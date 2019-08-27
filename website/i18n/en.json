@@ -3,8 +3,14 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for testing",
+    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol",
     "docs": {
+      "community": {
+        "title": "community"
+      },
+      "contributing": {
+        "title": "contributing"
+      },
       "doc1": {
         "title": "Latin-ish",
         "sidebar_label": "Example Page"
@@ -20,13 +26,213 @@
       },
       "doc5": {
         "title": "Fifth Document"
+      },
+      "glossary": {
+        "title": "glossary"
+      },
+      "index": {
+        "title": "index"
+      },
+      "lang/chinese/build/build-with-polkadot": {
+        "title": "lang/chinese/build/build-with-polkadot"
+      },
+      "lang/chinese/build/deploy-parachains": {
+        "title": "lang/chinese/build/deploy-parachains"
+      },
+      "lang/chinese/index": {
+        "title": "lang/chinese/index"
+      },
+      "lang/chinese/learn/comparisons": {
+        "title": "lang/chinese/learn/comparisons"
+      },
+      "lang/chinese/learn/interchain": {
+        "title": "lang/chinese/learn/interchain"
+      },
+      "lang/chinese/learn/staking": {
+        "title": "lang/chinese/learn/staking"
+      },
+      "lang/chinese/node/guides/how-to-validate": {
+        "title": "lang/chinese/node/guides/how-to-validate"
+      },
+      "lang/japanese": {
+        "title": "lang/japanese"
+      },
+      "news": {
+        "title": "news"
+      },
+      "polkadot/build/build-with-polkadot": {
+        "title": "polkadot/build/build-with-polkadot"
+      },
+      "polkadot/build/cumulus": {
+        "title": "polkadot/build/cumulus"
+      },
+      "polkadot/build/deploy-parachains": {
+        "title": "polkadot/build/deploy-parachains"
+      },
+      "polkadot/build/dev-roadmap": {
+        "title": "polkadot/build/dev-roadmap"
+      },
+      "polkadot/build/examples/index": {
+        "title": "polkadot/build/examples/index"
+      },
+      "polkadot/build/exchange-integration": {
+        "title": "polkadot/build/exchange-integration"
+      },
+      "polkadot/build/extrinsic-format": {
+        "title": "polkadot/build/extrinsic-format"
+      },
+      "polkadot/build/hackathon": {
+        "title": "polkadot/build/hackathon"
+      },
+      "polkadot/build/index": {
+        "title": "polkadot/build/index"
+      },
+      "polkadot/build/networks": {
+        "title": "polkadot/build/networks"
+      },
+      "polkadot/build/pdk": {
+        "title": "polkadot/build/pdk"
+      },
+      "polkadot/build/rust-style-guide": {
+        "title": "polkadot/build/rust-style-guide"
+      },
+      "polkadot/build/smart-contracts": {
+        "title": "polkadot/build/smart-contracts"
+      },
+      "polkadot/build/tools/index": {
+        "title": "polkadot/build/tools/index"
+      },
+      "polkadot/build/tools/subkey": {
+        "title": "polkadot/build/tools/subkey"
+      },
+      "polkadot/index": {
+        "title": "polkadot/index"
+      },
+      "polkadot/learn/architecture": {
+        "title": "polkadot/learn/architecture"
+      },
+      "polkadot/learn/auction": {
+        "title": "polkadot/learn/auction"
+      },
+      "polkadot/learn/basics": {
+        "title": "polkadot/learn/basics"
+      },
+      "polkadot/learn/bridges": {
+        "title": "polkadot/learn/bridges"
+      },
+      "polkadot/learn/candle": {
+        "title": "polkadot/learn/candle"
+      },
+      "polkadot/learn/comparisons": {
+        "title": "polkadot/learn/comparisons"
+      },
+      "polkadot/learn/comparisons/cosmos": {
+        "title": "polkadot/learn/comparisons/cosmos"
+      },
+      "polkadot/learn/consensus": {
+        "title": "polkadot/learn/consensus"
+      },
+      "polkadot/learn/cryptography": {
+        "title": "polkadot/learn/cryptography"
+      },
+      "polkadot/learn/DOT": {
+        "title": "polkadot/learn/DOT"
+      },
+      "polkadot/learn/faq": {
+        "title": "polkadot/learn/faq"
+      },
+      "polkadot/learn/governance": {
+        "title": "polkadot/learn/governance"
+      },
+      "polkadot/learn/grandpa": {
+        "title": "polkadot/learn/grandpa"
+      },
+      "polkadot/learn/implementations": {
+        "title": "polkadot/learn/implementations"
+      },
+      "polkadot/learn/index": {
+        "title": "polkadot/learn/index"
+      },
+      "polkadot/learn/interchain": {
+        "title": "polkadot/learn/interchain"
+      },
+      "polkadot/learn/introduction": {
+        "title": "polkadot/learn/introduction"
+      },
+      "polkadot/learn/keys": {
+        "title": "polkadot/learn/keys"
+      },
+      "polkadot/learn/parachains": {
+        "title": "polkadot/learn/parachains"
+      },
+      "polkadot/learn/parathreads": {
+        "title": "polkadot/learn/parathreads"
+      },
+      "polkadot/learn/phragmen": {
+        "title": "polkadot/learn/phragmen"
+      },
+      "polkadot/learn/PRE": {
+        "title": "polkadot/learn/PRE"
+      },
+      "polkadot/learn/randomness": {
+        "title": "polkadot/learn/randomness"
+      },
+      "polkadot/learn/relevant-links": {
+        "title": "polkadot/learn/relevant-links"
+      },
+      "polkadot/learn/roadmap": {
+        "title": "polkadot/learn/roadmap"
+      },
+      "polkadot/learn/security": {
+        "title": "polkadot/learn/security"
+      },
+      "polkadot/learn/spree": {
+        "title": "polkadot/learn/spree"
+      },
+      "polkadot/learn/staking": {
+        "title": "polkadot/learn/staking"
+      },
+      "polkadot/learn/UI": {
+        "title": "polkadot/learn/UI"
+      },
+      "polkadot/learn/wasm": {
+        "title": "polkadot/learn/wasm"
+      },
+      "polkadot/node/collator": {
+        "title": "polkadot/node/collator"
+      },
+      "polkadot/node/governance/index": {
+        "title": "polkadot/node/governance/index"
+      },
+      "polkadot/node/guides/how-to-nominate": {
+        "title": "polkadot/node/guides/how-to-nominate"
+      },
+      "polkadot/node/guides/how-to-systemd": {
+        "title": "polkadot/node/guides/how-to-systemd"
+      },
+      "polkadot/node/guides/how-to-validate": {
+        "title": "polkadot/node/guides/how-to-validate"
+      },
+      "polkadot/node/guides/validator-payout": {
+        "title": "polkadot/node/guides/validator-payout"
+      },
+      "polkadot/node/index": {
+        "title": "polkadot/node/index"
+      },
+      "polkadot/node/node-operator": {
+        "title": "polkadot/node/node-operator"
+      },
+      "polkadot/node/nominator": {
+        "title": "polkadot/node/nominator"
+      },
+      "research": {
+        "title": "research"
       }
     },
     "links": {
       "Docs": "Docs",
       "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "Help": "Help"
     },
     "categories": {
       "Docusaurus": "Docusaurus",
