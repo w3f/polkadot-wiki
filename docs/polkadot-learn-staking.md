@@ -102,28 +102,29 @@ In short, validators will be slashed if they have been reported offline more tha
 
 At the same time, once slashing is determined, a value will be deducted from the balance of the validator and all the nominators that have voted for this validator.
 
-!!! info
-    **Example:**
+### Example
 
+```
     Offline Slash Grace = 4 (Network define)
 
     Unstake Threshold   = 5 (Validator define)
+```
 
-    In this case, slashing will only occur if a validator has been reported offline more than 9 times.
-
+In this case, slashing will only occur if a validator has been reported offline more than 9 times.
 
 ## Reward Distribution
 
 Based on the the current configuration in the Alexander testnet, rewards are recorded per session that is roughly 5 minutes and paid per era. It takes 1 hour to finish an era; that means rewards will be distributed to the validators and nominators per hour.
 
-!!! info
-    **Example:**
+### Example
 
+```
     PER_ERA * BLOCK_TIME = **Reward Distribution Time**
 
     600 * 6 = 3600 = 1 Hour
 
     ***These parameters can be changed by proposing a referendum***
+```
 
 Validator can create a cut of the reward that is not shared with the nominators. After value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 

@@ -6,8 +6,7 @@ sidebar_label: Builders Portal
 
 # Builders Portal
 
-!!! info
-    _🏗️ Polkadot is under construction, these documents will likely change._
+_Polkadot is under construction, these documents will likely change._
 
 Welcome to the builders section of the Polkadot wiki.
 

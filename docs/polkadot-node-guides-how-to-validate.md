@@ -6,8 +6,8 @@ sidebar_label: How to validate
 
 # How to validate
 
-!!! info
-    _This tutorial works with the current Alexander testnet and has been updated for PoC-4._
+
+_This tutorial works with the current Alexander testnet and has been updated for PoC-4._
 
 To be a good validator, you should
 
@@ -21,8 +21,7 @@ Nominators still earn rewards. You can even nominate multiple validators. If you
 
 For this tutorial, we use Ubuntu 18.04 and will be running on the PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too different. There are a lot of [VPS](#vps-list) choices out there, feel free to pick the one you like.
 
-!!! attention
-    _Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
+_Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
 
 ## Install Rust
 
