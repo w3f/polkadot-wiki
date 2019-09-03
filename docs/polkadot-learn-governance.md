@@ -12,7 +12,7 @@ In order to do this, we bring together various novel mechanisms, including an am
 
 ## Overview
 
-TODO:![Governance Overview](../../../img/governance/Governance-diagram.png)
+![Governance Overview](../../../img/governance/Governance-diagram.png)
 
 The governance system of Polkadot is founded wholly around the idea of stakeholder voting. A key and unfailing rule is:
 
@@ -36,7 +36,7 @@ Proposal -
 ```
 Static Quorum
 -------------
-            AYE - Requires > 50% votes AND turnout >= QUORUM 
+            AYE - Requires > 50% votes AND turnout >= QUORUM
           /
 Proposal -
           \
@@ -129,8 +129,8 @@ $
 
 Where $t$ is the total number of voting tokens and $T$ is the total number of tokens issued in the system. $aye$ is the number of *aye* votes, and $nay$ the number of *nay* votes.
 
-TODO:![AQB](../../../img/governance/AQB.png)
-TODO:![AQB-electorate](../../../img/governance/AQB-electorate.png)
+![AQB](../../../img/governance/AQB.png)
+![AQB-electorate](../../../img/governance/AQB-electorate.png)
 
 So, in general:
 

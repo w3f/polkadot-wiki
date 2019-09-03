@@ -6,8 +6,7 @@ sidebar_label: Polkadot Builders Starter's Guide
 
 # Polkadot Builders Starter's Guide
 
-!!! info
-    This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735).
+_This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 @(Polkadot) is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** through [ICMP](polkadot-learn-interchain). With the advent of [PDKs](polkadot-build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
@@ -47,7 +46,7 @@ Some examples of features you can have on a parachain:
 - Treasury to be funded through transitions in your state function
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain treasury
 
-TODO:![build 1](../../../img/build-1.png)
+![build 1](../../../img/build-1.png)
 
 Parachains open possibilities to construct complex runtimes that would be too expensive to execute with smart contracts. Parachains in comparison lack a gas metering system entirely and could potentially be vulnerable to bugs that cause infinite loops (something that is prevented in smart contracts).
 
@@ -55,7 +54,7 @@ You may also decided to harness a combination of parachain and smart contract. I
 
 Most likely you’ve already realized that your application is better suited to be one or the other (or a hybrid of the two), but if you need a quick recap to digest the information, you can use this comparison chart as a cheat sheet:
 
-TODO:![build 2](../../../img/build-2.png)
+![build 2](../../../img/build-2.png)
 
 This guide now splits into two sections depending on whether you’ve decided on smart contract or parachain to build your application. Feel free to read both sections, or just the one that is applicable to you.
 

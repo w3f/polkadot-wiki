@@ -6,7 +6,7 @@ sidebar_label: Polkadot UI
 
 # Polkadot UI
 
-TODO:![Polkadot UI](../../img/polkadot_ui_1.png)
+![Polkadot UI](../../img/polkadot_ui_1.png)
 
 Polkadot comes with an open source, publicly accessible interface that makes it easy for anyone to connect to the Alexander testnet. You can find it [here](https://polkadot.js.org/apps/#/explorer).
 
@@ -67,7 +67,7 @@ This page lists your current Polkadot accounts. You can view, edit or create an 
 
 ### Vanity
 
-TODO:![Polkadot UI 3](../../img/polkadot_ui_3.png)
+![Polkadot UI 3](../../img/polkadot_ui_3.png)
 
 Polkadot UI comes with a vanity address generator in the browser. To create a vanity address, enter a string and start hashing. The longer the string, the longer it will take to compute. Note that some characters are not allowed due to the hashing algorithm used in Polkadot.
 
@@ -91,7 +91,7 @@ Some useful queries include:
 
 ### Extrinsics
 
-TODO:![Polkadot UI 2](../../img/polkadot_ui_2.png)
+![Polkadot UI 2](../../img/polkadot_ui_2.png)
 
 Extrinsics are the bits of information added to the blockchain, i.e., the things 'extrinsic' from the system. These include transactions, staking, proposing, voting, and many other consensus-level actions.
 
@@ -103,7 +103,7 @@ From here you can transfer, stake and unstake tokens.
 
  - transfer(recipient,value) - Transfer by entering the recipient's address in the 'recipient field', then entering the number of DOTs you would like to send.
 
-TODO: - stake() - Stake the entirety of your selected account's balance to become a Validator. However, becoming a Validator requires more than just staking. To get more information on becoming a Validator, read the requirements and tutorial in the [Validator Guide](polkadot-node-guides-how-to-validate).
+- stake() - Stake the entirety of your selected account's balance to become a Validator. However, becoming a Validator requires more than just staking. To get more information on becoming a Validator, read the requirements and tutorial in the [Validator Guide](polkadot-node-guides-how-to-validate).
 
  - unstake() - Unstake the entirety of your selected account's balance to withdraw your bid to be a Validator.
 

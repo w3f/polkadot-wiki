@@ -4,7 +4,7 @@ title: Polkadot Wiki
 sidebar_label: Polkadot Wiki
 ---
 
-TODO:![Polkadot Logo](./img/Polkadot_logotype_color.svg)
+![Polkadot Logo](./img/Polkadot_logotype_color.svg)
 
 # Polkadot Wiki
 

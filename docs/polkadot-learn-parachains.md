@@ -6,7 +6,7 @@ sidebar_label: Parachains
 
 # Parachains
 
-TODO:![One parachain](../../img/network/one_parachain.png)
+![One parachain](../../img/network/one_parachain.png)
 
 ## What is a parachain?
 

@@ -16,7 +16,7 @@ We will assume that you will be starting with two fresh accounts. Click [here](p
 
 The first step is to create two accounts by going to the *Accounts* tab on the Polkadot Dashboard and clicking on [*Add account*](https://polkadot.js.org/apps/#/accounts). Make sure to use `stash` and `controller` in the names of your accounts to identify them easily.
 
-TODO:![Creating an account](../../../img/guides/how-to-nominate/polkadot-dashboard-create-account.jpg)
+![Creating an account](../../../img/guides/how-to-nominate/polkadot-dashboard-create-account.jpg)
 
 Once you've created your accounts you will need to acquire some DOTs. See the [DOTs page](polkadot-learn-DOT#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
 
@@ -28,7 +28,7 @@ It is now time to setup our nominator. We will do the following:
 
 First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
 
-TODO:![dashboard bonding](../../../img/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
+![dashboard bonding](../../../img/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
 
 - **Stash account** - Select your `stash` account, we will bound 100 milliDOTs, make sure it has this amount of funds.
 - **Controller account** - select the `controller` account created earlier.
@@ -37,23 +37,23 @@ TODO:![dashboard bonding](../../../img/guides/how-to-nominate/polkadot-dashboard
 
 Once everything is filled properly, click `Bond` and sign the transaction (with your `stash` account). You will then see the following. You can ignore the `Set Session Key` button, it is only useful if you want to validate and we will not need it in this tutorial.
 
-TODO:![dashboard overview](../../../img/guides/how-to-nominate/polkadot-dashboard-set-session-key.jpg)
+![dashboard overview](../../../img/guides/how-to-nominate/polkadot-dashboard-set-session-key.jpg)
 
 ## Nominating a validator
 
 Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signaled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
 
-TODO:![Validators](../../../img/guides/how-to-nominate/validators.png)
+![Validators](../../../img/guides/how-to-nominate/validators.png)
 
 Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
 
-TODO:![Nominating](../../../img/guides/how-to-nominate/nominating.jpg)
+![Nominating](../../../img/guides/how-to-nominate/nominating.jpg)
 
 **Congratulations!** You are now a nominator.
 
 If you return to the *Staking Overview* tab after an era has changed and scroll until you find your validator you should see your own `stash` account appear as one of the nominators.
 
-TODO:![Nominating2](../../../img/guides/how-to-nominate/nominating2.jpg)
+![Nominating2](../../../img/guides/how-to-nominate/nominating2.jpg)
 
 ## How to stop nominating
 

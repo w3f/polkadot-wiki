@@ -8,7 +8,7 @@ sidebar_label: Polkadot comparisons
 
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular chains.
 
-TODO:## [Cosmos](./comparisons/cosmos.md)
+## [Cosmos](polkadot-learn-comparisons-cosmos)
 
 ## Ethereum
 
@@ -26,9 +26,9 @@ In practical terms, this means that the layer of abstraction between these two p
 
 Ethereum 2.0 refers to the planned Ethereum sharded chain which is currently being implemented and exists in the [spec](https://github.com/ethereum/eth2.0-specs/tree/0.4.0).
 
-On the surface, it may appear that the Eth2.0 spec for the beacon chain and shard chains is comparable to the Polkadot relay chain and parachains. However, a key distinction is that Eth2.0 shards are _homogeneous_ while Polkadot parachains are _heterogeneous_. This means that in Polkadot there is much more flexibility in the logic of the chain which can share the security with the Polkadot network, while Eth2.0 shards all are strictly the same logic. 
+On the surface, it may appear that the Eth2.0 spec for the beacon chain and shard chains is comparable to the Polkadot relay chain and parachains. However, a key distinction is that Eth2.0 shards are _homogeneous_ while Polkadot parachains are _heterogeneous_. This means that in Polkadot there is much more flexibility in the logic of the chain which can share the security with the Polkadot network, while Eth2.0 shards all are strictly the same logic.
 
-The Eth2.0 beacon chain uses LMD (Latest Message-Driven) GHOST as its fork-choice rule while Polkadot relay chain uses BABE for block production and GRANDPA as its finality gadget.  
+The Eth2.0 beacon chain uses LMD (Latest Message-Driven) GHOST as its fork-choice rule while Polkadot relay chain uses BABE for block production and GRANDPA as its finality gadget.
 
 ## Tezos
 
