@@ -1,1 +1,0 @@
-This file has moved to [auction](./auction.md).

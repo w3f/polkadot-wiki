@@ -1,3 +1,9 @@
+---
+id: community
+title: Community
+sidebar_label: Community
+---
+
 # Community
 
 The Polkadot community is expanding every day. Below are the most essential links to the community channels.

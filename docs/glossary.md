@@ -1,3 +1,9 @@
+---
+id: glossary
+title: Terms and Definitions
+sidebar_label: Terms and Definitions
+---
+
 # Terms and Definitions
 
 ## Block

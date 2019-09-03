@@ -1,3 +1,9 @@
+---
+id: news
+title: This Week in Polkadot
+sidebar_label: This Week in Polkadot
+---
+
 # This Week in Polkadot
 
 This Week in Polkadot is a weekly aggregation of the top news in the Polkadot space, maintained by Rory from W3F.
