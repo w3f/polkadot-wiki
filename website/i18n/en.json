@@ -285,9 +285,10 @@
       "Help": "Help"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Main": "Main",
+      "Build": "Build",
+      "Learn": "Learn",
+      "Maintaining": "Maintaining"
     }
   },
   "pages-strings": {
