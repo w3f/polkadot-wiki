@@ -4,8 +4,6 @@ title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 ---
 
-# Polkadot Builders Starter's Guide
-
 _This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 @(Polkadot) is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** through [ICMP](polkadot-learn-interchain). With the advent of [PDKs](polkadot-build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.

@@ -4,8 +4,6 @@ title: Polkadot Keys
 sidebar_label: Polkadot Keys
 ---
 
-# Polkadot Keys
-
 Public and private keys are an important aspect of most crypto-systems and an essential component that enables blockchains like Polkadot to exist.
 
 ## Account Keys

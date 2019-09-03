@@ -4,8 +4,6 @@ title: Bridges
 sidebar_label: Bridges
 ---
 
-# Bridges
-
 One of the central ideas in blockchain intercommunication is the role of bridges. Some of the exact details of how bridging will work in Polkadot have yet to be decided; please consider this page a work in progress.  It will be updated as more details are determined.
 
 Currently, there are three different types of bridging in Polkadot:

@@ -4,8 +4,6 @@ title: Roadmap
 sidebar_label: Roadmap
 ---
 
-# Roadmap
-
 ## Polkadot release
 
 We are targeting the end of 2019 for the initial release of Polkadot.

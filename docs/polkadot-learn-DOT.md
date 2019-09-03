@@ -4,8 +4,6 @@ title: DOT
 sidebar_label: DOT
 ---
 
-# DOT
-
 ## What are DOTs?
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native
@@ -31,7 +29,7 @@ Currently, DOTs have 15 decimal places, while the smallest unit is called the Pl
 Planck| 1
 Point | 3
 Microdot (UDOT)| 6
-Millidot (MDOT)| 9 
+Millidot (MDOT)| 9
 Dot (DOT) | 12
 Blob | 15
 
@@ -41,9 +39,9 @@ DOTs serve three key functions in Polkadot, (i) to be used for governance of the
 
 ### DOTs for governance
 
-The first function of DOTs will be to entitle holders to control of the governance of the platform. Some functions which will be included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform. 
+The first function of DOTs will be to entitle holders to control of the governance of the platform. Some functions which will be included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
 
-The governance mechanism will not be formally granted to all holders of DOTs but rather the underlying code of Polkadot will enable a holder of DOTs to participate in governance. 
+The governance mechanism will not be formally granted to all holders of DOTs but rather the underlying code of Polkadot will enable a holder of DOTs to participate in governance.
 
 ### DOTs for consensus
 

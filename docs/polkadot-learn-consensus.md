@@ -4,8 +4,6 @@ title: Polkadot Consensus
 sidebar_label: Polkadot Consensus
 ---
 
-# Polkadot Consensus
-
 ## Why do we need consensus?
 
 Consensus is a method for coming to agreement over a shared state. In order for the state of the blockchain to continue to build and move forward, all nodes in the network must agree and come to consensus. It is the way that the nodes in a decentralized network are able to stay synced with each other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to provide the _objective_ view of the state amid participants which each have their own _subjective_ views of the network. It is the process for which these nodes communicate and come to agreement, and are able to build new blocks.

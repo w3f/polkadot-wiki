@@ -4,8 +4,6 @@ title: Parachain Slots Auction
 sidebar_label: Parachain Slots Auction
 ---
 
-# Parachain Slots Auction
-
 <div class="img-container">
     <a href="https://slides.com/paritytech/validating-in-polkadot#/20" target="_blank">
         <img alt="Polkadot's roadmap to 200 parachains" src="../../../img/parachain-roadmap.jpg"/>
@@ -17,11 +15,11 @@ The parachain slots of Polkadot will be sold according to an unpermissioned [Can
 
 ## Mechanics of a Candle auction
 
-Candle auctions are a variant of open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner. 
+Candle auctions are a variant of open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner.
 
 Candle auctions were originally employed in 16th century for the sale of ships and get their name from the "inch of a candle" that determined the open period of the auction. When the flame extinguished and the candle went out, the auction would suddenly terminate and the standing bid at that point would win.
 
-When Candle auctions are used online, they require a random number to decide the moment of termination. 
+When Candle auctions are used online, they require a random number to decide the moment of termination.
 
 Parachain slot auctions will differ slightly from a normal Candle auction in that it does not use the random number to decide the duration of its opening phase. Instead, it has a known open phase and will be retroactively determined (at the normal close) to have ended at some point in the past. So during the open phase, bids will continue to be accepted but, later bids have higher probability of losing since the retroactively determined close moment may be found to be preceding the moment a bid was submitted.
 
@@ -29,7 +27,7 @@ Parachain slot auctions will differ slightly from a normal Candle auction in tha
 
 The open and transparent nature of blockchain systems opens attack vectors which are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
-Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item. 
+Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item.
 
 For example, Alice may value an item at auction for 30 USD. She submits an initial bid of 10 USD in hopes of acquiring the items at a lower price. Alice's strategy is place incrementally higher bids until her true value of 30 USD is exceeded. Another bidder Eve values the same item at 11 USD. Eve's strategy is to watch the auction and submit a bid of 11 USD at the last second. Alice will have no time to respond to this bid before the close of the auction and will lose the item. The auction mechanism is sub-optimal because it has not discovered the true price of the item and the item has not gone to the actor whom valued it the most.
 
@@ -60,7 +58,7 @@ Slot C |__________|     1    |     2     |     3     |     4     |...
 Slot D |__________|     1    |     2     |     3     |     4     |...
 Slot E |__________|__________|     1     |     2     |     3     |     4     |...
        ^                                             ^
-       ---------------------2 years-------------------      
+       ---------------------2 years-------------------
 
 Each period of the range 1 - 4 represents a 6-month duration for a total of 2 years
 ```
@@ -128,7 +126,7 @@ Dave - 100 * 2 = 200 for range 3 - 4
 
 Emily - 40 * 2 = 80 for range 1 - 2
 
-Although Dave had the highest bid in accordance to DOT amount, when we do the calculations we see that since he only bid for a range of 2, he would need to share the slot with Emily who bid much less. Together Dave's and Emily's bids only equal a valuation of `280`. 
+Although Dave had the highest bid in accordance to DOT amount, when we do the calculations we see that since he only bid for a range of 2, he would need to share the slot with Emily who bid much less. Together Dave's and Emily's bids only equal a valuation of `280`.
 
 Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of the parachain slot.
 
@@ -141,7 +139,7 @@ For the duration of the slot the `DOTs` bid in the auction will be locked up. Th
 ### How does this mechanism help ensure parachain diversity?
 
 The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each period a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations which are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
- 
+
 ### Why is randomness difficult on blockchains?
 
 Randomness is problematic for blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify opens the possibility for actors to attempt to alter or manipulate the randomness. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.

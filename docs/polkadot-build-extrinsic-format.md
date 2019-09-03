@@ -4,11 +4,9 @@ title: Polkadot Extrinsic Format aka Transaction Format
 sidebar_label: Polkadot Extrinsic Format aka Transaction Format
 ---
 
-# Polkadot Extrinsic Format aka Transaction Format
-
 ## Old Format
 
-For reference the **old** extrinsic format was:
+For reference, the **old** extrinsic format was:
 
 ```
 [ account-id (32-bytes), index (4-bytes), call (dynamic-length), signature on first three fields (64 bytes) ]

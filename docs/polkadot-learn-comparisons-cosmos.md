@@ -4,9 +4,7 @@ title: Polkadot vs. Cosmos: Design Comparison
 sidebar_label: Polkadot vs. Cosmos: Design Comparison
 ---
 
-# Polkadot vs. Cosmos: Design Comparison
-
-Both Polkadot and Cosmos are projects in the blockchain space that aim to solve interoperability and scalability of blockchains. 
+Both Polkadot and Cosmos are projects in the blockchain space that aim to solve interoperability and scalability of blockchains.
 
 Polkadot takes a shared-state heterogeneous multichain approach, while Cosmos assumes all chains are independent but connected.
 
@@ -20,9 +18,9 @@ Cosmos is composed of individual chains with independent security and bridges be
 
 ## Architecture
 
-### Polkadot 
+### Polkadot
 
-The center of the Polkadot multichain is the relay-chain. All validators validate for the relay-chain by participating in Polkadot's hybrid consensus model known as BABE/GRANDPA using a variant of Proof-of-Stake. 
+The center of the Polkadot multichain is the relay-chain. All validators validate for the relay-chain by participating in Polkadot's hybrid consensus model known as BABE/GRANDPA using a variant of Proof-of-Stake.
 
 Validators are selected through a Nominated Proof-of-Stake (NPoS) scheme in which DOT holders can nominate their stake to a set of validators and the stake will attempt to equalize between them. For more on Polkadot's NPoS click [here](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43).
 
@@ -52,13 +50,13 @@ The entire validator set must resolve a conflict if it so happens that the super
 
 Cosmos does not operate under the assumption that all the connected chains have shared state, so in this way each chain is independent and responsible for incentivizing their own security. The Cosmos IBC design does not make additional security guarantees on any of the interchain messaging. If a user decided to send a message from one Cosmos Tendermint chain to another, and later that second chain is corrupted because it had much lower security, it could have an indirect effect on the original chain. Cosmos' model is only as secure as the least secure of the bridged chains that the user uses. It is expected that the security will vary widely between each chain on Cosmos and users of the chains should know and understand this. This is different from Polkadot which is designed to distribute security as a blanket over all parachains through the shared-state model.
 
-## Interoperability 
+## Interoperability
 
 Polkadot and Cosmos are both working on blockchain interoperability protocols.
 
 Polkadot uses the Interchain Message Passing (ICMP) protocol to send messages between parachains. The messages which are passed can be any arbitrary string of bytes, meaning they could be encoded to be asset transfers or more complex cross-chain calls. ICMP is trustless because it is verified by the validator as part of the validity check of each new parachain block that the messages will be included. Validators only accept new parachain blocks if they've included all of the incoming messages from other parachains (given a one or two blocks buffer). Additionally, the Shared Protected Runtime Execution Environment (SPREE) gives even stronger guarantees that the messages will trigger the same exact code across parachains.
 
-Cosmos's work in this regard is currently focused on Inter-Blockchain Communication (IBC). IBC resembles TCP in the legacy world of networking because it treats each blockchain as its own separate process with its own security assumptions. 
+Cosmos's work in this regard is currently focused on Inter-Blockchain Communication (IBC). IBC resembles TCP in the legacy world of networking because it treats each blockchain as its own separate process with its own security assumptions.
 
 Both ICMP and IBC require consensus verification, but ICMP provides state machine verification while IBC leaves this aspect up to the user.
 
@@ -80,7 +78,7 @@ Cosmos does not treat validity in the same way. Validity for Cosmos chains requi
 
 ## Availability
 
-Polkadot has additional mechanisms which guarantee the availability of data and gives even stronger security assurances. Namely, these are the use of erasure codes for parachain data availability among the entire validator set and fishermen which are bounty hunters that watch for invalid validator behaviors. 
+Polkadot has additional mechanisms which guarantee the availability of data and gives even stronger security assurances. Namely, these are the use of erasure codes for parachain data availability among the entire validator set and fishermen which are bounty hunters that watch for invalid validator behaviors.
 
 Cosmos chains must keep the entire data for the chains they are validating, and for bridge chains will need to be also a light client of that chain. Cosmos has no plan to use erasure codes or fishermen at the base layer, but acknowledges that these could be implemented on top of IBC.
 
@@ -98,9 +96,9 @@ Polkadot's GRANDPA finality gadget comes to finality on _chains of blocks_ rathe
 
 Polkadot's design has stronger liveness guarantees than Cosmos' Tendermint, which prioritizes the safety.
 
-In Tendermint, block production will stop along with the finality, once more than 1/3 of the validator set has become Byzantine. 
+In Tendermint, block production will stop along with the finality, once more than 1/3 of the validator set has become Byzantine.
 
-Tendermint uses a weight-based proof-of-stake algorithm which gives validators voting power based on the amount of ATOM tokens they hold (or are delegated). Currently only 5 out of 100 validators control 1/3 of the stake and thus could halt the finalization procedure of the network. In Polkadot, the number of validators will always be 33% of the total (so with 100 validators, 33). 
+Tendermint uses a weight-based proof-of-stake algorithm which gives validators voting power based on the amount of ATOM tokens they hold (or are delegated). Currently only 5 out of 100 validators control 1/3 of the stake and thus could halt the finalization procedure of the network. In Polkadot, the number of validators will always be 33% of the total (so with 100 validators, 33).
 
 While Polkadot's GRANDPA will also stop finalizing blocks once more than 1/3 of the validator set is Byzantine, BABE will continue to produce blocks. Once the validator set has been restored by either kicking out the unresponsive validators or validators coming back online, GRANDPA will start to finalize on all the blocks BABE has produced in the meantime.
 

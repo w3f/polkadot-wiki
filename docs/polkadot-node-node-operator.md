@@ -4,8 +4,6 @@ title: Node Operator / Validator
 sidebar_label: Node Operator / Validator
 ---
 
-# Node Operator / Validator
-
 Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
 
 These participants will play a crucial role in adding new blocks to the Relay Chain and, by extension to all parachains, such that parties can complete cross-chain transactions via the Relay Chain. Validators perform two functions. First, verifying the information contained in an assigned set of parachain blocks is valid (such as the identities of the transacting parties and the subject matter of the contract). Their second role is to participate in the consensus mechanism to produce the Relay Chain blocks based on validity statements from other validators. Any instances of non-compliance with the consensus algorithms result in punishment by removal of some or all of the validator’s staked DOTs, thereby discouraging bad actors. Good performance, however, will be rewarded, with validators receiving transaction fees in the form of DOTs in exchange for their activities.

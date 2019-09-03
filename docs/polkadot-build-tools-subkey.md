@@ -4,8 +4,6 @@ title: Subkey
 sidebar_label: Subkey
 ---
 
-# Subkey
-
 Subkey is a commandline utility included with Substrate that generates or restores Substrate keys.
 
 `subkey` will use [sr25519](http://wiki.polkadot.network/en/latest/polkadot/learn/cryptography/#keypairs-and-signing) cryptography by default. If you need to use the older ed25519 cryptography to generate or restore your key, or to generate a session key for use by validators, pass the `--ed25519` flag to any of the commands.

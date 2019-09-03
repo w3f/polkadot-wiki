@@ -4,8 +4,6 @@ title: How to view and deploy parachains
 sidebar_label: How to view and deploy parachains
 ---
 
-# How to view and deploy parachains
-
 The guide has been updated to work with the Alexander testnet.
 
 ## How to view parachains

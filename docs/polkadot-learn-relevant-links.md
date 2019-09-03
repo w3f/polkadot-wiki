@@ -4,8 +4,6 @@ title: Links
 sidebar_label: Links
 ---
 
-# Links
-
 ## Protocol
 
 ### General

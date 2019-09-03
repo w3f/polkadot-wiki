@@ -4,8 +4,6 @@ title: Exchange integration
 sidebar_label: Exchange integration
 ---
 
-# Exchange integration
-
 ```
 +--------------------+
 |                    |
@@ -192,7 +190,7 @@ In Polkadot, account balances can be looked up within the `Balances` module usin
 
 NOTE: `FreeBalance` gives the total balance controlled by that account, but does not account for temporarily locked portions of balance, such as those locked for staking, voting or vesting. This information can be queried from the chain, but it is outside the scope of this document.
 
-The balance encodes the DOT token with 12 decimal places. To get the actual number of DOTs, you need to divide the 128-bit balance by 1,000,000,000,000 (10**12). For completeness, The exact denominations of the Polkadot currency are: 
+The balance encodes the DOT token with 12 decimal places. To get the actual number of DOTs, you need to divide the 128-bit balance by 1,000,000,000,000 (10**12). For completeness, The exact denominations of the Polkadot currency are:
 
 | Balance value | Name |
 | --- | --- |
@@ -244,7 +242,7 @@ The `tip` is a `Balance` (logically equivalent to the `u128` type in SCALE), whi
 
 The `checkpoint_hash` is the hash of the "checkpoint block", which is to say the first block of the era specified by the `era` field. If just making the transaction "immortal", then the genesis hash of the blockchain should be used. This can be determined through the RPC `chain_getBlockHash(0)`.
 
-Finally, the `function` is a `Function` type (sometimes known as a `Call` or `Proposal` in certain contexts) which describes what action shall be dispatched. It must be constructed according to metadata. In this case, we want our transaction to effect the `transfer` function in the `Balances` module, to transfer a balance from one account to another. It is important to check the index of the Balances module itself in the list of modules. In this case, it is the 6th item, or index 5. It is also necessary to inspect the `calls` field of the Balances `Module` in the metadata, and determine what index in the list of calls the transfer function is. As it happens, it is first in the list, and thus has an index of 0. 
+Finally, the `function` is a `Function` type (sometimes known as a `Call` or `Proposal` in certain contexts) which describes what action shall be dispatched. It must be constructed according to metadata. In this case, we want our transaction to effect the `transfer` function in the `Balances` module, to transfer a balance from one account to another. It is important to check the index of the Balances module itself in the list of modules. In this case, it is the 6th item, or index 5. It is also necessary to inspect the `calls` field of the Balances `Module` in the metadata, and determine what index in the list of calls the transfer function is. As it happens, it is first in the list, and thus has an index of 0.
 
 Finally, we need to know what parameters to this function are expected in order to construct the rest of the transaction. This is provided in the `Call` item of the metadata that we just located. Two parameters are expected:
 - `dest` with a type of `<T::Lookup as StaticLookup>::Source` (aka `Address`); and

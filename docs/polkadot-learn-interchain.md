@@ -4,9 +4,7 @@ title: Interchain Message Passing (ICMP)
 sidebar_label: Interchain Message Passing (ICMP)
 ---
 
-# Interchain Message Passing (ICMP)
-
-Interchain transactions are resolved using a simple queuing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain. 
+Interchain transactions are resolved using a simple queuing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
 
 The input and output queue are sometimes referred to in the codebase as "ingress" and "egress" messages.
 
@@ -25,7 +23,7 @@ The input and output queue are sometimes referred to in the codebase as "ingress
 
 A smart contract that exists on parachain A will route a message to parachain B in which another smart contract is called that makes a transfer of some assets within that chain.
 
-Charlie executes the smart contract on parachain A which initiates a new interchain message for the destination of a smart contract on parachain B. 
+Charlie executes the smart contract on parachain A which initiates a new interchain message for the destination of a smart contract on parachain B.
 
 The collator node of parachain A will place this new interchain message into its out-bound messages queue, along with a `destination` and a `timestamp`.
 
@@ -35,7 +33,7 @@ Validators for parachain A will also read the out-bound queue and know the messa
 
 When the collator of parachain B is building the next block in its chain, it will process the new message in its in-bound queue as well as any other messages it may have found/received.
 
-During processing, the message will execute the smart contract on parachain B and complete the asset transfer like intended. 
+During processing, the message will execute the smart contract on parachain B and complete the asset transfer like intended.
 
 The collator now hands this block to the validator, which itself will verify that this message was processed. If the message was processed and all other aspects of the block are valid, the validator will include this block for parachain B into the relay chain.
 

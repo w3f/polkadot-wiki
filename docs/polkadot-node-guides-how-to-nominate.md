@@ -4,8 +4,6 @@ title: How to nominate
 sidebar_label: How to nominate
 ---
 
-# How to nominate
-
 This guide will walk you through how to nominate your DOTs to a validator node so that you can take part in the staking system and earn fresh DOTs.
 
 It has been updated for the Alexander testnet and Polkadot release PoC-4.

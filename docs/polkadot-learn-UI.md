@@ -4,8 +4,6 @@ title: Polkadot UI
 sidebar_label: Polkadot UI
 ---
 
-# Polkadot UI
-
 ![Polkadot UI](../../img/polkadot_ui_1.png)
 
 Polkadot comes with an open source, publicly accessible interface that makes it easy for anyone to connect to the Alexander testnet. You can find it [here](https://polkadot.js.org/apps/#/explorer).

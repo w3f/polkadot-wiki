@@ -4,15 +4,13 @@ title: Security of the network
 sidebar_label: Security of the network
 ---
 
-# Security of the network
-
 ## Shared security
 
-Shared security, sometimes referred in documentation as _pooled security_, is one of the unique value propositions for chains considering to become a parachain and join the Polkadot network. On a high level, shared security means that all parachains which have connected to the Polkadot relay chain by leasing a parachain slot will benefit from the economic security provided by the relay chain validators. 
+Shared security, sometimes referred in documentation as _pooled security_, is one of the unique value propositions for chains considering to become a parachain and join the Polkadot network. On a high level, shared security means that all parachains which have connected to the Polkadot relay chain by leasing a parachain slot will benefit from the economic security provided by the relay chain validators.
 
 The notion of shared security is different from interchain protocols that build on an architecture of bridges. For bridge protocols, each chain is considered sovereign and must maintain its own validator set and economic security. One concern in these protocols is on the point of scalability of security. For example, one suggestion to scale blockchains is that of _scale by altcoins_ which suggests that transaction volumes will filter down to lower market cap altcoins as the bigger ones fill their blocks. A major flaw in this idea is that the lower market cap coins will have less economic security attached, and be easier to attack. We see a real life example of a 51% in the case of [Ethereum Classic attack on January 10](https://cointelegraph.com/news/ethereum-classic-51-attack-the-reality-of-proof-of-work) in which an unknown attacker double spent 219,500 ETC (~1.1M USD).
 
-Polkadot overcomes security scalability concerns since it gravitates all the economic incentives to the relay chain and allows the parachains to tap into the stronger guarantees at genesis. Sovereign chains must exhaust much more effort to grow the value of their coin so that it is not easily able to be attacked by well-funded attackers. 
+Polkadot overcomes security scalability concerns since it gravitates all the economic incentives to the relay chain and allows the parachains to tap into the stronger guarantees at genesis. Sovereign chains must exhaust much more effort to grow the value of their coin so that it is not easily able to be attacked by well-funded attackers.
 
 ### Example
 
@@ -22,9 +20,9 @@ On Polkadot, this disparity between chain security will not be present. When a p
 
 ## FAQ
 
-### Is security correlated to the number of validators? What about to the number of parachains? 
+### Is security correlated to the number of validators? What about to the number of parachains?
 
-Security is independent of the number of parachains which are connected to the Polkadot relay chain. The correlation of security and the number of validators exists as the higher number of validators will give the network stronger decentralization properties and make it harder to try to take down. However, the biggest indicator of the security of the network is the economic signal of the number of DOTs which are bonded and staked. The greater number of DOTs which are staked by honest validators and nominators raises the minimum amount of DOTs an attacker would need to acquire a validator slot. 
+Security is independent of the number of parachains which are connected to the Polkadot relay chain. The correlation of security and the number of validators exists as the higher number of validators will give the network stronger decentralization properties and make it harder to try to take down. However, the biggest indicator of the security of the network is the economic signal of the number of DOTs which are bonded and staked. The greater number of DOTs which are staked by honest validators and nominators raises the minimum amount of DOTs an attacker would need to acquire a validator slot.
 
 ### Will parachains ever need their own security? In what scenarios do parachains need their own security?
 

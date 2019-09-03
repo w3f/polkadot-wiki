@@ -4,8 +4,6 @@ title: GRANDPA
 sidebar_label: GRANDPA
 ---
 
-# GRANDPA
-
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot relay chain.
 
 It works in partially synchronous network models and can cope with 1/5 Byzantine nodes in an asynchronous setting.

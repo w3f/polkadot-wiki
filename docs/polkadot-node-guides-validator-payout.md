@@ -4,8 +4,6 @@ title: Validator Payout Overview
 sidebar_label: Validator Payout Overview
 ---
 
-# Validator Payout Overview
-
 ## Payout Scheme
 
 Validators are paid for authoring blocks on the relay chain and signing parachain blocks. Validator payouts occur at the end of every era (on the Alexander testnet, this is approximately once per hour, although this may be modified on Kusama and the Polkadot mainnet). No matter how much stake is behind a validator (by the validator stash itself, as well as by nominators), all validators split the block authoring payout equally.

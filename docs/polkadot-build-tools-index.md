@@ -4,8 +4,6 @@ title: Tools
 sidebar_label: Tools
 ---
 
-# Tools
-
 Here we provide a list of tools available for your development needs. They
 are sorted by programming language. Right now, the Rust ecosystem is the most
 mature and it's possible to get started by building on Substrate today. As the
@@ -81,5 +79,5 @@ Polkadot-JS Common provides various useful utility functions that are used acros
 
 ### RPC Tools
 
-- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - Demonstrates how the JS tools interact with the node over RPC. 
+- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - Demonstrates how the JS tools interact with the node over RPC.
 - [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html) - Documents Substrate RPC endpoints.

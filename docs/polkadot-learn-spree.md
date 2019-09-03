@@ -4,8 +4,6 @@ title: SPREE
 sidebar_label: SPREE
 ---
 
-# SPREE
-
 SPREE (Shared Protected Runtime Execution Enclaves), also known as "trust wormholes," allows parachains to trust one another, regardless of how they upgrade and evolve.
 
 ## How it works

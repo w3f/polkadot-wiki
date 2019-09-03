@@ -4,8 +4,6 @@ title: Style Guide for Rust in Polkadot
 sidebar_label: Style Guide for Rust in Polkadot
 ---
 
-# Style Guide for Rust in Polkadot
-
 - Indent using tabs
 - Lines should be longer than 80 characters long only in exceptional circumstances and certainly no longer than 120. For this purpose, tabs are considered 4 characters wide.
 - Indent levels should be greater than 5 only in exceptional circumstances and certainly no greater than 8. If they are greater than 5, then consider using `let` or auxiliary functions in order to strip out complex inline expressions.
@@ -71,9 +69,9 @@ fn foo(really_long_parameter_name_1: SomeLongTypeName, really_long_parameter_nam
 
 	// Long, simple function call.
 	waz(
-		really_long_parameter_name_1, 
+		really_long_parameter_name_1,
 		really_long_parameter_name_2,
-		shrt_nm_1, 
+		shrt_nm_1,
 		shrt_nm_2,
 	);
 

@@ -4,13 +4,11 @@ title: Hackathon
 sidebar_label: Hackathon
 ---
 
-# Hackathon
-
 As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
 
 We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
 
-## Ideas 
+## Ideas
 
 - NFT
 - Bonded Tokens
@@ -26,7 +24,7 @@ We are not only providing technical resources for you, but we can have someone f
 
 ## Why you should host a hackathon?
 
-- Love to deliver the vision of Web3 
+- Love to deliver the vision of Web3
 - Learn the bleeding-edge technology
 - Believe the Web3 technology stack is suitable for developers to build their applications
 - Like to make connections
@@ -42,7 +40,7 @@ Hackathon is aimed at participants who want to deliver their prototype and demon
 
 ## How we can help you
 
-- Provide technical resources/materials. 
+- Provide technical resources/materials.
 - Find a venue.
 - Ensure the hackathon run smoothly.
 

@@ -4,8 +4,6 @@ title: Parachain Development Kits (PDKs)
 sidebar_label: Parachain Development Kits (PDKs)
 ---
 
-# Parachain Development Kits (PDKs)
-
 Parachain development kits (PDKs) are a set of tools that make it easy for developers to create Polkadot compatible [parachains](polkadot-learn-parachains).
 
 ## Why create a parachain?

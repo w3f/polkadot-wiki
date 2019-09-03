@@ -4,8 +4,6 @@ title: Examples
 sidebar_label: Examples
 ---
 
-# Examples
-
 Examples are helpful to demonstrate patterns of development. In this repository is collected some open source examples which will may be helpful for developers.
 
 ## Substrate Runtimes

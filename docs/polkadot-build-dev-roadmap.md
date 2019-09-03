@@ -4,10 +4,8 @@ title: Roadmap For Developers
 sidebar_label: Roadmap For Developers
 ---
 
-# Roadmap For Developers
-
 Developers need some guide posts for when they can expect certain milestones
-to be reached by the upstream teams. We will try to keep the sections below 
+to be reached by the upstream teams. We will try to keep the sections below
 up to date with the what we know and add definite dates if possible.
 
 ## Substrate
@@ -20,7 +18,7 @@ up to date with the what we know and add definite dates if possible.
 
 Expected Features:
 
- - Final API and stable interfaces 
+ - Final API and stable interfaces
  - Ristretto Crypto
  - Solid networking
  - Outstanding bugs fixed
@@ -37,7 +35,7 @@ Expected Features:
 
  - Economic safety
 
-## Polkadot 
+## Polkadot
 
 Current release: **PoC-4**
 
@@ -49,6 +47,6 @@ Current release: **PoC-4**
 
 Expected Features:
 
- - BLS signature aggregation for parachain candidate attestations 
+ - BLS signature aggregation for parachain candidate attestations
  - [Integrate Parachain tokens into governance](https://github.com/paritytech/polkadot/issues/124)
- - Improvements to parachain validation 
+ - Improvements to parachain validation

@@ -4,8 +4,6 @@ title: Networks
 sidebar_label: Networks
 ---
 
-# Networks
-
 The following commands can be used to connect to the different networks.
 
 ## Development

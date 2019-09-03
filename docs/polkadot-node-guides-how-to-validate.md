@@ -4,9 +4,6 @@ title: How to validate
 sidebar_label: How to validate
 ---
 
-# How to validate
-
-
 _This tutorial works with the current Alexander testnet and has been updated for PoC-4._
 
 To be a good validator, you should

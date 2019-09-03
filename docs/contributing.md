@@ -4,8 +4,6 @@ title: Contributing
 sidebar_label: Contributing
 ---
 
-# Contributing
-
 ## This [wiki](https://github.com/w3f/Polkadot-wiki) is an **OPEN-ish Open Source Project**
 
 This is an informational resource on Polkadot and the Polkadot ecosystem.

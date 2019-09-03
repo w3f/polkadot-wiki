@@ -4,8 +4,6 @@ title: Learn about Polkadot
 sidebar_label: Learn about Polkadot
 ---
 
-# Learn about Polkadot
-
 - [Introduction](polkadot-learn-introduction) - Introduction to the _who_, _what_, _where_, _when_, and _why_ of Polkadot.
 - [FAQ](polkadot-learn-faq) - Answers to some of the frequently asked questions in regard to Polkadot.
 

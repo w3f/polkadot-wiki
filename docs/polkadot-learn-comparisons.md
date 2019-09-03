@@ -4,8 +4,6 @@ title: Polkadot comparisons
 sidebar_label: Polkadot comparisons
 ---
 
-# Polkadot comparisons
-
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular chains.
 
 ## [Cosmos](polkadot-learn-comparisons-cosmos)

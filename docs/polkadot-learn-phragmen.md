@@ -4,8 +4,6 @@ title: What is Phragmen and what does it mean for node operators?
 sidebar_label: What is Phragmen and what does it mean for node operators?
 ---
 
-# What is Phragmen and what does it mean for node operators?
-
 ## What is the sequential Phragmen method?
 
 The sequential Phragmen method is a multi-winner election method introduce by Edvard Phragmen in the 1890s.

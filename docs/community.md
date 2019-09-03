@@ -4,8 +4,6 @@ title: Community
 sidebar_label: Community
 ---
 
-# Community
-
 The Polkadot community is expanding every day. Below are the most essential links to the community channels.
 
 ## General
@@ -26,7 +24,7 @@ The Polkadot community is expanding every day. Below are the most essential link
 - [Subscribe to the Polkadot newsletter](https://polkadot.network/#roadmap) - Email sign up form is available at the bottom of the page.
 - [Polkadot Telegram](https://t.me/polkadotofficial) - Official Telegram room for discussion of Polkadot (please read the rules before chatting).
 - [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Official Twitter account of Polkadot.
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit. 
+- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit.
 - [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video content from founders and build of Polkadot describing the network and the vision.
 
 ## Ecosystem

@@ -4,8 +4,6 @@ title: Nominator
 sidebar_label: Nominator
 ---
 
-# Nominator
-
 Nominators secure the relay chain by selecting good validators and staking DOTs.
 
 You may have an account with DOTs and want to earn fresh DOTs. You could do so as validator, which requires a node running 24/7. If you do not have such node or do not want to bother, you can still earn DOTs by nominating another validator.

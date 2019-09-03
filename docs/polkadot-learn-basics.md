@@ -4,8 +4,6 @@ title: Basics
 sidebar_label: Basics
 ---
 
-# Basics
-
 ## Themes in blockchain 3.0
 
 The following are some topics which have been [presented by Gavin Wood](https://slides.com/paritytech/polkadot-governance#/1) as "themes of blockchain 3.0":
@@ -19,12 +17,12 @@ The following are some topics which have been [presented by Gavin Wood](https://
 
 ## Two sides of blockchain
 
-A blockchain is composed of two main pieces: 
+A blockchain is composed of two main pieces:
 
  - a state machine (what composes a block)
  - a consensus algorithm (how to agree on the blocks)
 
-Blockchain incentive systems like Proof of Work and Proof of 
+Blockchain incentive systems like Proof of Work and Proof of
 Stake are notably **not** consensus mechanisms by themselves.
 
 ## Interoperability
@@ -49,7 +47,7 @@ Instantiation of pluggable consensus that follows the relay chain.
 It knows how to run another blockchain node internally (a light client) and follow
 the relay chain.
 
-Extends the substrate runtime already into a Polkadot validation 
+Extends the substrate runtime already into a Polkadot validation
 compatible runtime. Typical block authorship has some key difference
 to Polkadot parachains.
 

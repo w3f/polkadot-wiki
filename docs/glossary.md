@@ -4,8 +4,6 @@ title: Terms and Definitions
 sidebar_label: Terms and Definitions
 ---
 
-# Terms and Definitions
-
 ## Block
 
 A collection of data, such as transactions, that together indicate a state transition of the blockchain.
@@ -156,11 +154,11 @@ The process of adding a block to the relay chain.  Note that finalization is a s
 
 ## Session certificate
 
-Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p. 
+Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
 
 ## Session key
 
-A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p. 
+A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
 
 ## Staking
 

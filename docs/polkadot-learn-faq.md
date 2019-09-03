@@ -4,8 +4,6 @@ title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
-# Frequently Asked Questions (FAQs)
-
 _This FAQ focuses on technical questions for users interested in developing applications for Polkadot.  If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq).  If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
 ### How many validators will be online at launch?

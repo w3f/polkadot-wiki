@@ -4,8 +4,6 @@ title: Polkadot
 sidebar_label: Polkadot
 ---
 
-# Polkadot
-
 Polkadot is a heterogeneous multi-chain technology. It consists of the @(relay chain), @(parachain)s, and @(bridge)s to other networks. The relay chain is responsible for achieving consensus and transaction delivery among parachains. Parachains are independent blockchains with their own state transitions that gather and process transactions while plugging in to the security of the relay chain. Bridges allow the Polkadot network to make it interoperable with other blockchains not built to natively support it.
 
 ## Why Polkadot?

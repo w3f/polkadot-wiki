@@ -4,8 +4,6 @@ title: Cumulus
 sidebar_label: Cumulus
 ---
 
-# Cumulus
-
 > Cumulus clouds are shaped sort of like dots and are up in the air, like this project (as it is an initial prototype -- expect a rename when it gets cooler.)
 
 [Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
@@ -30,6 +28,6 @@ runtime::register_validate_block!(Block, BlockExecutor);
 
 A planned Polkadot collator for a parachain.
 
-## Resources 
+## Resources
 
 - [Rob's talk from EthCC introducing Cumulus](https://www.youtube.com/watch?v=thgtXq5YMOo)

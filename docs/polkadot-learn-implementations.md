@@ -4,8 +4,6 @@ title: Polkadot Implementations
 sidebar_label: Polkadot Implementations
 ---
 
-# Polkadot Implementations
-
 There are Polkadot implementations developed in Rust, C++, Go, and JavaScript.
 
 [**Polkadot**](https://github.com/paritytech/polkadot) - The Rust client is developed by Parity Technologies in concert with their work on [Substrate](https://github.com/paritytech/substrate).

@@ -4,8 +4,6 @@ title: Architecture
 sidebar_label: Architecture
 ---
 
-# Architecture
-
 Polkadot is a heterogeneous multichain with scalable security and an interoperability protocol.
 
 ## Relay-chain

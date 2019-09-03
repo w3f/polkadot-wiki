@@ -4,8 +4,6 @@ title: Builders Portal
 sidebar_label: Builders Portal
 ---
 
-# Builders Portal
-
 _Polkadot is under construction, these documents will likely change._
 
 Welcome to the builders section of the Polkadot wiki.
