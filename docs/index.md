@@ -4,7 +4,7 @@ title: Polkadot Wiki
 sidebar_label: Polkadot Wiki
 ---
 
-![Polkadot Logo](./img/Polkadot_logotype_color.svg)
+![Polkadot Logo](../../../img/Polkadot_logotype_color.svg)
 
 Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol.
 
