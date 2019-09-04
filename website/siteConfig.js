@@ -41,7 +41,7 @@ const siteConfig = {
 	{doc: 'polkadot-build-index', label: 'Build'},
 	{doc: 'polkadot-learn-index', label: 'Learn'},
         {doc: 'polkadot-node-index', label: 'Maintainers'},
-	{page: 'help', label: 'Help'}
+	{ languages: true }
     ],
 
     // If you have users set above, you add it here:
