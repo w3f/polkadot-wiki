@@ -26,7 +26,7 @@ const siteConfig = {
     url: 'https://w3f.github.io', // Your website URL
     baseUrl: '/polkadot-wiki-i18n/',
     // Used for publishing and more
-    projectName: 'polkadot-wiki',
+    projectName: 'polkadot-wiki-i18n',
     organizationName: 'w3f',
     // For top-level user or org sites, the organization is still the same.
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
