@@ -23,15 +23,11 @@ const users = [
 const siteConfig = {
     title: 'Polkadot Wiki', // Title for your website.
     tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol',
-    url: 'https://wiki.polkadot.network', // Your website URL
-    baseUrl: '/', // Base URL for your project */
-    // For github.io type URLs, you would set the url and baseUrl like:
-    //   url: 'https://facebook.github.io',
-    //   baseUrl: '/test-site/',
-
+    url: 'https://w3f.github.io', // Your website URL
+    baseUrl: '/polkadot-wiki-i18n/',
     // Used for publishing and more
     projectName: 'Polkadot Wiki',
-    organizationName: 'Web3 Foundation',
+    organizationName: 'w3f',
     // For top-level user or org sites, the organization is still the same.
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
     //   organizationName: 'JoelMarcey'
