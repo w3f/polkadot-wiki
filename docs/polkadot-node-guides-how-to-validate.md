@@ -79,7 +79,7 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
 
 To be a validator, you will need three separate accounts for managing your funds, namely `stash`, `controller`, and `session`. If you want to know more about it, please see [here](polkadot-learn-staking#accounts).
 
-![create account](../../../img/guides/how-to-validate/polkadot-dashboard-create-account.jpg)
+![create account](../../img/guides/how-to-validate/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) and click on the `add account` button.
 
 To help identify your accounts easily later, make sure to use `stash`, `controller`, and `session` in the names of your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
@@ -94,7 +94,7 @@ You should use `Schnorrkel (sr25519)` for your Stash and Controller accounts and
 
 The mnemonic phrase for the Session account needs to be used later in this guide to validate. Make sure you save it safely.
 
-![backup seed](../../../img/guides/how-to-validate/polkadot-overview.jpg)
+![backup seed](../../img/guides/how-to-validate/polkadot-overview.jpg)
 
 ## Get Testnet DOTs Tokens
 
@@ -110,7 +110,7 @@ It is now time to set up our validator. We will do the following:
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
 
-![dashboard bonding](../../../img/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
+![dashboard bonding](../../img/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
 - **Stash account** - Select your `stash` account, we will bond 100 milliDOTs, make sure it has enough funds.
 - **Controller account** - Select the `controller` account created earlier.
@@ -123,7 +123,7 @@ Once everything is filled properly, click `Bond` and sign the transaction (with 
 
 You should now see a new card with all your accounts. The bonded amount on the right corresponds to the funds bonded by the `stash` account.
 
-![dashboard validate](../../../img/guides/how-to-validate/polkadot-dashboard-set-session-key.jpg)
+![dashboard validate](../../img/guides/how-to-validate/polkadot-dashboard-set-session-key.jpg)
 
 Click on `Set Session Key`. Select the `session` account created previously and click on `Set Session Key`.
 
@@ -139,14 +139,14 @@ polkadot --chain alex --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TE
 
 Make sure that the address generated from the seed corresponds to your `session` account's address. Don't worry if the last characters diverge, it's just the checksum that has recently changed.
 
-![terminal session key verification](../../../img/guides/how-to-validate/polkadot-node-seed.jpg)
+![terminal session key verification](../../img/guides/how-to-validate/polkadot-node-seed.jpg)
 
 To verify that your node is live and in sync, head to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after a few seconds, your node's information will be shown.
 
 If everything looks good, go ahead and click on `Validate` in Polkadot UI.
 
-![dashboard validate](../../../img/guides/how-to-validate/polkadot-dashboard-validate.jpg)
-![dashboard validate](../../../img/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
+![dashboard validate](../../img/guides/how-to-validate/polkadot-dashboard-validate.jpg)
+![dashboard validate](../../img/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
 - **Unstake Threshold** - Set how often you want to be reported offline (and slashed) before being removed from the validator set. A higher value will allow you to be offline more times before being slashed, but you will be slashed more severely.
 - **Reward Commission** - Select how much of the reward you will keep; the rest will be shared among you and your nominators.
@@ -155,7 +155,7 @@ Click `Validate`.
 
 Go to the Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validator slots are available and how many nodes intend to be a validator.
 
-![staking queue](../../../img/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
+![staking queue](../../img/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
 
 Your node will be shown on the *next up* queue. In the next era (up to 1 hour), if you have enough backing, your node will become an active validator.
 
