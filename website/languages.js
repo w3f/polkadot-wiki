@@ -171,6 +171,12 @@ const languages = [
     name: 'Tiếng Việt',
     tag: 'vi',
   },
+      {
+    enabled: true,
+    name: 'Thai',
+    tag: 'th',
+  },
+
   {
     enabled: true,
     name: '中文',

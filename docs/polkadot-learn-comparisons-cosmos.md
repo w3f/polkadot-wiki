@@ -1,7 +1,7 @@
 ---
 id: polkadot-learn-comparisons-cosmos
-title: Polkadot vs. Cosmos: Design Comparison
-sidebar_label: Polkadot vs. Cosmos: Design Comparison
+title: Polkadot vs. Cosmos - Design Comparison
+sidebar_label: Polkadot vs. Cosmos - Design Comparison
 ---
 
 Both Polkadot and Cosmos are projects in the blockchain space that aim to solve interoperability and scalability of blockchains.
