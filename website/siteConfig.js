@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
     title: 'Polkadot Wiki', // Title for your website.
     tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol',
-    url: 'https://w3f.github.io', // Your website URL
+    url: 'https://w3f.github.io/', // Your website URL
     baseUrl: '/',
     // Used for publishing and more
     projectName: 'polkadot-wiki-i18n',
