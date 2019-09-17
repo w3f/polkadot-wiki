@@ -1,6 +1,5 @@
 {
   "homepage": "https://w3f.github.io/polkadot-wiki-i18n",
-
   "scripts": {
     "examples": "docusaurus-examples",
     "predeploy": "npm run build",
