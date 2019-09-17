@@ -124,8 +124,8 @@ class Index extends React.Component {
           {
             content:
               'Polkadot empowers blockchain networks to work together under the protection of shared security.',
-            image: `${baseUrl}img/undraw_note_list.svg`,
-            imageAlign: 'right',
+            image: `${baseUrl}img/updated_pre.png`,
+            imageAlign: 'left',
             title: 'Build',
           },
         ]}
@@ -138,7 +138,7 @@ class Index extends React.Component {
           {
             content:
               'Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+            image: `${baseUrl}img/network/one_parachain.png`,
             imageAlign: 'right',
             title: 'A scalable, heterogeneous multichain.',
           },
