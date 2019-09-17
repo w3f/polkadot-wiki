@@ -61,7 +61,8 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
+          <img src='/polkadot-wiki-i18n/img/Polkadot_logotype_color.svg' height={320}/>
+          {/* <ProjectTitle siteConfig={siteConfig} /> */}
           {/* <PromoSection>
             <Button href="#try">Try It Out</Button>
             <Button href={docUrl('doc1.html')}>Build</Button>
@@ -122,10 +123,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
+              'Polkadot empowers blockchain networks to work together under the protection of shared security.',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
-            title: 'Description',
+            title: 'Build',
           },
         ]}
       </Block>
@@ -136,10 +137,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
+              'Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.',
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'A scalable, heterogeneous multichain.',
           },
         ]}
       </Block>
@@ -149,16 +150,16 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'This is the content of my feature',
+            content: 'Run a validator and help to secure the Polkadot network while earning rewards.',
             image: `${baseUrl}img/undraw_react.svg`,
             imageAlign: 'top',
-            title: 'Feature One',
+            title: 'Validate',
           },
           {
-            content: 'The content of my second feature',
+            content: 'Run a collator to package the parachain blocks and pass them to validators for verification.',
             image: `${baseUrl}img/undraw_operating_system.svg`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            title: 'Collate',
           },
         ]}
       </Block>
@@ -193,16 +194,21 @@ class Index extends React.Component {
       );
     };
 
+    const Button = props => (
+      <div className="pluginWrapper buttonWrapper">
+        <a className="button" href={props.href} target={props.target}>
+          {props.children}
+        </a>
+      </div>
+    );
+
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          {/* <Features /> */}
-          {/* <FeatureCallout /> */}
           <LearnHow />
-          {/* <TryOut /> */}
           <Description />
-          {/* <Showcase /> */}
+          <Features />
         </div> 
       </div>
     );

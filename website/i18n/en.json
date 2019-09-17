@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol",
+    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol.",
     "docs": {
       "community": {
         "title": "Community",
@@ -281,13 +281,13 @@
     "links": {
       "Build": "Build",
       "Learn": "Learn",
-      "Maintainers": "Maintainers"
+      "Maintain": "Maintain"
     },
     "categories": {
       "Main": "Main",
       "Build": "Build",
       "Learn": "Learn",
-      "Maintaining": "Maintaining"
+      "Maintain": "Maintain"
     }
   },
   "pages-strings": {

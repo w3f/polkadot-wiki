@@ -32,7 +32,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'polkadot-build-index', label: 'Build'},
     {doc: 'polkadot-learn-index', label: 'Learn'},
-    {doc: 'polkadot-node-index', label: 'Maintainers'},
+    {doc: 'polkadot-node-index', label: 'Maintain'},
     { languages: true }
   ],
 
