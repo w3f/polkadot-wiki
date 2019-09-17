@@ -25,12 +25,8 @@ const siteConfig = {
     tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol',
     url: 'https://w3f.github.io', // Your website URL
     baseUrl: '/polkadot-wiki-i18n/',
-    // Used for publishing and more
     projectName: 'polkadot-wiki-i18n',
     organizationName: 'w3f',
-    // For top-level user or org sites, the organization is still the same.
-    // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-    //   organizationName: 'JoelMarcey'
 
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
@@ -50,7 +46,7 @@ const siteConfig = {
 
     /* Colors for website */
     colors: {
-	primaryColor: '#56070b',
+	primaryColor: '#000000',
 	secondaryColor: '#3c0407',
     },
 
@@ -93,14 +89,14 @@ const siteConfig = {
     docsSideNavCollapsible: true,
 
     // Show documentation's last contributor's name.
-    // enableUpdateBy: true,
+    enableUpdateBy: true,
 
     // Show documentation's last update time.
-    // enableUpdateTime: true,
+    enableUpdateTime: true,
 
     // You may provide arbitrary config keys to be used as needed by your
     // template. For example, if you need your repo's URL...
-    //   repoUrl: 'https://github.com/facebook/test-site',
+      repoUrl: 'https://github.com/paritytech/polkadot',
 };
 
 module.exports = siteConfig;
