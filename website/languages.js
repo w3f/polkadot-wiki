@@ -12,7 +12,7 @@ const languages = [
     tag: 'en',
   },
   {
-    enabled: true,
+    enabled: false,
     name: '日本語',
     tag: 'ja',
   },
@@ -52,7 +52,7 @@ const languages = [
     tag: 'el',
   },
   {
-    enabled: true,
+    enabled: false,
     name: 'Español',
     tag: 'es-ES',
   },
@@ -97,7 +97,7 @@ const languages = [
     tag: 'af',
   },
   {
-    enabled: true,
+    enabled: false,
     name: '한국어',
     tag: 'ko',
   },
@@ -137,7 +137,7 @@ const languages = [
     tag: 'ro',
   },
   {
-    enabled: true,
+    enabled: false,
     name: 'Русский',
     tag: 'ru',
   },
@@ -157,7 +157,7 @@ const languages = [
     tag: 'sv-SE',
   },
   {
-    enabled: true,
+    enabled: false,
     name: 'Türkçe',
     tag: 'tr',
   },
@@ -176,6 +176,11 @@ const languages = [
     name: '中文',
     tag: 'zh-CN',
   },
-  {enabled: false, name: '繁體中文', tag: 'zh-TW'},
+  {
+    enabled: false,
+    name: '繁體中文',
+    tag: 'zh-TW',
+  },
 ];
+
 module.exports = languages;

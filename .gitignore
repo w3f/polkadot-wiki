@@ -62,3 +62,5 @@ typings/
 
 # Emacs backup files
 *~
+
+build
