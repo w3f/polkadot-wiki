@@ -42,7 +42,10 @@ class HomeSplash extends React.Component {
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+    const {baseUrl, docsUrl} = siteConfig;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
+    const langPart = `${language ? `${language}/` : ''}`;
+    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const Block = props => (
       <Container
@@ -62,7 +65,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Polkadot empowers blockchain networks to work together under the protection of shared security.',
+              `Polkadot empowers blockchain networks to work together under the protection of shared security.\n\n[Go to builder's portal](${docUrl('polkadot-build-index')})`,
             image: `${baseUrl}img/network/one_parachain.png`,
             imageAlign: 'left',
             title: 'Build',
@@ -76,7 +79,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.',
+              `Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.\n\n[Learn more](${docUrl('polkadot-learn-index')})`,
             image: `${baseUrl}img/polkadot_overview.svg`,
             imageAlign: 'right',
             title: 'A scalable, heterogeneous multichain.',
@@ -86,22 +89,29 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'Run a validator and help to secure the Polkadot network while earning rewards.',
-            image: `${baseUrl}img/icon_validator.svg`,
-            imageAlign: 'top',
-            title: 'Validate',
-          },
-          {
-            content: 'Run a collator to package the parachain blocks and pass them to validators for verification.',
-            image: `${baseUrl}img/icon_collator.svg`,
-            imageAlign: 'top',
-            title: 'Collate',
-          },
-        ]}
-      </Block>
+      <>
+        <Block layout="fourColumn">
+          {[
+            {
+              content: 'Run a validator and help to secure the Polkadot network while earning rewards.',
+              image: `${baseUrl}img/icon_validator.svg`,
+              imageAlign: 'top',
+              title: 'Validate',
+            },
+            {
+              content: 'Run a collator to package the parachain blocks and pass them to validators for verification.',
+              image: `${baseUrl}img/icon_collator.svg`,
+              imageAlign: 'top',
+              title: 'Collate',
+            },
+          ]}
+        </Block>
+        <center>
+          <a href={docUrl('polkadot-node-index')}>
+            Be a maintainer
+          </a>
+        </center>
+      </>
     );
 
     return (
