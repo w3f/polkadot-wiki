@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
-  tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol',
+  tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol.',
   url: 'https://w3f.github.io', // Your website URL
   baseUrl: '/polkadot-wiki-i18n/',
   projectName: 'polkadot-wiki-i18n',
@@ -46,8 +46,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#000000',
-    secondaryColor: '#3c0407',
+    primaryColor: '#E6007A',
+    secondaryColor: '#000000',
   },
 
   /* Custom fonts for website */

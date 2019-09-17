@@ -14,3 +14,20 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+  background-color: black;
+}
+
+.fixedHeaderContainer {
+  background: black;
+}
+
+.homeContainer {
+  background: white;
+  height: 40vh;
+}
+
+.projectTitle {
+  color: black;
+}
