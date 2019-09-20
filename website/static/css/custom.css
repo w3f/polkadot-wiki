@@ -1,6 +1,8 @@
-/* your custom css */
-
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  .mainpage-column {
+    width: 100% !important;
+  }
+  
 }
 
 @media only screen and (min-width: 1024px) {
@@ -46,4 +48,98 @@
 
 .projectTitle {
   color: black;
+}
+
+.nav-footer .row {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-footer .row .item {
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-footer .row .item:hover {
+  color: #ffffff;
+}
+
+.mainpage-row {
+  width: 100%;
+  display: flex;
+  padding: 10%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.mainpage-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  text-align: center;
+  flex-flow: column;
+}
+
+.mainpage-maintain-btn {
+  background: black;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.mainpage-maintain-btn:hover {
+  background: #E6007A;
+  cursor: pointer;
+}
+
+.mainpage-build-btn {
+  background: #E6007A;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.mainpage-build-btn:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.mainpage-row-build {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: linear-gradient(#AAA, #777);
+
+  color: white;
+}
+
+.mainpage-row-learn {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: linear-gradient(#FFF, #AAA);
+  color: black;
+}
+
+.full-width {
+  width: 100%;
+  text-align: center;
 }

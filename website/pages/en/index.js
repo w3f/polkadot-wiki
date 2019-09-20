@@ -9,17 +9,9 @@ const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
 
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
-
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
-    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
+    // const {siteConfig, language = ''} = this.props;
 
     const SplashContainer = props => (
       <div className="homeContainer">
@@ -47,80 +39,63 @@ class Index extends React.Component {
     const langPart = `${language ? `${language}/` : ''}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
-    const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
-      </Container>
-    );
-
-    const Description = () => (
-      <Block background="dark">
-        {[
-          {
-            content:
-              `Polkadot empowers blockchain networks to work together under the protection of shared security.\n\n[Go to builder's portal](${docUrl('polkadot-build-index')})`,
-            image: `${baseUrl}img/network/one_parachain.png`,
-            imageAlign: 'left',
-            title: 'Build',
-          },
-        ]}
-      </Block>
-    );
-
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content:
-              `Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.\n\n[Learn more](${docUrl('polkadot-learn-index')})`,
-            image: `${baseUrl}img/polkadot_overview.svg`,
-            imageAlign: 'right',
-            title: 'A scalable, heterogeneous multichain.',
-          },
-        ]}
-      </Block>
-    );
-
-    const Features = () => (
-      <>
-        <Block layout="fourColumn">
-          {[
-            {
-              content: 'Run a validator and help to secure the Polkadot network while earning rewards.',
-              image: `${baseUrl}img/icon_validator.svg`,
-              imageAlign: 'top',
-              title: 'Validate',
-            },
-            {
-              content: 'Run a collator to package the parachain blocks and pass them to validators for verification.',
-              image: `${baseUrl}img/icon_collator.svg`,
-              imageAlign: 'top',
-              title: 'Collate',
-            },
-          ]}
-        </Block>
-        <center>
-          <a href={docUrl('polkadot-node-index')}>
-            Be a maintainer
-          </a>
-        </center>
-      </>
-    );
-
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <LearnHow />
-          <Description />
-          <Features />
+          <div className="mainpage-row-learn">
+            <div className="mainpage-column">
+              <h2>A scalable, heterogeneous multichain.</h2>
+              <p>
+                Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.              </p>
+              <a href={docUrl('polkadot-learn-index')}>
+                <button className="mainpage-build-btn">
+                  Learn More                
+                </button>
+              </a>
+            </div>
+            <div className="mainpage-column">
+              <img src={`${baseUrl}img/polkadot_overview.svg`}/>
+            </div>
+          </div>
+          <div className="mainpage-row-build">
+            <div className="mainpage-column">
+              <img src={`${baseUrl}img/network/one_parachain.png`}/>
+            </div>
+            <div className="mainpage-column">
+              <h2>Build</h2>
+              <p>
+                Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.
+              </p>
+              <a href={docUrl('polkadot-build-index')}>
+                <button className="mainpage-build-btn">
+                  Builder's Portal
+                </button>
+              </a>
+            </div>
+          </div>
+          <div className="mainpage-row">
+            <h1 className="full-width">Maintain</h1>
+            <div className="mainpage-column">
+              <img src={`${baseUrl}img/icon_validator.svg`} width={100}/>
+              <h2>Validators</h2>
+              <p>
+              Run a validator and help to secure the Polkadot network while earning rewards.
+              </p>
+            </div>
+            <div className="mainpage-column">
+              <img src={`${baseUrl}img/icon_collator.svg`} width={100}/>
+              <h2>Collators</h2>
+              <p>
+              Run a collator to package the parachain blocks and pass them to validators for verification.
+              </p>
+            </div>
+            <a href={docUrl('polkadot-node-index')}>
+              <button className="mainpage-maintain-btn">
+                Become a Maintainer
+              </button>
+            </a>
+          </div>
         </div> 
       </div>
     );
