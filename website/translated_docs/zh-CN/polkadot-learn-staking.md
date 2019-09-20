@@ -1,5 +1,5 @@
 ---
-id: polkadot-learn-staking
+id: learn-staking
 title: 抵押
 sidebar_label: 抵押
 ---
@@ -78,7 +78,7 @@ TODO:![staking](assets/NPoS/staking-keys.png)
 
 - **Session** 此账户种子应通过`--key`参数传递至节点。你可以为密钥参数传入助记符（推荐）或种子。Session 帐户中无需存入任何资金，其并不负责发送任何交易。最好的做法是创建专用的 session 帐户。尽管理论上单个帐户可同时作为 `session` 和 `controller` 账户加以使用，但并不建议你这样操作。专用的 `session` 帐户能够防止资金在验证人节点受到攻击或密钥遭遇泄漏时被盗取。需注意，session 密钥应始终为加密类型 `Edwards (Ed25519)`，而非默认的 `Schnorrkel (sr25519)`。
 
-TODO:更多关于在波卡链中密钥如何使用及其背后密码学的内容，请参见[此处](polkadot-learn-keys#session-keys)。
+TODO:更多关于在波卡链中密钥如何使用及其背后密码学的内容，请参见[此处](learn-keys#session-keys)。
 
 ## 验证人 和 提名人
 
@@ -88,8 +88,8 @@ TODO:更多关于在波卡链中密钥如何使用及其背后密码学的内容
 
 ### 想参与抵押 DOT?
 
-TODO:- [提名人指南](polkadot-node-guides-how-to-nominate) - 成为 Alexander 测试网的提名人。
-TODO:- [验证人指南](polkadot-node-guides-how-to-validate) - 成为 Alexander 测试网的验证人。
+TODO:- [提名人指南](maintain-guides-how-to-nominate) - 成为 Alexander 测试网的提名人。
+TODO:- [验证人指南](maintain-guides-how-to-validate) - 成为 Alexander 测试网的验证人。
 
 ## Slash惩罚
 

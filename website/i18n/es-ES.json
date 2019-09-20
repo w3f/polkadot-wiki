@@ -57,219 +57,219 @@
         "title": "This Week in Polkadot",
         "sidebar_label": "This Week in Polkadot"
       },
-      "polkadot-build-build-with-polkadot": {
+      "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
-      "polkadot-build-cumulus": {
+      "build-cumulus": {
         "title": "Cumulus",
         "sidebar_label": "Cumulus"
       },
-      "polkadot-build-deploy-parachains": {
+      "build-deploy-parachains": {
         "title": "How to view and deploy parachains",
         "sidebar_label": "How to view and deploy parachains"
       },
-      "polkadot-build-dev-roadmap": {
+      "build-dev-roadmap": {
         "title": "Roadmap For Developers",
         "sidebar_label": "Roadmap For Developers"
       },
-      "polkadot-build-examples-index": {
+      "build-examples-index": {
         "title": "Examples",
         "sidebar_label": "Examples"
       },
-      "polkadot-build-exchange-integration": {
+      "build-exchange-integration": {
         "title": "Exchange integration",
         "sidebar_label": "Exchange integration"
       },
-      "polkadot-build-extrinsic-format": {
+      "build-extrinsic-format": {
         "title": "Polkadot Extrinsic Format aka Transaction Format",
         "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
       },
-      "polkadot-build-hackathon": {
+      "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "Hackathon"
       },
-      "polkadot-build-index": {
+      "build-index": {
         "title": "Builders Portal",
         "sidebar_label": "Builders Portal"
       },
-      "polkadot-build-networks": {
+      "build-networks": {
         "title": "Networks",
         "sidebar_label": "Networks"
       },
-      "polkadot-build-pdk": {
+      "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
       },
-      "polkadot-build-rust-style-guide": {
+      "build-rust-style-guide": {
         "title": "Style Guide for Rust in Polkadot",
         "sidebar_label": "Style Guide for Rust in Polkadot"
       },
-      "polkadot-build-smart-contracts": {
+      "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
       },
-      "polkadot-build-tools-index": {
+      "build-tools-index": {
         "title": "Tools",
         "sidebar_label": "Tools"
       },
-      "polkadot-build-tools-subkey": {
+      "build-tools-subkey": {
         "title": "Subkey",
         "sidebar_label": "Subkey"
       },
-      "polkadot-learn-architecture": {
+      "learn-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
       },
-      "polkadot-learn-auction": {
+      "learn-auction": {
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
       },
-      "polkadot-learn-basics": {
+      "learn-basics": {
         "title": "Basics",
         "sidebar_label": "Basics"
       },
-      "polkadot-learn-bridges": {
+      "learn-bridges": {
         "title": "Bridges",
         "sidebar_label": "Bridges"
       },
-      "polkadot-learn-comparisons-cosmos": {
+      "learn-comparisons-cosmos": {
         "title": "Polkadot vs. Cosmos: Design Comparison",
         "sidebar_label": "Polkadot vs. Cosmos: Design Comparison"
       },
-      "polkadot-learn-comparisons": {
+      "learn-comparisons": {
         "title": "Polkadot comparisons",
         "sidebar_label": "Polkadot comparisons"
       },
-      "polkadot-learn-consensus": {
+      "learn-consensus": {
         "title": "Polkadot Consensus",
         "sidebar_label": "Polkadot Consensus"
       },
-      "polkadot-learn-cryptography": {
+      "learn-cryptography": {
         "title": "Cryptography Explainer",
         "sidebar_label": "Cryptography Explainer"
       },
-      "polkadot-learn-DOT": {
+      "learn-DOT": {
         "title": "DOT",
         "sidebar_label": "DOT"
       },
-      "polkadot-learn-faq": {
+      "learn-faq": {
         "title": "Frequently Asked Questions (FAQs)",
         "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
-      "polkadot-learn-governance": {
+      "learn-governance": {
         "title": "Governance",
         "sidebar_label": "Governance"
       },
-      "polkadot-learn-grandpa": {
+      "learn-grandpa": {
         "title": "GRANDPA",
         "sidebar_label": "GRANDPA"
       },
-      "polkadot-learn-implementations": {
+      "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
       },
-      "polkadot-learn-index": {
+      "learn-index": {
         "title": "Learn about Polkadot",
         "sidebar_label": "Learn about Polkadot"
       },
-      "polkadot-learn-interchain": {
+      "learn-interchain": {
         "title": "Interchain Message Passing (ICMP)",
         "sidebar_label": "Interchain Message Passing (ICMP)"
       },
-      "polkadot-learn-introduction": {
+      "learn-introduction": {
         "title": "Polkadot",
         "sidebar_label": "Polkadot"
       },
-      "polkadot-learn-keys": {
+      "learn-keys": {
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
-      "polkadot-learn-parachains": {
+      "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"
       },
-      "polkadot-learn-parathreads": {
+      "learn-parathreads": {
         "title": "Parathreads",
         "sidebar_label": "Parathreads"
       },
-      "polkadot-learn-phragmen": {
+      "learn-phragmen": {
         "title": "What is Phragmen and what does it mean for node operators?",
         "sidebar_label": "What is Phragmen and what does it mean for node operators?"
       },
-      "polkadot-learn-PRE": {
+      "learn-PRE": {
         "title": "Polkadot Runtime Environment (PRE)",
         "sidebar_label": "Polkadot Runtime Environment (PRE)"
       },
-      "polkadot-learn-randomness": {
+      "learn-randomness": {
         "title": "Randomness",
         "sidebar_label": "Randomness"
       },
-      "polkadot-learn-relevant-links": {
+      "learn-relevant-links": {
         "title": "Links",
         "sidebar_label": "Links"
       },
-      "polkadot-learn-roadmap": {
+      "learn-roadmap": {
         "title": "Roadmap",
         "sidebar_label": "Roadmap"
       },
-      "polkadot-learn-security": {
+      "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
       },
-      "polkadot-learn-spree": {
+      "learn-spree": {
         "title": "SPREE",
         "sidebar_label": "SPREE"
       },
-      "polkadot-learn-staking": {
+      "learn-staking": {
         "title": "Staking",
         "sidebar_label": "Staking"
       },
-      "polkadot-learn-treasury": {
+      "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
       },
-      "polkadot-learn-UI": {
+      "learn-UI": {
         "title": "Polkadot UI",
         "sidebar_label": "Polkadot UI"
       },
-      "polkadot-learn-wasm": {
+      "learn-wasm": {
         "title": "WebAssembly (Wasm)",
         "sidebar_label": "WebAssembly (Wasm)"
       },
-      "polkadot-node-collator": {
+      "maintain-collator": {
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "polkadot-node-governance-index": {
+      "maintain-governance-index": {
         "title": "Governance",
         "sidebar_label": "Governance"
       },
-      "polkadot-node-guides-how-to-nominate": {
+      "maintain-guides-how-to-nominate": {
         "title": "How to nominate",
         "sidebar_label": "How to nominate"
       },
-      "polkadot-node-guides-how-to-systemd": {
+      "maintain-guides-how-to-systemd": {
         "title": "How to run your node as a `systemd` process",
         "sidebar_label": "How to run your node as a `systemd` process"
       },
-      "polkadot-node-guides-how-to-validate": {
+      "maintain-guides-how-to-validate": {
         "title": "How to validate",
         "sidebar_label": "How to validate"
       },
-      "polkadot-node-guides-validator-payout": {
+      "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
         "sidebar_label": "Validator Payout Overview"
       },
-      "polkadot-node-index": {
+      "maintain-index": {
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
-      "polkadot-node-node-operator": {
+      "maintain-node-operator": {
         "title": "Node Operator / Validator",
         "sidebar_label": "Node Operator / Validator"
       },
-      "polkadot-node-nominator": {
+      "maintain-nominator": {
         "title": "Nominator",
         "sidebar_label": "Nominator"
       },

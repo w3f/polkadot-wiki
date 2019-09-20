@@ -57,219 +57,219 @@
         "title": "This Week in Polkadot",
         "sidebar_label": "This Week in Polkadot"
       },
-      "polkadot-build-build-with-polkadot": {
+      "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
-      "polkadot-build-cumulus": {
+      "build-cumulus": {
         "title": "Cumulus",
         "sidebar_label": "Cumulus"
       },
-      "polkadot-build-deploy-parachains": {
+      "build-deploy-parachains": {
         "title": "How to view and deploy parachains",
         "sidebar_label": "How to view and deploy parachains"
       },
-      "polkadot-build-dev-roadmap": {
+      "build-dev-roadmap": {
         "title": "Roadmap For Developers",
         "sidebar_label": "Roadmap For Developers"
       },
-      "polkadot-build-examples-index": {
+      "build-examples-index": {
         "title": "例子",
         "sidebar_label": "例子"
       },
-      "polkadot-build-exchange-integration": {
+      "build-exchange-integration": {
         "title": "交易所整合",
         "sidebar_label": "交易所整合"
       },
-      "polkadot-build-extrinsic-format": {
+      "build-extrinsic-format": {
         "title": "Polkadot Extrinsic Format aka Transaction Format",
         "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
       },
-      "polkadot-build-hackathon": {
+      "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "黑客马拉松"
       },
-      "polkadot-build-index": {
+      "build-index": {
         "title": "Builders Portal",
         "sidebar_label": "Builders Portal"
       },
-      "polkadot-build-networks": {
+      "build-networks": {
         "title": "网络",
         "sidebar_label": "网络"
       },
-      "polkadot-build-pdk": {
+      "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
       },
-      "polkadot-build-rust-style-guide": {
+      "build-rust-style-guide": {
         "title": "Style Guide for Rust in Polkadot",
         "sidebar_label": "Style Guide for Rust in Polkadot"
       },
-      "polkadot-build-smart-contracts": {
+      "build-smart-contracts": {
         "title": "智能合约",
         "sidebar_label": "智能合约"
       },
-      "polkadot-build-tools-index": {
+      "build-tools-index": {
         "title": "工具",
         "sidebar_label": "工具"
       },
-      "polkadot-build-tools-subkey": {
+      "build-tools-subkey": {
         "title": "Subkey",
         "sidebar_label": "Subkey"
       },
-      "polkadot-learn-architecture": {
+      "learn-architecture": {
         "title": "架构",
         "sidebar_label": "架构"
       },
-      "polkadot-learn-auction": {
+      "learn-auction": {
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
       },
-      "polkadot-learn-basics": {
+      "learn-basics": {
         "title": "Basics",
         "sidebar_label": "基础"
       },
-      "polkadot-learn-bridges": {
+      "learn-bridges": {
         "title": "Bridges",
         "sidebar_label": "Bridges"
       },
-      "polkadot-learn-comparisons-cosmos": {
+      "learn-comparisons-cosmos": {
         "title": "Polkadot vs. Cosmos: 设计比较",
         "sidebar_label": "Polkadot vs. Cosmos: 设计比较"
       },
-      "polkadot-learn-comparisons": {
+      "learn-comparisons": {
         "title": "Polkadot comparisons",
         "sidebar_label": "Polkadot comparisons"
       },
-      "polkadot-learn-consensus": {
+      "learn-consensus": {
         "title": "Polkadot 共识",
         "sidebar_label": "Polkadot 共识"
       },
-      "polkadot-learn-cryptography": {
+      "learn-cryptography": {
         "title": "Cryptography Explainer",
         "sidebar_label": "Cryptography Explainer"
       },
-      "polkadot-learn-DOT": {
+      "learn-DOT": {
         "title": "DOT",
         "sidebar_label": "DOT"
       },
-      "polkadot-learn-faq": {
+      "learn-faq": {
         "title": "常见问题",
         "sidebar_label": "常见问题"
       },
-      "polkadot-learn-governance": {
+      "learn-governance": {
         "title": "治理",
         "sidebar_label": "治理"
       },
-      "polkadot-learn-grandpa": {
+      "learn-grandpa": {
         "title": "GRANDPA",
         "sidebar_label": "GRANDPA"
       },
-      "polkadot-learn-implementations": {
+      "learn-implementations": {
         "title": "Polkadot 实现",
         "sidebar_label": "Polkadot 实现"
       },
-      "polkadot-learn-index": {
+      "learn-index": {
         "title": "了解 Polkadot",
         "sidebar_label": "了解 Polkadot"
       },
-      "polkadot-learn-interchain": {
+      "learn-interchain": {
         "title": "Interchain Message Passing (ICMP)",
         "sidebar_label": "Interchain Message Passing (ICMP)"
       },
-      "polkadot-learn-introduction": {
+      "learn-introduction": {
         "title": "Polkadot",
         "sidebar_label": "Polkadot"
       },
-      "polkadot-learn-keys": {
+      "learn-keys": {
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
-      "polkadot-learn-parachains": {
+      "learn-parachains": {
         "title": "平行链",
         "sidebar_label": "平行链"
       },
-      "polkadot-learn-parathreads": {
+      "learn-parathreads": {
         "title": "Parathreads",
         "sidebar_label": "Parathreads"
       },
-      "polkadot-learn-phragmen": {
+      "learn-phragmen": {
         "title": "What is Phragmen and what does it mean for node operators?",
         "sidebar_label": "What is Phragmen and what does it mean for node operators?"
       },
-      "polkadot-learn-PRE": {
+      "learn-PRE": {
         "title": "Polkadot Runtime Environment (PRE)",
         "sidebar_label": "Polkadot Runtime Environment (PRE)"
       },
-      "polkadot-learn-randomness": {
+      "learn-randomness": {
         "title": "Randomness",
         "sidebar_label": "Randomness"
       },
-      "polkadot-learn-relevant-links": {
+      "learn-relevant-links": {
         "title": "链接",
         "sidebar_label": "链接"
       },
-      "polkadot-learn-roadmap": {
+      "learn-roadmap": {
         "title": "路线图",
         "sidebar_label": "路线图"
       },
-      "polkadot-learn-security": {
+      "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
       },
-      "polkadot-learn-spree": {
+      "learn-spree": {
         "title": "SPREE",
         "sidebar_label": "SPREE"
       },
-      "polkadot-learn-staking": {
+      "learn-staking": {
         "title": "Staking",
         "sidebar_label": "Staking"
       },
-      "polkadot-learn-treasury": {
+      "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
       },
-      "polkadot-learn-UI": {
+      "learn-UI": {
         "title": "Polkadot UI",
         "sidebar_label": "Polkadot UI"
       },
-      "polkadot-learn-wasm": {
+      "learn-wasm": {
         "title": "WebAssembly (Wasm)",
         "sidebar_label": "WebAssembly (Wasm)"
       },
-      "polkadot-node-collator": {
+      "maintain-collator": {
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "polkadot-node-governance-index": {
+      "maintain-governance-index": {
         "title": "治理",
         "sidebar_label": "治理"
       },
-      "polkadot-node-guides-how-to-nominate": {
+      "maintain-guides-how-to-nominate": {
         "title": "如何成为提名人",
         "sidebar_label": "如何成为提名人"
       },
-      "polkadot-node-guides-how-to-systemd": {
+      "maintain-guides-how-to-systemd": {
         "title": "How to run your node as a `systemd` process",
         "sidebar_label": "How to run your node as a `systemd` process"
       },
-      "polkadot-node-guides-how-to-validate": {
+      "maintain-guides-how-to-validate": {
         "title": "如何运行验证人节点",
         "sidebar_label": "如何运行验证人节点"
       },
-      "polkadot-node-guides-validator-payout": {
+      "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
         "sidebar_label": "Validator Payout Overview"
       },
-      "polkadot-node-index": {
+      "maintain-index": {
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
-      "polkadot-node-node-operator": {
+      "maintain-node-operator": {
         "title": "验证人",
         "sidebar_label": "验证人"
       },
-      "polkadot-node-nominator": {
+      "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
       },

@@ -48,7 +48,7 @@ class Index extends React.Component {
               <h2>A scalable, heterogeneous multichain.</h2>
               <p>
                 Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.              </p>
-              <a href={docUrl('polkadot-learn-index')}>
+              <a href={docUrl('learn-index')}>
                 <button className="mainpage-build-btn">
                   Learn More                
                 </button>
@@ -67,7 +67,7 @@ class Index extends React.Component {
               <p>
                 Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.
               </p>
-              <a href={docUrl('polkadot-build-index')}>
+              <a href={docUrl('build-index')}>
                 <button className="mainpage-build-btn">
                   Builder's Portal
                 </button>
@@ -90,7 +90,7 @@ class Index extends React.Component {
               Run a collator to package the parachain blocks and pass them to validators for verification.
               </p>
             </div>
-            <a href={docUrl('polkadot-node-index')}>
+            <a href={docUrl('maintain-index')}>
               <button className="mainpage-maintain-btn">
                 Become a Maintainer
               </button>
