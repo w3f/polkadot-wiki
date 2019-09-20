@@ -69,7 +69,7 @@ The second point we want to highlight is that each validator candidate is free t
 
 There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts.
 
-![staking](../../img/NPoS/staking-keys.png)
+![staking](assets/NPoS/staking-keys.png)
 
 - **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
 - **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken).
@@ -84,7 +84,7 @@ For more on how keys are used in Polkadot and the cryptography behind it [see he
 
 Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting, they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate STF of parachains, and possibly some other responsibilities in regard to data availability. Nominators, on the other hand do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it" while the validator will be doing an actual service for the network by performing the critical operations. For this reason, the validator has certain privileges in regard to the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
 
-![staking](../../img/NPoS/article-2.png)
+![staking](assets/NPoS/article-2.png)
 
 ### Want to stake DOTs?
 
@@ -135,7 +135,7 @@ Rewards can be used by the same account (controller) to keep accumulating the re
 
 It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
-![staking](../../img/NPoS/staking-participation-rate.png)
+![staking](assets/NPoS/staking-participation-rate.png)
 
 <sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
 

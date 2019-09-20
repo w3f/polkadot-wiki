@@ -6,7 +6,7 @@ sidebar_label: Parachain Slots Auction
 
 <div class="img-container">
     <a href="https://slides.com/paritytech/validating-in-polkadot#/20" target="_blank">
-        <img alt="Polkadot's roadmap to 200 parachains" src="../../img/parachain-roadmap.jpg"/>
+        <img alt="Polkadot's roadmap to 200 parachains" src="assets/parachain-roadmap.jpg"/>
     </a>
     Parachain auction schedule. [Click for slide]
 </div>

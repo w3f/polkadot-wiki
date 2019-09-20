@@ -133,7 +133,7 @@ Based on the current testnet setting, the maximum number of lock periods is set 
 
 Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
 
-![](../../img/governance/adaptive-quorum-biasing.png)
+![](assets/governance/adaptive-quorum-biasing.png)
 
 Let's use the above image as an example.
 
@@ -153,7 +153,7 @@ Since not everyone is interested in participating in governance, there is a coun
 
 ### How to be a council member?
 
-![](../../img/governance/approval-vote.png)
+![](assets/governance/approval-vote.png)
 
  At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
 

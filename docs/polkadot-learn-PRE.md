@@ -19,7 +19,7 @@ The Polkadot runtime (as well as the runtimes of the parachains) must be compile
 
 The image below is taken from the [slide deck](https://slides.com/paritytech/paritysubstrate#/8) that Gavin Wood presented on Substrate and demonstrates visually the 4 layers of the Polkadot stack.
 
-![PRE](../../img/PRE.png)
+![PRE](assets/PRE.png)
 
 ## Resources
 

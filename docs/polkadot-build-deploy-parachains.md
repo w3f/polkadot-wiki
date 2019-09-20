@@ -74,19 +74,19 @@ Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerPa
 
 In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
 
-![registering a parachain](../../img/parachain/register.png)
+![registering a parachain](assets/parachain/register.png)
 
 If you navigate to the `Democracy` tab you will be able to see your proposal in the proposals section.
 
 Once you wait for the proposal to become a referendum you will be able to vote `Nay` or `Aye` on it. Assumably, you will vote Aye as this will be a vote for the deployment of your parachain.
 
-![parachain referendum](../../img/parachain/referendum.png)
+![parachain referendum](assets/parachain/referendum.png)
 
 After the voting period of your referendum goes through you will be able to query the state of your parachain.
 
 You can go to the `Chain State` tab and by querying the `parachains` state you should be able to see some information on your parachain.
 
-![parachain info](../../img/parachain/info.png)
+![parachain info](assets/parachain/info.png)
 
 ### Interacting with the parachain
 

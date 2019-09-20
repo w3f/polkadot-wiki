@@ -70,7 +70,7 @@ _验证人池 A 和 B 均拥有 4 名提名人，分别持有 600 和 400 的权
 
 这里有三个不同的帐户供你管理资金： `Stash`、`Controller` 和 `Session`帐户。
 
-TODO:![staking](../../img/NPoS/staking-keys.png)
+TODO:![staking](assets/NPoS/staking-keys.png)
 
 - **Stash:** 持有资金的主要账户，其中部分抵押为锁定资金；所有资金均可存放于冷钱包中；所有抵押 DOT 将被锁定。当用户决定不再参与抵押时，用户必须等待一定时间才控制锁定资金（撰写本文时等候时间为 600 区块）。
 
@@ -84,7 +84,7 @@ TODO:更多关于在波卡链中密钥如何使用及其背后密码学的内容
 
 由于验证人位置有限，因此大多数意欲抵押 DOT 并提升网络经济安全的参与者将扮演提名人的角色。验证人需负责大部分繁重工作，它們在 BABE 中生成新区块、在 GRANDPA 中进行投票并达成共识、验证平行链的 STF，以及其他一些与数据可用性相关的职责。而作为提名人，在绑定 DOT 后便无需进行任何操作。提名人的任务类似于“设置并忘记”，而验证人则需执行关键操作为本网络提供切实服务。鉴于此，验证人在获取Staking收益方面拥有部分特权，并且在将相关奖励发放至各提名人之前就可以抽取佣金。
 
-[staking](../../img/NPoS/article-2.png)
+[staking](assets/NPoS/article-2.png)
 
 ### 想参与抵押 DOT?
 
@@ -132,7 +132,7 @@ TODO:- [验证人指南](polkadot-node-guides-how-to-validate) - 成为 Alexande
 
 第一年通胀率将近10%，各验证人每月将获得 1000 - 2000 DOT，与提名人共享。
 
-TODO:![staking](../../img/NPoS/staking-participation-rate.png)
+TODO:![staking](assets/NPoS/staking-participation-rate.png)
 
 <sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
 

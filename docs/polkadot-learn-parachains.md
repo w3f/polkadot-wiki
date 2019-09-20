@@ -4,7 +4,7 @@ title: Parachains
 sidebar_label: Parachains
 ---
 
-![One parachain](../../img/network/one_parachain.png)
+![One parachain](assets/network/one_parachain.png)
 
 ## What is a parachain?
 

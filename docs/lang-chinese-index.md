@@ -57,14 +57,14 @@ Substrate 簡介
 
 #### 微信公众号 - Page Account
 
-TODO:![](../../img/wechat_page_account.jpg)
+TODO:![](assets/wechat_page_account.jpg)
 
 
 #### 微信群 - Wechat Group
 
 请加polkadot-web3
 
-TODO:![](../../img/polkadot-wechat.jpg)
+TODO:![](assets/polkadot-wechat.jpg)
 
 [中文电报群 - Telegram Group](https://t.me/polkadotChi)
 
