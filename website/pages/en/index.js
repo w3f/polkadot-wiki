@@ -7,7 +7,7 @@
 
 const React = require('react');
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const translate = require('../../server/translate.js').translate;
 
 class HomeSplash extends React.Component {
   render() {
@@ -45,12 +45,15 @@ class Index extends React.Component {
         <div className="mainContainer">
           <div className="mainpage-row-learn">
             <div className="mainpage-column">
-              <h2>A scalable, heterogeneous multichain.</h2>
+              <h2><translate>A scalable, heterogeneous multichain.</translate></h2>
               <p>
-                Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.              </p>
+                <translate>
+                  Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.
+                </translate>
+              </p>
               <a href={docUrl('learn-index')}>
                 <button className="mainpage-build-btn">
-                  Learn More                
+                  <translate>Learn More</translate>                
                 </button>
               </a>
             </div>
@@ -63,13 +66,15 @@ class Index extends React.Component {
               <img src={`${baseUrl}img/network/one_parachain.png`}/>
             </div>
             <div className="mainpage-column">
-              <h2>Build</h2>
+              <h2><translate>Build</translate></h2>
               <p>
-                Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.
+                <translate>
+                  Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.
+                </translate>
               </p>
               <a href={docUrl('build-index')}>
                 <button className="mainpage-build-btn">
-                  Builder's Portal
+                  <translate>Builder's Portal</translate>
                 </button>
               </a>
             </div>
@@ -78,21 +83,21 @@ class Index extends React.Component {
             <h1 className="full-width">Maintain</h1>
             <div className="mainpage-column">
               <img src={`${baseUrl}img/icon_validator.svg`} width={100}/>
-              <h2>Validators</h2>
+              <h2><translate>Validators</translate></h2>
               <p>
-              Run a validator and help to secure the Polkadot network while earning rewards.
+                <translate>Run a validator and help to secure the Polkadot network while earning rewards.</translate>
               </p>
             </div>
             <div className="mainpage-column">
               <img src={`${baseUrl}img/icon_collator.svg`} width={100}/>
-              <h2>Collators</h2>
+              <h2><translate>Collators</translate></h2>
               <p>
-              Run a collator to package the parachain blocks and pass them to validators for verification.
+                <translate>Run a collator to package the parachain blocks and pass them to validators for verification.</translate>
               </p>
             </div>
             <a href={docUrl('maintain-index')}>
               <button className="mainpage-maintain-btn">
-                Become a Maintainer
+                <translate>Become a Maintainer</translate>
               </button>
             </a>
           </div>
