@@ -83,7 +83,7 @@
       },
       "build-extrinsic-format": {
         "title": "Polkadot Extrinsic 格式(又称交易格式)",
-        "sidebar_label": "Polkadot Extrinsic 格式又称交易格式"
+        "sidebar_label": "Polkadot Extrinsic 格式(又称交易格式)"
       },
       "build-hackathon": {
         "title": "黑客马拉松",
@@ -281,13 +281,13 @@
     "links": {
       "Build": "建立",
       "Learn": "学习",
-      "Maintainers": "维护者"
+      "Maintain": "参与"
     },
     "categories": {
       "Main": "主要",
       "Build": "建立",
       "Learn": "学习",
-      "Maintaining": "参与"
+      "Maintain": "参与"
     }
   },
   "pages-strings": {
