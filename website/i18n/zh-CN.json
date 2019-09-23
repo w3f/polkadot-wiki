@@ -90,16 +90,16 @@
         "sidebar_label": "Subkey"
       },
       "learn-architecture": {
-        "title": "架构",
-        "sidebar_label": "架构"
+        "title": "Polkadot 架构",
+        "sidebar_label": "Polkadot 架构"
       },
       "learn-auction": {
         "title": "平行链插槽拍卖",
         "sidebar_label": "平行链插槽拍卖"
       },
       "learn-basics": {
-        "title": "基础",
-        "sidebar_label": "基础"
+        "title": "Polkadot 基础",
+        "sidebar_label": "Polkadot 基础"
       },
       "learn-bridges": {
         "title": "桥接",
@@ -114,8 +114,8 @@
         "sidebar_label": "与其它区块链比较"
       },
       "learn-consensus": {
-        "title": "共识机制",
-        "sidebar_label": "共识机制"
+        "title": "Polkadot 共识机制",
+        "sidebar_label": "Polkadot 共识机制"
       },
       "learn-cryptography": {
         "title": "密码学讲解",
