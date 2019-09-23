@@ -10,23 +10,23 @@ Welcome to the Polkadot wiki, the hub for those interested in learning, building
 
 If you're looking for an introduction on Polkadot please [see here](learn-introduction).
 
-## Want to learn more?
+## 想了解更多 ?
 
-- [Explore the Wiki](learn-index) - Read the informational section of the wiki.
-- [Relevant Links](learn-relevant-links) - **Comprehensive links about Polkadot.**
+- [探索维基](learn-index) - Read the informational section of the wiki.
+- [相关链接](learn-relevant-links) - **Comprehensive links about Polkadot.**
 
-## Want to build on Polkadot?
+## 想在 Polkadot 上建立？
 
-- [Builders Portal](build-index) - Tools, libraries, and resources to help you build.
-- [Starters Guide](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
+- [开发者入口](build-index) - Tools, libraries, and resources to help you build.
+- [入门指南](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
 
-## Want to run a node?
+## 想运行节点 ?
 
-- [Run a Node](maintain-index) - Information covering running a node on the Polkadot network.
+- [运行节点](maintain-index) - Information covering running a node on the Polkadot network.
 
-## Resources
+## 资源
 
-- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
-- [News](news) - Links to the hottest news about Polkadot, aggregated every week.
-- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
-- [Contributing Guide](contributing) - Rules for contributing to the wiki.
+- [社区/生态](community) - List of community rooms and channels to talk to others about Polkadot.
+- [新闻](news) - Links to the hottest news about Polkadot, aggregated every week.
+- [程序例子](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
+- [贡献指南](contributing) - Rules for contributing to the wiki.

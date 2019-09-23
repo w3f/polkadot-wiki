@@ -21,34 +21,6 @@
         "title": "Polkadot 维基",
         "sidebar_label": "Polkadot 维基"
       },
-      "lang-chinese-build-build-with-polkadot": {
-        "title": "Polkadot開發者快速入门指南",
-        "sidebar_label": "Polkadot開發者快速入门指南"
-      },
-      "lang-chinese-build-deploy-parachains": {
-        "title": "如何查询和部署平行链",
-        "sidebar_label": "如何查询和部署平行链"
-      },
-      "lang-chinese-index": {
-        "title": "Polkadot & Substrate 中文资源",
-        "sidebar_label": "Polkadot & Substrate 中文资源"
-      },
-      "lang-chinese-learn-comparisons": {
-        "title": "以太坊",
-        "sidebar_label": "以太坊"
-      },
-      "lang-chinese-learn-interchain": {
-        "title": "跨链信息传递 (ICMP)",
-        "sidebar_label": "跨链信息传递 (ICMP)"
-      },
-      "lang-chinese-learn-staking": {
-        "title": "抵押",
-        "sidebar_label": "抵押"
-      },
-      "lang-chinese-node-guides-how-to-validate": {
-        "title": "如何成为验证人",
-        "sidebar_label": "如何成为验证人"
-      },
       "lang-japanese": {
         "title": "Polkadot & Substate (日本语)",
         "sidebar_label": "Polkadot & Substate (日本语)"
