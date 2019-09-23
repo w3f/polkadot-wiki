@@ -4,10 +4,7 @@ title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 ---
 
-# Polkadot開發者快速入门指南
-
-!!! info
-    _本文是Medium博客上[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)的最新版本_
+_本文是Medium博客上[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)的最新版本_
 
 Polkadot是个网络协议，缩短了区块链开发者的开发时间。以前发布和维护着一个新的区块链需要用数年时间，但利用Polkadot只需要数星期甚至几天就可以了。
 

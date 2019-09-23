@@ -4,26 +4,29 @@ title: Polkadot Extrinsic Format aka Transaction Format
 sidebar_label: Polkadot Extrinsic Format aka Transaction Format
 ---
 
-## Old Format
+## 原格式
 
-For reference, the **old** extrinsic format was:
+**原外部函数格**式可参考如下：
 
-    [ account-id (32-bytes), index (4-bytes), call (dynamic-length), signature on first three fields (64 bytes) ]
-    
+```
+[ account-id (32-bytes), index (4-bytes), call (dynamic-length), signature on first three fields (64 bytes) ]
+```
 
-## Current Format
+## 现格式
 
-The Polkadot extrinsic format is:
+Polkadot外部函数格式是：
 
-    [ address (1/3/5/9/33-bytes, dependent on first byte), index (4-bytes), call (dynamic-length), signature on *original* fields (64 bytes) ]
-    
+```
+[ address (1/3/5/9/33-bytes, dependent on first byte), index (4-bytes), call (dynamic-length), signature on *original* fields (64 bytes) ]
+```
 
-The *original* fields refer to the following from the old extrinsic format:
+*original*部分指的是原外部函数格式中的下面部分内容：
 
-    [ account-id (32-bytes), index (4-bytes), call (dynamic-length) ]
-    
+```
+[ account-id (32-bytes), index (4-bytes), call (dynamic-length) ]
+```
 
-The specific format for the new address type is one of 5 sub-formats, switched on the first byte:
+新地址类型的特定格式是5种子格式中的一种，第一个字节不同。
 
 - `0xff, 32-byte account id`
 - `0xfe, 8-byte account index`
@@ -32,10 +35,10 @@ The specific format for the new address type is one of 5 sub-formats, switched o
 - `[0xf0...0xfb] (invalid, reserved for future use)`
 - `[0x00...0xef] 1-byte account index (less than 0xf0)`
 
-The account index variants are significantly smaller but require a lookup in the state. To avoid a transaction replay attack when an index changes its account, the signature is signed not with the first field as the index, but rather as the account id, thereby invalidating all previous signatures once the index is used to lookup a different id.
+帐户索引变量要小得多，但需要在状态下查找。若要避免索引更改帐户时的交易重播攻击，签名的时候不应以第一个字段作为索引，而应以第一个字段作为帐户ID。因此，一旦索引用于查找不同的ID，就会使以前的所有签名失效。
 
-In addition to the sender field, any parameters to Call/Propose (PrivCall) fields that were AccountId (32-bytes) in the old format are now Address (1/3/5/9/33-bytes).
+包括发送器字段在内，所有在旧格式中表示账户ID（32字节）的调用/提议（私下调用）字段的参数现在都是地址（1/3/5/9/33字节）。
 
-## Source
+## 来源
 
 [Substrate #195](https://github.com/paritytech/substrate/pull/195)

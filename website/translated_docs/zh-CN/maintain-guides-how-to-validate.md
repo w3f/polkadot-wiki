@@ -4,8 +4,7 @@ title: How to validate
 sidebar_label: How to validate
 ---
 
-!!! info
-    _这个教程将更新到最新测试网_
+_这个教程将更新到最新测试网_
 
 想成为一个好验证人，你需要留意以下几点:
 
