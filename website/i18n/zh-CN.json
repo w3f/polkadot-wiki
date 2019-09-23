@@ -3,23 +3,23 @@
   "localized-strings": {
     "next": "下一页",
     "previous": "上一页",
-    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol",
+    "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
     "docs": {
       "community": {
         "title": "社区",
         "sidebar_label": "社区"
       },
       "contributing": {
-        "title": "Contributing",
-        "sidebar_label": "Contributing"
+        "title": "贡献",
+        "sidebar_label": "贡献"
       },
       "glossary": {
         "title": "条款及细则",
         "sidebar_label": "条款及细则"
       },
       "index": {
-        "title": "Polkadot Wiki",
-        "sidebar_label": "Polkadot Wiki"
+        "title": "Polkadot 维基",
+        "sidebar_label": "Polkadot 维基"
       },
       "lang-chinese-build-build-with-polkadot": {
         "title": "Polkadot開發者快速入门指南",
@@ -50,28 +50,28 @@
         "sidebar_label": "如何成为验证人"
       },
       "lang-japanese": {
-        "title": "Polkadot & Substate (Japanese)",
-        "sidebar_label": "Polkadot & Substate (Japanese)"
+        "title": "Polkadot & Substate (日本语)",
+        "sidebar_label": "Polkadot & Substate (日本语)"
       },
       "news": {
-        "title": "This Week in Polkadot",
-        "sidebar_label": "This Week in Polkadot"
+        "title": "Polkadot 周报",
+        "sidebar_label": "Polkadot 周报"
       },
       "build-build-with-polkadot": {
-        "title": "Polkadot Builders Starter's Guide",
-        "sidebar_label": "Polkadot Builders Starter's Guide"
+        "title": "Polkadot 開發者入门指南",
+        "sidebar_label": "Polkadot 開發者入门指南"
       },
       "build-cumulus": {
         "title": "Cumulus",
         "sidebar_label": "Cumulus"
       },
       "build-deploy-parachains": {
-        "title": "How to view and deploy parachains",
-        "sidebar_label": "How to view and deploy parachains"
+        "title": "如何查看及部署平行链",
+        "sidebar_label": "如何查看及部署平行链"
       },
       "build-dev-roadmap": {
-        "title": "Roadmap For Developers",
-        "sidebar_label": "Roadmap For Developers"
+        "title": "开发路线图",
+        "sidebar_label": "开发路线图"
       },
       "build-examples-index": {
         "title": "例子",
@@ -82,28 +82,28 @@
         "sidebar_label": "交易所整合"
       },
       "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic Format aka Transaction Format",
-        "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
+        "title": "Polkadot Extrinsic 格式(又称交易格式)",
+        "sidebar_label": "Polkadot Extrinsic 格式又称交易格式"
       },
       "build-hackathon": {
-        "title": "Hackathon",
+        "title": "黑客马拉松",
         "sidebar_label": "黑客马拉松"
       },
       "build-index": {
-        "title": "Builders Portal",
-        "sidebar_label": "Builders Portal"
+        "title": "开发者入口",
+        "sidebar_label": "开发者入口"
       },
       "build-networks": {
         "title": "网络",
         "sidebar_label": "网络"
       },
       "build-pdk": {
-        "title": "Parachain Development Kits (PDKs)",
-        "sidebar_label": "Parachain Development Kits (PDKs)"
+        "title": "平行链开发套件 (PDKs)",
+        "sidebar_label": "平行链开发套件(PDKs)"
       },
       "build-rust-style-guide": {
-        "title": "Style Guide for Rust in Polkadot",
-        "sidebar_label": "Style Guide for Rust in Polkadot"
+        "title": "Polkadot中Rust的格式指南",
+        "sidebar_label": "Polkadot中的Rust的格式指南"
       },
       "build-smart-contracts": {
         "title": "智能合约",
@@ -122,32 +122,32 @@
         "sidebar_label": "架构"
       },
       "learn-auction": {
-        "title": "Parachain Slots Auction",
-        "sidebar_label": "Parachain Slots Auction"
+        "title": "平行链插槽拍卖",
+        "sidebar_label": "平行链插槽拍卖"
       },
       "learn-basics": {
-        "title": "Basics",
+        "title": "基础",
         "sidebar_label": "基础"
       },
       "learn-bridges": {
-        "title": "Bridges",
-        "sidebar_label": "Bridges"
+        "title": "桥接",
+        "sidebar_label": "桥接"
       },
       "learn-comparisons-cosmos": {
         "title": "Polkadot vs. Cosmos: 设计比较",
         "sidebar_label": "Polkadot vs. Cosmos: 设计比较"
       },
       "learn-comparisons": {
-        "title": "Polkadot comparisons",
-        "sidebar_label": "Polkadot comparisons"
+        "title": "与其它区块链比较",
+        "sidebar_label": "与其它区块链比较"
       },
       "learn-consensus": {
-        "title": "Polkadot 共识",
-        "sidebar_label": "Polkadot 共识"
+        "title": "共识机制",
+        "sidebar_label": "共识机制"
       },
       "learn-cryptography": {
-        "title": "Cryptography Explainer",
-        "sidebar_label": "Cryptography Explainer"
+        "title": "密码学讲解",
+        "sidebar_label": "密码学讲解"
       },
       "learn-DOT": {
         "title": "DOT",
@@ -166,44 +166,44 @@
         "sidebar_label": "GRANDPA"
       },
       "learn-implementations": {
-        "title": "Polkadot 实现",
-        "sidebar_label": "Polkadot 实现"
+        "title": "其它程序语言实现",
+        "sidebar_label": "其它程序语言实现"
       },
       "learn-index": {
         "title": "了解 Polkadot",
         "sidebar_label": "了解 Polkadot"
       },
       "learn-interchain": {
-        "title": "Interchain Message Passing (ICMP)",
-        "sidebar_label": "Interchain Message Passing (ICMP)"
+        "title": "跨链消息传递 (ICMP)",
+        "sidebar_label": "跨链消息传递 (ICMP)"
       },
       "learn-introduction": {
         "title": "Polkadot",
         "sidebar_label": "Polkadot"
       },
       "learn-keys": {
-        "title": "Polkadot Keys",
-        "sidebar_label": "Polkadot Keys"
+        "title": "密匙",
+        "sidebar_label": "密匙"
       },
       "learn-parachains": {
         "title": "平行链",
         "sidebar_label": "平行链"
       },
       "learn-parathreads": {
-        "title": "Parathreads",
-        "sidebar_label": "Parathreads"
+        "title": "平行线程",
+        "sidebar_label": "平行线程"
       },
       "learn-phragmen": {
-        "title": "What is Phragmen and what does it mean for node operators?",
-        "sidebar_label": "What is Phragmen and what does it mean for node operators?"
+        "title": "Phragmen 是什么，它对验证人意味着什么?",
+        "sidebar_label": "Phragmen 是什么，它对验证人意味着什么?"
       },
       "learn-PRE": {
-        "title": "Polkadot Runtime Environment (PRE)",
-        "sidebar_label": "Polkadot Runtime Environment (PRE)"
+        "title": "Polkadot Runtime 环境 (PRE)",
+        "sidebar_label": "Polkadot Runtime 环境 (PRE)"
       },
       "learn-randomness": {
-        "title": "Randomness",
-        "sidebar_label": "Randomness"
+        "title": "随机性",
+        "sidebar_label": "随机性"
       },
       "learn-relevant-links": {
         "title": "链接",
@@ -214,20 +214,20 @@
         "sidebar_label": "路线图"
       },
       "learn-security": {
-        "title": "Security of the network",
-        "sidebar_label": "Security of the network"
+        "title": "网络安全",
+        "sidebar_label": "网络安全"
       },
       "learn-spree": {
         "title": "SPREE",
         "sidebar_label": "SPREE"
       },
       "learn-staking": {
-        "title": "Staking",
-        "sidebar_label": "Staking"
+        "title": "抵押",
+        "sidebar_label": "抵押"
       },
       "learn-treasury": {
-        "title": "Treasury",
-        "sidebar_label": "Treasury"
+        "title": "财政库",
+        "sidebar_label": "财政库"
       },
       "learn-UI": {
         "title": "Polkadot UI",
@@ -238,8 +238,8 @@
         "sidebar_label": "WebAssembly (Wasm)"
       },
       "maintain-collator": {
-        "title": "Collator",
-        "sidebar_label": "Collator"
+        "title": "收集人",
+        "sidebar_label": "收集人"
       },
       "maintain-governance-index": {
         "title": "治理",
@@ -250,20 +250,20 @@
         "sidebar_label": "如何成为提名人"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "How to run your node as a `systemd` process",
-        "sidebar_label": "How to run your node as a `systemd` process"
+        "title": "如何把节点设定为 `systemd` 进程运行",
+        "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
       "maintain-guides-how-to-validate": {
         "title": "如何运行验证人节点",
         "sidebar_label": "如何运行验证人节点"
       },
       "maintain-guides-validator-payout": {
-        "title": "Validator Payout Overview",
-        "sidebar_label": "Validator Payout Overview"
+        "title": "验证人付款概述",
+        "sidebar_label": "验证人付款概述"
       },
       "maintain-index": {
-        "title": "Network Maintainers",
-        "sidebar_label": "Network Maintainers"
+        "title": "网络维护者",
+        "sidebar_label": "网络维护者"
       },
       "maintain-node-operator": {
         "title": "验证人",
@@ -274,8 +274,8 @@
         "sidebar_label": "提名人"
       },
       "research": {
-        "title": "Polkadot 研究",
-        "sidebar_label": "Polkadot 研究"
+        "title": "研究专页",
+        "sidebar_label": "研究专页"
       }
     },
     "links": {
@@ -287,20 +287,32 @@
       "Main": "主要",
       "Build": "建立",
       "Learn": "学习",
-      "Maintaining": "Maintaining"
+      "Maintaining": "参与"
     }
   },
   "pages-strings": {
     "Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)|no description given": "Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)",
-    "Browse Docs|no description given": "Browse Docs",
-    "Ask questions about the documentation and project|no description given": "Ask questions about the documentation and project",
-    "Join the community|no description given": "Join the community",
-    "Find out what's new with this project|no description given": "Find out what's new with this project",
-    "Stay up to date|no description given": "Stay up to date",
+    "Browse Docs|no description given": "浏览文档",
+    "Ask questions about the documentation and project|no description given": "询问有关文档和项目的问题",
+    "Join the community|no description given": "加入社区",
+    "Find out what's new with this project|no description given": "了解项目的最新发展",
+    "Stay up to date|no description given": "保持最新",
     "Need help?|no description given": "需要协助?",
-    "This project is maintained by a dedicated group of people.|statement made to reader": "This project is maintained by a dedicated group of people.",
+    "This project is maintained by a dedicated group of people.|statement made to reader": "该项目由一群专职人员维护",
     "Help Translate|recruit community translators for your project": "帮助翻译",
     "Edit this Doc|recruitment message asking to edit the doc source": "修改",
-    "Translate this Doc|recruitment message asking to translate the docs": "翻译"
+    "Translate this Doc|recruitment message asking to translate the docs": "翻译",
+
+    "A scalable, heterogeneous multichain.|no description given": "可扩容的异构多链。",
+    "Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.|no description given": "Polkadot 是一个平台，对于在 Polkadot的 共享安全保护伞内共同行动的灵活，自治的经济体，入门槛低。Polkadot 不仅是区块链技术的革命，而且是朝着建立更公平的点对点数字管辖区迈进的革命。",
+    "Learn More|no description given": "了解更多",
+    "Build|no description given": "开发",
+    "Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.|no description given": "Polkadot 使建设者和开发者能够创建适合他们需求的区块链，并从互操作性和共享安全性中受益。",
+    "Builder's Portal|no description given": "开发者入口",
+    "Validators|no description given": "验证人",
+    "Run a validator and help to secure the Polkadot network while earning rewards.|no description given": "运行验证人节点获得奖励同时帮助保护 Polkadot 网络。",
+    "Collators|no description given": "收集人",
+    "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "运行收集人打包平行链的区块并将其传递给验证人以进行验证。",
+    "Become a Maintainer|no description given": "成为参与者"
   }
 }
