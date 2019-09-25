@@ -5,30 +5,6 @@
     "previous": "上一页",
     "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
     "docs": {
-      "community": {
-        "title": "社区",
-        "sidebar_label": "社区"
-      },
-      "contributing": {
-        "title": "贡献",
-        "sidebar_label": "贡献"
-      },
-      "glossary": {
-        "title": "条款及细则",
-        "sidebar_label": "条款及细则"
-      },
-      "index": {
-        "title": "Polkadot 维基",
-        "sidebar_label": "Polkadot 维基"
-      },
-      "lang-japanese": {
-        "title": "Polkadot & Substate (日本语)",
-        "sidebar_label": "Polkadot & Substate (日本语)"
-      },
-      "news": {
-        "title": "Polkadot 周报",
-        "sidebar_label": "Polkadot 周报"
-      },
       "build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
         "sidebar_label": "Polkadot 開發者入门指南"
@@ -88,6 +64,26 @@
       "build-tools-subkey": {
         "title": "Subkey",
         "sidebar_label": "Subkey"
+      },
+      "community": {
+        "title": "社区",
+        "sidebar_label": "社区"
+      },
+      "contributing": {
+        "title": "贡献",
+        "sidebar_label": "贡献"
+      },
+      "glossary": {
+        "title": "条款及细则",
+        "sidebar_label": "条款及细则"
+      },
+      "index": {
+        "title": "Polkadot 维基",
+        "sidebar_label": "Polkadot 维基"
+      },
+      "lang-japanese": {
+        "title": "Polkadot & Substate (日本语)",
+        "sidebar_label": "Polkadot & Substate (日本语)"
       },
       "learn-architecture": {
         "title": "Polkadot 架构",
@@ -245,6 +241,10 @@
         "title": "提名人",
         "sidebar_label": "提名人"
       },
+      "news": {
+        "title": "Polkadot 周报",
+        "sidebar_label": "Polkadot 周报"
+      },
       "research": {
         "title": "研究专页",
         "sidebar_label": "研究专页"
@@ -271,10 +271,6 @@
     "Stay up to date|no description given": "保持最新",
     "Need help?|no description given": "需要协助?",
     "This project is maintained by a dedicated group of people.|statement made to reader": "该项目由一群专职人员维护",
-    "Help Translate|recruit community translators for your project": "帮助翻译",
-    "Edit this Doc|recruitment message asking to edit the doc source": "修改",
-    "Translate this Doc|recruitment message asking to translate the docs": "翻译",
-
     "A scalable, heterogeneous multichain.|no description given": "可扩容的异构多链。",
     "Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.|no description given": "Polkadot 是一个平台，对于在 Polkadot的 共享安全保护伞内共同行动的灵活，自治的经济体，入门槛低。Polkadot 不仅是区块链技术的革命，而且是朝着建立更公平的点对点数字管辖区迈进的革命。",
     "Learn More|no description given": "了解更多",
@@ -285,6 +281,9 @@
     "Run a validator and help to secure the Polkadot network while earning rewards.|no description given": "运行验证人节点获得奖励同时帮助保护 Polkadot 网络。",
     "Collators|no description given": "收集人",
     "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "运行收集人打包平行链的区块并将其传递给验证人以进行验证。",
-    "Become a Maintainer|no description given": "成为参与者"
+    "Become a Maintainer|no description given": "成为参与者",
+    "Help Translate|recruit community translators for your project": "帮助翻译",
+    "Edit this Doc|recruitment message asking to edit the doc source": "修改",
+    "Translate this Doc|recruitment message asking to translate the docs": "翻译"
   }
 }
