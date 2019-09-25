@@ -4,42 +4,36 @@ title: Builders Portal
 sidebar_label: Builders Portal
 ---
 
-_🏗️ Polkadot尚未完成，文件将有所更改。_
+*Polkadot is under construction, these documents will likely change.*
 
-欢迎访问Polkadot维基网站的“构建者”章节。
+Welcome to the builders section of the Polkadot wiki.
 
-在这里，您可以了解@(Polkadot)生态系统中开发工具的最新状态。我们一直致力于学习新的工具和框架，并将它们添加进网站内容中。如您有认为应包含在内的信息，请在[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)上联系我们。
+Here you will be able to find the most up-to-date information on the status of the development tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about them so if you are working on something that should be included please reach out to us on [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
-我们将本维基网站的“构建者”章节分为三部分：第一部分为技术指南，帮助您快速了解Polkadot的开发进度。第二部分为最新的开发者工具目录。第三部分中的资源将包含更深层次的、其它地方找不到的技术信息。
+This section of the wiki is divided into three parts: the first part takes the shape of a technical guide that will get you quickly up to speed with developing for Polkadot. The second part is an up-to-date catalogue of developer tooling. The third part is a resource which will contain some deeper technical information that is not available to be found elsewhere.
 
-## 主页
+## Development Guide
 
-## 开发指南
+- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
+- [Development Roadmap](build-dev-roadmap)
+- [Parachain Development Kits](build-pdk) - Learn about parachain development kits and create your own parachain.
+- [Smart Contracts](build-smart-contracts) - Learn all about smart contracts on Polkadot and Substrate and how to get started today.
 
-- [入门指南](build-build-with-polkadot)——对平行链和智能合约的选择，以及目前可用资源进行高度概述。
+## Tools
 
-- [开发路线图](build-dev-roadmap)
+- [Tools](build-tools-index) - Maintained list of tools.
+- [Subkey](build-tools-subkey) - Commandline utility for generating Polkadot/Substrate keys.
 
-- [平行链开发工具包](build-pdk)——了解平行链开发工具包并创建平行链
+## Resources
 
-- [智能合约](build-smart-contracts)——学习Polkadot和Substrate中的所有智能合约，以及现在开始构建的指南
+- [Exchange Integration](build-exchange-integration)
+- [Extrinsic Format](build-extrinsic-format)
+- [Networks](build-networks)
+- [Examples](build-examples-index)
+- [Rust Style Guide](build-rust-style-guide)
 
-## 工具
+## Hackathon
 
-- [工具](build-tools-index)——受保护的工具清单。
+- [Resources For Running a Hackathon](build-hackathon)
 
-- [子密钥](build-tools-subkey)——用于生成Polkadot/Substrate密钥的命令行实用程序。
-
-## 资源
-
-- [交易所整合](build-exchange-integration)
-- [Extrinsics格式](build-extrinsic-format)
-- [网络](build-networks)
-- [范例](build-examples-index)
-- [Rust设计指南](build-rust-style-guide)
-
-## 黑客马拉松
-
-- [运行骇客松的资源](build-hackathon)
-
-*敬请期待。*
+*More coming soon.*
