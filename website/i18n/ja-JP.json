@@ -5,58 +5,6 @@
     "previous": "Previous",
     "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol",
     "docs": {
-      "community": {
-        "title": "Community",
-        "sidebar_label": "Community"
-      },
-      "contributing": {
-        "title": "Contributing",
-        "sidebar_label": "Contributing"
-      },
-      "glossary": {
-        "title": "Terms and Definitions",
-        "sidebar_label": "Terms and Definitions"
-      },
-      "index": {
-        "title": "Polkadot Wiki",
-        "sidebar_label": "Polkadot Wiki"
-      },
-      "lang-chinese-build-build-with-polkadot": {
-        "title": "Polkadot開發者快速入门指南",
-        "sidebar_label": "Polkadot開發者快速入门指南"
-      },
-      "lang-chinese-build-deploy-parachains": {
-        "title": "如何查询和部署平行链",
-        "sidebar_label": "如何查询和部署平行链"
-      },
-      "lang-chinese-index": {
-        "title": "Polkadot & Substrate 中文资源",
-        "sidebar_label": "Polkadot & Substrate 中文资源"
-      },
-      "lang-chinese-learn-comparisons": {
-        "title": "以太坊",
-        "sidebar_label": "以太坊"
-      },
-      "lang-chinese-learn-interchain": {
-        "title": "跨链信息传递 (ICMP)",
-        "sidebar_label": "跨链信息传递 (ICMP)"
-      },
-      "lang-chinese-learn-staking": {
-        "title": "抵押",
-        "sidebar_label": "抵押"
-      },
-      "lang-chinese-node-guides-how-to-validate": {
-        "title": "如何成为验证人",
-        "sidebar_label": "如何成为验证人"
-      },
-      "lang-japanese": {
-        "title": "Polkadot & Substate (Japanese)",
-        "sidebar_label": "Polkadot & Substate (Japanese)"
-      },
-      "news": {
-        "title": "This Week in Polkadot",
-        "sidebar_label": "This Week in Polkadot"
-      },
       "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
@@ -116,6 +64,26 @@
       "build-tools-subkey": {
         "title": "Subkey",
         "sidebar_label": "Subkey"
+      },
+      "community": {
+        "title": "Community",
+        "sidebar_label": "Community"
+      },
+      "contributing": {
+        "title": "Contributing",
+        "sidebar_label": "Contributing"
+      },
+      "glossary": {
+        "title": "Terms and Definitions",
+        "sidebar_label": "Terms and Definitions"
+      },
+      "index": {
+        "title": "Polkadot Wiki",
+        "sidebar_label": "Polkadot Wiki"
+      },
+      "lang-japanese": {
+        "title": "Polkadot & Substate (Japanese)",
+        "sidebar_label": "Polkadot & Substate (Japanese)"
       },
       "learn-architecture": {
         "title": "Architecture",
@@ -273,6 +241,10 @@
         "title": "Nominator",
         "sidebar_label": "Nominator"
       },
+      "news": {
+        "title": "This Week in Polkadot",
+        "sidebar_label": "This Week in Polkadot"
+      },
       "research": {
         "title": "Polkadot Research",
         "sidebar_label": "Polkadot Research"
@@ -281,13 +253,13 @@
     "links": {
       "Build": "Build",
       "Learn": "Learn",
-      "Maintainers": "Maintainers"
+      "Maintain": "Maintain"
     },
     "categories": {
       "Main": "Main",
       "Build": "Build",
       "Learn": "Learn",
-      "Maintaining": "Maintaining"
+      "Maintain": "Maintain"
     }
   },
   "pages-strings": {
@@ -299,6 +271,17 @@
     "Stay up to date|no description given": "Stay up to date",
     "Need help?|no description given": "Need help?",
     "This project is maintained by a dedicated group of people.|statement made to reader": "This project is maintained by a dedicated group of people.",
+    "A scalable, heterogeneous multichain.|no description given": "A scalable, heterogeneous multichain.",
+    "Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.|no description given": "Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.",
+    "Learn More|no description given": "Learn More",
+    "Build|no description given": "Build",
+    "Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.|no description given": "Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.",
+    "Builder's Portal|no description given": "Builder's Portal",
+    "Validators|no description given": "Validators",
+    "Run a validator and help to secure the Polkadot network while earning rewards.|no description given": "Run a validator and help to secure the Polkadot network while earning rewards.",
+    "Collators|no description given": "Collators",
+    "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "Run a collator to package the parachain blocks and pass them to validators for verification.",
+    "Become a Maintainer|no description given": "Become a Maintainer",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
