@@ -4,7 +4,7 @@ title: Builders Portal
 sidebar_label: Builders Portal
 ---
 
-_🏗️ Polkadot尚未完成，文件将有所更改。_
+*🏗️ Polkadot尚未完成，文件将有所更改。*
 
 欢迎访问Polkadot维基网站的“构建者”章节。
 
@@ -14,23 +14,17 @@ _🏗️ Polkadot尚未完成，文件将有所更改。_
 
 ## 主页
 
+- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
+- [Development Roadmap](build-dev-roadmap)
+- [Parachain Development Kits](build-pdk) - Learn about parachain development kits and create your own parachain.
+- [Smart Contracts](build-smart-contracts) - Learn all about smart contracts on Polkadot and Substrate and how to get started today.
+
 ## 开发指南
 
-- [入门指南](build-build-with-polkadot)——对平行链和智能合约的选择，以及目前可用资源进行高度概述。
-
-- [开发路线图](build-dev-roadmap)
-
-- [平行链开发工具包](build-pdk)——了解平行链开发工具包并创建平行链
-
-- [智能合约](build-smart-contracts)——学习Polkadot和Substrate中的所有智能合约，以及现在开始构建的指南
+- [Tools](build-tools-index) - Maintained list of tools.
+- [Subkey](build-tools-subkey) - Commandline utility for generating Polkadot/Substrate keys.
 
 ## 工具
-
-- [工具](build-tools-index)——受保护的工具清单。
-
-- [子密钥](build-tools-subkey)——用于生成Polkadot/Substrate密钥的命令行实用程序。
-
-## 资源
 
 - [交易所整合](build-exchange-integration)
 - [Extrinsics格式](build-extrinsic-format)
@@ -38,7 +32,7 @@ _🏗️ Polkadot尚未完成，文件将有所更改。_
 - [范例](build-examples-index)
 - [Rust设计指南](build-rust-style-guide)
 
-## 黑客马拉松
+## 资源
 
 - [运行骇客松的资源](build-hackathon)
 

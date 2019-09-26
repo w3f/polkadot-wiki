@@ -22,9 +22,9 @@ polkadot --dev
 
 您可以复制和创建以下网站：
 
-http://github.com/paritytech/polka-ui 和 http://github.com/paritytech/polkadot-ui or 或前往到 https://polkadot.js.org/apps.
-
 ## Krumme Lanke
+
+http://github.com/paritytech/polka-ui 和 http://github.com/paritytech/polkadot-ui or 或前往到 https://polkadot.js.org/apps.
 
 Krumme Lanke 是一个在 Poc-2 开发期间使用的测试网络。请在以下路径安装 Polkadot PoC-2 和 `Polkadot 二进制` 文件：
 

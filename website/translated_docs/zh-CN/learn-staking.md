@@ -26,7 +26,6 @@ TODO:在抵押中，你可以充当提名人或验证人。提名人可提名多
 
 在估計通胀率和作为提名人或验证人每月可获得多少 DOT 时，你可以参考此 [Excel 表格](https://docs.google.com/spreadsheets/d/1-9Hc3kZ23EhZC3X6feRUKSTv6gj4xR7cvUbJD2zUEZk/edit?usp=sharing)，并可改一下部分参数数字（例如验证人池、总量、佣金等）使你有更好估算。尽管此表格的准确性因抵押参与率不断变化而改变，但仍可以作为很好的指标加以参考。
 
-
 ### 4. 奖励机制
 
 我们要重点强调这一支付模式的两个特点：第一个特点，由于各验证人池的报酬相同，因此与拥有更多权益的池相比，权益较少的池将按照 DOT 支付提名人更多的报酬。因此，这便形成一种经济激励，使得提名人逐渐将偏好转向那些高声誉但被抵押少的验证人。这样做的原因是，我们希望各验证人池之间的权益尽可能均匀分布，以避免权力集中在几名验证人手中。从长期来看，我们希望各验证人池的权益大致相等，声誉更高的验证人拥有更多的权益（这意味着愿意冒更大风险支持低声誉验证人的提名人将获得更高报酬，这一点十分合理）。
@@ -40,23 +39,25 @@ TODO:在抵押中，你可以充当提名人或验证人。提名人可提名多
 * 奖励金额为 100 DOT 代币
 * 成为验证人需持有的最低 DOT 数为350
 
-||**验证人池 A**|||
-|:----:|:----:|:----:|:----:|
-|提名人 (4) | 权益 (600) | 所占总权益比 | 奖励|
-|Jin| 100 | 0.167 | 16.7|
-|**Sam**| 50 | 0.083 | 8.3|
-|Anson| 250 | 0.417 | 41.7|
-|Bobby | 200 | 0.333 | 33.3|
+|         | **验证人池 A** |        |      |
+|:-------:|:----------:|:------:|:----:|
+| 提名人 (4) |  权益 (600)  | 所占总权益比 |  奖励  |
+|   Jin   |    100     | 0.167  | 16.7 |
+| **Sam** |     50     | 0.083  | 8.3  |
+|  Anson  |    250     | 0.417  | 41.7 |
+|  Bobby  |    200     | 0.333  | 33.3 |
 
-||**验证人池 B**|||
-|:----:|:----:|:----:|:----:|
-|提名人 (4) | 权益 (400) | 所占总权益比 | 奖励|
-|Alice | 100 | 0.25 | 25|
-|Peter | 100 | 0.25 | 25|
-|John | 150 | 0.375 | 37.5|
-|**Kitty** | 50 | 0.125 | 12.5|
 
-_验证人池 A 和 B 均拥有 4 名提名人，分别持有 600 和 400 的权益。_
+|           | **验证人池 B** |        |      |
+|:---------:|:----------:|:------:|:----:|
+|  提名人 (4)  |  权益 (400)  | 所占总权益比 |  奖励  |
+|   Alice   |    100     |  0.25  |  25  |
+|   Peter   |    100     |  0.25  |  25  |
+|   John    |    150     | 0.375  | 37.5 |
+| **Kitty** |     50     | 0.125  | 12.5 |
+
+
+*验证人池 A 和 B 均拥有 4 名提名人，分别持有 600 和 400 的权益。*
 
 根据上文的奖励分配原则，由于 A 验证人池的总权益更高，B 池中的提名人每 DOT 获得的奖励分成将高于 A 池中的提名人。Sam 在 A 池抵押了 50 DOT，只获利 8.3，而抵押数相同的 Kitty 却获利 12.5。
 
@@ -68,26 +69,26 @@ _验证人池 A 和 B 均拥有 4 名提名人，分别持有 600 和 400 的权
 
 这里有三个不同的帐户供你管理资金： `Stash`、`Controller` 和 `Session`帐户。
 
-TODO:![staking](assets/NPoS/staking-keys.png)
+![staking](assets/NPoS/staking-keys.png)
 
-- **Stash:** 持有资金的主要账户，其中部分抵押为锁定资金；所有资金均可存放于冷钱包中；所有抵押 DOT 将被锁定。当用户决定不再参与抵押时，用户必须等待一定时间才控制锁定资金（撰写本文时等候时间为 600 区块）。
-
-- **Controller** 用于控制验证人或提名人的运行操作，在验证、提名和闲置之间进行切换；（当交易行为发生时，仅需足够资金便可发送交易）。
-
-- **Session** 此账户种子应通过`--key`参数传递至节点。你可以为密钥参数传入助记符（推荐）或种子。Session 帐户中无需存入任何资金，其并不负责发送任何交易。最好的做法是创建专用的 session 帐户。尽管理论上单个帐户可同时作为 `session` 和 `controller` 账户加以使用，但并不建议你这样操作。专用的 `session` 帐户能够防止资金在验证人节点受到攻击或密钥遭遇泄漏时被盗取。需注意，session 密钥应始终为加密类型 `Edwards (Ed25519)`，而非默认的 `Schnorrkel (sr25519)`。
+- **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
+- **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken).
+- **Session** > Note: This only for the current Alexander testnet. For details about session keys in Kusama Network or Polkadot mainnet, please read [here](learn-keys#session-keys).
 
 TODO:更多关于在波卡链中密钥如何使用及其背后密码学的内容，请参见[此处](learn-keys#session-keys)。
 
-## 验证人 和 提名人
-
 由于验证人位置有限，因此大多数意欲抵押 DOT 并提升网络经济安全的参与者将扮演提名人的角色。验证人需负责大部分繁重工作，它們在 BABE 中生成新区块、在 GRANDPA 中进行投票并达成共识、验证平行链的 STF，以及其他一些与数据可用性相关的职责。而作为提名人，在绑定 DOT 后便无需进行任何操作。提名人的任务类似于“设置并忘记”，而验证人则需执行关键操作为本网络提供切实服务。鉴于此，验证人在获取Staking收益方面拥有部分特权，并且在将相关奖励发放至各提名人之前就可以抽取佣金。
 
-[staking](assets/NPoS/article-2.png)
+## 验证人 和 提名人
+
+Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting, they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate STF of parachains, and possibly some other responsibilities in regard to data availability. Nominators, on the other hand do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it" while the validator will be doing an actual service for the network by performing the critical operations. For this reason, the validator has certain privileges in regard to the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
+
+![staking](assets/NPoS/article-2.png)
 
 ### 想参与抵押 DOT?
 
-TODO:- [提名人指南](maintain-guides-how-to-nominate) - 成为 Alexander 测试网的提名人。
-TODO:- [验证人指南](maintain-guides-how-to-validate) - 成为 Alexander 测试网的验证人。
+- 主网上线后年通胀率将达到 10%
+- 目标活跃抵押率 50%
 
 ## Slash惩罚
 
@@ -97,42 +98,45 @@ TODO:- [验证人指南](maintain-guides-how-to-validate) - 成为 Alexander 测
 
 此外，Slash惩罚一旦确定，系统将从验证人的余额以及所有投票给该验证人的提名人的余额中扣除相应DOT。
 
-!!! info
-    **范例:**
+### Example
 
-    Offline Slash Grace = 4 (由网络定义)
+        Offline Slash Grace = 4 (由网络定义)
+    
+      Unstake Threshold = 5 (由验证人定义)
+    
+      在这种情况下，只有当验证人被报告离线超过 9 次时Slash才会发生。
+    
 
-    Unstake Threshold = 5 (由验证人定义)
-
-    在这种情况下，只有当验证人被报告离线超过 9 次时Slash才会发生。
+!!! info **范例:**
 
 ## 奖励分配
 
 基于Alexander 测试网络的当前配置，奖励将按大约 5 分钟的会话(session)进行记录，并按纪元(era)进行支付。一个纪元为 1 个小时；这意味着奖励将按小时分配给验证人和提名人。
 
-!!! Info
-    **范例:**
+### Example
 
-    每纪元 * 出块时间 = 奖励分配时间
+        每纪元 * 出块时间 = 奖励分配时间
+    
+      600 * 6 = 3600 = 1 小时
+    
+      **以上参数可通过提议全民投票做出调整**
+    
 
-    600 * 6 = 3600 = 1 小时
-
-    **以上参数可通过提议全民投票做出调整**
+!!! Info **范例:**
 
 验证人可以创建不与提名人共享的部分奖励(佣金)。在扣除相关金额后，剩余部分将以抵押值为基础，分配至验证人和所有投票给该验证人的提名人。
 
-例如:假设奖励为 100 DOT
-验证人可以指定 `validator_payment（佣金） = 50 DOT`，剩余 50 DOT 将根据各自所持有的权益比例分配给验证人和提名人。
-
-奖励可以放入同一帐户 (controller) 以不断累积金额，也可以放入 stash 帐户便于使用（增加/不增加抵押值）。同时，无需完全赎回所有抵押便可追加或撤回部分抵押中 DOT。
+例如:假设奖励为 100 DOT 验证人可以指定 `validator_payment（佣金） = 50 DOT`，剩余 50 DOT 将根据各自所持有的权益比例分配给验证人和提名人。
 
 ## 通胀率
 
-第一年通胀率将近10%，各验证人每月将获得 1000 - 2000 DOT，与提名人共享。
+奖励可以放入同一帐户 (controller) 以不断累积金额，也可以放入 stash 帐户便于使用（增加/不增加抵押值）。同时，无需完全赎回所有抵押便可追加或撤回部分抵押中 DOT。
 
-TODO:![staking](assets/NPoS/staking-participation-rate.png)
+![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
+<sub><sup>Source: <a href="https://research.web3.foundation">Research - Web3 Foundation</a></sup></sub>
+
+**x-axis**: amount of DOTs staked
 
 **X 轴**: 抵押 DOT 数
 
@@ -140,25 +144,27 @@ TODO:![staking](assets/NPoS/staking-participation-rate.png)
 
 **绿线**: 基于抵押参与度的回报率
 
-**蓝线**:  通胀率
+**蓝线**: 通胀率
 
 上图为本网络的通胀模型。抵押参与度将带动通胀率呈动态变化，以激励或抑制代币持有人参与抵押。例如，当本网络中抵押 DOT 率为 50% 时，通胀率将为 10%。
 
 由于本网络需要足够多的 DOT 进行抵押从而保障预期的安全程度且避免市场流动性不足，因此，要确定出理想抵押率并非易事。
 
-如你想进一步了解本网络通胀模型的设计，请参阅[此处](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/)。
-
 ## 为什么参与抵押?
-
-- 主网上线后年通胀率将达到 10%
-- 目标活跃抵押率 50% 
-- 年回报率~20%
-
-## 为什么不参与抵押?
 
 - 代币将被锁定 12 周左右
 - 验证人如果做出损害网络行为将面临惩罚
+- ~20% annual return
+
+## 为什么不参与抵押?
+
+- Tokens will be locked for about 12 weeks
+- Punishment in case of validator found to be misbehaving
 
 ## 波卡会有多少链验证人数量?
 
-当主网上后在初始阶段计划开放 50 至 100 的验证人位置，之后逐步增加。尽管验证人数量的上限还未确定，但其应仅会受到网络带宽压力的限制。网络带宽压力由频繁且大量的点对点消息传递导致。我们预估，当波卡链发展至成熟阶段时，将拥有大约 1000 名验证人。
+如你想进一步了解本网络通胀模型的设计，请参阅[此处](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/)。
+
+## Resources
+
+- [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.

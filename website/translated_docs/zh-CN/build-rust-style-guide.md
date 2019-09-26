@@ -18,7 +18,9 @@ fn calculation(some_long_variable_a: i8, some_long_variable_b: i8) -bool {
  x 10
 }
 ```
+
 - 应在左括号后输入缩进格数，但应折叠为实际使用的最小格数：
+
 ```rust
 fn calculate(
  some_long_variable_a: f32,
@@ -33,23 +35,24 @@ fn calculate(
  )) / (2 * some_long_variable_a)
 }
 ```
+
 - `where`及其项需
 - 过长的参数列表或函数调用无法在一行中使用，需缩进为与代码区块类似。一旦某参数被以这种方式缩进，那么其它所有参数都应该进行相同操作。此外，运行参数列表也适用于基础函数调用的单行运行。
 
 ```rust
 // OK
 fn foo(
-	really_long_parameter_name_1: SomeLongTypeName,
-	really_long_parameter_name_2: SomeLongTypeName,
-	shrt_nm_1: u8,
-	shrt_nm_2: u8,
+    really_long_parameter_name_1: SomeLongTypeName,
+    really_long_parameter_name_2: SomeLongTypeName,
+    shrt_nm_1: u8,
+    shrt_nm_2: u8,
 ) {
    ...
 }
 
 // NOT OK
 fn foo(really_long_parameter_name_1: SomeLongTypeName, really_long_parameter_name_2: SomeLongTypeName,
-	shrt_nm_1: u8, shrt_nm_2: u8) {
+    shrt_nm_1: u8, shrt_nm_2: u8) {
    ...
 }
 
@@ -57,24 +60,24 @@ fn foo(really_long_parameter_name_1: SomeLongTypeName, really_long_parameter_nam
 
 ```rust
 {
-	// 符合语句（不仅有函数调用，还有一个let声明），采用完整结构
-	let (a, b) = bar(
-		really_long_parameter_name_1,
-		really_long_parameter_name_2,
-		shrt_nm_1,
-		shrt_nm_2,
-	);
+    // 符合语句（不仅有函数调用，还有一个let声明），采用完整结构
+    let (a, b) = bar(
+        really_long_parameter_name_1,
+        really_long_parameter_name_2,
+        shrt_nm_1,
+        shrt_nm_2,
+    );
 
-	// 很长，但仅是函数调用
-	waz(
-		really_long_parameter_name_1, 
-		really_long_parameter_name_2,
-		shrt_nm_1, 
-		shrt_nm_2,
-	);
+    // 很长，但仅是函数调用
+    waz(
+        really_long_parameter_name_1, 
+        really_long_parameter_name_2,
+        shrt_nm_1, 
+        shrt_nm_2,
+    );
 
-	// 短的函数调用
-	baz(a, b);
+    // 短的函数调用
+    baz(a, b);
 }
 ```
 
@@ -91,6 +94,7 @@ enum Meal { Breakfast, Lunch, Dinner };
 ```
 
 - 避免在不需要的地方使用 “;”结尾。
+
 ```rust
 if condition {
  return 1    // <--这里不需要“；”

@@ -21,8 +21,6 @@ Polkadot中继链本身并不支持智能合约，不过在它之上的平行链
 
 - [Ownable](https://github.com/JesseAbram/foRust/) - OpenZeppelin `Ownable`合约的端口。
 
- 
-
 ## 创建智能合约与创建平行链之间有哪些不同？
 
 ### 抽象层

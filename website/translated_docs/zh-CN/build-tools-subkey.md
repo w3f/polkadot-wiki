@@ -24,18 +24,6 @@ subkey generate
 
 您可以检查给定的URI（助记词，种子，公钥或地址）并恢复公钥和地址。
 
-​```bash
-subkey inspect <mnemonic，seed，pubkey，address>
-
-OUTPUT:
-  Public key (hex): 0x461edcf1ba99e43f50dec4bdeb3d1a2cf521ad7c3cd0eeee5cd3314e50fd424c
-  Address (SS58): 5DeeNqcAcaHDSed2HYnqMDK7JHcvxZ5QUE9EKmjc5snvU6wF
-​```
-
-### 签名
-
-`subkey`会需要在标准输入端跟随一条命令信息，以下是一种签名消息的方法：
-
 ```bash
 echo <msg> | subkey sign <seed,mnemonic>
 
@@ -43,7 +31,9 @@ OUTPUT：
 a69da4a6ccbf81dbbbfad235fa12cf8528c18012b991ae89214de8d20d29c1280576ced6eb38b7406d1b7e03231df6dd4a5257546ddad13259356e1c3adfb509
 ```
 
-### 验证签名
+### 签名
+
+​```bash subkey inspect 
 
 ```bash
 echo <msg> | subkey verify <sig> <address>
@@ -52,9 +42,15 @@ OUTPUT:
 Signature verifies correctly.
 ```
 
+### 验证签名
+
+```bash
+subkey vanity 1337
+```
+
 ### 使用虚荣地址生成器
 
-您可以使用附带的虚荣生成器来查找提供包含所需字符模式的地址的种子。请注意，基于不同硬件的情况，生成过程可能需要一段时间。
+OUTPUT: Public key (hex): 0x461edcf1ba99e43f50dec4bdeb3d1a2cf521ad7c3cd0eeee5cd3314e50fd424c Address (SS58): 5DeeNqcAcaHDSed2HYnqMDK7JHcvxZ5QUE9EKmjc5snvU6wF ​```
 
 ```bash
 subkey vanity 1337

@@ -8,23 +8,20 @@ sidebar_label: Polkadot Extrinsic Format aka Transaction Format
 
 **原外部函数格**式可参考如下：
 
-```
-[ account-id (32-bytes), index (4-bytes), call (dynamic-length), signature on first three fields (64 bytes) ]
-```
+    [ account-id (32-bytes), index (4-bytes), call (dynamic-length), signature on first three fields (64 bytes) ]
+    
 
 ## 现格式
 
 Polkadot外部函数格式是：
 
-```
-[ address (1/3/5/9/33-bytes, dependent on first byte), index (4-bytes), call (dynamic-length), signature on *original* fields (64 bytes) ]
-```
+    [ address (1/3/5/9/33-bytes, dependent on first byte), index (4-bytes), call (dynamic-length), signature on *original* fields (64 bytes) ]
+    
 
 *original*部分指的是原外部函数格式中的下面部分内容：
 
-```
-[ account-id (32-bytes), index (4-bytes), call (dynamic-length) ]
-```
+    [ account-id (32-bytes), index (4-bytes), call (dynamic-length) ]
+    
 
 新地址类型的特定格式是5种子格式中的一种，第一个字节不同。
 

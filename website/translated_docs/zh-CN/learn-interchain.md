@@ -25,7 +25,7 @@ sidebar_label: Interchain Message Passing (ICMP)
 
 Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行链B的智能合约。
 
-平行链A的校对人会把跨链信息连同`目的地(destination)`和`时间(timestamp) `放到出口信息队列中。
+平行链A的校对人会把跨链信息连同`目的地(destination)`和`时间(timestamp)`放到出口信息队列中。
 
 平行链B的校对人会持续地问其它校对人节点是否有新信息(通过筛选`目的地`)，当平行链B的校对人问是否有新信息时，它会看到从平行链A发送过来的信息并且把它加到下一个区块中的入口队列。
 
@@ -39,4 +39,4 @@ Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行
 
 ## 资源
 
-[ICMP方案](https://research.web3.foundation/en/latest/polkadot/ICMP/) - 在Web3基金会研究网页上完整的技术描述
+- [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description on the Web3 Foundation research wiki.

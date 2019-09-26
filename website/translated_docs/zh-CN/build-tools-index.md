@@ -18,7 +18,6 @@ sidebar_label: Tools
 - [Bonds oo7 Polkadot UI](https://github.com/paritytech/substrate-ui) - 使用Bonds oo7库构建。
 - [Polkawallet](https://polkawallet.io/) - Polkadot在iOs和Android上使用的移动钱包。目前仍在开发之中，但测试版已经可以下载。关注GitHub上的开发进度。
 - [SpeckleOS](https://www.speckleos.io/) - 浏览器扩展钱包，目前仍在开发之中。关注[GitHub]()上的开发进度。
-- [ImageWallet](https://www.reddit.com/r/dot/comments/ah3py1/introducing_alpha_version_of_httpsimagewalletio/) - 可视化跨链钱包。目前仍在开发之中。**计划支持 Polkadot和所有Substrate链**。 
 
 ## 网络监控与报告
 
@@ -33,9 +32,8 @@ sidebar_label: Tools
 
 ### 工具
 
-- [Substrate](https://github.com/paritytech/substrate) - 区块链开发平台用Rust进行编写，Polkadot建立于Substrate之上。
-
-- [Substrate开发中心](https://docs.substrate.dev) - 有关使用Substrate构建区块链的全面文档和教程。
+- [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in Rust. Polkadot is being built on top of Substrate.
+- [Substrate Development Hub](https://docs.substrate.dev) - Comprehensive documentation and tutorials for building a blockchain using Substrate.
 
 ## C++
 
@@ -65,7 +63,7 @@ Polkadot-JS Common提供各种实用型效用函数，便于在@polkadot namespa
 - [@polkadot/keyring](https://polkadot.js.org/common/keyring/)用JavaScript创建/加载帐户，有助于创建钱包或任何要求用户编写链的应用程序。[范例](https://polkadot.js.org/common/examples/keyring/)
 - [@polkadot/util](https://polkadot.js.org/common/util/)实用型效用函数，例如检查字符串是否十六进制编码。
 - [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/)便于在Polkadot上开发使用的加密实用程序。
-- 
+
 #### Bonds oo7
 
 - [oo7-polkadot](https://github.com/polkadot-js/oo7-polkadot) 007-polkadot 用于Polkadot的绑定库，[oo7 API文档](https://paritytech.github.io/oo7/)
