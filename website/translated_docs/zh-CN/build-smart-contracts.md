@@ -4,41 +4,41 @@ title: Smart Contracts
 sidebar_label: Smart Contracts
 ---
 
-Polkadot中继链本身并不支持智能合约，不过在它之上的平行链可以。目前已出现[Edgeware](https://edgewa.re)等多个项目，而Substrate的内置[合约模块]((https://crates.parity.io/srml_contract/index.html))将很可能使得更多的平行链支持这一特性。
+The Polkadot relay chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract module](https://crates.parity.io/srml_contract/index.html), it is likely that more parachains will support this feature.
 
-## 资源
+## Resources
 
-下文列出了开发者当前可使用的资源，帮助开始编写智能合约并部署在基于Substrate的平行链之上。
+Here are the list of current resources available to developer who want to get started writing smart contracts to deploy on parachains based on Substrate.
 
-- [ink!](https://github.com/paritytech/ink) - Parity的ink用于编写智能合约。
-- [部署首个合约](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - 部署给定的`flipper`合约的指南。
-- [编写首份合同](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract)——编写`flipper`合约的指南。
-- [Substrate合约工作坊](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - 帮助了解使用`ink!`和编写ERC20代币的基本方法。
+- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
+- [Deploying your first contract](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - Guide to deploy the provided `flipper` contract.
+- [Writing your first contract](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract) - Guide to how one would write the `flipper` contract.
+- [Substrate contracts workshop](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - Walks you through the basics of using `ink!` and writing an ERC20 token.
 
-## 范例
+## Examples
 
-下文收集了一些用`ink!`编写的智能合约的社区示例。您也在编写智能合约吗？请让我们把它添加到这个页面！
+Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!
 
-- [Ownable](https://github.com/JesseAbram/foRust/) - OpenZeppelin `Ownable`合约的端口。
+- [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
-## 创建智能合约与创建平行链之间有哪些不同？
+## What is the difference between developing a smart contract versus a parachain?
 
-### 抽象层
+### Layer of Abstraction
 
-编写智能合约时，需创建一系列将被部署并关联到特定链地址的指令。
+When you write a smart contract you are creating the instructions which will be deployed and associated to a specific chain address.
 
-相比之下，运行时模块是链的状态转换的整个逻辑（称为状态转换函数）。
+In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a state transition function).
 
-智能合约必须自觉实现可升级性，而平行链则能够通过根命令或治理模块来替换其所有代码。
+Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance module.
 
-构建的智能合约最终将被部署到拥有自己环境的目标链中，而平行链则允许开发者公布各自链的环境，甚至允许其他人为该链编写智能合约。
+When you build a smart contract, it will be eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
 
-### Gas费用
+### Gas Fees
 
-智能合约必须找到方法来限制内部执行，否则所有节点都将非常容易受到DOS攻击。例如，智能合约中的无限循环可能会耗尽整个链的计算资源，使别人无资源可用。[终止问题](https://en.wikipedia.org/wiki/Halting_problem)表明，使用足够强大的语言不可能提前知道某程序是否会停止执行。比特币等平台通过提供极度受限的脚本语言避免了这一限制。而其它像以太坊这样的平台则是向智能合约收取gas费用，从而给与其执行代码的权利。若智能合约的执行永远不会终止，那么它最终将耗尽gas而无法执行任何操作，同时智能合约执行的所有状态转换都将被回溯。
+Smart contracts must find a way to limit their own execution, or else full nodes are vulnerable to DOS attacks. An infinite loop in a smart contract, for example, could consume the computational resources of an entire chain, preventing others from using it. The [halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that with a powerful enough language, it is impossible to know ahead of time whether or not a program will ever cease execution. Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute their code. If a smart contract does get into a state where execution will never halt, it eventually runs out of gas, ceases execution, and any state transition that would have been made by the smart contract is rolled back.
 
-平行链可以实现果断且强大的编程语言，且在其自身逻辑中未采用gas概念。这意味着开发者更易于实现部分功能，但也意味着无终止条件的循环等结构将永远不能实现。将某些逻辑（例如可能无限运行的复杂循环）置于非智能合约层，或者尝试将它们完全消除，往往是更明智的选择。
+Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should *never* be implemented. Leaving certain logic, such as complex loops which could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
 
-## 资源
+## Resources
 
-- [应该在什么时候构建Substrate运行时或构建Substrate智能合约](https://stackoverflow.com/a/56041305) - 从技术角度回答了开发者什么时候可以选择开发运行时或智能合约。
+- [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) - From a technical standpoint answers the question of when a developer might choose to develop a runtime versus a smart contract.
