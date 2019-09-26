@@ -4,36 +4,46 @@ title: Subkey
 sidebar_label: Subkey
 ---
 
-Subkey是Substrate中包含的命令行实用程序，用于生成或恢复Substrate密钥。
+Subkey is a commandline utility included with Substrate that generates or restores Substrate keys.
 
-`subkey`默认使用[sr25519](learn-cryptography#keypairs-and-signing)加密。如果您需要使用较旧的ed25519加密技术来生成或恢复密钥，或生成供验证程序使用的会话密钥（session key），请将`--ed25519`标志传递给命令。
+`subkey` will use [sr25519](http://wiki.polkadot.network/en/latest/polkadot/learn/cryptography/#keypairs-and-signing) cryptography by default. If you need to use the older ed25519 cryptography to generate or restore your key, or to generate a session key for use by validators, pass the `--ed25519` flag to any of the commands.
 
-## 用法
+## Usage
 
-### 生成一个随机帐户
+### Generate a random account
 
 ```bash
 subkey generate
 ```
 
-将输出助记词并为您提供新帐户的种子，公钥和地址。不要与任何人分享你的助记词或种子，它会让他们获得你的资金。如果有人要给你转账，他们只需要你的**地址**。
+Will output a mnemonic phrase and give you the seed, public key, and address of a new account. DO NOT SHARE your mnemonic or seed with ANYONE it will give them access to your funds. If someone is making a transfer to you they will only need your **Address**.
 
-请注意，助记词将允许您生成原始种子。建议使用助记词，因为不推荐使用原始种子供最终用户使用。助记词还为您提供校验和并减少拼写错误的可能性。
+Note that the mnemonic phrase will allow you to generate the raw seed. Use of the mnemonic phrase is recommended, as the raw seed is deprecated for use by end users. The mnemonic phrase also gives you benefit of a checksum and reduced likelihood of typos.
 
-### 检查一个私钥
+### Inspecting a key
 
-您可以检查给定的URI（助记词，种子，公钥或地址）并恢复公钥和地址。
+You can inspect a given URI (mnemonic, seed, public key, or address) and recover the public key and the address.
+
+```bash
+subkey inspect <mnemonic,seed,pubkey,address>
+
+OUTPUT:
+  Public key (hex): 0x461edcf1ba99e43f50dec4bdeb3d1a2cf521ad7c3cd0eeee5cd3314e50fd424c
+  Address (SS58): 5DeeNqcAcaHDSed2HYnqMDK7JHcvxZ5QUE9EKmjc5snvU6wF
+```
+
+### Signing
+
+`subkey` expects a message to come in on STDIN, one way to sign a message would look like this:
 
 ```bash
 echo <msg> | subkey sign <seed,mnemonic>
 
-OUTPUT：
+OUTPUT:
 a69da4a6ccbf81dbbbfad235fa12cf8528c18012b991ae89214de8d20d29c1280576ced6eb38b7406d1b7e03231df6dd4a5257546ddad13259356e1c3adfb509
 ```
 
-### 签名
-
-​```bash subkey inspect 
+### Verifying a signature
 
 ```bash
 echo <msg> | subkey verify <sig> <address>
@@ -42,15 +52,9 @@ OUTPUT:
 Signature verifies correctly.
 ```
 
-### 验证签名
+### Using the vanity generator
 
-```bash
-subkey vanity 1337
-```
-
-### 使用虚荣地址生成器
-
-OUTPUT: Public key (hex): 0x461edcf1ba99e43f50dec4bdeb3d1a2cf521ad7c3cd0eeee5cd3314e50fd424c Address (SS58): 5DeeNqcAcaHDSed2HYnqMDK7JHcvxZ5QUE9EKmjc5snvU6wF ​```
+You can use the included vanity generator to find a seed that provides an address which includes the desired pattern. Be warned, depending on your hardware this may take a while.
 
 ```bash
 subkey vanity 1337
