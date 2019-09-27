@@ -14,5 +14,5 @@ window.onload = () => {
   pixel.setAttribute('width', '0');
   pixel.setAttribute('style', 'display:none;visibility:hidden');
   tracker.appendChild(pixel);
-  header.appendChild(tracker);
+  head.appendChild(tracker);
 }
