@@ -81,6 +81,10 @@
         "title": "Polkadot Wiki",
         "sidebar_label": "Polkadot Wiki"
       },
+      "lang-japanese": {
+        "title": "Polkadot & Substate (Japanese)",
+        "sidebar_label": "Polkadot & Substate (Japanese)"
+      },
       "learn-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
