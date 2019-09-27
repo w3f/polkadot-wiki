@@ -19,6 +19,10 @@ The wiki is automatically deployed to GitHub Pages via the CircleCI job on each 
 
 ## Internationalization
 
+We are using Crowdin to manage all different translations. You can go to the [project page](https://crowdin.com/project/polkadot-wiki) and select the language you would like to translate to start.  
+All translated content through Crowdin will regularly submit a pull request to this repository.
+
+If you do not see the language you would like to translate, please let us know via Riot.
 
 ## License
 
