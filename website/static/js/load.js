@@ -1,6 +1,5 @@
 window.onload = () => {
   const head = document.getElementsByTagName('head')[0];
-  const body = document.getElementsByTagName('body')[0];
 
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
@@ -15,14 +14,5 @@ window.onload = () => {
   pixel.setAttribute('width', '0');
   pixel.setAttribute('style', 'display:none;visibility:hidden');
   tracker.appendChild(pixel);
-  if (!body) {
-    setTimeout(() => {
-      let tryBody = document.getElementsByTagName('body')[0];
-      if (tryBody) {
-        tryBody.appendChild(tracker);
-      }
-    }, 2000);
-  } else {
-    body.appendChild(tracker);
-  }
+  header.appendChild(tracker);
 }
