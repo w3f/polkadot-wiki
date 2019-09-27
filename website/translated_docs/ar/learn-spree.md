@@ -11,13 +11,13 @@ SPREE (Shared Protected Runtime Execution Enclaves), also known as "trust wormho
 The below description is taken from /u/gavofyork's post on the Smart Protocols proposal (linked below):
 
 > A parachain would be able to upload a "runtime appendix" to the relay chain. It would live on the relay chain and be a WebAssembly blob, not dissimilar to a parachain's normal validation function. However, it would only ever be executed by parachain collators.
-> 
+
 > Storage/state and ICMP would be independent of the parachain itself. However, the parachain would be able to pass it messages synchronously for it to interpret on its own terms.
-> 
+
 > It would retain its own storage root (which would either be referenced by the parachain's main state root or, more likely, be stored in another appendix-state trie item). Interaction from the parachain would be possible through an exposed function from the Wasm (`execute(bytes)`). There would also be another exposed function for managing ICMP input messages (`apply_message(bytes)`). And then it would also need a final function to call itself when it needs to send a message on ICMP (`post_message`). ICMP message origins, as well as honest execution of the blob would be enforced as part of the relay chain's requirements placed on the parachain. For this, it would have its own ICMP endpoint (probably a special subordinate endpoint from the appendix itself, so the endpoint set would be {RelayChain, Parachain\[0..PARACHAINS], Appendix[0..APPENDICES\]\[0..PARACHAINS\]}.
-> 
+
 > This appendix would be opt-in for each parachain: parachains would be able to "tell" the runtime that they're happy to use this appendix.
-> 
+
 > I'm not sure about the name though :) - there's not really anything "smart" about them and they're not really "protocols". Really they're a Shared Protected Runtime Appendix is more like it...
 
 Later on the description was simplified to the below in a presentation from Tokyo DOT Day:
