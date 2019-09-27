@@ -23,6 +23,7 @@ There are a few basic ground-rules for contributors:
 7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
 8. Care should be taken to remain as objective and informative as possible. There should be no editorializing, and external bias should not be present.
 
+
 ## Changes to this arrangement
 
 This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
