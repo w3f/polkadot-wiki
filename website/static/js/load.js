@@ -15,5 +15,14 @@ window.onload = () => {
   pixel.setAttribute('width', '0');
   pixel.setAttribute('style', 'display:none;visibility:hidden');
   tracker.appendChild(pixel);
-  body.appendChild(tracker);
+  if (!body) {
+    setTimeout(() => {
+      let tryBody = document.getElementsByTagName('body')[0];
+      if (tryBody) {
+        tryBody.appendChild(tracker);
+      }
+    }, 2000);
+  } else {
+    body.appendChild(tracker);
+  }
 }
