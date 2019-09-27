@@ -10,10 +10,10 @@ window.onload = () => {
 
   const tracker = document.createElement('noscript');
   const pixel = document.createElement('iframe');
-  pixel.setAttribute('data-src', 'https://www.googletagmanager.com/ns.html?id=GTM-5BKVQLS');
-  pixel.setAttribute('data-height', '0');
-  pixel.setAttribute('data-width', '0');
-  pixel.setAttribute('data-style', 'display:none;visibility:hidden');
+  pixel.setAttribute('src', 'https://www.googletagmanager.com/ns.html?id=GTM-5BKVQLS');
+  pixel.setAttribute('height', '0');
+  pixel.setAttribute('width', '0');
+  pixel.setAttribute('style', 'display:none;visibility:hidden');
   tracker.appendChild(pixel);
   body.appendChild(tracker);
 }
