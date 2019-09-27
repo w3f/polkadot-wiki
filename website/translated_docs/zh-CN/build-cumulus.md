@@ -4,21 +4,21 @@ title: Cumulus
 sidebar_label: Cumulus
 ---
 
-> Cumulus clouds are shaped sort of like dots and are up in the air, like this project (as it is an initial prototype -- expect a rename when it gets cooler.)
+> Cumulus 云像点状浮在空中，跟这个项目很相像（因为以 Cumulus 云为原型故得名——待项目发展得更酷，我们可能会对它重新命名，敬请期待。）
 
-[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
+[Cumulus](https://github.com/paritytech/cumulus)是对Substrate的扩展，可以轻松将任何Substrate构建的运行时转换为与Polkadot兼容的平行链。
 
-## Components
+## 组件
 
-### Cumulus Consensus
+### Cumulus共识
 
-*cumulus-consensus* is a consensus engine for Substrate which follows a Polkadot relay chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
+*Cumulus共识*是Substrate追踪Polkadot中继链的一个共识引擎。它在内部运行一个Polkadot节点并指示客户端和同步算法对哪个链加以追踪、最终确定并视为最佳。
 
-### Cumulus Runtime
+### Cumulus运行时
 
-A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface which will be called by validators.
+Cumulus运行时围绕在Substrate运行时周围，使它们得以被Polkadot验证人验证并提供见证生成运行时。它向被验证人调用的Substrate外部界面添加一个`validate_block` API
 
-Integrating it into your substrate runtime will be as easy as importing the crate and adding this one line macro to your code.
+将它集成到substrate运行时就像导入crate包并将这一行宏添加到代码中一样简单。
 
 ```rust
 runtime::register_validate_block!(Block, BlockExecutor);
@@ -26,8 +26,8 @@ runtime::register_validate_block!(Block, BlockExecutor);
 
 ### Cumulus Collator
 
-A planned Polkadot collator for a parachain.
+计划为平行链的Polkadot收集人。
 
-## Resources
+## 资源
 
-- [Rob's talk from EthCC introducing Cumulus](https://www.youtube.com/watch?v=thgtXq5YMOo)
+- [以太坊社区大会上Rob介绍Cumulus的谈话](https://www.youtube.com/watch?v=thgtXq5YMOo)

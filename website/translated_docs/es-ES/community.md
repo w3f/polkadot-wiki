@@ -1,32 +1,32 @@
 ---
-id: community
-title: Community
-sidebar_label: Community
+id: comunidad
+title: Comunidad
+sidebar_label: Comunidad
 ---
 
-The Polkadot community is expanding every day. Below are the most essential links to the community channels.
+La comunidad de Polkadot se está expandiendo cada día. A continuación se muestran los enlaces más importantes a los canales de la comunidad.
 
 ## General
 
-- [Join the Polkadot PoC-4 Testnet ("Alexander")](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with the latest Polkadot testnet.
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot runtime environment.
-- [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Information on hosting meetups, applying for funding, and materials for running it.
+- . [Únase a la testnet Polkadot PoC-4 ("Alexander")](https://polkadot.js.org/apps/#/explorer) - Acceda al panel de control de la interfaz para interactuar con la última testnet de Polkadot.
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Repositorio mantenido por Parity que incluye la implementación de Rust del runtime de Polkadot.
+- [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Información sobre la organización de eventos, solicitud de ayudas y materiales para llevarlos a cabo.
 
 ## Riot
 
-- [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) - Room for beginners learning about Polkadot. **A good place to ask questions**
-- [Polkadot Watercooler Chat](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) - General room for talk about Polkadot.
-- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - Room for validators learning about setting up a node.
-- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
+- [Sala para principiantes en Polkadot](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) - Sala para principiantes aprendiendo sobre Polkadot. **Un buen lugar para hacer preguntas**
+- [Chat Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) - Sala general para hablar sobre Polkadot.
+- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - Espacio para que los validadores aprendan a configurar un nodo.
+- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - Sala más avanzada para preguntas técnicas sobre el desarrollo con Substrate.
 
-## Socials
+## Redes Sociales
 
-- [Subscribe to the Polkadot newsletter](https://polkadot.network/#roadmap) - Email sign up form is available at the bottom of the page.
-- [Polkadot Telegram](https://t.me/polkadotofficial) - Official Telegram room for discussion of Polkadot (please read the rules before chatting).
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Official Twitter account of Polkadot.
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit.
-- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video content from founders and build of Polkadot describing the network and the vision.
+- [Suscríbete a la newsletter de Polkadot](https://polkadot.network/#roadmap) - El formulario de registro por correo electrónico está disponible en la parte inferior de la página.
+- [Polkadot Telegram](https://t.me/polkadotofficial) - Sala Oficial de Telegram para discutir sobre Polkadot (por favor lea las reglas antes de chatear).
+- [Twitter de Polkadot](https://twitter.com/polkadotnetwork) - Cuenta oficial de Twitter para Polkadot.
+- [Reddit Polkadot](https://www.reddit.com/r/dot/) - Reddit oficial de Polkadot.
+- [Canal de Youtube Polkadot](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Contenido de vídeo de los fundadores y desarrollo de Polkadot que describen la red y la visión.
 
-## Ecosystem
+## Ecosistema
 
-- [Teams Building on Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Maintained list of teams building on Polkadot and/or Substrate.
+- [Equipos desarrollando en Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Lista mantenida de equipos que desarrollan sobre Polkadot y/o Substrate.
