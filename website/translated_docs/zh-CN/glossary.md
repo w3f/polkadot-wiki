@@ -4,11 +4,11 @@ title: Terms and Definitions
 sidebar_label: Terms and Definitions
 ---
 
-## Block
+## 区块
 
 A collection of data, such as transactions, that together indicate a state transition of the blockchain.
 
-## Block explorer
+## 区块浏览器
 
 An application which allows a user to explore the different blocks on a blockchain.
 
@@ -28,11 +28,11 @@ A node which acts as an intermediary between the Polkadot relay chain and an ext
 
 The property of a system which is tolerant of Byzantine faults; that is, a system where not only may individual subsystems fail, but it may not be clear if a particular subsystem has failed or not. That is, different observers on the system may not agree on whether or not the system has failed. Ensuring Byzantine fault tolerance is an important part of developing any distributed system.
 
-## Collator
+## 收集人
 
 A node which maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
 
-## Consensus
+## 共识
 
 The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
 
@@ -48,7 +48,7 @@ A generic term for a decentralized application, that is, one which runs as part 
 
 Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework. Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
 
-## Finality
+## 确定性
 
 The property of a block which cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point). In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
 
@@ -56,7 +56,7 @@ The property of a block which cannot be reverted. Generally, created blocks are 
 
 A mechanism which determines finality.
 
-## Fisherman
+## 钓鱼人
 
 Nodes which monitor the network for validators or collators which are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
 
@@ -64,11 +64,11 @@ Nodes which monitor the network for validators or collators which are behaving b
 
 GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: <https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372>
 
-## Governance
+## 治理
 
 The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
 
-## Governance Council
+## 治理委员会
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
@@ -76,11 +76,11 @@ An on-chain entity which consists of several on-chain accounts (starting at 6, e
 
 An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: <https://libp2p.io/>
 
-## Liveness
+## 活跃性
 
 The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system which eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
 
-## Node explorer
+## 节点浏览器
 
 A tool which gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
 
@@ -88,19 +88,19 @@ A tool which gives you information about a node, such as the latest blocks seale
 
 A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from delegated proof-of-stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator.
 
-## Nominator
+## 提名人
 
 Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
 
-## On-chain governance
+## 链上治理
 
 Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
 
-## Parachain
+## 平行链
 
 A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
 
-## Parachain Registry
+## 平行链注册表
 
 A relatively simple database-like construct that holds both static and dynamic information on each chain.
 
@@ -116,23 +116,23 @@ A heterogeneous multi-chain technology allowing for various blockchains of diffe
 
 The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
-## Proof of Stake (PoS)
+## 权益证明 (PoS)
 
 A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
 
-## Proof of Work
+## 工作量证明
 
 A method of achieving consensus in which the next block is determined by the first to solve a difficult puzzle (e.g., in Bitcoin, solving a partial pre-image hash for a block candidate).
 
-## Proposal
+## 提案
 
 A potential function call to be voted on in a referendum. Proposals modify the behavior of the Polkadot network, from minor parameter tuning all the way up to replacing the runtime code.
 
-## Referendum
+## 公投
 
 A vote on whether or not a proposal should be accepted by the network. These referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
 
-## Relay chain
+## 中继链
 
 A chain which coordinates consensus and communication between parachains (and external chains, via bridges).
 
@@ -172,23 +172,23 @@ A function which describes how the state of a blockchain can be transformed. For
 
 An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
 
-## Transaction
+## 交易
 
 An individual element of the state transition function of a block, such as moving tokens from one account to another.
 
-## Validator
+## 验证人
 
 A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
 
-## Voting
+## 投票
 
 The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
 
-## Wallet
+## 钱包
 
 A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
 
-## Web3 Foundation
+## Web3 基金会
 
 A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
 
