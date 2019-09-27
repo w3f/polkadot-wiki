@@ -70,12 +70,12 @@ Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cos
 
 The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
 
-- in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
-- GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block production mechanism
+ - in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
+ - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block production mechanism
 
 ### Casper CBC
 
-*Coming soon!*
+_Coming soon!_
 
 <!-- ### Avalanche -->
 
@@ -95,3 +95,4 @@ Although effective in coming to a decentralized consensus, PoW consumes an incre
 ### Finality Gadget
 
 ### NPoS -->
+
