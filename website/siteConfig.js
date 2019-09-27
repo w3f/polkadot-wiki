@@ -23,9 +23,9 @@ const users = [
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
   tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol.',
-  url: 'https://w3f.github.io', // Your website URL
-  baseUrl: '/polkadot-wiki-i18n/',
-  projectName: 'polkadot-wiki-i18n',
+  url: 'https://wiki.polkadot.network', // Your website URL
+  baseUrl: '/',
+  projectName: 'polkadot-wiki',
   organizationName: 'w3f',
 
   // For no header links in the top nav bar -> headerLinks: [],
