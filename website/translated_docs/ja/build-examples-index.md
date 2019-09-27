@@ -20,7 +20,7 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 - Robonomics modules for integrating with ROS. [Repo](https://github.com/airalab/substrate-node-robonomics)
 - Plasma on Substrate implemented by Staked Technologies. [Repo](https://github.com/stakedtechnologies/Plasm)
 - Edgeware. [Repo](https://github.com/hicommonwealth/edgeware-node)
-- Zerochain privacy-focused runtime module. 
+- Zerochain privacy-focused runtime module.
     - [Zero-chain Repo](https://github.com/LayerXcom/zero-chain)
     - [Bellman-substrate (zksnarks on substrate) Repo](https://github.com/LayerXcom/bellman-substrate)
 - Starlog, IPFS metadata on substrate. [Repo](https://github.com/PACTCare/Starlog)
@@ -34,7 +34,7 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 - Substrate inherents sample. [Repo](https://github.com/gautamdhameja/substrate-inherents-sample)
 - Collateralize non-fungible assets for cash. [Repo](https://github.com/nczhu/collateral)
 - CidChain. [Repo](https://github.com/Polygos/substrate-node-cidchain)
-- Katal. [Repo](https://github.com/Trinkler/katal-chain) 
+- Katal. [Repo](https://github.com/Trinkler/katal-chain)
     - [Fixed-point arithmetic](https://github.com/Trinkler/katal-chain/tree/master/modules/reals)
     - [Time in ISO8601 format](https://github.com/Trinkler/katal-chain/tree/master/modules/time)
     - [Permissioned Oracle](https://github.com/Trinkler/katal-chain/tree/master/modules/oracle)
