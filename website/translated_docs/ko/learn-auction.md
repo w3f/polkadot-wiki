@@ -6,7 +6,7 @@ sidebar_label: Parachain Slots Auction
 
 <div class="img-container">
     <a href="https://slides.com/paritytech/validating-in-polkadot#/20" target="_blank">
-        <img alt="Polkadot's roadmap to 200 parachains" src="assets/parachain-roadmap.jpg"/>
+        <img alt="Polkadot's roadmap to 200 parachains" src="assets/parachain-roadmap.jpg" />
     </a>
     Parachain auction schedule. [Click for slide]
 </div>
@@ -47,20 +47,21 @@ The slot durations are capped to 2 years and divided into 6-month periods. Parac
 
 ## How does bidding work?
 
-    Parachain slots at genesis
-    
-           --6 months--
-           v          v
-    Slot A |     1    |     2    |     3     |     4     |...
-    Slot B |     1    |     2    |     3     |     4     |...
-    Slot C |__________|     1    |     2     |     3     |     4     |...
-    Slot D |__________|     1    |     2     |     3     |     4     |...
-    Slot E |__________|__________|     1     |     2     |     3     |     4     |...
-           ^                                             ^
-           ---------------------2 years-------------------
-    
-    Each period of the range 1 - 4 represents a 6-month duration for a total of 2 years
-    
+```
+Parachain slots at genesis
+
+       --6 months--
+       v          v
+Slot A |     1    |     2    |     3     |     4     |...
+Slot B |     1    |     2    |     3     |     4     |...
+Slot C |__________|     1    |     2     |     3     |     4     |...
+Slot D |__________|     1    |     2     |     3     |     4     |...
+Slot E |__________|__________|     1     |     2     |     3     |     4     |...
+       ^                                             ^
+       ---------------------2 years-------------------
+
+Each period of the range 1 - 4 represents a 6-month duration for a total of 2 years
+```
 
 Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `lease period`. More than one continuous `period` is a `range`.
 
