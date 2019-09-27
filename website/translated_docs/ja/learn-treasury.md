@@ -10,16 +10,16 @@ When a stakeholder wishes to propose a spend from the treasury, they must reserv
 
 Proposals may consist of (but are not limited to):
 
-- Infrastructure deployment and continued operation.
-- Network security operations (monitoring services, continuous auditing).
-- Ecosystem provisions (collaborations with friendly chains).
-- Marketing activities (advertising, paid features, collaborations).
-- Community events and outreach (meetups, pizza parties, hackerspaces).
-- Software development (wallets and wallet integration, clients and client upgrades).
+ - Infrastructure deployment and continued operation.
+ - Network security operations (monitoring services, continuous auditing).
+ - Ecosystem provisions (collaborations with friendly chains).
+ - Marketing activities (advertising, paid features, collaborations).
+ - Community events and outreach (meetups, pizza parties, hackerspaces).
+ - Software development (wallets and wallet integration, clients and client upgrades).
 
 The treasury is ultimately controlled by the stakeholders, and how the funds will be spent is up to their judgment.
 
 ## Resources
 
-- [Substrate's Treasury Module](https://github.com/paritytech/substrate/blob/master/srml/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/srml_treasury/index.html))
-- [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - Details the treasury in its first live environment on the Kusama network.
+ - [Substrate's Treasury Module](https://github.com/paritytech/substrate/blob/master/srml/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/srml_treasury/index.html))
+ - [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - Details the treasury in its first live environment on the Kusama network.

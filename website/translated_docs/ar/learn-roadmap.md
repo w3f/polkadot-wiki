@@ -8,6 +8,7 @@ sidebar_label: Roadmap
 
 We are targeting the end of 2019 for the initial release of Polkadot.
 
+
 ## Polkadot PoCs
 
 Polkadot is currently undergoing a series of proof-of-concept testnet releases as new features are completed and rolled out.
