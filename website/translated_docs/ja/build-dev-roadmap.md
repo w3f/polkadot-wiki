@@ -16,14 +16,14 @@ Developers need some guide posts for when they can expect certain milestones to 
 
 Expected Features:
 
-- Final API and stable interfaces
-- Ristretto Crypto
-- Solid networking
-- Outstanding bugs fixed
-- Decoupled balances
-- Integration tests
-- Enhanced control over Wasm/native execution heuristics
-- Panics/overflows sweeps in runtime
+ - Final API and stable interfaces
+ - Ristretto Crypto
+ - Solid networking
+ - Outstanding bugs fixed
+ - Decoupled balances
+ - Integration tests
+ - Enhanced control over Wasm/native execution heuristics
+ - Panics/overflows sweeps in runtime
 
 ### 1.1
 
@@ -31,7 +31,7 @@ Expected Features:
 
 Expected Features:
 
-- Economic safety
+ - Economic safety
 
 ## Polkadot
 
@@ -45,6 +45,6 @@ Current release: **PoC-4**
 
 Expected Features:
 
-- BLS signature aggregation for parachain candidate attestations
-- [Integrate Parachain tokens into governance](https://github.com/paritytech/polkadot/issues/124)
-- Improvements to parachain validation
+ - BLS signature aggregation for parachain candidate attestations
+ - [Integrate Parachain tokens into governance](https://github.com/paritytech/polkadot/issues/124)
+ - Improvements to parachain validation
