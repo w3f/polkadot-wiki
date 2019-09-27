@@ -24,7 +24,7 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <img src='/polkadot-wiki-i18n/img/Polkadot_logotype_color.svg' height={320}/>
+          <img src='/img/Polkadot_logotype_color.svg' height={320}/>
         </div>
       </SplashContainer>
     );
