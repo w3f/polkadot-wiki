@@ -4,12 +4,12 @@ title: Community
 sidebar_label: Community
 ---
 
-The Polkadot community is expanding every day. Below are the most essential links to the community channels.
+ชุมชน Polkadot เติบโตขึ้นทุกวัน ด้านล่างนี้เป็นลิงค์สำคัญเกี่ยวกับการติดต่อกับชุมชน
 
-## General
+## ทั่วไป
 
-- [Join the Polkadot PoC-4 Testnet ("Alexander")](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with the latest Polkadot testnet.
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot runtime environment.
+- [เชื่อมต่อ Polkadot PoC-4 Testnet ("Alexander")](https://polkadot.js.org/apps/#/explorer) - ใช้ UI dashboard เพื่อ interact กับ Polkadot testnet รุ่นล่าสุด
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Github Repo ที่ทาง Parity ดูแล ซึ่งเก็บโค้ดเกี่ยวกับ Polkadot runtime environment ที่เขียนขึ้นโดยใช้ภาษา Rust
 - [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Information on hosting meetups, applying for funding, and materials for running it.
 
 ## Riot

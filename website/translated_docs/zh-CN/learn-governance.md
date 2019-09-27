@@ -30,6 +30,26 @@ Another mechanism used, one again which favors the *nay* side (or the *status qu
               \
                 NAY - Requires > 50% votes
     
+    
+    Static Quorum
+    -------------
+                AYE - Requires > 50% votes AND turnout >= QUORUM
+              /
+    Proposal -
+              \
+                NAY - Requires > 50% votes AND turnout >= QUORUM
+    
+    where QUORUM is a constant percentage of the total voting population
+    
+    
+    Supermajority
+    ----------------
+                AYE - Requires > 66.7% votes
+              /
+    Proposal -
+              \
+                NAY - Requires > 66.7% votes
+    
 
     Static Quorum
     -------------

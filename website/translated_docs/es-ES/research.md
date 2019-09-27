@@ -1,7 +1,7 @@
 ---
-id: investigación
-title: Investigación en Polkadot
-sidebar_label: Investigación en Polkadot
+id: research
+title: Polkadot Research
+sidebar_label: Polkadot Research
 ---
 
 <https://research.polkadot.network>

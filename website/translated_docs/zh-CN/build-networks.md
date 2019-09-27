@@ -4,68 +4,68 @@ title: Networks
 sidebar_label: Networks
 ---
 
-The following commands can be used to connect to the different networks.
+您可以通过下面的代码来连接到不同网络。
 
-## Development
+## 开发
 
-Install Polkadot and have a `polkadot` binary install to your `PATH` with:
+在以下 `路径` 安装 `Polkadot` 和 Polkadot 二进制文件：
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git polkadot
 ```
 
-You can run a simple single-node development "network" on your machine by running in a terminal:
+通过在终端上运行，您可以在机器上跑简单的单节点开发网络：
 
 ```bash
 polkadot --dev
 ```
 
-You can muck around by cloning and building the http://github.com/paritytech/polka-ui and http://github.com/paritytech/polkadot-ui or just heading to https://polkadot.js.org/apps.
+您可以复制和创建以下网站：
 
 ## Krumme Lanke
 
-Krumme Lanke is a testnet network used during the development of PoC-2.
+http://github.com/paritytech/polka-ui 和 http://github.com/paritytech/polkadot-ui or 或前往到 https://polkadot.js.org/apps.
 
-Install Polkadot PoC-2 and have a `polkadot` binary installed to your `PATH` with:
+Krumme Lanke 是一个在 Poc-2 开发期间使用的测试网络。请在以下路径安装 Polkadot PoC-2 和 `Polkadot 二进制` 文件：
 
 ```bash
 cargo install --git https://github.com/paritytech/substrate.git --branch v0.2 polkadot
 ```
 
-Connect to the global "Krumme Lanke" testnet by default by running:
+通过默认运行以下代码连接到全球 "Krumme Lanke" 测试网：
 
 ```bash
 polkadot
 ```
 
-## Alexander (PoC-4)
+## Alexander（Poc-4）
 
-Alexander is a testnet network used during the development of PoC-3 and PoC-4.
+Alexander 是一个在 PoC-3 和 PoC-4 开发期间使用的测试网络。
 
-Install Polkadot PoC-4 and have a `polkadot` binary installed to your `PATH` with:
+请在以下 `路径` 安装 Polkadot Poc-4 和 `polkadot` 二进制文件：
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot
 ```
 
-Connect to the global "Alexander" testnet by default by running:
+通过默认运行以下代码来连接到全球 "Alexander测试网:"
 
 ```bash
-polkadot
+Polkadot
 ```
 
-## Local Two-Node Testnet
+## 本地双节点测试网
 
-If you want to see the multi-node consensus algorithm in action locally, then you can create a local testnet. You'll need two terminals open. In one, run:
+如果您想要在本地看到多节点共识算法操作，那么您可以创建一个本地测试网。您需要开两个终端，其中一个运行以下代码：
 
 ```bash
 polkadot --chain=local --validator --key Alice -d /tmp/alice
 ```
 
-and in the other, run:
+另一个运行以下代码：
 
 ```bash
 polkadot --chain=local --validator --key Bob -d /tmp/bob --port 30334 --bootnodes '/ip4/127.0.0.1/tcp/30333/p2p/ALICE_BOOTNODE_ID_HERE'
 ```
 
-Ensure you replace `ALICE_BOOTNODE_ID_HERE` with the node ID from the output of the first terminal.
+请确保将第一个终端的输出结果中的节点ID替换为`ALICE_BOOTNODE_ID_HERE` 。

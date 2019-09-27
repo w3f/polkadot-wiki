@@ -4,39 +4,39 @@ title: Interchain Message Passing (ICMP)
 sidebar_label: Interchain Message Passing (ICMP)
 ---
 
-Interchain transactions are resolved using a simple queuing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
+跨链交易是基于梅克尔树(Merkle tree)利用简单队列机制方案解决确保正确性。这将会是属于在中继链上验证人的工作，把在平行链上出口队列中的交易发送到刻目的地(平行链)的入口队列中。
 
-The input and output queue are sometimes referred to in the codebase as "ingress" and "egress" messages.
+入口和出口队列在代码中通常称为"入口(ingress)"和"出口(egress)"信息。
 
-## Overview
+## 概述
 
-- Interchain messages will *not* go on to the relay chain.
-- Interchain messages will be constrained to a max size in bytes.
-- Parachains are allowed to block messages from other parachains, in which case the dispatching parachain would be aware of this block.
-- Collator nodes are responsible for routing messages between chains.
-- Collators produce a list of "egress" messages and will receive the "ingress" messages from other parachains.
-- On each block, parachains are expected to route messages from some subset of all other parachains.
-- When a collator produces a new block to hand off to a validator, it will collect the latest ingress queue information and process it.
-- Validators will check a proof that the new candidate for the next parachain block includes the processing of the expected ingress messages to that parachain.
+- 跨链信息不会发送到中继链
+- 跨链信息将会限制于字节(bytes)最大值
+- 平行链可以拒绝接收从其它平行链发出的信息，在这种情况下，发送方会意识到有障碍
+- 校对人负责把平行链之间的信息传递
+- 校对人产生"出口"列表信息並会在"入口"接收到其它平行链信息
+- 平行链在每个区块中，将会传递所有其它平行链信息
+- 当校对人产生了区块并提交给验证人，它会收集最新入口队列信息并且处理它
+- 验证人将会对校对人提交的平行链区块进行验证，包括处理到该平行链预期入口的信息
 
-## Example
+## 例子
 
-A smart contract that exists on parachain A will route a message to parachain B in which another smart contract is called that makes a transfer of some assets within that chain.
+从平行链A里的智能合约发送信息到平行链B里的另一个智能合约，达到链与链之间资产转移。
 
-Charlie executes the smart contract on parachain A which initiates a new interchain message for the destination of a smart contract on parachain B.
+Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行链B的智能合约。
 
-The collator node of parachain A will place this new interchain message into its out-bound messages queue, along with a `destination` and a `timestamp`.
+平行链A的校对人会把跨链信息连同`目的地(destination)`和`时间(timestamp)`放到出口信息队列中。
 
-The collator node of parachain B routinely pings all other collator nodes asking for new messages (filtering by the `destination` field). When the collator of parachain B makes its next ping, it will see this new message on parachain A and add it into its own in-bound queue for processing into the next block.
+平行链B的校对人会持续地问其它校对人节点是否有新信息(通过筛选`目的地`)，当平行链B的校对人问是否有新信息时，它会看到从平行链A发送过来的信息并且把它加到下一个区块中的入口队列。
 
-Validators for parachain A will also read the out-bound queue and know the message. Validators for parachain B will do the same. This is so that they will be able to verify the message transmission happened.
+平行链A和B的验证人同样也会读取出口队列并且发现该信息，这样它们就可以验证传输中信息。
 
-When the collator of parachain B is building the next block in its chain, it will process the new message in its in-bound queue as well as any other messages it may have found/received.
+当平行链B的校对人在打包区块的时候，它会处理在入口队列中的新信息和其它发现或接收到的信息。
 
-During processing, the message will execute the smart contract on parachain B and complete the asset transfer like intended.
+在处理时，平行链B里的智能合约会执行该信息并且完成资产转移。
 
-The collator now hands this block to the validator, which itself will verify that this message was processed. If the message was processed and all other aspects of the block are valid, the validator will include this block for parachain B into the relay chain.
+然后校对人提交该区块给验证人，并且核对信息是否处已经处理。如果信息经已处理好和区块中其它方面是有效，验证人便会把该区块包括到中继链上。
 
-## Resources
+## 资源
 
 - [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description on the Web3 Foundation research wiki.

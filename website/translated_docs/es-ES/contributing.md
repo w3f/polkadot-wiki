@@ -1,32 +1,32 @@
 ---
-id: contributing
-title: Contributing
-sidebar_label: Contributing
+id: colaboración
+title: Colaboración
+sidebar_label: Colaboración
 ---
 
-## This [wiki](https://github.com/w3f/Polkadot-wiki) is an **OPEN-ish Open Source Project**
+## Esta wiki [](https://github.com/w3f/Polkadot-wiki) es un proyecto de código abierto **OPEN-ish**
 
-This is an informational resource on Polkadot and the Polkadot ecosystem.
+Este es un recurso de información sobre Polkadot y el ecosistema de Polkadot.
 
-Pull requests or other contributions from the community are encouraged! However, the final decision to add content will be made by the Web3 Foundation.
+¡Se motivan Pull requests u otras contribuciones de la comunidad! Sin embargo, la decisión final de añadir contenido será responsabilidad de la Fundación Web3.
 
-## Rules
+## Reglas
 
-There are a few basic ground-rules for contributors:
+Hay algunas reglas básicas para los colaboradores:
 
-1. **No `--force` pushes** or modifying the Git history in any way.
-2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
-3. **Non-master branches** ought to be used for ongoing work.
-4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
-5. Pull requests to solicit feedback are *encouraged* for any other non-trivial contribution but left to the discretion of the contributor.
-6. Contributors should attempt to adhere to the prevailing Markdown style, language, and layout.
-7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
-8. Care should be taken to remain as objective and informative as possible. There should be no editorializing, and external bias should not be present.
+1. . **No `--force` puse** o modificar el historial de Git de alguna manera.
+2. Las solicitudes de Pull request son preferibles a issues, especialmente en el caso de pequeños cambios como errores tipográficos. Issues deben ser utilizados para cambios genéricos, de gran alcance o contenido incompleto.
+3. **Ramas no principales** (master) deben ser usadas para el trabajo en curso.
+4. Las **modificaciones relevantes** deben estar sujetas a una solicitud de **pull request** con el fin de solicitar el feedback de otros colaboradores.
+5. Se *recomiendan* Pull requests para solicitar feedback en caso de cualquier otra contribución no trivial, pero se deja a la elección del colaborador.
+6. Los colaboradores deben intentar adaptarse al estilo, lenguaje y disposición de Markdown actual.
+7. La gramática correcta debe ser utilizada en todo momento. Las peticiones de Pull requests con errores tipográficos no se integrarán hasta que se solucionen.
+8. Se debe tener cuidado para ser lo más objetivo e informativo posible. No debe haber ediciones y no debe haber prejuicios externos.
 
-## Changes to this arrangement
+## Modificaciones de este acuerdo
 
-This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
+Este documento también puede estar sujeto a solicitudes de "pull requests" o cambios por parte de los contribuyentes cuando usted crea que tiene algo importante que añadir o cambiar.
 
-## Heritage
+## Legado
 
-This document was based on the Level contribution guidelines located here: <https://github.com/Level/community/blob/master/CONTRIBUTING.md>
+Este documento se basó en las normas de contribución que se detallan a continuación: <https://github.com/Level/community/blob/master/CONTRIBUTING.md>
