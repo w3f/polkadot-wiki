@@ -21,13 +21,12 @@ Currently, DOTs have 15 decimal places, while the smallest unit is called the Pl
 | Milli | 12             |
 | DOT   | 15             |
 
-
 **New Version**
 
 | Unit | Decimal Places |
 | ---- | -------------- |
 |      |                |
- Planck| 1 Point | 3 Microdot (UDOT)| 6 Millidot (MDOT)| 9 Dot (DOT) | 12 Blob | 15 
+ Planck| 1 Point | 3 Microdot (UDOT)| 6 Millidot (MDOT)| 9 Dot (DOT) | 12 Blob | 15
 
 ## What are the uses of DOTs?
 
@@ -51,7 +50,7 @@ DOTs will have the ability to be bonded for a duration of time in order to add a
 
 Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch later this year (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Project Founder Gavin Wood said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
 
-*Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of Mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.*
+_Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of Mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch._
 
 Testnet dots are freely available now - see below for various ways to obtain them.
 

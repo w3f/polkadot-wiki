@@ -39,6 +39,7 @@ For simplicity, we have the following assumptions.
 * Rewards amount is 100 DOT tokens
 * The least amount of DOTs to be a validator is 350
 
+
 |               | **A - Validator Pool** |                             |         |
 |:-------------:|:----------------------:|:---------------------------:|:-------:|
 | Nominator (4) |      Stake (600)       | Fraction of the Total Stake | Rewards |
@@ -46,7 +47,6 @@ For simplicity, we have the following assumptions.
 |    **Sam**    |           50           |            0.083            |   8.3   |
 |     Anson     |          250           |            0.417            |  41.7   |
 |     Bobby     |          200           |            0.333            |  33.3   |
-
 
 |               | **B - Validator Pool** |                             |         |
 |:-------------:|:----------------------:|:---------------------------:|:-------:|
@@ -56,8 +56,7 @@ For simplicity, we have the following assumptions.
 |     John      |          150           |            0.375            |  37.5   |
 |   **Kitty**   |           50           |            0.125            |  12.5   |
 
-
-*Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively.*
+_Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT than those in pool A because pool A has more overall stake. Sam has staked 50 DOTs in pool A, but he only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
 
@@ -100,10 +99,11 @@ At the same time, once slashing is determined, a value will be deducted from the
 
 ### Example
 
-        Offline Slash Grace = 4 (Network define)
-    
-        Unstake Threshold   = 5 (Validator define)
-    
+```
+    Offline Slash Grace = 4 (Network define)
+
+    Unstake Threshold   = 5 (Validator define)
+```
 
 In this case, slashing will only occur if a validator has been reported offline more than 9 times.
 
@@ -113,12 +113,13 @@ Based on the the current configuration in the Alexander testnet, rewards are rec
 
 ### Example
 
-        PER_ERA * BLOCK_TIME = **Reward Distribution Time**
-    
-        600 * 6 = 3600 = 1 Hour
-    
-        ***These parameters can be changed by proposing a referendum***
-    
+```
+    PER_ERA * BLOCK_TIME = **Reward Distribution Time**
+
+    600 * 6 = 3600 = 1 Hour
+
+    ***These parameters can be changed by proposing a referendum***
+```
 
 Validator can create a cut of the reward that is not shared with the nominators. After value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 

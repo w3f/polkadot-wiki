@@ -30,11 +30,9 @@ We are not only providing technical resources for you, but we can have someone f
 - Like to make connections
 
 ## How do hackathons differ from workshops?
-
 Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
 
 ## How can you run a hackathon in your city?
-
 1. Submit your application (Coming soon.)
 2. Review
 3. Decision

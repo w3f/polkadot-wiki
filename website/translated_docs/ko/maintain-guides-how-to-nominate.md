@@ -21,7 +21,6 @@ Once you've created your accounts you will need to acquire some DOTs. See the [D
 ## Nominating
 
 It is now time to setup our nominator. We will do the following:
-
 - Bound the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Select the `controller`. This is the account that will decide when to start or stop nominating.
 
