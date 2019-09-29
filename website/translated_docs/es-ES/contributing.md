@@ -23,6 +23,7 @@ Hay algunas reglas básicas para los colaboradores:
 7. La gramática correcta debe ser utilizada en todo momento. Las peticiones de Pull requests con errores tipográficos no se integrarán hasta que se solucionen.
 8. Se debe tener cuidado para ser lo más objetivo e informativo posible. No debe haber ediciones y no debe haber prejuicios externos.
 
+
 ## Modificaciones de este acuerdo
 
 Este documento también puede estar sujeto a solicitudes de "pull requests" o cambios por parte de los contribuyentes cuando usted crea que tiene algo importante que añadir o cambiar.
