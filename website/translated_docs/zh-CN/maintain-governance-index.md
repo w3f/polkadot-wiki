@@ -27,23 +27,24 @@ To better understand how the council is formed, please read [this section](#coun
 - **Public**: Anyone can propose a referenda by depositing the minimum amount of DOTs for a certain period (No. of Blocks). If someone likes the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest number of support bond will be selected to be a referendum. The bonded tokens will be released once the proposal is tabled. At genesis, every two weeks there will be a referendum for the most supported proposal.
 
 - **[Council](#council)**:
-    
+
     Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
-    
+
     Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.)
 
 ### Voting for a proposal
 
 To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referendum result, you can read more about the [Voluntary Locking](#voluntary-locking).
 
-    Example:
-    
-    Peter: Votes `No` with 10 DOTs for a 12 week lock period  => 10 * 6 = 60 Votes
-    
-    Logan: Votes `Yes` with 20 DOTs for a 2 week lock period => 20 * 1 = 20 Votes
-    
-    Kevin: Votes `Yes` with 15 DOTs for a 4 week lock period => 15 * 2 = 30 Votes
-    
+```
+Example:
+
+Peter: Votes `No` with 10 DOTs for a 12 week lock period  => 10 * 6 = 60 Votes
+
+Logan: Votes `Yes` with 20 DOTs for a 2 week lock period => 20 * 1 = 20 Votes
+
+Kevin: Votes `Yes` with 15 DOTs for a 4 week lock period => 15 * 2 = 30 Votes
+```
 
 According to the above scenario, even though combining both Logan and Kevin's DOTs is more than Peter, the lock period for both of them is far less than Peter, leading to their voting power counting as less.
 
@@ -57,17 +58,17 @@ Depending on which entity proposed the proposal and whether all council members 
 | Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
 | Council (Majority agreement) |                Simple Majority                 |
 
-
 Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
 
-    approve - the number of aye votes
-    
-    against - the number of nay votes
-    
-    voters - the total number of voting tokens
-    
-    electorate - the total number of DOTs tokens issued in the network
-    
+```
+approve - the number of aye votes
+
+against - the number of nay votes
+
+voters - the total number of voting tokens
+
+electorate - the total number of DOTs tokens issued in the network
+```
 
 **Super-Majority Approve**
 
@@ -83,27 +84,28 @@ Majority-carries, a simple comparison of votes, if there are more aye votes than
 
 *To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
 
-    Example:
-    
-    Assume we only have 1,500 DOTs tokens in total.
-    
-    John  - 500 DOTs
-    Peter - 100 DOTs
-    Lilly - 150 DOTs
-    JJ    - 150 DOTs
-    Ken   - 600 DOTs
-    
-    John: Votes `Yes`for a 2 week lock period  => 500 * 1 = 500 Votes
-    
-    Peter: Votes `Yes` for a 2 week lock period => 100 * 1 = 100 Votes
-    
-    JJ: Votes `No` for a 6 week lock period => 150 * 3 = 450 Votes
-    
-    approve = 600
-    against = 450
-    voters = 1050
-    electorate = 1500
-    
+```
+Example:
+
+Assume we only have 1,500 DOTs tokens in total.
+
+John  - 500 DOTs
+Peter - 100 DOTs
+Lilly - 150 DOTs
+JJ    - 150 DOTs
+Ken   - 600 DOTs
+
+John: Votes `Yes`for a 2 week lock period  => 500 * 1 = 500 Votes
+
+Peter: Votes `Yes` for a 2 week lock period => 100 * 1 = 100 Votes
+
+JJ: Votes `No` for a 6 week lock period => 150 * 3 = 450 Votes
+
+approve = 600
+against = 450
+voters = 1050
+electorate = 1500
+```
 
 $${450 \over \sqrt{1050}} < {600 \over \sqrt{1500}}$$
 
@@ -115,12 +117,14 @@ Based on the above result, the proposal will be approved. In addition, only the 
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
-    Max votes = tokens * periods
-    
+```
+Max votes = tokens * periods
+```
 
 Based on the current testnet setting, the maximum number of lock periods is set to 6.
 
 **Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
+
 
 ## Adaptive Quorum Biasing
 
@@ -148,7 +152,7 @@ Since not everyone is interested in participating in governance, there is a coun
 
 ![](assets/governance/approval-vote.png)
 
-At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
+ At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
 
 To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election.
 
@@ -176,7 +180,5 @@ This would be the tentative governance configuration for Polkadot in the initial
 ## Guides
 
 ### [How to create a proposal]()
-
 ### [How to join the council]()
-
 ### [How to propose a referenda]()

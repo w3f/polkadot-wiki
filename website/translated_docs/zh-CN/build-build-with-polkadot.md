@@ -4,7 +4,7 @@ title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 ---
 
-*本文是Medium博客上[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)的最新版本*
+_本文是Medium博客上[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)的最新版本_
 
 Polkadot是个网络协议，缩短了区块链开发者的开发时间。以前发布和维护着一个新的区块链需要用数年时间，但利用Polkadot只需要数星期甚至几天就可以了。
 
@@ -67,7 +67,7 @@ TODO:
 
 ### 开始使用Substrate
 
-TODO:将来也会有很多Polkadot runtime的[实现](learn-implementations.md)在各种语言包括C ++，Rust，Go和JS。
+TODO:将来也会有很多Polkadot runtime的[实现](learn-implementations)在各种语言包括C ++，Rust，Go和JS。
 
 正如刚才提到的，Polkadot背后是基于Substrate框架建立的，它是区块链创新者的工具，为构建区块链提供了必要的构建模块，它包含了模块化插件库，你可以从中构建更复杂的逻辑链。
 

@@ -16,16 +16,17 @@ touch /etc/systemd/system/polkadot-validator.service
 
 In this unit file you will write the commands that you want to run on server boot / restart.
 
-    [Unit]
-    Description=Polkadot Validator
-    
-    [Service]
-    ExecStart=PATH_TO_POLKADOT_BIN --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
-    Restart=always
-    
-    [Install]
-    WantedBy=multi-user.target
-    
+```
+[Unit]
+Description=Polkadot Validator
+
+[Service]
+ExecStart=PATH_TO_POLKADOT_BIN --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
 
 To enable this to autostart on bootup run:
 

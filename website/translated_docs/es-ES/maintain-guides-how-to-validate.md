@@ -4,7 +4,7 @@ title: How to validate
 sidebar_label: How to validate
 ---
 
-*This tutorial works with the current Alexander testnet and has been updated for PoC-4.*
+_This tutorial works with the current Alexander testnet and has been updated for PoC-4._
 
 To be a good validator, you should
 
@@ -18,7 +18,7 @@ Nominators still earn rewards. You can even nominate multiple validators. If you
 
 For this tutorial, we use Ubuntu 18.04 and will be running on the PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too different. There are a lot of [VPS](#vps-list) choices out there, feel free to pick the one you like.
 
-*Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability.*
+_Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
 
 ## Install Rust
 
@@ -41,10 +41,11 @@ Until support for the one-line installer is back up for PoC-4, you will need to 
 
 **You must use a specific version of nightly to install PoC-4.** Follow the directions below:
 
-    rustup toolchain install nightly-2019-07-14
-    rustup default nightly-2019-07-14
-    rustup target add wasm32-unknown-unknown --toolchain nightly-2019-07-14
-    
+```
+rustup toolchain install nightly-2019-07-14
+rustup default nightly-2019-07-14
+rustup target add wasm32-unknown-unknown --toolchain nightly-2019-07-14
+```
 
 After switching to `nightly-2019-07-14` as the default toolchain, the below instructions should work as written.
 
