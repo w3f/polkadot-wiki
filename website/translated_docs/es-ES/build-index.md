@@ -4,7 +4,7 @@ title: Builders Portal
 sidebar_label: Builders Portal
 ---
 
-*Polkadot is under construction, these documents will likely change.*
+_Polkadot is under construction, these documents will likely change._
 
 Welcome to the builders section of the Polkadot wiki.
 
@@ -36,4 +36,4 @@ This section of the wiki is divided into three parts: the first part takes the s
 
 - [Resources For Running a Hackathon](build-hackathon)
 
-*More coming soon.*
+_More coming soon._

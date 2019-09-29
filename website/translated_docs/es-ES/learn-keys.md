@@ -92,21 +92,23 @@ Even though Schnorr signatures allow for signature aggregation, BLS signatures a
 
 From the [introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10) into `libssl`:
 
-    The reason is the following: During summer of 2013, revelations from ex-
-    consultant at [the] NSA Edward Snowden gave proof that [the] NSA willingly inserts backdoors
-    into software, hardware components and published standards. While it is still
-    believed that the mathematics behind ECC (Elliptic-curve cryptography) are still sound and solid,
-    some people (including Bruce Schneier [SCHNEIER]), showed their lack of confidence
-    in NIST-published curves such as nistp256, nistp384, nistp521, for which constant
-    parameters (including the generator point) are defined without explanation. It
-    is also believed that [the] NSA had a word to say in their definition. These curves
-    are not the most secure or fastest possible for their key sizes [DJB], and
-    researchers think it is possible that NSA have ways of cracking NIST curves.
-    It is also interesting to note that SSH belongs to the list of protocols the NSA
-    claims to be able to eavesdrop. Having a secure replacement would make passive
-    attacks much harder if such a backdoor exists.
-    
-    However an alternative exists in the form of Curve25519. This algorithm has been
-    proposed in 2006 by DJB [Curve25519]. Its main strengths are its speed, its
-    constant-time run time (and resistance against side-channel attacks), and its
-    lack of nebulous hard-coded constants.
+```
+The reason is the following: During summer of 2013, revelations from ex-
+consultant at [the] NSA Edward Snowden gave proof that [the] NSA willingly inserts backdoors
+into software, hardware components and published standards. While it is still
+believed that the mathematics behind ECC (Elliptic-curve cryptography) are still sound and solid,
+some people (including Bruce Schneier [SCHNEIER]), showed their lack of confidence
+in NIST-published curves such as nistp256, nistp384, nistp521, for which constant
+parameters (including the generator point) are defined without explanation. It
+is also believed that [the] NSA had a word to say in their definition. These curves
+are not the most secure or fastest possible for their key sizes [DJB], and
+researchers think it is possible that NSA have ways of cracking NIST curves.
+It is also interesting to note that SSH belongs to the list of protocols the NSA
+claims to be able to eavesdrop. Having a secure replacement would make passive
+attacks much harder if such a backdoor exists.
+
+However an alternative exists in the form of Curve25519. This algorithm has been
+proposed in 2006 by DJB [Curve25519]. Its main strengths are its speed, its
+constant-time run time (and resistance against side-channel attacks), and its
+lack of nebulous hard-coded constants.
+```

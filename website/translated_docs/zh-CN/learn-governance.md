@@ -22,54 +22,75 @@ Despite this, by taking advantage of the fact that turnout is rarely 100%, we ca
 
 Another mechanism used, one again which favors the *nay* side (or the *status quo*), is to require a super-majority approval. This works on two principles: firstly that the status quo tends to be safer than any change, and thus should have some bias towards it. Secondly that, like all means of empirical measurement, there is inevitably going to be some degree of inaccuracy and volatility over time. A result could be 51%-49% one month and then change to 49%-51% the following month because of macro-environmental factors such as the economy, social-demographic progression or even the weather. Given the costs involved in enacting the changes of a proposal, it is advantageous to ensure that a result would not likely flip within a short period of time after enactment, and thus a supermajority should approve the non-status-quo option. (As an example of why this can be important, a super-majority was indeed not required in the UK's "Brexit" referendum, resulting in a result that, two years on from the vote but before the enactment, appears indeed to have flipped).
 
-    Majority Carries
-    ----------------
-                AYE - Requires > 50% votes
-              /
-    Proposal -
-              \
-                NAY - Requires > 50% votes
-    
-    
-    Static Quorum
-    -------------
-                AYE - Requires > 50% votes AND turnout >= QUORUM
-              /
-    Proposal -
-              \
-                NAY - Requires > 50% votes AND turnout >= QUORUM
-    
-    where QUORUM is a constant percentage of the total voting population
-    
-    
-    Supermajority
-    ----------------
-                AYE - Requires > 66.7% votes
-              /
-    Proposal -
-              \
-                NAY - Requires > 66.7% votes
-    
+```
+Majority Carries
+----------------
+            AYE - Requires > 50% votes
+          /
+Proposal -
+          \
+            NAY - Requires > 50% votes
 
-    Static Quorum
-    -------------
-                AYE - Requires > 50% votes AND turnout >= QUORUM
-              /
-    Proposal -
-              \
-                NAY - Requires > 50% votes AND turnout >= QUORUM
-    
-    where QUORUM is a constant percentage of the total voting population
-    
 
-    Supermajority
-    ----------------
-                AYE - Requires > 66.7% votes
-              /
-    Proposal -
-              \
-                NAY - Requires > 66.7% votes
-    
+Static Quorum
+-------------
+            AYE - Requires > 50% votes AND turnout >= QUORUM
+          /
+Proposal -
+          \
+            NAY - Requires > 50% votes AND turnout >= QUORUM
+
+where QUORUM is a constant percentage of the total voting population
+
+
+Supermajority
+----------------
+            AYE - Requires > 66.7% votes
+          /
+Proposal -
+          \
+            NAY - Requires > 66.7% votes
+
+
+Static Quorum
+-------------
+            AYE - Requires > 50% votes AND turnout >= QUORUM
+          /
+Proposal -
+          \
+            NAY - Requires > 50% votes AND turnout >= QUORUM
+
+where QUORUM is a constant percentage of the total voting population
+
+
+Supermajority
+----------------
+            AYE - Requires > 66.7% votes
+          /
+Proposal -
+          \
+            NAY - Requires > 66.7% votes
+```
+```
+Static Quorum
+-------------
+            AYE - Requires > 50% votes AND turnout >= QUORUM
+          /
+Proposal -
+          \
+            NAY - Requires > 50% votes AND turnout >= QUORUM
+
+where QUORUM is a constant percentage of the total voting population
+```
+```
+Supermajority
+----------------
+            AYE - Requires > 66.7% votes
+          /
+Proposal -
+          \
+            NAY - Requires > 66.7% votes
+```
 
 In our case, we introduce something broadly similar, only more sophisticated, to ensure that as turnout drops, a "sensible" decision prevails. Specifically we have a council which, in the model of a board of directors, is a group of individuals delegated by stakeholders to help determine what happens when there is no commanding majority of stake in favor or against a proposal.
 

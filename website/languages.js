@@ -97,7 +97,7 @@ const languages = [
     tag: 'af',
   },
   {
-    enabled: false,
+    enabled: true,
     name: '한국어',
     tag: 'ko',
   },

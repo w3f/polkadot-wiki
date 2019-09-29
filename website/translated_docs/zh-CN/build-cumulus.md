@@ -20,7 +20,7 @@ Cumulus运行时围绕在Substrate运行时周围，使它们得以被Polkadot�
 
 将它集成到substrate运行时就像导入crate包并将这一行宏添加到代码中一样简单。
 
-```rust
+``` rust
 runtime::register_validate_block!(Block, BlockExecutor);
 ```
 

@@ -7,7 +7,6 @@ sidebar_label: Links
 ## Protocol
 
 ### General
-
 - [White Paper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) - General Polkadot description.
 - [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) - Brief, non-technical overview of Polkadot.
 - [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) - Epicenter interviews Gavin Wood.
@@ -21,6 +20,7 @@ sidebar_label: Links
 - [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interoperability: Connecting the Dots."
 - [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
 - [DOT Day Seoul](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39) - Video playlist of all talks at DOT Day Seoul.
+
 
 ### Substrate
 
@@ -71,6 +71,7 @@ sidebar_label: Links
 - [Cumulus](https://github.com/paritytech/cumulus) - A library for making Substrate-built chains compatible with Polkadot.
 - [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot cofounder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.
 
+
 ### Wasm
 
 - [Wasmi](https://github.com/paritytech/Wasmi) - WebAssembly interpreter written in Rust.
@@ -86,12 +87,12 @@ sidebar_label: Links
 - [Parity Bridge](https://github.com/paritytech/parity-bridge) - Bridge between any two ethereum-based networks.
 
 ## Running a node
-
 - [Polkadot UI](learn-UI) - Get started on the testnet.
 - [Install PoC-3](https://github.com/paritytech/polkadot#install-poc-3-alexander-testnet) - Install Polkadot's client and connect to the global PoC-3 testnet.
 - [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
 - [Get testnet DOTS](learn-DOT#getting-testnet-dots) \- Receive the native testnet token.
 - [Deploy a Parachain](https://github.com/paritytech/polkadot/wiki/Parachains) \- Deploy a blockchain on the testnet.
+
 
 ### UI and explorers
 

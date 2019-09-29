@@ -4,7 +4,7 @@ title: Builders Portal
 sidebar_label: Builders Portal
 ---
 
-*🏗️ Polkadot尚未完成，文件将有所更改。*
+_🏗️ Polkadot尚未完成，文件将有所更改。_
 
 欢迎访问Polkadot维基网站的“构建者”章节。
 
@@ -36,4 +36,4 @@ sidebar_label: Builders Portal
 
 - [运行骇客松的资源](build-hackathon)
 
-*敬请期待。*
+_敬请期待。_

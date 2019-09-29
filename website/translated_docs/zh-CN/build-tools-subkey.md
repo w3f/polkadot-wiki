@@ -33,7 +33,7 @@ a69da4a6ccbf81dbbbfad235fa12cf8528c18012b991ae89214de8d20d29c1280576ced6eb38b740
 
 ### 签名
 
-​```bash subkey inspect 
+​```bash subkey inspect
 
 ```bash
 echo <msg> | subkey verify <sig> <address>

@@ -8,7 +8,7 @@ sidebar_label: Términos y Condiciones
 
 Una recopilación de datos, como las transacciones, que juntos indican una transición de estado de la blockchain.
 
-## Block explorer 
+## Block explorer
 
 Una aplicación que permite al usuario visualizar los diferentes bloques de una blockchain.
 
