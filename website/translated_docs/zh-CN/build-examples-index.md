@@ -20,7 +20,7 @@ sidebar_label: Examples
 - 用于与ROS集成的Robonomics模式。[源码库](https://github.com/airalab/substrate-node-robonomics)
 - Staked Technologies在Substrate上实现Plasma。[源码库](https://github.com/stakedtechnologies/Plasm)
 - Edgeware。[源码库](https://github.com/hicommonwealth/edgeware-node)
-- 专注于隐私安全的运行时模组的 Zerochain 
+- 专注于隐私安全的运行时模组的 Zerochain
     - [Zerochain 源码库](https://github.com/LayerXcom/zero-chain)
     - [Bellman-substrate（substrate上的zksnarks）源码库](https://github.com/LayerXcom/bellman-substrate)
 - Substrate上的Starlog，IPFS元数据。[源码库](https://github.com/PACTCare/Starlog)
@@ -34,7 +34,7 @@ sidebar_label: Examples
 - Substrate固有样本。[源码库](https://github.com/gautamdhameja/substrate-inherents-sample)
 - 抵押非同质化资产以获取现金。[源码库](https://github.com/nczhu/collateral)
 - CidChain。[源码库](https://github.com/Polygos/substrate-node-cidchain)
-- Katal。 [源码库](https://github.com/Trinkler/katal-chain) 
+- Katal。 [源码库](https://github.com/Trinkler/katal-chain)
     - [定点运算](https://github.com/Trinkler/katal-chain/tree/master/modules/reals)
     - [使用 ISO8601 时间格式](https://github.com/Trinkler/katal-chain/tree/master/modules/time)
     - [许可制预言机](https://github.com/Trinkler/katal-chain/tree/master/modules/oracle)
