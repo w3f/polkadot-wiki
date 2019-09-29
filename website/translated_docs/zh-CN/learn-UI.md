@@ -34,11 +34,11 @@ You will notice the value increase in the destination address after a few blocks
 
 The Polkadot explorer lists the validated blocks as they are sealed. Each block listed includes its:
 
-- Block height/number.
-- Hash.
-- `parentHash` (hash of the previous block).
-- The extrinsics root (merkle root of the ordered mapping of extrinsics, from the index to each extrinsic in the block).
-- State root (merkle root of all the storage).
+ - Block height/number.
+ - Hash.
+ - `parentHash` (hash of the previous block).
+ - The extrinsics root (merkle root of the ordered mapping of extrinsics, from the index to each extrinsic in the block).
+ - State root (merkle root of all the storage).
 
 ### Transfer
 
@@ -79,12 +79,13 @@ The **Chain State** tab allows you to query the Polkadot PoC-3 blockchain for st
 
 Some useful queries include:
 
-- `consensus.authorityCount()`: the number of current validators
-- `session.validators()`: the current validators by address, useful for verifying your status as a validator
-- `staking.intentions()`: accounts with the desire to stake and become validators
-- `consensus.code()`: the Wasm code of the current runtime, useful for monitoring changes in the state transition function
-- `system.accountIndexOf(who)`: the number of extrinsics a given account has submitted
-- `staking.freeBalanceOfWho()`: the balance of a given account
+ - `consensus.authorityCount()`: the number of current validators
+ - `session.validators()`: the current validators by address, useful for verifying your status as a validator
+ - `staking.intentions()`: accounts with the desire to stake and become validators
+ - `consensus.code()`: the Wasm code of the current runtime, useful for monitoring changes in the state transition function
+ - `system.accountIndexOf(who)`: the number of extrinsics a given account has submitted
+ - `staking.freeBalanceOfWho()`: the balance of a given account
+
 
 ### Extrinsics
 
@@ -98,10 +99,11 @@ Start by selecting the account you wish to act with, then choose one of the foll
 
 From here you can transfer, stake and unstake tokens.
 
-- transfer(recipient,value) - Transfer by entering the recipient's address in the 'recipient field', then entering the number of DOTs you would like to send.
-    
- - stake() - Stake the entirety of your selected account's balance to become a Validator. However, becoming a Validator requires more than just staking. To get more information on becoming a Validator, read the requirements and tutorial in the [Validator Guide](maintain-guides-how-to-validate).
-- unstake() - Unstake the entirety of your selected account's balance to withdraw your bid to be a Validator.
+ - transfer(recipient,value) - Transfer by entering the recipient's address in the 'recipient field', then entering the number of DOTs you would like to send.
+
+- stake() - Stake the entirety of your selected account's balance to become a Validator. However, becoming a Validator requires more than just staking. To get more information on becoming a Validator, read the requirements and tutorial in the [Validator Guide](maintain-guides-how-to-validate).
+
+ - unstake() - Unstake the entirety of your selected account's balance to withdraw your bid to be a Validator.
 
 ### Toolbox
 
