@@ -19,8 +19,8 @@ The following are some topics which have been [presented by Gavin Wood](https://
 
 A blockchain is composed of two main pieces:
 
-- a state machine (what composes a block)
-- a consensus algorithm (how to agree on the blocks)
+ - a state machine (what composes a block)
+ - a consensus algorithm (how to agree on the blocks)
 
 Blockchain incentive systems like Proof of Work and Proof of Stake are notably **not** consensus mechanisms by themselves.
 
@@ -50,17 +50,17 @@ Parachains vs. Sovereign chain substrate
 
 Parachains:
 
-- Draw finality and consensus from the relay chain.
-- block authorship depends on info from the relay chain (such as messages of other parachains)
+ - Draw finality and consensus from the relay chain.
+ - block authorship depends on info from the relay chain (such as messages of other parachains)
 
 Sovereign chain:
 
-- provides their own finality and consensus
-- block authorship is completely independent
+ - provides their own finality and consensus
+ - block authorship is completely independent
 
 How to get started with cumulus?
 
-- Minimal modification of substrate chain you've already written
-- Cumulus, as its ready will be used to port it over w/ little effort
+ - Minimal modification of substrate chain you've already written
+ - Cumulus, as its ready will be used to port it over w/ little effort
 
 GRANDPA - GHOST-based Recursive ANcestor Deriving Prefix Agreement
