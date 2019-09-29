@@ -4,7 +4,7 @@ title: How to validate
 sidebar_label: How to validate
 ---
 
-*这个教程将更新到最新测试网*
+_这个教程将更新到最新测试网_
 
 想成为一个好验证人，你需要留意以下几点:
 
@@ -18,7 +18,7 @@ TODO:你仍然能成为提名人提名多个验证人从而获得奖励。你可
 
 这个教程我们使用Ubuntu 18.04并将在PoC-4测试网运行，不论你使用那个操作系统，大部份设定也不会有太大区别。另外这里有些[VPS服务器](#vps)给大家选择。
 
-*Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability.*
+_Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
 
 ## 安裝 Rust
 
@@ -41,16 +41,17 @@ rustup update
 
 编译需要一段时间，具体取决于你的硬件。
 
-    git clone https://github.com/paritytech/polkadot.git
-    # 如果你是更新节点，可以从这一步开始。
-    cd polkadot
-    cargo clean
-    git checkout v0.4
-    git pull origin v0.4
-    ./scripts/init.sh
-    ./scripts/build.sh
-    cargo install --path ./ --force
-    
+```
+git clone https://github.com/paritytech/polkadot.git
+# 如果你是更新节点，可以从这一步开始。
+cd polkadot
+cargo clean
+git checkout v0.4
+git pull origin v0.4
+./scripts/init.sh
+./scripts/build.sh
+cargo install --path ./ --force
+```
 
 同步将会需要数小时。 你可以通过[Telemetry](https://telemetry.polkadot.io/#/Alexander)或[PolkadotJS区块浏览器](https://polkadot.js.org/apps/#/explorer)查看最新区块。
 
