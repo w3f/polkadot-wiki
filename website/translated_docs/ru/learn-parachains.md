@@ -1,12 +1,12 @@
 ---
 id: learn-parachains
-title: Parachains
-sidebar_label: Parachains
+title: Парачейны
+sidebar_label: Парачейны
 ---
 
 ![One parachain](assets/network/one_parachain.png)
 
-## What is a parachain?
+## Что такое парачейн?
 
 A parachain is an application specific data structure that is globally coherent and validatable by the validators of the Polkadot relay chain. Most commonly a parachain will take the form of a blockchain, but there is no specific need for them to be blockchain in nature. They take their name from the concept of parallelized chains that run parallel to the relay chain. Due to their parallel nature, they are able to parallelize transaction processing and achieve scalability of the Polkadot system. They [share in the security](learn-security) of the entire Polkadot network and communicate with other parachains through [ICMP](learn-interchain).
 
