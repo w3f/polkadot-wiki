@@ -62,11 +62,12 @@
       "maintain-governance-index",
       "maintain-guides-how-to-nominate",
       "maintain-guides-how-to-systemd",
-      "maintain-guides-how-to-validate",
       "maintain-guides-validator-payout",
       "maintain-index",
       "maintain-node-operator",
-      "maintain-nominator"
+      "maintain-nominator",
+      "maintain-guides-how-to-validate",
+      "maintain-guides-how-to-validate-kusama"
     ]
   }
 }
