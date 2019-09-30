@@ -67,7 +67,7 @@ TODO:
 
 ### 开始使用Substrate
 
-TODO:将来也会有很多Polkadot runtime的[实现](learn-implementations)在各种语言包括C ++，Rust，Go和JS。
+TODO:将来也会有很多Polkadot runtime的[实现](learn-implementations.md)在各种语言包括C ++，Rust，Go和JS。
 
 正如刚才提到的，Polkadot背后是基于Substrate框架建立的，它是区块链创新者的工具，为构建区块链提供了必要的构建模块，它包含了模块化插件库，你可以从中构建更复杂的逻辑链。
 
