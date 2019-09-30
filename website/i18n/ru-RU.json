@@ -121,6 +121,10 @@
         "title": "Frequently Asked Questions (FAQs)",
         "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
+      "learn-governance-2": {
+        "title": "Governance",
+        "sidebar_label": "Governance"
+      },
       "learn-governance": {
         "title": "Governance",
         "sidebar_label": "Governance"
@@ -205,10 +209,6 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "maintain-governance-index": {
-        "title": "Governance",
-        "sidebar_label": "Governance"
-      },
       "maintain-guides-how-to-nominate": {
         "title": "How to nominate",
         "sidebar_label": "How to nominate"
@@ -218,8 +218,12 @@
         "sidebar_label": "How to run your node as a `systemd` process"
       },
       "maintain-guides-how-to-validate": {
-        "title": "How to validate",
-        "sidebar_label": "How to validate"
+        "title": "Guide: Run a Validator",
+        "sidebar_label": "Guide: Run a Validator"
+      },
+      "maintain-guides-how-to-validate-kusama": {
+        "title": "Guide: Run a Validator (Kusama)",
+        "sidebar_label": "Guide: Run a Validator (Kusama)"
       },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
