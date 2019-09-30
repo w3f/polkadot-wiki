@@ -1,5 +1,5 @@
 ---
-id: learn-parachains
+id: о парачейнах
 title: Парачейны
 sidebar_label: Парачейны
 ---
