@@ -59,16 +59,35 @@
     ],
     "Maintain": [
       "maintain-index",
-      "maintain-collator",
-      "maintain-nominator",
-      "maintain-guides-how-to-nominate-alexander",
-      "maintain-guides-how-to-nominate-kusama",
-      "maintain-validator",
-      "maintain-guides-how-to-validate-alexander",
-      "maintain-guides-how-to-validate-kusama",
-      "maintain-guides-validator-payout",
-      "maintain-guides-how-to-systemd",
-      "maintain-guides-secure-validator"
+      {
+
+        "type": "subcategory",
+        "label": "Collator",
+        "ids": [
+          "maintain-collator"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Nominator",
+        "ids": [
+          "maintain-nominator",
+          "maintain-guides-how-to-nominate-alexander",
+          "maintain-guides-how-to-nominate-kusama"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Validator",
+        "ids": [
+          "maintain-validator",
+          "maintain-guides-how-to-validate-alexander",
+          "maintain-guides-how-to-validate-kusama",
+          "maintain-guides-validator-payout",
+          "maintain-guides-how-to-systemd",
+          "maintain-guides-secure-validator"
+        ]
+      }
     ]
   }
 }
