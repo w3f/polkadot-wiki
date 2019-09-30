@@ -212,6 +212,13 @@ For the top-N (say 4 in this example) runners-up, they can remain and their vote
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
+## Technical Committee
+
+The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/)
+as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical
+Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or
+the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+
 ## [Usage of DOT](learn-DOT#dots-for-governance)
 
 ## Resources
