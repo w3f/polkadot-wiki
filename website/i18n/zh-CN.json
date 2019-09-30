@@ -121,6 +121,10 @@
         "title": "常见问题",
         "sidebar_label": "常见问题"
       },
+      "learn-governance-2": {
+        "title": "Governance",
+        "sidebar_label": "Governance"
+      },
       "learn-governance": {
         "title": "治理",
         "sidebar_label": "治理"
@@ -205,10 +209,6 @@
         "title": "收集人",
         "sidebar_label": "收集人"
       },
-      "maintain-governance-index": {
-        "title": "治理",
-        "sidebar_label": "治理"
-      },
       "maintain-guides-how-to-nominate": {
         "title": "如何成为提名人",
         "sidebar_label": "如何成为提名人"
@@ -218,8 +218,12 @@
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
       "maintain-guides-how-to-validate": {
-        "title": "如何运行验证人节点",
-        "sidebar_label": "如何运行验证人节点"
+        "title": "Guide: Run a Validator",
+        "sidebar_label": "Guide: Run a Validator"
+      },
+      "maintain-guides-how-to-validate-kusama": {
+        "title": "Guide: Run a Validator (Kusama)",
+        "sidebar_label": "Guide: Run a Validator (Kusama)"
       },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",
