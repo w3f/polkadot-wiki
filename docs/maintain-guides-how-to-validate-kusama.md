@@ -1,8 +1,10 @@
 ---
-id: maintain-guides-how-to-validate
-title: Guide: Run a Validator
-sidebar_label: Guide: Run a Validator
+id: maintain-guides-how-to-validate-kusama
+title: Guide: Run a Validator (Kusama)
+sidebar_label: Guide: Run a Validator (Kusama)
 ---
+
+
 
 _This tutorial works with the current Alexander testnet and has been updated for PoC-4._
 
