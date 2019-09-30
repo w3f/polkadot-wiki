@@ -1,10 +1,8 @@
 ---
 id: maintain-guides-secure-validator
-title: Guide: Secure Validator
+title: Secure Validator
 sidebar_label: Secure Validator
 ---
-
-# Secure Validator Setup
 
 Validators in a Proof of Stake network are responsible for keeping the network in consensus and verifying state transitions. As the number of validators is limited, validators in the set have the responsibility to be online and faithfully execute their tasks.
 
