@@ -1,8 +1,12 @@
 ---
-id: maintain-guides-how-to-validate
-title: How to validate
-sidebar_label: How to validate
+id: maintain-guides-how-to-validate-kusama
+title:
+  Guide: Run a Validator (Kusama)
+sidebar_label:
+  Guide: Run a Validator (Kusama)
 ---
+
+
 
 _这个教程将更新到最新测试网_
 
