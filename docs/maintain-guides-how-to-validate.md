@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-alexander
-title: Guide: Run a Validator (Alexander)
-sidebar_label: Guide: Run a Validator (Alexander)
+title: Run a Validator (Alexander)
+sidebar_label: Run a Validator (Alexander)
 ---
 
 __Note: This guide is for the Alexander testnet in the Polkadot repository on the v0.4 branch.__

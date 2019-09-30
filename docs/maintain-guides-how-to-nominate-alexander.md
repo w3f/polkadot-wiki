@@ -1,22 +1,28 @@
 ---
-id: maintain-guides-how-to-nominate
-title: How to nominate
-sidebar_label: How to nominate
+id: maintain-guides-how-to-nominate-alexander
+title: Be a Nominator (Alexander)
+sidebar_label: Be a Nominator (Alexander)
 ---
 
-This guide will walk you through how to nominate your DOTs to a validator node so that you can take part in the staking system and earn fresh DOTs.
+This guide will walk you through how to nominate your DOTs to a validator node so that you can take part in the staking 
+system and earn fresh DOTs.
 
 It has been updated for the Alexander testnet and Polkadot release PoC-4.
 
 ## Create `stash` and `controller` accounts
 
-We will assume that you will be starting with two fresh accounts. Click [here](learn-staking#accounts) to learn more about what `stash` and `controller` accounts mean.
+We will assume that you will be starting with two fresh accounts. Click [here](learn-staking#accounts) to learn more 
+about what `stash` and `controller` accounts mean.
 
-The first step is to create two accounts by going to the *Accounts* tab on the Polkadot Dashboard and clicking on [*Add account*](https://polkadot.js.org/apps/#/accounts). Make sure to use `stash` and `controller` in the names of your accounts to identify them easily.
+The first step is to create two accounts by going to the *Accounts* tab on the Polkadot Dashboard and clicking on
+[*Add account*](https://polkadot.js.org/apps/#/accounts). Make sure to use `stash` and `controller` in the names of your
+accounts to identify them easily.
 
 ![Creating an account](assets/guides/how-to-nominate/polkadot-dashboard-create-account.jpg)
 
-Once you've created your accounts you will need to acquire some DOTs. See the [DOTs page](learn-DOT#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
+Once you've created your accounts you will need to acquire some DOTs. See the [DOTs page](learn-DOT#getting-testnet-dots)
+for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the
+existential deposit and transaction fees.
 
 ## Nominating
 

@@ -229,7 +229,7 @@
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
-      "maintain-node-operator": {
+      "maintain-validator": {
         "title": "Node Operator / Validator",
         "sidebar_label": "Node Operator / Validator"
       },

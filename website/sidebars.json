@@ -58,16 +58,16 @@
       "learn-wasm"
     ],
     "Maintain": [
-      "maintain-collator",
-      "maintain-governance-index",
-      "maintain-guides-how-to-nominate",
-      "maintain-guides-how-to-systemd",
-      "maintain-guides-validator-payout",
       "maintain-index",
-      "maintain-node-operator",
+      "maintain-collator",
       "maintain-nominator",
+      "maintain-guides-how-to-nominate-alexander",
+      "maintain-guides-how-to-nominate-kusama",
+      "maintain-validator",
       "maintain-guides-how-to-validate-alexander",
       "maintain-guides-how-to-validate-kusama",
+      "maintain-guides-validator-payout",
+      "maintain-guides-how-to-systemd",
       "maintain-guides-secure-validator"
     ]
   }

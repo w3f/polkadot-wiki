@@ -1,5 +1,5 @@
 ---
-id: maintain-node-operator
+id: maintain-validator
 title: Node Operator / Validator
 sidebar_label: Node Operator / Validator
 ---

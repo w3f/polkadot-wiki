@@ -8,7 +8,7 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 
 ## Validator
 
-- [Validator Home](maintain-node-operator) - Gives high level overview of validator and related links.
+- [Validator Home](maintain-validator) - Gives high level overview of validator and related links.
 - [Validation Guide](maintain-guides-how-to-validate) - Walkthrough on how to validator on PoC-4 Alexander testnet.
 
 ## Nominator

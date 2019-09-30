@@ -1,7 +1,7 @@
 ---
-id: maintain-node-operator
-title: Node Operator / Validator
-sidebar_label: Node Operator / Validator
+id: maintain-validator
+title: Validator
+sidebar_label: Validator
 ---
 
 Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
