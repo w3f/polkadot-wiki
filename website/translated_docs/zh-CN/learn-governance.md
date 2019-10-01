@@ -24,11 +24,11 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 
 ## 公投
 
-Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific _proposal_ associated with it which takes the form of a privileged function call in the runtime (that includes the most powerful call: `set_code`, which is able to switch out the entire code of the runtime, achieving what would otherwise require a "hard fork"). They are discrete events, have a fixed period where voting happens, and then are tallied and the function call is made if the vote is approved.
+公民投票是简单，广泛，基于代币抵押的投票方案。 每个公投都有一个与之相关的特定_提案_，该提议在运行时采用特权函数调用的形式（其中包括功能最强大的调用：`set_code`，它可以切换 runtime 的整个代码，从而实现不需要“硬分叉”的功能）。 它们是分离事件，具有固定的投票发生时间段，然后被计票，如果投票获得批准，则会进行函数调用。
 
-Referenda can be started in three ways:
+公民投票可以通过三种方式开始:
 
-* Publicly submitted proposals;
+* 公开提交的提案
 * Proposals submitted by the council, either through a no-veto majority or unanimously;
 * Proposals submitted as part of the enactment of a prior referendum.
 
