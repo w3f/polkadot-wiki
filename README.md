@@ -15,8 +15,7 @@ preferable to create a pull request over an issue to propose a change to the wik
 
 ### Style Guide
 
-- Break lines at 100 chars. We do this to make git diffs and suggestions easier on digestible lines vs. huge chunks
-of markdown text.
+- Break lines at 120 characters.
 - Newlines between headers and text.
 - No double line breaks.
 
