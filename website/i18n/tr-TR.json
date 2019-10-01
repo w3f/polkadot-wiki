@@ -121,10 +121,6 @@
         "title": "Frequently Asked Questions (FAQs)",
         "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
-      "learn-governance-2": {
-        "title": "Governance",
-        "sidebar_label": "Governance"
-      },
       "learn-governance": {
         "title": "Governance",
         "sidebar_label": "Governance"
@@ -209,21 +205,29 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "maintain-guides-how-to-nominate": {
-        "title": "How to nominate",
-        "sidebar_label": "How to nominate"
+      "maintain-guides-how-to-nominate-alexander": {
+        "title": "Be a Nominator (Alexander)",
+        "sidebar_label": "Be a Nominator (Alexander)"
+      },
+      "maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Be a Nominator (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "How to run your node as a `systemd` process",
-        "sidebar_label": "How to run your node as a `systemd` process"
-      },
-      "maintain-guides-how-to-validate": {
-        "title": "Guide: Run a Validator",
-        "sidebar_label": "Guide: Run a Validator"
+        "title": "Using systemd for the Validator Node",
+        "sidebar_label": "Using systemd for the Validator Node"
       },
       "maintain-guides-how-to-validate-kusama": {
-        "title": "Guide: Run a Validator (Kusama)",
-        "sidebar_label": "Guide: Run a Validator (Kusama)"
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Run a Validator (Kusama)"
+      },
+      "maintain-guides-how-to-validate-alexander": {
+        "title": "Run a Validator (Alexander)",
+        "sidebar_label": "Run a Validator (Alexander)"
+      },
+      "maintain-guides-secure-validator": {
+        "title": "Secure Validator",
+        "sidebar_label": "Secure Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
@@ -233,13 +237,13 @@
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
-      "maintain-node-operator": {
-        "title": "Node Operator / Validator",
-        "sidebar_label": "Node Operator / Validator"
-      },
       "maintain-nominator": {
         "title": "Nominator",
         "sidebar_label": "Nominator"
+      },
+      "maintain-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
       },
       "news": {
         "title": "This Week in Polkadot",
