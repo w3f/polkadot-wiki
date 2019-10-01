@@ -16,5 +16,7 @@
   "devDependencies": {
     "docusaurus": "^1.12.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "remarkable-katex": "^1.0.1"
+  }
 }
