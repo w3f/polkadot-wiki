@@ -3824,6 +3824,13 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+katex@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.7.1.tgz#06bb5298efad05e1e7228035ba8e1591f3061b8f"
+  integrity sha1-BrtSmO+tBeHnIoA1uo4VkfMGG48=
+  dependencies:
+    match-at "^0.1.0"
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
@@ -4133,6 +4140,11 @@ markdown-toc@^1.2.0:
     remarkable "^1.7.1"
     repeat-string "^1.6.1"
     strip-color "^0.1.0"
+
+match-at@^0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/match-at/-/match-at-0.1.1.tgz#25d040d291777704d5e6556bbb79230ec2de0540"
+  integrity sha512-h4Yd392z9mST+dzc+yjuybOGFNOZjmXIPKWjxBd1Bb23r4SmDOsk2NYCU2BMUBGbSpZqwVsZYNq26QS3xfaT3Q==
 
 math-random@^1.0.1:
   version "1.0.4"
@@ -5514,6 +5526,13 @@ regjsparser@^0.6.0:
   integrity sha512-RQ7YyokLiQBomUJuUG8iGVvkgOLxwyZM8k6d3q5SAXpg4r5TZJZigKFvC6PpD+qQ98bCDC5YelPeA3EucDoNeQ==
   dependencies:
     jsesc "~0.5.0"
+
+remarkable-katex@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remarkable-katex/-/remarkable-katex-1.0.1.tgz#558acbf81625ff482ce0fa875e0f937a03efe3c8"
+  integrity sha1-VYrL+BYl/0gs4PqHXg+TegPv48g=
+  dependencies:
+    katex "^0.7.1"
 
 remarkable@^1.7.1, remarkable@^1.7.4:
   version "1.7.4"

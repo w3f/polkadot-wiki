@@ -59,6 +59,12 @@ const siteConfig = {
   scripts: [
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
+    'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.js',
+  ],
+
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css',
+    'https://fonts.googleapis.com/css?family=Muli&display=swap',
   ],
 
   // On page navigation for the current documentation page.
@@ -76,6 +82,12 @@ const siteConfig = {
 
   // Show documentation's last update time.
   enableUpdateTime: true,
+
+  markdownPlugins: [
+    (md) => {
+      md.use(require('remarkable-katex'));
+    },
+  ],
 
   editUrl: 'https://github.com/w3f/polkadot-wiki/edit/master/docs/',
 
