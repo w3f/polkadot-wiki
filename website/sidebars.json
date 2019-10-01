@@ -58,16 +58,36 @@
       "learn-wasm"
     ],
     "Maintain": [
-      "maintain-collator",
-      "maintain-governance-index",
-      "maintain-guides-how-to-nominate",
-      "maintain-guides-how-to-systemd",
-      "maintain-guides-validator-payout",
       "maintain-index",
-      "maintain-node-operator",
-      "maintain-nominator",
-      "maintain-guides-how-to-validate",
-      "maintain-guides-how-to-validate-kusama"
+      {
+
+        "type": "subcategory",
+        "label": "Collator",
+        "ids": [
+          "maintain-collator"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Nominator",
+        "ids": [
+          "maintain-nominator",
+          "maintain-guides-how-to-nominate-alexander",
+          "maintain-guides-how-to-nominate-kusama"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Validator",
+        "ids": [
+          "maintain-validator",
+          "maintain-guides-how-to-validate-alexander",
+          "maintain-guides-how-to-validate-kusama",
+          "maintain-guides-validator-payout",
+          "maintain-guides-how-to-systemd",
+          "maintain-guides-secure-validator"
+        ]
+      }
     ]
   }
 }
