@@ -74,12 +74,12 @@
         "sidebar_label": "Contributing"
       },
       "glossary": {
-        "title": "Terms and Definitions",
-        "sidebar_label": "Terms and Definitions"
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
       },
       "index": {
-        "title": "Polkadot Wiki",
-        "sidebar_label": "Polkadot Wiki"
+        "title": "Wiki Index",
+        "sidebar_label": "Wiki Index"
       },
       "learn-architecture": {
         "title": "Architecture",
@@ -246,12 +246,12 @@
         "sidebar_label": "Validator"
       },
       "news": {
-        "title": "This Week in Polkadot",
-        "sidebar_label": "This Week in Polkadot"
+        "title": "News",
+        "sidebar_label": "News"
       },
       "research": {
-        "title": "Polkadot Research",
-        "sidebar_label": "Polkadot Research"
+        "title": "Research Pages",
+        "sidebar_label": "Research Pages"
       }
     },
     "links": {
