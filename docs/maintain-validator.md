@@ -10,7 +10,8 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 
 ## Guides
 
-- [How to validate on PoC-4](maintain-guides-how-to-validate) - Guide on how to set up a validator for PoC-4 and the Alexander testnet.
+- [How to Validate on Alexander](maintain-guides-how-to-validate-alexander) - Guide on how to set up a validator on the Alexander testnet.
+- [How to Validate on Kusama](maintain-guides-how-to-validate-kusama) - Guide on how to set up a validator on the Kusama canary network.
 - [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the validator payout mechanism works
 - [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
 
@@ -19,7 +20,7 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://hackernoon.com/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
 - [Getting Testnet DOTs](learn-DOT#getting-testnet-dots)
-- [VPS list](maintain-guides-how-to-validate#vps-list)
+- [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
 
 ## Security / Key Management

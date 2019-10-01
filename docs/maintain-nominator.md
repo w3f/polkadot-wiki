@@ -14,4 +14,6 @@ While your DOTs are staked by nominating a validator, they are 'locked'. You can
 
 ### Guides
 
-- [How to nominate](maintain-guides-how-to-nominate) - Guide on nominating for Alexander testnet v0.4.3 and above.
+- [Be a Nominator (Alexander)](maintain-guides-how-to-nominate-alexander) - Guide on nominating on the Alexander test network.
+- [Be a Nominator (Kusama)](maintain-guides-how-to-nominate-kusama) - Guide on nominating on the Kusama canary network.
+
