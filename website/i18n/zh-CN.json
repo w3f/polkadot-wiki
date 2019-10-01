@@ -121,10 +121,6 @@
         "title": "常见问题",
         "sidebar_label": "常见问题"
       },
-      "learn-governance-2": {
-        "title": "Governance",
-        "sidebar_label": "Governance"
-      },
       "learn-governance": {
         "title": "治理",
         "sidebar_label": "治理"
@@ -209,21 +205,29 @@
         "title": "收集人",
         "sidebar_label": "收集人"
       },
-      "maintain-guides-how-to-nominate": {
-        "title": "如何成为提名人",
-        "sidebar_label": "如何成为提名人"
+      "maintain-guides-how-to-nominate-alexander": {
+        "title": "Be a Nominator (Alexander)",
+        "sidebar_label": "Be a Nominator (Alexander)"
+      },
+      "maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Be a Nominator (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "如何把节点设定为 `systemd` 进程运行",
-        "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
-      },
-      "maintain-guides-how-to-validate": {
-        "title": "Guide: Run a Validator",
-        "sidebar_label": "Guide: Run a Validator"
+        "title": "Using systemd for the Validator Node",
+        "sidebar_label": "Using systemd for the Validator Node"
       },
       "maintain-guides-how-to-validate-kusama": {
-        "title": "Guide: Run a Validator (Kusama)",
-        "sidebar_label": "Guide: Run a Validator (Kusama)"
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Run a Validator (Kusama)"
+      },
+      "maintain-guides-how-to-validate-alexander": {
+        "title": "Run a Validator (Alexander)",
+        "sidebar_label": "Run a Validator (Alexander)"
+      },
+      "maintain-guides-secure-validator": {
+        "title": "Secure Validator",
+        "sidebar_label": "Secure Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",
@@ -233,13 +237,13 @@
         "title": "网络维护者",
         "sidebar_label": "网络维护者"
       },
-      "maintain-node-operator": {
-        "title": "验证人",
-        "sidebar_label": "验证人"
-      },
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
+      },
+      "maintain-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
       },
       "news": {
         "title": "Polkadot 周报",
