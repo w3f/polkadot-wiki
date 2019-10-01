@@ -183,27 +183,27 @@ Basically, instead of using one person one vote, [approval voting](https://en.wi
 
 Let's take a look at the example below.
 
-|      Round 1      |   |                |   |   |   |
-|:-----------------:|:-:|:--------------:|:-:|:-:|:-:|
-| **Token Holders** |   | **Candidates** |   |   |   |
-|                   | A |       B        | C | D | E |
-|       Peter       | X |                | X | X | X |
-|       Alice       |   |       X        |   |   |   |
-|        Bob        |   |                | X | X | X |
-|      Kelvin       | X |                | X |   |   |
-|     **Total**     | 2 |       1        | 3 | 2 | 2 |
+|    第一轮    |   |         |   |   |   |
+|:---------:|:-:|:-------:|:-:|:-:|:-:|
+| **代币持有人** |   | **候选人** |   |   |   |
+|           | A |    B    | C | D | E |
+|   Peter   | X |         | X | X | X |
+|   Alice   |   |    X    |   |   |   |
+|    Bob    |   |         | X | X | X |
+|  Kelvin   | X |         | X |   |   |
+| **Total** | 2 |    1    | 3 | 2 | 2 |
 
 The above example shows that candidate C wins the election in round 1, while candidate A, B, D & E keep remaining on the candidates' list for the next round.
 
-|      Round 2      |   |                |   |   |
-|:-----------------:|:-:|:--------------:|:-:|:-:|
-| **Token Holders** |   | **Candidates** |   |   |
-|                   | A |       B        | D | E |
-|       Peter       | X |       X        |   |   |
-|       Alice       | X |       X        |   |   |
-|        Bob        | X |       X        | X | X |
-|      Kelvin       | X |       X        |   |   |
-|     **Total**     | 4 |       4        | 1 | 1 |
+|    第二轮    |   |         |   |   |
+|:---------:|:-:|:-------:|:-:|:-:|
+| **代币持有人** |   | **候选人** |   |   |
+|           | A |    B    | D | E |
+|   Peter   | X |    X    |   |   |
+|   Alice   | X |    X    |   |   |
+|    Bob    | X |    X    | X | X |
+|  Kelvin   | X |    X    |   |   |
+| **Total** | 4 |    4    | 1 | 1 |
 
 For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 
@@ -218,4 +218,4 @@ This would be the tentative governance configuration for Polkadot in the initial
 ## 资源
 
 - [治理简介](https://github.com/paritytech/polkadot/wiki/Governance)
-- [Democracy Module](https://github.com/paritytech/substrate/tree/master/srml/democracy/src)
+- [民主模块](https://github.com/paritytech/substrate/tree/master/srml/democracy/src)
