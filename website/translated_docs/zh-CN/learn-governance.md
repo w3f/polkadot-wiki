@@ -29,25 +29,25 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 公民投票可以通过三种方式开始:
 
 * 公开提交的提案
-* Proposals submitted by the council, either through a no-veto majority or unanimously;
-* Proposals submitted as part of the enactment of a prior referendum.
+* 通过理事会的提案,否决或一致通过；
+* 作为先前公民投票通过的一部分而提交的提案。
 
 All referendums have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is fixed, (for Polkadot, it is likely to be two weeks). For the third type, it can be set as desired.
 
 
-### Proposing a Referenda
+### 提议全民公投
 
-#### Public Referenda
+#### 公众投票
 
 Anyone can propose a referenda by depositing the minimum amount of DOTs for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest number of support bonds will be selected to be a referendum. The bonded tokens will be released once the proposal is tabled.
 
-#### Council Referenda
+#### 理事会公投
 
 Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
 
 Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.)
 
-#### Voting for a proposal
+#### 投票提案
 
 To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referendum result, you can read more about the [Voluntary Locking](#voluntary-locking).
 
@@ -128,7 +128,7 @@ $${13.887} < {15.492}$$
 
 Based on the above result, the proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 
-#### Voluntary Locking
+#### 自愿锁定
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
@@ -159,7 +159,7 @@ Referring to the above image, when the referenda only has 25% turnout, the tally
 
 In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
-## Council
+## 议会
 
 To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain entity comprising a number of actors each represented as an on-chain account. For Polkadot this number is likely to begin at around six people, and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). In general it has a fixed number of seats (envisioned to be 24 for Polkadot) and all members have a fixed term (12 months).
 
@@ -171,7 +171,7 @@ For a referendum to be cancelled, there must be a unanimous vote to do so. Since
 
 If the cancellation is controversial enough that there is at least one dissenter, then it will be left to the stakeholders *en masse* to determine the fate of the proposal.
 
-### How to be a council member?
+### 如何成为议会成员?
 
 ![](assets/governance/approval-vote.png)
 
@@ -209,13 +209,13 @@ For the top-N (say 4 in this example) runners-up, they can remain and their vote
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
-## Technical Committee
+## 技术委员会
 
-The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+在[ Kusama 推出和治理帖子](https://polkadot.network/kusama-rollout-and-governance/)中介绍了技术委员会。 作为 Kusama 的三个会议厅之一的议院（以及议会和公民投票会议厅）。 技术 委员会由成功实施或指定 Polkadot / Kusama runtime 或 runtime 环境。 在议会的简单多数表决中，从技术委员会中添加或删除团队。
 
-## [Usage of DOT](learn-DOT#dots-for-governance)
+## [DOT 的用途](learn-DOT#dots-for-governance)
 
-## Resources
+## 资源
 
-- [Governance Description](https://github.com/paritytech/polkadot/wiki/Governance))
+- [治理简介](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Module](https://github.com/paritytech/substrate/tree/master/srml/democracy/src)
