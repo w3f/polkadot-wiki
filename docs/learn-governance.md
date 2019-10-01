@@ -125,11 +125,9 @@ voters = 1050
 electorate = 1500
 ```
 
-$${450 \over \sqrt{1050}}$$
+$${450\over\sqrt{1050}} < {600 \over \sqrt{1500}}$$
 
-<!-- $${450\over\sqrt{1050}} < {600 \over \sqrt{1500}}$$ -->
-
-<!-- $${13.887} < {15.492}$$ -->
+$${13.887} < {15.492}$$
 
 Based on the above result, the proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 

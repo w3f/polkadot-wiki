@@ -59,11 +59,11 @@ const siteConfig = {
   scripts: [
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
-    'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.js',
+    'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
   ],
 
   stylesheets: [
-    'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css',
+    'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
     'https://fonts.googleapis.com/css?family=Muli&display=swap',
   ],
 
