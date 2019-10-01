@@ -4,25 +4,25 @@ title: Governance
 sidebar_label: Governance
 ---
 
-Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders.
+Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相关者的最终要求随着时间而优雅地发展。
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.
+为此，我们将各种新颖的机制结合在一起，包括存储在链上并以平台无关的中间语言（WebAssembly）定义的状态转换函数，以及几种链上投票机制，例如具有自适应超多数阈值的全民投票和批量批准投票。
 
-All changes to the protocol must be agreed upon by stake-weighted referenda; the majority of the stake can always command the network.
+对协议的所有更改必须经过全民投票同意: 大部分股份始终可以控制网络。大部分代币持有人始终可以控制网络。
 
-## Mechanism
+## 机制
 
-In order to make any changes to the network, the idea is to compose active token holders and council together to administrate a network upgrade decision. No matter whether the proposal is proposed by the public (DOT holders) or council, it finally will have to go through the [referenda](learn-governance#referenda) to let all DOT holders make the decision.
+为了对网络进行任何更改，其想法是组成活跃的代币持有者和理事会共同管理网络升级决策。无论提案是由公众（DOT持有人）还是理事会提出的，最终都必须经过[全民投票](learn-governance#referenda)才能让所有DOT持有人做出决定。
 
-The following steps are the governance procedure in the Polkadot network:
+以下步骤是 Polkadot 网络中的治理过程:
 
-- [Proposing Referenda](#proposing-referenda) (Involved info: [Referenda](learn-governance#referenda))
-- [Voting for a proposal](#voting-for-a-proposal) (Involved info: [Voluntary Locking](#voluntary-locking))
-- [Tallying](#tallying) (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
+- [提议全民公投](#proposed-referendum) (相关资料: [ 公投 ](learn-governance#referenda))
+- [为提案投票](#voting-for-a-proposal)(相关资料: [自愿锁定](#voluntary-locking)）
+- [统计](#tallying)（相关资料: [自我调整仲裁偏置 ](#adaptive-quorum-biasing)）
 
-To better understand how the council is formed, please read [this section](#council).
+为了更好地了解理事会的组成方式，请阅读[本节](#council)。
 
-## Referenda
+## 公投
 
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific _proposal_ associated with it which takes the form of a privileged function call in the runtime (that includes the most powerful call: `set_code`, which is able to switch out the entire code of the runtime, achieving what would otherwise require a "hard fork"). They are discrete events, have a fixed period where voting happens, and then are tallied and the function call is made if the vote is approved.
 
