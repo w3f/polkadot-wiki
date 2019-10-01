@@ -9,15 +9,15 @@
       "research"
     ],
     "Build": [
+      "build-index",
       "build-build-with-polkadot",
+      "build-dev-roadmap",
+      "build-hackathon",
       "build-cumulus",
       "build-deploy-parachains",
-      "build-dev-roadmap",
       "build-examples-index",
       "build-exchange-integration",
       "build-extrinsic-format",
-      "build-hackathon",
-      "build-index",
       "build-networks",
       "build-pdk",
       "build-rust-style-guide",
