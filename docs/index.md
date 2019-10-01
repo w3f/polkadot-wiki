@@ -1,7 +1,7 @@
 ---
 id: index
-title: Polkadot Wiki
-sidebar_label: Polkadot Wiki
+title: Wiki Index
+sidebar_label: Wiki Index
 ---
 
 ![Polkadot Logo](assets/Polkadot_logotype_color.svg)

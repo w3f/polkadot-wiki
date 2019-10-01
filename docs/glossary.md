@@ -1,7 +1,7 @@
 ---
 id: glossary
-title: Terms and Definitions
-sidebar_label: Terms and Definitions
+title: Glossary
+sidebar_label: Glossary
 ---
 
 ## Block

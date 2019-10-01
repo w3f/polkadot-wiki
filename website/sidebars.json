@@ -1,10 +1,10 @@
 {
   "docs": {
     "Main": [
+      "index",
       "community",
       "contributing",
       "glossary",
-      "index",
       "news",
       "research"
     ],

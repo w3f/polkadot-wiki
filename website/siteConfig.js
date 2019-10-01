@@ -12,6 +12,7 @@ const siteConfig = {
     {doc: 'build-index', label: 'Build'},
     {doc: 'learn-index', label: 'Learn'},
     {doc: 'maintain-index', label: 'Maintain'},
+    { search: true },
     { languages: true }
   ],
 
@@ -24,6 +25,12 @@ const siteConfig = {
   colors: {
     primaryColor: '#E6007A',
     secondaryColor: '#000000',
+  },
+
+  algolia: {
+    apiKey: '8bfa06b56bb8f33e5698c7f40b00b38f',
+    indexName: 'polkadot',
+    algoliaOptions: {} // Optional, if provided by Algolia
   },
 
   /* Custom fonts for website */
