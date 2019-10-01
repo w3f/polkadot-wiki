@@ -1,12 +1,10 @@
 ---
-id: maintain-guides-how-to-validate-kusama
-title: Guide: Run a Validator (Kusama)
-sidebar_label: Guide: Run a Validator (Kusama)
+id: maintain-guides-how-to-validate-alexander
+title: Run a Validator (Alexander)
+sidebar_label: Run a Validator (Alexander)
 ---
 
-
-
-_This tutorial works with the current Alexander testnet and has been updated for PoC-4._
+__Note: This guide is for the Alexander testnet in the Polkadot repository on the v0.4 branch.__
 
 To be a good validator, you should
 

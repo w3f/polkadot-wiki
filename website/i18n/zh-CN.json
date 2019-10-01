@@ -229,7 +229,7 @@
         "title": "网络维护者",
         "sidebar_label": "网络维护者"
       },
-      "maintain-node-operator": {
+      "maintain-validator": {
         "title": "验证人",
         "sidebar_label": "验证人"
       },

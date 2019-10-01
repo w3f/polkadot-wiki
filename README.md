@@ -13,6 +13,12 @@ If you notice typos or grammatical errors, please feel free to directly create p
 Larger contributions may start as issues to test the waters on the subject with the maintainers. It is generally
 preferable to create a pull request over an issue to propose a change to the wiki content.
 
+### Style Guide
+
+- Break lines at 120 characters.
+- Newlines between headers and text.
+- No double line breaks.
+
 ### Automated Deployments
 
 The wiki is automatically deployed to GitHub Pages via the CircleCI job on each new commit to the master branch.
