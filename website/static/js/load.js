@@ -17,10 +17,8 @@ window.onload = () => {
   head.appendChild(tracker);
 
   const katex = document.createElement('script');
-  katex.text = `<script>
-  document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body);
-  });
-</script>`;
-  head.appendChild(katex);
+  katex.setAttribute('defer', true);
+  katex.setAttribute('src', 'ttps://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js');
+  katex.setAttribute('integrity', 'sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI');
+  katex.setAttribute('onload', 'renderMathInElement(document.body);');
 }
