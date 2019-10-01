@@ -1,14 +1,10 @@
 ---
-id: maintain-guides-how-to-validate-kusama
-title:
-  Guide: Run a Validator (Kusama)
-sidebar_label:
-  Guide: Run a Validator (Kusama)
+id: maintain-guides-how-to-validate-alexander
+title: Run a Validator (Alexander)
+sidebar_label: Run a Validator (Alexander)
 ---
 
-
-
-_这个教程将更新到最新测试网_
+__Note: This guide is for the Alexander testnet in the Polkadot repository on the v0.4 branch.__
 
 想成为一个好验证人，你需要留意以下几点:
 
