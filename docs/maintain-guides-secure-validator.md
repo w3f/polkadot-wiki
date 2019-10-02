@@ -9,7 +9,7 @@ Validators in a Proof of Stake network are responsible for keeping the network i
 This primarily means that validators:
 
 - Must have infrastructure that protects the validator's signing keys so that an attacker cannot take control and commit slashable behavior.
-- And; must be high availability.
+- Must be high availability.
 
 ## High Availability
 
@@ -39,7 +39,7 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 ## Monitoring Tools
 
-- [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.  
+- [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.
 
 - [Prometheus](https://prometheus.io/)-based monitoring stack, including [Grafana](https://grafana.com) for dashboards and log aggregation. It includes alerting, querying, visualization, and monitoring features and works for both cloud and on-premise systems. The data from `substrate-telemetry` can be made available to Prometheus through exporters like [this](https://github.com/w3f/substrate-telemetry-exporter).
 
@@ -60,7 +60,7 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 - Given that HA setups would always be at risk of double-signing and there's currently no built-in mechanism to prevent it, we propose having a single instance of the validator to avoid slashing. Slashing penalties for being offline are much less than those for equivocation.
 
-### Validators 
+### Validators
 
 - Validators should only run the Polkadot binary, and they should not listen on any port other than the configured p2p port.
 
@@ -94,7 +94,7 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 ## Resources
 
-- [Figment Network's Full Disclosure of Cosmos Validator Infrastructure](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967) 
+- [Figment Network's Full Disclosure of Cosmos Validator Infrastructure](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
 - [Certus One's Knowledge Base](https://kb.certus.one/)
 - [EOS Block Producer Security List](https://github.com/slowmist/eos-bp-nodes-security-checklist)
 - [Sentry Node Architecture Overview](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)

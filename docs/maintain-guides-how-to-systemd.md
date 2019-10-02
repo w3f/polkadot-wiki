@@ -42,7 +42,7 @@ Start it manually with:
 systemctl start polkadot-validator.service
 ```
 
-You can check it's working with:
+You can check that it's working with:
 
 ```bash
 systemctl status polkadot-validator.service
