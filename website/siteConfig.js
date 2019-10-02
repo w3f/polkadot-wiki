@@ -34,18 +34,12 @@ const siteConfig = {
   },
 
   /* Custom fonts for website */
-  /*
-    fonts: {
+  fonts: {
     myFont: [
-    "Times New Roman",
-    "Serif"
+    'Muli',
+    'sans-serif',
     ],
-    myOtherFont: [
-    "-apple-system",
-    "system-ui"
-    ]
-    },
-  */
+  },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Web3 Foundation`,
