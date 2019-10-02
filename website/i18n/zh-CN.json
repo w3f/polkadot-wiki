@@ -214,8 +214,8 @@
         "sidebar_label": "Be a Nominator (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "Using systemd for the Validator Node",
-        "sidebar_label": "Using systemd for the Validator Node"
+        "title": "如何把节点设定为 `systemd` 进程运行",
+        "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
@@ -242,8 +242,8 @@
         "sidebar_label": "提名人"
       },
       "maintain-validator": {
-        "title": "Validator",
-        "sidebar_label": "Validator"
+        "title": "验证人",
+        "sidebar_label": "验证人"
       },
       "news": {
         "title": "Polkadot 周报",
