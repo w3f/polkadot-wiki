@@ -6,7 +6,7 @@ sidebar_label: What is Phragmen and what does it mean for node operators?
 
 ## What is the sequential Phragmen method?
 
-The sequential Phragmen method is a multi-winner election method introduce by Edvard Phragmen in the 1890s.
+The sequential Phragmen method is a multi-winner election method introduced by Edvard Phragmen in the 1890s.
 
 > The problem that Phragmen’s methods try to solve is that of electing a set of a given numbers of persons from a larger set of candidates. Phragmen discussed this in the context of a parliamentary election in a multi-member constituency; the same problem can, of course, also occur in local elections, but also in many other situations such as electing a board or a committee in an organization.
 
