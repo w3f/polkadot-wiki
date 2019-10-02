@@ -214,8 +214,8 @@
         "sidebar_label": "Be a Nominator (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "Using systemd for the Validator Node",
-        "sidebar_label": "Using systemd for the Validator Node"
+        "title": "How to run your node as a `systemd` process",
+        "sidebar_label": "How to run your node as a `systemd` process"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
@@ -242,8 +242,8 @@
         "sidebar_label": "Nominator"
       },
       "maintain-validator": {
-        "title": "Validator",
-        "sidebar_label": "Validator"
+        "title": "Node Operator / Validator",
+        "sidebar_label": "Node Operator / Validator"
       },
       "news": {
         "title": "This Week in Polkadot",
