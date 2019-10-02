@@ -21,6 +21,12 @@ sidebar_label: Links
 - [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
 - [DOT Day Seoul](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39) - Video playlist of all talks at DOT Day Seoul.
 
+### Kusama
+
+- [Kusama Home Page](https://kusama.network/) Front page for all things on Polkadot's canary network, Kusama.
+- [Kusama User Guide](https://guide.kusama.network) The source of truth for Kusama-specific information.
+- [Kusama Claims](https://claim.kusama.network/) Information for DOT holders to claim their Kusama tokens.
+- [Kusama Launch Announcement](https://medium.com/polkadot-network/kusama-network-7446706b8f4c) The first announcement of the Kusama network.
 
 ### Substrate
 
@@ -88,7 +94,8 @@ sidebar_label: Links
 
 ## Running a node
 - [Polkadot UI](learn-UI) - Get started on the testnet.
-- [Install PoC-3](https://github.com/paritytech/polkadot#install-poc-3-alexander-testnet) - Install Polkadot's client and connect to the global PoC-3 testnet.
+- [Install Kusama](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) - Install Polkadot's client and connect to the Kusama canary network.
+- [Install PoC-4](https://github.com/paritytech/polkadot#23-install-poc-4-on-alexander-testnet) - Install Polkadot's client and connect to the global PoC-4 testnet, Alexander.
 - [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
 - [Get testnet DOTS](learn-DOT#getting-testnet-dots) \- Receive the native testnet token.
 - [Deploy a Parachain](https://github.com/paritytech/polkadot/wiki/Parachains) \- Deploy a blockchain on the testnet.
@@ -96,8 +103,8 @@ sidebar_label: Links
 
 ### UI and explorers
 
-- [PoC-3 UI](https://poc-3.polkadot.io/) - Browser and apps.
+- [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Alexander, Kusama, or your own private network.
 - [Telemetry](http://telemetry.polkadot.io/) - Information services website for nodes.
-- [Polkadash](http://polkadash.io/) \- Dashboard displaying validators and governance proposals.
-- [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain and Parity Substrate chains.
+- [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain ation on and Parity Substrate chains.
 - [Polka.io](https://polka.io/) \- Polkadot Muti-Chain Explorer
+- [Polkastat](http://polkastat.xyz/) \- See staking and validator inform
