@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-systemd
-title: Using systemd for the Validator Node
-sidebar_label: Using systemd for the Validator Node
+title: How to run your node as a `systemd` process
+sidebar_label: How to run your node as a `systemd` process
 ---
 
 You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it will automatically restart on server reboots or crashes (and helps to avoid getting slashed!).
@@ -40,7 +40,7 @@ Start it manually with:
 systemctl start polkadot-validator.service
 ```
 
-You can check that it's working with:
+You can check it's working with:
 
 ```bash
 systemctl status polkadot-validator.service
