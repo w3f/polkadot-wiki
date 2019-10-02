@@ -13,12 +13,12 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 ## Nominator
 
 - [Nominator Home](maintain-nominator) - High level overview of nominators and related links.
-- [Nomination Guide (Alexander)](maintain-guides-how-to-nominate-alexander) - Walkthrough on how to nominate on PoC-4 Alexander testnet.
-- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on Kusama canary network.
+- [Nomination Guide (Alexander)](maintain-guides-how-to-nominate-alexander) - Walkthrough on how to nominate on the PoC-4 Alexander testnet.
+- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
 
 
 ## Validator
 
-- [Validator Home](maintain-validator) - Gives high level overview of validator and related links.
-- [Validation Guide (Alexander)](maintain-guides-how-to-validate-alexander) - Walkthrough on how to validator on PoC-4 Alexander testnet.
-- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to nominate on Kusama canary network.
+- [Validator Home](maintain-validator) - High level overview of validator and related links.
+- [Validation Guide (Alexander)](maintain-guides-how-to-validate-alexander) - Walkthrough on how to validate on the PoC-4 Alexander testnet.
+- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
