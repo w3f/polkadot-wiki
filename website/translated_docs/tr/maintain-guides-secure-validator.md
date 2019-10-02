@@ -9,7 +9,7 @@ Validators in a Proof of Stake network are responsible for keeping the network i
 This primarily means that validators:
 
 - Must have infrastructure that protects the validator's signing keys so that an attacker cannot take control and commit slashable behavior.
-- And; must be high availability.
+- Must be high availability.
 
 ## High Availability
 
