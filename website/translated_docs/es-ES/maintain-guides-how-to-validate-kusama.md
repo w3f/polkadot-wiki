@@ -8,11 +8,11 @@ This guide will instruct you how to set up a validator node on the Kusama networ
 
 ## Preliminaries
 
-Running a validator on a live network is a lot of responsibility! You will be accountable for not only your own stake, but also the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding knowing that you contribute to the security of a decentralized network while growing your stash.
+Running a validator on a live network is a lot of responsibility! You will be accountable for not only your own stake, but also the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
 
-Since security is so important to running a successful validator, you should take a look at the [secure validator](maintain-guides-secure-validator) information to make you understand the factors to consider when constructing your infrastructure. Web3 Foundation also maintains a [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator) that you can use by deploying yourself. As your progress in your journey as a validator, you will likely want to use this repository as a _starting point_ for your own modifications and customizations.
+Since security is so important to running a successful validator, you should take a look at the [secure validator](maintain-guides-secure-validator) information to make you understand the factors to consider when constructing your infrastructure. The Web3 Foundation also maintains a [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator) that you can use by deploying yourself. As you progress in your journey as a validator, you will likely want to use this repository as a _starting point_ for your own modifications and customizations.
 
-If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot, the team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
+If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot.  The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node instead.
 
@@ -28,7 +28,7 @@ You will not need a very powerful machine to run your validator, but you should 
 - **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill.
 - **CPU:** 1 - 2. One CPU is okay, but 2 is better. Again, this is a performance preference.
 
-On most cloud service providers, these specs are usually within the $10 - $20 range.
+On most cloud service providers, these specs are usually within the $10 - $20 per month range.
 
 ### Install Rust
 
@@ -52,7 +52,7 @@ Finally, run this command to install the necessary dependencies for compiling an
 sudo apt install make clang pkg-config libssl-dev build-essential
 ```
 
-Note - if you are using OSX, if you have [Homebrew](https://brew.sh) installed, you can issue the following equivalent command INSTEAD of the previous one:
+Note - if you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the following equivalent command INSTEAD of the previous one:
 
 ```sh
 brew install cmake pkg-config openssl git llvm
@@ -68,7 +68,7 @@ You will need to build the `polkadot` binary from the [paritytech/polkadot](http
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git checkout v0.6
-./scripts/init.sh 
+./scripts/init.sh
 cargo build --release
 ```
 
@@ -108,7 +108,7 @@ Then stop and copy your previous keystore to new chain id.
 cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
 ```
 
-If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. This is okay, but it means you will want to fix it by setting new session keys for your validators. The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your validator node. Before submitting the `setKeys` transaction, verify that the keys are in the new cc2 keystore.
+If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. This is okay, but it means you will want to fix it by setting new session keys for your validators. The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys` transaction, verify that the keys are in the new CC2 keystore.
 
 Start your node.
 
@@ -124,7 +124,7 @@ If you are interested in determining how much longer you have to go, your server
 
 ## Bond KSM
 
-For the soft launch period, since transfers are disabled, you will set your Controller and Stash account to be the same account. If you have two accounts with KSM, the recommended method is to still have the Controller and Stash different accounts. Once the network is operating with PoS, you will be able to re-configure your controller later.
+For the soft launch period, since transfers are disabled, you will set your Controller and Stash account to be the same account. If you have two accounts with KSM, the recommended method is to still have the Controller and Stash different accounts. Once the network is operating with PoS, you will be able to re-configure your controller to have separate controller and stash accounts.
 
 Make sure not to bond all your KSM balance since the latest codebase in Kusama CC2 does not allow to use the bonded balance to pay transaction fees.
 
@@ -139,7 +139,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 - **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
 - **Controller account** - Select the Controller account created earlier. This account will also need a small amount of KSM in order to start and stop validating.
-- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the bonding duration period to be over (For Kusama, 28 days).
+- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the bonding duration period to be over (for Kusama, 28 days).
 - **Payment destination** - The account where the rewards from validating are sent. More info [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash account.
@@ -196,9 +196,9 @@ If you go to the Staking tab, you should see a list of active validators current
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
 
-Your node will be shown in the *next up* queue. During [soft launch](#soft-launch) period there will be no era changes, your node will remain in the queue until the transition to the Proof-of-Stake validator selection.
+Your node will be shown in the *next up* queue. During the [soft launch](#soft-launch) period, there will be no era changes, and your node will remain in the queue until the transition to the Proof-of-Stake validator selection.
 
-**After soft launch:** The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain the _next up_ queue. If your validator is not selected to become part of the validator set, it will remain in the _next up_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of KSMs staked or seek out nominators for your validator in order to join the validator set.
+**After soft launch:** The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _next up_ queue. If your validator is not selected to become part of the validator set, it will remain in the _next up_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of KSMs staked or seek out nominators for your validator in order to join the validator set.
 
 ## Soft Launch
 
