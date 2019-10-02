@@ -16,7 +16,7 @@ struct Block:
 
 ## 1. Tracking the chain head
 
-+\---\---\---\---\---\-\----+ |                    | | Substrate/Polkadot | |                    | +\---\---\---+\---\---\-\---+ | | +\---\-\----+\---\---\---+ |                  | | Client interface | |                  | | +\---\---\---\-\----+ | | | Client DB    | | | +\---\---\---\-\----+ | |                  | +\---\-\----+\---\---\---+ | | +\---\-\----+\---\---\---+ |                  | | Exchange backend | |                  | +\---\---\---\---\---\---+
++\---\---\---\---\---\-\-\---+ |                    | | Substrate/Polkadot | |                    | +\---\---\---+\---\---\-\---+ | | +\---\-\-\---+\---\---\---+ |                  | | Client interface | |                  | | +\---\---\---\-\-\---+ | | | Client DB    | | | +\---\---\---\-\-\---+ | |                  | +\---\-\-\---+\---\---\---+ | | +\---\-\-\---+\---\---\---+ |                  | | Exchange backend | |                  | +\---\---\---\---\---\---+
 
 Track each finalised block by subscribing with the `chain_subscribeFinalizedHeads` RPC (or polling the `chain_getFinalizedHead` RPC).
 
