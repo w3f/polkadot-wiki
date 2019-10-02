@@ -16,9 +16,9 @@ __Note: This guide is for the Alexander testnet in the Polkadot repository on th
 
 TODO:你仍然能成为提名人提名多个验证人从而获得奖励。你可以在[这裹](maintain-nominator)了解更多关于提名人的操作。
 
-这个教程我们使用Ubuntu 18.04并将在PoC-4测试网运行，不论你使用那个操作系统，大部份设定也不会有太大区别。另外这里有些[VPS服务器](#vps)给大家选择。
+For this tutorial, we use Ubuntu 18.04 and will be running on the PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too different. There are a lot of [VPS](#vps-list) choices out there; feel free to pick the one you like.
 
-_Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
+_Please make sure that you do **NOT** use this setup and configuration on Polkadot mainnet or Kusama. This guide simply walks you through step-by-step how to set up and run a validator node on the Alexander testnet. If you would like to run a validator on a non-testnet network, you must be EXTREMELY careful on some areas like key management, DDoS protection, and high availability._
 
 ## 安裝 Rust
 
@@ -80,11 +80,11 @@ TODO:
 
 ## 创建帐号
 
-为了简单容易识别帐号起见，建议大家把`Stash`、`Controller`和`Session`命名为(`1337_Stash`, `1337_Controller`, `1337_Session`)。
+To be a validator, you will need three separate accounts for managing your funds, namely `stash`, `controller`, and `session`. If you want to know more about these accounts, please see [here](learn-staking#accounts).
 
 ![create account](assets/guides/how-to-validate/polkadot-dashboard-create-account.jpg) Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當创建**Session**密钥時，你必须在`Advanced creation options`选择`ed25519`加密算法作为`Key pair crypto type`。另外确保你选择`Raw Seed`并储存在本地某个地方，因为当你运行验证人时，那个指令需要使用到它。
 
-每个帐号，输入密码加密种子(Seed)并按下`Save`。
+To help easily identify your accounts later, make sure to use `stash`, `controller`, and `session` in the names of your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
 
 接下来选择*Create and backup account*储存你的密匙为JSON格式。连同密码一起，这是能够恢复帐户的方法。
 
@@ -106,7 +106,7 @@ TODO:
 
 现在可以开始设定验证人，首先我们将会做以下步骤：
 
-- Stash
+- Bond the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Controller
 - Session (必须是 ed25519)
 
@@ -141,7 +141,7 @@ polkadot --chain alex --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TE
 
 选择之前建立的 `Session` 帐号并按下 `Set Session Key`。
 
-![terminal session key verification](assets/guides/how-to-validate/maintain-seed.jpg)
+![terminal session key verification](assets/guides/how-to-validate/polkadot-node-seed.jpg)
 
 TODO:![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg) TODO:
 
