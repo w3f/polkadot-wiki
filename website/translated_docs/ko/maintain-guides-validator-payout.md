@@ -22,13 +22,13 @@ Payout for each validator (v1 - v4):
 p / v = 8 / 4 = 2 DOTs
 ```
 
-Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive equal rewards. Validator `v1`, who had 18 DOTs staked, received the same reward (2 DOTs) in this era as `v4` who had only 7 DOTs staked.
+Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive the same block reward as every other validator. Validator `v1`, who had 18 DOTs staked, received the same reward (2 DOTs) in this era as `v4` who had only 7 DOTs staked.
 
 ## Running Multiple Validators
 
-It is possible for a single entity to run multiple validators. Running multiple validators will lead to an optimal risk/reward ratio. Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
+It is possible for a single entity to run multiple validators. Running multiple validators may provide a better risk/reward ratio. Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
 
-Assume you have 18 DOTs to stake - for simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
+For the following example, assume you have 18 DOTs to stake.  For simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
 
 ```
 Validator Set Size (v): 4
