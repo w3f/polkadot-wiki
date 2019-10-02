@@ -11,7 +11,7 @@ Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the
 ### 1. Identifying which role you are
 
 In staking, you can be either a [nominator or a validator](#validators-and-nominators). As a nominator,
-you can nominate multiple validator candidates that you trust to help you earn rewards in DOTs. You can take a look at the [nominator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-nominate/) to understand what you are required to do when the mainnet launches. Meanwhile, a validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [validator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/) if you want to run a validator in the current testnet.
+you can nominate multiple validator candidates that you trust to help you earn rewards in DOTs. You can take a look at the [nominator guide](https://wiki.polkadot.network/docs/en/maintain-nominator) to understand what you are required to do when the mainnet launches. Meanwhile, a validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [validator guide](https://wiki.polkadot.network/docs/en/maintain-validator) if you want to run a validator in the current testnet.
 
 ### 2.  Nomination period
 
@@ -124,16 +124,16 @@ Based on the the current configuration in the Alexander testnet, rewards are rec
     ***These parameters can be changed by proposing a referendum***
 ```
 
-Validator can create a cut of the reward that is not shared with the nominators. After value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
+Validators can create a cut of the reward that is not shared with the nominators. After the value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 
 For example, assume reward is 100 DOTs.
-A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would split between the validator and their nominators based on the portion of stakes they had.
+A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would be split between the validator and their nominators based on the portion of stakes they had.
 
-Rewards can be used by the same account (controller) to keep accumulating the rewards or by the stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
+Rewards can be used by the same account (controller) to keep accumulating the rewards or by the stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to completely un-stake everything.
 
 ## Inflation
 
-It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
+It will be close to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
