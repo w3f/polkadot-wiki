@@ -197,15 +197,13 @@ The balance encodes the DOT token with 12 decimal places. To get the actual numb
 |               |      |
  1 | Planck 10
 
-**3 | Point 10**6 | Microdot (UDOT) 10**9 | Millidot (MDOT) 10**12 | Dot (DOT) 10**15 | Blob
-
 ### Transferring balances
+
+**3 | Point 10**6 | Microdot (UDOT) 10**9 | Millidot (MDOT) 10**12 | Dot (DOT) 10**15 | Blob
 
 To transfer a balance, a transaction must be constructed and sent. In constructing a transaction, there are two key parts: the general part of the transaction and the module-specific `function` part of the transaction with the latter generally needing information from the chain's metadata must generally.
 
 In general, Polkadot's transactions are encoded as *signed* `Extrinsic`s in SCALE. To facilitate forward compatibility, extrinsics are double-encoded, so the initial encoding is passed back into SCALE (as a `Vec<u8>`) and the output of that is used. This has the effect of adding a small length prefix onto it allowing systems that cannot interpret the transaction data itself to still be able to pass them around as opaque packets of data.
-
-The SCALE format is given by `Extrinsic`:
 
 ```
 struct Extrinsic:
@@ -225,6 +223,8 @@ struct TransactionPayload:
     checkpoint_hash: Hash
 ```
 
+The SCALE format is given by `Extrinsic`:
+
 For a transaction, the optional `tx` is always used. The `Address` type is a specially encoded SCALE type, allowing an account to be presented either as an account index or as a 32-byte account ID, whichever is more convenient. The format is described here in the SCALE [TODO]. Assuming you wish to present a 32-byte account ID, then it can be expressed as an `Address` merely by prefixing the `0xff` byte.
 
 The `sig` field must contain a 25519-family signature of the SCALE-encoded `SigPayload`. The key used to sign the payload must correspond to the `sender` account. Schnorr/Ristretto 25519 ("sr25519") is the recommended signing format to use.
@@ -240,12 +240,10 @@ The `tip` is a `Balance` (logically equivalent to the `u128` type in SCALE), whi
 The `checkpoint_hash` is the hash of the "checkpoint block", which is to say the first block of the era specified by the `era` field. If just making the transaction "immortal", then the genesis hash of the blockchain should be used. This can be determined through the RPC `chain_getBlockHash(0)`.
 
 Finally, the `function` is a `Function` type (sometimes known as a `Call` or `Proposal` in certain contexts) which describes what action shall be dispatched. It must be constructed according to metadata. In this case, we want our transaction to effect the `transfer` function in the `Balances` module, to transfer a balance from one account to another. It is important to check the index of the Balances module itself in the list of modules. In this case, it is the 6th item, or index 5. It is also necessary to inspect the `calls` field of the Balances `Module` in the metadata, and determine what index in the list of calls the transfer function is. As it happens, it is first in the list, and thus has an index of 0.
-
-Finally, we need to know what parameters to this function are expected in order to construct the rest of the transaction. This is provided in the `Call` item of the metadata that we just located. Two parameters are expected:
 - `dest` with a type of `<T::Lookup as StaticLookup>::Source` (aka `Address`); and
 - `value` with a type of `Compact<T::Balance>` (aka `Compact Balance`).
 
-The `function` *in this case* (i.e. specifically and only for the Balance transfer transaction on Polkadot as of right now) would be the struct:
+Finally, we need to know what parameters to this function are expected in order to construct the rest of the transaction. This is provided in the `Call` item of the metadata that we just located. Two parameters are expected:
 
 ```
 struct BalanceTransferFunction:
@@ -255,22 +253,22 @@ struct BalanceTransferFunction:
     value: Compact Balance
 ```
 
+The `function` *in this case* (i.e. specifically and only for the Balance transfer transaction on Polkadot as of right now) would be the struct:
+
 where `module_index` is `0x05` and `call_index` is `0x00`. `dest` is similar to `sender` and may be provided as either an account index or a 32-byte account ID, whichever is more convenient. If providing as an account ID, then it can be formed into an address simply by prefixing the byte `0xff` to it.
 
-The amount to be transferred (not including any fees payable to the system) is given by `value`, and must be a SCALE compact-encoded number.
-
 ### Submitting and checking transactions
+
+The amount to be transferred (not including any fees payable to the system) is given by `value`, and must be a SCALE compact-encoded number.
 
 Once a transaction has been crafted, you will need to submit it for inclusion in the chain and eventually want to verify that it has indeed been included.
 
 This can be done in two ways: one is to use the simple RPC `author_submitExtrinsic`, which will return the transaction's hash. Once submitted, you can keep checking transactions in finalised blocks manually (since you are tracking the finalised heads anyway) until you see the transaction you submitted, at which point you know it is in the chain.
 
-The other way is to use the pub/sub RPC `author_submitAndWatchExtrinsic`. Again, you provide the SCALE-encoded transaction, but here you receive a subscription ID. You will be notified over the RPC as the transaction gets validated, broadcast and included in the chain with separate messages that are pushed.
-
 ## Conclusion
+
+The other way is to use the pub/sub RPC `author_submitAndWatchExtrinsic`. Again, you provide the SCALE-encoded transaction, but here you receive a subscription ID. You will be notified over the RPC as the transaction gets validated, broadcast and included in the chain with separate messages that are pushed.
 
 This concludes the article. Here you should have a good idea of how to interact with a Substrate/Polkadot node in order to track the finalised chain head, to decode SS58 addresses, check account information like balances & nonces and to construct, submit and track transactions. You've also learnt a little about the SCALE codec, the Substrate metadata system and how to build future-proof and generic Substrate-based systems.
 
 If you have any questions, please come ask in [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org).
-
-The original source of this page was published [here](https://hackmd.io/@gavwood/r1jTRX2Zr).
