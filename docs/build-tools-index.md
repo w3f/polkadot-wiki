@@ -42,11 +42,17 @@ will be filled out.
 ## C++
 
 - [Kagome](https://github.com/soramitsu/kagome) - A C++ Polkadot client developed by [Soramitsu](https://github.com/soramitsu).
+- [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot
+
+## C#
+
+- [Polkadot API - .NET](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API for .NET 
 
 ## Go
 
 - [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Runtime Environment.
 - [Golkadot](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate.
+- [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC client for go aka GSRPC
 
 ## JS
 
