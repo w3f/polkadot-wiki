@@ -71,12 +71,14 @@ There are three different accounts for managing your funds: `Stash`, `Controller
 
 ![staking](assets/NPoS/staking-keys.png)
 
-- **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
-- **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken).
-- **Session**
-> Note: This only for the current Alexander testnet. For details about session keys in Kusama Network or Polkadot mainnet, please read [here](learn-keys#session-keys).
+- **Stash:** This account holds funds bonded for participation, but delegates its staking and governance functions to controller and proxy keys.  As a result, you may actively participate with a stash key kept in a cold wallet, meaning it stays offline all the time, possibly sharded in bank vaults.  After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
+- **Controller** This account controls its stash account's nomination of validator nodes, or authorizes operation of your own validator, switching between validating, nominating and idle.  It only needs enough funds to post transactions when actions are taken.
+- **Proxy** This account participates in governance on behalf of its stash account.  Again, it only needs enough funds to post vote transactions.
+- **Session** Session keys are not account keys, but instead consist of several different key types used by validator nodes for different functions.  A validator operator first certifies their session keys with their controller key.  We recommend handling session keys using only your node's RPC interface because if session keys exist elsewhere then you might equivocate and be slashed.  We still support the legacy `--key` parameter for testnets like Alexander.
 
-The seed of this account should be passed to the node using the `--key` parameter. You may pass in either a mnemonic (recommended) or a legacy raw seed for the key parameter. The session account does not need to have funds as it does not need to send any transaction. The best practice is to create a dedicated account to be used as session account. Although a single account can theoretically be used as both `session` and `controller`, it is not recommended to do so. Having a dedicated `session` account would prevent the theft of funds should the validator node be compromised and the `--key` leaked.  Note that Session keys should always be of crypto type `Edwards (Ed25519)`, not the default `Schnorrkel (sr25519)`.
+We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key.  As a rule, you loose security anytime you use one key for multiple roles, or even if you use keys related by derivation.  You should never use any account key for a "hot" session key in particular.
+
+Any account key (stash, controller, proxy, etc.) could be either sr25519 or ed25519.  At present, Polkadot session keys include one Sr25519 and several Ed25519 keys, but we shall add BLS12-381 and a zero-knowledge VRF mechanism, and parachains might employ other session key types.
 
 For more on how keys are used in Polkadot and the cryptography behind it [see here](learn-keys).
 

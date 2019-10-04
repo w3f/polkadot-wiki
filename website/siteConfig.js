@@ -34,18 +34,12 @@ const siteConfig = {
   },
 
   /* Custom fonts for website */
-  /*
-    fonts: {
+  fonts: {
     myFont: [
-    "Times New Roman",
-    "Serif"
+    'Muli',
+    'sans-serif',
     ],
-    myOtherFont: [
-    "-apple-system",
-    "system-ui"
-    ]
-    },
-  */
+  },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Web3 Foundation`,
@@ -59,6 +53,12 @@ const siteConfig = {
   scripts: [
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
+    'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
+  ],
+
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
+    'https://fonts.googleapis.com/css?family=Muli&display=swap',
   ],
 
   // On page navigation for the current documentation page.
@@ -76,6 +76,12 @@ const siteConfig = {
 
   // Show documentation's last update time.
   enableUpdateTime: true,
+
+  markdownPlugins: [
+    (md) => {
+      md.use(require('remarkable-katex'));
+    },
+  ],
 
   editUrl: 'https://github.com/w3f/polkadot-wiki/edit/master/docs/',
 
