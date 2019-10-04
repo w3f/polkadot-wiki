@@ -12,7 +12,7 @@ sidebar_label: Learn about Polkadot
 - [Architecture](learn-architecture) - Overview of the Polkadot architecture.
 - [Bridges](learn-bridges) - Overview of bridges.
 - [Cryptography](learn-cryptography) - Describes the cryptography used in Polkadot and where it is employed in the protocol.
-- [Consensus](learn-consensus) - Describes what kind of consensus used in the Polkadot protocol and how it compares to other consensus protocols.
+- [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
 - [DOT](learn-DOT) - Information on DOTs, the native token of the Polkadot protocol.
 - [Governance](learn-governance) - What blockchain governance is, and how it works in Polkadot.
 - [Interchain Communication](learn-interchain) - Information regarding how interchain messaging works.
