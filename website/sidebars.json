@@ -32,12 +32,10 @@
         "type": "subcategory",
         "label": "Resources",
         "ids": [
-          "build-hackathon",
-          "build-deploy-parachains",
-          "build-examples-index",
           "build-exchange-integration",
-          "build-networks",
-          "build-rust-style-guide"
+          "build-examples-index",
+          "build-deploy-parachains",
+          "build-hackathon"
         ]
       }
     ],
