@@ -1,7 +1,7 @@
 ---
 id: build-tools-index
-title: Tools
-sidebar_label: Tools
+title: Tool Index
+sidebar_label: Tool Index
 ---
 
 Here we provide a list of tools available for your development needs. They

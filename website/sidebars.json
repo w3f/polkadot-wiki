@@ -10,20 +10,36 @@
     ],
     "Build": [
       "build-index",
-      "build-build-with-polkadot",
-      "build-dev-roadmap",
-      "build-hackathon",
-      "build-cumulus",
-      "build-deploy-parachains",
-      "build-examples-index",
-      "build-exchange-integration",
-      "build-extrinsic-format",
-      "build-networks",
-      "build-pdk",
-      "build-rust-style-guide",
-      "build-smart-contracts",
-      "build-tools-index",
-      "build-tools-subkey"
+      {
+        "type": "subcategory",
+        "label": "Development Guide",
+        "ids": [
+          "build-build-with-polkadot",
+          "build-dev-roadmap",
+          "build-pdk",
+          "build-cumulus",
+          "build-smart-contracts"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Tools",
+        "ids": [
+          "build-tools-index"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Resources",
+        "ids": [
+          "build-hackathon",
+          "build-deploy-parachains",
+          "build-examples-index",
+          "build-exchange-integration",
+          "build-networks",
+          "build-rust-style-guide"
+        ]
+      }
     ],
     "Learn": [
       "learn-DOT",
@@ -60,7 +76,6 @@
     "Maintain": [
       "maintain-index",
       {
-
         "type": "subcategory",
         "label": "Collator",
         "ids": [
