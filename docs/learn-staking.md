@@ -13,7 +13,7 @@ Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the
 In staking, you can be either a [nominator or a validator](#validators-and-nominators). As a nominator,
 you can nominate multiple validator candidates that you trust to help you earn rewards in DOTs. You can take a look at the [nominator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-nominate/) to understand what you are required to do when the mainnet launches. Meanwhile, a validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [validator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/) if you want to run a validator in the current testnet.
 
-### 2.  Nomination period
+### 2. Nomination period
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies are made public to all nominators, and a nominator in turn submits a list of any number of candidates that it supports. In the next epoch (lasting several hours), a certain number of validators having the most DOT backing get elected and become active. There are no particular requirements for a DOT holder to become a nominator, though we expect each nominator to carefully track the performance and reputation of validators.
 
@@ -71,14 +71,14 @@ There are three different accounts for managing your funds: `Stash`, `Controller
 
 ![staking](assets/NPoS/staking-keys.png)
 
-- **Stash:** This account holds funds bonded for participation, but delegates its staking and governance functions to controller and proxy keys.  As a result, you may actively participate with a stash key kept in a cold wallet, meaning it stays offline all the time, possibly sharded in bank vaults.  After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
-- **Controller** This account controls its stash account's nomination of validator nodes, or authorizes operation of your own validator, switching between validating, nominating and idle.  It only needs enough funds to post transactions when actions are taken.
-- **Proxy** This account participates in governance on behalf of its stash account.  Again, it only needs enough funds to post vote transactions.
-- **Session** Session keys are not account keys, but instead consist of several different key types used by validator nodes for different functions.  A validator operator first certifies their session keys with their controller key.  We recommend handling session keys using only your node's RPC interface because if session keys exist elsewhere then you might equivocate and be slashed.  We still support the legacy `--key` parameter for testnets like Alexander.
+- **Stash:** This account holds funds bonded for participation, but delegates its staking and governance functions to controller and proxy keys. As a result, you may actively participate with a stash key kept in a cold wallet, meaning it stays offline all the time, possibly sharded in bank vaults. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
+- **Controller** This account controls its stash account's nomination of validator nodes, or authorizes operation of your own validator, switching between validating, nominating and idle. It only needs enough funds to post transactions when actions are taken.
+- **Proxy** This account participates in governance on behalf of its stash account. Again, it only needs enough funds to post vote transactions.
+- **Session** Session keys are not account keys, but instead consist of several different key types used by validator nodes for different functions. A validator operator first certifies their session keys with their controller key. We recommend handling session keys using only your node's RPC interface because if session keys exist elsewhere then you might equivocate and be slashed. We still support the legacy `--key` parameter for testnets like Alexander.
 
-We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key.  As a rule, you loose security anytime you use one key for multiple roles, or even if you use keys related by derivation.  You should never use any account key for a "hot" session key in particular.
+We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key. As a rule, you lose security anytime you use one key for multiple roles, or even if you use keys related by derivation. You should never use any account key for a "hot" session key in particular.
 
-Any account key (stash, controller, proxy, etc.) could be either sr25519 or ed25519.  At present, Polkadot session keys include one Sr25519 and several Ed25519 keys, but we shall add BLS12-381 and a zero-knowledge VRF mechanism, and parachains might employ other session key types.
+Any account key (stash, controller, proxy, etc.) could be either sr25519 or ed25519. At present, Polkadot session keys include one Sr25519 and several Ed25519 keys, but we shall add BLS12-381 and a zero-knowledge VRF mechanism, and parachains might employ other session key types.
 
 For more on how keys are used in Polkadot and the cryptography behind it [see here](learn-keys).
 
