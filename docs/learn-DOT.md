@@ -78,6 +78,9 @@ DOTs are required to make transactions on the Polkadot network. Testnet DOTs do 
 
 You can request DOTs from the [Polkadot faucet](https://faucet.polkadot.network/), the [BlockX Labs faucet](https://faucets.blockxlabs.com/) or ask someone to send you DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
+Also, you can get DOTs by joining the [faucet channel](https://matrix.to/#/!puxkyylfiAUGGBhGmY:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io) on Riot. Simply input `!faucet` to know how to use it.
+
+
 You can make your own DOTs by [becoming a validator](https://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/).
 
 ## Kusama Tokens
