@@ -11,8 +11,8 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 ### Parity
 
 - [Shasper](https://github.com/paritytech/shasper)- Eth2.0 implemented as Substrate runtime.
-- [Substrate TCR](https://github.com/parity-samples/substrate-tcr)- Token curated registry as a runtime module.
-- [Substrate ERC20](https://github.com/parity-samples/substrate-erc20) - ERC20 token standard implemented on Substrate.
+- [Substrate TCR](https://github.com/substrate-developer-hub/substrate-tcr)- Token curated registry as a runtime module.
+- [Substrate ERC20](https://github.com/substrate-developer-hub/substrate-erc20-multi/blob/master/runtime/src/erc20.rs) - ERC20 token standard implemented on Substrate.
 
 ### Community
 
@@ -27,7 +27,6 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 - An example "Apple Store" to sell apples using Substrate. [Repo](https://github.com/osuketh/apple-store-substrate)
 - Darwinia, a cross-chain gaming platform. [Repo](https://github.com/darwinia-network/darwinia)
 - Joystream, a user governed video platform. [Repo](https://github.com/Joystream/substrate-node-joystream)
-- IPFS browser. [Repo](https://github.com/Polygos/substrate-node-ipfsbrowser)
 - Substrate multisig. [Repo](https://github.com/mixbytes/substrate-module-multisig)
 - Merkle tree module. [Repo](https://github.com/filiplazovic/substrate-merkle-tree)
 - Parking spaces registry using Substrate. [Repo](https://github.com/yjkimjunior/ParkingSpaceSubstrate)
@@ -35,6 +34,6 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 - Collateralize non-fungible assets for cash. [Repo](https://github.com/nczhu/collateral)
 - CidChain. [Repo](https://github.com/Polygos/substrate-node-cidchain)
 - Katal. [Repo](https://github.com/Trinkler/katal-chain)
-    - [Fixed-point arithmetic](https://github.com/Trinkler/katal-chain/tree/master/modules/reals)
-    - [Time in ISO8601 format](https://github.com/Trinkler/katal-chain/tree/master/modules/time)
+    - [Fixed-point arithmetic](https://github.com/Trinkler/katal-chain/blob/master/modules/structures/src/reals.rs)
+    - [Time in ISO8601 format](https://github.com/Trinkler/katal-chain/blob/master/modules/structures/src/time.rs)
     - [Permissioned Oracle](https://github.com/Trinkler/katal-chain/tree/master/modules/oracle)
