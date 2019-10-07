@@ -6,9 +6,9 @@ sidebar_label: DOT
 
 ## What are DOTs?
 
-DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or Ether is the native token of the Ethereum Blockchain.
+DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
 
-Alexander testnet DOTs have 15 decimal places, while the smallest unit is called the Planck. Kusama tokens (KSM) have 12 decimal places.  You can compare the Planck to Satoshis or Wei, while the DOT is like a bitcoin or an ether.
+Alexander testnet DOTs have 15 decimal places, while the smallest unit is called the Planck. Kusama tokens (KSM) have 12 decimal places.  You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
 **The table show as below is the old version.**
 
