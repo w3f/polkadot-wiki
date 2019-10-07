@@ -15,6 +15,7 @@ Here is the list of current resources available to developers who want to get st
 - [Writing your first contract](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract) - Guide to how one would write the `flipper` contract.
 - [Substrate contracts workshop](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - Walks you through the basics of using `ink!` and writing an ERC20 token.
 
+
 ## Examples
 
 Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!

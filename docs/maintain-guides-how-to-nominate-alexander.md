@@ -4,14 +4,14 @@ title: Be a Nominator (Alexander)
 sidebar_label: Be a Nominator (Alexander)
 ---
 
-This guide will walk you through how to nominate your DOTs to a validator node so that you can take part in the staking 
+This guide will walk you through how to nominate your DOTs to a validator node so that you can take part in the staking
 system and earn fresh DOTs.
 
 It has been updated for the Alexander testnet and Polkadot release PoC-4.
 
 ## Create `stash` and `controller` accounts
 
-We will assume that you will be starting with two fresh accounts. Click [here](learn-staking#accounts) to learn more 
+We will assume that you will be starting with two fresh accounts. Click [here](learn-staking#accounts) to learn more
 about what `stash` and `controller` accounts mean.
 
 The first step is to create two accounts by going to the *Accounts* tab on the Polkadot Dashboard and clicking on
@@ -27,7 +27,7 @@ existential deposit and transaction fees.
 ## Nominating
 
 It is now time to setup our nominator. We will do the following:
-- Bound the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
+- Bond the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Select the `controller`. This is the account that will decide when to start or stop nominating.
 
 First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
@@ -35,9 +35,9 @@ First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/
 ![dashboard bonding](assets/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
 
 - **Stash account** - Select your `stash` account, we will bound 100 milliDOTs, make sure it has this amount of funds.
-- **Controller account** - select the `controller` account created earlier.
-- **Value bonded** - how many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bound more DOTs later, however, withdrawing any bounded amount requires the bounding duration period to be over (several months at the time of writing).
-- **Payment destination** - where the rewards get sent. More info [here](learn-staking#reward-distribution).
+- **Controller account** - Select the `controller` account created earlier.
+- **Value bonded** - How many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bound more DOTs later, however, withdrawing any bounded amount requires the bounding duration period to be over (several months at the time of writing).
+- **Payment destination** - Where the rewards get sent. More info [here](learn-staking#reward-distribution).
 
 Once everything is filled properly, click `Bond` and sign the transaction (with your `stash` account). You will then see the following. You can ignore the `Set Session Key` button, it is only useful if you want to validate and we will not need it in this tutorial.
 
@@ -49,7 +49,7 @@ Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. 
 
 ![Validators](assets/guides/how-to-nominate/validators.png)
 
-Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
+Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction, you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
 
 ![Nominating](assets/guides/how-to-nominate/nominating.jpg)
 
