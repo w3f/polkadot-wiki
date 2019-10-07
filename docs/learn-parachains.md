@@ -41,7 +41,7 @@ Some examples of parachains:
 
 ### How will parachain slots be distributed?
 
-Parachain slots will be acquirable through auction, please see the [parachain slots](learn-auction) article.  Additionally, some parachain slots will be set aside from run [parathreads](learn-parathreads) - parachains which bid on a per-block basis to be included in the relay chain.
+Parachain slots will be acquirable through auction, please see the [parachain slots](learn-auction) article.  Additionally, some parachain slots will be set aside to run [parathreads](learn-parathreads) - parachains which bid on a per-block basis to be included in the relay chain.
 
 ### Parachain Development Kits (PDKs)
 

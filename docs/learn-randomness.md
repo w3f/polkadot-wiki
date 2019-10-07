@@ -10,7 +10,7 @@ BABE assigns block production slots to validators according to stake and using t
 
 The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos. Ouroboros randomness is secure for block production and works well for BABE. However, Polkadot requires a stronger source of randomness since it would be viable for an attacker to manipulate this randomness and effect validator-parachain selection.
 
-There are proposed solutions that have been considered for stronger randomness, but each has its own weakness (see [the section](http://research.web3.foundation/en/latest/polkadot/BABE/3-VDF/#unbiased-randomness) in the research wiki for a fuller explanation). For this reason, Polkadot uses randomness which is based on a VDF.
+There are proposed solutions that have been considered for stronger randomness, but each has its own weakness (see [the section](http://research.web3.foundation/en/latest/polkadot/BABE/3-VDF/#unbiased-randomness) in the research wiki for a fuller explanation). For this reason, Polkadot uses randomness which is based on a VRF.
 
 ## VDFs
 
