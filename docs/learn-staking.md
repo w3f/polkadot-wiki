@@ -129,12 +129,12 @@ Based on the the current configuration in the Alexander testnet, rewards are rec
     ***These parameters can be changed by proposing a referendum***
 ```
 
-Validator can create a cut of the reward that is not shared with the nominators. After value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
+Validators can create a cut of the reward that is not shared with the nominators. After the value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 
 For example, assume reward is 100 DOTs.
-A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would split between the validator and their nominators based on the portion of stakes they had.
+A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would be split between the validator and their nominators based on the portion of stakes they had.
 
-Rewards can be used by the same account (controller) to keep accumulating the rewards or by the stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
+Rewards can be used by the same account (controller) to keep accumulating the rewards or by the stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to completely un-stake everything.
 
 ## Inflation
 
