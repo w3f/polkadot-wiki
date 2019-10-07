@@ -37,7 +37,7 @@ Some examples of parachains:
 
 ### What is "parachain consensus"?
 
-"Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality.  Only sovereign chains (that must bridge to the relay chain via a parachain) can control their own consensus. Parachains have control over how blocks are authored and by who.
+"Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality.  Only sovereign chains (that must bridge to the relay chain via a parachain) can control their own consensus. Parachains have control over how blocks are authored and by whom.
 
 ### How will parachain slots be distributed?
 
