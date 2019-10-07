@@ -171,7 +171,7 @@ Referring to the above image, when the referenda only has 25% turnout, the tally
 
 In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
-All three talling mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
+All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
 
 ## Council
 
