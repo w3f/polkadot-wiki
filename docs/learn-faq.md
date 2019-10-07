@@ -26,7 +26,7 @@ The expected block time on the mainnet Polkadot chain is estimated to be limited
 by the theoretical limits of the peer-to-peer networks of the validators.
 Since there is no forced time between blocks due to Proof-of-Work and the only
 overhead on validators is to validate state transitions, the block times should
-be quite fast. Two or three seconds may not be unreasonable after optimizations  However, the specific block time will probably begin at a rate similar to Kusama.
+be quite fast. Two or three seconds may not be unreasonable after optimizations  However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
 
 ### What is the token inflation rate?
 
