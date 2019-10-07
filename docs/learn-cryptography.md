@@ -32,4 +32,4 @@ it allows for native multisignature through [signature aggregation](https://bitc
 
 The names Schnorrkel and Ristretto come from the two Rust libraries that implement this
 scheme, the [Schnorrkel](https://github.com/w3f/schnorrkel) library for Schnorr signatures and the [Ristretto](https://ristretto.group/ristretto.html)
-library that makes it possible to use cofactor-8 curves like the Curve25519.
+library that makes it possible to use cofactor-8 curves like Curve25519.

@@ -4,6 +4,10 @@ title: Terms and Definitions
 sidebar_label: Terms and Definitions
 ---
 
+## Alexander
+
+The most up-to-date testnet for Polkadot.
+
 ## Block
 
 A collection of data, such as transactions, that together indicate a state transition of the blockchain.
@@ -44,6 +48,10 @@ The native token for Polkadot.  DOTs serve three purposes: network governance (a
 
 A generic term for a decentralized application, that is, one which runs as part of a distributed network as opposed to being run on a specific system or set of systems.
 
+## Equivocation
+
+Providing conflicting information to the network.  BABE equivocation entails creating multiple blocks in the same slot.  GRANDPA equivocation would consist of signing multiple conflicting chains.
+
 ## Extrinsic
 
 Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework.  Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
@@ -72,6 +80,14 @@ The process of determining what changes to the network are permissible, such as 
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders.  Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
+## KSM
+
+The abbreviation for Kusama network tokens.
+
+## Kusama
+
+The "canary network" for Polkadot.  It consists of an early-release, unaudited version of the Polkadot software.  It is not a testnet - after the transition to NPoS, the network is entirely in the hands of the community (i.e., Kusama token holders).
+
 ## LIBP2P
 
 An open-source library for encrypted peer-to-peer communications and other networking functionality.  More information at: [https://libp2p.io/](https://libp2p.io/)
@@ -86,7 +102,7 @@ A tool which gives you information about a node, such as the latest blocks seale
 
 ## Nominated Proof of Stake (NPoS)
 
-A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator.  Nominated proof-of-stake differs from delegated proof-of-stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator.
+A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator.  Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator.  Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
 
 ## Nominator
 
@@ -160,6 +176,10 @@ Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key
 
 A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
 
+## Slashing
+
+The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
+
 ## Staking
 
 "Reserving" tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to produce a valid block (and thus obtain a block reward).  Validators and nominators (who back validators through NPoS) together stake their DOTs in order to add blocks to the relay chain.
@@ -171,6 +191,10 @@ A function which describes how the state of a blockchain can be transformed.  Fo
 ## Substrate
 
 An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
+
+## Tabling
+
+In Polkadot governance, bringing a proposal to a vote via referendum.  Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
 ## Transaction
 
