@@ -25,7 +25,7 @@ The Kusama network is currently operating at a rate of one block approximately e
 The expected block time on the mainnet Polkadot chain is estimated to be limited
 by the theoretical limits of the peer-to-peer networks of the validators.
 Since there is no forced time between blocks due to Proof-of-Work and the only
-overhead onvValidators is to validate state transitions, the block times should
+overhead on validators is to validate state transitions, the block times should
 be quite fast. Two or three seconds may not be unreasonable after optimizations  However, the specific block time will probably begin at a rate similar to Kusama.
 
 ### What is the token inflation rate?
