@@ -33,7 +33,7 @@ For a precise description of the parathread protocol, see [here](https://hackmd.
 ## Parathread Economics
 
 There are two sources of compensation for collators:
-1) Assuming a parathread has its own local token system, it pays the collators from the transaction fees in its local token. If the parathread does not implement a local token, then it can use DOTs to incentivize collators.
+1) Assuming a parathread has its own local token system, it pays the collators from the transaction fees in its local token. If the parathread does not implement a local token, or its local token has no value (e.g. it is used only for governance), then it can use DOTs to incentivize collators.
 2) Parathread protocol subsidy. A parathread can mint new tokens in order to provide additional incentives for the collator. Probably, the amount of local tokens to mint for the parathread would be a function of time, the more time that passes between parathread blocks that are included in the relay chain, the more tokens the parathread is willing to subsidize in order to be considered for inclusion. The exact implementation of this minting process could be through local parathread inflation or via a stockpile of funds like a treasury.
 
 Collators may be paid in local parathread currency. However, the relay chain transacts with the Polkadot universal currency (DOT) only. Collators must then submit block candidates with an associated bid in DOT. This means that if the parathread offers a local currency, the collator will need to understand the exchange rate between this currency and DOT in order to place a proper DOT bid on the relay chain and ensure that they make a profit.
