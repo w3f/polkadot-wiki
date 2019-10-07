@@ -16,7 +16,7 @@ Somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://
 
 ### How does consensus on the relay chain work?
 
-Please see the page on the [GRANDPA](learn-GRANDPA) finality gadget.
+Please see the [consensus](learn-consensus) page.
 
 ### What is the expected block time on the relay chain?
 

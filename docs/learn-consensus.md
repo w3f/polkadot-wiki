@@ -42,7 +42,15 @@ It works in a partially synchronous network model as long as 2/3 of nodes are ho
 
 A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
 
-For details on GRANDPA, please see the [GRANDPA page](learn-GRANDPA) on this wiki, or for even more detail, the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
+#### Protocol
+
+Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol. It is better to go to the source than copying the text here and butchering the Latex formatting.
+
+#### Implementation
+
+The [Rust implementation](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs) is part of Substrate Runtime Module Library.
+
+For even more detail, see the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
 
 ### BABE: Block Production
 
