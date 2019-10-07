@@ -20,7 +20,7 @@ Please see the page on the [GRANDPA](learn-GRANDPA) finality gadget.
 
 ### What is the expected block time on the relay chain?
 
-The Kusama network is currently operating at a rate of one block approximately every eight to ten seconds.
+The Kusama network is currently operating at a rate of one block approximately every six seconds.
 
 The expected block time on the mainnet Polkadot chain is estimated to be limited
 by the theoretical limits of the peer-to-peer networks of the validators.
