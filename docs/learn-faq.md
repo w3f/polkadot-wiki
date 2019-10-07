@@ -4,7 +4,7 @@ title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
-_This FAQ focuses on technical questions for users interested in developing applications for Polkadot.  If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq).  If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
+_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
 ### How many validators will be online at Mainnet launch?
 
@@ -26,15 +26,15 @@ The expected block time on the mainnet Polkadot chain is estimated to be limited
 by the theoretical limits of the peer-to-peer networks of the validators.
 Since there is no forced time between blocks due to Proof-of-Work and the only
 overhead on validators is to validate state transitions, the block times should
-be quite fast. Two or three seconds may not be unreasonable after optimizations  However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
+be quite fast. Two or three seconds may not be unreasonable after optimizations. However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
 
 ### What is the token inflation rate?
 
-This is difficult to calculate precisely, since the inflation rate will vary based on what percentage of the DOTs are staked.  For Kusama, inflation is estimated to be around 10 - 20% for the first year.
+This is difficult to calculate precisely, since the inflation rate will vary based on what percentage of the DOTs are staked. For Kusama, inflation is estimated to be around 10 - 20% for the first year.
 
 ### How are validators rewarded?
 
-Validators are rewarded from the block reward of the relay chain. Block rewards consists of transaction fees (and tips) and block production rewards.  For more details, see the [validator payout page](maintain-guides-validator-payout).
+Validators are rewarded from the block reward of the relay chain. Block rewards consists of transaction fees (and tips) and block production rewards. For more details, see the [validator payout page](maintain-guides-validator-payout).
 
 ### How do parachain economics work?
 

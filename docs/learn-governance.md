@@ -4,9 +4,9 @@ title: Governance
 sidebar_label: Governance
 ---
 
-Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders.  The stated goal is to ensure that the majority of the stake can always command the network.
+Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of the stake can always command the network.
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.  All changes to the protocol must be agreed upon by stake-weighted referenda.
+To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## Mechanism
 
@@ -22,7 +22,7 @@ To better understand how the council is formed, please read [this section](#coun
 
 ## Referenda
 
-Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific _proposal_ associated with it which takes the form of a privileged function call in the runtime (that includes the most powerful call: `set_code`, which is able to switch out the entire code of the runtime, achieving what would otherwise require a "hard fork"). They are discrete events, have a fixed period where voting happens, and then are tallied and the function call is made if the vote is approved.  Referenda are always binary; your only options in voting are "aye", "nay", or abstaining entirely.
+Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific _proposal_ associated with it which takes the form of a privileged function call in the runtime (that includes the most powerful call: `set_code`, which is able to switch out the entire code of the runtime, achieving what would otherwise require a "hard fork"). They are discrete events, have a fixed period where voting happens, and then are tallied and the function call is made if the vote is approved. Referenda are always binary; your only options in voting are "aye", "nay", or abstaining entirely.
 
 Referenda can be started in one of several ways:
 
@@ -31,9 +31,9 @@ Referenda can be started in one of several ways:
 * Proposals submitted as part of the enactment of a prior referendum;
 * Emergency proposals submitted by the Technical Committee and approved by the Council.
 
-All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time.  For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
+All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
 
-Emergency proposals deal with major problems with the network which need to be "fast-tracked".  These will have a shorter enactment time.
+Emergency proposals deal with major problems with the network which need to be "fast-tracked". These will have a shorter enactment time.
 
 ### Proposing a Referenda
 
@@ -43,13 +43,13 @@ Anyone can propose a referendum by depositing the minimum amount of DOTs for a c
 
 #### Council Referenda
 
-Unanimous Council - When all members of the council agree on a proposal, it can be moved to a referendum.  This referendum will have a negative turnout bias (that is, the smaller the amount of stake voting, the smaller the amount necessary for it to pass - see "Adaptive Quorum Biasing", below).
+Unanimous Council - When all members of the council agree on a proposal, it can be moved to a referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of stake voting, the smaller the amount necessary for it to pass - see "Adaptive Quorum Biasing", below).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the referendum can also be voted upon, but it will be majority-carries
 
 #### Voting Timetable
 
-Every thirty days, a new referendum will come up for a vote, assuming there are referenda in the queues.  There is a queue for Council-approved referenda and a queue for publicly submitted referenda.  The referendum to be voted upon alternates between the two queues.
+Every thirty days, a new referendum will come up for a vote, assuming there are referenda in the queues. There is a queue for Council-approved referenda and a queue for publicly submitted referenda. The referendum to be voted upon alternates between the two queues.
 
 If the given queue whose turn it is empty, and there are proposals waiting in the other queue, the top proposal in the other queue will become a proposal.
 
@@ -58,7 +58,7 @@ Multiple referenda cannot be voted upon in the same time period, excluding emerg
 
 #### Voting for a proposal
 
-To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. It is possible to vote without locking at all, but your vote is worth a small fraction of a normal vote, given your stake.  At the same time, holding only a small amount of DOT tokens does not mean that the holder cannot influence the referendum result, thanks to time-locking.  You can read more about this at [Voluntary Locking](#voluntary-locking).
+To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. It is possible to vote without locking at all, but your vote is worth a small fraction of a normal vote, given your stake. At the same time, holding only a small amount of DOT tokens does not mean that the holder cannot influence the referendum result, thanks to time-locking. You can read more about this at [Voluntary Locking](#voluntary-locking).
 
 ```
 Example:
@@ -230,7 +230,7 @@ as one of the three chambers of Kusama governance (along with the Council and th
 Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or
 the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
 
-The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation.  These emergency referenda are intended for use only under urgent circumstances.
+The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 
 ## [Usage of DOT](learn-DOT#dots-for-governance)
 
