@@ -18,7 +18,7 @@ Although simple and effective in coming to a decentralized consensus, proof of w
 
 ## Probabilistic vs. provable finality
 
-A pure Nakamoto consensus blockchain which runs PoW is only able to achieve the notion of _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final.  Eventual consensus means that at some point in the future, all nodes will agree on the truthfulness of one set of data.  This eventual consensus may take a long time and will not be able to be determined how long it will take ahead of time.  However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and quicker guarantees on the finality of blocks - specifically, that they can never be reverted after some process of byzantine agreements has taken place. The notion of irreversible consensus is known as _provable finality._
+A pure Nakamoto consensus blockchain which runs PoW is only able to achieve the notion of _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final.  Eventual consensus means that at some point in the future, all nodes will agree on the truthfulness of one set of data.  This eventual consensus may take a long time and will not be able to be determined how long it will take ahead of time.  However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and quicker guarantees on the finality of blocks - specifically, that they can never be reverted after some process of Byzantine agreements has taken place. The notion of irreversible consensus is known as _provable finality._
 
 In the GRANDPA paper, it is phrased in this way:
 
@@ -44,7 +44,7 @@ A notable distinction is that GRANDPA reaches agreements on chains rather than b
 
 #### Protocol
 
-Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol. It is better to go to the source than copying the text here and butchering the Latex formatting.
+Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol.
 
 #### Implementation
 

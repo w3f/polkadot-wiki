@@ -11,8 +11,6 @@ Polkadot中继链本身并不支持智能合约，不过在它之上的平行链
 下文列出了开发者当前可使用的资源，帮助开始编写智能合约并部署在基于Substrate的平行链之上。
 
 - [ink!](https://github.com/paritytech/ink) - Parity的ink用于编写智能合约。
-- [部署首个合约](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - 部署给定的`flipper`合约的指南。
-- [编写首份合同](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract)——编写`flipper`合约的指南。
 - [Substrate合约工作坊](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - 帮助了解使用`ink!`和编写ERC20代币的基本方法。
 
 ## 范例

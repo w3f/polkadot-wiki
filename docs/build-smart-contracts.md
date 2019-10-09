@@ -11,10 +11,7 @@ The Polkadot relay chain will not support smart contracts natively.  However, pa
 Here is the list of current resources available to developers who want to get started writing smart contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Parity's ink! eDSL to write smart contracts.
-- [Deploying your first contract](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - Guide to deploy the provided `flipper` contract.
-- [Writing your first contract](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract) - Guide to how one would write the `flipper` contract.
 - [Substrate contracts workshop](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - Walks you through the basics of using `ink!` and writing an ERC20 token.
-
 
 ## Examples
 
