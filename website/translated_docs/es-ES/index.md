@@ -12,7 +12,7 @@ Si estás buscando una introducción en Polkadot por favor [vaya aquí](learn-in
 
 ## ¿Quiere saber más?
 
-- [Explora la Wiki](learn-index) - Lea la sección informativa de la wiki.
+- [Explora la Wiki](learn-introduction) - Lea la sección informativa de la wiki.
 - [Enlaces relevantes](learn-relevant-links) - **Enlaces de interés sobre Polkadot.**
 
 ## ¿Quiere desarrollar en Polkadot?

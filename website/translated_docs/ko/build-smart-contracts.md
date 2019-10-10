@@ -11,8 +11,6 @@ sidebar_label: Smart Contracts
 Substrate 기반의 패러체인(parachain)에 배포 할 스마트 컨트랙트 작성을 시작하려는 개발자가 현재 사용할 수있는 리소스 목록입니다.
 
 - [ink!](https://github.com/paritytech/ink) - 스마트 컨트랙트를 작성하기 위한 Parity의 ink.
-- [첫번째 컨트랙트 배포하기](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - 제공되는 `flipper` 컨트랙트 배포 가이드.
-- [첫번째 컨트랙트 작성하기](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract) - `flipper` 컨트랙트를 어떻게 작성하는지에 대한 가이드.
 - [서브스트레이트 컨트랙트 워크샵 (Substrate contracts workshop)](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - `ink!`를 사용하고 ERC20 토큰을 어떻게 작성하는지에 대한 과정을 안내합니다.
 
 ## 예시

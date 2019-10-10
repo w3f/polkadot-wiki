@@ -18,7 +18,7 @@ Although simple and effective in coming to a decentralized consensus, proof of w
 
 ## Probabilistic vs. provable finality
 
-A pure Nakamoto consensus blockchain which runs PoW is only able to achieve the notion of _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final. Eventual consensus means that at some point in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus may take a long time and will not be able to be determined how long it will take ahead of time. However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and quicker guarantees on the finality of blocks - specifically, that they can never be reverted after some process of byzantine agreements has taken place. The notion of irreversible consensus is known as _provable finality._
+A pure Nakamoto consensus blockchain which runs PoW is only able to achieve the notion of _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final.  Eventual consensus means that at some point in the future, all nodes will agree on the truthfulness of one set of data.  This eventual consensus may take a long time and will not be able to be determined how long it will take ahead of time.  However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and quicker guarantees on the finality of blocks - specifically, that they can never be reverted after some process of Byzantine agreements has taken place. The notion of irreversible consensus is known as _provable finality._
 
 In the GRANDPA paper, it is phrased in this way:
 
@@ -28,7 +28,7 @@ In the GRANDPA paper, it is phrased in this way:
 
 ### Hybrid Consensus
 
-There are two acronyms we use when we talk about the consensus protocol of Polkadot, GRANDPA and BABE. We talk about both of these acronyms because Polkadot uses what is known as **hybrid consensus**. Hybrid consensus splits up the finality gadget from the block production mechanism.
+There are two acronyms we use when we talk about the consensus protocol of Polkadot, GRANDPA and BABE. We talk about both of these acronyms because Polkadot uses what is known as _hybrid consensus_. Hybrid consensus splits up the finality gadget from the block production mechanism.
 
 This is a way of getting the benefits of probabilistic finality (the ability to always produce new blocks) and provable finality (having a universal agreement on the canonical chain with no chance for reversion) in Polkadot. It also avoids the corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong fork in probabilistic finality, and a chance for "stalling" - not being able to produce new blocks - in provable finality). By combining these two mechanisms, Polkadot allows for blocks to be rapidly produced, and the slower finality mechanism to run in a separate process to finalize blocks without risking slower transaction processing or stalling.
 
@@ -42,7 +42,15 @@ It works in a partially synchronous network model as long as 2/3 of nodes are ho
 
 A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
 
-For details on GRANDPA, please see the [GRANDPA page](learn-GRANDPA) on this wiki, or for even more detail, the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
+#### Protocol
+
+Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol.
+
+#### Implementation
+
+The [Rust implementation](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs) is part of Substrate Runtime Module Library.
+
+For even more detail, see the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
 
 ### BABE: Block Production
 

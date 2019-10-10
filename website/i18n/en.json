@@ -89,10 +89,6 @@
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
       },
-      "learn-basics": {
-        "title": "Basics",
-        "sidebar_label": "Basics"
-      },
       "learn-bridges": {
         "title": "Bridges",
         "sidebar_label": "Bridges"
@@ -125,17 +121,9 @@
         "title": "Governance",
         "sidebar_label": "Governance"
       },
-      "learn-grandpa": {
-        "title": "GRANDPA",
-        "sidebar_label": "GRANDPA"
-      },
       "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
-      },
-      "learn-index": {
-        "title": "Learn about Polkadot",
-        "sidebar_label": "Learn about Polkadot"
       },
       "learn-interchain": {
         "title": "Interchain Message Passing (ICMP)",
