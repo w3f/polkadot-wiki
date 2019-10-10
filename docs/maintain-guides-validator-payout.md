@@ -30,7 +30,7 @@ Note that this is different than most other Proof-of-Stake systems such as Cosmo
 
 It is possible for a single entity to run multiple validators. Running multiple validators may provide a better risk/reward ratio. Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
 
-For the following example, assume you have 18 DOTs to stake.  For simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
+For the following example, assume you have 18 DOTs to stake. For simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
 
 ```
 Validator Set Size (v): 4
