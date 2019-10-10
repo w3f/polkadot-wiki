@@ -8,7 +8,7 @@ sidebar_label: DOT
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
 
-Alexander testnet DOTs have 15 decimal places, while the smallest unit is called the Planck. Kusama tokens (KSM) have 12 decimal places.  You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
+Alexander testnet DOTs have 15 decimal places, while the smallest unit is called the Planck. Kusama tokens (KSM) have 12 decimal places. You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
 **The table show as below is the old version.**
 
@@ -46,13 +46,13 @@ KSM (DOT) | 12
 
 DOTs serve three key functions in Polkadot, (i) to be used for governance of the network, (ii) to be staked for operation of the network, and (iii) to be bonded to connect a chain to Polkadot as a parachain.
 
-DOTs can also serve ancillary functions by virtue of being a transferrable token.  For example, DOTs stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
+DOTs can also serve ancillary functions by virtue of being a transferrable token. For example, DOTs stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
 ### DOTs for governance
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions which are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
 
-Polkadot will enable any holder of DOTs to participate in governance.  For details on how holders can participate in governance, as well as their rights and responsibilities, see the [governance page](polkadot-learn-governance).
+Polkadot will enable any holder of DOTs to participate in governance. For details on how holders can participate in governance, as well as their rights and responsibilities, see the [governance page](polkadot-learn-governance).
 
 ### DOTs for consensus
 
@@ -85,4 +85,4 @@ You can make your own DOTs by [becoming a validator](https://wiki.polkadot.netwo
 
 ## Kusama Tokens
 
-Unlike testnet DOTs, Kusama tokens are not freely given away.  Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the frictional faucet (online soon), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
+Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the frictional faucet (online soon), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.

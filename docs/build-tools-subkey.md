@@ -18,7 +18,7 @@ subkey generate
 
 Will output a mnemonic phrase and give you the seed, public key, and address of a new account. DO NOT SHARE your mnemonic or seed with ANYONE it will give them access to your funds. If someone is making a transfer to you they will only need your **Address**.
 
-Note that the mnemonic phrase will allow you to generate the raw seed.  Use of the mnemonic phrase is recommended, as the raw seed is deprecated for use by end users.  The mnemonic phrase also gives you benefit of a checksum and reduced likelihood of typos.
+Note that the mnemonic phrase will allow you to generate the raw seed. Use of the mnemonic phrase is recommended, as the raw seed is deprecated for use by end users. The mnemonic phrase also gives you benefit of a checksum and reduced likelihood of typos.
 
 ### Inspecting a key
 
