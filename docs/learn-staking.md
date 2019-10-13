@@ -98,22 +98,46 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into account whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`.
-`Offline Slash Grace` is configured by the network, and the current testnet configuration is set to `4`, whereas `Unstake Threshold` is decided by the validator. However,the maximum number of `Unstake threshold` is NOT allowed to be set greater than 10 in the current setting.
+Slashing will happen if a validator misbehaves(e.g. always offline, attack the network or running modified software) in the network, they and their nominators will get slashed by losing a percentage of their bonded/staked DOTs. 
 
-In short, validators will be slashed if they have been reported offline more than `Offline Slash Grace + Unstake Threshold` times.
+As validators have more DOTs staked, they will get slashed more, so we encourage nominators to shift their nominations to less popular validators to reduce the risk of being lost more. 
 
-At the same time, once slashing is determined, a value will be deducted from the balance of the validator and all the nominators that have voted for this validator.
+Based on the latest Polkadot's codebase, the following slashing have been implemented:
 
-### Example
+### Unresponsiveness
 
-```
-    Offline Slash Grace = 4 (Network define)
+For every session, validators will send a "I'm Online" message to indicate they are online while unresponsiveness means that the validator fails to send the heartbeat. Depending on the repeated offences and how many other validators were offline, slashing will occur. If one-third of all validators are unresponsive, 5% of their bonded DOTs will be slashed.
 
-    Unstake Threshold   = 5 (Validator define)
-```
+Here is the formula for calculation:
 
-In this case, slashing will only occur if a validator has been reported offline more than 9 times.
+    Let x = offenders, n = total no. validators
+
+    Min( (3 * (x - 1)) / n, 1) * 0.05
+
+
+Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed, for example, having high availability support to guarantee even though when the node went offline, you can still have another machine to take place.
+
+### Grandpa Equivocation
+
+A validator signed two or more votes in the same round on different chains.
+
+### Babe Equivocation 
+
+A validator produces two or more blocks on the relay chain in the same time slot. 
+
+
+Grandpa and Babe equivocation slashing amount is calculated as below:
+
+    Let x = offenders, n = total no. validators
+
+    Min( (3 * x / n )^2, 1)
+
+Validators may run their nodes on multiple machines to make sure they can still perform validation work in case if one of their nodes goes down, but if they do not have a good coordination to manage those machines to do signing that can potentially cause the equivocation problem, hence, it would be better to have something like KMS (Key Management Server) as a middleware in between those machines to coordinate those tasks in order to avoid this kind of problem occurs.
+
+> Notice:
+If a validator is reported for anyone of the offences they will be removed from the validator set and they will not be paid while they are kicked out.
+
+If you want to know the details of the slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts/).
 
 ## Reward Distribution
 
