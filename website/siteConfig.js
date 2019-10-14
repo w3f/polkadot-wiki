@@ -10,7 +10,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'build-index', label: 'Build'},
-    {doc: 'learn-index', label: 'Learn'},
+    {doc: 'learn-introduction', label: 'Learn'},
     {doc: 'maintain-index', label: 'Maintain'},
     { search: true },
     { languages: true }

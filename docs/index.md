@@ -17,7 +17,7 @@ If you're looking for an introduction to Polkadot please [see here](learn-introd
 
 ## Want to learn more?
 
-- [Explore the Wiki](learn-index) - Read the informational section of the wiki.
+- [Explore the Wiki](learn-introduction) - Read the informational section of the wiki.
 - [Relevant Links](learn-relevant-links) - **Comprehensive links about Polkadot.**
 
 ## Want to build on Polkadot?

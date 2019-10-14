@@ -89,10 +89,6 @@
         "title": "平行链插槽拍卖",
         "sidebar_label": "平行链插槽拍卖"
       },
-      "learn-basics": {
-        "title": "Polkadot 基础",
-        "sidebar_label": "Polkadot 基础"
-      },
       "learn-bridges": {
         "title": "桥接",
         "sidebar_label": "桥接"
@@ -125,17 +121,9 @@
         "title": "治理",
         "sidebar_label": "治理"
       },
-      "learn-grandpa": {
-        "title": "GRANDPA",
-        "sidebar_label": "GRANDPA"
-      },
       "learn-implementations": {
         "title": "其它程序语言实现",
         "sidebar_label": "其它程序语言实现"
-      },
-      "learn-index": {
-        "title": "了解 Polkadot",
-        "sidebar_label": "了解 Polkadot"
       },
       "learn-interchain": {
         "title": "跨链消息传递 (ICMP)",

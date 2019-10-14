@@ -20,7 +20,7 @@ that you can use by deploying yourself. As you progress in your journey as a val
 this repository as a _starting point_ for your own modifications and customizations.
 
 If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)
-on Riot.  The team and other validators are there to help answer questions and provide experience. If you have a more
+on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more
 significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper

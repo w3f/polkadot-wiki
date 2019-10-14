@@ -40,36 +40,67 @@
       }
     ],
     "Learn": [
-      "learn-DOT",
-      "learn-PRE",
-      "learn-UI",
-      "learn-architecture",
-      "learn-auction",
-      "learn-basics",
-      "learn-bridges",
-      "learn-comparisons-cosmos",
-      "learn-comparisons",
-      "learn-consensus",
-      "learn-cryptography",
-      "learn-faq",
-      "learn-governance",
-      "learn-grandpa",
-      "learn-implementations",
-      "learn-index",
-      "learn-interchain",
       "learn-introduction",
-      "learn-keys",
-      "learn-parachains",
-      "learn-parathreads",
-      "learn-phragmen",
-      "learn-randomness",
-      "learn-relevant-links",
-      "learn-roadmap",
-      "learn-security",
-      "learn-spree",
-      "learn-staking",
-      "learn-treasury",
-      "learn-wasm"
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": [
+          "learn-architecture",
+          "learn-security",
+          "learn-consensus",
+          "learn-governance",
+          "learn-bridges",
+          "learn-parachains",
+          "learn-parathreads",
+          "learn-PRE",
+          "learn-treasury"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Advanced",
+        "ids": [
+          "learn-staking",
+          "learn-randomness",
+          "learn-spree",
+          "learn-wasm",
+          "learn-phragmen",
+          "learn-interchain"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cryptography",
+        "ids": [
+          "learn-cryptography",
+          "learn-keys"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Economics",
+        "ids": [
+          "learn-DOT",
+          "learn-auction"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Polkadot Comparisons",
+        "ids": [
+          "learn-comparisons-cosmos",
+          "learn-comparisons"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Miscellaneous",
+        "ids": [
+          "learn-roadmap",
+          "learn-relevant-links",
+          "learn-faq"
+        ]
+      }
     ],
     "Maintain": [
       "maintain-index",
