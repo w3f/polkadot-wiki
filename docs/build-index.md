@@ -31,7 +31,6 @@ elsewhere.
 ## Resources
 
 - [Exchange Integration](build-exchange-integration) - Guide for how to integrate Polkadot with your exchange.
-- [Networks](build-networks) - How to connect to the different networks.
 - [Examples](build-examples-index) - Example projects sourced from the community-- see what others are building!
 
 ### PSPs

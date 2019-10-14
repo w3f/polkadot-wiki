@@ -192,7 +192,7 @@ Parathreads will not require a parachain slot, so you will not need to engage in
 you will be able to register your parathread code to the Relaychain for a fee and from then be able to start participating
 in the per-block auctions for inclusion of your state transition into the Relaychain.
 
-For more information on how parathread per-block auctions work, see the more detailed [parathread](learn-parathread) page.
+For more information on how parathread per-block auctions work, see the more detailed [parathread](learn-parathreads) page.
 
 ## So you want to build a smart contract...
 
