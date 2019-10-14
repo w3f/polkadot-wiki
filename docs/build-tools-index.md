@@ -1,7 +1,7 @@
 ---
 id: build-tools-index
-title: Tools
-sidebar_label: Tools
+title: Tool Index
+sidebar_label: Tool Index
 ---
 
 Here we provide a list of tools available for your development needs. They
@@ -88,4 +88,4 @@ Polkadot-JS Common provides various useful utility functions that are used acros
 ### RPC Tools
 
 - [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - Demonstrates how the JS tools interact with the node over RPC.
-- [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html) - Documents Substrate RPC endpoints.
+- [RPC documentation](https://polkadot.js.org/api/substrate/rpc.html) - Documents Substrate RPC endpoints.

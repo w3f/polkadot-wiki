@@ -1,7 +1,7 @@
 ---
 id: glossary
-title: Terms and Definitions
-sidebar_label: Terms and Definitions
+title: Glossary
+sidebar_label: Glossary
 ---
 
 ## Alexander
@@ -48,6 +48,15 @@ The native token for Polkadot. DOTs serve three purposes: network governance (al
 
 A generic term for a decentralized application, that is, one which runs as part of a distributed network as opposed to being run on a specific system or set of systems.
 
+## Epoch
+
+An epoch is a time duration in the BABE protocol that assigns leadership positions to authorities for production in slots.
+In Kusama, it is the same duration as a [session](#session).
+
+## Era
+
+A (whole) number of sessions, which is the period that the validator set (and each validator's active nominator set) is
+recalculated and where rewards are paid out.
 ## Equivocation
 
 Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
@@ -167,6 +176,11 @@ The property of a distributed system indicating that the system will properly me
 ## Sealing
 
 The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
+
+## Session
+
+A session is a Substrate implementation term for a period of time that has a constant set of validators. Validators can only join
+or exit the validator set at a session change.
 
 ## Session certificate
 

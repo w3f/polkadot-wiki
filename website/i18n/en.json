@@ -29,17 +29,13 @@
         "title": "Exchange integration",
         "sidebar_label": "Exchange integration"
       },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic Format aka Transaction Format",
-        "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
-      },
       "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "Hackathon"
       },
       "build-index": {
-        "title": "Builders Portal",
-        "sidebar_label": "Builders Portal"
+        "title": "Builder's Portal",
+        "sidebar_label": "Builder's Portal"
       },
       "build-networks": {
         "title": "Networks",
@@ -49,21 +45,13 @@
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
       },
-      "build-rust-style-guide": {
-        "title": "Style Guide for Rust in Polkadot",
-        "sidebar_label": "Style Guide for Rust in Polkadot"
-      },
       "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
       },
       "build-tools-index": {
-        "title": "Tools",
-        "sidebar_label": "Tools"
-      },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
+        "title": "Tool Index",
+        "sidebar_label": "Tool Index"
       },
       "community": {
         "title": "Community",
@@ -74,12 +62,12 @@
         "sidebar_label": "Contributing"
       },
       "glossary": {
-        "title": "Terms and Definitions",
-        "sidebar_label": "Terms and Definitions"
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
       },
       "index": {
-        "title": "Polkadot Wiki",
-        "sidebar_label": "Polkadot Wiki"
+        "title": "Wiki Index",
+        "sidebar_label": "Wiki Index"
       },
       "learn-architecture": {
         "title": "Architecture",
@@ -234,12 +222,12 @@
         "sidebar_label": "Validator"
       },
       "news": {
-        "title": "This Week in Polkadot",
-        "sidebar_label": "This Week in Polkadot"
+        "title": "News",
+        "sidebar_label": "News"
       },
       "research": {
-        "title": "Polkadot Research",
-        "sidebar_label": "Polkadot Research"
+        "title": "Research Pages",
+        "sidebar_label": "Research Pages"
       }
     },
     "links": {
