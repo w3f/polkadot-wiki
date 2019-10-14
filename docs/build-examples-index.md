@@ -10,8 +10,8 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 
 ### Parity
 
-- [Shasper](https://github.com/paritytech/shasper)- Eth2.0 implemented as Substrate runtime.
-- [Substrate TCR](https://github.com/substrate-developer-hub/substrate-tcr)- Token curated registry as a runtime module.
+- [Shasper](https://github.com/paritytech/shasper) - Eth2.0 implemented as Substrate runtime.
+- [Substrate TCR](https://github.com/substrate-developer-hub/substrate-tcr) - Token curated registry as a runtime module.
 - [Substrate ERC20](https://github.com/substrate-developer-hub/substrate-erc20-multi/blob/master/runtime/src/erc20.rs) - ERC20 token standard implemented on Substrate.
 
 ### Community

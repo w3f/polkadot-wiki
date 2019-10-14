@@ -22,7 +22,7 @@ that you can get started creating your application in anticipation of the Polkad
 - Initial release: **End of 2019**
 - Current PoC release: **PoC-4**
 - Current testnet: **Alexander**
-- Substrate: **1.0.0-rc**
+- Substrate: **1.0.0**
 - Cumulus: **Initial release: October 2019**
 - ink!: **Pre-Alpha**
 
@@ -37,8 +37,8 @@ connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, w
 being.
 
 Substrate chains can include smart contract functionality by using the provided [contracts runtime module from the SRML](https://github.com/paritytech/substrate/tree/master/srml/contracts).
-This module allows for smart contracts compile to Wasm code to be deployed to the chain and instantiated by users.
-To facilitate development of Wasm smart contracts, Parity is also developing ink!, a domain specific language built
+This module allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users.
+To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built
 in Rust that is intended for writing smart contracts. 
 
 Polkadot is planned to go live with an initial release at the end of 2019, depending on security audits and launch
@@ -50,7 +50,7 @@ available to developers who want to build for Polkadot.
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
 Polkadot provides a few ways for you to deploy your application: as a smart contract on an existing parachain, as your
-own parachain, or as a parathread. There are trade-offs when working with either any of these and reading this section will help you
+own parachain, or as a parathread. There are trade-offs when working with each of these and reading this section will help you
 understand them.
 
 Parachains are individual chains containing their own runtime logic that benefit from the shared security and the
@@ -59,25 +59,25 @@ customization but will require more effort to create.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application.
 The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain.
-The lower costs of parathreads are due to the nature that parathreads will only produce a block when they need to, unlike
+The lower costs of parathreads are due to the fact that parathreads will only produce a block when they need to, unlike
 parachains which have secured a slot to produce a block at every block of the relay chain. When building a parathread,
 you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback
 of the cost. 
 
-On the Polkadot mainnet, there will be one or more parachains that act as smart contract platforms. Smart contracts are
+On the Polkadot mainnet, there can be parachains that act as smart contract platforms. Smart contracts are
 executable programs that exist on only a single chain and are limited in complexity. Because they exist on a single
-chain, they have smooth interoperability with other smart contracts. However, they will always be constrained and
+chain, they can have smooth interoperability with other smart contracts on the same chain. However, they will always be constrained and
 limited by the inherent characteristics of their host chain.
 
 If there is a need to have a large amount of control over the design and features of your application, a parachain is a
 better choice. Keep in mind, smart contracts can be used as a testing ground before later being turned into
 full-fledged parachains. Smart contract platforms will usually have more convenient tooling like IDEs to facilitate
-quick iterations. A smart contract MVP could be created to gauge user interest before putting in the fuller work to
+quick iterations. A smart contract MVP could be created to gauge user interest before putting in the work to
 build out a parachain.
 
-Parachains will grant the creators more space to build the monetary system of the chain from the ground up. They will
+Parachains grant the creators more space to build the monetary system and other aspects of the chain from the ground up. They will
 allow for more succinct and efficient execution of complex logic than could ever be offered by a smart contract
-platform. Parachains also offer more in the form of governance and can perform complete upgrades in a less
+platform. Parachains also offer more flexibility in the form of governance and can perform complete upgrades in a less
 controversial way than the current process of hard-forks.
 
 Some examples of features you can have on a parachain or parathread:
@@ -90,26 +90,26 @@ Some examples of features you can have on a parachain or parathread:
 ![build 1](assets/build-1.png)
 
 Parachains open possibilities to construct complex runtime logic that would be too expensive to execute with smart
-contracts. Parachains in comparison lack a gas metering system entirely and could potentially be vulnerable to bugs
+contracts. However, unlike smart contracts, parachains lack a mandatory gas metering system entirely and could potentially be vulnerable to bugs
 that cause infinite loops (something that is prevented by design in smart contracts).
 
-You may also decided to harness a combination of parachain, parathread, and smart contract. If you have certain logic that requires
+You may also decide to harness a combination of parachain, parathread, and smart contract. If you have certain logic that requires
 loops and it cannot be removed, use the native parachain runtime to handle all complex logic and the smart contract to
 call iteration. If you require off-chain data from an oracle, you may want to use a parathread as an oracle feed that
-only triggers once every 24 hours (this mostly makes sense if the data is useful to other players in the Polkadot
+only triggers once every 24 hours (this makes the most sense if the data is useful to other players in the Polkadot
 ecosystem too).
 
-Most likely you’ve already realized that your application is better suited to be one or the other (or a hybrid of them all
+Most likely you’ve already realized that your application is better suited to be one or the other (or a hybrid of them both
 ), but if you need a quick recap to digest the information, you can use this comparison chart as a cheat sheet:
 
 ![build 2](assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the benefits of parachains
-> applies just as well to parathreads. However, they are cheaper to deploy and maintain. So if they had a column
+> apply just as well to parathreads. However, they are cheaper to deploy and maintain. So if they had a column
 > on the table above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead"
 > changed to `+`.
 
-This guide now splits into two sections depending on whether you’ve decided on smart contract or parachain to build
+This guide now splits into two sections depending on whether you’ve decided on a smart contract or a parachain to build
 your application. Feel free to read both sections, or just the one that is applicable to you.
 
 - [I want to build a parachain or parathread!](#so-you-want-to-build-a-parachain-or-parathread)
@@ -147,13 +147,13 @@ code blob will contain the entire state transition function of your chain, and i
 project to Polkadot as either a parachain or parathread.
 
 Validators on Polkadot will use the submitted Wasm code to validate the state transitions of your chain or thread, 
-but in order to do this requires some additional infrastructure. It needs some way to stay up to date with the most
+but doing this requires some additional infrastructure. A validator needs some way to stay up to date with the most
 recent state transitions, since Polkadot nodes will not be required to also be nodes of your chain.
 
-This is where the collator node comes in to play, it the maintainer of your parachain and performs the critical action
+This is where the collator node comes into play. A collator is a maintainer of your parachain and performs the critical action
 of producing new block candidates for your chain and passing them to Polkadot validators for inclusion in the Relaychain.
 
-Substrate comes with its own networking layer built-in but unfortunately only supports solo chains. However, there is
+Substrate comes with its own networking layer built-in but unfortunately only supports solo chains (that is, chains which do not connect to the relay chain). However, there is
 the Cumulus extension which does include a collator node and allows for your Substrate-built logic to be compatible
 with Polkadot as either a parachain or parathread.
 
@@ -201,7 +201,7 @@ blockchains, there will be parachains that do.
 
 Already Parity Technologies has laid much of the groundwork for an out-of-the-box solution for parachains that want to
 include smart contract functionality. The Substrate
-[contract](https://github.com/paritytech/substrate/tree/master/srml/contract) module in the core SRML will support
+[contract](https://github.com/paritytech/substrate/tree/master/srml/contracts) module in the core SRML will support
 smart contracts that are compiled to Wasm.
 
 In order to develop a smart contract that compiles to Wasm, an appropriate language is also needed. For this, Parity
@@ -212,7 +212,7 @@ One project that has announced intent to become a Polkadot parachain with suppor
 smart contract enabled parachains.
 
 Polkadot will also be compatible with preexisting smart contract platforms such as Ethereum and Tezos through bridges.
-This means that even work spent developing on these platforms today may be applicable to running on Polkadot in the
+This means that work spent developing on these platforms today may be applicable to running on Polkadot in the
 future.
 
 ### Edgeware
@@ -229,7 +229,7 @@ compile down to Wasm code. As stated in the README, it is still in an experiment
 aware that they might have a less-than-smooth development experience, but with enough determination can use it to build
 their application.
 
-For the interested developers, they can get started writing smart contracts using Ink by studying the
+For interested developers, they can get started writing smart contracts using Ink by studying the
 [examples](https://github.com/paritytech/ink/tree/master/examples) which have already been written. These can be used
 as guideposts to writing more complex logic which will be deployable on smart contract parachains.
 
@@ -238,7 +238,7 @@ compatible with Substrate chains.
 
 Substrate includes a contract module that includes the core logic needed for a smart contract chain. Along these lines,
 ink! will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and
-support compilation to Wasm.
+supports compilation to Wasm.
 
 ## Deploying your smart contract
 
@@ -246,7 +246,7 @@ A smart contract is simply some code that exists at an address on a chain and is
 part is that you actually have to put the code on chain before anyone can start executing it!
 
 Deploying your smart contract on chain will vary slightly for whichever specific parachain you will use, but generally
-you will send a special transaction that will CREATE the smart contract on the ledger. You will likely need to pay an
+you will send a special transaction that will create the smart contract on the ledger. You will likely need to pay an
 associated fee for the initialization logic and any storage that your contract consumes.
 
 ## Paying for your smart contract
@@ -265,7 +265,7 @@ The different patterns you may see for paying for your smart contract include:
 
 You will need to consider the storage and complexity of your smart contract to ensure that gas usage stays within
 reasonable bounds. Storage will likely be expensive for whichever smart contract platform you use, so it is necessary
-to keep as much data off-chain as possible. You may consider using IPFS or Storj to keep the data and submitting only
+to keep as much data off-chain as possible. You may consider using [IPFS](https://ipfs.io/) or [Storj](https://storj.io/) to keep the data and submitting only
 the content address on chain.
 
 ### It's still early
@@ -276,7 +276,7 @@ also keep up to date with the following links:
 
 - [Edgeware](https://edgewa.re).
 - [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
-- [Substrate contracts module](https://github.com/paritytech/substrate).
+- [Substrate contracts module](https://github.com/paritytech/substrate/tree/master/srml/contracts).
 
 ## Conclusion
 
