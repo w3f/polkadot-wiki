@@ -12,7 +12,7 @@ If you're looking for an introduction on Polkadot please [see here](learn-introd
 
 ## 좀 더 자료가 필요하시다면
 
-- [위키 돌아다녀 보기](learn-index) - 위키의 정보 섹션을 읽어보세요.
+- [위키 돌아다녀 보기](learn-introduction) - 위키의 정보 섹션을 읽어보세요.
 - [관련된 링크들](learn-relevant-links) - **폴카닷 과 관련된 전반적인 모든 링크들.**
 
 ## 폴카닷 위에서 구현해보고 싶으신 것이 있다면
