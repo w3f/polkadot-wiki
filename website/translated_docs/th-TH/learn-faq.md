@@ -12,32 +12,34 @@ Somewhere between 50 - 100, Iincreasing to 1000 or so later on. [Source](https:/
 
 ### How do I apply to be a validator?
 
-This has not been announced at this time. Please follow the appropriate social channels to stay up to date.
+
 
 ### How does consensus on the relay chain work?
 
-Please see the entry on the [GRANDPA](learn-consensus#grandpa-finality-gadget) finality gadget.
+This has not been announced at this time. Please follow the appropriate social channels to stay up to date.
 
 ### What is the expected block time on the relay chain?
 
-The expected block time on the relay chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on Validators is to validate state transitions, the block times should be quite fast. On a scale of 2 - 3 seconds may not be unreasonable after optimizations.
+Please see the entry on the [GRANDPA](learn-consensus#grandpa-finality-gadget) finality gadget.
 
-However, the council will decide what is the rational limit on the speed of the block production on the relay chain. Therefore it will likely begin around 10-12 seconds and be brought down from there through governance.
+The expected block time on the relay chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on Validators is to validate state transitions, the block times should be quite fast. On a scale of 2 - 3 seconds may not be unreasonable after optimizations.
 
 ### What is the token inflation rate?
 
-The token inflation and staking mechanics have not been finalized at this time and will be announced soon.
+However, the council will decide what is the rational limit on the speed of the block production on the relay chain. Therefore it will likely begin around 10-12 seconds and be brought down from there through governance.
 
 ### How are validators rewarded?
 
-Validators are rewarded from the block reward of the relay chain. The mechanics of this have not been announced yet and will be updated soon.
+The token inflation and staking mechanics have not been finalized at this time and will be announced soon.
 
 ### How do parachain economics work?
 
-Parachains have the flexibility to implement their own monetary system or incentive structure for collators. However, this is not strictly necessary. Since the collator's job is to continue to give recent state transitions to the validators on the relay chain whom validate each transition, the security of the parachain and the Polkadot network is completely separate from parachain economics. Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them incent collator nodes in some way but it is completely up to parachain implementers.
+Validators are rewarded from the block reward of the relay chain. The mechanics of this have not been announced yet and will be updated soon.
 
 
 ### Can I buy or transfer DOT tokens?
+
+Parachains have the flexibility to implement their own monetary system or incentive structure for collators. However, this is not strictly necessary. Since the collator's job is to continue to give recent state transitions to the validators on the relay chain whom validate each transition, the security of the parachain and the Polkadot network is completely separate from parachain economics. Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them incent collator nodes in some way but it is completely up to parachain implementers.
 
 Testnet DOT tokens are freely available from a variety of sources - see the [DOT page](learn-DOT) for details.
 
