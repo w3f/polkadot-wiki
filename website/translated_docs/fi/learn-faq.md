@@ -4,46 +4,48 @@ title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
-_This FAQ focuses on technical questions for users interested in developing applications for Polkadot.  If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq).  If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
+_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
-### How many validators will be online at launch?
+### How many validators will be online at Mainnet launch?
 
-Somewhere between 50 - 100, Iincreasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630)
+Somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630)
 
 ### How do I apply to be a validator?
 
-This has not been announced at this time. Please follow the appropriate social channels to stay up to date.
+
 
 ### How does consensus on the relay chain work?
 
-Please see the entry on the [GRANDPA](learn-consensus#grandpa-finality-gadget) finality gadget.
+Please see the [consensus](learn-consensus) page.
 
 ### What is the expected block time on the relay chain?
 
-The expected block time on the relay chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on Validators is to validate state transitions, the block times should be quite fast. On a scale of 2 - 3 seconds may not be unreasonable after optimizations.
+The Kusama network is currently operating at a rate of one block approximately every six seconds.
 
-However, the council will decide what is the rational limit on the speed of the block production on the relay chain. Therefore it will likely begin around 10-12 seconds and be brought down from there through governance.
+The expected block time on the mainnet Polkadot chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on validators is to validate state transitions, the block times should be quite fast. Two or three seconds may not be unreasonable after optimizations. However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
 
 ### What is the token inflation rate?
 
-The token inflation and staking mechanics have not been finalized at this time and will be announced soon.
+This is difficult to calculate precisely, since the inflation rate will vary based on what percentage of the DOTs are staked. For Kusama, inflation is estimated to be around 10 - 20% for the first year.
 
 ### How are validators rewarded?
 
-Validators are rewarded from the block reward of the relay chain. The mechanics of this have not been announced yet and will be updated soon.
+Validators are rewarded from the block reward of the relay chain. Block rewards consists of transaction fees (and tips) and block production rewards. For more details, see the [validator payout page](maintain-guides-validator-payout).
 
 ### How do parachain economics work?
 
-Parachains have the flexibility to implement their own monetary system or incentive structure for collators. However, this is not strictly necessary. Since the collator's job is to continue to give recent state transitions to the validators on the relay chain whom validate each transition, the security of the parachain and the Polkadot network is completely separate from parachain economics. Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them incent collator nodes in some way but it is completely up to parachain implementers.
+Parachains have the flexibility to implement their own monetary system or incentive structure for collators. However, this is not strictly necessary. Since the collator's job is to continue to give recent state transitions to the validators on the relay chain whom validate each transition, the security of the parachain and the Polkadot network is completely separate from parachain economics. Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them incentivize collator nodes in some way but it is completely up to parachain implementers.
 
 
 ### Can I buy or transfer DOT tokens?
 
 Testnet DOT tokens are freely available from a variety of sources - see the [DOT page](learn-DOT) for details.
 
-Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch later this year (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Project Founder Gavin Wood said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the frictional faucet (online soon), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
 
-Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
+The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Gavin Wood, one of the project's founders, said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+
+Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore, any transfers of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
 
 ## Answered by Gav series
 
