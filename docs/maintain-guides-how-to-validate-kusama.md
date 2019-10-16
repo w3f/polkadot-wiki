@@ -116,18 +116,19 @@ following command:
 
 #### Previous Kusama CC1 Validator
 
-Before synchronizing the chain data, you can copy your previous keystore to the new chain id if you want to use your
-previous session keys. Otherwise, you are required to set your new session keys again.
+Before synchronizing the the CC2 chain data, you will need to copy your previous keystore to the new chain id in order to
+use the previously set session keys. If you do not do this, you will need to generate and set your session keys again. 
 
-Start your Kusama node to create default datadir first.
+Kusama CC1 and Kusama CC2 have different default data directories, usually located in the `$HOME/.local/share/polkadot/chains` directory on Linux based machines. For example, the default directory for Kusama CC1 is `$HOME/.local/share/polkadot/chains/ksma/keystore` while CC2 keys are located in `$HOME/.local/share/polkadot/chains/ksmcc2/keystore`.
+
+You can easily generate the default keystore for CC2 by first starting to sync and exiitng out of your node client.
 
 ```sh
 ./target/release/polkadot
+# Wait a few seconds for it to start up and create the data directory then press `ctrl-c`.
 ```
 
-Then stop and copy your previous keystore to new chain id.
-
-**Keystore default location for CC1:** `$HOME/.local/share/polkadot/chains/ksma/keystore`.
+Now you can copy your old session keys into the new CC2 keystore with the next command:
 
 ```sh
 cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
