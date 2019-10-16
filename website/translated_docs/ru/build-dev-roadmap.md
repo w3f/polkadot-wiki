@@ -8,43 +8,25 @@ Developers need some guide posts for when they can expect certain milestones to 
 
 ## Substrate
 
-### 1.0
-
-41% Complete
-
-[Milestone tracker](https://github.com/paritytech/substrate/milestone/9)
-
-Expected Features:
-
- - Final API and stable interfaces
- - Ristretto Crypto
- - Solid networking
- - Outstanding bugs fixed
- - Decoupled balances
- - Integration tests
- - Enhanced control over Wasm/native execution heuristics
- - Panics/overflows sweeps in runtime
-
-### 1.1
-
-[Milestone tracker](https://github.com/paritytech/substrate/milestone/4)
-
-Expected Features:
-
- - Economic safety
+- Final API and stable interfaces
+- Ristretto Crypto
 
 ## Polkadot
 
-Current release: **PoC-4**
+### 1.0
 
-### PoC 5,6,7
+- Economic safety
 
-7% Progress on issue tracker
+### 1.1
 
-[Milestone tracker](https://github.com/paritytech/polkadot/milestone/2)
+41% Complete
+
+- BLS signature aggregation for parachain candidate attestations
+
+## Cumulus
+
+Cumulus is currently under development, with an estimated release to be sometime in October.
+
+## ink!
 
 Expected Features:
-
- - BLS signature aggregation for parachain candidate attestations
- - [Integrate Parachain tokens into governance](https://github.com/paritytech/polkadot/issues/124)
- - Improvements to parachain validation
