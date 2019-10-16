@@ -29,10 +29,6 @@
         "title": "交易所整合",
         "sidebar_label": "交易所整合"
       },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic 格式(又称交易格式)",
-        "sidebar_label": "Polkadot Extrinsic 格式(又称交易格式)"
-      },
       "build-hackathon": {
         "title": "黑客马拉松",
         "sidebar_label": "黑客马拉松"
@@ -49,10 +45,6 @@
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
       },
-      "build-rust-style-guide": {
-        "title": "Polkadot中Rust的格式指南",
-        "sidebar_label": "Polkadot中的Rust的格式指南"
-      },
       "build-smart-contracts": {
         "title": "智能合约",
         "sidebar_label": "智能合约"
@@ -60,10 +52,6 @@
       "build-tools-index": {
         "title": "工具",
         "sidebar_label": "工具"
-      },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
       },
       "community": {
         "title": "社区",
@@ -88,10 +76,6 @@
       "learn-auction": {
         "title": "平行链插槽拍卖",
         "sidebar_label": "平行链插槽拍卖"
-      },
-      "learn-basics": {
-        "title": "Polkadot 基础",
-        "sidebar_label": "Polkadot 基础"
       },
       "learn-bridges": {
         "title": "桥接",
@@ -125,17 +109,9 @@
         "title": "治理",
         "sidebar_label": "治理"
       },
-      "learn-grandpa": {
-        "title": "GRANDPA",
-        "sidebar_label": "GRANDPA"
-      },
       "learn-implementations": {
         "title": "其它程序语言实现",
         "sidebar_label": "其它程序语言实现"
-      },
-      "learn-index": {
-        "title": "了解 Polkadot",
-        "sidebar_label": "了解 Polkadot"
       },
       "learn-interchain": {
         "title": "跨链消息传递 (ICMP)",
