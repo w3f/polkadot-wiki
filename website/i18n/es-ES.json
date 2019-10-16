@@ -29,10 +29,6 @@
         "title": "Exchange integration",
         "sidebar_label": "Exchange integration"
       },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic Format aka Transaction Format",
-        "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
-      },
       "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "Hackathon"
@@ -49,10 +45,6 @@
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
       },
-      "build-rust-style-guide": {
-        "title": "Style Guide for Rust in Polkadot",
-        "sidebar_label": "Style Guide for Rust in Polkadot"
-      },
       "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
@@ -60,10 +52,6 @@
       "build-tools-index": {
         "title": "Tools",
         "sidebar_label": "Tools"
-      },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
       },
       "community": {
         "title": "Community",
@@ -88,10 +76,6 @@
       "learn-auction": {
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
-      },
-      "learn-basics": {
-        "title": "Basics",
-        "sidebar_label": "Basics"
       },
       "learn-bridges": {
         "title": "Bridges",
@@ -125,17 +109,9 @@
         "title": "Governance",
         "sidebar_label": "Governance"
       },
-      "learn-grandpa": {
-        "title": "GRANDPA",
-        "sidebar_label": "GRANDPA"
-      },
       "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
-      },
-      "learn-index": {
-        "title": "Learn about Polkadot",
-        "sidebar_label": "Learn about Polkadot"
       },
       "learn-interchain": {
         "title": "Interchain Message Passing (ICMP)",
@@ -214,8 +190,8 @@
         "sidebar_label": "Be a Nominator (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "Using systemd for the Validator Node",
-        "sidebar_label": "Using systemd for the Validator Node"
+        "title": "How to run your node as a `systemd` process",
+        "sidebar_label": "How to run your node as a `systemd` process"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
@@ -242,8 +218,8 @@
         "sidebar_label": "Nominator"
       },
       "maintain-validator": {
-        "title": "Validator",
-        "sidebar_label": "Validator"
+        "title": "Node Operator / Validator",
+        "sidebar_label": "Node Operator / Validator"
       },
       "news": {
         "title": "This Week in Polkadot",
