@@ -4,85 +4,94 @@ title: Governance
 sidebar_label: Governance
 ---
 
-Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相关者的最终要求随着时间而优雅地发展。
+Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of the stake can always command the network.
 
-为此，我们将各种新颖的机制结合在一起，包括存储在链上并以平台无关的中间语言（WebAssembly）定义的状态转换函数，以及几种链上投票机制，例如具有自适应超多数阈值的全民投票和批量批准投票。
-
-对协议的所有更改必须经过全民投票同意: 大部分股份始终可以控制网络。大部分代币持有人始终可以控制网络。
+To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## 机制
 
-为了对网络进行任何更改，其想法是组成活跃的代币持有者和理事会共同管理网络升级决策。无论提案是由公众（DOT持有人）还是理事会提出的，最终都必须经过[全民投票](learn-governance#referenda)才能让所有DOT持有人做出决定。
+In order to make any changes to the network, the idea is to compose active token holders and council together to administrate a network upgrade decision. No matter whether the proposal is proposed by the public (DOT holders) or council, it finally will have to go through a [referendum](learn-governance#referenda) to let all DOT holders, weighted by stake, make the decision.
 
-以下步骤是 Polkadot 网络中的治理过程:
+The following steps are the governance procedure in the Polkadot network:
 
 - [提议全民公投](#proposed-referendum) (相关资料: [ 公投 ](learn-governance#referenda))
 - [为提案投票](#voting-for-a-proposal)(相关资料: [自愿锁定](#voluntary-locking)）
 - [统计](#tallying)（相关资料: [自我调整仲裁偏置 ](#adaptive-quorum-biasing)）
 
-为了更好地了解理事会的组成方式，请阅读[本节](#council)。
+To better understand how the council is formed, please read [this section](#council).
 
 ## 公投
 
-公民投票是简单，广泛，基于代币抵押的投票方案。 每个公投都有一个与之相关的特定_提案_，该提议在运行时采用特权函数调用的形式（其中包括功能最强大的调用：`set_code`，它可以切换 runtime 的整个代码，从而实现不需要“硬分叉”的功能）。 它们是分离事件，具有固定的投票发生时间段，然后被计票，如果投票获得批准，则会进行函数调用。
+Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific _proposal_ associated with it which takes the form of a privileged function call in the runtime (that includes the most powerful call: `set_code`, which is able to switch out the entire code of the runtime, achieving what would otherwise require a "hard fork"). They are discrete events, have a fixed period where voting happens, and then are tallied and the function call is made if the vote is approved. Referenda are always binary; your only options in voting are "aye", "nay", or abstaining entirely.
 
-公民投票可以通过三种方式开始:
+Referenda can be started in one of several ways:
 
 * 公开提交的提案
-* 通过理事会的提案,否决或一致通过；
-* 作为先前公民投票通过的一部分而提交的提案。
+* Proposals submitted by the council, either through a majority or unanimously;
+* Proposals submitted as part of the enactment of a prior referendum;
+* Emergency proposals submitted by the Technical Committee and approved by the Council.
 
-All referendums have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is fixed, (for Polkadot, it is likely to be two weeks). For the third type, it can be set as desired.
+All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
 
+Emergency proposals deal with major problems with the network which need to be "fast-tracked". These will have a shorter enactment time.
 
 ### 提议全民公投
 
 #### 公众投票
 
-Anyone can propose a referenda by depositing the minimum amount of DOTs for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest number of support bonds will be selected to be a referendum. The bonded tokens will be released once the proposal is tabled.
+Anyone can propose a referendum by depositing the minimum amount of DOTs for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest number of support bonds will be selected to be a referendum. The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
-#### 理事会公投
+#### 议会公投
 
-Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
+Unanimous Council - When all members of the council agree on a proposal, it can be moved to a referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of stake voting, the smaller the amount necessary for it to pass - see "Adaptive Quorum Biasing", below).
 
-Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.)
+Majority Council - When agreement from only a simple majority of council members occurs, the referendum can also be voted upon, but it will be majority-carries
 
-#### 投票提案
+#### Voting Timetable
 
-To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referendum result, you can read more about the [Voluntary Locking](#voluntary-locking).
+Every thirty days, a new referendum will come up for a vote, assuming there are referenda in the queues. There is a queue for Council-approved referenda and a queue for publicly submitted referenda. The referendum to be voted upon alternates between the two queues.
+
+If the given queue whose turn it is empty, and there are proposals waiting in the other queue, the top proposal in the other queue will become a proposal.
+
+Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda.
+
+
+#### Voting for a proposal
+
+To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. It is possible to vote without locking at all, but your vote is worth a small fraction of a normal vote, given your stake. At the same time, holding only a small amount of DOT tokens does not mean that the holder cannot influence the referendum result, thanks to time-locking. You can read more about this at [Voluntary Locking](#voluntary-locking).
 
 ```
-Example:
+例子:
 
-Peter: Votes `No` with 10 DOTs for a 12 week lock period  => 10 * 6 = 60 Votes
+Peter: 投 `No` 有10 DOTs，锁12周  => 10 * 6 = 60 票数
 
-Logan: Votes `Yes` with 20 DOTs for a 2 week lock period => 20 * 1 = 20 Votes
+Logan: 投 `Yes` 有 20 DOTs 锁2周 => 20 * 1 = 20 票数
 
-Kevin: Votes `Yes` with 15 DOTs for a 4 week lock period => 15 * 2 = 30 Votes
+Kevin: 投 `Yes`  有 15 DOTs 锁4周 => 15 * 2 = 30 票数
 ```
 
-According to the above scenario, even though combining both Logan and Kevin's DOTs is more than Peter, the lock period for both of them is far less than Peter, leading to their voting power counting as less.
+Even though combining both Logan and Kevin's DOTs is more than Peter, the lock period for both of them is far less than Peter, leading to their voting power counting as less.
 
 #### Tallying
 
 Depending on which entity proposed the proposal and whether all council members voted yes, there are three different scenarios. We can use following table for reference.
 
-|          **Entity**          |                   **Metric**                   |
-|:----------------------------:|:----------------------------------------------:|
-|            Public            | Positive Turnout Bias (Super-Majority Approve) |
-| Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
-| Council (Majority agreement) |                Simple Majority                 |
+|  **实体**   |        **指标**         |
+|:---------:|:---------------------:|
+|    大众     | Positive Turnout Bias |
+| 议会(一致赞成)  | Negative Turnout Bias |
+| 议会(大部分赞成) |    Simple Majority    |
 
 Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
 
 ```
-approve - the number of aye votes
+approve - 赞成票数
 
-against - the number of nay votes
+against - 反对票数
 
-voters - the total number of voting tokens
+voters - 总投票代币数
 
-electorate - the total number of DOTs tokens issued in the network
+electorate -网络中 DOT 的总数
 ```
 
 ##### Super-Majority Approve
@@ -100,9 +109,9 @@ Majority-carries, a simple comparison of votes, if there are more aye votes than
 *To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
 
 ```
-Example:
+例子:
 
-Assume we only have 1,500 DOTs tokens in total.
+假设我们总共只有1,500个DOT代币。
 
 John  - 500 DOTs
 Peter - 100 DOTs
@@ -110,11 +119,11 @@ Lilly - 150 DOTs
 JJ    - 150 DOTs
 Ken   - 600 DOTs
 
-John: Votes `Yes`for a 2 week lock period  => 500 * 1 = 500 Votes
+John: 投 `Yes`锁定2周  => 500 * 1 = 500 票数
 
-Peter: Votes `Yes` for a 2 week lock period => 100 * 1 = 100 Votes
+Peter: 投 `Yes`锁定2周 => 100 * 1 = 100 票数
 
-JJ: Votes `No` for a 6 week lock period => 150 * 3 = 450 Votes
+JJ: 投 `No` 锁定6周 => 150 * 3 = 450 票数
 
 approve = 600
 against = 450
@@ -128,12 +137,12 @@ $${13.887} < {15.492}$$
 
 Based on the above result, the proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 
-#### 自愿锁定
+#### Voluntary Locking
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
 ```
-Max votes = tokens * periods
+票数 = 代币 * 时间
 ```
 
 Based on the current testnet setting, the maximum number of lock periods is set to 6.
@@ -159,6 +168,8 @@ Referring to the above image, when the referenda only has 25% turnout, the tally
 
 In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
+All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
+
 ## 议会
 
 To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain entity comprising a number of actors each represented as an on-chain account. For Polkadot this number is likely to begin at around six people, and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). In general it has a fixed number of seats (envisioned to be 24 for Polkadot) and all members have a fixed term (12 months).
@@ -175,11 +186,11 @@ If the cancellation is controversial enough that there is at least one dissenter
 
 ![](assets/governance/approval-vote.png)
 
- At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
+ At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
 
 To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election.
 
-Basically, instead of using one person one vote, [approval voting](https://en.wikipedia.org/wiki/Approval_voting) is a more expressive way to indicate their views. Token holders can treat it as boolean voting to support as many candidates as they want.
+As opposed to a "first past the post", where voters must decide only on a single candidate chosen from a list, [approval voting](https://en.wikipedia.org/wiki/Approval_voting) is a more expressive way to indicate voters' views. Token holders can treat it as Boolean voting to support as many candidates as they want.
 
 Let's take a look at the example below.
 
@@ -191,7 +202,7 @@ Let's take a look at the example below.
 |   Alice   |   |    X    |   |   |   |
 |    Bob    |   |         | X | X | X |
 |  Kelvin   | X |         | X |   |   |
-| **Total** | 2 |    1    | 3 | 2 | 2 |
+|  **总数**   | 2 |    1    | 3 | 2 | 2 |
 
 The above example shows that candidate C wins the election in round 1, while candidate A, B, D & E keep remaining on the candidates' list for the next round.
 
@@ -203,7 +214,7 @@ The above example shows that candidate C wins the election in round 1, while can
 |   Alice   | X |    X    |   |   |
 |    Bob    | X |    X    | X | X |
 |  Kelvin   | X |    X    |   |   |
-| **Total** | 4 |    4    | 1 | 1 |
+|  **总数**   | 4 |    4    | 1 | 1 |
 
 For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 
@@ -211,7 +222,9 @@ This would be the tentative governance configuration for Polkadot in the initial
 
 ## 技术委员会
 
-在[ Kusama 推出和治理帖子](https://polkadot.network/kusama-rollout-and-governance/)中介绍了技术委员会。 作为 Kusama 的三个会议厅之一的议院（以及议会和公民投票会议厅）。 技术 委员会由成功实施或指定 Polkadot / Kusama runtime 或 runtime 环境。 在议会的简单多数表决中，从技术委员会中添加或删除团队。
+The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+
+The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 
 ## [DOT 的用途](learn-DOT#dots-for-governance)
 
