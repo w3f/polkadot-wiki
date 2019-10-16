@@ -4,7 +4,7 @@ title: This Week in Polkadot
 sidebar_label: This Week in Polkadot
 ---
 
-This Week in Polkadot is a weekly aggregation of the top news in the Polkadot space, maintained by Rory from W3F.
+This Week in Polkadot รวบรวมข่าวฮอตประจำสัปดาห์เกี่ยวกับ Polkadot ดูแลโดย Rory จาก W3F
 
 - [This Week in Polkadot 12](https://www.reddit.com/r/dot/comments/bwbir9/this_week_in_polkadot/) - June 3, 2019
 - [This Week in Polkadot 11](https://www.reddit.com/r/dot/comments/brcucp/this_week_in_polkadot/) - May 21, 2019
