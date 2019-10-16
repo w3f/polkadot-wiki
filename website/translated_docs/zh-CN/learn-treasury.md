@@ -8,18 +8,18 @@ The treasury is a pot of funds collected through transaction fees, slashing, ine
 
 When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling 5% of the proposed spend. This deposit will be slashed if the proposal is rejected, and returned if the proposal was accepted.
 
-Proposals may consist of (but are not limited to):
+提案可能包括 (但不限于):
 
- - Infrastructure deployment and continued operation.
- - Network security operations (monitoring services, continuous auditing).
- - Ecosystem provisions (collaborations with friendly chains).
- - Marketing activities (advertising, paid features, collaborations).
- - Community events and outreach (meetups, pizza parties, hackerspaces).
- - Software development (wallets and wallet integration, clients and client upgrades).
+ - 基础架构部署
+ - 网络安全操作(监视服务，审核)。
+ - 生态系统发展(与友好链的合作)。
+ - 推广活动(广告，合作)。
+ - 社区活动(聚会，比萨派对，黑客空间)。
+ - 软件开发(钱包和钱包整合，客户端升级)。
 
-The treasury is ultimately controlled by the stakeholders, and how the funds will be spent is up to their judgment.
+财政库最终由利益相关者控制，资金的使用方式取决于他们的判断。
 
-## Resources
+## 资源
 
- - [Substrate's Treasury Module](https://github.com/paritytech/substrate/blob/master/srml/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/srml_treasury/index.html))
- - [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - Details the treasury in its first live environment on the Kusama network.
+ - [Substrate's 财政库模块](https://github.com/paritytech/substrate/blob/master/srml/treasury/src/lib.rs) - 财政库的 Rust 实现 ([文档](https://substrate.dev/rustdocs/master/srml_treasury/index.html))
+ - [Gavin Wood's Kusama 推出计划](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - 在 Kusama 网络上的第一个上线环境中详细描述了财政库。
