@@ -55,7 +55,6 @@ La propiedad de un bloque que no puede ser revertido. Generalmente, los bloques 
 ## Finality Gadget
 
 Un mecanismo que determina la finalidad.
-
 ## Fisherman
 
 Nodos que monitorean la red en busca de validadores o collators que se estén comportando mal. Los Fishermen deben depositar una pequeña cantidad de DOTs pero pueden ser recompensados enormemente si encuentran un mal comportamiento.
@@ -203,3 +202,39 @@ Un formato de instrucción para una máquina virtual basada en stacks. Los módu
 ## Witness
 
 Pruebas criptográficas de la validez del dato.
+
+## Tabling
+
+In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
+
+## Transaction
+
+An individual element of the state transition function of a block, such as moving tokens from one account to another.
+
+## Validator
+
+A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
+
+## Voting
+
+The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
+
+## Wallet
+
+A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
+
+## Web3 Foundation
+
+A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
+
+## WebAssembly
+
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
+
+## Wasm
+
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
+
+## Witness
+
+Cryptographic proof statements of data validity.
