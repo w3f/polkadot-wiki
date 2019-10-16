@@ -1,5 +1,5 @@
 ---
-id: index
+id: индекс
 title: Polkadot Wiki
 sidebar_label: Polkadot Wiki
 ---
@@ -12,7 +12,7 @@ If you're looking for an introduction on Polkadot please [see here](learn-introd
 
 ## Want to learn more?
 
-- [Explore the Wiki](learn-index) - Read the informational section of the wiki.
+- [Explore the Wiki](learn-introduction) - Read the informational section of the wiki.
 - [Relevant Links](learn-relevant-links) - **Comprehensive links about Polkadot.**
 
 ## Want to build on Polkadot?
