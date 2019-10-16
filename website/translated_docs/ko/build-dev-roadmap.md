@@ -8,43 +8,25 @@ sidebar_label: Roadmap For Developers
 
 ## 서브스트레이트(Substrate)
 
-### 1.0
-
-41% 완료
-
-[마일스톤 트래커](https://github.com/paritytech/substrate/milestone/9)
-
-예상되는 기능들:
-
- - 확정된 API와 안정된 인터페이스
- - Ristretto Crypto
- - 튼튼한 네트워크
- - 해결되지 않은 버그 제거
- - 분리된 잔고 (Decoupled balances)
- - 인테그레이션 테스트 (Integration tests)
- - Wasm/native 실행 휴리스틱스를 통한 향상된 컨트롤 (Enhanced control over Wasm/native execution heuristics)
- - 런타임에서의 Panics/overflows 스윕 (Panics/overflows sweeps in runtime)
-
-### 1.1
-
-[마일스톤 트래커](https://github.com/paritytech/substrate/milestone/4)
-
-예상되는 기능:
-
- - 경제학적 안정 (Economic safety)
+- 확정된 API와 안정된 인터페이스
+- Ristretto Crypto
 
 ## Polkadot
 
-현재 릴리즈: **PoC-4**
+### 1.0
 
-### PoC 5,6,7
+- 경제학적 안정 (Economic safety)
 
-이슈 트래커에서 7% 진척도가 있음.
+### 1.1
 
-[마일스톤 트래커](https://github.com/paritytech/polkadot/milestone/2)
+41% 완료
+
+- 패러체인(parachain) 후보들의 증명을 위한 BLS 시그니처 에그리게이션
+
+## Cumulus
+
+Cumulus is currently under development, with an estimated release to be sometime in October.
+
+## ink!
 
 예상되는 기능들:
-
- - 패러체인(parachain) 후보들의 증명을 위한 BLS 시그니처 에그리게이션
- - [패러체인(parachain) 토큰들을 거버넌스에 통합(Integrate Parachain tokens into governance)](https://github.com/paritytech/polkadot/issues/124)
- - 패러체인(parachain) 확인(validation)의 개선
