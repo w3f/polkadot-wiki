@@ -55,7 +55,6 @@ The property of a block which cannot be reverted. Generally, created blocks are 
 ## Finality Gadget
 
 A mechanism which determines finality.
-
 ## Fisherman
 
 Nodes which monitor the network for validators or collators which are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
@@ -171,6 +170,42 @@ A function which describes how the state of a blockchain can be transformed. For
 ## Substrate
 
 An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
+
+## Transaction
+
+An individual element of the state transition function of a block, such as moving tokens from one account to another.
+
+## Validator
+
+A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
+
+## Voting
+
+The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
+
+## Wallet
+
+A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
+
+## Web3 Foundation
+
+A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
+
+## WebAssembly
+
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
+
+## Wasm
+
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
+
+## Witness
+
+Cryptographic proof statements of data validity.
+
+## Tabling
+
+In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
 ## Transaction
 
