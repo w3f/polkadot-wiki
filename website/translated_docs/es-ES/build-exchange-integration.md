@@ -16,7 +16,7 @@ struct Block:
 
 ## 1. Tracking the chain head
 
-+\---\---\---\---\---\-----+ |                    | | Substrate/Polkadot | |                    | +\---\---\---+\---\---\----+ | | +\---\-----+\---\---\---+ |                  | | Client interface | |                  | | +\---\---\---\-----+ | | | Client DB    | | | +\---\---\---\-----+ | |                  | +\---\-----+\---\---\---+ | | +\---\-----+\---\---\---+ |                  | | Exchange backend | |                  | +\---\---\---\---\---\---+
++\---\---\---\---\---\-\----+ |                    | | Substrate/Polkadot | |                    | +\---\---\---+\---\---\-\---+ | | +\---\-\----+\---\---\---+ |                  | | Client interface | |                  | | +\---\---\---\-\----+ | | | Client DB    | | | +\---\---\---\-\----+ | |                  | +\---\-\----+\---\---\---+ | | +\---\-\----+\---\---\---+ |                  | | Exchange backend | |                  | +\---\---\---\---\---\---+
 
 Track each finalised block by subscribing with the `chain_subscribeFinalizedHeads` RPC (or polling the `chain_getFinalizedHead` RPC).
 
@@ -253,4 +253,4 @@ This can be done in two ways: one is to use the simple RPC `author_submitExtrins
 
 The other way is to use the pub/sub RPC `author_submitAndWatchExtrinsic`. Again, you provide the SCALE-encoded transaction, but here you receive a subscription ID. You will be notified over the RPC as the transaction gets validated, broadcast and included in the chain with separate messages that are pushed.
 
-This concludes the article. Here you should have a good idea of how to interact with a Substrate/Polkadot node in order to track the finalised chain head, to decode SS58 addresses, check account information like balances & nonces and to construct, submit and track transactions. You've also learnt a little about the SCALE codec, the Substrate metadata system and how to build future-proof and generic Substrate-based systems.
+_The original source of this page was published [here](https://hackmd.io/@gavwood/r1jTRX2Zr)._
