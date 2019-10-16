@@ -18,6 +18,8 @@ sidebar_label: Tools
 - [Bonds oo7 Polkadot UI](https://github.com/paritytech/substrate-ui) - Bonds oo7 라이브러리로 만들어진 지갑.
 - [Polkawallet](https://polkawallet.io/) - 아이폰(iOs)과 안드로이드(Android)를 둘 다 지원하는 폴카닷 모바일 월렛(mobile wallet for Polkadot). 현재 개발중이며 베타버전은 다운로드가 가능합니다. 이 [GitHub](https://github.com/polkawallet-io/polkawallet-RN)링크에서 확인하세요.
 - [SpeckleOS](https://www.speckleos.io/) - 브라우저 확장 월렛, 개발중입니다.- 이 [GitHub](https://github.com/SpeckleOS/speckle-browser-extension)에서 진행사항을 확인 할 수 있습니다.
+- [Enzyme](https://getenzyme.dev/) - Browser extension wallet. Follow development on [GitHub](https://github.com/blockxlabs/enzyme/).
+- [Math Wallet](https://www.mathwallet.org) - Browser extension and mobile wallet
 
 ## 네트워크 모니터링 및 리포팅 툴 (Network Monitoring & Reporting)
 
@@ -38,17 +40,23 @@ sidebar_label: Tools
 ## C++
 
 - [Kagome](https://github.com/soramitsu/kagome) - [Soramitsu](https://github.com/soramitsu)에서 구현한 C++ 폴카닷 클라이언트(Polkadot client)
+- [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot
 
 ## Go
 
 - [Gossamer](https://github.com/ChainSafe/gossamer) - 폴카닷 런타임 환경(Polkadot Runtime Environment)의 Golang 구현체.
-- [Golkadot](https://github.com/opennetsys/golkadot) -폴카닷 서브스트레이트(Polkadot Substrate)의 Golang 구현체 .
 
 ## 자바 스크립트 (JS)
 
+- [Polkadot-JS client](https://github.com/polkadot-js/client) - JavaScript를 사용하는 개발자들을 위해서 구현된 다른 클라이언트.
+- [Golkadot](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate.
+- [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC client for go aka GSRPC
+
+## JS
+
 ### 클라이언트
 
-- [Polkadot-JS client](https://github.com/polkadot-js/client) - JavaScript를 사용하는 개발자들을 위해서 구현된 다른 클라이언트.
+- [@polkadot/keyring](https://polkadot.js.org/common/keyring/) JavaScript로 계정을 생성/로드하거나, 지갑을 만드는데 도움이 되거나 또는 유저가 체인에 무언가 쓸(Write) 필요가 있는 애플리케이션에 도움이 되는 툴 입니다. [관련 예시 참고 링크](https://polkadot.js.org/common/examples/keyring/)
 
 [Polkadot-JS](https://polkadot.js.org)의 문서들은 폴카닷을 좀 더 깊이 이해하는데 좋은 시작 포인트라고 할 수 있습니다.
 
@@ -60,20 +68,20 @@ sidebar_label: Tools
 
 Polkadot-JS Common은 @polkadot 네임 스페이스 내의 모든 프로젝트에서 사용하는 다양하고 유용한 유틸리티 기능을 제공합니다. 그리고 다음과 같은 여러가지 내부 유틸리티 패키지로 분할됩니다. 문서 및 사용법은 [Polkadot-JS / Common API 문서 링크](https://polkadot.js.org/common/)를 참고하세요.
 
-- [@polkadot/keyring](https://polkadot.js.org/common/keyring/) JavaScript로 계정을 생성/로드하거나, 지갑을 만드는데 도움이 되거나 또는 유저가 체인에 무언가 쓸(Write) 필요가 있는 애플리케이션에 도움이 되는 툴 입니다. [관련 예시 참고 링크](https://polkadot.js.org/common/examples/keyring/)
-- [@polkadot/util](https://polkadot.js.org/common/util/)  문자열 (String)이 Hex 인코딩이 되었는지 등을 확인 할 때 쓰는 유용한 유틸리티.
-- [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Polkadot로 개발하는 동안 유용하게 사용할 수있는 암호 유틸리티.
+- [oo7-polkadot](https://github.com/polkadot-js/oo7-polkadot) Polkadot의 bonds 라이브러리. [oo7 API 문서](https://paritytech.github.io/oo7/)
+- [@polkadot/util](https://polkadot.js.org/common/util/) Useful utility functions like checking if a string is hex encoded.
+- [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Crypto utilities that will come into handy while developing with Polkadot.
 
 #### Bonds oo7
 
-- [oo7-polkadot](https://github.com/polkadot-js/oo7-polkadot) Polkadot의 bonds 라이브러리. [oo7 API 문서](https://paritytech.github.io/oo7/)
+- [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Polkadot API를 위한 단순한 CLI(commandline interface). [참고문서](https://polkadot.js.org/api/api/)
 
 ### CLI Tools
 
-- [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Polkadot API를 위한 단순한 CLI(commandline interface). [참고문서](https://polkadot.js.org/api/api/)
-- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) Polkadot의 RPC 모니터. RPC tool 과 관련해서는 아래의 추가 정보를 확인하세요.
+- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - 노드들이 JS 도구를 사용해서 RPC를 통해 어떻게 인터랙션 하는지 보여줍니다.
+- [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html) - 섭스트레이트 RPC 엔드포인트 관련 문서들.
 
 ### RPC 도구들(tools)
 
-- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - 노드들이 JS 도구를 사용해서 RPC를 통해 어떻게 인터랙션 하는지 보여줍니다.
-- [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html) - 섭스트레이트 RPC 엔드포인트 관련 문서들.
+- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - Demonstrates how the JS tools interact with the node over RPC.
+- [RPC documentation](https://polkadot.js.org/api/substrate/rpc.html) - Documents Substrate RPC endpoints.
