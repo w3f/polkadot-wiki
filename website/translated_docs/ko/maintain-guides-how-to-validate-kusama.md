@@ -12,7 +12,7 @@ Running a validator on a live network is a lot of responsibility! You will be ac
 
 Since security is so important to running a successful validator, you should take a look at the [secure validator](maintain-guides-secure-validator) information to make you understand the factors to consider when constructing your infrastructure. The Web3 Foundation also maintains a [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator) that you can use by deploying yourself. As you progress in your journey as a validator, you will likely want to use this repository as a _starting point_ for your own modifications and customizations.
 
-If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot.  The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
+If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node instead.
 
