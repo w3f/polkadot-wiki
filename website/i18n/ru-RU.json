@@ -37,10 +37,6 @@
         "title": "Builder's Portal",
         "sidebar_label": "Builder's Portal"
       },
-      "build-networks": {
-        "title": "Networks",
-        "sidebar_label": "Networks"
-      },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
