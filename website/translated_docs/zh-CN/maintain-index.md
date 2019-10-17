@@ -6,7 +6,7 @@ sidebar_label: Network Maintainers
 
 Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and guides to set up a node and run the network.
 
-## Collator
+## 校对人
 
 - [Collator Home](maintain-collator) - High level overview of collators and related links.
 
@@ -17,7 +17,7 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 - [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
 
 
-## Validator
+## 验证人
 
 - [Validator Home](maintain-validator) - High level overview of validator and related links.
 - [Validation Guide (Alexander)](maintain-guides-how-to-validate-alexander) - Walkthrough on how to validate on the PoC-4 Alexander testnet.
