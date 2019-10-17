@@ -94,12 +94,12 @@
         "sidebar_label": "Bridges"
       },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot vs. Cosmos: Design Comparison",
-        "sidebar_label": "Polkadot vs. Cosmos: Design Comparison"
+        "title": "Design Comparison",
+        "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
         "title": "Polkadot comparisons",
-        "sidebar_label": "Polkadot comparisons"
+        "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
         "title": "Polkadot Consensus",
