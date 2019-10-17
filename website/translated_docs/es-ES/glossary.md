@@ -1,205 +1,240 @@
 ---
-id: glosario
-title: Términos y condiciones
-sidebar_label: Términos y Condiciones
+id: glossary
+title: Glossary
+sidebar_label: Glossary
 ---
 
-## Bloque
+## Alexander
 
-Una recopilación de datos, como las transacciones, que juntos indican una transición de estado de la blockchain.
+The most up-to-date testnet for Polkadot.
+
+## Block
+
+A collection of data, such as transactions, that together indicate a state transition of the blockchain.
 
 ## Block explorer
 
-Una aplicación que permite al usuario visualizar los diferentes bloques de una blockchain.
+An application which allows a user to explore the different blocks on a blockchain.
 
 ## BLS
 
-Las firmas Boneh-Lynn-Shacham (BLS) tienen una firma lenta, una verificación muy lenta, requieren curvas amistosas de emparejamiento lentas y mucho menos seguras, y tienden hacia una maleabilidad peligrosa. Sin embargo, el BLS permite una amplia gama de opciones de agregar firmas mucho más allá que cualquier otro esquema de firmas conocido, lo que hace de BLS un esquema ideal para votar en algoritmos de consenso y para firmas de umbrales.
+Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a diverse array of signature aggregation options far beyond any other known signature scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
 
 ## Bonding
 
-Un proceso por el cual los tokens pueden ser "congelados" a cambio de unir una Parachain a la relay chain. Este proceso asegura que sólo las cadenas que son válidas y en funcionamiento serán conectadas a la relay chain, ya que sería conveniente que los titulares de los DOTs dejaran de vincular sus tokens.
+A process by which tokens can be "frozen" in exchange for attaching a parachain to a relay chain. This process ensures that only chains that are valid and running will be attached to the relay chain, as it would behoove DOT holders to stop bonding their tokens.
 
 ## Bridge
 
-Un nodo que actúa como intermediario entre la relay chain de Polkadot y una cadena externa, de tal manera que a la relay chain le parecerá que la cadena externa es una parachain (es decir, que cumple con los requisitos del entorno de tiempo de ejecución de Polkadot). Los bridges permiten la interacción entre otras blockchains como Ethereum y Bitcoin que no son compatibles de forma nativa con Polkadot.
+A node which acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Runtime Environment requirements). Bridges allow for interaction between other blockchains such as Ethereum and Bitcoin which are not natively compatible with Polkadot.
 
 ## Byzantine Fault Tolerance
 
-La propiedad de un sistema que es tolerante a los fallos Bizantinos; es decir, un sistema en el que no sólo pueden fallar subsistemas individuales, sino que puede no estar claro si un subsistema en particular ha fallado o no. Es decir, diferentes participantes en el sistema pueden no estar de acuerdo en si el sistema ha fallado o no. Asegurar la tolerancia Bizantina a los errores es una parte importante del desarrollo de cualquier sistema distribuido.
+The property of a system which is tolerant of Byzantine faults; that is, a system where not only may individual subsystems fail, but it may not be clear if a particular subsystem has failed or not. That is, different observers on the system may not agree on whether or not the system has failed. Ensuring Byzantine fault tolerance is an important part of developing any distributed system.
 
 ## Collator
 
-Un nodo que mantiene una Parachain recopilando transacciones de la Parachain y produciendo pruebas de transición de estado para los validadores.
+A node which maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
 
 ## Consensus
 
-El proceso de un grupo de entidades para acordar un valor de datos particular (como el pedido y composición de bloques en una blockchain). Hay una variedad de algoritmos utilizados para determinar el consenso. El algoritmo de consenso utilizado por Polkadot es GRANDPA.
+The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
 
 ## DOTs
 
-El token nativo de Polkadot. Los DOTs sirven para tres propósitos: gobierno de la red (permitiéndoles votar sobre las mejoras de la red y otros eventos excepcionales), operaciones generales (recompensando a los buenos actores y castigando a los malos), y la vinculación (añadiendo nuevas Parachains mediante la "congelación" de los DOTs mientras están conectados a la relay chain).
+The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are connected the relay chain).
 
 ## Dapps
 
-Un término genérico para una aplicación descentralizada, es decir, que se ejecuta como parte de una red distribuida en lugar de ejecutarse en un sistema o conjunto de sistemas específicos.
+A generic term for a decentralized application, that is, one which runs as part of a distributed network as opposed to being run on a specific system or set of systems.
+
+## Epoch
+
+An epoch is a time duration in the BABE protocol that assigns leadership positions to authorities for production in slots. In Kusama, it is the same duration as a [session](#session).
+
+## Era
+
+A (whole) number of sessions, which is the period that the validator set (and each validator's active nominator set) is recalculated and where rewards are paid out.
+## Equivocation
+
+Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
 
 ## Extrinsic
 
-De forma genérica, alguna función declarada por el programador, es decir, una que no está incorporada al lenguaje o al framework. Específicamente para Polkadot, esto se refiere a un código binario que representa alguna transición de estado (como una transacción) y se utiliza para que las Parachains se comuniquen a través de la relay chain.
+Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework. Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
 
 ## Finality
 
-La propiedad de un bloque que no puede ser revertido. Generalmente, los bloques creados no son definitivos hasta algún punto en el futuro - quizás nunca, en el caso de la "finalidad probabilística" como en Bitcoin (aunque los bloques de Bitcoin se consideran generalmente "definitivos" después de seis confirmaciones debido a la improbabilidad de revertir en ese punto). En la relay chain de Polkadot, el objetivo es que los bloques se finalicen entre 10 y 12 segundos después de su creación.
+The property of a block which cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point). In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
 
 ## Finality Gadget
 
-Un mecanismo que determina la finalidad.
+A mechanism which determines finality.
 
 ## Fisherman
 
-Nodos que monitorean la red en busca de validadores o collators que se estén comportando mal. Los Fishermen deben depositar una pequeña cantidad de DOTs pero pueden ser recompensados enormemente si encuentran un mal comportamiento.
+Nodes which monitor the network for validators or collators which are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
 
-## Algoritmo de consenso GRANDPA
+## GRANDPA consensus algorithm
 
-GHOST-based Recursive Ancestor Deriving Prefix Agreement. Es el gadget final para Polkadot, que permite una finalización asincrónica, responsable y segura para la blockchain. Para una perspectiva general de GRANDPA, vea este post de Medium: <https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372>
+GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## Governance
 
-El proceso de determinar qué cambios en la red son aceptables, por ejemplo, modificaciones en el código o en la gestión de fondos. El sistema de gobernanza de Polkadot es on-chain y gira en torno a la votación de las partes implicadas, es decir, la mayoría de las participaciones (DOTs) determina la dirección de la red.
+The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
 
 ## Governance Council
 
-Una entidad on-chain que consiste en varias cuentas on-chain (comenzando en 6 y eventualmente terminando con el valor final de 24) que puede actuar como representante de las partes implicadas "pasivas" (sin voto). Los miembros del Consejo tienen dos tareas principales: proponer referéndums para que el grupo de partes interesadas en general vote y cancelar los referéndums maliciosos.
+An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
+
+## KSM
+
+The abbreviation for Kusama network tokens.
+
+## Kusama
+
+The "canary network" for Polkadot. It consists of an early-release, unaudited version of the Polkadot software. It is not a testnet - after the transition to NPoS, the network is entirely in the hands of the community (i.e., Kusama token holders).
 
 ## LIBP2P
 
-Una librería de open-source para comunicaciones peer-to-peer encriptadas y otras funcionalidades de red. Más información en: <https://libp2p.io/>
+An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: [https://libp2p.io/](https://libp2p.io/)
 
 ## Liveness
 
-La propiedad de un sistema distribuido que eventualmente llegará a algún acuerdo de consenso. Un sistema atascado en un bucle infinito no se consideraría vivo, incluso si se están realizando cálculos; un sistema que finalmente proporciona un resultado, incluso si es incorrecto o tarda mucho tiempo, se considera que tiene vida.
+The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system which eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
 
 ## Node explorer
 
-Una herramienta que proporciona información sobre un nodo, como los últimos bloques firmados, finalizados y el estado actual de la cadena tal y como lo conoce ese nodo.
+A tool which gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
 
 ## Nominated Proof of Stake (NPoS)
 
-Un sistema de prueba de participación en el que los nominadores "ceden" su participación a los validadores, como muestra de fe en el buen comportamiento del validador. La prueba de participación nominada difiere de la prueba de participación delegada en que los nominadores están sujetos a la pérdida de participación si nominan a un validador malo; los delegadores no están sujetos a la pérdida de participación basada en el comportamiento del validador.
+A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
 
 ## Nominator
 
-Nodos que seleccionan un set de validadores. Para ello se debe vincular una cierta cantidad de DOTs, que pueden perderse si el validador se comporta mal. Esto obliga a los nominadores a seleccionar cuidadosamente a los validadores.
+Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
 
 ## On-chain governance
 
-Gobierno de una blockchain cuyo control se realiza mediante mecanismos gestionados por la blockchain. La gobernanza on-chain permite que las decisiones se tomen de manera transparente. Tenga en cuenta que hay una variedad de algoritmos diferentes para tomar estas decisiones, como la votación por mayoría simple o la votación cuadrática basada en la identidad.
+Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
 
 ## Parachain
 
-Una blockchain que reúne varias características que le permiten trabajar dentro de los límites del Runtime Environment de Polkadot. También conocida como "parallelized chain".
+A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
 
 ## Parachain Registry
 
-Una construcción relativamente simple, similar a una base de datos, que contiene información estática y dinámica sobre cada cadena.
+A relatively simple database-like construct that holds both static and dynamic information on each chain.
 
 ## Parity Technologies
 
-Una empresa, fundada por el Dr. Gavin Wood, que está desarrollando Substrate. También ha publicado otros proyectos, entre ellos Parity en Ethereum y Parity Wasm.
+A company, founded by Dr. Gavin Wood, which is developing Substrate. It has also released several other projects including Parity Ethereum and Parity Wasm.
 
 ## Polkadot
 
-Una tecnología heterogénea multi-cadena que permite que varias blockchains de diferentes características realicen la comunicación entre ellas.
+A heterogeneous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
 
 ## Polkadot Runtime Environment
 
-El entorno de tiempo de ejecución en el que se puede ejecutar un módulo de tiempo de ejecución. Parachains deben ser compatibles con el Polkadot Runtime Environment - cadenas externas que no tendrán que usar un bridge.
+The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
 ## Proof of Stake (PoS)
 
-Un método para lograr consenso en el cual el siguiente bloque es determinado por un nodo que es elegido por alguna característica (por ejemplo, la cantidad de tokens que se vinculan).
+A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
 
 ## Proof of Work
 
-Un método para lograr consenso en el que el siguiente bloque es determinado por el primero para resolver un rompecabezas difícil (por ejemplo, en Bitcoin, resolver un pre-image hash para un candidato a bloque).
+A method of achieving consensus in which the next block is determined by the first to solve a difficult puzzle (e.g., in Bitcoin, solving a partial pre-image hash for a block candidate).
 
 ## Proposal
 
-Un posible llamamiento a la votación en un referéndum. Los proposals modifican el comportamiento de la red de Polkadot, desde el ajuste de parámetros menores hasta la sustitución del código del runtime.
+A potential function call to be voted on in a referendum. Proposals modify the behavior of the Polkadot network, from minor parameter tuning all the way up to replacing the runtime code.
 
 ## Referendum
 
-Una votación sobre si una propuesta debe ser aceptada o no por la red. Estos referéndums pueden ser iniciados por el Consejo de Gobierno, por un miembro del público o como resultado de una propuesta previa. Las partes interesadas votan en los referéndums, ponderados tanto por el tamaño de su depósito (es decir, el número de DOTs celebrados) como por la cantidad de tiempo que están dispuestos a bloquear sus tokens.
+A vote on whether or not a proposal should be accepted by the network. These referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
 
 ## Relay chain
 
-La cadena que coordina el consenso y la comunicación entre las Parachains (y las cadenas externas, a través de bridges).
+A chain which coordinates consensus and communication between parachains (and external chains, via bridges).
 
 ## Runtime
 
-Una función de transición de estado que indica un algoritmo válido para determinar el estado del bloque siguiente dado el bloque anterior.
+A state transition function which indicates a valid algorithm for determining the state of the next block given the previous block.
 
 ## Runtime Module
 
-Código de wasm que codifica una función de transición de estado.
+Wasm code which encodes a state transition function.
 
 ## Safety
 
-La propiedad de un sistema distribuido que indica que el sistema cumplirá correctamente con todas las invariantes; es decir, que nada "malo" le suceda a los datos (como por ejemplo, que estén corruptos).
+The property of a distributed system indicating that the system will properly meet all invariants; that is, that nothing "bad" ever happens to the data (such as it being corrupted).
 
 ## Sealing
 
-El proceso de añadir un bloque a la relay chain. Tenga en cuenta que la finalización es un proceso separado - los bloques se finalizan algún tiempo después de que se hayan cerrado (el objetivo es aproximadamente de 10 a 12 segundos).
+The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
+
+## Session
+
+A session is a Substrate implementation term for a period of time that has a constant set of validators. Validators can only join or exit the validator set at a session change.
 
 ## Session certificate
 
-Otro nombre para la "llave" de sesión que es una llave BLS para GRANDPA, una llave sr25519 para BABE, y eventualmente una llave Ed25519 para libp2p.
+Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
 
 ## Session key
 
-Una "llave" para la sesión es una llave BLS para GRANDPA, una llave sr25519 para BABE, y eventualmente una llave Ed25519 para libp2p.
+A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
+
+## Slashing
+
+The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
 ## Staking
 
-"Reservar" tokens (para Polkadot, DOTs) que se presentan como "fianza" para la posibilidad de producir un bloque válido (y así obtener una recompensa por el bloque). Los validadores y nominadores (que respaldan a los validadores a través de NPoS) ponen en juego sus DOTs para añadir bloques a la relay chain.
+"Reserving" tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators (who back validators through NPoS) together stake their DOTs in order to add blocks to the relay chain.
 
 ## State transition function
 
-Una función que describe cómo se puede transformar el estado de una blockchain. Por ejemplo, puede describir cómo se pueden transferir tokens de una cuenta a otra.
+A function which describes how the state of a blockchain can be transformed. For example, it may describe how tokens can be transferred from one account to another.
 
 ## Substrate
 
-Una implementación del runtime de Polkadot que permite a los desarrolladores generar Parachains compatibles con la relay chain de Polkadot.
+An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
+
+## Tabling
+
+In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
 ## Transaction
 
-Un componente individual de la función de transición de estado de un bloque, como mover tokens de una cuenta a otra.
+An individual element of the state transition function of a block, such as moving tokens from one account to another.
 
 ## Validator
 
-Un nodo que asegura la relay chain mediante la vinculación de DOTs, validando las pruebas de los collators en las Parachains, y determinando un consenso con otros validadores.
+A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
 
 ## Voting
 
-El proceso de los accionistas para determinar si debe aprobarse o no un referéndum para implementar una propuesta específica. Los votos se basan tanto por el número de DOTs que controla la cuenta de las partes interesadas como por la cantidad de tiempo que están dispuestas a vincular sus DOTs. La votación puede ser anulada por el Consejo de Gobernanza si existe un acuerdo unánime de que no es así.
+The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
 
 ## Wallet
 
-Un programa que permite almacenar, recibir y transmitir DOTs u otros tokens basados en bloques.
+A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
 
 ## Web3 Foundation
 
-Una fundación con sede en Suiza que fomenta y administra tecnologías y aplicaciones en los campos de los protocolos de software web descentralizados, en particular aquellos que utilizan métodos criptográficos modernos para garantizar la descentralización, en beneficio y para la estabilidad del ecosistema de Web3.
+A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
 
 ## WebAssembly
 
-Un formato de instrucción para una máquina virtual basada en stacks. Los módulos runtime de Polkadot se compilan en WebAssembly. También conocido como Wasm.
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
 
 ## Wasm
 
-Un formato de instrucción para una máquina virtual basada en stacks. Los módulos de runtime de Polkadot están compilados en Wasm.
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
 
 ## Witness
 
-Pruebas criptográficas de la validez del dato.
+Cryptographic proof statements of data validity.
