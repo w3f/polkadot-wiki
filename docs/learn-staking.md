@@ -164,7 +164,7 @@ Rewards can be used by the same account (controller) to keep accumulating the re
 
 ## Inflation
 
-Planned to be close to 10% in the first year. This means that each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
+Inflation is designed to be close to 10% in the first year. This means that each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
