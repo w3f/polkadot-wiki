@@ -1,10 +1,10 @@
 ---
-id: maintain-guides-how-to-validate
-title: How to validate
-sidebar_label: How to validate
+id: maintain-guides-how-to-validate-alexander
+title: Run a Validator (Alexander)
+sidebar_label: Run a Validator (Alexander)
 ---
 
-_This tutorial works with the current Alexander testnet and has been updated for PoC-4._
+__Note: This guide is for the Alexander testnet in the Polkadot repository on the v0.4 branch.__
 
 To be a good validator, you should
 
@@ -16,9 +16,9 @@ You should **NOT** run a validator if you have DOTs but do not have enough techn
 
 Nominators still earn rewards. You can even nominate multiple validators. If you want to know more about nominators, please see [here](maintain-nominator).
 
-For this tutorial, we use Ubuntu 18.04 and will be running on the PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too different. There are a lot of [VPS](#vps-list) choices out there, feel free to pick the one you like.
+For this tutorial, we use Ubuntu 18.04 and will be running on the PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too different. There are a lot of [VPS](#vps-list) choices out there; feel free to pick the one you like.
 
-_Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
+_Please make sure that you do **NOT** use this setup and configuration on Polkadot mainnet or Kusama. This guide simply walks you through step-by-step how to set up and run a validator node on the Alexander testnet. If you would like to run a validator on a non-testnet network, you must be EXTREMELY careful on some areas like key management, DDoS protection, and high availability._
 
 ## Install Rust
 
@@ -77,11 +77,11 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
 
 ## Create accounts
 
-To be a validator, you will need three separate accounts for managing your funds, namely `stash`, `controller`, and `session`. If you want to know more about it, please see [here](learn-staking#accounts).
+To be a validator, you will need three separate accounts for managing your funds, namely `stash`, `controller`, and `session`. If you want to know more about these accounts, please see [here](learn-staking#accounts).
 
 ![create account](assets/guides/how-to-validate/polkadot-dashboard-create-account.jpg) First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) and click on the `add account` button.
 
-To help identify your accounts easily later, make sure to use `stash`, `controller`, and `session` in the names of your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
+To help easily identify your accounts later, make sure to use `stash`, `controller`, and `session` in the names of your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
 
 You need to generate three accounts:
 
@@ -103,7 +103,7 @@ To continue the following steps, you are required to get some testnet DOTs for t
 
 It is now time to set up our validator. We will do the following:
 
-- Bound the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
+- Bond the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Select the `controller`. This is the account that will decide when to start or stop validating.
 - Select the `session` account. This is the account whose seed will be used to run the node.
 
@@ -138,7 +138,7 @@ polkadot --chain alex --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TE
 
 Make sure that the address generated from the seed corresponds to your `session` account's address. Don't worry if the last characters diverge, it's just the checksum that has recently changed.
 
-![terminal session key verification](assets/guides/how-to-validate/maintain-seed.jpg)
+![terminal session key verification](assets/guides/how-to-validate/polkadot-node-seed.jpg)
 
 To verify that your node is live and in sync, head to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after a few seconds, your node's information will be shown.
 

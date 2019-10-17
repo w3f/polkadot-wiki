@@ -1,7 +1,7 @@
 ---
 id: build-tools-index
-title: Tools
-sidebar_label: Tools
+title: Tool Index
+sidebar_label: Tool Index
 ---
 
 Here we provide a list of tools available for your development needs. They are sorted by programming language. Right now, the Rust ecosystem is the most mature and it's possible to get started by building on Substrate today. As the ecosystems surrounding other programming languages expand, the sections below will be filled out.
@@ -18,6 +18,8 @@ Here we provide a list of tools available for your development needs. They are s
 - [Bonds oo7 Polkadot UI](https://github.com/paritytech/substrate-ui) - built with the Bonds oo7 library.
 - [Polkawallet](https://polkawallet.io/) - A mobile wallet for Polkadot on both iOs and Android. Currently in development but a Beta version is available for download. Follow development on [GitHub](https://github.com/polkawallet-io/polkawallet-RN).
 - [SpeckleOS](https://www.speckleos.io/) - Browser extension wallet. In development - follow progress on [GitHub](https://github.com/SpeckleOS/speckle-browser-extension).
+- [Enzyme](https://getenzyme.dev/) - Browser extension wallet. Follow development on [GitHub](https://github.com/blockxlabs/enzyme/).
+- [Math Wallet](https://www.mathwallet.org) - Browser extension and mobile wallet
 
 ## Network Monitoring & Reporting
 
@@ -38,11 +40,17 @@ Here we provide a list of tools available for your development needs. They are s
 ## C++
 
 - [Kagome](https://github.com/soramitsu/kagome) - A C++ Polkadot client developed by [Soramitsu](https://github.com/soramitsu).
+- [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot
+
+## C
+
+- [Polkadot API - .NET](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API for .NET
 
 ## Go
 
 - [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Runtime Environment.
 - [Golkadot](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate.
+- [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC client for go aka GSRPC
 
 ## JS
 
@@ -76,4 +84,4 @@ Polkadot-JS Common provides various useful utility functions that are used acros
 ### RPC Tools
 
 - [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - Demonstrates how the JS tools interact with the node over RPC.
-- [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html) - Documents Substrate RPC endpoints.
+- [RPC documentation](https://polkadot.js.org/api/substrate/rpc.html) - Documents Substrate RPC endpoints.

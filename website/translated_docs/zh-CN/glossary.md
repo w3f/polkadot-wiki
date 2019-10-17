@@ -1,16 +1,20 @@
 ---
 id: glossary
-title: Terms and Definitions
-sidebar_label: Terms and Definitions
+title: 专业术语
+sidebar_label: 专业术语
 ---
 
-## Block
+## Alexander
+
+The most up-to-date testnet for Polkadot.
+
+## 区块
 
 A collection of data, such as transactions, that together indicate a state transition of the blockchain.
 
-## Block explorer
+## 区块浏览器
 
-An application which allows a user to explore the different blocks on a blockchain.
+允许用户探索区块链上不同区块的应用程序
 
 ## BLS
 
@@ -32,7 +36,7 @@ The property of a system which is tolerant of Byzantine faults; that is, a syste
 
 A node which maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
 
-## Consensus
+## 共识
 
 The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
 
@@ -44,15 +48,26 @@ The native token for Polkadot. DOTs serve three purposes: network governance (al
 
 A generic term for a decentralized application, that is, one which runs as part of a distributed network as opposed to being run on a specific system or set of systems.
 
+## Epoch
+
+An epoch is a time duration in the BABE protocol that assigns leadership positions to authorities for production in slots. In Kusama, it is the same duration as a [session](#session).
+
+## Era
+
+A (whole) number of sessions, which is the period that the validator set (and each validator's active nominator set) is recalculated and where rewards are paid out.
+## Equivocation
+
+Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
+
 ## Extrinsic
 
 Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework. Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
 
-## Finality
+## 确定性
 
 The property of a block which cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point). In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
 
-## Finality Gadget
+## 确定性工具
 
 A mechanism which determines finality.
 
@@ -62,9 +77,9 @@ Nodes which monitor the network for validators or collators which are behaving b
 
 ## GRANDPA consensus algorithm
 
-GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: <https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372>
+GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
-## Governance
+## 治理
 
 The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
 
@@ -72,9 +87,17 @@ The process of determining what changes to the network are permissible, such as 
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
+## KSM
+
+The abbreviation for Kusama network tokens.
+
+## Kusama
+
+The "canary network" for Polkadot. It consists of an early-release, unaudited version of the Polkadot software. It is not a testnet - after the transition to NPoS, the network is entirely in the hands of the community (i.e., Kusama token holders).
+
 ## LIBP2P
 
-An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: <https://libp2p.io/>
+An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: [https://libp2p.io/](https://libp2p.io/)
 
 ## Liveness
 
@@ -86,7 +109,7 @@ A tool which gives you information about a node, such as the latest blocks seale
 
 ## Nominated Proof of Stake (NPoS)
 
-A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from delegated proof-of-stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator.
+A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
 
 ## Nominator
 
@@ -152,6 +175,10 @@ The property of a distributed system indicating that the system will properly me
 
 The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
 
+## Session
+
+A session is a Substrate implementation term for a period of time that has a constant set of validators. Validators can only join or exit the validator set at a session change.
+
 ## Session certificate
 
 Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
@@ -159,6 +186,10 @@ Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key
 ## Session key
 
 A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
+
+## Slashing
+
+The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
 ## Staking
 
@@ -171,6 +202,10 @@ A function which describes how the state of a blockchain can be transformed. For
 ## Substrate
 
 An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
+
+## Tabling
+
+In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
 ## Transaction
 

@@ -29,41 +29,25 @@
         "title": "交易所整合",
         "sidebar_label": "交易所整合"
       },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic 格式(又称交易格式)",
-        "sidebar_label": "Polkadot Extrinsic 格式(又称交易格式)"
-      },
       "build-hackathon": {
         "title": "黑客马拉松",
         "sidebar_label": "黑客马拉松"
       },
       "build-index": {
-        "title": "开发者入口",
-        "sidebar_label": "开发者入口"
-      },
-      "build-networks": {
-        "title": "网络",
-        "sidebar_label": "网络"
+        "title": "开发者专页",
+        "sidebar_label": "开发者专页"
       },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
-      },
-      "build-rust-style-guide": {
-        "title": "Polkadot中Rust的格式指南",
-        "sidebar_label": "Polkadot中的Rust的格式指南"
       },
       "build-smart-contracts": {
         "title": "智能合约",
         "sidebar_label": "智能合约"
       },
       "build-tools-index": {
-        "title": "工具",
-        "sidebar_label": "工具"
-      },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
+        "title": "工具索引",
+        "sidebar_label": "工具索引"
       },
       "community": {
         "title": "社区",
@@ -74,12 +58,12 @@
         "sidebar_label": "贡献"
       },
       "glossary": {
-        "title": "条款及细则",
-        "sidebar_label": "条款及细则"
+        "title": "专业术语",
+        "sidebar_label": "专业术语"
       },
       "index": {
-        "title": "Polkadot 维基",
-        "sidebar_label": "Polkadot 维基"
+        "title": "维基索引",
+        "sidebar_label": "维基索引"
       },
       "learn-architecture": {
         "title": "Polkadot 架构",
@@ -99,7 +83,7 @@
       },
       "learn-comparisons": {
         "title": "与其它区块链比较",
-        "sidebar_label": "与其它区块链比较"
+        "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
         "title": "Polkadot 共识机制",
@@ -193,21 +177,29 @@
         "title": "收集人",
         "sidebar_label": "收集人"
       },
-      "maintain-governance-index": {
-        "title": "治理",
-        "sidebar_label": "治理"
+      "maintain-guides-how-to-nominate-alexander": {
+        "title": "成为提名人 (Alexander)",
+        "sidebar_label": "成为提名人 (Alexander)"
       },
-      "maintain-guides-how-to-nominate": {
-        "title": "如何成为提名人",
-        "sidebar_label": "如何成为提名人"
+      "maintain-guides-how-to-nominate-kusama": {
+        "title": "成为提名人 (Kusama)",
+        "sidebar_label": "成为提名人 (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
-      "maintain-guides-how-to-validate": {
-        "title": "如何运行验证人节点",
-        "sidebar_label": "如何运行验证人节点"
+      "maintain-guides-how-to-validate-kusama": {
+        "title": "运行验证人 (Kusama)",
+        "sidebar_label": "运行验证人 (Kusama)"
+      },
+      "maintain-guides-how-to-validate-alexander": {
+        "title": "运行验证人 (Alexander)",
+        "sidebar_label": "运行验证人 (Alexander)"
+      },
+      "maintain-guides-secure-validator": {
+        "title": "安全验证人节点",
+        "sidebar_label": "安全验证人节点"
       },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",
@@ -217,17 +209,17 @@
         "title": "网络维护者",
         "sidebar_label": "网络维护者"
       },
-      "maintain-validator": {
-        "title": "验证人",
-        "sidebar_label": "验证人"
-      },
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
       },
+      "maintain-validator": {
+        "title": "验证人",
+        "sidebar_label": "验证人"
+      },
       "news": {
-        "title": "Polkadot 周报",
-        "sidebar_label": "Polkadot 周报"
+        "title": "新闻",
+        "sidebar_label": "新闻"
       },
       "research": {
         "title": "研究专页",
@@ -266,7 +258,7 @@
     "Collators|no description given": "收集人",
     "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "运行收集人打包平行链的区块并将其传递给验证人以进行验证。",
     "Become a Maintainer|no description given": "成为参与者",
-    "Help Translate|recruit community translators for your project": "帮助翻译",
+    "Help Translate|recruit community translators for your project": "参与翻译",
     "Edit this Doc|recruitment message asking to edit the doc source": "修改",
     "Translate this Doc|recruitment message asking to translate the docs": "翻译"
   }
