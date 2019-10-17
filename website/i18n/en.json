@@ -37,10 +37,6 @@
         "title": "Builder's Portal",
         "sidebar_label": "Builder's Portal"
       },
-      "build-networks": {
-        "title": "Networks",
-        "sidebar_label": "Networks"
-      },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
@@ -82,12 +78,12 @@
         "sidebar_label": "Bridges"
       },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot vs. Cosmos: Design Comparison",
-        "sidebar_label": "Polkadot vs. Cosmos: Design Comparison"
+        "title": "Design Comparison",
+        "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
         "title": "Polkadot comparisons",
-        "sidebar_label": "Polkadot comparisons"
+        "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
         "title": "Polkadot Consensus",
