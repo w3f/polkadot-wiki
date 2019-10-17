@@ -4,7 +4,7 @@ title: Treasury
 sidebar_label: Treasury
 ---
 
-The treasury is a pot of funds collected through transaction fees, slashing, inefficiencies in the chain's staking set, and lost deposits. The funds held in the treasury can be spent by making a spending proposal that, if approved by the council, will enter a queue that is cleared every 24 days (known as the budget period). The treasury attempts to spend as many proposals in the queue as it can without running out of funds. If the treasury ends a budget period without spending all of its funds, it suffers a burn of small percentage of its funds -- thereby causing deflationary pressure.
+The treasury is a pot of funds collected through transaction fees, slashing, inefficiencies in the chain's staking set, and lost deposits. The funds held in the treasury can be spent by making a spending proposal that, if approved by the council, will enter a queue that is cleared every 24 days (known as the budget period). The treasury attempts to spend as many proposals in the queue as it can without running out of funds. If the treasury ends a budget period without spending all of its funds, it suffers a burn of a small percentage of its funds -- thereby causing deflationary pressure.
 
 When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling 5% of the proposed spend. This deposit will be slashed if the proposal is rejected, and returned if the proposal was accepted.
 
