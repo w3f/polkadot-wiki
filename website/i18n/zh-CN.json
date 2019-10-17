@@ -37,10 +37,6 @@
         "title": "开发者专页",
         "sidebar_label": "开发者专页"
       },
-      "build-networks": {
-        "title": "网络",
-        "sidebar_label": "网络"
-      },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
@@ -82,12 +78,12 @@
         "sidebar_label": "桥接"
       },
       "learn-comparisons-cosmos": {
-        "title": "设计比较",
+        "title": "Design Comparison",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
         "title": "与其它区块链比较",
-        "sidebar_label": "与其它区块链比较"
+        "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
         "title": "Polkadot 共识机制",
