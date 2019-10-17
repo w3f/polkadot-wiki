@@ -22,4 +22,4 @@ Polkadot 在中继链和所有连接的平行链之间具有共享状态。如�
 
 ## 白板系列
 
-有关 Polkadot 架构的视频概述，请观看下面的视频，W3F研究员 Alistair Stewart 的白板访问:  <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+有关 Polkadot 架构的视频概述，请观看下面的视频，W3F研究员 Alistair Stewart 的白板访问: <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
