@@ -1,7 +1,7 @@
 ---
 id: build-index
-title: Builder's Portal
-sidebar_label: Builder's Portal
+title: 开发者专页
+sidebar_label: 开发者专页
 ---
 
 欢迎访问Polkadot维基网站的构建者部份。
@@ -29,7 +29,7 @@ sidebar_label: Builder's Portal
 
 ### PSPs
 
-Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
+Polkadot 标准建议 (PSP) 是 Polkadot 生态系统的标准。
 
 - [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and proposals.
 
