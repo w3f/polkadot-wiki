@@ -1,7 +1,7 @@
 ---
 id: news
-title: News
-sidebar_label: News
+title: 新闻
+sidebar_label: 新闻
 ---
 
 Follow the Polkadot [blog](https://polkadot.network/blog/) to stay up to date.
