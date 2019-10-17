@@ -38,7 +38,7 @@ sidebar_label: Links
 - [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post which recaps information regarding Substrate and Polkadot.
 - [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
 
-### Governance
+### 治理
 
 - [Governance](learn-governance) - Overview of governance system.
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr. Gavin Wood presents the initial governance structure for Polkadot. (Video)
