@@ -1,20 +1,20 @@
 ---
 id: glossary
-title: Glossary
-sidebar_label: Glossary
+title: 专业术语
+sidebar_label: 专业术语
 ---
 
 ## Alexander
 
 The most up-to-date testnet for Polkadot.
 
-## Block
+## 区块
 
 A collection of data, such as transactions, that together indicate a state transition of the blockchain.
 
-## Block explorer
+## 区块浏览器
 
-An application which allows a user to explore the different blocks on a blockchain.
+允许用户探索区块链上不同区块的应用程序
 
 ## BLS
 
@@ -36,7 +36,7 @@ The property of a system which is tolerant of Byzantine faults; that is, a syste
 
 A node which maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
 
-## Consensus
+## 共识
 
 The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
 
@@ -63,11 +63,11 @@ Providing conflicting information to the network. BABE equivocation entails crea
 
 Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework. Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
 
-## Finality
+## 确定性
 
 The property of a block which cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point). In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
 
-## Finality Gadget
+## 确定性工具
 
 A mechanism which determines finality.
 
@@ -79,7 +79,7 @@ Nodes which monitor the network for validators or collators which are behaving b
 
 GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
-## Governance
+## 治理
 
 The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
 
