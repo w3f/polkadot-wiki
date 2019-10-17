@@ -273,4 +273,4 @@ This concludes the article. Here you should have a good idea of how to interact 
 
 If you have any questions, please come ask in [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org).
 
-The original source of this page was published [here](https://hackmd.io/@gavwood/r1jTRX2Zr).
+_The original source of this page was published [here](https://hackmd.io/@gavwood/r1jTRX2Zr)._

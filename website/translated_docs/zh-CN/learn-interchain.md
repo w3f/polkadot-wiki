@@ -10,7 +10,7 @@ sidebar_label: Interchain Message Passing (ICMP)
 
 ## 概述
 
-- 跨链信息不会发送到中继链
+- 跨链信息*不会*发送到中继链
 - 跨链信息将会限制于字节(bytes)最大值
 - 平行链可以拒绝接收从其它平行链发出的信息，在这种情况下，发送方会意识到有障碍
 - 校对人负责把平行链之间的信息传递
@@ -39,4 +39,4 @@ Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行
 
 ## 资源
 
-- [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description on the Web3 Foundation research wiki.
+- [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description of internchain communication on the Web3 Foundation research wiki.

@@ -34,11 +34,11 @@ Some of the parachains on Polkadot will act as interpreters to external chains s
 
 ### Cosmos
 
-There is not a center in the Cosmos universe, where in true decentralized fashion each chain is independent and maintains their own validator set. However, the *hubs* such as the Cosmos Hub or the [Iris Hub](https://www.irisnet.org) provide a juncture for which the chains can communicate.
+There is not a center in the Cosmos universe, where in true decentralized fashion each chain is independent and maintains their own validator set. However, the _hubs_ such as the Cosmos Hub or the [Iris Hub](https://www.irisnet.org) provide a juncture for which the chains can communicate.
 
-Cosmos does not attempt to create an environment of shared security among the chains connected by the bridge *zones* and hubs. Instead they take a sovereign-first approach and strictly require chains to maintain their own validator set and economic security.
+Cosmos does not attempt to create an environment of shared security among the chains connected by the bridge _zones_ and hubs. Instead they take a sovereign-first approach and strictly require chains to maintain their own validator set and economic security.
 
-Cosmos connects to external chains through the use of what are called *peg zones* which provide a kind of specialized bridge that can understand the external consensus. For all chains that satisfy [consensus requirements](https://github.com/cosmos/ics/tree/master/spec/ics-002-consensus-verification), their interoperability protocol (known as IBC, more on that below) will work without the need of this special peg.
+Cosmos connects to external chains through the use of what are called _peg zones_ which provide a kind of specialized bridge that can understand the external consensus. For all chains that satisfy [consensus requirements](https://github.com/cosmos/ics/tree/master/spec/ics-002-consensus-verification), their interoperability protocol (known as IBC, more on that below) will work without the need of this special peg.
 
 The Cosmos hub uses a Proof-of-Stake algorithm that weighs validators by the amount of tokens backing them. It also allows smaller holders to delegate their tokens to one of its validators (currently 100, but there are plans to increase this number to >300). However, other zones in Cosmos may implement variants of this Proof-of-Stake scheme.
 
@@ -92,7 +92,7 @@ Cosmos uses Tendermint BFT consensus, which is closely inspired by Practical Byz
 
 ### Finality
 
-Polkadot's GRANDPA finality gadget comes to finality on *chains of blocks* rather than individual blocks. This is largely different from Cosmos, which comes to consensus on every block. In fact, Cosmos' Tendermint algorithm conflates the act of block production with the finality, which means that blocks can only be produced if they have been finalized. GRANDPA, instead is placed on top of the block production (BABE), and can finalize more than one block at once, making the overall consensus process run quicker.
+Polkadot's GRANDPA finality gadget comes to finality on _chains of blocks_ rather than individual blocks. This is largely different from Cosmos, which comes to consensus on every block. In fact, Cosmos' Tendermint algorithm conflates the act of block production with the finality, which means that blocks can only be produced if they have been finalized. GRANDPA, instead is placed on top of the block production (BABE), and can finalize more than one block at once, making the overall consensus process run quicker.
 
 ### Liveness
 
