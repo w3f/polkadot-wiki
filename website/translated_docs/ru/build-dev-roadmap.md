@@ -8,43 +8,25 @@ Developers need some guide posts for when they can expect certain milestones to 
 
 ## Substrate
 
-### 1.0
-
-41% Complete
-
-[Milestone tracker](https://github.com/paritytech/substrate/milestone/9)
-
-Expected Features:
-
- - Final API and stable interfaces
- - Ristretto Crypto
- - Solid networking
- - Outstanding bugs fixed
- - Decoupled balances
- - Integration tests
- - Enhanced control over Wasm/native execution heuristics
- - Panics/overflows sweeps in runtime
-
-### 1.1
-
-[Milestone tracker](https://github.com/paritytech/substrate/milestone/4)
-
-Expected Features:
-
- - Economic safety
+- [1.0.0](https://github.com/paritytech/substrate/tree/v1.0) - The Substrate 1.0.0 stable release is the recommended way to get started developing on Substrate.
+- [2.0.0](https://github.com/paritytech/substrate) - The master branch of Substrate is currently where development is happening for the next release of Substrate.
 
 ## Polkadot
 
-Current release: **PoC-4**
+### Current Testnet
 
-### PoC 5,6,7
+- [Alexander Testnet](https://github.com/paritytech/polkadot#install-poc-4-on-alexander-testnet) - The Polkadot Alexander testnet is the PoC-4 release of the Polkadot source code.
 
-7% Progress on issue tracker
+### Kusama
 
-[Milestone tracker](https://github.com/paritytech/polkadot/milestone/2)
+[Kusama Canary Network](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) is a live network aimed to test the economic conditions of Polkadot.
 
-Expected Features:
+- It is currently in the PoA phase, meaning that transfers and most functionality besides signalling the intention to stake have been disabled.
 
- - BLS signature aggregation for parachain candidate attestations
- - [Integrate Parachain tokens into governance](https://github.com/paritytech/polkadot/issues/124)
- - Improvements to parachain validation
+## Cumulus
+
+Cumulus is currently under development, with an estimated release to be sometime in October.
+
+## ink!
+
+Ink! is currently under development, however it is usable today by the brave developer. It's estimated that it will become more stabilized over the next few months.
