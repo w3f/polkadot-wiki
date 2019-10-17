@@ -31,7 +31,7 @@ Since the stash key is kept offline, it must be set to have its funds bonded to 
 
 ## Session Keys
 
-Session keys are hot keys that be must kept online by a validator to perform network operations. Session keys are typically generated in the client, although they don't have to be. They are *not* meant to control funds and should only be used for their intended purpose. They can be changed regularly; your controller only need create a certificate by signing a session public key and broadcast this certificate via an extrinsic.
+Session keys are hot keys that be must kept online by a validator to perform network operations. Session keys are typically generated in the client, although they don't have to be. They are _not_ meant to control funds and should only be used for their intended purpose. They can be changed regularly; your controller only need create a certificate by signing a session public key and broadcast this certificate via an extrinsic.
 
 Polkadot uses four session keys:
 
@@ -50,7 +50,7 @@ In the future, we plan to use a BLS key for GRANDPA because it allows for more e
 
 The original key derivation cryptography that was implemented for Polkadot and Substrate chains was `ed25519`, which is a Schnorr signature algorithm implemented over the Edward's Curve 25519 (so named due to the parameters of the curve equation).
 
-Most cryptocurrencies, including Bitcoin and Ethereum, currently use ECDSA signatures on the secp256k1 curve. This curve is considered much more secure than NIST curves, which [have possible backdoors from the NSA](#appendix-a-on-the-security-of-curves). The Curve25519 is considered possibly *even more* secure than this one and allows for easier implementation of Schnorr signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
+Most cryptocurrencies, including Bitcoin and Ethereum, currently use ECDSA signatures on the secp256k1 curve. This curve is considered much more secure than NIST curves, which [have possible backdoors from the NSA](#appendix-a-on-the-security-of-curves). The Curve25519 is considered possibly _even more_ secure than this one and allows for easier implementation of Schnorr signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
 
 The choice of using Schnorr signatures over using ECDSA is not so cut and dry. As stated in Jeff Burdges' (a Web3 researcher) [original forum post](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70/2) on the topic:
 
