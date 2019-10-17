@@ -198,4 +198,4 @@ The plan is to start with somewhere between 50 to 100 open validator positions a
 ## Resources
 
 * [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-* [Secure validator setup](https://hackmd.io/QSJlqjZpQBihEU_ojmtR8g)
+* [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
