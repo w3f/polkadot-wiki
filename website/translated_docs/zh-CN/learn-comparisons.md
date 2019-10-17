@@ -1,7 +1,7 @@
 ---
 id: learn-comparisons
 title: Polkadot comparisons
-sidebar_label: Polkadot comparisons
+sidebar_label: Other comparisons
 ---
 
 Polkadot is a blockchain technology but makes some innovations that set it apart from other popular chains.
