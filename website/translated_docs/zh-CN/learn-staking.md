@@ -108,7 +108,7 @@ Based on the latest Polkadot's codebase, the following slashing have been implem
 
 For every session, validators will send a "I'm Online" message to indicate they are online while unresponsiveness means that the validator fails to send the heartbeat. Depending on the repeated offences and how many other validators were offline, slashing will occur. If one-third of all validators are unresponsive, 5% of their bonded DOTs will be slashed.
 
-Here is the formula for calculation:
+下面是计算公式:
 
     Let x = offenders, n = total no. validators
     
