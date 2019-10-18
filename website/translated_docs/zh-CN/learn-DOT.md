@@ -61,7 +61,7 @@ Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launc
 
 _Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of Mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch._
 
-Testnet dots are freely available now - see below for various ways to obtain them.
+测试 DOTs 现在可免费获取-请参见进一步了解获取它们的各种方法。
 
 ## Testnet DOTs
 

@@ -16,11 +16,11 @@ Somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://
 
 ### How does consensus on the relay chain work?
 
-Please see the [consensus](learn-consensus) page.
+请参阅[共识](learn-consensus)页面。
 
 ### What is the expected block time on the relay chain?
 
-The Kusama network is currently operating at a rate of one block approximately every six seconds.
+Kusama 网络目前大约是六秒钟出块。
 
 The expected block time on the mainnet Polkadot chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on validators is to validate state transitions, the block times should be quite fast. Two or three seconds may not be unreasonable after optimizations. However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
 

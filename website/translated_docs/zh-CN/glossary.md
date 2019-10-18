@@ -83,7 +83,7 @@ GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gad
 
 The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
 
-## Governance Council
+## 治理议会
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
@@ -115,7 +115,7 @@ A proof of stake system whereby nominators "lend" their stake to validators, as 
 
 Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
 
-## On-chain governance
+## 链上治理
 
 Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
 
@@ -139,7 +139,7 @@ A heterogeneous multi-chain technology allowing for various blockchains of diffe
 
 The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
-## Proof of Stake (PoS)
+## 权益证明 (PoS)
 
 A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
 
