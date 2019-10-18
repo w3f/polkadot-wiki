@@ -10,7 +10,7 @@ Validators are paid for authoring blocks on the relay chain and signing parachai
 
 Validators may also receive "tips" from senders as an incentive to include transactions in their produced blocks.
 
-For example:
+例如:
 
 ```
 Validator Set Size (v): 4
@@ -66,7 +66,7 @@ Although rewards are paid equally, slashes are relative to a validator's stake. 
 
 Running multiple validators does not absolve you of the consequences of misbehavior. Polkadot punishes attacks that appear coordinated more severely than individual attacks. You should not, for example, run multiple validators hosted on the same infrastructure. A proper multi-validator configuration would ensure that they do not fail simultaneously.
 
-Nominators have the incentive to nominate the lowest-staked validator, as this will result in the lowest risk and highest reward.
+提名人有动机提名权益最低的验证人，因为这将导致最低的风险和最高的回报。
 
 ## Nominators and Validator Payments
 
