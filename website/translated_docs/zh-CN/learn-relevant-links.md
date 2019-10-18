@@ -40,7 +40,7 @@ sidebar_label: Links
 
 ### 治理
 
-- [Governance](learn-governance) - Overview of governance system.
+- [治理](learn-governance) - 治理系统概述。
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr. Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Kusama Rollout and Governance](https://polkadot.network/kusama-rollout-and-governance/) - Information on the governance on the Kusama Canary network.
 
@@ -65,7 +65,7 @@ sidebar_label: Links
 
 ### Polkadot
 
-- [Rust](https://github.com/paritytech/polkadot) - Initial Polkadot implementation.
+- [Rust](https://github.com/paritytech/polkadot) - 初始 Polkadot 实现。
 - [Style Guide](https://github.com/paritytech/polkadot/wiki/Style-Guide) - Contribute to the Rust implementation of Polkadot.
 
 ### Polkadot Runtime Environment
@@ -91,7 +91,7 @@ sidebar_label: Links
 - [Parity Wasm](https://github.com/paritytech/parity-Wasm) - WebAssembly serialization/deserialization in Rust.
 - [Wasm utils](https://github.com/paritytech/Wasm-utils) - Collection of Wasm utilities used in Parity and Wasm contract development.
 
-### Networking (libp2p)
+### 网络层 (libp2p)
 
 - [Rust libp2p](https://github.com/libp2p/rust-libp2p) - The Rust Implementation of libp2p networking stack.
 
