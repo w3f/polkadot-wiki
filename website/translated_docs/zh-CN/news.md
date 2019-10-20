@@ -4,4 +4,4 @@ title: 新闻
 sidebar_label: 新闻
 ---
 
-Follow the Polkadot [blog](https://polkadot.network/blog/) to stay up to date.
+关注Polkadot [博客](https://polkadot.network/blog/)以保持最新消息。

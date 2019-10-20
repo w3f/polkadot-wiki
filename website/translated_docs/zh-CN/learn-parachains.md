@@ -8,49 +8,49 @@ sidebar_label: Parachains
 
 ## 什么是平行链?
 
-A parachain is an application-specific data structure that is globally coherent and validatable by the validators of the Polkadot relay chain. Most commonly a parachain will take the form of a blockchain, but there is no specific need for them to be actual blockchains. They take their name from the concept of parallelized chains that run parallel to the relay chain. Due to their parallel nature, they are able to parallelize transaction processing and achieve scalability of the Polkadot system. They [share in the security](learn-security) of the entire Polkadot network and can communicate with other parachains through [ICMP](learn-interchain).
+平行链是特定于应用程序的数据结构，它在上下上是一致的，并且可以由Polkadot中继链的验证人进行验证。最常见的是，平行链将采用区块链的形式，但并没有由于它们与并行链并行运行的并行链的概念命名。由于它们的并行性质，它们能够并行化事务处理并实现Polkadot系统的可伸缩性。它们[共享整个Polkadot网络的安全性](learn-security)，并且可以通过[ ICMP ](learn-interchain)与其它平行链进行通信。
 
-Parachains are maintained by a network maintainer known as a [collator](maintain-collator). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the relay chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They are not required to be staked on the relay chain or own DOT tokens unless stipulated to do so by the parachain implementation.
+平行链由称为[收集人](maintain-collator)的网络维护者维护。 收集人节点的作用是运行平行链的全节点，保留平行链的所有必要信息，并生成新的候选区块，以传递给中继链验证器人进行验证并包含在 Polkadot 的共享状态里。 收集人节点的激励是对平行链的实施细节（请参见[平行链经济](#parachain-economies)）。 除非平行链实施规定这样做，否则它们无需将 DOT 押在中继链或持有代币。
 
-The Polkadot runtime environment (PRE) allows for the state transitions performed on parachains to be specified as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated against the registered state transition function (STF) that is stored on the relay chain by the validators before Polkadot acknowledges a state transition has occurred on a parachain. The only constraint to the logic that a parachain is allowed to implement is that it must be verifiable by the relay chain validators. Verification most commonly takes the form of a bundled proof of a state transition known as a Proof-of-Verification (PoV) block, which is submitted to the validators from one or more of the parachain collators to be checked.
+Polkadot runtime 环境（PRE）允许将在平行链上执行的状态转换指定为Wasm可执行文件。 在Polkadot确认在平行链上发生状态转换之前，必须通过验证程序根据在中继链上存储的注册状态转换函数（STF）验证在平行链上发生的新状态转换的证据。允许执行平行链的逻辑的唯一约束是中继链验证程序必须可以验证该逻辑。 验证通常采用状态转换的捆绑式证明的形式，即验证的证明（PoV）区块，该验证从一个或多个平行链的收集人核对提交给验证人，以进行检查。
 
 ## 平行链经济学
 
-Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake are usually used to select the validator set in order to handle validation and finalization; parachains will not be required to do either of those things. However, since Polkadot is general over what the parachain can implement, it may be the choice of the parachain to implement a staking token, but it's not generally necessary.
+平行链可能有自己的经济体和自己的原生币。方案像权益证明通常用于选择验证人以便用于验证区块和确定性。平行链并不需要处理以上功能。但是，由于 Polkadot 对于平行链可以实现的内容也是通用的，因此平行链可以选择实现抵押代币，但通常没有必要。
 
-Collators may be incentivized through inflation of a native parachain token. There may be other ways to incentivize the collator nodes which do not involve inflating the native parachain token.
+收集人可能通过平行链的原生币通胀来激励。 可能还有其他方法可以激励收集人而不需要通胀平行链原生币。
 
-Transaction fees in a native parachain token can also be an implementation choice of parachains. Polkadot makes no hard and fast rules for how the parachains decide on original validity of transactions. For example, a parachain may be implemented so that transactions must pay a minimum fee to collators to be valid. The relay chain will enforce this validity. Similarly, a parachain could not include that in their implementation and Polkadot would still enforce its validity.
+平行链也可实现使用原生币作为交易费用 。 Polkadot 对平行链如何决定交易的原始有效性没有硬性规定。例如平行链可以实现必须支付小额费用给收集人才能有效。中继链将强制执行此有效性。同样平行链不能包括他们的实现和 Polkadot 仍将强制执行其有效性。
 
-Parachains are not required to have their own token. If they do, is up to the parachain to make the economic case for their token, not Polkadot.
+平行链并不需要拥有它们自己的代币。如果它们拥有自己的代币，那将会是平行链决定如何使它们的代币有经济用途，需不是 Polkadot。
 
 ## 例子
 
 平行链例子
 
-- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the ICMP protocol.
-- **High Frequency Chains** - These are chains which can compute many transactions in a short amount of time by taking certain trade-offs or making optimizations.
-- **Privacy Chains** - These are chains which do not leak any information to the public through use of novel cryptography.
-- **Smart Contract Chains** - These are chains which can have additional logic implemented on them through the deployment of code known as _smart contracts_.
+- **加密联盟链** - 这些可能是私人链，不会向公众泄露任何信息，但由于 ICMP 协议的性质，它们仍然可以以可信任的形式与它们进行交互。
+- **高频链** - 这些链可以通过进行某些权衡或进行优化，在短时间内大量计算。
+- **隐私链** - 这些链通过使用新颖的加密技术不会向公众泄露任何信息。
+- **智能合约链** - 这些链可以通过部署称为 _智能合约_的代码来实现额外的逻辑。
 
 ## 常见问题
 
-### What is "parachain consensus"?
+### 平行链共识是什么?
 
-"Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality. Only sovereign chains (that must bridge to the relay chain via a parachain) can control their own consensus. Parachains have control over how blocks are authored and by whom.
+"平行链共识"的特殊之处在于它将遵循 Polkadot 中继链。平行链不能使用其他提供确定性的共识算法。只有主权链 (必须通过转接桥的平行链接到中继链) 能够控制它们的共识。平行链可以控制区块的创作方式和通过谁。
 
-### How will parachain slots be distributed?
+### 平行链插槽如何分配？
 
-Parachain slots will be acquirable through auction, please see the [parachain slots](learn-auction) article. Additionally, some parachain slots will be set aside to run [parathreads](learn-parathreads) - parachains which bid on a per-block basis to be included in the relay chain.
+平行链插槽通过使用拍卖方式获取。请查看[平行链插槽](learn-auction)文章。如此，一些平行链插槽将会运行[平行线程](learn-parathreads) - 平行线程通过以竞标每个区块方式包括在中继链内。
 
-### Parachain Development Kits (PDKs)
+### 平行链开发套件 (PDKs)
 
-Parachain Development Kits are a set of tools that enable developers to create their own applications as parachains. For more info see [here](build-pdk).
+平行链开发套件是一组工具供开发者创造他们创造的他们的应用成为平行链，详细资料请看[这里](build-pdk)。
 
 ### 部署平行链
 
-Please see the builder's article on [deploying parachains](build-deploy-parachains).
+请参阅有关[部署平行链](build-deploy-parachains)的开发者文章。
 
 ## 资源
 
-- [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Blog post by Polkadot co-founder Rob Habermeier that introduced parachains in 2017 as "a simpler form of blockchain, which attaches to the security provided by a ‘relay chain’ rather than providing its own. The relay chain provides security to attached parachains, but also provides a guarantee of secure message-passing between them."
+- [Polkadot: 平行链](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Polkadot 联合创始人 Rob Habermeier在2017年撰写的博客文章，将平行链介绍为 "一种更简单的区块链形式，它附加于“中继链”提供的安全性，而不是提供其自身的安全性。中继链为附加的平行链提供安全性，但是还为它们之间的安全消息传递提供了保证。"
