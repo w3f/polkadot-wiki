@@ -105,13 +105,16 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
+> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain,
+you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+
 #### New to the Network
 
 If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the
 following command:
 
 ```sh
-./target/release/polkadot
+./target/release/polkadot --pruning=archive
 ```
 
 #### Previous Kusama CC1 Validator
@@ -142,7 +145,7 @@ transaction, verify that the keys are in the new CC2 keystore.
 Start your node.
 
 ```sh
-./target/release/polkadot
+./target/release/polkadot --pruning=archive
 ```
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
@@ -182,7 +185,7 @@ account contains _at least_ this much. You can, of course, stake more than this.
 KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all
 of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded
-amount requires the bonding duration period to be over (for Kusama, 28 days).
+amount requires the duration of the unbonding  period (on Kusama the unbonding period is 28 days).
 - **Payment destination** - The account where the rewards from validating are sent. More info
 [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
@@ -198,7 +201,7 @@ Once your node is fully synced, stop it using Control-C. At your terminal prompt
 validator mode.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/release/polkadot --validator --name "name on telemetry" --pruning=archive
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and it will be included
