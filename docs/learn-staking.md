@@ -122,7 +122,7 @@ Validators should have a well-architected network infrastructure to ensure the n
 
 ### Grandpa Equivocation
 
-A validator signed two or more votes in the same round on different chains.
+A validator signs two or more votes in the same round on different chains.
 
 ### Babe Equivocation
 
