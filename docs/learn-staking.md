@@ -178,7 +178,7 @@ Inflation is designed to be close to 10% in the first year. This means that each
 
 **Blue line**:  inflation rate
 
-The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in staking. For instance, inflation would be 10% if 50% of DOTs are staked in the network.
+The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will change dynamically to incent / disincent token holders to participate in staking. For instance, inflation would be 10% if 50% of DOTs are staked in the network.
 
 Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees, and we want and to avoid illiquidity on the market.
 
