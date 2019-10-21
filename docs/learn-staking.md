@@ -10,7 +10,7 @@ The system encourages DOT holders to participate as nominators. Nominators may b
 
 Validators assume the role of producing new blocks in BABE, validating parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with their stake.
 
-The staking system pays out rewards equally to all validators. Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In this way, the network provides incentive to nominate lower-staked validators and furthers ensure decentralization of the validator set.
+The staking system pays out rewards equally to all validators. Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In this way, the network incents the nomination of lower-staked validators to create an equally-staked validator set.
 
 ## How does staking work in Polkadot?
 
