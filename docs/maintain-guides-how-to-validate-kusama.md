@@ -137,10 +137,32 @@ Now you can copy your old session keys into the new CC2 keystore with the next c
 cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
 ```
 
-If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. This is okay, but it
-means you will want to fix it by setting new session keys for your validators. The best way to do this would be to call the
-`author_rotateKeys` RPC call and make sure the call is directed to your validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
-transaction, verify that the keys are in the new CC2 keystore.
+If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. You want to fix this.
+The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your
+validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
+transaction, verify that the keys are in the new CC2 keystore. See more information in the [section below](#generating-session-keys).
+
+After you copy your keystore into the new chains directory, you want to to inject the keys into the memory of the node.
+For this you can use the `author_injectKey` method for each of the four types of keys: 'babe', 'gran', 'imon', and 'para'.
+You can map these keys to the ones in your keystore by parsing the concatenated output of the `rotateKeys` RPC call you
+made the first time. They will be concatenated in order following the below struct declaration:
+
+```rust
+pub struct SessionKeys {
+    #[id(key_types::GRANDPA)]
+    pub grandpa: GrandpaId,
+    #[id(key_types::BABE)]
+    pub babe: BabeId,
+    #[id(key_types::IM_ONLINE)]
+    pub im_online: ImOnlineId,
+    #[id(parachain::PARACHAIN_KEY_TYPE_ID)]
+    pub parachain_validator: parachain::ValidatorId,
+}
+```
+
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys
+> that you made the `setKeys` transaction for then simply run through the process of generating and setting new ones
+> using the `rotateKeys` method below. Better safe than sorry!
 
 Start your node.
 
