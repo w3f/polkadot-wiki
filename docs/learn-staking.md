@@ -134,7 +134,7 @@ GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
     Min( (3 * x / n )^2, 1)
 
-Validators may run their nodes on multiple machines to make sure they can still perform validation work in case if one of their nodes goes down. It should be noted that if they do not have a good coordination to manage those machines to do signing, the equivocation problem becomes a possibility. Hence, it would be better to have something like KMS (Key Management Server) as a middleware between those machines to coordinate.
+Validators may run their nodes on multiple machines to make sure they can still perform validation work in case one of their nodes goes down. It should be noted that if they do not have good coordination to manage signing machines, then equivocation is possible.
 
 > Notice:
 If a validator is reported for any one of the offences they will be removed from the validator set and they will not be paid while they are kicked out.
