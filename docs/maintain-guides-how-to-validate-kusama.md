@@ -195,10 +195,10 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 (note: you may need to refresh the screen). The bonded amount on the right corresponds to the funds bonded by the Stash
 account.
 
-## Set the Session Key
+## Set Session Keys
 
-Once your node is fully synced, stop it using Control-C. At your terminal prompt, you will now start your node in
-validator mode.
+Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running
+the node in validator mode with the pruning option set to `archive`.
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry" --pruning=archive
@@ -208,25 +208,40 @@ You can give your validator any name that you like, but note that others will be
 in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended
 that you choose something likely to be unique.
 
-### Option 1: RPC
+### Generating the Session Keys
+
+You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your
+validator node with your Controller account on Polkadot.
+
+#### Option 1: PolkadotJS-APPS
 
 You can generate your [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the
-client via RPC. If you are doing this, make sure that you have your Polkadot explorer attached to your validator
-(configurable in the Settings tab). If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
-you will need to connect to the endpoint for your validator. You can rotate session keys after connecting Polkadot JS
-to your local node by going to Toolbox and selecting RPC Calls then select the author > rotateKeys() options.
+client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+validator node. You can configure the apps dashboard to connect to the endpoint of your validator in the Settings tab.
+If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you will not be able to use this method
+since making RPC requests to this node would effect the local keystore hosted on a _public node_ and you want to make
+sure you are interacting with the keystore for _your node_.
+
+Once ensuring that you have connected to your node, the easiest way to set session keys for your node is by calling the
+`author_rotateKeys` RPC request to create new keys in your validator's keystore.
+Navigate to Toolbox tab and select RPC Calls then select the author > rotateKeys() option and remember to save the
+output that you get back for a later step.
 
 ![Explorer RPC call](assets/guides/how-to-validate/polkadot-explorer-rotatekeys-rpc.jpg)
 
-### Option 2: CLI
+#### Option 2: CLI
 
-If you are on a remote server, it may be easier to run this command on the same machine instead:
+If you are on a remote server, it is easier to run this command on the same machine (while the node is running with the
+default HTTP RPC port configured):
 
 ```sh
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-The output will have a hex-encoded "result" field. This is an encoding of your four session keys.
+The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this
+result for a later step.
+
+### Submitting the `setKeys` Transaction
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your
 validator with your Controller account.
