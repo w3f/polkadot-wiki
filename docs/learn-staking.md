@@ -128,7 +128,7 @@ A validator signs two or more votes in the same round on different chains.
 
 A validator produces two or more blocks on the relay chain in the same time slot.
 
-Grandpa and Babe equivocation slashing amount is calculated as below:
+GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
     Let x = offenders, n = total no. validators
 
