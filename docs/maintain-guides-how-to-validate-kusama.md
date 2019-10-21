@@ -143,7 +143,7 @@ validator node (not the default Polkadot JS connection or one of the boot nodes)
 transaction, verify that the keys are in the new CC2 keystore. See more information in the [section below](#generating-session-keys).
 
 After you copy your keystore into the new chains directory, you want to to inject the keys into the memory of the node.
-For this you can use the `author_injectKey` method for each of the four types of keys: 'babe', 'gran', 'imon', and 'para'.
+For this you can use the `author_insertKey` method for each of the four types of keys: 'babe', 'gran', 'imon', and 'para'.
 You can map these keys to the ones in your keystore by parsing the concatenated output of the `rotateKeys` RPC call you
 made the first time. They will be concatenated in order following the below struct declaration:
 
