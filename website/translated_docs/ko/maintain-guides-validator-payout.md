@@ -8,6 +8,8 @@ sidebar_label: Validator Payout Overview
 
 Validators are paid for authoring blocks on the relay chain and signing parachain blocks. Validator payouts occur at the end of every era (on the Alexander testnet, this is approximately once per hour, although this may be modified on Kusama and the Polkadot mainnet). No matter how much stake is behind a validator (by the validator stash itself, as well as by nominators), all validators split the block authoring payout equally.
 
+Validators may also receive "tips" from senders as an incentive to include transactions in their produced blocks.
+
 For example:
 
 ```
@@ -22,13 +24,13 @@ Payout for each validator (v1 - v4):
 p / v = 8 / 4 = 2 DOTs
 ```
 
-Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive equal rewards. Validator `v1`, who had 18 DOTs staked, received the same reward (2 DOTs) in this era as `v4` who had only 7 DOTs staked.
+Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive the same block reward as every other validator. Validator `v1`, who had 18 DOTs staked, received the same reward (2 DOTs) in this era as `v4` who had only 7 DOTs staked.
 
 ## Running Multiple Validators
 
-It is possible for a single entity to run multiple validators. Running multiple validators will lead to an optimal risk/reward ratio. Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
+It is possible for a single entity to run multiple validators. Running multiple validators may provide a better risk/reward ratio. Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
 
-Assume you have 18 DOTs to stake - for simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
+For the following example, assume you have 18 DOTs to stake. For simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
 
 ```
 Validator Set Size (v): 4
@@ -70,7 +72,7 @@ Nominators have the incentive to nominate the lowest-staked validator, as this w
 
 Nominated stake allows you to "vote" for validators and share in the rewards (and slashing) without running a validator node yourself. Validators can choose to keep part of their rewards to "reimburse" themselves for the cost of running a validator node. Other than that, all rewards are shared based on the stake behind each validator. This includes the stake of the validator itself, plus any stake bonded by nominators.
 
-> **NOTE:** Validators set their preference in DOTs, *not* as a percentage of the reward. Polkadot's block reward is based on the *total* amount at stake, with the reward peaking when the amount staked is at 50% of the total supply. In periods when there is a lower amount staked, and therefore lower rewards, the validator's payout preference could mean that there is zero left over for nominators.
+> **NOTE:** Validators set their preference in DOTs, _not_ as a percentage of the reward. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking when the amount staked is at 50% of the total supply. In periods when there is a lower amount staked, and therefore lower rewards, the validator's payout preference could mean that there is zero left over for nominators.
 
 In the following examples, we can see the results of several different validator payment schemes and split between nominator and validator stake. We will assume a single nominator for each validator. However, there can be numerous nominators for each validator. Rewards are still distributed proportionally - for example, if the total rewards to be given to nominators is 2 DOTs, and there are four nominators with equal stake bonded, each will receive 0.5 DOTs. Note also that a single nominator may stake different validators.
 

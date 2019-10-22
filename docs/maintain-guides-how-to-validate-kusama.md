@@ -105,13 +105,16 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
+> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain,
+you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+
 #### New to the Network
 
 If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the
 following command:
 
 ```sh
-./target/release/polkadot
+./target/release/polkadot --pruning=archive
 ```
 
 #### Previous Kusama CC1 Validator
@@ -134,15 +137,37 @@ Now you can copy your old session keys into the new CC2 keystore with the next c
 cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
 ```
 
-If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. This is okay, but it
-means you will want to fix it by setting new session keys for your validators. The best way to do this would be to call the
-`author_rotateKeys` RPC call and make sure the call is directed to your validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
-transaction, verify that the keys are in the new CC2 keystore.
+If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. You want to fix this.
+The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your
+validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
+transaction, verify that the keys are in the new CC2 keystore. See more information in the [section below](#generating-session-keys).
+
+After you copy your keystore into the new chains directory, you want to to inject the keys into the memory of the node.
+For this you can use the `author_insertKey` method for each of the four types of keys: 'babe', 'gran', 'imon', and 'para'.
+You can map these keys to the ones in your keystore by parsing the concatenated output of the `rotateKeys` RPC call you
+made the first time. They will be concatenated in order following the below struct declaration:
+
+```rust
+pub struct SessionKeys {
+    #[id(key_types::GRANDPA)]
+    pub grandpa: GrandpaId,
+    #[id(key_types::BABE)]
+    pub babe: BabeId,
+    #[id(key_types::IM_ONLINE)]
+    pub im_online: ImOnlineId,
+    #[id(parachain::PARACHAIN_KEY_TYPE_ID)]
+    pub parachain_validator: parachain::ValidatorId,
+}
+```
+
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys
+> that you made the `setKeys` transaction for then simply run through the process of generating and setting new ones
+> using the `rotateKeys` method below. Better safe than sorry!
 
 Start your node.
 
 ```sh
-./target/release/polkadot
+./target/release/polkadot --pruning=archive
 ```
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
@@ -182,7 +207,7 @@ account contains _at least_ this much. You can, of course, stake more than this.
 KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all
 of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded
-amount requires the bonding duration period to be over (for Kusama, 28 days).
+amount requires the duration of the unbonding  period (on Kusama the unbonding period is 28 days).
 - **Payment destination** - The account where the rewards from validating are sent. More info
 [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
@@ -192,38 +217,53 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 (note: you may need to refresh the screen). The bonded amount on the right corresponds to the funds bonded by the Stash
 account.
 
-## Set the Session Key
+## Set Session Keys
 
-Once your node is fully synced, stop it using Control-C. At your terminal prompt, you will now start your node in
-validator mode.
+Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running
+the node in validator mode with the pruning option set to `archive`.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/release/polkadot --validator --name "name on telemetry" --pruning=archive
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and it will be included
 in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended
 that you choose something likely to be unique.
 
-### Option 1: RPC
+### Generating the Session Keys
+
+You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your
+validator node with your Controller account on Polkadot.
+
+#### Option 1: PolkadotJS-APPS
 
 You can generate your [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the
-client via RPC. If you are doing this, make sure that you have your Polkadot explorer attached to your validator
-(configurable in the Settings tab). If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
-you will need to connect to the endpoint for your validator. You can rotate session keys after connecting Polkadot JS
-to your local node by going to Toolbox and selecting RPC Calls then select the author > rotateKeys() options.
+client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+validator node. You can configure the apps dashboard to connect to the endpoint of your validator in the Settings tab.
+If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you will not be able to use this method
+since making RPC requests to this node would effect the local keystore hosted on a _public node_ and you want to make
+sure you are interacting with the keystore for _your node_.
+
+Once ensuring that you have connected to your node, the easiest way to set session keys for your node is by calling the
+`author_rotateKeys` RPC request to create new keys in your validator's keystore.
+Navigate to Toolbox tab and select RPC Calls then select the author > rotateKeys() option and remember to save the
+output that you get back for a later step.
 
 ![Explorer RPC call](assets/guides/how-to-validate/polkadot-explorer-rotatekeys-rpc.jpg)
 
-### Option 2: CLI
+#### Option 2: CLI
 
-If you are on a remote server, it may be easier to run this command on the same machine instead:
+If you are on a remote server, it is easier to run this command on the same machine (while the node is running with the
+default HTTP RPC port configured):
 
 ```sh
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-The output will have a hex-encoded "result" field. This is an encoding of your four session keys.
+The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this
+result for a later step.
+
+### Submitting the `setKeys` Transaction
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your
 validator with your Controller account.

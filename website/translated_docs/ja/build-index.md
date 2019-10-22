@@ -1,10 +1,8 @@
 ---
 id: build-index
-title: Builders Portal
-sidebar_label: Builders Portal
+title: Builder's Portal
+sidebar_label: Builder's Portal
 ---
-
-_Polkadot is under construction, these documents will likely change._
 
 Welcome to the builders section of the Polkadot wiki.
 
@@ -14,26 +12,27 @@ This section of the wiki is divided into three parts: the first part takes the s
 
 ## Development Guide
 
-- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
-- [Development Roadmap](build-dev-roadmap)
-- [Parachain Development Kits](build-pdk) - Learn about parachain development kits and create your own parachain.
-- [Smart Contracts](build-smart-contracts) - Learn all about smart contracts on Polkadot and Substrate and how to get started today.
+- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain, parathread, or smart contract for your project and what resources are can be used today to get started.
+- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most important tools.
+- [Parachain Development Kits](build-pdk) - PDKs are tool kits for building parachains and parathreads.
+- [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can be deployed to a live chain.
 
 ## Tools
 
 - [Tools](build-tools-index) - Maintained list of tools.
-- [Subkey](build-tools-subkey) - Commandline utility for generating Polkadot/Substrate keys.
+- [Subkey](https://substrate.dev/docs/en/ecosystem/subkey) - Commandline utility for generating x25519 key pairs.
 
 ## Resources
 
-- [Exchange Integration](build-exchange-integration)
-- [Extrinsic Format](build-extrinsic-format)
-- [Networks](build-networks)
-- [Examples](build-examples-index)
-- [Rust Style Guide](build-rust-style-guide)
+- [Exchange Integration](build-exchange-integration) - Guide for how to integrate Polkadot with your exchange.
+- [Examples](build-examples-index) - Example projects sourced from the community-- see what others are building!
 
-## Hackathon
+### PSPs
+
+Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
+
+- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and proposals.
+
+### Hackathon
 
 - [Resources For Running a Hackathon](build-hackathon)
-
-_More coming soon._

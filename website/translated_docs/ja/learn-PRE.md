@@ -4,7 +4,7 @@ title: Polkadot Runtime Environment (PRE)
 sidebar_label: Polkadot Runtime Environment (PRE)
 ---
 
-The Polkadot Runtime Environment is an important component of the Polkadot protocol. It consists of the networking, consensus and Wasm VM and acts as the lower layers of the stack which are underlying the Polkadot runtime and the runtimes of the parachains. Loosely, the Polkadot RE can be thought of as synonymous with the Polkadot relay chain (although as stated below there is a clear separation between the chain logic and the PRE).
+The Polkadot Runtime Environment is an important component of the Polkadot protocol. It consists of the networking, consensus and Wasm VM subsystems, and acts as the lower layers of the stack underlying the Polkadot runtime and the runtimes of the parachains. Loosely, the Polkadot RE can be thought of as synonymous with a virtual machine running the Polkadot relay chain (although as stated below, there is a clear separation between the chain logic itself, and the PRE on which it runs).
 
 The components of the Polkadot RE are:
 

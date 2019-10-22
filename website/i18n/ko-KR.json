@@ -29,41 +29,25 @@
         "title": "Exchange integration",
         "sidebar_label": "Exchange integration"
       },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic Format aka Transaction Format",
-        "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
-      },
       "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "Hackathon"
       },
       "build-index": {
-        "title": "Builders Portal",
-        "sidebar_label": "Builders Portal"
-      },
-      "build-networks": {
-        "title": "Networks",
-        "sidebar_label": "Networks"
+        "title": "Builder's Portal",
+        "sidebar_label": "Builder's Portal"
       },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
-      },
-      "build-rust-style-guide": {
-        "title": "Style Guide for Rust in Polkadot",
-        "sidebar_label": "Style Guide for Rust in Polkadot"
       },
       "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
       },
       "build-tools-index": {
-        "title": "Tools",
-        "sidebar_label": "Tools"
-      },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
+        "title": "Tool Index",
+        "sidebar_label": "Tool Index"
       },
       "community": {
         "title": "Community",
@@ -74,12 +58,12 @@
         "sidebar_label": "Contributing"
       },
       "glossary": {
-        "title": "Terms and Definitions",
-        "sidebar_label": "Terms and Definitions"
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
       },
       "index": {
-        "title": "Polkadot Wiki",
-        "sidebar_label": "Polkadot Wiki"
+        "title": "Wiki Index",
+        "sidebar_label": "Wiki Index"
       },
       "learn-architecture": {
         "title": "Architecture",
@@ -94,12 +78,12 @@
         "sidebar_label": "Bridges"
       },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot vs. Cosmos: Design Comparison",
-        "sidebar_label": "Polkadot vs. Cosmos: Design Comparison"
+        "title": "Design Comparison",
+        "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
         "title": "Polkadot comparisons",
-        "sidebar_label": "Polkadot comparisons"
+        "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
         "title": "Polkadot Consensus",
@@ -121,7 +105,6 @@
         "title": "Governance",
         "sidebar_label": "Governance"
       },
-
       "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
@@ -194,21 +177,29 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "maintain-governance-index": {
-        "title": "Governance",
-        "sidebar_label": "Governance"
+      "maintain-guides-how-to-nominate-alexander": {
+        "title": "Be a Nominator (Alexander)",
+        "sidebar_label": "Be a Nominator (Alexander)"
       },
-      "maintain-guides-how-to-nominate": {
-        "title": "How to nominate",
-        "sidebar_label": "How to nominate"
+      "maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Be a Nominator (Kusama)"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "How to run your node as a `systemd` process",
-        "sidebar_label": "How to run your node as a `systemd` process"
+        "title": "Using systemd for the Validator Node",
+        "sidebar_label": "Using systemd for the Validator Node"
       },
-      "maintain-guides-how-to-validate": {
-        "title": "How to validate",
-        "sidebar_label": "How to validate"
+      "maintain-guides-how-to-validate-kusama": {
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Run a Validator (Kusama)"
+      },
+      "maintain-guides-how-to-validate-alexander": {
+        "title": "Run a Validator (Alexander)",
+        "sidebar_label": "Run a Validator (Alexander)"
+      },
+      "maintain-guides-secure-validator": {
+        "title": "Secure Validator",
+        "sidebar_label": "Secure Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
@@ -218,21 +209,21 @@
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
-      "maintain-validator": {
-        "title": "Node Operator / Validator",
-        "sidebar_label": "Node Operator / Validator"
-      },
       "maintain-nominator": {
         "title": "Nominator",
         "sidebar_label": "Nominator"
       },
+      "maintain-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
+      },
       "news": {
-        "title": "This Week in Polkadot",
-        "sidebar_label": "This Week in Polkadot"
+        "title": "News",
+        "sidebar_label": "News"
       },
       "research": {
-        "title": "Polkadot Research",
-        "sidebar_label": "Polkadot Research"
+        "title": "Research Pages",
+        "sidebar_label": "Research Pages"
       }
     },
     "links": {

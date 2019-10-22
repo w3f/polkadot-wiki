@@ -1,32 +1,32 @@
 ---
 id: index
-title: Polkadot Wiki
-sidebar_label: Polkadot Wiki
+title: Wiki Index
+sidebar_label: Wiki Index
 ---
 
 ![Polkadot Logo](assets/Polkadot_logotype_color.svg)
 
-폴카닷 위키에 오신것을 환영합니다. 여기에서 폴카닷 프로토콜에 대해서 배우고 노드를 구동시켜보고 네트워크를 만들어 볼 수 있습니다. 폴카닷에 대한 소개글을 찾으신다면 [이 링크](learn-introduction)를 참고하세요.
+Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build section](#want-to-build-on-polkadot). If you're interested in operating a node, head on over to the [maintain section](#want-to-run-a-node). And, if you want to learn more then peruse the [learn section](#want-to-learn-more) below.
 
-If you're looking for an introduction on Polkadot please [see here](learn-introduction).
+If you're looking for an introduction to Polkadot please [see here](learn-introduction).
 
-## 좀 더 자료가 필요하시다면
+## Want to learn more?
 
-- [위키 돌아다녀 보기](learn-introduction) - 위키의 정보 섹션을 읽어보세요.
-- [관련된 링크들](learn-relevant-links) - **폴카닷 과 관련된 전반적인 모든 링크들.**
+- [Explore the Wiki](learn-introduction) - Read the informational section of the wiki.
+- [Relevant Links](learn-relevant-links) - **Comprehensive links about Polkadot.**
 
-## 폴카닷 위에서 구현해보고 싶으신 것이 있다면
+## Want to build on Polkadot?
 
-- [Builders Portal](build-index) - build하는데 도움을 줄 도구와 라이브러리들.
-- [스타터 가이드](build-build-with-polkadot) - **Polkadot에서 어떻게 프로젝트를 시작할것인가에 대한 전체적인 개요들.**
+- [Builders Portal](build-index) - Tools, libraries, and resources to help you build.
+- [Starters Guide](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
 
-## 노드 구동을 하고 싶다면
+## Want to run a node?
 
-- [노드 구동하기](maintain-index) - Polkadot network에서 노드를 구동 할 때 필요한 정보들.
+- [Run a Node](maintain-index) - Information covering running a node on the Polkadot network.
 
 ## Resources
 
-- [Community / Ecosystem](community) - Polkadot과 관련된 커뮤니티 들과 채널들.
-- [News](news) - Polkadot의 핫한 주간 뉴스들. 매주 발행됩니다.
-- [Sample Applications](build-examples-index) - Polkadot에서 구현되고 있거나 이미 구현된 샘플 어플리케이션들
-- [Contributing Guide](contributing) - wiki에 기여하기 위해 필요한 규칙들
+- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
+- [News](news) - Links to the hottest news about Polkadot, aggregated every week.
+- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
+- [Contributing Guide](contributing) - Rules for contributing to the wiki.

@@ -1,10 +1,10 @@
 ---
 id: maintain-guides-how-to-validate
-title: How to validate
-sidebar_label: How to validate
+title: 运行验证人 (Alexander)
+sidebar_label: 运行验证人 (Alexander)
 ---
 
-_这个教程将更新到最新测试网_
+__Note: This guide is for the Alexander testnet in the Polkadot repository on the v0.4 branch.__
 
 想成为一个好验证人，你需要留意以下几点:
 
@@ -12,11 +12,11 @@ _这个教程将更新到最新测试网_
 - 确保节点运行最新版本
 - 拥有网络保安知识
 
-如果你有DOT但是没有足够技术知识，你最好也不要当验证人，反而提议把你的DOTs提名到其它你信任的验证人身上去帮你做这个工作。
+如果你有DOT但是没有足够技术知识，你最好也 **不要**当验证人，反而提议把你的DOTs提名到其它你信任的验证人身上去帮你做这个工作。
 
-TODO:你仍然能成为提名人提名多个验证人从而获得奖励。你可以在[这裹](maintain-nominator)了解更多关于提名人的操作。
+你仍然能成为提名人提名多个验证人从而获得奖励。你可以在[这裹](maintain-nominator)了解更多关于提名人的操作。
 
-这个教程我们使用Ubuntu 18.04并将在PoC-4测试网运行，不论你使用那个操作系统，大部份设定也不会有太大区别。另外这里有些[VPS服务器](#vps)给大家选择。
+这个教程我们使用Ubuntu 18.04并将在PoC-4测试网运行，不论你使用那个操作系统，大部份设定也不会有太大区别。另外这里有些[VPS服务器](#vps-list)给大家选择。
 
 _Please make sure that you do **NOT** use this setup and configuration on mainnet. This guide simply walks you through step-by-step how to set up and run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDoS protection, and high availability._
 
@@ -37,13 +37,21 @@ rustup update
 
 ## 安装 `Polkadot` PoC-4
 
-在没有一键安装之前，你需要从源代码编译Polkadot。
+在没有一键安装之前，你需要从源代码编译`Polkadot`。
 
-编译需要一段时间，具体取决于你的硬件。
+**您必须使用特定版本的 nightly 安装 PoC-4.**按照以下说明操作：
 
 ```
+rustup toolchain install nightly-2019-07-14
+rustup default nightly-2019-07-14
+rustup target add wasm32-unknown-unknown --toolchain nightly-2019-07-14
+```
+
+切换到`nightly-2019-07-14`作为默认后，以下指令应该没有问题。
+
+```bash
 git clone https://github.com/paritytech/polkadot.git
-# 如果你是更新节点，可以从这一步开始。
+# To update your node. Run from this step.
 cd polkadot
 cargo clean
 git checkout v0.4
@@ -53,106 +61,95 @@ git pull origin v0.4
 cargo install --path ./ --force
 ```
 
-同步将会需要数小时。 你可以通过[Telemetry](https://telemetry.polkadot.io/#/Alexander)或[PolkadotJS区块浏览器](https://polkadot.js.org/apps/#/explorer)查看最新区块。
+这可能需要一段时间，具体取决于您的硬件!
+
+## 同步链数据
+
+现在，您可以启动 Polkadot 节点。通过执行以下命令开始同步链数据：
 
 ```bash
 polkadot --chain alex
 ```
 
-第一件事你需要做的是新增三个不同帐号来管理资金和操作验证人:
+这至少需要几个小时。
 
-## 同步链数据
-
-TODO:请看[这裹](learn-keys)如果你想了解更多关于以上三个分别和为什么需要它们。
-
-```bash
-polkadot \
---chain alex \
---validator \
---key <SESSION_ACCOUNT_SEED> \
---name <在TELEMETRY显示的名称> \
---telemetry-url ws://telemetry.polkadot.io:1024
-```
-
-TODO:
-
-在PolkadotJS区块浏览器选择 [`Accounts`](https://polkadot.js.org/apps/#/accounts)，再按下`Create account`。
+您可以通过<a href=https://telemetry.polkadot.io/#/Alexander">Telemetry</a>或 [polkadotJS 区块浏览器](https://polkadot.js.org/apps/#/Explorer)来检查当前最高块。
 
 ## 创建帐号
 
-为了简单容易识别帐号起见，建议大家把`Stash`、`Controller`和`Session`命名为(`1337_Stash`, `1337_Controller`, `1337_Session`)。
+To be a validator, you will need three separate accounts for managing your funds, namely `stash`, `controller`, and `session`. If you want to know more about these accounts, please see [here](learn-staking#accounts).
 
-![create account](assets/guides/how-to-validate/polkadot-dashboard-create-account.jpg) Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當创建**Session**密钥時，你必须在`Advanced creation options`选择`ed25519`加密算法作为`Key pair crypto type`。另外确保你选择`Raw Seed`并储存在本地某个地方，因为当你运行验证人时，那个指令需要使用到它。
+![create account](assets/guides/how-to-validate/polkadot-dashboard-create-account.jpg) First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) and click on the `add account` button.
 
-每个帐号，输入密码加密种子(Seed)并按下`Save`。
+To help easily identify your accounts later, make sure to use `stash`, `controller`, and `session` in the names of your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
 
-接下来选择*Create and backup account*储存你的密匙为JSON格式。连同密码一起，这是能够恢复帐户的方法。
+You need to generate three accounts:
 
 1. Stash
 2. Controller
 3. Session
 
-重复以上步骤创建其它帐号之后，你应该看到三个全新帐号。
+You should use `Schnorrkel (sr25519)` for your Stash and Controller accounts and `Edwards (ed25519)` for your Session key.
 
-接下来`Stash`和`Controller`帐号也需要有测试币才能提交交易和参与抵押。而`Session`帐号不需要有DOTs及不建议发送任何币到`Session`，而`Stash`和`Controller`需要有最少100 mDOTs(即0.1 DOTs)的最低金额，另外有多些DOTs允许你作支付交易费用。
+The mnemonic phrase for the Session account needs to be used later in this guide to validate. Make sure you save it safely.
 
 ![backup seed](assets/guides/how-to-validate/polkadot-overview.jpg)
 
 ## 获取测试币
 
-如果以上二个方法不行，你需要在[Polkadot Watercooler聊天室](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)贴下你的地址并请求其它人发给你。只需要贴下一个地址并将接收回来的DOTs发送到其它帐号。
+To continue the following steps, you are required to get some testnet DOTs for the `stash` and `controller` accounts in order to submit transactions and use these DOTs as stake. The `session` account doesn't need any DOTs. See the [DOTs page](learn-DOT#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
 
 ## 绑定 DOTS
 
 现在可以开始设定验证人，首先我们将会做以下步骤：
 
-- Stash
-- Controller
-- Session (必须是 ed25519)
+- Bond the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
+- Select the `controller`. This is the account that will decide when to start or stop validating.
+- Select the `session` account. This is the account whose seed will be used to run the node.
 
-首先前往这里的 [`Staking`](https://polkadot.js.org/apps/#/staking/actions) 页面，你应该会看到你之前所创建的帐号。
+First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- [Polkadot Faucet](https://faucet.polkadot.network) - 在推特发布Tweet附带你的地址，注意每24小时最多能获取300 mDOTs。
-- [Blockxlabs Faucet](https://faucets.blockxlabs.com/polkadot) - 需要电邮登录。
+- **Stash account** - Select your `stash` account, we will bond 100 milliDOTs, make sure it has enough funds.
+- **Controller account** - Select the `controller` account created earlier.
 - **Value bonded** - Enter how many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bond more DOTs later, however, withdrawing any bonded amount requires the bonding duration period to be over (several months at the time of writing).
 - **Payment destination** - Select where the rewards get sent. More info [here](learn-staking#reward-distribution).
 
-TODO:
+正确填写所有内容后，单击`Bond`并签署交易(使用`stash`帐户)。
 
 ## 设定 Session Key
 
-当所有资料填写好后，利用`Stash`帐号按`Bond`并签署交易。
+现在您应该会看到一张新卡，其中带有您的所有帐户。右边的绑定金额与`stash`账户所绑定的资金相对应。
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-set-session-key.jpg)
 
-TODO:
+点击 `Set Session Key`。选择之前创建的`session`帐户，然后单击`Set Session Key`。
 
-## 抵押
+## 验证
 
-选择 `Set Session Key`。
+您现在应该能够看到Session Key的`Validate`和`Nominate`按钮
 
-TODO:
+此时，在验证之前，应确保节点已同步。打开终端机，使用`session`帐户的种子或助记符运行验证人，例如：
 
 ```bash
 polkadot --chain alex --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TELEMETRY
 ```
 
-选择之前建立的 `Session` 帐号并按下 `Set Session Key`。
+Make sure that the address generated from the seed corresponds to your `session` account's address. Don't worry if the last characters diverge, it's just the checksum that has recently changed.
 
-![terminal session key verification](assets/guides/how-to-validate/maintain-seed.jpg)
+![terminal session key verification](assets/guides/how-to-validate/polkadot-node-seed.jpg)
 
-TODO:![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg) TODO:
+要验证您的节点是否处于活动状态并且处于同步状态，请转到[Telemetry](https://telemetry.polkadot.io/#/Alexander)，几秒钟后，将显示您节点的信息。
 
-按下 `Stake`
+如果一切看起来都很好，请在Polkadot UI 中点击`Validate`。
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg) ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
 - **Unstake Threshold** - Set how often you want to be reported offline (and slashed) before being removed from the validator set. A higher value will allow you to be offline more times before being slashed, but you will be slashed more severely.
 - **Reward Commission** - Select how much of the reward you will keep; the rest will be shared among you and your nominators.
 
-之后前往 [Telemetry](https://telemetry.polkadot.io/#/Alexander)，经过数秒后，你的节点资料将会显示出来。
+点击`Validate`。
 
 前往 [Staking apps](https://polkadot.js.org/apps/#/staking) 选择 "Staking Overview"，你应该看到所有运行中的验证人。在最顶部份，你会看到有多少验证人位置空缺和有多少人有意成为验证人。
 
@@ -162,9 +159,9 @@ TODO:![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-vali
 
 **恭喜你！**
 
-> If you want to run your validator as a `systemd` process, see the short guide [here](maintain-guides-how-to-systemd).
+> 如果要将验证器作为`systemd`进程运行，请参阅[此处](maintain-guides-how-to-systemd)简短指南。
 
-TODO:> 如果你想把你验证人程序变成系统程序，你可以看[这个](maintain-guides-how-to-systemd)教学。
+**注意:**随着主网越来越近，您可以估计有更多的空缺位置用于测试。
 
 ## VPS 服务器
 
