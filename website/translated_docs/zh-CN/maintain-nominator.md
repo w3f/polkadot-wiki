@@ -1,18 +1,18 @@
 ---
 id: maintain-nominator
-title: Nominator
-sidebar_label: Nominator
+title: 提名人
+sidebar_label: 提名人
 ---
 
-Nominators secure the relay chain by selecting good validators and staking DOTs.
+提名人通过选择好的验证人和抵押 DOT 来保护中继链。
 
-You may have an account with DOTs and want to earn fresh DOTs. You could do so as validator, which requires a node running 24/7. If you do not have such node or do not want to bother, you can still earn DOTs by nominating another validator.
+您的帐户可能拥有 DOT，并希望赚取新的 DOT。您可以作为验证人执行此操作，这需要全天候24小时运行节点。如果您没有这样的节点或不想费心，您仍然可以通过提名另一个验证人来赚取 DOT。
 
-By doing so, you become a nominator for the validator of your choice. Pick your validator carefully - if they do not behave properly, they will get slashed and you will lose DOTs as well.
+通过这样您就成为选择验证人的提名人。仔细挑选你的验证器人-如果他们有不良的表现，他们将得到惩罚，你也将失去DOT。
 
-While your DOTs are staked by nominating a validator, they are 'locked'. You can receive new DOTs in your account but you cannot stake as validator or transfer DOTs away from your account. You can un-nominate at any time to unlock your funds. Keep in mind that the un-nomination is effective at the next era. Currently, that means you may need to wait up to ~1 hour before the change takes place.
+当您的 DOT 通过提名验证人进行抵押，它们将会是"锁定的"。您可以在您的帐户中接收新的 DOT，但您不能将 DOT 作为验证人抵押，也不能将 DOT 从您的帐户中转移出去。您可以随时取消提名以解绑您的资金。请记住，取消提名在下一个时代是有效的。这意味着目前您可能需要等待长达 一小时才能进行更改。
 
-### Guides
+### 指南
 
-- [Be a Nominator (Alexander)](maintain-guides-how-to-nominate-alexander) - Guide on nominating on the Alexander test network.
-- [Be a Nominator (Kusama)](maintain-guides-how-to-nominate-kusama) - Guide on nominating on the Kusama canary network.
+- [成为提名人 (Alexander)](maintain-guides-how-to-nominate-alexander)- Alexander 测试网络提名指南。
+- [提名人指南 (Kusama)](maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。

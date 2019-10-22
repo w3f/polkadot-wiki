@@ -4,11 +4,11 @@ title: Hackathon
 sidebar_label: Hackathon
 ---
 
-As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
+作为我们在Web3基金会中的目标之一，我们正在推动 [Web3技术栈](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/)，我们想支持任何个人或团队组织黑客活动，让更多的开发者了解你的城市的波尔卡多特/Substal。
 
-We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
+我们不仅为您提供技术资源，而且还可以安排我们团队的人来做具体的技术工作坊和讲解介绍我们的技术，从而帮助参与者可以更快地开启hack开发工作。
 
-## Ideas
+## 一些想法
 
 - NFT
 - Bonded Tokens
