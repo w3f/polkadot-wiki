@@ -1,7 +1,7 @@
 ---
 id: learn-governance
-title: Governance
-sidebar_label: Governance
+title: 治理
+sidebar_label: 治理
 ---
 
 Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相关者的最终要求随着时间而发展。既定目标是确保多数支持者始终可以控制网络。
@@ -27,13 +27,13 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 可以通过以下几种方式之一启动公投：
 
 * 公开提交的提案
-* Proposals submitted by the council, either through a majority or unanimously;
+* 理事会多数或全体一致提交的提案；
 * Proposals submitted as part of the enactment of a prior referendum;
-* Emergency proposals submitted by the Technical Committee and approved by the Council.
+* 技术委员会提交并经理事会批准的紧急提案。
 
 All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
 
-Emergency proposals deal with major problems with the network which need to be "fast-tracked". These will have a shorter enactment time.
+紧急建议涉及网络中的主要问题，需要“快速跟踪”，这将将有一个更短颁布时间。
 
 ### 提议全民公投
 
@@ -47,11 +47,11 @@ Emergency proposals deal with major problems with the network which need to be "
 
 议会(大部分赞成) - 仅需获得多数议会成员的同意即可。(1. Aye投赞成票多过Nay投反对票=接受，2. Nay多过Aye=反对。)
 
-#### Voting Timetable
+#### 投票时间表
 
-Every thirty days, a new referendum will come up for a vote, assuming there are referenda in the queues. There is a queue for Council-approved referenda and a queue for publicly submitted referenda. The referendum to be voted upon alternates between the two queues.
+每三十天举行一次新的全民投票，假定在队列里进行全民投票，这里有一个理事会核准的全民投票队列和公开提案的公民投票队列，全民投票在两个队列之间交替表决。
 
-If the given queue whose turn it is empty, and there are proposals waiting in the other queue, the top proposal in the other queue will become a proposal.
+如果给定的队列轮次为空，并且有提案在另一队列中等待，则另一队列中的顶部提案将变为提案。
 
 除紧急公投外，不能在同一时间对多个公投进行投票。
 
@@ -104,7 +104,7 @@ electorate -网络中 DOT 的总数
 
 ##### Simple-Majority
 
-Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried. $${approve} > {against}$$
+多数票通过，简单比较一下选票，如果赞成票多于反对票，那么提案通过。$${approve} > {against}$$
 
 *要详细了解上述公式的来源，请阅读[民主模块](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs) *。
 
