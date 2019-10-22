@@ -1,55 +1,55 @@
 ---
 id: maintain-guides-how-to-nominate-kusama
-title: Be a Nominator (Kusama)
-sidebar_label: Be a Nominator (Kusama)
+title: 成为提名人 (Kusama)
+sidebar_label: 成为提名人 (Kusama)
 ---
 
-## During Soft Launch
+## 在非正式发布
 
-While Kusama is still in the soft launch phase most of the functionality is disabled besides Staking. This is so that 50 - 100 validators can register their intention to secure the Kusama network by running [validator nodes](maintain-validator). If you do not want to operate a validator node yourself, you can still stake your tokens and earn rewards by _nominating_ to a reputable validator. This guide will walk you through how to do that during the soft launch phase.
+当 Kusama 仍处于在非正式发布阶段时，除了抵押之外，大多数功能都被禁用。 这样一来希望有50至100个验证人来注册通过运行[验证人节点](maintain-validator)其保护Kusama 网络。如果您不想做验证人节点，则仍可以通过<em x-id =“ 4”>提名</em>给信誉良好的验证人来获得奖励。 本指南将引导您逐步在非正式发布阶段的操作。
 
-### Step 1: Bond your tokens
+### 第一步: 绑定代币
 
-During soft launch you will likely only have one account with KSM. This means that your _stash_ and _controller_ accounts will be the same account. After soft launch it is advised to set a new controller on your stash account, but for now this is fine.
+在非正式发布阶段，您可能只有一个KSM帐户。 这意味着您的<em x-id =“ 4”> stash </em>和<em x-id =“ 4”> controller </em>帐户将是同一帐户。 在正式发布之后，建议在您的 stash 帐户上设置一个新的 controller。
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+在 [Polkadot UI](https://polkadot.js.org/apps) 前往 "Staking" 标签
 
-On this tab click on the "Account Actions" button on the top-left of the screen.
+在页面左上角点击 "Account Actions"。
 
-Click the blue "New Stake" button.
+按下蓝色 "New Stake" 按键
 
-You will see a modal window that looks like the below:
+您将看到一个视窗口，如下所示：
 
 ![Bonding](assets/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
 
-As mentioned before, **choose the same account for both controller and stash**.
+如之前所述，**controller 和 stash 选择为同一个帐户**。
 
-Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some left over to transfer later when transfers are enabled. Try to save at least 500 mKSM to cover transferring to a new account and some fees.
+选择 "value bonded" 时，输入一个比您总量 **少**的 KSM 数量，这样，当转帐功能启用后，您还有一些剩余的 KSM 可以转移。 尝试保存至少 500 mKSM，以支付转入新帐户和一些费用。
 
-Choose whatever payment destination sounds good to you. If you're unsure just click "Stash account (increase amount at stake)".
+选择任何您喜欢的付款目的地。 如果您不确定，请选择 "Stash 帐号 (increase amount at stake)"。
 
-### Step 2: Nominate a validator
+### 第二步: 提名验证人
 
-You are now bonded and can nominate up to 16 validators. Be careful about the validators you choose since you will be slashed if your validator commits an offence.
+现在您经已绑定了并且最多可以提名16位验证人。请谨慎选择验证人，因为如果您的验证人做出损害网络行为，您抵押中的 KSM 也将被大幅削减。
 
-Go to the "Staking Overview" tab.
+前往 "Staking Overview" 标签。
 
-The initial Proof-of-Authority validators are currently in the left-hand column. You cannot stake to these validators.
+当前的权威证明验证人显示在左侧栏中。您不能选择这些验证人。
 
-On the right-hand column in the list that's labelled "next up", you will see all of the validators that have signalled their intention to operate genesis validators on Kusama.
+在右列上，显示为 "next up" 的列表中，您将看到所有表示有兴趣成为 Kusama 一开始的验证人。
 
-Pick one (or more) of these validators to nominate and copy their address by clicking on the icon.
+从图标中选择一个(或多个)验证人来提名并复制其地址。
 
 ![Bonding](assets/guides/how-to-nominate/validators.png)
 
-Return to the "Account Actions" screen and you will see your bonded account.
+返回到 "Account Actions" 页面，您将看到绑定的帐户。
 
-Click the "Nominate" button and fill in the blank field with the address of the validator you have chosen.
+按下 "Nominate" 按钮，然后在空白字段中填写所选验证人的地址。
 
-Sign and submit the transaction, and you are now nominating!
+签署并提交交易，您现在经已提名了！
 
-### Step 3: Stop nominating
+### 第五步：停止提名
 
-At some point, you might decide to stop nominating one or more validators.
+在某一刻，您可能决定停止提名一个或多个验证人。
 
-You can do this by clicking the "Stop nominating" button, which will set your account to _chill_ (meaning that it will not do any actions). If you want to start nominating again, just re-do the actions you took in step 2!
+您可以通过按下 "Stop nominating" 按钮来完成此操作，这会将您的帐户设置为* chill *（这意味着您可以不做任何动作）。如果要重新开始提名，只需重新执行在第二步中执行的操作即可！
