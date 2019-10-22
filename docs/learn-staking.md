@@ -104,7 +104,7 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs modified software) in the network. They and their nominators will get slashed by losing a percentage of their bonded/staked DOTs.
 
-As validators have more DOTs staked, they will get slashed more, so we encourage nominators to shift their nominations to less popular validators to reduce the possible losses.
+Validator pools with larger total stake backing them will get slashed more harshly than less popular ones, so we encourage nominators to shift their nominations to less popular validators to reduce the possible losses.
 
 Based on Polkadot's latest codebase, the following slashing conditions have been implemented:
 
