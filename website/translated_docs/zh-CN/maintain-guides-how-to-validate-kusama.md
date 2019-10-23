@@ -1,68 +1,68 @@
 ---
 id: maintain-guides-how-to-validate-kusama
-title: Run a Validator (Kusama)
-sidebar_label: Run a Validator (Kusama)
+title: 成为验证人 (Kusama)
+sidebar_label: 成为验证人 (Kusama)
 ---
 
-This guide will instruct you how to set up a validator node on the Kusama network.
+本指南将指导您如何在 Kusama 网络上设置验证人节点。
 
-## Preliminaries
+## 首先
 
-Running a validator on a live network is a lot of responsibility! You will be accountable for not only your own stake, but also the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
+在主网上运行验证人有很大的责任！你不仅要对自己抵押的 KSM 负责， 还有目前提名你的提名人抵押。如果你犯了一个错误并且被削减，你的钱和声誉 将处于危险之中。但是运行验证人也有非常可观的回报，您为安全性做出了贡献，使网络更分散。
 
-Since security is so important to running a successful validator, you should take a look at the [secure validator](maintain-guides-secure-validator) information to make you understand the factors to consider when constructing your infrastructure. The Web3 Foundation also maintains a [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator) that you can use by deploying yourself. As you progress in your journey as a validator, you will likely want to use this repository as a _starting point_ for your own modifications and customizations.
+由于安全性对运行验证人至关重要，因此您最好看一下[设定安全验证人](maintain-guides-secure-validator) 资料使您了解在构建网络架构时要考虑的要素。 Web3 基金会也 会保持更新[安全验证人设置的参考](https://github.com/w3f/polkadot-secure-validator)使您也可以自己部署来使用。随着您成为验证人愈长时间，您可能使用此库作为自己的_起点_进行修改和自定义。
 
-If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
+如果您需要帮助，请在[Kusama 验证人聊天室](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) 发问。(而中文朋友可以在微信群找 anson) 团队和其他验证人在那里帮助回答问题并提供协助。如果您还有更重要的建议，您可以在[ Kusama论坛](https://forum.kusama.network)提交。
 
-**Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node instead.
+**警告: ** 验证人抵押中的 KSM 都有可能遭到大幅削减(惩罚)，这意味着不安全或设置不当可能会导致 KSM 丢失！ 如果您对运行验证人节点的能力不太确定，那最好建议把您的KSM 提名给你信任的验证人节点。
 
-## Initial Set-up
+## 初始设置
 
-### Requirements
+### 要求
 
-You will likely run your validator on a cloud server running Linux. You may choose whatever [VPS](#vps-list) provider that your prefer, and whatever operating system you are comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be similar for other platforms.
+您可以选择任何你喜欢我[ VPS ](#vps-list)服务器以及任何操作系统。在本指南中我们将使用** Ubuntu 18.04 ** ，但其它系统的设定也应类似。
 
-You will not need a very powerful machine to run your validator, but you should be aware of the resource constraints. The most important resource for your validator node is networking bandwidth, followed by its storage and memory capabilities. The bare minimum requirements for a machine to run a validator are as follows:
+您并不需要非常强大的电脑运行验证人，但是您应该意识到资源限制。验证人节点最重要的资源是网络带宽，其次是存储和内存功能。对运行验证人节点的计算机最低要求如下:
 
-- **Storage:** 40GB - 80GB. Kusama doesn't have very heavy storage requirements yet so something in this range will be fine, just keep in mind you may have to upgrade it later if the chain state becomes very big.
-- **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill.
-- **CPU:** 1 - 2. One CPU is okay, but 2 is better. Again, this is a performance preference.
+- **存储:** 40GB - 80GB。 Kusama 对存储空间的要求不是很高，因此这范围经已可以满足所需要的要求，请记住如果链的存储持续增加，则可能需要稍后对其进行升级。
+- <strong x-id =“ 1”>内存:</strong> 2GB - 8GB。2GB 实际上是运行验证人最低的要求，小于 2GB 会使构建时间更长。 为了有更好性能，您可以将其提高到 4GB 或 8GB。
+- ** 中央处理器:** 1 - 2。一个 CPU 是可以，但是2个更好。 同样地这是一种性能偏好。
 
-On most cloud service providers, these specs are usually within the $10 - $20 per month range.
+在大多数云服务提供商中，这些规格通常在每月 $10 到 $20 美元之间。
 
-### Install Rust
+### 安装 Rust
 
-Once you choose your cloud service provider and set-up your new server, the first thing you will do is install Rust.
+选择云端服务供应商并设置新服务器后，第一件您要做的事就是安装 Rust。
 
-If you have never installed Rust, you should do this first. This command will fetch the latest version of Rust and install it.
+如果您从未安装过 Rust，则应先执行此指令。该指令将下载最新版本的 Rust 并 安装。
 
 ```sh
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-Otherwise, if you have already installed Rust, run the following command to make sure you are using the latest version.
+相反如果您已经安装了 Rust，请运行以下指令以确保您使用的是最新版本。
 
 ```sh
 rustup update
 ```
 
-Finally, run this command to install the necessary dependencies for compiling and running the Kusama node software.
+最后运行此指令以安装必要的相关依赖，以编译和运行 Kusama 节点。
 
 ```sh
 sudo apt install make clang pkg-config libssl-dev build-essential
 ```
 
-Note - if you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the following equivalent command INSTEAD of the previous one:
+注意 - 如果您使用的是 OSX，并且已安装[ Homebrew ](https://brew.sh)，则可以执行以下指令而不是之前的指令：
 
 ```sh
 brew install cmake pkg-config openssl git llvm
 ```
 
-### Building and Installing the `polkadot` Binary
+### 生成和安装 `polkadot `
 
-You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.6** branch.
+您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.6 **分支中构建 ` polkadot ` 二进制文件。
 
-> Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
+> 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
@@ -72,48 +72,49 @@ git checkout v0.6
 cargo build --release
 ```
 
-This step will take a while (generally 15 - 30 minutes, depending on your hardware).
+这一步将需要一段时间（通常需要 15 - 30 分钟，具体取决于您的硬件）。
 
-If you are interested in generating keys locally, you can also install `subkey` from the same directory. You may then take the generated `subkey` executable and transfer it to an air-gapped machine for extra security.
+如果您想在本地生成密钥，您还可以在同一目录安装` subkey `。 然后您可以把生成好的` subkey `可执行文件，并将其转移到与世隔绝的电脑中，以提高安全性。
 
 ```sh
 cargo install --force --git https://github.com/paritytech/substrate subkey
 ```
 
-### Synchronize Chain Data
+### 同步链数据
 
-> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+> **注意：**验证人节点必须以 archive 模式同步以避免被惩罚。如果您已经同步好，您必须首先运行` polkadot purge-chain `删除之前的数据库，然后确保使用` --pruning=archive `运行 Polkadot。
 
-#### New to the Network
+#### 第一次运行 Kusama 网络
 
-If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the following command:
+如果您没有在 Kusama CC1 上运行的验证人，则可以通过执行以下指令开始同步：
 
 ```sh
 ./target/release/polkadot --pruning=archive
 ```
 
-#### Previous Kusama CC1 Validator
+#### 之前 Kusama CC1 的验证人
 
-Before synchronizing the the CC2 chain data, you will need to copy your previous keystore to the new chain id in order to use the previously set session keys. If you do not do this, you will need to generate and set your session keys again.
+在同步 CC2 链数据之前，您需要将以前的 keystore 复制到新的链 Id，以便使用先前设置的 session 密钥。 如果您不这样做，您需要再次生成 session 密钥并设置。
 
-Kusama CC1 and Kusama CC2 have different default data directories, usually located in the `$HOME/.local/share/polkadot/chains` directory on Linux based machines. For example, the default directory for Kusama CC1 is `$HOME/.local/share/polkadot/chains/ksma/keystore` while CC2 keys are located in `$HOME/.local/share/polkadot/chains/ksmcc2/keystore`.
+Kusama CC1 和 Kusama CC2 具有不同的默认数据目录，通常位于基于 Linux 上的` 
+ $HOME/.local/share/polkadot/chains `目录中。 例如 Kusama CC1 默认目录为` $HOME/.local/share/polkadot/chains/ksma/keystore `，而 CC2 密钥位于` $HOME/.local/share/polkadot/chains/ksmcc2/keystore `。
 
-You can easily generate the default keystore for CC2 by first starting to sync and exiitng out of your node client.
+首先开始同步节点并退出节点客户端，这样做您可以轻松生成 CC2 的默认 keystore。
 
 ```sh
 ./target/release/polkadot
-# Wait a few seconds for it to start up and create the data directory then press `ctrl-c`.
+# 待启动数秒后，它会创建数据资料夹，之后再按下 `ctrl-c`。
 ```
 
-Now you can copy your old session keys into the new CC2 keystore with the next command:
+现在您可以使用以下指令将旧的 session 密钥复制到新的 CC2 keystore 中：
 
 ```sh
 cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
 ```
 
-If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. You want to fix this. The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys` transaction, verify that the keys are in the new CC2 keystore. See more information in the [section below](#generating-session-keys).
+如果 keystore 是空，则意味着节点没有在 CC1 链中创建密钥。 解决此问题最好的方法是调用 ` author_rotateKeys ` RPC 并确保将调用指向到您的 验证人节点(而不是 Polkadot JS 默认的连接 或 其它节点)。 在提交` setKeys `交易之前，请验证密钥是否在新的 CC2 keystore 中。在下面的[部分](#generating-session-keys)中查看更多信息。
 
-After you copy your keystore into the new chains directory, you want to to inject the keys into the memory of the node. For this you can use the `author_insertKey` method for each of the four types of keys: 'babe', 'gran', 'imon', and 'para'. You can map these keys to the ones in your keystore by parsing the concatenated output of the `rotateKeys` RPC call you made the first time. They will be concatenated in order following the below struct declaration:
+把 keystore 复制到新链的目录后，密钥将会注入到节点的内存中。为此您可以使用 ` author_insertKey `方法生成：'babe'，'gran'，'imon' 和 ' para' 四种类型的密钥。您可以通过 ` rotateKeys ` RPC 调用，把这些 keys 映射到 keystore 中。它们将按照以下 struct 声明的顺序连接：
 
 ```rust
 pub struct SessionKeys {
@@ -128,127 +129,127 @@ pub struct SessionKeys {
 }
 ```
 
-> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction for then simply run through the process of generating and setting new ones using the `rotateKeys` method below. Better safe than sorry!
+> **注意:** session 密钥在共识中是很关键，因此如果不确定节点是否有执行 ` setKeys ` 具有设定好的 session 密钥，最简单方法是生成和设置多一次，使用下面 ` rotateKeys ` 方法。小心驶得万年船！
 
-Start your node.
+启动您的节点。
 
 ```sh
 ./target/release/polkadot --pruning=archive
 ```
 
-Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
+根据当时链的大小，此一步可能需要几分钟到几个小时不等。
 
-If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC2) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+如果您想估计还需要再多少时间，服务器日志（在 ` polkadot ` STDOUT 程序中显示）显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Kusama%20CC2)或当前 [ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
 
-> **Note:** If you do not already have KSM, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of KSM to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with KSM, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
+> **注意:** 如果您还没有 KSM，您只能做到这一步，直至升级到 PoS 之后。您仍然可以运行节点，但是因为在非正式发布期间轉帳是不能使用，所以您需要少数量 KSM 才能继续操作。 在 NPoS 开始之前，即使有 KSM 的人也只能表达他们_有意_成为验证人，他们现在是无法成为验证人。
 
-## Bond KSM
+## 绑定 KSM
 
-For the soft launch period, since transfers are disabled, you will set your Controller and Stash account to be the same account. If you have two accounts with KSM, the recommended method is to still have the Controller and Stash different accounts. Once the network is operating with PoS, you will be able to re-configure your controller to have separate controller and stash accounts.
+在非正式发布期间，由于转帐不能使用，所以您需要将 Controller 和 Stash 帐户设置为 相同的帐户。如果您有两个帐户同时也有 KSM，建议的做法仍然是把 Controller 和 Stash 分开成不同的帐户。当网络升级到 PoS 后，您可以重新设置 Controller，使二个帐户分隔开。
 
-Make sure not to bond all your KSM balance since the latest codebase in Kusama CC2 does not allow to use the bonded balance to pay transaction fees.
+确保不要绑定所有 KSM，因为在 Kusama CC2 最新代码中不允许使用绑定的 KSM 作支付交易费用。
 
-It is now time to set up our validator. We will do the following:
+现在是时候设置我们的验证人了。 我们将执行以下操作：
 
-- Bond the KSM of the Stash account. These KSM will be put at stake for the security of the network and can be slashed.
-- Select the Controller. This is the account that will decide when to start or stop validating.
+- 绑定 Stash 帐户的KSM。 这些抵押中的 KSM 是为了保护网络的安全，并可以大幅削减(惩罚)。
+- 选择 Controller，Controller 是决定何时开始或停止验证的帐户。
 
-First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on "Account Actions", and then the "New stake" button.
+首先，进入[ Staking ](https://polkadot.js.org/apps/#/staking/actions)部分。按下"Account Actions"，然后再按 "New stake" 按钮。
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
-- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of KSM in order to start and stop validating.
-- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding  period (on Kusama the unbonding period is 28 days).
-- **Payment destination** - The account where the rewards from validating are sent. More info [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
+- **Stash account** -选择 Stash 账户。在这个例子我们会绑定 100 milliKSMs - 确保你的 Stash 帐户拥有_至少_这个数量。当然你也可以绑定更多。
+- **Controller account** - 选择你之前创建的 Controller 帐号。此帐户也需要少量 KMS 才能开始和停止验证。
+- **Value bonded** - 选择从 Stash 帐号绑定/抵押 KSM 数量， 因为你需要支付交易费，所以不能够把全部 KSM 作押抵。另外你之后还可以绑定_更多_。但是_提取_ 已经绑定了的 KSM 是需要等待一段时间 (Kusama 解绑时间是28天)。
+- **Payment destination** - 把奖励发送到那个帐戶，详情请看[这里](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution)。
 
-Once everything is filled in properly, click `Bond` and sign the transaction with your Stash account.
+当所有资料填写好后，使用 Stash 帐号按下`Bond`并签署交易。
 
-After a few seconds, you should see an "ExtrinsicSuccess" message. You should now see a new card with all your accounts (note: you may need to refresh the screen). The bonded amount on the right corresponds to the funds bonded by the Stash account.
+几秒钟后您应该看到 "ExtrinsicSuccess" 信息。 现在您应该会看到包含所有帐户的新卡 (注意：您可能需要重新整理页面)。 右侧的保证金金额对应于 Stash 的绑定帐户。
 
-## Set Session Keys
+## 设置 Session 密钥
 
-Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with the pruning option set to `archive`.
+同步好节点后，按下 Ctrl-C 停下节点。使用` archive ` 模式开始运行验证人。
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry" --pruning=archive
 ```
 
-You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique.
+您可以为验证者人改任何名称，但其他人也可以看到。该名称也会显示在 telemetry 服务器里。由于多人也在使用 telemetry，因此建议您的名称尽可能独特一点。
 
-### Generating the Session Keys
+### 生成 Session 密钥
 
-You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator node with your Controller account on Polkadot.
+您需要通过签名并提交交易设定 Session 密钥。这就是用来与您的验证节点和 Controller 帐户连接起来。
 
-#### Option 1: PolkadotJS-APPS
+#### 第一个选项: PolkadotJS-APPS
 
-You can generate your [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator node. You can configure the apps dashboard to connect to the endpoint of your validator in the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you will not be able to use this method since making RPC requests to this node would effect the local keystore hosted on a _public node_ and you want to make sure you are interacting with the keystore for _your node_.
+您可以使用客户端通过 RPC 生成[ Session 密钥](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key)。 如果执行此操作，确保已将 PolkadotJS-Apps 浏览器连接到验证人节点。 您可以在 "Settings" 标签中将应用程序设置连接到验证人的地址。如果您连接到 Web3 Foundation 的 Parity 托管的地址，则不能使用此方法，因为向该节点发出 RPC 请求是_公开节点_上托管的 keystore，因此您需要确认正在与_您的节点_的 keystore 连接。
 
-Once ensuring that you have connected to your node, the easiest way to set session keys for your node is by calling the `author_rotateKeys` RPC request to create new keys in your validator's keystore. Navigate to Toolbox tab and select RPC Calls then select the author > rotateKeys() option and remember to save the output that you get back for a later step.
+一旦确定已连接到节点，最简单为节点设置 session 密钥的方法是调用 ` author_rotateKeys ` RPC 请求在验证人的 keystore 中创建新密钥。前往到工具箱选项卡并调用 RPC，然后选择 author > rotateKeys() 选项并记住保存回传结果。
 
 ![Explorer RPC call](assets/guides/how-to-validate/polkadot-explorer-rotatekeys-rpc.jpg)
 
-#### Option 2: CLI
+#### 第二个选项: CLI
 
-If you are on a remote server, it is easier to run this command on the same machine (while the node is running with the default HTTP RPC port configured):
+如果您在远程服务器上，运行此指令在同一台电脑上会更容易(当节点是运行中并且配置默认HTTP RPC 端口):
 
 ```sh
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this result for a later step.
+结果将是十六进制编码的 "result"。這结果是四个公钥的合并。保存结果供后续使用。
 
-### Submitting the `setKeys` Transaction
+### 提交` setKeys `交易
 
-You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator with your Controller account.
+您需要通过签名并提交交易设定你的 Session 密钥。 这就是把您的 Controller 帳戶与验证人连接起来。
 
-Go to [Staking > Account Actions](https://polkadot.js.org/apps/#/staking/actions), and click "Set Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys` in the field and click "Set Session Key".
+前往 [ Stake > Account Actions](https://polkadot.js.org/apps/#/staking/actions)，然后在您先前生成的绑定(Stash)帐户。 按下 "Set Session Key" 之后输入之前在` author_rotateKeys `的结果。
 
 ![staking-change-session](assets/guides/how-to-validate/set-session-key-1.jpg) ![staking-session-result](assets/guides/how-to-validate/set-session-key-2.jpg)
 
-Submit this extrinsic and you are now ready to start validating.
+提交交易，现在您可以开始验证了。
 
-## Validate
+## 验证
 
-To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC1) and find your node. Note that this will show all nodes on the Kusama network, which is why it is important to select a unique name!
+要核实您的节点是否处于运行状态并已同步，前往[Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC1) 并找您的节点。注意: 这里显示 Kusama 网络上的所有节点，因此拥有一个独一无二的名字很重要。
 
-If everything looks good, go ahead and click on "Validate" in Polkadot UI.
+如果一切看起来顺利，请继续操作，在 Polkadot UI 中按下 "Validate"。
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg) ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
-- **Payment preferences** - Rewards you will keep, the rest will be shared among you and your nominators.
+- **Payment preferences** - 验证人会先取下这里设定的奖励，余下那些将会与提名你的人按比例分配。
 
-Click "Validate".
+按下 "Validate"。
 
-If you go to the Staking tab, you should see a list of active validators currently running on the network, as well as any nodes that have signaled their intention to be validators but have not yet been selected as being part of the current validator set. At the top of the page, it shows how many validator slots are available and how many nodes are intended to be a validator.
+前往 Staking 页面，你应该看到所有在网络中运行的验证人和所有侯选验证人节点。在最顶部份，你会看到有多少验证人位置空缺和有多少人有意成为验证人。
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
 
-Your node will be shown in the *next up* queue. During the [soft launch](#soft-launch) period, there will be no era changes, and your node will remain in the queue until the transition to the Proof-of-Stake validator selection.
+您的节点将会在 *next up* 队列显示，在[非正式发表发布](#soft-launch)期间，era 是不会改变和你的节点将会保持在等待队列中直至转换成 PoS 网络运行验证人算法。
 
-**After soft launch:** The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _next up_ queue. If your validator is not selected to become part of the validator set, it will remain in the _next up_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of KSMs staked or seek out nominators for your validator in order to join the validator set.
+**升级 PoS 后:** 验证人竞选在每个 era 也会重新运行。当下一个 era 如果有位置空缺并且您的节点成功成为验证人，您的节点将会正式成为验证人。在此之前它将停留在 _next up_队列中。如果您的节点沒有成功成为验证人，它将会一直停留在_ next up _队列中排队。你不需要重新启动它。但是为了成为验证人，你可能需要增加抵押 KSM 的数量或寻找提名人支持你的节点。
 
-## Soft Launch
+## 非正式发布
 
-When Kusama launches, it will be a Proof-of-Authority network, with nodes run by the Web3 Foundation. After having a sufficient _next up_ queue (50-100 validators), the network will upgrade to NPoS and allow validators into the validator set based on their stake.
+当 Kusama 启动时，它将成为一个权威证明(Proof-of-Authority) 网络，由 Web3 Foundation 运行节点。當具有足够的 _next up_ 队列（50-100 个验证人）之后，网络将升级到 PoS 并允许验证人根据其抵押竞选成为验证人。
 
-**Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Kusama validator! If you need help, reach out on the [Kusama forum](https://forum.kusama.network/) or in the [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
+**恭喜你!** 如果你有按照以上步骤操作，你经已设定好 Kusama 网络的验证人！若果你需要帮助，请前往 [Kusama 论坛](https://forum.kusama.network/) 或 [Kusama 验证人聊天室](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)。
 
-## FAQ
+## 常见问题
 
-### Why am I unable to synchronize the chain with 0 peers?
+### 为什么我无法同步链？
 
 ![zero-peer](assets/guides/how-to-validate/polkadot-zero-peer.jpg)
 
-Make sure to enable `30333` libp2p port. Eventually, it will take a little bit of time to discover other peers over the network.
+确保 libp2p 端口 `30333` 打开，可能需要一点时间发现网络上其它的 peers。
 
-### How do I clear all my chain data?
+### 如何清除链的所有数据？
 
 ```sh
 ./target/release/polkadot purge-chain
 ```
 
-## VPS List
+## 云端服务器
 
 * [OVH](https://www.ovh.com.au/)
 * [Digital Ocean](https://www.digitalocean.com/)
@@ -257,9 +258,9 @@ Make sure to enable `30333` libp2p port. Eventually, it will take a little bit o
 * [Contabo](https://contabo.com/)
 * [Scaleway](https://www.scaleway.com/)
 
-## Using Docker
+## 使用 Docker
 
-If you have Docker installed, you can use it to start your validator node without needing to build the binary. You can do this with a simple one line command:
+如果安装了 Docker，则可以使用它启动验证人节点，而无需要构建二进制文件。您可以使用简单的指令执行：
 
 ```sh
 $ docker run parity/polkadot:v0.5.0 --validator --name "name on telemetry"
