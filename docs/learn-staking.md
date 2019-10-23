@@ -76,7 +76,7 @@ The second point to note is that each validator candidate is free to name their 
 
 There are two different accounts for managing your funds: `Stash` and `Controller`.
 
-![staking](assets/NPoS/staking-keys_new.png)
+![staking](assets/NPoS/staking-keys_stash_controller.png)
 
 * **Stash:** This account holds funds bonded for staking, but delegates some functions to a Controller. As a result, you may actively participate with a Stash key kept in a cold wallet, meaning it stays offline all the time. You can also designate a Proxy account to vote in [governance](./learn-governance) proposals.
 * **Controller** This account acts on behalf of the Stash account, signalling decisions about nominating and validating. It set preferences like payout account and commission. If you are a validator, it also sets your [session keys](learn-keys#session-keys). It only needs enough funds to pay transaction fees.
