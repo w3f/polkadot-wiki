@@ -74,14 +74,13 @@ The second point to note is that each validator candidate is free to name their 
 
 ## Accounts
 
-There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts.
+There are two different accounts for managing your funds: `Stash` and `Controller`. The latter sets your [Session keys](learn-keys#session-keys).
 
-![staking](assets/NPoS/staking-keys.png)
+![staking](assets/NPoS/staking-keys_new.png)
 
 * **Stash:** This account holds funds bonded for participation, but delegates its staking and governance functions to controller and proxy keys. As a result, you may actively participate with a stash key kept in a cold wallet, meaning it stays offline all the time. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
-* **Controller** This account acts on behalf of the stash account, signalling decisions about nominating and validating. It also sets validator preferences like session keys, payout account, and commission. It only needs enough funds to pay transaction fees.
+* **Controller** This account acts on behalf of the stash account, signalling decisions about nominating and validating. It also sets validator preferences like [session keys](learn-keys#session-keys), payout account, and commission. It only needs enough funds to pay transaction fees.
 * **Proxy** This account participates in governance on behalf of its stash account. Again, it only needs enough funds to post vote transactions.
-* **Session** Session keys are not account keys, but instead consist of several different key types used by validator nodes for different functions. A validator operator first certifies their session keys with their controller key. We recommend handling session keys using only your node's RPC interface because if session keys exist elsewhere then you might equivocate and be slashed. We still support the legacy `--key` parameter for testnets like Alexander.
 
 We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key. As a rule, you lose security anytime you use one key for multiple roles, or even if you use keys related by derivation. You should never use any account key for a "hot" session key in particular.
 
