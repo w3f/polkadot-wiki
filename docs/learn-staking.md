@@ -74,7 +74,7 @@ The second point to note is that each validator candidate is free to name their 
 
 ## Accounts
 
-There are two different accounts for managing your funds: `Stash` and `Controller`. The latter sets your [Session keys](learn-keys#session-keys).
+There are two different accounts for managing your funds: `Stash` and `Controller`.
 
 ![staking](assets/NPoS/staking-keys_new.png)
 
