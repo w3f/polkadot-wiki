@@ -89,7 +89,7 @@ You need to generate three accounts:
 2. Controller
 3. Session
 
-You should use `Schnorrkel (sr25519)` for your Stash and Controller accounts and `Edwards (ed25519)` for your Session key.
+You can use either sr25519 or ed25519 for your Stash and Controller keys and must use `Edwards (ed25519)` for your Session key.
 
 The mnemonic phrase for the Session account needs to be used later in this guide to validate. Make sure you save it safely.
 
