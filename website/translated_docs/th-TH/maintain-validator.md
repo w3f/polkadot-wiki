@@ -1,36 +1,37 @@
 ---
 id: maintain-validator
-title: Validator
-sidebar_label: Validator
+title: ผู้ตรวจสอบ (Validator)
+sidebar_label: ผู้ตรวจสอบ (Validator)
 ---
 
-Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
+ผู้ตรวบจสอบดูแลความปลอดภัยของรีเลย์เชนโดยการวาง DOT เป็นหลักประกัน ตรวจสอบหลักฐานที่ได้จากผู้ตรวจทาน (Collators) และหาฉันทามติร่วมกันกับผู้ตรวจสอบท่านอื่น
 
-These participants will play a crucial role in adding new blocks to the Relay Chain and, by extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay Chain.
+ผู้เข้าร่วมเหล่านี้จะมีบทบาทสำคัญในการเพิ่มบล็อกใหม่ในรีเลย์เชน และส่งผลกระทบไปยังพาราเชนทั้งหมด เหตุนี้ทำให้ฝ่ายต่างๆสามารถทำธุรกรรมระหว่างเชนผ่านรีเลย์เชนได้
 
-Validators perform two functions. First, verifying that the information contained in an assigned set of parachain blocks is valid (such as the identities of the transacting parties and the subject matter of the contract). Their second role is to participate in the consensus mechanism to produce the Relay Chain blocks based on validity statements from other validators. Any instances of non-compliance with the consensus algorithms result in punishment by removal of some or all of the validator’s staked DOTs, thereby discouraging bad actors. Good performance, however, will be rewarded, with validators receiving block rewards (including transaction fees) in the form of DOTs in exchange for their activities.
+ผู้ตรวจสอบทำหน้าที่สองอย่าง อย่างแรกคือการตรวจสอบว่าข้อมูลที่อยู่บล็อกของกลุ่มพาราเชนที่ได้รับมอบหมายนั้นถูกต้อง (เช่นข้อมูลประจำตัวของฝ่ายที่ทำธุรกรรมและสาระสำคัญของสัญญา) อย่างที่สองคือการมีส่วนร่วมในการหาฉันทามติเพื่อสร้างบล็อกของรีเลย์เชนตามข้อความรับรองความถูกต้องจากผู้ตรวจสอบท่านอื่น ใครที่ไม่ปฏิบัติตามอัลกอริทึมฉันทามติจะถูกลงโทษโดยการถูกยึด DOTs บางส่วนหรือทั้งหมดที่ผู้ตรวจสอบวางประกันไว้เพื่อกีดกันการกระทำความผิด อย่างไรก็ตาม หากผลงานดีจะได้รับผลตอบแทน ผู้ตรวจสอบจะได้รับรางวัลจากบล็อค (รวมถึงค่าธรรมเนียมการทำธุรกรรม) ในรูปแบบของ DOT เพื่อแลกเปลี่ยนกับการทำความดีของพวกเขา
 
-## Guides
+## คู่มือแนะนำ
 
-- [How to Validate on Alexander](maintain-guides-how-to-validate-alexander) - Guide on how to set up a validator on the Alexander testnet.
-- [How to Validate on Kusama](maintain-guides-how-to-validate-kusama) - Guide on how to set up a validator on the Kusama canary network.
-- [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the validator payout mechanism works.
-- [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
+- [วิธีการตรวจสอบบน Alexander](maintain-guides-how-to-validate-alexander) - คู่มือแนะนำในการตั้งค่าโหนดตรวจสอบบนเครือข่ายทดลอง Alexander
+- [วิธีการตรวจสอบบน Kusama](maintain-guides-how-to-validate-kusama) - คู่มือแนะนำในการตั้งค่าโหนดตรวจสอบบนเครือข่าย Kusama
+- [หลักการจ่ายเงินให้ผู้ตรวจสอบ](maintain-guides-validator-payout) - บทความแนะนำเกี่ยวกับการทำงานของกลไกการจ่ายเงินให้ผู้ตรวจสอบ
+- [วิธีการรันโหนดตรวจสอบโดยใช้ systemd](maintain-guides-how-to-systemd) - คู่มือแนะนำการรันโหนดโดยใช้`systemd` เพื่อที่จะให้โหนดทำงานในพื้นหลังและรันอัตโนมัติเมื่อปิดเปิดเครื่องใหม่
 
-## Other References
+## เอกสารอ้างอิง
 
-- [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
-- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://hackernoon.com/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
-- [Getting Testnet DOTs](learn-DOT#getting-testnet-dots)
-- [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
-- [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
+- [วิธีรันโหนด Polkadot โดยใช้ Docker](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
+- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://hackernoon.com/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - บทความที่ให้รายละเอียดเกี่ยวกับวิธีสร้างระบบเพื่อรันโหนดตรวจสอบที่เสถียรและทนทานต่อข้อบกพร่อง
+- [วิธีการขอ DOTs บนเครือข่ายทดลอง](learn-DOT#getting-testnet-dots)
+- [ลิสต์ VPS](maintain-guides-how-to-validate-kusama#vps-list)
+- [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - ห้องแชทสำหรับสนทนาเกี่ยวกับการเป็นผู้ตรวจสอบ
+- [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
 
-## Security / Key Management
+## ความปลอดภัย / การจัดการดูแลคีย์
 
-- [Validator Security Overview](https://github.com/w3f/validator-security)
+- [ภาพรวมเกี่ยวกับความปลอดภัยของผู้ตรวจสอบ](https://github.com/w3f/validator-security)
 
-## Monitoring Tools
+## เครื่องมือตรวจสอบ
 
-- [Polkadot Telemetry Service](https://telemetry.polkadot.io/#/Alexander) - Network information, including what nodes are running on a given chain, what software versions they are running, and sync status.
-- [Polkadash](http://polkadash.io/) - Validator monitor.
-- [Other Useful Links](https://forum.web3.foundation/t/useful-links-for-validators/20)
+- [Polkadot Telemetry Service](https://telemetry.polkadot.io/#/Alexander) - ข้อมูลเครือข่าย รวมถึงข้อมูลว่าโหนดใดบ้างที่ทำงานบนเครือข่ายที่ระบุ รุ่นซอฟต์แวร์ที่ใช้งานอยู่ และสถานะการ sync
+- [Polkadash](http://polkadash.io/) - เครื่องมือตรวจสอบ
+- [ลิงค์ที่มีประโยชน์อื่น ๆ](https://forum.web3.foundation/t/useful-links-for-validators/20)
