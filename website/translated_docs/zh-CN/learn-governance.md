@@ -190,7 +190,7 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 
 为了选新的议会成员，Polkadot使用`approval voting`方法来允许代币持有人选择他们想要支持的候选人名单，并且权重相等，而获得票数最多的候选人赢得选举，而最高的N名亚军仍保留在下次选举的候选人名单上。
 
-基本上，为了代替一人一票，[Approval voting](https://en.wikipedia.org/wiki/Approval_voting) 是表达他们观点的一种更具表达力的方式。 代币持有人可以将其视为布尔投票，以支持他们尽可能多的候选人。
+基本上，为了代替一人一票，[Approval voting(同意投票)](https://en.wikipedia.org/wiki/Approval_voting) 是表达他们观点的一种更具表达力的方式。 代币持有人可以将其视为布尔投票，以支持他们尽可能多的候选人。
 
 让我们看下面的例子。
 
