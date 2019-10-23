@@ -78,7 +78,7 @@ There are two different accounts for managing your funds: `Stash` and `Controlle
 
 ![staking](assets/NPoS/staking-keys_new.png)
 
-* **Stash:** This account holds funds bonded for participation, but delegates its staking and governance functions to controller and proxy keys. As a result, you may actively participate with a stash key kept in a cold wallet, meaning it stays offline all the time. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
+* **Stash:** This account holds funds bonded for staking, but delegates some functions to a Controller. As a result, you may actively participate with a Stash key kept in a cold wallet, meaning it stays offline all the time. You can also designate a Proxy account to vote in [governance](./learn-governance) proposals.
 * **Controller** This account acts on behalf of the stash account, signalling decisions about nominating and validating. It also sets validator preferences like [session keys](learn-keys#session-keys), payout account, and commission. It only needs enough funds to pay transaction fees.
 * **Proxy** This account participates in governance on behalf of its stash account. Again, it only needs enough funds to post vote transactions.
 
