@@ -6,47 +6,47 @@ sidebar_label: Glossary
 
 ## Alexander
 
-The most up-to-date testnet for Polkadot.
+Testnet ตัวล่าสุดของ Polkadot
 
-## Block
+## บล็อก (Block)
 
-A collection of data, such as transactions, that together indicate a state transition of the blockchain.
+สิ่งที่รวบรวมข้อมูลเช่นธุรกรรมที่บ่งบอกถึงการเปลี่ยนสถานะของบล็อกเชน
 
-## Block explorer
+## เครื่องมือสำรวจบล็อก (Block Explorer)
 
-An application which allows a user to explore the different blocks on a blockchain.
+แอปพลิเคชั่นที่ช่วยให้ผู้ใช้สำรวจข้อมูลของบล็อกต่าง ๆ บนบล็อกเชน
 
 ## BLS
 
-Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a diverse array of signature aggregation options far beyond any other known signature scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
+ลายเซ็นดิจิตอล Boneh-Lynn-Shacham (BLS) มีการเซ็นที่ช้า การยืนยันที่ใช้เวลานาน ใช้ pairing-friendly curves ที่ช้าและปลอดภัยน้อยกว่า curve อื่นๆ และมีแนวโน้มที่จะอ่อนต่อการป้องกันอันตราย อย่างไรก็ตาม BLS มีตัวเลือก signature aggregation หลากหลายมากกว่า scheme ลายเซ็นอื่น ๆ ที่รู้จัก ซึ่งทำให้ BLS เป็น scheme ที่เหมาะสำหรับการลงคะแนนเสียงในอัลกอริธึมหาฉันทามติ และสำหรับ threshold signatures
 
-## Bonding
+## การเชื่อมต่อเครือข่าย (Bonding)
 
-A process by which tokens can be "frozen" in exchange for attaching a parachain to a relay chain. This process ensures that only chains that are valid and running will be attached to the relay chain, as it would behoove DOT holders to stop bonding their tokens.
+กระบวนการในการล็อกหรือ "แช่แข็ง" โทเค็นเพื่อแลกกับการเช่ือมต่อพาราเชนเข้ากับรีเลย์เชน กระบวนการนี้ทำให้มั่นใจได้ว่ามีเพียงเชนที่ถูกต้องและทำงานอยู่เท่านั้นที่จะสามารถเชื่อมเข้ากับรีเลย์เชนได้ เนื่องจากว่าถ้าไม่งั้นผู้ถือ DOT จะหยุดการล็อกโทเค็น
 
-## Bridge
+## สะพานเชื่อมต่อ (Bridge)
 
-A node which acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Runtime Environment requirements). Bridges allow for interaction between other blockchains such as Ethereum and Bitcoin which are not natively compatible with Polkadot.
+เป็นโหนดที่ทำหน้าที่เป็นตัวกลางระหว่างรีเลย์เชนบน Polkadot และบล็อกเชนภายนอก โดยทำให้บล็อกเชนภายนอกถูกมองเป็นพาราเชนโดยรีเลย์เชน (ตัวอย่างเช่น ทำให้เชนนอกรองรับ Polkadot Runtime Environment) สะพานเชื่อมต่อทำให้บล็อกเชนที่ไม่ถูกรองรับบน Polkadot เช่น Ethereum และ Bitcoin สามารถสื่อสารกับเครื่อข่าย Polkadot ได้
 
 ## Byzantine Fault Tolerance
 
-The property of a system which is tolerant of Byzantine faults; that is, a system where not only may individual subsystems fail, but it may not be clear if a particular subsystem has failed or not. That is, different observers on the system may not agree on whether or not the system has failed. Ensuring Byzantine fault tolerance is an important part of developing any distributed system.
+คุณสมบัติของระบบที่สามารถทนต่อความผิดพลาดไบเซนไทน์ นั่นคือระบบที่ระบบย่อยสามารถล้มเหลวได้ แต่ไม่สามารถรู้ได้ชัดเจนว่าระบบย่อยบางระบบมีการล้มเหลวเกิดขึ้นหรือไม่ นี้หมายความว่าผู้สังเกตการณ์ที่แตกต่างกันในระบบไม่สามารถตัดสินใจร่วมกันได้ว่าระบบล้มเหลวหรือไม่ การที่มีคุณสมบัติ Byzantine fault tolerance เป็นส่วนสำคัญของการพัฒนาระบบกระจาย
 
-## Collator
+## ผู้ตรวจทาน (Collator)
 
-A node which maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
+โหนดที่ทำหน้าที่ดูแลพาราเชนโดยการรวบรวมธุรกรรมบนพาราเชนและสร้างหลักฐานการเปลี่ยนสถานะให้ผู้ตรวจสอบ (Validator)
 
-## Consensus
+## ฉันทามติ (Consensus)
 
-The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
+กระบวนการที่คนกลุ่มหนึ่งจะตกลงข้อมูลเฉพาะหนึ่งร่วมกัน (เช่นลำกับและองค์ประกอบของบล็อกบนบล็อกเชน) มีอัลกอริธึมที่หลากหลายที่ใช้สำหรับหาฉันทามติร่วมกัน อัลกอริทึมที่ใช้โดย Polkadot มีชื่อว่า GRANDPA
 
 ## DOTs
 
-The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are connected the relay chain).
+โทเค็นหลักของ Polkadot DOT มีจุดประสงค์สามประการ: การกำกับดูแลเครือข่าย (อนุญาตให้ผู้ถือโหวตเกี่ยวกับการอัพเกรดเครือข่ายและเหตุการณ์พิเศษอื่น ๆ) การดำเนินงานทั่วไป (ให้รางวัลผู้ที่ทำตัวดีและลงโทษผู้ที่ประพฤติตัวไม่ดี) และการเชื่อมต่อเครือข่าย (เชื่อมพาราเชนกับรีเลย์เชนโดยการล็อก DOT)
 
 ## Dapps
 
-A generic term for a decentralized application, that is, one which runs as part of a distributed network as opposed to being run on a specific system or set of systems.
+คําศัพท์ที่ใช้เรียกแอปพลิเคชันที่กระจายอำนาจ นั่นคือแอปซึ่งทำงานเป็นส่วนหนึ่งของเครือข่ายแบบกระจาย ซึ่งต่างจากการทำงานบนระบบหรือระบบชุดหนึ่ง
 
 ## Epoch
 
@@ -61,35 +61,35 @@ Providing conflicting information to the network. BABE equivocation entails crea
 
 ## Extrinsic
 
-Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework. Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
+ฟังก์ชั่นที่ถูกกำหนดโดยโปรแกรมเมอร์ เช่นฟังก์ชั่นที่ไม่ได้ถูก built-in เข้ามาในเฟรมเวิร์ค สำหรับ Polkadot นี่หมายถึง binary blob ซึ่งแสดงถึงการเปลี่ยนสถานะ (state transition) บางอย่าง (เช่นการทำธุรกรรม) และถูกใช้ในพาราเชนเพื่อที่สื่อสารกับรีเลย์เชน
 
-## Finality
+## การสรุปผล (Finality)
 
-The property of a block which cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point). In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
+คุณสมบัติของบล็อกที่ไม่สามารถถูกย้อนกลับได้ โดยทั่วไปบล็อกที่สร้างขึ้นจะไม่ถูกสรุปผลว่าจะถูกเพิ่มเข้าบล็อกเชนหรือไม่จนกว่าจะถึงจุดหนึ่งในอนาคต - อาจจะไม่การเกิดขึ้นเลยก็เป็นได้ เหมือนในกรณีของ "probabilistic finality" ที่ใช้ใน Bitcoin (ถึงแม้ว่าบล็อกใน Bitcoin โดยทั่วไปจะถือว่าถูก "สรุปผล" หลังจากการยืนยันหกครั้ง เนื่องจากโอกาศที่บล็อกจะถูกย้อนกลับในจุดนั้นต่ำมาก) ในรีเลย์เชนของ Polkadot มีเป้าหมายที่จะทำการสรุปผลภายใน 10-12 วินาทีหลังจากถูกสร้าง
 
-## Finality Gadget
+## เครื่องมือสรุปผล (Finality Gadget)
 
-A mechanism which determines finality.
+กลไกที่กำหนดผลสรุป
 
-## Fisherman
+## ชาวประมง (Fisherman)
 
-Nodes which monitor the network for validators or collators which are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
+โหนดที่ทำหน้าที่ตรวจสอบการทำงานบนเครื่อข่ายของผู้ตรวจสอบ (Validator) และ ผู้ตรวจทาน (Collator) เพื่อหาพฤติกรรมผิดปกติ ชาวประมงจะต้องเดิมพัน DOT เล็กน้อยในการฟ้อง แต่จะได้รับรางวัลตอบแทนอย่างมากหากพบว่าพฤติกรรมไม่ดีจริง
 
 ## GRANDPA consensus algorithm
 
-GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+ย่อมากจาก GHOST-based Recursive Ancestor Deriving Prefix Agreement เป็นเครื่องมือสรุปผลของ Polkadot ซึ่งช่วยในการสรุปว่าบล็อกตัวไหนควรถูกเพิ่มเข้าบล็อกเชนอย่าง asynchronous สามารถอธิบายได้ และปลอดภัย สำหรับภาพรวมของ GRANDPA อ่านได้ที่โพสต์ Medium นี้: <https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372>
 
-## Governance
+## การกำกับดูแล (Governance)
 
-The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
+กระบวนการในการพิจารณาว่าการเปลี่ยนแปลงเครือข่ายใดบ้างควรได้รับอนุญาต เช่นการแก้ไขโค้ดหรือการเคลื่อนย้ายเงินทุน ระบบการกำกับดูแลใน Polkadot เป็นแบบ on-chain และใช้การลงคะแนนของผู้มีส่วนได้ส่วนเสียเป็นหลัก ซึ่งหมายความว่ากลุ่มผู้ถือหุ้น (DOTs) ส่วนใหญ่กำหนดทิศทางเติบโตของเครือข่าย
 
-## Governance Council
+## สภาการกำกับดูแล (Governance Council)
 
-An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
+กลุ่มออนไลน์บนบล็อกเชน ซึ่งประกอบด้วยบัญชีบล็อกเชนหลายบัญชี (เริ่มต้นที่ 6 จนถึง 24 บัญชี) ซึ่งทำหน้าที่เป็นตัวแทนของผู้มีส่วนได้เสียที่ไม่ลงคะแนนเสียง สมาชิกสภามีหน้าที่หลักสองประการ การเสนอ referenda เพื่อให้กลุ่มผู้มีส่วนได้เสียลงคะแนน และยกเลิก referenda ที่มีจุดประสงค์ร้าย
 
 ## KSM
 
-The abbreviation for Kusama network tokens.
+อักษรย่อของโทเค็นบนเครือข่าย Kusama
 
 ## Kusama
 
@@ -97,144 +97,144 @@ The "canary network" for Polkadot. It consists of an early-release, unaudited ve
 
 ## LIBP2P
 
-An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: [https://libp2p.io/](https://libp2p.io/)
+ไลบรารีโอเพนซอร์สสำหรับการสื่อสารแบบ P2P ที่มีการเข้ารหัสและฟังก์ชันเครือข่ายอื่น ๆ อ่านข้อมูลเพิ่มเติมได้ที่: [https://libp2p.io/](https://libp2p.io/)
 
 ## Liveness
 
-The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system which eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
+คุณสมบัติของระบบกระจายที่บ่งบอกว่าในที่สุดระบบจะสามารถหาฉันทามติได้ ระบบที่ติดอยู่ในลูปไม่สิ้นสุด ถึงแม้ว่าจะมีการคำนวณเกิดขึ้น ไม่ถือว่ามี liveness ระบบที่ให้ผลลัพธ์ในที่สุด ถึงแม้ว่าจะไม่ถูกต้องหรือใช้เวลานาน ถือว่ามี liveness
 
-## Node explorer
+## เครื่องมือสำรวจโหนด (Node Explorer)
 
-A tool which gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
+เครื่องมือที่ให้ข้อมูลเกี่ยวกับโหนด เช่นบล็อกล่าสุดที่ถูกปิดผนึก บล็อกที่ถูกสรุป และสถานะบล็อกเชนปัจจุบัน
 
 ## Nominated Proof of Stake (NPoS)
 
-A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
+ระบบ proof of stake ที่ผู้เสนอชื่อ (Nominators) ให้ยืมเงินที่ถูกล็อกเป็นหลักประกัน แก่ผู้ตรวจสอบ (Validators) เพราะเชื่อในในพฤติกรรมที่ดีของผู้ตรวจสอบ Nominated proof-of-stake แตกต่างจาก delegated proof-of-stake ตรงที่ ผู้เสนอช่ือ (Nominators) อาจสูญเสียเงินที่วางเป็นหลักประกันหากพวกเขาเสนอผู้ตรวจสอบที่ประพฤติตัวไม่ดี แต่ผู้แทน (Delegates) ไม่ต้องสูญเสียเงินเดิมพันตามพฤติกรรมของผู้ตรวจสอบ โปรดทราบว่าเทคโนโลยีบล็อกเชนอื่น ๆ อาจมีการใช้เรียกว่าเป็น delegated proof of stake ถึงแม้ว่าผู้แทนอาจจะถูกยึดหลักประกัน
 
-## Nominator
+## ผู้เสนอชื่อ (Nominator)
 
-Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
+เป็นโหนดที่มีหน้าที่เลือกลุ่มผู้ตรวจชอบชุดนึง DOT จำนวนนึงต้องถูกล็อกเป็นหลักประกันเพื่อที่จะได้ทำหน้าที่ดังกล่าว ซึ่งอาจจะเกิดการสูญเสียของ DOT ได้หากผู้ตรวจสอบที่โหนดเลือกประพฤติตัวไม่ดี สิ่งนี้จึงบังคับให้ผู้เสนอชื่อเลือกผู้ตรวจสอบอย่างระมัดระวัง
 
-## On-chain governance
+## การกำกับดูบนบล็อกเชน (On-chain governance)
 
-Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
+การกำกับดูแลของบล็อกเชน ซึ่งถูกควบคุมโดยกลไกที่ควบคุมโดยบล็อกเชน การกำกับดูแลแบบ On-chain ช่วยให้สามารถทำการตัดสินใจได้อย่างโปร่งใส โปรดทราบว่ามีอัลกอริทึมหลายตัวที่สามารถช่วยในการตัดสินใจเหล่านี้ เช่นการลงคะแนนเสียงข้างมาก และการลงคะแนนเสียงแบบ identity-based quadratic
 
-## Parachain
+## พาราเชน (Parachain)
 
-A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
+เป็นบล็อกเชนที่มีคุณสมบัติหลายอย่างที่ทำให้สามารถทำงานบน Polkadot Runtime Environment ได้ อีกชื่อเรียกคือ "บล็อกเชนแบบขนาน"
 
 ## Parachain Registry
 
-A relatively simple database-like construct that holds both static and dynamic information on each chain.
+โครงสร้างคล้ายฐานข้อมูลที่ไม่ซับซ้อนที่เก็บข้อมูลทั้งแบบคงที่และแบบไดนามิกในแต่ละบล็อกเชน
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood, which is developing Substrate. It has also released several other projects including Parity Ethereum and Parity Wasm.
+บริษัทที่ก่อตั้งโดย Dr. Gavin Wood ซึ่งกำลังพัฒนา Substrate บริษัทยังได้มีการพัฒนาโครงการอื่น ๆ อีกหลายอย่าง เช่น Parity Ethereum และ Parity Wasm
 
 ## Polkadot
 
-A heterogeneous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
+เทคโนโลยีสำหรับหลายบล็อกเชนต่างชนิด ช่วยให้บล็อกเชนที่มีคุณลักษณะที่แตกต่างกันสามารถสื่อสารระหว่างกันได้
 
 ## Polkadot Runtime Environment
 
-The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
+สภาวะแวดล้อมรันไทม์ (Runtime Environment) ที่โมดูลรันไทม์ (runtime module) สามารถรันบนได้ Parachains ต้องรองรับ Polkadot Runtime Environment - เครือข่ายภายนอกซึ่งไม่รองรับต้องใช้สะพานเชื่อมต่อ (Bridge) ในการเชื่อมต่อ
 
 ## Proof of Stake (PoS)
 
-A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
+หนึ่งวิธีในการหาฉันทามติโดยกำหนดว่าบล็อกต่อไปจะถูกกำหนดโดยโหนดที่ถูกเลือกเพราะคุณสมบัติบางอย่าง (เช่น จำนวนโทเค็นที่วางเป็นหลักประกัน)
 
 ## Proof of Work
 
-A method of achieving consensus in which the next block is determined by the first to solve a difficult puzzle (e.g., in Bitcoin, solving a partial pre-image hash for a block candidate).
+หนึ่งวิธีในการหาฉันทามติโดยกำหนดว่าบล็อกต่อไปคือบล็อกแรกที่สามารถแก้ไขปริศนาที่ยากได้ (เช่นใน Bitcoin ต้องหา pre-image hash เพื่อที่จะสร้างบล็อกต่อไป)
 
-## Proposal
+## ข้อเสนอ (Proposal)
 
-A potential function call to be voted on in a referendum. Proposals modify the behavior of the Polkadot network, from minor parameter tuning all the way up to replacing the runtime code.
+การเรียกใช้ฟังก์ชันที่ต้องผ่านการลงคะแนนเสียงประชามติ ข้อเสนอมีสิทธิ์ในแก้ไขพฤติกรรมของเครือข่าย Polkadot ตั้งแต่การปรับพารามิเตอร์เล็กน้อยจนถึงการเปลี่ยนโค้ดรันไทม์
 
-## Referendum
+## การลงประชามติ (Referendum)
 
-A vote on whether or not a proposal should be accepted by the network. These referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
+โหวตว่าข้อเสนอควรถูกเครือข่ายยอมรับหรือไม่ การลงประชามติอาจริเริ่มโดยสภาการกำกับดูแล (Governance Council) โดยสมาชิกของสาธารณชน หรือเป็นผลมาจากข้อเสนอก่อนหน้า ผู้มีส่วนได้ส่วนเสียลงคะแนนเสียง ซึ่งคิดตามจำนวน DOT ที่บัญชีผู้มีส่วนได้เสียควบคุมและระยะเวลาที่พวกเขาเต็มใจที่จะล็อค DOT ของพวกเขา
 
-## Relay chain
+## รีเลย์เชน (Relay chain)
 
-A chain which coordinates consensus and communication between parachains (and external chains, via bridges).
+เชนที่มีหน้าที่ประสานงานแสวงหาฉันทามติ (consensus) และช่วยให้พาราเชนสื่อสารระหว่างกัน (และบล็อกเชนภายนอกผ่านสะพาน Bridge)
 
 ## Runtime
 
-A state transition function which indicates a valid algorithm for determining the state of the next block given the previous block.
+ฟังก์ชันการเปลี่ยนสถานะซึ่งระบุอัลกอริทึมสำหรับการกำหนดสถานะของบล็อกถัดไปโดยใช้ข้อมูลบล็อกก่อนหน้า
 
 ## Runtime Module
 
-Wasm code which encodes a state transition function.
+โค้ด Wasm ซึ่งเข้ารหัสฟังก์ชันการเปลี่ยนสถานะ
 
-## Safety
+## ความปลอดภัย
 
-The property of a distributed system indicating that the system will properly meet all invariants; that is, that nothing "bad" ever happens to the data (such as it being corrupted).
+คุณสมบัติของระบบแบบกระจายที่บ่งบอกถึงการตอบสนอง invariants ทั้งหมดอย่างถูกต้อง ซึ่งหมายความว่าจะไม่มีสิ่งใด "เลวร้าย" เกิดขึ้นกับข้อมูล (เช่นเกิดความเสียหาย)
 
-## Sealing
+## การปิดผนึก (Sealing)
 
-The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
+กระบวนการเพิ่มบล็อกลงในรีเลย์เชน การสรุป (Finalization) ของบล็อกเป็นกระบวนการที่แยกจากกัน - บล็อกจะถูกสรุปหลังจากถูกปิดผนึกแล้วเท่านั้น (ประมาณ 10 - 12 วินาที)
 
 ## Session
 
-A session is a Substrate implementation term for a period of time that has a constant set of validators. Validators can only join or exit the validator set at a session change.
+เซสชั่นเป็นคำที่ใช้เรียกใน Substrate สำหรับระยะเวลาหนึ่งที่กลุ่มผู้ตรวจสอบคงที่ไม่สามารถมีการเปลี่ยนแปลง ผู้ตรวจสอบสามารถเข้าร่วมหรือออกจากกลุ่มผู้ตรวจสอบเมื่อมีการเปลี่ยนแปลงเซสชันเท่านั้น
 
 ## Session certificate
 
-Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
+อีกชื่อเรียกของ Session "key" ซึ่งเป็นคีย์ประเภท BLS สำหรับ GRANDPA, sr25519 สำหรับ BABE และ Ed25519 สำหรับ libp2p.
 
 ## Session key
 
-A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
+Session "key" เป็นคีย์ประเภท BLS สำหรับ GRANDPA, sr25519 สำหรับ BABE และ Ed25519 สำหรับ libp2p.
 
 ## Slashing
 
 The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
-## Staking
+## การวางหลักประกัน (Staking)
 
-"Reserving" tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators (who back validators through NPoS) together stake their DOTs in order to add blocks to the relay chain.
+การล็อกโทเค็น(DOTs ใน Polkadot) เพื่อเป็น "หลักประกัน" ในการขอโอกาสเป็นผู้สร้างบล็อกที่ถูกต้อง (และได้รับรางวัลจากการสร้างบล็อก) ผู้ตรวจสอบและผู้เสนอชื่อ (Nominators, ผู้ที่สนับสนุนผู้ตรวจสอบผ่าน NPoS) ร่วมกันวาง DOTs เป็นหลักประกันเพื่อเพิ่มบล็อกบนรีเลย์เชน
 
-## State transition function
+## ฟังก์ชั่นการเปลี่ยนสถานะ (State transition function)
 
-A function which describes how the state of a blockchain can be transformed. For example, it may describe how tokens can be transferred from one account to another.
+ฟังก์ชั่นที่อธิบายถึงวิธีการเปลี่ยนสถานะของบล็อกเชน ตัวอย่างเช่นอาจอธิบายถึงวิธีการโอนโทเค็นจากบัญชีหนึ่งไปยังอีกบัญชีหนึ่ง
 
 ## Substrate
 
-An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
+เฟรมเวิร์คที่ใช้ในการพัฒนา Polkadot Runtime Environment ซึ่งช่วยให้นักพัฒนาสามารถสร้างพาราเชน ซึ่งสามารถเชื่อมกับรีเลย์เชนของ Polkadot ได้
 
 ## Tabling
 
 In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
-## Transaction
+## ธุรกรรม (Transaction)
 
-An individual element of the state transition function of a block, such as moving tokens from one account to another.
+องค์ประกอบของฟังก์ชั่นการเปลี่ยนสถานะ (State Transition Function) ของแต่ละบล็อก เช่นการย้ายโทเค็นจากบัญชีหนึ่งไปยังอีกบัญชีหนึ่ง
 
-## Validator
+## ผู้ตรวจสอบ (Validator)
 
-A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
+โหนดที่ทำหน้าที่ดูแลความปลอดภัยของรีเลย์เชน (Relay Chain) โดยการตรวจสอบหลักฐานที่ได้จากผู้ตรวจทาน (Collators) ที่ทำงานบนพาราเชน และหาฉันทามติร่วมกันกับผู้ตรวจสอบท่านอื่น
 
-## Voting
+## การลงคะแนนเสียง (Voting)
 
-The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
+กระบวนการของผู้มีส่วนได้เสียที่จะตัดสินว่าข้อเสนอควรผ่านหรือไม่ คะแนนเสียงจะคิดตามจำนวน DOT ที่บัญชีผู้มีส่วนได้เสียควบคุมและระยะเวลาที่พวกเขาเต็มใจที่จะล็อค DOT ของพวกเขา การลงคะแนนอาจถูกแทนที่โดยสภาการกำกับดูแล (Governance Council) ถ้ามีข้อตกลงร่วมกันที่มีลักษณะเป็นการยอมรับแบบเอกฉันท์
 
-## Wallet
+## วอลเลต (Wallet)
 
-A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
+โปรแกรมที่ทำให้ผู้ใช้สามารถเก็บ รับ และส่ง DOT หรือโทเค็นอื่น ๆ ที่ใช้เทคโนโลยีบล็อกเชน
 
-## Web3 Foundation
+## มูลนิธิ Web3
 
-A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
+มูลนิธิที่ตั้งอยู่ในประเทศสวิตเซอร์แลนด์ ซึ่งมีจุดมุ่งหมายที่จะส่งเสริมและสนันสนุนการพัฒนาเทคโนโลยีและแอพพลิเคชั่นเกี่ยวโปรโตคอลซอฟต์แวร์เว็บแบบกระจายอำนาจ โดยเฉพาะโทคโนโลยีที่ใช้วิธีการเข้ารหัสลับที่ทันสมัยเพื่อช่วยเหลือในการกระจายอำนาจ เพื่อผลประโยชน์และเพื่อความมั่นคงของระบบนิเวศ Web3
 
 ## WebAssembly
 
-An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
+WebAssembly หรือที่รู้จักในชื่อ Wasm เป็น Instruction format สำหรับ stack-based VM โมดูลรันไทม์ของ Polkadot ถูก compile เป็น Wasm
 
 ## Wasm
 
-An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
+Instruction format สำหรับ stack-based VM โมดูลรันไทม์ของ Polkadot ถูก compile เป็น Wasm
 
 ## Witness
 
-Cryptographic proof statements of data validity.
+Cryptographic proof ที่ชี้แจงเกี่ยวกับความถูกต้องของข้อมูล
