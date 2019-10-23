@@ -124,7 +124,7 @@ Validators should have a well-architected network infrastructure to ensure the n
 
 A validator signs two or more votes in the same round on different chains.
 
-### Babe Equivocation
+### BABE Equivocation
 
 A validator produces two or more blocks on the relay chain in the same time slot.
 
