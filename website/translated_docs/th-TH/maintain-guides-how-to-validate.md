@@ -1,45 +1,45 @@
 ---
-id: maintain-guides-how-to-validate-alexander
-title: Run a Validator (Alexander)
-sidebar_label: Run a Validator (Alexander)
+id: maintain-guides-how-to-validate
+title: How to validate
+sidebar_label: How to validate
 ---
 
-__Note: This guide is for the Alexander testnet in the Polkadot repository on the v0.4 branch.__
+__หมายเหตุ: คู่มือนี้ใช้สำหรับเครือข่ายทดลอง Alexander ที่อยู่ใน branch รุ่น v0.4 ของ Polkadot repo__
 
-To be a good validator, you should
+การเป็นผู้ตรวจสอบที่ดี คุณควรจะ
 
-- Have DOTs to stake (**basic requirement**).
-- Keep your node up to the latest version.
-- Have enough knowledge of network security to create a secure network.
+- มี DOTs สำหรับวางเป็นหลักประกัน (**ข้อกำหนดพื้นฐาน**).
+- อัปเดตโหนดของคุณให้เป็นเวอร์ชันล่าสุด
+- มีความรู้เกี่ยวกับความปลอดภัยของเครือข่ายเพียงพอที่จะสร้างเครือข่ายที่ปลอดภัย
 
-You should **NOT** run a validator if you have DOTs but do not have enough technical knowledge to set up a validator. If this is the case, you should nominate your DOTs to someone you trust.
+คุณ**ไม่**ควรที่จะรันโหนดตรวจสอบ หากคุณมี DOT แต่ไม่มีความรู้ด้านเทคนิคเพียงพอที่จะตั้งค่าโหนดตรวจสอบ หากเป็นกรณีนี้คุณควรใช้ DOT ของคุณเสนอชื่อคนที่คุณไว้วางใจ
 
-Nominators still earn rewards. You can even nominate multiple validators. If you want to know more about nominators, please see [here](maintain-nominator).
+ผู้เสนอชื่อสามารถได้รับรางวัล คุณสามารถเสนอชื่อผู้ตรวจสอบหลายคนได้ หากคุณต้องการทราบข้อมูลเพิ่มเติมเกี่ยวกับผู้เสนอชื่อ อ่านเพิ่มเติมได้ [ที่นี่](maintain-nominator).
 
-For this tutorial, we use Ubuntu 18.04 and will be running on the PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too different. There are a lot of [VPS](#vps-list) choices out there; feel free to pick the one you like.
+สำหรับคู่มือนี้เราใช้ Ubuntu 18.04 และจะรันโหนดบนเครือข่ายทดลอง Alexander PoC-4 ไม่ว่าคุณจะใช้ระบบปฏิบัติการใด การตั้งค่าไม่น่าจะแตกต่างกันมาก มีตัวเลือก [VPS](#vps-list) มากมาย คุณสามารถเลือกได้ตามใจชอบ
 
-_Please make sure that you do **NOT** use this setup and configuration on Polkadot mainnet or Kusama. This guide simply walks you through step-by-step how to set up and run a validator node on the Alexander testnet. If you would like to run a validator on a non-testnet network, you must be EXTREMELY careful on some areas like key management, DDoS protection, and high availability._
+_โปรดตรวจสอบให้แน่ใจว่าคุณ**ไม่**ได้ใช้การตั้งค่านี้บน mainnet ของ Polkadot หรือ Kusama คู่มือแนะนำนี้จะสอนคุณเกี่ยวกับวิธีการตั้งค่าและรันโหนดบนเครือข่ายทดลอง Alexander หากคุณต้องการรันโหนดตรวจสอบบนเครือข่ายจริง คุณจะต้องระมัดระวังหลายจุด เช่นการจัดการดูแลคีย์ การป้องกันจาก DDoS และความพร้อมใช้งาน_
 
-## Install Rust
+## ติดตั้ง Rust
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
 sudo apt install make clang pkg-config libssl-dev
 ```
 
-The first command will fetch the latest version of Rust and install it. Execute the second command to install the required dependencies for Polkadot.
+คำสั่งแรกจะดาวน์โหลด Rust เวอร์ชันล่าสุดของและทำการติดตั้ง ดำเนินการคำสั่งที่สองเพื่อติดตั้ง dependencies ที่จำเป็นสำหรับ Polkadot
 
 ```bash
 rustup update
 ```
 
-If you have already installed Rust, run this command to check whether there is a new version available.
+หากคุณติดตั้ง Rust เรียบร้อยแล้ว ให้รันคำสั่งนี้เพื่อตรวจสอบว่ามีเวอร์ชั่นใหม่หรือไม่
 
-## Install `polkadot` PoC-4
+## ติดตั้ง `polkadot` PoC-4
 
-Until support for the one-line installer is back up for PoC-4, you will need to build `polkadot` from source.
+จนกว่า one-line installer จะรองรับ PoC-4 คุณจะต้อง build `polkadot` จาก source
 
-**You must use a specific version of nightly to install PoC-4.** Follow the directions below:
+**คุณต้องระบุรุ่น nightly แบบ เฉพาะเพื่อติดตั้ง PoC-4** กรุณาทำตามวิธีด้านล่าง:
 
 ```
 rustup toolchain install nightly-2019-07-14
@@ -47,7 +47,7 @@ rustup default nightly-2019-07-14
 rustup target add wasm32-unknown-unknown --toolchain nightly-2019-07-14
 ```
 
-After switching to `nightly-2019-07-14` as the default toolchain, the below instructions should work as written.
+หลังจากเปลี่ยน default toolchain เป็น `nightly-2019-07-14` คำสั่งด้านล่างควรทำงานได้ปกติ
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
@@ -61,109 +61,109 @@ git pull origin v0.4
 cargo install --path ./ --force
 ```
 
-This may take a while depending on your hardware!
+อาจต้องใช้เวลาสักพักขึ้นอยู่กับฮาร์ดแวร์ของคุณ!
 
-## Synchronize Chain Data
+## ซิงค์ Chain Data
 
-Now you can start your Polkadot node. Start synchronizing the chain by executing the following command:
+ตอนนี้คุณสามารถเริ่มรันโหนด Polkadot ของตัวเองได้ คุณสามารถเริ่มการซิงโครไนซ์ chain โดยดำเนินการคำสั่งต่อไปนี้:
 
 ```bash
 polkadot --chain alex
 ```
 
-It will take at least a few hours.
+ขั้นตอนนี้จะใช้เวลาอย่างน้อยสองสามชั่วโมง
 
-You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+คุณสามารถตรวจสอบบล็อกสูงสุดในปัจจุบันผ่าน [Telemetry](https://telemetry.polkadot.io/#/Alexander) หรือ [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
-## Create accounts
+## สร้างบัญชี
 
-To be a validator, you will need three separate accounts for managing your funds, namely `stash`, `controller`, and `session`. If you want to know more about these accounts, please see [here](learn-staking#accounts).
+การเป็นผู้ตรวจสอบ คุณจะต้องมีสามบัญชีแยกต่างหากสำหรับการจัดการเงินของคุณ สามบัญชีนั้นคือบัญชี `stash`, `controller` และ `session` หากคุณต้องการทราบข้อมูลเพิ่มเติม อ่านได้[ที่นี่](learn-staking#accounts).
 
-![create account](assets/guides/how-to-validate/polkadot-dashboard-create-account.jpg) First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) and click on the `add account` button.
+![create account](assets/guides/how-to-validate/polkadot-dashboard-create-account.jpg) ก่อนแรก ไปที่ [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) แลกคลิกปุ่ม `add account`
 
-To help easily identify your accounts later, make sure to use `stash`, `controller`, and `session` in the names of your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
+เพื่อช่วยในการแยกแยะบัญชีของคุณในภายหลัง แนะนำให้ใช้คำว่า `stash`, `controller` และ `session` ในชื่อบัญชีสามอันของคุณ คุณจะได้รับ mnemonic seed phrase ซึ่งช่วยในการจำบัญชี คุณสามารถบันทึกข้อมูลนี้ไว้ในที่ปลอดภัย ออฟไลน์ หรือคุณสามารถเลือกที่จะบันทึกบัญชีของคุณโดยเก็บเป็น JSON keyfile ที่จะถูกสร้างขึ้นโดยอัตโนมัติเมื่อคลิกที่ปุ่ม `Save` รหัสผ่านที่จำเป็นในการสร้างบัญชีจะถูกใช้เพื่อเซ็น transaction ต่างๆ สำหรับแต่ละบัญชี และยังจะถูกใช้เพื่อเข้ารหัสไฟล์ JSON keyfile และจะต้องการมันถ้าคุณต้องการกู้คืนบัญชีของคุณโดยใช้ไฟล์นี้
 
-You need to generate three accounts:
+คุณต้องสร้างสามบัญชี:
 
 1. Stash
 2. Controller
 3. Session
 
-You should use `Schnorrkel (sr25519)` for your Stash and Controller accounts and `Edwards (ed25519)` for your Session key.
+You can use either sr25519 or ed25519 for your Stash and Controller keys and must use `Edwards (ed25519)` for your Session key.
 
-The mnemonic phrase for the Session account needs to be used later in this guide to validate. Make sure you save it safely.
+Mnemonic phrase สำหรับบัญชี Session จะต้องใช้ในภายหลังในคู่มือนี้เพื่อทำการตรวจสอบ คุณควรบันทึกมันไว้อย่างปลอดภัย
 
 ![backup seed](assets/guides/how-to-validate/polkadot-overview.jpg)
 
-## Get Testnet DOTs Tokens
+## วิธีการขอโทเคน DOTs ของเครือข่ายทดลอง
 
-To continue the following steps, you are required to get some testnet DOTs for the `stash` and `controller` accounts in order to submit transactions and use these DOTs as stake. The `session` account doesn't need any DOTs. See the [DOTs page](learn-DOT#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
+ก่อนทำขั้นตอนต่อไปนี้ คุณจะต้องได้มี DOT ของเครือข่ายทดลองในบัญชี `stash` และ `controller` เพื่อที่จะทำการสร้าง transaction และใช้ DOT พวกนี้เป็นหลักประกัน บัญชี `session` ไม่จำเป็นต้องมี DOT ชม[เพจ DOTs](learn-DOT#getting-testnet-dots) สำหรับคำแนะนำในการขอรับ DOT ของเครือข่ายทดลอง แต่ละบัญชีของคุณควรมีอย่างน้อย 150 milliDOTs เพื่อให้มีพอสำหรับการฝากเงินและค่าธรรมเนียมการทำธุรกรรม
 
-## Bond DOTs
+## วาง DOT เป็นหลักประกัน
 
-It is now time to set up our validator. We will do the following:
+ได้เวลาแล้วสำหรับการตั้งค่าบัญชีตรวจสอบของเรา เราต้องทำสิ่งต่อไปนี้:
 
-- Bond the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
-- Select the `controller`. This is the account that will decide when to start or stop validating.
-- Select the `session` account. This is the account whose seed will be used to run the node.
+- ทำการล็อค DOT ของบัญชี `stash` DOT เหล่านี้จะถูกวางเป็นหลักประกันเพื่อความปลอดภัยของเครือข่ายและอาจถูกยึดได้
+- เลือกบัญชี `controller` บัญชีนี้จะเป็นบัญชีที่ตัดสินใจว่าเริ่มหรือหยุดการตรวจสอบตอนไหน
+- เลือกบัญชี `session` seed ของบัญชีนี้จะถูกใช้ไปรันโหนด
 
-First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
+ก่อนแรกไปที่ส่วน [Staking ](https://polkadot.js.org/apps/#/staking/actions) และคลิกที่ปุ่ม "New Stake"
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your `stash` account, we will bond 100 milliDOTs, make sure it has enough funds.
-- **Controller account** - Select the `controller` account created earlier.
-- **Value bonded** - Enter how many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bond more DOTs later, however, withdrawing any bonded amount requires the bonding duration period to be over (several months at the time of writing).
-- **Payment destination** - Select where the rewards get sent. More info [here](learn-staking#reward-distribution).
+- **Stash account** - เลือกบัญชี `stash` ที่เราจะทำการวางเงินประกันจำนวน 100 milliDOTs ควรเช็คให้แน่ใจว่าบัญชีดังกล่าวมีเงินเพียงพอ
+- **Controller account** - เลือกบัญชี `controller` จะสร้างขึ้นก่อนหน้านี้
+- **Value bonded** - ใส่จำนวน DOT จากบัญชี `stash` ที่ต้องการจะล็อคเป็นเงินประกัน คุณสามารถเพิ่มจำนวนเงินประกันได้ภายหลัง แต่การถอนเงินประกันจะต้องรอจนกว่าระยะเวลาประกันเสร็จสิ้น (หลายเดือน ณ ขณะที่เขียนบทความนี้)
+- **Payment destination** - เลือกบัญชีที่จะรอรับเงินรางวัล อ่านข้อมูลเพิ่มเติมได้ [ที่นี่](learn-staking#reward-distribution).
 
-Once everything is filled properly, click `Bond` and sign the transaction (with your `stash` account).
+หลังจากกรอกทุกอย่างเรียบร้อยแล้ว คลิกที่ปุ่ม `Bond` และทำการเซ็น transaction (โดยใช้บัญชี `stash`)
 
-## Set the Session Key
+## ตั้งค่า Session Key
 
-You should now see a new card with all your accounts. The bonded amount on the right corresponds to the funds bonded by the `stash` account.
+ตอนนี้คุณควรจะเห็นโซนใหม่พร้อมกับบัญชีทั้งหมดของคุณ ค่า bonded amount ทางด้านขวาจะตรงกับเงินที่คุณวางเป็นหลักประกันของบัญชี `stash`
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-set-session-key.jpg)
 
-Click on `Set Session Key`. Select the `session` account created previously and click on `Set Session Key`.
+คลิกบน `Set Session Key` หลังจากนั้นทำการเลือกบัญชี `session` ที่สร้างขึ้นก่อนหน้านี้และคลิกปุ่ม `Set Session Key`.
 
-## Validate
+## การตรวจสอบ
 
-You should now be able to see both `Validate` and `Nominate` buttons for your Session key.
+ตอนนี้คุณควรจะเห็นปุ่ม `Validate` และ `Nominate` สำหรับ Session Key ของคุณ
 
-At this point, and before validating, you should make sure your node is synced. Open your terminal and run your validator with the seed or the mnemonic from the `session` account, e.g:
+ณ จุดนี้ ก่อนที่จะเริ่มการตรวจสอบ คุณควรเช็คให้แน่ใจว่าโหนดได้ทำการซิงค์เรียบร้อย ให้ทำการเปิด terminal และรันโหนดตรวจสอบโดยใช้ seed หรือ mnemonic ของบัญชี `session` เช่น
 
 ```bash
 polkadot --chain alex --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TELEMETRY
 ```
 
-Make sure that the address generated from the seed corresponds to your `session` account's address. Don't worry if the last characters diverge, it's just the checksum that has recently changed.
+กรุณาตรวจสอบให้แน่ใจว่า address ที่ถูกสร้างจาก seed นั้นตรงกับ address ของบัญชี `session` ของคุณ ไม่ต้องกังวลหากอักขระตัวหลังๆ มีการเปลี่ยนแปลง มันเป็นเพียงเช็คซัมที่เปลี่ยนไปเมื่อเร็ว ๆ นี้
 
 ![terminal session key verification](assets/guides/how-to-validate/polkadot-node-seed.jpg)
 
-To verify that your node is live and in sync, head to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after a few seconds, your node's information will be shown.
+เพื่อตรวจสอบว่าโหนดของคุณทำงานอยู่จริงและอยู่ในโหมดซิงค์แล้วให้ไปที่ [Telemetry](https://telemetry.polkadot.io/#/Alexander) หลังจากนั้นไม่กี่วินาทีข้อมูลโหนดของคุณจะปรากฏขึ้น
 
-If everything looks good, go ahead and click on `Validate` in Polkadot UI.
+หากทุกอย่างเป็นไปด้วยดี ให้ทำการคลิกที่ปุ่ม `Validate` ใน Polkadot UI
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg) ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
-- **Unstake Threshold** - Set how often you want to be reported offline (and slashed) before being removed from the validator set. A higher value will allow you to be offline more times before being slashed, but you will be slashed more severely.
-- **Reward Commission** - Select how much of the reward you will keep; the rest will be shared among you and your nominators.
+- **Unstake Threshold** - ติดตั้งค่าถูกรายงานว่าออฟไลน์สูงสุดกี่ครั้ง (และถูกตัดเงิน) ก่อนที่จะถูกดึงออกจากกลุ่มผู้ตรวจสอบ การตั้งค่าที่สูงจะช่วยให้คุณออฟไลน์ได้นานขึ้นก่อนที่จะถูกตัดเงิน แต่คุณจะถูกตัดเงินหนักมากขึ้น
+- **Reward Commission** - เลือกจำนวนเงินรางวัลที่คุณจะเก็บไว้ ส่วนที่เหลือจะถูกแบ่งปันให้กับคุณและผู้ที่เสนอชื่อคุณ
 
-Click `Validate`.
+คลิก `Validate`.
 
-Go to the Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validator slots are available and how many nodes intend to be a validator.
+ไปที่แท็บ Staking คุณจะห็นรายการของผู้ตรวจสอบที่กำลังทำงานอยู่ ที่ด้านบนของหน้า จะแสดงจำนวนสล็อตผู้ตรวจสอบที่ยังเหลืออยู่ และจำนวนโหนดที่ต้องการจะเป็นผู้ตรวจสอบ
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
 
-Your node will be shown on the *next up* queue. In the next era (up to 1 hour), if you have enough backing, your node will become an active validator.
+โหนดของคุณจะปรากฏในคิว *next up* ในยุค (era) ถัดไป (ไม่เกิน 1 ชั่วโมง) หากคุณมีผู้สนับสนุนที่เสนอชื่อคุณเพียงพอ โหนดของคุณจะกลายเป็นผู้ตรวจสอบที่สามารถเริ่มทำงานได้
 
-**Congratulations!**
+**ขอแสดงความยินดี!**
 
-> If you want to run your validator as a `systemd` process, see the short guide [here](maintain-guides-how-to-systemd).
+> หากคุณต้องการรันโหนดตรวจสอบโดยใช้ `systemd` สามารถอ่านคู่มือวิธีทำได้[ที่นี่](maintain-guides-how-to-systemd).
 
-**Notice:** As mainnet gets closer, you can expect more slots to be available for testing.
+**หมายเหตุ: ** ยิ่งเข้าใกล้ถึงเวลาปล่อย mainnet มากขึ้น สล็อตสำหรับทดสอบจะเพิ่มขึ้น
 
-## VPS List
+## ลิสต์ VPS
 
 * [OVH](https://www.ovh.com.au/)
 * [Digital Ocean](https://www.digitalocean.com/)

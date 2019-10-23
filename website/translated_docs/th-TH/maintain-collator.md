@@ -1,13 +1,13 @@
 ---
 id: maintain-collator
-title: Collator
-sidebar_label: Collator
+title: ผู้ตรวจทาน (Collator)
+sidebar_label: ผู้ตรวจทาน (Collator)
 ---
 
-Collators maintain parachains by collecting parachain transactions from users and producing state transition proofs for validators.
+ผู้ตรวจทานดูแลพาราเชนโดยการรวบรวมธุรกรรมบนพาราเชนและสร้างหลักฐานการเปลี่ยนสถานะให้ผู้ตรวจสอบ (Validator)
 
-These participants will sit atop parachains and provide proofs to validators based on transactions from parachains. Collators maintain parachains by aggregating parachain transactions into parachain blocks and producing state transition proofs for validators based on those blocks. They also monitor the network and prove bad behavior to validators. Collators maintain a “full-node” for a particular parachain; meaning they retain all necessary information to be able to author new blocks and execute transactions in much the same way as miners do on current PoW blockchains. Under normal circumstances, they will collate and execute transactions to create an unsealed block and provide it, together with a proof of state transition, to one or more validators responsible for proposing a parachain block.
+ผู้มีส่วนร่วมเหล่านี้ทำงานกับพาราเชน มีหน้าที่สร้างหลักฐานการให้ผู้ตรวจสอบตามธุรกรรมบนพาราเชน ผู้ตรวจสอบดูแลพาราเชนโดยการรวบรวมธุรกรรมบนพาราเชนใส่ในบล็อกพาราเชน และผลิตหลักฐานการเปลี่ยนสถานะให้ผู้ตรวจสอบตามข้อมูลของบล็อกเหล่านั้น พวกเขายังคอยตรวจสอบเครือข่ายและแจ้งพฤติกรรมที่ไม่เหมาะสมพร้อมหลักฐานกับผู้ตรวจสอบ ผู้ตรวจทานต้องรัน “ full-node” สำหรับพาราเชนที่ดูแล ซึ่งหมายความว่าพวกเขาเก็บข้อมูลที่จำเป็นทั้งหมดสำหรับการสร้างบล็อกใหม่และการดำเนินการธุรกรรม เหมือนกับที่ miner ของบล็อกเชนแบบ PoW ทำ ภายใต้สถานการณ์ปกติ พวกเขาจะตรวจสอบและดำเนินการธุรกรรมเพื่อสร้างบล็อกที่ไม่ได้ปิดผนึก (unsealed block) และส่งมันพร้อมกับหลักฐานการเปลี่ยนสถานะให้กับผู้ตรวจสอบอย่างน้อยหนึ่งคนที่รับผิดชอบในการเสนอบล็อกของพาเราเชนนั้น
 
-### Guides
+### คู่มือแนะนำ
 
-COMING SOON!
+จะมาเร็ว ๆ นี้

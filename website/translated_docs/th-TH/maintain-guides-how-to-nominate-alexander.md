@@ -1,58 +1,58 @@
 ---
 id: maintain-guides-how-to-nominate-alexander
-title: Be a Nominator (Alexander)
-sidebar_label: Be a Nominator (Alexander)
+title: การเป็นผู้เสนอชื่อ (Nominator) บนเครือข่าย Alexander
+sidebar_label: การเป็นผู้เสนอชื่อ (Nominator) บนเครือข่าย Alexander
 ---
 
-This guide will walk you through how to nominate your DOTs to a validator node so that you can take part in the staking system and earn fresh DOTs.
+คู่มือแนะนำนี้จะสอนคุณเกี่ยวกับวิธีการเสนอชื่อผู้ตรวจสอบโดยการล็อค DOT เพื่อให้คุณสามารถมีส่วนร่วมในระบบการเลือกผู้ตรวจสอบและรับ DOT เพิ่มเป็นผลตอบแทน
 
-It has been updated for the Alexander testnet and Polkadot release PoC-4.
+คู่มือนี้ได้รับการอัพเดตสำหรับเครือข่ายทดลอง Alexander และ Polkadot release PoC-4
 
-## Create `stash` and `controller` accounts
+## สร้างบัญชีประเภท `stash` และ `controller`
 
-We will assume that you will be starting with two fresh accounts. Click [here](learn-staking#accounts) to learn more about what `stash` and `controller` accounts mean.
+เราจะสมมติว่าคุณจะเริ่มต้นด้วยสองบัญชีใหม่ คลิก [ ที่นี่ ](learn-staking#accounts) เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับความหมายของบัญชีประเภท ` stash ` และ ` controller `
 
-The first step is to create two accounts by going to the *Accounts* tab on the Polkadot Dashboard and clicking on [*Add account*](https://polkadot.js.org/apps/#/accounts). Make sure to use `stash` and `controller` in the names of your accounts to identify them easily.
+ขั้นตอนแรกคือการสร้างบัญชีสองอันโดยไปที่แท็บ *Accounts* บน Polkadot Dashboard และคลิกที่ [*Add account*](https://polkadot.js.org/apps/#/accounts) อย่าลืมใส่ `stash` และ `controller` ในชื่อบัญชีของคุณเพื่อช่วยในการแยกแยะ
 
 ![Creating an account](assets/guides/how-to-nominate/polkadot-dashboard-create-account.jpg)
 
-Once you've created your accounts you will need to acquire some DOTs. See the [DOTs page](learn-DOT#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
+เมื่อคุณสร้างบัญชีเสร็จแล้ว คุณต้องการ DOT จำนวนนึง กรุณาอ่าน [วิธีการขอ DOTs](learn-DOT#getting-testnet-dots) สำหรับคำแนะนำในการของ DOT สำหรับเครือข่ายทดลอง แต่ละบัญชีของคุณควรมีอย่างน้อย 150 milliDOTs เพื่อให้พอสำหรับการฝากเงินและค่าธรรมเนียมการทำธุรกรรม
 
-## Nominating
+## การเสนอชื่อ
 
-It is now time to setup our nominator. We will do the following:
-- Bond the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
-- Select the `controller`. This is the account that will decide when to start or stop nominating.
+ได้เวลาแล้วสำหรับการตั้งค่าบัญชีเสนอชื่อของเรา เราต้องทำสิ่งต่อไปนี้:
+- ทำการล็อค DOT ของบัญชี `stash` DOT เหล่านี้จะถูกวางเป็นหลักประกันเพื่อความปลอดภัยของเครือข่ายและอาจถูกยึดได้
+- เลือกบัญชี `controller` บัญชีนี้จะเป็นบัญชีที่ตัดสินใจว่าเริ่มหรือหยุดการเสนอชื่อตอนไหน
 
-First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
+ก่อนแรกไปที่ส่วน [Staking > Account actions](https://polkadot.js.org/apps/#/staking/actions) และคลิกที่ปุ่ม "New Stake"
 
 ![dashboard bonding](assets/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your `stash` account, we will bound 100 milliDOTs, make sure it has this amount of funds.
-- **Controller account** - Select the `controller` account created earlier.
-- **Value bonded** - How many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bound more DOTs later, however, withdrawing any bounded amount requires the bounding duration period to be over (several months at the time of writing).
-- **Payment destination** - Where the rewards get sent. More info [here](learn-staking#reward-distribution).
+- **Stash account** - เลือกบัญชี `stash` ที่เราจะทำการวางเงินประกันจำนวน 100 milliDOTs ควรเช็คให้แน่ใจว่าบัญชีดังกล่าวมีเงินเพียงพอ
+- **Controller account** - เลือกบัญชี `controller` จะสร้างขึ้นก่อนหน้านี้
+- **Value bonded** - จำนวน DOT จากบัญชี `stash` ที่ต้องการจะล็อคเป็นเงินประกัน คุณสามารถเพิ่มจำนวนเงินประกันได้ภายหลัง แต่การถอนเงินประกันจะต้องรอจนกว่าระยะเวลาประกันเสร็จสิ้น (หลายเดือน ณ ขณะที่เขียนบทความนี้)
+- **Payment destination** - เงินรางวัลจะถูกส่งไปที่นี่ อ่านข้อมูลเพิ่มเติมได้ [ที่นี่](learn-staking#reward-distribution).
 
-Once everything is filled properly, click `Bond` and sign the transaction (with your `stash` account). You will then see the following. You can ignore the `Set Session Key` button, it is only useful if you want to validate and we will not need it in this tutorial.
+หลังจากกรอกทุกอย่างถูกต้อง คลิก `Bond` และทำการเซ็น transaction (โดยใช้บัญชี `stash`) คุณจะเห็นอย่างดังกล่าวนี้ ไม่ต้องสนใจปุ่ม `Set Session Key` มันจะมีประโยชน์ก็ต่อเมื่อคุณต้องการตรวจสอบซึ่งเราไม่จำเป็นต้องใช้ในคู่มือนี้
 
 ![dashboard overview](assets/guides/how-to-nominate/polkadot-dashboard-set-session-key.jpg)
 
-## Nominating a validator
+## การเสนอชื่อผู้ตรวจสอบ
 
-Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signaled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
+ไปที่แท็บ *Staking Overview* บนหน้า Staking ของ Polkadot Dashboard ทางด้านซ้ายคุณจะเห็นรายการผู้ตรวจสอบ (ทางด้านขวาคือผู้ตรวจสอบที่สนใจที่จะเข้าร่วมกลุ่มผู้ตรวจสอบ คุณไม่ต้องสนใจพวกนี้ตอนนี้) จากรายการผู้ตรวจสอบ ให้คุณเลือกคนที่คุณอยากจะเสนอชื่อและทำการคัดลอก address ของเขาเก็บไว้ (โดยคลิกที่ identicon) หรือจะเพิ่มบัญชีเขาลงใน Address book ของคุณ
 
 ![Validators](assets/guides/how-to-nominate/validators.png)
 
-Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction, you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
+ไปที่แท็บ *Account Actions* และคลิกปุ่ม `Nominate` กรอกข้อมูลในฟิลด์ว่างด้วย address ของผู้ตรวจสอบที่คุณเลือกที่จะเสนอชื่อ หลังจากเซ็นและส่ง transaction ของคุณแล้ว คุณจะเห็นปุ่ม `Stop Nominating` และบัญชีที่คุณกำลังเสนอชื่อในส่วน `Nominating` การเสนอชื่อของคุณจะมีผลในยุค (era) ถัดไป (ซึ่งอาจใช้เวลาถึงหนึ่งชั่วโมง)
 
 ![Nominating](assets/guides/how-to-nominate/nominating.jpg)
 
-**Congratulations!** You are now a nominator.
+**ยินดีด้วย​!** คุณได้เป็นผู้เสนอชื่อแล้ว
 
-If you return to the *Staking Overview* tab after an era has changed and scroll until you find your validator you should see your own `stash` account appear as one of the nominators.
+ถ้าคุณกลับไปที่แท็บ *Staking Overview* หลังจาก era มีการเปลี่ยนแปลง และเลื่อนจนกว่าจะเจอผู้ตรวจสอบของคุณ คุณจะเห็นบัญชี `stash` ของคุณเป็นรายชื่อผู้เสนอชื่อของผู้ตรวจสอบนั้น
 
 ![Nominating2](assets/guides/how-to-nominate/nominating2.jpg)
 
-## How to stop nominating
+## วิธีการหยุดเสนอชื่อ
 
-To stop nominating simply return to the *Account Actions* tab and click the `Stop Nominating` button. Your account will be set to `chill` and at the next era will no longer be nominating to the validator. This may take up to an hour to take effect!
+หากต้องการจะหยุดการเสนอชื่อ เพียงแค่ไปแท็บ *Account Actions* และคลิกปุ่ม `Stop Nominating` บัญชีของคุณจะถูกเซ็ทเป็น `chill` และใน era ถัดไปจะยกเลิกการเสนอชื่อของผู้ตรวจสอบ ขั้นตอนนี้อาจใช้เวลาถึงหนึ่งชั่วโมงกว่าจะเห็นผล

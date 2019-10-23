@@ -24,6 +24,7 @@ sidebar_label: 验证人
 - [获取测试网 DOTs](learn-DOT#getting-testnet-dots)
 - [云服务器清单](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot 验证人休息室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 验证人聊天室。
+- [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
 
 ## 安全 / 密钥管理
 

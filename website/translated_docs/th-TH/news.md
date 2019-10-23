@@ -1,7 +1,7 @@
 ---
 id: news
-title: News
-sidebar_label: News
+title: ข่าวสาร
+sidebar_label: ข่าวสาร
 ---
 
-Follow the Polkadot [blog](https://polkadot.network/blog/) to stay up to date.
+ติดตาม [ บล็อก ](https://polkadot.network/blog/) Polkadot เพื่อรับรู้ข่าวสารก่อนใคร

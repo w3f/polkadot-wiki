@@ -1,55 +1,55 @@
 ---
 id: maintain-guides-how-to-nominate-kusama
-title: Be a Nominator (Kusama)
-sidebar_label: Be a Nominator (Kusama)
+title: การเป็นผู้เสนอชื่อ (Nominator) บนเครือข่าย Kusama
+sidebar_label: การเป็นผู้เสนอชื่อ (Nominator) บนเครือข่าย Kusama
 ---
 
-## During Soft Launch
+## ในช่วงเปิดตัว Soft Launch
 
-While Kusama is still in the soft launch phase most of the functionality is disabled besides Staking. This is so that 50 - 100 validators can register their intention to secure the Kusama network by running [validator nodes](maintain-validator). If you do not want to operate a validator node yourself, you can still stake your tokens and earn rewards by _nominating_ to a reputable validator. This guide will walk you through how to do that during the soft launch phase.
+ในขณะที่ Kusama ยังอยู่ในช่วงการเปิดตัวแบบ Soft Launch ฟังก์ชั่นส่วนใหญ่ถูกปิดการใช้งานนอกเหนือจากการ Staking ทำเช่นนี้เพื่อให้ผู้ตรวจสอบ 50 - 100 ท่านสามารถลงสมัครขอดูแลความปลอดภัยเครือข่าย Kusama โดยการรัน [ โหนดตรวจสอบ ](maintain-validator) หากคุณไม่ต้องการรันโหนดด้วยตนเอง คุณยังสามารถ stake โทเคนของคุณและรับรางวัลได้โดยการ <em x-id = "4"> เสนอชื่อ </em> ผู้ตรวจสอบที่มีความน่าเชื่อถือ คู่มือแนะนำนี้จะพาคุณเรียนรู้เกี่ยวกับวิธีการเสนอชื่อในช่วง soft launch
 
-### Step 1: Bond your tokens
+### ขั้นตอนแรก: ล็อคโทเคนของคุณ
 
-During soft launch you will likely only have one account with KSM. This means that your _stash_ and _controller_ accounts will be the same account. After soft launch it is advised to set a new controller on your stash account, but for now this is fine.
+ในช่วง soft launch คุณน่าจะมีเพียงบัญชีเดียวที่มี KSM ซึ่งหมายความว่าบัญชี _stash_ และ _controller_ จะเป็นบัญชีเดียวกัน หลังจาก soft launch แนะนำให้ตั้งค่าบัญชี controller ใหม่สำหรับบัญชี stash แต่สำหรับตอนนี้ไม่จำเป็น
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+บน [Polkadot UI](https://polkadot.js.org/apps) เปิดแท็บ "Staking"
 
-On this tab click on the "Account Actions" button on the top-left of the screen.
+ในแท็บนี้ให้กดปุ่ม "Account Actions" ที่อยู่ด้านบนซ้ายของหน้าจอ
 
-Click the blue "New Stake" button.
+คลิกปุ่ม "New Stake" สีฟ้า
 
-You will see a modal window that looks like the below:
+คุณจะเห็นหน้าต่าง modal ที่มีลักษณะดังนี้:
 
 ![Bonding](assets/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
 
-As mentioned before, **choose the same account for both controller and stash**.
+อย่างที่บอกก่อนหน้านี้ **ให้เลือกบัญชีเดียวกันสำหรับ controller และ stash**.
 
-Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some left over to transfer later when transfers are enabled. Try to save at least 500 mKSM to cover transferring to a new account and some fees.
+เลือกค่า "value bonded" ที่ **น้อย** กว่าจำนวน KSM ที่คุณมีเพื่อให้คุณสามารถโอนเงินเหลือหลังฟังก์ชั่นโอนเงินเปิดตัวได้ ควรเหลือเงินอย่างน้อย 500 mKSM เพื่อที่จะให้พอสำหรับการโอนเงินไปยังบัญชีใหม่และค่าทำธุรกรรม
 
-Choose whatever payment destination sounds good to you. If you're unsure just click "Stash account (increase amount at stake)".
+เลือก payment destination ที่เหมาะสมกับคุณ หากคุณไม่แน่ใจให้เลือก "Stash account (เพิ่มจำนวนเงินเดิมพัน)"
 
-### Step 2: Nominate a validator
+### ขั้นตอนที่ 2: การเสนอชื่อผู้ตรวจสอบ
 
-You are now bonded and can nominate up to 16 validators. Be careful about the validators you choose since you will be slashed if your validator commits an offence.
+คุณได้ทำการล็อคโทเคนเป็นหลักประกันและสามารถเสนอชื่อผู้ตรวจสอบได้ 16 ท่าน ควรเลือกผู้ตรวจสอบอย่างระมัดระวังเพราะคุณอาจถูกยึดหลักประกันได้หากผู้ตรวจสอบที่คุณเลือกปฏิบัติตัวไม่ถูกต้อง
 
-Go to the "Staking Overview" tab.
+ไปที่แท็บ "Staking Overview"
 
-The initial Proof-of-Authority validators are currently in the left-hand column. You cannot stake to these validators.
+ผู้ตรวจสอบชุดแรกของ Proof-of-Authority อยู่ในคอลัมน์ด้านซ้าย คุณไม่สามารถเลือกผู้ตรวจสอบเหล่านี้ได้
 
-On the right-hand column in the list that's labelled "next up", you will see all of the validators that have signalled their intention to operate genesis validators on Kusama.
+ในคอลัมน์ด้านขวาภายใต้รายการ "next up" คุณจะเห็นรายชื่อผู้ตรวจสอบที่สนใจที่จะเป็นผู้ตรวจสอบชุดแรกของ Kusama
 
-Pick one (or more) of these validators to nominate and copy their address by clicking on the icon.
+เลือกผู้ตรวจสอบอย่างน้อยหนึ่งท่านที่คุณอยากจะเสนอชื่อ และทำการคัดลอก address โดยการคลิกที่ icon
 
 ![Bonding](assets/guides/how-to-nominate/validators.png)
 
-Return to the "Account Actions" screen and you will see your bonded account.
+ไปที่หน้า "Account Actions" แล้วคุณจะเห็นบัญชีที่คุณวางหลักประกันไว้
 
-Click the "Nominate" button and fill in the blank field with the address of the validator you have chosen.
+คลิกปุ่ม "Nominate" และกรอกข้อมูลในฟิลด์ว่างด้วย address ของผู้ตรวจสอบที่คุณเลือก
 
-Sign and submit the transaction, and you are now nominating!
+ทำการเซ็นและส่ง transaction ตอนนี้คุณได้เสนอชื่อแล้ว
 
-### Step 3: Stop nominating
+### ขั้นตอนที่ 3: การหยุดเสนอชื่อ
 
-At some point, you might decide to stop nominating one or more validators.
+ณ จุดหนึ่ง คุณอาจตัดสินใจหยุดการเสนอชื่อผู้ตรวจสอบอย่างน้อยหนึ่งท่าน
 
-You can do this by clicking the "Stop nominating" button, which will set your account to _chill_ (meaning that it will not do any actions). If you want to start nominating again, just re-do the actions you took in step 2!
+คุณสามารถทำได้โดยคลิกที่ปุ่ม "Stop nominating" ซึ่งจะตั้งค่าบัญชีของคุณเป็น _chill_ (หมายความว่ามันจะไม่ทำอะไรเลย) หากคุณต้องการเริ่มเสนอชื่ออีกครั้ง ให้ทำตามขั้นตอนที่ 2 อีกครั้ง!
