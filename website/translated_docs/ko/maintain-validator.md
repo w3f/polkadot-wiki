@@ -24,6 +24,7 @@ Validators perform two functions. First, verifying that the information containe
 - [Getting Testnet DOTs](learn-DOT#getting-testnet-dots)
 - [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
+- [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
 
 ## Security / Key Management
 
