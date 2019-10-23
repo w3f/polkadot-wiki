@@ -40,4 +40,4 @@ One interesting idea for a PDK that would be nice to see is to have a [roll_up](
 
 ## Build a PDK
 
-If you or your team are interested in developing a PDK feel free to open an issue on the W3F collaboration repository for comment. There may be grants available for this type of work.
+If you or your team are interested in developing a PDK feel free to open an issue on the [W3F collaboration repository](https://github.com/w3f/Web3-collaboration) for comment. There may be grants available for this type of work.
