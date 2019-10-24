@@ -24,6 +24,6 @@ is launched to help inform the ultimate goal of Polkadot.
 
 For latest information on the state of the Polkadot roadmap and the Polkadot codebase, please see the Polkadot GitHub repository, specifically the milestones page: [https://github.com/paritytech/polkadot/milestones](https://github.com/paritytech/polkadot/milestones)
 
-[kusama announcement][https://polkadot.network/kusama-network-the-canary-network/]
-[kusama genesis][https://polkadot.network/kusama-rollout-and-governance/]
-[kusama cc2][https://polkadot.network/kusama-cc2/]
+[kusama announcement]: https://polkadot.network/kusama-network-the-canary-network/
+[kusama genesis]: https://polkadot.network/kusama-rollout-and-governance/
+[kusama cc2]: https://polkadot.network/kusama-cc2/
