@@ -8,31 +8,7 @@ Polkadot is a blockchain technology but makes some innovations that sets it apar
 
 ## [Cosmos](learn-comparisons-cosmos)
 
-## Dfinity
-
-Dfinity calls itself "the internet computer". Although Dfinity has been promising their "Copper" release since 2017,
-it is now 2019 and the world has yet to see the majority of Dfinity's closed source code. This is in stark contrast to
-Polkadot, which has developed its Rust reference implementation in the open from the start in 2017.
-
-### Algorithmic Governane
-
-Dfinity is a strong proponent of algorithmic governance, having published
-[two](https://medium.com/dfinity/the-dfinity-blockchain-nervous-system-a5dd1783288e#.duzxztt9k)
-[blog](https://medium.com/dfinity/future-governance-integrating-traditional-ai-technology-into-the-blockchain-nervous-system-825ababf9d9)
-posts explicitly on the topic. 
-
-Dfinity terms its governance framework the Blockchain Nervous System (BNS). The BNS awards a neuron token to 
-participants whom deposit Dfinity's native token in a system lock. The relative voting power of the neuron is weighted by the
-amounts of Dfinity tokens held in the deposit, and the delay for withdrawing these tokens is at least three months.
-The heaviest weighted neuron of the network then is able to dictate which direction the chain will progress when proposals
-would otherwise create blockchain forks. If the heaviest is not available, then it tries to follow the second heaviest,
-and so on until one neuron is available to decide the fork or none are (a situation not explored in their blog post).
-
-Dfinity positions its algorithmic governance as "AI is Law" in contrast to the Szabo-influenced "Code is Law" ethos.
-
-### Consensus
-
-
+## [Dfinity](learn-comparisons-dfinity)
 
 ## Ethereum
 
