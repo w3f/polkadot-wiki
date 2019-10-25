@@ -83,7 +83,7 @@ There are two different accounts for managing your funds: `Stash` and `Controlle
 
 We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key. As a rule, you lose security anytime you use one key for multiple roles, or even if you use keys related by derivation. You should never use any account key for a "hot" session key in particular.
 
-Any account key (controller or stash) could be either Sr25519 or Ed25519. At present, Polkadot session keys include one Sr25519 and several Ed25519 keys, but we shall add BLS12-381 and a zero-knowledge VRF mechanism, and parachains might employ other session key types.
+Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in Polkadot and the cryptography behind it [see here](learn-keys).
 
 For more on how keys are used in Polkadot and the cryptography behind it [see here](learn-keys).
 
