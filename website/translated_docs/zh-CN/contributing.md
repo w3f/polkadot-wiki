@@ -4,20 +4,20 @@ title: Contributing
 sidebar_label: Contributing
 ---
 
-## This [wiki](https://github.com/w3f/Polkadot-wiki) is an **OPEN-ish Open Source Project**
+## 这[ Wiki ](https://github.com/w3f/Polkadot-wiki)是<strong x-id =“ 1”> OPEN-ish开放源代码项目</strong>
 
-This is an informational resource on Polkadot and the Polkadot ecosystem.
+这是关于 Polkadot 和 Polkadot 生态系统的信息资源。
 
 Pull requests or other contributions from the community are encouraged! However, the final decision to add content will be made by the Web3 Foundation.
 
-## Rules
+## 规则
 
 There are a few basic ground-rules for contributors:
 
-1. **No `--force` pushes** or modifying the Git history in any way.
-2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
-3. **Non-master branches** ought to be used for ongoing work.
-4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
+1. **没有` --force ` pushes **或以任何方式修改 Git 历史记录。
+2. 对于某些问题，尤其是对于诸如错别字之类的较小更改，优先使用 Pull requests。 问题适用于一般或广泛的更改或内容缺少。
+3. **非主要分支**应用于正在进行的工作。
+4. **重大修改**应该用** pull request**的约束，以征询其他贡献者的反馈。
 5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
 6. Contributors should attempt to adhere to the prevailing Markdown style, language, and layout.
 7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
