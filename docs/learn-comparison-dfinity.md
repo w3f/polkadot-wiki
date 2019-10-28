@@ -7,8 +7,8 @@ sidebar_label: Dfinity
 Dfinity calls itself "the internet computer" and positions itself as a sister project to Ethereum. Dfinity has been
 in development since 2016, with a release called "Copper" supposed to have come out in 2017 but never seemed to have landed.
 In 2019, the world has yet to see the majority of Dfinity's closed source code for their client since they only publish
-helper libraries on their GitHub. The closed source nature of development is in stark contrast to the development of
-Polkadot, which has developed its Rust reference implementation in the open on GitHub from the start in 2017.
+helper libraries on [their GitHub][dfinity github]. The closed source nature of development is in stark contrast to the development of
+Polkadot, which has developed its Rust reference implementation in [the open on GitHub][polkadot github] from the start in 2017.
 
 ### Algorithmic Governance
 
@@ -17,23 +17,15 @@ Dfinity is a strong proponent of algorithmic governance, having published
 [blog](https://medium.com/dfinity/future-governance-integrating-traditional-ai-technology-into-the-blockchain-nervous-system-825ababf9d9)
 posts explicitly on the topic. 
 
-Dfinity terms its governance framework the Blockchain Nervous System (BNS). The BNS awards a neuron token to 
-participants who deposit Dfinity's native token in a system lock. The relative voting power of the neuron is weighted by the
-amounts of Dfinity tokens held in the deposit, and the delay for withdrawing these tokens is at least three months.
-The heaviest weighted neuron of the network then is able to dictate which direction the chain will progress when proposals
-would otherwise create blockchain forks. If the heaviest is not available, then it tries to follow the second heaviest,
-and so on until one neuron is available to decide the fork. The situation when none are is one not explored in their blog post.
+Dfinitiy proposes a governance framework called the Blockchain Nervous System (BNS). However, they have not come forward
+with any definite algorithms or further information following the publishing of the two previous blog posts in 2018.
 
-Dfinity positions its algorithmic governance as "AI is Law" in a similar vein to the Szabo-influenced "Code is Law" ethos.
-However, it makes this "Code is Law" statement contingent on the distributed intelligence of the blockchain nervous system.
-The reliance on external decision making to enact on-chain changes is comparable to Polkadot's approach to on-chain
-governance, in which the rules of participation are laid out in dry code but is ultimately dictated by the will of the
-token holders. 
+The BNS described in the blog posts is, compared to Polkadot's extensive governance mechanisms, a simplified reduction
+of the potential of on-chain governance. It only decides on chain forks through a "trust the expert" follow-the-heaviest-neuron
+approach.
 
-However, the BNS seems to be a simplified reduction of governance to only deciding on chain forks through
-a "trust the expert" follow-the-heaviest-neuron approach. Whereas Polkadot allows governance mechanisms to be much more
-fine-grained through mechanisms of conviction voting, a tri-cameral model of checks and balances, and the ability to
-follow chain upgrades seamlessly without needing to update client software.
+Polkadot allows governance mechanisms to be much more fine-grained through mechanisms of conviction voting, a
+tri-cameral model of checks and balances, and the ability to follow chain upgrades seamlessly without needing to update client software.
 
 ### Consensus
 
@@ -80,3 +72,6 @@ pre-vote rounds of standard BFT protocols. Although, since Dfinity has a two-ste
 blocks (much like how Polkadot has with BABE and GRANDPA), the time-to-finality of both protocols should be comparable.
 GRANDPA has nice properties like coming to finality on entire chains of blocks instead of single blocks one at a time,
 which makes it an improvement to the finality mechanism outlined by Dfinity.
+
+[dfinity github]: https://github.com/dfinity
+[polkadot github]: https://github.com/paritytech/polkadot
