@@ -1,33 +1,33 @@
 ---
 id: contributing
-title: Contributing
-sidebar_label: Contributing
+title: 贡献
+sidebar_label: 贡献
 ---
 
-## This [wiki](https://github.com/w3f/Polkadot-wiki) is an **OPEN-ish Open Source Project**
+## 这[ Wiki ](https://github.com/w3f/Polkadot-wiki)是<strong x-id =“ 1”> OPEN-ish开放源代码项目</strong>
 
-This is an informational resource on Polkadot and the Polkadot ecosystem.
+这是关于 Polkadot 和 Polkadot 生态系统的信息资源。
 
-Pull requests or other contributions from the community are encouraged! However, the final decision to add content will be made by the Web3 Foundation.
+鼓励来社区提出意见或其他贡献！ 但是内容的添加最终决定权将由 Web3 基金会做出。
 
-## Rules
+## 规则
 
-There are a few basic ground-rules for contributors:
+对于贡献者，有几个基本的规则：
 
-1. **No `--force` pushes** or modifying the Git history in any way.
-2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
-3. **Non-master branches** ought to be used for ongoing work.
-4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
-5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
-6. Contributors should attempt to adhere to the prevailing Markdown style, language, and layout.
-7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
-8. Care should be taken to remain as objective and informative as possible. There should be no editorializing, and external bias should not be present.
+1. **没有` --force ` pushes **或以任何方式修改 Git 历史记录。
+2. 对于某些问题，尤其是对于诸如错别字之类的较小更改，优先使用 Pull requests。 问题适用于一般或广泛的更改或内容缺少。
+3. **非主要分支**应用于正在进行的工作。
+4. **重大修改**应该用** pull request**的约束，以征询其他贡献者的反馈。
+5. 对于任何其不是非常重要的贡献，_鼓励_ Pull requests，但由贡献者自行决定。
+6. 贡献者应尝试遵循 Markdown 样式，语言和布局。
+7. 应使用正确的语法。带有错别字的 Pull requests 的请求在修复之前不会合并。
+8. 应注意保持尽可能客观和有益的信息。不应故意编造 ，也不应存在外部偏见。
 
 
-## Changes to this arrangement
+## 更改这一安排
 
-This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
+如果您认为有一些有价值的内容需要添加或更改，则此文档也可能会受到贡献者的请求或更改的影响。
 
-## Heritage
+## 继承
 
-This document was based on the Level contribution guidelines located here: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
+本文档基于以下级别贡献准则：[https://github.com/level/community/blob/master/contribution.md](https://github.com/level/community/blob/master/contribution.md)

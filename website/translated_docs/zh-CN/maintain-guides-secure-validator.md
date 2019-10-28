@@ -1,17 +1,17 @@
 ---
 id: maintain-guides-secure-validator
-title: Secure Validator
-sidebar_label: Secure Validator
+title: 安全验证人节点
+sidebar_label: 安全验证人节点
 ---
 
 Validators in a Proof of Stake network are responsible for keeping the network in consensus and verifying state transitions. As the number of validators is limited, validators in the set have the responsibility to be online and faithfully execute their tasks.
 
-This primarily means that validators:
+验证者的主要工作：
 
 - Must have infrastructure that protects the validator's signing keys so that an attacker cannot take control and commit slashable behavior.
-- Must be high availability.
+- 必须有高可用性
 
-## High Availability
+## 高可用性
 
 The best way to keep your validator available is to have it behind a layer of "sentry nodes". Sentry nodes are full nodes that can be provisioned on cloud infrastructure, e.g. AWS, GCP, Azure. Your validator node should be placed in a private data center and limit its connections to the sentry nodes.
 
@@ -33,69 +33,69 @@ Session keys are generated inside the node via RPC call. See the [Kusama guide](
 
 In the future, Polkadot will support signing payloads outside the client so that keys can be stored on another device, e.g. a hardware security module (HSM) or secure enclave. For the time being, however, Session key signatures are performed within the client.
 
-> **NOTE:** HSMs are not a panacea. They do not incorporate any logic and will just sign and return whatever payload they receive. Therefore, an attacker who gains access to your validator node could still commit slashable behavior.
+> **注意: ** HSM 不是灵丹妙药。 它们不包含任何逻辑，只会签名并返回接收到的任何有效负载。 因此，获得对您的验证人节点的访问权限的攻击者仍然可能会犯有严重的行为。
 
 An example of highly available, secure setup would be a layer of sentry nodes in front of multiple validators connected to a single signing machine. This machine could implement signing logic to avoid equivocation, even if an attacker gained access to a validator node.
 
-## Monitoring Tools
+## 监视工具
 
 - [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.
 
 - [Prometheus](https://prometheus.io/)-based monitoring stack, including [Grafana](https://grafana.com) for dashboards and log aggregation. It includes alerting, querying, visualization, and monitoring features and works for both cloud and on-premise systems. The data from `substrate-telemetry` can be made available to Prometheus through exporters like [this](https://github.com/w3f/substrate-telemetry-exporter).
 
-## Linux Best Practices
+## Linux 最佳实践
 
-- Never use the root user.
-- Always update the security patches for your OS.
-- Enable and set up a firewall.
-- Never allow password-based SSH, only use key-based access.
-- Disable non-essential SSH subsystems (banner, motd, scp, X11 forwarding) and harden your SSH configuration ([reasonable guide to begin with](https://stribika.github.io/2015/01/04/secure-secure-shell.html)).
-- Back up your storage regularly.
+- 永不使用 root 用户
+- 保持更新系统的安全补丁
+- 启动并设置防火墙
+- 永不允许基于密码的ssh，只能使用基于密钥的访问。
+- 禁用不必要的 SSH 子系统 (banner，motd，scp，X11 转发)并加强SSH配置（[入门指南](https://stribika.github.io/2015/01/04/secure-secure-shell.html)）。
+- 定期备份您的存储。
 
-## Conclusions
+## 结论
 
 - Do not expose validators to the public internet, they should only be accessible by allowed parties. Therefore, we propose a layered approach in which the validators are isolated from the internet and connect to the Polkadot network via an intermediate layer of public-facing nodes.
 
-- At the moment, Polkadot/Substrate can't interact with HSM/SGX, so we need to provide the signing key seeds to the validator machine. This key is kept in memory for signing operations and persisted to disk (encrypted with a password).
+- 目前 Polkadot / Substrate 无法与 HSM /SGX 交互，因此我们需要向验证人机器提供签密钥种子。 该密钥保留在内存中以进行签名操作，并保留在磁盘上(使用密码加密)。
 
 - Given that HA setups would always be at risk of double-signing and there's currently no built-in mechanism to prevent it, we propose having a single instance of the validator to avoid slashing. Slashing penalties for being offline are much less than those for equivocation.
 
-### Validators
+### 验证人
 
 - Validators should only run the Polkadot binary, and they should not listen on any port other than the configured p2p port.
 
 - Validators should run on bare-metal machines, as opposed to VMs. This will prevent some of the availability issues with cloud providers, along with potential attacks from other VMs on the same hardware. The provisioning of the validator machine should be automated and defined in code. This code should be kept in private version control, reviewed, audited, and tested.
 
-- Session keys should be generated and provided in a secure way.
+- Session 密钥应以安全的方式生成和提供。
 
 - Polkadot should be started at boot and restarted if stopped for any reason (supervisor process).
 
-- Polkadot should run as non-root user.
+- Polkadot 应该以非 root 用户身份运行。
 
 - Each validator should connect to the Polkadot network through a set of at least 2 public-facing nodes. The connection is done through a VPN and the machine can't access the public internet, thus the only possible connection is through the VPN.
 
-### Public Facing Nodes
+### 面向公众的节点
 
 - At least two nodes associated with each validator run on at least two different cloud providers and they only publicly expose the p2p port.
 
 - They can run as a container on Kubernetes and we can define the desired state (number of replicas always up, network and storage settings); the connection between the validator and the public-facing nodes is done through a VPN. They have the common Kubernetes security setup in place (restrictive service account, pod security policy and network policy).
 
-- Node keys should be provided in a secure way.
+- 应以安全的方式提供节点密钥。
 
 - Only run the Polkadot container, no additional services. The VPN agent should run on a sidecar in the same pod (sharing the same network stack).
 
-### Monitoring
+### 监测
 
-- Public-facing nodes and the validator should be monitored and alerts set for several failure conditions defined.
+- 应监控面向公众和验证人节点，并定义几种故障情况警报。
 
 - There should be an on-call rotation for managing the alerts.
 
-- There should be a clear protocol with actions to perform for each level of each alert and an escalation policy.
+- 应该有一个清晰的协议，其中包含针对每个警报的每个级别执行的操作以及升级策略。
 
-## Resources
+## 资源
 
 - [Figment Network's Full Disclosure of Cosmos Validator Infrastructure](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
-- [Certus One's Knowledge Base](https://kb.certus.one/)
+- [Certus One 的知识库](https://kb.certus.one/)
 - [EOS Block Producer Security List](https://github.com/slowmist/eos-bp-nodes-security-checklist)
-- [Sentry Node Architecture Overview](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
+- [哨兵节点架构概述](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
 - [HSM Policies and the Important of Validator Security](https://medium.com/loom-network/hsm-policies-and-the-importance-of-validator-security-ec8a4cc1b6f)
