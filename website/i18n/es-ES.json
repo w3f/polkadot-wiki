@@ -77,6 +77,10 @@
         "title": "Bridges",
         "sidebar_label": "Bridges"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Dfinity and Polkadot",
+        "sidebar_label": "Dfinity"
+      },
       "learn-comparisons-cosmos": {
         "title": "Design Comparison",
         "sidebar_label": "Cosmos"
