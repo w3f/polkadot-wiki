@@ -8,6 +8,8 @@ Polkadot is a blockchain technology but makes some innovations that set it apart
 
 ## [Cosmos](learn-comparisons-cosmos)
 
+## [Dfinity](learn-comparisons-dfinity)
+
 ## Ethereum
 
 [Ethereum](https://ethereum.org)是区块链智能合约平台，通过P2P网络运作并允许在链上进行运算。
