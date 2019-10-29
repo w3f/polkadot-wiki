@@ -130,7 +130,8 @@
           "maintain-guides-how-to-validate-kusama",
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
-          "maintain-guides-secure-validator"
+          "maintain-guides-secure-validator",
+          "maintain-guides-how-to-upgrade"
         ]
       }
     ]
