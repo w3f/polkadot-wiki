@@ -37,7 +37,7 @@ It is imperitive that your Validator A keep running in this Session. `set_key` o
 
 ### Session `N+1`
 
-Validator B is now acting as your validator. You can safely take Validator A offline.
+Validator B is now acting as your validator. You can safely take Validator A offline. See note at bottom.
 
 1. Stop Validator A.
 1. Perform your system or client upgrade.
@@ -46,6 +46,12 @@ Validator B is now acting as your validator. You can safely take Validator A off
 1. Submit a `set_key` extrinsic from your Controller account with your new Session keys for Validator A.
 1. Take note of the Session that this extrinsic was executed in.
 
-Again, it is imperitive that Validator B keep running until the end of this Session.
+Again, it is imperitive that Validator B keep running until the next Session.
 
 Once the Session changes, Validator A will take over. You can safely stop Validator B.
+
+**NOTE:** To verify that the Session has changed, make sure that a block in the new Session is finalized. You should see log messages like this to indicate the change:
+```
+2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
+2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities
+```
