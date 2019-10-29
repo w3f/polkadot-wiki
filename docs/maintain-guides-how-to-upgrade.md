@@ -33,7 +33,7 @@ You will need to start a second validator to operate while you upgrade your prim
 1. Submit a `set_key` extrinsic from your Controller account with your new Session keys.
 1. Take note of the Session that this extrinsic was executed in.
 
-**It is imperitive that your Validator A keep running in this Session.** `set_key` only takes effect in the next Session.
+**It is imperative that your Validator A keep running in this Session.** `set_key` only takes effect in the next Session.
 
 ### Session `N+1`
 
@@ -46,7 +46,7 @@ Validator B is now acting as your validator. You can safely take Validator A off
 1. Submit a `set_key` extrinsic from your Controller account with your new Session keys for Validator A.
 1. Take note of the Session that this extrinsic was executed in.
 
-**Again, it is imperitive that Validator B keep running until the next Session.**
+**Again, it is imperative that Validator B keep running until the next Session.**
 
 Once the Session changes, Validator A will take over. You can safely stop Validator B.
 
