@@ -58,7 +58,32 @@ supporting resolves the need for trust and makes the execution of the appendices
 
 SPREE would be helpful to ensure that the same logic is shared between parachains in the SPREE modules. An especially
 relevant use case would revolve around the use of token transfers across parachains in which it is important that the
-sending and receiving parachains agree about the total supply of tokens and a basic interface.
+sending and receiving parachains agree about how to change the total supply of tokens and a basic interface.
+
+## Example
+
+![spree example](assets/SPREE/spree_module.png)
+
+The diagram above is a simplification of the Polkadot system.
+
+In this diagram we see that the Wasm code for SPREE module "X" has been uploaded to the Polkadot relay chain. The two
+cylinders "A" and "B" represent two distinct parachains that have both opted-in to this SPREE module creating two
+distinct instances of it with their own ICMP endpoints "A.X" and "B.X".
+
+In the example we assume that this SPREE module "X" contains the functionality for incrementing of decrementing the
+balance of a particular asset that is unique to this module.
+
+By initiating a transaction at A.X to decrease a particular balance by 1, a message over ICMP can be trustlessly
+sent to B.X to increase a balance by 1.
+
+Collators, represented as the green triangle are responsible for relaying this message from parachain A to parachain
+B, as well as mantaining the storage for each particular instance of A.X and B.X for their respective parachains. They
+provide proofs of valid state transitions to the relay chain validators, represented as blue diamonds.
+
+Validators can validate the correct state transitions of SPREE modules A.X and B.X by being provided with the previous
+state root of the SPREE module instances, the data of the ICMP message between the instances, and the next state root
+of the instance. They do this validation be checking it against the `validate` function as provided by the SPREE module
+API. Collators are expected to be able to provide this information in order to progress their parachains.
 
 [polkadot reddit]: https://www.reddit.com/r/dot/
 [smart protocols reddit post]: https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/
