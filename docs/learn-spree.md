@@ -17,7 +17,7 @@ SPREE in brief was described with the following properties and functions:
 
 ## Origin
 
-On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on [r/dot](polkadot reddit) called
+On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on [r/dot][polkadot reddit] called
 "SmartProtocols Idea" and laid out a proposal for [Smart Protocols][smart protocols reddit post]. The core insight
 of the post was that ICMP had a complication in that it was difficult to verify and prove code was executed on a parachain
 without trust. A solution was to install the SmartProtocols in the Relaychain that would be isolated blobs of code
@@ -32,18 +32,18 @@ can decide to opt-in to the logic. The SPREE module would retain its own storage
 be able to be called through an interface with the parachain. Parachains will send messages to the SPREE module synchronously.
 
 SPREE modules are important to the overall ICMP architecture because they give guarentee to the code that will be
-executed on destination parachains. While ICMP guarentees the delivery of a message, it does not guarentee what code
+executed on destination parachains. While ICMP guarantees the delivery of a message, it does not guarantee what code
 will be executed, i.e. how the receiving parachain will interpret the message. While ICMP accomplishes trustless message
-passing, SPREE is the trustless interpration of the message and a key part to the usefulness of ICMP.
+passing, SPREE is the trustless interpenetration of the message and a key part to the usefulness of ICMP.
 
-SPREE modules are like recipes in cookbooks. For example, if we give an order to a cook to make a souffle, and we’re
+SPREE modules are like recipes in cookbooks. For example, if we give an order to a cook to make a soufflé, and we’re
 decently confident in the ability of the cook, we have a vague idea of what will be made but no actually surety how it 
-will be made. However, let’s say that a cook has the “Souffle Maker’s Manual” on their bookshelf and has committed
+will be made. However, let’s say that a cook has the “Soufflé Maker’s Manual” on their bookshelf and has committed
 themselves to only make souffles from this book. Now we can also consult the same book that the cook has, and we have a
-precise understanding of what will happen when we tell the cook to make a souffle. In this example, “make a souffle” was
+precise understanding of what will happen when we tell the cook to make a soufflé. In this example, “make a soufflé” was
 the message in ICMP and the cookbook was the SPREE module.
 
-In concrete terms, SPREE modules could be useful for various functionally on Polkadot. One suggested use case of SPREE
+In concrete terms, SPREE modules could be useful for various functionality on Polkadot. One suggested use case of SPREE
 modules is for a trustless decentralized exchange that is offered as functionality to any parachain without any extra
 effort from parachain developers. One can imagine this working by having a SPREE module which exposes the interface for
 the incrementing and decrementing of balances of various assets based on a unique identifier.
@@ -53,8 +53,8 @@ the incrementing and decrementing of balances of various assets based on a uniqu
 Sending messages across parachains in ICMP only ensures that the message will be delivered but does not specify the code
 that will be executed, or how the message will be interpreted by the receiving parachain. There would be ways around
 this such as requesting a verifiable receipt of the execution from the receiving parachain, but in the naked case the
-other parachain would have to be trusted. Having shared code which exist in appendices that the parachain can opt-in to
-supporting resolves the need for trust and makes the execution of the appendices completely trustless.
+other parachain would have to be trusted. Having shared code which exists in appendices that the parachain can opt-in to
+resolves the need for trust and makes the execution of the appendices completely trustless.
 
 SPREE would be helpful to ensure that the same logic is shared between parachains in the SPREE modules. An especially
 relevant use case would revolve around the use of token transfers across parachains in which it is important that the
