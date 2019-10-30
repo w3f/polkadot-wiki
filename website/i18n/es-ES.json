@@ -205,6 +205,10 @@
         "title": "Secure Validator",
         "sidebar_label": "Secure Validator"
       },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
+      },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
         "sidebar_label": "Validator Payout Overview"
