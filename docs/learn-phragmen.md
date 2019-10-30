@@ -1,7 +1,7 @@
 ---
 id: learn-phragmen
-title: Phragmen
-sidebar_label: Phragmen
+title: Sequential Phragmen Method
+sidebar_label: Sequential Phragmen Method
 ---
 
 ## What is the sequential Phragmen method?
