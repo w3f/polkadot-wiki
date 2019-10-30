@@ -16,6 +16,7 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 - [วิธีการตรวจสอบบน Kusama](maintain-guides-how-to-validate-kusama) - คู่มือแนะนำในการตั้งค่าโหนดตรวจสอบบนเครือข่าย Kusama
 - [หลักการจ่ายเงินให้ผู้ตรวจสอบ](maintain-guides-validator-payout) - บทความแนะนำเกี่ยวกับการทำงานของกลไกการจ่ายเงินให้ผู้ตรวจสอบ
 - [วิธีการรันโหนดตรวจสอบโดยใช้ systemd](maintain-guides-how-to-systemd) - คู่มือแนะนำการรันโหนดโดยใช้`systemd` เพื่อที่จะให้โหนดทำงานในพื้นหลังและรันอัตโนมัติเมื่อปิดเปิดเครื่องใหม่
+- [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.
 
 ## เอกสารอ้างอิง
 
