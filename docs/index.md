@@ -4,8 +4,6 @@ title: Wiki Index
 sidebar_label: Wiki Index
 ---
 
-![Polkadot Logo](assets/Polkadot_logotype_color.svg)
-
 Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot
 protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot
 ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build
