@@ -38,11 +38,15 @@ understand how it works since it means that not all the stake you've been nomina
 after an election. Nominators are likely to nominate a few different validators that they trust will do a good job
 operating their nodes.
 
+You can use the [offline-phragmen](https://github.com/kianenigma/offline-phragmen) script for predicting the outcome
+of a validator election ahead of a new era beginning.
+
 ## External Resources
 
 - [W3F Research Page on Sequential Phragmen Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragmén’s%20method/) - The formal adaptation of the Phragmen method as applied to Polkadot validators.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Implementations of Simple and Complicated Phragmen methods.
 - [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/core/phragmen/src/lib.rs) - Rust implementation used in the Substrate Runtime Module Library.
 - [Phragmen's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper explaining Phragmen's election methods in detail.
+- [Offline Phragmen](https://github.com/kianenigma/offline-phragmen) - Script to generate the Phragmen validator election outcome before the start of an era.
 
 [Phragmen Paper]: https://arxiv.org/pdf/1611.08826.pdf
