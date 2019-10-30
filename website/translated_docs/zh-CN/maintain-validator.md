@@ -16,6 +16,7 @@ sidebar_label: 验证人
 - [如何在 Kusama 运行节点](maintain-guides-how-to-validate-kusama)- 逐步介绍如何在 Kusama 金丝雀网络上设置验证人的指南。
 - [验证人奖励发放概述](maintain-guides-validator-payout) - 简短概述验证人奖励发放机制原理。
 - [如何将验证人程序作为 systemd 进程运行](maintain-guides-how-to-systemd)-有关将验证人程序作为` systemd `进程运行的指南 ，使它在背后运行，并当重新启动时自动启动。
+- [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.
 
 ## 其他参考
 
