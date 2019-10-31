@@ -4,11 +4,9 @@ title: 维基索引
 sidebar_label: 维基索引
 ---
 
-![波卡图标](assets/Polkadot_logotype_color.svg)
+Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build section](#want-to-build-on-polkadot). If you're interested in operating a node, head on over to the [maintain section](#want-to-run-a-node). And, if you want to learn more then peruse the [learn section](#want-to-learn-more) below.
 
-欢迎使用 Polkadot 维基，这里是学习，构建或运行 Polkadot 协议上的节点感兴趣的人员的中心。 维基分为三个主要部分，以迎合 Polkadot 生态系统中每个不同的参与者。 如果您渴望开始构建项目以连接到 Polkadot，请查看[构建部分](#want-to-build-on-polkadot)。 如果您对操作节点感兴趣，请转到[维护部分](#want-to-run-a-node)。并且如果您想了解更多信息，请仔细阅读下面的[学习部分](#want-to-learn-more)。
-
-如果您正在寻找关于 Polkadot 的介绍，请参见[此处](learn-introduction)。
+If you're looking for an introduction to Polkadot please [see here](learn-introduction).
 
 ## 想了解更多？
 
