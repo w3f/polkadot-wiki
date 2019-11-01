@@ -34,13 +34,31 @@ This is a way of getting the benefits of probabilistic finality (the ability to 
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011) which specified [Casper FFG](#casper-ffg).
 
-### GRANDPA: Finality Gadget
+### BABE
+
+BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments. BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](learn-randomness).
+
+Validators in Polkadot will participate in a [lottery](learn-randomness) in every slot which will tell them whether or not they are the block producer candidate for that slot. Slots are discrete units of time 6 seconds in length, but because of this randomness mechanic, it can happen that multiple validators are candidates in a slot. Other times, when no validators made a successful roll, it might happen that a slot is empty which can get in the way of Polkadot's ambitious 6-second block time. How, then, do we make sure that block time is indeed constant? How do we deal with each of these scenarios?
+
+#### Multiple Validators per Slot
+
+When multiple validators are block producer candidates in a given slot, both will produce a block and broadcast it to the network. At that point, it's a race. The validator whose block reaches most of the network first wins. Depending on network topology and latency, both chains will continue to build in some capacity, until finalization kicks in and amputates a fork. See Fork Choice below for how that works.
+
+#### No Validators in Slot
+
+When no validators have rolled low enough in the randomness lottery to qualify for block production, a slot can remain seemingly blockless. We avoid this by running a secondary round robin style validator selection algorithm in the background. The validators selected to produce blocks through this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also produces a primary block from a [VRF-selected](learn-randomness) validator. Thus, a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
+
+For more details on BABE, please see the [working research draft](http://research.web3.foundation/en/latest/polkadot/BABE/Babe/).
+
+### GRANDPA: Finality gadget
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot relay chain.
 
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope with 1/5 Byzantine nodes in an asynchronous setting.
 
 A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
+
+In other words, as soon as 2/3 or more validators attest to a block, all blocks leading up to that one are immediately finalized at once.
 
 #### Protocol
 
@@ -52,15 +70,16 @@ The [Rust implementation](https://github.com/paritytech/substrate/blob/master/sr
 
 For even more detail, see the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
 
-### BABE: Block Production
+### Fork Choice
 
-BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between the validator nodes and determines the authors of new blocks.
+Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. When there are competing forks, the following is how priority is determined for both BABE to produce new blocks on top of, and for GRANDPA to finalize:
 
-BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](learn-randomness).
+1. Check which chain has the nearest finalized block. That one takes priority over all others.
+2. If there is still ambiguity after this, pick the fork with the most primary blocks.
 
-BABE is comparable as an algorithm to Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments.
+![Best chain choice](assets/best_chain.png)
 
-For details on BABE, please see the [working draft](http://research.web3.foundation/en/latest/polkadot/BABE/Babe/).
+In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks. Even though the topmost chain is the longest chain on the latest finalized block, it does not qualify because it has fewer primaries at the time of evaluation than the one below it.
 
 ## Comparisons
 
