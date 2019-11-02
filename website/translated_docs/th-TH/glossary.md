@@ -151,90 +151,94 @@ The "canary network" for Polkadot. It consists of an early-release, unaudited ve
 
 การเรียกใช้ฟังก์ชันที่ต้องผ่านการลงคะแนนเสียงประชามติ ข้อเสนอมีสิทธิ์ในแก้ไขพฤติกรรมของเครือข่าย Polkadot ตั้งแต่การปรับพารามิเตอร์เล็กน้อยจนถึงการเปลี่ยนโค้ดรันไทม์
 
-## การลงประชามติ (Referendum)
+## Protocol
 
-โหวตว่าข้อเสนอควรถูกเครือข่ายยอมรับหรือไม่ การลงประชามติอาจริเริ่มโดยสภาการกำกับดูแล (Governance Council) โดยสมาชิกของสาธารณชน หรือเป็นผลมาจากข้อเสนอก่อนหน้า ผู้มีส่วนได้ส่วนเสียลงคะแนนเสียง ซึ่งคิดตามจำนวน DOT ที่บัญชีผู้มีส่วนได้เสียควบคุมและระยะเวลาที่พวกเขาเต็มใจที่จะล็อค DOT ของพวกเขา
+A system of rules that allow two or more entities of a communications system to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication and possible recovery methods.
 
-## รีเลย์เชน (Relay chain)
+## Referendum
 
-เชนที่มีหน้าที่ประสานงานแสวงหาฉันทามติ (consensus) และช่วยให้พาราเชนสื่อสารระหว่างกัน (และบล็อกเชนภายนอกผ่านสะพาน Bridge)
+A vote on whether or not a proposal should be accepted by the network. These referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
+
+## Relay chain
+
+A chain which coordinates consensus and communication between parachains (and external chains, via bridges).
 
 ## Runtime
 
-ฟังก์ชันการเปลี่ยนสถานะซึ่งระบุอัลกอริทึมสำหรับการกำหนดสถานะของบล็อกถัดไปโดยใช้ข้อมูลบล็อกก่อนหน้า
+A state transition function which indicates a valid algorithm for determining the state of the next block given the previous block.
 
 ## Runtime Module
 
-โค้ด Wasm ซึ่งเข้ารหัสฟังก์ชันการเปลี่ยนสถานะ
+Wasm code which encodes a state transition function.
 
-## ความปลอดภัย
+## Safety
 
-คุณสมบัติของระบบแบบกระจายที่บ่งบอกถึงการตอบสนอง invariants ทั้งหมดอย่างถูกต้อง ซึ่งหมายความว่าจะไม่มีสิ่งใด "เลวร้าย" เกิดขึ้นกับข้อมูล (เช่นเกิดความเสียหาย)
+The property of a distributed system indicating that the system will properly meet all invariants; that is, that nothing "bad" ever happens to the data (such as it being corrupted).
 
-## การปิดผนึก (Sealing)
+## Sealing
 
-กระบวนการเพิ่มบล็อกลงในรีเลย์เชน การสรุป (Finalization) ของบล็อกเป็นกระบวนการที่แยกจากกัน - บล็อกจะถูกสรุปหลังจากถูกปิดผนึกแล้วเท่านั้น (ประมาณ 10 - 12 วินาที)
+The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
 
 ## Session
 
-เซสชั่นเป็นคำที่ใช้เรียกใน Substrate สำหรับระยะเวลาหนึ่งที่กลุ่มผู้ตรวจสอบคงที่ไม่สามารถมีการเปลี่ยนแปลง ผู้ตรวจสอบสามารถเข้าร่วมหรือออกจากกลุ่มผู้ตรวจสอบเมื่อมีการเปลี่ยนแปลงเซสชันเท่านั้น
+A session is a Substrate implementation term for a period of time that has a constant set of validators. Validators can only join or exit the validator set at a session change.
 
 ## Session certificate
 
-อีกชื่อเรียกของ Session "key" ซึ่งเป็นคีย์ประเภท BLS สำหรับ GRANDPA, sr25519 สำหรับ BABE และ Ed25519 สำหรับ libp2p.
+Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
 
 ## Session key
 
-Session "key" เป็นคีย์ประเภท BLS สำหรับ GRANDPA, sr25519 สำหรับ BABE และ Ed25519 สำหรับ libp2p.
+A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
 
 ## Slashing
 
 The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
-## การวางหลักประกัน (Staking)
+## Staking
 
-การล็อกโทเค็น(DOTs ใน Polkadot) เพื่อเป็น "หลักประกัน" ในการขอโอกาสเป็นผู้สร้างบล็อกที่ถูกต้อง (และได้รับรางวัลจากการสร้างบล็อก) ผู้ตรวจสอบและผู้เสนอชื่อ (Nominators, ผู้ที่สนับสนุนผู้ตรวจสอบผ่าน NPoS) ร่วมกันวาง DOTs เป็นหลักประกันเพื่อเพิ่มบล็อกบนรีเลย์เชน
+"Reserving" tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators (who back validators through NPoS) together stake their DOTs in order to add blocks to the relay chain.
 
-## ฟังก์ชั่นการเปลี่ยนสถานะ (State transition function)
+## State transition function
 
-ฟังก์ชั่นที่อธิบายถึงวิธีการเปลี่ยนสถานะของบล็อกเชน ตัวอย่างเช่นอาจอธิบายถึงวิธีการโอนโทเค็นจากบัญชีหนึ่งไปยังอีกบัญชีหนึ่ง
+A function which describes how the state of a blockchain can be transformed. For example, it may describe how tokens can be transferred from one account to another.
 
 ## Substrate
 
-เฟรมเวิร์คที่ใช้ในการพัฒนา Polkadot Runtime Environment ซึ่งช่วยให้นักพัฒนาสามารถสร้างพาราเชน ซึ่งสามารถเชื่อมกับรีเลย์เชนของ Polkadot ได้
+An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
 
 ## Tabling
 
 In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
-## ธุรกรรม (Transaction)
+## Transaction
 
-องค์ประกอบของฟังก์ชั่นการเปลี่ยนสถานะ (State Transition Function) ของแต่ละบล็อก เช่นการย้ายโทเค็นจากบัญชีหนึ่งไปยังอีกบัญชีหนึ่ง
+An individual element of the state transition function of a block, such as moving tokens from one account to another.
 
-## ผู้ตรวจสอบ (Validator)
+## Validator
 
-โหนดที่ทำหน้าที่ดูแลความปลอดภัยของรีเลย์เชน (Relay Chain) โดยการตรวจสอบหลักฐานที่ได้จากผู้ตรวจทาน (Collators) ที่ทำงานบนพาราเชน และหาฉันทามติร่วมกันกับผู้ตรวจสอบท่านอื่น
+A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
 
-## การลงคะแนนเสียง (Voting)
+## Voting
 
-กระบวนการของผู้มีส่วนได้เสียที่จะตัดสินว่าข้อเสนอควรผ่านหรือไม่ คะแนนเสียงจะคิดตามจำนวน DOT ที่บัญชีผู้มีส่วนได้เสียควบคุมและระยะเวลาที่พวกเขาเต็มใจที่จะล็อค DOT ของพวกเขา การลงคะแนนอาจถูกแทนที่โดยสภาการกำกับดูแล (Governance Council) ถ้ามีข้อตกลงร่วมกันที่มีลักษณะเป็นการยอมรับแบบเอกฉันท์
+The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
 
-## วอลเลต (Wallet)
+## Wallet
 
-โปรแกรมที่ทำให้ผู้ใช้สามารถเก็บ รับ และส่ง DOT หรือโทเค็นอื่น ๆ ที่ใช้เทคโนโลยีบล็อกเชน
+A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
 
-## มูลนิธิ Web3
+## Web3 Foundation
 
-มูลนิธิที่ตั้งอยู่ในประเทศสวิตเซอร์แลนด์ ซึ่งมีจุดมุ่งหมายที่จะส่งเสริมและสนันสนุนการพัฒนาเทคโนโลยีและแอพพลิเคชั่นเกี่ยวโปรโตคอลซอฟต์แวร์เว็บแบบกระจายอำนาจ โดยเฉพาะโทคโนโลยีที่ใช้วิธีการเข้ารหัสลับที่ทันสมัยเพื่อช่วยเหลือในการกระจายอำนาจ เพื่อผลประโยชน์และเพื่อความมั่นคงของระบบนิเวศ Web3
+A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
 
 ## WebAssembly
 
-WebAssembly หรือที่รู้จักในชื่อ Wasm เป็น Instruction format สำหรับ stack-based VM โมดูลรันไทม์ของ Polkadot ถูก compile เป็น Wasm
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
 
 ## Wasm
 
-Instruction format สำหรับ stack-based VM โมดูลรันไทม์ของ Polkadot ถูก compile เป็น Wasm
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
 
 ## Witness
 
-Cryptographic proof ที่ชี้แจงเกี่ยวกับความถูกต้องของข้อมูล
+Cryptographic proof statements of data validity.
