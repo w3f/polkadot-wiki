@@ -4,7 +4,7 @@ title: Randomness
 sidebar_label: Randomness
 ---
 
-Randomness in Proof of Stake blockchains is important for a fair and unpredictable distribution of validator responsibilities. Because computers are deterministic (the same input always produces the same output), they are bad at random numbers. Additionally, general random numbers as found in common applications are pseudo-random as they depend on a sufficiently random _seed_ provided by the user or another type of _oracle_, like a [weather station for atmospheric noise](https://www.random.org/randomness/), [your heart rate](https://mdpi.altmetric.com/details/47574324), or even [lava lamps](https://en.wikipedia.org/wiki/Lavarand).
+Randomness in Proof of Stake blockchains is important for a fair and unpredictable distribution of validator responsibilities. Computers are bad at random numbers because they are deterministic devices (the same input always produces the same output). Another complication is that general random numbers that are commonly used in applications are pseudo-random and they depend on a sufficiently random _seed_ provided by the user or another type of _oracle_, like a [weather station for atmospheric noise](https://www.random.org/randomness/), [your heart rate](https://mdpi.altmetric.com/details/47574324), or even [lava lamps](https://en.wikipedia.org/wiki/Lavarand).
 
 These inputs will vary based on time and space, however, and it would be impossible to get the same result into all the nodes of a particular blockchain around the world. If nodes get different inputs on which to build blocks, forks happen. Obviously, real-world entropy is not suitable for use as a seed for blockchain randomness.
 
