@@ -38,7 +38,7 @@ Hybrid consensus has been proposed in the past. Notably, it was proposed (now de
 
 BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments. BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](learn-randomness).
 
-Validators in Polkadot will participate in a [lottery](learn-randomness) in every slot which will tell them whether or not they are the block producer candidate for that slot. Slots are discrete units of time 6 seconds in length, but because of this randomness mechanic, it can happen that multiple validators are candidates in a slot. Other times, when no validators made a successful roll, it might happen that a slot is empty which can get in the way of Polkadot's ambitious 6-second block time. How, then, do we make sure that block time is indeed constant? How do we deal with each of these scenarios?
+Validators in Polkadot will participate in a [lottery](learn-randomness) in every slot that will tell them whether or not they are the block producer candidate for that slot. Slots are discrete units of time, nominally 6 seconds in length. Because of this randomness mechanism, multiple validators could be candidates for the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
 
 #### Multiple Validators per Slot
 
