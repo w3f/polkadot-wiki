@@ -21,7 +21,7 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 ## เอกสารอ้างอิง
 
 - [วิธีรันโหนด Polkadot โดยใช้ Docker](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
-- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://hackernoon.com/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - บทความที่ให้รายละเอียดเกี่ยวกับวิธีสร้างระบบเพื่อรันโหนดตรวจสอบที่เสถียรและทนทานต่อข้อบกพร่อง
+- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
 - [วิธีการขอ DOTs บนเครือข่ายทดลอง](learn-DOT#getting-testnet-dots)
 - [ลิสต์ VPS](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - ห้องแชทสำหรับสนทนาเกี่ยวกับการเป็นผู้ตรวจสอบ
