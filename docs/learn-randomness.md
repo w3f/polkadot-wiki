@@ -18,7 +18,7 @@ The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos.
 
 Here's how it works in detail:
 
-Slots are discrete units of time six seconds in length. Each slot can contain a block, but doesn't have to. The aim is to have block times at six seconds too, so in theory every slot should have a block. Slots make up epochs - specifically, 2400 slots make one epoch, which makes epochs four hours long.
+Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not. Slots make up epochs - on Kusama, 2400 slots make one epoch, which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) which takes as input the following:
 
