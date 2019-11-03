@@ -58,7 +58,7 @@ It works in a partially synchronous network model as long as 2/3 of nodes are ho
 
 A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
 
-In other words, as soon as 2/3 or more validators attest to a block, all blocks leading up to that one are immediately finalized at once.
+In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block, all blocks leading up to that one are finalized at once.
 
 #### Protocol
 
