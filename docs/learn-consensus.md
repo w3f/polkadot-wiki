@@ -42,7 +42,7 @@ Validators in Polkadot will participate in a [lottery](learn-randomness) in ever
 
 #### Multiple Validators per Slot
 
-When multiple validators are block producer candidates in a given slot, both will produce a block and broadcast it to the network. At that point, it's a race. The validator whose block reaches most of the network first wins. Depending on network topology and latency, both chains will continue to build in some capacity, until finalization kicks in and amputates a fork. See Fork Choice below for how that works.
+When multiple validators are block producer candidates in a given slot, all will produce a block and broadcast it to the network. At that point, it's a race. The validator whose block reaches most of the network first wins. Depending on network topology and latency, both chains will continue to build in some capacity, until finalization kicks in and amputates a fork. See Fork Choice below for how that works.
 
 #### No Validators in Slot
 
