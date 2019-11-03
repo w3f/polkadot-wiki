@@ -4,9 +4,9 @@ title: 维基索引
 sidebar_label: 维基索引
 ---
 
-Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build section](#want-to-build-on-polkadot). If you're interested in operating a node, head on over to the [maintain section](#want-to-run-a-node). And, if you want to learn more then peruse the [learn section](#want-to-learn-more) below.
+欢迎来到 Polkadot 维基，这里是给对 Polkadot 协议学习，构建或运行节点感兴趣的人地方。维基分为三个主要部分，以迎合 Polkadot 生态中不同的参与者。如果您急于开始开发你的项目以连接到 Polkadot，查看 [构建部分](#want-to-build-on-polkadot)。如果您对运行节点感兴趣，请前往到[维护部份](#want-to-run-a-node)。并且如果您想了解更多，请仔细阅读以下[学习部份](#want-to-learn-more)。
 
-If you're looking for an introduction to Polkadot please [see here](learn-introduction).
+如果您正在找 Polkadot 的介绍，请看[这里](learn-introduction).
 
 ## 想了解更多？
 
@@ -15,10 +15,10 @@ If you're looking for an introduction to Polkadot please [see here](learn-introd
 
 ## 想在 Polkadot 建立？
 
-- [Builders Portal](build-index) - Tools, libraries, and resources to help you build.
+- [开发者门户](build-index) - 可帮助您开发的工具，库和资源。
 - [入门指南](build-build-with-polkadot)-**如何开始在 Polkadot 上构建项目的指南。**
 
-## 想要运行节点？
+## 想运行节点？
 
 - [运行节点](maintain index)-有关在 Polkadot 网络上运行节点的信息。
 
