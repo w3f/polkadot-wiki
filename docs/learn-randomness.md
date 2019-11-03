@@ -22,7 +22,7 @@ Slots are discrete units of time six seconds in length. Each slot can contain a 
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) which takes as input the following:
 
-- the "secret key", a key specifically made for these die rolls and which gets regenerated in every new slot
+- **The "secret key"**, a key specifically made for these die rolls and which gets regenerated in every new slot.
 - the hash of VRF values from the blocks in the epoch before last (N-2), so past randomness has an effect on the current pending randomness (N)
 - the slot number
 
