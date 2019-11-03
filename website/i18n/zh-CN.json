@@ -77,6 +77,10 @@
         "title": "桥接",
         "sidebar_label": "桥接"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Dfinity and Polkadot",
+        "sidebar_label": "Dfinity"
+      },
       "learn-comparisons-cosmos": {
         "title": "Design Comparison",
         "sidebar_label": "Cosmos"
@@ -200,6 +204,10 @@
       "maintain-guides-secure-validator": {
         "title": "安全验证人节点",
         "sidebar_label": "安全验证人节点"
+      },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",

@@ -10,7 +10,7 @@ sidebar_label: Tool Index
 
 - [Polka.io](https://polka.io) - 用于Polkadot的区块链资源管理器。
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot仪表板区块资源管理器。当前默认连接到Alexander测试网，您可以自行配置以连接到其它远程或本地端点。
-- [Polkascan](https://polkascan.io/) -用于Polkadot的区块链资源管理器。**目前下线**
+- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot.
 
 ## 钱包
 

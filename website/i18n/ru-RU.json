@@ -77,6 +77,10 @@
         "title": "Bridges",
         "sidebar_label": "Bridges"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Dfinity and Polkadot",
+        "sidebar_label": "Dfinity"
+      },
       "learn-comparisons-cosmos": {
         "title": "Design Comparison",
         "sidebar_label": "Cosmos"
@@ -200,6 +204,10 @@
       "maintain-guides-secure-validator": {
         "title": "Secure Validator",
         "sidebar_label": "Secure Validator"
+      },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",

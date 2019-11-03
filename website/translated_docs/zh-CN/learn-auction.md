@@ -105,7 +105,7 @@ Bob bonds `30 DOTs` and will have the parachain slot for the second year.
 
 #### Compete
 
-有一个平行链可用。
+只有一个平行链插槽可用。
 
 Charlie bids `75 DOTs` for the range 1 - 4.
 

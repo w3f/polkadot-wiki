@@ -16,11 +16,12 @@ sidebar_label: 验证人
 - [如何在 Kusama 运行节点](maintain-guides-how-to-validate-kusama)- 逐步介绍如何在 Kusama 金丝雀网络上设置验证人的指南。
 - [验证人奖励发放概述](maintain-guides-validator-payout) - 简短概述验证人奖励发放机制原理。
 - [如何将验证人程序作为 systemd 进程运行](maintain-guides-how-to-systemd)-有关将验证人程序作为` systemd `进程运行的指南 ，使它在背后运行，并当重新启动时自动启动。
+- [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.
 
 ## 其他参考
 
 - [如何运行 Polkadot 节点 (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
-- [Web 3.0 验证人节点的无服务器故障转移解决方案](https://hackernoon.com/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - 博客详细介绍了如何创建可靠的故障转移解决方案运行验证人。
+- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
 - [获取测试网 DOTs](learn-DOT#getting-testnet-dots)
 - [云服务器清单](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot 验证人休息室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 验证人聊天室。

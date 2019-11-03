@@ -164,7 +164,7 @@ Inflation is designed to be close to 10% in the first year. This means that each
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>Source: <a href="https://research.web3.foundation">Research - Web3 Foundation</a></sup></sub>
+<sub><sup>资料来源: [研究 - Web3 基金会](https://research.web3.Foundation)</sup></sub>
 
 **x-axis**: amount of DOTs staked
 
@@ -182,7 +182,7 @@ For those who are interested in knowing more about the design of inflation model
 
 ## 为什么参与抵押?
 
-* 10% inflation/year when the network launches
+* 当主网上线，接近 ~10% 通胀率
 * 50% targeted active staking
 * ~20% annual return
 

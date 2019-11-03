@@ -12,26 +12,26 @@ sidebar_label: 开发者专页
 
 ## 主页
 
-- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain, parathread, or smart contract for your project and what resources are can be used today to get started.
-- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most important tools.
-- [Parachain Development Kits](build-pdk) - PDKs are tool kits for building parachains and parathreads.
-- [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can be deployed to a live chain.
+- [入门指南](build-build-with-polkadot) - 有关您的项目应选择平行链，平行线程或智能合约的高级概述，以及现在有哪些资源可以使用。
+- [开发路线图](build-dev-roadmap) - 最重要开发工具的状态。
+- [平行链开发套件](build-pdk)- PDKs 是用于构建平行链和平行线程的工具套件。
+- [智能合约](build-smart-contracts) - 智能合约是用于制定逻辑使部署到现有的链中。
 
 ## 开发指南
 
-- [Tools](build-tools-index) - Maintained list of tools.
-- [Subkey](https://substrate.dev/docs/en/ecosystem/subkey) - Commandline utility for generating x25519 key pairs.
+- [工具](build-tools-index)-维护的工具。
+- [ Subkey ](https://substrate.dev/docs/en/ecosystem/subkey) -用于生成 x25519 密钥的命令行程序。
 
 ## 工具
 
 - [交易所整合](build-exchange-integration) - 如何整合 Polkadot 到你的交易所
-- [例子](build-examples-index) - Example projects sourced from the community-- see what others are building!
+- [例子](build-examples-index) - 来自社区的项目- 查看其他人开发中的项目!
 
 ### PSPs
 
 Polkadot 标准建议 (PSP) 是 Polkadot 生态系统的标准。
 
-- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and proposals.
+- [ PSP GitHub存储库](https://github.com/w3f/PSPs)-阅读，创建或讨论标准和提案。
 
 ### 骇客松
 

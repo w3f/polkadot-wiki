@@ -4,11 +4,9 @@ title: หน้าหลัก Wiki
 sidebar_label: หน้าหลัก Wiki
 ---
 
-![Polkadot Logo](assets/Polkadot_logotype_color.svg)
+Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build section](#want-to-build-on-polkadot). If you're interested in operating a node, head on over to the [maintain section](#want-to-run-a-node). And, if you want to learn more then peruse the [learn section](#want-to-learn-more) below.
 
-ยินดีต้อนรับสู่ Polkadot Wiki ศูนย์กลางสำหรับผู้ที่สนใจในการเรียนรู้ การพัฒนา หรือการรันโหนดบน Polkadot วิกินี้ถูกแบ่งออกเป็นสามส่วนหลักเพื่อตอบสนองต่อความต้องการของผู้อ่านในระบบนิเวศ Polkadot หากคุณสนใจพัฒนาโปรเจคของคุณเพื่อเชื่อมต่อกับ Polkadot อ่านเพิ่มเติมได้ที่ [ ส่วนการพัฒนา ](#want-to-build-on-polkadot) หากคุณสนใจที่จะเรียนรู้เกี่ยวกับการทำงานของโหนด อ่านเพิ่มเติมได้ที่ [ ส่วนการดูแล ](#want-to-run-a-node) หากคุณต้องการเรียนรู้เพิ่มเติม โปรดอ่าน [ ส่วนการศึกษา](#want-to-learn-more) ด้านล่าง
-
-หากคุณกำลังหาบทความแนะนำเกี่ยวกับ Polkadot สามารถ [ อ่านได้ที่นี่ ](learn-introduction)
+If you're looking for an introduction to Polkadot please [see here](learn-introduction).
 
 ## อยากเรียนรู้เพิ่มเติม?
 
