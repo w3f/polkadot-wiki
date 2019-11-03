@@ -4,24 +4,24 @@ title: 安全验证人节点
 sidebar_label: 安全验证人节点
 ---
 
-Validators in a Proof of Stake network are responsible for keeping the network in consensus and verifying state transitions. As the number of validators is limited, validators in the set have the responsibility to be online and faithfully execute their tasks.
+验证人在权益证明网络中负责使网络共识保持一致并验证状态转换。由于验证人数量有限，所验证人是有责任在线并忠诚地执行其任务。
 
 验证者的主要工作：
 
-- Must have infrastructure that protects the validator's signing keys so that an attacker cannot take control and commit slashable behavior.
+- 必须具有保护验证人签名密钥的架构，使攻击者无法控制和提交会被惩罚的行为。
 - 必须有高可用性
 
 ## 高可用性
 
-The best way to keep your validator available is to have it behind a layer of "sentry nodes". Sentry nodes are full nodes that can be provisioned on cloud infrastructure, e.g. AWS, GCP, Azure. Your validator node should be placed in a private data center and limit its connections to the sentry nodes.
+最好保护验证人在线的的方法是将其置于"哨兵节点"后面。哨兵节点可以通在云端架构上配置的全节点，例如 AWS，GCP，Azure。您的验证人节点应放在专用数据中心，并将其限制仅连接到哨兵节点。
 
-Sentry nodes can filter the messages that they send to the validator, never sending duplicates so that the validator doesn't get spammed. Likewise, if a sentry node is attacked and goes offline, other instances can be provisioned to replace it. DDoS attacks should never make it to the validator.
+哨兵节点可以过滤发送到验证人的消息，从不发送重复的消息，使验证人不会接收垃圾消息。同样，如果哨兵节点受到攻击并离线，则可以调配其他云端服务器来替换它使 DDoS 攻击验证人。
 
-As validators are expected to have 100% uptime, node operators may want to have failovers. In this setup, there would be one primary validator, and a second one that only responds to messages if the primary goes offline.
+由于验证人需要 100％ 在线，因此节点操作员可能想支持故障转移。在此设置中，将有一个主验证人节点，和备用验证人节点。而备用验证人仅在主验证节点离线时才响应消息。
 
 If multiple validators do end up online at the same time, your validator may end up signing multiple blocks and will thus get slashed for equivocation. A properly configured, highly available setup like this will reduce your chances of getting slashed for non-responsiveness, but a misconfigured setup will increase your chances of getting slashed for equivocation. This is a trade-off, and we expect that different validators will make different decisions on which side they err towards.
 
-## Key Management
+## 密钥管理
 
 See the [Polkadot Keys guide](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/) for more information on keys. The keys that are of primary concern for validator infrastructure are the Session keys. These keys sign messages related to consensus and parachains. Although Session keys are _not_ account keys and therefore cannot transfer funds, an attacker could use them to commit slashable behavior.
 
@@ -39,7 +39,7 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 ## 监视工具
 
-- [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.
+- [ Telemetry ](https://github.com/paritytech/substrate telemetry) Telemetry 可以跟踪节点的资料包括运行版本、区块高度、CPU & 内存使用情况、区块传播时间等。
 
 - [Prometheus](https://prometheus.io/)-based monitoring stack, including [Grafana](https://grafana.com) for dashboards and log aggregation. It includes alerting, querying, visualization, and monitoring features and works for both cloud and on-premise systems. The data from `substrate-telemetry` can be made available to Prometheus through exporters like [this](https://github.com/w3f/substrate-telemetry-exporter).
 
@@ -54,21 +54,21 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 ## 结论
 
-- Do not expose validators to the public internet, they should only be accessible by allowed parties. Therefore, we propose a layered approach in which the validators are isolated from the internet and connect to the Polkadot network via an intermediate layer of public-facing nodes.
+- 不要把验证人公开在互联网上，它们应只能由允许的用户访问。因此我们提出了分层的方法，把验证人与互联网隔开，并通过面向公众的中间层节点连接到Polkadot 网络。
 
 - 目前 Polkadot / Substrate 无法与 HSM /SGX 交互，因此我们需要向验证人机器提供签密钥种子。 该密钥保留在内存中以进行签名操作，并保留在磁盘上(使用密码加密)。
 
-- Given that HA setups would always be at risk of double-signing and there's currently no built-in mechanism to prevent it, we propose having a single instance of the validator to avoid slashing. Slashing penalties for being offline are much less than those for equivocation.
+- 鉴于高可用性设置始终存有双重签名的风险，并且目前没有内置机制可以防止这个情况，因此我们建议使用单个验证人节点来避免惩罚。 离线造成的惩罚远少于双重签名。
 
 ### 验证人
 
-- Validators should only run the Polkadot binary, and they should not listen on any port other than the configured p2p port.
+- 验证人应仅运行 Polkadot 执行檔，并且关上除已配置 p2p 端口以外的其它任何端口。
 
 - Validators should run on bare-metal machines, as opposed to VMs. This will prevent some of the availability issues with cloud providers, along with potential attacks from other VMs on the same hardware. The provisioning of the validator machine should be automated and defined in code. This code should be kept in private version control, reviewed, audited, and tested.
 
 - Session 密钥应以安全的方式生成和提供。
 
-- Polkadot should be started at boot and restarted if stopped for any reason (supervisor process).
+- 如果任何原因导致 Polkadot 停止运行(supervisor 程序)，Polkadot 应该在开机和重新启动时重新启动。
 
 - Polkadot 应该以非 root 用户身份运行。
 
@@ -82,20 +82,20 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 - 应以安全的方式提供节点密钥。
 
-- Only run the Polkadot container, no additional services. The VPN agent should run on a sidecar in the same pod (sharing the same network stack).
+- 仅运行 Polkadot 容器，没有其他应用服务。VPN 代理应在同一Pod 上运行 (共享网络堆栈)。
 
 ### 监测
 
 - 应监控面向公众和验证人节点，并定义几种故障情况警报。
 
-- There should be an on-call rotation for managing the alerts.
+- 应该有用于管理警报的待命轮换。
 
 - 应该有一个清晰的协议，其中包含针对每个警报的每个级别执行的操作以及升级策略。
 
 ## 资源
 
-- [Figment Network's Full Disclosure of Cosmos Validator Infrastructure](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
+- [Figment Network 对 Cosmos 验证人基础结构的全面披露](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
 - [Certus One 的知识库](https://kb.certus.one/)
-- [EOS Block Producer Security List](https://github.com/slowmist/eos-bp-nodes-security-checklist)
+- [EOS 区块生产者安全性列表](https://github.com/slowmist/eos-bp-nodes-security-checklist)
 - [哨兵节点架构概述](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
-- [HSM Policies and the Important of Validator Security](https://medium.com/loom-network/hsm-policies-and-the-importance-of-validator-security-ec8a4cc1b6f)
+- [HSM 政策和验证人安全的重要性](https://medium.com/loom-network/hsm-policies-and-the-importance-of-validator-security-ec8a4cc1b6f)
