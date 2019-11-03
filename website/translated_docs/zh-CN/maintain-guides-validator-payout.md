@@ -1,10 +1,10 @@
 ---
 id: maintain-guides-validator-payout
-title: Validator Payout Overview
-sidebar_label: Validator Payout Overview
+title: 验证人奖励概述
+sidebar_label: 验证人奖励概述
 ---
 
-## Payout Scheme
+## 奖励方式
 
 Validators are paid for authoring blocks on the relay chain and signing parachain blocks. Validator payouts occur at the end of every era (on the Alexander testnet, this is approximately once per hour, although this may be modified on Kusama and the Polkadot mainnet). No matter how much stake is behind a validator (by the validator stash itself, as well as by nominators), all validators split the block authoring payout equally.
 
@@ -26,7 +26,7 @@ p / v = 8 / 4 = 2 DOTs
 
 Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive the same block reward as every other validator. Validator `v1`, who had 18 DOTs staked, received the same reward (2 DOTs) in this era as `v4` who had only 7 DOTs staked.
 
-## Running Multiple Validators
+## 运行多个验证人节点
 
 It is possible for a single entity to run multiple validators. Running multiple validators may provide a better risk/reward ratio. Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
 
@@ -60,15 +60,15 @@ With enough stake, you could run more than two validators. However, each validat
 
 The incentives of the system favor equally-staked validators. This will most likely be a dynamic, rather than static, equilibrium. Potential validators will run different numbers of validators and apply different amounts of stake to them as time goes on, and in response to the actions of other validators on the network.
 
-## Slashing
+## 惩罚
 
-Although rewards are paid equally, slashes are relative to a validator's stake. Therefore, if you do have enough DOTs to run multiple validators, it is in your best interest to do so. A slash of 30% will, of course, be more DOTs for a validator with 18 DOTs staked than one with 9 DOTs staked.
+虽然奖励分配是一样，但惩罚是根据验证人的抵押量而定。 因此如果您确实有足够的 DOT，可以运行多个验证人节点，则可以达到最大利益化。 当然，如果惩罚 30% 时，对于拥有18 DOTs 的验证人节点，会比拥有9 DOT的验证人惩罚多。
 
-Running multiple validators does not absolve you of the consequences of misbehavior. Polkadot punishes attacks that appear coordinated more severely than individual attacks. You should not, for example, run multiple validators hosted on the same infrastructure. A proper multi-validator configuration would ensure that they do not fail simultaneously.
+运行多个验证人节点并不能免除错误行为的后果。當 Polkadot 受到多个节点同時攻擊，惩罚會比單一攻擊更多。例如您不应在同一云端服务器上托管多个验证人节点。 运行多个验证人节点的正确方法是确保它们不会同时离线。
 
 提名人有动机提名权益最低的验证人，因为这将导致最低的风险和最高的回报。
 
-## Nominators and Validator Payments
+## 提名人和验证人支付
 
 Nominated stake allows you to "vote" for validators and share in the rewards (and slashing) without running a validator node yourself. Validators can choose to keep part of their rewards to "reimburse" themselves for the cost of running a validator node. Other than that, all rewards are shared based on the stake behind each validator. This includes the stake of the validator itself, plus any stake bonded by nominators.
 
