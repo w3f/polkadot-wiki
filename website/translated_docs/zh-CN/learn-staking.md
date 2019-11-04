@@ -112,7 +112,7 @@ For every session, validators will send an "I'm Online" message to indicate they
 
 Here is the formula for calculation:
 
-    Let x = offenders, n = total no. validators
+    设 x = 出错节点, n = 验证人总数
     
     Min( (3 * (x - 1)) / n, 1) * 0.05
 
@@ -128,7 +128,7 @@ A validator produces two or more blocks on the relay chain in the same time slot
 
 GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
-    Let x = offenders, n = total no. validators
+    设 x = 出错节点, n = 验证人总数
     
     Min( (3 * x / n )^2, 1)
 
