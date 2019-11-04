@@ -186,7 +186,7 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 
 ![](assets/governance/approval-vote.png)
 
- 在创世纪，将有6到12个席位开始。 所有利益相关者可以自由表示同意(或不同意)任何注册候选人。 每两周，其中一个席位将当选，并在9个月内增加到24人(每两周大约增加一个人)。 所有成员都有固定的任期(1年)。议会成员也能通过全民公投提前罢免。
+ At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
 
 为了选新的议会成员，Polkadot使用`approval voting`方法来允许代币持有人选择他们想要支持的候选人名单，并且权重相等，而获得票数最多的候选人赢得选举，而最高的N名亚军仍保留在下次选举的候选人名单上。
 
