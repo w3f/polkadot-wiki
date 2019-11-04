@@ -16,14 +16,14 @@ removed.
 > Currently the bond for submitting a council candidacy on Kusama is 1 KSM.
 
 It is a good idea to announce your council intention before submitting your candidacy so that your supporters will know
-that when they can start to vote for you. You can also vote for yourself in case no one else does.
+when they can start to vote for you. You can also vote for yourself in case no one else does.
 
 Go to [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and navigate to the "Council" tab. Click the button on the
 right that says "Submit Candidacy."
 
 ![a](assets/council/submit_candidacy.png)
 
-After making the transaction, you will see your account appear on the right column under the "Candidates." 
+After making the transaction, you will see your account appear on the right column under "Candidates." 
 
 ![b](assets/council/candidate.png)
 
@@ -36,7 +36,7 @@ yourself (optional).
 
 ![c](assets/council/vote.png)
 
-The council uses the Phragmen approval voting which is also used in the validator elections. This means that you can
+The council uses the [Phragmen](learn-phragmen) approval voting which is also used in the validator elections. This means that you can
 choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to
 approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 

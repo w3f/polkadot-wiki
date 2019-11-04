@@ -8,7 +8,7 @@ The council is an elected body of on-chain accounts that are intended to represe
 
 ## Voting for Councillors
 
-Voting for councillors require you to lock your DOTs / KSMs for the duration of your vote. Like the validator elections,
+Voting for councillors requires you to lock your DOTs / KSMs for the duration of your vote. Like the validator elections,
 you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator
 elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid
 again.
@@ -23,7 +23,7 @@ of the window there are two blue buttons, click on the one that says "Vote."
 ![](assets/council/vote.png)
 
 Since the council uses approval voting, when you vote you signal which of the validators you approve of and your voted
-tokens will be equalized among the winning candidates. Select up to 16 council candidates by moving the slider to
+tokens will be equalized among the selected candidates. Select up to 16 council candidates by moving the slider to
 "Aye" for each one that you want to be elected. When you've made the proper configuration submit your transaction.
 
 ![](assets/council/vote_for_yourself.png)
@@ -37,7 +37,7 @@ participating in elections and you no longer want your reserved tokens to count 
 
 Go to the "Extrinsics" tab on [Polkadot Apps Dashboard](https://polkadot.js.org/apps).
 
-Choose the account your want to remove the vote of and select the "electionsPhragmen -> removeVoter()" options and
+Choose the account you want to remove the vote of and select the "electionsPhragmen -> removeVoter()" options and
 submit the transaction.
 
 ![](assets/council/remove_vote.png)
