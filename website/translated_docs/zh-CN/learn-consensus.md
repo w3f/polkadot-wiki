@@ -34,58 +34,74 @@ sidebar_label: 波卡共识
 
 过去已经提出了混合共识。 值得注意的是，它被提议（现已不复存在），作为以太坊向[ EIP 1011 ](http://eips.ethereum.org/EIPS/eip-1011)的股权证明过渡的一步。 [ Casper FFG ](#casper-ffg)。
 
-### GRANDPA: 最终性小工具
+### BABE
 
-GRANDPA（基于 GHOST 的递归祖先派生前缀协议）是为 Polkadot 中继链实现的终局性小工具。
+BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments. BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](learn-randomness).
 
-它工作在一个部分同步的网络模型中，只要2/3的节点是诚实的，并且能够在异步设置中处理1/5的拜占庭节点。
+Validators in Polkadot will participate in a [lottery](learn-randomness) in every slot that will tell them whether or not they are the block producer candidate for that slot. Slots are discrete units of time, nominally 6 seconds in length. Because of this randomness mechanism, multiple validators could be candidates for the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
 
-一个显着的区别是，即使在长期的网络分区或其他网络故障中，GRANDPA 仍在链上达成协议，而不是在区块上达成协议，从而极大地加快了最终确定过程。
+#### Multiple Validators per Slot
 
-#### 协议
+When multiple validators are block producer candidates in a given slot, all will produce a block and broadcast it to the network. At that point, it's a race. The validator whose block reaches most of the network first wins. Depending on network topology and latency, both chains will continue to build in some capacity, until finalization kicks in and amputates a fork. See Fork Choice below for how that works.
+
+#### No Validators in Slot
+
+When no validators have rolled low enough in the randomness lottery to qualify for block production, a slot can remain seemingly blockless. We avoid this by running a secondary, round-robin style validator selection algorithm in the background. The validators selected to produce blocks through this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also produces a primary block from a [VRF-selected](learn-randomness) validator. Thus, a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
+
+For more details on BABE, please see the [working research draft](http://research.web3.foundation/en/latest/polkadot/BABE/Babe/).
+
+### GRANDPA: Finality gadget
+
+GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot relay chain.
+
+It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope with 1/5 Byzantine nodes in an asynchronous setting.
+
+A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
+
+In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block, all blocks leading up to that one are finalized at once.
+
+#### Protocol
 
 Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol.
 
-#### 实现
+#### Implementation
 
-[ Rust实现](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs) 是 Substrate Runtime 库的一部分。
+The [Rust implementation](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs) is part of Substrate Runtime Module Library.
 
-有关更多详细信息，请参阅 W3F 研究页面上的[ GRANDPA 研究页面](http://research.web3.foundation/en/latest/polkadot/GRANDPA/)。
+For even more detail, see the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
 
-### BABE: 区块生成
+### Fork Choice
 
-BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between the validator nodes and determines the authors of new blocks.
+Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always build on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
 
-BABE 会根据抵押并使用 Polkadot [随机周期](learn-randomness)，将区块生产时段分配给验证人。
+![Best chain choice](assets/best_chain.png)
 
-BABE 可以与 Ouroboros Praos 相比，具有可比性，在链选择规则和时段调整方面存在一些关键差异。
-
-For details on BABE, please see the [working draft](http://research.web3.foundation/en/latest/polkadot/BABE/Babe/).
+In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks. Even though the topmost chain is the longest chain on the latest finalized block, it does not qualify because it has fewer primaries at the time of evaluation than the one below it.
 
 ## 共识比较
 
-### 中本聪共识
+### Nakamoto consensus
 
-中本聪共识包括最长的链条规则，该规则以工作证明作为其抵御反对的机制和领导者选举。
+Nakamoto consensus consists of the longest chain rule using proof of work as its sybil resistance mechanism and leader election.
 
-中本聪共识只给了我们概率确定性。概率最终性指出，过去的区块仅与其确认数或在其之上构建的区块数一样安全。由于在工作量证明链中的特定块之上构建了更多的块，因此在该特定链后面花费了更多的计算工作。 然而，它不能保证包含区块的链始终保持一致，因为拥有无限资源的参与者可能会构建竞争链并消耗足够的计算资源以创建不包含特定区块的链。在这种情况下，在比特币和其他工作链证明中采用的最长链规则将作为规范链转移到这一新链上。
+Nakamoto consensus only gives us probabilistic finality. Probabilistic finality states that a block in the past is only as safe as the number of confirmations it has, or the number of blocks that have been built on top of it. As more blocks are built on top of a specific block in a Proof of Work chain, more computational work has been expended behind this particular chain. However, it does not guarantee that the chain containing the block will always remain the agreed-upon chain, since an actor with unlimited resources could potentially build a competing chain and expend enough computational resources to create a chain that did not contain a specific block. In such a situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to this new chain as the canonical one.
 
-### PBFT (拜占庭容错）/ Tendermint
+### PBFT / Tendermint
 
-请参阅 Cosmos 比较文章中的[相关部分](learn-comparisons-cosmos#consensus)。
+Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cosmos comparison article.
 
 <!-- ### HoneyBadgerBFT -->
 
 ### Casper FFG
 
-Grander 和 Casper FFG (友好最终小工具）的两个主要区别是：
+The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
 
  - in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
  - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block production mechanism
 
 ### Casper CBC
 
-_敬请期待！_
+_Coming soon!_
 
 <!-- ### Avalanche -->
 
