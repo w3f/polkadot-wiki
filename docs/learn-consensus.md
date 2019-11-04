@@ -74,9 +74,6 @@ For even more detail, see the [GRANDPA research page](http://research.web3.found
 
 Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always build on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
 
-1. Check which chain has the nearest finalized block. That one takes priority over all others.
-2. If there is still ambiguity after this, pick the fork with the most primary blocks.
-
 ![Best chain choice](assets/best_chain.png)
 
 In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks. Even though the topmost chain is the longest chain on the latest finalized block, it does not qualify because it has fewer primaries at the time of evaluation than the one below it.
