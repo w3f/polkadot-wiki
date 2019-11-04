@@ -72,7 +72,7 @@ For even more detail, see the [GRANDPA research page](http://research.web3.found
 
 ### Fork Choice
 
-Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. When there are competing forks, the following is how priority is determined for both BABE to produce new blocks on top of, and for GRANDPA to finalize:
+Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always build on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
 
 1. Check which chain has the nearest finalized block. That one takes priority over all others.
 2. If there is still ambiguity after this, pick the fork with the most primary blocks.
