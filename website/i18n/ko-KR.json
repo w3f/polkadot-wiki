@@ -134,8 +134,8 @@
         "sidebar_label": "Parathreads"
       },
       "learn-phragmen": {
-        "title": "What is Phragmen and what does it mean for node operators?",
-        "sidebar_label": "What is Phragmen and what does it mean for node operators?"
+        "title": "Sequential Phragmen Method",
+        "sidebar_label": "Sequential Phragmen Method"
       },
       "learn-PRE": {
         "title": "Polkadot Runtime Environment (PRE)",
@@ -193,6 +193,10 @@
         "title": "Using systemd for the Validator Node",
         "sidebar_label": "Using systemd for the Validator Node"
       },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
+      },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "Run a Validator (Kusama)"
@@ -204,10 +208,6 @@
       "maintain-guides-secure-validator": {
         "title": "Secure Validator",
         "sidebar_label": "Secure Validator"
-      },
-      "maintain-guides-how-to-upgrade": {
-        "title": "How to Upgrade Your Validator",
-        "sidebar_label": "How to Upgrade Your Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
