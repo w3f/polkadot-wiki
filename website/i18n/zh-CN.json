@@ -134,8 +134,8 @@
         "sidebar_label": "平行线程"
       },
       "learn-phragmen": {
-        "title": "Phragmen 是什么，它对验证人意味着什么?",
-        "sidebar_label": "Phragmen 是什么，它对验证人意味着什么?"
+        "title": "Sequential Phragmen Method",
+        "sidebar_label": "Sequential Phragmen Method"
       },
       "learn-PRE": {
         "title": "Polkadot Runtime 环境 (PRE)",
@@ -193,6 +193,10 @@
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
+      },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
         "sidebar_label": "运行验证人 (Kusama)"
@@ -204,10 +208,6 @@
       "maintain-guides-secure-validator": {
         "title": "安全验证人节点",
         "sidebar_label": "安全验证人节点"
-      },
-      "maintain-guides-how-to-upgrade": {
-        "title": "How to Upgrade Your Validator",
-        "sidebar_label": "How to Upgrade Your Validator"
       },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",
