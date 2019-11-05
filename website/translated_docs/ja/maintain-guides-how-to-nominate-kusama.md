@@ -4,6 +4,8 @@ title: Be a Nominator (Kusama)
 sidebar_label: Be a Nominator (Kusama)
 ---
 
+TODO: we're no longer in soft launch
+
 ## During Soft Launch
 
 While Kusama is still in the soft launch phase most of the functionality is disabled besides Staking. This is so that 50 - 100 validators can register their intention to secure the Kusama network by running [validator nodes](maintain-validator). If you do not want to operate a validator node yourself, you can still stake your tokens and earn rewards by _nominating_ to a reputable validator. This guide will walk you through how to do that during the soft launch phase.

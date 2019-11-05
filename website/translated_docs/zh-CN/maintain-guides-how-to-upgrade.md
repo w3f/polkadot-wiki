@@ -1,56 +1,56 @@
 ---
 id: maintain-guides-how-to-upgrade
-title: How to Upgrade Your Validator
-sidebar_label: How to Upgrade Your Validator
+title: 如何升级验证人节点
+sidebar_label: 如何升级验证人节点
 ---
 
-Validators perform critical functions for the network, and as such, have strict uptime requirements. Validators may have to go offline for periods of time to upgrade the client software or the host machine. This guide will walk you through upgrading your machine and keeping your validator online.
+验证人负责执行网络上的重要工作，所以对在线有严格的要求。验证人有机会更新客户端或系统同时离线一段时间。这教程将会指导您如何升级并保持验证人在线。
 
-The process will take several hours, so make sure you understand the instructions first and plan accordingly.
+这过程可能需要数小时，所以确保您先理解说明并制定相应的计划。
 
-## Key Components
+## 重要组件
 
-### Session Keys
+### Session 密钥
 
-Session keys are stored in the client and used to sign validator operations. They are what link your validator node to your Controller account. You cannot change them mid-Session.
+Session 密钥储存在客户瑞并供验证人作签名操作。它是把验证人节点和 Controller 帐户联系起来。您不能在 Session 中段更改它。
 
-[More info about keys in Polkadot.](learn-keys)
+[关于 Polkadot 密钥资料。](learn-keys)
 
-### Database
+### 数据库
 
-Validators keep a database with all of their votes. If two machines have the same Session keys but different databases, they risk equivocating. For this reason, we will generate new Session keys each time we change machines.
+验证人保留所有他们的投票在数据库，如果二台电脑在不同数据库拥有相同 Session 密钥，他们会有 equivocating 风险。因此每次更换电脑时，我们都会生成新 Session 密钥。
 
-[More info about equivocation.](learn-staking#slashing)
+[有关 equivocation 更多信息。](learn-staking#slashing)
 
-## Steps
+## 步骤
 
-You will need to start a second validator to operate while you upgrade your primary. Throughout these steps, we will refer to the validator that you are upgrading as "Validator A" and the second one as "Validator B."
+当您升级主机时，您需要启动另一台验证人。在升级步骤中，我们将需要升级的验证人称为 "验证人A"，而第二个称为 "验证人B"。
 
 ### Session `N`
 
-1. Start a second node and connect it to your sentry nodes. Once it is synced, use the `--validator` flag. This is "Validator B."
-1. Generate Session keys in Validator B.
-1. Submit a `set_key` extrinsic from your Controller account with your new Session keys.
-1. Take note of the Session that this extrinsic was executed in.
+1. 启动另外节点并且连接到你的哨兵节点。一旦同步数据完成，使用 `--validator` 标志。这是 "验证人 B"。
+1. 在验证人 B 生成Session 密钥。
+1. 在你 Controller 帐户提交 `set_key` 交易设定新的 Session 密钥。
+1. 记下交易执行后的结果。
 
-**It is imperative that your Validator A keep running in this Session.** `set_key` only takes effect in the next Session.
+**验证人 A 必须在当下 Session 继续运行** ` set_key ` 仅在下一个 Session 生效。
 
 ### Session `N+1`
 
-Validator B is now acting as your validator. You can safely take Validator A offline. See note at bottom.
+现在验证人 B 充当验证人，你可以把验证人 A 停下来。请留意底部的注释。
 
-1. Stop Validator A.
-1. Perform your system or client upgrade.
-1. Start Validator A, sync the database, and connect it to your sentry nodes.
-1. Generate new Session keys in Validator A.
-1. Submit a `set_key` extrinsic from your Controller account with your new Session keys for Validator A.
-1. Take note of the Session that this extrinsic was executed in.
+1. 停止验证人 A。
+1. 把您的系统或客户端进行升级。
+1. 启动验证人 A，同步数据库并连接你的哨兵节点。
+1. 在验证人 A 生成新的 Session 密钥。
+1. 在你 Controller 帐户提交 `set_key` 交易设定验证人 A 新的 Session 密钥。
+1. 记下交易执行后的结果。
 
-**Again, it is imperative that Validator B keep running until the next Session.**
+**再重复一次验证人 B 必须在当下 Session 继续运行直至下一个 Session。**
 
-Once the Session changes, Validator A will take over. You can safely stop Validator B.
+一旦 Session 改变，验证人 A 将接管。你可以把验证人 B 停下来。
 
-**NOTE:** To verify that the Session has changed, make sure that a block in the new Session is finalized. You should see log messages like this to indicate the change:
+**注意:**: 为了确保 Session 已更改，请确保新 Session 中有一个区块已确认。如果成功，您应该看到类似以下的日志消息:
 ```
 2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
 2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities
