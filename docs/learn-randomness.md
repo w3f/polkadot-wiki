@@ -32,7 +32,7 @@ The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof t
 
 The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol (specifically, in the Polkadot Runtime Environment currently being built by Parity). If the value is less than the threshold, then the validator who rolled this number is a viable block production candidate for that slot. The validator then attempts to create a block and submits this block into the network along with the previously obtained `PROOF` and `RESULT`. 
 
-The fishermen - the nodes watching the network for collator and validator wrongdoing - will be verifying relay chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for them to automatically report cheating validators.
+The fishermen - nodes watching the network for collator and validator wrongdoing - will be verifying relay chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for them to automatically report cheating validators.
 
 To summarize: under VRF, every validator rolls a number for themselves, checks it against a threshold, and produces a block if the random roll is under that threshold. Fishermen who observe the network and report bad behavior verify the validity of these rolls post hoc, reporting any cheaters to the system (e.g. someone pretends to be a block producer despite rolling a number over the threshold).
 
