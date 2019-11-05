@@ -28,7 +28,7 @@ In every slot, each validator "rolls a die". They execute a function (the VRF) w
 
 ![](assets/VRF_babe.png)
 
-The output is two values: a `RESULT` and a `PROOF`.
+The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof that the random value was generated correctly).
 
 The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol (specifically, in the Polkadot Runtime Environment currently being built by Parity). If the value is less than the threshold, then the validator who rolled this number is a viable block production candidate for that slot. The validator then attempts to create a block and submits this block into the network along with the previously obtained `PROOF` and `RESULT`. 
 
