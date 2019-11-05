@@ -30,7 +30,7 @@ In every slot, each validator "rolls a die". They execute a function (the VRF) w
 
 The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof that the random value was generated correctly).
 
-The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol (specifically, in the Polkadot Runtime Environment currently being built by Parity). If the value is less than the threshold, then the validator who rolled this number is a viable block production candidate for that slot. The validator then attempts to create a block and submits this block into the network along with the previously obtained `PROOF` and `RESULT`. 
+The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol (specifically, in the Polkadot Runtime Environment). If the value is less than the threshold, then the validator who rolled this number is a viable block production candidate for that slot. The validator then attempts to create a block and submits this block into the network along with the previously obtained `PROOF` and `RESULT`. 
 
 The fishermen - nodes watching the network for collator and validator wrongdoing - will be verifying relay chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for them to automatically report cheating validators.
 
