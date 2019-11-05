@@ -4,6 +4,8 @@ title: Be a Nominator (Kusama)
 sidebar_label: Be a Nominator (Kusama)
 ---
 
+TODO: we're no longer in soft launch
+
 ## During Soft Launch
 
 While Kusama is still in the soft launch phase most of the functionality is disabled besides Staking. This is so that

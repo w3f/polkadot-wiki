@@ -133,6 +133,14 @@
           "maintain-guides-secure-validator",
           "maintain-guides-how-to-upgrade"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Governance Guides",
+        "ids": [
+          "maintain-guides-how-to-join-council",
+          "maintain-guides-how-to-vote-councillor"
+        ]
       }
     ]
   }
