@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "下一页",
     "previous": "上一页",
-    "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
+    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
@@ -181,6 +181,10 @@
         "title": "收集人",
         "sidebar_label": "收集人"
       },
+      "maintain-guides-how-to-join-council": {
+        "title": "Join the Council",
+        "sidebar_label": "Join the Council"
+      },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "成为提名人 (Alexander)",
         "sidebar_label": "成为提名人 (Alexander)"
@@ -204,6 +208,10 @@
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
         "sidebar_label": "运行验证人 (Alexander)"
+      },
+      "maintain-guides-how-to-vote-councillor": {
+        "title": "Voting for Councillors",
+        "sidebar_label": "Voting for Councillors"
       },
       "maintain-guides-secure-validator": {
         "title": "安全验证人节点",
