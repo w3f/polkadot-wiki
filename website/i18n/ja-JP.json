@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol.",
+    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
@@ -181,6 +181,10 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
+      "maintain-guides-how-to-join-council": {
+        "title": "Join the Council",
+        "sidebar_label": "Join the Council"
+      },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "Be a Nominator (Alexander)",
         "sidebar_label": "Be a Nominator (Alexander)"
@@ -204,6 +208,10 @@
       "maintain-guides-how-to-validate-alexander": {
         "title": "Run a Validator (Alexander)",
         "sidebar_label": "Run a Validator (Alexander)"
+      },
+      "maintain-guides-how-to-vote-councillor": {
+        "title": "Voting for Councillors",
+        "sidebar_label": "Voting for Councillors"
       },
       "maintain-guides-secure-validator": {
         "title": "Secure Validator",
