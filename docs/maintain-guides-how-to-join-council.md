@@ -50,5 +50,5 @@ the heading "Members."
 ![e](assets/council/member.png)
 
 Congratulations! Now you are able to participate on the council by making motions or vetoing
-proposals. It's a good idea to now [set a nick]() so that others know who the account belongs to and join the public
-[Kusama governance channel](). 
+proposals. It's a good idea to now [set a nick](https://guide.kusama.network/en/latest/try/nicks/) so that others know
+who the account belongs to and join the public [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation). 

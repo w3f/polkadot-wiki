@@ -43,4 +43,4 @@ submit the transaction.
 ![](assets/council/remove_vote.png)
 
 When the transaction is included in a block you should have your reserved tokens made liquid again and your vote will
-no longer be counting for any councillors in the elections.
+no longer be counting for any councillors in the elections starting in the next term.
