@@ -1,25 +1,25 @@
 ---
 id: learn-randomness
-title: Randomness
-sidebar_label: Randomness
+title: 随机性
+sidebar_label: 随机性
 ---
 
 ## VRFs
 
-BABE assigns block production slots to validators according to stake and using the Polkadot randomness cycle.
+BABE 根据抵押金额并使用 Polkadot 随机周期为验证者分配区块生产时段。
 
-The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos. Ouroboros randomness is secure for block production and works well for BABE. However, Polkadot requires a stronger source of randomness since it would be viable for an attacker to manipulate this randomness and effect validator-parachain selection.
+Polkadot 中使用的 VRF 与 Ouroboros Praos 中使用的 VRF 大致相同。Ouroboros 的随机性对于区 块生产来和 BABE 来说效果很好。因为攻击者可以操纵这种随机性并影响验证人对于平行链的选择，  所以 Polkadot 需要产生更强大的随机性。
 
-There are proposed solutions that have been considered for stronger randomness, but each has its own weakness (see [the section](https://research.web3.foundation/en/latest/polkadot/BABE/sortition/) in the research wiki for a fuller explanation). For this reason, Polkadot uses randomness which is based on a VRF.
+目前已有提出了被认为具有更强随机性的解决方案，但是每种解决方案都有其自身的弱点（请参阅[本节](https://research.web3.foundation/en/latest/polkadot/BABE/sortition/)在 Web3 研究维基中获得更完整的说明）。因此 Polkadot 使用基于 VRF 的随机性。
 
-## VDFs
+## 可验证延迟函数 (VDFs)
 
-[Verifiable Delay Functions](https://vdfresearch.org/) are computations which take a prescribed duration of time to complete, even on parallel computers. They produce unique output which can independently and efficiently verified in a public setting.
+[可验证延迟函数](https://vdfresearch.org/)即使在并行计算机上，也是需要指定时间才能完成的计算。 它们产生独特的输出使可以在公开设置中独立有效地进行验证。
 
-## Other approaches to randomness on blockchains
+## 其他区块链随机性的方法
 
-- [RANDAO](https://github.com/randao/randao) - RANDAO requires each validator to prepare by performing a series of hashes on some seed. Validators then publish the final hash during a round and the random number is derived from every participant's entry into the game. As long as one honest validator participates, the randomness is considered secure (non-economically viable to attack). It was not chosen as the randomness method for the VRF used in Polkadot because revealing a hash from every block producer for each slot costs quadratic bandwidth, or at least quadratic computation.
+- [ RANDAO ](https://github.com/randao/randao) - RANDAO 要求每个验证人通过对某些种子执行一系列哈希操作来进行准备。 验证人然后在一个回合中发布最终的哈希值，加上随机数是从每个参与者进入游戏中得出。只要有一名诚实的验证人参加，随机性就被认为是安全（在经济上进行攻击是不可行）。Polkadot 不选用 VRF 的随机性方法是因为从每个区块生产者处揭示每个时隙的哈希值需要二次带宽或至少二次计算。
 
-## Resources
+## 资源
 
-- [Discussion on Randomness used in Polkadot](https://github.com/paritytech/ink/issues/57) - W3F researchers discuss the randomness in Polkadot and when it is usable and under which assumptions.
+- [关于 Polkadot 中使用随机性的讨论](https://github.com/paritytech/ink/issues/57) - W3F 研究人员讨论了 Polkadot 中的随机性，何时用以及在哪些假设下进行。
