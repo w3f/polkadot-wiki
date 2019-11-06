@@ -6,7 +6,7 @@ sidebar_label: Staking
 
 Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors who are interested in maintaining the network can run a validator node. At genesis, Polkadot will have a limited amount of slots available for these validators, but this number will grow over time to over one thousand.
 
-The system encourages DOT holders to participate as nominators. Nominators may back up to 16 validators as trusted validator candidates. 
+The system encourages DOT holders to participate as nominators. Nominators may back up to 16 validators as trusted validator candidates.
 
 Validators assume the role of producing new blocks in BABE, validating parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with their stake.
 
@@ -95,8 +95,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### Want to stake DOTs?
 
-* [Nominator Guide](maintain-guides-how-to-nominate) - Become a nominator on the Alexander testnet.
-* [Validator Guide](maintain-guides-how-to-validate) - Become a validator on the Alexander testnet.
+* [Nominator Guide](maintain-guides-how-to-nominate-alexander) - Become a nominator on the Alexander testnet.
+* [Validator Guide](maintain-guides-how-to-validate-alexander) - Become a validator on the Alexander testnet.
 
 ## Slashing
 
