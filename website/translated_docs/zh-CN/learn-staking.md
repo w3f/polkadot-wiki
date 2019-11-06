@@ -95,8 +95,8 @@ Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。
 
 ### 想参与抵押 DOT?
 
-* 主网上线后年通胀率将达到 10%
-* 目标活跃抵押率 50%
+* [Nominator Guide](maintain-guides-how-to-nominate-alexander) - Become a nominator on the Alexander testnet.
+* [Validator Guide](maintain-guides-how-to-validate-alexander) - Become a validator on the Alexander testnet.
 
 ## Slash惩罚
 
