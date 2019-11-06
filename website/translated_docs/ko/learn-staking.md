@@ -95,8 +95,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### Want to stake DOTs?
 
-* [Nominator Guide](maintain-guides-how-to-nominate) - Become a nominator on the Alexander testnet.
-* [Validator Guide](maintain-guides-how-to-validate) - Become a validator on the Alexander testnet.
+* [Nominator Guide](maintain-guides-how-to-nominate-alexander) - Become a nominator on the Alexander testnet.
+* [Validator Guide](maintain-guides-how-to-validate-alexander) - Become a validator on the Alexander testnet.
 
 ## Slashing
 

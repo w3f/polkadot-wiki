@@ -78,16 +78,16 @@
         "sidebar_label": "桥接"
       },
       "learn-comparisons-dfinity": {
-        "title": "Dfinity and Polkadot",
+        "title": "Dfinity 和 Polkadot",
         "sidebar_label": "Dfinity"
       },
       "learn-comparisons-cosmos": {
-        "title": "Design Comparison",
+        "title": "设计比较",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
         "title": "与其它区块链比较",
-        "sidebar_label": "Other comparisons"
+        "sidebar_label": "与其它比较"
       },
       "learn-consensus": {
         "title": "Polkadot 共识机制",
@@ -182,8 +182,8 @@
         "sidebar_label": "收集人"
       },
       "maintain-guides-how-to-join-council": {
-        "title": "Join the Council",
-        "sidebar_label": "Join the Council"
+        "title": "加入议会",
+        "sidebar_label": "加入议会"
       },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "成为提名人 (Alexander)",
@@ -198,8 +198,8 @@
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
       "maintain-guides-how-to-upgrade": {
-        "title": "How to Upgrade Your Validator",
-        "sidebar_label": "How to Upgrade Your Validator"
+        "title": "如何升级验证人节点",
+        "sidebar_label": "如何升级验证人节点"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
