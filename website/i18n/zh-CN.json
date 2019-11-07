@@ -134,8 +134,8 @@
         "sidebar_label": "平行线程"
       },
       "learn-phragmen": {
-        "title": "Sequential Phragmen Method",
-        "sidebar_label": "Sequential Phragmen Method"
+        "title": "顺序弗拉格曼方法",
+        "sidebar_label": "顺序弗拉格曼方法"
       },
       "learn-PRE": {
         "title": "Polkadot Runtime 环境 (PRE)",
@@ -210,8 +210,8 @@
         "sidebar_label": "运行验证人 (Alexander)"
       },
       "maintain-guides-how-to-vote-councillor": {
-        "title": "Voting for Councillors",
-        "sidebar_label": "Voting for Councillors"
+        "title": "投票选举议员",
+        "sidebar_label": "投票选举议员"
       },
       "maintain-guides-secure-validator": {
         "title": "安全验证人节点",
