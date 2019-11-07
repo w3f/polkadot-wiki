@@ -20,7 +20,7 @@ sidebar_label: 维基索引
 
 ## 想运行节点？
 
-- [运行节点](maintain index)-有关在 Polkadot 网络上运行节点的信息。
+- [运行节点](maintain-index)-有关在 Polkadot 网络上运行节点的信息。
 
 ## 资源
 
