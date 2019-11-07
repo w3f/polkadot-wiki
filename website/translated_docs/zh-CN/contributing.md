@@ -4,7 +4,7 @@ title: 贡献
 sidebar_label: 贡献
 ---
 
-## 这[ Wiki ](https://github.com/w3f/Polkadot-wiki)是<strong x-id =“ 1”> OPEN-ish开放源代码项目</strong>
+## 这[ Wiki ](https://github.com/w3f/Polkadot-wiki)是 ** OPEN-ish开放源代码项目**
 
 这是关于 Polkadot 和 Polkadot 生态系统的信息资源。
 
