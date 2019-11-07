@@ -1,21 +1,21 @@
 ---
 id: learn-cryptography
-title: Cryptography Explainer
-sidebar_label: Cryptography Explainer
+title: 密码学解释
+sidebar_label: 密码学解释
 ---
 
-This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some knowledge about cryptographic primitives that are used in blockchains generally such as hashes, elliptic curve cryptography (ECC), and public-private keypairs.
+这是 Polkadot 中使用密码学技术的高级概述。假设你已了解在区块链中常用的密码学术语例如哈希，椭圆曲线密码学（ECC）和公私密钥对。
 
-For detailed descriptions on the cryptography used please see the more advanced [research wiki](https://research.web3.foundation).
+有关所用密码学的详细说明，请参阅我们[研究团队的维基](https://research.web3.foundation)。
 
-## Hashing Algorithm
+## 哈希算法
 
-The hashing algorithm used in Polkadot is [Blake2b](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2). Blake2 is considered to be a very fast cryptographic hash function that is also used in the cryptocurrency [Zcash](https://z.cash).
+在 Polkadot 使用的哈希算法是  [Blake2b](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2)。 Blake2 被认为是一个非常快的加密哈希函数，也用在 [Zcash](https://z.cash) 加密货币。
 
-## Keypairs and Signing
+## 密钥对和签名
 
-Polkadot uses Schnorrkel/Ristretto x25519 ("sr25519") as its key derivation and signing algorithm.
+Polkadot 使用 Schnorrkel/Ristretto x25519 ("sr25519") 作为导出密钥和签名算法。
 
-Sr25519 is based on the same underlying [Curve25519](https://en.wikipedia.org/wiki/Curve25519) as its EdDSA counterpart, [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519). However, it uses Schnorr signatures instead of the EdDSA scheme. Schnorr signatures bring some noticeable benefits over the ECDSA/EdDSA schemes. For one, it is more efficient and still retains the same feature set and security assumptions. Additionally, it allows for native multisignature through [signature aggregation](https://bitcoincore.org/en/2017/03/23/schnorr-signature-aggregation/).
+Sr25519 基于 [Curve25519](https://en.wikipedia.org/wiki/Curve25519) 相同的底層作為 EdDSA 的哥哥  [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) ，但是它使用 Schnorr 簽名而不是 EdDSA 方案。与 ECDSA / EdDSA 方案相比，Schnorr 签名带来了一些明显好处，一方面效率更高，但仍保留相同的功能和安全性假设。另外它允许通过簽名集合方式进行原生多重签名。
 
-The names Schnorrkel and Ristretto come from the two Rust libraries that implement this scheme, the [Schnorrkel](https://github.com/w3f/schnorrkel) library for Schnorr signatures and the [Ristretto](https://ristretto.group/ristretto.html) library that makes it possible to use cofactor-8 curves like Curve25519.
+Schnorrkel 和 Ristretto 名称来自实现该方案的两个 Rust 库，分别为[ Schnorrkel ](https://github.com/w3f/schnorrkel)库用于 Schnorr 签名和 [Ristretto](https://ristretto.group/ristretto.html) 库，使可以用诸如 Curve25519 之类的 cofactor-8 曲线。
