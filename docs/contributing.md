@@ -16,7 +16,7 @@ Education team at the foundation are most directly involved.
 
 ## How to Contribute
 
-Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a very easy to learn
+Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/)
 syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
 Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub
