@@ -4,15 +4,21 @@ title: 贡献
 sidebar_label: 贡献
 ---
 
-## 这[ Wiki ](https://github.com/w3f/Polkadot-wiki)是 ** OPEN-ish开放源代码项目**
+The wiki was started and is maintained by the Web3 Foundation. It is an Open-ish open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to cover informational material for community projects. But please do not try to pull request any marketing material as this will be rejected.
 
-这是关于 Polkadot 和 Polkadot 生态系统的信息资源。
+Pull requests, discussions and contributions from the community are encouraged. For certain active community members who demonstrate a record of good contributions, they may be given write access to the repository. Otherwise, the Web3 Foundation holds the administrative position and final say on the content that is included. Specifically the Technical Education team at the foundation are most directly involved.
 
-鼓励来社区提出意见或其他贡献！ 但是内容的添加最终决定权将由 Web3 基金会做出。
+## How to Contribute
+
+Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
+
+Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes you can create a new Pull Request to the repository and one of the maintainers will either merge it in or request changes very soon.
+
+![](assets/edit_button.png)
 
 ## 规则
 
-对于贡献者，有几个基本的规则：
+There are a few basic ground-rules for contributors:
 
 1. **没有` --force ` pushes **或以任何方式修改 Git 历史记录。
 2. 对于某些问题，尤其是对于诸如错别字之类的较小更改，优先使用 Pull requests。 问题适用于一般或广泛的更改或内容缺少。
@@ -23,11 +29,10 @@ sidebar_label: 贡献
 7. 应使用正确的语法。带有错别字的 Pull requests 的请求在修复之前不会合并。
 8. 应注意保持尽可能客观和有益的信息。不应故意编造 ，也不应存在外部偏见。
 
-
 ## 更改这一安排
 
-如果您认为有一些有价值的内容需要添加或更改，则此文档也可能会受到贡献者的请求或更改的影响。
+This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
 
 ## 继承
 
-本文档基于以下级别贡献准则：[https://github.com/level/community/blob/master/contribution.md](https://github.com/level/community/blob/master/contribution.md)
+This document was based on the Level contribution guidelines located here: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
