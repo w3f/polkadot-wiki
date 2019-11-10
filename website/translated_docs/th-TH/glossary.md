@@ -87,9 +87,17 @@ Providing conflicting information to the network. BABE equivocation entails crea
 
 กลุ่มออนไลน์บนบล็อกเชน ซึ่งประกอบด้วยบัญชีบล็อกเชนหลายบัญชี (เริ่มต้นที่ 6 จนถึง 24 บัญชี) ซึ่งทำหน้าที่เป็นตัวแทนของผู้มีส่วนได้เสียที่ไม่ลงคะแนนเสียง สมาชิกสภามีหน้าที่หลักสองประการ การเสนอ referenda เพื่อให้กลุ่มผู้มีส่วนได้เสียลงคะแนน และยกเลิก referenda ที่มีจุดประสงค์ร้าย
 
+## Hard Fork
+
+A permenant diversion of a blockchain that can occur quickly due to a high priority change in a consensus rule. Clients who follow a hard fork always need to upgrade their clients in order to continue following the hard-forked chain. Hard forks are considered permanent divergences of a chain for which non-upgraded clients are following consensus rules incompatible to the ones followed by upgraded clients.
+
+## Hard Spoon
+
+Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of *the same blockchain*.
+
 ## KSM
 
-อักษรย่อของโทเค็นบนเครือข่าย Kusama
+The abbreviation for Kusama network tokens.
 
 ## Kusama
 
@@ -97,59 +105,59 @@ The "canary network" for Polkadot. It consists of an early-release, unaudited ve
 
 ## LIBP2P
 
-ไลบรารีโอเพนซอร์สสำหรับการสื่อสารแบบ P2P ที่มีการเข้ารหัสและฟังก์ชันเครือข่ายอื่น ๆ อ่านข้อมูลเพิ่มเติมได้ที่: [https://libp2p.io/](https://libp2p.io/)
+An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: [https://libp2p.io/](https://libp2p.io/)
 
 ## Liveness
 
-คุณสมบัติของระบบกระจายที่บ่งบอกว่าในที่สุดระบบจะสามารถหาฉันทามติได้ ระบบที่ติดอยู่ในลูปไม่สิ้นสุด ถึงแม้ว่าจะมีการคำนวณเกิดขึ้น ไม่ถือว่ามี liveness ระบบที่ให้ผลลัพธ์ในที่สุด ถึงแม้ว่าจะไม่ถูกต้องหรือใช้เวลานาน ถือว่ามี liveness
+The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system which eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
 
-## เครื่องมือสำรวจโหนด (Node Explorer)
+## Node explorer
 
-เครื่องมือที่ให้ข้อมูลเกี่ยวกับโหนด เช่นบล็อกล่าสุดที่ถูกปิดผนึก บล็อกที่ถูกสรุป และสถานะบล็อกเชนปัจจุบัน
+A tool which gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
 
 ## Nominated Proof of Stake (NPoS)
 
-ระบบ proof of stake ที่ผู้เสนอชื่อ (Nominators) ให้ยืมเงินที่ถูกล็อกเป็นหลักประกัน แก่ผู้ตรวจสอบ (Validators) เพราะเชื่อในในพฤติกรรมที่ดีของผู้ตรวจสอบ Nominated proof-of-stake แตกต่างจาก delegated proof-of-stake ตรงที่ ผู้เสนอช่ือ (Nominators) อาจสูญเสียเงินที่วางเป็นหลักประกันหากพวกเขาเสนอผู้ตรวจสอบที่ประพฤติตัวไม่ดี แต่ผู้แทน (Delegates) ไม่ต้องสูญเสียเงินเดิมพันตามพฤติกรรมของผู้ตรวจสอบ โปรดทราบว่าเทคโนโลยีบล็อกเชนอื่น ๆ อาจมีการใช้เรียกว่าเป็น delegated proof of stake ถึงแม้ว่าผู้แทนอาจจะถูกยึดหลักประกัน
+A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
 
-## ผู้เสนอชื่อ (Nominator)
+## Nominator
 
-เป็นโหนดที่มีหน้าที่เลือกลุ่มผู้ตรวจชอบชุดนึง DOT จำนวนนึงต้องถูกล็อกเป็นหลักประกันเพื่อที่จะได้ทำหน้าที่ดังกล่าว ซึ่งอาจจะเกิดการสูญเสียของ DOT ได้หากผู้ตรวจสอบที่โหนดเลือกประพฤติตัวไม่ดี สิ่งนี้จึงบังคับให้ผู้เสนอชื่อเลือกผู้ตรวจสอบอย่างระมัดระวัง
+Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
 
-## การกำกับดูบนบล็อกเชน (On-chain governance)
+## On-chain governance
 
-การกำกับดูแลของบล็อกเชน ซึ่งถูกควบคุมโดยกลไกที่ควบคุมโดยบล็อกเชน การกำกับดูแลแบบ On-chain ช่วยให้สามารถทำการตัดสินใจได้อย่างโปร่งใส โปรดทราบว่ามีอัลกอริทึมหลายตัวที่สามารถช่วยในการตัดสินใจเหล่านี้ เช่นการลงคะแนนเสียงข้างมาก และการลงคะแนนเสียงแบบ identity-based quadratic
+Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
 
-## พาราเชน (Parachain)
+## Parachain
 
-เป็นบล็อกเชนที่มีคุณสมบัติหลายอย่างที่ทำให้สามารถทำงานบน Polkadot Runtime Environment ได้ อีกชื่อเรียกคือ "บล็อกเชนแบบขนาน"
+A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
 
 ## Parachain Registry
 
-โครงสร้างคล้ายฐานข้อมูลที่ไม่ซับซ้อนที่เก็บข้อมูลทั้งแบบคงที่และแบบไดนามิกในแต่ละบล็อกเชน
+A relatively simple database-like construct that holds both static and dynamic information on each chain.
 
 ## Parity Technologies
 
-บริษัทที่ก่อตั้งโดย Dr. Gavin Wood ซึ่งกำลังพัฒนา Substrate บริษัทยังได้มีการพัฒนาโครงการอื่น ๆ อีกหลายอย่าง เช่น Parity Ethereum และ Parity Wasm
+A company, founded by Dr. Gavin Wood, which is developing Substrate. It has also released several other projects including Parity Ethereum and Parity Wasm.
 
 ## Polkadot
 
-เทคโนโลยีสำหรับหลายบล็อกเชนต่างชนิด ช่วยให้บล็อกเชนที่มีคุณลักษณะที่แตกต่างกันสามารถสื่อสารระหว่างกันได้
+A heterogeneous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
 
 ## Polkadot Runtime Environment
 
-สภาวะแวดล้อมรันไทม์ (Runtime Environment) ที่โมดูลรันไทม์ (runtime module) สามารถรันบนได้ Parachains ต้องรองรับ Polkadot Runtime Environment - เครือข่ายภายนอกซึ่งไม่รองรับต้องใช้สะพานเชื่อมต่อ (Bridge) ในการเชื่อมต่อ
+The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
 ## Proof of Stake (PoS)
 
-หนึ่งวิธีในการหาฉันทามติโดยกำหนดว่าบล็อกต่อไปจะถูกกำหนดโดยโหนดที่ถูกเลือกเพราะคุณสมบัติบางอย่าง (เช่น จำนวนโทเค็นที่วางเป็นหลักประกัน)
+A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
 
 ## Proof of Work
 
-หนึ่งวิธีในการหาฉันทามติโดยกำหนดว่าบล็อกต่อไปคือบล็อกแรกที่สามารถแก้ไขปริศนาที่ยากได้ (เช่นใน Bitcoin ต้องหา pre-image hash เพื่อที่จะสร้างบล็อกต่อไป)
+A method of achieving consensus in which the next block is determined by the first to solve a difficult puzzle (e.g., in Bitcoin, solving a partial pre-image hash for a block candidate).
 
-## ข้อเสนอ (Proposal)
+## Proposal
 
-การเรียกใช้ฟังก์ชันที่ต้องผ่านการลงคะแนนเสียงประชามติ ข้อเสนอมีสิทธิ์ในแก้ไขพฤติกรรมของเครือข่าย Polkadot ตั้งแต่การปรับพารามิเตอร์เล็กน้อยจนถึงการเปลี่ยนโค้ดรันไทม์
+A potential function call to be voted on in a referendum. Proposals modify the behavior of the Polkadot network, from minor parameter tuning all the way up to replacing the runtime code.
 
 ## Protocol
 
@@ -194,6 +202,10 @@ A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually
 ## Slashing
 
 The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
+
+## Soft Fork
+
+A backwards compatible change to client code which causes upgraded clients to start mining a new chain. Requires a "vote-by-hashrate" of majority of miners in order to enact successfully. Soft forks are considered temporary divergences in a chain since non-upgraded clients do not follow the new consensus rules but upgraded clients are still compatible with old consensus rules.
 
 ## Staking
 

@@ -25,6 +25,7 @@ Here we provide a list of tools available for your development needs. They are s
 
 - [Polkadot Telemetry Service](https://telemetry.polkadot.io/) - Network information including what nodes are running the chain, what software versions they are running, sync status, and map showing where they are located.
 - Polkabot - Polkadot network monitoring and reporting using Riot chat. Users may create custom bot plugins. [Blogpost](https://medium.com/polkadot-network/polkabot-a3dba18c20c8). [Github Repository](https://gitlab.com/Polkabot/polkabot)
+- [PolkaStats](https://polkastats.io/) - Polkadot network statistics (Kusama and Alexander). Shows network information and staking details from validators and intentions. [Github Repository](https://github.com/Colm3na/polkastats-v2/)
 
 ## Rust
 
