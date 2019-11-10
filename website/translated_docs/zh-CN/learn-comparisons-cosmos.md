@@ -1,121 +1,121 @@
 ---
 id: learn-comparisons-cosmos
-title: Design Comparison
+title: 设计比较
 sidebar_label: Cosmos
 ---
 
-Both Polkadot and Cosmos are projects in the blockchain space that aim to solve interoperability and scalability of blockchains.
+Polkadot 和 Cosmos 都是区块链领域旨在解决互操作性和可扩展性的项目。
 
-Polkadot takes a shared-state heterogeneous multichain approach, while Cosmos assumes all chains are independent but connected.
+Polkadot 采用共享状态异构多链方法，而 Cosmos 则假设所有链都是独立，但相互连接。
 
-This article will attempt to break down the core differences between the Polkadot and Cosmos designs, explain some benefits and drawbacks of each, and argues that the two projects are complimentary in nature.
+本文将试图打破 Polkadot 和 Cosmos 设计之间的核心区别，解释每个设计的优点和缺点，并争辩这两个项目在本质上是互补。
 
-## In one sentence
+## 一句说话
 
-Polkadot is a heterogeneous sharded multichain with scalable security and a trustless data transmission protocol.
+Polkadot 是异构分片多链，具有可扩展的安全性和去信任的数据传输协议。
 
-Cosmos is composed of individual chains with independent security and bridges between them that allow for the transfer of messages.
+Cosmos 由具有独立安全性的单链和它们之间的桥梁组成，允许传输消息。
 
-## Architecture
+## 架构
 
 ### Polkadot
 
-The center of the Polkadot multichain is the relay-chain. All validators validate for the relay-chain by participating in Polkadot's hybrid consensus model known as BABE/GRANDPA using a variant of Proof-of-Stake.
+Polkadot 链的中心是中继链，所有验证人都可以通过使用权益证明参与 Polkadot 的混合共识模型(称为 BABE/GRANDPA) 来验证中继链。
 
-Validators are selected through a Nominated Proof-of-Stake (NPoS) scheme in which DOT holders can nominate their stake to a set of validators and the stake will attempt to equalize between them. For more on Polkadot's NPoS click [here](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43).
+验证人通过 NPoS 方案被选择出来，即 DOT 持有人使用他们的抵押提名多位验证人和将他们的抵押尽可能平均分配到验证人。想了解更多 Polkadot's NPoS按[这里](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43)。
 
-Polkadot is a sharded design that allows parachains with their own contained logic to connect and share in the security of the relay-chain validators. These parachains (short for parallelized chain) are something between a side-chain and a shard since they encapsulate their own state and state transitions, but must report it to the relay-chain for verification.
+Polkadot 是分片设计，它允许具有自己逻辑的平街链连接和共享中继链验证人的安全性。这些平行链(缩写是并行链)是侧链和分片之间的部分，因为它们封装了自己的状态和状态转换，但必须将其报告给中继链以进行验证。
 
-For each parachain, a type of network maintainer known as the collators engage with a subset of validators by handing proofs of state transitions which the validators can then easily verify. In this way, only a few validators are assigned to verify each parachain shard and computation can scale with the number of parachains. Parachains are able to transmit data between each other in a trustless manner which can be escalated to the security of the entire relay-chain validator set when necessary (known as ICMP, more on that below).
+对于每个平行链，一种称为网络维护者的收集人通过提交状态转换证明与验证人的子集进行交互，然后验证人可以轻松地对其进行验证。 这样仅分配了几个验证人来验证每个平行链，并且计算可以随平行链的扩展数量。 平行链能够以去信任的方式在彼此之间传输数据，可以在必要时将其升级为整个中继链验证人集的安全性(称为ICMP，在下文中有更多介绍)。
 
-Some of the parachains on Polkadot will act as interpreters to external chains such as Bitcoin, Ethereum, and Cosmos. These are called parachain bridges.
+Polkadot 上的一些平行链将充当外部链的解释器，例如比特币，以太坊和 Cosmos。 这些被称为桥转链。
 
 ### Cosmos
 
-There is not a center in the Cosmos universe, where in true decentralized fashion each chain is independent and maintains their own validator set. However, the _hubs_ such as the Cosmos Hub or the [Iris Hub](https://www.irisnet.org) provide a juncture for which the chains can communicate.
+Cosmos 宇宙中没有中心，以真正的分散方式。每个链都是独立的，并维护自己的验证人。但是*hubs*(例如Cosmos Hub或[ Iris Hub ](https://www.irisnet.org))提供了一个结合点，使连锁的链可以交流的。
 
-Cosmos does not attempt to create an environment of shared security among the chains connected by the bridge _zones_ and hubs. Instead they take a sovereign-first approach and strictly require chains to maintain their own validator set and economic security.
+Cosmos 不会尝试在由桥*zones*和 hubs 连接的链之间创建共享安全性的环境。 相反它们采取主权第一的方法，并严格要求链条维护自己的验证人和经济安全。
 
-Cosmos connects to external chains through the use of what are called _peg zones_ which provide a kind of specialized bridge that can understand the external consensus. For all chains that satisfy [consensus requirements](https://github.com/cosmos/ics/tree/master/spec/ics-002-consensus-verification), their interoperability protocol (known as IBC, more on that below) will work without the need of this special peg.
+Cosmos 通过使用所谓的*peg zones*连接到外部链，该提供了一种可以理解外部共识的专门桥梁。对于满足[共识要求](https://github.com/cosmos/ics/tree/master/spec/ics-002-consensus-verification)的所有链，它们的互操作性协议(称为 IBC，请参见下文)。
 
-The Cosmos hub uses a Proof-of-Stake algorithm that weighs validators by the amount of tokens backing them. It also allows smaller holders to delegate their tokens to one of its validators (currently 100, but there are plans to increase this number to >300). However, other zones in Cosmos may implement variants of this Proof-of-Stake scheme.
+Cosmos hub 使用权益证明算法，该算法通过支持验证人的代币数量对验证人进行加权。它还允许较小的持有者将其代币委派给其验证人之一(目前为100个，但计划将其数量增加到>300)。但是 Cosmos 中的其他 zones 可能会实施此不一样 的权益证明方案。
 
-## Trust model
+## 信任模式
 
-Polkadot and Cosmos enforce the notion of honest behavior of their validator set through slashing punishments in which some of the validators' stakes could get depleted if they are found doing something bad.
+Polkadot 和 Cosmos 通过严厉的惩罚来实施，使其验证人不会做不诚实的行为，如果发现验证人做错了事，他们抵押中的代币就会被耗尽。
 
-Polkadot depends on the complete validator set in cases where the subset of validators are unable to make a new state transition for a parachain. At all times, there is the possibility to tap into the entire security of all of Polkadot. This is because Polkadot has the notion of shared state, in which all the pieces fit together into one unanimous multichain. So in this way, if one parachain is tainted the entire state of Polkadot is able to revert the tainted operations and slash the unscrupulous validators.
+如果验证人的子集无法为平行链进行新的状态转换，Polkadot 则取决于完整的验证人。 在任何时候，都有可能利用所有 Polkadot 的整个安全性。 这是因为Polkadot 具有共享状态的概念，其中所有部分都组成一个一致的多链。 因此以这种方式，如果一个平行链受到污染，则 Polkadot 的整个状态就能够还原受污染的操作并削减不道德的验证人。
 
-The entire validator set must resolve a conflict if it so happens that the supermajority of the validators which are assigned to a parachain shard become dishonest (or Byzantine, a word to refer nodes which have failed in some fashion-- whether this means they have gone offline or become malicious).
+如果发生这种情况，则整个验证人都必须解决冲突，以至于分配给平行链碎片的验证人的绝大多数变得不诚实(或拜占庭，一个以某种方式失败的节点的引用这个词-是否意味着它们已经消失了) 离线或恶意)。
 
-Cosmos does not operate under the assumption that all the connected chains have shared state, so in this way each chain is independent and responsible for incentivizing their own security. The Cosmos IBC design does not make additional security guarantees on any of the interchain messaging. If a user decided to send a message from one Cosmos Tendermint chain to another, and later that second chain is corrupted because it had much lower security, it could have an indirect effect on the original chain. Cosmos' model is only as secure as the least secure of the bridged chains that the user uses. It is expected that the security will vary widely between each chain on Cosmos and users of the chains should know and understand this. This is different from Polkadot which is designed to distribute security as a blanket over all parachains through the shared-state model.
+Cosmos 并不是在所有连接的链都具有共享状态的假设下运行的，因此每个链都是独立并有自己负责激励的安全性。 Cosmos IBC 设计不对任何链间消息传递做出额外的安全保证。 如果用户决定将消息从一个 Cosmos Tendermint 链发送到另一个链，然后由于安全性低得多而使第二条链损坏，则可能对原始链产生间接影响。 Cosmos 模型仅与用户使用的桥接链中最不安全的模型一样安全。 预计 Cosmos 上每个链之间的安全性将有很大差异，并且链的用户应了解并理解这一点。 这不同于 Polkadot，后者旨在通过共享状态模型将安全性作为一揽子服务分配给所有平行链。
 
-## Interoperability
+## 互通性
 
-Polkadot and Cosmos are both working on blockchain interoperability protocols.
+Polkadot 和 Cosmos 都在研究区块链互操作性协议。
 
-Polkadot uses the Interchain Message Passing (ICMP) protocol to send messages between parachains. The messages which are passed can be any arbitrary string of bytes, meaning they could be encoded to be asset transfers or more complex cross-chain calls. ICMP is trustless because it is verified by the validator as part of the validity check of each new parachain block that the messages will be included. Validators only accept new parachain blocks if they've included all of the incoming messages from other parachains (given a one or two blocks buffer). Additionally, the Shared Protected Runtime Execution Environment (SPREE) gives even stronger guarantees that the messages will trigger the same exact code across parachains.
+Polkadot 使用跨链消息传递(ICMP)协议在平行链之间发送消息。传递的消息可以是任意字节串，这意味着它们可以被编码为资产转移或更复杂的跨链调用。 ICMP是去信任的，因为它是由验证人验证作为每个新的平行链区块检查有效性的一部分，使该消息将被包含。验证人仅接受包含其他平行链的所有传入消息(给定一个或两个区块缓冲区)的新平行链区块。此外 Shared Protected Runtime Execution Environment (SPREE) 甚至提供了更强有力的保证，即消息将在平行链中触发相同的精确代码。
 
-Cosmos's work in this regard is currently focused on Inter-Blockchain Communication (IBC). IBC resembles TCP in the legacy world of networking because it treats each blockchain as its own separate process with its own security assumptions.
+Cosmos 在这方面的工作目前专注于跨链通信(IBC)。 IBC 在网络的传统世界中类似于 TCP，因为它将每个区块链视为具有自己的安全性假设的独立流程。
 
-Both ICMP and IBC require consensus verification, but ICMP provides state machine verification while IBC leaves this aspect up to the user.
+ICMP 和 IBC 都需要共识验证，但是 ICMP 提供状态机验证，而 IBC 将这方面的工作留给用户。
 
-> Protip: For more on SPREE see [here](https://wiki.polkadot.network/en/latest/polkadot/learn/spree/).
+> Protip：有关SPREE的更多信息，请参见[此处](https://wiki.polkadot.network/en/latest/polkadot/learn/spree/)。
 
-### Connecting Polkadot and Cosmos
+### 连接 Polkadot 和 Cosmos
 
-The astute reader will notice that the two interoperability protocols used respectively by Polkadot and Cosmos have different formats and try to achieve different goals. While Polkadot wants to enable trustless data transmission among the parachains, Cosmos wants to be able to send packet-like messages from one blockchain with finality to another.
+精明的读者会注意到 Polkadot 和 Cosmos 分别使用的两种互操作性协议具有不同的格式，并试图实现不同的目标。尽管 Polkadot 希望能够在平行链之间实现去信任的数据传输，但 Cosmos 希望能够从一个区块链最终发送到另一个区块链状消息。
 
-Since the Polkadot relay-chain comes to finality by using the GRANDPA finality gadget, the IBC scheme proposed by Cosmos should be able to work with Polkadot (more on finality in the [section below](#finality)).
+由于 Polkadot 中继链通过使用 GRANDPA 最终性工具达到了最终性，因此 Cosmos 提出的 IBC 方案应该能够与 Polkadot 一起使用（有关[以下部分中](#finality)的最终性的更多信息）。
 
-There does not need to be any tweaks made to the design of either of the protocols, but an interpreter for IBC packets would need to occupy a parachain slot on Polkadot. This is so that this slot could serve as a Tendermint light client and consensus interpreter and be able to verify which blocks have been signed with finality. On the Cosmos side they would watch for the headers of this interpreter which would be included in the relay-chain blocks.
+无需对这两种协议的设计进行任何调整，但用于 IBC 数据包的解释器将需要占用 Polkadot 上的平行链插槽。这样该插槽可以充当 Tendermint 轻客户端和共识解释器，并能够验证已最终签署了哪些区块。在 Cosmos 方面，它们将注意此解释器的区块头，该区块头将包含在中继链区块中。
 
-## Validity
+## 有效性
 
-In Polkadot validity of the entire state of the network is secured by 100% of the validators. The way this happens is as follows: validators will be shuffled into groups (subsets) and assigned to be validating for specific parachains. Every time a parachain submits a proof of a new block (i.e. the state transition), the subset of validators will verify its validity using only a proof and the necessary data. The validators then must only commit the hash of the parachain header to the relay chain block in order to include it. In this way, the parachain execution is compressed first into a proof and given to a subset of validators which then compress it further before writing it onto the relay chain.
+在 Polkadot 中网络的整个状态的有效性由 100％ 的验证人确保。发生这种情况的方式如下：验证人将洗牌并分配给特定的平行链进行验证。每次平行链提交新区块的证明(即状态转换)时，验证人将仅使用证明和必要数据来验证其有效性。然后验证人必须仅将平行链区块头的哈希提交到中继链区块才能包括在内。这样首先将平行链执行压缩为证明，然后提供给验证人，之后再将其写入到中继链之前进一步压缩它。
 
-Cosmos does not treat validity in the same way. Validity for Cosmos chains require the supermajority of validator sets on each chain to sign off on every block, and to perform the complete verification on the transactions in the blocks. The acts of compression which take place during Polkadot's validity checking process do not happen during Cosmos' process. For this reason, the same scalability among the shared state of Polkadot would be infeasible on Cosmos, which prefers to take an approach in which chains are connected in a sparse graph.
+Cosmos 不是以相同的方式看待有效性。 Cosmos 链的有效性要求每个链上都有大量验证人，以便在每个区块上签名，并对区块中的交易执行完整的验证。在 Polkadot 的有效性检查过程中发生的压缩行为不会在 Cosmos 的过程中发生。因此在 Cosmos 上，Polkadot 共享状态之间的相同可伸缩性是不可行的，它倾向于采用在稀疏中连接链的方法。
 
-## Availability
+## 可用性
 
-Polkadot has additional mechanisms which guarantee the availability of data and gives even stronger security assurances. Namely, these are the use of erasure codes for parachain data availability among the entire validator set and fishermen which are bounty hunters that watch for invalid validator behaviors.
+Polkadot 具有其它机制保证数据的可用性并提供更强的安全性保证。这些是在整个验证人和钓鱼人中使用擦除码来获取平行链数据，这些钓鱼人是赏金猎人，他们在监视无效的验证人行为。
 
-Cosmos chains must keep the entire data for the chains they are validating, and for bridge chains will need to be also a light client of that chain. Cosmos has no plan to use erasure codes or fishermen at the base layer, but acknowledges that these could be implemented on top of IBC.
+Cosmos 链必须保留要验证的链的全部数据，而对于桥接链也必须是该链的轻节点。Cosmos 没有计划在基础层使用擦除代码或钓鱼人，但承认可以在 IBC 之上实施。
 
-## Consensus
+## 共识
 
-Polkadot uses a hybrid consensus composed of BABE, a block production mechanism and GRANDPA, a Byzantine finality gadget.
+Polkadot 使用由 BABE(区块生产机制)和GRANDPA(拜占庭确定性工具)组成的混合共识。
 
-Cosmos uses Tendermint BFT consensus, which is closely inspired by Practical Byzantine Fault Tolerance (PBFT).
+Cosmos 使用 Tendermint BFT 共识，这是受到拜占庭容错(PBFT)的启发。
 
-### Finality
+### 确定性
 
-Polkadot's GRANDPA finality gadget comes to finality on _chains of blocks_ rather than individual blocks. This is largely different from Cosmos, which comes to consensus on every block. In fact, Cosmos' Tendermint algorithm conflates the act of block production with the finality, which means that blocks can only be produced if they have been finalized. GRANDPA, instead is placed on top of the block production (BABE), and can finalize more than one block at once, making the overall consensus process run quicker.
+Polkadot 的 GRANDPA 确定性工具可以在多个区块而不是单个区块上实现最终性。 这与 Cosmos 有很大不同，后者在每个方面都达成了共识。 实际上 Cosmos 的 Tendermint 算法将区块生产的行为与最终性结合在一起，这意味着只有在区块确定后才能生产块。 相反 GRANDPA 被置于区块生产(BABE)之上，并且可以一次完成确认一个以上的区块，从而使整个共识流程运行得更快。
 
-### Liveness
+### 活跃性
 
-Polkadot's design has stronger liveness guarantees than Cosmos' Tendermint, which prioritizes the safety.
+Polkadot 的设计比 Cosmos 的 Tendermint 具有更强的活跃保证，后者将安全性放在了首位。
 
-In Tendermint, block production will stop along with the finality, once more than 1/3 of the validator set has become Byzantine.
+在 Tendermint 中，一旦超过1/3的验证人，即为拜占庭，则区块生产将随着最终性而停止。
 
-Tendermint uses a weight-based proof-of-stake algorithm which gives validators voting power based on the amount of ATOM tokens they hold (or are delegated). Currently only 5 out of 100 validators control 1/3 of the stake and thus could halt the finalization procedure of the network. In Polkadot, the number of validators will always be 33% of the total (so with 100 validators, 33).
+Tendermint 使用基于权重的股权证明算法，该算法根据验证人持有(或委托)的ATOM 数量，为验证人提供投票权。目前每100个验证者中，有5个控制着1/3的股份，因此可能会终止网络的最终确定程序。在 Polkadot 中，验证人的数量将始终是总数的33％(因此如果有100个验证人，则为33)。
 
-While Polkadot's GRANDPA will also stop finalizing blocks once more than 1/3 of the validator set is Byzantine, BABE will continue to produce blocks. Once the validator set has been restored by either kicking out the unresponsive validators or validators coming back online, GRANDPA will start to finalize on all the blocks BABE has produced in the meantime.
+一旦 Polkadot 的 GRANDPA 会在超过1/3的验证人是拜占庭时也停止确认区块，而 BABE 将继续产生区块。通过踢出反应迟钝的验证人或重新返回在线的验证人来恢复验证者人后，GRANDPA 将开始最终确定 BABE 同时生成的所有区块。
 
-### Validator selection (PoS)
+### 验证人选择 (PoS)
 
-Polkadot uses a nominated Proof-of-Stake (NPoS) scheme to elect its validator set. Since the NPoS algorithm gives equal voting weights to each validator, an equalizing algorithm known as Phragmen's method is used to distribute the nominated DOTs equally among all validators as evenly as possible.
+Polkadot 使用提名的股权证明(NPoS)方案来选择其验证人。由于 NPoS 算法为每个验证人提供相等的投票权重，使用称为 Phragmen 的算法来尽可能平均地在所有验证人之间平均分配提名的 DOT。
 
-Even though the Proof-of-Stake models in both projects differ, they are both based on the idea of economic sybil resistance. While Cosmos validators are observed to be a power law relationship (something that is much more resisted in Polkadot's NPoS equalization algorithm known as the Phragmen method), it is possible that in Polkadot large actors simply maintain more than one validator. Even if this becomes the case, Polkadot slashes coordinated faults more strongly than uncoordinated faults. This means that there is greater pressure for the network to be decentralized even if more than one validator is ran by a single actor.
+尽管两个项目中的权益证明模型都不同，但它们都基于经济稳定性。虽然观察到 Cosmos 验证人是幂律关系（在 Polkadot 的 NPoS 均衡算法中称为 Phragmen 方法的情况更难以解决)，但在 Polkadot 中，大戶参与者有可能维护一个以上的验证人。即使是这种情况，Polkadot 也会比非协调故障更强烈地惩罚协调故障。这意味着即使单个参与者运行了多个验证人，也存在更大分散网络的压力。
 
-## Programming languages
+## 编程语言:
 
-Cosmos favors the Go programming language and has currently constructed the Cosmos-SDK in Golang. However, the Tendermint consensus engine implements a binary wire protocol called ABCI, and has libraries for interacting with it in [roughly a dozen languages](https://tendermint.com/ecosystem). It is not a direct comparison to Polkadot since the Cosmos Hub only currently has a single implementation in Golang.
+Cosmos 偏爱 Go 编程语言，目前已在 Golang 中构建了 Cosmos-SDK。但是 Tendermint 共识引擎实现了一种称为 ABCI 的二进制有线协议，并具有[多种语言](https://tendermint.com/ecosystem)与之它交互的库。这并不是与 Polkadot 的直接比较，因为 Cosmos Hub 目前仅在 Golang 中具有单个实现。
 
-In comparison, Polkadot currently has 5 in progress implementations in the languages: Rust, Golang, JavaScript, Golang (there are two), and C++. Additionally, Polkadot is made to use Web Assembly for its runtime compilation target, which means that any language that can compile to Wasm could be used to construct a parachain or write a smart contract for a Polkadot parachain. Until more frameworks for creating parachains is developed, only Substrate and Rust are available to be used.
+Polkadot 相比之下目前有五种正在开发中的语言实现: Rust，Golang，JavaScript，Golang 和 C ++。此外，Polkadot 可以将 Web Assembly 用于其 runtime 编译目标，这意味着可以编译为 Wasm 的任何语言都可以用于构造平行链或为 Polkadot 平行链编写智能合约。在开发出更多用于创建平行链的框架之前，仅可以使用 Substrate 和 Rust。
 
-## Conclusion
+## 总结
 
-Polkadot has a shared state multichain architecture compared to the Cosmos independent bridged chains network.
+与 Cosmos 独立的桥接链网络相比，Polkadot 具有共享状态多链架构。
 
-The trust model of Polkadot ensures that the shared state of parachains are secured by the entire relay-chain validator set, while Cosmos assumes no such shared security and maintains independence of each chain. The ICMP of Polkadot allows for trustless transmission of data among parachains. Cosmos' IBC places no constraint on chains to share state but requires them to fit certain constraints, and does not ensure the same security among each zone. Polkadot ensures validity and availability using erasure codes, which Cosmos does not implement at the base layer. The hybrid BABE/GRANDPA consensus is intended to be able to reach finality more rapidly on chains of blocks than the Cosmos Tendermint algorithm which can only finalize one block at a time. There are stronger liveness guarantees for Polkadot because of the BABE block production mechanism that will continue making blocks even when GRANDPA has halted. Validator set selection using the Phragmen method in Polkadot equalizes validators votes while Cosmos uses stake weighted voting. Finally, Polkadot embraces a broad ecosystem of programming languages thanks to its backbone of WebAssembly, while Cosmos favors the Golang programming language.
+Polkadot 的信任模型可确保整个中继链验证人确保平行链的共享状态安全，而Cosmos 则不假设此类共享安全性并保持每个链的独立性。 Polkadot 的 ICMP 允许在平行链之间进行去信任的数据传输。Cosmos 的 IBC 对共享状态的链没有施加任何约束，但要求它们满足某些约束，并且不能确保每个 zone 之间的安全性相同。 Polkadot 使用擦除代码确保有效性和可用性，而 Cosmos 并未在基础层实现该代码。与 Cosmos Tendermint 算法一次只能完成一个块相比，混合 BABE / GRANDPA 共识旨在在块链上更快地达到最终状态。即使 GRANDPA 停顿，BABE 区块生产机制将继续，使 Polkadot 有更强的活力保证。而 Polkadot 中的Phragmen 方法，使验证人票数尽可能相等，而 Cosmos 使用股权加权投票。最后由于其 WebAssembly 为它的骨干，Polkadot 拥有广泛的编程语言生态系统，而Cosmos 则偏爱 Golang 编程语言。
