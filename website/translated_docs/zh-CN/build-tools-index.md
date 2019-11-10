@@ -25,6 +25,7 @@ sidebar_label: Tool Index
 
 - [Polkadot遥测服务](https://telemetry.polkadot.io/) - 提供网络信息，包括当前正在运行链的节点、节点正在运行的软件版本、同步状态，以及显示节点位置的地图。
 - Polkabot——Polkadot使用Riot聊天来进行网络监控和报告，用户可以自定义创建bot插件。[博文](https://medium.com/polkadot-network/polkabot-a3dba18c20c8)，[Github仓库](https://gitlab.com/Polkabot/polkabot)
+- [PolkaStats](https://polkastats.io/) - Polkadot network statistics (Kusama and Alexander). Shows network information and staking details from validators and intentions. [Github Repository](https://github.com/Colm3na/polkastats-v2/)
 
 ## Rust
 
