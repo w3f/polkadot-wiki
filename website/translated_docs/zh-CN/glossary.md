@@ -87,6 +87,14 @@ The process of determining what changes to the network are permissible, such as 
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
+## Hard Fork
+
+A permenant diversion of a blockchain that can occur quickly due to a high priority change in a consensus rule. Clients who follow a hard fork always need to upgrade their clients in order to continue following the hard-forked chain. Hard forks are considered permanent divergences of a chain for which non-upgraded clients are following consensus rules incompatible to the ones followed by upgraded clients.
+
+## Hard Spoon
+
+Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of *the same blockchain*.
+
 ## KSM
 
 The abbreviation for Kusama network tokens.
@@ -103,7 +111,7 @@ An open-source library for encrypted peer-to-peer communications and other netwo
 
 The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system which eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
 
-## 节点浏览器
+## Node explorer
 
 A tool which gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
 
@@ -111,15 +119,15 @@ A tool which gives you information about a node, such as the latest blocks seale
 
 A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
 
-## 提名人
+## Nominator
 
 Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
 
-## 链上治理
+## On-chain governance
 
 Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
 
-## 平行链
+## Parachain
 
 A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
 
@@ -139,7 +147,7 @@ A heterogeneous multi-chain technology allowing for various blockchains of diffe
 
 The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
-## 权益证明 (PoS)
+## Proof of Stake (PoS)
 
 A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
 
@@ -194,6 +202,10 @@ A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually
 ## Slashing
 
 The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
+
+## Soft Fork
+
+A backwards compatible change to client code which causes upgraded clients to start mining a new chain. Requires a "vote-by-hashrate" of majority of miners in order to enact successfully. Soft forks are considered temporary divergences in a chain since non-upgraded clients do not follow the new consensus rules but upgraded clients are still compatible with old consensus rules.
 
 ## Staking
 
