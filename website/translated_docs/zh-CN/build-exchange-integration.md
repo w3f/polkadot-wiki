@@ -1,7 +1,7 @@
 ---
 id: build-exchange-integration
-title: Exchange integration
-sidebar_label: Exchange integration
+title: 交易所整合
+sidebar_label: 交易所整合
 ---
 
 ```
@@ -14,10 +14,10 @@ sidebar_label: Exchange integration
           |
  +--------+---------+
  |                  |
- | Client interface |
+ |   客户端界面      |
  |                  |
  | +--------------+ |
- | | Client DB    | |
+ | | 客户端数据库 | |
  | +--------------+ |
  |                  |
  +--------+---------+
@@ -25,28 +25,28 @@ sidebar_label: Exchange integration
           |
  +--------+---------+
  |                  |
- | Exchange backend |
+ | 交易所后端        |
  |                  |
  +------------------+
 ```
 
-## 1. Tracking the chain head
+## 1. 追踪链头
 
-Track each finalised block by subscribing with the `chain_subscribeFinalizedHeads` RPC (or polling the `chain_getFinalizedHead` RPC).
+通过监察 ` chain_subscribeFinalizedHeads ` RPC (或轮询 ` chain_getFinalizedHead ` RPC 跟踪每个确认了的区块。
 
-That will give you a stream of hashes of the most recent finalised headers.
+这将会提供一列最新确认了的区块头。
 
-When a new hash arrives, you can use `chain_getBlock` to turn that hash into a block.
+当新哈希到达，你可以使用 ` chain_getBlock ` 把该哈希变成区块。
 
-If the new block is not an immediate child of the last block you processed, make sure that you iterate over all blocks between them. Because `chain_getBlock` can accept only hashes, you will need to use `chain_getBlockHash` to convert numbers into hashes and in this way iterate between any two finalised blocks.
+如果新区块不是您处理的最后区块的直接子代，确保迭代它们之间的所有区块。因为 ` chain_getBlock ` 只接受哈希，所以你需要使用 ` chain_getBlockHash` 把那些数字转换成哈希并以这种方式在任意两个最终区块之间迭代。
 
-## 2. Decoding blocks
+## 2. 解码区块
 
-You will need to decode blocks from the basic data into useful fields.
+您需要将基本数据的区块解码为有用的字段。
 
-All block data is encoded using the basic SCALE codec described in detail [here](https://substrate.dev/docs/en/overview/low-level-data-format). SCALE provides only the low-level underlying format however. Details of its fields and internal structure may alter between different chains and even different blocks of the same chain.
+所有区块数据是使用基本 SCALE 编码数据，详细资料[在此](https://substrate.dev/docs/en/overview/low-level-data-format)。但是 SCALE 仅提供底层格式，它的字段和内部结构的详细信息可能会在不同链甚至在同一链不同区块之间改变。
 
-For Genesis Polkadot, the header format is a five-field structure:
+对于 Polkadot 一开始，区块头格式为五字段结构：
 
 ```
 struct Block:
@@ -58,7 +58,7 @@ struct Block:
     extrinsics: Vec<Extrinsic>
 ```
 
-This relies on `Hash`, which is a fixed length 32-byte value or `[u8; 32]` in SCALE. It also relies on `DigestItem`, an enumeration type:
+这依赖于 `Hash`，固定长度的32字节值或在 SCALE ` [u8; 32] `。它还依赖` DigestItem ` (枚举类型):
 
 ```
 enum DigestItem:
@@ -72,9 +72,9 @@ struct ConsensusItem:
     data: Vec<u8>
 ```
 
-It also relies on `Extrinsic`. An *extrinsic* is a generalisation of a transaction and other (unsigned) external information. It is a highly extensible type which doesn't have a fixed format per se. To ensure future format compatibility, metadata concerning the extrinsic format is provided through an RPC `state_getMetadata`.
+它还依赖于 `外部交易(Extrinsic)`。*外部交易*是概括了一般和其他(未签名)外部信息的交易。它是种高度可扩展的类型，本身没有固定格式。为了确保将来格式的兼容性，可以通过 RPC `state_getMetadata` 提供外部有关格式的元数据。
 
-The metadata itself is provided encoded in SCALE. Its format is:
+元数据本身以 SCALE 编码提供，其格式为：
 
 ```
 struct Metadata:
@@ -136,25 +136,25 @@ struct Event:
     documentation: Vec<String>
 ```
 
-`Type` is just a `String`, but the contents of the string are to be interpreted as the name of a type.
+` Type `只是` String `，但是字符串的内容将被解释为类型的名称。
 
-Substrate chains (actually, specifically Substrate chains built using the SRML) such as Polkadot are composed of various *modules*. Each module can be imagined a little bit like a smart contract, with various kinds of transactions (or, in Substrate terms, *extrinsics*), data items that persist between transactions and blocks, events and constant parameters. The metadata encodes all of these things, allowing your client code to both create particular transactions or interpret what has happened on the chain, even between different Substrate blockchains or over many different upgrades or forks of the same chain.
+Substrate 链(实际上 Substrte 链是使用 SRML 构建) 例如 Polkadot 是由不同*模块*组成。每个模块可以想象有点像智能合，有各种交易(或 Substrate 术语，*外部交易*)，数据会持续在交易和区块, 事件和常量参数之间。元数据对所有东西进行编码，允许客户端代码创建特定的交易或解释链上发生了什么，甚至在不同的 Substrate 链之间或同一链不同升级或分叉之间。
 
-There are two modules an exchange needs to be aware of: Balances and Indices. Balances allows you to send and receive funds between different accounts. Indices allows you to interpret user addresses.
+交易所需要注意两个模块:  Balances 和 Indices。Balance 使您可以在不同帐户之间发送和接收资金。 Indices 样您解释用户地址。
 
-## 3. Working with SS58 and account addresses
+## 3. 处理SS58和帐户地址
 
-In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit) *AccountId*. This is simply the public key for the x25519 cryptography used by Substrate.
+在 Polkadot (和大多数 Substrate 链)中，用户帐户由32字节(256位)的 AccountId 识别。这只是Substrate 使用的 x25519 加密的公钥。
 
-However, to keep the addresses small, we index every account with a non-zero balance on Polkadot and use just this *index* to identify the account. This index is much smaller than the 32-byte *AccountId*, and can usually be encoded in just a couple of bytes.
+但是为了使地址细小，我们为Polkadot上余额大于零的帐户编制索引，并仅使用此*索引*来标识该帐户。该索引比32字节长的 *AccountId* 细小多个，通常仅用几个字节进行编码 。
 
-Where Bitcoin has the Check58 address format and Ethereum used the `0x...` hex format, Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to handle many different cryptographies and chains. It has much in common with Bitcoin's Check58 format such as a version prefix, a hash-based checksum suffix and base-58 encoding. Further information on it can be found here [TODO]. Of the many supported "version codes", only one particular family of subformats is especially important for Polkadot support in exchanges.
+比特币使用 Check58 格式地址，而以太坊使用 ` 0x ... </ code> 十六进制格式，Polkadot (和Substrate) 则使用 SS58 格式。这是一种广泛的 "元格式(meta-format)"，旨在处理不同密码学和链。它与比特币的 Check58 格式有很多共同地方点，例如版本前缀，基于哈希的校验和后缀和base-58 编码。有关更多信息，请参见 [TODO]。在许多支持的 "版本代码" 中，只有一种特定的子格式对交易所支持 Polkadot 特别重要。</p>
 
-The SS58 format is a base-58 encoding (using the same alphabet as Bitcoin) of a version prefix (which is one byte and always `0x00` for Polkadot and `0x02` for Kusama) followed by one or more payload bytes and ending with one or more checksum bytes:
+<p spaces-before="0">SS58 格式是版本前缀(对于Polkadot 为一个字节，并总是为<code> 0x00 `，而 Kusama 为` 0x02 `)的base-58编码(使用与比特币相同的字母)，后跟一个或多个有效载荷字节，并以一个或多个校验字节结尾:
 
 `0x00 <payload bytes> <checksum bytes>`
 
-**An address does not have a fixed length.** Depending on the length, the payload may have a different meaning and there could be a different ratio of payload to checksum bytes. Here is a table to consult to determine how to interpret an address of a particular size:
+**地址的长度没有固定长度。**根据长度，有效负载可能具有不同的含义，并且有效负载与校验和字节的比率可能不同。下面是一个表，用于参考如何解释特定大小的地址:
 
 | Total bytes | Version bytes | Payload bytes | Checksum bytes | Payload type |
 | ----------- | ------------- | ------------- | -------------- | ------------ |
@@ -164,46 +164,46 @@ The SS58 format is a base-58 encoding (using the same alphabet as Bitcoin) of a 
 | 35          | 1             | 32            | 2              | AccountId    |
 
 
-NOTE: This table contains only the most common commbinations; SS58 includes several more uncommon ones. For maximum compatibility then implement according to the full SS58 specification.
+注意: 此表仅包含最常见的组合。SS58 包括几个更不常见的。为了达到最大的兼容性，然后根据完整的 SS58 规范实现。
 
-Once decoded into the fields, then the version should be checked to be `0x00`. The checksum should then be verified as being equivalent to the beginning of the Blake2-256 hash of the SS58 data, not including the checksum itself. If the checksum is one byte, then only the first byte of the hash is checked. If it is two bytes, then the first two bytes of the hash are checked.
+一旦解码为字段，则应检查版本为` 0x00 `。然后应验证 checksum 是否等于 SS58 数据的Blake2-256 哈希的开头，不包括 checksum 本身。如果 checksum 是一个字节，则检查哈希的第一个字节。如果是两个字节，则检查哈希的前两个字节。
 
-Finally, in the case of an indexed address, the index should be decoded into a 32-byte account identifier. This can be done by inspecting the storage of the Indices module.
+最后在使用索引地址的情况下，索引应解码为 32 字节的帐户标识符。这可以通过检查 Indices 模块的存储来实现。
 
-### Looking up an index
+### 查找索引
 
-Looking up an index is a bit fiddly, since it involves looking up some storage and decoding and interpreting it.
+查找索引有点麻烦，因为涉及查找存储，解码和解释。
 
-The specific storage item that we care about is `EnumSet` in the `Indices` module. Inspecting the storage is done through the `state_getStorage` RPC, to which a key must be supplied. The key encodes the entire "query". In general, the metadata should be consulted on how to generate the key. To do this, we first find the `Module` whose name is `Indices`, then find the entry in that module's `storage` field of the `Storage` item with the name `EnumSet`. This item contains all the information we need to construct and interpret the query.
+我们关心的特定存储是` Indices `模块中的` EnumSet `。通过` state_getStorage ` RPC 检查存储，必须向其提供密钥。该键对整个"查询"进行编码。通常应咨询元数据如何生成密钥。为此我们首先找到名称为` Indices `的` 模块`，然后在` Storage 模块中` `storage `字段中找到，名称为` EnumSet `。此项包含我们构造和解释查询所需的所有信息。
 
-For Polkadot, we find that the item has a `type` of `Map` whose associate value is a `StorageMapType` whose `hasher` is `Blake2_256`, whose `key` is `T::AccountIndex` (equivalent to a `u32` for Polkadot) and whose `value` is `Vec<T::AccountId>`.
+对于 Polkadot 我们发现该项目的`type`为`Map`，其关联值为` StorageMapType `，其`hasher`为 ` Blake2_256 `，其`key`是` T:: AccountIndex `(对于 Polkadot 来说是` u32 `)，并且其`value`为`Vec<T::AccountId> `。
 
-This means that if our index, encoded by SCALE as a `u32`, is `<INDEX>`, then our storage key is determined through the Blake2 256 hash of the string `Indices EnumSet<INDEX>`. In fact, accounts are stored in batches of 64, so to look up a particular index, we don't query by the account index but rather the index of its batch. This just means we first need to divide the index by 64 before encoding.
+这意味着如果我们的索引由 SCALE 编码为` u32 `为`<INDEX>`，那么我们的存储键是通过字符串` Indices EnumSet <INDEX> `的 Blake2 256 哈希确定。 实际上帐户是按64个批次存储的，因此要查找特定的索引，我们不按帐户索引查询，而是按其批次的索引查询，这只是意味着我们首先需要在编码之前将索引除以64。
 
-This will return a SCALE-encoded `Vec<T::AccountId>` (`T::AccountId` may be defined in SCALE as `[u8; 32]` or a 32-byte fixed quantity) of up the batch that contains the account we are interested in. To get the `AccountId` item, just take the `index % 64`th item from the vector. If that item doesn't exist (or you get an empty storage item), then the account index is invalid.
+这会返回 SCALE-encoded `Vec<T::AccountId>` (`T::AccountId` 可能在 SCALE 定义为 `[u8; 32]`  或固定32字节数量) 包含我们感兴趣帐户的批次。要获取` AccountId `项，只需从向量中获取第` index％64 `项。如果该项目不存在（或您得到一个空的存储)，则帐户索引无效。
 
-Otherwise, you have your account ID and it can be displayed to the user along with its identicon and balance.
+否则您将拥有您的帐户 ID，并且可以将其及其标识和显示余额给用户。
 
-## 4. Working with balances
+## 4. 处理余额
 
-In Polkadot, account balances can be looked up within the `Balances` module using the metadata in a manner not dissimilar to looking up an account index. In this case, we need to query the `FreeBalance` item in storage. Here, the `StorageMapType` is similar, except that the `key` is of type `T::AccountId` (the 32-byte quantity) and the `value` is `BalanceOf<T>`, which for the purposes of Polkadot is a `u128` (128-bit value). The hash function is the same Blake2 256, so the full storage key would be given by the Blake2 256 hash of the string `Balances FreeBalance<ID>` where `<ID>` is the 32-byte `AccountId`.
+在 Polkadot 中，帳戶结余可以在`Balances`模块内使用元数据的方式查找帐户索引查询被锁上的结余。在这种情况下我们需要查询存储中的` FreeBalance `。这里` StorageMapType `很相似，不同之处在于` key `的类型为` T::AccountId `(32字节)和` value `是` BalanceOf<T> `，就 Polkadot 而言，它是` u128 `(128位值)。哈希函数与 Blake2 256 相同，因此完整的存储密钥将由字符串` Balances FreeBalance<ID> `的 Blake2 256 哈希给出，其中`<ID>`是32字节的` AccountId `。
 
-NOTE: `FreeBalance` gives the total balance controlled by that account, but does not account for temporarily locked portions of balance, such as those locked for staking, voting or vesting. This information can be queried from the chain, but it is outside the scope of this document.
+注意: ` FreeBalance `是该帐户控制的总余额，但没有考虑暂时锁定的部分，例如抵押中，投票或归属而锁定的部分。这些信息可以从链中查询，但不在本文档的范围之内。
 
-The balance encodes the DOT token with 12 decimal places. To get the actual number of DOTs, you need to divide the 128-bit balance by 1,000,000,000,000 (10**12). For completeness, The exact denominations of the Polkadot currency are:
+DOT 代币结余将编码为12个数位。要获得 DOT 的实际数量，您需要将128位余额除以1,000,000,000,000(10 ** 12)。 为了完整起见，Polkadot 的货币面额为:
 
-| Balance value | Name |
-| ------------- | ---- |
-|               |      |
+| 余额值 | 名称 |
+| --- | -- |
+|     |    |
  1 | Planck 10
 
 **3 | Point 10**6 | Microdot (UDOT) 10**9 | Millidot (MDOT) 10**12 | Dot (DOT) 10**15 | Blob
 
-### Transferring balances
+### 转移余额
 
-To transfer a balance, a transaction must be constructed and sent. In constructing a transaction, there are two key parts: the general part of the transaction and the module-specific `function` part of the transaction with the latter generally needing information from the chain's metadata must generally.
+要转移余额，必须准备和发送交易。在准备交易时，有两个关键部分: 一般交易部分和模块特定的交易`功能`部分通常需要来自链元数据的信息。
 
-In general, Polkadot's transactions are encoded as *signed* `Extrinsic`s in SCALE. To facilitate forward compatibility, extrinsics are double-encoded, so the initial encoding is passed back into SCALE (as a `Vec<u8>`) and the output of that is used. This has the effect of adding a small length prefix onto it allowing systems that cannot interpret the transaction data itself to still be able to pass them around as opaque packets of data.
+通常 Polkadot 的交易在 SCALE 中编码为 *signed*`Extrinsics`。为了便于之后兼容，外在进行双编码，因此初始编码将传回 SCALE（作为`Vec<u8>`）并输出使用的。这样做的效果是向它添加一个小长度前缀，使无法解释事务数据本身的系统仍然能够将它们传递为不透明的数据包。
 
 The SCALE format is given by `Extrinsic`:
 
@@ -225,27 +225,27 @@ struct TransactionPayload:
     checkpoint_hash: Hash
 ```
 
-For a transaction, the optional `tx` is always used. The `Address` type is a specially encoded SCALE type, allowing an account to be presented either as an account index or as a 32-byte account ID, whichever is more convenient. The format is described here in the SCALE [TODO]. Assuming you wish to present a 32-byte account ID, then it can be expressed as an `Address` merely by prefixing the `0xff` byte.
+对于交易，使用可选的` tx `。` Address `类型是经过特殊编码的 SCALE 类型，允许将帐户显示为帐户索引或32字节帐户 ID，以较方便的方式显示。格式在 SCALE [TODO] 中进行了说明。假设您希望提供一个32字节的帐户 ID，则只需在` 0xff `字节前面添加前缀，就可以将其表示为` Address `。
 
-The `sig` field must contain a 25519-family signature of the SCALE-encoded `SigPayload`. The key used to sign the payload must correspond to the `sender` account. Schnorr/Ristretto 25519 ("sr25519") is the recommended signing format to use.
+` sig `字段必须包含 SCALE 编码的` SigPayload `的25519系列签名。 用于对负载进行签名的密钥必须与` sender `帐户相对应。 建议使用 Schnorr / Ristretto 25519("sr25519")签名格式。
 
-Era is a one or two byte item, again with a special SCALE encoding format and it encodes the period (as a range of blocks) for which this transaction should be considered valid. It is an important safeguard against certain transaction replay attacks and should generally be used, however a simple exchange implementation that has no plans to reuse accounts after they become empty should be able to safely ignore it. To ignore it and make the transaction "immortal", use an encoded `Era` of just one byte: `0x00`.
+纪元是一或两个字节，同样具有特殊的 SCALE 编码格式，并且它对该交易有效的时间段(一列区块的范围)进行编码。这是防范某些交易重播攻击的重要保障，通常应使用，但是没有计划在帐户变空后重用的简单交换实现应该可以安全地忽略它。 要忽略它并使交易"不朽"，请使用仅一个字节的已编码` Era `：` 0x00 `。
 
-The nonce is the number of transactions send so far by the sender account, much like in Ethereum. It is of type `Nonce`, logically equivalent to a `u64`. To get the correct value, the appropriate storage item must be queried, much like when querying an account's balance. In this case, it is the `System` module's `AccountNonce` item; thus the storage key required is the Blake2 256 hash of the string `System AccountNonce<ID>` where `<ID>` is the 32-byte `AccountId`. It will return a `Nonce` which may be decoded and used here.
+随机数到目前为止，由发送人帐户发送的交易数量，就像在以太坊中一样。 它是` Nonce `类型，在逻辑上等效于` u64 `。 为了获得正确的值，必须查询适当的存储，就像查询帐户余额时一样。 在这种情况下，它是` System `模块的` AccountNonce `。 因此所需的存储密钥是字符串` System AccountNonce<ID>`的 Blake2 256 哈希，其中` <ID> `是32字节的` AccountId `。 它将返回一个` Nonce `，可以在此处对其进行解码和使用。
 
-NOTE: The nonce retrieved from storage does not take into account *pending* transactions. If you are sending more than one transaction from a single account at a time, then you will need to increment and track this value manually.
+注意: 从存储中检索的 nonce 没考虑*待处理*交易。如果您从一个帐户发送多个交易，则需要手动递增和跟踪此值。
 
-The `tip` is a `Balance` (logically equivalent to the `u128` type in SCALE), which denotes some additional fees paid to the block author for prioritized inclusion at busy times. It will typically be zero.
+` tip `是` Balance `(在逻辑上等同于 SCALE 中的` u128 `类型)，它表示在繁忙的时候，为优先包含创建区块者支付一些额外费用。通常为零。
 
-The `checkpoint_hash` is the hash of the "checkpoint block", which is to say the first block of the era specified by the `era` field. If just making the transaction "immortal", then the genesis hash of the blockchain should be used. This can be determined through the RPC `chain_getBlockHash(0)`.
+` checkpoint_hash `是 "区块检查点"的哈希，也就是说` era `字段指定的纪元的第一个区块。 如果只是使交易"immortal"，则应使用区块链的创始哈希。 这可以通过RPC ` chain_getBlockHash(0)`确定。
 
-Finally, the `function` is a `Function` type (sometimes known as a `Call` or `Proposal` in certain contexts) which describes what action shall be dispatched. It must be constructed according to metadata. In this case, we want our transaction to effect the `transfer` function in the `Balances` module, to transfer a balance from one account to another. It is important to check the index of the Balances module itself in the list of modules. In this case, it is the 6th item, or index 5. It is also necessary to inspect the `calls` field of the Balances `Module` in the metadata, and determine what index in the list of calls the transfer function is. As it happens, it is first in the list, and thus has an index of 0.
+最后 ` function `是` Function `类型(在某些情况下有时称为` Call `或` Proposal `)，它描述了应该采取什么行动。它必须根据元数据构造。 在这种情况下，我们希望交易在` Balances `模块中实现` transfer `功能，以将余额从一个帐户转移到另一个帐户。 在模块列表中检查余额模块本身的索引很重要。 在这种情况下，它是第六项或索引5。还需要检查元数据中余额` Module `的` calls `字段，并确定其中的索引转移功能。它在列表中排在第一位，因此索引为0。
 
-Finally, we need to know what parameters to this function are expected in order to construct the rest of the transaction. This is provided in the `Call` item of the metadata that we just located. Two parameters are expected:
+最后我们需要知道该函数需要哪些参数才能创建其余的交易。这在我们刚刚找到的元数据的` Call `项中提供。预期有两个参数：
 - `dest` with a type of `<T::Lookup as StaticLookup>::Source` (aka `Address`); and
 - `value` with a type of `Compact<T::Balance>` (aka `Compact Balance`).
 
-The `function` *in this case* (i.e. specifically and only for the Balance transfer transaction on Polkadot as of right now) would be the struct:
+在这种情况下 `函数` * * (即专门针对并且仅适用于Polkadot 上的余额转帐交易) 将是以下结构：
 
 ```
 struct BalanceTransferFunction:
@@ -255,22 +255,22 @@ struct BalanceTransferFunction:
     value: Compact Balance
 ```
 
-where `module_index` is `0x05` and `call_index` is `0x00`. `dest` is similar to `sender` and may be provided as either an account index or a 32-byte account ID, whichever is more convenient. If providing as an account ID, then it can be formed into an address simply by prefixing the byte `0xff` to it.
+其中` module_index `是` 0x05 `，而` call_index `是` 0x00 `。` dest `与` sender `类似，可以作为帐户索引或32字节帐户ID提供，以较方便为准。如果提供帐户ID，则只需在其前面加上字节` 0xff `即可将其成为地址。
 
-The amount to be transferred (not including any fees payable to the system) is given by `value`, and must be a SCALE compact-encoded number.
+转帐的金额(不包括付给系统的任何费用)由` value `给出，并且必须是 SCALE compact 编码的数字。
 
-### Submitting and checking transactions
+### 提交和检查交易
 
-Once a transaction has been crafted, you will need to submit it for inclusion in the chain and eventually want to verify that it has indeed been included.
+一旦交易准备好，您将需要将其提交以包含在链中，并最终想要验证它是否真的包含在链中。
 
-This can be done in two ways: one is to use the simple RPC `author_submitExtrinsic`, which will return the transaction's hash. Once submitted, you can keep checking transactions in finalised blocks manually (since you are tracking the finalised heads anyway) until you see the transaction you submitted, at which point you know it is in the chain.
+可以通过两种方式完成: 一种是使用简单 RPC ` author_submitExtrinsic `，它将回传交易的哈希值。 提交后您可以继续手动检查交易是否在已确认的区块内(因为您都已经跟踪已确认的区块头)，直到看到您提交的交易为止，此时您知道交易已在链中。
 
-The other way is to use the pub/sub RPC `author_submitAndWatchExtrinsic`. Again, you provide the SCALE-encoded transaction, but here you receive a subscription ID. You will be notified over the RPC as the transaction gets validated, broadcast and included in the chain with separate messages that are pushed.
+另一种方法是使用 pub/sub RPC ` author_submitAndWatchExtrinsic `。您同样提供 SCALE 编码的交易，但是在这里您会收到 subscription ID。 当交易被验证，广播并通过单独推送的消息包含在链中时，将通过 RPC 通知您。
 
-## Conclusion
+## 总结
 
-This concludes the article. Here you should have a good idea of how to interact with a Substrate/Polkadot node in order to track the finalised chain head, to decode SS58 addresses, check account information like balances & nonces and to construct, submit and track transactions. You've also learnt a little about the SCALE codec, the Substrate metadata system and how to build future-proof and generic Substrate-based systems.
+文章到此结束。在这里，您应该知道如何与 Substrate/Polkadot 节点进行交互，以便跟踪最终确定的链头、解码 SS58 地址、检查账户信息(如 balances & nonces) 以及构建、提交和跟踪交易。您还了解了 SCALE 编码器、Substrate 元数据系统以及如何构建面向未来的通用 Substrate 系统。
 
-If you have any questions, please come ask in [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org).
+如果你有任何问题，请在 [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) 问。
 
-_The original source of this page was published [here](https://hackmd.io/@gavwood/r1jTRX2Zr)._
+_最初版本发布在[此处](https://hackmd.io/@gavwood/r1jTRX2Zr)。_
