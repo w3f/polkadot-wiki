@@ -108,7 +108,7 @@ Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。
 
 ### Unresponsiveness
 
-每个时代验证人会发送 "I'm Online" 信息表示他们在线。heartbeat 发送失败意味着无应答。根据累积攻击以及有多少验证人也处于离线状态，惩罚(Slashing) 即会发生 。如果 1/3 验证人无应答，百份之 5％ 绑定的 DOT 将被扣减。
+For every session, validators will send an "I'm Online" message to indicate they are online. If a validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as unresponsive. Depending on the repeated offences and how many other validators were unresponsive or offline, slashing will occur. If one-third of all validators are unresponsive, 5% of their bonded DOTs will be slashed.
 
 下面是计算公式:
 
