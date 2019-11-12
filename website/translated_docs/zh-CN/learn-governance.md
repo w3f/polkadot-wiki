@@ -162,11 +162,11 @@ Polkadot引入了"Adaptive Quorum Biasing"概念，作为议会可以用来更�
 
 相反，当投票率达到75％时，"赞成"票总数必须达到54％，这意味着随着更多代币持有人对全民投票，那么所需的多数将随着投票率的增加而减少。
 
-假设议会提议了一项一致的提案，则将使用`Negative Turnout Bias`，因此这意味着该提案在默认情况下通过。 因此，如果他们不喜欢该提案，则更多的代币持有者必须参与投票以防止投票通过。
+When the council proposes a new proposal through unanimous consent, the referendum would be put to a vote using "Negative Turnout Bias." In this case it is easier to pass this proposal with low turn-out and requires a super-majority to reject. As more token holders participate in voting the bias approaches a plain majority carries.
 
-参考上图，当全民投票的投票率只有25％时，"反对"票数必须达到34％才能被拒绝。
+Referring to the above image, when the referenda only has 25% turnout, the tally of "aye" votes has to reach 34% for it to accept.
 
-简而言之，当投票率低时，需要超级多数才能通过提案，这意味着必须达到更高的"赞成"选票门槛，但是当投票率增加到100％时，这变成多数。
+In short, when turnout rate is low, a super-majority is required to reject the proposal, which means a lower threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
 
