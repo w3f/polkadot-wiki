@@ -1,35 +1,35 @@
 ---
 id: maintain-guides-how-to-vote-councillor
-title: Voting for Councillors
-sidebar_label: Voting for Councillors
+title: 投票选举议员
+sidebar_label: 投票选举议员
 ---
 
-The council is an elected body of on-chain accounts that are intended to represent the passive stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing referenda and vetoing dangerous or malicious referenda. For more information on the council, see the [governance page](learn-governance#council). This guide will walk you through voting for councillors in the elections.
+该议会是经在链上选举产生的账户，旨在代表在 Polkadot / Kusama 被动利益相关者。议会在治理方面有两项主要任务: 提议公投和否决危险或恶意的公投。有关议会的更多信息，请参见[治理页面](learn-governance#council)。本指南将引导您如何在选举议员中投票。
 
-## Voting for Councillors
+## 投票选举议员
 
-Voting for councillors requires you to lock your DOTs / KSMs for the duration of your vote. Like the validator elections, you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid again.
+在投票给议员期间，您需要锁定 DOT / KSM。像验证人选举一样，您最多可以提名16个不同的议员，您的选票将在所选组中平均分配。与验证人选举不同，您预留的余额代币没有解除绑定期限。一旦您的投票取消，代币将回复流动性。
 
-> Warning: It is your responsibility not to put your entire balance into the reserved value when you make a vote for councillors. It's best to keep _at least_ a few KSM to pay for transaction fees.
+> 警告: 当投票给议员时，您有责任不要把全部余额也放在预留余额。最好至少保持_ _几个 KSM 来支付交易费用。
 
-Go to the [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab. On the right side of the window there are two blue buttons, click on the one that says "Vote."
+前往到 [ Polkadot Apps ](https://polkadot.js.org/apps)，然后选择 "议会"。在右侧窗口中有两个蓝色按钮，按下 "投票" 按钮。
 
 ![](assets/council/vote.png)
 
-Since the council uses approval voting, when you vote you signal which of the validators you approve of and your voted tokens will be equalized among the selected candidates. Select up to 16 council candidates by moving the slider to "Aye" for each one that you want to be elected. When you've made the proper configuration submit your transaction.
+由于议会使用了同意投票(Approval Voting)，因此当您进行投票时，您只需要获得投票的支持，就可以验证自己，并因此所投票的代币将被分配给投票中的平均分配。 选择 "赞成(Aye)"，最多可以选择16个候选人。当您选择好后，提交交易。
 
 ![](assets/council/vote_for_yourself.png)
 
-You should see your vote appear in the interface immediately after your transaction is included.
+当你提交的交易被确认后，您应该在界面看到您的投票结果。
 
-## Removing your Vote
+## 取消投票
 
-In order to get your reserved tokens back, you will need to remove your vote. Only remove your vote when you're done participating in elections and you no longer want your reserved tokens to count for the councillors that you approve.
+为了取回预留余额，您需要取消你的投票。仅当您参加完选举并且不再希望预留余额计入您支持的议员后，才可以取消投票。
 
-Go to the "Extrinsics" tab on [Polkadot Apps Dashboard](https://polkadot.js.org/apps).
+前往到[ Polkadot Apps ](https://polkadot.js.org/apps)上的 "Extrinsics"。
 
-Choose the account you want to remove the vote of and select the "electionsPhragmen -> removeVoter()" options and submit the transaction.
+选择要取消投票的帐户，然后选择 "electionsPhragmen-> removeVoter()" 选项并提交交易。
 
 ![](assets/council/remove_vote.png)
 
-When the transaction is included in a block you should have your reserved tokens made liquid again and your vote will no longer be counting for any councillors in the elections starting in the next term.
+当交易被确认在一个区块后，您应该会取回你的预留余额并且在下一届选举，你对任何议员的投票都将不再计算在内。
