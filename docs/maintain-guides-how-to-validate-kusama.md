@@ -207,7 +207,7 @@ account contains _at least_ this much. You can, of course, stake more than this.
 KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all
 of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded
-amount requires the duration of the unbonding  period (on Kusama the unbonding period is 28 days).
+amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
 [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
