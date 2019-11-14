@@ -31,7 +31,7 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 * Proposals submitted as part of the enactment of a prior referendum;
 * 技术委员会提交并经理事会批准的紧急提案。
 
-All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
+All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 7 days; Polkadot will likely be 28 days. For the third type, it can be set as desired.
 
 紧急建议涉及网络中的主要问题，需要“快速跟踪”，这将将有一个更短颁布时间。
 
