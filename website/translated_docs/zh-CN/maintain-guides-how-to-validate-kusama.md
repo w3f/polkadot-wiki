@@ -160,7 +160,7 @@ pub struct SessionKeys {
 
 - **Stash account** -选择 Stash 账户。在这个例子我们会绑定 100 milliKSMs - 确保你的 Stash 帐户拥有_至少_这个数量。当然你也可以绑定更多。
 - **Controller account** - 选择你之前创建的 Controller 帐号。此帐户也需要少量 KMS 才能开始和停止验证。
-- **Value bonded** - 选择从 Stash 帐号绑定/抵押 KSM 数量， 因为你需要支付交易费，所以不能够把全部 KSM 作押抵。另外你之后还可以绑定_更多_。但是_提取_ 已经绑定了的 KSM 是需要等待一段时间 (Kusama 解绑时间是28天)。
+- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - 把奖励发送到那个帐戶，详情请看[这里](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution)。
 
 当所有资料填写好后，使用 Stash 帐号按下`Bond`并签署交易。
