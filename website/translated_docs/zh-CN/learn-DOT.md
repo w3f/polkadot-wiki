@@ -32,7 +32,7 @@ Alexander 测试网 DOT 具有15个小数位，而最小的单位称为普朗克
 | 单位 | 小数位 |
 | -- | --- |
 |    |     |
- Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM (DOT) | 12
+ Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
 
 
 ## DOTs 用途是什么？
