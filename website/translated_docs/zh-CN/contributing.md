@@ -1,24 +1,24 @@
 ---
 id: contributing
-title: 贡献
-sidebar_label: 贡献
+title: 参与贡献
+sidebar_label: 参与贡献
 ---
 
-The wiki was started and is maintained by the Web3 Foundation. It is an Open-ish open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to cover informational material for community projects. But please do not try to pull request any marketing material as this will be rejected.
+Wiki 是由 Web3 基金会开始并维护。这是开源项目并旨在成为有关 Polkadot 和 Polkadot 生态系统中最广泛的学习资源，但请不要试图 pull request 任何营销资料，因为这将会被拒绝。
 
-Pull requests, discussions and contributions from the community are encouraged. For certain active community members who demonstrate a record of good contributions, they may be given write access to the repository. Otherwise, the Web3 Foundation holds the administrative position and final say on the content that is included. Specifically the Technical Education team at the foundation are most directly involved.
+鼓励社区提交 pull requests，讨论和参与贡献。对于某些良好贡献的活跃社区成员，我们可以授予 Github 库的写权限。否则 Web3 基金会将对所有内容拥有管理权和最终决定权。具体来说，基金会的技术教育团队是最直接地参与。
 
-## How to Contribute
+## 如何参与贡献
 
-Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
+使用 GitHub 帐户，可以轻松地为 Wiki 作出贡献。每个页面都是 markdown 文件，是[非常容易学习的](https://guides.github.com/features/mastering-markdown/) 纯文本的语法扩展，使创建链接，渲染图像和美观的格式变得简单。
 
-Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes you can create a new Pull Request to the repository and one of the maintainers will either merge it in or request changes very soon.
+在每个页面内容的右上角都有一个"编辑(Edit)"按钮。按下 Edit，将转到 GitHub 文本编辑器，您可以在其中直接进行编辑。完成更改后，您可以创建 pull request，使维护者将它合并或更改请求。
 
 ![](assets/edit_button.png)
 
 ## 规则
 
-There are a few basic ground-rules for contributors:
+成为贡献者有些基本规则:
 
 1. **没有` --force ` pushes **或以任何方式修改 Git 历史记录。
 2. 对于某些问题，尤其是对于诸如错别字之类的较小更改，优先使用 Pull requests。 问题适用于一般或广泛的更改或内容缺少。
@@ -29,10 +29,10 @@ There are a few basic ground-rules for contributors:
 7. 应使用正确的语法。带有错别字的 Pull requests 的请求在修复之前不会合并。
 8. 应注意保持尽可能客观和有益的信息。不应故意编造 ，也不应存在外部偏见。
 
-## 更改这一安排
+## 更改安排
 
-This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
+如果您有任何内容需要添加或更改，本文档也可能会受到贡献者的 pull requests 或更改。
 
 ## 继承
 
-This document was based on the Level contribution guidelines located here: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
+本文档基于此处的"等级贡献"准则: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
