@@ -8,7 +8,7 @@ Polkadot is a heterogeneous multi-chain technology. It consists of the relay cha
 
 ## Why Polkadot?
 
-Polkadot is built to connect private/consortium chains, public/permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
+Polkadot is built to connect private or consortium chains, public and permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
 
 By connecting these dots, we allow for the development of a truly decentralized web, serving as a foundational building block for the creation of an ecosystem of Dapps and services that will distribute power and equity for the common good.
 

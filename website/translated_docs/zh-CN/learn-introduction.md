@@ -8,7 +8,7 @@ Polkadot是一种异构多链技术。 它由中继链，平行链和到其他�
 
 ## 为什么是 Polkadot？
 
-Polkadot 旨在连接私人/联盟链，公共/无需许可网络，预言机和未来 Web3 生态系统中尚未创建的技术发展。 它使互联网成为一个独立的区块链可以通过 Polkadot 中继链交换信息和去信任交易的互联网，其主要宗旨是可扩展性，治理和互操作性。
+Polkadot is built to connect private or consortium chains, public and permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
 
 通过连接这些点，我们可以开发真正的去中心化网络，作为创建 Dapps 和服务生态系统的基础构建块，这些 Dapps 和服务生态系统将为共同利益分配权力和公平。
 
