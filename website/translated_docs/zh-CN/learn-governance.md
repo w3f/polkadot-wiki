@@ -230,5 +230,5 @@ The Technical Committee can, along with the Polkadot Council, produce emergency 
 
 ## 资源
 
-- [治理简介](https://github.com/paritytech/polkadot/wiki/Governance)
+- [Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [民主模块](https://github.com/paritytech/substrate/tree/master/srml/democracy/src)
