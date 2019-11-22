@@ -23,5 +23,4 @@ The image below is taken from the [slide deck](https://slides.com/paritytech/par
 
 ## Resources
 
-- [Polkadot Runtime Environment Protocol Specification](https://github.com/w3f/polkadot-re-spec) - Incubator for the PRE spec.
-- [polkadot-re-tests](https://github.com/w3f/polkadot-re-tests) - Cross-implementation tests for the Polkadot Runtime Environment.
+- [Polkadot Runtime Environment Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the PRE spec, including tests.

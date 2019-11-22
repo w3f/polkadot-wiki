@@ -23,5 +23,4 @@ Polkadot runtime（以及平行链 runtime）必须编译成 WebAssembly(Wasm) B
 
 ## 资源
 
-- [ Polkadot Runtime 环境协议规范](https://github.com/w3f/polkadot-re-spec) - PRE 规范的孵化器。
-- [ polkadot-re-tests ](https://github.com/w3f/polkadot-re-tests) - 不同 Polkadot Runtime 环境的实现测试。
+- [Polkadot Runtime Environment Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the PRE spec, including tests.
