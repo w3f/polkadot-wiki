@@ -39,7 +39,7 @@ Planck| 1
 Point | 3
 MicroKSM (uKSM)| 6
 MilliKSM (mKSM)| 9
-KSM (DOT) | 12
+KSM | 12
 
 
 ## What are the uses of DOTs?

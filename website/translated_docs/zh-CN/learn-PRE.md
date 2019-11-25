@@ -1,27 +1,26 @@
 ---
 id: learn-PRE
-title: Polkadot Runtime Environment (PRE)
-sidebar_label: Polkadot Runtime Environment (PRE)
+title: Polkadot Runtime 环境 (PRE)
+sidebar_label: Polkadot Runtime 环境 (PRE)
 ---
 
-The Polkadot Runtime Environment is an important component of the Polkadot protocol. It consists of the networking, consensus and Wasm VM subsystems, and acts as the lower layers of the stack underlying the Polkadot runtime and the runtimes of the parachains. Loosely, the Polkadot RE can be thought of as synonymous with a virtual machine running the Polkadot relay chain (although as stated below, there is a clear separation between the chain logic itself, and the PRE on which it runs).
+Polkadot Runtime 环境是 Polkadot 协议的重要组成部分。 它由网络层，共识和 Wasm VM 子系统组成，并充当 Polkadot runtime 和平行链 runtime 的基础堆栈底层。Polkadot RE 可以视为运行Polkadot 中继链的虚拟机的同义词（尽管如下所述，链逻辑本身与其运行的 PRE 之间有明显的分隔）。
 
-The components of the Polkadot RE are:
+Polkadot RE 组件为：
 
-- Network Interactions
-- State storage and the Storage Trie
-- Consensus Engine
-- Wasm Virtual Machine (VM)
+- 网络交互
+- 状态存储和 Trie 树
+- 共识引擎
+- Wasm 虚拟机 (VM)
 
-The runtime, which is defined as the code implementing the logic of the chain, is decoupled from the Polkadot RE. The separation of the two components allows the runtime to be easily upgradable without needing to upgrade the Polkadot RE.
+Runtime（定义为实现链逻辑的代码）与 Polkadot RE 分离。 这两个组件的分离使 runtime 可以轻松升级，而无需升级 Polkadot RE。
 
-The Polkadot runtime (as well as the runtimes of the parachains) must be compiled WebAssembly (Wasm) blobs. The Polkadot runtime "plugs-in" to the Polkadot RE and will be swappable through the governance mechanism.
+Polkadot runtime（以及平行链 runtime）必须编译成 WebAssembly(Wasm) Blob。 Polkadot runtime 将 "插件" 放到 Polkadot RE 并且可以通过治理机制进行交换。
 
-The image below is taken from the [slide deck](https://slides.com/paritytech/paritysubstrate#/8) that Gavin Wood presented on Substrate and demonstrates visually the 4 layers of the Polkadot stack.
+下图取自 Gavin Wood 在 Substrate 上展示的[ PPT ](https://slides.com/paritytech/paritysubstrate#/8)，并演示了 Polkadot 堆栈的四 层 。
 
 ![PRE](assets/PRE.png)
 
-## Resources
+## 资源
 
-- [Polkadot Runtime Environment Protocol Specification](https://github.com/w3f/polkadot-re-spec) - Incubator for the PRE spec.
-- [polkadot-re-tests](https://github.com/w3f/polkadot-re-tests) - Cross-implementation tests for the Polkadot Runtime Environment.
+- [Polkadot Runtime Environment Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the PRE spec, including tests.

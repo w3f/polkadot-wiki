@@ -8,6 +8,8 @@ Polkadot is a blockchain technology but makes some innovations that sets it apar
 
 ## [Cosmos](learn-comparisons-cosmos)
 
+## [Dfinity](learn-comparisons-dfinity)
+
 ## Ethereum
 
 [Ethereum](https://ethereum.org) is a smart contract platform blockchain which allows for general computation to be deployed on-chain and operated across the p2p network.

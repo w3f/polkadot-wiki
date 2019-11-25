@@ -4,43 +4,43 @@ title: Polkadot
 sidebar_label: Polkadot
 ---
 
-Polkadot is a heterogeneous multi-chain technology. It consists of the relay chain, parachains, and bridges to other networks. The relay chain is responsible for achieving consensus and transaction delivery among parachains. Parachains are independent blockchains with their own state transitions that gather and process transactions while plugging in to the security of the relay chain. Bridges allow the Polkadot network to make it interoperable with other blockchains not built to natively support it.
+Polkadot是一种异构多链技术。 它由中继链，平行链和到其他网络的转接桥组成。中继链负责在平行链之间达成共识和输送交易。 平行链是独立的区块链，并具有自己的状态转换，可以收集和处理交易，同时接入中继链的安全性。 转接桥允许 Polkadot 网络与其它非直接支持的区块链相互操作。
 
-## Why Polkadot?
+## 为什么是 Polkadot？
 
-Polkadot is built to connect private/consortium chains, public/permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
+Polkadot is built to connect private or consortium chains, public and permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
 
-By connecting these dots, we allow for the development of a truly decentralized web, serving as a foundational building block for the creation of an ecosystem of Dapps and services that will distribute power and equity for the common good.
+通过连接这些点，我们可以开发真正的去中心化网络，作为创建 Dapps 和服务生态系统的基础构建块，这些 Dapps 和服务生态系统将为共同利益分配权力和公平。
 
-## What Is Polkadot?
+## 什么是 Polkadot？
 
-Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This interoperability also allows the additional benefit of scalability by creating a general environment for multiple state machines.
+Polkadot 是一个协议，允许独立的区块链交换信息。 Polkadot 是跨链间区块链协议，与互联网消息传递协议（例如TCP/IP）不同，它还强制执行链之间消息的次序和有效性。通过为多个状态机创建通用环境，这种互操作性还带来了可伸缩性的其它好处。
 
-## Digging deeper
+## 深入了解
 
-- [Architecture](learn-architecture) - Overview of the Polkadot architecture.
-- [Bridges](learn-bridges) - Overview of bridges.
-- [Cryptography](learn-cryptography) - Describes the cryptography used in Polkadot and where it is employed in the protocol.
-- [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
-- [DOT](learn-DOT) - Information on DOTs, the native token of the Polkadot protocol.
-- [Governance](learn-governance) - What blockchain governance is, and how it works in Polkadot.
-- [Interchain Communication](learn-interchain) - Information regarding how interchain messaging works.
-- [Parachains](learn-parachains) - Overview of what a parachain is, and how they work.
-- [Parachain Auctions](learn-auction) - Describes the mechanism for the auctioning of parachain slots.
-- [Parathreads](learn-parathreads) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
-- [Phragmen](learn-phragmen) - Information on the Phragmen method.
-- [Polkadot Runtime Environment](learn-PRE) - General information on the Polkadot Runtime Environment.
-- [Randomness](learn-randomness) - What Polkadot uses for randomness, as well as why and how it is used.
-- [Security](learn-security) - How the Polkadot network remains secure.
-- [SPREE](learn-spree) - Shared Protected Runtime Execution Environments.
-- [Staking](learn-staking) - How staking works in Polkadot.
-- [Treasury](learn-treasury) - How to make spending proposals on Polkadot and Kusama.
-- [WebAssembly](learn-wasm) - A description of WebAssembly and how it is used in Polkadot.
+- [架构](learn-architecture) - Polkadot 架构概述。
+- [转接桥](learn-bridges) - 转接桥的概述。
+- [密码学](learn-cryptography) - 描述 Polkadot 中使用的密码学以及在协议中那里使用。
+- [共识](learn-consensus) - 描述 Polkadot 协议中使用的共识类型以及它与其它共识协议的比较。
+- [ DOT ](learn-DOT) 关于 DOT 的资料，即 Polkadot 协议的原生代币。
+- [治理](learn-governance) - 什么是区块链治理及其在 Polkadot 中的方式。
+- [跨链沟通](learn-interchain) - 有关链与链之间传递消息的工作方式。
+- [平行链](learn-parachains) - 什么是平行链以及它们如何运作。
+- [平行链拍卖](learn-auction) - 描述了平行链插槽拍卖的机制。
+- [平行线程](learn-parathreads) - 平行线程是在许多平行链-"线程"之间共享平行链插槽的一种方法。
+- [ 菲拉格曼法 (Phragmen) ](learn-phragmen) - 有关菲拉格曼法的信息。
+- [ Polkadot runtime 环境](learn-PRE) - 有关 Polkadot runtime 环境的信息。
+- [随机性](learn-randomness) - Polkadot 怎么使用随机性以及使用的原因和方式。
+- [安全性](learn-security) - Polkadot 网络如何保持安全。
+- [ SPREE ](learn-spree)- 共享受保护 runtime 执行环境。
+- [抵押](learn-staking) - 抵押在 Polkadot 中的原理。
+- [财政部](learn-treasury) - 如何在 Polkadot 和 Kusama 上提出支出建议。
+- [ WebAssembly ](learn-wasm) - WebAssembly 的描述及其在 Polkadot 中的用法。
 
-## Resources
+## 资源
 
-- [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
-- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
-- [Links](learn-relevant-links) - Comprehensive list of external links.
-- [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
-- [FAQ](learn-faq) - Answers to some of the frequently asked questions about Polkadot.
+- [词汇表](glossary) - Polkadot 文档中使用的特定领域术语的定义。
+- [实现](learn-implementations)- Polkadot 协议实现的列表（那些团队在构建它们和链接到源代码）。
+- [链接](learn-relevant-links) - 外部链接的完整列表。
+- [路线图](learn-roadmap) - Polkadot 的实现路线图。
+- [常见问题](learn-faq) - 回答有关 Polkadot 的一些常见问题。

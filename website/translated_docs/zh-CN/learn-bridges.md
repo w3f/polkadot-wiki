@@ -1,47 +1,47 @@
 ---
 id: learn-bridges
-title: Bridges
-sidebar_label: Bridges
+title: 转接桥
+sidebar_label: 转接桥
 ---
 
-One of the central ideas in blockchain intercommunication is the role of bridges. Some of the exact details of how bridging will work in Polkadot have yet to be decided; please consider this page a work in progress. It will be updated as more details are determined.
+在区块链互通得中心思想之一是转接桥的角色。转接桥如何在 Polkadot 中工作的确切细节尚待确定。请将此页面视为进行中的工作，确定更多详细信息后将对其进行更新。
 
-Currently, there are three different types of bridging in Polkadot:
+目前 Polkadot 中有三种不同类型的转接桥:
 
-* _Bridge contracts_ - Smart contracts deployed as bridges between Polkadot and external chains.
-* _Cross-parachain communication_ - No contracts needed.
-* _In-built bridging modules_ - Bridging to Polkadot from an external chain via a purpose-built module.
+* _桥接合约_部署为 Polkadot 和外部链之间的桥接智能合约。
+* _跨平行链通信_ - 无需智能合约。
+* _内置转接桥模块_ - 专用模块从外部链桥接到 Polkadot。
 
-## Bridge Contracts
+## 转接桥智能合约
 
-Those who are already familiar with Ethereum may know of the [Parity Bridge](https://github.com/paritytech/parity-bridge) and the efforts being made to connect PoA sidechains to the Ethereum mainnet. The bridge is a combination of two smart contracts, one deployed on each chain, that allow for cross-chain transfers of value. As an example of usage, the initial Parity Bridge proof of concept connects two Ethereum chains, `main` and `side`. Ether deposited into the contract on `main` generate a balance denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract on `side` can free up Ether on `main`.
+那些已经熟悉以太坊的人可能知道[ Parity Bridge ](https://github.com/paritytech/parity-bridge)以及为将 PoA 侧链连接到以太坊主网所做的努力。转接桥是两个智能合约，每个合约上都部署了在每个链上，可以实现跨链的价值转移。作为使用示例，最初的 Parity Bridge 概念证明连接了两个以太坊链，分别是` main `和` side `。 在` main `上存入以太币到合约会在` side `上生成以 ERC-20 余额计算的代币。 相反在` side `上存回合约的 ERC-20 代币可以释放` main `上的以太币。
 
-In the case of Polkadot, it should be possible to have a bridge contract deployed on, say, an EVM-based standalone chain and a contract deployed on a smart contract capable parachain. This would not necessarily be the most efficient method of bridging, but given the generality of a Turing-complete parachain it would be possible to bridge Polkadot and any other smart contract capable blockchain.
+就 Polkadot 而言，应该有可能在基于 EVM 的独立链上部署桥接合约，并在具有智能合约功能的平行链上部署合约。这不一定是最有效的桥接方法，但是鉴于一般图灵完备的平行链，将有可能桥接 Polkadot 和任何其它具有智能合约功能的区块链。
 
-## Cross-Parachain Communication
-As mentioned on the [parachains](learn-parachains) page, parachains will be able to send messages (including transactions) to each other without the need for smart contracts to perform the bridging functionality. Cross-parachain messaging will be native to Polkadot.
+## 跨平行链通信
+如[ 平行链](learn-parachains)页中所述，平行链将能够彼此发送消息(包括交易)，而无需智能合约来执行转接桥功能，跨平行链通信将是 Polkadot 的本地消息。
 
-## In-built Bridging Modules
+## 内置转接桥模块
 
-Receiving messages on a parachain from a non-parachain blockchain will likely be done natively within a module of the client software. This would negate the need for bridging contracts and allow non-parachains to act as "virtual parachains". Collators for the specific blockchain can then collate transactions or other state transitions, and submit them to the relay chain as if the blockchain were a parachain.
+在非平行链接收平行链上的消息很可能会通过客户端软件的模块中完成。这消除桥接合约的需要，并允许非平行链充当"虚拟平行链"。然后收集人在特定区块链可以收集交易或其它状态转换，(像平行链一样)将其提交给中继链。
 
-The bridging modules will likely be written with particular parachains in mind (e.g. Bitcoin, Ethereum), which means that any blockchain that's based on either of those should be able to be bridged directly to Polkadot without the need of going through a bridge contract on a parachain. This should allow for faster execution for those chains that are compatible.
+桥接模块在编写时可能会考虑到特定的平行链(例如比特币，以太坊)，这意味着基于其中任何一个的区块链都应能够直接连接到 Polkadot ，而无需在平台上部署桥接合约。这允许更快地执行那些兼容的链。
 
-For the standalone chains that don't have an in-built bridging module on Polkadot, it will be necessary to deploy bridge contracts (see above).
+对于在 Polkadot 上没有内置转接桥模块的独立链，需要部署转接桥合约(请参见上文)。
 
-## Resources
+## 资源
 
-### Smart Contract Bridges
+### 智能合约转接桥
 
-- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to Edgeware chain (a Substrate-based chain).
-- [Parity Bridge](https://github.com/paritytech/parity-bridge)
-- [POA Network](https://poa.network/)
-- [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA Network's implementation of Parity's bridge chain solution.
+- [ Edgeth 转接桥](https://github.com/hicommonwealth/edgeth_bridge/)-从以太坊到 Edgeware 链（基于 Substrate 的链)。
+- [Parity 转接桥](https://github.com/paritytech/parity-bridge)
+- [POA 网络](https://poa.network/)
+- [ POA 网络实现 Parity 桥链解决方案的案例研究](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772)。
 
-### Runtime Module Bridges
+### 转接桥 Runtime 模块
 
-- [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX have implemented a BTC to Substrate bridge for their parachain.
+- [ ChainX BTC 桥](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX  实现了 BTC -> Substrate 桥供其平行链。
 
-### Design
+### 设计
 
-- [XClaim](https://eprint.iacr.org/2018/643.pdf) - XClaim design for bridging Proof-of-Work chains in a trustless way.
+- [ XClaim ](https://eprint.iacr.org/2018/643.pdf)-XClaim设计，以去中心方式桥接工作量证明(PoW)链。

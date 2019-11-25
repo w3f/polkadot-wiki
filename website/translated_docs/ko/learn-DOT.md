@@ -32,7 +32,7 @@ Alexander testnet DOTs have 15 decimal places, while the smallest unit is called
 | Unit | Decimal Places |
 | ---- | -------------- |
 |      |                |
- Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM (DOT) | 12
+ Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
 
 
 ## What are the uses of DOTs?

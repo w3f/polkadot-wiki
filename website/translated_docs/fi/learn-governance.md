@@ -31,7 +31,7 @@ Referenda can be started in one of several ways:
 * Proposals submitted as part of the enactment of a prior referendum;
 * Emergency proposals submitted by the Technical Committee and approved by the Council.
 
-All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
+All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 7 days; Polkadot will likely be 28 days. For the third type, it can be set as desired.
 
 Emergency proposals deal with major problems with the network which need to be "fast-tracked". These will have a shorter enactment time.
 
@@ -162,11 +162,11 @@ If there is publicly submitted referenda only has 25% turnout, the tally of "aye
 
 In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the super-majority required decreases as the turnout increases.
 
-Suppose there is a unanimous proposal proposed by the council, `Negative Turnout Bias` would be used, so that means the proposal is passed by default. Hence, more token holders have to participate in voting to prevent it from passing if they do not like this proposal.
+When the council proposes a new proposal through unanimous consent, the referendum would be put to a vote using "Negative Turnout Bias." In this case it is easier to pass this proposal with low turn-out and requires a super-majority to reject. As more token holders participate in voting the bias approaches a plain majority carries.
 
-Referring to the above image, when the referenda only has 25% turnout, the tally of "nay" votes has to reach 34% for it to reject.
+Referring to the above image, when the referenda only has 25% turnout, the tally of "aye" votes has to reach 34% for it to accept.
 
-In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
+In short, when turnout rate is low, a super-majority is required to reject the proposal, which means a lower threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
 
@@ -186,7 +186,7 @@ If the cancellation is controversial enough that there is at least one dissenter
 
 ![](assets/governance/approval-vote.png)
 
- At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
+ At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
 
 To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election.
 
@@ -230,5 +230,5 @@ The Technical Committee can, along with the Polkadot Council, produce emergency 
 
 ## Resources
 
-- [Governance Description](https://github.com/paritytech/polkadot/wiki/Governance))
+- [Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Module](https://github.com/paritytech/substrate/tree/master/srml/democracy/src)

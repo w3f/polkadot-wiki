@@ -39,4 +39,4 @@ Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行
 
 ## 资源
 
-- [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description of internchain communication on the Web3 Foundation research wiki.
+- [ICMP 方案](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Web3 基金会维基上的跨链通信的完整技术描述。

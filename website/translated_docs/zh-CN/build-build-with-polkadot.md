@@ -1,7 +1,7 @@
 ---
 id: build-build-with-polkadot
-title: Polkadot Builders Starter's Guide
-sidebar_label: Polkadot Builders Starter's Guide
+title: Polkadot 開發者入门指南
+sidebar_label: Polkadot 開發者入门指南
 ---
 
 _本文是Medium博客上: [Everything you Need to Know to Prepare for Polkadot的最新版本](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)_
@@ -19,11 +19,11 @@ Polkadot是个网络协议，缩短了区块链开发者的开发时间。以前
 - Cumulus: **Initial release: October 2019**
 - ink!: **Pre-Alpha**
 
-**What you need to know**: Polkadot is currently on the v0.6 release with a running testnet named Alexander and Kusama, a value-bearing canary network. The Alexander testnet has been live for over 6 months through the entire PoC-3 and PoC-4 release cycles. Polkadot is being built with [implementations in various programming languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in Rust and using the Substrate framework for developing blockchains. Substrate is a library that allows developers to more easily develop entire blockchains by building from a base layer including a networking protocol, consensus, and a Wasm interpreter. An in-development extension to Substrate called Cumulus will allow any Substrate built chain to connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, which settled its API for the time being.
+** 有什么你需要知道 **: Polkadot 现在最新发布是 v0.6 并且运行着名为 Alexander 的测试网络和 Kusama 具有价值的金丝雀网络。目前最快的实现是 Rust 并使用 Substrate 框架来开发区块链。 Substrate 是一个库，通过从包括网络协议，共识和 Wasm 编译器的基础层进行开发，开发者可以短时间开发出整个区块链。对于 Substrate 的扩展称为 Cumulus，将允许任何 Substrate 开发的链连接到 Polkadot 并成为平行链。 Substrate 已发布1.0.0版，目前已稳定了其 API。
 
-Substrate chains can include smart contract functionality by using the provided [contracts runtime module from the SRML](https://github.com/paritytech/substrate/tree/master/srml/contracts). This module allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users. To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built in Rust that is intended for writing smart contracts.
+Substrate 链通过包含[SRML 中 contract runtime 模块](https://github.com/paritytech/substrate/tree/master/srml/contracts)增加智能合约功能。该模块允许将编译成 Wasm 代码的智能合约部署到链中并由用户实例化。为了促进 Wasm 智能合约开发，Parity 还开发了[ ink! ](https://github.com/paritytech/ink)，它是基于 Rust 的领域特定语言，旨在编写智能合约。
 
-Polkadot is planned to go live with an initial release at the end of 2019, depending on security audits and launch provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build for Polkadot.
+取决于安全审核和无法控制团队的启动规定，Polkadot 计划在 2019 年底发布第一个版本。现在不同工具已经开始出现和稳定，没有比现在更好的时间开始开发。但是等等！在你跳进代码之前，您应该考虑要开发的分布式应用程序类型，并了解不同的范例可为在 Polkadot 的开发者使用。
 
 ## 平行链/平行线程与智能合约有什么区别?
 
@@ -31,7 +31,7 @@ Polkadot is planned to go live with an initial release at the end of 2019, depen
 
 平行链是独立的链连接到Polkadot网络取得中继链上验证人的共享安全和跨链消息传递。平行链提供了极大灵活性和可定制，但将需要更多时间来构建。
 
-Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application. The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain. The lower costs of parathreads are due to the fact that parathreads will only produce a block when they need to, unlike parachains which have secured a slot to produce a block at every block of the relay chain. When building a parathread, you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback of the cost.
+平行线程像平行链一样使开发者有最低层应用程序的逻辑控制。它们二者差别在于经济上，因为取得平行线程所需的成本比平行链便宜得多。平行线程成本低的原因是因为仅在需要时才出块，跟平行链不一样，它拥有了一个插槽，以产生每个区块在中继链上。开发平行线程时，您将使用相同的工具(例如 PDK)，并获得开发平行链的所有好处，而没有成本的缺点。
 
 当Polkadot主网上线后，将会有一个或多个智能合约平台会成为平行链，智能合约是仅存在于某个链上并且执行复杂性有限的程序。因为它们只存在于单一链，所以它们很容易跟其它在同一链内的智能合约互相沟通，但是它们将始终会受到主链的固有特性约束和限制。
 
@@ -39,12 +39,12 @@ Parathreads are like parachains and enable the developer to have lower-level con
 
 平行链会为开发者提供更多空间从头开始建立链的货币体制，它提供比智能合约平台更简洁和有效地执行复杂的逻辑，平行链还提供治理的形式，并且可以比现有硬分叉的过程减少争议的方式进行升级。
 
-Some examples of features you can have on a parachain or parathread:
+在平行链或平行线程上的功能例子:
 
-- Custom fee structure (for example, pay a flat fee for transactions or pay per byte).
-- Custom monetary policy for the native token and local economy.
-- Treasury to be funded through transitions in your state function.
-- A governance mechanism that could manage a DAO that is responsible for allocating your on-chain treasury.
+- 定制费用架构(例如: 固定费用交易费或按字节)。
+- 定制货币政策用作原生币币和本地经济。
+- 财政库通过状态转变函数获取资助。
+- 治理机制使你可以管理 DAO ，用來负责分配链上的财政库。
 
 ![build 1](assets/build-1.png)
 
@@ -52,30 +52,30 @@ Some examples of features you can have on a parachain or parathread:
 
 你也可以决定结合两者，如果有部份逻辑需要循环并且不能够移除，你可以使用原生平行链runtime去处理所有复杂的逻辑和调用智能合约执行迭代。
 
-Most likely you’ve already realized that your application is better suited to be one or the other (or a hybrid of them both ), but if you need a quick recap to digest the information, you can use this comparison chart as a cheat sheet:
+大概您已经意识到您的应用程序更适合于其中一个(或混合两者)，但如果您需要快速回顾这些信息，您可以使用此比较图表作为备忘:
 
 ![build 2](assets/build-2.png)
 
-> **Note:** The image above does not include parathreads, but as we mentioned before all the benefits of parachains apply just as well to parathreads. However, they are cheaper to deploy and maintain. So if they had a column on the table above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead" changed to `+`.
+> **注意:** 以面的图片不包括平行线程，但正如我们之前提到平行链所有优点同样适用于平行线程。但是它们部署和维护成本较低。因此如果他们在上面的图表上有一列，它会在平行链列的"易于部署"和"维护费用"的更改为 `_`。
 
 本指南现在分为两部分，具体取决于你的应用决定是在平行链或智能合约上建立。你可以随意阅读这两个部分，也可以只阅读适用于你的部分。
 
-- [I want to build a parachain or parathread!](#so-you-want-to-build-a-parachain-or-parathread)
-- [I want to build a smart contract!](#so-you-want-to-build-a-smart-contract)
+- [你想建立平行链或平行线程!](#so-you-want-to-build-a-parachain-or-parathread)
+- [你想建立智能合约!](#so-you-want-to-build-a-smart-contract)
 
-## 所以你想建立平行链
+## 你想建立平行链或平行线程...
 
-Now that you have determined that building a parachain or parathread is the right approach for your new project, the next step is to decide which framework to use. Frameworks for building a parachain or parathread are known as parachain development kits (PDKs). Currently, the only PDK available is Substrate and Cumulus from Parity Technologies.
+现在是决定新项目建立平行链还是平行线程那一个合适的方法，接下来是决定使用那个框架。框架是用于建立平行链或平行线程的平行链开发正具(PDKs)。现在只有 Parity Technologies 的 Substrate 和 Cumulus PDK 可选择。
 
-In the future, there will be many different PDKs available in different programming languages, just like there are multiple [implementations](learn-implementations.md) of the Polkadot runtime environment.
+将来会有不同的编程语言提供不同的 PDKs，就像 Polkadot runtime 环境有多个[实现](learn-implementations.md)一样。
 
-> **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3 Foundation is giving grants to teams who are doing this, learn more and apply on the [W3F grants page](https://grants.web3.foundation).
+> **立即行动:** 您是否想从头开始开发平行链开发套件工具？ Web3 基金会这些团队提供资助，了解更多并且在[W3F 资助页面](https://grants.web3.foundation)申请。
 
-### 开始使用Substrate
+### 开始使用 Substrate
 
 正如刚才提到的，Polkadot背后是基于Substrate框架建立的，它是区块链创新者的工具，为构建区块链提供了必要的构建模块，它包含了模块化插件库，你可以从中构建更复杂的逻辑链。
 
-了解最好Substrate的方式是前往[Substrate Development Hub](https://substrate.dev)，它是由Parity Technologies建立和维护的线上Substrate资源。
+了解最好 Substrate的 方式是前往[ Substrate Development Hub ](https://substrate.dev)，它是由 Parity Technologies 建立和维护的线上 Substrate 资源。
 
 建议在那里逛一逛，直到你熟悉构建Substrate链的模式。一旦你有了扎实的理解，你就可以跟着Substratekitties的工作坊挑战自己，然后前往TCR Dappchain教程。
 
@@ -91,21 +91,21 @@ Substrate内置拥有自己的网络层，但它不能够直接兼容Polkadot校
 
 #### Cumulus
 
-[Cumulus](build-cumulus)的目标是成为Substrate的扩展，它将会使所有Substrate runtime兼容于Polkadot。
+[Cumulus](build-cumulus) 的目标是成为 Substrate 的扩展，它将会使所有 Substrate runtime 兼容于 Polkadot。
 
-It handles the network compatibility overhead that any parachain would need to implement to be connected to Polkadot. This includes:
+它可以处理任何平行链连接到 Polkadot 所需的网络兼容性开销。
 
 - 跨链信息传递
 - 开箱即用的收集人节点
 - 中继链的嵌入式轻客户端
-- Polkadot block authorship compatibility.
-- Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with minimal modification, possibly as little work as importing a crate and adding a single line.
+- Polkadot 出块者兼容性。
+- 将 Cumulus 整合到 Substrate 链后，可使其只需要修改很少就能成为 Polkadot 上的平行链，可能像导入 create 和添加一行代码一样小。
 
-Rob Habermeier, a co-founder of Polkadot, recently gave a talk at EthCC that gave the latest on the development of Cumulus, which you can watch below.
+Polkadot 联合创始人 Rob Habermeier 最近在 EthCC 上演讲了关于 Cumulus 的最新发展，你可以在下面观看。
 
 [![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
 
-### How to deploy your parachain or parathread in Polkadot
+### 如何在 Polkadot 中部署平行链或平行线程。
 
 #### 平行链
 
@@ -115,17 +115,17 @@ Rob Habermeier, a co-founder of Polkadot, recently gave a talk at EthCC that gav
 
 #### 平行线程
 
-Parathreads will not require a parachain slot, so you will not need to engage in the candle auction mechanism. Instead, you will be able to register your parathread code to the Relaychain for a fee and from then be able to start participating in the per-block auctions for inclusion of your state transition into the Relaychain.
+平行线程不需要平行链插槽，所以你并不需要参与蜡烛拍卖。但是您可以付费向中继链注册您的平行线程代码，然后参加按区块拍卖，以使您的状态转换(STF)包括到中继链中。
 
-For more information on how parathread per-block auctions work, see the more detailed [parathread](learn-parathreads) page.
+有关平行线程按区块拍卖如何运作，详请前往[平行线程](learn-parathreads)专页。
 
-## 所以你想建立智能合约
+## 你想建立智能合约
 
-The Polkadot relay chain itself will not support smart contracts but since Polkadot is a network of many heterogeneous blockchains, there will be parachains that do.
+Polkadot 中继链本身不会支持智能合约，但由于 Polkadot 是个包含各种各样的区块链网络，所以会有平行链会支持的。
 
-Already Parity Technologies has laid much of the groundwork for an out-of-the-box solution for parachains that want to include smart contract functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contracts) module in the core SRML will support smart contracts that are compiled to Wasm.
+Parity Technologies 已经为想要包括智能合约功能的平行链的提供了即用型解决方案。 Substrate 核心 SRML 中的[contract](https://github.com/paritytech/substrate/tree/master/srml/contracts) 模块将支持编译为 Wasm 的智能合约。
 
-为了使智能合约编译到Wasm，还需要一种合适的语言，因此Parity一直致力于开发名为 [Ink](#ink)的领域特定语言。
+为了使智能合约编译到 Wasm，还需要一种合适的语言，因此 Parity 一直致力于开发名为 [Ink](#ink)的领域特定语言。
 
 经已有一个项目名为[Edgeware](#edgeware)公布有意成为Polkadot上的平行链并支持智能合约。随着生态成熟，日后很有可能会有更多支持智能合约的平行链出现。
 
@@ -177,6 +177,6 @@ Polkadot的智能合约还是处于早期，而且开发才刚刚开始稳定下
 
 本指南經已給了一個全面兩者的分別及展示了必要的资料帮助你作出决定項目是適合建立平行链还是智能合约。尽管工具还没成熟，但是提早熟悉對你有好处，项目赢在起跑线，并且允許你创造真正创新的东西。
 
-If you have interesting ideas for parachains or smart contracts on Polkadot feel free to drop in to the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) to talk about them. Developers may be interested in joining the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their questions. As always, keep up to date with Polkadot by following the [social channels](https://wiki.polkadot.network/en/latest/community/).
+如果你有任何想法在 Pokadot 上的平行链或智能合约，随便在 [ Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) 分享一下。开发者可能会有兴趣加入 [ Polkadot Beginners Lounge ](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) 或 [ Substrate Technical ](https://riot.im/app/#/room/#substrate-technical:matrix.org) 问问题。一如既往，跟随着所有 Polkadot 的[社交频道](https://wiki.polkadot.network/en/latest/community/)。
 
 祝你好运！

@@ -25,7 +25,7 @@ sidebar_label: 成为验证人 (Kusama)
 您并不需要非常强大的电脑运行验证人，但是您应该意识到资源限制。验证人节点最重要的资源是网络带宽，其次是存储和内存功能。对运行验证人节点的计算机最低要求如下:
 
 - **存储:** 40GB - 80GB。 Kusama 对存储空间的要求不是很高，因此这范围经已可以满足所需要的要求，请记住如果链的存储持续增加，则可能需要稍后对其进行升级。
-- <strong x-id =“ 1”>内存:</strong> 2GB - 8GB。2GB 实际上是运行验证人最低的要求，小于 2GB 会使构建时间更长。 为了有更好性能，您可以将其提高到 4GB 或 8GB。
+- **内存:** 2GB - 8GB。2GB 实际上是运行验证人最低的要求，小于 2GB 会使构建时间更长。 为了有更好性能，您可以将其提高到 4GB 或 8GB。
 - ** 中央处理器:** 1 - 2。一个 CPU 是可以，但是2个更好。 同样地这是一种性能偏好。
 
 在大多数云服务提供商中，这些规格通常在每月 10 到 20 美元之间。
@@ -160,7 +160,7 @@ pub struct SessionKeys {
 
 - **Stash account** -选择 Stash 账户。在这个例子我们会绑定 100 milliKSMs - 确保你的 Stash 帐户拥有_至少_这个数量。当然你也可以绑定更多。
 - **Controller account** - 选择你之前创建的 Controller 帐号。此帐户也需要少量 KMS 才能开始和停止验证。
-- **Value bonded** - 选择从 Stash 帐号绑定/抵押 KSM 数量， 因为你需要支付交易费，所以不能够把全部 KSM 作押抵。另外你之后还可以绑定_更多_。但是_提取_ 已经绑定了的 KSM 是需要等待一段时间 (Kusama 解绑时间是28天)。
+- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - 把奖励发送到那个帐戶，详情请看[这里](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution)。
 
 当所有资料填写好后，使用 Stash 帐号按下`Bond`并签署交易。

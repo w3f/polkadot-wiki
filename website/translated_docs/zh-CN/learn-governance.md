@@ -16,7 +16,7 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 
 - [提议全民公投](#proposed-referendum) (相关资料: [ 公投 ](learn-governance#referenda))
 - [为提案投票](#voting-for-a-proposal)(相关资料: [自愿锁定](#voluntary-locking)）
-- [统计](#tallying)（相关资料: [自我调整仲裁偏置 ](#adaptive-quorum-biasing)）
+- [统计](#tallying)（相关资料: [Adaptive Quorum Biasing](#adaptive-quorum-biasing)）
 
 为了更好地了解理事会的组成方式，请阅读[本节](#council)。
 
@@ -28,10 +28,10 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 
 * 公开提交的提案
 * 理事会多数或全体一致提交的提案；
-* Proposals submitted as part of the enactment of a prior referendum;
+* 作为先前公投通过部分的提交提案。
 * 技术委员会提交并经理事会批准的紧急提案。
 
-All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 28 days, and Polkadot will likely be similar. For the third type, it can be set as desired.
+所有公投均具有*颁布延迟(enactment delay)*。这是全民投票结束并且假设提案获得通过，将会实施的改变。对于发起公投的头两种方式，这是固定时间(Kusama 会是 7天, 而 Polkadot 则会是 28天)。对于第三种类型，可以根据其需要设置。
 
 紧急建议涉及网络中的主要问题，需要“快速跟踪”，这将将有一个更短颁布时间。
 
@@ -43,7 +43,7 @@ All referenda have an *enactment delay* associated with them. This is the period
 
 #### 议会公投
 
-议会(一致赞成) - 议会的所有成员都同意一项提案时，可以将其移交给全民投票。This referendum will have a negative turnout bias (that is, the smaller the amount of stake voting, the smaller the amount necessary for it to pass - see "Adaptive Quorum Biasing", below).
+议会(一致赞成) - 议会的所有成员都同意一项提案时，可以将其移交给全民投票。这个公投带有 negative turnout bias (意思是当愈少人参与投票，通过所需要的数量会愈少) - 查看下面 "Adaptive Quorum Biasing"。
 
 议会(大部分赞成) - 仅需获得多数议会成员的同意即可。(1. Aye投赞成票多过Nay投反对票=接受，2. Nay多过Aye=反对。)
 
@@ -162,13 +162,13 @@ Polkadot引入了"Adaptive Quorum Biasing"概念，作为议会可以用来更�
 
 相反，当投票率达到75％时，"赞成"票总数必须达到54％，这意味着随着更多代币持有人对全民投票，那么所需的多数将随着投票率的增加而减少。
 
-假设议会提议了一项一致的提案，则将使用`Negative Turnout Bias`，因此这意味着该提案在默认情况下通过。 因此，如果他们不喜欢该提案，则更多的代币持有者必须参与投票以防止投票通过。
+当议会提交的是提案是通过一致同意，公投将会采用 "Negative Turnout Bias"。在这种情况下，当投票率较低时，通过此提案会比较容易，并且需要绝大多数才能否决。 随着来越多代币持有人参与投票，这将会走向简单多数决。
 
-参考上图，当全民投票的投票率只有25％时，"反对"票数必须达到34％才能被拒绝。
+根据以上图片，当公投的投票率只有25％时，"赞成"票数必须达到34％才能通过该提案。
 
-简而言之，当投票率低时，需要超级多数才能通过提案，这意味着必须达到更高的"赞成"选票门槛，但是当投票率增加到100％时，这变成多数。
+简而言之，当投票率低时，需要超级多数人投"反对"才能否决该提案，这意味着必须是较少的"赞成"票，但是当投票率增加到100％时，这变得很简单多数制。
 
-All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
+这三种统计计票机制 - 多数通过，超级多数赞成和超级多数反对票 - 等同于当100％投票率的简单多数通过的制度。
 
 ## 议会
 
@@ -186,9 +186,9 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 
 ![](assets/governance/approval-vote.png)
 
- 在创世纪，将有6到12个席位开始。 所有利益相关者可以自由表示同意(或不同意)任何注册候选人。 每两周，其中一个席位将当选，并在9个月内增加到24人(每两周大约增加一个人)。 所有成员都有固定的任期(1年)。议会成员也能通过全民公投提前罢免。
+ 一开始议会将有6至12个位置。所有利益相关者可自由表示赞成任何已登记的候选人。每两周其中一个席位将从选举产生，并在9个月内增加到24人(大约每两周增加一人)。所有成员都有固定期限(1 年)。议会成员可以通过公投提前罢免。
 
-为了选新的议会成员，Polkadot使用`approval voting`方法来允许代币持有人选择他们想要支持的候选人名单，并且权重相等，而获得票数最多的候选人赢得选举，而最高的N名亚军仍保留在下次选举的候选人名单上。
+为了选新的议会成员，Polkadot 使用 `同意投票 (approval voting)` 方法来允许代币持有人选择他们想要支持的候选人名单，并且权重相等，而获得票数最多的候选人赢得选举，而最高的 N 名亚军仍保留在下次选举的候选人名单上。
 
 基本上，为了代替一人一票，[Approval voting(同意投票)](https://en.wikipedia.org/wiki/Approval_voting) 是表达他们观点的一种更具表达力的方式。 代币持有人可以将其视为布尔投票，以支持他们尽可能多的候选人。
 
@@ -224,7 +224,7 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 
 在[ Kusama 推出和治理帖子](https://polkadot.network/kusama-rollout-and-governance/)中介绍了技术委员会。作为 Kusama 的三个会议厅之一的议院（以及议会和公民投票会议厅）。 技术 委员会由成功实施或指定 Polkadot / Kusama runtime 或 runtime 环境。 在议会的简单多数表决中，从技术委员会中添加或删除团队。
 
-The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
+技术委员会可以与 Polkadot 议会一起提出紧急公民投票，使快速进行表决和执行。紧急公投仅在紧急情况下使用。
 
 ## [DOT 的用途](learn-DOT#dots-for-governance)
 

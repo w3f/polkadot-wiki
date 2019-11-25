@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "下一页",
     "previous": "上一页",
-    "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
+    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
@@ -77,13 +77,17 @@
         "title": "桥接",
         "sidebar_label": "桥接"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Dfinity 和 Polkadot",
+        "sidebar_label": "Dfinity"
+      },
       "learn-comparisons-cosmos": {
-        "title": "Design Comparison",
+        "title": "设计比较",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
         "title": "与其它区块链比较",
-        "sidebar_label": "Other comparisons"
+        "sidebar_label": "与其它比较"
       },
       "learn-consensus": {
         "title": "Polkadot 共识机制",
@@ -130,8 +134,8 @@
         "sidebar_label": "平行线程"
       },
       "learn-phragmen": {
-        "title": "Phragmen 是什么，它对验证人意味着什么?",
-        "sidebar_label": "Phragmen 是什么，它对验证人意味着什么?"
+        "title": "顺序弗拉格曼方法",
+        "sidebar_label": "顺序弗拉格曼方法"
       },
       "learn-PRE": {
         "title": "Polkadot Runtime 环境 (PRE)",
@@ -177,6 +181,10 @@
         "title": "收集人",
         "sidebar_label": "收集人"
       },
+      "maintain-guides-how-to-join-council": {
+        "title": "加入议会",
+        "sidebar_label": "加入议会"
+      },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "成为提名人 (Alexander)",
         "sidebar_label": "成为提名人 (Alexander)"
@@ -189,6 +197,10 @@
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
+      "maintain-guides-how-to-upgrade": {
+        "title": "如何升级验证人节点",
+        "sidebar_label": "如何升级验证人节点"
+      },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
         "sidebar_label": "运行验证人 (Kusama)"
@@ -196,6 +208,10 @@
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
         "sidebar_label": "运行验证人 (Alexander)"
+      },
+      "maintain-guides-how-to-vote-councillor": {
+        "title": "投票选举议员",
+        "sidebar_label": "投票选举议员"
       },
       "maintain-guides-secure-validator": {
         "title": "安全验证人节点",

@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol.",
+    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
@@ -77,6 +77,10 @@
         "title": "Bridges",
         "sidebar_label": "Bridges"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Dfinity and Polkadot",
+        "sidebar_label": "Dfinity"
+      },
       "learn-comparisons-cosmos": {
         "title": "Design Comparison",
         "sidebar_label": "Cosmos"
@@ -130,8 +134,8 @@
         "sidebar_label": "Parathreads"
       },
       "learn-phragmen": {
-        "title": "What is Phragmen and what does it mean for node operators?",
-        "sidebar_label": "What is Phragmen and what does it mean for node operators?"
+        "title": "Sequential Phragmen Method",
+        "sidebar_label": "Sequential Phragmen Method"
       },
       "learn-PRE": {
         "title": "Polkadot Runtime Environment (PRE)",
@@ -177,6 +181,10 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
+      "maintain-guides-how-to-join-council": {
+        "title": "Join the Council",
+        "sidebar_label": "Join the Council"
+      },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "Be a Nominator (Alexander)",
         "sidebar_label": "Be a Nominator (Alexander)"
@@ -189,6 +197,10 @@
         "title": "Using systemd for the Validator Node",
         "sidebar_label": "Using systemd for the Validator Node"
       },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
+      },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "Run a Validator (Kusama)"
@@ -196,6 +208,10 @@
       "maintain-guides-how-to-validate-alexander": {
         "title": "Run a Validator (Alexander)",
         "sidebar_label": "Run a Validator (Alexander)"
+      },
+      "maintain-guides-how-to-vote-councillor": {
+        "title": "Voting for Councillors",
+        "sidebar_label": "Voting for Councillors"
       },
       "maintain-guides-secure-validator": {
         "title": "Secure Validator",

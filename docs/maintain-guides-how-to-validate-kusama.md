@@ -23,6 +23,10 @@ If you need help, please reach out on the [Kusama validator chat](https://riot.i
 on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more
 significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
 
+### How Many KSM Do I Need?
+
+Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
+
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper
 setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is
 recommended to nominate your KSM to a trusted validator node instead.
@@ -207,7 +211,7 @@ account contains _at least_ this much. You can, of course, stake more than this.
 KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all
 of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded
-amount requires the duration of the unbonding  period (on Kusama the unbonding period is 28 days).
+amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
 [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 

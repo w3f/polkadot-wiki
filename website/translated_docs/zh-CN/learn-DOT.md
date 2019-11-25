@@ -4,78 +4,78 @@ title: DOT
 sidebar_label: DOT
 ---
 
-## What are DOTs?
+## 什么是 DOTs？
 
-DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
+DOT 是 Polkadot 网络的原生代币，类似于 BTC 是比特币的原生代币或以太币是以太坊区块链的原生代币。
 
-Alexander testnet DOTs have 15 decimal places, while the smallest unit is called the Planck. Kusama tokens (KSM) have 12 decimal places. You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
+Alexander 测试网 DOT 具有15个小数位，而最小的单位称为普朗克（Planck）。 Kusama 代币（KSM）具有12个小数位。 您可以将 Planck 与 satoshis 或 wei 进行比较，而 DOT 就像比特币或以太币。
 
-**The table show as below is the old version.**
+**下表显示的是旧版本。**
 
-| Unit  | Decimal Places |
-| ----- | -------------- |
-| Femto | 0              |
-| Pico  | 3              |
-| Nano  | 6              |
-| Micro | 9              |
-| Milli | 12             |
-| DOT   | 15             |
+| 单位    | 小数位 |
+| ----- | --- |
+| Femto | 0   |
+| Pico  | 3   |
+| Nano  | 6   |
+| Micro | 9   |
+| Milli | 12  |
+| DOT   | 15  |
 
-**New Version**
+**新版本**
 
-| Unit | Decimal Places |
-| ---- | -------------- |
-|      |                |
+| 单位 | 小数位 |
+| -- | --- |
+|    |     |
  Planck| 1 Point | 3 Microdot (uDOT)| 6 Millidot (mDOT)| 9 Dot (DOT) | 12 Blob | 15
 
 **Kusama**
-| Unit | Decimal Places |
-| ---- | -------------- |
-|      |                |
- Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM (DOT) | 12
+| 单位 | 小数位 |
+| -- | --- |
+|    |     |
+ Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
 
 
-## What are the uses of DOTs?
+## DOTs 用途是什么？
 
-DOTs serve three key functions in Polkadot, (i) to be used for governance of the network, (ii) to be staked for operation of the network, and (iii) to be bonded to connect a chain to Polkadot as a parachain.
+DOTs在 Polkadot 中有三个关键功能: (i)用于网络的治理; (ii)参与抵押用于网络的运作; (iii)作为抵押品绑定以将链连接到 Polkadot 作为平行链;
 
-DOTs can also serve ancillary functions by virtue of being a transferrable token. For example, DOTs stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
+DOT 还可以作为辅助功能充当可转送代币。 例如将存储在财政库中的 DOT 发送给为 Polkadot 网络进行相关项目的团队。
 
-### DOTs for governance
+### DOTs 用于治理
 
-The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions which are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
+DOTs 的第一功能是使持有人有权控制平台的治理。 治理机制中包含了一些功能其包括定下 网络费用，添加或移除平行链以及特殊事件，例如对 Polkadot 平台的升级和修复。
 
-Polkadot will enable any holder of DOTs to participate in governance. For details on how holders can participate in governance, as well as their rights and responsibilities, see the [governance page](polkadot-learn-governance).
+在 Polkadot 里，任何持有 DOTs 的人都能参与治理。有关持有人如何参与治理以及他们的权利和责任的详细信息，请参见[治理页面](polkadot-learn-governance)。
 
-### DOTs for consensus
+### DOTs 用于共识
 
-DOTs will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious participants whom will be punished by the network by getting their DOTs slashed. The DOTs required to participate in the network will vary depending on the activity which is being performed, the duration the DOTs will be staked for, and the total number of DOTs staked.
+DOTs 将用于促进支撑 Polkadot 的共识机制。为了使平台发挥作用并允许跨平行链进行有效交易，Polkadot 将依靠 DOT 的持有人发挥积极作用。 参与者将（通过抵押）将其 DOT 置于担保之中，以执行这些功能。如果有恶意参与者破壞网络，抵押中的 DOT 将会因而被 Slash受到网络惩罚。 参与网络所需要 DOT 的数量将根据正在执行的活动，抵押 DOT 的时间以及抵押 DOT 的总数而有所不同。
 
-### DOTs for bonding
+### DOTs 用于绑定
 
-DOTs will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOTs will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed.
+为了把平行链连接到 Polkadot 网络， DOTs 将会有需要绑定一段时间。绑定期间的 DOTs 将会被锁上，当过了绑定时间和平行链被移除后，原有绑定的 DOTs 将会返回你帐户。
 
-## Mainnet DOTs
+## 主网 DOTs
 
-Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch in 2019 (see the [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Gavin Wood, one of the project's founders, said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+Web3 基金會將會在2019年主網上線前分配最多20% DOTs。(查看 [简短版](https://polkadot.network/Polkadot-lightpaper.pdf)或[Polkadot 网络常见问题](https://polkadot.network/faq/))。正如项目创始人之 一Gavin Wood 在年终回顾中所说，今年某个时候可能会公开发售该笔款项的一部分。在[ polkadot.network ](https://polkadot.network/)上订阅 Polkadot 电子报，以获取最新消息。
 
-_Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of Mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch._
+_警告：DOT 在主网上线前（预计于2019年末）之前不可转让。因此任何人转让 DOT 都是非法且未经授权。还有，DOT 现时是无法转移。拥有 DOT 并将地址转移给其他人，而该个人仍然可以保留其私钥副本，因此在主网上线之前，请大家不要参这类极大风险的买卖。_
 
-测试 DOTs 现在可免费获取-请参见进一步了解获取它们的各种方法。
+测试 DOTs 现在可免费获取 - 请参见下面了解获取的各种方法。
 
-## Testnet DOTs
+## 测试网 DOTs
 
-DOTs are required to make transactions on the Polkadot network. Testnet DOTs do not have any value beside allowing you to experiment with the network.
+DOTs 必须在 Polkadot 网络上进行交易。 测试网的DOTs 除了可以测试网络之外没有任何价值。
 
-### Getting testnet DOTs
+### 获取测试网 DOTs
 
-You can request DOTs from the [Polkadot faucet](https://faucet.polkadot.network/), the [BlockX Labs faucet](https://faucets.blockxlabs.com/) or ask someone to send you DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
+您可以从[ Polkadot 水龙头](https://faucet.polkadot.network/)，[ BlockX Labs 水龙头](https://faucets.blockxlabs.com/)，或在[ Polkadot Watercooler ](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) 请求某人向您发送。
 
-Also, you can get DOTs by joining the [faucet channel](https://matrix.to/#/!puxkyylfiAUGGBhGmY:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io) on Riot. Simply input `!faucet` to know how to use it.
+此外，您还可以通过链接 [水龙头通道](https://matrix.to/#/!puxkyylfiAUGGBhGmY:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io)Riot上。简单输入`!水龙头` 了解如何使用水龙头
 
 
-You can make your own DOTs by [becoming a validator](https://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/).
+您可以通过[成为验证人](https://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/)来得到 DOTs。
 
-## Kusama Tokens
+## Kusama 代币
 
-Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the frictional faucet (online soon), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
+与测试网 DOTs 有所不同，Kusama 代币并不是免费赠送。 Kusama 代币可通过[认领过程](https://claim.kusama.network/)（如果您已经购买了 DOTs），Kusama 水龙头（即将在线）

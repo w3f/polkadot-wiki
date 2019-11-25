@@ -1,41 +1,41 @@
 ---
 id: learn-parathreads
-title: Parathreads
-sidebar_label: Parathreads
+title: 平行线程
+sidebar_label: 平行线程
 ---
 
-Parathreads are an idea for parachains to temporarily participate (on a block by block basis) in Polkadot security without needing to lease a dedicated parachain slot. This is done through economically sharing the scarce resource of a _parachain slot_ among a number of competing resources (parathreads). Chains that otherwise would not be able to acquire a full parachain slot, or do not find it economically sensible to do so, are enabled to still participate in Polkadot's shared security -- albeit with an associated fee per block. It also offers a graceful off-ramp to parachains which no longer require a dedicated parachain slot, but would like to continue using the relay chain.
+平行线程的想法是样平行链暂时(按每个区块)使用 Polkadot 的安全性而不用租用专用的平行链链插槽。这是通过在众多资源竞争(平行线程)之间经济共享稀缺的_平行链插槽_资源来实现。那些无法获取整个平利链插槽或认为在经济上不明智的链仍然能够参与 Polkadot 的共享安全 - 尽管按每个区块需要的收取相关费用。它还为不再需要平行链插槽，但希望继续使用中继链的链提供了良好的脱链过程。
 
-## Origin
+## 起源
 
-According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu, the origin of the idea came from similar notions in the limited resource of memory on early personal computers of the late '80s and '90s. Since computers have a limited amount of physical memory, when an application needs more, the computer can create virtual memory by using _swap space_ on a hard disk. Swap space allows the capacity of a computer's memory to expand and for more processes to run concurrently with the trade-off that some processes will take longer to progress.
+根据在成都的[演讲](https://v.douyu.com/show/a4Jj7llO5q47Dk01)，这个想法的起源于于80年代末和90年代早期个人电脑上有限的内存资源概念类似。由于计算机上的内存记忆体资源有限，当某个程序需要更多内存时，计算机可以在硬盘通过使用_交换空间_创建虚拟记数亿体。交换空间允许计算机内存量扩大，权衡取舍并供更多程序同时运行，某些程序需要更长的时间才能完成。
 
 ## 平行线程 vs. 平行链
 
-Parachains and parathreads are very similar from a development perspective. One can imagine that a chain developed with Substrate can at different points in its lifetime assume one of three states: 1) independent chain with secured bridge, 2) parachain, or 3) parathread. It can switch between these last two states with relatively minimal effort on behalf of developers since the difference is more of an economic distinction than a technological one.
+平行链和平行线程在开发方面很相似。可以想象使用 Substrate 开发的链其生命周期不同时间上采取以下三种状态之一：1) 带有安全转接桥的独立链 2) 平行链或 3) 平行线程因为更多差别是在经济上的区别而不是技术上，所以它可以帮助开发者用最小工夫在这两个状态之间切换。
 
-Parathreads have the exact same benefits for connecting to Polkadot that a full parachain has. Namely, it is able to send messages to other para{chain,threads} through ICMP and it is secured under the full economic security of Polkadot's validator set.
+平行线程有着跟平行链连接 Polkadot 一样的好处。换句话说通过 ICMP 并受 Polkadot 验证人全面的经济安全保护发送信息到其它平行{平, 线程}。
 
-The difference between parachains and parathreads is economic. Parachains must be registered through a normal means of Polkadot, i.e. governance proposal or parachain slot auction. Parathreads have a fixed fee for registration that would realistically be much lower than the cost of acquiring a parachain slot. Similarly to how DOTs are locked for the duration of parachain slots and then returned to the winner of the auction, the deposit for a parathread will be returned to the parathread after the conclusion of its term.
+平行链与平行线程在于经济。平行链必须通过 Polkadot 正常过程注册。例如治理进行或平行链插槽拍卖。平行线程具有固定的注册费用，实际上比获取平行链插槽的费用低。 跟平行链插槽锁定 DOT 的期间并随后将返回还给拍卖的赢家的方式类似，平行线程在使用过后，将押金返还给给使用方。
 
-Registration of the parathread does not guarantee anything more than the registration of the parathread code to the Polkadot relay chain. When a parathread progresses by producing a new block, there is a fee that must be paid in order to participate in a per-block auction for inclusion in the verification of the next relay chain block. All parathreads that are registered are competing in this auction for their parathread to be included for progression.
+除了将平行线程代码注册到 Polkadot 中继链之外，注册平行线程不提供任何保证。当平行线程产生新的区块时，使用方必须支付费用参加每个区块链的拍卖，以使包含在下一个验证的中继链区块。所有已注册的平行线程都将参与拍卖，使将包含其平行线程。
 
-There are two interesting observations to make about parathreads. One, since they compete on a per-block basis, it is similar to how transactions are included in Bitcoin or Ethereum. A similar fee market will likely develop, which means that busier times will drive the price of parathread inclusion up, while times of low activity will require lower fees. Two, this mechanism is markedly different from the parachain mechanism which guarantees inclusion as long as a parachain slot is held; parathread registration grants no such right to the parathread.
+有两个关于平行线程的有趣发现。第一，由于它们是逐个区块竞争，这跟比特币和以太坊处理交易相似。同样将会开发费用市场，意味着当繁忙时间使用平行线程，价格将推高，而较少人使用的时侯，费用将会较低。第二，这种机制与平行链机制明显不同，后者只要持有平行链槽保证可用，而平行线程注册没有给予此类权利。
 
-## How Will Parathreads be Operated?
+## 平行线程将如何运作？
 
-A portion of the parachain slots on the relay chain will be designated as part of the parathread pool. In other words, some parachain slots will have no parachain attached to them and rather will be used as a space for which the winner(s) of the block-by-block parathread fee auction can have their block candidate included.
+中继链上的部分平行链槽将被指定为平行线程池的一部分。换句话说某些插槽将没有附上平行链，而是将被用作拍卖平行线程候选区块的空间，供每个区块获胜者使用。
 
-Collators will offer a bid designated in DOTs for inclusion of a parathread block candidate. The relay chain block author is able to select from these bids to include a parathread block. The obvious incentive is for them to accept the block candidate with the highest bid, which would bring them the most profit. The tokens from the parathread bids will likely be split 80-20, meaning that 80% goes into Polkadot treasury and 20% goes to the block author. This is the same split that applies also to transaction fees and, like many other parameters in Polkadot, can be changed through a governance mechanism.
+收集人将提供以 DOT 指定的出价，以包含平行线程的候选区块。中继链出块者可以从这些出价中进行选择，以包括一个平行线程区块。显而的诱因是他们接受出价最高的区块候选人，这将使他们获得最大的利润。来自平行线程出价的代币可能会被拆分为80-20，这意味着80％将进入 Polkadot 库房，而20％将给出块者。这也同样适用于交易费用的划分，并且像 Polkadot 中的其它参数一样，可以通过治理机制进行更改。
 
-For a precise description of the parathread protocol, see [here](https://hackmd.io/UcOOzoyDR9WJpQBZICtg3Q?both#Parathread-Protocol).
+有关平行线程协议的详细说明，请参见[此处](https://hackmd.io/UcOOzoyDR9WJpQBZICtg3Q?both#Parathread-Protocol)。
 
 ## 平行线程经济学
 
-There are two sources of compensation for collators: 1) Assuming a parathread has its own local token system, it pays the collators from the transaction fees in its local token. If the parathread does not implement a local token, or its local token has no value (e.g. it is used only for governance), then it can use DOTs to incentivize collators. 2) Parathread protocol subsidy. A parathread can mint new tokens in order to provide additional incentives for the collator. Probably, the amount of local tokens to mint for the parathread would be a function of time, the more time that passes between parathread blocks that are included in the relay chain, the more tokens the parathread is willing to subsidize in order to be considered for inclusion. The exact implementation of this minting process could be through local parathread inflation or via a stockpile of funds like a treasury.
+收集人有两种报酬： 1）假设平行线程有自己的代币系统，它可用自己的代币作交易费用给收集人。如果平行线程没有代币或代币本身没有价值（例如：仅利用治理），则可使用DOT 去激励收集人。 2）平行线程协议补偿。平行线程可以创建新代币，以为收集人提供额外的激励。平行线程生产的代币数量将是时间的函数，中继链中包含的平行线程区块之间传递的。 实施生产币的过程可能是通过本地的平行线程通货膨胀或者是通过库存资金（如库房）。
 
-Collators may be paid in local parathread currency. However, the relay chain transacts with the Polkadot universal currency (DOT) only. Collators must then submit block candidates with an associated bid in DOT. This means that if the parathread offers a local currency, the collator will need to understand the exchange rate between this currency and DOT in order to place a proper DOT bid on the relay chain and ensure that they make a profit.
+收集人可以使用本地平行线程的币支付。但是中继链仅接收 Polkadot （DOT）进行交易。收集人必须提交所有出价的候选区块以 DOT 表示，这意味着如果平行线程提供本地币，收集人将需要了解此币与 DOT 之间的汇率，以便在中继链上放置适当的 DOT 出价并确保它们获利。
 
-## Parachain Slot Swaps
+## 平行链插槽交换
 
-It will be possible for a parachain that holds a parachain slot to swap this slot with a parathread so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread. Similarly, this provides a graceful off-ramp for parachains that have reached the end of their lease and do not have sufficient usage to justify renewal; they can remain registered on the relay chain but only produce new blocks when they need to. Parathreads help ease the sharp stop of the parachain slot term by allowing parachains that are still doing something useful to produce blocks, even if it is no longer economically viable to rent a parachain slot.
+拥有平行链插槽的平行链可能会用平行线程交换该插槽，以使平行线程"升级"为完整的平行链，并将平行链成为平行线程。同样这为租约期末且没有足够使用量来证明续约的平行链提供了一个良好的脱链机制。它们可以在中继链上保持注册状态，但仅在需要时才产生新区块。即使租用平行链插槽在经济上不再可行，平行线程仅在有需要的时侯来生产区块，从而有助于脱链后的使用问题。
