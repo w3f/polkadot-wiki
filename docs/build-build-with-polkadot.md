@@ -8,7 +8,7 @@ _This article is the up-to-date version of the blog post: [Everything you Need t
 Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and
-allowing all connected chains to **interoperate** by using [ICMP](learn-interchain). With the advent of
+allowing all connected chains to **interoperate** by using [XCMP](learn-interchain). With the advent of
 [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped
 significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days. 
 

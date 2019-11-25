@@ -14,7 +14,7 @@ According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu, 
 
 Parachains and parathreads are very similar from a development perspective. One can imagine that a chain developed with Substrate can at different points in its lifetime assume one of three states: 1) independent chain with secured bridge, 2) parachain, or 3) parathread. It can switch between these last two states with relatively minimal effort on behalf of developers since the difference is more of an economic distinction than a technological one.
 
-Parathreads have the exact same benefits for connecting to Polkadot that a full parachain has. Namely, it is able to send messages to other para{chain,threads} through ICMP and it is secured under the full economic security of Polkadot's validator set.
+Parathreads have the exact same benefits for connecting to Polkadot that a full parachain has. Namely, it is able to send messages to other para{chain,threads} through XCMP and it is secured under the full economic security of Polkadot's validator set.
 
 The difference between parachains and parathreads is economic. Parachains must be registered through a normal means of Polkadot, i.e. governance proposal or parachain slot auction. Parathreads have a fixed fee for registration that would realistically be much lower than the cost of acquiring a parachain slot. Similarly to how DOTs are locked for the duration of parachain slots and then returned to the winner of the auction, the deposit for a parathread will be returned to the parathread after the conclusion of its term.
 
