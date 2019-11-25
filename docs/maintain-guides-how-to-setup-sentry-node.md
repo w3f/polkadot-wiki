@@ -6,7 +6,7 @@ sidebar_label: Setup a Sentry Node
 
 This guide assumes you have already set-up a validator and would like to make it more resillient and protect against sybil attack or DDoS. It has same configuration of the [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator).
 
-In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate from the Internet and reduce the chance of your validator being hacked.
+In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate it from the Internet and reduce the chance of your validator being hacked.
 
 ## VPN Installation & Configuration
 
