@@ -147,7 +147,7 @@ After you have started the `wg0` interface on your public node and validator, do
 
 `--reserved-only` - Only allows the connection from reserved nodes you defined
 
-Since we want to ensure that the sentry node would never reject a connection from our validator and this could happen if all the peer slots were full, `--reserved-nodes` will be required on the sentry to prevent that happen.
+Since we want to ensure that the sentry node would never reject a connection from our validator and this could happen if all the peer slots were full, `--reserved-nodes` will be required on the sentry to prevent that happening.
 
 You need to execute the following command to start your validator and then copy the node's identity first. Then stop it.
 
