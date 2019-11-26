@@ -22,3 +22,8 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 - [Validator Home](maintain-validator) - High level overview of validator and related links.
 - [Validation Guide (Alexander)](maintain-guides-how-to-validate-alexander) - Walkthrough on how to validate on the PoC-4 Alexander testnet.
 - [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
+
+## Governance
+
+- [How to join the Council](maintain-guides-how-to-join-council) - Step by step guide for running for the Council.
+- [How to vote for a Councillor](maintain-guides-how-to-vote-councillor) - Step by step guide for voting for your favorite councillors.
