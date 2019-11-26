@@ -1,7 +1,7 @@
 ---
 id: learn-interchain
-title: Interchain Message Passing (ICMP)
-sidebar_label: Interchain Message Passing (ICMP)
+title: Interchain Message Passing (XCMP)
+sidebar_label: Interchain Message Passing (XCMP)
 ---
 
 Interchain transactions are resolved using a simple queuing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
@@ -39,4 +39,4 @@ The collator now hands this block to the validator, which itself will verify tha
 
 ## Resources
 
-- [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description of internchain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description of internchain communication on the Web3 Foundation research wiki.
