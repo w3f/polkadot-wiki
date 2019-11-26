@@ -14,7 +14,7 @@ sidebar_label: 平行线程
 
 平行链和平行线程在开发方面很相似。可以想象使用 Substrate 开发的链其生命周期不同时间上采取以下三种状态之一：1) 带有安全转接桥的独立链 2) 平行链或 3) 平行线程因为更多差别是在经济上的区别而不是技术上，所以它可以帮助开发者用最小工夫在这两个状态之间切换。
 
-平行线程有着跟平行链连接 Polkadot 一样的好处。换句话说通过 ICMP 并受 Polkadot 验证人全面的经济安全保护发送信息到其它平行{平, 线程}。
+Parathreads have the exact same benefits for connecting to Polkadot that a full parachain has. Namely, it is able to send messages to other para{chain,threads} through XCMP and it is secured under the full economic security of Polkadot's validator set.
 
 平行链与平行线程在于经济。平行链必须通过 Polkadot 正常过程注册。例如治理进行或平行链插槽拍卖。平行线程具有固定的注册费用，实际上比获取平行链插槽的费用低。 跟平行链插槽锁定 DOT 的期间并随后将返回还给拍卖的赢家的方式类似，平行线程在使用过后，将押金返还给给使用方。
 
