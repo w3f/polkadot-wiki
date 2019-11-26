@@ -89,7 +89,7 @@ Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。
 
 ## 验证人 和 提名人
 
-大多数希望抵押他們的 DOT  并为网络提供经济安全的人中，大多数都将是提名人。验证人负责大部分繁重的工作: 他们在 BABE 中产生新的候选区块，投票并在 GRANDPA 达成共识，验证平行链的状态转变函数。还可能验证数据可用性和 ICMP 方面的一些责任。 另一方面提名人一旦绑定他们的 DOTS 进行抵押，就不必采取任何动作。提名人就类似于"设置并忘记它"。 验证人则为网络提供服务负责关键操作。 出于这原因， 验证人对抵押机制的奖励一些特权，并能够在奖励分配给提名人之前取下佣金 。
+Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the STF of parachains, and possibly some other responsibilities regarding data availability and XCMP. Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
 
 ![staking](assets/NPoS/article-2.png)
 
