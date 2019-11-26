@@ -22,3 +22,8 @@ sidebar_label: 网络维护者
 - [验证人主页](maintain-validator)-验证人和相关链接。
 - [验证人指南 (Alexander)](maintain-guides-how-to-validate-alexander)-逐步介绍如何在 PoC-4 Alexander 测试网上运行节点。
 - [验证人指南 (Kusama)](maintain-guides-how-to-validate-kusama)-逐步介绍如何在 Kusama 金丝雀网络上运行节点。
+
+## Governance
+
+- [How to join the Council](maintain-guides-how-to-join-council) - Step by step guide for running for the Council.
+- [How to vote for a Councillor](maintain-guides-how-to-vote-councillor) - Step by step guide for voting for your favorite councillors.
