@@ -8,7 +8,7 @@ sidebar_label: Parachains
 
 ## What is a parachain?
 
-A parachain is an application-specific data structure that is globally coherent and validatable by the validators of the Polkadot relay chain. Most commonly a parachain will take the form of a blockchain, but there is no specific need for them to be actual blockchains. They take their name from the concept of parallelized chains that run parallel to the relay chain. Due to their parallel nature, they are able to parallelize transaction processing and achieve scalability of the Polkadot system. They [share in the security](learn-security) of the entire Polkadot network and can communicate with other parachains through [ICMP](learn-interchain).
+A parachain is an application-specific data structure that is globally coherent and validatable by the validators of the Polkadot relay chain. Most commonly a parachain will take the form of a blockchain, but there is no specific need for them to be actual blockchains. They take their name from the concept of parallelized chains that run parallel to the relay chain. Due to their parallel nature, they are able to parallelize transaction processing and achieve scalability of the Polkadot system. They [share in the security](learn-security) of the entire Polkadot network and can communicate with other parachains through [XCMP](learn-interchain).
 
 Parachains are maintained by a network maintainer known as a [collator](maintain-collator). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the relay chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They are not required to be staked on the relay chain or own DOT tokens unless stipulated to do so by the parachain implementation.
 
@@ -28,7 +28,7 @@ Parachains are not required to have their own token. If they do, is up to the pa
 
 Some examples of parachains:
 
-- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the ICMP protocol.
+- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the XCMP protocol.
 - **High Frequency Chains** - These are chains which can compute many transactions in a short amount of time by taking certain trade-offs or making optimizations.
 - **Privacy Chains** - These are chains which do not leak any information to the public through use of novel cryptography.
 - **Smart Contract Chains** - These are chains which can have additional logic implemented on them through the deployment of code known as _smart contracts_.
