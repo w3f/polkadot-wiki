@@ -13,11 +13,11 @@ sidebar_label: 平行链开发套件 (PDKs)
 平行链拥有两个关键的附加功能，是开发者创建独立链的不二选择：
 
 - *共享安全性* - 去除了自举链的验证人集的必要性。
-- *跨链通信* - 使得平行链之间通过ICMP协议交互操作。
+- _Interchain communication_ - allows parachains to interoperate with each other through the XCMP protocol.
 
 平行链通过为其插槽绑定 [DOT](learn-DOT) 来[出租 Polkadot 网络的安全性](learn-security)，这意味着项目在构建社区和说服验证人参与网络安全性中的社会成本*将有所降低*。预计 Polkadot 的安全性会十分强大，届时想从一安全性中获益的去中心化应用程序将会希望成为平行链。有关通过蜡烛拍卖出租平行链插槽的更多信息，请[点击此处](learn-auction)。
 
-所有去中心化的应用程序或链，若想要向其它已连接到Polkadot的平行链去信任地传递信息，都会希望成为平行链。主权链之间的互操作性需借助约束和复杂的协议才可广泛实现。在 Polkadot 中，一旦将应用程序构建为平行链，便会立即获得这一特性。[ ICMP 协议](learn-interchain)将传递平行链之间的信息，实现其互操作性。此外，连接其它链的桥接器（例如比特币或以太坊的桥接器）纷纷推出，平行链也可以与它们进行交互。
+Any decentralized application or chain that wants to enable trustless messaging to other parachains already connected to Polkadot would want to become a parachain. Interoperability between sovereign chains involves certain constraints and complex protocols to enable across a wide breadth of chains. With Polkadot, you will get this feature out of the box if your build your application as a parachain. The [XCMP protocol](learn-interchain) will allow any parachains to interoperate by passing messages between them. Furthermore, as bridges to other chains are launched (such as those to Bitcoin or Ethereum) the parachains will be able to operate with these as well.
 
 ## 什么是PDK？
 
@@ -28,7 +28,7 @@ sidebar_label: 平行链开发套件 (PDKs)
 
 状态转换函数(STF)是应用程序从某状态转换到另一状态的抽象方法。Polkadot对此STF的唯一限制要求是其必须易于验证——也就是通常我们所说的_见证_或_证明_。STF必须满足此要求，因为中继链验证器需要检查它从校验人节点接收的每个状态是否正确，但不必切实运行整个计算过程。这些证明可能包括有效性证明区块或zk-SNARK（验证所需的计算资源低于生成时的需求量）。STF证明生成的验证不对称是Polkadot能够在确保高安全性的同时进行扩展的重要原因之一。
 
-校验人节点在Polkadot协议中扮演网络维护者，负责维持平行链状态和状态转换函数迭代返回的新状态的**有效性**。它们必须始终在线，以便跟踪状态和ICMP与其它平行链之间传递的信息。校验人节点将传递简洁证明至中继链验证人，并跟踪来自中继链的最新区块。同时，校验人节点本质上还是Polkadot中继链的轻客户端。有关校验人节点的更多信息，请参见[此处](maintain-collator)。
+A collator node is one of the types of network maintainers in the Polkadot protocol. They are responsible for **keeping availability** of the state of the parachain and the new states returned from iteration of the state transition function. They must remain online in order to keep track of the state and also of the XCMP messages that it will route between itself and other parachains. Collator nodes are responsible for passing the succinct proofs to the relay chain validators, and tracking the latest blocks from the relay chain. In essence, a collator node also acts as a light client for the Polkadot relay chain. For more on collator nodes see [here](maintain-collator).
 
 ## 目前存在哪些 PDK？
 

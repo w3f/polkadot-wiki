@@ -17,6 +17,7 @@ Validators perform two functions. First, verifying that the information containe
 - [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the validator payout mechanism works.
 - [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
 - [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.
+- [How to Set up a Sentry Node](maintain-guides-how-to-setup-sentry-node) - Guide for setting up a sentry node for your validator.
 
 ## Other References
 

@@ -193,6 +193,10 @@
         "title": "Be a Nominator (Kusama)",
         "sidebar_label": "Be a Nominator (Kusama)"
       },
+      "maintain-guides-how-to-setup-sentry-node": {
+        "title": "Setup a Sentry Node - Public Node",
+        "sidebar_label": "Setup a Sentry Node"
+      },
       "maintain-guides-how-to-systemd": {
         "title": "Using systemd for the Validator Node",
         "sidebar_label": "Using systemd for the Validator Node"

@@ -8,7 +8,7 @@ sidebar_label: Parachains
 
 ## 什么是平行链?
 
-平行链是特定于应用程序的数据结构，它在上下上是一致的，并且可以由Polkadot中继链的验证人进行验证。最常见的是，平行链将采用区块链的形式，但并没有由于它们与并行链并行运行的并行链的概念命名。由于它们的并行性质，它们能够并行化事务处理并实现Polkadot系统的可伸缩性。它们[共享整个Polkadot网络的安全性](learn-security)，并且可以通过[ ICMP ](learn-interchain)与其它平行链进行通信。
+A parachain is an application-specific data structure that is globally coherent and validatable by the validators of the Polkadot relay chain. Most commonly a parachain will take the form of a blockchain, but there is no specific need for them to be actual blockchains. They take their name from the concept of parallelized chains that run parallel to the relay chain. Due to their parallel nature, they are able to parallelize transaction processing and achieve scalability of the Polkadot system. They [share in the security](learn-security) of the entire Polkadot network and can communicate with other parachains through [XCMP](learn-interchain).
 
 平行链由称为[收集人](maintain-collator)的网络维护者维护。 收集人节点的作用是运行平行链的全节点，保留平行链的所有必要信息，并生成新的候选区块，以传递给中继链验证器人进行验证并包含在 Polkadot 的共享状态里。 收集人节点的激励是对平行链的实施细节（请参见[平行链经济](#parachain-economies)）。 除非平行链实施规定这样做，否则它们无需将 DOT 押在中继链或持有代币。
 
@@ -28,7 +28,7 @@ Polkadot runtime 环境（PRE）允许将在平行链上执行的状态转换指
 
 平行链例子
 
-- **加密联盟链** - 这些可能是私人链，不会向公众泄露任何信息，但由于 ICMP 协议的性质，它们仍然可以以可信任的形式与它们进行交互。
+- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the XCMP protocol.
 - **高频链** - 这些链可以通过进行某些权衡或进行优化，在短时间内大量计算。
 - **隐私链** - 这些链通过使用新颖的加密技术不会向公众泄露任何信息。
 - **智能合约链** - 这些链可以通过部署称为 _智能合约_的代码来实现额外的逻辑。

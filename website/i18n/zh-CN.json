@@ -193,6 +193,10 @@
         "title": "成为提名人 (Kusama)",
         "sidebar_label": "成为提名人 (Kusama)"
       },
+      "maintain-guides-how-to-setup-sentry-node": {
+        "title": "Setup a Sentry Node - Public Node",
+        "sidebar_label": "Setup a Sentry Node"
+      },
       "maintain-guides-how-to-systemd": {
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"

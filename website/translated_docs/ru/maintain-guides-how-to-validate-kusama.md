@@ -14,6 +14,10 @@ Since security is so important to running a successful validator, you should tak
 
 If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
 
+### How Many KSM Do I Need?
+
+Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
+
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node instead.
 
 ## Initial Set-up

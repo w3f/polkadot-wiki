@@ -6,7 +6,7 @@ sidebar_label: Polkadot 開發者入门指南
 
 _本文是Medium博客上: [Everything you Need to Know to Prepare for Polkadot的最新版本](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)_
 
-Polkadot是个网络协议，缩短了区块链开发者的开发时间。以前发布和维护着一个新的区块链需要用数年时间，但利用Polkadot只需要数星期甚至几天就可以了。
+Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-interchain). With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
 本指南将带领你了解现在如何开始在Polkadot上建立你的愿景，也会讲解平行链与智能合约的分别(和为什么其中一样会更加适合你的应用程序)
 
