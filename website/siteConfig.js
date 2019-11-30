@@ -1,3 +1,32 @@
+const {Plugin: Embed} = require('remarkable-embed');
+const networkData  = require('./networkData.json');
+
+// Our custom remarkable plugin factory.
+const createVariableInjectionPlugin = variables => {
+  // `let` binding used to initialize the `Embed` plugin only once for efficiency.
+  // See `if` statement below.
+  let initializedPlugin;
+
+  const embed = new Embed();
+  embed.register({
+    // Call the render method to process the corresponding variable with
+    // the passed Remarkable instance.
+    // -> the Markdown markup in the variable will be converted to HTML.
+    inject: key => initializedPlugin.render(variables[key])
+  });
+
+  return (md, options) => {
+    if (!initializedPlugin) {
+      initializedPlugin = {
+        render: md.render.bind(md),
+        hook: embed.hook(md, options)
+      };
+    }
+
+    return initializedPlugin.hook;
+  };
+};
+
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
   tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
@@ -93,6 +122,10 @@ const siteConfig = {
   },
 
   repoUrl: 'https://github.com/paritytech/polkadot',
+
+  markdownPlugins: [
+      createVariableInjectionPlugin(networkData)
+  ],
 };
 
 module.exports = siteConfig;
