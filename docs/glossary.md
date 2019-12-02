@@ -172,7 +172,7 @@ A potential function call to be voted on in a referendum. Proposals modify the b
 
 ## Protocol
 
-A system of rules that allows two or more entities of a communications system to transmit information. The protocol defines the rules, syntax, semantics, and synchronization of communication and possible recovery methods.
+A system of rules that allows two or more entities of a communications system to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication and possible recovery methods.
 
 ## Referendum
 
