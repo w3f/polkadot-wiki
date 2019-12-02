@@ -232,7 +232,7 @@ A function that describes how the state of a blockchain can be transformed. For 
 
 ## Substrate
 
-A modular framework for building blockchains. Polkadot is build using Substrate. Chains built with Substrate will be easy to connect as parachains.
+A modular framework for building blockchains. Polkadot is built using Substrate. Chains built with Substrate will be easy to connect as parachains.
 
 ## Tabling
 
