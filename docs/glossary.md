@@ -240,7 +240,7 @@ In Polkadot governance, bringing a proposal to a vote via referendum. Note that 
 
 ## Transaction
 
-An extrinsic that is signed. Transactions are gossiped on the network and incur a transaction fee. Transactions are "provably true", unlike inherents. For example, one can prove that Alice wants to send funds to Bob grace of her signature on a transfer-funds message with her private key.
+An extrinsic that is signed. Transactions are gossiped on the network and incur a transaction fee. Transactions are "provably true", unlike inherents. For example, one can prove that Alice wants to send funds to Bob by the fact that she signed a transfer-funds message with her private key.
 
 ## Validator
 
