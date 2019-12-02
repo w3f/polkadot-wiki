@@ -22,7 +22,7 @@ Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, r
 
 ## Bonding
 
-A process by which tokens can be "frozen" in exchange for some other benefit. For example, taking is a form of bonding for which you receive rewards in exchange for securing the network. You can also bond tokens in exchange for a parachain slot.
+A process by which tokens can be "frozen" in exchange for some other benefit. For example, staking is a form of bonding for which you receive rewards in exchange for securing the network. You can also bond tokens in exchange for a parachain slot.
 
 ## Bridge
 
