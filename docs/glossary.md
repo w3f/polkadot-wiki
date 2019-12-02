@@ -244,7 +244,7 @@ An extrinsic that is signed. Transactions are gossiped on the network and incur 
 
 ## Validator
 
-A node that secures the relay chain by staking DOTs, validating proofs from collators on parachains, and voting on consensus along with other validators.
+A node that secures the relay chain by staking DOTs, validating proofs from collators on parachains and voting on consensus along with other validators.
 
 ## Voting
 
