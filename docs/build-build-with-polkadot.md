@@ -19,12 +19,12 @@ that you can get started creating your application in anticipation of the Polkad
 
 ## Where are we now?
 
-- Initial release: **End of 2019**
-- Current PoC release: **PoC-4**
+- Polkadot release: **Around the New Year**
+- Canary release: **Kusama**
 - Current testnet: **Alexander**
-- Substrate: **1.0.0**
-- Cumulus: **Initial release: October 2019**
-- ink!: **Pre-Alpha**
+- Substrate: **1.0.0** (2.0.0 to be tagged soon)
+- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
 **What you need to know**: Polkadot is currently on the v0.6 release with a running testnet named Alexander and Kusama,
 a value-bearing canary network. The Alexander testnet has been live for over 6 months through the entire PoC-3 and
