@@ -12,12 +12,12 @@ Polkadot is a blockchain protocol with two goals: providing **shared security** 
 
 ## 我们处于哪里？
 
-- 自定义费用结构 (例如:支付固定交易费用 或 按字节计算)
-- 自定义代币通涨政策
+- Polkadot release: **Around the New Year**
+- Canary release: **Kusama**
 - 通过状态转变函数分配财政
-- Substrate: **1.0.0**
-- Cumulus: **Initial release: October 2019**
-- ink!: **Pre-Alpha**
+- Substrate: **1.0.0** (2.0.0 to be tagged soon)
+- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
 ** 有什么你需要知道 **: Polkadot 现在最新发布是 v0.6 并且运行着名为 Alexander 的测试网络和 Kusama 具有价值的金丝雀网络。目前最快的实现是 Rust 并使用 Substrate 框架来开发区块链。 Substrate 是一个库，通过从包括网络协议，共识和 Wasm 编译器的基础层进行开发，开发者可以短时间开发出整个区块链。对于 Substrate 的扩展称为 Cumulus，将允许任何 Substrate 开发的链连接到 Polkadot 并成为平行链。 Substrate 已发布1.0.0版，目前已稳定了其 API。
 
