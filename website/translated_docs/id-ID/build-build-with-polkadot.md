@@ -12,12 +12,12 @@ This guide will walk you through the steps you can take today to get started bui
 
 ## Where are we now?
 
-- Initial release: **End of 2019**
-- Current PoC release: **PoC-4**
+- Polkadot release: **Around the New Year**
+- Canary release: **Kusama**
 - Current testnet: **Alexander**
-- Substrate: **1.0.0**
-- Cumulus: **Initial release: October 2019**
-- ink!: **Pre-Alpha**
+- Substrate: **1.0.0** (2.0.0 to be tagged soon)
+- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
 **What you need to know**: Polkadot is currently on the v0.6 release with a running testnet named Alexander and Kusama, a value-bearing canary network. The Alexander testnet has been live for over 6 months through the entire PoC-3 and PoC-4 release cycles. Polkadot is being built with [implementations in various programming languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in Rust and using the Substrate framework for developing blockchains. Substrate is a library that allows developers to more easily develop entire blockchains by building from a base layer including a networking protocol, consensus, and a Wasm interpreter. An in-development extension to Substrate called Cumulus will allow any Substrate built chain to connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, which settled its API for the time being.
 
