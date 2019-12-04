@@ -39,4 +39,4 @@ The collator now hands this block to the validator, which itself will verify tha
 
 ## Resources
 
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description of internchain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP.html) - Full technical description of interchain communication on the Web3 Foundation research wiki.
