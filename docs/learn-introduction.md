@@ -32,7 +32,7 @@ a general environment for multiple state machines.
 - [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
 - [DOT](learn-DOT) - Information on DOTs, the native token of the Polkadot protocol.
 - [Governance](learn-governance) - What blockchain governance is, and how it works in Polkadot.
-- [Interchain Communication](learn-interchain) - Information regarding how interchain messaging works.
+- [Cross-chain Communication](learn-crosschain) - Information regarding how cross-chain messaging works.
 - [Parachains](learn-parachains) - Overview of what a parachain is, and how they work.
 - [Parachain Auctions](learn-auction) - Describes the mechanism for the auctioning of parachain slots.
 - [Parathreads](learn-parathreads) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
