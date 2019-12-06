@@ -8,9 +8,9 @@ _This article is the up-to-date version of the blog post: [Everything you Need t
 Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and
-allowing all connected chains to **interoperate** by using [XCMP](learn-interchain). With the advent of
+allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain). With the advent of
 [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped
-significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days. 
+significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision with Polkadot. It
 will explain the difference between a parachain and a smart contract (and why one may be better suited for your
@@ -39,7 +39,7 @@ being.
 Substrate chains can include smart contract functionality by using the provided [contracts runtime module from the SRML](https://github.com/paritytech/substrate/tree/master/srml/contracts).
 This module allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users.
 To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built
-in Rust that is intended for writing smart contracts. 
+in Rust that is intended for writing smart contracts.
 
 Polkadot is planned to go live with an initial release at the end of 2019, depending on security audits and launch
 provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been
@@ -54,7 +54,7 @@ own parachain, or as a parathread. There are trade-offs when working with each o
 understand them.
 
 Parachains are individual chains containing their own runtime logic that benefit from the shared security and the
-interchain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and
+cross-chain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and
 customization but will require more effort to create.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application.
@@ -62,7 +62,7 @@ The main difference between the two is economic, since parathreads will be much 
 The lower costs of parathreads are due to the fact that parathreads will only produce a block when they need to, unlike
 parachains which have secured a slot to produce a block at every block of the relay chain. When building a parathread,
 you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback
-of the cost. 
+of the cost.
 
 On the Polkadot mainnet, there can be parachains that act as smart contract platforms. Smart contracts are
 executable programs that exist on only a single chain and are limited in complexity. Because they exist on a single
@@ -121,7 +121,7 @@ Now that you have determined that building a parachain or parathread is the righ
 step is to decide which framework to use. Frameworks for building a parachain or parathread are known as parachain
 development kits (PDKs). Currently, the only PDK available is Substrate and Cumulus from Parity Technologies.
 
-In the future, there will be many different PDKs available in different programming languages, just like there are 
+In the future, there will be many different PDKs available in different programming languages, just like there are
 multiple [implementations](learn-implementations.md) of the Polkadot runtime environment.
 
 > **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3 Foundation is giving
@@ -146,7 +146,7 @@ After creating your chain logic with Substrate, you will be able to compile it d
 code blob will contain the entire state transition function of your chain, and is what you will need to deploy your
 project to Polkadot as either a parachain or parathread.
 
-Validators on Polkadot will use the submitted Wasm code to validate the state transitions of your chain or thread, 
+Validators on Polkadot will use the submitted Wasm code to validate the state transitions of your chain or thread,
 but doing this requires some additional infrastructure. A validator needs some way to stay up to date with the most
 recent state transitions, since Polkadot nodes will not be required to also be nodes of your chain.
 
@@ -165,7 +165,7 @@ with Polkadot.
 It handles the network compatibility overhead that any parachain would need to implement to be connected to Polkadot.
 This includes:
 
-- Interchain message passing.
+- Cross-chain message passing.
 - Out-of-the-box Collator node setup.
 - An embedded light client of the relay chain.
 - Polkadot block authorship compatibility.

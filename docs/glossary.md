@@ -148,7 +148,7 @@ A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot.
 
 ## Polkadot
 
-A heterogeneous, multi-chain network allowing various blockchains of different characteristics to perform arbitrary, interchain communication under shared security.
+A heterogeneous, multi-chain network allowing various blockchains of different characteristics to perform arbitrary, cross-chain communication under shared security.
 
 ## Polkadot Runtime Environment
 

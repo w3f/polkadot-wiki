@@ -1,17 +1,17 @@
 ---
-id: learn-interchain
-title: Interchain Message Passing (XCMP)
-sidebar_label: Interchain Message Passing (XCMP)
+id: learn-crosschain
+title: Cross-chain Message Passing (XCMP)
+sidebar_label: Cross-chain Message Passing (XCMP)
 ---
 
-Interchain transactions are resolved using a simple queuing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
+Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
 
 The input and output queue are sometimes referred to in the codebase as "ingress" and "egress" messages.
 
 ## Overview
 
-- Interchain messages will *not* go on to the relay chain.
-- Interchain messages will be constrained to a maximum size in bytes.
+- Cross-chain messages will *not* go on to the relay chain.
+- Cross-chain messages will be constrained to a maximum size in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching parachain would be aware of this block.
 - Collator nodes are responsible for routing messages between chains.
 - Collators produce a list of "egress" messages and will receive the "ingress" messages from other parachains.
@@ -23,9 +23,9 @@ The input and output queue are sometimes referred to in the codebase as "ingress
 
 A smart contract that exists on parachain A will route a message to parachain B in which another smart contract is called that makes a transfer of some assets within that chain.
 
-Charlie executes the smart contract on parachain A which initiates a new interchain message for the destination of a smart contract on parachain B.
+Charlie executes the smart contract on parachain A which initiates a new cross-chain message for the destination of a smart contract on parachain B.
 
-The collator node of parachain A will place this new interchain message into its outbound messages queue, along with a `destination` and a `timestamp`.
+The collator node of parachain A will place this new cross-chain message into its outbound messages queue, along with a `destination` and a `timestamp`.
 
 The collator node of parachain B routinely pings all other collator nodes asking for new messages (filtering by the `destination` field). When the collator of parachain B makes its next ping, it will see this new message on parachain A and add it into its own inbound queue for processing into the next block.
 
@@ -39,4 +39,4 @@ The collator now hands this block to the validator, which itself will verify tha
 
 ## Resources
 
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP.html) - Full technical description of interchain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical description of cross-chain communication on the Web3 Foundation research wiki.
