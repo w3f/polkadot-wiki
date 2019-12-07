@@ -13,11 +13,11 @@ Before diving into what a PDK is and how it would be used, let's revisit _why_ a
 A parachain has two major value adds that make it a desirable choice for a developer over creating a standalone chain:
 
 - _Shared security_ - removes the necessity of bootstrapping a chain's own validator set.
-- _Interchain communication_ - allows parachains to interoperate with each other through the XCMP protocol.
+- _Cross-chain communication_ - allows parachains to interoperate with each other through the XCMP protocol.
 
 Parachains can [lease the security](learn-security) of the Polkadot network by bonding [DOTs](learn-DOT) for a parachain slot. This means that the social costs of building a community around your project and convincing validators to participate in your network security are reduced. It is anticipated that Polkadot will have strong security, and decentralized application projects wishing to benefit from this security would want to become a parachain. For more information on the mechanic of leasing a parachain slot through a candle auction see [here](learn-auction).
 
-Any decentralized application or chain that wants to enable trustless messaging to other parachains already connected to Polkadot would want to become a parachain. Interoperability between sovereign chains involves certain constraints and complex protocols to enable across a wide breadth of chains. With Polkadot, you will get this feature out of the box if your build your application as a parachain. The [XCMP protocol](learn-interchain) will allow any parachains to interoperate by passing messages between them. Furthermore, as bridges to other chains are launched (such as those to Bitcoin or Ethereum) the parachains will be able to operate with these as well.
+Any decentralized application or chain that wants to enable trustless messaging to other parachains already connected to Polkadot would want to become a parachain. Interoperability between sovereign chains involves certain constraints and complex protocols to enable across a wide breadth of chains. With Polkadot, you will get this feature out of the box if your build your application as a parachain. The [XCMP protocol](learn-crosschain) will allow any parachains to interoperate by passing messages between them. Furthermore, as bridges to other chains are launched (such as those to Bitcoin or Ethereum) the parachains will be able to operate with these as well.
 
 ## What is a PDK?
 
