@@ -114,8 +114,8 @@
         "sidebar_label": "其它程序语言实现"
       },
       "learn-interchain": {
-        "title": "跨链消息传递 (ICMP)",
-        "sidebar_label": "跨链消息传递 (ICMP)"
+        "title": "Interchain Message Passing (XCMP)",
+        "sidebar_label": "Interchain Message Passing (XCMP)"
       },
       "learn-introduction": {
         "title": "Polkadot",
@@ -204,6 +204,10 @@
       "maintain-guides-how-to-upgrade": {
         "title": "如何升级验证人节点",
         "sidebar_label": "如何升级验证人节点"
+      },
+      "maintain-guides-how-to-use-polkadot-secure-validator": {
+        "title": "How to use Polkadot Secure Validator Setup",
+        "sidebar_label": "How to use Polkadot Secure Validator Setup"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
