@@ -18,6 +18,7 @@ sidebar_label: 验证人
 - [如何将验证人程序作为 systemd 进程运行](maintain-guides-how-to-systemd)-有关将验证人程序作为` systemd `进程运行的指南 ，使它在背后运行，并当重新启动时自动启动。
 - [如何升级您的验证人](maintain-guides-how-to-upgrade) - 当要转换到另一台计算机或运行最新版本的客户端时 - 升级验证人指南。
 - [如何设置哨兵节点](maintain-guides-how-to-setup-sentry-node) - 为验证人设置哨兵节点
+- [How to Use Secure Validator Setup](maintain-guides-how-to-use-polkadot-secure-validator) - Guide on how to use Polkadot / Kusama secure validator setup.
 
 ## 其他参考
 
