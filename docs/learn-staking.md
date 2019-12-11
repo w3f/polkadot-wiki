@@ -145,7 +145,7 @@ If you want to know more details about slashing, please look at our [research pa
 
 Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.  Polkadot will also produce blocks at approximately six second intervals.
 
-Rewards are recorded per session --- approximately one hour on Kusama and four hours on Polkadot --- and paid per era. It takes approximately six hours to finish one eram twenty-four hours on Polkadot.  Thus, rewards will be distributed to the validators and nominators four times per day on Kusama and once per day on Polkadot.
+Rewards are recorded per session --- approximately one hour on Kusama and four hours on Polkadot --- and paid per era. It takes approximately six hours to finish one era, twenty-four hours on Polkadot.  Thus, rewards will be distributed to the validators and nominators four times per day on Kusama and once per day on Polkadot.
 
 ### Example
 
