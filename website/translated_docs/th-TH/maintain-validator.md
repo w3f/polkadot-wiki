@@ -18,6 +18,7 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 - [วิธีการรันโหนดตรวจสอบโดยใช้ systemd](maintain-guides-how-to-systemd) - คู่มือแนะนำการรันโหนดโดยใช้`systemd` เพื่อที่จะให้โหนดทำงานในพื้นหลังและรันอัตโนมัติเมื่อปิดเปิดเครื่องใหม่
 - [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.
 - [How to Set up a Sentry Node](maintain-guides-how-to-setup-sentry-node) - Guide for setting up a sentry node for your validator.
+- [How to Use Secure Validator Setup](maintain-guides-how-to-use-polkadot-secure-validator) - Guide on how to use Polkadot / Kusama secure validator setup.
 
 ## เอกสารอ้างอิง
 
