@@ -4,7 +4,7 @@ title: How to use Polkadot Secure Validator Setup
 sidebar_label: How to use Polkadot Secure Validator Setup
 ---
 
-This guide will walk you through how to use [polkadot seucre validator](https://github.com/w3f/polkadot-secure-validator) to deploy your validator in a secure way of running a Kusama's validator. It uses Terraform for defining and managing your infrastructure, while Ansible is a automation tool that is used for setting up the VPN, Firewall, Validator, etc.. It supports multiple cloud providers such as AWS, Microsoft Azure, Google GCP and Packet. You can create an [issue](https://github.com/w3f/polkadot-secure-validator/issues) if you do not find a cloud provider that you want to use. We will use GCP to show as an example.
+This guide will walk you through how to use [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator) to deploy your validator in a secure way and run a Kusama validator. It uses Terraform for defining and managing your infrastructure, while Ansible is a automation tool that is used for setting up the VPN, Firewall, Validator, etc.. It supports multiple cloud providers such as AWS, Microsoft Azure, Google GCP and Packet. You can create an [issue](https://github.com/w3f/polkadot-secure-validator/issues) if you do not find a cloud provider that you want to use. We will use GCP to show as an example.
 
 
 ## Prerequisites
@@ -13,12 +13,13 @@ Since we will use ssh to access validator and public nodes, execute the command 
 ```
 ssh-keygen
 ```
-- filename should be different (id_rsa_validator, id_rsa_public_node)
-- not to use password for the ssh keys
+- You may want to change the filename to something different than the default (ex. `id_rsa_validator` or `id_rsa_public_node`).
+- For the sake of the tutorial we will not set a password for the SSH key, although usually it's recommended.
 
 Also you need to install the following applications:
 
-- NodeJS (recommend to use [nvm](https://github.com/nvm-sh/nvm))
+- NodeJS (recommend to use [nvm](https://github.com/nvm-sh/nvm)).
+
 ```
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
@@ -64,7 +65,7 @@ Under `validators` and `publicNodes`, specify which cloud provider you are going
 
 `polkadotBinary=>url` - Polkadot binary under the [w3f repo](https://github.com/w3f/polkadot/releases).
 
-`nodeExporter` - If defined ansible will install and configure node_exporter https://github.com/prometheus/node_exporter which will expose hardware-level metrics of your node in a format compatible with Prometheus.
+`nodeExporter` - If defined Ansible will install and configure [node_exporter](https://github.com/prometheus/node_exporter) which will expose hardware-level metrics of your node in a format compatible with Prometheus.
 
 `machineType:` - Machine's hardware spec, check this via https://cloud.google.com/compute/docs/machine-types.
 
@@ -74,8 +75,7 @@ Under `validators` and `publicNodes`, specify which cloud provider you are going
 
 `location` & `zone` - Machine location, for GCP check this via https://cloud.google.com/compute/docs/regions-zones/.
 
-`telemetryUrl` - Send your nodes information to the specific telemetry server. You could send all your nodes data (e.g. IP address) to the public one(wss://telemetry.polkadot.io/submit/) but it is highly recommended that setting up your own telemetry server to protect your validator’s data being exposed to the public. If you want to do that, check [this](https://github.com/paritytech/substrate-telemetry) out.
-
+`telemetryUrl` - Send your nodes information to the specific telemetry server. You could send all your nodes data (e.g. IP address) to the public endpoint (that is, wss://telemetry.polkadot.io/submit/) but it is highly recommended that setting up your own telemetry server to protect your validator’s data from being exposed to the public. If you want to do that, check [substrate telemetry source](https://github.com/paritytech/substrate-telemetry) out.
 
 *If you decided to send your node’s information to the public telemetry, the name for your validator and public node that shows on the telemetry would look something like `PROJECT_NAME-sv-public-0` / `PROJECT_NAME-sv-validator-0`.
 
@@ -83,14 +83,15 @@ Under `validators` and `publicNodes`, specify which cloud provider you are going
 
 `sshUser` - An user to manage your machine.
 
-For different cloud providers, you need to set the corresnpnding credentials as envrionement variable, for example, you only need to set `GOOGLE_APPLICATION_CREDENTIALS` (path to json file with credentials of the service account you want to use; this service account needs to have write access to compute and network resources if you use GCP. For others, you can check that by referring to the [repo](https://github.com/w3f/polkadot-secure-validator#prerequisites).
+For different cloud providers, you need to set the corresponding credentials as environment variable, for example, you only need to set `GOOGLE_APPLICATION_CREDENTIALS`. This is the path to the JSON file containing the credentials of the service account you wish to use; this service account needs to have write access to compute and network resources if you use GCP. For others, you can check that by referring to the [README](https://github.com/w3f/polkadot-secure-validator#prerequisites).
 
-Besides that, you need two additional environment variables to allow ansible to connect to the created machines (You have generated in the beginning):
+Besides that, you need two additional environment variables to allow Ansible to connect to the created machines (The ones you generated in the beginning):
 
 ```
-SSH_ID_RSA_PUBLIC - path to private SSH key you want to use for the public nodes.
+SSH_ID_RSA_PUBLIC - Path to private SSH key you want to use for the public nodes.
 
-SSH_ID_RSA_VALIDATOR - path to private SSH key you want to use for the validators.
+SSH_ID_RSA_VALIDATOR - Path to private SSH key you want to use for the validators.
+
 ```
 
 After everything is configured properly, you can start to run the deployment with: 
@@ -148,9 +149,9 @@ ok: [34.80.70.172] => {
 }
 ```
 
-The result "0xf126b68841f5…..95f54249" is your session key. Set this to your controller account in the [polkadotJS dashboard](https://polkadot.js.org/apps/#/staking/actions).
+The result "0xf126b68841f5…..95f54249" is your session key. Set this to your controller account in the [polkadot-js Apps](https://polkadot.js.org/apps/#/staking/actions).
 
-After accessing one of the machines through ssh, to keep track of node’s status you can use `journalctl --follow -u polkadot` that shows the latest synced block information.
+After accessing one of the machines through SSH, you can keep track of the node’s status by running `journalctl --follow -u polkadot` which will shows the latest synced block information.
 
 Moreover, every time you changed something in `main.json`, you can simply run `./scripts/deploy.sh` to update it.
 
