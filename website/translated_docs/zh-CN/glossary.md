@@ -6,15 +6,15 @@ sidebar_label: 专业术语
 
 ## Alexander
 
-Polkadot 最新测试网。
+The fourth proof of concept (PoC-4) testnet for Polkadot.
 
 ## 区块
 
-数据集合在一起(例如交易)标明区块链的状态转换。
+A collection of data, such as transactions, that together indicates a state transition of the blockchain.
 
 ## 区块浏览器
 
-允许用户浏览区块链上不同区块的程序
+An application that allows a user to explore the different blocks on a blockchain.
 
 ## BLS
 
@@ -22,19 +22,19 @@ Boneh-Lynn-Shacham(BLS)签名速度慢，验证速度非常慢，需要慢和低
 
 ## 绑定
 
-A process by which tokens can be "frozen" in exchange for attaching a parachain to a relay chain. This process ensures that only chains that are valid and running will be attached to the relay chain, as it would behoove DOT holders to stop bonding their tokens.
+A process by which tokens can be "frozen" in exchange for some other benefit. For example, staking is a form of bonding for which you receive rewards in exchange for securing the network. You can also bond tokens in exchange for a parachain slot.
 
 ## 桥接
 
-节点充当着在 Polkadot 中继链与外部链之间的中介，以这种方式在中继链中看起来外部链是平行链(即满足 Polkadot Runtime 环境要求)。桥接允许像以太坊和比特币等其他与 Polkadot 原生不兼容的区块链之间进行交互。
+A parachain that acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Runtime Environment requirements). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
 
 ## 拜占庭容错
 
-拜占庭容错能力是系统一种属性。也就是说系统不仅可以容忍单个子系统发生故障，但是可能不清楚某个子系统是否发生故障。也就是说系统上的不同观察者可能无法就系统是否发生故障达成共识。确保拜占庭容错能力是开发任何分布式系统的重要部分。
+The property of a system that is tolerant of Byzantine faults; that is, a system where not only may individual subsystems fail, but it may not be clear if a particular subsystem has failed or not. That is, different observers on the system may not agree on whether or not the system has failed. Ensuring Byzantine fault tolerance is an important part of developing any distributed system.
 
 ## 收集人
 
-通过收集平行链交易并为验证人生成状态转换证明来维持平行链的节点。
+A node that maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
 
 ## 共识
 
@@ -46,54 +46,59 @@ DOT 是 Polkadot 的原生代币。 DOTs 具有三个用途: 网络治理(允许
 
 ## 分布式应用
 
-Dapps 是分布式应用程序的通用术语，即作为分布式网络的一部分而不是在特定系统或一组系统上运行的应用程序。
+A generic term for a decentralized application, that is, one that runs as part of a distributed network as opposed to being run on a specific system or set of systems.
 
 ## 周期
 
-Epoch(周期)是 BABE 协议中的持续时间，该协议将分配领导职务给验证人在时隙中生产区块的权限。在 Kusama，持续时间与 [session](#session) 相同。
+An epoch is a time duration in the BABE protocol that is broken into smaller time slots. Each slot has at least one slot leader who has the right to propose a block. In Kusama, it is the same duration as a [session](#session).
 
 ## 纪元
 
 A (whole) number of sessions, which is the period that the validator set (and each validator's active nominator set) is recalculated and where rewards are paid out.
+
 ## Equivocation
 
 Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
 
 ## 交易 (Extrinsic)
 
-Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework. Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
+State changes that come from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms, "[inherents](#inherents)" and "[transactions](#transactions)".
 
 ## 确定性
 
-The property of a block which cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point). In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
+The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot relay chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
 
 ## 确定性工具
 
-A mechanism which determines finality.
+A mechanism that determines finality.
 
 ## 钓鱼人
 
-Nodes which monitor the network for validators or collators which are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
+Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
 
-## GRANDPA 共识算法
+## GRANDPA Consensus Algorithm
 
-GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## 治理
 
-The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
+The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting.
 
 ## 治理议会
 
-An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
+An on-chain entity that consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24). The Council can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
 ## 硬分叉
 
-A permenant diversion of a blockchain that can occur quickly due to a high priority change in a consensus rule. Clients who follow a hard fork always need to upgrade their clients in order to continue following the hard-forked chain. Hard forks are considered permanent divergences of a chain for which non-upgraded clients are following consensus rules incompatible to the ones followed by upgraded clients.
+A permanent diversion of a blockchain that can occur quickly due to a high priority change in a consensus rule. Clients who follow a hard fork always need to upgrade their clients in order to continue following the upgraded chain. Hard forks are considered permanent divergences of a chain for which non-upgraded clients are following consensus rules incompatible to the ones followed by upgraded clients.
 
 ## Hard Spoon
 
 Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of *the same blockchain*.
+
+## Inherent
+
+Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into blocks by the block author. They are not provably true the way that the desire to send funds is, therefore they do not carry a signature. A blockchain's [runtime](#runtime) must have rules for validating inherents. For example, timestamps are inherents. They are validated by being within some margin that each validator deems reasonable.
 
 ## KSM
 
@@ -107,141 +112,149 @@ The "canary network" for Polkadot. It consists of an early-release, unaudited ve
 
 An open-source library for encrypted peer-to-peer communications and other networking functionality. More information at: [https://libp2p.io/](https://libp2p.io/)
 
-## 活跃性
+## Liveness
 
-The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system which eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
+The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system that eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
 
-## 节点浏览器
+## Node Explorer
 
-A tool which gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
+A tool that gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
 
-## 提名权益证明 (NPoS)
+## Nominated Proof of Stake (NPoS)
 
-A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator. Nominated proof-of-stake differs from the more generic concept delegated proof of stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term delegated proof of stake, even if delegates can be slashed.
+A Proof-of-Stake system where nominators back validators with their own stake as a show of faith in the good behavior of the validator. Nominated Proof-of-Stake differs from the more generic concept Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad validator; delegators are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if delegators can be slashed. Polkadot uses the Phragmen method to allocate stake to nominees.
 
-## 提名人
+## Nominator
 
-Nodes which select a set of validators. A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly. This forces nominators to carefully select validators.
+Accounts that select a set of validators to nominate by bonding their tokens. Nominators receive some of the validators' rewards, but are also liable for slashing if their nominated validators misbehave.
 
-## 链上治理
+## On-chain Governance
 
-Governance of a blockchain which is controlled by mechanisms controlled by the blockchain. On-chain governance allows for decisions can be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
+A governance system of a blockchain that is controlled by mechanisms on the blockchain. On-chain governance allows decisions to be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting, adaptive quorum biasing, or identity-based quadratic voting.
 
-## 平行链 / 并行链
+## Parachain
 
-A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
+A blockchain that meets several characteristics that allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
 
-## 平行链注册表
+## Parachain Registry
 
 A relatively simple database-like construct that holds both static and dynamic information on each chain.
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood, which is developing Substrate. It has also released several other projects including Parity Ethereum and Parity Wasm.
+A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret Store.
 
 ## Polkadot
 
-A heterogeneous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
+A heterogeneous, multi-chain network allowing various blockchains of different characteristics to perform arbitrary, cross-chain communication under shared security.
 
-## Polkadot Runtime 环境
+## Polkadot Runtime Environment
 
-The runtime environment which a runtime module can be executed in. Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
+The runtime environment in which a runtime module can be executed. Parachains must support the Polkadot Runtime Environment - external chains that do not will have to use a bridge.
 
-## 权益证明 (PoS)
+## Proof of Stake (PoS)
 
-A method of achieving consensus in which the next block is determined by a node that is chosen by some characteristic (e.g., the amount of tokens that they stake).
+A method of selecting participation in a consensus system, in which participants are chosen based on how many tokens they have at stake (at risk of loss due to misbehavior). Normally, Proof-of-Stake systems limit the number of participants.
 
-## 工作量证明 (PoW)
+## Proof of Validity
 
-A method of achieving consensus in which the next block is determined by the first to solve a difficult puzzle (e.g., in Bitcoin, solving a partial pre-image hash for a block candidate).
+A proof produced by parachain collators. Based on this proof and the parachain registry, a validator can verify that a parachain has properly executed its state transition function. Proofs of Validity go into the relay chain blocks.
 
-## 提案
+## Proof of Work (PoW)
+
+A method of selecting participants in a consensus system, typically the longest chain rule, in which participants try to solve a puzzle like finding a partial pre-image of a hash. Normally, a Proof-of-Work system can have any number of participants.
+
+## Proposal
 
 A potential function call to be voted on in a referendum. Proposals modify the behavior of the Polkadot network, from minor parameter tuning all the way up to replacing the runtime code.
 
-## 协议
+## Protocol
 
-A system of rules that allow two or more entities of a communications system to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication and possible recovery methods.
+A system of rules that allows two or more entities of a communications system to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication and possible recovery methods.
 
-## 公投
+## Referendum
 
-A vote on whether or not a proposal should be accepted by the network. These referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
+A vote on whether or not a proposal should be accepted by the network. Referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
 
-## 中继链
+## Relay chain
 
-A chain which coordinates consensus and communication between parachains (and external chains, via bridges).
+The chain that coordinates consensus and communication between parachains (and external chains, via bridges).
 
 ## Runtime
 
-A state transition function which indicates a valid algorithm for determining the state of the next block given the previous block.
+The state transition function of a blockchain. It defines a valid algorithm for determining the state of the next block given the previous state.
 
-## Runtime 模块
+## Runtime Module
 
-Wasm code which encodes a state transition function.
+A module that implements specific transition functions and features one might want to have in their runtime. Each module should have domain-specific logic. For example, a Balances module has logic to deal with accounts and balances. In Substrate, modules are called "pallets".
 
-## 安全
+## Safety
 
-The property of a distributed system indicating that the system will properly meet all invariants; that is, that nothing "bad" ever happens to the data (such as it being corrupted).
+The property of a distributed system indicating that a particular state transition will not be reverted. GRANDPA provides _deterministic_ safety. That is, for a state changed marked as "safe" or "final", one would require a hard fork to revert that change.
 
 ## Sealing
 
-The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
+The process of adding a block to the relay chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed.
 
 ## Session
 
 A session is a Substrate implementation term for a period of time that has a constant set of validators. Validators can only join or exit the validator set at a session change.
 
-## Session 证书
+## Session Certificate
 
-Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
+A message containing a signature on the concatenation of all the Session keys. Signed by the Controller.
 
-## Session 密钥
+## Session Key
 
-A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p.
+Hot keys that are used for performing network operations by validators, for example signing GRANDPA commit messages.
 
-## 惩罚 (Slashing)
+## Shared Security
+
+The security model that Polkadot uses whereby all chains are equally secured. This is acheived by placing proofs of validity of parachain blocks into the relay chain such that, in order to revert finality of a single parachain, an attacked would need to attack the entire Polkadot system.
+
+## Slashing
 
 The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
-## 软分叉
+## Soft Fork
 
 A backwards compatible change to client code which causes upgraded clients to start mining a new chain. Requires a "vote-by-hashrate" of majority of miners in order to enact successfully. Soft forks are considered temporary divergences in a chain since non-upgraded clients do not follow the new consensus rules but upgraded clients are still compatible with old consensus rules.
 
-## 抵押
+## Staking
 
-"Reserving" tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators (who back validators through NPoS) together stake their DOTs in order to add blocks to the relay chain.
+The act of bonding tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOTs in order to secure the network.
 
-## 状态转变函数
+## State transition function
 
-A function which describes how the state of a blockchain can be transformed. For example, it may describe how tokens can be transferred from one account to another.
+A function that describes how the state of a blockchain can be transformed. For example, it may describe how tokens can be transferred from one account to another.
 
 ## Substrate
 
-An implementation of the Polkadot Runtime Environment which allows developers to generate parachains which are compatible with the Polkadot relay chain.
+A modular framework for building blockchains. Polkadot is built using Substrate. Chains built with Substrate will be easy to connect as parachains.
 
-## 推迟
+## Tabling
 
 In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
 
-## 交易
+## Transaction
 
-An individual element of the state transition function of a block, such as moving tokens from one account to another.
+An extrinsic that is signed. Transactions are gossiped on the network and incur a transaction fee. Transactions are "provably true", unlike inherents. For example, one can prove that Alice wants to send funds to Bob by the fact that she signed a transfer-funds message with her private key.
 
-## 验证人
+## Validator
 
-A node which secures the relay chain by staking DOTs, validating proofs from collators on parachains, and determine a consensus along with other validators.
+A node that secures the relay chain by staking DOTs, validating proofs from collators on parachains and voting on consensus along with other validators.
 
-## 投票
+## Voting
 
-The process of stakeholders determining whether or not a referendum to implement a specific proposal should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs up. Voting may be overridden by the Governance Council if there is unanimous agreement that it not
+The process of stakeholders determining whether or not a referendum should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs.
 
-## 钱包
+## Wallet
 
-A program which allows one to store, receive, and transmit DOTs or other blockchain-based tokens.
+A program that allows one to store private keys and sign transactions for Polkadot or other blockchain networks.
 
-## Web3 基金会
+## Web3 Foundation
 
-A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
+A Switzerland-based foundation that nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those that utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
 
 ## WebAssembly
 
@@ -251,6 +264,6 @@ An instruction format for a virtual, stack-based machine. Polkadot Runtime Modul
 
 An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
 
-## 见证人
+## Witness
 
 Cryptographic proof statements of data validity.

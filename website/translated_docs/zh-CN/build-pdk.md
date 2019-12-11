@@ -13,11 +13,11 @@ sidebar_label: 平行链开发套件 (PDKs)
 平行链拥有两个关键的附加功能，是开发者创建独立链的不二选择：
 
 - *共享安全性* - 去除了自举链的验证人集的必要性。
-- _Interchain communication_ - allows parachains to interoperate with each other through the XCMP protocol.
+- _Cross-chain communication_ - allows parachains to interoperate with each other through the XCMP protocol.
 
 平行链通过为其插槽绑定 [DOT](learn-DOT) 来[出租 Polkadot 网络的安全性](learn-security)，这意味着项目在构建社区和说服验证人参与网络安全性中的社会成本*将有所降低*。预计 Polkadot 的安全性会十分强大，届时想从一安全性中获益的去中心化应用程序将会希望成为平行链。有关通过蜡烛拍卖出租平行链插槽的更多信息，请[点击此处](learn-auction)。
 
-Any decentralized application or chain that wants to enable trustless messaging to other parachains already connected to Polkadot would want to become a parachain. Interoperability between sovereign chains involves certain constraints and complex protocols to enable across a wide breadth of chains. With Polkadot, you will get this feature out of the box if your build your application as a parachain. The [XCMP protocol](learn-interchain) will allow any parachains to interoperate by passing messages between them. Furthermore, as bridges to other chains are launched (such as those to Bitcoin or Ethereum) the parachains will be able to operate with these as well.
+Any decentralized application or chain that wants to enable trustless messaging to other parachains already connected to Polkadot would want to become a parachain. Interoperability between sovereign chains involves certain constraints and complex protocols to enable across a wide breadth of chains. With Polkadot, you will get this feature out of the box if your build your application as a parachain. The [XCMP protocol](learn-crosschain) will allow any parachains to interoperate by passing messages between them. Furthermore, as bridges to other chains are launched (such as those to Bitcoin or Ethereum) the parachains will be able to operate with these as well.
 
 ## 什么是PDK？
 

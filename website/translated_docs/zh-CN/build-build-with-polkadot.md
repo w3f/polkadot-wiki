@@ -6,18 +6,18 @@ sidebar_label: Polkadot 開發者入门指南
 
 _本文是Medium博客上: [Everything you Need to Know to Prepare for Polkadot的最新版本](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)_
 
-Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-interchain). With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
+Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain). With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
 本指南将带领你了解现在如何开始在Polkadot上建立你的愿景，也会讲解平行链与智能合约的分别(和为什么其中一样会更加适合你的应用程序)
 
 ## 我们处于哪里？
 
-- 自定义费用结构 (例如:支付固定交易费用 或 按字节计算)
-- 自定义代币通涨政策
+- Polkadot release: **Around the New Year**
+- Canary release: **Kusama**
 - 通过状态转变函数分配财政
-- Substrate: **1.0.0**
-- Cumulus: **Initial release: October 2019**
-- ink!: **Pre-Alpha**
+- Substrate: **1.0.0** (2.0.0 to be tagged soon)
+- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
 ** 有什么你需要知道 **: Polkadot 现在最新发布是 v0.6 并且运行着名为 Alexander 的测试网络和 Kusama 具有价值的金丝雀网络。目前最快的实现是 Rust 并使用 Substrate 框架来开发区块链。 Substrate 是一个库，通过从包括网络协议，共识和 Wasm 编译器的基础层进行开发，开发者可以短时间开发出整个区块链。对于 Substrate 的扩展称为 Cumulus，将允许任何 Substrate 开发的链连接到 Polkadot 并成为平行链。 Substrate 已发布1.0.0版，目前已稳定了其 API。
 
@@ -29,7 +29,7 @@ Substrate 链通过包含[SRML 中 contract runtime 模块](https://github.com/p
 
 使用其中任何一个都需要衡量比较，阅读本节将有助你理解它们的分別。
 
-平行链是独立的链连接到Polkadot网络取得中继链上验证人的共享安全和跨链消息传递。平行链提供了极大灵活性和可定制，但将需要更多时间来构建。
+Parachains are individual chains containing their own runtime logic that benefit from the shared security and the cross-chain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and customization but will require more effort to create.
 
 平行线程像平行链一样使开发者有最低层应用程序的逻辑控制。它们二者差别在于经济上，因为取得平行线程所需的成本比平行链便宜得多。平行线程成本低的原因是因为仅在需要时才出块，跟平行链不一样，它拥有了一个插槽，以产生每个区块在中继链上。开发平行线程时，您将使用相同的工具(例如 PDK)，并获得开发平行链的所有好处，而没有成本的缺点。
 
@@ -67,7 +67,7 @@ Substrate 链通过包含[SRML 中 contract runtime 模块](https://github.com/p
 
 现在是决定新项目建立平行链还是平行线程那一个合适的方法，接下来是决定使用那个框架。框架是用于建立平行链或平行线程的平行链开发正具(PDKs)。现在只有 Parity Technologies 的 Substrate 和 Cumulus PDK 可选择。
 
-将来会有不同的编程语言提供不同的 PDKs，就像 Polkadot runtime 环境有多个[实现](learn-implementations.md)一样。
+In the future, there will be many different PDKs available in different programming languages, just like there are multiple [implementations](learn-implementations.md) of the Polkadot runtime environment.
 
 > **立即行动:** 您是否想从头开始开发平行链开发套件工具？ Web3 基金会这些团队提供资助，了解更多并且在[W3F 资助页面](https://grants.web3.foundation)申请。
 
@@ -83,7 +83,7 @@ Substrate 链通过包含[SRML 中 contract runtime 模块](https://github.com/p
 
 当你利用Substrate建立好链的逻辑后，你需要编译runtime到Wasm blob可执行档案，它包含了整个链的状态转变函数。
 
-Polkadot中继链上的验证人会使用Wasm blob去验证平行链整个状态转变。
+Validators on Polkadot will use the submitted Wasm code to validate the state transitions of your chain or thread, but doing this requires some additional infrastructure. A validator needs some way to stay up to date with the most recent state transitions, since Polkadot nodes will not be required to also be nodes of your chain.
 
 为了使Polkadot验证人是拥有着平行链的最新状态转变，它会需要一些基础设施，上述工作由平行链上的校对人节点执行。
 
@@ -95,7 +95,7 @@ Substrate内置拥有自己的网络层，但它不能够直接兼容Polkadot校
 
 它可以处理任何平行链连接到 Polkadot 所需的网络兼容性开销。
 
-- 跨链信息传递
+- Cross-chain message passing.
 - 开箱即用的收集人节点
 - 中继链的嵌入式轻客户端
 - Polkadot 出块者兼容性。

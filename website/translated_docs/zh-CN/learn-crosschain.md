@@ -1,17 +1,17 @@
 ---
-id: learn-interchain
-title: Interchain Message Passing (XCMP)
-sidebar_label: Interchain Message Passing (XCMP)
+id: learn-crosschain
+title: Cross-chain Message Passing (XCMP)
+sidebar_label: Cross-chain Message Passing (XCMP)
 ---
 
-跨链交易是基于梅克尔树(Merkle tree)利用简单队列机制方案解决确保正确性。这将会是属于在中继链上验证人的工作，把在平行链上出口队列中的交易发送到刻目的地(平行链)的入口队列中。
+Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
 
 入口和出口队列在代码中通常称为"入口(ingress)"和"出口(egress)"信息。
 
 ## 概述
 
-- 跨链信息*不会*发送到中继链
-- 跨链信息将会限制于字节(bytes)最大值
+- Cross-chain messages will *not* go on to the relay chain.
+- Cross-chain messages will be constrained to a maximum size in bytes.
 - 平行链可以拒绝接收从其它平行链发出的信息，在这种情况下，发送方会意识到有障碍
 - 校对人负责把平行链之间的信息传递
 - 校对人产生"出口"列表信息並会在"入口"接收到其它平行链信息
@@ -23,9 +23,9 @@ sidebar_label: Interchain Message Passing (XCMP)
 
 从平行链A里的智能合约发送信息到平行链B里的另一个智能合约，达到链与链之间资产转移。
 
-Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行链B的智能合约。
+Charlie executes the smart contract on parachain A which initiates a new cross-chain message for the destination of a smart contract on parachain B.
 
-平行链A的校对人会把跨链信息连同`目的地(destination)`和`时间(timestamp)`放到出口信息队列中。
+The collator node of parachain A will place this new cross-chain message into its outbound messages queue, along with a `destination` and a `timestamp`.
 
 平行链B的校对人会持续地问其它校对人节点是否有新信息(通过筛选`目的地`)，当平行链B的校对人问是否有新信息时，它会看到从平行链A发送过来的信息并且把它加到下一个区块中的入口队列。
 
@@ -39,4 +39,4 @@ Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行
 
 ## 资源
 
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP.html) - Full technical description of interchain communication on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical description of cross-chain communication on the Web3 Foundation research wiki.

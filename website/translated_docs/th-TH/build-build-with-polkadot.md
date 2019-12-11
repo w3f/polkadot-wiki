@@ -6,18 +6,18 @@ sidebar_label: Polkadot Builders Starter's Guide
 
 _This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
-Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-interchain). With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
+Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain). With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision with Polkadot. It will explain the difference between a parachain and a smart contract (and why one may be better suited for your application over the other). It will lay out the resources that are available now and the ones that are coming soon so that you can get started creating your application in anticipation of the Polkadot mainnet launch later this year.
 
 ## Where are we now?
 
-- Initial release: **End of 2019**
-- Current PoC release: **PoC-4**
+- Polkadot release: **Around the New Year**
+- Canary release: **Kusama**
 - Current testnet: **Alexander**
-- Substrate: **1.0.0**
-- Cumulus: **Initial release: October 2019**
-- ink!: **Pre-Alpha**
+- Substrate: **1.0.0** (2.0.0 to be tagged soon)
+- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
 **What you need to know**: Polkadot is currently on the v0.6 release with a running testnet named Alexander and Kusama, a value-bearing canary network. The Alexander testnet has been live for over 6 months through the entire PoC-3 and PoC-4 release cycles. Polkadot is being built with [implementations in various programming languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in Rust and using the Substrate framework for developing blockchains. Substrate is a library that allows developers to more easily develop entire blockchains by building from a base layer including a networking protocol, consensus, and a Wasm interpreter. An in-development extension to Substrate called Cumulus will allow any Substrate built chain to connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, which settled its API for the time being.
 
@@ -29,7 +29,7 @@ Polkadot is planned to go live with an initial release at the end of 2019, depen
 
 Polkadot provides a few ways for you to deploy your application: as a smart contract on an existing parachain, as your own parachain, or as a parathread. There are trade-offs when working with each of these and reading this section will help you understand them.
 
-Parachains are individual chains containing their own runtime logic that benefit from the shared security and the interchain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and customization but will require more effort to create.
+Parachains are individual chains containing their own runtime logic that benefit from the shared security and the cross-chain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and customization but will require more effort to create.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application. The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain. The lower costs of parathreads are due to the fact that parathreads will only produce a block when they need to, unlike parachains which have secured a slot to produce a block at every block of the relay chain. When building a parathread, you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback of the cost.
 
@@ -95,7 +95,7 @@ The goal of [Cumulus](build-cumulus) is to be an extension of Substrate that wil
 
 It handles the network compatibility overhead that any parachain would need to implement to be connected to Polkadot. This includes:
 
-- Interchain message passing.
+- Cross-chain message passing.
 - Out-of-the-box Collator node setup.
 - An embedded light client of the relay chain.
 - Polkadot block authorship compatibility.
