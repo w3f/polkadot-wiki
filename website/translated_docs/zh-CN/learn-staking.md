@@ -182,7 +182,7 @@ The above chart shows the inflation model of the network. Depending on the staki
 
 Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees and we want and to avoid illiquidity on the market.
 
-For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/).
+For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
 
 ## 为什么参与抵押?
 
