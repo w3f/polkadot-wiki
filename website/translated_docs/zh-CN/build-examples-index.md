@@ -6,6 +6,10 @@ sidebar_label: Examples
 
 范例有助于演示开发模式。在该存储库中收集了一些可能对开发人员有所帮助的开源范例。
 
+## Web3 Grants
+
+For a list of all Web3 Foundation grants to teams working on projects which promote the Polkadot ecosystem, please see the [Grants](grants.md) page.
+
 ## Substrate Runtimes
 
 ### Parity
