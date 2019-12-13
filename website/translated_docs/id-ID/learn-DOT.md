@@ -78,4 +78,4 @@ You can make your own DOTs by [becoming a validator](https://wiki.polkadot.netwo
 
 ## Kusama Tokens
 
-Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the frictional faucet (online soon), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
+Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
