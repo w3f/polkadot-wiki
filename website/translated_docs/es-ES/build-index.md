@@ -27,6 +27,10 @@ This section of the wiki is divided into three parts: the first part takes the s
 - [Exchange Integration](build-exchange-integration) - Guide for how to integrate Polkadot with your exchange.
 - [Examples](build-examples-index) - Example projects sourced from the community-- see what others are building!
 
+### Grants
+
+- [Grants](grants) - A list of all Polkadot-related projects given grants by the Web3 Foundation.
+
 ### PSPs
 
 Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
