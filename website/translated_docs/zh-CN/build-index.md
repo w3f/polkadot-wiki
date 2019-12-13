@@ -27,12 +27,16 @@ sidebar_label: 开发者专页
 - [交易所整合](build-exchange-integration) - 如何整合 Polkadot 到你的交易所
 - [例子](build-examples-index) - 来自社区的项目- 查看其他人开发中的项目!
 
+### Grants
+
+- [Grants](grants) - A list of all Polkadot-related projects given grants by the Web3 Foundation.
+
 ### PSPs
 
 Polkadot 标准建议 (PSP) 是 Polkadot 生态系统的标准。
 
-- [ PSP GitHub存储库](https://github.com/w3f/PSPs)-阅读，创建或讨论标准和提案。
+- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and proposals.
 
-### 骇客松
+### Hackathon
 
-- [举办骇客松的资源](build-hackathon)
+- [Resources For Running a Hackathon](build-hackathon)
