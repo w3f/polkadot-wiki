@@ -169,7 +169,7 @@ Inflation is designed to be close to 10% in the first year. This means that each
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
+<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)</sup></sub>
 
 **x-axis**: amount of DOTs staked
 
