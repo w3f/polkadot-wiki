@@ -109,6 +109,10 @@
         "title": "治理",
         "sidebar_label": "治理"
       },
+      "learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
+      },
       "learn-implementations": {
         "title": "其它程序语言实现",
         "sidebar_label": "其它程序语言实现"
