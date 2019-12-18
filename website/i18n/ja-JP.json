@@ -109,6 +109,10 @@
         "title": "Governance",
         "sidebar_label": "Governance"
       },
+      "learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
+      },
       "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
