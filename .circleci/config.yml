@@ -1,6 +1,43 @@
 version: 2
 
 jobs:
+  check-links:
+    docker:
+      - image: nikolaik/python-nodejs:python3.8-nodejs10
+    steps:
+      - checkout
+      - run:
+          name: build
+          command: |
+            cd website
+            yarn
+
+      - run:
+          name: serve
+          background: true
+          command: |
+            cd website
+            yarn start
+
+      - run:
+          name: wait website up
+          command: |
+            apt update && apt install -y netcat
+            while ! nc -z localhost 3000; do
+              sleep 1
+              echo waiting for website up...
+            done
+
+
+      - run:
+          name: check links
+          command: |
+            pip install pylinkvalidator html5lib
+
+            sed -i -e 's/\(decode("ascii")\)/\1.replace(" ", "%20")/g' /usr/local/lib/python3.8/site-packages/pylinkvalidator/urlutil.py
+
+            pylinkvalidate.py --parser=html5lib -P http://localhost:3000
+
   deploy-website:
     docker:
       # specify the version you desire here
@@ -21,7 +58,13 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - check-links:
+          filters:
+            tags:
+              only: /.*/
       - deploy-website:
+          requires:
+            - check-links
           filters:
             branches:
               only: master
