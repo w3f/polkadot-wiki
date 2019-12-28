@@ -158,7 +158,7 @@ Rewards are recorded per session --- approximately one hour on Kusama and four h
 
 Validators can create a cut of the reward that is not shared with the nominators. This cut is a percentage of the block reward, not an absolute value. After the value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 
-For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the portion of stakes they had.
+For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the proportion of stake each nominator had.  Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
 
 Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOTs without having to un-stake everything.
 
@@ -168,7 +168,7 @@ Inflation is designed to be close to 10% in the first year. This means that each
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
+<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)</sup></sub>
 
 **x-axis**: amount of DOTs staked
 
