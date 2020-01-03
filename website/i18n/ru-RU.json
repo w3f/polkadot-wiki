@@ -61,6 +61,9 @@
         "title": "Glossary",
         "sidebar_label": "Glossary"
       },
+      "grants": {
+        "title": "grants"
+      },
       "index": {
         "title": "Wiki Index",
         "sidebar_label": "Wiki Index"
@@ -93,6 +96,10 @@
         "title": "Polkadot Consensus",
         "sidebar_label": "Polkadot Consensus"
       },
+      "learn-crosschain": {
+        "title": "Cross-chain Message Passing (XCMP)",
+        "sidebar_label": "Cross-chain Message Passing (XCMP)"
+      },
       "learn-cryptography": {
         "title": "Cryptography Explainer",
         "sidebar_label": "Cryptography Explainer"
@@ -116,10 +123,6 @@
       "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
-      },
-      "learn-interchain": {
-        "title": "Interchain Message Passing (XCMP)",
-        "sidebar_label": "Interchain Message Passing (XCMP)"
       },
       "learn-introduction": {
         "title": "Polkadot",
