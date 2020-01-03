@@ -138,7 +138,7 @@ Validators may run their nodes on multiple machines to make sure they can still 
 
 > Notice: If a validator is reported for any one of the offences they will be removed from the validator set and they will not be paid while they are kicked out.
 
-If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts/).
+If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
 ## Reward Distribution
 
