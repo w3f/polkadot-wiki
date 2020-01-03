@@ -64,10 +64,10 @@
         "ids": [
           "learn-staking",
           "learn-randomness",
+          "learn-crosschain",
           "learn-spree",
           "learn-wasm",
-          "learn-phragmen",
-          "learn-interchain"
+          "learn-phragmen"
         ]
       },
       {
