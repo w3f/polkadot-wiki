@@ -138,7 +138,7 @@ Validators may run their nodes on multiple machines to make sure they can still 
 
 > 注意: 如果验证人被举报以上任何一个过错，验证人将会被踢下来和之后的奖励也不会有。
 
-If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts/).
+If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
 ## 奖励分配
 
