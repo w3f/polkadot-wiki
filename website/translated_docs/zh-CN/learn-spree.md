@@ -9,7 +9,7 @@ Shared Protected Runtime Execution Enclaves (SPREE) 有时被称为"信任虫洞
 SPREE 简要地描述了以下属性和功能：
 
 - 平行链可以选择加入特殊的 Runtime 逻辑（例如智能合约）。
-- These fragments have their own storage and own XCMP endpoint.
+- These fragments have their own storage and own [XCMP](learn-crosschain) endpoint.
 - 跨链的所有实例具有相同的逻辑。
 - 它与平行链一起执行。
 - 受保护：存储不能通过平行链逻辑更改，消息不能被平行链伪造。
