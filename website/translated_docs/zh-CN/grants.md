@@ -1,3 +1,7 @@
+- - -
+id: grants title: Web3 Foundation Grantees sidebar_label: Grants
+- - -
+
 # Accepted Grant Applications
 
 This page gives an overview of accepted grants and a link to their GitHub repositories. Keep in mind that not all of the accepted grants have already delivered software.
