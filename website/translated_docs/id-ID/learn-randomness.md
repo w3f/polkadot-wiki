@@ -52,5 +52,5 @@ VDFs will likely be implemented through ASIC devices which need to be run separa
 
 ## Resources
 
-- [Polkadot's research on blockchain randomness and sortition](https://research.web3.foundation/en/latest/polkadot/BABE/sortition/) - contains reasoning for choices made along with proofs
+- [Polkadot's research on blockchain randomness and sortition](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html) - contains reasoning for choices made along with proofs
 - [Discussion on Randomness used in Polkadot](https://github.com/paritytech/ink/issues/57) - W3F researchers discuss the randomness in Polkadot and when it is usable and under which assumptions.
