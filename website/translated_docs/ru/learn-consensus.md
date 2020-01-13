@@ -2,6 +2,7 @@
 id: learn-consensus
 title: Polkadot Consensus
 sidebar_label: Polkadot Consensus
+description: An explanation of the consensus model used in Polkadot and Kusama
 ---
 
 ## Why do we need consensus?
