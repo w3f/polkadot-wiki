@@ -6,6 +6,10 @@ sidebar_label: Examples
 
 Examples are helpful to demonstrate patterns of development. In this repository is collected some open source examples which will may be helpful for developers.
 
+## Web3 Grants
+
+For a list of all Web3 Foundation grants to teams working on projects which promote the Polkadot ecosystem, please see the [Grants](grants.md) page.
+
 ## Substrate Runtimes
 
 ### Parity

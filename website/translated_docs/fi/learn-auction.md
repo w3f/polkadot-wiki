@@ -4,8 +4,6 @@ title: Parachain Slots Auction
 sidebar_label: Parachain Slots Auction
 ---
 
-![Parachain Roadmap](assets/parachain-roadmap.jpg)
-
 The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) which has been slightly modified to be secure on a blockchain.
 
 ## Mechanics of a Candle auction

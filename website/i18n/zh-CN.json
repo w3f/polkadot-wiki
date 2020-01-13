@@ -61,6 +61,9 @@
         "title": "专业术语",
         "sidebar_label": "专业术语"
       },
+      "grants": {
+        "title": "grants"
+      },
       "index": {
         "title": "维基索引",
         "sidebar_label": "维基索引"
@@ -93,6 +96,10 @@
         "title": "Polkadot 共识机制",
         "sidebar_label": "Polkadot 共识机制"
       },
+      "learn-crosschain": {
+        "title": "Cross-chain Message Passing (XCMP)",
+        "sidebar_label": "Cross-chain Message Passing (XCMP)"
+      },
       "learn-cryptography": {
         "title": "密码学讲解",
         "sidebar_label": "密码学讲解"
@@ -109,13 +116,13 @@
         "title": "治理",
         "sidebar_label": "治理"
       },
+      "learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
+      },
       "learn-implementations": {
         "title": "其它程序语言实现",
         "sidebar_label": "其它程序语言实现"
-      },
-      "learn-interchain": {
-        "title": "跨链消息传递 (ICMP)",
-        "sidebar_label": "跨链消息传递 (ICMP)"
       },
       "learn-introduction": {
         "title": "Polkadot",
@@ -204,6 +211,10 @@
       "maintain-guides-how-to-upgrade": {
         "title": "如何升级验证人节点",
         "sidebar_label": "如何升级验证人节点"
+      },
+      "maintain-guides-how-to-use-polkadot-secure-validator": {
+        "title": "How to use Polkadot Secure Validator Setup",
+        "sidebar_label": "How to use Polkadot Secure Validator Setup"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",

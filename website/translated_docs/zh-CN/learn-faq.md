@@ -36,13 +36,12 @@ Kusama 网络目前大约是六秒钟出块。
 
 平行链具有弹性地实现他们的货币系统或收集人的激励机制，但这并不是一定需要。由于收集人会持续地提交它们最新验证状态转换，平行链的安全性和 Polkadot 网络的平行链经济是完全分隔。平行链需要有收集人保持运作，所以平行链实现者会以某种方式激励收集人，但这完全取决于平行链实现者。
 
-
 ### 我可以购买或转发 DOT 代币吗?
 
 可从不同来源免费获得测试网DOT代币-有关详细信息，请参见
  DOT页面</ 0>。</p> 
 
-Kusama 代币可通过[兑换程序](https://claim.kusama.network/)领取 (如果你买了 DOTs)或水龙头 (快将上线)。
+Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
 
 Web3 基金会将会在主网上线前把余下 20% 的 DOTs 代币分配。(查看[简短版白皮书](https://polkadot.network/Polkadot-lightpaper.pdf)) 或 [Polkadot 常见问题](https://polkadot.network/faq/)。正如项目的创始人之一 Gavin Wood 在年终回顾中所说，今年在某个时间可能会公开发售该代币的其中一部分。订阅 [polkadot.network](https://polkadot.network/)Polkadot 的电子报以获取最新消息。
 

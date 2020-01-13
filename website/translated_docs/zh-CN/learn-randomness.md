@@ -52,5 +52,5 @@ VDFs 可能会通过需要与其他类型的节点分开运行 ASIC 设备来实
 
 ## Resources
 
-- [ Polkadot 对区块链随机性的研究](https://research.web3.foundation/en/latest/polkadot/BABE/sortition/) - 包含做出选择的理由以及证明
+- [Polkadot's research on blockchain randomness and sortition](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html) - contains reasoning for choices made along with proofs
 - [关于 Polkadot 中使用随机性的讨论](https://github.com/paritytech/ink/issues/57) - W3F 研究人员讨论了 Polkadot 中的随机性，何时用以及在哪些假设下进行。

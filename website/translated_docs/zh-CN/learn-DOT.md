@@ -78,4 +78,4 @@ DOTs 必须在 Polkadot 网络上进行交易。 测试网的DOTs 除了可以�
 
 ## Kusama 代币
 
-与测试网 DOTs 有所不同，Kusama 代币并不是免费赠送。 Kusama 代币可通过[认领过程](https://claim.kusama.network/)（如果您已经购买了 DOTs），Kusama 水龙头（即将在线）
+Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.

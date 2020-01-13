@@ -108,77 +108,81 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### Unresponsiveness
 
-For every session, validators will send an "I'm Online" message to indicate they are online. If a validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as unresponsive. Depending on the repeated offences and how many other validators were unresponsive or offline, slashing will occur. If one-third of all validators are unresponsive, 5% of their bonded DOTs will be slashed.
+For every session, validators will send an "I'm Online" message to indicate they are online. If a validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as unresponsive. Depending on the repeated offences and how many other validators were unresponsive or offline, slashing will occur.
 
 下面是计算公式:
 
-    设 x = 出错节点, n = 验证人总数
+    Let x = offenders, n = total no. validators
     
-    Min( (3 * (x - 1)) / n, 1) * 0.05
+    min((3 * (k - (n / 10 + 1))) / n, 1) * 0.07
 
-验证人应该要有一个良好的网络架构去确保节点是正常运行，从而被免被惩罚的风险。拥有高可用性的设定是最理想，**一旦运行中的节点离线**，备份节点会立即换上。 (被免双重签名和因 equivocation 被惩罚 - 请查看下面)，与代理节点一起使用，从而避免当你被 DDoSed 时 把您的验证人节点 IP 地址公开。 [此处](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)提供了设置有关安全验证人的全面指南。
+Note that if less than 10% of all validators are offline, no penalty is enacted.
+
+Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below), together with proxy nodes to avoid being DDoSed when your validator node's IP address is exposed. A comprehensive guide on secure validator setup is in progress with the draft available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
 
 ### GRANDPA Equivocation
 
-验证人在同一轮里面在不同链上签上二个或更多投票。
+A validator signs two or more votes in the same round on different chains.
 
 ### BABE Equivocation
 
-验证人在中继链同一个时隙中生成二个或更多区块。
+A validator produces two or more blocks on the relay chain in the same time slot.
 
-GRANDPA and BABE equivocation 惩罚算式如下:
+GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
     设 x = 出错节点, n = 验证人总数
     
     Min( (3 * x / n )^2, 1)
 
-验证人可以在多台电脑上运行他们的节点，即使其中一台节点有问题，他们仍然执行验证工作。应注意的是，如果他们在管理签名方面没有很好的协调，equivocation 是有可能的。
+Validators may run their nodes on multiple machines to make sure they can still perform validation work in case one of their nodes goes down. It should be noted that if they do not have good coordination to manage signing machines, then equivocation is possible.
 
 > 注意: 如果验证人被举报以上任何一个过错，验证人将会被踢下来和之后的奖励也不会有。
 
-如果您想要了解更多有关惩罚(Slashing)的详细信息，请查看我们的 [研究专页](https://research.web3.foundation/en/latest/polkadot/slashing/amounts/)。
+If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
 ## 奖励分配
 
-基于 Alexander 测试网络的当前配置，奖励将按大约 5 分钟 (session) 进行记录，并按纪元(era)进行支付。一纪元为 一个小时；这意味着奖励将按小时分配给验证人和提名人。
+Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.  Polkadot will also produce blocks at approximately six second intervals.
+
+Rewards are recorded per session --- approximately one hour on Kusama and four hours on Polkadot --- and paid per era. It takes approximately six hours to finish one era, twenty-four hours on Polkadot.  Thus, rewards will be distributed to the validators and nominators four times per day on Kusama and once per day on Polkadot.
 
 ### 例子
 
 ```
-    每纪元 * 出块时间 = 奖励分配时间
+    PER_ERA * BLOCK_TIME = **Reward Distribution Time**
 
-  600 * 6 = 3600 = 1 小时
+    3600 * 6 seconds = 21,600 s = 6 hours
 
-  **以上参数可通过提议全民投票做出调整**
+    ***These parameters can be changed by proposing a referendum***
 ```
 
-验证人可以设置佣金把奖励先取下一部份再跟提名人分享。当取下佣金后，余下部份会根据验证人和所有提名该验证人的抵押比例作分配。
+Validators can create a cut of the reward that is not shared with the nominators. This cut is a percentage of the block reward, not an absolute value. After the value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 
-例如: 假设奖励是 100 DOTs。验证人可以设定 ` validator_payment = 50 DOTs ` 而余下 50 DOTs 将会是验证人和提名人按他们的抵押比例分配奖励。
+For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the proportion of stake each nominator had.  Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
 
-奖励可以放在同一个帐户 (Controller) 不断积累奖励或存放在 Stash 帐户 (增加抵押量 / 不增加抵押量)。另外，你可以仍然在参与抵押中充值 / 提款部份绑定的 DOTs。
+Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOTs without having to un-stake everything.
 
 ## 通胀率
 
-通胀率在第一年接近为 10%，这意味着每个验证人在每个月将会获得 1,000 - 2000 DOTs 与他们的提名人分享。
+Inflation is designed to be close to 10% in the first year. This means that each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>资料来源: [研究 - Web3 基金会](https://research.web3.Foundation)</sup></sub>
+<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)</sup></sub>
 
-**x-轴**: DOTs 抵押的数量
+**x-axis**: amount of DOTs staked
 
-**y-轴**: 年度化百分比
+**y-axis**: the annualized percentage
 
-**绿线**：基于参与抵押的回报率
+**Green line**: return rate based on the staking participation
 
-**蓝线**: 通胀率
+**Blue line**:  inflation rate
 
-上图为本网络的通胀模型。抵押参与度将带动通胀率呈动态变化，以激励或抑制代币持有人参与抵押。例如当网络中抵押 DOT 率为 50% 时，通胀率将为 10%。
+The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will change dynamically to incent / disincent token holders to participate in staking. For instance, inflation would be 10% if 50% of DOTs are staked in the network.
 
-由于本网络需要足够多的 DOT 参与抵押从而保障预期的安全并且避免市场流动性不足，所以要确定出理想抵押率并非易事。
+Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees and we want and to avoid illiquidity on the market.
 
-如你想进一步了解本网络通胀模型的设计，请参阅[此处](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/)。
+For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
 
 ## 为什么参与抵押?
 
@@ -193,7 +197,7 @@ GRANDPA and BABE equivocation 惩罚算式如下:
 
 ## 波卡会有多少链验证人数量?
 
-一开始计划是开放 50 - 100 验证人并且逐渐扩大，而验证人上限尚未确定，但会受到网络频宽所限制，因为大量频繁点对点信息交互 ，Polkadot 届时将拥有验证人数量估计约为1000。
+The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000.
 
 ## 资源
 
