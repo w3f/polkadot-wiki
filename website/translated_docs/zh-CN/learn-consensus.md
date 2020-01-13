@@ -2,6 +2,7 @@
 id: learn-consensus
 title: 波卡共识
 sidebar_label: 波卡共识
+description: An explanation of the consensus model used in Polkadot and Kusama
 ---
 
 ## 为什么我们需要共识机制？

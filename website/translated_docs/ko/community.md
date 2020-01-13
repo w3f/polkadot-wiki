@@ -1,32 +1,32 @@
 ---
 id: community
-title: Community
-sidebar_label: Community
+title: 커뮤니티
+sidebar_label: 커뮤니티
 ---
 
-The Polkadot community is expanding every day. Below are the most essential links to the community channels.
+폴카닷 커뮤니티는 매일매일 확장되고 있습니다. 아래는 가장 기본적인 커뮤니티 채널들에 대한 링크들입니다.
 
-## General
+## 기본 정보
 
-- [Join the Polkadot PoC-4 Testnet ("Alexander")](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with the latest Polkadot testnet.
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot runtime environment.
-- [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Information on hosting meetups, applying for funding, and materials for running it.
+- [Polkadot PoC-4 테스트넷에 대해 알아보세요 ("알렉산더")](https://polkadot.js.org/apps/#/explorer) - UI 대시보드에서 가장 최근의 폴카닷 테스트넷을 테스트 해보세요.
+- [폴카닷 Github](https://github.com/paritytech/polkadot/) - 패리티가 관리하는 러스트로 구현된 폴카닷 런타임 환경 리포지토리
+- [폴카닷 밋업](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - 폴카닷 밋업 행사내용, 밋업 지원, 자료에 관한 정보들
 
-## Riot
+## Riot(앱) 채널
 
-- [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) - Room for beginners learning about Polkadot. **A good place to ask questions**
-- [Polkadot Watercooler Chat](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) - General room for talk about Polkadot.
-- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - Room for validators learning about setting up a node.
-- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
+- [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) - 폴카닷에 대해 배우기 위한 입문자들의 채널 **질문하기 좋은 채널**
+- [Polkadot Watercooler Chat](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) - 폴카닷 관련 톡방
+- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - 폴카닷 검증자 노드 관련 톡방
+- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - 서브스트레이트에 관한 기술적인 질문을 위한 톡방
 
-## Socials
+## 소셜 미디어
 
-- [Subscribe to the Polkadot newsletter](https://polkadot.network/#roadmap) - Email sign up form is available at the bottom of the page.
-- [Polkadot Telegram](https://t.me/polkadotofficial) - Official Telegram room for discussion of Polkadot (please read the rules before chatting).
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Official Twitter account of Polkadot.
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit.
-- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video content from founders and build of Polkadot describing the network and the vision.
+- [폴카닷 뉴스레터를 구독해보세요](https://polkadot.network/#roadmap) - 이메일 구독 폼은 홈페이지 끝부분에 있습니다.
+- [Polkadot Telegram](https://t.me/polkadotofficial) - 폴카닷에 관한 공식 텔레그램 방 (채팅하기 전에 먼저 룰을 읽어보세요).
+- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - 폴카닷 공식 트위터
+- [Polkadot Reddit](https://www.reddit.com/r/dot/) - 폴카닷 공식 레딧.
+- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - 설립자로부터의 폴카닷 네트워크의 비전과 구조를 설명하는 영상 컨텐츠들.
 
-## Ecosystem
+## 생태계
 
-- [Teams Building on Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Maintained list of teams building on Polkadot and/or Substrate.
+- [폴카닷 개발 팀들](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - 폴카닷이나 서브스트레이트로 개발하고 있는 팀들의 리스트들
