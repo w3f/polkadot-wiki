@@ -4,31 +4,29 @@ title: How to view and deploy parachains
 sidebar_label: How to view and deploy parachains
 ---
 
-The guide has been updated to work with the Alexander testnet.
+이 가이드는 Alexander testnet과 함께 동작하도록 업데이트 되었습니다.
 
-## How to view parachains
+## 패러체인을 보는 방법(How to view parachains)
 
-On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
+[Polkadot UI](https://polkadot.js.org/apps/#/explorer)에서 `Chain State` 탭을 찾으새요. `parachains` 모듈을 선택하고 탭에서 `parachains()`을 선택한 뒤 `+` 을 누르세요. 그렇다면 현재 작동중인 패러체인(parachain)의 array를 리턴합니다.
 
-## How to deploy the Adder parachain
+## 패러체인에 애더(Adder)를 배포하는 방법 (How to deploy the Adder parachain)
 
-**You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
+**투표를 만들기 위해 필요한 최소한의 보증금이 필요합니다. 현재는 최소 5 Dot이 필요합니다.**
 
-The `adder` parachain is a simple parachain which will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
+`Adder`패러체인(parachain)은 스토리지에 값을 유지하고 메시지가 전송 될 때 이 값에 더하는 단순한 패러체인(parachain) 입니다. 폴카닷(Polkadot) 레포지토리의 `test-parachains` 폴더에 있습니다.
 
-> A slightly out-of-date video version of this guide presented by Adrian Brink is available [here](https://www.youtube.com/watch?v=pDqkzvA4C0E). When the two guides diverge, please refer to this written text as definitive and updated.
+> 조금 시간이 지난 Adrian Brink가 발표한 [이 가이드의 비디오는 여기서 보실 수 있습니다]((https://www.youtube.com/watch?v=pDqkzvA4C0E)). 가이드가 두개로 나뉘면 이 텍스트를 최종본으로 업데이트 하세요.
 
-### Building the code
+### 코드 짜기 (Building the code)
 
-The first step is to download locally the Polkadot code and switch to the `v0.4` branch.
+첫번째로 폴카닷(Polkadot) 코드를 다운로드 받습니다.
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
-cd polkadot
-git checkout v0.4
 ```
 
-Now make sure you have Rust installed.
+Rust가 설치되어 있는지 확인하세요.
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -36,18 +34,18 @@ sudo apt install make clang pkg-config libssl-dev
 rustup update
 ```
 
-Now navigate to the `test-parachains` folder in the Polkadot code repository and run the build script.
+다음 폴카닷(Polkadot) 디렉토리에 있는 `test-parachains`디렉토리를 찾아서 실행시키고 스크립트를 실행시키고 빌드합니다.
 
 ```bash
-cd test-parachains
+cd polkadot/test-parachains
 ./build.sh
 ```
 
-This will create the Wasm executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The Wasm executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
+이 폴더에 들어있는 간단한 `Adder` 패러체인(parachain)의 Wasm 실행 파일이 생성됩니다. 이 패러체인(parachain)은 단순히 전송 된 메시지를 추가합니다. Wasm 실행 파일은 `parachains / test / res / adder.wasm` 경로에 값을 출력합니다. 결과값들은 거기서 찾을 수 있습니다.
 
-You will need to build and run the collator node in order to get the genesis state of this parachain.
+이 패러체인(parachain)의 제네시스 스테이트를 얻기 위해서 검사기 (Collator)노드를 빌드하고 실행시켜야 합니다.
 
-Navigate to the `test-parachains/adder/collator` directory and run the `build` and `run` commands.
+`test-parachains/adder/collator`디렉토리로 가서 `build`와 `run` 커맨드를 실행하세요.
 
 ```bash
 cargo build
@@ -55,7 +53,7 @@ cargo run
 [ctrl-c]
 ```
 
-Feel free to stop the collator node right away. You will get some output that looks like this:
+검사기(Collator)노드를 즉시 중단하면 다음과 같은 출력이 표시됩니다
 
 ```
 Starting adder collator with genesis:
@@ -64,30 +62,30 @@ Dec: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 Hex: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000011b4d03dd8c01f1049143cf9c4c817e4b167f1d1b83e5c6f0f10d89ba1e7bce
 ```
 
-The important information is the hex string. This is your genesis state and you will need to save it for the next steps.
+여기서 16진수(hex) 스트링이 중요한 정보입니다. 이 정보는 제네시스 스테이트(Genesis state)이고 다음 단계를 위해서 저장해놓아야 합니다.
 
-### Deploying the parachain
+### 패러체인 배포하기 (Deploying the parachain)
 
-Go to [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics) on the `Extrinsics` tab. Select the account you wish to deploy the parachain from. You will need to create a referendum to deploy the parachain.
+`Extrinsics` 탭에 있는 [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics)로 가세요. 패러체인(parachain)을 배포하고 싶은 계정을 선택하세요 패러체인(parachain)을 배포하기 위해서 투표를 생성해야 합니다.
 
-Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
+`democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)` 순서대로 클릭하세요.
 
-In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
+`id` 입력에서 패러체인(parachain)의 id를 입력하세요. 단순한 애더(Adder)의 경우 `100`이 됩니다. `code` 필드에서 페이지 버튼을 클릭하고 그다음 이전에 컴파일 된`adder.wasm` 바이너리를 업로드 하세요. `initial_head_data`에서 검사기(collator) 노드를 실행하여 얻은 16진수(hex) 데이터를 복사하여 붙여 넣습니다. `value` 필드에서 투표를 만들 때 필요한 최소값을 입력해야합니다. 이 글을 쓰는 시점에서 Alexander testnet에서 _5 DOTs_가 필요합니다.
 
-![registering a parachain](assets/parachain/register.png)
+![패러체인 등록하기](assets/parachain/register.png)
 
-If you navigate to the `Democracy` tab you will be able to see your proposal in the proposals section.
+`Democracy` 탭으로 이동하면 프로포절 섹션에서 프로포절을 볼 수 있습니다.
 
-Once you wait for the proposal to become a referendum you will be able to vote `Nay` or `Aye` on it. Assumably, you will vote Aye as this will be a vote for the deployment of your parachain.
+일단 프로포절이 투표가 될 때까지 기다리면 `Nay`나 `Aye`에 투표 할 수 있습니다. 아마도 당신은 당신의 패러체인(parachain)을 배포하기위한 표가 될 것이기 때문에 당신은 Aye에게 투표 할 것입니다.
 
-![parachain referendum](assets/parachain/referendum.png)
+![패러체인 투표](assets/parachain/referendum.png)
 
-After the voting period of your referendum goes through you will be able to query the state of your parachain.
+투표 기간이 끝나면 패러체인(parachain)의 스테이트를 쿼리 할 수 있습니다. `Chain State` 탭으로 가서 `parachains` 스테이트를 쿼리함으로써 패러체인(parachain)에 대한 정보를 볼 수 있습니다.
 
 You can go to the `Chain State` tab and by querying the `parachains` state you should be able to see some information on your parachain.
 
 ![parachain info](assets/parachain/info.png)
 
-### Interacting with the parachain
+### 패러체인과 인터렉션 하기 (Interacting with the parachain)
 
 _Coming soon_
