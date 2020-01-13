@@ -1,38 +1,38 @@
 ---
 id: contributing
-title: Contributing
-sidebar_label: Contributing
+title: 기여하기
+sidebar_label: 기여하기
 ---
 
-The wiki was started and is maintained by the Web3 Foundation. It is an Open-ish open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to cover informational material for community projects. But please do not try to pull request any marketing material as this will be rejected.
+이 위키는 웹3재단에 의해 만들어졌으며 관리되고 있으며 위키는 오픈-된 오픈소스 프로젝트로서 폴카닷과 폴카닷 생태계를 총망라하는 리소스가 되도록하는 게 목표입니다. 대부분의 컨텐트들은 폴카닷에 집중되어 있으나 커뮤니티 프로젝트들을 포함할 수도 있습니다. 하지만 프로젝트들을 홍보하는 글귀나 내용을 풀 리퀘스트로 날리지 말아주세요(던져버립니다).
 
-Pull requests, discussions and contributions from the community are encouraged. For certain active community members who demonstrate a record of good contributions, they may be given write access to the repository. Otherwise, the Web3 Foundation holds the administrative position and final say on the content that is included. Specifically the Technical Education team at the foundation are most directly involved.
+위키에 대하여 저희는 항상 깃허브에서의 풀 리퀘스트나 토론 또는 커뮤니티의 기여를 항상 장려하고 있습니다. 프로젝트에 올바른 풀 리퀘스트 기록들을 보이시는분들에게는 그에 맞는 액세스를 제공해야한다는 것을 당연하다고 생각합니다.  그외 모든 경우에는 웹3재단이 내용이 포함될 수 있는지 확인한 후 추가하도록 할 것이니다. 이 때 주로 기술 교육팀이 주로 감독을 담당합니다.
 
-## How to Contribute
+## 기여 방법
 
-Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
+위키에 기여하는 방법은 깃허브 계정을 통해 쉽게 할 수 있습니다. 모든 페이지들은 마크다운 파일로 이루어져 있습니다.  마크다운은 마크업 언어로서 [매우 배우기 쉬운](https://guides.github.com/features/mastering-markdown/) syntax로 링크를 만들고, 이미지를 추가하며, 문서작업을 할 수 있게 해줍니다.
 
-Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes you can create a new Pull Request to the repository and one of the maintainers will either merge it in or request changes very soon.
+매 페이지마다 "편집" 버튼이 맨 위 오른쪽에 위치해 있는데 이를 클릭하면 해당 위키 페이지의 내용을 편집할 수 있는 깃헙 에디터 페이지로 이동됩니다. 편집을 하고나면 풀 리퀘스트를 보내시면 되며 이후 메인테이너가 편집된 내용을 반영할지 아니면 바꿀지 빠른 시일 내에 피드백을 줄 것입니다.
 
 ![](assets/edit_button.png)
 
-## Rules
+## 규칙
 
-There are a few basic ground-rules for contributors:
+깃헙에서 기여를 할 때 컨트리뷰터들이 지켜야 할 몇 가지 규칙이 있습니다:
 
-1. **No `--force` pushes** or modifying the Git history in any way.
-2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
-3. **Non-master branches** ought to be used for ongoing work.
-4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
+1. **절대 `--force`를 사용한 푸쉬를 사용하거나** 깃헙 히스토리를 어떤 연유로든 바꾸시면 안됩니다.
+2. 풀 리퀘스트 대신 이슈를 주로 이용해주십시오. 특히 문법에 어긋나는 경우(typo)나 전체적으로 바꾸어야할 사항, 내용이 빠진 경우에는 이슈를 이용합니다.
+3. **마스터가 아닌 브랜치들은** 아직 안정화가 되지 않은 작업들을 포함하고 있으며 풀 리퀘스트를 보내는 것을 지양합니다.
+4. **크게 바뀔 수 있는 변경**은 다른 컨트리뷰터들의 리뷰를 받기 위해 **풀 리퀘스트**로 보내주세요.
 5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
-6. Contributors should attempt to adhere to the prevailing Markdown style, language, and layout.
-7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
-8. Care should be taken to remain as objective and informative as possible. There should be no editorializing, and external bias should not be present.
+6. 컨트리뷰터는 기존에 있던 마크다운 스타일, 용어, 레이아웃에 맞게 기여해야 합니다.
+7. 항상 어법에 맞는 문구를 적어야 합니다. 어법이나 철자에 문제가 생길 경우 고칠 때까지 머지를 할 수 없습니다.
+8. 항상 객관적이고 사실이 검증된 것만을 적어야 합니다. 개인의 의견이나 외부에 의한 편견은 없어야 합니다.
 
-## Changes to this arrangement
+## 규칙 수정
 
-This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
+이 문서 또한 컨트리뷰터들의 풀리퀘스트로 바꿔야 한다고 생각되는 부분은 수정될 수 있으며 내용이 더해질 수도 있습니다.
 
-## Heritage
+## 참고 문헌
 
-This document was based on the Level contribution guidelines located here: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
+이 문서는 여기 Level 컨트리뷰션 가이드라인([https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md))에서 비롯되었습니다.
