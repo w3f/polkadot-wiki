@@ -85,5 +85,28 @@ state root of the SPREE module instances, the data of the XCMP message between t
 of the instance. They do this validation be checking it against the `validate` function as provided by the SPREE module
 API. Collators are expected to be able to provide this information in order to progress their parachains.
 
+## Metaphor
+
+SPREE modules are like recipes in cookbooks. Let’s consider an example for comparison.
+We are at a restaurant and we give an order to a cook to make a soufflé. We're sufficiently
+confident in the cook’s ability and we have a vague idea of what will be made, but no actual
+surety how it will be made. If we want to be sure on the exact execution of the making of the
+soufflé, then we would need to inspect the cook’s kitchen before hand and verify ourselves
+how the cook makes the soufflé. This is comparable to sending XCMP messages without
+SPREE, as the sending party is responsible for verifying themselves the receiving chain’s
+code.
+
+However, let's say that a cook has the Soufflé Maker's Manual; on their bookshelf and has
+committed themselves to only making soufflés from this book. One can now examine the
+book and have a precise understanding of what will happen when we tell the cook to make a
+soufflé. When we place an order to make a soufflé as is written on page 10 of the manual,
+we then know exactly what will be executed in the cook’s kitchen and the finished product
+that will come back to the table. Additionally, any kitchen we go to we can ask if the cook
+owns this book and if so we can order the standard recipe and be sure of the execution in
+the cook’s kitchen. Like the recipe in the cookbook, we only need to verify a SPREE module
+once in order to be sure of its execution across all parachains. If we know a parachain uses
+a specific SPREE module, it’s not necessary to know any other details on how the parachain
+is implemented.
+
 [polkadot reddit]: https://www.reddit.com/r/dot/
 [smart protocols reddit post]: https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/
