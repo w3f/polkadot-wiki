@@ -1,25 +1,25 @@
 ---
 id: learn-architecture
-title: Architecture
-sidebar_label: Architecture
+title: 아키텍쳐
+sidebar_label: 아키텍처
 ---
 
-Polkadot is a heterogeneous multichain with scalable security and an interoperability protocol.
+폴카닷은 서로 다른 시스템의 여러 체인들이 상호 운용을 지원하고 공유되는 보안을 제공합니다.
 
-## Relay-chain
+## 릴레이체인(Relay-chain)
 
-The relay-chain is the central chain of Polkadot. All validators of Polkadot are staked on the relay-chain in DOTs and validate for the relay-chain. The relay-chain is composed of a small amount of transaction types which include ways to interact with the governance mechanism, parachain auctions, and participating in NPoS. Transaction on the relay-chain will likely be priced higher than they will be on parachains. This is because most of the computational work is expected to be delegated to the parachains which have differing implementations and features.
+릴레이 체인은 폴카닷의 중심이 되는 부분입니다. 폴카닷의 모든 검증자(validator)는 릴레이 체인의 블록을 검증함으로서 닷(DOT)를 위임 받습니다. 릴레이체인은 폴카닷에 연결할 패러체인을 뽑거나 네트워크 거버넌스, NPoS에서 닷(DOT)을 위임할 때 쓰입니다. 릴레이체인에서의 트랜젝션은 패러체인 간에 일어나는 인터체인 트랜젝션을 제외하고는 관여를 하지 않는 방향을 보입니다. 이는 패러체인들이 자신이 수행하는 기능을 독립적으로 처리하여 컴퓨터가 처리하는 일을 분산시키기 위해서입니다.
 
-## [Parachains](build-deploy-parachains)
+## [패러체인(Parachains)](build-deploy-parachains)
 
-Most of the computation that happens across the Polkadot network as a whole will be delegated to specific parachain implementations that handle various use cases. Polkadot places no constraints over what parachains are able to do besides that they must be able to generate a proof that can be validated by the validators assigned to the parachain. Some parachains may be DApp specific, others may focus on specific features like privacy or scalability -- still others might be experimental architectures that are not necessarily blockchain in nature.
+폴카닷 생태계에서 처리하는 대부분의 연산은 각각의 기능에 대해 특화된 패러체인들이 처리합니다. 폴카닷은 각각의 패러체인에 배정된 폴카닷의 검증자 노드가 검증할 증명방식을 제공할 수 있어야 하는 것만 된다면 구현체나 기능에 대해 제한을 두지 않습니다. 어떤 패러체인은 댑 하나를 돌리기 위해 쓰일 수 있고, 개인정보 보호나 시스템 성능을 향상시키기 위해(e.g. sidechain) 쓰일 수 도 있습니다 - 심지어 블록체인이 아닌 다른 실험적인 p2p 아키텍쳐도 가능합니다.
 
-## Shared state
+## 공유되는 상태(Shared state)
 
-Polkadot has a shared state between the relay-chain and all of the connected parachains. If the relay-chain must revert for any reason, then all of the parachains would also revert. This is to ensure that the validity of the entire system can persist and no individual part is corruptible.
+폴카닷은 릴레이체인과 연결된 모든 패러체인들에 대해 공유되는 상태를 가집니다. 만약 릴레이체인이 수정되야하는 경우가 발생할 경우, 다른 연결된 패러체인도 수정이 되어야 합니다. 이는 모든 시스템이 안정적이고 하나의 시스템이라도 변질되지 않도록 하기 위함입니다.
 
-The shared state makes it so that the trust assumptions when using Polkadot parachains are only those of the relay-chain validator set, and no other. Since the validator set on the relay-chain is expected to be secure with a large amount of stake put up to back it, it is desirable for parachains to benefit from this security.
+공유되는 상태는 폴카닷에 연결되는 패러체인은 릴레이 체인의 검증자(validator)들로만 검증이 되게합니다. 폴카닷의 검증자들은 폴카닷 외 다른 패러체인 운영자들로부터 상당한 양의 자산을 위임을 받고 운영을 하므로 안전하게 검증을 하게끔 심혈을 기울이기 때문에 패러체인들은 이들에게 검증을 맡김으로서 보안상의 안전을 확보할 수 있습니다.
 
-## Whiteboard Series
+## 화이트보드 시리즈(Whiteboard Series)
 
-For a video overview of the architecture of Polkadot watch the video below for the whiteboard interview with W3F researcher Alistair Stewart: <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+폴카닷의 아키텍쳐를 설명하는 비디오는 아래 링크에 웹3재단(W3F)의 연구원인 알리스테어 스튜어트(Alistair Stewart)의 화이트보드 인터뷰에서 알아보실 수 있습니다. <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
