@@ -5,7 +5,7 @@ sidebar_label: Stop Being a Nominator
 description: The full process of how to stop being a nominator in order to unlock and withdraw your tokens for sending or selling.
 ---
 
-The following describes how to stop nominating and retrieve your tokens. Please note that all networks on which you can nominate have a delayed exit period, called the _unbonding period_, which serves as a cooldown. You will not be able to liquidate your tokens before this period has elapsed.
+The following describes how to stop nominating and retrieve your tokens. Please note that all networks on which you can nominate have a delayed exit period, called the _unbonding period_, which serves as a cooldown. You will not be able to transfer your tokens before this period has elapsed.
 
 ### Step 1: Stop Nominating
 
@@ -29,10 +29,10 @@ Select the amount you wish to unbond and click Unbond, then confirm the transact
 
 ![Unbonding all](/img/NPoS/unbond3.png)
 
-If successful, your balance will show as "unbonding" with an indicator of how many more blocks remain until the amount is fully unlocked. 
+If successful, your balance will show as "unbonding" with an indicator of how many more blocks remain until the amount is fully unlocked.
 
 ![Unbonding duration](/img/NPoS/unbond4.png)
 
 This duration will vary depending on the network you're on and will typically be four times as fast on Kusama as it is on Polkadot.
 
-Once this process is complete, you can use your tokens again.
+Once this process is complete, you will have to issue another, final transaction: Withdraw Unbonded. Then, your transferrable balance will increase by the amount of tokens you've just fully unbonded.
