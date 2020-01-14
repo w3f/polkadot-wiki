@@ -119,7 +119,6 @@
         "label": "Nominator",
         "ids": [
           "maintain-nominator",
-          "maintain-guides-how-to-nominate-alexander",
           "maintain-guides-how-to-nominate-kusama",
           "maintain-guides-how-to-unbond"
         ]
@@ -129,7 +128,6 @@
         "label": "Validator",
         "ids": [
           "maintain-validator",
-          "maintain-guides-how-to-validate-alexander",
           "maintain-guides-how-to-validate-kusama",
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
