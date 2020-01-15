@@ -62,7 +62,8 @@
         "sidebar_label": "용어 정리"
       },
       "grants": {
-        "title": "grants"
+        "title": "Web3 Foundation Grantees",
+        "sidebar_label": "Grants"
       },
       "index": {
         "title": "위키 목록",
@@ -207,6 +208,10 @@
       "maintain-guides-how-to-systemd": {
         "title": "Using systemd for the Validator Node",
         "sidebar_label": "Using systemd for the Validator Node"
+      },
+      "maintain-guides-how-to-unbond": {
+        "title": "Stop Being a Nominator",
+        "sidebar_label": "Stop Being a Nominator"
       },
       "maintain-guides-how-to-upgrade": {
         "title": "검증자 노드를 업그레이드하는 방법",
