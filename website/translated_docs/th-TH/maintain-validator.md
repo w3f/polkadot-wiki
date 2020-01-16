@@ -12,10 +12,9 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 
 ## คู่มือแนะนำ
 
-- [วิธีการตรวจสอบบน Alexander](maintain-guides-how-to-validate-alexander) - คู่มือแนะนำในการตั้งค่าโหนดตรวจสอบบนเครือข่ายทดลอง Alexander
-- [วิธีการตรวจสอบบน Kusama](maintain-guides-how-to-validate-kusama) - คู่มือแนะนำในการตั้งค่าโหนดตรวจสอบบนเครือข่าย Kusama
-- [หลักการจ่ายเงินให้ผู้ตรวจสอบ](maintain-guides-validator-payout) - บทความแนะนำเกี่ยวกับการทำงานของกลไกการจ่ายเงินให้ผู้ตรวจสอบ
-- [วิธีการรันโหนดตรวจสอบโดยใช้ systemd](maintain-guides-how-to-systemd) - คู่มือแนะนำการรันโหนดโดยใช้`systemd` เพื่อที่จะให้โหนดทำงานในพื้นหลังและรันอัตโนมัติเมื่อปิดเปิดเครื่องใหม่
+- [How to Validate on Kusama](maintain-guides-how-to-validate-kusama) - Guide on how to set up a validator on the Kusama canary network.
+- [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the validator payout mechanism works.
+- [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
 - [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.
 - [How to Set up a Sentry Node](maintain-guides-how-to-setup-sentry-node) - Guide for setting up a sentry node for your validator.
 - [How to Use Secure Validator Setup](maintain-guides-how-to-use-polkadot-secure-validator) - Guide on how to use Polkadot / Kusama secure validator setup.
@@ -24,9 +23,8 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 
 - [วิธีรันโหนด Polkadot โดยใช้ Docker](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
-- [วิธีการขอ DOTs บนเครือข่ายทดลอง](learn-DOT#getting-testnet-dots)
-- [ลิสต์ VPS](maintain-guides-how-to-validate-kusama#vps-list)
-- [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - ห้องแชทสำหรับสนทนาเกี่ยวกับการเป็นผู้ตรวจสอบ
+- [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
+- [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
 - [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
 
 ## ความปลอดภัย / การจัดการดูแลคีย์
@@ -35,6 +33,5 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 
 ## เครื่องมือตรวจสอบ
 
-- [Polkadot Telemetry Service](https://telemetry.polkadot.io/#/Alexander) - ข้อมูลเครือข่าย รวมถึงข้อมูลว่าโหนดใดบ้างที่ทำงานบนเครือข่ายที่ระบุ รุ่นซอฟต์แวร์ที่ใช้งานอยู่ และสถานะการ sync
-- [Polkadash](http://polkadash.io/) - เครื่องมือตรวจสอบ
-- [ลิงค์ที่มีประโยชน์อื่น ๆ](https://forum.web3.foundation/t/useful-links-for-validators/20)
+- [Polkadot Telemetry Service](https://telemetry.polkadot.io/#list/Kusama%20CC3) - Network information, including what nodes are running on a given chain, what software versions they are running, and sync status.
+- [Other Useful Links](https://forum.web3.foundation/t/useful-links-for-validators/20)
