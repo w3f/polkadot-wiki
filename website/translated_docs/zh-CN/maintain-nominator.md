@@ -10,9 +10,9 @@ sidebar_label: 提名人
 
 通过这样您就成为选择验证人的提名人。仔细挑选你的验证器人-如果他们有不良的表现，他们将得到惩罚，你也将失去DOT。
 
-当您的 DOT 通过提名验证人进行抵押，它们将会是"锁定的"。您可以在您的帐户中接收新的 DOT，但您不能将 DOT 作为验证人抵押，也不能将 DOT 从您的帐户中转移出去。您可以随时取消提名以解绑您的资金。请记住，取消提名在下一个时代是有效的。这意味着目前您可能需要等待长达 一小时才能进行更改。
+While your DOTs are staked by nominating a validator, they are 'locked' (bonded). You can receive new DOTs in your account but you cannot stake as validator or transfer DOTs away from your account. You can [un-nominate at any time](maintain-guides-how-to-unbond) to unlock your funds. Keep in mind that the un-nomination is effective in the next era.
 
 ### 指南
 
-- [成为提名人 (Alexander)](maintain-guides-how-to-nominate-alexander)- Alexander 测试网络提名指南。
-- [提名人指南 (Kusama)](maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。
+- [Be a Nominator (Kusama)](maintain-guides-how-to-nominate-kusama) - Guide on nominating on the Kusama canary network.
+- [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond) - Guide on stopping nominations and withdrawing tokens.
