@@ -13,15 +13,13 @@ sidebar_label: 网络维护者
 ## 提名人
 
 - [提名人主页](maintain-nominator)-提名人和相关链接。
-- [提名人指南](maintain-guides-how-to-nominate)-如何在 PoC-4 Alexander 测试网上提名。
-- [提名人指南 (Kusama)](maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。
+- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
 
 
 ## 验证人
 
 - [验证人主页](maintain-validator)-验证人和相关链接。
-- [验证人指南 (Alexander)](maintain-guides-how-to-validate-alexander)-逐步介绍如何在 PoC-4 Alexander 测试网上运行节点。
-- [验证人指南 (Kusama)](maintain-guides-how-to-validate-kusama)-逐步介绍如何在 Kusama 金丝雀网络上运行节点。
+- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
 
 ## Governance
 
