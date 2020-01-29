@@ -18,7 +18,7 @@ You will see a modal window that looks like the below:
 
 Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some left over to pay transaction fees. Transaction fees are currently at least 0.01 KSM, but they are dynamic based on a variety of factors including the load of recent blocks.
 
-Also be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 0.01 in Kusama, so it's recommended to keep at least 0.1 KSM in your account to be on the safe side.
+Also be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 0.1 in Kusama, so it's recommended to keep at least 1 KSM in your account to be on the safe side.
 
 Choose whatever payment destination sounds good to you. If you're unsure, you can choose "Stash account (increase amount at stake)".
 
