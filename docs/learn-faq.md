@@ -30,7 +30,7 @@ be quite fast. Two or three seconds may not be unreasonable after optimizations.
 
 ### What is the token inflation rate?
 
-This is difficult to calculate precisely, since the inflation rate will vary based on what percentage of the DOTs are staked. For both Kusama and Polkadot, inflation is estimated to be around 10 - 20% for the first year.  Inflation on testnets and parachains will vary more dramatically.
+This is difficult to calculate precisely, since the [inflation rate will vary](learn-staking#inflation) based on what percentage of the DOTs are staked. For both Kusama and Polkadot, inflation is estimated to be around 10 - 20% for the first year.  Inflation on testnets and parachains will vary more dramatically.
 
 ### How are validators rewarded?
 
