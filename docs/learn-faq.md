@@ -58,7 +58,7 @@ Please see the (Substrate page on fee calculation)[https://substrate.dev/docs/en
 
 ### What is the minimum amount of KSM I can have in my account?
 
-It is recommended to always ensure that you keep at least 1 KSM in your account in order to avoid the reaping threshold of 0.1 KSM.  If you have less than 0.1 KSM in your account, that account will be "reaped" - it will no longer occupy space on the chain. This is a dust prevention measure, in order to ensure that the chain is not full of accounts with trivial amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provides dramatic benefits in terms of scalability.
+It is recommended to always ensure that you keep at least 0.1 KSM in your account in order to avoid the reaping threshold of 0.01 KSM.  If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM.   This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provides dramatic benefits in terms of scalability.
 
 ### Can I buy or transfer DOT tokens?
 
