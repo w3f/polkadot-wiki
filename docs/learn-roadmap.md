@@ -14,8 +14,9 @@ Polkadot is currently undergoing a series of proof-of-concept testnet releases a
 out. Additionally, Kusama a canary network that will test the economic conditions of an early, unaudited version of Polkadot
 is launched to help inform the ultimate goal of Polkadot.
 
-- Polkadot Genesis - Expected around the end of the year.
+- Polkadot Genesis - Expected early 2020.
 - Kusama - [Announcement][kusama announcement] on 16 July, 2019. [Genesis][kusama genesis] on 23 August 2019. [Kusama CC2][kusama cc2] on 26 September 2019.
+- Westend - (Released January 2020) - A testnet based on the current Kusama codebase.
 - PoC-4 (Release date 3 April 2019) - _Staking changes and GRANDPA optimizations_ [Release Blog post](https://medium.com/polkadot-network/polkadot-proof-of-concept-4-arrives-with-new-ways-to-stake-3b27037346cc)
 - PoC-3 (Released 21 Dec 2018) - _GRANDPA finality gadget added. Testnet: "Alexander"_ [Release Blog Post](https://medium.com/coinmonks/polkadot-hello-world-3-poc-3-on-substrate-is-here-c45d100f72e3)
 - BBQ-Birch testnet (Went live: 15 October 2018): _Added smart contract support._
