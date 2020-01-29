@@ -8,15 +8,15 @@ _This FAQ focuses on technical questions for users interested in developing appl
 
 ### How many validators will be online at Mainnet launch?
 
-Somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630)  There 
+Somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630)  There are currently 160 validators in the active validator set on the Kusama network.
 
 ### How do I apply to be a validator?
 
-Please see ("How To Validate on Kusama")[maintain-guides-how-to-validate-kusama.md].
+See ("How To Validate on Kusama")[maintain-guides-how-to-validate-kusama.md].  Note that just because you run a validator does not mean you will necessarily be producing blocks; only a certain number of validators will be part of the active validator set, based on the amount of stake they can attract and the results of the (Phragmen election)[learn-phragmen].
 
 ### How does consensus on the relay chain work?
 
-Please see the [consensus](learn-consensus) page.
+See the [consensus](learn-consensus) page.
 
 ### What is the expected block time on the relay chain?
 
