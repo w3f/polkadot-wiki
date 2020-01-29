@@ -7,7 +7,7 @@ sidebar_label: Using systemd for the Validator Node
 You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it will automatically
 restart on server reboots or crashes (and helps to avoid getting slashed!).
 
-Before following this guide you should have already set up your validator by following the [How to validate](maintain-guides-how-to-validate)
+Before following this guide you should have already set up your validator by following the [How to validate](maintain-validator)
 article.
 
 First create a new unit file called `polkadot-validator.service` in `/etc/systemd/system/`.
