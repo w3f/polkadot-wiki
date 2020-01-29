@@ -6,9 +6,9 @@ sidebar_label: Frequently Asked Questions (FAQs)
 
 _This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
-### How many validators will be online at Mainnet launch?
+### How many validators will be validating at Mainnet launch?
 
-Somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630)  There are currently 160 validators in the active validator set on the Kusama network.
+Most likely somewhere between 50 - 100, increasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630) The number of validators can be changed by governance, and so it is difficult to state precisely how many will be in the active validator set at any particular point in the future.
 
 ### How do I apply to be a validator?
 
