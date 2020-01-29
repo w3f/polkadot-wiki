@@ -12,7 +12,6 @@ Validators perform two functions. First, verifying that the information containe
 
 ## Guides
 
-- [How to Validate on Alexander](maintain-guides-how-to-validate-alexander) - Guide on how to set up a validator on the Alexander testnet.
 - [How to Validate on Kusama](maintain-guides-how-to-validate-kusama) - Guide on how to set up a validator on the Kusama canary network.
 - [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the validator payout mechanism works.
 - [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
@@ -24,7 +23,6 @@ Validators perform two functions. First, verifying that the information containe
 
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
-- [Getting Testnet DOTs](learn-DOT#getting-testnet-dots)
 - [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
 - [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
@@ -35,6 +33,5 @@ Validators perform two functions. First, verifying that the information containe
 
 ## Monitoring Tools
 
-- [Polkadot Telemetry Service](https://telemetry.polkadot.io/#/Alexander) - Network information, including what nodes are running on a given chain, what software versions they are running, and sync status.
-- [Polkadash](http://polkadash.io/) - Validator monitor.
+- [Polkadot Telemetry Service](https://telemetry.polkadot.io/#list/Kusama%20CC3) - Network information, including what nodes are running on a given chain, what software versions they are running, and sync status.
 - [Other Useful Links](https://forum.web3.foundation/t/useful-links-for-validators/20)

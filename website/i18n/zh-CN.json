@@ -62,7 +62,8 @@
         "sidebar_label": "专业术语"
       },
       "grants": {
-        "title": "grants"
+        "title": "Web3 Foundation Grantees",
+        "sidebar_label": "Grants"
       },
       "index": {
         "title": "维基索引",
@@ -207,6 +208,10 @@
       "maintain-guides-how-to-systemd": {
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
+      },
+      "maintain-guides-how-to-unbond": {
+        "title": "Stop Being a Nominator",
+        "sidebar_label": "Stop Being a Nominator"
       },
       "maintain-guides-how-to-upgrade": {
         "title": "如何升级验证人节点",

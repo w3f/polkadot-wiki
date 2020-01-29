@@ -64,14 +64,17 @@ brew install cmake pkg-config openssl git llvm
 
 ### Building and Installing the `polkadot` Binary
 
-You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.6** branch.
+You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.7** branch.
+
+You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.16**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.16` with the latest build (i.e., the highest number).
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git checkout v0.6
+git tag | grep "$v\0\.7"
+git checkout v0.7.16
 ./scripts/init.sh
 cargo build --release
 ```

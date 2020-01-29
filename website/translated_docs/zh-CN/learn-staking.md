@@ -70,7 +70,7 @@ _验证人池 A & B 均拥有 4 名提名人，分别持有 600 和 400 DOTs 作
 
 同时还需注意，验证人若出现不良行为（例如验证人离线、双重签名等），网络将对其按固定的百分比（而非固定的 DOT 数量）作出 Slashing 惩罚。这意味着抵押更多的验证人池将损失更多 DOT。同样地，这也是为了给提名人提供一种经济激励，使其改变去支持那些他们认为值得信任却没有那么受欢迎的验证人。
 
-第二个特点是，各验证候选人均可设定佣金(固定DOT的数量）以弥补运行成本。由于各验证人池的奖励相同，因此佣金较低的池向提名人分成的奖励要多于高佣金的池。另外所有验证人均可自由选择提高佣金获得更多 DOT，或降低佣金吸引更多提名人、增加当选机会。我们让市场自我调节，从长远来看，我们预计所有验证人都需要具有低成本效益以维持其竞争力，同时声誉好的验证人可以收取略高的佣金（这一点十分公平）。
+The second point to note is that each validator candidate is free to name their desired commission fee (as a percentage of rewards) to cover operational costs. Since validator pools are paid the same, pools with lower commission fees pay more to nominators than pools with higher fees. Thus, each validator can choose between increasing their fees to earn more DOTs, or decreasing their fees to attract more nominators and increase their chances of being elected. We will let the market regulate itself in this regard. In the long term, we expect that all validators will need to be cost efficient to remain competitive, and that validators with higher reputation will be able to charge slightly higher commission fees (which is fair).
 
 ## 账户
 

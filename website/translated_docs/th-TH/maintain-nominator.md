@@ -10,9 +10,9 @@ sidebar_label: ผู้เสนอชื่อ (Nominator)
 
 การทำเช่นนี้ คุณจะกลายเป็นผู้เสนอชื่อสำหรับผู้ตรวจสอบที่คุณเลือก ควรเลือกผู้ตรวจสอบอย่างระมัดระวัง หากพวกเขาทำหน้าที่บกพร่อง พวกเขาจะถูกลงโทษและคุณจะเสีย DOT เช่นกัน
 
-ในขณะที่ DOT ของคุณถูกวางเป็นหลักประกันเพื่อเสนอชื่อผู้ตรวจสอบ โทเคนพวกนี้จะถูกล็อค คุณสามารถรับ DOT เพิ่มในบัญชีของคุณ แต่จะไม่สามารถสมัครเป็นผู้ตรวจสอบหรือหรือโอน DOT ออกไปจากบัญชีของคุณได้ คุณสามารถยกเลิกการเสนอชื่อได้ตลอดเวลาเพื่อปลดล็อคเงินของคุณ โปรดทราบว่าการยกเลิกการเสนอชื่อจะมีผลในยุค (era) ต่อไป ซึ่งหมายความว่าคุณอาจต้องรอประมาณ 1 ชั่วโมงก่อนที่การเปลี่ยนแปลงจะเกิดขึ้น
+While your DOTs are staked by nominating a validator, they are 'locked' (bonded). You can receive new DOTs in your account but you cannot stake as validator or transfer DOTs away from your account. You can [un-nominate at any time](maintain-guides-how-to-unbond) to unlock your funds. Keep in mind that the un-nomination is effective in the next era.
 
 ### คู่มือแนะนำ
 
-- [ วิธีเสนอชื่อ ](maintain-guides-how-to-nominate) - คู่มือแนะนำการเสนอชื่อสำหรับ testnet Alexander รุ่น 0.4.3 ขึ้นไป
-- [การเป็นผู้เสนอช่ือ (Kusama)](maintain-guides-how-to-nominate-kusama) - คู่มือแนะนำเกี่ยวกับการเสนอชื่อบนเครือข่าย Kusama
+- [Be a Nominator (Kusama)](maintain-guides-how-to-nominate-kusama) - Guide on nominating on the Kusama canary network.
+- [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond) - Guide on stopping nominations and withdrawing tokens.

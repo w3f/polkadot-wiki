@@ -4,54 +4,32 @@ title: Be a Nominator (Kusama)
 sidebar_label: Be a Nominator (Kusama)
 ---
 
-TODO: we're no longer in soft launch
-
-## During Soft Launch
-
-While Kusama is still in the soft launch phase most of the functionality is disabled besides Staking. This is so that 50 - 100 validators can register their intention to secure the Kusama network by running [validator nodes](maintain-validator). If you do not want to operate a validator node yourself, you can still stake your tokens and earn rewards by _nominating_ to a reputable validator. This guide will walk you through how to do that during the soft launch phase.
-
-### Step 1: Bond your tokens
-
-During soft launch you will likely only have one account with KSM. This means that your _stash_ and _controller_ accounts will be the same account. After soft launch it is advised to set a new controller on your stash account, but for now this is fine.
+## Step 1: Bond your tokens
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
-On this tab click on the "Account Actions" button on the top-left of the screen.
+The "Staking Overview" subsection will show you all the active validators and their information - points (reliability), earnings, identities, etc. The "Waiting" subsection lists all pending validators that need more nominations to enter the active validator set. The "Returns" screen will help you estimate your earnings and this is where it's good to start picking favorites. The "Account Actions" subsection allows you to stake and nominate and the "Validator Stats" screen will show you some interesting in-depth graphs about a selected validator.
 
-Click the blue "New Stake" button.
+Pick "Account Actions", then click the blue "New Stake" button.
 
 You will see a modal window that looks like the below:
 
-![Bonding](assets/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
+![Bonding](/img/NPoS/nominate2.png)
 
-As mentioned before, **choose the same account for both controller and stash**.
+Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some left over to pay transaction fees. Be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 0.01 in Kusama, so it's recommended to keep at least 0.1 KSM in your account to be on the safe side.
 
-Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some left over to transfer later when transfers are enabled. Try to save at least 500 mKSM to cover transferring to a new account and some fees.
-
-Choose whatever payment destination sounds good to you. If you're unsure just click "Stash account (increase amount at stake)".
+Choose whatever payment destination sounds good to you. If you're unsure choose "Stash account (increase amount at stake)".
 
 ### Step 2: Nominate a validator
 
-You are now bonded and can nominate up to 16 validators. Be careful about the validators you choose since you will be slashed if your validator commits an offence.
+You are now bonded. Being bonded means your tokens are locked and could be [slashed](learn-staking#slashing) if the validators you nominate misbehave. All bonded funds can now be distributed to up to 16 validators. Be careful about the validators you choose since you will be slashed if your validator commits an offence.
 
-Go to the "Staking Overview" tab.
+Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select some validators.
 
-The initial Proof-of-Authority validators are currently in the left-hand column. You cannot stake to these validators.
+![Nominating validators](/img/NPoS/nominate.png)
 
-On the right-hand column in the list that's labelled "next up", you will see all of the validators that have signalled their intention to operate genesis validators on Kusama.
-
-Pick one (or more) of these validators to nominate and copy their address by clicking on the icon.
-
-![Bonding](assets/guides/how-to-nominate/validators.png)
-
-Return to the "Account Actions" screen and you will see your bonded account.
-
-Click the "Nominate" button and fill in the blank field with the address of the validator you have chosen.
-
-Sign and submit the transaction, and you are now nominating!
+Select them, confirm the transaction, and you're done - you are now nominating. You should notice your balance increasing shortly.
 
 ### Step 3: Stop nominating
 
-At some point, you might decide to stop nominating one or more validators.
-
-You can do this by clicking the "Stop nominating" button, which will set your account to _chill_ (meaning that it will not do any actions). If you want to start nominating again, just re-do the actions you took in step 2!
+At some point, you might decide to stop nominating one or more validators. You can always change who you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions are available [here](maintain-guides-how-to-unbond).
