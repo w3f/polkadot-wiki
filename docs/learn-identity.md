@@ -93,7 +93,7 @@ To "waiting":
 
 At this point, direct contact with the registrar is required. Each registrar will have their own set of procedures to verify your identity and values, and only once you've satisfied their requirements will the process continue.
 
-Once the registrar has confirmed the identity, a green checkmark should appear with the appropriate confidence level:
+Once the registrar has confirmed the identity, a green checkmark should appear next to your account name with the appropriate confidence level:
 
 ![A confirmed identity](/img/identity/10.jpg)
 
