@@ -50,7 +50,7 @@ To become a registrar, submit a pre-image and proposal into Democracy, then wait
 
 Here's how to submit a proposal to become a registrar:
 
-Go to Democracy, select Submit preimage, and input the information for this motion - notably which account you're nominating to be a registrar in the `identity.setRegistrar` function.
+Go to the Democracy tab, select "Submit preimage", and input the information for this motion - notably which account you're nominating to be a registrar in the `identity.setRegistrar` function.
 
 ![Setting a registrar](/img/identity/12.jpg)
 
