@@ -40,8 +40,6 @@ Please note the following caveat: because the fields support different formats, 
 
 ## Registrars
 
-Registrars are appointed from a specified "Registrar Origin", which will start as the [Council](learn-governance). Either the Council or a public referendum could appoint a new registrar origin to appoint registrars.
-
 Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
 
 ### Becoming a registrar
