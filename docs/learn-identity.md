@@ -8,7 +8,7 @@ Polkadot provides a naming system that allows participants to add personal infor
 
 ## Setting an Identity
 
-Users can register some default fields like legal name, display name, website, Twitter handle, Riot handle, etc. along with extra, custom fields for which they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain - 10 per identity, and 2.5 KSM per each field beyond the legal name. These funds are locked and not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of information, so the data must be less than that. When inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
+Users can register some default fields like legal name, display name, website, Twitter handle, Riot handle, etc. along with extra, custom fields for which they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain - 10 KSM per identity, and 2.5 KSM per each field beyond the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of information, so the data must be less than that. When inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
 The easiest way to add the built-in fields is to click the gear icon next to one's account and select "Set on-chain identity".
 
