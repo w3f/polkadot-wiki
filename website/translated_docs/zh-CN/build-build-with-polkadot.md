@@ -23,7 +23,7 @@ Polkadot is a blockchain protocol with two goals: providing **shared security** 
 
 Substrate 链通过包含[SRML 中 contract runtime 模块](https://github.com/paritytech/substrate/tree/master/srml/contracts)增加智能合约功能。该模块允许将编译成 Wasm 代码的智能合约部署到链中并由用户实例化。为了促进 Wasm 智能合约开发，Parity 还开发了[ ink! ](https://github.com/paritytech/ink)，它是基于 Rust 的领域特定语言，旨在编写智能合约。
 
-取决于安全审核和无法控制团队的启动规定，Polkadot 计划在 2019 年底发布第一个版本。现在不同工具已经开始出现和稳定，没有比现在更好的时间开始开发。但是等等！在你跳进代码之前，您应该考虑要开发的分布式应用程序类型，并了解不同的范例可为在 Polkadot 的开发者使用。
+Polkadot is planned to go live with an initial release early in 2020, depending on security audits and launch provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build for Polkadot.
 
 ## 平行链/平行线程与智能合约有什么区别?
 
