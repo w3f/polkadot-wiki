@@ -40,7 +40,7 @@ Please note the following caveat: because the fields support different formats, 
 
 ## Registrars
 
-Registrars are appointed from a specified "Registrar Origin", which will start as the [council](learn-governance). Either the council or a public referendum could appoint a new registrar origin to appoint registrars.
+Registrars are appointed from a specified "Registrar Origin", which will start as the [Council](learn-governance). Either the Council or a public referendum could appoint a new registrar origin to appoint registrars.
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
 
@@ -79,7 +79,26 @@ A seventh state, "fee paid", is for when a user has requested judgement and it i
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for issuing faulty judgements.
 
-To be judged after submitting your identity information, go to the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations. Registrar 1's fee is 5 KSM, so that's what's in the image below.
+To be judged after submitting your identity information, go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations. 
+
+If you don't know which registrar to pick, first check the available registrars by going to ["Chain State UI"]() and selecting `identity.registrars()` to get the full list.
+
+![Showing all registrars](/img/identity/14.jpg)
+
+The image above reveals two registrars:
+
+- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL charges 25 KSM per judgement
+- Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn charges 5 KSM per judgement
+
+To find out how to contact the registrar after the application for judgement or to learn who they are, we can check their identity by adding them to our Address Book. Their identity will be automatically loaded.
+
+![Gav is a registrar](/img/identity/15.jpg)
+
+Gavin Wood is registrar #0.
+
+![Chevdor is registrar #1](/img/identity/16.jpg)
+
+Chevdor is registrar #1. We pick that one.
 
 ![Requesting judgement](/img/identity/08.jpg)
 
@@ -91,7 +110,7 @@ To "waiting":
 
 ![A pending identity](/img/identity/09.jpg)
 
-At this point, direct contact with the registrar is required. Each registrar will have their own set of procedures to verify your identity and values, and only once you've satisfied their requirements will the process continue.
+At this point, direct contact with the registrar is required - the contact info is in their identity as shown above. Each registrar will have their own set of procedures to verify your identity and values, and only once you've satisfied their requirements will the process continue.
 
 Once the registrar has confirmed the identity, a green checkmark should appear with the appropriate confidence level:
 
@@ -119,4 +138,4 @@ Note that a deposit of 2.5KSM is required for every sub-account.
 
 Clearing is done through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics).
 
-**Killing:** The council can kill an identity that it deems erroneous. This results in a slash of the deposit.
+**Killing:** The Council can kill an identity that it deems erroneous. This results in a slash of the deposit.
