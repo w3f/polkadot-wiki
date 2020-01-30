@@ -30,7 +30,7 @@ The rendering of such custom values is, ultimately, up to the UI/dapp makers. In
 
 ![Raw values of custom fileds are available on-chain](/img/identity/05.jpg)
 
-It is up to your own UI or dapp to then do with this data as it pleases. The data will remain available for querying via RPC calls, so you don't have to rely on the PolkadotJS UI.
+It is up to your own UI or dapp to then do with this data as it pleases. The data will remain available for querying via the Polkadot API, so you don't have to rely on the PolkadotJS UI.
 
 You can have a maximum of 100 custom fields.
 
