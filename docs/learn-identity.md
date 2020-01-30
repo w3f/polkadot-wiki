@@ -8,7 +8,7 @@ Polkadot provides a naming system that allows participants to add personal infor
 
 ## Setting an Identity
 
-Users can register some default fields like legal name, display name, website, Twitter handle, Riot handle, etc. along with extra, custom fields for which they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain - 10 per identity, and 2.5 KSM per each field beyond the legal name. These funds are locked and not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of information, so the data must be less than that. When inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
+Users can register some default fields like legal name, display name, website, Twitter handle, Riot handle, etc. along with extra, custom fields for which they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain - 10 KSM per identity, and 2.5 KSM per each field beyond the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of information, so the data must be less than that. When inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
 The easiest way to add the built-in fields is to click the gear icon next to one's account and select "Set on-chain identity".
 
@@ -18,7 +18,7 @@ A popup will appear, offering the default fields.
 
 ![Identity field setup popup](/img/identity/02.jpg)
 
-To add custom fields beyond the default ones, use the Extrinsics UI to submit a raw transaction by first clicking "Add Item" and adding any field you desire. The example below adds a field `steam` which is a user's [Steam](https://store.steampowered.com) username. The first value is the field name in bytes ("steam") and the second is the account name in bytes ("theswader"). The display name also has to be provided, otherwise the Identity pallet would consider it wiped if we submitted it with the "None" option still selected. That is to say, every time you make a change to your identity values, you need to re-submit the entire set of fields: the write operation is always "overwrite", never "append".
+To add custom fields beyond the default ones, use the Extrinsics UI to submit a raw transaction by first clicking "Add Item" and adding any field name you like. The example below adds a field `steam` which is a user's [Steam](https://store.steampowered.com) username. The first value is the field name in bytes ("steam") and the second is the account name in bytes ("theswader"). The display name also has to be provided, otherwise the Identity pallet would consider it wiped if we submitted it with the "None" option still selected. That is to say, every time you make a change to your identity values, you need to re-submit the entire set of fields: the write operation is always "overwrite", never "append".
 
 ![Setting a custom field](/img/identity/03.jpg)
 
@@ -30,13 +30,13 @@ The rendering of such custom values is, ultimately, up to the UI/dapp makers. In
 
 ![Raw values of custom fileds are available on-chain](/img/identity/05.jpg)
 
-It is up to your own UI or dapp to then do with this data as it pleases. The data will remain available for querying via RPC calls, so you don't have to rely on the PolkadotJS UI.
+It is up to your own UI or dapp to then do with this data as it pleases. The data will remain available for querying via the Polkadot API, so you don't have to rely on the PolkadotJS UI.
 
 You can have a maximum of 100 custom fields.
 
 ### Format Caveat
 
-Please note the following caveat: because the fields support different formats, from raw bytes to various hashes, a UI has no way of telling how to encode a given field it encounters. The PolkadotJS UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these values readable on screen. However, given that there are no restrictions on the values that can be placed into these fields, a different UI may be equipped to expect them all to be IPFS hashes only. This means any field stored as raw bytes will become unreadable by that specific UI. As field standards crystallize, things will become easier to use but for now, every custom implementation of displaying user information will likely have to make a conscious decision on the approach to take, or support multiple formats and then attempt multiple encodings until the output makes sense.
+Please note the following caveat: because the fields support different formats, from raw bytes to various hashes, a UI has no way of telling how to encode a given field it encounters. The PolkadotJS UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these values readable on screen. However, given that there are no restrictions on the values that can be placed into these fields, a different UI may interpret them as, for example, IPFS hashes or encoded bitmaps. This means any field stored as raw bytes will become unreadable by that specific UI. As field standards crystallize, things will become easier to use but for now, every custom implementation of displaying user information will likely have to make a conscious decision on the approach to take, or support multiple formats and then attempt multiple encodings until the output makes sense.
 
 ## Registrars
 
@@ -50,7 +50,7 @@ To become a registrar, submit a pre-image and proposal into Democracy, then wait
 
 Here's how to submit a proposal to become a registrar:
 
-Go to Democracy, select Submit preimage, and input the information for this motion - notably which account you're nominating to be a registrar in the `identity.setRegistrar` function.
+Go to the Democracy tab, select "Submit preimage", and input the information for this motion - notably which account you're nominating to be a registrar in the `identity.setRegistrar` function.
 
 ![Setting a registrar](/img/identity/12.jpg)
 
@@ -112,11 +112,11 @@ To "waiting":
 
 At this point, direct contact with the registrar is required - the contact info is in their identity as shown above. Each registrar will have their own set of procedures to verify your identity and values, and only once you've satisfied their requirements will the process continue.
 
-Once the registrar has confirmed the identity, a green checkmark should appear with the appropriate confidence level:
+Once the registrar has confirmed the identity, a green checkmark should appear next to your account name with the appropriate confidence level:
 
 ![A confirmed identity](/img/identity/10.jpg)
 
-_Note that changing even a single field's value after you've been verified will un-verify your account and you need to start the judgement process anew, but you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
+_Note that changing even a single field's value after you've been verified will un-verify your account and you will need to start the judgement process anew.  However, you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
 
 ## Sub Accounts
 
