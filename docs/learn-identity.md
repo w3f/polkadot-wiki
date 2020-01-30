@@ -97,7 +97,7 @@ Once the registrar has confirmed the identity, a green checkmark should appear w
 
 ![A confirmed identity](/img/identity/10.jpg)
 
-_Note that changing even a single field's value after you've been verified will un-verify your account and you need to start the judgement process anew, but you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
+_Note that changing even a single field's value after you've been verified will un-verify your account and you will need to start the judgement process anew.  However, you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
 
 ## Sub Accounts
 
