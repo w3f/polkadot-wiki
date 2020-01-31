@@ -100,13 +100,9 @@ sidebar_label: Links
 - [Parity Bridge](https://github.com/paritytech/parity-bridge) - Bridge between any two ethereum-based networks.
 
 ## Running a node
-- [Polkadot UI](learn-UI) - Get started on the testnet.
-- [Install Kusama](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) - Install Polkadot's client and connect to the Kusama canary network.
-- [Install PoC-4](https://github.com/paritytech/polkadot#23-install-poc-4-on-alexander-testnet) - Install Polkadot's client and connect to the global PoC-4 testnet, Alexander.
-- [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
-- [Get testnet DOTS](learn-DOT#getting-testnet-dots) \- Receive the native testnet token.
-- [Deploy a Parachain](https://github.com/paritytech/polkadot/wiki/Parachains) \- Deploy a blockchain on the testnet.
 
+- [Install Kusama](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) - Install Polkadot's client and connect to the Kusama canary network.
+- [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
 
 ### UI and explorers
 
