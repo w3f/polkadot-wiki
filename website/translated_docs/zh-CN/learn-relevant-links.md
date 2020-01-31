@@ -100,13 +100,9 @@ sidebar_label: 链接
 - [Parity 桥](https://github.com/paritytech/parity-bridge)-任意两个基于以太坊的网络之间的转接桥。
 
 ## 运行节点
-- [ Polkadot 用户界面](learn-UI)-在测试网上开始使用。
-- [安装 Kusama ](https://github.com/paritytech/polkadot#22-install-kusama-canary-network)-安装 Polkadot 的客户端并连接到 Kusama 金丝雀网络。
-- [安装 PoC-4 ](https://github.com/paritytech/polkadot#23-install-poc-4-on-alexander-testnet)-安装 Polkadot 的客户端并连接到 PoC -4 测试网，Alexander。
-- [Substrate 节点](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) -在 Dry-Danta 测试网上安装并运行 Substrate 节点。
-- [获取测试网的 DOTS ](learn-DOT#getting-testnet-dots) - 接收测试代币。
-- [部署平行链](https://github.com/paritytech/polkadot/wiki/Parachains) - 在测试网上部署区块链。
 
+- [Install Kusama](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) - Install Polkadot's client and connect to the Kusama canary network.
+- [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
 
 ### 用户界面与浏览器
 
