@@ -96,17 +96,24 @@ electorate -网络中 DOT 的总数
 
 ##### Super-Majority Approve
 
-`Positive turnout bias`，即在投票率低的情况下，需要大量多赞成数票才能通过，但是当投票率增加到100％时，投票者将变成简单多数票，如下所示。 $${against \over \sqrt{voters}} < {approve \over \sqrt{electorate}}$$
+A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{voters}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
-`Negative turnout bias`，其中低投票率底下要求大量否决票才能否决，但当投票率增加到100％时，它变成了如下所示的简单多数票。 $${against \over \sqrt{electorate}} < {approve \over \sqrt{voters}}$$
+A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{voters}})
+
 
 ##### Simple-Majority
 
-多数票通过，简单比较一下选票，如果赞成票多于反对票，那么提案通过。$${approve} > {against}$$
+Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
 
-*要详细了解上述公式的来源，请阅读[民主模块](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs) *。
+![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
+
+*To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
 
 ```
 例子:
@@ -131,68 +138,68 @@ voters = 1050
 electorate = 1500
 ```
 
-$${450\over\sqrt{1050}} < {600 \over \sqrt{1500}}$$
+![\Large \frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}})
 
-$${13.887} < {15.492}$$
+![\Large {13.887}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{13.887}&space;<&space;{15.492})
 
-根据以上结果，该提案将获得批准。 此外，只有获胜选民的代币才被锁定，这意味着如果该公投损害了网络，那么投票反对该网络的人可以立即取回他们锁定的代币。 在提案生效之前，他们可以退出网络并向市场出售其代币。 而且，获胜的提议只有在一些冷却期之后才自主执行。
+Based on the above result, the proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 
 #### 自愿锁定
 
-Polkadot利用称为`自愿锁定`的想法，允许代币持有者通过声明愿意锁定其DOT的时间来增加其投票权，因此，每个代币持有者的最大投票数将是通过以下公式计算:
+Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
 ```
 票数 = 代币 * 时间
 ```
 
-根据当前的测试网设置，最大锁定周期数设置为6。
+Based on the current testnet setting, the maximum number of lock periods is set to 6.
 
-**每个周期需要2周，这意味着最长的锁定时间为12周。**
+**Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
 
 #### Adaptive Quorum Biasing
 
-Polkadot引入了"Adaptive Quorum Biasing"概念，作为议会可以用来更改在提案中没有明确多数的情况下使提案更容易或更困难地通过。
+Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
 
 ![](assets/governance/adaptive-quorum-biasing.png)
 
-让我们以上面的图片为例。
+Let's use the above image as an example.
 
-如果公开提交的公投只有25％的投票率，"aye"(赞成)票数必须达到66％才能通过，那是因为我们应用了` Positive Turnout Bias `。
+If there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the `Positive Turnout Bias`.
 
-相反，当投票率达到75％时，"赞成"票总数必须达到54％，这意味着随着更多代币持有人对全民投票，那么所需的多数将随着投票率的增加而减少。
+In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the super-majority required decreases as the turnout increases.
 
-当议会提交的是提案是通过一致同意，公投将会采用 "Negative Turnout Bias"。在这种情况下，当投票率较低时，通过此提案会比较容易，并且需要绝大多数才能否决。 随着来越多代币持有人参与投票，这将会走向简单多数决。
+When the council proposes a new proposal through unanimous consent, the referendum would be put to a vote using "Negative Turnout Bias." In this case it is easier to pass this proposal with low turn-out and requires a super-majority to reject. As more token holders participate in voting the bias approaches a plain majority carries.
 
-根据以上图片，当公投的投票率只有25％时，"赞成"票数必须达到34％才能通过该提案。
+Referring to the above image, when the referenda only has 25% turnout, the tally of "aye" votes has to reach 34% for it to accept.
 
-简而言之，当投票率低时，需要超级多数人投"反对"才能否决该提案，这意味着必须是较少的"赞成"票，但是当投票率增加到100％时，这变得很简单多数制。
+In short, when turnout rate is low, a super-majority is required to reject the proposal, which means a lower threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
-这三种统计计票机制 - 多数通过，超级多数赞成和超级多数反对票 - 等同于当100％投票率的简单多数通过的制度。
+All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
 
 ## 议会
 
-为了代表被动的利益相关者，我们介绍了“议会”的概念。 议会是一个链上实体，包括多个参与者，每个参与者代表一个链上账户。 对于Polkadot来说，这个数字可能会从大约6个人开始，并在9个月的过程中增加到24个人(大约每两周增加一个人)。 通常，它有固定数量的席位(Polkadot的席位预计为24个)，所有成员的任期固定(12个月)。
+To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain entity comprising a number of actors each represented as an on-chain account. For Polkadot this number is likely to begin at around six people, and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). In general it has a fixed number of seats (envisioned to be 24 for Polkadot) and all members have a fixed term (12 months).
 
-议会主要负责两项管理任务：提出明智的提案，以及取消毫无争议的危险或恶意的提案。
+The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
 
-由议会提出的提案，必须有绝大多数成员赞成，并且没有成员行使否决权。 成员对任何单个提案只能行使一次否决权； 如果在冷静期之后重新提交了提案，则他们可能不会第二次否决该提案。 在所有成员都投票赞成的情况下，该投票被认为是一致的，被认为是没有争议的。
+For a referendum to be proposed by the council, a strict majority of members must be in favor, with no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal; if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In the case that all members vote in favor, the vote is considered unanimous and is treated as uncontroversial.
 
-要取消全民投票，必须获得一致通过。 由于一致要求很高，因此可以预期只有在完全无争议的举动时才使用此措施。 如果全天候提案中发现一个问题，例如提案将提出的运行时代码中的错误，则这可能是最后手段。
+For a referendum to be cancelled, there must be a unanimous vote to do so. Since unanimity is a high requirement, it is expected that this measure will only be used when it is an entirely uncontroversial move. This may function as a last-resort if there is an issue found late in the day with a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
-如果取消的争议足够大，以至于至少有一个反对者，那么将由利益相关者*全体*来决定提案的命运。
+If the cancellation is controversial enough that there is at least one dissenter, then it will be left to the stakeholders *en masse* to determine the fate of the proposal.
 
 ### 如何成为议会成员?
 
 ![](assets/governance/approval-vote.png)
 
- 一开始议会将有6至12个位置。所有利益相关者可自由表示赞成任何已登记的候选人。每两周其中一个席位将从选举产生，并在9个月内增加到24人(大约每两周增加一人)。所有成员都有固定期限(1 年)。议会成员可以通过公投提前罢免。
+ At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
 
-为了选新的议会成员，Polkadot 使用 `同意投票 (approval voting)` 方法来允许代币持有人选择他们想要支持的候选人名单，并且权重相等，而获得票数最多的候选人赢得选举，而最高的 N 名亚军仍保留在下次选举的候选人名单上。
+To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election.
 
-基本上，为了代替一人一票，[Approval voting(同意投票)](https://en.wikipedia.org/wiki/Approval_voting) 是表达他们观点的一种更具表达力的方式。 代币持有人可以将其视为布尔投票，以支持他们尽可能多的候选人。
+As opposed to a "first past the post", where voters must decide only on a single candidate chosen from a list, [approval voting](https://en.wikipedia.org/wiki/Approval_voting) is a more expressive way to indicate voters' views. Token holders can treat it as Boolean voting to support as many candidates as they want.
 
-让我们看下面的例子。
+Let's take a look at the example below.
 
 |    第一轮    |   |         |   |   |   |
 |:---------:|:-:|:-------:|:-:|:-:|:-:|
@@ -204,7 +211,7 @@ Polkadot引入了"Adaptive Quorum Biasing"概念，作为议会可以用来更�
 |  Kelvin   | X |         | X |   |   |
 |  **总数**   | 2 |    1    | 3 | 2 | 2 |
 
-上面的例子显示，候选人C在第一轮选举中获胜，而候选人A，B，D & E仍保留在下一轮候选人名单上。
+The above example shows that candidate C wins the election in round 1, while candidate A, B, D & E keep remaining on the candidates' list for the next round.
 
 |    第二轮    |   |         |   |   |
 |:---------:|:-:|:-------:|:-:|:-:|
@@ -216,15 +223,15 @@ Polkadot引入了"Adaptive Quorum Biasing"概念，作为议会可以用来更�
 |  Kelvin   | X |    X    |   |   |
 |  **总数**   | 4 |    4    | 1 | 1 |
 
-对于前N名(例如本示例中为4名)的亚军，他们可以保留并保持投票直到下一次选举。 在第2轮之后，即使候选人A & B在本轮中获得相同的票数，候选人A也被选出，因为在加上一轮的票数后，它比B高。
+For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 
-这将是最初 Polkadot 的临时治理设置。如果在第三方审核之后发现任何安全漏洞，它将被更改。
+This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
 ## 技术委员会
 
-在[ Kusama 推出和治理帖子](https://polkadot.network/kusama-rollout-and-governance/)中介绍了技术委员会。作为 Kusama 的三个会议厅之一的议院（以及议会和公民投票会议厅）。 技术 委员会由成功实施或指定 Polkadot / Kusama runtime 或 runtime 环境。 在议会的简单多数表决中，从技术委员会中添加或删除团队。
+The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
 
-技术委员会可以与 Polkadot 议会一起提出紧急公民投票，使快速进行表决和执行。紧急公投仅在紧急情况下使用。
+The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 
 ## [DOT 的用途](learn-DOT#dots-for-governance)
 
