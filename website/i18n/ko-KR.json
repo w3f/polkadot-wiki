@@ -177,10 +177,6 @@
         "title": "재무관리",
         "sidebar_label": "재무관리"
       },
-      "learn-UI": {
-        "title": "폴카닷 UI",
-        "sidebar_label": "폴카닷 UI"
-      },
       "learn-wasm": {
         "title": "웹어셈블리 (WASM; Web Assembly)",
         "sidebar_label": "웹어셈블리 (WASM; Web Assembly)"
