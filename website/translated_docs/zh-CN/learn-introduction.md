@@ -4,17 +4,27 @@ title: Polkadot
 sidebar_label: Polkadot
 ---
 
-Polkadot是一种异构多链技术。 它由中继链，平行链和到其他网络的转接桥组成。中继链负责在平行链之间达成共识和输送交易。 平行链是独立的区块链，并具有自己的状态转换，可以收集和处理交易，同时接入中继链的安全性。 转接桥允许 Polkadot 网络与其它非直接支持的区块链相互操作。
+Polkadot is a sharded blockchain based on the thesis that the world will have several blockchains that need to interact. Polkadot unites scalability, interoperability, and security.
 
 ## 为什么是 Polkadot？
 
-Polkadot is built to connect private or consortium chains, public and permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
+Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a secure, trust-free environment.
 
-通过连接这些点，我们可以开发真正的去中心化网络，作为创建 Dapps 和服务生态系统的基础构建块，这些 Dapps 和服务生态系统将为共同利益分配权力和公平。
+Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet where independent blockchains can exchange information under common security guarantees.
+
+Polkadot is a living network with the core pillars of governance and upgradability. The network has an advanced suite of governance tools and, using the WebAssembly standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your growing needs without the risks of network forks.
+
+By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users control their data and are not limited by trust bounds within the network.
 
 ## 什么是 Polkadot？
 
-Polkadot 是一个协议，允许独立的区块链交换信息。 Polkadot 是跨链间区块链协议，与互联网消息传递协议（例如TCP/IP）不同，它还强制执行链之间消息的次序和有效性。通过为多个状态机创建通用环境，这种互操作性还带来了可伸缩性的其它好处。
+The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)" - in the network have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm, then it can connect to the Polkadot network as a parachain.
+
+Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, collators don't have any security responsibilities, and thus do not require a robust incentive system.
+
+In order to interact with chains that want to use their own finalization process (e.g. Bitcoin), Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
+
+The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
 
 ## 深入了解
 
