@@ -4,17 +4,27 @@ title: Polkadot
 sidebar_label: Polkadot
 ---
 
-Polkadot is a heterogeneous multi-chain technology. It consists of the relay chain, parachains, and bridges to other networks. The relay chain is responsible for achieving consensus and transaction delivery among parachains. Parachains are independent blockchains with their own state transitions that gather and process transactions while plugging in to the security of the relay chain. Bridges allow the Polkadot network to make it interoperable with other blockchains not built to natively support it.
+Polkadot is a sharded blockchain based on the thesis that the world will have several blockchains that need to interact. Polkadot unites scalability, interoperability, and security.
 
 ## Why Polkadot?
 
-Polkadot is built to connect private or consortium chains, public and permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
+Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a secure, trust-free environment.
 
-By connecting these dots, we allow for the development of a truly decentralized web, serving as a foundational building block for the creation of an ecosystem of Dapps and services that will distribute power and equity for the common good.
+Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet where independent blockchains can exchange information under common security guarantees.
+
+Polkadot is a living network with the core pillars of governance and upgradability. The network has an advanced suite of governance tools and, using the WebAssembly standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your growing needs without the risks of network forks.
+
+By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users control their data and are not limited by trust bounds within the network.
 
 ## What Is Polkadot?
 
-Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This interoperability also allows the additional benefit of scalability by creating a general environment for multiple state machines.
+The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)" - in the network have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm, then it can connect to the Polkadot network as a parachain.
+
+Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, collators don't have any security responsibilities, and thus do not require a robust incentive system.
+
+In order to interact with chains that want to use their own finalization process (e.g. Bitcoin), Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
+
+The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
 
 ## Digging deeper
 
