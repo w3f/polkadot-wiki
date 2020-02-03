@@ -177,10 +177,6 @@
         "title": "财政库",
         "sidebar_label": "财政库"
       },
-      "learn-UI": {
-        "title": "Polkadot UI",
-        "sidebar_label": "Polkadot UI"
-      },
       "learn-wasm": {
         "title": "WebAssembly (Wasm)",
         "sidebar_label": "WebAssembly (Wasm)"

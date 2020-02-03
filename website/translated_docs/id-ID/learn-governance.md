@@ -96,15 +96,22 @@ electorate - the total number of DOTs tokens issued in the network
 
 ##### Super-Majority Approve
 
-A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below. $${against \over \sqrt{voters}} < {approve \over \sqrt{electorate}}$$
+A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{voters}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
-A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below. $${against \over \sqrt{electorate}} < {approve \over \sqrt{voters}}$$
+A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{voters}})
+
 
 ##### Simple-Majority
 
-Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried. $${approve} > {against}$$
+Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
 *To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
 
@@ -131,9 +138,9 @@ voters = 1050
 electorate = 1500
 ```
 
-$${450\over\sqrt{1050}} < {600 \over \sqrt{1500}}$$
+![\Large \frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}})
 
-$${13.887} < {15.492}$$
+![\Large {13.887}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{13.887}&space;<&space;{15.492})
 
 Based on the above result, the proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 
