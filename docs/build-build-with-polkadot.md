@@ -36,8 +36,8 @@ Wasm interpreter. An in-development extension to Substrate called Cumulus will a
 connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, which settled its API for the time
 being.
 
-Substrate chains can include smart contract functionality by using the provided [contracts runtime module from the SRML](https://github.com/paritytech/substrate/tree/master/srml/contracts).
-This module allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users.
+Substrate chains can include smart contract functionality by using the provided [contracts Frame pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
+This pallet allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users.
 To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built
 in Rust that is intended for writing smart contracts.
 
@@ -131,7 +131,7 @@ multiple [implementations](learn-implementations.md) of the Polkadot runtime env
 
 Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for blockchain innovators
 that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins
-from which you can compose your chain logic and allows you to write your own modules to use or publish to the community.
+from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
 The best way to get started with Substrate is to explore the [Substrate Development Hub](https://substrate.dev), an online
 resource built and maintained by Parity Technologies.
@@ -201,8 +201,7 @@ blockchains, there will be parachains that do.
 
 Already Parity Technologies has laid much of the groundwork for an out-of-the-box solution for parachains that want to
 include smart contract functionality. The Substrate
-[contract](https://github.com/paritytech/substrate/tree/master/srml/contracts) module in the core SRML will support
-smart contracts that are compiled to Wasm.
+[contract](https://github.com/paritytech/substrate/tree/master/frame/contracts) Frame pallet will support smart contracts that are compiled to Wasm.
 
 In order to develop a smart contract that compiles to Wasm, an appropriate language is also needed. For this, Parity
 has been working on a domain specific language called [Ink](#ink).
@@ -236,7 +235,7 @@ as guideposts to writing more complex logic which will be deployable on smart co
 Ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and
 compatible with Substrate chains.
 
-Substrate includes a contract module that includes the core logic needed for a smart contract chain. Along these lines,
+Substrate includes a contract pallet that includes the core logic needed for a smart contract chain. Along these lines,
 ink! will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and
 supports compilation to Wasm.
 
@@ -276,7 +275,7 @@ also keep up to date with the following links:
 
 - [Edgeware](https://edgewa.re).
 - [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
-- [Substrate contracts module](https://github.com/paritytech/substrate/tree/master/srml/contracts).
+- [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
 
 ## Conclusion
 
