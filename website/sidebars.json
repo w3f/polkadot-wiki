@@ -116,6 +116,14 @@
       },
       {
         "type": "subcategory",
+        "label": "Nodes and Dapps",
+        "ids": [
+          "maintain-sync",
+          "maintain-wss"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Nominator",
         "ids": [
           "maintain-nominator",
