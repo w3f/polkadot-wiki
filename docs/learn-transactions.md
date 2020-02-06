@@ -6,25 +6,27 @@ sidebar_label: Transaction Types and Metering
 
 Depending on the pallets installed in a [Substrate](https://substrate.dev)-based chain like Polkadot or Kusama, different transactions are possible within the system. For example, one can propose referenda in the Governance pallet, verify identities in the Identities pallet, send tokens through the Balances pallet, shout remarks into the chain through the System pallet, and more. 
 
-Batching these transactions into blocks cannot work based on size like it does in a blockchain like Bitcoin's because smaller transactions might require more computation and vice versa - it's all about their effect. These transactions also do not happen on a smart contract platform (as smart contracts are not a first-class citizen of Substrate-based chains), so there is no concept of gas to meter transactions with.
+Batching these transactions into blocks cannot work based on size like it does in a blockchain like Bitcoin's because smaller transactions might require more computation and vice versa - it's all about their computational effect. These transactions also do not happen on a smart contract platform (as smart contracts are not a first-class citizen of Substrate-based chains), so there is no concept of gas to meter transactions with.
 
 To seemingly complicate matters further, there are parachain transactions (within the parachain, as well as parachain-to-relay-chain), parathread transactions, and smart contract transactions in a smart contract pallet like the EVM pallet or the Ink pallet. This document will explain how it all fits together and how we meter transactions in Polkadot.
 
 ## Metering Extrinsics with Weight
 
-Extrinsics are user-initiated transactions: "inputs from the outside world". Extrinsics have *size*.
+Extrinsics are user-initiated transactions: "inputs from the outside world". Extrinsics have *length* or *size*.
 
-Transactions are the consequence of extrinsics. Transactions have *weight*.
+Transactions are the consequence of extrinsics. Transactions often have *weight*.
 
 A block in Kusama is limited to [1 billion weight](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/lib.rs#L53) or to [5 MB](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/lib.rs#L55), whichever limit is hit first. These parameters _may_ change for Polkadot mainnet.
 
-Every transaction in the runtime code [has a weight declaration](https://github.com/paritytech/substrate/blob/922b36c8eb6d971fbe2b72d69099a291a368ea25/frame/sudo/src/lib.rs#L122):
+Most transactions in the runtime code [have a weight declaration](https://github.com/paritytech/substrate/blob/922b36c8eb6d971fbe2b72d69099a291a368ea25/frame/sudo/src/lib.rs#L122):
 
 ![The sudo function has a weight of 50000](/img/tx/01.jpg)
 
-The example above shows that the `sudo` function in the `sudo` pallet has a weight of 50000.
+The example above shows that the `sudo` function in the `sudo` pallet has a weight of 50000. Some transactions are free, meaning they carry no weight and only pay the base transaction fee as calculated by the system.
 
-These limits apply only to blocks on the Relay Chain, and not to parachains or parathreads (see below).
+Another important parameter exists: [`AvailableBlockRatio`](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/lib.rs#L54). This parameter indicates how much of the block's weight or length is reserved for `Operational` transactions - transactions that are necessary for the Relay Chain to run reliably at all (these can be related to nominating, governance, fishermen reporting illegal activity, etc.) If this ratio is 75%, that means 25% is reserved for Operational transactions.
+
+The weight and size limits apply only to blocks on the Relay Chain, and not to parachains or parathreads (see below).
 
 ## Parachain Transactions
 
