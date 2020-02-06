@@ -173,6 +173,10 @@
         "title": "Staking",
         "sidebar_label": "Staking"
       },
+      "learn-transactions": {
+        "title": "Transaction Types and Metering",
+        "sidebar_label": "Transaction Types and Metering"
+      },
       "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
