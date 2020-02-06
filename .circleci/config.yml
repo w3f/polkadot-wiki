@@ -20,16 +20,6 @@ jobs:
             yarn start
 
       - run:
-          name: wait website up
-          command: |
-            apt update && apt install -y netcat
-            while ! nc -z localhost 3000; do
-              sleep 1
-              echo waiting for website up...
-            done
-
-
-      - run:
           name: check links
           command: |
             pip install pylinkvalidator html5lib
