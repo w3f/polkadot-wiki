@@ -113,7 +113,7 @@ Majority-carries, a simple comparison of votes, if there are more aye votes than
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
-*To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
+*To know more about where these above formulas come from, please read the [democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs)*.
 
 ```
 Example:
@@ -240,5 +240,5 @@ The Technical Committee can, along with the Polkadot Council, produce emergency 
 
 ## Resources
 
-- [Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
-- [Democracy Module](https://github.com/paritytech/substrate/tree/master/srml/democracy/src)
+- [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
+- [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
