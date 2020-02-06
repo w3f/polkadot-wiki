@@ -3,7 +3,7 @@ version: 2
 jobs:
   check-links:
     docker:
-      - image: nikolaik/python-nodejs:python3.8-nodejs10
+      - image: web3f/link-checker:v0.1.0
     steps:
       - checkout
       - run:
@@ -18,14 +18,14 @@ jobs:
           command: |
             cd website
             yarn start
+            while ! nc -z localhost 3000; do
+              sleep 1
+              echo waiting for website up...
+            done
 
       - run:
           name: check links
           command: |
-            pip install pylinkvalidator html5lib
-
-            sed -i -e 's/\(decode("ascii")\)/\1.replace(" ", "%20")/g' /usr/local/lib/python3.8/site-packages/pylinkvalidator/urlutil.py
-
             pylinkvalidate.py --parser=html5lib -P http://localhost:3000
 
   deploy-website:
