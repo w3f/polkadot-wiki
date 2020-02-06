@@ -18,6 +18,10 @@ jobs:
           command: |
             cd website
             yarn start
+
+      - run:
+          name: wait website up
+          command: |
             while ! nc -z localhost 3000; do
               sleep 1
               echo waiting for website up...
