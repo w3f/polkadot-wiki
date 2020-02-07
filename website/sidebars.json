@@ -35,7 +35,6 @@
         "ids": [
           "build-exchange-integration",
           "build-examples-index",
-          "build-deploy-parachains",
           "build-hackathon"
         ]
       }
