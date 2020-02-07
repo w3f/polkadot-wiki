@@ -89,6 +89,7 @@
         "type": "subcategory",
         "label": "Polkadot Comparisons",
         "ids": [
+          "learn-comparisons-ethereum-2",
           "learn-comparisons-cosmos",
           "learn-comparisons-dfinity",
           "learn-comparisons"

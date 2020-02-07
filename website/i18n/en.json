@@ -82,15 +82,19 @@
         "sidebar_label": "Bridges"
       },
       "learn-comparisons-dfinity": {
-        "title": "Dfinity and Polkadot",
+        "title": "Polkadot and Dfinity",
         "sidebar_label": "Dfinity"
       },
+      "learn-comparisons-ethereum-2": {
+        "title": "Polkadot and Ethereum 2.0",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
-        "title": "Design Comparison",
+        "title": "Polkadot and Cosmos",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "Polkadot comparisons",
+        "title": "Polkadot Comparisons",
         "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
