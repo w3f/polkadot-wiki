@@ -6,29 +6,19 @@ sidebar_label: Other comparisons
 
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular chains.
 
+## [Ethereum 2.0](learn-comparisons-ethereum-2)
+
 ## [Cosmos](learn-comparisons-cosmos)
 
 ## [Dfinity](learn-comparisons-dfinity)
 
-## Ethereum
+## Ethereum 1.x
 
-[Ethereum](https://ethereum.org) is a smart contract platform blockchain which allows for general computation to be deployed on-chain and operated across the p2p network.
+[Ethereum](https://ethereum.org) is a smart contract platform blockchain that allows for general computation to be deployed on-chain and operated across the p2p network. Ethereum 1.x refers to the current Ethereum release (at the time of writing at the Muir Glacier hard fork) and the immediately planned future upgrades.
 
-### Ethereum 1.x
+The difference between Ethereum 1.x and Polkadot is quite large. Ethereum is a single chain that allows developers to extend its functionality through the deployment of blobs of code onto the chain (called smart contracts). Polkadot, as described in the whitepaper, is a fully extensible and scalable blockchain network that provides security and interoperability through shared state.
 
-Ethereum 1.x refers to the current Ethereum release (at the time of writing at the Constantinople hard fork) and the immediately planned future upgrades.
-
-The difference between the current Ethereum and Polkadot is quite large. Ethereum is a single chain which allows developers to extend its functionality through the deployment of blobs of code onto the chain (called smart contracts). Polkadot, as described in the whitepaper, is a fully extensible and scalable blockchain development, deployment and interaction test bed. It aims to be able to assimilate new blockchains, high-frequency chains, and even consortium chains with ease.
-
-In practical terms, this means that the layer of abstraction between these two projects is remarkably different for developers. While in Ethereum developers code to deploy in a permissionless environment where smart contracts can interoperate seamlessly, this is not the case in Polkadot. Rather, Polkadot development currently takes the form as Substrate runtime modules, which are simply Wasm blobs which dictate the entire logic for the chain State Transition Function (STF).
-
-### Ethereum 2.0
-
-Ethereum 2.0 refers to the planned Ethereum sharded chain which is currently being implemented and exists in the [spec](https://github.com/ethereum/eth2.0-specs/tree/0.4.0).
-
-On the surface, it may appear that the Eth2.0 spec for the beacon chain and shard chains is comparable to the Polkadot relay chain and parachains. However, a key distinction is that Eth2.0 shards are _homogeneous_ while Polkadot parachains are _heterogeneous_. This means that in Polkadot there is much more flexibility in the logic of the chain which can share the security with the Polkadot network, while Eth2.0 shards all are strictly the same logic.
-
-The Eth2.0 beacon chain uses LMD (Latest Message-Driven) GHOST as its fork-choice rule while Polkadot relay chain uses BABE for block production and GRANDPA as its finality gadget.
+In practical terms, this means that the layer of abstraction between these two projects is remarkably different for developers. In Ethereum, developers write smart contracts that all execute on a single virtual machine. In Polkadot, however, developers write their logic into individual blockchains, where the interface is part of the state transition function of the blockchain itself. Polkadot will also support smart contract blockchains for Wasm and EVM to provide compatibility with existing contracts.
 
 ## Tezos
 

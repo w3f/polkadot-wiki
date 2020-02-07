@@ -85,6 +85,10 @@
         "title": "Dfinity and Polkadot",
         "sidebar_label": "Dfinity"
       },
+      "learn-comparisons-ethereum-2": {
+        "title": "Design Comparison",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
         "title": "Design Comparison",
         "sidebar_label": "Cosmos"
