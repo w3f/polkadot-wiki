@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-dfinity
-title: Dfinity and Polkadot
+title: Polkadot and Dfinity
 sidebar_label: Dfinity
 ---
 

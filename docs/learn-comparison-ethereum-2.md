@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-ethereum-2
-title: Design Comparison
+title: Polkadot and Ethereum 2.0
 sidebar_label: Ethereum 2.0
 ---
 

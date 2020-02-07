@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons
-title: Polkadot comparisons
+title: Polkadot Comparisons
 sidebar_label: Other comparisons
 ---
 
