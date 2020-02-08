@@ -57,8 +57,6 @@ workflows:
             tags:
               only: /.*/
       - deploy-website:
-          requires:
-            - check-links
           filters:
             branches:
               only: master
