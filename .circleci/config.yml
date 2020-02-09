@@ -30,7 +30,7 @@ jobs:
       - run:
           name: check links
           command: |
-            pylinkvalidate.py --parser=html5lib -P http://localhost:3000/docs/en -d 0
+            pylinkvalidate.py --parser=html5lib -P http://localhost:3000/docs/en/ -d 0
 
   deploy-website:
     docker:
