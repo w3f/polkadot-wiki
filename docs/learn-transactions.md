@@ -59,4 +59,4 @@ There are four types of transactions:
 1. Relay Chain transactions (from various pallets like governance, identity, etc.), metered by weight and block size.
 2. Parachain block transactions, always free and granted by placement in the parachain slot.
 3. Parathread block transactions, basic fee when no other threads in pool want to write, auction when there's high demand for writes.
-4. Internal parathread / parachain transactions (including smart contracts): completely local and dependent on whatever the chain designers decide, these do not bleed into Relay Chain economics in any way
+4. Internal parathread / parachain transactions (including smart contracts): completely local and dependent on whatever the chain designers decide, these do not bleed into Relay Chain economics in any way.
