@@ -14,7 +14,7 @@ In this guide we'll be using Ubuntu 18.04 hosted on a $10 DigitalOcean droplet. 
 
 Whether it's a generic Substrate node, a Kusama node, or your own private blockchain, they all default to the same websocket connection: port 9944 on localhost. For this example, we'll set up a Kusama sync node (non-validator).
 
-Create a new server on your provider of choice or locally at home (preferred). We'll assume you're using Ubuntu 18.04. Then install substrate and build the node.
+Create a new server on your provider of choice or locally at home (preferred). We'll assume you're using Ubuntu 18.04. Then install Substrate and build the node.
 
 ```bash
 curl https://getsubstrate.io -sSf | bash
