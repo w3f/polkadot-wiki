@@ -249,9 +249,17 @@
         "title": "Nominator",
         "sidebar_label": "Nominator"
       },
+      "maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
+      },
       "maintain-validator": {
         "title": "Validator",
         "sidebar_label": "Validator"
+      },
+      "maintain-wss": {
+        "title": "Set up Secure WebSocket for Remote Connections",
+        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
       },
       "news": {
         "title": "News",
