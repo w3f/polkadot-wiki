@@ -48,7 +48,7 @@ Transactions occurring on the parathread itself are, as with parachains, specifi
 
 ## Smart Contract Transactions
 
-Some chains (threads or full parachains) will include a smart contract pallet. This would let third parties develop applications on that chain without having to have native code commit access to that chain's runtime. Transactions within that smart contract pallet might need to be metered somehow as well.
+Some chains (threads or full parachains) will include a smart contract pallet. This would let third parties develop applications on that chain without having to have native code commit access to that chain's runtime. Transactions within that smart contract pallet will need to be metered or otherwise access-controlled to prevent spam and block fullness.
 
 Just like with parathreads and parachains, the smart contract transactions within a parathread or parachain are entirely local and do not affect any fee or metering calculation on the Relay Chain. The chain implementing the smart contract pallet can meter the transactions using its own design, or it can decide that no metering is necessary at all, or anything in between. The transaction fees and block sizes of the chain are up to the chain and its collators and a block produced by a thread or chain with a smart contract pallet will be like any other thread's or chain's block - as long as the state transition function of the chain offers the `execute_block` function for validators to execute and validate, the chain's internals are no business of the relay chain.
 
