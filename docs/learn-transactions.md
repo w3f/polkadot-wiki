@@ -22,7 +22,7 @@ Most transactions in the runtime code [have a weight declaration](https://github
 
 ![The sudo function has a weight of 50000](/img/tx/01.jpg)
 
-The example above shows that the `sudo` function in the `sudo` pallet has a weight of 50000. Some transactions are free, meaning they carry no weight and only pay the base transaction fee as calculated by the system.
+The example above shows that the `sudo` function in the `sudo` pallet has a weight of `50000`. Some transactions are free, meaning they carry no weight and only pay the base transaction fee as calculated by the system.
 
 Another important parameter exists: [`AvailableBlockRatio`](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/lib.rs#L54). This parameter indicates how much of the block's weight or length is reserved for `Operational` transactions - transactions that are necessary for the Relay Chain to run reliably at all (these can be related to nominating, governance, fishermen reporting illegal activity, etc.) If this ratio is 75%, that means 25% is reserved for Operational transactions.
 
