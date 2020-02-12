@@ -69,6 +69,10 @@
         "title": "Wiki Index",
         "sidebar_label": "Wiki Index"
       },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Kusama"
+      },
       "learn-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
@@ -279,7 +283,8 @@
       "Main": "Main",
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain": "Maintain",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {
