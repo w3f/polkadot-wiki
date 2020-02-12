@@ -22,7 +22,7 @@ Most transactions in the runtime code [have a weight declaration](https://github
 
 ![The sudo function has a weight of 50000](/img/tx/01.jpg)
 
-The example above shows that the `sudo` function in the `sudo` pallet has a weight of 50000. Some transactions are free, meaning they carry no weight and only pay the base transaction fee as calculated by the system.
+The example above shows that the `sudo` function in the `sudo` pallet has a weight of `50000`. Some transactions are free, meaning they carry no weight and only pay the base transaction fee as calculated by the system.
 
 Another important parameter exists: [`AvailableBlockRatio`](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/lib.rs#L54). This parameter indicates how much of the block's weight or length is reserved for `Operational` transactions - transactions that are necessary for the Relay Chain to run reliably at all (these can be related to nominating, governance, fishermen reporting illegal activity, etc.) If this ratio is 75%, that means 25% is reserved for Operational transactions.
 
@@ -48,7 +48,7 @@ Transactions occurring on the parathread itself are, as with parachains, specifi
 
 ## Smart Contract Transactions
 
-Some chains (threads or full parachains) will include a smart contract pallet. This would let third parties develop applications on that chain without having to have native code commit access to that chain's runtime. Transactions within that smart contract pallet might need to be metered somehow as well.
+Some chains (threads or full parachains) will include a smart contract pallet. This would let third parties develop applications on that chain without having to have native code commit access to that chain's runtime. Transactions within that smart contract pallet will need to be metered or otherwise access-controlled to prevent spam and block fullness.
 
 Just like with parathreads and parachains, the smart contract transactions within a parathread or parachain are entirely local and do not affect any fee or metering calculation on the Relay Chain. The chain implementing the smart contract pallet can meter the transactions using its own design, or it can decide that no metering is necessary at all, or anything in between. The transaction fees and block sizes of the chain are up to the chain and its collators and a block produced by a thread or chain with a smart contract pallet will be like any other thread's or chain's block - as long as the state transition function of the chain offers the `execute_block` function for validators to execute and validate, the chain's internals are no business of the relay chain.
 
@@ -56,7 +56,7 @@ Just like with parathreads and parachains, the smart contract transactions withi
 
 There are four types of transactions:
 
-1. On-relay-chain transactions (from various pallets like governance, identity, etc.), metered by weight and block size
-2. Parachain block transactions, always free
-3. Parathread block transactions, basic fee when no other threads in pool want to write, auction when there's high demand for writes
-4. Internal parathread / parachain transactions (including smart contracts): completely local and dependent on whatever the chain designers decide, these do not bleed into Relay Chain economics in any way
+1. Relay Chain transactions (from various pallets like governance, identity, etc.), metered by weight and block size.
+2. Parachain block transactions, always free and granted by placement in the parachain slot.
+3. Parathread block transactions, basic fee when no other threads in pool want to write, auction when there's high demand for writes.
+4. Internal parathread / parachain transactions (including smart contracts): completely local and dependent on whatever the chain designers decide, these do not bleed into Relay Chain economics in any way.
