@@ -245,6 +245,10 @@
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
+      "maintain-networks": {
+        "title": "Networks",
+        "sidebar_label": "Networks"
+      },
       "maintain-nominator": {
         "title": "Nominator",
         "sidebar_label": "Nominator"
