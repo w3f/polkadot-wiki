@@ -153,7 +153,8 @@
       }
     ],
     "Kusama": [
-      "kusama-index"
+      "kusama-index",
+      "kusama-faucet"
     ]
   }
 }
