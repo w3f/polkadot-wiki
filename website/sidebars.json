@@ -119,6 +119,7 @@
         "label": "Nodes and Dapps",
         "ids": [
           "maintain-sync",
+          "maintain-networks",
           "maintain-wss"
         ]
       },
