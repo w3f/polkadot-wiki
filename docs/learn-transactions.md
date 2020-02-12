@@ -4,7 +4,7 @@ title: Transaction Types and Metering
 sidebar_label: Transaction Types and Metering
 ---
 
-Depending on the pallets installed in a [Substrate](https://substrate.dev)-based chain like Polkadot or Kusama, different transactions are possible within the system. For example, one can propose referenda in the Governance pallet, verify identities in the Identities pallet, send tokens through the Balances pallet, shout remarks into the chain through the System pallet, and more. 
+Depending on the pallets installed in a [Substrate](https://substrate.dev)-based chain like Polkadot or Kusama, different transactions are possible within the system. For example, one can propose referenda in the Governance pallet, verify identities in the Identities pallet, send tokens through the Balances pallet, shout remarks into the chain through the System pallet, and more.
 
 Batching these transactions into blocks cannot work based on size like it does in a blockchain like Bitcoin's because smaller transactions might require more computation and vice versa - it's all about their computational effect. These transactions also do not happen on a smart contract platform (as smart contracts are not a first-class citizen of Substrate-based chains), so there is no concept of gas to meter transactions with.
 
