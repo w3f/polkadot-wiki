@@ -82,7 +82,7 @@ If slots 0-2 are populated by addresses A, B and C respectively, and I add an ex
 
 But what if an account gets reaped as explained above? In that case, the index is emptied. In other words, the slot frees up again. If someone creates a new account, they may end up using the same index another address was using before.
 
-Because of this unreliability of indices, they will **not be present** in Polkadot mainnet.
+Because of this unreliability of indices, they **may not be present** in Polkadot mainnet.
 
 ## Identities
 
