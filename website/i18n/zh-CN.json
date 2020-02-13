@@ -82,15 +82,19 @@
         "sidebar_label": "桥接"
       },
       "learn-comparisons-dfinity": {
-        "title": "Dfinity 和 Polkadot",
+        "title": "Polkadot and Dfinity",
         "sidebar_label": "Dfinity"
       },
+      "learn-comparisons-ethereum-2": {
+        "title": "Polkadot and Ethereum 2.0",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
-        "title": "设计比较",
+        "title": "Polkadot and Cosmos",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "与其它区块链比较",
+        "title": "Polkadot Comparisons",
         "sidebar_label": "与其它比较"
       },
       "learn-consensus": {
@@ -241,13 +245,25 @@
         "title": "网络维护者",
         "sidebar_label": "网络维护者"
       },
+      "maintain-networks": {
+        "title": "Networks",
+        "sidebar_label": "Networks"
+      },
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
       },
+      "maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
+      },
       "maintain-validator": {
         "title": "验证人",
         "sidebar_label": "验证人"
+      },
+      "maintain-wss": {
+        "title": "Set up Secure WebSocket for Remote Connections",
+        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
       },
       "news": {
         "title": "新闻",
