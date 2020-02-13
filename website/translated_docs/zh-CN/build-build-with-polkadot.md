@@ -21,7 +21,7 @@ Polkadot is a blockchain protocol with two goals: providing **shared security** 
 
 ** 有什么你需要知道 **: Polkadot 现在最新发布是 v0.6 并且运行着名为 Alexander 的测试网络和 Kusama 具有价值的金丝雀网络。目前最快的实现是 Rust 并使用 Substrate 框架来开发区块链。 Substrate 是一个库，通过从包括网络协议，共识和 Wasm 编译器的基础层进行开发，开发者可以短时间开发出整个区块链。对于 Substrate 的扩展称为 Cumulus，将允许任何 Substrate 开发的链连接到 Polkadot 并成为平行链。 Substrate 已发布1.0.0版，目前已稳定了其 API。
 
-Substrate 链通过包含[SRML 中 contract runtime 模块](https://github.com/paritytech/substrate/tree/master/srml/contracts)增加智能合约功能。该模块允许将编译成 Wasm 代码的智能合约部署到链中并由用户实例化。为了促进 Wasm 智能合约开发，Parity 还开发了[ ink! ](https://github.com/paritytech/ink)，它是基于 Rust 的领域特定语言，旨在编写智能合约。
+Substrate chains can include smart contract functionality by using the provided [contracts Frame pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts). This pallet allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users. To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built in Rust that is intended for writing smart contracts.
 
 Polkadot is planned to go live with an initial release early in 2020, depending on security audits and launch provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build for Polkadot.
 
@@ -73,7 +73,7 @@ In the future, there will be many different PDKs available in different programm
 
 ### 开始使用 Substrate
 
-正如刚才提到的，Polkadot背后是基于Substrate框架建立的，它是区块链创新者的工具，为构建区块链提供了必要的构建模块，它包含了模块化插件库，你可以从中构建更复杂的逻辑链。
+Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for blockchain innovators that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
 了解最好 Substrate的 方式是前往[ Substrate Development Hub ](https://substrate.dev)，它是由 Parity Technologies 建立和维护的线上 Substrate 资源。
 
@@ -123,7 +123,7 @@ Polkadot 联合创始人 Rob Habermeier 最近在 EthCC 上演讲了关于 Cumul
 
 Polkadot 中继链本身不会支持智能合约，但由于 Polkadot 是个包含各种各样的区块链网络，所以会有平行链会支持的。
 
-Parity Technologies 已经为想要包括智能合约功能的平行链的提供了即用型解决方案。 Substrate 核心 SRML 中的[contract](https://github.com/paritytech/substrate/tree/master/srml/contracts) 模块将支持编译为 Wasm 的智能合约。
+Already Parity Technologies has laid much of the groundwork for an out-of-the-box solution for parachains that want to include smart contract functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/frame/contracts) Frame pallet will support smart contracts that are compiled to Wasm.
 
 为了使智能合约编译到 Wasm，还需要一种合适的语言，因此 Parity 一直致力于开发名为 [Ink](#ink)的领域特定语言。
 
@@ -143,7 +143,7 @@ Edgeware的计划了在Polkadot上运行平行链，它将会是个智能合约�
 
 Ink! 为基于Wasm虚拟机并与Substrate链兼容的新智能合约堆栈制定了基础。
 
-Substrate包括合约模块，其中包括智能合约链所需的核心逻辑。除此之外，ink! 将是用Rust编写智能合约的语言，它利用已有Rust的工具和支持，并将它编译到Wasm。
+Substrate includes a contract pallet that includes the core logic needed for a smart contract chain. Along these lines, ink! will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and supports compilation to Wasm.
 
 ## 部署你的智能合约
 
@@ -171,7 +171,7 @@ Polkadot的智能合约还是处于早期，而且开发才刚刚开始稳定下
 
 - [Edgeware](https://edgewa.re).
 - [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
-- [Substrate contracts module](https://github.com/paritytech/substrate/tree/master/srml/contracts).
+- [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
 
 ## 总结
 
