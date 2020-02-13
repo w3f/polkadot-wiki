@@ -12,11 +12,11 @@ We are not only providing technical resources for you, but we can have someone f
 
 - NFT
 - Bonded Tokens
-- New governance modules with different styles of voting & democracy
-- Upgrade the TCR module
+- New governance pallets with different styles of voting & democracy
+- Upgrade the TCR pallet
 - IPFS integration
 - Decentralized identity solutions
-- Oracle module
+- Oracle pallet
 - Implement Generalized State Channel/Plasma Chain
 - Decentralized Exchange
 - Tools for monitoring validator performance
