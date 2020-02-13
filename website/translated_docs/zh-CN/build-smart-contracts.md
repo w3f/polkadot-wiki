@@ -4,7 +4,7 @@ title: Smart Contracts
 sidebar_label: Smart Contracts
 ---
 
-Polkadot中继链本身并不支持智能合约，不过在它之上的平行链可以。目前已出现[Edgeware](https://edgewa.re)等多个项目，而Substrate的内置[合约模块](https://crates.parity.io/srml_contract/index.html)将很可能使得更多的平行链支持这一特性。
+The Polkadot relay chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://crates.parity.io/pallet_contracts/index.html), it is likely that more parachains will support this feature.
 
 ## 资源
 
@@ -27,7 +27,7 @@ Polkadot中继链本身并不支持智能合约，不过在它之上的平行链
 
 相比之下，运行时模块是链的状态转换的整个逻辑（称为状态转换函数）。
 
-智能合约必须自觉实现可升级性，而平行链则能够通过根命令或治理模块来替换其所有代码。
+Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance pallet.
 
 构建的智能合约最终将被部署到拥有自己环境的目标链中，而平行链则允许开发者公布各自链的环境，甚至允许其他人为该链编写智能合约。
 
