@@ -21,5 +21,5 @@ sidebar_label: Treasury
 
 ## 资源
 
- - [Substrate's 财政库模块](https://github.com/paritytech/substrate/blob/master/srml/treasury/src/lib.rs) - 财政库的 Rust 实现 ([文档](https://substrate.dev/rustdocs/master/srml_treasury/index.html))
+ - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/pallet_treasury/index.html))
  - [Gavin Wood's Kusama 推出计划](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - 在 Kusama 网络上的第一个上线环境中详细描述了财政库。
