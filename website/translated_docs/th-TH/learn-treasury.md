@@ -21,5 +21,5 @@ The treasury is ultimately controlled by the stakeholders, and how the funds wil
 
 ## Resources
 
- - [Substrate's Treasury Module](https://github.com/paritytech/substrate/blob/master/srml/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/srml_treasury/index.html))
+ - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/pallet_treasury/index.html))
  - [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - Details the treasury in its first live environment on the Kusama network.
