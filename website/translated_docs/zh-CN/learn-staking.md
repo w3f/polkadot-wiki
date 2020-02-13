@@ -164,7 +164,7 @@ Rewards can be directed to the same account (controller) or to the stash account
 
 ## 通胀率
 
-Inflation is designed to be close to 10% in the first year. This means that each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
+Inflation is designed to be 10% in the first year, with validator rewards being a function of amount staked and the remainder going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
@@ -176,9 +176,9 @@ Inflation is designed to be close to 10% in the first year. This means that each
 
 **Green line**: return rate based on the staking participation
 
-**Blue line**:  inflation rate
+**Blue line**:  how much of the inflation goes to validators versus the treasury
 
-The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will change dynamically to incent / disincent token holders to participate in staking. For instance, inflation would be 10% if 50% of DOTs are staked in the network.
+The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to incentivize / disincentivize token holders to participate in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
 
 Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees and we want and to avoid illiquidity on the market.
 
@@ -197,7 +197,7 @@ For those who are interested in knowing more about the design of inflation model
 
 ## 波卡会有多少链验证人数量?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000.
+The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, is currently rapidly approaching 200 validators slots.
 
 ## 资源
 
