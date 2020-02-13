@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-dfinity
-title: Dfinity 与 Polkadot 区别
+title: Polkadot and Dfinity
 sidebar_label: Dfinity
 ---
 
