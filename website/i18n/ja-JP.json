@@ -82,15 +82,19 @@
         "sidebar_label": "Bridges"
       },
       "learn-comparisons-dfinity": {
-        "title": "Dfinity and Polkadot",
+        "title": "Polkadot and Dfinity",
         "sidebar_label": "Dfinity"
       },
+      "learn-comparisons-ethereum-2": {
+        "title": "Polkadot and Ethereum 2.0",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
-        "title": "Design Comparison",
+        "title": "Polkadot and Cosmos",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "Polkadot comparisons",
+        "title": "Polkadot Comparisons",
         "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
@@ -241,13 +245,25 @@
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
+      "maintain-networks": {
+        "title": "Networks",
+        "sidebar_label": "Networks"
+      },
       "maintain-nominator": {
         "title": "Nominator",
         "sidebar_label": "Nominator"
       },
+      "maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
+      },
       "maintain-validator": {
         "title": "Validator",
         "sidebar_label": "Validator"
+      },
+      "maintain-wss": {
+        "title": "Set up Secure WebSocket for Remote Connections",
+        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
       },
       "news": {
         "title": "News",

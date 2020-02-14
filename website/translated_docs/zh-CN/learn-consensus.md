@@ -67,7 +67,7 @@ GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) 是在 Polkad
 
 #### 实现
 
-[ Rust 实现](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs)是 Substrate Runtime 模块库的一部分。
+The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
 
 有关更多详细信息，请参阅 W3F 研究专页上的[ GRANDPA 页面](http://research.web3.foundation/en/latest/polkadot/GRANDPA/)。
 
@@ -109,7 +109,7 @@ _即将来临!_
 ## 资源
 
 - [ GRANDPA 论文](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)- GRANDPA 最终确定性工具的描述。 包含算法证明。
-- [Finality Grandpa - Rust 实现](https://github.com/paritytech/finality-grandpa) - 及[ Substrate Runtime 模块](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs)。
+- [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference implementation and the accompanying [Substrate pallet](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs).
 
 <!-- ## Consensus in Polkadot
 

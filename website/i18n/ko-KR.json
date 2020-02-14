@@ -82,15 +82,19 @@
         "sidebar_label": "브릿지들"
       },
       "learn-comparisons-dfinity": {
-        "title": "디피니티와 폴카닷",
+        "title": "Polkadot and Dfinity",
         "sidebar_label": "디피니티"
       },
+      "learn-comparisons-ethereum-2": {
+        "title": "Polkadot and Ethereum 2.0",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
-        "title": "디자인 구조 비교",
+        "title": "Polkadot and Cosmos",
         "sidebar_label": "코스모스에 비교분석\n"
       },
       "learn-comparisons": {
-        "title": "폴카닷에 비교/분석",
+        "title": "Polkadot Comparisons",
         "sidebar_label": "다른 체인과의 비교분석"
       },
       "learn-consensus": {
@@ -241,13 +245,25 @@
         "title": "네트워크 메인테이너들",
         "sidebar_label": "네트워크 메인테이너들"
       },
+      "maintain-networks": {
+        "title": "Networks",
+        "sidebar_label": "Networks"
+      },
       "maintain-nominator": {
         "title": "노미네이터",
         "sidebar_label": "노미네이터"
       },
+      "maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
+      },
       "maintain-validator": {
         "title": "Validator",
         "sidebar_label": "Validator"
+      },
+      "maintain-wss": {
+        "title": "Set up Secure WebSocket for Remote Connections",
+        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
       },
       "news": {
         "title": "뉴스",

@@ -12,11 +12,11 @@ sidebar_label: 黑客马拉松
 
 - NFT
 - Bonded Tokens
-- 具有不同類型投票 & 民主機制的新治理模块
-- 升级 TCR 模块
+- New governance pallets with different styles of voting & democracy
+- Upgrade the TCR pallet
 - 整合 IPFS
 - 分布式身份认证方案
-- 预言机模块
+- Oracle pallet
 - 实现通用状态通道 / Plasma 链
 - 去中心化交易所
 - 验证人监视工具

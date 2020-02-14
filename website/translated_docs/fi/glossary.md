@@ -76,6 +76,10 @@ A mechanism that determines finality.
 
 Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
 
+## Frame
+
+The collection of Substrate-provided pallets (Substrate Runtime Modules).
+
 ## GRANDPA Consensus Algorithm
 
 GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
@@ -131,6 +135,10 @@ Accounts that select a set of validators to nominate by bonding their tokens. No
 ## On-chain Governance
 
 A governance system of a blockchain that is controlled by mechanisms on the blockchain. On-chain governance allows decisions to be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting, adaptive quorum biasing, or identity-based quadratic voting.
+
+## Pallet
+
+A Substrate runtime module.
 
 ## Parachain
 

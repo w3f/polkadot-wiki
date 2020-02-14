@@ -12,11 +12,11 @@ Web3 Foundation의 목표 중 하나인 [Web3 기술 스택](http://wiki.web3.fo
 
 - NFT
 - Bonded Tokens
-- New governance modules with different styles of voting & democracy
-- Upgrade the TCR module
+- New governance pallets with different styles of voting & democracy
+- Upgrade the TCR pallet
 - IPFS integration
 - 분산화된 신원 인증 솔루션 (Decentralized identity solutions)
-- 오라클 모듈 (Oracle module)
+- Oracle pallet
 - 제네럴 스테이트 체널/플라즈마 체인의 구현 (Implement Generalized State Channel/Plasma Chain)
 - DeX (Decentralized Exchange)
 - 밸리데이터 퍼포먼스 모니터링 툴 (Tools for monitoring validator performance)

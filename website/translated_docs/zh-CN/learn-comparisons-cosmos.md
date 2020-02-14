@@ -1,6 +1,6 @@
 ---
 id: learn-comparisons-cosmos
-title: 设计比较
+title: Polkadot and Cosmos
 sidebar_label: Cosmos
 ---
 
