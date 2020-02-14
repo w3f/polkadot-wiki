@@ -37,7 +37,7 @@ The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is h
 
 ### Announcing the Proposal
 
-Before submitting a proposal, it is good practice to announce it. Alternatively, it's good to explain it in detail after it's been proposed.
+To minimize storage on chain, proposals don't contain contextual information. When a user submits a proposal, they will probably need to find an off-chain way to explain the proposal. Most discussion takes place on the following platforms:
 
 Several platforms exist for this, none of them official. What matters during an explanation is that the explainer can prove they're behind the proposal, and this is likely easiest to do on a Web3-enabled platform like [Commonwealth](https://commonwealth.im). Commonwealth allows users to log in with their KSM (or Polkadot) address, which immediately binds the identity they're using for on-chain actions with the submissions made on the platform. [Here is an example of an explanatory thread on Commonwealth](https://commonwealth.im/kusama/proposal/discussion/284-treasury-proposal-11-a-demo), made by the same account which created the Treasury spend proposal it's discussing.
 
