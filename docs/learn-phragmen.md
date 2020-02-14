@@ -54,7 +54,6 @@ In order to understand the Sequential Phragmén method, we must first understand
 ### Algorithm
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
-
 1. Candidates submit their ballots, marking which candidates they approve of.  Ballots will not be modified after submission.
 2. An initial weight of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters would have the _least average (mean) cost_ if that candidate wins.
@@ -142,7 +141,6 @@ Another interesting characteristic of this calculation is that the total weight 
 ### Rationale
 
 While this method works well if all voters have equal weight, this is not the case in Polkadot.  Elections for both validators and candidates for the Polkadot Council are weighted by the number of tokens held by the voters.  This makes elections more similar to a corporate shareholder election than a traditional political election, where some members have more pull than others.  Someone with a single token will have much less voting power than someone with 100.  Although this may seem anti-democratic, in a pseudonymous system, it is trivial for someone with 100 tokens to create 100 different accounts and spread their wealth to all of their pseudonyms.
-
 
 Therefore, not only do we want want to allow voters to have their preferences expressed in the result, but do so while keeping as equal a distribution of their stake as possible.  The Sequential Phragmén method allows us to reach these goals.
 
@@ -397,8 +395,6 @@ There are further optimizations that can be done to more evenly distribute the l
 Another issue is that we want to ensure that as equal a distribution of votes as possible amongst the elected validators or council members.  This helps us increase the security of the system by ensuring that the minimum amount of tokens in order to join the active validator set or council is as high as possible.  For example, imagine a result of five validators being elected, where validators have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1_050.  In this case, a potential attacker could join the active validator set with only 11 tokens, and could obtain a majority of validators with only 33 tokens (since the attacker only has to have enough stake to "kick out" the three lowest validators).
 
 In contrast, imagine a different result with the same amount of total stake, but with that stake perfectly equally distributed: `{210, 210, 210, 210, 210}`.  With the same amount of stake, an attacker would need to stake 633 tokens in order to get a majority of validators, a much more expensive proposition.  Although obtaining an equal distribution is unlikely, the more equal the distribution, the higher the threshold - and thus the higher the expense - for attackers to gain entry to the set.
-
-Therefore, in practice, we will also add post-processing to equalize the weights as much as possible after the election.
 
 ## External Resources
 
