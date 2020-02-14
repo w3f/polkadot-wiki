@@ -150,7 +150,7 @@ Therefore, not only do we want want to allow voters to have their preferences ex
 
 Sequential Phragmen is similar to Basic Phragmen in that it selects candidates sequentially, one per round, until the maximum number of candidates are elected.  However, it has additional features to also allocate weight (stake) behind the candidates.
 
-_Note: in terms of validator selection, for the following algorithm, you can think of "voters" as "nominators" and "candidates" as "validators".
+_Note: in terms of validator selection, for the following algorithm, you can think of "voters" as "nominators" and "candidates" as "validators"._
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have won a "seat").  This aspect of the algorithm is very similar to the "basic Phragmen" algorithm described above.
 2. However, as candidates are elected, an edge weight vector mapping is built, defining the weights of each each selection of a validator by each candidate.
@@ -226,9 +226,28 @@ Voter V5 (5):  X     X    0
 
 Candidate `A` is now safe; there is no way that they will lose their seat.  Before moving on to the next round, we need to update the scores on the edges of our graph for any candidates who have not yet been elected.
 
-We elided this detail in the previous round, since it made no difference to the final scores, but we should go into depth here to see how scores are updated.
+We elided this detail in the previous round, since it made no difference to the final scores, but we should go into depth here to see how scores are updated.  We first must calculate the new loads of the voters, and then calculate the new scores of the candidates.
 
-As a reminder, here are the current scores:
+Any voter who had one of their choices for candidate fill the seat in this round (i.e., voters `V1`, `V2`, `V3`, and `V5`, who all voted for `A`) will have their load increased.  This load increase will blunt the impact of their vote in future rounds, and the edge (which will be used in determining stake allocation later) is set to the score of the elected candidate minus the _current_ voter load.
+
+```
+edge_load = elected_candidate_score - voter_load
+voter_load = elected_candidate_score
+```
+
+In this instance, the score of the elected candidate is `0.091` and the voter loads are all `0`.  So for each voter who voted for `A`, we will calculate a new edge load `Voter` -> `A` of:
+
+```
+Edge load: 0.091 - 0 = 0.091
+```
+
+and a new voter load of:
+
+```
+Voter load: 0.091
+```
+
+As a reminder, here are the current scores.  Loads of the voters are all `0`.
 
 ```
 Candidate B : 0.143
@@ -236,18 +255,24 @@ Candidate C : 0.25
 Candidate D : 0.111
 ```
 
-Now, we go through the weighted graph and update all of the 
+Now, we go through the weighted graph and update the score of the candidate and the load of the edge, using the algorithm:
 
 ```
-V1 updates B  to  0.15584415584415584
-V2 updates B  to  0.18181818181818182
-V4 updates B  to  0.18181818181818182
-V4 updates C  to  0.25
-V4 updates D  to  0.1111111111111111
-V5 updates D  to  0.1616161616161616
+candidate_score = candidate_score + ((voter_budget * voter_load) / candidate_approval_stake)
 ```
 
-After scores are updated, the final scores for the candidates are: 
+Without walking through each step, this gives us the following modifications to the scores of the different candidates.
+
+```
+V1 updates B to 0.156
+V2 updates B to 0.182
+V4 updates B to 0.182
+V4 updates C to 0.25
+V4 updates D to 0.111
+V5 updates D to 0.162
+```
+
+After scores are updated, the final scores for the candidates for this round are: 
 
 ```
 Candidate B: 0.182
@@ -257,49 +282,115 @@ Candidate D: 0.162
 
 `D`, with the lowest score, is elected.  You will note that even though candidate `B` had more voters supporting them, candidate `D` won the election due to their lower score.  This is directly due to the fact that they had the lowest score, of course, but the root reason behind them having a lower score was both the greater amount of stake behind them and that voters who did not get one of their choices in an earlier round (in this example, voter V4) correspond to a higher likelihood of a candidate being elected.
 
-We end the round in the following state:
+We then update the loads for the voters and edges as specified above for any voters who voted for candidate `D` (viz., `V4` and `V5`) using the same formula as above.
 
 ```
 Filled seats: 2 (A, D)
 Open Seats: 1
 
-Candidates:    A B C D E  L0
-----------------------------
-Voter V1 (1):  X X        0
-Voter V2 (2):  X X        0
-Voter V3 (3):  X          0
-Voter V4 (4):    X X X    0
-Voter V5 (5):  X     X    0
+Candidates:    A B C D E  L0 L1    L2
+-----------------------------------
+Voter V1 (1):  X X        0  0.091 0.091
+Voter V2 (2):  X X        0  0.091 0.091
+Voter V3 (3):  X          0  0.091 0.091
+Voter V4 (4):    X X X    0  0     0.091
+Voter V5 (5):  X     X    0  0.091 0.162
 ```
 
+W
+
+Following a similar process for Round 2, we start with initial candidate scores of:
+
+```
+Candidate B : 0.143
+Candidate C : 0.25
+```
+
+We can then update the scores of the remaining two candidates according to the algorithm described above.
+
+```
+	 V1 updating B  to  0.156
+	 V2 updating B  to  0.182
+	 V4 updating B  to  0.274
+	 V4 updating C  to  0.412
+```
+
+With the lowest score of `0.274`, Candidate `B` claims the last open seat.
+
+Candidates `A`, `D`, and `B` have been elected, and candidates `C` and `E` are not.  We now must split the stake between the candidates who won from the voters who voted for them.
+
+We must perform a final load adjustment for the voters and the graph.
 
 ```
 Filled seats: 3 (A, D, B)
 Open Seats: 0
 
-Candidates:    A B C D E  L0
-----------------------------
-Voter V1 (1):  X X        0
-Voter V2 (2):  X X        0
-Voter V3 (3):  X          0
-Voter V4 (4):    X X X    0
-Voter V5 (5):  X     X    0
+Candidates:    A B C D E  L0 L1    L2    L3
+------------------------------------------ 
+Voter V1 (1):  X X        0  0.091 0.091 0.274
+Voter V2 (2):  X X        0  0.091 0.091 0.274
+Voter V3 (3):  X          0  0.091 0.091 0.091
+Voter V4 (4):    X X X    0  0     0.091 0.274
+Voter V5 (5):  X     X    0  0.091 0.162 0.162
 ```
 
-Candidates `A`, `D`, and `B` have been elected, and candidates `C` and `E` are not.  We now must split the stake between the candidates who won from the voters who voted for them.
+Now we have to determine how much stake every voter should allocate to each candidate.  This is done by taking the load of the each edge and dividing it by the voter load, then multiplying by the total budget of the voter.
 
-
-A  is elected with stake  6.807236842105263 and score  0.09090909090909091
-D  is elected with stake  4.5453947368421055 and score  0.1616161616161616
-B  is elected with stake  3.6473684210526316 and score  0.2741702741702742
+In this example, the weighted graph ended up looking like this:
 
 ```
-V1  (l: 0.2741702741702742 ) supports: A (stake: 0.33157894736842103 ) B (stake: 0.6684210526315789 ) 
-V2  (l: 0.2741702741702742 ) supports: A (stake: 0.6631578947368421 ) B (stake: 1.3368421052631578 ) 
-V3  (l: 0.09090909090909091 ) supports: A (stake: 2.9999999999999996 ) 
-V4  (l: 0.2741702741702742 ) supports: B (stake: 1.642105263157895 ) C (stake: 0.0 ) D (stake: 2.357894736842105 ) 
-V5  (l: 0.1616161616161616 ) supports: A (stake: 2.8125000000000004 ) D (stake: 2.1875 ) 
+Nominator: V1
+	Edge to A load= 0.091
+	Edge to B load= 0.183
+Nominator: V2
+	Edge to A load= 0.091
+	Edge to B load= 0.183
+Nominator: V3
+	Edge to A load= 0.091
+Nominator: V4
+	Edge to B load= 0.113
+	Edge to D load= 0.162
+Nominator: V5
+	Edge to A load= 0.091
+	Edge to D load= 0.071
 ```
+
+For instance, the budget of `V1` is `1`, the edge load to `A` is `0.091`, and the voter load is `0.274`.  Using our equation:
+
+```
+backing_stake (A) = voter_budget * edge_load / voter_load
+```
+
+We can fill these variables in with:
+
+```
+backing_stake (A) = 1 * 0.091 / 0.274 = 0.332
+```
+
+For `V1` backing stake of `B`, you can simply replace the edge load value and re-calculate.
+
+```
+backing_stake (B) = 1 * 0.183 / 0.274 = 0.668
+```
+
+Note that the total amount of all backing stake for a given voter will equal the total budget of the voter, unless that voter had no candidates elected, in which case it will be 0.
+
+The final results are:
+
+```
+A is elected with stake 6.807.
+D is elected with stake 4.545.
+B is elected with stake 3.647.
+
+V1 supports: A with stake: 0.332 and B with stake: 0.668.
+V2 supports: A with stake: 0.663 and B with stake: 1.337.
+V3 supports: A with stake: 3.0.
+V4 supports: B with stake: 1.642 and D with stake: 2.358.
+V5 supports: A with stake: 2.813 and D with stake: 2.187. 
+```
+
+You will notice that the total amount of stake for candidates `A`, `D`, and `B` equals (aside from rounding errors) the total amount of stake of all the voters (`1 + 2 + 3 + 4 + 5 = 15`).  This is because each voter had at least one of their candidates fill a seat.  Any voter whose had none of their candidates selected will also not have any stake in any of the elected candidates.
+
 
 ## Optimizations
 
