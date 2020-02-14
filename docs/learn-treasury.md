@@ -31,7 +31,7 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
-The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future. The way to always find out the up to date values is to [query the constants](https://polkadot.js.org/apps/#/chainstate/constants) as in the image below, or to look at the [source code](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs#L784).
+The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future.
 
 ![Constants queried in the Polkadot JS UI](/img/treasury/constants.jpg)
 
