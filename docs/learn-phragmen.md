@@ -305,10 +305,10 @@ Candidate C : 0.25
 We can then update the scores of the remaining two candidates according to the algorithm described above.
 
 ```
-	 V1 updating B  to  0.156
-	 V2 updating B  to  0.182
-	 V4 updating B  to  0.274
-	 V4 updating C  to  0.412
+V1 updates B to 0.156
+V2 updates B to 0.182
+V4 updates B to 0.274
+V4 updates C to 0.412
 ```
 
 With the lowest score of `0.274`, Candidate `B` claims the last open seat.  Candidates `A`, `D`, and `B` have been elected, and candidates `C` and `E` are not.
