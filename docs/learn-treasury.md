@@ -2,7 +2,7 @@
 id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
-description: Details about Kusama's on-chain treasury - how it works, how it's funded, what its purposes is, and a guide on making spending proposals
+description: Details about Polkadot's on-chain treasury.
 ---
 
 The treasury is a pot of funds collected through transaction fees, slashing, [inefficiencies in the chain's staking set](learn-staking#inflation), etc. - see next section for details. The funds held in the treasury can be spent by making a spending proposal that, if approved by the council, will enter a queue that is periodically cleared. This is known as the budget period, and its duration is subject to [governance](learn-governance), with current defaults set to 24 days for Polkadot mainnet, and 6 days for Kusama. The treasury attempts to spend as many proposals in the queue as it can without running out of funds. If the treasury ends a budget period without spending all of its funds, it suffers a burn of a percentage of its funds -- thereby causing deflationary pressure. This percentage is currently at 0%.
