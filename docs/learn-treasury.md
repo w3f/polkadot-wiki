@@ -33,17 +33,14 @@ The Treasury is funded from different sources:
 
 The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future.
 
-![Constants queried in the Polkadot JS UI](/img/treasury/constants.jpg)
-
 ### Announcing the Proposal
 
 To minimize storage on chain, proposals don't contain contextual information. When a user submits a proposal, they will probably need to find an off-chain way to explain the proposal. Most discussion takes place on the following platforms:
 
-
-
+- [Commonwealth.im](https://commonwealth.im) which allows users to log in with their KSM address and automatically reads proposals from the chain, turning them into discussion threads.
 - The [Kusama forum](https://forum.kusama.network) and [Polkadot forum](https://forum.polkadot.network) can be used for proposal explanations on Kusama and Polkadot respectively.
 - The [KGP (Kusama Governance Proposals)](https://github.com/kusamanetwork/KGPs) repository is well suited for detailed issues about proposals on Kusama, with the added advantage of easy linkability across repositories and tagging team members.
-- Many community members participate in discussion in the Kusama [Riot](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat.
+- Many community members participate in discussion in the [Kusama Riot](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat.
 
 Spreading the word about the proposal's explanation is ultimately up to the proposer - the recommended way is using official Riot channels like the [Kusama Direction room](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) or the [Kusama Watercooler](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders). For Polkadot, you may want to frequent the [Polkadot Watercooler](https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org).
 
