@@ -55,10 +55,10 @@ In order to understand the Sequential Phragmén method, we must first understand
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 1. Candidates submit their ballots, marking which candidates they approve of.  Ballots will not be modified after submission.
-2. An initial weight of 0 is set for each ballot.
+2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters would have the _least average (mean) cost_ if that candidate wins.
-4. The _n_ ballots that approved that winning candidate get _1/n_ added to their weight.
-5. The weight of all ballots that supported the winner of this round are averaged out so that they are equal.
+4. The _n_ ballots that approved that winning candidate get _1/n_ added to their load.
+5. The load of all ballots that supported the winner of this round are averaged out so that they are equal.
 6. If there are any more seats, go back to step 3.  Otherwise, the selection ends.
 
 ### Example
@@ -78,7 +78,7 @@ Voter V4:     X X      0
 Voter V5:       X X X  0
 ```
 
-In this example, we can see that voter `V1` approves only of candidate `B`, voter `V2` approves of candidates `C` and `D`, etc.  Voters can approve any number of candidates between 1 and `number_of_candidates - 1`.  An initial "weight" of `0` is set for each ballot (`L0` = weight after round `0`, i.e., the "round" before the first round).  We shall see shortly how this weight is updated and used to select candidates.
+In this example, we can see that voter `V1` approves only of candidate `B`, voter `V2` approves of candidates `C` and `D`, etc.  Voters can approve any number of candidates between 1 and `number_of_candidates - 1`.  An initial "load" of `0` is set for each ballot (`L0` = load after round `0`, i.e., the "round" before the first round).  We shall see shortly how this load is updated and used to select candidates.
 
 We will now run through an iterative algorithm, with each iteration corresponding to one "seat".  Since there are three seats, we will walk through three rounds.
 
@@ -97,11 +97,11 @@ Voter V4:     X X      0  1/4
 Voter V5:       X X X  0  1/4
 ```
 
-We are now down to candidates `A`, `C`, and `D` for two open seats.  There is only one voter (`V4`) for `A`, with weight `1/4`.   `C` has two voters, `V2` and `V5`, with weights of `0` and `1/4`.  `D` has three voters approving of them, `V2`, `V3`, and `V5`, with weights of `0`, `1/4`, and `1/4`, respectively.
+We are now down to candidates `A`, `C`, and `D` for two open seats.  There is only one voter (`V4`) for `A`, with load `1/4`.   `C` has two voters, `V2` and `V5`, with loads of `0` and `1/4`.  `D` has three voters approving of them, `V2`, `V3`, and `V5`, with loads of `0`, `1/4`, and `1/4`, respectively.
 
 If Candidate `A` wins, the average load would be `(1/4 + 1/1) / 1`, or `5/4`.  If candidate `C` wins, the average load would be `(0 + 1/2) + (1/4 + 1/2) / 2`, or `5/8`.  If candidate `D` wins, the average load would be `(0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3) / 3`, or `1/2`.  Since `1/2` is the lowest average load, candidate D wins the second round.
 
-Now everybody who voted for Candidate `D` has their weight set to the average, `1/2` of all the weights.
+Now everybody who voted for Candidate `D` has their load set to the average, `1/2` of all the loads.
 
 ```
 Filled seats: 2 (B, D)
@@ -117,7 +117,7 @@ Voter V5:       X X X  0  1/4 1/2
 ```
 
 
-There is now one seat open and two candidates, `A` and `C`.  Voter `V4` is the only one voting for `A`, so if `A` wins then the average weight would be `(1/4 + 1/1) / 1`, or `5/4`.  Voters `V2` and `V5` (both with weight `1/2`) support `C`, so if `C` wins the average weight would be `((1/2 + 1) + (1/2 + 1)) / 2`, or `3/2`.  Since the average weight would be lower with `A`, `A` wins the final seat.
+There is now one seat open and two candidates, `A` and `C`.  Voter `V4` is the only one voting for `A`, so if `A` wins then the average load would be `(1/4 + 1/1) / 1`, or `5/4`.  Voters `V2` and `V5` (both with load `1/2`) support `C`, so if `C` wins the average load would be `((1/2 + 1) + (1/2 + 1)) / 2`, or `3/2`.  Since the average load would be lower with `A`, `A` wins the final seat.
 
 ```
 Filled seats: 3 (B, D, A)
@@ -132,9 +132,9 @@ Voter V4:     X X      0  1/4 1/4 5/4
 Voter V5:       X X X  0  1/4 1/2 1/2
 ```
 
-Note that even though more voters voted for `C` in the final round, `A` won due to `V4`'s lower weight.  This shows how Phragmén gives extra "weight" to those who have not had their choices already taken into account in previous rounds.
+Note that even though more voters voted for `C` in the final round, `A` won due to `V4`'s lower load.  This shows how Phragmén gives extra "weight" to those who have not had their choices already taken into account in previous rounds.
 
-Another interesting characteristic of this calculation is that the total weight of all voters will always equal the number of seats filled in that round.  In the zeroth round, weight starts at `0` and there are no seats filled.  After the first round, the total of all weights is `1`, after the second round it is `2`, etc.
+Another interesting characteristic of this calculation is that the total load of all voters will always equal the number of seats filled in that round.  In the zeroth round, load starts at `0` and there are no seats filled.  After the first round, the total of all loads is `1`, after the second round it is `2`, etc.
 
 ### Sequential Phragmén
 
@@ -151,7 +151,7 @@ Sequential Phragmén is similar to Basic Phragmén in that it selects candidates
 _Note: in terms of validator selection, for the following algorithm, you can think of "voters" as "nominators" and "candidates" as "validators"._
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have won a "seat").  This aspect of the algorithm is very similar to the "basic Phragmén" algorithm described above.
-2. However, as candidates are elected, an edge weight vector mapping is built, defining the weights of each each selection of a validator by each candidate.
+2. However, as candidates are elected, an weighted mapping is built, defining the weights of each each selection of a validator by each candidate.
 
 In more depth, the algorithm operates like so:
 
