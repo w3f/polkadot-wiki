@@ -25,7 +25,7 @@ The treasury is ultimately controlled by the council, and how the funds will be 
 The Treasury is funded from different sources:
 
 1. Slashing: When a validator is slashed for any reason, the slashed amount is sent to the Treasury with a reward going to the entity that reported the validator (another validator or fisherman). The reward is taken from the slash amount and varies per offence and number of reporters.
-2. Transaction fees paid on the Relay Chain for executing balance transfers, governance votes, council actions or any other function allowed by [pallets](https://substrate.dev/docs/en/tutorials/adding-a-module-to-your-runtime/) included in the runtime.
+2. Transaction fees: A portion of each block's transaction fees goes to the Treasury, with the remainder going to the block author.
 3. Staking inefficiency. [Inflation](learn-staking#inflation) is designed to be 10% in the first year, and the ideal staking ratio is set at 50%, meaning half of all tokens should be locked in staking. Any deviation from this ratio will cause a proportional amount of the inflation to go to the Treasury. In other words, if 50% of all tokens are staked, then 100% of the 10% inflation goes to the validators as reward.
 4. Once [Parathreads](learn-parathreads) are live, the per-block auction they have to go through to include their block on the Relay Chain will also likely contribute to the Treasury.
 
