@@ -2,24 +2,72 @@
 id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
+description: Details about Kusama's on-chain treasury - how it works, how it's funded, what its purposes is, and a guide on making spending proposals
 ---
 
-The treasury is a pot of funds collected through transaction fees, slashing, inefficiencies in the chain's staking set, and lost deposits. The funds held in the treasury can be spent by making a spending proposal that, if approved by the council, will enter a queue that is cleared every 24 days (known as the budget period). The treasury attempts to spend as many proposals in the queue as it can without running out of funds. If the treasury ends a budget period without spending all of its funds, it suffers a burn of a small percentage of its funds -- thereby causing deflationary pressure.
+The treasury is a pot of funds collected through transaction fees, slashing, [inefficiencies in the chain's staking set](learn-staking#inflation), etc. - see next section for details. The funds held in the treasury can be spent by making a spending proposal that, if approved by the council, will enter a queue that is periodically cleared. This is known as the budget period, and its duration is subject to [governance](learn-governance), with current defaults set to 24 days for Polkadot mainnet, and 6 days for Kusama. The treasury attempts to spend as many proposals in the queue as it can without running out of funds. If the treasury ends a budget period without spending all of its funds, it suffers a burn of a percentage of its funds -- thereby causing deflationary pressure. This percentage is currently at 0%.
 
-When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling 5% of the proposed spend. This deposit will be slashed if the proposal is rejected, and returned if the proposal was accepted.
+When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling 5% of the proposed spend (see below for variations). This deposit will be slashed if the proposal is rejected, and returned if the proposal was accepted.
 
 Proposals may consist of (but are not limited to):
 
- - Infrastructure deployment and continued operation.
- - Network security operations (monitoring services, continuous auditing).
- - Ecosystem provisions (collaborations with friendly chains).
- - Marketing activities (advertising, paid features, collaborations).
- - Community events and outreach (meetups, pizza parties, hackerspaces).
- - Software development (wallets and wallet integration, clients and client upgrades).
+- Infrastructure deployment and continued operation.
+- Network security operations (monitoring services, continuous auditing).
+- Ecosystem provisions (collaborations with friendly chains).
+- Marketing activities (advertising, paid features, collaborations).
+- Community events and outreach (meetups, pizza parties, hackerspaces).
+- Software development (wallets and wallet integration, clients and client upgrades).
 
-The treasury is ultimately controlled by the stakeholders, and how the funds will be spent is up to their judgment.
+The treasury is ultimately controlled by the council, and how the funds will be spent is up to their judgment.
 
-## Resources
+## Funding the Treasury
+
+The Treasury is funded from different sources:
+
+1. When a validator is slashed for equivocation or invalid attestations of parachain blocks, the slashed amount is sent to the Treasury with a reward going to the entity which reported the validator (another validator or fisherman). The reward is taken from the slash amount and varies per offence and number of reporters.
+2. Transaction fees paid on the Relay Chain for executing balance transfers, governance votes, council actions or any other function allowed by [pallets](https://substrate.dev/docs/en/tutorials/adding-a-module-to-your-runtime/) included in the runtime.
+3. Staking inefficiency. [Inflation](learn-staking#inflation) is designed to be 10% in the first year, and the ideal staking ratio is set at 50%, meaning half of all tokens should be locked in staking. Any deviation from this ratio will cause a proportional amount of the inflation to go to the Treasury. In other words, if 50% of all tokens are staked, then 100% of the 10% inflation goes to the validators as reward.
+4. Once [Parathreads](learn-parathreads) are live, the per-block auction they have to go through to include their block on the Relay Chain will also likely contribute to the Treasury.
+
+## Creating a Treasury Proposal
+
+The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future. The way to always find out the up to date values is to [query the constants](https://polkadot.js.org/apps/#/chainstate/constants) as in the image below, or to look at the [source code](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs#L784).
+
+![Constants queried in the Polkadot JS UI](/img/treasury/constants.jpg)
+
+### Announcing the Proposal
+
+Before submitting a proposal, it is good practice to announce it. Alternatively, it's good to explain it in detail after it's been proposed.
+
+Several platforms exist for this, none of them official. What matters during an explanation is that the explainer can prove they're behind the proposal, and this is likely easiest to do on a Web3-enabled platform like [Commonwealth](https://commonwealth.im). Commonwealth allows users to log in with their KSM (or Polkadot) address, which immediately binds the identity they're using for on-chain actions with the submissions made on the platform. [Here is an example of an explanatory thread on Commonwealth](https://commonwealth.im/kusama/proposal/discussion/284-treasury-proposal-11-a-demo), made by the same account which created the Treasury spend proposal it's discussing.
+
+Commonwealth is still in beta and can be buggy, so other platforms can be used as well:
+
+- The [Kusama forum](https://forum.kusama.network) and [Polkadot forum](https://forum.polkadot.network) can be used for proposal explanations on Kusama and Polkadot respectively.
+- The [KGP (Kusama Governance Proposals)](https://github.com/kusamanetwork/KGPs) repository is well suited for detailed issues about proposals on Kusama, with the added advantage of easy linkability across repositories and tagging team members.
+- [Riot](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) is useful, but perhaps too ephemeral for long-form discussions about specific proposals, so it's best suited for promoting any of the above.
+
+Spreading the word about the proposal's explanation is ultimately up to the proposer - the recommended way is using official Riot channels like the [Kusama Direction room](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) or the [Kusama Watercooler](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders). For Polkadot, you may want to frequent the [Polkadot Watercooler](https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org).
+
+### Creating the Proposal
+
+To create a proposal, use either the [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and select the Treasury pallet, then `proposeSpend` and enter the desired amount and recipient, or use the [Treasury tab](https://polkadot.js.org/apps/#/treasury) and its dedicated Submit Proposal button:
+
+![An example of a proposal being created](/img/treasury/propose.jpg)
+
+The system will automatically take the required deposit, picking the higher of the following two values: 20 KSM or 5% of the requested amount.
+
+Once created, your proposal will become visible in the Treasury screen and the council can start voting on it.
+
+![A pending proposal](/img/treasury/proposal.jpg)
+
+Remember that the proposal has no metadata, so it's up to the proposer to create a description and purpose that the council could study and base their votes on.
+
+At this point, a Council member can turn this proposal into a motion to accept, or a motion to reject. It is possible (but unlikely) that a motion for both acceptance and rejection is created. After being turned into a council motion, the proposal needs 51% of the council to approve it to pass, or 51% to reject it to fail. If majority is not reached, the proposal remains in limbo - neither accepted nor rejected until more council members weigh in.
+
+![Motion in action](/img/treasury/motion.jpg)
+
+## Further Reading
 
  - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/pallet_treasury/index.html))
  - [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - Details the treasury in its first live environment on the Kusama network.
