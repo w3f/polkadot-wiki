@@ -40,7 +40,6 @@ The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is h
 To minimize storage on chain, proposals don't contain contextual information. When a user submits a proposal, they will probably need to find an off-chain way to explain the proposal. Most discussion takes place on the following platforms:
 
 
-Commonwealth is still in beta and can be buggy, so other platforms can be used as well:
 
 - The [Kusama forum](https://forum.kusama.network) and [Polkadot forum](https://forum.polkadot.network) can be used for proposal explanations on Kusama and Polkadot respectively.
 - The [KGP (Kusama Governance Proposals)](https://github.com/kusamanetwork/KGPs) repository is well suited for detailed issues about proposals on Kusama, with the added advantage of easy linkability across repositories and tagging team members.
