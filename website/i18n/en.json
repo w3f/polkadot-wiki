@@ -177,6 +177,10 @@
         "title": "Staking",
         "sidebar_label": "Staking"
       },
+      "learn-transactions": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
