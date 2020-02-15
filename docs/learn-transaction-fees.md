@@ -25,7 +25,7 @@ Fees on the Polkadot Relay Chain are calculated based on four parameters:
 
 The base fee is a fixed fee applied to every transaction. The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
 
-Weights are simply a fixed number designed to represent overall resource consumption of a transaction. Resources could be CPU cycles, memory usage, disk I/O, etc. Each transaction has a weight, which is multiplied by a per-weight fee to calculate the transaction's weight fee.
+Weights are a fixed number designed to represent overall resource consumption of a transaction. Resources could be CPU cycles, memory usage, disk I/O, etc. Each transaction has a weight, which is multiplied by a per-weight fee to calculate the transaction's weight fee.
 
 Tips are an optional transaction fee that users can add to give a transaction higher priority.
 
