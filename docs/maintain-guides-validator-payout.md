@@ -23,7 +23,7 @@ No matter how much total stake is behind a validator, all validators split the b
 
 Validators may also receive "tips" from senders as an incentive to include transactions in their produced blocks.
 
-For simplicity, the examples above will assume all validators have the same amount of era points.
+For simplicity, the examples below will assume all validators have the same amount of era points.
 
 ```
 Validator Set Size (v): 4
