@@ -104,7 +104,14 @@ Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the n
 
 Validator pools with larger total stake backing them will get slashed more harshly than less popular ones, so we encourage nominators to shift their nominations to less popular validators to reduce the possible losses.
 
-Based on Polkadot's latest codebase, the following slashing conditions have been implemented:
+The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
+
+* Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
+* Level 2: concurrent unresponsiveness or isolated equivocation. Slashing up to 1% of the staked amount.
+* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashing up to 10%.
+* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashing 100% of the stake behind the offenders.
+
+Let's look at these offences in a bit more detail.
 
 ### Unresponsiveness
 
@@ -137,9 +144,15 @@ GRANDPA and BABE equivocation slashing penalty is calculated as below:
 Validators may run their nodes on multiple machines to make sure they can still perform validation work in case one of their nodes goes down. It should be noted that if they do not have good coordination to manage signing machines, then equivocation is possible.
 
 > Notice:
-If a validator is reported for any one of the offences they will be removed from the validator set and they will not be paid while they are kicked out.
+If a validator is reported for any one of the offences they will be removed from the validator set ([chilled](#chilling)) and they will not be paid while they are kicked out.
 
 If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
+
+### Chilling
+
+Chilling is the act of kicking a validator out of the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle. This carries an implied penalty of being unable to earn rewards for the duration of the next era, and requires them to earn back any nominations they may have had before being kicked out.
+
+Because every offence regardless of level triggers a chill, and every chill triggers an automatic re-election of a new active validator set, the offending validator is immediately removed from the current set and the next, and someone else takes their place. To re-join, they need to acknowledge the slash and re-announce their candidature.
 
 ## Reward Distribution
 
@@ -162,6 +175,8 @@ Validators can create a cut of the reward that is not shared with the nominators
 For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the proportion of stake each nominator had.  Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
 
 Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOTs without having to un-stake everything.
+
+For specific details about validator payouts, please see [this guide](maintain-guides-validator-payout).
 
 ## Inflation
 
@@ -193,8 +208,8 @@ For those who are interested in knowing more about the design of inflation model
 
 ## Why not stake?
 
-* Tokens will be locked for about 12 weeks
-* Punishment in case of validator found to be misbehaving
+* Tokens will be locked for about 12 weeks on Polkadot, seven days on Kusama
+* Punishment in case of validator found to be misbehaving (see [#slashing](#slashing))
 
 ## How many validators will Polkadot have?
 
