@@ -181,7 +181,7 @@ Having trouble? Get support in the KSM [Claims Support](https://riot.im/app/#/ro
 
 ### 2. Faucet:
 
-For those who didn’t participate in the Polkadot sale, KSMs are publicly available after genesis through a faucet. Find out more [here](kusama-faucet.md).
+For those who didn’t participate in the Polkadot sale, KSMs are publicly available after genesis through a faucet. Find out more [here](kusama-faucet).
 
 ### Third Party Claims Processes
 
