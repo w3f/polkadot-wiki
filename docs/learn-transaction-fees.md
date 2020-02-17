@@ -6,7 +6,7 @@ sidebar_label: Transaction Fees
 
 Several resources in a blockchain network are limited, for example, storage and computation. Transaction fees prevent individual users from consuming too many resources. Polkadot uses a weight-based fee model as opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the fee is paid, nodes will execute the transaction.
 
-Web3 Foundation designed the Polkadot fee system with the following objectives:
+[Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits) designed the Polkadot fee system with the following objectives:
 
 - Each Relay Chain block should be processed efficiently to avoid delays in block production.
 - The growth rate of the Relay Chain should be bounded.
