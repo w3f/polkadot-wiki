@@ -69,9 +69,33 @@
         "title": "Wiki Index",
         "sidebar_label": "Wiki Index"
       },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Kusama Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Kusama Faucet"
+      },
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "Kusama"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet (Kusama)",
+        "sidebar_label": "Time Periods"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
       },
       "learn-architecture": {
         "title": "Architecture",

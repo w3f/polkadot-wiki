@@ -23,29 +23,29 @@ Obtaining a valid address will require generating numerous addresses until you f
 #### Using PolkadotJS Dashboard
 
 1. Go to [Settings](https://polkadot.js.org/apps/#/settings) and select `Kusama (canary)` on the address network prefix drop-down list, then click `Save & Reload`.
-![Faucet 1](../img/faucet_1.png)
+![Faucet 1](assets/kusama/faucet_1.png)
 
 2. Under the [Accounts page](https://polkadot.js.org/apps/#/accounts), select `Vanity Address` tab.
-![Faucet 2](../img/faucet_2.png)
+![Faucet 2](assets/kusama/faucet_2.png)
 
 3. Input `ksma` in the "search for" textbox and leave the "keypair crypto type" by default unless you want to use another type.  After this, click `Start generation`. You may leave YES in the case sensitive field but switching to NO will greatly speed up the process.  It may take 10 minutes or more to generate the address pattern you want, depending on the power of your hardware.
-![Faucet 3](../img/faucet_3.png)
+![Faucet 3](assets/kusama/faucet_3.png)
 
 4. After you see that a valid `ksma` address has been created, press the blue `+` button to generate an account.  Note that the case does not matter, any of the following are ok: kSmA, KSMA, ksMA, etc.
 
-![Save Generated Account](../img/save_generated_account.png)
+![Save Generated Account](assets/kusama/save_generated_account.png)
 
 5. Give your account a name and password, then click "Save" to save the account.
 
-![Create Account](../img/create_account.png)
+![Create Account](assets/kusama/create_account.png)
 
 6. Save the backup file to your local computer.
 
-![Save Backup](../img/save_backup.png)
+![Save Backup](assets/kusama/save_backup.png)
 
 7. Click on the Accounts tab, or press "My Accounts" at the top of the page, and look for your newly generated account.  You can then copy the address to your clipboard by clicking on the dot icon next to the account.
 
-![Select Address](../img/select_address.png)
+![Select Address](assets/kusama/select_address.png)
 
 
 #### Using subkey

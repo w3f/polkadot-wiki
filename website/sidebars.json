@@ -154,7 +154,12 @@
     ],
     "Kusama": [
       "kusama-index",
-      "kusama-faucet"
+      "kusama-faucet",
+      "kusama-claims",
+      "kusama-timeline",
+      "kusama-community",
+      "kusama-time-periods",
+      "kusama-coc"
     ]
   }
 }
