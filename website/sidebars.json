@@ -45,6 +45,7 @@
         "type": "subcategory",
         "label": "Basics",
         "ids": [
+          "learn-accounts",
           "learn-architecture",
           "learn-security",
           "learn-consensus",
