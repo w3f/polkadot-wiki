@@ -4,13 +4,26 @@ title: Validator Payout Overview
 sidebar_label: Validator Payout Overview
 ---
 
+## Era Points
+
+For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in Polkadot), validators are paid proportionally to the amount of _era points_ they have collected. Era points are reward points earned for payable actions like:
+
+- issuing validity statements for [parachain](learn-parachain) blocks.
+- producing a non-uncle block in the relay chain.
+- producing a reference to a previously unreferenced uncle block.
+- producing a referenced uncle block.
+
+_Note: An uncle block is a relay chain block that is valid in every regard, but which failed to become canonical. This can happen when two or more validators are block producers in a single slot, and the block produced by one validator reaches the majority of the network before the others. We call the lagging blocks uncle blocks._
+
+Payments occur at the end of every era.
+
 ## Payout Scheme
 
-Validators are paid for authoring blocks on the relay chain and signing parachain blocks. Validator payouts occur at the end of every era (on the Alexander testnet, this was approximately once per hour, on Kusama once every six hours, and on Polkadot mainnet once per day ). No matter how much stake is behind a validator (by the validator stash itself, as well as by nominators), all validators split the block authoring payout equally.
+No matter how much total stake is behind a validator, all validators split the block authoring payout equally. The total payout, however, may differ based on [era points](#era-points), as described above.
 
 Validators may also receive "tips" from senders as an incentive to include transactions in their produced blocks.
 
-For example:
+For simplicity, the examples above will assume all validators have the same amount of era points.
 
 ```
 Validator Set Size (v): 4
