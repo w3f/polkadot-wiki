@@ -51,12 +51,6 @@ Alternatively, you might find some wallets on the [Polkaproject.com page](http:/
 
 Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
 
-This is an [invalid external link](https://foobarbaznonexistent.com.uk) for testing our CI.
-
-This is an [invalid internal link](learn-something-that-doesnt-exist) for testing our CI.
-
-This is an [external 404 link](https://bitfalls.com/something-non-existent) for testing our CI.
-
 ## Existential Deposit and Reaping
 
 When you generate an account (address), you only generate a _key_ which lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit - 0.01 KSM / DOT. This deposit is paid by the account sending you tokens. The one "creating" you pays for your creation.
