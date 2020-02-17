@@ -13,7 +13,7 @@ For every era (a period of time approximately 6 hours in length in Kusama, and 2
 - producing a reference to a previously unreferenced uncle block.
 - producing a referenced uncle block.
 
-_Note: An uncle block is a relay chain block that is valid in every regard, but which failed to become canonical. This can happen when two or more validators are block producers in a single slot, and the block produced by one validator reaches the majority of the network before the others. We call the lagging blocks uncle blocks._
+_Note: An uncle block is a relay chain block that is valid in every regard, but which failed to become canonical. This can happen when two or more validators are block producers in a single slot, and the block produced by one validator reaches the next block producer before the others. We call the lagging blocks uncle blocks._
 
 Payments occur at the end of every era.
 
