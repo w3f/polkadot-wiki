@@ -29,7 +29,7 @@ Weights are a fixed number designed to represent overall resource consumption of
 
 Tips are an optional transaction fee that users can add to give a transaction higher priority.
 
-Together, these four fees constitute the inclusion fee. This fee is deducted from the sender's account prior to transaction execution. A portion of the fee will go to the block producer and the remainder will go to the [Treasury](learn-treasury). At genesis, this is set to 20% and 80%, respectively.
+Together, these four fees constitute the inclusion fee. This fee is deducted from the sender's account prior to transaction execution. A portion of the fee will go to the block producer and the remainder will go to the [Treasury](learn-treasury). At Polkadot's genesis, this is set to 20% and 80%, respectively.
 
 ## Block Limits and Transaction Priority
 
