@@ -39,6 +39,29 @@ through a highly-frictional [faucet][KSM faucet].
 As a KSM holder, you are able to interact with all the features of the Kusama
 network such as staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and everything else.
 
+## Contact 
+
+### General
+[Kusama forum](https://forum.kusama.network/)
+[Kusama chat](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders)
+[wut@kusama.network](mailto:wut@kusama.network)
+
+### Get help claiming KSM
+[KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
+
+### Validator chat
+[Validator chat (English)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)  
+To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
+
+### Report an issue or submit bugs
+[sos@kusama.network](mailto:sos@kusama.network)
+
+### Get updates
+[@kusamanetwork](https://twitter.com/kusamanetwork)
+[Kusama newsletter](https://kusama.network/newsletter)
+[r/kusama](https://reddit.com/r/kusama)
+
+
 [kappa]: https://polkascan.io/pre/kusama/council/motion/94
 [thousand validators]: https://polkadot.network/join-kusamas-thousand-validators-programme/
 [kusama claims]: https://claim.kusama.network
