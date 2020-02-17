@@ -33,7 +33,11 @@ Together, these four fees constitute the inclusion fee. This fee is deducted fro
 
 ## Block Limits and Transaction Priority
 
-Blocks in Polkadot have both a maximum length (in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these limits. A portion of each block - currently 25% - is reserved for critical transactions that are related to the chain's operation, such as misbehavior reports. Block producers will only fill up to 75% of a block with normal transactions.
+Blocks in Polkadot have both a maximum length (in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these limits. A portion of each block - currently 25% - is reserved for critical transactions that are related to the chain's operation. Block producers will only fill up to 75% of a block with normal transactions. Some examples of operational transactions:
+
+- Misbehavior reports
+- Council operations
+- Member operations in an election (e.g. renouncing candidacy)
 
 Block producers prioritize transactions based on each transaction's total fee. Since a portion of the fee will go to the block producer, producers will include the transactions with the highest fees to maximize their reward.
 
@@ -55,7 +59,8 @@ The transactions that take place within Polkadot's shards - parachains and parat
 
 Transaction weight must be computable prior to execution, and therefore can only represent fixed logic. Some transactions warrant limiting resources with other strategies. For example:
 
-- Bonds: Some transactions, like voting, may require a bond that will be returned later, or slashed if the voter tries anything malicious.
+- Bonds: Some transactions, like voting, may require a bond that will be returned or slashed after an on-chain event. In the voting example, returned at the end of the election or slashed if the voter tried anything malicious.
+- Deposits: Some transactions, like setting an [identity](learn-identity) or claiming an index, use storage space indefinitely. These require a deposit that will be returned if the user decides to free storage (e.g. clear their ide).
 - Burns: A transaction may burn funds internally based on its logic. For example, a transaction may burn funds from the sender if it creates new storage entries, thus increasing the state size.
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16 validators. This limits the complexity of [Phragmen](learn-phragmen).
 
