@@ -26,7 +26,7 @@ be the active validators, then you should see two of your nominations as inactiv
 
 As long as you have nominated more than one validator candidate and at least one of them got elected, your bonded stake will be fully distributed to the elected validators. That being said, you still will have the chance to get 0 rewards if you nominated very few validator candidates and no one got elected. So it would be safe to choose as many trustworthy validators as you can (up to 16) to reduce the risk of none of your nominated validators being elected.
 
-### What you should take into consideration during nominating? 
+### What to take into consideration during nominating
 
 ![Staking Returns](/img/staking/polkadotjs-staking-returns.jpg)
 
