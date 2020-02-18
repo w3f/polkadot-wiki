@@ -235,7 +235,7 @@
       },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",
-        "sidebar_label": "Be a Nominator (Kusama)"
+        "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Setup a Sentry Node - Public Node",
@@ -259,7 +259,7 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Run a Validator (Kusama)"
+        "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "Run a Validator (Alexander)",
