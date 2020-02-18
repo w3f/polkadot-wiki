@@ -36,7 +36,7 @@ One example would be like if a validator regularly offline, their nominators mos
 
 ![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
 
-Thus, to be a smart nominator, it would be better to look at their [histories](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards & slashes and identity (if they have set) as well. Blocks produced means how many blocks they have been created for each era, while rewards & slashes indicate the total amount of tokens they have earned in each era. 
+Thus, to be a smart nominator, it would be better to look at their [histories](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set).
 [Identity](learn-identity) is usually used to know who is behind running the validator. 
 Moreover, you should do deep-dive research on the underlying validator candidates such as go over their websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and many more. 
 
