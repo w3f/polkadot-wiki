@@ -1,7 +1,7 @@
 ---
 id: kusama-faucet
 title: Kusama Faucet
-sidebar_label: Kusama Faucet
+sidebar_label: Faucet
 ---
 
 In order to prevent Sybil attacks, the faucet will only drip to users that have a GitHub account that was created prior to June, 21, 2019. If you do not have a GitHub account that was created prior to this date, please use the [KSM Request Form](https://docs.google.com/forms/d/e/1FAIpQLSfGAqjXY3xLokwl7A-R4JZAnrBnSI3BVXKMKDLCKVtHaxgs-w/formResponse) to request tokens.

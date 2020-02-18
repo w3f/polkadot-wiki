@@ -1,7 +1,7 @@
 ---
 id: kusama-claims
 title: Kusama Claims
-sidebar_label: Kusama Claims
+sidebar_label: Claims
 ---
 
 
