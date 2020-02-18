@@ -151,7 +151,7 @@ Sequential Phragmén is similar to Basic Phragmén in that it selects candidates
 _Note: in terms of validator selection, for the following algorithm, you can think of "voters" as "nominators" and "candidates" as "validators"._
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have won a "seat").  This aspect of the algorithm is very similar to the "basic Phragmén" algorithm described above.
-2. However, as candidates are elected, an weighted mapping is built, defining the weights of each each selection of a validator by each candidate.
+2. However, as candidates are elected, an weighted mapping is built, defining the weights of each selection of a validator by each candidate.
 
 In more depth, the algorithm operates like so:
 
