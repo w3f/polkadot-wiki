@@ -15,7 +15,7 @@ While your DOTs are staked by nominating a validator, they are 'locked' (bonded)
 ### What does active/inactive nomination mean?
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking page, you should see your bonded accounts and nomination
-status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be effective in the next era, that means roughly 6 hours.
+status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be effective in the next era, that means roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
 
