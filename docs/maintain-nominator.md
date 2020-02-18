@@ -19,7 +19,7 @@ status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) gu
 
 ![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
 
-Suppose you have nominated five validator candidates, but 3 out of 5 were elected to 
+Suppose you have nominated five validator candidates, but three out of five were elected to 
 be the active validators then you should see 2 of your nominations are inactive. Active nomination means your nominated validators have been elected to be the active validator, whereas inactive means not get elected. 
 
 ### What does inactive nominations could affect your rewards?
