@@ -177,6 +177,10 @@
         "title": "스테이킹",
         "sidebar_label": "스테이킹"
       },
+      "learn-transaction-fees": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "재무관리",
         "sidebar_label": "재무관리"
