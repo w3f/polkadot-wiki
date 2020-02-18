@@ -24,7 +24,7 @@ be the active validators, then you should see two of your nominations as inactiv
 
 ### Possible effect of inactive nominations on rewards
 
-As long as you have nominated more than one validator candidates and have at least one of them got elected, your bonded stake will be fully distributed to the elected validators. That being said, you still will have the chance to get 0 rewards if you nominated very few validator candidates and no one got elected. So it would be safe to to choose as many trustworthy validators as you can (up to 16) to reduce the risk of getting nothing happened.
+As long as you have nominated more than one validator candidate and at least one of them got elected, your bonded stake will be fully distributed to the elected validators. That being said, you still will have the chance to get 0 rewards if you nominated very few validator candidates and no one got elected. So it would be safe to choose as many trustworthy validators as you can (up to 16) to reduce the risk of none of your nominated validators being elected.
 
 ### What you should take into consideration during nominating? 
 
