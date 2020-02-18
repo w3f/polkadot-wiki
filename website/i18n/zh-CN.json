@@ -177,6 +177,10 @@
         "title": "抵押",
         "sidebar_label": "抵押"
       },
+      "learn-transaction-fees": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "财政库",
         "sidebar_label": "财政库"
