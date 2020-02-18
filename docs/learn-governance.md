@@ -35,7 +35,7 @@ All referenda have an *enactment delay* associated with them. This is the period
 
 Emergency proposals deal with major problems with the network which need to be "fast-tracked". These will have a shorter enactment time.
 
-### Proposing a Referenda
+### Proposing a Referendum
 
 #### Public Referenda
 
