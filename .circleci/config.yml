@@ -3,7 +3,7 @@ version: 2
 jobs:
   check-links:
     docker:
-      - image: web3f/link-checker:v0.1.0
+      - image: web3f/link-checker:v1.0.1
     steps:
       - checkout
       - run:
@@ -30,7 +30,7 @@ jobs:
       - run:
           name: check links
           command: |
-            pylinkvalidate.py --parser=html5lib -P http://localhost:3000/docs/en/ -d 0
+            linkchecker --ignore-url=!\/en\/ http://localhost:3000/ --check-extern
 
   deploy-website:
     docker:
