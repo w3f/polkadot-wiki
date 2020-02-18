@@ -22,7 +22,7 @@ status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) gu
 Suppose you have nominated five validator candidates, but three out of five were elected to 
 be the active validators, then you should see two of your nominations as inactive. Active nomination means your nominated validators have been elected to be in the active validator set, whereas inactive means they did not get elected. 
 
-### What does inactive nominations could affect your rewards?
+### Possible effect of inactive nominations on rewards
 
 As long as you have nominated more than one validator candidates and have at least one of them got elected, your bonded stake will be fully distributed to the elected validators. That being said, you still will have the chance to get 0 rewards if you nominated very few validator candidates and no one got elected. So it would be safe to to choose as many trustworthy validators as you can (up to 16) to reduce the risk of getting nothing happened.
 
