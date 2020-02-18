@@ -37,7 +37,7 @@ One example would be like if a validator regularly offline, their nominators mos
 ![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
 
 Thus, to be a smart nominator, it would be better to look at their [histories](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set).
-Moreover, you should do deep-dive research on the underlying validator candidates such as go over their websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and many more. 
+Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more. 
 
 To sum things up, instead of just by looking at the single indicator, combining with all these information together could form a more comprehensive metrics to evaluate the validators' capability.
 
