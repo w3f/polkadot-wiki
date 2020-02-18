@@ -19,33 +19,38 @@ that you can get started creating your application in anticipation of the Polkad
 
 ## Where are we now?
 
-- Polkadot release: **Around the New Year**
+- Polkadot release: **Early 2020**
 - Canary release: **Kusama**
-- Current testnet: **Alexander**
-- Substrate: **1.0.0** (2.0.0 to be tagged soon)
-- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- Current testnet: **Westend**
+- Substrate: **2.0.0**
+- Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
 - ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
-**What you need to know**: Polkadot is currently on the v0.6 release with a running testnet named Alexander and Kusama,
-a value-bearing canary network. The Alexander testnet has been live for over 6 months through the entire PoC-3 and
-PoC-4 release cycles. Polkadot is being built with [implementations in various programming
-languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in
-Rust and using the Substrate framework for developing blockchains. Substrate is a library that allows developers to
-more easily develop entire blockchains by building from a base layer including a networking protocol, consensus, and a
-Wasm interpreter. An in-development extension to Substrate called Cumulus will allow any Substrate built chain to
-connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, which settled its API for the time
-being.
+## What you need to know
 
-Substrate chains can include smart contract functionality by using the provided [contracts Frame pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
-This pallet allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users.
-To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built
-in Rust that is intended for writing smart contracts.
+Polkadot is currently on the v0.7 release with a testnet called Westend and a
+value-bearing canary network called Kusama. Polkadot is being built with [implementations in various programming
+languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in
+Rust and built on the Substrate framework. Substrate is a library that allows developers to
+develop entire blockchain applications with ease by bundling together a networking protocol, consensus, and
+Wasm interpreter. Cumulus, an extension to Substrate, will allow any Substrate built chain to
+connect to Polkadot and become a parachain. Substrate is currently nearing its official
+2.0.0 tagged release that will solidify its API.
+
+Polkadot does not natively support smart contracts, however there will be parachains
+that do. Substrate chains can include smart contract functionality by using the provided 
+[contracts Frame pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
+The contracts pallet enables a chain to use Wasm-compiled contracts that can be deployed
+permissionlessly by users or with specific rules dependent on the chain. 
+To facilitate development of Wasm smart contracts, Parity is also developing 
+[ink!](https://github.com/paritytech/ink), a domain specific language built
+in Rust for writing smart contracts.
 
 Polkadot is planned to go live with an initial release early in 2020, depending on security audits and launch
 provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been
 a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code,
 you should think about the kind of decentralized application you want to make and understand the different paradigms
-available to developers who want to build for Polkadot.
+available to developers who want to build on Polkadot.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
@@ -55,7 +60,7 @@ understand them.
 
 Parachains are individual chains containing their own runtime logic that benefit from the shared security and the
 cross-chain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and
-customization but will require more effort to create.
+customization but will require more effort to create and maintain.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application.
 The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain.
@@ -64,7 +69,7 @@ parachains which have secured a slot to produce a block at every block of the re
 you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback
 of the cost.
 
-On the Polkadot mainnet, there can be parachains that act as smart contract platforms. Smart contracts are
+On the Polkadot mainnet, there will be parachains that act as smart contract platforms. Smart contracts are
 executable programs that exist on only a single chain and are limited in complexity. Because they exist on a single
 chain, they can have smooth interoperability with other smart contracts on the same chain. However, they will always be constrained and
 limited by the inherent characteristics of their host chain.
@@ -99,13 +104,14 @@ call iteration. If you require off-chain data from an oracle, you may want to us
 only triggers once every 24 hours (this makes the most sense if the data is useful to other players in the Polkadot
 ecosystem too).
 
-Most likely you’ve already realized that your application is better suited to be one or the other (or a hybrid of them both
-), but if you need a quick recap to digest the information, you can use this comparison chart as a cheat sheet:
+Most likely you’ve already realized that your application is better suited to be
+one or the other (or a hybrid of them both), but if you need a quick recap to 
+digest the information, you can use this comparison chart as a cheat sheet:
 
 ![build 2](assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the benefits of parachains
-> apply just as well to parathreads. However, they are cheaper to deploy and maintain. So if they had a column
+> apply just as well to parathreads. Parathreads, however, _are_ cheaper to deploy and maintain. So if they had a column
 > on the table above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead"
 > changed to `+`.
 
@@ -172,7 +178,7 @@ This includes:
 - Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with
   minimal modification, possibly as little work as importing a crate and adding a single line.
 
-Rob Habermeier, a co-founder of Polkadot, recently gave a talk at EthCC that gave the latest on the development of
+Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced
 Cumulus, which you can watch below.
 
 [![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
