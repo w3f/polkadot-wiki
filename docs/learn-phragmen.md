@@ -205,7 +205,7 @@ Candidate D: 1 / 9 = 0.111
 Candidate E: N/A
 ```
 
-For every edge, we are going to calculate the score, which is current score plus the total budget * the load o the voter divided by the approval stake of the candidate.  However, since the load of every voter starts at 0, and anything multiplied by 0 is 0, any addition will be `0 / x`, or 0.  This means that this step can be safely ignored for the initial round.
+For every edge, we are going to calculate the score, which is current score plus the total budget * the load of the voter divided by the approval stake of the candidate.  However, since the load of every voter starts at 0, and anything multiplied by 0 is 0, any addition will be `0 / x`, or 0.  This means that this step can be safely ignored for the initial round.
 
 Thus, the best (lowest) score for Round 0 is Candidate A, with a score of `0.091`.
 
