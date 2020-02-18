@@ -19,4 +19,4 @@ When the first transition to PoS took place, the full functionality of Kusama wa
 the Sudo key still existed and was used to initiate further upgrades. Balance transfers were still disabled
 for a short while. 
 
-Kusama now has had it's full functionality enabled.
+Kusama now has had its full functionality enabled.

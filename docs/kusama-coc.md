@@ -18,7 +18,7 @@ Please note: these are just a few examples and you can always consult a team mem
 
 Angry aggressive comments towards individuals or other projects on any medium of communication
 Knowingly distributing false information about Kusama or other projects
-Harassing other individuals or projects (trolling)
+Harassing other individuals or projects (trolling).
 
 ## What To Do If You Witness or Are Subject To Unacceptable Behavior
 If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact the administrator of the channel you’re in.
