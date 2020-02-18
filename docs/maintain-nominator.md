@@ -12,7 +12,7 @@ By doing so, you become a nominator for the validator of your choice. Pick your 
 
 While your DOTs are staked by nominating a validator, they are 'locked' (bonded). You can receive new DOTs in your account but you cannot stake as validator or transfer DOTs away from your account. You can [un-nominate at any time](maintain-guides-how-to-unbond) to unlock your funds. Keep in mind that the un-nomination is effective in the next era.
 
-### What does active/inactive nomination mean?
+### Active vs. Inactive Nomination
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking page, you should see your bonded accounts and nomination
 status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be effective in the next era, that means roughly 6 hours on Kusama and 24 hours on Polkadot.
