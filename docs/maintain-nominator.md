@@ -30,7 +30,7 @@ As long as you have nominated more than one validator candidate and at least one
 
 ![Staking Returns](/img/staking/polkadotjs-staking-returns.jpg)
 
-As a nominator, if you only want to know the profit of each validator has been made for each era, you can go to the [Returns](https://polkadot.js.org/apps/#/staking/returns) section under staking page by inputting the number of tokens you would like to stake to check it. And then nominate those who have a higher profit. However, that does not mean the right way to evaluate the validators' performance in overall.
+As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Returns](https://polkadot.js.org/apps/#/staking/returns) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
 
 One example would be if a validator is regularly offline, their nominators most likely would get fewer rewards than others. More importantly, when many validators are [unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be slashed.
 
