@@ -1,7 +1,7 @@
 ---
 id: kusama-time-periods
-title: Time Period Cheat Sheet (Kusama)
-sidebar_label: Time Periods
+title: Time Period Cheat Sheet
+sidebar_label: Parameters
 ---
 
 ### Periods of common actions and attributes

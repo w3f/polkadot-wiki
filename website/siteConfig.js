@@ -9,9 +9,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'build-index', label: 'Build'},
-    {doc: 'learn-introduction', label: 'Learn'},
-    {doc: 'maintain-index', label: 'Maintain'},
+    { doc: 'build-index', label: 'Build' },
+    { doc: 'learn-introduction', label: 'Learn' },
+    { doc: 'maintain-index', label: 'Maintain '},
+    { doc: 'kusama-index', label: 'Kusama' },
     { search: true },
     { languages: true }
   ],

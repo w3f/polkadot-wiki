@@ -1,7 +1,7 @@
 ---
 id: kusama-index
 title: Kusama
-sidebar_label: Kusama
+sidebar_label: Home
 ---
 
 Kusama is a "canary network" for Polkadot, an early unaudited release of the code

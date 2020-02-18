@@ -69,9 +69,17 @@
         "title": "Wiki Index",
         "sidebar_label": "Wiki Index"
       },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
       "kusama-claims": {
         "title": "Kusama Claims",
-        "sidebar_label": "Kusama Claims"
+        "sidebar_label": "Claims"
       },
       "kusama-coc": {
         "title": "Kusama Code of Conduct",
@@ -83,15 +91,15 @@
       },
       "kusama-faucet": {
         "title": "Kusama Faucet",
-        "sidebar_label": "Kusama Faucet"
+        "sidebar_label": "Faucet"
       },
       "kusama-index": {
         "title": "Kusama",
-        "sidebar_label": "Kusama"
+        "sidebar_label": "Home"
       },
       "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet (Kusama)",
-        "sidebar_label": "Time Periods"
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
       },
       "kusama-timeline": {
         "title": "Kusama Timeline",
@@ -301,7 +309,8 @@
     "links": {
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "Main",
