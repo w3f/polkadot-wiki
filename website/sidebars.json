@@ -155,5 +155,41 @@
         ]
       }
     ]
+  },
+  "kusama": {
+    "Kusama": [
+      "kusama-index",
+      {
+        "type": "subcategory",
+        "label": "Get Started",
+        "ids": [
+          "kusama-faucet",
+          "kusama-claims"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "What to Try",
+        "ids": [
+          "maintain-guides-how-to-validate-kusama",
+          "maintain-guides-how-to-nominate-kusama",
+          "learn-governance",
+          "learn-identity",
+          "build-build-with-polkadot"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "What to Break",
+        "ids": [
+          "kusama-bug-bounty",
+          "kusama-adverserial-cheatsheet"
+        ]
+      },
+      "kusama-timeline",
+      "kusama-community",
+      "kusama-time-periods",
+      "kusama-coc"
+    ]
   }
 }
