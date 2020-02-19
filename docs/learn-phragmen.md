@@ -49,7 +49,13 @@ This section explains the sequential Phragmén method in-depth and walks through
 
 ### Rationale
 
-In order to understand the Sequential Phragmén method, we must first understand the original Phragmén method.  There must be some group of candidates, a group of seats they are vying for (which is less than the size of the group of candidates), and some group of voters.  The voters can cast an approval vote - that is, they can signal approval for any subset of the candidates.  The subset must be a minimum size of one (i.e., one cannot vote for no candidates) and a maximum size of one less than the number of candidates (i.e., one cannot vote for all candidates).
+In order to understand the Weighted Phragmén method, we must first understand the basic Phragmén method.  There must be some group of candidates, a group of seats they are vying for (which is less than the size of the group of candidates), and some group of voters.  The voters can cast an approval vote - that is, they can signal approval for any subset of the candidates.
+
+The subset should be a minimum size of one (i.e., one cannot vote for no candidates) and a maximum size of one less than the number of candidates (i.e., one cannot vote for all candidates).  Users are allowed to voting for all or no candidates, but this will not have an effect on the final result, and so votes of this nature are meaningless.
+
+Note that in this example, all voters are assumed to have equal say (that is, their vote does not count more or less than any other votes).  The weighted case will be considered later.  However, weighting can be "simulated" by having multiple voters vote for the same slate of candidates.  For instance, five people voting for a particular candidate is mathematically the same as a single person with weight `5` voting for that candidate.
+
+The particular algorithm we call here the "Basic Phragmén" was first described by Brill _et al._ in their paper ["Phragmén’s Voting Methods and Justified Representation"](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791).
 
 ### Algorithm
 
@@ -117,41 +123,39 @@ Voter V5:       X X X  0  1/4 1/2
 ```
 
 
-There is now one seat open and two candidates, `A` and `C`.  Voter `V4` is the only one voting for `A`, so if `A` wins then the average load would be `(1/4 + 1/1) / 1`, or `5/4`.  Voters `V2` and `V5` (both with load `1/2`) support `C`, so if `C` wins the average load would be `((1/2 + 1) + (1/2 + 1)) / 2`, or `3/2`.  Since the average load would be lower with `A`, `A` wins the final seat.
+There is now one seat open and two candidates, `A` and `C`.  Voter `V4` is the only one voting for `A`, so if `A` wins then the average load would be `(1/4 + 1/1) / 1`, or `5/4`.  Voters `V2` and `V5` (both with load `1/2`) support `C`, so if `C` wins the average load would be `((1/2 + 1/2) + (1/2 + 1/2)) / 2`, or `1`.  Since the average load would be lower with `C`, `C` wins the final seat.
 
 ```
-Filled seats: 3 (B, D, A)
+Filled seats: 3 (B, D, C)
 Open Seats: 0
 
 Candidates:   A B C D  L0 L1  L2  L3
 ------------------------------------
 Voter V1:       X      0  1/4 1/4 1/4
-Voter V2:         X X  0  0   1/2 1/2
+Voter V2:         X X  0  0   1/2 1
 Voter V3:       X   X  0  1/4 1/2 1/2
-Voter V4:     X X      0  1/4 1/4 5/4
-Voter V5:       X X X  0  1/4 1/2 1/2
+Voter V4:     X X      0  1/4 1/4 1/4
+Voter V5:       X X X  0  1/4 1/2 1
 ```
 
-Note that even though more voters voted for `C` in the final round, `A` won due to `V4`'s lower load.  This shows how Phragmén gives extra "weight" to those who have not had their choices already taken into account in previous rounds.
+An interesting characteristic of this calculation is that the total load of all voters will always equal the number of seats filled in that round.  In the zeroth round, load starts at `0` and there are no seats filled.  After the first round, the total of all loads is `1`, after the second round it is `2`, etc.
 
-Another interesting characteristic of this calculation is that the total load of all voters will always equal the number of seats filled in that round.  In the zeroth round, load starts at `0` and there are no seats filled.  After the first round, the total of all loads is `1`, after the second round it is `2`, etc.
-
-### Sequential Phragmén
+### Weighted Phragmén
 
 ### Rationale
 
 While this method works well if all voters have equal weight, this is not the case in Polkadot.  Elections for both validators and candidates for the Polkadot Council are weighted by the number of tokens held by the voters.  This makes elections more similar to a corporate shareholder election than a traditional political election, where some members have more pull than others.  Someone with a single token will have much less voting power than someone with 100.  Although this may seem anti-democratic, in a pseudonymous system, it is trivial for someone with 100 tokens to create 100 different accounts and spread their wealth to all of their pseudonyms.
 
-Therefore, not only do we want want to allow voters to have their preferences expressed in the result, but do so while keeping as equal a distribution of their stake as possible.  The Sequential Phragmén method allows us to reach these goals.
+Therefore, not only do we want to allow voters to have their preferences expressed in the result, but do so while keeping as equal a distribution of their stake as possible and express the wishes of minorities as much as is possible.  The Weighted Phragmén method allows us to reach these goals.
 
 ### Algorithm
 
-Sequential Phragmén is similar to Basic Phragmén in that it selects candidates sequentially, one per round, until the maximum number of candidates are elected.  However, it has additional features to also allocate weight (stake) behind the candidates.
+Weighted Phragmén is similar to Basic Phragmén in that it selects candidates sequentially, one per round, until the maximum number of candidates are elected.  However, it has additional features to also allocate weight (stake) behind the candidates.
 
 _Note: in terms of validator selection, for the following algorithm, you can think of "voters" as "nominators" and "candidates" as "validators"._
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have won a "seat").  This aspect of the algorithm is very similar to the "basic Phragmén" algorithm described above.
-2. However, as candidates are elected, an weighted mapping is built, defining the weights of each selection of a validator by each candidate.
+2. However, as candidates are elected, a weighted mapping is built, defining the weights of each selection of a validator by each candidate.
 
 In more depth, the algorithm operates like so:
 
@@ -166,7 +170,7 @@ In more depth, the algorithm operates like so:
 
 ### Example
 
-_Note: floating-point numbers in this example are rounded off to three decimal places._
+_Note: All numbers in this example are rounded off to three decimal places._
 
 In the following example, there are five voters and five candidates vying for three potential seats.  Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2` has stake of 2, etc.).  Every voter is also going to have a _load_ which initially starts at `0`.
 
@@ -396,12 +400,17 @@ Another issue is that we want to ensure that as equal a distribution of votes as
 
 In contrast, imagine a different result with the same amount of total stake, but with that stake perfectly equally distributed: `{210, 210, 210, 210, 210}`.  With the same amount of stake, an attacker would need to stake 633 tokens in order to get a majority of validators, a much more expensive proposition.  Although obtaining an equal distribution is unlikely, the more equal the distribution, the higher the threshold - and thus the higher the expense - for attackers to gain entry to the set.
 
+### High-Level Description
+
+After running the weighted Phragmén algorithm, a process is run which redistributes the vote amongst the elected set.  This process will never add or remove an elected candidate from the set.  Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates.  Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible.
+
+For more details, you can view the [Rust implementation in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs) or the `seqPhragménwithpostprocessing` method in the [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS).
+
 ## External Resources
 
 - [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html) - The formal adaptation of the Phragmén method as applied to Polkadot validators.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Implementations of Simple and Complicated Phragmén methods.
 - [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/core/phragmen/src/lib.rs) - Rust implementation used in the Substrate Runtime Module Library.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper explaining Phragmén's election methods in detail.
+- [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) - This paper by Brill _et al._ is the source for the simple Phragmén algorithm, along with proofs about its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the Phragmén validator election outcome before the start of an era.
-
-[Phragmen Paper]: https://arxiv.org/pdf/1611.08826.pdf
