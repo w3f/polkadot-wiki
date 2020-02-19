@@ -102,6 +102,27 @@ update with the information for your already submitted proposal.
 
 ## Seconding a Proposal
 
+Seconding a proposal means that you are agreeing with the proposal and backing
+it with an equal amount of deposit as was originally locked. By seconding a 
+proposal you will move it higher up the rank of proposals. The most seconded
+proposal will be tabled as a referendum to be voted on every launch period.
+
+To second a proposal, navigate to the proposal you want to second and click on
+the "Second" button.
+
+![second button]()
+
+You will be prompted with the full details of the proposal (if the preimage has
+been submitted!) and can then broadcast the transaction by clicking the blue
+"Second" button.
+
+![second confirm]()
+
+Once successful you will see your second appear in the dropdown in the proposal
+details.
+
+![second result]()
+
 ## Voting on a Proposal
 
 ## Proxies
@@ -114,4 +135,37 @@ update with the information for your already submitted proposal.
 
 ## Delegate a Vote
 
+You may want to delegate your vote to another account in case that you are unsure
+about the best decision for a particular referendum, but trust the judgement of
+another.
+
+You can delegate your vote to another account and even attach a "Conviction"
+to the delegation. Navigate to the "Extrinsics" tab on Polkadot Apps and select
+the options "democracy" and "delegate". This means you are accessing the democracy
+pallet and choosing the delegate transaction type to send. 
+
+In the first input select the account you want to delegate to and in the second
+input select the amount of your conviction. Remember, higher convictions means
+that your vote will be locked longer. So choose wisely!
+
+![delegate]()
+
+After you send the delegate transaction, you can verify it went through by navigating
+to the "Chain State" tab and selecting the "democracy" and "delegations" options.
+You will see an output similar to below, showing the addresses which you have
+delegated your voting power.
+
+![delegate state]()
+
 ## Undelegate a Vote
+
+After some time if you decide to undelegate your vote from the delegated account,
+you must simply send the `undelegate` transaction from the account you wish to
+clear.
+
+The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select
+the "democracy" pallet and the "undelegate" transaction type. Ensure that you are
+sending the transaction from the account you want to clear of delegations. Click
+"Submit transaction" and confirm. 
+
+![undelegate]()
