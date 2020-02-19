@@ -4,15 +4,21 @@ title: Participate in Democracy
 sidebar_label: Participate in Democracy
 ---
 
-Public referenda are one of the three bodies of Polkadot / Kusama's governance system, alongside the [council]()
-and the [technical committee]().
+The public referenda chamber is one of the three bodies of on-chain governance
+as its instantiated in Polkadot and Kusama. The other two bodies are the
+[council](maintain-guides-how-to-join-council) and the
+[technical committee](learn-governance#technical-committee).
 
 Public referenda can be proposed and voted on by any token holder in the system
-as long as they provide a bond. If a token holder is willing to lock up their
-tokens for a longer amount of time they will get their vote amplified.
-This mechanism (known as conviction voting) are discussed more fully in the
-[governance]() page on the wiki. This guide will instruct token holders how
-to proposed and vote on public referenda using the Democracy module.
+as long as they provide a bond. After a proposal is made, others can agree with
+it by _seconding_ it and putting up tokens equal to the original bond. Every
+launch period, the most seconded proposal will be moved to the public referenda
+table will it can be voted upon. Voters who are willing to lock up their tokens
+for a greater duration of time can do so and get their vote amplified. For more
+details on the governance system please see [here](learn-governance).
+
+This guide will instruct token holders how to proposed and vote on public
+referenda using the Democracy module as it's implemented in Kusama.
 
 ## Important Parameters
 
@@ -22,15 +28,77 @@ The important parameters to be aware of when voting using the Democracry module 
 
 **Voting Period** - How often votes for referenda are tallied.
 
-**Emergency Voting Period** - The minimum voting period for a fast-tracked emergency referendum.
+**Emergency Voting Period** - The minimum voting period for a fast-tracked
+emergency referendum.
 
-**Minimum Deposit** - The minimum amount to be used as a deposit for a public referendum proposal.
+**Minimum Deposit** - The minimum amount to be used as a deposit for a public
+referendum proposal.
 
-**Enactment Period** - The minimum period for locking funds _and_ the period between a proposal being approved and enacted.
+**Enactment Period** - The minimum period for locking funds _and_ the period 
+between a proposal being approved and enacted.
 
-**Cooloff Period** - The period in blocks where a proposal may not be re-submitted after being vetoed.
+**Cooloff Period** - The period in blocks where a proposal may not be 
+re-submitted after being vetoed.
 
 ## Proposing an Action
+
+Proposing an action to be taken requires you to bond some tokens. In order to
+ensure you have enough tokens to make the minimum deposit you can check the
+parameter in the chain state.
+
+On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order
+to submit a proposal, you will need to submit what's called the preimage hash.
+The preimage hash is simply the hash of the proposal to be enacted. The easiest
+way to get the preimage hash is by clicking on the "Submit preimage" button and
+configuring the action that you are proposing.
+
+For example, if you wanted to propose that the account "Dave" would have a balance
+of 10 tokens your proposal may look something like the below image. The preimage
+hash would be `0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0`.
+You can copy this preimage hash and save it for the next step.
+
+![submit preimage]()
+
+Now you will click on the "Submit proposal" button and enter the preimage hash
+in the input titled "preimage hash" and _at least_ the minimum deposit into the
+"locked balance" field. Click on the blue "Submit proposal" button and confirm
+the transaction. You should now see your proposal appear in the "proposals"
+column on the page.
+
+![submit proposal]()
+
+Now your proposal is visible by anyone who accesses the chain and others can
+second it or submit a preimage. However, it's hard to tell what exactly this
+proposal does since it shows the hash of the action. Other holders will not be
+able to make a judgement for whether they second it or not until someone submits
+the actual preimage for this proposal. The next step you will submit the preimage.
+
+![proposals]()
+
+## Submitting a Preimage
+
+The act of making a proposal is split from submitting the preimage for the proposal
+since the storage cost of submitting a large preimage could be pretty expensive.
+Allowing for the preimage submission to come as a separate transaction means that
+another account could submit the preimage for you if you don't have the funds to
+do so. It also means that you don't have to pay so many funds right away as you
+can prove the preimage hash out-of-band.
+
+However, at some point before the proposal passes you will need to submit the
+preimage or else the proposal cannot be enacted. The guide will now show you how
+to do this.
+
+Click on the blue "Submit preimage" button and configure it to be the same as
+what you did before to acquire the preimage hash. This time, instead of copying
+the hash to another tab, you will follow through and click "Submit preimage" and
+confirm the transaction. 
+
+![submit preimage]()
+
+Once the transaction is included you should see the UI
+update with the information for your already submitted proposal.
+
+![proposals updated]()
 
 ## Seconding a Proposal
 
