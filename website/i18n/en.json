@@ -105,6 +105,10 @@
         "title": "Kusama Timeline",
         "sidebar_label": "Timeline"
       },
+      "learn-accounts": {
+        "title": "Polkadot Accounts",
+        "sidebar_label": "Polkadot Accounts"
+      },
       "learn-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
@@ -185,9 +189,9 @@
         "title": "Sequential Phragmen Method",
         "sidebar_label": "Sequential Phragmen Method"
       },
-      "learn-PRE": {
-        "title": "Polkadot Runtime Environment (PRE)",
-        "sidebar_label": "Polkadot Runtime Environment (PRE)"
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "Randomness",

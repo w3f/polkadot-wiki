@@ -35,7 +35,7 @@ will be filled out.
 
 ### Clients
 
-- [Polkadot](https://github.com/paritytech/polkadot) - Rust implementation of the Polkadot Runtime Environment.
+- [Polkadot](https://github.com/paritytech/polkadot) - Rust implementation of the Polkadot Host and Polkadot Runtime.
 
 ### Tools
 
@@ -53,7 +53,7 @@ will be filled out.
 
 ## Go
 
-- [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Runtime Environment.
+- [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Host.
 - [Golkadot](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate.
 - [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC client for go aka GSRPC
 
