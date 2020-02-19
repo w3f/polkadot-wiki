@@ -69,6 +69,42 @@
         "title": "维基索引",
         "sidebar_label": "维基索引"
       },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Faucet"
+      },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Home"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
+      },
       "learn-architecture": {
         "title": "Polkadot 架构",
         "sidebar_label": "Polkadot 架构"
@@ -203,7 +239,7 @@
       },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "成为提名人 (Kusama)",
-        "sidebar_label": "成为提名人 (Kusama)"
+        "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Setup a Sentry Node - Public Node",
@@ -227,7 +263,7 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "运行验证人 (Kusama)"
+        "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
@@ -281,13 +317,15 @@
     "links": {
       "Build": "建立",
       "Learn": "学习",
-      "Maintain": "参与"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "主要",
       "Build": "建立",
       "Learn": "学习",
-      "Maintain": "参与"
+      "Maintain": "参与",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {
