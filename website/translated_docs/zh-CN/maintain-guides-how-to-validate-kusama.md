@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-kusama
 title: 成为验证人 (Kusama)
-sidebar_label: 成为验证人 (Kusama)
+sidebar_label: Validator Guide
 ---
 
 本指南将指导您如何在 Kusama 网络上设置验证人节点。
