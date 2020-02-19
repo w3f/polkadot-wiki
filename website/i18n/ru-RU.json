@@ -69,6 +69,42 @@
         "title": "Wiki Index",
         "sidebar_label": "Wiki Index"
       },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Faucet"
+      },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Home"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
+      },
       "learn-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
@@ -203,7 +239,7 @@
       },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",
-        "sidebar_label": "Be a Nominator (Kusama)"
+        "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Setup a Sentry Node - Public Node",
@@ -227,7 +263,7 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Run a Validator (Kusama)"
+        "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "Run a Validator (Alexander)",
@@ -281,13 +317,15 @@
     "links": {
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "Main",
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain": "Maintain",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {
