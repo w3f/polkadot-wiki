@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-kusama
 title: การเป็นผู้เสนอชื่อ (Nominator) บนเครือข่าย Kusama
-sidebar_label: การเป็นผู้เสนอชื่อ (Nominator) บนเครือข่าย Kusama
+sidebar_label: Nominator Guide
 ---
 
 ## Step 1: Bond your tokens
