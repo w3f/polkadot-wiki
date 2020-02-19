@@ -30,7 +30,7 @@ jobs:
       - run:
           name: check links
           command: |
-            linkchecker --ignore-url=!\/en\/ http://localhost:3000/ --check-extern
+            linkchecker --ignore-url="^(?:(?!http))(?:(?!\/en\/).)*$" --check-extern http://localhost:3000/
 
   deploy-website:
     docker:
