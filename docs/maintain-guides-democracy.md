@@ -125,13 +125,29 @@ details.
 
 ## Voting on a Proposal
 
-## Proxies
+At the end of each launch period, the most seconded proposal will move to
+referendum. During this time you can cast a vote for or against the proposal.
+You may also lock up your tokens for a greater length of time to weigh your vote
+more strongly.
 
-### Setting a Proxy
+To vote on a referendum, navigate to the "Democracy" tab of Polkadot Apps. Any
+active referendum will show in the "referenda" column. Click the blue button
+"Vote" to cast a vote for the referendum.
 
-### Removing a Proxy
+If you would like to cast your vote for the proposal select the "Aye, I approve"
+option. If you would like to cast your vote against the proposal in referendum
+you will select "Nay, I do not approve" option. 
 
-### Resigning a Proxy
+The second option is to select your conviction for this vote. The longer you are
+willing to lock your tokens, the stronger your vote will be weighted. Unwillingness
+to lock your tokens means that your vote only counts for 10% of the tokens that
+you hold, while the maximum lock up of 128 days means you can make your vote count
+for 500% of the tokens that you hold.
+
+When you are comfortable with the decision you have made, click the blue "Vote"
+button to submit your transaction and wait for it to be included in a block.
+
+![voting]()
 
 ## Delegate a Vote
 
@@ -169,3 +185,20 @@ sending the transaction from the account you want to clear of delegations. Click
 "Submit transaction" and confirm. 
 
 ![undelegate]()
+
+## Proxies
+
+Proxies can be used to vote on behalf of a stash account. Unlike delegation,
+the proxy is meant to act as a longer-term account that makes all the voting
+decisions for funds held in a different account. Delegation is a logical action,
+taken when you trust another account's judgement, while proxying is more of a
+recommended security practice for keeping your funds safe and using an active
+account with low funds instead.
+
+### Setting a Proxy
+
+
+
+### Removing a Proxy
+
+### Resigning a Proxy
