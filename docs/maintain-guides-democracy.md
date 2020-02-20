@@ -130,7 +130,7 @@ referendum. During this time you can cast a vote for or against the proposal.
 You may also lock up your tokens for a greater length of time to weigh your vote
 more strongly.
 
-To vote on a referendum, navigate to the "Democracy" tab of Polkadot Apps. Any
+To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any
 active referendum will show in the "referenda" column. Click the blue button
 "Vote" to cast a vote for the referendum.
 
