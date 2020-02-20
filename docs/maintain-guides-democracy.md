@@ -71,7 +71,7 @@ Now your proposal is visible by anyone who accesses the chain and others can
 second it or submit a preimage. However, it's hard to tell what exactly this
 proposal does since it shows the hash of the action. Other holders will not be
 able to make a judgement for whether they second it or not until someone submits
-the actual preimage for this proposal. The next step you will submit the preimage.
+the actual preimage for this proposal. In the next step you will submit the preimage.
 
 ![proposals](assets/democracy/proposals.png)
 
