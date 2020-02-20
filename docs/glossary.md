@@ -160,7 +160,11 @@ A heterogeneous, multi-chain network allowing various blockchains of different c
 
 ## Polkadot Host
 
-The environment in which a runtime module can be executed. Parachains must support the Polkadot Host - external chains that do not will have to use a bridge.
+The environment in which a runtime module can be executed. Parachains must support the Polkadot Host - external chains that do not will have to use a bridge. Previously known as the Polkadot Runtime Environment or PRE.
+
+## Polkadot Runtime Environment
+
+The previous name for the [Polkadot Host](#polkadot-host).
 
 ## Proof of Stake (PoS)
 
