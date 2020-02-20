@@ -117,12 +117,21 @@ you must first remove the database with `polkadot purge-chain` and then ensure t
 
 #### New to the Network
 
-If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the
-following command:
+You can begin syncing your node by running the following command:
+
+```sh
+./target/release/polkadot --validator
+```
+
+or 
 
 ```sh
 ./target/release/polkadot --pruning=archive
 ```
+
+if you do not want to start in validator mode right away.
+
+**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
 #### Previous Kusama CC1 Validator
 
