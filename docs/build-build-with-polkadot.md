@@ -38,13 +38,14 @@ connect to Polkadot and become a parachain. Substrate is currently nearing its o
 2.0.0 tagged release that will solidify its API.
 
 Polkadot does not natively support smart contracts, however there will be parachains
-that do. Substrate chains can include smart contract functionality by using the provided 
-[contracts Frame pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
-The contracts pallet enables a chain to use Wasm-compiled contracts that can be deployed
-permissionlessly by users or with specific rules dependent on the chain. 
-To facilitate development of Wasm smart contracts, Parity is also developing 
+that do. Substrate chains can include smart contract functionality by using the
+[Contracts][substrate contracts] pallet for Wasm contracts or the
+[EVM][substrate evm] pallet in FRAME. The contracts pallet enables a chain to 
+use Wasm-compiled contracts that can be deployed permissionlessly by users or 
+with specific rules dependent on the chain. To facilitate development of Wasm
+smart contracts, Parity is also developing 
 [ink!](https://github.com/paritytech/ink), a domain specific language built
-in Rust for writing smart contracts.
+in Rust for writing smart contracts. 
 
 Polkadot is planned to go live with an initial release early in 2020, depending on security audits and launch
 provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been
