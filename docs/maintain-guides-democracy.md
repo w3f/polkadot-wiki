@@ -168,7 +168,7 @@ that your vote will be locked longer. So choose wisely!
 
 After you send the delegate transaction, you can verify it went through by navigating
 to the "Chain State" tab and selecting the "democracy" and "delegations" options.
-You will see an output similar to below, showing the addresses which you have
+You will see an output similar to below, showing the addresses to which you have
 delegated your voting power.
 
 ![delegate state](assets/democracy/delegate_state.png)
