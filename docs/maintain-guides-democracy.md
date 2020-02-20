@@ -216,7 +216,7 @@ sending this transaction you will specify the index of the referendum that is
 being voted on as well as the judgement (i.e. "Aye" for approval or "Nay" for
 rejection).
 
-![proxy vote](assets/democracy/proxy_vot.png)
+![proxy vote](assets/democracy/proxy_vote.png)
 
 ### Removing a proxy
 
