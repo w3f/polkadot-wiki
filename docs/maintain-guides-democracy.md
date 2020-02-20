@@ -17,7 +17,7 @@ table will it can be voted upon. Voters who are willing to lock up their tokens
 for a greater duration of time can do so and get their vote amplified. For more
 details on the governance system please see [here](learn-governance).
 
-This guide will instruct token holders how to proposed and vote on public
+This guide will instruct token holders how to propose and vote on public
 referenda using the Democracy module as it's implemented in Kusama.
 
 ## Important Parameters
