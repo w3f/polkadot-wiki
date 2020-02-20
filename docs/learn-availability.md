@@ -4,9 +4,37 @@ title: Availability and Validity
 sidebar_label: Availability and Validity
 ---
 
-The Availability and Validity protocol of Polkadot is what allows for the network
-to be efficiently sharded among parachains while maintaining strong security
-guarantees.
+The Availability and Validity (AnV) protocol of Polkadot is what allows for the
+network to be efficiently sharded among parachains while maintaining strong 
+security guarantees.
+
+## Phases of the AnV protocol
+
+There are six phases of the Availability and the Validity protocol.
+
+1. Parachain phase.
+2. Relay chain submission phase.
+3. Availability and unavailability subprotocols.
+4. Secondary GRANDPA validity checks.
+5. Objection procedure for fishermen.
+6. Invokation of a Byzantine fault tolerant _finality gadget_ to cement the chain.
+
+### Parachain phase
+
+The parachain phase of AnV is when the _collator_ of a parachain proposes a 
+_candidate block_ to the validators that are currently assigned to the parachain.
+
+> A __candidate block__ is...
+
+The validators then check the candidate block against the verification function
+exposed by that parachain's registered code. If the verification succeeds, then
+the validators will pass the candidate block to the other validators in the gossip
+network. However, if the verification fails, the validators immediately reject
+the candidate block as invalid.
+
+### Relay chain submission phase
+
+
 
 ## Erasure Codes
 
