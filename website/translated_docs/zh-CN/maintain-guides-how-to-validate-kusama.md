@@ -151,9 +151,9 @@ If you are interested in determining how much longer you have to go, your server
 
 ## 绑定 KSM
 
-For the soft launch period, since transfers are disabled, you will set your Controller and Stash account to be the same account. If you have two accounts with KSM, the recommended method is to still have the Controller and Stash different accounts. Once the network is operating with PoS, you will be able to re-configure your controller to have separate controller and stash accounts.
+It is highly recommended that you make your controller and stash accounts be two separate accounts. For this, you will create two accounts and make sure each of them have at least enough funds to pay the fees for making transactions. Keep most of your funds in the stash account since it is meant to be the custodian of your staking funds.
 
-Make sure not to bond all your KSM balance since the latest codebase in Kusama CC2 does not allow to use the bonded balance to pay transaction fees.
+Make sure not to bond all your KSM balance since you will be unable to pay transaction fees from your bonded balance.
 
 It is now time to set up our validator. We will do the following:
 
