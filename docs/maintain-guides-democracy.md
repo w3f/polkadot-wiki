@@ -195,10 +195,40 @@ taken when you trust another account's judgement, while proxying is more of a
 recommended security practice for keeping your funds safe and using an active
 account with low funds instead.
 
-### Setting a Proxy
+### Setting a proxy
 
+Setting a proxy is simple and involves only submitting a single transaction, 
+the transaction type "setProxy" from the "democracy" pallet.
 
+You can make this transaction from Polkadot Apps by navigating to the "Extrinsics"
+tab and selecting the "democracy" pallet and the "setProxy" transaction type.
+Send the transaction from the "Stash" account which holds the funds that you want
+to vote with, and the target to the proxy account that will be responsible for
+casting the votes going forward. In the example below, "Alice Stash" is proxying
+to "Alice" so that Alice can vote on behalf of Alice Stash.
 
-### Removing a Proxy
+### Voting with a proxy
 
-### Resigning a Proxy
+Making a vote on behalf of a stash requires a `proxyVote` transaction. When
+sending this transaction you will specify the index of the referendum that is
+being voted on as well as the judgement (i.e. "Aye" for approval or "Nay" for
+rejection).
+
+![proxy vote]()
+
+### Removing a proxy
+
+At some point you may want to remove a proxy from being able to vote on behalf
+of a stash account. This is possible to do by submitting a `removeProxy` transaction
+from the stash account, targetting the proxy account.
+
+![remove proxy]()
+
+### Resigning a proxy
+
+If a proxy account wants to resign their proxy status for a different stash account
+this is possible to do by sending the `resignProxy` transaction. Simply call this
+transaction from the proxy account and all of its proxy responsibilities will be
+removed.
+
+![resign proxy]()
