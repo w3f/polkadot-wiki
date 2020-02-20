@@ -19,33 +19,39 @@ that you can get started creating your application in anticipation of the Polkad
 
 ## Where are we now?
 
-- Polkadot release: **Around the New Year**
+- Polkadot release: **Early 2020**
 - Canary release: **Kusama**
-- Current testnet: **Alexander**
-- Substrate: **1.0.0** (2.0.0 to be tagged soon)
-- Cumulus: **In development** ([Demo](https://github.com/paritytech/cumulus#running-a-collator))
+- Current testnet: **Westend**
+- Substrate: **2.0.0**
+- Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
 - ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
 
-**What you need to know**: Polkadot is currently on the v0.6 release with a running testnet named Alexander and Kusama,
-a value-bearing canary network. The Alexander testnet has been live for over 6 months through the entire PoC-3 and
-PoC-4 release cycles. Polkadot is being built with [implementations in various programming
-languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in
-Rust and using the Substrate framework for developing blockchains. Substrate is a library that allows developers to
-more easily develop entire blockchains by building from a base layer including a networking protocol, consensus, and a
-Wasm interpreter. An in-development extension to Substrate called Cumulus will allow any Substrate built chain to
-connect to Polkadot and become a parachain. Substrate has had a 1.0.0 release, which settled its API for the time
-being.
+## What you need to know
 
-Substrate chains can include smart contract functionality by using the provided [contracts Frame pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
-This pallet allows for smart contracts compiled to Wasm code to be deployed to the chain and instantiated by users.
-To facilitate development of Wasm smart contracts, Parity is also developing [ink!](https://github.com/paritytech/ink), a domain specific language built
-in Rust that is intended for writing smart contracts.
+Polkadot is currently on the v0.7 release with a testnet called Westend and a
+value-bearing canary network called Kusama. Polkadot is being built with [implementations in various programming
+languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in
+Rust and built on the Substrate framework. Substrate is a library that allows developers to
+develop entire blockchain applications with ease by bundling together a networking protocol, consensus, and
+Wasm interpreter. Cumulus, an extension to Substrate, will allow any Substrate built chain to
+connect to Polkadot and become a parachain. Substrate is currently nearing its official
+2.0.0 tagged release that will solidify its API.
+
+Polkadot does not natively support smart contracts, however there will be parachains
+that do. Substrate chains can include smart contract functionality by using the
+[Contracts][substrate contracts] pallet for Wasm contracts or the
+[EVM][substrate evm] pallet in FRAME. The contracts pallet enables a chain to 
+use Wasm-compiled contracts that can be deployed permissionlessly by users or 
+with specific rules dependent on the chain. To facilitate development of Wasm
+smart contracts, Parity is also developing 
+[ink!](https://github.com/paritytech/ink), a domain specific language built
+in Rust for writing smart contracts. 
 
 Polkadot is planned to go live with an initial release early in 2020, depending on security audits and launch
 provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been
 a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code,
 you should think about the kind of decentralized application you want to make and understand the different paradigms
-available to developers who want to build for Polkadot.
+available to developers who want to build on Polkadot.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
@@ -55,7 +61,7 @@ understand them.
 
 Parachains are individual chains containing their own runtime logic that benefit from the shared security and the
 cross-chain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and
-customization but will require more effort to create.
+customization but will require more effort to create and maintain.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application.
 The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain.
@@ -64,7 +70,7 @@ parachains which have secured a slot to produce a block at every block of the re
 you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback
 of the cost.
 
-On the Polkadot mainnet, there can be parachains that act as smart contract platforms. Smart contracts are
+On the Polkadot mainnet, there will be parachains that act as smart contract platforms. Smart contracts are
 executable programs that exist on only a single chain and are limited in complexity. Because they exist on a single
 chain, they can have smooth interoperability with other smart contracts on the same chain. However, they will always be constrained and
 limited by the inherent characteristics of their host chain.
@@ -99,13 +105,14 @@ call iteration. If you require off-chain data from an oracle, you may want to us
 only triggers once every 24 hours (this makes the most sense if the data is useful to other players in the Polkadot
 ecosystem too).
 
-Most likely you’ve already realized that your application is better suited to be one or the other (or a hybrid of them both
-), but if you need a quick recap to digest the information, you can use this comparison chart as a cheat sheet:
+Most likely you’ve already realized that your application is better suited to be
+one or the other (or a hybrid of them both), but if you need a quick recap to 
+digest the information, you can use this comparison chart as a cheat sheet:
 
 ![build 2](assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the benefits of parachains
-> apply just as well to parathreads. However, they are cheaper to deploy and maintain. So if they had a column
+> apply just as well to parathreads. Parathreads, however, _are_ cheaper to deploy and maintain. So if they had a column
 > on the table above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead"
 > changed to `+`.
 
@@ -172,7 +179,7 @@ This includes:
 - Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with
   minimal modification, possibly as little work as importing a crate and adding a single line.
 
-Rob Habermeier, a co-founder of Polkadot, recently gave a talk at EthCC that gave the latest on the development of
+Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced
 Cumulus, which you can watch below.
 
 [![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
@@ -196,48 +203,77 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## So you want to build a smart contract...
 
-The Polkadot relay chain itself will not support smart contracts but since Polkadot is a network of many heterogeneous
-blockchains, there will be parachains that do.
+The Polkadot relay chain itself will not support smart contracts.
+However, since the parachains that connect to Polkadot can support arbitrary
+state transitions, they can support smart contracts. Builders of smart contracts
+can use these options when they become available. Today, it's possible to
+start development using a local development chain and later deploy to a live
+environment when the technology matures.
 
-Already Parity Technologies has laid much of the groundwork for an out-of-the-box solution for parachains that want to
-include smart contract functionality. The Substrate
-[contract](https://github.com/paritytech/substrate/tree/master/frame/contracts) Frame pallet will support smart contracts that are compiled to Wasm.
+Substrate supports smart contracts out-of-the-box in two ways. One way is using
+the provided [Contracts][substrate contracts] pallet in the FRAME library. The
+second way is using the Substrate [EVM pallet][substrate evm] to deploy EVM-based
+bytecode compiled from Solidity or Vyper and using tools available from the
+Ethereum stack.
 
-In order to develop a smart contract that compiles to Wasm, an appropriate language is also needed. For this, Parity
-has been working on a domain specific language called [Ink](#ink).
+The experience of deploying to an EVM-based chain may be more familiar to developers
+that have written smart contract before. However, the Contracts pallet makes some
+notable improvements to the design of the EVM. Namely these are:
 
-One project that has announced intent to become a Polkadot parachain with support for smart contracts is
-[Edgeware](#edgeware). As the ecosystem matures, there is a high probability that more chains will come forward as
-smart contract enabled parachains.
+1. __Wasm__. The Contracts pallet uses WebAssembly as its compilation target. Any
+language that compiles to Wasm can potentially be used to write smart contracts.
+Although it's better to have a dedicated domain-specific-language and for that
+reason Parity offers the [ink!](#ink) language.
 
-Polkadot will also be compatible with preexisting smart contract platforms such as Ethereum and Tezos through bridges.
-This means that work spent developing on these platforms today may be applicable to running on Polkadot in the
-future.
+2. __Rent__. Contracts must pay rent or else hold a deposit suitably large enough in
+order to justify its existence on-chain. When a contract does not uphold this,
+it may create what's called a _tombstone_ which is a reference to the contract.
+In some conditions, the contract will be deleted outright along with its storage
+if it does not maintain these requirements.
+
+3. __Caching__. Contracts are cached by default and therefore means they only need
+to be deployed once, and afterward be instantiated as many times as you want.
+This helps to keep the storage load on the chain down to the minimum. On top
+of this, when a contract is no longer being used and the _existential deposit_
+is drained, the code will be erased from storage (known as reaping).
+
+You will likely want to set up a local test environment to start writing your
+smart contracts. This can be done using a Substrate node with one of the two
+smart contracts pallets including. After development you will want to look into
+projects such as [Edgware])(#edgeware) for deploying your smart contract to a
+live environment.
 
 ### Edgeware
 
-Edgeware is a planned parachain for Polkadot which will allow for smart contracts. Along with other interesting
-innovations in governance and token distribution, it will likely be the first parachain that will connect to the
-Polkadot mainnet with smart contracts enabled. You can stay up to date with the project on their
-[website](https://edgewa.re).
+One project that is live today with the smart contracts pallet is [Edgeware][edgeware].
+Edgeware is a permissionless platform for smart contracts and is conducting
+experiments with on-chain governance. It is currently the best option for
+developers who have created their smart contracts and want to deploy to a live
+environment.
+
+Edgeware intends to at some point connect to Polkadot as a parachain that allows
+for smart contracts. At this point, the smart contracts would be able to interact
+with other pieces of the Polkadot ecosystem through [XCMP](learn-crosschain).
+
+Edgeware documentation can be found [here][edgeware documentation].
 
 ### Ink
 
-[Ink](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts in Rust that will
-compile down to Wasm code. As stated in the README, it is still in an experimental phase so brave developers should be
-aware that they might have a less-than-smooth development experience, but with enough determination can use it to build
-their application.
+[ink!](https://github.com/paritytech/ink) is a domain specific language for
+writing smart contracts in Rust and compiles to Wasm code. As it states in its
+README, it is still in an experimental phase so brave developers should be
+aware that they might have a bumpy - but workable - development experience.
+There are some projects which have built projects in ink! with a decent level
+of complexity such as Plasm's [Plasma contracts][plasm plasma], so it is mature
+enough to start building interesting things.
 
-For interested developers, they can get started writing smart contracts using Ink by studying the
-[examples](https://github.com/paritytech/ink/tree/master/examples) which have already been written. These can be used
-as guideposts to writing more complex logic which will be deployable on smart contract parachains.
+For interested developers, they can get started writing smart contracts using ink!
+by studying the [examples](https://github.com/paritytech/ink/tree/master/examples)
+that were already written. These can be used as guideposts to writing more
+complex logic which will be deployable on smart contract parachains.
 
-Ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and
-compatible with Substrate chains.
-
-Substrate includes a contract pallet that includes the core logic needed for a smart contract chain. Along these lines,
-ink! will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and
-supports compilation to Wasm.
+ink! has laid much of the groundwork for a new smart contract stack that is
+based on a Wasm virtual machine and compatible with Substrate chains.
 
 ## Deploying your smart contract
 
@@ -290,3 +326,9 @@ interested in joining the [Polkadot Beginners Lounge](https://riot.im/app/#/room
 keep up to date with Polkadot by following the [social channels](https://wiki.polkadot.network/en/latest/community/).
 
 Good luck!
+
+[substrate contracts]: https://github.com/paritytech/substrate/tree/master/frame/contracts
+[substrate evm]: https://github.com/paritytech/substrate/tree/master/frame/evm
+[edgeware]: https://edgewa.re
+[edgeware documentation]: https://docs.edgewa.re/
+[plasm plasma]: https://github.com/staketechnologies/Plasm
