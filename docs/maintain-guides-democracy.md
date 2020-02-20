@@ -197,7 +197,7 @@ account with low funds instead.
 
 ### Setting a proxy
 
-Setting a proxy is simple and involves only submitting a single transaction, 
+Setting a proxy involves submitting a single transaction, 
 the transaction type "setProxy" from the "democracy" pallet.
 
 You can make this transaction from Polkadot Apps by navigating to the "Extrinsics"
