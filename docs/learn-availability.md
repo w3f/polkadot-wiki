@@ -10,6 +10,26 @@ guarantees.
 
 ## Erasure Codes
 
+Erasure coding transforms a message into a longer _code word_ that allows for the
+original message to be recovered from a subset of the code word and in absence
+of some portion of the code word.
+
+The type of erasure codes used by Polkadot's availability scheme are
+[Reed-Solomon][reed solomon] codes, which already enjoys a battle-tested
+application in technology outside the blockchain industry. One example is found
+in the compact disk industry. CDs use Reed-Solomon codes to correct any missing
+data due to inconsistencies on the disk face such as dust particles or scratches.
+
+In Polkadot, the erasure codes are used to keep parachain state available to the
+system without requiring all validators to keep tabs on all the parachains.
+Instead, validators share smaller pieces of the data and can later reconstruct
+the entire data under the assumption that 1/3+1 of the validators can provide
+their individual pieces of the data.
+
+**Note:** The 1/3+1 threshold of validators that must be responsive in order to
+construct the full parachain state data corresponds to Polkadot's security
+assumption that no more than 2/3 of the validators can be Byzantine. 
+
 ## Fishermen
 
 Fishermen are full nodes of parachains, same as collators, but perform a different
@@ -50,5 +70,5 @@ be updated with a guide on setting one up once it becomes possible.
 ### On submission of an invalidity report
 
 
-
+[reed solomon]: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
 [pruning]: https://example.org
