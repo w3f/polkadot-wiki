@@ -55,7 +55,7 @@ configuring the action that you are proposing.
 For example, if you wanted to propose that the account "Dave" would have a balance
 of 10 tokens your proposal may look something like the below image. The preimage
 hash would be `0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0`.
-You can copy this preimage hash and save it for the next step.
+You can copy this preimage hash and save it for the next step. There is no need to click Submit Preimage at this point, though you could. We'll go over that in the next section.
 
 ![submit preimage](assets/democracy/submit_preimage.png)
 
