@@ -176,7 +176,7 @@ delegated your voting power.
 ## Undelegate a Vote
 
 After some time if you decide to undelegate your vote from the delegated account,
-you must simply send the `undelegate` transaction from the account you wish to
+you must send the `undelegate` transaction from the account you wish to
 clear.
 
 The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select
