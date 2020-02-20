@@ -57,7 +57,7 @@ of 10 tokens your proposal may look something like the below image. The preimage
 hash would be `0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0`.
 You can copy this preimage hash and save it for the next step.
 
-![submit preimage]()
+![submit preimage](assets/democracy/submit_preimage.png)
 
 Now you will click on the "Submit proposal" button and enter the preimage hash
 in the input titled "preimage hash" and _at least_ the minimum deposit into the
@@ -65,7 +65,7 @@ in the input titled "preimage hash" and _at least_ the minimum deposit into the
 the transaction. You should now see your proposal appear in the "proposals"
 column on the page.
 
-![submit proposal]()
+![submit proposal](assets/democracy/submit_proposal.png)
 
 Now your proposal is visible by anyone who accesses the chain and others can
 second it or submit a preimage. However, it's hard to tell what exactly this
@@ -73,7 +73,7 @@ proposal does since it shows the hash of the action. Other holders will not be
 able to make a judgement for whether they second it or not until someone submits
 the actual preimage for this proposal. The next step you will submit the preimage.
 
-![proposals]()
+![proposals](assets/democracy/proposals.png)
 
 ## Submitting a Preimage
 
@@ -93,12 +93,12 @@ what you did before to acquire the preimage hash. This time, instead of copying
 the hash to another tab, you will follow through and click "Submit preimage" and
 confirm the transaction. 
 
-![submit preimage]()
+![submit preimage](assets/democracy/submit_preimage.png)
 
 Once the transaction is included you should see the UI
 update with the information for your already submitted proposal.
 
-![proposals updated]()
+![proposals updated](assets/democracy/proposals_updated.png)
 
 ## Seconding a Proposal
 
@@ -110,18 +110,18 @@ proposal will be tabled as a referendum to be voted on every launch period.
 To second a proposal, navigate to the proposal you want to second and click on
 the "Second" button.
 
-![second button]()
+![second button](assets/democracy/second_button.png)
 
 You will be prompted with the full details of the proposal (if the preimage has
 been submitted!) and can then broadcast the transaction by clicking the blue
 "Second" button.
 
-![second confirm]()
+![second confirm](assets/democracy/second_confirm.png)
 
 Once successful you will see your second appear in the dropdown in the proposal
 details.
 
-![second result]()
+![second result](assets/democracy/second_result.png)
 
 ## Voting on a Proposal
 
@@ -147,7 +147,7 @@ for 500% of the tokens that you hold.
 When you are comfortable with the decision you have made, click the blue "Vote"
 button to submit your transaction and wait for it to be included in a block.
 
-![voting]()
+![voting](assets/democracy/voting.png)
 
 ## Delegate a Vote
 
@@ -164,14 +164,14 @@ In the first input select the account you want to delegate to and in the second
 input select the amount of your conviction. Remember, higher convictions means
 that your vote will be locked longer. So choose wisely!
 
-![delegate]()
+![delegate](assets/democracy/delegate.png)
 
 After you send the delegate transaction, you can verify it went through by navigating
 to the "Chain State" tab and selecting the "democracy" and "delegations" options.
 You will see an output similar to below, showing the addresses which you have
 delegated your voting power.
 
-![delegate state]()
+![delegate state](assets/democracy/delegate_state.png)
 
 ## Undelegate a Vote
 
@@ -184,7 +184,7 @@ the "democracy" pallet and the "undelegate" transaction type. Ensure that you ar
 sending the transaction from the account you want to clear of delegations. Click
 "Submit transaction" and confirm. 
 
-![undelegate]()
+![undelegate](assets/democracy/undelegate.png)
 
 ## Proxies
 
@@ -207,6 +207,8 @@ to vote with, and the target to the proxy account that will be responsible for
 casting the votes going forward. In the example below, "Alice Stash" is proxying
 to "Alice" so that Alice can vote on behalf of Alice Stash.
 
+![set proxy](assets/democracy/set_proxy.png)
+
 ### Voting with a proxy
 
 Making a vote on behalf of a stash requires a `proxyVote` transaction. When
@@ -214,7 +216,7 @@ sending this transaction you will specify the index of the referendum that is
 being voted on as well as the judgement (i.e. "Aye" for approval or "Nay" for
 rejection).
 
-![proxy vote]()
+![proxy vote](assets/democracy/proxy_vot.png)
 
 ### Removing a proxy
 
@@ -222,7 +224,7 @@ At some point you may want to remove a proxy from being able to vote on behalf
 of a stash account. This is possible to do by submitting a `removeProxy` transaction
 from the stash account, targetting the proxy account.
 
-![remove proxy]()
+![remove proxy](assets/democracy/remove_proxy.png)
 
 ### Resigning a proxy
 
@@ -231,4 +233,4 @@ this is possible to do by sending the `resignProxy` transaction. Simply call thi
 transaction from the proxy account and all of its proxy responsibilities will be
 removed.
 
-![resign proxy]()
+![resign proxy](assets/democracy/resign_proxy.png)
