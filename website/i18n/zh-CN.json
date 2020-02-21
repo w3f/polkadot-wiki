@@ -105,6 +105,10 @@
         "title": "Kusama Timeline",
         "sidebar_label": "Timeline"
       },
+      "learn-accounts": {
+        "title": "Polkadot Accounts",
+        "sidebar_label": "Polkadot Accounts"
+      },
       "learn-architecture": {
         "title": "Polkadot 架构",
         "sidebar_label": "Polkadot 架构"
