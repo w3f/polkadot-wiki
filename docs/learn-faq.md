@@ -76,7 +76,7 @@ There are few ways to estimate it.
 
 - [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
 
-If you want to know what would be the outcome of the election in the next era, this can provide an estimation result to you. You can customize parameters such as number of validators to elect, network and WebSocket endpoint, but it would take some times to build the binary.
+If you want to know what would be the outcome of the election in the next era, this can provide an estimation result. You can customize parameters such as number of validators to elect, network, and WebSocket endpoint, but it would take some time to build the binary.
 - [Validator stats script](https://github.com/ansonla3/kusama-validator-stats)
 
 This script helps you quickly identify which validator is the lowest-staked and the basic statistics about staking on Kusama.
