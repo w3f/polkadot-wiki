@@ -74,7 +74,7 @@ Mainnet DOT tokens are not transferrable until mainnet launch, expected in early
 
 There are few ways to estimate it.
 
-1. [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
+- [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
 
 If you want to know what would be the outcome of the election in the next era, this can provide an estimation result to you. You can customize parameters such as number of validators to elect, network and WebSocket endpoint, but it would take some times to build the binary.
 - [Validator stats script](https://github.com/ansonla3/kusama-validator-stats)
