@@ -93,11 +93,21 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 #### 第一次运行 Kusama 网络
 
-If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the following command:
+You can begin syncing your node by running the following command:
+
+```sh
+./target/release/polkadot --validator
+```
+
+or
 
 ```sh
 ./target/release/polkadot --pruning=archive
 ```
+
+if you do not want to start in validator mode right away.
+
+**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
 #### 之前 Kusama CC1 的验证人
 
@@ -109,7 +119,7 @@ You can easily generate the default keystore for CC2 by first starting to sync a
 
 ```sh
 ./target/release/polkadot
-# 待启动数秒后，它会创建数据资料夹，之后再按下 `ctrl-c`。
+# Wait a few seconds for it to start up and create the data directory then press `ctrl-c`.
 ```
 
 Now you can copy your old session keys into the new CC2 keystore with the next command:
