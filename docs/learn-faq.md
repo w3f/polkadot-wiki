@@ -82,7 +82,7 @@ If you want to know what would be the outcome of the election in the next era, t
 With this script, it helps you to quickly identify which validator is the lowest-staked and the basic statistics about staking on Kusama.
 3. [Copy everything from the Staking page](https://polkadot.js.org/apps/#/staking) 
 
-It is also possible to copy both `own stake` and `other stake` on the Staking page to the excel and then do a simple calculation.
+It is also possible to copy both `own stake` and `other stake` on the Staking page to a spreadsheet and then do a simple calculation.
 
 
 ## Answered by Gav series
