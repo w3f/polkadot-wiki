@@ -70,6 +70,21 @@ The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network l
 
 Mainnet DOT tokens are not transferrable until mainnet launch, expected in early 2020. Any transfers before that time of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
 
+### What are the ways to find out the minimum stake necessary for the validators?
+
+There are few ways to estimate it.
+
+1. [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
+
+If you want to know what would be the outcome of the election in the next era, this can provide an estimation result to you. You can define customize parameters such as number of validators to elect, network and WebSocket endpoint, but it would take some times to build the binary.
+2. [Validator stats script](https://github.com/ansonla3/kusama-validator-stats)
+
+With this script, it helps you to quickly identify which validator is the lowest-staked and the basic statistics about staking on Kusama.
+3. [Copy everything from the Staking page](https://polkadot.js.org/apps/#/staking) 
+
+It is also possible to copy both `own stake` and `other stake` on the Staking page to the excel and then do a simple calculation.
+
+
 ## Answered by Gav series
 
 The "Answered by Gav" series is a collection of posts uploaded to Reddit of questions that have been asked in the Polkadot Watercooler Riot channel and answered by Polkadot founder Gavin Wood.
