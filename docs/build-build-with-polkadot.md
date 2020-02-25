@@ -129,7 +129,7 @@ step is to decide which framework to use. Frameworks for building a parachain or
 development kits (PDKs). Currently, the only PDK available is Substrate and Cumulus from Parity Technologies.
 
 In the future, there will be many different PDKs available in different programming languages, just like there are
-multiple [implementations](learn-implementations.md) of the Polkadot runtime environment.
+multiple [implementations](learn-implementations.md) of the Polkadot Host.
 
 > **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3 Foundation is giving
 > grants to teams who are doing this, learn more and apply on the [W3F grants page](https://grants.web3.foundation).
