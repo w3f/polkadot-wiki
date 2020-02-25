@@ -69,7 +69,7 @@ sidebar_label: Links
 
 - [Polkadot Host specification](https://github.com/w3f/polkadot-re-spec/blob/master/polkadot_re_spec.pdf) - In progress. A complete specification of the Polkadot Host.
 - [Polkadot.js](https://polkadot.js.org/) - Tools, utilities and client in JS. Polkadot JS is a 3-person development team in Germany and is building the JavaScript implementation of Polkadot.
-- [ChainSafe's Go PRE](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team based in Toronto. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0 client in TypeScript and this Go implementation of Polkadot.
+- [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team based in Toronto. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0 client in TypeScript and this Go implementation of Polkadot.
 
 ### Cumulus
 
