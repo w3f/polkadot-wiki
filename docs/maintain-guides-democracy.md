@@ -128,7 +128,11 @@ details.
 At the end of each launch period, the most seconded proposal will move to
 referendum. During this time you can cast a vote for or against the proposal.
 You may also lock up your tokens for a greater length of time to weigh your vote
-more strongly.
+more strongly. During the time your tokens are locked, you are unable to transfer
+them, however they can still be used for further votes. Locks are layered on top
+of each other, so a 8 week lock does not become a 15 week lock if you vote again
+a week later, rather another 8 week lock is placed to extend the lock just 1 extra
+week.
 
 To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any
 active referendum will show in the "referenda" column. Click the blue button
@@ -141,8 +145,8 @@ you will select "Nay, I do not approve" option.
 The second option is to select your conviction for this vote. The longer you are
 willing to lock your tokens, the stronger your vote will be weighted. Unwillingness
 to lock your tokens means that your vote only counts for 10% of the tokens that
-you hold, while the maximum lock up of 128 days means you can make your vote count
-for 500% of the tokens that you hold.
+you hold, while the maximum lock up of 256 days means you can make your vote count
+for 600% of the tokens that you hold.
 
 When you are comfortable with the decision you have made, click the blue "Vote"
 button to submit your transaction and wait for it to be included in a block.
@@ -158,7 +162,9 @@ another.
 You can delegate your vote to another account and even attach a "Conviction"
 to the delegation. Navigate to the "Extrinsics" tab on Polkadot Apps and select
 the options "democracy" and "delegate". This means you are accessing the democracy
-pallet and choosing the delegate transaction type to send. 
+pallet and choosing the delegate transaction type to send. Your delegation will
+count toward whatever the account you delegated for votes on until you explicitly
+undelegate your vote. 
 
 In the first input select the account you want to delegate to and in the second
 input select the amount of your conviction. Remember, higher convictions means
