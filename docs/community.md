@@ -8,8 +8,8 @@ The Polkadot community is expanding every day. Below are the most essential link
 
 ## General
 
-- [Join the Polkadot PoC-4 Testnet ("Alexander")](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with the latest Polkadot testnet.
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host and Polkadot Runtime.
+- [Join Kusama](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with Polkadot's canary network, Kusama.
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
 - [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Information on hosting meetups, applying for funding, and materials for running it.
 
 ## Riot
