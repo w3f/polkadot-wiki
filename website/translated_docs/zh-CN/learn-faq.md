@@ -22,7 +22,7 @@ See the [consensus](learn-consensus) page.
 
 The Kusama network is currently operating at a rate of one block approximately every six seconds.
 
-The expected block time on the mainnet Polkadot chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on validators is to validate state transitions, the block times should be quite fast. Two or three seconds may not be unreasonable after optimizations. However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
+The initial expected block time on the mainnet Polkadot chain will also be targeted at every six seconds.  However, this is subject to change and after optimization, may go down to as low as every two to three seconds. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
 
 ### 代币通胀率是多少?
 
@@ -56,13 +56,13 @@ Testnet DOT and KSM tokens are freely available from a variety of sources - see 
 
 Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.  Upon obtaining Kusama tokens, they are freely transferable.
 
-The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Gavin Wood, one of the project's founders, said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)).  Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
 
 Mainnet DOT tokens are not transferrable until mainnet launch, expected in early 2020. Any transfers before that time of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
 
 ### What are the ways to find out the minimum stake necessary for the validators?
 
-There are few ways to estimate it.
+There are a few ways to estimate it.
 
 - [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
 
