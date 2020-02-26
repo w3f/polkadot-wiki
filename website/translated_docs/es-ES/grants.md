@@ -15,8 +15,8 @@ This page gives an overview of accepted grants and a link to their GitHub reposi
 - [Wave 5 - First Quarter 2020](#wave-5)
 
 ## Wave 1
--   [ChainSafe](https://chainsafe.io/) - Polkadot Runtime Environment in Go (via an RFP) ([GitHub](https://github.com/ChainSafeSystems/gossamer))
--   [Soramitsu](https://soramitsu.co.jp/) - Polkadot Runtime Environment in C++ (via an RFP) ([GitHub](https://github.com/soramitsu/kagome))
+-   [ChainSafe](https://chainsafe.io/) - Polkadot Host in Go (via an RFP) ([GitHub](https://github.com/ChainSafeSystems/gossamer))
+-   [Soramitsu](https://soramitsu.co.jp/) - Polkadot Host in C++ (via an RFP) ([GitHub](https://github.com/soramitsu/kagome))
 -   [WEB3SCAN](https://www.web3scan.com/) - Polkascan: Open Source Block Explorer ([GitHub](https://github.com/polkascan))
 -   [Polkawallet](https://polkawallet.io/) - Mobile Wallet ([GitHub](https://github.com/polkawallet-io/polkawallet-RN))
 -   [Validators](http://validators.com/) - Open Source Scalable Cluster ([GitHub](https://github.com/Validators))
