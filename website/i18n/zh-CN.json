@@ -189,9 +189,9 @@
         "title": "顺序弗拉格曼方法",
         "sidebar_label": "顺序弗拉格曼方法"
       },
-      "learn-PRE": {
-        "title": "Polkadot Runtime 环境 (PRE)",
-        "sidebar_label": "Polkadot Runtime 环境 (PRE)"
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "随机性",
