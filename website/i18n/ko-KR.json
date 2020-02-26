@@ -189,9 +189,9 @@
         "title": "순차적 프라그멘 방법",
         "sidebar_label": "순차적 프라그멘 방법"
       },
-      "learn-PRE": {
-        "title": "폴카닷 런타임 환경 (Polkadot Runtime Environment; PRE) ",
-        "sidebar_label": "폴카닷 런타임 환경 (Polkadot Runtime Environment; PRE) "
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "무작위 선택",
