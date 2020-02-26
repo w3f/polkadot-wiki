@@ -39,7 +39,7 @@ The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of 
 - [平行链拍卖](learn-auction) - 描述了平行链插槽拍卖的机制。
 - [平行线程](learn-parathreads) - 平行线程是在许多平行链-"线程"之间共享平行链插槽的一种方法。
 - [ 菲拉格曼法 (Phragmen) ](learn-phragmen) - 有关菲拉格曼法的信息。
-- [ Polkadot runtime 环境](learn-PRE) - 有关 Polkadot runtime 环境的信息。
+- [Polkadot Host](learn-polkadot-host) - General information on the Polkadot Host.
 - [随机性](learn-randomness) - Polkadot 怎么使用随机性以及使用的原因和方式。
 - [安全性](learn-security) - Polkadot 网络如何保持安全。
 - [ SPREE ](learn-spree)- 共享受保护 runtime 执行环境。
