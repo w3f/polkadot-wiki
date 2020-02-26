@@ -26,7 +26,7 @@ A process by which tokens can be "frozen" in exchange for some other benefit. Fo
 
 ## 桥接
 
-A parachain that acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Runtime Environment requirements). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
+A parachain that acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Host's requirements of parachains). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
 
 ## 拜占庭容错
 
@@ -142,7 +142,7 @@ A Substrate runtime module.
 
 ## Parachain
 
-A blockchain that meets several characteristics that allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
+A blockchain that meets several characteristics that allow it work within the confines of the Polkadot Host. Also known as "parallelized chain."
 
 ## Parachain Registry
 
@@ -156,9 +156,13 @@ A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot.
 
 A heterogeneous, multi-chain network allowing various blockchains of different characteristics to perform arbitrary, cross-chain communication under shared security.
 
+## Polkadot Host
+
+The environment in which a runtime module can be executed. Parachains must support the Polkadot Host - external chains that do not will have to use a bridge. Previously known as the Polkadot Runtime Environment or PRE.
+
 ## Polkadot Runtime Environment
 
-The runtime environment in which a runtime module can be executed. Parachains must support the Polkadot Runtime Environment - external chains that do not will have to use a bridge.
+The previous name for the [Polkadot Host](#polkadot-host).
 
 ## Proof of Stake (PoS)
 
