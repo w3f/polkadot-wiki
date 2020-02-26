@@ -39,7 +39,7 @@ The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of 
 - [Parachain Auctions](learn-auction) - Describes the mechanism for the auctioning of parachain slots.
 - [Parathreads](learn-parathreads) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
 - [Phragmen](learn-phragmen) - Information on the Phragmen method.
-- [Polkadot Runtime Environment](learn-PRE) - General information on the Polkadot Runtime Environment.
+- [Polkadot Host](learn-polkadot-host) - General information on the Polkadot Host.
 - [Randomness](learn-randomness) - What Polkadot uses for randomness, as well as why and how it is used.
 - [Security](learn-security) - How the Polkadot network remains secure.
 - [SPREE](learn-spree) - Shared Protected Runtime Execution Environments.
