@@ -69,7 +69,7 @@ Most likely you’ve already realized that your application is better suited to 
 
 现在是决定新项目建立平行链还是平行线程那一个合适的方法，接下来是决定使用那个框架。框架是用于建立平行链或平行线程的平行链开发正具(PDKs)。现在只有 Parity Technologies 的 Substrate 和 Cumulus PDK 可选择。
 
-In the future, there will be many different PDKs available in different programming languages, just like there are multiple [implementations](learn-implementations.md) of the Polkadot runtime environment.
+In the future, there will be many different PDKs available in different programming languages, just like there are multiple [implementations](learn-implementations.md) of the Polkadot Host.
 
 > **立即行动:** 您是否想从头开始开发平行链开发套件工具？ Web3 基金会这些团队提供资助，了解更多并且在[W3F 资助页面](https://grants.web3.foundation)申请。
 
