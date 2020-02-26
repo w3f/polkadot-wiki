@@ -30,7 +30,7 @@ Polkadot 中使用的 VRF 与 Ouroboros Praos 中的大致相同。 Ouroboros �
 
 输出为两个数值: ` RESULT `(随机值)和` PROOF `(证明随机数值已正确生成的证明)。
 
-然后将` RESULT `与该协议实现中定义的_阈值_(在 Polkadot Runtime 环境中)进行比较。如果该值小于阈值，那么掷此数字的验证人将是可在该插槽的区块生产候选者。然后，验证人尝试创建一个区块，并将该区块与先前获得的` PROOF `和` RESULT `一起提交到网络中。
+The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol (specifically, in the Polkadot Host). If the value is less than the threshold, then the validator who rolled this number is a viable block production candidate for that slot. The validator then attempts to create a block and submits this block into the network along with the previously obtained `PROOF` and `RESULT`.
 
 钓鱼人 - 监视网络做坏事的收集人和验证人节点 - 验证中继链區块。 由于非法掷骰将产生非法区块，并且由于钓鱼人将在验证人产生的每个区块中访问` RESULT `和` PROOF `，因此对它们而言，很容易自动报告作弊的验证人。
 
