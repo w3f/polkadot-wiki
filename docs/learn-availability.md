@@ -24,7 +24,11 @@ There are six phases of the Availability and the Validity protocol.
 The parachain phase of AnV is when the _collator_ of a parachain proposes a 
 _candidate block_ to the validators that are currently assigned to the parachain.
 
-> A __candidate block__ is...
+> A __candidate block__ is a new block from a parachain collator that may or
+> may not be valid and must go through validity checks before being included
+> into the Relay Chain.
+
+### Relay chain submission phase
 
 The validators then check the candidate block against the verification function
 exposed by that parachain's registered code. If the verification succeeds, then
@@ -32,7 +36,31 @@ the validators will pass the candidate block to the other validators in the goss
 network. However, if the verification fails, the validators immediately reject
 the candidate block as invalid.
 
-### Relay chain submission phase
+When more than half of the parachain validators agree that a particular parachain
+block candidate is a valid state transition, they prepare a _candidate receipt_.
+The candidate receipt is what will eventually be included into the Relay Chain
+state. It includes:
+
+- The parachain ID.
+- The collator's ID and signature.
+- A hash of the parent block's candidate receipt.
+- A merkle root of the block's erasure coded pieces.
+- A merkle root of any outgoing messages.
+- A hash of the block.
+- The state root of the parachain before block execution.
+- The state root of the parachain after block execution.
+
+This information is __constant size__ while the actual PoV block of the parachain
+can be variable length. It is enough information for anyone that obtains the full
+PoV block to verify the state transition contained inside of it.
+
+### Availability and unavailability subprotocols
+
+During the availability and unavailability phases, the validators gossip the
+[erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1
+validators must report that they possess their piece of the code word. Once
+this threshold of validators has been reached, the network can consider the PoV
+block of the parachain _available_.
 
 
 
@@ -98,5 +126,15 @@ be updated with a guide on setting one up once it becomes possible.
 ### On submission of an invalidity report
 
 
+## Further Resources
+
+- [Life of a Parachain Block][life of] - Article by Parity analyst Joe Petrowski
+  expounding on the validity checks that a parachain block must pass in order to
+  progress the parachain.
+- [Availability and Validity][anv paper] - Paper by the W3F Research Team that
+  specifies the availability and validity protocol in detail.
+
 [reed solomon]: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
 [pruning]: https://example.org
+[life of]: https://polkadot.network/the-path-of-a-parachain-block/
+[anv paper]: https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV
