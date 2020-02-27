@@ -19,7 +19,8 @@
           "build-dev-roadmap",
           "build-pdk",
           "build-cumulus",
-          "build-smart-contracts"
+          "build-smart-contracts",
+          "build-oracle"
         ]
       },
       {
