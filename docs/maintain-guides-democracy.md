@@ -155,9 +155,17 @@ button to submit your transaction and wait for it to be included in a block.
 
 ## Delegate a Vote
 
-You may want to delegate your vote to another account in case that you are unsure
-about the best decision for a particular referendum, but trust the judgement of
-another.
+If you are too busy to keep up and vote on upcoming referenda, there is an option
+to delegate your vote to another account whose opinion you trust. When you delegate
+to another account, that account gets the added voting power of your tokens along
+with the conviction that you set. The conviction for delegation works just like
+the conviction for regular voting, except your tokens may be locked longer than
+they would normally since locking resets when you undelegate your vote. 
+
+The account that is being delegated to does not make any special action once the
+delegation is in place. They can continue to vote on referenda how they see fit.
+The difference is now when the Democracy system tallies votes, the delegated
+tokens now are added to whatever vote the delegatee has made.
 
 You can delegate your vote to another account and even attach a "Conviction"
 to the delegation. Navigate to the "Extrinsics" tab on Polkadot Apps and select
@@ -181,9 +189,18 @@ delegated your voting power.
 
 ## Undelegate a Vote
 
-After some time if you decide to undelegate your vote from the delegated account,
-you must send the `undelegate` transaction from the account you wish to
-clear.
+You may decide at some point in the future to remove your delegation to a target
+account. In this case, your tokens will be locked for the maximum amount of time
+in accordance with the conviction you set at the beginning of the delegation. For
+example, if you chose "2x" delegation for four weeks lock up time, your tokens will
+be locked for 4 weeks after sending the `undelegate` transaction. Once your vote
+has been undelegated, you are in control of making votes with it once again. You
+can start to vote directly, or chose a different account to act as your delegate.
+
+The `undelegate` transaction must be sent from the account that you wish to clear
+of its delegation. For example, if Alice has delegated her tokens to Bob, Alice
+would need to be the one to call the `undelegate` transaction to clear her
+delegation.
 
 The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select
 the "democracy" pallet and the "undelegate" transaction type. Ensure that you are
