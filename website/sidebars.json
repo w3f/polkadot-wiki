@@ -150,6 +150,7 @@
         "type": "subcategory",
         "label": "Governance Guides",
         "ids": [
+          "maintain-guides-democracy",
           "maintain-guides-how-to-join-council",
           "maintain-guides-how-to-vote-councillor"
         ]
