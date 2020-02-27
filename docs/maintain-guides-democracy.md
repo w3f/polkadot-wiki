@@ -131,7 +131,7 @@ You may also lock up your tokens for a greater length of time to weigh your vote
 more strongly. During the time your tokens are locked, you are unable to transfer
 them, however they can still be used for further votes. Locks are layered on top
 of each other, so an eight week lock does not become a 15 week lock if you vote again
-a week later, rather another 8 week lock is placed to extend the lock just 1 extra
+a week later, rather another eight week lock is placed to extend the lock just one extra
 week.
 
 To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any
