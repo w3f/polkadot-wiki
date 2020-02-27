@@ -172,11 +172,11 @@
         "type": "subcategory",
         "label": "What to Try",
         "ids": [
-          "maintain-guides-how-to-validate-kusama",
-          "maintain-guides-how-to-nominate-kusama",
-          "learn-governance",
-          "learn-identity",
-          "build-build-with-polkadot"
+          "mirror-maintain-guides-how-to-validate-kusama",
+          "mirror-maintain-guides-how-to-nominate-kusama",
+          "mirror-learn-governance",
+          "mirror-learn-identity",
+          "mirror-build-build-with-polkadot"
         ]
       },
       {
