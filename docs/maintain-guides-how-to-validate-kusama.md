@@ -87,7 +87,7 @@ brew install cmake pkg-config openssl git llvm
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot)
 repository on GitHub using the source code available in the **v0.7** branch.
 
-You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.16**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.16` with the latest build (i.e., the highest number).
+You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.20**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.20` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com:paritytech/polkadot.git`.
@@ -96,7 +96,7 @@ You should generally use the latest **0.7.x** tag.  At the time of writing, this
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.7"
-git checkout v0.7.16
+git checkout v0.7.20
 ./scripts/init.sh
 cargo build --release
 ```
@@ -120,12 +120,6 @@ you must first remove the database with `polkadot purge-chain` and then ensure t
 You can begin syncing your node by running the following command:
 
 ```sh
-./target/release/polkadot --validator
-```
-
-or 
-
-```sh
 ./target/release/polkadot --pruning=archive
 ```
 
@@ -133,12 +127,11 @@ if you do not want to start in validator mode right away.
 
 **Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
-#### Previous Kusama CC1 Validator
+#### Previous Kusama CC2 Validator
 
-Before synchronizing the the CC2 chain data, you will need to copy your previous keystore to the new chain id in order to
-use the previously set session keys. If you do not do this, you will need to generate and set your session keys again.
+Before synchronizing the latest chain data, you will need to copy your previous keystore to the new chain id in order to use the previously set session keys. If you do not do this, you will need to generate and set your session keys again.
 
-Kusama CC1 and Kusama CC2 have different default data directories, usually located in the `$HOME/.local/share/polkadot/chains` directory on Linux based machines. For example, the default directory for Kusama CC1 is `$HOME/.local/share/polkadot/chains/ksma/keystore` while CC2 keys are located in `$HOME/.local/share/polkadot/chains/ksmcc2/keystore`.
+Kusama CC1 and Kusama CC2 have different default data directories, usually located in the `$HOME/.local/share/polkadot/chains` directory on Linux based machines. For example, the default directory for Kusama CC2 is `$HOME/.local/share/polkadot/chains/ksmcc2/keystore` while CC2 keys are located in `$HOME/.local/share/polkadot/chains/ksmcc2/keystore`.
 
 You can easily generate the default keystore for CC2 by first starting to sync and exiitng out of your node client.
 
@@ -147,13 +140,13 @@ You can easily generate the default keystore for CC2 by first starting to sync a
 # Wait a few seconds for it to start up and create the data directory then press `ctrl-c`.
 ```
 
-Now you can copy your old session keys into the new CC2 keystore with the next command:
+Now you can copy your old session keys into the new CC3 keystore with the next command:
 
 ```sh
-cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
+cp -r $HOME/.local/share/polkadot/chains/ksmcc2/keystore $HOME/.local/share/polkadot/chains/ksmcc3/keystore
 ```
 
-If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. You want to fix this.
+If your keystore is empty, it means that the keys were not created on your node in the CC2 chain. You want to fix this.
 The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your
 validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
 transaction, verify that the keys are in the new CC2 keystore. See more information in the [section below](#generating-session-keys).
@@ -165,14 +158,11 @@ made the first time. They will be concatenated in order following the below stru
 
 ```rust
 pub struct SessionKeys {
-    #[id(key_types::GRANDPA)]
-    pub grandpa: GrandpaId,
-    #[id(key_types::BABE)]
-    pub babe: BabeId,
-    #[id(key_types::IM_ONLINE)]
-    pub im_online: ImOnlineId,
-    #[id(parachain::PARACHAIN_KEY_TYPE_ID)]
-    pub parachain_validator: parachain::ValidatorId,
+    pub grandpa: Grandpa,
+    pub babe: Babe,
+    pub im_online: ImOnline,
+    pub parachain_validator: Parachains,
+    pub authority_discovery: AuthorityDiscovery,
 }
 ```
 
@@ -190,7 +180,7 @@ Depending on the size of the chain when you do this, this step may take anywhere
 
 If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the
 `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to
-the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC2) or the
+the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC3) or the
 [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 > **Note:** If you do not already have KSM, this is as far as you will be able to go until the end of the soft
@@ -304,28 +294,16 @@ If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 
 Click "Validate".
 
-If you go to the Staking tab, you should see a list of active validators currently running on the network, as well as
-any nodes that have signaled their intention to be validators but have not yet been selected as being part of the current
-validator set. At the top of the page, it shows how many validator slots are available and how many nodes are intended to
-be a validator.
+If you go to the Staking tab, you should see a list of active validators currently running on the network. At the top of the page, it shows how many validator slots are available and how many nodes are intended to be a validator.
+You can also go to the Waiting tab to double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
+![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
-Your node will be shown in the *next up* queue. During the [soft launch](#soft-launch) period, there will be no era changes, and
-your node will remain in the queue until the transition to the Proof-of-Stake validator selection.
-
-**After soft launch:** The validator set is refreshed every era. In the next era, if there is a slot available and your
-node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the
-_next up_ queue. If your validator is not selected to become part of the validator set, it will remain in the _next up_
+The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the
+_waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_
 queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era.
 However, it may be necessary to increase the number of KSMs staked or seek out nominators for your validator in order to
 join the validator set.
-
-## Soft Launch
-
-When Kusama launches, it will be a Proof-of-Authority network, with nodes run by the Web3 Foundation. After having a
-sufficient _next up_ queue (50-100 validators), the network will upgrade to NPoS and allow validators into the validator
-set based on their stake.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you
 are now running a Kusama validator! If you need help, reach out on the [Kusama forum](https://forum.kusama.network/) or
@@ -360,5 +338,5 @@ over the network.
 If you have Docker installed, you can use it to start your validator node without needing to build the binary. You can do this with a simple one line command:
 
 ```sh
-$ docker run parity/polkadot:v0.5.0 --validator --name "name on telemetry"
+$ docker run parity/polkadot:v0.7.20 --validator --name "name on telemetry"
 ```
