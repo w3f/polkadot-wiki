@@ -1,145 +1,145 @@
 ---
 id: maintain-guides-democracy
-title: Participate in Democracy
-sidebar_label: Participate in Democracy
+title: 参与民主权利
+sidebar_label: 参与民主权利
 ---
 
-The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated in Polkadot and Kusama. The other two bodies are the [council](maintain-guides-how-to-join-council) and the [technical committee](learn-governance#technical-committee).
+公投议院是在 Polkadot 和 Kusama 中实例的三个链上治理机构之一。其它两个机构是[议会](maintain-guides-how-to-join-council)和[技术委员会](learn-governance#technical-committee)。
 
-Public referenda can be proposed and voted on by any token holder in the system as long as they provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to the public referenda table will it can be voted upon. Voters who are willing to lock up their tokens for a greater duration of time can do so and get their vote amplified. For more details on the governance system please see [here](learn-governance).
+任何代币持有人只要绑定他们的币，他们也可以提出公投和投票。当议案提交后，其它人如果同意，他们可以通过绑定同一数量的币作_支持_该议案。在经过一段时段后，最多人支持的议案将会进入下一步全民投票。投票人可以把他们的币锁定更长的时间来换取更大的投票权重。详情关于治理系统请看[这里](learn-governance)。
 
-This guide will instruct token holders how to propose and vote on public referenda using the Democracy module as it's implemented in Kusama.
+这个指南将会指引代币持有人如何在 Kusama 上实现的民主权利模块提交和在公投上投票。
 
-## Important Parameters
+## 重要参数
 
-The important parameters to be aware of when voting using the Democracry module are as follow:
+使用民主权利模块进行投票时要注意的重要参数如下:
 
-**Launch Period** - How often new public referenda are launched.
+**Launch Period** - 新的公民投票多久才开始。
 
-**Voting Period** - How often votes for referenda are tallied.
+**Voting Period** - 公投的投票时间。
 
-**Emergency Voting Period** - The minimum voting period for a fast-tracked emergency referendum.
+**Emergency Voting Period** -快速紧急公投的最少投票时间。
 
-**Minimum Deposit** - The minimum amount to be used as a deposit for a public referendum proposal.
+**Minimum Deposit** - 公投提案的最低保证金。
 
-**Enactment Period** - The minimum period for locking funds _and_ the period between a proposal being approved and enacted.
+**Enactment Period** - 锁定资金的最短期限以_及_提案被批准和颁布之间的期限。
 
-**Cooloff Period** - The period in blocks where a proposal may not be re-submitted after being vetoed.
+**Cooloff Period** - 否决之后在一段时间内可能无法重新提交 (以区块为单位)。
 
-## Proposing an Action
+## 提出议案
 
-Proposing an action to be taken requires you to bond some tokens. In order to ensure you have enough tokens to make the minimum deposit you can check the parameter in the chain state.
+提出议案需要要求您绑定一些代币。为了确保您有足够的代币来提交，您可以在链状态下检查该参数。
 
-On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order to submit a proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the hash of the proposal to be enacted. The easiest way to get the preimage hash is by clicking on the "Submit preimage" button and configuring the action that you are proposing.
+在 Polkadot 程序上，你可以在"民主权利"的标签提交新的议案。为了提交议案，你将会需要提交一个称为 preimage 的哈希。 Preimage 的哈希只是需要执行议案的哈希。最简单取得 preimage 的哈希是通过按下 "Submit preimage" 并且设置你将会提交的议案。
 
-For example, if you wanted to propose that the account "Dave" would have a balance of 10 tokens your proposal may look something like the below image. The preimage hash would be `0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0`. You can copy this preimage hash and save it for the next step. There is no need to click Submit Preimage at this point, though you could. We'll go over that in the next section.
+例如: 你想提交一个议案是 "Dave" 的帐户拥有10个代币，你的议案将会像下图一样。 Preimage 哈希会是 ` 0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0` 你可以复制那个 preimage 哈希并且储存用作下一步。尽管你可以在这一步提交 Preimage，但是我们将会留在下一个部份。
 
 ![submit preimage](assets/democracy/submit_preimage.png)
 
-Now you will click on the "Submit proposal" button and enter the preimage hash in the input titled "preimage hash" and _at least_ the minimum deposit into the "locked balance" field. Click on the blue "Submit proposal" button and confirm the transaction. You should now see your proposal appear in the "proposals" column on the page.
+现在你按下 "Submit proposal" 并且在 "preimage hash" 里输入 preimage 哈希和储入_至少_数量的 "locked balance" 。再按下 "Submit proposal" 和确认交易。之后你应该看到你的议案显示在 "proposals" 页面上。
 
 ![submit proposal](assets/democracy/submit_proposal.png)
 
-Now your proposal is visible by anyone who accesses the chain and others can second it or submit a preimage. However, it's hard to tell what exactly this proposal does since it shows the hash of the action. Other holders will not be able to make a judgement for whether they second it or not until someone submits the actual preimage for this proposal. In the next step you will submit the preimage.
+现在任何人访问该链都可以看到您的提案，其他人可以支持你的提案或提交 preimage。但是，由于该提案只显示了其哈希值，因此很难说出该提案的确切功能。其它人将无法判断他们是否赞成，除非有人提交了该提案的实际 preimage。在下一步，您将提交 preimage。
 
 ![proposals](assets/democracy/proposals.png)
 
-## Submitting a Preimage
+## 提交 Preimage
 
 The act of making a proposal is split from submitting the preimage for the proposal since the storage cost of submitting a large preimage could be pretty expensive. Allowing for the preimage submission to come as a separate transaction means that another account could submit the preimage for you if you don't have the funds to do so. It also means that you don't have to pay so many funds right away as you can prove the preimage hash out-of-band.
 
-However, at some point before the proposal passes you will need to submit the preimage or else the proposal cannot be enacted. The guide will now show you how to do this.
+但是，在提案通过之前的时候，您将需要提交 preimage，否则提案将无法生效。 现在将向您展示如何执行此操作。
 
-Click on the blue "Submit preimage" button and configure it to be the same as what you did before to acquire the preimage hash. This time, instead of copying the hash to another tab, you will follow through and click "Submit preimage" and confirm the transaction.
+按下 "Submit preimage" 和设置成在你之前取得的 preimage 哈希。这次您将继续操作并按下 "Submit preimage" 并确认交易，而不是将哈希复制到另一个选项。
 
 ![submit preimage](assets/democracy/submit_preimage.png)
 
-Once the transaction is included you should see the UI update with the information for your already submitted proposal.
+当交易被确认后，您应该会看到包含您已提交议案的 UI 更新了信息 。
 
 ![proposals updated](assets/democracy/proposals_updated.png)
 
-## Seconding a Proposal
+## 支持议案
 
-Seconding a proposal means that you are agreeing with the proposal and backing it with an equal amount of deposit as was originally locked. By seconding a proposal you will move it higher up the rank of proposals. The most seconded proposal - in value, not number of supporters - will be tabled as a referendum to be voted on every launch period.
+支持该议案意味着您同意该提案并且会存入同一样数量的币锁起来。通过支持该议案使它会排到更高的位置。背后最多币支持的议案 (不是最多人支持)将会在每个投票期间成为公投。
 
-To second a proposal, navigate to the proposal you want to second and click on the "Second" button.
+若支持该议案，前往到该议案并按下 "Second"。
 
 ![second button](assets/democracy/second_button.png)
 
-You will be prompted with the full details of the proposal (if the preimage has been submitted!) and can then broadcast the transaction by clicking the blue "Second" button.
+系统将提示您该提案的完整详细信息 (如果 preimage 已提交!)，然后可以通过按下 "Second" 提交交易。
 
 ![second confirm](assets/democracy/second_confirm.png)
 
-Once successful you will see your second appear in the dropdown in the proposal details.
+一旦成功，您将会在下拉菜单中看到您支持该提案的详细信息。
 
 ![second result](assets/democracy/second_result.png)
 
-## Voting on a Proposal
+## 议案投票
 
-At the end of each launch period, the most seconded proposal will move to referendum. During this time you can cast a vote for or against the proposal. You may also lock up your tokens for a greater length of time to weigh your vote more strongly. During the time your tokens are locked, you are unable to transfer them, however they can still be used for further votes. Locks are layered on top of each other, so an eight week lock does not become a 15 week lock if you vote again a week later, rather another eight week lock is placed to extend the lock just one extra week.
+在每个启动投票期之前时，支持最多的提案将移至全民投票。在此期间，您可以对提案投赞成票或反对票。在这个时侯您可以对该提案投赞成票或反对票。你也可以锁上你的币更长一点时间来换取投票权重更多一点。在这个时侯你的币将会是锁上，所以你也不能够转帐它。但是你仍然可以之后的投票。锁币是彼此层叠，意思是如果你在一星期后再投另一个提案，你不会变成需要锁15星期。而只是将锁延长1星期。
 
-To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any active referendum will show in the "referenda" column. Click the blue button "Vote" to cast a vote for the referendum.
+若要参与公投，前往到 [在 Polkadot 程序的 "民主权利" 标签](https://polkadot.js.org/apps/#/democracy/)。任何生效中的公投也会显示在 "referenda" 中。按下 "Vote" 为公投投票。
 
-If you would like to cast your vote for the proposal select the "Aye, I approve" option. If you would like to cast your vote against the proposal in referendum you will select "Nay, I do not approve" option.
+如果您想对该提案投赞成票，请选择 "Aye, I approve" 选项。 如果您想对公投中的提案投反对票，您将选择 "Nay, I do not approve"。
 
-The second option is to select your conviction for this vote. The longer you are willing to lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means that your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 256 days means you can make your vote count for 600% of the tokens that you hold.
+第二个选项是选择您对此票的信念。您愿意锁币的时间越长，投票权重就越大。不愿意锁币意味着您的投票只占您持有的代币的10％，而最多锁256天意味着您可以让您的投票占您拥有的币的600％。
 
-When you are comfortable with the decision you have made, click the blue "Vote" button to submit your transaction and wait for it to be included in a block.
+如果您对所做出的决定感到满意，请按下 "Vote" 以提交您的交易，并等待其交易被包含到区块中。
 
 ![voting](assets/democracy/voting.png)
 
-## Delegate a Vote
+## 委托投票
 
-If you are too busy to keep up and vote on upcoming referenda, there is an option to delegate your vote to another account whose opinion you trust. When you delegate to another account, that account gets the added voting power of your tokens along with the conviction that you set. The conviction for delegation works just like the conviction for regular voting, except your tokens may be locked longer than they would normally since locking resets when you undelegate your vote.
+如果您太忙而无法跟上即将举行的公投并投票，可以选择将您的投票委托给您信任其意见的另一个帐户。当您委托到另一个帐户，该帐户将获得您所拥有的币的附加投票权。委派的方式与正常投票的方式一样，只不过您的代币锁定时间可能比通常时间长，因为当您取消投票时锁定重置。
 
-The account that is being delegated to does not make any special action once the delegation is in place. They can continue to vote on referenda how they see fit. The difference is now when the Democracy system tallies votes, the delegated tokens now are added to whatever vote the delegatee has made.
+委派的帐户在委派到后不会采取任何特殊行动。他们可以继续就他们认为合适的公投进行投票。不同的是，现在当民主权利系统统计选票时，委托代币现在被添加到授权人所做的任何投票中。
 
-You can delegate your vote to another account and even attach a "Conviction" to the delegation. Navigate to the "Extrinsics" tab on Polkadot Apps and select the options "democracy" and "delegate". This means you are accessing the democracy pallet and choosing the delegate transaction type to send. Your delegation will count toward whatever the account you delegated for votes on until you explicitly undelegate your vote.
+您可以将投票委托给另一个帐户，甚至可以对委托附加 "Conviction"。 前往到Polkadot Apps上的 "Extrinsics" 标签，然后选择 "民主权利" 和 "delegate" 选项。 这意味着您正在访问民主权利模块并选择要发送的委托交易类型。您的委托人将计入您委托进行投票的帐户，直到您明确撤消投票为止。
 
-In the first input select the account you want to delegate to and in the second input select the amount of your conviction. Remember, higher convictions means that your vote will be locked longer. So choose wisely!
+在第一个输入，选择要委派给的帐户，在第二个选择投票時想要的投票權重(倍數愈高即鎖幣時間愈長)。请记住，更高的倍數意味着您的投票将被锁定更长的时间。 因此請明智地选择！
 
 ![delegate](assets/democracy/delegate.png)
 
-After you send the delegate transaction, you can verify it went through by navigating to the "Chain State" tab and selecting the "democracy" and "delegations" options. You will see an output similar to below, showing the addresses to which you have delegated your voting power.
+当你提交了委托交易后，你可以在 "Chain State" 里选择 "democracy" 和 "delegations" 选项中核对一下。 您将看到类似于以下的信息，显示您已将投票权委派给的地址。
 
 ![delegate state](assets/democracy/delegate_state.png)
 
-## Undelegate a Vote
+## 取消委托投票
 
-You may decide at some point in the future to remove your delegation to a target account. In this case, your tokens will be locked for the maximum amount of time in accordance with the conviction you set at the beginning of the delegation. For example, if you chose "2x" delegation for four weeks lock up time, your tokens will be locked for 4 weeks after sending the `undelegate` transaction. Once your vote has been undelegated, you are in control of making votes with it once again. You can start to vote directly, or chose a different account to act as your delegate.
+您可能在日后某个时候决定将委派删除到目标帐户。在这种情况下，根据您在委派开始时的设置，您的代币将被锁定为最长时间。例如如果选择 "2x" 委派进行四周的锁定时间，则代币将在发送 `undelegate` 交易后锁定 4 周。一旦你的投票被取消授权，你将可以再次用它进行投票。您可以开始直接投票，或选择其它帐户作为您的代表。
 
-The `undelegate` transaction must be sent from the account that you wish to clear of its delegation. For example, if Alice has delegated her tokens to Bob, Alice would need to be the one to call the `undelegate` transaction to clear her delegation.
+`undelegate`交易必须从您要清除其委托的帐户发送。例如如果 Alice 委托了 Bob, Alice 需要使用她自己的帐户提交 `undelegate`交易清除其委托。
 
-The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select the "democracy" pallet and the "undelegate" transaction type. Ensure that you are sending the transaction from the account you want to clear of delegations. Click "Submit transaction" and confirm.
+最简单的方法是从 Polkadot 程序的 "Extrinsics" 选项。 选择 "democracy" 和 "undelegate" 交易。 确保您是从要清除委托的帐户发送交易。 按 "Submit transaction" 并确认。
 
 ![undelegate](assets/democracy/undelegate.png)
 
-## Proxies
+## 代理
 
-Proxies can be used to vote on behalf of a stash account. Unlike delegation, the proxy is meant to act as a longer-term account that makes all the voting decisions for funds held in a different account. Delegation is a logical action, taken when you trust another account's judgement, while proxying is more of a recommended security practice for keeping your funds safe and using an active account with low funds instead.
+代理可用于代表 Stash 帐户进行投票。与委派不同，代理是打算作为一个长期帐户，使所有投票决定持有不同账户的资金。委派是一个合乎逻辑的行动， 采取当你信任另一个帐户的判断，而代理是一个更建议的安全做法，以保护您的资金安全和使用主动低资金的帐户。
 
-### Setting a proxy
+### 设置代理
 
-Setting a proxy involves submitting a single transaction, the transaction type "setProxy" from the "democracy" pallet.
+设置代理只涉及提交一个交易，交易类型 "setProxy" 来自 "democracy" 模块。
 
-You can make this transaction from Polkadot Apps by navigating to the "Extrinsics" tab and selecting the "democracy" pallet and the "setProxy" transaction type. Send the transaction from the "Stash" account which holds the funds that you want to vote with, and the target to the proxy account that will be responsible for casting the votes going forward. In the example below, "Alice Stash" is proxying to "Alice" so that Alice can vote on behalf of Alice Stash.
+您可以从 Polkadot Apps 通过前往到 "Extrinsics" 选项并选择 "democracy" 和 "setProxy" 交易类型进行此交易。将交易从 "Stash" 帐户发送，该账户持有您要使用的资金，目标将发送到负责投票的账户。在下面的示例中，"Alice Stash" 是代理 "Alice"，以便 Alice 可以代表 Alice Stash 投票。
 
 ![set proxy](assets/democracy/set_proxy.png)
 
-### Voting with a proxy
+### 代理投票
 
-Making a vote on behalf of a stash requires a `proxyVote` transaction. When sending this transaction you will specify the index of the referendum that is being voted on as well as the judgement (i.e. "Aye" for approval or "Nay" for rejection).
+代表 Stash 进行投票需要 `proxyVote` 交易。发送此交易时，您将指定正在公投投票的索引以及判决(即"Aye"以获得批准或"Nay"拒绝)。
 
 ![proxy vote](assets/democracy/proxy_vote.png)
 
-### Removing a proxy
+### 移除代理
 
-At some point you may want to remove a proxy from being able to vote on behalf of a stash account. This is possible to do by submitting a `removeProxy` transaction from the stash account, targetting the proxy account.
+在某个时候您可能想要移除代理，无法为 stash 账户投票。 这可以通过提交 `removeProxy` 交易从 stash 帐户中提交该交易，针对代理帐户。
 
 ![remove proxy](assets/democracy/remove_proxy.png)
 
-### Resigning a proxy
+### 移除代理
 
-If a proxy account wants to resign their proxy status for a different stash account this is possible to do by sending the `resignProxy` transaction. Simply call this transaction from the proxy account and all of its proxy responsibilities will be removed.
+如果代理帳戶想把它的代理狀態移除為不同的 stash 帳戶，這是可通過提交 `resignProxy` 交易完成。 只需调用該代理帐户來提交交易及其所有代理职责将會被删除。
 
 ![resign proxy](assets/democracy/resign_proxy.png)
