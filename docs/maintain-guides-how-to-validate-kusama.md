@@ -82,6 +82,28 @@ command INSTEAD of the previous one:
 brew install cmake pkg-config openssl git llvm
 ```
 
+### Install & Configure NTP(Network Time Protocol) Client
+
+[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required the validators local clocks reasonably in sync, so you can check whether you have the NTP client by running: 
+
+_If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
+
+``` sh
+timedatectl
+```
+
+When you see something like `System clock synchronized: yes` then it is fine. If you do not see it, just install it by executing:
+
+```sh
+sudo apt-get install ntp
+```
+ntpd will be started automatically after install. You can query ntpd for status information to verify that everything is working:
+
+```sh
+sudo ntpq -p
+```
+
+
 ### Building and Installing the `polkadot` Binary
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot)
