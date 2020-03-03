@@ -230,7 +230,7 @@ A system of rules that allows two or more entities of a communications system to
 
 ## Random Seed
 
-A random seed is psuedo-random number available on-chain. It is used in various
+A random seed is pseudo-random number available on-chain. It is used in various
 places of the Polkadot protocol, most prominently in [BABE](#babe) the block
 production mechanism.
 
