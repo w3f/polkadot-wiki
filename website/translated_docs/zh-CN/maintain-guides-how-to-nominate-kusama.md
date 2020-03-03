@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-kusama
 title: 成为提名人 (Kusama)
-sidebar_label: 成为提名人 (Kusama)
+sidebar_label: Nominator Guide
 ---
 
 ## Step 1: Bond your tokens

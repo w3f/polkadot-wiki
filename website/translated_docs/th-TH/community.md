@@ -8,8 +8,8 @@ sidebar_label: ชุมชน
 
 ## ทั่วไป
 
-- [เชื่อมต่อ Polkadot PoC-4 Testnet ("Alexander")](https://polkadot.js.org/apps/#/explorer) - ใช้ UI dashboard เพื่อ interact กับ Polkadot testnet รุ่นล่าสุด
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Github Repo ที่ทาง Parity ดูแล ซึ่งเก็บโค้ดเกี่ยวกับ Polkadot runtime environment ที่เขียนขึ้นโดยใช้ภาษา Rust
+- [Join Kusama](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with Polkadot's canary network, Kusama.
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
 - [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - ข้อมูลเกี่ยวกับการจัดงาน meetup วิธีสมัครขอทุน และสิ่งของสำหรับการจัดงาน
 
 ## Riot

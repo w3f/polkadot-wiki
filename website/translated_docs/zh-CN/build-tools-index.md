@@ -9,7 +9,7 @@ sidebar_label: Tool Index
 ## 区块资源管理器
 
 - [Polka.io](https://polka.io) - 用于Polkadot的区块链资源管理器。
-- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot仪表板区块资源管理器。当前默认连接到Alexander测试网，您可以自行配置以连接到其它远程或本地端点。
+- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to Kusama by default, but can be configured to connect to other remote or local endpoints.
 - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot.
 
 ## 钱包
@@ -25,13 +25,13 @@ sidebar_label: Tool Index
 
 - [Polkadot遥测服务](https://telemetry.polkadot.io/) - 提供网络信息，包括当前正在运行链的节点、节点正在运行的软件版本、同步状态，以及显示节点位置的地图。
 - Polkabot——Polkadot使用Riot聊天来进行网络监控和报告，用户可以自定义创建bot插件。[博文](https://medium.com/polkadot-network/polkabot-a3dba18c20c8)，[Github仓库](https://gitlab.com/Polkabot/polkabot)
-- [PolkaStats](https://polkastats.io/) - Polkadot network statistics (Kusama and Alexander). Shows network information and staking details from validators and intentions. [Github Repository](https://github.com/Colm3na/polkastats-v2/)
+- [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows network information and staking details from validators and intentions. [Github Repository](https://github.com/Colm3na/polkastats-v2/)
 
 ## Rust
 
 ### 客户端
 
-- [Polkadot](https://github.com/paritytech/polkadot) - Polkadot运行时环境的Rust实现。
+- [Polkadot](https://github.com/paritytech/polkadot) - Rust implementation of the Polkadot Host.
 
 ### 工具
 
@@ -49,7 +49,7 @@ sidebar_label: Tool Index
 
 ## Go
 
-- [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Runtime Environment.
+- [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Host.
 - [Golkadot](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate.
 - [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC client for go aka GSRPC
 

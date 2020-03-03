@@ -8,8 +8,8 @@ sidebar_label: 커뮤니티
 
 ## 기본 정보
 
-- [Polkadot PoC-4 테스트넷에 대해 알아보세요 ("알렉산더")](https://polkadot.js.org/apps/#/explorer) - UI 대시보드에서 가장 최근의 폴카닷 테스트넷을 테스트 해보세요.
-- [폴카닷 Github](https://github.com/paritytech/polkadot/) - 패리티가 관리하는 러스트로 구현된 폴카닷 런타임 환경 리포지토리
+- [Join Kusama](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with Polkadot's canary network, Kusama.
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
 - [폴카닷 밋업](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - 폴카닷 밋업 행사내용, 밋업 지원, 자료에 관한 정보들
 
 ## Riot(앱) 채널

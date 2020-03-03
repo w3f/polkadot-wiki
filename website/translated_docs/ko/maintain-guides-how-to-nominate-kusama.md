@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-kusama
 title: Be a Nominator (Kusama)
-sidebar_label: Be a Nominator (Kusama)
+sidebar_label: Nominator Guide
 ---
 
 ## Step 1: Bond your tokens

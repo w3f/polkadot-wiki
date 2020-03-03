@@ -12,7 +12,7 @@ A parachain is an application-specific data structure that is globally coherent 
 
 平行链由称为[收集人](maintain-collator)的网络维护者维护。 收集人节点的作用是运行平行链的全节点，保留平行链的所有必要信息，并生成新的候选区块，以传递给中继链验证器人进行验证并包含在 Polkadot 的共享状态里。 收集人节点的激励是对平行链的实施细节（请参见[平行链经济](#parachain-economies)）。 除非平行链实施规定这样做，否则它们无需将 DOT 押在中继链或持有代币。
 
-Polkadot runtime 环境（PRE）允许将在平行链上执行的状态转换指定为Wasm可执行文件。 在Polkadot确认在平行链上发生状态转换之前，必须通过验证程序根据在中继链上存储的注册状态转换函数（STF）验证在平行链上发生的新状态转换的证据。允许执行平行链的逻辑的唯一约束是中继链验证程序必须可以验证该逻辑。 验证通常采用状态转换的捆绑式证明的形式，即验证的证明（PoV）区块，该验证从一个或多个平行链的收集人核对提交给验证人，以进行检查。
+The Polkadot Host (PH) allows for the state transitions performed on parachains to be specified as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated against the registered state transition function (STF) that is stored on the relay chain by the validators before Polkadot acknowledges a state transition has occurred on a parachain. The only constraint to the logic that a parachain is allowed to implement is that it must be verifiable by the relay chain validators. Verification most commonly takes the form of a bundled proof of a state transition known as a Proof-of-Verification (PoV) block, which is submitted to the validators from one or more of the parachain collators to be checked.
 
 ## 平行链经济学
 

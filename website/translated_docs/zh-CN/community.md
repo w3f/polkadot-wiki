@@ -8,8 +8,8 @@ Polkadot 社区每天都在扩大。以下是最重要的社区链接。
 
 ## 一般
 
-- [加入 Polkadot PoC-4 测试网 ("Alexander")](https://polkadot.js.org/apps/#/explorer) - 前往Polkadot UI 测试當前最新网络。
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity Polkadot 库，包含 Polkadot runtime 环境 Rust 实现。
+- [Join Kusama](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with Polkadot's canary network, Kusama.
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
 - [Polkadot 聚会](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - 有关举办聚会的资料，申请资金。
 
 ## Riot
