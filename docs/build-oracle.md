@@ -25,7 +25,7 @@ On the decentralized end, a [complex game of "chicken"][schellingcoin] can be
 played among various staked actors who risk getting slashed if they don't submit
 the same data as everyone else. Solutions such as [ChainLink][chainlink] fit
 somewhere in the middle, where the amount of trust you put into the reporting
-oracles is minimized based on your preferences. 
+oracles can be adjusted based on your preferences. 
 
 When using an oracle in your application you should be aware of the benefits and
 risks that are baked into its specific model. As the Polkadot ecosystem develops
