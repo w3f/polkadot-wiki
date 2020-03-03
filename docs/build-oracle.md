@@ -30,7 +30,7 @@ oracles is minimized based on your preferences.
 When using an oracle in your application you should be aware of the benefits and
 risks that are baked into its specific model. As the Polkadot ecosystem develops
 and oracle parachains begin to appear, this article will be updated with a
-comparison of the different solutions and the benefits each provides.
+comparison of the different solutions and the drawbacks and benefits each provides.
 
 [schellingcoin]: https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/
 [chainlink]: https://polkadot.network/chainlink-reaches-milestone-with-polkadot/
