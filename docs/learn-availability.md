@@ -44,8 +44,8 @@ state. It includes:
 - The parachain ID.
 - The collator's ID and signature.
 - A hash of the parent block's candidate receipt.
-- A merkle root of the block's erasure coded pieces.
-- A merkle root of any outgoing messages.
+- A Merkle root of the block's erasure coded pieces.
+- A Merkle root of any outgoing messages.
 - A hash of the block.
 - The state root of the parachain before block execution.
 - The state root of the parachain after block execution.
@@ -93,7 +93,7 @@ transitions and producing the next parachain blocks as collators do, fishermen
 will watch this process and ensure no invalid state transitions are included.
 Fishermen will be moderately staked on the Relay Chain, unlike collators that 
 require no stake on the Relay Chain. Fishermen will submit invalidity reports
-if they find a misconduct has occurred during the production of a parachain.
+if they find that misconduct has occurred during the production of a parachain.
 If they are proven right about the reported misconduct, they will be handsomely
 rewarded, but they risk losing their stake if they're proven wrong. For this
 reason, fishermen are similar to bounty hunters that get a large payout on
@@ -111,7 +111,7 @@ for the Relay Chain to process.
 
 On the hardware end of requirements, a moderately powerful machine should be
 capable of running a full node of one or more parachains. The biggest requirement
-will likely be the storage of maintaining the data for each of the parachains
+will likely be the storage of data for each of the parachains
 that are being fished. However, improvements such as [pruning][pruning] mean
 that the eventual storage size needed to maintain a full node of a parachain
 will level off at a non-exorbitant amount. RAM and CPU requirements will likely
