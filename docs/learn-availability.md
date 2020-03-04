@@ -15,7 +15,7 @@ There are six phases of the Availability and the Validity protocol.
 1. Parachain phase.
 2. Relay chain submission phase.
 3. Availability and unavailability subprotocols.
-4. Secondary GRANDPA validity checks.
+4. Secondary GRANDPA approval validity checks.
 5. Objection procedure for fishermen.
 6. Invokation of a Byzantine fault tolerant _finality gadget_ to cement the chain.
 
@@ -83,7 +83,7 @@ their individual pieces of the data.
 
 **Note:** The 1/3+1 threshold of validators that must be responsive in order to
 construct the full parachain state data corresponds to Polkadot's security
-assumption that no more than 2/3 of the validators can be Byzantine. 
+assumption in regard to Byzantine nodes.
 
 ## Fishermen
 
@@ -121,9 +121,6 @@ instance will be enough to get started.
 
 **Note:** Fishermen are not available on Kusama or Polkadot yet! This page will
 be updated with a guide on setting one up once it becomes possible.
-
-### On submission of an invalidity report
-
 
 ## Further Resources
 
