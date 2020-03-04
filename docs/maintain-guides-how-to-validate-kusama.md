@@ -92,7 +92,7 @@ _If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by defaul
 timedatectl
 ```
 
-When you see something like `System clock synchronized: yes` then it is fine. If you do not see it, just install it by executing:
+If NTP is installed and running, you should see `System clock synchronized: yes` (or a similar message). If you do not see it, you can install it by executing:
 
 ```sh
 sudo apt-get install ntp
