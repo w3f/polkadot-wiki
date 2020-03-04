@@ -69,7 +69,7 @@ Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/m
 
 The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
 
-For even more detail, see the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
+For even more detail, see the [GRANDPA research page](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html) on the W3F Research pages.
 
 ### Fork Choice
 
