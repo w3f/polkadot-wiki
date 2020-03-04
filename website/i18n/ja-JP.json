@@ -69,6 +69,46 @@
         "title": "Wiki Index",
         "sidebar_label": "Wiki Index"
       },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Faucet"
+      },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Home"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
+      },
+      "learn-accounts": {
+        "title": "Polkadot Accounts",
+        "sidebar_label": "Polkadot Accounts"
+      },
       "learn-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
@@ -149,9 +189,9 @@
         "title": "Sequential Phragmen Method",
         "sidebar_label": "Sequential Phragmen Method"
       },
-      "learn-PRE": {
-        "title": "Polkadot Runtime Environment (PRE)",
-        "sidebar_label": "Polkadot Runtime Environment (PRE)"
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "Randomness",
@@ -177,6 +217,10 @@
         "title": "Staking",
         "sidebar_label": "Staking"
       },
+      "learn-transaction-fees": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
@@ -189,6 +233,10 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
+      "maintain-guides-democracy": {
+        "title": "Participate in Democracy",
+        "sidebar_label": "Participate in Democracy"
+      },
       "maintain-guides-how-to-join-council": {
         "title": "Join the Council",
         "sidebar_label": "Join the Council"
@@ -199,7 +247,7 @@
       },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",
-        "sidebar_label": "Be a Nominator (Kusama)"
+        "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Setup a Sentry Node - Public Node",
@@ -223,7 +271,7 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Run a Validator (Kusama)"
+        "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "Run a Validator (Alexander)",
@@ -277,13 +325,15 @@
     "links": {
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "Main",
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain": "Maintain",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {

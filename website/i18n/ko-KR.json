@@ -69,6 +69,46 @@
         "title": "위키 목록",
         "sidebar_label": "위키 목록"
       },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Faucet"
+      },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Home"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
+      },
+      "learn-accounts": {
+        "title": "Polkadot Accounts",
+        "sidebar_label": "Polkadot Accounts"
+      },
       "learn-architecture": {
         "title": "아키텍쳐",
         "sidebar_label": "아키텍쳐"
@@ -149,9 +189,9 @@
         "title": "순차적 프라그멘 방법",
         "sidebar_label": "순차적 프라그멘 방법"
       },
-      "learn-PRE": {
-        "title": "폴카닷 런타임 환경 (Polkadot Runtime Environment; PRE) ",
-        "sidebar_label": "폴카닷 런타임 환경 (Polkadot Runtime Environment; PRE) "
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "무작위 선택",
@@ -177,6 +217,10 @@
         "title": "스테이킹",
         "sidebar_label": "스테이킹"
       },
+      "learn-transaction-fees": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "재무관리",
         "sidebar_label": "재무관리"
@@ -189,6 +233,10 @@
         "title": "전달자 (Collator)",
         "sidebar_label": "전달자 (Collator)"
       },
+      "maintain-guides-democracy": {
+        "title": "Participate in Democracy",
+        "sidebar_label": "Participate in Democracy"
+      },
       "maintain-guides-how-to-join-council": {
         "title": "의회에 출마하는 법",
         "sidebar_label": "의회에 출마하는 법"
@@ -199,7 +247,7 @@
       },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "노미네이터가 되어보세요 (쿠사마)",
-        "sidebar_label": "노미네이터가 되어보세요 (쿠사마)"
+        "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "공개용 센트리 노드 구축 방법",
@@ -223,7 +271,7 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "검증자 노드를 돌려보세요 (쿠사마)",
-        "sidebar_label": "검증자 노드를 돌려보세요 (쿠사마)"
+        "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "검증자 노드를 돌려보세요 (알렉산더)",
@@ -277,13 +325,15 @@
     "links": {
       "Build": "개발",
       "Learn": "학습",
-      "Maintain": "유지 및 보수"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "메인",
       "Build": "개발",
       "Learn": "학습",
-      "Maintain": "유지 및 보수"
+      "Maintain": "유지 및 보수",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {

@@ -1,0 +1,30 @@
+{
+  "name": "polkadot-wiki",
+  "version": "1.0.0",
+  "description": "The Polkadot knowledge base.",
+  "main": "none",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3f/polkadot-wiki.git"
+  },
+  "author": "W3F",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/w3f/polkadot-wiki/issues"
+  },
+  "homepage": "https://github.com/w3f/polkadot-wiki#readme",
+  "devDependencies": {
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node mirror.js"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-kusama
 title: Run a Validator (Kusama)
-sidebar_label: Run a Validator (Kusama)
+sidebar_label: Validator Guide
 ---
 
 This guide will instruct you how to set up a validator node on the Kusama network.
@@ -93,11 +93,21 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 #### New to the Network
 
-If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the following command:
+You can begin syncing your node by running the following command:
+
+```sh
+./target/release/polkadot --validator
+```
+
+or
 
 ```sh
 ./target/release/polkadot --pruning=archive
 ```
+
+if you do not want to start in validator mode right away.
+
+**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
 #### Previous Kusama CC1 Validator
 
@@ -151,9 +161,9 @@ If you are interested in determining how much longer you have to go, your server
 
 ## Bond KSM
 
-For the soft launch period, since transfers are disabled, you will set your Controller and Stash account to be the same account. If you have two accounts with KSM, the recommended method is to still have the Controller and Stash different accounts. Once the network is operating with PoS, you will be able to re-configure your controller to have separate controller and stash accounts.
+It is highly recommended that you make your controller and stash accounts be two separate accounts. For this, you will create two accounts and make sure each of them have at least enough funds to pay the fees for making transactions. Keep most of your funds in the stash account since it is meant to be the custodian of your staking funds.
 
-Make sure not to bond all your KSM balance since the latest codebase in Kusama CC2 does not allow to use the bonded balance to pay transaction fees.
+Make sure not to bond all your KSM balance since you will be unable to pay transaction fees from your bonded balance.
 
 It is now time to set up our validator. We will do the following:
 

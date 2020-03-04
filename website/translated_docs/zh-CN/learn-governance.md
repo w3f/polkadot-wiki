@@ -35,7 +35,7 @@ Polkadot 使用尖端的治理机制，使其能够按照其聚集的利益相�
 
 紧急建议涉及网络中的主要问题，需要“快速跟踪”，这将将有一个更短颁布时间。
 
-### 提议全民公投
+### Proposing a Referendum
 
 #### 公众投票
 
@@ -229,7 +229,7 @@ This would be the tentative governance configuration for Polkadot in the initial
 
 ## 技术委员会
 
-The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or the Host. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
 
 The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 

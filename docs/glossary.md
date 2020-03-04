@@ -6,7 +6,25 @@ sidebar_label: Glossary
 
 ## Alexander
 
-The fourth proof of concept (PoC-4) testnet for Polkadot.
+The fourth (now defunct) proof of concept (PoC-4) testnet for Polkadot.
+
+## Attestation
+
+In the Polkadot validity system, an _attestation_ is a type of message that
+validators broadcast that says whether they think a parachain candidate block
+is valid or invalid.
+
+## Authority
+
+An authority is a generic term for the role in a blockchain that is able to
+participate in the consensus mechanisms. In GRANDPA, the authorities vote
+on chains they consider final. In BABE, the authorities are block producers.
+Authority sets can be chosen be mechanisms such as Polkadot's NPoS algorithm.
+
+## BABE
+
+_B_lind _A_ssignment of _B_lock _E_xtension is Polkadot's block production
+mechanism.
 
 ## Block
 
@@ -26,7 +44,7 @@ A process by which tokens can be "frozen" in exchange for some other benefit. Fo
 
 ## Bridge
 
-A parachain that acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Runtime Environment requirements). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
+A parachain that acts as an intermediary between the Polkadot relay chain and an external chain, in such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets the Polkadot Host's requirements of parachains). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
 
 ## Byzantine Fault Tolerance
 
@@ -40,13 +58,19 @@ A node that maintains a parachain by collecting parachain transactions and produ
 
 The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
 
+## Dapps
+
+A generic term for a decentralized application, that is, one that runs as part of a distributed network as opposed to being run on a specific system or set of systems.
+
 ## DOTs
 
 The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are connected the relay chain).
 
-## Dapps
+## Duty Roster
 
-A generic term for a decentralized application, that is, one that runs as part of a distributed network as opposed to being run on a specific system or set of systems.
+A lookup table that specifies the job that a particular validator is required to
+do (i.e. attest to the validity of a specific paracahain). The duty roster
+routinely shuffles the validator set into different subsets per parachain.
 
 ## Epoch
 
@@ -82,9 +106,12 @@ Nodes that monitor the network for validators or collators who are behaving badl
 
 The collection of Substrate-provided pallets (Substrate Runtime Modules).
 
-## GRANDPA Consensus Algorithm
+## Genesis
 
-GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+The origin of a blockchain, also known as block 0. It can also be used to
+reference the initial state of the blockchain at origination. 
+
+> Example: "In the _genesis_ state Alice, Bob, and Charlie had 30 tokens each."
 
 ## Governance
 
@@ -93,6 +120,10 @@ The process of determining what changes to the network are permissible, such as 
 ## Governance Council
 
 An on-chain entity that consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24). The Council can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
+
+## GRANDPA Finality Gadget
+
+GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## Hard Fork
 
@@ -122,6 +153,17 @@ An open-source library for encrypted peer-to-peer communications and other netwo
 
 The property of a distributed system that it will eventually come to some sort of consensus. A system stuck in an infinite loop would not be considered live, even if computations are taking place; a system that eventually provides a result, even if incorrect or it takes a long time, is considered to have liveness.
 
+## Message
+
+In Polkadot's XCMP protocol, a _message_ is arbitrary data that is sent from
+one parachain (the egress chain) to another (the ingress chain) through a
+channel and ensured delivery by the vaidator set.
+
+## Message Queue
+
+In Polkadot's XCMP protocol, a _message queue_ is the list of messages waiting
+to be process by a particular receiving parachain over a channel.
+
 ## Node Explorer
 
 A tool that gives you information about a node, such as the latest blocks sealed, finalized, and the current chain state as known by that node.
@@ -144,7 +186,7 @@ A Substrate runtime module.
 
 ## Parachain
 
-A blockchain that meets several characteristics that allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
+A blockchain that meets several characteristics that allow it work within the confines of the Polkadot Host. Also known as "parallelized chain."
 
 ## Parachain Registry
 
@@ -158,9 +200,13 @@ A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot.
 
 A heterogeneous, multi-chain network allowing various blockchains of different characteristics to perform arbitrary, cross-chain communication under shared security.
 
+## Polkadot Host
+
+The environment in which a runtime module can be executed. Parachains must support the Polkadot Host - external chains that do not will have to use a bridge. Previously known as the Polkadot Runtime Environment or PRE.
+
 ## Polkadot Runtime Environment
 
-The runtime environment in which a runtime module can be executed. Parachains must support the Polkadot Runtime Environment - external chains that do not will have to use a bridge.
+The previous name for the [Polkadot Host](#polkadot-host).
 
 ## Proof of Stake (PoS)
 
@@ -181,6 +227,12 @@ A potential function call to be voted on in a referendum. Proposals modify the b
 ## Protocol
 
 A system of rules that allows two or more entities of a communications system to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication and possible recovery methods.
+
+## Random Seed
+
+A random seed is pseudo-random number available on-chain. It is used in various
+places of the Polkadot protocol, most prominently in [BABE](#babe) the block
+production mechanism.
 
 ## Referendum
 
@@ -262,6 +314,17 @@ The process of stakeholders determining whether or not a referendum should pass.
 
 A program that allows one to store private keys and sign transactions for Polkadot or other blockchain networks.
 
+## Wasm
+
+An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
+
+## Watermark
+
+In Polkadot's parachain messaging scheme, the _watermark_ is the minimum processed
+send-height of the receiving parachain. All messages on all channels that are
+sending to this parachain at or before the watermark are guaranteed to be
+processed.
+
 ## Web3 Foundation
 
 A Switzerland-based foundation that nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those that utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
@@ -269,10 +332,6 @@ A Switzerland-based foundation that nurtures and stewards technologies and appli
 ## WebAssembly
 
 An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
-
-## Wasm
-
-An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to Wasm.
 
 ## Witness
 

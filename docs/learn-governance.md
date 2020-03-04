@@ -35,7 +35,7 @@ All referenda have an *enactment delay* associated with them. This is the period
 
 Emergency proposals deal with major problems with the network which need to be "fast-tracked". These will have a shorter enactment time.
 
-### Proposing a Referenda
+### Proposing a Referendum
 
 #### Public Referenda
 
@@ -232,7 +232,7 @@ This would be the tentative governance configuration for Polkadot in the initial
 The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/)
 as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical
 Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or
-the runtime environment. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+the Host. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
 
 The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 

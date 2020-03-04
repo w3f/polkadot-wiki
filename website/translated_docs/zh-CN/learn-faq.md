@@ -22,7 +22,7 @@ See the [consensus](learn-consensus) page.
 
 The Kusama network is currently operating at a rate of one block approximately every six seconds.
 
-The expected block time on the mainnet Polkadot chain is estimated to be limited by the theoretical limits of the peer-to-peer networks of the validators. Since there is no forced time between blocks due to Proof-of-Work and the only overhead on validators is to validate state transitions, the block times should be quite fast. Two or three seconds may not be unreasonable after optimizations. However, the specific block time will probably begin at a rate similar to Kusama. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
+The initial expected block time on the mainnet Polkadot chain will also be targeted at every six seconds.  However, this is subject to change and after optimization, may go down to as low as every two to three seconds. It also may potentially be longer (up to 10 - 15 seconds) due to the constraint of networking all parachain data.
 
 ### 代币通胀率是多少?
 
@@ -56,9 +56,25 @@ Testnet DOT and KSM tokens are freely available from a variety of sources - see 
 
 Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.  Upon obtaining Kusama tokens, they are freely transferable.
 
-The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Gavin Wood, one of the project's founders, said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)).  Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
 
 Mainnet DOT tokens are not transferrable until mainnet launch, expected in early 2020. Any transfers before that time of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
+
+### What are the ways to find out the minimum stake necessary for the validators?
+
+There are a few ways to estimate it.
+
+- [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
+
+If you want to know what would be the outcome of the election in the next era, this can provide an estimation result. You can customize parameters such as number of validators to elect, network, and WebSocket endpoint, but it would take some time to build the binary.
+- [Validator stats script](https://github.com/ansonla3/kusama-validator-stats)
+
+This script helps you quickly identify which validator is the lowest-staked and the basic statistics about staking on Kusama.
+
+- [Copy everything from the Staking page](https://polkadot.js.org/apps/#/staking)
+
+It is also possible to copy both `own stake` and `other stake` on the Staking page to a spreadsheet and then do a simple calculation.
+
 
 ## Gav 回答的问题
 
@@ -69,5 +85,5 @@ The "Answered by Gav" series is a collection of posts uploaded to Reddit of ques
 - [What are the main issues with Bitcoin integration and will it ever be possible? Same problem with other POW chains? Is Polkadot only going to work with POS chains? How is it trust-less in comparison to Cosmos though?](https://www.reddit.com/r/dot/comments/b87bua/answered_by_gav_what_are_the_main_issues_with/)
 - [What are the current thoughts around governance especially since projects have to be voted in to receive the parachains security?](https://www.reddit.com/r/dot/comments/b87cjz/answered_by_gav_what_are_the_current_thoughts/)
 - [Also is there any detailed overview of how exactly a token transfer from ETH could be exchanged with another chain's currency?](https://www.reddit.com/r/dot/comments/b87ds8/answered_by_gav_also_is_there_any_detailed/)
-- [我可以使用相同的 Session 密钥运行多个验证人节点吗？](https://www.reddit.com/r/dot/comments/bcqrx9/answered_by_gav_can_i_run_multiple_validators/)
+- [Can I run multiple Validators with the same Session Key?](https://www.reddit.com/r/dot/comments/bcqrx9/answered_by_gav_can_i_run_multiple_validators/)
 - [How to tackle the concentration risk of Validators in data centers?](https://www.reddit.com/r/dot/comments/bcqwit/answered_by_gav_how_to_tackle_the_concentration/)
