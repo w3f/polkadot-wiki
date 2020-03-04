@@ -317,7 +317,7 @@ If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 Click "Validate".
 
 If you go to the "Staking" tab, you will see a list of active validators currently running on the network. At the top of the page, it shows how many validator slots are available as well as how many nodes have signaled their intention to be a validator.
-You can also go to the Waiting tab to double check to see whether your node is listed there.
+You can also go to the "Waiting" tab to double check to see whether your node is listed there.
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
