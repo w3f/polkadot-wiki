@@ -38,7 +38,7 @@ This section explains the sequential Phragmén method in-depth and walks through
 
 In order to understand the Weighted Phragmén method, we must first understand the basic Phragmén method.  There must be some group of candidates, a group of seats they are vying for (which is less than the size of the group of candidates), and some group of voters.  The voters can cast an approval vote - that is, they can signal approval for any subset of the candidates.
 
-The subset should be a minimum size of one (i.e., one cannot vote for no candidates) and a maximum size of one less than the number of candidates (i.e., one cannot vote for all candidates).  Users are allowed to voting for all or no candidates, but this will not have an effect on the final result, and so votes of this nature are meaningless.
+The subset should be a minimum size of one (i.e., one cannot vote for no candidates) and a maximum size of one less than the number of candidates (i.e., one cannot vote for all candidates).  Users are allowed to vote for all or no candidates, but this will not have an effect on the final result, and so votes of this nature are meaningless.
 
 Note that in this example, all voters are assumed to have equal say (that is, their vote does not count more or less than any other votes).  The weighted case will be considered later.  However, weighting can be "simulated" by having multiple voters vote for the same slate of candidates.  For instance, five people voting for a particular candidate is mathematically the same as a single person with weight `5` voting for that candidate.
 
@@ -199,6 +199,16 @@ Candidate E: N/A
 For every edge, we are going to calculate the score, which is current score plus the total budget * the load of the voter divided by the approval stake of the candidate.  However, since the load of every voter starts at 0, and anything multiplied by 0 is 0, any addition will be `0 / x`, or 0.  This means that this step can be safely ignored for the initial round.
 
 Thus, the best (lowest) score for Round 0 is Candidate A, with a score of `0.091`.
+
+```
+Candidates:    A B C D E  L0 L1
+----------------------------------
+Voter V1 (1):  X X        0  0.091
+Voter V2 (2):  X X        0  0.091
+Voter V3 (3):  X          0  0.091
+Voter V4 (4):    X X X    0  0
+Voter V5 (5):  X     X    0  0.091
+```
 
 ```
 Filled seats: 1 (A)
@@ -379,7 +389,7 @@ You will notice that the total amount of stake for candidates `A`, `D`, and `B` 
 
 ## Optimizations
 
-There are further optimizations that can be done to more evenly distribute the load (which is a desirable feature, as discussed below).  These optimizations will not be covered on this page, but can be reviewed at the [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html).
+The results are further optimized to more evenly distribute the load (which is a desirable feature, as discussed below) via post-processing.
 
 ### Rationale
 
@@ -391,7 +401,8 @@ In contrast, imagine a different result with the same amount of total stake, but
 
 After running the weighted Phragmén algorithm, a process is run which redistributes the vote amongst the elected set.  This process will never add or remove an elected candidate from the set.  Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates.  Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible.
 
-For more details, you can view the [Rust implementation in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs) or the `seqPhragménwithpostprocessing` method in the [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS).
+These optimizations will not be covered in-depth on this page.  For more details, you can view the [Rust implementation in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs) or the `seqPhragménwithpostprocessing` method in the [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS).  If you would like to dive even more deeply, you can review the [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html).
+
 
 ## External Resources
 
