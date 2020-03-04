@@ -139,5 +139,5 @@ Randomness is problematic for blockchain systems. Generating a random number tru
 
 ## Resources
 
-- [Parachain Allocation](http://research.web3.foundation/en/latest/polkadot/Parachain-Allocation/) - W3F research page on parachain allocation that goes more in depth to the mechanism.
+- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
 - [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.
