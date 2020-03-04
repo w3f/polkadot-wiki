@@ -24,7 +24,7 @@ that you can get started creating your application in anticipation of the Polkad
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/))
 
 ## What you need to know
 
@@ -323,7 +323,7 @@ If you have interesting ideas for parachains or smart contracts on Polkadot feel
 Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) to talk about them. Developers may be
 interested in joining the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their questions. As always,
-keep up to date with Polkadot by following the [social channels](https://wiki.polkadot.network/en/latest/community/).
+keep up to date with Polkadot by following the [social channels](community).
 
 Good luck!
 
