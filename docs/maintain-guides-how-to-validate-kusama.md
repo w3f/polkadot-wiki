@@ -25,7 +25,7 @@ significant proposal, you can write it on the [Kusama forum](https://forum.kusam
 
 ### How Many KSM Do I Need?
 
-Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
+You can have a rough estimate on that by using the methods listed [here](learn-faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper
 setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is
@@ -137,8 +137,6 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 > **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain,
 you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 
-#### New to the Network
-
 You can begin syncing your node by running the following command:
 
 ```sh
@@ -148,55 +146,6 @@ You can begin syncing your node by running the following command:
 if you do not want to start in validator mode right away.
 
 **Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
-
-#### Previous Kusama CC2 Validator
-
-Before synchronizing the latest chain data, you will need to copy your previous keystore to the new chain id in order to use the previously set session keys. If you do not do this, you will need to generate and set your session keys again.
-
-Kusama CC1 and Kusama CC2 have different default data directories, usually located in the `$HOME/.local/share/polkadot/chains` directory on Linux based machines. For example, the default directory for Kusama CC2 is `$HOME/.local/share/polkadot/chains/ksmcc2/keystore` while CC2 keys are located in `$HOME/.local/share/polkadot/chains/ksmcc2/keystore`.
-
-You can easily generate the default keystore for CC2 by first starting to sync and exiitng out of your node client.
-
-```sh
-./target/release/polkadot
-# Wait a few seconds for it to start up and create the data directory then press `ctrl-c`.
-```
-
-Now you can copy your old session keys into the new CC3 keystore with the next command:
-
-```sh
-cp -r $HOME/.local/share/polkadot/chains/ksmcc2/keystore $HOME/.local/share/polkadot/chains/ksmcc3/keystore
-```
-
-If your keystore is empty, it means that the keys were not created on your node in the CC2 chain. You want to fix this.
-The best way to do this would be to call the `author_rotateKeys` RPC call and make sure the call is directed to your
-validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
-transaction, verify that the keys are in the new CC2 keystore. See more information in the [section below](#generating-session-keys).
-
-After you copy your keystore into the new chains directory, you want to to inject the keys into the memory of the node.
-For this you can use the `author_insertKey` method for each of the four types of keys: 'babe', 'gran', 'imon', and 'para'.
-You can map these keys to the ones in your keystore by parsing the concatenated output of the `rotateKeys` RPC call you
-made the first time. They will be concatenated in order following the below struct declaration:
-
-```rust
-pub struct SessionKeys {
-    pub grandpa: Grandpa,
-    pub babe: Babe,
-    pub im_online: ImOnline,
-    pub parachain_validator: Parachains,
-    pub authority_discovery: AuthorityDiscovery,
-}
-```
-
-> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys
-> that you made the `setKeys` transaction for then simply run through the process of generating and setting new ones
-> using the `rotateKeys` method below. Better safe than sorry!
-
-Start your node.
-
-```sh
-./target/release/polkadot --pruning=archive
-```
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
 
@@ -243,6 +192,10 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 account.
 
 ## Set Session Keys
+
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys
+> that you made the `setKeys` transaction for then simply run through the process of generating and setting new ones
+> using the `rotateKeys` method below. Better safe than sorry!
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running
 the node in validator mode with the pruning option set to `archive`.
@@ -303,7 +256,7 @@ Submit this extrinsic and you are now ready to start validating.
 
 ## Validate
 
-To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC1)
+To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3)
 and find your node. Note that this will show all nodes on the Kusama network, which is why it is important to select a
 unique name!
 
