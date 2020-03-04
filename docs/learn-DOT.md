@@ -65,7 +65,7 @@ DOTs are required to make transactions on the Polkadot network. Testnet DOTs do 
 
 The current testnet is called Westend and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.w3f.tech/#westend_faucet:matrix.org).
 
-You can also make your own DOTs by [becoming a validator on the testnet](https://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/).
+You can also make your own DOTs by [becoming a validator](maintain-validator).
 
 ## Kusama Tokens
 
