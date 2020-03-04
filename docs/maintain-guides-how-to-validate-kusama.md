@@ -84,7 +84,7 @@ brew install cmake pkg-config openssl git llvm
 
 ### Install & Configure NTP(Network Time Protocol) Client
 
-[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required the validators local clocks reasonably in sync, so you can check whether you have the NTP client by running: 
+[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service.  You can check whether you have the NTP client by running: 
 
 _If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
 
