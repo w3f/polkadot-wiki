@@ -112,7 +112,7 @@ for the Relay Chain to process.
 
 On the hardware end of requirements, a moderately powerful machine should be
 capable of running a full node of one or more parachains. The biggest requirement
-will likely be the storage of maintaining the data for each of the parachains
+will likely be the storage of data for each of the parachains
 that are being fished. However, improvements such as [pruning][pruning] mean
 that the eventual storage size needed to maintain a full node of a parachain
 will level off at a non-exorbitant amount. RAM and CPU requirements will likely
