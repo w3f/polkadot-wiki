@@ -45,7 +45,7 @@ state. It includes:
 - The collator's ID and signature.
 - A hash of the parent block's candidate receipt.
 - A Merkle root of the block's erasure coded pieces.
-- A merkle root of any outgoing messages.
+- A Merkle root of any outgoing messages.
 - A hash of the block.
 - The state root of the parachain before block execution.
 - The state root of the parachain after block execution.
