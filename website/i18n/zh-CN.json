@@ -37,6 +37,10 @@
         "title": "开发者专页",
         "sidebar_label": "开发者专页"
       },
+      "build-oracle": {
+        "title": "Oracles",
+        "sidebar_label": "Oracles"
+      },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
