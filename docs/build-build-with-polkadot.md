@@ -24,7 +24,7 @@ that you can get started creating your application in anticipation of the Polkad
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/))
 
 ## What you need to know
 
