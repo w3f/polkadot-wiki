@@ -37,6 +37,10 @@
         "title": "개발자 포탈",
         "sidebar_label": "개발자 포탈"
       },
+      "build-oracle": {
+        "title": "Oracles",
+        "sidebar_label": "Oracles"
+      },
       "build-pdk": {
         "title": "패러체인 개발 키트",
         "sidebar_label": "패러체인 개발 키트"
