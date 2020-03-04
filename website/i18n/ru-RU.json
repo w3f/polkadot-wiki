@@ -37,6 +37,10 @@
         "title": "Builder's Portal",
         "sidebar_label": "Builder's Portal"
       },
+      "build-oracle": {
+        "title": "Oracles",
+        "sidebar_label": "Oracles"
+      },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
