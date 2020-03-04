@@ -62,13 +62,12 @@ validators must report that they possess their piece of the code word. Once
 this threshold of validators has been reached, the network can consider the PoV
 block of the parachain _available_.
 
-
-
 ## Erasure Codes
 
-Erasure coding transforms a message into a longer _code word_ that allows for the
-original message to be recovered from a subset of the code word and in absence
-of some portion of the code word.
+Erasure coding transforms a message into a longer _code_ that allows for the
+original message to be recovered from a subset of the code and in absence
+of some portion of the code. A code is the original message padded with some
+extra data that enables the reconstruction of the code in the case of erasures.
 
 The type of erasure codes used by Polkadot's availability scheme are
 [Reed-Solomon][reed solomon] codes, which already enjoys a battle-tested
