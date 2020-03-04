@@ -17,7 +17,7 @@ There are six phases of the Availability and the Validity protocol.
 3. Availability and unavailability subprotocols.
 4. Secondary GRANDPA validity checks.
 5. Objection procedure for fishermen.
-6. Invokation of a Byzantine fault tolerant _finality gadget_ to cement the chain.
+6. Invocation of a Byzantine fault tolerant _finality gadget_ to cement the chain.
 
 ### Parachain phase
 
