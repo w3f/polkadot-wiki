@@ -8,7 +8,7 @@ sidebar_label: 验证人奖励概述
 
 For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in Polkadot), validators are paid proportionally to the amount of _era points_ they have collected. Era points are reward points earned for payable actions like:
 
-- issuing validity statements for [parachain](learn-parachain) blocks.
+- issuing validity statements for [parachain](learn-parachains) blocks.
 - producing a non-uncle block in the relay chain.
 - producing a reference to a previously unreferenced uncle block.
 - producing a referenced uncle block.
