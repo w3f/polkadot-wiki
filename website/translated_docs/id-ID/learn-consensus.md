@@ -49,7 +49,7 @@ When multiple validators are block producer candidates in a given slot, all will
 
 When no validators have rolled low enough in the randomness lottery to qualify for block production, a slot can remain seemingly blockless. We avoid this by running a secondary, round-robin style validator selection algorithm in the background. The validators selected to produce blocks through this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also produces a primary block from a [VRF-selected](learn-randomness) validator. Thus, a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
-For more details on BABE, please see the [working research draft](http://research.web3.foundation/en/latest/polkadot/BABE/Babe/).
+For more details on BABE, please see the [working research draft](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html).
 
 ### GRANDPA: Finality gadget
 
@@ -69,7 +69,7 @@ Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/m
 
 The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
 
-For even more detail, see the [GRANDPA research page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the W3F Research pages.
+For even more detail, see the [GRANDPA research page](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html) on the W3F Research pages.
 
 ### Fork Choice
 
