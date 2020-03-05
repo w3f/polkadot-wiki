@@ -107,9 +107,9 @@ Validator pools with larger total stake backing them will get slashed more harsh
 The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
 
 * Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
-* Level 2: concurrent unresponsiveness or isolated equivocation. Slashing up to 1% of the staked amount.
-* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashing up to 10%.
-* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashing 100% of the stake behind the offenders.
+* Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake.
+* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake.
+* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator.
 
 Let's look at these offences in a bit more detail.
 
@@ -150,7 +150,7 @@ If you want to know more details about slashing, please look at our [research pa
 
 ### Chilling
 
-Chilling is the act of kicking a validator out of the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle. This carries an implied penalty of being unable to earn rewards for the duration of the next era, and requires them to earn back any nominations they may have had before being kicked out.
+Chilling is the act of removing a validator from the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle. This carries an implied penalty of being unable to earn rewards for the duration of the next era, and requires them to earn back any nominations they may have had before being removed.
 
 Because every offence regardless of level triggers a chill, and every chill triggers an automatic re-election of a new active validator set, the offending validator is immediately removed from the current set and the next, and someone else takes their place. To re-join, they need to acknowledge the slash and re-announce their candidature.
 
