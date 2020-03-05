@@ -33,5 +33,6 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 
 ## เครื่องมือตรวจสอบ
 
+- [PANIC for Polkadot](https://github.com/SimplyVC/panic_polkadot) - A monitoring and alerting solution for Polkadot / Kusama node
 - [Polkadot Telemetry Service](https://telemetry.polkadot.io/#list/Kusama%20CC3) - Network information, including what nodes are running on a given chain, what software versions they are running, and sync status.
 - [Other Useful Links](https://forum.web3.foundation/t/useful-links-for-validators/20)
