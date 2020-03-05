@@ -49,7 +49,7 @@ Polkadot 的验证人将会参与在每次的抽奖去决定它们是否在那�
 
 当没有任何验证人在随机抽奖中达到足够低的资格进行生产区块时，时隙便会没有区块。我们在后台通过运行辅助轮循样式验证人选择算法来避免这种情况。通过选择该算法生成区块的验证人始终生成区块，但是如果同一时隙也从[ VRF 选择](learn-randomness)验证人生成主块，则这些_次要_区块将被忽略。因此时隙可以具有_ 主要 _或_ 次要 _区块，并且不会跳过任何时隙。
 
-有关更多 BABE 的详细信息，请参见[正在研究的草案](http://research.web3.foundation/zh/latest/polkadot/BABE/Babe/)。
+For more details on BABE, please see the [working research draft](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html).
 
 ### GRANDPA: 最终决定性工具
 
@@ -69,7 +69,7 @@ GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) 是在 Polkad
 
 The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
 
-有关更多详细信息，请参阅 W3F 研究专页上的[ GRANDPA 页面](http://research.web3.foundation/en/latest/polkadot/GRANDPA/)。
+For even more detail, see the [GRANDPA research page](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html) on the W3F Research pages.
 
 ### 分叉选择
 
