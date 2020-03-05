@@ -86,7 +86,7 @@ Web3 基金会已在[ Schnorrkel ](https://github.com/w3f/schnorrkel)库中的Cu
 
 - [Key discovery attack on BIP32-Ed25519](https://forum.web3.foundation/t/key-recovery-attack-on-bip32-ed25519/44) - Forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition to the sr25519 variant.
 - [Account signatures and keys in Polkadot](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70) - Original forum post by Web3 researcher Jeff Burdges.
-- [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/a/57977l)
+- [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 
 ## Appendix A: On the security of curves
 
