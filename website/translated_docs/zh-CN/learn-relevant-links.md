@@ -99,9 +99,8 @@ sidebar_label: 链接
 
 - [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Alexander, Kusama, or your own private network.
 - [Telemetry](http://telemetry.polkadot.io/) - Information services website for nodes.
-- [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain ation on and Parity Substrate chains.
-- [Polka.io](https://polka.io/) \- Polkadot Muti-Chain Explorer
-- [Polkastat](http://polkastat.xyz/) \- See staking and validator inform
+- [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain and Parity Substrate chains.
+- [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.
 
 ### Crowdcast Webinars
 
