@@ -78,7 +78,7 @@ Providing conflicting information to the network. BABE equivocation entails crea
 
 ## Extrinsic
 
-State changes that come from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms, "[inherents](#inherents)" and "[transactions](#transactions)".
+State changes that come from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms, "[inherents](#inherent)" and "[transactions](#transaction)".
 
 ## Finality
 
