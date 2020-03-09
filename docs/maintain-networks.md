@@ -54,6 +54,11 @@ polkadot --chain westend
 
 and you will connect and start syncing to Westend.
 
+#### Westend Faucet
+
+Follow the instruction [here](learn-DOT#getting-westies) for instructions on acquiring
+Westies.
+
 Check your node is connected by viewing it on [Telemetry](https://telemetry.polkadot.io/#list/Westend).
 
 ## Substrate Networks
