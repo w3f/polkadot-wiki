@@ -102,6 +102,7 @@
         "type": "subcategory",
         "label": "Miscellaneous",
         "ids": [
+          "learn-account-generation",
           "learn-roadmap",
           "learn-relevant-links",
           "learn-faq"
