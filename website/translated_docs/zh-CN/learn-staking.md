@@ -114,7 +114,7 @@ For every session, validators will send an "I'm Online" message to indicate they
 
     Let x = offenders, n = total no. validators
     
-    min((3 * (k - (n / 10 + 1))) / n, 1) * 0.07
+    min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
