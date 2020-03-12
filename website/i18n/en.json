@@ -121,6 +121,10 @@
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
       },
+      "learn-availability": {
+        "title": "Availability and Validity",
+        "sidebar_label": "Availability and Validity"
+      },
       "learn-bridges": {
         "title": "Bridges",
         "sidebar_label": "Bridges"
@@ -240,6 +244,10 @@
       "maintain-guides-democracy": {
         "title": "Participate in Democracy",
         "sidebar_label": "Participate in Democracy"
+      },
+      "maintain-guides-how-to-create-offline-transaction": {
+        "title": "Generate an offline transaction",
+        "sidebar_label": "Generate an offline transaction"
       },
       "maintain-guides-how-to-join-council": {
         "title": "Join the Council",

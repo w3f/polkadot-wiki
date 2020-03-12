@@ -155,6 +155,13 @@
           "maintain-guides-how-to-join-council",
           "maintain-guides-how-to-vote-councillor"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Others",
+        "ids": [
+          "maintain-guides-how-to-create-offline-transaction"
+        ]
       }
     ]
   },
