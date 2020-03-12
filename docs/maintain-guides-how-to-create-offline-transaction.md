@@ -6,7 +6,7 @@ sidebar_label: Generate an offline transaction
 
 # Generating an offline transaction
 
-There are few different ways to create an offline transaction by using the [@polkadot@cli-signer](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli), [txwrapper](https://github.com/paritytech/txwrapper) or [Subkey](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). This guide shows you how to use each one of these for different scenarios. 
+There are few different ways to create an offline transaction: by using the [@polkadot@cli-signer](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli), [txwrapper](https://github.com/paritytech/txwrapper), or [Subkey](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). This guide shows you how to use each one of these for different scenarios. 
 
 ## polkadot@cli-signer
 
