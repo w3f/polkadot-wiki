@@ -15,7 +15,7 @@ This would be the easiest to use if you are looking for a CLI approach and have 
 
 ### Installation
 
-Assume you have installed both nodeJS and npm, you can run the following command:
+We assume you have installed [NodeJS with npm](https://nodejs.org). Run the following command:
 
 ```
 npm install -g @polkadot/api-cli
