@@ -20,6 +20,7 @@ We assume you have installed [NodeJS with npm](https://nodejs.org). Run the foll
 ```bash
 npm install -g @polkadot/api-cli
 ```
+
 ### Creating a transaction
 
 Let's say we want to transfer 0.5 KSM from `DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX` to `EQ64DQpzBkMcPUqUh7ddvAWmuQFnX3gCPpY8E6F9EsZjHPT`. We need to construct a payload and then use `DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX` to sign it. 
