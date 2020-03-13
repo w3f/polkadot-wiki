@@ -12,7 +12,6 @@ There are few different ways to create an offline transaction: by using the [@po
 
 This would be the easiest to use if you are looking for a CLI approach and have some basic understanding of public-key cryptography. You can use that to create any transaction and submit it (Extrinsic) to the network directly or you create an offline transaction and then submit it over RPC or [PolkadotJS UI](https://polkadot.js.org/apps/#/toolbox).
 
-
 ### Installation
 
 We assume you have installed [NodeJS with npm](https://nodejs.org). Run the following command:
