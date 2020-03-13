@@ -17,7 +17,7 @@ This would be the easiest to use if you are looking for a CLI approach and have 
 
 We assume you have installed [NodeJS with npm](https://nodejs.org). Run the following command:
 
-```
+```bash
 npm install -g @polkadot/api-cli
 ```
 ### Creating a transaction
@@ -26,18 +26,18 @@ Let's say we want to transfer 0.5 KSM from `DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X
 
 Executing the following command:
 
-```
+```bash
 yarn run:signer sendOffline --account SENDER_ADDR --ws WEBSOCKET_ENDPOINT RUNTIME_MODULE.FUNCTION RECEIVER_ADDR AMOUNT
 ```
 
-```
+```bash
 yarn run:signer sendOffline --account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX --ws wss://kusama-rpc.polkadot.io/ balances.transfer EQ64DQpzBkMcPUqUh7ddvAWmuQFnX3gCPpY8E6F9EsZjHPT 500000000000
 
 ```
 
 You should see 
 
-```
+```bash
 Payload: 0x040050aab27d83bafddea5ffdb5d24fa38b98e3940d08c3744a65214cf7613930c51070088526a743501d0001a040000b0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafec37cfc20a7851d7139acd706cdc47a3abc6f8b23a28c7f72098138a09e15b4df
 Signature> 
 ```
@@ -48,14 +48,14 @@ Then copy the payload and open another terminal to run the following command to 
 yarn run:signer sign --account SENDER_ADDR --seed SECRET_PHRASE --type KEYPAIR_CRYPTO_TYPE PAYLOAD
 ```
 
-```
+```bash
 yarn run:signer sign --account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX --seed "normal salon one century nerve timber online engine actress walnut wheel display" --type sr25519 0x040050aab27d83bafddea5ffdb5d24fa38b98e3940d08c3744a65214cf7613930c51070088526a742503cc001a040000b0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe6d6b1c0764c0e434e8f690052c72777c916d50aef8185cd5f40d6200c3a557cb
 
 ```
 
 Result:
 
-```
+```bash
 Signature: 0x015ec182626a8407cc198d31efb14664e1f6d5b6cbe9190696e91df2c0c6ac1a2be7759be8533b56cd579a5f118dd3e490d7660abf40a3fafc9b10c4ae557ae584
 ```
 
@@ -63,7 +63,7 @@ Now you can copy & paste the signature to the first terminal. And you will have 
 
 ### Submitting to the network
 
-```
+```bash
 Signed transaction:
 0x390284226c361c136ed316babb2309f8e4fa4498939408868c3594f6257855808f666f015ec182626a8407cc198d31efb14664e1f6d5b6cbe9190696e91df2c0c6ac1a2be7759be8533b56cd579a5f118dd3e490d7660abf40a3fafc9b10c4ae557ae5843501d000040050aab27d83bafddea5ffdb5d24fa38b98e3940d08c3744a65214cf7613930c51070088526a74
 ```
