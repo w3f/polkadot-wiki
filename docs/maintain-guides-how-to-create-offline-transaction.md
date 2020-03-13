@@ -10,7 +10,7 @@ There are few different ways to create an offline transaction: by using the [@po
 
 ## polkadot@cli-signer
 
-This would be the easiest to use if you are looking for a CLI approach and have some basic understanding of public-key cryptography. You can use that to create any transaction and submit it (Extrinsic) to the network directly or you create an offline transaction and then submit it over RPC or [PolkadotJS UI](https://polkadot.js.org/apps/#/toolbox).
+This would be the easiest to use if you are looking for a CLI approach and have some basic understanding of public-key cryptography. You can use that to create an extrinsic and submit it as a transaction to the network directly or you sign an offline transaction and submit it over RPC or on [PolkadotJS Apps UI](https://polkadot.js.org/apps/#/toolbox).
 
 ### Installation
 
