@@ -5,7 +5,42 @@ sidebar_label: Account Generation
 description: Step-by-step guides on generating a Polkadot account.
 ---
 
-There are several ways to generate a Polkadot address.
+There are several ways to generate a Polkadot address:
+ - [Polkadot.js Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
+ - [Subkey](#subkey) **ADVANCED and MOST SECURE**
+ - [Polkadot.js Web Apps](#polkadotjs)
+ - [Parity Signer](#parity-signer) **COMING SOON**
+
+## DISCLAIMER: Key Security
+
+Your secret seed is the _only_ way to get access to your account. You must keep
+the secret both secure and private. If you share you secret with anyone they
+will be able to have full access to your account, including all of your funds.
+The secret, for this reason, is a target from hackers and others with bad
+intentions to steal your funds. We recommend a variety of account generation
+methods that have various convienience and security tradeoffs. Please review
+this page carefully before making your address so that you understand the risks
+of the account generation method you choose and how to properly mitigate them
+in order to keep your funds safe.
+
+### Storing your key safely
+
+The seed is your **key** to the account. Knowing the seed allows you, or anyone
+else who knows the seed, to re-generate and control this account.
+
+It is imperative to store the seed somewhere safe, secret, and secure. If
+you lose access to your account, you can re-create it by entering the seed. This
+also means that somebody else can have control over your account if they have
+access to your seed.
+
+For maximum security, the seed should be written down on paper or another non-digital device and stored in a
+safe place. You may also want to protect your seed from physical damage, as well (e.g. by storing in a sealed
+plastic bag to prevent water damage, storing it in a fireproof safe, etc.) It is recommended that you store
+multiple copies of the seed in geographically separate locations (e.g., one in your home safe and one in a
+safety deposit box at your bank).
+
+You should definitely not store your seed on any kind of computer that has or may have access to the internet
+in the future.
 
 ## Polkadot.js Browser Plugin
 
@@ -59,24 +94,7 @@ to your account once again.
 
 ![plugin-05](assets/accounts/polkadot_plugin_js_05.jpg)
 
-### Store the Key Safely
-
-The seed is your **key** to the account. Knowing the seed allows you, or anyone
-else who knows the seed, to re-generate and control this account.
-
-It is imperative to store the seed somewhere safe, secret, and secure. If
-you lose access to your account, you can re-create it by entering the seed. This
-also means that somebody else can have control over your account if they have
-access to your seed.
-
-For maximum security, the seed should be written down on paper or another non-digital device and stored in a
-safe place. You may also want to protect your seed from physical damage, as well (e.g. by storing in a sealed
-plastic bag to prevent water damage, storing it in a fireproof safe, etc.) It is recommended that you store
-multiple copies of the seed in geographically separate locations (e.g., one in your home safe and one in a
-safety deposit box at your bank).
-
-You should definitely not store your seed on any kind of computer that has or may have access to the internet
-in the future.
+Please see above for information on [storing your key safely](#disclaimer-key-security).
 
 ### Name Account
 
@@ -187,23 +205,8 @@ When you have entered valid information for both, the color of the text boxes wi
 
 ![pjs-04](assets/accounts/polkadot_js_04.jpg)
 
-### Store the key somewhere safe
+Please see above for information on [storing your key safely](#disclaimer-key-security).
 
-The seed is your **key** to the account. Knowing the seed allows you, or
-anyone else who knows the seed, to re-generate and control this account.
-
-It is imperative to store the seed somewhere safe, secret, and secure. If you lose access to your account, you
-can re-create it by entering the seed. This also means that somebody else can have control over your account
-if they have access to your seed.
-
-For maximum security, the seed should be written down on paper or another non-digital device and stored in a
-safe place. You may also want to protect your seed from physical damage, as well (e.g. by storing in a sealed
-plastic bag to prevent water damage, storing it in a fireproof safe, etc.) It is recommended that you store
-multiple copies of the seed in geographically separate locations (e.g., one in your home safe and one in a
-safety deposit box at your bank).
-
-You should definitely not store your seed on any kind of computer that has or may have access to the internet
-in the future.
 
 ### Create and backup account
 
@@ -215,19 +218,6 @@ You can use this backup file to restore your account. This backup file is not re
 with the password.
 
 ![pjs-05](assets/accounts/polkadot_js_05.jpg)
-
-## Coinbase
-
-Coinbase offers custody services for their customers with at least 1,000 dots and
-during the _Claims_ process.
-
-To open an account please contact Coinbase directly at <a href="mailto:sales@coinbase.com" target="_blank" rel="noopener noreferrer">sales@coinbase.com</a>.
-
-Once you’ve opened an account, Coinbase Custody will generate a dot address for you to use in the
-claims process and send it to you.
-
-You may then claim your tokens using your Coinbase Custody dot address and your tokens will appear in your
-Coinbase Custody account.
 
 ## Parity Signer
 
