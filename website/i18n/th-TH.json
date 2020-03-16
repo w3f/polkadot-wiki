@@ -109,6 +109,10 @@
         "title": "Kusama Timeline",
         "sidebar_label": "Timeline"
       },
+      "learn-account-generation": {
+        "title": "Account Generation",
+        "sidebar_label": "Account Generation"
+      },
       "learn-accounts": {
         "title": "Polkadot Accounts",
         "sidebar_label": "Polkadot Accounts"
@@ -120,6 +124,10 @@
       "learn-auction": {
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
+      },
+      "learn-availability": {
+        "title": "Availability and Validity",
+        "sidebar_label": "Availability and Validity"
       },
       "learn-bridges": {
         "title": "Bridges",
