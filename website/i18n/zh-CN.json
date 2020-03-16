@@ -109,6 +109,10 @@
         "title": "Kusama Timeline",
         "sidebar_label": "Timeline"
       },
+      "learn-account-generation": {
+        "title": "Account Generation",
+        "sidebar_label": "Account Generation"
+      },
       "learn-accounts": {
         "title": "Polkadot Accounts",
         "sidebar_label": "Polkadot Accounts"
@@ -120,6 +124,10 @@
       "learn-auction": {
         "title": "平行链插槽拍卖",
         "sidebar_label": "平行链插槽拍卖"
+      },
+      "learn-availability": {
+        "title": "Availability and Validity",
+        "sidebar_label": "Availability and Validity"
       },
       "learn-bridges": {
         "title": "桥接",
