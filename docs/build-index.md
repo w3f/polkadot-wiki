@@ -30,7 +30,7 @@ elsewhere.
 
 ## Resources
 
-- [Exchange Integration](build-exchange-integration) - Guide for how to integrate Polkadot with your exchange.
+- [Wallet Integration](build-wallet-integration) - Guide for how to integrate Polkadot with your wallet.
 - [Examples](build-examples-index) - Example projects sourced from the community-- see what others are building!
 
 ### Grants
