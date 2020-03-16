@@ -1,7 +1,7 @@
 ---
-id: build-exchange-integration
-title: Exchange integration
-sidebar_label: Exchange integration
+id: build-wallet-integration
+title: Wallet integration
+sidebar_label: Wallet integration
 ---
 
 ```
@@ -25,7 +25,7 @@ sidebar_label: Exchange integration
           |
  +--------+---------+
  |                  |
- | Exchange backend |
+ |  Wallet backend  |
  |                  |
  +------------------+
 ```
@@ -140,7 +140,7 @@ struct Event:
 
 Substrate chains (actually, specifically Substrate chains built using the SRML) such as Polkadot are composed of various *modules*. Each module can be imagined a little bit like a smart contract, with various kinds of transactions (or, in Substrate terms, *extrinsics*), data items that persist between transactions and blocks, events and constant parameters. The metadata encodes all of these things, allowing your client code to both create particular transactions or interpret what has happened on the chain, even between different Substrate blockchains or over many different upgrades or forks of the same chain.
 
-There are two modules an exchange needs to be aware of: Balances and Indices. Balances allows you to send and receive funds between different accounts. Indices allows you to interpret user addresses.
+There are two modules a wallet needs to be aware of: Balances and Indices. Balances allows you to send and receive funds between different accounts. Indices allows you to interpret user addresses.
 
 ## 3. Working with SS58 and account addresses
 
@@ -148,7 +148,7 @@ In Polkadot (and most Substrate chains), user accounts are identified by a 32-by
 
 However, to keep the addresses small, we index every account with a non-zero balance on Polkadot and use just this *index* to identify the account. This index is much smaller than the 32-byte *AccountId*, and can usually be encoded in just a couple of bytes.
 
-Where Bitcoin has the Check58 address format and Ethereum used the `0x...` hex format, Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to handle many different cryptographies and chains. It has much in common with Bitcoin's Check58 format such as a version prefix, a hash-based checksum suffix and base-58 encoding. Further information on it can be found here [TODO]. Of the many supported "version codes", only one particular family of subformats is especially important for Polkadot support in exchanges.
+Where Bitcoin has the Check58 address format and Ethereum used the `0x...` hex format, Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to handle many different cryptographies and chains. It has much in common with Bitcoin's Check58 format such as a version prefix, a hash-based checksum suffix and base-58 encoding. Further information on it can be found here [TODO]. Of the many supported "version codes", only one particular family of subformats is especially important for Polkadot support in wallets.
 
 The SS58 format is a base-58 encoding (using the same alphabet as Bitcoin) of a version prefix (which is one byte and always `0x00` for Polkadot and `0x02` for Kusama) followed by one or more payload bytes and ending with one or more checksum bytes:
 
@@ -232,7 +232,7 @@ For a transaction, the optional `tx` is always used. The `Address` type is a spe
 
 The `sig` field must contain a 25519-family signature of the SCALE-encoded `SigPayload`. The key used to sign the payload must correspond to the `sender` account. Schnorr/Ristretto 25519 ("sr25519") is the recommended signing format to use.
 
-Era is a one or two byte item, again with a special SCALE encoding format and it encodes the period (as a range of blocks) for which this transaction should be considered valid. It is an important safeguard against certain transaction replay attacks and should generally be used, however a simple exchange implementation that has no plans to reuse accounts after they become empty should be able to safely ignore it. To ignore it and make the transaction "immortal", use an encoded `Era` of just one byte: `0x00`.
+Era is a one or two byte item, again with a special SCALE encoding format and it encodes the period (as a range of blocks) for which this transaction should be considered valid. It is an important safeguard against certain transaction replay attacks and should generally be used, however a simple wallet implementation that has no plans to reuse accounts after they become empty could ignore it. To ignore it and make the transaction "immortal", use an encoded `Era` of just one byte: `0x00`. However, if an account is removed from storage and a user re-funds an address, then previous immortal transactions could be replayed. Therefore, you may want to prevent account reaping and use mortal transactions to be safe.
 
 The nonce is the number of transactions send so far by the sender account, much like in Ethereum. It is of type `Nonce`, logically equivalent to a `u64`. To get the correct value, the appropriate storage item must be queried, much like when querying an account's balance. In this case, it is the `System` module's `AccountNonce` item; thus the storage key required is the Blake2 256 hash of the string `System AccountNonce<ID>` where `<ID>` is the 32-byte `AccountId`. It will return a `Nonce` which may be decoded and used here.
 
