@@ -25,9 +25,9 @@
         "title": "사례들",
         "sidebar_label": "사례들"
       },
-      "build-exchange-integration": {
-        "title": "거래소 연동",
-        "sidebar_label": "거래소 연동"
+      "build-wallet-integration": {
+        "title": "Wallet integration",
+        "sidebar_label": "Wallet integration"
       },
       "build-hackathon": {
         "title": "해커톤",
