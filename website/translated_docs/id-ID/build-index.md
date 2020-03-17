@@ -24,7 +24,7 @@ This section of the wiki is divided into three parts: the first part takes the s
 
 ## Resources
 
-- [Exchange Integration](build-exchange-integration) - Guide for how to integrate Polkadot with your exchange.
+- [Wallet Integration](build-wallet-integration) - Guide for how to integrate Polkadot with your wallet.
 - [Examples](build-examples-index) - Example projects sourced from the community-- see what others are building!
 
 ### Grants
