@@ -25,9 +25,9 @@
         "title": "例子",
         "sidebar_label": "例子"
       },
-      "build-exchange-integration": {
-        "title": "交易所整合",
-        "sidebar_label": "交易所整合"
+      "build-wallet-integration": {
+        "title": "Wallet integration",
+        "sidebar_label": "Wallet integration"
       },
       "build-hackathon": {
         "title": "黑客马拉松",
