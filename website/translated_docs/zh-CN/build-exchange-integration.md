@@ -1,7 +1,7 @@
 ---
-id: build-exchange-integration
-title: 交易所整合
-sidebar_label: 交易所整合
+id: build-wallet-integration
+title: Wallet integration
+sidebar_label: Wallet integration
 ---
 
 ```
@@ -14,10 +14,10 @@ sidebar_label: 交易所整合
           |
  +--------+---------+
  |                  |
- |   客户端界面      |
+ | Client interface |
  |                  |
  | +--------------+ |
- | | 客户端数据库 | |
+ | | Client DB    | |
  | +--------------+ |
  |                  |
  +--------+---------+
@@ -25,7 +25,7 @@ sidebar_label: 交易所整合
           |
  +--------+---------+
  |                  |
- | 交易所后端        |
+ |  Wallet backend  |
  |                  |
  +------------------+
 ```
@@ -140,7 +140,7 @@ struct Event:
 
 Substrate 链(实际上 Substrte 链是使用 SRML 构建) 例如 Polkadot 是由不同*模块*组成。每个模块可以想象有点像智能合，有各种交易(或 Substrate 术语，*外部交易*)，数据会持续在交易和区块, 事件和常量参数之间。元数据对所有东西进行编码，允许客户端代码创建特定的交易或解释链上发生了什么，甚至在不同的 Substrate 链之间或同一链不同升级或分叉之间。
 
-交易所需要注意两个模块:  Balances 和 Indices。Balance 使您可以在不同帐户之间发送和接收资金。 Indices 样您解释用户地址。
+There are two modules a wallet needs to be aware of: Balances and Indices. Balances allows you to send and receive funds between different accounts. Indices allows you to interpret user addresses.
 
 ## 3. 处理SS58和帐户地址
 
@@ -148,9 +148,9 @@ Substrate 链(实际上 Substrte 链是使用 SRML 构建) 例如 Polkadot 是�
 
 但是为了使地址细小，我们为Polkadot上余额大于零的帐户编制索引，并仅使用此*索引*来标识该帐户。该索引比32字节长的 *AccountId* 细小多个，通常仅用几个字节进行编码 。
 
-比特币使用 Check58 格式地址，而以太坊使用 ` 0x ... </ code> 十六进制格式，Polkadot (和Substrate) 则使用 SS58 格式。这是一种广泛的 "元格式(meta-format)"，旨在处理不同密码学和链。它与比特币的 Check58 格式有很多共同地方点，例如版本前缀，基于哈希的校验和后缀和base-58 编码。有关更多信息，请参见 [TODO]。在许多支持的 "版本代码" 中，只有一种特定的子格式对交易所支持 Polkadot 特别重要。</p>
+Where Bitcoin has the Check58 address format and Ethereum used the `0x...` hex format, Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to handle many different cryptographies and chains. It has much in common with Bitcoin's Check58 format such as a version prefix, a hash-based checksum suffix and base-58 encoding. Further information on it can be found here [TODO]. Of the many supported "version codes", only one particular family of subformats is especially important for Polkadot support in wallets.
 
-<p spaces-before="0">SS58 格式是版本前缀(对于Polkadot 为一个字节，并总是为<code> 0x00 `，而 Kusama 为` 0x02 `)的base-58编码(使用与比特币相同的字母)，后跟一个或多个有效载荷字节，并以一个或多个校验字节结尾:
+SS58 格式是版本前缀(对于Polkadot 为一个字节，并总是为` 0x00 `，而 Kusama 为` 0x02 `)的base-58编码(使用与比特币相同的字母)，后跟一个或多个有效载荷字节，并以一个或多个校验字节结尾:
 
 `0x00 <payload bytes> <checksum bytes>`
 
@@ -229,7 +229,7 @@ struct TransactionPayload:
 
 ` sig `字段必须包含 SCALE 编码的` SigPayload `的25519系列签名。 用于对负载进行签名的密钥必须与` sender `帐户相对应。 建议使用 Schnorr / Ristretto 25519("sr25519")签名格式。
 
-纪元是一或两个字节，同样具有特殊的 SCALE 编码格式，并且它对该交易有效的时间段(一列区块的范围)进行编码。这是防范某些交易重播攻击的重要保障，通常应使用，但是没有计划在帐户变空后重用的简单交换实现应该可以安全地忽略它。 要忽略它并使交易"不朽"，请使用仅一个字节的已编码` Era `：` 0x00 `。
+Era is a one or two byte item, again with a special SCALE encoding format and it encodes the period (as a range of blocks) for which this transaction should be considered valid. It is an important safeguard against certain transaction replay attacks and should generally be used, however a simple wallet implementation that has no plans to reuse accounts after they become empty could ignore it. To ignore it and make the transaction "immortal", use an encoded `Era` of just one byte: `0x00`. However, if an account is removed from storage and a user re-funds an address, then previous immortal transactions could be replayed. Therefore, you may want to prevent account reaping and use mortal transactions to be safe.
 
 随机数到目前为止，由发送人帐户发送的交易数量，就像在以太坊中一样。 它是` Nonce `类型，在逻辑上等效于` u64 `。 为了获得正确的值，必须查询适当的存储，就像查询帐户余额时一样。 在这种情况下，它是` System `模块的` AccountNonce `。 因此所需的存储密钥是字符串` System AccountNonce<ID>`的 Blake2 256 哈希，其中` <ID> `是32字节的` AccountId `。 它将返回一个` Nonce `，可以在此处对其进行解码和使用。
 
