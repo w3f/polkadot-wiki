@@ -23,7 +23,7 @@ In this unit file you will write the commands that you want to run on server boo
 Description=Polkadot Validator
 
 [Service]
-ExecStart=PATH_TO_POLKADOT_BIN --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
+ExecStart=PATH_TO_POLKADOT_BIN --validator --name SHOW_ON_TELEMETRY
 Restart=always
 
 [Install]
