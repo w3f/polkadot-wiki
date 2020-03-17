@@ -25,9 +25,9 @@
         "title": "Examples",
         "sidebar_label": "Examples"
       },
-      "build-exchange-integration": {
-        "title": "Exchange integration",
-        "sidebar_label": "Exchange integration"
+      "build-wallet-integration": {
+        "title": "Wallet integration",
+        "sidebar_label": "Wallet integration"
       },
       "build-hackathon": {
         "title": "Hackathon",
