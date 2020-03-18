@@ -13,4 +13,8 @@ TODO
 	- Creating a signing payload
 	- Signing the payload
 	- Decoding payloads and signed extrinsics
+- Using [polkadot-js tools](https://github.com/polkadot-js/tools)
+	- Creating a transaction
+	- Signing a payload
+	- Submitting the transaction
 - Submitting a signed payload to the chain
