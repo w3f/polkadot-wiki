@@ -25,6 +25,16 @@
       },
       {
         "type": "subcategory",
+        "label": "Integration Guide",
+        "ids": [
+          "build-protocol-info",
+          "build-node-management",
+          "build-node-interaction",
+          "build-transaction-construction"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Tools",
         "ids": [
           "build-tools-index"
@@ -34,7 +44,6 @@
         "type": "subcategory",
         "label": "Resources",
         "ids": [
-          "build-wallet-integration",
           "build-examples-index",
           "build-hackathon"
         ]

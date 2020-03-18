@@ -25,9 +25,21 @@
         "title": "Examples",
         "sidebar_label": "Examples"
       },
-      "build-wallet-integration": {
-        "title": "Wallet integration",
-        "sidebar_label": "Wallet integration"
+      "build-protocol-info": {
+        "title": "Polkadot Protocol Information",
+        "sidebar_label": "Polkadot Protocol"
+      },
+      "build-node-management": {
+        "title": "Node Management",
+        "sidebar_label": "Node Management"
+      },
+      "build-node-interaction": {
+        "title": "Node Interaction",
+        "sidebar_label": "Node Interaction"
+      },
+      "build-transaction-construction": {
+        "title": "Transaction Construction and Signing",
+        "sidebar_label": "Transaction Construction"
       },
       "build-hackathon": {
         "title": "Hackathon",
