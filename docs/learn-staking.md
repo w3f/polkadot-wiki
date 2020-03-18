@@ -167,7 +167,7 @@ In order to claim your rewards, click on the "gear" icon at the far right. On th
 
 ![claim_payout_reward](assets/claim_payout_reward.png)
 
-Finally, sign the transaction. You will notice that numerous transactions will occur, giving you all of the rewards up to this point at once.
+Finally, sign the transaction. This is a batch transaction - you will notice that numerous transactions will be indicated by the UI, and giving you all of the rewards up to this point at once.
 
 ![claim_sign_tx](assets/claim_sign_tx.png)
 
