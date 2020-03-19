@@ -31,7 +31,7 @@ Nominators will need to submit a `payout_nominator(era: EraIndex, validators: Ve
 
 Providing the index eliminates search and allows for a lower transaction fee.
 
-These details are handled for you automatically if you use the ![polkadot.js UI](https://polkadot.js.org/apps/#/staking/actions).
+These details are handled for you automatically if you use the [polkadot.js UI](https://polkadot.js.org/apps/#/staking/actions).
 
 ## F.A.Q. and Cautionary Notes
 
