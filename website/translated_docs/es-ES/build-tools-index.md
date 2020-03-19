@@ -8,9 +8,9 @@ Here we provide a list of tools available for your development needs. They are s
 
 ## Block Explorers
 
-- [Polka.io](https://polka.io) - Blockchain explorer for Polkadot.
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to Kusama by default, but can be configured to connect to other remote or local endpoints.
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot.
+- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related chains.
+- [Subscan](httpS://subscan.io) - Blockchain explorer for Substrate chains
 
 ## Wallets
 

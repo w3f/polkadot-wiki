@@ -114,7 +114,7 @@ Here is the formula for calculation:
 
     Let x = offenders, n = total no. validators
     
-    min((3 * (k - (n / 10 + 1))) / n, 1) * 0.07
+    min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
@@ -192,8 +192,8 @@ For those who are interested in knowing more about the design of inflation model
 
 ## Why not stake?
 
-* Tokens will be locked for about 12 weeks
-* Punishment in case of validator found to be misbehaving
+* Tokens will be locked for 28 days after unbonding.
+* Tokens can be slashed as punishment if the validator is not running properly.
 
 ## How many validators will Polkadot have?
 

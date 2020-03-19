@@ -139,5 +139,5 @@ Randomness is problematic for blockchain systems. Generating a random number tru
 
 ## 资源
 
-- [ 平行链分配](http://research.web3.foundation/zh-Cn/latest/polkadot/Parachain-Allocation/)-有关平行链分配的W3F研究页面，对该机制进行了更深入的介绍。
+- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
 - [ paritytech / polkadot＃239 ](https://github.com/paritytech/polkadot/pull/239) - Pull request，介绍了平行链插槽代码。

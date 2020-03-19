@@ -25,9 +25,9 @@
         "title": "사례들",
         "sidebar_label": "사례들"
       },
-      "build-exchange-integration": {
-        "title": "거래소 연동",
-        "sidebar_label": "거래소 연동"
+      "build-wallet-integration": {
+        "title": "Wallet integration",
+        "sidebar_label": "Wallet integration"
       },
       "build-hackathon": {
         "title": "해커톤",
@@ -36,6 +36,10 @@
       "build-index": {
         "title": "개발자 포탈",
         "sidebar_label": "개발자 포탈"
+      },
+      "build-oracle": {
+        "title": "Oracles",
+        "sidebar_label": "Oracles"
       },
       "build-pdk": {
         "title": "패러체인 개발 키트",
@@ -105,6 +109,10 @@
         "title": "Kusama Timeline",
         "sidebar_label": "Timeline"
       },
+      "learn-account-generation": {
+        "title": "Account Generation",
+        "sidebar_label": "Account Generation"
+      },
       "learn-accounts": {
         "title": "Polkadot Accounts",
         "sidebar_label": "Polkadot Accounts"
@@ -116,6 +124,10 @@
       "learn-auction": {
         "title": "패러체인 슬롯 경매",
         "sidebar_label": "패러체인 슬롯 경매"
+      },
+      "learn-availability": {
+        "title": "Availability and Validity",
+        "sidebar_label": "Availability and Validity"
       },
       "learn-bridges": {
         "title": "브릿지들",
@@ -312,6 +324,26 @@
       "maintain-wss": {
         "title": "Set up Secure WebSocket for Remote Connections",
         "sidebar_label": "Set up Secure WebSocket for Remote Connections"
+      },
+      "mirror-build-build-with-polkadot": {
+        "title": "Polkadot Builders Starter's Guide",
+        "sidebar_label": "Polkadot Builders Starter's Guide"
+      },
+      "mirror-learn-governance": {
+        "title": "Governance",
+        "sidebar_label": "Governance"
+      },
+      "mirror-learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
+      },
+      "mirror-maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Nominator Guide"
+      },
+      "mirror-maintain-guides-how-to-validate-kusama": {
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Validator Guide"
       },
       "news": {
         "title": "뉴스",

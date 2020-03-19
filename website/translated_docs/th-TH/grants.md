@@ -66,10 +66,10 @@ This page gives an overview of accepted grants and a link to their GitHub reposi
 - [Laminar One](https://laminar.one/) - LaminarChain: High performance Flow Protocols powering synthetic asset and margin trading ([GitHub](https://github.com/laminar-protocol/laminar-chain))
 - [Stake Technologies](https://stake.co.jp/) - Ink! Playground ([GitHub](https://github.com/staketechnologies/ink-playground))
 - [B-Harvest](https://bharvest.io/) - Node Monitoring Tool ([GitHub](https://github.com/b-harvest))
-- [Simply VC](https://simply-vc.com.mt/) - P.A.N.I.C. Validator alerting solution
+- [Simply VC](https://simply-vc.com.mt/) - P.A.N.I.C. Validator alerting solution ([GitHub](https://github.com/SimplyVC/panic_polkadot))
 - [Ethworks](https://ethworks.io/) - Polkadot{.js} extension improvements ([GitHub](https://github.com/ethWorks))
 - [Lyken Software Solutions](https://lyken.rs/) - Investigation of runtime compilation
-- [Blockchain IT](blockchain-it.hr) - Ink! Remix Plugin ([GitHub](https://github.com/blockchain-it-hr/ink-remix-plugin))
+- [Blockchain IT](https://blockchain-it.hr) - Ink! Remix Plugin ([GitHub](https://github.com/blockchain-it-hr/ink-remix-plugin))
 - [Kadena](https://www.kadena.io/) - Pact feasibility study ([GitHub](https://github.com/kadena-io/))
 - [STAFI Protocol](http://www.stafi.io/) - Stafi is a protocol to provide liquidity for staking assets ([GitHub](https://github.com/stafiprotocol/stafi-node))
 - [Vision Baker](https://playproject.io/) - DatDot - Dat protocol for Polkadot ([GitHub](https://github.com/playproject-io/datdot))

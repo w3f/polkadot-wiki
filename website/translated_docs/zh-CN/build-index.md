@@ -24,7 +24,7 @@ sidebar_label: 开发者专页
 
 ## 工具
 
-- [交易所整合](build-exchange-integration) - 如何整合 Polkadot 到你的交易所
+- [Wallet Integration](build-wallet-integration) - Guide for how to integrate Polkadot with your wallet.
 - [例子](build-examples-index) - 来自社区的项目- 查看其他人开发中的项目!
 
 ### Grants

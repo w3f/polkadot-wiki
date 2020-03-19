@@ -17,7 +17,7 @@ Polkadot is a blockchain protocol with two goals: providing **shared security** 
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/https://substrate.dev/substrate-contracts-workshop/))
+- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/))
 
 ## What you need to know
 
@@ -185,6 +185,6 @@ Polkadot的智能合约还是处于早期，而且开发才刚刚开始稳定下
 
 本指南經已給了一個全面兩者的分別及展示了必要的资料帮助你作出决定項目是適合建立平行链还是智能合约。尽管工具还没成熟，但是提早熟悉對你有好处，项目赢在起跑线，并且允許你创造真正创新的东西。
 
-如果你有任何想法在 Pokadot 上的平行链或智能合约，随便在 [ Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) 分享一下。开发者可能会有兴趣加入 [ Polkadot Beginners Lounge ](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) 或 [ Substrate Technical ](https://riot.im/app/#/room/#substrate-technical:matrix.org) 问问题。一如既往，跟随着所有 Polkadot 的[社交频道](https://wiki.polkadot.network/en/latest/community/)。
+If you have interesting ideas for parachains or smart contracts on Polkadot feel free to drop in to the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) to talk about them. Developers may be interested in joining the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their questions. As always, keep up to date with Polkadot by following the [social channels](community).
 
 祝你好运！

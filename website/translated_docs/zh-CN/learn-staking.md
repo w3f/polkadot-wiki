@@ -114,7 +114,7 @@ For every session, validators will send an "I'm Online" message to indicate they
 
     Let x = offenders, n = total no. validators
     
-    min((3 * (k - (n / 10 + 1))) / n, 1) * 0.07
+    min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
@@ -192,8 +192,8 @@ For those who are interested in knowing more about the design of inflation model
 
 ## 为什么不参与抵押?
 
-* 代币将被锁定 12 周左右
-* 验证人如果做出损害网络行为将面临惩罚
+* Tokens will be locked for 28 days after unbonding.
+* Tokens can be slashed as punishment if the validator is not running properly.
 
 ## 波卡会有多少链验证人数量?
 

@@ -8,9 +8,9 @@ sidebar_label: Tool Index
 
 ## 区块资源管理器
 
-- [Polka.io](https://polka.io) - 用于Polkadot的区块链资源管理器。
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to Kusama by default, but can be configured to connect to other remote or local endpoints.
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot.
+- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related chains.
+- [Subscan](httpS://subscan.io) - Blockchain explorer for Substrate chains
 
 ## 钱包
 
