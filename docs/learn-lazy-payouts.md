@@ -4,8 +4,6 @@ title: Lazy Payouts
 sidebar_label: Lazy Payouts
 ---
 
-# Lazy Payouts
-
 Polkadot and Kusama make all stakers claim their rewards for past eras by submitting a transaction. This naturally leads to spreading out reward distribution, as people make transactions at disparate times, rather than updating the accounts of all stakers in a single block. Even if everyone submitted a reward claim at the same time, the fact that they are individual transactions would allow the block construction algorithm to process only a limited number per block and ensure that the network maintains a constant block time. If all rewards were sent out in one block, this could cause serious issues with the stability of the network.
 
 Lazy payouts requires one transaction per staker per era to claim rewards, where a staker can be either a validator or a nominator. The reason Polkadot requires this is to avoid an attack where someone has several thousand accounts nominating a single validator. The major cost in reward distribution is mutating the accounts in storage, and Polkadot cannot pay out several thousand accounts in a single transaction.
