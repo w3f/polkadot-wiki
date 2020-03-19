@@ -292,7 +292,7 @@ Candidates:    A B C D E  L0 L1    L2
 Voter V1 (1):  X X        0  0.091 0.091
 Voter V2 (2):  X X        0  0.091 0.091
 Voter V3 (3):  X          0  0.091 0.091
-Voter V4 (4):    X X X    0  0     0.091
+Voter V4 (4):    X X X    0  0     0.162
 Voter V5 (5):  X     X    0  0.091 0.162
 ```
 
@@ -325,7 +325,7 @@ Candidates:    A B C D E  L0 L1    L2    L3
 Voter V1 (1):  X X        0  0.091 0.091 0.274
 Voter V2 (2):  X X        0  0.091 0.091 0.274
 Voter V3 (3):  X          0  0.091 0.091 0.091
-Voter V4 (4):    X X X    0  0     0.091 0.274
+Voter V4 (4):    X X X    0  0     0.162 0.274
 Voter V5 (5):  X     X    0  0.091 0.162 0.162
 ```
 
