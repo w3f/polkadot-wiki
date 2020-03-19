@@ -25,6 +25,17 @@ format such as a version prefix, a hash-based checksum suffix, and base-58 encod
 See the [SS58 page](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) in
 the Substrate wiki for encoding information.
 
+### Cryptography
+
+Polkadot supports the following cryptographic key pairs and signing algorithms:
+
+- Ed25519
+- Sr25519 - Schorr signatures on the Ristretto group
+- ECDSA signatures on secp256k1
+
+Note that the address for a secp256k1 key is the SS58 encoding of the _hash of the public key_ in
+order to reduce the public key from 33 bytes to 32 bytes.
+
 ## Existential Deposit
 
 Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an
@@ -118,6 +129,12 @@ when claiming staking rewards to tell the user how much the account was credited
 Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Users can also add a
 "tip" to increase transaction priority during congested periods. See the
 [transaction fee](learn-transaction-fees) page for more info.
+
+### Encoding
+
+Polkadot encodes block and transaction data using the
+[SCALE codec](https://substrate.dev/docs/en/next/conceptual/core/codec). Parity's integration tools
+should allow you to deal with decoded data.
 
 ## Smart Contracts
 
