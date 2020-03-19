@@ -132,9 +132,9 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 ### Encoding
 
-Polkadot encodes block and transaction data using the
-[SCALE codec](https://substrate.dev/docs/en/next/conceptual/core/codec). Parity's integration tools
-should allow you to deal with decoded data.
+Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them 
+and interact directly with the chain data or implement your own codec, Polkadot encodes block and 
+transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conceptual/core/codec). 
 
 ## Smart Contracts
 

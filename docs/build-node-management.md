@@ -4,12 +4,109 @@ title: Node Management
 sidebar_label: Node Management
 ---
 
-TODO:
+This page contains basic information about running a Parity Polkadot client. There are a lot of
+ways to obtain/run a client, e.g. compiling from source, running in Docker, or downloading a
+binary. This guide will always refer to the executable as `polkadot`.
 
-- How to run an archive node
-- How to export blocks
-- db/keystore
-- Enable/close RPC ports
-- Node status
-- Logs
-- Telemetry
+**Always refer to the client's help `polkadot --help` for the most up-to-date information.**
+
+> Other client implementation teams: Feel free to make a PR to this page with instructions (or a
+link to instructions) for your client.
+
+## Basic Node Operations
+
+**Archive node**
+
+An archive node does not prune any block or state data. Use the `--archive` flag.
+
+**Exporting blocks**
+
+To export all blocks, run:
+
+```bash
+polkadot export-blocks --from 0 output_file
+```
+
+**RPC ports**
+
+Use the `--rpc-external` flag to expose RPC ports and `--ws-external` to expose websockets. Not all
+RPC calls are safe to allow and you should use an RPC proxy to filter unsafe calls. Select ports
+with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access, use the
+`--rpcs-cors` and `--ws-cors` options.
+
+**Execution**
+
+The Parity Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set
+the preferred method to use when executing Wasm with `--wasm-execution Compiled`. Compiled
+execution will run much faster, especially when syncing the chain since the client may not have the
+native runtime for prior blocks.
+
+## File Structure
+
+The node stores a number of files in: `/home/$USER/.local/share/polkadot/chains/<chain name>/`
+
+**`keystore`**
+
+The keystore stores session keys, which are important for validator operations.
+
+- [Polkadot documentation](learn-keys#session-keys)
+- [Substrate documentation](https://substrate.dev/docs/en/next/conceptual/cryptography/session-keys)
+
+**`db`**
+
+The database stores blocks and the state trie. If you are running a validator node, it also stores
+GRANDPA pre-votes and pre-commits and the offchain-worker DB. Use caution when
+[migrating validator nodes](maintain-guides-how-to-upgrade) to avoid equivocation.
+
+To delete your DB and re-sync from genesis, run:
+
+```bash
+polkadot purge-chain
+```
+
+## Monitoring and Telemetry
+
+**Node status**
+
+You can check the node's health via RPC with:
+
+```bash
+curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933 
+```
+
+**Logs**
+
+The Polkadot client has a number of log targets. The most interesting to users may be:
+
+- `afg` (GRANDPA)
+- `babe`
+- `telemetry`
+- `tx-pool`
+- `usage`
+
+Other targets include: `db, gossip, peerset, state-db, state-trace, sub-libp2p, trie,
+wasm-executor, wasm-heap`.
+
+The log levels, from least to most verbose, are:
+
+- `error`
+- `warn`
+- `info`
+- `debug`
+- `trace`
+
+All targets are set to `info` logging by default. You can adjust individual log levels using the
+`--log (-l short)` option, for example `-l afg=trace,sync=debug` or globally with `-ldebug`.
+
+**Telemetry & Metrics**
+
+The Parity Polkadot client connects to telemetry by default. You can disable it with
+`--no-telemetry`, or connect only to specified telemetry servers with `--telemetry-url` (see the
+help options for instructions). You can run your own, private
+[telemetry server](https://github.com/paritytech/substrate-telemetry).
+
+The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
+expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter).
+
+See the [Polkadot JS explorer](https://polkadot.js.org/apps/#/explorer) for an external source of
+the current chain height.
