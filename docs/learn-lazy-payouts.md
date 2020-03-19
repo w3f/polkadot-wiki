@@ -38,6 +38,7 @@ These details are handled for you automatically if you use the [polkadot.js UI](
 1. Users must use their **controller** key to claim payouts. The **stash** key should remain in cold storage.
 1. Claiming rewards (or neglecting to claim rewards) does not affect nominations in any way. Nominations will persist after claiming rewards or the rewards expire.
 1. Polkadot provides a `batch` function under the Utility pallet that allows the user to batch several transactions into a single transaction _from the same origin._ Therefore, users can use this function to claim rewards for several eras for a single validator or nominator.
+1. Rewards are not minted until they are claimed. Therefore, if your reward destination is "stash, increasing amount at stake", then your staked amount does not reflect your rewards until you claim them. If you want to maximize compounding, then you will need to claim often.
 
 ## Future Plans
 
