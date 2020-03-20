@@ -17,11 +17,14 @@ link to instructions) for your client.
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, or `westend`.
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`,
+or a custom chain spec.
 
 **Archive node**
 
-An archive node does not prune any block or state data. Use the `--archive` flag.
+An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of
+nodes, like validators an sentries, must run in archive mode. Likewise, all [events]() are cleared
+from state in each block, so if you want to store events then you will need an archive node.
 
 **Exporting blocks**
 
@@ -41,13 +44,16 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 **Execution**
 
 The Parity Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set
-the preferred method to use when executing Wasm with `--wasm-execution Compiled`. Compiled
-execution will run much faster, especially when syncing the chain since the client may not have the
-native runtime for prior blocks.
+the preferred method to use when executing Wasm with `--wasm-execution <Interpreted|Compiled>`.
+Compiled execution will run much faster, especially when syncing the chain, but is experimental and
+may use more memory/CPU. A reasonable tradeoff would be to sync the chain with compiled and then
+restart the node with interpreted execution.
 
 ## File Structure
 
-The node stores a number of files in: `/home/$USER/.local/share/polkadot/chains/<chain name>/`
+The node stores a number of files. The default location is:
+`/home/$USER/.local/share/polkadot/chains/<chain name>/`. You can set a custom path with
+`--base-path <path>`.
 
 **`keystore`**
 
@@ -60,7 +66,9 @@ The keystore stores session keys, which are important for validator operations.
 
 The database stores blocks and the state trie. If you are running a validator node, it also stores
 GRANDPA pre-votes and pre-commits and the offchain-worker DB. Use caution when
-[migrating validator nodes](maintain-guides-how-to-upgrade) to avoid equivocation.
+[migrating validator nodes](maintain-guides-how-to-upgrade) to avoid equivocation. If you want to
+start a new machine without resyncing, you can stop your node, back up the DB, and move it to a new
+machine.
 
 To delete your DB and re-sync from genesis, run:
 
@@ -82,10 +90,10 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 The Polkadot client has a number of log targets. The most interesting to users may be:
 
-- `afg` (GRANDPA)
+- `afg` (Al's Finality Gadget - GRANDPA consensus)
 - `babe`
 - `telemetry`
-- `tx-pool`
+- `txpool`
 - `usage`
 
 Other targets include: `db, gossip, peerset, state-db, state-trace, sub-libp2p, trie,
@@ -110,7 +118,9 @@ help options for instructions). You can run your own, private
 [telemetry server](https://github.com/paritytech/substrate-telemetry).
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
-expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter).
+expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate
+has a [vizualizing node metrics
+tutorial](https://substrate.dev/docs/en/next/tutorials/visualizing-node-metrics/).
 
 See the [Polkadot JS explorer](https://polkadot.js.org/apps/#/explorer) for an external source of
 the current chain height.

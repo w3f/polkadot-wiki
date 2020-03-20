@@ -11,12 +11,12 @@ practical information for dealing with the chain.
 ## DOT Tokens
 
 - **Token decimals:** 12
-- **Balance type:** `u128`
+- **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
 
 ## Addresses
 
 In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit)
-`AccountId`. This is simply the public key for the x25519 cryptography used by Substrate.
+`AccountId`. This is simply the public key for the cryptography used by Substrate.
 
 Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
 handle many different cryptographies and chains. It has much in common with Bitcoin's Check58
@@ -27,7 +27,8 @@ the Substrate wiki for encoding information.
 
 ### Cryptography
 
-Polkadot supports the following cryptographic key pairs and signing algorithms:
+Polkadot supports the following [cryptographic](learn-cryptography) key pairs and signing
+algorithms:
 
 - Ed25519
 - Sr25519 - Schorr signatures on the Ristretto group
@@ -132,9 +133,9 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 ### Encoding
 
-Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them 
-and interact directly with the chain data or implement your own codec, Polkadot encodes block and 
-transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conceptual/core/codec). 
+Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them
+and interact directly with the chain data or implement your own codec, Polkadot encodes block and
+transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conceptual/core/codec).
 
 ## Smart Contracts
 

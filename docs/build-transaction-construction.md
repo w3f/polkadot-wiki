@@ -17,14 +17,14 @@ Polkadot has some basic transaction information that is common to all transactio
 - Block Number: The number of the checkpoint block.
 - Genesis Hash: The genesis hash of the chain.
 - Metadata: The SCALE-encoded metadata for the runtime when submitted.
-- Nonce: The nonce for this transaction.*
+- Nonce: The nonce for this transaction.\*
 - Spec Version: The current spec version for the runtime.
 - Tip: Optional, the [tip](build-protocol-info#fees) to increase transaction priority.
 - Validity Period: Optional, the number of blocks after the checkpoint for which a transaction is
   valid. The default is 300 (5 minutes). If zero, the transaction is
   [immortal](build-protocol-info#transaction-mortality).
 
-*The nonce queried from the System module does not account for pending transactions. You must track
+\*The nonce queried from the System module does not account for pending transactions. You must track
 and increment the nonce manually if you want to submit multiple valid transactions at the same time.
 
 Each transaction will have its own (or no) parameters to add. For example, the `transferKeepAlive`
@@ -75,7 +75,7 @@ This will return a payload to sign and an input waiting for a signature. Take th
 your normal signing environment (e.g. airgapped machine, VM, etc.). Sign the payload:
 
 ```bash
-yarn run:signer sign --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 --seed "pulp gaze fuel enforce casino dose ankle vapor regret mercy inherit equal" --type sr25519 0x040300ff4a83f1...a8239139ff3ff7c3f6
+yarn run:signer sign --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 --seed "pulp gaze fuel ... mercy inherit equal" --type sr25519 0x040300ff4a83f1...a8239139ff3ff7c3f6
 ```
 
 Save the output and bring it to the machine that you will broadcast from, enter it into `submit`'s
@@ -88,12 +88,15 @@ If you do not want to use the CLI for signing operations, Parity provides an SDK
 [txwrapper](https://github.com/paritytech/txwrapper) to generate and sign transactions offline. See
 the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for a guide.
 
+Note: Tx Wrapper defaults to Kusama's SS58 encoding. Read the documentation to ensure that you
+encode and decode address formats properly.
+
 **Generate an address**
 
 ```ts
 import { importPrivateKey } from '@substrate/txwrapper';
 
-const keypair = importPrivateKey(“pulp gaze fuel enforce casino dose ankle vapor regret mercy inherit equal”);
+const keypair = importPrivateKey(“pulp gaze fuel ... mercy inherit equal”);
 ```
 
 **Derive an address from a public key**
@@ -193,15 +196,15 @@ Some addresses to use in the examples. See
 
 ```bash
 $ subkey --network polkadot generate
-Secret phrase `pulp gaze fuel enforce casino dose ankle vapor regret mercy inherit equal` is account:
-  Secret seed:      0x57450b3e09ba45983def7ac20e024e6f539c34c581a7eecd219756eeba80bb16
+Secret phrase `pulp gaze fuel ... mercy inherit equal` is account:
+  Secret seed:      0x57450b3e09ba4598 ... ... ... ... ... ... ... .. 219756eeba80bb16
   Public key (hex): 0x2ca17d26ca376087dc30ed52deb74bf0f64aca96fe78b05ec3e720a72adb1235
   Account ID:       0x2ca17d26ca376087dc30ed52deb74bf0f64aca96fe78b05ec3e720a72adb1235
   SS58 Address:     121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2
 
 $ subkey --network polkadot generate
-Secret phrase `exercise auction soft supreme judge anger forget dawn subway obey control easily` is account:
-  Secret seed:      0x5f4bbb9fbb69261acb3d67b5631731594df5b12de499f8864691ed7d1130fbbd
+Secret phrase `exercise auction soft ... obey control easily` is account:
+  Secret seed:      0x5f4bbb9fbb69261a ... ... ... ... ... ... ... .. 4691ed7d1130fbbd
   Public key (hex): 0xda04de6cd781c98acf0693dfb97c11011938ad22fcc476ed0089ac5aec3fe243
   Account ID:       0xda04de6cd781c98acf0693dfb97c11011938ad22fcc476ed0089ac5aec3fe243
   SS58 Address:     15vrtLsCQFG3qRYUcaEeeEih4JwepocNJHkpsrqojqnZPc2y

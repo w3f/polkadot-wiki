@@ -25,22 +25,6 @@
         "title": "Examples",
         "sidebar_label": "Examples"
       },
-      "build-protocol-info": {
-        "title": "Polkadot Protocol Information",
-        "sidebar_label": "Polkadot Protocol"
-      },
-      "build-node-management": {
-        "title": "Node Management",
-        "sidebar_label": "Node Management"
-      },
-      "build-node-interaction": {
-        "title": "Node Interaction",
-        "sidebar_label": "Node Interaction"
-      },
-      "build-transaction-construction": {
-        "title": "Transaction Construction and Signing",
-        "sidebar_label": "Transaction Construction"
-      },
       "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "Hackathon"
@@ -48,6 +32,14 @@
       "build-index": {
         "title": "Builder's Portal",
         "sidebar_label": "Builder's Portal"
+      },
+      "build-node-interaction": {
+        "title": "Node Interaction",
+        "sidebar_label": "Node Interaction"
+      },
+      "build-node-management": {
+        "title": "Node Management",
+        "sidebar_label": "Node Management"
       },
       "build-oracle": {
         "title": "Oracles",
@@ -57,6 +49,10 @@
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
       },
+      "build-protocol-info": {
+        "title": "Polkadot Protocol Information",
+        "sidebar_label": "Polkadot Protocol"
+      },
       "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
@@ -64,6 +60,10 @@
       "build-tools-index": {
         "title": "Tool Index",
         "sidebar_label": "Tool Index"
+      },
+      "build-transaction-construction": {
+        "title": "Transaction Construction and Signing",
+        "sidebar_label": "Transaction Construction"
       },
       "community": {
         "title": "Community",

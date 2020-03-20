@@ -40,16 +40,18 @@ Some return values may not appear meaningful at first glance. Polkadot uses
 suitable for resource-constrained execution environments. You will need to decode the information
 and use the chain metadata (`state_getMetadata`) to obtain human-readable information.
 
+<!--
+	TODO link to documentation about metadata
+	https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/issues/507
+-->
+
 ### Tracking the Chain Head
 
-Use `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of finalized headers, or
-`chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use `chain_getBlock` to
-get the block associated with that hash. `chain_getBlock` only accepts block hashes, so if you need
-to query intermediate blocks, use `chain_getBlockHash` to get the block hash from a block number.
+Use the RPC endpoint `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of finalized headers, or `chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use `chain_getBlock` to get the block associated with a given hash. `chain_getBlock` only accepts block hashes, so if you need to query intermediate blocks, use `chain_getBlockHash` to get the block hash from a block number.
 
 ## Substrate API Sidecar
 
-Parity maintains an RPC client that exposes a limited set of endpoints. It handles the metadata and
+Parity maintains an RPC client, written in TypeScript, that exposes a limited set of endpoints. It handles the metadata and
 codec logic so that you are always dealing with decoded information. It also aggregates information
 that an infrastructure business may need for accounting and auditing, e.g. transaction fees.
 
@@ -146,10 +148,13 @@ would include the `tip` field.
    'success': True}]}
 ```
 
+> Note: The JS number type is float with 53 bits of precision. There is no guarantee that the
+numerical values in the response will have a numerical type. Anything larger than `2**53-1` will
+have a string type.
+
 ### Submitting a Transaction
 
-Submit a serialized transaction using the `tx` endpoint. This endpoint returns a JSON with the
-transaction hash.
+Submit a serialized transaction using the `tx` endpoint with an HTTP POST request.
 
 ```python
 import requests
@@ -160,4 +165,14 @@ response = requests.post(url, data='{"tx": "0x..."}')
 if response.ok:
 	txhash = json.loads(response.text)
 	print(txhash)
+```
+
+If successful, this endpoint returns a JSON with the transaction hash. In case of error, it will
+return an error report, e.g.:
+
+```
+{
+    "error": "Failed to parse a tx" | "Failed to submit a tx",
+    "cause": "Upstream error description"
+}
 ```
