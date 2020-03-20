@@ -15,6 +15,10 @@ link to instructions) for your client.
 
 ## Basic Node Operations
 
+**Selecting a chain**
+
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, or `westend`.
+
 **Archive node**
 
 An archive node does not prune any block or state data. Use the `--archive` flag.
