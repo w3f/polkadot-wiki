@@ -60,6 +60,7 @@ Fetch a block using the `block/number` endpoint. To get the chain tip, omit the 
 
 ```python
 import requests
+import json
 
 url = 'http://127.0.0.1:8080/block/1432511'
 response = requests.get(url)
