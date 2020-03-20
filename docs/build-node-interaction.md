@@ -4,8 +4,8 @@ title: Node Interaction
 sidebar_label: Node Interaction
 ---
 
-This page will guide you through some basic interactions with your node. Always refer to the proper 
-documentation for the tool you are using. This guide should _guide you to the proper tools,_ not be 
+This page will guide you through some basic interactions with your node. Always refer to the proper
+documentation for the tool you are using. This guide should _guide you to the proper tools,_ not be
 seen as canonical reference.
 
 - [Substrate RPC API](https://substrate.dev/rustdocs/master/sc_rpc_api/index.html)
@@ -14,7 +14,7 @@ seen as canonical reference.
 
 ## Polkadot RPC
 
-The Parity Polkadot client exposes HTTP and WS endpoints for RPC connections. The default ports are 
+The Parity Polkadot client exposes HTTP and WS endpoints for RPC connections. The default ports are
 9933 for HTTP and 9944 for WS.
 
 To get a list of all RPC methods, the node has an RPC endpoint called `rpc_methods`.
@@ -35,23 +35,30 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 {"jsonrpc":"2.0","result":{"block":{"extrinsics":["0x280402000b50055ee97001","0x1004140000"],"header":{"digest":{"logs":["0x06424142453402af000000937fbd0f00000000","0x054241424501011e38401b0aab22f4d72ebc95329c3798445786b92ca1ae69366aacb6e1584851f5fcdfcc0f518df121265c343059c62ab0a34e8e88fda8578810fbe508b6f583"]},"extrinsicsRoot":"0x0e354333c062892e774898e7ff5e23bf1cdd8314755fac15079e25c1a7765f06","number":"0x16c28c","parentHash":"0xe3bf2e8f0e901c292de24d07ebc412d67224ce52a3d1ffae76dc4bd78351e8ac","stateRoot":"0xd582f0dfeb6a7c73c47db735ae82d37fbeb5bada67ee8abcd43479df0f8fc8d8"}},"justification":null},"id":1}
 ```
 
-Some return values may not appear meaningful at first glance. Polkadot uses 
-[SCALE encoding](https://substrate.dev/docs/en/next/conceptual/core/codec) as a format that is 
-suitable for resource-constrained execution environments. You will need to decode the information 
+Some return values may not appear meaningful at first glance. Polkadot uses
+[SCALE encoding](https://substrate.dev/docs/en/next/conceptual/core/codec) as a format that is
+suitable for resource-constrained execution environments. You will need to decode the information
 and use the chain metadata (`state_getMetadata`) to obtain human-readable information.
+
+### Tracking the Chain Head
+
+Use `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of finalized headers, or
+`chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use `chain_getBlock` to
+get the block associated with that hash. `chain_getBlock` only accepts block hashes, so if you need
+to query intermediate blocks, use `chain_getBlockHash` to get the block hash from a block number.
 
 ## Substrate API Sidecar
 
-Parity maintains an RPC client that exposes a limited set of endpoints. It handles the metadata and 
-codec logic so that you are always dealing with decoded information. It also aggregates information 
+Parity maintains an RPC client that exposes a limited set of endpoints. It handles the metadata and
+codec logic so that you are always dealing with decoded information. It also aggregates information
 that an infrastructure business may need for accounting and auditing, e.g. transaction fees.
 
-The sidecar can fetch blocks, get the balance of an address atomically (i.e., with a corresponding 
-block number), get the chain's metadata, and submit transactions to a node's transaction queue. If 
-you have any feature/endpoint requests, log an issue in the 
+The sidecar can fetch blocks, get the balance of an address atomically (i.e., with a corresponding
+block number), get the chain's metadata, and submit transactions to a node's transaction queue. If
+you have any feature/endpoint requests, log an issue in the
 [repo](https://github.com/paritytech/substrate-api-sidecar).
 
-The client runs on an HTTP host. The following examples use python3, but you can query any way you 
+The client runs on an HTTP host. The following examples use python3, but you can query any way you
 prefer at `http://HOST:PORT/`. The default is `http://127.0.0.1:8080`.
 
 ### Fetching a Block
@@ -69,8 +76,8 @@ if response.ok:
 	print(block_info)
 ```
 
-This returns a fully decoded block. In the `balances.transfer` extrinsic, the `partialFee` item is 
-the transaction fee. It is called "partial fee" because the [total fee](build-protocol-info#fees) 
+This returns a fully decoded block. In the `balances.transfer` extrinsic, the `partialFee` item is
+the transaction fee. It is called "partial fee" because the [total fee](build-protocol-info#fees)
 would include the `tip` field.
 
 ```python
@@ -139,8 +146,18 @@ would include the `tip` field.
    'success': True}]}
 ```
 
-<!--
-### Submit a Transaction
+### Submitting a Transaction
 
-Awaiting feature
--->
+Submit a serialized transaction using the `tx` endpoint. This endpoint returns a JSON with the
+transaction hash.
+
+```python
+import requests
+import json
+
+url = 'http://127.0.0.1:8080/tx/'
+response = requests.post(url, data='{"tx": "0x..."}')
+if response.ok:
+	txhash = json.loads(response.text)
+	print(txhash)
+```
