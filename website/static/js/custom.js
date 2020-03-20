@@ -83,10 +83,11 @@ docReady(function () {
     // Insert "Improve this wiki ribbon"
     let link = document.createElement('a');
     link.classList = 'github-fork-ribbon';
-    link.setAttribute('href', 'contributing');
-    link.setAttribute('title', 'Improve this wiki');
+    link.setAttribute('href', 'https://wiki.polkadot.network/docs/en/contributing');
+    link.setAttribute('title', 'Want to improve this wiki? Click here to learn how');
     link.dataset.ribbon = 'Improve this wiki';
-    link.innerText = 'Improve this wiki';
-    document.querySelector('body').appendChild(link);
+    link.innerText = 'Want to improve this wiki? Click here to learn how';
+    document.querySelector('body').prepend(link);
+    // .appendChild(link);
     // -----------------
 })
