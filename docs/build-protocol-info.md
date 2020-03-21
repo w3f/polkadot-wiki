@@ -46,7 +46,7 @@ reset.
 Wallets and custodians who track account nonces for auditing purposes should take care not to have
 accounts reaped, as users could refund the address and try making transactions from it. The
 Balances pallet provides a `transfer_keep_alive` function that will return an error and abort
-rather than make the transfer if it would result in account reaping.
+rather than make the transfer if doing so would result in reaping the sender's account.
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
@@ -167,3 +167,8 @@ No, users interact directly with the chain's logic.
 
 No, Polkadot uses the existential deposit to prevent dust accounts and other economic mechanisms
 like locking or reserving tokens for operations that utilize state.
+
+**What is an external source to see the current chain height?**
+
+- [Polkadot JS explorer](https://polkadot.js.org/apps/#/explorer)
+- [Polkascan block explorer](https://polkascan.io/)

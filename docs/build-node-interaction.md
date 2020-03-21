@@ -47,13 +47,18 @@ and use the chain metadata (`state_getMetadata`) to obtain human-readable inform
 
 ### Tracking the Chain Head
 
-Use the RPC endpoint `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of finalized headers, or `chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use `chain_getBlock` to get the block associated with a given hash. `chain_getBlock` only accepts block hashes, so if you need to query intermediate blocks, use `chain_getBlockHash` to get the block hash from a block number.
+Use the RPC endpoint `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of
+finalized headers, or `chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use
+`chain_getBlock` to get the block associated with a given hash. `chain_getBlock` only accepts block
+hashes, so if you need to query intermediate blocks, use `chain_getBlockHash` to get the block hash
+from a block number.
 
 ## Substrate API Sidecar
 
-Parity maintains an RPC client, written in TypeScript, that exposes a limited set of endpoints. It handles the metadata and
-codec logic so that you are always dealing with decoded information. It also aggregates information
-that an infrastructure business may need for accounting and auditing, e.g. transaction fees.
+Parity maintains an RPC client, written in TypeScript, that exposes a limited set of endpoints. It
+handles the metadata and codec logic so that you are always dealing with decoded information. It
+also aggregates information that an infrastructure business may need for accounting and auditing,
+e.g. transaction fees.
 
 The sidecar can fetch blocks, get the balance of an address atomically (i.e., with a corresponding
 block number), get the chain's metadata, and submit transactions to a node's transaction queue. If
@@ -80,7 +85,8 @@ if response.ok:
 
 This returns a fully decoded block. In the `balances.transfer` extrinsic, the `partialFee` item is
 the transaction fee. It is called "partial fee" because the [total fee](build-protocol-info#fees)
-would include the `tip` field.
+would include the `tip` field. Notice that some extrinsics do not have a signature. These are
+[inherents](build-protocol-info#extrinsics).
 
 ```python
 {'number': 1432511,
@@ -148,9 +154,8 @@ would include the `tip` field.
    'success': True}]}
 ```
 
-> Note: The JS number type is float with 53 bits of precision. There is no guarantee that the
-numerical values in the response will have a numerical type. Anything larger than `2**53-1` will
-have a string type.
+> The JS number type a 53 bit precision float. There is no guarantee that the numerical values in
+the response will have a numerical type. Any numbers larger than `2**53-1` will have a string type.
 
 ### Submitting a Transaction
 

@@ -23,15 +23,17 @@ or a custom chain spec.
 **Archive node**
 
 An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of
-nodes, like validators an sentries, must run in archive mode. Likewise, all [events]() are cleared
-from state in each block, so if you want to store events then you will need an archive node.
+nodes, like validators an sentries, must run in archive mode. Likewise, all
+[events](build-protocol-info#events) are cleared from state in each block, so if you want to store
+events then you will need an archive node.
 
 **Exporting blocks**
 
-To export all blocks, run:
+To export blocks to a file, use `export-blocks`. Export in JSON (default), or binary
+(`--binary true`).
 
 ```bash
-polkadot export-blocks --from 0 output_file
+polkadot export-blocks --from 0 <output_file>
 ```
 
 **RPC ports**
@@ -46,14 +48,13 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 The Parity Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set
 the preferred method to use when executing Wasm with `--wasm-execution <Interpreted|Compiled>`.
 Compiled execution will run much faster, especially when syncing the chain, but is experimental and
-may use more memory/CPU. A reasonable tradeoff would be to sync the chain with compiled and then
-restart the node with interpreted execution.
+may use more memory/CPU. A reasonable tradeoff would be to sync the chain with compiled execution
+and then restart the node with interpreted execution.
 
 ## File Structure
 
-The node stores a number of files. The default location is:
-`/home/$USER/.local/share/polkadot/chains/<chain name>/`. You can set a custom path with
-`--base-path <path>`.
+The node stores a number of files in: `/home/$USER/.local/share/polkadot/chains/<chain name>/`. You
+can set a custom path with `--base-path <path>`.
 
 **`keystore`**
 
@@ -114,13 +115,11 @@ All targets are set to `info` logging by default. You can adjust individual log 
 
 The Parity Polkadot client connects to telemetry by default. You can disable it with
 `--no-telemetry`, or connect only to specified telemetry servers with `--telemetry-url` (see the
-help options for instructions). You can run your own, private
+help options for instructions). Connecting to public telemetry may expose information that puts
+your node at higher risk of attack. You can run your own, private
 [telemetry server](https://github.com/paritytech/substrate-telemetry).
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
 expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate
 has a [vizualizing node metrics
 tutorial](https://substrate.dev/docs/en/next/tutorials/visualizing-node-metrics/).
-
-See the [Polkadot JS explorer](https://polkadot.js.org/apps/#/explorer) for an external source of
-the current chain height.

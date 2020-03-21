@@ -21,8 +21,7 @@ Polkadot has some basic transaction information that is common to all transactio
 - Spec Version: The current spec version for the runtime.
 - Tip: Optional, the [tip](build-protocol-info#fees) to increase transaction priority.
 - Validity Period: Optional, the number of blocks after the checkpoint for which a transaction is
-  valid. The default is 300 (5 minutes). If zero, the transaction is
-  [immortal](build-protocol-info#transaction-mortality).
+  valid. If zero, the transaction is [immortal](build-protocol-info#transaction-mortality).
 
 \*The nonce queried from the System module does not account for pending transactions. You must track
 and increment the nonce manually if you want to submit multiple valid transactions at the same time.
@@ -91,7 +90,7 @@ the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for
 Note: Tx Wrapper defaults to Kusama's SS58 encoding. Read the documentation to ensure that you
 encode and decode address formats properly.
 
-**Generate an address**
+**Import a private key**
 
 ```ts
 import { importPrivateKey } from '@substrate/txwrapper';

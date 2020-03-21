@@ -29,13 +29,13 @@ be deployed to a live chain.
 This section is for service providers like wallets or node operators who want to learn how to
 integrate Polkadot into their systems.
 
-- [Polkadot Protocol Information](learn-protocol-info) - General information and F.A.Q.s about the
-Polkadot protocol, e.g. _how does replay protection work?_
-- [Node Management](learn-node-management) - A short overview of the Parity Polkadot client and the
-most relevant options/flags for infrastructure providers.
-- [Node Interaction](learn-node-interaction) - Learn how to interact with your node via RPC.
-- [Transation Construction and Signing](learn-transaction-construction) - Learn the transaction
-format for Polkadot and how to construct and sign transactions offline.
+- [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the
+  Polkadot protocol, e.g. address formats.
+- [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the
+  most relevant options/flags for infrastructure providers.
+- [Node Interaction](build-node-interaction) - Learn how to interact with your node via RPC.
+- [Transation Construction and Signing](build-transaction-construction) - Learn the transaction
+  format for Polkadot and how to construct and sign transactions offline.
 
 ## Tools
 
