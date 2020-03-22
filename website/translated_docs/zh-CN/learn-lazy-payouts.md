@@ -4,42 +4,42 @@ title: Lazy Payouts
 sidebar_label: Lazy Payouts
 ---
 
-Polkadot and Kusama make all stakers claim their rewards for past eras by submitting a transaction. This naturally leads to spreading out reward distribution, as people make transactions at disparate times, rather than updating the accounts of all stakers in a single block. Even if everyone submitted a reward claim at the same time, the fact that they are individual transactions would allow the block construction algorithm to process only a limited number per block and ensure that the network maintains a constant block time. If all rewards were sent out in one block, this could cause serious issues with the stability of the network.
+在 Polkadot 和 Kusama 里通过提交交易使所有抵押参与者领取过去 eras 的奖励。这自然会使奖励分散分配，因为人们在不同的时间提交交易，而不是一次过更新所有抵押参与者的帐户。即使每个人都同时提交了领取奖励要求，但这将是按个人交易使区块构建算法每个区块只能处理有限的数量，并确保网络保持恒定的区块时间。如果所有奖励都在一个区块中发送出去，则可能导致网络稳定性严重问题。
 
-Lazy payouts requires one transaction per staker per era to claim rewards, where a staker can be either a validator or a nominator. The reason Polkadot requires this is to avoid an attack where someone has several thousand accounts nominating a single validator. The major cost in reward distribution is mutating the accounts in storage, and Polkadot cannot pay out several thousand accounts in a single transaction.
+延迟支付要求每个时代参与抵押的人需要提交一次交易才能领取奖励，包括验证人或提名人。抵押参与者可以是验证人或提名人。 Polkadot 要求这样做的原因是为了避免某人拥有数千个帐户提名单个验证人的攻击。奖励分配的主要成本是改变存储中的帐户，而 Polkadot 无法在一次交易中支付数千个帐户。
 
-## Claiming Rewards
+## 领取奖励
 
-Polkadot stores up to 84 eras of reward info like maps of era number to validator points, inflationary rewards, and nomination exposures.
+Polkadot 最多可存储达 84 eras 的奖励资料，例如验证人的分数，通货膨胀奖励和提名人分配到验证人的抵押数量。
 
-Rewards will not be claimable more than 84 eras after they were earned. This means that all stakers --- nominators and validators alike --- must claim their rewards within 84 eras, or they will not be able to be claimed.
+当获得抵押奖励后，其奖励不得超过 84 个时代才领取。这意味着所有参与抵押者包括提名人和验证人都是必须在 84 个时代内领取他们的奖励，否则将无法领取。
 
-### Validators
+### 验证人
 
-In order to claim rewards, validators must submit a `payout_validator(era: EraIndex)` transaction from their **controller** key, where `era` is the era for which they are claiming rewards.
+为了取得奖励，验证人必须从他们的 **controller** 帐号提交 `payout_validator(era: EraIndex)` 交易，而 `era` 是他们要求奖励的时代。
 
-### Nominators
+### 提名人
 
-Nominators will need to submit a `payout_nominator(era: EraIndex, validators: Vec<(T::AccountId, u32)>)` transaction from their **controller** key, where:
+提名人需要从他们的 **controller** 帐号提交 `payout_nominator(era: EraIndex, validators: Vec<(T::AccountId, u32)>)` 交易，而:
 
-- `era` is the era for which that the nominator is claiming rewards.
-- `validators` is a list of tuples of:
-  - Validator stash account IDs that the nominator was nominating during `era`, and
-  - The nominator's index in the list of nominators for that validator for that era.
+- `era` 是提名人领取奖励的时代。
+- `validators` 是一个列表：
+  - 验证人 stash 帐户 IDs, 提名人在 `era` 期间提名以及
+  - 当时的提名人名单中的提名人索引。
 
-Providing the index eliminates search and allows for a lower transaction fee.
+提供索引将更快搜索，并允许较低的交易费用。
 
-These details are handled for you automatically if you use the [polkadot.js UI](https://polkadot.js.org/apps/#/staking/actions).
+如果您使用 [ polkadot.js用户界面](https://polkadot.js.org/apps/#/staking/actions)，则会自动为您处理这些详细资料。
 
-## F.A.Q. and Cautionary Notes
+## 常问问题和注意事项
 
-1. **Caution:** Once a user claims rewards for an era, all reward information for that user for previous eras is removed. Regular users should not construct these transactions themselves, but should use a wallet or front end that safely claims in the correct order.
-1. Rewards expire after 84 eras. On Polkadot, that's about 84 days. On Kusama, it is approximately 21 days.
-1. Users must use their **controller** key to claim payouts. The **stash** key should remain in cold storage.
-1. Claiming rewards (or neglecting to claim rewards) does not affect nominations in any way. Nominations will persist after claiming rewards or the rewards expire.
-1. Polkadot provides a `batch` function under the Utility pallet that allows the user to batch several transactions into a single transaction _from the same origin._ Therefore, users can use this function to claim rewards for several eras for a single validator or nominator.
-1. Rewards are not minted until they are claimed. Therefore, if your reward destination is "stash, increasing amount at stake", then your staked amount does not reflect your rewards until you claim them. If you want to maximize compounding, then you will need to claim often.
+1. **注意：** 一旦用户领取某个时代奖励，该用户的前一个时代的所有奖励信息都会被删除。 正常用户不应该自己构建这些交易，而应该使用一个钱包或前端，以正确的次序安全地领取。
+1. 奖励在84个时代后过期。在 Polkadot, 约84天。在 Kusama, 约为21天。
+1. 用户必须使用他们的 **controller** 密钥领取奖励。 **stash** 密钥应保存在冷钱包中。
+1. 领取奖励(或忽略领取奖励)不会以任何方式影响提名。提名在领取奖励或奖励到期后继续有效。
+1. Polkadot 在常用的 pallet 下提供了` batch `功能，该功能使用户可以将多个交易从_同一来源_批量成一个交易，所以用户 可以使用此功能为个别验证人或提名人领取多个时代的奖励。
+1. 在还没有领取奖励之前，奖励不会创造在网络里。因此如果您的奖励目的地是 "stash, increasing amount at stake"，那么您的抵押额直到您申领奖励后才反映您的奖励。如果您想最大化复利，那么您将需要经常领取。
 
-## Future Plans
+## 将来计划
 
-This scheme protects against malicious nominators, but is difficult for UX and especially hurts smaller nominators who would rather be passive participants and for whom the transaction fee could represent a non-trivial fraction of their rewards. We are actively investigating other solutions that would, for example, let a single user trigger the payout for all nominators of a single validator as long as that user is willing to pay the transaction fee.
+这种方案可以防止恶意的提名人，但是对于 UX 来说却很难，尤其是伤害了较小的提名人，他们更愿意成为被动的参与者，而对于他们而言，交易费可以代表其报酬的不平凡的部分。 我们正在积极研究其他解决方案，例如只要一个用户愿意支付交易费，就可以让单个用户触发单个验证人的所有提名人的支付。
