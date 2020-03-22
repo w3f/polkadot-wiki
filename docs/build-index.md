@@ -41,7 +41,7 @@ integrate Polkadot into their systems.
 
 - [Tools](build-tools-index) - Maintained list of tools.
 - [Subkey](https://substrate.dev/docs/en/ecosystem/subkey) - Command line utility for generating
-x25519 key pairs.
+  and inspecting key pairs.
 
 ## Resources
 

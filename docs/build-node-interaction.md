@@ -154,7 +154,7 @@ would include the `tip` field. Notice that some extrinsics do not have a signatu
    'success': True}]}
 ```
 
-> The JS number type a 53 bit precision float. There is no guarantee that the numerical values in
+> The JS number type is a 53 bit precision float. There is no guarantee that the numerical values in
 the response will have a numerical type. Any numbers larger than `2**53-1` will have a string type.
 
 ### Submitting a Transaction

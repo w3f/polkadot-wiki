@@ -6,7 +6,7 @@ sidebar_label: Transaction Construction
 
 This page will discuss the transaction format in Polkadot and how to create, sign, and broadcast
 transactions. Like the other pages in this guide, this page demonstrates some of the available
-tools. Always refer to each tool's documentation when integrating.
+tools. **Always refer to each tool's documentation when integrating.**
 
 ## Transaction Format
 
@@ -51,7 +51,7 @@ broadcast transactions.
 This example will use the `signer submit` command, which will create and submit the transaction.
 The `signer sendOffline` command has the exact same API, but will not broadcast the transaction.
 `submit` and `sendOffline` must be connected to a node to fetch the current metadata and construct
-a valid transaction. Their API has the format (see documentation!):
+a valid transaction. Their API has the format:
 
 ```bash
 yarn run:signer <submit|sendOffline> --account <from-account-ss58> --ws <endpoint> <module.method> [param1] [...] [paramX]

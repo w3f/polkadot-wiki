@@ -25,6 +25,12 @@ format such as a version prefix, a hash-based checksum suffix, and base-58 encod
 See the [SS58 page](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) in
 the Substrate wiki for encoding information.
 
+SS58 Encoding Prefixes:
+
+- Polkadot: 0
+- Kusama: 2
+- Westend: 42
+
 ### Cryptography
 
 Polkadot supports the following [cryptographic](learn-cryptography) key pairs and signing
@@ -140,6 +146,16 @@ transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conc
 ## Smart Contracts
 
 The Polkadot Relay Chain does not expose a smart contract interface.
+
+## Other Networks
+
+Besides running a private network, Polkadot has two other networks where you could test
+infrastucture prior to deploying to the Polkadot mainnet.
+
+**Kusama Canary Network:** Kusama is Polkadot's cutting-edge cousin. Many risky features are
+deployed to Kusama prior to making their way into Polkadot.
+
+**Westend Testnet:** Westend is Polkadot's testnet and uses the Polkadot runtime.
 
 ## Other F.A.Q.
 

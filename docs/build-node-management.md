@@ -77,6 +77,15 @@ To delete your DB and re-sync from genesis, run:
 polkadot purge-chain
 ```
 
+## Deployment Tools
+
+Web3 Foundation maintains [Polkadot Deployer](https://github.com/w3f/polkadot-deployer), which
+allows you to create local or remote cloud deployments of Polkadot nodes. See the README for
+instructions.
+
+Validators, see the [secure setup guide](maintain-guides-how-to-use-polkadot-secure-validator) for
+information specific to deploying validator nodes.
+
 ## Monitoring and Telemetry
 
 **Node status**
@@ -114,10 +123,12 @@ All targets are set to `info` logging by default. You can adjust individual log 
 **Telemetry & Metrics**
 
 The Parity Polkadot client connects to telemetry by default. You can disable it with
-`--no-telemetry`, or connect only to specified telemetry servers with `--telemetry-url` (see the
-help options for instructions). Connecting to public telemetry may expose information that puts
-your node at higher risk of attack. You can run your own, private
-[telemetry server](https://github.com/paritytech/substrate-telemetry).
+`--no-telemetry`, or connect only to specified telemetry servers with the `--telemetry-url` option
+(see the help options for instructions). Connecting to public telemetry may expose information that
+puts your node at higher risk of attack. You can run your own, private
+[telemetry server](https://github.com/paritytech/substrate-telemetry) or deploy a
+`substrate-telemetry` instance to a Kubernetes cluster using
+[this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
 expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate
