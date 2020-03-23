@@ -23,7 +23,7 @@ or a custom chain spec.
 **Archive node**
 
 An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of
-nodes, like validators an sentries, must run in archive mode. Likewise, all
+nodes, like validators and sentries, must run in archive mode. Likewise, all
 [events](build-protocol-info#events) are cleared from state in each block, so if you want to store
 events then you will need an archive node.
 

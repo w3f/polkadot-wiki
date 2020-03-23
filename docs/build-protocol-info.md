@@ -19,13 +19,13 @@ In Polkadot (and most Substrate chains), user accounts are identified by a 32-by
 `AccountId`. This is simply the public key for the cryptography used by Substrate.
 
 Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
-handle many different cryptographies and chains. It has much in common with Bitcoin's Check58
+handle many different cryptographies and chains. It has much in common with Bitcoin's Base58Check
 format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
 See the [SS58 page](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) in
-the Substrate wiki for encoding information.
+the Substrate wiki for encoding information and a more comprehensive list of network prefixes.
 
-SS58 Encoding Prefixes:
+Relevant SS58 prefixes for this guide:
 
 - Polkadot: 0
 - Kusama: 2
@@ -74,7 +74,7 @@ below 150 DOTs, but an operation could result in reserving DOTs such that the fr
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 
 Vesting is another abstraction that uses locks on free balance. Vesting sets a lock that decreases
-over time until all the funds are spendable.
+over time until all the funds are transferable.
 
 More info:
 
@@ -109,7 +109,7 @@ Ethereum or Bitcoin.
 
 Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For
 example, when a user claims their DOTs from the Ethereum DOT indicator contract to a new DOT
-address, the new address doesn't have any fees.
+address, the new address doesn't yet have any funds with which to pay fees.
 
 ### Transaction Mortality
 
@@ -145,7 +145,7 @@ transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conc
 
 ## Smart Contracts
 
-The Polkadot Relay Chain does not expose a smart contract interface.
+The Polkadot Relay Chain does not support smart contract.
 
 ## Other Networks
 
@@ -169,8 +169,8 @@ i.e. free balance minus the maximum lock.
 **What chain depth is considered "safe"?**
 
 Polkadot uses a deterministic finality mechanism. Once a block is finalized, it cannot be reverted
-except by a hard fork. Kusama has had hard forks that had to revert four blocks in order to cancel
-a runtime upgrade. Using a finalized depth of ten blocks should be safe.
+except by a hard fork. Kusama has had hard forks that had to revert four finalized blocks in order
+to cancel a runtime upgrade. Using a finalized depth of ten blocks should be safe.
 
 Note that block production and finality are isolated processes in Polkadot, and the chain can have
 a long unfinalized head.

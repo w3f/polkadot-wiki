@@ -17,7 +17,7 @@ will be filled out.
   remote or local endpoints.
 - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related
   chains.
-- [Subscan](httpS://subscan.io) - Blockchain explorer for Substrate chains.
+- [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
 
 ## Wallets
 
