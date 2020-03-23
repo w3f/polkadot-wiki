@@ -6,7 +6,21 @@ sidebar_label: Set up a Full Node
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's always better to rely on your own infrastructure than on a third-party-hosted one in this brave new decentralized world.
 
-This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev)-based chain.
+This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev)-based chain. First, let's clarify the term _full node_.
+
+### Types of Nodes
+
+A blockchain's growth comes from a _genesis block_, _extrinsics_, and _events_.
+
+When a validator seals block 1, it takes the blockchain's state at block 0. It then applies all pending changes on top of it, and emits the events that are the result of these changes. Later, the state of the chain at block 1 is used in the same way to build the state of the chain at block 2, and so on. Once two thirds of the validators agree on a specific block being valid, it is finalized.
+
+An **archive node** keeps all the past blocks. An archive node makes it convenient to query the past state of the chain at any point in time. Finding out what an account's balance at a certain block was, or which extrinsics resulted in a certain state change are fast operations when using an archive node. However, an archive node takes up a lot of disk space - at Kusama's 1.6 millionth block this was ~20GB. When running a validator, this requirement doubles as [the sentry node](maintain-guides-how-to-setup-sentry-node) in front of a validator should be an archive node too.
+
+A **full node** is _pruned_, meaning it discards all information older than 256 blocks, but keeps the extrinsics for all past blocks, and the genesis block. A node that is pruned this way requires much less space than an archive node. In order to query past state through a full node, a user would have to wait for the node to rebuild the chain up until that block. A full node _can_ rebuild the entire chain with no additional input from other nodes and become an archive node. One caveat is that if finality stalled for some reason and the last finalized block is more than 256 blocks behind, a pruned full node will not be able to sync to the network.
+
+Archive nodes are used by utilities that need past information - like block explorers, council scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need to be able to look at past on-chain data. Full nodes are used by everyone else - they allow you to read the current state of the chain and to submit transactions directly to the chain without relying on a centralized infrastructure provider.
+
+Another type of node is a **light node**. A light node has only the runtime and the current state, but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome extension which is a node in its own right, running the runtime in WASM format: https://github.com/paritytech/substrate-light-ui
 
 ## Get Substrate
 
@@ -35,7 +49,7 @@ Alternatively, check out a specific tagged release:
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
 cd kusama
-git checkout tags/v0.7.20
+git checkout tags/v0.7.27
 ./scripts/init.sh
 cargo build --release
 ```
@@ -56,7 +70,7 @@ Congratulations, you're now syncing with Kusama. Keep in mind that the process i
 
 ## Running an Archive Node
 
-When running as a simple sync node (above), only the state of the past 256 blocks will be kept. When validating, it defaults to archive mode (keeps all state - much more resource intensive). To keep the full state - so you can do historical lookups, for example - use the `--pruning` flag:
+When running as a simple sync node (above), only the state of the past 256 blocks will be kept. When validating, it defaults to [archive mode](#types-of-nodes). To keep the full state use the `--pruning` flag:
 
 ```bash
 ./target/release/polkadot --name "My node's name" --pruning archive
