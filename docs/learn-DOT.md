@@ -6,9 +6,13 @@ sidebar_label: DOT
 
 ## What are DOTs?
 
-DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
+DOT is the native token of the Polkadot network in a similar way that BTC is the
+native token of Bitcoin or ether is the native token of the Ethereum blockchain.
 
-Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest unit being the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
+Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest
+unit being the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length),
+the smallest possible distance in the physical Universe). You can compare the
+Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
 **Polkadot**
 |Unit |Decimal Places|
@@ -49,6 +53,59 @@ DOTs will be used to facilitate the consensus mechanism that underpins Polkadot.
 
 DOTs will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOTs will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed.
 
+### Vesting
+
+DOTs that are allocated to the Polkadot team or awarded to teams as part of 
+Web3 Foundation's grants program will have a vesting schedule attached. Vested
+balances are classified as a separate abstraction to the other locks that are
+placed on your balance. This means that although vested tokens cannot be transferred,
+they can still be used for voting in governance or staked in the staking system.
+
+Vesting schedules are linear release and will unlock a constant amount of tokens
+at every block until all the funds have been made available.
+
+Let's take for example the data structure for the vesting schedule, the `VestingInfo`
+struct:
+
+```rust
+pub struct VestingInfo<Balance, BlockNumber> {
+	/// Locked amount at genesis.
+	pub locked: Balance,
+	/// Amount that gets unlocked every block after `starting_block`.
+	pub per_block: Balance,
+	/// Starting block for unlocking(vesting).
+	pub starting_block: BlockNumber,
+}
+```
+
+There are three fields in the struct above: `locked`, `per_block` and `starting_block`.
+The configuration of these three fields dictate the amount of funds locked, the
+slope of the linear curve for unlocking and the block number for when unlocking will begin.
+
+There are two ways that vesting schedules are created. 
+
+- The first way will be
+part of the genesis configuration of Polkadot, the chain specification will
+read the state of the Polkadot Claims contract on Ethereum for allocations that
+are registered as _vested_ and create the appropriate vesting schedule for them.
+
+- The second way is through a transaction type available in the "Vesting" pallet,
+`vested_transfer`. The vested transfer function allows anyone to create a 
+vesting schedule with a transfer of funds, with the caveat that the account
+for which the vesting schedule will be created does not already have one. To
+call vested transfer successfully you must transfer at least `MinVestedTransfer`
+funds, which is specified as a chain constant.
+
+#### Lazy Vesting
+
+Like [lazy payouts](learn-lazy-payouts), vesting is _lazy_. This means that
+someone must explicitly call either `vest` to vest themselves (the caller) or 
+`vest_other` to unlock some vested funds from another target account. These
+extrinsics are available as part of the "Vesting" pallet.
+
+Vested funds that are "vested" will remain locked until one of the two above
+functions are called which trigger the unlock of the funds.
+
 ## Mainnet DOTs
 
 Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch in early 2020 (see the [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Gavin Wood, one of the project's founders, said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
@@ -58,7 +115,7 @@ _Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expecte
 Testnet dots are freely available now - see below for various ways to obtain them.
 
 ## Testnet DOTs
-
+ubstrate-telemetry-
 DOTs are required to make transactions on the Polkadot network. Testnet DOTs do not have any value beside allowing you to experiment with the network.
 
 ### Getting Westies
