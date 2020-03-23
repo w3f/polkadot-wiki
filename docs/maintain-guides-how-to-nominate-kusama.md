@@ -40,7 +40,7 @@ At some point, you might decide to stop nominating one or more validators. You c
 
 # Using Command-Line Interface (CLI) 
 
-Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI instead. The CLI approach that allows you to interact with the Polkadot / Kusama network without going to the PolkadoJS dashboard.
+Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to the PolkadoJS dashboard.
 
 ### Step 1: Install @polkadot/api-cli
 
