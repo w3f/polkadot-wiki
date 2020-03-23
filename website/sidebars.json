@@ -25,6 +25,16 @@
       },
       {
         "type": "subcategory",
+        "label": "Integration Guide",
+        "ids": [
+          "build-protocol-info",
+          "build-node-management",
+          "build-node-interaction",
+          "build-transaction-construction"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Tools",
         "ids": [
           "build-tools-index"
@@ -34,7 +44,6 @@
         "type": "subcategory",
         "label": "Resources",
         "ids": [
-          "build-wallet-integration",
           "build-examples-index",
           "build-hackathon"
         ]
@@ -146,6 +155,7 @@
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
           "maintain-guides-secure-validator",
+          "maintain-guides-how-to-setup-sentry-node",
           "maintain-guides-how-to-upgrade"
         ]
       },
