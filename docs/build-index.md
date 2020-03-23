@@ -40,8 +40,8 @@ integrate Polkadot into their systems.
 ## Tools
 
 - [Tools](build-tools-index) - Maintained list of tools.
-- [Subkey](https://substrate.dev/docs/en/ecosystem/subkey) - Command line utility for generating
-  and inspecting key pairs.
+- [Subkey](https://substrate.dev/docs/en/next/development/tools/subkey) - Command line utility for
+  generating and inspecting key pairs.
 
 ## Resources
 

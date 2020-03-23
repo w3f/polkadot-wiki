@@ -1,12 +1,12 @@
 ---
 id: maintain-guides-how-to-setup-sentry-node
-title: Setup a Sentry Node - Public Node
-sidebar_label: Setup a Sentry Node
+title: Set Up a Sentry Node - Public Node
+sidebar_label: Set Up a Sentry Node
 ---
 
-This guide assumes you have already set-up a validator and would like to make it more resillient and protect against sybil attack or DDoS. It has same configuration of the [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator).
+This guide assumes you have already set up a validator and would like to make it more resilient and protect against sybil attack or DDoS. It has same configuration of the [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator).
 
-In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate it from the Internet and reduce the chance of your validator being hacked.
+In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate it from the internet and reduce the chance of your validator being hacked.
 
 ## VPN Installation & Configuration
 
@@ -46,8 +46,7 @@ umask 077
 wg genkey | sudo tee privatekey | wg pubkey | sudo tee publickey
 ```
 
-You will see two files, `publickey` and `privatekey`, have been created.  As may be guessed from their names, `publickey` contains the public key and `privatekey` contains the private key of the keypair.
-
+You will see that two files, `publickey` and `privatekey`, have been created.  As may be guessed from their names, `publickey` contains the public key and `privatekey` contains the private key of the keypair.
 
 ### 3. Configuration
 
@@ -78,8 +77,9 @@ Endpoint = 112.223.334.445:51820
 AllowedIPs = 10.0.0.2/32
 # keep the connection alive by sending a handshake every 21 seconds
 PersistentKeepalive = 21
+```
 
-# Note: In this guide, we only set up 1 peer (public node)
+> Note: In this guide, we only set up 1 peer (public node)
 
 You need to do the previous steps (1 and 2) again in your **public node** but the `wg0.conf` configuration file will look like this:
 
@@ -100,6 +100,7 @@ Endpoint = 55.321.234.4:51820
 AllowedIPs = 10.0.0.1/32
 PersistentKeepalive = 21
 ```
+
 ### 4. Test-Connection
 
 If everything goes well, you are ready to test the connection.
@@ -133,15 +134,15 @@ peer: Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
   persistent keepalive: every 25 seconds
 ```
 
-You can then use `ping` to verify the connectivity between each other. 
+You can then use `ping` to verify the connectivity between the nodes. 
 
 In case you want to update `wg0.conf`, run `wg-quick down wg0` to stop the interface first.
 
 ### 5. Start your Sentry Node and Validator
 
-After you have started the `wg0` interface on your public node and validator, do spend a little bit of time to take a briefly look at the following description of those flags you are going to use. 
+After you have started the `wg0` interface on your public node and validator, do spend a little bit of time to take a look at the following description of those flags you are going to use. 
 
-`--sentry` - This would be required for your public node to be a authority as a observer that means it actually same as validator node but without holding keys / doing signing. And the difference between running a full node versus adding an extra `--sentry` flag is that running a authority node would have every data the validator is needed available, while full node might not have all the data the validator need to validate properly.
+`--sentry` - This would be required for your public node to be an authority as an observer. That means it acts the same as a validator node but without holding keys / signing. And the difference between running a full node versus adding an extra `--sentry` flag is that a full node might not have all the data the validator needs to validate properly.
 
 `--reserved-nodes` - The node will try to connect to these nodes and always accept connections from them, but it will still connect and accept connections from other nodes as well. 
 
@@ -151,7 +152,7 @@ Since we want to ensure that the sentry node would never reject a connection fro
 
 You need to execute the following command to start your validator and then copy the node's identity first. Then stop it.
 
-`./target/release/polkadot --validator`
+`polkadot --validator`
 
 ```
 2019-11-22 18:44:45 Parity Polkadot
@@ -172,25 +173,23 @@ You need to execute the following command to start your validator and then copy 
 Now start your sentry with `--sentry` and `--reserved-nodes`. 
 
 ```
-./target/release/polkadot \
+polkadot \
 --name "Sentry-A" \
 --sentry \
 --reserved-nodes /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
 ```
 
-You are also required to use sentry's node identity when starting your validator, so make sure to save it in somewhere else as well.
-
-Then start your validator.
+You are also required to use the sentry's node identity when starting your validator, so make sure to save it somewhere else as well. Then start your validator.
 
 ```
-./target/release/polkadot \
+polkadot \
 --name "Validator" \
 --reserved-only \ 
 --reserved-nodes /ip4/SENTRY_VPN_ADDRESS/tcp/30333/p2p/SENTRY_NODE_IDENTITY \
 --validator
 ```
 
-Finally you should see your validator has 1 peers that is a connection from your sentry node. Do the above steps to spin up few more if you think one sentry node is not enough.
+You should see your validator has 1 peer, that is a connection from your sentry node. Do the above steps to spin up few more if you think one sentry node is not enough.
 
 ```
 2019-11-22 19:15:08 Idle (1 peers), best: #781102 (0xcb78…6913), finalized #781100 (0xacc8…d7bb), ⬇ 43.4kiB/s ⬆ 34.3kiB/s
@@ -209,4 +208,4 @@ Finally you should see your validator has 1 peers that is a connection from your
 2019-11-22 19:15:31 Starting parachain attestation session on top of parent 0x0eb1a30932beaf676d3853475315bf3e7b5629bb77e2891295f4f9bf45eb5697. Local parachain duty is None
 ```
 
-Congratulations! You have successfully set-up a validator with a public facing node and now have a more secure way of running your validator.
+Congratulations! You have successfully set up a validator with a public facing node and now have a more secure way of running your validator.

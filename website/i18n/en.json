@@ -274,8 +274,8 @@
         "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
-        "title": "Setup a Sentry Node - Public Node",
-        "sidebar_label": "Setup a Sentry Node"
+        "title": "Set Up a Sentry Node - Public Node",
+        "sidebar_label": "Set Up a Sentry Node"
       },
       "maintain-guides-how-to-systemd": {
         "title": "Using systemd for the Validator Node",

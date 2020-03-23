@@ -154,6 +154,7 @@
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
           "maintain-guides-secure-validator",
+          "maintain-guides-how-to-setup-sentry-node",
           "maintain-guides-how-to-upgrade"
         ]
       },
