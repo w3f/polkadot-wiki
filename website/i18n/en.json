@@ -192,7 +192,7 @@
       "learn-lazy-payouts": {
         "title": "Lazy Payouts",
         "sidebar_label": "Lazy Payouts"
-      },	
+      },
       "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"
@@ -248,6 +248,10 @@
       "maintain-collator": {
         "title": "Collator",
         "sidebar_label": "Collator"
+      },
+      "maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
       },
       "maintain-guides-democracy": {
         "title": "Participate in Democracy",
@@ -341,6 +345,10 @@
         "title": "Identity",
         "sidebar_label": "Identity"
       },
+      "mirror-maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
+      },
       "mirror-maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",
         "sidebar_label": "Nominator Guide"
@@ -348,6 +356,10 @@
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "Validator Guide"
+      },
+      "mirror-maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
       },
       "news": {
         "title": "News",
