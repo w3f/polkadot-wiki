@@ -57,6 +57,7 @@ const siteConfig = {
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
+    '/js/custom.js'
   ],
 
   stylesheets: [
