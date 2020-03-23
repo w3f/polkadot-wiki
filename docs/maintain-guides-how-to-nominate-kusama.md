@@ -82,7 +82,7 @@ Result:
     }
 ```
 
-You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS.
+You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
 
 
 ### Step 3. Nominate a validator 
