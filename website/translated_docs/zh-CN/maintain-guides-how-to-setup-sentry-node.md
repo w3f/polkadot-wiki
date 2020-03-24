@@ -1,12 +1,12 @@
 ---
 id: maintain-guides-how-to-setup-sentry-node
-title: 设置哨兵节点
-sidebar_label: 设置哨兵节点
+title: Set Up a Sentry Node - Public Node
+sidebar_label: Set Up a Sentry Node
 ---
 
-本教程假设你已经设置好验证人并且想把你的节点提高女巫攻击或 DDOs 防御保护。这个跟 [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator) 配置一样。
+This guide assumes you have already set up a validator and would like to make it more resilient and protect against sybil attack or DDoS. It has same configuration of the [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator).
 
-我们会一步一步把验证人设置在 VPN 网络内。验证人只会与哨兵节点沟通并与网络分隔，从而减低你的验证人被入侵机会。
+In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate it from the internet and reduce the chance of your validator being hacked.
 
 ## VPN 安装 & 设置
 
@@ -46,8 +46,7 @@ umask 077
 wg genkey | sudo tee privatekey | wg pubkey | sudo tee publickey
 ```
 
-你会看到二个文档 <`publickey` 和 `privatekey` 已经创建了。从只看名称 `publickey` 包含了公钥而 `privatekey`包含了私钥对。
-
+You will see that two files, `publickey` and `privatekey`, have been created.  As may be guessed from their names, `publickey` contains the public key and `privatekey` contains the private key of the keypair.
 
 ### 3. 设置
 
@@ -68,7 +67,7 @@ ListenPort = 51820
 # without requiring a restart
 SaveConfig = true
 
-# 哨兵节点 
+# Public Node A   
 [Peer]
 # replace it to the public node A public key
 PublicKey = Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
@@ -78,10 +77,11 @@ Endpoint = 112.223.334.445:51820
 AllowedIPs = 10.0.0.2/32
 # keep the connection alive by sending a handshake every 21 seconds
 PersistentKeepalive = 21
+```
 
-# 注意: 在本教程，我们仅设置一个哨兵节点
+> Note: In this guide, we only set up 1 peer (public node)
 
-你需要在**哨兵节点**中重覆前面1和2的步骤，但 wg0.conf 配置文件将如下所示:
+You need to do the previous steps (1 and 2) again in your **public node** but the `wg0.conf` configuration file will look like this:
 
 ```bash
 [Interface]
@@ -90,7 +90,7 @@ PrivateKey = eCii0j3IWi4w0hScc8myUj5QjXjjt5rp1VVuqlEmM24=
 ListenPort = 51820
 SaveConfig = true
 
-# 验证人
+# Validator
 [Peer]
 # replace this with the validator public key
 PublicKey = iZeq+jm4baF3pTWR1K1YEyLPhrfpIckGjY/DfwCoKns=
@@ -100,11 +100,12 @@ Endpoint = 55.321.234.4:51820
 AllowedIPs = 10.0.0.1/32
 PersistentKeepalive = 21
 ```
+
 ### 4. 测试连接
 
-如果一切顺利，您已准备好测试连接。
+If everything goes well, you are ready to test the connection.
 
-要启动 VPN 隧道接口，请在您的 `验证人` 和 `哨兵节点` 中执行以下指令。
+To start the tunnel interface, execute the following command in both your `validator` and `public node`.
 
 ```bash
 wg-quick up wg0
@@ -116,7 +117,7 @@ wg-quick up wg0
 #[#] ip link set mtu 1420 up dev wg0
 ```
 
-您可以通过运行 `wg` 来检查接口状态:
+You can check the status of the interface by running `wg` :
 
 ```bash
 # Output
@@ -133,25 +134,25 @@ peer: Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
   persistent keepalive: every 25 seconds
 ```
 
-然后您可以使用 `ping` 来验证彼此之间的连接。
+You can then use `ping` to verify the connectivity between the nodes.
 
-如果你想要更新 `wg0.conf`, 先运行 `wg-quick-own wg0` 來停止接口。
+In case you want to update `wg0.conf`, run `wg-quick down wg0` to stop the interface first.
 
 ### 5. 启动哨兵节点和验证人
 
-当你启动了哨兵节点和验证人的 `wg0` 接口，用一点时间看一下你将会使用标志的描述。
+After you have started the `wg0` interface on your public node and validator, do spend a little bit of time to take a look at the following description of those flags you are going to use.
 
-`-sentry ` - 这将需要在哨兵节点成为观察者，这意味着它跟运行验证人是一样，但是并没有持有密钥/负责签名。运行全节点与增加额外的 ` --sentry ` 区别是，哨兵节点将会拥有验证人所需要的数据，但是全节点有可能没有验证人所需要的数据作验证。
+`--sentry` - This would be required for your public node to be an authority as an observer. That means it acts the same as a validator node but without holding keys / signing. And the difference between running a full node versus adding an extra `--sentry` flag is that a full node might not have all the data the validator needs to validate properly.
 
-`--reserved-nodes` - 节点会尝试连接在这里定义的节点并且一直接受它们的连接，但是它还会连接和接受其它以外的节点。
+`--reserved-nodes` - The node will try to connect to these nodes and always accept connections from them, but it will still connect and accept connections from other nodes as well.
 
-`--reserved-only` - 只接受你在 --reserved-nodes 定义的节点连接。
+`--reserved-only` - Only allows the connection from reserved nodes you defined
 
-因为我们想要确保哨兵节点永不会拒绝验证人的连接，所以 `--reserved-nodes` 也需要在哨兵节点上使用来防止发生。这将会发生这种情况，当节点位置都满了。
+Since we want to ensure that the sentry node would never reject a connection from our validator and this could happen if all the peer slots were full, `--reserved-nodes` will be required on the sentry to prevent that happening.
 
-您需要执行以下指令启动验证人，然后先复制节点的身份。然后再停止它。
+You need to execute the following command to start your validator and then copy the node's identity first. Then stop it.
 
-`./target/release/polkadot --validator`
+`polkadot --validator`
 
 ```
 2019-11-22 18:44:45 Parity Polkadot
@@ -169,28 +170,26 @@ peer: Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
 2019-11-22 18:44:45 Local node identity is: QmTRSEZVE86Vrx8cHLqZhsQ2UfhMy4zZikvgWKzYBsLJZv
 ```
 
-现在使用 `--sentry` 和 `--reserved-nodes` 启动哨兵节点。
+Now start your sentry with `--sentry` and `--reserved-nodes`.
 
 ```
-./target/release/polkadot \
+polkadot \
 --name "Sentry-A" \
 --sentry \
 --reserved-nodes /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
 ```
 
-您也需要在启动验证人时使用哨兵节点的 ID，所以确保先保存它的 ID 在其它地方。
-
-然后启动验证人。
+You are also required to use the sentry's node identity when starting your validator, so make sure to save it somewhere else as well. Then start your validator.
 
 ```
-./target/release/polkadot \
+polkadot \
 --name "Validator" \
 --reserved-only \ 
 --reserved-nodes /ip4/SENTRY_VPN_ADDRESS/tcp/30333/p2p/SENTRY_NODE_IDENTITY \
 --validator
 ```
 
-最后您应该看到验证人有一个来自哨兵节点的连接。如果你认为一个哨兵节点不足够，你可按照上述步骤来增加更多。
+You should see your validator has 1 peer, that is a connection from your sentry node. Do the above steps to spin up few more if you think one sentry node is not enough.
 
 ```
 2019-11-22 19:15:08 Idle (1 peers), best: #781102 (0xcb78…6913), finalized #781100 (0xacc8…d7bb), ⬇ 43.4kiB/s ⬆ 34.3kiB/s
@@ -209,4 +208,4 @@ peer: Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
 2019-11-22 19:15:31 Starting parachain attestation session on top of parent 0x0eb1a30932beaf676d3853475315bf3e7b5629bb77e2891295f4f9bf45eb5697. Local parachain duty is None
 ```
 
-恭喜！您已经成功地设置了一个拥有哨兵节点的验证人，现在可以更安全地运行验证人。
+Congratulations! You have successfully set up a validator with a public facing node and now have a more secure way of running your validator.
