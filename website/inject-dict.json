@@ -1,0 +1,17 @@
+[
+  {
+    "tpl": "num_validators",
+    "default": 180,
+    "path": "query.staking.validatorCount"
+  },
+  {
+    "tpl": "treasury_proposal_total",
+    "default": 10,
+    "path": "query.treasury.proposalCount"
+  },
+  {
+    "tpl": "babe_epoch_duration",
+    "default": 500,
+    "path": "consts.babe.epochDuration"
+  }
+]
