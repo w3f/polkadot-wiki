@@ -59,7 +59,7 @@ DOTs may have a lock placed on them to account for vesting funds. Like other typ
 of locks, these funds cannot be transferred but can be used in other parts of
 the protocol such as voting in governance or being staked as a validator or nominator.
 
-Vesting funds are on a linear release schedule and unlock a constant amount of
+Vesting funds are on a linear release schedule and unlock a constant number of
 tokens at each block. Although the tokens are released in this manner,
 it does not get reflected on-chain automatically due to the fact that locks are
 [lazy](#lazy-vesting) and require an extrinsic to update.
