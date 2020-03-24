@@ -233,15 +233,15 @@ The council, being an instantiation of Substrate's Collective pallet, implements
 what's called a _prime member_ whose vote acts as the default for other members
 that fail to vote before the timeout.
 
-The prime member is chosen based on the most popular candidate as determined by
-the phragmen election. 
+The prime member is chosen based on the most popular candidate. The most popular
+candidate of the council is simply the most highly scored candidate as determined
+by the [Phragmen election](learn-phragmen).
 
 The purpose of having a prime member of the council is to avoid reaching quorum
 when a member abstains from a vote. Council members might be tempted to vote a
 "soft rejection" or a "soft approval" by not voting and letting the others vote.
 With the existence of a prime member, it forces councillors to be explicit in their
 votes or have their vote counted for whatever is voted on by the prime.
-
 
 ## Technical Committee
 
