@@ -20,7 +20,7 @@ sidebar_label: 抵押
 
 作为提名人，你最多提名一个(或最多 16) 你信任的侯选验证人去帮你赚取 DOTs。你可以看看 [提名人手册](maintain-nominator)去理解一下当主网上线时有什么你需要做。
 
-验证人需要 24/7 在线及时履行其预期职责，并避免任何会被惩罚的行为。如果你想在现有测试网运行节点或 Kusama 网络，你可以留意查看  [ Alexande ](maintain-guides-how-to-validate-alexander) 或 [ Kusama ](maintain-guides-how-to-validate-kusama)验证人手册。
+A validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a validator on Kusama.
 
 ### 2. 提名期
 
@@ -95,8 +95,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### 想参与抵押 DOT?
 
-* [Nominator Guide](maintain-guides-how-to-nominate-alexander) - Become a nominator on the Alexander testnet.
-* [Validator Guide](maintain-guides-how-to-validate-alexander) - Become a validator on the Alexander testnet.
+* [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
+* [Validator Guide](/mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
 
 ## Slash惩罚
 
@@ -144,9 +144,35 @@ If you want to know more details about slashing, please look at our [research pa
 
 Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.  Polkadot will also produce blocks at approximately six second intervals.
 
-Rewards are recorded per session --- approximately one hour on Kusama and four hours on Polkadot --- and paid per era. It takes approximately six hours to finish one era, twenty-four hours on Polkadot.  Thus, rewards will be distributed to the validators and nominators four times per day on Kusama and once per day on Polkadot.
+Rewards are recorded per session (approximately one hour on Kusama and four hours on Polkadot) and calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). Thus, rewards will be calculated four times per day on Kusama and once per day on Polkadot.
 
-### 例子
+In order to be paid your staking rewards, you must manually claim them. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot and 21 days on Kusama. For more information on why this is so, see the page on [lazy payouts](learn-lazy-payouts).
+
+> WARNING: If you do not claim your staking rewards by this time, then you will not be able to claim them and some of your staking rewards will be lost.
+
+### Claiming Rewards
+
+If you have staking rewards ready to be claimed, you will see a red circle on the Staking tab, along with the number of accounts that have rewards to claim.
+
+![claim_see_reward_notification](assets/claim_see_reward_notification.png)
+
+Click on the "Account Actions" tab at the top of the screen, and you should see all of your accounts that have bonded. Any accounts that have staking rewards available to be claimed will have a red circle next to it. The number insidew the circle indicates the number of eras' worth of claims you have waiting. Hovering over the red circle with your mouse cursor shows you a popup displaying how much in rewards you can claim.
+
+Note that you will need to pay a transaction fee for claiming, so if you have a very small amount of staking rewards, this may be outweighed by the need to pay the transaction fee. In this case, it would make sense to wait a few more eras and "batch" claiming your rewards.
+
+![claim_see_reward](assets/claim_see_reward.png)
+
+In order to claim your rewards, click on the "gear" icon at the far right. On the dropdown menu, select "payout reward".
+
+![claim_payout_reward](assets/claim_payout_reward.png)
+
+Finally, sign the transaction. This is a batch transaction - you will notice that numerous transactions will be indicated by the UI, and giving you all of the rewards up to this point at once.
+
+![claim_sign_tx](assets/claim_sign_tx.png)
+
+After this, all of your rewards will be available wherever you have set rewards to go (selected when you first started nominating, generally to the stash).
+
+### Reward Distribution Example
 
 ```
     PER_ERA * BLOCK_TIME = **Reward Distribution Time**
