@@ -1,7 +1,7 @@
 [
   {
     "tpl": "num_validators",
-    "default": 180,
+    "default": 150,
     "path": "query.staking.validatorCount"
   },
   {
