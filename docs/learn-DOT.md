@@ -115,7 +115,6 @@ _Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expecte
 Testnet dots are freely available now - see below for various ways to obtain them.
 
 ## Testnet DOTs
-ubstrate-telemetry-
 DOTs are required to make transactions on the Polkadot network. Testnet DOTs do not have any value beside allowing you to experiment with the network.
 
 ### Getting Westies
