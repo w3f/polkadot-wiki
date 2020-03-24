@@ -145,7 +145,7 @@ transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conc
 
 ## Smart Contracts
 
-The Polkadot Relay Chain does not support smart contract.
+The Polkadot Relay Chain does not support smart contracts.
 
 ## Other Networks
 
