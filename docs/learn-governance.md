@@ -227,12 +227,28 @@ For the top-N (say 4 in this example) runners-up, they can remain and their vote
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
+### Prime Members
+
+The council, being an instantiation of Substrate's Collective pallet, implements 
+what's called a _prime member_ whose vote acts as the default for other members
+that fail to vote before the timeout.
+
+The prime member is chosen based on the most popular candidate as determined by
+the phragmen election. 
+
+The purpose of having a prime member of the council is to avoid reaching quorum
+when a member abstains from a vote. Council members might be tempted to vote a
+"soft rejection" or a "soft approval" by not voting and letting the others vote.
+With the existence of a prime member, it forces councillors to be explicit in their
+votes or have their vote counted for whatever is voted on by the prime.
+
+
 ## Technical Committee
 
 The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/)
 as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical
 Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or
-the Host. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+the Polkadot Host. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
 
 The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 
