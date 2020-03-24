@@ -29,7 +29,7 @@ events then you will need an archive node.
 
 **Exporting blocks**
 
-To export blocks to a file, use `export-blocks`. Export in JSON (default), or binary
+To export blocks to a file, use `export-blocks`. Export in JSON (default) or binary
 (`--binary true`).
 
 ```bash
@@ -45,7 +45,16 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 
 **Execution**
 
-The Parity Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set
+The Parity Polkadot client implements a [Polkadot Host](learn-polkadot-host) and a native runtime.
+The runtime must compile to WebAssembly and is stored on-chain. If the client's runtime is the same
+spec as the runtime that is stored on-chain, then the client will execute blocks using the client
+binary. Otherwise, the client will execute the Wasm runtime.
+
+Therefore, when syncing the chain, the client will execute blocks from past runtimes using their
+associated Wasm binary. This feature also allows forkless upgrades: the client can execute a new
+runtime without updating the client.
+
+Parity's Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set
 the preferred method to use when executing Wasm with `--wasm-execution <Interpreted|Compiled>`.
 Compiled execution will run much faster, especially when syncing the chain, but is experimental and
 may use more memory/CPU. A reasonable tradeoff would be to sync the chain with compiled execution
