@@ -195,21 +195,22 @@ Inflation is designed to be 10% in the first year, with validator rewards being 
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)</sup></sub>
+<p style="text-align:center">Source: <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
 
-**x-axis**: amount of DOTs staked
+- **x-axis**: Proportion of DOTs staked
+- **y-axis**: Inflation, annualized percentage
+- **Blue line**: Inflation rewards to stakers
+- **Green line**: Staker rate of return
 
-**y-axis**: the annualized percentage
+The above chart shows the inflation model of the network. Depending on the staking participation, 
+the distribution of the inflation to validators versus the treasury will change dynamically to 
+incentivize / disincentivize token holders to participate in staking. For instance, all of the 
+inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 
+50% - positive or negative - sends the proportional remainder to the treasury and effectively 
+reduces validator payouts.
 
-**Green line**: return rate based on the staking participation
-
-**Blue line**:  how much of the inflation goes to validators versus the treasury
-
-The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to incentivize / disincentivize token holders to participate in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
-
-Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees and we want and to avoid illiquidity on the market.
-
-For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
+For those who are interested in knowing more about the design of inflation model for the network, 
+please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
 
 ## Why stake?
 
