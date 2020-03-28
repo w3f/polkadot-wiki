@@ -42,6 +42,8 @@ Below are the various types of users at different stages.
 
 ## Procedure
 
+**Remember to take a look at the rules written [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) first. If you are not sure about the rules, join the [public chat room](https://matrix.to/#/!BUmiAAnAYSRGarqwOt:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) to ask any questions.**
+
 ### 1. Bid Phase
 
 Anyone can submit a bid to join the society by reserving a deposit or find an existing member to create a bid on behalf by vouching for you. At every rotation period, bids will be selected as many bids the society pot can support. And those selected bids will be moved to the candidate phase, whereas bids that were not selected will stay in the bidder pool until they are selected or a user chooses to unbid.
