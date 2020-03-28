@@ -234,7 +234,7 @@ what's called a _prime member_ whose vote acts as the default for other members
 that fail to vote before the timeout.
 
 The prime member is chosen based on the most popular candidate. The most popular
-candidate of the council is simply the most highly scored candidate as determined
+candidate of the council is simply the most-backed candidate as determined
 by the [Phragmen election](learn-phragmen).
 
 The purpose of having a prime member of the council is to avoid reaching quorum
