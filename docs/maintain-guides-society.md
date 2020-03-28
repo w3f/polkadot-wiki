@@ -83,6 +83,14 @@ Note: The final value that the candidate will get = (value - tip)
 
 ![Society Vote Candidate](assets/society/vote_candidate.jpg)
 
+
+```bash
+vote(candidate,approve)
+
+candidate - Select the candidate you would like to vote
+approve - Yes / No
+```
+
 Those selected bids in this phase will be voted by the existing members to decide whether you will be approved to join the society. Members will vote for all the candidates and the final outcome will be randomly selected by one of the votes. Let's take a look the example shown as below:
 
 ```bash
@@ -115,7 +123,17 @@ If the candidate loses the vote, they are suspended and it is up to the suspensi
 ### 3. Member Phase
 
 Once you become a member of society, a few things you need to be aware of. First, you should vote on candidates who applied for the membership for 
-every rotation period. Second, there will have a membership challenge for every `7` days on Kusama. So one of the members will be randomly selected as a defender. Then, other members can vote whether this defender should stay in society. A simple majority wins the vote will determine the outcome of the member. You can take a look at [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) and search for "Existing Members (Challenges)" keyword.
+every rotation period. 
+
+![Society Vote Defender](assets/society/vote_defender.jpg) 
+
+```bash
+defenderVote(approve)
+
+approve - Yes / No
+```
+
+Second, there will have a membership challenge for every `7` days on Kusama. So one of the members will be randomly selected as a defender. Then, other members can vote whether this defender should stay in society. A simple majority wins the vote will determine the outcome of the member. You can take a look at [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) and search for "Existing Members (Challenges)" keyword.
 Besides that, you can earn an extra KSM by helping a user to apply for the membership by requesting a tip. This is useful when a user does not have enough balance to deposit a reserve. And the tip will be given when a user successfully joins the society.
 
 ```bash
