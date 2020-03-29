@@ -50,7 +50,7 @@ Anyone can submit a bid to join the society by reserving a deposit or find an ex
 
 ![Society Dashboard](assets/society/submit_bid.jpg)
 
-Anyone who wants to join the society that is required to reserve 10 KSM on Kusama and placing the bid(1 in this case) that you want to get when joining the society. 
+Anyone who wants to join the society that is required to deposit 10 KSM for reserve on Kusama and placing the bid(1 in this case) that you want to get when joining the society. 
 
 ![Society Dashboard](assets/society/test_bid.jpg)
 
@@ -122,8 +122,7 @@ If the candidate loses the vote, they are suspended and it is up to the suspensi
 
 ### 3. Member Phase
 
-Once you become a member of society, a few things you need to be aware of. First, you should vote on candidates who applied for the membership for 
-every rotation period. 
+Once you become a member of society,  you will get back the deposit that you have reserved during the bidding. A few things you need to be aware of. First, you should vote on candidates who applied for the membership for every rotation period. 
 
 ![Society Vote Defender](assets/society/vote_defender.jpg) 
 
@@ -132,6 +131,11 @@ defenderVote(approve)
 
 approve - Yes / No
 ```
+
+Second, you will need to claim your payout manually by calling `payout()` after a certain period of time.
+
+![Society Payout](assets/society/payout.jpg) 
+
 
 Second, there will have a membership challenge for every `7` days on Kusama. So one of the members will be randomly selected as a defender. Then, other members can vote whether this defender should stay in society. A simple majority wins the vote will determine the outcome of the member. You can take a look at [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) and search for "Existing Members (Challenges)" keyword.
 Besides that, you can earn an extra KSM by helping a user to apply for the membership by requesting a tip. This is useful when a user does not have enough balance to deposit a reserve. And the tip will be given when a user successfully joins the society.
