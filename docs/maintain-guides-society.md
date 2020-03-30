@@ -57,25 +57,23 @@ Anyone who wants to join the society is required to deposit 10 KSM for reserve o
 
 Once you have submitted the transaction, your bid will be shown on the [Society page](https://polkadot.js.org/apps/#/society) under the bids section. You can cancel the bidding if you decided not to join the society by calling `unbid(pos)`.
 
-```bash
-unbid(pos)
-
-pos - The index of the bid. 
-```
+> unbid(pos)
+>
+> pos - The index of the bid. 
 
 If you are not sure what your position is, you can check that by going to the [Society->bids chain state](https://polkadot.js.org/apps/#/chainstate) in the PolkadotJS apps.
 
 You can find an existing member to place a bid on your behalf if you do not have KSM and you are willing to give them a tip. An existing member can submit a `vouch(who,value,tip)` transaction.
 
-```bash
-vouch(who,value,tip)
-
-who - Which user you are vouching for
-value - The value that the user would like to get when joining the society
-tip - Fees you get
-
-Note: The final value that the candidate will get = (value - tip)
-```
+> vouch(who,value,tip)
+>
+> who - Which user you are vouching for
+>
+> value - The value that the user would like to get when joining the society
+> 
+> tip - Fees you get
+>
+> Note: The final value that the candidate will get = (value - tip)
 
 ![Society Dashboard](assets/society/vouch.jpg)
 
@@ -84,21 +82,19 @@ Note: The final value that the candidate will get = (value - tip)
 
 ![Society Vote Candidate](assets/society/vote_candidate.jpg)
 
-
-```bash
-vote(candidate,approve)
-
-candidate - Select the candidate you would like to vote
-approve - Yes / No
-```
+> vote(candidate,approve)
+>
+> candidate - Select the candidate you would like to vote
+>
+> approve - Yes / No
 
 Bids selected in this phase will be voted on by the existing members to decide whether or not you will be approved to join the society. Members will vote for all the candidates and the final outcome will be randomly selected by one of the votes. Let's take a look the example shown as below:
 
-```bash
-Note:
-- If the randomly selected member does not vote, it will be treated as a rejection.
-- For each rotation period, the maximum number of members that can be accepted is set as 10. 
-```
+> **_NOTE:_** 
+>
+> If the randomly selected member does not vote, it will be treated as a rejection.
+> 
+> For each rotation period, the maximum number of members that can be accepted is set as 10. 
 
 A - Accept,  R - Reject,  S - Skeptic
 
@@ -109,10 +105,9 @@ Selected |   |   | X |   |   |
 
 In this example, a candidate will be approved to join the society since member 3 was selected as a final voting outcome. A number of members will also be randomly chosen as "skeptics" to vote for the candidates during the rotation period. Since member 5 was chosen as a skeptic, they are required to participate in the voting process. If they do not participate in voting, they will be punished with one strike per missing vote. If one accumulates too many strikes, one's membership is suspended which means they may need to re-apply and their unclaimed payouts will be slashed. Moreover, each member who voted opposite to the randomly selected vote will have their unclaimed payouts slashed and strikes increased. In this case, member 4 will be punished.
 
-```bash
-Note:
-- The maximum number of strikes you can have is 10 in Kusama.
-```
+> **_NOTE:_** 
+>
+> The maximum number of strikes you can have is 10 in Kusama.
 
 These slashed funds will be given to a random member who voted the same as the selected vote as a reward for participating in the vote.
 
@@ -127,11 +122,9 @@ Once you become a member of the society, you will get back the deposit that you 
 
 ![Society Vote Defender](assets/society/vote_defender.jpg) 
 
-```bash
-defenderVote(approve)
-
-approve - Yes / No
-```
+> defenderVote(approve)
+>
+> approve - Yes / No
 
 Second, you will need to claim your payout manually by calling `payout()` after a certain period of time.
 
@@ -141,14 +134,13 @@ Second, you will need to claim your payout manually by calling `payout()` after 
 Third, there will be a membership challenge every seven days on Kusama. So one of the members will be randomly selected as a defender. Then, other members can vote whether this defender should stay in society or not. A simple majority wins the vote. You can take a look [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) and search for "Existing Members (Challenges)".
 Besides that, you can earn extra KSM by helping a user apply for the membership and requesting a tip. This is useful when a user does not have enough balance to deposit a reserve. The tip will be given when a user successfully joins the society.
 
-```bash
-Note:
-- Each member can only vouch for one user at a time.
-- Member is not required to reserve the deposit when vouching for a user.
-```
+> **_NOTE:_** 
+>
+> Each member can only vouch for one user at a time.
+>
+> Member is not required to reserve the deposit when vouching for a user.
 
 If a member accumulates too many strikes or fails their membership challenge, they will become suspended. While a member is suspended, they are unable to claim matured payouts. It is up to the suspension judgment origin to determine if the member should re-enter society or be removed from society with all their future payouts slashed.
-
 
 ## Useful links
 
