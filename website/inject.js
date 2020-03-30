@@ -2,15 +2,6 @@ const replace = require('replace-in-file');
 const replacements = require("./inject-dict.json");
 const api = require("@polkadot/api");
 
-// Init template options for replace-in-file
-const options = {
-    files: [
-        'build/polkadot-wiki/docs/*/*/*.html'
-    ],
-    from: [],
-    to: []
-};
-
 /**
  * Process input args
  * 
@@ -20,13 +11,15 @@ const args = process.argv.slice(2);
 const node = (undefined !== args[0]) ? args[0] : 'wss://kusama-rpc.polkadot.io/';
 console.log("Connecting to node " + node);
 
+let filledDict = {};
+let resolved = 0;
+
 // Connect to a node
 const wsProvider = new api.WsProvider(node);
 api.ApiPromise.create({provider: wsProvider}).then(function (instance) {
 
     console.log("Connected");
     replacements.forEach(async function (replacement) {
-        options.from.push("/{{ " + replacement.tpl + " }}/g");
 
         let chainValue = undefined;
         try {
@@ -49,20 +42,26 @@ api.ApiPromise.create({provider: wsProvider}).then(function (instance) {
             }
 
         } catch (e) {}
-
-        console.log(chainValue);
-        options.to.push(chainValue || replacement.default);
+        filledDict["/{{ " + replacement.tpl + " }}/g"] = chainValue || replacement.default;
     });
 }).catch(function(e){
     console.error("Error connecting! Check your node URL and make sure its websockets are open, secure if remote (wss), and allow RPC from all.");
     process.exit(1);
 });
 
-
-
 let v = setInterval(function () {
-    if (options.to.length == options.from.length && options.to.length > 0) {
+    if (Object.keys(filledDict).length === Object.keys(replacements).length) {
         clearInterval(v);
+
+        // Init template options for replace-in-file
+        const options = {
+            files: [
+                'build/polkadot-wiki/docs/*/*/index.html'
+            ],
+            from: Object.keys(filledDict),
+            to: Object.values(filledDict)
+        };
+
         console.log("Replacement configuration: ");
         console.log(options);
 
@@ -71,10 +70,15 @@ let v = setInterval(function () {
             const changedFiles = results
                 .filter(result => result.hasChanged)
                 .map(result => result.file);
+            const filesThatNeedToChange = results
+                .filter(result => result.file.indexOf("cumulus") > -1)
+                .map(result => result.file);
             console.log('Modified files:', changedFiles);
+            console.log('Files I wanted to change: ', filesThatNeedToChange);
             process.exit(0);
         } catch (error) {
             console.error('Error occurred:', error);
+            process.exit(1);
         }
     }
 }, 1000);
