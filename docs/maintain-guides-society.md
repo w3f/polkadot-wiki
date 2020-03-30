@@ -123,7 +123,7 @@ If the candidate loses the vote, they are suspended and it is up to the suspensi
 
 ### 3. Member Phase
 
-Once you become a member of society,  you will get back the deposit that you have reserved during the bidding. A few things you need to be aware of. First, you should vote on candidates who applied for the membership for every rotation period. 
+Once you become a member of the society, you will get back the deposit that you have reserved during the bidding. A few things you need to be aware of. First, you should vote on candidates who applied for the membership in every rotation period. 
 
 ![Society Vote Defender](assets/society/vote_defender.jpg) 
 
