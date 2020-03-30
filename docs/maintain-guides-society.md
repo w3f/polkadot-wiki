@@ -16,7 +16,7 @@ Before joining the society, let's take a brief look at the [Society UI](https://
 
 `Rotation`: The time period that processes the membership application. 
 
-`Challenge`: The time period to randomly select one of the members to defend his membership into the society. 
+`Challenge`: The time period to randomly select one of the members to defend his membership in the society. 
 
 `Pot`: Resource that is used to support the member of society.
 
