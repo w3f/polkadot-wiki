@@ -105,7 +105,7 @@ A - Accept,  R - Reject,  S - Skeptic
 Member | 1 | 2 | 3 | 4 | 5 |
 -------- | - | - | - | - | - |
 Vote     | A | A | A | R | S |
-Selected | | | X | | | 
+Selected |   |   | X |   |   | 
 
 In this example, this candidate will be approved to join the society since member 3 was selected as a final outcome. Also, a number of members will be randomly chosen as `skeptics` to vote for the candidates during the rotation period. Since members 5 was chosen as a skeptic, he is required to participate in the voting process. If he does not participate in voting, he will be punished by increase his strike per missing vote. And if you have accumulated too many stikes, your membership will be suspended which means you may need to re-apply the membership and your unclaimed payouts will be slashed. Moreover, each member who voted opposite to the randomly selected vote will be slashed their unclaimed payouts and increase their strikes. In this case, member 4 will be punished.
 
