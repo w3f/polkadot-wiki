@@ -37,7 +37,7 @@ Below are the various types of users at different stages.
 
 `Head` - One winning candidate will be randomly chosen as head of the members, weighted by the number of approvals the winning candidates accumulated. 
 
-`Defender` - At every challenge period, one of the members will be randomly selected to defend their membership of the society. Regarding what does the defender require to do during the challenge period, you can have a look at [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17).
+`Defender` - In every challenge period, one of the members will be randomly selected to defend their membership in the society. The rules for defending the membership are documented [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17).
 
 
 ## Procedure
