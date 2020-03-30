@@ -116,7 +116,7 @@ Note:
 
 These slashed funds will be given to a random member who voted the same as the selected vote as a reward for participating in the vote.
 
-If the candidate wins the vote, they receive their bid reward as a future payout. If the bid was placed by a voucher, they will get the reward that was set during vouching. And the remaining will be given to the candidate.
+If the candidate wins the vote, they receive their bid reward as a future payout. If the bid was placed by a voucher, they will get the reward that was set during vouching with the remainder given to the candidate.
 
 If the candidate loses the vote, they are suspended and it is up to the suspension judgment origin to determine if the candidate should go through the bidding process again, should be accepted into the membership society, or rejected and their deposit slashed.
 
