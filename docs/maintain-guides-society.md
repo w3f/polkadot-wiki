@@ -65,7 +65,7 @@ pos - The index of the bid.
 
 If you are not sure what your position is, you can check that by going to the [Society->bids chain state](https://polkadot.js.org/apps/#/chainstate) in the PolkadotJS apps.
 
-You can find an existing member by placing a bid on your behalf if you do not have KSM and you are willing to give a tip to them. An existing member can submit a `vouch(who,value,tip)` transaction.
+You can find an existing member to place a bid on your behalf if you do not have KSM and you are willing to give them a tip. An existing member can submit a `vouch(who,value,tip)` transaction.
 
 ```bash
 vouch(who,value,tip)
