@@ -103,7 +103,7 @@ Note:
 A - Accept,  R - Reject,  S - Skeptic
 
 Member | 1 | 2 | 3 | 4 | 5 |
---- | --- | --- | --- | ---- | --- |
+-------- | - | - | - | - | - |
 Vote     | A | A | A | R | S |
 Selected | | | X | | | 
 
