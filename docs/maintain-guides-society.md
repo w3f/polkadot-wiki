@@ -55,7 +55,7 @@ Anyone who wants to join the society is required to deposit 10 KSM for reserve o
 
 ![Society Dashboard](assets/society/test_bid.jpg)
 
-Once you have submitted the transaction, your bid will be shown on the [Society page](https://polkadot.js.org/apps/#/society) under the bids section. You can cancel the bidding if you decided not to join the society by calling the `unbid(pos)`.   
+Once you have submitted the transaction, your bid will be shown on the [Society page](https://polkadot.js.org/apps/#/society) under the bids section. You can cancel the bidding if you decided not to join the society by calling `unbid(pos)`.
 
 ```bash
 unbid(pos)
