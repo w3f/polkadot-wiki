@@ -25,7 +25,7 @@ Before joining the society, let's take a brief look at the [Society UI](https://
 ## User Types
 Below are the various types of users at different stages.
 
-`Bidder` - A token holder who intended to join the society by placing a bid.
+`Bidder` - A token holder who intends to join the society by placing a bid.
 
 `Candidate` - Those selected bidders will become a candidate to wait for the members of society to vote for.
 
