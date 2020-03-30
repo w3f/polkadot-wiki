@@ -42,7 +42,7 @@ Below are the various types of users at different stages.
 
 ## Procedure
 
-**Remember to take a look at the rules written [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) first. And since those rules are not enforced on-chain, it is recommended to join the [public chat room](https://matrix.to/#/!BUmiAAnAYSRGarqwOt:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) to ask any questions if you have something do not understand or unclear.**
+**Remember to take a look at the rules written [here](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) first. And since those rules are not enforced on-chain, it is recommended to join the [public chat room](https://matrix.to/#/!BUmiAAnAYSRGarqwOt:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) to ask any questions if anything is unclear.**
 
 
 ### 1. Bid Phase
