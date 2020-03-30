@@ -12,7 +12,7 @@ Before joining the society, let's take a brief look at the [Society UI](https://
 
 ## UI Overview
 
-`Members`: The number of members in the society. Currently, the maximum number of members current is set to `150`. It can be changed by using governance to increase the number. 
+`Members`: The number of members in the society. Currently, the maximum number of members is set to `150`. It can be changed by using governance to increase the number. 
 
 `Rotation`: The time period that processes the membership application. 
 
