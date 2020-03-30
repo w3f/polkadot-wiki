@@ -107,7 +107,7 @@ Member   | 1 | 2 | 3 | 4 | 5 |
 Vote     | A | A | A | R | S |
 Selected |   |   | X |   |   | 
 
-In this example, this candidate will be approved to join the society since member 3 was selected as a final outcome. Also, a number of members will be randomly chosen as `skeptics` to vote for the candidates during the rotation period. Since members 5 was chosen as a skeptic, he is required to participate in the voting process. If he does not participate in voting, he will be punished by increase his strike per missing vote. And if you have accumulated too many stikes, your membership will be suspended which means you may need to re-apply the membership and your unclaimed payouts will be slashed. Moreover, each member who voted opposite to the randomly selected vote will be slashed their unclaimed payouts and increase their strikes. In this case, member 4 will be punished.
+In this example, a candidate will be approved to join the society since member 3 was selected as a final voting outcome. A number of members will also be randomly chosen as "skeptics" to vote for the candidates during the rotation period. Since member 5 was chosen as a skeptic, they are required to participate in the voting process. If they do not participate in voting, they will be punished with one strike per missing vote. If one accumulates too many strikes, one's membership is suspended which means they may need to re-apply and their unclaimed payouts will be slashed. Moreover, each member who voted opposite to the randomly selected vote will have their unclaimed payouts slashed and strikes increased. In this case, member 4 will be punished.
 
 ```bash
 Note:
