@@ -189,6 +189,22 @@ For a referendum to be cancelled, there must be a unanimous vote to do so. Since
 
 If the cancellation is controversial enough that there is at least one dissenter, then it will be left to the stakeholders *en masse* to determine the fate of the proposal.
 
+### Prime Members
+
+The council, being an instantiation of Substrate's Collective pallet, implements 
+what's called a _prime member_ whose vote acts as the default for other members
+that fail to vote before the timeout.
+
+The prime member is chosen based on the most popular candidate. The most popular
+candidate of the council is simply the most-backed candidate as determined
+by the [Phragmen election](learn-phragmen).
+
+The purpose of having a prime member of the council is to ensure a quorum, even
+when several members abstain from a vote. Council members might be tempted to vote a
+"soft rejection" or a "soft approval" by not voting and letting the others vote.
+With the existence of a prime member, it forces councillors to be explicit in their
+votes or have their vote counted for whatever is voted on by the prime.
+
 ### How to be a council member?
 
 ![](assets/governance/approval-vote.png)
