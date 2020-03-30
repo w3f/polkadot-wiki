@@ -51,7 +51,7 @@ Anyone can submit a bid to join the society by reserving a deposit or finding an
 
 ![Society Dashboard](assets/society/submit_bid.jpg)
 
-Anyone who wants to join the society that is required to deposit 10 KSM for reserve on Kusama and placing the bid(1 in this case) that you want to get when joining the society. 
+Anyone who wants to join the society is required to deposit 10 KSM for reserve on Kusama and place the bid amount (1 KSM in this case) that they want to get when joining the society. 
 
 ![Society Dashboard](assets/society/test_bid.jpg)
 
