@@ -92,7 +92,7 @@ candidate - Select the candidate you would like to vote
 approve - Yes / No
 ```
 
-Those selected bids in this phase will be voted by the existing members to decide whether you will be approved to join the society. Members will vote for all the candidates and the final outcome will be randomly selected by one of the votes. Let's take a look the example shown as below:
+Bids selected in this phase will be voted on by the existing members to decide whether or not you will be approved to join the society. Members will vote for all the candidates and the final outcome will be randomly selected by one of the votes. Let's take a look the example shown as below:
 
 ```bash
 Note:
