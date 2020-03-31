@@ -25,6 +25,7 @@ const mirrored = [
   'learn-governance',
   'maintain-guides-how-to-nominate-kusama',
   'maintain-guides-how-to-validate-kusama',
+  'maintain-errors'
 ];
 
 for (const file of mirrored) {
