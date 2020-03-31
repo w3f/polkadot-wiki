@@ -28,8 +28,8 @@ const mirrored = [
 ];
 
 for (const file of mirrored) {
-  const doc = 'docs/' + file + '.md';
-  const mirror = 'docs/mirror-' + file + '.md';
+  const doc = '../docs/' + file + '.md';
+  const mirror = '../docs/mirror-' + file + '.md';
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
