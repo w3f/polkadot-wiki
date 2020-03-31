@@ -42,7 +42,7 @@ api.ApiPromise.create({provider: wsProvider}).then(function (instance) {
             }
 
         } catch (e) {}
-        filledDict["/{{ " + replacement.tpl + " }}/g"] = chainValue || replacement.default;
+        filledDict["{{ " + replacement.tpl + " }}"] = chainValue || replacement.default;
     });
 }).catch(function(e){
     console.error("Error connecting! Check your node URL and make sure its websockets are open, secure if remote (wss), and allow RPC from all.");
@@ -58,7 +58,7 @@ let v = setInterval(function () {
             files: [
                 'build/polkadot-wiki/docs/*/*/index.html'
             ],
-            from: Object.keys(filledDict),
+            from: Object.keys(filledDict).map(el => {return new RegExp(el, 'ig')}),
             to: Object.values(filledDict)
         };
 
@@ -67,14 +67,18 @@ let v = setInterval(function () {
 
         try {
             let results = replace.sync(options);
+            
             const changedFiles = results
                 .filter(result => result.hasChanged)
                 .map(result => result.file);
+            
             const filesThatNeedToChange = results
                 .filter(result => result.file.indexOf("cumulus") > -1)
                 .map(result => result.file);
+            
             console.log('Modified files:', changedFiles);
             console.log('Files I wanted to change: ', filesThatNeedToChange);
+
             process.exit(0);
         } catch (error) {
             console.error('Error occurred:', error);
