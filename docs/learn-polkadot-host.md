@@ -4,26 +4,41 @@ title: Polkadot Host (PH)
 sidebar_label: Polkadot Host (PH)
 ---
 
-The Polkadot Host is an important component of the Polkadot protocol. It consists of the networking, consensus and Wasm VM subsystems, and acts as the lower layers of the stack underlying the Polkadot runtime and the runtimes of the parachains. Loosely, the Polkadot Host can be thought of as synonymous with a virtual machine running the Polkadot Relay Chain (although as stated below, there is a clear separation between the chain logic itself, and the Polkadot Host on which it runs).
+The architecture of Polkadot can be divided into two different parts,
+the Polkadot _runtime_ and the Polkadot _host_. The Polkadot runtime is the core
+state transition logic of the chain and can be upgraded over the course of time
+and without the need for a hard fork. In comparison, the Polkadot host is the
+environment in which the runtime executes and is expected to remain stable
+and mostly static over the lifetime of Polkadot.
 
-The components of the Polkadot Host are:
+The Polkadot host interacts with the Polkadot runtime in limited, and well-specified
+ways. For this reason, implementation teams can build an alternative implementation
+of the Polkadot host while treating the Polkadot runtime as a black box. For more
+details of the interactions between the host and the runtime, please see the
+[specification](https://github.com/w3f/polkadot-spec/blob/master/runtime-environment-spec/polkadot_re_spec.pdf). 
 
-- The networking layer that facilitates network interactions.
+## Components of the Polkadot host
+
+- Networking components such as Libp2p that facilitates network interactions.
 - State storage and the storage trie along with the database layer.
-- Consensus engine.
+- Consensus engine for GRANDPA and BABE (some logic exists on the runtime).
 - Wasm interpreter and virtual machine.
+- Low level primitives for a blockchain, such a cryptographic primitives like hash
+functions.
 
-The runtime, which is defined as the code implementing the logic of the chain,
-is decoupled from the Polkadot Host. The separation of the two components allows
-the runtime to be easily upgradable without needing to upgrade the Polkadot Host.
+A compiled Polkadot runtime, a blob of Wasm code, can be uploaded into the
+Polkadot host and used as the logic for the execution of state transitions.
+Without a runtime, the Polkadot host is unable to make state transitions
+or produce any blocks.
 
-The Polkadot runtime (as well as the runtimes of the parachains) must be compiled
-to WebAssembly (Wasm) blobs. The Polkadot runtime "plugs-in" to the Polkadot Host
- and will be swappable through the governance mechanism.
+## Diagram
 
-The image below is taken from the [slide deck](https://slides.com/paritytech/paritysubstrate#/8) that Gavin Wood presented on Substrate and demonstrates visually the 4 layers of the Polkadot stack.
+Below is a diagram that displays the Polkadot host surrounding the Polkadot
+runtime. Think of the runtime (in white) as a component that can be inserted,
+swapped out, or removed entirely. While the parts in grey are stable and can not
+change without an explicit hard fork.
 
-![Polkadot Host](assets/PH.png)
+![polkadot host](assets/updated_pre.png)
 
 ## Resources
 
