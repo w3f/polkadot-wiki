@@ -134,7 +134,8 @@
         "ids": [
           "maintain-sync",
           "maintain-networks",
-          "maintain-wss"
+          "maintain-wss",
+          "maintain-errors"
         ]
       },
       {
@@ -196,6 +197,7 @@
         "type": "subcategory",
         "label": "What to Break",
         "ids": [
+          "mirror-maintain-errors",
           "kusama-bug-bounty",
           "kusama-adverserial-cheatsheet"
         ]
