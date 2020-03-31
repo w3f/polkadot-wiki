@@ -221,7 +221,7 @@ with the password.
 
 ## Parity Signer
 
-Parity Signer is a secure way of storing your dots on an air-gapped device.
+Parity Signer is a secure way of storing your DOTs on an air-gapped device.
 
 __Coming soon!__ 
 
