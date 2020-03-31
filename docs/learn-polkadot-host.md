@@ -23,7 +23,7 @@ details of the interactions between the host and the runtime, please see the
 - State storage and the storage trie along with the database layer.
 - Consensus engine for GRANDPA and BABE (some logic exists on the runtime).
 - Wasm interpreter and virtual machine.
-- Low level primitives for a blockchain, such a cryptographic primitives like hash
+- Low level primitives for a blockchain, such as cryptographic primitives like hash
 functions.
 
 A compiled Polkadot runtime, a blob of Wasm code, can be uploaded into the
