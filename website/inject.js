@@ -1,18 +1,27 @@
 const replace = require('replace-in-file');
+const yargs = require('yargs');
 const replacements = require("./inject-dict.json");
 const api = require("@polkadot/api");
 
-/**
- * Process input args
- * 
- * args[0]: node URL, must be websocket URL
- */
-const args = process.argv.slice(2);
-const node = (undefined !== args[0]) ? args[0] : 'wss://kusama-rpc.polkadot.io/';
+const argv = yargs
+    .option('node', {
+        alias: 'n',
+        description: 'Websocket node URL to query',
+        type: 'string',
+    })
+    .option('dry', {
+        alias: 'd',
+        description: 'Dry run - check values before replacing',
+        type: 'boolean',
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
+
+const node = (argv.node || 'wss://kusama-rpc.polkadot.io/');
 console.log("Connecting to node " + node);
 
 let filledDict = {};
-let resolved = 0;
 
 // Connect to a node
 const wsProvider = new api.WsProvider(node);
@@ -65,24 +74,23 @@ let v = setInterval(function () {
         console.log("Replacement configuration: ");
         console.log(options);
 
-        try {
-            let results = replace.sync(options);
-            
-            const changedFiles = results
-                .filter(result => result.hasChanged)
-                .map(result => result.file);
-            
-            const filesThatNeedToChange = results
-                .filter(result => result.file.indexOf("cumulus") > -1)
-                .map(result => result.file);
-            
-            console.log('Modified files:', changedFiles);
-            console.log('Files I wanted to change: ', filesThatNeedToChange);
+        if (!argv.dry) {
+            try {
+                let results = replace.sync(options);
+                
+                const changedFiles = results
+                    .filter(result => result.hasChanged)
+                    .map(result => result.file);
+                console.log('Modified files:', changedFiles);
 
+                process.exit(0);
+            } catch (error) {
+                console.error('Error occurred:', error);
+                process.exit(1);
+            }
+        } else {
+            console.log("Dry run complete, exiting.");
             process.exit(0);
-        } catch (error) {
-            console.error('Error occurred:', error);
-            process.exit(1);
         }
     }
 }, 1000);
