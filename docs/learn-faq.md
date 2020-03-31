@@ -81,6 +81,88 @@ This script helps you quickly identify which validator is the lowest-staked and 
 
 It is also possible to copy both `own stake` and `other stake` on the Staking page to a spreadsheet and then do a simple calculation.
 
+## Myths
+
+Below we present some myths about Polkadot that we've seen in the community.
+We're not absolutely sure what the origin of these myths are -- maybe they arise
+from people who have not taken the time to understand Polkadot. Regardless,
+we have collected a rebuttal for each of the common myths below. Feel free to
+link out to this page if you see one of these myths propagated on discussion platforms
+of the internet. 
+
+### Polkadot is an "Ethereum-killer"
+
+Some people position blockchains antagonistically against each other, claiming
+that all of the new blockchains are by default "Ethereum killers". The line of
+thinking is that there is a limited market share for blockchain platforms and
+therefore all projects are competing and vying for the lion's share. There may
+be some truth to this in the wide ecosystem of blockchain projects, but not all
+of them.
+
+Polkadot and Ethereum have significant differences in their technology, governance
+ideology, and community that instead forms a complimentary whole instead of a
+divided pie. Polkadot is a network for parachain applications, which may likely
+be domain-specific blockchains. Ethereum is instead a smart contract chain that
+focuses on maximizing the decentralization of its architecture. For more on the
+differences between the two chains see the more comprehensive [comparison article](learn-comparison-ethereum).
+
+In order to be an Ethereum killer, Polkadot would have to be actively working
+against the progression of the Ethereum technology and ecosystem, which is not
+true. Instead, Web3 Foundation, the holders of the treasury from the DOT sales, 
+promotes and funds technology that benefits the web3 world as a whole.
+
+### On-chain governance is flawed, it can never work
+
+Blockchain governance is a very young field, and no one knows what works and
+what doesn't -- yet. Polkadot's governance arises from a couple key observations,
+1) blockchains need some way to adapt and evolve and 2) the only measure of value
+that is intrinsic to a blockchain is its native coin and therefore the best
+measure of stakeholders for the system are the token holders. There are of
+course caveats to the above two observations and that is why Polkadot's governance
+is still in its experimental phases. Polkadot takes the approach that it will try
+out best methods and observe how they work and tweak them until they're optimal.
+
+### Polkadot's governance is plutocratic
+
+Since Polkadot uses "coin-voting" that allows token holders to vote based on the
+amount of their holdings, some claim that Polkadot must be plutocratic. 
+
+However, Polkadot's governance is actually more fine-grained than this and has
+built in mechanisms that increase resiliency over plutocracy and cartels. One of
+these mechanisms is the council, an elected body that can make motions that will
+be voted on as refernda with a bias toward passing. The council acts as the voice
+for passive token holders or other users of the system that cannot vote. Another
+mechanism that can be employed by any token holder is called _conviction voting_
+and allows any toke holder to amplify their vote for stronger voting power. These
+mechanisms, and more, provide counter weights to the tendency for a simple token
+voting system to devolve into a plutocracy.
+
+For more on Polkadot's governance please see the [governance page](learn-governance).
+
+### Eth2.0 is better because it has 200,000+ validators and Polkadot has 1000
+
+The answer to this myth is still at this point totally unclear. The argument is
+that Eth2.0 will be more decentralized because it supports more validators than
+Polkadot. On Eth2.0, the barriers to entry for being a validator can be lower
+because the requirement is only 32 ETH, while on Polkadot it can be many multiples
+of this. On the flip side Polkadot has a more robust nomination system for electing
+the validator set that Eth2.0 lacks. It is still uncertain whether a decentralized
+network can support the network bandwidth and overhead of consensus messages being
+gossiped among hundreds of thousands of nodes. Polkadot's estimation of 1000
+validators is a more realistic estimation and if its possible to scale to more
+then it's possible for on-chain governance to enable it in the future.
+
+### The auction mechanism for parachains implies they are ephemeral
+
+The myth is that the parachain auction mechanism for Polkadot implies that
+all applications will be ephemeral, or, worse, eventually be bought out by more
+wealthy bidders. 
+
+The resolution of this myth is to understand Polkadot's tiered applications offering
+that includes parachains, parathreads, and smart contracts. Parachains can
+move to being a parathread and only producing a block when necessary. Parachain
+slots are only needed by the applications with heaviest load that need block-by-block
+aligned production with the Relay Chain.  
 
 ## Answered by Gav series
 
