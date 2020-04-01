@@ -1,10 +1,10 @@
 ---
-id: maintain-guides-society
-title: Participate in Society
-sidebar_label: Participate in Society
+id: maintain-guides-society-kusama
+title: Join Kappa Sigma Mu
+sidebar_label: Join Kappa Sigma Mu
 ---
 
-Society is an economic game to incentivize users to join the society that coordinates around whatever the rules are decided to be. The members of the society are incentivized to participate in society via the rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to have multiple societies in the future through a runtime upgrade.
+Kappa Sigma Mu is a membership club using the Substrate Society pallet. It is an economic game to incentivize users to join the society that coordinates around whatever the rules are decided to be. The members of the society are incentivized to participate in society via the rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to have multiple societies in the future through a runtime upgrade.
 
 ![Society Dashboard](assets/society/dashboard.jpg)
 
@@ -109,11 +109,27 @@ In this example, a candidate will be approved to join the society since member 3
 >
 > The maximum number of strikes you can have is 10 in Kusama.
 
-These slashed funds will be given to a random member who voted the same as the selected vote as a reward for participating in the vote.
+These slashed funds (It is set as `2` KSM currently) will be given to a random member who voted the same as the selected vote as a reward for participating in the vote. It is also required to lock-up for some period of time before the member can get it.
+
+#### Lock-up Time
+
+It would take the number of members of the society as the variable to determine how many blocks you have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula is available [here](https://github.com/paritytech/substrate/blob/master/frame/society/src/lib.rs#L1588) if you would like to have a look.
+
+Example: 
+
+```
+Let's assume we have 5 members in the society.
+
+lock_duration = 100 - 50,000 / (5 + 500)
+lock_duration * 15,552,000 (Blocks)
+lock_duration = 155,520 Blocks ~ 11 days
+```
+
+Based on the above calculation, it is required to wait close to 11 days to get the slashed funds.
 
 If the candidate wins the vote, they receive their bid reward as a future payout. If the bid was placed by a voucher, they will get the reward that was set during vouching with the remainder given to the candidate.
 
-If the candidate loses the vote, they are suspended and it is up to the suspension judgment origin to determine if the candidate should go through the bidding process again, should be accepted into the membership society, or rejected and their deposit slashed.
+If the candidate loses the vote, they are suspended and it is up to the founder of the society (Suspension Judgment Origin) to determine if the candidate should go through the bidding process again, should be accepted into the membership society, or rejected and their deposit slashed. 
 
 
 ### 3. Member Phase
@@ -126,7 +142,7 @@ Once you become a member of the society, you will get back the deposit that you 
 >
 > approve - Yes / No
 
-Second, you will need to claim your payout manually by calling `payout()` after a certain period of time.
+Second, you will need to claim your payout manually by calling `payout()` after the lock-up time. It is the same as the above mentioned lock-up formula.
 
 ![Society Payout](assets/society/payout.jpg) 
 
