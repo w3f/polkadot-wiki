@@ -4,7 +4,7 @@ title: Participate in Society
 sidebar_label: Participate in Society
 ---
 
-Society is an economic game to incentivize users to join the society that coordinates around whatever the rules are decided to be. The members of the society are incentivized to participate in society via the rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to have multiple societies in the future through the runtime upgrade.
+Society is an economic game to incentivize users to join the society that coordinates around whatever the rules are decided to be. The members of the society are incentivized to participate in society via the rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to have multiple societies in the future through a runtime upgrade.
 
 ![Society Dashboard](assets/society/dashboard.jpg)
 
