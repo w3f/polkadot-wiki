@@ -113,7 +113,7 @@ The slashed funds (2 KSM currently) will be given to a random member who voted t
 
 #### Lock-up Time
 
-It would take the number of members of the society as the variable to determine how many blocks you have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula is available [here](https://github.com/paritytech/substrate/blob/master/frame/society/src/lib.rs#L1588) if you would like to have a look.
+It would take the number of members of the society as the variable to determine how many blocks you have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula is defined [in the society pallet](https://github.com/paritytech/substrate/blob/master/frame/society/) if you would like to have a look.
 
 Example: 
 
