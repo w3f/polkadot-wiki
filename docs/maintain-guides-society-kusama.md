@@ -8,7 +8,7 @@ Kappa Sigma Mu is a membership club using the Substrate Society pallet. It is an
 
 ![Society Dashboard](assets/society/dashboard.jpg)
 
-Before joining the society, let's take a brief look at the [Society UI](https://polkadot.js.org/apps/#/society) on PolkadotJS apps and read through all the  [rules](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) to become a member.
+Before joining the society, let's take a brief look at the [Society UI](https://polkadot.js.org/apps/#/society) on PolkadotJS apps and read through all the [rules](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) to become a member.
 
 ## UI Overview
 
