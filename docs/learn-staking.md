@@ -107,9 +107,15 @@ Validator pools with larger total stake backing them will get slashed more harsh
 The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
 
 * Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
+<<<<<<< HEAD
 * Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake and chills.
 * Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake and chills.
 * Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator and chills.
+=======
+* Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake.
+* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake.
+* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator.
+>>>>>>> 98672631f903d2d02568784cb3dce9a4faa81e03
 
 Let's look at these offences in a bit more detail.
 
