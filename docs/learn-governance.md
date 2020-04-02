@@ -213,7 +213,7 @@ The conviction multiplier adds an extra vote every time the lock period doubles.
 | 32  | 6   |
 
 Based on the genesis runtime, the maximum number of lock periods is set to 6 and the lock period is
-30 days.
+30 days on Polkadot and eight days on Kusama.
 
 #### Adaptive Quorum Biasing
 
@@ -226,7 +226,7 @@ against it.
 
 Let's use the above image as an example.
 
-If a publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66%
+If a publicly submitted referendum only has 25% turnout, the tally of "aye" votes has to reach 66%
 for it to pass since we applied `Positive Turnout Bias`.
 
 In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that
