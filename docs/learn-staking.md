@@ -87,7 +87,9 @@ Controller and Stash account keys can be either sr25519 or ed25519. For more on 
 
 ## Validators and nominators
 
-Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the STF of parachains, and possibly some other responsibilities regarding data availability and XCMP. Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
+Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of parachains, and possibly some other responsibilities regarding data availability and [XCMP](learn-xcmp). Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
+
+> Note that a nominator still has to interact with the network at least once in 84 days on Polkadot or 21 days on Kusama to claim rewards. The rewards are not distributed automatically at this point. See [Reward Distribution](#reward-distribution).
 
 ![staking](assets/NPoS/article-2.png)
 
@@ -105,9 +107,9 @@ Validator pools with larger total stake backing them will get slashed more harsh
 The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
 
 * Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
-* Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake.
-* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake.
-* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator.
+* Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake and chills.
+* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake and chills.
+* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator and chills.
 
 Let's look at these offences in a bit more detail.
 
@@ -123,7 +125,7 @@ Here is the formula for calculation:
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
-Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below), together with proxy nodes to avoid being DDoSed when your validator node's IP address is exposed. A comprehensive guide on secure validator setup is in progress with the draft available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
+Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below), together with [proxy nodes](maintain-guides-how-to-setup-sentry-node) to avoid being DDoSed when your validator node's IP address is exposed. A comprehensive guide on secure validator setup is in progress with the draft available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
 
 ### GRANDPA Equivocation
 
