@@ -109,7 +109,7 @@ In this example, a candidate will be approved to join the society since member 3
 >
 > The maximum number of strikes you can have is 10 in Kusama.
 
-These slashed funds (It is set as `2` KSM currently) will be given to a random member who voted the same as the selected vote as a reward for participating in the vote. It is also required to lock-up for some period of time before the member can get it.
+The slashed funds (2 KSM currently) will be given to a random member who voted the same as the selected vote as a reward for participating in the vote. The reward is escrowed for some period of time - see below.
 
 #### Lock-up Time
 
