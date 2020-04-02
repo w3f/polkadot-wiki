@@ -128,7 +128,7 @@ Result = 1% * 15,552,000 ~ 11 days
 
 Based on the above calculation, it is required to wait close to 11 days to get the slashed funds.
 
-If the candidate wins the vote, they receive their bid reward as a future payout. If the bid was placed by a voucher, they will get the reward that was set during vouching with the remainder given to the candidate.
+If the candidate wins the vote, they receive their bid reward as a future payout. If the bid was placed by a voucher, they will get the reward that was set during vouching with the remainder given to the candidate - both escrowed for some time.
 
 If the candidate loses the vote, they are suspended and it is up to the founder of the society (Suspension Judgment Origin) to determine if the candidate should go through the bidding process again, should be accepted into the membership society, or rejected and their deposit slashed. 
 
