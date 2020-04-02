@@ -4,7 +4,9 @@ title: Be a Nominator (Kusama)
 sidebar_label: Nominator Guide
 ---
 
-## Step 1: Bond your tokens
+# Using Polkadot UI
+
+### Step 1: Bond your tokens
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
@@ -35,3 +37,65 @@ Select them, confirm the transaction, and you're done - you are now nominating. 
 ### Step 3: Stop nominating
 
 At some point, you might decide to stop nominating one or more validators. You can always change who you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions are available [here](maintain-guides-how-to-unbond).
+
+# Using Command-Line Interface (CLI)
+
+Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to the PolkadoJS dashboard.
+
+### Step 1: Install @polkadot/api-cli
+
+We assume you have installed [NodeJS with npm](https://nodejs.org). Run the following command to install the `@polkadot/api-cli` globally:
+
+```bash
+npm install -g @polkadot/api-cli
+```
+
+### Step 2. Bond your KSM
+
+Executing the following command:
+
+```bash
+polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
+```
+
+`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. Stash and Controller can be the same address but it is not recommended since it defeats the security of the two-account staking model.
+
+`NUMBER_OF_TOKENS`: The number of KSM / DOT you would like to stake to the network. **Note**: KSM has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM = 1,000,000,000,000 units.
+
+`REWARD_DESTINATION`:
+- `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
+- `Stash` - Pay into the stash account, not increasing the amount at stake.
+- `Controller` - Pay into the controller account.
+
+Example:
+
+```bash
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io/
+```
+
+Result:
+```bash
+...
+...
+    "status": {
+      "InBlock": "0x0ed1ec0ba69564e8f98958d69f826adef895b5617366a32a3aa384290e98514e"
+    }
+```
+
+You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
+
+
+### Step 3. Nominate a validator
+
+
+To nominate a validator, you can execute the following command:
+
+```bash
+polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRESS"]' --ws WS_ENDPOINT
+```
+
+```bash
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://kusama-rpc.polkadot.io/
+```
+
+After a few seconds, you should see the hash of the transaction and if you would like to verify the nomination status, you can check that on the PolkadotJS UI as well.

@@ -25,10 +25,6 @@
         "title": "사례들",
         "sidebar_label": "사례들"
       },
-      "build-wallet-integration": {
-        "title": "Wallet integration",
-        "sidebar_label": "Wallet integration"
-      },
       "build-hackathon": {
         "title": "해커톤",
         "sidebar_label": "해커톤"
@@ -36,6 +32,14 @@
       "build-index": {
         "title": "개발자 포탈",
         "sidebar_label": "개발자 포탈"
+      },
+      "build-node-interaction": {
+        "title": "Node Interaction",
+        "sidebar_label": "Node Interaction"
+      },
+      "build-node-management": {
+        "title": "Node Management",
+        "sidebar_label": "Node Management"
       },
       "build-oracle": {
         "title": "Oracles",
@@ -45,6 +49,10 @@
         "title": "패러체인 개발 키트",
         "sidebar_label": "패러체인 개발 키트"
       },
+      "build-protocol-info": {
+        "title": "Polkadot Protocol Information",
+        "sidebar_label": "Polkadot Protocol"
+      },
       "build-smart-contracts": {
         "title": "스마트 컨트랙트",
         "sidebar_label": "스마트 컨트랙트"
@@ -52,6 +60,10 @@
       "build-tools-index": {
         "title": "툴 목록",
         "sidebar_label": "툴 목록"
+      },
+      "build-transaction-construction": {
+        "title": "Transaction Construction and Signing",
+        "sidebar_label": "Transaction Construction"
       },
       "community": {
         "title": "커뮤니티",
@@ -249,6 +261,10 @@
         "title": "전달자 (Collator)",
         "sidebar_label": "전달자 (Collator)"
       },
+      "maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
+      },
       "maintain-guides-democracy": {
         "title": "Participate in Democracy",
         "sidebar_label": "Participate in Democracy"
@@ -266,8 +282,8 @@
         "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-setup-sentry-node": {
-        "title": "공개용 센트리 노드 구축 방법",
-        "sidebar_label": "센트리노드 구축 방법"
+        "title": "Set Up a Sentry Node - Public Node",
+        "sidebar_label": "Set Up a Sentry Node"
       },
       "maintain-guides-how-to-systemd": {
         "title": "Using systemd for the Validator Node",
@@ -340,6 +356,10 @@
       "mirror-learn-identity": {
         "title": "Identity",
         "sidebar_label": "Identity"
+      },
+      "mirror-maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
       },
       "mirror-maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",

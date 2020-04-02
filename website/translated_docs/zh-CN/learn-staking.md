@@ -194,27 +194,22 @@ Inflation is designed to be 10% in the first year, with validator rewards being 
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)</sup></sub>
+<p style="text-align:center">Source: <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
 
-**x-axis**: amount of DOTs staked
+- **x-axis**: Proportion of DOTs staked
+- **y-axis**: Inflation, annualized percentage
+- **Blue line**: Inflation rewards to stakers
+- **Green line**: Staker rate of return
 
-**y-axis**: the annualized percentage
-
-**Green line**: return rate based on the staking participation
-
-**Blue line**:  how much of the inflation goes to validators versus the treasury
-
-The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to incentivize / disincentivize token holders to participate in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
-
-Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees and we want and to avoid illiquidity on the market.
+The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
 
 For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
 
 ## 为什么参与抵押?
 
-* 当主网上线，接近 ~10% 通胀率
+* 10% inflation/year when the network launches
 * 50% targeted active staking
-* ~20% 年回报
+* ~20% annual return
 
 ## 为什么不参与抵押?
 
@@ -227,5 +222,5 @@ The plan is to start with somewhere between 50 to 100 open validator positions a
 
 ## 资源
 
-* [NPoS 在 Polkadot 怎么运作](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Web3 基金会研究员 Alfonso Cevallos 描述 NPoS 在 Polkadot 的博客文章
-* [设置安全验证人](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
+* [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
+* [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
