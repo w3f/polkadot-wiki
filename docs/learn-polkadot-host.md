@@ -21,7 +21,7 @@ details of the interactions between the host and the runtime, please see the
 
 - Networking components such as Libp2p that facilitates network interactions.
 - State storage and the storage trie along with the database layer.
-- Consensus engine for GRANDPA and BABE (some logic exists on the runtime).
+- Consensus engine for GRANDPA and BABE.
 - Wasm interpreter and virtual machine.
 - Low level primitives for a blockchain, such as cryptographic primitives like hash
 functions.
