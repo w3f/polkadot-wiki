@@ -154,6 +154,16 @@ Chilling is the act of removing a validator from the active validator set, also 
 
 Because every offence regardless of level triggers a chill, and every chill triggers an automatic re-election of a new active validator set, the offending validator is immediately removed from the current set and the next, and someone else takes their place. To re-join, they need to acknowledge the slash and re-announce their candidature.
 
+### Slashing Across Eras
+
+There are 3 main difficulties to account for with slashing in NPoS:
+
+- A nominator can nominate multiple validators and be slashed via any of them.
+- Until slashed, stake is reused from era to era. Nominating with N coins for E eras in a row does not mean you have N*E coins to be slashed - you've only ever had N.
+- Slashable offences can be found after the fact and out of order.
+
+To balance this, we only slash for the maximum slash a participant can receive in some time period, rather than the sum. This ensures protection from overslashing. Likewise, the time span over which maximum slashes are computed are finite and the validator is chilled with nominations withdrawn after a slashing event, as state in the previous section. This prevents rage-quit attacks in which, once caught misbehaving, a participant deliberately misbehaves more because their slashing amount is already maxed out.
+
 ## Reward Distribution
 
 Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.  Polkadot will also produce blocks at approximately six second intervals.
