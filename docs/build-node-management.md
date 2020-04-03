@@ -41,7 +41,7 @@ polkadot export-blocks --from 0 <output_file>
 Use the `--rpc-external` flag to expose RPC ports and `--ws-external` to expose websockets. Not all
 RPC calls are safe to allow and you should use an RPC proxy to filter unsafe calls. Select ports
 with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access, use the
-`--rpcs-cors` and `--ws-cors` options.
+`--rpc-cors` and `--ws-cors` options.
 
 **Execution**
 
