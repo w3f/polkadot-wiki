@@ -150,7 +150,11 @@ If you want to know more details about slashing, please look at our [research pa
 
 ### Chilling
 
-Chilling is the act of removing a validator from the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle. This carries an implied penalty of being unable to earn rewards for the duration of the next era, and requires them to earn back any nominations they may have had before being removed.
+Chilling is the act of removing a validator from the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle.
+
+This may be voluntary and validator-initiated, e.g. if there is a planned outage in the validator's surroundings or hosting provider, and the validator wants to exit to protect themselves against slashing.
+
+When used as part of a punishment, being chilled carries an implied penalty of being unable to earn rewards for the duration of the next era, and forces the validator to earn back any nominations they may have had before being removed.
 
 Because every offence regardless of level triggers a chill, and every chill triggers an automatic re-election of a new active validator set, the offending validator is immediately removed from the current set and the next, and someone else takes their place. To re-join, they need to acknowledge the slash and re-announce their candidature.
 
@@ -245,7 +249,7 @@ please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Ec
 
 ## Why not stake?
 
-* Tokens will be locked for about 12 weeks on Polkadot, seven days on Kusama
+* Tokens will be locked for about 28 days on Polkadot, seven days on Kusama
 * Punishment in case of validator found to be misbehaving (see [#slashing](#slashing))
 
 ## How many validators will Polkadot have?
