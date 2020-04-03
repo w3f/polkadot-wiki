@@ -87,7 +87,7 @@ Below we present some myths about Polkadot that we've seen in the community.
 We're not absolutely sure what the origin of these myths are -- maybe they arise
 from people who have not taken the time to understand Polkadot. Regardless,
 we have collected a rebuttal for each of the common myths below. Feel free to
-link out to this page if you see one of these myths propagated on discussion platforms
+link to this page if you see one of these myths propagated on discussion platforms
 of the internet. 
 
 ### Polkadot is an "Ethereum-killer"
