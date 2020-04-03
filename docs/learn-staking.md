@@ -8,7 +8,7 @@ Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the
 
 The system encourages DOT holders to participate as nominators. Nominators may back up to 16 validators as trusted validator candidates.
 
-Validators assume the role of producing new blocks in BABE, validating parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with their stake.
+Validators assume the role of producing new blocks in [BABE](learn-consensus#babe), validating parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with their stake.
 
 The staking system pays out rewards equally to all validators. Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In this way, the network incents the nomination of lower-staked validators to create an equally-staked validator set.
 
@@ -87,7 +87,7 @@ Controller and Stash account keys can be either sr25519 or ed25519. For more on 
 
 ## Validators and nominators
 
-Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of parachains, and possibly some other responsibilities regarding data availability and [XCMP](learn-xcmp). Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
+Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of parachains, and possibly some other responsibilities regarding data availability and [XCMP](learn-crosschain). Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
 
 > Note that a nominator still has to interact with the network at least once in 84 days on Polkadot or 21 days on Kusama to claim rewards. The rewards are not distributed automatically at this point. See [Reward Distribution](#reward-distribution).
 
@@ -107,15 +107,9 @@ Validator pools with larger total stake backing them will get slashed more harsh
 The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
 
 * Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
-<<<<<<< HEAD
 * Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake and chills.
 * Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake and chills.
 * Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator and chills.
-=======
-* Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake.
-* Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake.
-* Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator.
->>>>>>> 98672631f903d2d02568784cb3dce9a4faa81e03
 
 Let's look at these offences in a bit more detail.
 
@@ -168,7 +162,7 @@ There are 3 main difficulties to account for with slashing in NPoS:
 - Until slashed, stake is reused from era to era. Nominating with N coins for E eras in a row does not mean you have N*E coins to be slashed - you've only ever had N.
 - Slashable offences can be found after the fact and out of order.
 
-To balance this, we only slash for the maximum slash a participant can receive in some time period, rather than the sum. This ensures protection from overslashing. Likewise, the time span over which maximum slashes are computed are finite and the validator is chilled with nominations withdrawn after a slashing event, as state in the previous section. This prevents rage-quit attacks in which, once caught misbehaving, a participant deliberately misbehaves more because their slashing amount is already maxed out.
+To balance this, we only slash for the maximum slash a participant can receive in some time period, rather than the sum. This ensures protection from overslashing. Likewise, the time span over which maximum slashes are computed are finite and the validator is chilled with nominations withdrawn after a slashing event, as stated in the previous section. This prevents rage-quit attacks in which, once caught misbehaving, a participant deliberately misbehaves more because their slashing amount is already maxed out.
 
 ## Reward Distribution
 
