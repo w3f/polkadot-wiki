@@ -317,6 +317,10 @@
         "title": "安全验证人节点",
         "sidebar_label": "安全验证人节点"
       },
+      "maintain-guides-society-kusama": {
+        "title": "Join Kappa Sigma Mu",
+        "sidebar_label": "Join Kappa Sigma Mu"
+      },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",
         "sidebar_label": "验证人付款概述"

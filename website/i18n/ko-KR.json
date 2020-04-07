@@ -317,6 +317,10 @@
         "title": "안전한 검증자 노드",
         "sidebar_label": "안전한 검증자 노드"
       },
+      "maintain-guides-society-kusama": {
+        "title": "Join Kappa Sigma Mu",
+        "sidebar_label": "Join Kappa Sigma Mu"
+      },
       "maintain-guides-validator-payout": {
         "title": "검증자 보상 구조 정리",
         "sidebar_label": "검증자 보상 구조 정리"
