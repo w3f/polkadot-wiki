@@ -6,7 +6,7 @@ sidebar_label: Frequently Asked Questions (FAQs)
 
 _This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
-## Polkadot
+## Polkadot Launch
 
 ### What is the launch process of Polkadot Beta?
 
@@ -44,6 +44,8 @@ a sufficient number of validators have registered and are ready to take over
 the security of the network. This number can be as low as 50 but probably
 closer to 100.
 
+## Validators
+
 ### How do I apply to be a validator?
 
 There is no central authority that decides on validators, so there is no _one_
@@ -68,6 +70,39 @@ cannot acquire the minimum stake from the community, Parity and Web3 Foundation
 run a join program called [Thousand Validators][thousand validators] that will
 nominate validators if they conform to some requirements.
 
+### How are validators rewarded?
+
+Validators are rewarded from the inflation of the Relay Chain, transaction fees,
+and tips. However they only take a percentage of the former two. More details
+can be read on the page for [validator payouts](maintain-guides-validator-payout).
+
+### What is the minimum stake necessary to be elected as an active validator?
+
+The minimum stake that is necessary to be elected as an active validator is
+dynamic and can change over time. It depends not only on how much stake is being
+put behind each validator, but also the size of the active set and how many
+validators are waiting in the pool.
+
+There are a few ways to estimate the minimum stake.
+
+One way, can be to navigate
+to the [Polkadot Apps](https://polkadot.js.org/apps) and click on the Staking
+tab. Scroll all the way down to the bottom and look at the stake backing the
+validator at the end of the list. That's roughly the minimum stake required
+to enter the active set at that era.
+
+You can also use some tools some to perform estimations.
+
+- [Offline Phragmen](https://github.com/kianenigma/offline-phragmen) can provide
+exact results of running an election on the current set of validators using the 
+same Rust code that is ran in Polkadot. 
+
+- [Validator stats script](https://github.com/ansonla3/kusama-validator-stats) can
+give you the estimation that is based on the currently elected set, as well as
+some statistics about Kusama validators.
+
+## Relay Chain
+
 ### What is the expected block time on the Relay Chain?
 
 The Kusama network, an early and unaudited release of the Polkadot code is
@@ -79,6 +114,8 @@ as low as two to three seconds after optimizations, or it may potentially
 increase in order to handle the capacity of the parachain networking in a live
 environment.
 
+## DOTs
+
 ### What is the inflation rate of the DOT?
 
 The inflation rate is 10% per year.
@@ -88,11 +125,25 @@ while another portion may go directly to the treasury. The exact percentage that
 goes into both varies and is based on the amount of DOTs that are staked.
 Please see the article on [inflation](learn-staking#inflation) for more information.
 
-### How are validators rewarded?
+### Can I buy or transfer DOT tokens?
 
-Validators are rewarded from the inflation of the Relay Chain, transaction fees,
-and tips. However they only take a percentage of the former two. More details
-can be read on the page for [validator payouts](maintain-guides-validator-payout).
+Testnet DOT tokens are freely available from a variety of sources. See
+the [DOT page](learn-DOT) for details.
+
+The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network
+launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or
+the [Polkadot Network FAQ](https://polkadot.network/faq/)).  Subscribe to the
+Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further
+updates.
+
+DOT token are not transferrable until the launch of Polkadot Beta is complete.
+Any transfers before that time of DOTs are illegitimate and unauthorized. DOTs
+are currenly represented on Ethereum as the DOT Indicator Token, these cannot be
+moved from the current allocation address. Individuals with an allocation of DOTs
+can always keep a copy of their private key, therefore it is extreme risk for
+individuals to participate in trading of DOTs before Polkadot launch.
+
+## Parachains
 
 ### How do parachain economics work?
 
@@ -102,46 +153,72 @@ Since the collator's job is to continue to give recent state transitions to
 the validators on the relay chain whom validate each transition, the security
 of the parachain and the Polkadot network is completely separate from parachain
 economics. Parachains need collators to continue to progress, so it wouldn't be
-unreasonable to see them incentivize collator nodes in some way but it is completely up to parachain implementers.
+unreasonable to see them incentivize collator nodes in some way but it is completely
+up to parachain implementers.
 
-### What are the transfer fees for Kusama and Polkadot?
+## Networking
 
-It is important to note that the cost of transferring KSM or DOT tokens is dynamic. Currently, the minimum cost of transferring KSM is 0.01 KSM (the base fee), although this can be changed via governance. However, actual transaction fees will vary based on a variety of factors. Specifically, fee calculation follows the following formula:
+### What is libp2p?
 
-```
-base_fee + (tx_length * length_fee) + WeightToFee(weight)
-```
+[Libp2p][libp2p] is a modular and extensible networking stack that is used by
+IPFS, Substrate, and many other projects. It is a collection of peer-to-peer
+protocols for finding peers and connecting to them. It's modules have logic for
+content routing, peer routing, peer discovery, different transports, and NAT
+traversals. It is intended to be used by applications for building large scale
+peer-to-peer networks by only selecting the parts of the protocol suite that are
+needed.
 
-Please see the (Substrate page on fee calculation)[https://substrate.dev/docs/en/next/development/module/fees#fee-calculation] for more detailed information.
+The Rust implementation of the specification was built and primarily maintained
+by a team of contributors at Parity Technologies. The Go and JavaScript versions
+are maintained by Protocol Labs as well as community contributors. It is an open
+source project that is actively developed and expanded on various code repositories
+hosted on [GitHub][libp2p github].
+
+### Does Polkadot use libp2p?
+
+Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol
+that is based on libp2p (specifically the Rust libp2p library). However, Substrate
+uses a mix of standard libp2p protocols and protocols that are homegrown and not
+official libp2p standards. Of the standards protocols, these which are shared
+with other implementations of libp2p such as IPFS, are connection-checking (ping),
+asking for information on a peer (identity), and Kademlia random walks (kad).
+
+Of the protocols that are custom to Substrate, there are the legacy Substrate
+stream, a request-response for getting information on blocks (sync), a light
+client protocol, a notification protocol for transactions, and block announcement.
+For detailed information on how Substrate uses libp2p and the standard and custom
+protocols, please see the [networking documentation][substrate network]. 
+
+### How does libp2p differ from IPFS?
+
+The [Interplanetary Filesystem][ipfs] (IPFS) is a peer-to-peer hypermedia protocol
+used primarily for storage of files. It allows one to upload a file onto the
+network and share it with its content addressable URI. IPFS, like Substrate,
+is an application of libp2p and exists higher on the technology stack. Although
+both IPFS and Substrate use libp2p, it cannot be said that Substrate "uses" IPFS
+since besides sharing the underlying library for networking there is no native
+integration between the two applications.
+
+## Kusama
 
 ### What is the minimum amount of KSM I can have in my account?
 
 It is recommended to always ensure that you keep at least 0.1 KSM in your account in order to avoid the reaping threshold of 0.01 KSM.  If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM.   This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provides dramatic benefits in terms of scalability.
 
-### Can I buy or transfer DOT tokens?
+### What are the transfer fees for Kusama?
 
-Testnet DOT and KSM tokens are freely available from a variety of sources - see the [DOT page](learn-DOT) for details.
+It is important to note that the cost of transferring KSM is dynamic.
+Currently, the minimum cost of transferring KSM is 0.01 KSM (the base fee), although
+this can be changed via governance. However, actual transaction fees will vary
+based on a variety of factors. Specifically, fee calculation follows the following
+formula:
 
-Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.  Upon obtaining Kusama tokens, they are freely transferable.
+```
+base_fee + (tx_length * length_fee) + WeightToFee(weight)
+```
 
-The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)).  Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
-
-Mainnet DOT tokens are not transferrable until mainnet launch, expected in early 2020. Any transfers before that time of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
-
-### What are the ways to find out the minimum stake necessary for the validators?
-
-There are a few ways to estimate it.
-
-- [Offline Phragmen](https://github.com/kianenigma/offline-phragmen)
-
-If you want to know what would be the outcome of the election in the next era, this can provide an estimation result. You can customize parameters such as number of validators to elect, network, and WebSocket endpoint, but it would take some time to build the binary.
-- [Validator stats script](https://github.com/ansonla3/kusama-validator-stats)
-
-This script helps you quickly identify which validator is the lowest-staked and the basic statistics about staking on Kusama.
-
-- [Copy everything from the Staking page](https://polkadot.js.org/apps/#/staking) 
-
-It is also possible to copy both `own stake` and `other stake` on the Staking page to a spreadsheet and then do a simple calculation.
+Please see the [fee calculation][fee calculation] page in the Substrate documentation
+for more detailed information.
 
 
 ## Answered by Gav series
@@ -157,4 +234,8 @@ The "Answered by Gav" series is a collection of posts uploaded to Reddit of ques
 - [How to tackle the concentration risk of Validators in data centers?](https://www.reddit.com/r/dot/comments/bcqwit/answered_by_gav_how_to_tackle_the_concentration/)
 
 
+[fee calculation]: https://substrate.dev/docs/en/next/development/module/fees#fee-calculatio
+[libp2p]: https://libp2p.io
+[libp2p github]: https://github.com/libp2p
+[substrate network]: https://crates.parity.io/sc_network/index.html
 [thousand validators]: https://thousand-validators.kusama.network/#/
