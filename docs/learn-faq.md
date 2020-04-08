@@ -140,6 +140,29 @@ as low as two to three seconds after optimizations, or it may potentially
 increase in order to handle the capacity of the parachain networking in a live
 environment.
 
+### Does Polkadot have smart contracts?
+
+No - and yes. The Polkadot Relay Chain does not implement smart contracts
+natively. The reason for not having smart contracts on the Relay Chain is 
+party of the design philosophy for Polkadot that dictates it should be the 
+minimal logic required.
+
+However, Polkadot will be a platform for other chains that _do_ implement
+smart contracts. It's possible for parachains to enable smart contract functionality
+and then benefit from the security and interoperability features of Polkadot. 
+Additionally, already existing smart contract chains can connect to Polkadot
+as a parachain, or via a bridge. 
+
+### How will the Polkadot Relay Chain connect to external chains in the ecosystem?
+
+One of the cornerstone interoperability technologies being research and developed
+for deployment on Polkadot is cross-chain bridges. Bridges can in a variety
+of flavors with varying levels of trust associated with them. Polkadot is mostly
+researching the trust-minimized flavor that imposes economic costs on the operators
+of the bridge, and therefore makes it economically secure. Bridge efforts are being
+work on in concert with other projects in the ecosystem. Eventually, there
+will be bridges between Polkadot and most of the major chains. 
+
 ## DOTs
 
 ### What is the inflation rate of the DOT?
