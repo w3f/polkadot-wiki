@@ -101,6 +101,32 @@ same Rust code that is ran in Polkadot.
 give you the estimation that is based on the currently elected set, as well as
 some statistics about Kusama validators.
 
+### Why will Polkadot have only 1000 validators while other projects have hundreds of thousands?
+
+Polkadot's goal to have 1000 validators is set to be something that is practically
+achievable in the short term with high confidence of good performance in a live
+environment. Furthermore, validators in Polkadot are not the only stakers, and
+if we consider the number of stakers that can be possible on Polkadot the number
+can scale up to hundreds of thousands. Since validators are performing critical
+consensus work to maintain the security of the chain including all of its shards,
+a more modest number of validators is estimated to start. Upon later improvements,
+such as implementing signature aggregation for finalization messages the number
+of validators could reasonably scale up. However, increasing validators above
+one thousand remains a goal for later iterations of Polkadot.
+
+It is also worth mentioning that one thousand validators is already higher than
+the number of validators of similar PoS chains with comparable levels of economic
+security as Polkadot. The closes contenders are operating with around 150
+validators, while Kusama is running with 180 securely.
+
+Additionally, other projects sometimes have a different definition of _validator_
+that approximates more closely to just remote signing keys without the full
+set-up of a validating node. On Polkadot, each validator is running their own
+validating node and performing full verification of the Relay Chain, voting on
+finality, producing blocks in their decided slots, and verifying parachain state
+transitions. Other projects may consider validators and "validating nodes" as
+separate entities.
+
 ## Relay Chain
 
 ### What is the expected block time on the Relay Chain?
@@ -143,6 +169,40 @@ moved from the current allocation address. Individuals with an allocation of DOT
 can always keep a copy of their private key, therefore it is extreme risk for
 individuals to participate in trading of DOTs before Polkadot launch.
 
+## Governance
+
+### What prevents Polkadot governance from failing?
+
+To date, runtime upgrades have successfully taken place through the governance
+process of Polkadot on the testnets as well as on [Kusama](kusama-index).
+Although the field of on-chain blockchain governance is still new, and we don't
+know exactly what is optimal yet, the governance logic of Polkadot has been
+shown to work in a live economic environment. Since blockchains need a method
+to adapt and evolve, an on-chain governance system was necessary for the long-term
+success of Polkadot. Ultimately, the token holders are the actors that prevent
+Polkadot's governance from failing by using their economic value to vote on
+the progression of the protocol.
+
+### What prevents Polkadot governance from becoming plutocratic?
+
+A savvy reader might have noticed that the answer to the previous question
+endowed the token holder with the ultimate responsibility to ensure that
+Polkadot's governance does not fail. By following the course of this assertion,
+one might assume that Polkadot's governance is susceptible to becoming ruled
+by a few large token holders (called _whales_ in trading parlance) and therefore
+being a mere plutocracy. 
+
+There are a couple further mechanisms that are built-in to the governance system
+to resist this plutocratic tendency. One of these mechanisms is called conviction
+voting, and imbues greater voting power to token holders who are willing to lock
+their tokens on the protocol for longer lengths of time to display _conviction_
+in a vote. Conviction voting could allow a highly determined minority to overrule
+the vote of an apathetic majority in certain situations. Another mechanism is
+known as Adaptive Quorum Biasing, and this makes it so that proposals have a
+varying threshold for approval or rejction based on what part of the governance
+protocol that the proposal originated in. For details on the subtleties of
+Polkadot's governance system, please see the [governance page](learn-governance).
+
 ## Parachains
 
 ### How do parachain economics work?
@@ -155,6 +215,21 @@ of the parachain and the Polkadot network is completely separate from parachain
 economics. Parachains need collators to continue to progress, so it wouldn't be
 unreasonable to see them incentivize collator nodes in some way but it is completely
 up to parachain implementers.
+
+### Are parachains ephemeral? What happens when a parachain loses the next auction?
+
+Parachains are not ephemeral. As long as someone is keeping the data for a
+parachain, the parachain can move between being a parachain, a parathread, or
+a separate sovereign chain at different points of its lifetime. Especially
+with parathreads, parachains can be decomissioned to only produce blocks when
+their usage and throughput makes it necessary.
+
+When a parachain loses an auction for renewal, that parachain has a few options.
+In most cases, becoming a parathread instead would be a suitable choice. Parathreads
+are still secured by the Relay Chain, but don't need to hold a parachain slot
+and can produce a block when its economically feasible for them. For more on
+parachains please see the [parachains page](learn-parachains) and for more on
+parathreads see [here](learn-parathreads).
 
 ## Networking
 
