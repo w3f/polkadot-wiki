@@ -26,13 +26,15 @@ Another type of node is a **light node**. A light node has only the runtime and 
 
 > Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
 
-- Type terminal in the iOS searchbar/searchlight or CMD+Spacebar to open the 'terminal' application
-- Install Rust in your terminal by running: 'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
-- Once Rust is installed, run the following command to clone and build the kusama code: git clone https://github.com/paritytech/polkadot kusama
+- Type terminal in the ios searchbar/searchlight to open the 'terminal' application
+- Install Homebrew within the terminal by running:`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+- Then run: `brew install openssl cmake llvm`
+- Install Rust in your terminal by running: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Once Rust is installed, run the following command to clone and build the kusama code: `git clone https://github.com/paritytech/polkadot kusama
 cd kusama
 ./scripts/init.sh
-cargo build –release
-- Run the following command to start your node:'./target/release/polkadot --name "My node's name"'
+cargo build –release`
+- Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 
