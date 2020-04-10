@@ -59,7 +59,7 @@ Another type of node is a **light node**. A light node has only the runtime and 
 > Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
 
 - Download Polkadot binary by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.28/polkadot -o polkadot`
-- Run the following: `sudo chmod +x polkdadot`
+- Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
