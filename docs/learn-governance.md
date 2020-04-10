@@ -281,15 +281,16 @@ election and increase over the course of 9 months to 24 people (roughly one extr
 on every two weeks). All members have a fixed term (1 year). Council members can be removed early
 only by a referendum.
 
-To elect a new council member, Polkadot employs `approval voting` method to allow token holders
-that choose a list of candidates they want to support in equal weight and the one with the most
-approval votes wins the election, while top-N runners-up remain on the candidates' list for next
-election.
+To elect a new council member, Polkadot employs the same election scheme as used
+for choosing the active set of validators, a [Phragmen election][phragmen]. The
+election also chooses a set number of runners up (currently seven in Kusama) that
+will remain in the queue with their votes intact.
 
-As opposed to a "first past the post", where voters must decide only on a single candidate chosen
-from a list, [approval voting](https://en.wikipedia.org/wiki/Approval_voting) is a more expressive
-way to indicate voters' views. Token holders can treat it as Boolean voting to support as many
-candidates as they want.
+As opposed to a "first past the post", where voters must decide only on a single
+candidate chosen from a list, a Phragmen election is a more expressive
+way to indicate voters' views. Token holders can treat it as Boolean voting to
+support as many candidates as they want. The election algorithm will find the
+fair winners.
 
 Let's take a look at the example below.
 
@@ -357,3 +358,5 @@ under urgent circumstances.
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+
+[phragmen]: learn-phragmen
