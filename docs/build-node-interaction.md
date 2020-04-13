@@ -166,10 +166,13 @@ import requests
 import json
 
 url = 'http://127.0.0.1:8080/tx/'
-response = requests.post(url, data='{"tx": "0x..."}')
-if response.ok:
-	txhash = json.loads(response.text)
-	print(txhash)
+tx_headers = {'Content-type' : 'application/json', 'Accept' : 'text/plain'}
+response = requests.post(
+	url,
+	data='{"tx": "0xed0...000"}', # A serialized tx.
+	headers=tx_headers
+)
+tx_response = json.loads(response.text)
 ```
 
 If successful, this endpoint returns a JSON with the transaction hash. In case of error, it will
