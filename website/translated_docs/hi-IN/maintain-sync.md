@@ -65,7 +65,7 @@ Another type of node is a **light node**. A light node has only the runtime and 
 
 ## Get Substrate
 
-Follow instructions as outlined [here](https://substrate.dev/docs/en/getting-started/installing-substrate) - note that Windows users will have their work cut out for them. It's better to instead use a virtual machine.
+Follow instructions as outlined [here](https://substrate.dev/docs/en/overview/getting-started) - note that Windows users will have their work cut out for them. It's better to instead use a virtual machine.
 
 Test if the installation was successful by running `cargo --version`.
 
