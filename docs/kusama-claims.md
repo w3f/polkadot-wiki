@@ -51,7 +51,7 @@ cargo install --git https://github.com/alexcrichton/wasm-gc
 
 Alternatively, you can build `subkey` from the source code.
 
-1. Follow the build instructions for [Substrate](https://github.com/paritytech/substrate#6-building).
+1. Follow the build instructions for [Substrate](https://substrate.dev/docs/en/overview/getting-started/#substrate).
 2. When building, only build `subkey` by typing `cargo build -p subkey`.
 3. The executable is `./target/debug/subkey`.
 
