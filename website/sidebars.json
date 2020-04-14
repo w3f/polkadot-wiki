@@ -57,7 +57,6 @@
         "ids": [
           "learn-accounts",
           "learn-architecture",
-          "learn-availability",  
           "learn-security",
           "learn-consensus",
           "learn-governance",
@@ -75,6 +74,7 @@
         "label": "Advanced",
         "ids": [
           "learn-staking",
+          "learn-availability",  
           "learn-randomness",
           "learn-crosschain",
           "learn-spree",
