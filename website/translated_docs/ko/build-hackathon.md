@@ -54,7 +54,7 @@ Coming soon.
 
 ## 참고 자료들
 
-- [섭스트레이트 개발자 허브](https://docs.substrate.dev)
+- [섭스트레이트 개발자 허브](https://substrate.dev/docs/en/)
 
 ## Support / Contact
 
