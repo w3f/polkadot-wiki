@@ -10,16 +10,17 @@ _This FAQ focuses on technical questions for users interested in developing appl
 
 ### What is the launch process of Polkadot Beta?
 
-The network will launch first in as a Proof-of-Authority (PoA) chain, with governance
-controlled by the single Sudo (super-user) account, and functionality restricted to disallow
-transfers of funds. 
+The Polkadot network will launch first in as a Proof-of-Authority (PoA) chain.
+During this time, governance will be controlled by the single Sudo (super-user)
+account, and functionality will be restricted to (among other things) disallow
+the transfer of funds. 
 
-During this time, validator will be able to start joining the network and signalling
+During this time, validators can start joining the network by signalling
 their intention to participate in consensus. When a sufficient number of validator
 are sourced from the community, the Sudo account will initiate the transition
 of the chain security from PoA to Proof-of-Stake (PoS). After this happens,
-the first validator elections will begin and the chain is secured by the
-economic stake that is bonded by validators and nominators.
+the first validator elections will begin and the chain  will be going forward 
+secured by the economic stake that is bonded by validators and nominators.
 
 After the chain has been secured by the decentralized community of validators,
 the next step is to transition the governance of the chain into the hands of the
@@ -32,31 +33,31 @@ The final step to transition to full-functioning Polkadot is the enabling of
 transfer functionality. The community will need to propose a new upgrade and vote
 upon it in order to accomplish this. If the vote to enable transfers passes, then
 it will be enacted shortly thereafter. When this takes place, Polkadot will
-move out of it's Beta release state.
+be fully live and move out of it's Beta release label.
 
 ### How many validators will be validating at Polkadot Beta launch?
 
-Initially only a few authority validators will be securing the network. However,
+Initially only a few authorized validators will be securing the network. However,
 as [detailed in the answer above](#what-is-the-launch-process-of-polkadot-beta),
-the network will right away be available for vaidators to start registering
-their intentions. The transition to Proof-of-Stake will largely depend on when
-a sufficient number of validators have registered and are ready to take over
-the security of the network. This number can be as low as 50 but probably
-closer to 100.
+the network will right away be available to vaidators that want to register
+their intention to validate. The transition to Proof-of-Stake will largely
+depend on when a sufficient number of validators have registered and are ready
+to take over the security of the network. This number can be as low as 50 but
+probably closer to 100.
 
 ## Validators
 
 ### How do I apply to be a validator?
 
-There is no central authority that decides on validators, so there is no _one_
-application that you can fill out. Since becoming a validator is permissionless,
-in order to become one you must only set up a validator node and register
-your intention to validate on chain. For detailed instruction on how to do this
-you can consult the [wiki guide](maintain-guides-how-to-validate-kusama.md) on
-validating for Kusama.
+There is no central authority that decides on validators, so there is not per se
+an _application_ that you can fill out. Registering as a validator is
+permissionless, in order to become one you must only set up a validator node and
+mark your intention to validate on chain. For detailed instruction on how to do
+this you can consult the [wiki guide](maintain-guides-how-to-validate-kusama.md)
+on validating for Kusama.
 
-However, not that because you've set up a validator and have registered your
-intention does not mean that you will be included in the _active set_ right
+However, once you've set up a validator and have registered your intention it
+does not mean that you will be included in the _active set_ right
 away. The validators are elected to the active set based on the results of an
 election algorithm known as [Phragmen's method](learn-phragmen). Phragmen's
 tries to accomplish two things, 1) select `n` members from a larger set based
@@ -67,8 +68,8 @@ You will likely want to campaign your validator to the community in order to
 get more backing. You are looking for _nominators_ that will put up their tokens
 to increase the stake for your validator. Besides this, for validators who
 cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-run a join program called [Thousand Validators][thousand validators] that will
-nominate validators if they conform to some requirements.
+run a joint program called [Thousand Validators][thousand validators] that will
+nominate validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
@@ -114,14 +115,14 @@ such as implementing signature aggregation for finalization messages the number
 of validators could reasonably scale up. However, increasing validators above
 one thousand remains a goal for later iterations of Polkadot.
 
-It is also worth mentioning that one thousand validators is already higher than
+It is also worth mentioning that one thousand validators is more than
 the number of validators of similar PoS chains with comparable levels of economic
-security as Polkadot. The closes contenders are operating with around 150
-validators, while Kusama is running with 180 securely.
+security as Polkadot. The closest contenders are operating with around 150
+validators, while Kusama is running with 180 securely as of April 2020.
 
 Additionally, other projects sometimes have a different definition of _validator_
-that approximates more closely to just remote signing keys without the full
-set-up of a validating node. On Polkadot, each validator is running their own
+that approximates more closely to remote signing keys without the full
+operation of a validating node. On Polkadot, each validator is running their own
 validating node and performing full verification of the Relay Chain, voting on
 finality, producing blocks in their decided slots, and verifying parachain state
 transitions. Other projects may consider validators and "validating nodes" as
@@ -145,23 +146,27 @@ environment.
 No - and yes. The Polkadot Relay Chain does not implement smart contracts
 natively. The reason for not having smart contracts on the Relay Chain is 
 party of the design philosophy for Polkadot that dictates it should be the 
-minimal logic required.
+minimal logic required to accomplish its job.
 
 However, Polkadot will be a platform for other chains that _do_ implement
 smart contracts. It's possible for parachains to enable smart contract functionality
 and then benefit from the security and interoperability features of Polkadot. 
 Additionally, already existing smart contract chains can connect to Polkadot
-as a parachain, or via a bridge. 
+as a parachain, or via a bridge.
+
+While the Polkadot Relay Chain does not implement smart contracts directly,
+undoubtedly there will be parachains that do. So it's better to say that the 
+Polkadot _ecosystem_ has smart contracts versus "Polkadot has smart contracts."
 
 ### How will the Polkadot Relay Chain connect to external chains in the ecosystem?
 
 One of the cornerstone interoperability technologies being research and developed
-for deployment on Polkadot is cross-chain bridges. Bridges can in a variety
-of flavors with varying levels of trust associated with them. Polkadot is mostly
+for deployment on Polkadot is cross-chain bridges. Bridges come in a variety
+of flavors with varying levels of trust associated with them. Polkadot is predominantly
 researching the trust-minimized flavor that imposes economic costs on the operators
 of the bridge, and therefore makes it economically secure. Bridge efforts are being
 work on in concert with other projects in the ecosystem. Eventually, there
-will be bridges between Polkadot and most of the major chains. 
+will be bridges between Polkadot and most of the other major chains. 
 
 ## DOTs
 
@@ -196,33 +201,38 @@ individuals to participate in trading of DOTs before Polkadot launch.
 
 ### What prevents Polkadot governance from failing?
 
-To date, runtime upgrades have successfully taken place through the governance
-process of Polkadot on the testnets as well as on [Kusama](kusama-index).
-Although the field of on-chain blockchain governance is still new, and we don't
-know exactly what is optimal yet, the governance logic of Polkadot has been
-shown to work in a live economic environment. Since blockchains need a method
-to adapt and evolve, an on-chain governance system was necessary for the long-term
-success of Polkadot. Ultimately, the token holders are the actors that prevent
-Polkadot's governance from failing by using their economic value to vote on
-the progression of the protocol.
+Polkadot's governance has already been shown to work, examples of which can by
+found in the runtime upgrades that have successfully taken place through on the 
+testnets as well as in a real economic environment on [Kusama](kusama-index).
+
+It is fair to say that the field of on-chain blockchain governance is still new,
+and no one can claim to know exactly what is the optimal version of on-chain
+governance yet. However, Polkadot takes a brave step forward in pioneering
+thought-through mechanisms for evolving a blockchain.
+
+Blockchains need a method to adapt and evolve. Therefore, an on-chain governance
+system was necessary for the long-term success of Polkadot. Ultimately, it is
+the token holders that are resonsible for preventing Polkadot's governance from
+failing by using their economic value and conviction to sway the progression of
+the protocol.
 
 ### What prevents Polkadot governance from becoming plutocratic?
 
 A savvy reader might have noticed that the answer to the previous question
 endowed the token holder with the ultimate responsibility to ensure that
-Polkadot's governance does not fail. By following the course of this assertion,
+Polkadot's governance does not fail. By following the train of this assertion,
 one might assume that Polkadot's governance is susceptible to becoming ruled
 by a few large token holders (called _whales_ in trading parlance) and therefore
-being a mere plutocracy. 
+become a mere plutocracy (rule of the rich).
 
 There are a couple further mechanisms that are built-in to the governance system
 to resist this plutocratic tendency. One of these mechanisms is called conviction
 voting, and imbues greater voting power to token holders who are willing to lock
-their tokens on the protocol for longer lengths of time to display _conviction_
+their tokens on the protocol for longer lengths of time. Longer lock-ups display _conviction_
 in a vote. Conviction voting could allow a highly determined minority to overrule
 the vote of an apathetic majority in certain situations. Another mechanism is
 known as Adaptive Quorum Biasing, and this makes it so that proposals have a
-varying threshold for approval or rejction based on what part of the governance
+varying threshold for approval or rejection based on what part of the governance
 protocol that the proposal originated in. For details on the subtleties of
 Polkadot's governance system, please see the [governance page](learn-governance).
 
@@ -244,7 +254,7 @@ up to parachain implementers.
 Parachains are not ephemeral. As long as someone is keeping the data for a
 parachain, the parachain can move between being a parachain, a parathread, or
 a separate sovereign chain at different points of its lifetime. Especially
-with parathreads, parachains can be decomissioned to only produce blocks when
+with parathreads, parachains can be decommissioned to only produce blocks when
 their usage and throughput makes it necessary.
 
 When a parachain loses an auction for renewal, that parachain has a few options.
