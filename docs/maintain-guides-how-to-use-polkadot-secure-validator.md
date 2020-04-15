@@ -12,7 +12,7 @@ with some tweaking. We assume you will be deploying on Kusama.
 It uses Terraform for defining and managing your infrastructure. Ansible, an 
 automation tool, is used for setting up the VPN, Firewall, and the validator node.
 It supports a few different cloud providers such as AWS, Microsoft Azure, GCP,
-and Packet. The code is publicly hosted on GitHub, so please file an [issue](https://github.com/w3f/polkadot-secure-validator/issues)
+and Packet. The code is publicly hosted on GitHub, so please file an [issue][]
 if you would like to make a feature request or report a bug.
 
 ## Prerequisites
@@ -24,12 +24,13 @@ sentry nodes. You will first use the `ssh-keygen` command to generate two keys,
 one for your validator and one for the sentry nodes.
 
 ```zsh
-$ ssh-keygen
+$ ssh-keygen -m pem -f id_rsa_validator
+$ ssh-keygen -m pem -f id_rsa_public
 ```
 
 If you have multiple keys stored, you may want to change the filename where you
 save your keys to something besides the default. For example, let's set the name
-of the validator key to `id_rsa_validator` and the sentry nodes will be `id_rsa_sentry`.
+of the validator key to `id_rsa_validator` and the sentry nodes will be `id_rsa_public.
 
 For this tutorial we will not set a passphrase for the SSH key, although usually
 you would want to do that.
@@ -42,7 +43,10 @@ Usually these are readily available using your operating system's package manage
 Instructions may vary depending on which system you are on, the instructions below
 demonstrate the commands for a user of a Debian or Ubuntu based system.
 
-#### NodeJS (recommend to use [nvm][]).
+#### NodeJS
+
+We recommend using [nvm][] as a tool to manage different NodeJS versions across
+projects.
 
 ```
 sudo apt-get install curl
@@ -98,8 +102,12 @@ Under `validators` and `publicNodes`, specify which cloud provider you want to
 use, the type of machine specification, the number of validators you are going
 to deploy, the machine location, and the user to use for SSH.
 
-The other options can be mostly self explanatory. Here's some nice defaults you
-can use:
+The other options can be mostly self explanatory. Here's some tips on what they
+are and how you can use them:
+
+In the `additionalFlags` option, configure any of the additional flags you
+want to run for your validator. If you want to run with a specific name, this
+is where you would enter it.
 
 Under the `polkadotBinary.url` field you can provide the release that is hosted
 in the [W3F repository][w3f polkadot] or use an alternate one that you build
@@ -149,6 +157,9 @@ will be the keys that you generated at the beginning of the guide.
 > `SSH_ID_RSA_PUBLIC` - Path to private SSH key you want to use for the public nodes.
 
 > `SSH_ID_RSA_VALIDATOR` - Path to private SSH key you want to use for the validator.
+
+> NOTE: You will need to configure the Compute Engine API and enable billing on
+> your GCP accounts to properly run these scripts.
 
 After everything is configured properly, you can start to run the deployment with:
 
@@ -220,6 +231,7 @@ Congratulations! You have successfully deployed a secure validator. Free feel to
 you have any suggestions.
 
 [polkadot secure validator]: https://github.com/w3f/polkadot-secure-validator
+[issue]: https://github.com/w3f/polkadot-secure-validator/issues
 [SSH]: https://en.wikipedia.org/wiki/Secure_Shell
 [nvm]: https://github.com/nvm-sh/nvm
 [w3f polkadot]: https://github.com/w3f/polkadot/releases
