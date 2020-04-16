@@ -148,8 +148,6 @@ After you have started the `wg0` interface on your public node and validator, do
 
 `--reserved-only` - Only allows the connection from reserved nodes you defined
 
-Since we want to ensure that the sentry node would never reject a connection from our validator and this could happen if all the peer slots were full, `--reserved-nodes` will be required on the sentry to prevent that happening.
-
 You need to execute the following command to start your validator and then copy the node's identity first. Then stop it.
 
 `polkadot --validator`
@@ -170,13 +168,12 @@ You need to execute the following command to start your validator and then copy 
 2019-11-22 18:44:45 Local node identity is: QmTRSEZVE86Vrx8cHLqZhsQ2UfhMy4zZikvgWKzYBsLJZv
 ```
 
-Now start your sentry with `--sentry` and `--reserved-nodes`. 
+Now start your sentry with `--sentry` flag. 
 
 ```
 polkadot \
 --name "Sentry-A" \
---sentry \
---reserved-nodes /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
+--sentry /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
 ```
 
 You are also required to use the sentry's node identity when starting your validator, so make sure to save it somewhere else as well. Then start your validator.
