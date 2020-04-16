@@ -153,19 +153,21 @@ You need to execute the following command to start your validator and then copy 
 `polkadot --validator`
 
 ```
-2019-11-22 18:44:45 Parity Polkadot
-2019-11-22 18:44:45   version 0.6.17-4b9ed4e1-x86_64-linux-gnu
-2019-11-22 18:44:45   by Parity Team <admin@parity.io>, 2017-2019
-2019-11-22 18:44:45 Chain specification: Kusama CC2
-2019-11-22 18:44:45 ----------------------------
-2019-11-22 18:44:45 This chain is not in any way
-2019-11-22 18:44:45       endorsed by the
-2019-11-22 18:44:45      KUSAMA FOUNDATION
-2019-11-22 18:44:45 ----------------------------
-2019-11-22 18:44:45 Node name: maddening-cabbage-7688
-2019-11-22 18:44:45 Roles: AUTHORITY
-2019-11-22 18:44:45 Highest known block at #780795
-2019-11-22 18:44:45 Local node identity is: QmTRSEZVE86Vrx8cHLqZhsQ2UfhMy4zZikvgWKzYBsLJZv
+2020-04-16 19:40:52 ----------------------------
+2020-04-16 19:40:52 This chain is not in any way
+2020-04-16 19:40:52       endorsed by the       
+2020-04-16 19:40:52      KUSAMA FOUNDATION      
+2020-04-16 19:40:52 ----------------------------
+2020-04-16 19:40:52 Parity Polkadot
+2020-04-16 19:40:52 ✌️  version 0.7.29-13ec3023-x86_64-linux-gnu
+2020-04-16 19:40:52 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
+2020-04-16 19:40:52 📋 Chain specification: Kusama
+2020-04-16 19:40:52 🏷  Node name: 😍 Anson demo
+2020-04-16 19:40:52 👤 Role: AUTHORITY
+2020-04-16 19:40:52 ⛓  Native runtime: kusama-1057:2(parity-kusama-1)
+2020-04-16 19:40:53 📦 Highest known block at #1913153
+2020-04-16 19:40:53 🏷  Local node identity is: QmR4kE8mxKcPjtvEofN59B176tKxsKoNV5Ugbf86vmfJnY
+2020-04-16 19:40:53 👶 Starting BABE Authorship worker
 ```
 
 Now start your sentry with `--sentry` flag. 
@@ -174,6 +176,25 @@ Now start your sentry with `--sentry` flag.
 polkadot \
 --name "Sentry-A" \
 --sentry /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
+```
+
+Result:
+```
+2020-04-16 19:41:53 ----------------------------
+2020-04-16 19:41:53 This chain is not in any way
+2020-04-16 19:41:53       endorsed by the       
+2020-04-16 19:41:53      KUSAMA FOUNDATION      
+2020-04-16 19:41:53 ----------------------------
+2020-04-16 19:41:53 Parity Polkadot
+2020-04-16 19:41:53 ✌️  version 0.7.29-13ec3023-x86_64-linux-gnu
+2020-04-16 19:41:53 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
+2020-04-16 19:41:53 📋 Chain specification: Kusama
+2020-04-16 19:41:53 🏷  Node name: Sentry ANSON - A
+2020-04-16 19:41:53 👤 Role: SENTRY
+2020-04-16 19:41:53 ⛓  Native runtime: kusama-1057:2(parity-kusama-1)
+2020-04-16 19:41:53 📦 Highest known block at #1913161
+2020-04-16 19:41:53 🏷  Local node identity is: QmSAg4uHhVK1CHt5TJGPrWVWDJBVjgwKd1wSv88DPCtEHa
+2020-04-16 19:41:53 〽️ Prometheus server started at 127.0.0.1:9615
 ```
 
 You are also required to use the sentry's node identity when starting your validator, so make sure to save it somewhere else as well. Then start your validator.
@@ -189,20 +210,20 @@ polkadot \
 You should see your validator has 1 peer, that is a connection from your sentry node. Do the above steps to spin up few more if you think one sentry node is not enough.
 
 ```
-2019-11-22 19:15:08 Idle (1 peers), best: #781102 (0xcb78…6913), finalized #781100 (0xacc8…d7bb), ⬇ 43.4kiB/s ⬆ 34.3kiB/s
-2019-11-22 19:15:13 Idle (1 peers), best: #781102 (0xcb78…6913), finalized #781101 (0x9323…0859), ⬇ 35.1kiB/s ⬆ 12.9kiB/s
-2019-11-22 19:15:13 Imported #781103 (0x9212…16f3)
-2019-11-22 19:15:13 Starting parachain attestation session on top of parent 0x9212f2a6ef33cf87625c86bc2766a28d75f3365d521d37298ba91e32d6af16f3. Local parachain duty is None
-2019-11-22 19:15:18 Idle (1 peers), best: #781103 (0x9212…16f3), finalized #781102 (0xcb78…6913), ⬇ 35.6kiB/s ⬆ 35.6kiB/s
-2019-11-22 19:15:18 Discovered new external address for our node: /ip4/10.0.1.30/tcp/30333/p2p/QmTRSEZVE86Vrx8cHLqZhsQ2UfhMy4zZikvgWKzYBsLJZv
-2019-11-22 19:15:20 Imported #781104 (0x45ac…9249)
-2019-11-22 19:15:20 Starting parachain attestation session on top of parent 0x45acec7ceeaa9994a82a6d9c9ca028b4a26c25b70041a42427cb2ba345529249. Local parachain duty is None
-2019-11-22 19:15:23 Idle (1 peers), best: #781104 (0x45ac…9249), finalized #781103 (0x9212…16f3), ⬇ 46.9kiB/s ⬆ 36.7kiB/s
-2019-11-22 19:15:25 Starting parachain attestation session on top of parent 0x5450c2d923b3877f0864a1cff8db0a93680eb0af585e2e836702392420b73269. Local parachain duty is None
-2019-11-22 19:15:25 Imported #781105 (0x5450…3269)
-2019-11-22 19:15:28 Idle (1 peers), best: #781105 (0x5450…3269), finalized #781104 (0x45ac…9249), ⬇ 17.7kiB/s ⬆ 20.1kiB/s
-2019-11-22 19:15:31 Imported #781106 (0x0eb1…5697)
-2019-11-22 19:15:31 Starting parachain attestation session on top of parent 0x0eb1a30932beaf676d3853475315bf3e7b5629bb77e2891295f4f9bf45eb5697. Local parachain duty is None
+2020-04-16 19:42:57 💤 Idle (1 peers), best: #1913174 (0x24f6…14f9), finalized #1913151 (0xced8…492b), ⬇ 18.0kiB/s ⬆ 4.5kiB/s
+2020-04-16 19:42:58 🔍 Discovered new external address for our node: /ip4/10.0.0.164/tcp/30333/p2p/12D3KooWEnA6JqCk59k8SNShYDGDHTfdqGJLsTpZjgLRT6rAqfDg
+2020-04-16 19:43:00 ✨ Imported #1913175 (0x76c0…ad3e)
+2020-04-16 19:43:00 Starting parachain attestation session on top of parent 0x76c0c4649d290c840523316ac157380dd703fa1b9fb83b326756ce35ff49ad3e. Local parachain duty is None
+2020-04-16 19:43:02 💤 Idle (1 peers), best: #1913175 (0x76c0…ad3e), finalized #1913172 (0x5925…15bd), ⬇ 33.0kiB/s ⬆ 7.1kiB/s
+2020-04-16 19:43:07 ✨ Imported #1913176 (0xf1bc…3ace)
+2020-04-16 19:43:07 Starting parachain attestation session on top of parent 0xf1bc3c7ed57070b4ad48bfc564a16827dc7486582f97abf00ff38061e4ef3ace. Local parachain duty is None
+2020-04-16 19:43:07 💤 Idle (1 peers), best: #1913176 (0xf1bc…3ace), finalized #1913173 (0x4c97…e6b6), ⬇ 16.4kiB/s ⬆ 5.9kiB/s
+2020-04-16 19:43:08 ✨ Imported #1913176 (0x672e…6123)
+2020-04-16 19:43:12 💤 Idle (1 peers), best: #1913176 (0xf1bc…3ace), finalized #1913174 (0x24f6…14f9), ⬇ 43.7kiB/s ⬆ 29.4kiB/s
+2020-04-16 19:43:13 ✨ Imported #1913177 (0x4e1b…209f)
+2020-04-16 19:43:13 Starting parachain attestation session on top of parent 0x4e1b8fd258739d5784fbdf7cf156e2ebfd90159b21427b8e041a3aa73b99209f. Local parachain duty is None
+2020-04-16 19:43:14 ✨ Imported #1913177 (0x9b77…67c7)
+2020-04-16 19:43:17 💤 Idle (1 peers), best: #1913177 (0x4e1b…209f), finalized #1913174 (0x24f6…14f9)
 ```
 
 Congratulations! You have successfully set up a validator with a public facing node and now have a more secure way of running your validator.
