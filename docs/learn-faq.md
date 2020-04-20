@@ -12,8 +12,8 @@ _This FAQ focuses on technical questions for users interested in developing appl
 
 The Polkadot network will launch first as a Proof-of-Authority (PoA) chain.
 During this time, governance will be controlled by the single Sudo (super-user)
-account, and functionality will be restricted to (among other things) disallow
-the transfer of funds. 
+account, and functionality will be restricted. Among other things, transfer of
+funds will not be enabled during this period.
 
 During this time, validators can start joining the network and signaling
 their intention to participate in consensus. When a sufficient number of validators
@@ -44,6 +44,11 @@ their intention to validate. The transition to Proof-of-Stake will largely
 depend on when a sufficient number of validators have registered and are ready
 to take over the security of the network. This number can be as low as 50 but
 probably closer to 100.
+
+The launch process is expected to be similar to that of the Kusama network.
+Kusama transitioned to PoS when there were 50 validators ready, but in a matter
+of months scaled up the validator count to 225. Polkadot's validator count is
+expected to scale up in a similar fashion. 
 
 ## Validators
 
@@ -135,7 +140,7 @@ separate entities.
 The Kusama network, an early and unaudited release of the Polkadot code is
 currently operating at a rate of one block every six seconds. 
 
-It is expected that Polkadot will also target its block production for producing
+We expect that Polkadot will target its block production rate to produce
 a block every six seconds. However, it is still subject to change. It may go
 as low as two to three seconds after optimizations, or it may potentially
 increase in order to handle the capacity of the parachain networking in a live
@@ -278,7 +283,8 @@ needed.
 
 The Rust implementation of the specification was built and primarily maintained
 by a team of contributors at Parity Technologies. The Go and JavaScript versions
-are maintained by Protocol Labs as well as community contributors. It is an open
+are maintained by Protocol Labs as well as community contributors. A [Nim][nim libp2p] 
+version of the library also exists. Libp2p as a whole is an open
 source project that is actively developed and expanded on various code repositories
 hosted on [GitHub][libp2p github].
 
@@ -344,6 +350,7 @@ The "Answered by Gav" series is a collection of posts uploaded to Reddit of ques
 
 [fee calculation]: https://substrate.dev/docs/en/next/development/module/fees#fee-calculatio
 [libp2p]: https://libp2p.io
+[nim libp2p]: https://github.com/status-im/nim-libp2p
 [libp2p github]: https://github.com/libp2p
 [substrate network]: https://crates.parity.io/sc_network/index.html
 [thousand validators]: https://thousand-validators.kusama.network/#/
