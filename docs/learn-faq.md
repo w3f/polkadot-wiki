@@ -10,36 +10,36 @@ _This FAQ focuses on technical questions for users interested in developing appl
 
 ### What is the launch process of Polkadot Beta?
 
-The Polkadot network will launch first in as a Proof-of-Authority (PoA) chain.
+The Polkadot network will launch first as a Proof-of-Authority (PoA) chain.
 During this time, governance will be controlled by the single Sudo (super-user)
 account, and functionality will be restricted to (among other things) disallow
 the transfer of funds. 
 
-During this time, validators can start joining the network by signalling
-their intention to participate in consensus. When a sufficient number of validator
+During this time, validators can start joining the network and signaling
+their intention to participate in consensus. When a sufficient number of validators
 are sourced from the community, the Sudo account will initiate the transition
 of the chain security from PoA to Proof-of-Stake (PoS). After this happens,
-the first validator elections will begin and the chain  will be going forward 
+the first validator elections will begin, and from that time onward, the chain will be 
 secured by the economic stake that is bonded by validators and nominators.
 
 After the chain has been secured by the decentralized community of validators,
 the next step is to transition the governance of the chain into the hands of the
-token holders. The Sudo account will now initiate an upgrade that erases the
+token holders. The Sudo account will initiate an upgrade that erases the
 Sudo logic from the chain entirely and replaces it with the stakeholder
-governance modules. From henceforward, the network is in the hands of the token
-holders and no longer under control of an authority.
+governance modules. From this point, the network is entirely in the hands of the token
+holders and no longer under control of any centralized authority.
 
 The final step to transition to full-functioning Polkadot is the enabling of
-transfer functionality. The community will need to propose a new upgrade and vote
+transfer functionality. The community will need to propose a runtime upgrade and vote
 upon it in order to accomplish this. If the vote to enable transfers passes, then
 it will be enacted shortly thereafter. When this takes place, Polkadot will
-be fully live and move out of it's Beta release label.
+be fully live and move out of its Beta release label.
 
 ### How many validators will be validating at Polkadot Beta launch?
 
 Initially only a few authorized validators will be securing the network. However,
 as [detailed in the answer above](#what-is-the-launch-process-of-polkadot-beta),
-the network will right away be available to vaidators that want to register
+the network will right away be available to validators that want to register
 their intention to validate. The transition to Proof-of-Stake will largely
 depend on when a sufficient number of validators have registered and are ready
 to take over the security of the network. This number can be as low as 50 but
@@ -51,7 +51,7 @@ probably closer to 100.
 
 There is no central authority that decides on validators, so there is not per se
 an _application_ that you can fill out. Registering as a validator is
-permissionless, in order to become one you must only set up a validator node and
+permissionless; in order to become one you must only set up a validator node and
 mark your intention to validate on chain. For detailed instruction on how to do
 this you can consult the [wiki guide](maintain-guides-how-to-validate-kusama.md)
 on validating for Kusama.
@@ -59,22 +59,22 @@ on validating for Kusama.
 However, once you've set up a validator and have registered your intention it
 does not mean that you will be included in the _active set_ right
 away. The validators are elected to the active set based on the results of an
-election algorithm known as [Phragmen's method](learn-phragmen). Phragmen's
-tries to accomplish two things, 1) select `n` members from a larger set based
+election algorithm known as [Phragmen's method](learn-phragmen). Phragmen's method
+tries to accomplish two goals: 1) select `n` members from a larger set based
 on stake-weighted votes and 2) equalize the stake backing each validator as 
 much as possible.
 
 You will likely want to campaign your validator to the community in order to
 get more backing. You are looking for _nominators_ that will put up their tokens
-to increase the stake for your validator. Besides this, for validators who
+to increase the stake for your validator. For validators who
 cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-run a joint program called [Thousand Validators][thousand validators] that will
+also run a joint program called [Thousand Validators][thousand validators] that will
 nominate validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
 Validators are rewarded from the inflation of the Relay Chain, transaction fees,
-and tips. However they only take a percentage of the former two. More details
+and tips. However, they only take a percentage of the former two. More details
 can be read on the page for [validator payouts](maintain-guides-validator-payout).
 
 ### What is the minimum stake necessary to be elected as an active validator?
@@ -86,7 +86,7 @@ validators are waiting in the pool.
 
 There are a few ways to estimate the minimum stake.
 
-One way, can be to navigate
+One way can be to navigate
 to the [Polkadot Apps](https://polkadot.js.org/apps) and click on the Staking
 tab. Scroll all the way down to the bottom and look at the stake backing the
 validator at the end of the list. That's roughly the minimum stake required
@@ -99,7 +99,7 @@ exact results of running an election on the current set of validators using the
 same Rust code that is ran in Polkadot. 
 
 - [Validator stats script](https://github.com/ansonla3/kusama-validator-stats) can
-give you the estimation that is based on the currently elected set, as well as
+give you an estimate that is based on the currently elected set, as well as
 some statistics about Kusama validators.
 
 ### Why will Polkadot have only 1000 validators while other projects have hundreds of thousands?
@@ -111,14 +111,14 @@ if we consider the number of stakers that can be possible on Polkadot the number
 can scale up to hundreds of thousands. Since validators are performing critical
 consensus work to maintain the security of the chain including all of its shards,
 a more modest number of validators is estimated to start. Upon later improvements,
-such as implementing signature aggregation for finalization messages the number
+such as implementing signature aggregation for finalization messages, the number
 of validators could reasonably scale up. However, increasing validators above
 one thousand remains a goal for later iterations of Polkadot.
 
 It is also worth mentioning that one thousand validators is more than
 the number of validators of similar PoS chains with comparable levels of economic
 security as Polkadot. The closest contenders are operating with around 150
-validators, while Kusama is running with 180 securely as of April 2020.
+validators, while Kusama is running with 225 securely as of April 2020.
 
 Additionally, other projects sometimes have a different definition of _validator_
 that approximates more closely to remote signing keys without the full
@@ -145,13 +145,13 @@ environment.
 
 No - and yes. The Polkadot Relay Chain does not implement smart contracts
 natively. The reason for not having smart contracts on the Relay Chain is 
-party of the design philosophy for Polkadot that dictates it should be the 
+party of the design philosophy for Polkadot that dictates that the Relay Chain should be the 
 minimal logic required to accomplish its job.
 
 However, Polkadot will be a platform for other chains that _do_ implement
 smart contracts. It's possible for parachains to enable smart contract functionality
 and then benefit from the security and interoperability features of Polkadot. 
-Additionally, already existing smart contract chains can connect to Polkadot
+Additionally, existing smart contract chains can connect to Polkadot
 as a parachain, or via a bridge.
 
 While the Polkadot Relay Chain does not implement smart contracts directly,
@@ -165,7 +165,7 @@ for deployment on Polkadot is cross-chain bridges. Bridges come in a variety
 of flavors with varying levels of trust associated with them. Polkadot is predominantly
 researching the trust-minimized flavor that imposes economic costs on the operators
 of the bridge, and therefore makes it economically secure. Bridge efforts are being
-work on in concert with other projects in the ecosystem. Eventually, there
+worked on in concert with other projects in the ecosystem. Eventually, there
 will be bridges between Polkadot and most of the other major chains. 
 
 ## DOTs
@@ -190,18 +190,18 @@ the [Polkadot Network FAQ](https://polkadot.network/faq/)).  Subscribe to the
 Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further
 updates.
 
-DOT token are not transferrable until the launch of Polkadot Beta is complete.
-Any transfers before that time of DOTs are illegitimate and unauthorized. DOTs
-are currenly represented on Ethereum as the DOT Indicator Token, these cannot be
+DOT tokens are not transferable until the launch of Polkadot Beta is complete.
+Any transfers of DOTs before that time are illegitimate and unauthorized. DOTs
+are currently represented on Ethereum as the DOT Indicator Token, these cannot be
 moved from the current allocation address. Individuals with an allocation of DOTs
-can always keep a copy of their private key, therefore it is extreme risk for
+can always keep a copy of their private key, therefore it is extremely risky for
 individuals to participate in trading of DOTs before Polkadot launch.
 
 ## Governance
 
 ### What prevents Polkadot governance from failing?
 
-Polkadot's governance has already been shown to work, examples of which can by
+Polkadot's governance has already been shown to work. Examples can be
 found in the runtime upgrades that have successfully taken place through on the 
 testnets as well as in a real economic environment on [Kusama](kusama-index).
 
@@ -212,7 +212,7 @@ thought-through mechanisms for evolving a blockchain.
 
 Blockchains need a method to adapt and evolve. Therefore, an on-chain governance
 system was necessary for the long-term success of Polkadot. Ultimately, it is
-the token holders that are resonsible for preventing Polkadot's governance from
+the token holders that are responsible for preventing Polkadot's governance from
 failing by using their economic value and conviction to sway the progression of
 the protocol.
 
@@ -225,15 +225,15 @@ one might assume that Polkadot's governance is susceptible to becoming ruled
 by a few large token holders (called _whales_ in trading parlance) and therefore
 become a mere plutocracy (rule of the rich).
 
-There are a couple further mechanisms that are built-in to the governance system
+There are several other mechanisms that are built-in to the governance system
 to resist this plutocratic tendency. One of these mechanisms is called conviction
 voting, and imbues greater voting power to token holders who are willing to lock
 their tokens on the protocol for longer lengths of time. Longer lock-ups display _conviction_
 in a vote. Conviction voting could allow a highly determined minority to overrule
 the vote of an apathetic majority in certain situations. Another mechanism is
-known as Adaptive Quorum Biasing, and this makes it so that proposals have a
+known as Adaptive Quorum Biasing.  This makes proposals have a
 varying threshold for approval or rejection based on what part of the governance
-protocol that the proposal originated in. For details on the subtleties of
+protocol the proposal originated in. For details on the subtleties of
 Polkadot's governance system, please see the [governance page](learn-governance).
 
 ## Parachains
@@ -243,10 +243,10 @@ Polkadot's governance system, please see the [governance page](learn-governance)
 Parachains have the flexibility to implement their own monetary system or
 incentive structure for collators. However, this is not strictly necessary.
 Since the collator's job is to continue to give recent state transitions to
-the validators on the relay chain whom validate each transition, the security
+the validators on the relay chain who validate each transition, the security
 of the parachain and the Polkadot network is completely separate from parachain
 economics. Parachains need collators to continue to progress, so it wouldn't be
-unreasonable to see them incentivize collator nodes in some way but it is completely
+unreasonable to see them incentivize collator nodes in some way but the specific mechanism is completely
 up to parachain implementers.
 
 ### Are parachains ephemeral? What happens when a parachain loses the next auction?
@@ -262,7 +262,7 @@ In most cases, becoming a parathread instead would be a suitable choice. Parathr
 are still secured by the Relay Chain, but don't need to hold a parachain slot
 and can produce a block when its economically feasible for them. For more on
 parachains please see the [parachains page](learn-parachains) and for more on
-parathreads see [here](learn-parathreads).
+parathreads see [the parathreads page](learn-parathreads).
 
 ## Networking
 
@@ -270,7 +270,7 @@ parathreads see [here](learn-parathreads).
 
 [Libp2p][libp2p] is a modular and extensible networking stack that is used by
 IPFS, Substrate, and many other projects. It is a collection of peer-to-peer
-protocols for finding peers and connecting to them. It's modules have logic for
+protocols for finding peers and connecting to them. Its modules have logic for
 content routing, peer routing, peer discovery, different transports, and NAT
 traversals. It is intended to be used by applications for building large scale
 peer-to-peer networks by only selecting the parts of the protocol suite that are
@@ -287,7 +287,7 @@ hosted on [GitHub][libp2p github].
 Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol
 that is based on libp2p (specifically the Rust libp2p library). However, Substrate
 uses a mix of standard libp2p protocols and protocols that are homegrown and not
-official libp2p standards. Of the standards protocols, these which are shared
+official libp2p standards. Of the standards protocols, those which are shared
 with other implementations of libp2p such as IPFS, are connection-checking (ping),
 asking for information on a peer (identity), and Kademlia random walks (kad).
 
@@ -311,7 +311,7 @@ integration between the two applications.
 
 ### What is the minimum amount of KSM I can have in my account?
 
-It is recommended to always ensure that you keep at least 0.1 KSM in your account in order to avoid the reaping threshold of 0.01 KSM.  If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM.   This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provides dramatic benefits in terms of scalability.
+We recommend users always keep at least 0.1 KSM in their account in order to avoid the reaping threshold of 0.01 KSM.  If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM.   This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provide dramatic benefits in terms of scalability.
 
 ### What are the transfer fees for Kusama?
 
