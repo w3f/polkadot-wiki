@@ -155,7 +155,6 @@ attack is taking place. The time delay then allows chain participants time to re
 extreme cases a liquidation of their holdings and a migration to a minority fork.
 However, the possibility of this scenario is quite low.
 
-
 ## Further Reading
 
  - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/pallet_treasury/index.html))
