@@ -1,5 +1,5 @@
 ---
-id: learn-treasury
+id: mirror-learn-treasury
 title: Treasury
 sidebar_label: Treasury
 description: Details about Polkadot's on-chain treasury.
