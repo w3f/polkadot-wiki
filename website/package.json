@@ -7,7 +7,7 @@
     "start": "npm run mirror && docusaurus-start",
     "build": "npm run mirror && docusaurus-build",
     "mirror": "node mirror.js",
-    "publish-gh-pages": "docusaurus-publish",
+    "publish-gh-pages": "npm run mirror && docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
