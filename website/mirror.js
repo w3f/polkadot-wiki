@@ -47,3 +47,25 @@ for (const file of mirrored) {
 
   fs.writeFileSync(mirror, mirroredContent);
 }
+
+const langDirectories = fs.readdirSync('./translated_docs');
+for (const lang of langDirectories) {
+  for (const file of mirrored) {
+    const doc = `./translated_docs/${lang}/${file}.md`;
+    const mirror = `./translated_docs/${lang}/mirror-${file}.md`;
+    // console.log(mirror);
+    if (!fs.existsSync(doc)) {
+      throw new Error(`${doc} doesn't exist!`);
+    }
+
+    const content = fs.readFileSync(doc, { encoding: 'utf-8' });
+    const mirroredContent = content.split('\n').map((line) => {
+      if (line.startsWith('id:')) {
+        const [before,after] = line.split(' ');
+        return `${before} mirror-${after}`;
+      } else return line;
+    }).join('\n');
+
+    fs.writeFileSync(mirror, mirroredContent);
+  }
+}
