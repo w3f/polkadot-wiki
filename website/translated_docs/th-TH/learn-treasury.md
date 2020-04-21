@@ -62,6 +62,48 @@ At this point, a Council member can turn this proposal into a motion to accept, 
 
 ![Motion in action](/img/treasury/motion.jpg)
 
+## Tipping
+
+Next to the proposals process, a separate system for making tips exists for the treasury. Tips can be suggested by anyone and are supported by members of the council. Tips do not have any definite value, the final value of the tip is decided based on the median of all tips issued by the tippers.
+
+Currently on Kusama, the tippers are the same as the members of the council. However, being a tipper is not direct responsibility of the council, and at some point the council and the tippers may be different groups of accounts.
+
+To better understand the process a tip goes through until it is paid out, let's consider an example.
+
+### Example
+
+Bob has done something great for Kusama. Alice has noticed this and decides to report Bob as deserving a tip from the treasury. The council is composed of three members Charlie, Dave, and Eve.
+
+Alice begins the process by issuing the `report_awesome` extrinsic. This extrinsic requires two arguments, a reason and the address to tip. Alice submits Bob's address with the reason being a UTF-8 encoded URL to post on [polkassembly](https://kusama.polkassembly.io) that explains her reasoning for why Bob is deserving.
+
+Alice must also lock up a deposit for making this report. The deposit is the base deposit as set in the chain's parameter list plus the additional deposit per byte contained in the reason. This is why Alice submitted a URL as the reason instead of the explanation directly, it was cheaper for her to do so.
+
+For her trouble, Alice is able to claim the eventual finder's fee if the tip is approved by the tippers.
+
+Since the tipper group is the same as the council on Kusama, the council must now collectively (but also independently) decide on the value of the tip that Bob deserves.
+
+Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of the benefit Bob has provided to Kusama.
+
+Charlie tips 100 KSM. Dave tips 300 KSM. Eve tips 1000 KSM.
+
+The tip could have been closed out with only two of the three tippers. Once more than half of the tippers group have issued tip valuations the countdown to close the tip will begin. In this case, the third tipper issued their tip before the end of the closing period, so all three were able to make their tip valuations known.
+
+Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out 300 KSM from the treasury.
+
+In order for Bob to be paid his tip, some account must call the `close_tip` extrinsic at the end of the closing period for the tip. This extrinsic may be called by anyone.
+
+## FAQ
+
+### What prevents the treasury from being captured by a majority of the council?
+
+The majority of the council can decide the outcome of a treasury spend proposal. In an adversarial mindset, we may consider the possibility that the council may at some point go rogue and attempt to steal all of the treasury funds. It is a possibility that the treasury pot becomes so great, that a large financial incentive would present itself.
+
+For one, the treasury has deflationary pressure due to the burn that is suffered every spend period. The burn aims to incentivize the complete spend of all treasury funds at every burn period, so ideally the treasury pot doesn't have time to accumulate mass amounts of wealth. However, it is the case that the burn on the treasury could be so little that it does not matter - as is the case currently on Kusama. On Kusama, the treasury burn is currently set to 0, meaning that no funds are burned.
+
+However, it is the case on Kusama that the council is composed of mainly well-known members of the community. Remember, the council is voted in by the token holders, so they must do some campaigning or otherwise be recognized to earn votes. In the scenario of an attack, the council members would lose their social credibility. Furthermore, members of the council are usually externally motivated by the proper operation of the chain. This external motivation is either because they run businesses which depend on the chain, or they have direct financial gain (through their holdings) of the token value remaining steady.
+
+Concretely there are a couple on-chain methods that resist this kind of attack. One, the council majority may not be the token majority of the chain. This means that the token majority could vote to replace the council if they attempted this attack - or even reverse the treasury spend. They would do this through a normal referendum. Two, there are time delays to treasury spends. They are only enacted every spend period. This means that there will be some time to observe this attack is taking place. The time delay then allows chain participants time to respond. The response may take the form of governance measures or - in the most extreme cases a liquidation of their holdings and a migration to a minority fork. However, the possibility of this scenario is quite low.
+
 ## Further Reading
 
  - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/pallet_treasury/index.html))

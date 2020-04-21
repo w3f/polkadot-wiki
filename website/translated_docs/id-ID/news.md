@@ -1,7 +1,7 @@
 ---
 id: news
-title: News
-sidebar_label: News
+title: Berita
+sidebar_label: Berita
 ---
 
-Follow the Polkadot [blog](https://polkadot.network/blog/) to stay up to date.
+Ikuti Polkadot [ blog ](https://polkadot.network/blog/) untuk mendapatkan informasi terbaru.

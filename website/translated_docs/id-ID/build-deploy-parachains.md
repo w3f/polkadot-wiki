@@ -1,26 +1,26 @@
 ---
 id: build-deploy-parachains
-title: How to view and deploy parachains
-sidebar_label: How to view and deploy parachains
+title: Cara melihat dan menggunakan parachains
+sidebar_label: Cara melihat dan menggunakan parachains
 ---
 
-The guide has been updated to work with the Alexander testnet.
+Panduan ini telah diperbarui untuk bekerja dengan testnet Alexander.
 
-## How to view parachains
+## Cara melihat parachains
 
-On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
+Pada [ UI Polkadot ](https://polkadot.js.org/apps/#/explorer) navigasikan ke tab ` Keadaan Rantai `. Pilih modul ` parachains ` dan ` parachains () ` lalu tekan tombol ` + `. Ini akan mengembalikan array dari parachains yang saat ini aktif.
 
-## How to deploy the Adder parachain
+## Cara menyebarkan parachain Adder
 
-**You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
+**Cara menantang parachain Adder.**
 
-The `adder` parachain is a simple parachain which will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
+Parachain ` adder ` adalah parachain sederhana yang akan menyimpan nilai dalam penyimpanan dan menambah nilai ini saat pesan dikirim ke sana. Itu dapat ditemukan di repositori Polkadot di bawah folder ` test-parachains `.
 
-> A slightly out-of-date video version of this guide presented by Adrian Brink is available [here](https://www.youtube.com/watch?v=pDqkzvA4C0E). When the two guides diverge, please refer to this written text as definitive and updated.
+> Versi video yang sedikit ketinggalan zaman dari panduan ini yang disajikan oleh Adrian Brink tersedia [ di sini ](https://www.youtube.com/watch?v=pDqkzvA4C0E). Ketika kedua panduan ini berbeda, silakan merujuk teks tertulis ini sebagai definitif dan diperbarui.
 
-### Building the code
+### Membangun kode
 
-The first step is to download locally the Polkadot code and switch to the `v0.4` branch.
+Langkah pertama adalah mengunduh secara lokal kode Polkadot dan beralih ke cabang ` v0.4 `.
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
@@ -28,7 +28,7 @@ cd polkadot
 git checkout v0.4
 ```
 
-Now make sure you have Rust installed.
+Sekarang pastikan Anda telah menginstal Rust.
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -36,18 +36,18 @@ sudo apt install make clang pkg-config libssl-dev
 rustup update
 ```
 
-Now navigate to the `test-parachains` folder in the Polkadot code repository and run the build script.
+Sekarang navigasikan ke folder ` test-parachains ` di repositori kode Polkadot dan jalankan skrip build.
 
 ```bash
 cd test-parachains
 ./build.sh
 ```
 
-This will create the Wasm executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The Wasm executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
+Ini akan membuat Wasm dieksekusi dari parachain ` adder ` sederhana yang terkandung dalam folder ini. Parachain ini hanya akan menambahkan pesan yang dikirim ke sana. Wasm executable akan menampilkan ke jalur ` parachains / test / res / adder.wasm ` jadi pastikan Anda dapat menemukannya di sana.
 
-You will need to build and run the collator node in order to get the genesis state of this parachain.
+Anda perlu membangun dan menjalankan node collator untuk mendapatkan status asal dari parachain ini.
 
-Navigate to the `test-parachains/adder/collator` directory and run the `build` and `run` commands.
+Navigasikan ke direktori ` test-parachains / adder / collator ` dan jalankan perintah ` build ` dan ` run `.
 
 ```bash
 cargo build
@@ -55,7 +55,7 @@ cargo run
 [ctrl-c]
 ```
 
-Feel free to stop the collator node right away. You will get some output that looks like this:
+Jangan ragu untuk menghentikan node collator segera. Anda akan mendapatkan beberapa output yang terlihat seperti ini:
 
 ```
 Starting adder collator with genesis:
@@ -64,30 +64,30 @@ Dec: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 Hex: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000011b4d03dd8c01f1049143cf9c4c817e4b167f1d1b83e5c6f0f10d89ba1e7bce
 ```
 
-The important information is the hex string. This is your genesis state and you will need to save it for the next steps.
+Informasi penting adalah string hex. Ini adalah kondisi awal Anda dan Anda harus menyimpannya untuk langkah selanjutnya.
 
-### Deploying the parachain
+### Menjalankan parachain
 
-Go to [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics) on the `Extrinsics` tab. Select the account you wish to deploy the parachain from. You will need to create a referendum to deploy the parachain.
+Buka [ UI Polkadot ](https://polkadot.js.org/apps/#/extrinsics) pada tab ` Extrinsics `. Pilih akun dari mana Anda ingin menggunakan parachain. Anda perlu membuat referendum untuk menggunakan parachain.
 
-Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
+Klik pada `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 
-In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
+Pada input ` id ` masukkan id dari parachain. Dalam kasus adder sederhana, itu akan menjadi ` 100 `. Di bidang ` kode ` klik pada tombol halaman dan kemudian unggah biner ` adder.wasm ` yang telah dikompilasi dari sebelumnya. Dalam ` initial_head_data ` kami akan menyalin dan menempelkan data hex yang kami dapatkan dari menjalankan node collator. Dalam bidang ` value ` Anda harus memasukkan nilai minimum yang diperlukan untuk membuat referendum. Pada saat penulisan ini <em x-id = "4"> 5 DOT </em> di Alexander testnet.
 
-![registering a parachain](assets/parachain/register.png)
+![mendaftarkan parachain](assets/parachain/register.png)
 
-If you navigate to the `Democracy` tab you will be able to see your proposal in the proposals section.
+Jika Anda menavigasi ke tab ` Demokrasi ` Anda akan dapat melihat proposal Anda di bagian proposal.
 
-Once you wait for the proposal to become a referendum you will be able to vote `Nay` or `Aye` on it. Assumably, you will vote Aye as this will be a vote for the deployment of your parachain.
+Setelah Anda menunggu proposal menjadi referendum, Anda akan dapat memilih ` Tidak ` atau ` Aye ` di atasnya. Mungkin, Anda akan memilih Aye karena ini akan menjadi suara untuk penyebaran parachain Anda.
 
-![parachain referendum](assets/parachain/referendum.png)
+![referendum parachain](assets/parachain/referendum.png)
 
-After the voting period of your referendum goes through you will be able to query the state of your parachain.
+Setelah periode pemungutan suara referendum Anda berlangsung, Anda akan dapat menanyakan keadaan parachain Anda.
 
-You can go to the `Chain State` tab and by querying the `parachains` state you should be able to see some information on your parachain.
+Anda dapat pergi ke tab ` Status Rantai ` dan dengan menanyakan kondisi ` parachains ` Anda harus dapat melihat beberapa informasi tentang parachain Anda.
 
-![parachain info](assets/parachain/info.png)
+![info parachain](assets/parachain/info.png)
 
-### Interacting with the parachain
+### Berinteraksi dengan parachain
 
-_Coming soon_
+_Segera hadir_

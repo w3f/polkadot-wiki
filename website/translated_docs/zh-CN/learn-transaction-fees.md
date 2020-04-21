@@ -1,86 +1,86 @@
 ---
 id: learn-transaction-fees
-title: Transaction Fees
-sidebar_label: Transaction Fees
+title: 交易费用
+sidebar_label: 交易费用
 ---
 
-Several resources in a blockchain network are limited, for example, storage and computation. Transaction fees prevent individual users from consuming too many resources. Polkadot uses a weight-based fee model as opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the fee is paid, nodes will execute the transaction.
+区块链网络中的资源是有限的，例如存储和计算。交易费用是用来防止用户消耗太多资源。 Polkadot 使用基于权重的收费模式，而不是 gas-metering 模式。 因此在执行交易之前需要先收取费用；一旦费用支付，节点将执行交易。
 
-[Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits) designed the Polkadot fee system with the following objectives:
+[Web3 基金会研究团队](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits) 设计了 Polkadot 以下目标的收费系统:
 
-- Each Relay Chain block should be processed efficiently to avoid delays in block production.
-- The growth rate of the Relay Chain should be bounded.
-- Each block should have space for special, high-priority transactions like misconduct reports.
-- The system should be able to handle spikes in demand.
-- Fees should change slowly so that senders can accurately predict the fee for a given transaction.
+- 每个中继链的区块链应该有效地处理从而被免延迟生成区块链。
+- 中继链的增长率应该有界限。
+- 每个区块都应有空间给特殊高优先的交易，例如不当行为报告。
+- 该系统应能够处理需求激增的问题。
+- 费用应缓慢变化，以便用户可以准确预测既定交易的费用。
 
-## Fee Calculation
+## 费用计算
 
-Fees on the Polkadot Relay Chain are calculated based on four parameters:
+Polkadot 中继链的费用是根据以下四个参数计算的:
 
-- A base fee
-- A per-byte fee (also known as the "length fee")
-- A weight fee
-- A tip (optional)
+- 基本费用
+- 每字节费用 (亦称"长度费")
+- 比重费用
+- 小费(可选)
 
-The base fee is a fixed fee applied to every transaction. The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
+基本费用是适用于每笔交易的固定费用。长度费是每字节的固定费用和交易大小的结果(按字节)。
 
-Weights are a fixed number designed to represent overall resource consumption of a transaction. Resources could be CPU cycles, memory usage, disk I/O, etc. Each transaction has a weight, which is multiplied by a per-weight fee to calculate the transaction's weight fee.
+比重是个固定的数字，用于表示交易资源的总消耗。资源可以是 CPU 周期、内存使用情况、磁盘I/O等。每笔交易都有一个比重，乘以每个比重费用，以计算交易的比重费用。
 
-Tips are an optional transaction fee that users can add to give a transaction higher priority.
+小费是一种可选的交易费，用户可以添加来给予交易更优先的处理。
 
-Together, these four fees constitute the inclusion fee. This fee is deducted from the sender's account prior to transaction execution. A portion of the fee will go to the block producer and the remainder will go to the [Treasury](learn-treasury). At Polkadot's genesis, this is set to 20% and 80%, respectively.
+这四个费用共同构成了费用。在执行交易之前，将从用户的帐户中扣除这笔费用。一部分费用将给区块生成者，其余部分将流向[库房](learn-treasury)。在 Polkadot 的一开始阶段，该比例分别设置为20％和80％。
 
-## Block Limits and Transaction Priority
+## 区块限制和交易优先
 
-Blocks in Polkadot have both a maximum length (in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these limits. A portion of each block - currently 25% - is reserved for critical transactions that are related to the chain's operation. Block producers will only fill up to 75% of a block with normal transactions. Some examples of operational transactions:
+Polkadot 中的区块既有最大长度(字节)，也有最大比重。区块生产者将用这些限制填满交易到方块。每个区块的一部分―目前为25%―保留给与该区块操作相关的重要交易。区块生产者将只能使用区块正常交易的75%。一些操作交易例子：
 
-- Misbehavior reports
-- Council operations
-- Member operations in an election (e.g. renouncing candidacy)
+- 错误报告
+- 议会操作
+- 选举中的成员操作(例如放弃候选人)
 
-Block producers prioritize transactions based on each transaction's total fee. Since a portion of the fee will go to the block producer, producers will include the transactions with the highest fees to maximize their reward.
+区块生产者根据每笔交易的总费用确定交易的优先次序。由于部分费用将给区块生产者，生产者将打包最高费用的交易，以获得最大回报。
 
-## Fee Adjustment
+## 费用调整
 
-Transaction volume on blockchains is highly irregular, and therefore transaction fees need a mechanism to adjust. However, users should be able to predict transaction fees.
+区块链上的交易量非常不正常，因此交易费用需要一种调整机制。然而，用户应该能够预测交易费用。
 
-Polkadot uses a slow-adjusting fee mechanism with tips to balance these two considerations. In addition to block _limits,_ Polkadot also has a block fullness _target._ Fees increase or decrease for the next block based on the fullness of the current block relative to the target. The per-weight fee can change up to 30% in a 24 hour period. This rate captures long-term trends in demand, but not short-term spikes. To consider short term spikes, Polkadot uses tips on top of the base, byte, and weight fees. Users can optionally add a tip to the fee to give the transaction a higher priority.
+除了区块链_限制，_ Polkadot还有阻止填满的_目标。_根据当前方块相对于目标的最终，下一个区块链的费用增加或减少。每次比重收费可在24小时内提高30％，这个比率反映出需求的长期趋势， 为了考虑短期跳跃，Polkadot在底线，字节和重量费用上使用小费。用户可以选择在收费中添加一个小费，给予交易更高的优先等级。
 
-## Shard Transactions
+## 分片交易
 
-The transactions that take place within Polkadot's shards - parachains and parathreads - do not incur Relay Chain transaction fees. Users of shard applications do not even need to hold DOT tokens, as each shard has its own economic model and may or may not have a token. There are, however, situations where shards themselves make transactions on the Relay Chain.
+在 Polkadot 的分片中进行的交易―平行链和对平行线程―不会引起中继链交易费用。 分片应用程序的用户甚至不需要持有 DOT， 因为每个分片都有自己的经济模式，可能有代币，也可能没有代币。 然而在有些情况下，这些人自己在中继链上进行交易。
 
-[Parachains](learn-parachains) have a dedicated slot on the Relay Chain for execution, so their collators do not need to own DOTs in order to include blocks. The parachain will make some transactions itself, for example, opening or closing an [XCMP](learn-crosschain) channel, participating in an [auction](learn-auction) to renew its slot, or upgrading its runtime. Parachains have their own accounts on the Relay Chain and will need to use those funds to issue transactions on the parachain's behalf.
+[平行链](learn-parachains) 在中继链上有一个用于执行专用的插槽。 所以它们的收集人不需要拥有 DOT 也能打包区块。 平行链本身会进行一些交易，例如打开或关闭 [XCMP](learn-crosschain) 频道， 参与 [拍卖](learn-auction) 以更新其插槽或升级其 runtime。 平行链在中继链上有自己的帐户，将需要利用这些资金代表平行链签发交易。
 
-[Parathreads](learn-parathreads) will also make all the same transactions that a parachain might. In addition, the collators need to participate in an auction every block to progress their chain. The collators will need to have DOTs to participate in these auctions.
+[平行线程](learn-parathreads) 也与平行链有着可能相同的事务。 此外，收集人需要参与每个区块的拍卖，以处理其链的运作。收集人需要持有 DOT 来参加这些拍卖。
 
-## Other Resource Limitation Strategies
+## 其他资源限制策略
 
-Transaction weight must be computable prior to execution, and therefore can only represent fixed logic. Some transactions warrant limiting resources with other strategies. For example:
+交易比重必须在执行前可以计算，因此只能是固定逻辑。有些交易需要通过其他策略限制资源。
 
-- Bonds: Some transactions, like voting, may require a bond that will be returned or slashed after an on-chain event. In the voting example, returned at the end of the election or slashed if the voter tried anything malicious.
-- Deposits: Some transactions, like setting an [identity](learn-identity) or claiming an index, use storage space indefinitely. These require a deposit that will be returned if the user decides to free storage (e.g. clear their ide).
-- Burns: A transaction may burn funds internally based on its logic. For example, a transaction may burn funds from the sender if it creates new storage entries, thus increasing the state size.
-- Limits: Some limits are part of the protocol. For example, nominators can only nominate 16 validators. This limits the complexity of [Phragmen](learn-phragmen).
+- 绑定(Bonds)：有些交易，如投票，有可能需要绑定保证金， 并在链上发生事件后退还或 slash。 在投票的例子中，选举结束时返回，或者如果选民试图恶意行事，就会被slash。
+- 存款(Deposits): 有些交易, 如设置[身份](learn-identity) 或认领索引, 无限期地使用存储空间。 如果用户决定释放存储空间，这些存款将会被退还。
+- 烧毁(Burns)：交易可能会根据其内部逻辑烧毁资金。例如如果交易创建了新的存储，从而增加了状态容量，则交易可能会从用户那里烧毁资金。
+- 限制(Limits)：一些限制是协议的一部分。例如，提名人只能提名16个验证人。这限制了 [Phragmen](learn-phragmen) 的复杂性。
 
-## Advanced
+## 进阶
 
-This page only covered transactions that come from normal users. If you look at blocks in a block explorer, though, you may see some "extrinsics" that look different from these transactions. In Polkadot (and any chain built on Substrate), an extrinsic is a piece of information that comes from outside the chain. Extrinsics fall into three categories:
+此页面仅涵盖来自普通用户的交易。 不过，如果你看到區塊鏈浏览器的區块，你可能会看到一些"extrinsics"看起来与这些交易不同。 在 Polkadot (以及建立在Substrate 上的任何链)中，extrinsic 在是一种来自链外的信息。 Extrinsics 可分为三类：
 
 - Signed transactions
 - Unsigned transactions
 - Inherents
 
-This page only covered signed transactions, which is the way that most users will interact with Polkadot. Signed transactions come from an account that has funds, and therefore Polkadot can charge a transaction fee as a way to prevent spam.
+此页面仅覆盖已签名的交易(signed transactions)，这是大多数用户与 Polkadot 互动的方式。 有签名的交易来自有资金的帐户，因此 Polkadot 可以收取交易费作为防止垃圾邮件的问题。
 
-Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key pair that does not control funds. For example, when users [claim their DOT tokens](https://claims.polkadot.network) after genesis, their DOT address doesn't have any funds yet, so that uses an unsigned transaction. Validators also submit unsigned transactions in the form of "heartbeat" messages to indicate that they are online. These heartbeats must be signed by one of the validator's [session keys](learn-keys). Session keys never control funds. Unsigned transactions are only used in special cases because, since Polkadot cannot charge a fee for them, each one needs its own, custom validation logic.
+无签名的交易(unsigned transactions) 是指用户需要提交不控制资金的密钥对外在的特殊情况。 例如当用户在上线后 [领取他们的 DOT ](https://claims.polkadot.network) 他们的DOT 地址还没有任何资金，因此是用了无签名的交易。验证人也会提交一些无签名的交易，其形式为"heartbeat"消息，表示它们是在线。 这些 heartbeat 必须由验证人 [session keys 之一](learn-keys)签名。 Session keys 永远不会控制资金。 无签名的交易仅用于特殊情况，因为既然 Polkadot 无法为它们收取费用，每个交易需要自定义的验证逻辑。
 
-Finally, inherents are pieces of information that are not signed or included in the transaction queue. As such, only the block author can add inherents to a block. Inherents are assumed to be "true" simply because a sufficiently large number of validators have agreed on them being reasonable. For example, Polkadot blocks include a timestamp inherent. There is no way to prove that a timestamp is true the way one proves the desire to send funds with a signature. Rather, validators accept or reject the block based on how reasonable they find the timestamp. In Polkadot, it must be within some acceptable range of their own system clocks.
+最后，固有的是没有签名或包含在交易队列中的信息。 因此，只有出块的人才能将固有的东西添加到区块中。 因为仅仅足够多的验证人已经同意它们是合理，就假定不信守者为“真理”。 例如 Polkadot 区块包括一个固有的时间戳。 没有办法证明时间戳是真实的，可以证明有签字的资金的发出。 相反验证人根据他们认为时间戳的合理程度接受或拒绝区块。 在《Polkadot》中，它必须在他们自己的系统时钟的某个可接受范围之内。
 
-## Learn More
+## 了解更多
 
-- [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
-- [Substrate Weights](https://substrate.dev/docs/en/next/conceptual/runtime/weight)
-- [Substrate Fees](https://substrate.dev/docs/en/next/development/module/fees)
-- [Extrinsics](https://substrate.dev/docs/en/next/conceptual/node/extrinsics)
+- [Web3 基金会研究](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
+- [Substrate 权重](https://substrate.dev/docs/en/next/conceptual/runtime/weight)
+- [Substrate 费用](https://substrate.dev/docs/en/next/development/module/fees)
+- [交易 (Extrinsics)](https://substrate.dev/docs/en/next/conceptual/node/extrinsics)

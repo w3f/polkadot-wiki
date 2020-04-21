@@ -1,12 +1,12 @@
 ---
 id: learn-comparisons-dfinity
-title: Polkadot and Dfinity
+title: Dfinity and Polkadot
 sidebar_label: Dfinity
 ---
 
 Dfinity calls itself "the internet computer" and positions itself as a sister project to Ethereum. Dfinity has been in development since 2016, with a release called "Copper" supposed to have come out in 2017 but never seemed to have landed. In 2019, the world has yet to see the majority of Dfinity's closed source code for their client since they only publish helper libraries on [their GitHub](https://github.com/dfinity). The closed source nature of development is in stark contrast to the development of Polkadot, which has developed its Rust reference implementation in [the open on GitHub](https://github.com/paritytech/polkadot) from the start in 2017.
 
-### Algorithmic Governance
+### Tata Kelola Algoritma
 
 Dfinity is a strong proponent of algorithmic governance, having published [two](https://medium.com/dfinity/the-dfinity-blockchain-nervous-system-a5dd1783288e#.duzxztt9k) [blog](https://medium.com/dfinity/future-governance-integrating-traditional-ai-technology-into-the-blockchain-nervous-system-825ababf9d9) posts explicitly on the topic.
 
@@ -16,7 +16,7 @@ The BNS described in the blog posts is, compared to Polkadot's extensive governa
 
 Polkadot allows governance mechanisms to be much more fine-grained through mechanisms of conviction voting, a tri-cameral model of checks and balances, and the ability to follow chain upgrades seamlessly without needing to update client software.
 
-### Consensus
+### Konsensus
 
 Dfinity uses a four-layered consensus consisting of an identity layer, a random beacon layer, a blockchain layer, and a notary layer.
 
