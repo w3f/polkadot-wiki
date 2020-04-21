@@ -1,5 +1,5 @@
 ---
-id: learn-treasury
+id: mirror-learn-treasury
 title: Treasury
 sidebar_label: Treasury
 description: Details about Polkadot's on-chain treasury.
@@ -152,8 +152,9 @@ attack - or even reverse the treasury spend. They would do this through a normal
 referendum. Two, there are time delays to treasury spends. They are only enacted
 every spend period. This means that there will be some time to observe this
 attack is taking place. The time delay then allows chain participants time to respond. The response may take the form of governance measures or - in the most
-extreme cases a liquidation of their holdings and a migration to a minority fork.
+extream cases a liquidation of their holdings and a migration to a minority fork.
 However, the possibility of this scenario is quite low.
+
 
 ## Further Reading
 

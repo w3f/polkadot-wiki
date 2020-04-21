@@ -23,6 +23,7 @@ const mirrored = [
   'build-build-with-polkadot',
   'learn-identity',
   'learn-governance',
+  'learn-treasury',
   'maintain-guides-how-to-nominate-kusama',
   'maintain-guides-how-to-validate-kusama',
   'maintain-errors'
