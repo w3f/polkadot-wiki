@@ -49,7 +49,7 @@ Another type of node is a **light node**. A light node has only the runtime and 
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
-- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.28/polkadot -o polkadot`
+- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
