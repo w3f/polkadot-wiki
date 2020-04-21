@@ -4,58 +4,58 @@ title: Hackathon
 sidebar_label: Hackathon
 ---
 
-As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
+Karena salah satu tujuan kami di Web3 Foundation adalah mendorong [ tumpukan teknologi Web3 ](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), kami ingin mendukung setiap individu atau tim yang ingin mengatur hackathon yang membuat lebih banyak pengembang memahami Polkadot / Substrate di kota Anda.
 
-We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
+Kami tidak hanya menyediakan sumber daya teknis untuk Anda, tetapi kami dapat meminta seseorang dari tim kami memberikan lokakarya langsung / presentasi tentang teknologi untuk membantu peserta memulai meretasnya lebih cepat.
 
-## Ideas
+## Ide ide
 
 - NFT
-- Bonded Tokens
-- New governance pallets with different styles of voting & democracy
-- Upgrade the TCR pallet
-- IPFS integration
-- Decentralized identity solutions
-- Oracle pallet
-- Implement Generalized State Channel/Plasma Chain
-- Decentralized Exchange
-- Tools for monitoring validator performance
-- dApps across different parachains
+- Token Berikat
+- New governance modules with different styles of voting & democracy
+- Upgrade the TCR module
+- Integrasi IPFS
+- Solusi identitas terdesentralisasi
+- Oracle module
+- Menerapkan Saluran Saluran / Plasma Umum Negara
+- Pertukaran Terdesentralisasi
+- Alat untuk memantau kinerja validator
+- dApps di berbagai parachain
 
-## Why you should host a hackathon?
+## Mengapa Anda harus menyelenggarakan hackathon?
 
-- Love to deliver the vision of Web3
-- Learn the bleeding-edge technology
-- Believe the Web3 technology stack is suitable for developers to build their applications
-- Like to make connections
+- Senang menyampaikan visi Web3
+- Pelajari teknologi mutakhir
+- Percaya tumpukan teknologi Web3 cocok bagi pengembang untuk membangun aplikasi mereka
+- Suka membuat koneksi
 
-## How do hackathons differ from workshops?
-Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
+## Apa perbedaan hackathon dengan bengkel?
+Hackathon ditujukan untuk peserta yang ingin memberikan prototipe mereka dan menunjukkan ide-ide mereka menjadi kenyataan dalam waktu singkat (beberapa jam - satu hari). Lokakarya lebih untuk membuat pengembang terbiasa dengan perangkat ini dan memahami lebih lanjut tentang apa saja sumber daya yang tersedia saat ini dan bagaimana mereka dapat menggunakannya.
 
-## How can you run a hackathon in your city?
-1. Submit your application (Coming soon.)
-2. Review
-3. Decision
-4. Follow up
+## Bagaimana Anda bisa menjalankan hackathon di kota Anda?
+1. Kirim aplikasi Anda (Segera hadir.)
+2. Ulasan
+3. Keputusan
+4. Tindak lanjut
 
-## How we can help you
+## Bagaimana kami dapat membantu Anda
 
-- Provide technical resources/materials.
-- Find a venue.
-- Ensure the hackathon run smoothly.
+- Menyediakan sumber daya / bahan teknis.
+- Temukan tempat.
+- Pastikan hackathon berjalan dengan lancar.
 
-## Upcoming hackathon events
+## Acara hackathon yang akan datang
 
-Coming soon.
+Segera akan hadir.
 
-## Template / Starter packs
+## Paket Template / Pemula
 
-Coming soon.
+Segera akan hadir.
 
-## Resources
+## Sumber daya
 
-- [Substrate Developer Hub](https://substrate.dev/docs/en/)
+- [Pusat Pengembang Substrat](https://substrate.dev/docs/en/)
 
-## Support / Contact
+## Dukungan / Kontak
 
-If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
+Jika Anda memiliki pertanyaan tentang pengorganisasian hackathon, jangan ragu untuk menghubungi kami melalui [ email ](mailto:events@web3.foundation) atau tanyakan kepada kami melalui [ Riot ](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
