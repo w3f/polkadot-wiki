@@ -24,6 +24,47 @@ Transaction fees in a native parachain token can also be an implementation choic
 
 Parachains are not required to have their own token. If they do, is up to the parachain to make the economic case for their token, not Polkadot.
 
+## Crowdfunding parachains
+
+Polkadot allows for parachains to  crowdfund their slots in a decentralized and
+safe way. The logic for this is handled in the [crowdfunding pallet][]. 
+
+During a parachain auction, anyone can create a new crowdfunding campaign for
+a parachain slot. When a campaign is created, the range of slots (i.e. the
+duration of the lease) is specified. Up to four slots, for a total time duration
+of roughly two years, can be selected. The creator of the crowdfund becomes the
+owner of the campaign, and can later upload the parachain's code. When creating
+a campaign, a crowdfunding "cap" is also specified. The crowdfund will refuse
+to accept funds after the cap has been reached.
+
+Once a crowdfunding campaign is open, anyone can contribute by sending a special
+transaction and depositing funds. Funds that are used to contribute must be
+transferrable (that is, not locked) because they will be moved into a module
+controlled account that was generated uniquely for this campaign.
+
+During some point of the crowdfund campaign the owner will upload the parachain
+data. Ideally, the owner does this before soliciting contributions to the
+campaign so that the contributors can verify it. The data can only be uploaded
+once during the course of the campaign and it will be what is deployed for
+the parachain. Of course, once the parachain is running it can always change
+via runtime upgrades (as determined through its own local governance).
+
+If a crowdfunding campaign is successful, that parachain will be on-boarded as
+a parachain in Polkadot. The funds that contributed to it will be locked in
+that parachain's account for the entire duration that it is active (up to two
+years). On one hand, this means that the parachain can do reliable accounting
+of contributors and reward them with parachain tokens in their local economies.
+On the other hand, the DOTs that contributors used will be essentially taken
+out of circulation for that time and cannot be used to stake or vote.
+
+At the end of the parachain's lifecycle, it will enter into a retirement phase.
+During this phase, contributors can begin to withdraw their locked DOTs. Contributors
+must withdraw their funds during the retirement phase, otherwise they will be
+sent to the treasury when that parachain is dissolved. Likewise, any parachain
+that started a campaign but was unsuccessful at acquiring a slot will have a
+timeout during which contributors can withdraw their funds. If funds are not
+withdrawn during the timeout, they are dissolved to the treasury.
+
 ## Examples
 
 Some examples of parachains:
@@ -54,3 +95,5 @@ Please see the builder's article on [deploying parachains](build-deploy-parachai
 ## Resources
 
 - [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Blog post by Polkadot co-founder Rob Habermeier that introduced parachains in 2017 as "a simpler form of blockchain, which attaches to the security provided by a ‘relay chain’ rather than providing its own. The relay chain provides security to attached parachains, but also provides a guarantee of secure message-passing between them."
+
+[crowdfunding pallet]: https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs
