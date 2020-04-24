@@ -74,6 +74,8 @@ below).
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum can also be voted upon, but it will be majority-carries.
 
+There can only be one active referendum at any given time, except when there is also an emergency referendum in progress.
+
 #### Voting Timetable
 
 Every thirty days, a new referendum will come up for a vote, assuming there are referenda in the
@@ -85,7 +87,7 @@ top proposal in the other queue will become a proposal.
 
 Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda.
 
-#### Voting for a proposal
+#### Voting on a referendum
 
 To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond
 the end of the referendum. This is in order to ensure that some minimal economic buy-in to the
@@ -351,6 +353,10 @@ Technical Committee from a simple majority vote of the council.
 The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which
 are fast-tracked for voting and implementation. These emergency referenda are intended for use only
 under urgent circumstances.
+
+Fast-tracked referenda are the only type of referenda which can be active alongside another active referendum. 
+
+Thus, with fast tracked referenda it is possible to have two active referendums at the same time. Voting on one does not prevent a user from voting on the other.
 
 ## [Usage of DOT](learn-DOT#dots-for-governance)
 
