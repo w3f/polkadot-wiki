@@ -8,7 +8,7 @@ When interacting with the [Kusama network](https://kusama.network) via [Polkadot
 
 ## Parity Archive Node
 
-The development company Parity maintains an archive node at endpoint `wss://kusama-rpc.polkadot.io/`. 
+The development company Parity maintains an archive node at endpoint `wss://kusama-rpc.polkadot.io/`.
 
 To connect to the Parity node, use the endpoint in your JavaScript apps like so:
 
@@ -29,18 +29,9 @@ or in Polkadot Apps UI by clicking the top-left corner of the screen and selecti
 
 The Web3 Foundation maintains an archive node at endpoint `wss://cc3-5.kusama.network/`. 
 
-To connect to this node, use the endpoint in your JavaScript apps like so:
+To connect to this node, replace the endpoint in the JavaScript snippet above. 
 
-```javascript
-const{ ApiPromise, WsProvider } = require('@polkadot/api')
-
-(async () => {
-    const provider = new WsProvider('wss://cc3-5.kusama.network/')
-    const api = await ApiPromise.create({ provider })
-    // ...
-```
-
-or in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
+Connect to it in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
 
 ![Selecting W3F's Node](/img/endpoints/w3f.png)
 
@@ -50,18 +41,9 @@ RYO (Run Your Own) infrastructure from [Avado](https://ava.do) is a load balance
 
 Check the current status of the Kusama RYO cloud including available nodes at https://status.cloud.ava.do/
 
-To connect to the RYO cloud, use the endpoint `wss://kusama.polkadot.cloud.ava.do/` in your JavaScript apps like so:
+To connect to the RYO cloud, use the endpoint `wss://kusama.polkadot.cloud.ava.do/` in the JavaScript code.
 
-```javascript
-const{ ApiPromise, WsProvider } = require('@polkadot/api')
-
-(async () => {
-    const provider = new WsProvider('wss://kusama.polkadot.cloud.ava.do/')
-    const api = await ApiPromise.create({ provider })
-    // ...
-```
-
-or in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
+Connect to the endpoint in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
 
 ![Selecting the RYO cloud](/img/endpoints/ryo.png)
 
@@ -69,7 +51,7 @@ or in Polkadot Apps UI by clicking the top-left corner of the screen and selecti
 
 #### Reliability 
 
-There is no incentive to run these public nodes yet. We're working on making that happen. Ideally, the Kusama Treasury would fund this public infrastructure venture. For now, running the nodes is altruistic which means the nodes can disappear for no reason.
+There is no incentive to run these public nodes yet. We're working on making that happen. Ideally, the Kusama Treasury would fund this public infrastructure venture. For now, running the nodes is altruistic.
 
 #### \*Centralization
 
@@ -77,7 +59,7 @@ The nodes are distributed and decentralized, but the load balancer serving them 
 
 #### Full nodes
 
-The nodes in the RYO cloud are currently *full nodes*, not *archive nodes*. To learn the difference, [watch this crash course](https://www.youtube.com/watch?v=31DdfcxbAVs). If you need archive data, run your own archive node or go with a Parity or W3F hosted node for now. Archive nodes in RYO are planned for a future update.
+The nodes in the RYO cloud are currently *full nodes*, not *archive nodes*. To learn the difference, [watch this crash course](https://www.youtube.com/watch?v=31DdfcxbAVs). If you need archive data, run your own archive node or use a Parity or W3F hosted node for now. Archive nodes in RYO are planned for a future update.
 
 #### Avado Only
 
