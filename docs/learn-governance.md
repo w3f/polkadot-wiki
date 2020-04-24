@@ -76,14 +76,16 @@ referendum can also be voted upon, but it will be majority-carries.
 
 #### Voting Timetable
 
-Every thirty days, a new referendum will come up for a vote, assuming there are referenda in the
-queues. There is a queue for Council-approved referenda and a queue for publicly submitted
-referenda. The referendum to be voted upon alternates between the two queues.
+Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the
+queues. There is a queue for Council-approved proposals and a queue for publicly submitted
+proposals. The referendum to be voted upon alternates between the top proposal in the two queues.  
+The "top" proposal is determined by the number of second votes behind it.  If the given queue whose turn it is
+to create a referedum has no proposals (is empty), and there are proposals waiting in the other queue, the
+top proposal in the other queue will become a referendum.
 
-If the given queue whose turn it is empty, and there are proposals waiting in the other queue, the
-top proposal in the other queue will become a proposal.
-
-Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda.
+Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda.  An emergency
+referendum occurring at the same time as a regular referendum (either public- or council-proposed) is the
+only time that multiple referenda will be able to be voted on at once.
 
 #### Voting for a proposal
 
