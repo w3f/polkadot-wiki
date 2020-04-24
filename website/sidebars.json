@@ -181,7 +181,8 @@
         "label": "Get Started",
         "ids": [
           "kusama-faucet",
-          "kusama-claims"
+          "kusama-claims",
+          "kusama-endpoints"
         ]
       },
       {
