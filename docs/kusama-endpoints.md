@@ -73,7 +73,7 @@ There is no incentive to run these public nodes yet. We're working on making tha
 
 #### \*Centralization
 
-The nodes are distributed and decentralized, but the load balancer serving them requests isn't. The Ava.do team is actively looking for other companies and organizations willing to run load balancers as backups to the main one - get in touch if you'd like to lend a hand.
+The nodes are distributed and decentralized, but the load balancer serving them requests isn't. The Ava.do team is actively looking for other companies and organizations willing to run load balancers as backups to the main one - [get in touch](https://t.me/joinchat/F_LlkBLEoDrFioPNviEpsQ) if you'd like to lend a hand.
 
 #### Full nodes
 
