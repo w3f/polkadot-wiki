@@ -35,7 +35,18 @@ duration of the lease) is specified. Up to four slots, for a total time duration
 of roughly two years, can be selected. The creator of the crowdfund becomes the
 owner of the campaign, and can later upload the parachain's code. When creating
 a campaign, a crowdfunding "cap" is also specified. The crowdfund will refuse
-to accept funds after the cap has been reached.
+to accept funds after the cap has been reached. 
+
+Parachain campaigns may use
+caps when they are confident they will raise enough funds to reach the minimum
+amount needed for a raise but do not want to raise too much over this amount.
+As a simplified example, let's consider that the total supply of DOTs is 10
+million. We can assume that 5 million DOTs are bonded in the staking
+subsystem since that is what is optimized by the rewards. We are left with
+a maximum of 5 million DOTs to use in parachain auctions. If there were only
+4 slots up for an auction then we can calculate that 1.25 million is enough
+to win any one of them. A parachain might choose to place this as their cap,
+so that no single parachain can be oversubscribed.
 
 Once a crowdfunding campaign is open, anyone can contribute by sending a special
 transaction and depositing funds. Funds that are used to contribute must be
