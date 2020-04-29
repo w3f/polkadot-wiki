@@ -24,33 +24,49 @@ The Polkadot Host (PH) allows for the state transitions performed on parachains 
 
 平行链并不需要拥有它们自己的代币。如果它们拥有自己的代币，那将会是平行链决定如何使它们的代币有经济用途，需不是 Polkadot。
 
-## 例子
+## Crowdfunding parachains
 
-平行链例子
+Polkadot allows for parachains to  crowdfund their slots in a decentralized and safe way. The logic for this is handled in the [crowdfunding pallet](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs).
+
+During a parachain auction, anyone can create a new crowdfunding campaign for a parachain slot. When a campaign is created, the range of slots (i.e. the duration of the lease) is specified. Up to four slots, for a total time duration of roughly two years, can be selected. The creator of the crowdfund becomes the owner of the campaign, and can later upload the parachain's code. When creating a campaign, a crowdfunding "cap" is also specified. The crowdfund will refuse to accept funds after the cap has been reached.
+
+Parachain campaigns may use caps when they are confident they will raise enough funds to reach the minimum amount needed for a raise but do not want to raise too much over this amount. As a simplified example, let's consider that the total supply of DOTs is 10 million. We can assume that 5 million DOTs are bonded in the staking subsystem since that is what is optimized by the rewards. We are left with a maximum of 5 million DOTs to use in parachain auctions. If there were only 4 slots up for an auction then we can calculate that 1.25 million is enough to win any one of them. A parachain might choose to place this as their cap, so that no single parachain can be oversubscribed.
+
+Once a crowdfunding campaign is open, anyone can contribute by sending a special transaction and depositing funds. Funds that are used to contribute must be transferrable (that is, not locked) because they will be moved into a module controlled account that was generated uniquely for this campaign.
+
+During some point of the crowdfund campaign the owner will upload the parachain data. Ideally, the owner does this before soliciting contributions to the campaign so that the contributors can verify it. The data can only be uploaded once during the course of the campaign and it will be what is deployed for the parachain. Of course, once the parachain is running it can always change via runtime upgrades (as determined through its own local governance).
+
+If a crowdfunding campaign is successful, that parachain will be on-boarded as a parachain in Polkadot. The funds that contributed to it will be locked in that parachain's account for the entire duration that it is active (up to two years). On one hand, this means that the parachain can do reliable accounting of contributors and reward them with parachain tokens in their local economies. On the other hand, the DOTs that contributors used will be essentially taken out of circulation for that time and cannot be used to stake or vote.
+
+At the end of the parachain's lifecycle, it will enter into a retirement phase. During this phase, contributors can begin to withdraw their locked DOTs. Contributors must withdraw their funds during the retirement phase, otherwise they will be sent to the treasury when that parachain is dissolved. Likewise, any parachain that started a campaign but was unsuccessful at acquiring a slot will have a timeout during which contributors can withdraw their funds. If funds are not withdrawn during the timeout, they are dissolved to the treasury.
+
+## Examples
+
+Some examples of parachains:
 
 - **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the XCMP protocol.
 - **高频链** - 这些链可以通过进行某些权衡或进行优化，在短时间内大量计算。
 - **隐私链** - 这些链通过使用新颖的加密技术不会向公众泄露任何信息。
 - **智能合约链** - 这些链可以通过部署称为 _智能合约_的代码来实现额外的逻辑。
 
-## 常见问题
+## FAQ
 
 ### 平行链共识是什么?
 
-"平行链共识"的特殊之处在于它将遵循 Polkadot 中继链。平行链不能使用其他提供确定性的共识算法。只有主权链 (必须通过转接桥的平行链接到中继链) 能够控制它们的共识。平行链可以控制区块的创作方式和通过谁。
+"Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality. Only sovereign chains (that must bridge to the relay chain via a parachain) can control their own consensus. Parachains have control over how blocks are authored and by whom.
 
 ### 平行链插槽如何分配？
 
-平行链插槽通过使用拍卖方式获取。请查看[平行链插槽](learn-auction)文章。如此，一些平行链插槽将会运行[平行线程](learn-parathreads) - 平行线程通过以竞标每个区块方式包括在中继链内。
+Parachain slots will be acquirable through auction, please see the [parachain slots](learn-auction) article. Additionally, some parachain slots will be set aside to run [parathreads](learn-parathreads) - parathreads which bid on a per-block basis to be included in the relay chain.
 
 ### 平行链开发套件 (PDKs)
 
-平行链开发套件是一组工具供开发者创造他们创造的他们的应用成为平行链，详细资料请看[这里](build-pdk)。
+Parachain Development Kits are a set of tools that enable developers to create their own applications as parachains. For more info see [here](build-pdk).
 
 ### 部署平行链
 
-请参阅有关[部署平行链](build-deploy-parachains)的开发者文章。
+Please see the builder's article on [deploying parachains](build-deploy-parachains).
 
-## 资源
+## Resources
 
 - [Polkadot: 平行链](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Polkadot 联合创始人 Rob Habermeier在2017年撰写的博客文章，将平行链介绍为 "一种更简单的区块链形式，它附加于“中继链”提供的安全性，而不是提供其自身的安全性。中继链为附加的平行链提供安全性，但是还为它们之间的安全消息传递提供了保证。"
