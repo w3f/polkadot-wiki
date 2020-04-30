@@ -233,7 +233,7 @@ Suppose we funded it with some tokens, and now want to send from the multi-sig t
 
 ![Sending from multi-sig account](/img/accounts/send-from-multi.png)
 
-The next step is to sign the transaction from every required participating account; in the above case, two out of three signatories must sign.
+The next step is to sign the transaction from with enough accounts to meet the threshold; in the above case, two out of three signatories must sign.
 
 ![Signing from multi-sig account](/img/accounts/sign-from-multi-1.png)
 
