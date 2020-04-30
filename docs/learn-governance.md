@@ -143,14 +143,14 @@ electorate - the total number of DOTs tokens issued in the network
 A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low
 turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnouts}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
 A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low
 turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnouts}})
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
 
 ##### Simple-Majority
 
