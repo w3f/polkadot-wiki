@@ -133,7 +133,7 @@ approve - the number of aye votes
 
 against - the number of nay votes
 
-turnouts - the total number of voting tokens (Does not include conviction)
+turnout - the total number of voting tokens (Does not include conviction)
 
 electorate - the total number of DOTs tokens issued in the network
 ```
@@ -183,7 +183,7 @@ JJ: Votes `No` for a 16 week lock period => 150 * 3 = 450 Votes
 
 approve = 600
 against = 450
-turnouts = 750
+turnout = 750
 electorate = 1500
 ```
 
@@ -192,7 +192,7 @@ electorate = 1500
 ![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
 
 Since the above example is a public proposal, `Super-Majority Approve` would be used to calculate the result. 
-And `Super-Majority Approve` requires more `aye` votes to pass the proposal when turnouts is low, therefore, 
+And `Super-Majority Approve` requires more `aye` votes to pass the proposal when turnout is low, therefore, 
 based on the above result, the proposal will be rejected. In addition, only the winning voter's
 tokens are locked. If the voters on the losing side of the referendum believe that the outcome will
 have negative effects, their tokens are transferrable so they will not be locked in to the
