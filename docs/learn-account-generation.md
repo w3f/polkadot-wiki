@@ -245,7 +245,7 @@ There is currently no indication of a pending transaction from a multi-sig in th
 
 Other calls work exactly the same - if a multi-sig wants to become a Council member, the candidacy request has to come from the multi-sig, but be signed (re-requested) from each signatory until the threshold is reached.
 
-Signatories should be in constant off-chain communication to prevent many pending transactions and crossed communication lines on-chain.
+Signatories should communicate off-chain to prevent many pending transactions and crossed communication lines on-chain.
 
 ## Parity Signer
 
