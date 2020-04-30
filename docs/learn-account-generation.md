@@ -219,6 +219,34 @@ with the password.
 
 ![pjs-05](assets/accounts/polkadot_js_05.jpg)
 
+### Multi-signature Accounts
+
+Multi-signature accounts are accounts created from several standard accounts (or even other multi-sig accounts). For a full explanation, please see the [Accounts Explainer section on multi-sigs](learn-accounts#multi-signature-accounts).
+
+On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter the threshold and add signatories. The threshold must be less than or equal to the number of signatories. The threshold indicates how many members must be in agreement for an extrinsic submission to be successful. Click `Create` when done. We'll use the accounts Alice, Bob, and Charlie here.
+
+![Multi-sig account creation](/img/accounts/create-multisig.png)
+
+This merely calculates the multi-signature's address and adds it to your UI. The account does not exist yet, and is subject to the same [Existential Deposit and Reaping](learn-accounts#existential-deposit-and-reaping) rules as regular accounts. 
+
+Suppose we funded it with some tokens, and now want to send from the multi-sig to another account. 
+
+![Sending from multi-sig account](/img/accounts/send-from-multi.png)
+
+The next step is to sign the transaction from with enough accounts to meet the threshold; in the above case, two out of three signatories must sign.
+
+![Signing from multi-sig account](/img/accounts/sign-from-multi-1.png)
+
+There is currently no indication of a pending transaction from a multi-sig in the UI. This means the second signatory must **repeat the call in full** in order to sign it. In other words:
+
+- if Alice initiates a transaction from the multi-sig to Ferdie for 150 tokens, there will be a pending transaction in the chain.
+- if Bob initiates a transaction from the multi-sig to Ferdie for 250 tokens, there will be **another** pending transaction in the chain, and the first one will not complete.
+- because the threshold is 2/3, Charlie can now finalize either or both of these by repeating the desired transaction.
+
+Other calls work exactly the same - if a multi-sig wants to become a Council member, the candidacy request has to come from the multi-sig, but be signed (re-requested) from each signatory until the threshold is reached.
+
+Signatories should communicate off-chain to prevent many pending transactions and crossed communication lines on-chain.
+
 ## Parity Signer
 
 Parity Signer is a secure way of storing your DOTs on an air-gapped device.
