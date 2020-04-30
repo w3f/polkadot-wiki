@@ -239,7 +239,7 @@ The next step is to sign the transaction from with enough accounts to meet the t
 
 There is currently no indication of a pending transaction from a multi-sig in the UI. This means the second signatory must **repeat the call in full** in order to sign it. In other words:
 
-- if Alice initiates a transaction from the multi-sig to Ferdie for 150 tokens, there will be a pending TX in the chain.
+- if Alice initiates a transaction from the multi-sig to Ferdie for 150 tokens, there will be a pending transaction in the chain.
 - if Bob initiates a transaction from the multi-sig to Ferdie for 250 tokens, there will be **another** pending TX in the chain, and the first one will not complete.
 - because the threshold is 2/3, Charlie can now finalize either or both of these by repeating the desired transaction.
 
