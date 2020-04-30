@@ -133,7 +133,7 @@ approve - the number of aye votes
 
 against - the number of nay votes
 
-voters - the total number of voting tokens
+turnout - the total number of voting tokens (Does not include conviction)
 
 electorate - the total number of DOTs tokens issued in the network
 ```
@@ -143,14 +143,14 @@ electorate - the total number of DOTs tokens issued in the network
 A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low
 turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{voters}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
 A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low
 turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{voters}})
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
 
 ##### Simple-Majority
 
@@ -165,7 +165,9 @@ proposal is carried.
 ```
 Example:
 
-Assume we only have 1,500 DOTs tokens in total.
+Assume:
+- We only have 1,500 DOTs tokens in total.
+- Public proposal
 
 John  - 500 DOTs
 Peter - 100 DOTs
@@ -181,15 +183,17 @@ JJ: Votes `No` for a 16 week lock period => 150 * 3 = 450 Votes
 
 approve = 600
 against = 450
-voters = 1050
+turnout = 750
 electorate = 1500
 ```
 
-![\Large \frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}})
+![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
 
-![\Large {13.887}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{13.887}&space;<&space;{15.492})
+![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
 
-Based on the above result, the proposal will be approved. In addition, only the winning voter's
+Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate the result. 
+And `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout is low, therefore, 
+based on the above result, the referendum will be rejected. In addition, only the winning voter's
 tokens are locked. If the voters on the losing side of the referendum believe that the outcome will
 have negative effects, their tokens are transferrable so they will not be locked in to the
 decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
@@ -366,5 +370,3 @@ Thus, with fast tracked referenda it is possible to have two active referendums 
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
-
-[phragmen]: learn-phragmen
