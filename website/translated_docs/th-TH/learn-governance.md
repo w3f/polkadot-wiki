@@ -89,7 +89,7 @@ approve - the number of aye votes
 
 against - the number of nay votes
 
-voters - the total number of voting tokens
+turnout - the total number of voting tokens (Does not include conviction)
 
 electorate - the total number of DOTs tokens issued in the network
 ```
@@ -98,13 +98,13 @@ electorate - the total number of DOTs tokens issued in the network
 
 A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{voters}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
 A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 
-![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{voters}})
+![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
 
 ##### Simple-Majority
 
@@ -117,7 +117,9 @@ Majority-carries, a simple comparison of votes, if there are more aye votes than
 ```
 Example:
 
-Assume we only have 1,500 DOTs tokens in total.
+Assume:
+- We only have 1,500 DOTs tokens in total.
+- Public proposal
 
 John  - 500 DOTs
 Peter - 100 DOTs
@@ -133,15 +135,15 @@ JJ: Votes `No` for a 16 week lock period => 150 * 3 = 450 Votes
 
 approve = 600
 against = 450
-voters = 1050
+turnout = 750
 electorate = 1500
 ```
 
-![\Large \frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{1050}}&space;<&space;\frac{600}{\sqrt{1500}})
+![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
 
-![\Large {13.887}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{13.887}&space;<&space;{15.492})
+![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
 
-Based on the above result, the proposal will be approved. In addition, only the winning voter's tokens are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their tokens are transferrable so they will not be locked in to the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
+Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate the result. And `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's tokens are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their tokens are transferrable so they will not be locked in to the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
 
 #### Voluntary Locking
 
@@ -203,7 +205,7 @@ If the cancellation is controversial enough that the council cannot get a two-th
 
 At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
 
-To elect a new council member, Polkadot employs the same election scheme as used for choosing the active set of validators, a [Phragmen election](learn-phragmen). The election also chooses a set number of runners up (currently seven in Kusama) that will remain in the queue with their votes intact.
+To elect a new council member, Polkadot employs the same election scheme as used for choosing the active set of validators, a \[Phragmen election\]\[phragmen\]. The election also chooses a set number of runners up (currently seven in Kusama) that will remain in the queue with their votes intact.
 
 As opposed to a "first past the post", where voters must decide only on a single candidate chosen from a list, a Phragmen election is a more expressive way to indicate voters' views. Token holders can treat it as Boolean voting to support as many candidates as they want. The election algorithm will find the fair winners.
 
