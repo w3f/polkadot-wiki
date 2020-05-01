@@ -81,3 +81,43 @@ Kusama地址可以有一个索引。一个索引就像一个简短易读版本�
 ## 账户身份（Identities）
 
 Kusama 网络上的 _身份标识_ 允许用户将上链元数据附加到他们的账户。 这个元数据可以由独立的登记员核实，以提供可信度。 了解更多关于如何设置或发布身份的信息，如何定义子账户， 或者如何成为登记员，请阅读 [本指南](learn-identity)。
+
+## Multi-signature Accounts
+
+It is possible to create a multi-signature account in Substrate-based chains. A multi-signature account is composed of one or more addresses and a threshold. The threshold defines how many signatories (participating addresses) need to agree on the submission of an extrinsic in order for the call to be successful.
+
+For example, Alice, Bob, and Charlie set up a multi-sig with a threshold of 2. This means Alice and Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute any call without Alice. A threshold is typically a number smaller than the total number of members but can also be equal to it which means they all have to be in agreement.
+
+Multi-signature accounts have several uses:
+
+- securing your own stash: use additional signatories as a 2FA mechanism to secure your funds. One signer can be on one computer, another can be on another, or in cold storage. This slows down your interactions with the chain, but is orders of magnitude more secure.
+- board decisions: legal entities such as businesses and foundations use multi-sigs to collectively govern over the entity's treasury.
+- group participation in governance: a multi-sig account can do everything a regular account can. A multi-sig account could be a council member in Kusama's governance, where a set of community members could vote as one entity.
+
+Multi-signature accounts **cannot be modified after being created**. Changing the set of members or altering the threshold is not possible and instead requires the dissolution of the current multi-sig and creation of a new one. As such, multi-sig account addresses are **deterministic**, i.e. you can always calculate the address of a multi-sig just by knowing the members and the threshold, without the account existing yet. This means one can send tokens to an address which does not exist yet, and if the entities designated as the recipients come together in a new multi-sig under a matching threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig deterministically can be done in TypeScript like so:
+
+```js
+rawAddress(addresses: string[], threshold: number) {
+    const addr = [...addresses]
+    addr.sort()
+    const prefix = 'modlpy/utilisuba'
+    const payload = new Uint8Array(prefix.length + 1 + 32 * addresses.length + 2)
+    payload.set(Array.from(prefix).map(c => c.charCodeAt(0)), 0)
+    payload[prefix.length] = addresses.length << 2;
+    addr.forEach((addr, idx) => {
+        const decoded = decodeAddress(addr);
+        payload.set(decoded, prefix.length + 1 + idx * 32)
+    })
+    payload[prefix.length + 1 + 32 * addresses.length] = threshold
+
+    return blake2AsU8a(payload)
+},
+address(addresses: string[], threshold: number, ss58prefix?: number) {
+    const hashed = this.rawAddress(addresses, threshold)
+    return encodeAddress(hashed, ss58prefix)
+}
+
+const multiSigAddress = address(addresses, 2);
+```
+
+The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts).  This is easier than generating them manually.
