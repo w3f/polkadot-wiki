@@ -116,3 +116,5 @@ When running as a simple sync node (above), only the state of the past 256 block
 ```bash
 ./target/release/polkadot --name "My node's name" --pruning archive
 ```
+
+It is possible to almost quadruple synchronization speed by using an additional flag: `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off after the node is in sync.
