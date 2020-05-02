@@ -25,11 +25,33 @@ sequential Phragmén method:
 The sequential Phragmén method is used in the Nominated Proof-of-Stake scheme to elect validators
 based on their own self-stake and the stake that is voted to them from nominators. It also tries to
 equalize the weights between the validators after each election round. Since validators are paid
-equally in Polkadot, it is important that the stake behind each validator is spread out. The
-equalization method is ran twice for every validator election. The first iteration will do a rough
-equalization among all validator candidates in order to determine the subset that will become the
-next active validators. The second iteration runs only among the elected candidates to equalize the
-stake between the ones which are elected.
+equally in Polkadot, it is important that the stake behind each validator is spread out. Polkadot
+tries to optimize three metrics in its elections:
+
+1. Maximize the total amount at stake.
+1. Maximize the stake behind the minimally staked validator.
+1. Minimize the variance of the stake in the set.
+
+#### Off-Chain Phragmen
+
+Given the large set of nominators and validators, Phragmén's method is a difficult optimization
+problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to
+propose the set of winners. The reason for performing this computation off-chain is to keep a
+constant block time of six seconds and prevent long block times at the end of each era, when the
+validator election takes place.
+
+Because certain user actions, like changing nominations, can change the outcome of the Phragmén
+election, the system forbids calls to these functions for the last quarter of the session before an
+era change. These functions are not permitted:
+
+- `bondExtra`
+- `unbond`
+- `withdrawUnbonded`
+- `validate`
+- `nominate`
+- `chill`
+- `payoutStakers`
+- `rebond`
 
 ### Council Elections
 
@@ -44,10 +66,10 @@ votes behind them as much as possible.
 Phragmén is something that will run in the background and requires no extra effort from you.
 However, it is good to understand how it works since it means that not all the stake you've been
 nominated will end up on your validator after an election. Nominators are likely to nominate a few
-different validators that they trust will do a good job operating their nodes.
+different validators that they trust to do a good job operating their nodes.
 
 You can use the [offline-phragmen](https://github.com/kianenigma/offline-phragmen) script for
-predicting the outcome of a validator election ahead of a new era beginning.
+predicting the outcome of a validator election ahead of a new election.
 
 ## Understanding Phragmén
 
