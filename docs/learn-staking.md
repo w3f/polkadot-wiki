@@ -245,45 +245,21 @@ Rewards are recorded per session (approximately one hour on Kusama and four hour
 calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). Thus,
 rewards will be calculated four times per day on Kusama and once per day on Polkadot.
 
-In order to be paid your staking rewards, you must manually claim them. Staking rewards are kept
-available for 84 eras, which is approximately 84 days on Polkadot and 21 days on Kusama. For more
-information on why this is so, see the page on [lazy payouts](learn-lazy-payouts).
+In order to be paid your staking rewards, someone must claim them for each validator that you
+nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot
+and 21 days on Kusama. For more information on why this is so, see the page on
+[simple payouts](learn-simple-payouts).
 
-> WARNING: If you do not claim your staking rewards by this time, then you will not be able to claim
+> WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim
 > them and some of your staking rewards will be lost.
 
 ### Claiming Rewards
 
-If you have staking rewards ready to be claimed, you will see a red circle on the Staking tab, along
-with the number of accounts that have rewards to claim.
-
-![claim_see_reward_notification](assets/claim_see_reward_notification.png)
-
-Click on the "Account Actions" tab at the top of the screen, and you should see all of your accounts
-that have bonded. Any accounts that have staking rewards available to be claimed will have a red
-circle next to it. The number insidew the circle indicates the number of eras' worth of claims you
-have waiting. Hovering over the red circle with your mouse cursor shows you a popup displaying how
-much in rewards you can claim.
-
-Note that you will need to pay a transaction fee for claiming, so if you have a very small amount of
-staking rewards, this may be outweighed by the need to pay the transaction fee. In this case, it
-would make sense to wait a few more eras and "batch" claiming your rewards.
-
-![claim_see_reward](assets/claim_see_reward.png)
-
-In order to claim your rewards, click on the "gear" icon at the far right. On the dropdown menu,
-select "payout reward".
-
-![claim_payout_reward](assets/claim_payout_reward.png)
-
-Finally, sign the transaction. This is a batch transaction - you will notice that numerous
-transactions will be indicated by the UI, and giving you all of the rewards up to this point at
-once.
-
-![claim_sign_tx](assets/claim_sign_tx.png)
-
-After this, all of your rewards will be available wherever you have set rewards to go (selected when
-you first started nominating, generally to the stash).
+If you go to the Staking payouts page on
+[Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of validators that
+you have nominated in the past 84 eras. Each one has the option to trigger the payout for all
+unclaimed eras. Note that this will pay everyone who was nominating that validator during those
+eras, and anyone can call it.
 
 ### Reward Distribution Example
 

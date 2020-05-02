@@ -85,7 +85,7 @@ the unlocking begins.
 
 #### Lazy Vesting
 
-Like [lazy payouts](learn-lazy-payouts), vesting is _lazy_, which means that
+Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that
 someone must explicitly call an extrinsic to update the lock that is placed on
 an account.
 
