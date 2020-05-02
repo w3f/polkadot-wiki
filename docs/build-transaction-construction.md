@@ -191,7 +191,7 @@ as a transaction gets validated and included in the chain.
 ## Notes
 
 Some addresses to use in the examples. See
-[Subkey documentation](https://substrate.dev/docs/en/next/development/tools/subkey).
+[Subkey documentation](https://www.substrate.io/kb/integrate/subkey).
 
 ```bash
 $ subkey --network polkadot generate

@@ -36,10 +36,10 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 ```
 
 Some return values may not appear meaningful at first glance. Polkadot uses
-[SCALE encoding](https://substrate.dev/docs/en/next/conceptual/core/codec) as a format that is
+[SCALE encoding](https://www.substrate.io/kb/advanced/codec) as a format that is
 suitable for resource-constrained execution environments. You will need to decode the information
 and use the chain
-[metadata](https://github.com/substrate-developer-hub/knowledgebase/blob/master/current/runtime/metadata.md)
+[metadata](https://www.substrate.io/kb/runtime/metadata)
 (`state_getMetadata`) to obtain human-readable information.
 
 ### Tracking the Chain Head
