@@ -156,7 +156,7 @@ It is important to note that the cost of transferring KSM is dynamic. Currently,
 base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
-Please see the [fee calculation](https://substrate.dev/docs/en/next/development/module/fees#fee-calculatio) page in the Substrate documentation for more detailed information.
+Please see the [fee calculation](https://www.substrate.io/kb/runtime/fees) page in the Substrate documentation for more detailed information.
 
 
 ## Answered by Gav series
