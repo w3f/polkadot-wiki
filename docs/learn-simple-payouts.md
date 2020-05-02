@@ -44,3 +44,5 @@ batches of eras at once.
 1. Rewards are not minted until they are claimed. Therefore, if your reward destination is "stash,
    increasing amount at stake", then your staked amount does not reflect your rewards until you
    claim them. If you want to maximize compounding, then you will need to claim often.
+1. Staking operations at the end of an era are closed to allow the off-chain validator election to
+   take place. See [Off-chain Phragmén](learn-phragmen#off-chain-phragmen) for more information.
