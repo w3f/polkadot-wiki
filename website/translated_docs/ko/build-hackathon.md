@@ -54,7 +54,7 @@ Coming soon.
 
 ## 참고 자료들
 
-- [섭스트레이트 개발자 허브](https://substrate.dev/docs/en/)
+- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate)
 
 ## Support / Contact
 
