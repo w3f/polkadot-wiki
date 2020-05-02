@@ -105,6 +105,10 @@
         "title": "Kusama Community",
         "sidebar_label": "Community"
       },
+      "kusama-endpoints": {
+        "title": "Kusama Endpoints",
+        "sidebar_label": "Kusama Endpoints"
+      },
       "kusama-faucet": {
         "title": "Kusama Faucet",
         "sidebar_label": "Faucet"
@@ -201,10 +205,6 @@
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
-      "learn-lazy-payouts": {
-        "title": "Lazy Payouts",
-        "sidebar_label": "Lazy Payouts"
-      },
       "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"
@@ -236,6 +236,10 @@
       "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
+      },
+      "learn-simple-payouts": {
+        "title": "Simple Payouts",
+        "sidebar_label": "Simple Payouts"
       },
       "learn-spree": {
         "title": "SPREE",
