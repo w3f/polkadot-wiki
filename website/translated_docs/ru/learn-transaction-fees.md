@@ -80,6 +80,6 @@ Finally, inherents are pieces of information that are not signed or included in 
 ## Learn More
 
 - [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
-- [Substrate Weights](https://substrate.dev/docs/en/next/conceptual/runtime/weight)
-- [Substrate Fees](https://substrate.dev/docs/en/next/development/module/fees)
-- [Extrinsics](https://substrate.dev/docs/en/next/conceptual/node/extrinsics)
+- [Substrate Weights](https://www.substrate.io/kb/learn-substrate/weight)
+- [Substrate Fees](https://www.substrate.io/kb/runtime/fees)
+- [Extrinsics](https://www.substrate.io/kb/learn-substrate/extrinsics)
