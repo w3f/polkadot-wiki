@@ -348,7 +348,7 @@ The "Answered by Gav" series is a collection of posts uploaded to Reddit of ques
 - [How to tackle the concentration risk of Validators in data centers?](https://www.reddit.com/r/dot/comments/bcqwit/answered_by_gav_how_to_tackle_the_concentration/)
 
 
-[fee calculation]: https://substrate.dev/docs/en/next/development/module/fees#fee-calculatio
+[fee calculation]: https://www.substrate.io/kb/runtime/fees
 [libp2p]: https://libp2p.io
 [nim libp2p]: https://github.com/status-im/nim-libp2p
 [libp2p github]: https://github.com/libp2p

@@ -70,7 +70,7 @@ can set a custom path with `--base-path <path>`.
 The keystore stores session keys, which are important for validator operations.
 
 - [Polkadot documentation](learn-keys#session-keys)
-- [Substrate documentation](https://substrate.dev/docs/en/next/conceptual/cryptography/session-keys)
+- [Substrate documentation](https://www.substrate.io/kb/learn-substrate/session-keys)
 
 **`db`**
 
