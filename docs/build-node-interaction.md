@@ -36,14 +36,11 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 ```
 
 Some return values may not appear meaningful at first glance. Polkadot uses
-[SCALE encoding](https://substrate.dev/docs/en/next/conceptual/core/codec) as a format that is
+[SCALE encoding](https://www.substrate.io/kb/advanced/codec) as a format that is
 suitable for resource-constrained execution environments. You will need to decode the information
-and use the chain metadata (`state_getMetadata`) to obtain human-readable information.
-
-<!--
-	TODO link to documentation about metadata
-	https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/issues/507
--->
+and use the chain
+[metadata](https://www.substrate.io/kb/runtime/metadata)
+(`state_getMetadata`) to obtain human-readable information.
 
 ### Tracking the Chain Head
 
@@ -166,10 +163,13 @@ import requests
 import json
 
 url = 'http://127.0.0.1:8080/tx/'
-response = requests.post(url, data='{"tx": "0x..."}')
-if response.ok:
-	txhash = json.loads(response.text)
-	print(txhash)
+tx_headers = {'Content-type' : 'application/json', 'Accept' : 'text/plain'}
+response = requests.post(
+	url,
+	data='{"tx": "0xed0...000"}', # A serialized tx.
+	headers=tx_headers
+)
+tx_response = json.loads(response.text)
 ```
 
 If successful, this endpoint returns a JSON with the transaction hash. In case of error, it will

@@ -1,18 +1,18 @@
 ---
 id: learn-cryptography
-title: Cryptography Explainer
-sidebar_label: Cryptography Explainer
+title: Penjelasan Kriptografi
+sidebar_label: Penjelasan Kriptografi
 ---
 
 This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some knowledge about cryptographic primitives that are used in blockchains generally such as hashes, elliptic curve cryptography (ECC), and public-private keypairs.
 
 For detailed descriptions on the cryptography used please see the more advanced [research wiki](https://research.web3.foundation).
 
-## Hashing Algorithm
+## Algoritma Hashing
 
 The hashing algorithm used in Polkadot is [Blake2b](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2). Blake2 is considered to be a very fast cryptographic hash function that is also used in the cryptocurrency [Zcash](https://z.cash).
 
-## Keypairs and Signing
+## Keypairs dan Signing
 
 Polkadot uses Schnorrkel/Ristretto x25519 ("sr25519") as its key derivation and signing algorithm.
 

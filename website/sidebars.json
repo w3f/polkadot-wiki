@@ -74,12 +74,13 @@
         "label": "Advanced",
         "ids": [
           "learn-staking",
+          "learn-availability",  
           "learn-randomness",
           "learn-crosschain",
           "learn-spree",
           "learn-wasm",
           "learn-phragmen",
-          "learn-lazy-payouts"
+          "learn-simple-payouts"
         ]
       },
       {
@@ -156,6 +157,7 @@
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
           "maintain-guides-secure-validator",
+          "maintain-guides-how-to-use-polkadot-secure-validator",
           "maintain-guides-how-to-setup-sentry-node",
           "maintain-guides-how-to-upgrade"
         ]
@@ -179,7 +181,8 @@
         "label": "Get Started",
         "ids": [
           "kusama-faucet",
-          "kusama-claims"
+          "kusama-claims",
+          "kusama-endpoints"
         ]
       },
       {
@@ -190,7 +193,9 @@
           "mirror-maintain-guides-how-to-nominate-kusama",
           "mirror-learn-governance",
           "mirror-learn-identity",
-          "mirror-build-build-with-polkadot"
+          "mirror-learn-treasury",
+          "mirror-build-build-with-polkadot",
+          "maintain-guides-society-kusama"
         ]
       },
       {

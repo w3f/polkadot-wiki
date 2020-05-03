@@ -52,7 +52,7 @@ will be filled out.
 
 - [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in
   Rust. Polkadot is being built on top of Substrate.
-- [Substrate Developer Hub](https://docs.substrate.dev) - Comprehensive documentation and tutorials
+- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate) - Comprehensive documentation and tutorials
   for building a blockchain using Substrate.
 
 ## C++

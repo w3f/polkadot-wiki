@@ -105,6 +105,10 @@
         "title": "Kusama Community",
         "sidebar_label": "Community"
       },
+      "kusama-endpoints": {
+        "title": "Kusama Endpoints",
+        "sidebar_label": "Kusama Endpoints"
+      },
       "kusama-faucet": {
         "title": "Kusama Faucet",
         "sidebar_label": "Faucet"
@@ -201,10 +205,6 @@
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
-      "learn-lazy-payouts": {
-        "title": "Lazy Payouts",
-        "sidebar_label": "Lazy Payouts"
-      },
       "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"
@@ -236,6 +236,10 @@
       "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
+      },
+      "learn-simple-payouts": {
+        "title": "Simple Payouts",
+        "sidebar_label": "Simple Payouts"
       },
       "learn-spree": {
         "title": "SPREE",
@@ -317,6 +321,10 @@
         "title": "Secure Validator",
         "sidebar_label": "Secure Validator"
       },
+      "maintain-guides-society-kusama": {
+        "title": "Join Kappa Sigma Mu",
+        "sidebar_label": "Join Kappa Sigma Mu"
+      },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
         "sidebar_label": "Validator Payout Overview"
@@ -356,6 +364,10 @@
       "mirror-learn-identity": {
         "title": "Identity",
         "sidebar_label": "Identity"
+      },
+      "mirror-learn-treasury": {
+        "title": "Treasury",
+        "sidebar_label": "Treasury"
       },
       "mirror-maintain-errors": {
         "title": "Errors and How to Resolve Them",

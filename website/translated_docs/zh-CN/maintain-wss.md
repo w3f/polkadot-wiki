@@ -1,20 +1,20 @@
 ---
 id: maintain-wss
-title: Set up Secure WebSocket for Remote Connections
-sidebar_label: Set up Secure WebSocket for Remote Connections
+title: 设置安全远程 WebSocket 连接
+sidebar_label: 设置安全远程 WebSocket 连接
 ---
 
-You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [PolakdotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
+您可能想要在服务器上设置一个节点，然后从另一个服务器上的用户界面连接。例如 [PolakdotJS UI](https://polkadot.js.org/apps)。 除非您为 websocket 连接设置一个安全的代理服务器，否则这是不可行的。 让我们看看如何在 Substrate 节点上设置 WSS 。
 
-_Note: this should **only** be done for sync nodes used as back-end for some dapps or projects. Never open websockets to your validator node - there's no reason to do that and it can only lead to security gaffes!_
+_注意：**仅应**将同步节点用作某些dapp或项目的后端，才能执行此操作。 永远不要打开您的验证人节点 websockets - 并且没有理由这样做，这只会导致安全问题！_
 
-In this guide we'll be using Ubuntu 18.04 hosted on a $10 DigitalOcean droplet. We'll assume you're using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
+在本指南中，我们将使用在 $10 DigitalOcean 上的 Ubuntu 18.04。 我们将假定你正在使用类似的操作系统，并且你已经安装 nginx (如果没有，运行 `sudo apt-get install nginx`)。
 
-## Set up a node
+## 设置节点
 
-Whether it's a generic Substrate node, a Kusama node, or your own private blockchain, they all default to the same websocket connection: port 9944 on localhost. For this example, we'll set up a Kusama sync node (non-validator).
+不论是一个通用的Substrate ， Kusama 节点，还是你自己的私有区块链，他们都默认使用相同的 websocket 连接: 本地主机上的 9944 端口。对于这个示例，我们会设置一个Kusama 同步节点(非验证人)。
 
-Create a new server on your provider of choice or locally at home (preferred). We'll assume you're using Ubuntu 18.04. Then install Substrate and build the node.
+在您服务商选创建务器提或在本地创建 (首选)。 假设您正在使用 Ubuntu 18.04。然后安装 Substrate 并构建节点。
 
 ```bash
 curl https://getsubstrate.io -sSf | bash
@@ -25,41 +25,41 @@ cargo build --release
 /target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
 ```
 
-This will start the syncing process with Kusama's mainnet.
+这将启动与 Kusama 主网的同步过程。
 
-_Note: the `--rpc-cors` mode needs to be set to all so that all external connections are allowed._
+_注意：需要使用 `--rpc-cors` 模式以便允许所有外部连接。_
 
-## Set up a certificate
+## 设置证书
 
-To get WSS (secure websocket), you need an SSL certificate. There are two possible approaches.
+要获取 WSS (secure websocket), 您需要 SSL 证书。有两种可能的方法。
 
-### Domain and Certbot
+### 域名和 Certbot
 
-The first approach is getting a dedicated domain, redirecting its nameservers to your IP address, setting up an Nginx server for that domain, and finally [following LetsEncrypt instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html) for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx configuration. This will let you connect PolkadotJS UI to a URL like mynode.mydomain.com rather than 82.196.8.192:9944, which is arguably more user friendly.
+第一个方法是获取一个专用域名，将其命名并导向到您的 IP 地址。 为此域设置Nginx服务器，最后 [遵循Nginx设置的 LetsEncrypt 指令](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html) 。 这将自动生成一个 SSL 证书，并将其包含在您的 Nginx 配置中。 这将让您将 PolkadotJS 用户界面连接到 mynode.mydomain.com 等网址，而不是82 196.8192:9944，这可能更方便用户。
 
-This is simple to do on cloud hosting providers or if you have a static IP, but harder to pull off when running things from your home server.
+对于云端托管服服务商或如果您有静态IP，这样做很简单， 但在从您的家服务器运行时更难拉开。
 
-### Self-signed
+### 自我签名
 
-The second approach and one we'll follow here is generating a self-signed certificate and relying on the raw IP address of your node when connecting to it.
+第二种方法和我们在这里将遵循的方法是生成一个自签名的证书，并且在连接到您的节点时靠您的原本 IP 地址。
 
-Generate a self-signed certificate.
+生成一个自签名的证书
 
 ```bash
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
-## Set up Nginx server
+## 设置 Nginx 服务器
 
-Now it's time to tell Nginx to use these certificates. The server block below is all you need, but keep in mind that you need to replace some placeholder values. Notably:
+现在是告诉 Nginx 使用这些证书的时候了。 下面的服务器设置是您所需要的，但牢记您需要替换一些数值。请注意：
 
-- `SERVER_ADDRESS` should be replaced by your domain name if you have it, or your server's IP address if not.
-- `CERT_LOCATION` should be `/etc/letsencrypt/live/YOUR_DOMAIN/fullchain.pem` if you used Certbot, or `/etc/ssl/certs/nginx-selfsigned.crt` if self-signed.
-- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` if you used Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
-- `CERT_DHPARAM` should be `/etc/letsencrypt/ssl-dhparams.pem` if you used Certbot, and `/etc/ssl/certs/dhparam.pem` if self-signed.
+- `SERVER_ADDRESS` 如果你有域名，应该替换成你的域名，或者你的服务器的 IP 地址。
+- `CERT_LOCATION` 如果您使用 Certbot，应该是 `/etc/letsensencrypt/live/YOUR_DOMAIN/fullchain.pem` 或者 `/etc/ssl/certs/nginx-selfsigned.crt` 如果是自签名。
+- `CERT_LOCATION_KEY` 如果您使用 Certbot，应该是 `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` 或 `/etc/ssl/private/nginx-selfsigned.key` 如果您是自签名的话。
+- `CERT_DHPARAM` 如果您使用 Certbot， 应该是 `/etc/letsencrypt/ssl-dhparams.pem` ，如果您是自签名，应该是 `/etc/ssl/certs/dhparam.pem` 。
 
-_Note that if you used Certbot, it should have made the path insertions below for you if you followed the [official instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
+_请注意如果您使用 Certbot ，它应该在下面为您插入路径，如果您遵循 [官方指示](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
 
 ```conf
 server {
@@ -100,12 +100,12 @@ server {
 }
 ```
 
-Restart nginx after setting this up: `sudo service nginx restart`.
+设置后重启 nginx: `sudo service nginx restart`。
 
-## Connecting to the node
+## 连接节点
 
-Open [PolkadotJS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`!
+打开 [PolkadotJS UI](https://polkadot.js.org/apps) 并点击左上方的 logo 切换节点。 选择 "Custom Endpoint" 切换并输入您的节点地址 - 或者是域名或IP地址。 记得在前缀使用 `wss://`！
 
 ![A sync-in-progress chain connected to Polkadot UI](/img/wss/wss01.jpg)
 
-Congratulations - you have a secure remote connect setup for your Substrate node.
+恭喜-您已经为您的 Substrate 节点设置了安全的远程连接。

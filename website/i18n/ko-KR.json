@@ -105,6 +105,10 @@
         "title": "Kusama Community",
         "sidebar_label": "Community"
       },
+      "kusama-endpoints": {
+        "title": "Kusama Endpoints",
+        "sidebar_label": "Kusama Endpoints"
+      },
       "kusama-faucet": {
         "title": "Kusama Faucet",
         "sidebar_label": "Faucet"
@@ -201,10 +205,6 @@
         "title": "폴카닷 키들",
         "sidebar_label": "폴카닷 키들"
       },
-      "learn-lazy-payouts": {
-        "title": "Lazy Payouts",
-        "sidebar_label": "Lazy Payouts"
-      },
       "learn-parachains": {
         "title": "패러체인 (Parachains)",
         "sidebar_label": "패러체인 (Parachains)"
@@ -236,6 +236,10 @@
       "learn-security": {
         "title": "네트워크의 보안",
         "sidebar_label": "네트워크의 보안"
+      },
+      "learn-simple-payouts": {
+        "title": "Simple Payouts",
+        "sidebar_label": "Simple Payouts"
       },
       "learn-spree": {
         "title": "스프리 (SPREE)",
@@ -317,6 +321,10 @@
         "title": "안전한 검증자 노드",
         "sidebar_label": "안전한 검증자 노드"
       },
+      "maintain-guides-society-kusama": {
+        "title": "Join Kappa Sigma Mu",
+        "sidebar_label": "Join Kappa Sigma Mu"
+      },
       "maintain-guides-validator-payout": {
         "title": "검증자 보상 구조 정리",
         "sidebar_label": "검증자 보상 구조 정리"
@@ -356,6 +364,10 @@
       "mirror-learn-identity": {
         "title": "Identity",
         "sidebar_label": "Identity"
+      },
+      "mirror-learn-treasury": {
+        "title": "Treasury",
+        "sidebar_label": "Treasury"
       },
       "mirror-maintain-errors": {
         "title": "Errors and How to Resolve Them",

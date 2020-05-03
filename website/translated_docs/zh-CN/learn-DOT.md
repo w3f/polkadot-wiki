@@ -10,18 +10,9 @@ DOT is the native token of the Polkadot network in a similar way that BTC is the
 
 Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest unit being the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
-**Polkadot**
-| Unit | Decimal Places |
-| ---- | -------------- |
-|      |                |
- Planck| 1 Point | 3 Microdot (uDOT)| 6 Millidot (mDOT)| 9 Dot (DOT) | 12
+**Polkadot** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 Microdot (uDOT)| 6 Millidot (mDOT)| 9 Dot (DOT) | 12
 
-**Kusama**
-| Unit | Decimal Places |
-| ---- | -------------- |
-|      |                |
- Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
-
+**Kusama** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
 
 ## DOTs 用途是什么？
 
@@ -52,13 +43,13 @@ Vesting funds are on a linear release schedule and unlock a constant number of t
 There are two ways that vesting schedules can be created.
 
 - One way is as part of the genesis configuration of the chain. In the case of Polkadot and Kusama, the chain specification genesis script reads the state of the Polkadot Claims contract that exists on the Ethereum blockchain and creates vesting schedules in genesis for all the allocations registered as being vested.
-- A second way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as long as 1) the account for which the vesting schedule will be created does not already have one and 2) the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
+- A second way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as long as the account for which the vesting schedule will be created does not already have one and the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
 
 Vesting schedules have three parameters, `locked`, `per_block`, and `starting_block`. The configuration of these three fields dictate the amount of funds that are originally locked, the slope of the unlock line, and the block number for when the unlocking begins.
 
 #### Lazy Vesting
 
-Like [lazy payouts](learn-lazy-payouts), vesting is _lazy_, which means that someone must explicitly call an extrinsic to update the lock that is placed on an account.
+Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that someone must explicitly call an extrinsic to update the lock that is placed on an account.
 
 - The `vest` extrinsic will update the lock that is placed on the caller.
 - The `vest_other` will update the lock that is placed on another "target" account's funds.
@@ -74,6 +65,7 @@ _Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expecte
 Testnet DOTs are freely available now - see below for various ways to obtain them.
 
 ## 测试网 DOTs
+
 DOTs are required to make transactions on the Polkadot network. Testnet DOTs do not have any value beside allowing you to experiment with the network.
 
 ### Getting Westies

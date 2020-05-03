@@ -30,7 +30,7 @@ polkadot export-blocks --from 0 <output_file>
 
 **RPC ports**
 
-Use the `--rpc-external` flag to expose RPC ports and `--ws-external` to expose websockets. Not all RPC calls are safe to allow and you should use an RPC proxy to filter unsafe calls. Select ports with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access, use the `--rpcs-cors` and `--ws-cors` options.
+Use the `--rpc-external` flag to expose RPC ports and `--ws-external` to expose websockets. Not all RPC calls are safe to allow and you should use an RPC proxy to filter unsafe calls. Select ports with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access, use the `--rpc-cors` and `--ws-cors` options.
 
 **Execution**
 
@@ -49,7 +49,7 @@ The node stores a number of files in: `/home/$USER/.local/share/polkadot/chains/
 The keystore stores session keys, which are important for validator operations.
 
 - [Polkadot documentation](learn-keys#session-keys)
-- [Substrate documentation](https://substrate.dev/docs/en/next/conceptual/cryptography/session-keys)
+- [Substrate documentation](https://www.substrate.io/kb/learn-substrate/session-keys)
 
 **`db`**
 

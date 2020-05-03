@@ -1,42 +1,42 @@
 ---
 id: build-smart-contracts
-title: Smart Contracts
-sidebar_label: Smart Contracts
+title: Kontrak pintar
+sidebar_label: Kontrak pintar
 ---
 
-The Polkadot relay chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://crates.parity.io/pallet_contracts/index.html), it is likely that more parachains will support this feature.
+The Polkadot relay chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract module](https://crates.parity.io/srml_contract/index.html), it is likely that more parachains will support this feature.
 
-## Resources
+## Sumber daya
 
-Here is the list of current resources available to developers who want to get started writing smart contracts to deploy on parachains based on Substrate.
+Berikut adalah daftar sumber daya saat ini tersedia untuk pengembang yang ingin memulai menulis kontrak pintar untuk menggunakan parachains berdasarkan Substrate.
 
-- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
+- [ tinta! ](https://github.com/paritytech/ink) - Tinta Parity untuk menulis kontrak pintar.
 - [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you through the basics of writing and deploying an ERC20 token using `ink!`.
 
-## Examples
+## Contoh
 
-Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!
+Dikumpulkan di bawah ini adalah beberapa contoh komunitas kontrak pintar dalam tinta `ink!`. Apakah Anda mengerjakan contoh kontrak pintar? Minta kami untuk menambahkannya ke halaman ini!
 
-- [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
+- [ Dimiliki ](https://github.com/JesseAbram/foRust/) - Port kontrak OpenZeppelin ` Ownable `.
 
-## What is the difference between developing a smart contract versus a parachain?
+## Apa perbedaan antara mengembangkan kontrak pintar versus parachain?
 
-### Layer of Abstraction
+### Lapisan Abstraksi
 
-When you write a smart contract you are creating the instructions which will be deployed and associated to a specific chain address.
+Saat Anda menulis kontrak pintar, Anda membuat instruksi yang akan digunakan dan dikaitkan dengan alamat rantai tertentu.
 
-In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a state transition function).
+Sebagai perbandingan, modul runtime adalah seluruh logika transisi status rantai (apa yang disebut fungsi transisi status).
 
-Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance pallet.
+Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance module.
 
-When you build a smart contract, it will be eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
+Ketika Anda membangun kontrak yang cerdas, pada akhirnya akan dikerahkan ke rantai target dengan lingkungannya sendiri. Parachains memungkinkan pengembang untuk menyatakan lingkungan rantai mereka sendiri, bahkan memungkinkan orang lain untuk menulis kontrak pintar untuk itu.
 
-### Gas Fees
+### Biaya Gas
 
-Smart contracts must find a way to limit their own execution, or else full nodes are vulnerable to DOS attacks. An infinite loop in a smart contract, for example, could consume the computational resources of an entire chain, preventing others from using it. The [halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that with a powerful enough language, it is impossible to know ahead of time whether or not a program will ever cease execution. Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute their code. If a smart contract does get into a state where execution will never halt, it eventually runs out of gas, ceases execution, and any state transition that would have been made by the smart contract is rolled back.
+Kontrak pintar harus menemukan cara untuk membatasi eksekusi mereka sendiri, atau node penuh rentan terhadap serangan DOS. Loop tak terbatas dalam kontrak pintar, misalnya, dapat menggunakan sumber daya komputasi seluruh rantai, mencegah orang lain menggunakannya. [ menghentikan masalah ](https://en.wikipedia.org/wiki/Halting_problem) menunjukkan bahwa dengan bahasa yang cukup kuat, tidak mungkin untuk mengetahui sebelumnya apakah suatu program akan pernah atau tidak akan pernah hentikan eksekusi. Beberapa platform, seperti Bitcoin, mengatasi kendala ini dengan menyediakan bahasa scripting yang sangat terbatas. Lainnya, seperti Ethereum, "menagih" kontrak pintar "gas" untuk hak untuk mengeksekusi kode mereka. Jika suatu kontrak pintar benar-benar masuk ke suatu keadaan di mana eksekusi tidak akan pernah berhenti, ia akhirnya kehabisan bensin, berhenti eksekusi, dan setiap transisi negara yang akan dibuat oleh kontrak pintar dibatalkan.
 
-Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should _never_ be implemented. Leaving certain logic, such as complex loops which could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
+Parachains dapat mengimplementasikan bahasa pemrograman yang kuat secara sewenang-wenang dan juga tidak mengandung gagasan gas untuk logika asli mereka. Ini berarti bahwa beberapa fungsionalitas lebih mudah diimplementasikan untuk pengembang, tetapi itu juga berarti ada beberapa konstruksi, seperti perulangan tanpa syarat pengakhiran, yang harus _ tidak pernah _ diimplementasikan. Meninggalkan logika tertentu, seperti loop rumit yang mungkin dapat berjalan tanpa batas waktu, ke lapisan kontrak yang tidak cerdas, atau bahkan mencoba menghilangkannya sepenuhnya, akan sering menjadi pilihan yang lebih bijaksana.
 
-## Resources
+## Sumber daya
 
-- [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) - From a technical standpoint answers the question of when a developer might choose to develop a runtime versus a smart contract.
+- [ Kapan saya harus membangun runtime substrat versus kontrak pintar substrat ](https://stackoverflow.com/a/56041305) - Dari sudut pandang teknis, jawab pertanyaan kapan pengembang mungkin memilih untuk mengembangkan runtime versus kontrak pintar.

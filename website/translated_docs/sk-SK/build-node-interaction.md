@@ -32,13 +32,7 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 {"jsonrpc":"2.0","result":{"block":{"extrinsics":["0x280402000b50055ee97001","0x1004140000"],"header":{"digest":{"logs":["0x06424142453402af000000937fbd0f00000000","0x054241424501011e38401b0aab22f4d72ebc95329c3798445786b92ca1ae69366aacb6e1584851f5fcdfcc0f518df121265c343059c62ab0a34e8e88fda8578810fbe508b6f583"]},"extrinsicsRoot":"0x0e354333c062892e774898e7ff5e23bf1cdd8314755fac15079e25c1a7765f06","number":"0x16c28c","parentHash":"0xe3bf2e8f0e901c292de24d07ebc412d67224ce52a3d1ffae76dc4bd78351e8ac","stateRoot":"0xd582f0dfeb6a7c73c47db735ae82d37fbeb5bada67ee8abcd43479df0f8fc8d8"}},"justification":null},"id":1}
 ```
 
-Some return values may not appear meaningful at first glance. Polkadot uses [SCALE encoding](https://substrate.dev/docs/en/next/conceptual/core/codec) as a format that is suitable for resource-constrained execution environments. You will need to decode the information and use the chain metadata (`state_getMetadata`) to obtain human-readable information.
-
-
-<!--
-    TODO link to documentation about metadata
-    https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/issues/507
--->
+Some return values may not appear meaningful at first glance. Polkadot uses [SCALE encoding](https://www.substrate.io/kb/advanced/codec) as a format that is suitable for resource-constrained execution environments. You will need to decode the information and use the chain [metadata](https://www.substrate.io/kb/runtime/metadata) (`state_getMetadata`) to obtain human-readable information.
 
 ### Tracking the Chain Head
 
@@ -146,10 +140,13 @@ import requests
 import json
 
 url = 'http://127.0.0.1:8080/tx/'
-response = requests.post(url, data='{"tx": "0x..."}')
-if response.ok:
-    txhash = json.loads(response.text)
-    print(txhash)
+tx_headers = {'Content-type' : 'application/json', 'Accept' : 'text/plain'}
+response = requests.post(
+    url,
+    data='{"tx": "0xed0...000"}', # A serialized tx.
+    headers=tx_headers
+)
+tx_response = json.loads(response.text)
 ```
 
 If successful, this endpoint returns a JSON with the transaction hash. In case of error, it will return an error report, e.g.:

@@ -1,26 +1,29 @@
 ---
 id: learn-polkadot-host
-title: Polkadot Host (PH)
-sidebar_label: Polkadot Host (PH)
+title: Polkadot 组件
+sidebar_label: Polkadot 组件
 ---
 
-The Polkadot Host is an important component of the Polkadot protocol. It consists of the networking, consensus and Wasm VM subsystems, and acts as the lower layers of the stack underlying the Polkadot runtime and the runtimes of the parachains. Loosely, the Polkadot Host can be thought of as synonymous with a virtual machine running the Polkadot Relay Chain (although as stated below, there is a clear separation between the chain logic itself, and the Polkadot Host on which it runs).
+Polkadot的架构可以分为两个不同的部分： Polkadot _runtime_和 Polkadot _组件_。 Polkadot runtime 是链的核心状态转变逻辑，可以在一段时间内升级而不需要硬分叉。 相比 Polkadot 的主机是执行 runtime 的环境并且保持稳定和在 Polkadot 的生命周期内保持静态状态。
 
-The components of the Polkadot Host are:
+Polkadot 主机与 Polkadot runtime 进行交互是受到限制，并且有明确规定的方式。出于这个原因，实现团队可以建立备选的的 Polkadot 主机程序用 Polkadot runtime 视为一个黑箱。 欲了解更多主机与 runtime 之间互动的详细信息，请参阅 [规格](https://github.com/w3f/polkadot-spec/blob/master/runtime-environment-spec/polkadot_re_spec.pdf)。
 
-- The networking layer that facilitates network interactions.
-- State storage and the storage trie along with the database layer.
-- Consensus engine.
-- Wasm interpreter and virtual machine.
+## Polkadot 的组件
 
-The runtime, which is defined as the code implementing the logic of the chain, is decoupled from the Polkadot Host. The separation of the two components allows the runtime to be easily upgradable without needing to upgrade the Polkadot Host.
+- 网络组件如 Libp2p 用于网络的交互 。
+- 狀態储存和 storage trie 与数据库
+- GRANDPA 和 BABE 的共识引擎。
+- Wasm 解析器和虚拟机.
+- 底层原始的区块链功能例如像密码学的哈希函数。
 
-The Polkadot runtime (as well as the runtimes of the parachains) must be compiled to WebAssembly (Wasm) blobs. The Polkadot runtime "plugs-in" to the Polkadot Host and will be swappable through the governance mechanism.
+编译了的 Polkadot runtime，Wasm 代码可以上传到 Polkadot 主机并用作执行状态转变的逻辑。没有 runtime，Polkadot 主机无法进行状态转变或生成任何区块。
 
-The image below is taken from the [slide deck](https://slides.com/paritytech/paritysubstrate#/8) that Gavin Wood presented on Substrate and demonstrates visually the 4 layers of the Polkadot stack.
+## 图表
 
-![Polkadot Host](assets/PH.png)
+下面是显示了 Polkadot runtime 周围的 Polkadot 主机图表。试想像 runtime (白色) 作为是一个可以插入、交换或完全删除的组件。灰色中的部分是稳定的，如果没有明确的硬分叉，就不能更改。
 
-## Resources
+![polkadot host](assets/updated_pre.png)
 
-- [Polkadot Host Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the Polkadot Host spec, including tests.
+## 资源
+
+- [Polkadot 主机协议规格](https://github.com/w3f/polkadot-spec) - Polkadot 规格，包括测试。

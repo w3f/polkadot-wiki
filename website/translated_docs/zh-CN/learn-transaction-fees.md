@@ -1,53 +1,52 @@
 ---
 id: learn-transaction-fees
-title: Transaction Fees
-sidebar_label: Transaction Fees
+title: 交易费用
+sidebar_label: 交易费用
 ---
 
 Several resources in a blockchain network are limited, for example, storage and computation. Transaction fees prevent individual users from consuming too many resources. Polkadot uses a weight-based fee model as opposed to a gas-metering model. As such, fees are charged prior to transaction execution; once the fee is paid, nodes will execute the transaction.
 
 [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits) designed the Polkadot fee system with the following objectives:
 
-- Each Relay Chain block should be processed efficiently to avoid delays in block production.
-- The growth rate of the Relay Chain should be bounded.
-- Each block should have space for special, high-priority transactions like misconduct reports.
-- The system should be able to handle spikes in demand.
-- Fees should change slowly so that senders can accurately predict the fee for a given transaction.
+- 每个中继链的区块链应该有效地处理从而被免延迟生成区块链。
+- 中继链的增长率应该有界限。
+- 每个区块都应有空间给特殊高优先的交易，例如不当行为报告。
+- 该系统应能够处理需求激增的问题。
+- 费用应缓慢变化，以便用户可以准确预测既定交易的费用。
 
-## Fee Calculation
+## 费用计算
 
-Fees on the Polkadot Relay Chain are calculated based on four parameters:
+Fees on the Polkadot Relay Chain are calculated based on three parameters:
 
-- A base fee
 - A per-byte fee (also known as the "length fee")
 - A weight fee
 - A tip (optional)
 
-The base fee is a fixed fee applied to every transaction. The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
+The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
 
-Weights are a fixed number designed to represent overall resource consumption of a transaction. Resources could be CPU cycles, memory usage, disk I/O, etc. Each transaction has a weight, which is multiplied by a per-weight fee to calculate the transaction's weight fee.
+Weights are a fixed number designed to manage the time is takes to validate a block. Each transaction has a base weight that accounts for the overhead of inclusion (e.g. signature verification) as well as a dispatch weight that accounts for the time to execute the transaction. The total weight is multiplied by a per-weight fee to calculate the transaction's weight fee.
 
-Tips are an optional transaction fee that users can add to give a transaction higher priority.
+小费是一种可选的交易费，用户可以添加来给予交易更优先的处理。
 
-Together, these four fees constitute the inclusion fee. This fee is deducted from the sender's account prior to transaction execution. A portion of the fee will go to the block producer and the remainder will go to the [Treasury](learn-treasury). At Polkadot's genesis, this is set to 20% and 80%, respectively.
+Together, these three fees constitute the inclusion fee. This fee is deducted from the sender's account prior to transaction execution. A portion of the fee will go to the block producer and the remainder will go to the [Treasury](learn-treasury). At Polkadot's genesis, this is set to 20% and 80%, respectively.
 
-## Block Limits and Transaction Priority
+## 区块限制和交易优先
 
 Blocks in Polkadot have both a maximum length (in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these limits. A portion of each block - currently 25% - is reserved for critical transactions that are related to the chain's operation. Block producers will only fill up to 75% of a block with normal transactions. Some examples of operational transactions:
 
-- Misbehavior reports
-- Council operations
-- Member operations in an election (e.g. renouncing candidacy)
+- 错误报告
+- 议会操作
+- 选举中的成员操作(例如放弃候选人)
 
 Block producers prioritize transactions based on each transaction's total fee. Since a portion of the fee will go to the block producer, producers will include the transactions with the highest fees to maximize their reward.
 
-## Fee Adjustment
+## 费用调整
 
 Transaction volume on blockchains is highly irregular, and therefore transaction fees need a mechanism to adjust. However, users should be able to predict transaction fees.
 
-Polkadot uses a slow-adjusting fee mechanism with tips to balance these two considerations. In addition to block _limits,_ Polkadot also has a block fullness _target._ Fees increase or decrease for the next block based on the fullness of the current block relative to the target. The per-weight fee can change up to 30% in a 24 hour period. This rate captures long-term trends in demand, but not short-term spikes. To consider short term spikes, Polkadot uses tips on top of the base, byte, and weight fees. Users can optionally add a tip to the fee to give the transaction a higher priority.
+Polkadot uses a slow-adjusting fee mechanism with tips to balance these two considerations. In addition to block _limits,_ Polkadot also has a block fullness _target._ Fees increase or decrease for the next block based on the fullness of the current block relative to the target. The per-weight fee can change up to 30% in a 24 hour period. This rate captures long-term trends in demand, but not short-term spikes. To consider short term spikes, Polkadot uses tips on top of the length and weight fees. Users can optionally add a tip to the fee to give the transaction a higher priority.
 
-## Shard Transactions
+## 分片交易
 
 The transactions that take place within Polkadot's shards - parachains and parathreads - do not incur Relay Chain transaction fees. Users of shard applications do not even need to hold DOT tokens, as each shard has its own economic model and may or may not have a token. There are, however, situations where shards themselves make transactions on the Relay Chain.
 
@@ -55,7 +54,7 @@ The transactions that take place within Polkadot's shards - parachains and parat
 
 [Parathreads](learn-parathreads) will also make all the same transactions that a parachain might. In addition, the collators need to participate in an auction every block to progress their chain. The collators will need to have DOTs to participate in these auctions.
 
-## Other Resource Limitation Strategies
+## 其他资源限制策略
 
 Transaction weight must be computable prior to execution, and therefore can only represent fixed logic. Some transactions warrant limiting resources with other strategies. For example:
 
@@ -64,7 +63,7 @@ Transaction weight must be computable prior to execution, and therefore can only
 - Burns: A transaction may burn funds internally based on its logic. For example, a transaction may burn funds from the sender if it creates new storage entries, thus increasing the state size.
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16 validators. This limits the complexity of [Phragmen](learn-phragmen).
 
-## Advanced
+## 进阶
 
 This page only covered transactions that come from normal users. If you look at blocks in a block explorer, though, you may see some "extrinsics" that look different from these transactions. In Polkadot (and any chain built on Substrate), an extrinsic is a piece of information that comes from outside the chain. Extrinsics fall into three categories:
 
@@ -78,9 +77,9 @@ Unsigned transactions are for special cases where a user needs to submit an extr
 
 Finally, inherents are pieces of information that are not signed or included in the transaction queue. As such, only the block author can add inherents to a block. Inherents are assumed to be "true" simply because a sufficiently large number of validators have agreed on them being reasonable. For example, Polkadot blocks include a timestamp inherent. There is no way to prove that a timestamp is true the way one proves the desire to send funds with a signature. Rather, validators accept or reject the block based on how reasonable they find the timestamp. In Polkadot, it must be within some acceptable range of their own system clocks.
 
-## Learn More
+## 了解更多
 
-- [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
-- [Substrate Weights](https://substrate.dev/docs/en/next/conceptual/runtime/weight)
-- [Substrate Fees](https://substrate.dev/docs/en/next/development/module/fees)
-- [Extrinsics](https://substrate.dev/docs/en/next/conceptual/node/extrinsics)
+- [Web3 基金会研究](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
+- [Substrate 权重](https://www.substrate.io/kb/learn-substrate/weight)
+- [Substrate 费用](https://www.substrate.io/kb/runtime/fees)
+- [交易 (Extrinsics)](https://www.substrate.io/kb/learn-substrate/extrinsics)

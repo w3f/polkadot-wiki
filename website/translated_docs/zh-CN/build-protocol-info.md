@@ -69,7 +69,7 @@ Extrinsics constitute information from the outside world and take on three forms
 - Signed Transactions
 - Unsigned Transactions
 
-As an infrastructure provider, you will deal almost exclusively with signed transactions. You will, however, see other extrinsics within the blocks that you decode. Find more information in the [Substrate documentation](https://substrate.dev/docs/en/next/conceptual/node/extrinsics).
+As an infrastructure provider, you will deal almost exclusively with signed transactions. You will, however, see other extrinsics within the blocks that you decode. Find more information in the [Substrate documentation](https://www.substrate.io/kb/learn-substrate/extrinsics).
 
 Inherents contain information that is not provably true, but validators agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but validators can agree that it is within some delta of their system clock. Inherents are not gossiped on the network, and only block authors insert them into blocks.
 
@@ -95,7 +95,7 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 ### Encoding
 
-Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them and interact directly with the chain data or implement your own codec, Polkadot encodes block and transaction data using the [SCALE codec](https://substrate.dev/docs/en/next/conceptual/core/codec).
+Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them and interact directly with the chain data or implement your own codec, Polkadot encodes block and transaction data using the [SCALE codec](https://www.substrate.io/kb/advanced/codec).
 
 ## Smart Contracts
 

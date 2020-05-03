@@ -89,4 +89,12 @@ docReady(function () {
     link.innerText = 'Improve this wiki';
     document.querySelector('body').appendChild(link);
     // -----------------
+
+    // Add fathom to footer
+    
+    let script = document.createElement('script');
+    script.setAttribute('src', 'https://cdn.usefathom.com/3.js');
+    script.setAttribute('site', 'YOUKYIQA');
+    document.querySelector('body footer').appendChild(script);
+
 })

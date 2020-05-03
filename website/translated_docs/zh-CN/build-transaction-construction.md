@@ -1,47 +1,47 @@
 ---
 id: build-transaction-construction
-title: Transaction Construction and Signing
-sidebar_label: Transaction Construction
+title: 交易创建和签名
+sidebar_label: 交易创建
 ---
 
-This page will discuss the transaction format in Polkadot and how to create, sign, and broadcast transactions. Like the other pages in this guide, this page demonstrates some of the available tools. **Always refer to each tool's documentation when integrating.**
+這页将讨论 Polkadot 的交易格式以及如何创建、签名和提交交易。 与其它教程的页面一样，这一页展示了一些可用的工具。 **在整合时请前往每个工具的文档。**
 
-## Transaction Format
+## 交易格式
 
-Polkadot has some basic transaction information that is common to all transactions.
+Polkadot 有一些所有交易的基本交易信息。
 
-- Address: The SS58-encoded address of the sending account.
-- Block Hash: The hash of the [checkpoint](build-protocol-info#transaction-mortality) block.
-- Block Number: The number of the checkpoint block.
-- Genesis Hash: The genesis hash of the chain.
-- Metadata: The SCALE-encoded metadata for the runtime when submitted.
-- Nonce: The nonce for this transaction.\*
-- Spec Version: The current spec version for the runtime.
-- Tip: Optional, the [tip](build-protocol-info#fees) to increase transaction priority.
-- Validity Period: Optional, the number of blocks after the checkpoint for which a transaction is valid. If zero, the transaction is [immortal](build-protocol-info#transaction-mortality).
+- 地址(Address)：发送帐户的 SS58 编码地址。
+- 区块哈希(Block Hash)： [检查站](build-protocol-info#transaction-mortality) 区块。
+- 区块编号(Block Number)：检查站区块的数量。
+- 创世纪哈希 (Genesis Hash)：链的创世纪哈希。
+- 元数据 (Metadata)：提交 runtime 的 SCALE 编码元数据。
+- Nonce：此交易的nonce。
+- Spec 版本：当前 runtime 的 spec 版本。
+- 小费: 可选， [小费](build-protocol-info#fees) 以提高交易优先处理。
+- 有效期 (Validity Period)：可选，检查点之后有效处理交易的区块数量。 如果为零，交易为 [immortal](build-protocol-info#transaction-mortality)。
 
-\*The nonce queried from the System module does not account for pending transactions. You must track and increment the nonce manually if you want to submit multiple valid transactions at the same time.
+从系统模块中查询的 nonce 不会考虑待处理的交易。如果您想要同时提交多个有效的交易，您必须跟踪并手动递增 nonce。
 
-Each transaction will have its own (or no) parameters to add. For example, the `transferKeepAlive` function from the Balances pallet will take:
+每个交易都有自己(与否)的参数添加。例如来自 Balances pallet 的 `transferKeepAlive`函数将需要：
 
-- `dest`: Destination address
-- `#[compact] value`: Number of tokens (compact encoding)
+- `dest`: 目标地址
+- `#[compact] value`: 代币数量
 
-Once you have all the necessary information, you will need to:
+一旦您有了必要的资料，您需要:
 
-1. Construct an unsigned transaction.
-1. Create a signing payload.
-1. Sign the payload.
-1. Serialize the signed payload into a transaction.
-1. Submit the serialized transaction.
+1. 创建未签名的交易
+1. 创建签名的 payload。
+1. payload 签名。
+1. 将已签名的 payload 序列化为交易。
+1. 提交序列化的交易。
 
-Parity provides the following tools to help perform these steps.
+Parity 提供了以下工具来帮助执行这些步骤。
 
-## Polkadot JS Tools
+## Polkadot JS 工具
 
-[Polkadot JS Tools](https://github.com/polkadot-js/tools) contains a set of command line tools for interacting with a Substrate client, including one called "Signer CLI" to create, sign, and broadcast transactions.
+[Polkadot JS 工具](https://github.com/polkadot-js/tools) 包含一组命令行工具，用于与 Substrate 客户端交互， 包括一个叫做" Signer CLI"的交易，创建、签名和广播交易。
 
-This example will use the `signer submit` command, which will create and submit the transaction. The `signer sendOffline` command has the exact same API, but will not broadcast the transaction. `submit` and `sendOffline` must be connected to a node to fetch the current metadata and construct a valid transaction. Their API has the format:
+此例将使用 `signer submit` 指令，该指令将创建和提交交易。 `signer sendOffline` 指令有完全相同的API，但不会广播交易。 `submit` 和 `sendOffline` 必须连接到一个节点才能获取当前元数据并构建一个有效的交易。他们的 API 格式：
 
 ```bash
 yarn run:signer <submit|sendOffline> --account <from-account-ss58> --ws <endpoint> <module.method> [param1] [...] [paramX]
@@ -53,27 +53,27 @@ Signing:
 yarn run:signer sign --account <from-account-ss58> --seed <seed> --type <sr25519|ed25519> <payload>
 ```
 
-For example, let's send 0.5 DOT from `121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2` to `15vrtLsCQFG3qRYUcaEeeEih4JwepocNJHkpsrqojqnZPc2y`.
+例如我们从 `121X5bEgTZcGQx5NZjwuTjqkoiG8B2wEAvrUFjuw24ZGZf2` 发送0.5 DOT 到 `15vrtLsCQF3qRYUcaEeh4JwepolNJkpsrqojqnZPc2y`
 
 ```bash
 yarn run:signer submit --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 --ws ws://127.0.0.1:9944 balances.transferKeepAlive 15vrtLsCQFG3qRYUcaEeeEih4JwepocNJHkpsrqojqnZPc2y 500000000000
 ```
 
-This will return a payload to sign and an input waiting for a signature. Take this payload and use your normal signing environment (e.g. airgapped machine, VM, etc.). Sign the payload:
+这将返回 payload 签名和等待签名。 使用这个 payload 并使用 你的正常签名环境 (例如 airgapped 電腦、 VM 等) 签 payload：
 
 ```bash
 yarn run:signer sign --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 --seed "pulp gaze fuel ... mercy inherit equal" --type sr25519 0x040300ff4a83f1...a8239139ff3ff7c3f6
 ```
 
-Save the output and bring it to the machine that you will broadcast from, enter it into `submit`'s signature field, and send the transaction (or just return the serialized transaction if using `sendOffline`).
+保存输出并将其带到您要广播的电脑，输入 `submit`'s 签名字段并发送交易(或如果使用 `sendOffline`，则只是退回 serialized 的交易)。
 
 ## Tx Wrapper
 
-If you do not want to use the CLI for signing operations, Parity provides an SDK called [txwrapper](https://github.com/paritytech/txwrapper) to generate and sign transactions offline. See the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for a guide.
+如果您不想使用 CLI 来签名操作，Parity 提供了一个名为 [txwrapper](https://github.com/paritytech/txwrapper) 的SDK来生成和离线签名交易。 请参阅 [示例](https://github.com/paritytech/txwrapper/tree/master/examples)
 
-Note: Tx Wrapper defaults to Kusama's SS58 encoding. Read the documentation to ensure that you encode and decode address formats properly.
+注意：Tx Wrapper 默认为Kusama的 SS58 编码。请阅读文档以确保您的 编码(encode)并正确解码(decode)地址。
 
-**Import a private key**
+**导入私钥**
 
 ```ts
 import { importPrivateKey } from '@substrate/txwrapper';
@@ -81,7 +81,7 @@ import { importPrivateKey } from '@substrate/txwrapper';
 const keypair = importPrivateKey(“pulp gaze fuel ... mercy inherit equal”);
 ```
 
-**Derive an address from a public key**
+**从公钥生成地址**
 
 ```ts
 import { deriveAddress } from '@substrate/txwrapper';
@@ -91,7 +91,7 @@ const publicKey = “0x2ca17d26ca376087dc30ed52deb74bf0f64aca96fe78b05ec3e720a72
 const address = deriveAddress(publicKey);
 ```
 
-**Construct a transaction offline**
+**构造离线交易**
 
 ```ts
 import { methods } from '@substrate/txwrapper';
@@ -115,7 +115,7 @@ const unsigned = methods.balances.transferKeepAlive(
 );
 ```
 
-**Construct a signing payload**
+**创建签名的 payload。**
 
 ```ts
 import { methods, createSigningPayload } from '@substrate/txwrapper';
@@ -125,7 +125,7 @@ const unsigned = methods.balances.transferKeepAlive({...}, {...});
 const signingPayload = createSigningPayload(unsigned);
 ```
 
-**Serialize a signed transaction**
+**序列化已签名的交易**
 
 ```ts
 import { createSignedTx } from '@substrate/txwrapper';
@@ -137,9 +137,9 @@ const signature = await signWithAlice(signingPayload);
 const signedTx = createSignedTx(unsigned, signature);
 ```
 
-**Decode payload types**
+**解码 payload 类型**
 
-You may want to decode payloads to verify their contents prior to submission.
+您可能想要在提交解码 payloads 前以验证其内容。
 
 ```ts
 import { decode } from '@substrate/txwrapper';
@@ -154,24 +154,24 @@ const txInfo = decode(signingPayload, { metadata });
 const txInfo = decode(signedTx, { metadata });
 ```
 
-**Check a transaction's hash**
+**检查交易哈希**
 
 ```ts
 import { getTxHash } from ‘@substrate/txwrapper’;
 const txHash = getTxHash(signedTx);
 ```
 
-## Submitting a Signed Payload
+## 提交已签名的 Payload
 
-There are several ways to submit a signed payload:
+有几种方法提交已经签名的 payload：
 
 1. Signer CLI (`yarn run:signer submit --tx <signed-transaction> --ws <endpoint>`)
 1. [Substrate API Sidecar](build-node-interaction#substrate-api-sidecar)
 1. [RPC](build-node-interaction#polkadot-rpc) with `author_submitExtrinsic` or `author_submitAndWatchExtrinsic`, the latter of which will subscribe you to events to be notified as a transaction gets validated and included in the chain.
 
-## Notes
+## 注意
 
-Some addresses to use in the examples. See [Subkey documentation](https://substrate.dev/docs/en/next/development/tools/subkey).
+Some addresses to use in the examples. See [Subkey documentation](https://www.substrate.io/kb/integrate/subkey).
 
 ```bash
 $ subkey --network polkadot generate

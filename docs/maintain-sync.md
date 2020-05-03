@@ -6,7 +6,7 @@ sidebar_label: Set up a Full Node
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's always better to rely on your own infrastructure than on a third-party-hosted one in this brave new decentralized world.
 
-This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev)-based chain. First, let's clarify the term _full node_.
+This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://www.substrate.io/kb/learn-substrate)-based chain. First, let's clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -22,9 +22,50 @@ Archive nodes are used by utilities that need past information - like block expl
 
 Another type of node is a **light node**. A light node has only the runtime and the current state, but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome extension which is a node in its own right, running the runtime in WASM format: https://github.com/paritytech/substrate-light-ui
 
+### Fast Install Instructions (Mac)
+
+> Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
+
+- Type terminal in the ios searchbar/searchlight to open the 'terminal' application
+- Install Homebrew within the terminal by running: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+- Then run: `brew install openssl cmake llvm`
+- Install Rust in your terminal by running: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Once Rust is installed, run the following command to clone and build the kusama code: 
+  ```
+  git clone https://github.com/paritytech/polkadot kusama
+  cd kusama
+  ./scripts/init.sh
+  cargo build –-release
+  ```
+- Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
+- Find your node at https://telemetry.polkadot.io/#list/Kusama
+
+
+### Fast Install Instructions (Windows)
+
+> This works only on Windows Pro with virtualization enabled.
+
+> Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
+
+- Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+- Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
+- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
+- Run the following: `sudo chmod +x polkadot`
+- Run the following: `./polkadot --name "Your Node Name Here"`
+- Find your node at https://telemetry.polkadot.io/#list/Kusama
+
+### Fast Install Instructions (Linux)
+
+> Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
+
+- Download Polkadot binary by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
+- Run the following: `sudo chmod +x polkadot`
+- Run the following: `./polkadot --name "Your Node Name Here"`
+- Find your node at https://telemetry.polkadot.io/#list/Kusama
+
 ## Get Substrate
 
-Follow instructions as outlined [here](https://substrate.dev/docs/en/getting-started/installing-substrate) - note that Windows users will have their work cut out for them. It's better to instead use a virtual machine.
+Follow instructions as outlined [here](https://www.substrate.io/kb/getting-started) - note that Windows users will have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
 
@@ -75,3 +116,5 @@ When running as a simple sync node (above), only the state of the past 256 block
 ```bash
 ./target/release/polkadot --name "My node's name" --pruning archive
 ```
+
+It is possible to almost quadruple synchronization speed by using an additional flag: `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off after the node is in sync.

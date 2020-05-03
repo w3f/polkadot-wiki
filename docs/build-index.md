@@ -34,13 +34,13 @@ integrate Polkadot into their systems.
 - [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the
   most relevant options/flags for infrastructure providers.
 - [Node Interaction](build-node-interaction) - Learn how to interact with your node via RPC.
-- [Transation Construction and Signing](build-transaction-construction) - Learn the transaction
+- [Transaction Construction and Signing](build-transaction-construction) - Learn the transaction
   format for Polkadot and how to construct and sign transactions offline.
 
 ## Tools
 
 - [Tools](build-tools-index) - Maintained list of tools.
-- [Subkey](https://substrate.dev/docs/en/next/development/tools/subkey) - Command line utility for
+- [Subkey](https://www.substrate.io/kb/integrate/subkey) - Command line utility for
   generating and inspecting key pairs.
 
 ## Resources
