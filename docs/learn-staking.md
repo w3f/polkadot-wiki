@@ -236,7 +236,7 @@ Validators may run their nodes on multiple machines to make sure they can still 
 work in case one of their nodes goes down. It should be noted that if they do not have good
 coordination to manage signing machines, then equivocation is possible.
 
-> If a validator is reported for any one of the offences they will be removed from the validator set ([chilled](#chilling)) and they will not be paid while they are out.
+If a validator is reported for any one of the offences they will be removed from the validator set ([chilled](#chilling)) and they will not be paid while they are out. They will be considered inactive immediately and will lose their nominators. They need to re-issue intent to validate and gather support from nominators.
 
 If you want to know more details about slashing, please look at our
 [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
@@ -245,9 +245,9 @@ If you want to know more details about slashing, please look at our
 
 Chilling is the act of removing a validator from the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle.
 
-This may be voluntary and validator-initiated, e.g. if there is a planned outage in the validator's surroundings or hosting provider, and the validator wants to exit to protect themselves against slashing.
+This may be voluntary and validator-initiated, e.g. if there is a planned outage in the validator's surroundings or hosting provider, and the validator wants to exit to protect themselves against slashing. When voluntary, chilling will keep the validator active in the current session, but will move them to the inactive set in the next. The validator will not lose their nominators.
 
-When used as part of a punishment, being chilled carries an implied penalty of being unable to earn rewards for the duration of the next era, and forces the validator to earn back any nominations they may have had before being removed.
+When used as part of a punishment, being chilled carries an implied penalty of being un-nominated. It also renders the validator unable to earn rewards for the remainder of the current era, and from the next era onward, forcing the validator to earn back any nominations they may have had before being removed.
 
 Because every offence regardless of level triggers a chill, and every chill triggers an automatic re-election of a new active validator set, the offending validator is immediately removed from the current set and the next, and someone else takes their place. To re-join, they need to acknowledge the slash and re-announce their candidature.
 
