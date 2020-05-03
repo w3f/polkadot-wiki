@@ -171,7 +171,7 @@ There are several ways to submit a signed payload:
 
 ## Notes
 
-Some addresses to use in the examples. See [Subkey documentation](https://substrate.dev/docs/en/next/development/tools/subkey).
+Some addresses to use in the examples. See [Subkey documentation](https://www.substrate.io/kb/integrate/subkey).
 
 ```bash
 $ subkey --network polkadot generate

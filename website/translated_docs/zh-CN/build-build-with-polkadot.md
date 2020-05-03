@@ -17,7 +17,7 @@ Polkadot is a blockchain protocol with two goals: providing **shared security** 
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/))
+- ink!: **In development** ([Documentation](https://www.substrate.io/kb/smart-contracts))
 
 ## What you need to know
 
@@ -77,7 +77,7 @@ In the future, there will be many different PDKs available in different programm
 
 Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for blockchain innovators that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
-了解最好 Substrate的 方式是前往[ Substrate Development Hub ](https://substrate.dev)，它是由 Parity Technologies 建立和维护的线上 Substrate 资源。
+The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate), an online resource built and maintained by Parity Technologies.
 
 建议在那里逛一逛，直到你熟悉构建Substrate链的模式。一旦你有了扎实的理解，你就可以跟着Substratekitties的工作坊挑战自己，然后前往TCR Dappchain教程。
 

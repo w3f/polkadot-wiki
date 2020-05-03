@@ -43,7 +43,7 @@ description: 账户、账户索引、账户身份和回收机制的解释
 
 请注意，由于您的帐户保存在浏览器中，所以它对于大持仓量账户并不安全。浏览器是一个“热钱包”，顾名思义，它容易受到各种攻击。 在处理大量金额时，请使用冷钱包。 创建冷钱包也很简单，只要安全地把你的账户的助记词删除，并从你的计算机中移除该帐户的所有痕迹。
 
-除了扩展和默认的 UI之外、Polkadot 和 Kusama 地址还可以使用 [Subkey 工具](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey)创建。 Subkey是为熟悉命令行的用户提供的，而且看起来可能会吓人，但很容易上手。 按照 [此页面](https://substrate.dev/docs/en/ecosystem/subkey)中的说明操作。 使用得当的话，Subkey是 **最安全的** 创建账户的方法。
+Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is intended for users comfortable with using the command line and can seem intimidating, but is quite approachable. Follow the instructions in the [Subkey documentation](https://www.substrate.io/kb/integrate/subkey). When used properly, Subkey is the **most secure** available method of creating an account.
 
 另外还有一个很安全的 [Parity Signer](https://www.parity.io/signer/) ，但它当前只支持Kusama 地址，不支持Polkadot和通用Substrate地址。
 

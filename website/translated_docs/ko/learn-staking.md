@@ -42,11 +42,10 @@ We highlight two features of this payment scheme. The first is that since valida
 
 The following example should clarify the above. For simplicity, we have the following assumptions:
 
-* These validators do not have a stake of their own.
-* They do NOT charge any commission fees
-* Reward amount is 100 DOT tokens
-* The least amount of DOTs to be a validator is 350
-
+- These validators do not have a stake of their own.
+- They do NOT charge any commission fees
+- Reward amount is 100 DOT tokens
+- The least amount of DOTs to be a validator is 350
 
 |               | **A - Validator Pool** |                             |         |
 |:-------------:|:----------------------:|:---------------------------:|:-------:|
@@ -78,8 +77,8 @@ There are two different accounts for managing your funds: `Stash` and `Controlle
 
 ![staking](assets/NPoS/staking-keys_stash_controller.png)
 
-* **Stash:** This account holds funds bonded for staking, but delegates some functions to a Controller. As a result, you may actively participate with a Stash key kept in a cold wallet, meaning it stays offline all the time. You can also designate a Proxy account to vote in [governance](./learn-governance) proposals.
-* **Controller** This account acts on behalf of the Stash account, signalling decisions about nominating and validating. It set preferences like payout account and commission. If you are a validator, it also sets your [session keys](learn-keys#session-keys). It only needs enough funds to pay transaction fees.
+- **Stash:** This account holds funds bonded for staking, but delegates some functions to a Controller. As a result, you may actively participate with a Stash key kept in a cold wallet, meaning it stays offline all the time. You can also designate a Proxy account to vote in [governance](./learn-governance) proposals.
+- **Controller** This account acts on behalf of the Stash account, signalling decisions about nominating and validating. It set preferences like payout account and commission. If you are a validator, it also sets your [session keys](learn-keys#session-keys). It only needs enough funds to pay transaction fees.
 
 We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key. As a rule, you lose security anytime you use one key for multiple roles, or even if you use keys related by derivation. You should never use any account key for a "hot" session key in particular.
 
@@ -95,8 +94,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### Want to stake DOTs?
 
-* [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
-* [Validator Guide](/mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
+- [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
+- [Validator Guide](/mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
 
 ## Slashing
 
@@ -142,35 +141,17 @@ If you want to know more details about slashing, please look at our [research pa
 
 ## Reward Distribution
 
-Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.  Polkadot will also produce blocks at approximately six second intervals.
+Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times. Polkadot will also produce blocks at approximately six second intervals.
 
 Rewards are recorded per session (approximately one hour on Kusama and four hours on Polkadot) and calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). Thus, rewards will be calculated four times per day on Kusama and once per day on Polkadot.
 
-In order to be paid your staking rewards, you must manually claim them. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot and 21 days on Kusama. For more information on why this is so, see the page on [lazy payouts](learn-lazy-payouts).
+In order to be paid your staking rewards, someone must claim them for each validator that you nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot and 21 days on Kusama. For more information on why this is so, see the page on [simple payouts](learn-simple-payouts).
 
-> WARNING: If you do not claim your staking rewards by this time, then you will not be able to claim them and some of your staking rewards will be lost.
+> WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim them and some of your staking rewards will be lost.
 
 ### Claiming Rewards
 
-If you have staking rewards ready to be claimed, you will see a red circle on the Staking tab, along with the number of accounts that have rewards to claim.
-
-![claim_see_reward_notification](assets/claim_see_reward_notification.png)
-
-Click on the "Account Actions" tab at the top of the screen, and you should see all of your accounts that have bonded. Any accounts that have staking rewards available to be claimed will have a red circle next to it. The number insidew the circle indicates the number of eras' worth of claims you have waiting. Hovering over the red circle with your mouse cursor shows you a popup displaying how much in rewards you can claim.
-
-Note that you will need to pay a transaction fee for claiming, so if you have a very small amount of staking rewards, this may be outweighed by the need to pay the transaction fee. In this case, it would make sense to wait a few more eras and "batch" claiming your rewards.
-
-![claim_see_reward](assets/claim_see_reward.png)
-
-In order to claim your rewards, click on the "gear" icon at the far right. On the dropdown menu, select "payout reward".
-
-![claim_payout_reward](assets/claim_payout_reward.png)
-
-Finally, sign the transaction. This is a batch transaction - you will notice that numerous transactions will be indicated by the UI, and giving you all of the rewards up to this point at once.
-
-![claim_sign_tx](assets/claim_sign_tx.png)
-
-After this, all of your rewards will be available wherever you have set rewards to go (selected when you first started nominating, generally to the stash).
+If you go to the Staking payouts page on [Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of validators that you have nominated in the past 84 eras. Each one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone who was nominating that validator during those eras, and anyone can call it.
 
 ### Reward Distribution Example
 
@@ -184,7 +165,7 @@ After this, all of your rewards will be available wherever you have set rewards 
 
 Validators can create a cut of the reward that is not shared with the nominators. This cut is a percentage of the block reward, not an absolute value. After the value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 
-For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the proportion of stake each nominator had.  Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
+For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the proportion of stake each nominator had. Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
 
 Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOTs without having to un-stake everything.
 
@@ -207,14 +188,14 @@ For those who are interested in knowing more about the design of inflation model
 
 ## Why stake?
 
-* 10% inflation/year when the network launches
-* 50% targeted active staking
-* ~20% annual return
+- 10% inflation/year when the network launches
+- 50% targeted active staking
+- ~20% annual return
 
 ## Why not stake?
 
-* Tokens will be locked for 28 days after unbonding.
-* Tokens can be slashed as punishment if the validator is not running properly.
+- Tokens will be locked for 28 days after unbonding.
+- Tokens can be slashed as punishment if the validator is not running properly.
 
 ## How many validators will Polkadot have?
 
@@ -222,5 +203,5 @@ The plan is to start with somewhere between 50 to 100 open validator positions a
 
 ## Resources
 
-* [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-* [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
+- [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
+- [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)

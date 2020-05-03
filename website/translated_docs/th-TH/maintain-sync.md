@@ -6,7 +6,7 @@ sidebar_label: Set up a Full Node
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's always better to rely on your own infrastructure than on a third-party-hosted one in this brave new decentralized world.
 
-This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev)-based chain. First, let's clarify the term _full node_.
+This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://www.substrate.io/kb/learn-substrate)-based chain. First, let's clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -35,7 +35,7 @@ Another type of node is a **light node**. A light node has only the runtime and 
   git clone https://github.com/paritytech/polkadot kusama
   cd kusama
   ./scripts/init.sh
-  cargo build –release`
+  cargo build –-release
   ```
 - Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
@@ -65,7 +65,7 @@ Another type of node is a **light node**. A light node has only the runtime and 
 
 ## Get Substrate
 
-Follow instructions as outlined [here](https://substrate.dev/docs/en/overview/getting-started) - note that Windows users will have their work cut out for them. It's better to instead use a virtual machine.
+Follow instructions as outlined [here](https://www.substrate.io/kb/getting-started) - note that Windows users will have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
 
