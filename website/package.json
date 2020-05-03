@@ -18,6 +18,6 @@
     "docusaurus": "^1.12.0"
   },
   "dependencies": {
-    "remarkable-katex": "^1.0.1"
+    "remarkable-katex": "^1.1.4"
   }
 }
