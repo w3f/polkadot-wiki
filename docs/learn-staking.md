@@ -262,8 +262,12 @@ slashing. When voluntary, chilling will keep the validator active in the current
 move them to the inactive set in the next. The validator will not lose their nominators.
 
 When used as part of a punishment, being chilled carries an implied penalty of being un-nominated.
-It also triggers an era change, and therefore a new validator election. The chilled validator will
-need to reissue an intention to validate and ask for nominator support.
+It also disables the validator for the remainder of the current era and removes the offending
+validator from the next election.
+
+Polkadot allows some validators to be disabled, but if the number of disabled validators gets too
+large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
+need to resubmit their intention to validate and regarner support from nominators.
 
 ### Slashing Across Eras
 
