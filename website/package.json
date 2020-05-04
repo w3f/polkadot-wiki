@@ -4,7 +4,7 @@
     "examples": "docusaurus-examples",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "docusaurus-start",
+    "start": "yarn mirror && docusaurus-start",
     "build": "npm run mirror && docusaurus-build && npm run inject",
     "mirror": "node mirror.js",
     "inject": "node inject.js",
