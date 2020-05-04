@@ -65,4 +65,4 @@ typings/
 
 build
 build-script*
-mirror*.md
+**/mirror*.md
