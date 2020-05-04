@@ -247,9 +247,7 @@ Chilling is the act of removing a validator from the active validator set, also 
 
 This may be voluntary and validator-initiated, e.g. if there is a planned outage in the validator's surroundings or hosting provider, and the validator wants to exit to protect themselves against slashing. When voluntary, chilling will keep the validator active in the current session, but will move them to the inactive set in the next. The validator will not lose their nominators.
 
-When used as part of a punishment, being chilled carries an implied penalty of being un-nominated. It also renders the validator unable to earn rewards for the remainder of the current era, and from the next era onward, forcing the validator to earn back any nominations they may have had before being removed.
-
-Because every offence regardless of level triggers a chill, and every chill triggers an automatic re-election of a new active validator set, the offending validator is immediately removed from the current set and the next, and someone else takes their place. To re-join, they need to acknowledge the slash and re-announce their candidature.
+When used as part of a punishment, being chilled carries an implied penalty of being un-nominated. It also triggers an era change, and therefore a new validator election. The chilled validator will need to reissue an intention to validate and ask for nominator support.
 
 ### Slashing Across Eras
 
@@ -345,8 +343,9 @@ please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Ec
 
 ## Why not stake?
 
-* Tokens will be locked for about 28 days on Polkadot, seven days on Kusama
-* Punishment in case of validator found to be misbehaving (see [#slashing](#slashing))
+- Tokens will be locked for about 28 days on Polkadot after unbonding, seven days on Kusama.
+- Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
+- You want to use the tokens for a parachain slot.
 
 ## How many validators will Polkadot have?
 
