@@ -47,7 +47,7 @@ probably closer to 100.
 
 The launch process is expected to be similar to that of the Kusama network.
 Kusama transitioned to PoS when there were 50 validators ready, but in a matter
-of months scaled up the validator count to 225. Polkadot's validator count is
+of months scaled up the validator count to {{ num_validators }}. Polkadot's validator count is
 expected to scale up in a similar fashion. 
 
 ## Validators
@@ -123,7 +123,7 @@ one thousand remains a goal for later iterations of Polkadot.
 It is also worth mentioning that one thousand validators is more than
 the number of validators of similar PoS chains with comparable levels of economic
 security as Polkadot. The closest contenders are operating with around 150
-validators, while Kusama is running with 225 securely as of April 2020.
+validators, while Kusama is securely running with {{ num_validators }}.
 
 Additionally, other projects sometimes have a different definition of _validator_
 that approximates more closely to remote signing keys without the full
