@@ -6,9 +6,9 @@ sidebar_label: Builder's Portal
 
 Welcome to the builders section of the Polkadot wiki.
 
-Here you will be able to find the most up-to-date information on the status of the development
-tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about
-them so if you are working on something that should be included please reach out to us on
+Here you will be able to find the most up-to-date information on the status of the development tools
+in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about them so
+if you are working on something that should be included please reach out to us on
 [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
 This section of the wiki is divided into the following parts:
@@ -16,13 +16,13 @@ This section of the wiki is divided into the following parts:
 ## Development Guide
 
 - [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain,
-parathread, or smart contract for your project and how to get started.
-- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most
-important tools.
+  parathread, or smart contract for your project and how to get started.
+- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most important
+  tools.
 - [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and
-parathreads.
+  parathreads.
 - [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can
-be deployed to a live chain.
+  be deployed to a live chain.
 
 ## Integration Guide
 
@@ -40,13 +40,13 @@ integrate Polkadot into their systems.
 ## Tools
 
 - [Tools](build-tools-index) - Maintained list of tools.
-- [Subkey](https://www.substrate.io/kb/integrate/subkey) - Command line utility for
-  generating and inspecting key pairs.
+- [Subkey](https://www.substrate.io/kb/integrate/subkey) - Command line utility for generating and
+  inspecting key pairs.
 
 ## Resources
 
 - [Examples](build-examples-index) - Example projects sourced from the community -- see what others
-are building.
+  are building.
 
 ### Grants
 
@@ -57,7 +57,7 @@ are building.
 Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
 
 - [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and
-proposals.
+  proposals.
 
 ### Hackathon
 

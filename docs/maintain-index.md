@@ -4,7 +4,8 @@ title: Network Maintainers
 sidebar_label: Network Maintainers
 ---
 
-Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and guides to set up a node and run the network.
+Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and
+guides to set up a node and run the network.
 
 ## Collator
 
@@ -13,18 +14,20 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 ## Nominator
 
 - [Nominator Home](maintain-nominator) - High level overview of nominators and related links.
-- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
-
+- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to
+  nominate on the Kusama canary network.
 
 ## Validator
 
 - [Validator Home](maintain-validator) - High level overview of validator and related links.
-- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
+- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to
+  validate on the Kusama canary network.
 
 ## Governance
 
 - [How to join the Council][join the council] - Step by step guide for running for the Council.
-- [How to vote for a Councillor][vote for councillors] - Step by step guide for voting for your favorite councillors.
+- [How to vote for a Councillor][vote for councillors] - Step by step guide for voting for your
+  favorite councillors.
 
 [join the council]: maintain-guides-how-to-join-council
 [vote for councillors]: maintain-guides-how-to-vote-councillor

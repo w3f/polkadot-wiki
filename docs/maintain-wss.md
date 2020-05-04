@@ -4,17 +4,25 @@ title: Set up Secure WebSocket for Remote Connections
 sidebar_label: Set up Secure WebSocket for Remote Connections
 ---
 
-You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [PolakdotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
+You might want to host a node on one server and then connect to it from a UI hosted on another, e.g.
+[PolakdotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure
+proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
 
-_Note: this should **only** be done for sync nodes used as back-end for some dapps or projects. Never open websockets to your validator node - there's no reason to do that and it can only lead to security gaffes!_
+_Note: this should **only** be done for sync nodes used as back-end for some dapps or projects.
+Never open websockets to your validator node - there's no reason to do that and it can only lead to
+security gaffes!_
 
-In this guide we'll be using Ubuntu 18.04 hosted on a $10 DigitalOcean droplet. We'll assume you're using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
+In this guide we'll be using Ubuntu 18.04 hosted on a \$10 DigitalOcean droplet. We'll assume you're
+using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
 
 ## Set up a node
 
-Whether it's a generic Substrate node, a Kusama node, or your own private blockchain, they all default to the same websocket connection: port 9944 on localhost. For this example, we'll set up a Kusama sync node (non-validator).
+Whether it's a generic Substrate node, a Kusama node, or your own private blockchain, they all
+default to the same websocket connection: port 9944 on localhost. For this example, we'll set up a
+Kusama sync node (non-validator).
 
-Create a new server on your provider of choice or locally at home (preferred). We'll assume you're using Ubuntu 18.04. Then install Substrate and build the node.
+Create a new server on your provider of choice or locally at home (preferred). We'll assume you're
+using Ubuntu 18.04. Then install Substrate and build the node.
 
 ```bash
 curl https://getsubstrate.io -sSf | bash
@@ -35,13 +43,20 @@ To get WSS (secure websocket), you need an SSL certificate. There are two possib
 
 ### Domain and Certbot
 
-The first approach is getting a dedicated domain, redirecting its nameservers to your IP address, setting up an Nginx server for that domain, and finally [following LetsEncrypt instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html) for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx configuration. This will let you connect PolkadotJS UI to a URL like mynode.mydomain.com rather than 82.196.8.192:9944, which is arguably more user friendly.
+The first approach is getting a dedicated domain, redirecting its nameservers to your IP address,
+setting up an Nginx server for that domain, and finally
+[following LetsEncrypt instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)
+for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx
+configuration. This will let you connect PolkadotJS UI to a URL like mynode.mydomain.com rather than
+82.196.8.192:9944, which is arguably more user friendly.
 
-This is simple to do on cloud hosting providers or if you have a static IP, but harder to pull off when running things from your home server.
+This is simple to do on cloud hosting providers or if you have a static IP, but harder to pull off
+when running things from your home server.
 
 ### Self-signed
 
-The second approach and one we'll follow here is generating a self-signed certificate and relying on the raw IP address of your node when connecting to it.
+The second approach and one we'll follow here is generating a self-signed certificate and relying on
+the raw IP address of your node when connecting to it.
 
 Generate a self-signed certificate.
 
@@ -52,14 +67,20 @@ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
 ## Set up Nginx server
 
-Now it's time to tell Nginx to use these certificates. The server block below is all you need, but keep in mind that you need to replace some placeholder values. Notably:
+Now it's time to tell Nginx to use these certificates. The server block below is all you need, but
+keep in mind that you need to replace some placeholder values. Notably:
 
-- `SERVER_ADDRESS` should be replaced by your domain name if you have it, or your server's IP address if not.
-- `CERT_LOCATION` should be `/etc/letsencrypt/live/YOUR_DOMAIN/fullchain.pem` if you used Certbot, or `/etc/ssl/certs/nginx-selfsigned.crt` if self-signed.
-- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` if you used Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
-- `CERT_DHPARAM` should be `/etc/letsencrypt/ssl-dhparams.pem` if you used Certbot, and `/etc/ssl/certs/dhparam.pem` if self-signed.
+- `SERVER_ADDRESS` should be replaced by your domain name if you have it, or your server's IP
+  address if not.
+- `CERT_LOCATION` should be `/etc/letsencrypt/live/YOUR_DOMAIN/fullchain.pem` if you used Certbot,
+  or `/etc/ssl/certs/nginx-selfsigned.crt` if self-signed.
+- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` if you used
+  Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
+- `CERT_DHPARAM` should be `/etc/letsencrypt/ssl-dhparams.pem` if you used Certbot, and
+  `/etc/ssl/certs/dhparam.pem` if self-signed.
 
-_Note that if you used Certbot, it should have made the path insertions below for you if you followed the [official instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
+_Note that if you used Certbot, it should have made the path insertions below for you if you
+followed the [official instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
 
 ```conf
 server {
@@ -86,7 +107,7 @@ server {
         listen 443 ssl;
         ssl_certificate CERT_LOCATION;
         ssl_certificate_key CERT_LOCATION_KEY;
-        
+
         ssl_session_cache shared:cache_nginx_SSL:1m;
         ssl_session_timeout 1440m;
 
@@ -104,7 +125,9 @@ Restart nginx after setting this up: `sudo service nginx restart`.
 
 ## Connecting to the node
 
-Open [PolkadotJS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`!
+Open [PolkadotJS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch
+node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the
+IP address. Remember to prefix with `wss://`!
 
 ![A sync-in-progress chain connected to Polkadot UI](/img/wss/wss01.jpg)
 

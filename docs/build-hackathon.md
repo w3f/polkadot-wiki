@@ -4,9 +4,14 @@ title: Hackathon
 sidebar_label: Hackathon
 ---
 
-As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
+As one of our objectives in the Web3 Foundation is pushing the
+[Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we
+would like to support any individual or team who wants to organize a hackathon that gets more
+developers to understand Polkadot/Substrate in your city.
 
-We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
+We are not only providing technical resources for you, but we can have someone from our team give a
+hands-on workshop/presentation about the technology to help participants get started hacking on it
+more quickly.
 
 ## Ideas
 
@@ -30,9 +35,14 @@ We are not only providing technical resources for you, but we can have someone f
 - Like to make connections
 
 ## How do hackathons differ from workshops?
-Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
+
+Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas
+to reality in a short period (few hours - one day). Workshops are more for getting developers
+familiar with the tooling and understanding more about what are the resources currently available
+and how they can make use of it.
 
 ## How can you run a hackathon in your city?
+
 1. Submit your application (Coming soon.)
 2. Review
 3. Decision
@@ -58,4 +68,6 @@ Coming soon.
 
 ## Support / Contact
 
-If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
+If you have any questions regarding organizing a hackathon, please free feel to contact us by
+[email](mailto:events@web3.foundation) or ask us via
+[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.

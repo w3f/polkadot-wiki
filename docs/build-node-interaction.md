@@ -36,16 +36,15 @@ $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method
 ```
 
 Some return values may not appear meaningful at first glance. Polkadot uses
-[SCALE encoding](https://www.substrate.io/kb/advanced/codec) as a format that is
-suitable for resource-constrained execution environments. You will need to decode the information
-and use the chain
-[metadata](https://www.substrate.io/kb/runtime/metadata)
-(`state_getMetadata`) to obtain human-readable information.
+[SCALE encoding](https://www.substrate.io/kb/advanced/codec) as a format that is suitable for
+resource-constrained execution environments. You will need to decode the information and use the
+chain [metadata](https://www.substrate.io/kb/runtime/metadata) (`state_getMetadata`) to obtain
+human-readable information.
 
 ### Tracking the Chain Head
 
-Use the RPC endpoint `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of
-finalized headers, or `chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use
+Use the RPC endpoint `chain_subscribeFinalizedHeads` to subscribe to a stream of hashes of finalized
+headers, or `chain_FinalizedHeads` to fetch the latest hash of the finalized header. Use
 `chain_getBlock` to get the block associated with a given hash. `chain_getBlock` only accepts block
 hashes, so if you need to query intermediate blocks, use `chain_getBlockHash` to get the block hash
 from a block number.
@@ -152,7 +151,8 @@ would include the `tip` field. Notice that some extrinsics do not have a signatu
 ```
 
 > The JS number type is a 53 bit precision float. There is no guarantee that the numerical values in
-the response will have a numerical type. Any numbers larger than `2**53-1` will have a string type.
+> the response will have a numerical type. Any numbers larger than `2**53-1` will have a string
+> type.
 
 ### Submitting a Transaction
 
