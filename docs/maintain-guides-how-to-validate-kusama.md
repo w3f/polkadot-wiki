@@ -197,12 +197,12 @@ Once your node is fully synced, stop it using Control-C. At your terminal prompt
 validator mode.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and it will be included
 in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended
-that you choose something likely to be unique.
+that you choose something likely to be unique. Note that the `--unsafe-rpc-expose` flag is needed in order to set the session key as shown below. 
 
 ### Option 1: RPC
 
