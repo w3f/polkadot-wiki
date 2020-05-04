@@ -22,8 +22,8 @@ Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-form
 handle many different cryptographies and chains. It has much in common with Bitcoin's Base58Check
 format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
-See the [SS58 page](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) in
-the Substrate wiki for encoding information and a more comprehensive list of network prefixes.
+See the [SS58 page](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>)
+in the Substrate wiki for encoding information and a more comprehensive list of network prefixes.
 
 Relevant SS58 prefixes for this guide:
 
@@ -50,9 +50,9 @@ account drops below the ED, it will be _reaped,_ i.e. completely removed from st
 reset.
 
 Wallets and custodians who track account nonces for auditing purposes should take care not to have
-accounts reaped, as users could refund the address and try making transactions from it. The
-Balances pallet provides a `transfer_keep_alive` function that will return an error and abort
-rather than make the transfer if doing so would result in reaping the sender's account.
+accounts reaped, as users could refund the address and try making transactions from it. The Balances
+pallet provides a `transfer_keep_alive` function that will return an error and abort rather than
+make the transfer if doing so would result in reaping the sender's account.
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
@@ -64,12 +64,12 @@ For most operations, free balance is what you are interested in. It is the "powe
 staking and governance, for example. Reserved balance represents funds that have been set aside by
 some operation and still belong to the account holder, but cannot be used.
 
-Locks are an abstraction over free balance that prevent spending for certain purposes. Several
-locks can operate on the same account, but they overlap rather than add. For example, an account
-could have a free balance of 200 DOTs with two locks on it: 150 DOTs for `Transfer` purposes and
-100 DOTs for `Reserve` purposes. The account could not make a transfer that brings its free balance
-below 150 DOTs, but an operation could result in reserving DOTs such that the free balance is below
-150, but above 100 DOTs.
+Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
+can operate on the same account, but they overlap rather than add. For example, an account could
+have a free balance of 200 DOTs with two locks on it: 150 DOTs for `Transfer` purposes and 100 DOTs
+for `Reserve` purposes. The account could not make a transfer that brings its free balance below 150
+DOTs, but an operation could result in reserving DOTs such that the free balance is below 150, but
+above 100 DOTs.
 
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 
@@ -101,11 +101,11 @@ measure of reasonability. For example, a timestamp cannot be proved, but validat
 it is within some delta of their system clock. Inherents are not gossiped on the network, and only
 block authors insert them into blocks.
 
-Signed transactions contain a signature of the account that issued the transaction and stands to
-pay a fee to have the transaction included on chain. Because the value of including signed
-transactions on-chain can be recognized prior to execution, they can be gossiped on the network
-between nodes with a low risk of spam. Signed transactions fit the concept of a transaction in
-Ethereum or Bitcoin.
+Signed transactions contain a signature of the account that issued the transaction and stands to pay
+a fee to have the transaction included on chain. Because the value of including signed transactions
+on-chain can be recognized prior to execution, they can be gossiped on the network between nodes
+with a low risk of spam. Signed transactions fit the concept of a transaction in Ethereum or
+Bitcoin.
 
 Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For
 example, when a user claims their DOTs from the Ethereum DOT indicator contract to a new DOT
@@ -113,11 +113,11 @@ address, the new address doesn't yet have any funds with which to pay fees.
 
 ### Transaction Mortality
 
-Extrinsics can be mortal or immortal. The transaction payload includes a block number and block
-hash checkpoint from which a transaction is valid and a validity period (also called "era" in some
+Extrinsics can be mortal or immortal. The transaction payload includes a block number and block hash
+checkpoint from which a transaction is valid and a validity period (also called "era" in some
 places) that represents the number of blocks after the checkpoint for which the transaction is
-valid. If the extrinsic is not included in a block within this validity window, it will be
-discarded from the transaction queue.
+valid. If the extrinsic is not included in a block within this validity window, it will be discarded
+from the transaction queue.
 
 Setting the block checkpoint to zero, using the genesis hash, and a validity period of zero will
 make the transaction "immortal".
@@ -127,9 +127,9 @@ immortal transaction. Always default to using a mortal extrinsic.
 
 ### Events
 
-While extrinsics represent information from the outside world, events represent information from
-the chain. Extrinsics can trigger events. For example, the Staking pallet emits a `Reward` event
-when claiming staking rewards to tell the user how much the account was credited.
+While extrinsics represent information from the outside world, events represent information from the
+chain. Extrinsics can trigger events. For example, the Staking pallet emits a `Reward` event when
+claiming staking rewards to tell the user how much the account was credited.
 
 ### Fees
 
@@ -172,8 +172,8 @@ Polkadot uses a deterministic finality mechanism. Once a block is finalized, it 
 except by a hard fork. Kusama has had hard forks that had to revert four finalized blocks in order
 to cancel a runtime upgrade. Using a finalized depth of ten blocks should be safe.
 
-Note that block production and finality are isolated processes in Polkadot, and the chain can have
-a long unfinalized head.
+Note that block production and finality are isolated processes in Polkadot, and the chain can have a
+long unfinalized head.
 
 **Do users need to interact with any smart contracts?**
 

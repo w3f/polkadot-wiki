@@ -52,8 +52,8 @@ only fill up to 75% of a block with normal transactions. Some examples of operat
 - Member operations in an election (e.g. renouncing candidacy)
 
 Block producers prioritize transactions based on each transaction's total fee. Since a portion of
-the fee will go to the block producer, producers will include the transactions with the highest
-fees to maximize their reward.
+the fee will go to the block producer, producers will include the transactions with the highest fees
+to maximize their reward.
 
 ## Fee Adjustment
 
@@ -62,29 +62,28 @@ mechanism to adjust. However, users should be able to predict transaction fees.
 
 Polkadot uses a slow-adjusting fee mechanism with tips to balance these two considerations. In
 addition to block _limits,_ Polkadot also has a block fullness _target._ Fees increase or decrease
-for the next block based on the fullness of the current block relative to the target. The
-per-weight fee can change up to 30% in a 24 hour period. This rate captures long-term trends in
-demand, but not short-term spikes. To consider short term spikes, Polkadot uses tips on top of the
-length and weight fees. Users can optionally add a tip to the fee to give the transaction a higher
-priority.
+for the next block based on the fullness of the current block relative to the target. The per-weight
+fee can change up to 30% in a 24 hour period. This rate captures long-term trends in demand, but not
+short-term spikes. To consider short term spikes, Polkadot uses tips on top of the length and weight
+fees. Users can optionally add a tip to the fee to give the transaction a higher priority.
 
 ## Shard Transactions
 
 The transactions that take place within Polkadot's shards - parachains and parathreads - do not
-incur Relay Chain transaction fees. Users of shard applications do not even need to hold DOT
-tokens, as each shard has its own economic model and may or may not have a token. There are,
-however, situations where shards themselves make transactions on the Relay Chain.
+incur Relay Chain transaction fees. Users of shard applications do not even need to hold DOT tokens,
+as each shard has its own economic model and may or may not have a token. There are, however,
+situations where shards themselves make transactions on the Relay Chain.
 
 [Parachains](learn-parachains) have a dedicated slot on the Relay Chain for execution, so their
 collators do not need to own DOTs in order to include blocks. The parachain will make some
 transactions itself, for example, opening or closing an [XCMP](learn-crosschain) channel,
-participating in an [auction](learn-auction) to renew its slot, or upgrading its runtime.
-Parachains have their own accounts on the Relay Chain and will need to use those funds to issue
-transactions on the parachain's behalf.
+participating in an [auction](learn-auction) to renew its slot, or upgrading its runtime. Parachains
+have their own accounts on the Relay Chain and will need to use those funds to issue transactions on
+the parachain's behalf.
 
-[Parathreads](learn-parathreads) will also make all the same transactions that a parachain might.
-In addition, the collators need to participate in an auction every block to progress their chain.
-The collators will need to have DOTs to participate in these auctions.
+[Parathreads](learn-parathreads) will also make all the same transactions that a parachain might. In
+addition, the collators need to participate in an auction every block to progress their chain. The
+collators will need to have DOTs to participate in these auctions.
 
 ## Other Resource Limitation Strategies
 
@@ -114,8 +113,8 @@ outside the chain. Extrinsics fall into three categories:
 - Inherents
 
 This page only covered signed transactions, which is the way that most users will interact with
-Polkadot. Signed transactions come from an account that has funds, and therefore Polkadot can
-charge a transaction fee as a way to prevent spam.
+Polkadot. Signed transactions come from an account that has funds, and therefore Polkadot can charge
+a transaction fee as a way to prevent spam.
 
 Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
 pair that does not control funds. For example, when users
@@ -129,10 +128,10 @@ fee for them, each one needs its own, custom validation logic.
 Finally, inherents are pieces of information that are not signed or included in the transaction
 queue. As such, only the block author can add inherents to a block. Inherents are assumed to be
 "true" simply because a sufficiently large number of validators have agreed on them being
-reasonable. For example, Polkadot blocks include a timestamp inherent. There is no way to prove
-that a timestamp is true the way one proves the desire to send funds with a signature. Rather,
-validators accept or reject the block based on how reasonable they find the timestamp. In Polkadot,
-it must be within some acceptable range of their own system clocks.
+reasonable. For example, Polkadot blocks include a timestamp inherent. There is no way to prove that
+a timestamp is true the way one proves the desire to send funds with a signature. Rather, validators
+accept or reject the block based on how reasonable they find the timestamp. In Polkadot, it must be
+within some acceptable range of their own system clocks.
 
 ## Learn More
 

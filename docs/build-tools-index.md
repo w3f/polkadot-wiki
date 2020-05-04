@@ -4,11 +4,10 @@ title: Tool Index
 sidebar_label: Tool Index
 ---
 
-Here we provide a list of tools available for your development needs. They
-are sorted by programming language. Right now, the Rust ecosystem is the most
-mature and it's possible to get started by building on Substrate today. As the
-ecosystems surrounding other programming languages expand, the sections below
-will be filled out.
+Here we provide a list of tools available for your development needs. They are sorted by programming
+language. Right now, the Rust ecosystem is the most mature and it's possible to get started by
+building on Substrate today. As the ecosystems surrounding other programming languages expand, the
+sections below will be filled out.
 
 ## Block Explorers
 
@@ -52,8 +51,8 @@ will be filled out.
 
 - [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in
   Rust. Polkadot is being built on top of Substrate.
-- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate) - Comprehensive documentation and tutorials
-  for building a blockchain using Substrate.
+- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate) - Comprehensive
+  documentation and tutorials for building a blockchain using Substrate.
 
 ## C++
 
@@ -61,10 +60,10 @@ will be filled out.
   [Soramitsu](https://github.com/soramitsu).
 - [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot
 
-## C#
+## C
 
-- [Polkadot API - .NET](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate
-  API for .NET.
+- [Polkadot API - .NET](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API
+  for .NET.
 
 ## Go
 
@@ -82,23 +81,23 @@ will be filled out.
 
 Documentation on [Polkadot-JS](https://polkadot.js.org) is a good starting point for diving deeper.
 
-Once you've configured and started to run a local node, you can interact with it through the
-generic polkadot [explorer](https://polkadot.js.org/apps/#/explorer).
+Once you've configured and started to run a local node, you can interact with it through the generic
+polkadot [explorer](https://polkadot.js.org/apps/#/explorer).
 
 ### Libraries
 
 ### Polkadot-JS Common
 
 Polkadot-JS Common provides various utility functions that are used across all projects in the
-`@polkadot` namespace and is split into a number of internal utility packages. The documentation
-and usage instructions are provided at
+`@polkadot` namespace and is split into a number of internal utility packages. The documentation and
+usage instructions are provided at
 [Polkadot-JS/Common API Documentation](https://polkadot.js.org/common/).
 
 - [@polkadot/keyring](https://polkadot.js.org/common/keyring/) To create / load accounts in
-  JavaScript, helpful for creating wallets or any application that will require the user to write
-  to chain. [Examples](https://polkadot.js.org/common/examples/keyring/)
-- [@polkadot/util](https://polkadot.js.org/common/util/) Utility functions like checking if a
-  string is hex-encoded.
+  JavaScript, helpful for creating wallets or any application that will require the user to write to
+  chain. [Examples](https://polkadot.js.org/common/examples/keyring/)
+- [@polkadot/util](https://polkadot.js.org/common/util/) Utility functions like checking if a string
+  is hex-encoded.
 - [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Crypto utilities that will
   come in handy while developing with Polkadot.
 
@@ -106,10 +105,10 @@ and usage instructions are provided at
 
 - [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Command
   line interface for the polkadot API. [Documentation](https://polkadot.js.org/api/api/)
-- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc)
-  RPC monitor for Polkadot. See the RPC tools below for additional information.
-- [@polkadot/signer-cli](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli)
-  Tool to construct, sign, and broadcast transactions. Signing can be done offline.
+- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) RPC
+  monitor for Polkadot. See the RPC tools below for additional information.
+- [@polkadot/signer-cli](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli) Tool
+  to construct, sign, and broadcast transactions. Signing can be done offline.
 
 ### RPC Tools
 

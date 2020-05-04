@@ -4,29 +4,26 @@ title: How to use Polkadot Secure Validator Setup
 sidebar_label: How to use Polkadot Secure Validator Setup
 ---
 
-The following guide will walk you through using [polkadot secure validator][]
-to deploy your validator in a secure way. It will work for Kusama (and later Polkadot)
-out of the box, and if you're using another Substrate-based chain, should work
-with some tweaking. We assume you will be deploying on Kusama.
+The following guide will walk you through using [polkadot secure validator][] to deploy your
+validator in a secure way. It will work for Kusama (and later Polkadot) out of the box, and if
+you're using another Substrate-based chain, should work with some tweaking. We assume you will be
+deploying on Kusama.
 
-It uses Terraform for defining and managing your infrastructure. Ansible, an 
-automation tool, is used for setting up the VPN, Firewall, and the validator node.
-It supports a few different cloud providers such as AWS, Microsoft Azure, GCP,
-and Packet. The code is publicly hosted on GitHub, so please file an [issue][]
-if you would like to make a feature request or report a bug.
+It uses Terraform for defining and managing your infrastructure. Ansible, an automation tool, is
+used for setting up the VPN, Firewall, and the validator node. It supports a few different cloud
+providers such as AWS, Microsoft Azure, GCP, and Packet. The code is publicly hosted on GitHub, so
+please file an [issue][] if you would like to make a feature request or report a bug.
 
 ## Dependencies
 
-The next step is to install the software dependencies for running the secure
-validator scripts. We will need to acquire NodeJS, Yarn, Terraform, and Ansible.
-Usually these are readily available using your operating system's package manager.
-Instructions may vary depending on which system you are on, the instructions below
-demonstrate the commands for a user of a Debian or Ubuntu based system.
+The next step is to install the software dependencies for running the secure validator scripts. We
+will need to acquire NodeJS, Yarn, Terraform, and Ansible. Usually these are readily available using
+your operating system's package manager. Instructions may vary depending on which system you are on,
+the instructions below demonstrate the commands for a user of a Debian or Ubuntu based system.
 
 ### NodeJS
 
-We recommend using [nvm][] as a tool to manage different NodeJS versions across
-projects.
+We recommend using [nvm][] as a tool to manage different NodeJS versions across projects.
 
 ```
 sudo apt-get install curl
@@ -73,24 +70,24 @@ The first step is to clone the `polkadot-secure-validator` guide locally.
 $ git clone git@github.com:w3f/polkadot-secure-validator.git
 ```
 
-Now you can `cd` into the `polkadot-secure-validator` directory and start to
-change the configurations to match your custom deployment. However, before
-we start tweaking those, let's start by creating two new SSH keys that we
-(or rather, the ansible playbooks) will use to access the machines.
+Now you can `cd` into the `polkadot-secure-validator` directory and start to change the
+configurations to match your custom deployment. However, before we start tweaking those, let's start
+by creating two new SSH keys that we (or rather, the ansible playbooks) will use to access the
+machines.
 
 ### Step Two: Generate the SSH keys
 
-We will use [SSH][], a remote shell tool, to access our validator and public
-sentry nodes. You will first use the `ssh-keygen` command to generate two keys,
-one for your validator and one for the sentry nodes.
+We will use [SSH][], a remote shell tool, to access our validator and public sentry nodes. You will
+first use the `ssh-keygen` command to generate two keys, one for your validator and one for the
+sentry nodes.
 
 ```zsh
 $ ssh-keygen -m pem -f id_rsa_validator
 $ ssh-keygen -m pem -f id_rsa_public
 ```
 
-Be sure to add these keys to your SSH agent. First make sure your
-SSH agent is evaluated, then add the keys to them.
+Be sure to add these keys to your SSH agent. First make sure your SSH agent is evaluated, then add
+the keys to them.
 
 ```zsh
 $ eval $(ssh-agent)
@@ -98,15 +95,15 @@ $ ssh-add id_rsa_validator
 $ ssh-add id_rsa_public
 ```
 
-For this tutorial we will not set a passphrase for the SSH key, although usually
-that would be recommended.
+For this tutorial we will not set a passphrase for the SSH key, although usually that would be
+recommended.
 
 ### Configuration
 
-After you have installed all the required software and made your ssh keys, you can start to configure
-your infrastructure deployment by following the instructions. Start by cloning
-the `polkadot-secure-validator` repository locally, and installing the package
-dependencies. Then customize the configuration how you want it.
+After you have installed all the required software and made your ssh keys, you can start to
+configure your infrastructure deployment by following the instructions. Start by cloning the
+`polkadot-secure-validator` repository locally, and installing the package dependencies. Then
+customize the configuration how you want it.
 
 First run yarn to install the NodeJS dependencies:
 
@@ -121,22 +118,20 @@ $ cp config/main.sample.json config/main.json
 # now you should customize config/main.json
 ```
 
-Under `validators` and `publicNodes`, specify which cloud provider you want to
-use, the type of machine specification, the number of validators you are going
-to deploy, the machine location, and the user to use for SSH.
+Under `validators` and `publicNodes`, specify which cloud provider you want to use, the type of
+machine specification, the number of validators you are going to deploy, the machine location, and
+the user to use for SSH.
 
 #### Getting the authorization keys
 
-The secure validator set up supports Google Cloud, AWS, Microsoft Azure,
-and Packet. For this tutorial we will be using Google Cloud.
+The secure validator set up supports Google Cloud, AWS, Microsoft Azure, and Packet. For this
+tutorial we will be using Google Cloud.
 
 ##### Log in to the Google Cloud console
 
-You will need to log in to the google cloud console in order to access
-your authorization keys.
+You will need to log in to the google cloud console in order to access your authorization keys.
 
-In the IAM&Admin panel you will navigate to service accounts. Download JSON for
-service account key.
+In the IAM&Admin panel you will navigate to service accounts. Download JSON for service account key.
 
 Make sure to also auth into your account like so:
 
@@ -148,64 +143,59 @@ And don't forget to enable the compute engine!
 
 #### Configuration Options
 
-The other options can be mostly self explanatory. Here's some tips on what they
-are and how you can use them:
+The other options can be mostly self explanatory. Here's some tips on what they are and how you can
+use them:
 
-In the `additionalFlags` option, configure any of the additional flags you
-want to run for your validator. If you want to run with a specific name, this
-is where you would enter it.
+In the `additionalFlags` option, configure any of the additional flags you want to run for your
+validator. If you want to run with a specific name, this is where you would enter it.
 
-Under the `polkadotBinary.url` field you can provide the release that is hosted
-in the [W3F repository][w3f polkadot] or use an alternate one that you build
-and publish yourself.
+Under the `polkadotBinary.url` field you can provide the release that is hosted in the [W3F
+repository][w3f polkadot] or use an alternate one that you build and publish yourself.
 
-By enabling the `nodeExporter`, Ansible will install and configure the 
-[node_exporter][] which will expose hardware-level metrics of your node in a
-format compatible with Prometheus.
+By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter][] which will
+expose hardware-level metrics of your node in a format compatible with Prometheus.
 
-The field `machineType:` will configure the machine's hardware specifications,
-check [here][gcp machine types] for the configuration options for GCP. The other
-hosting providers should have similar pages in their documentation.
+The field `machineType:` will configure the machine's hardware specifications, check
+[here][gcp machine types] for the configuration options for GCP. The other hosting providers should
+have similar pages in their documentation.
 
-Under `provider` the option are `gcp` (Google Cloud Provider), `aws` (AWS),
-`azure` (Microsoft Azure) and `packet` for Packet.
+Under `provider` the option are `gcp` (Google Cloud Provider), `aws` (AWS), `azure` (Microsoft
+Azure) and `packet` for Packet.
 
 The field `count` is the number of instances you would like to create.
 
-The `location` and `zone` fields are for the location of the machine, for GCP
-check [here][GCP regions], other cloud providers will have similar documentation.
+The `location` and `zone` fields are for the location of the machine, for GCP check
+[here][gcp regions], other cloud providers will have similar documentation.
 
-The `telemetryUrl` field will send your node's information to a specific
-telemetry server. You could send all your nodes' data (e.g. IP address) to the
-public endpoint, but it is highly recommended that that you set up your own
-telemetry server to protect your validator’s data from being exposed to the
-public. If you want to do that, see [substrate telemetry source][].
+The `telemetryUrl` field will send your node's information to a specific telemetry server. You could
+send all your nodes' data (e.g. IP address) to the public endpoint, but it is highly recommended
+that that you set up your own telemetry server to protect your validator’s data from being exposed
+to the public. If you want to do that, see [substrate telemetry source][].
 
-> NOTE: If you decided to send your node’s information to public telemetry,
-> the name for your validator and public node that is displayed on the telemetry
-> would look something like `PROJECT_NAME-sv-public-0` / `PROJECT_NAME-sv-validator-0`.
+> NOTE: If you decided to send your node’s information to public telemetry, the name for your
+> validator and public node that is displayed on the telemetry would look something like
+> `PROJECT_NAME-sv-public-0` / `PROJECT_NAME-sv-validator-0`.
 
 Configure `projectId` to be the name of the project you want to use in GCP.
 
-Configure `sshUser`  to be the user that manages your machine.
+Configure `sshUser` to be the user that manages your machine.
 
 For different cloud providers, you need to set the corresponding credentials as environment
-variables, for example, on GCP you only need to set `GOOGLE_APPLICATION_CREDENTIALS`. 
-This variable is the path to the JSON file containing the credentials of the
-service account you wish to use; this service account needs to have write access
-to compute and network resources if you use GCP. For others, you can check that
-by referring to the [README][].
+variables, for example, on GCP you only need to set `GOOGLE_APPLICATION_CREDENTIALS`. This variable
+is the path to the JSON file containing the credentials of the service account you wish to use; this
+service account needs to have write access to compute and network resources if you use GCP. For
+others, you can check that by referring to the [README][].
 
-Besides that, you need two additional environment variables that will allow
-Ansible to connect to the created machines. These values of these variables
-will be the keys that you generated at the beginning of the guide.
+Besides that, you need two additional environment variables that will allow Ansible to connect to
+the created machines. These values of these variables will be the keys that you generated at the
+beginning of the guide.
 
 > `SSH_ID_RSA_PUBLIC` - Path to private SSH key you want to use for the public nodes.
 
 > `SSH_ID_RSA_VALIDATOR` - Path to private SSH key you want to use for the validator.
 
-> NOTE: You will need to configure the Compute Engine API and enable billing on
-> your GCP accounts to properly run these scripts.
+> NOTE: You will need to configure the Compute Engine API and enable billing on your GCP accounts to
+> properly run these scripts.
 
 After everything is configured properly, you can start to run the deployment with:
 
@@ -213,12 +203,12 @@ After everything is configured properly, you can start to run the deployment wit
 $ scripts/deploy.sh
 ```
 
-> NOTE: Certain steps of the process may hang, however the scripts are idempotent
-> so you simply need to re-run them and 
+> NOTE: Certain steps of the process may hang, however the scripts are idempotent so you simply need
+> to re-run them and
 
-When the deployment and configuration is completed, you should see some
-output that looks like what's below. You are able to find the validator’s
-session keys by searching for "show rotateKeys output".
+When the deployment and configuration is completed, you should see some output that looks like
+what's below. You are able to find the validator’s session keys by searching for "show rotateKeys
+output".
 
 ```
 TASK [polkadot-validator-session-info : retrieve session info] *****************
@@ -281,11 +271,11 @@ you have any suggestions.
 
 [polkadot secure validator]: https://github.com/w3f/polkadot-secure-validator
 [issue]: https://github.com/w3f/polkadot-secure-validator/issues
-[SSH]: https://en.wikipedia.org/wiki/Secure_Shell
+[ssh]: https://en.wikipedia.org/wiki/Secure_Shell
 [nvm]: https://github.com/nvm-sh/nvm
 [w3f polkadot]: https://github.com/w3f/polkadot/releases
 [node_exporter]: https://github.com/prometheus/node_exporter
 [gcp machine types]: https://cloud.google.com/compute/docs/machine-types
-[GCP regions]: https://cloud.google.com/compute/docs/regions-zones/
+[gcp regions]: https://cloud.google.com/compute/docs/regions-zones/
 [substrate telemetry source]: https://github.com/paritytech/substrate-telemetry
-[README]: https://github.com/w3f/polkadot-secure-validator#prerequisites
+[readme]: https://github.com/w3f/polkadot-secure-validator#prerequisites
