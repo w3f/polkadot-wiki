@@ -9,14 +9,14 @@ The treasury is a pot of funds collected through transaction fees, slashing, [st
 
 When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling 5% of the proposed spend (see below for variations). This deposit will be slashed if the proposal is rejected, and returned if the proposal was accepted.
 
-Proposals may consist of (but are not limited to):
+提案可能包括 (但不限于):
 
-- Infrastructure deployment and continued operation.
-- Network security operations (monitoring services, continuous auditing).
-- Ecosystem provisions (collaborations with friendly chains).
-- Marketing activities (advertising, paid features, collaborations).
-- Community events and outreach (meetups, pizza parties, hackerspaces).
-- Software development (wallets and wallet integration, clients and client upgrades).
+- 基础架构部署
+- 网络安全操作(监视服务，审核)。
+- 生态系统发展(与友好链的合作)。
+- 推广活动(广告，合作)。
+- 社区活动(聚会，比萨派对，黑客空间)。
+- 软件开发(钱包和钱包整合，客户端升级)。
 
 The treasury is ultimately controlled by the council, and how the funds will be spent is up to their judgment.
 
@@ -102,8 +102,7 @@ For one, the treasury has deflationary pressure due to the burn that is suffered
 
 However, it is the case on Kusama that the council is composed of mainly well-known members of the community. Remember, the council is voted in by the token holders, so they must do some campaigning or otherwise be recognized to earn votes. In the scenario of an attack, the council members would lose their social credibility. Furthermore, members of the council are usually externally motivated by the proper operation of the chain. This external motivation is either because they run businesses which depend on the chain, or they have direct financial gain (through their holdings) of the token value remaining steady.
 
-Concretely there are a couple on-chain methods that resist this kind of attack. One, the council majority may not be the token majority of the chain. This means that the token majority could vote to replace the council if they attempted this attack - or even reverse the treasury spend. They would do this through a normal referendum. Two, there are time delays to treasury spends. They are only enacted every spend period. This means that there will be some time to observe this attack is taking place. The time delay then allows chain participants time to respond. The response may take the form of governance measures or - in the most extream cases a liquidation of their holdings and a migration to a minority fork. However, the possibility of this scenario is quite low.
-
+Concretely there are a couple on-chain methods that resist this kind of attack. One, the council majority may not be the token majority of the chain. This means that the token majority could vote to replace the council if they attempted this attack - or even reverse the treasury spend. They would do this through a normal referendum. Two, there are time delays to treasury spends. They are only enacted every spend period. This means that there will be some time to observe this attack is taking place. The time delay then allows chain participants time to respond. The response may take the form of governance measures or - in the most extreme cases a liquidation of their holdings and a migration to a minority fork. However, the possibility of this scenario is quite low.
 
 ## Further Reading
 
