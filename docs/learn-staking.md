@@ -174,7 +174,7 @@ own allocation before the share is divided to nominators.
 
 - [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the
   Kusama network.
-- [Validator Guide](maintain-guides-how-to-validate-kusama) - Become a validator on the
+- [Validator Guide](mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the
   Kusama network.
 
 ## Slashing
