@@ -74,15 +74,35 @@ capable parachain. This would not necessarily be the most efficient method of
 bridging, but given the generality of a Turing-complete parachain it would be 
 possible to bridge Polkadot and any other smart contract capable blockchain.
 
-## Proof-of-Work vs Proof-of-Stake bridges
+## Bitcoin Bridge
 
-External chains have their own consensus which can be classed as Proof-of-Work
-or Proof-of-Stake. In general, Proof-of-Work chains have what's known as
-_eventual consistency_ meaning that after some period of time a reversal
-of chain history becomes nearly infeasible. Proof-of-Stake chains usually
-are accompanied by a _finality gadget_ that grants the chain an absolute
-finality after a process of validator voting. The design of the bridge is impacted
-largely by which one of these two camps the external chain is classified.
+The Interlay team has written a [specification][interlay] on a Bitcoin bridge
+that is based on the [XClaim][] design paper. The protocol enables a two-way
+bridge between Polkadot and Bitcoin. It allows holders of BTC to "teleport"
+their assets to Polkadot as PolkaBTC, and holders of PolkaBTC to burn their
+assets for BTC on the Bitcoin chain.
+
+The Bitcoin bridge as documented in the specification is composed of two
+logically different components:
+
+- The XCLAIM component that maintains all accounts that own PolkadBTC.
+- The BTC-Relay that is responsible for verifying Bitcoin state when a new
+transaction is submitted.
+
+For full details on how it works please refer to the specification.
+
+## Ethereum Bridge
+
+As explained by Dr. Gavin Wood in a [blog post][eth bridging blog] from late 2019,
+there are three ways that the Polkadot and Substrate ecosystem can be bridged to
+the Ethereum ecosystem.
+
+1) Polkadot <-> Ethereum Public Bridge.
+1) Substrate <-> Parity Ethereum (Openethereum) Bridge.
+1) The Substrate EVM module.
+
+Please read the blog article for fuller descriptions of each one of these
+options.
 
 ## Resources
 
@@ -95,11 +115,25 @@ largely by which one of these two camps the external chain is classified.
 
 ### Runtime Module Bridges
 
+- [Bifrost][bifrost] - The Bifrost team was awarded a grant in W3F Grants [Wave 5][]
+to build a bridge to EOS.
+- [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe
+and Centrifuge were awarded a grant in W3F Grants [Wave 5][] to build a Substrate
+to Ethereum two-way bridge.
+ - [Tendermint Bridge](https://github.com/ChorusOne) - ChorusOne was awarded a
+ grant in [Wave 5][] to build a GRANDPA light client in Tendermint.
+ - [Interlay BTC Bridge][interlay] - The Interlay team was awarded a grant in W3F
+ grants [Wave 5][] to build a trust-minimized BTC bridge.
 - [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX have implemented a BTC to Substrate bridge for their parachain.
 
 ### Design
 
-- [XClaim](https://eprint.iacr.org/2018/643.pdf) - XClaim design for bridging Proof-of-Work chains in a trustless way.
+- [XClaim][] - XClaim design for bridging Proof-of-Work chains in a trustless way.
 
 [crosschain]: learn-crosschain
 [Parity bridge]: https://github.com/paritytech/parity-bridge
+[interlay]: https://interlay.gitlab.io/polkabtc-spec/
+[XClaim]: https://eprint.iacr.org/2018/643.pdf
+[bifrost]: https://github.com/bifrost-codes/bifrost
+[Wave 5]: https://medium.com/web3foundation/web3-foundation-grants-wave-5-recipients-2205f4fde096
+[eth bridging blog]: https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13
