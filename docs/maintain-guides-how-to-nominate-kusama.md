@@ -4,6 +4,27 @@ title: Be a Nominator (Kusama)
 sidebar_label: Nominator Guide
 ---
 
+Nominators are participants in the staking system that are responsible for
+electing good validators for a share in those validators' rewards. 
+
+While [validators][] operate as active participants by taking part in the
+block production and finality voting mechanisms, nominators take more of a 
+"set-it-and-forget-it" approach. Being a nominator does not require running
+a node of your own or worrying about online uptime. However, a good nominator
+performs diligence on the validators that it elects. When looking for validators
+to nominate, a nominator should pay attention to its own reward percentage for
+nominating a specific validator - as well as the risk that it bares of being
+slashed if the validator gets slashed.
+
+# Setting up Stash and Controller keys
+
+Nominators are recommended to set up two separate stash and controller accounts.
+Explanation and reasoning for generating distinct accounts for this purpose is
+elaborated in the [keys][] section of the Wiki.
+
+You can generate your stash and controller account via any of the recommended
+methods that are detailed on the [account generation][] page.
+
 # Using Polkadot UI
 
 ### Step 1: Bond your tokens
@@ -101,3 +122,7 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 ```
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the nomination status, you can check that on the PolkadotJS UI as well.
+
+[validators]: maintain-guides-how-to-validate-kusama
+[keys]: learn-keys#controller-and-stash-keys
+[account generation]: learn-account-generation
