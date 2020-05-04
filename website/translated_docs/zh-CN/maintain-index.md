@@ -1,25 +1,27 @@
 ---
 id: maintain-index
-title: Network Maintainers
-sidebar_label: Network Maintainers
+title: 网络维护者
+sidebar_label: 网络维护者
 ---
 
-Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and guides to set up a node and run the network.
+欢迎来到 Polkadot 维基的网络维护者部分。 在这里您将找到有关设置节点和运行指南。
 
-## Validator
+## 收集人
 
-- [Validator Home](maintain-validator) - Gives high level overview of validator and related links.
-- [Validation Guide](maintain-guides-how-to-validate) - Walkthrough on how to validator on PoC-4 Alexander testnet.
+- [收集人主页](maintain-collator)- 收集人和相关链接。
 
-## Nominator
+## 提名人
 
-- [Nominator Home](maintain-nominator) - High level overview of nominators and related links.
-- [Nomination Guide](maintain-guides-how-to-nominate) - Walkthrough on how to nominate on PoC-4 Alexander testnet.
+- [提名人主页](maintain-nominator)-提名人和相关链接。
+- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
 
-## Collator
 
-- [Collator Home](maintain-collator) - High level overview of collators and related links.
+## 验证人
+
+- [验证人主页](maintain-validator)-验证人和相关链接。
+- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
 
 ## Governance
 
-- [Governance](maintain-governance-index) - Overview of governance on Polkadot.
+- [How to join the Council](maintain-guides-how-to-join-council) - Step by step guide for running for the Council.
+- [How to vote for a Councillor](maintain-guides-how-to-vote-councillor) - Step by step guide for voting for your favorite councillors.

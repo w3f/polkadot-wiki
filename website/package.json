@@ -4,9 +4,10 @@
     "examples": "docusaurus-examples",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "docusaurus-start",
-    "build": "docusaurus-build",
-    "publish-gh-pages": "docusaurus-publish",
+    "start": "npm run mirror && docusaurus-start",
+    "build": "npm run mirror && docusaurus-build",
+    "mirror": "node mirror.js",
+    "publish-gh-pages": "npm run mirror && docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
@@ -17,6 +18,6 @@
     "docusaurus": "^1.12.0"
   },
   "dependencies": {
-    "remarkable-katex": "^1.0.1"
+    "remarkable-katex": "^1.1.4"
   }
 }

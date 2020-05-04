@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "The hub for those interested in learning, building, or running a node on the Polkadot protocol.",
+    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
@@ -25,45 +25,45 @@
         "title": "Examples",
         "sidebar_label": "Examples"
       },
-      "build-exchange-integration": {
-        "title": "Exchange integration",
-        "sidebar_label": "Exchange integration"
-      },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic Format aka Transaction Format",
-        "sidebar_label": "Polkadot Extrinsic Format aka Transaction Format"
-      },
       "build-hackathon": {
         "title": "Hackathon",
         "sidebar_label": "Hackathon"
       },
       "build-index": {
-        "title": "Builders Portal",
-        "sidebar_label": "Builders Portal"
+        "title": "Builder's Portal",
+        "sidebar_label": "Builder's Portal"
       },
-      "build-networks": {
-        "title": "Networks",
-        "sidebar_label": "Networks"
+      "build-node-interaction": {
+        "title": "Node Interaction",
+        "sidebar_label": "Node Interaction"
+      },
+      "build-node-management": {
+        "title": "Node Management",
+        "sidebar_label": "Node Management"
+      },
+      "build-oracle": {
+        "title": "Oracles",
+        "sidebar_label": "Oracles"
       },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
       },
-      "build-rust-style-guide": {
-        "title": "Style Guide for Rust in Polkadot",
-        "sidebar_label": "Style Guide for Rust in Polkadot"
+      "build-protocol-info": {
+        "title": "Polkadot Protocol Information",
+        "sidebar_label": "Polkadot Protocol"
       },
       "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
       },
       "build-tools-index": {
-        "title": "Tools",
-        "sidebar_label": "Tools"
+        "title": "Tool Index",
+        "sidebar_label": "Tool Index"
       },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
+      "build-transaction-construction": {
+        "title": "Transaction Construction and Signing",
+        "sidebar_label": "Transaction Construction"
       },
       "community": {
         "title": "Community",
@@ -74,12 +74,64 @@
         "sidebar_label": "Contributing"
       },
       "glossary": {
-        "title": "Terms and Definitions",
-        "sidebar_label": "Terms and Definitions"
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
+      },
+      "grants": {
+        "title": "Web3 Foundation Grantees",
+        "sidebar_label": "Grants"
       },
       "index": {
-        "title": "Polkadot Wiki",
-        "sidebar_label": "Polkadot Wiki"
+        "title": "Wiki Index",
+        "sidebar_label": "Wiki Index"
+      },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-endpoints": {
+        "title": "Kusama Endpoints",
+        "sidebar_label": "Kusama Endpoints"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Faucet"
+      },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Home"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
+      },
+      "learn-account-generation": {
+        "title": "Account Generation",
+        "sidebar_label": "Account Generation"
+      },
+      "learn-accounts": {
+        "title": "Polkadot Accounts",
+        "sidebar_label": "Polkadot Accounts"
       },
       "learn-architecture": {
         "title": "Architecture",
@@ -89,25 +141,37 @@
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
       },
-      "learn-basics": {
-        "title": "Basics",
-        "sidebar_label": "Basics"
+      "learn-availability": {
+        "title": "Availability and Validity",
+        "sidebar_label": "Availability and Validity"
       },
       "learn-bridges": {
         "title": "Bridges",
         "sidebar_label": "Bridges"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Polkadot and Dfinity",
+        "sidebar_label": "Dfinity"
+      },
+      "learn-comparisons-ethereum-2": {
+        "title": "Polkadot and Ethereum 2.0",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot vs. Cosmos: Design Comparison",
-        "sidebar_label": "Polkadot vs. Cosmos: Design Comparison"
+        "title": "Polkadot and Cosmos",
+        "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "Polkadot comparisons",
-        "sidebar_label": "Polkadot comparisons"
+        "title": "Polkadot Comparisons",
+        "sidebar_label": "Other comparisons"
       },
       "learn-consensus": {
         "title": "Polkadot Consensus",
         "sidebar_label": "Polkadot Consensus"
+      },
+      "learn-crosschain": {
+        "title": "Cross-chain Message Passing (XCMP)",
+        "sidebar_label": "Cross-chain Message Passing (XCMP)"
       },
       "learn-cryptography": {
         "title": "Cryptography Explainer",
@@ -125,21 +189,13 @@
         "title": "Governance",
         "sidebar_label": "Governance"
       },
-      "learn-grandpa": {
-        "title": "GRANDPA",
-        "sidebar_label": "GRANDPA"
+      "learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
       },
       "learn-implementations": {
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
-      },
-      "learn-index": {
-        "title": "Learn about Polkadot",
-        "sidebar_label": "Learn about Polkadot"
-      },
-      "learn-interchain": {
-        "title": "Interchain Message Passing (ICMP)",
-        "sidebar_label": "Interchain Message Passing (ICMP)"
       },
       "learn-introduction": {
         "title": "Polkadot",
@@ -158,12 +214,12 @@
         "sidebar_label": "Parathreads"
       },
       "learn-phragmen": {
-        "title": "What is Phragmen and what does it mean for node operators?",
-        "sidebar_label": "What is Phragmen and what does it mean for node operators?"
+        "title": "Sequential Phragmen Method",
+        "sidebar_label": "Sequential Phragmen Method"
       },
-      "learn-PRE": {
-        "title": "Polkadot Runtime Environment (PRE)",
-        "sidebar_label": "Polkadot Runtime Environment (PRE)"
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "Randomness",
@@ -181,6 +237,10 @@
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
       },
+      "learn-simple-payouts": {
+        "title": "Simple Payouts",
+        "sidebar_label": "Simple Payouts"
+      },
       "learn-spree": {
         "title": "SPREE",
         "sidebar_label": "SPREE"
@@ -189,13 +249,13 @@
         "title": "Staking",
         "sidebar_label": "Staking"
       },
+      "learn-transaction-fees": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
-      },
-      "learn-UI": {
-        "title": "Polkadot UI",
-        "sidebar_label": "Polkadot UI"
       },
       "learn-wasm": {
         "title": "WebAssembly (Wasm)",
@@ -205,21 +265,65 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "maintain-governance-index": {
-        "title": "Governance",
-        "sidebar_label": "Governance"
+      "maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
       },
-      "maintain-guides-how-to-nominate": {
-        "title": "How to nominate",
-        "sidebar_label": "How to nominate"
+      "maintain-guides-democracy": {
+        "title": "Participate in Democracy",
+        "sidebar_label": "Participate in Democracy"
+      },
+      "maintain-guides-how-to-join-council": {
+        "title": "Join the Council",
+        "sidebar_label": "Join the Council"
+      },
+      "maintain-guides-how-to-nominate-alexander": {
+        "title": "Be a Nominator (Alexander)",
+        "sidebar_label": "Be a Nominator (Alexander)"
+      },
+      "maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Nominator Guide"
+      },
+      "maintain-guides-how-to-setup-sentry-node": {
+        "title": "Set Up a Sentry Node - Public Node",
+        "sidebar_label": "Set Up a Sentry Node"
       },
       "maintain-guides-how-to-systemd": {
-        "title": "How to run your node as a `systemd` process",
-        "sidebar_label": "How to run your node as a `systemd` process"
+        "title": "Using systemd for the Validator Node",
+        "sidebar_label": "Using systemd for the Validator Node"
       },
-      "maintain-guides-how-to-validate": {
-        "title": "How to validate",
-        "sidebar_label": "How to validate"
+      "maintain-guides-how-to-unbond": {
+        "title": "Stop Being a Nominator",
+        "sidebar_label": "Stop Being a Nominator"
+      },
+      "maintain-guides-how-to-upgrade": {
+        "title": "How to Upgrade Your Validator",
+        "sidebar_label": "How to Upgrade Your Validator"
+      },
+      "maintain-guides-how-to-use-polkadot-secure-validator": {
+        "title": "How to use Polkadot Secure Validator Setup",
+        "sidebar_label": "How to use Polkadot Secure Validator Setup"
+      },
+      "maintain-guides-how-to-validate-kusama": {
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Validator Guide"
+      },
+      "maintain-guides-how-to-validate-alexander": {
+        "title": "Run a Validator (Alexander)",
+        "sidebar_label": "Run a Validator (Alexander)"
+      },
+      "maintain-guides-how-to-vote-councillor": {
+        "title": "Voting for Councillors",
+        "sidebar_label": "Voting for Councillors"
+      },
+      "maintain-guides-secure-validator": {
+        "title": "Secure Validator",
+        "sidebar_label": "Secure Validator"
+      },
+      "maintain-guides-society-kusama": {
+        "title": "Join Kappa Sigma Mu",
+        "sidebar_label": "Join Kappa Sigma Mu"
       },
       "maintain-guides-validator-payout": {
         "title": "Validator Payout Overview",
@@ -229,33 +333,75 @@
         "title": "Network Maintainers",
         "sidebar_label": "Network Maintainers"
       },
-      "maintain-validator": {
-        "title": "Node Operator / Validator",
-        "sidebar_label": "Node Operator / Validator"
+      "maintain-networks": {
+        "title": "Networks",
+        "sidebar_label": "Networks"
       },
       "maintain-nominator": {
         "title": "Nominator",
         "sidebar_label": "Nominator"
       },
+      "maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
+      },
+      "maintain-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
+      },
+      "maintain-wss": {
+        "title": "Set up Secure WebSocket for Remote Connections",
+        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
+      },
+      "mirror-build-build-with-polkadot": {
+        "title": "Polkadot Builders Starter's Guide",
+        "sidebar_label": "Polkadot Builders Starter's Guide"
+      },
+      "mirror-learn-governance": {
+        "title": "Governance",
+        "sidebar_label": "Governance"
+      },
+      "mirror-learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
+      },
+      "mirror-learn-treasury": {
+        "title": "Treasury",
+        "sidebar_label": "Treasury"
+      },
+      "mirror-maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
+      },
+      "mirror-maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Nominator Guide"
+      },
+      "mirror-maintain-guides-how-to-validate-kusama": {
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Validator Guide"
+      },
       "news": {
-        "title": "This Week in Polkadot",
-        "sidebar_label": "This Week in Polkadot"
+        "title": "News",
+        "sidebar_label": "News"
       },
       "research": {
-        "title": "Polkadot Research",
-        "sidebar_label": "Polkadot Research"
+        "title": "Research Pages",
+        "sidebar_label": "Research Pages"
       }
     },
     "links": {
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "Main",
       "Build": "Build",
       "Learn": "Learn",
-      "Maintain": "Maintain"
+      "Maintain": "Maintain",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {

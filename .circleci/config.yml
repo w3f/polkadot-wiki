@@ -1,6 +1,37 @@
 version: 2
 
 jobs:
+  check-links:
+    docker:
+      - image: web3f/link-checker:v1.0.1
+    steps:
+      - checkout
+      - run:
+          name: build
+          command: |
+            cd website
+            yarn
+
+      - run:
+          name: serve
+          background: true
+          command: |
+            cd website
+            yarn start
+
+      - run:
+          name: wait website up
+          command: |
+            while ! nc -z localhost 3000; do
+              sleep 1
+              echo waiting for website up...
+            done
+
+      - run:
+          name: check links
+          command: |
+            linkchecker --ignore-url="^(?:(?!\/en\/).)*$" --check-extern http://localhost:3000/
+
   deploy-website:
     docker:
       # specify the version you desire here
@@ -21,6 +52,10 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - check-links:
+          filters:
+            tags:
+              only: /.*/
       - deploy-website:
           filters:
             branches:

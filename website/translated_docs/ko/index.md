@@ -1,18 +1,16 @@
 ---
 id: index
-title: Polkadot Wiki
-sidebar_label: Polkadot Wiki
+title: 위키 목록
+sidebar_label: 위키 목록
 ---
 
-![Polkadot Logo](assets/Polkadot_logotype_color.svg)
+만나서 반가워요, 폴카닷에 대해 배우고, 개발하며, 노드를 돌리는데 관심을 가진 사람들을 위한 허브인 폴카닷 위키에 오신 것을 진심으로 환영합니다.
 
-폴카닷 위키에 오신것을 환영합니다. 여기에서 폴카닷 프로토콜에 대해서 배우고 노드를 구동시켜보고 네트워크를 만들어 볼 수 있습니다. 폴카닷에 대한 소개글을 찾으신다면 [이 링크](learn-introduction)를 참고하세요.
+만약 폴카닷에 대한 소개를 찾고 계시다면 [여기를 봐주세요](learn-introduction).
 
-If you're looking for an introduction on Polkadot please [see here](learn-introduction).
+## 좀 더 자료가 필요하다면
 
-## 좀 더 자료가 필요하시다면
-
-- [위키 돌아다녀 보기](learn-index) - 위키의 정보 섹션을 읽어보세요.
+- [위키 돌아다니기](learn-introduction) - 위키의 정보 섹션을 읽어보세요.
 - [관련된 링크들](learn-relevant-links) - **폴카닷 과 관련된 전반적인 모든 링크들.**
 
 ## 폴카닷 위에서 구현해보고 싶으신 것이 있다면
@@ -24,7 +22,7 @@ If you're looking for an introduction on Polkadot please [see here](learn-introd
 
 - [노드 구동하기](maintain-index) - Polkadot network에서 노드를 구동 할 때 필요한 정보들.
 
-## Resources
+## 참고자료들 (Resources)
 
 - [Community / Ecosystem](community) - Polkadot과 관련된 커뮤니티 들과 채널들.
 - [News](news) - Polkadot의 핫한 주간 뉴스들. 매주 발행됩니다.

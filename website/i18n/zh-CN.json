@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "下一页",
     "previous": "上一页",
-    "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
+    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
@@ -25,45 +25,45 @@
         "title": "例子",
         "sidebar_label": "例子"
       },
-      "build-exchange-integration": {
-        "title": "交易所整合",
-        "sidebar_label": "交易所整合"
-      },
-      "build-extrinsic-format": {
-        "title": "Polkadot Extrinsic 格式(又称交易格式)",
-        "sidebar_label": "Polkadot Extrinsic 格式(又称交易格式)"
-      },
       "build-hackathon": {
         "title": "黑客马拉松",
         "sidebar_label": "黑客马拉松"
       },
       "build-index": {
-        "title": "开发者入口",
-        "sidebar_label": "开发者入口"
+        "title": "开发者专页",
+        "sidebar_label": "开发者专页"
       },
-      "build-networks": {
-        "title": "网络",
-        "sidebar_label": "网络"
+      "build-node-interaction": {
+        "title": "Node Interaction",
+        "sidebar_label": "Node Interaction"
+      },
+      "build-node-management": {
+        "title": "Node Management",
+        "sidebar_label": "Node Management"
+      },
+      "build-oracle": {
+        "title": "Oracles",
+        "sidebar_label": "Oracles"
       },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
       },
-      "build-rust-style-guide": {
-        "title": "Polkadot中Rust的格式指南",
-        "sidebar_label": "Polkadot中的Rust的格式指南"
+      "build-protocol-info": {
+        "title": "Polkadot Protocol Information",
+        "sidebar_label": "Polkadot Protocol"
       },
       "build-smart-contracts": {
         "title": "智能合约",
         "sidebar_label": "智能合约"
       },
       "build-tools-index": {
-        "title": "工具",
-        "sidebar_label": "工具"
+        "title": "工具索引",
+        "sidebar_label": "工具索引"
       },
-      "build-tools-subkey": {
-        "title": "Subkey",
-        "sidebar_label": "Subkey"
+      "build-transaction-construction": {
+        "title": "Transaction Construction and Signing",
+        "sidebar_label": "Transaction Construction"
       },
       "community": {
         "title": "社区",
@@ -74,12 +74,64 @@
         "sidebar_label": "贡献"
       },
       "glossary": {
-        "title": "条款及细则",
-        "sidebar_label": "条款及细则"
+        "title": "专业术语",
+        "sidebar_label": "专业术语"
+      },
+      "grants": {
+        "title": "Web3 Foundation Grantees",
+        "sidebar_label": "Grants"
       },
       "index": {
-        "title": "Polkadot 维基",
-        "sidebar_label": "Polkadot 维基"
+        "title": "维基索引",
+        "sidebar_label": "维基索引"
+      },
+      "kusama-adverserial-cheatsheet": {
+        "title": "Adverserial Cheatsheet",
+        "sidebar_label": "Adverserial Cheatsheet"
+      },
+      "kusama-bug-bounty": {
+        "title": "Bug Bounty",
+        "sidebar_label": "Bug Bounty"
+      },
+      "kusama-claims": {
+        "title": "Kusama Claims",
+        "sidebar_label": "Claims"
+      },
+      "kusama-coc": {
+        "title": "Kusama Code of Conduct",
+        "sidebar_label": "Code of Conduct"
+      },
+      "kusama-community": {
+        "title": "Kusama Community",
+        "sidebar_label": "Community"
+      },
+      "kusama-endpoints": {
+        "title": "Kusama Endpoints",
+        "sidebar_label": "Kusama Endpoints"
+      },
+      "kusama-faucet": {
+        "title": "Kusama Faucet",
+        "sidebar_label": "Faucet"
+      },
+      "kusama-index": {
+        "title": "Kusama",
+        "sidebar_label": "Home"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-timeline": {
+        "title": "Kusama Timeline",
+        "sidebar_label": "Timeline"
+      },
+      "learn-account-generation": {
+        "title": "Account Generation",
+        "sidebar_label": "Account Generation"
+      },
+      "learn-accounts": {
+        "title": "Polkadot Accounts",
+        "sidebar_label": "Polkadot Accounts"
       },
       "learn-architecture": {
         "title": "Polkadot 架构",
@@ -89,25 +141,37 @@
         "title": "平行链插槽拍卖",
         "sidebar_label": "平行链插槽拍卖"
       },
-      "learn-basics": {
-        "title": "Polkadot 基础",
-        "sidebar_label": "Polkadot 基础"
+      "learn-availability": {
+        "title": "Availability and Validity",
+        "sidebar_label": "Availability and Validity"
       },
       "learn-bridges": {
         "title": "桥接",
         "sidebar_label": "桥接"
       },
+      "learn-comparisons-dfinity": {
+        "title": "Polkadot and Dfinity",
+        "sidebar_label": "Dfinity"
+      },
+      "learn-comparisons-ethereum-2": {
+        "title": "Polkadot and Ethereum 2.0",
+        "sidebar_label": "Ethereum 2.0"
+      },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot vs. Cosmos: 设计比较",
-        "sidebar_label": "Polkadot vs. Cosmos: 设计比较"
+        "title": "Polkadot and Cosmos",
+        "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "与其它区块链比较",
-        "sidebar_label": "与其它区块链比较"
+        "title": "Polkadot Comparisons",
+        "sidebar_label": "与其它比较"
       },
       "learn-consensus": {
         "title": "Polkadot 共识机制",
         "sidebar_label": "Polkadot 共识机制"
+      },
+      "learn-crosschain": {
+        "title": "Cross-chain Message Passing (XCMP)",
+        "sidebar_label": "Cross-chain Message Passing (XCMP)"
       },
       "learn-cryptography": {
         "title": "密码学讲解",
@@ -125,21 +189,13 @@
         "title": "治理",
         "sidebar_label": "治理"
       },
-      "learn-grandpa": {
-        "title": "GRANDPA",
-        "sidebar_label": "GRANDPA"
+      "learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
       },
       "learn-implementations": {
         "title": "其它程序语言实现",
         "sidebar_label": "其它程序语言实现"
-      },
-      "learn-index": {
-        "title": "了解 Polkadot",
-        "sidebar_label": "了解 Polkadot"
-      },
-      "learn-interchain": {
-        "title": "跨链消息传递 (ICMP)",
-        "sidebar_label": "跨链消息传递 (ICMP)"
       },
       "learn-introduction": {
         "title": "Polkadot",
@@ -158,12 +214,12 @@
         "sidebar_label": "平行线程"
       },
       "learn-phragmen": {
-        "title": "Phragmen 是什么，它对验证人意味着什么?",
-        "sidebar_label": "Phragmen 是什么，它对验证人意味着什么?"
+        "title": "顺序弗拉格曼方法",
+        "sidebar_label": "顺序弗拉格曼方法"
       },
-      "learn-PRE": {
-        "title": "Polkadot Runtime 环境 (PRE)",
-        "sidebar_label": "Polkadot Runtime 环境 (PRE)"
+      "learn-polkadot-host": {
+        "title": "Polkadot Host (PH)",
+        "sidebar_label": "Polkadot Host (PH)"
       },
       "learn-randomness": {
         "title": "随机性",
@@ -181,6 +237,10 @@
         "title": "网络安全",
         "sidebar_label": "网络安全"
       },
+      "learn-simple-payouts": {
+        "title": "Simple Payouts",
+        "sidebar_label": "Simple Payouts"
+      },
       "learn-spree": {
         "title": "SPREE",
         "sidebar_label": "SPREE"
@@ -189,13 +249,13 @@
         "title": "抵押",
         "sidebar_label": "抵押"
       },
+      "learn-transaction-fees": {
+        "title": "Transaction Fees",
+        "sidebar_label": "Transaction Fees"
+      },
       "learn-treasury": {
         "title": "财政库",
         "sidebar_label": "财政库"
-      },
-      "learn-UI": {
-        "title": "Polkadot UI",
-        "sidebar_label": "Polkadot UI"
       },
       "learn-wasm": {
         "title": "WebAssembly (Wasm)",
@@ -205,21 +265,65 @@
         "title": "收集人",
         "sidebar_label": "收集人"
       },
-      "maintain-governance-index": {
-        "title": "治理",
-        "sidebar_label": "治理"
+      "maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
       },
-      "maintain-guides-how-to-nominate": {
-        "title": "如何成为提名人",
-        "sidebar_label": "如何成为提名人"
+      "maintain-guides-democracy": {
+        "title": "Participate in Democracy",
+        "sidebar_label": "Participate in Democracy"
+      },
+      "maintain-guides-how-to-join-council": {
+        "title": "加入议会",
+        "sidebar_label": "加入议会"
+      },
+      "maintain-guides-how-to-nominate-alexander": {
+        "title": "成为提名人 (Alexander)",
+        "sidebar_label": "成为提名人 (Alexander)"
+      },
+      "maintain-guides-how-to-nominate-kusama": {
+        "title": "成为提名人 (Kusama)",
+        "sidebar_label": "Nominator Guide"
+      },
+      "maintain-guides-how-to-setup-sentry-node": {
+        "title": "Set Up a Sentry Node - Public Node",
+        "sidebar_label": "Set Up a Sentry Node"
       },
       "maintain-guides-how-to-systemd": {
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
-      "maintain-guides-how-to-validate": {
-        "title": "如何运行验证人节点",
-        "sidebar_label": "如何运行验证人节点"
+      "maintain-guides-how-to-unbond": {
+        "title": "Stop Being a Nominator",
+        "sidebar_label": "Stop Being a Nominator"
+      },
+      "maintain-guides-how-to-upgrade": {
+        "title": "如何升级验证人节点",
+        "sidebar_label": "如何升级验证人节点"
+      },
+      "maintain-guides-how-to-use-polkadot-secure-validator": {
+        "title": "How to use Polkadot Secure Validator Setup",
+        "sidebar_label": "How to use Polkadot Secure Validator Setup"
+      },
+      "maintain-guides-how-to-validate-kusama": {
+        "title": "运行验证人 (Kusama)",
+        "sidebar_label": "Validator Guide"
+      },
+      "maintain-guides-how-to-validate-alexander": {
+        "title": "运行验证人 (Alexander)",
+        "sidebar_label": "运行验证人 (Alexander)"
+      },
+      "maintain-guides-how-to-vote-councillor": {
+        "title": "投票选举议员",
+        "sidebar_label": "投票选举议员"
+      },
+      "maintain-guides-secure-validator": {
+        "title": "安全验证人节点",
+        "sidebar_label": "安全验证人节点"
+      },
+      "maintain-guides-society-kusama": {
+        "title": "Join Kappa Sigma Mu",
+        "sidebar_label": "Join Kappa Sigma Mu"
       },
       "maintain-guides-validator-payout": {
         "title": "验证人付款概述",
@@ -229,17 +333,57 @@
         "title": "网络维护者",
         "sidebar_label": "网络维护者"
       },
-      "maintain-validator": {
-        "title": "验证人",
-        "sidebar_label": "验证人"
+      "maintain-networks": {
+        "title": "Networks",
+        "sidebar_label": "Networks"
       },
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
       },
+      "maintain-sync": {
+        "title": "Set up a Full Node",
+        "sidebar_label": "Set up a Full Node"
+      },
+      "maintain-validator": {
+        "title": "验证人",
+        "sidebar_label": "验证人"
+      },
+      "maintain-wss": {
+        "title": "Set up Secure WebSocket for Remote Connections",
+        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
+      },
+      "mirror-build-build-with-polkadot": {
+        "title": "Polkadot Builders Starter's Guide",
+        "sidebar_label": "Polkadot Builders Starter's Guide"
+      },
+      "mirror-learn-governance": {
+        "title": "Governance",
+        "sidebar_label": "Governance"
+      },
+      "mirror-learn-identity": {
+        "title": "Identity",
+        "sidebar_label": "Identity"
+      },
+      "mirror-learn-treasury": {
+        "title": "Treasury",
+        "sidebar_label": "Treasury"
+      },
+      "mirror-maintain-errors": {
+        "title": "Errors and How to Resolve Them",
+        "sidebar_label": "Resolving Errors"
+      },
+      "mirror-maintain-guides-how-to-nominate-kusama": {
+        "title": "Be a Nominator (Kusama)",
+        "sidebar_label": "Nominator Guide"
+      },
+      "mirror-maintain-guides-how-to-validate-kusama": {
+        "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Validator Guide"
+      },
       "news": {
-        "title": "Polkadot 周报",
-        "sidebar_label": "Polkadot 周报"
+        "title": "新闻",
+        "sidebar_label": "新闻"
       },
       "research": {
         "title": "研究专页",
@@ -249,13 +393,15 @@
     "links": {
       "Build": "建立",
       "Learn": "学习",
-      "Maintain": "参与"
+      "Maintain ": "Maintain ",
+      "Kusama": "Kusama"
     },
     "categories": {
       "Main": "主要",
       "Build": "建立",
       "Learn": "学习",
-      "Maintain": "参与"
+      "Maintain": "参与",
+      "Kusama": "Kusama"
     }
   },
   "pages-strings": {
@@ -278,7 +424,7 @@
     "Collators|no description given": "收集人",
     "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "运行收集人打包平行链的区块并将其传递给验证人以进行验证。",
     "Become a Maintainer|no description given": "成为参与者",
-    "Help Translate|recruit community translators for your project": "帮助翻译",
+    "Help Translate|recruit community translators for your project": "参与翻译",
     "Edit this Doc|recruitment message asking to edit the doc source": "修改",
     "Translate this Doc|recruitment message asking to translate the docs": "翻译"
   }

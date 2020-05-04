@@ -8,9 +8,9 @@ One of the central ideas in blockchain intercommunication is the role of bridges
 
 Currently, there are three different types of bridging in Polkadot:
 
-* *Bridge contracts* - Smart contracts deployed as bridges between Polkadot and external chains.
-* *Cross-parachain communication* - No contracts needed.
-* *In-built bridging modules* - Bridging to Polkadot from an external chain via a purpose-built module.
+* _Bridge contracts_ - Smart contracts deployed as bridges between Polkadot and external chains.
+* _Cross-parachain communication_ - No contracts needed.
+* _In-built bridging modules_ - Bridging to Polkadot from an external chain via a purpose-built module.
 
 ## Bridge Contracts
 

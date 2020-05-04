@@ -14,7 +14,7 @@ sidebar_label: Cumulus
 
 *Cumulus共识*是Substrate追踪Polkadot中继链的一个共识引擎。它在内部运行一个Polkadot节点并指示客户端和同步算法对哪个链加以追踪、最终确定并视为最佳。
 
-### Cumulus运行时
+### Cumulus Runtime
 
 Cumulus运行时围绕在Substrate运行时周围，使它们得以被Polkadot验证人验证并提供见证生成运行时。它向被验证人调用的Substrate外部界面添加一个`validate_block` API
 

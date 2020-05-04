@@ -1,6 +1,6 @@
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
-  tagline: 'The hub for those interested in learning, building, or running a node on the Polkadot protocol.',
+  tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
   url: 'https://wiki.polkadot.network', // Your website URL
   baseUrl: '/',
   projectName: 'polkadot-wiki',
@@ -9,9 +9,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'build-index', label: 'Build'},
-    {doc: 'learn-index', label: 'Learn'},
-    {doc: 'maintain-index', label: 'Maintain'},
+    { doc: 'build-index', label: 'Build' },
+    { doc: 'learn-introduction', label: 'Learn' },
+    { doc: 'maintain-index', label: 'Maintain '},
+    { doc: 'kusama-index', label: 'Kusama' },
     { search: true },
     { languages: true }
   ],
@@ -30,7 +31,9 @@ const siteConfig = {
   algolia: {
     apiKey: '8bfa06b56bb8f33e5698c7f40b00b38f',
     indexName: 'polkadot',
-    algoliaOptions: {} // Optional, if provided by Algolia
+    algoliaOptions: {
+      facetFilters: ["language:LANGUAGE"]
+    } // Optional, if provided by Algolia
   },
 
   /* Custom fonts for website */
@@ -54,6 +57,7 @@ const siteConfig = {
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
+    '/js/custom.js'
   ],
 
   stylesheets: [

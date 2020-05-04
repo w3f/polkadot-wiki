@@ -4,16 +4,53 @@ title: Polkadot
 sidebar_label: Polkadot
 ---
 
-Polkadot is a heterogeneous multi-chain technology. It consists of the relay chain, parachains, and bridges to other networks. The relay chain is responsible for achieving consensus and transaction delivery among parachains. Parachains are independent blockchains with their own state transitions that gather and process transactions while plugging in to the security of the relay chain. Bridges allow the Polkadot network to make it interoperable with other blockchains not built to natively support it.
+Polkadot is a sharded blockchain based on the thesis that the world will have several blockchains that need to interact. Polkadot unites scalability, interoperability, and security.
 
 ## Why Polkadot?
 
-Polkadot is built to connect private/consortium chains, public/permission-less networks, oracles and future technological developments yet to be created in the Web3 ecosystem. It enables an internet where independent blockchains can exchange information and trust-free transactions via the Polkadot relay chain, with the key tenets of scalability, governance and interoperability.
+Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a secure, trust-free environment.
 
-By connecting these dots, we allow for the development of a truly decentralized web, serving as a foundational building block for the creation of an ecosystem of Dapps and services that will distribute power and equity for the common good.
+Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet where independent blockchains can exchange information under common security guarantees.
+
+Polkadot is a living network with the core pillars of governance and upgradability. The network has an advanced suite of governance tools and, using the WebAssembly standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your growing needs without the risks of network forks.
+
+By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users control their data and are not limited by trust bounds within the network.
 
 ## What Is Polkadot?
 
-Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This interoperability also allows the additional benefit of scalability by creating a general environment for multiple state machines.
+The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)" - in the network have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm, then it can connect to the Polkadot network as a parachain.
 
-## [Polkadot Architecture](learn-architecture)
+Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, collators don't have any security responsibilities, and thus do not require a robust incentive system.
+
+In order to interact with chains that want to use their own finalization process (e.g. Bitcoin), Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
+
+The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
+
+## Digging deeper
+
+- [Architecture](learn-architecture) - Overview of the Polkadot architecture.
+- [Bridges](learn-bridges) - Overview of bridges.
+- [Cryptography](learn-cryptography) - Describes the cryptography used in Polkadot and where it is employed in the protocol.
+- [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
+- [DOT](learn-DOT) - Information on DOTs, the native token of the Polkadot protocol.
+- [Governance](learn-governance) - What blockchain governance is, and how it works in Polkadot.
+- [Cross-chain Communication](learn-crosschain) - Information regarding how cross-chain messaging works.
+- [Parachains](learn-parachains) - Overview of what a parachain is, and how they work.
+- [Parachain Auctions](learn-auction) - Describes the mechanism for the auctioning of parachain slots.
+- [Parathreads](learn-parathreads) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
+- [Phragmen](learn-phragmen) - Information on the Phragmen method.
+- [Polkadot Host](learn-polkadot-host) - General information on the Polkadot Host.
+- [Randomness](learn-randomness) - What Polkadot uses for randomness, as well as why and how it is used.
+- [Security](learn-security) - How the Polkadot network remains secure.
+- [SPREE](learn-spree) - Shared Protected Runtime Execution Environments.
+- [Staking](learn-staking) - How staking works in Polkadot.
+- [Treasury](learn-treasury) - How to make spending proposals on Polkadot and Kusama.
+- [WebAssembly](learn-wasm) - A description of WebAssembly and how it is used in Polkadot.
+
+## Resources
+
+- [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
+- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
+- [Links](learn-relevant-links) - Comprehensive list of external links.
+- [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
+- [FAQ](learn-faq) - Answers to some of the frequently asked questions about Polkadot.

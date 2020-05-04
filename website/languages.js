@@ -52,7 +52,7 @@ const languages = [
     tag: 'el',
   },
   {
-    enabled: true,
+    enabled: false,
     name: 'Español',
     tag: 'es-ES',
   },
@@ -97,7 +97,7 @@ const languages = [
     tag: 'af',
   },
   {
-    enabled: true,
+    enabled: false,
     name: '한국어',
     tag: 'ko',
   },

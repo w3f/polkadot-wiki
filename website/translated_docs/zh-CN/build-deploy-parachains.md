@@ -70,7 +70,7 @@ Hex: 0x0000000000000000000000000000000000000000000000000000000000000000000000000
 
 按下 `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`
 
-在id栏位输入平行链的`id`，在这个简单的adder情况，将会是`100`。在`code`栏位，按下页面按钮之后你可以直接上传你之前编译好的`adder.wasm`二进制档案。在`initial_head_data`，你需要复制和贴下你从校对人取的Hex数据。在`value`栏位，你需要输入最小要求的数值从而创建公投，在Alexander测试网络暂时是5 DOTs。
+在id栏位输入平行链的`id`，在这个简单的adder情况，将会是`100`。在`code`栏位，按下页面按钮之后你可以直接上传你之前编译好的`adder.wasm`二进制档案。在`initial_head_data`，你需要复制和贴下你从校对人取的Hex数据。在`value`栏位，你需要输入最小要求的数值从而创建公投，在Alexander测试网络暂时_是5 DOTs_。
 
 ![registering a parachain](assets/parachain/register.png)
 

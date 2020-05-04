@@ -1,32 +1,30 @@
 ---
 id: index
-title: Polkadot Wiki
-sidebar_label: Polkadot Wiki
+title: หน้าหลัก Wiki
+sidebar_label: หน้าหลัก Wiki
 ---
 
-![Polkadot Logo](assets/Polkadot_logotype_color.svg)
+Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build section](#want-to-build-on-polkadot). If you're interested in operating a node, head on over to the [maintain section](#want-to-run-a-node). And, if you want to learn more then peruse the [learn section](#want-to-learn-more) below.
 
-Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol.
+If you're looking for an introduction to Polkadot please [see here](learn-introduction).
 
-If you're looking for an introduction on Polkadot please [see here](learn-introduction).
+## อยากเรียนรู้เพิ่มเติม?
 
-## Want to learn more?
+- [สำรวจ Wiki](learn-introduction) - อ่านส่วนที่ให้ข้อมูลเกี่ยวกับ Wiki
+- [ลิงค์ที่เกี่ยวข้อง](learn-relevant-links) - **ลิงก์เนื้อหาที่ครอบคลุมเกี่ยวกับ Polkadot**
 
-- [Explore the Wiki](learn-index) - Read the informational section of the wiki.
-- [Relevant Links](learn-relevant-links) - **Comprehensive links about Polkadot.**
+## อยากจะพัฒนาบน Polkadot?
 
-## Want to build on Polkadot?
+- [พอร์ทัลสำหรับนักพัฒนา](build-index) - เครื่องมือ ไลบรารี และแหล่งข้อมูลที่จะช่วยคุณในการพัฒนา
+- [คู่มือการเริ่มต้น](build-build-with-polkadot) - **ภาพรวมเกี่ยวกับการเริ่มต้นพัฒนาบน Polkadot**
 
-- [Builders Portal](build-index) - Tools, libraries, and resources to help you build.
-- [Starters Guide](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
+## อยากจะรันโหนด?
 
-## Want to run a node?
+- [รันโหนด](maintain-index) - ข้อมูลเกี่ยวกับการรันโหนดบนเครือข่าย Polkadot
 
-- [Run a Node](maintain-index) - Information covering running a node on the Polkadot network.
+## ข้อมูลเพิ่มเติม
 
-## Resources
-
-- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
-- [News](news) - Links to the hottest news about Polkadot, aggregated every week.
-- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
-- [Contributing Guide](contributing) - Rules for contributing to the wiki.
+- [ชุมชน / ระบบนิเวศ](community) - รายชื่อห้องแชทและช่องทางสำหรับพูดคุยกับนักพัฒนาท่านอื่นเกี่ยวกับ Polkadot
+- [ข่าวสาร](news) - ลิ้งข่าวฮ็อตเกี่ยวกับ Polkadot อัพเดททุกสัปดาห์
+- [ตัวอย่าง Application](build-examples-index) - แอปพลิเคชันตัวอย่างที่สร้างขึ้นหรือกำลังพัฒนาบน Polkadot
+- [คู่มือสำหรับผู้สนับสนุน](contributing) - กฎสำหรับการมีส่วนร่วมในวิกิ

@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-kusama
 title: Run a Validator (Kusama)
-sidebar_label: Run a Validator (Kusama)
+sidebar_label: Validator Guide
 ---
 
 This guide will instruct you how to set up a validator node on the Kusama network.
@@ -20,8 +20,12 @@ that you can use by deploying yourself. As you progress in your journey as a val
 this repository as a _starting point_ for your own modifications and customizations.
 
 If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)
-on Riot.  The team and other validators are there to help answer questions and provide experience. If you have a more
+on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more
 significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
+
+### How Many KSM Do I Need?
+
+You can have a rough estimate on that by using the methods listed [here](learn-faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper
 setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is
@@ -78,10 +82,34 @@ command INSTEAD of the previous one:
 brew install cmake pkg-config openssl git llvm
 ```
 
+### Install & Configure Network Time Protocol (NTP) Client
+
+[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service.  You can check whether you have the NTP client by running: 
+
+_If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
+
+``` sh
+timedatectl
+```
+
+If NTP is installed and running, you should see `System clock synchronized: yes` (or a similar message). If you do not see it, you can install it by executing:
+
+```sh
+sudo apt-get install ntp
+```
+ntpd will be started automatically after install. You can query ntpd for status information to verify that everything is working:
+
+```sh
+sudo ntpq -p
+```
+
+
 ### Building and Installing the `polkadot` Binary
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot)
-repository on GitHub using the source code available in the **v0.6** branch.
+repository on GitHub using the source code available in the **v0.7** branch.
+
+You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com:paritytech/polkadot.git`.
@@ -89,7 +117,8 @@ repository on GitHub using the source code available in the **v0.6** branch.
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git checkout v0.6
+git tag | grep "$v\0\.7"
+git checkout v0.7.28
 ./scripts/init.sh
 cargo build --release
 ```
@@ -105,50 +134,24 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-#### New to the Network
+> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain,
+you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 
-If you do not have a validator that was running on Kusama CC1, you can start to synchronize the chain by executing the
-following command:
-
-```sh
-./target/release/polkadot
-```
-
-#### Previous Kusama CC1 Validator
-
-Before synchronizing the chain data, you can copy your previous keystore to the new chain id if you want to use your
-previous session keys. Otherwise, you are required to set your new session keys again.
-
-Start your Kusama node to create default datadir first.
+You can begin syncing your node by running the following command:
 
 ```sh
-./target/release/polkadot
+./target/release/polkadot --pruning=archive
 ```
 
-Then stop and copy your previous keystore to new chain id.
+if you do not want to start in validator mode right away.
 
-**Keystore default location for CC1:** `$HOME/.local/share/polkadot/chains/ksma/keystore`.
-
-```sh
-cp -r $HOME/.local/share/polkadot/chains/ksma/keystore $HOME/.local/share/polkadot/chains/ksmcc2/keystore
-```
-
-If your keystore is empty, it means that the keys were not created on your node in the CC1 chain. This is okay, but it
-means you will want to fix it by setting new session keys for your validators. The best way to do this would be to call the
-`author_rotateKeys` RPC call and make sure the call is directed to your validator node (not the default Polkadot JS connection or one of the boot nodes). Before submitting the `setKeys`
-transaction, verify that the keys are in the new CC2 keystore.
-
-Start your node.
-
-```sh
-./target/release/polkadot
-```
+**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
 
 If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the
 `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to
-the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC2) or the
+the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
 [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 > **Note:** If you do not already have KSM, this is as far as you will be able to go until the end of the soft
@@ -158,12 +161,9 @@ the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Ku
 
 ## Bond KSM
 
-For the soft launch period, since transfers are disabled, you will set your Controller and Stash account to be the
-same account. If you have two accounts with KSM, the recommended method is to still have the Controller and Stash
-different accounts. Once the network is operating with PoS, you will be able to re-configure your controller to have separate controller and stash accounts.
+It is highly recommended that you make your controller and stash accounts be two separate accounts. For this, you will create two accounts and make sure each of them have at least enough funds to pay the fees for making transactions. Keep most of your funds in the stash account since it is meant to be the custodian of your staking funds.
 
-Make sure not to bond all your KSM balance since the latest codebase in Kusama CC2 does not allow to use the bonded
-balance to pay transaction fees.
+Make sure not to bond all your KSM balance since you will be unable to pay transaction fees from your bonded balance.
 
 It is now time to set up our validator. We will do the following:
 
@@ -181,7 +181,7 @@ account contains _at least_ this much. You can, of course, stake more than this.
 KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all
 of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded
-amount requires the bonding duration period to be over (for Kusama, 28 days).
+amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
 [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
@@ -191,10 +191,16 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 (note: you may need to refresh the screen). The bonded amount on the right corresponds to the funds bonded by the Stash
 account.
 
-## Set the Session Key
+## Set Session Keys
 
-Once your node is fully synced, stop it using Control-C. At your terminal prompt, you will now start your node in
-validator mode.
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys
+> that you made the `setKeys` transaction then you can use one of the two available
+> RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)
+> to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)
+> to check the full session key public key string.
+
+Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running
+the node in validator mode with a flag allowing unsafe RPC calls, needed for some advanced operations.
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
@@ -204,25 +210,42 @@ You can give your validator any name that you like, but note that others will be
 in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended
 that you choose something likely to be unique. Note that the `--unsafe-rpc-expose` flag is needed in order to set the session key as shown below. 
 
-### Option 1: RPC
+### Generating the Session Keys
+
+You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your
+validator node with your Controller account on Polkadot.
+
+#### Option 1: PolkadotJS-APPS
 
 You can generate your [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the
-client via RPC. If you are doing this, make sure that you have your Polkadot explorer attached to your validator
-(configurable in the Settings tab). If you are connected to a default endpoint hosted by Parity of Web3 Foundation,
-you will need to connect to the endpoint for your validator. You can rotate session keys after connecting Polkadot JS
-to your local node by going to Toolbox and selecting RPC Calls then select the author > rotateKeys() options.
+client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your
+validator node. You can configure the apps dashboard to connect to the endpoint of your validator in the Settings tab.
+If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you will not be able to use this method
+since making RPC requests to this node would effect the local keystore hosted on a _public node_ and you want to make
+sure you are interacting with the keystore for _your node_.
+
+Once ensuring that you have connected to your node, the easiest way to set session keys for your node is by calling the
+`author_rotateKeys` RPC request to create new keys in your validator's keystore.
+Navigate to Toolbox tab and select RPC Calls then select the author > rotateKeys() option and remember to save the
+output that you get back for a later step.
 
 ![Explorer RPC call](assets/guides/how-to-validate/polkadot-explorer-rotatekeys-rpc.jpg)
 
-### Option 2: CLI
+#### Option 2: CLI
 
-If you are on a remote server, it may be easier to run this command on the same machine instead:
+If you are on a remote server, it is easier to run this command on the same machine (while the node is running with the
+default HTTP RPC port configured):
 
 ```sh
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-The output will have a hex-encoded "result" field. This is an encoding of your four session keys.
+The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this
+result for a later step.
+
+You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer needed.
+
+### Submitting the `setKeys` Transaction
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your
 validator with your Controller account.
@@ -237,7 +260,7 @@ Submit this extrinsic and you are now ready to start validating.
 
 ## Validate
 
-To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC1)
+To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#/Kusama)
 and find your node. Note that this will show all nodes on the Kusama network, which is why it is important to select a
 unique name!
 
@@ -250,28 +273,16 @@ If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 
 Click "Validate".
 
-If you go to the Staking tab, you should see a list of active validators currently running on the network, as well as
-any nodes that have signaled their intention to be validators but have not yet been selected as being part of the current
-validator set. At the top of the page, it shows how many validator slots are available and how many nodes are intended to
-be a validator.
+If you go to the "Staking" tab, you will see a list of active validators currently running on the network. At the top of the page, it shows how many validator slots are available as well as how many nodes have signaled their intention to be a validator.
+You can also go to the "Waiting" tab to double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
+![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
-Your node will be shown in the *next up* queue. During the [soft launch](#soft-launch) period, there will be no era changes, and
-your node will remain in the queue until the transition to the Proof-of-Stake validator selection.
-
-**After soft launch:** The validator set is refreshed every era. In the next era, if there is a slot available and your
-node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the
-_next up_ queue. If your validator is not selected to become part of the validator set, it will remain in the _next up_
+The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the
+_waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_
 queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era.
 However, it may be necessary to increase the number of KSMs staked or seek out nominators for your validator in order to
 join the validator set.
-
-## Soft Launch
-
-When Kusama launches, it will be a Proof-of-Authority network, with nodes run by the Web3 Foundation. After having a
-sufficient _next up_ queue (50-100 validators), the network will upgrade to NPoS and allow validators into the validator
-set based on their stake.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you
 are now running a Kusama validator! If you need help, reach out on the [Kusama forum](https://forum.kusama.network/) or
@@ -306,5 +317,5 @@ over the network.
 If you have Docker installed, you can use it to start your validator node without needing to build the binary. You can do this with a simple one line command:
 
 ```sh
-$ docker run parity/polkadot:v0.5.0 --validator --name "name on telemetry"
+$ docker run parity/polkadot:v0.7.28 --validator --name "name on telemetry"
 ```

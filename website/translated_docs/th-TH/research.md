@@ -1,7 +1,7 @@
 ---
 id: research
-title: Polkadot Research
-sidebar_label: Polkadot Research
+title: แหล่งรวมบทความวิจัย
+sidebar_label: แหล่งรวมบทความวิจัย
 ---
 
-[https://research.polkadot.network](https://research.polkadot.network)
+[ แหล่งรวมบทความวิจัย ](https://research.polkadot.network) ของ Polkadot ดูแลตรงโดยนักวิจัยจาก W3F รวบรวมเอกสาร เนื้อหา และบทความที่เป็นแหล่งที่มาข้อมูลสำหรับ Wiki

@@ -51,7 +51,7 @@ class Index extends React.Component {
                   Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.
                 </translate>
               </p>
-              <a href={docUrl('learn-index')}>
+              <a href={docUrl('learn-introduction')}>
                 <button className="mainpage-build-btn">
                   <translate>Learn More</translate>                
                 </button>

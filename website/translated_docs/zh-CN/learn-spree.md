@@ -4,36 +4,54 @@ title: SPREE
 sidebar_label: SPREE
 ---
 
-SPREE (Shared Protected Runtime Execution Enclaves), also known as "trust wormholes," allows parachains to trust one another, regardless of how they upgrade and evolve.
+Shared Protected Runtime Execution Enclaves (SPREE) 有时被称为"信任虫洞"，是逻辑的碎片与 Substrate 中的 Runtime 模块类似但位于 Polkadot 中继链上，并且可以通过被平行链选择。
 
-## How it works
+SPREE 简要地描述了以下属性和功能：
 
-The below description is taken from /u/gavofyork's post on the Smart Protocols proposal (linked below):
+- 平行链可以选择加入特殊的 Runtime 逻辑（例如智能合约）。
+- These fragments have their own storage and own [XCMP](learn-crosschain) endpoint.
+- 跨链的所有实例具有相同的逻辑。
+- 它与平行链一起执行。
+- 受保护：存储不能通过平行链逻辑更改，消息不能被平行链伪造。
 
-> A parachain would be able to upload a "runtime appendix" to the relay chain. It would live on the relay chain and be a WebAssembly blob, not dissimilar to a parachain's normal validation function. However, it would only ever be executed by parachain collators.
+## 起源
 
-> Storage/state and ICMP would be independent of the parachain itself. However, the parachain would be able to pass it messages synchronously for it to interpret on its own terms.
+On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on [r/dot](https://www.reddit.com/r/dot/) called "SmartProtocols Idea" and laid out a proposal for [Smart Protocols](https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/). The core insight of the post was that XCMP had a complication in that it was difficult to verify and prove code was executed on a parachain without trust. A solution was to install the SmartProtocols in the Relaychain that would be isolated blobs of code with their own storage per instance that could only be changed through an interface with each parachain. SmartProtocols are the precursor to SPREE.
 
-> It would retain its own storage root (which would either be referenced by the parachain's main state root or, more likely, be stored in another appendix-state trie item). Interaction from the parachain would be possible through an exposed function from the Wasm (`execute(bytes)`). There would also be another exposed function for managing ICMP input messages (`apply_message(bytes)`). And then it would also need a final function to call itself when it needs to send a message on ICMP (`post_message`). ICMP message origins, as well as honest execution of the blob would be enforced as part of the relay chain's requirements placed on the parachain. For this, it would have its own ICMP endpoint (probably a special subordinate endpoint from the appendix itself, so the endpoint set would be {RelayChain, Parachain\[0..PARACHAINS], Appendix[0..APPENDICES\]\[0..PARACHAINS\]}.
+## 什么是 SPREE 模块？
 
-> This appendix would be opt-in for each parachain: parachains would be able to "tell" the runtime that they're happy to use this appendix.
+SPREE模块是逻辑片段（具体而言，它们是 WebAssembly 代码的 blob），通过治理机制或平行链上载到波卡。一旦 blob 上载到波卡，所有其他平行链可以决定选择加入逻辑。SPREE模块将保留自己的存储与平行链分隔，但会能够通过与平行链的接口调用。平行链将同步向 SPREE 模块发送消息。
 
-> I'm not sure about the name though :) - there's not really anything "smart" about them and they're not really "protocols". Really they're a Shared Protected Runtime Appendix is more like it...
+SPREE modules are important to the overall XCMP architecture because they give guarentee to the code that will be executed on destination parachains. While XCMP guarantees the delivery of a message, it does not guarantee what code will be executed, i.e. how the receiving parachain will interpret the message. While XCMP accomplishes trustless message passing, SPREE is the trustless interpenetration of the message and a key part to the usefulness of XCMP.
 
-Later on the description was simplified to the below in a presentation from Tokyo DOT Day:
+SPREE modules are like recipes in cookbooks. For example, if we give an order to a cook to make a soufflé, and we’re decently confident in the ability of the cook, we have a vague idea of what will be made but no actually surety how it will be made. However, let’s say that a cook has the “Soufflé Maker’s Manual” on their bookshelf and has committed themselves to only make souffles from this book. Now we can also consult the same book that the cook has, and we have a precise understanding of what will happen when we tell the cook to make a soufflé. In this example, “make a soufflé” was the message in XCMP and the cookbook was the SPREE module.
 
-- Parachains can opt-in to special runtime logic fragments (like smart contracts)
-- Own storage, own ICMP endpoint
-- All instances across parachains have identical logic
-- Executes alongside parachain
-- Protected: storage can not be altered by parachain logic; messages can not be faked from them by parachains
+具体来说 SPREE 模块对于波卡的各种功能非常有用。其中一个 SPREE 模块用例是适用于去中心化交易所，作为提供功能给任何平行链，开发者无需任何额外的工夫。可以想象有 SPREE 模块，该模块会公开了各种资产余额递增和递减唯一标识的接口。
 
-## Why?
+## 为什么?
 
-Sending messages across parachains in ICMP only ensures that the message will be delivered but does not specify the code that will be executed, or how the message will be interpreted by the receiving parachain. There would be ways around this such as requesting a verifiable receipt of the execution from the receiving parachain, but in the naked case the other parachain would have to be trusted. Having shared code which exist in appendices that the parachain can opt-in to supporting resolves the need for trust and makes the execution of the appendices completely trustless.
+Sending messages across parachains in XCMP only ensures that the message will be delivered but does not specify the code that will be executed, or how the message will be interpreted by the receiving parachain. There would be ways around this such as requesting a verifiable receipt of the execution from the receiving parachain, but in the naked case the other parachain would have to be trusted. Having shared code which exists in appendices that the parachain can opt-in to resolves the need for trust and makes the execution of the appendices completely trustless.
 
-SPREE would be helpful to ensure that the same logic is shared between parachains in the `appendices`. An especially relevant use case would resolve around the use of token transfers across parachains in which it is important that the sending and receiving parachains agree about the total supply of tokens and basic functionalities.
+SPREE 将有助于确保在 SPREE 模块平行链之间共享相同的逻辑。一个特别相关的用例将围绕跨平行链代币转移，在发送和接收平行链就如何更改代币的总供应量和基本接口达成一致非常重要。
 
-## Resources
+## 例子
 
-- [Smart protocols](https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/) - Reddit post by u/tawaran describing "smart protocols" an idea that inspired SPREE.
+![spree example](assets/SPREE/spree_module.png)
+
+上图是简化 Polkadot 的系统。
+
+In this diagram we see that the Wasm code for SPREE module "X" has been uploaded to the Polkadot relay chain. The two cylinders "A" and "B" represent two distinct parachains that have both opted-in to this SPREE module creating two distinct instances of it with their own XCMP endpoints "A.X" and "B.X".
+
+在示例中，我们假设此 SPREE 模块 "X" 包含用于递增或递减该模块特定资产的余额。
+
+By initiating a transaction at A.X to decrease a particular balance by 1, a message over XCMP can be trustlessly sent to B.X to increase a balance by 1.
+
+表示为绿色三角形的收集人负责将消息从平行链 A 传递到平行链 B，以及为 A.X 和 B.X 的每个特定实例为其各自的平行链维护存储。 它们向中继链验证人提供有效状态转换的证明，以蓝色菱形表示。
+
+Validators can validate the correct state transitions of SPREE modules A.X and B.X by being provided with the previous state root of the SPREE module instances, the data of the XCMP message between the instances, and the next state root of the instance. They do this validation be checking it against the `validate` function as provided by the SPREE module API. Collators are expected to be able to provide this information in order to progress their parachains.
+
+## Metaphor
+
+SPREE modules are like recipes in cookbooks. Let’s consider an example for comparison. We are at a restaurant and we give an order to a cook to make a soufflé. We're sufficiently confident in the cook’s ability and we have a vague idea of what will be made, but no actual surety how it will be made. If we want to be sure on the exact execution of the making of the soufflé, then we would need to inspect the cook’s kitchen before hand and verify ourselves how the cook makes the soufflé. This is comparable to sending XCMP messages without SPREE, as the sending party is responsible for verifying themselves the receiving chain’s code.
+
+However, let's say that a cook has the Soufflé Maker's Manual; on their bookshelf and has committed themselves to only making soufflés from this book. One can now examine the book and have a precise understanding of what will happen when we tell the cook to make a soufflé. When we place an order to make a soufflé as is written on page 10 of the manual, we then know exactly what will be executed in the cook’s kitchen and the finished product that will come back to the table. Additionally, any kitchen we go to we can ask if the cook owns this book and if so we can order the standard recipe and be sure of the execution in the cook’s kitchen. Like the recipe in the cookbook, we only need to verify a SPREE module once in order to be sure of its execution across all parachains. If we know a parachain uses a specific SPREE module, it’s not necessary to know any other details on how the parachain is implemented.

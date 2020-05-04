@@ -1,39 +1,50 @@
 ---
 id: build-index
-title: Builders Portal
-sidebar_label: Builders Portal
+title: 开发者专页
+sidebar_label: 开发者专页
 ---
 
-_🏗️ Polkadot尚未完成，文件将有所更改。_
+欢迎访问Polkadot维基网站的构建者部份。
 
-欢迎访问Polkadot维基网站的“构建者”章节。
+Here you will be able to find the most up-to-date information on the status of the development tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about them so if you are working on something that should be included please reach out to us on [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
-在这里，您可以了解@(Polkadot)生态系统中开发工具的最新状态。我们一直致力于学习新的工具和框架，并将它们添加进网站内容中。如您有认为应包含在内的信息，请在[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)上联系我们。
-
-我们将本维基网站的“构建者”章节分为三部分：第一部分为技术指南，帮助您快速了解Polkadot的开发进度。第二部分为最新的开发者工具目录。第三部分中的资源将包含更深层次的、其它地方找不到的技术信息。
+This section of the wiki is divided into the following parts:
 
 ## 主页
 
-- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
-- [Development Roadmap](build-dev-roadmap)
-- [Parachain Development Kits](build-pdk) - Learn about parachain development kits and create your own parachain.
-- [Smart Contracts](build-smart-contracts) - Learn all about smart contracts on Polkadot and Substrate and how to get started today.
+- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain, parathread, or smart contract for your project and how to get started.
+- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most important tools.
+- [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and parathreads.
+- [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can be deployed to a live chain.
 
-## 开发指南
+## Integration Guide
+
+This section is for service providers like wallets or node operators who want to learn how to integrate Polkadot into their systems.
+
+- [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the Polkadot protocol, e.g. address formats.
+- [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the most relevant options/flags for infrastructure providers.
+- [Node Interaction](build-node-interaction) - Learn how to interact with your node via RPC.
+- [Transaction Construction and Signing](build-transaction-construction) - Learn the transaction format for Polkadot and how to construct and sign transactions offline.
+
+## Tools
 
 - [Tools](build-tools-index) - Maintained list of tools.
-- [Subkey](build-tools-subkey) - Commandline utility for generating Polkadot/Substrate keys.
+- [Subkey](https://www.substrate.io/kb/integrate/subkey) - Command line utility for generating and inspecting key pairs.
 
-## 工具
+## Resources
 
-- [交易所整合](build-exchange-integration)
-- [Extrinsics格式](build-extrinsic-format)
-- [网络](build-networks)
-- [范例](build-examples-index)
-- [Rust设计指南](build-rust-style-guide)
+- [Examples](build-examples-index) - Example projects sourced from the community -- see what others are building.
 
-## 资源
+### Grants
 
-- [运行骇客松的资源](build-hackathon)
+- [Grants](grants) - A list of all Polkadot-related projects given grants by the Web3 Foundation.
 
-_敬请期待。_
+### PSPs
+
+Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
+
+- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Read, create, or discuss standards and proposals.
+
+### Hackathon
+
+- [Resources For Running a Hackathon](build-hackathon)

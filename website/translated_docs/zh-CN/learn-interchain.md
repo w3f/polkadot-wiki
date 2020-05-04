@@ -1,7 +1,7 @@
 ---
 id: learn-interchain
-title: Interchain Message Passing (ICMP)
-sidebar_label: Interchain Message Passing (ICMP)
+title: Interchain Message Passing (XCMP)
+sidebar_label: Interchain Message Passing (XCMP)
 ---
 
 跨链交易是基于梅克尔树(Merkle tree)利用简单队列机制方案解决确保正确性。这将会是属于在中继链上验证人的工作，把在平行链上出口队列中的交易发送到刻目的地(平行链)的入口队列中。
@@ -10,7 +10,7 @@ sidebar_label: Interchain Message Passing (ICMP)
 
 ## 概述
 
-- 跨链信息不会发送到中继链
+- 跨链信息*不会*发送到中继链
 - 跨链信息将会限制于字节(bytes)最大值
 - 平行链可以拒绝接收从其它平行链发出的信息，在这种情况下，发送方会意识到有障碍
 - 校对人负责把平行链之间的信息传递
@@ -39,4 +39,4 @@ Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行
 
 ## 资源
 
-- [ICMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP/) - Full technical description on the Web3 Foundation research wiki.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/ICMP.html) - Full technical description of interchain communication on the Web3 Foundation research wiki.

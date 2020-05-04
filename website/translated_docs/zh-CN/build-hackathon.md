@@ -1,61 +1,61 @@
 ---
 id: build-hackathon
-title: Hackathon
-sidebar_label: Hackathon
+title: 黑客马拉松
+sidebar_label: 黑客马拉松
 ---
 
-As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
+作为我们在Web3基金会中的目标之一，我们正在推动 [Web3技术栈](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/)，我们想支持任何个人或团队组织黑客活动，让更多的开发者了解你的城市的波尔卡多特/Substal。
 
-We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
+我们不仅为您提供技术资源，而且还可以安排我们团队的人来做具体的技术工作坊和讲解介绍我们的技术，从而帮助参与者可以更快地开启hack开发工作。
 
-## Ideas
+## 一些想法
 
 - NFT
 - Bonded Tokens
-- New governance modules with different styles of voting & democracy
-- Upgrade the TCR module
-- IPFS integration
-- Decentralized identity solutions
-- Oracle module
-- Implement Generalized State Channel/Plasma Chain
-- Decentralized Exchange
-- Tools for monitoring validator performance
-- dApps across different parachains
+- New governance pallets with different styles of voting & democracy
+- Upgrade the TCR pallet
+- 整合 IPFS
+- 分布式身份认证方案
+- Oracle pallet
+- 实现通用状态通道 / Plasma 链
+- 去中心化交易所
+- 验证人监视工具
+- 跨不同平行链的 dApp
 
-## Why you should host a hackathon?
+## 为什么要举办黑客马拉松？
 
-- Love to deliver the vision of Web3
-- Learn the bleeding-edge technology
-- Believe the Web3 technology stack is suitable for developers to build their applications
-- Like to make connections
+- 热爱实现 Web3 的愿景
+- 学习前沿技术
+- 相信 Web3 技术栈适合开发人员构建他们的应用程序
+- 喜欢建立联系
 
-## How do hackathons differ from workshops?
-Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
+## 黑客马拉松与研讨会有何不同？
+黑客马拉松是希望参与者在短时间内（几小时到一天）实现出原型并展示他们的想法。研讨会的目的是使开发人员熟悉该工具，并了解更多当前有哪些资源可用以及如何使用它们。
 
-## How can you run a hackathon in your city?
-1. Submit your application (Coming soon.)
-2. Review
-3. Decision
-4. Follow up
+## 如何在您的城市里举办黑客马拉松？
+1. 提交您的申请（即将到来）
+2. 评论
+3. 决定
+4. 跟进
 
-## How we can help you
+## 我们如何为您提供协助
 
-- Provide technical resources/materials.
-- Find a venue.
-- Ensure the hackathon run smoothly.
+- 提供技术资源 / 材料。
+- 找场地。
+- 确保黑客马拉松顺利举行
 
-## Upcoming hackathon events
+## 即将的黑客马拉松活动
 
-Coming soon.
+即将到来
 
-## Template / Starter packs
+## 模板 / 入门包
 
-Coming soon.
+即将到来
 
-## Resources
+## 资源
 
-- [Substrate Developer Hub](https://docs.substrate.dev)
+- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate)
 
-## Support / Contact
+## 支持 / 联系
 
-If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
+如果您对举办黑客马拉松有任何疑问，请随时通过[邮件](mailto:events@web3.foundation)或通过[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)与我们联系。
