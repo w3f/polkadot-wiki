@@ -36,3 +36,10 @@ sidebar_label: ผู้ตรวจสอบ (Validator)
 - [PANIC for Polkadot](https://github.com/SimplyVC/panic_polkadot) - A monitoring and alerting solution for Polkadot / Kusama node
 - [Polkadot Telemetry Service](https://telemetry.polkadot.io/#list/Kusama%20CC3) - Network information, including what nodes are running on a given chain, what software versions they are running, and sync status.
 - [Other Useful Links](https://forum.web3.foundation/t/useful-links-for-validators/20)
+
+## Validator Stats
+
+- [HashQuark Staking Strategy](https://labs.hashquark.io/#/polka/strategy) - The HashQuark staking strategy dashboard helps you choose the optimal set-up to maximize rewards.
+- [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator statistics.
+- [Polkanalytics](https://polkanalytics.com/#/dashboard) - A validator dashboard that displays the daily earnings of all nominators.
+- [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the current validators - not as tailored for validators as the other sites.

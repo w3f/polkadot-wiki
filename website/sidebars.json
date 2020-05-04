@@ -25,6 +25,16 @@
       },
       {
         "type": "subcategory",
+        "label": "Integration Guide",
+        "ids": [
+          "build-protocol-info",
+          "build-node-management",
+          "build-node-interaction",
+          "build-transaction-construction"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Tools",
         "ids": [
           "build-tools-index"
@@ -34,7 +44,6 @@
         "type": "subcategory",
         "label": "Resources",
         "ids": [
-          "build-wallet-integration",
           "build-examples-index",
           "build-hackathon"
         ]
@@ -65,12 +74,13 @@
         "label": "Advanced",
         "ids": [
           "learn-staking",
+          "learn-availability",  
           "learn-randomness",
           "learn-crosschain",
           "learn-spree",
           "learn-wasm",
           "learn-phragmen",
-          "learn-lazy-payouts"
+          "learn-simple-payouts"
         ]
       },
       {
@@ -125,7 +135,8 @@
         "ids": [
           "maintain-sync",
           "maintain-networks",
-          "maintain-wss"
+          "maintain-wss",
+          "maintain-errors"
         ]
       },
       {
@@ -146,6 +157,8 @@
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
           "maintain-guides-secure-validator",
+          "maintain-guides-how-to-use-polkadot-secure-validator",
+          "maintain-guides-how-to-setup-sentry-node",
           "maintain-guides-how-to-upgrade"
         ]
       },
@@ -168,7 +181,8 @@
         "label": "Get Started",
         "ids": [
           "kusama-faucet",
-          "kusama-claims"
+          "kusama-claims",
+          "kusama-endpoints"
         ]
       },
       {
@@ -179,13 +193,16 @@
           "mirror-maintain-guides-how-to-nominate-kusama",
           "mirror-learn-governance",
           "mirror-learn-identity",
-          "mirror-build-build-with-polkadot"
+          "mirror-learn-treasury",
+          "mirror-build-build-with-polkadot",
+          "maintain-guides-society-kusama"
         ]
       },
       {
         "type": "subcategory",
         "label": "What to Break",
         "ids": [
+          "mirror-maintain-errors",
           "kusama-bug-bounty",
           "kusama-adverserial-cheatsheet"
         ]

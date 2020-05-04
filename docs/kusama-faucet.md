@@ -60,7 +60,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 Alternatively, you can build `subkey` from the source code.
 
-1. Follow the build instructions for [Substrate](https://github.com/paritytech/substrate#6-building).
+1. Follow the build instructions for [Substrate](https://substrate.dev/docs/en/overview/getting-started/).
 2. When building, build `subkey` by typing `cargo build -p subkey`.
 3. The executable is `./target/debug/subkey`.
 

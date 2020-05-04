@@ -51,7 +51,7 @@ cargo install --git https://github.com/alexcrichton/wasm-gc
 
 Alternatively, you can build `subkey` from the source code.
 
-1. Follow the build instructions for [Substrate](https://github.com/paritytech/substrate#6-building).
+1. Follow the build instructions for [Substrate](https://www.substrate.io/kb/getting-started).
 2. When building, only build `subkey` by typing `cargo build -p subkey`.
 3. The executable is `./target/debug/subkey`.
 
@@ -73,7 +73,7 @@ The `Address (SS58)` field is what you should use to claim your KSM tokens. Neve
 
 NOTE: Previous versions of `subkey` only generated Substrate addresses. If you do not want to generate a new seed, you can convert the Substrate address to a Kusama address by following [this section](#kusama-from-substrate-address).
 
-See the [`subkey` documentation](https://substrate.dev/docs/en/ecosystem/subkey) or enter `subkey --help` for more usage examples.
+See the [`subkey` documentation](https://www.substrate.io/kb/integrate/subkey) or enter `subkey --help` for more usage examples.
 
 ### Using Polkadot UI
 

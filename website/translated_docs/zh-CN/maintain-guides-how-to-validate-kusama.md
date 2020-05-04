@@ -88,7 +88,7 @@ sudo ntpq -p
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.7** branch.
 
-You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.20**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.20` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -96,7 +96,7 @@ You should generally use the latest **0.7.x** tag.  At the time of writing, this
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.7"
-git checkout v0.7.20
+git checkout v0.7.28
 ./scripts/init.sh
 cargo build --release
 ```
@@ -125,7 +125,7 @@ if you do not want to start in validator mode right away.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
 
-If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama%20CC3) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 > **Note:** If you do not already have KSM, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of KSM to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with KSM, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
 
@@ -155,7 +155,7 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 
 ## 设置 Session 密钥
 
-> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction for then simply run through the process of generating and setting new ones using the `rotateKeys` method below. Better safe than sorry!
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction then you can use one of the two available RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) to check the full session key public key string.
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with the pruning option set to `archive`.
 
@@ -199,7 +199,7 @@ Submit this extrinsic and you are now ready to start validating.
 
 ## 验证
 
-To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) and find your node. Note that this will show all nodes on the Kusama network, which is why it is important to select a unique name!
+To verify that your node is live and synchronized, head to [Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all nodes on the Kusama network, which is why it is important to select a unique name!
 
 If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 
@@ -245,5 +245,5 @@ Make sure to enable `30333` libp2p port. Eventually, it will take a little bit o
 If you have Docker installed, you can use it to start your validator node without needing to build the binary. You can do this with a simple one line command:
 
 ```sh
-$ docker run parity/polkadot:v0.7.20 --validator --name "name on telemetry"
+$ docker run parity/polkadot:v0.7.28 --validator --name "name on telemetry"
 ```

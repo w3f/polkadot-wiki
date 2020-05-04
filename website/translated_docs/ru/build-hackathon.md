@@ -54,7 +54,7 @@ Coming soon.
 
 ## Resources
 
-- [Substrate Developer Hub](https://docs.substrate.dev)
+- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate)
 
 ## Support / Contact
 

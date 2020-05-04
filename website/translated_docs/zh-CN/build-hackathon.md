@@ -54,7 +54,7 @@ sidebar_label: 黑客马拉松
 
 ## 资源
 
-- [Substrate 开发者中心](https://docs.substrate.dev)
+- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate)
 
 ## 支持 / 联系
 

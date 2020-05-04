@@ -1,47 +1,47 @@
 ---
 id: learn-bridges
-title: Bridges
-sidebar_label: Bridges
+title: Jembatan
+sidebar_label: Jembatan
 ---
 
-One of the central ideas in blockchain intercommunication is the role of bridges. Some of the exact details of how bridging will work in Polkadot have yet to be decided; please consider this page a work in progress. It will be updated as more details are determined.
+Salah satu ide sentral dalam komunikasi antar blockchain adalah peran jembatan. Beberapa detail pasti tentang bagaimana menjembatani akan berfungsi di Polkadot belum diputuskan; tolong pertimbangkan halaman ini sedang dalam proses. Ini akan diperbarui karena rincian lebih lanjut akan ditentukan.
 
-Currently, there are three different types of bridging in Polkadot:
+Saat ini, ada tiga jenis jembatan di Polkadot:
 
-* _Bridge contracts_ - Smart contracts deployed as bridges between Polkadot and external chains.
-* _Cross-parachain communication_ - No contracts needed.
-* _In-built bridging modules_ - Bridging to Polkadot from an external chain via a purpose-built module.
+* _ Kontrak jembatan _ - Kontrak pintar yang digunakan sebagai jembatan antara Polkadot dan rantai eksternal.
+* _ Komunikasi lintas-parachain _ - Tidak perlu kontrak.
+* _ Modul bridging internal _ - Menjembatani ke Polkadot dari rantai eksternal melalui modul yang dibuat khusus.
 
-## Bridge Contracts
+## Kontrak jembatan
 
-Those who are already familiar with Ethereum may know of the [Parity Bridge](https://github.com/paritytech/parity-bridge) and the efforts being made to connect PoA sidechains to the Ethereum mainnet. The bridge is a combination of two smart contracts, one deployed on each chain, that allow for cross-chain transfers of value. As an example of usage, the initial Parity Bridge proof of concept connects two Ethereum chains, `main` and `side`. Ether deposited into the contract on `main` generate a balance denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract on `side` can free up Ether on `main`.
+Mereka yang sudah terbiasa dengan Ethereum mungkin tahu tentang [ Jembatan Paritas ](https://github.com/paritytech/parity-bridge) dan upaya yang dilakukan untuk menghubungkan sidechains PoA ke mainnet Ethereum. Jembatan adalah kombinasi dari dua kontrak pintar, satu dikerahkan di setiap rantai, yang memungkinkan untuk transfer nilai lintas-rantai. Sebagai contoh penggunaan, bukti awal konsep Parity Bridge menghubungkan dua rantai Ethereum, ` main ` dan ` side `. Eter yang dimasukkan ke dalam kontrak pada ` utama ` menghasilkan saldo dalam denominasi ERC-20 pada ` sisi `. Sebaliknya, token ERC-20 yang disetor kembali ke dalam kontrak di ` sisi ` dapat membebaskan Ether di ` main `.
 
-In the case of Polkadot, it should be possible to have a bridge contract deployed on, say, an EVM-based standalone chain and a contract deployed on a smart contract capable parachain. This would not necessarily be the most efficient method of bridging, but given the generality of a Turing-complete parachain it would be possible to bridge Polkadot and any other smart contract capable blockchain.
+Dalam kasus Polkadot, harus dimungkinkan untuk memiliki kontrak jembatan yang digunakan, katakanlah, rantai mandiri berbasis EVM dan kontrak yang digunakan pada parachain yang mampu melakukan kontrak pintar. Ini tidak harus menjadi metode yang paling efisien untuk menjembatani, tetapi mengingat sifat umum dari parachain lengkap Turing akan mungkin untuk menjembatani Polkadot dan blockchain lain yang mampu melakukan kontrak pintar.
 
-## Cross-Parachain Communication
-As mentioned on the [parachains](learn-parachains) page, parachains will be able to send messages (including transactions) to each other without the need for smart contracts to perform the bridging functionality. Cross-parachain messaging will be native to Polkadot.
+## Komunikasi Lintas Parachain
+Seperti yang disebutkan pada halaman [ parachains ](learn-parachains), parachains akan dapat saling mengirim pesan (termasuk transaksi) tanpa perlu kontrak pintar untuk melakukan fungsi bridging. Perpesanan lintas-parachain akan menjadi asli Polkadot.
 
-## In-built Bridging Modules
+## Modul Bridging yang dibangun
 
-Receiving messages on a parachain from a non-parachain blockchain will likely be done natively within a module of the client software. This would negate the need for bridging contracts and allow non-parachains to act as "virtual parachains". Collators for the specific blockchain can then collate transactions or other state transitions, and submit them to the relay chain as if the blockchain were a parachain.
+Menerima pesan pada parachain dari blockchain non-parachain kemungkinan akan dilakukan secara asli dalam modul perangkat lunak klien. Ini akan meniadakan kebutuhan untuk menjembatani kontrak dan memungkinkan non-parachain untuk bertindak sebagai "parachain virtual". Kolektor untuk blockchain tertentu kemudian dapat menyusun transaksi atau transisi negara lain, dan mengirimkannya ke rantai relay seolah-olah blockchain adalah parachain.
 
-The bridging modules will likely be written with particular parachains in mind (e.g. Bitcoin, Ethereum), which means that any blockchain that's based on either of those should be able to be bridged directly to Polkadot without the need of going through a bridge contract on a parachain. This should allow for faster execution for those chains that are compatible.
+Modul bridging kemungkinan akan ditulis dengan parachains tertentu dalam pikiran (misalnya Bitcoin, Ethereum), yang berarti bahwa setiap blockchain yang didasarkan pada salah satu dari mereka harus dapat dijembatani langsung ke Polkadot tanpa perlu melalui kontrak jembatan pada sebuah parachain. Ini harus memungkinkan eksekusi yang lebih cepat untuk rantai yang kompatibel.
 
-For the standalone chains that don't have an in-built bridging module on Polkadot, it will be necessary to deploy bridge contracts (see above).
+Untuk rantai mandiri yang tidak memiliki modul bridging built-in pada Polkadot, perlu untuk menggunakan kontrak jembatan (lihat di atas).
 
-## Resources
+## Sumber daya
 
-### Smart Contract Bridges
+### Jembatan Kontrak Pintar
 
-- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to Edgeware chain (a Substrate-based chain).
-- [Parity Bridge](https://github.com/paritytech/parity-bridge)
-- [POA Network](https://poa.network/)
-- [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA Network's implementation of Parity's bridge chain solution.
+- [ Jembatan Edgeth ](https://github.com/hicommonwealth/edgeth_bridge/) - jembatan dari rantai Ethereum ke Edgeware (rantai berbasis substrat).
+- [Jembatan Parity](https://github.com/paritytech/parity-bridge)
+- [Jaringan POA](https://poa.network/)
+- [ Studi kasus ](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) implementasi POA Network terhadap solusi solusi jembatan jembatan Parity.
 
-### Runtime Module Bridges
+### Runtime Jembatan Modul
 
-- [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX have implemented a BTC to Substrate bridge for their parachain.
+- [ Jembatan ChainX BTC ](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX telah menerapkan BTC ke Substrate bridge untuk parachain mereka.
 
-### Design
+### Desain
 
-- [XClaim](https://eprint.iacr.org/2018/643.pdf) - XClaim design for bridging Proof-of-Work chains in a trustless way.
+- [ XClaim ](https://eprint.iacr.org/2018/643.pdf) - desain XClaim untuk menjembatani rantai Bukti Kerja dengan cara yang tidak dapat dipercaya.

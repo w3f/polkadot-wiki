@@ -24,7 +24,7 @@ that you can get started creating your application in anticipation of the Polkad
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://substrate.dev/substrate-contracts-workshop/))
+- ink!: **In development** ([Documentation](https://www.substrate.io/kb/smart-contracts))
 
 ## What you need to know
 
@@ -140,7 +140,7 @@ Substrate is the underlying framework on which Polkadot itself is built. It is a
 that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins
 from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
-The best way to get started with Substrate is to explore the [Substrate Development Hub](https://substrate.dev), an online
+The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate), an online
 resource built and maintained by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you have a solid
