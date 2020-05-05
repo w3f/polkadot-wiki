@@ -12,7 +12,7 @@ sidebar_label: Cumulus
 
 ### Cumulus Consensus
 
-*cumulus-consensus* is a consensus engine for Substrate which follows a Polkadot relay chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
+_cumulus-consensus_ is a consensus engine for Substrate which follows a Polkadot relay chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
 
 ### Cumulus Runtime
 
@@ -20,7 +20,7 @@ A wrapper around Substrate runtimes to allow them to be validated by Polkadot va
 
 Integrating it into your substrate runtime will be as easy as importing the crate and adding this one line macro to your code.
 
-``` rust
+```rust
 runtime::register_validate_block!(Block, BlockExecutor);
 ```
 
