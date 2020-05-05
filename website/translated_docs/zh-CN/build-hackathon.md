@@ -4,9 +4,9 @@ title: 黑客马拉松
 sidebar_label: 黑客马拉松
 ---
 
-作为我们在Web3基金会中的目标之一，我们正在推动 [Web3技术栈](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/)，我们想支持任何个人或团队组织黑客活动，让更多的开发者了解你的城市的波尔卡多特/Substal。
+As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
 
-我们不仅为您提供技术资源，而且还可以安排我们团队的人来做具体的技术工作坊和讲解介绍我们的技术，从而帮助参与者可以更快地开启hack开发工作。
+We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
 
 ## 一些想法
 
@@ -30,9 +30,11 @@ sidebar_label: 黑客马拉松
 - 喜欢建立联系
 
 ## 黑客马拉松与研讨会有何不同？
-黑客马拉松是希望参与者在短时间内（几小时到一天）实现出原型并展示他们的想法。研讨会的目的是使开发人员熟悉该工具，并了解更多当前有哪些资源可用以及如何使用它们。
+
+Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
 
 ## 如何在您的城市里举办黑客马拉松？
+
 1. 提交您的申请（即将到来）
 2. 评论
 3. 决定
@@ -58,4 +60,4 @@ sidebar_label: 黑客马拉松
 
 ## 支持 / 联系
 
-如果您对举办黑客马拉松有任何疑问，请随时通过[邮件](mailto:events@web3.foundation)或通过[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)与我们联系。
+If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
