@@ -4,4 +4,4 @@ title: แหล่งรวมบทความวิจัย
 sidebar_label: แหล่งรวมบทความวิจัย
 ---
 
-[ แหล่งรวมบทความวิจัย ](https://research.polkadot.network) ของ Polkadot ดูแลตรงโดยนักวิจัยจาก W3F รวบรวมเอกสาร เนื้อหา และบทความที่เป็นแหล่งที่มาข้อมูลสำหรับ Wiki
+The Polkadot [research pages](https://research.polkadot.network) are edited directly by the researchers at W3F and contains papers, articles and docuements that are sources for the information on the wiki.
