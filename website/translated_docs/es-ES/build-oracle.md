@@ -6,7 +6,7 @@ sidebar_label: Oracles
 
 In the blockchain context, an _oracle_ is a way to bring real-world data onto the blockchain so that it can be used by a decentralized application.
 
-Oracles serve many purposes for application builders.  For example,
+Oracles serve many purposes for application builders. For example,
 
 - Most stablecoin designs use an oracle to bring in data of the exchange rate of assets, in order to peg their value to a real world currency.
 - Synthetic assets use oracles as price feeds in order to determine if the underlying cryptocurrency sufficiently collateralizes the debt position.
