@@ -16,7 +16,7 @@ If you're looking for an introduction to Polkadot please [see here](learn-introd
 ## อยากจะพัฒนาบน Polkadot?
 
 - [พอร์ทัลสำหรับนักพัฒนา](build-index) - เครื่องมือ ไลบรารี และแหล่งข้อมูลที่จะช่วยคุณในการพัฒนา
-- [คู่มือการเริ่มต้น](build-build-with-polkadot) - **ภาพรวมเกี่ยวกับการเริ่มต้นพัฒนาบน Polkadot**
+- [Starters Guide](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
 
 ## อยากจะรันโหนด?
 
@@ -24,7 +24,7 @@ If you're looking for an introduction to Polkadot please [see here](learn-introd
 
 ## ข้อมูลเพิ่มเติม
 
-- [ชุมชน / ระบบนิเวศ](community) - รายชื่อห้องแชทและช่องทางสำหรับพูดคุยกับนักพัฒนาท่านอื่นเกี่ยวกับ Polkadot
+- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
 - [ข่าวสาร](news) - ลิ้งข่าวฮ็อตเกี่ยวกับ Polkadot อัพเดททุกสัปดาห์
-- [ตัวอย่าง Application](build-examples-index) - แอปพลิเคชันตัวอย่างที่สร้างขึ้นหรือกำลังพัฒนาบน Polkadot
+- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
 - [คู่มือสำหรับผู้สนับสนุน](contributing) - กฎสำหรับการมีส่วนร่วมในวิกิ

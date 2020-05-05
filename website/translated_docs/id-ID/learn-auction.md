@@ -4,39 +4,39 @@ title: Slot lelang Parachain
 sidebar_label: Slot lelang Parachain
 ---
 
-Slot parachain Polkadot akan dijual sesuai dengan [ lelang lilin ](https://en.wikipedia.org/wiki/Candle_auction) yang telah sedikit dimodifikasi agar aman di blockchain.
+The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) which has been slightly modified to be secure on a blockchain.
 
 ## Mekanisme lelang lilin
 
-Lelang lilin adalah varian lelang terbuka di mana penawar mengajukan tawaran yang semakin tinggi dan penawar tertinggi pada akhir lelang dianggap sebagai pemenang.
+Candle auctions are a variant of open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner.
 
-Lelang lilin awalnya digunakan pada abad ke-16 untuk penjualan kapal dan mendapatkan nama mereka dari "inci lilin" yang menentukan periode lelang terbuka. Ketika nyala api padam dan lilin padam, pelelangan akan tiba-tiba berakhir dan tawaran berdiri pada saat itu akan menang.
+Candle auctions were originally employed in 16th century for the sale of ships and get their name from the "inch of a candle" that determined the open period of the auction. When the flame extinguished and the candle went out, the auction would suddenly terminate and the standing bid at that point would win.
 
-Ketika lelang Lilin digunakan secara online, mereka membutuhkan nomor acak untuk memutuskan saat penghentian.
+When Candle auctions are used online, they require a random number to decide the moment of termination.
 
-Lelang slot parachain akan sedikit berbeda dari lelang Candle normal karena tidak menggunakan nomor acak untuk memutuskan durasi fase pembukaannya. Sebagai gantinya, ia memiliki fase terbuka yang diketahui dan akan ditentukan secara surut (pada penutupan normal) telah berakhir pada beberapa titik di masa lalu. Jadi selama fase terbuka, penawaran akan terus diterima, tetapi, tawaran selanjutnya memiliki kemungkinan kehilangan yang lebih tinggi karena momen penutupan yang ditentukan secara retroaktif dapat ditemukan telah mendahului waktu ketika penawaran diajukan.
+Parachain slot auctions will differ slightly from a normal Candle auction in that it does not use the random number to decide the duration of its opening phase. Instead, it has a known open phase and will be retroactively determined (at the normal close) to have ended at some point in the past. So during the open phase, bids will continue to be accepted but, later bids have higher probability of losing since the retroactively determined close moment may be found to have preceded the time that a bid was submitted.
 
 ## Mengapa menggunakan lelang Candle?
 
-Sifat terbuka dan transparan dari sistem blockchain membuka vektor serangan yang tidak ada dalam format lelang tradisional. Lelang terbuka normal pada khususnya dapat rentan terhadap <em x-id = "4"> sniping lelang </em> ketika diterapkan melalui internet atau pada blockchain.
+The open and transparent nature of blockchain systems opens attack vectors which are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
-Penembakan lelang terjadi ketika akhir lelang diketahui dan penawar ragu untuk menawar harga asli mereka lebih awal, dengan harapan membayar lebih rendah dari nilai sebenarnya barang tersebut.
+Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item.
 
-Misalnya, Alice dapat menilai suatu barang di lelang seharga 30 USD. Dia mengajukan tawaran awal sebesar 10 USD dengan harapan memperoleh barang dengan harga lebih rendah. Strategi Alice adalah menempatkan tawaran yang lebih tinggi secara bertahap hingga nilai sejatinya sebesar 30 USD terlampaui. Penawar lain Hawa menghargai barang yang sama dengan 11 USD. Strategi Eve adalah menonton pelelangan dan mengajukan penawaran sebesar 11 USD pada detik terakhir. Alice tidak akan punya waktu untuk menanggapi tawaran ini sebelum penutupan lelang dan akan kehilangan barang. Mekanisme lelang ini kurang optimal karena belum menemukan harga sebenarnya dari barang tersebut dan barang tersebut belum sampai ke aktor yang paling menghargainya.
+For example, Alice may value an item at auction for 30 USD. She submits an initial bid of 10 USD in hopes of acquiring the items at a lower price. Alice's strategy is to place incrementally higher bids until her true value of 30 USD is exceeded. Another bidder Eve values the same item at 11 USD. Eve's strategy is to watch the auction and submit a bid of 11 USD at the last second. Alice will have no time to respond to this bid before the close of the auction and will lose the item. The auction mechanism is sub-optimal because it has not discovered the true price of the item and the item has not gone to the actor who valued it the most.
 
-Pada blockchains masalah ini mungkin bahkan lebih buruk, karena berpotensi memberikan produsen blok kesempatan untuk melakukan lelang di blok penutup terakhir dengan menambahkannya sendiri dan / atau mengabaikan tawaran lainnya. Ada juga kemungkinan penawar jahat atau produsen blok mencoba <em x-id = "4"> bersedih </em> jujur penawar dengan memotong lelang.
+On blockchains this problem may be even worse, since it potentially gives the producer of the block an opportunity to snipe any auction at the last concluding block by adding it themselves and/or ignoring other bids. There is also the possibility of a malicious bidder or a block producer trying to _grief_ honest bidders by sniping auctions.
 
-Untuk alasan ini, [ lelang Vickrey ](https://en.wikipedia.org/wiki/Vickrey_auction), varian lelang harga kedua di mana penawaran disembunyikan dan hanya diungkapkan pada fase selanjutnya, telah muncul sebagai mekanik yang dianggap baik. Misalnya, ini diterapkan sebagai mekanisme untuk melelang nama yang dapat dibaca manusia di [ ENS ](https://ens.domains). Pelelangan Candle adalah solusi lain yang tidak memerlukan skema dua langkah komitmen dan pengungkapan (komponen utama lelang Vickrey), dan untuk alasan ini memungkinkan kontrak yang cerdas untuk berpartisipasi.
+For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The Candle auction is another solution which does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
 
-Lelang lilin memungkinkan setiap orang untuk selalu mengetahui kondisi penawaran, tetapi tidak ketika lelang akan ditentukan telah "berakhir." Ini membantu memastikan bahwa penawar bersedia mengajukan tawaran mereka yang sebenarnya lebih awal. Kalau tidak, mereka mungkin menemukan diri mereka dalam situasi bahwa pelelangan bertekad telah "berakhir" bahkan sebelum mereka menawar.
+Candle auctions allow everyone to always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise, they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
 
 ## Bagaimana ini digunakan di Polkadot
 
-Polkadot akan menggunakan _ suar acak _ berdasarkan VRF yang digunakan juga di tempat lain dari protokol. VRF akan memberikan dasar dari keacakan yang akan menentukan secara retroaktif "akhir zaman" lelang.
+Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness which will retroactively determine the "end-time" of the auction.
 
-Ketika suatu tawaran akun, mereka dapat menempatkan penawaran untuk periode atau rentang yang tersedia di dalam slot. Namun, jika sebuah parachain (dengan STF yang sama) mengajukan tawaran, maka parachain tersebut harus menawar pada periode yang berkelanjutan atau rentang ke yang telah mereka tempati. Mereka tidak akan dapat menawar slot yang tumpang tindih (tidak ada kelipatan dari parachain yang sama pada waktu yang sama) dan mereka tidak akan dapat menawar slot yang akan datang jika ada celah di antaranya. Dalam kasus parachain di-reboot setelah mencapai akhir durasi slotnya, parachain harus dimulai lagi dari genesis baru (yang bisa berupa snapshot dari semua kondisi lama) dan harus ditawar dari akun eksternal.
+When an account bids, they can place bids for any of the available periods or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous period or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid from an external account.
 
-Durasi slot dibatasi hingga 2 tahun dan dibagi menjadi periode 6 bulan. Parachains dapat menyewa slot untuk rentang waktu slot yang berdekatan. Parachains dapat menyewa lebih dari satu slot dari waktu ke waktu, yang berarti bahwa mereka dapat memperpanjang sewa mereka ke Polkadot melewati durasi slot 2 tahun hanya dengan menyewa slot yang berdekatan.
+The slot durations are capped to 2 years and divided into 6-month periods. Parachains may lease a slot for any contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by leasing a contiguous slot.
 
 ## Bagaimana cara kerja penawaran?
 
@@ -56,34 +56,34 @@ Slot E | __________ | __________ | 1 | 2 | 3 | 4 |...
 Setiap periode dalam rentang 1 - 4 mewakili durasi 6 bulan untuk total 2 tahun
 ```
 
-Setiap slot parachain memiliki durasi maksimum 2 tahun. Setiap interval 6 bulan dalam slot dibagi menjadi ` masa sewa ` sendiri. Lebih dari satu ` periode berkelanjutan ` adalah ` rentang `.
+Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `lease period`. More than one continuous `period` is a `range`.
 
-Beberapa lelang akan berlangsung dalam enam bulan sebelumnya sebelum satu set slot slot parachain dimulai.
+Several auctions will take place in the preceding six months before a set of parachain slot leases begin.
 
-Penawar akan mengirimkan konfigurasi tawaran yang menetapkan jumlah DOT yang ingin mereka kunci dan untuk rentang mana. Rentang slot dapat berupa rentang berkelanjutan periode 1 - 4.
+Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
 
 Konfigurasi penawar untuk satu penawar mungkin terlihat seperti ini:
 
 ```js
-Bids [
-       {
-              range: [1,2,3,4],
-              bond_amount: 300, //DOTs
-       },
-       {
-              range: [1,2],
-              bond_amount: 777, //DOTs
-       },
-       {
-              range: [2,3,4],
-              bond_amount: 450, // DOTs
-       }
-]
+Bids[
+  ({
+    range: [1, 2, 3, 4],
+    bond_amount: 300, //DOTs
+  },
+  {
+    range: [1, 2],
+    bond_amount: 777, //DOTs
+  },
+  {
+    range: [2, 3, 4],
+    bond_amount: 450, // DOTs
+  })
+];
 ```
 
-Algoritme pemilihan pemenang akan memilih tawaran yang mungkin tidak tumpang tindih untuk memaksimalkan jumlah DOT yang dimiliki selama durasi sewa 2 tahun keseluruhan dari slot parachain. Ini berarti bahwa penawar tertinggi untuk periode sewa slot tertentu mungkin tidak selalu menang (lihat [ contoh di bawah ](#compete)).
+The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
-Angka acak ditentukan pada setiap blok yang didasarkan pada VRF yang digunakan oleh Polkadot. Selain itu, setiap lelang akan memiliki ambang batas yang dimulai dari 0 dan meningkat menjadi 1. Angka acak yang diproduksi oleh VRF diperiksa di sebelah ambang untuk menentukan apakah blok itu adalah akhir lelang. Selain itu, VRF akan memilih blok dari zaman terakhir untuk mengambil status tawaran (untuk mengurangi beberapa jenis serangan dari validator jahat).
+A random number is determined at each block which is based on the VRF used by Polkadot. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
 ### Contoh
 
@@ -111,33 +111,33 @@ Dave tawaran ` 100 DOTs ` untuk rentang 3 - 4.
 
 Tawaran Emily ` 40 DOTs ` untuk rentang 1 - 2.
 
-Mari kita menghitung penilaian setiap penawar sesuai dengan algoritma. Kami melakukan ini dengan mengalikan jumlah obligasi dengan jumlah periode dalam rentang penawaran yang ditentukan.
+Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of periods in the specified range of the bid.
 
-Emily - 75 * 4 = 300 untuk rentang 1 - 4
+Charlie - 75 \* 4 = 300 for range 1 - 4
 
-Dave - 100 * 2 = 200 untuk rentang 3 - 4
+Dave - 100 \* 2 = 200 for range 3 - 4
 
-Emily - 40 * 2 = 80 untuk rentang 1 - 2
+Emily - 40 \* 2 = 80 for range 1 - 2
 
-Meskipun Dave memiliki tawaran tertinggi sesuai dengan jumlah DOT, ketika kami melakukan perhitungan, kami melihat bahwa karena ia hanya menawar untuk kisaran 2, ia harus berbagi slot dengan Emily yang tawarannya jauh lebih sedikit. Tawaran bersama Dave dan Emily hanya sama dengan penilaian ` 280 `.
+Although Dave had the highest bid in accordance to DOT amount, when we do the calculations we see that since he only bid for a range of 2, he would need to share the slot with Emily who bid much less. Together Dave's and Emily's bids only equal a valuation of `280`.
 
-Penilaian Charlie untuk seluruh rentang adalah ` 300 ` oleh karena itu Charlie diberikan rangkaian lengkap slot parachain.
+Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of the parachain slot.
 
 ## Tanya-jawab
 
 ### Mengapa tidak semua orang menawar untuk panjang maks?
 
-Selama slot, tawaran ` DOTs ` dalam pelelangan akan dikunci. Ini berarti ada biaya peluang dari kemungkinan menggunakan ` DOTs ` itu untuk sesuatu yang lain. Untuk parachains yang bermanfaat bagi Polkadot, ini harus menyelaraskan kepentingan antara parachains dan rantai relay Polkadot.
+For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot relay chain.
 
 ### Bagaimana mekanisme ini membantu memastikan keragaman parachain?
 
-Metode untuk membagi slot parachain menjadi interval enam bulan sebagian diinspirasi oleh keinginan untuk memungkinkan jumlah keragaman parachain yang lebih besar, dan mencegah parachain yang sangat besar dan didanai dengan baik dari slot yang menimbun. Dengan membuat setiap periode durasi enam bulan tetapi slot keseluruhan durasi 2 tahun, mekanisme tersebut dapat mengatasi parachain yang didanai dengan baik yang akan memastikan mereka mengamankan slot di akhir masa sewa mereka, sementara secara bertahap memungkinkan parachain lain untuk memasuki ekosistem untuk menempati jangka waktu enam bulan yang tidak diisi. Misalnya, jika parachain besar yang didanai dengan baik telah memperoleh slot untuk rentang 1 - 4, mereka akan sangat tertarik untuk mendapatkan slot berikutnya yang akan terbuka untuk 2 - 5. Di bawah mekanisme ini bahwa parachain dapat memperoleh periode 5 ( karena hanya itu yang dibutuhkan) dan memungkinkan jangkauan 2 - 4 slot parachain kedua untuk ditempati oleh yang lain.
+The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each period a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations which are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
 
 ### Mengapa keacakan sulit pada blockchain?
 
-Keacakan adalah masalah untuk sistem blockchain. Menghasilkan angka acak tanpa kepercayaan pada jaringan transparan dan terbuka di mana pihak lain harus dapat memverifikasi membuka kemungkinan bagi pelaku untuk mencoba mengubah atau memanipulasi keacakan. Ada beberapa solusi yang telah diajukan, termasuk bawang hash seperti [ RANDAO ](https://github.com/randao/randao) dan <a href = "https://en.wikipedia.org/wiki/Verifiable_random_function"> fungsi acak yang dapat diverifikasi </a> (VRFs). Yang terakhir adalah apa yang digunakan Polkadot sebagai dasar untuk keacakannya.
+Randomness is problematic for blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify opens the possibility for actors to attempt to alter or manipulate the randomness. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.
 
 ## Sumber daya
 
 - [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
-- [ paritytech / polkadot # 239 ](https://github.com/paritytech/polkadot/pull/239) - Tarik permintaan yang memperkenalkan kode slot parachain.
+- [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.

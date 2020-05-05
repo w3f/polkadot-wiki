@@ -8,11 +8,11 @@ sidebar_label: Validator Guide
 
 ## 首先
 
-在主网上运行验证人有很大的责任！你不仅要对自己抵押的 KSM 负责， 还有目前提名你的提名人抵押。如果你犯了一个错误并且被削减，你的钱和声誉 将处于危险之中。但是运行验证人也有非常可观的回报，您为安全性做出了贡献，使网络更分散。
+Running a validator on a live network is a lot of responsibility! You will be accountable for not only your own stake, but also the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a validator can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
 
-由于安全性对运行验证人至关重要，因此您最好看一下[设定安全验证人](maintain-guides-secure-validator) 资料使您了解在构建网络架构时要考虑的要素。 Web3 基金会也 会保持更新[安全验证人设置的参考](https://github.com/w3f/polkadot-secure-validator)使您也可以自己部署来使用。随着您成为验证人愈长时间，您可能使用此库作为自己的_起点_进行修改和自定义。
+Since security is so important to running a successful validator, you should take a look at the [secure validator](maintain-guides-secure-validator) information to make you understand the factors to consider when constructing your infrastructure. The Web3 Foundation also maintains a [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator) that you can use by deploying yourself. As you progress in your journey as a validator, you will likely want to use this repository as a _starting point_ for your own modifications and customizations.
 
-如果您需要帮助，请在[Kusama 验证人聊天室](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) 发问。(而中文朋友可以在微信群找 anson) 团队和其他验证人在那里帮助回答问题并提供协助。如果您还有更重要的建议，您可以在[ Kusama论坛](https://forum.kusama.network)提交。
+If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
 
 ### How Many KSM Do I Need?
 
@@ -28,8 +28,8 @@ You will likely run your validator on a cloud server running Linux. You may choo
 
 You will not need a very powerful machine to run your validator, but you should be aware of the resource constraints. The most important resource for your validator node is networking bandwidth, followed by its storage and memory capabilities. The bare minimum requirements for a machine to run a validator are as follows:
 
-- **存储:** 40GB - 80GB。 Kusama 对存储空间的要求不是很高，因此这范围经已可以满足所需要的要求，请记住如果链的存储持续增加，则可能需要稍后对其进行升级。
-- **内存:** 2GB - 8GB。2GB 实际上是运行验证人最低的要求，小于 2GB 会使构建时间更长。 为了有更好性能，您可以将其提高到 4GB 或 8GB。
+- **Storage:** 40GB - 80GB. Kusama doesn't have very heavy storage requirements yet so something in this range will be fine, just keep in mind you may have to upgrade it later if the chain state becomes very big.
+- **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill.
 - ** 中央处理器:** 1 - 2。一个 CPU 是可以，但是2个更好。 同样地这是一种性能偏好。
 
 On most cloud service providers, these specs are usually within the $10 - $20 per month range.
@@ -64,11 +64,11 @@ brew install cmake pkg-config openssl git llvm
 
 ### Install & Configure Network Time Protocol (NTP) Client
 
-[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service.  You can check whether you have the NTP client by running:
+[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service. You can check whether you have the NTP client by running:
 
 _If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
 
-``` sh
+```sh
 timedatectl
 ```
 
@@ -77,18 +77,18 @@ If NTP is installed and running, you should see `System clock synchronized: yes`
 ```sh
 sudo apt-get install ntp
 ```
+
 ntpd will be started automatically after install. You can query ntpd for status information to verify that everything is working:
 
 ```sh
 sudo ntpq -p
 ```
 
-
 ### Building and Installing the `polkadot` Binary
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.7** branch.
 
-You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.7.x** tag. At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases. You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -111,7 +111,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-> **注意：**验证人节点必须以 archive 模式同步以避免被惩罚。如果您已经同步好，您必须首先运行` polkadot purge-chain `删除之前的数据库，然后确保使用` --pruning=archive `运行 Polkadot。
+> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 
 You can begin syncing your node by running the following command:
 
@@ -137,16 +137,16 @@ Make sure not to bond all your KSM balance since you will be unable to pay trans
 
 It is now time to set up our validator. We will do the following:
 
-- 绑定 Stash 帐户的KSM。 这些抵押中的 KSM 是为了保护网络的安全，并可以大幅削减(惩罚)。
+- Bond the KSM of the Stash account. These KSM will be put at stake for the security of the network and can be slashed.
 - 选择 Controller，Controller 是决定何时开始或停止验证的帐户。
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on "Account Actions", and then the "New stake" button.
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** -选择 Stash 账户。在这个例子我们会绑定 100 milliKSMs - 确保你的 Stash 帐户拥有_至少_这个数量。当然你也可以绑定更多。
-- **Controller account** - 选择你之前创建的 Controller 帐号。此帐户也需要少量 KMS 才能开始和停止验证。
-- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
+- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of KSM in order to start and stop validating.
+- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - 把奖励发送到那个帐戶，详情请看[这里](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution)。
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash account.
@@ -157,13 +157,13 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 
 > **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction then you can use one of the two available RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) to check the full session key public key string.
 
-Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with the pruning option set to `archive`.
+Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with a flag allowing unsafe RPC calls, needed for some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry" --pruning=archive
+./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
 ```
 
-You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique.
+You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique. Note that the `--unsafe-rpc-expose` flag is needed in order to set the session key as shown below.
 
 ### Generating the Session Keys
 
@@ -187,6 +187,8 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this result for a later step.
 
+You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer needed.
+
 ### Submitting the `setKeys` Transaction
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator with your Controller account.
@@ -205,7 +207,7 @@ If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg) ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
-- **Payment preferences** - 验证人会先取下这里设定的奖励，余下那些将会与提名你的人按比例分配。
+- **Payment preferences** - Rewards you will keep, the rest will be shared among you and your nominators.
 
 Click "Validate".
 
@@ -233,12 +235,12 @@ Make sure to enable `30333` libp2p port. Eventually, it will take a little bit o
 
 ## VPS List
 
-* [OVH](https://www.ovh.com.au/)
-* [Digital Ocean](https://www.digitalocean.com/)
-* [Vultr](https://www.vultr.com/)
-* [Linode](https://www.linode.com/)
-* [Contabo](https://contabo.com/)
-* [Scaleway](https://www.scaleway.com/)
+- [OVH](https://www.ovh.com.au/)
+- [Digital Ocean](https://www.digitalocean.com/)
+- [Vultr](https://www.vultr.com/)
+- [Linode](https://www.linode.com/)
+- [Contabo](https://contabo.com/)
+- [Scaleway](https://www.scaleway.com/)
 
 ## Using Docker
 

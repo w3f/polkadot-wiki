@@ -4,7 +4,7 @@ title: 网络维护者
 sidebar_label: 网络维护者
 ---
 
-欢迎来到 Polkadot 维基的网络维护者部分。 在这里您将找到有关设置节点和运行指南。
+Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and guides to set up a node and run the network.
 
 ## 收集人
 
@@ -14,7 +14,6 @@ sidebar_label: 网络维护者
 
 - [提名人主页](maintain-nominator)-提名人和相关链接。
 - [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
-
 
 ## 验证人
 

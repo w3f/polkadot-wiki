@@ -4,11 +4,11 @@ title: 验证人
 sidebar_label: 验证人
 ---
 
-验证人通过抵押 DOT，验证收集人的证明并与其他验证人达成共识来保护中继链。
+Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
 
-这些参与者将在向中继链以及所有平行链添加新区块方面发挥关键作用。这允许各方通过中继链完成跨链交易。
+These participants will play a crucial role in adding new blocks to the Relay Chain and, by extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay Chain.
 
-验证人执行两个功能。首先验证一组分配好的平行链区块中包含的信息是否有效（例如交易方的身份和合同的标题）。其第二个作用是大月参与共识机制，以基于其他验证人的有效性声明生成中继链区块。任何不遵守协商一致算法的情况都会导致惩罚，削减验证人所持有的部分或所有抵押中的 DOT，从而防止有不良行为的人。然而，良好的表现将会得到奖励，验证人将获得以 DOT 的形式获得区块奖励（包括交易费用），以换取它们的参与。
+Validators perform two functions. First, verifying that the information contained in an assigned set of parachain blocks is valid (such as the identities of the transacting parties and the subject matter of the contract). Their second role is to participate in the consensus mechanism to produce the Relay Chain blocks based on validity statements from other validators. Any instances of non-compliance with the consensus algorithms result in punishment by removal of some or all of the validator’s staked DOTs, thereby discouraging bad actors. Good performance, however, will be rewarded, with validators receiving block rewards (including transaction fees) in the form of DOTs in exchange for their activities.
 
 ## 指南
 
@@ -22,7 +22,7 @@ sidebar_label: 验证人
 ## 其他参考
 
 - [如何运行 Polkadot 节点 (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
-- [Web 3.0 验证人节点的无服务器故障转移解决方案](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - 博客详细介绍了如何创建可靠的故障转移解决方案运行验证人。
+- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
 - [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
 - [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.

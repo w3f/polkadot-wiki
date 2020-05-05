@@ -59,7 +59,7 @@ The nodes are distributed and decentralized, but the load balancer serving them 
 
 #### Full nodes
 
-The nodes in the RYO cloud are currently *full nodes*, not *archive nodes*. To learn the difference, [watch this crash course](https://www.youtube.com/watch?v=31DdfcxbAVs). If you need archive data, run your own archive node or use a Parity or W3F hosted node for now. Archive nodes in RYO are planned for a future update.
+The nodes in the RYO cloud are currently _full nodes_, not _archive nodes_. To learn the difference, [watch this crash course](https://www.youtube.com/watch?v=31DdfcxbAVs). If you need archive data, run your own archive node or use a Parity or W3F hosted node for now. Archive nodes in RYO are planned for a future update.
 
 #### Avado Only
 

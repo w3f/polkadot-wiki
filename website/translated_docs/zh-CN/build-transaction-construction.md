@@ -41,7 +41,7 @@ Parity 提供了以下工具来帮助执行这些步骤。
 
 [Polkadot JS 工具](https://github.com/polkadot-js/tools) 包含一组命令行工具，用于与 Substrate 客户端交互， 包括一个叫做" Signer CLI"的交易，创建、签名和广播交易。
 
-此例将使用 `signer submit` 指令，该指令将创建和提交交易。 `signer sendOffline` 指令有完全相同的API，但不会广播交易。 `submit` 和 `sendOffline` 必须连接到一个节点才能获取当前元数据并构建一个有效的交易。他们的 API 格式：
+This example will use the `signer submit` command, which will create and submit the transaction. The `signer sendOffline` command has the exact same API, but will not broadcast the transaction. `submit` and `sendOffline` must be connected to a node to fetch the current metadata and construct a valid transaction. Their API has the format:
 
 ```bash
 yarn run:signer <submit|sendOffline> --account <from-account-ss58> --ws <endpoint> <module.method> [param1] [...] [paramX]
@@ -94,24 +94,24 @@ const address = deriveAddress(publicKey);
 **构造离线交易**
 
 ```ts
-import { methods } from '@substrate/txwrapper';
+import { methods } from "@substrate/txwrapper";
 
 const unsigned = methods.balances.transferKeepAlive(
-  {
-    dest: '15vrtLsCQFG3qRYUcaEeeEih4JwepocNJHkpsrqojqnZPc2y',
-    value: 500000000000,
-  },
-  {
-    address: '121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2',
-    blockHash: '0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582',
-    blockNumber: 4302222,
-    genesisHash: '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636',
-    metadataRpc, // must import from client RPC call state_getMetadata
-    nonce: 2,
-    specVersion: 1019,
-    tip: 0,
-    validityPeriod: 240 * 60 // seconds (240 minutes)
-  }
+  {
+    dest: "15vrtLsCQFG3qRYUcaEeeEih4JwepocNJHkpsrqojqnZPc2y",
+    value: 500000000000,
+  },
+  {
+    address: "121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2",
+    blockHash: "0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582",
+    blockNumber: 4302222,
+    genesisHash: "0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636",
+    metadataRpc, // must import from client RPC call state_getMetadata
+    nonce: 2,
+    specVersion: 1019,
+    tip: 0,
+    validityPeriod: 240 * 60, // seconds (240 minutes)
+  }
 );
 ```
 
@@ -128,7 +128,7 @@ const signingPayload = createSigningPayload(unsigned);
 **序列化已签名的交易**
 
 ```ts
-import { createSignedTx } from '@substrate/txwrapper';
+import { createSignedTx } from "@substrate/txwrapper";
 
 // Example code, replace `signWithAlice` with actual remote signer.
 // An example is given here:
@@ -142,7 +142,7 @@ const signedTx = createSignedTx(unsigned, signature);
 您可能想要在提交解码 payloads 前以验证其内容。
 
 ```ts
-import { decode } from '@substrate/txwrapper';
+import { decode } from "@substrate/txwrapper";
 
 // Decode an unsigned tx
 const txInfo = decode(unsigned, { metadata });

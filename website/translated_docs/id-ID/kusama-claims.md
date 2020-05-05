@@ -4,7 +4,6 @@ title: Kusama Claims
 sidebar_label: Claims
 ---
 
-
 The Kusama network is Polkadot's experimental, community-focused R&D network. If you hold the DOT indicator token, you are entitled to claim an equivalent amount of KSM on the Kusama network. This is so that the Kusama network is aligned with the existing DOT holders and community.
 
 You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens.
@@ -38,7 +37,7 @@ You can install `subkey` with this one-line command:
 cargo install --force --git https://github.com/paritytech/substrate subkey
 ```
 
-Note that you will already have had to install the proper Rust version and dependencies.  If you have not done so, or experience problems installing using that command, run the following commands first, and then re-try the previous command:
+Note that you will already have had to install the proper Rust version and dependencies. If you have not done so, or experience problems installing using that command, run the following commands first, and then re-try the previous command:
 
 ```
 curl https://sh.rustup.rs -sSf | sh
@@ -186,4 +185,4 @@ For those who didn’t participate in the Polkadot sale, KSMs are publicly avail
 
 **We do not recommend using a third-party app or process to perform your claim or acquire KSM**
 
-Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation. 
+Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation.

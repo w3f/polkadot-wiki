@@ -51,6 +51,7 @@ Validator B is now acting as your validator. You can safely take Validator A off
 Once the Session changes, Validator A will take over. You can safely stop Validator B.
 
 **NOTE:** To verify that the Session has changed, make sure that a block in the new Session is finalized. You should see log messages like this to indicate the change:
+
 ```
 2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
 2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities

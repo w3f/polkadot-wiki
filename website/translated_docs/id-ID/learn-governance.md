@@ -26,12 +26,12 @@ Referenda are simple, inclusive, stake-based voting schemes. Each referendum has
 
 Referenda can be started in one of several ways:
 
-* Publicly submitted proposals;
-* Proposals submitted by the council, either through a majority or unanimously;
-* Proposals submitted as part of the enactment of a prior referendum;
-* Emergency proposals submitted by the Technical Committee and approved by the Council.
+- Publicly submitted proposals;
+- Proposals submitted by the council, either through a majority or unanimously;
+- Proposals submitted as part of the enactment of a prior referendum;
+- Emergency proposals submitted by the Technical Committee and approved by the Council.
 
-All referenda have an *enactment delay* associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 7 days; Polkadot will likely be 28 days. For the third type, it can be set as desired.
+All referenda have an _enactment delay_ associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 7 days; Polkadot will likely be 28 days. For the third type, it can be set as desired.
 
 Emergency proposals deal with major problems with the network that need to be "fast-tracked". These will have a shorter enactment time.
 
@@ -51,9 +51,9 @@ There can only be one active referendum at any given time, except when there is 
 
 #### Voting Timetable
 
-Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the top proposal in the two queues. The "top" proposal is determined by the number of second votes behind it.  If the given queue whose turn it is to create a referedum has no proposals (is empty), and there are proposals waiting in the other queue, the top proposal in the other queue will become a referendum.
+Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the top proposal in the two queues. The "top" proposal is determined by the number of second votes behind it. If the given queue whose turn it is to create a referedum has no proposals (is empty), and there are proposals waiting in the other queue, the top proposal in the other queue will become a referendum.
 
-Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda.  An emergency referendum occurring at the same time as a regular referendum (either public- or council-proposed) is the only time that multiple referenda will be able to be voted on at once.
+Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda. An emergency referendum occurring at the same time as a regular referendum (either public- or council-proposed) is the only time that multiple referenda will be able to be voted on at once.
 
 #### Voting on a referendum
 
@@ -81,8 +81,7 @@ Depending on which entity proposed the proposal and whether all council members 
 | Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
 | Council (Majority agreement) |                Simple Majority                 |
 
-Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so `Super-Majority
-Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
+Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
 
 ```
 approve - the number of aye votes
@@ -112,7 +111,7 @@ Majority-carries, a simple comparison of votes, if there are more aye votes than
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
-*To know more about where these above formulas come from, please read the [democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs)*.
+_To know more about where these above formulas come from, please read the [democracy pallet](https://github.com/paritytech/substrate/blob/master/frame/democracy/src/vote_threshold.rs)_.
 
 ```
 Example:
@@ -197,7 +196,7 @@ For a referendum to be proposed by the council, a strict majority of members mus
 
 A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if there is an issue found late in the day with a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
-If the cancellation is controversial enough that the council cannot get a two-thirds majority, then it will be left to the stakeholders *en masse* to determine the fate of the proposal.
+If the cancellation is controversial enough that the council cannot get a two-thirds majority, then it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
 
 ### How to be a council member?
 

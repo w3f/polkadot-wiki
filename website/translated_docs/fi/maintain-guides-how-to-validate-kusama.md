@@ -64,11 +64,11 @@ brew install cmake pkg-config openssl git llvm
 
 ### Install & Configure Network Time Protocol (NTP) Client
 
-[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service.  You can check whether you have the NTP client by running:
+[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service. You can check whether you have the NTP client by running:
 
 _If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
 
-``` sh
+```sh
 timedatectl
 ```
 
@@ -77,18 +77,18 @@ If NTP is installed and running, you should see `System clock synchronized: yes`
 ```sh
 sudo apt-get install ntp
 ```
+
 ntpd will be started automatically after install. You can query ntpd for status information to verify that everything is working:
 
 ```sh
 sudo ntpq -p
 ```
 
-
 ### Building and Installing the `polkadot` Binary
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.7** branch.
 
-You should generally use the latest **0.7.x** tag.  At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases.  You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.7.x** tag. At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases. You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
@@ -146,7 +146,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 - **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
 - **Controller account** - Select the Controller account created earlier. This account will also need a small amount of KSM in order to start and stop validating.
-- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding  period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
+- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash account.
@@ -157,13 +157,13 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 
 > **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction then you can use one of the two available RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) to check the full session key public key string.
 
-Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with the pruning option set to `archive`.
+Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with a flag allowing unsafe RPC calls, needed for some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry" --pruning=archive
+./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
 ```
 
-You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique.
+You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique. Note that the `--unsafe-rpc-expose` flag is needed in order to set the session key as shown below.
 
 ### Generating the Session Keys
 
@@ -186,6 +186,8 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this result for a later step.
+
+You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer needed.
 
 ### Submitting the `setKeys` Transaction
 
@@ -233,12 +235,12 @@ Make sure to enable `30333` libp2p port. Eventually, it will take a little bit o
 
 ## VPS List
 
-* [OVH](https://www.ovh.com.au/)
-* [Digital Ocean](https://www.digitalocean.com/)
-* [Vultr](https://www.vultr.com/)
-* [Linode](https://www.linode.com/)
-* [Contabo](https://contabo.com/)
-* [Scaleway](https://www.scaleway.com/)
+- [OVH](https://www.ovh.com.au/)
+- [Digital Ocean](https://www.digitalocean.com/)
+- [Vultr](https://www.vultr.com/)
+- [Linode](https://www.linode.com/)
+- [Contabo](https://contabo.com/)
+- [Scaleway](https://www.scaleway.com/)
 
 ## Using Docker
 

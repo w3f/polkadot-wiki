@@ -8,29 +8,29 @@ sidebar_label: 链接
 
 ### 常用
 
-- [白皮书](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf)- Polkadot 介绍
-- [简短版](https://polkadot.network/Polkadot-lightpaper.pdf)- 非技术性 Polkadot 的简述，。
+- [White Paper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) - General Polkadot description.
+- [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) - Brief, non-technical overview of Polkadot.
 - [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) - Epicenter interviews Gavin Wood.
-- [区块链基础架构](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/)-Gavin Wood在《软件日报》上介绍了Substrate。
-- [ Polkadot概述](https://www.zeroknowledge.fm/46)- Gavin Wood 聊 Polkadot 的历史，并在零知识播客进行了很好的概述。
-- [ Polkadot概述](https://www.youtube.com/watch?v=oiunBLGHlAU)- Epicenter 采访了 Web3 基金会的 Peter Czaban 关于 Polkadot 的问题。
+- [Blockchain Infrastructure](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/) - Gavin Wood presents Substrate on Software Daily.
+- [Polkadot Overview](https://www.zeroknowledge.fm/46) - Gavin Wood chatted about the history of Polkadot and provided a great overview on Zero Knowledge podcast.
+- [Polkadot Overview](https://www.youtube.com/watch?v=oiunBLGHlAU) - Epicenter interviews Peter Czaban of Web3 Foundation about Polkadot.
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate. (Video)
-- [ Polkadot 概述](https://youtu.be/lIghiCmHz0U)-Gavin Wood 博士介绍了 Polkadot。(视频)
-- [ Polkadot 概述](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/)-Jutta Steiner 博士介绍了Polkadot。(视频)
-- [互操作性简介](https://www.youtube.com/watch?v=RSAFHhTwA8Q)-Rob Habermeier 提出 "互操作性：Dots"。
-- [ Polkadot 的共识和确定性](https://www.youtube.com/watch?v=qvoAf2uIF3c)-Rob Habermeier 的讲话详述了 Polkadot 的共识机制。
-- [首尔DOT日](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39)-首尔DOT日所有演讲的视频播放列表。
+- [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
+- [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Dr. Jutta Steiner presents Polkadot. (Video)
+- [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interoperability: Connecting the Dots."
+- [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
+- [DOT Day Seoul](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39) - Video playlist of all talks at DOT Day Seoul.
 
 ### Kusama
 
-- [Kusama首页](https://kusama.network/) Polkadot 的金丝雀网络(Kusama)所有内容的页面。
-- [Kusama 用户指南](https://guide.kusama.network)Kusama 特定信息的来源。
-- [ Kusam 认领](https://claim.kusama.network/)供 DOT 持有者认领 Kusama 代币的信息。
-- [ Kusama 发布公告](https://medium.com/polkadot-network/kusama-network-7446706b8f4c) Kusama 网络的第一条公告。
+- [Kusama Home Page](https://kusama.network/) Front page for all things on Polkadot's canary network, Kusama.
+- [Kusama User Guide](https://guide.kusama.network) The source of truth for Kusama-specific information.
+- [Kusama Claims](https://claim.kusama.network/) Information for DOT holders to claim their Kusama tokens.
+- [Kusama Launch Announcement](https://medium.com/polkadot-network/kusama-network-7446706b8f4c) The first announcement of the Kusama network.
 
 ### Substrate
 
-- [什么是 Substrate?](https://medium.com/paritytech/what-is-substrate-29af4231d7e0)-说明用于搭建 Polkadot 的框架。
+- [What is Substrate?](https://medium.com/paritytech/what-is-substrate-29af4231d7e0) - Explanation of the framework used to build Polkadot.
 - [Parity Substrate](https://github.com/paritytech/substrate) - First implementation, written in Rust. Parity Technologies is a 75-person development team based in the UK and Germany. Parity’s tech is responsible for running the premier client for Ethereum, powering 40% of the nodes in the network. Parity also maintains a client for [Bitcoin](https://github.com/paritytech/parity-bitcoin) and developed and released [Zebra](https://github.com/ZcashFoundation/zebra), a rust implementation of a zcash node.
 - [Substrate Developer Hub](https://www.substrate.io/kb/learn-substrate) - Overviews, tutorials and reference documentation for Substrate.
 - [Substrate Intro](https://youtu.be/iUMZyL5kTwc) - Dr. Gavin Wood presents Substrate, one of the technologies underlying Polkadot.
@@ -44,12 +44,12 @@ sidebar_label: 链接
 
 - [治理](learn-governance) - 治理系统概述。
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr. Gavin Wood presents the initial governance structure for Polkadot. (Video)
-- [Kusama 的推出和治理](https://polkadot.network/kusama-rollout-and-governance/)-关于 Kusama 金丝雀网络的治理信息。
+- [Kusama Rollout and Governance](https://polkadot.network/kusama-rollout-and-governance/) - Information on the governance on the Kusama Canary network.
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar explaining how governance works in Polkadot and Kusama.
 
 ### 共识与确定性
 
-- [ GRANDPA 确定性工具](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)-Polkadot 的确定性工具。
+- [GRANDPA finality gadget](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - Finality gadget for Polkadot.
 
 ### 研究
 
@@ -74,7 +74,6 @@ sidebar_label: 链接
 
 - [Cumulus](https://github.com/paritytech/cumulus) - A library for making Substrate-built chains compatible with Polkadot.
 - [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot co-founder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.
-
 
 ### Wasm
 
