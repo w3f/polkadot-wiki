@@ -21,18 +21,18 @@ Each page has an "Edit" button on the top right of the content. By clicking this
 Ada beberapa aturan dasar bagi para kontributor:
 
 1. ** Tidak ada ` - memaksa ` mendorong ** atau memodifikasi riwayat Git dengan cara apa pun.
-2. Permintaan tarikan lebih disukai daripada masalah, terutama untuk perubahan kecil seperti kesalahan ketik. Masalah harus digunakan untuk perubahan umum atau berbasis luas atau konten yang hilang.
+2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
 3. ** Cabang non-master ** harus digunakan untuk pekerjaan yang sedang berlangsung.
-4. ** Modifikasi signifikan ** harus tunduk pada ** permintaan tarik ** untuk meminta umpan balik dari kontributor lain.
-5. Permintaan tarik untuk meminta umpan balik _ didorong _ untuk kontribusi non-sepele lainnya tetapi diserahkan kepada kebijaksanaan kontributor.
+4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
+5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
 6. Kontributor harus berusaha mematuhi gaya, bahasa, dan tata letak Markdown yang berlaku.
-7. Tata bahasa yang benar harus digunakan setiap saat. Permintaan tarik dengan kesalahan ketik tidak akan digabungkan sampai diperbaiki.
-8. Perawatan harus diambil untuk tetap seobjektif dan seinformatif mungkin. Seharusnya tidak ada editorialisasi, dan bias eksternal tidak boleh ada.
+7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
+8. Care should be taken to remain as objective and informative as possible. There should be no editorializing, and external bias should not be present.
 
 ## Perubahan pada pengaturan ini
 
-Dokumen ini juga dapat dikenakan permintaan atau perubahan oleh kontributor di mana Anda yakin Anda memiliki sesuatu yang berharga untuk ditambahkan atau diubah.
+This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
 
 ## Warisan
 
-Dokumen ini didasarkan pada pedoman Tingkat kontribusi yang terdapat di sini: [ https://github.com/Level/community/ blob / master / CONTRIBUTING.md ](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
+This document was based on the Level contribution guidelines located here: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
