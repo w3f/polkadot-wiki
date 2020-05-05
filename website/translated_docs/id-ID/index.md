@@ -16,7 +16,7 @@ Jika Anda mencari pengantar untuk Polkadot, harap [ lihat di sini ](learn-introd
 ## Ingin membangun di atas Polkadot?
 
 - [ Portal Pembuat ](build-index) - Alat, perpustakaan, dan sumber daya untuk membantu Anda membangun.
-- [ Panduan Memulai ](build-build-with-polkadot) - <strong x-id = "1"> Tinjauan umum tentang cara memulai membangun proyek Anda di Polkadot. </strong>
+- [Starters Guide](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
 
 ## Ingin menjalankan simpul?
 
@@ -24,7 +24,7 @@ Jika Anda mencari pengantar untuk Polkadot, harap [ lihat di sini ](learn-introd
 
 ## Sumber daya
 
-- [ Komunitas / Ekosistem ](community) - Daftar ruang dan saluran komunitas untuk berbicara dengan orang lain tentang Polkadot.
+- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
 - [ Berita ](news) - Tautan ke berita terpanas tentang Polkadot, dikumpulkan setiap minggu.
-- [ Aplikasi Sampel ](build-examples-index) - Contoh aplikasi yang sedang dibangun atau sedang dibangun untuk Polkadot.
+- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
 - [ Panduan Berkontribusi ](contributing) - Aturan untuk berkontribusi ke wiki.
