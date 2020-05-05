@@ -30,17 +30,17 @@ The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of 
 
 - [架构](learn-architecture) - Polkadot 架构概述。
 - [转接桥](learn-bridges) - 转接桥的概述。
-- [密码学](learn-cryptography) - 描述 Polkadot 中使用的密码学以及在协议中那里使用。
-- [共识](learn-consensus) - 描述 Polkadot 协议中使用的共识类型以及它与其它共识协议的比较。
+- [Cryptography](learn-cryptography) - Describes the cryptography used in Polkadot and where it is employed in the protocol.
+- [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
 - [ DOT ](learn-DOT) 关于 DOT 的资料，即 Polkadot 协议的原生代币。
 - [治理](learn-governance) - 什么是区块链治理及其在 Polkadot 中的方式。
 - [Cross-chain Communication](learn-crosschain) - Information regarding how cross-chain messaging works.
 - [平行链](learn-parachains) - 什么是平行链以及它们如何运作。
-- [平行链拍卖](learn-auction) - 描述了平行链插槽拍卖的机制。
-- [平行线程](learn-parathreads) - 平行线程是在许多平行链-"线程"之间共享平行链插槽的一种方法。
+- [Parachain Auctions](learn-auction) - Describes the mechanism for the auctioning of parachain slots.
+- [Parathreads](learn-parathreads) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
 - [ 菲拉格曼法 (Phragmen) ](learn-phragmen) - 有关菲拉格曼法的信息。
 - [Polkadot Host](learn-polkadot-host) - General information on the Polkadot Host.
-- [随机性](learn-randomness) - Polkadot 怎么使用随机性以及使用的原因和方式。
+- [Randomness](learn-randomness) - What Polkadot uses for randomness, as well as why and how it is used.
 - [安全性](learn-security) - Polkadot 网络如何保持安全。
 - [ SPREE ](learn-spree)- 共享受保护 runtime 执行环境。
 - [抵押](learn-staking) - 抵押在 Polkadot 中的原理。
@@ -50,7 +50,7 @@ The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of 
 ## 资源
 
 - [词汇表](glossary) - Polkadot 文档中使用的特定领域术语的定义。
-- [实现](learn-implementations)- Polkadot 协议实现的列表（那些团队在构建它们和链接到源代码）。
+- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
 - [链接](learn-relevant-links) - 外部链接的完整列表。
 - [路线图](learn-roadmap) - Polkadot 的实现路线图。
 - [常见问题](learn-faq) - 回答有关 Polkadot 的一些常见问题。
