@@ -40,7 +40,6 @@ Another type of node is a **light node**. A light node has only the runtime and 
 - Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
-
 ### Fast Install Instructions (Windows)
 
 > This works only on Windows Pro with virtualization enabled.
@@ -105,7 +104,7 @@ The built binary will be in the `target/release` folder, called `polkadot`.
 
 Use the `--help` flag to find out which flags you can use when running the node. For example, if [connecting to your node remotely](maintain-wss), you'll probably want to use `--ws-external` and `--rpc-cors all`.
 
-The syncing process will take a while depending on your bandwidth, processing power, disk speed and RAM. On a $10 DigitalOcean droplet, the process can complete in some 36 hours.
+The syncing process will take a while depending on your bandwidth, processing power, disk speed and RAM. On a \$10 DigitalOcean droplet, the process can complete in some 36 hours.
 
 Congratulations, you're now syncing with Kusama. Keep in mind that the process is identical when using any other Substrate chain.
 
