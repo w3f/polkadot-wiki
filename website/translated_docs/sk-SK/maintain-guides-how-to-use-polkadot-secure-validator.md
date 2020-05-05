@@ -143,7 +143,7 @@ The `telemetryUrl` field will send your node's information to a specific telemet
 
 Configure `projectId` to be the name of the project you want to use in GCP.
 
-Configure `sshUser`  to be the user that manages your machine.
+Configure `sshUser` to be the user that manages your machine.
 
 For different cloud providers, you need to set the corresponding credentials as environment variables, for example, on GCP you only need to set `GOOGLE_APPLICATION_CREDENTIALS`. This variable is the path to the JSON file containing the credentials of the service account you wish to use; this service account needs to have write access to compute and network resources if you use GCP. For others, you can check that by referring to the [README](https://github.com/w3f/polkadot-secure-validator#prerequisites).
 
