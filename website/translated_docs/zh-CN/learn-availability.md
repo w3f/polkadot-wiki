@@ -21,7 +21,7 @@ There are six phases of the Availability and the Validity protocol.
 
 The parachain phase of AnV is when the _collator_ of a parachain proposes a _candidate block_ to the validators that are currently assigned to the parachain.
 
-> A __candidate block__ is a new block from a parachain collator that may or may not be valid and must go through validity checks before being included into the Relay Chain.
+> A **candidate block** is a new block from a parachain collator that may or may not be valid and must go through validity checks before being included into the Relay Chain.
 
 ### Relay chain submission phase
 
@@ -38,7 +38,7 @@ When more than half of the parachain validators agree that a particular parachai
 - The state root of the parachain before block execution.
 - The state root of the parachain after block execution.
 
-This information is __constant size__ while the actual PoV block of the parachain can be variable length. It is enough information for anyone that obtains the full PoV block to verify the state transition contained inside of it.
+This information is **constant size** while the actual PoV block of the parachain can be variable length. It is enough information for anyone that obtains the full PoV block to verify the state transition contained inside of it.
 
 ### Availability and unavailability subprotocols
 
@@ -69,4 +69,4 @@ On the hardware end of requirements, a moderately powerful machine should be cap
 ## Further Resources
 
 - [Life of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - Article by Parity analyst Joe Petrowski expounding on the validity checks that a parachain block must pass in order to progress the parachain.
-- [Availability and Validity](https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV) - Paper by the W3F Research Team that specifies the availability and validity protocol in detail.
+-   [Availability and Validity](https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV) - Paper by the W3F Research Team that specifies the availability and validity protocol in detail.
