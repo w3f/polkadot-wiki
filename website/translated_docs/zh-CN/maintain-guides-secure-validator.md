@@ -4,44 +4,44 @@ title: 安全验证人节点
 sidebar_label: 安全验证人节点
 ---
 
-验证人在权益证明网络中负责使网络共识保持一致并验证状态转换。由于验证人数量有限，所验证人是有责任在线并忠诚地执行其任务。
+Validators in a Proof of Stake network are responsible for keeping the network in consensus and verifying state transitions. As the number of validators is limited, validators in the set have the responsibility to be online and faithfully execute their tasks.
 
 验证者的主要工作：
 
-- 必须具有保护验证人签名密钥的架构，使攻击者无法控制和提交会被惩罚的行为。
+- Must have infrastructure that protects the validator's signing keys so that an attacker cannot take control and commit slashable behavior.
 - 必须有高可用性
 
 ## 高可用性
 
-最好保护验证人在线的的方法是将其置于"哨兵节点"后面。哨兵节点可以通在云端架构上配置的全节点，例如 AWS，GCP，Azure。您的验证人节点应放在专用数据中心，并将其限制仅连接到哨兵节点。
+The best way to keep your validator available is to have it behind a layer of "sentry nodes". Sentry nodes are full nodes that can be provisioned on cloud infrastructure, e.g. AWS, GCP, Azure. Your validator node should be placed in a private data center and limit its connections to the sentry nodes.
 
-哨兵节点可以过滤发送到验证人的消息，从不发送重复的消息，使验证人不会接收垃圾消息。同样，如果哨兵节点受到攻击并离线，则可以调配其他云端服务器来替换它使 DDoS 攻击验证人。
+Sentry nodes can filter the messages that they send to the validator, never sending duplicates so that the validator doesn't get spammed. Likewise, if a sentry node is attacked and goes offline, other instances can be provisioned to replace it. DDoS attacks should never make it to the validator.
 
-由于验证人需要 100％ 在线，因此节点操作员可能想支持故障转移。在此设置中，将有一个主验证人节点，和备用验证人节点。而备用验证人仅在主验证节点离线时才响应消息。
+As validators are expected to have 100% uptime, node operators may want to have failovers. In this setup, there would be one primary validator, and a second one that only responds to messages if the primary goes offline.
 
-如果多个验证人节点同时使用同一条会话密钥并且同时在线，那该验证人节点可能会短时间签署多个区块后，会因双重签名而受到系统惩罚。所以正确 配置并有高可用性的设置能有效减少因为 non-responsiveness（无响应）而触发的惩罚。错误设置也会因为增加双重签名风险而被惩罚。对于不同类型的错误和失误造成的惩罚，验证人应当采取不同应对措施。
+If multiple validators do end up online at the same time, your validator may end up signing multiple blocks and will thus get slashed for equivocation. A properly configured, highly available setup like this will reduce your chances of getting slashed for non-responsiveness, but a misconfigured setup will increase your chances of getting slashed for equivocation. This is a trade-off, and we expect that different validators will make different decisions on which side they err towards.
 
 ## 密钥管理
 
-有关密钥的更多信息，请参见[ Polkadot 密钥指南](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/)。验证人架构最重要密钥是 Session 密钥。 这些密钥签署与共识和平行链相关的消息。 尽管 Session 密钥是_不是_帐户密钥，因此无法转移资金，但攻击者可以使用它们来使你实施严重的被惩罚 行为。
+See the [Polkadot Keys guide](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/) for more information on keys. The keys that are of primary concern for validator infrastructure are the Session keys. These keys sign messages related to consensus and parachains. Although Session keys are _not_ account keys and therefore cannot transfer funds, an attacker could use them to commit slashable behavior.
 
-Session 密钥是通过 RPC 调用节点内部生成的。有关设置 Session 密钥的说明，请参见[ Kusama 指南](https://guide.kusama.network/en/latest/try/validate/#set-the-session-key)。这应生成并保存在您的客户端中。当生成新的 Session 密钥时，必须从 Controller 密钥中提交外部交易（Session 证书），以告知链中您的新 Session 密钥。
+Session keys are generated inside the node via RPC call. See the [Kusama guide](https://guide.kusama.network/en/latest/try/validate/#set-the-session-key) for instructions on setting Session keys. These should be generated and kept within your client. When you generate new Session keys, you must submit an extrinsic (a Session certificate) from your Controller key telling the chain your new Session keys.
 
-> **注意:**: Session 密钥也可以在客户端外部生成，并通过 RPC更新到客户端的密钥库中。 对大多数用户，我们建议在客户端內生成密钥。
+> **NOTE:** Session keys can also be generated outside the client and inserted into the client's keystore via RPC. For most users, we recommend using the key generation functionality within the client.
 
 ### 客户端外部签署
 
-Polkadot 也会在之后支持外部客户端签署数据的密钥设备，所以密钥可以存储在另一个设备上。例如：硬件安全模组(HSM) 或 Secure Enclave。然而目前 Session 密钥的签署只能在客户端内进行。
+In the future, Polkadot will support signing payloads outside the client so that keys can be stored on another device, e.g. a hardware security module (HSM) or secure enclave. For the time being, however, Session key signatures are performed within the client.
 
-> **注意: ** HSM 不是灵丹妙药。 它们不包含任何逻辑，只会签名并返回接收到的任何有效负载。 因此，获得对您的验证人节点的访问权限的攻击者仍然可能会犯有严重的行为。
+> **NOTE:** HSMs are not a panacea. They do not incorporate any logic and will just sign and return whatever payload they receive. Therefore, an attacker who gains access to your validator node could still commit slashable behavior.
 
-高可用性的例子: 安全设定是把哨兵节点设置在多个验证人节点前面，同时连接到单独的签名电脑。即使如果攻击者能够访问到验证人节点，该电脑可以实现签名逻辑被免双重签名。
+An example of highly available, secure setup would be a layer of sentry nodes in front of multiple validators connected to a single signing machine. This machine could implement signing logic to avoid equivocation, even if an attacker gained access to a validator node.
 
 ## 监视工具
 
-- [ Telemetry ](https://github.com/paritytech/substrate telemetry) Telemetry 可以跟踪节点的资料包括运行版本、区块高度、CPU & 内存使用情况、区块传播时间等。
+- [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details including the version you are running, block height, CPU & memory usage, block propagation time, etc.
 
-- [Prometheus](https://prometheus.io/) - 监控堆栈, 包括 [Grafana](https://grafana.com) 日志收集功能的监控应用。它包括了警告, 查询, 图像及监控功能并适用于云端和本地系统。数据来自于`substrate-telemetry` 可以通过 [这](https://github.com/w3f/substrate-telemetry-exporter) Prometheus 使它汇出。
+- [Prometheus](https://prometheus.io/)-based monitoring stack, including [Grafana](https://grafana.com) for dashboards and log aggregation. It includes alerting, querying, visualization, and monitoring features and works for both cloud and on-premise systems. The data from `substrate-telemetry` can be made available to Prometheus through exporters like [this](https://github.com/w3f/substrate-telemetry-exporter).
 
 ## Linux 最佳实践
 
@@ -49,22 +49,22 @@ Polkadot 也会在之后支持外部客户端签署数据的密钥设备，所�
 - 保持更新系统的安全补丁
 - 启动并设置防火墙
 - 永不允许基于密码的ssh，只能使用基于密钥的访问。
-- 禁用不必要的 SSH 子系统 (banner，motd，scp，X11 转发)并加强SSH配置（[入门指南](https://stribika.github.io/2015/01/04/secure-secure-shell.html)）。
+- Disable non-essential SSH subsystems (banner, motd, scp, X11 forwarding) and harden your SSH configuration ([reasonable guide to begin with](https://stribika.github.io/2015/01/04/secure-secure-shell.html)).
 - 定期备份您的存储。
 
 ## 结论
 
-- 不要把验证人公开在互联网上，它们应只能由允许的用户访问。因此我们提出了分层的方法，把验证人与互联网隔开，并通过面向公众的中间层节点连接到Polkadot 网络。
+- Do not expose validators to the public internet, they should only be accessible by allowed parties. Therefore, we propose a layered approach in which the validators are isolated from the internet and connect to the Polkadot network via an intermediate layer of public-facing nodes.
 
-- 目前 Polkadot / Substrate 无法与 HSM /SGX 交互，因此我们需要向验证人机器提供签密钥种子。 该密钥保留在内存中以进行签名操作，并保留在磁盘上(使用密码加密)。
+- At the moment, Polkadot/Substrate can't interact with HSM/SGX, so we need to provide the signing key seeds to the validator machine. This key is kept in memory for signing operations and persisted to disk (encrypted with a password).
 
-- 鉴于高可用性设置始终存有双重签名的风险，并且目前没有内置机制可以防止这个情况，因此我们建议使用单个验证人节点来避免惩罚。 离线造成的惩罚远少于双重签名。
+- Given that HA setups would always be at risk of double-signing and there's currently no built-in mechanism to prevent it, we propose having a single instance of the validator to avoid slashing. Slashing penalties for being offline are much less than those for equivocation.
 
 ### 验证人
 
-- 验证人应仅运行 Polkadot 执行檔，并且关上除已配置 p2p 端口以外的其它任何端口。
+- Validators should only run the Polkadot binary, and they should not listen on any port other than the configured p2p port.
 
-- 验证程序应在裸机（而不是 VM）上运行。这将防止云端服务器的某些可用性问题，以及来自相同硬件上其他 VM 的潜在攻击。 验证人配置应当是自动化以代码定义。该代码应保存在私有(Github)，进行审查，审核和测试。
+- Validators should run on bare-metal machines, as opposed to VMs. This will prevent some of the availability issues with cloud providers, along with potential attacks from other VMs on the same hardware. The provisioning of the validator machine should be automated and defined in code. This code should be kept in private version control, reviewed, audited, and tested.
 
 - Session 密钥应以安全的方式生成和提供。
 
@@ -72,25 +72,25 @@ Polkadot 也会在之后支持外部客户端签署数据的密钥设备，所�
 
 - Polkadot 应该以非 root 用户身份运行。
 
-- 每个验证人都应通过至少两个公开节点连接到 Polkadot 网络。连接应使用进行，并且服务器无法访问互联网，所以唯一的可能是通过VPN连接。
+- Each validator should connect to the Polkadot network through a set of at least 2 public-facing nodes. The connection is done through a VPN and the machine can't access the public internet, thus the only possible connection is through the VPN.
 
 ### 面向公众的节点
 
-- 每个验证人至少有两个节点在两个不同的云端服务器上运行，并且它们仅公开 p2p 端口。
+- At least two nodes associated with each validator run on at least two different cloud providers and they only publicly expose the p2p port.
 
-- 它们可以在 Kubernetes 上作容器运行，我们可以定义所需的状态（多少 replicas 总是在线，网络和存储设置)。验证人和公开众节点之间的连接是通过 VPN 。他们具有通用的 Kubernetes 安全设置（限制性服务帐户，pod 安全策略和网络策略）。
+- They can run as a container on Kubernetes and we can define the desired state (number of replicas always up, network and storage settings); the connection between the validator and the public-facing nodes is done through a VPN. They have the common Kubernetes security setup in place (restrictive service account, pod security policy and network policy).
 
 - 应以安全的方式提供节点密钥。
 
-- 仅运行 Polkadot 容器，没有其他应用服务。VPN 代理应在同一Pod 上运行 (共享网络堆栈)。
+- Only run the Polkadot container, no additional services. The VPN agent should run on a sidecar in the same pod (sharing the same network stack).
 
 ### 监测
 
-- 应监控面向公众和验证人节点，并定义几种故障情况警报。
+- Public-facing nodes and the validator should be monitored and alerts set for several failure conditions defined.
 
 - 应该有用于管理警报的待命轮换。
 
-- 应该有一个清晰的协议，其中包含针对每个警报的每个级别执行的操作以及升级策略。
+- There should be a clear protocol with actions to perform for each level of each alert and an escalation policy.
 
 ## 资源
 
