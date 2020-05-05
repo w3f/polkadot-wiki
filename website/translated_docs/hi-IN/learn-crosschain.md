@@ -10,7 +10,7 @@ The input and output queue are sometimes referred to in the codebase as "ingress
 
 ## Overview
 
-- Cross-chain messages will *not* go on to the relay chain.
+- Cross-chain messages will _not_ go on to the relay chain.
 - Cross-chain messages will be constrained to a maximum size in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching parachain would be aware of this block.
 - Collator nodes are responsible for routing messages between chains.
