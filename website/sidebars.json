@@ -7,7 +7,8 @@
       "glossary",
       "news",
       "research",
-      "grants"
+      "grants",
+      "claims"
     ],
     "Build": [
       "build-index",
