@@ -4,7 +4,7 @@ title: Tool Index
 sidebar_label: Tool Index
 ---
 
-在这里，我们提供了满足您开发需求的工具列表，它将按照编程语言进行分类。目前，Rust生态系统最为成熟，您可以现在就开始在Substrate上进行构建。随着围绕其它编程语言的生态系统不断扩展，我们将陆续完善以下章节。
+Here we provide a list of tools available for your development needs. They are sorted by programming language. Right now, the Rust ecosystem is the most mature and it's possible to get started by building on Substrate today. As the ecosystems surrounding other programming languages expand, the sections below will be filled out.
 
 ## 区块资源管理器
 
