@@ -120,4 +120,4 @@ address(addresses: string[], threshold: number, ss58prefix?: number) {
 const multiSigAddress = address(addresses, 2);
 ```
 
-The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts).  This is easier than generating them manually.
+The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
