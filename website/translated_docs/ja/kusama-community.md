@@ -4,7 +4,6 @@ title: Kusama Community
 sidebar_label: Community
 ---
 
-
 ## General
 
 [Kusama forum](https://forum.kusama.network/)
@@ -16,6 +15,7 @@ sidebar_label: Community
 [KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
 
 ## Report an issue or submit bugs
+
 [sos@kusama.network](mailto:sos@kusama.network)
 
 ## Validator chat
@@ -29,4 +29,3 @@ To join the Chinese Validator chat, message [Anson](https://raw.githubuserconten
 [@kusamanetwork](https://twitter.com/kusamanetwork)
 
 [r/kusama](https://reddit.com/r/kusama)
-
