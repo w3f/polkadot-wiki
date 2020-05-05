@@ -75,7 +75,6 @@ sidebar_label: Links
 - [Cumulus](https://github.com/paritytech/cumulus) - A library for making Substrate-built chains compatible with Polkadot.
 - [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot co-founder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.
 
-
 ### Wasm
 
 - [Wasmi](https://github.com/paritytech/Wasmi) - WebAssembly interpreter written in Rust.
