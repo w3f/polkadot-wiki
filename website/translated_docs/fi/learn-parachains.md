@@ -26,7 +26,7 @@ Parachains are not required to have their own token. If they do, is up to the pa
 
 ## Crowdfunding parachains
 
-Polkadot allows for parachains to  crowdfund their slots in a decentralized and safe way. The logic for this is handled in the [crowdfunding pallet](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs).
+Polkadot allows for parachains to crowdfund their slots in a decentralized and safe way. The logic for this is handled in the [crowdfunding pallet](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs).
 
 During a parachain auction, anyone can create a new crowdfunding campaign for a parachain slot. When a campaign is created, the range of slots (i.e. the duration of the lease) is specified. Up to four slots, for a total time duration of roughly two years, can be selected. The creator of the crowdfund becomes the owner of the campaign, and can later upload the parachain's code. When creating a campaign, a crowdfunding "cap" is also specified. The crowdfund will refuse to accept funds after the cap has been reached.
 
