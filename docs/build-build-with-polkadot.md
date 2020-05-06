@@ -199,7 +199,8 @@ connected to Polkadot. This includes:
 Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced Cumulus,
 which you can watch below.
 
-[![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/thgtXq5YMOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" >
 
 ### How to deploy your parachain or parathread in Polkadot
 
