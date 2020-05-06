@@ -57,12 +57,15 @@ const siteConfig = {
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
-    '/js/custom.js'
+    '/js/custom.js',
+    '/js/klaro-config.js',
+    '/js/klaro.js'
   ],
 
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
     'https://fonts.googleapis.com/css?family=Muli&display=swap',
+    '/css/klaro.css'
   ],
 
   // On page navigation for the current documentation page.
