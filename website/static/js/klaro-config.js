@@ -193,11 +193,6 @@ var klaroConfig = {
   // This is a list of third-party apps that Klaro will manage for you.
   apps: [
       {
-          name: 'googleFonts',
-          title: 'Google Fonts',
-          purposes: ['styling'],
-      },
-      {
           name: 'cloudflare',
           title: 'Cloudflare',
           purposes: ['security'],
