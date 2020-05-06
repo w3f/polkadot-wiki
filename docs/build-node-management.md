@@ -4,21 +4,21 @@ title: Node Management
 sidebar_label: Node Management
 ---
 
-This page contains basic information about running a Parity Polkadot client. There are a lot of
-ways to obtain/run a client, e.g. compiling from source, running in Docker, or downloading a
-binary. This guide will always refer to the executable as `polkadot`.
+This page contains basic information about running a Parity Polkadot client. There are a lot of ways
+to obtain/run a client, e.g. compiling from source, running in Docker, or downloading a binary. This
+guide will always refer to the executable as `polkadot`.
 
 **Always refer to the client's help `polkadot --help` for the most up-to-date information.**
 
 > Other client implementation teams: Feel free to make a PR to this page with instructions (or a
-link to instructions) for your client.
+> link to instructions) for your client.
 
 ## Basic Node Operations
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`,
-or a custom chain spec.
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or
+a custom chain spec.
 
 **Archive node**
 
@@ -54,11 +54,11 @@ Therefore, when syncing the chain, the client will execute blocks from past runt
 associated Wasm binary. This feature also allows forkless upgrades: the client can execute a new
 runtime without updating the client.
 
-Parity's Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set
-the preferred method to use when executing Wasm with `--wasm-execution <Interpreted|Compiled>`.
-Compiled execution will run much faster, especially when syncing the chain, but is experimental and
-may use more memory/CPU. A reasonable tradeoff would be to sync the chain with compiled execution
-and then restart the node with interpreted execution.
+Parity's Polkadot client has two Wasm execution methods, interpreted (default) and compiled. Set the
+preferred method to use when executing Wasm with `--wasm-execution <Interpreted|Compiled>`. Compiled
+execution will run much faster, especially when syncing the chain, but is experimental and may use
+more memory/CPU. A reasonable tradeoff would be to sync the chain with compiled execution and then
+restart the node with interpreted execution.
 
 ## File Structure
 
@@ -115,8 +115,8 @@ The Polkadot client has a number of log targets. The most interesting to users m
 - `txpool`
 - `usage`
 
-Other targets include: `db, gossip, peerset, state-db, state-trace, sub-libp2p, trie,
-wasm-executor, wasm-heap`.
+Other targets include:
+`db, gossip, peerset, state-db, state-trace, sub-libp2p, trie, wasm-executor, wasm-heap`.
 
 The log levels, from least to most verbose, are:
 
@@ -140,6 +140,6 @@ puts your node at higher risk of attack. You can run your own, private
 [this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
-expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate
-has a [vizualizing node metrics
-tutorial](https://substrate.dev/docs/en/next/tutorials/visualizing-node-metrics/).
+expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has
+a
+[vizualizing node metrics tutorial](https://substrate.dev/docs/en/next/tutorials/visualizing-node-metrics/).

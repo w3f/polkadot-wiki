@@ -10,7 +10,7 @@ In this guide, we will walk you through how to configure a validator that sits i
 
 ## VPN 安装 & 设置
 
-我们会使用 Wireguard 作为 VPN。 Wireguard 是快速和安全的 VPN ，它使用最新的密码学。如果你有兴趣想了解更多关于 Wireguard，前往[这里](https://www.wireguard.com/)。在我们前往下一步之前，先设置防火墙并打开所需要的端口。
+We will use Wireguard to configure the VPN. Wireguard is a fast and secure VPN that uses state-of-the-art cryptography. If you want to learn more about Wireguard, please go [here](https://www.wireguard.com/). Before we move on to the next step, configure the firewall to open the required ports.
 
 ```bash
 # ssh port
@@ -36,7 +36,7 @@ apt-get install wireguard
 
 ### 2. 生成密钥
 
-这里有二个指令当你设置 Wireguard 时会经常使用，`wg` 是设置程序用作管理 Wireguard 隧道接口，而 `wg-quick` 是用于启动或停止。
+There are two commands you will use quite a bit when setting up Wireguard; `wg` is the configuration utility for managing Wireguard tunnel interfaces; `wg-quick` is a utility for starting and stopping the interface.
 
 需要生成公钥/私钥对，请执行以下指令:
 
@@ -46,11 +46,11 @@ umask 077
 wg genkey | sudo tee privatekey | wg pubkey | sudo tee publickey
 ```
 
-You will see that two files, `publickey` and `privatekey`, have been created.  As may be guessed from their names, `publickey` contains the public key and `privatekey` contains the private key of the keypair.
+You will see that two files, `publickey` and `privatekey`, have been created. As may be guessed from their names, `publickey` contains the public key and `privatekey` contains the private key of the keypair.
 
 ### 3. 设置
 
-在 `/etc/wireguard/` 目录下创建 `wg0.conf` 文档，这将会用于设置其界面。
+Now create a `wg0.conf` file under the `/etc/wireguard/` directory. This file will be used to configure the interface.
 
 这是设置**验证人** `wg0.conf` 的模版。
 
@@ -62,12 +62,12 @@ Address = 10.0.0.1/32
 PrivateKey = 8MeWtQjBrmYazzwni7s/9Ow37U8eECAfAs0AIuffFng=
 # listening port of your server
 ListenPort = 51820
-# if you use wg to add a new peer when running, it will automatically 
+# if you use wg to add a new peer when running, it will automatically
 # save the newly added peers to your configuration file
 # without requiring a restart
 SaveConfig = true
 
-# Public Node A   
+# Public Node A
 [Peer]
 # replace it to the public node A public key
 PublicKey = Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
@@ -155,8 +155,8 @@ You need to execute the following command to start your validator and then copy 
 ```
 2020-04-16 19:40:52 ----------------------------
 2020-04-16 19:40:52 This chain is not in any way
-2020-04-16 19:40:52       endorsed by the       
-2020-04-16 19:40:52      KUSAMA FOUNDATION      
+2020-04-16 19:40:52       endorsed by the
+2020-04-16 19:40:52      KUSAMA FOUNDATION
 2020-04-16 19:40:52 ----------------------------
 2020-04-16 19:40:52 Parity Polkadot
 2020-04-16 19:40:52 ✌️  version 0.7.29-13ec3023-x86_64-linux-gnu
@@ -179,11 +179,12 @@ polkadot \
 ```
 
 Result:
+
 ```
 2020-04-16 19:41:53 ----------------------------
 2020-04-16 19:41:53 This chain is not in any way
-2020-04-16 19:41:53       endorsed by the       
-2020-04-16 19:41:53      KUSAMA FOUNDATION      
+2020-04-16 19:41:53       endorsed by the
+2020-04-16 19:41:53      KUSAMA FOUNDATION
 2020-04-16 19:41:53 ----------------------------
 2020-04-16 19:41:53 Parity Polkadot
 2020-04-16 19:41:53 ✌️  version 0.7.29-13ec3023-x86_64-linux-gnu
@@ -202,7 +203,7 @@ You are also required to use the sentry's node identity when starting your valid
 ```
 polkadot \
 --name "Validator" \
---reserved-only \ 
+--reserved-only \
 --reserved-nodes /ip4/SENTRY_VPN_ADDRESS/tcp/30333/p2p/SENTRY_NODE_IDENTITY \
 --validator
 ```

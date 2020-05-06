@@ -4,7 +4,7 @@ title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
-_常见问题主要针对有兴趣为 Polkadot 开发应用程序的用户提出的技术问题，如果您有更深入的问题，你可以通过搜索[ Polkadot 网络常见问题](https://polkadot.network/faq)中找到答案。如果您还有未解决的问题，请随时在 Polkadot Watercooler [ Riot 频道上提问](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)。 _
+_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question which is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
 ## Polkadot Launch
 
@@ -22,7 +22,8 @@ The final step to transition to full-functioning Polkadot is the enabling of tra
 
 Initially only a few authorized validators will be securing the network. However, as [detailed in the answer above](#what-is-the-launch-process-of-polkadot-beta), the network will right away be available to validators that want to register their intention to validate. The transition to Proof-of-Stake will largely depend on when a sufficient number of validators have registered and are ready to take over the security of the network. This number can be as low as 50 but probably closer to 100.
 
-The launch process is expected to be similar to that of the Kusama network. Kusama transitioned to PoS when there were 50 validators ready, but in a matter of months scaled up the validator count to 225. Polkadot's validator count is expected to scale up in a similar fashion.
+The launch process is expected to be similar to that of the Kusama network. Kusama transitioned to PoS when there were 50 validators ready, but in a matter of months scaled up the validator count to
+{{ num_validators }}. Polkadot's validator count is expected to scale up in a similar fashion.
 
 ## Validators
 
@@ -56,7 +57,8 @@ You can also use some tools some to perform estimations.
 
 Polkadot's goal to have 1000 validators is set to be something that is practically achievable in the short term with high confidence of good performance in a live environment. Furthermore, validators in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible on Polkadot the number can scale up to hundreds of thousands. Since validators are performing critical consensus work to maintain the security of the chain including all of its shards, a more modest number of validators is estimated to start. Upon later improvements, such as implementing signature aggregation for finalization messages, the number of validators could reasonably scale up. However, increasing validators above one thousand remains a goal for later iterations of Polkadot.
 
-It is also worth mentioning that one thousand validators is more than the number of validators of similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders are operating with around 150 validators, while Kusama is running with 225 securely as of April 2020.
+It is also worth mentioning that one thousand validators is more than the number of validators of similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders are operating with around 150 validators, while Kusama is securely running with
+{{ num_validators }}.
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator is running their own validating node and performing full verification of the Relay Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
@@ -92,7 +94,7 @@ A portion of the inflation is rewarded to validators for performing their duties
 
 Testnet DOT tokens are freely available from a variety of sources. See the [DOT page](learn-DOT) for details.
 
-The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)).  Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
 
 DOT tokens are not transferable until the launch of Polkadot Beta is complete. Any transfers of DOTs before that time are illegitimate and unauthorized. DOTs are currently represented on Ethereum as the DOT Indicator Token, these cannot be moved from the current allocation address. Individuals with an allocation of DOTs can always keep a copy of their private key, therefore it is extremely risky for individuals to participate in trading of DOTs before Polkadot launch.
 
@@ -110,7 +112,7 @@ Blockchains need a method to adapt and evolve. Therefore, an on-chain governance
 
 A savvy reader might have noticed that the answer to the previous question endowed the token holder with the ultimate responsibility to ensure that Polkadot's governance does not fail. By following the train of this assertion, one might assume that Polkadot's governance is susceptible to becoming ruled by a few large token holders (called _whales_ in trading parlance) and therefore become a mere plutocracy (rule of the rich).
 
-There are several other mechanisms that are built-in to the governance system to resist this plutocratic tendency. One of these mechanisms is called conviction voting, and imbues greater voting power to token holders who are willing to lock their tokens on the protocol for longer lengths of time. Longer lock-ups display _conviction_ in a vote. Conviction voting could allow a highly determined minority to overrule the vote of an apathetic majority in certain situations. Another mechanism is known as Adaptive Quorum Biasing.  This makes proposals have a varying threshold for approval or rejection based on what part of the governance protocol the proposal originated in. For details on the subtleties of Polkadot's governance system, please see the [governance page](learn-governance).
+There are several other mechanisms that are built-in to the governance system to resist this plutocratic tendency. One of these mechanisms is called conviction voting, and imbues greater voting power to token holders who are willing to lock their tokens on the protocol for longer lengths of time. Longer lock-ups display _conviction_ in a vote. Conviction voting could allow a highly determined minority to overrule the vote of an apathetic majority in certain situations. Another mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for approval or rejection based on what part of the governance protocol the proposal originated in. For details on the subtleties of Polkadot's governance system, please see the [governance page](learn-governance).
 
 ## Parachains
 
@@ -146,7 +148,7 @@ The \[Interplanetary Filesystem][ipfs\] (IPFS) is a peer-to-peer hypermedia prot
 
 ### What is the minimum amount of KSM I can have in my account?
 
-We recommend users always keep at least 0.1 KSM in their account in order to avoid the reaping threshold of 0.01 KSM.  If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM.   This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provide dramatic benefits in terms of scalability.
+We recommend users always keep at least 0.1 KSM in their account in order to avoid the reaping threshold of 0.01 KSM. If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM. This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provide dramatic benefits in terms of scalability.
 
 ### What are the transfer fees for Kusama?
 
@@ -157,7 +159,6 @@ base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
 Please see the [fee calculation](https://www.substrate.io/kb/runtime/fees) page in the Substrate documentation for more detailed information.
-
 
 ## Answered by Gav series
 

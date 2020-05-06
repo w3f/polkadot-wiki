@@ -21,13 +21,13 @@ Each page has an "Edit" button on the top right of the content. By clicking this
 There are a few basic ground-rules for contributors:
 
 1. **ห้าม `--force` push** หรือดัดแปลงประวัติ ของ Git ด้วยวิธีใดๆ
-2. แนะนำให้ใช้ Pull requests แทน Issues โดยเฉพาะสำหรับการแก้ไขเล็กน้อยเช่นการพิมพ์ผิด ควรใช้ Issues สำหรับการเปลี่ยนแปลงใหญ่โตหรือเนื้อหาที่ขาดหายไป
+2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
 3. ** ควรใช้ branch ที่ไม่ใช่ master** สำหรับงานที่กำลังดำเนินอยู่
-4. **ถ้าต้องการแก้ไขจุดสำคัญ ** ควรใช้ ** Pull Request ** เพื่อขอความคิดเห็นจากผู้สนับสนุนท่านอื่น
-5. ทางเรา _ สนับสนุน _ ให้ใช้ Pull Request เพื่อขอความคิดเห็นถึงแม้ว่าจะไม่ใช่ contribution ที่สำคัญ อย่างไรก็ตามการทำ Pull Request ขึ้นอยู่กับวิจารณญาณของผู้สนับสนุน
+4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
+5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
 6. ผู้สนับสนุนควรพยายามที่จะปฏิบัติตามสไตล์ ภาษา และเลย์เอาท์ ของ Markdown ที่มีอยู่
-7. ควรใช้ไวยากรณ์ที่ถูกต้องตลอดเวลา Pull requests ที่มีการพิมพ์ผิดจะไม่ถูก merge จนกว่าจะได้รับการแก้ไข
-8. ควรมีความระมัดระวังในการให้เนื้อหา ควรคำนึงถึงวัตถุประสงค์และให้ความรู้มากที่สุดเท่าที่ทำได้ โดยไม่ควรมีการให้ความคิดส่วนตัวและไม่ควรมีอคติ
+7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
+8. Care should be taken to remain as objective and informative as possible. There should be no editorializing, and external bias should not be present.
 
 ## การเปลี่ยนแปลงของการกำหนัดนี้
 

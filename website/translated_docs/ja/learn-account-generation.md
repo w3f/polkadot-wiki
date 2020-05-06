@@ -6,10 +6,11 @@ description: Step-by-step guides on generating a Polkadot account.
 ---
 
 There are several ways to generate a Polkadot address:
- - [Polkadot.js Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
- - [Subkey](#subkey) **ADVANCED and MOST SECURE**
- - [Polkadot.js Web Apps](#polkadotjs)
- - [Parity Signer](#parity-signer) **COMING SOON**
+
+- [Polkadot.js Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
+- [Subkey](#subkey) **ADVANCED and MOST SECURE**
+- [Polkadot.js Web Apps](#polkadotjs)
+- [Parity Signer](#parity-signer) **COMING SOON**
 
 ## DISCLAIMER: Key Security
 
@@ -151,7 +152,6 @@ When you have entered valid information for both, the color of the text boxes wi
 
 Please see above for information on [storing your key safely](#disclaimer-key-security).
 
-
 ### Create and backup account
 
 Click “Save” and your account will be created. It will also generate a backup file that you should save to your computer. Ideally, you would also save it on an external hard drive or thumb drive, or print it out and be able to re-enter it later. You should not store it in cloud storage, email it to yourself, etc.
@@ -192,6 +192,6 @@ Signatories should communicate off-chain to prevent many pending transactions an
 
 Parity Signer is a secure way of storing your DOTs on an air-gapped device.
 
-__Coming soon!__
+**Coming soon!**
 
 Parity Signer requires the genesis hash of the chain to be known in order to derive new accounts. Since Polkadot is not launched yet - the genesis hash is not known. Expect a Parity Signer release to follow the launch of Polkadot that allows you to create accounts.

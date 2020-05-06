@@ -23,7 +23,7 @@ Currently Kusama is built from the tip of master and is the default option when 
 Run the Polkadot binary:
 
 ```
-polkadot 
+polkadot
 ```
 
 and you will connect and start syncing to Kusama.

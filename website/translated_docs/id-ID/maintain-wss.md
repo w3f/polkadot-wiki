@@ -8,7 +8,7 @@ You might want to host a node on one server and then connect to it from a UI hos
 
 _Note: this should **only** be done for sync nodes used as back-end for some dapps or projects. Never open websockets to your validator node - there's no reason to do that and it can only lead to security gaffes!_
 
-In this guide we'll be using Ubuntu 18.04 hosted on a $10 DigitalOcean droplet. We'll assume you're using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
+In this guide we'll be using Ubuntu 18.04 hosted on a \$10 DigitalOcean droplet. We'll assume you're using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
 
 ## Set up a node
 

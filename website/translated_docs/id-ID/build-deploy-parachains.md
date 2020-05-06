@@ -8,15 +8,15 @@ Panduan ini telah diperbarui untuk bekerja dengan testnet Alexander.
 
 ## Cara melihat parachains
 
-Pada [ UI Polkadot ](https://polkadot.js.org/apps/#/explorer) navigasikan ke tab ` Keadaan Rantai `. Pilih modul ` parachains ` dan ` parachains () ` lalu tekan tombol ` + `. Ini akan mengembalikan array dari parachains yang saat ini aktif.
+On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
 
 ## Cara menyebarkan parachain Adder
 
-**Cara menantang parachain Adder.**
+**You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
 
-Parachain ` adder ` adalah parachain sederhana yang akan menyimpan nilai dalam penyimpanan dan menambah nilai ini saat pesan dikirim ke sana. Itu dapat ditemukan di repositori Polkadot di bawah folder ` test-parachains `.
+The `adder` parachain is a simple parachain which will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
 
-> Versi video yang sedikit ketinggalan zaman dari panduan ini yang disajikan oleh Adrian Brink tersedia [ di sini ](https://www.youtube.com/watch?v=pDqkzvA4C0E). Ketika kedua panduan ini berbeda, silakan merujuk teks tertulis ini sebagai definitif dan diperbarui.
+> A slightly out-of-date video version of this guide presented by Adrian Brink is available [here](https://www.youtube.com/watch?v=pDqkzvA4C0E). When the two guides diverge, please refer to this written text as definitive and updated.
 
 ### Membangun kode
 
@@ -36,16 +36,16 @@ sudo apt install make clang pkg-config libssl-dev
 rustup update
 ```
 
-Sekarang navigasikan ke folder ` test-parachains ` di repositori kode Polkadot dan jalankan skrip build.
+Now navigate to the `test-parachains` folder in the Polkadot code repository and run the build script.
 
 ```bash
 cd test-parachains
 ./build.sh
 ```
 
-Ini akan membuat Wasm dieksekusi dari parachain ` adder ` sederhana yang terkandung dalam folder ini. Parachain ini hanya akan menambahkan pesan yang dikirim ke sana. Wasm executable akan menampilkan ke jalur ` parachains / test / res / adder.wasm ` jadi pastikan Anda dapat menemukannya di sana.
+This will create the Wasm executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The Wasm executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
 
-Anda perlu membangun dan menjalankan node collator untuk mendapatkan status asal dari parachain ini.
+You will need to build and run the collator node in order to get the genesis state of this parachain.
 
 Navigasikan ke direktori ` test-parachains / adder / collator ` dan jalankan perintah ` build ` dan ` run `.
 
@@ -64,27 +64,27 @@ Dec: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 Hex: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000011b4d03dd8c01f1049143cf9c4c817e4b167f1d1b83e5c6f0f10d89ba1e7bce
 ```
 
-Informasi penting adalah string hex. Ini adalah kondisi awal Anda dan Anda harus menyimpannya untuk langkah selanjutnya.
+The important information is the hex string. This is your genesis state and you will need to save it for the next steps.
 
 ### Menjalankan parachain
 
-Buka [ UI Polkadot ](https://polkadot.js.org/apps/#/extrinsics) pada tab ` Extrinsics `. Pilih akun dari mana Anda ingin menggunakan parachain. Anda perlu membuat referendum untuk menggunakan parachain.
+Go to [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics) on the `Extrinsics` tab. Select the account you wish to deploy the parachain from. You will need to create a referendum to deploy the parachain.
 
-Klik pada `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
+Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 
-Pada input ` id ` masukkan id dari parachain. Dalam kasus adder sederhana, itu akan menjadi ` 100 `. Di bidang ` kode ` klik pada tombol halaman dan kemudian unggah biner ` adder.wasm ` yang telah dikompilasi dari sebelumnya. Dalam ` initial_head_data ` kami akan menyalin dan menempelkan data hex yang kami dapatkan dari menjalankan node collator. Dalam bidang ` value ` Anda harus memasukkan nilai minimum yang diperlukan untuk membuat referendum. Pada saat penulisan ini <em x-id = "4"> 5 DOT </em> di Alexander testnet.
+In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
 
 ![mendaftarkan parachain](assets/parachain/register.png)
 
-Jika Anda menavigasi ke tab ` Demokrasi ` Anda akan dapat melihat proposal Anda di bagian proposal.
+If you navigate to the `Democracy` tab you will be able to see your proposal in the proposals section.
 
-Setelah Anda menunggu proposal menjadi referendum, Anda akan dapat memilih ` Tidak ` atau ` Aye ` di atasnya. Mungkin, Anda akan memilih Aye karena ini akan menjadi suara untuk penyebaran parachain Anda.
+Once you wait for the proposal to become a referendum you will be able to vote `Nay` or `Aye` on it. Assumably, you will vote Aye as this will be a vote for the deployment of your parachain.
 
 ![referendum parachain](assets/parachain/referendum.png)
 
-Setelah periode pemungutan suara referendum Anda berlangsung, Anda akan dapat menanyakan keadaan parachain Anda.
+After the voting period of your referendum goes through you will be able to query the state of your parachain.
 
-Anda dapat pergi ke tab ` Status Rantai ` dan dengan menanyakan kondisi ` parachains ` Anda harus dapat melihat beberapa informasi tentang parachain Anda.
+You can go to the `Chain State` tab and by querying the `parachains` state you should be able to see some information on your parachain.
 
 ![info parachain](assets/parachain/info.png)
 

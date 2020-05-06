@@ -18,7 +18,7 @@ An authority is a generic term for the role in a blockchain that is able to part
 
 ## BABE
 
-_B_lind _A_ssignment of _B_lock _E_xtension is Polkadot's block production mechanism.
+\_B_lind \_A_ssignment of \_B_lock \_E_xtension is Polkadot's block production mechanism.
 
 ## Block
 
@@ -120,7 +120,7 @@ A permanent diversion of a blockchain that can occur quickly due to a high prior
 
 ## Hard Spoon
 
-Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of *the same blockchain*.
+Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of _the same blockchain_.
 
 ## Inherent
 

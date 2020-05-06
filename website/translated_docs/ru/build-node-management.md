@@ -87,8 +87,7 @@ The Polkadot client has a number of log targets. The most interesting to users m
 - `txpool`
 - `usage`
 
-Other targets include: `db, gossip, peerset, state-db, state-trace, sub-libp2p, trie,
-wasm-executor, wasm-heap`.
+Other targets include: `db, gossip, peerset, state-db, state-trace, sub-libp2p, trie, wasm-executor, wasm-heap`.
 
 The log levels, from least to most verbose, are:
 

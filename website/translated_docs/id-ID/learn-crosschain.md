@@ -4,39 +4,39 @@ title: Berlalunya pesan lintas-rantai (XCMP)
 sidebar_label: Berlalunya pesan lintas-rantai (XCMP)
 ---
 
-Transaksi lintas-rantai diselesaikan menggunakan mekanisme antrian sederhana yang berbasis di sekitar pohon Merkle untuk memastikan kesetiaan. Merupakan tugas validator rantai-relay untuk memindahkan transaksi pada antrian output dari satu parachain ke dalam antrian input dari parachain tujuan.
+Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
 
-Antrian input dan output kadang-kadang disebut dalam basis kode sebagai pesan "masuk" dan "keluar".
+The input and output queue are sometimes referred to in the codebase as "ingress" and "egress" messages.
 
 ## Tinjauan
 
-- Pesan lintas-rantai *bukan* tidak akan melanjutkan ke rantai relai.
+- Cross-chain messages will _not_ go on to the relay chain.
 - Pesan lintas rantai akan dibatasi hingga ukuran maksimum dalam byte.
-- Parachain diizinkan untuk memblokir pesan dari parachain lain, dalam hal ini parachain pengirim akan mengetahui blok ini.
+- Parachains are allowed to block messages from other parachains, in which case the dispatching parachain would be aware of this block.
 - Node kolator bertanggung jawab untuk merutekan pesan antar rantai.
-- Kolektor menghasilkan daftar pesan "keluar" dan akan menerima pesan "masuk" dari parachain lain.
+- Collators produce a list of "egress" messages and will receive the "ingress" messages from other parachains.
 - Di setiap blok, parachains diharapkan untuk merutekan pesan dari beberapa subset dari semua parachain lainnya.
-- Ketika seorang kolektor menghasilkan blok baru untuk diserahkan kepada validator, ia akan mengumpulkan informasi antrian masuk terbaru dan memprosesnya.
-- Validator akan memeriksa bukti bahwa kandidat baru untuk blok parachain berikutnya mencakup pemrosesan pesan masuk yang diharapkan ke parachain itu.
+- When a collator produces a new block to hand off to a validator, it will collect the latest ingress queue information and process it.
+- Validators will check a proof that the new candidate for the next parachain block includes the processing of the expected ingress messages to that parachain.
 
 ## Contoh
 
-Sebuah kontrak pintar yang ada pada parachain A akan merutekan pesan ke parachain B di mana kontrak pintar lain disebut yang melakukan transfer beberapa aset dalam rantai itu.
+A smart contract that exists on parachain A will route a message to parachain B in which another smart contract is called that makes a transfer of some assets within that chain.
 
-Charlie mengeksekusi kontrak pintar pada parachain A yang memulai pesan lintas-rantai baru untuk tujuan kontrak pintar pada parachain B.
+Charlie executes the smart contract on parachain A which initiates a new cross-chain message for the destination of a smart contract on parachain B.
 
-Node kolator parachain A akan menempatkan pesan rantai-silang baru ini ke dalam antrian pesan keluar, bersama dengan ` tujuan ` dan ` timestamp `.
+The collator node of parachain A will place this new cross-chain message into its outbound messages queue, along with a `destination` and a `timestamp`.
 
-Node kolator parachain B secara rutin mengirim semua node collator lainnya yang meminta pesan baru (difilter oleh bidang ` tujuan `). Ketika kolektor parachain B melakukan ping berikutnya, ia akan melihat pesan baru ini di parachain A dan menambahkannya ke antrian masuk sendiri untuk diproses ke blok berikutnya.
+The collator node of parachain B routinely pings all other collator nodes asking for new messages (filtering by the `destination` field). When the collator of parachain B makes its next ping, it will see this new message on parachain A and add it into its own inbound queue for processing into the next block.
 
-Validator untuk parachain A juga akan membaca antrian keluar dan mengetahui pesannya. Validator untuk parachain B akan melakukan hal yang sama. Ini agar mereka dapat memverifikasi pengiriman pesan yang terjadi.
+Validators for parachain A will also read the outbound queue and know the message. Validators for parachain B will do the same. This is so that they will be able to verify the message transmission happened.
 
-Ketika kolektor parachain B sedang membangun blok berikutnya dalam rantainya, ia akan memproses pesan baru dalam antrian masuknya serta pesan lain yang mungkin telah ditemukan / diterima.
+When the collator of parachain B is building the next block in its chain, it will process the new message in its inbound queue as well as any other messages it may have found/received.
 
-Selama pemrosesan, pesan akan mengeksekusi kontrak pintar pada paragraf B dan menyelesaikan transfer aset seperti yang dimaksudkan.
+During processing, the message will execute the smart contract on parachain B and complete the asset transfer like intended.
 
-Kolator sekarang menyerahkan blok ini ke validator, yang dengan sendirinya akan memverifikasi bahwa pesan ini diproses. Jika pesan diproses dan semua aspek lain dari blok valid, validator akan menyertakan blok ini untuk parachain B ke dalam rantai relai.
+The collator now hands this block to the validator, which itself will verify that this message was processed. If the message was processed and all other aspects of the block are valid, the validator will include this block for parachain B into the relay chain.
 
 ## Sumber daya
 
-- [ Skema XCMP ](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Deskripsi teknis lengkap tentang komunikasi lintas rantai pada wiki penelitian Web3 Foundation.
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical description of cross-chain communication on the Web3 Foundation research wiki.

@@ -65,20 +65,20 @@ Bidders will submit a configuration of bids specifying the DOT amount they are w
 A bidder configuration for a single bidder may look like this:
 
 ```js
-出价[
-        {
-               范围：[1,2,3,4]，
-               bond_amount：300，//DOT
-        }，
-        {
-               范围：[1,2]，
-               bond_amount：777，//DOT
-        }，
-        {
-               范围：[2,3,4]，
-               bond_amount：450，// DOT
-        }
-]
+Bids[
+  ({
+    range: [1, 2, 3, 4],
+    bond_amount: 300, //DOTs
+  },
+  {
+    range: [1, 2],
+    bond_amount: 777, //DOTs
+  },
+  {
+    range: [2, 3, 4],
+    bond_amount: 450, // DOTs
+  })
+];
 ```
 
 The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
@@ -113,11 +113,11 @@ Emily bids `40 DOTs` for the range 1 - 2.
 
 Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of periods in the specified range of the bid.
 
-Charlie - 75 * 4 = 300 for range 1 - 4
+Charlie - 75 \* 4 = 300 for range 1 - 4
 
-Dave - 100 * 2 = 200 for range 3 - 4
+Dave - 100 \* 2 = 200 for range 3 - 4
 
-Emily - 40 * 2 = 80 for range 1 - 2
+Emily - 40 \* 2 = 80 for range 1 - 2
 
 Although Dave had the highest bid in accordance to DOT amount, when we do the calculations we see that since he only bid for a range of 2, he would need to share the slot with Emily who bid much less. Together Dave's and Emily's bids only equal a valuation of `280`.
 
@@ -140,4 +140,4 @@ Randomness is problematic for blockchain systems. Generating a random number tru
 ## 资源
 
 - [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
-- [ paritytech / polkadot＃239 ](https://github.com/paritytech/polkadot/pull/239) - Pull request，介绍了平行链插槽代码。
+- [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.

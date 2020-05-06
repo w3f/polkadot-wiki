@@ -6,9 +6,9 @@ sidebar_label: ผู้เสนอชื่อ (Nominator)
 
 ผู้เสนอชื่อ (Nominator) ดูแลความปลอดภัยของรีเลย์เชนโดยการเลือกผู้ตรวจสอบ (Validator) ที่ดีและวางโทเคน DOT เป็นหลักประกัน
 
-คุณอาจมีบัญชีที่มี DOT และต้องการ DOT เพิ่ม คุณสามารถทำได้โดยการเป็นผู้ตรวจสอบ ซึ่งต้องมีโหนดที่ทำงานตลอด 24 ชั่วโมงทุกวัน หากคุณไม่มีโหนดดังกล่าวหรือไม่สนใจที่รันโหนด คุณยังสามารถหารายได้เพิ่มโดยการเสนอชื่อผู้ตรวจสอบท่านอื่น
+You may have an account with DOTs and want to earn fresh DOTs. You could do so as validator, which requires a node running 24/7. If you do not have such node or do not want to bother, you can still earn DOTs by nominating another validator.
 
-การทำเช่นนี้ คุณจะกลายเป็นผู้เสนอชื่อสำหรับผู้ตรวจสอบที่คุณเลือก ควรเลือกผู้ตรวจสอบอย่างระมัดระวัง หากพวกเขาทำหน้าที่บกพร่อง พวกเขาจะถูกลงโทษและคุณจะเสีย DOT เช่นกัน
+By doing so, you become a nominator for the validator of your choice. Pick your validator carefully - if they do not behave properly, they will get slashed and you will lose DOTs as well.
 
 While your DOTs are staked by nominating a validator, they are 'locked' (bonded). You can receive new DOTs in your account but you cannot stake as validator or transfer DOTs away from your account. You can [un-nominate at any time](maintain-guides-how-to-unbond) to unlock your funds. Keep in mind that the un-nomination is effective in the next era.
 
@@ -35,7 +35,6 @@ One example would be if a validator is regularly offline, their nominators most 
 ![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
 
 Thus, to be a smart nominator, it would be better to look at their [histories](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
-
 
 ### Guides
 

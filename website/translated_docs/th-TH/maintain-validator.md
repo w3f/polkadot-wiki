@@ -4,11 +4,11 @@ title: ผู้ตรวจสอบ (Validator)
 sidebar_label: ผู้ตรวจสอบ (Validator)
 ---
 
-ผู้ตรวบจสอบดูแลความปลอดภัยของรีเลย์เชนโดยการวาง DOT เป็นหลักประกัน ตรวจสอบหลักฐานที่ได้จากผู้ตรวจทาน (Collators) และหาฉันทามติร่วมกันกับผู้ตรวจสอบท่านอื่น
+Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
 
-ผู้เข้าร่วมเหล่านี้จะมีบทบาทสำคัญในการเพิ่มบล็อกใหม่ในรีเลย์เชน และส่งผลกระทบไปยังพาราเชนทั้งหมด เหตุนี้ทำให้ฝ่ายต่างๆสามารถทำธุรกรรมระหว่างเชนผ่านรีเลย์เชนได้
+These participants will play a crucial role in adding new blocks to the Relay Chain and, by extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay Chain.
 
-ผู้ตรวจสอบทำหน้าที่สองอย่าง อย่างแรกคือการตรวจสอบว่าข้อมูลที่อยู่บล็อกของกลุ่มพาราเชนที่ได้รับมอบหมายนั้นถูกต้อง (เช่นข้อมูลประจำตัวของฝ่ายที่ทำธุรกรรมและสาระสำคัญของสัญญา) อย่างที่สองคือการมีส่วนร่วมในการหาฉันทามติเพื่อสร้างบล็อกของรีเลย์เชนตามข้อความรับรองความถูกต้องจากผู้ตรวจสอบท่านอื่น ใครที่ไม่ปฏิบัติตามอัลกอริทึมฉันทามติจะถูกลงโทษโดยการถูกยึด DOTs บางส่วนหรือทั้งหมดที่ผู้ตรวจสอบวางประกันไว้เพื่อกีดกันการกระทำความผิด อย่างไรก็ตาม หากผลงานดีจะได้รับผลตอบแทน ผู้ตรวจสอบจะได้รับรางวัลจากบล็อค (รวมถึงค่าธรรมเนียมการทำธุรกรรม) ในรูปแบบของ DOT เพื่อแลกเปลี่ยนกับการทำความดีของพวกเขา
+Validators perform two functions. First, verifying that the information contained in an assigned set of parachain blocks is valid (such as the identities of the transacting parties and the subject matter of the contract). Their second role is to participate in the consensus mechanism to produce the Relay Chain blocks based on validity statements from other validators. Any instances of non-compliance with the consensus algorithms result in punishment by removal of some or all of the validator’s staked DOTs, thereby discouraging bad actors. Good performance, however, will be rewarded, with validators receiving block rewards (including transaction fees) in the form of DOTs in exchange for their activities.
 
 ## คู่มือแนะนำ
 

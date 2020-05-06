@@ -4,9 +4,9 @@ title: Hackathon
 sidebar_label: Hackathon
 ---
 
-Web3 Foundation의 목표 중 하나인 [Web3 기술 스택](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/)을 추진함에 따라 우리는 당신의 도시에있는 Polkadot/Substrate를 더 많은 개발자들이 이해할 수 있도록 해커톤을 진행 할 개인이나 팀을 지원하고자합니다.
+As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
 
-우리는 기술 리소스를 제공하는 것뿐만 아니라 우리 팀 중 누군가가 기술에 대한 핸즈 온(hands-on)워크숍 /프레젠테이션을 진행해서 이를 통해 참가자가 해커톤을 더 빨리 시작할 수 있도록 할 수 있습니다.
+We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
 
 ## Ideas
 
@@ -30,9 +30,11 @@ Web3 Foundation의 목표 중 하나인 [Web3 기술 스택](http://wiki.web3.fo
 - 사람들과 만나는 것을 좋아하니까
 
 ## 워크샵과 해커톤은 어떻게 다른가요?
-해커톤은 짧은 시간 (몇 시간 ~ 하루) 동안 프로토타입을 보여주고 아이디어를 현실로 구현하기를 원하는 참가자를 대상으로 합니다. 워크샵은 개발자가 현재 사용할 수있는 리소스가 무엇인지, 리소스를 사용하는 방법에 대해 툴링(tooling)하고 이해하는 것에 익숙해 지도록 합니다.
+
+Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
 
 ## 어떻게 당신의 도시에서 해커톤을 열 수 있나요?
+
 1. 해커톤 지원서를 제출합니다  (Coming soon.)
 2. 리뷰하고
 3. 결정한 뒤
@@ -58,4 +60,4 @@ Coming soon.
 
 ## Support / Contact
 
-해커톤을 여는데 질문이 있으시다면 [이메일](mailto:events@web3.foundation)이나 [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)으로 연락해 주세요.
+If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.

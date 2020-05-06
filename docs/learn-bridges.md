@@ -108,10 +108,12 @@ options.
 
 ### Smart Contract Bridges
 
-- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to Edgeware chain (a Substrate-based chain).
+- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to
+  Edgeware chain (a Substrate-based chain).
 - [Parity Bridge](https://github.com/paritytech/parity-bridge)
 - [POA Network](https://poa.network/)
-- [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA Network's implementation of Parity's bridge chain solution.
+- [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA
+  Network's implementation of Parity's bridge chain solution.
 
 ### Runtime Module Bridges
 
