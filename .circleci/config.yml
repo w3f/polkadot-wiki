@@ -1,6 +1,17 @@
 version: 2
 
 jobs:
+  check-format:
+    docker:
+      - image: circleci/node:10.15.2   
+    steps:
+      - checkout
+      - run:
+          name: prettier
+          command: |
+            npm i -g prettier
+            prettier -c docs/*.md
+
   check-links:
     docker:
       - image: web3f/link-checker:v1.0.1
@@ -52,6 +63,10 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - check-format:
+          filters:
+            tags:
+              only: /.*/
       - check-links:
           filters:
             tags:
