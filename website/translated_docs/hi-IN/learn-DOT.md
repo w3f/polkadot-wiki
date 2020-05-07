@@ -10,9 +10,25 @@ DOT is the native token of the Polkadot network in a similar way that BTC is the
 
 Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest unit being the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
-**Polkadot** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 Microdot (uDOT)| 6 Millidot (mDOT)| 9 Dot (DOT) | 12
+### Polkadot
 
-**Kusama** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
+| Unit            | Decimal Places |
+| --------------- | -------------- |
+| Planck          | 1              |
+| Point           | 3              |
+| Microdot (uDOT) | 6              |
+| Millidot (mDOT) | 9              |
+| Dot (DOT)       | 12             |
+
+### Kusama
+
+| Unit            | Decimal Places |
+| --------------- | -------------- |
+| Planck          | 1              |
+| Point           | 3              |
+| MicroKSM (uKSM) | 6              |
+| MilliKSM (mKSM) | 9              |
+| KSM             | 12             |
 
 ## What are the uses of DOTs?
 

@@ -10,9 +10,25 @@ DOT is the native token of the Polkadot network in a similar way that BTC is the
 
 Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest unit being the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
-**Polkadot** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 Microdot (uDOT)| 6 Millidot (mDOT)| 9 Dot (DOT) | 12
+### Polkadot
 
-**Kusama** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM (mKSM)| 9 KSM | 12
+| Unit            | Decimal Places |
+| --------------- | -------------- |
+| Planck          | 1              |
+| Point           | 3              |
+| Microdot (uDOT) | 6              |
+| Millidot (mDOT) | 9              |
+| Dot (DOT)       | 12             |
+
+### Kusama
+
+| Unit            | Decimal Places |
+| --------------- | -------------- |
+| Planck          | 1              |
+| Point           | 3              |
+| MicroKSM (uKSM) | 6              |
+| MilliKSM (mKSM) | 9              |
+| KSM             | 12             |
 
 ## DOTs 用途是什么？
 
@@ -20,17 +36,17 @@ DOTs serve three key functions in Polkadot, (i) to be used for governance of the
 
 DOTs can also serve ancillary functions by virtue of being a transferrable token. For example, DOTs stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
-### DOTs 用于治理
+### DOTs for governance
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions which are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
 
 Polkadot will enable any holder of DOTs to participate in governance. For details on how holders can participate in governance, as well as their rights and responsibilities, see the [governance page](learn-governance).
 
-### DOTs 用于共识
+### DOTs for consensus
 
 DOTs will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious participants whom will be punished by the network by getting their DOTs slashed. The DOTs required to participate in the network will vary depending on the activity which is being performed, the duration the DOTs will be staked for, and the total number of DOTs staked.
 
-### DOTs 用于绑定
+### DOTs for bonding
 
 DOTs will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOTs will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed.
 
