@@ -9,8 +9,8 @@ jobs:
       - run:
           name: prettier
           command: |
-            npm i -g prettier
-            prettier -c docs/*.md
+            npm i prettier
+            node_modules/.bin/prettier -c docs/*.md
 
   check-links:
     docker:
