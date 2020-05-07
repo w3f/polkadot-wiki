@@ -13,7 +13,7 @@ there is nothing that blocks a development team from building and deploying
 the former.
 
 While bridge designs are now getting to a place where they are sufficiently 
-fleshed out, there has not been too many that have been used heavily in
+planned out, there has not been too many that have been used heavily in
 production. For this reason, you can consider this page a work in progress.
 It will be updated as more information is determined and available.
 
