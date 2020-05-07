@@ -34,8 +34,7 @@ Polkadot is currently on the v0.7 release with a testnet called Westend and a va
 network called Kusama. Polkadot is being built with
 [implementations in various programming languages](learn-implementations) ranging from Rust to
 JavaScript. Currently the leading implementation is built in Rust and built on the Substrate
-framework. Substrate is a library that allows developers to develop entire blockchain applications
-with ease by bundling together a networking protocol, consensus, and Wasm interpreter. Cumulus, an
+framework. Substrate is a library that allows developers to develop entire blockchain applications with ease by bundling together a networking protocol, consensus, and Wasm interpreter. Cumulus, an
 extension to Substrate, will allow any Substrate built chain to connect to Polkadot and become a
 parachain. Substrate is currently nearing its official 2.0.0 tagged release that will solidify its
 API.
