@@ -4,24 +4,24 @@ title: 开发路线图
 sidebar_label: 开发路线图
 ---
 
-Developers need some guide posts for when they can expect certain milestones to be reached by the upstream teams. We will try to keep the sections below up to date with the what we know and add definite dates if possible.
+开发者需要一些指南，作为他们所能预估团队将完成里程碑的时间。该章节将保持更新，里程碑可能会进一步增加确定的日期。
 
 ## Substrate
 
-- [1.0.0](https://github.com/paritytech/substrate/tree/v1.0) - The Substrate 1.0.0 stable release is the recommended way to get started developing on Substrate.
-- [2.0.0](https://github.com/paritytech/substrate) - The master branch of Substrate is currently where development is happening for the next release of Substrate.
+- [1.0.0](https://github.com/paritytech/substrate/tree/v1.0) - Substrate 1.0.0 的稳定发布被视为可以开始基于 Substrate 框架的开发初始阶段。
+- [2.0.0](https://github.com/paritytech/substrate) - Substrate 的 master branch 目前正作为下一个 Substrate 开发的发布。
 
 ## Polkadot
 
 ### 当前测试网
 
-- [Alexander Testnet](https://github.com/paritytech/polkadot#install-poc-4-on-alexander-testnet) - The Polkadot Alexander testnet is the PoC-4 release of the Polkadot source code.
+- [Alexander Testnet](https://github.com/paritytech/polkadot#install-poc-4-on-alexander-testnet) - Alexander 测试网即 Polkadot 源码进行 PoC-4 概念验证的主网。
 
 ### Kusama
 
-[Kusama Canary Network](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) is a live network aimed to test the economic conditions of Polkadot.
+[Kusama 金丝雀网络](https://github.com/paritytech/polkadot#22-install-kusama-canary-network)是个旨在模拟 Polkadot 经济生态条件的网络。
 
-- It is currently in the PoA phase, meaning that transfers and most functionality besides signalling the intention to stake have been disabled.
+- Kusama 网络当前处于 PoA 阶段，这意味着除了 signalling 之外，转帐和大多数功能仍被禁用。
 
 ## Cumulus
 
@@ -29,4 +29,4 @@ Cumulus 目前正处于紧锣密鼓的开发阶段，并将在约10月份进行�
 
 ## ink!
 
-Ink! is currently under development, however it is usable today by the brave developer. It's estimated that it will become more stabilized over the next few months.
+Ink! 目前正在开发中，但对高风险偏好的开发者而言仍可以下载并使用它。我们将致力于在未来数月将其打造更稳定。
