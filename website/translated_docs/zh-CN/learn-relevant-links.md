@@ -6,50 +6,50 @@ sidebar_label: 链接
 
 ## 协议
 
-### 常用
+### 概述
 
-- [White Paper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) - General Polkadot description.
-- [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) - Brief, non-technical overview of Polkadot.
-- [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) - Epicenter interviews Gavin Wood.
-- [Blockchain Infrastructure](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/) - Gavin Wood presents Substrate on Software Daily.
-- [Polkadot Overview](https://www.zeroknowledge.fm/46) - Gavin Wood chatted about the history of Polkadot and provided a great overview on Zero Knowledge podcast.
-- [Polkadot Overview](https://www.youtube.com/watch?v=oiunBLGHlAU) - Epicenter interviews Peter Czaban of Web3 Foundation about Polkadot.
-- [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate. (Video)
-- [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
-- [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Dr. Jutta Steiner presents Polkadot. (Video)
-- [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interoperability: Connecting the Dots."
-- [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
-- [DOT Day Seoul](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39) - Video playlist of all talks at DOT Day Seoul.
+- [白皮书](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf)- Polkadot 介绍
+- [简短版](https://polkadot.network/Polkadot-lightpaper.pdf)- 非技术性 Polkadot 的简述，。
+- [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) - Epicenter interviews Gavin Wood。
+- [区块链架构](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/)-Gavin Wood在《软件日报》上介绍了Substrate。
+- [ Polkadot概述](https://www.zeroknowledge.fm/46)- Gavin Wood 聊 Polkadot 的历史，并在零知识播客进行了很好的概述。
+- [ Polkadot概述](https://www.youtube.com/watch?v=oiunBLGHlAU)- Epicenter 采访了 Web3 基金会的 Peter Czaban 关于 Polkadot。
+- [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood 博士展示了Substrate（区块链框架 + VM）和 Polkadot，并在15分钟内用 Substrate 构建可行的区块链。
+- [ Polkadot 概述](https://youtu.be/lIghiCmHz0U)-Gavin Wood 博士介绍了 Polkadot。(视频)
+- [ Polkadot 概述](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/)-Jutta Steiner 博士介绍了Polkadot。(视频)
+- [互操作性简介](https://www.youtube.com/watch?v=RSAFHhTwA8Q)-Rob Habermeier 提出 "互操作性：Dots"。
+- [ Polkadot 的共识和确定性](https://www.youtube.com/watch?v=qvoAf2uIF3c)-Rob Habermeier 的讲话详述了 Polkadot 的共识机制。
+- [首尔DOT日](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39)-首尔DOT日所有演讲的视频播放列表。
 
 ### Kusama
 
-- [Kusama Home Page](https://kusama.network/) Front page for all things on Polkadot's canary network, Kusama.
-- [Kusama User Guide](https://guide.kusama.network) The source of truth for Kusama-specific information.
-- [Kusama Claims](https://claim.kusama.network/) Information for DOT holders to claim their Kusama tokens.
-- [Kusama Launch Announcement](https://medium.com/polkadot-network/kusama-network-7446706b8f4c) The first announcement of the Kusama network.
+- [Kusama 首页](https://kusama.network/) Polkadot 的金丝雀网络(Kusama)所有内容的页面。
+- [Kusama 用户指南](https://guide.kusama.network)Kusama 特定信息的来源。
+- [ Kusam 认领](https://claim.kusama.network/)供 DOT 持有者认领 Kusama 代币的资料。
+- [ Kusama 发布公告](https://medium.com/polkadot-network/kusama-network-7446706b8f4c) Kusama 网络的第一条公告。
 
 ### Substrate
 
-- [What is Substrate?](https://medium.com/paritytech/what-is-substrate-29af4231d7e0) - Explanation of the framework used to build Polkadot.
-- [Parity Substrate](https://github.com/paritytech/substrate) - First implementation, written in Rust. Parity Technologies is a 75-person development team based in the UK and Germany. Parity’s tech is responsible for running the premier client for Ethereum, powering 40% of the nodes in the network. Parity also maintains a client for [Bitcoin](https://github.com/paritytech/parity-bitcoin) and developed and released [Zebra](https://github.com/ZcashFoundation/zebra), a rust implementation of a zcash node.
-- [Substrate Developer Hub](https://www.substrate.io/kb/learn-substrate) - Overviews, tutorials and reference documentation for Substrate.
-- [Substrate Intro](https://youtu.be/iUMZyL5kTwc) - Dr. Gavin Wood presents Substrate, one of the technologies underlying Polkadot.
-- [How Substrate relates to Polkadot](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - A Tale of Two Technologies Presentation Transcript
-- [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate.
-- [Preparing for Polkadot's Launch with Substrate](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815) - An overview of how to start preparing for Polkadot before the launch date.
-- [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post which recaps information regarding Substrate and Polkadot.
-- [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
+- [什么是 Substrate?](https://medium.com/paritytech/what-is-substrate-29af4231d7e0)-介绍用于搭建 Polkadot 的框架。
+- [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支75人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中40％的节点服务。 Parity 还为[比特币](https://github.com/paritytech/parity-bitcoin)维护客户端，并为[Zcash ](https://github.com/ZcashFoundation/zebra)建立客户端。
+- [ Substrate 开发人员中心](https://www.substrate.io/kb/learn-substrate)-Substrate 的概述，教程和参考文档。
+- [Substrate 介绍](https://youtu.be/iUMZyL5kTwc)-Gavin Wood 博士介绍 Substrate ，这是 Polkadot 的底层技术。
+- [Substrate 与Polkadot 的关系](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - 关于两种技术的详细描述
+- [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood博士展示了Substrate（区块链框架 + VM）和 Polkadot，并在15分钟内用 Substrate 构建可行的区块链系统
+- [为 Polkadot 的Substrate 发布做准备](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815)-如何在发布之前开始准备 Polkadot 的概述。
+- [ Substrate 和 Polkadot 的所有内容的简要说明](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d)-该博客概述了有关 Substrate 和 Polkadot 的信息。
+- [在Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Gavin Wood 视频上提供 Substrate 的路线图摘要和 MelonportM-1 会议在 Polkadot 上的更新。
 
 ### 治理
 
 - [治理](learn-governance) - 治理系统概述。
-- [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr. Gavin Wood presents the initial governance structure for Polkadot. (Video)
-- [Kusama Rollout and Governance](https://polkadot.network/kusama-rollout-and-governance/) - Information on the governance on the Kusama Canary network.
-- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar explaining how governance works in Polkadot and Kusama.
+- [治理演示](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734)-Gavin wood 博士介绍了 Polkadot 的初始治理结构。(视频)
+- [Kusama 推出和治理](https://polkadot.network/kusama-rollout-and-governance/)-关于 Kusama 金丝雀网络的治理信息。
+- [Polkadot 上的治理](https://www.crowdcast.io/e/governance-on-polkadot--) - 网络研讨会解释治理如何在 Polkadot 和 Kusama 中起作用。
 
 ### 共识与确定性
 
-- [GRANDPA finality gadget](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - Finality gadget for Polkadot.
+- [ GRANDPA 确定性工具](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)-Polkadot 的确定性工具。
 
 ### 研究
 
@@ -57,59 +57,59 @@ sidebar_label: 链接
 
 ## 开发
 
-- [Teams building on Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - List of teams building on Polkadot.
+- [在 Polkadot 构建的团队](https://forum.web3.foundation/t/teams-building-on-polkadot/67)-在 Polkadot上 构建的团队名单。
 
-### Polkadot
+### Kusama
 
-- [Rust](https://github.com/paritytech/polkadot) - Initial Polkadot implementation.
-- [Style Guide](https://github.com/paritytech/polkadot/wiki/Style-Guide) - Contribute to the Rust implementation of Polkadot.
+- [在 Polkadot 构建的团队](https://forum.web3.foundation/t/teams-building-on-polkadot/67)-在 Polkadot上 构建的团队名单。
+- [样式指南](https://github.com/paritytech/polkadot/wiki/Style-Guide)-为 Polkadot 的 Rust 做贡献。
 
 ### Polkadot Host
 
-- [Polkadot Host specification](https://github.com/w3f/polkadot-re-spec/blob/master/polkadot_re_spec.pdf) - In progress. A complete specification of the Polkadot Host.
-- [Polkadot.js](https://polkadot.js.org/) - Tools, utilities and client in JS. Polkadot JS is a 3-person development team in Germany and is building the JavaScript implementation of Polkadot.
-- [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team based in Toronto. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0 client in TypeScript and this Go implementation of Polkadot.
+- [ Polkadot Host 规范](https://github.com/w3f/polkadot-re-spec/blob/master/polkadot_re_spec.pdf)- Polkadot Host 的完整规范。
+- [ Polkadot.js ](https://polkadot.js.org/)-JS中的工具和客户端。Polkadot JS 是由德国的三人团队开发，正在构建 Polkadot 的 JavaScript 实现。
+- [ ChainSafe 的 Go PRE ](https://github.com/ChainSafeSystems/go-pre)是由25人组成的开发团队，位于多伦多。 ChainSafe 使用 TypeScript 构建以太坊2.0客户端的信标链实现和 Polkadot 的 Go 实现。
 
 ### Cumulus
 
-- [Cumulus](https://github.com/paritytech/cumulus) - A library for making Substrate-built chains compatible with Polkadot.
-- [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot co-founder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.
+- [ Cumulus ](https://github.com/paritytech/cumulus)-使 Substrate 构建的链与 Polkadot 兼容的库。
+- [Cumulus: 深入学习](https://www.youtube.com/watch?v=thgtXq5YMOo)-Polkadot 联合创始人 Robert Habermeier 于2019年3月在EthCC 上的讲话，详细介绍 Cumulus 与平行链的最新进展。
+
+### Substrate
+
+- [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支75人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中40％的节点服务。 Parity 还为比特币维护客户端，并为Zcash 建立客户端。
+- [Parity Wasm](https://github.com/paritytech/parity-Wasm)- Rust 中的 WebAssembly 序列化/反序列化。
+- [ Wasm utils ](https://github.com/paritytech/Wasm-utils)-用于 Parity 和 Wasm 合同开发的 Wasm 实用程序合集。
+
+### Cumulus
+
+- [ Rust libp2p ](https://github.com/libp2p/rust-libp2p)- libp2p 网络堆栈的 Rust 实现。
 
 ### Wasm
 
-- [Wasmi](https://github.com/paritytech/Wasmi) - WebAssembly interpreter written in Rust.
-- [Parity Wasm](https://github.com/paritytech/parity-Wasm) - WebAssembly serialization/deserialization in Rust.
-- [Wasm utils](https://github.com/paritytech/Wasm-utils) - Collection of Wasm utilities used in Parity and Wasm contract development.
-
-### Networking (libp2p)
-
-- [Rust libp2p](https://github.com/libp2p/rust-libp2p) - The Rust Implementation of libp2p networking stack.
-
-### Bridges
-
-- [Parity Bridge](https://github.com/paritytech/parity-bridge) - Bridge between any two ethereum-based networks.
+- [Parity Bridge](https://github.com/paritytech/parity-bridge)-任意两个基于以太坊的网络之间的转接桥。
 
 ## 运行节点
 
-- [Install Kusama](https://github.com/paritytech/polkadot#22-install-kusama-canary-network) - Install Polkadot's client and connect to the Kusama canary network.
-- [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
+- [安装 Kusama ](https://github.com/paritytech/polkadot#22-install-kusama-canary-network)-安装 Polkadot 的客户端并连接到 Kusama 金丝雀网络。
+- [Substrate 节点](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) -在 Dry-Danta 测试网上安装并运行 Substrate 节点。
 
-### UI and explorers
+### 用户界面与浏览器
 
-- [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Alexander, Kusama, or your own private network.
-- [Telemetry](http://telemetry.polkadot.io/) - Information services website for nodes.
-- [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain and Parity Substrate chains.
-- [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.
+- [Polkadot 浏览器](https://polkadot.js.org/apps/#/explorer)-Polkadot 网络浏览器，可用于Alexander、Kusama 网络或您的网络。
+- [Telemetry](http://telemetry.polkadot.io/)-节点的信息服务网站。
+- [ Polkascan ](http://polkascan.io/) - Polkadot 的中继链和Parity Substrate 链上的实时多链数据。
+- [Subscan.io](https://subscan.io) - 基于 Substrate 链的资源管理器。
 
-### Crowdcast Webinars
+### Crowdcast 网络研讨会
 
-- [Polkadot Homepage](https://www.crowdcast.io/polkadot) - List of all Crowdcast webinars that the Web3 Foundation has done.
-- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - An explanation of how governance works in Polkadot and Kusama, with Bill Laboon.
-- [Kusama](https://www.crowdcast.io/e/qpz8aran) - An overview of Kusama with Anson Lau.
-- [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) - An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama, with Bill Laboon.
-- [Validating on Polkadot](https://www.crowdcast.io/e/validating-on-polkadot) - An explanation of how to validate on Polkadot, with Joe Petrowski and David Dorgan of Parity Technologies, along with Tim Ogilvie from Staked.
-- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill Laboon and Chinmay Patel of BlockX Labs.
-- [Participating in Kusama](https://www.crowdcast.io/e/participating-on-kusama) - How to participate in Kusama in a variety of different roles, with Logan Saether.
-- [Developing Apps that Interact with Polkadot](https://www.crowdcast.io/e/developing-apps-on-polkadot) - Bill Laboon walks through how to write your own scripts and programs to interact with Polkadot via the Polkadot API.
-- [Adding Web3 Logins to a Web2.0 App](https://www.crowdcast.io/e/web3-logins-workshop) Bruno Skvorc explains how to add a login process to a legacy Web2.0 application.
-- [A Distributed Drawing Program on Kusama](https://www.crowdcast.io/e/distributed-drawing) - Expanding on his previous talk, Bill Laboon uses Shawn Tabrizi's `remarkable` codebase to make a node.js app which listens to the Kusama chain and allows users to set pixels to programmatically draw a shared picture.
+- [Polkadot 首页](https://www.crowdcast.io/polkadot) - Web3基金会所有过去 Crowdcast 网络研讨会的列表。
+- [Polkadot 上的治理](https://www.crowdcast.io/e/governance-on-polkadot--) - 网络研讨会解释治理如何在 Polkadot 和 Kusama 中起作用。
+- [Kusama](https://www.crowdcast.io/e/qpz8aran) - Anson Lau 的 Kusama 概述。
+- [Polkadot 上的出块和最终确定性](https://www.crowdcast.io/e/polkadot-block-production) - Bill Laboon 解释在 Kusama BABE 和 GRANDPA 如何一起运作出块和区块确定性。
+- [在 Polkadot 上验证](https://www.crowdcast.io/e/validating-on-polkadot) - 讲解如何在 Polkadot 上验证 与Joe Petrowski 和 Equity Technologies 的 David Dorgan 以及 与 Staked 的 Tim Ogilvie 合作。
+- [了解 Polkadot 中的账户和密钥](https://www.crowdcast.io/e/polkadot-keys) - 解释在 Polkadot 中使用的不同类型的账户和密钥 -  Bill Laboon 和 BlockX Labs 的 Chinmay Patel。
+- [参与 Kusama](https://www.crowdcast.io/e/participating-on-kusama) - 如何参与 在 Kusama 不同的角色 -  Logan Saether 。
+- [开发应用程序与 Polkadot 交互](https://www.crowdcast.io/e/developing-apps-on-polkadot) 。Bill Laboon 讲解如何通过 Polkadot API 编写你自己的脚本和程序与Polkadot 交互。
+- [将 Web3 登录添加到 Web2.0 应用程序](https://www.crowdcast.io/e/web3-logins-workshop) Bruno Skvorc 解释如何将登录过程添加到 Web2.0 应用程序中。
+- [在 Kusama 上的绘画程序](https://www.crowdcast.io/e/distributed-drawing) - 扩展他以前的语音， Bill Laboon 使用Shawn Tabrizi `remarkable` codebase 来制作 node.js 程序，该应用程序监听到 Kusama 链，允许用户设置像素到程序化绘制共享图片中。
