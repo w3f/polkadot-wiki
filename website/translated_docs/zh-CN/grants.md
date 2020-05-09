@@ -2,17 +2,17 @@
 id: grants title: Web3 Foundation Grantees sidebar_label: Grants
 - - -
 
-This page gives an overview of accepted grants and a link to their GitHub repositories. Keep in mind that not all of the accepted grants have already delivered software.
+此页提供了接受赠款的概览和他们的 GitHub 库的链接。请记住并不是所有接受赠款的团队都完成了他们的项目。
 
 ---
 
-## Table of Contents
+## 目录
 
-- [Wave 1 - First Quarter 2019](#wave-1)
-- [Wave 2 - Second Quarter 2019](#wave-2)
-- [Wave 3 - Third Quarter 2019](#wave-3)
-- [Wave 4 - Fourth Quarter 2019](#wave-4)
-- [Wave 5 - First Quarter 2020](#wave-5)
+- [Wave 1- 第一季 2019](#wave-1)
+- [Wave 2- 第二季 2019](#wave-2)
+- [Wave 3- 第三季 2019](#wave-3)
+- [Wave 4- 第四季 2019](#wave-4)
+- [Wave 5- 第一季 2020](#wave-5)
 
 ## Wave 1
 
