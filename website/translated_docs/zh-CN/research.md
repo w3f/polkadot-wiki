@@ -4,4 +4,4 @@ title: 研究专页
 sidebar_label: 研究专页
 ---
 
-The Polkadot [research pages](https://research.polkadot.network) are edited directly by the researchers at W3F and contains papers, articles and docuements that are sources for the information on the wiki.
+Polkadot [研究页面](https://research.polkadot.network)由 W3F 的研究人员直接编辑，并包含作为维基信息来源的论文、文章和文档。

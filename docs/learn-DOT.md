@@ -14,11 +14,25 @@ Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_leng
 possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while
 the DOT is like a bitcoin or an ether.
 
-**Polkadot** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 Microdot (uDOT)| 6 Millidot
-(mDOT)| 9 Dot (DOT) | 12
+### Polkadot
 
-**Kusama** |Unit |Decimal Places| | --- | --- | Planck| 1 Point | 3 MicroKSM (uKSM)| 6 MilliKSM
-(mKSM)| 9 KSM | 12
+| Unit            | Decimal Places |
+| --------------- | -------------- |
+| Planck          | 1              |
+| Point           | 3              |
+| Microdot (uDOT) | 6              |
+| Millidot (mDOT) | 9              |
+| Dot (DOT)       | 12             |
+
+### Kusama
+
+| Unit            | Decimal Places |
+| --------------- | -------------- |
+| Planck          | 1              |
+| Point           | 3              |
+| MicroKSM (uKSM) | 6              |
+| MilliKSM (mKSM) | 9              |
+| KSM             | 12             |
 
 ## What are the uses of DOTs?
 
