@@ -85,7 +85,7 @@ assets for BTC on the Bitcoin chain.
 The Bitcoin bridge as documented in the specification is composed of two
 logically different components:
 
-- The XCLAIM component that maintains all accounts that own PolkadBTC.
+- The XCLAIM component that maintains all accounts that own PolkaBTC.
 - The BTC-Relay that is responsible for verifying Bitcoin state when a new
 transaction is submitted.
 
