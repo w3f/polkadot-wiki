@@ -50,7 +50,7 @@ A parachain
 
 The bridging modules will likely be written with particular parachains in mind 
 (e.g. Bitcoin, Ethereum), which means that any blockchain that's based on either 
-of those should be able to be bridged directly to Polkadot without the need of 
+of those should be able to bridge directly to Polkadot without the need of 
 going through a bridge contract on a parachain. This should allow for faster 
 execution for those chains that are compatible.
 
