@@ -1,0 +1,42 @@
+{
+  "docs": {
+    "Kusama": [
+      "kusama-index",
+      {
+        "type": "subcategory",
+        "label": "Get Started",
+        "ids": [
+          "kusama-faucet",
+          "kusama-claims",
+          "kusama-endpoints"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "What to Try",
+        "ids": [
+          "mirror-maintain-guides-how-to-validate-kusama",
+          "mirror-maintain-guides-how-to-nominate-kusama",
+          "mirror-learn-governance",
+          "mirror-learn-identity",
+          "mirror-learn-treasury",
+          "mirror-build-build-with-polkadot",
+          "maintain-guides-society-kusama"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "What to Break",
+        "ids": [
+          "mirror-maintain-errors",
+          "kusama-bug-bounty",
+          "kusama-adverserial-cheatsheet"
+        ]
+      },
+      "kusama-timeline",
+      "kusama-community",
+      "kusama-time-periods",
+      "kusama-coc"
+    ]
+  }
+}
