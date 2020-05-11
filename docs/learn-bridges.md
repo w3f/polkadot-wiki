@@ -6,7 +6,7 @@ sidebar_label: Bridges
 
 A cornerstone technology of blockchain interoperability is the blockchain bridge.
 Blockchain bridges are ways for two economically sovereign and technologically
-diverse chain to communicate with each other. Bridge designs come in a variety
+diverse chains to communicate with each other. Bridge designs come in a variety
 of flavors ranging from centralized and trusted to more decentralized and
 trustless. Polkadot favors the latter bridge designs for its ecosystem, however
 there is nothing that blocks a development team from building and deploying
