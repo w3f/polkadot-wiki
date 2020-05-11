@@ -64,7 +64,7 @@ and the efforts being made to connect PoA sidechains to the Ethereum mainnet.
 The bridge is a combination of two smart contracts, one deployed on each chain, 
 that allow for cross-chain transfers of value. As an example of usage, the 
 initial Parity Bridge proof of concept connects two Ethereum chains, `main` and 
-`side`. Ether deposited into the contract on `main` generate a balance 
+`side`. Ether deposited into the contract on `main` generates a balance 
 denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back 
 into the contract on `side` can free up Ether on `main`.
 
