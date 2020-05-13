@@ -97,6 +97,22 @@ and not officially affiliated with Web3 Foundation or the Polkadot project unles
 
 Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
 
+### Compatibility
+
+Seed phrases are not portable across all wallets. Some wallets only support certain signing curves
+and derivation paths. See the following table for compatibility.
+
+|                  | sr25519 |  ed25519  | secp256k1 |
+| :--------------- | :-----: | :-------: | :-------: |
+| Polkadot JS UI   |    X    |     X     |     X     |
+| Polkadot JS Apps |    X    |     X     |     X     |
+| Parity Signer    |    X    |    X\*    |           |
+| Ledger           |         | X&dagger; |           |
+| Subkey           |    X    |     X     |     X     |
+
+- \* Planned
+- &dagger; Only with BIP32 derivations
+
 ## Existential Deposit and Reaping
 
 When you generate an account (address), you only generate a _key_ which lets you access it. The

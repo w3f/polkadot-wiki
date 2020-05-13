@@ -43,6 +43,8 @@ algorithms:
 Note that the address for a secp256k1 key is the SS58 encoding of the _hash of the public key_ in
 order to reduce the public key from 33 bytes to 32 bytes.
 
+See the [Accounts page](learn-accounts#compatibility) for existing wallet compatibility.
+
 ## Existential Deposit
 
 Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an
@@ -118,6 +120,12 @@ checkpoint from which a transaction is valid and a validity period (also called 
 places) that represents the number of blocks after the checkpoint for which the transaction is
 valid. If the extrinsic is not included in a block within this validity window, it will be discarded
 from the transaction queue.
+
+The chain only stores a limited number of prior block hashes as reference. You can query this
+parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to 2400
+blocks (about four hours) at genesis. If the validity period is larger than the number of blocks
+stored on-chain, then the transaction will only be valid as long as there is a block to check it
+against, i.e. the minimum value of validity period and block hash count.
 
 Setting the block checkpoint to zero, using the genesis hash, and a validity period of zero will
 make the transaction "immortal".
