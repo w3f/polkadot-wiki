@@ -1,6 +1,6 @@
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
-  tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
+  tagline: 'Information about Kusama.',
   url: 'https://wiki.polkadot.network', // Your website URL
   baseUrl: '/',
   projectName: 'polkadot-wiki',
