@@ -538,16 +538,18 @@ After running the weighted Phragmén algorithm, a process is run which redistrib
 the elected set. This process will never add or remove an elected candidate from the set. Instead,
 it reduces the variance in the list of backing stake from the voters to the elected candidates.
 Perfect equalization is not always possible, but the algorithm attempts to equalize as much as
-possible. It then runs an edge-reducing algorithm to minimize the number of validators per 
+possible. It then runs an edge-reducing algorithm to minimize the number of validators per
 nominator, ideally giving every nominator a single validator to nominate per era.
 
-To minimize block computation time, the staking process is run as an 
-[off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to 
-give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not 
-allowed in the last quarter of each era.
+To minimize block computation time, the staking process is run as an
+[off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to
+give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed
+in the last quarter of each era.
 
 These optimizations will not be covered in-depth on this page. For more details, you can view the
-[Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs), the [Rust implementation of staking in Substrate](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs),
+[Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs),
+the
+[Rust implementation of staking in Substrate](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs),
 or the `seqPhragménwithpostprocessing` method in the
 [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would
 like to dive even more deeply, you can review the
@@ -555,36 +557,37 @@ like to dive even more deeply, you can review the
 
 ### Rationale for Minimizing the Number of Validators Per Nominator
 
-Paying out rewards for staking from every validator to all of their nominators can cost a 
-non-trivial amount of chain resources (in terms of space on chain and resources to compute). 
-Assume a system with 200 validators and 1000 nominators, where each of the nominators has nominated
-10 different validators. Payout would thus require `1000 * 10`, or 10,000 transactions. In an 
-ideal scenario, if every nominator selects a single validator, only 1,000 transactions would need
-to take place - an order of magnitude fewer. Empirically, network slowdown at the beginning of an 
-era has been seen due to the large number of individual payouts by validators to nominators. In
-extreme cases, this could be an attack vector on the system, where nominators nominate many different
+Paying out rewards for staking from every validator to all of their nominators can cost a
+non-trivial amount of chain resources (in terms of space on chain and resources to compute). Assume
+a system with 200 validators and 1000 nominators, where each of the nominators has nominated 10
+different validators. Payout would thus require `1000 * 10`, or 10,000 transactions. In an ideal
+scenario, if every nominator selects a single validator, only 1,000 transactions would need to take
+place - an order of magnitude fewer. Empirically, network slowdown at the beginning of an era has
+been seen due to the large number of individual payouts by validators to nominators. In extreme
+cases, this could be an attack vector on the system, where nominators nominate many different
 validators with small amounts of stake in order to slow the system at the next era change.
 
-While this would reduce network and on-chain load, being able to select only a single validator 
-incurs some diversification costs. If the single validator that a nominator has nominated goes offline or acts maliciously, then the nominator incurs a risk of a significant amount of slashing. 
+While this would reduce network and on-chain load, being able to select only a single validator
+incurs some diversification costs. If the single validator that a nominator has nominated goes
+offline or acts maliciously, then the nominator incurs a risk of a significant amount of slashing.
 Nominators are thus allowed to nominate up to 16 different validators. However, after the weighted
 edge-reducing algorithm is run, the number of validators per nominator is minimized. Nominators are
 likely to see themselves nominating a single active validator for an era.
 
 At each era change, as the algorithm runs again, nominators are likely to have a different validator
-than they had before (assuming a significant number of selected validators).  Therefore, nominators
+than they had before (assuming a significant number of selected validators). Therefore, nominators
 can diversify against incompetent or corrupt validators causing slashing on their accounts, even if
-only nominate a single validator is nominated by them per era. 
+only nominate a single validator is nominated by them per era.
 
 ### Rationale for Maintaining an Even Distribution of Stake
 
 Another issue is that we want to ensure that as equal a distribution of votes as possible amongst
 the elected validators or council members. This helps us increase the security of the system by
 ensuring that the minimum amount of tokens in order to join the active validator set or council is
-as high as possible. For example, assume a result of five validators being elected, where
-validators have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1,050. In this
-case, a potential attacker could join the active validator set with only 11 tokens, and could obtain
-a majority of validators with only 33 tokens (since the attacker only has to have enough stake to
+as high as possible. For example, assume a result of five validators being elected, where validators
+have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1,050. In this case, a
+potential attacker could join the active validator set with only 11 tokens, and could obtain a
+majority of validators with only 33 tokens (since the attacker only has to have enough stake to
 "kick out" the three lowest validators).
 
 In contrast, imagine a different result with the same amount of total stake, but with that stake
@@ -600,10 +603,10 @@ Running the Phragmén algorithm is time-consuming, and often cannot be completed
 limits of production of a single block. Waiting for calculation to complete would jeopardize the
 constant block production time of the network. Therefore, as much computation as possible is moved
 to an offchain worker, which validators can work on the problem without impacting block production
-time. By restricting the ability of users to make any modifications in the last 25% of an era,
-and running the selection of validators by nominators as an offchain process, validators have
-a significant amount of time to calculate the new active validator set and allocate the nominators
-in an optimal manner.
+time. By restricting the ability of users to make any modifications in the last 25% of an era, and
+running the selection of validators by nominators as an offchain process, validators have a
+significant amount of time to calculate the new active validator set and allocate the nominators in
+an optimal manner.
 
 There are several further restrictions put in place to limit the complexity of the election and
 payout. As already mentioned, any given nominator can only select up to 16 validators to nominate.
