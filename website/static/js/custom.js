@@ -93,8 +93,7 @@ docReady(function () {
     // Add fathom to footer
     
     let script = document.createElement('script');
-    script.setAttribute('src', 'https://cdn.usefathom.com/3.js');
+    script.setAttribute('src', 'https://mammal.polkadot.network/script.js');
     script.setAttribute('site', 'YOUKYIQA');
     document.querySelector('body footer').appendChild(script);
-
 })
