@@ -524,7 +524,7 @@ rounding errors) the total amount of stake of all the voters (`1 + 2 + 3 + 4 + 5
 because each voter had at least one of their candidates fill a seat. Any voter whose had none of
 their candidates selected will also not have any stake in any of the elected candidates.
 
-## Other Optimizations
+## Optimizations
 
 The results for nominating validators are further optimized for several purposes:
 
@@ -582,7 +582,7 @@ Another issue is that we want to ensure that as equal a distribution of votes as
 the elected validators or council members. This helps us increase the security of the system by
 ensuring that the minimum amount of tokens in order to join the active validator set or council is
 as high as possible. For example, assume a result of five validators being elected, where
-validators have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1_050. In this
+validators have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1,050. In this
 case, a potential attacker could join the active validator set with only 11 tokens, and could obtain
 a majority of validators with only 33 tokens (since the attacker only has to have enough stake to
 "kick out" the three lowest validators).
@@ -597,8 +597,9 @@ entry to the set.
 ### Rationale for Reducing Block Computing Time
 
 Running the Phragmén algorithm is time-consuming, and often cannot be completed within the time
-limits of production of a single block. Therefore, as much computation as possible is moved to
-an offchain worker, which validators can work on the problem without impacting block production
+limits of production of a single block. Waiting for calculation to complete would jeopardize the
+constant block production time of the network. Therefore, as much computation as possible is moved
+to an offchain worker, which validators can work on the problem without impacting block production
 time. By restricting the ability of users to make any modifications in the last 25% of an era,
 and running the selection of validators by nominators as an offchain process, validators have
 a significant amount of time to calculate the new active validator set and allocate the nominators
