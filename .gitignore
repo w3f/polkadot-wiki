@@ -66,3 +66,4 @@ typings/
 build
 build-script*
 **/mirror*.md
+.DS_Store
