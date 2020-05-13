@@ -95,7 +95,7 @@ Alternatively, you might find some wallets on the
 [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited**
 and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated.
 
-Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
+Full hardware wallet integration on [Ledger](https://ledger.com) is coming soon.
 
 ### Compatibility
 
