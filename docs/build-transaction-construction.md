@@ -127,7 +127,7 @@ const unsigned = methods.balances.transferKeepAlive(
     nonce: 2,
     specVersion: 1019,
     tip: 0,
-    validityPeriod: 240 * 60, // seconds (240 minutes)
+    eraPeriod: 64, // number of blocks from checkpoint
   }
 );
 ```
