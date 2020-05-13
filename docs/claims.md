@@ -11,6 +11,10 @@ _attest_ transaction before your DOTs are sent to your account.
 
 This guide will walk you through the steps for either making a claim or attesting to the statement.
 
+If you are making a claim on Polkadot for the first time please read on below in the
+[making a claim](#making-a-claim) section. If you've already claimed during the pre-genesis claims
+please proceed to [attesting to a statem](#attesting-to-a-statement) section instead.
+
 ## Making a Claim
 
 If you did not make a claim in the pre-genesis claims period then you are able to make a claim any
@@ -97,6 +101,17 @@ recommend using any third party apps to do so. Manually specifying your transact
 specified in our claims process, is the only way to be certain you will receive your allocation.
 
 ## Attesting to a statement
+
+If you've already made a pre-genesis claim you still have to attest to a statement using your
+Polkadot account.
+
+### What you will need
+
+- Your Polkadot account unlocked on Polkadot-JS Apps UI.
+
+You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI.
+
+TODO
 
 [mycrypto]: https://github.com/MyCryptoHQ/MyCrypto/release
 [account generation]: learn-account-generation
