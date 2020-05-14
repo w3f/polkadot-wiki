@@ -563,7 +563,7 @@ a system with 200 validators and 1000 nominators, where each of the nominators h
 different validators. Payout would thus require `1000 * 10`, or 10,000 transactions. In an ideal
 scenario, if every nominator selects a single validator, only 1,000 transactions would need to take
 place - an order of magnitude fewer. Empirically, network slowdown at the beginning of an era has
-been seen due to the large number of individual payouts by validators to nominators. In extreme
+occurred due to the large number of individual payouts by validators to nominators. In extreme
 cases, this could be an attack vector on the system, where nominators nominate many different
 validators with small amounts of stake in order to slow the system at the next era change.
 
@@ -577,7 +577,7 @@ likely to see themselves nominating a single active validator for an era.
 At each era change, as the algorithm runs again, nominators are likely to have a different validator
 than they had before (assuming a significant number of selected validators). Therefore, nominators
 can diversify against incompetent or corrupt validators causing slashing on their accounts, even if
-only nominate a single validator is nominated by them per era.
+they only nominate a single validator per era.
 
 ### Rationale for Maintaining an Even Distribution of Stake
 
@@ -610,7 +610,12 @@ an optimal manner.
 
 There are several further restrictions put in place to limit the complexity of the election and
 payout. As already mentioned, any given nominator can only select up to 16 validators to nominate.
-Conversely, a single validator can have only 64 nominators.
+Conversely, a single validator can have only 64 nominators. A drawback to this is that it is 
+possible, if the number of nominators is very high or the number of validators is very low, that
+all available validators may be "saturated" and unable to accept more nominations. In this case,
+one may need a larger amount of stake to participate in staking, since nominations are 
+priority-ranked in terms of amount of stake. One can estimate the number of nominators for a 
+specific validator in the next era by running the [`offline-phragmen`](https://github.com/kianenigma/offline-phragmen) program.
 
 ## External Resources
 
