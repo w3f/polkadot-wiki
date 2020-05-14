@@ -614,7 +614,7 @@ Conversely, a single validator can have only 64 nominators. A drawback to this i
 possible, if the number of nominators is very high or the number of validators is very low, that all
 available validators may be "saturated" and unable to accept more nominations. In this case, one may
 need a larger amount of stake to participate in staking, since nominations are priority-ranked in
-terms of amount of stake. 
+terms of amount of stake.
 
 ## External Resources
 
