@@ -82,9 +82,9 @@ Secret phrase `lobster flock few equip connect boost excuse glass machine find w
   Address (SS58): JL1eTcbzuZP99FjeySkDrMygNREPdbhRyV7iD5AsV4fDRcg
 ```
 
-The `Address (SS58)` field is the address you will claim your KSM tokens. You will use
-the Public key when constructing the message. Never share your
-`Secret phrase` or `Secret seed`, as these can both control your funds.
+The `Address (SS58)` field is the address you will claim your KSM tokens. You will use the Public
+key when constructing the message. Never share your `Secret phrase` or `Secret seed`, as these can
+both control your funds.
 
 NOTE: Previous versions of `subkey` only generated Substrate addresses. If you do not want to
 generate a new seed, you can convert the Substrate address to a Kusama address by following
