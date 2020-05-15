@@ -97,13 +97,24 @@ docReady(function () {
     script.setAttribute('site', 'YOUKYIQA');
     document.querySelector('body footer').appendChild(script);
 
-    // Redirect if Chinese
-    fetch("https://wiki.polkadot.network/countrycheck").then(result => {
-        console.log(result);
-        console.log(JSON.parse(result));
-        if (result.countryCode === "CN" && !localStorage.getItem("langswitched")) {
+    /**
+     * If user's country is detected to be China, and if the user is not already
+     * on Chinese, and if the user did not previously get redirected to the Chinese
+     * version of the wiki, only then try to redirect them to the Chinese version.
+     */
+    fetch("https://wiki.polkadot.network/countrycheck")
+    .then(result => result.json())
+    .then(data => {
+        console.info("Country detected as", data.countryCode);
+        if (
+            data.countryCode === "CN" 
+            && !localStorage.getItem("langswitched") 
+            && window.location.pathname.indexOf("zh-CN") === -1
+        ) {
             localStorage.setItem("langswitched", true);
             window.location.pathname = window.location.pathname.replace("en", "zh-CN");
         }
+    }).catch(err => {
+        console.log("Could not parse the country code check");
     });
 })
