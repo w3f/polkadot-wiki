@@ -96,4 +96,14 @@ docReady(function () {
     script.setAttribute('src', 'https://mammal.polkadot.network/script.js');
     script.setAttribute('site', 'YOUKYIQA');
     document.querySelector('body footer').appendChild(script);
+
+    // Redirect if Chinese
+    fetch("https://wiki.polkadot.network/countrycheck").then(result => {
+        console.log(result);
+        console.log(JSON.parse(result));
+        if (result.countryCode === "CN" && !localStorage.getItem("langswitched")) {
+            localStorage.setItem("langswitched", true);
+            window.location.pathname = window.location.pathname.replace("en", "zh-CN");
+        }
+    });
 })
