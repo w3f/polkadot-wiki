@@ -1,18 +1,18 @@
 ---
 id: build-deploy-parachains
-title: How to view and deploy parachains
-sidebar_label: How to view and deploy parachains
+title: 如何查看及部署平行链
+sidebar_label: 如何查看及部署平行链
 ---
 
 这个指南经已更新到Alexander测试网络
 
 ## 如何查询平行链
 
-On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
+前往[Polkadot UI](https://polkadot.js.org/apps/#/explorer)的`Chain State`，选择`parachains`模组和`parachains(）`之后按下`+`按钮，之后会回传有效的平行链。
 
 ## 如何部署Adder平行链
 
-**You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
+**现在需要至少拥有5 DOTs从而创建公投。**
 
 The `adder` parachain is a simple parachain which will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
 
