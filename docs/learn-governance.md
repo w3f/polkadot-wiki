@@ -265,7 +265,7 @@ To represent passive stakeholders, we introduce the idea of a "council". The cou
 entity comprising a number of actors, each represented as an on-chain account. For Polkadot this
 number is likely to begin at around six people, and increase over the course of 9 months to 24
 people (roughly one extra individual coming on every two weeks). In general, it has a fixed number
-of seats (envisioned to be 24 for Polkadot) and all members have a fixed term (12 months).
+of seats (24 on Polkadot and 13 on Kusama).
 
 The council is called upon primarily for two tasks of governance: proposing sensible referenda, and
 cancelling uncontroversially dangerous or malicious referenda.
