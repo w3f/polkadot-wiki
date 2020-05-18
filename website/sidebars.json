@@ -51,6 +51,7 @@
     ],
     "Learn": [
       "learn-introduction",
+      "learn-launch",
       {
         "type": "subcategory",
         "label": "Basics",
