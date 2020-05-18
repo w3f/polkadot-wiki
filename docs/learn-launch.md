@@ -41,8 +41,6 @@ Time-wise, the transition to Proof-of-Stake will largely depend on when a suffic
 validators have registered and are ready to take over the security of the network. This number can
 be as low as 50 but probably closer to 100, as it was with [Kusama](https://kusama.network).
 
-This phase will last for at least two months.
-
 ## Sudo to Governance
 
 After the chain has been running well with a sufficiently large validator set, the

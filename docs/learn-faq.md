@@ -12,7 +12,7 @@ please feel free to ask on the Polkadot Watercooler
 
 ## Polkadot Launch
 
-### What is the launch process of Polkadot Beta?
+### What is the launch process of Polkadot?
 
 The Polkadot network will launch first as a Proof-of-Authority (PoA) chain. During this time,
 governance will be controlled by the single Sudo (super-user) account, and functionality will be
