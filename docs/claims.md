@@ -110,8 +110,42 @@ Polkadot account.
 - Your Polkadot account unlocked on Polkadot-JS Apps UI.
 
 You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI.
+Once you make this transaction you will have the tokens available in your account
+to use for staking, voting, and eventually transfers.
 
-TODO
+### Log on to Polkadot-JS Apps
+
+Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to your
+account in some way. One way would be to go to the Accounts page
+and "create" a new account, replacing the generated seed or mnemonic with the one
+belonging to your account. The other way is by using the Polkadot-JS extension and
+entering your seed or mnemonic there, which is generally safer than entering it
+directly to the Apps page.
+
+### Make the attestation
+
+Once you have your account entered you should see a red counter appear on the "Claim
+Tokens" tab on the left navigation drawer.
+
+![claim-attest-1](claim-attest-1)
+
+Click on the "Claim Tokens" tab and you will see a large notification at the top of the page
+that tells you that you need to sign an attestation.
+
+![claim-attest-2](claim-attest-2)
+
+You will select your Polkadot account that is being notified to you needs to make
+an attestation in the selector on this page. Click "Continue" and you should see a green
+box appear to the right of the selector.
+
+![claim-attest-3](claim-attest-3)
+
+![claim-attest-4](claim-attest-4)
+
+Click on "Attest" and then "Sign and Submit" to make your free attest transaction.
+When the transaction is included in the block you will see a green success box appear
+in the upper left corner and not the DOTs are in your account.
+
 
 [mycrypto]: https://github.com/MyCryptoHQ/MyCrypto/release
 [account generation]: learn-account-generation
