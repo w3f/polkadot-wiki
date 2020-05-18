@@ -21,6 +21,10 @@ If you did not make a claim in the pre-genesis claims period then you are able t
 time after genesis. There is no time limit for making your claim so feel free to do this whenever
 you are most comfortable.
 
+> Note: When you make a claim, at the same time you will make an attestation to the
+> required statement. The two actions "claim" and "attest" are done at once in a `claim_attest`
+> transaction, but for the most part this is simplified from the perspective of the UI.
+
 ### What you will need
 
 - The Ethereum account that holds the DOT indicator tokens.
@@ -51,37 +55,58 @@ download the latest version for your operating system. You can always find the m
 releases of the desktop app on their [releases page][mycrypto].
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for
-maximum security), you can start by navigating to the Claims app on the Polkadot JS UI. Select the
+maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the
 account you would like to claim the DOTs into and click the blue "Continue" button to proceed. Your
 screen should look something like this:
 
-_TODO_UPDATE_IMG_
+![claim-1](claim-1)
+
+Now you will need to provide the Ethereum address that is associated with the DOT indicator
+tokens that you will claim. Enter the Ethereum address into the box and click "Continue".
+Next your screen should look the image below.
+
+![claim-2](claim-2)
 
 The hex encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the
 hex-encoded public key of your Polkadot account, minus the `0x` prefix. To verify that the public
 key is correct you can use the `subkey` tool to inspect your address.
 
-The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab. This
-will prompt you to select a method for unlocking your wallet. After unlocking your wallet, you will
+The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab. 
+
+![claim-3](claim-3)
+
+This
+will prompt you to select a method for unlocking your wallet. 
+
+![claim-3](claim-4)
+
+After unlocking your wallet, you will
 copy and paste the outputted sentence into the input box.
 
-_TODO_UPDATE_IMG_
+![claim-5](claim-5)
 
 When you click "Sign Message" you will get a JSON output like the below:
 
-_TODO_UPDATE_IMG_
+![claim-6](claim-6)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
 Polkadot JS UI and click "Confirm Claim."
 
-_TODO_UPDATE_IMG_
+![claim-7](claim-7)
+
+Now a green box will appear telling you the amount to claim with a "Claim" button to make the
+claim. Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
+
+![claim-9](claim-9)
 
 At this point you will see a success message if everything went right and your DOTs will now be in
-the account that you claimed to. Congratulations you can now participate in aspects of the Polkadot
+the account that you claimed to. 
+
+![claim-10](claim-10)
+
+Congratulations you can now participate in aspects of the Polkadot
 network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch
 period balance transfers will not be enabled.
-
-_TODO_UPDATE_IMG_
 
 #### Verifying your Claim
 
