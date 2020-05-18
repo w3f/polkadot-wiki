@@ -21,9 +21,9 @@ If you did not make a claim in the pre-genesis claims period then you are able t
 time after genesis. There is no time limit for making your claim so feel free to do this whenever
 you are most comfortable.
 
-> Note: When you make a claim, at the same time you will make an attestation to the
-> required statement. The two actions "claim" and "attest" are done at once in a `claim_attest`
-> transaction, but for the most part this is simplified from the perspective of the UI.
+> Note: When you make a claim, at the same time you will make an attestation to the required
+> statement. The two actions "claim" and "attest" are done at once in a `claim_attest` transaction,
+> but for the most part this is simplified from the perspective of the UI.
 
 ### What you will need
 
@@ -59,54 +59,52 @@ maximum security), you can start by navigating to the Claims app on Polkadot-JS 
 account you would like to claim the DOTs into and click the blue "Continue" button to proceed. Your
 screen should look something like this:
 
-![claim-1](claim-1)
+![claim-1](assets/new-claims/claim-1.png)
 
-Now you will need to provide the Ethereum address that is associated with the DOT indicator
-tokens that you will claim. Enter the Ethereum address into the box and click "Continue".
-Next your screen should look the image below.
+Now you will need to provide the Ethereum address that is associated with the DOT indicator tokens
+that you will claim. Enter the Ethereum address into the box and click "Continue". Next your screen
+should look the image below.
 
-![claim-2](claim-2)
+![claim-2](assets/new-claims/claim-2.png)
 
 The hex encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the
 hex-encoded public key of your Polkadot account, minus the `0x` prefix. To verify that the public
 key is correct you can use the `subkey` tool to inspect your address.
 
-The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab. 
+The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab.
 
-![claim-3](claim-3)
+![claim-3](assets/new-claims/claim-3.png)
 
-This
-will prompt you to select a method for unlocking your wallet. 
+This will prompt you to select a method for unlocking your wallet.
 
-![claim-3](claim-4)
+![claim-3](assets/new-claims/claim-4.png)
 
-After unlocking your wallet, you will
-copy and paste the outputted sentence into the input box.
+After unlocking your wallet, you will copy and paste the outputted sentence into the input box.
 
-![claim-5](claim-5)
+![claim-5](assets/new-claims/claim-5.png)
 
 When you click "Sign Message" you will get a JSON output like the below:
 
-![claim-6](claim-6)
+![claim-6](assets/new-claims/claim-6.png)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
 Polkadot JS UI and click "Confirm Claim."
 
-![claim-7](claim-7)
+![claim-7](assets/new-claims/claim-7.png)
 
-Now a green box will appear telling you the amount to claim with a "Claim" button to make the
-claim. Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
+Now a green box will appear telling you the amount to claim with a "Claim" button to make the claim.
+Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
 
-![claim-9](claim-9)
+![claim-9](assets/new-claims/claim-9.png)
 
 At this point you will see a success message if everything went right and your DOTs will now be in
-the account that you claimed to. 
+the account that you claimed to.
 
-![claim-10](claim-10)
+![claim-10](assets/new-claims/claim-10.png)
 
-Congratulations you can now participate in aspects of the Polkadot
-network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch
-period balance transfers will not be enabled.
+Congratulations you can now participate in aspects of the Polkadot network such as
+[governance](learn-governance) and [staking](learn-staking). During the soft launch period balance
+transfers will not be enabled.
 
 #### Verifying your Claim
 
@@ -134,43 +132,41 @@ Polkadot account.
 
 - Your Polkadot account unlocked on Polkadot-JS Apps UI.
 
-You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI.
-Once you make this transaction you will have the tokens available in your account
-to use for staking, voting, and eventually transfers.
+You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI. Once
+you make this transaction you will have the tokens available in your account to use for staking,
+voting, and eventually transfers.
 
 ### Log on to Polkadot-JS Apps
 
-Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to your
-account in some way. One way would be to go to the Accounts page
-and "create" a new account, replacing the generated seed or mnemonic with the one
-belonging to your account. The other way is by using the Polkadot-JS extension and
-entering your seed or mnemonic there, which is generally safer than entering it
-directly to the Apps page.
+Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to your account in
+some way. One way would be to go to the Accounts page and "create" a new account, replacing the
+generated seed or mnemonic with the one belonging to your account. The other way is by using the
+Polkadot-JS extension and entering your seed or mnemonic there, which is generally safer than
+entering it directly to the Apps page.
 
 ### Make the attestation
 
-Once you have your account entered you should see a red counter appear on the "Claim
-Tokens" tab on the left navigation drawer.
+Once you have your account entered you should see a red counter appear on the "Claim Tokens" tab on
+the left navigation drawer.
 
-![claim-attest-1](claim-attest-1)
+![claim-attest-1](assets/new-claims/claim-attest-1.png)
 
-Click on the "Claim Tokens" tab and you will see a large notification at the top of the page
-that tells you that you need to sign an attestation.
+Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that
+tells you that you need to sign an attestation.
 
-![claim-attest-2](claim-attest-2)
+![claim-attest-2](assets/new-claims/claim-attest-2.png)
 
-You will select your Polkadot account that is being notified to you needs to make
-an attestation in the selector on this page. Click "Continue" and you should see a green
-box appear to the right of the selector.
+You will select your Polkadot account that is being notified to you needs to make an attestation in
+the selector on this page. Click "Continue" and you should see a green box appear to the right of
+the selector.
 
-![claim-attest-3](claim-attest-3)
+![claim-attest-3](assets/new-claims/claim-attest-3.png)
 
-![claim-attest-4](claim-attest-4)
+![claim-attest-4](assets/new-claims/claim-attest-4.png)
 
-Click on "Attest" and then "Sign and Submit" to make your free attest transaction.
-When the transaction is included in the block you will see a green success box appear
-in the upper left corner and not the DOTs are in your account.
-
+Click on "Attest" and then "Sign and Submit" to make your free attest transaction. When the
+transaction is included in the block you will see a green success box appear in the upper left
+corner and not the DOTs are in your account.
 
 [mycrypto]: https://github.com/MyCryptoHQ/MyCrypto/release
 [account generation]: learn-account-generation
