@@ -133,7 +133,7 @@ const unsigned = methods.balances.transferKeepAlive(
   {
     metadataRpc,
     registry, // Type registry
-  },
+  }
 );
 ```
 
