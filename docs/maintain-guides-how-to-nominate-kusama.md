@@ -28,19 +28,33 @@ detailed on the [account generation][] page.
 ### Step 1: Bond your tokens
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
-
 The "Staking Overview" subsection will show you all the active validators and their information -
-points (reliability), earnings, identities, etc. The "Waiting" subsection lists all pending
-validators that need more nominations to enter the active validator set. The "Returns" screen will
-help you estimate your earnings and this is where it's good to start picking favorites. The "Account
-Actions" subsection allows you to stake and nominate and the "Validator Stats" screen will show you
-some interesting in-depth graphs about a selected validator.
+their identities, the amount of DOTs that are staking for them, amount that is their own provided
+stake, how much they charge in commission, the era points they've earned in the current era, and the
+last block number that they produced. If you click on the chart button it will take you to the
+"Validator Stats" page for that validator that shows you more detailed and historical information
+about the validator's stake, rewards and slashes.
 
-Pick "Account Actions", then click the blue "New Stake" button.
+The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
+validators that are awaiting more nominations to enter the active validator set. Validators will
+stay in the waiting queue until they have enough DOTs backing them (as allocated through the
+Phragmen election mechanism). It is possible validator can remain in the queue for a very long time
+if they never get enough backing.
+
+The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
+estimate your earnings and this is where it's good to start picking favorites.
+
+The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
+to stake and nominate.
+
+The "Validator Stats" screen will show you some interesting in-depth graphs about a selected
+validator.
+
+Pick "Account actions", then click the grey "+ Nominator" button.
 
 You will see a modal window that looks like the below:
 
-![Bonding](/img/NPoS/nominate2.png)
+![nominator-update-1](assets/nominator-update-1.png)
 
 Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some
 left over to pay transaction fees. Transaction fees are currently at least 0.01 KSM, but they are
