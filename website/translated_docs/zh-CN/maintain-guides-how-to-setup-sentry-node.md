@@ -1,16 +1,16 @@
 ---
 id: maintain-guides-how-to-setup-sentry-node
-title: Set Up a Sentry Node - Public Node
-sidebar_label: Set Up a Sentry Node
+title: 设置哨兵节点
+sidebar_label: 设置哨兵节点
 ---
 
-This guide assumes you have already set up a validator and would like to make it more resilient and protect against sybil attack or DDoS. It has same configuration of the [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator).
+本教程假设你已经设置好验证人并且想把你的节点提高女巫攻击或 DDOs 防御保护。这个跟 [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator) 配置一样。
 
-In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate it from the internet and reduce the chance of your validator being hacked.
+我们会一步一步把验证人设置在 VPN 网络内。验证人只会与哨兵节点沟通并与网络分隔，从而减低你的验证人被入侵机会。
 
 ## VPN 安装 & 设置
 
-We will use Wireguard to configure the VPN. Wireguard is a fast and secure VPN that uses state-of-the-art cryptography. If you want to learn more about Wireguard, please go [here](https://www.wireguard.com/). Before we move on to the next step, configure the firewall to open the required ports.
+我们会使用 Wireguard 作为 VPN。 Wireguard 是快速和安全的 VPN ，它使用最新的密码学。如果你有兴趣想了解更多关于 Wireguard，前往[这里](https://www.wireguard.com/)。在我们前往下一步之前，先设置防火墙并打开所需要的端口。
 
 ```bash
 # ssh port
@@ -36,7 +36,7 @@ apt-get install wireguard
 
 ### 2. 生成密钥
 
-There are two commands you will use quite a bit when setting up Wireguard; `wg` is the configuration utility for managing Wireguard tunnel interfaces; `wg-quick` is a utility for starting and stopping the interface.
+这里有二个指令当你设置 Wireguard 时会经常使用，`wg` 是设置程序用作管理 Wireguard 隧道接口，而 `wg-quick` 是用于启动或停止。
 
 需要生成公钥/私钥对，请执行以下指令:
 
@@ -46,13 +46,13 @@ umask 077
 wg genkey | sudo tee privatekey | wg pubkey | sudo tee publickey
 ```
 
-You will see that two files, `publickey` and `privatekey`, have been created. As may be guessed from their names, `publickey` contains the public key and `privatekey` contains the private key of the keypair.
+你会看到 `publickey` 和 `privatekey` 已经创建了。从只看名称 `publickey` 包含了公钥而 `privatekey`包含了私钥对。
 
 ### 3. 设置
 
-Now create a `wg0.conf` file under the `/etc/wireguard/` directory. This file will be used to configure the interface.
+在 `/etc/wireguard/` 目录下创建 `wg0.conf` 文档，这将会用于设置其界面。
 
-这是设置**验证人** `wg0.conf` 的模版。
+这是设置 **验证人** `wg0.conf` 的模版。
 
 ```bash
 [Interface]
@@ -79,9 +79,9 @@ AllowedIPs = 10.0.0.2/32
 PersistentKeepalive = 21
 ```
 
-> Note: In this guide, we only set up 1 peer (public node)
+> 注意：在本指南中，我们仅设置了 1 个对等点(公开节点)
 
-You need to do the previous steps (1 and 2) again in your **public node** but the `wg0.conf` configuration file will look like this:
+您需要在您的  **哨兵节点** 中再次执行之前的步骤(1和2)，但 `wg0.onf`配置文件会是像这样：
 
 ```bash
 [Interface]
@@ -103,9 +103,9 @@ PersistentKeepalive = 21
 
 ### 4. 测试连接
 
-If everything goes well, you are ready to test the connection.
+如果一切顺利，您已准备好测试连接。
 
-To start the tunnel interface, execute the following command in both your `validator` and `public node`.
+要启动 VPN 隧道接口，请在您的 `验证人` 和 `哨兵节点` 中执行以下指令。
 
 ```bash
 wg-quick up wg0
@@ -117,7 +117,7 @@ wg-quick up wg0
 #[#] ip link set mtu 1420 up dev wg0
 ```
 
-You can check the status of the interface by running `wg` :
+您可以通过运行 `wg` 来检查接口状态:
 
 ```bash
 # Output
@@ -134,21 +134,21 @@ peer: Vdepw3JhRKDytCwjwA0nePLFiNsfB4KxGewl4YwAFRg=
   persistent keepalive: every 25 seconds
 ```
 
-You can then use `ping` to verify the connectivity between the nodes.
+然后您可以使用 `ping` 来验证彼此之间的连接。
 
 In case you want to update `wg0.conf`, run `wg-quick down wg0` to stop the interface first.
 
 ### 5. 启动哨兵节点和验证人
 
-After you have started the `wg0` interface on your public node and validator, do spend a little bit of time to take a look at the following description of those flags you are going to use.
+当你启动了哨兵节点和验证人的 `wg0` 接口，用一点时间看一下你将会使用标志的描述。
 
-`--sentry` - This would be required for your public node to be an authority as an observer. That means it acts the same as a validator node but without holding keys / signing. And the difference between running a full node versus adding an extra `--sentry` flag is that a full node might not have all the data the validator needs to validate properly.
+` --sentry ` - 这将需要在哨兵节点成为观察者，这意味着它跟运行验证人是一样，但是并没有持有密钥/负责签名。运行全节点与增加额外的 ` --sentry ` 区别是，哨兵节点将会拥有验证人所需要的数据，但是全节点有可能没有验证人所需要的数据作验证。
 
-`--reserved-nodes` - The node will try to connect to these nodes and always accept connections from them, but it will still connect and accept connections from other nodes as well.
+`--reserved-nodes` - 节点会尝试连接在这里定义的节点并且一直接受它们的连接，但是它还会连接和接受其它以外的节点。
 
-`--reserved-only` - Only allows the connection from reserved nodes you defined
+`--reserved-only` - 只接受你在 --reserved-nodes 定义的节点连接。
 
-You need to execute the following command to start your validator and then copy the node's identity first. Then stop it.
+您需要执行以下指令启动验证人，然后先复制节点的身份。然后再停止它。
 
 `polkadot --validator`
 
@@ -170,7 +170,7 @@ You need to execute the following command to start your validator and then copy 
 2020-04-16 19:40:53 👶 Starting BABE Authorship worker
 ```
 
-Now start your sentry with `--sentry` flag.
+现在启动哨兵节点时加上 `--sentry` 标志。
 
 ```
 polkadot \
@@ -178,7 +178,7 @@ polkadot \
 --sentry /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
 ```
 
-Result:
+结果：
 
 ```
 2020-04-16 19:41:53 ----------------------------
@@ -198,7 +198,7 @@ Result:
 2020-04-16 19:41:53 〽️ Prometheus server started at 127.0.0.1:9615
 ```
 
-You are also required to use the sentry's node identity when starting your validator, so make sure to save it somewhere else as well. Then start your validator.
+您也需要在启动验证人时使用哨兵节点的 ID，所以确保先保存它的 ID 在其它地方。
 
 ```
 polkadot \
@@ -208,7 +208,7 @@ polkadot \
 --validator
 ```
 
-You should see your validator has 1 peer, that is a connection from your sentry node. Do the above steps to spin up few more if you think one sentry node is not enough.
+最后您应该看到验证人有一个来自哨兵节点的连接。如果你认为一个哨兵节点不足够，你可按照上述步骤来增加更多。
 
 ```
 2020-04-16 19:42:57 💤 Idle (1 peers), best: #1913174 (0x24f6…14f9), finalized #1913151 (0xced8…492b), ⬇ 18.0kiB/s ⬆ 4.5kiB/s
@@ -227,4 +227,4 @@ You should see your validator has 1 peer, that is a connection from your sentry 
 2020-04-16 19:43:17 💤 Idle (1 peers), best: #1913177 (0x4e1b…209f), finalized #1913174 (0x24f6…14f9)
 ```
 
-Congratulations! You have successfully set up a validator with a public facing node and now have a more secure way of running your validator.
+恭喜！您已经成功地设置了一个拥有哨兵节点的验证人，现在可以更安全地运行验证人。
