@@ -27,13 +27,13 @@ detailed on the [account generation][] page.
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
-The "Staking Overview" subsection will show you all the active validators and their information -
-their identities, the amount of DOTs that are staking for them, amount that is their own provided
-stake, how much they charge in commission, the era points they've earned in the current era, and the
-last block number that they produced. If you click on the chart button it will take you to the
-"Validator Stats" page for that validator that shows you more detailed and historical information
-about the validator's stake, rewards and slashes.
+On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking
+Overview" subsection will show you all the active validators and their information - their
+identities, the amount of DOTs that are staking for them, amount that is their own provided stake,
+how much they charge in commission, the era points they've earned in the current era, and the last
+block number that they produced. If you click on the chart button it will take you to the "Validator
+Stats" page for that validator that shows you more detailed and historical information about the
+validator's stake, rewards and slashes.
 
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will

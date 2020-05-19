@@ -8,7 +8,6 @@ sidebar_label: Validator Guide
 > you want to get started today please consider using this guide on the Westend test network, or
 > checking out the [Kusama guide](maintain-guides-how-to-validate-kusama) instead.
 
-
 This guide will instruct you how to set up a validator node on the Polkadot network.
 
 ## Preliminaries
