@@ -36,7 +36,7 @@ election. This election will transition the network from PoA into its second pha
 
 Time-wise, the transition to Proof-of-Stake will largely depend on when a sufficient number of
 validators are ready to take over the security of the network. This transition will probably require
-at least 100 well back validators.
+at least 100 well backed validators.
 
 ## Governance
 
