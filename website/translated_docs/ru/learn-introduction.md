@@ -49,6 +49,7 @@ The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of 
 
 ## Resources
 
+- [Launch timeline](learn-launch) - find out about the Polkadot launch plans and schedule
 - [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
 - [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
 - [Links](learn-relevant-links) - Comprehensive list of external links.

@@ -205,6 +205,10 @@
         "title": "密匙",
         "sidebar_label": "密匙"
       },
+      "learn-launch": {
+        "title": "Polkadot Launch Timeline",
+        "sidebar_label": "Polkadot Launch Timeline"
+      },
       "learn-parachains": {
         "title": "平行链",
         "sidebar_label": "平行链"

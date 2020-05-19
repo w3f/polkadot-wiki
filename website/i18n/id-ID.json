@@ -205,6 +205,10 @@
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
+      "learn-launch": {
+        "title": "Polkadot Launch Timeline",
+        "sidebar_label": "Polkadot Launch Timeline"
+      },
       "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"

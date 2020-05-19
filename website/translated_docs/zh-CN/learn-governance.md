@@ -14,8 +14,8 @@ In order to make any changes to the network, the idea is to compose active token
 
 以下步骤是 Polkadot 网络中的治理过程:
 
-- [Proposing Referenda](#proposing-referenda)
-- [Voting for a proposal](#voting-for-a-proposal)
+- [Proposing Referenda](#proposing-a-referendum)
+- [Voting for a proposal](#voting-on-a-referendum)
 - [Tallying](#tallying)
 
 为了更好地了解理事会的组成方式，请阅读[本节](#council)。
@@ -39,7 +39,7 @@ Emergency proposals deal with major problems with the network that need to be "f
 
 #### 公众投票
 
-Anyone can propose a referendum by depositing the minimum amount of DOTs for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest number of support bonds will be selected to be a referendum. The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
+Anyone can propose a referendum by depositing the minimum amount of DOTs for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest amount of bonded support will be selected to be a referendum. Note that this may be different than the absolute number of seconds; for instance, three accounts bonding 20 DOTs each would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
 #### 议会公投
 
@@ -51,7 +51,9 @@ There can only be one active referendum at any given time, except when there is 
 
 #### 投票时间表
 
-Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the top proposal in the two queues. The "top" proposal is determined by the number of second votes behind it. If the given queue whose turn it is to create a referedum has no proposals (is empty), and there are proposals waiting in the other queue, the top proposal in the other queue will become a referendum.
+Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
+
+The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose turn it is to create a referendum has no proposals (is empty), and there are proposals waiting in the other queue, the top proposal in the other queue will become a referendum.
 
 Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda. An emergency referendum occurring at the same time as a regular referendum (either public- or council-proposed) is the only time that multiple referenda will be able to be voted on at once.
 
@@ -81,7 +83,7 @@ Depending on which entity proposed the proposal and whether all council members 
 | 议会(一致赞成)  | Negative Turnout Bias |
 | 议会(大部分赞成) |    Simple Majority    |
 
-Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
+Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so the `Super-Majority Approve` formula will be applied. There is no strict quorum, but the super-majority required increases as turnout lowers.
 
 ```
 approve - the number of aye votes
@@ -95,19 +97,19 @@ electorate - the total number of DOTs tokens issued in the network
 
 ##### Super-Majority Approve
 
-A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
+A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
-A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
+A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
 
 ##### Simple-Majority
 
-Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
+Majority-carries, a simple comparison of votes; if there are more aye votes than nay, then the proposal is carried, no matter how much stake votes on the proposal.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{approve}&space;>&space;{against})
 
@@ -142,7 +144,7 @@ electorate = 1500
 
 ![\Large {16.432}&space;<&space;{15.492}](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
 
-Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate the result. And `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's tokens are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their tokens are transferrable so they will not be locked in to the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
+Since the above example is a public referendum, `Super-Majority Approve` would be used to calculate the result. `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout is low, therefore, based on the above result, the referendum will be rejected. In addition, only the winning voter's tokens are locked. If the voters on the losing side of the referendum believe that the outcome will have negative effects, their tokens are transferrable so they will not be locked in to the decision. Moreover, winning proposals are autonomously enacted only after some enactment period.
 
 #### 自愿锁定
 
@@ -152,7 +154,7 @@ Polkadot utilizes an idea called `Voluntary Locking` that allows token holders t
 Max votes = tokens * vote_multiplier
 ```
 
-The conviction multiplier adds an extra vote every time the lock period doubles.
+The conviction multiplier increases the vote multiplier by one every time the lock period doubles.
 
 | Lock Periods | Vote Multiplier |
 |:------------:|:---------------:|
@@ -168,7 +170,7 @@ Based on the genesis runtime, the maximum number of lock periods is set to 6 and
 
 #### Adaptive Quorum Biasing
 
-Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
+Polkadot introduces a concept, "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
 
 ![](assets/governance/adaptive-quorum-biasing.png)
 
@@ -184,17 +186,17 @@ Referring to the above image, when a referendum only has 25% turnout, the tally 
 
 In short, when turnout rate is low, a super-majority is required to reject the proposal, which means a lower threshold of "aye" votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
-All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority carries system at 100% turnout.
+All three tallying mechanisms - majority carries, super-majority approve, and super-majority against - equate to a simple majority-carries system at 100% turnout.
 
 ## 议会
 
-To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain entity comprising a number of actors, each represented as an on-chain account. For Polkadot this number is likely to begin at around six people, and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). In general it has a fixed number of seats (envisioned to be 24 for Polkadot) and all members have a fixed term (12 months).
+To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain entity comprising a number of actors, each represented as an on-chain account. For Polkadot this number is likely to begin at around six people, and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). In general, it has a fixed number of seats (24 on Polkadot and 13 on Kusama).
 
 The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal; if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In the case that all members vote in favor, the vote is considered unanimous and is treated as uncontroversial.
 
-A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if there is an issue found late in the day with a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
+A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
 
@@ -204,9 +206,9 @@ If the cancellation is controversial enough that the council cannot get a two-th
 
 At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
 
-To elect a new council member, Polkadot employs the same election scheme as used for choosing the active set of validators, a \[Phragmen election\]\[phragmen\]. The election also chooses a set number of runners up (currently seven in Kusama) that will remain in the queue with their votes intact.
+To elect a new council member, Polkadot employs the same election scheme as used for choosing the active set of validators, a \[Phragmén election\]\[phragmen\]. The election also chooses a set number of runners up (currently seven in Kusama) that will remain in the queue with their votes intact.
 
-As opposed to a "first past the post", where voters must decide only on a single candidate chosen from a list, a Phragmen election is a more expressive way to indicate voters' views. Token holders can treat it as Boolean voting to support as many candidates as they want. The election algorithm will find the fair winners.
+As opposed to a "first past the post", where voters must decide only on a single candidate chosen from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders can treat it as Boolean voting to support as many candidates as they want. The election algorithm will find a fair subset of the candidates which closely match the expressed indications of the electorate as a whole.
 
 Let's take a look at the example below.
 
@@ -234,7 +236,7 @@ The above example shows that candidate C wins the election in round 1, while can
 
 For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 
-This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
+This is the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing. Further changes can be made through on-chain governance.
 
 ### Prime Members
 
@@ -246,13 +248,11 @@ The purpose of having a prime member of the council is to ensure a quorum, even 
 
 ## 技术委员会
 
-The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either Polkadot/Kusama runtime or the Polkadot Host. Teams are added or removed from the Technical Committee from a simple majority vote of the council.
+The Technical Committee was introduced in the [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The Technical Committee is composed of the teams that have successfully implemented or specified either a Polkadot/Kusama runtime or Polkadot Host. Teams are added or removed from the Technical Committee via simple majority vote of the council.
 
 The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are fast-tracked for voting and implementation. These emergency referenda are intended for use only under urgent circumstances.
 
-Fast-tracked referenda are the only type of referenda which can be active alongside another active referendum.
-
-Thus, with fast tracked referenda it is possible to have two active referendums at the same time. Voting on one does not prevent a user from voting on the other.
+Fast-tracked referenda are the only type of referenda which can be active alongside another active referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the same time. Voting on one does not prevent a user from voting on the other.
 
 ## [DOT 的用途](learn-DOT#dots-for-governance)
 

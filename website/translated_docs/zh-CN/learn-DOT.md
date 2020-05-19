@@ -6,90 +6,90 @@ sidebar_label: DOT
 
 ## 什么是 DOTs？
 
-DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
+DOT 是 Polkadot 网络的原生代币，类似于 BTC 是比特币的原生代币或以太币是以太坊区块链的原生代币。
 
 Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest unit being the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether.
 
 ### Polkadot
 
-| Unit            | Decimal Places |
-| --------------- | -------------- |
-| Planck          | 1              |
-| Point           | 3              |
-| Microdot (uDOT) | 6              |
-| Millidot (mDOT) | 9              |
-| Dot (DOT)       | 12             |
+| 单位              | 小数位 |
+| --------------- | --- |
+| Planck          | 1   |
+| Point           | 3   |
+| Microdot (uDOT) | 6   |
+| Millidot (mDOT) | 9   |
+| Dot (DOT)       | 12  |
 
 ### Kusama
 
-| Unit            | Decimal Places |
-| --------------- | -------------- |
-| Planck          | 1              |
-| Point           | 3              |
-| MicroKSM (uKSM) | 6              |
-| MilliKSM (mKSM) | 9              |
-| KSM             | 12             |
+| 单位              | 小数位 |
+| --------------- | --- |
+| Planck          | 1   |
+| Point           | 3   |
+| MicroKSM (uKSM) | 6   |
+| MilliKSM (mKSM) | 9   |
+| KSM             | 12  |
 
 ## DOTs 用途是什么？
 
-DOTs serve three key functions in Polkadot, (i) to be used for governance of the network, (ii) to be staked for operation of the network, and (iii) to be bonded to connect a chain to Polkadot as a parachain.
+DOTs 在 Polkadot 中有三个关键功能: (i)用于网络的治理; (ii)参与抵押用于网络的运作; (iii)作为抵押绑定以将链连接到 Polkadot 作为平行链;
 
-DOTs can also serve ancillary functions by virtue of being a transferrable token. For example, DOTs stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
+DOT 还可以作为辅助功能充当可转送代币。 例如将存储在财政库中的 DOT 发送给为 Polkadot 网络进行相关项目的团队。
 
-### DOTs for governance
+### DOTs 用于治理
 
-The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions which are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
+DOTs 的第一功能是使持有人有权控制平台的治理。 治理机制中包含了一些功能其包括定下网络费用，添加或移除平行链以及特殊事件，例如对 Polkadot 平台的升级和修复。
 
-Polkadot will enable any holder of DOTs to participate in governance. For details on how holders can participate in governance, as well as their rights and responsibilities, see the [governance page](learn-governance).
+在 Polkadot 里，任何持有 DOTs 的人都能参与治理。有关持有人如何参与治理以及他们的权利和责任的详细信息，请参见[治理页面](learn-governance)。
 
-### DOTs for consensus
+### DOTs 用于共识
 
-DOTs will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious participants whom will be punished by the network by getting their DOTs slashed. The DOTs required to participate in the network will vary depending on the activity which is being performed, the duration the DOTs will be staked for, and the total number of DOTs staked.
+DOTs 将用于促进支撑 Polkadot 的共识机制。为了使平台发挥作用并允许跨平行链进行有效交易，Polkadot 将依靠 DOT 的持有人发挥积极作用。 参与者将（通过抵押）将其 DOT 置于担保之中，以执行这些功能。如果有恶意参与者破壞网络，抵押中的 DOT 将会因破壞而受到惩罚。 参与网络所需要 DOT 的数量将根据正在执行的活动，抵押 DOT 的时间以及抵押 DOT 的总数而有所不同。
 
-### DOTs for bonding
+### DOTs 用于绑定
 
-DOTs will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOTs will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed.
+为了把平行链连接到 Polkadot 网络， DOTs 将会有需要绑定一段时间。绑定期间的 DOTs 将会被锁上，当过了绑定时间和平行链被移除后，原有绑定的 DOTs 将会返回你帐户。
 
-### Vesting
+### 锁仓 (Vesting)
 
-DOTs may have a lock placed on them to account for vesting funds. Like other types of locks, these funds cannot be transferred but can be used in other parts of the protocol such as voting in governance or being staked as a validator or nominator.
+DOTs 可能被锁仓。这些资金不能转移，但可以用于协议的其他部分，例如在治理中投票或作为验证人或提名人。
 
-Vesting funds are on a linear release schedule and unlock a constant number of tokens at each block. Although the tokens are released in this manner, it does not get reflected on-chain automatically due to the fact that locks are [lazy](#lazy-vesting) and require an extrinsic to update.
+锁仓资金按线性发布时间表进行，并在每个区块上解锁恒定数量的代币。 尽管代币是以这种方式释放的，但由于锁上[ lazy ](#lazy-vesting)且需要外部更新，因此不会自动反映在链上。
 
-There are two ways that vesting schedules can be created.
+可以创建两种锁仓时间表的方式。
 
-- One way is as part of the genesis configuration of the chain. In the case of Polkadot and Kusama, the chain specification genesis script reads the state of the Polkadot Claims contract that exists on the Ethereum blockchain and creates vesting schedules in genesis for all the allocations registered as being vested.
-- A second way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as long as the account for which the vesting schedule will be created does not already have one and the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
+- 一种方法是作为链的创世配置的一部分。 在 Polkadot 和 Kusama 的情况下，链规范生成脚本读取以太坊区块链上存在的 Polkadot Claims 合約的状态，并生成所有创世代币的分配和锁仓时间表。
+- 第二种方式是通过锁仓 pallet, `vested_transfer`的外在类型。 vested 转账功能允许任何人创建带有资金锁仓计划。为只要创建锁仓时间表的帐户还没有锁仓，转移至少指定在链上的 `MinVestedTransfer` 资金。
 
-Vesting schedules have three parameters, `locked`, `per_block`, and `starting_block`. The configuration of these three fields dictate the amount of funds that are originally locked, the slope of the unlock line, and the block number for when the unlocking begins.
+锁仓时间表有三个参数， `locked`， `per_block`和 `starting_block`。 这三个领域的配置决定了原先锁定的资金额，解锁线的斜坡和解锁时的区块。
 
-#### Lazy Vesting
+#### Lazy 锁仓
 
-Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that someone must explicitly call an extrinsic to update the lock that is placed on an account.
+像 [simple payouts](learn-simple-payouts), 像 _lazy_, 这意味着某人必须明确调用外部交易来更新在帐户上的锁仓。
 
-- The `vest` extrinsic will update the lock that is placed on the caller.
-- The `vest_other` will update the lock that is placed on another "target" account's funds.
+- `vest` 外部交易将更新呼叫者之前锁上的资金
+- `vest_other` 将更新放在另一个"目标"账户资金上的锁定。
 
-These extrinsics are exposed from the Vesting pallet.
+这些交易是从 Vesting pallet 提供。
 
 ## 主网 DOTs
 
-Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch in early 2020 (see the [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Gavin Wood, one of the project's founders, said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+Web3 基金會將會在 2020 年主網上線前分配最多 10% DOTs。(查看 [简短版](https://polkadot.network/Polkadot-lightpaper.pdf)或[Polkadot 网络常见问题](https://polkadot.network/faq/))。正如项目创始人之 一Gavin Wood 在年终回顾中所说，今年某个时候可能会公开发售该笔款项的一部分。在[ polkadot.network ](https://polkadot.network/)上订阅 Polkadot 电子报，以获取最新消息。
 
-_Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expected in early 2020. Therefore any transfers of Mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch._
+_警告：DOT 在主网上线前（预计于 2020 年中）之前不可转让。因此任何人转让 DOT 都是非法且未经授权。还有，DOT 现时是无法转移。拥有 DOT 并将地址转移给其他人，而该个人仍然可以保留其私钥副本，因此在主网上线之前，请大家不要参这类极大风险的买卖。_
 
-Testnet DOTs are freely available now - see below for various ways to obtain them.
+测试 DOTs 现在可免费获取 - 请参见下面了解获取的各种方法。
 
 ## 测试网 DOTs
 
-DOTs are required to make transactions on the Polkadot network. Testnet DOTs do not have any value beside allowing you to experiment with the network.
+DOTs 必须在 Polkadot 网络上进行交易。 测试网的 DOTs 除了可以测试网络之外没有任何价值。
 
-### Getting Westies
+### 获取 Westies
 
-The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.w3f.tech/#westend_faucet:matrix.org).
+当前的测试网称为[ Westend ](maintain-networks#westend-test-network)，您可以通过在 Riot 聊天室输入`!drip <WESTEND_ADDRESS>`来获得其测试币 [#westend_faucet:matrix.org](https://riot.w3f.tech/#westend_faucet:matrix.org).
 
-You can also make your own DOTs by [becoming a validator](maintain-validator).
+你也可以通过 [成为验证人](maintain-validator) 来获取 DOTs。
 
 ## Kusama 代币
 
-Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the [frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via [grant request](http://grants.web3.foundation) from the Web3 Foundation.
+与测试网 DOTs 有所不同，Kusama 代币并不是免费赠送。 Kusama 代币可通过[认领过程](https://claim.kusama.network/)（如果您已经购买了 DOTs），[ Kusama 水龙头 ](https://guide.kusama.network/en/latest/start/faucet/)
