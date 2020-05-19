@@ -49,8 +49,9 @@ Polkadot 有中继链作为系统的主链。 平行链(parachain) 构造并向�
 
 ## 资源
 
-- [词汇表](glossary) - Polkadot 文档中使用的特定领域术语的定义。
-- [实现](learn-implementations) - Polkadot 协议的实现(那些人在开发和 Github 库代码)。
-- [链接](learn-relevant-links) - 外部链接的完整列表。
-- [路线图](learn-roadmap) - Polkadot 的实现路线图。
-- [常见问题](learn-faq) - 回答有关 Polkadot 的一些常见问题。
+- [Launch timeline](learn-launch) - find out about the Polkadot launch plans and schedule
+- [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
+- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
+- [Links](learn-relevant-links) - Comprehensive list of external links.
+- [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
+- [FAQ](learn-faq) - Answers to some of the frequently asked questions about Polkadot.

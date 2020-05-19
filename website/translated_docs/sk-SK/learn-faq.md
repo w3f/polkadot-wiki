@@ -8,7 +8,7 @@ _This FAQ focuses on technical questions for users interested in developing appl
 
 ## Polkadot Launch
 
-### What is the launch process of Polkadot Beta?
+### What is the launch process of Polkadot?
 
 The Polkadot network will launch first as a Proof-of-Authority (PoA) chain. During this time, governance will be controlled by the single Sudo (super-user) account, and functionality will be restricted. Among other things, transfer of funds will not be enabled during this period.
 
