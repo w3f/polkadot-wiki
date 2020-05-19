@@ -128,6 +128,11 @@ const unsigned = methods.balances.transferKeepAlive(
     specVersion: 1019,
     tip: 0,
     validityPeriod: 240 * 60, // seconds (240 minutes)
+    transactionVersion,
+  },
+  {
+    metadataRpc,
+    registry, // Type registry
   }
 );
 ```
@@ -138,8 +143,8 @@ const unsigned = methods.balances.transferKeepAlive(
 import { methods, createSigningPayload } from '@substrate/txwrapper';
 
 // See "Construct a transaction offline" for "{...}"
-const unsigned = methods.balances.transferKeepAlive({...}, {...});
-const signingPayload = createSigningPayload(unsigned);
+const unsigned = methods.balances.transferKeepAlive({...}, {...}, {...});
+const signingPayload = createSigningPayload(unsigned, { registry });
 ```
 
 **Serialize a signed transaction**
@@ -151,7 +156,7 @@ import { createSignedTx } from "@substrate/txwrapper";
 // An example is given here:
 // https://github.com/paritytech/txwrapper/blob/630c38d/examples/index.ts#L50-L68
 const signature = await signWithAlice(signingPayload);
-const signedTx = createSignedTx(unsigned, signature);
+const signedTx = createSignedTx(unsigned, signature, { metadataRpc, registry });
 ```
 
 **Decode payload types**
@@ -162,13 +167,13 @@ You may want to decode payloads to verify their contents prior to submission.
 import { decode } from "@substrate/txwrapper";
 
 // Decode an unsigned tx
-const txInfo = decode(unsigned, { metadata });
+const txInfo = decode(unsigned, { metadataRpc, registry });
 
 // Decode a signing payload
-const txInfo = decode(signingPayload, { metadata });
+const txInfo = decode(signingPayload, { metadataRpc, registry });
 
 // Decode a signed tx
-const txInfo = decode(signedTx, { metadata });
+const txInfo = decode(signedTx, { metadataRpc, registry });
 ```
 
 **Check a transaction's hash**
