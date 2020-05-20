@@ -34,24 +34,24 @@
         "sidebar_label": "开发者专页"
       },
       "build-node-interaction": {
-        "title": "Node Interaction",
-        "sidebar_label": "Node Interaction"
+        "title": "节点互动",
+        "sidebar_label": "节点互动"
       },
       "build-node-management": {
-        "title": "Node Management",
-        "sidebar_label": "Node Management"
+        "title": "节点管理",
+        "sidebar_label": "节点管理"
       },
       "build-oracle": {
-        "title": "Oracles",
-        "sidebar_label": "Oracles"
+        "title": "预言机",
+        "sidebar_label": "预言机"
       },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
       },
       "build-protocol-info": {
-        "title": "Polkadot Protocol Information",
-        "sidebar_label": "Polkadot Protocol"
+        "title": "Polkadot 协议资料",
+        "sidebar_label": "Polkadot 协议"
       },
       "build-smart-contracts": {
         "title": "智能合约",
@@ -62,8 +62,8 @@
         "sidebar_label": "工具索引"
       },
       "build-transaction-construction": {
-        "title": "Transaction Construction and Signing",
-        "sidebar_label": "Transaction Construction"
+        "title": "交易创建和签名",
+        "sidebar_label": "交易创建"
       },
       "community": {
         "title": "社区",
@@ -90,20 +90,20 @@
         "sidebar_label": "Adverserial Cheatsheet"
       },
       "kusama-bug-bounty": {
-        "title": "Bug Bounty",
-        "sidebar_label": "Bug Bounty"
+        "title": "漏洞奖励计画",
+        "sidebar_label": "漏洞奖励计画"
       },
       "kusama-claims": {
-        "title": "Kusama Claims",
-        "sidebar_label": "Claims"
+        "title": "Kusama 领取",
+        "sidebar_label": "领取"
       },
       "kusama-coc": {
-        "title": "Kusama Code of Conduct",
-        "sidebar_label": "Code of Conduct"
+        "title": "Kusama 守则",
+        "sidebar_label": "守则"
       },
       "kusama-community": {
-        "title": "Kusama Community",
-        "sidebar_label": "Community"
+        "title": "Kusama 社区",
+        "sidebar_label": "社区"
       },
       "kusama-endpoints": {
         "title": "Kusama Endpoints",
@@ -111,27 +111,27 @@
       },
       "kusama-faucet": {
         "title": "Kusama Faucet",
-        "sidebar_label": "Faucet"
+        "sidebar_label": "水龙头"
       },
       "kusama-index": {
         "title": "Kusama",
-        "sidebar_label": "Home"
+        "sidebar_label": "主页"
       },
       "kusama-time-periods": {
         "title": "Time Period Cheat Sheet",
-        "sidebar_label": "Parameters"
+        "sidebar_label": "参数"
       },
       "kusama-timeline": {
-        "title": "Kusama Timeline",
-        "sidebar_label": "Timeline"
+        "title": "Kusama 时间线",
+        "sidebar_label": "时间线"
       },
       "learn-account-generation": {
-        "title": "Account Generation",
-        "sidebar_label": "Account Generation"
+        "title": "创建帐户",
+        "sidebar_label": "创建帐户"
       },
       "learn-accounts": {
-        "title": "Polkadot Accounts",
-        "sidebar_label": "Polkadot Accounts"
+        "title": "Polkadot 账户",
+        "sidebar_label": "Polkadot 账户"
       },
       "learn-architecture": {
         "title": "Polkadot 架构",
@@ -142,27 +142,27 @@
         "sidebar_label": "平行链插槽拍卖"
       },
       "learn-availability": {
-        "title": "Availability and Validity",
-        "sidebar_label": "Availability and Validity"
+        "title": "可用性和有效性",
+        "sidebar_label": "可用性和有效性"
       },
       "learn-bridges": {
         "title": "桥接",
         "sidebar_label": "桥接"
       },
       "learn-comparisons-dfinity": {
-        "title": "Polkadot and Dfinity",
+        "title": "Dfinity 与 Polkadot 区别",
         "sidebar_label": "Dfinity"
       },
       "learn-comparisons-ethereum-2": {
-        "title": "Polkadot and Ethereum 2.0",
-        "sidebar_label": "Ethereum 2.0"
+        "title": "Polkadot 和 以太坊 2.0",
+        "sidebar_label": "以太坊 2.0"
       },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot and Cosmos",
+        "title": "Polkadot 与 Cosmos",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "Polkadot Comparisons",
+        "title": "与其它区块链比较",
         "sidebar_label": "与其它比较"
       },
       "learn-consensus": {
@@ -170,8 +170,8 @@
         "sidebar_label": "Polkadot 共识机制"
       },
       "learn-crosschain": {
-        "title": "Cross-chain Message Passing (XCMP)",
-        "sidebar_label": "Cross-chain Message Passing (XCMP)"
+        "title": "跨链消息传递 (XCMP)",
+        "sidebar_label": "跨链消息传递 (XCMP)"
       },
       "learn-cryptography": {
         "title": "密码学讲解",
@@ -190,8 +190,8 @@
         "sidebar_label": "治理"
       },
       "learn-identity": {
-        "title": "Identity",
-        "sidebar_label": "Identity"
+        "title": "身份",
+        "sidebar_label": "身份"
       },
       "learn-implementations": {
         "title": "其它程序语言实现",
@@ -206,8 +206,8 @@
         "sidebar_label": "密匙"
       },
       "learn-launch": {
-        "title": "Polkadot Launch Timeline",
-        "sidebar_label": "Polkadot Launch Timeline"
+        "title": "Polkadot 上线流程",
+        "sidebar_label": "Polkadot 上线流程"
       },
       "learn-parachains": {
         "title": "平行链",
