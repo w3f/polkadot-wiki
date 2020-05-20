@@ -1,38 +1,38 @@
 ---
 id: maintain-guides-how-to-unbond
-title: Stop Being a Nominator
-sidebar_label: Stop Being a Nominator
-description: The full process of how to stop being a nominator in order to unlock and withdraw your tokens for sending or selling. ---
+title: 停止成为提名人
+sidebar_label: 停止成为提名人
+description: 如何停止成为提名人以解锁和提取代币以可发送或出售的完整过程。 ---
 ---
 
-The following describes how to stop nominating and retrieve your tokens. Please note that all networks on which you can nominate have a delayed exit period, called the _unbonding period_, which serves as a cooldown. You will not be able to transfer your tokens before this period has elapsed.
+下面介绍如何停止提名和取回代币。 请注意您可以提名的所有网络都有一个延迟的退出期，称为<em x-id =“ 4”>解除绑定期</em>，这是个冷却时间。 在此期限过后，您将无法转让代币。
 
-### Step 1: Stop Nominating
+### 第1步：停止提名
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+在 [Polkadot UI](https://polkadot.js.org/apps) 前往 "Staking" 标签
 
-On this tab click on the "Account Actions" tab at the top of the screen.
+在页面左上角点击 "Account Actions"。
 
-Here, click "Stop Nominating" on an account you're nominating with and would like to free the funds for.
+在这里，点击您要提名并希望腾出资金的帐户上的 "Stop Nominating"。
 
 ![Stop Nominating Button](/img/NPoS/unbond1.png)
 
-After you confirm this transaction, your tokens will remain _bonded_. This means they stay ready to be distributed among nominees again. To actually withdraw them, you need to unbond.
+确认此交易后，您的代币将保持_绑定_。 这意味着他们随时准备再次分配给被提名人。 要撤回它们，您需要取消绑定。
 
-### Step 2: Unbonding an amount
+### 第2步：取消绑定
 
-To unbond the amount, click the little gear icon next to the account you want to unbond money for, and select "Unbond funds".
+要取消绑定，请点击您要取消其资金绑定的帐户旁边的图标，然后选择 "Unbond funds"。
 
 ![Unbonding](/img/NPoS/unbond2.png)
 
-Select the amount you wish to unbond and click Unbond, then confirm the transaction.
+选择您要取消绑定的金额，然后单击 "Unbond"，然后确认交易。
 
 ![Unbonding all](/img/NPoS/unbond3.png)
 
-If successful, your balance will show as "unbonding" with an indicator of how many more blocks remain until the amount is fully unlocked.
+如果成功，您的余额将显示为 "unbonding"，并显示还剩余多少区块，你就会完全解锁该数量。
 
 ![Unbonding duration](/img/NPoS/unbond4.png)
 
-This duration will vary depending on the network you're on and will typically be four times as fast on Kusama as it is on Polkadot.
+该持续时间会因您所使用的网络而异，在 Kusama 上的速度通常是 Polkadot 上速度的四倍。
 
-Once this process is complete, you will have to issue another, final transaction: Withdraw Unbonded. Then, your transferrable balance will increase by the amount of tokens you've just fully unbonded.
+完成此过程后，您将必须发出另一笔交易: 提取已解绑的代币。 然后您的可转出余额将会增加刚解除绑定的代币数量。
