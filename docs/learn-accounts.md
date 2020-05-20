@@ -110,24 +110,29 @@ For example, the Ledger app uses BIP39 mnemonics, BIP44 paths (Polkadot and Kusa
 [Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf) for
 seed derivation, and ed25519 signatures.
 
-Subkey also uses BIP39 mnemonics and BIP32 seed derivation, but you must supply a path and specify
-the signature scheme to use (see table below).
+Subkey also supports BIP39 mnemonics (when used with ed25519) and BIP32 seed derivation, but you
+must supply a path and specify the signature scheme to use (see table below).
 
 If you want to use the same mnemonic across multiple wallets, make sure that they follow compatible
 methods for generating keys and signing messages. If you cannot find understandable documentation,
 reach out to the project maintainers.
 
-**Signing Curve Support**
+|                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
+| :-------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
+| Polkadot JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot JS Apps      |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
+| Subkey                |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
 
-|                  | sr25519 | ed25519 | secp256k1 |
-| :--------------- | :-----: | :-----: | :-------: |
-| Polkadot JS UI   |    X    |    X    |     X     |
-| Polkadot JS Apps |    X    |    X    |     X     |
-| Parity Signer    |    X    |   X\*   |           |
-| Ledger           |         |    X    |           |
-| Subkey           |    X    |    X    |     X     |
+\* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with
+BIP39.
 
-- \* Planned
+&dagger; [BIP44 Registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
+
+&Dagger; Ed25519 and BIP32 based on
+[Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)
+
+&sect; Sr25519 planned
 
 ## Existential Deposit and Reaping
 
