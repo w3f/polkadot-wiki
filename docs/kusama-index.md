@@ -38,8 +38,9 @@ Kusama is a permissionless network and anyone can come along and start using it.
 Those who participated in the Polkadot sale can claim a proportional amount of KSM through the
 [Kusama Claims process][kusama claims].
 
-For those who did not participate in the Polkadot sale, KSM are publicly available through a
-highly-frictional [faucet][ksm faucet].
+KSM used to be publicly available through a highly-frictional faucet, but this has been
+decommissioned. Web3 Foundation is considering new ways to distribute KSM for people who need KSM to
+build.
 
 As a KSM holder, you are able to interact with all the features of the Kusama network such as
 staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and
@@ -75,4 +76,3 @@ To join the Chinese Validator chat, message
 [kappa]: https://polkascan.io/pre/kusama/council/motion/94
 [thousand validators]: https://polkadot.network/join-kusamas-thousand-validators-programme/
 [kusama claims]: https://claim.kusama.network
-[ksm faucet]: https://github.com/kusamanetwork/faucet
