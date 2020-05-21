@@ -1,27 +1,27 @@
 ---
 id: kusama-coc
-title: Kusama Code of Conduct
-sidebar_label: Code of Conduct
+title: Кодекс поведения Kusama
+sidebar_label: Кодекс поведения
 ---
 
-Kusama is an entirely new network, it’s one big experiment and we need your participation for it to be a great success.
+Kusama является совершенно новой сетью, это один большой эксперимент, и нам нужно Ваше участие в нём для достижения больших успехов.
 
-A Kusama community member is expected to keep the utmost respect for others. We want to foster a sense of collaboration amongst ourselves and the open source community. Kusma participants exist to encourage the open exchange of ideas and expression and require an environment that recognizes the inherent worth of every person and group. We are here to collaborate, discuss, and even disagree. The key is doing this is a manner that comes from a place of respect and professionalism. Participants in the Kusama network may consist of participants in an online forum, on-chain governance participants, parachain deployment teams, validators, enthusiasts, and ecosystem tool builders. We expect for there to be participation from all backgrounds but like to set some social boundaries on how you may be treated and treat others.
+Предполагается, что член сообщества Kusama будет уважать других. Мы хотим укрепить чувство сотрудничества между собой и сообществом с открытым исходным кодом. Участники Kusama существуют, чтобы поощрять открытый обмен идеями и выражением и требуют среды, которая признает присущую каждому человеку и группе. Мы здесь, чтобы сотрудничать, обсуждать и даже не соглашаться. Главное, чтобы это было сделано так, что всё основывается на уважении и профессионализме. Участники сети Kusama могут состоять из участников онлайн-форума, участников ончейн управления, команд развертывания парчейнов, валидаторов, энтузиастов и разработчиков инструментов экосистемы. Мы ожидаем, что там будет участие из всех слоев общества, но хотели бы установить некоторые социальные границы того, как относиться к Вам и относиться к другим.
 
-## Kusama Community
+## Сообщество Kusama
 
-Kusama community members come from across the globe and are not bordered by race, gender, or background. Community participants have read through the requisite resources and obtained sufficient knowledge about Kusama and all related content. This knowledge equips the community with the requisite information needed in the dispense of their duties as a participant.
+Члены сообщества Kusama со всего земного шара и не ограничиваются расой, полом или происхождением. Участники сообщества ознакомились с необходимыми ресурсами и получили достаточные знания о Kusama и всём сопутствующем контенте. Эти знания снабжают сообщество необходимой информацией, необходимой для выполнения его обязанностей в качестве участника.
 
-Please understand that this network is an experiment with potential flaws, so it’s appreciated that community members help report any sort of exploits directly to the team before sharing publicly. Please see the bug bounty.
+Пожалуйста, поймите, что эта сеть - эксперимент с потенциальными недостатками, поэтому очень важно, чтобы члены сообщества сообщали о любых уязвимостях непосредственно команде, прежде чем делиться ими публично. Пожалуйста, посмотрите на программу вознаграждений за найденные ошибки.
 
-## Examples of Unacceptable Behavior
+## Примеры недопустимого поведения
 
-Please note: these are just a few examples and you can always consult a team member if you have any questions.
+Пожалуйста, обратите внимание, что это всего несколько примеров, и Вы всегда можете проконсультироваться с членом команды, если у Вас есть вопросы:
 
-Angry aggressive comments towards individuals or other projects on any medium of communication Knowingly distributing false information about Kusama or other projects Harassing other individuals or projects (trolling).
+Злые агрессивные комментарии к отдельным лицам или другим проектам на любом канале коммуникации сознательно распространяя ложную информацию о Kusama или других проектах. Преследование других людей или проектов (троллинг).
 
-## What To Do If You Witness or Are Subject To Unacceptable Behavior
+## Что делать, если Вы стали свидетелем или подверглись неприемлемому поведению?
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact the administrator of the channel you’re in.
+Если Вы подвергаетесь преследованиям, знаете, что кто-то другой подвергается преследованиям, или у Вас есть какие-либо другие вопросы связанные с преследованиями, пожалуйста, свяжитесь с администратором канала.
 
-This Code of Conduct may be revised at any time. We are always willing to revise this document based on feedback from the Kusama participants and or Polkadot community.
+Настоящий Кодекс поведения может быть пересмотрен в любое время. Мы всегда готовы пересмотреть этот документ, основываясь на отзывах участников Kusama и сообщества Polkadot.
