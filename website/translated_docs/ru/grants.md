@@ -2,19 +2,19 @@
 id: grants title: Web3 Foundation Grantees sidebar_label: Grants
 - - -
 
-This page gives an overview of accepted grants and a link to their GitHub repositories. Keep in mind that not all of the accepted grants have already delivered software.
+Эта страница дает обзор принятых грантов и ссылку на их репозитории GitHub. Имейте в виду, что не все принятые гранты уже поставили программное обеспечение.
 
 ---
 
-## Table of Contents
+## Содержание
 
-- [Wave 1 - First Quarter 2019](#wave-1)
-- [Wave 2 - Second Quarter 2019](#wave-2)
-- [Wave 3 - Third Quarter 2019](#wave-3)
-- [Wave 4 - Fourth Quarter 2019](#wave-4)
-- [Wave 5 - First Quarter 2020](#wave-5)
+- [Волна 1 - Первый квартал 2019](#wave-1)
+- [Волна 2 - Второй квартал 2019](#wave-2)
+- [Волна 3 - Третий квартал 2019](#wave-3)
+- [Волна 4 - четвертый квартал 2019 года](#wave-4)
+- [Волна 5 - Первый квартал 2020](#wave-5)
 
-## Wave 1
+## Волна 1
 
 - [ChainSafe](https://chainsafe.io/) - Polkadot Host in Go (via an RFP) ([GitHub](https://github.com/ChainSafeSystems/gossamer))
 - [Soramitsu](https://soramitsu.co.jp/) - Polkadot Host in C++ (via an RFP) ([GitHub](https://github.com/soramitsu/kagome))
@@ -27,7 +27,7 @@ This page gives an overview of accepted grants and a link to their GitHub reposi
 - [Protos](http://protosmanagement.com/) - Open Source Node Explorer
 - [Supercomputing Systems](https://www.scs.ch/) - Substrate Transaction Privacy using Intel SGX ([GitHub](https://github.com/scs/substraTEE))
 
-## Wave 2
+## Волна 2
 
 - [Cap9](https://cap9.io/) - A low-level security protocol and framework for smart contracts ([GitHub](https://github.com/Daohub-io/cap9))
 - Substrate Java API - Java version of our JS API ([GitHub](https://github.com/polkadot-java))
@@ -42,7 +42,7 @@ This page gives an overview of accepted grants and a link to their GitHub reposi
 - [Mailchain](https://mailchain.xyz/) - a Multi-Blockchain Messaging Application ([GitHub](https://github.com/mailchain))
 - [Usetech](http://usetech.com/blockchain.html) - Polkadot C++ API ([GitHub](https://github.com/usetech-llc/polkadot_api_cpp))
 
-## Wave 3
+## Волна 3
 
 - [Supercomputing systems](http://scs.ch/) - Substrate Rust API client ([GitHub](https://github.com/scs/substrate-api-client))
 - [NGRAVE](https://ngrave.io/) - Substrate Hardware Wallet Integration
@@ -59,7 +59,7 @@ This page gives an overview of accepted grants and a link to their GitHub reposi
 - [pLibra ](https://plibra.io/)- Bridge between Polkadot and a Libra chain ([GitHub](https://github.com/libra-china-org))
 - [Wiv ](http://wiv.io/)- Supply chain modules and front-end UI ([GitHub](https://github.com/wivtech))
 
-## Wave 4
+## Волна 4
 
 - [Genesis Lab](https://genesislab.net/) - Validator Tracker ([GitHub](https://github.com/genesis-lab-team))
 - [Usetech](http://usetech.com/blockchain.html) - Substrate API in .NET ([GitHub](https://github.com/usetech-llc/polkadot_api_dotnet))
@@ -88,7 +88,7 @@ This page gives an overview of accepted grants and a link to their GitHub reposi
 - [Sean Young](https://www.mess.org/) - Solidity to WASM compiler ([GitHub](https://github.com/hyperledger-labs/solang))
 - [Chain Security](https://chainsecurity.com/) - Tool for validating correctness of Polkadot runtimes ([GitHub](https://github.com/ChainSecurity))
 
-## Wave 5
+## Волна 5
 
 - [Bifrost](https://bifrost.codes/) - EOS interoperable bridge ([GitHub](https://github.com/bifrost-codes))
 - [Entropy Labs](https://entropylabs.hk) - A toolkit for building and deploying applications with substrate

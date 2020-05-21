@@ -1,7 +1,7 @@
 ---
-id: news
-title: News
-sidebar_label: News
+id: новости
+title: Новости
+sidebar_label: Новости
 ---
 
-Follow the Polkadot [blog](https://polkadot.network/blog/) to stay up to date.
+Следите за [блогом Polkadot](https://polkadot.network/blog/), чтобы быть в курсе последних событий.

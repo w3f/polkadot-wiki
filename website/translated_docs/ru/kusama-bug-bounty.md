@@ -1,32 +1,32 @@
 ---
 id: kusama-bug-bounty
-title: Bug Bounty
+title: Программа вознаграждений за найденные ошибки (Bug Bounty)
 sidebar_label: Bug Bounty
 ---
 
-We call on our community and all bug bounty hunters to help identify bugs in Kusama.
+Мы призываем наше сообщество и всех охотников за bug bounty помочь выявить ошибки в Kusama.
 
-If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it to [sos@kusama.network](mailto:sos@kusama.network). Disclosure to any third parties disqualifies bug bounty eligibility.
+Если Вы обнаружили ошибку, мы ценим Ваше сотрудничество в ответственном расследовании и сообщении об этом [sos@kusama.network](mailto:sos@kusama.network). Объявление третьим лицам дисквалифицирует Ваше право на участие в программе.
 
-## Eligibility
+## Правомочность
 
-Generally speaking, any bug that poses a significant vulnerability, either to the soundness of protocols and protocol/implementation compliance to network security, to classical client security as well as security of cryptographic primitives, could be eligible for reward. Please note that it's entirely at our discretion to decide whether a bug is significant enough to be eligible for reward.
+Вообще говоря, любая ошибка, которая представляет собой значительную уязвимость, будь то надёжность протоколов и соответствие протокола/реализации сетевой безопасности, классической безопасности клиента, а также безопасности криптографических примитивов, может подлежать вознаграждению. Пожалуйста, обратите внимание, что это полностью на наше усмотрение, чтобы решить, является ли ошибка достаточно значимой, чтобы иметь право на вознаграждение.
 
-**Examples include:** An attack that could disrupt the entire network and harm the validity to the network would be considered a critical threat. An attack that would cause disruption in service to others would be considered a high threat.
+**Примеры:** Атака, которая может сорвать всю сеть и нанести вред действию сети будет считаться критической угрозой. Нападение, которое приведет к сбоям в работе других сервисов, будет рассматриваться как серьезная угроза.
 
-Please note: The submission quality will be a large factor in the level of considered compensation. A high quality submission includes an explanation of how the bug can be reproduced, how it was discovered and elsewise critical details. Please disclose responsibly; disclosure to any third parties disqualifies bug bounty eligibility.
+Пожалуйста, обратите внимание: качество подачи будет большим фактором в уровне рассматриваемой компенсации. Высокое качество представления включает в себя объяснение того, как ошибка может быть воспроизведена, как она была обнаружена и другие важные детали. Пожалуйста, раскрывайте ответственно; раскрытие информации любым третьим лицам дисквалифицирует право на получение вознаграждения за ошибки.
 
-**Responsible investigation and reporting** Responsible investigation and reporting includes, but isn't limited to, the following:
+**Ответственное расследование и отчетность** включает в себя ответственное расследование и отчеты, но не ограничивается следующими:
 
-- Don't violate the privacy of other users, destroy data, etc.
-- Don’t defraud or harm Kusama network or its users during your research; you should make a good faith effort to not interrupt or degrade our services.
-- Don't target the validators’ physical security measures, or attempt to use social engineering, spam, distributed denial of service (DDOS) attacks, etc.
-- Initially report the bug only to us and not to anyone else.
-- Give us a reasonable amount of time to fix the bug before disclosing it to anyone else, and give us adequate written warning before disclosing it to anyone else.
-- In general, please investigate and report bugs in a way that makes a reasonable, good faith effort not to be disruptive or harmful to us or our users. Otherwise your actions might be interpreted as an attack rather than an effort to be helpful.
+- Не нарушать конфиденциальность других пользователей, уничтожать данные и т.д.
+- Не обманывайте и не причиняйте вреда сети Kusama или её пользователям во время Вашего исследования; Вам следует приложить усилия для того, чтобы не прерывать или не ухудшать качество наших услуг.
+- Не испытывайте физическую безопасность валидаторов и не пытайтесь использовать социальную инженерию, спам, распределенные атаки типа "отказ в обслуживании" (DDOS) и т. д.
+- Первоначально сообщите об ошибке только нам, а не кому-либо ещё.
+- Дайте нам достаточно времени для исправления ошибки, прежде чем раскрыть её кому-либо ещё, и подать нам соответствующее письменное предупреждение, прежде чем раскрыть её кому-либо еще.
+- В целом, пожалуйста, расследуйте и сообщайте об ошибках таким образом, чтобы разумные, добросовестные усилия не были разрушительными или вредными для нас или наших пользователей. В противном случае Ваши действия могут быть истолкованы как нападение, а не как попытка быть полезным.
 
-## How to report a bug
+## Как сообщить об ошибке
 
-Please email your submission with all details to [sos@kusama.network](mailto:sos@kusama.network).
+Пожалуйста, отправьте письмо со всеми деталями на адрес [sos@kusama.network](mailto:sos@kusama.network).
 
-Pseudonymous and anonymous submissions are welcome.
+Псевдонимы и анонимные сообщения приветствуются.

@@ -177,10 +177,6 @@ After you make an on-chain claim for KSMs, your balance should be updated on the
 
 Having trouble? Get support in the KSM [Claims Support](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders) channel.
 
-### 2. Faucet:
-
-For those who didn’t participate in the Polkadot sale, KSMs are publicly available after genesis through a faucet. Find out more [here](kusama-faucet).
-
 ### Third Party Claims Processes
 
 **We do not recommend using a third-party app or process to perform your claim or acquire KSM**

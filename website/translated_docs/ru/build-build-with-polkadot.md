@@ -1,7 +1,7 @@
 ---
 id: build-build-with-polkadot
-title: Polkadot Builders Starter's Guide
-sidebar_label: Polkadot Builders Starter's Guide
+title: С чего начать? Введение в программирование Polkadot
+sidebar_label: Инструкция для начала разработки в Polkadot
 ---
 
 _This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
@@ -10,13 +10,13 @@ Polkadot is a blockchain protocol with two goals: providing **shared security** 
 
 This guide will walk you through the steps you can take today to get started building your vision with Polkadot. It will explain the difference between a parachain and a smart contract (and why one may be better suited for your application over the other). It will lay out the resources that are available now and the ones that are coming soon so that you can get started creating your application in anticipation of the Polkadot mainnet launch later this year.
 
-## Where are we now?
+## Итак, на какой стадии разработки мы сейчас?
 
 - Polkadot release: **Early 2020**
-- Canary release: **Kusama**
-- Current testnet: **Westend**
+- Канареечный релиз: **Kusama**
+- Текущая тестовая сеть: **Westend**
 - Substrate: **2.0.0**
-- Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
+- Cumulus: **в разработке** ([Доступно демо](https://github.com/paritytech/cumulus))
 - ink!: **In development** ([Documentation](https://www.substrate.io/kb/smart-contracts))
 
 ## What you need to know
@@ -81,7 +81,7 @@ The best way to get started with Substrate is to explore the [Substrate Knowledg
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you have a solid understanding, you can challenge yourself by progressing through the Substratekitties workshop then advancing to the TCR Dappchain tutorial or one of the others.
 
-### How to set up your parachain
+### Как настроить ваш парачейн
 
 After creating your chain logic with Substrate, you will be able to compile it down to a Wasm executable. This Wasm code blob will contain the entire state transition function of your chain, and is what you will need to deploy your project to Polkadot as either a parachain or parathread.
 
@@ -100,7 +100,7 @@ It handles the network compatibility overhead that any parachain would need to i
 - Cross-chain message passing.
 - Out-of-the-box Collator node setup.
 - An embedded light client of the relay chain.
-- Polkadot block authorship compatibility.
+- Совместимость с блоками Polkadot.
 - Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with minimal modification, possibly as little work as importing a crate and adding a single line.
 
 Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced Cumulus, which you can watch below.
@@ -108,7 +108,7 @@ Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that in
 
 ### How to deploy your parachain or parathread in Polkadot
 
-#### Parachain
+#### Парачейн
 
 In order to include your parachain into the Polkadot network, you will need to acquire a parachain slot.
 

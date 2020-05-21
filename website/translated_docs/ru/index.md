@@ -1,30 +1,30 @@
 ---
-id: index
-title: Wiki Index
-sidebar_label: Wiki Index
+id: индекс
+title: Wiki индекс
+sidebar_label: Wiki Индекс
 ---
 
-Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol. The wiki is sectioned into three major sections to cater to each of these different actors in the Polkadot ecosystem. If you're eager to start building your project to connect to Polkadot, see the [build section](#want-to-build-on-polkadot). If you're interested in operating a node, head on over to the [maintain section](#want-to-run-a-node). And, if you want to learn more then peruse the [learn section](#want-to-learn-more) below.
+Добро пожаловать в Polkadot wiki, центр для тех, кто заинтересован в обучении, создании или запуске узла (ноды) на протоколе Polkadot. Вики-сайт разделен на три основных раздела, чтобы удовлетворить потребности каждого из различных участников экосистемы Polkadot. Если Вы хотите начать строить свой проект для подключения к Polkadot, смотрите раздел [build](#want-to-build-on-polka dot). Если Вас интересует управление нодой, перейдите к разделу [maintain](#want-to-run-a-node). И наконец, если Вы хотите узнать больше, то ознакомьтесь с разделом[learn](#want-to-learn-more) ниже.
 
-If you're looking for an introduction to Polkadot please [see here](learn-introduction).
+Если Вы ищете введение в Polkadot, пожалуйста, [перейдите сюда](learn-introduction).
 
-## Want to learn more?
+## Хотите узнать больше?
 
-- [Explore the Wiki](learn-introduction) - Read the informational section of the wiki.
-- [Relevant Links](learn-relevant-links) - **Comprehensive links about Polkadot.**
+- [Wiki](learn-introduction) - читайте информационный раздел Wiki.
+- [Дополнительные ссылки](learn-relevant-links) - **Всеобьемлющая информация о Polkadot.**
 
-## Want to build on Polkadot?
+## Хотите разрабатывать на Polkadot?
 
-- [Builders Portal](build-index) - Tools, libraries, and resources to help you build.
-- [Starters Guide](build-build-with-polkadot) - **Overview on how to get started building your project on Polkadot.**
+- [Портал разработчиков](build-index) - Инструменты, библиотеки и ресурсы, которые помогут вам в разработке.
+- [Руководство для начинающих](build-build-with-polkadot) - **Описание первоначальных шагов для разработки проекта на Polkadot.**
 
-## Want to run a node?
+## Хотите запустить ноду?
 
-- [Run a Node](maintain-index) - Information covering running a node on the Polkadot network.
+- [Запуск ноды](maintain-index) - Информация о запуске ноды в сети Polkadot.
 
-## Resources
+## Ресурсы
 
-- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
-- [News](news) - Links to the hottest news about Polkadot, aggregated every week.
-- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
-- [Contributing Guide](contributing) - Rules for contributing to the wiki.
+- [Сообщество/Экосистема](community) - Список групп и каналов, где можно поговорить о Polkadot.
+- [Новости](news) - Ссылки на самые последние новости о Polkadot, агрегатируются каждую неделю.
+- [Образцы приложений](build-examples-index) - Образцы приложений, которые построены или создаются для Polkadot
+- [Руководство по развитию](contributing) - Правила для развития Wiki.

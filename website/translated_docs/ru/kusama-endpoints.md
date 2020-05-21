@@ -1,16 +1,16 @@
 ---
 id: kusama-endpoints
-title: Kusama Endpoints
-sidebar_label: Kusama Endpoints
+title: Конечные точки Kusama (endpoints)
+sidebar_label: Конечные точки Kusama (endpoints)
 ---
 
-When interacting with the [Kusama network](https://kusama.network) via [Polkadot Apps](https://polkadot.js.org/apps) or other UIs and programmatic methods, you'd ideally be running your own node ([text guide](maintain-sync), [video guide](https://www.youtube.com/watch?v=31DdfcxbAVs)). Granted, that's not something everyone can or wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusama has several public endpoints you can use for your apps.
+При взаимодействии с [сетью Kusama](https://kusama.network) через [приложения Polkadot](https://polkadot.js.org/apps) или другие интерфейсы и программные методы, в идеале Вы бы запустили свой собственный узел ([текстовое руководство](maintain-sync), [видеогид](https://www.youtube.com/watch?v=31DdfcxbAVs)). Но это не то, что каждый может или хочет делать, поэтому удобство в большинстве случаев превалирует над идеалами. Чтобы реализовать это удобство, Kusama имеет несколько публичных конечных точек, которые Вы можете использовать для Ваших приложений.
 
-## Parity Archive Node
+## Архивная нода Parity
 
-The development company Parity maintains an archive node at endpoint `wss://kusama-rpc.polkadot.io/`.
+Разработчики из компании Parity поддерживают архивную ноду в конечной точке `wss://kusama-rpc.polkadot.io/`.
 
-To connect to the Parity node, use the endpoint in your JavaScript apps like so:
+Чтобы подключиться к узлу Parity, используйте конечную точку в приложениях JavaScript например так:
 
 ```javascript
 const{ ApiPromise, WsProvider } = require('@polkadot/api')
@@ -21,46 +21,46 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api')
     // ...
 ```
 
-or in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
+или в интерфейсе Polkadot приложений, нажав левый верхний угол экрана и выбрав соответствующий параметр:
 
-![Selecting Parity's Node](/img/endpoints/parity.png)
+![Выбор узла Parity](/img/endpoints/parity.png)
 
-## Web3 Foundation Archive Node
+## Архивная нода Фонда Web3
 
-The Web3 Foundation maintains an archive node at endpoint `wss://cc3-5.kusama.network/`.
+Фонд Web3 поддерживает архивный узел с конечной точкой `wss://cc3-5.kusama.network/`.
 
-To connect to this node, replace the endpoint in the JavaScript snippet above.
+Чтобы подключиться к этому узлу, замените конечную точку в сниппете JavaScript выше.
 
-Connect to it in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
+Подключитесь к нему в интерфейсе Polkadot приложений, нажав левый верхний угол экрана и выбрав соответствующий параметр:
 
-![Selecting W3F's Node](/img/endpoints/w3f.png)
+![Выбор узла W3F](/img/endpoints/w3f.png)
 
-## Kusama RYO Full Node Cloud
+## Kusama RYO Облако полных нод
 
-RYO (Run Your Own) infrastructure from [Avado](https://ava.do) is a load balancer - a server redirecting requests randomly to other computers - to which you can attach your own home-run node. This means that by connecting to the load balancer's endpoint, you're randomly connecting to another person's public node: the convenience of one reliable endpoint, without the downside of centralization\*.
+RYO (запускайте свою собственную) инфраструктуру из [Avado](https://ava.do) - это балансировщик нагрузки - сервер, случайно перенаправляющий запросы на другие компьютеры, к которому Вы можете присоединить свой собственный домашний узел. Это означает, что при подключении к конечной точке балансировщика нагрузки Вы случайно подключаетесь к общедоступному узлу другого человека: удобство одной надежной конечной точки, без недостатков централизации\*.
 
-Check the current status of the Kusama RYO cloud including available nodes at https://status.cloud.ava.do/
+Проверьте текущий статус RYO облака Kusama, включая доступные узлы на https://status.cloud.ava.do/
 
-To connect to the RYO cloud, use the endpoint `wss://kusama.polkadot.cloud.ava.do/` in the JavaScript code.
+Чтобы подключиться к RYO облаку, используйте конечную точку `wss://kusama.polkadot.cloud.ava.do/` в JavaScript коде.
 
-Connect to the endpoint in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
+Подключитесь к конечной точке в интерфейсе приложений Polkadot, нажав левый верхний угол экрана и выбрав соответствующий параметр:
 
-![Selecting the RYO cloud](/img/endpoints/ryo.png)
+![Выбор RYO облака](/img/endpoints/ryo.png)
 
-### Things to know
+### О чем следует знать
 
-#### Reliability
+#### Надежность
 
-There is no incentive to run these public nodes yet. We're working on making that happen. Ideally, the Kusama Treasury would fund this public infrastructure venture. For now, running the nodes is altruistic.
+Пока нет стимулов для запуска публичных узлов. Мы работаем над тем, чтобы это произошло. В идеале Kusama Treasury будет финансировать публичную инфраструктуру. На данный момент создание узлов - это альтруизм.
 
-#### \*Centralization
+#### \*Централизация
 
-The nodes are distributed and decentralized, but the load balancer serving them requests isn't. The Ava.do team is actively looking for other companies and organizations willing to run load balancers as backups to the main one - [get in touch](https://t.me/joinchat/F_LlkBLEoDrFioPNviEpsQ) if you'd like to lend a hand.
+Узлы распределены и децентрализованы, но балансировщик нагрузки, обслуживающий их, нет. Команда Ava.do активно ищет другие компании и организации, желающие запустить балансировщики нагрузки в качестве резервного копирования на главный - [свяжитесь](https://t.me/joinchat/F_LlkBLEoDrFioPNviEpsQ), если желаете помочь.
 
-#### Full nodes
+#### Полные ноды
 
-The nodes in the RYO cloud are currently _full nodes_, not _archive nodes_. To learn the difference, [watch this crash course](https://www.youtube.com/watch?v=31DdfcxbAVs). If you need archive data, run your own archive node or use a Parity or W3F hosted node for now. Archive nodes in RYO are planned for a future update.
+Узлы в облаке RYO в настоящее время _полные узлы_, но нет _архивных узлов_. Чтобы узнать разницу, [посмотрите этот курс](https://www.youtube.com/watch?v=31DdfcxbAVs). Если вам нужны архивные данные, запустите собственный архивный узел или используйте узел Parity или W3F. Архивировные узлы в RYO планируется в будущих обновлениях.
 
-#### Avado Only
+#### Только Avado
 
-For now, the RYO cloud can be joined only with Ava.do hardware. This is a guarantee that the hardware is at or above minimum requirements, so that the endpoint can guarantee a reliable node on the other end. In the future, fully custom remote-run and even cloud-run nodes will be able to join the RYO cloud.
+На данный момент RYO облако может работать только с оборудованием Ava.do. Это гарантия того, что оборудование соответствует минимальным требованиям или выше, чтобы конечная точка могла гарантировать надежный узел на другом конце. В будущем полностью настраиваемые узлы для удаленного запуска и даже облачные узлы смогут присоединиться к облаку RYO.
