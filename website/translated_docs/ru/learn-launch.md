@@ -19,7 +19,7 @@ The purpose of PoA is to ensure the network starts properly and allow community 
 
 Once Web3 Foundation is confident in the stability of the network and there are a sufficient number of validator intentions, Web3 Foundation will use [Sudo](https://youtu.be/InekMjJpVdo) - a superuser account with access to [governance](learn-governance) functions - to initiate the first validator election. This election will transition the network from PoA into its second phase, [Nominated Proof of Stake (NPoS)](learn-staking), where the network is [secured by the economic stake](learn-security) that is bonded to the validators by the [nominators](maintain-nominator) and the validators themselves.
 
-Time-wise, the transition to Proof-of-Stake will largely depend on when a sufficient number of validators are ready to take over the security of the network. This transition will probably require at least 100 well backed validators.
+Time-wise, the transition to Proof of Stake will largely depend on when a sufficient number of validators are ready to take over the security of the network. This transition will probably require at least 100 well backed validators.
 
 ## Governance
 
