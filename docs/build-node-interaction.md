@@ -141,7 +141,7 @@ would include the `tip` field. Notice that some extrinsics do not have a signatu
     '5000000000000'],
    'tip': '0',
    'hash': '0xc7b57537e2e63f866083ea22265cb65c846528d76378a3b3490eeada97f83d1d',
-   'info': {},
+   'info': {'weight': '200000000', 'class': 'Normal', 'partialFee': '10000000000'},
    'events': [{'method': 'system.NewAccount',
      'data': ['GoJ89MXptpNt1dH4NaZ73YtzknhrYeZcBJ33mifX5BMqoFz']},
     {'method': 'balances.Endowed',
