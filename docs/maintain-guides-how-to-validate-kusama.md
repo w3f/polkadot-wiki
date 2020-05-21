@@ -192,9 +192,7 @@ verified. You can then compare that to the current highest block via
 
 > **Note:** If you do not already have KSM, this is as far as you will be able to go until the end
 > of the soft launch period. You can still run a node, but you will need to have a minimal amount of
-> KSM to continue, as balance transfers are disabled during the soft launch. Please keep in mind
-> that even for those with KSM, they will only be indicating their _intent_ to validate; they will
-> also not be able to run a validator until the NPoS phase starts.
+> KSM to continue, as balance transfers are disabled during the soft launch.
 
 ## Bond KSM
 
