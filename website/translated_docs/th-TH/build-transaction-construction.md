@@ -17,8 +17,9 @@ Polkadot has some basic transaction information that is common to all transactio
 - Metadata: The SCALE-encoded metadata for the runtime when submitted.
 - Nonce: The nonce for this transaction.\*
 - Spec Version: The current spec version for the runtime.
+- Transaction Version: The current version for transaction format.
 - Tip: Optional, the [tip](build-protocol-info#fees) to increase transaction priority.
-- Validity Period: Optional, the number of blocks after the checkpoint for which a transaction is valid. If zero, the transaction is [immortal](build-protocol-info#transaction-mortality).
+- Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid. If zero, the transaction is [immortal](build-protocol-info#transaction-mortality).
 
 \*The nonce queried from the System module does not account for pending transactions. You must track and increment the nonce manually if you want to submit multiple valid transactions at the same time.
 
@@ -69,9 +70,7 @@ Save the output and bring it to the machine that you will broadcast from, enter 
 
 ## Tx Wrapper
 
-If you do not want to use the CLI for signing operations, Parity provides an SDK called [txwrapper](https://github.com/paritytech/txwrapper) to generate and sign transactions offline. See the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for a guide.
-
-Note: Tx Wrapper defaults to Kusama's SS58 encoding. Read the documentation to ensure that you encode and decode address formats properly.
+If you do not want to use the CLI for signing operations, Parity provides an SDK called [TxWrapper](https://github.com/paritytech/txwrapper) to generate and sign transactions offline. See the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for a guide.
 
 **Import a private key**
 
@@ -110,8 +109,8 @@ const unsigned = methods.balances.transferKeepAlive(
     nonce: 2,
     specVersion: 1019,
     tip: 0,
-    validityPeriod: 240 * 60, // seconds (240 minutes)
-    transactionVersion,
+    eraPeriod: 64, // number of blocks from checkpoint that transaction is valid
+    transactionVersion: 1,
   },
   {
     metadataRpc,
