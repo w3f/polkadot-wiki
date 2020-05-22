@@ -1,42 +1,42 @@
 ---
 id: build-smart-contracts
-title: Smart Contracts
-sidebar_label: Smart Contracts
+title: Смарт-контракты
+sidebar_label: Смарт-Контракты
 ---
 
-The Polkadot relay chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://crates.parity.io/pallet_contracts/index.html), it is likely that more parachains will support this feature.
+Релейная цепочка в Polkadot изначально не будет поддерживать смарт-контракты. Однако, парачейны в Polkadot будут поддерживать смарт-контракты. Уже есть анонсированные проекты, такие как [Edgeware](https://edgewa.re), а также благодаря встроенному в Substrate [паллету контрактов](https://crates.parity.io/pallet_contracts/index.html), вполне вероятно, что в будущем больше парачейнов будут поддерживать эту функцию.
 
-## Resources
+## Ресурсы
 
-Here is the list of current resources available to developers who want to get started writing smart contracts to deploy on parachains based on Substrate.
+Вот список текущих ресурсов, доступных разработчикам, которые хотят начать писать смарт-контракты для развёртывания на основе Substrate.
 
-- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you through the basics of writing and deploying an ERC20 token using `ink!`.
+- [ink!](https://github.com/paritytech/ink) - ink! разрабатываются Parity для написания смарт-контрактов.
+- [Мастерская по контрактам Substrate](https://substrate.dev/substrate-contracts-workshop/#/) - Знакомит Вас с основами написания и развёртывания токена ERC20 с помощью `ink!`.
 
-## Examples
+## Примеры
 
-Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!
+Ниже собраны некоторые примеры смарт-контрактов на `ink!` от сообщества. Вы работаете над смарт-примером контракта? Попросите нас добавить его на эту страницу!
 
-- [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
+- [Ownable](https://github.com/JesseAbram/foRust/) - Порт контракта OpenZeppelin - `Ownable`.
 
-## What is the difference between developing a smart contract versus a parachain?
+## В чём разница между разработкой смарт-контракта и парачейном?
 
-### Layer of Abstraction
+### Слой абстракции
 
-When you write a smart contract you are creating the instructions which will be deployed and associated to a specific chain address.
+Когда Вы пишете смарт-контракт, Вы создаете инструкции, которые будут развёрнуты и связанны с определенным адресом цепочки.
 
-In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a state transition function).
+Для сравнения, модуль среды исполнения - это вся логика перехода к состояниям цепочки (так называемая функция перехода состояний).
 
-Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance pallet.
+Смарт-контракты должны сознательно реализовывать возможность обновления, в то время как парачейны будут иметь возможность полностью менять свой код через root команду или через паллет управления.
 
-When you build a smart contract, it will be eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
+Когда Вы создаете смарт-контракт, он в конечном итоге будет развернут в целевую цепочку со своим собственным окружением/средой. Парачейны позволяют разработчику объявлять окружение своей собственной цепочки, даже позволяя другим писать для него смарт-контракты.
 
-### Gas Fees
+### Плата за газ
 
-Smart contracts must find a way to limit their own execution, or else full nodes are vulnerable to DOS attacks. An infinite loop in a smart contract, for example, could consume the computational resources of an entire chain, preventing others from using it. The [halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that with a powerful enough language, it is impossible to know ahead of time whether or not a program will ever cease execution. Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute their code. If a smart contract does get into a state where execution will never halt, it eventually runs out of gas, ceases execution, and any state transition that would have been made by the smart contract is rolled back.
+Смарт-контракты должны найти способ ограничивать свое собственное исполнение, иначе полные узлы будут уязвимы для DOS-атак. Например, бесконечный цикл в смарт-контракте может потреблять вычислительные ресурсы всей цепочки, не позволяя другим использовать её. The [проблема остановки](https://en.wikipedia.org/wiki/Halting_problem) показывает, что даже при достаточно мощном языке невозможно заранее знать, прекратится ли когда-либо выполнение программы. Некоторые платформы, такие как биткойн, обходят это ограничение, предоставляя очень ограниченный язык сценариев. Другие, например Ethereum, "заряжают" смарт-контракт "газом" за права на выполнение своего кода. Если смарт-контракт действительно попадает в состояние, в котором исполнение никогда не остановится, он в конечном итоге исчерпывает газ, прекращает исполнение, и любой переход состояния, который был бы сделан смарт-контрактом, откатывается назад.
 
-Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should _never_ be implemented. Leaving certain logic, such as complex loops which could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
+Парачейны могут реализовывать сколь угодно мощные языки программирования, а также не содержать понятия газа для своей собственной нативной логики. Это означает, что некоторые функциональные возможности проще реализовать для разработчика, но это также означает, что существуют некоторые конструкции, такие как цикл без завершающего условия, который _никогда_ не должен быть реализован. Оставить определенную логику, такую как сложные циклы, которые, возможно, будут работать бесконечно, на уровне не-смарт-контрактов (англ. non-smart contract) или даже пытаться полностью устранить её, часто будет более мудрым выбором.
 
-## Resources
+## Ресурсы
 
-- [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) - From a technical standpoint answers the question of when a developer might choose to develop a runtime versus a smart contract.
+- [Когда я должен разрабатывать среду исполнения Substrate по сравнению с смарт-контрактом Substrate](https://stackoverflow.com/a/56041305) - с технической точки зрения отвечает на вопрос, когда разработчик может выбрать для разработки среду исполнения по сравнению со смарт-контрактом.
