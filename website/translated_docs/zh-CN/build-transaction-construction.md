@@ -17,8 +17,9 @@ Polkadot 有一些所有交易的基本交易信息。
 - 元数据 (Metadata)：提交 runtime 的 SCALE 编码元数据。
 - Nonce：此交易的nonce。
 - Spec 版本：当前 runtime 的 spec 版本。
-- 小费: 可选， [小费](build-protocol-info#fees) 以提高交易优先处理。
-- 有效期 (Validity Period)：可选，检查点之后有效处理交易的区块数量。 如果为零，交易为 [immortal](build-protocol-info#transaction-mortality)。
+- Transaction Version: The current version for transaction format.
+- Tip: Optional, the [tip](build-protocol-info#fees) to increase transaction priority.
+- Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid. If zero, the transaction is [immortal](build-protocol-info#transaction-mortality).
 
 从系统模块中查询的 nonce 不会考虑待处理的交易。如果您想要同时提交多个有效的交易，您必须跟踪并手动递增 nonce。
 
@@ -69,11 +70,9 @@ yarn run:signer sign --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 
 
 ## Tx Wrapper
 
-如果您不想使用 CLI 来签名操作，Parity 提供了一个名为 [txwrapper](https://github.com/paritytech/txwrapper) 的SDK来生成和离线签名交易。 请参阅 [示例](https://github.com/paritytech/txwrapper/tree/master/examples)
+If you do not want to use the CLI for signing operations, Parity provides an SDK called [TxWrapper](https://github.com/paritytech/txwrapper) to generate and sign transactions offline. See the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for a guide.
 
-注意：Tx Wrapper 默认为Kusama的 SS58 编码。请阅读文档以确保您的 编码(encode)并正确解码(decode)地址。
-
-**导入私钥**
+**Import a private key**
 
 ```ts
 import { importPrivateKey } from '@substrate/txwrapper';
@@ -81,7 +80,7 @@ import { importPrivateKey } from '@substrate/txwrapper';
 const keypair = importPrivateKey(“pulp gaze fuel ... mercy inherit equal”);
 ```
 
-**从公钥生成地址**
+**Derive an address from a public key**
 
 ```ts
 import { deriveAddress } from '@substrate/txwrapper';
@@ -91,7 +90,7 @@ const publicKey = “0x2ca17d26ca376087dc30ed52deb74bf0f64aca96fe78b05ec3e720a72
 const address = deriveAddress(publicKey);
 ```
 
-**构造离线交易**
+**Construct a transaction offline**
 
 ```ts
 import { methods } from "@substrate/txwrapper";
@@ -110,8 +109,8 @@ const unsigned = methods.balances.transferKeepAlive(
     nonce: 2,
     specVersion: 1019,
     tip: 0,
-    validityPeriod: 240 * 60, // seconds (240 minutes)
-    transactionVersion,
+    eraPeriod: 64, // number of blocks from checkpoint that transaction is valid
+    transactionVersion: 1,
   },
   {
     metadataRpc,
@@ -120,7 +119,7 @@ const unsigned = methods.balances.transferKeepAlive(
 );
 ```
 
-**创建签名的 payload。**
+**Construct a signing payload**
 
 ```ts
 import { methods, createSigningPayload } from '@substrate/txwrapper';
@@ -130,7 +129,7 @@ const unsigned = methods.balances.transferKeepAlive({...}, {...}, {...});
 const signingPayload = createSigningPayload(unsigned, { registry });
 ```
 
-**序列化已签名的交易**
+**Serialize a signed transaction**
 
 ```ts
 import { createSignedTx } from "@substrate/txwrapper";
@@ -142,9 +141,9 @@ const signature = await signWithAlice(signingPayload);
 const signedTx = createSignedTx(unsigned, signature, { metadataRpc, registry });
 ```
 
-**解码 payload 类型**
+**Decode payload types**
 
-您可能想要在提交解码 payloads 前以验证其内容。
+You may want to decode payloads to verify their contents prior to submission.
 
 ```ts
 import { decode } from "@substrate/txwrapper";
@@ -159,7 +158,7 @@ const txInfo = decode(signingPayload, { metadataRpc, registry });
 const txInfo = decode(signedTx, { metadataRpc, registry });
 ```
 
-**检查交易哈希**
+**Check a transaction's hash**
 
 ```ts
 import { getTxHash } from ‘@substrate/txwrapper’;
@@ -168,7 +167,7 @@ const txHash = getTxHash(signedTx);
 
 ## 提交已签名的 Payload
 
-有几种方法提交已经签名的 payload：
+There are several ways to submit a signed payload:
 
 1. Signer CLI (`yarn run:signer submit --tx <signed-transaction> --ws <endpoint>`)
 1. [Substrate API Sidecar](build-node-interaction#substrate-api-sidecar)
