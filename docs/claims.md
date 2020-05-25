@@ -102,9 +102,7 @@ the account that you claimed to.
 
 ![claim-10](assets/new-claims/claim-10.png)
 
-Congratulations you can now participate in aspects of the Polkadot network such as
-[governance](learn-governance) and [staking](learn-staking). During the soft launch period balance
-transfers will not be enabled.
+Congratulations, you have now completed the process for claiming and signing for your DOTs.
 
 #### Verifying your Claim
 
