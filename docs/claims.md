@@ -28,7 +28,7 @@ you are most comfortable.
 ### What you will need
 
 - The Ethereum account that holds the DOT indicator tokens.
-- The MyCrypto wallet.
+- The MyCrypto wallet
 - A Polkadot account.
 
 You should already have your Ethereum account that holds the DOT indicator tokens from Polkadot's
