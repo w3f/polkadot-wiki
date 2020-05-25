@@ -29,7 +29,7 @@ you are most comfortable.
 
 - The Ethereum account that holds the DOT indicator tokens.
 - The MyCrypto wallet
-- A Polkadot account.
+- A Polkadot account
 
 You should already have your Ethereum account that holds the DOT indicator tokens from Polkadot's
 prior sales. You will need to have access to this account in order to make a signature.
