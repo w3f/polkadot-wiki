@@ -79,7 +79,7 @@ This will prompt you to select a method for unlocking your wallet.
 
 ![claim-3](assets/new-claims/claim-4.png)
 
-After unlocking your wallet, you will copy and paste the outputted sentence into the input box.
+After unlocking your wallet, paste the message from Polkadot JS into the "Message" box.
 
 ![claim-5](assets/new-claims/claim-5.png)
 
