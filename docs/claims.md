@@ -5,9 +5,10 @@ sidebar_label: Claims
 ---
 
 When Polkadot enters into its soft launch, the functionality for making on-chain claims for DOTs
-will already be enabled. If you've already made a pre-genesis claim by making a claim transaction on
-the Ethereum Claim Contract, then you will not need to claim again but you will need to send a free
-_attest_ transaction before your DOTs are sent to your account.
+will already be enabled. If you've made a pre-genesis claim by sending a claim transaction to the
+Claims Contract on Ethereum, then you should already know your Polkadot address. You will still need
+to send a free transaction that will agree to the terms and conditions of your allocation. You must
+either _claim_ or _attest_ before your DOTs are available in your account.
 
 This guide will walk you through the steps for either making a claim or attesting to the statement.
 
@@ -39,9 +40,12 @@ account. Please click on the link to go to their downloads page and ensure you d
 version for your operating system. This is important because the latest version will always have the
 latest security patches.
 
-You will need a Polkadot account to mark as the destination for sending the DOTs in the claim.
-Please follow the instructions on the [account generation][] page for generating a new Polkadot
-account.
+> **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always
+> find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
+
+You will need a Polkadot account to be the destination of the DOTs that will be sent to you after
+you claim. Please follow the instructions on the [account generation][] page for generating a new
+Polkadot account.
 
 #### Claiming your DOT with MyCrypto
 
@@ -49,10 +53,6 @@ The Polkadot JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto 
 case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware
 device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics and Parity
 signer.
-
-**NOTICE**: It is much more secure to download and use the MyCrypto app locally. Please make sure to
-download the latest version for your operating system. You can always find the most up-to-date
-releases of the desktop app on their [releases page][mycrypto].
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for
 maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the
