@@ -25,7 +25,7 @@ you are most comfortable.
 > statement. The two actions "claim" and "attest" are done at once in a `claim_attest` transaction,
 > but for the most part this is simplified from the perspective of the UI.
 
-### What you will need
+### What You Will Need
 
 - The Ethereum account that holds the DOT indicator tokens
 - The MyCrypto wallet
