@@ -40,7 +40,7 @@ version for your operating system. This is important because the latest version 
 latest security patches.
 
 You will need a Polkadot account to mark as the destination for sending the DOTs in the claim.
-Please follow the instructions on the [account generation][] page for generating a new Polakdot
+Please follow the instructions on the [account generation][] page for generating a new Polkadot
 account.
 
 #### Claiming your DOT with MyCrypto
