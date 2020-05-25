@@ -34,7 +34,7 @@ you are most comfortable.
 You should already have your Ethereum account that holds the DOT indicator tokens from Polkadot's
 prior sales. You will need to have access to this account in order to make a signature.
 
-The [MyCrypto][] is a versatile wallet that supports a variety of storage methods for your Ethereum
+[MyCrypto][] is a versatile wallet that supports a variety of storage methods for your Ethereum
 account. Please click on the link to go to their downloads page and ensure you download the latest
 version for your operating system. This is important because the latest version will always have the
 latest security patches.
