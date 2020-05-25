@@ -39,7 +39,7 @@ account. Please click on the link to go to their downloads page and ensure you d
 version for your operating system. This is important because the latest version will always have the
 latest security patches.
 
-You will need a Polkadot account to mark as the destination for sending the dots in the claim.
+You will need a Polkadot account to mark as the destination for sending the DOTs in the claim.
 Please follow the instructions on the [account generation][] page for generating a new Polakdot
 account.
 
