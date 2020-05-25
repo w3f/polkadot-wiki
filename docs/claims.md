@@ -65,7 +65,7 @@ Now you will need to provide the Ethereum address that is associated with the DO
 that you will claim. Enter the Ethereum address into the box and click "Continue". Next your screen
 should look the image below.
 
-![claim-2](assets/new-claims/claim-2.png)
+![claim-2](assets/new-claims/new-claim-2.png)
 
 The hex encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the
 hex-encoded public key of your Polkadot account, minus the `0x` prefix.
@@ -80,16 +80,16 @@ This will prompt you to select a method for unlocking your wallet.
 
 After unlocking your wallet, paste the message from Polkadot JS into the "Message" box.
 
-![claim-5](assets/new-claims/claim-5.png)
+![claim-5](assets/new-claims/new-claim-5.png)
 
 When you click "Sign Message" you will get a JSON output like the below:
 
-![claim-6](assets/new-claims/claim-6.png)
+![claim-6](assets/new-claims/new-claim-6.png)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
 Polkadot JS UI and click "Confirm Claim."
 
-![claim-7](assets/new-claims/claim-7.png)
+![claim-7](assets/new-claims/new-claim-7.png)
 
 Now a green box will appear telling you the amount to claim with a "Claim" button to make the claim.
 Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
@@ -146,26 +146,29 @@ entering it directly to the Apps page.
 Once you have your account entered you should see a red counter appear on the "Claim Tokens" tab on
 the left navigation drawer.
 
-![claim-attest-1](assets/new-claims/claim-attest-1.png)
+![claim-attest-1](assets/new-claims/new-attest-1.png)
 
 Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that
 tells you that you need to sign an attestation.
 
-![claim-attest-2](assets/new-claims/claim-attest-2.png)
+![claim-attest-2](assets/new-claims/new-attest-2.png)
 
-You will select your Polkadot account that is being notified to you needs to make an attestation in
-the selector on this page. Click "Continue" and you should see a green box appear to the right of
-the selector.
+The notification will display one or more polkadot addresses that you have loaded in apps that needs
+to sign. You will select the Polkadot account that needs to sign by using the selector on the page.
+If you don't see a notification or don't see the selector, please double check the account has been
+loaded into your account and it has a valid DOT claim.
 
-![claim-attest-3](assets/new-claims/claim-attest-3.png)
+Click "Continue" and you will see a green box appear to the right of the selector.
 
-![claim-attest-4](assets/new-claims/claim-attest-4.png)
+![claim-attest-3](assets/new-claims/new-attest-3.png)
+
+![claim-attest-4](assets/new-claims/new-attest-4.png)
 
 Click on "Attest" and then "Sign and Submit" to make your free attest transaction. When the
 transaction is included in the block, you will see a green success box appear in the upper left
 corner and the DOTs will be in your account.
 
-[mycrypto]: https://github.com/MyCryptoHQ/MyCrypto/release
+[mycrypto]: https://github.com/MyCryptoHQ/MyCrypto/releases
 [account generation]: learn-account-generation
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims support]:
