@@ -13,6 +13,6 @@ Treasury or receive a tip.
 
 ### Support:
 
-If you are having difficulties using the faucet, please join the
+If you have any questions, please join the
 [Kusama Watercooler chat](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders) and
 somebody will try to help you.
