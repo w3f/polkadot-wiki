@@ -166,7 +166,7 @@ the selector.
 
 Click on "Attest" and then "Sign and Submit" to make your free attest transaction. When the
 transaction is included in the block you will see a green success box appear in the upper left
-corner and not the DOTs are in your account.
+corner and the DOTs will be in your account.
 
 [mycrypto]: https://github.com/MyCryptoHQ/MyCrypto/release
 [account generation]: learn-account-generation
