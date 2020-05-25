@@ -68,8 +68,7 @@ should look the image below.
 ![claim-2](assets/new-claims/claim-2.png)
 
 The hex encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the
-hex-encoded public key of your Polkadot account, minus the `0x` prefix. To verify that the public
-key is correct you can use the `subkey` tool to inspect your address.
+hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
 The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab.
 
