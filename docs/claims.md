@@ -13,7 +13,7 @@ This guide will walk you through the steps for either making a claim or attestin
 
 If you are making a claim on Polkadot for the first time please read on below in the
 [making a claim](#making-a-claim) section. If you've already claimed during the pre-genesis claims
-please proceed to [attesting to a statem](#attesting-to-a-statement) section instead.
+please proceed to [attesting to a statement](#attesting-to-a-statement) section instead.
 
 ## Making a Claim
 
