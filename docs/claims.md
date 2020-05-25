@@ -125,7 +125,7 @@ specified in our claims process, is the only way to be certain you will receive 
 
 ## Attesting to a statement
 
-If you've already made a pre-genesis claim you still have to attest to a statement using your
+If you've already made a pre-genesis claim, you still have to attest to a statement using your
 Polkadot account.
 
 ### What you will need
