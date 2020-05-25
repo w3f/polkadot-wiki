@@ -172,4 +172,4 @@ corner and not the DOTs are in your account.
 [account generation]: learn-account-generation
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims support]:
-  https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io)
+  https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
