@@ -47,7 +47,7 @@ account.
 
 The Polkadot JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in
 case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware
-device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics and the Parity
+device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics and Parity
 signer.
 
 **NOTICE**: It is much more secure to download and use the MyCrypto app locally. Please make sure to
