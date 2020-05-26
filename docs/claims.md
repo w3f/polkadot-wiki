@@ -24,7 +24,7 @@ you are most comfortable.
 
 > Note: When you make a claim, you will also attest to the agreement that corresponds to your DOT
 > allocation. The two actions "claim" and "attest" are done in a single transaction, but for the
-> most part this is simplified from the perspective of the UI.
+> most part this is simplified from the perspective of the user.
 
 ### What You Will Need
 
