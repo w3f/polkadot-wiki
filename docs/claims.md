@@ -62,10 +62,13 @@ screen should look something like this:
 ![claim-1](assets/new-claims/claim-1.png)
 
 Now you will need to provide the Ethereum address that is associated with the DOT indicator tokens
-that you will claim. Enter the Ethereum address into the box and click "Continue". Next your screen
-should look the image below.
+that you will claim. Enter the Ethereum address into the box and click "Continue".
 
-![claim-2](assets/new-claims/new-claim-2.png)
+![claim-2](assets/new-claims/claim-2.png)
+
+Next your screen should look the image below.
+
+![claim-2-1](assets/new-claims/claim-2-1.png)
 
 The hex encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the
 hex-encoded public key of your Polkadot account, minus the `0x` prefix.
@@ -76,20 +79,21 @@ The next step is to go to the MyCrypto application and click on "Sign & Verify M
 
 This will prompt you to select a method for unlocking your wallet.
 
-![claim-3](assets/new-claims/claim-4.png)
+![claim-4](assets/new-claims/claim-4.png)
 
 After unlocking your wallet, paste the message from Polkadot JS into the "Message" box.
 
-![claim-5](assets/new-claims/new-claim-5.png)
+![claim-5](assets/new-claims/claim-5.png)
 
 When you click "Sign Message" you will get a JSON output like the below:
 
-![claim-6](assets/new-claims/new-claim-6.png)
+![claim-6](assets/new-claims/claim-6.png)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
 Polkadot JS UI and click "Confirm Claim."
 
-![claim-7](assets/new-claims/new-claim-7.png)
+![claim-7](assets/new-claims/claim-7.png)
+![claim-8](assets/new-claims/claim-8.png)
 
 Now a green box will appear telling you the amount to claim with a "Claim" button to make the claim.
 Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
@@ -192,4 +196,3 @@ corner and the DOTs will be in your account.
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims support]:
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
-  
