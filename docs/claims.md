@@ -84,7 +84,7 @@ After unlocking your wallet, paste the message from Polkadot JS into the "Messag
 
 ![claim-5](assets/new-claims/claim-5.png)
 
-When you click "Sign Message" you will get a JSON output like the below:
+When you click "Sign Message" you will get a JSON output like the one below:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
