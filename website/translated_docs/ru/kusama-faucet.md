@@ -10,4 +10,4 @@ sidebar_label: Кран (Faucet)
 
 ### Поддержка:
 
-Если у Вас возникли трудности с использованием крана, пожалуйста, присоединяйтесь к [Watercooler чат Kusama](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders) и кто-то постарается Вам помочь.
+If you have any questions, please join the [Kusama Watercooler chat](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders) and somebody will try to help you.

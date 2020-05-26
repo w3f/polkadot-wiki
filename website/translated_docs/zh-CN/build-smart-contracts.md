@@ -29,7 +29,7 @@ Polkadot 中继链本身并不支持智能合约，不过在它之上的平行�
 
 智能合约必须自觉实现可升级性，而平行链则能够通过根命令或治理模块来替换其所有代码。
 
-构建的智能合约最终将被部署到拥有自己环境的目标链中，而平行链则允许开发者公布各自链的环境，甚至允许其他人为该链编写智能合约。
+When you build a smart contract, it will eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
 
 ### Gas 费用
 
