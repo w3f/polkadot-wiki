@@ -206,7 +206,7 @@ If the cancellation is controversial enough that the council cannot get a two-th
 
 At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their approval of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
 
-To elect a new council member, Polkadot employs the same election scheme as used for choosing the active set of validators, a \[Phragmén election\]\[phragmen\]. The election also chooses a set number of runners up (currently seven in Kusama) that will remain in the queue with their votes intact.
+To elect a new council member, Polkadot employs the same election scheme as used for choosing the active set of validators, a [Phragmén election](learn-phragmen). The election also chooses a set number of runners up (currently seven in Kusama) that will remain in the queue with their votes intact.
 
 As opposed to a "first past the post", where voters must decide only on a single candidate chosen from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders can treat it as Boolean voting to support as many candidates as they want. The election algorithm will find a fair subset of the candidates which closely match the expressed indications of the electorate as a whole.
 
