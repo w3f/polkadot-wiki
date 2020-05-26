@@ -112,9 +112,25 @@ Having trouble? Get support in the DOT [Claims Support][] channel.
 
 ### Third Party Claims Processes
 
-\_COINBASE_TO_DO
+#### Coinbase Custody
 
-**We do not recommend using a third-party app or process to perform your claim or acquire DOT**
+> Please note that using Coinbase Custody for the claims process requires your account to contain at
+> least 1,000 DOTs. There are also fees associated with Coinbase Custody. If you have fewer than
+> this number, please use a different way of generating a Polkadot address.
+
+1. To open an account please contact Coinbase Custody directly at sales@coinbase.com
+1. Once you’ve opened an account, Coinbase Custody will generate a DOT address for you to use in the
+   claims process and send it to you.
+1. You may then claim your tokens using your Coinbase Custody DOT address and your tokens will
+   appear in your Coinbase Custody account.
+
+For questions about claiming with Coinbase Custody, please contact: Nick de Bontin +1-630-884-8182
+sales@coinbase.com.
+
+#### Other Third Party Processes
+
+**We do not recommend using other third-party apps or processes to perform your claim or acquire
+DOT.**
 
 Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot
 recommend using any third party apps to do so. Manually specifying your transaction data, as
