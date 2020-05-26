@@ -132,9 +132,10 @@ sales@coinbase.com.
 **We do not recommend using other third-party apps or processes to perform your claim or acquire
 DOT.**
 
-Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot
-recommend using any third party apps to do so. Manually specifying your transaction data, as
-specified in our claims process, is the only way to be certain you will receive your allocation.
+Claiming using other third-party processes can lead to the loss of your allocation, therefore we
+cannot recommend using any third party apps to do so. Manually specifying your transaction data, as
+specified in our claims process, or by using Coinbase Custody, is the only way to be certain you
+will receive your allocation.
 
 ## Attesting to a Statement
 
