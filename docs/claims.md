@@ -136,9 +136,9 @@ Claiming using a third-party process can lead to the loss of your allocation, th
 recommend using any third party apps to do so. Manually specifying your transaction data, as
 specified in our claims process, is the only way to be certain you will receive your allocation.
 
-## Attesting to a statement
+## Attesting to a Statement
 
-If you've already made a pre-genesis claim, you still have to attest to a statement using your
+If you've already made a pre-genesis claim, you still have to agree to a statement using your
 Polkadot account.
 
 ### What you will need
@@ -172,7 +172,7 @@ tells you that you need to sign an attestation.
 The notification will display one or more polkadot addresses that you have loaded in apps that needs
 to sign. You will select the Polkadot account that needs to sign by using the selector on the page.
 If you don't see a notification or don't see the selector, please double check the account has been
-loaded into your account and it has a valid DOT claim.
+loaded into Polkadot-JS and that it has already claimed during the preclaim period.
 
 Click "Continue" and you will see a green box appear to the right of the selector.
 
