@@ -185,8 +185,11 @@ Click on "Attest" and then "Sign and Submit" to make your free attest transactio
 transaction is included in the block, you will see a green success box appear in the upper left
 corner and the DOTs will be in your account.
 
+![claim-attest-5](assets/new-claims/new-attest-5.png)
+
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims support]:
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
+  
