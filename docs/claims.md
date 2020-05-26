@@ -125,8 +125,7 @@ Congratulations, you have now completed the process for claiming and signing for
 1. You may then claim your tokens using your Coinbase Custody DOT address and your tokens will
    appear in your Coinbase Custody account.
 
-For questions about claiming with Coinbase Custody, please contact: Nick de Bontin +1-630-884-8182
-sales@coinbase.com.
+For questions about claiming with Coinbase Custody, please contact sales@coinbase.com.
 
 #### Other Third Party Processes
 
