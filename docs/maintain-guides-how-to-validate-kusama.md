@@ -251,7 +251,7 @@ will now start running the node in validator mode with a flag allowing unsafe RP
 some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
+./target/release/polkadot --validator --name "name on telemetry" --rpc-methods=Unsafe
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and
