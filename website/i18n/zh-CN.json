@@ -65,6 +65,10 @@
         "title": "交易创建和签名",
         "sidebar_label": "交易创建"
       },
+      "claims": {
+        "title": "Polkadot Claims",
+        "sidebar_label": "Claims"
+      },
       "community": {
         "title": "社区",
         "sidebar_label": "社区"
