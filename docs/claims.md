@@ -93,7 +93,7 @@ Polkadot JS UI and click "Confirm Claim."
 
 ![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
 
-Now a green box will appear telling you the amount to claim with a "Claim" button to make the claim.
+A green box will appear telling you the amount to claim with a "Claim" button to make the claim.
 Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
 
 ![claim-9](assets/new-claims/claim-9.png)
