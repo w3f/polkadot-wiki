@@ -10,4 +10,4 @@ If you are interested in obtaining KSM now for building or research, you can app
 
 ### Support:
 
-If you are having difficulties using the faucet, please join the [Kusama Watercooler chat](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders) and somebody will try to help you.
+If you have any questions, please join the [Kusama Watercooler chat](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders) and somebody will try to help you.
