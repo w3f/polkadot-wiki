@@ -8,7 +8,7 @@ sidebar_label: 顺序弗拉格曼方法
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in the 1890s.
 
-The quote below taken from the reference \[Phragmén paper\]\[phragmen paper\] sums up the purpose of the sequential Phragmén method:
+The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose of the sequential Phragmén method:
 
 > The problem that Phragmén’s methods try to solve is that of electing a set of a given numbers of persons from a larger set of candidates. Phragmén discussed this in the context of a parliamentary election in a multi-member constituency; the same problem can, of course, also occur in local elections, but also in many other situations such as electing a board or a committee in an organization.
 
