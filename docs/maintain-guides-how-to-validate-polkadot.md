@@ -211,6 +211,12 @@ verified. You can then compare that to the current highest block via
 
 ## Bond DOTs
 
+> **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you
+> are setting up a validator during this time you may not be able to make your stash and controller
+> two separate accounts, as is recommended. You must make them the same account, meaning that you
+> will bond the account to itself. However it is highly recommended that you change your controller
+> as soon as possible.
+
 It is highly recommended that you make your controller and stash accounts be two separate accounts.
 For this, you will create two accounts and make sure each of them have at least enough funds to pay
 the fees for making transactions. Keep most of your funds in the stash account since it is meant to
@@ -334,15 +340,15 @@ If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
-- **Payment preferences** - Rewards you will keep, the rest will be shared among you and your
-  nominators.
+- **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
+  The remaining will be split among your nominators.
 
 Click "Validate".
 
 If you go to the "Staking" tab, you will see a list of active validators currently running on the
-network. At the top of the page, it shows how many validator slots are available as well as how many
-nodes have signaled their intention to be a validator. You can also go to the "Waiting" tab to
-double check to see whether your node is listed there.
+network. At the top of the page, it shows the number of validator slots that are available as well
+as the number of nodes that have signaled their intention to be a validator. You can go to the
+"Waiting" tab to double check to see whether your node is listed there.
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
