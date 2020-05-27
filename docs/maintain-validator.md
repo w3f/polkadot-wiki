@@ -22,8 +22,8 @@ in exchange for their activities.
 
 ## Guides
 
-- [How to Validate on Kusama](maintain-guides-how-to-validate-kusama) - Guide on how to set up a
-  validator on the Kusama canary network.
+- [How to Validate on Polkadot](maintain-guides-how-to-validate-polkadot) - Guide on how to set up a
+  validator on the Polkadot live network.
 - [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the
   validator payout mechanism works.
 - [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on
