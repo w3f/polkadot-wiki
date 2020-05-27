@@ -43,8 +43,8 @@ patches.
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always
 > find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
 
-You will need a Polkadot account to claim your DOTs. Please follow the instructions
-on the [account generation][] page for generating a new Polkadot account.
+You will need a Polkadot account to claim your DOTs. Please follow the instructions on the [account
+generation][] page for generating a new Polkadot account.
 
 #### Claiming your DOT with MyCrypto
 
