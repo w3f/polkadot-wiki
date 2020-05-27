@@ -59,7 +59,7 @@ estimate your earnings and this is where it's good to start picking favorites.
 
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
-stay in the waiting queue until they have enough KSM backing them (as allocated through the
+stay in the waiting queue until they have enough DOT backing them (as allocated through the
 [Phragmen election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible
 validator can remain in the queue for a very long time if they never get enough backing.
 
@@ -129,7 +129,7 @@ install the `@polkadot/api-cli` globally:
 npm install -g @polkadot/api-cli
 ```
 
-### Step 2. Bond your KSM
+### Step 2. Bond your DOT
 
 Executing the following command:
 
@@ -141,9 +141,10 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMB
 can be the same address but it is not recommended since it defeats the security of the two-account
 staking model.
 
-`NUMBER_OF_TOKENS`: The number of KSM / DOT you would like to stake to the network. **Note**: KSM
-has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
-1,000,000,000,000 units.
+`NUMBER_OF_TOKENS`: The number of DOT you would like to stake to the network.
+
+> **Note**: DOT has twelve decimal places and is always represented as an integer with zeroes at the
+> end. So 1 DOT = 1,000,000,000,000 units.
 
 `REWARD_DESTINATION`:
 
