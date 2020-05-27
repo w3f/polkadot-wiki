@@ -35,7 +35,8 @@ detailed on the [account generation][] page.
 
 ### Step 1: Bond your tokens
 
-> NOTE: Much of the information below will not be fully populated during Polkadot's Proof-of-Authority phase since validator elections have not started yet.
+> NOTE: Much of the information below will not be fully populated during Polkadot's
+> Proof-of-Authority phase since validator elections have not started yet.
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
@@ -89,7 +90,9 @@ be distributed to up to 16 validators. Be careful about the validators you choos
 slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
-you to select up to 16 validators. Although you may choose up to 16 validators, due to the [Phragmen][] election algorithm your stake may be dispersed in different proportions to any subset or all of the validators your choose.
+you to select up to 16 validators. Although you may choose up to 16 validators, due to the
+[Phragmen][] election algorithm your stake may be dispersed in different proportions to any subset
+or all of the validators your choose.
 
 ![Nominating validators](/img/NPoS/nominate.png)
 
