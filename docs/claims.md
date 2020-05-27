@@ -181,7 +181,7 @@ Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Click on "Attest" and then "Sign and Submit" to make your free attest transaction. When the
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the
 transaction is included in the block, you will see a green success box appear in the upper right
 corner and the DOTs will be in your account.
 
