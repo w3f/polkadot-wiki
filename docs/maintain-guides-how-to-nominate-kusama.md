@@ -29,7 +29,7 @@ detailed on the [account generation][] page.
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking
 Overview" subsection will show you all the active validators and their information - their
-identities, the amount of DOTs that are staking for them, amount that is their own provided stake,
+identities, the amount of KSM that are staking for them, amount that is their own provided stake,
 how much they charge in commission, the era points they've earned in the current era, and the last
 block number that they produced. If you click on the chart button it will take you to the "Validator
 Stats" page for that validator that shows you more detailed and historical information about the
@@ -37,15 +37,15 @@ validator's stake, rewards and slashes.
 
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
-stay in the waiting queue until they have enough DOTs backing them (as allocated through the
-Phragmen election mechanism). It is possible validator can remain in the queue for a very long time
+stay in the waiting queue until they have enough KSM backing them (as allocated through the
+[Phragmen election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time
 if they never get enough backing.
 
 The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
 estimate your earnings and this is where it's good to start picking favorites.
 
 The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
-to stake and nominate.
+to stake and nominate. Note, this tab will only show up when you have existing accounts in the [accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 The "Validator Stats" screen will show you some interesting in-depth graphs about a selected
 validator.
