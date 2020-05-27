@@ -190,7 +190,7 @@ required explicitly if you start your node without one of these two options. If 
 pruning to archive node, even when not running in validator and sentry mode, you will need to
 re-sync your database when you switch.
 
-> **Note:** Validators should sync using the RocksDb backend by passing the `--databse RocksDb`
+> **Note:** Validators should sync using the RocksDb backend by passing the `--database RocksDb`
 > flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb
 > option. Switching between database backends will require a resync.
 
