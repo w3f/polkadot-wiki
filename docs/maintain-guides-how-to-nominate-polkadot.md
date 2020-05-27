@@ -1,22 +1,30 @@
 ---
-id: maintain-guides-how-to-nominate-kusama
-title: Be a Nominator (Kusama)
-sidebar_label: Nominator Guide
+id: maintain-guides-how-to-nominate-polkadot
+title: Nomination Guide
+sidebar_label: Nomination Guide
 ---
 
-Nominators are participants in the staking system that are responsible for electing good validators
-for a share in those validators' rewards.
+> The following information applies to the Polkadot network which is currently in the soft launch
+> phase. During soft launch the network starts as a Proof-of-Authority network before transitioning
+> to Proof-of-Stake. You will be able to follow this guide to set up your validator but the first
+> validator election and rewards will not start until later.
 
-While [validators][] operate as active participants by taking part in the block production and
-finality voting mechanisms, nominators take more of a "set-it-and-forget-it" approach. Being a
-nominator does not require running a node of your own or worrying about online uptime. However, a
-good nominator performs diligence on the validators that it elects. When looking for validators to
-nominate, a nominator should pay attention to its own reward percentage for nominating a specific
-validator - as well as the risk that it bares of being slashed if the validator gets slashed.
+Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
+for appointing their stake to the validators who are the second type of participant. By appointing
+their stake, they are able to elect the active set of validators and share in the rewards that are
+paid out.
+
+While the [validators][] are active participants in the network that take part in the block
+production and finality mechanisms, nominators take a more passive role with a
+"set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or
+worrying about online uptime. However, a good nominator performs due diligence on the validators
+that they elect. When looking for validators to nominate, a nominator should pay attention to their
+own reward percentage for nominating a specific validator - as well as the risk that they bare of
+being slashed if the validator gets slashed.
 
 # Setting up Stash and Controller keys
 
-Nominators are recommended to set up two separate stash and controller accounts. Explanation and
+Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
 
@@ -27,13 +35,17 @@ detailed on the [account generation][] page.
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking
-Overview" subsection will show you all the active validators and their information - their
-identities, the amount of KSM that are staking for them, amount that is their own provided stake,
-how much they charge in commission, the era points they've earned in the current era, and the last
-block number that they produced. If you click on the chart button it will take you to the "Validator
-Stats" page for that validator that shows you more detailed and historical information about the
-validator's stake, rewards and slashes.
+> NOTE: Much of the information below will not be fully populated during Polkadot's
+> Proof-of-Authority phase since validator elections have not started yet.
+
+On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+
+The "Staking Overview" subsection will show you all the active validators and their information -
+their identities, the amount of DOTs that are staking for them, amount that is their own provided
+stake, how much they charge in commission, the era points they've earned in the current era, and the
+last block number that they produced. If you click on the chart button it will take you to the
+"Validator Stats" page for that validator that shows you more detailed and historical information
+about the validator's stake, rewards and slashes.
 
 The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
 to stake and nominate.
@@ -57,19 +69,18 @@ rewards, and slashes.
 Pick "Account actions", then click the grey "+ Nominator" button.
 
 You will see a modal window that looks like the below:
-
 ![nominator-update-1](assets/nominator-update-1.png)
 
-Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some
-left over to pay transaction fees. Transaction fees are currently at least 0.01 KSM, but they are
+Select a "value bonded" that is **less** than the total amount of DOTs you have, so you have some
+left over to pay transaction fees. Transaction fees are currently around 0.01 DOTs, but they are
 dynamic based on a variety of factors including the load of recent blocks.
 
 Also be mindful of the reaping threshold - the amount that must remain in an account lest it be
-burned. That amount is 0.01 in Kusama, so it's recommended to keep at least 0.1 KSM in your account
-to be on the safe side.
+burned. That amount is 0.01 DOT on Polkadot, so it's recommended to keep around 0.1 DOT in your
+account to be on the safe side.
 
-Choose whatever payment destination sounds good to you. If you're unsure, you can choose "Stash
-account (increase amount at stake)".
+Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash
+account (increase amount at stake)" to simply accrue the rewards into the amount you're staking.
 
 ### Step 2: Nominate a validator
 
@@ -79,15 +90,17 @@ be distributed to up to 16 validators. Be careful about the validators you choos
 slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
-you to select some validators.
+you to select up to 16 validators. Although you may choose up to 16 validators, due to the
+[Phragmen][] election algorithm your stake may be dispersed in different proportions to any subset
+or all of the validators your choose.
 
 ![Nominating validators](/img/NPoS/nominate.png)
 
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
-will become active in the next era. Eras last six hours on Kusama - depending on when you do this,
-your nominations may become active almost immediately, or you may have to wait almost the entire six
-hours before your nominations are active. You can chek how far along Kusama is in the current era on
-the [Staking page](https://polkadot.js.org/apps/#/staking).
+will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you
+do this, your nominations may become active almost immediately, or you may have to wait almost the
+entire twenty-four hours before your nominations are active. You can chek how far along Polkadot is
+in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
@@ -102,9 +115,9 @@ are available [here](maintain-guides-how-to-unbond).
 
 # Using Command-Line Interface (CLI)
 
-Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI
-instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to
-the PolkadoJS dashboard.
+Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI
+instead. The CLI approach allows you to interact with the Polkadot network without going to the
+Polkado-JS Apps dashboard.
 
 ### Step 1: Install @polkadot/api-cli
 
