@@ -269,9 +269,7 @@ some advanced operations.
 
 You can give your validator any name that you like, but note that others will be able to see it, and
 it will be included in the list of all servers using the same telemetry server. Since numerous
-people are using telemetry, it is recommended that you choose something likely to be unique. Note
-that the `--rpc-methods=Unsafe` flag is needed in order to set the session key as shown below. Note
-this flag only exposes RPC methods locally.
+people are using telemetry, it is recommended that you choose something likely to be unique.
 
 ### Generating the Session Keys
 
@@ -328,8 +326,8 @@ Submit this extrinsic and you are now ready to start validating.
 ## Validate
 
 To verify that your node is live and synchronized, head to
-[Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all
-nodes on the Polkadot network, which is why it is important to select a unique name!
+[Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) and find your node. Note that this
+will show all nodes on the Polkadot network, which is why it is important to select a unique name!
 
 If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 
@@ -358,8 +356,7 @@ validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the
 validator set, you are now running a Polkadot validator! If you need help, reach out on the
-[Kusama forum](https://forum.kusama.network/) or in the
-[Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
+[Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 
 ## FAQ
 
