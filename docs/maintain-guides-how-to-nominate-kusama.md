@@ -49,8 +49,7 @@ stay in the waiting queue until they have enough KSM backing them (as allocated 
 [Phragmen election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time
 if they never get enough backing.
 
-The "Validator Stats" screen will show you some interesting in-depth graphs about a selected
-validator.
+The "Validator Stat's subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you to query a validator's stash address and see historical charts on era points, elected stake, rewards, and slashes.
 
 Pick "Account actions", then click the grey "+ Nominator" button.
 
