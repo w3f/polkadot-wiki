@@ -218,8 +218,8 @@ your bonded balance.
 
 It is now time to set up our validator. We will do the following:
 
-- Bond the DOTs of the Stash account. These DOTs will be put at stake for the security of the network
-  and can be slashed.
+- Bond the DOTs of the Stash account. These DOTs will be put at stake for the security of the
+  network and can be slashed.
 - Select the Controller. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
