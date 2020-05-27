@@ -35,17 +35,19 @@ block number that they produced. If you click on the chart button it will take y
 Stats" page for that validator that shows you more detailed and historical information about the
 validator's stake, rewards and slashes.
 
+The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
+to stake and nominate.
+
+The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)) allows you to claim rewards from staking.
+
+The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
+estimate your earnings and this is where it's good to start picking favorites.
+
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough DOTs backing them (as allocated through the
 Phragmen election mechanism). It is possible validator can remain in the queue for a very long time
 if they never get enough backing.
-
-The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
-estimate your earnings and this is where it's good to start picking favorites.
-
-The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
-to stake and nominate.
 
 The "Validator Stats" screen will show you some interesting in-depth graphs about a selected
 validator.
