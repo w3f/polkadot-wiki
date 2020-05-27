@@ -1,6 +1,6 @@
 ---
-id: maintain-guides-how-to-validate-kusama
-title: Run a Validator (Kusama)
+id: maintain-guides-how-to-validate-polkadot
+title: Run a Validator (Polkadot)
 sidebar_label: Validator Guide
 ---
 
@@ -200,25 +200,25 @@ verified. You can then compare that to the current highest block via
 [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
 [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
-> **Note:** If you do not already have KSM, this is as far as you will be able to go until the end
+> **Note:** If you do not already have DOTs, this is as far as you will be able to go until the end
 > of the soft launch period. You can still run a node, but you will need to have a minimal amount of
-> KSM to continue, as balance transfers are disabled during the soft launch. Please keep in mind
-> that even for those with KSM, they will only be indicating their _intent_ to validate; they will
+> DOTs to continue, as balance transfers are disabled during the soft launch. Please keep in mind
+> that even for those with DOTs, they will only be indicating their _intent_ to validate; they will
 > also not be able to run a validator until the NPoS phase starts.
 
-## Bond KSM
+## Bond DOTs
 
 It is highly recommended that you make your controller and stash accounts be two separate accounts.
 For this, you will create two accounts and make sure each of them have at least enough funds to pay
 the fees for making transactions. Keep most of your funds in the stash account since it is meant to
 be the custodian of your staking funds.
 
-Make sure not to bond all your KSM balance since you will be unable to pay transaction fees from
+Make sure not to bond all your DOT balance since you will be unable to pay transaction fees from
 your bonded balance.
 
 It is now time to set up our validator. We will do the following:
 
-- Bond the KSM of the Stash account. These KSM will be put at stake for the security of the network
+- Bond the DOTs of the Stash account. These DOTs will be put at stake for the security of the network
   and can be slashed.
 - Select the Controller. This is the account that will decide when to start or stop validating.
 
@@ -227,13 +227,13 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliDOTs - make
   sure that your Stash account contains _at least_ this much. You can, of course, stake more than
   this.
 - **Controller account** - Select the Controller account created earlier. This account will also
-  need a small amount of KSM in order to start and stop validating.
-- **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do
-  not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM
+  need a small amount of DOTs in order to start and stop validating.
+- **Value bonded** - How much DOts from the Stash account you want to bond/stake. Note that you do
+  not need to bond all of the DOTs in that account. Also note that you can always bond _more_ DOTs
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
@@ -261,7 +261,7 @@ will now start running the node in validator mode with a flag allowing unsafe RP
 some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
+./target/release/polkadot --validator --name "name on telemetry"
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and
@@ -326,7 +326,7 @@ Submit this extrinsic and you are now ready to start validating.
 
 To verify that your node is live and synchronized, head to
 [Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all
-nodes on the Kusama network, which is why it is important to select a unique name!
+nodes on the Polkadot network, which is why it is important to select a unique name!
 
 If everything looks good, go ahead and click on "Validate" in Polkadot UI.
 
@@ -354,7 +354,7 @@ increase the number of KSMs staked or seek out nominators for your validator in 
 validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the
-validator set, you are now running a Kusama validator! If you need help, reach out on the
+validator set, you are now running a Polkadot validator! If you need help, reach out on the
 [Kusama forum](https://forum.kusama.network/) or in the
 [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
 
@@ -388,5 +388,5 @@ If you have Docker installed, you can use it to start your validator node withou
 the binary. You can do this with a simple one line command:
 
 ```sh
-$ docker run parity/polkadot:v0.7.28 --validator --name "name on telemetry"
+$ docker run parity/polkadot:latest --validator --name "name on telemetry"
 ```
