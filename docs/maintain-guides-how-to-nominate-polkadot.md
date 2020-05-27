@@ -23,7 +23,7 @@ if the validator gets slashed.
 
 # Setting up Stash and Controller keys
 
-Nominators are recommended to set up two separate stash and controller accounts. Explanation and
+Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
 
