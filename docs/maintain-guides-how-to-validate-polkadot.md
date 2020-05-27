@@ -30,8 +30,7 @@ modifications and customizations.
 If you need help, please reach out on the
 [Polkadot Validator Longue](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
 on Riot. The team and other validators are there to help answer questions and provide tips from
-experience. If you have a more significant proposal, you can write it on the
-[Web3 Foundation forum](https://forum.web3.foundation/).
+experience.
 
 ### How many DOTs do I need?
 
@@ -142,11 +141,11 @@ sudo ntpq -p
 
 You will need to build the `polkadot` binary from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
-code available in the **v0.7** branch.
+code available in the **v0.8** branch.
 
-You should generally use the latest **0.7.x** tag. At the time of writing, this was **0.7.28**, but
-you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list
-of all the potential 0.7 releases. You should replace `v0.7.28` with the latest build (i.e., the
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.0**, but
+you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list
+of all the potential 0.8 releases. You should replace `v0.8.0` with the latest build (i.e., the
 highest number). You can also find the latest Kusama version on the
 [release](https://github.com/paritytech/polkadot/releases) tab.
 
@@ -156,13 +155,13 @@ highest number). You can also find the latest Kusama version on the
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.7"
-git checkout v0.7.28
+git tag | grep "$v\0\.8"
+git checkout v0.8.0
 ./scripts/init.sh
 cargo build --release
 ```
 
-This step will take a while (generally 15 - 30 minutes, depending on your hardware).
+This step will take a while (generally 10 - 40 minutes, depending on your hardware).
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
 directory. You may then take the generated `subkey` executable and transfer it to an air-gapped
@@ -174,9 +173,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've
-> already synced the chain, you must first remove the database with `polkadot purge-chain` and then
-> ensure that you run Polkadot with the `--pruning=archive` option.
+> **Note:** Validators must sync their nodes in archive mode, otherwise the node will throw an error
+> when on start. If you've already synced the chain, you must first remove the database with
+> `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 
 You can begin syncing your node by running the following command:
 
@@ -186,10 +185,14 @@ You can begin syncing your node by running the following command:
 
 if you do not want to start in validator mode right away.
 
-**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it
-is only required explicitly if you start your node without one of these two options. If you do not
-set your pruning to archive node, even when not running in validator and sentry mode, you will need
-to re-sync your database when you switch.
+The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only
+required explicitly if you start your node without one of these two options. If you do not set your
+pruning to archive node, even when not running in validator and sentry mode, you will need to
+re-sync your database when you switch.
+
+> **Note:** Validators should sync using the RocksDb backend by passing the `--databse RocksDb`
+> flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb
+> option. Switching between database backends will require a resync.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
