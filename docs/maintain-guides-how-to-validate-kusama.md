@@ -251,14 +251,12 @@ will now start running the node in validator mode with a flag allowing unsafe RP
 some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry" --rpc-methods=Unsafe
+./target/release/polkadot --validator --name "name on telemetry"
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and
 it will be included in the list of all servers using the same telemetry server. Since numerous
-people are using telemetry, it is recommended that you choose something likely to be unique. Note
-that the `--rpc-methods=Unsafe` flag is needed in order to set the session key as shown below. Note
-this flag only exposes RPC methods locally.
+people are using telemetry, it is recommended that you choose something likely to be unique.
 
 ### Generating the Session Keys
 
@@ -294,9 +292,6 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
 public keys. Save this result for a later step.
-
-You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer
-needed.
 
 ### Submitting the `setKeys` Transaction
 
