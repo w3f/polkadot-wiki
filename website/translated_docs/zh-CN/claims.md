@@ -28,7 +28,7 @@ sidebar_label: 认领
 
 > **注意**: 在本地下载和使用 MyCrypto 应用程序更加安全。 您可以在其[releases page][mycrypto]上找到桌面应用程序的最新版本。
 
-您需要 Polkadot 帐户作为 DOT 的目的地，该 DOT 将在您认领后发送给您。请按照[account generation][]页面上的说明生成新的 Polkadot 帐户。
+You will need a Polkadot account to claim your DOTs. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
 
 #### 使用 MyCrypto 认领您的 DOT
 
@@ -134,7 +134,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-点击 "Attest"，然后按 "Sign and Submit" 提交不用交易费的证明交易。当交易包含在该区块中后，您将看到绿色的成功框出现在右上角，并且 DOT 将出现在您的帐户中。
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
@@ -142,6 +142,5 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 [ MyCrypto ]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[account generation]: learn-account-generation
 [Claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
