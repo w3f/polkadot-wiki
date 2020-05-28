@@ -97,8 +97,8 @@ the latest version.
 rustup update
 ```
 
-Finally, run this command to install the necessary dependencies for compiling and running the Polkadot
-node software.
+Finally, run this command to install the necessary dependencies for compiling and running the
+Polkadot node software.
 
 ```sh
 sudo apt install make clang pkg-config libssl-dev build-essential
