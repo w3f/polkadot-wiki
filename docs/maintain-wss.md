@@ -74,7 +74,7 @@ keep in mind that you need to replace some placeholder values. Notably:
   address if not.
 - `CERT_LOCATION` should be `/etc/letsencrypt/live/YOUR_DOMAIN/fullchain.pem` if you used Certbot,
   or `/etc/ssl/certs/nginx-selfsigned.crt` if self-signed.
-- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` if you used
+- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem` if you used
   Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
 - `CERT_DHPARAM` should be `/etc/letsencrypt/ssl-dhparams.pem` if you used Certbot, and
   `/etc/ssl/certs/dhparam.pem` if self-signed.
@@ -87,7 +87,7 @@ server {
 
         server_name SERVER_ADDRESS;
 
-        root /var/www/node;
+        root /var/www/html;
         index index.html;
 
         location / {
