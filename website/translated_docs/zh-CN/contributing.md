@@ -23,7 +23,7 @@ Wiki 是由 Web3 基金会开始并维护。这是开源项目并旨在成为有
 1. **没有` --force ` pushes **或以任何方式修改 Git 历史记录。
 2. 对于某些问题，尤其是对于诸如错别字之类的较小更改，优先使用 Pull requests。 问题适用于一般或广泛的更改或内容缺少。
 3. **非主要分支**应用于正在进行的工作。
-4. **重大修改**应该用** pull request**的约束，以征询其他贡献者的反馈。
+4. **Significant modifications** ought to be subject to a **pull request** to solicit feedback from other contributors.
 5. 对于任何其不是非常重要的贡献，_鼓励_ Pull requests，但由贡献者自行决定。
 6. 贡献者应尝试遵循 Markdown 样式，语言和布局。
 7. 应使用正确的语法。带有错别字的 Pull requests 的请求在修复之前不会合并。
