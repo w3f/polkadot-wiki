@@ -30,7 +30,7 @@ validator, you will likely want to use this repository as a _starting point_ for
 modifications and customizations.
 
 If you need help, please reach out on the
-[Polkadot Validator Longue](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
+[Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
 on Riot. The team and other validators are there to help answer questions and provide tips from
 experience.
 
