@@ -87,7 +87,7 @@ server {
 
         server_name SERVER_ADDRESS;
 
-        root /var/www/node;
+        root /var/www/html;
         index index.html;
 
         location / {
