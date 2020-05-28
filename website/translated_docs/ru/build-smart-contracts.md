@@ -29,7 +29,7 @@ sidebar_label: Смарт-Контракты
 
 Смарт-контракты должны сознательно реализовывать возможность обновления, в то время как парачейны будут иметь возможность полностью менять свой код через root команду или через паллет управления.
 
-When you build a smart contract, it will eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
+Когда Вы создаете смарт-контракт, он в конечном итоге будет развернут в целевую цепочку со своим собственным окружением/средой. Парачейны позволяют разработчику объявлять окружение своей собственной цепочки, даже позволяя другим писать для него смарт-контракты.
 
 ### Плата за газ
 

@@ -56,7 +56,7 @@ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
 - `SERVER_ADDRESS` 如果你有域名，应该替换成你的域名，或者你的服务器的 IP 地址。
 - `CERT_LOCATION` 如果您使用 Certbot，应该是 `/etc/letsensencrypt/live/YOUR_DOMAIN/fullchain.pem` 或者 `/etc/ssl/certs/nginx-selfsigned.crt` 如果是自签名。
-- `CERT_LOCATION_KEY` 如果您使用 Certbot，应该是 `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` 或 `/etc/ssl/private/nginx-selfsigned.key` 如果您是自签名的话。
+- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem` if you used Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
 - `CERT_DHPARAM` 如果您使用 Certbot， 应该是 `/etc/letsencrypt/ssl-dhparams.pem` ，如果您是自签名，应该是 `/etc/ssl/certs/dhparam.pem` 。
 
 _请注意如果您使用 Certbot ，它应该在下面为您插入路径，如果您遵循 [官方指示](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
@@ -66,7 +66,7 @@ server {
 
         server_name SERVER_ADDRESS;
 
-        root /var/www/node;
+        root /var/www/html;
         index index.html;
 
         location / {
