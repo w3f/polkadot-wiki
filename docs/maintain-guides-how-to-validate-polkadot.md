@@ -97,7 +97,7 @@ the latest version.
 rustup update
 ```
 
-Finally, run this command to install the necessary dependencies for compiling and running the Kusama
+Finally, run this command to install the necessary dependencies for compiling and running the Polkadot
 node software.
 
 ```sh
@@ -148,7 +148,7 @@ code available in the **v0.8** branch.
 You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.0**, but
 you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list
 of all the potential 0.8 releases. You should replace `v0.8.0` with the latest build (i.e., the
-highest number). You can also find the latest Kusama version on the
+highest number). You can also find the latest Polkadot version on the
 [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
@@ -202,7 +202,7 @@ to a few hours.
 If you are interested in determining how much longer you have to go, your server logs (printed to
 STDOUT from the `polkadot` process) will tell you the latest block your node has processed and
 verified. You can then compare that to the current highest block via
-[Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
+[Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the
 [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 > **Note:** If you do not already have DOTs, this is as far as you will be able to go until the end

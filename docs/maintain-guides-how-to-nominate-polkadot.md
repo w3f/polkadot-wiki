@@ -8,7 +8,7 @@ sidebar_label: Nomination Guide
 > phase. During soft launch the network starts as a Proof-of-Authority network before transitioning
 > to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first
 > validator election and rewards will not start until later. If you want to nominate on Kusama,
-> check out the [Kusama guide](mirror-maintain-guides-how-to-validate-kusama) instead.
+> check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
 for appointing their stake to the validators who are the second type of participant. By appointing
@@ -155,7 +155,7 @@ staking model.
 Example:
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io/
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://rpc.polkadot.io
 ```
 
 Result:
@@ -169,7 +169,7 @@ Result:
 ```
 
 You can check the transaction status by using the value of the `InBlock` in
-[Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the
+[Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the
 [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
 
 ### Step 3. Nominate a validator
@@ -181,7 +181,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRES
 ```
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://kusama-rpc.polkadot.io/
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.polkadot.io
 ```
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
