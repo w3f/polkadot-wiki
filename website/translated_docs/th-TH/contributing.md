@@ -23,7 +23,7 @@ There are a few basic ground-rules for contributors:
 1. **ห้าม `--force` push** หรือดัดแปลงประวัติ ของ Git ด้วยวิธีใดๆ
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
 3. ** ควรใช้ branch ที่ไม่ใช่ master** สำหรับงานที่กำลังดำเนินอยู่
-4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
+4. **Significant modifications** ought to be subject to a **pull request** to solicit feedback from other contributors.
 5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
 6. ผู้สนับสนุนควรพยายามที่จะปฏิบัติตามสไตล์ ภาษา และเลย์เอาท์ ของ Markdown ที่มีอยู่
 7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
