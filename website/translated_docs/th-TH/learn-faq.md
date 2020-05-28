@@ -72,7 +72,7 @@ We expect that Polkadot will target its block production rate to produce a block
 
 ### Does Polkadot have smart contracts?
 
-No - and yes. The Polkadot Relay Chain does not implement smart contracts natively. The reason for not having smart contracts on the Relay Chain is party of the design philosophy for Polkadot that dictates that the Relay Chain should be the minimal logic required to accomplish its job.
+No - and yes. The Polkadot Relay Chain does not implement smart contracts natively. The reason for not having smart contracts on the Relay Chain is part of the design philosophy for Polkadot that dictates that the Relay Chain should be the minimal logic required to accomplish its job.
 
 However, Polkadot will be a platform for other chains that _do_ implement smart contracts. It's possible for parachains to enable smart contract functionality and then benefit from the security and interoperability features of Polkadot. Additionally, existing smart contract chains can connect to Polkadot as a parachain, or via a bridge.
 
