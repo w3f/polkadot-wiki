@@ -293,6 +293,10 @@
         "title": "노미네이터가 되어보세요 (쿠사마)",
         "sidebar_label": "Nominator Guide"
       },
+      "maintain-guides-how-to-nominate-polkadot": {
+        "title": "Nomination Guide",
+        "sidebar_label": "Nomination Guide"
+      },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Set Up a Sentry Node - Public Node",
         "sidebar_label": "Set Up a Sentry Node"
@@ -315,6 +319,10 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "검증자 노드를 돌려보세요 (쿠사마)",
+        "sidebar_label": "Validator Guide"
+      },
+      "maintain-guides-how-to-validate-polkadot": {
+        "title": "Run a Validator (Polkadot)",
         "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {

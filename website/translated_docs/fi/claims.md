@@ -28,7 +28,7 @@ You should already have your Ethereum account that holds the DOT indicator token
 
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
 
-You will need a Polkadot account to claim your DOTs. Please follow the instructions on the [account generation][] page for generating a new Polkadot account.
+You will need a Polkadot account to claim your DOTs. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
 
 #### Claiming your DOT with MyCrypto
 
@@ -134,7 +134,7 @@ Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Click on "Attest" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
@@ -142,6 +142,5 @@ Click on "Attest" and then "Sign and Submit" to make your free attest transactio
 [MyCrypto]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[account generation]: learn-account-generation
 [Claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
