@@ -26,13 +26,13 @@ sidebar_label: 认领
 
 [ MyCrypto ][] 是款多功能钱包，可为您的以太坊账户提供多种存储方式。请点击链接转到其下载页面，并确保您下载了适用于您操作系统的最新版本。 这很重要，因为最新版本将有最新的安全补丁程序。
 
-> **注意**: 在本地下载和使用 MyCrypto 应用程序更加安全。 您可以在其[下载页面][mycrypto]上找到桌面应用程序的最新版本。
+> **注意**: 在本地下载和使用 MyCrypto 应用程序更加安全。 您可以在其[releases page][mycrypto]上找到桌面应用程序的最新版本。
 
-您需要 Polkadot 帐户作为 DOT 的目的地，该 DOT 将在您认领后发送给您。请按照[帐户生成][]页面上的说明生成新的 Polkadot 帐户。
+You will need a Polkadot account to claim your DOTs. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
 
 #### 使用 MyCrypto 认领您的 DOT
 
-Polkadot JS [Claims 程序][]可帮助您从 MyCrypto 签名消息。 万一您持有 DOT 代币的以太坊帐户的密钥存储在 Ledger Nano S 或 Trezor 等冷钱包上，MyCrypto 是个不错的选择。它还支持私钥，助记词和 Parity signer。
+Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持有 DOT 代币的以太坊帐户的密钥存储在 Ledger Nano S 或 Trezor 等冷钱包上，MyCrypto 是个不错的选择。它还支持私钥，助记词和 Parity signer。
 
 一旦下载了 MyCrypto 并使其在本地运行(为了获得最大的安全性，我们建议使用完全离线的电脑)，您可以先前往到 Polkadot-JS Apps 上的 Claims 程序。选择您要申请认领 DOT 的帐户，然后点蓝色的 "Continue" 按钮继续。您的屏幕应如下所示:
 
@@ -78,7 +78,7 @@ Polkadot JS [Claims 程序][]可帮助您从 MyCrypto 签名消息。 万一您�
 
 当提出链上认领 DOT 之后，Polkadot UI 上应立即更新了您的余额。
 
-遇到麻烦? 在 DOT [认领协助]()渠道寻求帮助。
+遇到麻烦? 在 DOT [Claims Support]()渠道寻求帮助。
 
 ![claim-10](assets/new-claims/claim-10.png)
 
@@ -114,7 +114,7 @@ Polkadot JS [Claims 程序][]可帮助您从 MyCrypto 签名消息。 万一您�
 
 ### 前往 Polkadot-JS 程序
 
-继续使用 [polkadot-js 程序][claims app]。您将需要以某种方式授予程序对您帐户的访问权限。一种方法是前往到 Accounts 页面并 "create" 新帐户，将生成的种子或助记词替换为属于您的帐户的种子或助记词。另一种方法是使用 Polkadot-JS 扩展，然后在其输入您的种子或助记词，通常比直接在程序页面中输入更安全。
+继续使用 [polkadot-js Apps][claims app]。您将需要以某种方式授予程序对您帐户的访问权限。一种方法是前往到 Accounts 页面并 "create" 新帐户，将生成的种子或助记词替换为属于您的帐户的种子或助记词。另一种方法是使用 Polkadot-JS 扩展，然后在其输入您的种子或助记词，通常比直接在程序页面中输入更安全。
 
 ### 提交证明
 
@@ -134,7 +134,7 @@ Polkadot JS [Claims 程序][]可帮助您从 MyCrypto 签名消息。 万一您�
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-点击 "Attest"，然后按 "Sign and Submit" 提交不用交易费的证明交易。当交易包含在该区块中后，您将看到绿色的成功框出现在右上角，并且 DOT 将出现在您的帐户中。
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
@@ -142,6 +142,5 @@ Polkadot JS [Claims 程序][]可帮助您从 MyCrypto 签名消息。 万一您�
 [ MyCrypto ]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[帐户生成]: learn-account-generation
-[Claims 程序]: https://polkadot.js.org/apps/#/claims
+[Claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

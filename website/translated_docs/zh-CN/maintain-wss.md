@@ -22,7 +22,7 @@ git clone https://github.com/paritytech/polkadot kusama
 cd kusama
 ./scripts/init.sh
 cargo build --release
-/target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
+./target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
 ```
 
 这将启动与 Kusama 主网的同步过程。
