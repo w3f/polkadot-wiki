@@ -38,5 +38,5 @@ sidebar_label: 提名人
 
 ### 指南
 
-- [提名人指南 (Kusama)](maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。
+- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Guide on nominating on the Kusama canary network.
 - [停止作为提名人(所有网络)](maintain-guides-how-to-unbond) - 停止提名和提取币的指南。
