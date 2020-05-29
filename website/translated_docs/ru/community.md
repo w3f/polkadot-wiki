@@ -8,25 +8,40 @@ sidebar_label: Сообщество
 
 ## Общие
 
-- [Join Kusama](https://polkadot.js.org/apps/#/explorer) - Доступ к панели пользовательского интерфейса для взаимодействия с канареечной сетью Polkado, Kusama.
+- [Use Kusama Interface](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with Polkadot's canary network, Kusama.
 - [Polkadot GitHub](https://github.com/paritytech/polkadot/) - репозиторий, поддерживаемый Parity, в котором размещена реализация Rust хоста Polkadot.
-- [Митапы Polkadot](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Информация о проведении митапов, подача заявки на финансирование, а также материалы для проведения.
+- [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
 
-## Riot
+## Riot Chats
 
-- [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) - Комната для новичков, изучающих Polkadot. **Отличное место, чтобы задать вопросы**
-- [Polkadot Watercooler Chat](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) - Основная комната для обсуждения Polkadot.
-- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - Комната для валидаторов, желающих запустить ноду.
-- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - Комната для технических вопросов по разработке на Substrate.
+### Polkadot
+
+- [Polkadot Watercooler Chat](https://riot.im/app/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - General room for talk about Polkadot.
+- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - Room for validators learning about setting up a node.
+- [Polkadot Direction](https://riot.im/app/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Polkadot.
+
+### Kusama
+
+- [Kusama Watercooler Chat](https://riot.im/app/#/room/%23kusamawatercooler:polkadot.builders) - General room for talk about Kusama.
+- [Kusama Validator Lounge](https://riot.im/app/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Room for validators learning about setting up a node.
+- [Kusama Direction](https://riot.im/app/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Kusama.
+
+### Technical
+- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
+- [Smart Contracts & Parity Ink!](https://riot.im/app/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A room to discuss developing Substrate smart contracts using Parity Ink!
 
 ## Соц Сети
 
-- [Подписывайтесь на почтовую рассылку Polkadot](https://polkadot.network/#roadmap) - Форма для регистрации находится в нижней части страницы.
-- [Polkadot Telegram](https://t. me/polkadotofficial) - Официальная группа Telegram для обсуждения Polkadot (пожалуйста, прочитайте сначала правила).
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Официальный Twitter аккаунт Polkadot.
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Официальный аккаунт Polkadot Reddit.
-- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Видео от основателей и разработчиков Polkadot о сети и общем видении.
+- [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - Sign-up for our newsletter here.
+- [Polkadot Telegram](https://t.me/polkadotofficial) - Official Telegram room for discussion of Polkadot (please read the rules before chatting).
+- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Official Twitter account of Polkadot.
+- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit.
+- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video content from founders and build of Polkadot describing the network and the vision.
+- [Kusama Telegram](https://t.me/kusamanetworkofficial)
+- [Kusama Twitter](https://twitter.com/kusamanetwork)
+- [Kusama Reddit](https://www.reddit.com/r/Kusama)
+- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
 
 ## Экосистема
 
-- [Команды, разрабатывающие в сети Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Список команд, разрабатывающих свои решения в сети Polkadot и/или на Substrate.
+- [Teams Building on Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Maintained list of teams building on Polkadot and/or Substrate.
