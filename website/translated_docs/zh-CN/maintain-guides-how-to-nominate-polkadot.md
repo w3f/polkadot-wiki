@@ -4,7 +4,7 @@ title: 提名人指南
 sidebar_label: 提名人指南
 ---
 
-> 以下信息适用于当前处于非正式发布的 Polkadot 网络。 在非正式发布期间，网络在转换为权益证明(PoS) 之前先作为权威证明网络 (PoA) 启动。 您将可以按照本指南设置验证人，但是直到正式发布以后才开始第一次验证人选举和奖励。 如果您想在 Kusama 上成为提名人，请查看[Kusama 指南](mirror-maintain-guides-how-to-nominate-kusama)。
+> The following information applies to the Polkadot network which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 提名人是 Polkadot 抵押子系统的一种参与者。 他们负责将会参与抵押中的代币分配给第二种参与者的验证人。 通过抵押他们的代币，他们能够选举活跃的验证人并分享抵押所支付的奖励。
 
@@ -97,7 +97,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMB
 例子:
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io/
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://rpc.polkadot.io
 ```
 
 Result:
@@ -110,7 +110,7 @@ Result:
     }
 ```
 
-您可以使用[ Polkascan ](https://polkascan.io/pre/kusama)中的` InBlock `的值来检查交易状态。另外您可以在 PolkadotJS Apps 上的[ Staking ](https://polkadot.js.org/apps/#/staking/actions)页面下验证绑定状态。
+You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
 
 ### 第三步: 提名验证人
 
@@ -121,7 +121,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRES
 ```
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://kusama-rpc.polkadot.io/
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.polkadot.io
 ```
 
 几秒钟后，您应该看到交易的哈希值，并且如果您想验证提名状态，也可以在 PolkadotJS UI 上进行检查。
