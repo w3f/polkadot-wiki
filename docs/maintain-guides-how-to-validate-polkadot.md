@@ -94,7 +94,9 @@ Otherwise, if you have already installed Rust, run the following command to make
 the latest version.
 
 ```sh
-rustup update
+rustup update nightly
+rustup update stable
+rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
 
 Finally, run this command to install the necessary dependencies for compiling and running the
