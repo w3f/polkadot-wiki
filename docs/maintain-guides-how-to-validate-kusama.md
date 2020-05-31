@@ -131,11 +131,11 @@ sudo ntpq -p
 
 You will need to build the `polkadot` binary from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
-code available in the **v0.7** branch.
+code available in the **v0.8** branch.
 
-You should generally use the latest **0.7.x** tag. At the time of writing, this was **0.7.28**, but
-you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list
-of all the potential 0.7 releases. You should replace `v0.7.28` with the latest build (i.e., the
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.2**, but
+you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list
+of all the potential 0.8 releases. You should replace `v0.8.2` with the latest build (i.e., the
 highest number). You can also find the latest Kusama version on the
 [release](https://github.com/paritytech/polkadot/releases) tab.
 
@@ -175,7 +175,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 > not in archive mode, you must first remove the database with `polkadot purge-chain` and then
 > ensure that you run Polkadot with the `--pruning=archive` option.
 > 
-> You may run a validator node non-archive mode by adding the following flags:
+> You may run a validator node in non-archive mode by adding the following flags:
 > `-unsafe-pruning --pruning <NUMBER>`, but note that an archive node and non-archive node's
 > databases are not compatible with each other, and to switch you will need to purge the chain
 > data.
