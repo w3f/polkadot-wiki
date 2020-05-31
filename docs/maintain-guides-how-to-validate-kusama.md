@@ -24,9 +24,7 @@ customizations.
 
 If you need help, please reach out on the
 [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on
-Riot. The team and other validators are there to help answer questions and provide experience. If
-you have a more significant proposal, you can write it on the
-[Kusama forum](https://forum.kusama.network).
+Riot. The team and other validators are there to help answer questions and provide experience.
 
 ### How Many KSM Do I Need?
 
@@ -62,7 +60,8 @@ a validator are as follows:
   becomes very big.
 - **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with,
   anything less than this make build times too inconvenient. For better performance you can bump it
-  up to 4GB or 8GB, but anything more than that is probably over-kill.
+  up to 4GB or 8GB, but anything more than that is probably over-kill. In order to compile the
+  binary yourself you will likely need ~8GB.
 - **CPU:** 1 - 2. One CPU is okay, but 2 is better. Again, this is a performance preference.
 
 On most cloud service providers, these specs are usually within the $10 - $20 per month range.
@@ -146,13 +145,21 @@ highest number). You can also find the latest Kusama version on the
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.7"
-git checkout v0.7.28
+git tag | grep "$v\0\.8"
+git checkout v0.8.2
 ./scripts/init.sh
 cargo build --release
 ```
 
-This step will take a while (generally 15 - 30 minutes, depending on your hardware).
+This step will take a while (generally 10 - 40 minutes, depending on your hardware).
+
+> Note if you run into compile errors, you may have to switch to a less recent nightly.
+> This can be done by running:
+> ```sh
+> rustup install nightly-2020-05-15
+> rustup override set nightly-2020-05-15
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+> ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
 directory. You may then take the generated `subkey` executable and transfer it to an air-gapped
@@ -164,22 +171,34 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've
-> already synced the chain, you must first remove the database with `polkadot purge-chain` and then
+> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain
+> not in archive mode, you must first remove the database with `polkadot purge-chain` and then
 > ensure that you run Polkadot with the `--pruning=archive` option.
+> 
+> You may run a validator node non-archive mode by adding the following flags:
+> `-unsafe-pruning --pruning <NUMBER>`, but note that an archive node and non-archive node's
+> databases are not compatible with each other, and to switch you will need to purge the chain
+> data.
 
 You can begin syncing your node by running the following command:
 
 ```sh
-./target/release/polkadot --pruning=archive
+./target/release/polkadot --pruning=archive --chain kusama
 ```
 
 if you do not want to start in validator mode right away.
 
-**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it
+The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it
 is only required explicitly if you start your node without one of these two options. If you do not
 set your pruning to archive node, even when not running in validator and sentry mode, you will need
 to re-sync your database when you switch.
+
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can
+> be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch
+> to using the faster and more efficient ParityDb option. Switching between database backends will
+> require a resync. 
+> 
+> If you want to test out ParityDB you can add the flag `---database paritydb`.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
@@ -189,12 +208,6 @@ STDOUT from the `polkadot` process) will tell you the latest block your node has
 verified. You can then compare that to the current highest block via
 [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
 [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
-
-> **Note:** If you do not already have KSM, this is as far as you will be able to go until the end
-> of the soft launch period. You can still run a node, but you will need to have a minimal amount of
-> KSM to continue, as balance transfers are disabled during the soft launch. Please keep in mind
-> that even for those with KSM, they will only be indicating their _intent_ to validate; they will
-> also not be able to run a validator until the NPoS phase starts.
 
 ## Bond KSM
 
@@ -224,7 +237,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   need a small amount of KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM
-  later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
+   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
@@ -251,7 +264,7 @@ will now start running the node in validator mode with a flag allowing unsafe RP
 some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/release/polkadot --validator --name "name on telemetry" --chain kusama
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and

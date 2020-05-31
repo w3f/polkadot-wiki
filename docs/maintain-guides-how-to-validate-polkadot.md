@@ -158,12 +158,20 @@ highest number). You can also find the latest Polkadot version on the
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.8"
-git checkout v0.8.0
+git checkout v0.8.2
 ./scripts/init.sh
 cargo build --release
 ```
 
 This step will take a while (generally 10 - 40 minutes, depending on your hardware).
+
+> Note if you run into compile errors, you may have to switch to a less recent nightly.
+> This can be done by running:
+> ```sh
+> rustup install nightly-2020-05-15
+> rustup override set nightly-2020-05-15
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+> ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
 directory. You may then take the generated `subkey` executable and transfer it to an air-gapped
@@ -175,9 +183,14 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-> **Note:** Validators must sync their nodes in archive mode, otherwise the node will throw an error
-> when on start. If you've already synced the chain, you must first remove the database with
-> `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain
+> not in archive mode, you must first remove the database with `polkadot purge-chain` and then
+> ensure that you run Polkadot with the `--pruning=archive` option.
+> 
+> You may run a validator node non-archive mode by adding the following flags:
+> `-unsafe-pruning --pruning <NUMBER>`, but note that an archive node and non-archive node's
+> databases are not compatible with each other, and to switch you will need to purge the chain
+> data.
 
 You can begin syncing your node by running the following command:
 
@@ -192,9 +205,12 @@ required explicitly if you start your node without one of these two options. If 
 pruning to archive node, even when not running in validator and sentry mode, you will need to
 re-sync your database when you switch.
 
-> **Note:** Validators should sync using the RocksDb backend by passing the `--database RocksDb`
-> flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb
-> option. Switching between database backends will require a resync.
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can
+> be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch
+> to using the faster and more efficient ParityDb option. Switching between database backends will
+> require a resync. 
+> 
+> If you want to test out ParityDB you can add the flag `---database paritydb`.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
