@@ -14,7 +14,7 @@ sidebar_label: 验证人指南
 
 由于安全性对运行验证人至关重要，因此您最好看一下[设定安全验证人](maintain-guides-secure-validator)资料使您了解在构建网络架构时要考虑的要素。 Web3 基金会也会保持更新[安全验证人设置的参考](https://github.com/w3f/polkadot-secure-validator)使您也可以自己部署来使用(视频教程在[这里](https://www.youtube.com/watch?v=tTn8P6t7JYc))。随着您成为验证人愈长时间，您可能使用此库作为自己的_起点_进行修改和自定义。
 
-如果您需要帮助，请前往 [ Riot 上的 Polkadot 验证人聊天室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)  团队和其他验证人在那里帮助回答问题并提供经验。
+If you need help, please reach out on the [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) on Riot. The team and other validators are there to help answer questions and provide tips from experience.
 
 ### 我需要多少 DOTs？
 
@@ -56,7 +56,7 @@ curl https://sh.rustup.rs -sSf | sh
 rustup update
 ```
 
-最后运行此指令以安装必要的相关依赖，以编译和运行 Polkadot 节点。
+Finally, run this command to install the necessary dependencies for compiling and running the Polkadot node software.
 
 ```sh
 sudo apt install make clang pkg-config libssl-dev build-essential
@@ -94,7 +94,7 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-通常您应该使用最新的** 0.8.x **标记。在撰写本文时，这是** 0.8.0 **，但是您应该查看 "git tag" 指令的输出（` git tag | grep  "$v\0\.8"`)，以查看所有潜在的0.8版本的列表。 您应将` v0.8.0 `替换为最新版本(即最高号码)。 您还可以在[release](https://github.com/paritytech/polkadot/releases)选项卡上找到最新的 Polkadot 版本。
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.0**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.0` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -133,7 +133,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
-如果您想估计还需要再多少时间，服务器日志(在 ` polkadot ` STDOUT 程序中显示)显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Kusama)或当前[ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
+If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 > **注意:** 如果您还没有 DOTs，您只能做到这一步，直至升级到 PoS 之后。您仍然可以运行节点，但是因为在非正式发布期间轉帳是不能使用，所以您需要少数量 DOTs 才能继续操作。 在 NPoS 开始之前，即使有 DOTs 的人也只能表达他们_有意_成为验证人，他们现在是无法成为验证人。
 
