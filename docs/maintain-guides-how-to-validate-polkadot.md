@@ -189,7 +189,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 > that you run Polkadot with the `--pruning=archive` option.
 >
 > You may run a validator node in non-archive mode by adding the following flags:
-> `-unsafe-pruning --pruning <NUMBER>`, but note that an archive node and non-archive node's
+> `-unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's
 > databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 You can begin syncing your node by running the following command:
