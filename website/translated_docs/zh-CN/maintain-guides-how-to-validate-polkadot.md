@@ -94,7 +94,7 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.0**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.0` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.2**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.2` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -102,12 +102,20 @@ You should generally use the latest **0.8.x** tag. At the time of writing, this 
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.8"
-git checkout v0.8.0
+git checkout v0.8.2
 ./scripts/init.sh
 cargo build --release
 ```
 
 这步将需要一段时间(通常需要 10 - 40 分钟，具体取决于您的硬件)。
+
+> Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
+> 
+> ```sh
+rustup install nightly-2020-05-15
+rustup override set nightly-2020-05-15
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+```
 
 如果您想在本地生成密钥，您还可以在同一目录安装` subkey `。然后您可以把生成好的` subkey `可执行文件，并将其转移到与世隔绝的电脑中，以提高安全性。
 
@@ -117,7 +125,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### 同步链数据
 
-> **注意:**验证人节点必须以 archive 模式同步以避免启动时出现错误。如果您已经同步好，您必须首先运行` polkadot purge-chain `删除之前的数据库，然后确保使用` --pruning=archive `运行 Polkadot。
+> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+> 
+> You may run a validator node in non-archive mode by adding the following flags: `-unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 您可以通过运行以下指令来开始同步您的节点:
 
@@ -129,17 +139,19 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 `--pruning=archive`选项意味着` --validator `和`-sentry `选项，因此仅如果在没有这两个选项之一的情况下启动节点，则必须明确要求。 如果您不设置为 archive 节点，即使不在运行验证人和哨兵模式时，也需要切换时重新同步数据库。
 
-> **注意: **验证人应通过传递`--database RocksDb`标志来使用RocksDb 后端进行同步。 将来建议切换到使用更快，更有效的 ParityDb 选项。 在数据库后端之间切换将需要重新同步。
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
+> 
+> If you want to test out ParityDB you can add the flag `---database paritydb`.
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
 If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
-> **注意:** 如果您还没有 DOTs，您只能做到这一步，直至升级到 PoS 之后。您仍然可以运行节点，但是因为在非正式发布期间轉帳是不能使用，所以您需要少数量 DOTs 才能继续操作。 在 NPoS 开始之前，即使有 DOTs 的人也只能表达他们_有意_成为验证人，他们现在是无法成为验证人。
+> **Note:** If you do not already have DOTs, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of DOTs to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with DOTs, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
 
 ## 绑定 DOTS
 
-> **注意: **在 Polkadot 的非正式发布阶段将禁用转帐。 这意味着如果您在这段时间内设置验证人，则可能无法按照建议的方式将 stash 和 controller 设置为两个单独的帐号。 您必须使它们成为同一帐号，这意味着您将把该帐号绑定到其自身。 但是强烈建议您尽快更换 controller。
+> **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you are setting up a validator during this time you may not be able to make your stash and controller two separate accounts, as is recommended. You must make them the same account, meaning that you will bond the account to itself. However it is highly recommended that you change your controller as soon as possible.
 
 强烈建议您将 controller 和 stash 帐号设为两个单独的帐号。 为此，您将创建两个帐号，并确保每个帐号至少有足够的资金来支付进行交易的费用。 将您的大部分资金保留在 stash 帐号中，因为这是您存入资金的托管人。
 
@@ -165,7 +177,7 @@ If you are interested in determining how much longer you have to go, your server
 
 ## 设置 Session 密钥
 
-> **注意:** Session 密钥是共识的关键，因此如果不确定节点是否具有进行` setKeys `交易 当前 session 密钥，则可以使用以下之一: 有两种可用的 RPC 查询节点的方法: [ hasKey ](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)检查特定密钥，或[ hasSessionKeys ](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)检查完整的 session key 公钥字串。
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction then you can use one of the two available RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) to check the full session key public key string.
 
 节点同步好后，请按 Ctrl-C 停止该程序。 在终端机提示下，您现在将开始在验证人模式下运行节点，并带有允许进行某些高级操作所需不安全 RPC 调用的选项。
 
