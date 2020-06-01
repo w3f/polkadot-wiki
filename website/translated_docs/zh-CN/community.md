@@ -27,6 +27,7 @@ Polkadot 社区每天都在扩大。以下是最重要的社区链接。
 - [Kusama Direction](https://riot.im/app/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Kusama.
 
 ### Technical
+
 - [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://riot.im/app/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A room to discuss developing Substrate smart contracts using Parity Ink!
 
