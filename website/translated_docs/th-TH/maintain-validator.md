@@ -4,7 +4,7 @@ title: ผู้ตรวจสอบ (Validator)
 sidebar_label: ผู้ตรวจสอบ (Validator)
 ---
 
-Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
+Validators secure the Relay Chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
 
 These participants will play a crucial role in adding new blocks to the Relay Chain and, by extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay Chain.
 
