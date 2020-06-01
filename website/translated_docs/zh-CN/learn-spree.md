@@ -26,11 +26,11 @@ SPREE 模块对整个 XCMP 结构非常重要，因为它为将在目标平行�
 
 SPREE 模块就像食谱。 例如如果我们向厨师下令制作舒芙蕾，对厨师的能力非常有信心，我们对将要做的事情有模糊的想法，但实际上并不确定如何做。 但是假设某位厨师的书架上有 "SouffléMaker's 手册"，自己只能从这本书制作舒芙蕾。 现在我们还可以查阅厨师所拥有的一本书，了解当我们告诉厨师做舒芙蕾时会发生什么。 在此示例中" 制作舒芙蕾" 是 XCMP 的信息而菜谱是 SPREE 模块。
 
-具体来说 SPREE 模块对于波卡的各种功能非常有用。其中一个 SPREE 模块用例是适用于去中心化交易所，作为提供功能给任何平行链，开发者无需任何额外的工夫。可以想象有 SPREE 模块，该模块会公开了各种资产余额递增和递减唯一标识的接口。
+In concrete terms, SPREE modules could be useful for various functionality on Polkadot. One suggested use case of SPREE modules is for a trustless decentralized exchange that is offered as functionality to any parachain without any extra effort from parachain developers. One can imagine this working by having a SPREE module that exposes the interface for the incrementing and decrementing of balances of various assets based on a unique identifier.
 
 ## 为什么?
 
-在 XCMP 中发送跨平行链消息仅确保消息将被传递，但没有指定代码将被执行或者接收方链将如何解释消息。有一些解决方法例如从接收方的平行链请求可验证执行收据，但在裸露的情况下，其它平行链必须被信任。共享代码存在于附件中，平行链可以选择加入解决对信任的需求，并使附录的执行完全去信任。
+Sending messages across parachains in XCMP only ensures that the message will be delivered but does not specify the code that will be executed, or how the message will be interpreted by the receiving parachain. There would be ways around this such as requesting a verifiable receipt of the execution from the receiving parachain, but in the naked case the other parachain would have to be trusted. Having shared code that exists in appendices that the parachain can opt-in to resolves the need for trust and makes the execution of the appendices completely trustless.
 
 SPREE 将有助于确保在 SPREE 模块平行链之间共享相同的逻辑。一个特别相关的用例将围绕跨平行链代币转移，在发送和接收平行链就如何更改代币的总供应量和基本接口达成一致非常重要。
 
@@ -40,13 +40,13 @@ SPREE 将有助于确保在 SPREE 模块平行链之间共享相同的逻辑。�
 
 上图是简化 Polkadot 的系统。
 
-在此图中，我们看到 SPREE 模块 "X" 的 Wasm 代码已上传到 Polkadot 中继链。它们俩圆柱 "A" 和 "B" 代表两个截然不同的平行链，均已选择加入此 SPREE 模块，从而创建了两个具有它们自己的ICMP端点 "A.X" 和 "B.X" 的不同实例。
+In this diagram we see that the Wasm code for SPREE module "X" has been uploaded to the Polkadot Relay Chain. The two cylinders "A" and "B" represent two distinct parachains that have both opted-in to this SPREE module creating two distinct instances of it with their own XCMP endpoints "A.X" and "B.X".
 
 在示例中，我们假设此 SPREE 模块 "X" 包含用于递增或递减该模块特定资产的余额。
 
 通过在 A.X 处发起交易以将特定余额减少1，XCMP上的消息可以去信任发送到 B.X 以使余额增加1。
 
-表示为绿色三角形的收集人负责将消息从平行链 A 传递到平行链 B，以及为 A.X 和 B.X 的每个特定实例为其各自的平行链维护存储。 它们向中继链验证人提供有效状态转换的证明，以蓝色菱形表示。
+Collators, represented as the green triangle are responsible for relaying this message from parachain A to parachain B, as well as mantaining the storage for each particular instance of A.X and B.X for their respective parachains. They provide proofs of valid state transitions to the Relay Chain validators, represented as blue diamonds.
 
 验证人可以通过提供之前的 SPREE 模块实例的状态根和实例之间的 XCMP 消息的数据以及实例的下一个状态根去验证 SPREE 模块的 A.X 和 B.X 正确状态转换。它们执行此验证是对照 SPREE 模块提供的`验证`函数对其进行检查 API。收集人是需要能够提供此信息，以便处理其平行链。
 
