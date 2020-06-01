@@ -4,11 +4,11 @@ title: 例子
 sidebar_label: 例子
 ---
 
-例子有助于演示开发模式。在该库中收集了一些可能对开发人员有所帮助的开源范例。
+Examples are helpful to demonstrate patterns of development. This repository contains some open source examples that may be helpful for developers.
 
 ## Web3 Grants
 
-对于所有 Web3 基金会赠款给致力于促进 Polkadot 生态系统的项目的团队， 请查看 [Grants](grants.md) 页面。
+For a list of all Web3 Foundation grants to teams working on projects that promote the Polkadot ecosystem, please see the [Grants](grants.md) page.
 
 ## Substrate Runtimes
 
