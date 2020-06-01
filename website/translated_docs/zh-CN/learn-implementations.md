@@ -18,4 +18,4 @@ sidebar_label: Polkadot 实现
 
 如 Soramitsu 拨款公告所述:
 
-> 由于多种原因，包括去中心化，知识分散和更好的协议定义，实现 Polkadot 协议极之 重要。实现多个 Polkadot 版本提高了网络的弹性，并增加了网络的去中心化。当多个团队在网络中运行开发节点的客户端时，网络的治理将更加民主化。
+> It is critically important to have multiple implementations of the Polkadot protocol for a number of reasons, including decentralization, knowledge dispersion, and better definitions of the protocol... Multiple implementations of Polkadot improves network resilience and adds to the decentralization of the network. The governance of the network is more democratized when multiple teams build clients that run the nodes in the network.
