@@ -19,6 +19,6 @@ Polkadot 预计将于今年年底发布。
 - PoC-3(于2018年12月21日发布) - 添加了_ GRANDPA 最终决定性工具。 测试网："Alexander" _ [发布博客文章 ](https://medium.com/coinmonks/polkadot-hello-world-3-poc-3-on-substrate-is-here-c45d100f72e3)
 - BBQ-Birch 测试网（上线时间：2018年10月15日）：_添加了智能合约支持。_
 - PoC-2 (于2018年7月29日发布) - _添加了对平行链的支持， 奖励和惩罚已添加到 PoS 共识算法中。 测试网: "Krumme Lanke"。 首次通过治理进行自动升级。_ [发布博客文章](https://medium.com/polkadot-network/polkadot-poc-2-is-here-parachains-runtime-upgrades-and-libp2p-networking-7035bb141c25)
-- PoC-1 (于2018年5月16日发布，Testnet于2018年5月18日发布）-_概念的初始证明-包括用于中继链和链上治理的基本状态转换引擎。_ [发布博客文章](https://medium.com/polkadot-network/now-live-polkadot-proof-of-concept-1-3e718512a8d)
+- PoC-1 (Released 16 May 2018, Testnet went live 18 May 2018) - _Initial proof of concept - included basic state transition engine for Relay Chain and on-chain governance._ [Release Blog Post](https://medium.com/polkadot-network/now-live-polkadot-proof-of-concept-1-3e718512a8d)
 
 有关 Polkadot 路线图和 Polkadot 代码库状态的最新信息，请参阅 Polkadot GitHub 库，尤其是里程碑页面：[ https://github.com/paritytech/polkadot/milestones ](https://github.com/paritytech/polkadot/milestones)
