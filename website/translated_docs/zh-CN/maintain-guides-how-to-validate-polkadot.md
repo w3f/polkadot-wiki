@@ -4,7 +4,7 @@ title: 运行验证人 (Polkadot)
 sidebar_label: 验证人指南
 ---
 
-> 以下信息适用于当前处于非正式发布的 Polkadot 网络。 在非正式发布期间，网络在转换为权益证明(PoS) 之前先作为权威证明网络 (PoA) 启动。 您将可以按照本指南设置验证人，但是直到以后才开始第一次验证人选举和奖励。 如果您想在 Kusama 上设置验证人，请查看[Kusama 指南](mirror-maintain-guides-how-to-validate-kusama)。
+> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your validator but the first validator election and rewards will not start until later. If you want to set up a validator on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-validate-kusama) instead.
 
 本指南将指导您如何在 Polkadot 网络上设置验证人节点。
 
@@ -14,11 +14,11 @@ sidebar_label: 验证人指南
 
 由于安全性对运行验证人至关重要，因此您最好看一下[设定安全验证人](maintain-guides-secure-validator)资料使您了解在构建网络架构时要考虑的要素。 Web3 基金会也会保持更新[安全验证人设置的参考](https://github.com/w3f/polkadot-secure-validator)使您也可以自己部署来使用(视频教程在[这里](https://www.youtube.com/watch?v=tTn8P6t7JYc))。随着您成为验证人愈长时间，您可能使用此库作为自己的_起点_进行修改和自定义。
 
-If you need help, please reach out on the [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) on Riot. The team and other validators are there to help answer questions and provide tips from experience.
+如果您需要帮助，请前往 [ Riot 上的 Polkadot 验证人聊天室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) 。团队和其他验证人在那里帮助回答问题并提供经验。
 
 ### 我需要多少 DOTs？
 
-您可以使用[此处](learn-faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators)列出的方法对此进行粗略估算。 验证人是根据[ Phragmen 算法](learn-phragmen)选出的。 要被选入，您的验证人需要最低的抵押。抵押可以来自您自己，也可以来自[提名人](maintain-nominator)。 这意味着至少，您将需要足够的 DOT 来使用现有的存款设置 Stash 和 Controller [帐户](learn-keys)，外加一些额外的交易费。 其余的可以来自提名人。
+您可以使用[此处](learn-faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)列出的方法对此进行粗略估算。 验证人是根据[ Phragmen 算法](learn-phragmen)选出的。 要被选入，您的验证人需要最少的抵押。抵押可以来自您自己，也可以来自[提名人](maintain-nominator)。 这意味着至少，您将需要足够的 DOT 来使用现有的存款设置 Stash 和 Controller [帐户](learn-keys)，外加一些额外的交易费。 其余的可以来自提名人。
 
 **警告: ** 验证人抵押中的 DOTs 都有可能遭到大幅削减(惩罚)，这意味着不安全或设置不当可能会导致 KSM 被削减！ 如果您对运行验证人节点的能力不太确定，建议最好把您的 DOT 提名给你信任的验证人节点。
 
@@ -56,7 +56,7 @@ curl https://sh.rustup.rs -sSf | sh
 rustup update
 ```
 
-Finally, run this command to install the necessary dependencies for compiling and running the Polkadot node software.
+最后运行此指令以安装必要的相关依赖，以编译和运行 Polkadot 节点。
 
 ```sh
 sudo apt install make clang pkg-config libssl-dev build-essential
@@ -94,7 +94,7 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.2**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.2` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+通常您应该使用最新的** 0.8.x **标记。在撰写本文时，这是** 0.8.2 **，但是您应该查看 "git tag" 指令的输出（` git tag | grep  "$v\0\.8"`)，以查看所有潜在的0.8版本的列表。 您应将` v0.8.2 `替换为最新版本(即最高号码)。 您还可以在[release](https://github.com/paritytech/polkadot/releases)选项卡上找到最新的 Polkadot 版本。
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -109,7 +109,7 @@ cargo build --release
 
 这步将需要一段时间(通常需要 10 - 40 分钟，具体取决于您的硬件)。
 
-> Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
+> 注意如果您遇到编译错误，您可能不得不切换到一个没有那么近的 nightly。这可以是通过运行：
 > 
 > ```sh
 rustup install nightly-2020-05-15
@@ -125,9 +125,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### 同步链数据
 
-> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+> **注意:**验证人节点预设是以 archive 模式同步。如果您已经同步好并不是 archive 模式，您必须首先运行` polkadot purge-chain `删除之前的数据库，然后确保使用` --pruning=archive `运行 Polkadot。
 > 
-> You may run a validator node in non-archive mode by adding the following flags: `-unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
+> 您可以通过添加以下选项在非 archive 模式下运行验证人节点：`-unsafe-pruning --pruning OF BLOCKS>`，但请注意，archive 节点和非 archive 节点的数据库彼此不兼容，要进行切换，您将需要清除链数据。
 
 您可以通过运行以下指令来开始同步您的节点:
 
@@ -139,19 +139,19 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 `--pruning=archive`选项意味着` --validator `和`-sentry `选项，因此仅如果在没有这两个选项之一的情况下启动节点，则必须明确要求。 如果您不设置为 archive 节点，即使不在运行验证人和哨兵模式时，也需要切换时重新同步数据库。
 
-> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
+> **注意: **验证人应使用 rocksdb 后端同步。默认情况下这是隐式的，但可以显式绕过 `--database RocksDb`。 将来建议切换到使用更快，更有效的 ParityDb 选项。 在数据库后端之间切换将需要重新同步。
 > 
-> If you want to test out ParityDB you can add the flag `---database paritydb`.
+> 如果要测试 ParityDB，可以添加` ---database paritydb `选项。
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
-If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+如果您想估计还需要再多少时间，服务器日志(在 ` polkadot ` STDOUT 程序中显示)显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Polkadot%20CC1)或当前[ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
 
-> **Note:** If you do not already have DOTs, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of DOTs to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with DOTs, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
+> **注意:** 如果您还没有 DOTs，您只能做到这一步，直至升级到 PoS 之后。您仍然可以运行节点，但是因为在非正式发布期间轉帳是不能使用，所以您需要少数量 DOTs 才能继续操作。 在 NPoS 开始之前，即使有 DOTs 的人也只能表达他们_有意_成为验证人，他们现在是无法成为验证人。
 
 ## 绑定 DOTS
 
-> **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you are setting up a validator during this time you may not be able to make your stash and controller two separate accounts, as is recommended. You must make them the same account, meaning that you will bond the account to itself. However it is highly recommended that you change your controller as soon as possible.
+> **注意: **在 Polkadot 的非正式发布阶段将禁用转帐。 这意味着如果您在这段时间内设置验证人，则可能无法按照建议的方式将 stash 和 controller 设置为两个单独的帐号。 您必须使它们成为同一帐号，这意味着您将把该帐号绑定到其自身。 但是强烈建议您尽快更换 controller。
 
 强烈建议您将 controller 和 stash 帐号设为两个单独的帐号。 为此，您将创建两个帐号，并确保每个帐号至少有足够的资金来支付进行交易的费用。 将您的大部分资金保留在 stash 帐号中，因为这是您存入资金的托管人。
 
@@ -177,7 +177,7 @@ If you are interested in determining how much longer you have to go, your server
 
 ## 设置 Session 密钥
 
-> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction then you can use one of the two available RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) to check the full session key public key string.
+> **注意:** Session 密钥是共识的关键，因此如果不确定节点是否具有进行` setKeys `交易 当前 session 密钥，则可以使用以下之一: 有两种可用的 RPC 查询节点的方法: [ hasKey ](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)检查特定密钥，或[ hasSessionKeys ](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)检查完整的 session key 公钥字串。
 
 节点同步好后，请按 Ctrl-C 停止该程序。 在终端机提示下，您现在将开始在验证人模式下运行节点，并带有允许进行某些高级操作所需不安全 RPC 调用的选项。
 
