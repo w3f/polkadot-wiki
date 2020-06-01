@@ -7,11 +7,11 @@ description: Penjelasan tentang model konsensus yang digunakan di Polkadot dan K
 
 ## Mengapa kita membutuhkan konsensus?
 
-Consensus is a method for coming to agreement over a shared state. In order for the state of the blockchain to continue to build and move forward, all nodes in the network must agree and come to consensus. It is the way that the nodes in a decentralized network are able to stay synced with each other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to provide the _objective_ view of the state amid participants which each have their own _subjective_ views of the network. It is the process by which these nodes communicate and come to agreement, and are able to build new blocks.
+Consensus is a method for coming to agreement over a shared state. In order for the state of the blockchain to continue to build and move forward, all nodes in the network must agree and come to consensus. It is the way that the nodes in a decentralized network are able to stay synced with each other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to provide the _objective_ view of the state amid participants who each have their own _subjective_ views of the network. It is the process by which these nodes communicate and come to agreement, and are able to build new blocks.
 
 ## Apa itu PoW dan PoS?
 
-Proof of Work (PoW) and Proof of Stake (PoS) have been used as short hand to refer to consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method for agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a set of rules for selecting the validator set and does not specify a chain selection rule or how a chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos) is a practical Byzantine fault tolerant algorithm which uses PoS as its validator set selection method.
+Proof of Work (PoW) and Proof of Stake (PoS) have been used as short hand to refer to consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method for agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a set of rules for selecting the validator set and does not specify a chain selection rule or how a chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos) is a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection method.
 
 ## Kenapa tidak Bukti Kerja?
 
@@ -19,7 +19,7 @@ Although simple and effective in coming to a decentralized consensus, proof of w
 
 ## Probabilitas vs finalitas yang dapat dibuktikan
 
-A pure Nakamoto consensus blockchain which runs PoW is only able to achieve the notion of _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final. Eventual consensus means that at some point in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus may take a long time and will not be able to be determined how long it will take ahead of time. However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and quicker guarantees on the finality of blocks - specifically, that they can never be reverted after some process of Byzantine agreements has taken place. The notion of irreversible consensus is known as _provable finality._
+A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final. Eventual consensus means that at some point in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus may take a long time and will not be able to be determined how long it will take ahead of time. However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and quicker guarantees on the finality of blocks - specifically, that they can never be reverted after some process of Byzantine agreements has taken place. The notion of irreversible consensus is known as _provable finality._
 
 Dalam makalah GRANDPA, ini diungkapkan dengan cara ini:
 
@@ -33,7 +33,7 @@ There are two acronyms we use when we talk about the consensus protocol of Polka
 
 This is a way of getting the benefits of probabilistic finality (the ability to always produce new blocks) and provable finality (having a universal agreement on the canonical chain with no chance for reversion) in Polkadot. It also avoids the corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong fork in probabilistic finality, and a chance for "stalling" - not being able to produce new blocks - in provable finality). By combining these two mechanisms, Polkadot allows for blocks to be rapidly produced, and the slower finality mechanism to run in a separate process to finalize blocks without risking slower transaction processing or stalling.
 
-Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011) which specified [Casper FFG](#casper-ffg).
+Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which specified [Casper FFG](#casper-ffg).
 
 ### BABE
 
@@ -53,7 +53,7 @@ For more details on BABE, please see the [working research draft](https://resear
 
 ### GRANDPA: Gadget finalitas
 
-GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot relay chain.
+GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot Relay Chain.
 
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope with 1/5 Byzantine nodes in an asynchronous setting.
 
