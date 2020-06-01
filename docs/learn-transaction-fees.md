@@ -10,8 +10,7 @@ weight-based fee model as opposed to a gas-metering model. As such, fees are cha
 transaction execution; once the fee is paid, nodes will execute the transaction.
 
 [Web3 Foundation
-Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#Relay
-Chain-transaction-fees-and-per-block-transaction-limits) designed the Polkadot fee system with the
+Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html) designed the Polkadot fee system with the
 following objectives:
 
 - Each Relay Chain block should be processed efficiently to avoid delays in block production.
