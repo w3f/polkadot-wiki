@@ -37,7 +37,7 @@ sidebar_label: 链接
 - [Substrate 与Polkadot 的关系](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - 关于两种技术的详细描述
 - [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood博士展示了Substrate（区块链框架 + VM）和 Polkadot，并在15分钟内用 Substrate 构建可行的区块链系统
 - [为 Polkadot 的Substrate 发布做准备](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815)-如何在发布之前开始准备 Polkadot 的概述。
-- [ Substrate 和 Polkadot 的所有内容的简要说明](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d)-该博客概述了有关 Substrate 和 Polkadot 的信息。
+- [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post that recaps information regarding Substrate and Polkadot.
 - [在Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Gavin Wood 视频上提供 Substrate 的路线图摘要和 MelonportM-1 会议在 Polkadot 上的更新。
 
 ### 治理
@@ -112,4 +112,4 @@ sidebar_label: 链接
 - [参与 Kusama](https://www.crowdcast.io/e/participating-on-kusama) - 如何参与 在 Kusama 不同的角色 -  Logan Saether 。
 - [开发应用程序与 Polkadot 交互](https://www.crowdcast.io/e/developing-apps-on-polkadot) 。Bill Laboon 讲解如何通过 Polkadot API 编写你自己的脚本和程序与Polkadot 交互。
 - [将 Web3 登录添加到 Web2.0 应用程序](https://www.crowdcast.io/e/web3-logins-workshop) Bruno Skvorc 解释如何将登录过程添加到 Web2.0 应用程序中。
-- [在 Kusama 上的绘画程序](https://www.crowdcast.io/e/distributed-drawing) - 扩展他以前的语音， Bill Laboon 使用Shawn Tabrizi `remarkable` codebase 来制作 node.js 程序，该应用程序监听到 Kusama 链，允许用户设置像素到程序化绘制共享图片中。
+- [A Distributed Drawing Program on Kusama](https://www.crowdcast.io/e/distributed-drawing) - Expanding on his previous talk, Bill Laboon uses Shawn Tabrizi's `remarkable` codebase to make a node.js app that listens to the Kusama chain and allows users to set pixels to programmatically draw a shared picture.
