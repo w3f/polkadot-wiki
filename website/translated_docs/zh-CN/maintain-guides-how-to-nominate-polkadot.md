@@ -4,7 +4,7 @@ title: 提名人指南
 sidebar_label: 提名人指南
 ---
 
-> The following information applies to the Polkadot network which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
+> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 提名人是 Polkadot 抵押子系统的一种参与者。 他们负责将会参与抵押中的代币分配给第二种参与者的验证人。 通过抵押他们的代币，他们能够选举活跃的验证人并分享抵押所支付的奖励。
 
