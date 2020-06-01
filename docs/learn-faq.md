@@ -6,7 +6,7 @@ sidebar_label: Frequently Asked Questions (FAQs)
 
 _This FAQ focuses on technical questions for users interested in developing applications for
 Polkadot. If you have a more general question, you may wish to search for the answer on the main
-[Polkadot Network FAQ](https://polkadot.network/faq). If you have a question which is not answered,
+[Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
 [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
 
@@ -224,7 +224,7 @@ details on the subtleties of Polkadot's governance system, please see the
 
 Parachains have the flexibility to implement their own monetary system or incentive structure for
 collators. However, this is not strictly necessary. Since the collator's job is to continue to give
-recent state transitions to the validators on the relay chain who validate each transition, the
+recent state transitions to the validators on the Relay Chain who validate each transition, the
 security of the parachain and the Polkadot network is completely separate from parachain economics.
 Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them
 incentivize collator nodes in some way but the specific mechanism is completely up to parachain

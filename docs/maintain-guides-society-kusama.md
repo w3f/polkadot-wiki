@@ -90,7 +90,7 @@ willing to give them a tip. An existing member can submit a `vouch` transaction.
 
 > vouch(who,value,tip)
 >
-> who - Which user you are vouching for
+> who - The user you are vouching for
 >
 > value - The value that the user would like to get when joining the society
 >

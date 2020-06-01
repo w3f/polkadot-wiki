@@ -5,8 +5,8 @@ sidebar_label: Parachain Slots Auction
 ---
 
 The parachain slots of Polkadot will be sold according to an unpermissioned
-[Candle auction](https://en.wikipedia.org/wiki/Candle_auction) which has been slightly modified to
-be secure on a blockchain.
+[Candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
+secure on a blockchain.
 
 ## Mechanics of a Candle auction
 
@@ -30,7 +30,7 @@ that a bid was submitted.
 
 ## Why use a Candle auction?
 
-The open and transparent nature of blockchain systems opens attack vectors which are non-existent in
+The open and transparent nature of blockchain systems opens attack vectors that are non-existent in
 traditional auction formats. Normal open auctions in particular can be vulnerable to _auction
 sniping_ when implemented over the internet or on a blockchain.
 
@@ -53,7 +53,7 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](https://ens.domains). The Candle auction is another solution which does not need
+names on the [ENS](https://ens.domains). The Candle auction is another solution that does not need
 the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason
 allows smart contracts to participate.
 
@@ -65,7 +65,7 @@ have "ended" before they even bid.
 ## How it's used in Polkadot
 
 Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the
-protocol. The VRF will provide the base of the randomness which will retroactively determine the
+protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 "end-time" of the auction.
 
 When an account bids, they can place bids for any of the available periods or ranges in a slot.
@@ -127,12 +127,12 @@ Bids[
 ];
 ```
 
-The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the
+The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the
 amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the
 highest bidder for any given slot lease period might not always win (see the
 [example below](#compete)).
 
-A random number is determined at each block which is based on the VRF used by Polkadot.
+A random number, which is based on the VRF used by Polkadot, is determined at each block.
 Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random
 number produced by the VRF is examined next to the threshold to determine if that block is the end
 of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of
@@ -187,7 +187,7 @@ the parachain slot.
 For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there
 are opportunity costs from the possibility of using those `DOTs` for something else. For parachains
 that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot
-relay chain.
+Relay Chain.
 
 ### How does this mechanism help ensure parachain diversity?
 
@@ -196,9 +196,9 @@ desire to allow for a greater amount of parachain diversity, and prevent particu
 well-funded parachains from hoarding slots. By making each period a six-month duration but the
 overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure
 they secure a slot at the end of their lease, while gradually allowing other parachains to enter the
-ecosystem to occupy the six-month durations which are not filled. For example, if a large,
+ecosystem to occupy the six-month durations that are not filled. For example, if a large,
 well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in
-getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire
+getting the next slot that would open for 2 - 5. Under this mechanism that parachain could acquire
 period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to
 be occupied by another.
 

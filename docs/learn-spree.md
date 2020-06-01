@@ -52,7 +52,7 @@ the message in XCMP and the cookbook was the SPREE module.
 In concrete terms, SPREE modules could be useful for various functionality on Polkadot. One
 suggested use case of SPREE modules is for a trustless decentralized exchange that is offered as
 functionality to any parachain without any extra effort from parachain developers. One can imagine
-this working by having a SPREE module which exposes the interface for the incrementing and
+this working by having a SPREE module that exposes the interface for the incrementing and
 decrementing of balances of various assets based on a unique identifier.
 
 ## Why?
@@ -61,7 +61,7 @@ Sending messages across parachains in XCMP only ensures that the message will be
 not specify the code that will be executed, or how the message will be interpreted by the receiving
 parachain. There would be ways around this such as requesting a verifiable receipt of the execution
 from the receiving parachain, but in the naked case the other parachain would have to be trusted.
-Having shared code which exists in appendices that the parachain can opt-in to resolves the need for
+Having shared code that exists in appendices that the parachain can opt-in to resolves the need for
 trust and makes the execution of the appendices completely trustless.
 
 SPREE would be helpful to ensure that the same logic is shared between parachains in the SPREE
@@ -76,7 +76,7 @@ change the total supply of tokens and a basic interface.
 The diagram above is a simplification of the Polkadot system.
 
 In this diagram we see that the Wasm code for SPREE module "X" has been uploaded to the Polkadot
-relay chain. The two cylinders "A" and "B" represent two distinct parachains that have both opted-in
+Relay Chain. The two cylinders "A" and "B" represent two distinct parachains that have both opted-in
 to this SPREE module creating two distinct instances of it with their own XCMP endpoints "A.X" and
 "B.X".
 
@@ -88,8 +88,8 @@ trustlessly sent to B.X to increase a balance by 1.
 
 Collators, represented as the green triangle are responsible for relaying this message from
 parachain A to parachain B, as well as mantaining the storage for each particular instance of A.X
-and B.X for their respective parachains. They provide proofs of valid state transitions to the relay
-chain validators, represented as blue diamonds.
+and B.X for their respective parachains. They provide proofs of valid state transitions to the Relay
+Chain validators, represented as blue diamonds.
 
 Validators can validate the correct state transitions of SPREE modules A.X and B.X by being provided
 with the previous state root of the SPREE module instances, the data of the XCMP message between the

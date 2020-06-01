@@ -48,8 +48,8 @@ also bond tokens in exchange for a parachain slot.
 
 ## Bridge
 
-A parachain that acts as an intermediary between the Polkadot relay chain and an external chain, in
-such a way that it appears to the relay chain that the external chain is a parachain (i.e., meets
+A parachain that acts as an intermediary between the Polkadot Relay Chain and an external chain, in
+such a way that it appears to the Relay Chain that the external chain is a parachain (i.e., meets
 the Polkadot Host's requirements of parachains). Bridges allow for interaction between other
 blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
 
@@ -81,7 +81,7 @@ network as opposed to being run on a specific system or set of systems.
 The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote
 on network upgrades and other exceptional events), general operation (rewarding good actors and
 punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are
-connected the relay chain).
+connected the Relay Chain).
 
 ## Duty Roster
 
@@ -113,8 +113,8 @@ Extrinsics can take two forms, "[inherents](#inherent)" and "[transactions](#tra
 ## Finality
 
 The property of a block that cannot be reverted. Generally, created blocks are not final until some
-point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot relay
-chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
+point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay
+Chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
 
 ## Finality Gadget
 
@@ -282,7 +282,7 @@ systems limit the number of participants.
 
 A proof produced by parachain collators. Based on this proof and the parachain registry, a validator
 can verify that a parachain has properly executed its state transition function. Proofs of Validity
-go into the relay chain blocks.
+go into the Relay Chain blocks.
 
 ## Proof of Work (PoW)
 
@@ -337,7 +337,7 @@ reverted. GRANDPA provides _deterministic_ safety. That is, for a state changed 
 
 ## Sealing
 
-The process of adding a block to the relay chain. Note that finalization is a separate process -
+The process of adding a block to the Relay Chain. Note that finalization is a separate process -
 blocks are finalized some time after they are sealed.
 
 ## Session
@@ -358,7 +358,7 @@ commit messages.
 ## Shared Security
 
 The security model that Polkadot uses whereby all chains are equally secured. This is acheived by
-placing proofs of validity of parachain blocks into the relay chain such that, in order to revert
+placing proofs of validity of parachain blocks into the Relay Chain such that, in order to revert
 finality of a single parachain, an attacked would need to attack the entire Polkadot system.
 
 ## Slashing
@@ -368,14 +368,14 @@ or incompetently (e.g., equivocating or remaining offline for an extended period
 
 ## Soft Fork
 
-A backwards compatible change to client code which causes upgraded clients to start mining a new
+A backwards compatible change to client code that causes upgraded clients to start mining a new
 chain. Requires a "vote-by-hashrate" of majority of miners in order to enact successfully. Soft
 forks are considered temporary divergences in a chain since non-upgraded clients do not follow the
 new consensus rules but upgraded clients are still compatible with old consensus rules.
 
 ## Staking
 
-The act of bonding tokens (for Polkadot, DOTs) which are put up as "collateral" for a chance to
+The act of bonding tokens (for Polkadot, DOTs) by putting them up as "collateral" for a chance to
 produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOTs
 in order to secure the network.
 
@@ -402,7 +402,7 @@ send funds to Bob by the fact that she signed a transfer-funds message with her 
 
 ## Validator
 
-A node that secures the relay chain by staking DOTs, validating proofs from collators on parachains
+A node that secures the Relay Chain by staking DOTs, validating proofs from collators on parachains
 and voting on consensus along with other validators.
 
 ## Voting

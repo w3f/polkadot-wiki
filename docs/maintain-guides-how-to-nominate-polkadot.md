@@ -4,7 +4,7 @@ title: Nomination Guide
 sidebar_label: Nomination Guide
 ---
 
-> The following information applies to the Polkadot network which is currently in the soft launch
+> The following information applies to the Polkadot network, which is currently in the soft launch
 > phase. During soft launch the network starts as a Proof-of-Authority network before transitioning
 > to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first
 > validator election and rewards will not start until later. If you want to nominate on Kusama,

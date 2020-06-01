@@ -67,7 +67,7 @@ sidebar_label: Links
 - [Preparing for Polkadot's Launch with Substrate](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815) -
   An overview of how to start preparing for Polkadot before the launch date.
 - [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) -
-  Blog post which recaps information regarding Substrate and Polkadot.
+  Blog post that recaps information regarding Substrate and Polkadot.
 - [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood
   giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
 
@@ -178,5 +178,5 @@ sidebar_label: Links
   explains how to add a login process to a legacy Web2.0 application.
 - [A Distributed Drawing Program on Kusama](https://www.crowdcast.io/e/distributed-drawing) -
   Expanding on his previous talk, Bill Laboon uses Shawn Tabrizi's `remarkable` codebase to make a
-  node.js app which listens to the Kusama chain and allows users to set pixels to programmatically
+  node.js app that listens to the Kusama chain and allows users to set pixels to programmatically
   draw a shared picture.

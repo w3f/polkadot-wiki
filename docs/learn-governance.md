@@ -301,7 +301,7 @@ intact.
 As opposed to a "first past the post", where voters must decide only on a single candidate chosen
 from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders
 can treat it as Boolean voting to support as many candidates as they want. The election algorithm
-will find a fair subset of the candidates which closely match the expressed indications of the
+will find a fair subset of the candidates that closely matches the expressed indications of the
 electorate as a whole.
 
 Let's take a look at the example below.
@@ -365,7 +365,7 @@ The Technical Committee can, along with the Polkadot Council, produce emergency 
 fast-tracked for voting and implementation. These emergency referenda are intended for use only
 under urgent circumstances.
 
-Fast-tracked referenda are the only type of referenda which can be active alongside another active
+Fast-tracked referenda are the only type of referenda that can be active alongside another active
 referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
 
