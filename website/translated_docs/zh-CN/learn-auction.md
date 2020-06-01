@@ -4,7 +4,7 @@ title: 平行链插槽拍卖
 sidebar_label: 平行链插槽拍卖
 ---
 
-Polkadot 的平行链插槽通过[蜡烛(candle)拍卖](https://en.wikipedia.org/wiki/Candle_auction)进行出售，该拍卖经过了轻微修 改以确保在区块链上执行安全。
+The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be secure on a blockchain.
 
 ## 蜡烛(Candle)拍卖机制
 
@@ -18,7 +18,7 @@ Polkadot 的平行链插槽通过[蜡烛(candle)拍卖](https://en.wikipedia.org
 
 ## 为什么要使用蜡烛拍卖?
 
-区块链系统的开放性和透明性打开了传统拍卖形式中不存在的攻击媒介。当通过互联网或区块链实施时，特别是普通的公开拍卖容易受到_拍卖狙击_的攻击。
+The open and transparent nature of blockchain systems opens attack vectors that are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
 当已知拍卖结束且竞标者不愿提早竞标其真实价格时，便会进行拍卖狙击，以期支付比实际价格低的价格。
 
@@ -26,13 +26,13 @@ Polkadot 的平行链插槽通过[蜡烛(candle)拍卖](https://en.wikipedia.org
 
 在区块链上，这个问题可能更加严重，因为它可能给出块者提供机会，通过自己添加和/或忽略其他出价来窥探最后一个区块的任何拍卖。恶意竞标者或出块者还可能通过狙击拍卖来_grief_诚实的竞标者。
 
-因此 [ Vickrey 拍卖](https://en.wikipedia.org/wiki/Vickrey_auction)，是第二种价格拍卖，其中出价被隐藏起来，并且仅在以后的阶段才会显示，已经成为备受推崇的机制。 例如它被实现为在[ ENS ](https://ens.domains)上拍卖人类可读名称的机制。 蜡烛拍卖法是另一种不需要两步提交和披露计划（Vickrey拍卖的主要组成部分）的解决方案，因此允许智能合约参与。
+For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The Candle auction is another solution that does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
 
 蜡烛拍卖允许每个人始终知道出价的状态，但不能知道何时确定拍卖已"结束"。 这有助于确保投标人愿意尽早出价其真实出价。 否则他们可能会发现自己在甚至竞标之前就已确定拍卖已经"结束"。
 
 ## Polkadot 如何使用它
 
-Polkadot 将使用基于 VRF 的_随机信标_，VRF 也已在协议的其它地方使用。VRF 将提供随机性基础，该基础将追溯确定拍卖的"结束时间"。
+Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness, which will retroactively determine the "end-time" of the auction.
 
 当账户出价时，他们可以为插槽位中的任何可用时间段或范围出价，但是如果平行链(具有相同的STF)出价，则该平行链必须在连续的时期或范围内竞标，直至其已经占据的时期。它们将无法竞标重叠的插槽位(同一条平行链不能同时获得)，并且如果两者之间存在差距，他们将无法竞标未来的插槽位。如果平行链已达到其插槽持续时间的结束后重新启动，则需要从新的创世(可能是所有旧状态的快照)重新启动，并且需要从外部帐户出价 。
 
@@ -81,9 +81,9 @@ Bids[
 ];
 ```
 
-获胜者选择算法将选择可能不重叠的出价，以使在平行链槽位的整个2年租赁期限内持有的 DOT 数量最大化。 这意味着在任何给定的槽位租借期内，出价最高的人可能并不总是中标（请参见下面的[示例](#compete)）。
+The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
-根据 Polkadot 使用的 VRF 在每个区块处确定一个随机数。 此外每个拍卖都有一个从0开始并增加到1的阈值，将在阈值旁边检查由VRF产生的随机数，以确定该块是否是拍卖结束。 此外VRF将从最后一个时期开始选择一个区块，以获取出价状态（以减轻恶意验证者的某些类型的攻击）。
+A random number, which is based on the VRF used by Polkadot, is determined at each block. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
 ### 例子
 
@@ -127,11 +127,11 @@ Bids[
 
 ### 为什么每个人不竞标最大长度？
 
-在该时段内，拍卖中的` DOTs `出价将被锁定。 这意味着将这些` DOTs `用于其他用途的可能性会带来机会成本。 对于有益于 Polkadot 的平行链，这应该使平行链和 Polkadot 中继链之间的利益保持一致。
+For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
 
 ### 这种机制如何帮助确保平行链的多样性？
 
-将平行链槽划分为六个月间隔的方法部分地受到了以下愿望的启发: 允许更多的平行链多样性，并防止特别大且资金充足的平行链囤积插槽。 通过将每个周期设置为六个月，而将整个插槽设置为2年，该机制可以应对资金充裕的平行链，这将确保它们在租约期末获得固定的插槽，同时逐步允许其他平行链进入 生态系统占据了六个月的时间，占据未填满的6个月时段。 例如如果大型资金充裕的平行链已经获得了范围1-4的插槽，那么他们将非常有兴趣获得下一个将开放2-5的插槽。在这种机制下，平行链可以获取周期5 (因为这是它唯一需要的一个)，并允许第二个平行链插槽的范围2-4被另一个占用。
+The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each period a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations that are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot that would open for 2 - 5. Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
 
 ### 为什么在区块链上很难实现随机性？
 
