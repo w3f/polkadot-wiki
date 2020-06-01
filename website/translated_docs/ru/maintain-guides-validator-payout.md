@@ -9,11 +9,11 @@ sidebar_label: Обзор выплат валидатору
 За каждую эру (период времени примерно 6 часов в Kusama и 24 часа в Polkadot) оплата валидаторам рассчитывается пропорционально сумме баллов _era points_, которые они собрали. Era points-это бонусные баллы, заработанные за оплачиваемые действия, такие как:
 
 - выдача поддтвеждений валидности для [парачейн](learn-parachains) блоков.
-- производство non-uncle блоков в релейной цепи.
+- producing a non-uncle block in the Relay Chain.
 - создание ссылки на предыдущий нереференсный uncle блок.
 - создание референсного uncle блока.
 
-_Примечание: uncle блок - это блок релейной цепи, который действителен во всех отношениях, но который не стал каноническим. Это может произойти, когда два или более валидаторов являются производителями блоков в одном слоте, и блок, произведенный одним валидатором, достигает следующего производителя блоков раньше других. Мы называем отстающие блоки uncle блоками._
+_Note: An uncle block is a Relay Chain block that is valid in every regard, but which failed to become canonical. This can happen when two or more validators are block producers in a single slot, and the block produced by one validator reaches the next block producer before the others. We call the lagging blocks uncle blocks._
 
 Платежи происходят в конце каждой эпохи.
 
