@@ -180,7 +180,7 @@ community. Remember, the council is voted in by the token holders, so they must 
 or otherwise be recognized to earn votes. In the scenario of an attack, the council members would
 lose their social credibility. Furthermore, members of the council are usually externally motivated
 by the proper operation of the chain. This external motivation is either because they run businesses
-which depend on the chain, or they have direct financial gain (through their holdings) of the token
+that depend on the chain, or they have direct financial gain (through their holdings) of the token
 value remaining steady.
 
 Concretely there are a couple on-chain methods that resist this kind of attack. One, the council

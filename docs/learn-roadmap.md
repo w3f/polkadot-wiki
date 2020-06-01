@@ -28,7 +28,7 @@ of Polkadot.
   consensus algorithms. Testnet: "Krumme Lanke". First automatic upgrade via governance._
   [Release Blog Post](https://medium.com/polkadot-network/polkadot-poc-2-is-here-parachains-runtime-upgrades-and-libp2p-networking-7035bb141c25)
 - PoC-1 (Released 16 May 2018, Testnet went live 18 May 2018) - _Initial proof of concept - included
-  basic state transition engine for relay chain and on-chain governance._
+  basic state transition engine for Relay Chain and on-chain governance._
   [Release Blog Post](https://medium.com/polkadot-network/now-live-polkadot-proof-of-concept-1-3e718512a8d)
 
 For latest information on the state of the Polkadot roadmap and the Polkadot codebase, please see

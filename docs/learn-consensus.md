@@ -12,7 +12,7 @@ blockchain to continue to build and move forward, all nodes in the network must 
 consensus. It is the way that the nodes in a decentralized network are able to stay synced with each
 other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to
 ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to
-provide the _objective_ view of the state amid participants which each have their own _subjective_
+provide the _objective_ view of the state amid participants who each have their own _subjective_
 views of the network. It is the process by which these nodes communicate and come to agreement, and
 are able to build new blocks.
 
@@ -25,7 +25,7 @@ also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Si
 set of rules for selecting the validator set and does not specify a chain selection rule or how a
 chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for
 coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos) is
-a practical Byzantine fault tolerant algorithm which uses PoS as its validator set selection method.
+a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection method.
 
 ## Why not Proof of Work?
 
@@ -35,7 +35,7 @@ strategy in resisting cartels.
 
 ## Probabilistic vs. provable finality
 
-A pure Nakamoto consensus blockchain which runs PoW is only able to achieve the notion of
+A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of
 _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under
 some assumptions about the network and participants, if we see a few blocks building on a given
 block, we can estimate the probability that it is final. Eventual consensus means that at some point
@@ -68,7 +68,7 @@ Polkadot allows for blocks to be rapidly produced, and the slower finality mecha
 separate process to finalize blocks without risking slower transaction processing or stalling.
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in
-Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011) which
+Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
 specified [Casper FFG](#casper-ffg).
 
 ### BABE
@@ -108,7 +108,7 @@ For more details on BABE, please see the
 ### GRANDPA: Finality gadget
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
-implemented for the Polkadot relay chain.
+implemented for the Polkadot Relay Chain.
 
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope
 with 1/5 Byzantine nodes in an asynchronous setting.

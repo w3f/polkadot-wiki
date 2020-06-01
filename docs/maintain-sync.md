@@ -47,7 +47,7 @@ on a centralized infrastructure provider.
 Another type of node is a **light node**. A light node has only the runtime and the current state,
 but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes
 are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome
-extension which is a node in its own right, running the runtime in WASM format:
+extension, which is a node in its own right, running the runtime in WASM format:
 https://github.com/paritytech/substrate-light-ui
 
 ### Fast Install Instructions (Mac)

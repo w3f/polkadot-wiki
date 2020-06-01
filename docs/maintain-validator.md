@@ -4,7 +4,7 @@ title: Validator
 sidebar_label: Validator
 ---
 
-Validators secure the relay chain by staking DOTs, validating proofs from collators and
+Validators secure the Relay Chain by staking DOTs, validating proofs from collators and
 participating in consensus with other validators.
 
 These participants will play a crucial role in adding new blocks to the Relay Chain and, by

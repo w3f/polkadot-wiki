@@ -231,7 +231,7 @@ A validator signs two or more votes in the same round on different chains.
 
 ### BABE Equivocation
 
-A validator produces two or more blocks on the relay chain in the same time slot.
+A validator produces two or more blocks on the Relay Chain in the same time slot.
 
 GRANDPA and BABE equivocation slashing penalty is calculated as below:
 

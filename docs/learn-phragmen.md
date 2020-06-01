@@ -56,10 +56,10 @@ era change. These functions are not permitted:
 ### Council Elections
 
 The Phragmén method is also used in the council election mechanism. When you vote for council
-members, you can select up to 16 different candidates, and then place a reserved bond which is the
-weight of your vote. Phragmén will run once on every election to determine the top candidates to
-assume council positions and then again amongst the top candidates to equalize the weight of the
-votes behind them as much as possible.
+members, you can select up to 16 different candidates, and then place a reserved bond as the weight
+of your vote. Phragmén will run once on every election to determine the top candidates to assume
+council positions and then again amongst the top candidates to equalize the weight of the votes
+behind them as much as possible.
 
 ## What does it mean for node operators?
 
@@ -103,7 +103,7 @@ their paper
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 
-1. Candidates submit their ballots, marking which candidates they approve of. Ballots will not be
+1. Candidates submit their ballots, marking which candidates they approve. Ballots will not be
    modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters
@@ -267,7 +267,7 @@ _Note: All numbers in this example are rounded off to three decimal places._
 
 In the following example, there are five voters and five candidates vying for three potential seats.
 Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2`
-has stake of 2, etc.). Every voter is also going to have a _load_ which initially starts at `0`.
+has stake of 2, etc.). Every voter is also going to have a _load,_ which initially starts at `0`.
 
 ```
 Filled seats: 0
@@ -534,7 +534,7 @@ The results for nominating validators are further optimized for several purposes
 
 ### High-Level Description
 
-After running the weighted Phragmén algorithm, a process is run which redistributes the vote amongst
+After running the weighted Phragmén algorithm, a process is run that redistributes the vote amongst
 the elected set. This process will never add or remove an elected candidate from the set. Instead,
 it reduces the variance in the list of backing stake from the voters to the elected candidates.
 Perfect equalization is not always possible, but the algorithm attempts to equalize as much as

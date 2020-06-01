@@ -56,19 +56,19 @@ beacon is then taken from the VRF outputs from two blocks prior, which can be pr
 
 The blockchain and fork resolution layer used in Dfinity is known as _probablistic slot protocol_
 and uses the randomness from the random beacon to give priority to each proposer for a particular
-block. Within a constant block time, all proposals generated are sent to notaries which sign the
+block. Within a constant block time, all proposals generated are sent to notaries, which sign the
 block from the heaviest weighted proposal that they see and broadcast it. Forks are then decided
-based on the weight which was assigned to proposers in that round, with the heaviest proposer's
-block taking priority. Polkadot's BABE block production uses the random beacon from the previous VRF
+based on the weight that was assigned to proposers in that round, with the heaviest proposer's block
+taking priority. Polkadot's BABE block production uses the random beacon from the previous VRF
 outputs to assign weights to producers too. The individual producers then create local randomness
 and if it beats a threshold as determined by their weight, that producer will produce a new block.
 BABE achieves constant block time by having a fallback to the Aura round robin style block
 assignment if for a particular slot no producer generated a random number that fell below their
 threshold. In BABE forks can happen if more than one producer pulls a correct "lottery ticket"
-random number, and in this case will rely on the chain selection rule which uses the last finalized
+random number, and in this case will rely on the chain selection rule, which uses the last finalized
 chain from GRANDPA to build on.
 
-Finally, in the notarization and _near-instant finality_ layer of Dfinity, the blocks which are
+Finally, in the notarization and _near-instant finality_ layer of Dfinity, the blocks that are
 produced in the previous layer are notarized by the committee of validators. The notarization is a
 timestamp and a proof that the block has been published to the network, which prevents a malicious
 validator from creating a private chain and revealing it later. The notarization mechanism aims to

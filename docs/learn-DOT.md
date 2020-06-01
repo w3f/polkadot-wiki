@@ -46,7 +46,7 @@ stored in the Treasury can be sent to teams working on relevant projects for the
 ### DOTs for governance
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some
-functions which are included under the governance mechanism include determining the fees of the
+functions that are included under the governance mechanism include determining the fees of the
 network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to
 the Polkadot platform.
 
@@ -61,7 +61,7 @@ platform to function and allow for valid transactions to be carried out across p
 will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via
 staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious
 participants whom will be punished by the network by getting their DOTs slashed. The DOTs required
-to participate in the network will vary depending on the activity which is being performed, the
+to participate in the network will vary depending on the activity that is being performed, the
 duration the DOTs will be staked for, and the total number of DOTs staked.
 
 ### DOTs for bonding
