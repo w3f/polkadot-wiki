@@ -9,7 +9,7 @@ description: 账户、账户索引、账户身份和回收机制的解释
 
 ## 地址格式
 
-基于 Substrate 的区块链中使用的地址格式是 SS58。SS58 修改自比特币的 Base-58-check。 值得注意的是，地址格式包含一个 _地址类型_ 前缀，用于识别该地址属于特定网络。
+The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check from Bitcoin with some minor modifications. Notably, the format contains an _address type_ prefix that identifies an address as belonging to a specific network.
 
 例如:
 
@@ -53,7 +53,7 @@ description: 账户、账户索引、账户身份和回收机制的解释
 
 ## 账户保证金和账户回收
 
-当您生成帐户 (地址) 时，您只是生成了一个可使用的 _密钥_ 。 该帐户还不存在于链上。 为此，它需要存在的保证金 - 0.01 KSM / DOT。 这笔存款由给您发送代币的帐户支付，即为您“创建账户”的账户支付账户创建费用。
+When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit - 0.01 KSM / DOT. This deposit is paid by the account sending you tokens. The one "creating" you pays for your creation.
 
 余额低于0.01会导致帐户 _被回收_。您的帐户将从区块链状态中删除以保持空间。 只要您有私钥或助记词，您就不会失去访问该地址的权限。 您仍然可以使用该地址 - 但它需要另一个拥有存款的账户来充值才能与链交互。
 
@@ -86,7 +86,7 @@ Kusama 网络上的 _身份_ 允许用户将上链元数据附加到他们的账
 
 可以在基于 Substrate 的链中创建多重签名帐户。 多重签名帐户由一个或多个地址和一个阈值组成。 阈值定义了多少签名者(参与地址)需要同意外部提交才能成功进行呼叫。
 
-例如，爱丽丝(Alice)，鲍勃(Bob)和查理(Charlie)设置了阈值为2的多签。这意味着爱丽丝(Alice)和鲍勃(Bob)可以执行任何呼叫，即使查理不同意。 同样，Charlie 和 Bob 可以在没有 Alice 的情况下执行任何呼叫。 阈值通常小于成员总数的数字，但也可以等于阈值，这意味着它们必须完全一致。
+For example, Alice, Bob, and Charlie set up a multi-sig with a threshold of 2. This means Alice and Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute any call without Alice. A threshold is typically a number smaller than the total number of members but can also be equal to it, which means they all have to be in agreement.
 
 多签名账户有以下几种用途：
 
@@ -94,7 +94,7 @@ Kusama 网络上的 _身份_ 允许用户将上链元数据附加到他们的账
 - 董事会决定：商业和基金会等法律实体利用多种方式集体对该实体的财政实行管理。
 - 群组参与治理：多个账户可以做任何正常账户。多账户可以是 Kusama 治理中的一个理事会成员，在那里一组社区成员可以作为一个实体投票。
 
-多重签名帐户 **在创建后无法修改**。 更改成员组别或 改变阈值是不可能的，反而需要解除当前的多签并创建一个新的阈值。 因此，多签帐户地址为 **确定性**和 您总是可以通过了解会员和阈值来计算一个多签的地址，而不需要账户还存在。 这意味着我们可以发送代币到一个尚不存在的地址。 并且如果被指定为接收者的实体在匹配的一个新的多层级中聚合在一起 阈值， 他们将立即获得这些代币。 计算多签的地址可以在 TypeScript 中做到这一点:
+Multi-signature accounts **cannot be modified after being created**. Changing the set of members or altering the threshold is not possible and instead requires the dissolution of the current multi-sig and creation of a new one. As such, multi-sig account addresses are **deterministic**, i.e. you can always calculate the address of a multi-sig just by knowing the members and the threshold, without the account existing yet. This means one can send tokens to an address that does not exist yet, and if the entities designated as the recipients come together in a new multi-sig under a matching threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig deterministically can be done in TypeScript like so:
 
 ```js
 rawAddress(addresses: string[], threshold: number) {
