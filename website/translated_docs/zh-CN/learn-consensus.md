@@ -2,7 +2,7 @@
 id: learn-consensus
 title: 波卡共识
 sidebar_label: 波卡共识
-description: 对 Polkadot 和 Kusama 所用的共识模式解释
+description: 对 Polkadot 和 Kusama 所用的共识解释
 ---
 
 ## 为什么我们需要共识机制？
