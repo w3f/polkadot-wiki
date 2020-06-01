@@ -12,11 +12,11 @@ sidebar_label: Cumulus
 
 ### Консенсус Cumulus
 
-_Консенсус Cumulus_ - это механизм консенсуса для Substrate, который следует за релейной цепью Polkadot. Это позволит запустить узел Polkadot внутренне и диктовать клиенту и алгоритмам синхронизации, которым цепочка должна следовать, финализировать и обрабатывать как можно лучше.
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
 
 ### Среда исполнения Cumulus
 
-Обертка вокруг сред исполнения Substrate, позволяющая проверять их валидаторами Polkadot и предоставлять процедуры генерации свидетелей. Он добавляет API `validate_block` к внешнему интерфейсу Substrate, который будет вызываться валидаторами.
+A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface, which will be called by validators.
 
 Интегрировать его в среду исполнения Вашего субстрата так же просто, как импортировать crate и добавить этот однострочный макрос в Ваш код:
 
