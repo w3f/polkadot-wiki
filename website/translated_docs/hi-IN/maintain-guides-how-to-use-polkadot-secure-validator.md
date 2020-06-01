@@ -127,7 +127,7 @@ In the `additionalFlags` option, configure any of the additional flags you want 
 
 Under the `polkadotBinary.url` field you can provide the release that is hosted in the [W3F repository](https://github.com/w3f/polkadot/releases) or use an alternate one that you build and publish yourself.
 
-By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter](https://github.com/prometheus/node_exporter) which will expose hardware-level metrics of your node in a format compatible with Prometheus.
+By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter](https://github.com/prometheus/node_exporter), which will expose hardware-level metrics of your node in a format compatible with Prometheus.
 
 The field `machineType:` will configure the machine's hardware specifications, check [here](https://cloud.google.com/compute/docs/machine-types) for the configuration options for GCP. The other hosting providers should have similar pages in their documentation.
 
