@@ -4,7 +4,7 @@ title: 提名人
 sidebar_label: 提名人
 ---
 
-提名人通过选择好的验证人和抵押 DOT 来保护中继链。
+Nominators secure the Relay Chain by selecting good validators and staking DOTs.
 
 您的帐户可能拥有 DOT，并希望赚取新的 DOT。您可以作为验证人执行此操作，这需要全天候24小时运行节点。如果您没有这样的节点或不想费心，您仍然可以通过提名另一个验证人来赚取 DOT。
 

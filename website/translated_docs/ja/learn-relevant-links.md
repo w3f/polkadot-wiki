@@ -37,7 +37,7 @@ sidebar_label: Links
 - [How Substrate relates to Polkadot](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - A Tale of Two Technologies Presentation Transcript
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate.
 - [Preparing for Polkadot's Launch with Substrate](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815) - An overview of how to start preparing for Polkadot before the launch date.
-- [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post which recaps information regarding Substrate and Polkadot.
+- [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post that recaps information regarding Substrate and Polkadot.
 - [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
 
 ### Governance
@@ -112,4 +112,4 @@ sidebar_label: Links
 - [Participating in Kusama](https://www.crowdcast.io/e/participating-on-kusama) - How to participate in Kusama in a variety of different roles, with Logan Saether.
 - [Developing Apps that Interact with Polkadot](https://www.crowdcast.io/e/developing-apps-on-polkadot) - Bill Laboon walks through how to write your own scripts and programs to interact with Polkadot via the Polkadot API.
 - [Adding Web3 Logins to a Web2.0 App](https://www.crowdcast.io/e/web3-logins-workshop) Bruno Skvorc explains how to add a login process to a legacy Web2.0 application.
-- [A Distributed Drawing Program on Kusama](https://www.crowdcast.io/e/distributed-drawing) - Expanding on his previous talk, Bill Laboon uses Shawn Tabrizi's `remarkable` codebase to make a node.js app which listens to the Kusama chain and allows users to set pixels to programmatically draw a shared picture.
+- [A Distributed Drawing Program on Kusama](https://www.crowdcast.io/e/distributed-drawing) - Expanding on his previous talk, Bill Laboon uses Shawn Tabrizi's `remarkable` codebase to make a node.js app that listens to the Kusama chain and allows users to set pixels to programmatically draw a shared picture.

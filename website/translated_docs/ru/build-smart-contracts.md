@@ -4,7 +4,7 @@ title: Смарт-контракты
 sidebar_label: Смарт-Контракты
 ---
 
-Релейная цепочка в Polkadot изначально не будет поддерживать смарт-контракты. Однако, парачейны в Polkadot будут поддерживать смарт-контракты. Уже есть анонсированные проекты, такие как [Edgeware](https://edgewa.re), а также благодаря встроенному в Substrate [паллету контрактов](https://crates.parity.io/pallet_contracts/index.html), вполне вероятно, что в будущем больше парачейнов будут поддерживать эту функцию.
+The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://crates.parity.io/pallet_contracts/index.html), it is likely that more parachains will support this feature.
 
 ## Ресурсы
 
@@ -23,7 +23,7 @@ sidebar_label: Смарт-Контракты
 
 ### Слой абстракции
 
-Когда Вы пишете смарт-контракт, Вы создаете инструкции, которые будут развёрнуты и связанны с определенным адресом цепочки.
+When you write a smart contract you are creating the instructions that will be deployed and associated to a specific chain address.
 
 Для сравнения, модуль среды исполнения - это вся логика перехода к состояниям цепочки (так называемая функция перехода состояний).
 
@@ -35,7 +35,7 @@ sidebar_label: Смарт-Контракты
 
 Смарт-контракты должны найти способ ограничивать свое собственное исполнение, иначе полные узлы будут уязвимы для DOS-атак. Например, бесконечный цикл в смарт-контракте может потреблять вычислительные ресурсы всей цепочки, не позволяя другим использовать её. The [проблема остановки](https://en.wikipedia.org/wiki/Halting_problem) показывает, что даже при достаточно мощном языке невозможно заранее знать, прекратится ли когда-либо выполнение программы. Некоторые платформы, такие как биткойн, обходят это ограничение, предоставляя очень ограниченный язык сценариев. Другие, например Ethereum, "заряжают" смарт-контракт "газом" за права на выполнение своего кода. Если смарт-контракт действительно попадает в состояние, в котором исполнение никогда не остановится, он в конечном итоге исчерпывает газ, прекращает исполнение, и любой переход состояния, который был бы сделан смарт-контрактом, откатывается назад.
 
-Парачейны могут реализовывать сколь угодно мощные языки программирования, а также не содержать понятия газа для своей собственной нативной логики. Это означает, что некоторые функциональные возможности проще реализовать для разработчика, но это также означает, что существуют некоторые конструкции, такие как цикл без завершающего условия, который _никогда_ не должен быть реализован. Оставить определенную логику, такую как сложные циклы, которые, возможно, будут работать бесконечно, на уровне не-смарт-контрактов (англ. non-smart contract) или даже пытаться полностью устранить её, часто будет более мудрым выбором.
+Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
 
 ## Ресурсы
 

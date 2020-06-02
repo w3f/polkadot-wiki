@@ -122,7 +122,7 @@ Proxies can be used to vote on behalf of a stash account. Unlike delegation, the
 
 Setting a proxy involves submitting a single transaction, the transaction type "setProxy" from the "democracy" pallet.
 
-You can make this transaction from Polkadot Apps by navigating to the "Extrinsics" tab and selecting the "democracy" pallet and the "setProxy" transaction type. Send the transaction from the "Stash" account which holds the funds that you want to vote with, and the target to the proxy account that will be responsible for casting the votes going forward. In the example below, "Alice Stash" is proxying to "Alice" so that Alice can vote on behalf of Alice Stash.
+You can make this transaction from Polkadot Apps by navigating to the "Extrinsics" tab and selecting the "democracy" pallet and the "setProxy" transaction type. Send the transaction from the "Stash" account that holds the funds that you want to vote with, and the target to the proxy account that will be responsible for casting the votes going forward. In the example below, "Alice Stash" is proxying to "Alice" so that Alice can vote on behalf of Alice Stash.
 
 ![set proxy](assets/democracy/set_proxy.png)
 

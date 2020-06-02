@@ -66,7 +66,7 @@ You can find an existing member to place a bid on your behalf if you do not have
 
 > vouch(who,value,tip)
 > 
-> who - Which user you are vouching for
+> who - The user you are vouching for
 > 
 > value - The value that the user would like to get when joining the society
 > 

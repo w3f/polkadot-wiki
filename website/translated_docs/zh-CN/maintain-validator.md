@@ -4,7 +4,7 @@ title: 验证人
 sidebar_label: 验证人
 ---
 
-验证人通过抵押 DOT，验证收集人的证明并与其他验证人达成共识来保护中继链。
+Validators secure the Relay Chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
 
 这些参与者将在向中继链以及所有平行链添加新区块方面发挥关键作用。这允许各方通过中继链完成跨链交易。
 

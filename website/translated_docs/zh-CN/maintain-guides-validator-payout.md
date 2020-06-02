@@ -9,11 +9,11 @@ sidebar_label: 验证人奖励发放概述
 对于每个时代(era) (在 Kusama 大约6小时，在 Polkadot 大约24小时），验证人将按照他们的_era points_的数量按比例支付。era points 是指通过以下方式获得的奖励积分:
 
 - 为[ 平行链 ](learn-parachains)区块发布有效性声明。
-- 在中继链中产生一个非叔区块。
+- producing a non-uncle block in the Relay Chain.
 - 生成一个引用到以前未引用的叔块。
 - 生成一个引用的叔块。
 
-_注意：叔块是一个中继链区块，在所有方面都有效，但是未能成为主干块。 当在一个插槽中有两个或多个验证人出块时，并且一个验证人出块在其他验证人之前到达下一个出块者，可能会发生这种情况。 我们称落后块为叔块。_
+_Note: An uncle block is a Relay Chain block that is valid in every regard, but which failed to become canonical. This can happen when two or more validators are block producers in a single slot, and the block produced by one validator reaches the next block producer before the others. We call the lagging blocks uncle blocks._
 
 奖励发放在每个时代结束时。
 

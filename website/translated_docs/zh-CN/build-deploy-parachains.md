@@ -14,7 +14,7 @@ sidebar_label: 如何部署平行链
 
 **现在需要至少拥有5 DOTs从而创建公投。**
 
-`Adder`只是简单的平行链用来保留数值到存储中，并在消息发送给它时添加到该值。你可以在Polkadot Github库内的`test-parachains`找到。
+The `adder` parachain is a simple parachain that will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
 
 > 由 Adrian Brink 提出的本指南的过时视频版本 [此处](https://www.youtube.com/watch?v=pDqkzvA4C0E)。 当两个指南有分歧时，请参阅此。
 

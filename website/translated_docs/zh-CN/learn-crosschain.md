@@ -4,13 +4,13 @@ title: 跨链消息传递 (XCMP)
 sidebar_label: 跨链消息传递 (XCMP)
 ---
 
-我们利用基于梅克尔树的简单队列机制确保跨链交易的正确性。由中继链上的验证人负责把平行链出口队列中的交易转移到目标链的入口队列中。
+Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain.
 
 入口和出口队列在代码中通常称为"入口(ingress)"和"出口(egress)"信息。
 
 ## 概述
 
-- 跨链消息_不会_转发到中继链
+- Cross-chain messages will _not_ go on to the Relay Chain.
 - 跨链消息有长度限制
 - 平行链可以拒绝接收从其它平行链发出的信息，在这种情况下，发送方会意识到有障碍
 - 收集人节点负责把平行链之间的信息传递
@@ -23,7 +23,7 @@ sidebar_label: 跨链消息传递 (XCMP)
 
 从平行链 A 里的智能合约发送信息到平行链 B 里的另一个智能合约，达到链与链之间资产转移。
 
-Charlie 通过平行链 A 里的智能合约发起一个新跨链信息到在平行链 B 的智能合约。
+Charlie executes the smart contract on parachain A, which initiates a new cross-chain message for the destination of a smart contract on parachain B.
 
 平行链 A 的校对人会把跨链信息连同`目的地(destination)`和`时间(timestamp)`放到出口信息队列中。
 
@@ -35,7 +35,7 @@ Charlie 通过平行链 A 里的智能合约发起一个新跨链信息到在平
 
 在处理时，平行链 B 里的智能合约会执行该信息并且完成资产转移。
 
-然后收集人提交该区块给验证人，并且核对信息是否处已经处理。如果信息经已处理好和区块中其它方面是有效，验证人便会把该区块包括到中继链上。
+The collator now hands this block to the validator, which itself will verify that this message was processed. If the message was processed and all other aspects of the block are valid, the validator will include this block for parachain B into the Relay Chain.
 
 ## 资源
 

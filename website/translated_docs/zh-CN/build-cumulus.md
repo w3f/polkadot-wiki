@@ -12,11 +12,11 @@ sidebar_label: Cumulus
 
 ### Cumulus 共识
 
-_Cumulus 共识_是 Substrate 追踪 Polkadot 中继链的一个共识引擎。它在内部运行 Polkadot 节点并指示客户端和同步算法对哪个链加以追踪、最终确定并视为最佳。
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
 
 ### Cumulus Runtime
 
-Substrate runtime 的包装器，使它们可以由 Polkadot 验证人验证并提供见证生成程序。它向被验证人调用的 Substrate 外部界面添加`validate_block` API
+A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface, which will be called by validators.
 
 将它集成到 substrate runtime 就像导入 crate 包并将这一行宏添加到代码中一样简单。
 

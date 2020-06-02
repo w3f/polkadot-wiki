@@ -8,41 +8,41 @@ Polkadot 社区每天都在扩大。以下是最重要的社区链接。
 
 ## 一般
 
-- [Use Kusama Interface](https://polkadot.js.org/apps/#/explorer) - Access the UI dashboard for interacting with Polkadot's canary network, Kusama.
+- [使用 Kusama](https://polkadot.js.org/apps/#/explorer) - 访问 Kusama 网页 UI ，与 Kusama 交互
 - [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity Polkadot 库，包含 Polkadot runtime 环境 Rust 实现。
-- [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
+- [Polkadot 聚会中心](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - 有关举办聚会的资料，申请资金。
 
-## Riot Chats
+## Riot 聊天室
 
-### Polkadot
+### 波卡 (Polkadot)
 
-- [Polkadot Watercooler Chat](https://riot.im/app/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - General room for talk about Polkadot.
-- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - Room for validators learning about setting up a node.
-- [Polkadot Direction](https://riot.im/app/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Polkadot.
+- [Polkadot Watercooler 聊天室](https://riot.im/app/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 讨论 Polkadot 一般问题
+- [Polkadot 验证人聊天室](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org) - 验证人学习如何设定节点
+- [Polkadot 发展方向](https://riot.im/app/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 治理, 以及讨论 Polkadot 未来发展方向的地方。
 
 ### Kusama
 
-- [Kusama Watercooler Chat](https://riot.im/app/#/room/%23kusamawatercooler:polkadot.builders) - General room for talk about Kusama.
-- [Kusama Validator Lounge](https://riot.im/app/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Room for validators learning about setting up a node.
-- [Kusama Direction](https://riot.im/app/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Kusama.
+- [Kusama Watercooler 聊天室](https://riot.im/app/#/room/%23kusamawatercooler:polkadot.builders) - 讨论 Kusama 一般问题
+- [Kusama 验证人聊天室](https://riot.im/app/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 验证人学习如何设定节点
+- [Kusama 发展方向](https://riot.im/app/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 治理, 以及讨论 Kusama 未来发展方向的地方。
 
-### Technical
+### 技术
 
-- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://riot.im/app/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A room to discuss developing Substrate smart contracts using Parity Ink!
+- [Substrate 技术频道](https://riot.im/app/#/room/#substrate-technical:matrix.org) - 在这询问 Substrate 有关技术问题
+- [智能合約 & Parity Ink! ](https://riot.im/app/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 来讨论使用 Parity Ink! 开发 Substrate 智能合约的聊天室！
 
 ## 媒体
 
-- [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - Sign-up for our newsletter here.
-- [Polkadot Telegram](https://t.me/polkadotofficial) - Official Telegram room for discussion of Polkadot (please read the rules before chatting).
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Official Twitter account of Polkadot.
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit.
-- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video content from founders and build of Polkadot describing the network and the vision.
-- [Kusama Telegram](https://t.me/kusamanetworkofficial)
-- [Kusama Twitter](https://twitter.com/kusamanetwork)
+- [订阅 Polkadot 电子报](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - 在这里订阅我们的电子报。
+- [Polkadot 电报](https://t.me/polkadotofficial) - Polkadot 官方电报群 (聊天前请先阅读规则)。
+- [Polkadot 推特](https://twitter.com/polkadotnetwork) - Polkadot 官方推特帐户。
+- [Polkadot Reddit](https://www.reddit.com/r/dot/) - 官方 Polkadot Reddit.
+- [Polkadot Youtube 频道](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - 来自 Polkadot 创始人和 Polkadot 相关的视频，讲述网络和愿景。
+- [Kusama 电报](https://t.me/kusamanetworkofficial)
+- [Kusama 推特](https://twitter.com/kusamanetwork)
 - [Kusama Reddit](https://www.reddit.com/r/Kusama)
-- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
+- [Kusama YouTube 频道](http://youtube.com/c/kusamanetwork)
 
 ## 生态
 
-- [Teams Building on Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Maintained list of teams building on Polkadot and/or Substrate.
+- [有那些项目在 Polkadot 生态上](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - 列出所有项目基于 Polkadot / Substrate 上

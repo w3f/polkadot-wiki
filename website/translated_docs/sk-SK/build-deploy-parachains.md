@@ -14,7 +14,7 @@ On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `C
 
 **You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
 
-The `adder` parachain is a simple parachain which will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
+The `adder` parachain is a simple parachain that will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
 
 > A slightly out-of-date video version of this guide presented by Adrian Brink is available [here](https://www.youtube.com/watch?v=pDqkzvA4C0E). When the two guides diverge, please refer to this written text as definitive and updated.
 

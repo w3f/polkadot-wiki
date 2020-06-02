@@ -20,10 +20,10 @@ Polkadot 中使用的 VRF 与 Ouroboros Praos 中的大致相同。 Ouroboros �
 
 时隙长度为 6 秒的时间单位。每个时隙可以包含一个区块，但可以不包含区块。时隙构成了时期(epochs) - 在 Kusama 中，2400时隙构成一个时期，这使一个时期长达六个小时。
 
-每个时隙中，每个验证人 "掷骰子"。它们执行以下内容作为输入的函数(VRF):
+In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input the following:
 
-- **"密钥"** - 专为掷骰子而制成的密钥，在每个新时隙中再生。
-- **来自上一个(N-2)之前的时期中各个区块 VRF 值的哈希值**，因此过去的随机性会影响当前待处理的随机性( N)。
+- **The "secret key",** a key specifically made for these die rolls.
+- **An epoch randomness value,** which is The hash of VRF values from the blocks in the epoch before last (N-2), so past randomness has an effect on the current pending randomness (N).
 - **时隙号**
 
 ![](assets/VRF_babe.png)
@@ -32,7 +32,7 @@ Polkadot 中使用的 VRF 与 Ouroboros Praos 中的大致相同。 Ouroboros �
 
 然后将` RESULT `与该协议实现中定义的_阈值 (threshold) _(在 Polkadot Host)进行比较。如果该值小于阈值，那么掷此数字的验证人将是可在该插槽的区块生产候选者。然后，验证人尝试创建一个区块，并将该区块与先前获得的` PROOF `和` RESULT `一起提交到网络中。
 
-钓鱼人 - 监视网络做坏事的收集人和验证人节点 - 验证中继链區块。 由于非法掷骰将产生非法区块，并且由于钓鱼人将在验证人产生的每个区块中访问` RESULT `和` PROOF `，因此对它们而言，很容易自动报告作弊的验证人。
+The fishermen - nodes watching the network for collator and validator wrongdoing - will be verifying Relay Chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for them to automatically report cheating validators.
 
 总结: 在 VRF 中，每个验证人都会为自己掷出一个数字，并根据阈值对其进行检查，如果随机掷骰低于该阈值，则会生產區块。 钓鱼人监察网络并报告不良行为验证这些掷骰的有效性，并向系统报告任何作弊行为(例如尽管掷出的人数超过阈值，但有人假装成块生产區塊者)。
 
@@ -46,9 +46,9 @@ RANDAO 可选增加VDF。
 
 ### VDFs
 
-[可验证延迟函数(VDF)](https://vdfresearch.org/)是即使在并行计算机上也需要花费一定时间才能完成计算。它们产生独特的输出，可以在一般配置独立和有效地对其进行验证。通过将 RANDAO 的结果输入到 VDF 中引入延迟，从而使任何攻击者企图影响当前随机性的尝试都将过时。
+[Verifiable Delay Functions](https://vdfresearch.org/) are computations that take a prescribed duration of time to complete, even on parallel computers. They produce unique output that can be independently and efficiently verified in a public setting. By feeding the result of RANDAO into a VDF, a delay is introduced that renders any attacker's attempt at influencing the current randomness obsolete.
 
-VDFs 可能会通过需要与其他类型的节点分开运行 ASIC 设备来实现。 虽然只有一个足以保证系统的安全和它们将是开源并且几乎免费提供，但是运行它们并不便宜也没有激励，所以选择此方法的区块链用户，产生了不必要的麻烦。
+VDFs will likely be implemented through ASIC devices that need to be run separately from the other types of nodes. Although only one is enough to keep the system secure, and they will be open source and distributed at nearly no charge, running them is neither cheap nor incentivized, producing unneccessary friction for users of the blockchains opting for this method.
 
 ## 资源
 

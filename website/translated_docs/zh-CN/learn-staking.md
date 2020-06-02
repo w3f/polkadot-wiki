@@ -84,7 +84,7 @@ We designed this hierarchy of separate key types so that validator operators and
 
 Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in Polkadot and the cryptography behind it [see here](learn-keys).
 
-## 验证人 和 提名人
+## 验证人和提名人
 
 Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of parachains, and possibly some other responsibilities regarding data availability and [XCMP](learn-crosschain). Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
 
@@ -95,7 +95,7 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 - [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
 - [Validator Guide](mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
 
-## Slash惩罚
+## 惩罚 (Slashing)
 
 Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs modified software) in the network. They and their nominators will get slashed by losing a percentage of their bonded/staked DOTs.
 
@@ -130,7 +130,7 @@ A validator signs two or more votes in the same round on different chains.
 
 ### BABE Equivocation
 
-A validator produces two or more blocks on the relay chain in the same time slot.
+A validator produces two or more blocks on the Relay Chain in the same time slot.
 
 GRANDPA and BABE equivocation slashing penalty is calculated as below:
 

@@ -20,7 +20,7 @@ A **full node** is _pruned_, meaning it discards all information older than 256 
 
 Archive nodes are used by utilities that need past information - like block explorers, council scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need to be able to look at past on-chain data. Full nodes are used by everyone else - they allow you to read the current state of the chain and to submit transactions directly to the chain without relying on a centralized infrastructure provider.
 
-Another type of node is a **light node**. A light node has only the runtime and the current state, but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome extension which is a node in its own right, running the runtime in WASM format: https://github.com/paritytech/substrate-light-ui
+Another type of node is a **light node**. A light node has only the runtime and the current state, but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome extension, which is a node in its own right, running the runtime in WASM format: https://github.com/paritytech/substrate-light-ui
 
 ### Fast Install Instructions (Mac)
 

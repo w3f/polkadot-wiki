@@ -38,7 +38,7 @@ sidebar_label: Термины и определения
 
 ## Мост/Bridge
 
-Парачейн, который выступает в качестве посредника между Relay Chain Polkadot и внешней цепочкой, таким образом, что для Relay Chain кажется, что внешняя цепочка является парачейном (т. е. соответствует требованиям Polkadot хостов к парачейнам). Мосты позволяют взаимодействовать с другими блокчейнами, такими как Ethereum и Bitcoin, которые изначально не совместимы с Polkadot.
+A parachain that acts as an intermediary between the Polkadot Relay Chain and an external chain, in such a way that it appears to the Relay Chain that the external chain is a parachain (i.e., meets the Polkadot Host's requirements of parachains). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
 
 ## Византийская Отказоустойчивость/Byzantine Fault Tolerance
 
@@ -58,7 +58,7 @@ sidebar_label: Термины и определения
 
 ## DOT
 
-Токен сети Polkadot. DOT служат трем целям: управление сетью (позволяя голосовать за обновление сети и другие исключительные события), общее функционирование (награждая хорошее поведение и наказывая плохое) и бондинг(добавление новых парачейнов путем "замораживания" DOT при подключении к relay chain).
+The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are connected the Relay Chain).
 
 ## Список дежурств/Duty Roster
 
@@ -82,7 +82,7 @@ sidebar_label: Термины и определения
 
 ## Финальность/Finality
 
-Свойство блока, которое не может быть отменено. Как правило, созданные блоки не являются окончательными до определенного момента в будущем - возможно, никогда, в случае "вероятностной завершенности". Релейная цепь Polkadot использует детерминированный гаджет завершенности, известный как[GRANDPA](#GRANDPA-consensus-algorithm).
+The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay Chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
 
 ## Гаджет финальности/Finality Gadget
 
@@ -200,7 +200,7 @@ SRM - модули среды исполнения Substrate.
 
 ## Доказательство валидности/Proof of Validity
 
-Доказательство, полученное от коллаторов парачена. Основываясь на этом доказательстве и парачейн реестре, валидатор может проверить, что парачейн правильно выполнил свою функцию перехода состояния. Доказательства валидности идут в блоки ретранслирующей сети (англ. relay chain).
+A proof produced by parachain collators. Based on this proof and the parachain registry, a validator can verify that a parachain has properly executed its state transition function. Proofs of Validity go into the Relay Chain blocks.
 
 ## Доказательство работы (PoW)/Proof of Work
 
@@ -240,7 +240,7 @@ SRM - модули среды исполнения Substrate.
 
 ## Опечатывание/Sealing
 
-Процесс добавления блока в релейную цепь. Обратите внимание, что финализация является отдельным процессом - блоки завершаются через некоторое время после того, как они опечатаны.
+The process of adding a block to the Relay Chain. Note that finalization is a separate process - blocks are finalized some time after they are sealed.
 
 ## Сессия/Session
 
@@ -256,7 +256,7 @@ SRM - модули среды исполнения Substrate.
 
 ## Общая безопасность/Shared Security
 
-Модель безопасности, которую использует Polkadot, когда все цепи одинаково защищены. Это достигается путем размещения доказательств валидности блоков парачейн в релейной цепи таким образом, что для того, чтобы сделать откат финальности одного парачейна, атакующий должен был бы атаковать всю систему Polkadot.
+The security model that Polkadot uses whereby all chains are equally secured. This is acheived by placing proofs of validity of parachain blocks into the Relay Chain such that, in order to revert finality of a single parachain, an attacked would need to attack the entire Polkadot system.
 
 ## Слэшинг/Slashing
 
@@ -264,11 +264,11 @@ SRM - модули среды исполнения Substrate.
 
 ## Софтфорк/Soft Fork
 
-Обратно совместимое изменение клиентского кода, которое приводит к тому, что обновленные клиенты начинают работать на новой цепочке. Требуется большинство хешрейта майнеров, чтобы успешно сделать софтфорк. Софтфорки считаются временными расхождениями в цепочке, так как необновленные клиенты не следуют новым правилам консенсуса, но обновленные клиенты все еще совместимы со старыми правилами консенсуса.
+A backwards compatible change to client code that causes upgraded clients to start mining a new chain. Requires a "vote-by-hashrate" of majority of miners in order to enact successfully. Soft forks are considered temporary divergences in a chain since non-upgraded clients do not follow the new consensus rules but upgraded clients are still compatible with old consensus rules.
 
 ## Стейкинг/Staking
 
-Акт бондинга токенов (для Polkadot, DOT), которые выставляются в качестве "залога" за шанс произвести действительный блок (и таким образом получить вознаграждение за блок). Валидаторы и номинанты ставят свои DOT, чтобы обеспечить безопасность сети.
+The act of bonding tokens (for Polkadot, DOTs) by putting them up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOTs in order to secure the network.
 
 ## Функция перехода состояния/State transition function
 
@@ -288,7 +288,7 @@ SRM - модули среды исполнения Substrate.
 
 ## Валидатор/Validator
 
-Узел, который обеспечивает релейную цепочку путем стейкинга DOT, проверки доказательств от коллаторов на парачейнах и достижение консенса вместе с другими валидаторами.
+A node that secures the Relay Chain by staking DOTs, validating proofs from collators on parachains and voting on consensus along with other validators.
 
 ## Голосование (Voting)
 

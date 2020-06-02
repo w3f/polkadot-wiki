@@ -6,7 +6,7 @@ sidebar_label: 交易费用
 
 区块链网络中的资源是有限的，例如存储和计算。交易费用是用来防止用户消耗太多资源。 Polkadot 使用基于权重的收费模式，而不是 gas-metering 模式。 因此在执行交易之前需要先收取费用；一旦费用支付，节点将执行交易。
 
-[Web3 基金会研究团队](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits) 设计了 Polkadot 以下目标的收费系统:
+\[Web3 Foundation Research\](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#Relay Chain-transaction-fees-and-per-block-transaction-limits) designed the Polkadot fee system with the following objectives:
 
 - 每个中继链的区块链应该有效地处理从而被免延迟生成区块链。
 - 中继链的增长率应该有界限。
@@ -79,7 +79,7 @@ Polkadot 使用缓慢调整费用机制并提供小费来平衡这两个考虑�
 
 ## 了解更多
 
-- [Web3 基金会研究](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
-- [Substrate 权重](https://www.substrate.io/kb/learn-substrate/weight)
+- \[Web3 Foundation Research\](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#Relay Chain-transaction-fees-and-per-block-transaction-limits)
+- [Substrate Weights](https://www.substrate.io/kb/learn-substrate/weight)
 - [Substrate 费用](https://www.substrate.io/kb/runtime/fees)
 - [交易 (Extrinsics)](https://www.substrate.io/kb/learn-substrate/extrinsics)

@@ -4,7 +4,7 @@ title: Nomination Guide
 sidebar_label: Nomination Guide
 ---
 
-> The following information applies to the Polkadot network which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
+> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible for appointing their stake to the validators who are the second type of participant. By appointing their stake, they are able to elect the active set of validators and share in the rewards that are paid out.
 

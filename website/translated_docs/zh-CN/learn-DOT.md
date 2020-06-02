@@ -38,13 +38,13 @@ DOT 还可以作为辅助功能充当可转送代币。 例如将存储在财政
 
 ### DOTs 用于治理
 
-DOTs 的第一功能是使持有人有权控制平台的治理。 治理机制中包含了一些功能其包括定下网络费用，添加或移除平行链以及特殊事件，例如对 Polkadot 平台的升级和修复。
+The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions that are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
 
 在 Polkadot 里，任何持有 DOTs 的人都能参与治理。有关持有人如何参与治理以及他们的权利和责任的详细信息，请参见[治理页面](learn-governance)。
 
 ### DOTs 用于共识
 
-DOTs 将用于促进支撑 Polkadot 的共识机制。为了使平台发挥作用并允许跨平行链进行有效交易，Polkadot 将依靠 DOT 的持有人发挥积极作用。 参与者将（通过抵押）将其 DOT 置于担保之中，以执行这些功能。如果有恶意参与者破壞网络，抵押中的 DOT 将会因破壞而受到惩罚。 参与网络所需要 DOT 的数量将根据正在执行的活动，抵押 DOT 的时间以及抵押 DOT 的总数而有所不同。
+DOTs will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious participants whom will be punished by the network by getting their DOTs slashed. The DOTs required to participate in the network will vary depending on the activity that is being performed, the duration the DOTs will be staked for, and the total number of DOTs staked.
 
 ### DOTs 用于绑定
 

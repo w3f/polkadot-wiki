@@ -39,7 +39,7 @@ Because certain user actions, like changing nominations, can change the outcome 
 
 ### Council Elections
 
-The Phragmén method is also used in the council election mechanism. When you vote for council members, you can select up to 16 different candidates, and then place a reserved bond which is the weight of your vote. Phragmén will run once on every election to determine the top candidates to assume council positions and then again amongst the top candidates to equalize the weight of the votes behind them as much as possible.
+The Phragmén method is also used in the council election mechanism. When you vote for council members, you can select up to 16 different candidates, and then place a reserved bond as the weight of your vote. Phragmén will run once on every election to determine the top candidates to assume council positions and then again amongst the top candidates to equalize the weight of the votes behind them as much as possible.
 
 ## What does it mean for node operators?
 
@@ -67,7 +67,7 @@ The particular algorithm we call here the "Basic Phragmén" was first described 
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 
-1. Candidates submit their ballots, marking which candidates they approve of. Ballots will not be modified after submission.
+1. Candidates submit their ballots, marking which candidates they approve. Ballots will not be modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters would have the _least average (mean) cost_ if that candidate wins.
 4. The _n_ ballots that approved that winning candidate get _1/n_ added to their load.
@@ -177,7 +177,7 @@ In more depth, the algorithm operates like so:
 
 _Note: All numbers in this example are rounded off to three decimal places._
 
-In the following example, there are five voters and five candidates vying for three potential seats. Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2` has stake of 2, etc.). Every voter is also going to have a _load_ which initially starts at `0`.
+In the following example, there are five voters and five candidates vying for three potential seats. Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2` has stake of 2, etc.). Every voter is also going to have a _load,_ which initially starts at `0`.
 
 ```
 Filled seats: 0
@@ -414,7 +414,7 @@ The results for nominating validators are further optimized for several purposes
 
 ### High-Level Description
 
-After running the weighted Phragmén algorithm, a process is run which redistributes the vote amongst the elected set. This process will never add or remove an elected candidate from the set. Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates. Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible. It then runs an edge-reducing algorithm to minimize the number of validators per nominator, ideally giving every nominator a single validator to nominate per era.
+After running the weighted Phragmén algorithm, a process is run that redistributes the vote amongst the elected set. This process will never add or remove an elected candidate from the set. Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates. Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible. It then runs an edge-reducing algorithm to minimize the number of validators per nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an [off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed in the last quarter of each era.
 

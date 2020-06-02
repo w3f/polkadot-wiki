@@ -30,7 +30,7 @@ Next to the button to submit candidacy is another button titled "Vote." You will
 
 ![c](assets/council/vote.png)
 
-The council uses the [Phragmen](learn-phragmen) approval voting which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
+The council uses [Phragmen](learn-phragmen) approval voting, which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 
 ![d](assets/council/vote_for_yourself.png)
 
