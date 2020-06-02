@@ -140,6 +140,6 @@ puts your node at higher risk of attack. You can run your own, private
 [this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
-expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). There is also
-a [video tutorial](https://www.youtube.com/watch?v=G9b91ti0BAc) on visualizing these metrics in a
-Grafana dashboard.
+expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has
+a
+[vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualizing-node-metrics/).
