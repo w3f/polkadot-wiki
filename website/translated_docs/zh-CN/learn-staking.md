@@ -4,13 +4,13 @@ title: 抵押
 sidebar_label: 抵押
 ---
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors who are interested in maintaining the network can run a validator node. At genesis, Polkadot will have a limited amount of slots available for these validators, but this number will grow over time to over one thousand.
+波卡(Polkadot) 使用 NPoS(提名权益证明)机制选择验证人，该机制为了**验证人**和 **提名人**两种角色，以实现链安全性的最大化。对网络维护感兴趣的参与者可以负责运行验证人节点。在创世区块中，波卡链将为验证人提供有限位置，位置数量将逐步增加至 1000 以上。
 
-The system encourages DOT holders to participate as nominators. Nominators may back up to 16 validators as trusted validator candidates.
+系统鼓励 DOT 持有者作为提名人参与。提名人可以支持最多16个他们相信的验证候选人。
 
-Validators assume the role of producing new blocks in [BABE](learn-consensus#babe), validating parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with their stake.
+验证人角色是在 [BABE](learn-consensus#babe) 负责生成区块，验证平行链区块和确保最终性。提名人可以根据验证人抵押量而作选择。
 
-The staking system pays out rewards equally to all validators. Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In this way, the network incents the nomination of lower-staked validators to create an equally-staked validator set.
+在 Polkadot 抵押机制中，所有验证人将会获得相同奖励，而所有参与抵押的提名人将会等减去验证人设置的佣金后，再按他们的抵押比例分配奖励。网络通过这激励方法使提名人转而支持抵押量小的验证人，从而使所有验证人抵押比例接近相等。
 
 ## Polkadot 抵押的运作方式
 
@@ -18,27 +18,27 @@ The staking system pays out rewards equally to all validators. Distribution of t
 
 在抵押您可以是[提名人或验证人](#validators-and-nominators)。
 
-As a nominator, you can nominate one or more (up to 16) validator candidates that you trust to help you earn rewards in DOTs. You can take a look at the [nominator guide](maintain-nominator) to understand what you are required to do when the mainnet launches.
+作为提名人，你最多提名一个(或最多 16) 你信任的侯选验证人去帮你赚取 DOTs。你可以看看 [提名人手册](maintain-nominator)去理解一下当主网上线时有什么你需要做。
 
-A validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a validator on Kusama.
+验证节点必须是响应 24/7, 及时履行预期的职责, 并避免任何可惩罚的行为。如果您想在 Kusama 上运行验证人，您可以查看 [Kusama 验证指南](maintain-guides-how-to-validate-kusama)
 
 ### 2. 提名期
 
-Any potential validators can indicate their intention to be a validator candidate. Their candidacies are made public to all nominators, and a nominator in turn submits a list of any number of candidates that it supports. In the next epoch (lasting several hours), a certain number of validators having the most DOT backing get elected and become active. There are no particular requirements for a DOT holder to become a nominator, though we expect each nominator to carefully track the performance and reputation of validators.
+所有潜在验证人都可表明其希望成为验证人候选人的意愿。他们的候选资格将向所有提名人公开，提名人将依次提交所支持的候选人名单。在接下来的 epoch (持续几个小时）中，拥有最多 DOT 支持的验证候选人将被选为验证人。这里没有对 DOT 持有人成为提名人提出特别要求，但我们希望每位提名人都能仔细跟踪验证人的表现和声誉。
 
-Once the nomination period ends, the NPoS election mechanism takes the nominators and their associated votes as input, and outputs a set of validators of the required size, that maximizes the stake backing of any validator, and that makes the stakes backing validators as evenly distributed as possible. The objectives of this election mechanism are to maximize the security of the network, and achieve fair representation of the nominators. If you want to know more about how NPoS works (e.g. election, running time complexity, etc.), please read [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
+提名期结束后，NPoS 选举机制将输入提名人及其投票，并输出一组符合要求的验证人，其中每个验证人都能获得最大化的权益支持，并且支持验证人的权益会尽可能呈均匀分布。此选举机制旨在提高网络安全性，确保提名人的公平代表性。如你想进一步了解更多 NPoS 的工作原理（例如选举、运行时间复杂度等），请点击[此处](http://research.web3.foundation/en/latest/polkadot/NPoS.html)阅读。
 
 ### 3. 抵押奖励分配
 
-To explain how rewards are paid to validators and nominators, we need to consider **validator pools**, where a validator pool consists of an elected validator together with the nominators backing it. (Note: if a nominator `n` with stake `s` backs several elected validators, say `k`, the NPoS election mechanism will split its stakes into pieces `s_1`, `s_2`, …, `s_k`, so that it backs validator `i` with stake `s_i`. In that case, nominator `n` will be rewarded the same as if there were `k` nominators in different pools, each backing a single validator `i` with stake `s_i`). For each validator pool, we keep a list of nominators with the associated stakes.
+在了解验证人和提名人的奖励制度前，我们需要对**验证人池**进行了解。验证人池由一名当选的验证人和数位支持他的提名人组成。（注意：如果提名人 ` n ` 抵押了 ` s ` 支持多位当选验证人，比如 ` k ` 位，NPoS 选举机制将会把权益分成 ` s_1 ` 、` s_2 ` 、…、` s_k `，使支持验证人 ` i ` 时的抵押是 ` s_i `。这种情况下，如果有 ` k ` 提名人在不同验证人池，每个抵押 ` s_i ` 支持一位验证人 ` i `，提名人 ` n ` 将会获得相同的奖励）。在每个验证人池中都有一份权益关系的提名人列表。
 
-The general rule for rewards across validator pools is that two validator pools get paid the **same amount of DOTs** for equal work, i.e. they are NOT paid proportional to the stakes in each pool. Within a validator pool, a (configurable) part of the reward goes to pay the validator's commission fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the nominators and validator. Notice in particular that the validator is rewarded twice: once as commission fees for validating, and once for nominating itself with stake.
+验证人池的奖励分为，两个验证人池因工作量相等而获得**相同数量的 DOT **，即各验证人池并不会按抵押比例分配奖励。在验证人池中，部分奖励用于支付该验证人的佣金，其余则按**比例(pro-rata)**（即与抵押成比例）支付给提名人和该验证人。需特别注意，该验证人将获得两次奖励：一是验证人设置的佣金奖励，二是通过提名自己抵押的奖励。
 
-To estimate the inflation rate and how many DOTs you can get each month as a nominator or validator, you can use this [Excel sheet](https://docs.google.com/spreadsheets/d/1-9Hc3kZ23EhZC3X6feRUKSTv6gj4xR7cvUbJD2zUEZk/edit?usp=sharing) as a reference and play around with it by changing some parameters (e.g. validator pools, total supply, commission fees, etc.) to have a better estimate. Even though it may not be entirely accurate since staking participation is changing dynamically, it works well as an indicator.
+在估計通胀率和作为提名人或验证人每月可获得多少 DOT 时，你可以参考此 [Excel 表格](https://docs.google.com/spreadsheets/d/1-9Hc3kZ23EhZC3X6feRUKSTv6gj4xR7cvUbJD2zUEZk/edit?usp=sharing)，并可改一下部分参数数字（例如验证人池、总量、佣金等）使你有更好估算。尽管此表格的准确性因抵押参与率不断变化而改变，但仍可以作为很好的指标加以参考。
 
 ### 4. 奖励机制
 
-We highlight two features of this payment scheme. The first is that since validator pools are paid the same, pools with less stake will pay more to nominators per-DOT than pools with more stake. We thus give nominators an economic incentive to gradually shift their preferences to lower staked validators that gain a sufficient amount of reputation. The reason for this is that we want the stake across validator pools to be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, we expect all validator pools to have similar levels of stake, with the stake being higher for higher reputation validators (meaning that a nominator that is willing to risk more by backing a validator with a low reputation will get paid more).
+我们要重点强调奖励模式的两个特点：第一个特点，由于各验证人池的奖励相同，因此与拥有更多抵押的池相比，抵押较少的池提名人将会获得更多 DOT 的奖励从而形成一种经济激励，使提名人逐渐转向支持那些声誉好但抵押少的验证人。这样做的原因是，我们希望各验证人池之间的押抵量尽可能均匀分布，以避免权力集中在几名验证人手中。从长期来看，我们希望各验证人池的抵押大致相同，声誉更高的验证人拥有更多的抵押（这意味着愿意冒更大风险支持低声誉验证人的提名人将获得更高的回报，这一点十分合理）。
 
 下文将举例说明。为易于理解，我们做出了以下假设:
 
@@ -65,11 +65,11 @@ We highlight two features of this payment scheme. The first is that since valida
 
 _验证人池 A & B 均拥有 4 名提名人，分别持有 600 和 400 DOTs 作抵押。_
 
-Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT than those in pool A because pool A has more overall stake. Sam has staked 50 DOTs in pool A, but he only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
+根据上文的奖励分配原则，由于 A 验证人池的总权益更高，B 池中的提名人每 DOT 获得的奖励分成将高于 A 池中的提名人。Sam 在 A 池抵押了 50 DOT，只获利 8.3，而抵押数相同的 Kitty 却获利 12.5。
 
-We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount of DOTs), which means that validator pools with more stake get slashed more DOTs. Again, this is done to provide nominators with an economic incentive to shift their preferences and back less popular validators whom they consider to be trustworthy.
+同时还需注意，验证人若出现不良行为（例如验证人离线、双重签名等），网络将对其按固定的百分比（而非固定的 DOT 数量）作出惩罚。这意味着抵押更多的验证人池将损失更多 DOT。同样地，这也是为了给提名人提供一种经济激励，使其改变去支持那些他们认为值得信任却没有那么受欢迎的验证人。
 
-The second point to note is that each validator candidate is free to name their desired commission fee (as a percentage of rewards) to cover operational costs. Since validator pools are paid the same, pools with lower commission fees pay more to nominators than pools with higher fees. Thus, each validator can choose between increasing their fees to earn more DOTs, or decreasing their fees to attract more nominators and increase their chances of being elected. We will let the market regulate itself in this regard. In the long term, we expect that all validators will need to be cost efficient to remain competitive, and that validators with higher reputation will be able to charge slightly higher commission fees (which is fair).
+第二个特点是，各验证人候选人均可自由设定佣金(固定DOT的数量）以弥补运行成本。由于各验证人池的奖励相同，因此佣金较低的池向提名人分成的奖励要多于高于佣金较高的池。因此，所有验证人均可自由选择是提高佣金获得更多 DOT，还是降低佣金吸引更多提名人、增加当选的机会。在这一方面，我们允许市场自我调节。从长期来看，我们希望所有验证人都具有成本效益以维持其竞争力，同时声誉好的验证人可以收取略高的佣金（这一点十分公平）。
 
 ## 账户
 
@@ -77,42 +77,42 @@ The second point to note is that each validator candidate is free to name their 
 
 ![staking](assets/NPoS/staking-keys_stash_controller.png)
 
-- **Stash:** This account holds funds bonded for staking, but delegates some functions to a Controller. As a result, you may actively participate with a Stash key kept in a cold wallet, meaning it stays offline all the time. You can also designate a Proxy account to vote in [governance](./learn-governance) proposals.
-- **Controller** This account acts on behalf of the Stash account, signalling decisions about nominating and validating. It set preferences like payout account and commission. If you are a validator, it also sets your [session keys](learn-keys#session-keys). It only needs enough funds to pay transaction fees.
+- **Stash:** 这帐户储存资金用作绑定 DOTs 参与抵押，但将某些功能委托给 Controller。因此使用 Controller 可以积极参与，其保存 Stash 密钥在冷钱包中，这意味着它永远保持离线状态。您还可以指定代理帐户，对[治理](./learn-governance)议案进行投票。
+- **Controller** 这帐户是代表 Stash 帐户负责发出有关提名和验证的操作。它用于设置奖励发送到那个帐户和佣金。如果你是验证人，它亦用作设定[ session 密钥](learn-keys#session-keys)，并只需要足够的资金来支付交易费用。
 
-We designed this hierarchy of separate key types so that validator operators and nominators can protect themselves much better than in systems with only one key. As a rule, you lose security anytime you use one key for multiple roles, or even if you use keys related by derivation. You should never use any account key for a "hot" session key in particular.
+我们设计了这种分隔密匙类型的层次结构，相比起單一密匙系统，可以更好保護驗証人和提名人。通常一个密钥用于多个角色，甚至使用与密钥导出相关的都会失去安全性。 你应该不要将任何帐户密钥为 "热" session 密钥。
 
-Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in Polkadot and the cryptography behind it [see here](learn-keys).
+Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。有关如何在 Polkadot 中使用密钥及其背后加密的更多信息，请参见[此处](learn-keys)。
 
 ## 验证人和提名人
 
-Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of parachains, and possibly some other responsibilities regarding data availability and [XCMP](learn-crosschain). Nominators, on the other hand, do not need to do anything once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
+因为验证人位置数量有限，大多数希望抵押他們的 DOT  并为网络提供经济安全的人都将是提名人。验证人负责大部分繁重的工作: 他们在 BABE 中产生新的候选区块，投票并在 GRANDPA 达成共识，验证平行链的状态转变函数。还可能验证数据可用性和 [XCMP](learn-crosschain) 方面的一些责任。 另一方面提名人一旦绑定他们的 DOTS 进行抵押，就不必采取任何动作。提名人就类似于"设置并忘记它"。 验证人则为网络提供服务负责关键操作。 出于这原因， 验证人对抵押机制的奖励有一些特权，并能够在奖励分配给提名人之前取下佣金。
 
 ![staking](assets/NPoS/article-2.png)
 
 ### 想参与抵押 DOT?
 
-- [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
-- [Validator Guide](mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
+- [提名人指南 (Kusama)](mirror-maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。
+- [验证人指南](mirror-maintain-guides-how-to-validate-kusama)-成为 Kusama 网络上的验证人。
 
 ## 惩罚 (Slashing)
 
-Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs modified software) in the network. They and their nominators will get slashed by losing a percentage of their bonded/staked DOTs.
+如果验证人在网络上行为不当(例如: 离线, 攻击网络, 运行已修改的软件) ，验证人将会被惩罚(Slashing)。验证人和他的提名人也会被惩罚而损失百份比绑定/抵押中的 DOTs。
 
-Validator pools with larger total stake backing them will get slashed more harshly than less popular ones, so we encourage nominators to shift their nominations to less popular validators to reduce the possible losses.
+具有较高抵押支持量的验证人池将比不那么受欢迎的验证人池受到更大的惩罚，因此我们鼓励提名人将其提名转移给较不受欢迎的验证人，以减少可能的损失。
 
-The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
+[定义](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html)了以下过错级别:
 
 - Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake and chills.
 - Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator and chills.
 
-Let's look at these offences in a bit more detail.
+让我们更详细地看一下这些过错。
 
 ### Unresponsiveness
 
-For every session, validators will send an "I'm Online" message to indicate they are online. If a validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as unresponsive. Depending on the repeated offences and how many other validators were unresponsive or offline, slashing will occur.
+在每个 session ，验证人会发送 "I'm Online" 信息表示他们在线。如果验证人在那个 epoch 没有出块并且没有发送 heartbeat ，这样会视为 unresponsive。根据累积过错以及有多少验证人也处于 unresponsive 或离线状态，惩罚(Slashing) 即会发生。
 
 下面是计算公式:
 
@@ -120,65 +120,65 @@ For every session, validators will send an "I'm Online" message to indicate they
     
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
-Note that if less than 10% of all validators are offline, no penalty is enacted.
+请注意，如果少於10%的人验证人离线 ，则不会有任何惩罚。
 
-Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below), together with [proxy nodes](maintain-guides-how-to-setup-sentry-node) to avoid being DDoSed when your validator node's IP address is exposed. A comprehensive guide on secure validator setup is available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
+验证人应该要有一个良好的网络架构去确保节点是正常运行，从而被免被惩罚的风险。拥有高可用性(High Availability)的设定是最理想，**一旦运行中的节点离线**，备份节点会立即换上。 (被免双重签名和因 equivocation 被惩罚 - 请查看下面)，与[代理节点 (Proxy Nodes)](maintain-guides-how-to-setup-sentry-node)一起使用，从而避免当你被 DDoSed 时 把您的验证人节点 IP 地址公开。 [此处](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)提供了设置有关安全验证人的全面指南。
 
 ### GRANDPA Equivocation
 
-A validator signs two or more votes in the same round on different chains.
+在同一轮里面，验证人在不同链上签上二个或更多投票。
 
 ### BABE Equivocation
 
-A validator produces two or more blocks on the Relay Chain in the same time slot.
+验证人在中继链同一个时隙中出二个或更多区块。
 
-GRANDPA and BABE equivocation slashing penalty is calculated as below:
+GRANDPA 和 BABE 的 equivocation 惩罚算式如下:
 
     设 x = 出错节点, n = 验证人总数
     
     Min( (3 * x / n )^2, 1)
 
-Validators may run their nodes on multiple machines to make sure they can still perform validation work in case one of their nodes goes down. It should be noted that if they do not have good coordination to manage signing machines, then equivocation is possible.
+验证人可以在多台电脑上运行他们的节点，即使其中一台节点有问题，他们仍然执行验证工作。应注意的是，如果他们在管理签名方面没有很好的协调，equivocation 是有可能的。
 
-If a validator is reported for any one of the offences they will be removed from the validator set ([chilled](#chilling)) and they will not be paid while they are out. They will be considered inactive immediately and will lose their nominators. They need to re-issue intent to validate and gather support from nominators.
+如果验证人被举报了任何一种违法行为，则会踢出其验证人([chilled](#chilling))，验证人踢出后并不会获得奖励。 他们将立即被视为失效的验证人，并失去其所有提名人。 他们需要重新提交成为验证人的交易，并收集提名人的支持。
 
-If you want to know more details about slashing, please look at our [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
+如果您想要了解更多有关惩罚(Slashing)的详细信息，请查看我们的 [研究专页](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html)。
 
 ### Chilling
 
-Chilling is the act of removing a validator from the active validator set, also disqualifying them from the set of electable candidates in the next NPoS cycle.
+Chilling 是指从下一个 NPoS 周期中，从生效的验证人中删除它，并取消其与候选者资格的行为。
 
-This may be voluntary and validator-initiated, e.g. if there is a planned outage in the validator's surroundings or hosting provider, and the validator wants to exit to protect themselves against slashing. When voluntary, chilling will keep the validator active in the current session, but will move them to the inactive set in the next. The validator will not lose their nominators.
+这可以是自愿的并且可以由验证人发起，例如如果验证人的周围环境或托管服务提供商计划中断，并且验证人想要退出以保护自己免遭惩罚。 当 chilling 时，验证人在当前 session 中会保持生效状态，但在下一个 session 中将其移动到非生效状态。 验证人不会丢失其提名人。
 
-When used as part of a punishment, being chilled carries an implied penalty of being un-nominated. It also disables the validator for the remainder of the current era and removes the offending validator from the next election.
+当一部分作为惩罚时，chilled 意味着隐瞒未提名的惩罚。 它还会在当前时代的其余时间禁用验证人，并从下一次选举中删除有问题的验证人。
 
-Polkadot allows some validators to be disabled, but if the number of disabled validators gets too large, Polkadot will trigger a new validator election to get a full set. Disabled validators will need to resubmit their intention to validate and regarner support from nominators.
+Polkadot 允许停用某些验证人，但是如果停用的验证人数量过多，Polkadot 将触发新的验证人选择以获取完整的验证人。 停用验证人将需要重新提交其有意成为验证人的交易，以获得提名人的支持。
 
 ### Slashing Across Eras
 
-There are 3 main difficulties to account for with slashing in NPoS:
+有三个主要困难需要在 NPoS 中进行惩罚：
 
-- A nominator can nominate multiple validators and be slashed via any of them.
-- Until slashed, stake is reused from era to era. Nominating with N coins for E eras in a row does not mean you have N\*E coins to be slashed - you've only ever had N.
-- Slashable offences can be found after the fact and out of order.
+- 提名人可以提名多个验证人，然后通过其中任何一个将惩罚。
+- 在惩罚之前，抵押在各个时代都可以重复使用。 连续提名 E 个时代的 N 币并不意味着您要惩罚 N\*E 币 - 您只有 N 币。
+- 惩罚可在事实发生后发现。
 
-To balance this, we only slash for the maximum slash a participant can receive in some time period, rather than the sum. This ensures protection from overslashing. Likewise, the time span over which maximum slashes are computed are finite and the validator is chilled with nominations withdrawn after a slashing event, as stated in the previous section. This prevents rage-quit attacks in which, once caught misbehaving, a participant deliberately misbehaves more because their slashing amount is already maxed out.
+为了平衡这一点，我们只惩罚参与者在某个时间段内可收到的最大惩罚，而不是总和。 这样可以确保避免过度惩罚。 同样计算最大惩罚的时间间隔是有限的，并且如前一节所述，在发生惩罚事件后取消验证人的情况下，验证人会变冷。 这可以防止 rage-quit 攻击，因为一旦参与者表现出了严重的行为不当，就会故意加害。
 
 ## 奖励分配
 
-Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times. Polkadot will also produce blocks at approximately six second intervals.
+请注意，Kusama 运行速度大约是 Polkadot 的4倍，除了出块时间。 Polkadot 还将以大约六秒钟的间隔出块。
 
-Rewards are recorded per session (approximately one hour on Kusama and four hours on Polkadot) and calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). Thus, rewards will be calculated four times per day on Kusama and once per day on Polkadot.
+奖励是在每个 session 记录（在 Kusama 上大约一小时，在 Polkadot 上四个小时），并根据每个时代进行计算（在 Kusama 上大约六小时，在 Polkadot 上二十四个小时)。 因此在 Kusama 每天将计算四次奖励，而在 Polkadot 则将每天计算一次奖励。
 
-In order to be paid your staking rewards, someone must claim them for each validator that you nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot and 21 days on Kusama. For more information on why this is so, see the page on [simple payouts](learn-simple-payouts).
+为了获得您的抵押奖励，必须有人为您提名的验证人领取它们。 抵押奖励可以保留84个时代，在 Polkadot 大约84天，在 Kusama 大约21天。 有关为什么这样做的更多信息，请参见[Simple payouts](learn-simple-payouts)上的页面。
 
-> WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim them and some of your staking rewards will be lost.
+> 警告：如果此时没有人领取您的抵押奖励，那么您将无法领取它们，并且您的某些抵押奖励将会丢失。
 
-### Claiming Rewards
+### 领取奖励
 
-If you go to the Staking payouts page on [Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of validators that you have nominated in the past 84 eras. Each one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone who was nominating that validator during those eras, and anyone can call it.
+如果您前往到[ Polkadot JS ](https://polkadot.js.org/apps/#/staking/payout)上的"抵押 Staking payouts"页面，您将看到一个拥有验证人的列表在过去84个时代中获得的提名。 每个人都可以选择触发所有无人认领时代的奖励。 请注意，这将向那些在那个时代提名该验证人的人发送奖励，任何人都可以触发它。
 
-### Reward Distribution Example
+### 奖励分配例子
 
 ```
     PER_ERA * BLOCK_TIME = **Reward Distribution Time**
@@ -188,48 +188,48 @@ If you go to the Staking payouts page on [Polkadot JS](https://polkadot.js.org/a
     ***These parameters can be changed by proposing a referendum***
 ```
 
-Validators can create a cut of the reward that is not shared with the nominators. This cut is a percentage of the block reward, not an absolute value. After the value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
+验证人可以设置佣金把奖励先取下一部份再跟提名人分享。此佣金是区块奖励的百分比，而不是绝对值。当取下佣金后，余下部份会根据验证人和所有提名该验证人的抵押比例作分配。
 
-For example, assume the block reward for a validator is 10 DOTs. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs would then be split between the validator and their nominators based on the proportion of stake each nominator had. Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
+例如假设验证人的区块奖励是10个 DOT。 验证人可以指定` validator_payment = 50％`，在这种情况下，验证者将收到5个 DOT。 然后，根据每个提名人所拥有的抵押比例，在验证人及其提名人之间分配剩余的5个DOT。 请注意，验证人本身也可以有自己的抵押，对于此计算，他们的抵押就像是另一个提名人一样。
 
-Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOTs without having to un-stake everything.
+奖励可以放在同一个帐户 (Controller) 不断积累奖励或存放在 Stash 帐户 (增加抵押量 / 不增加抵押量)。另外，你可以在参与抵押中充值 / 提取部份绑定的 DOTs 而不用解绑全部。
 
-For specific details about validator payouts, please see [this guide](maintain-guides-validator-payout).
+关于验证人付款的详细信息，请参阅 [本指南](maintain-guides-validator-payout)。
 
 ## 通胀率
 
-Inflation is designed to be 10% in the first year, with validator rewards being a function of amount staked and the remainder going to treasury.
+第一年的通货膨胀率设计为10％，验证人的奖励是所抵押金额的函数，其余部分将用于国库。
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<p style="text-align:center">Source: <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
+<p style="text-align:center">资料来源： <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
 
-- **x-axis**: Proportion of DOTs staked
-- **y-axis**: Inflation, annualized percentage
-- **Blue line**: Inflation rewards to stakers
-- **Green line**: Staker rate of return
+- **x-轴**: DOTs 抵押的数量
+- **y-轴**: 通货膨胀, 年度化百分比
+- **蓝线**: 参与抵押者的通涨奖励
+- **绿线**: 抵押参与者的收益率
 
-The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
+上图显示了网络的通货膨胀模型。 根据抵押参与者的参与，通货膨胀对验证人与国库的分配将动态变化，以提供参与(或不参与)抵押的激励。 例如如果所有 KSM / DOT 中的50％参与抵押，所有的通货膨胀将流向验证人，但是任何与50％的偏差（正数或负数）都会将剩余部分按比例发送给国库，从而有效地减少了验证人的收益。
 
-For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
+如你想进一步了解本网络通胀模型的设计，请参阅[此处](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)。
 
 ## 为什么参与抵押?
 
-- 10% inflation/year when the network launches
-- 50% targeted active staking
-- ~20% annual return
+- 当主网上线，每年 10% 通胀率
+- 目标抵押为 50％
+- ~20% 年回报
 
 ## 为什么不参与抵押?
 
-- Tokens will be locked for about 28 days on Polkadot after unbonding, seven days on Kusama.
-- Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
-- You want to use the tokens for a parachain slot.
+- 代币解锁在 Kusama 需要7天，而 Polkadot 则是28天。
+- 如果发现验证人行为不当，将执行处罚（请参见[ #slashing ](#slashing)）。
+- 您将想代币用于平行链插槽。
 
 ## 波卡会有多少链验证人数量?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, is currently rapidly approaching 200 validators slots.
+一开始计划是开放 50 - 100 验证人并且逐渐扩大，而验证人上限尚未确定，但会受到网络频宽所限制，因为大量频繁点对点信息交互 ，Polkadot 届时将拥有验证人数量估计约为1000，而 Kusama 现在已经大约有200多个验证人。
 
 ## 资源
 
-- [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
+- [NPoS 在 Polkadot 怎么运作](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Web3 基金会研究员 Alfonso Cevallos 描述 NPoS 在 Polkadot 的博客文章
+- [设置安全验证人](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
