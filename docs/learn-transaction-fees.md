@@ -11,8 +11,7 @@ transaction execution; once the fee is paid, nodes will execute the transaction.
 
 [Web3 Foundation
 Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html) designed the 
-Polkadot fee system with the
-following objectives:
+Polkadot fee system with the following objectives:
 
 - Each Relay Chain block should be processed efficiently to avoid delays in block production.
 - The growth rate of the Relay Chain should be bounded.
