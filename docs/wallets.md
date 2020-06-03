@@ -38,4 +38,4 @@ supported by Polkadot.
 ### Wallets still being Explored
 
 - [Token Pocket](https://www.tokenpocket.pro/en/) - Mobile and desktop wallet
-- [Atomic Wallet](https://atomicwallet.io/) - Mobile and desktop wallet
+- [Atomic Wallet](https://atomicwallet.io/) - Mobile and desktop wallet 
