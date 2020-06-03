@@ -6,7 +6,7 @@ sidebar_label: 交易费用
 
 区块链网络中的资源是有限的，例如存储和计算。交易费用是用来防止用户消耗太多资源。 Polkadot 使用基于权重的收费模式，而不是 gas-metering 模式。 因此在执行交易之前需要先收取费用；一旦费用支付，节点将执行交易。
 
-\[Web3 Foundation Research\](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#Relay Chain-transaction-fees-and-per-block-transaction-limits) designed the Polkadot fee system with the following objectives:
+[Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html) designed the Polkadot fee system with the following objectives:
 
 - 每个中继链的区块链应该有效地处理从而被免延迟生成区块链。
 - 中继链的增长率应该有界限。
