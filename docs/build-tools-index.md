@@ -20,6 +20,8 @@ sections below will be filled out.
 
 ## Wallets
 
+See more on Wallets [here](build-wallets.md).
+
 - [Polkadot-JS Apps - Accounts](https://polkadot.js.org/apps/#/accounts)
 - [Polkawallet](https://polkawallet.io/) - A mobile wallet for Polkadot on both iOs and Android.
   Currently in development but a Beta version is available for download. Follow development on
