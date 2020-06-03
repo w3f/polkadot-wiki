@@ -17,7 +17,7 @@ array of the currently active parachains.
 **You will need to have the minimum deposit needed to create a referendum. Currently this minimum is
 5 DOTs.**
 
-The `adder` parachain is a simple parachain which will keep a value in storage and add to this value
+The `adder` parachain is a simple parachain that will keep a value in storage and add to this value
 as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains`
 folder.
 

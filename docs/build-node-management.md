@@ -142,4 +142,4 @@ puts your node at higher risk of attack. You can run your own, private
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
 expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has
 a
-[vizualizing node metrics tutorial](https://substrate.dev/docs/en/next/tutorials/visualizing-node-metrics/).
+[vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualizing-node-metrics/).

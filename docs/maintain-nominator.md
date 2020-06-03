@@ -4,7 +4,7 @@ title: Nominator
 sidebar_label: Nominator
 ---
 
-Nominators secure the relay chain by selecting good validators and staking DOTs.
+Nominators secure the Relay Chain by selecting good validators and staking DOTs.
 
 You may have an account with DOTs and want to earn fresh DOTs. You could do so as validator, which
 requires a node running 24/7. If you do not have such node or do not want to bother, you can still
@@ -66,7 +66,7 @@ using, reputation, the vision behind the validator, and more.
 
 ### Guides
 
-- [Be a Nominator (Kusama)](maintain-guides-how-to-nominate-kusama) - Guide on nominating on the
+- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Guide on nominating on the
   Kusama canary network.
 - [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond) - Guide on stopping
   nominations and withdrawing tokens.

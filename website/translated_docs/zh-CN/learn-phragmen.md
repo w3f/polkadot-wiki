@@ -8,7 +8,7 @@ sidebar_label: 顺序弗拉格曼方法
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in the 1890s.
 
-The quote below taken from the reference \[Phragmén paper\]\[phragmen paper\] sums up the purpose of the sequential Phragmén method:
+The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose of the sequential Phragmén method:
 
 > The problem that Phragmén’s methods try to solve is that of electing a set of a given numbers of persons from a larger set of candidates. Phragmén discussed this in the context of a parliamentary election in a multi-member constituency; the same problem can, of course, also occur in local elections, but also in many other situations such as electing a board or a committee in an organization.
 
@@ -39,7 +39,7 @@ Because certain user actions, like changing nominations, can change the outcome 
 
 ### 议会选举
 
-The Phragmén method is also used in the council election mechanism. When you vote for council members, you can select up to 16 different candidates, and then place a reserved bond which is the weight of your vote. Phragmén will run once on every election to determine the top candidates to assume council positions and then again amongst the top candidates to equalize the weight of the votes behind them as much as possible.
+The Phragmén method is also used in the council election mechanism. When you vote for council members, you can select up to 16 different candidates, and then place a reserved bond as the weight of your vote. Phragmén will run once on every election to determine the top candidates to assume council positions and then again amongst the top candidates to equalize the weight of the votes behind them as much as possible.
 
 ## 对验证人意味着什么？
 
@@ -67,7 +67,7 @@ The particular algorithm we call here the "Basic Phragmén" was first described 
 
 The Phragmén method will iterate, selecting one seat at a time, according to the following rules:
 
-1. Candidates submit their ballots, marking which candidates they approve of. Ballots will not be modified after submission.
+1. Candidates submit their ballots, marking which candidates they approve. Ballots will not be modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters would have the _least average (mean) cost_ if that candidate wins.
 4. The _n_ ballots that approved that winning candidate get _1/n_ added to their load.
@@ -177,7 +177,7 @@ In more depth, the algorithm operates like so:
 
 _Note: All numbers in this example are rounded off to three decimal places._
 
-In the following example, there are five voters and five candidates vying for three potential seats. Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2` has stake of 2, etc.). Every voter is also going to have a _load_ which initially starts at `0`.
+In the following example, there are five voters and five candidates vying for three potential seats. Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2` has stake of 2, etc.). Every voter is also going to have a _load,_ which initially starts at `0`.
 
 ```
 Filled seats: 0
@@ -406,19 +406,39 @@ You will notice that the total amount of stake for candidates `A`, `D`, and `B` 
 
 ## Optimizations
 
-The results are further optimized to more evenly distribute the load (which is a desirable feature, as discussed below) via post-processing.
+The results for nominating validators are further optimized for several purposes:
 
-### Rationale
-
-Another issue is that we want to ensure that as equal a distribution of votes as possible amongst the elected validators or council members. This helps us increase the security of the system by ensuring that the minimum amount of tokens in order to join the active validator set or council is as high as possible. For example, imagine a result of five validators being elected, where validators have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1_050. In this case, a potential attacker could join the active validator set with only 11 tokens, and could obtain a majority of validators with only 33 tokens (since the attacker only has to have enough stake to "kick out" the three lowest validators).
-
-In contrast, imagine a different result with the same amount of total stake, but with that stake perfectly equally distributed: `{210, 210, 210, 210, 210}`. With the same amount of stake, an attacker would need to stake 633 tokens in order to get a majority of validators, a much more expensive proposition. Although obtaining an equal distribution is unlikely, the more equal the distribution, the higher the threshold - and thus the higher the expense - for attackers to gain entry to the set.
+1. To reduce the number of edges, i.e. to minimize the number of validators any nominator selects
+2. To ensure, as much as possible, an even distribution of stake among the validators
+3. Reduce the amount of block computation time
 
 ### High-Level Description
 
-After running the weighted Phragmén algorithm, a process is run which redistributes the vote amongst the elected set. This process will never add or remove an elected candidate from the set. Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates. Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible.
+After running the weighted Phragmén algorithm, a process is run that redistributes the vote amongst the elected set. This process will never add or remove an elected candidate from the set. Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates. Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible. It then runs an edge-reducing algorithm to minimize the number of validators per nominator, ideally giving every nominator a single validator to nominate per era.
 
-These optimizations will not be covered in-depth on this page. For more details, you can view the [Rust implementation in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs) or the `seqPhragménwithpostprocessing` method in the [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would like to dive even more deeply, you can review the [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html).
+To minimize block computation time, the staking process is run as an [off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed in the last quarter of each era.
+
+These optimizations will not be covered in-depth on this page. For more details, you can view the [Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs), the [Rust implementation of staking in Substrate](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs), or the `seqPhragménwithpostprocessing` method in the [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would like to dive even more deeply, you can review the [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html).
+
+### Rationale for Minimizing the Number of Validators Per Nominator
+
+Paying out rewards for staking from every validator to all of their nominators can cost a non-trivial amount of chain resources (in terms of space on chain and resources to compute). Assume a system with 200 validators and 1000 nominators, where each of the nominators has nominated 10 different validators. Payout would thus require `1000 * 10`, or 10,000 transactions. In an ideal scenario, if every nominator selects a single validator, only 1,000 transactions would need to take place - an order of magnitude fewer. Empirically, network slowdown at the beginning of an era has occurred due to the large number of individual payouts by validators to nominators. In extreme cases, this could be an attack vector on the system, where nominators nominate many different validators with small amounts of stake in order to slow the system at the next era change.
+
+While this would reduce network and on-chain load, being able to select only a single validator incurs some diversification costs. If the single validator that a nominator has nominated goes offline or acts maliciously, then the nominator incurs a risk of a significant amount of slashing. Nominators are thus allowed to nominate up to 16 different validators. However, after the weighted edge-reducing algorithm is run, the number of validators per nominator is minimized. Nominators are likely to see themselves nominating a single active validator for an era.
+
+At each era change, as the algorithm runs again, nominators are likely to have a different validator than they had before (assuming a significant number of selected validators). Therefore, nominators can diversify against incompetent or corrupt validators causing slashing on their accounts, even if they only nominate a single validator per era.
+
+### Rationale for Maintaining an Even Distribution of Stake
+
+Another issue is that we want to ensure that as equal a distribution of votes as possible amongst the elected validators or council members. This helps us increase the security of the system by ensuring that the minimum amount of tokens in order to join the active validator set or council is as high as possible. For example, assume a result of five validators being elected, where validators have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1,050. In this case, a potential attacker could join the active validator set with only 11 tokens, and could obtain a majority of validators with only 33 tokens (since the attacker only has to have enough stake to "kick out" the three lowest validators).
+
+In contrast, imagine a different result with the same amount of total stake, but with that stake perfectly equally distributed: `{210, 210, 210, 210, 210}`. With the same amount of stake, an attacker would need to stake 633 tokens in order to get a majority of validators, a much more expensive proposition. Although obtaining an equal distribution is unlikely, the more equal the distribution, the higher the threshold - and thus the higher the expense - for attackers to gain entry to the set.
+
+### Rationale for Reducing Block Computing Time
+
+Running the Phragmén algorithm is time-consuming, and often cannot be completed within the time limits of production of a single block. Waiting for calculation to complete would jeopardize the constant block production time of the network. Therefore, as much computation as possible is moved to an offchain worker, which validators can work on the problem without impacting block production time. By restricting the ability of users to make any modifications in the last 25% of an era, and running the selection of validators by nominators as an offchain process, validators have a significant amount of time to calculate the new active validator set and allocate the nominators in an optimal manner.
+
+There are several further restrictions put in place to limit the complexity of the election and payout. As already mentioned, any given nominator can only select up to 16 validators to nominate. Conversely, a single validator can have only 64 nominators. A drawback to this is that it is possible, if the number of nominators is very high or the number of validators is very low, that all available validators may be "saturated" and unable to accept more nominations. In this case, one may need a larger amount of stake to participate in staking, since nominations are priority-ranked in terms of amount of stake.
 
 ## External Resources
 

@@ -39,13 +39,12 @@ Here's how it works in detail:
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
 Slots make up epochs - on Kusama, 2400 slots make one epoch, which makes epochs four hours long.
 
-In every slot, each validator "rolls a die". They execute a function (the VRF) which takes as input
+In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
 the following:
 
-- **The "secret key"**, a key specifically made for these die rolls and which gets regenerated in
-  every new slot.
-- **The hash of VRF values from the blocks in the epoch before last (N-2)**, so past randomness has
-  an effect on the current pending randomness (N).
+- **The "secret key",** a key specifically made for these die rolls.
+- **An epoch randomness value,** which is The hash of VRF values from the blocks in the epoch before
+  last (N-2), so past randomness has an effect on the current pending randomness (N).
 - **The slot number.**
 
 ![](assets/VRF_babe.png)
@@ -60,7 +59,7 @@ attempts to create a block and submits this block into the network along with th
 obtained `PROOF` and `RESULT`.
 
 The fishermen - nodes watching the network for collator and validator wrongdoing - will be verifying
-relay chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will
+Relay Chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will
 have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for
 them to automatically report cheating validators.
 
@@ -88,13 +87,13 @@ RANDAO is optionally augmented with VDF.
 
 ### VDFs
 
-[Verifiable Delay Functions](https://vdfresearch.org/) are computations which take a prescribed
-duration of time to complete, even on parallel computers. They produce unique output which can be
+[Verifiable Delay Functions](https://vdfresearch.org/) are computations that take a prescribed
+duration of time to complete, even on parallel computers. They produce unique output that can be
 independently and efficiently verified in a public setting. By feeding the result of RANDAO into a
-VDF, a delay is introduced which renders any attacker's attempt at influencing the current
-randomness obsolete.
+VDF, a delay is introduced that renders any attacker's attempt at influencing the current randomness
+obsolete.
 
-VDFs will likely be implemented through ASIC devices which need to be run separately from the other
+VDFs will likely be implemented through ASIC devices that need to be run separately from the other
 types of nodes. Although only one is enough to keep the system secure, and they will be open source
 and distributed at nearly no charge, running them is neither cheap nor incentivized, producing
 unneccessary friction for users of the blockchains opting for this method.

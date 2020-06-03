@@ -25,7 +25,7 @@ the right side of the window there are two blue buttons, click on the one that s
 
 ![](assets/council/vote.png)
 
-Since the council uses approval voting, when you vote you signal which of the validators you approve
+Since the council uses approval voting, when you vote you signal which of the candidates you approve
 of and your voted tokens will be equalized among the selected candidates. Select up to 16 council
 candidates by moving the slider to "Aye" for each one that you want to be elected. When you've made
 the proper configuration submit your transaction.

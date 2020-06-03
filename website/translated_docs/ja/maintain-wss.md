@@ -22,7 +22,7 @@ git clone https://github.com/paritytech/polkadot kusama
 cd kusama
 ./scripts/init.sh
 cargo build --release
-/target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
+./target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
 ```
 
 This will start the syncing process with Kusama's mainnet.
@@ -56,7 +56,7 @@ Now it's time to tell Nginx to use these certificates. The server block below is
 
 - `SERVER_ADDRESS` should be replaced by your domain name if you have it, or your server's IP address if not.
 - `CERT_LOCATION` should be `/etc/letsencrypt/live/YOUR_DOMAIN/fullchain.pem` if you used Certbot, or `/etc/ssl/certs/nginx-selfsigned.crt` if self-signed.
-- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem;` if you used Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
+- `CERT_LOCATION_KEY` should be `/etc/letsencrypt/live/YOUR_DOMAIN/privkey.pem` if you used Certbot, or `/etc/ssl/private/nginx-selfsigned.key` if self-signed.
 - `CERT_DHPARAM` should be `/etc/letsencrypt/ssl-dhparams.pem` if you used Certbot, and `/etc/ssl/certs/dhparam.pem` if self-signed.
 
 _Note that if you used Certbot, it should have made the path insertions below for you if you followed the [official instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
@@ -66,7 +66,7 @@ server {
 
         server_name SERVER_ADDRESS;
 
-        root /var/www/node;
+        root /var/www/html;
         index index.html;
 
         location / {

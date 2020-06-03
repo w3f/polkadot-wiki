@@ -46,7 +46,7 @@ stored in the Treasury can be sent to teams working on relevant projects for the
 ### DOTs for governance
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some
-functions which are included under the governance mechanism include determining the fees of the
+functions that are included under the governance mechanism include determining the fees of the
 network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to
 the Polkadot platform.
 
@@ -61,7 +61,7 @@ platform to function and allow for valid transactions to be carried out across p
 will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via
 staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious
 participants whom will be punished by the network by getting their DOTs slashed. The DOTs required
-to participate in the network will vary depending on the activity which is being performed, the
+to participate in the network will vary depending on the activity that is being performed, the
 duration the DOTs will be staked for, and the total number of DOTs staked.
 
 ### DOTs for bonding
@@ -131,13 +131,12 @@ beside allowing you to experiment with the network.
 
 The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain
 its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom
-[#westend_faucet:matrix.org](https://riot.w3f.tech/#westend_faucet:matrix.org).
+[#westend_faucet:matrix.org](https://riot.w3f.tech/#/room/#westend_faucet:matrix.org).
 
 You can also make your own DOTs by [becoming a validator](maintain-validator).
 
 ## Kusama Tokens
 
 Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the
-[claims process](https://claim.kusama.network/) (if you have already purchased DOTs), the
-[frictional faucet](https://guide.kusama.network/en/latest/start/faucet/), or via
-[grant request](http://grants.web3.foundation) from the Web3 Foundation.
+[claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the
+[Treasury](learn-treasury).

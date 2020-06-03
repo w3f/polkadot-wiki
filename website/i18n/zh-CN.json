@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "下一页",
     "previous": "上一页",
-    "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
+    "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
     "docs": {
       "build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
@@ -34,24 +34,24 @@
         "sidebar_label": "开发者专页"
       },
       "build-node-interaction": {
-        "title": "Node Interaction",
-        "sidebar_label": "Node Interaction"
+        "title": "节点互动",
+        "sidebar_label": "节点互动"
       },
       "build-node-management": {
-        "title": "Node Management",
-        "sidebar_label": "Node Management"
+        "title": "节点管理",
+        "sidebar_label": "节点管理"
       },
       "build-oracle": {
-        "title": "Oracles",
-        "sidebar_label": "Oracles"
+        "title": "预言机",
+        "sidebar_label": "预言机"
       },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
       },
       "build-protocol-info": {
-        "title": "Polkadot Protocol Information",
-        "sidebar_label": "Polkadot Protocol"
+        "title": "Polkadot 协议资料",
+        "sidebar_label": "Polkadot 协议"
       },
       "build-smart-contracts": {
         "title": "智能合约",
@@ -62,8 +62,12 @@
         "sidebar_label": "工具索引"
       },
       "build-transaction-construction": {
-        "title": "Transaction Construction and Signing",
-        "sidebar_label": "Transaction Construction"
+        "title": "交易创建和签名",
+        "sidebar_label": "交易创建"
+      },
+      "claims": {
+        "title": "Polkadot 认领",
+        "sidebar_label": "认领"
       },
       "community": {
         "title": "社区",
@@ -90,48 +94,48 @@
         "sidebar_label": "Adverserial Cheatsheet"
       },
       "kusama-bug-bounty": {
-        "title": "Bug Bounty",
-        "sidebar_label": "Bug Bounty"
+        "title": "漏洞奖励计画",
+        "sidebar_label": "漏洞奖励计画"
       },
       "kusama-claims": {
-        "title": "Kusama Claims",
-        "sidebar_label": "Claims"
+        "title": "Kusama 领取",
+        "sidebar_label": "领取"
       },
       "kusama-coc": {
-        "title": "Kusama Code of Conduct",
-        "sidebar_label": "Code of Conduct"
+        "title": "Kusama 守则",
+        "sidebar_label": "守则"
       },
       "kusama-community": {
-        "title": "Kusama Community",
-        "sidebar_label": "Community"
+        "title": "Kusama 社区",
+        "sidebar_label": "社区"
       },
       "kusama-endpoints": {
         "title": "Kusama Endpoints",
         "sidebar_label": "Kusama Endpoints"
       },
       "kusama-faucet": {
-        "title": "Kusama Faucet",
-        "sidebar_label": "Faucet"
+        "title": "Kusama 水龙头",
+        "sidebar_label": "水龙头"
       },
       "kusama-index": {
         "title": "Kusama",
-        "sidebar_label": "Home"
+        "sidebar_label": "主页"
       },
       "kusama-time-periods": {
         "title": "Time Period Cheat Sheet",
-        "sidebar_label": "Parameters"
+        "sidebar_label": "参数"
       },
       "kusama-timeline": {
-        "title": "Kusama Timeline",
-        "sidebar_label": "Timeline"
+        "title": "Kusama 时间线",
+        "sidebar_label": "时间线"
       },
       "learn-account-generation": {
-        "title": "Account Generation",
-        "sidebar_label": "Account Generation"
+        "title": "创建帐户",
+        "sidebar_label": "创建帐户"
       },
       "learn-accounts": {
-        "title": "Polkadot Accounts",
-        "sidebar_label": "Polkadot Accounts"
+        "title": "Polkadot 账户",
+        "sidebar_label": "Polkadot 账户"
       },
       "learn-architecture": {
         "title": "Polkadot 架构",
@@ -142,27 +146,27 @@
         "sidebar_label": "平行链插槽拍卖"
       },
       "learn-availability": {
-        "title": "Availability and Validity",
-        "sidebar_label": "Availability and Validity"
+        "title": "可用性和有效性",
+        "sidebar_label": "可用性和有效性"
       },
       "learn-bridges": {
         "title": "桥接",
         "sidebar_label": "桥接"
       },
       "learn-comparisons-dfinity": {
-        "title": "Polkadot and Dfinity",
+        "title": "Dfinity 与 Polkadot 区别",
         "sidebar_label": "Dfinity"
       },
       "learn-comparisons-ethereum-2": {
-        "title": "Polkadot and Ethereum 2.0",
-        "sidebar_label": "Ethereum 2.0"
+        "title": "Polkadot 和 以太坊 2.0",
+        "sidebar_label": "以太坊 2.0"
       },
       "learn-comparisons-cosmos": {
-        "title": "Polkadot and Cosmos",
+        "title": "Polkadot 与 Cosmos",
         "sidebar_label": "Cosmos"
       },
       "learn-comparisons": {
-        "title": "Polkadot Comparisons",
+        "title": "与其它区块链比较",
         "sidebar_label": "与其它比较"
       },
       "learn-consensus": {
@@ -170,8 +174,8 @@
         "sidebar_label": "Polkadot 共识机制"
       },
       "learn-crosschain": {
-        "title": "Cross-chain Message Passing (XCMP)",
-        "sidebar_label": "Cross-chain Message Passing (XCMP)"
+        "title": "跨链消息传递 (XCMP)",
+        "sidebar_label": "跨链消息传递 (XCMP)"
       },
       "learn-cryptography": {
         "title": "密码学讲解",
@@ -190,8 +194,8 @@
         "sidebar_label": "治理"
       },
       "learn-identity": {
-        "title": "Identity",
-        "sidebar_label": "Identity"
+        "title": "身份",
+        "sidebar_label": "身份"
       },
       "learn-implementations": {
         "title": "其它程序语言实现",
@@ -204,6 +208,10 @@
       "learn-keys": {
         "title": "密匙",
         "sidebar_label": "密匙"
+      },
+      "learn-launch": {
+        "title": "Polkadot 上线流程",
+        "sidebar_label": "Polkadot 上线流程"
       },
       "learn-parachains": {
         "title": "平行链",
@@ -218,8 +226,8 @@
         "sidebar_label": "顺序弗拉格曼方法"
       },
       "learn-polkadot-host": {
-        "title": "Polkadot Host (PH)",
-        "sidebar_label": "Polkadot Host (PH)"
+        "title": "Polkadot 主机 (PH)",
+        "sidebar_label": "Polkadot 主机 (PH)"
       },
       "learn-randomness": {
         "title": "随机性",
@@ -250,8 +258,8 @@
         "sidebar_label": "抵押"
       },
       "learn-transaction-fees": {
-        "title": "Transaction Fees",
-        "sidebar_label": "Transaction Fees"
+        "title": "交易费用",
+        "sidebar_label": "交易费用"
       },
       "learn-treasury": {
         "title": "财政库",
@@ -266,12 +274,12 @@
         "sidebar_label": "收集人"
       },
       "maintain-errors": {
-        "title": "Errors and How to Resolve Them",
-        "sidebar_label": "Resolving Errors"
+        "title": "错误和如何解决",
+        "sidebar_label": "解决错误"
       },
       "maintain-guides-democracy": {
-        "title": "Participate in Democracy",
-        "sidebar_label": "Participate in Democracy"
+        "title": "参与民主权利",
+        "sidebar_label": "参与民主权利"
       },
       "maintain-guides-how-to-join-council": {
         "title": "加入议会",
@@ -283,31 +291,39 @@
       },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "成为提名人 (Kusama)",
-        "sidebar_label": "Nominator Guide"
+        "sidebar_label": "成为提名人 (Kusama)"
+      },
+      "maintain-guides-how-to-nominate-polkadot": {
+        "title": "成为提名人 (Polkadot)",
+        "sidebar_label": "成为提名人 (Polkadot)"
       },
       "maintain-guides-how-to-setup-sentry-node": {
-        "title": "Set Up a Sentry Node - Public Node",
-        "sidebar_label": "Set Up a Sentry Node"
+        "title": "设置哨兵节点",
+        "sidebar_label": "设置哨兵节点"
       },
       "maintain-guides-how-to-systemd": {
         "title": "如何把节点设定为 `systemd` 进程运行",
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
       "maintain-guides-how-to-unbond": {
-        "title": "Stop Being a Nominator",
-        "sidebar_label": "Stop Being a Nominator"
+        "title": "停止作为提名人",
+        "sidebar_label": "停止作为提名人"
       },
       "maintain-guides-how-to-upgrade": {
         "title": "如何升级验证人节点",
         "sidebar_label": "如何升级验证人节点"
       },
       "maintain-guides-how-to-use-polkadot-secure-validator": {
-        "title": "How to use Polkadot Secure Validator Setup",
-        "sidebar_label": "How to use Polkadot Secure Validator Setup"
+        "title": "如何使用 Polkadot 安全验证人设置",
+        "sidebar_label": "如何使用 Polkadot 安全验证人设置"
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "验证人指南"
+      },
+      "maintain-guides-how-to-validate-polkadot": {
+        "title": "运行验证人 (Polkadot)",
+        "sidebar_label": "验证人指南"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
@@ -334,16 +350,16 @@
         "sidebar_label": "网络维护者"
       },
       "maintain-networks": {
-        "title": "Networks",
-        "sidebar_label": "Networks"
+        "title": "网络",
+        "sidebar_label": "网络"
       },
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
       },
       "maintain-sync": {
-        "title": "Set up a Full Node",
-        "sidebar_label": "Set up a Full Node"
+        "title": "设置全节点",
+        "sidebar_label": "设置全节点"
       },
       "maintain-validator": {
         "title": "验证人",
@@ -354,32 +370,32 @@
         "sidebar_label": "Set up Secure WebSocket for Remote Connections"
       },
       "mirror-build-build-with-polkadot": {
-        "title": "Polkadot Builders Starter's Guide",
-        "sidebar_label": "Polkadot Builders Starter's Guide"
+        "title": "Polkadot 開發者入门指南",
+        "sidebar_label": "Polkadot 開發者入门指南"
       },
       "mirror-learn-governance": {
-        "title": "Governance",
-        "sidebar_label": "Governance"
+        "title": "治理",
+        "sidebar_label": "治理"
       },
       "mirror-learn-identity": {
-        "title": "Identity",
-        "sidebar_label": "Identity"
+        "title": "身份",
+        "sidebar_label": "身份"
       },
       "mirror-learn-treasury": {
-        "title": "Treasury",
-        "sidebar_label": "Treasury"
+        "title": "国库",
+        "sidebar_label": "国库"
       },
       "mirror-maintain-errors": {
-        "title": "Errors and How to Resolve Them",
-        "sidebar_label": "Resolving Errors"
+        "title": "错误和如何解决",
+        "sidebar_label": "解决错误"
       },
       "mirror-maintain-guides-how-to-nominate-kusama": {
-        "title": "Be a Nominator (Kusama)",
-        "sidebar_label": "Nominator Guide"
+        "title": "成为提名人 (Kusama)",
+        "sidebar_label": "成为提名人 (Kusama)"
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
-        "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Validator Guide"
+        "title": "运行验证人 (Kusama)",
+        "sidebar_label": "验证人指南"
       },
       "news": {
         "title": "新闻",
@@ -393,7 +409,7 @@
     "links": {
       "Build": "建立",
       "Learn": "学习",
-      "Maintain ": "Maintain ",
+      "Maintain ": "参与 ",
       "Kusama": "Kusama"
     },
     "categories": {

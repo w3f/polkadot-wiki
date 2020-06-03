@@ -18,4 +18,4 @@ There are Polkadot implementations developed in Rust, C++, Go, and JavaScript.
 
 As stated in the Soramitsu grant announcement:
 
-> It is critically important to have multiple implementations of the Polkadot protocol for a number of reasons, including decentralization, knowledge dispersion, and better definitions of the protocol... Multiple implementations of Polkadot improves network resilience and adds to the decentralization of the network. The governance of the network is more democratized when multiple teams build clients which run the nodes in the network.
+> It is critically important to have multiple implementations of the Polkadot protocol for a number of reasons, including decentralization, knowledge dispersion, and better definitions of the protocol... Multiple implementations of Polkadot improves network resilience and adds to the decentralization of the network. The governance of the network is more democratized when multiple teams build clients that run the nodes in the network.

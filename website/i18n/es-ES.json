@@ -65,6 +65,10 @@
         "title": "Transaction Construction and Signing",
         "sidebar_label": "Transaction Construction"
       },
+      "claims": {
+        "title": "Polkadot Claims",
+        "sidebar_label": "Claims"
+      },
       "community": {
         "title": "Community",
         "sidebar_label": "Community"
@@ -205,6 +209,10 @@
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
+      "learn-launch": {
+        "title": "Polkadot Launch Phases",
+        "sidebar_label": "Polkadot Launch Phases"
+      },
       "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"
@@ -285,6 +293,10 @@
         "title": "Be a Nominator (Kusama)",
         "sidebar_label": "Nominator Guide"
       },
+      "maintain-guides-how-to-nominate-polkadot": {
+        "title": "Nomination Guide",
+        "sidebar_label": "Nomination Guide"
+      },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Set Up a Sentry Node - Public Node",
         "sidebar_label": "Set Up a Sentry Node"
@@ -307,6 +319,10 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
+        "sidebar_label": "Validator Guide"
+      },
+      "maintain-guides-how-to-validate-polkadot": {
+        "title": "Run a Validator (Polkadot)",
         "sidebar_label": "Validator Guide"
       },
       "maintain-guides-how-to-validate-alexander": {

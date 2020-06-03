@@ -1,9 +1,9 @@
 ---
-id: maintain-guides-how-to-validate-alexander
-title: Run a Validator (Alexander)
-sidebar_label: Run a Validator (Alexander)
+id: maintain-guides-how-to-validate
+title: Запустить валидатор (Alexander)
+sidebar_label: Запустить валидатор (Alexander)
 ---
 
-**The Alexander testnet (PoC-4) has been deprecated.**
+**Тестовая сеть Alexander (POC-4) была удалена.**
 
-If you are interested in validating, please see our page on [how to validate on Kusama](maintain-guides-how-to-validate-kusama).
+Если вы заинтересованы в валидации, пожалуйста, посетите нашу страницу [Как валидировать на Kusama](maintain-guides-how-to-validate-kusama).

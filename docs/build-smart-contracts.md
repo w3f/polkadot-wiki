@@ -4,7 +4,7 @@ title: Smart Contracts
 sidebar_label: Smart Contracts
 ---
 
-The Polkadot relay chain will not support smart contracts natively. However, parachains on Polkadot
+The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot
 will support smart contracts. There are already announced projects such as
 [Edgeware](https://edgewa.re), and thanks to the Substrate built-in
 [contract pallet](https://crates.parity.io/pallet_contracts/index.html), it is likely that more
@@ -30,7 +30,7 @@ contract example? Ask us to add it to this page!
 
 ### Layer of Abstraction
 
-When you write a smart contract you are creating the instructions which will be deployed and
+When you write a smart contract you are creating the instructions that will be deployed and
 associated to a specific chain address.
 
 In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a
@@ -39,7 +39,7 @@ state transition function).
 Smart contracts must consciously implement upgradeability while parachains will have the ability to
 swap out their code entirely through a root command or via the governance pallet.
 
-When you build a smart contract, it will be eventually be deployed to a target chain with its own
+When you build a smart contract, it will eventually be deployed to a target chain with its own
 environment. Parachains allow the developer to declare the environment of their own chain, even
 allowing others to write smart contracts for it.
 
@@ -59,7 +59,7 @@ contract is rolled back.
 Parachains can implement arbitrarily powerful programming languages and also contain no notion of
 gas for their own native logic. This means that some functionality is easier to implement for the
 developer, but it also means there are some constructs, such as a loop without a terminating
-condition, which should _never_ be implemented. Leaving certain logic, such as complex loops which
+condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that
 could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it
 entirely, will often be a wiser choice.
 

@@ -34,4 +34,4 @@ As stated in the Soramitsu grant announcement:
 > of reasons, including decentralization, knowledge dispersion, and better definitions of the
 > protocol... Multiple implementations of Polkadot improves network resilience and adds to the
 > decentralization of the network. The governance of the network is more democratized when multiple
-> teams build clients which run the nodes in the network.
+> teams build clients that run the nodes in the network.

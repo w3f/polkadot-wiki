@@ -4,30 +4,30 @@ title: Cumulus
 sidebar_label: Cumulus
 ---
 
-> Cumulus clouds are shaped sort of like dots and are up in the air, like this project (as it is an initial prototype -- expect a rename when it gets cooler.)
+> Cumulus 云像点状浮在空中，跟这个项目很相像（因为以 Cumulus 云为原型故得名——待项目发展得更酷，我们可能会对它重新命名，敬请期待。）
 
-[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
+[Cumulus](https://github.com/paritytech/cumulus)是对 Substrate 的扩展，可以轻松将任何 Substrate 构建的 runtime 转换为与 Polkadot 兼容的平行链。
 
 ## 组件
 
-### Cumulus共识
+### Cumulus 共识
 
-_cumulus-consensus_ is a consensus engine for Substrate which follows a Polkadot relay chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
 
 ### Cumulus Runtime
 
-A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface which will be called by validators.
+A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface, which will be called by validators.
 
-Integrating it into your substrate runtime will be as easy as importing the crate and adding this one line macro to your code.
+将它集成到 substrate runtime 就像导入 crate 包并将这一行宏添加到代码中一样简单。
 
 ```rust
 runtime::register_validate_block!(Block, BlockExecutor);
 ```
 
-### Cumulus Collator
+### Cumulus 收集人
 
-计划为平行链的Polkadot收集人。
+计划为平行链的 Polkadot 收集人。
 
 ## 资源
 
-- [以太坊社区大会上Rob介绍Cumulus的谈话](https://www.youtube.com/watch?v=thgtXq5YMOo)
+- [以太坊社区大会上 Rob 介绍 Cumulus 的谈话](https://www.youtube.com/watch?v=thgtXq5YMOo)

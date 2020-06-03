@@ -152,7 +152,7 @@ validator. If you want to run with a specific name, this is where you would ente
 Under the `polkadotBinary.url` field you can provide the release that is hosted in the [W3F
 repository][w3f polkadot] or use an alternate one that you build and publish yourself.
 
-By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter][] which will
+By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter][], which will
 expose hardware-level metrics of your node in a format compatible with Prometheus.
 
 The field `machineType:` will configure the machine's hardware specifications, check

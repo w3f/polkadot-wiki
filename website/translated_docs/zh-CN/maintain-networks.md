@@ -1,77 +1,77 @@
 ---
 id: maintain-networks
-title: Networks
-sidebar_label: Networks
+title: 网络
+sidebar_label: 网络
 ---
 
-Polkadot is built on top of Substrate, a modular framework for blockchains. One feature of Substrate is to allow for connection to different networks using a single executable and configuring it with a start-up flag. Here are some of the networks associated with Polkadot or Substrate that you may want to connect to and join.
+Polkadot 是建立在 Substrate 上面，Substrate 是个区块链框架。 Substrate 的其中一个功能是允许使用单个可执行文件并配置它一个启动标志连接到不同的网络。 这里是一些与 Polkadot 或 Substrate 相关联的网络。您可能想连接并加入。
 
-## Polkadot Networks
+## Polkadot 网络
 
-To connect to a Polkadot network please follow the [instructions](maintain-sync) for installing the Polkadot executable.
+若要连接到 Polkadot 网络，请按照 [说明](maintain-sync) 安装 Polkadot 可执行程序。
 
-### Polkadot Mainnet
+### Polkadot 主网
 
-The Polkadot mainnet is not released yet. Instructions will be here once the network is available.
+Polkadot 主网尚未发布。一旦主网上线， 简介将在此处。
 
-### Kusama Canary Network
+### Kusama Canary 网络
 
-The Kusama canary network is an early, unaudited version of Polkadot that is running today and holds real economic value.
+Kusama 网络是个早期未经审核的 Polkadot 版本，今天正在运行，拥有真正的经济价值。
 
-Currently Kusama is built from the tip of master and is the default option when starting a node.
+Kusama 目前是通过掌握技巧构建的，是启动节点时的默认选项。
 
-Run the Polkadot binary:
+执行 Polkadot binary：
 
 ```
 polkadot
 ```
 
-and you will connect and start syncing to Kusama.
+并且您将连接和开始同步到 Kusama。
 
-Check your node is connected by viewing it on [Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3).
+通过在 [Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) 查看您的节点是否已经连接。
 
-### Westend Test Network
+### Western 测试网络
 
-Westend is the latest test network for Polkadot. The tokens on this network are called _Westies_ and they purposefully hold no economic value.
+Westend 是 Polkadot 的最新测试网络。 此网络上的代币叫做 _Westies_ 和没有经济价值。
 
-Currently Westend is built from the tip of master and requires a commandline flag to access.
+Westend 目前是从 master 构建的，并且需要命令行标志才能访问。
 
-Run the Polkadot binary with a `chain` option:
+执行 Polkadot 时，使用 `chain` 选项：
 
 ```
 polkadot --chain westend
 ```
 
-and you will connect and start syncing to Westend.
+并且您将连接并开始同步 Westend。
 
-#### Westend Faucet
+#### Westend 水龙头
 
-Follow the instruction [here](learn-DOT#getting-westies) for instructions on acquiring Westies.
+按照[此处](learn-DOT#getting-westies)的说明获取有关 Westies 的说明。
 
-Check your node is connected by viewing it on [Telemetry](https://telemetry.polkadot.io/#list/Westend).
+通过在 [Telemetry](https://telemetry.polkadot.io/#list/Westend) 查看您的节点是否已经连接。
 
-## Substrate Networks
+## Substrate 网络
 
-To connect to a Substrate public network first follow the [instructions](https://www.substrate.io/kb/getting-started) for installing the Substrate executable.
+若要连接到 Substrate 网络，请按照 [说明](https://www.substrate.io/kb/getting-started) 安装 Substrate 可执行程序。
 
 ### Flaming Fir
 
-Flaming Fir is the public Substrate test network. It contains some pallets that will not be included in the Polkadot runtime.
+Flaming Fir 是公开的 Substrate 测试网络。它包含一些不在 Polkadot runtime 包含的 pallets。
 
-Flaming Fir is built from the tip of master and is the default option when running the Substrate executable.
+Flaming Fir 是从 master 构建的，是运行 Substrate 时的默认选项。
 
-Run Substrate without a flag or explicitly state `fir`:
+运行 Substrate 不带标志或表明状态 `fir`:
 
 ```
 substrate --chain fir
 ```
 
-and you will connect and start syncing Flaming Fir.
+并且您将连接并开始同步 Flaming Fir。
 
-## Telemetry Dashboard
+## Telemetry 监察
 
-If you connect to the public networks, the default configuration for your node will connect it to the public [Telemetry](https://telemetry.polkadot.io/) service.
+如果您连接到公開网络，节点的默认配置将连接到公開 [Telemetry](https://telemetry.polkadot.io/) 服务。
 
-You can verify that your node is connected by navigating to the correct network on the dashboard and finding the name of your node.
+您可以通过正确的网络网页上找到您的节点名称来验证您的节点是否已连接。
 
-There is a built-in search function for the nodes page. Simply start typing keystrokes in the main window to make it available.
+节点页面有个内置的搜索功能。只需在主窗口中输入即可使用。
