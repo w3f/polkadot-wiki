@@ -181,7 +181,7 @@ modules (e.g. staking, governance, etc.) that can be included in a chain's STF. 
 top of Tendermint.
 
 The primary development framework for parachains is
-[Substrate](https://www.substrate.io/kb/learn-substrate), written in Rust. Substrate comes with
+[Substrate](https://substrate.dev/docs/en/knowledgebase/learn-substrate), written in Rust. Substrate comes with
 FRAME, a set of about 35 modules (called "pallets") to use in a chain's STF. Beyond simply using the
 pallets, Substrate adds a further layer of abstraction that allows developers to compose FRAME's
 pallets by adding custom modules and configuring the parameters and initial storage values for the

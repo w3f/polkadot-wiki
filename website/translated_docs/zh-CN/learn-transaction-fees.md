@@ -80,6 +80,6 @@ Polkadot 使用缓慢调整费用机制并提供小费来平衡这两个考虑�
 ## 了解更多
 
 - \[Web3 Foundation Research\](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#Relay Chain-transaction-fees-and-per-block-transaction-limits)
-- [Substrate Weights](https://www.substrate.io/kb/learn-substrate/weight)
-- [Substrate 费用](https://www.substrate.io/kb/runtime/fees)
-- [交易 (Extrinsics)](https://www.substrate.io/kb/learn-substrate/extrinsics)
+- [Substrate Weights](https://substrate.dev/docs/en/knowledgebase/learn-substrate/weight)
+- [Substrate 费用](https://substrate.dev/docs/en/knowledgebase/runtime/fees)
+- [交易 (Extrinsics)](https://substrate.dev/docs/en/knowledgebase/learn-substrate/extrinsics)

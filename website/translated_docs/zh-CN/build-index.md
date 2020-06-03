@@ -29,7 +29,7 @@ Wiki 的这个部分分为以下:
 ## 工具
 
 - [工具](build-tools-index)-维护的工具。
-- [ Subkey ](https://www.substrate.io/kb/integrate/subkey) - 用于生成密钥的程序。
+- [ Subkey ](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) - 用于生成密钥的程序。
 
 ## 资源
 
