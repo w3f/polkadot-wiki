@@ -32,7 +32,7 @@ guides to set up a node and run the network.
 ## Validator
 
 - [Validator Home](maintain-validator) - High level overview of validator and related links.
-- [Validator Payouts](maintain-guides-validator-payouts) - Overview on how validator rewards are
+- [Validator Payouts](maintain-guides-validator-payout) - Overview on how validator rewards are
   calculated and paid.
 - [Validation Guide (Polkadot)](maintain-guides-how-to-validate-polkadot) - Walkthrough on how to
   validate on the Polkadot network.
