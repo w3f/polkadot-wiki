@@ -542,9 +542,9 @@ possible. It then runs an edge-reducing algorithm to minimize the number of vali
 nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an
-[off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to
-give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed
-in the last quarter of each era.
+[off-chain worker](https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-workers).
+In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are
+not allowed in the last quarter of each era.
 
 These optimizations will not be covered in-depth on this page. For more details, you can view the
 [Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs),

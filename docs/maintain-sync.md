@@ -10,8 +10,9 @@ always better to rely on your own infrastructure than on a third-party-hosted on
 decentralized world.
 
 This guide will show you how to connect to [Kusama network](https://kusama.network), but the same
-process applies to any other [Substrate](https://www.substrate.io/kb/learn-substrate)-based chain.
-First, let's clarify the term _full node_.
+process applies to any other
+[Substrate](https://substrate.dev/docs/en/knowledgebase/learn-substrate)-based chain. First, let's
+clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -99,8 +100,9 @@ https://github.com/paritytech/substrate-light-ui
 
 ## Get Substrate
 
-Follow instructions as outlined [here](https://www.substrate.io/kb/getting-started) - note that
-Windows users will have their work cut out for them. It's better to use a virtual machine instead.
+Follow instructions as outlined
+[here](https://substrate.dev/docs/en/knowledgebase/getting-started) - note that Windows users will
+have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
 

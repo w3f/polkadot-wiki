@@ -26,7 +26,8 @@ application in anticipation of the Polkadot mainnet launch later this year.
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://www.substrate.io/kb/smart-contracts))
+- ink!: **In development**
+  ([Documentation](https://substrate.dev/docs/en/knowledgebase/smart-contracts))
 
 ## What you need to know
 
@@ -153,8 +154,8 @@ includes a library of modular plug-ins from which you can compose your chain log
 write your own pallets to use or publish to the community.
 
 The best way to get started with Substrate is to explore the
-[Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate), an online resource built
-and maintained by Parity Technologies.
+[Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate), an online
+resource built and maintained by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you
 have a solid understanding, you can challenge yourself by progressing through the Substratekitties

@@ -322,7 +322,7 @@ asked in the Polkadot Watercooler Riot channel and answered by Polkadot founder 
 - [Can I run multiple Validators with the same Session Key?](https://www.reddit.com/r/dot/comments/bcqrx9/answered_by_gav_can_i_run_multiple_validators/)
 - [How to tackle the concentration risk of Validators in data centers?](https://www.reddit.com/r/dot/comments/bcqwit/answered_by_gav_how_to_tackle_the_concentration/)
 
-[fee calculation]: https://www.substrate.io/kb/runtime/fees
+[fee calculation]: https://substrate.dev/docs/en/knowledgebase/runtime/fees
 [libp2p]: https://libp2p.io
 [nim libp2p]: https://github.com/status-im/nim-libp2p
 [libp2p github]: https://github.com/libp2p

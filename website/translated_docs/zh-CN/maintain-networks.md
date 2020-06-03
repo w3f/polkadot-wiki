@@ -52,7 +52,7 @@ polkadot --chain westend
 
 ## Substrate 网络
 
-若要连接到 Substrate 网络，请按照 [说明](https://www.substrate.io/kb/getting-started) 安装 Substrate 可执行程序。
+若要连接到 Substrate 网络，请按照 [说明](https://substrate.dev/docs/en/knowledgebase/getting-started) 安装 Substrate 可执行程序。
 
 ### Flaming Fir
 

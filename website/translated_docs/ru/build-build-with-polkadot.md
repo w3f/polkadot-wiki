@@ -17,7 +17,7 @@ Polkadot - это протокол блокчейна с двумя целями
 - Текущая тестовая сеть: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **в разработке** ([Доступно демо](https://github.com/paritytech/cumulus))
-- ink!: **в разработке** ([Documentation](https://www.substrate.io/kb/smart-contracts))
+- ink!: **в разработке** ([Documentation](https://substrate.dev/docs/en/knowledgebase/smart-contracts))
 
 ## Что Вам нужно знать?
 
@@ -77,7 +77,7 @@ Parathreads are like parachains and enable the developer to have lower-level con
 
 Субстрат - это базовый каркас, на котором строится сам Polkadot. Это набор инструментов для блокчейн-новаторов, который обеспечивает необходимые строительные блоки для построения цепочки. Он включает в себя библиотеку модульных плагинов, из которых Вы можете составить свою блокчейн логику и позволяет Вам писать свои собственные паллеты для использования или публикации в сообществе.
 
-Лучший способ начать работу с Substrate - исследовать [Центр разработки Substrate](https://www.substrate.io/kb/learn-substrate), онлайн-ресурс созданный и поддерживаемый Parity Technologies.
+Лучший способ начать работу с Substrate - исследовать [Центр разработки Substrate](https://substrate.dev/docs/en/knowledgebase/learn-substrate), онлайн-ресурс созданный и поддерживаемый Parity Technologies.
 
 Мы рекомендуем Вам покопаться там, чтобы ознакомиться с общими шаблонами. Как только у Вас появится твердое понимание, Вы можете бросить вызов себе, пройдя через мастер-класс Substrate kitties, а затем перейдя к учебнику TCR Dappchain или любому другому.
 
