@@ -55,8 +55,8 @@ sidebar_label: Links
   network. Parity also maintains a client for
   [Bitcoin](https://github.com/paritytech/parity-bitcoin) and developed and released
   [Zebra](https://github.com/ZcashFoundation/zebra), a rust implementation of a zcash node.
-- [Substrate Developer Hub](https://substrate.dev/docs/en/knowledgebase/learn-substrate) - Overviews, tutorials and
-  reference documentation for Substrate.
+- [Substrate Developer Hub](https://substrate.dev/docs/en/knowledgebase/learn-substrate) -
+  Overviews, tutorials and reference documentation for Substrate.
 - [Substrate Intro](https://youtu.be/iUMZyL5kTwc) - Dr. Gavin Wood presents Substrate, one of the
   technologies underlying Polkadot.
 - [How Substrate relates to Polkadot](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) -

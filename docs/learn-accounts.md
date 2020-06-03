@@ -85,8 +85,8 @@ Other than the extension and the default UI, Polkadot and Kusama addresses can a
 the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
 intended for users comfortable with using the command line and can seem intimidating, but is quite
 approachable. Follow the instructions in the
-[Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey). When used properly, Subkey is
-the **most secure** available method of creating an account.
+[Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey). When used
+properly, Subkey is the **most secure** available method of creating an account.
 
 There is also the very secure [Parity Signer](https://www.parity.io/signer/) but it currently only
 supports Kusama addresses, not Polkadot or generic Substrate.
