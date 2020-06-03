@@ -18,9 +18,9 @@ are able to build new blocks.
 
 ## What are PoW and PoS?
 
-Proof of Work (PoW) and Proof of Stake (PoS) have been used as short hand to refer to consensus
-mechanisms of blockchains, but that does not capture the full picture. PoW is the method for
-agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that
+Proof of Work (PoW) and Proof of Stake (PoS) have been inaccurately used as short hand to refer to
+consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method
+for agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that
 also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a
 set of rules for selecting the validator set and does not specify a chain selection rule or how a
 chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for
@@ -29,9 +29,9 @@ a practical Byzantine fault tolerant algorithm that uses PoS as its validator se
 
 ## Why not Proof of Work?
 
-Although simple and effective in coming to a decentralized consensus, proof of work consensus
-consumes an incredible amount of energy, has no economic or provable finality, and has no effective
-strategy in resisting cartels.
+Although simple and effective in coming to a decentralized consensus on the next block producer,
+proof of work with Nakamoto consensus consumes an incredible amount of energy, has no economic or
+provable finality, and has no effective strategy in resisting cartels.
 
 ## Probabilistic vs. provable finality
 
