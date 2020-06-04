@@ -52,7 +52,7 @@ Check your node is connected by viewing it on [Telemetry](https://telemetry.polk
 
 ## Substrate Networks
 
-To connect to a Substrate public network first follow the [instructions](https://www.substrate.io/kb/getting-started) for installing the Substrate executable.
+To connect to a Substrate public network first follow the [instructions](https://substrate.dev/docs/en/knowledgebase/getting-started) for installing the Substrate executable.
 
 ### Flaming Fir
 
