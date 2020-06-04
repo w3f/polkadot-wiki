@@ -37,7 +37,7 @@ Polkadot supports the following [cryptographic](learn-cryptography) key pairs an
 algorithms:
 
 - Ed25519
-- Sr25519 - Schorr signatures on the Ristretto group
+- Sr25519 - Schnorr signatures on the Ristretto group
 - ECDSA signatures on secp256k1
 
 Note that the address for a secp256k1 key is the SS58 encoding of the _hash of the public key_ in

@@ -57,8 +57,8 @@ also aggregates information that an infrastructure business may need for account
 e.g. transaction fees.
 
 The sidecar can fetch blocks, get the balance of an address atomically (i.e., with a corresponding
-block number), get the chain's metadata, and submit transactions to a node's transaction queue. If
-you have any feature/endpoint requests, log an issue in the
+block number), get the chain's metadata, get a transaction fee prediction, and submit transactions
+to a node's transaction queue. If you have any feature/endpoint requests, log an issue in the
 [repo](https://github.com/paritytech/substrate-api-sidecar).
 
 The client runs on an HTTP host. The following examples use python3, but you can query any way you
@@ -83,6 +83,12 @@ This returns a fully decoded block. In the `balances.transfer` extrinsic, the `p
 the transaction fee. It is called "partial fee" because the [total fee](build-protocol-info#fees)
 would include the `tip` field. Notice that some extrinsics do not have a signature. These are
 [inherents](build-protocol-info#extrinsics).
+
+> When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining
+> if the extrinsic had a fee. This field only means that it would require a fee if submitted as a
+> transaction. In order to charge a fee, a transaction also needs to be signed. So in the following
+> example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the
+> block by the block author.
 
 ```python
 {'number': '2077200',

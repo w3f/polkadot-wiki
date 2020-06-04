@@ -18,7 +18,7 @@ guide will always refer to the executable as `polkadot`.
 **Selecting a chain**
 
 Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or
-a custom chain spec.
+a custom chain spec. By default, the client will start Polkadot.
 
 **Archive node**
 
