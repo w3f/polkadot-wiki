@@ -14,7 +14,7 @@ This page contains basic information about running a Parity Polkadot client. The
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or a custom chain spec.
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or a custom chain spec. By default, the client will start Polkadot.
 
 **Archive node**
 
@@ -49,7 +49,7 @@ The node stores a number of files in: `/home/$USER/.local/share/polkadot/chains/
 The keystore stores session keys, which are important for validator operations.
 
 - [Polkadot documentation](learn-keys#session-keys)
-- [Substrate documentation](https://www.substrate.io/kb/learn-substrate/session-keys)
+- [Substrate documentation](https://substrate.dev/docs/en/knowledgebase/learn-substrate/session-keys)
 
 **`db`**
 
@@ -103,4 +103,4 @@ All targets are set to `info` logging by default. You can adjust individual log 
 
 The Parity Polkadot client connects to telemetry by default. You can disable it with `--no-telemetry`, or connect only to specified telemetry servers with the `--telemetry-url` option (see the help options for instructions). Connecting to public telemetry may expose information that puts your node at higher risk of attack. You can run your own, private [telemetry server](https://github.com/paritytech/substrate-telemetry) or deploy a `substrate-telemetry` instance to a Kubernetes cluster using [this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
-The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has a [vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualizing-node-metrics/).
+The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has a [vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualize-node-metrics/).
