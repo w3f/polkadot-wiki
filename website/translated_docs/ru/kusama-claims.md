@@ -50,8 +50,8 @@ cargo install --git https://github.com/alexcrichton/wasm-gc
 
 Кроме того, Вы можете собрать `subkey` из исходного кода.
 
-1. Следуйте инструкциям по сборке [Substrate](https://www.substrate.io/kb/getting-started).
-2. Чтобы собрать `subkey`, выполните `cargo build -p subkey`.
+1. Follow the build instructions for [Substrate](https://substrate.dev/docs/en/knowledgebase/getting-started).
+2. When building, only build `subkey` by typing `cargo build -p subkey`.
 3. Исполняемый файл `./target/debug/subkey`.
 
 #### Использование
@@ -72,7 +72,7 @@ Secret phrase `lobster flock few equip connect boost excuse glass machine find w
 
 ПРИМЕЧАНИЕ: Предыдущие версии `subkey` генерируют только Substrate адреса. Если Вы не хотите генерировать новый seed, Вы можете преобразовать адрес Substrate в адрес Kusama, следуя [этому разделу](#kusama-from-substrate-address).
 
-Смотрите [`subkey` документация](https://www.substrate.io/kb/integrate/subkey) или введите `subkey --help` для большего количества примеров использования.
+See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) or enter `subkey --help` for more usage examples.
 
 ### Использование интерфейса пользователя Polkadot
 
