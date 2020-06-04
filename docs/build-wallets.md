@@ -15,8 +15,8 @@ Below are wallets that support Polkadot along with their development statuses.
 
 | Wallet Name                                                        | Development State | Team Name   | Description            |
 | ------------------------------------------------------------------ | ----------------- | ----------- | ---------------------- |
-| [Signer](https://www.parity.io/signer/)                            | Live              | Parity      | IOS and Android mobile |
-| [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android mobile |
+| [Signer](https://www.parity.io/signer/)                            | Live              | Parity      | IOS and Android |
+| [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android |
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser extension      |
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension      |
 | [Cobo Wallet](https://cobo.com/) | Building | Cobo | IOS and Android |
@@ -25,6 +25,6 @@ Below are wallets that support Polkadot along with their development statuses.
 | [MetaMask](https://metamask.io/index.html)                                       | Building          | MetaMask      | IOS, Android, and browser extension                 |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension      |
 | [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension      |
-| [AirGap](https://airgap.it/)                                       | Building          | AirGap      | Mobile                 |
+| [AirGap](https://airgap.it/)                                       | Building          | AirGap      | IOS and Android                 |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware               |
 | [ImToken](https://token.im/) | Building | ImToken | IOS and Android |
