@@ -11,11 +11,11 @@ description: 对 Polkadot 和 Kusama 所用的共识解释
 
 ## 什么是 PoW 和 PoS？
 
-工作量证明(PoW)和权益证明(PoS)已被用作为区块链共识机制的简写形式，但并不能完整地描述。 PoW 是达成区块创造者共识的方法，也是[中本聪共识](#nakamoto-consensus)的一部分，该共识还包含链选择算法(根据比特币中最长链的规则)。同样 PoS 是用于选择验证人的一组规则并且没有指定链的选择规则或如何达到链的最终性。传统上 PoS 算法已用于达成节点之间的拜占庭协议的算法配对。例如 [ Tendermint ](learn-comparisons-cosmos)是实用性的拜占庭容错算法，它使用 PoS 作为其验证人的选择方法。
+Proof of Work (PoW) and Proof of Stake (PoS) have been inaccurately used as short hand to refer to consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method for agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a set of rules for selecting the validator set and does not specify a chain selection rule or how a chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos) is a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection method.
 
 ## 为什么不使用工作量证明(PoW)?
 
-尽管 PoW 在达成共识的方式非常简单和有效，但 PoW 耗费大量电力，没有经济效益或可证明的最终性，也没有有效抵抗卡特尔的策略。
+Although simple and effective in coming to a decentralized consensus on the next block producer, proof of work with Nakamoto consensus consumes an incredible amount of energy, has no economic or provable finality, and has no effective strategy in resisting cartels.
 
 ## 概率性 vs 可证明的最终性
 
