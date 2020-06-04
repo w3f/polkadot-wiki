@@ -6,7 +6,7 @@ sidebar_label: 设置全节点
 
 如果你是使用 Substrate 开发 dapp 或产品如 Polkadot，Kusama 或自定义 Substrate 链，你需要具有节点作为运行的功能。另外，依靠自己的架构总是比依靠第三方托管的结构更好，毕竟这个是新的去中心世界。
 
-本指南将向您展示如何连接到[Kusama 网络](https://kusama.network)， 但也适用于其他基于[ Substrate](https://www.substrate.io/ kb/learn-substrate)的链。首先，让我们澄清术语 _全节点_
+This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev/docs/en/knowledgebase/learn-substrate)-based chain. First, let's clarify the term _full node_.
 
 ### 节点类型
 
@@ -64,7 +64,7 @@ Archive 节点是供需要过去信息的实用程序使用，例如区块浏览
 
 ## 获取 Substrate
 
-按照 [这里的说明](https://www.substrate.io/kb/getting-started) - 注意 Windows 用户， 最好是使用虚拟机。
+Follow instructions as outlined [here](https://substrate.dev/docs/en/knowledgebase/getting-started) - note that Windows users will have their work cut out for them. It's better to use a virtual machine instead.
 
 通过运行 `cargo --version` 来测试安装是否成功。
 
