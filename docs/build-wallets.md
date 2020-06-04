@@ -19,10 +19,12 @@ Below are wallets that support Polkadot along with their development statuses.
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android mobile |
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser extension      |
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension      |
+| [Cobo Wallet](https://cobo.com/) | Building | Cobo | IOS and Android |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension      |
 | [Lunie](https://lunie.io/)                                         | Building          | Lunie       | Browser extension      |
-| [Zondax](https://zondax.ch/)                                       | Building          | Zondax      | Mobile                 |
+| [MetaMask](https://metamask.io/index.html)                                       | Building          | MetaMask      | IOS, Android, and browser extension                 |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension      |
 | [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension      |
 | [AirGap](https://airgap.it/)                                       | Building          | AirGap      | Mobile                 |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware               |
+| [ImToken](https://token.im/) | Building | ImToken | IOS and Android |
