@@ -10,8 +10,7 @@ always better to rely on your own infrastructure than on a third-party-hosted on
 decentralized world.
 
 This guide will show you how to connect to [Kusama network](https://kusama.network), but the same
-process applies to any other
-[Substrate](https://substrate.dev/docs/en/knowledgebase/learn-substrate)-based chain. First, let's
+process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First, let's
 clarify the term _full node_.
 
 ### Types of Nodes
