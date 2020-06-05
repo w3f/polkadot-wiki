@@ -92,7 +92,7 @@ Web3 基金会已在[ Schnorrkel ](https://github.com/w3f/schnorrkel)库中的 C
 
 From the [introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10) into `libssl`:
 
-```
+```text
 The reason is the following: During summer of 2013, revelations from ex-
 consultant at [the] NSA Edward Snowden gave proof that [the] NSA willingly inserts backdoors
 into software, hardware components and published standards. While it is still
