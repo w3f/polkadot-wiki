@@ -79,8 +79,9 @@ https://github.com/paritytech/substrate-light-ui
 > Not recommended if you're a validator. Please see
 > [secure validator setup](maintain-guides-secure-validator)
 
-For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/)
-on the polkadot repository.
+For the most recent binary please see the
+[release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL
+in the code snippet below may become slightly out-of-date.
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
@@ -95,8 +96,15 @@ on the polkadot repository.
 > Not recommended if you're a validator. Please see
 > [secure validator setup](maintain-guides-secure-validator)
 
-For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/)
-on the polkadot repository.
+For the most recent binary please see the
+[release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL
+in the code snippet below may become slightly out-of-date.
+
+Also please note that the nature of pre-built binaries means that they may not work on your
+particular architecture or Linux distribution. If you see an error like
+`cannot execute binary file: Exec format error` it likely means the binary is not compatible with
+your system. You will either need to compile the [source code yourself](#clone-and-build) or use
+[docker](#using-docker).
 
 - Download Polkadot binary by running:
   `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
@@ -170,3 +178,13 @@ validating, it defaults to [archive mode](#types-of-nodes). To keep the full sta
 It is possible to almost quadruple synchronization speed by using an additional flag:
 `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off
 after the node is in sync.
+
+## Using Docker
+
+Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so
+it's best left up to those that either already have familiarity with docker, or have completed the
+other set-up instructions in this guide.
+
+```zsh
+docker run -p 9944:9944 parity/polkadot:v0.8.2 --name "calling_home_from_a_docker_container"
+```
