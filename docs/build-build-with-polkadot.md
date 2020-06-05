@@ -154,8 +154,8 @@ includes a library of modular plug-ins from which you can compose your chain log
 write your own pallets to use or publish to the community.
 
 The best way to get started with Substrate is to explore the
-[Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate), an online
-resource built and maintained by Parity Technologies.
+[Substrate Knowledge Base](https://substrate.dev/docs/en/), an online resource built and maintained
+by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you
 have a solid understanding, you can challenge yourself by progressing through the Substratekitties
