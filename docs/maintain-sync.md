@@ -85,7 +85,7 @@ in the code snippet below may become slightly out-of-date.
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Download Polkadot binary within Ubuntu by running:
-  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
+  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
@@ -106,7 +106,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
 [docker](#using-docker).
 
 - Download Polkadot binary by running:
-  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
+  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
@@ -141,7 +141,7 @@ Alternatively, check out a specific tagged release:
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
 cd kusama
-git checkout tags/v0.8.2
+git checkout tags/v0.8.3
 ./scripts/init.sh
 cargo build --release
 ```
@@ -185,5 +185,5 @@ it's best left up to those that either already have familiarity with docker, or 
 other set-up instructions in this guide.
 
 ```zsh
-docker run -p 9944:9944 parity/polkadot:v0.8.2 --name "calling_home_from_a_docker_container"
+docker run -p 9944:9944 parity/polkadot:v0.8.3 --name "calling_home_from_a_docker_container"
 ```
