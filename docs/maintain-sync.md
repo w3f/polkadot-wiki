@@ -79,10 +79,13 @@ https://github.com/paritytech/substrate-light-ui
 > Not recommended if you're a validator. Please see
 > [secure validator setup](maintain-guides-secure-validator)
 
+For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/)
+on the polkadot repository.
+
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Download Polkadot binary within Ubuntu by running:
-  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
+  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
@@ -92,8 +95,11 @@ https://github.com/paritytech/substrate-light-ui
 > Not recommended if you're a validator. Please see
 > [secure validator setup](maintain-guides-secure-validator)
 
+For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/)
+on the polkadot repository.
+
 - Download Polkadot binary by running:
-  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
+  `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
@@ -128,7 +134,7 @@ Alternatively, check out a specific tagged release:
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
 cd kusama
-git checkout tags/v0.7.27
+git checkout tags/v0.8.2
 ./scripts/init.sh
 cargo build --release
 ```
