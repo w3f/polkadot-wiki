@@ -6,7 +6,7 @@ sidebar_label: Node Interaction
 
 This page will guide you through some basic interactions with your node. Always refer to the proper documentation for the tool you are using. This guide should _guide you to the proper tools,_ not be seen as canonical reference.
 
-- [Substrate RPC API](https://substrate.dev/rustdocs/master/sc_rpc_api/index.html)
+- [Substrate RPC API](https://crates.parity.io/sc_rpc_api/index.html)
 - [Polkadot JS RPC Documentation](https://polkadot.js.org/api/substrate/rpc.html)
 - [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar)
 
