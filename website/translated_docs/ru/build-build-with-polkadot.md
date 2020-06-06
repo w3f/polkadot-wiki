@@ -77,7 +77,7 @@ Parathreads are like parachains and enable the developer to have lower-level con
 
 Субстрат - это базовый каркас, на котором строится сам Polkadot. Это набор инструментов для блокчейн-новаторов, который обеспечивает необходимые строительные блоки для построения цепочки. Он включает в себя библиотеку модульных плагинов, из которых Вы можете составить свою блокчейн логику и позволяет Вам писать свои собственные паллеты для использования или публикации в сообществе.
 
-The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate), an online resource built and maintained by Parity Technologies.
+The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/), an online resource built and maintained by Parity Technologies.
 
 Мы рекомендуем Вам покопаться там, чтобы ознакомиться с общими шаблонами. Как только у Вас появится твердое понимание, Вы можете бросить вызов себе, пройдя через мастер-класс Substrate kitties, а затем перейдя к учебнику TCR Dappchain или любому другому.
 
