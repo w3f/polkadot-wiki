@@ -35,7 +35,7 @@ sidebar_label: 工具索引
 ### 工具
 
 - [Substrate](https://github.com/paritytech/substrate) - 区块链开发平台使用 Rust 编写。Polkadot 基于在 Substrate 上开发。
-- [Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate) - Comprehensive documentation and tutorials for building a blockchain using Substrate.
+- [Substrate Knowledge Base](https://substrate.dev/docs/en/) - Comprehensive documentation and tutorials for building a blockchain using Substrate.
 
 ## C++
 
