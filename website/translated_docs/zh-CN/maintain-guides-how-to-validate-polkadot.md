@@ -94,7 +94,7 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-通常您应该使用最新的** 0.8.x **标记。在撰写本文时，这是** 0.8.2 **，但是您应该查看 "git tag" 指令的输出（` git tag | grep  "$v\0\.8"`)，以查看所有潜在的0.8版本的列表。 您应将` v0.8.2 `替换为最新版本(即最高号码)。 您还可以在[release](https://github.com/paritytech/polkadot/releases)选项卡上找到最新的 Polkadot 版本。
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.2` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
