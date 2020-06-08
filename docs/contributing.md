@@ -27,10 +27,10 @@ taken to the GitHub sign in page, where you can either login or create an accoun
 
 ![](assets/edit_button.png)
 
-Once logged in, you'll be taken to the GitHub text editor in which you can make your edits
-directly. When you've completed your changes, you can add any specific details on what was changed
-and commit to a new branch to create a new Pull Request to the repository. From there one of the
-maintainers will either merge it in or request changes very soon.
+Once logged in, you'll be taken to the GitHub text editor in which you can make your edits directly.
+When you've completed your changes, you can add any specific details on what was changed and commit
+to a new branch to create a new Pull Request to the repository. From there one of the maintainers
+will either merge it in or request changes very soon.
 
 ![](assets/contributing.png) ![](assets/creating-pull-request.png)
 

@@ -1,5 +1,5 @@
 ---
-id: wallets
+id: build-wallets
 title: Polkadot Wallets
 sidebar_label: Polkadot Wallets
 ---
