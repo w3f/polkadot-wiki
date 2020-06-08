@@ -6,10 +6,10 @@ sidebar_label: Polkadot Wallets
 
 ## Polkadot Wallets
 
-The integration of a [wallet](https://wiki.polkadot.network/docs/en/glossary#wallet) and Polkadot
-allows for simple and easy access to private keys and signing transactions. Polkadot.js.org,
-Parity's Signer app, and the Polkadot{.js} plugin are just a few of Polkadots own wallets created.
-Below are wallets that support Polkadot along with their development statuses.
+The integration of a [wallet](https://wiki.polkadot.network/docs/en/glossary#wallet) with Polkadot
+allows for simple and easy access to private keys and signing transactions. 
+Below are some wallets that support Polkadot along with their development statuses.
+Note that inclusion does not necessarily imply endorsement of that wallet.
 
 ### Supported Wallets
 
