@@ -19,9 +19,9 @@ necessarily imply endorsement of that wallet.
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android                     |
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser extension                   |
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                   |
+| [Lunie](https://lunie.io/)                                         | Live          | Lunie       | Browser extension                   |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
-| [Lunie](https://lunie.io/)                                         | Building          | Lunie       | Browser extension                   |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension                   |
 | [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension                   |
