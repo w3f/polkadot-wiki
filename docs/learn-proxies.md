@@ -26,21 +26,27 @@ account.
 As implied by the name, a proxy type of "Any" allows the proxy account to make any transaction,
 incuding balance transfers. In most cases, this should be avoided as the proxy account is used more
 frequently than the cold account and is therefore less secure. To allow any type of transaction
-except balance transfers (including vested transfers), the "Non-transfer" proxy type will be a more
-apposite fit.
+except balance transfers (including vested transfers), the "Non-transfer" proxy type will be a
+better fit.
 
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
 The "Staking" type allows staking-related transactions, but do not confuse a staking proxy with the
 Controller account. Within the Staking pallet, some transactions must come from the Stash, while
-others must come from the Controller.
+others must come from the Controller. The Stash account is meant to stay in cold storage, while the
+Controller account makes day-to-day transactions like setting session keys or deciding which
+validators to nominate. The Stash account still needs to make some transactions, though, like
+bonding extra funds or designating a new Controller. A proxy doesn't change the _roles_ of Stash and
+Controller accounts, but does allow the Stash to be accessed even less frequently.
 
 ### Anonymous Proxies
 
 Polkadot includes a function to create an anonymous proxy, an account that can only be accessed via
-proxy. That is, it generates an address but no corresponding private key. Use extreme care with
-anonymous proxies, as once you remove the proxy relationship, the account will be inaccessible.
+proxy. That is, it generates an address but no corresponding private key. Normally, a primary
+account designates a proxy account, but anonymous proxies are the opposite. The account that creates
+the proxy relationship is the proxy account and the new account is the primary. Use extreme care
+with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
 
 ## Putting It All Together
 
