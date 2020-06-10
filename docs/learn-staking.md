@@ -380,8 +380,7 @@ The plan is to start with somewhere between 50 to 100 open validator positions a
 gradually. The top bound on the number of validators has not been determined yet, but should only be
 limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message
 passing. The estimate of the number of validators that Polkadot will have at maturity is
-around 1000. Kusama, Polkadot's canary network, is currently rapidly approaching 200 validators
-slots.
+around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 
 ## Resources
 
