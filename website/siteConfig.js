@@ -12,7 +12,7 @@ const siteConfig = {
     { doc: 'build-index', label: 'Build' },
     { doc: 'learn-introduction', label: 'Learn' },
     { doc: 'maintain-index', label: 'Maintain '},
-    { doc: 'kusama-index', label: 'Kusama' },
+    { href: 'https://wiki.polkadot.network/docs/en/kusama-index', label: 'Kusama' },
     { search: true },
     { languages: true }
   ],
