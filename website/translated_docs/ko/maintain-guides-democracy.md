@@ -116,27 +116,23 @@ The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select
 
 ## Proxies
 
-Proxies can be used to vote on behalf of a stash account. Unlike delegation, the proxy is meant to act as a longer-term account that makes all the voting decisions for funds held in a different account. Delegation is a logical action, taken when you trust another account's judgement, while proxying is more of a recommended security practice for keeping your funds safe and using an active account with low funds instead.
+Proxies can be used to participate in governance on behalf of a stash account. A governance proxy can perform any transaction from Democracy, Council, Technical Committee, and Treasry modules. Unlike delegation, the proxy is meant to act as a longer-term account that makes all governance-related transactions for funds held in a different account. Delegation is a logical action, taken when you trust another account's judgement, while proxying is more of a recommended security practice for keeping your funds safe and using an active account with low funds instead.
+
+Learn more about proxies on the [proxies](learn-proxies) page.
 
 ### Setting a proxy
 
-Setting a proxy involves submitting a single transaction, the transaction type "setProxy" from the "democracy" pallet.
+Setting a proxy involves submitting a single transaction, the transaction type "addProxy" from the Proxy pallet.
 
-You can make this transaction from Polkadot Apps by navigating to the "Extrinsics" tab and selecting the "democracy" pallet and the "setProxy" transaction type. Send the transaction from the "Stash" account that holds the funds that you want to vote with, and the target to the proxy account that will be responsible for casting the votes going forward. In the example below, "Alice Stash" is proxying to "Alice" so that Alice can vote on behalf of Alice Stash.
-
-![set proxy](assets/democracy/set_proxy.png)
+You can make this transaction from Polkadot Apps by navigating to the "Extrinsics" tab and selecting the Proxy pallet and the "addProxy" transaction type. Send the transaction from the "Stash" account that holds the funds that you want to vote with, and the target to the proxy account that will perform governance action. Choose "Governance" as the proxy type.
 
 ### Voting with a proxy
 
-Making a vote on behalf of a stash requires a `proxyVote` transaction. When sending this transaction you will specify the index of the referendum that is being voted on as well as the judgement (i.e. "Aye" for approval or "Nay" for rejection).
-
-![proxy vote](assets/democracy/proxy_vote.png)
+Making a vote on behalf of a stash requires a "proxy" transaction from the Proxy pallet. When you choose this transaction from the "Extrinsics" tab, it will let you select "vote" from the Democracy pallet, and you will specify the index of the referendum that is being voted, the judgement (i.e. "Aye" for approval or "Nay" for rejection), and the conviction, just like a normal vote.
 
 ### Removing a proxy
 
-At some point you may want to remove a proxy from being able to vote on behalf of a stash account. This is possible to do by submitting a `removeProxy` transaction from the stash account, targetting the proxy account.
-
-![remove proxy](assets/democracy/remove_proxy.png)
+At some point you may want to remove a proxy from being able to vote on behalf of a stash account. This is possible to do by submitting a "removeProxy" transaction from the stash account, targetting the proxy account.
 
 ### Resigning a proxy
 
