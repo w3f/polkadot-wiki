@@ -9,7 +9,7 @@ indicator token, you are entitled to claim an equivalent amount of KSM on the Ku
 is so that the Kusama network is aligned with the existing DOT holders and community.
 
 You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator
-tokens.
+tokens. There is no deadline for claiming KSM.
 
 ## Step 1. Create a Kusama account
 
