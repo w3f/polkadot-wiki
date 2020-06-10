@@ -16,8 +16,9 @@ necessarily imply endorsement of that wallet.
 | Wallet Name                                                        | Development State | Team Name   | Description                         |
 | ------------------------------------------------------------------ | ----------------- | ----------- | ----------------------------------- |
 | [Signer](https://www.parity.io/signer/)                            | Live              | Parity      | IOS and Android                     |
+| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser                             |
+| [Polkadot.JS Plugin](https://github.com/polkadot-js/extension)     | Live              | Parity      | Browser extension                   |
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android                     |
-| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser extension                   |
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                   |
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
@@ -28,3 +29,4 @@ necessarily imply endorsement of that wallet.
 | [AirGap](https://airgap.it/)                                       | Building          | AirGap      | IOS and Android                     |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
 | [ImToken](https://token.im/)                                       | Building          | ImToken     | IOS and Android                     |
+| [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
