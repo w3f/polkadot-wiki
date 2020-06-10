@@ -149,6 +149,12 @@ accounts. This metadata can be verified by independent registrars to provide tru
 learn more about how to set or release an identity, how to define sub-accounts, or how to become a
 registrar, please read [this guide](learn-identity).
 
+## Proxy Accounts
+
+Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
+storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the
+[proxies](learn-proxies) page for more information.
+
 ## Multi-signature Accounts
 
 It is possible to create a multi-signature account in Substrate-based chains. A multi-signature
