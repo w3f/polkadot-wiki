@@ -29,7 +29,7 @@ Polkadot includes a function to create an anonymous proxy, an account that can o
 
 ## Putting It All Together
 
-If the idea of proxy types and their application seems abstract, they are. Here is an example of how you might use these accounts. Imagine you have one account as your primary token-holding account, and don't want to access it very often, but you do want to participate in governance and staking. You could set Governance and Staking proxies.
+If the idea of proxy types and their application seems abstract, it is. Here is an example of how you might use these accounts. Imagine you have one account as your primary token-holding account, and don't want to access it very often, but you do want to participate in governance and staking. You could set Governance and Staking proxies.
 
 ![proxies](assets/proxies-example.png)
 
