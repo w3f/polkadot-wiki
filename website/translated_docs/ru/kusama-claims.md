@@ -6,7 +6,7 @@ sidebar_label: Затребовать
 
 Сеть Kusama является экспериментальной сетью Polkadot's, ориентированной на сообщества R&D. Если Вы являетесь держателем токенов DOT, то Вы имеете право требовать эквивалентное количество KSM в сети Kusama. Это сделано для того, чтобы сеть Kusama совпала с существующими держателями и сообществом DOT.
 
-Вы можете запросить KSM, подписав сообщение с учётной записью Ethereum, которая содержит Ваши DOT токены.
+You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
 
 ## Шаг 1. Создайте учётную запись Kusama
 
