@@ -12,7 +12,7 @@ _Note: this should **only** be done for sync nodes used as back-end for some dap
 Never open websockets to your validator node - there's no reason to do that and it can only lead to
 security gaffes!_
 
-In this guide we'll be using Ubuntu 18.04 hosted on a \$10 DigitalOcean droplet. We'll assume you're
+In this guide we'll be using Ubuntu 20.04 hosted on a DigitalOcean droplet. We'll assume you're
 using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
 
 ## Set up a node
@@ -22,7 +22,7 @@ default to the same websocket connection: port 9944 on localhost. For this examp
 Kusama sync node (non-validator).
 
 Create a new server on your provider of choice or locally at home (preferred). We'll assume you're
-using Ubuntu 18.04. Then install Substrate and build the node.
+using Ubuntu 20.04. Let's install Substrate and build the node.
 
 ```bash
 curl https://getsubstrate.io -sSf | bash
@@ -30,10 +30,11 @@ git clone https://github.com/paritytech/polkadot kusama
 cd kusama
 ./scripts/init.sh
 cargo build --release
-./target/release/polkadot --name "DigitalOcean 10 USD droplet ftw" --rpc-cors all
+./target/release/polkadot --name="DigitalOcean 10 USD droplet ftw" --rpc-cors=all --chain=kusama
 ```
 
-This will start the syncing process with Kusama's mainnet.
+This will start the syncing process with Kusama's mainnet. The `--chain=kusama` flag is necessary 
+because the node otherwise defaults to Polkadot.
 
 _Note: the `--rpc-cors` mode needs to be set to all so that all external connections are allowed._
 
