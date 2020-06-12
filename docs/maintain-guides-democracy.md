@@ -216,7 +216,7 @@ the Proxy pallet and the "addProxy" transaction type. Send the transaction from 
 that holds the funds that you want to vote with, and the target to the proxy account that will
 perform governance action. Choose "Governance" as the proxy type.
 
-![add proxy](assets/democracy/adding-proxy.png)
+![add proxy](assets/democracy/adding_proxy.png)
 
 You also have the choice to add in a governance anonymous proxy underneath the "anonymous" type from
 the Proxy pallet and selecting "Governance" as the proxy type. A governance anonymous proxy is only
@@ -239,4 +239,4 @@ This is possible to do by submitting a "removeProxy" transaction from the stash 
 the proxy account. You also have the option to "removeProxies" which will remove all proxies created
 from a selected stash account.
 
-![remove proxy](assets/democracy/remove-proxy.png)
+![remove proxy](assets/democracy/remove_proxy.png)
