@@ -71,7 +71,9 @@ everything else.
 ### Get updates
 
 - [@kusamanetwork](https://twitter.com/kusamanetwork)
-- [Kusama newsletter](https://kusama.network/newsletter) [r/kusama](https://reddit.com/r/kusama)
-- [kappa]: https://polkascan.io/pre/kusama/council/motion/94
-- [thousand validators]: https://polkadot.network/join-kusamas-thousand-validators-programme/
-- [kusama claims]: https://claim.kusama.network
+- [Kusama newsletter](https://kusama.network/newsletter)
+- [r/kusama](https://reddit.com/r/kusama)
+
+[kappa]: https://polkascan.io/pre/kusama/council/motion/94
+[thousand validators]: https://polkadot.network/join-kusamas-thousand-validators-programme/
+[kusama claims]: https://claim.kusama.network
