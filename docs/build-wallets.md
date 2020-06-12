@@ -30,3 +30,4 @@ necessarily imply endorsement of that wallet.
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
 | [ImToken](https://token.im/)                                       | Building          | ImToken     | IOS and Android                     |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
+| [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                         |
