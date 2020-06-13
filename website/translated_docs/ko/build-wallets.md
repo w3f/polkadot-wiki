@@ -27,3 +27,4 @@ The integration of a [wallet](https://wiki.polkadot.network/docs/en/glossary#wal
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
 | [ImToken](https://token.im/)                                       | Building          | ImToken     | IOS and Android                     |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
+| [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                          |
