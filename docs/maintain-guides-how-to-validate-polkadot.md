@@ -147,7 +147,7 @@ code available in the **v0.8** branch.
 
 You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but
 you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list
-of all the potential 0.8 releases. You should replace `v0.8.2` with the latest build (i.e., the
+of all the potential 0.8 releases. You should replace `v0.8.8` with the latest build (i.e., the
 highest number). You can also find the latest Polkadot version on the
 [release](https://github.com/paritytech/polkadot/releases) tab.
 
@@ -158,7 +158,7 @@ highest number). You can also find the latest Polkadot version on the
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.8"
-git checkout v0.8.2
+git checkout v0.8.8
 ./scripts/init.sh
 cargo build --release
 ```
