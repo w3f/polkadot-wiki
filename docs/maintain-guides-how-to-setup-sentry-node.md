@@ -241,7 +241,7 @@ Running this will return the corresponding `PeerId` for the `secret_ed25519`.
 > `12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD`, and one that looks like
 > `QmdtiSGnqDoHrfVyxrRWuETyehMnmZJhxrnVBFyYtY7Trk`. These are two different representations of the
 > same `secret_ed25519` key and will both work, however `Qm...` is the legacy representation. It is
-> recommended to use the updated representation (`1D#KooW...`), otherwise warnings may be shown in
+> recommended to use the updated representation (`1D3KooW...`), otherwise warnings may be shown in
 > the logs.
 
 ##### Retrieving `PeerId`'s
@@ -277,7 +277,7 @@ Another way is by starting the node to see the identity printed as follows:
 
 Here we can see our `PeerId` is `12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD`.
 
-Another way is to fetch the `PeerId` is calling the following RPC call from the same host:
+Lastly, we can also find the `PeerId` by calling the following RPC call from the same host:
 
 ```bash
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId", "params":[]}' http://localhost:9933
