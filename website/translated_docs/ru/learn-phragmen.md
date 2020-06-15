@@ -1,10 +1,10 @@
 ---
 id: learn-phragmen
-title: Sequential Phragmen Method
-sidebar_label: Sequential Phragmen Method
+title: Sequential Phragmén Method
+sidebar_label: Sequential Phragmén Method
 ---
 
-## What is the sequential Phragmen method?
+## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in the 1890s.
 
@@ -45,7 +45,7 @@ The Phragmén method is also used in the council election mechanism. When you vo
 
 Phragmén is something that will run in the background and requires no extra effort from you. However, it is good to understand how it works since it means that not all the stake you've been nominated will end up on your validator after an election. Nominators are likely to nominate a few different validators that they trust to do a good job operating their nodes.
 
-You can use the [offline-phragmen](https://github.com/kianenigma/offline-phragmen) script for predicting the outcome of a validator election ahead of a new election.
+You can use the [offline-phragmén](https://github.com/kianenigma/offline-phragmen) script for predicting the outcome of a validator election ahead of a new election.
 
 ## Understanding Phragmén
 
