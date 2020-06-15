@@ -196,12 +196,14 @@ corner and the DOTs will be in your account.
 - Parity Signer
 - Your Polkadot account unlocked on Polkadot-JS Apps UI.
 
-You will be importing your Polkadot address on the Parity Signer to the PolkadotJS apps to interact with the network. All the operations will have to use your phone to sign the transaction and broadcast it via the PolkadotJS apps remote node.
+You will be importing your Polkadot address on the Parity Signer to the PolkadotJS apps to interact
+with the network. All the operations will have to use your phone to sign the transaction and
+broadcast it via the PolkadotJS apps remote node.
 
 ### Go to Polkadot-JS Apps
 
-Proceed to [polkadot-js Apps][claims app]. You will need to import your address on
-Parity Signer to the Accounts page first.
+Proceed to [polkadot-js Apps][claims app]. You will need to import your address on Parity Signer to
+the Accounts page first.
 
 ### Make the Attestation
 
@@ -221,8 +223,8 @@ Next, select the address that you have claimed DOTs during the pre-genesis.
 
 ![ps-3](assets/new-claims/ps-3.png)
 
-And then your address will be displayed in the QR code format. You can move the
-QR code to the camera so that the PolkadotJS apps can decode it.
+And then your address will be displayed in the QR code format. You can move the QR code to the
+camera so that the PolkadotJS apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
@@ -230,14 +232,16 @@ Once decoded successfully, input the name for your address and click "Create".
 
 ![ps-claim-4](assets/new-claims/ps-claim-4.png)
 
-You will notice that the digit beside the "Claim Tokens" menu changed to 2. It means the number of addresses on the Accounts page that need to do attestations.
+You will notice that the digit beside the "Claim Tokens" menu changed to 2. It means the number of
+addresses on the Accounts page that need to do attestations.
 
-Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
+Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large
+notification at the top of the page that tells you that you need to sign an attestation.
 
-Select the Polkadot account that you just have imported with a claim using the drop-down selection. If you
-don't see a notification or don't see the selector, please double check that the account has been
-loaded into Polkadot-JS and that it has already claimed during the pre-genesis period. As always, feel
-free to reach out for help in the [Claims Support][] channel.
+Select the Polkadot account that you just have imported with a claim using the drop-down selection.
+If you don't see a notification or don't see the selector, please double check that the account has
+been loaded into Polkadot-JS and that it has already claimed during the pre-genesis period. As
+always, feel free to reach out for help in the [Claims Support][] channel.
 
 ![ps-claim-5](assets/new-claims/ps-claim-5.png)
 
@@ -245,7 +249,7 @@ Then click "Continue" and you will see a green box appear on the right.
 
 ![ps-claim-6](assets/new-claims/ps-claim-6.png)
 
-Click on "I Agree" and then "Sign via Qr". 
+Click on "I Agree" and then "Sign via Qr".
 
 ![ps-claim-7](assets/new-claims/ps-claim-7.png)
 
@@ -253,14 +257,14 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-There are two ways to make your free attest transaction. The first option is to use the "QR Scanner" 
-below the QR code to scan the QR code that shows on the authorize transaction window. While the other 
-one is to move your QR code to the camera.
+There are two ways to make your free attest transaction. The first option is to use the "QR Scanner"
+below the QR code to scan the QR code that shows on the authorize transaction window. While the
+other one is to move your QR code to the camera.
 
 ![ps-3-highlight](assets/new-claims/ps-3-highlight.png)
 
-When the transaction is included in the block, you will see a green success box appear in the upper right
-corner and the DOTs will be in your account.
+When the transaction is included in the block, you will see a green success box appear in the upper
+right corner and the DOTs will be in your account.
 
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
