@@ -158,8 +158,8 @@ After you have started the `wg0` interface on your public node and validator, do
 of time to take a look at the following description of those flags you are going to use.
 
 `--sentry <VALIDATOR_MULTIADDR>` - This would be required for your public node to be an authority as
-an observer. That means it acts the same as a validator node but without holding keys / signing. And
-the difference between running a full node versus adding an extra `--sentry` flag is that a full
+an observer. That means it acts the same as a validator node but without holding keys or signing.
+The difference between running a full node versus adding an extra `--sentry` flag is that a full
 node might not have all the data the validator needs to validate properly, while a sentry node will
 prioritize consensus messages to the validator. `--sentry` implies `--reserved-nodes`.
 
@@ -204,7 +204,7 @@ Addresses in Substrate based chains will often take the form:
 
 Each peer in the network will have a private (secret) key (not to be confused with account keys or
 session keys) that will be used for network messaging. The secret key will have a corresponding
-public key, as well as a public address (`PeerId`) derived from this private key. `PeerId`'s are
+public key, as well as a public address (`PeerId`) derived from this private key. `PeerId`' is
 derived from the secret key that is stored in the following directory by default:
 
 ```
@@ -223,8 +223,8 @@ byte Ed25519 secret key, or the `--node-key <KEY>` flag, where `KEY` is a hex-en
 key. If explicitly specifying a secret key, it is recommended to specify it as a file.
 
 > Note: It is useful to generate or back up the `secret_ed25519` files if you want to use static
-> addresses for sentry configurations. Otherwise you may have to dynamically find and set
-> `PeerId`'s.
+> addresses for sentry configurations. Otherwise you may have to dynamically find and set the
+> `PeerId`.
 
 You can use [subkey](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey) to
 generate a new `secret_ed25519` as follows:
