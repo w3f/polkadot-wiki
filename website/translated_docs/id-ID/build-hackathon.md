@@ -56,7 +56,7 @@ Segera akan hadir.
 
 ## Sumber daya
 
-- [Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate)
+- [Substrate Knowledge Base](https://substrate.dev/docs/en/)
 
 ## Dukungan / Kontak
 

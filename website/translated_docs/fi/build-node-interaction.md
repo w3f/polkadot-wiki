@@ -6,7 +6,7 @@ sidebar_label: Node Interaction
 
 This page will guide you through some basic interactions with your node. Always refer to the proper documentation for the tool you are using. This guide should _guide you to the proper tools,_ not be seen as canonical reference.
 
-- [Substrate RPC API](https://substrate.dev/rustdocs/master/sc_rpc_api/index.html)
+- [Substrate RPC API](https://crates.parity.io/sc_rpc_api/index.html)
 - [Polkadot JS RPC Documentation](https://polkadot.js.org/api/substrate/rpc.html)
 - [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar)
 
@@ -42,7 +42,7 @@ Use the RPC endpoint `chain_subscribeFinalizedHeads` to subscribe to a stream of
 
 Parity maintains an RPC client, written in TypeScript, that exposes a limited set of endpoints. It handles the metadata and codec logic so that you are always dealing with decoded information. It also aggregates information that an infrastructure business may need for accounting and auditing, e.g. transaction fees.
 
-The sidecar can fetch blocks, get the balance of an address atomically (i.e., with a corresponding block number), get the chain's metadata, and submit transactions to a node's transaction queue. If you have any feature/endpoint requests, log an issue in the [repo](https://github.com/paritytech/substrate-api-sidecar).
+The sidecar can fetch blocks, get the balance of an address atomically (i.e., with a corresponding block number), get the chain's metadata, get a transaction fee prediction, and submit transactions to a node's transaction queue. If you have any feature/endpoint requests, log an issue in the [repo](https://github.com/paritytech/substrate-api-sidecar).
 
 The client runs on an HTTP host. The following examples use python3, but you can query any way you prefer at `http://HOST:PORT/`. The default is `http://127.0.0.1:8080`.
 
@@ -62,6 +62,8 @@ if response.ok:
 ```
 
 This returns a fully decoded block. In the `balances.transfer` extrinsic, the `partialFee` item is the transaction fee. It is called "partial fee" because the [total fee](build-protocol-info#fees) would include the `tip` field. Notice that some extrinsics do not have a signature. These are [inherents](build-protocol-info#extrinsics).
+
+> When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining if the extrinsic had a fee. This field only means that it would require a fee if submitted as a transaction. In order to charge a fee, a transaction also needs to be signed. So in the following example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the block by the block author.
 
 ```python
 {'number': '2077200',

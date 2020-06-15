@@ -227,7 +227,7 @@ Polkadot 允许停用某些验证人，但是如果停用的验证人数量过�
 
 ## 波卡会有多少链验证人数量?
 
-一开始计划是开放 50 - 100 验证人并且逐渐扩大，而验证人上限尚未确定，但会受到网络频宽所限制，因为大量频繁点对点信息交互 ，Polkadot 届时将拥有验证人数量估计约为1000，而 Kusama 现在已经大约有200多个验证人。
+The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 
 ## 资源
 

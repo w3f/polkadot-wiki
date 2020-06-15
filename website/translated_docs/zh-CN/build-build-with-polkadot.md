@@ -77,7 +77,7 @@ In the future, there will be many different PDKs available in different programm
 
 Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for blockchain innovators that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
-The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate), an online resource built and maintained by Parity Technologies.
+The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/), an online resource built and maintained by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you have a solid understanding, you can challenge yourself by progressing through the Substratekitties workshop then advancing to the TCR Dappchain tutorial or one of the others.
 

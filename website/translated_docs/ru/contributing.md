@@ -12,13 +12,17 @@ sidebar_label: Помощь в развитии
 
 Внести свой вклад в wiki легко с помощью учетной записи GitHub. Каждая страница - это файл markdown, который представляет собой [очень легкое для изучения](https://guides.github.com/features/mastering-markdown/) расширение синтаксиса для простого текста, которое делает создание ссылок, рендеринг изображений и приятное для глаз форматирование простыми и доступным.
 
-Каждая страница имеет кнопку "Редактировать"в правом верхнем углу содержимого. Нажав на эту кнопку Вы перемещаетесь в текстовый редактор GitHub, в котором Вы можете вносить свои правки непосредственно. Когда Вы закончите Ваши изменения можо создать новый **Pull Request** в репозиторий и один из сопровождающих либо объединит его, либо запросит изменения очень скоро.
+Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub sign in page, where you can either login or create an account.
 
 ![](assets/edit_button.png)
 
+Once logged in, you'll be taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes, you can add any specific details on what was changed and commit to a new branch to create a new Pull Request to the repository. From there one of the maintainers will either merge it in or request changes very soon.
+
+![](assets/contributing.png) ![](assets/creating-pull-request.png)
+
 ## Правила
 
-Есть несколько базовых правил для участников:
+There are a few basic ground-rules for contributors:
 
 1. **Не пушьте `--force`** или иным образом изменяйте историю Git.
 2. Запросы на слияние предпочтительнее задач, особенно для небольших изменений, таких как опечатки. Задачи должны использоваться для общих изменений или отсутствующего контента.
@@ -31,8 +35,8 @@ sidebar_label: Помощь в развитии
 
 ## Изменения в этой договоренности
 
-Этот документ также может быть объектом Pull запросов или изменений со стороны участников, если вы считаете, что у вас есть что-то ценное для добавления или изменения.
+This document may also be subject to pull requests or changes by contributors where you believe you have something valuable to add or change.
 
 ## Наследственность
 
-Этот документ был основан на этих руководящих принципах для участников: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)
+This document was based on the Level contribution guidelines located here: [https://github.com/Level/community/blob/master/CONTRIBUTING.md](https://github.com/Level/community/blob/master/CONTRIBUTING.md)

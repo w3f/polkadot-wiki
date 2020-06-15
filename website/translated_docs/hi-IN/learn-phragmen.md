@@ -1,10 +1,10 @@
 ---
 id: learn-phragmen
-title: Sequential Phragmen Method
-sidebar_label: Sequential Phragmen Method
+title: Sequential Phragmén Method
+sidebar_label: Sequential Phragmén Method
 ---
 
-## What is the sequential Phragmen method?
+## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in the 1890s.
 
@@ -45,7 +45,7 @@ The Phragmén method is also used in the council election mechanism. When you vo
 
 Phragmén is something that will run in the background and requires no extra effort from you. However, it is good to understand how it works since it means that not all the stake you've been nominated will end up on your validator after an election. Nominators are likely to nominate a few different validators that they trust to do a good job operating their nodes.
 
-You can use the [offline-phragmen](https://github.com/kianenigma/offline-phragmen) script for predicting the outcome of a validator election ahead of a new election.
+You can use the [offline-phragmén](https://github.com/kianenigma/offline-phragmen) script for predicting the outcome of a validator election ahead of a new election.
 
 ## Understanding Phragmén
 
@@ -416,7 +416,7 @@ The results for nominating validators are further optimized for several purposes
 
 After running the weighted Phragmén algorithm, a process is run that redistributes the vote amongst the elected set. This process will never add or remove an elected candidate from the set. Instead, it reduces the variance in the list of backing stake from the voters to the elected candidates. Perfect equalization is not always possible, but the algorithm attempts to equalize as much as possible. It then runs an edge-reducing algorithm to minimize the number of validators per nominator, ideally giving every nominator a single validator to nominate per era.
 
-To minimize block computation time, the staking process is run as an [off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed in the last quarter of each era.
+To minimize block computation time, the staking process is run as an [off-chain worker](https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-workers). In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed in the last quarter of each era.
 
 These optimizations will not be covered in-depth on this page. For more details, you can view the [Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs), the [Rust implementation of staking in Substrate](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs), or the `seqPhragménwithpostprocessing` method in the [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would like to dive even more deeply, you can review the [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html).
 

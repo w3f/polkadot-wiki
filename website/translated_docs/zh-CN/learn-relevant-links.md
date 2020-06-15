@@ -32,7 +32,7 @@ sidebar_label: 链接
 
 - [什么是 Substrate?](https://medium.com/paritytech/what-is-substrate-29af4231d7e0)-介绍用于搭建 Polkadot 的框架。
 - [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支75人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中40％的节点服务。 Parity 还为[比特币](https://github.com/paritytech/parity-bitcoin)维护客户端，并为[Zcash ](https://github.com/ZcashFoundation/zebra)建立客户端。
-- [ Substrate 开发人员中心](https://substrate.dev/docs/en/knowledgebase/learn-substrate)-Substrate 的概述，教程和参考文档。
+- [Substrate Developer Hub](https://substrate.dev/docs/en/) - Overviews, tutorials and reference documentation for Substrate.
 - [Substrate 介绍](https://youtu.be/iUMZyL5kTwc)-Gavin Wood 博士介绍 Substrate ，这是 Polkadot 的底层技术。
 - [Substrate 与Polkadot 的关系](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - 关于两种技术的详细描述
 - [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood博士展示了Substrate（区块链框架 + VM）和 Polkadot，并在15分钟内用 Substrate 构建可行的区块链系统
