@@ -43,7 +43,7 @@ The address format used in Substrate-based chains is SS58. SS58 is a modificatio
 
 请注意，由于您的帐户保存在浏览器中，所以它对于大持仓量账户并不安全。浏览器是一个“热钱包”，顾名思义，它容易受到各种攻击。 在处理大量金额时，请使用冷钱包。 创建冷钱包也很简单，只要安全地把你的账户的助记词删除，并从你的计算机中移除该帐户的所有痕迹。
 
-除了扩展和默认的 UI之外、Polkadot 和 Kusama 地址还可以使用 [Subkey 工具](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey)创建。 Subkey 是为熟悉命令行的用户提供的，而且看起来可能会吓人，但很容易上手。 按照 [此页面](https://substrate.dev/docs/en/ecosystem/subkey)中的说明操作。 使用得当的话，Subkey 是 **最安全的** 创建账户的方法。
+Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is intended for users comfortable with using the command line and can seem intimidating, but is quite approachable. Follow the instructions in the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey). When used properly, Subkey is the **most secure** available method of creating an account.
 
 另外还有一个很安全的 [Parity Signer](https://www.parity.io/signer/) ，但它当前只支持Kusama 地址，不支持 Polkadot 和通用 Substrate 地址。
 
@@ -82,13 +82,17 @@ Kusama地址可以有一个索引。一个索引就像一个简短易读版本�
 
 Kusama 网络上的 _身份_ 允许用户将上链元数据附加到他们的账户。 这个元数据可以由独立的登记员核实，以提供可信度。 了解更多关于如何设置或发布身份的信息，如何定义子账户， 或者如何成为登记员，请阅读 [本指南](learn-identity)。
 
-## 多签名账户
+## Proxy Accounts
 
-可以在基于 Substrate 的链中创建多重签名帐户。 多重签名帐户由一个或多个地址和一个阈值组成。 阈值定义了多少签名者(参与地址)需要同意外部提交才能成功进行呼叫。
+Polkadot comes with a generalized proxy account system that allows users to keep keys in cold storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the [proxies](learn-proxies) page for more information.
+
+## Multi-signature Accounts
+
+It is possible to create a multi-signature account in Substrate-based chains. A multi-signature account is composed of one or more addresses and a threshold. The threshold defines how many signatories (participating addresses) need to agree on the submission of an extrinsic in order for the call to be successful.
 
 For example, Alice, Bob, and Charlie set up a multi-sig with a threshold of 2. This means Alice and Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute any call without Alice. A threshold is typically a number smaller than the total number of members but can also be equal to it, which means they all have to be in agreement.
 
-多签名账户有以下几种用途：
+Multi-signature accounts have several uses:
 
 - 确保您自己的藏匿状态L 使用额外的签名作为一个2FA 机制来获取您的资金。 一个 签名者可以在一台电脑上，另一台可以在另一台电脑上，或者在冷钱包中。 这减慢了您与链的互动，但是更加安全。
 - 董事会决定：商业和基金会等法律实体利用多种方式集体对该实体的财政实行管理。
@@ -120,4 +124,4 @@ address(addresses: string[], threshold: number, ss58prefix?: number) {
 const multiSigAddress = address(addresses, 2);
 ```
 
-Polkadot JS Apps 用户界面还支持多签名帐户，如[Account Generate 页面](learn-account-generation#multi-signature-accounts)。这比手动更容易生成。
+The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
