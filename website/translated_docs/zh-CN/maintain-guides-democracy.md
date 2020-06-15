@@ -114,28 +114,34 @@ The easiest way to do this is from the "Extrinsics" tab of Polkadot Apps. Select
 
 ![undelegate](assets/democracy/undelegate.png)
 
-## 代理
+## Governance Proxies
 
-Proxies can be used to participate in governance on behalf of a stash account. A governance proxy can perform any transaction from Democracy, Council, Technical Committee, and Treasry modules. Unlike delegation, the proxy is meant to act as a longer-term account that makes all governance-related transactions for funds held in a different account. Delegation is a logical action, taken when you trust another account's judgement, while proxying is more of a recommended security practice for keeping your funds safe and using an active account with low funds instead.
+Governance Proxies can be used to participate in governance on behalf of a stash account. A governance proxy can perform any transaction from Democracy, Council, Technical Committee, and Treasury modules. Unlike delegation, the proxy is meant to act as a longer-term account that makes all governance-related transactions for funds held in a different account. Delegation is a logical action, taken when you trust another account's judgement, while proxying is more of a recommended security practice for keeping your funds safe and using an active account with low funds instead.
 
-Learn more about proxies on the [proxies](learn-proxies) page.
+Learn more about proxies and other types of proxies on the [proxies](learn-proxies) page.
 
-### 设置代理
+### Why use a proxy?
 
-Setting a proxy involves submitting a single transaction, the transaction type "addProxy" from the Proxy pallet.
+The idea of a governance proxy introduces a level of security. When engaging in transactions with Democracy, Council, Technical Committee, and Treasury modules, a governance proxy uses its low funds sent from its stash account. This leaves a safer proxy performing on-chain actions, rather than the stash account itself.
+
+### Adding a proxy
+
+Adding a proxy involves submitting a single transaction, the transaction type "addProxy" from the Proxy pallet.
 
 You can make this transaction from Polkadot Apps by navigating to the "Extrinsics" tab and selecting the Proxy pallet and the "addProxy" transaction type. Send the transaction from the "Stash" account that holds the funds that you want to vote with, and the target to the proxy account that will perform governance action. Choose "Governance" as the proxy type.
 
-### 代理投票
+![add proxy](assets/democracy/adding_proxy.png)
+
+You also have the choice to add in a governance anonymous proxy underneath the "anonymous" type from the Proxy pallet and selecting "Governance" as the proxy type. A governance anonymous proxy is only accessible by another proxy and these do not come with any associated secret key.
+
+Read more on Anonymous Proxies [here](https://wiki.polkadot.network/docs/en/learn-proxies#anonymous-proxies).
+
+### Voting with a proxy
 
 Making a vote on behalf of a stash requires a "proxy" transaction from the Proxy pallet. When you choose this transaction from the "Extrinsics" tab, it will let you select "vote" from the Democracy pallet, and you will specify the index of the referendum that is being voted, the judgement (i.e. "Aye" for approval or "Nay" for rejection), and the conviction, just like a normal vote.
 
-### 移除代理
+### Removing a proxy
 
-At some point you may want to remove a proxy from being able to vote on behalf of a stash account. This is possible to do by submitting a "removeProxy" transaction from the stash account, targetting the proxy account.
+At some point you may want to remove a proxy from being able to vote on behalf of a stash account. This is possible to do by submitting a "removeProxy" transaction from the stash account, targetting the proxy account. You also have the option to "removeProxies" which will remove all proxies created from a selected stash account.
 
-### 移除代理
-
-If a proxy account wants to resign their proxy status for a different stash account this is possible to do by sending the `resignProxy` transaction. Simply call this transaction from the proxy account and all of its proxy responsibilities will be removed.
-
-![resign proxy](assets/democracy/resign_proxy.png)
+![remove proxy](assets/democracy/remove_proxy.png)
