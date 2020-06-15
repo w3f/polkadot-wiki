@@ -175,7 +175,7 @@ const txHash = getTxHash(signedTx);
 
 ## Примечания
 
-Некоторые адреса для использования в примерах. Смотрите [документацию по Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey).
+Some addresses to use in the examples. See [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey).
 
 ```bash
 $ subkey --network polkadot generate
