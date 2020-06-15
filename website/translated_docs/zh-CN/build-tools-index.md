@@ -14,11 +14,7 @@ sidebar_label: 工具索引
 
 ## 钱包
 
-- [Polkadot-JS Apps - 账户](https://polkadot.js.org/apps/#/accounts)
-- [Polkawallet](https://polkawallet.io/) - Polkadot 在 iOS 和 Android 上使用的移动钱包。目前仍在开发之中，但测试版已经可以下载。关注 [ GitHub ](https://github.com/polkawallet-io/polkawallet-RN)上的开发进度。
-- [SpeckleOS](https://www.speckleos.io/) - 浏览器扩展钱包，目前仍在开发之中。关注[GitHub](https://github.com/SpeckleOS/speckle-browser-extension)上的开发进度。
-- [Enzyme](http://blockxlabs.com/) - 浏览器扩展钱包。关注 [GitHub](https://github.com/blockxlabs/enzyme/)
-- [Math 钱包](https://www.mathwallet.org) - 浏览器扩展和移动钱包
+查看 [钱包](build-wallets.md) 页面。
 
 ## 网络监控 & 报告
 
@@ -30,12 +26,12 @@ sidebar_label: 工具索引
 
 ### 客户端
 
-- [Polkadot](https://github.com/paritytech/polkadot) - Polkadot Host 的Rust 实现。
+- [Polkadot](https://github.com/paritytech/polkadot) - Polkadot Host 的 Rust 实现。
 
 ### 工具
 
 - [Substrate](https://github.com/paritytech/substrate) - 区块链开发平台使用 Rust 编写。Polkadot 基于在 Substrate 上开发。
-- [Substrate 知识库](https://substrate.dev/docs/en/knowledgebase/learn-substrate) - 使用 Substrate 构建区块链的全面文档和教程。
+- [Substrate 知识库](https://substrate.dev/docs/en/) - 使用 Substrate 构建区块链的全面文档和教程。
 
 ## C++
 
@@ -48,15 +44,15 @@ sidebar_label: 工具索引
 
 ## Go
 
-- [Gossamer](https://github.com/ChainSafe/gossamer) - Polkadot Host 的Go 实现。
-- [Golkadot](https://github.com/opennetsys/golkadot) - Polkadot Substrate 的 Go 实现。
+- [Gossamer](https://github.com/ChainSafe/gossamer) - Polkadot Host 的 Go 实现。
+- [Golkadot](https://github.com/opennetsys/golkadot) - Polkadot Substrate的 Go 实现。
 - [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC 客户端在 Go, a.k.a. GSRPC
 
 ## JS
 
 ### 客户端
 
-- [Polkadot-JS 客户端](https://github.com/polkadot-js/client) - JavaScript爱好者的备选客户端。
+- [Polkadot-JS客户端](https://github.com/polkadot-js/client) - JavaScript 爱好者的备选客户端。
 
 在深入研究[Polkadot-JS](https://polkadot.js.org)之前，您可以先浏览相关文档。
 
@@ -68,7 +64,7 @@ sidebar_label: 工具索引
 
 Polkadot-JS Common 提供各种实用型效用函数，便于在`@polkadot`namespace（命名空间）所有项目中加以使用。它包含多个实用程序包，具体如下所示。文档和使用说明可在[ Polkadot-JS/Common API 文档](https://polkadot.js.org/common/)中查看。
 
-- [@polkadot/keyring](https://polkadot.js.org/common/keyring/)用JavaScript 创建/加载帐户，有助于创建钱包或任何要求用户编写链的应用程序。[范例](https://polkadot.js.org/common/examples/keyring/)
+- [@polkadot/keyring](https://polkadot.js.org/common/keyring/)用 JavaScript 创建/加载帐户，有助于创建钱包或任何要求用户编写链的应用程序。[范例](https://polkadot.js.org/common/examples/keyring/)
 - [@polkadot/util](https://polkadot.js.org/common/util/)实用型效用函数，例如检查字符串是否十六进制编码。
 - [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/)便于在 Polkadot 上开发使用的加密实用程序。
 
