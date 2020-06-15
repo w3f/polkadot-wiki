@@ -203,8 +203,8 @@ Learn more about proxies and other types of proxies on the [proxies](learn-proxi
 
 The idea of a governance proxy introduces a level of security. When engaging in transactions with
 Democracy, Council, Technical Committee, and Treasury modules, a governance proxy uses its low funds
-sent from its stash acccount. This avoids a stash or primary account with larger funds from
-participating in governance.
+sent from its stash account. This leaves a safer proxy performing on-chain actions, rather than the
+stash account itself.
 
 ### Adding a proxy
 
