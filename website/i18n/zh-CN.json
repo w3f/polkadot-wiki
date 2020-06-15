@@ -65,6 +65,10 @@
         "title": "交易创建和签名",
         "sidebar_label": "交易创建"
       },
+      "build-wallets": {
+        "title": "Polkadot Wallets",
+        "sidebar_label": "Polkadot Wallets"
+      },
       "claims": {
         "title": "Polkadot 认领",
         "sidebar_label": "认领"
@@ -228,6 +232,10 @@
       "learn-polkadot-host": {
         "title": "Polkadot 主机 (PH)",
         "sidebar_label": "Polkadot 主机 (PH)"
+      },
+      "learn-proxies": {
+        "title": "Proxy Accounts",
+        "sidebar_label": "Proxy Accounts"
       },
       "learn-randomness": {
         "title": "随机性",
