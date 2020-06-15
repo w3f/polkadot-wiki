@@ -6,7 +6,7 @@ sidebar_label: Claims
 
 The Kusama network is Polkadot's experimental, community-focused R&D network. If you hold the DOT indicator token, you are entitled to claim an equivalent amount of KSM on the Kusama network. This is so that the Kusama network is aligned with the existing DOT holders and community.
 
-You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens.
+You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
 
 ## Step 1. Create a Kusama account
 
