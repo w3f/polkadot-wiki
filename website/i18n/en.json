@@ -125,6 +125,10 @@
         "title": "Kusama",
         "sidebar_label": "Home"
       },
+      "kusama-ledger": {
+        "title": "Using Ledger Devices",
+        "sidebar_label": "Ledger Devices"
+      },
       "kusama-time-periods": {
         "title": "Time Period Cheat Sheet",
         "sidebar_label": "Parameters"
@@ -226,8 +230,8 @@
         "sidebar_label": "Parathreads"
       },
       "learn-phragmen": {
-        "title": "Sequential Phragmen Method",
-        "sidebar_label": "Sequential Phragmen Method"
+        "title": "Sequential Phragmén Method",
+        "sidebar_label": "Sequential Phragmén Method"
       },
       "learn-polkadot-host": {
         "title": "Polkadot Host (PH)",
