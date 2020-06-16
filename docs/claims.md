@@ -263,7 +263,7 @@ There are two ways to make your free attest transaction. The first option is to 
 below the QR code to scan the QR code that shows on the authorize transaction window. While the
 other one is to move your QR code to the camera.
 
-![ps-3-highlight](assets/new-claims/ps-3-highlight.png)
+![ps-3-red](assets/new-claims/ps-3-red.png)
 
 When the transaction is included in the block, you will see a green success box appear in the upper
 right corner and the DOTs will be in your account.
