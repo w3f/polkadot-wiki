@@ -225,7 +225,7 @@ Next, select the address that you have claimed DOTs during the pre-genesis.
 
 ![ps-3](assets/new-claims/ps-03.jpg)
 
-And then your address will be displayed in the QR code format. You can move the QR code to the
+Your address will be displayed in QR code format. You can move the QR code to the
 camera so that the PolkadotJS apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
