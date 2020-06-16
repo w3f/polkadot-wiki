@@ -219,7 +219,7 @@ Now you need to open the Parity Signer and choose "Polkadot" network.
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-Next, select the address that you have claimed DOTs during the pre-genesis.
+Next, select the address that you have claimed DOTs to during the pre-genesis.
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
