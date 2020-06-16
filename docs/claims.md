@@ -259,9 +259,10 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-There are two ways to make your free attest transaction. The first option is to use the "QR Scanner"
-below the QR code to scan the QR code that shows on the authorize transaction window. While the
-other one is to move your QR code to the camera.
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that shows on the
+authorize transaction window to generate the raw transaction. Next, you may be required to input the
+PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to
+the camera on the PolkadotJS apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.png)
 
