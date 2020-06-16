@@ -197,8 +197,10 @@ corner and the DOTs will be in your account.
 - Your Polkadot account unlocked on Polkadot-JS Apps UI.
 
 You will be importing your Polkadot address on the Parity Signer to the PolkadotJS apps to interact
-with the network. All the operations will have to use your phone to sign the transaction and
-broadcast it via the PolkadotJS apps remote node.
+with the network. If you do not have a Polkadot address, please follow the instructions on the
+Parity Signer section in the [account generation][] page for generating a new Polkadot account. All
+the operations will have to use your phone to sign the transaction and broadcast it via the
+PolkadotJS apps remote node.
 
 ### Go to Polkadot-JS Apps
 
