@@ -620,10 +620,10 @@ terms of amount of stake.
 
 - [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html) -
   The formal adaptation of the Phragmén method as applied to Polkadot validators.
-- [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) -
-  Implementations of Simple and Complicated Phragmén methods.
-- [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/core/phragmen/src/lib.rs) -
-  Rust implementation used in the Substrate Runtime Module Library.
+- [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
+  implementations of Simple and Complicated Phragmén methods.
+- [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs) -
+  Rust implementation used in Substrate.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
 - [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
