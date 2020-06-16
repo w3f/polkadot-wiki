@@ -262,7 +262,7 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that shows on the
 authorize transaction window to generate the raw transaction. Next, you may be required to input the
 PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to
-the camera on the PolkadotJS apps to continue.
+the camera on the PolkadotJS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.png)
 
