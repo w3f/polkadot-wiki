@@ -217,13 +217,13 @@ Click "Add via Qr" on the right side.
 
 Now you need to open the Parity Signer and choose "Polkadot" network.
 
-![ps-1](assets/new-claims/ps-1.png)
+![ps-1](assets/new-claims/ps-01.jpg)
 
 Next, select the address that you have claimed DOTs during the pre-genesis.
 
-![ps-2](assets/new-claims/ps-2.png)
+![ps-2](assets/new-claims/ps-02.jpg)
 
-![ps-3](assets/new-claims/ps-3.png)
+![ps-3](assets/new-claims/ps-03.jpg)
 
 And then your address will be displayed in the QR code format. You can move the QR code to the
 camera so that the PolkadotJS apps can decode it.
