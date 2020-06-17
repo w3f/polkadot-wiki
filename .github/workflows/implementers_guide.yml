@@ -2,7 +2,7 @@ name: Build the Parachain Implementers's Guide and publish to the wiki.
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "0 * * * *"
   push:
     paths:
     - '.github/workflows/implementers_guide.yml'
