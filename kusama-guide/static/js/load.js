@@ -1,5 +1,7 @@
 window.onload = () => {
 
+  console.log(location.href)
+
   const head = document.getElementsByTagName('head')[0];
 
   const gtagScript = document.createElement('script');

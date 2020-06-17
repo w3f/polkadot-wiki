@@ -97,4 +97,8 @@ docReady(function () {
     script.setAttribute('site', 'YOUKYIQA');
     document.querySelector('body footer').appendChild(script);
 
-})
+});
+
+if (location.href.endsWith("/en")) {
+    location.href = "/docs/en/kusama-index"
+}
