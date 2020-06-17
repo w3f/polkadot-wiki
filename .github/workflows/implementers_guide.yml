@@ -28,7 +28,7 @@ jobs:
 
     - run: |
         mdbook build .tmp_polkadot/roadmap/implementors-guide/
-        cp -R .tmp_polkadot/roadmap/implementors-guide/book/ website/pages/implementers-guide/
+        cp -R .tmp_polkadot/roadmap/implementors-guide/book/ website/static/implementers-guide/
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v4
@@ -36,6 +36,6 @@ jobs:
         author_name: gh-workflow
         author_email: gh-workflow
         message: "Update newest Implementer's Guide changes"
-        add: "website/pages/implementers-guide"
+        add: "website/static/implementers-guide"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
