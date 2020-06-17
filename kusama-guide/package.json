@@ -5,7 +5,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "yarn mirror && docusaurus-start",
-    "build": "npm run mirror && docusaurus-build && npm run inject",
+    "build": "BUILDING=true npm run mirror && docusaurus-build && npm run inject",
     "mirror": "node mirror.js",
     "inject": "node inject.js",
     "publish-gh-pages": "npm run mirror && docusaurus-publish",

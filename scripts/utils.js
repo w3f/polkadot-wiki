@@ -6,8 +6,6 @@ const recursiveReaddir = require('recursive-readdir');
 const baseUrlPattern = '/_baseUrlPattern_/';
 const baseUrlRegExp = new RegExp(baseUrlPattern, 'g');
 
-const buildDirectory = path.join(__dirname, 'build');
-
 const relativify = (content, filePath) =>
   content.replace(baseUrlRegExp, () => {
     const result = `${path.relative(`${path.dirname(filePath)}`, '')
@@ -21,7 +19,7 @@ const websiteTextualFileExtensions = ['.css', '.js', '.html', '.xml'];
 const isNotWebsiteTextualFile = (filePath, stats) =>
   !(stats.isDirectory() || websiteTextualFileExtensions.includes(path.extname(filePath)));
 
-const postProcess = async () => {
+const postProcess = async (buildDirectory) => {
   const filePaths = await recursiveReaddir(buildDirectory, [isNotWebsiteTextualFile]);
   await Promise.all(
     filePaths.map(async filePath => {

@@ -1,14 +1,14 @@
-const {baseUrlPattern} = require('./utils');
+const { baseUrlPattern } = require('../scripts/utils');
 
 // const isBuilding = process.env.npm_lifecycle_script
 //   && process.env.npm_lifecycle_script === 'docusaurus-build'; 
-
-const isBuilding = true;
+ 
+const isBuilding = process.env.BUILDING;
 
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
-  tagline: 'Information about Kusama.',
-  url: 'https://lsaether.github.io', // Your website URL
+  tagline: 'One-stop-shop for Kusama information.',
+  url: '', // Your website URL
   baseUrl: isBuilding ? baseUrlPattern : '/',
   projectName: '',
   organizationName: 'lsaether',

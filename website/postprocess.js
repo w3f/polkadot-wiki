@@ -6,6 +6,6 @@ require('loud-rejection/register');
 const path = require('path');
 const { postProcess } = require('./utils');
 
-const buildDirectory = path.join(__dirname, 'build');
+const buildDirectory = path.join(__dirname, 'build/polkadot-wiki');
 
 postProcess(buildDirectory);
