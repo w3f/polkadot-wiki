@@ -1,5 +1,5 @@
 {
-  "homepage": "https://w3f.github.io/polkadot-wiki-i18n",
+  "homepage": "./",
   "scripts": {
     "examples": "docusaurus-examples",
     "predeploy": "npm run build",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@polkadot/api": "^1.19.1",
+    "ipfs-http-client": "^44.2.0",
     "katex": "^0.11.1",
     "remarkable-katex": "^1.1.4",
     "replace-in-file": "^6.1.0",

@@ -1,11 +1,17 @@
+const {baseUrlPattern} = require('./utils');
+
+// const isBuilding = process.env.npm_lifecycle_script
+//   && process.env.npm_lifecycle_script === 'docusaurus-build'; 
+
+const isBuilding = true;
+
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
   tagline: 'Information about Kusama.',
-  url: 'https://wiki.polkadot.network', // Your website URL
-  baseUrl: '/',
-  projectName: 'polkadot-wiki',
-  organizationName: 'w3f',
-  cname: 'wiki.polkadot.network',
+  url: 'https://lsaether.github.io', // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : '/',
+  projectName: '',
+  organizationName: 'lsaether',
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
@@ -15,9 +21,9 @@ const siteConfig = {
   ],
 
   /* path to images for header/footer */
-  headerIcon: 'img/kusama-brand-assets/Kusama Brand Assets/Symbol (Canary)/Kusama_Canary_white.png',
-  footerIcon: 'img/kusama-brand-assets/Kusama Brand Assets/Symbol (Canary)/Kusama_Canary_white.png',
-  favicon: 'img/kusama-brand-assets/Kusama Brand Assets/Symbol (Canary)/Kusama_Canary_white.png',
+  headerIcon: './img/kusama-brand-assets/Kusama_Canary_white.png',
+  footerIcon: './img/kusama-brand-assets/Kusama_Canary_white.png',
+  favicon: './img/kusama-brand-assets/Kusama_Canary_white.png',
 
   /* Colors for website */
   colors: {
@@ -54,22 +60,22 @@ const siteConfig = {
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
-    '/js/custom.js',
-    '/js/klaro-config.js',
-    '/js/klaro.js'
+    './js/custom.js',
+    './js/klaro-config.js',
+    './js/klaro.js'
   ],
 
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
     'https://fonts.googleapis.com/css?family=Muli&display=swap',
-    '/css/klaro.css'
+    './css/klaro.css'
   ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   
   // No .html extensions for paths.
-  cleanUrl: true,
+  cleanUrl: false,
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
