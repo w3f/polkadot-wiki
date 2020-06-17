@@ -1,4 +1,4 @@
-name: Build the Parachain Implementers's Guide and publish to the wiki.
+name: Build the Parachain Implementers's Guide and save as static website.
 
 on:
   schedule:
