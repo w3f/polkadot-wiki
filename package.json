@@ -1,13 +1,13 @@
 {
-  "homepage": "https://w3f.github.io/polkadot-wiki-i18n",
   "scripts": {
     "examples": "docusaurus-examples",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "yarn mirror && docusaurus-start",
-    "build": "npm run mirror && docusaurus-build && npm run inject",
-    "mirror": "node mirror.js",
-    "inject": "node inject.js",
+    "kusama:build": "BUILDING=true cd kusama-guide; docusaurus-build; node ./postprocess",
+    "polkadot:build": "BUILDING=true cd polkadot-wiki; docusaurus-build; node ./postprocess",
+    "mirror": "node scripts/mirror.js",
+    "inject": "node srcipts/inject.js",
     "publish-gh-pages": "npm run mirror && docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
@@ -21,6 +21,7 @@
   "dependencies": {
     "@polkadot/api": "^1.19.1",
     "fs-extra": "^9.0.1",
+    "ipfs-http-client": "^44.2.0",
     "katex": "^0.11.1",
     "remarkable-katex": "^1.1.4",
     "replace-in-file": "^6.1.0",

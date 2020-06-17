@@ -4,7 +4,7 @@
 require('loud-rejection/register');
 
 const path = require('path');
-const { postProcess } = require('./utils');
+const { postProcess } = require('../scripts/utils');
 
 const buildDirectory = path.join(__dirname, 'build');
 
