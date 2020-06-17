@@ -19,3 +19,4 @@ jobs:
         uses: aquiladev/ipfs-action@v0.1.2
         with:
           path: ./polkadot-wiki/build/polkadot-wiki
+          timeout: 120000
