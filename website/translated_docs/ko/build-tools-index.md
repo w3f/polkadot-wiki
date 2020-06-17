@@ -14,11 +14,7 @@ Here we provide a list of tools available for your development needs. They are s
 
 ## Wallets
 
-- [Polkadot-JS Apps - Accounts](https://polkadot.js.org/apps/#/accounts)
-- [Polkawallet](https://polkawallet.io/) - A mobile wallet for Polkadot on both iOs and Android. Currently in development but a Beta version is available for download. Follow development on [GitHub](https://github.com/polkawallet-io/polkawallet-RN).
-- [SpeckleOS](https://www.speckleos.io/) - Browser extension wallet. In development - follow progress on [GitHub](https://github.com/SpeckleOS/speckle-browser-extension).
-- [Enzyme](http://blockxlabs.com/) - Browser extension wallet. Follow development on [GitHub](https://github.com/blockxlabs/enzyme/).
-- [Math Wallet](https://www.mathwallet.org) - Browser extension and mobile wallet
+See the [Wallets](build-wallets.md) page.
 
 ## Network Monitoring & Reporting
 
@@ -35,7 +31,7 @@ Here we provide a list of tools available for your development needs. They are s
 ### Tools
 
 - [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in Rust. Polkadot is being built on top of Substrate.
-- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate) - Comprehensive documentation and tutorials for building a blockchain using Substrate.
+- [Substrate Knowledge Base](https://substrate.dev/docs/en/) - Comprehensive documentation and tutorials for building a blockchain using Substrate.
 
 ## C++
 

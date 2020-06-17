@@ -43,7 +43,7 @@ A **more convenient and recommended** method of keeping the accounts stored on y
 
 Please note that as this keeps your accounts in the browser, it is not a safe place to keep large holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. Creating cold storage is as simple as securely stashing away the seed phrase for your accounts and removing all traces of the accounts from your computer.
 
-Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is intended for users comfortable with using the command line and can seem intimidating, but is quite approachable. Follow the instructions in the [Subkey documentation](https://www.substrate.io/kb/integrate/subkey). When used properly, Subkey is the **most secure** available method of creating an account.
+Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is intended for users comfortable with using the command line and can seem intimidating, but is quite approachable. Follow the instructions in the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey). When used properly, Subkey is the **most secure** available method of creating an account.
 
 There is also the very secure [Parity Signer](https://www.parity.io/signer/) but it currently only supports Kusama addresses, not Polkadot or generic Substrate.
 
@@ -81,6 +81,10 @@ Because of this unreliability of indices, they **may not be present** in Polkado
 ## Identities
 
 The _Identities_ pallet built into Kusama allows users to attach on-chain metadata to their accounts. This metadata can be verified by independent registrars to provide trustworthiness. To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity).
+
+## Proxy Accounts
+
+Polkadot comes with a generalized proxy account system that allows users to keep keys in cold storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the [proxies](learn-proxies) page for more information.
 
 ## Multi-signature Accounts
 

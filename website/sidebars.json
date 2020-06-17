@@ -21,7 +21,8 @@
           "build-pdk",
           "build-cumulus",
           "build-smart-contracts",
-          "build-oracle"
+          "build-oracle",
+          "build-wallets"
         ]
       },
       {
@@ -76,6 +77,7 @@
         "label": "Advanced",
         "ids": [
           "learn-staking",
+          "learn-proxies",
           "learn-availability",  
           "learn-randomness",
           "learn-crosschain",

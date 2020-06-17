@@ -9,7 +9,7 @@ indicator token, you are entitled to claim an equivalent amount of KSM on the Ku
 is so that the Kusama network is aligned with the existing DOT holders and community.
 
 You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator
-tokens.
+tokens. There is no deadline for claiming KSM.
 
 ## Step 1. Create a Kusama account
 
@@ -63,7 +63,8 @@ cargo install --git https://github.com/alexcrichton/wasm-gc
 
 Alternatively, you can build `subkey` from the source code.
 
-1. Follow the build instructions for [Substrate](https://www.substrate.io/kb/getting-started).
+1. Follow the build instructions for
+   [Substrate](https://substrate.dev/docs/en/knowledgebase/getting-started).
 2. When building, only build `subkey` by typing `cargo build -p subkey`.
 3. The executable is `./target/debug/subkey`.
 
@@ -89,8 +90,8 @@ NOTE: Previous versions of `subkey` only generated Substrate addresses. If you d
 generate a new seed, you can convert the Substrate address to a Kusama address by following
 [this section](#kusama-from-substrate-address).
 
-See the [`subkey` documentation](https://www.substrate.io/kb/integrate/subkey) or enter
-`subkey --help` for more usage examples.
+See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) or
+enter `subkey --help` for more usage examples.
 
 ### Using Polkadot UI
 

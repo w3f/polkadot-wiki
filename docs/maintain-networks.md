@@ -90,5 +90,5 @@ finding the name of your node.
 There is a built-in search function for the nodes page. Simply start typing keystrokes in the main
 window to make it available.
 
-[substrate install]: https://www.substrate.io/kb/getting-started
+[substrate install]: https://substrate.dev/docs/en/knowledgebase/getting-started
 [telemetry]: https://telemetry.polkadot.io/

@@ -12,13 +12,17 @@ Pull requests, discussions and contributions from the community are encouraged. 
 
 Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
-Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes you can create a new Pull Request to the repository and one of the maintainers will either merge it in or request changes very soon.
+Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub sign in page, where you can either login or create an account.
 
 ![](assets/edit_button.png)
 
+Once logged in, you'll be taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes, you can add any specific details on what was changed and commit to a new branch to create a new Pull Request to the repository. From there one of the maintainers will either merge it in or request changes very soon.
+
+![](assets/contributing.png) ![](assets/creating-pull-request.png)
+
 ## Aturan
 
-Ada beberapa aturan dasar bagi para kontributor:
+There are a few basic ground-rules for contributors:
 
 1. ** Tidak ada ` - memaksa ` mendorong ** atau memodifikasi riwayat Git dengan cara apa pun.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.

@@ -36,20 +36,25 @@ Kusama - это общедоступная сеть и любой может п�
 
 ### Общие
 
-[Kusama форум](https://forum.kusama.network/) [Kusama чат](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders) [wut@kusama.network](mailto:wut@kusama.network)
+- [Kusama forum](https://forum.kusama.network/)
+- [Kusama chat](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders)
+- [support@kusama.network](mailto:support@kusama.network) _Email support_
 
 ### Получить помощь если вы претендуете на KSM
 
-[Чат поддержки KSM Claims](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
+- [KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
 
 ### Чат валидаторов
 
-[Чат валидаторов (английский)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) Чтобы присоединиться к китайскому чату валидаторов отправьте сообщение [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
+- [Validator chat (English)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)
+- To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
 
 ### Сообщить о проблеме или отправить ошибки
 
-[sos@kusama.network](mailto:sos@kusama.network)
+- [sos@kusama.network](mailto:sos@kusama.network)
 
 ### Получить обновления
 
-[@kusamanetwork](https://twitter.com/kusamanetwork) [Информационный бюллетень Kusama](https://kusama.network/newsletter) [r/kusama](https://reddit.com/r/kusama)
+- [@kusamanetwork](https://twitter.com/kusamanetwork)
+- [Kusama newsletter](https://kusama.network/newsletter)
+- [r/kusama](https://reddit.com/r/kusama)

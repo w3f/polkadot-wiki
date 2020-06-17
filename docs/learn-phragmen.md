@@ -1,10 +1,10 @@
 ---
 id: learn-phragmen
-title: Sequential Phragmen Method
-sidebar_label: Sequential Phragmen Method
+title: Sequential Phragmén Method
+sidebar_label: Sequential Phragmén Method
 ---
 
-## What is the sequential Phragmen method?
+## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
 the 1890s.
@@ -68,7 +68,7 @@ However, it is good to understand how it works since it means that not all the s
 nominated will end up on your validator after an election. Nominators are likely to nominate a few
 different validators that they trust to do a good job operating their nodes.
 
-You can use the [offline-phragmen](https://github.com/kianenigma/offline-phragmen) script for
+You can use the [offline-phragmén](https://github.com/kianenigma/offline-phragmen) script for
 predicting the outcome of a validator election ahead of a new election.
 
 ## Understanding Phragmén
@@ -542,9 +542,9 @@ possible. It then runs an edge-reducing algorithm to minimize the number of vali
 nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an
-[off-chain worker](https://substrate.dev/docs/en/conceptual/core/off-chain-workers). In order to
-give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed
-in the last quarter of each era.
+[off-chain worker](https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-workers).
+In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are
+not allowed in the last quarter of each era.
 
 These optimizations will not be covered in-depth on this page. For more details, you can view the
 [Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs),
@@ -620,10 +620,10 @@ terms of amount of stake.
 
 - [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html) -
   The formal adaptation of the Phragmén method as applied to Polkadot validators.
-- [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) -
-  Implementations of Simple and Complicated Phragmén methods.
-- [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/core/phragmen/src/lib.rs) -
-  Rust implementation used in the Substrate Runtime Module Library.
+- [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
+  implementations of Simple and Complicated Phragmén methods.
+- [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs) -
+  Rust implementation used in Substrate.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
 - [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -

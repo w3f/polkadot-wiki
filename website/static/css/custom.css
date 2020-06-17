@@ -33,10 +33,6 @@
   cursor: pointer;
 }
 
-.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
-  background-color: black;
-}
-
 .fixedHeaderContainer {
   background: black;
 }
@@ -142,6 +138,17 @@
 .full-width {
   width: 100%;
   text-align: center;
+}
+
+
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+ background-color: black;
+}
+
+
+.nav-site :nth-child(4) {
+  background-color: #E6007A !important;
+  border: solid 1px silver;
 }
 
 body {

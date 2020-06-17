@@ -6,7 +6,7 @@ sidebar_label: 设置全节点
 
 如果你是使用 Substrate 开发 dapp 或产品如 Polkadot，Kusama 或自定义 Substrate 链，你需要具有节点作为运行的功能。另外，依靠自己的架构总是比依靠第三方托管的结构更好，毕竟这个是新的去中心世界。
 
-本指南将向您展示如何连接到[Kusama 网络](https://kusama.network)， 但也适用于其他基于[ Substrate](https://www.substrate.io/ kb/learn-substrate)的链。首先，让我们澄清术语 _全节点_
+This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First, let's clarify the term _full node_.
 
 ### 节点类型
 
@@ -46,9 +46,11 @@ Archive 节点是供需要过去信息的实用程序使用，例如区块浏览
 
 > 如果您是验证人，则不建议使用。 请参阅 [设置安全验证人](maintain-guides-secure-validator)
 
+For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL in the code snippet below may become slightly out-of-date.
+
 - 安装 WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - 安装 Ubuntu (同一个网页): https://docs.microsoft.com/en-us/windows/wsl/install-win10
-- 在 Ubuntu 中运行以下指令下载 Polkadot 二进制文件： `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
+- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
 - 运行以下指令: `sudo chmod +x polkadot`
 - 运行以下指令: `./polkadot --name "你节点的名称"`
 - 在 https://telemetry.polkadot.io/#list/Kusama 找您的节点
@@ -57,16 +59,20 @@ Archive 节点是供需要过去信息的实用程序使用，例如区块浏览
 
 > 如果您是验证人，则不建议使用。 请参阅 [设置安全验证人](maintain-guides-secure-validator)
 
-- 运行以下指令下载 Polkadot 二进制文件： `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.2/polkadot -o polkadot`
+For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL in the code snippet below may become slightly out-of-date.
+
+Also please note that the nature of pre-built binaries means that they may not work on your particular architecture or Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it likely means the binary is not compatible with your system. You will either need to compile the [source code yourself](#clone-and-build) or use [docker](#using-docker).
+
+- Download Polkadot binary by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
 - 运行以下指令: `sudo chmod +x polkadot`
 - 运行以下指令: `./polkadot --name "你节点的名称"`
 - 在 https://telemetry.polkadot.io/#list/Kusama 找您的节点
 
 ## 获取 Substrate
 
-按照 [这里的说明](https://www.substrate.io/kb/getting-started) - 注意 Windows 用户， 最好是使用虚拟机。
+Follow instructions as outlined [here](https://substrate.dev/docs/en/knowledgebase/getting-started) - note that Windows users will have their work cut out for them. It's better to use a virtual machine instead.
 
-通过运行 `cargo --version` 来测试安装是否成功。
+Test if the installation was successful by running `cargo --version`.
 
 ```bash
 λ cargo --version
@@ -75,7 +81,7 @@ cargo 1.41.0 (626f0f40e 2019-12-03)
 
 ## Clone 及 Build
 
-[paritytech/polkadot](https://github.com/paritytech/polkadot) 库主分支包含 了最新 Kusama 的代码。
+The [paritytech/polkadot](https://github.com/paritytech/polkadot) repo's master branch contains the latest Kusama code.
 
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
@@ -84,36 +90,44 @@ cd kusama
 cargo build --release
 ```
 
-或者，查看特定标记的版本:
+Alternatively, check out a specific tagged release:
 
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
 cd kusama
-git checkout tags/v0.7.27
+git checkout tags/v0.8.3
 ./scripts/init.sh
 cargo build --release
 ```
 
 ## 运行
 
-内置的二进制文件将在 `target/release` 文件夹中，名为 `polkadot`。
+The built binary will be in the `target/release` folder, called `polkadot`.
 
 ```bash
 ./target/release/polkadot --name "我的节点名称"
 ```
 
-使用`-help ` 选项找出运行节点时可以使用的选项。 例如如果[连接到您的远程节点](maintain-wss)，则可能要使用`-ws-external `和`-rpc-cors all`。
+Use the `--help` flag to find out which flags you can use when running the node. For example, if [connecting to your node remotely](maintain-wss), you'll probably want to use `--ws-external` and `--rpc-cors all`.
 
-同步过程将需要一段时间，取决于您的带宽、处理能力、磁盘速度和内存记忆体。 在使用DigitalOcean $10 的 VPS 中，过程大约36小时内完成。
+The syncing process will take a while depending on your bandwidth, processing power, disk speed and RAM. On a \$10 DigitalOcean droplet, the process can complete in some 36 hours.
 
-恭喜您，您正在与 Kusama 网络同步。请记住，当使用任何其他的 Substrate 链时，该进程也是相同的。
+Congratulations, you're now syncing with Kusama. Keep in mind that the process is identical when using any other Substrate chain.
 
 ## 运行 Archive 节点
 
-当计行一个简单的同步节点时(上面)，仅保留过去256个区块的状态。当验证时，它默认为 [archive 模式](#types-of-nodes)。要保持完整状态，请使用`--pruning` 标志：
+When running as a simple sync node (above), only the state of the past 256 blocks will be kept. When validating, it defaults to [archive mode](#types-of-nodes). To keep the full state use the `--pruning` flag:
 
 ```bash
 ./target/release/polkadot --name "我的节点名称" --pruning archive
 ```
 
-使用额外标志可以使同步速度几乎达到四倍：`--wasm-execution Compiled`请注意，这使节点使用了更多的 CPU 和 RAM ，因此应该在节点同步后关闭 。
+It is possible to almost quadruple synchronization speed by using an additional flag: `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off after the node is in sync.
+
+## Using Docker
+
+Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so it's best left up to those that either already have familiarity with docker, or have completed the other set-up instructions in this guide.
+
+```zsh
+docker run -p 9944:9944 parity/polkadot:v0.8.3 --name "calling_home_from_a_docker_container"
+```

@@ -6,7 +6,7 @@ sidebar_label: Set up a Full Node
 
 If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's always better to rely on your own infrastructure than on a third-party-hosted one in this brave new decentralized world.
 
-This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://www.substrate.io/kb/learn-substrate)-based chain. First, let's clarify the term _full node_.
+This guide will show you how to connect to [Kusama network](https://kusama.network), but the same process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First, let's clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -46,9 +46,11 @@ Another type of node is a **light node**. A light node has only the runtime and 
 
 > Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
 
+For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL in the code snippet below may become slightly out-of-date.
+
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
-- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
+- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
@@ -57,14 +59,18 @@ Another type of node is a **light node**. A light node has only the runtime and 
 
 > Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator)
 
-- Download Polkadot binary by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.7.30/polkadot -o polkadot`
+For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL in the code snippet below may become slightly out-of-date.
+
+Also please note that the nature of pre-built binaries means that they may not work on your particular architecture or Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it likely means the binary is not compatible with your system. You will either need to compile the [source code yourself](#clone-and-build) or use [docker](#using-docker).
+
+- Download Polkadot binary by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 ## Get Substrate
 
-Follow instructions as outlined [here](https://www.substrate.io/kb/getting-started) - note that Windows users will have their work cut out for them. It's better to use a virtual machine instead.
+Follow instructions as outlined [here](https://substrate.dev/docs/en/knowledgebase/getting-started) - note that Windows users will have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
 
@@ -89,7 +95,7 @@ Alternatively, check out a specific tagged release:
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
 cd kusama
-git checkout tags/v0.7.27
+git checkout tags/v0.8.3
 ./scripts/init.sh
 cargo build --release
 ```
@@ -117,3 +123,11 @@ When running as a simple sync node (above), only the state of the past 256 block
 ```
 
 It is possible to almost quadruple synchronization speed by using an additional flag: `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off after the node is in sync.
+
+## Using Docker
+
+Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so it's best left up to those that either already have familiarity with docker, or have completed the other set-up instructions in this guide.
+
+```zsh
+docker run -p 9944:9944 parity/polkadot:v0.8.3 --name "calling_home_from_a_docker_container"
+```
