@@ -11,9 +11,10 @@ jobs:
     name: build and deploy
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: Build
         run: cd kusama-guide ; yarn ; yarn build ; node postprocess
-        
+
       - name: Upload to IPFS
         uses: aquiladev/ipfs-action@v0.1.2
         with:
