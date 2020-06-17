@@ -264,7 +264,7 @@ authorize transaction window to generate the raw transaction. Next, you may be r
 PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to
 the camera on the PolkadotJS apps to continue.
 
-![ps-3r](assets/new-claims/ps-3r.png)
+![ps-3r](assets/new-claims/ps-3r.jpg)
 
 When the transaction is included in the block, you will see a green success box appear in the upper
 right corner and the DOTs will be in your account.
