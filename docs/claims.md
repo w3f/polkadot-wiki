@@ -219,14 +219,14 @@ Now you need to open the Parity Signer and choose "Polkadot" network.
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-Next, select the address that you have claimed DOTs during the pre-genesis.
+Next, select the address that you have claimed DOTs to during the pre-genesis.
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
 ![ps-3](assets/new-claims/ps-03.jpg)
 
-And then your address will be displayed in the QR code format. You can move the QR code to the
-camera so that the PolkadotJS apps can decode it.
+Your address will be displayed in QR code format. You can move the QR code to the
+camera so that the PolkadotJS Apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
@@ -259,10 +259,10 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that shows on the
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the
 authorize transaction window to generate the raw transaction. Next, you may be required to input the
 PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to
-the camera on the PolkadotJS apps to continue.
+the camera on the PolkadotJS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
