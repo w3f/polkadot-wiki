@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        run: cd polkadot-wiki ; yarn ; yarn build ; node postprocess
+        run: cd website ; yarn ; yarn build ; node postprocess
 
       - name: Upload to IPFS
         uses: aquiladev/ipfs-action@v0.1.2
         with:
-          path: ./polkadot-wiki/build/polkadot-wiki
+          path: ./website/build/polkadot-wiki
