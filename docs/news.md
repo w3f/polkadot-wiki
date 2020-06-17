@@ -17,4 +17,4 @@ Check out our list of news sources related to Polkadot and Web3 Foundation.
 - [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/)
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
 - [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-- [Dotleap Newsletter](https://dotleap.substack.com/)
+- [Dot Leap Newsletter](https://dotleap.substack.com/)
