@@ -3,32 +3,32 @@ name: Build the Parachain Implementers's Guide and publish to the wiki.
 on:
   schedule:
     - cron: "* * * * *"
+  push:
+    paths:
+    - '.github/workflows/implementers_guide.yml'
 
 jobs:
   build:
     runs-on: ubuntu-20.04
 
     steps:
+    - name: Checkout local repo
+      uses: actions/checkout@v2
+
     - name: Clone polkadot repo
       uses: actions/checkout@v2
       with:
         repository: paritytech/polkadot
-        path: ~/.tmp_polkadot
+        path: .tmp_polkadot
 
-      - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v1
-        with:
-          mdbook-version: 'latest'
+    - name: Setup mdBook
+      uses: peaceiris/actions-mdbook@v1
+      with:
+        mdbook-version: 'latest'
 
-      # First, save the output in a temporary directory. In case of an error,
-      # the current (working) version will not be overwritten with incomplete data.
-      - run: |
-          mdbook build ~/.tmp_polkadot/roadmap/implementors-guide --dest-dir ~/.tmp_book
-          mkdir -p website/pages/implementers-guide
-          cp -R ~/.tmp_book/* website/pages/implementers-guide
-
-    - name: Checkout local repo
-      uses: actions/checkout@v2
+    - run: |
+        mdbook build .tmp_polkadot/roadmap/implementors-guide/
+        cp -R .tmp_polkadot/roadmap/implementors-guide/book/ website/pages/implementers-guide/
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v4
