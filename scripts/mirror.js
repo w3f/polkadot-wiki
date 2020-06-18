@@ -30,8 +30,8 @@ const mirrored = [
 ];
 
 for (const file of mirrored) {
-  const doc = '../docs/' + file + '.md';
-  const mirror = '../docs/mirror-' + file + '.md';
+  const doc = './docs/' + file + '.md';
+  const mirror = './docs/mirror-' + file + '.md';
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
@@ -48,11 +48,11 @@ for (const file of mirrored) {
   fs.writeFileSync(mirror, mirroredContent);
 }
 
-const langDirectories = fs.readdirSync('./translated_docs');
+const langDirectories = fs.readdirSync('./website/translated_docs');
 for (const lang of langDirectories) {
   for (const file of mirrored) {
-    const doc = `./translated_docs/${lang}/${file}.md`;
-    const mirror = `./translated_docs/${lang}/mirror-${file}.md`;
+    const doc = `./website/translated_docs/${lang}/${file}.md`;
+    const mirror = `./website/translated_docs/${lang}/mirror-${file}.md`;
     // console.log(mirror);
     if (!fs.existsSync(doc)) {
       throw new Error(`${doc} doesn't exist!`);
