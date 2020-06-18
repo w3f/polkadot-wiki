@@ -83,6 +83,9 @@ account to be on the safe side.
 Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash
 account (increase amount at stake)" to simply accrue the rewards into the amount you're staking.
 
+> [color=#E7007A] These concepts have been further explained in Polkadot's
+> [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be

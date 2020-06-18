@@ -41,6 +41,10 @@ Bridge modules will be written with particular chains in mind such as Bitcoin or
 means that blockchains that are based of these will likely be easily supported as well (e.g.
 Litecoin and other Bitcoin-forks).
 
+> [color=#E7007A] To learn more on how Bitcoin and Ethereum can Cooperate and Collaborate Through
+> Polkadot, check out this explainer video
+> [here](https://www.youtube.com/watch?v=rvoFUiOR3cM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=3)
+
 For the standalone chains that will not have a parachain bridging module on Polkadot, it will be
 necessary to deploy bridge contracts (see below).
 

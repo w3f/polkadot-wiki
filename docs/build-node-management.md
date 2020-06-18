@@ -27,6 +27,9 @@ nodes, like validators and sentries, must run in archive mode. Likewise, all
 [events](build-protocol-info#events) are cleared from state in each block, so if you want to store
 events then you will need an archive node.
 
+> [color=#E7007A] To upgrade a node, please refer to this
+> [video](https://www.youtube.com/watch?v=5LtcdBR9F40&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=5)
+
 **Exporting blocks**
 
 To export blocks to a file, use `export-blocks`. Export in JSON (default) or binary
