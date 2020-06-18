@@ -4,6 +4,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "yarn mirror && docusaurus-start",
+    "kusama:start": "cd kusama-guide; docusaurus-start",
     "kusama:build": "BUILDING=true; cd kusama-guide; docusaurus-build; node ./postprocess",
     "polkadot:build": "BUILDING=true; cd polkadot-wiki; docusaurus-build; node ./postprocess",
     "mirror": "node scripts/mirror.js",

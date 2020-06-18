@@ -1,10 +1,6 @@
 const { baseUrlPattern } = require('../scripts/utils');
 
-// const isBuilding = process.env.npm_lifecycle_script
-//   && process.env.npm_lifecycle_script === 'docusaurus-build'; 
- 
 const isBuilding = process.env.BUILDING;
-console.log(isBuilding);
 
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.

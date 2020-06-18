@@ -76,7 +76,7 @@ const siteConfig = {
   onPageNav: 'separate',
   
   // No .html extensions for paths.
-  cleanUrl: true,
+  cleanUrl: false,
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
