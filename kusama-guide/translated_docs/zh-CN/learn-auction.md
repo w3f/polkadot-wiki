@@ -4,39 +4,39 @@ title: 平行链插槽拍卖
 sidebar_label: 平行链插槽拍卖
 ---
 
-The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) which has been slightly modified to be secure on a blockchain.
+The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be secure on a blockchain.
 
 ## 蜡烛(Candle)拍卖机制
 
-Candle auctions are a variant of open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner.
+蜡烛拍卖是公开拍卖的一种形式，投标人提交的出价越来越高，拍卖结束时出价最高的投标人被视为获胜者。
 
-Candle auctions were originally employed in 16th century for the sale of ships and get their name from the "inch of a candle" that determined the open period of the auction. When the flame extinguished and the candle went out, the auction would suddenly terminate and the standing bid at that point would win.
+蜡烛拍卖法最初是在16世纪使用的，用于出售船只，其名称取自"蜡烛的英寸"，而蜡烛的长度决定了拍卖的开放时间。 当火焰熄灭并且蜡烛熄灭时，拍卖会突然终止，这时的长期竞标将获胜。
 
-When Candle auctions are used online, they require a random number to decide the moment of termination.
+在线使用蜡烛拍卖法时，它们需要一个随机数来决定终止的时间。
 
-Parachain slot auctions will differ slightly from a normal Candle auction in that it does not use the random number to decide the duration of its opening phase. Instead, it has a known open phase and will be retroactively determined (at the normal close) to have ended at some point in the past. So during the open phase, bids will continue to be accepted but, later bids have higher probability of losing since the retroactively determined close moment may be found to have preceded the time that a bid was submitted.
+平行链插槽拍卖与正常的蜡烛拍卖法会略有不同，因为它不使用随机数来决定其开放阶段的持续时间。 取而代之的是，它具有已知的开放阶段，并将被追溯确定(在正常关闭时)在过去的某个时刻结束。 因此在公开阶段，投标将继续被接受，但是以后的投标有更高的失败概率，因为追溯确定的关闭时刻可能早于提交投标的时间。
 
 ## 为什么要使用蜡烛拍卖?
 
-The open and transparent nature of blockchain systems opens attack vectors which are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
+The open and transparent nature of blockchain systems opens attack vectors that are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
-Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item.
+当已知拍卖结束且竞标者不愿提早竞标其真实价格时，便会进行拍卖狙击，以期支付比实际价格低的价格。
 
-For example, Alice may value an item at auction for 30 USD. She submits an initial bid of 10 USD in hopes of acquiring the items at a lower price. Alice's strategy is to place incrementally higher bids until her true value of 30 USD is exceeded. Another bidder Eve values the same item at 11 USD. Eve's strategy is to watch the auction and submit a bid of 11 USD at the last second. Alice will have no time to respond to this bid before the close of the auction and will lose the item. The auction mechanism is sub-optimal because it has not discovered the true price of the item and the item has not gone to the actor who valued it the most.
+例如爱丽丝在拍卖会上可能会为某物品估价30美元。 她提交了10美元的初始出价，希望以较低的价格购买这些物品。 爱丽丝的策略是逐步提高出价，直到超过其30美元的真实价值。 另一个竞标者夏娃对同一物品的估价为11美元。 夏娃的策略是持续观看拍卖结果，并在最后一秒提交11美元的出价。 在拍卖结束之前，爱丽丝将没有时间响应此出价，并且会失去该物品。 拍卖机制是次优的，因为它尚未发现商品的真实价格，而且商品也未归给估价最高的人员。
 
-On blockchains this problem may be even worse, since it potentially gives the producer of the block an opportunity to snipe any auction at the last concluding block by adding it themselves and/or ignoring other bids. There is also the possibility of a malicious bidder or a block producer trying to _grief_ honest bidders by sniping auctions.
+在区块链上，这个问题可能更加严重，因为它可能给出块者提供机会，通过自己添加和/或忽略其他出价来窥探最后一个区块的任何拍卖。恶意竞标者或出块者还可能通过狙击拍卖来_grief_诚实的竞标者。
 
-For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The Candle auction is another solution which does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
+For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The Candle auction is another solution that does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
 
-Candle auctions allow everyone to always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise, they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
+蜡烛拍卖允许每个人始终知道出价的状态，但不能知道何时确定拍卖已"结束"。 这有助于确保投标人愿意尽早出价其真实出价。 否则他们可能会发现自己在甚至竞标之前就已确定拍卖已经"结束"。
 
 ## Polkadot 如何使用它
 
-Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness which will retroactively determine the "end-time" of the auction.
+Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness, which will retroactively determine the "end-time" of the auction.
 
-When an account bids, they can place bids for any of the available periods or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous period or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid from an external account.
+当账户出价时，他们可以为插槽位中的任何可用时间段或范围出价，但是如果平行链(具有相同的STF)出价，则该平行链必须在连续的时期或范围内竞标，直至其已经占据的时期。它们将无法竞标重叠的插槽位(同一条平行链不能同时获得)，并且如果两者之间存在差距，他们将无法竞标未来的插槽位。如果平行链已达到其插槽持续时间的结束后重新启动，则需要从新的创世(可能是所有旧状态的快照)重新启动，并且需要从外部帐户出价 。
 
-The slot durations are capped to 2 years and divided into 6-month periods. Parachains may lease a slot for any contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by leasing a contiguous slot.
+插槽的持续时间上限为2年，每期分为6个月。平行链可以在时隙持续时间的任何连续范围内租用一个时隙。平行链可能会随时间租用一个以上的插槽，这意味着他们可以通过租用连续的插槽，将租约延长至 Polkadot 超过2年的插槽期限。
 
 ## 竞标如何运作？
 
@@ -56,13 +56,13 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 1-4范围的每个周期代表6个月的持续时间，共2年
 ```
 
-Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `lease period`. More than one continuous `period` is a `range`.
+每个平行链插槽的最长持续时间为2年。 在插槽各6个月的间隔被划分成它自己的`租赁期`。 一个`范围`是一个以上连续的`期间`。
 
-Several auctions will take place in the preceding six months before a set of parachain slot leases begin.
+在开始一组平行链插槽租赁之前的六个月中，将进行几次拍卖。
 
-Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+投标人将提交一份投标配置，以指定他们愿意锁定的 DOT 金额以及范围。 时隙范围可以是时段1-4的任何连续范围。
 
-A bidder configuration for a single bidder may look like this:
+单个投标人的投标人配置可能如下所示：
 
 ```js
 Bids[
@@ -81,63 +81,63 @@ Bids[
 ];
 ```
 
-The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
+The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
-A random number is determined at each block which is based on the VRF used by Polkadot. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
+A random number, which is based on the VRF used by Polkadot, is determined at each block. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
 ### 例子
 
 #### 非竞争性
 
-There is one parachain slot available.
+只有一个平行链插槽可用
 
-Alice bids `20 DOTs` for the range 1 - 2.
+爱丽丝将` 20 DOTs`的出价设置在1-2阶段。
 
-Bob bids `30 DOTs` for the range 3 - 4.
+鲍勃出价` 30 DOTs `在3-4阶段。
 
-The auction ends.
+拍卖结束
 
-Alice bonds `20 DOTs` and will have the parachain slot for the first year.
+爱丽丝会绑定` 20 DOTs`，并将在第一年拥有平行链插槽。
 
-Bob bonds `30 DOTs` and will have the parachain slot for the second year.
+鲍勃绑定了` 30 DOTs`，并将在第二年拥有平行链插槽。
 
 #### 竞争性
 
-There is one parachain slot available.
+只有一个平行链插槽可用
 
-Charlie bids `75 DOTs` for the range 1 - 4.
+对于1-4阶段，查理出价` 75个DOT `
 
-Dave bids `100 DOTs` for the range 3 - 4.
+对于3-4阶段，戴夫出价`100 DOTs`
 
-Emily bids `40 DOTs` for the range 1 - 2.
+对于1-2阶段，艾米丽出价`40 DOTs`
 
-Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of periods in the specified range of the bid.
+让我们根据算法来计算每个投标人的估价。 为此我们将保证金金额乘以投标指定范围内的期间数。
 
-Charlie - 75 \* 4 = 300 for range 1 - 4
+在1-4阶段，查理-75*4=300
 
-Dave - 100 \* 2 = 200 for range 3 - 4
+在3-4阶段，戴夫-100 * 2 = 200
 
-Emily - 40 \* 2 = 80 for range 1 - 2
+在1-2阶段，艾米丽-40 * 2 = 80
 
-Although Dave had the highest bid in accordance to DOT amount, when we do the calculations we see that since he only bid for a range of 2, he would need to share the slot with Emily who bid much less. Together Dave's and Emily's bids only equal a valuation of `280`.
+尽管根据 DOT 金额，戴夫的出价最高，但是当我们进行计算时，我们看到，由于他只出价2个在区间，他需要与出价低得多的艾米丽分享这个期间。戴夫和艾米丽的出价加在一起，其估价仅为` 280 `。
 
-Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of the parachain slot.
+查理对整个范围的估价是`300`因此查理被授予平行链插槽的整个阶段。
 
 ## 常见问题
 
 ### 为什么每个人不竞标最大长度？
 
-For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot relay chain.
+For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
 
 ### 这种机制如何帮助确保平行链的多样性？
 
-The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each period a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations which are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
+The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each period a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations that are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot that would open for 2 - 5. Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
 
 ### 为什么在区块链上很难实现随机性？
 
-Randomness is problematic for blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify opens the possibility for actors to attempt to alter or manipulate the randomness. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.
+对于区块链系统来说，随机性是个问题。在透明开放的网络上以不信任的方式生成随机数，其他各方必须能够在该网络中进行验证，这为行为者尝试改变或操纵随机性提供了可能性。 已经提出了一些解决方案，包括[ RANDAO ](https://github.com/randao/randao)和[可验证的随机函数](https:// zh.wikipedia.org/wiki/Verifiable_random_function)(VRFs)。后者是 Polkadot 用作随机性的基础。
 
 ## 资源
 
-- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
-- [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.
+- [ 平行链分配](http://research.web3.foundation/zh-Cn/latest/polkadot/Parachain-Allocation/)-有关平行链分配的 W3F 研究页面，对该机制进行了更深入的介绍。
+- [ paritytech/polkadot#239 ](https://github.com/paritytech/polkadot/pull/239) - Pull request，介绍了平行链插槽代码。

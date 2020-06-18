@@ -4,30 +4,30 @@ title: Cumulus
 sidebar_label: Cumulus
 ---
 
-> Cumulus clouds are shaped sort of like dots and are up in the air, like this project (as it is an initial prototype -- expect a rename when it gets cooler.)
+> Кучевые облака имеют форму точек и находятся в воздухе, как этот проект (поскольку это первоначальный прототип - ожидайте переименования, когда он станет круче.)
 
-[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
+[Cumulus](https://github.com/paritytech/cumulus) - это расширение для Substrate, которое позволяет легко сделать любую Substrate среду исполнения совместимой с парачейном Polkadot.
 
-## Components
+## Компоненты
 
-### Cumulus Consensus
+### Консенсус Cumulus
 
-_cumulus-consensus_ is a consensus engine for Substrate which follows a Polkadot relay chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
 
-### Cumulus Runtime
+### Среда исполнения Cumulus
 
-A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface which will be called by validators.
+A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface, which will be called by validators.
 
-Integrating it into your substrate runtime will be as easy as importing the crate and adding this one line macro to your code.
+Интегрировать его в среду исполнения Вашего субстрата так же просто, как импортировать crate и добавить этот однострочный макрос в Ваш код:
 
 ```rust
 runtime::register_validate_block!(Block, BlockExecutor);
 ```
 
-### Cumulus Collator
+### Сборщик Cumulus
 
-A planned Polkadot collator for a parachain.
+Планируемый Polkadot сборщик для парачейна.
 
-## Resources
+## Ресурсы
 
-- [Rob's talk from EthCC introducing Cumulus](https://www.youtube.com/watch?v=thgtXq5YMOo)
+- [Rob рассказывает на EthCC о создании Cumulus](https://www.youtube.com/watch?v=thgtXq5YMOo)

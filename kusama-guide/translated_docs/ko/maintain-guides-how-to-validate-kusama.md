@@ -12,7 +12,7 @@ Running a validator on a live network is a lot of responsibility! You will be ac
 
 Since security is so important to running a successful validator, you should take a look at the [secure validator](maintain-guides-secure-validator) information to make you understand the factors to consider when constructing your infrastructure. The Web3 Foundation also maintains a [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator) that you can use by deploying yourself. As you progress in your journey as a validator, you will likely want to use this repository as a _starting point_ for your own modifications and customizations.
 
-If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot. The team and other validators are there to help answer questions and provide experience. If you have a more significant proposal, you can write it on the [Kusama forum](https://forum.kusama.network).
+If you need help, please reach out on the [Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on Riot. The team and other validators are there to help answer questions and provide experience.
 
 ### How Many KSM Do I Need?
 
@@ -29,7 +29,7 @@ You will likely run your validator on a cloud server running Linux. You may choo
 You will not need a very powerful machine to run your validator, but you should be aware of the resource constraints. The most important resource for your validator node is networking bandwidth, followed by its storage and memory capabilities. The bare minimum requirements for a machine to run a validator are as follows:
 
 - **Storage:** 40GB - 80GB. Kusama doesn't have very heavy storage requirements yet so something in this range will be fine, just keep in mind you may have to upgrade it later if the chain state becomes very big.
-- **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill.
+- **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill. In order to compile the binary yourself you will likely need ~8GB.
 - **CPU:** 1 - 2. One CPU is okay, but 2 is better. Again, this is a performance preference.
 
 On most cloud service providers, these specs are usually within the $10 - $20 per month range.
@@ -86,22 +86,29 @@ sudo ntpq -p
 
 ### Building and Installing the `polkadot` Binary
 
-You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.7** branch.
+You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.8** branch.
 
-You should generally use the latest **0.7.x** tag. At the time of writing, this was **0.7.28**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.7"`) to see a list of all the potential 0.7 releases. You should replace `v0.7.28` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.8` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.7"
-git checkout v0.7.28
+git tag | grep "$v\0\.8"
+git checkout v0.8.8
 ./scripts/init.sh
 cargo build --release
 ```
 
-This step will take a while (generally 15 - 30 minutes, depending on your hardware).
+This step will take a while (generally 10 - 40 minutes, depending on your hardware).
+
+> Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
+> 
+> `sh
+  rustup install nightly-2020-05-15
+  rustup override set nightly-2020-05-15
+  rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15`
 
 If you are interested in generating keys locally, you can also install `subkey` from the same directory. You may then take the generated `subkey` executable and transfer it to an air-gapped machine for extra security.
 
@@ -111,23 +118,27 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-> **Note:** Validators must sync their nodes in archive mode to avoid being slashed. If you've already synced the chain, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
+> 
+> You may run a validator node in non-archive mode by adding the following flags: `-unsafe-pruning --pruning <NUMBER OF BLOCKS>`, but note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 You can begin syncing your node by running the following command:
 
 ```sh
-./target/release/polkadot --pruning=archive
+./target/release/polkadot --pruning=archive --chain kusama
 ```
 
 if you do not want to start in validator mode right away.
 
-**Note:** The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
+The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
+
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
+> 
+> If you want to test out ParityDB you can add the flag `---database paritydb`.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
 
 If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
-
-> **Note:** If you do not already have KSM, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of KSM to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with KSM, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
 
 ## Bond KSM
 
@@ -160,10 +171,10 @@ After a few seconds, you should see an "ExtrinsicSuccess" message. You should no
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node in validator mode with a flag allowing unsafe RPC calls, needed for some advanced operations.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry" --unsafe-rpc-expose
+./target/release/polkadot --validator --name "name on telemetry" --chain kusama
 ```
 
-You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique. Note that the `--unsafe-rpc-expose` flag is needed in order to set the session key as shown below.
+You can give your validator any name that you like, but note that others will be able to see it, and it will be included in the list of all servers using the same telemetry server. Since numerous people are using telemetry, it is recommended that you choose something likely to be unique.
 
 ### Generating the Session Keys
 
@@ -186,8 +197,6 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this result for a later step.
-
-You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer needed.
 
 ### Submitting the `setKeys` Transaction
 

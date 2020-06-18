@@ -17,7 +17,7 @@ This guide will walk you through the steps you can take today to get started bui
 - Current testnet: **Westend**
 - Substrate: **2.0.0**
 - Cumulus: **In development** ([Demo Available](https://github.com/paritytech/cumulus))
-- ink!: **In development** ([Documentation](https://www.substrate.io/kb/smart-contracts))
+- ink!: **In development** ([Documentation](https://substrate.dev/docs/en/knowledgebase/smart-contracts))
 
 ## What you need to know
 
@@ -31,9 +31,9 @@ Polkadot is planned to go live with an initial release early in 2020, depending 
 
 Polkadot provides a few ways for you to deploy your application: as a smart contract on an existing parachain, as your own parachain, or as a parathread. There are trade-offs when working with each of these and reading this section will help you understand them.
 
-Parachains are individual chains containing their own runtime logic that benefit from the shared security and the cross-chain messaging provided by the Polkadot relay chain. Parachains permit a high degree of flexibility and customization but will require more effort to create and maintain.
+Parachains are individual chains containing their own runtime logic that benefit from the shared security and the cross-chain messaging provided by the Polkadot Relay Chain. Parachains permit a high degree of flexibility and customization but will require more effort to create and maintain.
 
-Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application. The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain. The lower costs of parathreads are due to the fact that parathreads will only produce a block when they need to, unlike parachains which have secured a slot to produce a block at every block of the relay chain. When building a parathread, you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback of the cost.
+Parathreads are like parachains and enable the developer to have lower-level control of the logic of their application. The main difference between the two is economic, since parathreads will be much less expensive to secure than a parachain. The lower costs of parathreads are due to the fact that parathreads will only produce a block when they need to, unlike parachains, which have secured a slot to produce a block at every block of the Relay Chain. When building a parathread, you will use the same tools (like PDKs) and you get all of the benefits of building a parachain, without the drawback of the cost.
 
 On the Polkadot mainnet, there will be parachains that act as smart contract platforms. Smart contracts are executable programs that exist on only a single chain and are limited in complexity. Because they exist on a single chain, they can have smooth interoperability with other smart contracts on the same chain. However, they will always be constrained and limited by the inherent characteristics of their host chain.
 
@@ -77,7 +77,7 @@ In the future, there will be many different PDKs available in different programm
 
 Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for blockchain innovators that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
-The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate), an online resource built and maintained by Parity Technologies.
+The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/), an online resource built and maintained by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you have a solid understanding, you can challenge yourself by progressing through the Substratekitties workshop then advancing to the TCR Dappchain tutorial or one of the others.
 
@@ -89,7 +89,7 @@ Validators on Polkadot will use the submitted Wasm code to validate the state tr
 
 This is where the collator node comes into play. A collator is a maintainer of your parachain and performs the critical action of producing new block candidates for your chain and passing them to Polkadot validators for inclusion in the Relaychain.
 
-Substrate comes with its own networking layer built-in but unfortunately only supports solo chains (that is, chains which do not connect to the relay chain). However, there is the Cumulus extension which does include a collator node and allows for your Substrate-built logic to be compatible with Polkadot as either a parachain or parathread.
+Substrate comes with its own networking layer built-in but unfortunately only supports solo chains (that is, chains that do not connect to the Relay Chain). However, there is the Cumulus extension that includes a collator node and allows for your Substrate-built logic to be compatible with Polkadot as either a parachain or parathread.
 
 #### Cumulus
 
@@ -99,7 +99,7 @@ It handles the network compatibility overhead that any parachain would need to i
 
 - Cross-chain message passing.
 - 开箱即用的收集人节点
-- 中继链的嵌入式轻客户端
+- An embedded light client of the Relay Chain.
 - Polkadot 出块者兼容性。
 - Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with minimal modification, possibly as little work as importing a crate and adding a single line.
 
@@ -122,7 +122,7 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## So you want to build a smart contract...
 
-The Polkadot relay chain itself will not support smart contracts. However, since the parachains that connect to Polkadot can support arbitrary state transitions, they can support smart contracts. Builders of smart contracts can use these options when they become available. Today, it's possible to start development using a local development chain and later deploy to a live environment when the technology matures.
+The Polkadot Relay Chain itself will not support smart contracts. However, since the parachains that connect to Polkadot can support arbitrary state transitions, they can support smart contracts. Builders of smart contracts can use these options when they become available. Today, it's possible to start development using a local development chain and later deploy to a live environment when the technology matures.
 
 Substrate supports smart contracts out-of-the-box in two ways. One way is using the provided [Contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) pallet in the FRAME library. The second way is using the Substrate [EVM pallet](https://github.com/paritytech/substrate/tree/master/frame/evm) to deploy EVM-based bytecode compiled from Solidity or Vyper and using tools available from the Ethereum stack.
 
@@ -146,9 +146,9 @@ Edgeware documentation can be found [here](https://docs.edgewa.re/).
 
 ### Ink
 
-[ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts in Rust and compiles to Wasm code. As it states in its README, it is still in an experimental phase so brave developers should be aware that they might have a bumpy - but workable - development experience. There are some projects which have built projects in ink! with a decent level of complexity such as Plasm's [Plasma contracts](https://github.com/staketechnologies/Plasm), so it is mature enough to start building interesting things.
+[ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts in Rust and compiles to Wasm code. As it states in its README, it is still in an experimental phase so brave developers should be aware that they might have a bumpy - but workable - development experience. There are some projects that have built projects in ink! with a decent level of complexity such as Plasm's [Plasma contracts](https://github.com/staketechnologies/Plasm), so it is mature enough to start building interesting things.
 
-For interested developers, they can get started writing smart contracts using ink! by studying the [examples](https://github.com/paritytech/ink/tree/master/examples) that were already written. These can be used as guideposts to writing more complex logic which will be deployable on smart contract parachains.
+For interested developers, they can get started writing smart contracts using ink! by studying the [examples](https://github.com/paritytech/ink/tree/master/examples) that were already written. These can be used as guideposts to writing more complex logic that will be deployable on smart contract parachains.
 
 ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and compatible with Substrate chains.
 

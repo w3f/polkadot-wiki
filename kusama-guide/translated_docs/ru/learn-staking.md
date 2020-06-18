@@ -130,7 +130,7 @@ A validator signs two or more votes in the same round on different chains.
 
 ### BABE Equivocation
 
-A validator produces two or more blocks on the relay chain in the same time slot.
+A validator produces two or more blocks on the Relay Chain in the same time slot.
 
 GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
@@ -227,7 +227,7 @@ For those who are interested in knowing more about the design of inflation model
 
 ## How many validators will Polkadot have?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, is currently rapidly approaching 200 validators slots.
+The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 
 ## Resources
 

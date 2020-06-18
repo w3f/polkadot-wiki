@@ -4,7 +4,7 @@ title: ผู้ตรวจสอบ (Validator)
 sidebar_label: ผู้ตรวจสอบ (Validator)
 ---
 
-Validators secure the relay chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
+Validators secure the Relay Chain by staking DOTs, validating proofs from collators and participating in consensus with other validators.
 
 These participants will play a crucial role in adding new blocks to the Relay Chain and, by extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay Chain.
 
@@ -12,7 +12,7 @@ Validators perform two functions. First, verifying that the information containe
 
 ## คู่มือแนะนำ
 
-- [How to Validate on Kusama](maintain-guides-how-to-validate-kusama) - Guide on how to set up a validator on the Kusama canary network.
+- [How to Validate on Polkadot](maintain-guides-how-to-validate-polkadot) - Guide on how to set up a validator on the Polkadot live network.
 - [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the validator payout mechanism works.
 - [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
 - [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading your validator when you want to switch to a different machine or begin running the latest version of client code.

@@ -16,7 +16,7 @@ Go to the [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and click on t
 
 ![](assets/council/vote.png)
 
-Since the council uses approval voting, when you vote you signal which of the validators you approve of and your voted tokens will be equalized among the selected candidates. Select up to 16 council candidates by moving the slider to "Aye" for each one that you want to be elected. When you've made the proper configuration submit your transaction.
+Since the council uses approval voting, when you vote you signal which of the candidates you approve of and your voted tokens will be equalized among the selected candidates. Select up to 16 council candidates by moving the slider to "Aye" for each one that you want to be elected. When you've made the proper configuration submit your transaction.
 
 ![](assets/council/vote_for_yourself.png)
 

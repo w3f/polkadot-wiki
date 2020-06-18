@@ -1,55 +1,60 @@
 ---
 id: kusama-index
 title: Kusama
-sidebar_label: Home
+sidebar_label: Вступление
 ---
 
-Kusama is a "canary network" for Polkadot, an early unaudited release of the code that is available first and holds real economic value. For developers, Kusama is a proving ground for runtime upgrades, on-chain governance, and parachains.
+Kusama - это "канареечная сеть" для Polkadot, ранний неаудированный выпуск кода, который доступен первым и имеет реальную экономическую ценность. Для разработчиков Kusama - это испытательный полигон для обновления среды исполнения, ончейн управления и парачейнов.
 
-No Promises.
+Никаких обещаний.
 
-## What can you do on Kusama?
+## Что вы можете сделать на Kusama?
 
-On Kusama you can:
+На Kusama вы можете:
 
-- Explore the politics. Campaign as a councillor or vote for new runtime proposals using Democracy.
-- Hone your validator set-up. The minimum requirement for staking as a validator on Kusama is much lower than it is expected for Polkadot. There are also programs in place such as [Thousand Validators](https://polkadot.network/join-kusamas-thousand-validators-programme/) to help community validators rise the ranks.
-- Deploy a parachain. Kusama will get the functionality required for parachains before Polkadot. This includes participating in a parachain slot auction and composable applications.
-- Join a cyber secret society. The [Kappa Sigma Mu](https://polkascan.io/pre/kusama/council/motion/94) fraternity asks you to get a Kusama tattoo to join.
-- Expect Chaos. Kusama is getting more battle tested day-by-day but it's built on the foundations of moving fast and trying new things.
+- Исследуйте политику. Участвуйте в качестве члена совета или голосуйте за новые предложения сред исполнения, используя демократию.
+- Отточите свою настройку валидатора. Минимальное требование к стейку в качестве валидатора на Kusama намного ниже, чем это ожидается для Polkadot. Существуют также такие программы, как [Тысяча Валидаторов](https://polkadot.network/join-kusamas-thousand-validators-programme/), чтобы помочь валидаторам сообщества подняться на новые уровни.
+- Развертывание парачейна. Kusama будет иметь функциональность, необходимую для парачейнов раньше, чем в Polkadot. Это включает в себя участие в аукционе слотов парачейн и компонуемых приложений.
+- Присоединяйтесь к тайному кибер-сообществу. Чтобы присоединиться к Братству [Kappa Sigma Mu](https://polkas can.io/pre/kusama/council/motion/94) просим Вас сделать татуировку Kusama.
+- Ожидайте Хаос. Kusama получает все больше боевых испытаний изо дня в день, но она построена так, что надо двигаться быстро и постоянно пробовать что-то новое.
 
-Kusama is owned by those who hold the Kusama tokens (KSM). There's no central kill switch and all changes are made through the protocol's on-chain governance. Kusama is experimental. There are no guarantees.
+Kusama принадлежит тем, кто владеет токенами Kusama (KSM). Там нет центрального выключателя и все изменения вносятся через Управление протоколом ончейн. Kusama - это эксперимент. Здесь нет никаких гарантий.
 
-## Who can participate on Kusama?
+## Кто может участвовать в Кусама?
 
-The short answer is, everyone!
+Короткий ответ, каждый!
 
-Kusama is a permissionless network and anyone can come along and start using it.
+Kusama - это общедоступная сеть и любой может прийти и начать ее использовать.
 
-Those who participated in the Polkadot sale can claim a proportional amount of KSM through the [Kusama Claims process](https://claim.kusama.network).
+Те, кто участвовал в продаже Polkadot, могут получить пропорциональную сумму KSM через процесс [Kusama Claims](https://claim.kusama.network).
 
-For those who did not participate in the Polkadot sale, KSM are publicly available through a highly-frictional [faucet](https://github.com/kusamanetwork/faucet).
+Ранее KSM можно было получить с помощью крана (faucet), но теперь он больше не работает. Компания Web3 Foundation рассматривает новые способы распространения KSM для людей, которым нужны KSM для сборки.
 
-As a KSM holder, you are able to interact with all the features of the Kusama network such as staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and everything else.
+Как держатель KSM, вы можете взаимодействовать со всеми возможностями сети Kusama, такими как стейкинг (наприер проверка или номинирование), управление, аукцион парачейнов, основные трансферты и все остальное.
 
-## Contact
+## Контакты
 
-### General
+### Общие
 
-[Kusama forum](https://forum.kusama.network/) [Kusama chat](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders) [wut@kusama.network](mailto:wut@kusama.network)
+- [Kusama forum](https://forum.kusama.network/)
+- [Kusama chat](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders)
+- [support@kusama.network](mailto:support@kusama.network) _Email support_
 
-### Get help claiming KSM
+### Получить помощь если вы претендуете на KSM
 
-[KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
+- [KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
 
-### Validator chat
+### Чат валидаторов
 
-[Validator chat (English)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
+- [Validator chat (English)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)
+- To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
 
-### Report an issue or submit bugs
+### Сообщить о проблеме или отправить ошибки
 
-[sos@kusama.network](mailto:sos@kusama.network)
+- [sos@kusama.network](mailto:sos@kusama.network)
 
-### Get updates
+### Получить обновления
 
-[@kusamanetwork](https://twitter.com/kusamanetwork) [Kusama newsletter](https://kusama.network/newsletter) [r/kusama](https://reddit.com/r/kusama)
+- [@kusamanetwork](https://twitter.com/kusamanetwork)
+- [Kusama newsletter](https://kusama.network/newsletter)
+- [r/kusama](https://reddit.com/r/kusama)

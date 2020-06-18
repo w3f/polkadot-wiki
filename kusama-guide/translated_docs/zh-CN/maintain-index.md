@@ -1,23 +1,32 @@
 ---
 id: maintain-index
-title: 网络维护者
-sidebar_label: 网络维护者
+title: 网络参与者
+sidebar_label: 网络参与者
 ---
 
-Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and guides to set up a node and run the network.
+欢迎来到 Polkadot 维基的网络参与者部分。 在这里您将找到有关设置节点和运行指南。
 
-## 收集人
+## Node
 
-- [收集人主页](maintain-collator)- 收集人和相关链接。
+- [Networks Guide](maintain-networks) - A list of the available Polkadot networks that you can connect to with a node.
+- [Set up a Full Node](maintain-sync) - Get up and started by syncing a full node for the Kusama network. The steps in the guide will broadly apply also to any Substrate-based network (like Polkadot).
+- [Set up WSS using Nginx](maintain-wss) - Set up a Secure WebSockets server for your node's WebSockets connection.
 
-## 提名人
+## Collator
 
-- [提名人主页](maintain-nominator)-提名人和相关链接。
+- [Collator Home](maintain-collator) - High level overview of collators and related links.
+
+## Nominator
+
+- [Nominator Home](maintain-nominator) - High level overview of nominators and related links.
+- [Nomination Guide (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Walkthrough on how to nominate on the Polkadot network.
 - [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
 
-## 验证人
+## Validator
 
-- [验证人主页](maintain-validator)-验证人和相关链接。
+- [Validator Home](maintain-validator) - High level overview of validator and related links.
+- [Validator Payouts](maintain-guides-validator-payout) - Overview on how validator rewards are calculated and paid.
+- [Validation Guide (Polkadot)](maintain-guides-how-to-validate-polkadot) - Walkthrough on how to validate on the Polkadot network.
 - [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
 
 ## Governance

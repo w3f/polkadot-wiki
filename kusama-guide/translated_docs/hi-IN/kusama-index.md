@@ -28,7 +28,7 @@ Kusama is a permissionless network and anyone can come along and start using it.
 
 Those who participated in the Polkadot sale can claim a proportional amount of KSM through the [Kusama Claims process](https://claim.kusama.network).
 
-For those who did not participate in the Polkadot sale, KSM are publicly available through a highly-frictional [faucet](https://github.com/kusamanetwork/faucet).
+KSM used to be publicly available through a highly-frictional faucet, but this has been decommissioned. Web3 Foundation is considering new ways to distribute KSM for people who need KSM to build.
 
 As a KSM holder, you are able to interact with all the features of the Kusama network such as staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and everything else.
 
@@ -36,20 +36,25 @@ As a KSM holder, you are able to interact with all the features of the Kusama ne
 
 ### General
 
-[Kusama forum](https://forum.kusama.network/) [Kusama chat](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders) [wut@kusama.network](mailto:wut@kusama.network)
+- [Kusama forum](https://forum.kusama.network/)
+- [Kusama chat](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders)
+- [support@kusama.network](mailto:support@kusama.network) _Email support_
 
 ### Get help claiming KSM
 
-[KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
+- [KSM Claims Support chat](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
 
 ### Validator chat
 
-[Validator chat (English)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
+- [Validator chat (English)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)
+- To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
 
 ### Report an issue or submit bugs
 
-[sos@kusama.network](mailto:sos@kusama.network)
+- [sos@kusama.network](mailto:sos@kusama.network)
 
 ### Get updates
 
-[@kusamanetwork](https://twitter.com/kusamanetwork) [Kusama newsletter](https://kusama.network/newsletter) [r/kusama](https://reddit.com/r/kusama)
+- [@kusamanetwork](https://twitter.com/kusamanetwork)
+- [Kusama newsletter](https://kusama.network/newsletter)
+- [r/kusama](https://reddit.com/r/kusama)

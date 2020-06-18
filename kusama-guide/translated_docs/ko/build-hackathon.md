@@ -56,7 +56,7 @@ Coming soon.
 
 ## 참고 자료들
 
-- [Substrate Knowledge Base](https://www.substrate.io/kb/learn-substrate)
+- [Substrate Knowledge Base](https://substrate.dev/docs/en/)
 
 ## Support / Contact
 

@@ -30,7 +30,7 @@ Relevant SS58 prefixes for this guide:
 Polkadot supports the following [cryptographic](learn-cryptography) key pairs and signing algorithms:
 
 - Ed25519
-- Sr25519 - Schorr signatures on the Ristretto group
+- Sr25519 - Schnorr signatures on the Ristretto group
 - ECDSA signatures on secp256k1
 
 Note that the address for a secp256k1 key is the SS58 encoding of the _hash of the public key_ in order to reduce the public key from 33 bytes to 32 bytes.
@@ -69,7 +69,7 @@ Extrinsics constitute information from the outside world and take on three forms
 - Signed Transactions
 - Unsigned Transactions
 
-As an infrastructure provider, you will deal almost exclusively with signed transactions. You will, however, see other extrinsics within the blocks that you decode. Find more information in the [Substrate documentation](https://www.substrate.io/kb/learn-substrate/extrinsics).
+As an infrastructure provider, you will deal almost exclusively with signed transactions. You will, however, see other extrinsics within the blocks that you decode. Find more information in the [Substrate documentation](https://substrate.dev/docs/en/knowledgebase/learn-substrate/extrinsics).
 
 Inherents contain information that is not provably true, but validators agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but validators can agree that it is within some delta of their system clock. Inherents are not gossiped on the network, and only block authors insert them into blocks.
 
@@ -80,6 +80,8 @@ Some transactions cannot be signed by a fee-paying account and use unsigned tran
 ### Transaction Mortality
 
 Extrinsics can be mortal or immortal. The transaction payload includes a block number and block hash checkpoint from which a transaction is valid and a validity period (also called "era" in some places) that represents the number of blocks after the checkpoint for which the transaction is valid. If the extrinsic is not included in a block within this validity window, it will be discarded from the transaction queue.
+
+The chain only stores a limited number of prior block hashes as reference. You can query this parameter, called `BlockHashCount`, from the chain state or metadata. This parameter is set to 2400 blocks (about four hours) at genesis. If the validity period is larger than the number of blocks stored on-chain, then the transaction will only be valid as long as there is a block to check it against, i.e. the minimum value of validity period and block hash count.
 
 Setting the block checkpoint to zero, using the genesis hash, and a validity period of zero will make the transaction "immortal".
 
@@ -95,7 +97,7 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 ### Encoding
 
-Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them and interact directly with the chain data or implement your own codec, Polkadot encodes block and transaction data using the [SCALE codec](https://www.substrate.io/kb/advanced/codec).
+Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them and interact directly with the chain data or implement your own codec, Polkadot encodes block and transaction data using the [SCALE codec](https://substrate.dev/docs/en/knowledgebase/advanced/codec).
 
 ## Smart Contracts
 

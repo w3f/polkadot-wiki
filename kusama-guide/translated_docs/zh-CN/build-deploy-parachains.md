@@ -1,22 +1,22 @@
 ---
 id: build-deploy-parachains
-title: How to view and deploy parachains
-sidebar_label: How to view and deploy parachains
+title: 如何部署平行链
+sidebar_label: 如何部署平行链
 ---
 
 这个指南经已更新到Alexander测试网络
 
 ## 如何查询平行链
 
-On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
+前往[Polkadot UI](https://polkadot.js.org/apps/#/explorer)的`Chain State`，选择`parachains`模组和`parachains(）`之后按下`+`按钮，之后会回传有效的平行链。
 
 ## 如何部署Adder平行链
 
-**You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
+**现在需要至少拥有5 DOTs从而创建公投。**
 
-The `adder` parachain is a simple parachain which will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
+The `adder` parachain is a simple parachain that will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
 
-> A slightly out-of-date video version of this guide presented by Adrian Brink is available [here](https://www.youtube.com/watch?v=pDqkzvA4C0E). When the two guides diverge, please refer to this written text as definitive and updated.
+> 由 Adrian Brink 提出的本指南的过时视频版本 [此处](https://www.youtube.com/watch?v=pDqkzvA4C0E)。 当两个指南有分歧时，请参阅此。
 
 ### 代码生成
 
@@ -34,16 +34,16 @@ sudo apt install make clang pkg-config libssl-dev
 rustup update
 ```
 
-Now navigate to the `test-parachains` folder in the Polkadot code repository and run the build script.
+现在前往在Polkadot代码库裹的`test-parachains`资料夹并执行生成脚本
 
 ```bash
 cd polkadot/test-parachains
 ./build.sh
 ```
 
-This will create the Wasm executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The Wasm executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
+它会在这个资料夹建立简单`adder`平行链的Wasm可执行文件，它将简单地添加发送到给它的消息。Wasm可执行文件会在`parachains/test/res/adder.wasm`路径，所以确保你能在那找到。
 
-You will need to build and run the collator node in order to get the genesis state of this parachain.
+你需要生成并运行校对人(Collator)节点从而取得平行链的创世纪状态。
 
 前往`test-parachains/adder/collator`资料夹并执行`build`和`run`指令
 
@@ -62,27 +62,27 @@ Dec: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 Hex: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000011b4d03dd8c01f1049143cf9c4c817e4b167f1d1b83e5c6f0f10d89ba1e7bce
 ```
 
-The important information is the hex string. This is your genesis state and you will need to save it for the next steps.
+最重要的资料是Hex字串，这是你的创世纪状态，你需要将它保存用于接下来步骤。
 
 ### 部署平行链
 
-Go to [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics) on the `Extrinsics` tab. Select the account you wish to deploy the parachain from. You will need to create a referendum to deploy the parachain.
+前往[Polkadot UI](https://polkadot.js.org/apps/#/extrinsics)的`Extrinsics`标签，选择你要从中部署parachain的帐户，你需要创建公投从而部署平行链。
 
 Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 
-In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
+在id栏位输入平行链的`id`，在这个简单的adder情况，将会是`100`。在`code`栏位，按下页面按钮之后你可以直接上传你之前编译好的`adder.wasm`二进制档案。在`initial_head_data`，你需要复制和贴下你从校对人取的Hex数据。在`value`栏位，你需要输入最小要求的数值从而创建公投，在Alexander测试网络暂时_是5 DOTs_。
 
 ![registering a parachain](assets/parachain/register.png)
 
-If you navigate to the `Democracy` tab you will be able to see your proposal in the proposals section.
+假如你前往到`Democracy`标签，你应该会看到你的提案在议案部分
 
-Once you wait for the proposal to become a referendum you will be able to vote `Nay` or `Aye` on it. Assumably, you will vote Aye as this will be a vote for the deployment of your parachain.
+一旦你等待的提案成为公投，你可以投票选择`赞成(Aye)`或`反对(Nay)`，投赞成票使你能够部署平行链。
 
 ![parachain referendum](assets/parachain/referendum.png)
 
-After the voting period of your referendum goes through you will be able to query the state of your parachain.
+当公投结束后，你可以查询你的平行链状态。
 
-You can go to the `Chain State` tab and by querying the `parachains` state you should be able to see some information on your parachain.
+前往`Chain State`标签之后选择查询`parachains`状态 ，你应该能够看到一些你的平行链资料。
 
 ![parachain info](assets/parachain/info.png)
 

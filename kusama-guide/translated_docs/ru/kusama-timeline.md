@@ -1,19 +1,19 @@
 ---
-id: kusama-timeline
-title: Kusama Timeline
-sidebar_label: Timeline
+id: хронология-kusama
+title: Хронология Kusama
+sidebar_label: Хронология
 ---
 
-Kusama network started as a Proof-of-Authority network and was transitioned to Proof-of-Stake on 28 October 2019 at approximately 18:43 Zurich time (CET). The first successful validator set rotation took place at 22:45 CET.
+Сеть Kusama началась как сеть подтверждения полномочий (Proof-of-Authority) и была переведена на Proof-of-Stake 28 октября 2019 года примерно в 18:43 по Цюрихскому времени (CET). Первая успешная ротация набора валидаторов состоялась в 22:45 CET.
 
-Currently, Kusama is a healthy Proof-of-Stake network with over 150 validators and over a million blocks produced.
+В настоящее время Kusama является здоровой сетью Proof-of-Stake с более чем 150 валидаторами и произведено более миллиона блоков.
 
-## Rollout plan
+## План выполнения
 
-The rollout of full functionality of Kusama was staggered to allow for a safe transition. The first PoS phase began with 20 validators. Of the 20, the Web3 Foundation ran nine and Parity Technologies ran six. Five were ran by highly staked community members as voted in by the Phragmen election.
+Внедрение полной функциональности Kusama было приглушено, чтобы обеспечить безопасный переход. Первая фаза PoS началась с 20 валидаторов. Из 20 от Фонда Web3 было девять, от Parity Technologies - шесть. Пять из них были поддержаны членами сообщества с наибольшими стейками в ходе выборов в Phragmen.
 
-When the initial transition was successful, additional validator spots were opened 10 at a time in order to allow for more validators to enter the active set.
+Когда начальный переход был успешным, дополнительные места для валидаторов были открыты по 10 за 1 раз чтобы позволить участвовать большему количеству валидаторов.
 
-When the first transition to PoS took place, the full functionality of Kusama was not fully available. Notably, the Sudo key still existed and was used to initiate further upgrades. Balance transfers were still disabled for a short while.
+Когда произошел первый переход на PoS, полная функциональность Kusama была еще не полностью доступна. Примечательно, что ключ Sudo все еще существовал и использовался для инициирования дальнейших обновлений. Балансовые переводы все еще были отключены на короткое время.
 
-Kusama now has had its full functionality enabled.
+В Kusama теперь включена полную функциональность.

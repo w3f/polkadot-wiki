@@ -12,18 +12,22 @@ Pull requests, discussions and contributions from the community are encouraged. 
 
 Contributing to the wiki is easy with a GitHub account. Every page is a markdown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
-Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes you can create a new Pull Request to the repository and one of the maintainers will either merge it in or request changes very soon.
+Each page has an "Edit" button on the top right of the content. By clicking this button you are taken to the GitHub sign in page, where you can either login or create an account.
 
 ![](assets/edit_button.png)
 
+Once logged in, you'll be taken to the GitHub text editor in which you can make your edits directly. When you've completed your changes, you can add any specific details on what was changed and commit to a new branch to create a new Pull Request to the repository. From there one of the maintainers will either merge it in or request changes very soon.
+
+![](assets/contributing.png) ![](assets/creating-pull-request.png)
+
 ## 규칙
 
-깃헙에서 기여를 할 때 컨트리뷰터들이 지켜야 할 몇 가지 규칙이 있습니다:
+There are a few basic ground-rules for contributors:
 
 1. **절대 `--force`를 사용한 푸쉬를 사용하거나** 깃헙 히스토리를 어떤 연유로든 바꾸시면 안됩니다.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
 3. **마스터가 아닌 브랜치들은** 아직 안정화가 되지 않은 작업들을 포함하고 있으며 풀 리퀘스트를 보내는 것을 지양합니다.
-4. **Significant modifications** ought to be subject to an **pull request** to solicit feedback from other contributors.
+4. **Significant modifications** ought to be subject to a **pull request** to solicit feedback from other contributors.
 5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
 6. 컨트리뷰터는 기존에 있던 마크다운 스타일, 용어, 레이아웃에 맞게 기여해야 합니다.
 7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.

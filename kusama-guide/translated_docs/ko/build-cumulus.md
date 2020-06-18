@@ -12,11 +12,11 @@ sidebar_label: Cumulus
 
 ### 뭉게구름 컨센서스 (Cumulus Consensus)
 
-_cumulus-consensus_ is a consensus engine for Substrate which follows a Polkadot relay chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
 
 ### 뭉게구름 런타임 (Cumulus Runtime)
 
-A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface which will be called by validators.
+A wrapper around Substrate runtimes to allow them to be validated by Polkadot validators and provide witness generating routines. It adds a `validate_block` API to the Substrate external interface, which will be called by validators.
 
 Integrating it into your substrate runtime will be as easy as importing the crate and adding this one line macro to your code.
 

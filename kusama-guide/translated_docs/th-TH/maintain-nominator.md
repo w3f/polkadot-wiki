@@ -4,7 +4,7 @@ title: ผู้เสนอชื่อ (Nominator)
 sidebar_label: ผู้เสนอชื่อ (Nominator)
 ---
 
-ผู้เสนอชื่อ (Nominator) ดูแลความปลอดภัยของรีเลย์เชนโดยการเลือกผู้ตรวจสอบ (Validator) ที่ดีและวางโทเคน DOT เป็นหลักประกัน
+Nominators secure the Relay Chain by selecting good validators and staking DOTs.
 
 You may have an account with DOTs and want to earn fresh DOTs. You could do so as validator, which requires a node running 24/7. If you do not have such node or do not want to bother, you can still earn DOTs by nominating another validator.
 
@@ -38,5 +38,5 @@ Thus, to be a smart nominator, it would be better to look at their [histories](h
 
 ### Guides
 
-- [Be a Nominator (Kusama)](maintain-guides-how-to-nominate-kusama) - Guide on nominating on the Kusama canary network.
+- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Guide on nominating on the Kusama canary network.
 - [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond) - Guide on stopping nominations and withdrawing tokens.
