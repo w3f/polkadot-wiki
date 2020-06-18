@@ -137,6 +137,6 @@ You can also make your own WNDs (testnet DOTs) by [becoming a validator](maintai
 
 ## Kusama Tokens
 
-Unlike testnet DOTs (WND), Kusama tokens are not freely given away. Kusama tokens are available via the
-[claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the
-[Treasury](learn-treasury).
+Unlike testnet DOTs (WND), Kusama tokens are not freely given away. Kusama tokens are available via
+the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through
+the [Treasury](learn-treasury).
