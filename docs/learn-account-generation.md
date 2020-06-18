@@ -298,7 +298,8 @@ If you cannot access your account via your phone for some reason, you can simply
 recovery phrase on another phone that has Parity Signer installed, and have access to your account
 once again. This is also the only way to recover your account.
 
-![Parity Signer Create Account 3](assets/accounts/ps-create-3.jpg) 
+![Parity Signer Create Account 3](assets/accounts/ps-create-3.jpg)
+
 Please see above for information
 on [storing your key safely](#disclaimer-key-security).
 
