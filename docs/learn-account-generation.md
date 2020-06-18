@@ -300,8 +300,7 @@ once again. This is also the only way to recover your account.
 
 ![Parity Signer Create Account 3](assets/accounts/ps-create-3.jpg)
 
-Please see above for information
-on [storing your key safely](#disclaimer-key-security).
+Please see above for information on [storing your key safely](#disclaimer-key-security).
 
 ### Set PIN
 
@@ -325,8 +324,8 @@ select "Polkadot", a new Polkadot's address will be created for you under this i
 ### Your Address
 
 The address will be shown as a QR code. You can import your address to the PolkadotJS Apps by going
-to the [Accounts](https://polkadot.js.org/apps/#/accounts) page and click "Add via Qr". To submit a
-transaction to the network, you can scan a QR code to generate a raw transaction then signed it on
-your phone and broadcast it through the remote node on the PolkadotJS Apps.
+to the [Accounts](https://polkadot.js.org/apps/#/accounts) page and click "Add via Qr". To interact
+with the network, you will most of time scan a QR code to generate a raw transaction then signed it
+on your phone and broadcast it through the remote node on the PolkadotJS Apps.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
