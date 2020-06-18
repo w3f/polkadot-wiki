@@ -4,137 +4,137 @@ title: Polkadot Claims
 sidebar_label: Claims
 ---
 
-If you made a DOT purchase in one of the pre-launch sales, then you will need to claim your DOT tokens. For those who made a pre-genesis claim by sending a claim transaction to the Claims Contract on Ethereum, you will still need to send a free _attest_ transaction that will agree to the terms and conditions of your allocation. If you did not make a pre-genesis claim, then you will claim and attest in a single transaction.
+Si hiciste una compra de DOTs en una de las ventas previas al lanzamiento, entonces tendrás que solicitar tus tokens DOTs. Para aquellos que hicieron la solicitud previa al lanzamiento enviando una transacción de solicitud al Contrato de Reclamación en Ethereum, aún tendrán que enviar una transacción gratuita de _prueba_ que acepte los términos y condiciones de su asignación. Si no ha hecho una reclamación previa al génesis, entonces la reclamará y certificará en una sola transacción.
 
-This guide will walk you through the steps for either making a claim or attesting to the statement.
+Esta guía le ayudará en los pasos para hacer una reclamación o dar fe de la declaración.
 
-If you are making a claim on Polkadot for the first time, please read on below in the [making a claim](#making-a-claim) section. If you've already claimed during the pre-genesis claims period, please proceed to the [attesting to a statement](#attesting-to-a-statement) section instead.
+Si es la primera vez que reclama en Polkadot, por favor, lea más abajo en la sección de [reclamaciones](#making-a-claim). Si ya ha reclamado durante el período de reclamación previo al Génesis, por favor proceda a la sección de [certificar una declaración](#attesting-to-a-statement) en su lugar.
 
-## Making a Claim
+## Hacer la reclamación
 
-If you did not make a claim in the pre-genesis claims period, then you are able to claim your DOT tokens after genesis. There is no time limit for making your claim so feel free to do this whenever you are most comfortable.
+Si no hizo la solicitud en el período de reclamación previo a la génesis, entonces puede reclamar sus tokens DOTs después del génesis. No hay límite de tiempo para hacer su reclamación, así que siéntase libre de hacerlo cuando se sienta más cómodo.
 
-> Note: When you make a claim, you will also attest to the agreement that corresponds to your DOT allocation. The two actions "claim" and "attest" are done in a single transaction, but for the most part this is simplified from the perspective of the user.
+> Nota: Cuando haga una reclamación, también dará fe del acuerdo que corresponde a su asignación DOT. Las dos acciones "reclamar" y "atestiguar" se realizan en una sola transacción, pero para la mayor parte de esto se simplifica desde la perspectiva del usuario.
 
-### What You Will Need
+### Lo que necesitarás
 
-- The Ethereum account that holds the DOT indicator tokens
-- The MyCrypto wallet
-- A Polkadot account
+- La cuenta Ethereum que contiene los tokens del indicador DOT
+- La cartera MyCrypto
+- Una cuenta de Polkadot
 
-You should already have your Ethereum account that holds the DOT indicator tokens from Polkadot's prior sales. You will need to have access to this account in order to make a signature.
+Ya deberías tener tu cuenta en Ethereum que tiene los tokens del indicador DOT de Polkadot de la venta anterior. Necesitarás tener acceso a esta cuenta para poder firmar.
 
-[MyCrypto][] is a versatile wallet that supports a variety of storage methods for your Ethereum account. Go to their downloads page and ensure that you download the latest version for your operating system. This is important because the latest version will always have the latest security patches.
+[MyCrypto][] es una cartera versátil que admite una variedad de métodos de almacenamiento para su cuenta de Ethereum. Vaya a su página de descargas y asegúrese de descargar la última versión para su sistema operativo. Esto es importante porque la última versión siempre tendrá los últimos parches de seguridad.
 
-> **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
+> **AVISO**: Es mucho más seguro descargar y usar la aplicación MyCrypto localmente. Siempre puedes encontrar las versiones más actualizadas de la aplicación de escritorio en su [página de versiones][mycrypto].
 
-You will need a Polkadot account to claim your DOTs. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
+Necesitarás una cuenta Polkadot para reclamar tus DOTs. Por favor, sigue las instrucciones de la página \[generación de la cuenta\]\[\] para generar una nueva cuenta Polkadot.
 
-#### Claiming your DOT with MyCrypto
+#### Reclamando tus DOTs con MyCrypto
 
-The Polkadot JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
+La aplicación [Polkadot JS Claims][] te ayuda a firmar un mensaje de MyCrypto. MyCrypto es una buena opción en caso de que hayas guardado la clave de la cuenta de Ethereum con tus tokens de DOT en un dispositivo de hardware como Ledger Nano S o Trezor. También soporta claves privadas en bruto, mnemotécnicos y Parity Signer.
 
-Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOTs into and click the blue "Continue" button to proceed. Your screen should look something like this:
+Una vez que hayas descargado MyCrypto y lo tengas funcionando localmente (recomendamos un ordenador air-gapped para máxima seguridad), puedes empezar a navegar por la aplicación de Reclamaciones en Polkadot-JS Apps. Selecciona la cuenta en la que quieres reclamar los DOTs y haz clic en el botón azul "Continue" para continuar. Tu pantalla debería tener un aspecto parecido a este:
 
 ![claim-1](assets/new-claims/claim-1.png)
 
-Now you will need to provide the Ethereum address that is associated with the DOT indicator tokens that you will claim. Enter the Ethereum address into the box and click "Continue".
+Ahora tendrás que proporcionar la dirección de Ethereum que está asociada con los tokens DOTs que reclamarás. Introduce la dirección de Ethereum en la casilla y haz clic en "Continue".
 
 ![claim-2](assets/new-claims/claim-2.png)
 
-Next your screen should look the image below.
+A continuación, tu pantalla debe mostrar la imagen de abajo.
 
 ![claim-2-1](assets/new-claims/claim-2-1.png)
 
-The hex-encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
+La cadena codificada hexadecimal que sigue a la frase: "Pay DOTs to the Polkadot account:" es la clave pública con código hexadecimal de tu cuenta Polkadot, menos el prefijo `0x`.
 
-The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab.
+El siguiente paso es ir a la aplicación MyCrypto y hacer clic en la pestaña "Sign & Verify Message".
 
 ![claim-3](assets/new-claims/claim-3.png)
 
-This will prompt you to select a method for unlocking your wallet.
+Esto te pedirá que selecciones un método para desbloquear tu cartera.
 
 ![claim-4](assets/new-claims/claim-4.png)
 
-After unlocking your wallet, paste the message from Polkadot JS into the "Message" box.
+Después de desbloquear tu cartera, pega el mensaje de Polkadot JS en el apartado "Message".
 
 ![claim-5](assets/new-claims/claim-5.png)
 
-When you click "Sign Message" you will get a JSON output like the one below:
+Cuando hagas clic en "Sign Message" obtendrás una salida JSON como la de abajo:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot JS UI and click "Confirm Claim."
+Copia y pega la salida JSON del mensaje firmado de MyCrypto en el recuadro de entrada de la interfaz Polkadot JS y haz clic en "Confirm Claim."
 
 ![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
 
-A green box will appear telling you the amount to claim with a "Claim" button to make the claim. Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
+Aparecerá un cuadro verde que te indicará la cantidad a reclamar con un botón "Claim" para hacer la solicitud. Haz clic en el botón "Claim" y luego en "Submit (no signature)" para completar la solicitud.
 
 ![claim-9](assets/new-claims/claim-9.png)
 
-If this claim succeeded, then you will see a success message and your DOTs will be in the account that you claimed to.
+Si esta reclamación tuvo éxito, entonces verá un mensaje de éxito y sus DOTs estarán en la cuenta que usted declaró.
 
-#### Verifying your Claim
+#### Verificando tu reclamación
 
-After you make an on-chain claim for DOTs, your balance should be updated on the Polkadot UI immediately.
+Después de hacer una solicitud en cadena para sus DOTs, su saldo debe ser actualizado en la UI de Polkadot inmediatamente.
 
-Having trouble? Get support in the DOT [Claims Support]() channel.
+¿Tienes problemas? Consigue ayuda en el [canal de soporte de reclamaciones]() de DOT.
 
 ![claim-10](assets/new-claims/claim-10.png)
 
-Congratulations, you have now completed the process for claiming and signing for your DOTs.
+Enhorabuena, ya has completado el proceso para reclamar y registrar tus DOTs.
 
-### Third Party Claims Processes
+### Procesos de reclamaciones de terceros
 
 #### Coinbase Custody
 
-> Please note that using Coinbase Custody for the claims process requires your account to contain at least 1,000 DOTs. There are also fees associated with Coinbase Custody.
+> Tenga en cuenta que el uso de Coinbase Custody para el proceso de reclamaciones requiere que su cuenta disponga de al menos1.000 DOTs. También hay honorarios asociados a Coinbase Custody.
 
-1. To open an account please contact Coinbase Custody directly at sales@coinbase.com
-1. Once you’ve opened an account, Coinbase Custody will generate a DOT address for you to use in the claims process and send it to you.
-1. You may then claim your tokens using your Coinbase Custody DOT address and your tokens will appear in your Coinbase Custody account.
+1. Para abrir una cuenta, por favor contacte con Coinbase Custody directamente en sales@coinbase.com
+1. Una vez que haya abierto una cuenta, Coinbase Custody generará una dirección DOT para que la use en el proceso de reclamaciones y se lo enviará.
+1. Pueden reclamar sus tokens usando la dirección de Coinbase Custody y sus tokens aparecerán en su cuenta de Coinbase Custody.
 
-For questions about claiming with Coinbase Custody, please contact sales@coinbase.com.
+Para preguntas sobre cómo reclamar con Coinbase Custody, por favor contacta a sales@coinbase.com.
 
-#### Other Third Party Processes
+#### Otros procesos de terceros
 
-**We do not recommend using other third-party apps or processes to perform your claim or acquire DOT.**
+**No recomendamos el uso de aplicaciones o procesos de terceros para realizar su reclamación o adquirir DOT.**
 
-Claiming using other third-party processes can lead to the loss of your allocation; therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, or by using Coinbase Custody, is the only way to be certain that you will receive your allocation.
+Reclamar usando otros procesos de terceros puede llevar a la pérdida de su asignación; por lo tanto, no podemos recomendar el uso de aplicaciones de terceros para hacerlo. Especificar manualmente sus datos de transacción, como se especifica en nuestro proceso de reclamaciones o utilizando Coinbase Custody, es la única manera de estar seguro de que usted recibirá su asignación.
 
-## Attesting to a Statement
+## Acreditar una declaración
 
-If you've already made a pre-genesis claim, you still have to agree to a statement using your Polkadot account.
+Si ya ha hecho una reclamación previa al génesis, todavía tiene que aceptar una declaración usando su Cuenta Polkadot.
 
-### What you will need
+### Lo que necesitarás
 
-- Your Polkadot account unlocked on Polkadot-JS Apps UI.
+- Tu cuenta de Polkadot desbloqueada en la IU de Polkadot-JS Apps.
 
-You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI. Once you make this transaction you will have the tokens available in your account.
+Enviará una transacción gratuita desde su cuenta Polkadot en la Interfaz de Aplicaciones Polkadot-JS. Una vez que hagas esta transacción tendrás los tokens disponibles en tu cuenta.
 
-### Go to Polkadot-JS Apps
+### Vaya a Polkadot-JS Apps
 
-Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to your account in some way. One way would be to go to the Accounts page and "create" a new account, replacing the generated seed or mnemonic with the one belonging to your account. The other way is by using the Polkadot-JS extension and entering your seed or mnemonic there, which is generally safer than entering it directly to the Apps page.
+Continúe en las aplicaciones de [Polkadot-JS][claims app]. Tendrás que conceder a Apps acceso a tu cuenta de alguna manera. Una forma sería ir a la página de Cuentas y "crear" una nueva cuenta, reemplazando la semilla o mnemotécnica generada que pertenece a tu cuenta. La otra forma es utilizando la extensión Polkadot-JS e introduciendo tu semilla o mnemotécnica allí, lo que generalmente es más seguro que introducirla directamente en la página de Apps.
 
-### Make the Attestation
+### Haga la declaración
 
-After entering your account, you should see a red counter appear on the "Claim Tokens" tab on the left navigation drawer.
+Después de entrar en su cuenta, debería ver aparecer un cartel rojo en la pestaña "Claim Tokens" en el cajón de navegación izquierdo.
 
 ![claim-attest-1](assets/new-claims/new-attest-1.png)
 
-Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
+Haga clic en la pestaña "Claim Tokens" y verá una notificación grande en la parte superior de la página que le dice que tiene que firmar la declaración.
 
 ![claim-attest-2](assets/new-claims/new-attest-2.png)
 
-The notification will display one or more Polkadot addresses that you have loaded in Polkadot-JS that you need to sign. Select a Polkadot account with a claim using the drop down selection. If you don't see a notification or don't see the selector, please double check that the account has been loaded into Polkadot-JS and that it has already claimed during the preclaim period. As always, feel free to reach out for help in the [Claims Support]() channel.
+La notificación mostrará una o más direcciones Polkadot que haya cargado en Polkadot-JS y que necesite firmar. Selecciona una cuenta Polkadot con una solicitud usando la selección desplegable. Si no ves una notificación o no ves el selector, comprueba que la cuenta se ha cargado en Polkadot-JS y que ya ha sido reclamada durante el período de pre-reclamación. Como siempre, siéntase libre de pedir ayuda en el [canal de Soporte de Reclamaciones]().
 
-Click "Continue" and you will see a green box appear on the right.
+Haga clic en "Continue" y verá que aparece un cuadro verde a la derecha.
 
 ![claim-attest-3](assets/new-claims/new-attest-3.png)
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+Haga clic en "I Agree" y luego en "Sign and Submit" para realizar su transacción de confirmación gratuita. Cuando la transacción esté incluida en el bloque, verá aparecer un cuadro verde de éxito en la esquina superior derecha y los DOT estarán en su cuenta.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
@@ -142,5 +142,5 @@ Click on "I Agree" and then "Sign and Submit" to make your free attest transacti
 [MyCrypto]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[Claims app]: https://polkadot.js.org/apps/#/claims
+[Polkadot JS Claims]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
