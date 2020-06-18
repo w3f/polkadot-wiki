@@ -10,7 +10,7 @@ There are several ways to generate a Polkadot address:
 - [Polkadot.js Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
 - [Polkadot.js Web Apps](#polkadotjs)
-- [Parity Signer](#parity-signer) **COMING SOON**
+- [Parity Signer](#parity-signer)
 
 ## DISCLAIMER: Key Security
 
@@ -269,10 +269,62 @@ communication lines on-chain.
 
 ## Parity Signer
 
-Parity Signer is a secure way of storing your DOTs on an air-gapped device.
+Parity Signer is a secure way of storing your DOTs on an air-gapped device. It is highly recommended
+to turn off the WIFI, cellular network, Bluetooth, NFC when using it. If you have turned on, you
+should see an unshielded icon in red on the top-right corner that indicates your connection is not
+secure
 
-**Coming soon!**
+### Create Account
 
-Parity Signer requires the genesis hash of the chain to be known in order to derive new accounts.
-Since Polkadot is not launched yet - the genesis hash is not known. Expect a Parity Signer release
-to follow the launch of Polkadot that allows you to create accounts.
+Click "Create" to create an identity or "recover" if you have previously backup the recovery phrase.
+You can have multiple identities on one device. And each identity can manage multiple addresses on
+different networks.
+
+![Parity Signer Create Account 1](assets/accounts/ps-create-1.jpg)
+
+### Name Account
+
+Input the name for your identity and then click "Create".
+
+![Parity Signer Create Account 2](assets/accounts/ps-create-2.jpg)
+
+### Backup Account
+
+Next, Parity Signer will then use generate a recovery phrase randomly for you and display it to you
+in the form of 12/24 words.
+
+You should write down the recovery phrase on paper and store it somewhere safe, secret, and secure.
+If you cannot access your account via your phone for some reason, you can simply re-enter your
+recovery phrase on another phone that has Parity Signer installed, and have access to your account
+once again. This is also the only way to recover your account.
+
+![Parity Signer Create Account 3](assets/accounts/ps-create-3.jpg) Please see above for information
+on [storing your key safely](#disclaimer-key-security).
+
+### Set PIN
+
+Next, a new textbox will appear in which you can set a PIN. The PIN code should contain at least 6
+digits. If your PIN code does not match, it would not allow you to create the account. The PIN code
+will be mainly used for when signing the transaction or sensitive operations such as deleting an
+identity, revealing the recovery phrase.
+
+Note that if someone knows the 12/24 words in your recovery phrase, they still have control over
+your account even if they do not know the PIN.
+
+![Parity Signer Create Account 4](assets/accounts/ps-create-4.jpg)
+
+### Get Address
+
+Choose the network's address you would like to create by clicking the name of the network. If you
+select "Polkadot", a new Polkadot's address will be created for you under this identity.
+
+![Parity Signer Create Account 5](assets/accounts/ps-create-5.jpg)
+
+### Your Address
+
+The address will be shown as a QR code. You can import your address to the PolkadotJS Apps by going
+to the [Accounts](https://polkadot.js.org/apps/#/accounts) page and click "Add via Qr". To submit a
+transaction to the network, you can scan a QR code to generate a raw transaction then signed it on
+your phone and broadcast it through the remote node on the PolkadotJS Apps.
+
+![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
