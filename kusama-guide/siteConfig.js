@@ -1,13 +1,14 @@
 const { baseUrlPattern } = require('../scripts/utils');
 
 const isBuilding = process.env.BUILDING;
+const isPub = process.env.PUBLISHING;
 
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
   tagline: 'One-stop-shop for Kusama information.',
-  url: '', // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : '/',
-  projectName: '',
+  url: isPub ? "https://lsaether.github.io/" : "", // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/test/" : "/"),
+  projectName: isPub ? "test" : "",
   organizationName: 'lsaether',
 
   // For no header links in the top nav bar -> headerLinks: [],

@@ -1,12 +1,13 @@
 const { baseUrlPattern } = require('../scripts/utils');
 
 const isBuilding = process.env.BUILDING;
+const isPub = process.env.PUBLISHING;
 
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
   tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
   url: 'https://wiki.polkadot.network', // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : '/',
+  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/test/" : "/"),
   projectName: 'polkadot-wiki',
   organizationName: 'w3f',
   cname: 'wiki.polkadot.network',
