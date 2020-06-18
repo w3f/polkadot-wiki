@@ -272,7 +272,7 @@ communication lines on-chain.
 Parity Signer is a secure way of storing your DOTs on an air-gapped device. It is highly recommended
 to turn off the WIFI, cellular network, Bluetooth, NFC when using it. If you have turned on, you
 should see an unshielded icon in red on the top-right corner that indicates your connection is not
-secure
+secure.
 
 ### Create Account
 
@@ -290,8 +290,8 @@ Input the name for your identity and then click "Create".
 
 ### Backup Account
 
-Next, Parity Signer will then use generate a recovery phrase randomly for you and display it to you
-in the form of 12/24 words.
+Next, Parity Signer will then generate a recovery phrase randomly for you and display it to you in
+the form of 12/24 words.
 
 You should write down the recovery phrase on paper and store it somewhere safe, secret, and secure.
 If you cannot access your account via your phone for some reason, you can simply re-enter your
