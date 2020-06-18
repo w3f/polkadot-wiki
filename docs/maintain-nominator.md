@@ -64,7 +64,7 @@ Moreover, a nominator should do comprehensive research on their validator candid
 go over the validators' websites to see who they are, what kind of infrastructure setup they are
 using, reputation, the vision behind the validator, and more.
 
-> [color=#E7007A] These concepts have been further explained in the
+> These concepts have been further explained in the
 > [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
 > and
 > [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
