@@ -3,18 +3,14 @@ const { baseUrlPattern } = require('../scripts/utils');
 const isBuilding = process.env.BUILDING;
 const isPub = process.env.PUBLISHING;
 
-console.log("isPub:", isPub);
-
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
   tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
   // url: 'https://wiki.polkadot.network', // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/polkadot-wiki/" : "/"),
+  baseUrl: isBuilding ? baseUrlPattern : "/",
   projectName: 'polkadot-wiki',
-  organizationName: "lsaether",
-  url: "https://lsaether.github.io",
-  // organizationName: 'w3f',
-  // cname: 'wiki.polkadot.network',
+  organizationName: 'w3f',
+  cname: 'wiki.polkadot.network',
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
