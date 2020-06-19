@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Initializer Module - The Polkadot Parachain Host Implementers' Guide</title>
+        <title>Router Module - The Polkadot Parachain Host Implementers' Guide</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Preamble</a></li><li class="chapter-item expanded "><a href="../whence-parachains.html"><strong aria-hidden="true">1.</strong> Whence Parachains</a></li><li class="chapter-item expanded "><a href="../parachains-overview.html"><strong aria-hidden="true">2.</strong> Parachains Overview</a></li><li class="chapter-item expanded "><a href="../architecture.html"><strong aria-hidden="true">3.</strong> Architecture Overview</a></li><li class="chapter-item expanded "><a href="../runtime/index.html"><strong aria-hidden="true">4.</strong> Runtime Architecture</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../runtime/initializer.html" class="active"><strong aria-hidden="true">4.1.</strong> Initializer Module</a></li><li class="chapter-item expanded "><a href="../runtime/configuration.html"><strong aria-hidden="true">4.2.</strong> Configuration Module</a></li><li class="chapter-item expanded "><a href="../runtime/paras.html"><strong aria-hidden="true">4.3.</strong> Paras Module</a></li><li class="chapter-item expanded "><a href="../runtime/scheduler.html"><strong aria-hidden="true">4.4.</strong> Scheduler Module</a></li><li class="chapter-item expanded "><a href="../runtime/inclusion.html"><strong aria-hidden="true">4.5.</strong> Inclusion Module</a></li><li class="chapter-item expanded "><a href="../runtime/inclusioninherent.html"><strong aria-hidden="true">4.6.</strong> InclusionInherent Module</a></li><li class="chapter-item expanded "><a href="../runtime/validity.html"><strong aria-hidden="true">4.7.</strong> Validity Module</a></li><li class="chapter-item expanded "><a href="../runtime/router.html"><strong aria-hidden="true">4.8.</strong> Router Module</a></li></ol></li><li class="chapter-item expanded "><a href="../node/index.html"><strong aria-hidden="true">5.</strong> Node Architecture</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/subsystems-and-jobs.html"><strong aria-hidden="true">5.1.</strong> Subsystems and Jobs</a></li><li class="chapter-item expanded "><a href="../node/overseer.html"><strong aria-hidden="true">5.2.</strong> Overseer</a></li><li class="chapter-item expanded "><a href="../node/backing/index.html"><strong aria-hidden="true">5.3.</strong> Backing Subsystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/backing/candidate-selection.html"><strong aria-hidden="true">5.3.1.</strong> Candidate Selection</a></li><li class="chapter-item expanded "><a href="../node/backing/candidate-backing.html"><strong aria-hidden="true">5.3.2.</strong> Candidate Backing</a></li><li class="chapter-item expanded "><a href="../node/backing/statement-distribution.html"><strong aria-hidden="true">5.3.3.</strong> Statement Distribution</a></li><li class="chapter-item expanded "><a href="../node/backing/pov-distribution.html"><strong aria-hidden="true">5.3.4.</strong> PoV Distribution</a></li></ol></li><li class="chapter-item expanded "><a href="../node/availability/index.html"><strong aria-hidden="true">5.4.</strong> Availability Subsystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/availability/availability-distribution.html"><strong aria-hidden="true">5.4.1.</strong> Availability Distribution</a></li><li class="chapter-item expanded "><a href="../node/availability/bitfield-distribution.html"><strong aria-hidden="true">5.4.2.</strong> Bitfield Distribution</a></li><li class="chapter-item expanded "><a href="../node/availability/bitfield-signing.html"><strong aria-hidden="true">5.4.3.</strong> Bitfield Signing</a></li></ol></li><li class="chapter-item expanded "><a href="../node/collators/index.html"><strong aria-hidden="true">5.5.</strong> Collators</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/collators/collation-generation.html"><strong aria-hidden="true">5.5.1.</strong> Collation Generation</a></li><li class="chapter-item expanded "><a href="../node/collators/collation-distribution.html"><strong aria-hidden="true">5.5.2.</strong> Collation Distribution</a></li></ol></li><li class="chapter-item expanded "><a href="../node/validity/index.html"><strong aria-hidden="true">5.6.</strong> Validity</a></li><li class="chapter-item expanded "><a href="../node/utility/index.html"><strong aria-hidden="true">5.7.</strong> Utility Subsystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/utility/availability-store.html"><strong aria-hidden="true">5.7.1.</strong> Availability Store</a></li><li class="chapter-item expanded "><a href="../node/utility/candidate-validation.html"><strong aria-hidden="true">5.7.2.</strong> Candidate Validation</a></li><li class="chapter-item expanded "><a href="../node/utility/provisioner.html"><strong aria-hidden="true">5.7.3.</strong> Provisioner</a></li><li class="chapter-item expanded "><a href="../node/utility/network-bridge.html"><strong aria-hidden="true">5.7.4.</strong> Network Bridge</a></li><li class="chapter-item expanded "><a href="../node/utility/misbehavior-arbitration.html"><strong aria-hidden="true">5.7.5.</strong> Misbehavior Arbitration</a></li><li class="chapter-item expanded "><a href="../node/utility/peer-set-manager.html"><strong aria-hidden="true">5.7.6.</strong> Peer Set Manager</a></li><li class="chapter-item expanded "><a href="../node/utility/runtime-api.html"><strong aria-hidden="true">5.7.7.</strong> Runtime API Requests</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../types/index.html"><strong aria-hidden="true">6.</strong> Data Structures and Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../types/candidate.html"><strong aria-hidden="true">6.1.</strong> Candidate</a></li><li class="chapter-item expanded "><a href="../types/backing.html"><strong aria-hidden="true">6.2.</strong> Backing</a></li><li class="chapter-item expanded "><a href="../types/availability.html"><strong aria-hidden="true">6.3.</strong> Availability</a></li><li class="chapter-item expanded "><a href="../types/overseer-protocol.html"><strong aria-hidden="true">6.4.</strong> Overseer and Subsystem Protocol</a></li><li class="chapter-item expanded "><a href="../types/runtime.html"><strong aria-hidden="true">6.5.</strong> Runtime</a></li><li class="chapter-item expanded "><a href="../types/chain.html"><strong aria-hidden="true">6.6.</strong> Chain</a></li><li class="chapter-item expanded "><a href="../types/messages.html"><strong aria-hidden="true">6.7.</strong> Messages</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary.html">Glossary</a></li><li class="chapter-item expanded affix "><a href="../further-reading.html">Further Reading</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Preamble</a></li><li class="chapter-item expanded "><a href="../whence-parachains.html"><strong aria-hidden="true">1.</strong> Whence Parachains</a></li><li class="chapter-item expanded "><a href="../parachains-overview.html"><strong aria-hidden="true">2.</strong> Parachains Overview</a></li><li class="chapter-item expanded "><a href="../architecture.html"><strong aria-hidden="true">3.</strong> Architecture Overview</a></li><li class="chapter-item expanded "><a href="../runtime/index.html"><strong aria-hidden="true">4.</strong> Runtime Architecture</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../runtime/initializer.html"><strong aria-hidden="true">4.1.</strong> Initializer Module</a></li><li class="chapter-item expanded "><a href="../runtime/configuration.html"><strong aria-hidden="true">4.2.</strong> Configuration Module</a></li><li class="chapter-item expanded "><a href="../runtime/paras.html"><strong aria-hidden="true">4.3.</strong> Paras Module</a></li><li class="chapter-item expanded "><a href="../runtime/scheduler.html"><strong aria-hidden="true">4.4.</strong> Scheduler Module</a></li><li class="chapter-item expanded "><a href="../runtime/inclusion.html"><strong aria-hidden="true">4.5.</strong> Inclusion Module</a></li><li class="chapter-item expanded "><a href="../runtime/inclusioninherent.html"><strong aria-hidden="true">4.6.</strong> InclusionInherent Module</a></li><li class="chapter-item expanded "><a href="../runtime/validity.html"><strong aria-hidden="true">4.7.</strong> Validity Module</a></li><li class="chapter-item expanded "><a href="../runtime/router.html" class="active"><strong aria-hidden="true">4.8.</strong> Router Module</a></li></ol></li><li class="chapter-item expanded "><a href="../node/index.html"><strong aria-hidden="true">5.</strong> Node Architecture</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/subsystems-and-jobs.html"><strong aria-hidden="true">5.1.</strong> Subsystems and Jobs</a></li><li class="chapter-item expanded "><a href="../node/overseer.html"><strong aria-hidden="true">5.2.</strong> Overseer</a></li><li class="chapter-item expanded "><a href="../node/backing/index.html"><strong aria-hidden="true">5.3.</strong> Backing Subsystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/backing/candidate-selection.html"><strong aria-hidden="true">5.3.1.</strong> Candidate Selection</a></li><li class="chapter-item expanded "><a href="../node/backing/candidate-backing.html"><strong aria-hidden="true">5.3.2.</strong> Candidate Backing</a></li><li class="chapter-item expanded "><a href="../node/backing/statement-distribution.html"><strong aria-hidden="true">5.3.3.</strong> Statement Distribution</a></li><li class="chapter-item expanded "><a href="../node/backing/pov-distribution.html"><strong aria-hidden="true">5.3.4.</strong> PoV Distribution</a></li></ol></li><li class="chapter-item expanded "><a href="../node/availability/index.html"><strong aria-hidden="true">5.4.</strong> Availability Subsystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/availability/availability-distribution.html"><strong aria-hidden="true">5.4.1.</strong> Availability Distribution</a></li><li class="chapter-item expanded "><a href="../node/availability/bitfield-distribution.html"><strong aria-hidden="true">5.4.2.</strong> Bitfield Distribution</a></li><li class="chapter-item expanded "><a href="../node/availability/bitfield-signing.html"><strong aria-hidden="true">5.4.3.</strong> Bitfield Signing</a></li></ol></li><li class="chapter-item expanded "><a href="../node/collators/index.html"><strong aria-hidden="true">5.5.</strong> Collators</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/collators/collation-generation.html"><strong aria-hidden="true">5.5.1.</strong> Collation Generation</a></li><li class="chapter-item expanded "><a href="../node/collators/collation-distribution.html"><strong aria-hidden="true">5.5.2.</strong> Collation Distribution</a></li></ol></li><li class="chapter-item expanded "><a href="../node/validity/index.html"><strong aria-hidden="true">5.6.</strong> Validity</a></li><li class="chapter-item expanded "><a href="../node/utility/index.html"><strong aria-hidden="true">5.7.</strong> Utility Subsystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../node/utility/availability-store.html"><strong aria-hidden="true">5.7.1.</strong> Availability Store</a></li><li class="chapter-item expanded "><a href="../node/utility/candidate-validation.html"><strong aria-hidden="true">5.7.2.</strong> Candidate Validation</a></li><li class="chapter-item expanded "><a href="../node/utility/provisioner.html"><strong aria-hidden="true">5.7.3.</strong> Provisioner</a></li><li class="chapter-item expanded "><a href="../node/utility/network-bridge.html"><strong aria-hidden="true">5.7.4.</strong> Network Bridge</a></li><li class="chapter-item expanded "><a href="../node/utility/misbehavior-arbitration.html"><strong aria-hidden="true">5.7.5.</strong> Misbehavior Arbitration</a></li><li class="chapter-item expanded "><a href="../node/utility/peer-set-manager.html"><strong aria-hidden="true">5.7.6.</strong> Peer Set Manager</a></li><li class="chapter-item expanded "><a href="../node/utility/runtime-api.html"><strong aria-hidden="true">5.7.7.</strong> Runtime API Requests</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../types/index.html"><strong aria-hidden="true">6.</strong> Data Structures and Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../types/candidate.html"><strong aria-hidden="true">6.1.</strong> Candidate</a></li><li class="chapter-item expanded "><a href="../types/backing.html"><strong aria-hidden="true">6.2.</strong> Backing</a></li><li class="chapter-item expanded "><a href="../types/availability.html"><strong aria-hidden="true">6.3.</strong> Availability</a></li><li class="chapter-item expanded "><a href="../types/overseer-protocol.html"><strong aria-hidden="true">6.4.</strong> Overseer and Subsystem Protocol</a></li><li class="chapter-item expanded "><a href="../types/runtime.html"><strong aria-hidden="true">6.5.</strong> Runtime</a></li><li class="chapter-item expanded "><a href="../types/chain.html"><strong aria-hidden="true">6.6.</strong> Chain</a></li><li class="chapter-item expanded "><a href="../types/messages.html"><strong aria-hidden="true">6.7.</strong> Messages</a></li></ol></li><li class="chapter-item expanded "><a href="../glossary.html">Glossary</a></li><li class="chapter-item expanded affix "><a href="../further-reading.html">Further Reading</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,46 +147,49 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#initializer-module" id="initializer-module">Initializer Module</a></h1>
-<p>This module is responsible for initializing the other modules in a deterministic order. It also has one other purpose as described above: accepting and forwarding session change notifications.</p>
+                        <h1><a class="header" href="#router-module" id="router-module">Router Module</a></h1>
+<p>The Router module is responsible for storing and dispatching Upward and Downward messages from and to parachains respectively. It is intended to later handle the XCMP logic as well.</p>
+<p>For each enacted block the <code>queue_upward_messages</code> entry-point is called.</p>
 <h2><a class="header" href="#storage" id="storage">Storage</a></h2>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
-</span><span class="boring">fn main() {
-</span>HasInitialized: bool
-<span class="boring">}
-</span></code></pre></pre>
+<p>Storage layout:</p>
+<pre><code class="language-rust ignore">/// Messages ready to be dispatched onto the relay chain.
+/// This is subject to `max_upward_queue_count` and
+/// `watermark_queue_size` from `HostConfiguration`.
+RelayDispatchQueues: map ParaId =&gt; Vec&lt;UpwardMessage&gt;;
+/// Size of the dispatch queues. Caches sizes of the queues in `RelayDispatchQueue`.
+/// First item in the tuple is the count of messages and second
+/// is the total length (in bytes) of the message payloads.
+RelayDispatchQueueSize: map ParaId =&gt; (u32, u32);
+/// The ordered list of `ParaId`s that have a `RelayDispatchQueue` entry.
+NeedsDispatch: Vec&lt;ParaId&gt;;
+</code></pre>
 <h2><a class="header" href="#initialization" id="initialization">Initialization</a></h2>
-<p>The other modules are initialized in this order:</p>
+<p>No initialization routine runs for this module.</p>
+<h2><a class="header" href="#routines" id="routines">Routines</a></h2>
+<ul>
+<li><code>queue_upward_messages(AbridgedCandidateReceipt)</code>:
 <ol>
-<li>Configuration</li>
-<li>Paras</li>
-<li>Scheduler</li>
-<li>Inclusion</li>
-<li>Validity.</li>
-<li>Router.</li>
+<li>Updates <code>NeedsDispatch</code>, and enqueues upward messages into <code>RelayDispatchQueue</code> and modifies the respective entry in <code>RelayDispatchQueueSize</code>.</li>
 </ol>
-<p>The <a href="configuration.html">Configuration Module</a> is first, since all other modules need to operate under the same configuration as each other. It would lead to inconsistency if, for example, the scheduler ran first and then the configuration was updated before the Inclusion module.</p>
-<p>Set <code>HasInitialized</code> to true.</p>
-<h2><a class="header" href="#session-change" id="session-change">Session Change</a></h2>
-<p>If <code>HasInitialized</code> is true, throw an unrecoverable error (panic).
-Otherwise, forward the session change notification to other modules in initialization order.</p>
+</li>
+</ul>
 <h2><a class="header" href="#finalization" id="finalization">Finalization</a></h2>
-<p>Finalization order is less important in this case than initialization order, so we finalize the modules in the reverse order from initialization.</p>
-<p>Set <code>HasInitialized</code> to false.</p>
+<ol>
+<li>Dispatch queued upward messages from <code>RelayDispatchQueues</code> in a FIFO order applying the <code>config.watermark_upward_queue_size</code> and <code>config.max_upward_queue_count</code> limits.</li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../runtime/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../runtime/validity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../runtime/configuration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../node/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -198,13 +201,13 @@ Otherwise, forward the session change notification to other modules in initializ
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../runtime/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../runtime/validity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../runtime/configuration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../node/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
