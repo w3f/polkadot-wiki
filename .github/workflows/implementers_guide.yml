@@ -1,0 +1,41 @@
+name: Build the Parachain Implementers's Guide and save as static website.
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  push:
+    paths:
+    - '.github/workflows/implementers_guide.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout local repo
+      uses: actions/checkout@v2
+
+    - name: Clone polkadot repo
+      uses: actions/checkout@v2
+      with:
+        repository: paritytech/polkadot
+        path: .tmp_polkadot
+
+    - name: Setup mdBook
+      uses: peaceiris/actions-mdbook@v1
+      with:
+        mdbook-version: 'latest'
+
+    - run: |
+        mdbook build .tmp_polkadot/roadmap/implementors-guide/
+        cp -R .tmp_polkadot/roadmap/implementors-guide/book/ website/static/implementers-guide/
+
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v4
+      with:
+        author_name: gh-workflow
+        author_email: gh-workflow
+        message: "Update newest Implementer's Guide changes"
+        add: "website/static/implementers-guide"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
