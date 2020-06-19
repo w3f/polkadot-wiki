@@ -194,13 +194,13 @@ corner and the DOTs will be in your account.
 ### What you will need
 
 - Parity Signer
-- Your Polkadot account unlocked on Polkadot-JS Apps UI.
+- Your Polkadot account linked to Polkadot-JS Apps UI
 
-You will be importing your Polkadot address on the Parity Signer to the PolkadotJS apps to interact
-with the network. If you do not have a Polkadot address, please follow the instructions on the
-Parity Signer section in the [account generation][] page for generating a new Polkadot account. All
-the operations will have to use your phone to sign the transaction and broadcast it via the
-PolkadotJS apps remote node.
+Before claiming, you should import your Polkadot address on Parity Signer to the PolkadotJS apps.
+All operations will use Parity Signer to sign the transaction, but will broadcast it via the
+PolkadotJS apps remote node. If you do not have a Polkadot address, please follow the instructions
+on the Parity Signer section in the [account generation][] page for generating a new Polkadot
+account.
 
 ### Go to Polkadot-JS Apps
 
@@ -215,11 +215,11 @@ Click "Add via Qr" on the right side.
 
 ![ps-claim-2](assets/new-claims/ps-claim-2.png)
 
-Now you need to open the Parity Signer and choose "Polkadot" network.
+Open Parity Signer and choose "Polkadot" network.
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-Next, select the address that you have claimed DOTs to during the pre-genesis.
+Select the address that you have claimed DOTs to during pre-genesis.
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
