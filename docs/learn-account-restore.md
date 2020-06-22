@@ -67,7 +67,7 @@ that your account has been restored. That's it!
 To restore an account on Parity Signer, open the app and click on the user profile icon in the top
 right hand corner.
 
-![click-profile-parity](assets/accounts/parity_click_profile.jpg)
+![click-profile-parity](assets/accounts/parity_click_profile.png)
 
 From here, we want to choose "Show Recovery Phase", which will be the next step in restoring an
 account.
