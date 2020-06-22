@@ -118,6 +118,7 @@
         "label": "Miscellaneous",
         "ids": [
           "learn-account-generation",
+          "learn-account-restore",
           "learn-roadmap",
           "learn-relevant-links",
           "learn-faq",
