@@ -88,11 +88,11 @@ put in the mnemonic recovery phrase from your Parity Signer account.
 
 Note that you can change the name and password if desired.
 
-![restoring-account-parity](assets/accounts/parity_restoring_account.jpg)
+![restoring-account-parity](assets/accounts/parity_restoring_account.png)
 
 Once you hit save, it is important to "Create and backup account", which will download a .json file
 that contains all the relevant data for that account. At this point, we have successfully saved the
 Parity Signer account onto Polkadot js and downloaded the account data, now we have restored the
 account.
 
-![save-backup-parity](assets/accounts/parity_save_recovery.jpg)
+![save-backup-parity](assets/accounts/parity_save_recovery.png)
