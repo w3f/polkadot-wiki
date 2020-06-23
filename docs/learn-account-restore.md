@@ -88,7 +88,7 @@ put in the mnemonic recovery phrase from your Parity Signer account.
 
 Note that you can change the name and password if desired.
 
-![restoring-account-parity](assets/accounts/parity_restoring_account.png)
+![restoring-account-parity](assets/accounts/parity_restoring_account.jpg)
 
 Once you hit save, it is important to "Create and backup account", which will download a .json file
 that contains all the relevant data for that account. At this point, we have successfully saved the
