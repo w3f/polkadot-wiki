@@ -12,6 +12,7 @@ The Polkadot Relay Chain will not support smart contracts natively. However, par
 
 - [ink!](https://github.com/paritytech/ink) - ink! разрабатываются Parity для написания смарт-контрактов.
 - [Мастерская по контрактам Substrate](https://substrate.dev/substrate-contracts-workshop/#/) - Знакомит Вас с основами написания и развёртывания токена ERC20 с помощью `ink!`.
+- [Using Smart Contracts on Polkadot and Kusama](https://www.youtube.com/watch?v=fKHkFBXaUxQ&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=6)
 
 ## Примеры
 
