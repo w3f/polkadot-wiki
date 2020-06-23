@@ -1,5 +1,5 @@
 ---
-id: learn-faq
+id: faq
 title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
@@ -8,7 +8,7 @@ _This FAQ focuses on technical questions for users interested in developing appl
 Polkadot. If you have a more general question, you may wish to search for the answer on the main
 [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
-[Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)._
+[Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email [support](support@polkadot.network)._
 
 ## Polkadot Launch
 
@@ -45,8 +45,7 @@ ready to take over the security of the network. This number can be as low as 50 
 to 100.
 
 The launch process is expected to be similar to that of the Kusama network. Kusama transitioned to
-PoS when there were 50 validators ready, but in a matter of months scaled up the validator count to
-{{ num_validators }}. Polkadot's validator count is expected to scale up in a similar fashion.
+PoS when there were 50 validators ready, but in a matter of months scaled up the validator count to 350. Polkadot's validator count is expected to scale up in a similar fashion.
 
 ## Validators
 
@@ -60,7 +59,7 @@ validating for Kusama.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
-on the results of an election algorithm known as [Phragmen's method](learn-phragmen). Phragmen's
+on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmen's
 method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
@@ -90,7 +89,7 @@ the end of the list. That's roughly the minimum stake required to enter the acti
 
 You can also use some tools some to perform estimations.
 
-- [Offline Phragmen](https://github.com/kianenigma/offline-phragmen) can provide exact results of
+- [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) can provide exact results of
   running an election on the current set of validators using the same Rust code that is ran in
   Polkadot.
 
