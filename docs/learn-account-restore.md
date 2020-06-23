@@ -72,7 +72,7 @@ right hand corner.
 From here, we want to choose "Show Recovery Phase", which will be the next step in restoring an
 account.
 
-![click-restore-parity](assets/accounts/parity_click_restore.jpg)
+![click-restore-parity](assets/accounts/parity_click_restore.jpeg)
 
 The next step will require you to enter your PIN that was created with your account on Parity
 Signer. Once this has been added, you'll have access to your Mnemonic Recovery phrase for your
