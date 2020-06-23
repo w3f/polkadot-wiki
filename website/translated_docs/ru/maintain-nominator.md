@@ -36,6 +36,8 @@ One example would be if a validator is regularly offline, their nominators most 
 
 Thus, to be a smart nominator, it would be better to look at their [histories](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
 
+> These concepts have been further explained in the [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4) and [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+
 ### Guides
 
 - [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Guide on nominating on the Kusama canary network.

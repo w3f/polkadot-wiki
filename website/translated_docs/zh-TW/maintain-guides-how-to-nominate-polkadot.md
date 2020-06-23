@@ -46,6 +46,8 @@ Also be mindful of the reaping threshold - the amount that must remain in an acc
 
 Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash account (increase amount at stake)" to simply accrue the rewards into the amount you're staking.
 
+> These concepts have been further explained in Polkadot's [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be [slashed](learn-staking#slashing) if the validators you nominate misbehave. All bonded funds can now be distributed to up to 16 validators. Be careful about the validators you choose since you will be slashed if your validator commits an offence.
