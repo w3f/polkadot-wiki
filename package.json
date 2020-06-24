@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start": "yarn polkadot:start",
-    "kusama:start": "yarn mirror; cd kusama-guide; docusaurus-start",
-    "kusama:build": "BUILDING=true; cd kusama-guide; docusaurus-build; node ./postprocess",
+    "kusama:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
+    "kusama:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
     "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build",
     "kusama:publish-gh-pages": "PUBLISHING=true; cd kusama-guide; docusaurus-publish",
     "polkadot:start": "yarn mirror; cd website; docusaurus-start",
