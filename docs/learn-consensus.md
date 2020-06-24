@@ -105,6 +105,15 @@ either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 For more details on BABE, please see the
 [working research draft](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html).
 
+#### Difference of BABE secondary blocks between Kusama and Polkadot
+
+Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is
+a slight difference in the secondary blocks that are produced between the two networks. Polkadot
+attaches the VRF output to secondary blocks (and therefore every block contributes to the Era
+randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary
+blocks contribute to Era randomness). The Polkadot method should give stronger randomness as more
+inputs are collected during every Era.
+
 ### GRANDPA: Finality gadget
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
