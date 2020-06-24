@@ -78,4 +78,4 @@ trust-free message passing that opens up true interoperability.
   is building them and links to the source code).
 - [Links](learn-relevant-links) - Comprehensive list of external links.
 - [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
-- [FAQ](learn-faq) - Answers to some of the frequently asked questions about Polkadot.
+- [FAQ](faq) - Answers to some of the frequently asked questions about Polkadot.
