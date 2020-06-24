@@ -13,8 +13,8 @@ account, it is necessary that an account is made according to the instructions
 ## Polkadot.js Browser Plugin
 
 For using the Polkadot.js browser plugin, restoring an account is simple. Let's start off by heading
-over to the extension and selecting the desired account to restore. Click on the three dots
-beside the address to open up a settings tab.
+over to the extension and selecting the desired account to restore. Click on the three dots beside
+the address to open up a settings tab.
 
 ![list-accounts-plugin](assets/accounts/polkadot.js_list_accounts.png)
 
