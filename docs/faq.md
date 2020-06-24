@@ -9,7 +9,7 @@ Polkadot. If you have a more general question, you may wish to search for the an
 [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
 [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email
-[support](support@polkadot.network)._
+[support](mailto:support@polkadot.network)._
 
 ## Polkadot Launch
 
