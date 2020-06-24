@@ -39,6 +39,8 @@ sidebar_label: Links
 - [Preparing for Polkadot's Launch with Substrate](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815) - An overview of how to start preparing for Polkadot before the launch date.
 - [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post that recaps information regarding Substrate and Polkadot.
 - [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
+- [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8)
+- [How admin functions in Substrate chains work](https://www.youtube.com/watch?v=InekMjJpVdo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=13)
 
 ### Governance
 

@@ -12,6 +12,7 @@ Polkadot 中继链本身并不支持智能合约，不过在它之上的平行�
 
 - [ink!](https://github.com/paritytech/ink) - Parity的ink用于编写智能合约。
 - [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - 帮助了解使用`ink!`和编写ERC20代币。
+- [Using Smart Contracts on Polkadot and Kusama](https://www.youtube.com/watch?v=fKHkFBXaUxQ&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=6)
 
 ## 例子
 

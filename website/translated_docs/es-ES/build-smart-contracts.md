@@ -12,6 +12,7 @@ Aquí está la lista de los recursos actuales disponibles para desarrolladores q
 
 - [ink!](https://github.com/paritytech/ink) - Ink de Paridad para escribir Smart Contracts.
 - [Taller de Contratos de Substrate](https://substrate.dev/substrate-contracts-workshop/#/) - Te conduce a través de los conceptos básicos para escribir e implementar un token ERC20 usando `ink!`.
+- [Using Smart Contracts on Polkadot and Kusama](https://www.youtube.com/watch?v=fKHkFBXaUxQ&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=6)
 
 ## Ejemplos
 
