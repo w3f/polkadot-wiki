@@ -205,6 +205,10 @@
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
       },
+      "learn-implementers-guide": {
+        "title": "Parachain Implementer's Guide",
+        "sidebar_label": "Parachain Implementer's Guide"
+      },
       "learn-introduction": {
         "title": "Polkadot",
         "sidebar_label": "Polkadot"

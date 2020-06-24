@@ -20,6 +20,8 @@ Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `ku
 
 An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of nodes, like validators and sentries, must run in archive mode. Likewise, all [events](build-protocol-info#events) are cleared from state in each block, so if you want to store events then you will need an archive node.
 
+> To upgrade a node, please refer to this [video](https://www.youtube.com/watch?v=5LtcdBR9F40&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=5)
+
 **Exporting blocks**
 
 To export blocks to a file, use `export-blocks`. Export in JSON (default) or binary (`--binary true`).

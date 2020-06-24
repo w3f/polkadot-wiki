@@ -36,6 +36,8 @@ DOTs 在 Polkadot 中有三个关键功能: (i)用于网络的治理; (ii)参与
 
 DOT 还可以作为辅助功能充当可转送代币。 例如将存储在财政库中的 DOT 发送给为 Polkadot 网络进行相关项目的团队。
 
+> These concepts have been further explained in the [Usage of DOTs and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
+
 ### DOTs 用于治理
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions that are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.

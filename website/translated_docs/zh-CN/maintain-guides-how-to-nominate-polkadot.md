@@ -46,6 +46,8 @@ sidebar_label: 提名人指南
 
 选择适合您的付款目的地。 如果不确定，则可以选择 "Stash 帐号 (increase amount at stake)"，将奖励累积到抵押中的帐号。
 
+> These concepts have been further explained in Polkadot's [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+
 ### 第二步: 提名验证人
 
 您现在已经完成了绑定。完成绑定表示您的代币已被锁定，如果您提名的验证人有过失行为，该绑定的代币有可能被[惩罚(削减)](learn-staking#slashing) 。所有绑定资金现在可以分配给最多16个验证人。如果你提名的验证人恶意攻击网络，你也会被惩罚，所以请谨慎选择验证人。
@@ -86,7 +88,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMB
 
 `NUMBER_OF_TOKENS`:: 您想抵押到网络的 DOT 数量。
 
-> **注意**：DOT 具有十二个小数位，并且始终以结尾为零的整数表示。 因此 1 DOT = 1,000,000,000,000 单位
+> **Note**: DOT has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 DOT = 1,000,000,000,000 units.
 
 `REWARD_DESTINATION`:
 

@@ -36,6 +36,8 @@ Nominators secure the Relay Chain by selecting good validators and staking DOTs.
 
 所以作为一个聪明的提名人，最好是会查看验证人的[历史](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8)例如创造区块，rewards and slashes 和[身份](learn-identity)(如果他们有设置)。另外提名人应对其候选验证人进行全面研究例如前往他们的网页查看一下他们是怎么样的团队，使用什么架构，声誉，验证人背后的愿景等等。
 
+> These concepts have been further explained in the [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4) and [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+
 ### 指南
 
 - [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Guide on nominating on the Kusama canary network.
