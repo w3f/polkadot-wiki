@@ -13,8 +13,7 @@ static over the lifetime of Polkadot.
 The Polkadot host interacts with the Polkadot runtime in limited, and well-specified ways. For this
 reason, implementation teams can build an alternative implementation of the Polkadot host while
 treating the Polkadot runtime as a black box. For more details of the interactions between the host
-and the runtime, please see the
-[specification](https://github.com/w3f/polkadot-spec/blob/master/runtime-environment-spec/polkadot_re_spec.pdf).
+and the runtime, please see the [specification][].
 
 ## Components of the Polkadot host
 
@@ -40,3 +39,5 @@ parts in grey are stable and can not change without an explicit hard fork.
 
 - [Polkadot Host Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the
   Polkadot Host spec, including tests.
+
+[specification]: https://github.com/w3f/polkadot-spec/
