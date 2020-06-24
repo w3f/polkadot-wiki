@@ -8,7 +8,8 @@ _This FAQ focuses on technical questions for users interested in developing appl
 Polkadot. If you have a more general question, you may wish to search for the answer on the main
 [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
-[Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email [support](support@polkadot.network)._
+[Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email
+[support](support@polkadot.network)._
 
 ## Polkadot Launch
 
@@ -45,7 +46,8 @@ ready to take over the security of the network. This number can be as low as 50 
 to 100.
 
 The launch process is expected to be similar to that of the Kusama network. Kusama transitioned to
-PoS when there were 50 validators ready, but in a matter of months scaled up the validator count to 350. Polkadot's validator count is expected to scale up in a similar fashion.
+PoS when there were 50 validators ready, but in a matter of months scaled up the validator count
+to 350. Polkadot's validator count is expected to scale up in a similar fashion.
 
 ## Validators
 
