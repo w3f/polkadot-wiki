@@ -90,8 +90,8 @@ DOTs 必须在 Polkadot 网络上进行交易。 测试网的 DOTs 除了可以�
 
 The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.w3f.tech/#/room/#westend_faucet:matrix.org).
 
-你也可以通过 [成为验证人](maintain-validator) 来获取 DOTs。
+You can also make your own WNDs (testnet DOTs) by [becoming a validator](maintain-validator).
 
 ## Kusama 代币
 
-Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the [Treasury](learn-treasury).
+Unlike testnet DOTs (WND), Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the [Treasury](learn-treasury).
