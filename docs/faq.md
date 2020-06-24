@@ -11,7 +11,7 @@ please feel free to ask on the Polkadot Watercooler
 [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email
 [support](support@polkadot.network)._
 
-## Polkadot Launch
+## Polkadot Launch 
 
 ### What is the launch process of Polkadot?
 
