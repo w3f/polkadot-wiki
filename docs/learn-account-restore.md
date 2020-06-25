@@ -5,10 +5,10 @@ sidebar_label: Backing up and Restoring Accounts
 description: Step-by-step guides on backing up and restoring a Polkadot account.
 ---
 
-In the case that your Polkadot account needs to backed up and later restored, there are simple ways to take care of
-this in Polkadot.js Browser Plugin, Polkadot.js, and Parity Signer. Note that in order to recover an
-account, it is necessary that an account is created according to the instructions
-[here](learn-account-generation).
+In the case that your Polkadot account needs to backed up and later restored, there are simple ways
+to take care of this in Polkadot.js Browser Plugin, Polkadot.js, and Parity Signer. Note that in
+order to recover an account, it is necessary that an account is created according to the
+instructions [here](learn-account-generation).
 
 ## Polkadot.js Browser Plugin
 
@@ -27,8 +27,8 @@ your account. This part is _very important_.
 
 Now, onto restoring the account. In Polkadot.js browser plugin, let's click on the + button at the
 top. This will open up a tab with many choices listed, select "Restore account from backup JSON
-file". This will then prompt you for the `.json` file which was download earlier and the password for
-that account.
+file". This will then prompt you for the `.json` file which was download earlier and the password
+for that account.
 
 ![restore-account-plugin](assets/accounts/polkadot.js_restore_account.png)
 
@@ -39,32 +39,33 @@ main page of the plugin. There listed will be your restored account!
 
 If you're using the main Polkadot.js UI, restoring an account will feel similar to restoring an
 account on Polkadot.js browser plugin. The first step is to head over to the chosen account and
-click on the three dots beside it. This will open up a tab with lots of options. For backing up the account we'll restore later, press on "Create a backup file for this account".
+click on the three dots beside it. This will open up a tab with lots of options. For backing up the
+account we'll restore later, press on "Create a backup file for this account".
 
 ![click-account-restore-polkadot](assets/accounts/polkadot_click_restore.png)
 
 From there, a pop up screen will appear, prompting for the password of that account. By entering
-your password and clicking on "Download", your browser will download the `.json` file associated with
-the Polkadot account. This `.json` file holds all relevant data about the account to be used in
+your password and clicking on "Download", your browser will download the `.json` file associated
+with the Polkadot account. This `.json` file holds all relevant data about the account to be used in
 account restoration.
 
 ![enter-account-password-polkadot](assets/accounts/polkadot_enter_password.png)
 
 Now that's completed, it's time to restore the account. On the Polkadot accounts page, click on the
-"Restore JSON" button, which will let you upload your `.json` file that you downloaded and enter your
-password for that account.
+"Restore JSON" button, which will let you upload your `.json` file that you downloaded and enter
+your password for that account.
 
 ![restore-account-polkadot](assets/accounts/polkadot_restore_account.png)
 
-Once you've pressed the "Restore" button, you should see a green notification letting you know
-that your account has been restored. That's it!
+Once you've pressed the "Restore" button, you should see a green notification letting you know that
+your account has been restored. That's it!
 
 ![restore-complete-polkadot](assets/accounts/polkadot_restore_complete.png)
 
 ## Parity Signer
 
-To back up an account we'll restore below in Parity Signer, open the app and click on the user profile icon in the top
-right hand corner.
+To back up an account we'll restore below in Parity Signer, open the app and click on the user
+profile icon in the top right hand corner.
 
 ![click-profile-parity](assets/accounts/parity_select_profile.jpeg)
 
@@ -89,8 +90,8 @@ Note that you can change the name and password if desired.
 
 ![restoring-account-parity](assets/accounts/parity_restoring_account.jpg)
 
-Once you hit save, click on "Create and backup account", which will download a `.json` file
-that contains all the relevant data for that account. At this point, we have successfully saved the
+Once you hit save, click on "Create and backup account", which will download a `.json` file that
+contains all the relevant data for that account. At this point, we have successfully saved the
 Parity Signer account onto Polkadot js and downloaded the account data, now we have restored the
 account.
 
