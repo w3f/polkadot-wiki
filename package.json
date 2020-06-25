@@ -10,7 +10,7 @@
     "polkadot:inject": "node scripts/inject.js --rootDir website/build/polkadot-wiki",
     "polkadot:publish-gh-pages": "PUBLISHING=true; cd website; docusaurus-publish",
     "mirror": "node scripts/mirror.js",
-    "copy:translations": "cp website/translated_docs kusama-guide -r",
+    "copy:translations": "cp -R website/translated_docs kusama-guide ",
     "publish-gh-pages": "cd website; docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
