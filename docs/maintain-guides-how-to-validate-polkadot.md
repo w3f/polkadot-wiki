@@ -37,9 +37,9 @@ experience.
 ### How many DOTs do I need?
 
 You can have a rough estimate on that by using the methods listed
-[here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are
-elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a
-minimum stake behind your validator. This stake can come from yourself or from
+[here](learn-faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
+Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set,
+you need a minimum stake behind your validator. This stake can come from yourself or from
 [nominators](maintain-nominator). This means that as a minimum, you will need enough DOT to set up
 Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for
 transaction fees. The rest can come from nominators.

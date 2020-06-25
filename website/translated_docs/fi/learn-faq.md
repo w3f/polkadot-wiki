@@ -1,5 +1,5 @@
 ---
-id: faq
+id: learn-faq
 title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
