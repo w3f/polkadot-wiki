@@ -101,9 +101,9 @@ Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。有关如何在
 
 具有较高抵押支持量的验证人池将比不那么受欢迎的验证人池受到更大的惩罚，因此我们鼓励提名人将其提名转移给较不受欢迎的验证人，以减少可能的损失。
 
-[定义](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html)了以下过错级别:
+The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for slash amounts please see the equations in the section below):
 
-- Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only [_chilling_](#chilling).
+- Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch](glossary#epoch). No slashing, only [_chilling_](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake and chills.
 - Level 4: misconduct that poses a serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator and chills.
@@ -112,7 +112,7 @@ Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。有关如何在
 
 ### Unresponsiveness
 
-在每个 session ，验证人会发送 "I'm Online" 信息表示他们在线。如果验证人在那个 epoch 没有出块并且没有发送 heartbeat ，这样会视为 unresponsive。根据累积过错以及有多少验证人也处于 unresponsive 或离线状态，惩罚(Slashing) 即会发生。
+For every session, validators will send an "I'm Online" heartbeat to indicate they are online. If a validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as unresponsive. Depending on the repeated offences and how many other validators were unresponsive or offline during the epoch, slashing may occur.
 
 下面是计算公式:
 
