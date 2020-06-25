@@ -5,7 +5,7 @@ sidebar_label: Restoring Accounts
 description: Step-by-step guides on restoring a Polkadot account.
 ---
 
-In the case that your Polkadot account needs to be restored, there are simple ways to take care of
+In the case that your Polkadot account needs to backed up and later restored, there are simple ways to take care of
 this in Polkadot.js Browser Plugin, Polkadot.js, and Parity Signer. Note that in order to recover an
 account, it is necessary that an account is made according to the instructions
 [here](learn-account-generation).
