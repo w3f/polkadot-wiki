@@ -4,28 +4,24 @@ const isBuilding = process.env.BUILDING;
 const isPub = process.env.PUBLISHING;
 
 const siteConfig = {
-  title: 'Polkadot Wiki', // Title for your website.
-  tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
-  // url: 'https://wiki.polkadot.network', // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : "/",
-  projectName: 'polkadot-wiki',
-  organizationName: 'w3f',
-  cname: 'wiki.polkadot.network',
+  title: 'Kusama Guide', // Title for your website.
+  tagline: 'One-stop-shop for Kusama information.',
+  url: isPub ? "https://lsaether.github.io/" : "", // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/test/" : "/"),
+  projectName: isPub ? "test" : "",
+  organizationName: 'lsaether',
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'build-index', label: 'Build' },
-    { doc: 'learn-introduction', label: 'Learn' },
-    { doc: 'maintain-index', label: 'Maintain '},
-    { href: 'https://wiki.polkadot.network/docs/en/kusama-index', label: 'Kusama' },
+    { doc: 'kusama-index', label: 'Kusama' },
     { search: true },
     { languages: true }
   ],
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  headerIcon: './img/kusama-brand-assets/Kusama_Canary_white.png',
+  footerIcon: './img/kusama-brand-assets/Kusama_Canary_white.png',
+  favicon: './img/kusama-brand-assets/Kusama_Canary_white.png',
 
   /* Colors for website */
   colors: {
@@ -62,22 +58,22 @@ const siteConfig = {
     'https://buttons.github.io/buttons.js',
     'https://wiki.polkadot.network/js/load.js',
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js',
-    '/js/custom.js',
-    '/js/klaro-config.js',
-    '/js/klaro.js'
+    './js/custom.js',
+    './js/klaro-config.js',
+    './js/klaro.js'
   ],
 
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
     'https://fonts.googleapis.com/css?family=Muli&display=swap',
-    '/css/klaro.css'
+    './css/klaro.css'
   ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   
   // No .html extensions for paths.
-  cleanUrl: !isBuilding,
+  cleanUrl: false,
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
