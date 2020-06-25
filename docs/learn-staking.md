@@ -188,9 +188,10 @@ ones, so we encourage nominators to shift their nominations to less popular vali
 possible losses.
 
 The following levels of offence are
-[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html):
+[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for slash
+amounts please see the equations in the section below):
 
-- Level 1: isolated unresponsiveness, i.e. going offline for a long time. No slashing, only
+- Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch][]. No slashing, only
   [_chilling_](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the
   stake and chills.
@@ -204,10 +205,10 @@ Let's look at these offences in a bit more detail.
 
 ### Unresponsiveness
 
-For every session, validators will send an "I'm Online" message to indicate they are online. If a
+For every session, validators will send an "I'm Online" heartbeat to indicate they are online. If a
 validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
 unresponsive. Depending on the repeated offences and how many other validators were unresponsive or
-offline, slashing will occur.
+offline during the epoch, slashing may occur.
 
 Here is the formula for calculation:
 
@@ -387,3 +388,5 @@ around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
 - [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
+
+[epoch]: glossary#epoch
