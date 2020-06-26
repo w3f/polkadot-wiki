@@ -102,6 +102,14 @@ server {
 
 Restart nginx after setting this up: `sudo service nginx restart`.
 
+## Importing the Certificate
+
+If you used the self-signed certificate approach, modern browsers will not let you connect to this websocket endpoint without that certificate being imported - they will emit an `NET:ERR_CERT_AUTHORITY_INVALID` message.
+
+![ERR_CERT_AUTHORITY_INVALID](/img/wss/wss04.png)
+
+Every websocket connection bootstraps itself with `https` first, so to allow the certificate, visit the IP of your machine in the browser prefixed with `https`, like so: `https://MY_IP`. This should produce a "Not private" warning which you can skip by going to "Advanced" and the clicking on "Proceed to Site". You have now whitelisted this IP and its self-signed certificate for connecting.
+
 ## Connecting to the node
 
 Open [PolkadotJS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`!
