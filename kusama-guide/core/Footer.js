@@ -36,39 +36,32 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <a
-              href="https://stackoverflow.com/questions/tagged/polkadot"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Stack Overflow
-            </a>
-            <p>
+            <p className="homepage-font">
               Kusama is an experimental <br/>community research and<br/> development network.
             </p>
-            <a href="https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org">
-              Polkadot Watercooler (Riot Chat)
+            <a 
+              href="https://guide.kusama.network/docs/en/kusama-index"
+              target="_blank"
+              className="homepage-font"
+            >
+              Docs
+            </a>
+            <a 
+              href="https://kusama.network/" 
+              target="_blank"
+              className="homepage-font"
+            >
+              Kusama Network
             </a>
             <a
-              href="https://twitter.com/polkadotnetwork"
+              href="https://twitter.com/kusamanetwork"
               target="_blank"
               rel="noreferrer noopener"
+              className="homepage-font"
             >
               Twitter
             </a>
           </div>
-          {/* <a href="https://github.com/paritytech/polkadot">GitHub</a> */}
-          <a
-            className="github-button"
-            href={this.props.config.repoUrl}
-            data-icon="octicon-star"
-            data-count-href="/paritytech/polkadot/stargazers"
-            data-show-count="true"
-            data-count-aria-label="# stargazers on GitHub"
-            aria-label="Star this project on GitHub"
-          >
-            Star
-          </a>
           {this.props.config.twitterUsername && (
             <div className="social">
               <a
@@ -82,11 +75,11 @@ class Footer extends React.Component {
         </section>
 
         <section className="row">
-          <div className="copyright">{this.props.config.copyright}</div>
-          <a className="item" href="https://polkadot.network/privacy/">
+          <div className="copyright homepage-font">{this.props.config.copyright}</div>
+          <a className="item homepage-font" href="https://polkadot.network/privacy/">
             Privacy Policy
           </a>
-          <a className="item" href="#" id="cookie-settings">
+          <a className="item homepage-font" href="#" id="cookie-settings">
             Cookie Settings
           </a>
           <script
