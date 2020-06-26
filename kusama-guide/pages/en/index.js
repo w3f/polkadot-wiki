@@ -7,7 +7,7 @@ const Index = () => {
       <script
         dangerouslySetInnerHTML={{
             __html: `
-          window.location.href = 'docs/en/kusama-index/';
+          window.location.href = 'docs/en/kusama-index';
         `,
         }}
       />

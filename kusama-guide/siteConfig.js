@@ -6,10 +6,11 @@ const isPub = process.env.PUBLISHING;
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
   tagline: 'One-stop-shop for Kusama information.',
-  url: isPub ? "https://w3f.github.io/" : "", // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/kusama-guide-hosting/" : "/"),
+  url: isPub ? "https://guide.kusama.network" : "", // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : "/",
   projectName: isPub ? "kusama-guide-hosting" : "",
   organizationName: 'w3f',
+  cname: "guide.kusama.network",
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
@@ -73,7 +74,7 @@ const siteConfig = {
   onPageNav: 'separate',
   
   // No .html extensions for paths.
-  cleanUrl: false,
+  cleanUrl: !isBuilding,
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.

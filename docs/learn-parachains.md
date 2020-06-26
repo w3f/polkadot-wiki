@@ -129,6 +129,33 @@ article. Additionally, some parachain slots will be set aside to run
 [parathreads](learn-parathreads) - parathreads that bid on a per-block basis to be included in the
 Relay Chain.
 
+### What happens to parachains when the number of validators drops below a certain threshold?
+
+The minimal safe ratio of validator per parachain is 5:1. With a sufficiently large set of
+validators, the randomness of their distribution along with
+[availability and validity](learn-availability) will make sure security is on-par. However, should
+there be a big outage of a popular cloud provider or another network connectivity catastrophe, it is
+reasonable to expect that the number of validators per chain will drop.
+
+Depending on how many validators went offline, the outcome differs.
+
+If a few validators went offline, the parachains whose validator groups will be too small to
+validate a block will skip those blocks. Their block production speed will slow down to any
+increment of 6 seconds, until the situation is resolved and the optimal number of validators is in
+that parachain's validator group again.
+
+If anywhere from 30% to 50% of the validators go offline, availability will suffer because we need
+two thirds of the validator set to back the parachain candidates. In other words, all parachains
+will stop until the situation is resolved. Finality will also stop, but low-value transactions on
+the relay chain should be safe enough to execute, despite common forks. Once the required number of
+validators is in the validator set again, parachains will resume block production.
+
+Given that collators are full nodes of the relay chain and the parachain they are running, they will
+be able to recognize a disruption as soon as it occurs and should stop producing block candidates.
+Likewise, it should be easy for them to recongize when it's safe to restart block production -
+perhaps based on finality delay, validator set size, or some other factor that is yet to be decided
+within [Cumulus](https://github.com/paritytech/cumulus).
+
 ### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
