@@ -54,4 +54,4 @@ Polkadot 有中继链作为系统的主链。 平行链(parachain) 构造并向�
 - [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
 - [Links](learn-relevant-links) - Comprehensive list of external links.
 - [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
-- [FAQ](learn-faq) - Answers to some of the frequently asked questions about Polkadot.
+- [FAQ](faq) - Answers to some of the frequently asked questions about Polkadot.
