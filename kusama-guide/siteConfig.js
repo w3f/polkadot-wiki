@@ -3,6 +3,8 @@ const { baseUrlPattern } = require('../scripts/utils');
 const isBuilding = process.env.BUILDING;
 const isPub = process.env.PUBLISHING;
 
+console.log('PUBLISHING?', isPub);
+
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
   tagline: 'One-stop-shop for Kusama information.',

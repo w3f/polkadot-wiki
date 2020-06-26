@@ -88,5 +88,5 @@ workflows:
               only: master
       - deploy-kusama:
           filters:
-            tags:
+            branches:
               only: master
