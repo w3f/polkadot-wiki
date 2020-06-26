@@ -86,3 +86,7 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy-kusama:
+          filters:
+            tags:
+              only: /.*/
