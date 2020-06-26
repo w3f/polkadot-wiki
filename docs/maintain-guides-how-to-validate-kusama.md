@@ -29,7 +29,7 @@ Riot. The team and other validators are there to help answer questions and provi
 ### How Many KSM Do I Need?
 
 You can have a rough estimate on that by using the methods listed
-[here](learn-faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators).
+[here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators).
 Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set,
 you need a minimum stake behind your validator. This stake can come from yourself or from
 [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up
