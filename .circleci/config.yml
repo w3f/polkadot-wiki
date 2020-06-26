@@ -89,4 +89,4 @@ workflows:
       - deploy-kusama:
           filters:
             branches:
-              only: kusama-deployment-fix
+              only: master
