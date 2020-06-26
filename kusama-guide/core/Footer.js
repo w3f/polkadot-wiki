@@ -43,6 +43,9 @@ class Footer extends React.Component {
             >
               Stack Overflow
             </a>
+            <p>
+              Kusama is an experimental <br/>community research and<br/> development network.
+            </p>
             <a href="https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org">
               Polkadot Watercooler (Riot Chat)
             </a>

@@ -6,14 +6,14 @@ const isPub = process.env.PUBLISHING;
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
   tagline: 'One-stop-shop for Kusama information.',
-  url: isPub ? "https://w3f.github.io/" : "", // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/kusama-guide-hosting/" : "/"),
-  projectName: isPub ? "kusama-guide-hosting" : "",
-  organizationName: 'w3f',
+  url: isPub ? "https://lsaether.github.io/" : "", // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/test/" : "/"),
+  projectName: isPub ? "test" : "",
+  organizationName: 'lsaether',
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'kusama-index', label: 'Kusama' },
+    { doc: 'kusama-index', label: 'Docs' },
     { search: true },
     { languages: true }
   ],
