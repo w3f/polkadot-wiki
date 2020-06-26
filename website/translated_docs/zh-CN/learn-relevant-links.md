@@ -39,6 +39,8 @@ sidebar_label: 链接
 - [为 Polkadot 的Substrate 发布做准备](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815)-如何在发布之前开始准备 Polkadot 的概述。
 - [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post that recaps information regarding Substrate and Polkadot.
 - [在Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Gavin Wood 视频上提供 Substrate 的路线图摘要和 MelonportM-1 会议在 Polkadot 上的更新。
+- [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8)
+- [How admin functions in Substrate chains work](https://www.youtube.com/watch?v=InekMjJpVdo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=13)
 
 ### 治理
 

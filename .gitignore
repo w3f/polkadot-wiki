@@ -67,3 +67,4 @@ build
 build-script*
 **/mirror*.md
 .DS_Store
+kusama-guide/translated-docs/

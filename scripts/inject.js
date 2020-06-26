@@ -14,9 +14,16 @@ const argv = yargs
         description: 'Dry run - check values before replacing',
         type: 'boolean',
     })
+    .option("rootDir", {
+        alias: "r",
+        description: "root directory to find files",
+        type: "string",
+    })
     .help()
     .alias('help', 'h')
     .argv;
+
+if (!argv.rootDir) { throw new Error("Must pass a --rootDir option."); }
 
 const node = (argv.node || 'wss://kusama-rpc.polkadot.io/');
 console.log("Connecting to node " + node);
@@ -65,7 +72,7 @@ let v = setInterval(function () {
         // Init template options for replace-in-file
         const options = {
             files: [
-                'build/polkadot-wiki/docs/*/*/index.html'
+                `${argv.rootDir}/docs/*/*/index.html`
             ],
             from: Object.keys(filledDict).map(el => {return new RegExp(el, 'ig')}),
             to: Object.values(filledDict)

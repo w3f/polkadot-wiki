@@ -6,7 +6,7 @@ sidebar_label: Polkadot 组件
 
 Polkadot 的架构可以分为两个不同的部分：Polkadot _runtime_和 Polkadot _主机_。 Polkadot runtime 是链的核心状态转变逻辑，可以在一段时间内升级而不需要硬分叉。 相比 Polkadot 的主机是执行 runtime 的环境并且保持稳定和在 Polkadot 的生命周期内保持静态状态。
 
-Polkadot 主机与 Polkadot runtime 进行交互是受限制，并且有明确规定的方式。出于这个原因，实现团队可以建立备选的的 Polkadot 主机程序用 Polkadot runtime 视为一个黑箱。 欲了解更多主机与 runtime 之间互动的详细信息，请参阅 [规格](https://github.com/w3f/polkadot-spec/blob/master/runtime-environment-spec/polkadot_re_spec.pdf)。
+The Polkadot host interacts with the Polkadot runtime in limited, and well-specified ways. For this reason, implementation teams can build an alternative implementation of the Polkadot host while treating the Polkadot runtime as a black box. For more details of the interactions between the host and the runtime, please see the [specification](https://github.com/w3f/polkadot-spec/).
 
 ## Polkadot 主机组件
 
