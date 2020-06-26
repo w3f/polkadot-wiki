@@ -4,6 +4,8 @@ const isBuilding = process.env.BUILDING;
 const isPub = process.env.PUBLISHING;
 
 console.log('PUBLISHING?', isPub);
+console.log("IS PR?", process.env.CI_PULL_REQUEST, process.env.CIRCLE_PULL_REQUEST);
+console.log('DEBUG Project name', process.env.PROJECT_NAME);
 
 const siteConfig = {
   title: 'Kusama Guide', // Title for your website.
