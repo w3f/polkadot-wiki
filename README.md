@@ -14,6 +14,19 @@ pull requests with these corrections. Larger contributions may start as issues t
 the subject with the maintainers. It is generally preferable to create a pull request over an issue
 to propose a change to the wiki content.
 
+### Running Locally
+
+Both the Polkadot Wiki and the Kusama Guide are built from the source files in this repository.
+After cloning the source locally, you can start the websites with each of these respective commands
+(ensure you run `yarn` at the root of the repository first to install dependencies):
+
+```zsh
+# For the Polkadot Wiki:
+$ yarn polkadot:start
+# For the Kusama Guide:
+$ yarn kusama:start
+```
+
 ### Style Guide
 
 Use the style guide from the
@@ -25,13 +38,14 @@ Use [Prettier](https://prettier.io/) to format markdown pages. To run Prettier o
 run:
 
 ```bash
-npx prettier --write ./docs/
+$ npx prettier --write ./docs/
 ```
 
 ### Automated Deployments
 
 The wiki is automatically deployed to GitHub Pages via the CircleCI job on each new commit to the
-master branch.
+master branch. The Kusama guide is also deployed to GitHub Pages (via a separate repository). Both
+websites are also uploaded to IPFS via GitHub actions.
 
 ### Dynamic Value Inserts
 
@@ -39,31 +53,33 @@ This documentation sometimes makes references to on-chain values that may change
 example, it might reference the current number of validators. A custom script exists to populate
 these values post-build. To avoid conflicts in source files, the replacement is done on **built**
 files, not the MD files. The value placeholders are defined in
-[website/inject-dict.json](website/inject-dict.json). The placeholders should be included in text
+[scripts/inject-dict.json](scripts/inject-dict.json). The placeholders should be included in text
 surrounded by double curly braces, like so: `{{ num_validators }}`.
 
 To use the replace script:
 
 ```bash
-cd website
-node inject.js
+# For Polkadot Wiki
+$ yarn polkadot:inject
+# For Kusama Guide
+$ yarn kusama:inject
 ```
 
-This will read the dictionary and do the replacements.
+This will read the dictionary and do the replacements for the respective website.
 
 It is recommended to use the dry run option when adding new values and templates in, to make sure
 they resolve to values first and don't throw query errors. To use dry run (no replace, just output
 of templates and their resolved potential replacements), use the `--dry` or `-d` flag:
 
 ```bash
-node inject.js --dry
+$ yarn polkadot:inject --dry
 ```
 
 The script defaults to the websocket URL `wss://kusama-rpc.polkadot.io/`. To change to another URL
 or to connect to a local node, use the `--node/-n` flag:
 
 ```bash
-node inject.js -n ws:localhost:9944
+$ yarn polkadot:inject -n ws://localhost:9944
 ```
 
 > Note: make sure you're running an archive node if you're querying into the past!
@@ -71,7 +87,7 @@ node inject.js -n ws:localhost:9944
 See other available options by using the `help` command.
 
 ```bash
-node inject.js help
+$ yarn polkadot:inject help
 ```
 
 ### Mirror pages
@@ -80,14 +96,18 @@ A limitation of Docusaurus is that pages can only be included in one sidebar at 
 Thus, our Kusama section will either hijack some content it shares with the rest of the wiki, or
 lack that content.
 
-To solve this, the repo mirrors some pages and includes them in additional sidebars. The `website`
+To solve this, the repo mirrors some pages and includes them in additional sidebars. The `scripts`
 folder contains a `mirror.js` script that creates a copy of the pages to duplicate across sidebars.
 The new pages are prefixed with `mirror`, and first need to be declared in `mirror.js` and added to
 the relevant sidebar section. To run the script:
 
 ```bash
-node mirror.js
+$ yarn mirror
 ```
+
+> Note: This command runs automatically when using `polkadot:start` or `kusama:start` development
+> scripts, so you don't need to worry about running it manually if you start the development site
+> with one of these commands.
 
 ## Internationalization
 
