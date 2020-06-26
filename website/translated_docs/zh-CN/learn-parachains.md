@@ -59,13 +59,25 @@ Polkadot 允许平行链以分散和安全的方式将他们的插槽募资。 �
 
 平行链插槽通过使用拍卖方式获取。请查看[平行链插槽](learn-auction)文章。如此，一些平行链插槽将会运行[平行线程](learn-parathreads) - 平行线程通过以竞标每个区块方式包括在中继链内。
 
-### 平行链开发套件 (PDKs)
+### What happens to parachains when the number of validators drops below a certain threshold?
 
-平行链开发套件是一组工具供开发者创造他们创造的他们的应用成为平行链，详细资料请看[这里](build-pdk)。
+The minimal safe ratio of validator per parachain is 5:1. With a sufficiently large set of validators, the randomness of their distribution along with [availability and validity](learn-availability) will make sure security is on-par. However, should there be a big outage of a popular cloud provider or another network connectivity catastrophe, it is reasonable to expect that the number of validators per chain will drop.
 
-### 部署平行链
+Depending on how many validators went offline, the outcome differs.
 
-请参阅有关[部署平行链](build-deploy-parachains)的开发者文章。
+If a few validators went offline, the parachains whose validator groups will be too small to validate a block will skip those blocks. Their block production speed will slow down to any increment of 6 seconds, until the situation is resolved and the optimal number of validators is in that parachain's validator group again.
+
+If anywhere from 30% to 50% of the validators go offline, availability will suffer because we need two thirds of the validator set to back the parachain candidates. In other words, all parachains will stop until the situation is resolved. Finality will also stop, but low-value transactions on the relay chain should be safe enough to execute, despite common forks. Once the required number of validators is in the validator set again, parachains will resume block production.
+
+Given that collators are full nodes of the relay chain and the parachain they are running, they will be able to recognize a disruption as soon as it occurs and should stop producing block candidates. Likewise, it should be easy for them to recongize when it's safe to restart block production - perhaps based on finality delay, validator set size, or some other factor that is yet to be decided within [Cumulus](https://github.com/paritytech/cumulus).
+
+### Parachain Development Kits (PDKs)
+
+Parachain Development Kits are a set of tools that enable developers to create their own applications as parachains. For more info see [here](build-pdk).
+
+### Deploying parachains
+
+Please see the builder's article on [deploying parachains](build-deploy-parachains).
 
 ## 资源
 
