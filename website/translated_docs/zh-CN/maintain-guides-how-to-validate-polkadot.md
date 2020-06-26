@@ -18,7 +18,7 @@ sidebar_label: 验证人指南
 
 ### 我需要多少 DOTs？
 
-您可以使用[此处](learn-faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)列出的方法对此进行粗略估算。 验证人是根据[ Phragmen 算法](learn-phragmen)选出的。 要被选入，您的验证人需要最少的抵押。抵押可以来自您自己，也可以来自[提名人](maintain-nominator)。 这意味着至少，您将需要足够的 DOT 来使用现有的存款设置 Stash 和 Controller [帐户](learn-keys)，外加一些额外的交易费。 其余的可以来自提名人。
+You can have a rough estimate on that by using the methods listed [here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough DOT to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
 **警告: ** 验证人抵押中的 DOTs 都有可能遭到大幅削减(惩罚)，这意味着不安全或设置不当可能会导致 KSM 被削减！ 如果您对运行验证人节点的能力不太确定，建议最好把您的 DOT 提名给你信任的验证人节点。
 
