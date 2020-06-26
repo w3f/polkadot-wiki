@@ -56,6 +56,19 @@ jobs:
             echo "machine github.com login w3fbot password $GITHUB_TOKEN" > ~/.netrc
             yarn && GIT_USER=w3fbot PUBLISHING=true yarn run publish-gh-pages
 
+  deploy-kusama:
+    docker:
+      - image: circleci/node:10.15.2
+    
+    steps:
+      - checkout
+      - run:
+          name: Deploying to GitHub Pages
+          command: |
+            git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
+            git config --global user.name "Polkadot Wiki CI"
+            echo "machine github.com login w3fbot password $GITHUB_TOKEN" > ~/.netrc
+            yarn && GIT_USER=w3fbot PUBLISHING=true yarn run kusama:publish-gh-pages
 
 workflows:
   version: 2
