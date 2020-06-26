@@ -112,7 +112,7 @@ a slight difference in the secondary blocks that are produced between the two ne
 attaches the VRF output to secondary blocks (and therefore every block contributes to the Era
 randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary
 blocks contribute to Era randomness). The Polkadot method should give stronger randomness as more
-inputs are collected during every Era.
+inputs are collected during every Era. Eventually, this change should make its way into Kusama too.
 
 ### GRANDPA: Finality gadget
 
