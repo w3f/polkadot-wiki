@@ -57,6 +57,7 @@ left column under the heading "Members."
 ![e](assets/council/member.png)
 
 Congratulations! Now you are able to participate on the council by making motions or vetoing
-proposals. It's a good idea to now [set an identity](https://guide.kusama.network/docs/en/mirror-learn-identity)
-so that others know who the account belongs to and join the public
+proposals. It's a good idea to now
+[set an identity](https://guide.kusama.network/docs/en/mirror-learn-identity) so that others know
+who the account belongs to and join the public
 [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).

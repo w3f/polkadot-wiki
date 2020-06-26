@@ -45,9 +45,9 @@ are _not_ account keys and therefore cannot transfer funds, an attacker could us
 slashable behavior.
 
 Session keys are generated inside the node via RPC call. See the
-[Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama#set-session-keys) for
-instructions on setting Session keys. These should be generated and kept within your client. When
-you generate new Session keys, you must submit an extrinsic (a Session certificate) from your
+[Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama#set-session-keys)
+for instructions on setting Session keys. These should be generated and kept within your client.
+When you generate new Session keys, you must submit an extrinsic (a Session certificate) from your
 Controller key telling the chain your new Session keys.
 
 > **NOTE:** Session keys can also be generated outside the client and inserted into the client's
