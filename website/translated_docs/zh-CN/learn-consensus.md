@@ -51,58 +51,62 @@ Polkadot 的验证人将会参与在每次的[抽奖](learn-randomness)去决定
 
 有关更多 BABE 的详细信息，请参见[正在研究的草案](http://research.web3.foundation/zh/latest/polkadot/BABE/Babe/)。
 
+#### Difference of BABE secondary blocks between Kusama and Polkadot
+
+Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is a slight difference in the secondary blocks that are produced between the two networks. Polkadot attaches the VRF output to secondary blocks (and therefore every block contributes to the Era randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary blocks contribute to Era randomness). The Polkadot method should give stronger randomness as more inputs are collected during every Era. Eventually, this change should make its way into Kusama too.
+
 ### GRANDPA: 最终决定性工具
 
-GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) 是在 Polkadot 中继链上实现的最终决定性工具。
+GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot Relay Chain.
 
-只要 2/3 的节点是诚实的，并且可以在异步设置中处理 1/5 的拜占庭节点，它就可以在部分同步的网络模型中工作。
+It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope with 1/5 Byzantine nodes in an asynchronous setting.
 
-一个显着的区别是 GRANDPA 在链上达成协议，而不是在区块上达成，从而加快了最终确定过程，即使长期的网络分区或其他网络故障之后。
+A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
 
-换句话说，一旦超过 2/3 的验证人证明包含某个区块的链，就立即最终确定该块内的所有区 块。
+In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block, all blocks leading up to that one are finalized at once.
 
-#### 协议
+#### Protocol
 
-有关协议的完整说明，请参阅论文<a href=“https://github.com/w3f/consensus/blob/master/pdf/grander.pdf”>中的标题3</a>。
+Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol.
 
-#### 实现
+#### Implementation
 
-[ Rust 实现](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs)是 Substrate Runtime 模块库的一部分。
+The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
 
-有关更多详细信息，请参阅 W3F 研究页面上的[ GRANDPA 研究页面](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html)。
+For even more detail, see the [GRANDPA research page](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html) on the W3F Research pages.
 
 ### 分叉选择
 
-将 BABE 和 GRANDPA 结合在一起，Polkadot 的分叉选择变得很明确。 BABE 必须建立在GRANDPA 最终确定的链上。当最终确定的区头后面有分叉时，BABE 通过在具有最主要的区块的链上创建来提供概率确定性。
+Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always build on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
 
 ![Best chain choice](assets/best_chain.png)
 
-在上图中黑色块已完成。一个是主要，二个是次要的区块。即使最上层的链是最新确定最长区块的链，但它不符合条件，因为在评估时它主要的基数少于下一个。
+In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks. Even though the topmost chain is the longest chain on the latest finalized block, it does not qualify because it has fewer primaries at the time of evaluation than the one below it.
 
 ## 共识比较
 
 ### 中本聪共识
 
-中本共识包括最长的链规则是使用工作证明作为其支持机制和领导人选举。
+Nakamoto consensus consists of the longest chain rule using proof of work as its sybil resistance mechanism and leader election.
 
-中本共识只给了我们概率的确定性。概率确定性意思是过去一个区块只与它拥有确认的数量或在上面构建的区块数一样安全。随着更多区块构建在工作证明链中的特定区块之上，因此在特定链后面花费了更多的计算工作。但是它不保证包含区块的链将始终保持商定的链，因为具有无限资源的参与者可能会构建一个竞争链，并花费足够的计算资源来创建一个不包含特定的区块。在这种情况下，比特币和其他工作证明链中采用的最长链规则将作为规范链移动到这个新链中。
+Nakamoto consensus only gives us probabilistic finality. Probabilistic finality states that a block in the past is only as safe as the number of confirmations it has, or the number of blocks that have been built on top of it. As more blocks are built on top of a specific block in a Proof of Work chain, more computational work has been expended behind this particular chain. However, it does not guarantee that the chain containing the block will always remain the agreed-upon chain, since an actor with unlimited resources could potentially build a competing chain and expend enough computational resources to create a chain that did not contain a specific block. In such a situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to this new chain as the canonical one.
 
 ### PBFT / Tendermint
 
-请参阅 Cosmos 比较文章中的[相关部分](learn-comparisons-cosmos#consensus)。
+Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cosmos comparison article.
 
 <!-- ### HoneyBadgerBFT -->
 
 ### Casper FFG
 
-GRANDPA 和 Casper FFG(确定性工具)之间的两个主要区别是：
+The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
 
 - 在GRANDPA中，不同的选民可以同时为不同高度的区块投票
 - GRANDPA 依靠最终的区块来影响底层区块生产机制的分叉选择规则
 
 ### Casper CBC
 
-_即将来临!_
+_Coming soon!_
 
 <!-- ### Avalanche -->
 

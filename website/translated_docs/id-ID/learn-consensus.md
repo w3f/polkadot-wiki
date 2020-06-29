@@ -51,6 +51,10 @@ When no validators have rolled low enough in the randomness lottery to qualify f
 
 For more details on BABE, please see the [working research draft](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html).
 
+#### Difference of BABE secondary blocks between Kusama and Polkadot
+
+Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is a slight difference in the secondary blocks that are produced between the two networks. Polkadot attaches the VRF output to secondary blocks (and therefore every block contributes to the Era randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary blocks contribute to Era randomness). The Polkadot method should give stronger randomness as more inputs are collected during every Era. Eventually, this change should make its way into Kusama too.
+
 ### GRANDPA: Gadget finalitas
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot Relay Chain.
@@ -61,11 +65,11 @@ A notable distinction is that GRANDPA reaches agreements on chains rather than b
 
 In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block, all blocks leading up to that one are finalized at once.
 
-#### Protokol
+#### Protocol
 
 Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol.
 
-#### Implementasi
+#### Implementation
 
 The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
 
@@ -75,7 +79,7 @@ For even more detail, see the [GRANDPA research page](https://research.web3.foun
 
 Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always build on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
 
-![Pilihan rantai terbaik](assets/best_chain.png)
+![Best chain choice](assets/best_chain.png)
 
 In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks. Even though the topmost chain is the longest chain on the latest finalized block, it does not qualify because it has fewer primaries at the time of evaluation than the one below it.
 
@@ -95,14 +99,14 @@ Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cos
 
 ### Casper FFG
 
-Dua perbedaan utama antara GRANDPA dan Casper FFG (Friendly Finality Gadget) adalah:
+The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
 
 - di GRANDPA, pemilih yang berbeda dapat memberikan suara secara bersamaan untuk blok di ketinggian yang berbeda
 - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block production mechanism
 
 ### Casper CBC
 
-_Segera akan hadir!_
+_Coming soon!_
 
 <!-- ### Avalanche -->
 

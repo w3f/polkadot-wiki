@@ -40,4 +40,4 @@ Si eres uno de los afortunados en ganar una elección del Consejo verás que tu 
 
 ![e](assets/council/member.png)
 
-¡Enhorabuena! Ahora puedes participar en el Consejo haciendo mociones o vetando propuestas. Es una buena idea ahora [establecer un nick](https://guide.kusama.network/en/latest/try/nicks/) para que otros sepan a quién pertenece la cuenta y se unan al público [canal de gobernanza de Kusama](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+Congratulations! Now you are able to participate on the council by making motions or vetoing proposals. It's a good idea to now join the public [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).

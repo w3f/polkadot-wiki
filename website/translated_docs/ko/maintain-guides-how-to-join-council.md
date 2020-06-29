@@ -40,4 +40,4 @@ If you are one of the lucky ones to win a council election you will see your acc
 
 ![e](assets/council/member.png)
 
-Congratulations! Now you are able to participate on the council by making motions or vetoing proposals. It's a good idea to now [set a nick](https://guide.kusama.network/en/latest/try/nicks/) so that others know who the account belongs to and join the public [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+Congratulations! Now you are able to participate on the council by making motions or vetoing proposals. It's a good idea to now join the public [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
