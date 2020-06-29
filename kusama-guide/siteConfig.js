@@ -6,10 +6,11 @@ const isPub = process.env.PUBLISHING;
 const siteConfig = {
   title: 'Guide', // Title for your website.
   tagline: 'One-stop-shop for Kusama information.',
-  url: isPub ? "https://lsaether.github.io/" : "", // Your website URL
-  baseUrl: isBuilding ? baseUrlPattern : (isPub ? "/test/" : "/"),
-  projectName: isPub ? "test" : "",
-  organizationName: 'lsaether',
+  url: isPub ? "https://guide.kusama.network" : "", // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : "/",
+  projectName: isPub ? "kusama-guide-hosting" : "",
+  organizationName: 'w3f',
+  cname: "guide.kusama.network",
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
