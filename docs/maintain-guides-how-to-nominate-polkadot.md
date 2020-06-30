@@ -22,6 +22,8 @@ being slashed if the validator gets slashed.
 
 # Setting up Stash and Controller keys
 
+> Until transfers are enabled, you may need to use the same account for stash and controller.
+
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
@@ -32,9 +34,6 @@ detailed on the [account generation][] page.
 # Using Polkadot UI
 
 ### Step 1: Bond your tokens
-
-> NOTE: Much of the information below will not be fully populated during Polkadot's
-> Proof-of-Authority phase since validator elections have not started yet.
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
