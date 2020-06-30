@@ -187,26 +187,27 @@ if the entities designated as the recipients come together in a new multi-sig un
 threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig
 deterministically can be done in TypeScript like so:
 
-```js
-rawAddress(addresses: string[], threshold: number) {
-    const addr = [...addresses]
-    addr.sort()
+```ts
+const rawAddress = (addresses: string[], threshold: number): U8Array => {
+    const addrs = [...addresses]
+    addrs.sort()
     const prefix = 'modlpy/utilisuba'
     const payload = new Uint8Array(prefix.length + 1 + 32 * addresses.length + 2)
     payload.set(Array.from(prefix).map(c => c.charCodeAt(0)), 0)
     payload[prefix.length] = addresses.length << 2;
-    addr.forEach((addr, idx) => {
+    addrs.forEach((addr, idx) => {
         const decoded = decodeAddress(addr);
         payload.set(decoded, prefix.length + 1 + idx * 32)
     })
     payload[prefix.length + 1 + 32 * addresses.length] = threshold
 
     return blake2AsU8a(payload)
-},
-address(addresses: string[], threshold: number, ss58prefix?: number) {
-    const hashed = this.rawAddress(addresses, threshold)
+};
+
+const address = (addresses: string[], threshold: number, ss58prefix?: number): string {
+    const hashed = rawAddress(addresses, threshold)
     return encodeAddress(hashed, ss58prefix)
-}
+};
 
 const multiSigAddress = address(addresses, 2);
 ```
@@ -214,3 +215,65 @@ const multiSigAddress = address(addresses, 2);
 The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the
 [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than
 generating them manually.
+
+### Making Transactions with a Multi-signature Account
+
+There are three types of actions you can take with a multi-sig account:
+
+- Executing a call.
+- Approving a call.
+- Cancelling a call.
+
+In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
+should be used. This function takes only the other signatories and the raw call as its arguments.
+
+However, in anything but the simple one approval case, you will likely need more than one of the
+signatories to approve the call before finally executing it. When you create a new call or approve a
+call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the
+multi-sig until the call is executed. The reason for this deposit is to place an economic cost on
+the storage space that the multi-sig call takes up on the chain and discourage users from creating
+dangling multi-sig operations that never get executed.
+
+The deposit is dependent on the `threshold` parameter and is calculated as follows:
+
+```
+Deposit = DepositBase + threshold * DepositFactor
+```
+
+Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
+
+Currently, the DepositBase is equal to `deposit(1, 88)` and the DepositFactor is equal to
+`deposit(0,32)`.
+
+The deposit function in JavaScript is defined below, cribbed from the
+[Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/constants.rs#L26).
+
+```js
+// Polkadot
+const DOLLARS = 10000000000; // planck
+const MILLICENTS = 100000; // planck
+
+// Kusama
+// const DOLLARS = 166666666666.67;
+// const MILLICENTS = 1666666.66;
+
+const deposit = (items, bytes) => {
+  return items * 20 * DOLLARS + bytes * 100 * MILLICENTS;
+};
+
+console.log("DepositBase", deposit(1, 88));
+console.log("DepositFactor", deposit(0, 32));
+```
+
+Thus the deposit values can be calculated as shown in the table below.
+
+|               | Polkadot     | Kusama          |
+| ------------- | ------------ | --------------- |
+| DepositBase   | 200880000000 | 3347999999941.4 |
+| DepositFactor | 320000000    | 5333333312      |
+
+So let's take for example a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob,
+and Charlie. Firs Alice will create the call on chain by calling `as_multi` with the raw call. When
+doing this Alice will have to deposit 0.20152 DOTs while she waits for either Bob or Charlie to also
+approve the call. When Bob come to approve the call and execute the transaction, he will not need to
+place the deposit and Alice will receive her deposit back.
