@@ -18,7 +18,7 @@ sidebar_label: 验证人指南
 
 ### 我需要多少 DOTs？
 
-您可以使用[此处](learn-faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)列出的方法对此进行粗略估算。 验证人是根据[ Phragmen 算法](learn-phragmen)选出的。 要被选入，您的验证人需要最少的抵押。抵押可以来自您自己，也可以来自[提名人](maintain-nominator)。 这意味着至少，您将需要足够的 DOT 来使用现有的存款设置 Stash 和 Controller [帐户](learn-keys)，外加一些额外的交易费。 其余的可以来自提名人。
+You can have a rough estimate on that by using the methods listed [here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough DOT to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
 **警告: ** 验证人抵押中的 DOTs 都有可能遭到大幅削减(惩罚)，这意味着不安全或设置不当可能会导致 KSM 被削减！ 如果您对运行验证人节点的能力不太确定，建议最好把您的 DOT 提名给你信任的验证人节点。
 
@@ -94,7 +94,7 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-通常您应该使用最新的** 0.8.x **标记。在撰写本文时，这是** 0.8.2 **，但是您应该查看 "git tag" 指令的输出（` git tag | grep  "$v\0\.8"`)，以查看所有潜在的0.8版本的列表。 您应将` v0.8.2 `替换为最新版本(即最高号码)。 您还可以在[release](https://github.com/paritytech/polkadot/releases)选项卡上找到最新的 Polkadot 版本。
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.8` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -102,7 +102,7 @@ sudo ntpq -p
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.8"
-git checkout v0.8.2
+git checkout v0.8.8
 ./scripts/init.sh
 cargo build --release
 ```

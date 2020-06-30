@@ -26,6 +26,7 @@ Validators secure the Relay Chain by staking DOTs, validating proofs from collat
 - [云服务器清单](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot 验证人休息室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 验证人聊天室。
 - [ 惩罚(Slashing)后果](https://wiki.polkadot.network/docs/en/learn-staking#slashing) -了解更多有关运行验证人节点惩罚(Slashing)的后果。
+- [Why You Should be A Validator on Polkadot and Kusama](https://www.youtube.com/watch?v=0EmP0s6JOW4&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=2)
 
 ## 安全 / 密钥管理
 

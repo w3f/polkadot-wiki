@@ -38,11 +38,11 @@ The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is h
 To minimize storage on chain, proposals don't contain contextual information. When a user submits a proposal, they will probably need to find an off-chain way to explain the proposal. Most discussion takes place on the following platforms:
 
 - Many community members participate in discussion in the [Kusama Riot](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat.
+- The [Polkassembly](https://kusama.polkassembly.io) discussion platform that allows users to log in with their KSM address and automatically reads proposals from the chain, turning them into discussion threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a vote.
 - The [Kusama forum](https://forum.kusama.network) and [Polkadot forum](https://forum.polkadot.network) can be used for proposal explanations on Kusama and Polkadot respectively.
-- The [KGP (Kusama Governance Proposals)](https://github.com/kusamanetwork/KGPs) repository is well suited for detailed issues about proposals on Kusama, with the added advantage of easy linkability across repositories and tagging team members.
 - [Commonwealth.im](https://commonwealth.im) is a community site that allows users to log in with their KSM address and automatically reads proposals from the chain, turning them into discussion threads.
 
-Spreading the word about the proposal's explanation is ultimately up to the proposer - the recommended way is using official Riot channels like the [Kusama Direction room](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) or the [Kusama Watercooler](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders). For Polkadot, you may want to frequent the [Polkadot Watercooler](https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org).
+Spreading the word about the proposal's explanation is ultimately up to the proposer - the recommended way is using official Riot channels like the [Kusama Direction room](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) or the [Kusama Watercooler](https://riot.w3f.tech/#/room/#kusamawatercooler:polkadot.builders). For Polkadot, you may want to frequent the [Polkadot Watercooler](https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org) and [Polkadot Direction room](https://riot.w3f.tech/#/room/#polkadot-direction:matrix.parity.io).
 
 ### Creating the Proposal
 

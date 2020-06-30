@@ -1,8 +1,13 @@
+const { baseUrlPattern } = require('../scripts/utils');
+
+const isBuilding = process.env.BUILDING;
+const isPub = process.env.PUBLISHING;
+
 const siteConfig = {
   title: 'Polkadot Wiki', // Title for your website.
   tagline: 'The hub for those interested in learning, building, or running a node on Polkadot.',
-  url: 'https://wiki.polkadot.network', // Your website URL
-  baseUrl: '/',
+  // url: 'https://wiki.polkadot.network', // Your website URL
+  baseUrl: isBuilding ? baseUrlPattern : "/",
   projectName: 'polkadot-wiki',
   organizationName: 'w3f',
   cname: 'wiki.polkadot.network',
@@ -72,7 +77,7 @@ const siteConfig = {
   onPageNav: 'separate',
   
   // No .html extensions for paths.
-  cleanUrl: true,
+  cleanUrl: !isBuilding,
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.

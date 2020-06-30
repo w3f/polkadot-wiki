@@ -65,6 +65,10 @@
         "title": "Transaction Construction and Signing",
         "sidebar_label": "Transaction Construction"
       },
+      "build-wallets": {
+        "title": "Polkadot Wallets",
+        "sidebar_label": "Polkadot Wallets"
+      },
       "claims": {
         "title": "Polkadot Claims",
         "sidebar_label": "Claims"
@@ -201,6 +205,10 @@
         "title": "Polkadot Implementations",
         "sidebar_label": "Polkadot Implementations"
       },
+      "learn-implementers-guide": {
+        "title": "Parachain Implementer's Guide",
+        "sidebar_label": "Parachain Implementer's Guide"
+      },
       "learn-introduction": {
         "title": "Polkadot",
         "sidebar_label": "Polkadot"
@@ -222,12 +230,16 @@
         "sidebar_label": "Parathreads"
       },
       "learn-phragmen": {
-        "title": "Sequential Phragmen Method",
-        "sidebar_label": "Sequential Phragmen Method"
+        "title": "Sequential Phragmén Method",
+        "sidebar_label": "Sequential Phragmén Method"
       },
       "learn-polkadot-host": {
         "title": "Polkadot Host (PH)",
         "sidebar_label": "Polkadot Host (PH)"
+      },
+      "learn-proxies": {
+        "title": "Proxy Accounts",
+        "sidebar_label": "Proxy Accounts"
       },
       "learn-randomness": {
         "title": "Randomness",
@@ -398,8 +410,8 @@
         "sidebar_label": "Validator Guide"
       },
       "news": {
-        "title": "News",
-        "sidebar_label": "News"
+        "title": "News Sources",
+        "sidebar_label": "News Sources"
       },
       "research": {
         "title": "Research Pages",

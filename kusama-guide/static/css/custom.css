@@ -1,0 +1,364 @@
+@font-face {
+  font-family: "SpaceMono-Regular";
+  src: url("../fonts/SpaceMono-Regular.eot");
+  src: url("../fonts/SpaceMono-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SpaceMono-Regular.woff") format("woff"),
+    url("../fonts/SpaceMono-Regular.ttf") format("truetype"),
+    url("../fonts/SpaceMono-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.homepage-font {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  .mainpage-column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+.myButton {
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+#back-to-top {
+  background: #e6007a;
+}
+
+.myButton:hover {
+  background: #e6007a;
+  cursor: pointer;
+}
+
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+  background-color: black;
+}
+
+.fixedHeaderContainer {
+  background: black;
+}
+
+.homeContainer {
+  background: white;
+  height: 50vh;
+}
+
+.projectTitle {
+  color: black;
+}
+
+.nav-footer {
+  background: black;
+}
+
+.nav-footer .row {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-footer .row .item {
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-footer p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-footer .row .item:hover {
+  color: #ffffff;
+}
+
+.mainpage-row {
+  width: 100%;
+  display: flex;
+  padding: 10%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.mainpage-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  text-align: center;
+  flex-flow: column;
+}
+
+.full-width {
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  font-family: "Muli", sans-serif !important;
+}
+
+/*!
+ * "Fork me on GitHub" CSS ribbon v0.2.3 | MIT License
+ * https://github.com/simonwhitaker/github-fork-ribbon-css
+*/
+.github-fork-ribbon {
+  width: 12.1em;
+  height: 12.1em;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 13px;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+.github-fork-ribbon.fixed {
+  position: fixed;
+}
+.github-fork-ribbon:active,
+.github-fork-ribbon:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.github-fork-ribbon:after,
+.github-fork-ribbon:before {
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+  top: 3.23em;
+  right: -3.23em;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.github-fork-ribbon:before {
+  content: "";
+  padding: 0.38em 0;
+  background-color: #e6007a;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 0.15))
+  );
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  -webkit-box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.15em 0.23em 0 rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+.github-fork-ribbon:after {
+  content: attr(data-ribbon);
+  color: #fff;
+  font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.54em;
+  text-decoration: none;
+  text-shadow: 0 -0.08em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0;
+  padding: 0.15em 0;
+  margin: 0.15em 0;
+  border-width: 0.08em 0;
+  border-style: dotted;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.github-fork-ribbon.left-bottom,
+.github-fork-ribbon.left-top {
+  right: auto;
+  left: 0;
+}
+.github-fork-ribbon.left-bottom,
+.github-fork-ribbon.right-bottom {
+  top: auto;
+  bottom: 0;
+}
+.github-fork-ribbon.left-bottom:after,
+.github-fork-ribbon.left-bottom:before,
+.github-fork-ribbon.left-top:after,
+.github-fork-ribbon.left-top:before {
+  right: auto;
+  left: -3.23em;
+}
+.github-fork-ribbon.left-bottom:after,
+.github-fork-ribbon.left-bottom:before,
+.github-fork-ribbon.right-bottom:after,
+.github-fork-ribbon.right-bottom:before {
+  top: auto;
+  bottom: 3.23em;
+}
+.github-fork-ribbon.left-top:after,
+.github-fork-ribbon.left-top:before,
+.github-fork-ribbon.right-bottom:after,
+.github-fork-ribbon.right-bottom:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*# sourceMappingURL=gh-fork-ribbon.min.css.map */
+
+.logo {
+  padding-bottom: 10px;
+}
+
+.kusamaHomeContainer {
+  background: black;
+}
+
+.kusama-full-width {
+  width: 100%;
+  text-align: center;
+  margin: 50px;
+}
+
+.kusama-full-width-main {
+  width: 60%;
+  text-align: center;
+  margin: 50px;
+  height: auto;
+}
+
+.mainpage-row-placeholder {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: black;
+  height: 100px;
+}
+
+.kusama-mainpage-row-learn {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: white;
+  background: black;
+}
+
+.kusama-mainpage-row {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: white;
+  background: black;
+  background-image: url("../img/kusama-pink-row.svg");
+  background-position: center;
+  background: cover;
+}
+
+.kusama-mainpage-cyber-row {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: white;
+  background: black;
+  background-image: url("../img/Kusama-white-stencil.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+}
+
+.kusama-mainpage-row-validator {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: black;
+}
+
+.kusama-mainpage-row-more {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: black;
+  color: white;
+  border-bottom: 10px solid #e6007a;
+}
+
+.kusama-mainpage-build-btn {
+  background: transparent;
+  border: 1px solid #e6007a;
+  color: #e6007a;
+  width: 100%;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0.75rem !important;
+  display: inline-block;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.kusama-mainpage-build-btn:hover {
+  color: #00ffe1;
+  border: 1px solid #00ffe1;
+}
+
+.kusama-mainpage-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  text-align: center;
+  flex-flow: column;
+}

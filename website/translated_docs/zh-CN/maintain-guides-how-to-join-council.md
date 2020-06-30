@@ -40,4 +40,4 @@ sidebar_label: 加入议会
 
 ![e](assets/council/member.png)
 
-恭喜您! 现在您已是議員之一，可以动议或否决議会上的提案。 現在您设置 [ set a nick 昵称 ](https://guide.kusama.network/en/latest/try/nicks/)會更好地让其他人知道那個帐户是誰，并且請加入[ Kusama 治理聊天頻道](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)。
+Congratulations! Now you are able to participate on the council by making motions or vetoing proposals. It's a good idea to now join the public [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).

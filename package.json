@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "start": "yarn polkadot:start",
+    "kusama:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
+    "kusama:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
+    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build",
+    "kusama:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
+    "polkadot:start": "yarn mirror; cd website; docusaurus-start",
+    "polkadot:build": "BUILDING=true; cd website; docusaurus-build; node ./postprocess",
+    "polkadot:inject": "node scripts/inject.js --rootDir website/build/polkadot-wiki",
+    "polkadot:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd website; docusaurus-publish",
+    "mirror": "node scripts/mirror.js",
+    "copy:translations": "cp -R website/translated_docs kusama-guide ",
+    "publish-gh-pages": "cd website; docusaurus-publish",
+    "write-translations": "docusaurus-write-translations",
+    "version": "docusaurus-version",
+    "rename-version": "docusaurus-rename-version",
+    "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
+    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
+  },
+  "devDependencies": {
+    "docusaurus": "^1.12.0"
+  },
+  "dependencies": {
+    "@polkadot/api": "^1.19.1",
+    "fs-extra": "^9.0.1",
+    "ipfs-http-client": "^44.3.0",
+    "katex": "^0.11.1",
+    "remarkable-katex": "^1.1.4",
+    "replace-in-file": "^6.1.0",
+    "yargs": "^15.3.1"
+  }
+}

@@ -65,6 +65,10 @@
         "title": "Transaction Construction and Signing",
         "sidebar_label": "Transaction Construction"
       },
+      "build-wallets": {
+        "title": "Polkadot Wallets",
+        "sidebar_label": "Polkadot Wallets"
+      },
       "claims": {
         "title": "Polkadot Claims",
         "sidebar_label": "Claims"
@@ -201,6 +205,10 @@
         "title": "폴카닷 구현체들",
         "sidebar_label": "폴카닷 구현체들"
       },
+      "learn-implementers-guide": {
+        "title": "Parachain Implementer's Guide",
+        "sidebar_label": "Parachain Implementer's Guide"
+      },
       "learn-introduction": {
         "title": "폴카닷",
         "sidebar_label": "폴카닷"
@@ -222,12 +230,16 @@
         "sidebar_label": "패러쓰레드 (parathreads)"
       },
       "learn-phragmen": {
-        "title": "순차적 프라그멘 방법",
-        "sidebar_label": "순차적 프라그멘 방법"
+        "title": "Sequential Phragmén Method",
+        "sidebar_label": "Sequential Phragmén Method"
       },
       "learn-polkadot-host": {
         "title": "Polkadot Host (PH)",
         "sidebar_label": "Polkadot Host (PH)"
+      },
+      "learn-proxies": {
+        "title": "Proxy Accounts",
+        "sidebar_label": "Proxy Accounts"
       },
       "learn-randomness": {
         "title": "무작위 선택",
@@ -398,8 +410,8 @@
         "sidebar_label": "Validator Guide"
       },
       "news": {
-        "title": "뉴스",
-        "sidebar_label": "뉴스"
+        "title": "News Sources",
+        "sidebar_label": "News Sources"
       },
       "research": {
         "title": "연구 자료들",

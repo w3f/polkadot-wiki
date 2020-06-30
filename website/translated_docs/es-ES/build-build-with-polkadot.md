@@ -1,10 +1,10 @@
 ---
 id: build-build-with-polkadot
-title: Polkadot Builders Starter's Guide
-sidebar_label: Polkadot Builders Starter's Guide
+title: Guía de inicio para desarrolladores de Polkadot
+sidebar_label: Guía de inicio para desarrolladores de Polkadot
 ---
 
-_This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
+_Este artículo es la versión actualizada de la publicación del blog: [Todo lo que necesitas saber para prepararse para Polkadot](https://medium. com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain). With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
@@ -77,7 +77,7 @@ In the future, there will be many different PDKs available in different programm
 
 Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for blockchain innovators that provides the necessary building blocks for constructing a chain. It includes a library of modular plug-ins from which you can compose your chain logic and allows you to write your own pallets to use or publish to the community.
 
-The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/knowledgebase/learn-substrate), an online resource built and maintained by Parity Technologies.
+The best way to get started with Substrate is to explore the [Substrate Knowledge Base](https://substrate.dev/docs/en/), an online resource built and maintained by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you have a solid understanding, you can challenge yourself by progressing through the Substratekitties workshop then advancing to the TCR Dappchain tutorial or one of the others.
 

@@ -8,7 +8,8 @@
       "news",
       "research",
       "grants",
-      "claims"
+      "claims",
+      "faq"
     ],
     "Build": [
       "build-index",
@@ -118,9 +119,10 @@
         "label": "Miscellaneous",
         "ids": [
           "learn-account-generation",
+          "learn-account-restore",
           "learn-roadmap",
           "learn-relevant-links",
-          "learn-faq"
+          "learn-implementers-guide"
         ]
       }
     ],

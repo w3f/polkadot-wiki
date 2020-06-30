@@ -43,6 +43,9 @@ parachain.
 DOTs can also serve ancillary functions by virtue of being a transferrable token. For example, DOTs
 stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
+> These concepts have been further explained in the
+> [Usage of DOTs and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
+
 ### DOTs for governance
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some
@@ -133,10 +136,10 @@ The current testnet is called [Westend](maintain-networks#westend-test-network) 
 its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom
 [#westend_faucet:matrix.org](https://riot.w3f.tech/#/room/#westend_faucet:matrix.org).
 
-You can also make your own DOTs by [becoming a validator](maintain-validator).
+You can also make your own WNDs (testnet DOTs) by [becoming a validator](maintain-validator).
 
 ## Kusama Tokens
 
-Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the
-[claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the
-[Treasury](learn-treasury).
+Unlike testnet DOTs (WND), Kusama tokens are not freely given away. Kusama tokens are available via
+the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through
+the [Treasury](learn-treasury).

@@ -106,6 +106,8 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 如果您已经在创世块之前提出了认领，您仍然需要使用您的 Polkadot 帐户签署同意声明。
 
+## Using Polkadot-JS Apps
+
 ### 您将需要什么
 
 - 您的 Polkadot 帐户已在 Polkadot-JS Apps UI 上解锁。
@@ -137,10 +139,76 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
+
+## Using Parity Signer
+
+### What you will need
+
+- Parity Signer
+- Your Polkadot account linked to Polkadot-JS Apps UI
+
+Before claiming, you should import your Polkadot address on Parity Signer to the PolkadotJS apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the PolkadotJS apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
+
+### Go to Polkadot-JS Apps
+
+Proceed to [polkadot-js Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
+
+### Make the Attestation
+
+![ps-claim-1](assets/new-claims/ps-claim-1.png)
+
+Click "Add via Qr" on the right side.
+
+![ps-claim-2](assets/new-claims/ps-claim-2.png)
+
+Open Parity Signer and choose "Polkadot" network.
+
+![ps-1](assets/new-claims/ps-01.jpg)
+
+Select the address that you have claimed DOTs to during pre-genesis.
+
+![ps-2](assets/new-claims/ps-02.jpg)
+
+![ps-3](assets/new-claims/ps-03.jpg)
+
+Your address will be displayed in QR code format. You can move the QR code to the camera so that the PolkadotJS Apps can decode it.
+
+![ps-claim-3](assets/new-claims/ps-claim-3.png)
+
+Once decoded successfully, input the name for your address and click "Create".
+
+![ps-claim-4](assets/new-claims/ps-claim-4.png)
+
+You will notice that the digit beside the "Claim Tokens" menu changed to 2. It means the number of addresses on the Accounts page that need to do attestations.
+
+Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
+
+Select the Polkadot account that you just have imported with a claim using the drop-down selection. If you don't see a notification or don't see the selector, please double check that the account has been loaded into Polkadot-JS and that it has already claimed during the pre-genesis period. As always, feel free to reach out for help in the [Claims Support]() channel.
+
+![ps-claim-5](assets/new-claims/ps-claim-5.png)
+
+Then click "Continue" and you will see a green box appear on the right.
+
+![ps-claim-6](assets/new-claims/ps-claim-6.png)
+
+Click on "I Agree" and then "Sign via Qr".
+
+![ps-claim-7](assets/new-claims/ps-claim-7.png)
+
+Now you need to sign the transaction using the Parity Signer with your Polkadot address.
+
+![ps-claim-8](assets/new-claims/ps-claim-8.png)
+
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the PolkadotJS Apps to continue.
+
+![ps-3r](assets/new-claims/ps-3r.jpg)
+
+When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
 
 [ MyCrypto ]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
+[account generation]: learn-account-generation
 [Claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

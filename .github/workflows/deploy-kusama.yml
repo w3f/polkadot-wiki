@@ -1,0 +1,25 @@
+name: Deploy Kusama
+
+# Triggered on commits to the main branch.
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        run: yarn; yarn kusama:build
+        env:
+          BUILDING: true
+
+      - name: Upload to IPFS
+        uses: aquiladev/ipfs-action@v0.1.2
+        with:
+          path: ./kusama-guide/build
+          timeout: 120000
+

@@ -36,6 +36,8 @@ DOTs 在 Polkadot 中有三个关键功能: (i)用于网络的治理; (ii)参与
 
 DOT 还可以作为辅助功能充当可转送代币。 例如将存储在财政库中的 DOT 发送给为 Polkadot 网络进行相关项目的团队。
 
+> These concepts have been further explained in the [Usage of DOTs and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
+
 ### DOTs 用于治理
 
 The first function of DOTs is to entitle holders to control of the governance of the platform. Some functions that are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
@@ -88,8 +90,8 @@ DOTs 必须在 Polkadot 网络上进行交易。 测试网的 DOTs 除了可以�
 
 The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.w3f.tech/#/room/#westend_faucet:matrix.org).
 
-你也可以通过 [成为验证人](maintain-validator) 来获取 DOTs。
+You can also make your own WNDs (testnet DOTs) by [becoming a validator](maintain-validator).
 
 ## Kusama 代币
 
-Unlike testnet DOTs, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the [Treasury](learn-treasury).
+Unlike testnet DOTs (WND), Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you have already purchased DOTs) or through the [Treasury](learn-treasury).

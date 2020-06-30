@@ -2,9 +2,6 @@
 id: maintain-guides-how-to-unbond
 title: Stop Being a Nominator
 sidebar_label: Stop Being a Nominator
-description:
-  The full process of how to stop being a nominator in order to unlock and withdraw your tokens for
-  sending or selling.
 ---
 
 The following describes how to stop nominating and retrieve your tokens. Please note that all

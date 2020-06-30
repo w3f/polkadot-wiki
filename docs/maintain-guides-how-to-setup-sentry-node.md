@@ -152,80 +152,161 @@ You can then use `ping` to verify the connectivity between the nodes.
 
 In case you want to update `wg0.conf`, run `wg-quick down wg0` to stop the interface first.
 
-### 5. Start your Sentry Node and Validator
+### 5. Configuring your Sentry Node and Validator
 
 After you have started the `wg0` interface on your public node and validator, do spend a little bit
 of time to take a look at the following description of those flags you are going to use.
 
-`--sentry` - This would be required for your public node to be an authority as an observer. That
-means it acts the same as a validator node but without holding keys / signing. And the difference
-between running a full node versus adding an extra `--sentry` flag is that a full node might not
-have all the data the validator needs to validate properly.
+`--sentry <VALIDATOR_MULTIADDR>` - This would be required for your public node to be an authority as
+an observer. That means it acts the same as a validator node but without holding keys or signing.
+The difference between running a full node versus adding an extra `--sentry` flag is that a full
+node might not have all the data the validator needs to validate properly, while a sentry node will
+prioritize consensus messages to the validator. `--sentry` implies `--reserved-nodes`.
+
+`--sentry-nodes <SENTRY_MULTIADDR>` - This is required for your validator node to specify the sentry
+nodes to connect to. This flag will ensure that the isolated validator node can only be reached
+through it's sentry nodes. `--sentry-nodes` also implies `--reserved-nodes`.
 
 `--reserved-nodes` - The node will try to connect to these nodes and always accept connections from
-them, but it will still connect and accept connections from other nodes as well.
+them, but it will still connect and accept connections from other nodes as well. This is useful if
+you want to have multiple validator nodes specify each other as peers.
 
-`--reserved-only` - Only allows the connection from reserved nodes you defined
+`--reserved-only` - Only allows the connection from reserved nodes you defined.
 
-You need to execute the following command to start your validator and then copy the node's identity
-first. Then stop it.
+#### P2P Networking
 
-`polkadot --validator`
+Nodes will use [libp2p](https://libp2p.io/) as the networking layer to establish peers and gossip
+messages. In order to specify nodes as peers, you must do so using a `multiaddress` (`multiaddr`),
+which includes a node's `Peer Identity` (`PeerId`). A validator node will need to specify the
+`multiaddr` of it's sentry node(s), and a sentry node will specify the `multiaddr` of it's validator
+node(s).
 
-```
-2020-04-16 19:40:52 ----------------------------
-2020-04-16 19:40:52 This chain is not in any way
-2020-04-16 19:40:52       endorsed by the
-2020-04-16 19:40:52      KUSAMA FOUNDATION
-2020-04-16 19:40:52 ----------------------------
-2020-04-16 19:40:52 Parity Polkadot
-2020-04-16 19:40:52 ✌️  version 0.7.29-13ec3023-x86_64-linux-gnu
-2020-04-16 19:40:52 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
-2020-04-16 19:40:52 📋 Chain specification: Kusama
-2020-04-16 19:40:52 🏷  Node name: 😍 Anson demo
-2020-04-16 19:40:52 👤 Role: AUTHORITY
-2020-04-16 19:40:52 ⛓  Native runtime: kusama-1057:2(parity-kusama-1)
-2020-04-16 19:40:53 📦 Highest known block at #1913153
-2020-04-16 19:40:53 🏷  Local node identity is: QmR4kE8mxKcPjtvEofN59B176tKxsKoNV5Ugbf86vmfJnY
-2020-04-16 19:40:53 👶 Starting BABE Authorship worker
-```
+##### Multiaddr
 
-Now start your sentry with `--sentry` flag.
+`multiaddr` - A `multiaddr` is a flexible encoding of multiple layers of protocols into a human
+readable addressing scheme. For example, `/ip4/127.0.0.1/udp/1234` is a valid `multiaddr` that
+specifies you want to reach the 127.0.0.1 IPv4 loopback address with UDP packets on port 1234.
+Addresses in Substrate based chains will often take the form:
 
 ```
+/ip4/<IP ADDRESS>/tcp/<P2P PORT>/p2p/<PEER IDENTITY>
+```
+
+- `IP_ADDRESS` - Unless the node is public, this will often be the ip address of the node within the
+  private network.
+
+- `P2P_PORT` - This is the port that nodes will send p2p messages over. By default, this will be
+  30333, but can be explicitly specified using the `--port <P2P_PORT>` cli flag.
+
+- `PEER IDENTITY` - The PeerId is a unique identifier for each peer.
+
+##### PeerId
+
+Each peer in the network will have a private (secret) key (not to be confused with account keys or
+session keys) that will be used for network messaging. The secret key will have a corresponding
+public key, as well as a public address (`PeerId`) derived from this private key. `PeerId`' is
+derived from the secret key that is stored in the following directory by default:
+
+```
+/home/$USER/.local/share/polkadot/chains/<CHAIN>/network/secret_ed25519
+```
+
+Where `<CHAIN>` will be either `polkadot` for Polkadot, `ksmcc3` for Kusama, or `westend2` for
+Westend.
+
+If the `secret_ed25519` file does not exist by the time the node is running (or is not otherwise
+specified), a new `secret_ed25519` will be created and used to derive a new `PeerId`.
+
+If you want to explicitly specify the secret key to use, you can do so with the
+`--node-key-file <KEY_FILE>` flag, where `KEY_FILE` is the path of a file containing an unencoded 32
+byte Ed25519 secret key, or the `--node-key <KEY>` flag, where `KEY` is a hex-encoded 32 byte secret
+key. If explicitly specifying a secret key, it is recommended to specify it as a file.
+
+> Note: It is useful to generate or back up the `secret_ed25519` files if you want to use static
+> addresses for sentry configurations. Otherwise you may have to dynamically find and set the
+> `PeerId`.
+
+You can use [subkey](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey) to
+generate a new `secret_ed25519` as follows:
+
+```bash
+> subkey generate-node-key </PATH/SECRET_ED25519_FILE>
+# Output
+12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD
+```
+
+Running this will return the corresponding `PeerId` for the `secret_ed25519`.
+
+> Note: You may see two different kinds of representations of `PeerId`s, one that looks like
+> `12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD`, and one that looks like
+> `QmdtiSGnqDoHrfVyxrRWuETyehMnmZJhxrnVBFyYtY7Trk`. These are two different representations of the
+> same `secret_ed25519` key and will both work, however `Qm...` is the legacy representation. It is
+> recommended to use the updated representation (`1D3KooW...`), otherwise warnings may be shown in
+> the logs.
+
+##### Retrieving `PeerId`'s
+
+There are a couple of way to find out the `PeerId`. of the validator and sentry nodes.
+
+You can use `subkey` to print out the corresponding `PeerId` using:
+
+```bash
+subkey inspect-node-key </PATH/SECRET_ED25519_FILE>
+# Output
+12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD
+```
+
+Another way is by starting the node to see the identity printed as follows:
+
+`./polkadot --validator`
+
+```
+2020-06-13 14:42:21 Parity Polkadot
+2020-06-13 14:42:21 ✌️  version 0.8.8-b2c9c149-x86_64-linux-gnu
+2020-06-13 14:42:21 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
+2020-06-13 14:42:21 📋 Chain specification: Polkadot CC1
+2020-06-13 14:42:21 🏷  Node name: validator-node
+2020-06-13 14:42:21 👤 Role: AUTHORITY
+2020-06-13 14:42:21 💾 Database: RocksDb at /home/$USER/.local/share/polkadot/chains/polkadot/db
+2020-06-13 14:42:21 ⛓  Native runtime: polkadot-8 (parity-polkadot-0.tx0.au0)
+2020-06-13 14:42:21 📦 Highest known block at #529
+2020-06-13 14:42:21 🏷  Local node identity is: 12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD (legacy representation: QmdtiSGnqDoHrfVyxrRWuETyehMnmZJhxrnVBFyYtY7Trk)
+2020-06-13 14:42:21 〽️ Prometheus server started at 127.0.0.1:9615
+2020-06-13 14:42:21 👶 Starting BABE Authorship worker
+```
+
+Here we can see our `PeerId` is `12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD`.
+
+Lastly, we can also find the `PeerId` by calling the following RPC call from the same host:
+
+```bash
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId", "params":[]}' http://localhost:9933
+# Output
+{"jsonrpc":"2.0","result":"12D3KooWSAhdYsqrJKed3r5HKTJzpEWFUXCFmn6wv85M2woLLJpD","id":1}
+```
+
+#### Setting Validator and Sentry Peers
+
+After retrieving the appropriate `PeerId` of both the sentry and validator nodes, we can set them
+using the following flags:
+
+Start your sentry with `--sentry` flag:
+
+```bash
+# Sentry Node
 polkadot \
 --name "Sentry-A" \
---sentry /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_IDENTITY
+--sentry /ip4/VALIDATOR_VPN_ADDRESS/tcp/30333/p2p/VALIDATOR_NODE_PEER_ID
 ```
 
-Result:
+Start the validator with the `--valdiator` and `--sentry-nodes` flags:
 
-```
-2020-04-16 19:41:53 ----------------------------
-2020-04-16 19:41:53 This chain is not in any way
-2020-04-16 19:41:53       endorsed by the
-2020-04-16 19:41:53      KUSAMA FOUNDATION
-2020-04-16 19:41:53 ----------------------------
-2020-04-16 19:41:53 Parity Polkadot
-2020-04-16 19:41:53 ✌️  version 0.7.29-13ec3023-x86_64-linux-gnu
-2020-04-16 19:41:53 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
-2020-04-16 19:41:53 📋 Chain specification: Kusama
-2020-04-16 19:41:53 🏷  Node name: Sentry ANSON - A
-2020-04-16 19:41:53 👤 Role: SENTRY
-2020-04-16 19:41:53 ⛓  Native runtime: kusama-1057:2(parity-kusama-1)
-2020-04-16 19:41:53 📦 Highest known block at #1913161
-2020-04-16 19:41:53 🏷  Local node identity is: QmSAg4uHhVK1CHt5TJGPrWVWDJBVjgwKd1wSv88DPCtEHa
-2020-04-16 19:41:53 〽️ Prometheus server started at 127.0.0.1:9615
-```
-
-You are also required to use the sentry's node identity when starting your validator, so make sure
-to save it somewhere else as well. Then start your validator.
-
-```
+```bash
+# Validator Node
 polkadot \
 --name "Validator" \
 --reserved-only \
---reserved-nodes /ip4/SENTRY_VPN_ADDRESS/tcp/30333/p2p/SENTRY_NODE_IDENTITY \
+--sentry-nodes /ip4/SENTRY_VPN_ADDRESS/tcp/30333/p2p/SENTRY_NODE_PEER_ID \
 --validator
 ```
 
@@ -248,6 +329,10 @@ steps to spin up few more if you think one sentry node is not enough.
 2020-04-16 19:43:14 ✨ Imported #1913177 (0x9b77…67c7)
 2020-04-16 19:43:17 💤 Idle (1 peers), best: #1913177 (0x4e1b…209f), finalized #1913174 (0x24f6…14f9)
 ```
+
+> Note: You may have to start the sentry node first in order for the validator node to recognize it
+> as a peer. If it does not show up as a peer, try resrtarting the validator node after the sentry
+> is already running.
 
 Congratulations! You have successfully set up a validator with a public facing node and now have a
 more secure way of running your validator.

@@ -14,11 +14,13 @@ This page contains basic information about running a Parity Polkadot client. The
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or a custom chain spec.
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or a custom chain spec. By default, the client will start Polkadot.
 
 **Archive node**
 
 An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of nodes, like validators and sentries, must run in archive mode. Likewise, all [events](build-protocol-info#events) are cleared from state in each block, so if you want to store events then you will need an archive node.
+
+> To upgrade a node, please refer to this [video](https://www.youtube.com/watch?v=5LtcdBR9F40&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=5)
 
 **Exporting blocks**
 
@@ -103,4 +105,4 @@ All targets are set to `info` logging by default. You can adjust individual log 
 
 The Parity Polkadot client connects to telemetry by default. You can disable it with `--no-telemetry`, or connect only to specified telemetry servers with the `--telemetry-url` option (see the help options for instructions). Connecting to public telemetry may expose information that puts your node at higher risk of attack. You can run your own, private [telemetry server](https://github.com/paritytech/substrate-telemetry) or deploy a `substrate-telemetry` instance to a Kubernetes cluster using [this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
-The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has a [vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualizing-node-metrics/).
+The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has a [vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualize-node-metrics/).
