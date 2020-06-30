@@ -4,10 +4,7 @@ title: Nomination Guide
 sidebar_label: Nomination Guide
 ---
 
-> The following information applies to the Polkadot network, which is currently in the soft launch
-> phase. During soft launch the network starts as a Proof-of-Authority network before transitioning
-> to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first
-> validator election and rewards will not start until later. If you want to nominate on Kusama,
+> The following information applies to the Polkadot network. If you want to nominate on Kusama,
 > check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
@@ -25,6 +22,8 @@ being slashed if the validator gets slashed.
 
 # Setting up Stash and Controller keys
 
+> Until transfers are enabled, you may need to use the same account for stash and controller.
+
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
@@ -35,9 +34,6 @@ detailed on the [account generation][] page.
 # Using Polkadot UI
 
 ### Step 1: Bond your tokens
-
-> NOTE: Much of the information below will not be fully populated during Polkadot's
-> Proof-of-Authority phase since validator elections have not started yet.
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
