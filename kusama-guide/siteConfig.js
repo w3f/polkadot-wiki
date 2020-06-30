@@ -4,7 +4,7 @@ const isBuilding = process.env.BUILDING;
 const isPub = process.env.PUBLISHING;
 
 const siteConfig = {
-  title: 'Kusama Guide', // Title for your website.
+  title: 'Guide', // Title for your website.
   tagline: 'One-stop-shop for Kusama information.',
   url: isPub ? "https://guide.kusama.network" : "", // Your website URL
   baseUrl: isBuilding ? baseUrlPattern : "/",
@@ -14,13 +14,14 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'kusama-index', label: 'Kusama' },
+    { doc: 'kusama-claims', label: 'Get Started' },
+    { doc: 'kusama-index', label: 'Docs' },
     { search: true },
     { languages: true }
   ],
 
   /* path to images for header/footer */
-  headerIcon: './img/kusama-brand-assets/Kusama_Canary_white.png',
+  headerIcon: './img/Kusama_logotype_white_large.png',
   footerIcon: './img/kusama-brand-assets/Kusama_Canary_white.png',
   favicon: './img/kusama-brand-assets/Kusama_Canary_white.png',
 
