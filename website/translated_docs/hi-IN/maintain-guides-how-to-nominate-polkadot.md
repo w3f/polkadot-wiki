@@ -4,13 +4,15 @@ title: Nomination Guide
 sidebar_label: Nomination Guide
 ---
 
-> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible for appointing their stake to the validators who are the second type of participant. By appointing their stake, they are able to elect the active set of validators and share in the rewards that are paid out.
 
 While the [validators][] are active participants in the network that take part in the block production and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or worrying about online uptime. However, a good nominator performs due diligence on the validators that they elect. When looking for validators to nominate, a nominator should pay attention to their own reward percentage for nominating a specific validator - as well as the risk that they bare of being slashed if the validator gets slashed.
 
 # Setting up Stash and Controller keys
+
+> Until transfers are enabled, you may need to use the same account for stash and controller.
 
 Nominators are recommended to set up separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of the Wiki.
 
@@ -19,8 +21,6 @@ You can generate your stash and controller account via any of the recommended me
 # Using Polkadot UI
 
 ### Step 1: Bond your tokens
-
-> NOTE: Much of the information below will not be fully populated during Polkadot's Proof-of-Authority phase since validator elections have not started yet.
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 

@@ -4,13 +4,15 @@ title: 提名人指南
 sidebar_label: 提名人指南
 ---
 
-> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first validator election and rewards will not start until later. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 提名人是 Polkadot 抵押子系统的一种参与者。 他们负责将会参与抵押中的代币分配给第二种参与者的验证人。 通过抵押他们的代币，他们能够选举活跃的验证人并分享抵押所支付的奖励。
 
 当[ 验证人 ][]是网络中的活跃参与者，他们参与了出区和最终确定。 在提名机制中，提名者通过 "一劳永逸" 的方法承担着更为被动的角色。 成为提名人不需要运行自己的节点或担心在线运行时间。 但是好的提名人会对他们选出的验证人进行尽职调查。 在寻找要提名的验证人时，提名人应注意自己提名特定验证人的报酬百分比-以及如果验证人被惩罚，他们也有被惩罚的风险。
 
 # 设置 Stash 和 Controller 密钥
+
+> Until transfers are enabled, you may need to use the same account for stash and controller.
 
 建议提名人设置单独的 stash 帐户和 controller 帐户。 Wiki 的[密钥][]部分详细说明了为此生成不同帐户的理由。
 
@@ -19,8 +21,6 @@ sidebar_label: 提名人指南
 # 使用 Polkadot UI
 
 ### 第一步: 绑定您的代币
-
-> 注意：由于 Polkadot 在 PoA 阶段验证人选举尚未开始，因此以下大多数信息在这阶段不会完全出现。
 
 在 [Polkadot UI](https://polkadot.js.org/apps) 前往 "Staking" 标签
 
