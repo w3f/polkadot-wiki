@@ -230,8 +230,8 @@ should be used. This function takes only the other signatories and the raw call 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
 call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the
-multi-sig until the call is executed. The reason for this deposit is to place an economic cost on
-the storage space that the multi-sig call takes up on the chain and discourage users from creating
+multi-sig until the call is executed. The reason for the deposit is to place an economic cost on the
+storage space that the multi-sig call takes up on the chain and discourage users from creating
 dangling multi-sig operations that never get executed.
 
 The deposit is dependent on the `threshold` parameter and is calculated as follows:
@@ -272,8 +272,8 @@ Thus the deposit values can be calculated as shown in the table below.
 | DepositBase   | 200880000000 | 3347999999941.4 |
 | DepositFactor | 320000000    | 5333333312      |
 
-So let's take for example a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob,
-and Charlie. Firs Alice will create the call on chain by calling `as_multi` with the raw call. When
-doing this Alice will have to deposit 0.20152 DOTs while she waits for either Bob or Charlie to also
-approve the call. When Bob come to approve the call and execute the transaction, he will not need to
-place the deposit and Alice will receive her deposit back.
+Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
+Bob, and Charlie. First Alice will create the call on chain by calling `as_multi` with the raw call.
+When doing this Alice will have to deposit 0.20152 DOTs while she waits for either Bob or Charlie to
+also approve the call. When Bob come to approve the call and execute the transaction, he will not
+need to place the deposit and Alice will receive her deposit back.
