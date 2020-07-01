@@ -36,6 +36,15 @@ This is a list of what you will need before starting:
 > Developer Release" instruction below. Otherwise hold tight, the application should be approved
 > soon!
 
+- Open the Manager in Ledger Live.
+- Connect and unlock your Ledger device.
+- If asked, allow the manager on your device by pressing the right button.
+- Find Kusama in the app catalog.
+- Click the Install button of the app.
+- An installation window appears.
+- Your device will display Processing…
+- The app installation is confirmed.
+
 ### Using the Developer Release
 
 > NOTE: These instructions are for pre-release only. They will be replaced by the instructions for
@@ -116,11 +125,42 @@ Apps.
 
 ### Checking Balance of Your Account
 
+There are a couple methods to check the balance of your account. You can use Polkadot-JS Apps or you
+can use a block explorer like Polkascan.
+
+#### Using Polkadot-JS Apps
+
+Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
+account. At the far right of the row is located your account's KSM balances. If you click the menu
+open it will show details of your balance such as locks or reserve amounts.
+
+### Using a Block Explorer
+
+You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the KSM balance of
+your account. On these block explorers you can search for you account in the search box and click on
+it to reveal the details. It will show your KSM balance as well as details about your bonded or
+locked amounts.
+
 ### Sending a Transaction
 
-## Where to get help
+If you would like to send a transaction from your account housed on the Ledger device, the easiest
+method is to use Polkadot-JS Apps.
+
+- Click on the "Transfer" button on the left navigation menu.
+- In the top input, select "Ledger" as your sending account.
+- In the second input, select the account that you want to transfer funds to.
+- In the third input, enter the amount of KSM you want to transfer.
+- Click the "Make Transfer" button.
+- Confirm the transaction on your device.
+- A green success notification will be displayed when the transaction is included in a block.
+
+## Support
+
+If you need support please send an email to [support@kusama.network](mailto:support@kusama.network).
 
 [ledger]: https://www.ledger.com/
 [polkadot-js apps]: https://polkadot.js.org/apps
 [prerelease instructions]: https://github.com/Zondax/ledger-kusama#download-and-install
 [releases page]: https://github.com/Zondax/ledger-kusama/releases
+[polkascan]: https://polkascan.io/kusama
+[subscan]: https://kusama.subscan.io/
