@@ -81,6 +81,14 @@
         "title": "Contributing",
         "sidebar_label": "Contributing"
       },
+      "faq": {
+        "title": "Frequently Asked Questions (FAQs)",
+        "sidebar_label": "Frequently Asked Questions (FAQs)"
+      },
+      "guides": {
+        "title": "Guides",
+        "sidebar_label": "Guides"
+      },
       "glossary": {
         "title": "Glossary",
         "sidebar_label": "Glossary"
@@ -137,6 +145,10 @@
         "title": "Account Generation",
         "sidebar_label": "Account Generation"
       },
+      "learn-account-restore": {
+        "title": "Backing up and Restoring Accounts",
+        "sidebar_label": "Backing up and Restoring Accounts"
+      },
       "learn-accounts": {
         "title": "Polkadot Accounts",
         "sidebar_label": "Polkadot Accounts"
@@ -188,10 +200,6 @@
       "learn-DOT": {
         "title": "DOT",
         "sidebar_label": "DOT"
-      },
-      "learn-faq": {
-        "title": "Frequently Asked Questions (FAQs)",
-        "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
       "learn-governance": {
         "title": "Governance",
