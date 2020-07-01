@@ -181,16 +181,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-weight: 900;
+  color: #DDD;
+  font-weight: 700;
 }
 
-.github-fork-ribbon a {
-  color: black;
-}
 
-.github-fork-ribbon a > :hover {
-  color: blue !important;
+.github-fork-ribbon:hover {
+  color: white !important;
 }
 
 .fixedHeaderContainer {
