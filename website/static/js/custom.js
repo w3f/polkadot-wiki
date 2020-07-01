@@ -86,7 +86,7 @@ docReady(function () {
     link.setAttribute('href', 'contributing');
     link.setAttribute('title', 'Improve this wiki');
     link.dataset.ribbon = 'Improve this wiki';
-    link.innerText = 'Improve this wiki';
+    link.innerText = 'Want to contribute? Click here to learn how to improve this wiki.';
     document.querySelector('body').appendChild(link);
     // -----------------
 
