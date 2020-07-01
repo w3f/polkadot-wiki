@@ -21,7 +21,7 @@ functionality.
 
 [account generation]: https://example.com
 [nominator]: maintain-guides-how-to-nominate-polkadot
-[validator]: maintain-guides-hot-to-validate-polkadot
+[validator]: maintain-guides-how-to-validate-polkadot
 [identity]: learn-identity
 [proxy]: learn-proxies
 [democracy]: maintain-guides-democracy
