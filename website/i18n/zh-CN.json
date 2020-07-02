@@ -81,6 +81,10 @@
         "title": "贡献",
         "sidebar_label": "贡献"
       },
+      "faq": {
+        "title": "Frequently Asked Questions (FAQs)",
+        "sidebar_label": "Frequently Asked Questions (FAQs)"
+      },
       "glossary": {
         "title": "专业术语",
         "sidebar_label": "专业术语"
@@ -137,6 +141,10 @@
         "title": "创建帐户",
         "sidebar_label": "创建帐户"
       },
+      "learn-account-restore": {
+        "title": "Backing up and Restoring Accounts",
+        "sidebar_label": "Backing up and Restoring Accounts"
+      },
       "learn-accounts": {
         "title": "Polkadot 账户",
         "sidebar_label": "Polkadot 账户"
@@ -188,10 +196,6 @@
       "learn-DOT": {
         "title": "DOT",
         "sidebar_label": "DOT"
-      },
-      "learn-faq": {
-        "title": "常见问题",
-        "sidebar_label": "常见问题"
       },
       "learn-governance": {
         "title": "治理",
