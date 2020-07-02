@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Main": [
+    "General": [
       "index",
       "community",
       "contributing",
@@ -11,47 +11,6 @@
       "claims",
       "faq"
     ],
-    "Build": [
-      "build-index",
-      {
-        "type": "subcategory",
-        "label": "Development Guide",
-        "ids": [
-          "build-build-with-polkadot",
-          "build-dev-roadmap",
-          "build-pdk",
-          "build-cumulus",
-          "build-smart-contracts",
-          "build-oracle",
-          "build-wallets"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Integration Guide",
-        "ids": [
-          "build-protocol-info",
-          "build-node-management",
-          "build-node-interaction",
-          "build-transaction-construction"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Tools",
-        "ids": [
-          "build-tools-index"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Resources",
-        "ids": [
-          "build-examples-index",
-          "build-hackathon"
-        ]
-      }
-    ],
     "Learn": [
       "learn-introduction",
       "learn-launch",
@@ -60,6 +19,8 @@
         "label": "Basics",
         "ids": [
           "learn-accounts",
+          "learn-account-generation",
+          "learn-account-restore",
           "learn-architecture",
           "learn-security",
           "learn-consensus",
@@ -118,11 +79,50 @@
         "type": "subcategory",
         "label": "Miscellaneous",
         "ids": [
-          "learn-account-generation",
-          "learn-account-restore",
           "learn-roadmap",
           "learn-relevant-links",
           "learn-implementers-guide"
+        ]
+      }
+    ],
+    "Build": [
+      "build-index",
+      {
+        "type": "subcategory",
+        "label": "Development Guide",
+        "ids": [
+          "build-build-with-polkadot",
+          "build-dev-roadmap",
+          "build-pdk",
+          "build-cumulus",
+          "build-smart-contracts",
+          "build-oracle",
+          "build-wallets"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Integration Guide",
+        "ids": [
+          "build-protocol-info",
+          "build-node-management",
+          "build-node-interaction",
+          "build-transaction-construction"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Tools",
+        "ids": [
+          "build-tools-index"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Resources",
+        "ids": [
+          "build-examples-index",
+          "build-hackathon"
         ]
       }
     ],
