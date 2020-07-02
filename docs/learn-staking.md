@@ -342,8 +342,7 @@ For specific details about validator payouts, please see
 ## Inflation
 
 Inflation is designed to be 10% in the first year, with validator rewards being a function of amount
-staked and the remainder going to treasury. You can determine the inflation rewards by checking the
-current staking rate at [PolkadotJS](https://polkadot.js.org/apps/#/staking/targets).
+staked and the remainder going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
