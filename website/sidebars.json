@@ -18,7 +18,6 @@
         "label": "Development Guide",
         "ids": [
           "build-build-with-polkadot",
-          "build-dev-roadmap",
           "build-pdk",
           "build-cumulus",
           "build-smart-contracts",
@@ -39,17 +38,12 @@
       {
         "type": "subcategory",
         "label": "Tools",
-        "ids": [
-          "build-tools-index"
-        ]
+        "ids": ["build-tools-index"]
       },
       {
         "type": "subcategory",
         "label": "Resources",
-        "ids": [
-          "build-examples-index",
-          "build-hackathon"
-        ]
+        "ids": ["build-examples-index", "build-hackathon"]
       }
     ],
     "Learn": [
@@ -79,7 +73,7 @@
         "ids": [
           "learn-staking",
           "learn-proxies",
-          "learn-availability",  
+          "learn-availability",
           "learn-randomness",
           "learn-crosschain",
           "learn-spree",
@@ -91,18 +85,12 @@
       {
         "type": "subcategory",
         "label": "Cryptography",
-        "ids": [
-          "learn-cryptography",
-          "learn-keys"
-        ]
+        "ids": ["learn-cryptography", "learn-keys"]
       },
       {
         "type": "subcategory",
         "label": "Economics",
-        "ids": [
-          "learn-DOT",
-          "learn-auction"
-        ]
+        "ids": ["learn-DOT", "learn-auction"]
       },
       {
         "type": "subcategory",
@@ -131,19 +119,12 @@
       {
         "type": "subcategory",
         "label": "Collator",
-        "ids": [
-          "maintain-collator"
-        ]
+        "ids": ["maintain-collator"]
       },
       {
         "type": "subcategory",
         "label": "Nodes and Dapps",
-        "ids": [
-          "maintain-sync",
-          "maintain-networks",
-          "maintain-wss",
-          "maintain-errors"
-        ]
+        "ids": ["maintain-sync", "maintain-networks", "maintain-wss", "maintain-errors"]
       },
       {
         "type": "subcategory",
@@ -185,11 +166,7 @@
       {
         "type": "subcategory",
         "label": "Get Started",
-        "ids": [
-          "kusama-faucet",
-          "kusama-claims",
-          "kusama-endpoints"
-        ]
+        "ids": ["kusama-faucet", "kusama-claims", "kusama-endpoints"]
       },
       {
         "type": "subcategory",
@@ -207,11 +184,7 @@
       {
         "type": "subcategory",
         "label": "What to Break",
-        "ids": [
-          "mirror-maintain-errors",
-          "kusama-bug-bounty",
-          "kusama-adverserial-cheatsheet"
-        ]
+        "ids": ["mirror-maintain-errors", "kusama-bug-bounty", "kusama-adverserial-cheatsheet"]
       },
       "kusama-timeline",
       "kusama-community",
