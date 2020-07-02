@@ -1,20 +1,20 @@
 ---
 id: news
-title: News Sources
-sidebar_label: News Sources
+title: 新闻来源
+sidebar_label: 新闻来源
 ---
 
-Check out our list of news sources related to Polkadot and Web3 Foundation.
+查看 Polkadot 和 Web3基金会相关的新闻来源列表。
 
-- [Web3 Medium Blog](https://medium.com/@web3)
-- [Web3 Foundation Twitter](https://twitter.com/web3foundation)
-- [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
+- [Web3 Medium 博客](https://medium.com/@web3)
+- [Web3 基金会推特](https://twitter.com/web3foundation)
+- [Web3 基金会 YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
 - [Polkadot Reddit](https://www.reddit.com/r/dot/)
-- [Polkadot Blog](https://polkadot.network/blog/)
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork)
+- [Polkadot 博客](https://polkadot.network/blog/)
+- [Polkadot 推特](https://twitter.com/polkadotnetwork)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
-- [Polkadot Telegram](https://t.me/PolkadotOfficial)
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/)
-- [Kusama Twitter](https://twitter.com/kusamanetwork)
-- [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-- [Dot Leap Newsletter](https://dotleap.substack.com/)
+- [Polkadot 电报](https://t.me/PolkadotOfficial)
+- [Polkadot 最新研究](https://research.web3.foundation/en/latest/polkadot/)
+- [Kusama 推特](https://twitter.com/kusamanetwork)
+- [Gavin Wood Medium 博客](https://medium.com/@gavofyork)
+- [Dot Leap 电子报](https://dotleap.substack.com/)

@@ -57,7 +57,7 @@ More info:
 
 - [Lockable Currency](https://substrate.dev/rustdocs/master/frame_support/traits/trait.LockableCurrency.html)
 - [Lock Withdraw Reasons](https://substrate.dev/rustdocs/master/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://substrate.dev/rustdocs/master/pallet_vesting/index.html)
+- [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
 

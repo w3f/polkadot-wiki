@@ -1,33 +1,33 @@
 ---
 id: learn-proxies
-title: Proxy Accounts
-sidebar_label: Proxy Accounts
+title: 代理账户
+sidebar_label: 代理账户
 ---
 
-Polkadot provides a module that allows users to set proxy accounts to perform a limited number of actions on their behalf. Much like the Stash and Controller account relationship in [staking](learn-staking), proxies allow users to keep one account in cold storage and actively participate in the network with the weight of the tokens in that account.
+Polkadot 提供了一个模块，允许用户设置代理帐户以代表其执行有限数量的操作。 与[ Stakeing ](learn-staking)中的 Stash 和 Controller 帐户关系非常相似，代理允许用户将一个帐户保留在冷存储中，并利用该帐户中代币的权重积极参与网络。
 
-## Proxy Types
+## 代理类型
 
-You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of proxy for the relationship. Polkadot offers:
+您可以通过代理模块设置代理账户。当您设置代理时，您必须选择代理关系的 类型: Polkadot 提供：
 
-- Any
-- Non-transfer
-- Staking
-- Governance
+- 任何
+- 非转帐
+- 抵押
+- 治理
 
-When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure that the proxy account has the appropriate permission to make that transaction on behalf of the cold account.
+当代理账户进行 `proxy` 交易时， Polkadot 过滤了所需的交易，以确保代理账户有代表冷账户进行该交易的适当权限。
 
-As implied by the name, a proxy type of "Any" allows the proxy account to make any transaction, incuding balance transfers. In most cases, this should be avoided as the proxy account is used more frequently than the cold account and is therefore less secure. To allow any type of transaction except balance transfers (including vested transfers), the "Non-transfer" proxy type will be a better fit.
+顾名思义，代理类型 "Any" 允许代理帐户进行任何交易，包括余额转帐。 在大多数情况下，应避免这种情况，因为代理帐户比冷帐户更频繁地使用，因此安全性较低。为了允许除余额转帐（包括既定转帐）以外的任何类型的交易，"非转帐(Non-transfer)"代理类型将是更好的选择。
 
-The "Governance" type will allow proxies to make transactions related to governance (i.e., from the Democracy, Council, Treasury, Technical Committee, and Elections pallets).
+"治理" 类型将允许代理进行与治理相关的交易(即从民主，议会，国库，技术委员会和选举模块进行的交易)。
 
-The "Staking" type allows staking-related transactions, but do not confuse a staking proxy with the Controller account. Within the Staking pallet, some transactions must come from the Stash, while others must come from the Controller. The Stash account is meant to stay in cold storage, while the Controller account makes day-to-day transactions like setting session keys or deciding which validators to nominate. The Stash account still needs to make some transactions, though, like bonding extra funds or designating a new Controller. A proxy doesn't change the _roles_ of Stash and Controller accounts, but does allow the Stash to be accessed even less frequently.
+"抵押" 类型允许抵押相关的交易，但不要将抵押代理与 Controller 帐户混淆。 在抵押模块中，某些事务必须来自存储，而其他事务必须来自主 Controller。 Stash 帐户旨在保留在冷储存中，而 Controller 帐户则进行日常事务，例如设置 Session 密钥或确定要提名的验证人。 不过，Stash 帐户仍需要进行一些交易，例如绑定额外资金或指定新的 Controller。 代理服务器不会更改 Stash 和 Controller 帐户的_角色_，但确实允许访问 Stash 的频率更低。
 
-### Anonymous Proxies
+### 匿名代理:
 
-Polkadot includes a function to create an anonymous proxy, an account that can only be accessed via proxy. That is, it generates an address but no corresponding private key. Normally, a primary account designates a proxy account, but anonymous proxies are the opposite. The account that creates the proxy relationship is the proxy account and the new account is the primary. Use extreme care with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+Polkadot 包含创建匿名代理的功能，该匿名代理只能通过代理访问。 即它生成一个地址，但没有相应的私钥。 通常主帐户指定代理帐户，但匿名代理则相反。 创建代理关系的帐户是代理帐户，新帐户是主要帐户。 对匿名代理要格外小心，删除代理关系后，将无法访问该帐户。
 
-## Putting It All Together
+## 要点整合
 
 If the idea of proxy types and their application seems abstract, it is. Here is an example of how you might use these accounts. Imagine you have one account as your primary token-holding account, and don't want to access it very often, but you do want to participate in governance and staking. You could set Governance and Staking proxies.
 
