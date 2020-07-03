@@ -98,8 +98,9 @@ docReady(function () {
 
   // Force edit button to go to non-mirror page
   let button = document.querySelector("a.edit-page-link.button");
-  button.setAttribute("href", button.getAttribute("href").replace("mirror-", ""));
-  console.log("here");
+  if (button) {
+    button.setAttribute("href", button.getAttribute("href").replace("mirror-", ""));
+  }
 });
 
 // Redirects

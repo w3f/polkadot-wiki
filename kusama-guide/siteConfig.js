@@ -55,7 +55,6 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
     "https://buttons.github.io/buttons.js",
-    "https://wiki.polkadot.network/js/load.js",
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
     "/js/custom.js",
     "/js/klaro-config.js",
