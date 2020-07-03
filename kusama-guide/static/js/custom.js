@@ -95,6 +95,11 @@ docReady(function () {
   script.setAttribute("src", "https://lion.kusama.network/script.js");
   script.setAttribute("site", "PNZSQVUV");
   document.querySelector("body footer").appendChild(script);
+
+  // Force edit button to go to non-mirror page
+  let button = document.querySelector("a.edit-page-link.button");
+  button.setAttribute("href", button.getAttribute("href").replace("mirror-", ""));
+  console.log("here");
 });
 
 // Redirects
