@@ -35,7 +35,7 @@ The transactions weights in Polkadot were benchmarked on standard hardware. It i
 For the full details of the standard hardware please see [here](https://github.com/paritytech/substrate/pull/5848).
 
 - **CPU** - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
-- **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth. Starting around 30GB - 50GB will be okay for the first six months of Polkadot, but will need to be re-evaluated every six months.
+- **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth. Starting around 80GB - 160GB will be okay for the first six months of Polkadot, but will need to be re-evaluated every six months.
 - **Memory** - 64GB.
 
 The specs posted above are by no means the minimum specs that you could use when running a validator, however you should be aware that if you are using less you may need to toggle some extra optimizations in order to be equal to other validators that are running the standard.
