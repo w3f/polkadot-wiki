@@ -153,18 +153,8 @@
   background-color: black;
 }
 
-.nav-site > :nth-child(4) {
-  background-color: #e6007a !important;
-  border-radius: 10px;
-}
-
 .navigationSlider .slidingNav ul li a {
   transition: none !important;
-}
-
-.nav-site > :nth-child(4) > :hover {
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #fff;
 }
 
 body {
