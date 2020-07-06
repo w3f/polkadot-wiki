@@ -47,8 +47,8 @@ Referenda can be started in one of several ways:
 
 All referenda have an _enactment delay_ associated with them. This is the period of time between the
 referendum ending and, assuming the proposal was approved, the changes being enacted. For the first
-two ways that a referendum is launched, this is a fixed time. For Kusama, it is 7 days; Polkadot
-will likely be 28 days. For the third type, it can be set as desired.
+two ways that a referendum is launched, this is a fixed time. For Kusama, it is 8 days; in Polkadot,
+it is planned to be 28 days. For the third type, it can be set as desired.
 
 Emergency proposals deal with major problems with the network that need to be "fast-tracked". These
 will have a shorter enactment time.
@@ -79,8 +79,8 @@ referendum in progress.
 
 #### Voting Timetable
 
-Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal
-in one of the queues. There is a queue for Council-approved proposals and a queue for publicly
+Every 28 days, a new referendum will come up for a vote, assuming there is at least one proposal in
+one of the queues. There is a queue for Council-approved proposals and a queue for publicly
 submitted proposals. The referendum to be voted upon alternates between the top proposal in the two
 queues.
 
