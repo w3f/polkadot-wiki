@@ -423,15 +423,15 @@
       }
     },
     "links": {
-      "Build": "建立",
       "Learn": "学习",
+      "Build": "建立",
       "Maintain ": "参与 ",
       "Kusama": "Kusama"
     },
     "categories": {
-      "Main": "主要",
-      "Build": "建立",
+      "General": "General",
       "Learn": "学习",
+      "Build": "建立",
       "Maintain": "参与",
       "Kusama": "Kusama"
     }
