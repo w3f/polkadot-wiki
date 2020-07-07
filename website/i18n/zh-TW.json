@@ -423,15 +423,15 @@
       }
     },
     "links": {
-      "Build": "Build",
       "Learn": "Learn",
+      "Build": "Build",
       "Maintain ": "Maintain ",
       "Kusama": "Kusama"
     },
     "categories": {
-      "Main": "Main",
-      "Build": "Build",
+      "General": "General",
       "Learn": "Learn",
+      "Build": "Build",
       "Maintain": "Maintain",
       "Kusama": "Kusama"
     }
