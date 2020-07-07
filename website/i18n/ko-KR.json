@@ -423,15 +423,15 @@
       }
     },
     "links": {
-      "Build": "개발",
       "Learn": "학습",
+      "Build": "개발",
       "Maintain ": "Maintain ",
       "Kusama": "Kusama"
     },
     "categories": {
-      "Main": "메인",
-      "Build": "개발",
+      "General": "General",
       "Learn": "학습",
+      "Build": "개발",
       "Maintain": "유지 및 보수",
       "Kusama": "Kusama"
     }
