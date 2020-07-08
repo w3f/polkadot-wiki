@@ -228,6 +228,15 @@ body {
     margin: 0 !important;
     height: auto;
   }
+  .headerTitleWithLogo {
+    font-size: unset !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-site li {
+    font-size: smaller;
+  }
 }
 
 .nomargin {
