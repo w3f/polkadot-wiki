@@ -41,4 +41,12 @@ sidebar_label: 平行线程
 
 ## 平行链插槽交换
 
-拥有平行链插槽的平行链可能会用平行线程交换该插槽，以使平行线程"升级"为完整的平行链，并将平行链成为平行线程。同样这为租约期末且没有足够使用量来证明续约的平行链提供了一个良好的脱链机制。它们可以在中继链上保持注册状态，但仅在需要时才产生新区块。即使租用平行链插槽在经济上不再可行，平行线程仅在有需要的时侯来生产区块，从而有助于脱链后的使用问题。
+It will be possible for a parachain that holds a parachain slot to swap this slot with a parathread so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread. The chain can also stop being a chain and continue as a thread without swapping the slot. The slot, if unoccupied, would be [auctioned off in the next auction period](learn-auction).
+
+This provides a graceful off-ramp for parachains that have reached the end of their lease and do not have sufficient usage to justify renewal; they can remain registered on the Relay Chain but only produce new blocks when they need to.
+
+Parathreads help ease the sharp stop of the parachain slot term by allowing parachains that are still doing something useful to produce blocks, even if it is no longer economically viable to rent a parachain slot.
+
+The off-boarding is always in the following order: Parachain -> Parathread -> Dormant thread. This process is not automatic due to a thread requiring a deposit, so an expired parachain will skip right to _dormant thread_ if for some reason there isn't a single operational entity of that chain left (no sudo or member of democracy to make that deposit).
+
+When going dormant, the ParaId and the original genesis, as well as all the historically finalized blocks stay on the Relay Chain, so a dormant thread or chain can continue where it left off if it rebuilds its community and gathers the necessary funds for a new lease or parathread deposit.

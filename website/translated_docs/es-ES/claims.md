@@ -86,25 +86,13 @@ Enhorabuena, ya has completado el proceso para reclamar y registrar tus DOTs.
 
 ### Procesos de reclamaciones de terceros
 
-#### Coinbase Custody
+**We do not recommend using third-party apps or processes to perform your claim or acquire DOT.**
 
-> Tenga en cuenta que el uso de Coinbase Custody para el proceso de reclamaciones requiere que su cuenta disponga de al menos1.000 DOTs. También hay honorarios asociados a Coinbase Custody.
-
-1. Para abrir una cuenta, por favor contacte con Coinbase Custody directamente en sales@coinbase.com
-1. Una vez que haya abierto una cuenta, Coinbase Custody generará una dirección DOT para que la use en el proceso de reclamaciones y se lo enviará.
-1. Pueden reclamar sus tokens usando la dirección de Coinbase Custody y sus tokens aparecerán en su cuenta de Coinbase Custody.
-
-Para preguntas sobre cómo reclamar con Coinbase Custody, por favor contacta a sales@coinbase.com.
-
-#### Otros procesos de terceros
-
-**No recomendamos el uso de aplicaciones o procesos de terceros para realizar su reclamación o adquirir DOT.**
-
-Reclamar usando otros procesos de terceros puede llevar a la pérdida de su asignación; por lo tanto, no podemos recomendar el uso de aplicaciones de terceros para hacerlo. Especificar manualmente sus datos de transacción, como se especifica en nuestro proceso de reclamaciones o utilizando Coinbase Custody, es la única manera de estar seguro de que usted recibirá su asignación.
+Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation.
 
 ## Acreditar una declaración
 
-Si ya ha hecho una reclamación previa al génesis, todavía tiene que aceptar una declaración usando su Cuenta Polkadot.
+If you've already made a pre-genesis claim, you still have to agree to a statement using your Polkadot account.
 
 ## Using Polkadot-JS Apps
 
@@ -112,31 +100,31 @@ Si ya ha hecho una reclamación previa al génesis, todavía tiene que aceptar u
 
 - Tu cuenta de Polkadot desbloqueada en la IU de Polkadot-JS Apps.
 
-Enviará una transacción gratuita desde su cuenta Polkadot en la Interfaz de Aplicaciones Polkadot-JS. Una vez que hagas esta transacción tendrás los tokens disponibles en tu cuenta.
+You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI. Once you make this transaction you will have the tokens available in your account.
 
 ### Vaya a Polkadot-JS Apps
 
-Continúe en las aplicaciones de [Polkadot-JS][claims app]. Tendrás que conceder a Apps acceso a tu cuenta de alguna manera. Una forma sería ir a la página de Cuentas y "crear" una nueva cuenta, reemplazando la semilla o mnemotécnica generada que pertenece a tu cuenta. La otra forma es utilizando la extensión Polkadot-JS e introduciendo tu semilla o mnemotécnica allí, lo que generalmente es más seguro que introducirla directamente en la página de Apps.
+Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to your account in some way. One way would be to go to the Accounts page and "create" a new account, replacing the generated seed or mnemonic with the one belonging to your account. The other way is by using the Polkadot-JS extension and entering your seed or mnemonic there, which is generally safer than entering it directly to the Apps page.
 
 ### Haga la declaración
 
-Después de entrar en su cuenta, debería ver aparecer un cartel rojo en la pestaña "Claim Tokens" en el cajón de navegación izquierdo.
+After entering your account, you should see a red counter appear on the "Claim Tokens" tab on the left navigation drawer.
 
 ![claim-attest-1](assets/new-claims/new-attest-1.png)
 
-Haga clic en la pestaña "Claim Tokens" y verá una notificación grande en la parte superior de la página que le dice que tiene que firmar la declaración.
+Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
 ![claim-attest-2](assets/new-claims/new-attest-2.png)
 
-La notificación mostrará una o más direcciones Polkadot que haya cargado en Polkadot-JS y que necesite firmar. Selecciona una cuenta Polkadot con una solicitud usando la selección desplegable. Si no ves una notificación o no ves el selector, comprueba que la cuenta se ha cargado en Polkadot-JS y que ya ha sido reclamada durante el período de pre-reclamación. Como siempre, siéntase libre de pedir ayuda en el [canal de Soporte de Reclamaciones]().
+The notification will display one or more Polkadot addresses that you have loaded in Polkadot-JS that you need to sign. Select a Polkadot account with a claim using the drop down selection. If you don't see a notification or don't see the selector, please double check that the account has been loaded into Polkadot-JS and that it has already claimed during the preclaim period. As always, feel free to reach out for help in the [Claims Support]() channel.
 
-Haga clic en "Continue" y verá que aparece un cuadro verde a la derecha.
+Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-3](assets/new-claims/new-attest-3.png)
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Haga clic en "I Agree" y luego en "Sign and Submit" para realizar su transacción de confirmación gratuita. Cuando la transacción esté incluida en el bloque, verá aparecer un cuadro verde de éxito en la esquina superior derecha y los DOT estarán en su cuenta.
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
 
@@ -211,5 +199,4 @@ When the transaction is included in the block, you will see a green success box 
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
 [Polkadot JS Claims]: https://polkadot.js.org/apps/#/claims
-[claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

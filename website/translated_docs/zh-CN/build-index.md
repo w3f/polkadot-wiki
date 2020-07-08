@@ -13,9 +13,8 @@ Wiki 的这个部分分为以下:
 ## 主页
 
 - [入门指南](build-build-with-polkadot) - 有关您的项目应选择平行链，平行线程或智能合约的高级概述，以及现在有哪些资源可以使用。
-- [开发路线图](build-dev-roadmap) - 最重要开发工具的状态。
-- [平行链开发套件](build-pdk)- PDKs 是用于构建平行链和平行线程的工具套件。
-- [智能合约](build-smart-contracts) - 智能合约是用于制定逻辑使部署到现有的链中。
+- [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and parathreads.
+- [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can be deployed to a live chain.
 
 ## 集成指南
 
