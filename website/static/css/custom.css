@@ -233,3 +233,7 @@ body {
 .nomargin {
   margin: 0;
 }
+
+.headerTitleWithLogo {
+  display: inline !important;
+}
