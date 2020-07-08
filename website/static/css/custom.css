@@ -154,18 +154,24 @@
 }
 
 .nav-site > :nth-child(4) {
-  background-color: #e6007a !important;
-  border-radius: 10px;
+  /* background-color: #e6007a !important; */
+  border-left: 1px solid #333;
+  /* border-radius: 10px; */
+}
+
+.nav-site > :nth-child(4) a:hover {
+  background-color: transparent !important;
+  color: #e6007a !important;
 }
 
 .navigationSlider .slidingNav ul li a {
   transition: none !important;
 }
 
-.nav-site > :nth-child(4) > :hover {
+/* .nav-site > :nth-child(4) > :hover {
   border-radius: 10px;
   box-shadow: 0px 0px 10px #fff;
-}
+} */
 
 body {
   font-family: "Muli", sans-serif !important;
@@ -181,10 +187,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DDD;
+  color: #ddd;
   font-weight: 700;
 }
-
 
 .github-fork-ribbon:hover {
   color: white !important;
