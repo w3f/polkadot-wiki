@@ -83,9 +83,9 @@ docReady(function () {
   let link = document.createElement("a");
   link.classList = "github-fork-ribbon";
   link.setAttribute("href", "contributing");
-  link.setAttribute("title", "Improve this wiki");
-  link.dataset.ribbon = "Improve this wiki";
-  link.innerText = "Improve this wiki";
+  link.setAttribute("title", "Contribute to this wiki");
+  link.dataset.ribbon = "Contribute to this wiki";
+  link.innerText = "Contribute to this wiki";
   document.querySelector("body").appendChild(link);
   // -----------------
 
