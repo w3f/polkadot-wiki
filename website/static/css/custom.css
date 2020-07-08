@@ -180,9 +180,8 @@
 body {
   font-family: "Muli", sans-serif !important;
 }
-
 .github-fork-ribbon {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 30px;
   z-index: 999999;
@@ -200,7 +199,33 @@ body {
 }
 
 .fixedHeaderContainer {
-  position: sticky;
+  position: fixed;
   top: 0;
   margin-top: 30px;
+}
+
+.github-fork-ribbon:hover {
+  color: white !important;
+}
+
+.docsContainer > .wrapper > .post {
+  padding-top: 30px;
+}
+#docsNav {
+  padding-top: 30px;
+  height: 80%;
+}
+
+@media only screen and (max-width: 700px) {
+  .docsContainer > .wrapper > .post {
+    padding-top: 100px;
+  }
+  #docsNav {
+    position: fixed !important;
+    top: 130px !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    height: auto;
+  }
 }
