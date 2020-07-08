@@ -17,10 +17,6 @@
         "title": "How to view and deploy parachains",
         "sidebar_label": "How to view and deploy parachains"
       },
-      "build-dev-roadmap": {
-        "title": "Roadmap For Developers",
-        "sidebar_label": "Roadmap For Developers"
-      },
       "build-examples-index": {
         "title": "Examples",
         "sidebar_label": "Examples"
@@ -423,15 +419,15 @@
       }
     },
     "links": {
-      "Learn": "Learn",
       "Build": "Build",
+      "Learn": "Learn",
       "Maintain ": "Maintain ",
       "Kusama": "Kusama"
     },
     "categories": {
-      "General": "General",
-      "Learn": "Learn",
+      "Main": "Main",
       "Build": "Build",
+      "Learn": "Learn",
       "Maintain": "Maintain",
       "Kusama": "Kusama"
     }
