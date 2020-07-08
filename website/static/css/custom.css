@@ -153,6 +153,10 @@
   background-color: black;
 }
 
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a:hover {
+  background-color: #e6007a;
+}
+
 .nav-site > :nth-child(4) {
   /* background-color: #e6007a !important; */
   border-left: 1px solid #333;
