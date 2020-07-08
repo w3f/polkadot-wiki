@@ -83,7 +83,9 @@ docReady(function () {
   if (
     window.location.pathname !== "/" &&
     window.location.pathname !== "/index.html" &&
-    window.location.pathname !== "/en"
+    window.location.pathname !== "/en" &&
+    window.location.pathname !== "/en/" &&
+    window.location.pathname !== ""
   ) {
     let link = document.createElement("a");
     link.classList = "github-fork-ribbon";
