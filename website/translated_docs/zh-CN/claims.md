@@ -86,25 +86,13 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ### 第三方认领程序
 
-#### Coinbase 托管
+**We do not recommend using third-party apps or processes to perform your claim or acquire DOT.**
 
-> 请注意，使用 Coinbase 托管进行认领过程要求您的帐户至少有 1,000 DOT，另外也有与 Coinbase 托管相关的费用。
-
-1. 开设帐户，请直接通过 sales@coinbase.com 与 Coinbase 托管联系。
-1. 开设帐户后，Coinbase 托管将生成一个 DOT 地址供您在认领过程中使用并将其发送给您。
-1. 然后您可以使用 Coinbase 托管您的 DOT 地址认领您的代币，并且您的代币将出现在您的 Coinbase 托管帐户中。
-
-对于有关使用 Coinbase 托管认领的问题，请联系 sales@coinbase.com。
-
-#### 其它第三方程序
-
-**我们不建议使用其它第三方应用程序或程序来执行您的认领或获取 DOT。**
-
-使用其它第三方程序进行认领可能会导致分配失败。因此我们不建议您使用任何第三方应用程序来这样做。按照我们的认领流程中指定的方式手动生成交易数据，或使用Coinbase 托管，这是确保您将收到分配的唯一方法。
+Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation.
 
 ## 证明声明
 
-如果您已经在创世块之前提出了认领，您仍然需要使用您的 Polkadot 帐户签署同意声明。
+If you've already made a pre-genesis claim, you still have to agree to a statement using your Polkadot account.
 
 ## Using Polkadot-JS Apps
 
@@ -112,25 +100,25 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 - 您的 Polkadot 帐户已在 Polkadot-JS Apps UI 上解锁。
 
-您将通过 Polkadot-JS Apps UI 从您的 Polkadot 帐户发送不用交易费的交易。完成交易后，您的帐户将可以使用该代币。
+You will be sending a free transaction from your Polkadot account on the Polkadot-JS Apps UI. Once you make this transaction you will have the tokens available in your account.
 
 ### 前往 Polkadot-JS 程序
 
-继续使用 [polkadot-js Apps][claims app]。您将需要以某种方式授予程序对您帐户的访问权限。一种方法是前往到 Accounts 页面并 "create" 新帐户，将生成的种子或助记词替换为属于您的帐户的种子或助记词。另一种方法是使用 Polkadot-JS 扩展，然后在其输入您的种子或助记词，通常比直接在程序页面中输入更安全。
+Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to your account in some way. One way would be to go to the Accounts page and "create" a new account, replacing the generated seed or mnemonic with the one belonging to your account. The other way is by using the Polkadot-JS extension and entering your seed or mnemonic there, which is generally safer than entering it directly to the Apps page.
 
 ### 提交证明
 
-当输入帐户后，您应该会在左侧导航的 "Claim Tokens" 标签上看到红色的提示。
+After entering your account, you should see a red counter appear on the "Claim Tokens" tab on the left navigation drawer.
 
 ![claim-attest-1](assets/new-claims/new-attest-1.png)
 
-点击 "Claims Tokens" 选项，您将在页面顶部看到大通知，告诉您需要签署证明。
+Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
 ![claim-attest-2](assets/new-claims/new-attest-2.png)
 
-该通知将显示您已在 Polkadot-JS 中加载并需要签名的多个 Polkadot 地址。使用下拉选择来选择拥有认领 Polkadot 的帐户。如果您没有收到通知或看到，请仔细检查该帐户是否已加载到 Polkadot-JS 中，并且在创世块之前已经认领了该帐户。与往常一样，请随时在 [Claims Support]() 频道中寻求协助。
+The notification will display one or more Polkadot addresses that you have loaded in Polkadot-JS that you need to sign. Select a Polkadot account with a claim using the drop down selection. If you don't see a notification or don't see the selector, please double check that the account has been loaded into Polkadot-JS and that it has already claimed during the preclaim period. As always, feel free to reach out for help in the [Claims Support]() channel.
 
-点击 "Continue"，您将看到右侧的绿色框。
+Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-3](assets/new-claims/new-attest-3.png)
 
