@@ -17,10 +17,6 @@
         "title": "패러체인을 보고 배포하는 방법",
         "sidebar_label": "패러체인을 보고 배포하는 방법"
       },
-      "build-dev-roadmap": {
-        "title": "개발자들을 위한 로드맵",
-        "sidebar_label": "개발자들을 위한 로드맵"
-      },
       "build-examples-index": {
         "title": "사례들",
         "sidebar_label": "사례들"
@@ -423,15 +419,15 @@
       }
     },
     "links": {
-      "Learn": "학습",
       "Build": "개발",
+      "Learn": "학습",
       "Maintain ": "Maintain ",
       "Kusama": "Kusama"
     },
     "categories": {
-      "General": "General",
-      "Learn": "학습",
+      "Main": "Main",
       "Build": "개발",
+      "Learn": "학습",
       "Maintain": "유지 및 보수",
       "Kusama": "Kusama"
     }
