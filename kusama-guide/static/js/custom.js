@@ -80,13 +80,22 @@ docReady(function () {
   // Custom logic goes here
 
   // Insert "Improve this wiki ribbon"
-  let link = document.createElement("a");
-  link.classList = "github-fork-ribbon";
-  link.setAttribute("href", "contributing");
-  link.setAttribute("title", "Improve this wiki");
-  link.dataset.ribbon = "Improve this wiki";
-  link.innerText = "Improve this wiki";
-  document.querySelector("body").appendChild(link);
+  if (
+    window.location.pathname !== "/" &&
+    window.location.pathname !== "/index.html" &&
+    window.location.pathname !== "/en" &&
+    window.location.pathname !== "/en/"
+  ) {
+    let link = document.createElement("a");
+    link.classList = "github-fork-ribbon";
+    link.setAttribute("href", "contributing");
+    link.setAttribute("title", "Contribute to this wiki");
+    link.dataset.ribbon = "Contribute to this wiki";
+    link.innerText = "Contribute to this wiki";
+    document.querySelector("body").appendChild(link);
+  } else {
+    document.querySelector(".fixedHeaderContainer").classList += " nomargin";
+  }
   // -----------------
 
   // Add fathom to footer
