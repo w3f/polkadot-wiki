@@ -17,10 +17,6 @@
         "title": "如何查看及部署平行链",
         "sidebar_label": "如何查看及部署平行链"
       },
-      "build-dev-roadmap": {
-        "title": "开发路线图",
-        "sidebar_label": "开发路线图"
-      },
       "build-examples-index": {
         "title": "例子",
         "sidebar_label": "例子"
@@ -423,15 +419,15 @@
       }
     },
     "links": {
-      "Learn": "学习",
       "Build": "建立",
+      "Learn": "学习",
       "Maintain ": "参与 ",
       "Kusama": "Kusama"
     },
     "categories": {
-      "General": "General",
-      "Learn": "学习",
+      "Main": "Main",
       "Build": "建立",
+      "Learn": "学习",
       "Maintain": "参与",
       "Kusama": "Kusama"
     }
