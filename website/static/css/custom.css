@@ -229,3 +229,7 @@ body {
     height: auto;
   }
 }
+
+.nomargin {
+  margin: 0;
+}
