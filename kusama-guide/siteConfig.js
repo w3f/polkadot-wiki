@@ -32,8 +32,8 @@ const siteConfig = {
   },
 
   algolia: {
-    apiKey: "8bfa06b56bb8f33e5698c7f40b00b38f",
-    indexName: "polkadot",
+    apiKey: "53c6a4ab0d77c0755375a971c9b7cc3d",
+    indexName: "kusama_guide",
     algoliaOptions: {
       facetFilters: ["language:LANGUAGE"],
     }, // Optional, if provided by Algolia
