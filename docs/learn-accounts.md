@@ -187,29 +187,35 @@ if the entities designated as the recipients come together in a new multi-sig un
 threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig
 deterministically can be done in TypeScript like so:
 
-```ts
-const rawAddress = (addresses: string[], threshold: number): U8Array => {
-    const addrs = [...addresses]
-    addrs.sort()
-    const prefix = 'modlpy/utilisuba'
-    const payload = new Uint8Array(prefix.length + 1 + 32 * addresses.length + 2)
-    payload.set(Array.from(prefix).map(c => c.charCodeAt(0)), 0)
-    payload[prefix.length] = addresses.length << 2;
-    addrs.forEach((addr, idx) => {
-        const decoded = decodeAddress(addr);
-        payload.set(decoded, prefix.length + 1 + idx * 32)
-    })
-    payload[prefix.length + 1 + 32 * addresses.length] = threshold
+```js
+const rawAddress = (addresses, threshold) => {
+  const addrs = [...addresses];
+  addrs.sort();
+  const prefix = "modlpy/utilisuba";
+  const payload = new Uint8Array(prefix.length + 1 + 32 * addresses.length + 2);
+  payload.set(
+    Array.from(prefix).map((c) => c.charCodeAt(0)),
+    0
+  );
+  payload[prefix.length] = addresses.length << 2;
+  addrs.forEach((addr, idx) => {
+    const decoded = decodeAddress(addr);
+    payload.set(decoded, prefix.length + 1 + idx * 32);
+  });
+  payload[prefix.length + 1 + 32 * addresses.length] = threshold;
 
-    return blake2AsU8a(payload)
+  return blake2AsU8a(payload);
 };
 
-const address = (addresses: string[], threshold: number, ss58prefix?: number): string {
-    const hashed = rawAddress(addresses, threshold)
-    return encodeAddress(hashed, ss58prefix)
+const address = (addresses, threshold, ss58prefix) => {
+  const hashed = rawAddress(addresses, threshold);
+  return encodeAddress(hashed, ss58prefix);
 };
 
+const addresses = ["ADDRESS_1", "ADDRESS_2"]; // The addresses that make up the multisig.
 const multiSigAddress = address(addresses, 2);
+
+console.log("multisig address:", multiSigAddress);
 ```
 
 The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the
@@ -229,10 +235,11 @@ should be used. This function takes only the other signatories and the raw call 
 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
-call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the
-multi-sig until the call is executed. The reason for the deposit is to place an economic cost on the
-storage space that the multi-sig call takes up on the chain and discourage users from creating
-dangling multi-sig operations that never get executed.
+call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the pallet
+until the call is executed. The reason for the deposit is to place an economic cost on the storage
+space that the multi-sig call takes up on the chain and discourage users from creating dangling
+multi-sig operations that never get executed. The deposit will be reserved in the caller's accounts
+so participants in multi-signature wallets should have spare funds available.
 
 The deposit is dependent on the `threshold` parameter and is calculated as follows:
 
