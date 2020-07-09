@@ -185,7 +185,11 @@ always calculate the address of a multi-sig just by knowing the members and the 
 the account existing yet. This means one can send tokens to an address that does not exist yet, and
 if the entities designated as the recipients come together in a new multi-sig under a matching
 threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig
-deterministically can be done in TypeScript like so:
+deterministically is demonstrated in JavaScript below:
+
+> NOTE: In order for the below code snippet to run you'll need to run in an environment that imports
+> `@polkadot/keyring` package for `encodeAddress` and `decodeAddress` and the `@polkadot/util`
+> package for `blake2AsU8a`.
 
 ```js
 const rawAddress = (addresses, threshold) => {
