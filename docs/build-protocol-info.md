@@ -65,11 +65,12 @@ staking and governance, for example. Reserved balance represents funds that have
 some operation and still belong to the account holder, but cannot be used.
 
 Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
-can operate on the same account, but they overlap rather than add. For example, an account could
-have a free balance of 200 DOTs with two locks on it: 150 DOTs for `Transfer` purposes and 100 DOTs
-for `Reserve` purposes. The account could not make a transfer that brings its free balance below 150
-DOTs, but an operation could result in reserving DOTs such that the free balance is below 150, but
-above 100 DOTs.
+can operate on the same account, but they overlap rather than add. Locks are automatically added
+onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these
+are not customizable. For example, an account could have a free balance of 200 DOTs with two locks
+on it: 150 DOTs for `Transfer` purposes and 100 DOTs for `Reserve` purposes. The account could not
+make a transfer that brings its free balance below 150 DOTs, but an operation could result in
+reserving DOTs such that the free balance is below 150, but above 100 DOTs.
 
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 

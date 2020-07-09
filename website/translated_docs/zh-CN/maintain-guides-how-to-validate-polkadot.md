@@ -35,7 +35,7 @@ Polkadot 中的交易权重以标准硬件为基准。 建议验证人至少运�
 关于标准硬件的详细信息，请在[这里](https://github.com/paritytech/substrate/pull/5848)查看。
 
 - **CPU** - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
-- **Storage** - NVMe 固态硬盘，应该合理调整大小以应对区块链增长。 从大约 30GB 开始 - 在 Polkadot 的头六个月内可以使用 50GB，但需要每六个月重新评估一次。
+- **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth. Starting around 80GB - 160GB will be okay for the first six months of Polkadot, but will need to be re-evaluated every six months.
 - **Memory** - 64GB.
 
 上面发布的规格绝不是运行验证人时可以使用的最低规格，但是您应该意识到，如果使用的规格较少，则可能需要切换一些额外的优化才能与其他运行标准验证人相同。

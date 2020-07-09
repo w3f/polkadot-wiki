@@ -117,6 +117,8 @@ wg-quick up wg0
 #[#] ip link set mtu 1420 up dev wg0
 ```
 
+> Note: If you are not able to start Wireguard or getting any errors during start, restart the computer and run the above command again.
+
 您可以通过运行 `wg` 来检查接口状态:
 
 ```bash

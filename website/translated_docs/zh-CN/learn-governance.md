@@ -31,7 +31,7 @@ Referenda are simple, inclusive, stake-based voting schemes. Each referendum has
 - 作为先前公投通过部分的提交提案。
 - 技术委员会提交并经理事会批准的紧急提案。
 
-All referenda have an _enactment delay_ associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 7 days; Polkadot will likely be 28 days. For the third type, it can be set as desired.
+All referenda have an _enactment delay_ associated with them. This is the period of time between the referendum ending and, assuming the proposal was approved, the changes being enacted. For the first two ways that a referendum is launched, this is a fixed time. For Kusama, it is 8 days; in Polkadot, it is planned to be 28 days. For the third type, it can be set as desired.
 
 Emergency proposals deal with major problems with the network that need to be "fast-tracked". These will have a shorter enactment time.
 
@@ -51,7 +51,7 @@ There can only be one active referendum at any given time, except when there is 
 
 #### 投票时间表
 
-Every thirty days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
+Every 28 days, a new referendum will come up for a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the top proposal in the two queues.
 
 The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose turn it is to create a referendum has no proposals (is empty), and there are proposals waiting in the other queue, the top proposal in the other queue will become a referendum.
 

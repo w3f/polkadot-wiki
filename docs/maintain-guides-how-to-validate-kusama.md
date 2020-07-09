@@ -55,8 +55,8 @@ resource constraints. The most important resource for your validator node is net
 followed by its storage and memory capabilities. The bare minimum requirements for a machine to run
 a validator are as follows:
 
-- **Storage:** 40GB - 80GB. Kusama doesn't have very heavy storage requirements yet so something in
-  this range will be fine, just keep in mind you may have to upgrade it later if the chain state
+- **Storage:** 160GB - 200GB. Kusama doesn't have very heavy storage requirements yet so something
+  in this range will be fine, just keep in mind you may have to upgrade it later if the chain state
   becomes very big.
 - **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with,
   anything less than this make build times too inconvenient. For better performance you can bump it

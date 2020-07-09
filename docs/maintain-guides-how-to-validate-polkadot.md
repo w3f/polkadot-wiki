@@ -70,8 +70,8 @@ For the full details of the standard hardware please see
 
 - **CPU** - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
 - **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth.
-  Starting around 30GB - 50GB will be okay for the first six months of Polkadot, but will need to be
-  re-evaluated every six months.
+  Starting around 80GB - 160GB will be okay for the first six months of Polkadot, but will need to
+  be re-evaluated every six months.
 - **Memory** - 64GB.
 
 The specs posted above are by no means the minimum specs that you could use when running a

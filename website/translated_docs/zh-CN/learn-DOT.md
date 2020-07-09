@@ -88,7 +88,7 @@ DOTs 必须在 Polkadot 网络上进行交易。 测试网的 DOTs 除了可以�
 
 ### 获取 Westies
 
-The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.w3f.tech/#/room/#westend_faucet:matrix.org).
+The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.im/app/#/room/!cJFtAIkwxuofiSYkPN:matrix.org).
 
 You can also make your own WNDs (testnet DOTs) by [becoming a validator](maintain-validator).
 

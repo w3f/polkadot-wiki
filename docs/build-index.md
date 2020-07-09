@@ -17,8 +17,6 @@ This section of the wiki is divided into the following parts:
 
 - [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain,
   parathread, or smart contract for your project and how to get started.
-- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most important
-  tools.
 - [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and
   parathreads.
 - [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can

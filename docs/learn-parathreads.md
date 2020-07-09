@@ -96,9 +96,23 @@ bid on the Relay Chain and ensure that they make a profit.
 ## Parachain Slot Swaps
 
 It will be possible for a parachain that holds a parachain slot to swap this slot with a parathread
-so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread.
-Similarly, this provides a graceful off-ramp for parachains that have reached the end of their lease
-and do not have sufficient usage to justify renewal; they can remain registered on the Relay Chain
-but only produce new blocks when they need to. Parathreads help ease the sharp stop of the parachain
-slot term by allowing parachains that are still doing something useful to produce blocks, even if it
-is no longer economically viable to rent a parachain slot.
+so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread. The
+chain can also stop being a chain and continue as a thread without swapping the slot. The slot, if
+unoccupied, would be [auctioned off in the next auction period](learn-auction).
+
+This provides a graceful off-ramp for parachains that have reached the end of their lease and do not
+have sufficient usage to justify renewal; they can remain registered on the Relay Chain but only
+produce new blocks when they need to.
+
+Parathreads help ease the sharp stop of the parachain slot term by allowing parachains that are
+still doing something useful to produce blocks, even if it is no longer economically viable to rent
+a parachain slot.
+
+The off-boarding is always in the following order: Parachain -> Parathread -> Dormant thread. This
+process is not automatic due to a thread requiring a deposit, so an expired parachain will skip
+right to _dormant thread_ if for some reason there isn't a single operational entity of that chain
+left (no sudo or member of democracy to make that deposit).
+
+When going dormant, the ParaId and the original genesis, as well as all the historically finalized
+blocks stay on the Relay Chain, so a dormant thread or chain can continue where it left off if it
+rebuilds its community and gathers the necessary funds for a new lease or parathread deposit.

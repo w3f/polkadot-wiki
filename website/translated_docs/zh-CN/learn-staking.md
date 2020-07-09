@@ -97,11 +97,11 @@ Controller 和 Stash 帐户密钥可以是 sr25519 或 ed25519。有关如何在
 
 ## 惩罚 (Slashing)
 
-如果验证人在网络上行为不当(例如: 离线, 攻击网络, 运行已修改的软件) ，验证人将会被惩罚(Slashing)。验证人和他的提名人也会被惩罚而损失百份比绑定/抵押中的 DOTs。
+Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs modified software) in the network. They and their nominators will get slashed by losing a percentage of their bonded/staked DOTs. Any slashed DOTs will be added to the Treasury. The rationale for this (rather than burning or distributing them as rewards) is that slashes may then be reverted by the Council by simply paying out from the Treasury. This would be useful in situations such as a faulty runtime causing slashing or forcing validators offline through no fault of their own. In the case of legitimate slashing, it moves tokens away from malicious validators to those building the ecosystem through the normal Treasury process.
 
 具有较高抵押支持量的验证人池将比不那么受欢迎的验证人池受到更大的惩罚，因此我们鼓励提名人将其提名转移给较不受欢迎的验证人，以减少可能的损失。
 
-The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for slash amounts please see the equations in the section below):
+The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for specific slash amounts, see the equations in the section below):
 
 - Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch](glossary#epoch). No slashing, only [_chilling_](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the stake and chills.
@@ -209,7 +209,7 @@ Polkadot 允许停用某些验证人，但是如果停用的验证人数量过�
 - **蓝线**: 参与抵押者的通涨奖励
 - **绿线**: 抵押参与者的收益率
 
-上图显示了网络的通货膨胀模型。 根据抵押参与者的参与，通货膨胀对验证人与国库的分配将动态变化，以提供参与(或不参与)抵押的激励。 例如如果所有 KSM / DOT 中的50％参与抵押，所有的通货膨胀将流向验证人，但是任何与50％的偏差（正数或负数）都会将剩余部分按比例发送给国库，从而有效地减少了验证人的收益。
+You can determine the inflation rewards by checking the current staking rate at [PolkadotJS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
 
 如你想进一步了解本网络通胀模型的设计，请参阅[此处](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)。
 

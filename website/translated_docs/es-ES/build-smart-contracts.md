@@ -6,38 +6,51 @@ sidebar_label: Smart Contracts
 
 La Chain Relay de relé Polkadot no Smart Contracts de forma nativa. Sin embargo, los parachains en Polkadot soportarán Smart Contracts. Ya hay proyectos anunciados como [Edgeware](https://edgewa.re), y gracias al Substrate incorporado [contract pallet](https://crates.parity.io/pallet_contracts/index.html), es probable que más parachains soporten esta característica.
 
+Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine, thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this approach are [Moonbeam](https://moonbeam.network/) and [Frontier](https://github.com/paritytech/frontier).
+
+A video version of the recap of the smart contract situation on Polkadot and Kusama is available [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
+
 ## Recursos
 
-Aquí está la lista de los recursos actuales disponibles para desarrolladores que quieren comenzar a escribir contratos inteligentes para desplegar en parachains basados en Substrate.
+Here is the list of current resources available to developers who want to get started writing smart contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Ink de Paridad para escribir Smart Contracts.
 - [Taller de Contratos de Substrate](https://substrate.dev/substrate-contracts-workshop/#/) - Te conduce a través de los conceptos básicos para escribir e implementar un token ERC20 usando `ink!`.
-- [Using Smart Contracts on Polkadot and Kusama](https://www.youtube.com/watch?v=fKHkFBXaUxQ&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=6)
 
 ## Ejemplos
 
-A continuación se recolectan algunos ejemplos comunitarios de Smart Contracts en `tink!`. ¿Estás trabajando en un ejemplo de Smart Contracts? ¡Pídanos que lo añada a esta página!
+Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!
 
 - [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
-## ¿Cuál es la diferencia entre desarrollar un Smart Contracts y un parachain?
+## Storage Rent
+
+Storage rent limits the footprint that a contract can have on the blockchain's storage.
+
+A contract deployed to the chain produces a code hash from which new instances of the chain can be created, but there is currently no rent applied to the code hash itself. The rent applies only to instances of this contract which have their own _contract accounts_. Deploying a code hash currently has a one-time byte-fee applied to the transaction, but no recurring cost.
+
+An account of a contract instance is charged proportionally to the amount of storage its account uses. When a contract's balance goes below a defined limit, the contract's account is turned into a "tombstone" (a hash of the contract's current state) and its storage is cleaned up. A tombstone contract can be restored by providing the data that was cleaned up when it became a tombstone as well as any additional funds needed to keep the contract alive. This fee will retroactively apply to missed rent periods.
+
+Block producers or regular users of the chain can "poke" a smart contract if they think it ran out of funds for rent. This will initiate the cleanup process and the _poker_ will get a finder's fee.
+
+## What is the difference between developing a smart contract versus a parachain?
 
 ### Capa de abstracción
 
-Cuando escribes un Smart Contracts estás creando las instrucciones que serán desplegadas y asociadas a una dirección de cadena específica.
+When you write a smart contract you are creating the instructions that will be deployed and associated to a specific chain address.
 
-En comparación, un módulo de tiempo de ejecución es la lógica completa de las transiciones de estado de una cadena (lo que se llama un función de transición de estado).
+In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a state transition function).
 
-Los Smart contracts deben implementar conscientemente la actualización, mientras que los parachains tendrán la capacidad de intercambiar su código completamente a través de un comando raíz o a través de la paleta de gobernanza.
+Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance pallet.
 
-Cuando construyes un Smart contracts, eventualmente será desplegado en una cadena de destino con su propio entorno. Parachains permite al desarrollador declarar el entorno de su propia cadena, incluso permitiendo a otros escribir Smart contracts para ella.
+When you build a smart contract, it will eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
 
 ### Gastos de Gas
 
-Los Smart contracts deben encontrar una manera de limitar su propia ejecución, de lo contrario, los nodos completos son vulnerables a los ataques de DOS. Un bucle infinito en un Smart contract, por ejemplo, podría consumir el cálculo recursos de una cadena completa, evitando que otros la usen.El [problema del halting](https://en.wikipedia.org/wiki/Halting_problem) muestra eso con un lenguaje suficientemente potente, Es imposible saber con antelación si un programa dejará de ejecutarse o no. Algunas plataformas, como Bitcoin, superan esta restricción al proporcionar un lenguaje de script muy restringido. Otros, como Ethereum, "cobran" el "gas" del Smart contract por los derechos de ejecución de su código. Si un Smart contract llega a un estado donde la ejecución nunca se detendrá, finalmente se queda sin gas, cesa la ejecución y cualquier transición de estado que hubiera sido hecha por el Smart contract se revierte.
+Smart contracts must find a way to limit their own execution, or else full nodes are vulnerable to DOS attacks. An infinite loop in a smart contract, for example, could consume the computational resources of an entire chain, preventing others from using it. The [halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that with a powerful enough language, it is impossible to know ahead of time whether or not a program will ever cease execution. Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute their code. If a smart contract does get into a state where execution will never halt, it eventually runs out of gas, ceases execution, and any state transition that would have been made by the smart contract is rolled back.
 
-Parachains puede implementar lenguajes de programación poderosamente arbitrarios y tampoco contener ninguna noción de gas para su propia lógica nativa. Esto significa que alguna funcionalidad es más fácil de implementar para el desarrollador, pero también significa que hay algunas construcciones, como un bucle sin una condición finalizadora, la cual _nunca_ debería ser implementada. Dejando cierta lógica, como bucles complejos que podría correr indefinidamente, a una capa de contrato no inteligente, o incluso tratando de eliminarlo por completo, a menudo podria ser una elección más inteligente.
+Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
 
-## Recursos
+## Resources
 
 - [¿Cuándo debo construir un runtime de Substrate versus un Smart contract de Substrate](https://stackoverflow.com/a/56041305) - Desde un punto de vista técnico respondo a la pregunta de cuándo un desarrollador puede elegir desarrollar un runtime versus un Smart contract.
