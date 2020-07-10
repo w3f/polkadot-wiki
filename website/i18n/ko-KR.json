@@ -81,6 +81,10 @@
         "title": "Frequently Asked Questions (FAQs)",
         "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
+      "guides": {
+        "title": "Guides",
+        "sidebar_label": "Guides"
+      },
       "glossary": {
         "title": "용어 정리",
         "sidebar_label": "용어 정리"
