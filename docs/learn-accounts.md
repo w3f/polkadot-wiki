@@ -184,42 +184,30 @@ and creation of a new one. As such, multi-sig account addresses are **determinis
 always calculate the address of a multi-sig just by knowing the members and the threshold, without
 the account existing yet. This means one can send tokens to an address that does not exist yet, and
 if the entities designated as the recipients come together in a new multi-sig under a matching
-threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig
-deterministically is demonstrated in JavaScript below:
+threshold, they will immediately have access to these tokens.
 
-> NOTE: In order for the below code snippet to run you'll need to run in an environment that imports
-> `@polkadot/keyring` package for `encodeAddress` and `decodeAddress` and the `@polkadot/util`
-> package for `blake2AsU8a`.
+### Generating Addresses of Multi-signature Accounts
 
-```js
-const rawAddress = (addresses, threshold) => {
-  const addrs = [...addresses];
-  addrs.sort();
-  const prefix = "modlpy/utilisuba";
-  const payload = new Uint8Array(prefix.length + 1 + 32 * addresses.length + 2);
-  payload.set(
-    Array.from(prefix).map((c) => c.charCodeAt(0)),
-    0
-  );
-  payload[prefix.length] = addresses.length << 2;
-  addrs.forEach((addr, idx) => {
-    const decoded = decodeAddress(addr);
-    payload.set(decoded, prefix.length + 1 + idx * 32);
-  });
-  payload[prefix.length + 1 + 32 * addresses.length] = threshold;
+> NOTE: Addresses that are provided to the multi-sig wallets must be sorted. The below methods for
+> generating sort the accounts for you, but if you are implementing your own sorting then be aware
+> that the public keys are compared byte-for-byte and sorted ascending before being inserted in the
+> payload that is hashed.
 
-  return blake2AsU8a(payload);
-};
+Addresses are deterministically generated from the signers and threshold of the multisig wallet. For
+a code example (in TypeScript) of generating you can view the internals of `@w3f/msig-util`
+[here](https://github.com/lsaether/msig-util/blob/master/src/actions/deriveAddress.ts).
 
-const address = (addresses, threshold, ss58prefix) => {
-  const hashed = rawAddress(addresses, threshold);
-  return encodeAddress(hashed, ss58prefix);
-};
+The `@w3f/msig-util` is a small CLI tool that can determine the multisignature address based on your
+inputs.
 
-const addresses = ["ADDRESS_1", "ADDRESS_2"]; // The addresses that make up the multisig.
-const multiSigAddress = address(addresses, 2);
-
-console.log("multisig address:", multiSigAddress);
+```zsh
+$ npx @w3f/msig-util@1.0.7 derive --addresses 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr,1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU --threshold 1
+npx: installed 79 in 7.764s
+--------------------------------
+Addresses: 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr 1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU
+Threshold: 1
+Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
+--------------------------------
 ```
 
 The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the
