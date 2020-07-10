@@ -91,8 +91,9 @@ on the [Staking page](https://polkadot.js.org/apps/#/staking).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
-claim them. See the [Claiming Rewards](learn-staking#claiming-rewards) section of the Staking wiki
-page for more details.
+claim them. To initiate a claim, you can do it yourself or have the validator that you staked for
+initiate a claim. See the [Claiming Rewards](learn-staking#claiming-rewards) section of the Staking
+wiki page for more details.
 
 ### Step 3: Stop nominating
 
