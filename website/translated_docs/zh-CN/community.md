@@ -34,14 +34,21 @@ Polkadot 社区每天都在扩大。以下是最重要的社区链接。
 ## 媒体
 
 - [订阅 Polkadot 电子报](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - 在这里订阅我们的电子报。
-- [Polkadot 电报](https://t.me/polkadotofficial) - Polkadot 官方电报群 (聊天前请先阅读规则)。
-- [Polkadot 推特](https://twitter.com/polkadotnetwork) - Polkadot 官方推特帐户。
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - 官方 Polkadot Reddit.
-- [Polkadot Youtube 频道](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - 来自 Polkadot 创始人和 Polkadot 相关的视频，讲述网络和愿景。
-- [Kusama 电报](https://t.me/kusamanetworkofficial)
-- [Kusama 推特](https://twitter.com/kusamanetwork)
+- [Web3 Medium Blog](https://medium.com/@web3)
+- [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+- [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
+- [Polkadot Reddit](https://www.reddit.com/r/dot/)
+- [Polkadot Blog](https://polkadot.network/blog/)
+- [Polkadot Twitter](https://twitter.com/polkadotnetwork)
+- [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
+- [Polkadot Telegram](https://t.me/PolkadotOfficial)
+- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/)
+- [Kusama Twitter](https://twitter.com/kusamanetwork)
+- [Kusama Telegram](https://t.me/kusamanetworkofficial)
 - [Kusama Reddit](https://www.reddit.com/r/Kusama)
-- [Kusama YouTube 频道](http://youtube.com/c/kusamanetwork)
+- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
+- [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
+- [Dot Leap Newsletter](https://dotleap.substack.com/)
 
 ## 生态
 
