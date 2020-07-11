@@ -87,6 +87,22 @@ Setting the block checkpoint to zero, using the genesis hash, and a validity per
 
 **NOTE:** If an account is reaped and a user re-funds the account, then they could replay an immortal transaction. Always default to using a mortal extrinsic.
 
+### Unique Identifiers for Extrinsics
+
+Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a transaction's hash as a unique identifier. In Substrate-based chains like Polkadot, a transaction's hash only serves as a fingerprint of the information within a transaction, and there are times when two transactions with the same hash are both valid. In the case that one is invalid, the network properly handles the transaction and does not charge a transaction fee to the sender nor consider the transaction in the block's fullness.
+
+Imagine this contrived example with a [reaped account](#existential-deposit). The first and last transactions are identical, and both valid.
+
+| Index | Hash | Origin    | Nonce | Call                | Results                       |
+|:-----:|:----:|:--------- |:-----:|:------------------- |:----------------------------- |
+|   0   | 0x01 | Account A |   0   | Transfer 5 DOT to B | Account A reaped              |
+|   1   | 0x02 | Account B |   4   | Transfer 7 DOT to A | Account A created (nonce = 0) |
+|   2   | 0x01 | Account A |   0   | Transfer 5 DOT to B | Successful transaction        |
+
+In addition, not every extrinsic in a Substrate-based chain comes from an account as a public/private key pair; Substrate, rather, has the concept of dispatch “origin”, which could be created from a public key account, but could also form from other means such as governance. These origins do not have a nonce associated with them the way that an account does. For example, governance might dispatch the same call with the same arguments multiple times, like “increase the validator set by 10%.” This dispatch information (and therefore its hash) would be the same, and the hash would be a reliable representative of the call, but its execution would have different effects depending on the chain’s state at the time of dispatch.
+
+The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
+
 ### Events
 
 While extrinsics represent information from the outside world, events represent information from the chain. Extrinsics can trigger events. For example, the Staking pallet emits a `Reward` event when claiming staking rewards to tell the user how much the account was credited.
