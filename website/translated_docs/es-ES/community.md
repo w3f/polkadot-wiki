@@ -34,14 +34,21 @@ La comunidad Polkadot se está expandiendo todos los días. A continuación se m
 ## Redes Sociales
 
 - [Suscríbete al boletín de noticias de Polkadot](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - Suscríbete a nuestra newsletter aquí.
-- [Polkadot Telegram](https://t.me/polkadotofficial) - Sala oficial de Telegram para la discusión de Polkadot (lea las reglas antes de chatear).
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Cuenta oficial de Twitter de Polkadot.
-- [Reddit Polkadot](https://www.reddit.com/r/dot/) - Reddit oficial de Polkadot.
-- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video contenido de fundadores y construcción de Polkadot describiendo la red y la visión.
-- [Telegram de Kusama](https://t.me/kusamanetworkofficial)
+- [Web3 Medium Blog](https://medium.com/@web3)
+- [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+- [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
+- [Polkadot Reddit](https://www.reddit.com/r/dot/)
+- [Polkadot Blog](https://polkadot.network/blog/)
+- [Polkadot Twitter](https://twitter.com/polkadotnetwork)
+- [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
+- [Polkadot Telegram](https://t.me/PolkadotOfficial)
+- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/)
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
-- [Reddit de Kusama](https://www.reddit.com/r/Kusama)
-- [Canal de YouTube de Kusama](http://youtube.com/c/kusamanetwork)
+- [Kusama Telegram](https://t.me/kusamanetworkofficial)
+- [Kusama Reddit](https://www.reddit.com/r/Kusama)
+- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
+- [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
+- [Dot Leap Newsletter](https://dotleap.substack.com/)
 
 ## Ecosistema
 

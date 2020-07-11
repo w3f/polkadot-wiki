@@ -25,6 +25,5 @@ sidebar_label: Wiki Индекс
 ## Ресурсы
 
 - [Сообщество/Экосистема](community) - Список групп и каналов, где можно поговорить о Polkadot.
-- [Новости](news) - Ссылки на самые последние новости о Polkadot, агрегатируются каждую неделю.
-- [Образцы приложений](build-examples-index) - Образцы приложений, которые построены или создаются для Polkadot
-- [Руководство по развитию](contributing) - Правила для развития Wiki.
+- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
+- [Contributing Guide](contributing) - Rules for contributing to the wiki.
