@@ -10,7 +10,8 @@ setting up a social recovery. It is an M-of-N recovery tool that is based on the
 wallet to get back the control of your lost account.
 
 > Note: There is no way to get back your private key by using this method. This is just a way of
-> performing transactions on behalf of the lost account, so you can think of it like a proxy instead.
+> performing transactions on behalf of the lost account, so you can think of it like a proxy
+> instead.
 
 In this guide, you will learn how to create a recoverable account, how to recover it, and what you
 need to be aware of when using it.
@@ -53,8 +54,8 @@ owner to have enough time to check and react in case someone pretends you to sta
 process.
 
 > Note: set the block delay a little longer would be better since even they have acquired enough
-> signatures to recover your account, they would still have to wait until the block delay is passed in
-> order to control your account.
+> signatures to recover your account, they would still have to wait until the block delay is passed
+> in order to control your account.
 
 ![](/img/recovery/social-recovery-3.png)
 
