@@ -92,7 +92,7 @@ Now call your friends that you have set in the first section. They are required 
 ![](/img/recovery/social-recovery-7.png)
 
 Once the threshold is reached and the block delay is passed, use the new account to submit a
-`claimRecovery` transaction that would set a proxy on behalf of your lost account in the underlying.
+`claimRecovery` transaction that would set a proxy on behalf of your lost account.
 It means that you can still use the lost account in an indirect way to interact with the network.
 
 ![](/img/recovery/social-recovery-8.png)
