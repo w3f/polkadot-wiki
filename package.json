@@ -16,7 +16,8 @@
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
-    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
+    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "docusaurus": "^1.12.0"
@@ -26,6 +27,8 @@
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^44.3.0",
     "katex": "^0.11.1",
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
     "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
     "yargs": "^15.4.1"

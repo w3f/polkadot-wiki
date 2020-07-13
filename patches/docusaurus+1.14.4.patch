@@ -1,0 +1,17 @@
+diff --git a/node_modules/docusaurus/lib/publish-gh-pages.js b/node_modules/docusaurus/lib/publish-gh-pages.js
+index 2c3fdca..a8a284e 100755
+--- a/node_modules/docusaurus/lib/publish-gh-pages.js
++++ b/node_modules/docusaurus/lib/publish-gh-pages.js
+@@ -100,6 +100,12 @@ if (
+   shell.exit(1);
+ }
+ 
++if (PROJECT_NAME.indexOf("polkadot") !== -1) {
++  shell.exec("yarn polkadot:inject");
++} else {
++  shell.exec("yarn kusma:inject");
++}
++
+ // Save the commit hash that triggers publish-gh-pages before checking out to deployment branch
+ const currentCommit = shell.exec('git rev-parse HEAD').stdout.trim();
+ 
