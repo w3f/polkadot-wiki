@@ -18,6 +18,8 @@ period, please proceed to the [attesting to a statement](#attesting-to-a-stateme
 
 > To learn more on How to claim your DOTs post genesis, check out our walkthrough
 > [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22)
+> and our video on
+> [Claiming DOTs with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
 
 ## Making a Claim
 
