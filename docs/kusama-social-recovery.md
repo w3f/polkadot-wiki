@@ -5,9 +5,9 @@ sidebar_label: Account Recovery
 ---
 
 Managing an account is not an easy task especially many people have lost their private key due to
-improper key management. Kusama provides a method that allows users to recover their accounts by
-setting up a social recovery. It is an M-of-N recovery tool that is based on the multisignature
-wallet to get back the control of your lost account.
+improper key management over the past few years. Kusama provides a method that allows users to
+recover their accounts by setting up a social recovery. It is an M-of-N recovery tool that is based
+on the multisignature wallet to get back the control of your lost account.
 
 > Note: There is no way to get back your private key by using this method. This is just a way of
 > performing transactions on behalf of the lost account, so you can think of it like a proxy
@@ -48,7 +48,7 @@ order to recover the account.
 > Note: 1 is the minimum, but it is not recommended to set a small number. If you set 1, that means
 > any of your recovery helpers would be able to recover your account.
 
-`recovery block delay` -Once the threshold is reached, you will need to wait until the block delay
+`recovery block delay` - Once the threshold is reached, you will need to wait until the block delay
 is passed and then you can claim the recovery. This is a protection mechanism to allow the account
 owner to have enough time to check and react in case someone pretends you to start the recovery
 process.
@@ -131,11 +131,11 @@ Congratulation! You have successfully done the recovery process.
 
 ![](/img/recovery/social-recovery-15.png)
 
-There is still one possible way to recover the account without going through the recovery process.
-That is root. However, while using the root permission to perform this action, you will have to go
-through the governance by convincing the council members to help you to submit a council proposal or
-submit a public proposal yourself to see whether they will approve it or not. To learn more about
-governance, see here.
+> Note: There is still one possible way to recover the account without going through the recovery
+> process. That is root. However, while using the root permission to perform this action, you will
+> have to go through the governance by convincing the council members to help you to submit a
+> council proposal or submit a public proposal yourself to see whether they will approve it or not.
+> To learn more about governance, see [here](learn-governance).
 
 ## Further Reading
 
