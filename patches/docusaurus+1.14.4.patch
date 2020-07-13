@@ -9,7 +9,7 @@ index 2c3fdca..a8a284e 100755
 +if (PROJECT_NAME.indexOf("polkadot") !== -1) {
 +  shell.exec("yarn polkadot:inject");
 +} else {
-+  shell.exec("yarn kusma:inject");
++  shell.exec("yarn kusama:inject");
 +}
 +
  // Save the commit hash that triggers publish-gh-pages before checking out to deployment branch
