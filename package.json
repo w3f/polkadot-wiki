@@ -26,7 +26,7 @@
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^44.3.0",
     "katex": "^0.11.1",
-    "remarkable-katex": "^1.1.4",
+    "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
     "yargs": "^15.4.0"
   }
