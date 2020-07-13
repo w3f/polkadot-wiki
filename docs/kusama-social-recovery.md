@@ -53,7 +53,7 @@ has passed until you can claim the recovery. This is a protection mechanism to a
 owner to have enough time to check and react in case someone pretends to be you and does a recovery
 process.
 
-> Note: set the block delay a little longer would be better since even they have acquired enough
+> Note: Setting the block delay to be a little longer would be better since even if an attacker acquired enough
 > signatures to recover your account, they would still have to wait until the block delay is passed
 > in order to control your account.
 
