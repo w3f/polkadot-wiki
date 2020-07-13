@@ -52,7 +52,7 @@ Click on "Nominate" on an account you've bonded and you will be presented with a
 
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations will become active in the next era. Eras last six hours on Kusama - depending on when you do this, your nominations may become active almost immediately, or you may have to wait almost the entire six hours before your nominations are active. You can check how far along Kusama is in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
 
-Assuming at least one of your nominations ends up in the active validator set, you will start to get rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually claim them. See the [Claiming Rewards](learn-staking#claiming-rewards) section of the Staking wiki page for more details.
+Assuming at least one of your nominations ends up in the active validator set, you will start to get rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually claim them. To initiate a claim, you can do it yourself or have the validator that you staked for initiate a claim. This is to help optimize the effectiveness and storage of payouts on Kusama. See the [Claiming Rewards](learn-staking#claiming-rewards) section of the Staking wiki page for more details.
 
 ### Step 3: Stop nominating
 

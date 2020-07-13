@@ -98,30 +98,74 @@ Multi-signature accounts have several uses:
 - 董事会决定：商业和基金会等法律实体利用多种方式集体对该实体的财政实行管理。
 - 群组参与治理：多个账户可以做任何正常账户。多账户可以是 Kusama 治理中的一个理事会成员，在那里一组社区成员可以作为一个实体投票。
 
-Multi-signature accounts **cannot be modified after being created**. Changing the set of members or altering the threshold is not possible and instead requires the dissolution of the current multi-sig and creation of a new one. As such, multi-sig account addresses are **deterministic**, i.e. you can always calculate the address of a multi-sig just by knowing the members and the threshold, without the account existing yet. This means one can send tokens to an address that does not exist yet, and if the entities designated as the recipients come together in a new multi-sig under a matching threshold, they will immediately have access to these tokens. Calculating the address of a multi-sig deterministically can be done in TypeScript like so:
+Multi-signature accounts **cannot be modified after being created**. Changing the set of members or altering the threshold is not possible and instead requires the dissolution of the current multi-sig and creation of a new one. As such, multi-sig account addresses are **deterministic**, i.e. you can always calculate the address of a multi-sig just by knowing the members and the threshold, without the account existing yet. This means one can send tokens to an address that does not exist yet, and if the entities designated as the recipients come together in a new multi-sig under a matching threshold, they will immediately have access to these tokens.
 
-```js
-rawAddress(addresses: string[], threshold: number) {
-    const addr = [...addresses]
-    addr.sort()
-    const prefix = 'modlpy/utilisuba'
-    const payload = new Uint8Array(prefix.length + 1 + 32 * addresses.length + 2)
-    payload.set(Array.from(prefix).map(c => c.charCodeAt(0)), 0)
-    payload[prefix.length] = addresses.length << 2;
-    addr.forEach((addr, idx) => {
-        const decoded = decodeAddress(addr);
-        payload.set(decoded, prefix.length + 1 + idx * 32)
-    })
-    payload[prefix.length + 1 + 32 * addresses.length] = threshold
+### Generating Addresses of Multi-signature Accounts
 
-    return blake2AsU8a(payload)
-},
-address(addresses: string[], threshold: number, ss58prefix?: number) {
-    const hashed = this.rawAddress(addresses, threshold)
-    return encodeAddress(hashed, ss58prefix)
-}
+> NOTE: Addresses that are provided to the multi-sig wallets must be sorted. The below methods for generating sort the accounts for you, but if you are implementing your own sorting then be aware that the public keys are compared byte-for-byte and sorted ascending before being inserted in the payload that is hashed.
 
-const multiSigAddress = address(addresses, 2);
+Addresses are deterministically generated from the signers and threshold of the multisig wallet. For a code example (in TypeScript) of generating you can view the internals of `@w3f/msig-util` [here](https://github.com/lsaether/msig-util/blob/master/src/actions/deriveAddress.ts).
+
+The `@w3f/msig-util` is a small CLI tool that can determine the multisignature address based on your inputs.
+
+```zsh
+$ npx @w3f/msig-util@1.0.7 derive --addresses 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr,1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU --threshold 1
+npx: installed 79 in 7.764s
+--------------------------------
+Addresses: 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr 1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU
+Threshold: 1
+Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
+--------------------------------
 ```
 
 The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
+
+### Making Transactions with a Multi-signature Account
+
+There are three types of actions you can take with a multi-sig account:
+
+- Executing a call.
+- Approving a call.
+- Cancelling a call.
+
+In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1` should be used. This function takes only the other signatories and the raw call as its arguments.
+
+However, in anything but the simple one approval case, you will likely need more than one of the signatories to approve the call before finally executing it. When you create a new call or approve a call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the pallet until the call is executed. The reason for the deposit is to place an economic cost on the storage space that the multi-sig call takes up on the chain and discourage users from creating dangling multi-sig operations that never get executed. The deposit will be reserved in the caller's accounts so participants in multi-signature wallets should have spare funds available.
+
+The deposit is dependent on the `threshold` parameter and is calculated as follows:
+
+```
+Deposit = DepositBase + threshold * DepositFactor
+```
+
+Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
+
+Currently, the DepositBase is equal to `deposit(1, 88)` and the DepositFactor is equal to `deposit(0,32)`.
+
+The deposit function in JavaScript is defined below, cribbed from the [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/constants.rs#L26).
+
+```js
+// Polkadot
+const DOLLARS = 10000000000; // planck
+const MILLICENTS = 100000; // planck
+
+// Kusama
+// const DOLLARS = 166666666666.67;
+// const MILLICENTS = 1666666.66;
+
+const deposit = (items, bytes) => {
+  return items * 20 * DOLLARS + bytes * 100 * MILLICENTS;
+};
+
+console.log("DepositBase", deposit(1, 88));
+console.log("DepositFactor", deposit(0, 32));
+```
+
+Thus the deposit values can be calculated as shown in the table below.
+
+|               | Polkadot     | Kusama          |
+| ------------- | ------------ | --------------- |
+| DepositBase   | 200880000000 | 3347999999941.4 |
+| DepositFactor | 320000000    | 5333333312      |
+
+Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob, and Charlie. First Alice will create the call on chain by calling `as_multi` with the raw call. When doing this Alice will have to deposit 0.20152 DOTs while she waits for either Bob or Charlie to also approve the call. When Bob comes to approve the call and execute the transaction, he will not need to place the deposit and Alice will receive her deposit back.
