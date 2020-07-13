@@ -31,7 +31,7 @@ that you have some KSMs to pay for the transaction fees and some will be used fo
 
 ![](/img/recovery/social-recovery-1.png)
 
-Then click the menu that besides the `send` button, and choose `Make recoverable`.
+Then click the menu that is located besides the `send` button, and choose `Make recoverable`.
 
 ![](/img/recovery/social-recovery-2.png)
 
