@@ -37,7 +37,7 @@ Then click the menu that is located besides the `send` button, and choose `Make 
 
 Now you need to provide the following information:
 
-`trusted social recovery helpers` - A list of accounts that you trust can help you when you lost the
+`trusted social recovery helpers` - A list of accounts that you trust. These can help you if you lose the
 private key. Since setting up a recoverable account is required to lock up KSMs, better to ensure
 sure your account has enough transferrable balance for this. As you select more recovery helpers,
 more KSMs will be required to lock up.
