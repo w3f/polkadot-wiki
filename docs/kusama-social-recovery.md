@@ -4,10 +4,10 @@ title: Social Recovery
 sidebar_label: Account Recovery
 ---
 
-Managing an account is not an easy task especially many people have lost their private key due to
-improper key management over the past few years. Kusama provides a method that allows users to
-recover their accounts by setting up a social recovery. It is an M-of-N recovery tool that is based
-on the multisignature wallet to get back the control of your lost account.
+Managing an account is not an easy task. Many people have lost their private key due to improper key
+management over the past few years. Kusama provides a method that allows users to recover their
+accounts by setting up a social recovery. It is an M-of-N recovery tool that is based on the
+multisignature wallet to get back access of your lost account.
 
 > Note: There is no way to get back your private key by using this method. This is just a way of
 > performing transactions on behalf of the lost account, so you can think of it like a proxy
@@ -37,10 +37,10 @@ Then click the menu that is located besides the `send` button, and choose `Make 
 
 Now you need to provide the following information:
 
-`trusted social recovery helpers` - A list of accounts that you trust. These can help you if you lose the
-private key. Since setting up a recoverable account is required to lock up KSMs, better to ensure
-your account has enough transferable balance to cover it. As you select more recovery helpers,
-more KSMs will be required to lock up.
+`trusted social recovery helpers` - A list of accounts that you trust. These can help you if you
+lose the private key. Since setting up a recoverable account is required to lock up KSMs, better to
+ensure your account has enough transferable balance to cover it. As you select additional recovery
+helpers, more KSMs will be required to stay locked up.
 
 `recovery threshold` - The number of friends is required to submit a `vouchRecovery` transaction in
 order to recover the account.
@@ -53,9 +53,9 @@ has passed until you can claim the recovery. This is a protection mechanism to a
 owner to have enough time to check and react in case someone pretends to be you and does a recovery
 process.
 
-> Note: Setting the block delay to be a little longer would be better since even if an attacker acquired enough
-> signatures to recover your account, they would still have to wait until the block delay is passed
-> in order to control your account.
+> Note: Setting the block delay to be a little longer would be better since even if an attacker
+> acquired enough signatures to recover your account, they would still have to wait until the block
+> delay is passed in order to control your account.
 
 ![](/img/recovery/social-recovery-3.png)
 
@@ -68,12 +68,11 @@ held in the lost account to the new account.
 
 The above diagram shows the whole process of recovering an account.
 
-> Note: ensuring that your new account has enough KSM for paying the transaction fees and some are
-> used for reserved when doing the recovery.
+> Note: Ensure that your new account has enough KSM for paying the transaction fees and the amount
+> that is used for reserved when doing the recovery.
 
-First, use your new account that shows in the [Account](https://polkadot.js.org/apps/#/accounts)
-page to initiate a recovery process by clicking the "Initiate recovery for another" option that is
-in the menu besides the send button.
+Navigate to the menu that is located besides the send button in the row of your new account and
+click the "Initiate recover for another" option.
 
 ![](/img/recovery/social-recovery-4.png)
 
@@ -92,8 +91,8 @@ Now call your friends that you have set in the first section. They are required 
 ![](/img/recovery/social-recovery-7.png)
 
 Once the threshold is reached and the block delay is passed, use the new account to submit a
-`claimRecovery` transaction that would set a proxy on behalf of your lost account.
-It means that you can still use the lost account in an indirect way to interact with the network.
+`claimRecovery` transaction that would set a proxy on behalf of your lost account. It means that you
+can still use the lost account in an indirect way to interact with the network.
 
 ![](/img/recovery/social-recovery-8.png)
 
@@ -132,10 +131,9 @@ Congratulation! You have successfully done the recovery process.
 ![](/img/recovery/social-recovery-15.png)
 
 > Note: There is still one possible way to recover the account without going through the recovery
-> process. That is root. However, while using the root permission to perform this action, you will
-> have to go through the governance by convincing the council members to help you to submit a
-> council proposal or submit a public proposal yourself to see whether they will approve it or not.
-> To learn more about governance, see [here](learn-governance).
+> process. That is by using the `Root` origin. However, In order to use root permissions you will
+> need to either go through the council or submit a public proposal. To learn more about governance,
+> see [here](learn-governance).
 
 ## Further Reading
 
