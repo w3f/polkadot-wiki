@@ -16,6 +16,9 @@ If you are making a claim on Polkadot for the first time, please read on below i
 [making a claim](#making-a-claim) section. If you've already claimed during the pre-genesis claims
 period, please proceed to the [attesting to a statement](#attesting-to-a-statement) section instead.
 
+> To learn more on How to claim your DOTs post genesis, check out our walkthrough
+> [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22)
+
 ## Making a Claim
 
 If you did not make a claim in the pre-genesis claims period, then you are able to claim your DOT

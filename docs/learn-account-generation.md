@@ -12,6 +12,9 @@ There are several ways to generate a Polkadot address:
 - [Polkadot.js Web Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
 
+> To learn more on how to create Polkadot accounts, head over to our
+> [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
+
 ## DISCLAIMER: Key Security
 
 Your secret seed is the _only_ way to get access to your account. You must keep the secret both
