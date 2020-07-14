@@ -3,7 +3,7 @@
     "start": "yarn polkadot:start",
     "kusama:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
     "kusama:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
-    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build",
+    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build/kusama-guide-hosting",
     "kusama:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
     "polkadot:start": "yarn mirror; cd website; docusaurus-start",
     "polkadot:build": "BUILDING=true; cd website; docusaurus-build; node ./postprocess",
@@ -16,7 +16,8 @@
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
-    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
+    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "docusaurus": "^1.12.0"
@@ -26,6 +27,8 @@
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^44.3.0",
     "katex": "^0.11.1",
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
     "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
     "yargs": "^15.4.1"

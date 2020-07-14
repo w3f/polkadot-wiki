@@ -72,7 +72,7 @@ let v = setInterval(function () {
         // Init template options for replace-in-file
         const options = {
             files: [
-                `${argv.rootDir}/docs/*/*/index.html`
+                `${argv.rootDir}/docs/**/**/*.html`
             ],
             from: Object.keys(filledDict).map(el => {return new RegExp(el, 'ig')}),
             to: Object.values(filledDict)
