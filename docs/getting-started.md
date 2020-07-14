@@ -17,7 +17,7 @@ For brand-new learners of Blockchain technology:
 For brand-new learners of Polkadot:
 
 - [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Polkadot and it's [User Interface][ui].
+  explain and demonstrate how to use Polkadot and its [User Interface][ui].
 - [Creating a Polkadot Account][account generation]
 - [Sending a Transaction][transaction]
 - [Staking as Nominator][nominator]
