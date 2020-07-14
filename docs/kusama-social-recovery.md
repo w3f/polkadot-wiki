@@ -26,7 +26,7 @@ approve the recovery process in order to recover your account.
 ![](/img/recovery/social-recovery-diag-1.png)
 
 First, go to [PolkadotJS->Accounts](https://polkadot.js.org/apps/#/accounts) page that shows all
-available accounts on your browser's local storage. To create a recoverable account, making sure
+available accounts on your browser's local storage and PolkadotJS extension. To create a recoverable account, make sure
 that you have some KSMs to pay for the transaction fees and some will be used for reserved as well.
 
 ![](/img/recovery/social-recovery-1.png)
