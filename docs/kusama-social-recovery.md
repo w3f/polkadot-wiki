@@ -42,7 +42,7 @@ lose the private key. Since setting up a recoverable account requires you to loc
 your account has enough transferable balance to cover it. As you select additional recovery
 helpers, more KSM will be required.
 
-`recovery threshold` - The number of friends is required to submit a `vouchRecovery` transaction in
+`recovery threshold` - The number of friends required to submit a `vouchRecovery` transaction in
 order to recover the account.
 
 > Note: 1 is the minimum, but it is not recommended to set a small number. If you set 1, that means
