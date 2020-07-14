@@ -86,7 +86,7 @@ Once the transaction went through, some KSMs will be locked to prevent malicious
 ![](/img/recovery/social-recovery-6.png)
 
 Now call your friends that you have set in the first section. They are required to submit a
-`vouchRecovery` transaction that provides the lost and the rescuer address.
+`vouchRecovery` transaction.
 
 ![](/img/recovery/social-recovery-7.png)
 
