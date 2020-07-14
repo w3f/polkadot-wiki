@@ -10,11 +10,13 @@ Esta guía le ayudará en los pasos para hacer una reclamación o dar fe de la d
 
 Si es la primera vez que reclama en Polkadot, por favor, lea más abajo en la sección de [reclamaciones](#making-a-claim). Si ya ha reclamado durante el período de reclamación previo al Génesis, por favor proceda a la sección de [certificar una declaración](#attesting-to-a-statement) en su lugar.
 
+> To learn more on How to claim your DOTs post genesis, check out our walkthrough [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22) and our video on [Claiming DOTs with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+
 ## Hacer la reclamación
 
 Si no hizo la solicitud en el período de reclamación previo a la génesis, entonces puede reclamar sus tokens DOTs después del génesis. No hay límite de tiempo para hacer su reclamación, así que siéntase libre de hacerlo cuando se sienta más cómodo.
 
-> Nota: Cuando haga una reclamación, también dará fe del acuerdo que corresponde a su asignación DOT. Las dos acciones "reclamar" y "atestiguar" se realizan en una sola transacción, pero para la mayor parte de esto se simplifica desde la perspectiva del usuario.
+> Note: When you make a claim, you will also attest to the agreement that corresponds to your DOT allocation. The two actions "claim" and "attest" are done in a single transaction, but for the most part this is simplified from the perspective of the user.
 
 ### Lo que necesitarás
 
@@ -26,7 +28,7 @@ Ya deberías tener tu cuenta en Ethereum que tiene los tokens del indicador DOT 
 
 [MyCrypto][] es una cartera versátil que admite una variedad de métodos de almacenamiento para su cuenta de Ethereum. Vaya a su página de descargas y asegúrese de descargar la última versión para su sistema operativo. Esto es importante porque la última versión siempre tendrá los últimos parches de seguridad.
 
-> **AVISO**: Es mucho más seguro descargar y usar la aplicación MyCrypto localmente. Siempre puedes encontrar las versiones más actualizadas de la aplicación de escritorio en su [página de versiones][mycrypto].
+> **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
 
 Necesitarás una cuenta Polkadot para reclamar tus DOTs. Por favor, sigue las instrucciones de la página \[generación de la cuenta\]\[\] para generar una nueva cuenta Polkadot.
 
