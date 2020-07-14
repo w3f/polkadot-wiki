@@ -19,7 +19,7 @@ need to be aware of when using it.
 ## Create a Recoverable Account
 
 You will use your existing account to call `createRecovery` to select a list of accounts that you
-trust to help you recover the account when you lost the private key. To create a recoverable
+trust to help you recover the account when you lose the private key. To create a recoverable
 account, you will be required to set a `threshold` that is the number of your friends who need to
 approve the recovery process in order to recover your account.
 
