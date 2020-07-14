@@ -50,7 +50,7 @@ order to recover the account.
 
 `recovery block delay` - Once the threshold is reached, you will need to wait until the block delay
 has passed until you can claim the recovery. This is a protection mechanism to allow the account
-owner to have enough time to check and react in case someone pretends to be you and does a recovery
+owner to have enough time to check and react in case someone pretends to be you and initiates a recovery
 process.
 
 > Note: Setting the block delay to be a little longer would be better since even if an attacker
