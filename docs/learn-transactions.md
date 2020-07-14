@@ -5,7 +5,7 @@ sidebar_label: Transactions
 ---
 
 Transactions are used to send a balance to another user. To begin sending transactions, we will
-learn how to using Polkadot User Interface.
+learn how to begin sending transactions by using the Polkadot User Interface.
 
 ## Polkadot UI
 
