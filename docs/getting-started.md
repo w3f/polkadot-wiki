@@ -18,6 +18,8 @@ For brand-new learners of Polkadot:
 
 - [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
   explain and demonstrate how to use Polkadot and its [User Interface][ui].
+- Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
+  articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
 - [Creating a Polkadot Account][account generation]
 - [Sending a Transaction][transaction]
 - [Staking as Nominator][nominator]
@@ -35,6 +37,9 @@ network, please head over to our [Kusama Guide][kusama guide].
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [teched videos]: https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8
+[article]: https://medium.com/polkadot-network/what-is-polkadot-a-brief-introduction-ca3eac9ddca5
+[p medium]: https://medium.com/polkadot-network
+[w medium]: https://medium.com/web3foundation
 [ui]: https://polkadot.js.org/apps/
 [account generation]: learn-account-generation
 [transaction]: learn-transactions
