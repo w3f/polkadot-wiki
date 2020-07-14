@@ -307,7 +307,7 @@ calculated per era (approximately six hours on Kusama and twenty-four hours on P
 rewards will be calculated four times per day on Kusama and once per day on Polkadot.
 
 Rewards are calculated based on era points, which have a probabilistic component. In other words,
-there may be slight differences in your rewards from era and era, and even amongst validators in the
+there may be slight differences in your rewards from era to era, and even amongst validators in the
 active set at the same time. These variations should cancel out over a long enough timeline. See the
 page on [Validator Payout Guide](maintain-guides-validator-payout) for more information on how these
 are calculated.
