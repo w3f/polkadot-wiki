@@ -113,7 +113,7 @@ someone tried to initiate recovery on your account, you can do this to slash the
 
 ![](/img/recovery/social-recovery-11.png)
 
-Moving on, by using the "asRecovered" to submit the `removeRecovery` transaction on behalf of the
+Moving on, we use the `asRecovered` function to submit the `removeRecovery` transaction on behalf of the
 lost account to release the reserved KSM from your lost account.
 
 ![](/img/recovery/social-recovery-12.png)
