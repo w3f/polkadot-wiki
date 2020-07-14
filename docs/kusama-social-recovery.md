@@ -108,7 +108,7 @@ your lost account to get the locked KSM.
 ![](/img/recovery/social-recovery-10.png)
 
 Once the transaction goes through, the reserved KSM from the "NEW-ACC" will have been moved to the lost
-account. This is a way of preventing someone from recoversing other accounts maliciously. Imagine if
+account. This is a way of preventing someone from recovering other accounts maliciously. Imagine if
 someone tried to initiate recovery on your account, you can do this to slash their locked KSM.
 
 ![](/img/recovery/social-recovery-11.png)
