@@ -102,7 +102,7 @@ your lost account.
 
 ![](/img/recovery/social-recovery-9.png)
 
-Next, in order to call the "closeRecovery" transaction, you can make use of the "asRecovered" as
+Next, in order to call the "closeRecovery" transaction, you can make use of the "asRecovered" function as
 your lost account to get the locked KSM.
 
 ![](/img/recovery/social-recovery-10.png)
