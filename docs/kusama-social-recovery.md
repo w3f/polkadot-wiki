@@ -38,9 +38,9 @@ Then click the menu that is located besides the `send` button, and choose `Make 
 Now you need to provide the following information:
 
 `trusted social recovery helpers` - A list of accounts that you trust. These can help you if you
-lose the private key. Since setting up a recoverable account is required to lock up KSMs, better to
-ensure your account has enough transferable balance to cover it. As you select additional recovery
-helpers, more KSMs will be required to stay locked up.
+lose the private key. Since setting up a recoverable account requires you to lock up KSM, ensure 
+your account has enough transferable balance to cover it. As you select additional recovery
+helpers, more KSM will be required.
 
 `recovery threshold` - The number of friends is required to submit a `vouchRecovery` transaction in
 order to recover the account.
