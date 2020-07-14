@@ -17,9 +17,14 @@ Validators assume the role of producing new blocks in [BABE](learn-consensus#bab
 parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
 their stake.
 
-The staking system pays out rewards equally to all validators. Distribution of the rewards are
-pro-rata to all stakers after the validator payment is deducted. In this way, the network incents
-the nomination of lower-staked validators to create an equally-staked validator set.
+The staking system pays out rewards equally to all validators regardless of stake. In other words,
+having more stake on a validator does not influence the block rewards they receive. However, there
+is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly
+equal for all validators in a given era.
+
+Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In
+this way, the network incents the nomination of lower-staked validators to create an equally-staked
+validator set.
 
 ## How does staking work in Polkadot?
 
@@ -80,13 +85,14 @@ accurate since staking participation is changing dynamically, it works well as a
 ### 4. Rewards Mechanism
 
 We highlight two features of this payment scheme. The first is that since validator pools are paid
-the same, pools with less stake will pay more to nominators per-DOT than pools with more stake. We
-thus give nominators an economic incentive to gradually shift their preferences to lower staked
-validators that gain a sufficient amount of reputation. The reason for this is that we want the
-stake across validator pools to be as evenly distributed as possible, to avoid a concentration of
-power among a few validators. In the long term, we expect all validator pools to have similar levels
-of stake, with the stake being higher for higher reputation validators (meaning that a nominator
-that is willing to risk more by backing a validator with a low reputation will get paid more).
+the same regardless of stake level, pools with less stake will generally pay more to nominators
+per-DOT than pools with more stake. We thus give nominators an economic incentive to gradually shift
+their preferences to lower staked validators that gain a sufficient amount of reputation. The reason
+for this is that we want the stake across validator pools to be as evenly distributed as possible,
+to avoid a concentration of power among a few validators. In the long term, we expect all validator
+pools to have similar levels of stake, with the stake being higher for higher reputation validators
+(meaning that a nominator that is willing to risk more by backing a validator with a low reputation
+will get paid more).
 
 The following example should clarify the above. For simplicity, we have the following assumptions:
 
@@ -299,6 +305,12 @@ Polkadot will also produce blocks at approximately six second intervals.
 Rewards are recorded per session (approximately one hour on Kusama and four hours on Polkadot) and
 calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). Thus,
 rewards will be calculated four times per day on Kusama and once per day on Polkadot.
+
+Rewards are calculated based on era points, which have a probabilistic component. In other words,
+there may be slight differences in your rewards from era and era, and even amongst validators in the
+active set at the same time. These variations should cancel out over a long enough timeline. See the
+page on [Validator Payout Guide](maintain-guides-validator-payout) for more information on how these
+are calculated.
 
 In order to be paid your staking rewards, someone must claim them for each validator that you
 nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot
