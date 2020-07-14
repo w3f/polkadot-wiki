@@ -69,7 +69,7 @@ held in the lost account to the new account.
 The above diagram shows the whole process of recovering an account.
 
 > Note: Ensure that your new account has enough KSM to pay for the transaction fees and the amount
-> that is used for reserved when doing the recovery.
+> that is used for reserve when doing the recovery.
 
 Navigate to the menu that is located besides the send button in the row of your new account and
 click the "Initiate recover for another" option.
