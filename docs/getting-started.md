@@ -17,7 +17,7 @@ For brand-new learners of Blockchain technology:
 For brand-new learners of Polkadot:
 
 - [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Polkadot and it's [User Interface][ui].
+  explain and demonstrate how to use Polkadot and its [User Interface][ui].
 - [Creating a Polkadot Account][account generation]
 - [Sending a Transaction][transaction]
 - [Staking as Nominator][nominator]
@@ -36,7 +36,7 @@ network, please head over to our [Kusama Guide][kusama guide].
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [teched videos]: https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8
 [ui]: https://polkadot.js.org/apps/
-[account generation]: https://example.com
+[account generation]: learn-account-generation
 [transaction]: learn-transactions
 [nominator]: maintain-guides-how-to-nominate-polkadot
 [validator]: maintain-guides-how-to-validate-polkadot
