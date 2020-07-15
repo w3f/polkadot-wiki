@@ -14,7 +14,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "kusama-claims", label: "Get Started" },
+    { doc: "kusama-getting-started", label: "Get Started" },
     { doc: "kusama-index", label: "Docs" },
     { search: true },
     { languages: true },
