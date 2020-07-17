@@ -64,7 +64,7 @@ your account has been restored. That's it!
 
 ### Using an existing Mnemonic Seed to restore an Account
 
-If you've already created an account but are looking to have it backed up, you can do that by using
+If you've already created an account but are looking to have it restored, you can do that by using
 the Polkadot.js UI and the existing mnemonic seed.
 
 To start, you'll need to open up the [Polkadot.js UI](https://polkadot.js.org/apps) and head over to
