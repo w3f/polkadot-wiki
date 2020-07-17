@@ -22,6 +22,9 @@ intermediaries and build a trustless infrastructure. The Polkadot network is hea
 future by building a secure ecosystem for decentralized applications (built with blockchain
 technology) to communicate and interact in.
 
+> To understand more of the Web3 movement, check out this video from the
+> [Web3 Summit](https://youtu.be/l44z35vabvA)
+
 ## Why Polkadot?
 
 Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a
@@ -57,6 +60,9 @@ Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility
 The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each
 other. The shared security and validation logic of the Relay Chain provide the environment for
 trust-free message passing that opens up true interoperability.
+
+> To watch a short, beginner-friendly animation on Polkadot, check out our
+> [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA&t=9s)
 
 ## Why should you use Polkadot?
 
