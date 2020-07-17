@@ -71,13 +71,15 @@ To start, you'll need to open up the [Polkadot.js UI](https://polkadot.js.org/ap
 the accounts tab. Click on the "Add Account" button, and fill out with the prompted details: a name
 for the account, a password, and be sure to replace the generated mnemonic seed with your _existing
 seed_. Note here that when you replace the generated mnemonic seed with your existing one, you
-aren't actually creating a new account, rather adding that account onto the Polkadot.js UI.
+aren't actually creating a new account, rather adding that account onto the Polkadot.js UI. It is
+also important to note that the name and the password of this added account can be set to whatever
+you'd like, it does not need to be that specific accounts name and password when created.
 
 ![restore-using-json](assets/accounts/polkadot-js-existing-json.png)
 
 Now that those details have been filled in, you will need to click on the "Save" button. This will
-prompt a screen to appear. To back up your existing account, press on the "Create and backup account"
-button. This will download the `.json` file which contains the data to be used in account
+prompt a screen to appear. To back up your existing account, press on the "Create and backup
+account" button. This will download the `.json` file which contains the data to be used in account
 restoration.
 
 There we go! Now you've successfully restored and backed up your account using its mnemonic seed.
