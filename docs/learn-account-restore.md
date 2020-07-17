@@ -76,7 +76,7 @@ aren't actually creating a new account, rather adding that account onto the Polk
 ![restore-using-json](assets/accounts/polkadot-js-existing-json.png)
 
 Now that those details have been filled in, you will need to click on the "Save" button. This will
-prompt a screen to appear. To backup your existing account, press on the "Create and backup account"
+prompt a screen to appear. To back up your existing account, press on the "Create and backup account"
 button. This will download the `.json` file which contains the accounts data to be used in account
 restoration.
 
