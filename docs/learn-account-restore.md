@@ -80,7 +80,7 @@ prompt a screen to appear. To back up your existing account, press on the "Creat
 button. This will download the `.json` file which contains the data to be used in account
 restoration.
 
-There we go! Now you've successfully backed up your existing account with its mnemonic seed.
+There we go! Now you've successfully restored and backed up your account using its mnemonic seed.
 
 ## Parity Signer
 
