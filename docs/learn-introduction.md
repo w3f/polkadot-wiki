@@ -17,9 +17,9 @@ where the Web 3.0 comes into the picture.
 
 The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free
 protocols. The goal is to transform the internet into a decentralized web, where users control their
-own data and identity in a trust-free environment. The Web 3.0 movement aims to removing
-intermediaries and building a trustless infrastructure. The Polkadot network is heading towards that
-future by building a secure ecosystem for decentralized applications (built with Blockchain
+own data and identity in a trust-free environment. The Web 3.0 movement aims to remove
+intermediaries and build a trustless infrastructure. The Polkadot network is heading towards that
+future by building a secure ecosystem for decentralized applications (built with blockchain
 technology) to communicate and interact in.
 
 ## Why Polkadot?
