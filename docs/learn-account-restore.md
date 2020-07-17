@@ -64,15 +64,23 @@ your account has been restored. That's it!
 
 ### Using an existing Mnemonic Seed to backup an Account
 
-If you've already created an account but are looking to have it backed up, you can do that by using the Polkadot.js UI and the existing mnemonic seed. 
+If you've already created an account but are looking to have it backed up, you can do that by using
+the Polkadot.js UI and the existing mnemonic seed.
 
-To start, you'll need to open up the [Polkadot.js UI](https://polkadot.js.org/apps) and head over to the accounts tab. Click on the "Add Account" button, and fill out with the prompted details: a name for the account, a password, and be sure to replace the generated mnemonic seed with your _existing seed_. Note here that when you replace the generated mnemonic seed with your existing one, you aren't actually creating a new account, rather adding that account onto the Polkadot.js UI. 
+To start, you'll need to open up the [Polkadot.js UI](https://polkadot.js.org/apps) and head over to
+the accounts tab. Click on the "Add Account" button, and fill out with the prompted details: a name
+for the account, a password, and be sure to replace the generated mnemonic seed with your _existing
+seed_. Note here that when you replace the generated mnemonic seed with your existing one, you
+aren't actually creating a new account, rather adding that account onto the Polkadot.js UI.
 
 ![restore-using-json](assets/accounts/polkadot-js-existing-json.png)
 
-Now that those details have been filled in, you will need to click on the "Save" button. This will prompt a screen to appear. To backup your existing account, press on the "Create and backup account" button. This will download the `.json` file which contains the accounts data to be used in account restoration.
+Now that those details have been filled in, you will need to click on the "Save" button. This will
+prompt a screen to appear. To backup your existing account, press on the "Create and backup account"
+button. This will download the `.json` file which contains the accounts data to be used in account
+restoration.
 
-There we go! Now you've successfully backed up your existing account with its mnemonic seed. 
+There we go! Now you've successfully backed up your existing account with its mnemonic seed.
 
 ## Parity Signer
 
