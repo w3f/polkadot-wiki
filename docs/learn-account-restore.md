@@ -62,7 +62,7 @@ your account has been restored. That's it!
 
 ![restore-complete-polkadot](assets/accounts/polkadot_restore_complete.png)
 
-### Using an existing Mnemonic Seed to backup an Account
+### Using an existing Mnemonic Seed to restore an Account
 
 If you've already created an account but are looking to have it backed up, you can do that by using
 the Polkadot.js UI and the existing mnemonic seed.
