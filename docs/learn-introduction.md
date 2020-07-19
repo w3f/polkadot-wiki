@@ -62,7 +62,7 @@ other. The shared security and validation logic of the Relay Chain provide the e
 trust-free message passing that opens up true interoperability.
 
 > To watch a short, beginner-friendly animation on Polkadot, check out our
-> [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA&t=9s)
+> [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
 
 ## Why should you use Polkadot?
 
