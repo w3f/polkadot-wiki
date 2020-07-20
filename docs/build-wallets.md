@@ -31,3 +31,4 @@ necessarily imply endorsement of that wallet.
 | [ImToken](https://token.im/)                                       | Building          | ImToken     | IOS and Android                     |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                          |
+| [Ownbit](https://ownbit.io/)                                       | Building          | Ownbit      | IOS and Android                     |
