@@ -163,7 +163,7 @@
   /* border-radius: 10px; */
 }
 
-.nav-site > :nth-child(4) a:hover {
+.nav-site > :nth-child(5) a:hover {
   background-color: transparent !important;
   color: #e6007a !important;
 }
