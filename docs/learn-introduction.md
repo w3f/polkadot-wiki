@@ -5,7 +5,7 @@ sidebar_label: Polkadot
 ---
 
 Back in the early 2000's, when the internet was gaining popularity for the first time, the internet
-featured read-only, static, basic webpages. The online connected world at the time was just the
+featured read-only, static, basic webpages. The online connected world at the time was only the
 beginning of virtual data, identities, and more. The internet during this time was also called the
 Web 1.0.
 
@@ -22,7 +22,7 @@ intermediaries and build a trustless infrastructure. The Polkadot network is hea
 future by building a secure ecosystem for decentralized applications (built with blockchain
 technology) to communicate and interact in.
 
-> To understand more of the Web3 movement, check out this video from the
+> To learn more of the Web3 movement, check out this video from the
 > [Web3 Summit](https://youtu.be/l44z35vabvA)
 
 ## Why Polkadot?
@@ -66,10 +66,10 @@ trust-free message passing that opens up true interoperability.
 
 ## Why should you use Polkadot?
 
-Whether you're a programmer or if you're interested in taking part of Polkadot's community, Polkadot
-offers a platform for everyone. This Wiki offers a place for Builders and Maintainers to utilize
-tools and for brand-new learners to dive into material. In fact, the best place to start is the
-[Getting Started](getting-started) page.
+Whether you're a blockchain developer or if you're interested in taking part of Polkadot's
+community, Polkadot offers a platform for everyone. This Wiki offers a place for Builders and
+Maintainers to utilize tools and for brand-new learners to dive into material. In fact, the best
+place to start is the [Getting Started](getting-started) page.
 
 ## Digging deeper
 
