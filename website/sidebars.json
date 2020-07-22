@@ -4,7 +4,7 @@
       "index",
       "community",
       "contributing",
-      "guides",
+      "getting-started",
       "glossary",
       "research",
       "grants",
@@ -29,6 +29,7 @@
           "learn-bridges",
           "learn-parachains",
           "learn-parathreads",
+          "learn-transactions",
           "learn-transaction-fees",
           "learn-polkadot-host",
           "learn-treasury"

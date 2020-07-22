@@ -218,6 +218,6 @@ A public chat room on Riot to talk about anything about the society.
 information and allowing you to directly place a bid if you have installed the
 [PolkadotJS extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd).
 
-[substrate society]: https://substrate.dev/rustdocs/master/pallet_society/index.html
+[substrate society]: https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_society/index.html
 [kappa rules]:
   https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17

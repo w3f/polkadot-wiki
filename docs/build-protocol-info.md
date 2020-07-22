@@ -57,7 +57,7 @@ make the transfer if doing so would result in reaping the sender's account.
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
 Account balance information is stored in
-[`AccountData`](https://substrate.dev/rustdocs/master/pallet_balances/struct.AccountData.html).
+[`AccountData`](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_balances/struct.AccountData.html).
 Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in
@@ -79,8 +79,8 @@ over time until all the funds are transferable.
 
 More info:
 
-- [Lockable Currency](https://substrate.dev/rustdocs/master/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/master/frame_support/traits/enum.WithdrawReason.html)
+- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0-rc4/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0-rc4/frame_support/traits/enum.WithdrawReason.html)
 - [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
