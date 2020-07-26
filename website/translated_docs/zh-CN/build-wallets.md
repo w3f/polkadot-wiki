@@ -18,6 +18,7 @@ The integration of a [wallet](https://wiki.polkadot.network/docs/en/glossary#wal
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android                     |
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                   |
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
+| [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                     |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
@@ -25,7 +26,6 @@ The integration of a [wallet](https://wiki.polkadot.network/docs/en/glossary#wal
 | [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension                   |
 | [AirGap](https://airgap.it/)                                       | Building          | AirGap      | IOS and Android                     |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
-| [ImToken](https://token.im/)                                       | Building          | ImToken     | IOS and Android                     |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                          |
 | [Ownbit](https://ownbit.io/)                                       | Building          | Ownbit      | IOS and Android                     |
