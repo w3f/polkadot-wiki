@@ -43,7 +43,7 @@ Wallets and custodians who track account nonces for auditing purposes should tak
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
-Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/master/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
+Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in staking and governance, for example. Reserved balance represents funds that have been set aside by some operation and still belong to the account holder, but cannot be used.
 
@@ -55,8 +55,8 @@ Vesting is another abstraction that uses locks on free balance. Vesting sets a l
 
 More info:
 
-- [Lockable Currency](https://substrate.dev/rustdocs/master/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/master/frame_support/traits/enum.WithdrawReason.html)
+- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0-rc4/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0-rc4/frame_support/traits/enum.WithdrawReason.html)
 - [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
