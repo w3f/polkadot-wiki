@@ -4,7 +4,7 @@ title: Set up Secure WebSocket for Remote Connections
 sidebar_label: Set up Secure WebSocket for Remote Connections
 ---
 
-You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [PolakdotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
+You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [PolkadotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
 
 _Note: this should **only** be done for sync nodes used as back-end for some dapps or projects. Never open websockets to your validator node - there's no reason to do that and it can only lead to security gaffes!_
 
