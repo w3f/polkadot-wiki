@@ -4,7 +4,7 @@ title: Затребовать Kusama
 sidebar_label: Затребовать
 ---
 
-Сеть Kusama является экспериментальной сетью Polkadot's, ориентированной на сообщества R&D. Если Вы являетесь держателем токенов DOT, то Вы имеете право требовать эквивалентное количество KSM в сети Kusama. Это сделано для того, чтобы сеть Kusama совпала с существующими держателями и сообществом DOT.
+The Kusama network is Polkadot's experimental, community-focused R&D network. If you held the DOT indicator token at the time of the genesis block of Kusama, you are entitled to claim an equivalent amount of KSM on the Kusama network.
 
 You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
 
