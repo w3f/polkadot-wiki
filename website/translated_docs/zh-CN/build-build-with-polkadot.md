@@ -103,8 +103,7 @@ It handles the network compatibility overhead that any parachain would need to i
 - Polkadot 出块者兼容性。
 - Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with minimal modification, possibly as little work as importing a crate and adding a single line.
 
-Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced Cumulus, which you can watch below.
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/thgtXq5YMOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe> <iframe width="560" height="315" >
+Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced Cumulus, which you can watch below. <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/thgtXq5YMOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ### 如何在 Polkadot 中部署平行链或平行线程。
 
@@ -162,7 +161,7 @@ Deploying your smart contract on chain will vary slightly for whichever specific
 
 Each platform will have a different way of paying for and maintaining the state of your smart contract.
 
-你可能会看到支付智能合约不同的模式包括以下：
+The different patterns you may see for paying for your smart contract include:
 
 - 与部署交易关联的交易费用
 - 订阅方式，你可以定期支付到该平台作费用
@@ -186,4 +185,4 @@ This guide has given you a mental model and shown the requisite resources to hel
 
 If you have interesting ideas for parachains or smart contracts on Polkadot feel free to drop in to the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) to talk about them. Developers may be interested in joining the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their questions. As always, keep up to date with Polkadot by following the [social channels](community).
 
-祝你好运！
+Good luck!
