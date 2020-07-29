@@ -103,30 +103,29 @@ Substrate comes with its own networking layer built-in but unfortunately only su
 - Совместимость с блоками Polkadot.
 - Интеграция Cumulus с Вашей Substrate цепочкой портирует его в парачейн, способный работать на Polkadot с минимальными модификациями, возможно, с такой же незначительной доработкой, как импорт крейта и добавление одной строки.
 
-Rob Habermeier, соучредитель Polkadot, в прошлом году выступил с докладом на EthCC, в котором представил Cumulus, который Вы можете посмотреть ниже.
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/thgtXq5YMOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe> <iframe width="560" height="315" >
+Rob Habermeier, соучредитель Polkadot, в прошлом году выступил с докладом на EthCC, в котором представил Cumulus, который Вы можете посмотреть ниже. <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/thgtXq5YMOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ### Как развернуть парачейн или паратрид в Polkadot
 
 #### Парачейн
 
-Для того чтобы включить Ваш парачейн в сеть Polkadot, Вам нужно будет приобрести слот парачейн.
+In order to include your parachain into the Polkadot network, you will need to acquire a parachain slot.
 
-Слоты парачейна будут продаваться на открытых аукционах, механику аукционов можно найти на странице вики [парачейн аукционы](learn-auction).
+Parachain slots will be sold in open auctions, the mechanics of which can be found on the [parachain auction](learn-auction) page of the wiki.
 
 #### Паратрид
 
-Паратрид не потребует слота парачейна, поэтому Вам не нужно будет приобретать его на аукционе. Вместо этого вы сможете зарегистрировать паратрид код в релейной цепи за вознаграждение и с этого момента сможете начать участвовать в аукционах за каждый блок для включения Вашего состояния перехода в релейную цепь.
+Parathreads will not require a parachain slot, so you will not need to engage in the candle auction mechanism. Instead, you will be able to register your parathread code to the Relaychain for a fee and from then be able to start participating in the per-block auctions for inclusion of your state transition into the Relaychain.
 
-Более подробную информацию о том, как работает паратрид на аукционах за каждый блок, смотрите в более подробном описании [параттред](learn-parathreads).
+For more information on how parathread per-block auctions work, see the more detailed [parathread](learn-parathreads) page.
 
 ## Итак Вы хотите создать смарт-контракт...
 
 The Polkadot Relay Chain itself will not support smart contracts. However, since the parachains that connect to Polkadot can support arbitrary state transitions, they can support smart contracts. Builders of smart contracts can use these options when they become available. Today, it's possible to start development using a local development chain and later deploy to a live environment when the technology matures.
 
-Субстрат поддерживает смарт-контракты из коробки двумя способами. Один из способов-это использование предоставлен паллетом [Контракты](https://github.com/paritytech/substrate/tree/master/frame/contracts) в библиотеке FRAME. Второй путь - использование Substrate [EVM паллет](https://github.com/paritytech/substrate/tree/master/frame/evm) для развёртывания EVM на основе байт-кода скомпилированная с Solidity или Vyper и используя инструменты, доступные из стека Ethereum.
+Substrate supports smart contracts out-of-the-box in two ways. One way is using the provided [Contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) pallet in the FRAME library. The second way is using the Substrate [EVM pallet](https://github.com/paritytech/substrate/tree/master/frame/evm) to deploy EVM-based bytecode compiled from Solidity or Vyper and using tools available from the Ethereum stack.
 
-Опыт развертывания в цепочке на основе EVM может быть хорошо знаком разработчикам, которые ранее писали смарт-контракт. Тем не менее, паллет Контракты вносит некоторые заметные улучшения в конструкцию EVM. А именно такие:
+The experience of deploying to an EVM-based chain may be more familiar to developers that have written smart contract before. However, the Contracts pallet makes some notable improvements to the design of the EVM. Namely these are:
 
 1. **Wasm**. В качестве цели компиляции паллет Контракты использует WebAssembly. Любой язык, который компилируется в Wasm, потенциально может быть использован для написания смарт-контрактов. Хотя лучше иметь специфичный проблемно-ориентированный язык, поэтому Parity предлагает язык [ink!](#ink).
 
@@ -134,15 +133,15 @@ The Polkadot Relay Chain itself will not support smart contracts. However, since
 
 3. **Кэширование**. Контракты кэшируются по умолчанию и поэтому они должны быть развернуты только один раз, а затем создаваться столько раз, сколько Вы хотите. Это помогает свести нагрузку за хранение на цепочку к минимуму. Кроме того, когда контракт больше не используется и _экзистенциальный депозит_ истощается, код будет стерт из хранилища (известного как жатва).
 
-Скорее всего, Вы захотите создать локальную тестовую среду, чтобы начать писать свои смарт-контракты. Это может быть сделано с помощью узла Substrate с одним из двух паллет смарт-контрактов в том числе. После разработки Вы захотите изучить такие проекты, как [Edgeware])(#edgeware) для развертывания Вашего смарт-контракта в живой среде.
+You will likely want to set up a local test environment to start writing your smart contracts. This can be done using a Substrate node with one of the two smart contracts pallets including. After development you will want to look into projects such as [Edgware])(#edgeware) for deploying your smart contract to a live environment.
 
 ### Edgeware
 
-Один из проектов, который сегодня работает с палеттами смарт-контрактов, - это [Edgeware](https://edgewa.re). Edgeware - это общедоступная платформа для смарт-контрактов, которая проводит эксперименты с ончейн управлением. В настоящее время это лучший вариант для разработчиков, которые создают свои смарт-контракты и хотят внедрить их в живую среду.
+One project that is live today with the smart contracts pallet is [Edgeware](https://edgewa.re). Edgeware is a permissionless platform for smart contracts and is conducting experiments with on-chain governance. It is currently the best option for developers who have created their smart contracts and want to deploy to a live environment.
 
-Edgeware намеревается в какой-то момент подключиться к Polkadot в качестве парачейна, который позволяет использовать смарт-контракты. На данный момент смарт-контракты смогут взаимодействовать с другими частями экосистемы Polkadot через [XCMP](learn-crosschain).
+Edgeware intends to at some point connect to Polkadot as a parachain that allows for smart contracts. At this point, the smart contracts would be able to interact with other pieces of the Polkadot ecosystem through [XCMP](learn-crosschain).
 
-Документация по Edgeware находится [здесь](https://docs.edgewa.re/).
+Edgeware documentation can be found [here](https://docs.edgewa.re/).
 
 ### Ink!
 
@@ -150,19 +149,19 @@ Edgeware намеревается в какой-то момент подключ
 
 For interested developers, they can get started writing smart contracts using ink! by studying the [examples](https://github.com/paritytech/ink/tree/master/examples) that were already written. These can be used as guideposts to writing more complex logic that will be deployable on smart contract parachains.
 
-ink! заложил большую часть фундамента для нового стека смарт-контрактов, основанного на виртуальной машине Wasm и совместимый с цепями Substrate.
+ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and compatible with Substrate chains.
 
 ## Развёртывание Вашего смарт-контракта
 
-Смарт-контракт - это просто некоторый код, который существует по адресу в цепочке и вызывается внешними участниками. Ключевая часть заключается в том, что Вы на самом деле должны поместить код в цепочку, прежде чем кто-либо сможет начать его выполнять!
+A smart contract is simply some code that exists at an address on a chain and is callable by external actors. The key part is that you actually have to put the code on chain before anyone can start executing it!
 
-Развёртывание Вашего смарт-контракта в цепочке будет незначительно отличаться в зависимости от того, какой конкретный парачейн Вы будете использовать, но в целом Вы отправите специальную транзакцию, которая создаст смарт-контракт в главной книге. Скорее всего, вам придется заплатить соответствующую плату за инициализацию логики и любое хранилище, которое используется в Вашем контракте.
+Deploying your smart contract on chain will vary slightly for whichever specific parachain you will use, but generally you will send a special transaction that will create the smart contract on the ledger. You will likely need to pay an associated fee for the initialization logic and any storage that your contract consumes.
 
 ## Оплата Вашего смарт-контракта
 
-Каждая платформа имеет различные способы оплаты и поддержания состояния Вашего смарт- контракта.
+Each platform will have a different way of paying for and maintaining the state of your smart contract.
 
-Различные шаблоны, которые вы можете увидеть для оплаты смарт-контракта, включают:
+The different patterns you may see for paying for your smart contract include:
 
 - Комиссионный сбор, связанный с развертыванием каждой транзакции.
 - Модель подписки, в которой Вы оплачиваете некоторую плату за использование платформы.
@@ -170,11 +169,11 @@ ink! заложил большую часть фундамента для нов
 - Бесплатная пробная версия или промо-акция от разработчика.
 - Большинство платформ смарт-контрактов используют ту или иную форму газа, чтобы ограничить количество операций, которые пользователь может выполнять. Пользователи будут обязаны платить за газ авансом и получат возврат за то, что они не используют.
 
-Вам нужно будет учитывать хранение и сложность Вашего смарт-контракта, чтобы гарантировать, что использование газа остается в разумных пределах. Хранение данных, скорее всего, будет дорогостоящим для любой платформы смарт-контрактов, которую Вы используете, поэтому необходимо сохранить как можно больше данных вне цепочки. Вы можете рассмотреть возможность использования [IPFS](https://ipfs.io/) или [Storj](http://storj.io/) для сохранения данных и отправки только адреса содержимого по цепочке.
+You will need to consider the storage and complexity of your smart contract to ensure that gas usage stays within reasonable bounds. Storage will likely be expensive for whichever smart contract platform you use, so it is necessary to keep as much data off-chain as possible. You may consider using [IPFS](https://ipfs.io/) or [Storj](https://storj.io/) to keep the data and submitting only the content address on chain.
 
 ### До сих пор мы на раннем этапе
 
-Пока смарт-контракты на Polkadot ещё в ранней стадии, и развитие только сейчас стабилизируется. Мы активно создаем контент, чтобы помочь разработчикам войти в курс дела и поддерживать вики с самыми последними ресурсами. Вы также должны быть в курсе следующих ссылок:
+It’s still very early for smart contracts on Polkadot and the development is only now stabilizing. We are actively producing content to help developers get up to speed and will maintain the wiki with the latest resources. You should also keep up to date with the following links:
 
 - [Edgeware](https://edgewa.re).
 - [ink!](https://github.com/paritytech/ink). (Следите за контентом на вкладке вики.)
@@ -182,8 +181,8 @@ ink! заложил большую часть фундамента для нов
 
 ## Заключение
 
-Это руководство дало Вам ментальную модель и показало необходимые ресурсы, чтобы помочь Вам определить и уже сегодня начать реализацию Вашего проекта как парачейна, паратрида или смарт-контракта. Несмотря на то, что инструментарий всё ещё не зрелый, преимуществом раннего появления будет знакомство и фора в Вашем проекте, что позволит Вам внедрять инновации и создавать что-то действительно новое.
+This guide has given you a mental model and shown the requisite resources to help you determine and start building your project as a parachain or smart contract today. Even though the tooling is still maturing, the advantage of being early will be the familiarity and head start on your project, allowing you to innovate and create something truly new.
 
-Если у Вас есть интересные идеи для парачейнов или смарт-контрактов на Polkadot, не стесняйтесь заглянуть в [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org), чтобы поговорить о них. Разработчики могут быть заинтересованы в присоединении к <а href="https://riot.im/app/#/room/#polkadotnoobs:matrix.org">Polkadot Beginners Lounge</a> или [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org), чтобы задать свои вопросы. Как всегда, будьте в курсе событий с Polkadot, следуя за <a href= "community">социальными каналами</a>.
+If you have interesting ideas for parachains or smart contracts on Polkadot feel free to drop in to the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) to talk about them. Developers may be interested in joining the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their questions. As always, keep up to date with Polkadot by following the [social channels](community).
 
-Удачи!
+Good luck!
