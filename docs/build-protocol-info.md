@@ -10,8 +10,38 @@ practical information for dealing with the chain.
 
 ## DOT Tokens
 
-- **Token decimals:** 12
+- **Token decimals:** See [Redenomination](#redenomination)
+- **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
+
+### Redenomination
+
+Polkadot conducted a poll, which ended on 27 July 2020 (block 888,888), in which the stakeholders
+decided to redenominate the DOT token. The redenomination does not change the number of base units
+(called "plancks" in Polkadot) in the network. The only change is that a single DOT token will be
+1e10 plancks instead of the original 1e12 plancks. See the Polkadot blog posts explaining the
+[details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the
+[results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
+
+The redenomination will take effect 72 hours after transfers are enabled. The projected block
+numbers and times are:
+
+| Event             | Block Number |  Earliest Time   |
+| :---------------- | :----------: | :--------------: |
+| Transfers enabled |  1,205,128   | 18 Aug 13:15 UTC |
+| Redenomination    |  1,248,328   | 21 Aug 13:15 UTC |
+
+Block explorers, wallets, etc. should use the symbol "DOT (old)" to differentiate DOTs of the
+original denomination. For a period of time after the redenomination occurs, we recommend that you
+use the symbol "_New_ DOT" to clearly indicate that you have made the change. After sufficient time
+has elapsed post-redenomination, you should change "_New_ DOT" back to "DOT". An example of an
+explanation would be:
+
+> “On approximately August 21st at 13:15 UTC (block number 1,248,328), the DOT token will undergo a
+> redenomination. New DOTs will be 100x smaller than DOTs (old). Therefore, your DOT balance will be
+> 100x higher. The percentage of the DOTs you own relative to total supply will be unchanged. See
+> the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for
+> more information.”
 
 ## Addresses
 
