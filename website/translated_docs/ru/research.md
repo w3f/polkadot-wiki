@@ -4,4 +4,4 @@ title: Исследования
 sidebar_label: Исследования
 ---
 
-[Исследования Polkadot](https://research.polkadot.network) проводятся исследователями W3F, база содержит документы, статьи и документацию, которые являются основой wiki.
+The Polkadot [research pages](https://research.polkadot.network) are edited directly by the researchers at W3F and contains papers, articles and documents that are sources for the information on the wiki.
