@@ -29,7 +29,7 @@ both a non-technical and technical reader. For reference, the light paper can be
 ## The Polkadot Specification
 
 [Polkadot's specification](https://github.com/w3f/polkadot-spec) is a Github Repo that holds the
-latest Polkadot Host Protocol specification, Polkadot's specification tests of the many components
+latest Polkadot Host protocol specification, Polkadot's specification tests of the many components
 on the network, and the Polkadot Runtime specification. This repo holds algorithms and explores how
 various processes function in the Polkadot network. The Polkadot specification takes Polkadot's
 ideas and concepts from the light and the white paper but focuses on the technical specs of the
