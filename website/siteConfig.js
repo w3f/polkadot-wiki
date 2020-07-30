@@ -62,6 +62,7 @@ const siteConfig = {
     "/js/custom.js",
     "/js/klaro-config.js",
     "/js/klaro.js",
+    "/js/d3.min.js",
   ],
 
   stylesheets: [
