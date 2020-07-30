@@ -15,7 +15,7 @@ together to build this decentralized network. Polkadot's white paper can be foun
 ## Polkadot's Overview Paper
 
 [Polkadot's Overview paper](https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf)
-is an updated version of the White paper that describes the protocol in more technical terms. We
+is an updated version of the white paper that describes the protocol in more technical terms. We
 would recommend reading this overview paper if you are interested in digging more into the protocol
 itself.
 
