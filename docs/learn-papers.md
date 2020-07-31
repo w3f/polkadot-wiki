@@ -8,7 +8,7 @@ sidebar_label: Polkadot Papers
 
 Polkadot's original white paper is a technical summary around one possible direction of implementing
 the Polkadot network. This paper uses rationale and technical details to support why this direction
-is beneficial. This original white paper also explains how each core component in Polkadot works
+is beneficial. This original white paper also explains how Polkadot's core components work
 together to build this decentralized network. Polkadot's white paper can be found
 [here](https://polkadot.network/PolkaDotPaper.pdf).
 
