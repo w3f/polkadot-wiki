@@ -31,11 +31,12 @@ numbers and times are:
 | Transfers enabled |  1,205,128   | 18 Aug 13:15 UTC |
 | Redenomination    |  1,248,328   | 21 Aug 13:15 UTC |
 
-Block explorers, wallets, etc. should use the symbol "DOT (old)" to differentiate DOTs of the
-original denomination. For a period of time after the redenomination occurs, we recommend that you
-use the symbol "_New_ DOT" to clearly indicate that you have made the change. After sufficient time
-has elapsed post-redenomination, you should change "_New_ DOT" back to "DOT". An example of an
-explanation would be:
+Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT
+(old)" to differentiate DOTs of the original denomination. This change can be made immediately. For
+a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_"
+to clearly indicate that you have made the change. After sufficient time has elapsed
+post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would
+be:
 
 > “On approximately August 21st at 13:15 UTC (block number 1,248,328), the DOT token will undergo a
 > redenomination. New DOTs will be 100x smaller than DOTs (old). Therefore, your DOT balance will be
