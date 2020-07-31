@@ -161,6 +161,36 @@ Now the actual tip that will be paid out to Bob is the median of these tips, so 
 In order for Bob to be paid his tip, some account must call the `close_tip` extrinsic at the end of
 the closing period for the tip. This extrinsic may be called by anyone.
 
+## Bounties Spending
+
+There are practical limits to Council Members curation capabilities when it comes to treasury proposals: Council members likely do not have the expertise to make a proper assessment of the activities described in all proposals. Even if individual Councillors have that expertise, it is highly unlikely that a majority of members are capable in such diverse topics.
+
+Bounties Spending proposals aim to delegate the curation activity of spending proposals to an expert called a Curator. Curators can be defined as addresses with agency over a portion of the treasury with the goal of fixing a bug, vulnerability, develop a strategy or monitoring a set of tasks related to a specific topic: all for the benefit of the Polkadot ecosystem. 
+
+A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined after whose background and expertise is such that they are capable of determining when the task is complete. Curators are selected by the Council after the bounty proposal passes, and need to add an upfront payment to take the position. This deposit can be used to punish them if they act maliciously. But if they are successful in their task of getting someone to complete the bounty work, they will receive their deposit back and part of the bounty reward.
+
+When submitting the value of the bounty, the proposer includes a reward for curators willing to invest their time and expertise in the task: this amount is included in the total value of the bounty. In this sense, the curator's fee can be defined as the result of subtracting the value paid to the bounty rewardee from the total value of the bounty.
+
+In general terms, curators are expected to have a well-balanced track record related to the issues the bounty tries to resolve: they should be at least knowledgeable on the topics the bounty touches, and show project management skills or experience. These recommendations ensure an effective use of the mechanism. A Bounty Spending is a reward for a specified body of work - or specified set of objectives - that needs to be executed for a predefined treasury amount to be paid out. The responsibility of assigning a payout address once the specified set of objectives is completed is delegated to the curator.
+
+After the Council has activated a bounty, it delegates the work that requires expertise to the curator who gets to close the active bounty. Closing the active bounty enacts a delayed payout to the payout address and a payout of the curator fee. The delay phase allows the Council to act if any issues arise.
+
+To minimize storage on chain in the same way as any proposal, bounties don't contain contextual information. When a user submits a bounty spending proposal, they will probably need to find an off-chain way to explain the proposal (any of the available community forums serve this purpose). This template can help as a reminder of all needed information for the Council to make an informed decision.
+
+The bounty has a predetermined duration of 90 days with the possibility of being extended by the curator. Aiming to maintain flexibility on the tasks’ curation, the curator can create sub-bounties for more granularity and allocation.    
+
+### Creating a Bounty Proposal
+
+One way to create the Bounty proposal is to use the Polkadot JS Apps website. From the website, use either the extrinsics tab and select the Treasury pallet, then `Propose_bounty` and enter the value, reason for the proposal (usually linked to a forum) and curator's fee. Alternatively, you can use the treasury tab and its dedicated Submit Bounty Proposal button.
+
+A bounty can be cancelled by deleting the earmark for a specific treasury amount and closing the bounty. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active. 
+
+### Closing a bounty
+
+The curator can close the bounty once it approves the completion of its tasks. The curator should make sure to set up the payout address on the active bounty beforehand. Closing the Active bounty enacts a delayed payout to the payout address and a payout of the curator fee.
+
+A bounty can be closed by using the extrinsics tab and selecting the Treasury pallet, then `Award_bounty`, making sure the right bounty is to be closed and finally sign the transaction. It is important to note that those who received a reward after the bounty is completed, must claim the specific amount of the payout from the payour address, by calling `Claim_bounty` after the curator closed the allocation. 
+
 ## FAQ
 
 ### What prevents the treasury from being captured by a majority of the council?
