@@ -44,6 +44,8 @@ be:
 > the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for
 > more information.”
 
+If you require assistance with redenomination, please contact redenomination@web3.foundation.
+
 ## Addresses
 
 In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit)
