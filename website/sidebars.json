@@ -14,7 +14,6 @@
     "Learn": [
       "learn-introduction",
       "learn-launch",
-      "learn-papers",
       {
         "type": "subcategory",
         "label": "Basics",
