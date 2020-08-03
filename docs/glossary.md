@@ -359,7 +359,7 @@ commit messages.
 
 The security model that Polkadot uses whereby all chains are equally secured. This is acheived by
 placing proofs of validity of parachain blocks into the Relay Chain such that, in order to revert
-finality of a single parachain, an attacked would need to attack the entire Polkadot system.
+finality of a single parachain, an attacker would need to attack the entire Polkadot system.
 
 ## Slashing
 
