@@ -26,8 +26,8 @@ ecosystem, please see the [Grants](grants.md) page.
 
 - AdEx Payment Channels using Substrate. [Video](https://www.youtube.com/watch?v=1CeI6Oa1BnU).
   [Repo](https://github.com/AdExNetwork/adex-protocol-substrate).
-- Robonomics modules for integrating with ROS.
-  [Repo](https://github.com/airalab/substrate-node-robonomics)
+- Robonomics, Substrate-based chain designed to control robotics and IoT devices.
+  [Repo](https://github.com/airalab/robonomics)
 - Plasma on Substrate implemented by Staked Technologies.
   [Repo](https://github.com/stakedtechnologies/Plasm)
 - Edgeware. [Repo](https://github.com/hicommonwealth/edgeware-node)
