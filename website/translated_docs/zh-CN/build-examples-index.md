@@ -21,7 +21,7 @@ For a list of all Web3 Foundation grants to teams working on projects that promo
 ### 社区
 
 - 使用 Substrate 的 AdEx 支付通道。[视频](https://www.youtube.com/watch?v=1CeI6Oa1BnU)，[代码库](https://github.com/Polygos/substrate-node-cidchain)
-- 用于与 ROS 集成的 Robonomics 模式。[代码库](https://github.com/airalab/substrate-node-robonomics)
+- Robonomics, Substrate-based chain designed to control robotics and IoT devices. [Repo](https://github.com/airalab/robonomics)
 - Staked Technologies 在 Substrate 上实现 Plasma。[代码库](https://github.com/stakedtechnologies/Plasm)
 - Edgeware。[代码库](https://github.com/hicommonwealth/edgeware-node)
 - 专注于隐私安全的运行时模组的 Zerochain
