@@ -4,15 +4,25 @@ title: Redenomination of DOT
 sidebar_label: Redenomination of DOT
 ---
 
-**The DOT redenomination is taking place on 21st August, now to be known as Denomination Day, at
-block #1,248,328. This block will happen in Europe's early afternoon, China's evening and America's
-morning.**
+> Note: The DOT redenomination is taking place on 21st August, now to be known as Denomination Day,
+> at block #1,248,328. This block will happen in Europe's early afternoon, China's evening and
+> America's morning.
 
-The [DOT](learn-dot) was voted by the community to be redenominated from its initial representation of 10e12
-Plancks to 10e10 Plancks. In other words, the DOT went from having twelve decimal places of
-precision to only ten decimal places of precision. The overall effect of this change was that the
-amount of Polkadot's smallest unit, the Planck, remained constant, while DOT balance for all holders
-was increased by a factor of one hundred.
+While [DOT](learn-dot) is the base unti of currency on Polkadot, the smallest unit is called the
+Planck. You can think of the Planck's relation to DOT as the relation of Satoshi to Bitcion. Before
+21st August the DOT was denominated as 10e12 Planks, that is twelve decimal places. After this date
+the DOT is denominated as 10e10 Plancks, that is ten decimal places.
+
+The change in denomination, henceforth referred to as the _redenomination_, was voted on by the
+community of DOT holders. The community decided between four options, to change the DOT denomination
+by a factor of ten, one hundred, one thousand, or not at all. The end result was to change the
+denomination by a factor of one hundred.
+
+The overall effect of this change was that the amount of Polkadot's smallest unit, the Planck,
+remained constant, while DOT balance for all holders was increased by a factor of one hundred. As
+one can see from the code block below, the same base unit remained the same throughout the system,
+with the real change being the social consensus around where to put the decimal place when we talk
+about what constitutes a DOT.
 
 ```
    Before the change the decimal was here
@@ -54,10 +64,10 @@ A bolded quote from the Foundation read:
 ## The Vote
 
 After the genesis block of Polkadot was created and the network was running with a decentralized
-community of validators securing the network, it was decided to put the redenomination topic up to a
-vote again. This time, the vote was explicitly binding - whereas the vote on Kusama was of course
-non-binding being at best a way to capture of a signal and not able to affect the Polkadot chain
-directly.
+community of validators securing the network, Web3 Foundation decided to put the redenomination
+topic up to a vote again. This time, the vote was explicitly binding - meaning that it would be
+executed if voted through. In comparison, the vote on Kusama was of course non-binding, being at
+best a way to capture of a signal without a direct way to affect the Polkadot chain.
 
 Due to the feedback received during the Kusama referendum, the Polkadot vote was to be held in an
 approval vote style, with four available options. DOT holders could issue votes for any
@@ -107,7 +117,7 @@ to everyone.
 
 ### What This Means for Builders of Tools
 
-If you are the builder of  a tool that consumes the `@polkadot/api` package - then there should be no
+If you are the builder of a tool that consumes the `@polkadot/api` package - then there should be no
 real changes that need to be made in your application. The denomination is technically a cosmetic
 change and every value is still a constant amount of Plancks.
 
