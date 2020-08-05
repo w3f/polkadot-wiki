@@ -27,7 +27,7 @@ was increased by a factor of one hundred.
 ## Origins
 
 The initial vote for redenomination occurred as a [referendum][referendum 52] on the Kusama
-blockchain. The referndum was summarized as having four effects if approved by KSM holders.
+blockchain. The referendum was summarized as having four effects if approved by KSM holders.
 
 > - The total allocations of DOTs will increase one hundred times from 10 million to 1 billion.
 > - DOT allocation balances will increase by a factor of one hundred, such that 1 DOT will be 100
