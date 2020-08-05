@@ -107,7 +107,7 @@ to everyone.
 
 ### What This Means for Builders of Tools
 
-If you are a builder of tool that consumes the `@polkadot/api` package - then there should be no
+If you are the builder of  a tool that consumes the `@polkadot/api` package - then there should be no
 real changes that need to be made in your application. The denomination is technically a cosmetic
 change and every value is still a constant amount of Plancks.
 
