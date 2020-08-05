@@ -198,6 +198,6 @@ migration to a minority fork. However, the possibility of this scenario is quite
 
 - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) -
   The Rust implementation of the treasury.
-  ([Docs](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_treasury/index.html))
+  ([Docs](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_treasury/index.html))
 - [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) -
   Details the treasury in its first live environment on the Kusama network.
