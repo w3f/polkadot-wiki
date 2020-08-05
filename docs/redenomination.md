@@ -12,7 +12,7 @@ The [DOT](learn-dot) was voted by the community to be redenominated from its ini
 Plancks to 10e10 Plancks. In other words, the DOT went from having twelve decimal places of
 precision to only ten decimal places of precision. The overall effect of this change was that the
 amount of Polkadot's smallest unit, the Planck, remained constant, while DOT balance for all holders
-was increased by a factor of ten.
+was increased by a factor of one hundred.
 
 ```
    Before the change the decimal was here
