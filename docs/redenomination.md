@@ -100,7 +100,7 @@ block #1,248,328
 
 ### What This Means for the Community
 
-If you're a DOT holder, or user of the network than you do not need to take any action. The DOT
+If you're a DOT holder or user of the network, then you do not need to take any action. The DOT
 redenomination is a purely front-end change. You will still hold the same amount of Plancks after
 the change, but now it will appear that you hold 100x more DOTs. This change applies proportionally
 to everyone.
