@@ -73,7 +73,7 @@
       {
         "type": "subcategory",
         "label": "Miscellaneous",
-        "ids": ["learn-roadmap", "learn-relevant-links", "learn-implementers-guide"]
+        "ids": ["learn-roadmap", "learn-relevant-links"]
       }
     ],
     "Build": [
@@ -84,6 +84,7 @@
         "ids": [
           "build-build-with-polkadot",
           "build-pdk",
+          "learn-implementers-guide",
           "build-cumulus",
           "build-smart-contracts",
           "build-oracle",
