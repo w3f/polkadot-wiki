@@ -8,7 +8,7 @@ sidebar_label: Redenomination of DOT
 block #1,248,328. This block will happen in Europe's early afternoon, China's evening and America's
 morning.**
 
-The DOT was voted by the community to be redenomination from its initial representaiton of 10e12
+The [DOT](learn-dot) was voted by the community to be redenominated from its initial representation of 10e12
 Plancks to 10e10 Plancks. In other words, the DOT went from having twelve decimal places of
 precision to only ten decimal places of precision. The overall effect of this change was that the
 amount of Polkadot's smallest unit, the Planck remained constant, while DOT balances for all holders
