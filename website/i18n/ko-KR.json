@@ -81,9 +81,9 @@
         "title": "Frequently Asked Questions (FAQs)",
         "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
-      "guides": {
-        "title": "Guides",
-        "sidebar_label": "Guides"
+      "getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
       },
       "glossary": {
         "title": "용어 정리",
@@ -125,9 +125,17 @@
         "title": "Kusama Faucet",
         "sidebar_label": "Faucet"
       },
+      "kusama-getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "Home"
+      },
+      "kusama-social-recovery": {
+        "title": "Social Recovery",
+        "sidebar_label": "Account Recovery"
       },
       "kusama-time-periods": {
         "title": "Time Period Cheat Sheet",
@@ -277,6 +285,10 @@
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
       },
+      "learn-transactions": {
+        "title": "Transactions",
+        "sidebar_label": "Transactions"
+      },
       "learn-treasury": {
         "title": "재무관리",
         "sidebar_label": "재무관리"
@@ -413,9 +425,9 @@
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "Validator Guide"
       },
-      "news": {
-        "title": "News Sources",
-        "sidebar_label": "News Sources"
+      "redenomination": {
+        "title": "Redenomination of DOT",
+        "sidebar_label": "Redenomination of DOT"
       },
       "research": {
         "title": "연구 자료들",
@@ -423,6 +435,7 @@
       }
     },
     "links": {
+      "Get Started": "Get Started",
       "Learn": "학습",
       "Build": "개발",
       "Maintain ": "Maintain ",
