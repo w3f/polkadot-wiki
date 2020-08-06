@@ -81,9 +81,9 @@
         "title": "Frequently Asked Questions (FAQs)",
         "sidebar_label": "Frequently Asked Questions (FAQs)"
       },
-      "guides": {
-        "title": "Guides",
-        "sidebar_label": "Guides"
+      "getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
       },
       "glossary": {
         "title": "专业术语",
@@ -125,9 +125,17 @@
         "title": "Kusama 水龙头",
         "sidebar_label": "水龙头"
       },
+      "kusama-getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "主页"
+      },
+      "kusama-social-recovery": {
+        "title": "Social Recovery",
+        "sidebar_label": "Account Recovery"
       },
       "kusama-time-periods": {
         "title": "Time Period Cheat Sheet",
@@ -277,6 +285,10 @@
         "title": "交易费用",
         "sidebar_label": "交易费用"
       },
+      "learn-transactions": {
+        "title": "Transactions",
+        "sidebar_label": "Transactions"
+      },
       "learn-treasury": {
         "title": "财政库",
         "sidebar_label": "财政库"
@@ -413,9 +425,9 @@
         "title": "运行验证人 (Kusama)",
         "sidebar_label": "验证人指南"
       },
-      "news": {
-        "title": "News Sources",
-        "sidebar_label": "News Sources"
+      "redenomination": {
+        "title": "Redenomination of DOT",
+        "sidebar_label": "Redenomination of DOT"
       },
       "research": {
         "title": "研究专页",
@@ -423,6 +435,7 @@
       }
     },
     "links": {
+      "Get Started": "Get Started",
       "Learn": "学习",
       "Build": "建立",
       "Maintain ": "参与 ",
