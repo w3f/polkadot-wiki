@@ -6,7 +6,7 @@ sidebar_label: Redenomination of DOT
 
 > Note: The DOT redenomination is taking place on 21st August, now to be known as Denomination Day, at block #1,248,328. This block will happen in Europe's early afternoon, China's evening and America's morning.
 
-While [DOT](learn-dot) is the base unti of currency on Polkadot, the smallest unit is called the Planck. You can think of the Planck's relation to DOT as the relation of Satoshi to Bitcion. Before 21st August the DOT was denominated as 10e12 Planks, that is twelve decimal places. After this date the DOT is denominated as 10e10 Plancks, that is ten decimal places.
+While [DOT](learn-dot) is the base unti of currency on Polkadot, the smallest unit is called the Planck. You can think of the Planck's relation to DOT as the relation of Satoshi to Bitcoin. Before 21st August the DOT was denominated as 10e12 Planks, that is twelve decimal places. After this date the DOT is denominated as 10e10 Plancks, that is ten decimal places.
 
 The change in denomination, henceforth referred to as the _redenomination_, was voted on by the community of DOT holders. The community decided between four options, to change the DOT denomination by a factor of ten, one hundred, one thousand, or not at all. The end result was to change the denomination by a factor of one hundred.
 
