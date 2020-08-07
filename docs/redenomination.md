@@ -9,7 +9,7 @@ sidebar_label: Redenomination of DOT
 > America's morning.
 
 While [DOT](learn-dot) is the base unti of currency on Polkadot, the smallest unit is called the
-Planck. You can think of the Planck's relation to DOT as the relation of Satoshi to Bitcion. Before
+Planck. You can think of the Planck's relation to DOT as the relation of Satoshi to Bitcoin. Before
 21st August the DOT was denominated as 10e12 Planks, that is twelve decimal places. After this date
 the DOT is denominated as 10e10 Plancks, that is ten decimal places.
 
