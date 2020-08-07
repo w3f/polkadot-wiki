@@ -1,7 +1,7 @@
 ---
 id: learn-transactions
 title: Transactions
-sidebar_label: Transactions
+sidebar_label: How to send Transactions
 ---
 
 Transactions are used to send a balance to another user. To begin sending transactions, we will

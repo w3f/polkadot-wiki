@@ -8,17 +8,13 @@ sidebar_label: Links
 
 ### General
 
-- [White Paper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) - General
-  Polkadot description.
-- [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) - Brief, non-technical overview of
-  Polkadot.
 - [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) -
   Epicenter interviews Gavin Wood.
 - [Blockchain Infrastructure](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/) -
   Gavin Wood presents Substrate on Software Daily.
-- [Polkadot Overview](https://www.zeroknowledge.fm/46) - Gavin Wood chatted about the history of
-  Polkadot and provided a great overview on Zero Knowledge podcast.
-- [Polkadot Overview](https://www.youtube.com/watch?v=oiunBLGHlAU) - Epicenter interviews Peter
+- [Polkadot on Zero Knowledge](https://www.zeroknowledge.fm/46) - Gavin Wood chatted about the
+  history of Polkadot and provided a great overview on Zero Knowledge podcast.
+- [Epicenter and Polkadot](https://www.youtube.com/watch?v=oiunBLGHlAU) - Epicenter interviews Peter
   Czaban of Web3 Foundation about Polkadot.
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) -
   Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain
@@ -70,8 +66,12 @@ sidebar_label: Links
   Blog post that recaps information regarding Substrate and Polkadot.
 - [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood
   giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
-- [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8)
-- [How admin functions in Substrate chains work](https://www.youtube.com/watch?v=InekMjJpVdo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=13)
+- [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8) -
+  Logan Saether, from the technical education team presents a technical explaination of the
+  relationship between Rust, Substrate and Polkadot.
+- [How admin functions in Substrate chains work](https://www.youtube.com/watch?v=InekMjJpVdo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=13) -
+  Bruno Skvorc, from the technical education team dives into depth on admin functions in Substrate,
+  how they interact, and how they work.
 
 ### Governance
 
@@ -110,8 +110,8 @@ sidebar_label: Links
 - [Polkadot.js](https://polkadot.js.org/) - Tools, utilities and client in JS. Polkadot JS is a
   3-person development team in Germany and is building the JavaScript implementation of Polkadot.
 - [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team
-  based in Toronto. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0
-  client in TypeScript and this Go implementation of Polkadot.
+  based in Toronto, Canada. ChainSafe is building an implementation of the beacon chain for Ethereum
+  2.0 client in TypeScript and this Go implementation of Polkadot.
 
 ### Cumulus
 

@@ -15,6 +15,7 @@
     "Learn": [
       "learn-introduction",
       "learn-launch",
+      "learn-roadmap",
       {
         "type": "subcategory",
         "label": "Basics",
@@ -74,7 +75,7 @@
       {
         "type": "subcategory",
         "label": "Miscellaneous",
-        "ids": ["learn-roadmap", "learn-relevant-links"]
+        "ids": ["learn-relevant-links"]
       }
     ],
     "Build": [
@@ -117,7 +118,7 @@
       "maintain-index",
       {
         "type": "subcategory",
-        "label": "Collator",
+        "label": "Collator Guides",
         "ids": ["maintain-collator"]
       },
       {
@@ -127,7 +128,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Nominator",
+        "label": "Nominator Guides",
         "ids": [
           "maintain-nominator",
           "maintain-guides-how-to-nominate-polkadot",
@@ -136,7 +137,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Validator",
+        "label": "Validator Guides",
         "ids": [
           "maintain-validator",
           "maintain-guides-how-to-validate-polkadot",
