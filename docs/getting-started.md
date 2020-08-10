@@ -36,7 +36,7 @@ For brand-new learners of Polkadot:
 - Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
 - [Creating a Polkadot Account][account generation]
-- [Sending a Balance transfer][transaction]
+- [Sending a Balance transfer][transfer]
 - [Staking as Nominator][nominator]
 - [Running a Validator][validator]
 - [Setting an Identity][identity]
@@ -61,7 +61,7 @@ network, please head over to our [Kusama Guide][kusama guide].
 [w medium]: https://medium.com/web3foundation
 [ui]: https://polkadot.js.org/apps/
 [account generation]: learn-account-generation
-[transaction]: learn-balance-transfers
+[transfer]: learn-balance-transfers
 [nominator]: maintain-guides-how-to-nominate-polkadot
 [validator]: maintain-guides-how-to-validate-polkadot
 [identity]: learn-identity
