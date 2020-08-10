@@ -25,7 +25,7 @@ will not persist across chills.
 When you chill after being a validator, your nominators will not automatically go away. As long as
 your nominators make no action, you will still have the nominations when you choose to become an
 active validator once again. When you become an active validator you will also need to re-set your
-validator preferences (comission, etc.). These can be configured as the same values that were set
+validator preferences (commission, etc.). These can be configured as the same values that were set
 previously or something totally different.
 
 [chill extrinsic]:
