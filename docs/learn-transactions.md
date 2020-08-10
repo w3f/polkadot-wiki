@@ -1,11 +1,10 @@
 ---
-id: learn-transactions
-title: Transactions
-sidebar_label: How to send Transactions
+id: learn-balance-transfers
+title: Balance Transfers
+sidebar_label: How to send Balance Transactions
 ---
 
-Transactions are used to send a balance to another user. To begin sending transactions, we will
-learn how to begin sending transactions by using the Polkadot User Interface.
+Balance transfers are used to send one balance from one account to another account. To start sending transactions, we will begin by using the Polkadot User Interface.
 
 ## Polkadot UI
 
