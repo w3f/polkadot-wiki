@@ -4,7 +4,8 @@ title: Balance Transfers
 sidebar_label: How to transfer Balances
 ---
 
-Balance transfers are used to send one balance from one account to another account. To start transferring balances, we will begin by using the Polkadot User Interface.
+Balance transfers are used to send one balance from one account to another account. To start
+transferring balances, we will begin by using the Polkadot User Interface.
 
 ## Polkadot UI
 
