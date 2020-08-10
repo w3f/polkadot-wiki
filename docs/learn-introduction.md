@@ -1,7 +1,7 @@
 ---
 id: learn-introduction
-title: Polkadot
-sidebar_label: Polkadot
+title: What is Polkadot?
+sidebar_label: What is Polkadot?
 ---
 
 Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a
@@ -100,15 +100,3 @@ place to start is the [Getting Started](getting-started) page.
 - [Staking](learn-staking) - How staking works in Polkadot.
 - [Treasury](learn-treasury) - How to make spending proposals on Polkadot and Kusama.
 - [WebAssembly](learn-wasm) - A description of WebAssembly and how it is used in Polkadot.
-
-## Resources
-
-- [Launch timeline](learn-launch) - find out about the Polkadot launch plans and schedule
-- [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
-- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who
-  is building them and links to the source code).
-- [Links](learn-relevant-links) - Comprehensive list of external links.
-- [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
-- [FAQ](faq) - Answers to some of the frequently asked questions about Polkadot.
-- [Become a Polkadot Ambassador](https://polkadot.network/polkadot-ambassador-program/) - Learn how
-  you can take part in this program to strengthen our community
