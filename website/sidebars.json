@@ -2,14 +2,15 @@
   "docs": {
     "General": [
       "index",
+      "claims",
       "community",
       "contributing",
+      "faq",
       "getting-started",
       "glossary",
-      "research",
       "grants",
-      "claims",
-      "faq"
+      "redenomination",
+      "research"
     ],
     "Learn": [
       "learn-introduction",

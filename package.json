@@ -20,11 +20,11 @@
     "postinstall": "patch-package"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.5"
+    "docusaurus": "^1.14.6"
   },
   "dependencies": {
     "@octokit/rest": "^18.0.3",
-    "@polkadot/api": "^1.27.1",
+    "@polkadot/api": "^1.28.1",
     "axios": "^0.19.2",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^45.0.0",
