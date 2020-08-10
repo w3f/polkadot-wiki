@@ -69,9 +69,6 @@ sidebar_label: Links
 - [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8) -
   Logan Saether, from the technical education team presents a technical explaination of the
   relationship between Rust, Substrate and Polkadot.
-- [How admin functions in Substrate chains work](https://www.youtube.com/watch?v=InekMjJpVdo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=13) -
-  Bruno Skvorc, from the technical education team dives into depth on admin functions in Substrate,
-  how they interact, and how they work.
 
 ### Governance
 
