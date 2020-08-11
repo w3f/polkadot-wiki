@@ -6,12 +6,16 @@ sidebar_label: Cross-chain Message Passing (XCMP)
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
 ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output
-queue of one parachain into the input queue of the destination parachain.
+queue of one parachain into the input queue of the destination parachain. However, only the
+associated metadata is stored as a hash in the Relay Chain storage.
 
-The input and output queue are sometimes referred to in the codebase as "ingress" and "egress"
-messages.
+The input and output queue are sometimes referred to in the codebase and associated documentation as
+"ingress" and "egress" messages respectively.
 
 ## Overview
+
+XCMP is currently under development and the details are subject to change. However, the overall
+architecture and design decisions are as follows:
 
 - Cross-chain messages will _not_ go on to the Relay Chain.
 - Cross-chain messages will be constrained to a maximum size in bytes.
@@ -26,7 +30,20 @@ messages.
 - Validators will check a proof that the new candidate for the next parachain block includes the
   processing of the expected ingress messages to that parachain.
 
-## Example
+XCMP queues must be initiated by first opening a channel between two parachains. The channel is
+identified by both the sender and recipeient parachains, meaning that it's a one-way channel. A pair
+of parachains can have at most two channels between them, one for sending messages to the other
+chain and another for receiving messages. Channel will require a deposit in DOT to be opened, which
+will get reciprocated when the channel is closed.
+
+## Horizontal Relay-routed Message Passing (HRMP)
+
+While XCMP is still being implemented, a stop-gap protocol known as HRMP exists in its place. HRMP
+has the same interface and functionality as XCMP but is much more demanding on resources since it
+stores all messages in the Relay Chain storage. When XCMP has been implemented, HRMP is planned to
+be deprecated and phased out in favor of it.
+
+## Example of XCMP
 
 A smart contract that exists on parachain A will route a message to parachain B in which another
 smart contract is called that makes a transfer of some assets within that chain.
@@ -60,3 +77,5 @@ will include this block for parachain B into the Relay Chain.
 
 - [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
   description of cross-chain communication on the Web3 Foundation research wiki.
+- [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
+  overview of the messaging schemes from the Parachain Implementor's guide.
