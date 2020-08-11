@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-polkadot
 title: Run a Validator (Polkadot)
-sidebar_label: Validator Guide
+sidebar_label: How to run a Validator on Polkadot
 ---
 
 > The following information applies to the Polkadot network, which is currently in the soft launch
