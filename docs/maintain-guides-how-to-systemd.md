@@ -33,7 +33,7 @@ WantedBy=multi-user.target
 
 > **WARNING:** It's recommended to delay the restart of a node with `RestartSec` in the case of node
 > crashes. It's possible that when a node crashes, consensus votes in Grandpa aren't persisted to
-> disk. In this case, there is a potential to equivocate when immediately restarting. What can
+> disk. In this case, there is potential to equivocate when immediately restarting. What can
 > happen is the node will not recognize votes that didn't make it to disk, and will then cast
 > conflicting votes. Delaying the restart will allow the network to progress past potentially
 > conflicting votes, at which point other nodes will not accept them.
