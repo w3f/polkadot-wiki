@@ -23,7 +23,9 @@
     "docusaurus": "^1.14.6"
   },
   "dependencies": {
+    "@octokit/rest": "^18.0.3",
     "@polkadot/api": "^1.28.1",
+    "axios": "^0.19.2",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^45.0.0",
     "katex": "^0.11.1",
@@ -31,6 +33,7 @@
     "postinstall-postinstall": "^2.1.0",
     "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
+    "semver": "^7.3.2",
     "yargs": "^15.4.1"
   }
 }
