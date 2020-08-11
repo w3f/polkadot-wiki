@@ -170,6 +170,14 @@ Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from
 not to compete, but to provide broad access." A non-contentious blockchain that inherits the state
 of the underlying blockchain and creates a new branch of _the same blockchain_.
 
+## Horizontal Relay-routed Message Passing
+
+Horizontal Relay-routed Message Passing, also known as HRMP, is a precursor to the complete XCMP
+implementation that mimics the same interface and semantics of XCMP. It is similar to XCMP except
+for how it stores all messages in the Relay Chain storage, therefore making it more expensive and
+demaninding more resources than XCMP. It is planned to be retired once the implementation of XCMP is
+complete.
+
 ## Inherent
 
 Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into
@@ -404,6 +412,14 @@ send funds to Bob by the fact that she signed a transfer-funds message with her 
 
 A node that secures the Relay Chain by staking DOTs, validating proofs from collators on parachains
 and voting on consensus along with other validators.
+
+## Vertical Message Passing
+
+Vertical message passing consists of two separate types of message passing, Downward Message Passing
+(DMP) and Upward Message Passing (UMP). Downward messages pass from the Relay Chain to a parachain,
+although they may also originate from another parachain via
+[HRMP](#horiztonal-relay-routed-message-passing). Upward messages originate from parachains and go
+up to the Relay Chain via runtime entry points.
 
 ## Voting
 
