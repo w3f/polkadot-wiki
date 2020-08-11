@@ -43,6 +43,10 @@ has the same interface and functionality as XCMP but is much more demanding on r
 stores all messages in the Relay Chain storage. When XCMP has been implemented, HRMP is planned to
 be deprecated and phased out in favor of it.
 
+## XCMP Message Format
+
+For a description of the XCMP message format please see the [xcmp-format][] repository on GitHub.
+
 ## Example of XCMP
 
 A smart contract that exists on parachain A will route a message to parachain B in which another
@@ -79,3 +83,6 @@ will include this block for parachain B into the Relay Chain.
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
+- [XCMP Format](https://github.com/paritytech/xcm-format) - Description of the XCMP format.
+
+[xcmp-format]: https://github.com/paritytech/xcm-format
