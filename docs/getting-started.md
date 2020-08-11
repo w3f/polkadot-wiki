@@ -4,9 +4,9 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the core functionality.
-Our wiki has three main sections: Learn (for learners), Build (for people that want to build on
-Polkadot), and Maintain (for people that want to maintain the network).
+Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the
+core functionality. Our wiki has three main sections: Learn (for learners), Build (for people that
+want to build on Polkadot), and Maintain (for people that want to maintain the network).
 
 For brand-new learners of Blockchain technology:
 
