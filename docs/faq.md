@@ -327,5 +327,5 @@ asked in the Polkadot Watercooler Riot channel and answered by Polkadot founder 
 [libp2p]: https://libp2p.io
 [nim libp2p]: https://github.com/status-im/nim-libp2p
 [libp2p github]: https://github.com/libp2p
-[substrate network]: https://crates.parity.io/sc_network/index.html
+[substrate network]: https://substrate.dev/rustdocs/v2.0.0-rc5/sc_network/index.html
 [thousand validators]: https://thousand-validators.kusama.network/#/

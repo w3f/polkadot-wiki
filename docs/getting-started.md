@@ -4,9 +4,9 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-Getting started on Polkadot is easy! The wiki already contains guides for doing most of the core
-functionality. Our wiki has three main sections: Learn (for learners), Build (for people that want
-to build on Polkadot), and Maintain (for people that want to maintain the network).
+Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the
+core functionality. Our wiki has three main sections: Learn (for learners), Build (for people that
+want to build on Polkadot), and Maintain (for people that want to maintain the network).
 
 For brand-new learners of Blockchain technology:
 
@@ -20,7 +20,7 @@ For brand-new learners of Polkadot:
   direction of implementing the Polkadot network. This paper uses rationale and technical details to
   support why this direction is beneficial. This original white paper also explains how Polkadot's
   core components work together to build this decentralized network.
-- [Polkadot's Overview paper][overview-paper] is an updated version of the white paper that
+- [Polkadot's overview paper][overview-paper] is an updated version of the white paper that
   describes the protocol in more technical terms. We would recommend reading this overview paper if
   you are interested in digging more into the protocol itself.
 - [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
@@ -36,7 +36,7 @@ For brand-new learners of Polkadot:
 - Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
 - [Creating a Polkadot Account][account generation]
-- [Sending a Transaction][transaction]
+- [Sending a Balance transfer][transfer]
 - [Staking as Nominator][nominator]
 - [Running a Validator][validator]
 - [Setting an Identity][identity]
@@ -61,7 +61,7 @@ network, please head over to our [Kusama Guide][kusama guide].
 [w medium]: https://medium.com/web3foundation
 [ui]: https://polkadot.js.org/apps/
 [account generation]: learn-account-generation
-[transaction]: learn-transactions
+[transfer]: learn-balance-transfers
 [nominator]: maintain-guides-how-to-nominate-polkadot
 [validator]: maintain-guides-how-to-validate-polkadot
 [identity]: learn-identity

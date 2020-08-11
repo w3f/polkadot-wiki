@@ -429,6 +429,11 @@
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "Validator Guide"
       },
+      "redenomination": {
+        "title": "Redenomination of DOT",
+        "sidebar_label": "Redenomination of DOT"
+      },
+
       "research": {
         "title": "Research Pages",
         "sidebar_label": "Research Pages"
