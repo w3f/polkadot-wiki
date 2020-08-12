@@ -4,7 +4,7 @@ title: Smart Contracts
 sidebar_label: Smart Contracts
 ---
 
-La Chain Relay de relé Polkadot no Smart Contracts de forma nativa. Sin embargo, los parachains en Polkadot soportarán Smart Contracts. Ya hay proyectos anunciados como [Edgeware](https://edgewa.re), y gracias al Substrate incorporado [contract pallet](https://crates.parity.io/pallet_contracts/index.html), es probable que más parachains soporten esta característica.
+The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_contracts/index.html), it is likely that more parachains will support this feature.
 
 Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine, thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this approach are [Moonbeam](https://moonbeam.network/) and [Frontier](https://github.com/paritytech/frontier).
 
