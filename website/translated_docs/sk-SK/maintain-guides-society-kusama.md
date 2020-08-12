@@ -4,7 +4,7 @@ title: Join Kappa Sigma Mu
 sidebar_label: Join Kappa Sigma Mu
 ---
 
-Kappa Sigma Mu is a membership club using the Substrate [Society](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_society/index.html) pallet. It is an economic game to incentivize users to join a society that coordinates around whatever the rules are decided to be. The members of the society are incentivized to participate in the society via the rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to have multiple societies in the future through a runtime upgrade.
+Kappa Sigma Mu is a membership club using the Substrate [Society](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_society/index.html) pallet. It is an economic game to incentivize users to join a society that coordinates around whatever the rules are decided to be. The members of the society are incentivized to participate in the society via the rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to have multiple societies in the future through a runtime upgrade.
 
 ![Society Dashboard](assets/society/dashboard.jpg)
 
@@ -111,7 +111,7 @@ The slashed funds (2 KSM currently) will be given to a random member who voted t
 
 #### Lock-up Time
 
-It would take the number of members of the society as the variable to determine how many blocks you have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula is defined [in the society pallet](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_society/index.html) if you would like to have a look.
+It would take the number of members of the society as the variable to determine how many blocks you have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula is defined [in the society pallet](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_society/index.html) if you would like to have a look.
 
 Example:
 
