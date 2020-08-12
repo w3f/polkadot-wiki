@@ -261,20 +261,21 @@ against - equate to a simple majority-carries system at 100% turnout.
 
 ## Council
 
-To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain
-entity comprising a number of actors, each represented as an on-chain account. For Polkadot this
-number is likely to begin at around six people, and increase over the course of 9 months to 24
-people (roughly one extra individual coming on every two weeks). In general, it has a fixed number
-of seats (24 on Polkadot and 17 on Kusama).
+To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an on-chain
+entity comprising a number of actors, each represented as an on-chain account. On Polkadot the council currently
+consists of 13 members, however this is expected to increase over the next few months to 24
+people. In general, the council will end up having a fixed number of seats. On Polkadot, this will be 24 seats
+while on Kusama it is 17 seats.
 
-The council is called upon primarily for two tasks of governance: proposing sensible referenda, and
-cancelling uncontroversially dangerous or malicious referenda.
+The council is called upon primarily for three tasks of governance: proposing sensible referenda,
+cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
-if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In
-the case that all members vote in favor, the vote is considered unanimous and is treated as
-uncontroversial.
+if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. Council
+motions which pass with a strict majority - but without reaching unanimous support will move to public
+referendum under a neutral, majority-carries adaptive quorum biasing. In
+the case that all members of the council vote in favor of a motion, the vote is considered unanimous and becomes a referundum with negative adaptive quorum biasing.
 
 A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if
 there is an issue found late in a referendum's proposal such as a bug in the code of the runtime
@@ -288,10 +289,11 @@ it will be left to the stakeholders _en masse_ to determine the fate of the prop
 ![](assets/governance/approval-vote.png)
 
 At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their
-approval of any of the registered candidates. For every two weeks, one of those seats is up for
-election and increase over the course of 9 months to 24 people (roughly one extra individual coming
-on every two weeks). All members have a fixed term (1 year). Council members can be removed early
-only by a referendum.
+approval of any of the registered candidates. Council elections are handled by the same Phragmen
+election process that selects validators from the available pool based on nominations. However,
+token holders' vote for councillors are isolated from any of the nominations they may have on validators.
+Council terms last for one day. At the end of each term, Phragmen election algorithm is ran and the result
+will choose the new councillors based on the vote configurations of all voters.
 
 To elect a new council member, Polkadot employs the same election scheme as used for choosing the
 active set of validators, a [Phragmén election](learn-phragmen). The election also chooses a set
@@ -300,7 +302,7 @@ intact.
 
 As opposed to a "first past the post", where voters must decide only on a single candidate chosen
 from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders
-can treat it as Boolean voting to support as many candidates as they want. The election algorithm
+can treat it as Yes or No voting to support as many candidates as they want. The election algorithm
 will find a fair subset of the candidates that closely matches the expressed indications of the
 electorate as a whole.
 
