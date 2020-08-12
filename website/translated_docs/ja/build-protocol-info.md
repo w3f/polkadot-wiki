@@ -61,7 +61,7 @@ Wallets and custodians who track account nonces for auditing purposes should tak
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
-Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
+Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in staking and governance, for example. Reserved balance represents funds that have been set aside by some operation and still belong to the account holder, but cannot be used.
 
@@ -73,9 +73,9 @@ Vesting is another abstraction that uses locks on free balance. Vesting sets a l
 
 More info:
 
-- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0-rc4/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0-rc4/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_vesting/struct.Vesting.html)
+- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0-rc5/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0-rc5/frame_support/traits/enum.WithdrawReason.html)
+- [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
 
@@ -119,7 +119,7 @@ Imagine this contrived example with a [reaped account](#existential-deposit). Th
 
 In addition, not every extrinsic in a Substrate-based chain comes from an account as a public/private key pair; Substrate, rather, has the concept of dispatch “origin”, which could be created from a public key account, but could also form from other means such as governance. These origins do not have a nonce associated with them the way that an account does. For example, governance might dispatch the same call with the same arguments multiple times, like “increase the validator set by 10%.” This dispatch information (and therefore its hash) would be the same, and the hash would be a reliable representative of the call, but its execution would have different effects depending on the chain’s state at the time of dispatch.
 
-The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.0-rc4/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
+The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
 
 ### Events
 
