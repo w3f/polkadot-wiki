@@ -4,115 +4,112 @@ title: Monitor your node
 sidebar_label: Monitor your node
 ---
 
-This guide will walk you through how to set up the [Prometheus](https://prometheus.io/) with [Grafana](https://grafana.com/) to monitor your node using Ubuntu 18.04.
+This guide will walk you through how to set up [Prometheus](https://prometheus.io/) with
+[Grafana](https://grafana.com/) to monitor your node using Ubuntu 18.04.
+
+As Substrate-based chain would expose the data including the height of the chain, the number of
+connected peers to your node, CPU, and memory usage of your machine, etc. To monitor these data,
+Prometheus is capable of collecting metrics to allow Grafana for displaying it on the dashboard.
 
 ## Preparation
 
 First, create a user for Prometheus and Node Exporter without the possibility to log in.
 
 ```bash
-useradd --no-create-home --shell /usr/sbin/nologin prometheus
-useradd --no-create-home --shell /bin/false node_exporter
+sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
+sudo useradd --no-create-home --shell /bin/false node_exporter
 ```
 
 Create the directories required to store the configuration and executable files.
 
 ```bash
-mkdir /etc/prometheus
-mkdir /var/lib/prometheus
+sudo mkdir /etc/prometheus
+sudo mkdir /var/lib/prometheus
 ```
 
-Change the ownership of these directories to `prometheus` so that only prometheus can access to these them.
+Change the ownership of these directories to `prometheus` so that only prometheus can access them.
 
 ```bash
 sudo chown prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
 ```
 
-## Installing & Configuring Node Exporter
-
-```bash
-wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
-```
-
-```bash
-tar xvf node_exporter-1.0.1.linux-amd64.tar.gz
-```
-
-```bash
-cp node_exporter-1.0.1.linux-amd64/node_exporter /usr/local/bin
-chown node_exporter:node_exporter /usr/local/bin/node_exporter
-```
-
-```bash
-rm -rf node_exporter-1.0.1.linux-amd64*
-```
-
-```bash
-nano /etc/systemd/system/node_exporter.service
-```
-
-```bash
-[Unit]
-Description=Node Exporter
-Wants=network-online.target
-After=network-online.target
-
-[Service]
-User=node_exporter
-Group=node_exporter
-Type=simple
-ExecStart=/usr/local/bin/node_exporter
-
-[Install]
-WantedBy=multi-user.target
-```
-
-
-```bash
-systemctl daemon-reload && systemctl start node_exporter && systemctl status node_exporter
-```
-
-```bash
-systemctl enable node_exporter
-```
-
 ## Installing & Configuring Prometheus
 
+After setting up an environment, update the OS, and install the latest Prometheus. You can check the
+latest release by going to their GitHub repository under the
+[release](https://github.com/prometheus/prometheus/releases/) page.
+
 ```bash
-apt-get update && apt-get upgrade
+sudo apt-get update && apt-get upgrade
 wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
 tar xfz prometheus-*.tar.gz
 cd prometheus-2.20.1.linux-amd64
 ```
 
-```bash
-cp ./prometheus /usr/local/bin/
-cp ./promtool /usr/local/bin/
-```
+The following two binaries are in the directory:
+
+- Prometheus - Prometheus main binary file
+- promtool
+
+The following two directories (which contain the web interface, configuration files examples and the
+license) are in the directory:
+
+- consoles
+- console_libraries
+
+Copy the executable files to the `/usr/local/bin/` directory.
 
 ```bash
-chown prometheus:prometheus /usr/local/bin/prometheus
-chown prometheus:prometheus /usr/local/bin/promtool
+sudo cp ./prometheus /usr/local/bin/
+sudo cp ./promtool /usr/local/bin/
 ```
 
-```bash
-cp -r ./consoles /etc/prometheus
-cp -r ./console_libraries /etc/prometheus
-```
+Change the ownership of these files to the `prometheus` user.
 
 ```bash
-chown -R prometheus:prometheus /etc/prometheus/consoles
-chown -R prometheus:prometheus /etc/prometheus/console_libraries
+sudo chown prometheus:prometheus /usr/local/bin/prometheus
+sudo chown prometheus:prometheus /usr/local/bin/promtool
 ```
+
+Copy the `consoles` and `console_libraries` directories to `/etc/prometheus`
+
+```bash
+sudo cp -r ./consoles /etc/prometheus
+sudo cp -r ./console_libraries /etc/prometheus
+```
+
+Change the ownership of these directories to the `prometheus` user.
+
+```bash
+sudo chown -R prometheus:prometheus /etc/prometheus/consoles
+sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
+```
+
+Once everything is done, run this command to remove `prometheus` directory.
 
 ```bash
 cd .. && rm -rf prometheus*
 ```
 
+Before using Prometheus, it needs some configuration. Create a YAML configuration file named
+`prometheus.yml` by running the command below.
+
 ```bash
-nano /etc/prometheus/prometheus.yml
+sudo nano /etc/prometheus/prometheus.yml
 ```
+
+The configuration file is divided into three parts which are global, rule_files, and scrape_configs.
+
+`scrape_interval` defines how often Prometheus scrapes targets, while `evaluation_interval` controls
+how often the software will evaluate rules.
+
+`rule_files` block contains information of the location of any rules we want the Prometheus server
+to load.
+
+`scape_configs` contains the information which resources Prometheus monitors.
+
+The configuration file should look like this below:
 
 ```bash
 global:
@@ -128,20 +125,35 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['localhost:9090']
-  - job_name: 'node_exporter'
+  - job_name: 'substrate_node'
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:9100']
+      - targets: ['localhost:9165']
 ```
 
+With the above configuration file, the first exporter is Prometheus that monitors itself. As we want
+to have more precise information about the state of the Prometheus server we reduced the
+`scrape_interval` to 5 sec for this job. The parameters `static_configs` and `targets` determine
+where the exporters are running. While the second exporter is capturing the data from your node, and
+the port by default is `9165`.
+
+Save the configuration file and change the ownership of the file to `prometheus` user.
+
 ```bash
-chown prometheus:prometheus /etc/prometheus/prometheus.yml
+sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 ```
+
+## Starting Prometheus
+
+To test the Prometheus is setup properly, execute the following command to start it as a
+`prometheus` user.
 
 ```bash
 sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.path /var/lib/prometheus/ --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries
 ```
 
+The following messages indicate the status of the server. If you see the following messages, your
+server is setup properly.
 
 ```bash
 level=info ts=2020-08-12T21:39:05.453Z caller=main.go:308 msg="No time or size retention was set so using the default time retention" duration=15d
@@ -164,8 +176,15 @@ level=info ts=2020-08-12T21:39:05.467Z caller=main.go:833 msg="Completed loading
 level=info ts=2020-08-12T21:39:05.467Z caller=main.go:652 msg="Server is ready to receive web requests."
 ```
 
+Go to `http://SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus
+interface or not. If it is working, simply exit the process by pressing on `CTRL + C` on your
+Prometheus console.
+
+Next, we would like to automatically start the server during the boot process, so we have to create
+a new `systemd` configuration file with the following config.
+
 ```bash
-nano /etc/systemd/system/prometheus.service
+sudo nano /etc/systemd/system/prometheus.service
 ```
 
 ```bash
@@ -189,39 +208,67 @@ nano /etc/systemd/system/prometheus.service
   WantedBy=multi-user.target
 ```
 
-```bash
-systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
-```
+Once the file is saved, execute the command below to use reload the `systemd` and enable the service
+so that it will be loaded automatically during starting the OS.
 
+```bash
+sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
+```
 
 ## Installing Grafana
 
+In order to visualize those metrics of your node, you can use Grafana to query the Prometheus
+server. Run the following commands to install it first.
+
 ```bash
-sudo apt-get install -y adduser libfontconfig1
+sudo sudo apt-get install -y adduser libfontconfig1
 wget https://dl.grafana.com/oss/release/grafana_7.1.3_amd64.deb
 sudo dpkg -i grafana_7.1.3_amd64.deb
 ```
 
+If everything is fine, start the Grafana server and access it by going to the
+`http://SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
+
 ```bash
-systemctl daemon-reload && sudo systemctl enable grafana-server && sudo systemctl start grafana-server
+sudo systemctl daemon-reload && sudo systemctl enable grafana-server && sudo systemctl start grafana-server
 ```
-
-`http://IP_ADDRESS:3000/login`. The default user and password is admin/admin.
-
-
 
 ![grafana-1](assets/guides/how-to-monitor/1-grafana-login.png)
 
+In order to visualize those metrics, click setting to configure the `Data Sources` first.
+
 ![grafana-1](assets/guides/how-to-monitor/2-add-data-source.png)
+
+Click `Add data source` to choose where the data coming from.
 
 ![grafana-1](assets/guides/how-to-monitor/2-add-data-source-2.png)
 
+Select `Prometheus`.
+
 ![grafana-1](assets/guides/how-to-monitor/3-select-prometheus.png)
+
+The only thing you need to input is the `URL` that is `https://localhost:9090` and then click
+`Save & Test`. If you see the result is `Data source is working`, your connection is configured
+correctly.
 
 ![grafana-1](assets/guides/how-to-monitor/4-configure-data-source.png)
 
+Next, import the dashboard that lets you visualize your node data. Simply go to the menu bar on the
+left and mouse hover "+" then select `Import`.
+
+`Import via grafana.com` - It allows you to use someone who created the dashboard and make it
+public. You can check what other dashboards available via
+[https://grafana.com/grafana/dashboards](https://grafana.com/grafana/dashboards). In this guide, we
+use "My Polkadot Metrics", so input "12425" under the id field and click `Load`.
+
 ![grafana-1](assets/guides/how-to-monitor/5-import-dashboard.png)
 
+Once it has been loaded, make sure to select "Prometheus" in the Prometheus dropdown list. Then
+click `Import`.
+
 ![grafana-1](assets/guides/how-to-monitor/5-import-dashboard-2.png)
+
+If everything is done correctly, you should be able to monitor your node's performance such as the
+current block height, CPU, memory usage, etc.
 
 ![grafana-1](assets/guides/how-to-monitor/6-dashboard-metric.png)
