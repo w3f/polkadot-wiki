@@ -295,7 +295,7 @@ any of the registered candidates.
 Council elections are handled by the same [Phragmén election](learn-phragmen) process that selects
 validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
-for one day. At the end of each term, Phragmen election algorithm is ran and the result will choose
+for one day. At the end of each term, Phragmen election algorithm runs and the result will choose
 the new councillors based on the vote configurations of all voters. The election also chooses a set
 number of runners up (currently seven on Kusama and fifteen on Polkadot) that will remain in the
 queue with their votes intact.
