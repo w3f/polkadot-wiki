@@ -33,15 +33,18 @@ architecture and design decisions are as follows:
 XCMP queues must be initiated by first opening a channel between two parachains. The channel is
 identified by both the sender and recipeient parachains, meaning that it's a one-way channel. A pair
 of parachains can have at most two channels between them, one for sending messages to the other
-chain and another for receiving messages. The channel will require a deposit in DOT to be opened, which
-will get reciprocated when the channel is closed.
+chain and another for receiving messages. The channel will require a deposit in DOT to be opened,
+which will get reciprocated when the channel is closed.
 
 ## Horizontal Relay-routed Message Passing (HRMP)
 
-While XCMP is still being implemented, a stop-gap protocol known as HRMP exists in its place. HRMP
-has the same interface and functionality as XCMP but is much more demanding on resources since it
-stores all messages in the Relay Chain storage. When XCMP has been implemented, HRMP is planned to
-be deprecated and phased out in favor of it.
+While XCMP is still being implemented, a stop-gap protocol (see definition below) known as HRMP
+exists in its place. HRMP has the same interface and functionality as XCMP but is much more
+demanding on resources since it stores all messages in the Relay Chain storage. When XCMP has been
+implemented, HRMP is planned to be deprecated and phased out in favor of it.
+
+> Note: A stop-gap protocol is a temporary subsitute for the functionality that is not fully
+> complete. While XCMP proper is still in development, HRMP is a working replacement.
 
 ## Vertical Message Passing
 
@@ -54,7 +57,7 @@ DMP is used to move it down to another parachain.
 
 ## XCMP Message Format
 
-For a description of the XCMP message format please see the [xcmp-format][] repository on GitHub.
+For a description of the XCMP message format please see the [xcm-format][] repository on GitHub.
 
 ## Example of XCMP
 
@@ -92,6 +95,6 @@ will include this block for parachain B into the Relay Chain.
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
-- [XCMP Format](https://github.com/paritytech/xcm-format) - Description of the XCMP format.
+- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the XCMP format.
 
-[xcmp-format]: https://github.com/paritytech/xcm-format
+[xcm-format]: https://github.com/paritytech/xcm-format
