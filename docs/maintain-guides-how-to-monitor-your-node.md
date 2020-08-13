@@ -239,7 +239,7 @@ In order to visualize the node metrics, click setting to configure the `Data Sou
 
 ![grafana-1](assets/guides/how-to-monitor/2-add-data-source.png)
 
-Click `Add data source` to choose where the data coming from.
+Click `Add data source` to choose where the data is coming from.
 
 ![grafana-1](assets/guides/how-to-monitor/2-add-data-source-2.png)
 
