@@ -235,7 +235,7 @@ sudo systemctl daemon-reload && sudo systemctl enable grafana-server && sudo sys
 
 ![grafana-1](assets/guides/how-to-monitor/1-grafana-login.png)
 
-In order to visualize those metrics, click setting to configure the `Data Sources` first.
+In order to visualize the node metrics, click setting to configure the `Data Sources` first.
 
 ![grafana-1](assets/guides/how-to-monitor/2-add-data-source.png)
 
