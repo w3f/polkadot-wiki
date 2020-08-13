@@ -107,7 +107,7 @@ how often the software will evaluate rules.
 `rule_files` block contains information of the location of any rules we want the Prometheus server
 to load.
 
-`scape_configs` contains the information which resources Prometheus monitors.
+`scrape_configs` contains the information which resources Prometheus monitors.
 
 The configuration file should look like this below:
 
