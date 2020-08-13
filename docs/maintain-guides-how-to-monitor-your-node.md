@@ -13,11 +13,10 @@ to collect metrics and Grafana allows for displaying it on the dashboard.
 
 ## Preparation
 
-First, create a user for Prometheus and Node Exporter without the possibility to log in.
+First, create a user for Prometheus by adding `--no-create-home` flag to not allow `prometheus` to log in.
 
 ```bash
 sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
-sudo useradd --no-create-home --shell /bin/false node_exporter
 ```
 
 Create the directories required to store the configuration and executable files.
