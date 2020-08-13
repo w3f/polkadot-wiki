@@ -7,9 +7,9 @@ sidebar_label: Monitor your node
 This guide will walk you through how to set up [Prometheus](https://prometheus.io/) with
 [Grafana](https://grafana.com/) to monitor your node using Ubuntu 18.04.
 
-A Substrate-based chain exposes data such as the height of the chain, the number of
-connected peers to your node, CPU, memory usage of your machine, and more. To monitor this data,
-Prometheus is used to collect metrics and Grafana allows for displaying it on the dashboard.
+A Substrate-based chain exposes data such as the height of the chain, the number of connected peers
+to your node, CPU, memory usage of your machine, and more. To monitor this data, Prometheus is used
+to collect metrics and Grafana allows for displaying it on the dashboard.
 
 ## Preparation
 
@@ -36,8 +36,8 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 
 ## Installing and Configuring Prometheus
 
-After setting up the environment, update your OS, and install the latest Prometheus. You can check the
-latest release by going to their GitHub repository under the
+After setting up the environment, update your OS, and install the latest Prometheus. You can check
+the latest release by going to their GitHub repository under the
 [releases](https://github.com/prometheus/prometheus/releases/) page.
 
 ```bash
@@ -131,11 +131,11 @@ scrape_configs:
       - targets: ['localhost:9165']
 ```
 
-With the above configuration file, the first exporter is the one that Prometheus exports to monitor itself. As we want
-to have more precise information about the state of the Prometheus server we reduced the
-`scrape_interval` to 5 seconds for this job. The parameters `static_configs` and `targets` determine
-where the exporters are running. While the second exporter is capturing the data from your node, and
-the port by default is `9165`.
+With the above configuration file, the first exporter is the one that Prometheus exports to monitor
+itself. As we want to have more precise information about the state of the Prometheus server we
+reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and
+`targets` determine where the exporters are running. While the second exporter is capturing the data
+from your node, and the port by default is `9165`.
 
 Save the configuration file and change the ownership of the file to `prometheus` user.
 
@@ -217,8 +217,8 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 
 ## Installing Grafana
 
-In order to visualize your node metrics, you can use Grafana to query the Prometheus
-server. Run the following commands to install it first.
+In order to visualize your node metrics, you can use Grafana to query the Prometheus server. Run the
+following commands to install it first.
 
 ```bash
 sudo sudo apt-get install -y adduser libfontconfig1
