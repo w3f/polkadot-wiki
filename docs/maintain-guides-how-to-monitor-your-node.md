@@ -34,7 +34,7 @@ sudo chown prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
 ```
 
-## Installing & Configuring Prometheus
+## Installing and Configuring Prometheus
 
 After setting up an environment, update the OS, and install the latest Prometheus. You can check the
 latest release by going to their GitHub repository under the
