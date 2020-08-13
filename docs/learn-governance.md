@@ -262,7 +262,7 @@ against - equate to a simple majority-carries system at 100% turnout.
 ## Council
 
 To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
-on-chain entity comprising a number of actors, each represented as an on-chain account. On Polkadot
+on-chain entity comprising a number of actors, each represented as an on-chain account. On Polkadot,
 the council currently consists of 13 members. This is expected to increase over the next few
 months to 24 people. In general, the council will end up having a fixed number of seats. On
 Polkadot, this will be 24 seats while on Kusama it is 17 seats.
