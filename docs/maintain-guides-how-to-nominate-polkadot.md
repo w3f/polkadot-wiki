@@ -20,7 +20,7 @@ that they elect. When looking for validators to nominate, a nominator should pay
 own reward percentage for nominating a specific validator - as well as the risk that they bare of
 being slashed if the validator gets slashed.
 
-# Setting up Stash and Controller keys
+## Setting up Stash and Controller keys
 
 > Until transfers are enabled, you may need to use the same account for stash and controller.
 
@@ -31,7 +31,7 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
-# Using Polkadot UI
+## Using Polkadot UI
 
 ### Step 1: Bond your tokens
 
@@ -113,7 +113,7 @@ At some point, you might decide to stop nominating one or more validators. You c
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond).
 
-# Using Command-Line Interface (CLI)
+## Using Command-Line Interface (CLI)
 
 Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI
 instead. The CLI approach allows you to interact with the Polkadot network without going to the

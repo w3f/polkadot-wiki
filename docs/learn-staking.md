@@ -281,6 +281,8 @@ Polkadot allows some validators to be disabled, but if the number of disabled va
 large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
 need to resubmit their intention to validate and regarner support from nominators.
 
+For more on chilling, see the [How to Chill][] page on this wiki.
+
 ### Slashing Across Eras
 
 There are 3 main difficulties to account for with slashing in NPoS:
@@ -408,3 +410,4 @@ around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 - [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
 
 [epoch]: glossary#epoch
+[how to chill]: maintain-guides-how-to-chill
