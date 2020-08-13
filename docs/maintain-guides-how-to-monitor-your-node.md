@@ -131,7 +131,7 @@ scrape_configs:
       - targets: ['localhost:9165']
 ```
 
-With the above configuration file, the first exporter is Prometheus that monitors itself. As we want
+With the above configuration file, the first exporter is the one that Prometheus exports to monitor itself. As we want
 to have more precise information about the state of the Prometheus server we reduced the
 `scrape_interval` to 5 sec for this job. The parameters `static_configs` and `targets` determine
 where the exporters are running. While the second exporter is capturing the data from your node, and
