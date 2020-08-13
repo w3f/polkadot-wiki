@@ -217,7 +217,7 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 
 ## Installing Grafana
 
-In order to visualize those metrics of your node, you can use Grafana to query the Prometheus
+In order to visualize your node metrics, you can use Grafana to query the Prometheus
 server. Run the following commands to install it first.
 
 ```bash
