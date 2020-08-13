@@ -289,7 +289,7 @@ it will be left to the stakeholders _en masse_ to determine the fate of the prop
 
 ![](assets/governance/approval-vote.png)
 
-Currently there is 13 seats on the council. All stakeholders are free to signal their approval of
+Currently there are 13 seats on the council. All stakeholders are free to signal their approval of
 any of the registered candidates.
 
 Council elections are handled by the same [Phragmén election](learn-phragmen) process that selects
