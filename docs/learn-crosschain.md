@@ -45,7 +45,7 @@ be deprecated and phased out in favor of it.
 
 ## Vertical Message Passing
 
-There are two kinds of vertical message passing, Upward Message Passing (UMP) and Downward Message
+There are two kinds of Vertical Message Passing, Upward Message Passing (UMP) and Downward Message
 Passing (DMP). UMP is used when a message originates on a parachain or a parathread to go from that
 parachain up to the Relay Chain. DMP is used to go the other way around, when a message originates
 from the Relay Chain and is destined for a parachain. Messages that are passed via DMP may originate
