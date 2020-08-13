@@ -256,7 +256,7 @@ correctly.
 Next, import the dashboard that lets you visualize your node data. Simply go to the menu bar on the
 left and mouse hover "+" then select `Import`.
 
-`Import via grafana.com` - It allows you to use someone who created the dashboard and make it
+`Import via grafana.com` - It allows you to use a dashboard that someone else has created and made
 public. You can check what other dashboards available via
 [https://grafana.com/grafana/dashboards](https://grafana.com/grafana/dashboards). In this guide, we
 use "My Polkadot Metrics", so input "12425" under the id field and click `Load`.
