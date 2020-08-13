@@ -33,7 +33,7 @@ architecture and design decisions are as follows:
 XCMP queues must be initiated by first opening a channel between two parachains. The channel is
 identified by both the sender and recipeient parachains, meaning that it's a one-way channel. A pair
 of parachains can have at most two channels between them, one for sending messages to the other
-chain and another for receiving messages. Channel will require a deposit in DOT to be opened, which
+chain and another for receiving messages. The channel will require a deposit in DOT to be opened, which
 will get reciprocated when the channel is closed.
 
 ## Horizontal Relay-routed Message Passing (HRMP)
