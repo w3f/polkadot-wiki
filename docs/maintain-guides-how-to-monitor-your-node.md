@@ -13,7 +13,8 @@ to collect metrics and Grafana allows for displaying it on the dashboard.
 
 ## Preparation
 
-First, create a user for Prometheus by adding `--no-create-home` flag to not allow `prometheus` to log in.
+First, create a user for Prometheus by adding `--no-create-home` flag to not allow `prometheus` to
+log in.
 
 ```bash
 sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
