@@ -7,9 +7,9 @@ sidebar_label: Monitor your node
 This guide will walk you through how to set up [Prometheus](https://prometheus.io/) with
 [Grafana](https://grafana.com/) to monitor your node using Ubuntu 18.04.
 
-As Substrate-based chain would expose the data including the height of the chain, the number of
-connected peers to your node, CPU, and memory usage of your machine, etc. To monitor these data,
-Prometheus is capable of collecting metrics to allow Grafana for displaying it on the dashboard.
+A Substrate-based chain exposes data such as the height of the chain, the number of
+connected peers to your node, CPU, memory usage of your machine, and more. To monitor this data,
+Prometheus is used to collect metrics and Grafana allows for displaying it on the dashboard.
 
 ## Preparation
 
