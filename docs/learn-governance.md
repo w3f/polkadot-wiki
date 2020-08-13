@@ -263,9 +263,9 @@ against - equate to a simple majority-carries system at 100% turnout.
 
 To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
 on-chain entity comprising a number of actors, each represented as an on-chain account. On Polkadot,
-the council currently consists of 13 members. This is expected to increase over the next few
-months to 24 seats. In general, the council will end up having a fixed number of seats. On
-Polkadot, this will be 24 seats while on Kusama it is 17 seats.
+the council currently consists of 13 members. This is expected to increase over the next few months
+to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
+will be 24 seats while on Kusama it is 17 seats.
 
 The council is called upon primarily for three tasks of governance: proposing sensible referenda,
 cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
@@ -273,8 +273,8 @@ cancelling uncontroversially dangerous or malicious referenda, and electing the 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
 if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time.
-Council motions which pass with a strict majority - but without reaching unanimous support - will move
-to public referendum under a neutral, majority-carries voting scheme. In the case that all
+Council motions which pass with a strict majority - but without reaching unanimous support - will
+move to public referendum under a neutral, majority-carries voting scheme. In the case that all
 members of the council vote in favor of a motion, the vote is considered unanimous and becomes a
 referundum with negative adaptive quorum biasing.
 
