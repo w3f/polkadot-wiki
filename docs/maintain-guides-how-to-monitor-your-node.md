@@ -248,7 +248,7 @@ Select `Prometheus`.
 ![grafana-1](assets/guides/how-to-monitor/3-select-prometheus.png)
 
 The only thing you need to input is the `URL` that is `https://localhost:9090` and then click
-`Save & Test`. If you see the result is `Data source is working`, your connection is configured
+`Save & Test`. If you see `Data source is working`, your connection is configured
 correctly.
 
 ![grafana-1](assets/guides/how-to-monitor/4-configure-data-source.png)
