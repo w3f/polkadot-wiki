@@ -10,7 +10,7 @@ sidebar_label: 提名人指南
 
 当[ 验证人 ][]是网络中的活跃参与者，他们参与了出区和最终确定。 在提名机制中，提名者通过 "一劳永逸" 的方法承担着更为被动的角色。 成为提名人不需要运行自己的节点或担心在线运行时间。 但是好的提名人会对他们选出的验证人进行尽职调查。 在寻找要提名的验证人时，提名人应注意自己提名特定验证人的报酬百分比-以及如果验证人被惩罚，他们也有被惩罚的风险。
 
-# 设置 Stash 和 Controller 密钥
+## Setting up Stash and Controller keys
 
 > Until transfers are enabled, you may need to use the same account for stash and controller.
 
@@ -18,7 +18,7 @@ sidebar_label: 提名人指南
 
 您可以通过 [帐户生成][]页上详细介绍的任何推荐方法来生成 stash 和 controller 帐户。
 
-# 使用 Polkadot UI
+## Using Polkadot UI
 
 ### 第一步: 绑定您的代币
 
@@ -64,7 +64,7 @@ sidebar_label: 提名人指南
 
 在某个时候，您可能决定停止提名多个验证人。 您可以随时更改您提名的人，但除非您取消绑定，否则您不能撤回您的代币。详细说明见 [此处](maintain-guides-how-to-unbond)
 
-# 使用命令行 (CLI)
+## Using Command-Line Interface (CLI)
 
 除了使用 Polkadot-JS Apps 参与抵押，您还可以在 CLI 中完成所有这些操作。 CLI 方法使您无需进入 Polkado-JS Apps 即可与 Polkadot 网络进行交互。
 
