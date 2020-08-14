@@ -179,8 +179,7 @@ level=info ts=2020-08-12T21:39:05.467Z caller=main.go:652 msg="Server is ready t
 ```
 
 Go to `http://SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus
-interface or not. If it is working, simply exit the process by pressing on `CTRL + C` on your
-Prometheus console.
+interface or not. If it is working, exit the process by pressing on `CTRL + C`.
 
 Next, we would like to automatically start the server during the boot process, so we have to create
 a new `systemd` configuration file with the following config.
