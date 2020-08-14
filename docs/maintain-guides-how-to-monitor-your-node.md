@@ -216,6 +216,8 @@ so that it will be loaded automatically during starting the OS.
 sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
 ```
 
+Prometheus should be running now, and you should be able to access its front again end by re-visiting `IP_ADDRESS:9090/`.
+
 ## Installing Grafana
 
 In order to visualize your node metrics, you can use Grafana to query the Prometheus server. Run the
