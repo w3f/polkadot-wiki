@@ -253,7 +253,7 @@ correctly.
 
 ![grafana-1](assets/guides/how-to-monitor/4-configure-data-source.png)
 
-Next, import the dashboard that lets you visualize your node data. Simply go to the menu bar on the
+Next, import the dashboard that lets you visualize your node data. Go to the menu bar on the
 left and mouse hover "+" then select `Import`.
 
 `Import via grafana.com` - It allows you to use a dashboard that someone else has created and made
