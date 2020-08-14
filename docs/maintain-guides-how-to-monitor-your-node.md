@@ -147,7 +147,7 @@ sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 
 ## Starting Prometheus
 
-To test the Prometheus is setup properly, execute the following command to start it as a
+To test that Prometheus is set up properly, execute the following command to start it as the
 `prometheus` user.
 
 ```bash
