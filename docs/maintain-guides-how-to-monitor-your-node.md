@@ -209,8 +209,8 @@ sudo nano /etc/systemd/system/prometheus.service
   WantedBy=multi-user.target
 ```
 
-Once the file is saved, execute the command below to use reload the `systemd` and enable the service
-so that it will be loaded automatically during starting the OS.
+Once the file is saved, execute the command below to reload `systemd` and enable the service
+so that it will be loaded automatically during the operating system's startup.
 
 ```bash
 sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
