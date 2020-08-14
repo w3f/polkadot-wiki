@@ -224,7 +224,7 @@ In order to visualize your node metrics, you can use Grafana to query the Promet
 following commands to install it first.
 
 ```bash
-sudo sudo apt-get install -y adduser libfontconfig1
+sudo apt-get install -y adduser libfontconfig1
 wget https://dl.grafana.com/oss/release/grafana_7.1.3_amd64.deb
 sudo dpkg -i grafana_7.1.3_amd64.deb
 ```
