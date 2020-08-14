@@ -232,6 +232,10 @@ sudo dpkg -i grafana_7.1.3_amd64.deb
 If everything is fine, start the Grafana server and access it by going to the
 `http://SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
 
+Now configure Grafana to auto-start on boot.
+
+> Note: If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
+
 ```bash
 sudo systemctl daemon-reload && sudo systemctl enable grafana-server && sudo systemctl start grafana-server
 ```
