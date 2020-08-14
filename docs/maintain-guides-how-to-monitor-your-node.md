@@ -30,7 +30,7 @@ sudo mkdir /var/lib/prometheus
 Change the ownership of these directories to `prometheus` so that only prometheus can access them.
 
 ```bash
-sudo chown prometheus:prometheus /etc/prometheus
+sudo chown -R prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
 ```
 
