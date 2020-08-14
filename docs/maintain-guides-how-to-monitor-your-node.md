@@ -9,7 +9,7 @@ This guide will walk you through how to set up [Prometheus](https://prometheus.i
 
 A Substrate-based chain exposes data such as the height of the chain, the number of connected peers
 to your node, CPU, memory usage of your machine, and more. To monitor this data, Prometheus is used
-to collect metrics and Grafana allows for displaying it on the dashboard.
+to collect metrics and Grafana allows for displaying them on the dashboard.
 
 ## Preparation
 
