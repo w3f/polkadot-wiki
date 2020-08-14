@@ -259,7 +259,7 @@ left and mouse hover "+" then select `Import`.
 `Import via grafana.com` - It allows you to use a dashboard that someone else has created and made
 public. You can check what other dashboards are available via
 [https://grafana.com/grafana/dashboards](https://grafana.com/grafana/dashboards). In this guide, we
-use "My Polkadot Metrics", so input "12425" under the id field and click `Load`.
+use ["My Polkadot Metrics"](https://grafana.com/grafana/dashboards/12425), so input "12425" under the id field and click `Load`.
 
 ![grafana-1](assets/guides/how-to-monitor/5-import-dashboard.png)
 
