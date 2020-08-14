@@ -111,7 +111,7 @@ to load.
 
 The configuration file should look like this below:
 
-```bash
+```yaml
 global:
   scrape_interval:     15s
   evaluation_interval: 15s
