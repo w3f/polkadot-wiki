@@ -49,7 +49,7 @@ cd prometheus-2.20.1.linux-amd64
 
 The following two binaries are in the directory:
 
-- Prometheus - Prometheus main binary file
+- prometheus - Prometheus main binary file
 - promtool
 
 The following two directories (which contain the web interface, configuration files examples and the
