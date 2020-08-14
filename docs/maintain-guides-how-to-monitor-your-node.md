@@ -99,7 +99,7 @@ Before using Prometheus, it needs some configuration. Create a YAML configuratio
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
-The configuration file is divided into three parts which are global, rule_files, and scrape_configs.
+The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
 
 `scrape_interval` defines how often Prometheus scrapes targets, while `evaluation_interval` controls
 how often the software will evaluate rules.
