@@ -268,7 +268,8 @@ click `Import`.
 
 ![grafana-1](assets/guides/how-to-monitor/5-import-dashboard-2.png)
 
-If everything is done correctly, you should be able to monitor your node's performance such as the
-current block height, CPU, memory usage, etc.
+In the meantime, start your Polkadot node with by running `./polkadot`. If everything is done
+correctly, you should be able to monitor your node's performance such as the current block height,
+CPU, memory usage, etc on the Grafana dashboard.
 
 ![grafana-1](assets/guides/how-to-monitor/6-dashboard-metric.png)
