@@ -155,7 +155,7 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
 ```
 
 The following messages indicate the status of the server. If you see the following messages, your
-server is setup properly.
+server is set up properly.
 
 ```bash
 level=info ts=2020-08-12T21:39:05.453Z caller=main.go:308 msg="No time or size retention was set so using the default time retention" duration=15d
