@@ -156,6 +156,8 @@ When used as part of a punishment, being chilled carries an implied penalty of b
 
 Polkadot allows some validators to be disabled, but if the number of disabled validators gets too large, Polkadot will trigger a new validator election to get a full set. Disabled validators will need to resubmit their intention to validate and regarner support from nominators.
 
+For more on chilling, see the [How to Chill](maintain-guides-how-to-chill) page on this wiki.
+
 ### Slashing Across Eras
 
 There are 3 main difficulties to account for with slashing in NPoS:
