@@ -137,6 +137,8 @@ reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_
 `targets` determine where the exporters are running. While the second exporter is capturing the data
 from your node, and the port by default is `9165`.
 
+You can check the validity of this configuration file by running `promtool check config /etc/prometheus/prometheus.yml`.
+
 Save the configuration file and change the ownership of the file to `prometheus` user.
 
 ```bash
