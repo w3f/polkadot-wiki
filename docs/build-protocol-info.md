@@ -28,8 +28,8 @@ numbers and times are:
 
 | Event             | Block Number |  Earliest Time   |
 | :---------------- | :----------: | :--------------: |
-| Transfers enabled |  1,205,128   | 18 Aug 13:15 UTC |
-| Redenomination    |  1,248,328   | 21 Aug 13:15 UTC |
+| Transfers enabled |  1,205,128   | 18 Aug 16:40 UTC |
+| Redenomination    |  1,248,328   | 21 Aug 16:40 UTC |
 
 Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT
 (old)" to differentiate DOTs of the original denomination. This change can be made immediately. For
@@ -38,7 +38,7 @@ to clearly indicate that you have made the change. After sufficient time has ela
 post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would
 be:
 
-> “On approximately August 21st at 13:15 UTC (block number 1,248,328), the DOT token will undergo a
+> “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token will undergo a
 > redenomination. New DOTs will be 100x smaller than DOTs (old). Therefore, your DOT balance will be
 > 100x higher. The percentage of the DOTs you own relative to total supply will be unchanged. See
 > the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for

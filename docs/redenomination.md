@@ -5,7 +5,7 @@ sidebar_label: Redenomination of DOT
 ---
 
 > Note: The DOT redenomination is taking place on 21 August, now to be known as Denomination Day, at
-> block #1,248,328. This block will happen at approximately 13:15 UTC, which is in Europe's
+> block #1,248,328. This block will happen no earlier than 16:45 UTC, which is in Europe's
 > afternoon, China's evening and America's morning.
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting
