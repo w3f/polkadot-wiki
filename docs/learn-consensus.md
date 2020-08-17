@@ -193,8 +193,6 @@ The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadge
 
 _Coming soon!_
 
-<!-- ### Avalanche -->
-
 ## Resources
 
 - [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - The academic
@@ -202,11 +200,3 @@ _Coming soon!_
 - [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference
   implementation and the accompanying
   [Substrate pallet](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs).
-
-<!-- ## Consensus in Polkadot
-
-### Block Production
-
-### Finality Gadget
-
-### NPoS -->
