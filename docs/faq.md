@@ -157,7 +157,7 @@ economic costs on the operators of the bridge, and therefore makes it economical
 efforts are being worked on in concert with other projects in the ecosystem. Eventually, there will
 be bridges between Polkadot and most of the other major chains.
 
-## DOTs
+## DOT
 
 ### What is the inflation rate of the DOT?
 
@@ -165,7 +165,7 @@ The inflation rate is 10% per year.
 
 A portion of the inflation is rewarded to validators for performing their duties, while another
 portion may go directly to the treasury. The exact percentage that goes into both varies and is
-based on the amount of DOTs that are staked. Please see the article on
+based on the amount of DOT that are staked. Please see the article on
 [inflation](learn-staking#inflation) for more information.
 
 ### Can I buy or transfer DOT tokens?
@@ -173,16 +173,16 @@ based on the amount of DOTs that are staked. Please see the article on
 Testnet DOT tokens are freely available from a variety of sources. See the [DOT page](learn-DOT) for
 details.
 
-The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see
+The Web3 Foundation will distribute up to 20% of mainnet DOT prior to network launch (see
 [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the
 [Polkadot Network FAQ](https://polkadot.network/faq/)). Subscribe to the Polkadot newsletter on
 [polkadot.network](https://polkadot.network/) for further updates.
 
-DOT tokens are not transferable until the launch of Polkadot Beta is complete. Any transfers of DOTs
-before that time are illegitimate and unauthorized. DOTs are currently represented on Ethereum as
-the DOT Indicator Token, these cannot be moved from the current allocation address. Individuals with
-an allocation of DOTs can always keep a copy of their private key, therefore it is extremely risky
-for individuals to participate in trading of DOTs before Polkadot launch.
+DOT tokens are not transferable until the launch of Polkadot Beta is complete. Any transfers of DOT
+before that time are illegitimate and unauthorized. DOT are currently represented on Ethereum as the
+DOT Indicator Token, these cannot be moved from the current allocation address. Individuals with an
+allocation of DOT can always keep a copy of their private key, therefore it is extremely risky for
+individuals to participate in trading of DOT before Polkadot launch.
 
 ## Governance
 
