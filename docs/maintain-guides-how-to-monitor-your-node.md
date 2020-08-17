@@ -13,8 +13,8 @@ to collect metrics and Grafana allows for displaying them on the dashboard.
 
 ## Preparation
 
-First, create a user for Prometheus by adding the `--no-create-home` flag to disallow `prometheus` from
-logging in.
+First, create a user for Prometheus by adding the `--no-create-home` flag to disallow `prometheus`
+from logging in.
 
 ```bash
 sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
@@ -99,13 +99,14 @@ Before using Prometheus, it needs some configuration. Create a YAML configuratio
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
-The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
+The configuration file is divided into three parts which are `global`, `rule_files`, and
+`scrape_configs`.
 
-- `scrape_interval` defines how often Prometheus scrapes targets, while `evaluation_interval` controls
-how often the software will evaluate rules.
+- `scrape_interval` defines how often Prometheus scrapes targets, while `evaluation_interval`
+  controls how often the software will evaluate rules.
 
 - `rule_files` block contains information of the location of any rules we want the Prometheus server
-to load.
+  to load.
 
 - `scrape_configs` contains the information which resources Prometheus monitors.
 
@@ -113,7 +114,7 @@ The configuration file should look like this below:
 
 ```yaml
 global:
-  scrape_interval:     15s
+  scrape_interval: 15s
   evaluation_interval: 15s
 
 rule_files:
@@ -121,23 +122,24 @@ rule_files:
   # - "second.rules"
 
 scrape_configs:
-  - job_name: 'prometheus'
+  - job_name: "prometheus"
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:9090']
-  - job_name: 'substrate_node'
+      - targets: ["localhost:9090"]
+  - job_name: "substrate_node"
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:9165']
+      - targets: ["localhost:9165"]
 ```
 
 With the above configuration file, the first exporter is the one that Prometheus exports to monitor
 itself. As we want to have more precise information about the state of the Prometheus server we
 reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and
-`targets` determine where the exporters are running. The second exporter is capturing the data
-from your node, and the port by default is `9165`.
+`targets` determine where the exporters are running. The second exporter is capturing the data from
+your node, and the port by default is `9165`.
 
-You can check the validity of this configuration file by running `promtool check config /etc/prometheus/prometheus.yml`.
+You can check the validity of this configuration file by running
+`promtool check config /etc/prometheus/prometheus.yml`.
 
 Save the configuration file and change the ownership of the file to `prometheus` user.
 
@@ -209,14 +211,15 @@ sudo nano /etc/systemd/system/prometheus.service
   WantedBy=multi-user.target
 ```
 
-Once the file is saved, execute the command below to reload `systemd` and enable the service
-so that it will be loaded automatically during the operating system's startup.
+Once the file is saved, execute the command below to reload `systemd` and enable the service so that
+it will be loaded automatically during the operating system's startup.
 
 ```bash
 sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
 ```
 
-Prometheus should be running now, and you should be able to access its front again end by re-visiting `IP_ADDRESS:9090/`.
+Prometheus should be running now, and you should be able to access its front again end by
+re-visiting `IP_ADDRESS:9090/`.
 
 ## Installing Grafana
 
@@ -234,7 +237,10 @@ If everything is fine, start the Grafana server and access it by going to the
 
 Now configure Grafana to auto-start on boot.
 
-> Note: If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
+> Note: If you want to change the port on which Grafana runs (3000 is a popular port), edit the file
+> `/usr/share/grafana/conf/defaults.ini` with a command like
+> `sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something
+> else. Then restart grafana with `sudo systemctl restart grafana-server`.
 
 ```bash
 sudo systemctl daemon-reload && sudo systemctl enable grafana-server && sudo systemctl start grafana-server
@@ -255,18 +261,18 @@ Select `Prometheus`.
 ![grafana-1](assets/guides/how-to-monitor/3-select-prometheus.png)
 
 The only thing you need to input is the `URL` that is `https://localhost:9090` and then click
-`Save & Test`. If you see `Data source is working`, your connection is configured
-correctly.
+`Save & Test`. If you see `Data source is working`, your connection is configured correctly.
 
 ![grafana-1](assets/guides/how-to-monitor/4-configure-data-source.png)
 
-Next, import the dashboard that lets you visualize your node data. Go to the menu bar on the
-left and mouse hover "+" then select `Import`.
+Next, import the dashboard that lets you visualize your node data. Go to the menu bar on the left
+and mouse hover "+" then select `Import`.
 
 `Import via grafana.com` - It allows you to use a dashboard that someone else has created and made
 public. You can check what other dashboards are available via
 [https://grafana.com/grafana/dashboards](https://grafana.com/grafana/dashboards). In this guide, we
-use ["My Polkadot Metrics"](https://grafana.com/grafana/dashboards/12425), so input "12425" under the id field and click `Load`.
+use ["My Polkadot Metrics"](https://grafana.com/grafana/dashboards/12425), so input "12425" under
+the id field and click `Load`.
 
 ![grafana-1](assets/guides/how-to-monitor/5-import-dashboard.png)
 
@@ -275,8 +281,8 @@ click `Import`.
 
 ![grafana-1](assets/guides/how-to-monitor/5-import-dashboard-2.png)
 
-In the meantime, start your Polkadot node by running `./polkadot`. If everything is done
-correctly, you should be able to monitor your node's performance such as the current block height,
-CPU, memory usage, etc. on the Grafana dashboard.
+In the meantime, start your Polkadot node by running `./polkadot`. If everything is done correctly,
+you should be able to monitor your node's performance such as the current block height, CPU, memory
+usage, etc. on the Grafana dashboard.
 
 ![grafana-1](assets/guides/how-to-monitor/6-dashboard-metric.png)
