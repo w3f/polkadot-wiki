@@ -14,7 +14,7 @@ good nominator performs diligence on the validators that it elects. When looking
 nominate, a nominator should pay attention to its own reward percentage for nominating a specific
 validator - as well as the risk that it bares of being slashed if the validator gets slashed.
 
-# Setting up Stash and Controller keys
+## Setting up Stash and Controller keys
 
 Nominators are recommended to set up two separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
@@ -23,7 +23,7 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
-# Using Polkadot UI
+## Using Polkadot UI
 
 ### Step 1: Bond your tokens
 
@@ -102,7 +102,7 @@ At some point, you might decide to stop nominating one or more validators. You c
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond).
 
-# Using Command-Line Interface (CLI)
+## Using Command-Line Interface (CLI)
 
 Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI
 instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to

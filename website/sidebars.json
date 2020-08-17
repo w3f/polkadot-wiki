@@ -1,21 +1,19 @@
 {
   "docs": {
     "General": [
-      "index",
+      "getting-started",
       "claims",
+      "redenomination",
+      "grants",
+      "research",
       "community",
       "contributing",
-      "faq",
-      "getting-started",
       "glossary",
-      "grants",
-      "redenomination",
-      "research"
+      "faq"
     ],
     "Learn": [
       "learn-introduction",
       "learn-launch",
-      "learn-roadmap",
       {
         "type": "subcategory",
         "label": "Basics",
@@ -132,6 +130,7 @@
         "ids": [
           "maintain-nominator",
           "maintain-guides-how-to-nominate-polkadot",
+          "maintain-guides-how-to-chill",
           "maintain-guides-how-to-unbond"
         ]
       },
@@ -146,7 +145,8 @@
           "maintain-guides-secure-validator",
           "maintain-guides-how-to-use-polkadot-secure-validator",
           "maintain-guides-how-to-setup-sentry-node",
-          "maintain-guides-how-to-upgrade"
+          "maintain-guides-how-to-upgrade",
+          "maintain-guides-how-to-chill"
         ]
       },
       {

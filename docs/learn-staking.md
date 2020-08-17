@@ -76,11 +76,11 @@ validator. Notice in particular that the validator is rewarded twice: once as co
 validating, and once for nominating itself with stake.
 
 To estimate the inflation rate and how many DOTs you can get each month as a nominator or validator,
-you can use this
-[Excel sheet](https://docs.google.com/spreadsheets/d/1-9Hc3kZ23EhZC3X6feRUKSTv6gj4xR7cvUbJD2zUEZk/edit?usp=sharing)
-as a reference and play around with it by changing some parameters (e.g. validator pools, total
-supply, commission fees, etc.) to have a better estimate. Even though it may not be entirely
-accurate since staking participation is changing dynamically, it works well as an indicator.
+you can use this [tool](https://www.stakingrewards.com/earn/polkadot/calculate) as a reference and
+play around with it by changing some parameters (e.g. how many days you would like to stake with
+your DOTs, provider fees, compound rewards, etc.) to have a better estimate. Even though it may not
+be entirely accurate since staking participation is changing dynamically, it works well as an
+indicator.
 
 ### 4. Rewards Mechanism
 
@@ -281,6 +281,8 @@ Polkadot allows some validators to be disabled, but if the number of disabled va
 large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
 need to resubmit their intention to validate and regarner support from nominators.
 
+For more on chilling, see the [How to Chill][] page on this wiki.
+
 ### Slashing Across Eras
 
 There are 3 main difficulties to account for with slashing in NPoS:
@@ -408,3 +410,4 @@ around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 - [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
 
 [epoch]: glossary#epoch
+[how to chill]: maintain-guides-how-to-chill
