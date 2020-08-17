@@ -173,7 +173,7 @@ of the underlying blockchain and creates a new branch of _the same blockchain_.
 ## Horizontal Relay-routed Message Passing
 
 Horizontal Relay-routed Message Passing, also known as HRMP, is a precursor to the complete XCMP
-implementation that mimics the same interface and semantics of XCMP. It is similar to XCMP except
+implementation, that mimics the same interface and semantics of XCMP. It is similar to XCMP except
 for how it stores all messages in the Relay Chain storage, therefore making it more expensive and
 demanding more resources than XCMP. It is planned to be retired once the implementation of XCMP is
 complete.
