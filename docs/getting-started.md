@@ -42,7 +42,6 @@ For brand-new learners of Polkadot:
 - [Setting an Identity][identity]
 - [Creating a Proxy Account][proxy]
 - [Making Proposals and Voting for Referenda][democracy]
-- Social Recovery (Coming soon!)
 - [Running for the Council][council]
 - [Voting for Councillors][council voting]
 - [Using the Treasury][treasury]
