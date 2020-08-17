@@ -24,7 +24,8 @@ the DOT is like a bitcoin or an ether.
 | Millidot (mDOT) | 9              |
 | Dot (DOT)       | 12             |
 
-_Note: This will change at block #1,248,328. See [Redenomination of DOT](redenomination) for more details._
+_Note: This will change at block #1,248,328. See [Redenomination of DOT](redenomination) for more
+details._
 
 ### Kusama
 
@@ -45,7 +46,7 @@ parachain.
 DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT
 stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
-> These concepts have been further explained in the video 
+> These concepts have been further explained in the video
 > [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
 
 ### DOTs for governance
@@ -65,15 +66,15 @@ DOT will be used to facilitate the consensus mechanism that underpins Polkadot. 
 platform to function and allow for valid transactions to be carried out across parachains, Polkadot
 will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via
 staking) to perform these functions. The staking of DOT acts as a disincentive for malicious
-participants whom will be punished by the network by getting their DOT slashed. The DOT required
-to participate in the network will vary depending on the activity that is being performed, the
-duration the DOT will be staked for, and the total number of DOT staked.
+participants whom will be punished by the network by getting their DOT slashed. The DOT required to
+participate in the network will vary depending on the activity that is being performed, the duration
+the DOT will be staked for, and the total number of DOT staked.
 
 ### DOT for bonding
 
-DOT will have the ability to be bonded for a duration of time in order to add a new parachain to
-the network. The DOT will be locked during their bonding period and will be released back to the
-account that bonded them after the duration of the bond has elapsed and the parachain is removed.
+DOT will have the ability to be bonded for a duration of time in order to add a new parachain to the
+network. The DOT will be locked during their bonding period and will be released back to the account
+that bonded them after the duration of the bond has elapsed and the parachain is removed.
 
 ### Vesting
 
@@ -126,9 +127,10 @@ You can also make your own WNDs (testnet DOT) by [becoming a validator](maintain
 ## Kusama Tokens
 
 Unlike testnet DOT (WND), Kusama tokens are not freely given away. Kusama tokens are available via
-the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or through
-the [Treasury](learn-treasury).
+the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis)
+or through the [Treasury](learn-treasury).
 
 ## Polkadot Mainnet DOT
 
-Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you may claim them via the [Polkadot claims process](https://claims.polkadot.network/).
+Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you
+may claim them via the [Polkadot claims process](https://claims.polkadot.network/).
