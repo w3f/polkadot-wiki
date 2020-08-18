@@ -32,17 +32,17 @@ numbers and times are:
 | Redenomination    |  1,248,328   | 21 Aug 16:40 UTC |
 
 Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT
-(old)" to differentiate DOTs of the original denomination. This change can be made immediately. For
-a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_"
-to clearly indicate that you have made the change. After sufficient time has elapsed
+(old)" to differentiate DOT of the original denomination. This change can be made immediately. For a
+period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_" to
+clearly indicate that you have made the change. After sufficient time has elapsed
 post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would
 be:
 
 > “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token will undergo a
-> redenomination. New DOTs will be 100x smaller than DOTs (old). Therefore, your DOT balance will be
-> 100x higher. The percentage of the DOTs you own relative to total supply will be unchanged. See
-> the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for
-> more information.”
+> redenomination. New DOT will be 100x smaller than DOT (old). Therefore, your DOT balance will be
+> 100x higher. The percentage of the DOT you own relative to total supply will be unchanged. See the
+> Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for more
+> information.”
 
 If you require assistance with redenomination, please contact redenomination@web3.foundation.
 
@@ -100,10 +100,10 @@ some operation and still belong to the account holder, but cannot be used.
 Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
 can operate on the same account, but they overlap rather than add. Locks are automatically added
 onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these
-are not customizable. For example, an account could have a free balance of 200 DOTs with two locks
-on it: 150 DOTs for `Transfer` purposes and 100 DOTs for `Reserve` purposes. The account could not
-make a transfer that brings its free balance below 150 DOTs, but an operation could result in
-reserving DOTs such that the free balance is below 150, but above 100 DOTs.
+are not customizable. For example, an account could have a free balance of 200 DOT with two locks on
+it: 150 DOT for `Transfer` purposes and 100 DOT for `Reserve` purposes. The account could not make a
+transfer that brings its free balance below 150 DOT, but an operation could result in reserving DOT
+such that the free balance is below 150, but above 100 DOT.
 
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 
@@ -142,8 +142,8 @@ with a low risk of spam. Signed transactions fit the concept of a transaction in
 Bitcoin.
 
 Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For
-example, when a user claims their DOTs from the Ethereum DOT indicator contract to a new DOT
-address, the new address doesn't yet have any funds with which to pay fees.
+example, when a user claims their DOT from the Ethereum DOT indicator contract to a new DOT address,
+the new address doesn't yet have any funds with which to pay fees.
 
 ### Transaction Mortality
 

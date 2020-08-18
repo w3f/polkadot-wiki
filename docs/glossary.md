@@ -76,12 +76,12 @@ The consensus algorithm used by Polkadot is GRANDPA.
 A generic term for a decentralized application, that is, one that runs as part of a distributed
 network as opposed to being run on a specific system or set of systems.
 
-## DOTs
+## DOT
 
-The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote
+The native token for Polkadot. DOT serve three purposes: network governance (allowing them to vote
 on network upgrades and other exceptional events), general operation (rewarding good actors and
-punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are
-connected the Relay Chain).
+punishing bad actors), and bonding (adding new parachains by "freezing" DOT while they are connected
+the Relay Chain).
 
 ## Duty Roster
 
@@ -123,7 +123,7 @@ A mechanism that determines finality.
 ## Fisherman
 
 Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must
-stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
+stake a small amount of DOT but can be rewarded greatly if they find bad behavior.
 
 ## Frame
 
@@ -318,7 +318,7 @@ Polkadot protocol, most prominently in [BABE](#babe) the block production mechan
 
 A vote on whether or not a proposal should be accepted by the network. Referenda may be initiated by
 the Governance Council, by a member of the public, or as the result of a previous proposal.
-Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held)
+Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOT held)
 and the amount of time they are willing to lock their tokens.
 
 ## Relay chain
@@ -371,7 +371,7 @@ finality of a single parachain, an attacker would need to attack the entire Polk
 
 ## Slashing
 
-The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously
+The removal of a percentage of an account's DOT as a punishment for a validator acting maliciously
 or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
 ## Soft Fork
@@ -383,9 +383,9 @@ new consensus rules but upgraded clients are still compatible with old consensus
 
 ## Staking
 
-The act of bonding tokens (for Polkadot, DOTs) by putting them up as "collateral" for a chance to
-produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOTs
-in order to secure the network.
+The act of bonding tokens (for Polkadot, DOT) by putting them up as "collateral" for a chance to
+produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOT in
+order to secure the network.
 
 ## State transition function
 
@@ -410,7 +410,7 @@ send funds to Bob by the fact that she signed a transfer-funds message with her 
 
 ## Validator
 
-A node that secures the Relay Chain by staking DOTs, validating proofs from collators on parachains
+A node that secures the Relay Chain by staking DOT, validating proofs from collators on parachains
 and voting on consensus along with other validators.
 
 ## Vertical Message Passing
@@ -424,8 +424,8 @@ up to the Relay Chain via runtime entry points.
 ## Voting
 
 The process of stakeholders determining whether or not a referendum should pass. Votes are weighted
-both by the number of DOTs that the stakeholder account controls and the amount of time they are
-willing to lock their DOTs.
+both by the number of DOT that the stakeholder account controls and the amount of time they are
+willing to lock their DOT.
 
 ## Wallet
 
