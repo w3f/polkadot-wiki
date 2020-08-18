@@ -25,12 +25,17 @@ For brand-new learners of Polkadot:
 - [Setting an Identity][identity]
 - [Creating a Proxy Account][proxy]
 - [Making Proposals and Voting for Referenda][democracy]
-- Social Recovery (Coming soon!)
 - [Running for the Council][council]
 - [Voting for Councillors][council voting]
 - [Using the Treasury][treasury]
 
 For brand-new learners of Kusama: To learn more about how to build and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
+
+## Resources
+
+- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
+- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
+- [Contributing Guide](contributing) - Rules for contributing to the wiki.
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [white-paper]: https://polkadot.network/PolkaDotPaper.pdf
