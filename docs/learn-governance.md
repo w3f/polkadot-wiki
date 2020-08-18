@@ -389,7 +389,7 @@ singular place where you are guaranteed to grab every councillor's ear with your
 there are a handful of good places to start where you can get the attention of some of them. The
 [Polkadot Direction][] matrix room is one such place. After creating an account and joining this
 room, you can post a well thought-through message here that lays down your case and provides
-justification for why you think the council should consider enacting a change to the protocol on you
+justification for why you think the council should consider enacting a change to the protocol on your
 behalf.
 
 At some point you will likely need a place for a longer form discussion. For this, making a post on
