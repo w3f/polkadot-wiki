@@ -379,9 +379,10 @@ same time. Voting on one does not prevent a user from voting on the other.
 
 In some circumstances you may want to appeal to the on-chain council to enact a change on your
 behalf. One example of this circumstance is the case of lost or locked funds when the funds were
-lost due to a human interface error (such as inputting an address for another network). When these
-circumstances can be proven beyond a reasonable doubt to be an error, the council _may_ consider a
-governance motion to correct it.
+lost due to a human interface error (such as inputting an address for another network). Another
+example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does
+not let you sign a message easily. When these circumstances can be proven beyond a reasonable
+doubt to be an error, the council _may_ consider a governance motion to correct it.
 
 The first step to appeal to the council is to get in contact with the councillors. There is no
 singular place where you are guaranteed to grab every councillor's ear with your message. However,
