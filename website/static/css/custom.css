@@ -246,3 +246,23 @@ body {
 .headerTitleWithLogo {
   display: inline !important;
 }
+
+@media print {
+  .docsNavContainer,
+  .fixedHeaderContainer,
+  #klaro,
+  .github-fork-ribbon,
+  .toc,
+  .slidingNav,
+  .edit-page-link,
+  .docLastUpdate,
+  footer,
+  #back-to-top {
+    padding-top: 0;
+    display: none;
+  }
+
+  .navPusher {
+    padding-top: 0;
+  }
+}
