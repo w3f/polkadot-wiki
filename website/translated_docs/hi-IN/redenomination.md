@@ -4,7 +4,7 @@ title: Redenomination of DOT
 sidebar_label: Redenomination of DOT
 ---
 
-> Note: The DOT redenomination is taking place on 21 August, now to be known as Denomination Day, at block #1,248,328. This block will happen at approximately 13:15 UTC, which is in Europe's afternoon, China's evening and America's morning.
+> Note: The DOT redenomination is taking place on 21 August, now to be known as Denomination Day, at block #1,248,328. This block will happen no earlier than 16:45 UTC, which is in Europe's afternoon, China's evening and America's morning.
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12 Planks, that is twelve decimal places. After this date the DOT will be denominated as 1e10 Plancks, as in ten decimal places.
 
