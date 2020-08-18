@@ -380,17 +380,17 @@ same time. Voting on one does not prevent a user from voting on the other.
 In some circumstances you may want to appeal to the on-chain council to enact a change on your
 behalf. One example of this circumstance is the case of lost or locked funds when the funds were
 lost due to a human interface error (such as inputting an address for another network). Another
-example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does
-not let you sign a message easily. When these circumstances can be proven beyond a reasonable
-doubt to be an error, the council _may_ consider a governance motion to correct it.
+example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does not
+let you sign a message easily. When these circumstances can be proven beyond a reasonable doubt to
+be an error, the council _may_ consider a governance motion to correct it.
 
 The first step to appeal to the council is to get in contact with the councillors. There is no
 singular place where you are guaranteed to grab every councillor's ear with your message. However,
 there are a handful of good places to start where you can get the attention of some of them. The
 [Polkadot Direction][] matrix room is one such place. After creating an account and joining this
 room, you can post a well thought-through message here that lays down your case and provides
-justification for why you think the council should consider enacting a change to the protocol on your
-behalf.
+justification for why you think the council should consider enacting a change to the protocol on
+your behalf.
 
 At some point you will likely need a place for a longer form discussion. For this, making a post on
 [Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
