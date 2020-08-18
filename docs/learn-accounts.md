@@ -276,3 +276,9 @@ Bob, and Charlie. First Alice will create the call on chain by calling `as_multi
 When doing this Alice will have to deposit 0.20152 DOT while she waits for either Bob or Charlie to
 also approve the call. When Bob comes to approve the call and execute the transaction, he will not
 need to place the deposit and Alice will receive her deposit back.
+
+## Resources
+
+- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
+  explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill
+  Laboon and Chinmay Patel of BlockX Labs.

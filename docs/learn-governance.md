@@ -377,3 +377,9 @@ same time. Voting on one does not prevent a user from voting on the other.
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+- [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr.
+  Gavin Wood presents the initial governance structure for Polkadot. (Video)
+- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
+  explaining how governance works in Polkadot and Kusama.
+- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - An explanation of
+  how governance works in Polkadot and Kusama, with Bill Laboon.
