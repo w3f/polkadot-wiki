@@ -10,7 +10,7 @@ sidebar_label: 认领
 
 如果您是首次认领 DOT，请阅读下面[认领](#making-a-claim)的部分继续。如果您在创世块之前已经认领，请前往[证明声明](#attesting-to-a-statement)部分。
 
-> To learn more on How to claim your DOTs post genesis, check out our walkthrough [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22) and our video on [Claiming DOTs with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+> To learn more on How to claim your DOT post genesis, check out our walkthrough [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22) and our video on [Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
 
 ## 认领
 
@@ -30,13 +30,13 @@ sidebar_label: 认领
 
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
 
-You will need a Polkadot account to claim your DOTs. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
+You will need a Polkadot account to claim your DOT. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
 
 #### 使用 MyCrypto 认领您的 DOT
 
 Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持有 DOT 代币的以太坊帐户的密钥存储在 Ledger Nano S 或 Trezor 等冷钱包上，MyCrypto 是个不错的选择。它还支持私钥，助记词和 Parity signer。
 
-一旦下载了 MyCrypto 并使其在本地运行(为了获得最大的安全性，我们建议使用完全离线的电脑)，您可以先前往到 Polkadot-JS Apps 上的 Claims 程序。选择您要申请认领 DOT 的帐户，然后点蓝色的 "Continue" 按钮继续。您的屏幕应如下所示:
+Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
 ![claim-1](assets/new-claims/claim-1.png)
 
@@ -48,7 +48,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![claim-2-1](assets/new-claims/claim-2-1.png)
 
-句子后面的十六进制编码字符串: "Pay DOTs to the Polkadot account:" 是您 Polkadot 帐户的十六进制编码公钥，减去 `0x` 前缀。
+The hex-encoded string that follows the sentence: "Pay DOT to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
 下一步是转到 MyCrypto 程序，然后点击 "Sign & Verify Message" 选项。
 
@@ -74,17 +74,17 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![claim-9](assets/new-claims/claim-9.png)
 
-如果认领成功，那么您将看到一条成功消息，并且您的 DOT 将会在您认领的帐户中。
+If this claim succeeded, then you will see a success message and your DOT will be in the account that you claimed to.
 
 #### 确认您的认领
 
-当提出链上认领 DOT 之后，Polkadot UI 上应立即更新了您的余额。
+After you make an on-chain claim for DOT, your balance should be updated on the Polkadot UI immediately.
 
 遇到麻烦? 在 DOT [Claims Support]()渠道寻求帮助。
 
 ![claim-10](assets/new-claims/claim-10.png)
 
-恭喜，您现在已经完成了 DOT 认领和签名的程序。
+Congratulations, you have now completed the process for claiming and signing for your DOT.
 
 ### 第三方认领程序
 
@@ -126,7 +126,7 @@ Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
 
@@ -155,7 +155,7 @@ Open Parity Signer and choose "Polkadot" network.
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-Select the address that you have claimed DOTs to during pre-genesis.
+Select the address that you have claimed DOT to during pre-genesis.
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
@@ -193,7 +193,7 @@ First, you need to press the "QR Scanner" on the Parity Signer to scan the QR co
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
-When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
 
 [ MyCrypto ]: https://download.mycrypto.com/
