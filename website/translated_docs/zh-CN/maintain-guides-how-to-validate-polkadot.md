@@ -16,11 +16,11 @@ sidebar_label: How to run a Validator on Polkadot
 
 如果您需要帮助，请前往 [ Riot 上的 Polkadot 验证人聊天室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) 。团队和其他验证人在那里帮助回答问题并提供经验。
 
-### 我需要多少 DOTs？
+### How many DOT do I need?
 
 You can have a rough estimate on that by using the methods listed [here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough DOT to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
-**警告: ** 验证人抵押中的 DOTs 都有可能遭到大幅削减(惩罚)，这意味着不安全或设置不当可能会导致 KSM 被削减！ 如果您对运行验证人节点的能力不太确定，建议最好把您的 DOT 提名给你信任的验证人节点。
+**Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of DOT tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node instead.
 
 ## 初始设置
 
@@ -147,9 +147,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 如果您想估计还需要再多少时间，服务器日志(在 ` polkadot ` STDOUT 程序中显示)显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Polkadot%20CC1)或当前[ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
 
-> **注意:** 如果您还没有 DOTs，您只能做到这一步，直至升级到 PoS 之后。您仍然可以运行节点，但是因为在非正式发布期间轉帳是不能使用，所以您需要少数量 DOTs 才能继续操作。 在 NPoS 开始之前，即使有 DOTs 的人也只能表达他们_有意_成为验证人，他们现在是无法成为验证人。
+> **Note:** If you do not already have DOT, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of DOT to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with DOT, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
 
-## 绑定 DOTS
+## Bond DOT
 
 > **注意: **在 Polkadot 的非正式发布阶段将禁用转帐。 这意味着如果您在这段时间内设置验证人，则可能无法按照建议的方式将 stash 和 controller 设置为两个单独的帐号。 您必须使它们成为同一帐号，这意味着您将把该帐号绑定到其自身。 但是强烈建议您尽快更换 controller。
 
@@ -159,16 +159,16 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 现在可以开始设定验证人，首先我们将会做以下步骤：
 
-- 绑定 Stash 帐户的 DOT。 为了网络的安全，这些 DOT 将会抵押到网络，并且可以被惩罚。
+- Bond the DOT of the Stash account. These DOT will be put at stake for the security of the network and can be slashed.
 - 选择 Controller，Controller 是决定何时开始或停止验证的帐户。
 
 首先前往[ Staking ](https://polkadot.js.org/apps/#/staking/actions)部分。按下 "Account Actions"，然后再按 "New stake" 按钮。
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash 帐号** -选择 Stash 账号。在这个例子我们会绑定 100 milliDOTs - 确保你的 Stash 帐户拥有_至少_这个数量。当然你也可以绑定更多。
-- **Controller 帐号** - 选择你之前创建的 Controller 帐号。此帐户也需要少量 DOTs 才能开始和停止验证。
-- **Value bonded** - 选择从 Stash 帐号绑定/抵押 DOTs 数量， 因为你需要支付交易费，所以不能够把全部 DOTs 作押抵。另外你之后还可以绑定_更多_。但是_提取_ 已经绑定了的 DOTs 是需要等待一段时间 (Kusama 解绑时间是 7 天，而 Polkadot 计划是 28 天)。
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliDOT - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
+- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of DOT in order to start and stop validating.
+- **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - 把奖励发送到那个帐号，详情请看[这里](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution)。
 
 当所有资料填写好后，使用 Stash 帐号按下`Bond`并签署交易。
@@ -237,7 +237,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
-验证人竞选在每个 era 也会重新运行。当下一个 era 如果有位置空缺并且您的节点成功成为验证人，您的节点将会正式成为验证人。在此之前它将停留在 _waiting_队列中。如果您的节点沒有成功成为验证人，它将会一直停留在_waiting_队列中排队。你不需要重新启动它。但是为了成为验证人，你可能需要增加抵押 DOTs 的数量或寻找提名人支持你的节点。
+The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of DOT staked or seek out nominators for your validator in order to join the validator set.
 
 **恭喜你!** 如果你有按照以上步骤操作，你经已设定好 Polkadot 网络的验证人！若果你需要帮助，请前往 <a href="[Polkadot 验证人聊天室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
 
