@@ -69,7 +69,7 @@ Polkadot's redenomination is taking place on 21 August, now to be known as Denom
 
 ### What This Means for the Community
 
-If you're a DOT holder or user of the network, then you do not need to take any action. The DOT redenomination is a purely front-end change. You will still hold the same amount of Plancks after the change, but now it will appear that you hold 100x more DOTs. This change applies proportionally to everyone.
+If you're a DOT holder or user of the network, then you do not need to take any action. The DOT redenomination is a purely front-end change. You will still hold the same amount of Plancks after the change, but now it will appear that you hold 100x more DOT. This change applies proportionally to everyone.
 
 ### What This Means for Builders of Tools
 
