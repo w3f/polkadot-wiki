@@ -15,7 +15,7 @@ sidebar_label: 平行链开发套件 (PDKs)
 - *共享安全性* - 去除了自举链的验证人集的必要性。
 - *跨链通信* - 使得平行链之间通过 ICMP 协议交互操作。
 
-平行链通过为其插槽绑定 [DOT](learn-DOT) 来[出租 Polkadot 网络的安全性](learn-security)，这意味着项目在构建社区和说服验证人参与网络安全性中的社会成本将有所降低。预计 Polkadot 的安全性会十分强大，届时想从一安全性中获益的去中心化应用程序将会希望成为平行链。有关通过蜡烛拍卖出租平行链插槽的更多信息，请[点击此处](learn-auction)。
+Parachains can [lease the security](learn-security) of the Polkadot network by bonding [DOT](learn-DOT) for a parachain slot. This means that the social costs of building a community around your project and convincing validators to participate in your network security are reduced. It is anticipated that Polkadot will have strong security, and decentralized application projects wishing to benefit from this security would want to become a parachain. For more information on the mechanic of leasing a parachain slot through a candle auction see [here](learn-auction).
 
 所有去中心化的应用程序或链，若想要向其它已连接到 Polkadot 的平行链去信任地传递信息，都会希望成为平行链。主权链之间的互操作性需借助约束和复杂的协议才可广泛实现。在 Polkadot 中，一旦将应用程序构建为平行链，便会立即获得这一特性。[XCMP 协议](learn-crosschain)将传递平行链之间的信息，实现其互操作性。此外，连接其它链的转接桥(例如比特币或以太坊)纷纷推出，平行链也可以与它们进行交互。
 
