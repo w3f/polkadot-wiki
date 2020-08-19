@@ -4,7 +4,7 @@ title: DOT
 sidebar_label: DOT
 ---
 
-## What are DOTs?
+## What are DOT?
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
 Bitcoin or ether is the native token of the Ethereum blockchain.
@@ -49,7 +49,7 @@ stored in the Treasury can be sent to teams working on relevant projects for the
 > These concepts have been further explained in the video
 > [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
 
-### DOTs for governance
+### DOT for governance
 
 The first function of DOT is to entitle holders to control of the governance of the platform. Some
 functions that are included under the governance mechanism include determining the fees of the

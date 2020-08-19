@@ -12,7 +12,7 @@ in the elections.
 
 ## Voting for Councillors
 
-Voting for councillors requires you to lock your DOTs / KSMs for the duration of your vote. Like the
+Voting for councillors requires you to lock your DOT / KSMs for the duration of your vote. Like the
 validator elections, you can approve up to 16 different councillors and your vote will be equalized
 among the chosen group. Unlike validator elections, there is no unbonding period for your reserved
 tokens. Once you remove your vote, your tokens will be liquid again.

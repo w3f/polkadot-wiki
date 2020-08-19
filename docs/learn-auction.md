@@ -114,21 +114,21 @@ A bidder configuration for a single bidder may look like this:
 Bids[
   ({
     range: [1, 2, 3, 4],
-    bond_amount: 300, //DOTs
+    bond_amount: 300, //DOT
   },
   {
     range: [1, 2],
-    bond_amount: 777, //DOTs
+    bond_amount: 777, //DOT
   },
   {
     range: [2, 3, 4],
-    bond_amount: 450, // DOTs
+    bond_amount: 450, // DOT
   })
 ];
 ```
 
 The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the
-amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the
+amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the
 highest bidder for any given slot lease period might not always win (see the
 [example below](#compete)).
 
@@ -144,25 +144,25 @@ bids from (to mitigate some types of attacks from malicious validators).
 
 There is one parachain slot available.
 
-Alice bids `20 DOTs` for the range 1 - 2.
+Alice bids `20 DOT` for the range 1 - 2.
 
-Bob bids `30 DOTs` for the range 3 - 4.
+Bob bids `30 DOT` for the range 3 - 4.
 
 The auction ends.
 
-Alice bonds `20 DOTs` and will have the parachain slot for the first year.
+Alice bonds `20 DOT` and will have the parachain slot for the first year.
 
-Bob bonds `30 DOTs` and will have the parachain slot for the second year.
+Bob bonds `30 DOT` and will have the parachain slot for the second year.
 
 #### Compete
 
 There is one parachain slot available.
 
-Charlie bids `75 DOTs` for the range 1 - 4.
+Charlie bids `75 DOT` for the range 1 - 4.
 
-Dave bids `100 DOTs` for the range 3 - 4.
+Dave bids `100 DOT` for the range 3 - 4.
 
-Emily bids `40 DOTs` for the range 1 - 2.
+Emily bids `40 DOT` for the range 1 - 2.
 
 Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the
 bond amount by the amount of periods in the specified range of the bid.
@@ -184,8 +184,8 @@ the parachain slot.
 
 ### Why doesn't everyone bid for the max length?
 
-For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there
-are opportunity costs from the possibility of using those `DOTs` for something else. For parachains
+For the duration of the slot the `DOT` bid in the auction will be locked up. This means that there
+are opportunity costs from the possibility of using those `DOT` for something else. For parachains
 that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot
 Relay Chain.
 
