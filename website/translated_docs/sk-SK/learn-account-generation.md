@@ -192,7 +192,7 @@ Signatories should communicate off-chain to prevent many pending transactions an
 
 ## Parity Signer
 
-Parity Signer is a secure way of storing your DOTs on an air-gapped device. It is highly recommended that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after installing it. If you have any communications methods turned on, you will see an "unshielded" icon in red on the top-right corner that indicates your connection may not be secure.
+Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after installing it. If you have any communications methods turned on, you will see an "unshielded" icon in red on the top-right corner that indicates your connection may not be secure.
 
 ### Create Account
 
