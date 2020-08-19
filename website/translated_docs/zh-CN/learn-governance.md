@@ -39,7 +39,7 @@ Emergency proposals deal with major problems with the network that need to be "f
 
 #### 公众投票
 
-Anyone can propose a referendum by depositing the minimum amount of DOTs for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest amount of bonded support will be selected to be a referendum. Note that this may be different than the absolute number of seconds; for instance, three accounts bonding 20 DOTs each would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
+Anyone can propose a referendum by depositing the minimum amount of DOT for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest amount of bonded support will be selected to be a referendum. Note that this may be different than the absolute number of seconds; for instance, three accounts bonding 20 DOT each would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
 #### 议会公投
 
@@ -64,14 +64,14 @@ To vote, a voter generally must lock their tokens up for at least the enactment 
 ```
 Example:
 
-Peter: Votes `No` with 10 DOTs for a 128 week lock period  => 10 * 6 = 60 Votes
+Peter: Votes `No` with 10 DOT for a 128 week lock period  => 10 * 6 = 60 Votes
 
-Logan: Votes `Yes` with 20 DOTs for a 4 week lock period => 20 * 1 = 20 Votes
+Logan: Votes `Yes` with 20 DOT for a 4 week lock period => 20 * 1 = 20 Votes
 
-Kevin: Votes `Yes` with 15 DOTs for a 8 week lock period => 15 * 2 = 30 Votes
+Kevin: Votes `Yes` with 15 DOT for a 8 week lock period => 15 * 2 = 30 Votes
 ```
 
-Even though combining both Logan and Kevin vote with more DOTs than Peter, the lock period for both of them is less than Peter, leading to their voting power counting as less.
+Even though combining both Logan and Kevin vote with more DOT than Peter, the lock period for both of them is less than Peter, leading to their voting power counting as less.
 
 #### 统计
 
@@ -92,7 +92,7 @@ against - the number of nay votes
 
 turnout - the total number of voting tokens (Does not include conviction)
 
-electorate - the total number of DOTs tokens issued in the network
+electorate - the total number of DOT tokens issued in the network
 ```
 
 ##### Super-Majority Approve
@@ -119,14 +119,14 @@ _To know more about where these above formulas come from, please read the [democ
 Example:
 
 Assume:
-- We only have 1,500 DOTs tokens in total.
+- We only have 1,500 DOT tokens in total.
 - Public proposal
 
-John  - 500 DOTs
-Peter - 100 DOTs
-Lilly - 150 DOTs
-JJ    - 150 DOTs
-Ken   - 600 DOTs
+John  - 500 DOT
+Peter - 100 DOT
+Lilly - 150 DOT
+JJ    - 150 DOT
+Ken   - 600 DOT
 
 John: Votes `Yes` for a 4 week lock period  => 500 * 1 = 500 Votes
 
@@ -148,7 +148,7 @@ Since the above example is a public referendum, `Super-Majority Approve` would b
 
 #### 自愿锁定
 
-Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOT, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
 ```
 Max votes = tokens * vote_multiplier
@@ -254,7 +254,7 @@ The Technical Committee can, along with the Polkadot Council, produce emergency 
 
 Fast-tracked referenda are the only type of referenda that can be active alongside another active referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the same time. Voting on one does not prevent a user from voting on the other.
 
-## [DOT 的用途](learn-DOT#dots-for-governance)
+## [DOT 的用途](learn-DOT#DOT-for-governance)
 
 ## 资源
 
