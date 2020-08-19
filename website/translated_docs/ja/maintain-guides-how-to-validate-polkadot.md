@@ -16,11 +16,11 @@ Since security is so important to running a successful validator, you should tak
 
 If you need help, please reach out on the [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) on Riot. The team and other validators are there to help answer questions and provide tips from experience.
 
-### How many DOTs do I need?
+### How many DOT do I need?
 
 You can have a rough estimate on that by using the methods listed [here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough DOT to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
-**Warning:** Any DOTs that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of DOT tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node instead.
+**Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of DOT tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your DOT to a trusted validator node instead.
 
 ## Initial Set-up
 
@@ -147,9 +147,9 @@ Depending on the size of the chain when you do this, this step may take anywhere
 
 If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
-> **Note:** If you do not already have DOTs, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of DOTs to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with DOTs, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
+> **Note:** If you do not already have DOT, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of DOT to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with DOT, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
 
-## Bond DOTs
+## Bond DOT
 
 > **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you are setting up a validator during this time you may not be able to make your stash and controller two separate accounts, as is recommended. You must make them the same account, meaning that you will bond the account to itself. However it is highly recommended that you change your controller as soon as possible.
 
@@ -159,16 +159,16 @@ Make sure not to bond all your DOT balance since you will be unable to pay trans
 
 It is now time to set up our validator. We will do the following:
 
-- Bond the DOTs of the Stash account. These DOTs will be put at stake for the security of the network and can be slashed.
+- Bond the DOT of the Stash account. These DOT will be put at stake for the security of the network and can be slashed.
 - Select the Controller. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on "Account Actions", and then the "New stake" button.
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliDOTs - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
-- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of DOTs in order to start and stop validating.
-- **Value bonded** - How much DOts from the Stash account you want to bond/stake. Note that you do not need to bond all of the DOTs in that account. Also note that you can always bond _more_ DOTs later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliDOT - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
+- **Controller account** - Select the Controller account created earlier. This account will also need a small amount of DOT in order to start and stop validating.
+- **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash account.
@@ -237,7 +237,7 @@ If you go to the "Staking" tab, you will see a list of active validators current
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
-The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of DOTs staked or seek out nominators for your validator in order to join the validator set.
+The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of DOT staked or seek out nominators for your validator in order to join the validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Polkadot validator! If you need help, reach out on the [Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 
