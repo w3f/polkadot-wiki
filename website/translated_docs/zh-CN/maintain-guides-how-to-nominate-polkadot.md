@@ -24,7 +24,7 @@ sidebar_label: 提名人指南
 
 在 [Polkadot UI](https://polkadot.js.org/apps) 前往 "Staking" 标签
 
-"Staking Overview" 小节将向您显示所有生效的验证人及其信息 - 他们的身份，为他们抵押的 DOT 数量，其自己所提供的抵押数量，佣金，现时获得的时代积分收益和最后出块的区块。如果你点击图表按钮，您将进入该验证人的 "Validator Stats" 页面，该页面向您显示有关验证人 的抵押，奖励和惩罚的更多详细历史信息。
+The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of DOT that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
 "Account actions" 小节([链接](https://polkadot.js.org/apps/#/staking/actions))可让您抵押并提名。
 
@@ -40,7 +40,7 @@ sidebar_label: 提名人指南
 
 您将看到一个如下所示的窗口:![nominator-update-1](assets/nominator-update-1.png)
 
-输入** 少于 **您拥有 DOTs 的总量到 "value bonded"，这样您就剩下一些代币来支付交易费用。交易费用目前大约为 0.01 DOTs，但是交易费用是动态根据包括最近区块的负载在内的多种因素。
+Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are dynamic based on a variety of factors including the load of recent blocks.
 
 还要注意帐号回收阈值— 帐号必须保留在最低金额，以免帐号被销毁。 这个金额在 Polkadot 中为 0.01 DOT，所以建议在您的帐号中至少保留 0.1 DOT 以便保持账号安全。
 
