@@ -8,7 +8,7 @@ sidebar_label: 加入议会
 
 ## 成为候选人
 
-成为议会候选人需要绑定小量的 DOTs / KSMs。如果您没有成功获胜或成为亚军，则该绑定金额将被没收，但如果您成为了议会成员，绑定的金额将最终也会返回给你。每一轮选举都选出亚军成为备用议员，以防其中获胜者被撤离。
+Submitting your candidacy for the council requires a small bond of DOT / KSMs. The bond will be forfeited if your candidacy does not win or become a runner-up, but if you become a member of the council you will eventually get your bond back. Runner-ups are selected after every round and are reserved members in case one of the winners gets forcefully removed.
 
 > 目前提交参選议员在 Kusama 的綁定金額为1 KSM。
 
