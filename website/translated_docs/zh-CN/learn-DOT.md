@@ -4,7 +4,7 @@ title: DOT
 sidebar_label: DOT
 ---
 
-## 什么是 DOTs？
+## What are DOT?
 
 DOT 是 Polkadot 网络的原生代币，类似于 BTC 是比特币的原生代币或以太币是以太坊区块链的原生代币。
 
@@ -40,7 +40,7 @@ DOT can also serve ancillary functions by virtue of being a transferrable token.
 
 > These concepts have been further explained in the video [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
 
-### DOTs 用于治理
+### DOT for governance
 
 The first function of DOT is to entitle holders to control of the governance of the platform. Some functions that are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
 
