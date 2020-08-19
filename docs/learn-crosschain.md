@@ -58,7 +58,7 @@ will include this block for parachain B into the Relay Chain.
 
 Check out our interactive animation below that explores how XCMP works.
 
-<p><iframe src="/published_Final_XCMP.html" width="100%" height="640"></iframe></p>
+<p><iframe src="/published_Final_XCMP.html" width="100%" height="450"></iframe></p>
 
 ## Resources
 
