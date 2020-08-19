@@ -20,7 +20,7 @@ standalone chain:
   protocol.
 
 Parachains can [lease the security](learn-security) of the Polkadot network by bonding
-[DOTs](learn-DOT) for a parachain slot. This means that the social costs of building a community
+[DOT](learn-DOT) for a parachain slot. This means that the social costs of building a community
 around your project and convincing validators to participate in your network security are reduced.
 It is anticipated that Polkadot will have strong security, and decentralized application projects
 wishing to benefit from this security would want to become a parachain. For more information on the

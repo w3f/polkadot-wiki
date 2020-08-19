@@ -39,5 +39,8 @@ parts in grey are stable and can not change without an explicit hard fork.
 
 - [Polkadot Host Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the
   Polkadot Host spec, including tests.
+- [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team
+  based in Toronto, Canada. ChainSafe is building an implementation of the beacon chain for Ethereum
+  2.0 client in TypeScript and this Go implementation of Polkadot.
 
 [specification]: https://github.com/w3f/polkadot-spec/
