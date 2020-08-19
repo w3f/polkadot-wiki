@@ -26,47 +26,47 @@ _Note: An uncle block is a Relay Chain block that is valid in every regard, but 
 Для простоты в приведенных ниже примерах предполагается, что все валидаторы имеют одинаковое количество era points.
 
 ```
-Количество валидаторов (v): 4
-Стейк 1 валидатора (v1): 18 DOT
-Стейк 2 валидатора (v2): 9 DOT
-Стейк 3 валидатора (v3): 8 DOT
-Стейк 1 валидатора (v4): 7 DOT
-Выплата (p): 8 DOT
+Validator Set Size (v): 4
+Validator 1 Stake (v1): 18 DOT
+Validator 2 Stake (v2):  9 DOT
+Validator 3 Stake (v3):  8 DOT
+Validator 4 Stake (v4):  7 DOT
+Payout (p): 8 DOT
 
-Выплаты для каждого валидатора (v1 - v4):
+Payout for each validator (v1 - v4):
 p / v = 8 / 4 = 2 DOT
 ```
 
-Обратите внимание, что это отличается от большинства других Proof-of-Stake систем, таких как Cosmos. Пока валидатор находится в наборе валидаторов, он будет получать такое же вознаграждение за блок, как и любой другой валидатор. Валидатор `v1`, у которого было в стейке 18 DOT, получил ту же награду (2 DOT) в эту эпоху, что и `v4`, у которого было  в стейке только 7 DOT.
+Note that this is different than most other Proof-of-Stake systems such as Cosmos. As long as a validator is in the validator set, it will receive the same block reward as every other validator. Validator `v1`, who had 18 DOT staked, received the same reward (2 DOT) in this era as `v4` who had only 7 DOT staked.
 
 ## Запуск нескольких валидаторов
 
-Одна сущность может запустить несколько валидаторов. Запуск нескольких валидаторов может обеспечить лучшее соотношение риска и вознаграждения. Если предположить, что у вас достаточно DOT или достаточно стейка, номинирующих Ваш валидатор, чтобы гарантировать, что Ваши валидаторы останутся в наборе валидаторов, запуск нескольких валидаторов приведет к более высокой отдаче, чем запуск одного валидатора.
+It is possible for a single entity to run multiple validators. Running multiple validators may provide a better risk/reward ratio. Assuming you have enough DOT, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will result in a higher return than running a single validator.
 
-В следующем примере предполагаем, что у вас есть 18 DOT для стейка. Для простоты мы проигнорируем номинаторов. Запуск одного валидатора, как и в предыдущем примере, позволит Вам получить 2 DOT в эту эпоху.
+For the following example, assume you have 18 DOT to stake. For simplicity's sake, we will ignore nominators. Running a single validator, as in the example above, would net you 2 DOT in this era.
 
 ```
-Количество валидаторов (v): 4
-Стейк 1 валидатора (v1): 18 DOT <- Ваш валидатор
-Стейк 2 валидатора (v2): 9 DOT
-Стейк 3 валидатора (v3): 8 DOT
-Стейк 4 валидатора (v4): 7 DOT
-Выплаты (p): 8 DOT
+Validator Set Size (v): 4
+Validator 1 Stake (v1): 18 DOT <- Your validator
+Validator 2 Stake (v2):  9 DOT
+Validator 3 Stake (v3):  8 DOT
+Validator 4 Stake (v4):  7 DOT
+Payout (p): 8 DOT
 
-Ваша выплата = (p / v) * 1 = (8 / 4) * 1 = 2
+Your payout = (p / v) * 1 = (8 / 4) * 1 = 2
 ```
 
 Запуск двух валидаторов и разделение стейка поровну приведет к тому, что исходный валидатор `v4` будет выгнан из набора валидаторов, поскольку только верхние валидаторы `v` (измеренные по стейку) будут выбраны для включения в набор валидаторов. Что ещё более важно, это также удвоит вознаграждение, которое Вы получаете от каждой эпохи.
 
 ```
-Количество валидаторов (v): 4
-Стейк 1 валидатора (v1): 9 DOT <- Ваш первый валидатор
-Стейк 2 валидатора (v2): 9 DOT <- Ваш второй валидатор
-Стейк 3 валидатора (v3): 9 DOT
-Стейк 4 валидатора (v4): 8 DOT
-Выплата (p): 8 DOT
+Validator Set Size (v): 4
+Validator 1 Stake (v1): 9 DOT <- Your first validator
+Validator 2 Stake (v2): 9 DOT <- Your second validator
+Validator 3 Stake (v3): 9 DOT
+Validator 4 Stake (v4): 8 DOT
+Payout (p): 8 DOT
 
-Ваша выплата = (p / v) * 1 = (8 / 4) * 2 = 4
+Your payout = (p / v) * 1 = (8 / 4) * 2 = 4
 ```
 
 При достаточном количестве стейка Вы можете запустить более двух валидаторов. Тем не менее, каждый валидатор должен иметь достаточный стейк в запасе, чтобы быть в наборе валидатора.
@@ -75,7 +75,7 @@ p / v = 8 / 4 = 2 DOT
 
 ## Слэшинг/Slashing
 
-Хотя вознаграждение выплачивается в равной степени, слэши (сокращения) относятся к стейку валидаторов. Поэтому, если у Вас есть достаточно DOT для запуска нескольких валидаторов, это в Ваших же интересах. Слэш в 30%, конечно же, будет больше DOT для валидатора с 18 DOT в стейке, чем для одного с 9 DOT в стейке.
+Although rewards are paid equally, slashes are relative to a validator's stake. Therefore, if you do have enough DOT to run multiple validators, it is in your best interest to do so. A slash of 30% will, of course, be more DOT for a validator with 18 DOT staked than one with 9 DOT staked.
 
 Запуск нескольких валидаторов не освобождает Вас от последствий неправильного поведения. Polkadot наказывает атаки, которые кажутся скоординированными более строго, чем отдельные атаки. Например, не следует запускать несколько валидаторов, размещенных в одной инфраструктуре. Правильная конфигурация мульти-валидатора гарантирует, что они не выходят из строя одновременно.
 
@@ -85,52 +85,52 @@ p / v = 8 / 4 = 2 DOT
 
 Номинированный стейк позволяет вам "голосовать" за валидаторов и делиться вознаграждениями (и слэшингом), не запуская узел валидатора самостоятельно. Валидаторы могут оставить себе процент от вознаграждения, причитающегося их валидатору, чтобы "возместить" себе затраты на запуск узла валидатора. Кроме того, все вознаграждения делятся на основе стейка, стоящим за каждым валидатором. Это включает в себя стейк самого валидатора, а также любой стейк, с бондингом от номинаторов.
 
-> **Примечание:** валидаторы устанавливают свои предпочтения в процентах от вознаграждения блока, _не_ абсолютное число DOT. Блочное вознаграждение Polkadot основано на<emx-id="4">общей</em> сумме в стейке, причем вознаграждение достигает пика, когда сумма стейка составляет 50% от общего предложения. В периоды, когда ставится меньшая сумма и, следовательно, более низкие вознаграждения, предпочтение выплат валидатору может означать, что для номинаторов остается ноль.
+> **NOTE:** Validators set their preference as a percentage of the block reward, _not_ an absolute number of DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking when the amount staked is at 50% of the total supply. In periods when there is a lower amount staked, and therefore lower rewards, the validator's payout preference could mean that there is zero left over for nominators.
 
-В следующих примерах мы можем увидеть результаты нескольких различных схем оплаты валидатора и разделения стейка между номинатором и валидатором. Мы будем считать, что для каждого валидатора существует один номинатор. Однако для каждого валидатора может существовать множество номинаторов. Награды по прежнему распределяются пропорционально - например, если общее количество наград, которые будут даны номинаторам, составляет 2 DOT, и есть четыре номинатора с равными стейками, каждый получит по 0,5 DOT. Обратите также внимание, что один номинатор может распределять стейк на разных валидаторов.
+In the following examples, we can see the results of several different validator payment schemes and split between nominator and validator stake. We will assume a single nominator for each validator. However, there can be numerous nominators for each validator. Rewards are still distributed proportionally - for example, if the total rewards to be given to nominators is 2 DOT, and there are four nominators with equal stake bonded, each will receive 0.5 DOT. Note also that a single nominator may stake different validators.
 
-Каждый валидатор в этом примере выбрал разные платежи валидатора (то есть процент от вознаграждения, назначенного непосредственно валидатору перед разделением со всеми бондированными стейками). Процент оплаты валидатора (в DOT) указан в скобках (`[]`) рядом с каждым валидатором. Обратите внимание, что поскольку платеж валидатора является общеизвестным, наличие низкого или несуществующего платежа валидатора может привлечь больше ставок от номинантов, поскольку они знают, что получат более крупное вознаграждение.
+Each validator in the example has selected a different validator payment (that is, a percentage of the reward set aside directly for the validator before sharing with all bonded stake). The validator's payment percentage (in DOT) is listed in brackets (`[]`) next to each validator. Note that since the validator payment is public knowledge, having a low or non-existent validator payment may attract more stake from nominators, since they know they will receive a larger reward.
 
 ```
-Количество валидаторов (v): 4
-Стейк 1 валидатора (v1) [0.2]: 18 DOT (9 валидатор, 9 номинатор)
-Стейк 2 валидатора (v2) [0.4]:  9 DOT (3 валидатор, 6 номинатор)
-Стейк 3 валидатора (v3) [0.1]:  8 DOT (4 валидатор, 4 номинатор)
-Стейк 4 валидатора (v4) [0.0]:  6 DOT (1 валидатор, 5 номинатор)
+Validator Set Size (v): 4
+Validator 1 Stake (v1) [0.2]: 18 DOT (9 validator, 9 nominator)
+Validator 2 Stake (v2) [0.4]:  9 DOT (3 validator, 6 nominator)
+Validator 3 Stake (v3) [0.1]:  8 DOT (4 validator, 4 nominator)
+Validator 4 Stake (v4) [0.0]:  6 DOT (1 validator, 5 nominator)
 Payout (p): 8 DOT
 
-Payout for each валидатор (v1 - v4):
+Payout for each validator (v1 - v4):
 p / v = 8 / 4 = 2 DOT
 
 v1:
-(0.2 * 2) = 0.4 DOT -> выплата валидатору
-(2 - 0.4) = 1.6 -> распределяется между всеми стейками
-(9 / 18) * 1.6 = 0.8 -> доля валидатора в стейке
-(9 / 18) * 1.6 = 0.8 -> доля номинатора в стейке
-v1 Итого ваплата валидатору: 0.4 + 0.8 = 1.2 DOT
-v1 Итого ваплата номинатору: 0.8 DOT
+(0.2 * 2) = 0.4 DOT -> validator payment
+(2 - 0.4) = 1.6 -> shared between all stake
+(9 / 18) * 1.6 = 0.8 -> validator stake share
+(9 / 18) * 1.6 = 0.8 -> nominator stake share
+v1 validator total reward: 0.4 + 0.8 = 1.2 DOT
+v1 nominator reward: 0.8 DOT
 
 v2:
-(0.4 * 2) = 0.8 DOT -> выплата валидатору
-(2 - 0.8) = 1.2 -> распределяется между всеми стейками
-(3 / 9) * 1.2 = 0.4 -> доля валидатора в стейке
-(6 / 9) * 1.2 = 0.8 -> доля номинатора в стейке
-v2 Итого ваплата валидатору: 0.8 + 0.4 = 1.2 DOT
-v2 Итого ваплата номинатору: 0.8 DOT
+(0.4 * 2) = 0.8 DOT -> validator payment
+(2 - 0.8) = 1.2 -> shared between all stake
+(3 / 9) * 1.2 = 0.4 -> validator stake share
+(6 / 9) * 1.2 = 0.8 -> nominator stake share
+v2 validator total reward: 0.8 + 0.4 = 1.2 DOT
+v2 nominator reward: 0.8 DOT
 
 v3:
-(0.1 * 2) = 0.2 DOT -> выплата валидатору
-(2 - 0.2) = 1.8 -> распределяется между всеми стейками
-(4 / 8) * 1.8 = 0.9 -> доля валидатора в стейке
-(4 / 8) * 1.8 = 0.9 -> доля номинатора в стейке
-v3 Итого ваплата валидатору: 0.2 + 0.9 DOT = 1.1 DOT
-v3 Итого ваплата номинатору: 0.9 DOT
+(0.1 * 2) = 0.2 DOT -> validator payment
+(2 - 0.2) = 1.8 -> shared between all stake
+(4 / 8) * 1.8 = 0.9 -> validator stake share
+(4 / 8) * 1.8 = 0.9 -> nominator stake share
+v3 validator total reward: 0.2 + 0.9 DOT = 1.1 DOT
+v3 nominator reward: 0.9 DOT
 
 v4:
-(0 * 2) = 0 DOT -> выплата валидатору
-(2 - 0) = 2.0 -> распределяется между всеми стейками
-(1 / 6) * 2 = 0.33 -> доля валидатора в стейке
-(5 / 6) * 2 = 1.67 -> доля номинатора в стейке
-v4 Итого ваплата валидатору: 0 + 0.33 DOT = 0.33 DOT
-v4 Итого ваплата номинатору: 1.67 DOT
+(0 * 2) = 0 DOT -> validator payment
+(2 - 0) = 2.0 -> shared between all stake
+(1 / 6) * 2 = 0.33 -> validator stake share
+(5 / 6) * 2 = 1.67 -> nominator stake share
+v4 validator total reward: 0 + 0.33 DOT = 0.33 DOT
+v4 nominator reward: 1.67 DOT
 ```
