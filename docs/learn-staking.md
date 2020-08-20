@@ -178,9 +178,9 @@ nominators.
 
 ### Want to stake DOTs?
 
-- [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Kusama
+- [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
   network.
-- [Validator Guide](maintain-guides-how-to-validate-polkadot) - Become a validator on the Kusama
+- [Validator Guide](maintain-guides-how-to-validate-polkadot) - Become a validator on the Polkadot
   network.
 
 ## Slashing
