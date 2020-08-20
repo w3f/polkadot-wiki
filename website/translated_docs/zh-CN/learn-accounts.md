@@ -169,3 +169,7 @@ Thus the deposit values can be calculated as shown in the table below.
 | DepositFactor | 320000000    | 5333333312      |
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob, and Charlie. First Alice will create the call on chain by calling `as_multi` with the raw call. When doing this Alice will have to deposit 0.20152 DOT while she waits for either Bob or Charlie to also approve the call. When Bob comes to approve the call and execute the transaction, he will not need to place the deposit and Alice will receive her deposit back.
+
+## Resources
+
+- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill Laboon and Chinmay Patel of BlockX Labs.
