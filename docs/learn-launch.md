@@ -70,3 +70,7 @@ parachain slot auctions, parathreads, and cross-chain message passing. These upg
 runtime upgrades that will pass through Polkadot's normal governance processes. The core
 functionality does not have to be unlocked sequentially &mdash; several features can be unlocked
 with a single proposal.
+
+## Polkadot 2.0 
+
+After the 1.0 version of Polkadot is released, research for the next version of Polkadot will commence. Possible areas of research could include nested relay chains and support for three tiers of parachains. However these areas of possible research is subject to change as Polkadot evolves. 
