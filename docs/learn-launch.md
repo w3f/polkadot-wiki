@@ -73,6 +73,5 @@ with a single proposal.
 
 ## Polkadot 2.0
 
-After the 1.0 version of Polkadot is released, research for the next version of Polkadot will
-commence. Possible areas of research could include nested relay chains and support for three tiers
-of parachains. However these areas of possible research is subject to change as Polkadot evolves.
+With the release of Polkadot 1.0, research for the next version of Polkadot has
+began. Possible areas of research could include nested relay chains where there could be multiple layers of relay chains and support for three tiers of parachains, each working in parallel to one another. However these areas of possible research is subject to change as Polkadot evolves.
