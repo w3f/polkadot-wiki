@@ -286,3 +286,222 @@ you should be able to monitor your node's performance such as the current block 
 usage, etc. on the Grafana dashboard.
 
 ![grafana-1](assets/guides/how-to-monitor/6-dashboard-metric.png)
+
+## Installing and Configuring Alertmanager (Optional)
+
+In this section, let's configure the Alertmanager that helps to predict the potential problem or
+notify you of the current problem in your server. Alerts can be sent in Slacks, Emails, Matrix, or
+others. In this guide, we will show you how to configure the email notifications using Gmail if your
+node goes down.
+
+First, download the latest binary of AlertManager and unzip it by running the command below:
+
+```
+wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-amd64.tar.gz)
+tar -xvzf alertmanager-0.21.0.linux-amd64.tar.gz
+mv alertmanager-0.21.0.linux-amd64.tar.gz/alertmanager /usr/local/bin/
+```
+
+### Gmail Setup
+
+To allow AlertManager to send an email to you, you will need to generate something called an
+`app password` in your Gmail account. For details, click
+[here](https://support.google.com/accounts/answer/185833?hl=en) to follow the whole setup.
+
+You should see something like below:
+
+![grafana-am-1](assets/guides/how-to-monitor/1-alert-manager.png)
+
+Copy and save it somewhere else first.
+
+### AlertManager Configuration
+
+There is a configuration file named `alertmanager.yml` inside the directory that you just extracted
+in the previous command, but that is not of our use. We will create our `alertmanager.yml` file with
+the following config.
+
+```
+global:
+ resolve_timeout: 1m
+
+route:
+ receiver: 'gmail-notifications'
+
+receivers:
+- name: 'gmail-notifications'
+  email_configs:
+  - to: YOUR_EMAIL
+    from: YOUR_EMAIL
+    smarthost: smtp.gmail.com:587
+    auth_username: YOUR_EMAIL
+    auth_identity: YOUR_EMAIL
+    auth_password: YOUR_APP_PASSWORD
+    send_resolved: true
+```
+
+With the above configuration, alerts will be sent using the the email you set above. Remember to
+change `YOUR_EMAIL` to your email and paste the app password you just saved earlier to the
+`YOUR_APP_PASSWORD`.
+
+Next, create another `systemd` configuration file named `alertmanager.service` by running the
+command `sudo nano /etc/systemd/system/alertmanager.service` with the following config.
+
+> SERVER_IP - Change to your host IP address amd make sure port 9093 is opened
+
+```
+[Unit]
+Description=AlertManager Server Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/local/bin/alertmanager --config.file /etc/alertmanager/alertmanager.yml --web.external-url=http://SERVER_IP:9093 --cluster.advertise-a$
+
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To the start the Alertmanager, run the following commands:
+
+```
+sudo systemctl daemon-reload && systemctl start alertmanager && systemctl enable alertmanager && systemctl status alertmanager
+```
+
+```
+● alertmanager.service - AlertManager Server Service
+   Loaded: loaded (/etc/systemd/system/alertmanager.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2020-08-20 22:01:21 CEST; 3 days ago
+ Main PID: 20592 (alertmanager)
+    Tasks: 70 (limit: 9830)
+   CGroup: /system.slice/alertmanager.service
+```
+
+You should see the process status is "active (running)" if you have configured properly.
+
+There is a Alertmanager plugin in Grafana that can help you to monitor the alert information. To
+install it, execute the command below:
+
+```
+sudo grafana-cli plugins install camptocamp-prometheus-alertmanager-datasource
+```
+
+And restart Grafana once the plugin is successfully installed.
+
+```
+sudo service grafana-server restart
+```
+
+Now go to your Grafana dashboard `SERVER_IP:3000` and configure the Alertmanager datasource.
+
+![grafana-am-5](assets/guides/how-to-monitor/5-alert-manager.png)
+
+Go to Configuration -> Data Sources, search "Prometheus AlertManger" if you cannot find it at the
+top.
+
+![grafana-am-2](assets/guides/how-to-monitor/2-alert-manager.png)
+
+Fill in the `URL` to your server location followed by the port number used in the Alertmanager.
+
+Then click "Save & Test" at the bottom to test the connection.
+
+![grafana-am-3](assets/guides/how-to-monitor/3-alert-manager.png)
+
+To monitor the alerts, let's import dashboard "[8010](https://grafana.com/dashboards/8010)" that is
+used for Alertmanager. And make sure to select the "Prometheus AlertManager" in the last column.
+Then click "Import".
+
+You will end up having the follwing:
+
+![grafana-am-4](assets/guides/how-to-monitor/4-alert-manager.png)
+
+### AlertManager Integration
+
+To let the Prometheus server able to talk to the Alertmanger, we will need to add the following
+config in the `etc/prometheus/prometheus.yml`.
+
+```
+rule_files:
+  - 'rules.yml'
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - localhost:9093
+```
+
+That is the updated `etc/prometheus/prometheus.yml`.
+
+```
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+rule_files:
+  - 'rules.yml'
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - localhost:9093
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: 'substrate_node'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9615']
+```
+
+We will need to create a new file called "rules.yml" under `/etc/prometheus/` that is defined all
+the rules we would like to detect. If any of the rules defined in this file is fulfilled, an alert
+will be triggered. The rule below checks whether the instance is down. If it is down for more than 5
+minutes, you should receive an email notification. If you would like to learn more about the details
+of the rule defining, go
+[here](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/). There are other
+interesting alerts you may find useful [here](https://awesome-prometheus-alerts.grep.to/rules.html).
+
+```
+groups:
+  - name: alert_rules
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance [{{ $labels.instance }}] down"
+          description: "[{{ $labels.instance }}] of job [{{ $labels.job }}] has been down for more than 1 minute."
+```
+
+Change the ownership of this file to `prometheus` instead of `root` by running:
+
+```
+sudo chown prometheus:prometheus rules.yml
+```
+
+To check the rules defined in the "rules.yml" is syntactically correct, run the following command:
+
+```
+promtool check rules rules.yml
+```
+
+Finally, restart everthing by running:
+
+```
+sudo systemctl stop prometheus && systemctl start prometheus &&  systemctl stop alertmanager && systemctl start alertmanager
+```
+
+Now if one of your target instances down, you will receive an alert on the AlertManager and Gmail
+like below.
+
+![grafana-am-6](assets/guides/how-to-monitor/6-alert-manager.png)
