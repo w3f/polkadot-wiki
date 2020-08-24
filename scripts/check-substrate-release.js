@@ -2,8 +2,8 @@ const { Octokit } = require("@octokit/rest");
 const axios = require("axios");
 const fs = require("fs");
 
-try {
-  (async () => {
+(async () => {
+  try {
     const ghApi = new Octokit();
     const releases = await ghApi.repos.listReleases({
       owner: "paritytech",
@@ -37,5 +37,8 @@ try {
         }
       }
     }
-  })();
-} catch(err) { console.error(err); process.exit(1); }
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+})();
