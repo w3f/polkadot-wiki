@@ -30,15 +30,15 @@ application in anticipation of the Polkadot mainnet launch later this year.
 
 ## What you need to know
 
-Polkadot mainnet has been released.  There are also two major testnets - **Westend**, which aims to run similarly to the current Polkadot mainnet, and **Rococo**, which is used specifically for testing parachains.   Additionally, there is  a value-bearing canary
-network called Kusama. Polkadot is being built with
-[implementations in various programming languages](learn-implementations) ranging from Rust to
-JavaScript. Currently the leading implementation is built in Rust and built on the Substrate
-framework. Substrate is a library that allows developers to develop entire blockchain applications
-with ease by bundling together a networking protocol, consensus, and Wasm interpreter. Cumulus, an
-extension to Substrate, allows any Substrate built chain to connect to Polkadot and become a
-parachain. Substrate is currently on its 2.0.0 tagged release that solidified its
-API.
+Polkadot mainnet has been released. There are also two major testnets - **Westend**, which aims to
+run similarly to the current Polkadot mainnet, and **Rococo**, which is used specifically for
+testing parachains. Additionally, there is a value-bearing canary network called Kusama. Polkadot is
+being built with [implementations in various programming languages](learn-implementations) ranging
+from Rust to JavaScript. Currently the leading implementation is built in Rust and built on the
+Substrate framework. Substrate is a library that allows developers to develop entire blockchain
+applications with ease by bundling together a networking protocol, consensus, and Wasm interpreter.
+Cumulus, an extension to Substrate, allows any Substrate built chain to connect to Polkadot and
+become a parachain. Substrate is currently on its 2.0.0 tagged release that solidified its API.
 
 Polkadot does not natively support smart contracts, however there will be parachains that do.
 Substrate chains can include smart contract functionality by using the

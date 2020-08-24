@@ -78,11 +78,12 @@ https://github.com/paritytech/substrate-light-ui
 > Not recommended if you're a validator. Please see
 > [secure validator setup](maintain-guides-secure-validator)
 
-
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
-- Determine the latest version of the Polkadot binary (you can see the latest releases here: https://github.com/paritytech/polkadot/releases)
-- Download the correct Polkadot binary within Ubuntu by running the following command.  Replace `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
+- Determine the latest version of the Polkadot binary (you can see the latest releases here:
+  https://github.com/paritytech/polkadot/releases)
+- Download the correct Polkadot binary within Ubuntu by running the following command. Replace
+  `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
@@ -103,8 +104,10 @@ particular architecture or Linux distribution. If you see an error like
 your system. You will either need to compile the [source code yourself](#clone-and-build) or use
 [docker](#using-docker).
 
-- Determine the latest version of the Polkadot binary (you can see the latest releases here: https://github.com/paritytech/polkadot/releases)
-- Download the correct Polkadot binary within Ubuntu by running the following command.  Replace `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
+- Determine the latest version of the Polkadot binary (you can see the latest releases here:
+  https://github.com/paritytech/polkadot/releases)
+- Download the correct Polkadot binary within Ubuntu by running the following command. Replace
+  `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
@@ -135,7 +138,8 @@ cd kusama
 cargo build --release
 ```
 
-Alternatively, if you wish to use a specific release, you can check out a specific tag (`v0.8.3` in the example below):
+Alternatively, if you wish to use a specific release, you can check out a specific tag (`v0.8.3` in
+the example below):
 
 ```bash
 git clone https://github.com/paritytech/polkadot kusama
