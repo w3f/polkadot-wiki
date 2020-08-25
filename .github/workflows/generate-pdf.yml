@@ -26,3 +26,9 @@ jobs:
               echo waiting for website up...
           done
           yarn polkadot:pdf
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: polkadot-wiki.pdf
+          path: website/static/polkadot-wiki.pdf
