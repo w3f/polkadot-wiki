@@ -21,4 +21,8 @@ jobs:
         run: |
           yarn
           yarn polkadot:start &
+          while ! nc -z localhost 3000; do
+              sleep 1
+              echo waiting for website up...
+          done
           yarn polkadot:pdf
