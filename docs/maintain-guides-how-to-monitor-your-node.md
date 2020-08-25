@@ -290,7 +290,7 @@ usage, etc. on the Grafana dashboard.
 ## Installing and Configuring Alertmanager (Optional)
 
 In this section, let's configure the Alertmanager that helps to predict the potential problem or
-notify you of the current problem in your server. Alerts can be sent in Slacks, Emails, Matrix, or
+notify you of the current problem in your server. Alerts can be sent in Slack, Email, Matrix, or
 others. In this guide, we will show you how to configure the email notifications using Gmail if your
 node goes down.
 
@@ -317,8 +317,12 @@ Copy and save it somewhere else first.
 ### AlertManager Configuration
 
 There is a configuration file named `alertmanager.yml` inside the directory that you just extracted
-in the previous command, but that is not of our use. We will create our `alertmanager.yml` file with
-the following config.
+in the previous command, but that is not of our use. We will create our `alertmanager.yml` file
+under `/etc/alertmanager` with the following config.
+
+> Ensure to change the ownership of "/etc/alertmanager" to `prometheus` by executing
+>
+> sudo chown -R prometheus:prometheus /etc/alertmanager
 
 ```
 global:
@@ -420,7 +424,7 @@ You will end up having the follwing:
 
 ### AlertManager Integration
 
-To let the Prometheus server able to talk to the Alertmanger, we will need to add the following
+To let the Prometheus server be able to talk to the Alertmanger, we will need to add the following
 config in the `etc/prometheus/prometheus.yml`.
 
 ```
@@ -464,8 +468,8 @@ scrape_configs:
 We will need to create a new file called "rules.yml" under `/etc/prometheus/` that is defined all
 the rules we would like to detect. If any of the rules defined in this file is fulfilled, an alert
 will be triggered. The rule below checks whether the instance is down. If it is down for more than 5
-minutes, you should receive an email notification. If you would like to learn more about the details
-of the rule defining, go
+minutes, an email notification will be sent. If you would like to learn more about the details of
+the rule defining, go
 [here](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/). There are other
 interesting alerts you may find useful [here](https://awesome-prometheus-alerts.grep.to/rules.html).
 
