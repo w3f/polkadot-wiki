@@ -67,7 +67,7 @@ class Footer extends React.Component {
               </a>
             </div>
           )}
-          <a href="/kusama-wiki.pdf" target="_blank" rel="noreferrer noopener">
+          <a href="/kusama-wiki.zip" target="_blank" rel="noreferrer noopener">
             Download this Guide as PDF
           </a>
         </section>

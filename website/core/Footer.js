@@ -49,7 +49,7 @@ class Footer extends React.Component {
             <a href="https://twitter.com/polkadotnetwork" target="_blank" rel="noreferrer noopener">
               Twitter
             </a>
-            <a href="/polkadot-wiki.pdf" target="_blank" rel="noreferrer noopener">
+            <a href="/polkadot-wiki.zip" target="_blank" rel="noreferrer noopener">
               Download this Wiki as PDF
             </a>
           </div>
