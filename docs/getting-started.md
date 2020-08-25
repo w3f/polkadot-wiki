@@ -55,7 +55,7 @@ intermediaries and build a trustless infrastructure.
 
 The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)" -
 in the network have unique state transition functions (STF). Based on Polkadot's design, as long as
-a chain's logic can compile to Wasm, then it can connect to the Polkadot network as a parachain.
+a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
 
 Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose
 blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity
