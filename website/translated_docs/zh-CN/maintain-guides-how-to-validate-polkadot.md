@@ -4,7 +4,7 @@ title: 运行验证人 (Polkadot)
 sidebar_label: How to run a Validator on Polkadot
 ---
 
-> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your validator but the first validator election and rewards will not start until later. If you want to set up a validator on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-validate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-validate-kusama) instead.
 
 本指南将指导您如何在 Polkadot 网络上设置验证人节点。
 
