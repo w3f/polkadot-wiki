@@ -12,6 +12,7 @@ Account keys are keys that are meant to control funds. They can be either:
 
 - The vanilla `ed25519` implementation using Schnorr signatures.
 - The Schnorrkel/Ristretto `sr25519` variant using Schnorr signatures.
+- ECDSA signatures on secp256k1
 
 There are no differences in security between `ed25519` and `sr25519` for simple signatures.
 
