@@ -6,9 +6,11 @@ sidebar_label: Polkadot Protocol
 
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be specific to Polkadot, notable differences to other chains that you may have worked with, and practical information for dealing with the chain.
 
-## DOT Tokens
+## Tokens
 
-- **Token decimals:** See [Redenomination](#redenomination)
+- **Token decimals:**
+  - Polkadot (DOT): 10 (See [Redenomination](#redenomination))
+  - Kusama (KSM): 12
 - **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
 
@@ -16,16 +18,11 @@ This page serves as a high-level introduction to the Polkadot protocol with term
 
 Polkadot conducted a poll, which ended on 27 July 2020 (block 888,888), in which the stakeholders decided to redenominate the DOT token. The redenomination does not change the number of base units (called "plancks" in Polkadot) in the network. The only change is that a single DOT token will be 1e10 plancks instead of the original 1e12 plancks. See the Polkadot blog posts explaining the [details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the [results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
 
-The redenomination will take effect 72 hours after transfers are enabled. The projected block numbers and times are:
+The redenomination took effect 72 hours after transfers were enabled, at block 1,248,326, which occurred at approximately 16:50 UTC on 21 Aug 2020.
 
-| Event             | Block Number |  Earliest Time   |
-|:----------------- |:------------:|:----------------:|
-| Transfers enabled |  1,205,128   | 18 Aug 16:40 UTC |
-| Redenomination    |  1,248,328   | 21 Aug 16:40 UTC |
+Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT (old)" to differentiate DOT of the original denomination. For a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_" to clearly indicate that you have made the change. After sufficient time has elapsed post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would be:
 
-Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT (old)" to differentiate DOT of the original denomination. This change can be made immediately. For a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_" to clearly indicate that you have made the change. After sufficient time has elapsed post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would be:
-
-> “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token will undergo a redenomination. New DOT will be 100x smaller than DOT (old). Therefore, your DOT balance will be 100x higher. The percentage of the DOT you own relative to total supply will be unchanged. See the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for more information.”
+> “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token underwent a redenomination from its original sale. New DOT are 100x smaller than DOT (old). Therefore, your DOT balance is 100x higher and the price per DOT is 100x lower. The percentage of the DOT you own relative to total supply is unchanged. This will not affect the total value of your position. See the Polkadot blog post for more information.”
 
 If you require assistance with redenomination, please contact redenomination@web3.foundation.
 
@@ -55,7 +52,9 @@ Note that the address for a secp256k1 key is the SS58 encoding of the _hash of t
 
 ## Existential Deposit
 
-Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce reset.
+Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 0.01 KSM.
+
+Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful withdrawals.
 
 Wallets and custodians who track account nonces for auditing purposes should take care not to have accounts reaped, as users could refund the address and try making transactions from it. The Balances pallet provides a `transfer_keep_alive` function that will return an error and abort rather than make the transfer if doing so would result in reaping the sender's account.
 
