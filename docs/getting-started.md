@@ -77,7 +77,7 @@ trust-free message passing that opens up true interoperability.
 
 Whether you're a blockchain developer or if you're interested in taking part of Polkadot's
 community, Polkadot offers a platform for everyone. This Wiki offers a place for Builders and
-Maintainers to utilize tools and for brand-new learners to dive into material.
+maintainers to utilize tools and for brand-new learners to dive into educational material.
 
 ## Getting Started
 
