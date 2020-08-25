@@ -94,8 +94,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### Want to stake DOT?
 
-- [提名人指南 (Kusama)](mirror-maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。
-- [验证人指南](mirror-maintain-guides-how-to-validate-kusama)-成为 Kusama 网络上的验证人。
+- [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot network.
+- [Validator Guide](maintain-guides-how-to-validate-polkadot) - Become a validator on the Polkadot network.
 
 ## 惩罚 (Slashing)
 
