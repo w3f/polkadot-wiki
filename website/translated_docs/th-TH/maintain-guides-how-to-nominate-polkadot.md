@@ -10,7 +10,7 @@ Nominators are one type of participant in the staking subsystem of Polkadot. The
 
 While the [validators][] are active participants in the network that take part in the block production and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or worrying about online uptime. However, a good nominator performs due diligence on the validators that they elect. When looking for validators to nominate, a nominator should pay attention to their own reward percentage for nominating a specific validator - as well as the risk that they bare of being slashed if the validator gets slashed.
 
-# Setting up Stash and Controller keys
+## Setting up Stash and Controller keys
 
 > Until transfers are enabled, you may need to use the same account for stash and controller.
 
@@ -18,7 +18,7 @@ Nominators are recommended to set up separate stash and controller accounts. Exp
 
 You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation][] page.
 
-# Using Polkadot UI
+## Using Polkadot UI
 
 ### Step 1: Bond your tokens
 
@@ -64,7 +64,7 @@ Assuming at least one of your nominations ends up in the active validator set, y
 
 At some point, you might decide to stop nominating one or more validators. You can always change who you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions are available [here](maintain-guides-how-to-unbond).
 
-# Using Command-Line Interface (CLI)
+## Using Command-Line Interface (CLI)
 
 Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot network without going to the Polkado-JS Apps dashboard.
 

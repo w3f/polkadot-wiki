@@ -5,7 +5,7 @@ sidebar_label: Redenomination of DOT
 ---
 
 > Note: The DOT redenomination is taking place on 21 August, now to be known as Denomination Day, at
-> block #1,248,328. This block will happen at approximately 13:15 UTC, which is in Europe's
+> block #1,248,328. This block will happen no earlier than 16:45 UTC, which is in Europe's
 > afternoon, China's evening and America's morning.
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting
@@ -117,7 +117,7 @@ block #1,248,328
 
 If you're a DOT holder or user of the network, then you do not need to take any action. The DOT
 redenomination is a purely front-end change. You will still hold the same amount of Plancks after
-the change, but now it will appear that you hold 100x more DOTs. This change applies proportionally
+the change, but now it will appear that you hold 100x more DOT. This change applies proportionally
 to everyone.
 
 ### What This Means for Builders of Tools

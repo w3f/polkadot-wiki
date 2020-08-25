@@ -20,7 +20,7 @@ that they elect. When looking for validators to nominate, a nominator should pay
 own reward percentage for nominating a specific validator - as well as the risk that they bare of
 being slashed if the validator gets slashed.
 
-# Setting up Stash and Controller keys
+## Setting up Stash and Controller keys
 
 > Until transfers are enabled, you may need to use the same account for stash and controller.
 
@@ -31,14 +31,14 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
-# Using Polkadot UI
+## Using Polkadot UI
 
 ### Step 1: Bond your tokens
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
 The "Staking Overview" subsection will show you all the active validators and their information -
-their identities, the amount of DOTs that are staking for them, amount that is their own provided
+their identities, the amount of DOT that are staking for them, amount that is their own provided
 stake, how much they charge in commission, the era points they've earned in the current era, and the
 last block number that they produced. If you click on the chart button it will take you to the
 "Validator Stats" page for that validator that shows you more detailed and historical information
@@ -68,8 +68,8 @@ Pick "Account actions", then click the grey "+ Nominator" button.
 You will see a modal window that looks like the below:
 ![nominator-update-1](assets/nominator-update-1.png)
 
-Select a "value bonded" that is **less** than the total amount of DOTs you have, so you have some
-left over to pay transaction fees. Transaction fees are currently around 0.01 DOTs, but they are
+Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some
+left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are
 dynamic based on a variety of factors including the load of recent blocks.
 
 Also be mindful of the reaping threshold - the amount that must remain in an account lest it be
@@ -113,7 +113,7 @@ At some point, you might decide to stop nominating one or more validators. You c
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond).
 
-# Using Command-Line Interface (CLI)
+## Using Command-Line Interface (CLI)
 
 Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI
 instead. The CLI approach allows you to interact with the Polkadot network without going to the

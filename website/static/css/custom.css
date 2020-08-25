@@ -16,6 +16,9 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  #docsNav {
+    height: 80%;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -213,7 +216,6 @@ body {
 }
 #docsNav {
   padding-top: 30px;
-  height: 80%;
 }
 
 @media only screen and (max-width: 700px) {

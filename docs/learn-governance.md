@@ -57,11 +57,11 @@ will have a shorter enactment time.
 
 #### Public Referenda
 
-Anyone can propose a referendum by depositing the minimum amount of DOTs for a certain period
-(number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it. The proposal with the highest amount of bonded support will be selected to be a
+Anyone can propose a referendum by depositing the minimum amount of DOT for a certain period (number
+of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to
+support it. The proposal with the highest amount of bonded support will be selected to be a
 referendum. Note that this may be different than the absolute number of seconds; for instance, three
-accounts bonding 20 DOTs each would "outweigh" ten accounts bonding a single DOT each. The bonded
+accounts bonding 20 DOT each would "outweigh" ten accounts bonding a single DOT each. The bonded
 tokens will be released once the proposal is tabled (that is, brought to a vote).
 
 #### Council Referenda
@@ -105,14 +105,14 @@ result, thanks to time-locking. You can read more about this at
 ```
 Example:
 
-Peter: Votes `No` with 10 DOTs for a 128 week lock period  => 10 * 6 = 60 Votes
+Peter: Votes `No` with 10 DOT for a 128 week lock period  => 10 * 6 = 60 Votes
 
-Logan: Votes `Yes` with 20 DOTs for a 4 week lock period => 20 * 1 = 20 Votes
+Logan: Votes `Yes` with 20 DOT for a 4 week lock period => 20 * 1 = 20 Votes
 
-Kevin: Votes `Yes` with 15 DOTs for a 8 week lock period => 15 * 2 = 30 Votes
+Kevin: Votes `Yes` with 15 DOT for a 8 week lock period => 15 * 2 = 30 Votes
 ```
 
-Even though combining both Logan and Kevin vote with more DOTs than Peter, the lock period for both
+Even though combining both Logan and Kevin vote with more DOT than Peter, the lock period for both
 of them is less than Peter, leading to their voting power counting as less.
 
 #### Tallying
@@ -138,7 +138,7 @@ against - the number of nay votes
 
 turnout - the total number of voting tokens (Does not include conviction)
 
-electorate - the total number of DOTs tokens issued in the network
+electorate - the total number of DOT tokens issued in the network
 ```
 
 ##### Super-Majority Approve
@@ -169,14 +169,14 @@ _To know more about where these above formulas come from, please read the
 Example:
 
 Assume:
-- We only have 1,500 DOTs tokens in total.
+- We only have 1,500 DOT tokens in total.
 - Public proposal
 
-John  - 500 DOTs
-Peter - 100 DOTs
-Lilly - 150 DOTs
-JJ    - 150 DOTs
-Ken   - 600 DOTs
+John  - 500 DOT
+Peter - 100 DOT
+Lilly - 150 DOT
+JJ    - 150 DOT
+Ken   - 600 DOT
 
 John: Votes `Yes` for a 4 week lock period  => 500 * 1 = 500 Votes
 
@@ -205,7 +205,7 @@ period.
 #### Voluntary Locking
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their
-voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number
+voting power by declaring how long they are willing to lock-up their DOT, hence, the maximum number
 of votes for each token holder will be calculated by the following formula:
 
 ```
@@ -261,20 +261,22 @@ against - equate to a simple majority-carries system at 100% turnout.
 
 ## Council
 
-To represent passive stakeholders, we introduce the idea of a "council". The council is an on-chain
-entity comprising a number of actors, each represented as an on-chain account. For Polkadot this
-number is likely to begin at around six people, and increase over the course of 9 months to 24
-people (roughly one extra individual coming on every two weeks). In general, it has a fixed number
-of seats (24 on Polkadot and 17 on Kusama).
+To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
+on-chain entity comprising a number of actors, each represented as an on-chain account. On Polkadot,
+the council currently consists of 13 members. This is expected to increase over the next few months
+to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
+will be 24 seats while on Kusama it is 17 seats.
 
-The council is called upon primarily for two tasks of governance: proposing sensible referenda, and
-cancelling uncontroversially dangerous or malicious referenda.
+The council is called upon primarily for three tasks of governance: proposing sensible referenda,
+cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
-if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In
-the case that all members vote in favor, the vote is considered unanimous and is treated as
-uncontroversial.
+if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time.
+Council motions which pass with a strict majority - but without reaching unanimous support - will
+move to public referendum under a neutral, majority-carries voting scheme. In the case that all
+members of the council vote in favor of a motion, the vote is considered unanimous and becomes a
+referundum with negative adaptive quorum biasing.
 
 A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if
 there is an issue found late in a referendum's proposal such as a bug in the code of the runtime
@@ -287,20 +289,20 @@ it will be left to the stakeholders _en masse_ to determine the fate of the prop
 
 ![](assets/governance/approval-vote.png)
 
-At genesis, there will be 6 to 12 seats in the Council. All stakeholders are free to signal their
-approval of any of the registered candidates. For every two weeks, one of those seats is up for
-election and increase over the course of 9 months to 24 people (roughly one extra individual coming
-on every two weeks). All members have a fixed term (1 year). Council members can be removed early
-only by a referendum.
+Currently there are 13 seats on the council. All stakeholders are free to signal their approval of
+any of the registered candidates.
 
-To elect a new council member, Polkadot employs the same election scheme as used for choosing the
-active set of validators, a [Phragmén election](learn-phragmen). The election also chooses a set
-number of runners up (currently seven in Kusama) that will remain in the queue with their votes
-intact.
+Council elections are handled by the same [Phragmén election](learn-phragmen) process that selects
+validators from the available pool based on nominations. However, token holders' votes for
+councillors are isolated from any of the nominations they may have on validators. Council terms last
+for one day. At the end of each term, Phragmen election algorithm runs and the result will choose
+the new councillors based on the vote configurations of all voters. The election also chooses a set
+number of runners up (currently seven on Kusama and fifteen on Polkadot) that will remain in the
+queue with their votes intact.
 
 As opposed to a "first past the post", where voters must decide only on a single candidate chosen
 from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders
-can treat it as Boolean voting to support as many candidates as they want. The election algorithm
+can treat it as Yes or No voting to support as many candidates as they want. The election algorithm
 will find a fair subset of the candidates that closely matches the expressed indications of the
 electorate as a whole.
 
@@ -369,9 +371,43 @@ Fast-tracked referenda are the only type of referenda that can be active alongsi
 referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
 
-## [Usage of DOT](learn-DOT#dots-for-governance)
+## [Usage of DOT](learn-DOT#DOT-for-governance)
+
+## Frequently Asked Questions
+
+### How can I appeal to the council to enact a change on my behalf?
+
+In some circumstances you may want to appeal to the on-chain council to enact a change on your
+behalf. One example of this circumstance is the case of lost or locked funds when the funds were
+lost due to a human interface error (such as inputting an address for another network). Another
+example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does not
+let you sign a message easily. When these circumstances can be proven beyond a reasonable doubt to
+be an error, the council _may_ consider a governance motion to correct it.
+
+The first step to appeal to the council is to get in contact with the councillors. There is no
+singular place where you are guaranteed to grab every councillor's ear with your message. However,
+there are a handful of good places to start where you can get the attention of some of them. The
+[Polkadot Direction][] matrix room is one such place. After creating an account and joining this
+room, you can post a well thought-through message here that lays down your case and provides
+justification for why you think the council should consider enacting a change to the protocol on
+your behalf.
+
+At some point you will likely need a place for a longer form discussion. For this, making a post on
+[Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
+you present all the evidence for your circumstance and state clearly what kind of change you would
+suggest to the councillors to enact. Remember - the councillors do not need to make the change, it
+is your responsibility to make a strong case for why the change should be made.
 
 ## Resources
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
+- [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr.
+  Gavin Wood presents the initial governance structure for Polkadot. (Video)
+- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
+  explaining how governance works in Polkadot and Kusama.
+- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - An explanation of
+  how governance works in Polkadot and Kusama, with Bill Laboon.
+
+[polkadot direction]: https://matrix.to/#/!OwgojQyBzTlUQGGLhq:matrix.parity.io
+[polkassembly]: https://polkadot.polkassembly.io/

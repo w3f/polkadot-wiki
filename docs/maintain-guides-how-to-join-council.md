@@ -12,7 +12,7 @@ candidacy to the council.
 
 ## Submit Candidacy
 
-Submitting your candidacy for the council requires a small bond of DOTs / KSMs. The bond will be
+Submitting your candidacy for the council requires a small bond of DOT / KSMs. The bond will be
 forfeited if your candidacy does not win or become a runner-up, but if you become a member of the
 council you will eventually get your bond back. Runner-ups are selected after every round and are
 reserved members in case one of the winners gets forcefully removed.
