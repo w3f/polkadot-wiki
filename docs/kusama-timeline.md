@@ -40,7 +40,7 @@ The solution to the issue involved a rollback of the chain history before the pr
 upgrade took place. However, due to intricacies of the block production mechanism, it was also
 necessary to encapsulate the validators of the chain into a time bubble to trick them into believing
 that they were producing blocks in the past. Furthermore, in order for the chain to catch up to the
-present moment it was necessary to make time exist in the bubble at a speed of six times greater
+present moment it was necessary to make time flow in the bubble at a speed of six times greater
 than the speed of time in the real world. Therefore, the session of Kusama which would normally last
 one hour would last only 10 minutes until the validators caught up to the present moment.
 
