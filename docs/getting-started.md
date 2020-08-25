@@ -5,7 +5,7 @@ sidebar_label: Getting Started
 ---
 
 Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the
-core functionality. Our wiki has three main sections: Learn (for learners), Build (for people that
+core functionality. Our wiki has three main sections: Learn (for learners), Build (for individuals that
 want to build on Polkadot), and Maintain (for people that want to maintain the network).
 
 ## What is Polkadot?
@@ -69,11 +69,13 @@ guarantees, collators don't have any security responsibilities, and thus do not 
 incentive system. This is how the entire network stays up to date with the many transactions that
 take place.
 
+![polkadot-relay-chain](assets/polkadot_relay_chain.png)
+
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
 Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility, meaning that
 transactions can be made between different parachains.
 
-The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each
+The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain) allows parachains to send messages of any type to each
 other. The shared security and validation logic of the Relay Chain provide the environment for
 trust-free message passing that opens up true interoperability.
 

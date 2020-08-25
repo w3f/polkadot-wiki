@@ -217,10 +217,6 @@
         "title": "Parachain Implementer's Guide",
         "sidebar_label": "Parachain Implementer's Guide"
       },
-      "learn-introduction": {
-        "title": "What is Polkadot?",
-        "sidebar_label": "What is Polkadot?"
-      },
       "learn-keys": {
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
