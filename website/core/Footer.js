@@ -46,12 +46,11 @@ class Footer extends React.Component {
             <a href="https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org">
               Polkadot Watercooler (Riot Chat)
             </a>
-            <a
-              href="https://twitter.com/polkadotnetwork"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <a href="https://twitter.com/polkadotnetwork" target="_blank" rel="noreferrer noopener">
               Twitter
+            </a>
+            <a href="/polkadot-wiki.pdf" target="_blank" rel="noreferrer noopener">
+              Download this Wiki as PDF
             </a>
           </div>
           {/* <a href="https://github.com/paritytech/polkadot">GitHub</a> */}
@@ -68,10 +67,7 @@ class Footer extends React.Component {
           </a>
           {this.props.config.twitterUsername && (
             <div className="social">
-              <a
-                href={`https://twitter.com/polkadotnetwork}`}
-                className="twitter-follow-button"
-              >
+              <a href={`https://twitter.com/polkadotnetwork}`} className="twitter-follow-button">
                 Follow @{this.props.config.twitterUsername}
               </a>
             </div>
@@ -93,7 +89,7 @@ class Footer extends React.Component {
               cookieSettings.onclick = function() {
                 return klaro.show();
               };
-              `
+              `,
             }}
           />
         </section>
