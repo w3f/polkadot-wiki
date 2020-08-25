@@ -9,7 +9,7 @@ October 2019 at approximately 18:43 Zurich time (CET). The first successful vali
 took place at 22:45 CET.
 
 Currently, Kusama is a healthy Proof-of-Stake network with over 150 validators and over a million
-blocks produced.
+blocks produced. If you are curious about the history of the Kusama network, please read below
 
 ## Rollout plan
 
@@ -24,4 +24,26 @@ When the first transition to PoS took place, the full functionality of Kusama wa
 available. Notably, the Sudo key still existed and was used to initiate further upgrades. Balance
 transfers were still disabled for a short while.
 
-Kusama now has had its full functionality enabled.
+Kusama now has its full functionality enabled.
+
+## Kusama's First Adventure
+
+[Source](https://polkadot.network/kusamas-first-adventure/)
+
+On 4th January 2020, the Polkadot mainnet runtime, which was still at that time not live, was
+uploaded to the Kusama chain during a runtime upgrade. The mishap was due to a recent split apart of
+the Kusama logic from the Polkadot logic that was not properly named. This led to a halt of block
+production on the Kusama chain and bricked the chain entirely.
+
+The solution to the issue involved a rollback of the chain history before the problematic runtime
+upgrade took place. However, due to intricacies of the block production mechanism, it was also
+necessary to encapsulate the validators of the chain into a time bubble to trick them into believing
+that they were producing blocks in the past. Furthermore, in order for the chain to catch up to the
+present moment it was necessary to make time exist in the bubble at a speed of six times greater
+than the speed of time in the real world. Therefore, the session of Kusama which would normally last
+one hour would last only 10 minutes until the validators caught up to the present moment.
+
+The above plan was executed successfully on the 7th of January. Due to the time warp, the number of
+missed blocks in the sessions directly following
+[block #516558](https://polkascan.io/kusama/block/516558) was significantly higher. This is partly
+what contributes to the much higher ratio of missed blocks on Kusama versus Polkadot today.
