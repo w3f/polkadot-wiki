@@ -26,4 +26,5 @@ The Polkadot host interacts with the Polkadot runtime in limited, and well-speci
 
 ## 资源
 
-- [Polkadot 主机协议规格](https://github.com/w3f/polkadot-spec) - Polkadot 主机规格，包括测试。
+- [Polkadot Host Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the Polkadot Host spec, including tests.
+- [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team based in Toronto, Canada. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0 client in TypeScript and this Go implementation of Polkadot.

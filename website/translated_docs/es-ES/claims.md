@@ -10,7 +10,7 @@ Esta guía le ayudará en los pasos para hacer una reclamación o dar fe de la d
 
 Si es la primera vez que reclama en Polkadot, por favor, lea más abajo en la sección de [reclamaciones](#making-a-claim). Si ya ha reclamado durante el período de reclamación previo al Génesis, por favor proceda a la sección de [certificar una declaración](#attesting-to-a-statement) en su lugar.
 
-> To learn more on How to claim your DOTs post genesis, check out our walkthrough [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22) and our video on [Claiming DOTs with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+> To learn more on How to claim your DOT post genesis, check out our walkthrough [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22) and our video on [Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
 
 ## Hacer la reclamación
 
@@ -30,13 +30,13 @@ Ya deberías tener tu cuenta en Ethereum que tiene los tokens del indicador DOT 
 
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
 
-Necesitarás una cuenta Polkadot para reclamar tus DOTs. Por favor, sigue las instrucciones de la página \[generación de la cuenta\]\[\] para generar una nueva cuenta Polkadot.
+You will need a Polkadot account to claim your DOT. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
 
 #### Reclamando tus DOTs con MyCrypto
 
 La aplicación [Polkadot JS Claims][] te ayuda a firmar un mensaje de MyCrypto. MyCrypto es una buena opción en caso de que hayas guardado la clave de la cuenta de Ethereum con tus tokens de DOT en un dispositivo de hardware como Ledger Nano S o Trezor. También soporta claves privadas en bruto, mnemotécnicos y Parity Signer.
 
-Una vez que hayas descargado MyCrypto y lo tengas funcionando localmente (recomendamos un ordenador air-gapped para máxima seguridad), puedes empezar a navegar por la aplicación de Reclamaciones en Polkadot-JS Apps. Selecciona la cuenta en la que quieres reclamar los DOTs y haz clic en el botón azul "Continue" para continuar. Tu pantalla debería tener un aspecto parecido a este:
+Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
 ![claim-1](assets/new-claims/claim-1.png)
 
@@ -48,7 +48,7 @@ A continuación, tu pantalla debe mostrar la imagen de abajo.
 
 ![claim-2-1](assets/new-claims/claim-2-1.png)
 
-La cadena codificada hexadecimal que sigue a la frase: "Pay DOTs to the Polkadot account:" es la clave pública con código hexadecimal de tu cuenta Polkadot, menos el prefijo `0x`.
+The hex-encoded string that follows the sentence: "Pay DOT to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
 El siguiente paso es ir a la aplicación MyCrypto y hacer clic en la pestaña "Sign & Verify Message".
 
@@ -74,17 +74,17 @@ Aparecerá un cuadro verde que te indicará la cantidad a reclamar con un botón
 
 ![claim-9](assets/new-claims/claim-9.png)
 
-Si esta reclamación tuvo éxito, entonces verá un mensaje de éxito y sus DOTs estarán en la cuenta que usted declaró.
+If this claim succeeded, then you will see a success message and your DOT will be in the account that you claimed to.
 
 #### Verificando tu reclamación
 
-Después de hacer una solicitud en cadena para sus DOTs, su saldo debe ser actualizado en la UI de Polkadot inmediatamente.
+After you make an on-chain claim for DOT, your balance should be updated on the Polkadot UI immediately.
 
 ¿Tienes problemas? Consigue ayuda en el [canal de soporte de reclamaciones]() de DOT.
 
 ![claim-10](assets/new-claims/claim-10.png)
 
-Enhorabuena, ya has completado el proceso para reclamar y registrar tus DOTs.
+Congratulations, you have now completed the process for claiming and signing for your DOT.
 
 ### Procesos de reclamaciones de terceros
 
@@ -126,7 +126,7 @@ Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
 
@@ -155,7 +155,7 @@ Open Parity Signer and choose "Polkadot" network.
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-Select the address that you have claimed DOTs to during pre-genesis.
+Select the address that you have claimed DOT to during pre-genesis.
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
@@ -193,7 +193,7 @@ First, you need to press the "QR Scanner" on the Parity Signer to scan the QR co
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
-When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
 
 [MyCrypto]: https://download.mycrypto.com/

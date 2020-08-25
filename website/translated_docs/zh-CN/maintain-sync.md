@@ -46,14 +46,13 @@ Archive 节点是供需要过去信息的实用程序使用，例如区块浏览
 
 > 如果您是验证人，则不建议使用。 请参阅 [设置安全验证人](maintain-guides-secure-validator)
 
-For the most recent binary please see the [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL in the code snippet below may become slightly out-of-date.
-
 - 安装 WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - 安装 Ubuntu (同一个网页): https://docs.microsoft.com/en-us/windows/wsl/install-win10
-- Download Polkadot binary within Ubuntu by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
-- 运行以下指令: `sudo chmod +x polkadot`
-- 运行以下指令: `./polkadot --name "你节点的名称"`
-- 在 https://telemetry.polkadot.io/#list/Kusama 找您的节点
+- Determine the latest version of the Polkadot binary (you can see the latest releases here: https://github.com/paritytech/polkadot/releases)
+- Download the correct Polkadot binary within Ubuntu by running the following command. Replace `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`): `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
+- Run the following: `sudo chmod +x polkadot`
+- Run the following: `./polkadot --name "Your Node Name Here"`
+- Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 ### 快速安装说明 (Linux)
 
@@ -63,10 +62,11 @@ For the most recent binary please see the [release page](https://github.com/pari
 
 Also please note that the nature of pre-built binaries means that they may not work on your particular architecture or Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it likely means the binary is not compatible with your system. You will either need to compile the [source code yourself](#clone-and-build) or use [docker](#using-docker).
 
-- Download Polkadot binary by running: `curl -sL https://github.com/paritytech/polkadot/releases/download/v0.8.3/polkadot -o polkadot`
-- 运行以下指令: `sudo chmod +x polkadot`
-- 运行以下指令: `./polkadot --name "你节点的名称"`
-- 在 https://telemetry.polkadot.io/#list/Kusama 找您的节点
+- Determine the latest version of the Polkadot binary (you can see the latest releases here: https://github.com/paritytech/polkadot/releases)
+- Download the correct Polkadot binary within Ubuntu by running the following command. Replace `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`): `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
+- Run the following: `sudo chmod +x polkadot`
+- Run the following: `./polkadot --name "Your Node Name Here"`
+- Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 ## 获取 Substrate
 
@@ -90,7 +90,7 @@ cd kusama
 cargo build --release
 ```
 
-Alternatively, check out a specific tagged release:
+Alternatively, if you wish to use a specific release, you can check out a specific tag (`v0.8.3` in the example below):
 
 ```bash
 git clone https://github.com/paritytech/polkadot kusama

@@ -8,7 +8,7 @@ El Consejo es un cuerpo electo de cuentas on-chain que están destinadas a repre
 
 ## Enviar Candidatura
 
-La presentación de su candidatura para el Consejo requiere un pequeño vínculo de DOTs / KSM. El bono se perderá si tu candidatura no gana o no se convierte en subcampeón. pero si se convierte en miembro del Consejo finalmente recibirá su vinculación. Los directores son seleccionados después de cada ronda y son miembros en reserva en caso de que uno de los ganadores sea eliminado forzosamente.
+Submitting your candidacy for the council requires a small bond of DOT / KSMs. The bond will be forfeited if your candidacy does not win or become a runner-up, but if you become a member of the council you will eventually get your bond back. Runner-ups are selected after every round and are reserved members in case one of the winners gets forcefully removed.
 
 > Actualmente el vínculo para presentar una candidatura del consejo en Kusama es 1 KSM.
 

@@ -31,3 +31,4 @@ runtime::register_validate_block!(Block, BlockExecutor);
 ## Resources
 
 - [EthCC에서 Cumulus를 소개하는 Rob의 발표](https://www.youtube.com/watch?v=thgtXq5YMOo)
+- [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot co-founder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.
