@@ -1,16 +1,15 @@
 {
   "docs": {
     "General": [
-      "index",
+      "getting-started",
       "claims",
+      "redenomination",
+      "grants",
+      "research",
       "community",
       "contributing",
-      "faq",
-      "getting-started",
       "glossary",
-      "grants",
-      "redenomination",
-      "research"
+      "faq"
     ],
     "Learn": [
       "learn-introduction",

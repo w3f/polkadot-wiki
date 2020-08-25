@@ -37,7 +37,7 @@ under the full economic security of Polkadot's validator set.
 The difference between parachains and parathreads is economic. Parachains must be registered through
 a normal means of Polkadot, i.e. governance proposal or parachain slot auction. Parathreads have a
 fixed fee for registration that would realistically be much lower than the cost of acquiring a
-parachain slot. Similarly to how DOTs are locked for the duration of parachain slots and then
+parachain slot. Similarly to how DOT are locked for the duration of parachain slots and then
 returned to the winner of the auction, the deposit for a parathread will be returned to the
 parathread after the conclusion of its term.
 
@@ -61,7 +61,7 @@ pool. In other words, some parachain slots will have no parachain attached to th
 be used as a space for which the winner(s) of the block-by-block parathread fee auction can have
 their block candidate included.
 
-Collators will offer a bid designated in DOTs for inclusion of a parathread block candidate. The
+Collators will offer a bid designated in DOT for inclusion of a parathread block candidate. The
 Relay Chain block author is able to select from these bids to include a parathread block. The
 obvious incentive is for them to accept the block candidate with the highest bid, which would bring
 them the most profit. The tokens from the parathread bids will likely be split 80-20, meaning that
@@ -78,8 +78,7 @@ There are two sources of compensation for collators:
 
 1. Assuming a parathread has its own local token system, it pays the collators from the transaction
    fees in its local token. If the parathread does not implement a local token, or its local token
-   has no value (e.g. it is used only for governance), then it can use DOTs to incentivize
-   collators.
+   has no value (e.g. it is used only for governance), then it can use DOT to incentivize collators.
 2. Parathread protocol subsidy. A parathread can mint new tokens in order to provide additional
    incentives for the collator. Probably, the amount of local tokens to mint for the parathread
    would be a function of time, the more time that passes between parathread blocks that are

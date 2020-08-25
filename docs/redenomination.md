@@ -4,15 +4,15 @@ title: Redenomination of DOT
 sidebar_label: Redenomination of DOT
 ---
 
-> Note: The DOT redenomination is taking place on 21 August, now to be known as Denomination Day, at
-> block #1,248,328. This block will happen at approximately 13:15 UTC, which is in Europe's
-> afternoon, China's evening and America's morning.
+> Note: The DOT redenomination took place on 21 August, now to be known as Denomination Day, at
+> block #1,248,328.
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting
 with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is
 like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12 Planks,
-that is twelve decimal places. After this date the DOT will be denominated as 1e10 Plancks, as in
-ten decimal places.
+that is twelve decimal places. After this date, DOT is denominated as 1e10 Plancks, as in ten
+decimal places. DOT denominated to twelve decimal places is referred to as "DOT (old)" and DOT
+denominated to ten decimal places is referred to as "_New DOT_".
 
 The change in denomination, henceforth referred to as the _redenomination_, was voted on by the
 community of DOT holders. The community decided between four options, to change the DOT denomination
@@ -117,7 +117,7 @@ block #1,248,328
 
 If you're a DOT holder or user of the network, then you do not need to take any action. The DOT
 redenomination is a purely front-end change. You will still hold the same amount of Plancks after
-the change, but now it will appear that you hold 100x more DOTs. This change applies proportionally
+the change, but now it will appear that you hold 100x more DOT. This change applies proportionally
 to everyone.
 
 ### What This Means for Builders of Tools

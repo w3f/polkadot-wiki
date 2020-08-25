@@ -8,9 +8,11 @@ This page serves as a high-level introduction to the Polkadot protocol with term
 specific to Polkadot, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.
 
-## DOT Tokens
+## Tokens
 
-- **Token decimals:** See [Redenomination](#redenomination)
+- **Token decimals:**
+  - Polkadot (DOT): 10 (See [Redenomination](#redenomination))
+  - Kusama (KSM): 12
 - **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
 
@@ -23,26 +25,20 @@ decided to redenominate the DOT token. The redenomination does not change the nu
 [details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the
 [results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
 
-The redenomination will take effect 72 hours after transfers are enabled. The projected block
-numbers and times are:
-
-| Event             | Block Number |  Earliest Time   |
-| :---------------- | :----------: | :--------------: |
-| Transfers enabled |  1,205,128   | 18 Aug 13:15 UTC |
-| Redenomination    |  1,248,328   | 21 Aug 13:15 UTC |
+The redenomination took effect 72 hours after transfers were enabled, at block 1,248,326, which
+occurred at approximately 16:50 UTC on 21 Aug 2020.
 
 Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT
-(old)" to differentiate DOTs of the original denomination. This change can be made immediately. For
-a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_"
-to clearly indicate that you have made the change. After sufficient time has elapsed
-post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would
-be:
+(old)" to differentiate DOT of the original denomination. For a period of time after the
+redenomination occurs, we recommend that you use the symbol "_New DOT_" to clearly indicate that you
+have made the change. After sufficient time has elapsed post-redenomination, you should change "_New
+DOT_" back to "DOT". An example of an explanation would be:
 
-> “On approximately August 21st at 13:15 UTC (block number 1,248,328), the DOT token will undergo a
-> redenomination. New DOTs will be 100x smaller than DOTs (old). Therefore, your DOT balance will be
-> 100x higher. The percentage of the DOTs you own relative to total supply will be unchanged. See
-> the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for
-> more information.”
+> “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token underwent a
+> redenomination from its original sale. New DOT are 100x smaller than DOT (old). Therefore, your
+> DOT balance is 100x higher and the price per DOT is 100x lower. The percentage of the DOT you own
+> relative to total supply is unchanged. This will not affect the total value of your position. See
+> the Polkadot blog post for more information.”
 
 If you require assistance with redenomination, please contact redenomination@web3.foundation.
 
@@ -80,7 +76,11 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an
 account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce
-reset.
+reset. Polkadot's ED is 1 DOT, while Kusama's is 0.01 KSM.
+
+Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial
+wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful
+withdrawals.
 
 Wallets and custodians who track account nonces for auditing purposes should take care not to have
 accounts reaped, as users could refund the address and try making transactions from it. The Balances
@@ -100,10 +100,10 @@ some operation and still belong to the account holder, but cannot be used.
 Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
 can operate on the same account, but they overlap rather than add. Locks are automatically added
 onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these
-are not customizable. For example, an account could have a free balance of 200 DOTs with two locks
-on it: 150 DOTs for `Transfer` purposes and 100 DOTs for `Reserve` purposes. The account could not
-make a transfer that brings its free balance below 150 DOTs, but an operation could result in
-reserving DOTs such that the free balance is below 150, but above 100 DOTs.
+are not customizable. For example, an account could have a free balance of 200 DOT with two locks on
+it: 150 DOT for `Transfer` purposes and 100 DOT for `Reserve` purposes. The account could not make a
+transfer that brings its free balance below 150 DOT, but an operation could result in reserving DOT
+such that the free balance is below 150, but above 100 DOT.
 
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 
@@ -142,8 +142,8 @@ with a low risk of spam. Signed transactions fit the concept of a transaction in
 Bitcoin.
 
 Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For
-example, when a user claims their DOTs from the Ethereum DOT indicator contract to a new DOT
-address, the new address doesn't yet have any funds with which to pay fees.
+example, when a user claims their DOT from the Ethereum DOT indicator contract to a new DOT address,
+the new address doesn't yet have any funds with which to pay fees.
 
 ### Transaction Mortality
 

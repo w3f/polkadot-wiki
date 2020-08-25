@@ -13,6 +13,7 @@ Account keys are keys that are meant to control funds. They can be either:
 
 - The vanilla `ed25519` implementation using Schnorr signatures.
 - The Schnorrkel/Ristretto `sr25519` variant using Schnorr signatures.
+- ECDSA signatures on secp256k1
 
 There are no differences in security between `ed25519` and `sr25519` for simple signatures.
 
@@ -25,15 +26,15 @@ ecosystem.
 ### "Controller" and "Stash" Keys
 
 When we talk about "controller" and "stash" keys, we usually talk about them in the context of
-running a validator or nominating DOTs, but they are useful concepts for all users to know. Both
-keys are types of account keys. They are distinguished by their intended use, not by an underlying
+running a validator or nominating DOT, but they are useful concepts for all users to know. Both keys
+are types of account keys. They are distinguished by their intended use, not by an underlying
 cryptographic difference. All the info mentioned in the parent section applies to these keys. When
 creating new controller or stash keys, all cryptography supported by account keys are an available
 option.
 
 The controller key is a semi-online key that will be in the direct control of a user, and used to
 submit manual extrinsics. For validators or nominators, this means that the controller key will be
-used to start or stop validating or nominating. Controller keys should hold some DOTs to pay for
+used to start or stop validating or nominating. Controller keys should hold some DOT to pay for
 fees, but they should not be used to hold huge amounts or life savings. Since they will be exposed
 to the internet with relative frequency, they should be treated carefully and occasionally replaced
 with new ones.

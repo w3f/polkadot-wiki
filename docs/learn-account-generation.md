@@ -213,7 +213,7 @@ white.
 
 Please see above for information on [storing your key safely](#disclaimer-key-security).
 
-### Create and backup account
+### Create and Back Up Account
 
 Click “Save” and your account will be created. It will also generate a backup file that you should
 save to your computer. Ideally, you would also save it on an external hard drive or thumb drive, or
@@ -272,7 +272,7 @@ communication lines on-chain.
 
 ## Parity Signer
 
-Parity Signer is a secure way of storing your DOTs on an air-gapped device. It is highly recommended
+Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
 installing it. If you have any communications methods turned on, you will see an "unshielded" icon
 in red on the top-right corner that indicates your connection may not be secure.
@@ -291,7 +291,7 @@ Input the name for your identity and then click "Create".
 
 ![Parity Signer Create Account 2](assets/accounts/ps-create-2.jpg)
 
-### Backup Account
+### Back Up Account
 
 Parity Signer will then generate a recovery phrase for you and display it in the form of 12 or 24
 words.

@@ -15,7 +15,7 @@ array of the currently active parachains.
 ## How to deploy the Adder parachain
 
 **You will need to have the minimum deposit needed to create a referendum. Currently this minimum is
-5 DOTs.**
+5 DOT.**
 
 The `adder` parachain is a simple parachain that will keep a value in storage and add to this value
 as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains`
@@ -91,7 +91,7 @@ In the `id` input enter in the id of the parachain. In the case of the simple ad
 `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was
 compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got
 from running the collator node. In the `value` field you will need to input the minimum required
-value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
+value for creating a referendum. At the time of writing this is _5 DOT_ on the Alexander testnet.
 
 ![registering a parachain](assets/parachain/register.png)
 
