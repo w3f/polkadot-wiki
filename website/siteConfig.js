@@ -15,7 +15,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: "getting-started", label: "Get Started" },
-    { doc: "learn-introduction", label: "Learn" },
+    { doc: "learn-launch", label: "Learn" },
     { doc: "build-index", label: "Build" },
     { doc: "maintain-index", label: "Maintain " },
     { href: "https://guide.kusama.network", label: "Kusama" },
