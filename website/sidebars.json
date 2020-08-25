@@ -69,11 +69,6 @@
           "learn-comparisons-dfinity",
           "learn-comparisons"
         ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Miscellaneous",
-        "ids": ["learn-relevant-links"]
       }
     ],
     "Build": [
