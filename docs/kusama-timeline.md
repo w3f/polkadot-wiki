@@ -31,10 +31,10 @@ Kusama now has its full functionality enabled.
 
 [Source](https://polkadot.network/kusamas-first-adventure/)
 
-On 4th January 2020, the Polkadot mainnet runtime, which was still at that time not live, was
-uploaded to the Kusama chain during a runtime upgrade. The mishap was due to a recent split apart of
-the Kusama logic from the Polkadot logic that was not properly named. This led to a halt of block
-production on the Kusama chain and bricked the chain entirely.
+On 4th January 2020, the Polkadot mainnet runtime, which at that time still wasn't live, was
+uploaded to the Kusama chain during a runtime upgrade. The mishap was due to a recent split of
+the Kusama logic from the Polkadot logic and that runtime was not properly named. This led to a 
+halt of block production on the Kusama chain and bricked the chain entirely.
 
 The solution to the issue involved a rollback of the chain history before the problematic runtime
 upgrade took place. However, due to intricacies of the block production mechanism, it was also
