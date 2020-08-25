@@ -12,6 +12,7 @@ sidebar_label: Polkadot 密钥
 
 - 使用 Schnorr 签名的原版` ed25519 `实现。
 - 使用 Schnorr 签名的 Schnorrkel / Ristretto ` sr25519 `。
+- ECDSA signatures on secp256k1
 
 对于简单签名，` ed25519 `和` sr25519 `之间的安全性没有区别。
 
