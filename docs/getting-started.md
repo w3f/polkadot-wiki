@@ -18,11 +18,12 @@ networks, private consortium chains, or oracles and other Web3 technologies. It 
 where independent blockchains can exchange information under common security guarantees.
 
 Polkadot is a living network with the core pillars of governance and upgradability. The network has
-an advanced suite of governance tools and, using the [WebAssembly](https://webassembly.org/) standard as a "meta-protocol", can
-autonomously deploy network upgrades. Polkadot adapts to your growing needs without the risks of
-network forks.
+an advanced suite of governance tools and, using the [WebAssembly](https://webassembly.org/)
+standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your
+growing needs without the risks of network forks.
 
-> Note: If you haven't heard of Governance before, a great place to start is the [Governance page](learn-governance)
+> Note: If you haven't heard of Governance before, a great place to start is the
+> [Governance page](learn-governance)
 
 By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
@@ -55,17 +56,22 @@ intermediaries and build a trustless infrastructure.
 
 ## How does Polkadot work?
 
-The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)", allows transactions to be processed in parallel instead of one-by-one. Each parachain in the network have unique state transition functions (STF). Based on Polkadot's design, as long as
-a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
+The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)",
+allows transactions to be processed in parallel instead of one-by-one. Each parachain in the network
+have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic
+can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network
+as a parachain.
 
 Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose
 blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity
 checks before being added to the finalized chain. As the Relay Chain provides the security
 guarantees, collators don't have any security responsibilities, and thus do not require a robust
-incentive system. This is how the entire network stays up to date with the many transactions that take place.
+incentive system. This is how the entire network stays up to date with the many transactions that
+take place.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility, meaning that transactions can be made between different parachains.
+Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility, meaning that
+transactions can be made between different parachains.
 
 The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each
 other. The shared security and validation logic of the Relay Chain provide the environment for
@@ -77,8 +83,8 @@ trust-free message passing that opens up true interoperability.
 ## Why should you use Polkadot?
 
 Whether you're a blockchain developer or if you're interested in taking part of Polkadot's
-community, Polkadot offers a platform for everyone. The Polkadot Wiki offers a place for builders and
-maintainers to utilize tools and for brand-new learners to dive into educational material.
+community, Polkadot offers a platform for everyone. The Polkadot Wiki offers a place for builders
+and maintainers to utilize tools and for brand-new learners to dive into educational material.
 
 ## Getting Started
 
