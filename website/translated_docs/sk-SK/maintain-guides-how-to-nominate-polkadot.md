@@ -24,7 +24,7 @@ You can generate your stash and controller account via any of the recommended me
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
-The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of DOTs that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
+The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of DOT that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
 The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you to stake and nominate.
 
@@ -40,7 +40,7 @@ Pick "Account actions", then click the grey "+ Nominator" button.
 
 You will see a modal window that looks like the below: ![nominator-update-1](assets/nominator-update-1.png)
 
-Select a "value bonded" that is **less** than the total amount of DOTs you have, so you have some left over to pay transaction fees. Transaction fees are currently around 0.01 DOTs, but they are dynamic based on a variety of factors including the load of recent blocks.
+Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are dynamic based on a variety of factors including the load of recent blocks.
 
 Also be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 0.01 DOT on Polkadot, so it's recommended to keep around 0.1 DOT in your account to be on the safe side.
 

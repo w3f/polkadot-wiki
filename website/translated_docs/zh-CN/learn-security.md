@@ -22,7 +22,7 @@ Polkadot 克服了安全可伸缩性问题，因为它将所有的经济激励�
 
 ### 安全性与验证人的数量相关吗？ 平行链的数量呢？
 
-安全性与连接到 Polkadot 中继链的平行链的数量无关。 安全性和验证人数量之间存在相关性，为更多的验证人将使网络具有更强的分散性，并使其更难以攻击。但是，网络安全性的最大指标是 DOTs 的数量抵押与绑定。诚实的验证人和提名者押注的 DOTs 数量越多，攻击者需要获取验证人插槽的最小 DOTs 数量越高。
+Security is independent of the number of parachains that are connected to the Polkadot Relay Chain. The correlation of security and the number of validators exists as the higher number of validators will give the network stronger decentralization properties and make it harder to try to take down. However, the biggest indicator of the security of the network is the economic signal of the number of DOT that are bonded and staked. The greater the number of DOT staked by honest validators and nominators, the higher the minimum amount of DOT an attacker would need to acquire a validator slot.
 
 ### 平行链会需要他们自己的安全吗？平行链在什么情况下需要自己的安全性？
 

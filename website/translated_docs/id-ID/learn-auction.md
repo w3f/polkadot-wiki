@@ -68,20 +68,20 @@ Konfigurasi penawar untuk satu penawar mungkin terlihat seperti ini:
 Bids[
   ({
     range: [1, 2, 3, 4],
-    bond_amount: 300, //DOTs
+    bond_amount: 300, //DOT
   },
   {
     range: [1, 2],
-    bond_amount: 777, //DOTs
+    bond_amount: 777, //DOT
   },
   {
     range: [2, 3, 4],
-    bond_amount: 450, // DOTs
+    bond_amount: 450, // DOT
   })
 ];
 ```
 
-The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
+The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
 A random number, which is based on the VRF used by Polkadot, is determined at each block. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
@@ -91,25 +91,25 @@ A random number, which is based on the VRF used by Polkadot, is determined at ea
 
 Ada satu slot parachain yang tersedia.
 
-Tawaran Alice ` 20 DOTs ` untuk rentang 1 - 2.
+Alice bids `20 DOT` for the range 1 - 2.
 
-Tawaran Bob ` 30 DOTs ` untuk rentang 3 - 4.
+Bob bids `30 DOT` for the range 3 - 4.
 
 Lelang berakhir.
 
-Alice mengikat ` 20 DOTs ` dan akan memiliki slot parachain untuk tahun pertama.
+Alice bonds `20 DOT` and will have the parachain slot for the first year.
 
-Bob mengikat ` 30 DOTs ` dan akan memiliki slot parachain untuk tahun kedua.
+Bob bonds `30 DOT` and will have the parachain slot for the second year.
 
 #### Bersaing
 
 Ada satu slot parachain yang tersedia.
 
-Tawaran Charlie ` 75 DOTs ` untuk rentang 1 - 4.
+Charlie bids `75 DOT` for the range 1 - 4.
 
-Dave tawaran ` 100 DOTs ` untuk rentang 3 - 4.
+Dave bids `100 DOT` for the range 3 - 4.
 
-Tawaran Emily ` 40 DOTs ` untuk rentang 1 - 2.
+Emily bids `40 DOT` for the range 1 - 2.
 
 Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of periods in the specified range of the bid.
 
@@ -127,7 +127,7 @@ Charlie's valuation for the entire range is `300` therefore Charlie is awarded t
 
 ### Mengapa tidak semua orang menawar untuk panjang maks?
 
-For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
+For the duration of the slot the `DOT` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOT` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
 
 ### Bagaimana mekanisme ini membantu memastikan keragaman parachain?
 

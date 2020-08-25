@@ -68,20 +68,20 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 Bids[
   ({
     range: [1, 2, 3, 4],
-    bond_amount: 300, //DOTs
+    bond_amount: 300, //DOT
   },
   {
     range: [1, 2],
-    bond_amount: 777, //DOTs
+    bond_amount: 777, //DOT
   },
   {
     range: [2, 3, 4],
-    bond_amount: 450, // DOTs
+    bond_amount: 450, // DOT
   })
 ];
 ```
 
-The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
+The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
 A random number, which is based on the VRF used by Polkadot, is determined at each block. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
@@ -91,25 +91,25 @@ A random number, which is based on the VRF used by Polkadot, is determined at ea
 
 只有一个平行链插槽可用
 
-爱丽丝将` 20 DOTs`的出价设置在1-2阶段。
+Alice bids `20 DOT` for the range 1 - 2.
 
-鲍勃出价` 30 DOTs `在3-4阶段。
+Bob bids `30 DOT` for the range 3 - 4.
 
 拍卖结束
 
-爱丽丝会绑定` 20 DOTs`，并将在第一年拥有平行链插槽。
+Alice bonds `20 DOT` and will have the parachain slot for the first year.
 
-鲍勃绑定了` 30 DOTs`，并将在第二年拥有平行链插槽。
+Bob bonds `30 DOT` and will have the parachain slot for the second year.
 
 #### 竞争性
 
 只有一个平行链插槽可用
 
-对于1-4阶段，查理出价` 75个DOT `
+Charlie bids `75 DOT` for the range 1 - 4.
 
-对于3-4阶段，戴夫出价`100 DOTs`
+Dave bids `100 DOT` for the range 3 - 4.
 
-对于1-2阶段，艾米丽出价`40 DOTs`
+Emily bids `40 DOT` for the range 1 - 2.
 
 让我们根据算法来计算每个投标人的估价。 为此我们将保证金金额乘以投标指定范围内的期间数。
 
@@ -127,7 +127,7 @@ A random number, which is based on the VRF used by Polkadot, is determined at ea
 
 ### 为什么每个人不竞标最大长度？
 
-For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
+For the duration of the slot the `DOT` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOT` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
 
 ### 这种机制如何帮助确保平行链的多样性？
 

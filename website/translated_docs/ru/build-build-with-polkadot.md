@@ -12,20 +12,19 @@ Polkadot - это протокол блокчейна с двумя целями
 
 ## Итак, на какой стадии разработки мы сейчас?
 
-- Релиз Polkadot: **Середина 2020**
-- Канареечный релиз: **Kusama**
-- Текущая тестовая сеть: **Westend**
+- Mainnet: **Polkadot**
+- Canary network: **Kusama**
+- Current major testnets: **Westend** (Polkadot clone) and **Rococo** (parachains)
 - Substrate: **2.0.0**
-- Cumulus: **в разработке** ([Доступно демо](https://github.com/paritytech/cumulus))
 - ink!: **In development** ([Documentation](https://substrate.dev/docs/en/knowledgebase/smart-contracts))
 
 ## Что Вам нужно знать?
 
-В настоящее время Polkadot находится на стадии релиза v0.7 с тестовой сетью Westend и имеющую рыночную ценность канареечной сетью Kusama. Polkadot разрабатывается на [различных языках программирования](learn-implementations) от Rust до JavaScript. В настоящее время главная разработка  ведется на Rust и построена на фреймворке Substrate. Substrate - это библиотека, которая позволяет разработчикам с легкостью разрабатывать целые блокчейн приложения, объединяя сетевой протокол, консенсус и Wasm интерпретатор. Cumulus, являющийся расширением Substrate, позволит любому блокчейну на базе Substrate подключиться к Polkadot и стать парачейном. В настоящее время Substrate приближается к своему официальному релизу 2.0.0, в котором улучшен API.
+Polkadot mainnet has been released. There are also two major testnets - **Westend**, which aims to run similarly to the current Polkadot mainnet, and **Rococo**, which is used specifically for testing parachains. Additionally, there is a value-bearing canary network called Kusama. Polkadot is being built with [implementations in various programming languages](learn-implementations) ranging from Rust to JavaScript. Currently the leading implementation is built in Rust and built on the Substrate framework. Substrate is a library that allows developers to develop entire blockchain applications with ease by bundling together a networking protocol, consensus, and Wasm interpreter. Cumulus, an extension to Substrate, allows any Substrate built chain to connect to Polkadot and become a parachain. Substrate is currently on its 2.0.0 tagged release that solidified its API.
 
 Polkadot изначально не поддерживает смарт-контракты, однако будут парачейны которые будут их поддерживать. Цепочки Substrate могут включать в себя функциональность смарт-контракта с помощью [Контрактов](https://github.com/paritytech/substrate/tree/master/frame/contracts) платформа для контрактов Wasm или [EVM](https://github.com/paritytech/substrate/tree/master/frame/evm) палеет во FRAME. Платформы для смарт-контрактов позволяют цепочкам использовать скомпилированные в Wasm смарт-контракты, которые могут не иметь привязки к конкретным пользователям и с конкретными правилами, зависящими от цепи. Для облегчения разработки Wasm смарт-контракты, Parity также разрабатывает [ink!](https://github.com/paritytech/ink), язык на Rust для написания смарт-контрактов.
 
-Планируется, что запуск Polkadot начнется в середине 2020 года, в зависимости от аудитов безопасности и внешних факторов что вне контроля команды. С появлением и стабилизацией инструментов, нет лучшего времени для запуска, но подождите! Прежде чем приступить к изучению кода, Вам следует подумать о типе децентрализованного приложения, которое Вы хотите создать, и понять различные парадигмы, доступные разработчикам, которые хотят использовать Polkadot.
+Polkadot mainnet has been running since May 2020. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build on Polkadot.
 
 ## В чем различие между разработкой парачейнов, паратридов и смарт-контрактов?
 
