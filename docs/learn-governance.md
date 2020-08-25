@@ -373,6 +373,31 @@ same time. Voting on one does not prevent a user from voting on the other.
 
 ## [Usage of DOT](learn-DOT#DOT-for-governance)
 
+## Frequently Asked Questions
+
+### How can I appeal to the council to enact a change on my behalf?
+
+In some circumstances you may want to appeal to the on-chain council to enact a change on your
+behalf. One example of this circumstance is the case of lost or locked funds when the funds were
+lost due to a human interface error (such as inputting an address for another network). Another
+example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does not
+let you sign a message easily. When these circumstances can be proven beyond a reasonable doubt to
+be an error, the council _may_ consider a governance motion to correct it.
+
+The first step to appeal to the council is to get in contact with the councillors. There is no
+singular place where you are guaranteed to grab every councillor's ear with your message. However,
+there are a handful of good places to start where you can get the attention of some of them. The
+[Polkadot Direction][] matrix room is one such place. After creating an account and joining this
+room, you can post a well thought-through message here that lays down your case and provides
+justification for why you think the council should consider enacting a change to the protocol on
+your behalf.
+
+At some point you will likely need a place for a longer form discussion. For this, making a post on
+[Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
+you present all the evidence for your circumstance and state clearly what kind of change you would
+suggest to the councillors to enact. Remember - the councillors do not need to make the change, it
+is your responsibility to make a strong case for why the change should be made.
+
 ## Resources
 
 - [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
@@ -383,3 +408,6 @@ same time. Voting on one does not prevent a user from voting on the other.
   explaining how governance works in Polkadot and Kusama.
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - An explanation of
   how governance works in Polkadot and Kusama, with Bill Laboon.
+
+[polkadot direction]: https://matrix.to/#/!OwgojQyBzTlUQGGLhq:matrix.parity.io
+[polkassembly]: https://polkadot.polkassembly.io/
