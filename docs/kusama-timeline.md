@@ -8,7 +8,7 @@ Kusama network started as a Proof-of-Authority network and was transitioned to P
 October 2019 at approximately 18:43 Zurich time (CET). The first successful validator set rotation
 took place at 22:45 CET.
 
-Currently, Kusama is a healthy Proof-of-Stake network with over 150 validators and over a million
+Currently, Kusama is a healthy Proof-of-Stake network with over 500 validators and over two million
 blocks produced. If you are curious about the history of the Kusama network, you will find more
 information in the sections below.
 
