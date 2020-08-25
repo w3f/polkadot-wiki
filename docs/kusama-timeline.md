@@ -9,7 +9,8 @@ October 2019 at approximately 18:43 Zurich time (CET). The first successful vali
 took place at 22:45 CET.
 
 Currently, Kusama is a healthy Proof-of-Stake network with over 150 validators and over a million
-blocks produced. If you are curious about the history of the Kusama network, please read below
+blocks produced. If you are curious about the history of the Kusama network, you will find more
+information in the sections below.
 
 ## Rollout plan
 
