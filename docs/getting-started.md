@@ -76,7 +76,7 @@ trust-free message passing that opens up true interoperability.
 ## Why should you use Polkadot?
 
 Whether you're a blockchain developer or if you're interested in taking part of Polkadot's
-community, Polkadot offers a platform for everyone. This Wiki offers a place for Builders and
+community, Polkadot offers a platform for everyone. The Polkadot Wiki offers a place for builders and
 maintainers to utilize tools and for brand-new learners to dive into educational material.
 
 ## Getting Started
