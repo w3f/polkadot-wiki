@@ -137,7 +137,7 @@ The Rust implementation of the specification was built and primarily maintained 
 
 Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol that is based on libp2p (specifically the Rust libp2p library). However, Substrate uses a mix of standard libp2p protocols and protocols that are homegrown and not official libp2p standards. Of the standards protocols, those which are shared with other implementations of libp2p such as IPFS, are connection-checking (ping), asking for information on a peer (identity), and Kademlia random walks (kad).
 
-Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a request-response for getting information on blocks (sync), a light client protocol, a notification protocol for transactions, and block announcement. For detailed information on how Substrate uses libp2p and the standard and custom protocols, please see the [networking documentation](https://substrate.dev/rustdocs/v2.0.0-rc5/sc_network/index.html).
+Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a request-response for getting information on blocks (sync), a light client protocol, a notification protocol for transactions, and block announcement. For detailed information on how Substrate uses libp2p and the standard and custom protocols, please see the [networking documentation](https://substrate.dev/rustdocs/v2.0.0-rc6/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 
