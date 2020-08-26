@@ -15,6 +15,7 @@ jobs:
 
       - name: Clone and run the site
         run: |
+          apt-get install nc
           yarn
           yarn polkadot:start &
           while ! nc -z localhost 3000; do
