@@ -244,8 +244,7 @@ multi-sig accounts). For a full explanation, please see the
 On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter
 the threshold and add signatories. The threshold must be less than or equal to the number of
 signatories. The threshold indicates how many members must be in agreement for an extrinsic
-submission to be successful. Click `Create` when done. We'll use the accounts Alice, Bob, and
-Charlie here.
+submission to be successful. Click `Create` when done.
 
 ![Multi-sig account creation](/img/accounts/create-multisig.png)
 
