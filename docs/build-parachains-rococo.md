@@ -4,6 +4,8 @@ title: Building Parachains on Rococo
 sidebar_label: Building Parachains on Rococo
 ---
 
+[Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-chain Message Passing) in order to send transfers and messages between parachains. 
+
 ## Setting the Environment
 
 To connect to the Rococo testnet, we need to prepare the environment. This command will install
