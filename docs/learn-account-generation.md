@@ -189,12 +189,15 @@ your situation.
 
 ### Go to Polkadot Apps
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the Accounts tab. It is
-located in the navigation bar on the top of your screen.
+Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the
+Accounts tab. It is located in the navigation bar on the top of your screen.
 
 ![pjs-01](assets/accounts/polkadot_js_01.png)
 
-> Note: For these photos, I am currently connected to the Polkadot network. To create an account on a different network, you'll need to click on the network selection in the top left corner of the navigation menu. From there, you can select from a list of live, testing, and your own network to choose from. Do remember to hit the "Switch" button when you want to switch your network.
+> Note: For these photos, I am currently connected to the Polkadot network. To create an account on
+> a different network, you'll need to click on the network selection in the top left corner of the
+> navigation menu. From there, you can select from a list of live, testing, and your own network to
+> choose from. Do remember to hit the "Switch" button when you want to switch your network.
 
 ### Start Account Generation
 
