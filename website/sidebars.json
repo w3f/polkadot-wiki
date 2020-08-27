@@ -86,6 +86,7 @@
           "build-pdk",
           "learn-implementers-guide",
           "build-cumulus",
+          "build-parachains-rococo",
           "build-smart-contracts",
           "build-oracle",
           "build-wallets"
