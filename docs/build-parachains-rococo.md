@@ -208,7 +208,8 @@ Next, inside the same terminal, you will need to run the collator node.
 ```
 
 > Tip: to check what your validator nodes are doing on the network so far, you can look for:
-`✍️ Starting parachain attestation session (parent: 0xe482…3e12) with active duty LocalDuty { validation: Relay, index: 0 ` in your terminal. In this case, this validator node is working on the Relay Chain.
+> `✍️ Starting parachain attestation session (parent: 0xe482…3e12) with active duty LocalDuty { validation: Relay, index: 0 `
+> in your terminal. In this case, this validator node is working on the Relay Chain.
 
 Note that for `--port` and `--ws-port` you need to set to different values than your validator
 nodes. Also take note that for creating more parachains, you'd need to change the value of the
@@ -339,18 +340,20 @@ For reference, the page should look like this after you've added in the code:
 
 ## Launching another Parachain Node
 
-To launch another parachain node, you may notice that it is similar to launching our first parachain yet with subtle differences:
+To launch another parachain node, you may notice that it is similar to launching our first parachain
+yet with subtle differences:
 
 ```
 ./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other relay chain collators>
 ```
 
 > Note here that when launching another parachain node in a separate terminal, you'll need to change
-> the `<Parachain id>` to a different id than your first parachain. The chain spec can lead
-> to the same file as your other colllator, or you can generate a new wasm and point it to there.
+> the `<Parachain id>` to a different id than your first parachain. The chain spec can lead to the
+> same file as your other colllator, or you can generate a new wasm and point it to there.
 
-From here, you will need to go thru the [parachain registration steps](build-parachains-rococo#registering-the-parachain-on-polkadot-js-ui) again in order to see and interact with your new
-parachain node on the network.
+From here, you will need to go thru the
+[parachain registration steps](build-parachains-rococo#registering-the-parachain-on-polkadot-js-ui)
+again in order to see and interact with your new parachain node on the network.
 
 ![rococo two parachains](assets/rococo/rococo-two-parachains.png)
 
@@ -365,11 +368,13 @@ indicating a successful transfer.
 ### Downward Transfers
 
 Downward transfers are when an account on the Relay chain sends a transfer to their own account on a
-different parachain. This type of transfer uses a depository and mint model, meaning that when the DOT leave the senders account on the Relay chain and are transferred into an account on a parachain, the parachain mints a corresponding amount of tokens in the specified amount on the parachain.
+different parachain. This type of transfer uses a depository and mint model, meaning that when the
+DOT leave the senders account on the Relay chain and are transferred into an account on a parachain,
+the parachain mints a corresponding amount of tokens in the specified amount on the parachain.
 
-For example, we can send tokens from Alice's account on the Relay Chain to her
-own account on parachain 200. To do so, we will need to head to the `Network` > `Parachains` tab and
-click on the `Transfer to chain` button.
+For example, we can send tokens from Alice's account on the Relay Chain to her own account on
+parachain 200. To do so, we will need to head to the `Network` > `Parachains` tab and click on the
+`Transfer to chain` button.
 
 ![rococo downward transfer](assets/rococo/rococo-downward-transfer.png)
 
@@ -393,9 +398,13 @@ another parachain.
 This type of transfer is only possible with at least two different registered parachains. In true
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
-being. How lateral transfers work is thru the depository model, which means in order to transfer tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 in a depository on chain 300.
+being. How lateral transfers work is thru the depository model, which means in order to transfer
+tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 in a depository
+on chain 300.
 
-Before we can actually send funds from one parachain to another, we must ensure that the chain 's account on the receiptent chain has some funds in it. In this example, Alice will be sending some funds from her account on parachain 200 to her account on parachain 300.
+Before we can actually send funds from one parachain to another, we must ensure that the chain 's
+account on the receiptent chain has some funds in it. In this example, Alice will be sending some
+funds from her account on parachain 200 to her account on parachain 300.
 
 We will need to grab that parachains account address, from our parachain 300's terminal:
 
@@ -403,10 +412,11 @@ We will need to grab that parachains account address, from our parachain 300's t
 2020-08-26 14:46:34 Parachain Account: 5Ec4AhNv5ArwGxtngtW8qcVgzpCAu8nokvnh6vhtvvFkJtpq
 ```
 
-Then from the Alice's account on the Relay chain, she is able to send some amount to parachain 200's depository.
+Then from the Alice's account on the Relay chain, she is able to send some amount to parachain 200's
+depository.
 
 ![rococo lateral transfer](assets/rococo/rococo-lateral-transfer.png)
 
-From there, Alice is able to send from her account on parachain 200 to her account on parachain 300. 
+From there, Alice is able to send from her account on parachain 200 to her account on parachain 300.
 
 ![rococo lateral transfer part 2](assets/rococo/rococo-lateral-transfer2.png)
