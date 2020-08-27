@@ -35,6 +35,7 @@ application.
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                   |
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
 | [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                     |
+| [Trust Wallet](https://trustwallet.com/)                           | Live              | Trust Wallet| IOS and Android                     |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
