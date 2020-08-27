@@ -21,7 +21,7 @@ cd polkadot
 git checkout fd4b176
 ```
 
-Now it's time to build the relay chain node. Note that this command could take some time to run on
+Now it's time to build the Relay chain node. Note that this command could take some time to run on
 your machine.
 
 ```
@@ -49,20 +49,20 @@ cargo build --release
 ## Defining the Chain Spec
 
 Once you've cloned the Polkadot repo and the Parachain Template, the next step is to select and
-download a chain spec. A chain specification is needed for your Relay Chain because it contains
+download a chain spec. A chain specification is needed for your Relay chain because it contains
 information such as the genesis block, the chain type, and more. Depending on the number of
 validators you have, you can choose one from the three files below.
 
 - [rococo-local.json:](https://substrate.dev/cumulus-workshop/specs/rococo-local.json) This is a
-  two-validator relay chain with Alice and Bob as authorities.
+  two-validator Relay chain with Alice and Bob as authorities.
 - [rococo-3.json:](https://substrate.dev/cumulus-workshop/specs/rococo-3.json) A three-validator
-  relay chain with Alice, Bob, and Charlie as the third validator.
+  Relay chain with Alice, Bob, and Charlie as the third validator.
 - [rococo-4.json:](https://substrate.dev/cumulus-workshop/specs/rococo-4.json) A four-validator
-  relay chain with Dave as the fourth validator.
+  Relay chain with Dave as the fourth validator.
 
 ### Creating your own Chain Spec
 
-If you aren't interested in downloading pre-made chain specs for the Relay Chain, there is also the
+If you aren't interested in downloading pre-made chain specs for the Relay chain, there is also the
 option to build one yourself based on an existing specification. To do so, begin by running this
 command:
 
@@ -129,8 +129,8 @@ Next, we will need to generate the final raw spec file:
 
 ## Starting the Relay Chain
 
-Now it's time to start up the relay chain. Keep in mind this is separate from parachains, we will
-need to have the relay chain running in order to support parachains. To run the Polkadot executable,
+Now it's time to start up the Relay chain. Keep in mind this is separate from parachains, we will
+need to have the Relay chain running in order to support parachains. To run the Polkadot executable,
 we will need to go back to the `polkadot` directory and run the following command:
 
 ```
@@ -193,7 +193,7 @@ the network is connected, the main page should look like this:
 
 ## Starting the Parachain with the Relay Chain
 
-In order for the parachain to launch properly, we first need to register it with the relay chain. We
+In order for the parachain to launch properly, we first need to register it with the Relay chain. We
 will begin by running this command to generate a wasm file inside your substrate parachain template
 folder:
 
@@ -209,7 +209,7 @@ Next, inside the same terminal, you will need to run the collator node.
 
 > Tip: to check what your validator nodes are doing on the network so far, you can look for:
 > `✍️ Starting parachain attestation session (parent: 0xe482…3e12) with active duty LocalDuty { validation: Relay, index: 0 `
-> in your terminal. In this case, this validator node is working on the Relay Chain.
+> in your terminal. In this case, this validator node is working on the Relay chain.
 
 Note that for `--port` and `--ws-port` you need to set to different values than your validator
 nodes. Also take note that for creating more parachains, you'd need to change the value of the
@@ -308,7 +308,7 @@ If you return to your terminal where the collator is running, you should see the
 2020-08-26 10:21:48 ✨ [Parachain] Imported #3 (0x270a…f003)
 ```
 
-> This now shows that the Relay Chain is starting to import blocks and that the collator is
+> This now shows that the Relay chain is starting to import blocks and that the collator is
 > collating!
 
 ## Interacting with your Parachain
@@ -344,7 +344,7 @@ To launch another parachain node, you may notice that it is similar to launching
 yet with subtle differences:
 
 ```
-./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other relay chain collators>
+./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other Relay chain collators>
 ```
 
 > Note here that when launching another parachain node in a separate terminal, you'll need to change
@@ -372,7 +372,7 @@ different parachain. This type of transfer uses a depository and mint model, mea
 DOT leave the senders account on the Relay chain and are transferred into an account on a parachain,
 the parachain mints a corresponding amount of tokens in the specified amount on the parachain.
 
-For example, we can send tokens from Alice's account on the Relay Chain to her own account on
+For example, we can send tokens from Alice's account on the Relay chain to her own account on
 parachain 200. To do so, we will need to head to the `Network` > `Parachains` tab and click on the
 `Transfer to chain` button.
 
@@ -390,14 +390,14 @@ button.
 
 ![rococo upward transfer](assets/rococo/rococo-upward-transfer.png)
 
-Note here that the toggle should be set to off, that way the funds go to the Relay Chain and not
+Note here that the toggle should be set to off, that way the funds go to the Relay chain and not
 another parachain.
 
 ### Lateral Transfers
 
 This type of transfer is only possible with at least two different registered parachains. In true
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
-However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
+However, this is not yet implemented, so the Relay chain is helping us deliver messages for the time
 being. How lateral transfers work is thru the depository model, which means in order to transfer
 tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 in a depository
 on chain 300.
