@@ -22,8 +22,6 @@ being slashed if the validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
-> Until transfers are enabled, you may need to use the same account for stash and controller.
-
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
