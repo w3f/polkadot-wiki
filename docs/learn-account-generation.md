@@ -179,7 +179,10 @@ For detailed build and usage instructions of subkey, please see
 ## Polkadot.js
 
 > Please note! If you use Polkadot.js to create your account and clear your cookies in your browser,
-> your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you store your seed phrase in a safe place, or download the account's JSON file if using the PolkadotJS browser extension. Learn more about account backup and restoration [here](learn-account-restore).
+> your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you
+> store your seed phrase in a safe place, or download the account's JSON file if using the
+> PolkadotJS browser extension. Learn more about account backup and restoration
+> [here](learn-account-restore).
 
 Using the Polkadot.js user interface without the plugin is not recommended. It is the least secure
 way of generating an account. It should only be used if all of the other methods are not feasible in
@@ -192,10 +195,10 @@ Accounts tab. It is located in the navigation bar on the top of your screen.
 
 ![pjs-01](assets/accounts/polkadot_js_01.png)
 
-> Note: For these screenshots, I am currently connected to the Polkadot network. To create an account on
-> a different network, you'll need to click on the network selection in the top left corner of the
-> navigation menu. From there, you can select from a list of live, testing, and your own network to
-> choose from. Do remember to hit the "Switch" button when you want to switch your network.
+> Note: For these screenshots, I am currently connected to the Polkadot network. To create an
+> account on a different network, you'll need to click on the network selection in the top left
+> corner of the navigation menu. A pop-up sidebar will appear listing live, testing, and custom node
+> to choose from. Do remember to hit the "Switch" button when you want to switch your network.
 
 ### Start Account Generation
 
