@@ -3,7 +3,7 @@ version: 2
 jobs:
   check-format:
     docker:
-      - image: circleci/node:10.15.2   
+      - image: circleci/node:10.15.2
     steps:
       - checkout
       - run:
@@ -44,7 +44,7 @@ jobs:
   deploy-website:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.15.2
+      - image: circleci/node:10.17.0
 
     steps:
       - checkout
@@ -58,8 +58,8 @@ jobs:
 
   deploy-kusama:
     docker:
-      - image: circleci/node:10.15.2
-    
+      - image: circleci/node:10.17.0
+
     steps:
       - checkout
       - run:
