@@ -67,4 +67,13 @@ build
 build-script*
 **/mirror*.md
 .DS_Store
-kusama-guide/translated-docs/
+kusama-guide/translated_docs/
+website/translated-docs/
+website/i18n/*
+kusama-guide/i18n/*
+
+# Ignore because we don't need a 10MB file in VCS
+polkadot-wiki.pdf
+kusama-wiki.pdf
+polkadot-wiki.zip
+kusama-wiki.zip
