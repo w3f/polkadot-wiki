@@ -36,12 +36,12 @@ application.
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
 | [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                     |
 | [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit      | iOS and Android                     |
+| [AirGap](https://airgap.it/)                                       | Live          | AirGap      | IOS, Android, MacOS, Windows and Linux  |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension                   |
 | [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension                   |
-| [AirGap](https://airgap.it/)                                       | Building          | AirGap      | IOS and Android                     |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                          |
