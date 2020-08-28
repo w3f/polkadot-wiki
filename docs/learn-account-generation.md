@@ -178,22 +178,33 @@ For detailed build and usage instructions of subkey, please see
 
 ## Polkadot.js
 
-Using the polkadot.js user interface without the plugin is not recommended. It is the least secure
+> Please note! If you use Polkadot.js to create your account and clear your cookies in your browser,
+> your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you
+> store your seed phrase in a safe place, or download the account's JSON file if using the
+> PolkadotJS browser extension. Learn more about account backup and restoration
+> [here](learn-account-restore).
+
+Using the Polkadot.js user interface without the plugin is not recommended. It is the least secure
 way of generating an account. It should only be used if all of the other methods are not feasible in
 your situation.
 
-![pjs-01](assets/accounts/polkadot_js_01.jpg)
-
 ### Go to Polkadot Apps
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on the "Accounts" tab. It is
-located in the sidebar on the left side of your screen.
+Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the
+Accounts tab. It is located in the navigation bar on the top of your screen.
+
+![pjs-01](assets/accounts/polkadot_js_01.png)
+
+> Note: For these screenshots, I am currently connected to the Polkadot network. To create an
+> account on a different network, you'll need to click on the network selection in the top left
+> corner of the navigation menu. A pop-up sidebar will appear listing live, testing, and custom node
+> to choose from. Do remember to hit the "Switch" button when you want to switch your network.
 
 ### Start Account Generation
 
 Click on the "Add Account" button.
 
-![pjs-02](assets/accounts/polkadot_js_02.jpg)
+![pjs-02](assets/accounts/polkadot_js_02.png)
 
 You should see a pop-up that looks like the one here. The required text fields to complete are
 highlighted in pink.
@@ -223,7 +234,7 @@ yourself, etc.
 You can use this backup file to restore your account. This backup file is not readable unless it is
 decrypted with the password.
 
-![pjs-05](assets/accounts/polkadot_js_05.jpg)
+![pjs-05](assets/accounts/polkadot_js_05.png)
 
 ### Multi-signature Accounts
 
@@ -234,8 +245,7 @@ multi-sig accounts). For a full explanation, please see the
 On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter
 the threshold and add signatories. The threshold must be less than or equal to the number of
 signatories. The threshold indicates how many members must be in agreement for an extrinsic
-submission to be successful. Click `Create` when done. We'll use the accounts Alice, Bob, and
-Charlie here.
+submission to be successful. Click `Create` when done.
 
 ![Multi-sig account creation](/img/accounts/create-multisig.png)
 
