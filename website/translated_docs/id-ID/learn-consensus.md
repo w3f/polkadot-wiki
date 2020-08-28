@@ -108,19 +108,8 @@ The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadge
 
 _Coming soon!_
 
-<!-- ### Avalanche -->
-
 ## Sumber daya
 
 - [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - The academic description of the GRANDPA finality gadget. Contains formal proofs of the algorithm.
 - [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference implementation and the accompanying [Substrate pallet](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs).
 - [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) - An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama, with Bill Laboon.
-
-<!-- ## Consensus in Polkadot
-
-### Block Production
-
-### Finality Gadget
-
-### NPoS -->
-
