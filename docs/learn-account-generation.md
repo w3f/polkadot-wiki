@@ -179,9 +179,7 @@ For detailed build and usage instructions of subkey, please see
 ## Polkadot.js
 
 > Please note! If you use Polkadot.js to create your account and clear your cookies in your browser,
-> your account will be lost forever if you do not [backup your account](learn-account-restore). If
-> you create your account with Polkadot.js it is important to backup your account as it is with any
-> other method you choose to generate your account with.
+> your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you store your seed phrase in a safe place, or download the account's JSON file if using the PolkadotJS browser extension. Learn more about account backup and restoration [here](learn-account-restore).
 
 Using the Polkadot.js user interface without the plugin is not recommended. It is the least secure
 way of generating an account. It should only be used if all of the other methods are not feasible in
