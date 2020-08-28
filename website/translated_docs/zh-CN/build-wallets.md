@@ -25,6 +25,7 @@ If you are unable to load a JSON file in a wallet, try loading it in the Polkado
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                   |
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
 | [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                     |
+| [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit      | iOS and Android                     |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
@@ -34,5 +35,4 @@ If you are unable to load a JSON file in a wallet, try loading it in the Polkado
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                          |
-| [Ownbit](https://ownbit.io/)                                       | Building          | Ownbit      | IOS and Android                     |
 | [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu   | IOS and Android                     |

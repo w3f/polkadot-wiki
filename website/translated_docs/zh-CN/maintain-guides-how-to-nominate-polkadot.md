@@ -12,8 +12,6 @@ sidebar_label: 提名人指南
 
 ## Setting up Stash and Controller keys
 
-> Until transfers are enabled, you may need to use the same account for stash and controller.
-
 建议提名人设置单独的 stash 帐户和 controller 帐户。 Wiki 的[密钥][]部分详细说明了为此生成不同帐户的理由。
 
 您可以通过 [帐户生成][]页上详细介绍的任何推荐方法来生成 stash 和 controller 帐户。

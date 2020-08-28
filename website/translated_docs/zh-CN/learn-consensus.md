@@ -108,19 +108,8 @@ The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadge
 
 _Coming soon!_
 
-<!-- ### Avalanche -->
-
 ## 资源
 
 - [ GRANDPA 论文](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)- GRANDPA 最终确定性工具的描述。 包含算法证明。
 - [Finality Grandpa - Rust 实现](https://github.com/paritytech/finality-grandpa) - 及[ Substrate Runtime 模块](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs)。
 - [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) - An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama, with Bill Laboon.
-
-<!-- ## Consensus in Polkadot
-
-### Block Production
-
-### Finality Gadget
-
-### NPoS -->
-
