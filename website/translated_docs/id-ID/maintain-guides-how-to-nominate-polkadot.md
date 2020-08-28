@@ -12,8 +12,6 @@ While the [validators][] are active participants in the network that take part i
 
 ## Setting up Stash and Controller keys
 
-> Until transfers are enabled, you may need to use the same account for stash and controller.
-
 Nominators are recommended to set up separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of the Wiki.
 
 You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation][] page.
