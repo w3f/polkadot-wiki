@@ -25,7 +25,7 @@ cd polkadot
 git checkout fd4b176
 ```
 
-Now it's time to build the Relay chain node. Note that this command could take some time to run on
+Now it's time to build the Relay Chain node. Note that this command could take some time to run on
 your machine.
 
 ```
@@ -34,8 +34,8 @@ cargo build --release
 
 ## Building the Parachain Template
 
-Next we will be building the Parachain Template inside the `polkadot` repo, which will be used to
-launch parachains. First, we will clone the Parachain Template and checkout to the `2710c42` commit.
+Next we will be building the parachain template inside the `polkadot` repo, which will be used to
+launch parachains. First, we will clone the parachain template and checkout to the `2710c42` commit.
 
 ```
 git clone https://github.com/substrate-developer-hub/substrate-parachain-template.git
@@ -43,7 +43,7 @@ cd substrate-parachain-template
 git checkout 2710c42
 ```
 
-Now we will begin building the Parachain Template in our terminal. Again, this can take some time to
+Now we will begin building the parachain template in our terminal. Again, this can take some time to
 run on your computer.
 
 ```
@@ -52,21 +52,21 @@ cargo build --release
 
 ## Defining the Chain Spec
 
-Once you've cloned the Polkadot repo and the Parachain Template, the next step is to select and
-download a chain spec. A chain specification is needed for your Relay chain because it contains
+Once you've cloned the Polkadot repo and the parachain template, the next step is to select and
+download a chain spec. A chain specification is needed for your Relay Chain because it contains
 information such as the genesis block, the chain type, and more. Depending on the number of
 validators you have, you can choose one from the three files below.
 
 - [rococo-local.json:](https://substrate.dev/cumulus-workshop/specs/rococo-local.json) This is a
-  two-validator Relay chain with Alice and Bob as authorities.
+  two-validator Relay Chain with Alice and Bob as authorities.
 - [rococo-3.json:](https://substrate.dev/cumulus-workshop/specs/rococo-3.json) A three-validator
-  Relay chain with Alice, Bob, and Charlie as the third validator.
+  Relay Chain with Alice, Bob, and Charlie as the third validator.
 - [rococo-4.json:](https://substrate.dev/cumulus-workshop/specs/rococo-4.json) A four-validator
-  Relay chain with Dave as the fourth validator.
+  Relay Chain with Dave as the fourth validator.
 
 ### Creating your own Chain Spec
 
-If you aren't interested in downloading pre-made chain specs for the Relay chain, there is also the
+If you aren't interested in downloading pre-made chain specs for the Relay Chain, there is also the
 option to build one yourself based on an existing specification. To do so, begin by running this
 command:
 
@@ -112,7 +112,7 @@ to the file. So you will need to modify the following:
 > subkey.
 
 1. Add in your authority's `AccountID` and `ValidatorID`.
-2. Add in the grandpa session key with your own.
+2. Add in the GRANDPA session key with your own.
 3. Add in the other session keys.
 4. Remove these two lines (by removing them, it avoids parsing errors and warnings in your
    terminal):
@@ -133,8 +133,8 @@ Next, we will need to generate the final raw spec file:
 
 ## Starting the Relay Chain
 
-Now it's time to start up the Relay chain. Keep in mind this is separate from parachains, we will
-need to have the Relay chain running in order to support parachains. To run the Polkadot executable,
+Now it's time to start up the Relay Chain. Keep in mind this is separate from parachains, we will
+need to have the Relay Chain running in order to support parachains. To run the Polkadot executable,
 we will need to go back to the `polkadot` directory and run the following command:
 
 ```
@@ -197,8 +197,8 @@ the network is connected, the main page should look like this:
 
 ## Starting the Parachain with the Relay Chain
 
-In order for the parachain to launch properly, we first need to register it with the Relay chain. We
-will begin by running this command to generate a wasm file inside your substrate parachain template
+In order for the parachain to launch properly, we first need to register it with the Relay Chain. We
+will begin by running this command to generate a WASM file inside your substrate parachain template
 folder:
 
 ```
@@ -213,7 +213,7 @@ Next, inside the same terminal, you will need to run the collator node.
 
 > Tip: to check what your validator nodes are doing on the network so far, you can look for:
 > `✍️ Starting parachain attestation session (parent: 0xe482…3e12) with active duty LocalDuty { validation: Relay, index: 0 `
-> in your terminal. In this case, this validator node is working on the Relay chain.
+> in your terminal. In this case, this validator node is working on the Relay Chain.
 
 Note that for `--port` and `--ws-port` you need to set to different values than your validator
 nodes. Also take note that for creating more parachains, you'd need to change the value of the
@@ -293,7 +293,7 @@ head underneath `Developer` and click on the `Sudo` button.
 We will need the genesis state from before that we copied and placed in the `initial_head_data`
 section. On this page, you will see other details like the `id`, `ParaInfo`, and `code`. In the `id`
 field, we will want to place the ID of the parachain, in this case it would be `200`. The `ParaInfo`
-should be set to always, and the `code` field should contain the `wasm` file that was created while
+should be set to always, and the `code` field should contain the WASM file that was created while
 launching the parachain (for this example, it'd be `para-wasm`).
 
 ![rococo fields](assets/rococo/rococo-fill-out-fields.png)
@@ -312,7 +312,7 @@ If you return to your terminal where the collator is running, you should see the
 2020-08-26 10:21:48 ✨ [Parachain] Imported #3 (0x270a…f003)
 ```
 
-> This now shows that the Relay chain is starting to import blocks and that the collator is
+> This now shows that the Relay Chain is starting to import blocks and that the collator is
 > collating!
 
 ## Interacting with your Parachain
@@ -324,8 +324,8 @@ your `--ws-port` value, the custom endpoint should match that.
 ![rococo parachain connected](assets/rococo/rococo-change-network.png)
 
 At this point, you can make transfers between accounts on your parachain. However, to produce a
-successful transfer, you will need to enter the following `json` snippet inside `Settings` >
-`Developer` and hit the `Save` button.
+successful transfer, you will need to enter the following `json` snippet inside "Settings" >
+"Developer" and hit the "Save" button.
 
 ```
 {
@@ -348,12 +348,12 @@ To launch another parachain node, you may notice that it is similar to launching
 yet with subtle differences:
 
 ```
-./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other Relay chain collators>
+./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other Relay Chain collators>
 ```
 
 > Note here that when launching another parachain node in a separate terminal, you'll need to change
 > the `<Parachain id>` to a different id than your first parachain. The chain spec can lead to the
-> same file as your other colllator, or you can generate a new wasm and point it to there.
+> same file as your other colllator, or you can generate a new WASM and point it to there.
 
 From here, you will need to go thru the
 [parachain registration steps](build-parachains-rococo#registering-the-parachain-on-polkadot-js-ui)
@@ -363,7 +363,7 @@ again in order to see and interact with your new parachain node on the network.
 
 ## How to make Cross Chain transfers
 
-To send a transfer between parachains, let's start with heading over to `Accounts` > `Transfer`.
+To send a transfer between parachains, let's start with heading over to "Accounts" > "Transfer".
 From here, you'll need to select the parachain node that you have. Next, enter in the amount that
 you'd like to send to another parachain. Be sure to select the correct parachain you'd like to send
 an amount to. Once you've hit the Submit button, you should see a green notification button,
@@ -371,14 +371,14 @@ indicating a successful transfer.
 
 ### Downward Transfers
 
-Downward transfers are when an account on the Relay chain sends a transfer to their own account on a
+Downward transfers are when an account on the Relay Chain sends a transfer to their own account on a
 different parachain. This type of transfer uses a depository and mint model, meaning that when the
-DOT leave the senders account on the Relay chain and are transferred into an account on a parachain,
+DOT leave the senders account on the Relay Chain and are transferred into an account on a parachain,
 the parachain mints a corresponding amount of tokens in the specified amount on the parachain.
 
-For example, we can send tokens from Alice's account on the Relay chain to her own account on
-parachain 200. To do so, we will need to head to the `Network` > `Parachains` tab and click on the
-`Transfer to chain` button.
+For example, we can send tokens from Alice's account on the Relay Chain to her own account on
+parachain 200. To do so, we will need to head to the "Network" > "Parachains" tab and click on the
+"Transfer to chain" button.
 
 ![rococo downward transfer](assets/rococo/rococo-downward-transfer.png)
 
@@ -388,20 +388,20 @@ and add any comments or a memo for the transfer.
 ### Upward Transfers
 
 Upward transfers are when you are on a parachain and want to send a transfer to another account on
-the Relay chain. To proceed with this kind of transfer, we need to be connected to the parachain
-node on the network and be on the `Network` > `Parachains` tab and click on the `Transfer to chain`
+the Relay Chain. To proceed with this kind of transfer, we need to be connected to the parachain
+node on the network and be on the "Network" > "Parachains" tab and click on the "Transfer to chain"
 button.
 
 ![rococo upward transfer](assets/rococo/rococo-upward-transfer.png)
 
-Note here that the toggle should be set to off, that way the funds go to the Relay chain and not
+Note here that the toggle should be set to off, that way the funds go to the Relay Chain and not
 another parachain.
 
 ### Lateral Transfers
 
 This type of transfer is only possible with at least two different registered parachains. In true
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
-However, this is not yet implemented, so the Relay chain is helping us deliver messages for the time
+However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
 being. How lateral transfers work is thru the depository model, which means in order to transfer
 tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 in a depository
 on chain 300.
@@ -416,7 +416,7 @@ We will need to grab that parachains account address, from our parachain 300's t
 2020-08-26 14:46:34 Parachain Account: 5Ec4AhNv5ArwGxtngtW8qcVgzpCAu8nokvnh6vhtvvFkJtpq
 ```
 
-Then from the Alice's account on the Relay chain, she is able to send some amount to parachain 200's
+Then from the Alice's account on the Relay Chain, she is able to send some amount to parachain 200's
 depository.
 
 ![rococo lateral transfer](assets/rococo/rococo-lateral-transfer.png)
