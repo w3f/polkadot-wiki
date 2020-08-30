@@ -36,8 +36,9 @@ application.
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
 | [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                     |
 | [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit      | iOS and Android                     |
-| [AirGap](https://airgap.it/)                                       | Live          | AirGap      | IOS, Android, MacOS, Windows and Linux  |
-| [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo        | IOS and Android                     |
+| [AirGap](https://airgap.it/)                                       | Live              | AirGap      | IOS, Android, MacOS, Windows and Linux  |
+| [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo        | IOS and Android                     |
+| [SafePal](https://www.safepal.io/)                                 | Live              | SafePal     | Hardware                            |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension                   |
