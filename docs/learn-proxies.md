@@ -23,14 +23,23 @@ When a proxy account makes a `proxy` transaction, Polkadot filters the desired t
 that the proxy account has the appropriate permission to make that transaction on behalf of the cold
 account.
 
+### Any Proxies
+
 As implied by the name, a proxy type of "Any" allows the proxy account to make any transaction,
 incuding balance transfers. In most cases, this should be avoided as the proxy account is used more
 frequently than the cold account and is therefore less secure. To allow any type of transaction
 except balance transfers (including vested transfers), the "Non-transfer" proxy type will be a
 better fit.
 
+### Governance Proxies
+
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
+
+> Head over to our [Governance page](maintain-guides-democracy#governance-proxies) for more
+> information on governance proxies.
+
+### Staking Proxies
 
 The "Staking" type allows staking-related transactions, but do not confuse a staking proxy with the
 Controller account. Within the Staking pallet, some transactions must come from the Stash, while
@@ -47,6 +56,35 @@ proxy. That is, it generates an address but no corresponding private key. Normal
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+
+## How to set up a Proxy
+
+To set up either a governance, staking, or any proxy, head over to the
+[Polkadot-JS UI](https://polkadot.js.org/apps) and in the navigation tab, click on "Developer" >
+"Extrinsics". Here we will see a page that looks similar to this:
+
+![proxy generation](assets/polkadot_generating_proxy.png)
+
+Now, to add a proxy, we must first click on the selection of pallets, the button will be "submit the
+following extrinsic". Select the "proxy" pallet to load in all the functions that come with it. The
+`addProxy(proxy, proxy_type)` function will need to be selected in order to add in a proxy. The
+chosen proxy account that you set will be the account that has the proxy on it. The selected account
+at the top is the account that will be the user primary account or stash account.
+
+For anonymous proxies, a different function will need to be called, the
+`anonymous(proxy_type, index)`. This will let you customize what kind of anonymous proxy you'd like
+to set up if you choose, as well as the index.
+
+![proxy generation](assets/polkadot_anon_proxy.png)
+
+### Removing Proxies
+
+If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
+this. The `killAnonymous()` function will let you remove an anonymous proxy. Both the
+`removeProxies()` and the `removeProxy()` will remove any other type of proxy but one function will
+remove all proxies made while the other will remove one proxy, respectively.
+
+![remove proxies](assets/polkadot_remove_proxy.png)
 
 ## Putting It All Together
 
