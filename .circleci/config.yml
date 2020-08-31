@@ -3,7 +3,7 @@ version: 2
 jobs:
   check-format:
     docker:
-      - image: circleci/node:10.15.2
+      - image: circleci/node:10.17.0
     steps:
       - checkout
       - add_ssh_keys:
