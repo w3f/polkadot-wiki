@@ -81,7 +81,8 @@ chosen proxy account that you set will be the account that has the proxy on it. 
 at the top is the account that will be the user primary account or stash account.
 
 > Note! If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an
-> empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be created. 
+> empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
+> created.
 
 For anonymous proxies, a different function will need to be called, the
 `anonymous(proxy_type, index)`. This will let you customize what kind of anonymous proxy you'd like
