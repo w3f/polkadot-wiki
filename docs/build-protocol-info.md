@@ -205,12 +205,11 @@ While extrinsics represent information from the outside world, events represent 
 chain. Extrinsics can trigger events. For example, the Staking pallet emits a `Reward` event when
 claiming staking rewards to tell the user how much the account was credited.
 
-When monitoring events, keep in mind that there are various ways to send a balance transfer, such as
-“balances.transferKeepAlive” and a “utility.batch” transaction with a transfer inside of it. It is
-also important to look for "balances.transfer" events that include your deposit addresses. A common
-error that could occur when monitoring events are deposits not being credited because transaction
-names are instead being monitored. In this case, it is recommended to be careful with what you are
-trying to monitor.
+If you want to monitor deposits into an address, keep in mind that several transactions can initiate
+a balance transfer (such as “balances.transferKeepAlive” and a “utility.batch” transaction with a
+transfer inside of it). Only monitoring "balances.transfer" transactions will not be sufficient.
+Make sure that you monitor events for each block for those that contain your addresses of interest.
+Monitor events instead of transaction names to ensure that you can properly credit deposits.
 
 ### Fees
 
