@@ -18,6 +18,7 @@ proxy for the relationship. Polkadot offers:
 - Non-transfer
 - Staking
 - Governance
+- Identity Judgement
 
 When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure
 that the proxy account has the appropriate permission to make that transaction on behalf of the cold
@@ -49,6 +50,12 @@ validators to nominate. The Stash account still needs to make some transactions,
 bonding extra funds or designating a new Controller. A proxy doesn't change the _roles_ of Stash and
 Controller accounts, but does allow the Stash to be accessed even less frequently.
 
+### Identity Judgement Proxies
+
+"Identity Judgement" proxies are in charge of allowing registars to make judgement on an account's
+identity. If you are unfamiliar with judgements and identities on chain, please refer to
+[this page](learn-identity#judgements).
+
 ### Anonymous Proxies
 
 Polkadot includes a function to create an anonymous proxy, an account that can only be accessed via
@@ -56,10 +63,12 @@ proxy. That is, it generates an address but no corresponding private key. Normal
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+This type of proxy is very different from the other regular types of proxies, and belongs in its own
+category.
 
 ## How to set up a Proxy
 
-To set up either a governance, staking, or any proxy, head over to the
+To set up either a governance, staking, identity judgement, or any proxy, head over to the
 [Polkadot-JS UI](https://polkadot.js.org/apps) and in the navigation tab, click on "Developer" >
 "Extrinsics". Here we will see a page that looks similar to this:
 
