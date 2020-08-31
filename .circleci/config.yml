@@ -2,7 +2,6 @@ version: 2
 
 jobs:
   check-format:
-    context: github-bot
     docker:
       - image: circleci/node:10.17.0
     steps:
@@ -79,6 +78,7 @@ workflows:
   build_and_deploy:
     jobs:
       - check-format:
+          context: github-bot
           filters:
             tags:
               only: /.*/
