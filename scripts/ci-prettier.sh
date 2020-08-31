@@ -10,5 +10,7 @@ then
     git remote set-url origin https://github.com/w3f/polkadot-wiki.git
     ssh-add -l
     ls ~/.ssh
+    ssh-add -D
+    ssh-add ~/.ssh/id_rsa_93218110749961b89a5041c875703b1d
     git add -A; git commit -m "Ran prettier"; git push -u origin HEAD;
 fi
