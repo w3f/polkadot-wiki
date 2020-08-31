@@ -186,7 +186,7 @@ To run another validator, you will need the following command in another termina
 > Important note: When you run another validator, change the values for `--ws-port` and `--port`, so
 > that they aren't conflicting with each other. The Rococo `json` file should be kept the same here.
 
-## Connect to Polkadot JS UI
+## Connect to Polkadot-JS Apps
 
 At this point, you are now ready to connect your local node to the Polkadot JS UI. To do so, head
 over to the [user interface](https://polkadot.js.org/apps/) and change the network to `Local Node`.
