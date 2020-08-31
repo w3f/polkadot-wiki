@@ -229,7 +229,7 @@ be in the format:
 ```
 
 This is the genesis state of the parachain and will be used to actually register the parachain in
-the Polkadot JS UI. It is recommended to keep this in a safe place to refer back to.
+the Polkadot-JS Apps. It is recommended to keep this in a safe place to refer back to.
 
 At this point the console log should resemble something like this:
 
