@@ -59,6 +59,14 @@ class Footer extends React.Component {
             >
               Twitter
             </a>
+            <a
+              href="https://matrix.to/#/!HfRYKXBoPmDBCAWUEJ:polkadot.builders"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="homepage-font"
+            >
+              Kusama Watercooler (Element Chat)
+            </a>
           </div>
           {this.props.config.twitterUsername && (
             <div className="social">
