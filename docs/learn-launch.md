@@ -73,5 +73,10 @@ with a single proposal.
 
 ## Polkadot 2.0
 
-With the release of Polkadot 1.0, research for the next version of Polkadot has
-began. Possible areas of research could include nested relay chains where there could be multiple layers of relay chains and support for three tiers of parachains, each working in parallel to one another. However these areas of possible research is subject to change as Polkadot evolves.
+After the release of Polkadot 1.0, research for the next version of Polkadot will begin. However
+these areas of possible research are subject to change as Polkadot evolves. Possible areas of
+research could include:
+
+- Nested or heirarchical Relay Chains, where Relay Chains could be connected through parachains.
+- Support for three tiers of parachains, each working in parallel to one another.
+- A Verifiable Delay Function (VDF) inside the protocol.
