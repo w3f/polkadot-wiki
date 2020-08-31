@@ -217,7 +217,7 @@ Next, inside the same terminal, you will need to run the collator node.
 
 Note that for `--port` and `--ws-port` you need to set to different values than your validator
 nodes. Also take note that for creating more parachains, you'd need to change the value of the
-`--parachain-id`, and it is not required that the parachain id in this case be `200`, it can be
+`--parachain-id`, and it is not required that the parachain ID in this case be `200`, it can be
 whatever id you'd like that to be. The `<Alice port>` should also be replaced with alice's port
 number created.
 
