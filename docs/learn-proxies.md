@@ -86,6 +86,8 @@ be created. The use of an anonymous proxy in multisigs are useful for permisionl
 
 ## How to set up a Proxy
 
+### Using the Polkadot-JS UI
+
 To set up either a governance, staking, identity judgement, or any proxy, head over to the
 [Polkadot-JS UI](https://polkadot.js.org/apps) and in the navigation tab, click on "Developer" >
 "Extrinsics". Here we will see a page that looks similar to this:
@@ -102,11 +104,25 @@ at the top is the account that will be the user primary account or stash account
 > empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
 > created.
 
+### Creating Anonymous Proxies on Polkadot-JS UI
+
 For anonymous proxies, a different function will need to be called, the
 `anonymous(proxy_type, index)`. This will let you customize what kind of anonymous proxy you'd like
 to set up if you choose, as well as the index.
 
 ![proxy generation](assets/polkadot_anon_proxy.png)
+
+### Another way to create Proxies
+
+There is also another other way you can set up a proxy on Polkadot-JS UI. Head over to "Accounts" in
+the navigation and then the "Accounts" button inside. For each of the accounts you have on this
+page, the three dot button will let you create a proxy by using "Add proxy". This will open up a pop
+up onto your screen where you will be able to select the type of proxy for that specific account.
+
+![proxy generation part 2](assets/polkadot_add_another_proxy.png)
+
+> Note! You cannot create an anonymous function from the Accounts page, you must be on the
+> Extrinsics page.
 
 ### Removing Proxies
 
