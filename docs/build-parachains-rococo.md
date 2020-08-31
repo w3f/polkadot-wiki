@@ -75,7 +75,7 @@ command:
 ```
 
 When you create your own chain spec, there are a few considerations to keep in mind. One being that
-Rococo is a Proof of Authority chain, so you will need to add in an authority and its session keys
+Rococo is a Proof-of-Authority chain, so you will need to add in an authority and its session keys
 to the file. So you will need to modify the following:
 
 ```
