@@ -6,6 +6,9 @@ jobs:
       - image: circleci/node:10.15.2
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "93:21:81:10:74:99:61:b8:9a:50:41:c8:75:70:3b:1d"
       - run:
           name: prettier
           command: |
