@@ -205,6 +205,13 @@ While extrinsics represent information from the outside world, events represent 
 chain. Extrinsics can trigger events. For example, the Staking pallet emits a `Reward` event when
 claiming staking rewards to tell the user how much the account was credited.
 
+When monitoring events, keep in mind that there are various ways to send a balance transfer, such as
+“balances.transferKeepAlive” and a “utility.batch” transaction with a transfer inside of it. It is
+also important to look for "balances.transfer" events that include your deposit addresses. A common
+error that could occur when monitoring events are deposits not being credited because transaction
+names are instead being monitored. In this case, it is recommended to be careful with what you are
+trying to monitor.
+
 ### Fees
 
 Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Users can also add a
