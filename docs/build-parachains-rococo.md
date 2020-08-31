@@ -147,7 +147,8 @@ To run your other validators, ensure the commands are run in separate terminals.
 
 At this point, your log console should look like this:
 
-```Parity Polkadot
+```
+Parity Polkadot
 2020-08-24 17:36:37 ✌️  version 0.8.22-fd4b176f-x86_64-macos
 2020-08-24 17:36:37 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
 2020-08-24 17:36:37 📋 Chain specification: Rococo Local Testnet
@@ -233,7 +234,8 @@ the Polkadot-JS Apps. It is recommended to keep this in a safe place to refer ba
 
 At this point the console log should resemble something like this:
 
-```2020-08-25 13:32:11 Parachain Collator Template
+```
+2020-08-25 13:32:11 Parachain Collator Template
 2020-08-25 13:32:11 ✌️  version 0.1.0-2710c42-x86_64-macos
 2020-08-25 13:32:11 ❤️  by Parity Technologies <admin@parity.io>, 2017-2020
 2020-08-25 13:32:11 📋 Chain specification: Local Testnet
