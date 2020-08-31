@@ -8,7 +8,8 @@ sidebar_label: Cumulus
 > initial prototype -- expect a rename when it gets cooler.)
 
 [Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to
-make any Substrate built runtime into a Polkadot compatible parachain.
+make any Substrate built runti
+me into a Polkadot compatible parachain.
 
 ## Components
 
