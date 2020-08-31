@@ -283,7 +283,7 @@ Note a few things about this new output:
 - `Parachain Account: 5Ec4AhPTL6nWnUnw58QzjJvFd3QATwHA3UJnvSD4GVSQ7Gop` is important for cross chain
   transfers.
 
-## Registering the Parachain on Polkadot JS UI
+## Registering the Parachain on Polkadot-JS Apps
 
 At this point, the parachain is ready to be registered officially in the UI. The first step is to
 head underneath `Developer` and click on the `Sudo` button.
