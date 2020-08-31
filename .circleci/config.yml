@@ -10,7 +10,7 @@ jobs:
           name: prettier
           command: |
             npm i prettier
-            node_modules/.bin/prettier -c docs/*.md
+            ./scripts/ci-prettier.sh
 
   check-links:
     docker:
