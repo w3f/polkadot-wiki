@@ -78,7 +78,7 @@ When you create your own chain spec, there are a few considerations to keep in m
 Rococo is a Proof-of-Authority chain, so you will need to add in an authority and its session keys
 to the file. So you will need to modify the following:
 
-```
+```json
 "session": {
     "keys": [
         [
