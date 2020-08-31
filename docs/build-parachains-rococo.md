@@ -17,7 +17,7 @@ substrate onto your machine.
 curl https://getsubstrate.io -sSf | bash -s -- --fast
 ```
 
-Now make sure you have the Polkadot repo installed and checkout to the `fd4b176` commit.
+Make sure you have the Polkadot repository cloned locally and checkout to the `fd4b176` commit.
 
 ```
 git clone https://github.com/paritytech/polkadot.git
