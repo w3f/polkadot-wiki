@@ -25,7 +25,7 @@
     "docusaurus": "^1.14.6"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.3",
+    "@octokit/rest": "^18.0.4",
     "@polkadot/api": "^1.30.1",
     "axios": "^0.20.0",
     "fs-extra": "^9.0.1",
