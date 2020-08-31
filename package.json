@@ -34,6 +34,7 @@
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.1.1",
     "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
     "semver": "^7.3.2",
