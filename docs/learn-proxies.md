@@ -16,8 +16,8 @@ proxy for the relationship. Polkadot offers:
 
 - Any
 - Non-transfer
-- Staking
 - Governance
+- Staking
 - Identity Judgement
 
 When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure
@@ -28,9 +28,12 @@ account.
 
 As implied by the name, a proxy type of "Any" allows the proxy account to make any transaction,
 incuding balance transfers. In most cases, this should be avoided as the proxy account is used more
-frequently than the cold account and is therefore less secure. To allow any type of transaction
-except balance transfers (including vested transfers), the "Non-transfer" proxy type will be a
-better fit.
+frequently than the cold account and is therefore less secure.
+
+### Non-transfer Proxies
+
+Proxies that are of the type "non-transfer" are accounts that allow any type of transaction except
+balance transfers (including vested transfers).
 
 ### Governance Proxies
 
