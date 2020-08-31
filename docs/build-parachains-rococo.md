@@ -188,7 +188,7 @@ To run another validator, you will need the following command in another termina
 
 ## Connect to Polkadot-JS Apps
 
-At this point, you are now ready to connect your local node to the Polkadot JS UI. To do so, head
+At this point, you are now ready to connect your local node to the Polkadot-JS Apps. To do so, head
 over to the [user interface](https://polkadot.js.org/apps/) and change the network to `Local Node`.
 For now, you can change the custom endpoint to one of your validator `--ws-port` values. When this
 the network is connected, the main page should look like this:
