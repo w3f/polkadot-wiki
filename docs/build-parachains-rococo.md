@@ -184,7 +184,7 @@ To run another validator, you will need the following command in another termina
 ```
 
 > Important note: When you run another validator, change the values for `--ws-port` and `--port`, so
-> that they aren't conflicting with eachother. The Rococo `json` file should be kept the same here.
+> that they aren't conflicting with each other. The Rococo `json` file should be kept the same here.
 
 ## Connect to Polkadot JS UI
 
