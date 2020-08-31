@@ -66,8 +66,23 @@ proxy. That is, it generates an address but no corresponding private key. Normal
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
-This type of proxy is very different from the other regular types of proxies, and belongs in its own
-category.
+
+![anonymous proxy](assets/polkadot_anonymous_proxy.png)
+
+## Why use a Proxy?
+
+Proxies are great to use for specific purposes because they add in a layer of security. Rather than
+using funds in one sole account, smaller accounts with unique roles complete tasks for the main
+stash account. This drives attention away from the main account and to proxies.
+
+Anonymous proxies in particular are great for permissionless management. In this example below,
+there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob have an
+anonymous proxy attached to it. In the case that the multisig wanted to add or remove Alice or Bob
+or even add in a new account into the anonymous proxy, the anonymous proxy would take care of that
+change. If a multisig wanted to modify itself without an anonymous proxy, a whole new multisig would
+be created. The use of an anonymous proxy in multisigs are useful for permisionless management.
+
+![anonymous mutlisig proxy](assets/polkadot_multisig_anon.png)
 
 ## How to set up a Proxy
 
@@ -109,7 +124,7 @@ you might use these accounts. Imagine you have one account as your primary token
 and don't want to access it very often, but you do want to participate in governance and staking.
 You could set Governance and Staking proxies.
 
-![proxies](assets/proxies-example.png)
+![proxies](assets/polkadot_regular_proxies.png)
 
 In this example, the primary account A would only make two transactions to set account B as its
 governance proxy and account C as its staking proxy. Now, account B could participate in governance
