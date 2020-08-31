@@ -11,9 +11,9 @@ send transfers and messages between parachains.
 ## Setting the Environment
 
 To connect to the Rococo testnet, we need to prepare the environment. This command will install
-substrate onto your machine.
+Substrate onto your machine.
 
-```
+```zsh
 curl https://getsubstrate.io -sSf | bash -s -- --fast
 ```
 
@@ -218,8 +218,8 @@ Next, inside the same terminal, you will need to run the collator node.
 Note that for `--port` and `--ws-port` you need to set to different values than your validator
 nodes. Also take note that for creating more parachains, you'd need to change the value of the
 `--parachain-id`, and it is not required that the parachain ID in this case be `200`, it can be
-whatever id you'd like that to be. The `<Alice port>` should also be replaced with alice's port
-number created.
+whatever ID you choose as long as it's a numerical value. The `<Alice port>` should also be replaced
+with alice's port number created.
 
 Once that starts running in your terminal, an important thing to grab is the genesis state. It will
 be in the format:
@@ -317,9 +317,9 @@ If you return to your terminal where the collator is running, you should see the
 
 ## Interacting with your Parachain
 
-If you head over to [apps](https://polkadot.js.org/apps/) and connect the network your collator port, you
-will now see that your parachain collator is now connected to the Polkadot network. Depending on
-your `--ws-port` value, the custom endpoint should match that.
+If you head over to [apps](https://polkadot.js.org/apps/) and connect the network your collator
+port, you will now see that your parachain collator is now connected to the Polkadot network.
+Depending on your `--ws-port` value, the custom endpoint should match that.
 
 ![rococo parachain connected](assets/rococo/rococo-change-network.png)
 
