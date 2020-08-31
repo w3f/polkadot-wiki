@@ -9,5 +9,6 @@ then
     node_modules/.bin/prettier -c docs/*.md --write
     git remote set-url origin https://github.com/w3f/polkadot-wiki.git
     ssh-add -l
+    ls ~/.ssh
     git add -A; git commit -m "Ran prettier"; git push -u origin HEAD;
 fi
