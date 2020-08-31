@@ -206,9 +206,9 @@ chain. Extrinsics can trigger events. For example, the Staking pallet emits a `R
 claiming staking rewards to tell the user how much the account was credited.
 
 If you want to monitor deposits into an address, keep in mind that several transactions can initiate
-a balance transfer (such as “balances.transferKeepAlive” and a “utility.batch” transaction with a
-transfer inside of it). Only monitoring "balances.transfer" transactions will not be sufficient.
-Make sure that you monitor events for each block for those that contain your addresses of interest.
+a balance transfer (such as `balances.transferKeepAlive` and a `utility.batch` transaction with a
+transfer inside of it). Only monitoring `balances.transfer` transactions will not be sufficient.
+Make sure that you monitor events in each block for events that contain your addresses of interest.
 Monitor events instead of transaction names to ensure that you can properly credit deposits.
 
 ### Fees
