@@ -389,7 +389,7 @@ and add any comments or a memo for the transfer.
 
 ### Upward Transfers
 
-Upward transfers are when you are on a parachain and want to send a transfer to another account on
+Upward transfers occur _from_ a parachain _to_ an account on
 the Relay Chain. To proceed with this kind of transfer, we need to be connected to the parachain
 node on the network and be on the "Network" > "Parachains" tab and click on the "Transfer to chain"
 button.
