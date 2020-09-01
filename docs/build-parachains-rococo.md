@@ -391,7 +391,7 @@ and add any comments or a memo for the transfer.
 
 Upward transfers occur _from_ a parachain _to_ an account on
 the Relay Chain. To proceed with this kind of transfer, we need to be connected to a parachain
-node on the network and be on the "Network" > "Parachains" tab and click on the "Transfer to chain"
+node on the network and be on the "Network" > "Parachains" tab.  Click on the "Transfer to chain"
 button.
 
 ![rococo upward transfer](assets/rococo/rococo-upward-transfer.png)
