@@ -319,7 +319,7 @@ If you return to your terminal where the collator is running, you should see the
 
 ## Interacting with your Parachain
 
-If you head over to [apps](https://polkadot.js.org/apps/) and connect the network your collator
+If you navigate to [apps](https://polkadot.js.org/apps/) and connect the network your collator
 port, you will now see that your parachain collator is now connected to the Polkadot network.
 Depending on your `--ws-port` value, the custom endpoint should match that.
 
