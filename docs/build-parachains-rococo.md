@@ -292,7 +292,7 @@ head underneath `Developer` and click on the `Sudo` button.
 
 ![rococo registration](assets/rococo/rococo-register-parachain.png)
 
-We will need the genesis state from before that we copied and placed in the `initial_head_data`
+We will need the genesis state that we copied and placed in the `initial_head_data`
 section. On this page, you will see other details like the `id`, `ParaInfo`, and `code`. In the `id`
 field, we will want to place the ID of the parachain, in this case it would be `200`. The `ParaInfo`
 should be set to always, and the `code` field should contain the WASM file that was created while
