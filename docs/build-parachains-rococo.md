@@ -404,7 +404,7 @@ another parachain.
 This type of transfer is only possible with at least two different registered parachains. In true
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
-being. How lateral transfers work is thru the depository model, which means in order to transfer
+being. Lateral transfers work through the depository model, which means that in order to transfer
 tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 in a depository
 on chain 300.
 
