@@ -164,6 +164,7 @@ supports Kusama addresses, not Polkadot or generic Substrate.
 Alternatively, you might find some wallets on the
 [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited**
 and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated.
+Keep in mind that the Web3 Foundation is not affiliated with PolkaProject.
 
 Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
 
