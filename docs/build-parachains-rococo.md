@@ -412,7 +412,7 @@ Before we can actually send funds from one parachain to another, we must ensure 
 account on the receiptent chain has some funds in it. In this example, Alice will be sending some
 funds from her account on parachain 200 to her account on parachain 300.
 
-We will need to grab that parachains account address, from our parachain 300's terminal:
+We can get that parachain account address, from our parachain 300's terminal:
 
 ```
 2020-08-26 14:46:34 Parachain Account: 5Ec4AhNv5ArwGxtngtW8qcVgzpCAu8nokvnh6vhtvvFkJtpq
