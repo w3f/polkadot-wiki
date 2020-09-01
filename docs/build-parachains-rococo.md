@@ -396,7 +396,7 @@ button.
 
 ![rococo upward transfer](assets/rococo/rococo-upward-transfer.png)
 
-Note here that the toggle should be set to off, that way the funds go to the Relay Chain and not
+Note that the toggle should be set to off, ensuring that the funds go to the Relay Chain and not
 another parachain.
 
 ### Lateral Transfers
