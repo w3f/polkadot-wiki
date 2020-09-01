@@ -408,7 +408,7 @@ being. Lateral transfers work through the depository model, which means that in 
 tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited
 on chain 300.
 
-Before we can actually send funds from one parachain to another, we must ensure that the chain 's
+Before we can actually send funds from one parachain to another, we must ensure that the chain's
 account on the receiptent chain has some funds in it. In this example, Alice will be sending some
 funds from her account on parachain 200 to her account on parachain 300.
 
