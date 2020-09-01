@@ -355,7 +355,7 @@ yet with subtle differences:
 
 > Note here that when launching another parachain node in a separate terminal, you'll need to change
 > the `<Parachain id>` to a different id than your first parachain. The chain spec can lead to the
-> same file as your other colllator, or you can generate a new WASM and point it to there.
+> same file as your other collator, or you can generate a new runtime (Wasm blob).
 
 From here, you will need to go thru the
 [parachain registration steps](build-parachains-rococo#registering-the-parachain-on-polkadot-js-ui)
