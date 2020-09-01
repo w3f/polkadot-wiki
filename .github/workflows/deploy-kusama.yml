@@ -15,7 +15,7 @@ jobs:
 
       - name: Clone and run the site
         run: |
-          apt-get install nc
+          sudo apt-get install nc
           yarn
           yarn kusama:start &
           while ! nc -z localhost 3000; do
