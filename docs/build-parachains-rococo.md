@@ -423,6 +423,6 @@ depository.
 
 ![rococo lateral transfer](assets/rococo/rococo-lateral-transfer.png)
 
-From there, Alice is able to send from her account on parachain 200 to her account on parachain 300.
+Alice is now able to send from her account on parachain 200 to her account on parachain 300.
 
 ![rococo lateral transfer part 2](assets/rococo/rococo-lateral-transfer2.png)
