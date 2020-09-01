@@ -159,6 +159,11 @@ be bridges between Polkadot and most of the other major chains.
 
 ## DOT
 
+### What is the difference between DOT (old), new DOT, and DOT?
+
+The redomination of DOT (old), with twelve decimal places, changed the DOT token to new DOT, with
+ten decimal places. Following the redomination, new DOT has changed to DOT.
+
 ### What is the inflation rate of the DOT?
 
 The inflation rate is 10% per year.
