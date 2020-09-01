@@ -162,7 +162,7 @@ be bridges between Polkadot and most of the other major chains.
 ### What is the difference between DOT (old) and new DOT?
 
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
-August, 2020, Demoniation Day, the DOT (old) value was redominated to 1e10 Plancks, meaning that the
+August, 2020, Denomiation Day, the DOT (old) value was redenominated to 1e10 (10'000'000'000, or ten billion) Plancks, meaning that the
 new DOT was valued at ten decimal places. Following the redomination, the new DOT changed back to
 DOT.
 
