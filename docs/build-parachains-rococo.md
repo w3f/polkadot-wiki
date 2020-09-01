@@ -287,7 +287,7 @@ Note a few things about this new output:
 
 ## Registering the Parachain on Polkadot-JS Apps
 
-At this point, the parachain is ready to be registered officially in the UI. The first step is to
+The parachain is now ready to be registered. The first step is to
 head underneath `Developer` and click on the `Sudo` button.
 
 ![rococo registration](assets/rococo/rococo-register-parachain.png)
