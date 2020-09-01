@@ -375,7 +375,7 @@ indicating a successful transfer.
 
 Downward transfers are when an account on the Relay Chain sends a transfer to their own account on a
 different parachain. This type of transfer uses a depository and mint model, meaning that when the
-DOT leave the senders account on the Relay Chain and are transferred into an account on a parachain,
+DOT leave the sender's account on the Relay Chain and are transferred into an account on a parachain,
 the parachain mints a corresponding amount of tokens in the specified amount on the parachain.
 
 For example, we can send tokens from Alice's account on the Relay Chain to her own account on
