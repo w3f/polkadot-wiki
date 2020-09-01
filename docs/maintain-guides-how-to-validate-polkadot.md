@@ -281,8 +281,7 @@ corresponds to the funds bonded by the Stash account.
 > to check the full session key public key string.
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you
-will now start running the node in validator mode with a flag allowing unsafe RPC calls, needed for
-some advanced operations.
+will now start running the node.
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry"
@@ -327,8 +326,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
 public keys. Save this result for a later step.
 
-You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer
-needed.
+You can restart your node at this point.
 
 ### Submitting the `setKeys` Transaction
 
