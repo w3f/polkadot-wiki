@@ -405,7 +405,7 @@ This type of transfer is only possible with at least two different registered pa
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
 being. Lateral transfers work through the depository model, which means that in order to transfer
-tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 in a depository
+tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited
 on chain 300.
 
 Before we can actually send funds from one parachain to another, we must ensure that the chain 's
