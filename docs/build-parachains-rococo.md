@@ -264,19 +264,6 @@ At this point the console log should resemble something like this:
 2020-08-25 13:32:18 💤 [Parachain] Idle (0 peers), best: #0 (0x6d45…12f6), finalized #0 (0x6d45…12f6), ⬇ 0 ⬆ 0
 2020-08-25 13:32:20 💤 [Relaychain] Idle (3 peers), best: #268 (0xb6ba…65e0), finalized #265 (0x081c…1b35), ⬇ 18.1kiB/s ⬆ 2.4kiB/s
 2020-08-25 13:32:23 💤 [Parachain] Idle (0 peers), best: #0 (0x6d45…12f6), finalized #0 (0x6d45…12f6), ⬇ 0 ⬆ 0
-2020-08-25 13:32:24 ✨ [Relaychain] Imported #269 (0x2dd2…9964)
-2020-08-25 13:32:25 💤 [Relaychain] Idle (3 peers), best: #269 (0x2dd2…9964), finalized #266 (0xf093…fd8f), ⬇ 1.0kiB/s ⬆ 0.6kiB/s
-2020-08-25 13:32:28 💤 [Parachain] Idle (0 peers), best: #0 (0x6d45…12f6), finalized #0 (0x6d45…12f6), ⬇ 0 ⬆ 0
-2020-08-25 13:32:30 ✨ [Relaychain] Imported #270 (0xe7f2…3743)
-2020-08-25 13:32:30 💤 [Relaychain] Idle (3 peers), best: #270 (0xe7f2…3743), finalized #267 (0x8bfc…8abb), ⬇ 1.2kiB/s ⬆ 0.5kiB/s
-2020-08-25 13:32:33 💤 [Parachain] Idle (0 peers), best: #0 (0x6d45…12f6), finalized #0 (0x6d45…12f6), ⬇ 0 ⬆ 0
-2020-08-25 13:32:35 💤 [Relaychain] Idle (3 peers), best: #270 (0xe7f2…3743), finalized #267 (0x8bfc…8abb), ⬇ 0.7kiB/s ⬆ 0.3kiB/s
-2020-08-25 13:32:36 ✨ [Relaychain] Imported #271 (0x256f…8849)
-2020-08-25 13:32:38 💤 [Parachain] Idle (0 peers), best: #0 (0x6d45…12f6), finalized #0 (0x6d45…12f6), ⬇ 0 ⬆ 0
-2020-08-25 13:32:40 💤 [Relaychain] Idle (3 peers), best: #271 (0x256f…8849), finalized #269 (0x2dd2…9964), ⬇ 1.5kiB/s ⬆ 0.5kiB/s
-2020-08-25 13:32:42 ✨ [Relaychain] Imported #272 (0x709a…c025)
-2020-08-25 13:32:43 💤 [Parachain] Idle (0 peers), best: #0 (0x6d45…12f6), finalized #0 (0x6d45…12f6), ⬇ 0 ⬆ 0
-2020-08-25 13:32:45 💤 [Relaychain] Idle (3 peers), best: #272 (0x709a…c025), finalized #269 (0x2dd2…9964), ⬇ 0.6kiB/s ⬆ 0.3kiB/s
 ```
 
 Note a few things about this new output:
@@ -287,16 +274,16 @@ Note a few things about this new output:
 
 ## Registering the Parachain on Polkadot-JS Apps
 
-The parachain is now ready to be registered. The first step is to
-head underneath `Developer` and click on the `Sudo` button.
+The parachain is now ready to be registered. The first step is to head underneath `Developer` and
+click on the `Sudo` button.
 
 ![rococo registration](assets/rococo/rococo-register-parachain.png)
 
-We will need the genesis state that we copied and placed in the `initial_head_data`
-section. On this page, you will see other details like the `id`, `ParaInfo`, and `code`. In the `id`
-field, we will want to place the ID of the parachain, in this case it would be `200`. The `ParaInfo`
-should be set to always, and the `code` field should contain the WASM file that was created while
-launching the parachain (for this example, it'd be `para-wasm`).
+We will need the genesis state that we copied and placed in the `initial_head_data` section. On this
+page, you will see other details like the `id`, `ParaInfo`, and `code`. In the `id` field, we will
+want to place the ID of the parachain, in this case it would be `200`. The `ParaInfo` should be set
+to always, and the `code` field should contain the WASM file that was created while launching the
+parachain (for this example, it'd be `para-wasm`).
 
 ![rococo fields](assets/rococo/rococo-fill-out-fields.png)
 
@@ -319,15 +306,16 @@ If you return to your terminal where the collator is running, you should see the
 
 ## Interacting with your Parachain
 
-If you navigate to [apps](https://polkadot.js.org/apps/) and connect the network your collator
-port, you will now see that your parachain collator is now connected to the Rococo Relay Chain.
-Depending on your `--ws-port` value, the custom endpoint should match that.
+If you navigate to [apps](https://polkadot.js.org/apps/) and connect the network your collator port,
+you will now see that your parachain collator is now connected to the Rococo Relay Chain. Depending
+on your `--ws-port` value, the custom endpoint should match that.
 
 ![rococo parachain connected](assets/rococo/rococo-change-network.png)
 
-At this point, you can make transfers between accounts on your parachain. However, to produce a
-successful transfer, you will need to enter the following `json` snippet inside "Settings" >
-"Developer" and hit the "Save" button.
+At this point, you can make transfers between accounts on your parachain, because the environment is
+set up, the chain spec is defined, the Relay Chain is launched, and the parachain is registered.
+However, to produce a successful transfer, you will need to enter the following `json` snippet
+inside "Settings" > "Developer" and hit the "Save" button.
 
 ```
 {
@@ -346,8 +334,8 @@ For reference, the page should look like this after you've added in the code:
 
 ## Launching another Parachain Node
 
-To launch another parachain node, you follow a process similar to launching our first parachain node,
-but with a few subtle differences:
+To launch another parachain node, you follow a process similar to launching our first parachain
+node, but with a few subtle differences:
 
 ```
 ./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other Relay Chain collators>
@@ -366,19 +354,19 @@ again in order to see and interact with your new parachain node on the network.
 ## How to make Cross Chain transfers
 
 To send a transfer between parachains, let's start with heading over to "Accounts" > "Transfer".
-From here, you'll need to select the parachain node that you are running. Next, enter in the amount that
-you'd like to send to another parachain. Be sure to select the correct parachain you'd like to send
-an amount to. Once you've hit the Submit button, you should see a green notification,
+From here, you'll need to select the parachain node that you are running. Next, enter in the amount
+that you'd like to send to another parachain. Be sure to select the correct parachain you'd like to
+send an amount to. Once you've hit the Submit button, you should see a green notification,
 indicating a successful transfer.
 
 ### Downward Transfers
 
-Downward transfers are when an account on the Relay Chain sends a transfer to their own account on a
+Downward transfers are when an account on the Relay Chain sends a transfer to their account on a
 different parachain. This type of transfer uses a depository and mint model, meaning that when the
-DOT leave the sender's account on the Relay Chain and are transferred into an account on a parachain,
-the parachain mints a corresponding amount of tokens on the parachain.
+DOT leave the sender's account on the Relay Chain and are transferred into an account on a
+parachain, the parachain mints a corresponding amount of tokens on the parachain.
 
-For example, we can send tokens from Alice's account on the Relay Chain to her own account on
+For example, we can send tokens from Alice's account on the Relay Chain to her account on
 parachain 200. To do so, we will need to head to the "Network" > "Parachains" tab and click on the
 "Transfer to chain" button.
 
@@ -389,10 +377,9 @@ and add any comments or a memo for the transfer.
 
 ### Upward Transfers
 
-Upward transfers occur _from_ a parachain _to_ an account on
-the Relay Chain. To proceed with this kind of transfer, we need to be connected to a parachain
-node on the network and be on the "Network" > "Parachains" tab.  Click on the "Transfer to chain"
-button.
+Upward transfers occur _from_ a parachain _to_ an account on the Relay Chain. To proceed with this
+kind of transfer, we need to be connected to a parachain node on the network and be on the
+"Network" > "Parachains" tab. Click on the "Transfer to chain" button.
 
 ![rococo upward transfer](assets/rococo/rococo-upward-transfer.png)
 
@@ -405,8 +392,8 @@ This type of transfer is only possible with at least two different registered pa
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
 being. Lateral transfers work through the depository model, which means that in order to transfer
-tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited
-on chain 300.
+tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited on
+chain 300.
 
 Before we can actually send funds from one parachain to another, we must ensure that the chain's
 account on the receiptent chain has some funds in it. In this example, Alice will be sending some
