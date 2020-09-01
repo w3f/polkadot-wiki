@@ -346,7 +346,7 @@ For reference, the page should look like this after you've added in the code:
 
 ## Launching another Parachain Node
 
-To launch another parachain node, you may notice that it is similar to launching our first parachain
+To launch another parachain node, you follow a process similar to launching our first parachain node,
 yet with subtle differences:
 
 ```
