@@ -418,7 +418,7 @@ We can get that parachain account address, from our parachain 300's terminal:
 2020-08-26 14:46:34 Parachain Account: 5Ec4AhNv5ArwGxtngtW8qcVgzpCAu8nokvnh6vhtvvFkJtpq
 ```
 
-Then from the Alice's account on the Relay Chain, she is able to send some amount to parachain 200's
+From Alice's account on the Relay Chain, she is able to send some amount to parachain 200's
 depository.
 
 ![rococo lateral transfer](assets/rococo/rococo-lateral-transfer.png)
