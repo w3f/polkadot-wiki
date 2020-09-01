@@ -199,7 +199,7 @@ the network is connected, the main page should look like this:
 ## Starting the Parachain with the Relay Chain
 
 In order for the parachain to launch properly, we first need to register it with the Relay Chain. We
-will begin by running this command to generate a WASM file inside your substrate parachain template
+will begin by running this command to generate a Wasm file inside your substrate parachain template
 folder:
 
 ```
@@ -282,7 +282,7 @@ click on the `Sudo` button.
 We will need the genesis state that we copied and placed in the `initial_head_data` section. On this
 page, you will see other details like the `id`, `ParaInfo`, and `code`. In the `id` field, we will
 want to place the ID of the parachain, in this case it would be `200`. The `ParaInfo` should be set
-to always, and the `code` field should contain the WASM file that was created while launching the
+to always, and the `code` field should contain the Wasm file that was created while launching the
 parachain (for this example, it'd be `para-wasm`).
 
 ![rococo fields](assets/rococo/rococo-fill-out-fields.png)
