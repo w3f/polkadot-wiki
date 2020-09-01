@@ -347,7 +347,7 @@ For reference, the page should look like this after you've added in the code:
 ## Launching another Parachain Node
 
 To launch another parachain node, you follow a process similar to launching our first parachain node,
-yet with subtle differences:
+but with a few subtle differences:
 
 ```
 ./target/release/parachain-collator --tmp --bootnodes /ip4/<Collator ip>/tcp/<Collator port>/p2p/<Collator peer id>  --ws-port # --port # --parachain-id <Parachain id> --validator  -- --chain ./specs/rococo-#.json  --bootnodes <Alice, Bob, and other Relay Chain collators>
