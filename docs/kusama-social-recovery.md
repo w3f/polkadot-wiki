@@ -25,16 +25,19 @@ approve the recovery process in order to recover your account.
 
 ![](/img/recovery/social-recovery-diag-1.png)
 
-First, go to [PolkadotJS->Accounts](https://polkadot.js.org/apps/#/accounts) page that shows all
-available accounts on your browser's local storage and PolkadotJS extension. To create a recoverable
-account, make sure that you have some KSMs to pay for the transaction fees. You will also need some
-for the reserve required by the account recovery setup.
+> Note: If you are recovering an account, ensure that your network is set to Kusama. You can do this
+> by selecting the network from the top right corner in the Polkadot-JS UI.
 
-![](/img/recovery/social-recovery-1.png)
+First, go to [Polkadot-JS -> Accounts -> Accounts](https://polkadot.js.org/apps/#/accounts) page
+that shows all available accounts on your browser's local storage and Polkadot-JS extension. To
+create a recoverable account, make sure that you have some KSMs to pay for the transaction fees. You
+will also need some for the reserve required by the account recovery setup.
 
-Then click the menu that is located besides the `send` button, and choose `Make recoverable`.
+![kusama accounts page](assets/kusama/kusama_social_recovery_accounts_page.png)
 
-![](/img/recovery/social-recovery-2.png)
+Then click the menu that is located besides the "send" button, and choose "Make recoverable".
+
+![kusama accounts make recoverable](assets/kusama/kusama_make_recoverable.png)
 
 Now you need to provide the following information:
 
@@ -58,7 +61,7 @@ recovery process.
 > acquired enough signatures to recover your account, they would still have to wait until the block
 > delay is passed in order to control your account.
 
-![](/img/recovery/social-recovery-3.png)
+![kusama accounts page2](assets/kusama/kusama_make_account_recoverable.png)
 
 ## Recover your Account
 
@@ -75,19 +78,20 @@ The above diagram shows the whole process of recovering an account.
 Navigate to the menu that is located besides the send button in the row of your new account and
 click the "Initiate recover for another" option.
 
-![](/img/recovery/social-recovery-4.png)
+![kusama accounts initial recoverable](assets/kusama/kusama_make_recoverable.png)
 
 Then input the address you would like to recover in "recover this account" field and click "Start
 recovery".
 
-![](/img/recovery/social-recovery-5.png)
+![kusama accounts initial recoverable2](assets/kusama/kusama_make_account_initial.png)
 
 Once the transaction went through, some KSMs will be locked to prevent malicious behavior.
 
 ![](/img/recovery/social-recovery-6.png)
 
-Now call your friends that you have set in the first section. They are required to submit a
-`vouchRecovery` transaction.
+Now call your friends that you have set in the first section, but heading over to "Developer" >
+"Extrinsics" and using the recovery pallet. They are required to submit a `vouchRecovery`
+transaction.
 
 ![](/img/recovery/social-recovery-7.png)
 
@@ -128,7 +132,7 @@ Finally, transfer all of your available balance from the lost account to the new
 
 ![](/img/recovery/social-recovery-14.png)
 
-Congratulation! You have successfully done the recovery process.
+The recovery process is now complete and successful.
 
 ![](/img/recovery/social-recovery-15.png)
 
@@ -140,4 +144,4 @@ Congratulation! You have successfully done the recovery process.
 ## Further Reading
 
 - [Substrate's Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/src/lib.rs) -
-  The Rust implementation of the recovery.
+  The Rust implementation of the recovery pallet.
