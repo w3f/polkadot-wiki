@@ -6,7 +6,7 @@ sidebar_label: Contributors
 
 ## Anson Lau
 
-Anson is a technical educator at Web3 Foundation. Before that, he worked as a Hyperledger blockchain
+Anson is a Technical Educator at Web3 Foundation. Before that, he worked as a Hyperledger blockchain
 developer to deliver B2B application at IBM. He is passionate about staking, governance,
 cryptoeconomics, and privacy areas. Anson has been actively participating in the blockchain space
 since 2017 and creating video content to help different people to understand how decentralization
