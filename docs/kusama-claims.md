@@ -18,8 +18,7 @@ You will need to generate a Kusama account to claim KSM. There are a few ways yo
 For most users, we recommend using the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) since
 it will allow you to store your encrypted keystore locally.
 
-> NOTICE: Unfortunately, at this time Kusama does not have hardware wallet support. Hopefully this
-> will change soon!
+> NOTICE: Unfortunately, at this time Kusama does not have hardware wallet support. 
 
 Another option you may consider using is the `subkey` command line utility, which will allow you to
 take extra steps to protect the security of your key. Additionally, another option is the
@@ -95,31 +94,29 @@ enter `subkey --help` for more usage examples.
 
 ### Using Polkadot UI
 
-1. Open up the [Polkadot UI](https://polkadot.js.org/apps) and navigate to the `Settings` tab. Find
-   the configuration dropdown for `address network prefix` and select `Kusama (canary)`. Click
-   `Save and reload`.
+1. Open up the [Polkadot UI](https://polkadot.js.org/apps) and navigate to the top left corner of the navigation. This will open up a panel of network options to select from. Select on "Kusama", either from Parity or Web3 Foundation, then "Switch". 
 
-1. Navigate to the [Polkadot UI Accounts Tab](https://polkadot.js.org/apps/#/accounts) and click on
+2. Navigate to the [Polkadot UI Accounts Tab](https://polkadot.js.org/apps/#/accounts) and click on
    the `Add account` button.
 
-<img src="/img/kusama/polkadotui-find-the-accounts-page.png" width=50% />
+![kusama add account](assets/kusama/kusama_add_account.png)
 
-2. Enter a name for your account and create a secure password. This password will be used to decrypt
-   your account.
+3. Enter a name for your account and create a secure password. This password will be used to decrypt your account. The required text fields to complete are highlighted in pink.
 
-<img src="/img/kusama/polkadotui-create-your-account.png" width=50% />
+![kusama create account](assets/kusama/kusama_create_account.png)
 
-3. Ignore the advanced options unless you want to change the type of cryptography used for your keys
-   (we recommend "Schnorrkel (sr25519)").
+4. Ignore the advanced options unless you want to change the type of cryptography used for your keys (we recommend "Schnorrkel (sr25519)"). You will have to enter an Account Name and a password to protect your account. Be sure to select a secure and hard-to-guess password. Note that anything will be accepted as a password here. Please note: There are no checks to see if it is long enough or secure. You will need this password for any future interaction with or transaction from this account.
 
-4. Click `Save` and `Create and backup account`.
+5. Click `Save` and `Create and backup account`.
 
-5. Save your encrypted keystore locally.
+![kusama save backup](assets/kusama/kusama_backup_account.png)
 
-6. The account now appears in your Accounts tab and is backed up to the keystore you just saved.
+6. Save your encrypted keystore locally. Ideally, you would also save it on an external hard drive or thumb drive, or print it out and be able to re-enter it later. You should not store it in cloud storage, email it to yourself, etc. You can use this backup file to restore your account. This backup file is not readable unless it is decrypted with the password.
 
-7. Click on the DOT identicon to copy the address to the clipboard.
-   <img src="/img/kusama/polkadotui-copy-account-address.png" width=50% />
+7. The account now appears in your Accounts tab and is backed up to the keystore you just saved.
+
+8. Click on the DOT identicon to copy the address to the clipboard.
+![kusama copy address](assets/kusama/kusama_copy_address.png)
 
 ### Using Polkawallet
 
@@ -168,7 +165,7 @@ address.
 
 There are two methods to claim KSM.
 
-### 1. DOT Holders:
+### DOT Holders
 
 Those who participated in the Polkadot sales and have been allocated DOT indicator tokens can claim
 a proportional amount of KSMs on the Kusama Network.
@@ -179,7 +176,7 @@ using the Polkadot UI [Claims app](https://polkadot.js.org/apps/#/claims).
 #### Generate a Kusama address
 
 If you haven't already done so, you will need to generate a Kusama address. See further up this page
-for detailed instructions first!
+for detailed instructions first.
 
 #### Claiming your KSM with MyCrypto
 
