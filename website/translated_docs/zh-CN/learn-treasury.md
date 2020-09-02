@@ -31,7 +31,9 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
-The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future.
+The proposer has to deposit 5% of the requested amount or 100 DOT (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future.
+
+Please note that there is no way for a user to revoke a treasury proposal after it has been submitted. The Council will either accept or reject the proposal, and if the proposal is rejected, the bonded funds are burned.
 
 ### Announcing the Proposal
 
