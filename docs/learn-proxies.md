@@ -67,7 +67,7 @@ account designates a proxy account, but anonymous proxies are the opposite. The 
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
 
-![anonymous proxy](assets/polkadot_anonymous_proxy.png)
+![anonymous proxy](assets/proxy_anonymous_diagram.png)
 
 ## Why use a Proxy?
 
@@ -82,7 +82,7 @@ or even add in a new account into the anonymous proxy, the anonymous proxy would
 change. If a multisig wanted to modify itself without an anonymous proxy, a whole new multisig would
 be created. The use of an anonymous proxy in multisigs are useful for permisionless management.
 
-![anonymous mutlisig proxy](assets/polkadot_multisig_anon.png)
+![anonymous mutlisig proxy](assets/multisig_proxy_diagram.png)
 
 ## How to set up a Proxy
 
@@ -140,7 +140,7 @@ you might use these accounts. Imagine you have one account as your primary token
 and don't want to access it very often, but you do want to participate in governance and staking.
 You could set Governance and Staking proxies.
 
-![proxies](assets/polkadot_regular_proxies.png)
+![proxies](assets/regular_proxy_diagram.png)
 
 In this example, the primary account A would only make two transactions to set account B as its
 governance proxy and account C as its staking proxy. Now, account B could participate in governance
