@@ -28,20 +28,29 @@ teams building the next generation of Ethereum, and since 2019 he's been a techn
 Web3 Foundation, dedicated to forwarding the web3 vision and helping make sure everyone, everywhere
 has access to the Internet of Value and Trust. Bruno is passionate about decentralization,
 censorship resistance, and transparency coupled with accountability, so he's found his passion in
-immutable ledgers of the present and future. He holds Master's Degrees in Computer Science and
+immutable ledgers of the present and future. He holds masters' degrees in Computer Science and
 English Language and Literature and likes to dabble in virtual reality when possible. He can be
 found on Twitter at @bitfalls.
 
+## Joe Petrowski
+
+Joe is a research analyst at Parity Technologies, where he focuses on making Substrate chain
+integration as smooth as possible, from educating users on Substrate and Polkadot fundamentals to
+building tools to create great user experiences and occasionally writing a bit of code. He also
+hosts the [Relay Chain](https://relaychain.fm) podcast. Prior to working at Parity, Joe worked in
+shock and vibration simulation for satellite launch, algorithmic trading, and professional cycling.
+He has a Bachelor of Science in Aeronautical and Mechanical Engineering.
+
 ## Logan Saether
 
-Logan is a Tech Educator at Web3 Foundation where he works on creating material for supporting the
-development of the next generation of distributed technologies. At Web3 Technical Education, Logan
-focuses on creating the Polkadot Wiki as the central source of truth and knowledge for the Polkadot
-protocol. He contributes to the creation of written content and example applications that
+Logan is a Technical Educator at Web3 Foundation where he works on creating material for supporting
+the development of the next generation of distributed technologies. At Web3 Technical Education,
+Logan focuses on creating the Polkadot Wiki as the central source of truth and knowledge for the
+Polkadot protocol. He contributes to the creation of written content and example applications that
 demonstrate how to use these new technologies.
 
 ## Kirsten Richard
 
-Kirsten is a Technical Educator intern at Web3 Foundation from Canada. She's passionate about
-teaching and technology, while still studying her Computer Science Bachelors degree. She focuses on
-curating educational content around Blockchain and Polkadot concepts at Web3.
+Kirsten is a Technical Educator intern at the Web3 Foundation from Canada. She's passionate about
+teaching and technology, while still studying her Computer Science bachelor's degree. She focuses on
+curating educational content around blockchain and Polkadot concepts at Web3.
