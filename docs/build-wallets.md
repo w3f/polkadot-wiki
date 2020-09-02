@@ -26,24 +26,24 @@ application.
 
 ### Supported Wallets
 
-| Wallet Name                                                        | Development State | Team Name   | Description                         |
-| ------------------------------------------------------------------ | ----------------- | ----------- | ----------------------------------- |
-| [Signer](https://www.parity.io/signer/)                            | Live              | Parity      | IOS and Android                     |
-| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser                             |
-| [Polkadot.JS Plugin](https://github.com/polkadot-js/extension)     | Live              | Parity      | Browser extension                   |
-| [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android                     |
-| [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                   |
-| [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                   |
-| [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                     |
-| [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit      | iOS and Android                     |
-| [AirGap](https://airgap.it/)                                       | Live              | AirGap      | IOS, Android, MacOS, Windows and Linux  |
-| [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo        | IOS and Android                     |
-| [SafePal](https://www.safepal.io/)                                 | Live              | SafePal     | Hardware                            |
-| [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                   |
-| [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension |
-| [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension                   |
-| [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension                   |
-| [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                            |
-| [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                             |
-| [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                          |
-| [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu   | IOS and Android                     |
+| Wallet Name                                                        | Development State | Team Name   | Description                            |
+| ------------------------------------------------------------------ | ----------------- | ----------- | -------------------------------------- |
+| [Signer](https://www.parity.io/signer/)                            | Live              | Parity      | IOS and Android                        |
+| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity      | Browser                                |
+| [Polkadot.JS Plugin](https://github.com/polkadot-js/extension)     | Live              | Parity      | Browser extension                      |
+| [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet | IOS and Android                        |
+| [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet | Browser extension                      |
+| [Lunie](https://lunie.io/)                                         | Live              | Lunie       | Browser extension                      |
+| [ImToken](https://token.im/)                                       | Live              | ImToken     | IOS and Android                        |
+| [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit      | iOS and Android                        |
+| [AirGap](https://airgap.it/)                                       | Live              | AirGap      | IOS, Android, MacOS, Windows and Linux |
+| [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo        | IOS and Android                        |
+| [SafePal](https://www.safepal.io/)                                 | Live              | SafePal     | Hardware                               |
+| [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks    | Browser extension                      |
+| [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask    | IOS, Android, and browser extension    |
+| [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle     | Browser extension                      |
+| [Enzyme](https://getenzyme.dev/)                                   | Building          | BlockXLabs  | Browser extension                      |
+| [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax      | Hardware                               |
+| [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu       | Browser                                |
+| [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf         | CLI Wallet                             |
+| [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu   | IOS and Android                        |
