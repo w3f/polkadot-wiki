@@ -231,7 +231,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSM - make
   sure that your Stash account contains _at least_ this much. You can, of course, stake more than
   this.
 - **Controller account** - Select the Controller account created earlier. This account will also
@@ -349,7 +349,7 @@ node is selected to join the validator set, your node will become an active vali
 it will remain in the _waiting_ queue. If your validator is not selected to become part of the
 validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if
 you are not selected for the validator set in a particular era. However, it may be necessary to
-increase the number of KSMs staked or seek out nominators for your validator in order to join the
+increase the number of KSM staked or seek out nominators for your validator in order to join the
 validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the
