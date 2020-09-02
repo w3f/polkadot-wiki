@@ -51,6 +51,6 @@ demonstrate how to use these new technologies.
 
 ## Kirsten Richard
 
-Kirsten is a Technical Educator intern at the Web3 Foundation from Canada. She's passionate about
+Kirsten is a Technical Educator intern at Web3 Foundation from Canada. She's passionate about
 teaching and technology, while still studying her Computer Science bachelor's degree. She focuses on
 curating educational content around blockchain and Polkadot concepts at Web3.
