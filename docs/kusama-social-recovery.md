@@ -85,7 +85,7 @@ recovery".
 
 ![kusama accounts initial recoverable2](assets/kusama/kusama_make_account_initial.png)
 
-Once the transaction went through, some KSMs will be locked to prevent malicious behavior.
+Once the transaction went through, some KSM will be locked to prevent malicious behavior.
 
 ![](/img/recovery/social-recovery-6.png)
 
