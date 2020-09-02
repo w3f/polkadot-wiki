@@ -12,7 +12,7 @@ cryptoeconomics, and privacy areas. Anson has been actively participating in the
 since 2017 and creating video content to help different people to understand how decentralization
 could deliver us a better future.
 
-### Bill Laboon
+## Bill Laboon
 
 Bill Laboon is the Technical Education Lead at the Web3 Foundation, after spending the previous five
 years teaching Computer Science at the University of Pittsburgh. He is the author of two books: A
