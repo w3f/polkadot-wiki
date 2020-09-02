@@ -1,7 +1,7 @@
 name: Deploy Kusama
 
 # Triggered on commits to the main branch.
-on: 
+on:
   push:
     branches:
       - master
@@ -12,6 +12,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+
+      - name: Clone and run the site
+        run: |
+          sudo apt-get install netcat
+          yarn
+          yarn kusama:start &
+          while ! nc -z localhost 3000; do
+              sleep 1
+              echo waiting for website up...
+          done
+          yarn kusama:pdf
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: kusama-wiki
+          path: kusama-guide/static/kusama-wiki.pdf
+
       - name: Build
         run: yarn; yarn kusama:build
         env:
@@ -22,4 +40,3 @@ jobs:
         with:
           path: ./kusama-guide/build
           timeout: 120000
-

@@ -57,5 +57,5 @@ involuntarily chilled, you will need to request your nominators to re-issue the 
 order to start nominating you again.
 
 [chill extrinsic]:
-  https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_staking/enum.Call.html#variant.chill
+  https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_staking/enum.Call.html#variant.chill
 [accounts]: learn-staking#accounts

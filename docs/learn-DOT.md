@@ -9,23 +9,24 @@ sidebar_label: DOT
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
 Bitcoin or ether is the native token of the Ethereum blockchain.
 
-Kusama tokens (KSM) and DOT tokens both have 12 decimal places, with the smallest unit being the
-Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest
-possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while
-the DOT is like a bitcoin or an ether.
+The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck (a
+reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible
+distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is
+like a bitcoin or an ether. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT
+(also known as _New DOT_) are equal to 1e10 Planck.
 
 ### Polkadot
 
 | Unit            | Decimal Places |
 | --------------- | -------------- |
 | Planck          | 1              |
-| Point           | 3              |
-| Microdot (uDOT) | 6              |
-| Millidot (mDOT) | 9              |
-| Dot (DOT)       | 12             |
+| Microdot (uDOT) | 4              |
+| Millidot (mDOT) | 7              |
+| Dot (DOT)       | 10             |
 
-_Note: This will change at block #1,248,328. See [Redenomination of DOT](redenomination) for more
-details._
+_Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck,
+just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)".
+See [Redenomination of DOT](redenomination) for more details._
 
 ### Kusama
 

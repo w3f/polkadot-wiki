@@ -37,20 +37,18 @@ class Footer extends React.Component {
           </a>
           <div>
             <p className="homepage-font">
-              Kusama is an experimental <br/>community research and<br/> development network.
+              Kusama is an experimental <br />
+              community research and
+              <br /> development network.
             </p>
-            <a 
+            <a
               href="https://guide.kusama.network/docs/en/kusama-index"
               target="_blank"
               className="homepage-font"
             >
               Docs
             </a>
-            <a 
-              href="https://kusama.network/" 
-              target="_blank"
-              className="homepage-font"
-            >
+            <a href="https://kusama.network/" target="_blank" className="homepage-font">
               Kusama Network
             </a>
             <a
@@ -61,17 +59,25 @@ class Footer extends React.Component {
             >
               Twitter
             </a>
+            <a
+              href="https://matrix.to/#/!HfRYKXBoPmDBCAWUEJ:polkadot.builders"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="homepage-font"
+            >
+              Kusama Watercooler (Element Chat)
+            </a>
           </div>
           {this.props.config.twitterUsername && (
             <div className="social">
-              <a
-                href={`https://twitter.com/polkadotnetwork}`}
-                className="twitter-follow-button"
-              >
+              <a href={`https://twitter.com/polkadotnetwork}`} className="twitter-follow-button">
                 Follow @{this.props.config.twitterUsername}
               </a>
             </div>
           )}
+          <a href="/kusama-wiki.zip" target="_blank" rel="noreferrer noopener">
+            Download this Guide as PDF
+          </a>
         </section>
 
         <section className="row">
@@ -89,7 +95,7 @@ class Footer extends React.Component {
               cookieSettings.onclick = function() {
                 return klaro.show();
               };
-              `
+              `,
             }}
           />
         </section>

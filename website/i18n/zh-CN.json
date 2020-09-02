@@ -93,10 +93,6 @@
         "title": "Web3 Foundation Grantees",
         "sidebar_label": "Grants"
       },
-      "index": {
-        "title": "维基索引",
-        "sidebar_label": "维基索引"
-      },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
         "sidebar_label": "Adverserial Cheatsheet"
@@ -221,10 +217,6 @@
         "title": "Parachain Implementer's Guide",
         "sidebar_label": "Parachain Implementer's Guide"
       },
-      "learn-introduction": {
-        "title": "Polkadot",
-        "sidebar_label": "Polkadot"
-      },
       "learn-keys": {
         "title": "密匙",
         "sidebar_label": "密匙"
@@ -257,14 +249,6 @@
         "title": "随机性",
         "sidebar_label": "随机性"
       },
-      "learn-relevant-links": {
-        "title": "相关链接",
-        "sidebar_label": "相关链接"
-      },
-      "learn-roadmap": {
-        "title": "路线图",
-        "sidebar_label": "路线图"
-      },
       "learn-security": {
         "title": "网络安全",
         "sidebar_label": "网络安全"
@@ -285,9 +269,9 @@
         "title": "交易费用",
         "sidebar_label": "交易费用"
       },
-      "learn-transactions": {
-        "title": "Transactions",
-        "sidebar_label": "Transactions"
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
       },
       "learn-treasury": {
         "title": "财政库",
@@ -351,11 +335,11 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "验证人指南"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "maintain-guides-how-to-validate-polkadot": {
         "title": "运行验证人 (Polkadot)",
-        "sidebar_label": "验证人指南"
+        "sidebar_label": "How to run a Validator on Polkadot"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
@@ -427,7 +411,7 @@
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "验证人指南"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "redenomination": {
         "title": "Redenomination of DOT",

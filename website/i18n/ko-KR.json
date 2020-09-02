@@ -93,10 +93,6 @@
         "title": "Web3 Foundation Grantees",
         "sidebar_label": "Grants"
       },
-      "index": {
-        "title": "위키 목록",
-        "sidebar_label": "위키 목록"
-      },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
         "sidebar_label": "Adverserial Cheatsheet"
@@ -221,10 +217,6 @@
         "title": "Parachain Implementer's Guide",
         "sidebar_label": "Parachain Implementer's Guide"
       },
-      "learn-introduction": {
-        "title": "폴카닷",
-        "sidebar_label": "폴카닷"
-      },
       "learn-keys": {
         "title": "폴카닷 키들",
         "sidebar_label": "폴카닷 키들"
@@ -257,14 +249,6 @@
         "title": "무작위 선택",
         "sidebar_label": "무작위 선택"
       },
-      "learn-relevant-links": {
-        "title": "링크",
-        "sidebar_label": "링크"
-      },
-      "learn-roadmap": {
-        "title": "로드맵",
-        "sidebar_label": "로드맵"
-      },
       "learn-security": {
         "title": "네트워크의 보안",
         "sidebar_label": "네트워크의 보안"
@@ -285,9 +269,9 @@
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
       },
-      "learn-transactions": {
-        "title": "Transactions",
-        "sidebar_label": "Transactions"
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
       },
       "learn-treasury": {
         "title": "재무관리",
@@ -351,11 +335,11 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "검증자 노드를 돌려보세요 (쿠사마)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "maintain-guides-how-to-validate-polkadot": {
         "title": "Run a Validator (Polkadot)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Polkadot"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "검증자 노드를 돌려보세요 (알렉산더)",
@@ -427,7 +411,7 @@
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "redenomination": {
         "title": "Redenomination of DOT",

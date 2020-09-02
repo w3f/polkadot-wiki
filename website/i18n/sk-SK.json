@@ -93,10 +93,6 @@
         "title": "Web3 Foundation Grantees",
         "sidebar_label": "Grants"
       },
-      "index": {
-        "title": "Wiki Index",
-        "sidebar_label": "Wiki Index"
-      },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
         "sidebar_label": "Adverserial Cheatsheet"
@@ -221,10 +217,6 @@
         "title": "Parachain Implementer's Guide",
         "sidebar_label": "Parachain Implementer's Guide"
       },
-      "learn-introduction": {
-        "title": "Polkadot",
-        "sidebar_label": "Polkadot"
-      },
       "learn-keys": {
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
@@ -257,14 +249,6 @@
         "title": "Randomness",
         "sidebar_label": "Randomness"
       },
-      "learn-relevant-links": {
-        "title": "Links",
-        "sidebar_label": "Links"
-      },
-      "learn-roadmap": {
-        "title": "Roadmap",
-        "sidebar_label": "Roadmap"
-      },
       "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
@@ -285,9 +269,9 @@
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
       },
-      "learn-transactions": {
-        "title": "Transactions",
-        "sidebar_label": "Transactions"
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
       },
       "learn-treasury": {
         "title": "Treasury",
@@ -351,11 +335,11 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "maintain-guides-how-to-validate-polkadot": {
         "title": "Run a Validator (Polkadot)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Polkadot"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "Run a Validator (Alexander)",
@@ -427,7 +411,7 @@
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "redenomination": {
         "title": "Redenomination of DOT",

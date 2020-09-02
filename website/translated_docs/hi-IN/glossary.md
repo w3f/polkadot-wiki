@@ -56,9 +56,9 @@ The process of a group of entities to agree on a particular data value (such as 
 
 A generic term for a decentralized application, that is, one that runs as part of a distributed network as opposed to being run on a specific system or set of systems.
 
-## DOTs
+## DOT
 
-The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are connected the Relay Chain).
+The native token for Polkadot. DOT serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOT while they are connected the Relay Chain).
 
 ## Duty Roster
 
@@ -90,7 +90,7 @@ A mechanism that determines finality.
 
 ## Fisherman
 
-Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
+Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must stake a small amount of DOT but can be rewarded greatly if they find bad behavior.
 
 ## Frame
 
@@ -121,6 +121,10 @@ A permanent diversion of a blockchain that can occur quickly due to a high prior
 ## Hard Spoon
 
 Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of _the same blockchain_.
+
+## Horizontal Relay-routed Message Passing
+
+Horizontal Relay-routed Message Passing, also known as HRMP, is a precursor to the complete XCMP implementation, that mimics the same interface and semantics of XCMP. It is similar to XCMP except for how it stores all messages in the Relay Chain storage, therefore making it more expensive and demanding more resources than XCMP. The plan is to retire HRMP once the implementation of XCMP is complete.
 
 ## Inherent
 
@@ -220,7 +224,7 @@ A random seed is pseudo-random number available on-chain. It is used in various 
 
 ## Referendum
 
-A vote on whether or not a proposal should be accepted by the network. Referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held) and the amount of time they are willing to lock their tokens.
+A vote on whether or not a proposal should be accepted by the network. Referenda may be initiated by the Governance Council, by a member of the public, or as the result of a previous proposal. Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOT held) and the amount of time they are willing to lock their tokens.
 
 ## Relay chain
 
@@ -260,7 +264,7 @@ The security model that Polkadot uses whereby all chains are equally secured. Th
 
 ## Slashing
 
-The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
+The removal of a percentage of an account's DOT as a punishment for a validator acting maliciously or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
 ## Soft Fork
 
@@ -268,7 +272,7 @@ A backwards compatible change to client code that causes upgraded clients to sta
 
 ## Staking
 
-The act of bonding tokens (for Polkadot, DOTs) by putting them up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOTs in order to secure the network.
+The act of bonding tokens (for Polkadot, DOT) by putting them up as "collateral" for a chance to produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOT in order to secure the network.
 
 ## State transition function
 
@@ -288,11 +292,15 @@ An extrinsic that is signed. Transactions are gossiped on the network and incur 
 
 ## Validator
 
-A node that secures the Relay Chain by staking DOTs, validating proofs from collators on parachains and voting on consensus along with other validators.
+A node that secures the Relay Chain by staking DOT, validating proofs from collators on parachains and voting on consensus along with other validators.
+
+## Vertical Message Passing
+
+Vertical message passing consists of two separate types of message passing, Downward Message Passing (DMP) and Upward Message Passing (UMP). Downward messages pass from the Relay Chain to a parachain, although they may also originate from another parachain via [HRMP](#horiztonal-relay-routed-message-passing). Upward messages originate from parachains and go up to the Relay Chain via runtime entry points.
 
 ## Voting
 
-The process of stakeholders determining whether or not a referendum should pass. Votes are weighted both by the number of DOTs that the stakeholder account controls and the amount of time they are willing to lock their DOTs.
+The process of stakeholders determining whether or not a referendum should pass. Votes are weighted both by the number of DOT that the stakeholder account controls and the amount of time they are willing to lock their DOT.
 
 ## Wallet
 

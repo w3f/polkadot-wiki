@@ -6,9 +6,11 @@ sidebar_label: Polkadot Protocol
 
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be specific to Polkadot, notable differences to other chains that you may have worked with, and practical information for dealing with the chain.
 
-## DOT Tokens
+## Tokens
 
-- **Token decimals:** See [Redenomination](#redenomination)
+- **Token decimals:**
+  - Polkadot (DOT): 10 (See [Redenomination](#redenomination))
+  - Kusama (KSM): 12
 - **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
 
@@ -16,16 +18,11 @@ This page serves as a high-level introduction to the Polkadot protocol with term
 
 Polkadot conducted a poll, which ended on 27 July 2020 (block 888,888), in which the stakeholders decided to redenominate the DOT token. The redenomination does not change the number of base units (called "plancks" in Polkadot) in the network. The only change is that a single DOT token will be 1e10 plancks instead of the original 1e12 plancks. See the Polkadot blog posts explaining the [details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the [results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
 
-The redenomination will take effect 72 hours after transfers are enabled. The projected block numbers and times are:
+The redenomination took effect 72 hours after transfers were enabled, at block 1,248,326, which occurred at approximately 16:50 UTC on 21 Aug 2020.
 
-| Event             | Block Number |  Earliest Time   |
-|:----------------- |:------------:|:----------------:|
-| Transfers enabled |  1,205,128   | 18 Aug 13:15 UTC |
-| Redenomination    |  1,248,328   | 21 Aug 13:15 UTC |
+Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT (old)" to differentiate DOT of the original denomination. For a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_" to clearly indicate that you have made the change. After sufficient time has elapsed post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would be:
 
-Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT (old)" to differentiate DOTs of the original denomination. This change can be made immediately. For a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_" to clearly indicate that you have made the change. After sufficient time has elapsed post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would be:
-
-> “On approximately August 21st at 13:15 UTC (block number 1,248,328), the DOT token will undergo a redenomination. New DOTs will be 100x smaller than DOTs (old). Therefore, your DOT balance will be 100x higher. The percentage of the DOTs you own relative to total supply will be unchanged. See the Polkadot [blog post](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) for more information.”
+> “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token underwent a redenomination from its original sale. New DOT are 100x smaller than DOT (old). Therefore, your DOT balance is 100x higher and the price per DOT is 100x lower. The percentage of the DOT you own relative to total supply is unchanged. This will not affect the total value of your position. See the Polkadot blog post for more information.”
 
 If you require assistance with redenomination, please contact redenomination@web3.foundation.
 
@@ -55,17 +52,19 @@ Note that the address for a secp256k1 key is the SS58 encoding of the _hash of t
 
 ## Existential Deposit
 
-Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce reset.
+Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 0.01 KSM.
+
+Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful withdrawals.
 
 Wallets and custodians who track account nonces for auditing purposes should take care not to have accounts reaped, as users could refund the address and try making transactions from it. The Balances pallet provides a `transfer_keep_alive` function that will return an error and abort rather than make the transfer if doing so would result in reaping the sender's account.
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
-Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
+Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in staking and governance, for example. Reserved balance represents funds that have been set aside by some operation and still belong to the account holder, but cannot be used.
 
-Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks can operate on the same account, but they overlap rather than add. Locks are automatically added onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these are not customizable. For example, an account could have a free balance of 200 DOTs with two locks on it: 150 DOTs for `Transfer` purposes and 100 DOTs for `Reserve` purposes. The account could not make a transfer that brings its free balance below 150 DOTs, but an operation could result in reserving DOTs such that the free balance is below 150, but above 100 DOTs.
+Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks can operate on the same account, but they overlap rather than add. Locks are automatically added onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these are not customizable. For example, an account could have a free balance of 200 DOT with two locks on it: 150 DOT for `Transfer` purposes and 100 DOT for `Reserve` purposes. The account could not make a transfer that brings its free balance below 150 DOT, but an operation could result in reserving DOT such that the free balance is below 150, but above 100 DOT.
 
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 
@@ -73,9 +72,9 @@ Vesting is another abstraction that uses locks on free balance. Vesting sets a l
 
 More info:
 
-- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0-rc5/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0-rc5/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_vesting/struct.Vesting.html)
+- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0-rc6/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0-rc6/frame_support/traits/enum.WithdrawReason.html)
+- [Vesting](https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
 
@@ -93,7 +92,7 @@ Inherents contain information that is not provably true, but validators agree on
 
 Signed transactions contain a signature of the account that issued the transaction and stands to pay a fee to have the transaction included on chain. Because the value of including signed transactions on-chain can be recognized prior to execution, they can be gossiped on the network between nodes with a low risk of spam. Signed transactions fit the concept of a transaction in Ethereum or Bitcoin.
 
-Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For example, when a user claims their DOTs from the Ethereum DOT indicator contract to a new DOT address, the new address doesn't yet have any funds with which to pay fees.
+Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For example, when a user claims their DOT from the Ethereum DOT indicator contract to a new DOT address, the new address doesn't yet have any funds with which to pay fees.
 
 ### Transaction Mortality
 
@@ -119,11 +118,13 @@ Imagine this contrived example with a [reaped account](#existential-deposit). Th
 
 In addition, not every extrinsic in a Substrate-based chain comes from an account as a public/private key pair; Substrate, rather, has the concept of dispatch “origin”, which could be created from a public key account, but could also form from other means such as governance. These origins do not have a nonce associated with them the way that an account does. For example, governance might dispatch the same call with the same arguments multiple times, like “increase the validator set by 10%.” This dispatch information (and therefore its hash) would be the same, and the hash would be a reliable representative of the call, but its execution would have different effects depending on the chain’s state at the time of dispatch.
 
-The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
+The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
 
 ### Events
 
 While extrinsics represent information from the outside world, events represent information from the chain. Extrinsics can trigger events. For example, the Staking pallet emits a `Reward` event when claiming staking rewards to tell the user how much the account was credited.
+
+If you want to monitor deposits into an address, keep in mind that several transactions can initiate a balance transfer (such as `balances.transferKeepAlive` and a `utility.batch` transaction with a transfer inside of it). Only monitoring `balances.transfer` transactions will not be sufficient. Make sure that you monitor events in each block for events that contain your addresses of interest. Monitor events instead of transaction names to ensure that you can properly credit deposits.
 
 ### Fees
 

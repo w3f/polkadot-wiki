@@ -6,7 +6,7 @@ sidebar_label: Cumulus
 
 > Cumulus 云像点状浮在空中，跟这个项目很相像（因为以 Cumulus 云为原型故得名——待项目发展得更酷，我们可能会对它重新命名，敬请期待。）
 
-[Cumulus](https://github.com/paritytech/cumulus)是对 Substrate 的扩展，可以轻松将任何 Substrate 构建的 runtime 转换为与 Polkadot 兼容的平行链。
+[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runti me into a Polkadot compatible parachain.
 
 ## 组件
 
@@ -31,3 +31,4 @@ runtime::register_validate_block!(Block, BlockExecutor);
 ## 资源
 
 - [以太坊社区大会上 Rob 介绍 Cumulus 的谈话](https://www.youtube.com/watch?v=thgtXq5YMOo)
+- [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot co-founder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.

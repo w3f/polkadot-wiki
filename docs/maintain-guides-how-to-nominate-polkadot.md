@@ -22,8 +22,6 @@ being slashed if the validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
-> Until transfers are enabled, you may need to use the same account for stash and controller.
-
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
@@ -142,8 +140,8 @@ staking model.
 
 `NUMBER_OF_TOKENS`: The number of DOT you would like to stake to the network.
 
-> **Note**: DOT has twelve decimal places and is always represented as an integer with zeroes at the
-> end. So 1 DOT = 1,000,000,000,000 units.
+> **Note**: DOT has ten decimal places and is always represented as an integer with zeroes at the
+> end. So 1 DOT = 10,000,000,000 units.
 
 `REWARD_DESTINATION`:
 

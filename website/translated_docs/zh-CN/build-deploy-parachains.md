@@ -12,7 +12,7 @@ sidebar_label: 如何部署平行链
 
 ## 如何部署Adder平行链
 
-**现在需要至少拥有5 DOTs从而创建公投。**
+**You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOT.**
 
 The `adder` parachain is a simple parachain that will keep a value in storage and add to this value as messages are sent to it. It can be found in the Polkadot repository under the `test-parachains` folder.
 
@@ -70,7 +70,7 @@ Hex: 0x0000000000000000000000000000000000000000000000000000000000000000000000000
 
 Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 
-在id栏位输入平行链的`id`，在这个简单的adder情况，将会是`100`。在`code`栏位，按下页面按钮之后你可以直接上传你之前编译好的`adder.wasm`二进制档案。在`initial_head_data`，你需要复制和贴下你从校对人取的Hex数据。在`value`栏位，你需要输入最小要求的数值从而创建公投，在Alexander测试网络暂时_是5 DOTs_。
+In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOT_ on the Alexander testnet.
 
 ![registering a parachain](assets/parachain/register.png)
 
