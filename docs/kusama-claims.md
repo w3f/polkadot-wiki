@@ -244,7 +244,6 @@ period balance transfers will not be enabled.
 
 #### Verifying your Claim
 
-
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
 immediately.
 
