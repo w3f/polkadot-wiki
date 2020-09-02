@@ -30,20 +30,20 @@ Polkawallet mobile wallet, although it requires an extra step to generate Kusama
 1. Install the Polkadot{.js} extension from the
    [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
    or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
-1. Click on the settings button to change the network to "Kusama (canary)".
+2. Click on the settings button to change the network to "Kusama (canary)".
    <img src="/img/kusama/kusama_polkadotjs_add_account-1.png" width=50% style="margin-left: 70px;"/>
-1. Create a new account by clicking on "Create new account (root or derived)".
+3. Create a new account by clicking on "Create new account (root or derived)".
    <img src="/img/kusama/kusama_polkadotjs_create.png" width=50% style="margin-left: 70px;"/>
-1. Uncheck the option to create an account dervied from another seed.
+4. Uncheck the option to create an account dervied from another seed.
    <img src="/img/kusama/kusama_polkadotjs_uncheck.png" width=50% style="margin-left: 70px;"/>
-1. Copy the seed phrase and store it somewhere safe. Don't share the seed phrase with anyone, you
+5. Copy the seed phrase and store it somewhere safe. Don't share the seed phrase with anyone, you
    can use it to access your account if you forget your password or want to import your account
    again.
    <img src="/img/kusama/kusama_polkadotjs_mnemonicseed.jpg" width=50% style="margin-left: 70px;"/>
-1. Enter a name for the account and type a strong password (at least 6 characters).
+6. Enter a name for the account and type a strong password (at least 6 characters).
    <img src="/img/kusama/kusama_polkadotjs_final_account.png" width=50% style="margin-left: 70px;"/>
-1. Click on "Add the account with the generated seed".
-1. You can copy the account's address to the clipboard by clicking on its identicon.
+7. Click on "Add the account with the generated seed".
+8. You can copy the account's address to the clipboard by clicking on its identicon.
 
 ### Using Subkey
 
