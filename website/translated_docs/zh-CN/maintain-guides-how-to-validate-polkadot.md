@@ -94,7 +94,7 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.8` with the latest build (i.e., the highest number). You can also find the latest Polkadot version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command (`git tag | grep "$v\0\.8"` - note that output is sorted ASCII-betically, _not_ numerically or chronologically) or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
 
 > 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
 
@@ -102,7 +102,8 @@ You should generally use the latest **0.8.x** tag. At the time of writing, this 
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 git tag | grep "$v\0\.8"
-git checkout v0.8.8
+echo Get the latest version and replace VERSION (below) with it.
+git checkout VERSION
 ./scripts/init.sh
 cargo build --release
 ```
@@ -179,7 +180,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 > **注意:** Session 密钥是共识的关键，因此如果不确定节点是否具有进行` setKeys `交易 当前 session 密钥，则可以使用以下之一: 有两种可用的 RPC 查询节点的方法: [ hasKey ](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)检查特定密钥，或[ hasSessionKeys ](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)检查完整的 session key 公钥字串。
 
-节点同步好后，请按 Ctrl-C 停止该程序。 在终端机提示下，您现在将开始在验证人模式下运行节点，并带有允许进行某些高级操作所需不安全 RPC 调用的选项。
+Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node.
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry"
@@ -209,7 +210,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 结果将是十六进制编码的 "result"。這结果是四个公钥的合并。保存结果供后续使用。
 
-此时您可以重新启动节点，省略`---unsafe-rpc-expose `选项，因为不再需要它。
+You can restart your node at this point.
 
 ### 提交` setKeys `交易
 
