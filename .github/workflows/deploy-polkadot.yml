@@ -15,7 +15,7 @@ jobs:
 
       - name: Clone and run the site
         run: |
-          apt-get install nc
+          sudo apt-get install netcat
           yarn
           yarn polkadot:start &
           while ! nc -z localhost 3000; do

@@ -86,7 +86,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMB
 
 `NUMBER_OF_TOKENS`:: 您想抵押到网络的 DOT 数量。
 
-> **Note**: DOT has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 DOT = 1,000,000,000,000 units.
+> **Note**: DOT has ten decimal places and is always represented as an integer with zeroes at the end. So 1 DOT = 10,000,000,000 units.
 
 `REWARD_DESTINATION`:
 

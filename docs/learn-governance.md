@@ -273,10 +273,10 @@ cancelling uncontroversially dangerous or malicious referenda, and electing the 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
 if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time.
-Council motions which pass with a strict majority - but without reaching unanimous support - will
-move to public referendum under a neutral, majority-carries voting scheme. In the case that all
-members of the council vote in favor of a motion, the vote is considered unanimous and becomes a
-referundum with negative adaptive quorum biasing.
+Council motions which pass with a 3/5 (60%) super-majority - but without reaching unanimous
+support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
+case that all members of the council vote in favor of a motion, the vote is considered unanimous and
+becomes a referundum with negative adaptive quorum biasing.
 
 A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if
 there is an issue found late in a referendum's proposal such as a bug in the code of the runtime

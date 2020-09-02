@@ -8,7 +8,7 @@ The Kusama network is Polkadot's experimental, community-focused R&D network. If
 indicator token at the time of the genesis block of Kusama, you are entitled to claim an equivalent
 amount of KSM on the Kusama network.
 
-You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator
+You can claim KSM by signing a message with the Ethereum account that holds your DOT indicator
 tokens. There is no deadline for claiming KSM.
 
 ## Step 1. Create a Kusama account
@@ -171,7 +171,7 @@ There are two methods to claim KSM.
 ### 1. DOT Holders:
 
 Those who participated in the Polkadot sales and have been allocated DOT indicator tokens can claim
-a proportional amount of KSMs on the Kusama Network.
+a proportional amount of KSM on the Kusama Network.
 
 To do this you must sign a message containing the address of your Kusama account. You can do this by
 using the Polkadot UI [Claims app](https://polkadot.js.org/apps/#/claims).
@@ -195,12 +195,12 @@ releases of the desktop app on their
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for
 maximum security), you can start by navigating to the Claims app on the Polkadot JS UI. Select the
-account you would like to claim the KSMs into and click the blue "Continue" button to proceed. Your
+account you would like to claim the KSM into and click the blue "Continue" button to proceed. Your
 screen should look something like this:
 
 ![Claim Step 1](assets/kusama/claim/claim-1.png)
 
-The hex encoded string that follows the sentence: "Pay KSMs to the Kusama account:" is the
+The hex encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the
 hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key
 is correct you can use the `subkey` tool to inspect your address.
 
@@ -219,7 +219,7 @@ Polkadot JS UI and click "Confirm Claim."
 
 ![Claim Step 3](assets/kusama/claim/claim-3.png)
 
-At this point you will see a success message if everything went right and your KSMs will now be in
+At this point you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama
 network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch
 period balance transfers will not be enabled.
@@ -228,7 +228,7 @@ period balance transfers will not be enabled.
 
 #### Verifying your Claim
 
-After you make an on-chain claim for KSMs, your balance should be updated on the Polkadot UI
+After you make an on-chain claim for KSM, your balance should be updated on the Polkadot UI
 immediately.
 
 Having trouble? Get support in the KSM
