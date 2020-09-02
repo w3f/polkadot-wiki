@@ -26,7 +26,6 @@ application.
 
 ### Supported Wallets
 
-
 | Wallet Name                                                        | Development State | Team Name    | Description                            |
 | ------------------------------------------------------------------ | ----------------- | ------------ | -------------------------------------- |
 | [Signer](https://www.parity.io/signer/)                            | Live              | Parity       | IOS and Android                        |
@@ -40,7 +39,7 @@ application.
 | [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit       | iOS and Android                        |
 | [AirGap](https://airgap.it/)                                       | Live              | AirGap       | IOS, Android, MacOS, Windows and Linux |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo         | IOS and Android                        |
-| [SafePal](https://www.safepal.io/)                                 | Live              | SafePal     | Hardware                               |
+| [SafePal](https://www.safepal.io/)                                 | Live              | SafePal      | Hardware                               |
 | [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks     | Browser extension                      |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask     | IOS, Android, and browser extension    |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle      | Browser extension                      |
