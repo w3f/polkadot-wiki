@@ -52,7 +52,7 @@ any questions if anything is unclear.
 
 ### 1. Bid Phase
 
-> Note: If you want to bid to joing the society, you will need to be on the Extrinsics page for the
+> Note: If you want to bid to join the society, you will need to be on the Extrinsics page for the
 > following functions. The page is found under "Developer" > "Extrinsics" in Polkadot-JS UI
 > navigation. Ensure that you are on the Kusama network by clicking on the network in the top-left
 > corner
