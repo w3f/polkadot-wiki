@@ -29,6 +29,6 @@ When you become an active validator you will also need to reset your validator p
 If a validator was unresponsive or found to have committed a slashable offense within two Eras, the validator will be removed from the active set in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it is necessary for the nominators that were previously nominating that validator to re-issue the nominate call.
 
 Nominators who have the option to renominate an involuntarily chilled validator will have a display row to do so using Polkadot-JS Apps. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Redenomination required". If your validator has been involuntarily chilled, you will need to request your nominators to re-issue the nominate call in order to start nominating you again.
-  https://substrate.dev/rustdocs/v2.0.0-rc5/pallet_staking/enum.Call.html#variant.chill
+  https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_staking/enum.Call.html#variant.chill
 
 [accounts]: learn-staking#accounts

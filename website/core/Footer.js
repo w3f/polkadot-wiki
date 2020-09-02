@@ -43,8 +43,8 @@ class Footer extends React.Component {
             >
               Stack Overflow
             </a>
-            <a href="https://riot.w3f.tech/#/room/#polkadot-watercooler:matrix.org">
-              Polkadot Watercooler (Riot Chat)
+            <a href="https://matrix.to/#/!FdCojkeGzZLSEoiecf:web3.foundation">
+              Polkadot Watercooler (Element Chat)
             </a>
             <a href="https://twitter.com/polkadotnetwork" target="_blank" rel="noreferrer noopener">
               Twitter

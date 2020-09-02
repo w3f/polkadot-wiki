@@ -16,6 +16,12 @@ channels.
 - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) -
   Information on hosting meetups, applying for funding, and materials for running it.
 
+### Events
+
+The Web3 Foundation hosts many events online and in-person. To check out our current and past
+events, please refer to our public
+[Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
+
 ## Riot Chats
 
 ### Polkadot
