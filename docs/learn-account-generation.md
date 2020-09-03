@@ -360,7 +360,7 @@ lets you generate addresses which contain some specific substring.
 Components of vanity generator:
 
 - `Search for`: Some substring that you would like to include in your new address.
-- `case sensitive`: Yes or no
+- "case sensitive": Yes if the substring will be case sensitive or no if not.
 - `keypair crypto type`: Specifies the type of account you'd like to generate, Schnorrkel is
   recommended in most cases for its securtity.
 
