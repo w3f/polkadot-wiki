@@ -16,7 +16,7 @@ You will use your existing account to call `createRecovery` to select a list of 
 
 ![](/img/recovery/social-recovery-diag-1.png)
 
-First, go to [PolkadotJS->Accounts](https://polkadot.js.org/apps/#/accounts) page that shows all available accounts on your browser's local storage and PolkadotJS extension. To create a recoverable account, make sure that you have some KSMs to pay for the transaction fees. You will also need some for the reserve required by the account recovery setup.
+First, go to [PolkadotJS->Accounts](https://polkadot.js.org/apps/#/accounts) page that shows all available accounts on your browser's local storage and PolkadotJS extension. To create a recoverable account, make sure that you have some KSM to pay for the transaction fees. You will also need some for the reserve required by the account recovery setup.
 
 ![](/img/recovery/social-recovery-1.png)
 
@@ -56,7 +56,7 @@ Then input the address you would like to recover in "recover this account" field
 
 ![](/img/recovery/social-recovery-5.png)
 
-Once the transaction went through, some KSMs will be locked to prevent malicious behavior.
+Once the transaction went through, some KSM will be locked to prevent malicious behavior.
 
 ![](/img/recovery/social-recovery-6.png)
 
