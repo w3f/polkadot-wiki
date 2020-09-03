@@ -80,7 +80,7 @@ there is a multisig with four different accounts inside. Two of the accounts, Al
 anonymous proxy attached to them. In the case that the multisig account wanted to add or remove Alice or Bob
 or even add in a new account into the anonymous proxy, the anonymous proxy would take care of that
 change. If a multisig wanted to modify itself without an anonymous proxy, a whole new multisig would
-be created. The use of an anonymous proxy in multisigs are useful for permisionless management.
+be created.
 
 ![anonymous mutlisig proxy](assets/multisig_proxy_diagram.png)
 
