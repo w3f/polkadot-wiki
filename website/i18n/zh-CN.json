@@ -129,13 +129,13 @@
         "title": "Kusama",
         "sidebar_label": "主页"
       },
+      "kusama-parameters": {
+        "title": "Kusama Parameters",
+        "sidebar_label": "Parameters"
+      },
       "kusama-social-recovery": {
         "title": "Social Recovery",
         "sidebar_label": "Account Recovery"
-      },
-      "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet",
-        "sidebar_label": "参数"
       },
       "kusama-timeline": {
         "title": "Kusama 时间线",
@@ -372,6 +372,10 @@
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
+      },
+      "maintain-polkadot-parameters": {
+        "title": "Polkadot Parameters",
+        "sidebar_label": "Parameters"
       },
       "maintain-sync": {
         "title": "设置全节点",
