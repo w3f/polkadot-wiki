@@ -100,7 +100,7 @@ following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (
 chosen proxy account that you set will be the account that has the proxy on it. The selected account
 at the top is the account that will be the primary account.
 
-> Note! If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an
+> Note: If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an
 > empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
 > created.
 
