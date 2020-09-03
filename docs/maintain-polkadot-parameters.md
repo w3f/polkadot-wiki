@@ -36,7 +36,7 @@ for more details._
 | Democracy        | Time    | Slots   | Description                                                                                                                                                  |
 | ---------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Voting period    | 28 days | 403,200 | How long the public can vote on a referendum.                                                                                                                |
-| Launch period    | 28 days | 403,200 | How long the public can select which proposal to hold a referendum on. i.e., Every week, the highest-weighted proposal will be selected to have a referendum |
+| Launch period    | 28 days | 403,200 | How long the public can select which proposal to hold a referendum on, i.e., every week, the highest-weighted proposal will be selected to have a referendum. |
 | Enactment period | 28 days | 403,200 | Time it takes for a successful referendum to be implemented on the network.                                                                                  |
 
 | Council       | Time   | Slots   | Description                                                          |
