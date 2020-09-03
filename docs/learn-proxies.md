@@ -89,7 +89,7 @@ be created.
 ### Using the Polkadot-JS UI
 
 To set up a proxy, navigate to the
-[Polkadot-JS UI](https://polkadot.js.org/apps) and in the navigation tab, click on "Developer" >
+[Polkadot-JS UI](https://polkadot.js.org/apps) and click on "Developer" >
 "Extrinsics". Here we will see a page that looks similar to this:
 
 ![proxy generation](assets/polkadot_generating_proxy.png)
