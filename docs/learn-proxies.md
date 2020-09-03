@@ -121,7 +121,7 @@ up onto your screen where you will be able to select the type of proxy for that 
 
 ![proxy generation part 2](assets/polkadot_add_another_proxy.png)
 
-> Note! You cannot create an anonymous function from the Accounts page, you must be on the
+> Note: You cannot create an anonymous function from the Accounts page, you must be on the
 > Extrinsics page.
 
 ### Removing Proxies
