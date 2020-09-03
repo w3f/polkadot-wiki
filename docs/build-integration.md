@@ -29,8 +29,8 @@ Each page in the guide, especially the Node Interaction and Transaction Construc
 list several options to accomplish the same thing. We want you to know your options and choose the
 solution that is best for you.
 
-That said, the easiest path to integration is almost always to use Substrate API Sidecar to interact
-with your node and TxWrapper to construct and sign transactions. Parity and Web3 Foundation will be
+That said, the easiest path to integration is almost always to use [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar) to interact
+with your node and [TxWrapper](https://github.com/paritytech/txwrapper) to construct and sign transactions. Parity and Web3 Foundation will be
 able to provide the best support if you use these tools.
 
 If your team would like support, join some of our [community channels](community) or contact
