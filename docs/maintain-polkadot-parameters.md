@@ -44,7 +44,7 @@ for more details._
 | Term duration | 7 days | 100,800 | The length of a council member's term until the next election round. |
 | Voting period | 7 days | 100,800 | The council's voting period for motions.                             |
 
-The Polkadot Council consists of up to 13 members and up to 20 runners-up.
+The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 | Technical committee     | Time    | Slots   | Description                                                                                    |
 | ----------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------- |
