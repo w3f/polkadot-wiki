@@ -129,13 +129,13 @@
         "title": "Kusama",
         "sidebar_label": "Home"
       },
+      "kusama-parameters": {
+        "title": "Kusama Parameters",
+        "sidebar_label": "Parameters"
+      },
       "kusama-social-recovery": {
         "title": "Social Recovery",
         "sidebar_label": "Account Recovery"
-      },
-      "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet",
-        "sidebar_label": "Parameters"
       },
       "kusama-timeline": {
         "title": "Kusama Timeline",
@@ -372,6 +372,10 @@
       "maintain-nominator": {
         "title": "노미네이터",
         "sidebar_label": "노미네이터"
+      },
+      "maintain-polkadot-parameters": {
+        "title": "Polkadot Parameters",
+        "sidebar_label": "Parameters"
       },
       "maintain-sync": {
         "title": "Set up a Full Node",
