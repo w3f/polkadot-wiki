@@ -44,7 +44,7 @@ for more details._
 | Term duration | 1 day | 14,400 | The length of a council member's term until the next election round. |
 | Voting period | 1 day | 14,400 | The council's voting period for motions.                             |
 
-The Kusama Council consists of up to 19 members and up to 19 runners-up.
+The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 | Technical committee     | Time    | Slots   | Description                                                                                    |
 | ----------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------- |
