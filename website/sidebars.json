@@ -110,6 +110,7 @@
     ],
     "Maintain": [
       "maintain-index",
+	"maintain-polkadot-parameters",	
       {
         "type": "subcategory",
         "label": "Collator Guides",
