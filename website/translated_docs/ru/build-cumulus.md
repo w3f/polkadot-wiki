@@ -6,7 +6,7 @@ sidebar_label: Cumulus
 
 > Кучевые облака имеют форму точек и находятся в воздухе, как этот проект (поскольку это первоначальный прототип - ожидайте переименования, когда он станет круче.)
 
-[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runti me into a Polkadot compatible parachain.
+[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
 
 ## Компоненты
 
