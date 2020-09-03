@@ -4,7 +4,7 @@ title: Kusama Parameters
 sidebar_label: Parameters
 ---
 
-Many of these parameter values can be updated via the Governance process. If you require absolute
+Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty as to their values, it is recommended you directly check the constants by looking at the
 [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 [storage](https://polkadot.js.org/apps/#/chainstate).
