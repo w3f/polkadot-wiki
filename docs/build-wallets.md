@@ -11,7 +11,7 @@ allows for simple and easy access to private keys and signing transactions. Belo
 that support Polkadot along with their development statuses.
 
 Note that inclusion does not necessarily imply endorsement of that wallet. Polkadot support can
-provide assistance with issues related to Polkadot-JS, the Polkadot{.js} plugin, or Parity Signer.
+provide assistance with issues related to Polkadot-JS, the Polkadot{.js} extension, or Parity Signer.
 For other wallet software, you should contact the developers of that wallet.
 
 ## Encryption Enhancement
@@ -29,7 +29,7 @@ that the wallet software is using the latest version of the
 | ------------------------------------------------------------------ | ----------------- | ------------ | -------------------------------------- |
 | [Signer](https://www.parity.io/signer/)                            | Live              | Parity       | IOS and Android                        |
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity       | Browser                                |
-| [Polkadot.JS Plugin](https://github.com/polkadot-js/extension)     | Live              | Parity       | Browser extension                      |
+| [Polkadot{.js}](https://github.com/polkadot-js/extension)     | Live              | Parity       | Browser extension                      |
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet  | IOS and Android                        |
 | [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet  | Browser extension                      |
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie        | Browser extension                      |
@@ -40,7 +40,7 @@ that the wallet software is using the latest version of the
 | [SafePal](https://www.safepal.io/download)                         | Live              | SafePal      | Hardware                               |
 | [Crypto.com App](https://crypto.com/en/index.html)                 | Live              | Crypto.com   | IOS and Android                        |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo         | IOS and Android                        |
-| [Polkadot{.js}](https://github.com/EthWorks/extension)             | Building          | EthWorks     | Browser extension                      |
+| [Polkadot{.js} extension](https://github.com/EthWorks/extension)             | Building          | EthWorks     | Browser extension                      |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask     | IOS, Android, and browser extension    |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle      | Browser extension                      |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax       | Hardware                               |
