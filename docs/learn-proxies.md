@@ -88,7 +88,7 @@ be created.
 
 ### Using the Polkadot-JS UI
 
-To set up either a governance, staking, identity judgement, or any proxy, head over to the
+To set up a proxy, navigate to the
 [Polkadot-JS UI](https://polkadot.js.org/apps) and in the navigation tab, click on "Developer" >
 "Extrinsics". Here we will see a page that looks similar to this:
 
