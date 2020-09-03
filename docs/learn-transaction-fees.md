@@ -99,7 +99,7 @@ logic. Some transactions warrant limiting resources with other strategies. For e
 - Burns: A transaction may burn funds internally based on its logic. For example, a transaction may
   burn funds from the sender if it creates new storage entries, thus increasing the state size.
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16
-  validators. This limits the complexity of [Phragmen](learn-phragmen).
+  validators. This limits the complexity of [Phragmén](learn-phragmen).
 
 ## Advanced
 

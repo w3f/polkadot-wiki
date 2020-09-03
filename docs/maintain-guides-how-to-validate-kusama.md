@@ -30,7 +30,7 @@ Riot. The team and other validators are there to help answer questions and provi
 
 You can have a rough estimate on that by using the methods listed
 [here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators
-are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a
+are elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
 [nominators](learn-nominator). This means that as a minimum, you will need enough KSM to set up
 Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for
