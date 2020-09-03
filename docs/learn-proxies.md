@@ -76,7 +76,7 @@ using funds in one sole account, smaller accounts with unique roles complete tas
 stash account. This drives attention away from the main account and to proxies.
 
 Anonymous proxies, in particular, can be used for permissionless management. In this example below,
-there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob have an
+there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an
 anonymous proxy attached to it. In the case that the multisig wanted to add or remove Alice or Bob
 or even add in a new account into the anonymous proxy, the anonymous proxy would take care of that
 change. If a multisig wanted to modify itself without an anonymous proxy, a whole new multisig would
