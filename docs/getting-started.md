@@ -152,7 +152,8 @@ network, please head over to our [Kusama Guide][kusama guide].
 - [Sample Applications](build-examples-index) - Sample applications that are built on or currently
   being built for Polkadot.
 - [Contributing Guide](contributing) - Rules for contributing to the wiki.
-- [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for specific errors and problems.
+- [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
+  specific errors and problems.
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [white-paper]: https://polkadot.network/PolkaDotPaper.pdf
