@@ -15,7 +15,7 @@ _NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 
 [Polkadot Parameters](kusama-time-periods) for more details on how Kusama's parameters differ from
 Polkadot's._
 
-- Slot: 6 seconds *(generally one block per slot, although see note below)
+- Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 1 hour (600 slots x 6 seconds)
 - Session: 1 hour (6 sessions per Era)
 - Era: 6 hours (3600 slots x 6 seconds)
@@ -70,5 +70,5 @@ Burn percentage is currently `0.20%`.
 
 ### Precision
 
-KSM have 12 decimals of precision. In other words, 1e12 (1,000,000,000,000 or one trillion)
-Plancks make up a single KSM.
+KSM have 12 decimals of precision. In other words, 1e12 (1,000,000,000,000 or one trillion) Plancks
+make up a single KSM.
