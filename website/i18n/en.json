@@ -29,6 +29,10 @@
         "title": "Builder's Portal",
         "sidebar_label": "Builder's Portal"
       },
+      "build-integration": {
+        "title": "Polkadot Integration Guide",
+        "sidebar_label": "Getting Started"
+      },
       "build-node-interaction": {
         "title": "Node Interaction",
         "sidebar_label": "Node Interaction"

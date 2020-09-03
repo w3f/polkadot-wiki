@@ -90,6 +90,7 @@
         "type": "subcategory",
         "label": "Integration Guide",
         "ids": [
+          "build-integration",
           "build-protocol-info",
           "build-node-management",
           "build-node-interaction",
