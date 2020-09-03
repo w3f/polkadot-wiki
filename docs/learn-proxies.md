@@ -40,7 +40,7 @@ balance transfers (including vested transfers).
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
-> Head over to our [Governance page](maintain-guides-democracy#governance-proxies) for more
+> See [Governance](maintain-guides-democracy#governance-proxies) for more
 > information on governance proxies.
 
 ### Staking Proxies
