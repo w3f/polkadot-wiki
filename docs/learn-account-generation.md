@@ -365,7 +365,7 @@ The vanity generator takes the following parameters:
   recommended in most cases for its security.
 
 If you've filled out all details above and hit the "Start generation" button, a list of
-accounts will start generating on your screen.
+accounts will start generating on your screen.  Note that depending on the length of the substring and the processing speed of your computer, it may take some time before any accounts appear.
 
 ![Vanity Generator search](assets/polkadot_vanity_generate.png)
 
