@@ -40,8 +40,8 @@ balance transfers (including vested transfers).
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
-> See [Governance](maintain-guides-democracy#governance-proxies) for more
-> information on governance proxies.
+> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance
+> proxies.
 
 ### Staking Proxies
 
@@ -77,10 +77,10 @@ stash account. This drives attention away from the main account and to proxies.
 
 Anonymous proxies, in particular, can be used for permissionless management. In this example below,
 there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an
-anonymous proxy attached to them. In the case that the multisig account wanted to add or remove Alice or Bob
-or even add in a new account into the anonymous proxy, the anonymous proxy would take care of that
-change. If a multisig wanted to modify itself without an anonymous proxy, a whole new multisig would
-be created.
+anonymous proxy attached to them. In the case that the multisig account wanted to add or remove
+Alice or Bob or even add in a new account into the anonymous proxy, the anonymous proxy would take
+care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new
+multisig would be created.
 
 ![anonymous mutlisig proxy](assets/multisig_proxy_diagram.png)
 
@@ -88,17 +88,16 @@ be created.
 
 ### Using the Polkadot-JS UI
 
-To set up a proxy, navigate to the
-[Polkadot-JS UI](https://polkadot.js.org/apps) and click on "Developer" >
-"Extrinsics". Here we will see a page that looks similar to this:
+To set up a proxy, navigate to the [Polkadot-JS UI](https://polkadot.js.org/apps) and click on
+"Developer" > "Extrinsics". Here we will see a page that looks similar to this:
 
 ![proxy generation](assets/polkadot_generating_proxy.png)
 
-To add a proxy, click on the pallet selection dropdown menu.  The dropdown is labeled "submit the
-following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu next to it). The
-`addProxy(proxy, proxy_type)` function will need to be selected in order to add in a proxy. The
-chosen proxy account that you set will be the account that has the proxy on it. The selected account
-at the top is the account that will be the primary account.
+To add a proxy, click on the pallet selection dropdown menu. The dropdown is labeled "submit the
+following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu
+next to it). The `addProxy(proxy, proxy_type)` function will need to be selected in order to add in
+a proxy. The chosen proxy account that you set will be the account that has the proxy on it. The
+selected account at the top is the account that will be the primary account.
 
 > Note: If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an
 > empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
@@ -107,17 +106,17 @@ at the top is the account that will be the primary account.
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
 For anonymous proxies, a different function will need to be called, the
-`anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would like
-to set up if you choose, as well as the index.
+`anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would
+like to set up if you choose, as well as the index.
 
 ![proxy generation](assets/polkadot_anon_proxy.png)
 
 ### Another way to create Proxies
 
-There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" in
-the navigation and then click the "Accounts" button. For each of the accounts you have on this
-page, the three dot button will let you create a proxy by using "Add proxy". This will open up a pop
-up onto your screen where you will be able to select the type of proxy for that specific account.
+There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" in the navigation
+and then click the "Accounts" button. For each of the accounts you have on this page, the three dot
+button will let you create a proxy by using "Add proxy". This will open up a pop up onto your screen
+where you will be able to select the type of proxy for that specific account.
 
 ![proxy generation part 2](assets/polkadot_add_another_proxy.png)
 
