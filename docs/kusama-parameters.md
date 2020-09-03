@@ -15,7 +15,7 @@ _NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 
 See [Polkadot Parameters](kusama-time-periods) for more details on how Kusama's parameters differ
 from Polkadot's._
 
-- Slot / Block: 6 seconds (although see note below)
+- Slot: 6 seconds (generally one block per slot, although see note below)
 - Epoch: 1 hour (600 slots x 6 seconds)
 - Session: 1 hour (6 sessions per Era)
 - Era: 6 hours (3600 slots x 6 seconds)
