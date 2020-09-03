@@ -9,6 +9,8 @@ these messages, a tool parsing the blockchain data needs to request _chain metad
 That metadata explains how to read the messages. One such tool with a built-in parser for chain
 metadata is the [Polkadot JS Apps UI](https://polkadot.js.org/apps).
 
+If this page does not answer your question, try searching for your problem at the [Polkadot Knowledge Base](https://support.polkadot.network/) for more information on troubleshooting your issue.
+
 ## PolkadotJS Apps Explorer
 
 Here's how to find out the detailed error description through Polkadot JS Apps.
