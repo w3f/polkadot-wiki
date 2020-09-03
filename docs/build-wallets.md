@@ -11,8 +11,8 @@ allows for simple and easy access to private keys and signing transactions. Belo
 that support Polkadot along with their development statuses.
 
 Note that inclusion does not necessarily imply endorsement of that wallet. Polkadot support can
-provide assistance with issues related to Polkadot-JS, the Polkadot{.js} plugin, or Parity Signer. For
-other wallet software, you should contact the developers of that wallet.
+provide assistance with issues related to Polkadot-JS, the Polkadot{.js} plugin, or Parity Signer.
+For other wallet software, you should contact the developers of that wallet.
 
 ## Encryption Enhancement
 
