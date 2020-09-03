@@ -33,11 +33,11 @@ for more details._
 
 ### Governance
 
-| Democracy        | Time   | Slots   | Description                                                                                                                                                  |
-| ---------------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Voting period    | 7 days | 100,800 | How long the public can vote on a referendum.                                                                                                                |
+| Democracy        | Time   | Slots   | Description                                                                                                                                                   |
+| ---------------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Voting period    | 7 days | 100,800 | How long the public can vote on a referendum.                                                                                                                 |
 | Launch period    | 7 days | 100,800 | How long the public can select which proposal to hold a referendum on, i.e., every week, the highest-weighted proposal will be selected to have a referendum. |
-| Enactment period | 8 days | 115,200 | Time it takes for a successful referendum to be implemented on the network.                                                                                  |
+| Enactment period | 8 days | 115,200 | Time it takes for a successful referendum to be implemented on the network.                                                                                   |
 
 | Council       | Time  | Slots  | Description                                                          |
 | ------------- | ----- | ------ | -------------------------------------------------------------------- |
