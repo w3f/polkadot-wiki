@@ -95,7 +95,7 @@ To set up a proxy, navigate to the
 ![proxy generation](assets/polkadot_generating_proxy.png)
 
 To add a proxy, click on the pallet selection dropdown menu.  The dropdown is labeled "submit the
-following extrinsic". Select the "proxy" pallet to load in all the functions that come with it. The
+following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu next to it). The
 `addProxy(proxy, proxy_type)` function will need to be selected in order to add in a proxy. The
 chosen proxy account that you set will be the account that has the proxy on it. The selected account
 at the top is the account that will be the user primary account or stash account.
