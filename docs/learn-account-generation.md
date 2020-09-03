@@ -11,6 +11,7 @@ There are several ways to generate a Polkadot address:
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
 - [Polkadot.js Web Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
+- [Vanity Generator](#vanity-generator)
 
 > To learn more on how to create Polkadot accounts, head over to our
 > [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
@@ -348,3 +349,30 @@ computer a very small and limited scope for interacting with the Parity Signer d
 continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
+
+## Vanity Generator
+
+Vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity) that
+lets you generate addresses which contain a specific substring.
+
+![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
+
+The vanity generator takes the following parameters:
+
+- "Search for": The substring that you would like to include in your new address.
+- "case sensitive": "Yes" if the search is case sensitive; "no" if not.
+- "keypair crypto type": Specifies the type of account you'd like to generate; Schnorrkel is
+  recommended in most cases for its security.
+
+If you've filled out all details above and hit the "Start generation" button, a list of accounts
+will start generating on your screen. Note that depending on the length of the substring and the
+processing speed of your computer, it may take some time before any accounts appear.
+
+![Vanity Generator search](assets/polkadot_vanity_generate.png)
+
+The "Save" button will allow you to save on the generated accounts - they are not saved if you do
+not choose to do this. The next steps are identical to the
+[steps above on creating an account on the UI](#polkadotjs), where a password and name need to be
+filled in, and a backup file of your account will be downloaded.
+
+![Vanity Generator chosen address](assets/polkadot_save_account.png)
