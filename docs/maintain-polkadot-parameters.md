@@ -12,7 +12,7 @@ certainty as to their values, it is recommended you directly check the constants
 ### Periods of common actions and attributes
 
 _NOTE: Kusama runs 4x as fast as Polkadot, except Polkadot also has 6 second blocktimes. See
-[Kusama Parameters](kusama-time-periods) for more details on how Kusama's parameters differ from
+[Kusama Parameters](kusama-parameters) for more details on how Kusama's parameters differ from
 Polkadot's._
 
 - Slot / Block: 6 seconds (although see note below)
