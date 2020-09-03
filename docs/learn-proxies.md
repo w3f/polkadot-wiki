@@ -98,7 +98,7 @@ To add a proxy, click on the pallet selection dropdown menu.  The dropdown is la
 following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu next to it). The
 `addProxy(proxy, proxy_type)` function will need to be selected in order to add in a proxy. The
 chosen proxy account that you set will be the account that has the proxy on it. The selected account
-at the top is the account that will be the user primary account or stash account.
+at the top is the account that will be the primary account.
 
 > Note! If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an
 > empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
