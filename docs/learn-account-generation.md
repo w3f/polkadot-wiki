@@ -353,7 +353,7 @@ continue to keep your key safe.
 ## Vanity Generator
 
 Vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity) that
-lets you generate addresses which contain some specific substring.
+lets you generate addresses which contain a specific substring.
 
 ![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
 
