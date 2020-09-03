@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-polkadot
-title: Nomination Guide
-sidebar_label: Nomination Guide
+title: How to Nominate on Polkadot
+sidebar_label: How to Nominate on Polkadot
 ---
 
 > The following information applies to the Polkadot network. If you want to nominate on Kusama,

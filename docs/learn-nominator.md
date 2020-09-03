@@ -1,5 +1,5 @@
 ---
-id: maintain-nominator
+id: learn-nominator
 title: Nominator
 sidebar_label: Nominator
 ---

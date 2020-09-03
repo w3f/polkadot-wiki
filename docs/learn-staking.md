@@ -33,8 +33,8 @@ validator set.
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
 
 As a nominator, you can nominate one or more (up to 16) validator candidates that you trust to help
-you earn rewards in DOT. You can take a look at the [nominator guide](maintain-nominator) to
-understand what you are required to do when the mainnet launches.
+you earn rewards in DOT. You can take a look at the [nominator guide](learn-nominator) to understand
+what you are required to do when the mainnet launches.
 
 A validator node is required to be responsive 24/7, perform its expected duties in a timely manner,
 and avoid any slashable behavior. You can follow our
