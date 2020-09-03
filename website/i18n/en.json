@@ -31,7 +31,7 @@
       },
       "build-integration": {
         "title": "Polkadot Integration Guide",
-        "sidebar_label": "Getting Started"
+        "sidebar_label": "Integration Initiation"
       },
       "build-node-interaction": {
         "title": "Node Interaction",

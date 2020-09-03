@@ -1,14 +1,14 @@
 ---
 id: build-integration
 title: Polkadot Integration Guide
-sidebar_label: Getting Started
+sidebar_label: Integration Initiation
 ---
 
 Welcome to the Polkadot integration guide. This guide will provide all the information you need to
 get started. It targets wallets and custodians, but will also be useful to any infrastructure
-provider such as a validator or node operator.
+provider such as a validator or chain indexer.
 
-# Structure
+## Structure
 
 The guide focuses on Polkadot and Kusama, but the principles will apply to parachains and other
 Substrate-based chains. The guide contains four sections:
@@ -23,7 +23,7 @@ Substrate-based chains. The guide contains four sections:
 1. [Transaction Construction](build-transaction-construction): A guide to transaction construction,
    signing, decoding, and serialization using several available tools.
 
-# Recommendation
+## Recommendation
 
 Each page in the guide, especially the Node Interaction and Transaction Construction pages, tries to
 list several options to accomplish the same thing. We want you to know your options and choose the
