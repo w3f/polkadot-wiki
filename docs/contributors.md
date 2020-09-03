@@ -25,7 +25,7 @@ Bruno is a blockchain developer and educator from Croatia. He joined the ecosyst
 with the advent of Ethereum, and created educational resources, programming courses, tutorials and
 newsletters for budding developers of the industry. Since 2018 he had been working on one of the
 teams building the next generation of Ethereum, and since 2019 he's been a technical educator at
-Web3 Foundation, dedicated to forwarding the web3 vision and helping make sure everyone, everywhere
+Web3 Foundation, dedicated to forwarding the Web3 vision and helping make sure everyone, everywhere
 has access to the Internet of Value and Trust. Bruno is passionate about decentralization,
 censorship resistance, and transparency coupled with accountability, so he's found his passion in
 immutable ledgers of the present and future. He holds masters' degrees in Computer Science and
