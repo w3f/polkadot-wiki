@@ -16,11 +16,11 @@ other wallet software, you should contact the developers of that wallet.
 
 ## Encryption Enhancement
 
-Some recently generated wallets (JSON files) cannot be imported (restored) into older wallet
+Some recently generated `JSON` account files cannot be imported (restored) into older wallet
 software. This is due to an enhanced encryption method, which is also noticeable in a slight delay
 when encrypting/decrypting your wallet. If you are unable to load a `JSON` file, please ensure that
 you are using the latest version of the wallet software. If you are still unable to load it, ensure
-that the wallet software is using the latest version of the Polkadot API.
+that the wallet software is using the latest version of the [Polkadot API](https://polkadot.js.org/api/).
 
 ### Supported Wallets
 
