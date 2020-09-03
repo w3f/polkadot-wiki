@@ -357,7 +357,7 @@ lets you generate addresses which contain some specific substring.
 
 ![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
 
-Components of vanity generator:
+The vanity generator takes the following parameters:
 
 - "Search for": The substring that you would like to include in your new address.
 - "case sensitive": Yes if the substring will be case sensitive or no if not.
