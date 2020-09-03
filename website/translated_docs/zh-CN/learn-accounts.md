@@ -99,7 +99,7 @@ Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
 
 ## Existential Deposit and Reaping
 
-When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 0.01 DOT (old) / 1 _New DOT_ (on Polkadot mainnet) .
+When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 1 DOT (on Polkadot mainnet) .
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account will be wiped from the blockchain's state to conserve space, along with any funds in that address. You do not lose access to the reaped address - as long as you have your private key or recovery phrase, you can still use the address - but it needs a top-up of another existential deposit to be able to interact with the chain.
 

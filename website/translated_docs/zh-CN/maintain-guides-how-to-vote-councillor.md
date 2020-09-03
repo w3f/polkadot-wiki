@@ -8,7 +8,7 @@ sidebar_label: 投票给选举议员
 
 ## 投票给选举议员
 
-Voting for councillors requires you to lock your DOT / KSMs for the duration of your vote. Like the validator elections, you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid again.
+Voting for councillors requires you to lock your DOT / KSM for the duration of your vote. Like the validator elections, you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid again.
 
 > 警告: 当投票给议员时，您有责任不要把全部余额也放在预留余额。最好保持_至少_几个 KSM 来支付交易费用。
 
