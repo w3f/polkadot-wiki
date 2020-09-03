@@ -129,7 +129,7 @@ up onto your screen where you will be able to select the type of proxy for that 
 If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
 this. The `killAnonymous()` function will let you remove an anonymous proxy. Both the
 `removeProxies()` and the `removeProxy()` will remove any other type of proxy but the former will
-remove all proxies made while the other will remove one proxy, respectively.
+remove all proxies made while the latter will remove one selected proxy.
 
 ![remove proxies](assets/polkadot_remove_proxy.png)
 
