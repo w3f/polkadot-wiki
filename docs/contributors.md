@@ -14,7 +14,7 @@ could deliver us a better future.
 
 ## Bill Laboon
 
-Bill Laboon is the Technical Education Lead at the Web3 Foundation, after spending the previous five
+Bill Laboon is the Technical Education Lead at Web3 Foundation, after spending the previous five
 years teaching Computer Science at the University of Pittsburgh. He is the author of two books: A
 Friendly Introduction to Software Testing, an undergraduate textbook; and Strength in Numbers, a
 near-future novel set in a world in which cryptocurrency has eliminated traditional money.
