@@ -16,15 +16,15 @@ _NOTE: Kusama runs 4x as fast as Polkadot, except Polkadot also has 6 second blo
 Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
-- Epoch: 6 hours (3,600 slots x 6 seconds)
-- Session: 6 hours (Session and Epoch lengths are the same)
-- Era: 24 hours (4 sessions per Era, 3,600 slots x 4 epochs x 6 seconds)
+- Epoch: 4 hours (2,400 slots x 6 seconds)
+- Session: 4 hours (Session and Epoch lengths are the same)
+- Era: 24 hours (6 sessions per Era, 2,400 slots x 6 epochs x 6 seconds)
 
 | Polkadot | Time      | Slots\* |
 | -------- | --------- | ------- |
 | Slot     | 6 seconds | 1       |
-| Epoch    | 6 hours   | 3,600   |
-| Session  | 6 hours   | 3,600   |
+| Epoch    | 4 hours   | 2,400   |
+| Session  | 4 hours   | 2,400   |
 | Era      | 24 hours  | 14,400  |
 
 \*_A maximum of one block per slot can be in a canonical chain. However, occasionally a slot will be
