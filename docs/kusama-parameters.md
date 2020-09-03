@@ -12,7 +12,7 @@ certainty as to their values, it is recommended you directly check the constants
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See
-[Polkadot Parameters](kusama-time-periods) for more details on how Kusama's parameters differ from
+[Polkadot Parameters](polkadot-parameters) for more details on how Kusama's parameters differ from
 Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
@@ -36,7 +36,7 @@ for more details._
 | Democracy        | Time   | Slots   | Description                                                                                                                                                  |
 | ---------------- | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Voting period    | 7 days | 100,800 | How long the public can vote on a referendum.                                                                                                                |
-| Launch period    | 7 days | 100,800 | How long the public can select which proposal to hold a referendum on, i.e., every week, the highest-weighted proposal will be selected to have a referendum |
+| Launch period    | 7 days | 100,800 | How long the public can select which proposal to hold a referendum on, i.e., every week, the highest-weighted proposal will be selected to have a referendum. |
 | Enactment period | 8 days | 115,200 | Time it takes for a successful referendum to be implemented on the network.                                                                                  |
 
 | Council       | Time  | Slots  | Description                                                          |
