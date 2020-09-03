@@ -361,7 +361,7 @@ The vanity generator takes the following parameters:
 
 - "Search for": The substring that you would like to include in your new address.
 - "case sensitive": Yes if the substring will be case sensitive or no if not.
-- `keypair crypto type`: Specifies the type of account you'd like to generate, Schnorrkel is
+- "keypair crypto type": Specifies the type of account you'd like to generate, Schnorrkel is
   recommended in most cases for its securtity.
 
 If you've filled out all details above and hit the "Start generation" button, a long list of
