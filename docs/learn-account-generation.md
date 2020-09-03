@@ -365,7 +365,7 @@ Components of vanity generator:
   recommended in most cases for its securtity.
 
 If you've filled out all details above and hit the "Start generation" button, a long list of
-accounts will be generating on your screen.
+accounts will start generating on your screen.
 
 ![Vanity Generator search](assets/polkadot_vanity_generate.png)
 
