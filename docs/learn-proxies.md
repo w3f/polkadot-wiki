@@ -114,7 +114,7 @@ to set up if you choose, as well as the index.
 
 ### Another way to create Proxies
 
-There is also another other way you can set up a proxy on Polkadot-JS UI. Head over to "Accounts" in
+There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" in
 the navigation and then click the "Accounts" button. For each of the accounts you have on this
 page, the three dot button will let you create a proxy by using "Add proxy". This will open up a pop
 up onto your screen where you will be able to select the type of proxy for that specific account.
