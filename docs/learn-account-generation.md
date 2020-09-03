@@ -364,13 +364,15 @@ The vanity generator takes the following parameters:
 - "keypair crypto type": Specifies the type of account you'd like to generate; Schnorrkel is
   recommended in most cases for its security.
 
-If you've filled out all details above and hit the "Start generation" button, a list of
-accounts will start generating on your screen.  Note that depending on the length of the substring and the processing speed of your computer, it may take some time before any accounts appear.
+If you've filled out all details above and hit the "Start generation" button, a list of accounts
+will start generating on your screen. Note that depending on the length of the substring and the
+processing speed of your computer, it may take some time before any accounts appear.
 
 ![Vanity Generator search](assets/polkadot_vanity_generate.png)
 
-The "Save" button will allow you to save on the generated accounts - they are not saved if you do not choose to do this. The next steps
-are identical to the [steps above on creating an account on the UI](#polkadotjs), where a password
-and name need to be filled in, and a backup file of your account will be downloaded.
+The "Save" button will allow you to save on the generated accounts - they are not saved if you do
+not choose to do this. The next steps are identical to the
+[steps above on creating an account on the UI](#polkadotjs), where a password and name need to be
+filled in, and a backup file of your account will be downloaded.
 
 ![Vanity Generator chosen address](assets/polkadot_save_account.png)
