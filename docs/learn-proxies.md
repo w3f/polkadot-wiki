@@ -107,7 +107,7 @@ at the top is the account that will be the primary account.
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
 For anonymous proxies, a different function will need to be called, the
-`anonymous(proxy_type, index)`. This will let you customize what kind of anonymous proxy you'd like
+`anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would like
 to set up if you choose, as well as the index.
 
 ![proxy generation](assets/polkadot_anon_proxy.png)
