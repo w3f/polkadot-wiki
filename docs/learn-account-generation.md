@@ -364,7 +364,7 @@ The vanity generator takes the following parameters:
 - "keypair crypto type": Specifies the type of account you'd like to generate; Schnorrkel is
   recommended in most cases for its securtity.
 
-If you've filled out all details above and hit the "Start generation" button, a long list of
+If you've filled out all details above and hit the "Start generation" button, a list of
 accounts will start generating on your screen.
 
 ![Vanity Generator search](assets/polkadot_vanity_generate.png)
