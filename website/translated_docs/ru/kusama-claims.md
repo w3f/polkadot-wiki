@@ -6,7 +6,7 @@ sidebar_label: Затребовать
 
 The Kusama network is Polkadot's experimental, community-focused R&D network. If you held the DOT indicator token at the time of the genesis block of Kusama, you are entitled to claim an equivalent amount of KSM on the Kusama network.
 
-You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
+You can claim KSM by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
 
 ## Шаг 1. Создайте учётную запись Kusama
 
@@ -135,7 +135,7 @@ See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/int
 
 ### 1. Владелецы DOT:
 
-Те, кто участвовал в продажах Polkadot и владеет распределёнными токенам DOT, могут получить пропорциональное количество KSM в сети Kusama.
+Those who participated in the Polkadot sales and have been allocated DOT indicator tokens can claim a proportional amount of KSM on the Kusama Network.
 
 Для этого необходимо подписать сообщение, содержащее адрес Вашей учетной записи Kusama. Вы можете сделать это, используя интерфейс пользователя Polkadot[Claims app](https://polkadot.js.org/apps/#/claims).
 
@@ -149,11 +149,11 @@ See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/int
 
 **Обратите внимание **: гораздо безопаснее загружать и использовать приложение MyCrypto локально. Пожалуйста, не забудьте загрузить последнюю версию для Вашей операционной системы. Вы всегда можете найти самые последние версии настольного приложения на их [странице релизов](https://github.com/MyCryptoHQ/MyCrypto/releases).
 
-После того как Вы загрузили MyCrypto и запустили его локально (мы рекомендуем перевести компьютер в режим авиаперелетов,  для обеспечения максимальной безопасности), Вы можете начать с перехода к приложению Claims пользовательском интерфейсе Polkadot JS. Выберите учётную запись, на которую Вы хотели бы получить KSM, и нажмите синюю кнопку "Continue/Продолжить", чтобы продолжиь работу. Ваш экран должен выглядеть примерно так:
+Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on the Polkadot JS UI. Select the account you would like to claim the KSM into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
 ![Получить шаг 1](assets/kusama/claim/claim-1.png)
 
-Шестнадцатеричная кодированная строка, которая следует за предложением: "Pay KSMs to the Kusama account/Оплатить KSM на счет Kusama:" - это открытый ключ в шестнадцатеричной кодировке Вашего счета Kusama, за вычетом префикса `0x`. Чтобы проверить правильность открытого ключа, Вы можете использовать инструмент `subkey` для проверки Вашего адреса.
+The hex encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key is correct you can use the `subkey` tool to inspect your address.
 
 Следующий шаг - перейти в приложение MyCrypto и нажать на вкладку "Sign & Verify Message/Подписать & Заверить сообщение". Вам предложат выбрать способ разблокировки Вашего кошелька. После разблокировки кошелька, Вы должны скопировать и вставить выведенное предложение в поле ввода.
 
@@ -167,13 +167,13 @@ See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/int
 
 ![Получить шаг 3](assets/kusama/claim/claim-3.png)
 
-На данный момент Вы увидите сообщение об успехе в том случае, если всё прошло правильно, и Ваши KSM теперь находятся в аккаунте, на который Вы запрашивали вывод. Поздравляем, Вы теперь можете участвовать во всех аспектах сети Kusama, например таких как [управление](learn-governance) и [стейкинг](learn-staking).
+At this point you will see a success message if everything went right and your KSM will now be in the account that you claimed to. Congratulations you can now participate in aspects of the Kusama network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch period balance transfers will not be enabled.
 
 ![Получить шаг 4](assets/kusama/claim/claim-4.png)]
 
 #### Проверьте получение
 
-После того, как Вы оформите требование на получение KSM, Ваш баланс должен быть сразу обновлен в интерфейсе Polkadot.
+After you make an on-chain claim for KSM, your balance should be updated on the Polkadot UI immediately.
 
 Проблемы? Получите поддержку в KSM [Канал поддержки](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders).
 
