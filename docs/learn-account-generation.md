@@ -370,7 +370,7 @@ accounts will start generating on your screen.  Note that depending on the lengt
 ![Vanity Generator search](assets/polkadot_vanity_generate.png)
 
 The "Save" button will allow you to save on the generated accounts - they are not saved if you do not choose to do this. The next steps
-is identical to the [steps above on creating an account on the UI](#polkadotjs), where a password
+are identical to the [steps above on creating an account on the UI](#polkadotjs), where a password
 and name need to be filled in, and a backup file of your account will be downloaded.
 
 ![Vanity Generator chosen address](assets/polkadot_save_account.png)
