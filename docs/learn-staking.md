@@ -97,9 +97,9 @@ will get paid more).
 The following example should clarify the above. For simplicity, we have the following assumptions:
 
 - These validators do not have a stake of their own.
-- They do NOT charge any commission fees
-- Reward amount is 100 DOT tokens
-- The least amount of DOT to be a validator is 350
+- They do NOT charge any commission fees.
+- Reward amount is 100 DOT tokens.
+- The current minimum amount of DOT to be a validator is 350.
 
 |               | **A - Validator Pool** |                             |         |
 | :-----------: | :--------------------: | :-------------------------: | :-----: |
@@ -122,6 +122,15 @@ _Both validator pools A & B have 4 nominators with the total stake 600 and 400 r
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT
 than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he
 only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
+
+There is an additional factor to consider in terms of rewards. While there is no limit to the number
+of nominators a validator may have, a validator does have a limit to how many nominators to which it
+can pay rewards. In Polkadot and Kusama, this limit is currently 64, although this can be modified
+via runtime upgrade. A validator with more than 64 nominators is _oversubscribed_. When payouts
+occur, only the top 64 nominators as measured by amount of stake allocated to that validator will
+receive rewards. All other nominators are essentially "wasting" their stake - they used their
+nomination to elect that validator to the active stake, but receive no rewards in exchange for doing
+so.
 
 We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator
 offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount of
