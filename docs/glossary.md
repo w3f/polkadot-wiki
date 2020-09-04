@@ -4,6 +4,12 @@ title: Glossary
 sidebar_label: Glossary
 ---
 
+## Active Nomination
+
+A validator (or validators) that a nominator is actively validating this era. The nominator is
+placing their stake behind this validator for this era and will potentially receive staking rewards
+in return for doing so.
+
 ## Alexander
 
 The fourth (now defunct) proof of concept (PoC-4) testnet for Polkadot.
@@ -178,6 +184,11 @@ for how it stores all messages in the Relay Chain storage, therefore making it m
 demanding more resources than XCMP. The plan is to retire HRMP once the implementation of XCMP is
 complete.
 
+## Inactive Nomination
+
+A validator (or validators) that a nominator has selected to nominate, but is not actively
+validating this era. This type of nomination may become active in a future era.
+
 ## Inherent
 
 Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into
@@ -250,6 +261,12 @@ A governance system of a blockchain that is controlled by mechanisms on the bloc
 governance allows decisions to be made in a transparent manner. Note that there are a variety of
 different algorithms for making these decisions, such as simple majority voting, adaptive quorum
 biasing, or identity-based quadratic voting.
+
+## Oversubscribed
+
+If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64
+staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
+rewards for that era.
 
 ## Pallet
 
@@ -431,6 +448,12 @@ up to the Relay Chain via runtime entry points.
 The process of stakeholders determining whether or not a referendum should pass. Votes are weighted
 both by the number of DOT that the stakeholder account controls and the amount of time they are
 willing to lock their DOT.
+
+## Waiting Nomination
+
+The nominator has nominated this validator, but the validator was not elected into the active
+validator set this era and thus cannot produce blocks for the canonical chain. If the validator does
+get into the active set in a future era, this may turn into an active or inactive nomination.
 
 ## Wallet
 
