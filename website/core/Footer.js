@@ -134,104 +134,93 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <>
-        <footer className="nav-footer spacer-y-4 pb-4" id="footer">
-          <Container>
-            <Row className="justify-content-start">
-              <FooterNavColumn headline="General">
-                <FooterLink content="About" href="https://polkadot.network/about" />
-                <FooterLink content="FAQ" href="https://polkadot.network/faq" />
-                <FooterLink content="Contact" href="https://polkadot.network/contact" />
-                <FooterLink content="Build" href="https://polkadot.network/build" />
-                <FooterLink
-                  content="Grants and Bounties"
-                  href="https://github.com/w3f/General-Grants-Program"
+      <footer className="nav-footer spacer-y-4 pb-4" id="footer">
+        <Container>
+          <Row className="justify-content-start">
+            <FooterNavColumn headline="General">
+              <FooterLink content="About" href="https://polkadot.network/about" />
+              <FooterLink content="FAQ" href="https://polkadot.network/faq" />
+              <FooterLink content="Contact" href="https://polkadot.network/contact" />
+              <FooterLink content="Build" href="https://polkadot.network/build" />
+              <FooterLink
+                content="Grants and Bounties"
+                href="https://github.com/w3f/General-Grants-Program"
+              />
+              <FooterLink content="Carrers" href="https://polkadot.network/jobs" />
+            </FooterNavColumn>
+            <FooterNavColumn headline="Technology">
+              <FooterLink content="Technology" href="https://polkadot.network/technology" />
+              <FooterLink content="Token" href="https://polkadot.network/dot-token" />
+              <FooterLink content="Telemetry" href="https://telemetry.polkadot.io/" />
+              <FooterLink content="Substrate" href="https://www.parity.io/substrate" />
+              <FooterLink content="Whitepaper" href="https://polkadot.network/PolkaDotPaper.pdf" />
+              <FooterLink
+                content="Lightpaper"
+                href="https://polkadot.network/Polkadot-lightpaper.pdf"
+              />
+            </FooterNavColumn>
+            <FooterNavColumn headline="Community">
+              <FooterLink content="Community" href="https://polkadot.network/community" />
+              <FooterLink content="Documentation" href="http://wiki.polkadot.network/en/latest/" />
+              <FooterLink content="Brand Assets" href="https://polkadot.network/brand-assets" />
+              <FooterLink content="Blog" href="https://polkadot.network/blog" />
+              <FooterLink
+                content="Element Chat"
+                href="https://riot.im/app/#/room/#polkadot-watercooler:matrix.org"
+              />
+              <FooterLink content="Medium" href="https://medium.com/polkadot-network" />
+            </FooterNavColumn>
+            <FooterSocialColumn />
+          </Row>
+          <Row className="footer-legal align-items-end mt-5 pt-4">
+            {this.props.config.footerIcon && (
+              <Col lg={2} className="mb-2 mb-lg-0">
+                <a
+                  className="navbar-brand"
+                  href="https://polkadot.network/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={this.props.config.baseUrl + this.props.config.footerIcon}
+                    alt="Polkadot Network"
+                  />
+                </a>
+              </Col>
+            )}
+            <Col lg={10}>
+              <ul className="list-unstyled d-flex flex-wrap list-pipe-separator">
+                <FooterLegalLink
+                  content={this.props.config.copyright}
+                  href="https://web3.foundation"
                 />
-                <FooterLink content="Carrers" href="https://polkadot.network/jobs" />
-              </FooterNavColumn>
-              <FooterNavColumn headline="Technology">
-                <FooterLink content="Technology" href="https://polkadot.network/technology" />
-                <FooterLink content="Token" href="https://polkadot.network/dot-token" />
-                <FooterLink content="Telemetry" href="https://telemetry.polkadot.io/" />
-                <FooterLink content="Substrate" href="https://www.parity.io/substrate" />
-                <FooterLink
-                  content="Whitepaper"
-                  href="https://polkadot.network/PolkaDotPaper.pdf"
-                />
-                <FooterLink
-                  content="Lightpaper"
-                  href="https://polkadot.network/Polkadot-lightpaper.pdf"
-                />
-              </FooterNavColumn>
-              <FooterNavColumn headline="Community">
-                <FooterLink content="Community" href="https://polkadot.network/community" />
-                <FooterLink
-                  content="Documentation"
-                  href="http://wiki.polkadot.network/en/latest/"
-                />
-                <FooterLink content="Brand Assets" href="https://polkadot.network/brand-assets" />
-                <FooterLink content="Blog" href="https://polkadot.network/blog" />
-                <FooterLink
-                  content="Element Chat"
-                  href="https://riot.im/app/#/room/#polkadot-watercooler:matrix.org"
-                />
-                <FooterLink content="Medium" href="https://medium.com/polkadot-network" />
-              </FooterNavColumn>
-              <FooterSocialColumn />
-            </Row>
-            <Row className="footer-legal align-items-end mt-5 pt-4">
-              {this.props.config.footerIcon && (
-                <Col lg={2} className="mb-2 mb-lg-0">
-                  <a
-                    className="navbar-brand"
-                    href="https://polkadot.network/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={this.props.config.baseUrl + this.props.config.footerIcon}
-                      alt="Polkadot Network"
-                    />
+                <FooterLegalLink content="Impressum" href="https://polkadot.network/impressum" />
+                <FooterLegalLink content="Disclaimer" href="https://polkadot.network/disclaimer" />
+                <FooterLegalLink content="Privacy" href="https://polkadot.network/privacy" />
+                <li>
+                  <a className="text-white text-small" href="#" id="cookie-settings">
+                    Cookie Settings
                   </a>
-                </Col>
-              )}
-              <Col lg={10}>
-                <ul className="list-unstyled d-flex flex-wrap list-pipe-separator">
-                  <FooterLegalLink
-                    content={this.props.config.copyright}
-                    href="https://web3.foundation"
-                  />
-                  <FooterLegalLink content="Impressum" href="https://polkadot.network/impressum" />
-                  <FooterLegalLink
-                    content="Disclaimer"
-                    href="https://polkadot.network/disclaimer"
-                  />
-                  <FooterLegalLink content="Privacy" href="https://polkadot.network/privacy" />
-                  <li>
-                    <a className="text-white text-small" href="#" id="cookie-settings">
-                      Cookie Settings
-                    </a>
-                    <script
-                      dangerouslySetInnerHTML={{
-                        __html: `
+                  <script
+                    dangerouslySetInnerHTML={{
+                      __html: `
                         var cookieSettings = document.getElementById('cookie-settings');
                         cookieSettings.onclick = function() {
                           return klaro.show();
                         };
                         `,
-                      }}
-                    />
-                  </li>
-                  <FooterLegalLink
-                    content="Testnet disclaimer"
-                    href="https://polkadot.network/testnetdisclaimer"
+                    }}
                   />
-                </ul>
-              </Col>
-            </Row>
-          </Container>
-        </footer>
-      </>
+                </li>
+                <FooterLegalLink
+                  content="Testnet disclaimer"
+                  href="https://polkadot.network/testnetdisclaimer"
+                />
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     );
   }
 }
