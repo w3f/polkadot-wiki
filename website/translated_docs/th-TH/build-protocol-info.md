@@ -9,7 +9,7 @@ This page serves as a high-level introduction to the Polkadot protocol with term
 ## Tokens
 
 - **Token decimals:**
-  - Polkadot (DOT): 10 (See [Redenomination](#redenomination))
+  - Polkadot (DOT): 10
   - Kusama (KSM): 12
 - **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
@@ -19,12 +19,6 @@ This page serves as a high-level introduction to the Polkadot protocol with term
 Polkadot conducted a poll, which ended on 27 July 2020 (block 888,888), in which the stakeholders decided to redenominate the DOT token. The redenomination does not change the number of base units (called "plancks" in Polkadot) in the network. The only change is that a single DOT token will be 1e10 plancks instead of the original 1e12 plancks. See the Polkadot blog posts explaining the [details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the [results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
 
 The redenomination took effect 72 hours after transfers were enabled, at block 1,248,326, which occurred at approximately 16:50 UTC on 21 Aug 2020.
-
-Block explorers, wallets, and any component that displays DOT balances should use the symbol "DOT (old)" to differentiate DOT of the original denomination. For a period of time after the redenomination occurs, we recommend that you use the symbol "_New DOT_" to clearly indicate that you have made the change. After sufficient time has elapsed post-redenomination, you should change "_New DOT_" back to "DOT". An example of an explanation would be:
-
-> “On approximately August 21st at 16:40 UTC (block number 1,248,328), the DOT token underwent a redenomination from its original sale. New DOT are 100x smaller than DOT (old). Therefore, your DOT balance is 100x higher and the price per DOT is 100x lower. The percentage of the DOT you own relative to total supply is unchanged. This will not affect the total value of your position. See the Polkadot blog post for more information.”
-
-If you require assistance with redenomination, please contact redenomination@web3.foundation.
 
 ## Addresses
 
@@ -105,6 +99,8 @@ Setting the block checkpoint to zero, using the genesis hash, and a validity per
 **NOTE:** If an account is reaped and a user re-funds the account, then they could replay an immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
+
+> Note: The assumption that a transaction's hash is a unique identifier is the number one mistake that indexing services and custodians make. This error will cause major issues for your users. Make sure that you read this section carefully.
 
 Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a transaction's hash as a unique identifier. In Substrate-based chains like Polkadot, a transaction's hash only serves as a fingerprint of the information within a transaction, and there are times when two transactions with the same hash are both valid. In the case that one is invalid, the network properly handles the transaction and does not charge a transaction fee to the sender nor consider the transaction in the block's fullness.
 
