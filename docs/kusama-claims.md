@@ -130,7 +130,7 @@ enter `subkey --help` for more usage examples.
 6. Save your encrypted keystore locally. Ideally, you would also save it on an external hard drive
    or thumb drive, or print it out and be able to re-enter it later. You should not store it in
    cloud storage, email it to yourself, etc. You can use this backup file to restore your account.
-   This backup file is not readable unless it is decrypted with the password.
+   The seed in the backup file is not readable unless it is decrypted with the password.
 
 7. The account now appears in your Accounts tab and is backed up to the keystore you just saved.
 
