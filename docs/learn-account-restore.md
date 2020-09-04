@@ -6,7 +6,7 @@ description: Step-by-step guides on backing up and restoring a Polkadot account.
 ---
 
 In the case that your Polkadot account needs to backed up and later restored, there are simple ways
-to take care of this in Polkadot{.js} Browser Plugin, Polkadot{.js}, and Parity Signer. Note that in
+to take care of this in Polkadot{.js} Browser Plugin, Polkadot{.js} Apps, and Parity Signer. Note that in
 order to recover an account, it is necessary that an account is created according to the
 instructions [here](learn-account-generation).
 
