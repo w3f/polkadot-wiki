@@ -305,6 +305,10 @@
         "title": "Join the Council",
         "sidebar_label": "Join the Council"
       },
+      "maintain-guides-how-to-monitor-your-node": {
+        "title": "Monitor your node",
+        "sidebar_label": "Monitor your node"
+      },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "Be a Nominator (Alexander)",
         "sidebar_label": "Be a Nominator (Alexander)"
