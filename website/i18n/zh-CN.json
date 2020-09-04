@@ -29,6 +29,10 @@
         "title": "开发者专页",
         "sidebar_label": "开发者专页"
       },
+      "build-integration": {
+        "title": "Polkadot Integration Guide",
+        "sidebar_label": "Integration Initiation"
+      },
       "build-node-interaction": {
         "title": "节点互动",
         "sidebar_label": "节点互动"
@@ -300,6 +304,10 @@
       "maintain-guides-how-to-join-council": {
         "title": "加入议会",
         "sidebar_label": "加入议会"
+      },
+      "maintain-guides-how-to-monitor-your-node": {
+        "title": "Monitor your node",
+        "sidebar_label": "Monitor your node"
       },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "成为提名人 (Alexander)",
