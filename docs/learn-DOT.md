@@ -123,7 +123,7 @@ The current testnet is called [Westend](maintain-networks#westend-test-network) 
 its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom
 [#westend_faucet:matrix.org](https://riot.im/app/#/room/!cJFtAIkwxuofiSYkPN:matrix.org).
 
-You can also make your own WNDs (testnet DOT) by [becoming a validator](maintain-validator).
+You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
 ## Kusama Tokens
 

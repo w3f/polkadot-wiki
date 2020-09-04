@@ -1,5 +1,5 @@
 ---
-id: maintain-validator
+id: learn-validator
 title: Validator
 sidebar_label: Validator
 ---

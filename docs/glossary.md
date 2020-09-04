@@ -231,7 +231,7 @@ the good behavior of the validator. Nominated Proof-of-Stake differs from the mo
 Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad
 validator; delegators are not subject to loss of stake based on the behavior of the validator. Note
 that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if
-delegators can be slashed. Polkadot uses the Phragmen method to allocate stake to nominees.
+delegators can be slashed. Polkadot uses the Phragmén method to allocate stake to nominees.
 
 ## Nominator
 

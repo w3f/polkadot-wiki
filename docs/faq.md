@@ -61,7 +61,7 @@ validating for Kusama.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
-on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmen's
+on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmén's
 method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 

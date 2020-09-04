@@ -1,5 +1,5 @@
 ---
-id: maintain-collator
+id: learn-collator
 title: Collator
 sidebar_label: Collator
 ---

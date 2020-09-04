@@ -25,6 +25,9 @@
           "learn-architecture",
           "learn-security",
           "learn-consensus",
+          "learn-nominator",
+          "learn-validator",
+          "learn-collator",
           "learn-governance",
           "learn-identity",
           "learn-bridges",
@@ -114,11 +117,6 @@
 	"maintain-polkadot-parameters",	
       {
         "type": "subcategory",
-        "label": "Collator Guides",
-        "ids": ["maintain-collator"]
-      },
-      {
-        "type": "subcategory",
         "label": "Nodes and Dapps",
         "ids": ["maintain-sync", "maintain-networks", "maintain-wss", "maintain-errors"]
       },
@@ -126,7 +124,6 @@
         "type": "subcategory",
         "label": "Nominator Guides",
         "ids": [
-          "maintain-nominator",
           "maintain-guides-how-to-nominate-polkadot",
           "maintain-guides-how-to-chill",
           "maintain-guides-how-to-unbond"
@@ -136,7 +133,6 @@
         "type": "subcategory",
         "label": "Validator Guides",
         "ids": [
-          "maintain-validator",
           "maintain-guides-how-to-validate-polkadot",
           "maintain-guides-validator-payout",
           "maintain-guides-how-to-systemd",
