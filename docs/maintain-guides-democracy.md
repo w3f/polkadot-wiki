@@ -195,5 +195,5 @@ choose this transaction from the "Extrinsics" tab, it will let you select "vote"
 pallet, and you will specify the index of the referendum that is being voted, the judgement (i.e.
 "Aye" for approval or "Nay" for rejection), and the conviction, just like a normal vote.
 
-For more material on adding and removing Governance proxies, as well as other types, please see
-the [Proxy page](learn-proxies).
+For more material on adding and removing Governance proxies, as well as other types, please see the
+[Proxy page](learn-proxies).
