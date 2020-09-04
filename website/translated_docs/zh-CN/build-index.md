@@ -20,10 +20,11 @@ Wiki 的这个部分分为以下:
 
 本部分适用于希望学习如何将 Polkadot 集成到其系统中的服务提供商，例如钱包或节点运营商。
 
-- [Polkadot 协议信息](build-protocol-info) - 关于 Polkadot 协议的一般信息和常见问题如地址格式。
-- [节点管理](build-node-management) - 对 Parity Polkadot 客户端和 最相关的基础设施提供者选项/标志的简短概述。
-- [节点交互](build-node-interaction)-了解如何通过 RPC 与您的节点进行交互。
-- [交易结构和签名](build-transaction-construction) - 了解交易格式以及如何构建离线和签名交易。
+- [Integration Initiation](build-integration) - The guide to the guide.
+- [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the Polkadot protocol, e.g. address formats.
+- [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the most relevant options/flags for infrastructure providers.
+- [Node Interaction](build-node-interaction) - Learn how to interact with your node via RPC.
+- [Transaction Construction and Signing](build-transaction-construction) - Learn the transaction format for Polkadot and how to construct and sign transactions offline.
 
 ## 工具
 
