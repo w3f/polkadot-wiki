@@ -186,6 +186,11 @@ therefore they do not carry a signature. A blockchain's [runtime](#runtime) must
 validating inherents. For example, timestamps are inherents. They are validated by being within some
 margin that each validator deems reasonable.
 
+## Injected Account
+
+An account which is not directly managed by the Polkadot UI but can be accessed through it, such as
+accounts controlled by the Polkadot{.js} extension.
+
 ## KSM
 
 The abbreviation for Kusama network tokens.
