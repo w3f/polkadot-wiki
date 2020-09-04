@@ -33,7 +33,7 @@ for that account.
 ![restore-account-plugin](assets/accounts/polkadot.js_restore_account.png)
 
 Once these are filled out, and the "Restore" button has been pressed, you'll be taken back to the
-main page of the plugin. There listed will be your restored account!
+main page of the plugin. There listed will be your restored account.
 
 ## Polkadot{.js}
 
@@ -69,7 +69,7 @@ whatever you'd like, it does not need to be that specific accounts name and pass
 
 ![restore-using-json](assets/accounts/polkadot-js-existing-json.png)
 
-Now that those details have been filled in, you will need to click on the "Save" button. This will
+Once those details have been filled in, you will need to click on the "Save" button. This will
 prompt a screen to appear. To back up your existing account, press on the "Create and backup
 account" button. This will download the `.json` file which contains the data to be used in account
 restoration.
@@ -86,7 +86,7 @@ this screen, tap on the "recover existing identity" button.
 
 ![restore-using-parity](assets/parity_Signer_restore1.png)
 
-Now, enter in the identity name and the mnemonic seed phrase from the account you'd like to restore
+Enter in the identity name and the mnemonic seed phrase from the account you'd like to restore
 respectively.
 
 Set an identity PIN that will be used to unlock this account when you need to.
