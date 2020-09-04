@@ -12,26 +12,85 @@ Polkadot 提供了一个模块，允许用户设置代理帐户以代表其执�
 
 - 任何
 - 非转帐
-- 抵押
-- 治理
+- Governance
+- Staking
+- Identity Judgement
 
 当代理账户进行 `proxy` 交易时， Polkadot 过滤了所需的交易，以确保代理账户有代表冷账户进行该交易的适当权限。
 
-顾名思义，代理类型 "Any" 允许代理帐户进行任何交易，包括余额转帐。 在大多数情况下，应避免这种情况，因为代理帐户比冷帐户更频繁地使用，因此安全性较低。为了允许除余额转帐（包括既定转帐）以外的任何类型的交易，"非转帐(Non-transfer)"代理类型将是更好的选择。
+### Any Proxies
 
-"治理" 类型将允许代理进行与治理相关的交易(即从民主，议会，国库，技术委员会和选举模块进行的交易)。
+As implied by the name, a proxy type of "Any" allows the proxy account to make any transaction, incuding balance transfers. In most cases, this should be avoided as the proxy account is used more frequently than the cold account and is therefore less secure.
 
-"抵押" 类型允许抵押相关的交易，但不要将抵押代理与 Controller 帐户混淆。 在抵押模块中，某些事务必须来自存储，而其他事务必须来自主 Controller。 Stash 帐户旨在保留在冷储存中，而 Controller 帐户则进行日常事务，例如设置 Session 密钥或确定要提名的验证人。 不过，Stash 帐户仍需要进行一些交易，例如绑定额外资金或指定新的 Controller。 代理服务器不会更改 Stash 和 Controller 帐户的_角色_，但确实允许访问 Stash 的频率更低。
+### Non-transfer Proxies
 
-### 匿名代理:
+Proxies that are of the type "non-transfer" are accounts that allow any type of transaction except balance transfers (including vested transfers).
 
-Polkadot 包含创建匿名代理的功能，该匿名代理只能通过代理访问。 即它生成一个地址，但没有相应的私钥。 通常主帐户指定代理帐户，但匿名代理则相反。 创建代理关系的帐户是代理帐户，新帐户是主要帐户。 对匿名代理要格外小心，删除代理关系后，将无法访问该帐户。
+### Governance Proxies
 
-## 要点整合
+The "Governance" type will allow proxies to make transactions related to governance (i.e., from the Democracy, Council, Treasury, Technical Committee, and Elections pallets).
+
+> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance proxies.
+
+### Staking Proxies
+
+The "Staking" type allows staking-related transactions, but do not confuse a staking proxy with the Controller account. Within the Staking pallet, some transactions must come from the Stash, while others must come from the Controller. The Stash account is meant to stay in cold storage, while the Controller account makes day-to-day transactions like setting session keys or deciding which validators to nominate. The Stash account still needs to make some transactions, though, like bonding extra funds or designating a new Controller. A proxy doesn't change the _roles_ of Stash and Controller accounts, but does allow the Stash to be accessed even less frequently.
+
+### Identity Judgement Proxies
+
+"Identity Judgement" proxies are in charge of allowing registars to make judgement on an account's identity. If you are unfamiliar with judgements and identities on chain, please refer to [this page](learn-identity#judgements).
+
+### Anonymous Proxies
+
+Polkadot includes a function to create an anonymous proxy, an account that can only be accessed via proxy. That is, it generates an address but no corresponding private key. Normally, a primary account designates a proxy account, but anonymous proxies are the opposite. The account that creates the proxy relationship is the proxy account and the new account is the primary. Use extreme care with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+
+![anonymous proxy](assets/proxy_anonymous_diagram.png)
+
+## Why use a Proxy?
+
+Proxies are great to use for specific purposes because they add in a layer of security. Rather than using funds in one sole account, smaller accounts with unique roles complete tasks for the main stash account. This drives attention away from the main account and to proxies.
+
+Anonymous proxies, in particular, can be used for permissionless management. In this example below, there is a multisig with four different accounts inside. Two of the accounts, Alice and Bob, have an anonymous proxy attached to them. In the case that the multisig account wanted to add or remove Alice or Bob or even add in a new account into the anonymous proxy, the anonymous proxy would take care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new multisig would be created.
+
+![anonymous mutlisig proxy](assets/multisig_proxy_diagram.png)
+
+## How to set up a Proxy
+
+### Using the Polkadot-JS UI
+
+To set up a proxy, navigate to the [Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and click on "Developer" > "Extrinsics". Here we will see a page that looks similar to this:
+
+![proxy generation](assets/polkadot_generating_proxy.png)
+
+To add a proxy, click on the pallet selection dropdown menu. The dropdown is labeled "submit the following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu next to it). The `addProxy(proxy, proxy_type)` function will need to be selected in order to add in a proxy. The chosen proxy account that you set will be the account that has the proxy on it. The selected account at the top is the account that will be the primary account.
+
+> Note: If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be created.
+
+### Creating Anonymous Proxies on Polkadot-JS UI
+
+For anonymous proxies, a different function will need to be called, the `anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would like to set up if you choose, as well as the index.
+
+![proxy generation](assets/polkadot_anon_proxy.png)
+
+### Another way to create Proxies
+
+There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" in the navigation and then click the "Accounts" button. For each of the accounts you have on this page, the three dot button will let you create a proxy by using "Add proxy". This will open up a pop up onto your screen where you will be able to select the type of proxy for that specific account.
+
+![proxy generation part 2](assets/polkadot_add_another_proxy.png)
+
+> Note: You cannot create an anonymous function from the Accounts page, you must be on the Extrinsics page.
+
+### Removing Proxies
+
+If you want to remove a proxy, there are a few functions on the extrinsic page that will help do this. The `killAnonymous()` function will let you remove an anonymous proxy. Both the `removeProxies()` and the `removeProxy()` will remove any other type of proxy but the former will remove all proxies made while the latter will remove one selected proxy.
+
+![remove proxies](assets/polkadot_remove_proxy.png)
+
+## Putting It All Together
 
 If the idea of proxy types and their application seems abstract, it is. Here is an example of how you might use these accounts. Imagine you have one account as your primary token-holding account, and don't want to access it very often, but you do want to participate in governance and staking. You could set Governance and Staking proxies.
 
-![proxies](assets/proxies-example.png)
+![proxies](assets/regular_proxy_diagram.png)
 
 In this example, the primary account A would only make two transactions to set account B as its governance proxy and account C as its staking proxy. Now, account B could participate in governance activity on behalf of A.
 
