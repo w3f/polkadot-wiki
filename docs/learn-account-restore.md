@@ -6,8 +6,8 @@ description: Step-by-step guides on backing up and restoring a Polkadot account.
 ---
 
 In the case that your Polkadot account needs to backed up and later restored, there are simple ways
-to take care of this in Polkadot{.js} Browser Plugin, Polkadot{.js} Apps, and Parity Signer. Note that in
-order to recover an account, it is necessary that an account is created according to the
+to take care of this in Polkadot{.js} Browser Plugin, Polkadot{.js} Apps, and Parity Signer. Note
+that in order to recover an account, it is necessary that an account is created according to the
 instructions [here](learn-account-generation).
 
 ## Polkadot{.js} Browser Plugin
@@ -59,9 +59,9 @@ your account has been restored.
 If you've already created an account but are looking to have it restored, you can do that by using
 the Polkadot{.js} UI and the existing mnemonic seed.
 
-To start, you'll need to open up the [Polkadot{.js} Apps](https://polkadot.js.org/apps) and head over
-to the accounts tab. Click on the "Add Account" button, and fill out with the prompted details: a
-name for the account, a password, and be sure to replace the generated mnemonic seed with your
+To start, you'll need to open up the [Polkadot{.js} Apps](https://polkadot.js.org/apps) and head
+over to the accounts tab. Click on the "Add Account" button, and fill out with the prompted details:
+a name for the account, a password, and be sure to replace the generated mnemonic seed with your
 _existing seed_. Note here that when you replace the generated mnemonic seed with your existing one,
 you aren't actually creating a new account, rather adding that account onto the Polkadot{.js} UI. It
 is also important to note that the name and the password of this added account can be set to
