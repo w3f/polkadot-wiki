@@ -29,6 +29,10 @@
         "title": "개발자 포탈",
         "sidebar_label": "개발자 포탈"
       },
+      "build-integration": {
+        "title": "Polkadot Integration Guide",
+        "sidebar_label": "Integration Initiation"
+      },
       "build-node-interaction": {
         "title": "Node Interaction",
         "sidebar_label": "Node Interaction"
@@ -300,6 +304,10 @@
       "maintain-guides-how-to-join-council": {
         "title": "의회에 출마하는 법",
         "sidebar_label": "의회에 출마하는 법"
+      },
+      "maintain-guides-how-to-monitor-your-node": {
+        "title": "Monitor your node",
+        "sidebar_label": "Monitor your node"
       },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "노미네이터가 되어보세요 (알렉산더)",
