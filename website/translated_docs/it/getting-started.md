@@ -78,7 +78,7 @@ For brand-new learners of Kusama: To learn more about how to build and maintain 
 ## Resources
 
 - [Polkadot Crowdcast](https://www.crowdcast.io/polkadot) - List of all Crowdcast webinars that the Web3 Foundation has done.
-- [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Alexander, Kusama, or your own private network.
+- [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Polkadot, Kusama, or any Substrate-based chain.
 - [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain and Parity Substrate chains.
 - [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.
 - [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
@@ -87,6 +87,7 @@ For brand-new learners of Kusama: To learn more about how to build and maintain 
 - [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
 - [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
 - [Contributing Guide](contributing) - Rules for contributing to the wiki.
+- [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for specific errors and problems.
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [white-paper]: https://polkadot.network/PolkaDotPaper.pdf
