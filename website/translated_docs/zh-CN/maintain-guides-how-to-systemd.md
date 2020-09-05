@@ -6,7 +6,7 @@ sidebar_label: 如何把节点设定为 `systemd` 进程运行
 
 您可以将验证人作为[ systemd ](https://en.wikipedia.org/wiki/Systemd)进程运行，以便服务器重新启动或當意外时自动重启(并有助于避免被惩罚!)。
 
-在看本指南之前，您应该已经按照以下步骤设置了验证人 [如何验证](maintain-validator)文章。
+Before following this guide you should have already set up your validator by following the [How to validate](learn-validator) article.
 
 首先在 `/etc/systemd/system/` 中创建名为 `polkadot-validator.service` 的文件。
 
