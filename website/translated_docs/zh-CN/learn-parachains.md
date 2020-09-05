@@ -10,7 +10,7 @@ sidebar_label: 平行链
 
 平行链是特定于应用程序的数据结构，它在上下上是一致的，并且可以由 Polkadot 中继链的验证人进行验证。通常平行链会是一条区块链, 但并没有特别要求它们必须是一条链，之所以叫他们平行链是因为它们于中继链并行运行。由于它们的并行性质，它们能够并行地处理交易并实现 Polkadot 系统的可伸缩性。它们[与 Polkadot 网络共享安全](learn-security)，并且可以通过[ XCMP ](learn-crosschain)与其它平行链进行通信。
 
-平行链由称为[收集人 (collator)](maintain-collator)的网络维护者维护。 收集人节点的作用是运行平行链的全节点，保留平行链的所有必要信息，并生成新的候选区块，以传递给中继链验证人进行验证并包含在 Polkadot 的共享状态里。 收集人节点的激励是对平行链的实施细节（请参见[平行链经济](#parachain-economies)）。 除非平行链实施规定这样做，否则它们无需将 DOT 押在中继链或持有代币。
+Parachains are maintained by a network maintainer known as a [collator](learn-collator). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the Relay Chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the parachain implementation.
 
 Polkadot Host (PH) 允许将在平行链上执行的状态转换指定为 Wasm 可执行文件。 在Polkadot 确认在平行链上发生状态转换之前，必须通过验证程序根据在中继链上存储的注册状态转换函数 (STF) 验证在平行链上发生的新状态转换的证据。允许执行平行链的逻辑的唯一约束是中继链验证程序必须可以验证该逻辑。 验证通常采用状态转换的捆绑式证明的形式，即验证的证明 (PoV) 区块，该验证从一个或多个平行链的收集人核对提交给验证人，以进行检查。
 
