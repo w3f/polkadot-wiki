@@ -13,11 +13,11 @@ Web3 Foundation 将以 PoA 模式启动 Polkadot。 链功能将仅限于认领�
 
 在这段时间内，治理仅限于 Sudo 密钥，它将由 Web3 Foundation 持有，以发布完成启动过程所需的命令和升级。 在此期间没有通货膨胀或奖励。
 
-PoA 的目的是确保网络正常启动，并允许社区[验证人](maintain-validator)认领其代币，建立其基础架构并开始接收提名。
+The purpose of PoA is to ensure the network starts properly and allow community [validators](learn-validator) to claim their tokens, set up their infrastructure, and start receiving nominations.
 
 ## 提名权益证明 (NPoS)
 
-一旦 Web3 Foundation 对网络的稳定性充满信心并且有足够的验证候选人，Web3 Foundation 将使用[ Sudo ](https://youtu.be/InekMjJpVdo)-超级用户帐户 可以使用[治理](learn-governance)功能-发起第一次验证人选举。 这次选举将使网络从 PoA 过渡到第二阶段，即[提名权益证明(NPoS)](learn-staking)，其网络 是由[提名人](maintain-nominator)和验证人[绑定的经济利益所保护](learn-security)的。
+Once Web3 Foundation is confident in the stability of the network and there are a sufficient number of validator intentions, Web3 Foundation will use [Sudo](https://youtu.be/InekMjJpVdo) - a superuser account with access to [governance](learn-governance) functions - to initiate the first validator election. This election will transition the network from PoA into its second phase, [Nominated Proof of Stake (NPoS)](learn-staking), where the network is [secured by the economic stake](learn-security) that is bonded to the validators by the [nominators](learn-nominator) and the validators themselves.
 
 在时间上，PoS 的过渡将在很大程度上取决于何时有足够数量的验证人准备接管网络的安全性。 此转换可能至少需要 100个良好验证人的支持。
 
