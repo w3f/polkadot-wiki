@@ -22,7 +22,7 @@ The sequential Phragmén method is used in the Nominated Proof-of-Stake scheme t
 1. Maximize the stake behind the minimally staked validator.
 1. Minimize the variance of the stake in the set.
 
-#### Off-Chain Phragmen
+#### Off-Chain Phragmén
 
 Given the large set of nominators and validators, Phragmén's method is a difficult optimization problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to propose the set of winners. The reason for performing this computation off-chain is to keep a constant block time of six seconds and prevent long block times at the end of each era, when the validator election takes place.
 
