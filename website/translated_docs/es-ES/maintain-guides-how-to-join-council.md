@@ -30,7 +30,7 @@ Al lado del botón para presentar candidatura hay otro botón titulado "Vote." H
 
 ![c](assets/council/vote.png)
 
-El consejo usa [Phragmen](learn-phragmen) de votación de aprobación, que también se utiliza en las elecciones del validador. Esto significa que puedes elegir hasta 16 candidatos distintos por los que votar y que tu stake se igualará entre ellos. Para esta guía, elige aprobar tu propia candidatura haciendo clic en el cambio siguiente de tu cuenta y cambiarla para decir "Aye."
+The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 
 ![d](assets/council/vote_for_yourself.png)
 

@@ -30,7 +30,7 @@ Submitting your candidacy for the council requires a small bond of DOT / KSM. Th
 
 ![c](assets/council/vote.png)
 
-议会使用[弗拉格曼(Phragmen)](learn-phragmen) Approval Voting 方法选出议员，该投票也用于验证人选举。这意味着您最多可以选择16个不同的候选人，您的抵押将在候选人之间平均分配。关于本指南，当按下 "Vote" 之后，你会看到所有参选人包括你的帐户，你只需要在你户旁边的开关将其更改为 "Aye"，以示投票支持。
+The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 
 ![d](assets/council/vote_for_yourself.png)
 

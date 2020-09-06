@@ -14,22 +14,29 @@ sidebar_label: 网络参与者
 
 ## 收集人
 
-- [收集人主页](maintain-collator)- 收集人相关链接的概述。
+- [Learn about Collators](learn-collator) - High level overview of collators and related links.
 
 ## 提名人
 
-- [提名人主页](maintain-nominator)- 提名人相关链接的概述。
+- [Learn about Nominators](learn-nominator) - High level overview of nominators and related links.
 - [提名人指南 (Polkadot)](maintain-guides-how-to-nominate-polkadot)- 如何在 Polkadot 网络上进行提名。
 - [提名人指南 (Kusama)](maintain-guides-how-to-nominate-kusama)- 如何在 Kusama 金丝雀网络上进行提名。
+- [How to stop being a Nominator](maintain-guides-how-to-unbond) - Guide on how to stop nominating.
 
 ## 验证人
 
-- [验证人主页](maintain-validator)-验证人相关链接的概述。
+- [Learn about Validators](learn-validator) - High level overview of validator and related links.
 - [验证人奖励收益](maintain-guides-validator-payout) - 验证人奖励的计算和收益
 - [验证人指南 (Polkadot)](maintain-guides-how-to-validate-polkadot)- 如何在 Polkadot 网络上进行验证。
 - [验证人指南 (Kusama)](maintain-guides-how-to-validate-kusama)-逐步介绍如何在 Kusama 金丝雀网络上运行节点。
+- [Using systemmd for the Validator Node](maintain-guides-how-to-systemd) - Configuring systemmd with the Validator node.
+- [Secure Validator](maintain-guides-secure-validator) - Best tips and practices for validating.
+- [How to use Polkadot Secure Validator] - Walkthrough on how to set up a validator securely.
+- [How to upgrade a Validator Node](maintain-guides-how-to-upgrade) - Guide on upgrading your validator node.
+- [How to Chill](maintain-guides-how-to-chill) - Walkthrough on how to chill as a validator.
 
 ## 治理
 
-- [如何加入议会](maintain-guides-how-to-join-council) - 逐步指引你如何加入议会。
-- [如何投票给议员](maintain-guides-how-to-vote-councillor) - 逐步指引你如何投票给你喜欢的议员。
+- [How to pariticipate in Governance](maintain-guides-democracy) - Walkthrough on how to participate in governance.
+- [How to join the Council](maintain-guides-how-to-join-council) - Step by step guide for running for the Council.
+- [How to vote for a Councillor](maintain-guides-how-to-vote-councillor) - Step by step guide for voting for your favorite councillors.
