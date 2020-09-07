@@ -89,9 +89,9 @@ The collator now hands this block to the validator, which itself will verify tha
 processed. If the message was processed and all other aspects of the block are valid, the validator
 will include this block for parachain B into the Relay Chain.
 
-Check out our interactive animation below that explores how XCMP works.
+Check out our animated video below that explores how XCMP works.
 
-<p style="margin-bottom:0;"><iframe src="/XCMP_Animation.html" width="100%" height="360"></iframe></p>
+ <iframe width="560" height="315" src="SRC OF VIDEO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Resources
 
