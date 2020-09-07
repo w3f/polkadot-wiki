@@ -10,8 +10,8 @@ that does not get exposed to your computer or the internet. It is strongly recom
 hardware wallet if you are managing a significant amount of funds.
 
 The Kusama application allows you to manage Kusama's native asset, the KSM. It supports most of the
-available transaction types of the network (a notable exception is the "Batch" transaction from
-the Utilty pallet).
+available transaction types of the network (a notable exception is the "Batch" transaction from the
+Utilty pallet).
 
 ## Requirements
 
@@ -44,8 +44,8 @@ Please proceed to the usage instructions below.
 
 ### Using the Developer Release
 
-> NOTE: These instructions are for development installation only. It is recommended
-> to install the application from Ledger Live unless you _know exactly what you're doing_.
+> NOTE: These instructions are for development installation only. It is recommended to install the
+> application from Ledger Live unless you _know exactly what you're doing_.
 
 Instructions for downloading the prerelease binary from the GitHub releases is written [on the
 README][prerelease instructions] for the Kusama Ledger application GitHub repository.
@@ -138,9 +138,9 @@ your account. On these block explorers you can search for you account in the sea
 it to reveal the details. It will show your KSM balance as well as details about your bonded or
 locked amounts.
 
-### Sending a Transaction
+### Sending a Transfer
 
-If you would like to send a transaction from your account housed on the Ledger device, the easiest
+If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use Polkadot-JS Apps.
 
 - Click on the "Transfer" button on the left navigation menu.
@@ -150,6 +150,14 @@ method is to use Polkadot-JS Apps.
 - Click the "Make Transfer" button.
 - Confirm the transaction on your device.
 - A green success notification will be displayed when the transaction is included in a block.
+
+### Receiving a Transaction
+
+In order to receive a transaction on the account that is stored on your Ledger device, you will need
+to provide the sender (i.e. the payer) your address. You can copy your address to the clipboard
+after loading your device on Polkadot-JS Apps by clicking the account icon or by highlighting the
+address and pressing ctrl-c. Then you will provide your address to the payer so they can send a
+transfer.
 
 ## Support
 

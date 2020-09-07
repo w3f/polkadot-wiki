@@ -4,23 +4,23 @@ title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
 ---
 
-The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and 
-the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret secured
-on a physical device that does not expose it to your computer or the internet. It is
-strongly recommend to use a hardware wallet if you are managing a significant amount of funds.
+The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
+devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that
+does not expose it to your computer or the internet. It is strongly recommend to use a hardware
+wallet if you are managing a significant amount of funds.
 
-The Polkadot application allows you to manage Polkadot's native currency, the DOT. It supports
-most of the transaction types of the network (a notable exception is the "Batch" transaction from
-the Utilty pallet).
+The Polkadot application allows you to manage Polkadot's native currency, the DOT. It supports most
+of the transaction types of the network (a notable exception is the "Batch" transaction from the
+Utilty pallet).
 
 ## Requirements
 
 Here is a list of what you will need before starting:
 
- - A Ledger Nano S or a Ledger Nano X.
- - The latest firmware installed. (At the time of writing this is 1.6)
- - Ledger Live is installed.
- - A web browser is installed that you can use to access [Polkadot-JS Apps][].
+- A Ledger Nano S or a Ledger Nano X.
+- The latest firmware installed. (At the time of writing this is 1.6)
+- Ledger Live is installed.
+- A web browser is installed that you can use to access [Polkadot-JS Apps][].
 
 ## Installing the Ledger Application
 
@@ -39,8 +39,8 @@ Please proceed to the usage instruction below.
 
 ### Using the Developer Release
 
-> NOTE: These instructions are for development installation only. It is recommended
-> to install the application from Ledger Live unless you _know exactly what you're doing_.
+> NOTE: These instructions are for development installation only. It is recommended to install the
+> application from Ledger Live unless you _know exactly what you're doing_.
 
 Instructions for downloading the prerelease binary from the GitHub releases is written [on the
 README][prerelease instructions] for the Polkadot Ledger application GitHub repository.
@@ -133,9 +133,9 @@ your account. On these block explorers you can search for you account in the sea
 it to reveal the details. It will show your KSM balance as well as details about your bonded or
 locked amounts.
 
-### Sending a Transaction
+### Sending a Transfer
 
-If you would like to send a transaction from your account housed on the Ledger device, the easiest
+If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use Polkadot-JS Apps.
 
 - Click on the "Transfer" button on the left navigation menu.
@@ -146,9 +146,18 @@ method is to use Polkadot-JS Apps.
 - Confirm the transaction on your device.
 - A green success notification will be displayed when the transaction is included in a block.
 
+### Receiving a Transaction
+
+In order to receive a transaction on the account that is stored on your Ledger device, you will need
+to provide the sender (i.e. the payer) your address. You can copy your address to the clipboard
+after loading your device on Polkadot-JS Apps by clicking the account icon or by highlighting the
+address and pressing ctrl-c. Then you will provide your address to the payer so they can send a
+transfer.
+
 ## Support
 
-If you need support please send an email to [support@polkadot.network](mailto:support@polkadot.network).
+If you need support please send an email to
+[support@polkadot.network](mailto:support@polkadot.network).
 
 [ledger]: https://www.ledger.com/
 [polkadot-js apps]: https://polkadot.js.org/apps
