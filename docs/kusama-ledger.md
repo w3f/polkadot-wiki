@@ -4,26 +4,21 @@ title: Using Ledger Devices
 sidebar_label: Ledger Devices
 ---
 
-> WARNING: The Kusama Ledger application has not been approved by Ledger at the time of writing.
-> Until the application is approved, you must either build the application yourself or download a
-> pre-built binary from GitHub. The application is still considered in a development pre-release
-> until an official release happens on the Ledger Live marketplace. Proceed with caution and use a
-> spare development Ledger device if available.
-
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your secret secured on a physical device
 that does not get exposed to your computer or the internet. It is strongly recommended to use a
 hardware wallet if you are managing a significant amount of funds.
 
-The Kusama application allows your to manage Kusama's native asset, the KSM. It supports all of the
-available transaction types of the network.
+The Kusama application allows you to manage Kusama's native asset, the KSM. It supports most of the
+available transaction types of the network (a notable exception is the "Batch" transaction from
+the Utilty pallet).
 
 ## Requirements
 
 This is a list of what you will need before starting:
 
 - A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed. At the time of writing this was 1.6.
+- The latest firmware installed. (At the time of writing this was 1.6)
 - Ledger Live is installed.
 - A web browser is installed that you can use to access [Polkadot-JS Apps][].
 
@@ -36,19 +31,21 @@ This is a list of what you will need before starting:
 > Developer Release" instruction below. Otherwise hold tight, the application should be approved
 > soon!
 
-- Open the Manager in Ledger Live.
+- Open the "Manager" tab in Ledger Live.
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing the right button.
 - Find Kusama in the app catalog.
-- Click the Install button of the app.
+- Click the "Install" button of the app.
 - An installation window appears.
-- Your device will display Processing…
+- Your device will display "Processing…"
 - The app installation is confirmed.
+
+Please proceed to the usage instructions below.
 
 ### Using the Developer Release
 
-> NOTE: These instructions are for pre-release only. They will be replaced by the instructions for
-> downloading the applicaton directly from Ledger Live when it becomes available.
+> NOTE: These instructions are for development installation only. It is recommended
+> to install the application from Ledger Live unless you _know exactly what you're doing_.
 
 Instructions for downloading the prerelease binary from the GitHub releases is written [on the
 README][prerelease instructions] for the Kusama Ledger application GitHub repository.
@@ -71,7 +68,7 @@ firmware (1.6 at the time of writing). If everything is prepared, then type `ins
 and accept the prompts on your Ledger device to install the application.
 
 First it will prompt you to allow an unsafe manager. Navigate all the way to the left and click both
-buttons to allow the unsafe manager to install the kusama app.
+buttons to allow the unsafe manager to install the Kusama app.
 
 After some processing time, the screen of your device will update to say "Install app Kusama".
 Again, navigate all the way to the right, verify the Identifier hash matches the one that is printed
