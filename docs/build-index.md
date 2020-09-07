@@ -17,8 +17,6 @@ This section of the wiki is divided into the following parts:
 
 - [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain,
   parathread, or smart contract for your project and how to get started.
-- [Development Roadmap](build-dev-roadmap) - Tracker for the development state of the most important
-  tools.
 - [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and
   parathreads.
 - [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can
@@ -29,6 +27,7 @@ This section of the wiki is divided into the following parts:
 This section is for service providers like wallets or node operators who want to learn how to
 integrate Polkadot into their systems.
 
+- [Integration Initiation](build-integration) - The guide to the guide.
 - [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the
   Polkadot protocol, e.g. address formats.
 - [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the

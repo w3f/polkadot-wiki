@@ -12,6 +12,10 @@ The Polkadot community is expanding every day. Below are the most essential link
 - [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
 - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
 
+### Events
+
+The Web3 Foundation hosts many events online and in-person. To check out our current and past events, please refer to our public [Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
+
 ## Riot Chats
 
 ### Polkadot
@@ -34,14 +38,21 @@ The Polkadot community is expanding every day. Below are the most essential link
 ## Socials
 
 - [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - Sign-up for our newsletter here.
-- [Polkadot Telegram](https://t.me/polkadotofficial) - Official Telegram room for discussion of Polkadot (please read the rules before chatting).
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork) - Official Twitter account of Polkadot.
-- [Polkadot Reddit](https://www.reddit.com/r/dot/) - Official Polkadot Reddit.
-- [Polkadot Youtube Channel](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw) - Video content from founders and build of Polkadot describing the network and the vision.
-- [Kusama Telegram](https://t.me/kusamanetworkofficial)
+- [Web3 Medium Blog](https://medium.com/@web3)
+- [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+- [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
+- [Polkadot Reddit](https://www.reddit.com/r/dot/)
+- [Polkadot Blog](https://polkadot.network/blog/)
+- [Polkadot Twitter](https://twitter.com/polkadotnetwork)
+- [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
+- [Polkadot Telegram](https://t.me/PolkadotOfficial)
+- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/)
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
+- [Kusama Telegram](https://t.me/kusamanetworkofficial)
 - [Kusama Reddit](https://www.reddit.com/r/Kusama)
 - [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
+- [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
+- [Dot Leap Newsletter](https://dotleap.substack.com/)
 
 ## Ecosystem
 

@@ -25,6 +25,5 @@ Welcome to the Polkadot wiki, the hub for those interested in learning, building
 ## 참고자료들 (Resources)
 
 - [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
-- [News](news) - Polkadot의 핫한 주간 뉴스들. 매주 발행됩니다.
 - [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
-- [Contributing Guide](contributing) - wiki에 기여하기 위해 필요한 규칙들
+- [Contributing Guide](contributing) - Rules for contributing to the wiki.

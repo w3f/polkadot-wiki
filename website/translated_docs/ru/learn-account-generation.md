@@ -11,6 +11,9 @@ There are several ways to generate a Polkadot address:
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
 - [Polkadot.js Web Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
+- [Vanity Generator](#vanity-generator)
+
+> To learn more on how to create Polkadot accounts, head over to our [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
 
 ## DISCLAIMER: Key Security
 
@@ -126,19 +129,23 @@ For detailed build and usage instructions of subkey, please see [here](https://g
 
 ## Polkadot.js
 
-Using the polkadot.js user interface without the plugin is not recommended. It is the least secure way of generating an account. It should only be used if all of the other methods are not feasible in your situation.
+> Please note! If you use Polkadot.js to create your account and clear your cookies in your browser, your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you store your seed phrase in a safe place, or download the account's JSON file if using the PolkadotJS browser extension. Learn more about account backup and restoration [here](learn-account-restore).
 
-![pjs-01](assets/accounts/polkadot_js_01.jpg)
+Using the Polkadot.js user interface without the plugin is not recommended. It is the least secure way of generating an account. It should only be used if all of the other methods are not feasible in your situation.
 
 ### Go to Polkadot Apps
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on the "Accounts" tab. It is located in the sidebar on the left side of your screen.
+Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar on the top of your screen.
+
+![pjs-01](assets/accounts/polkadot_js_01.png)
+
+> Note: For these screenshots, I am currently connected to the Polkadot network. To create an account on a different network, you'll need to click on the network selection in the top left corner of the navigation menu. A pop-up sidebar will appear listing live, testing, and custom node to choose from. Do remember to hit the "Switch" button when you want to switch your network.
 
 ### Start Account Generation
 
 Click on the "Add Account" button.
 
-![pjs-02](assets/accounts/polkadot_js_02.jpg)
+![pjs-02](assets/accounts/polkadot_js_02.png)
 
 You should see a pop-up that looks like the one here. The required text fields to complete are highlighted in pink.
 
@@ -152,19 +159,19 @@ When you have entered valid information for both, the color of the text boxes wi
 
 Please see above for information on [storing your key safely](#disclaimer-key-security).
 
-### Create and backup account
+### Create and Back Up Account
 
 Click “Save” and your account will be created. It will also generate a backup file that you should save to your computer. Ideally, you would also save it on an external hard drive or thumb drive, or print it out and be able to re-enter it later. You should not store it in cloud storage, email it to yourself, etc.
 
 You can use this backup file to restore your account. This backup file is not readable unless it is decrypted with the password.
 
-![pjs-05](assets/accounts/polkadot_js_05.jpg)
+![pjs-05](assets/accounts/polkadot_js_05.png)
 
 ### Multi-signature Accounts
 
 Multi-signature accounts are accounts created from several standard accounts (or even other multi-sig accounts). For a full explanation, please see the [Accounts Explainer section on multi-sigs](learn-accounts#multi-signature-accounts).
 
-On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter the threshold and add signatories. The threshold must be less than or equal to the number of signatories. The threshold indicates how many members must be in agreement for an extrinsic submission to be successful. Click `Create` when done. We'll use the accounts Alice, Bob, and Charlie here.
+On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter the threshold and add signatories. The threshold must be less than or equal to the number of signatories. The threshold indicates how many members must be in agreement for an extrinsic submission to be successful. Click `Create` when done.
 
 ![Multi-sig account creation](/img/accounts/create-multisig.png)
 
@@ -190,7 +197,7 @@ Signatories should communicate off-chain to prevent many pending transactions an
 
 ## Parity Signer
 
-Parity Signer is a secure way of storing your DOTs on an air-gapped device. It is highly recommended that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after installing it. If you have any communications methods turned on, you will see an "unshielded" icon in red on the top-right corner that indicates your connection may not be secure.
+Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after installing it. If you have any communications methods turned on, you will see an "unshielded" icon in red on the top-right corner that indicates your connection may not be secure.
 
 ### Create Account
 
@@ -204,7 +211,7 @@ Input the name for your identity and then click "Create".
 
 ![Parity Signer Create Account 2](assets/accounts/ps-create-2.jpg)
 
-### Backup Account
+### Back Up Account
 
 Parity Signer will then generate a recovery phrase for you and display it in the form of 12 or 24 words.
 
@@ -233,3 +240,23 @@ Choose which network you would like to create an address on by clicking the name
 The address will be shown as a QR code. You can import your address to the PolkadotJS Apps by going to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
+
+## Vanity Generator
+
+Vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity) that lets you generate addresses which contain a specific substring.
+
+![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
+
+The vanity generator takes the following parameters:
+
+- "Search for": The substring that you would like to include in your new address.
+- "case sensitive": "Yes" if the search is case sensitive; "no" if not.
+- "keypair crypto type": Specifies the type of account you'd like to generate; Schnorrkel is recommended in most cases for its security.
+
+If you've filled out all details above and hit the "Start generation" button, a list of accounts will start generating on your screen. Note that depending on the length of the substring and the processing speed of your computer, it may take some time before any accounts appear.
+
+![Vanity Generator search](assets/polkadot_vanity_generate.png)
+
+The "Save" button will allow you to save on the generated accounts - they are not saved if you do not choose to do this. The next steps are identical to the [steps above on creating an account on the UI](#polkadotjs), where a password and name need to be filled in, and a backup file of your account will be downloaded.
+
+![Vanity Generator chosen address](assets/polkadot_save_account.png)

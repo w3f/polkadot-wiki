@@ -1,38 +1,52 @@
 ---
 id: learn-introduction
-title: Polkadot
-sidebar_label: Polkadot
+title: What is Polkadot?
+sidebar_label: What is Polkadot?
 ---
 
-Polkadot 是个分片的区块链网络，它建立在世界将会有多条需要交互的区块链的理论之上。 Polkadot 将可扩展性、互操作性和安全性统一在一起。
+Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a secure, trust-free environment.
+
+Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet where independent blockchains can exchange information under common security guarantees.
+
+Polkadot is a living network with the core pillars of governance and upgradability. The network has an advanced suite of governance tools and, using the WebAssembly standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your growing needs without the risks of network forks.
+
+By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users control their data and are not limited by trust bounds within the network.
 
 ## 为什么是 Polkadot？
 
-Polkadot 允许多条专业领域的（specialized）区块链在安全的无信任环境中相互沟通，从而实现可扩展性。
+The Polkadot network is heading towards a future with a secure ecosystem for decentralized applications (built with blockchain technology) to communicate and interact in. Polkadot has deep roots in the blockchain industry and working hard to build on existing blockchain concepts like governance, scalibility, and many more.
 
-Polkadot 是为了连接和保护多条独特的区块链，无论它们是公共的、无权限的网络、私人企业集团链、还是 oracles 或其他Web3技术。 它使多条独立区块链在共同的安全保证下交换信息的网络成为可能。
+Back in the early 2000's, when the internet was gaining popularity for the first time, the internet featured read-only, static, basic webpages. The online connected world at the time was only the beginning of virtual data, identities, and more. The internet during this time was also called the Web 1.0.
 
-Polkadot 是个有生命力的网络，其核心支柱是民主治理和可更新性。 该网络拥有一套先进的治理工具，以 WebAssembly 标准作为 "元协议"，可以自动部署网络升级。 Polkadot 会适应您不断增长的需求，而不会产生区块链网络分叉的风险。
+As social media platforms and online businesses began to emerge, the internet transformed into the Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages, where users can read and write information plus publish their own for others to see. This version of the web though, comes with downsides dealing with data control, privacy issues, and trust. This is where the Web 3.0 comes into the picture.
 
-通过连接这些点, Polkadot 提供了一个去中心化网络的基础服务, 用户控制他们的数据，并且不受网络内信任界线的限制。
+The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free protocols. The goal is to transform the internet into a decentralized web, where users control their own data and identity in a trust-free environment. The Web 3.0 movement aims to remove intermediaries and build a trustless infrastructure.
 
-## 什么是 Polkadot？
+> To learn more of the Web3 movement, check out this video from the [Web3 Summit](https://youtu.be/l44z35vabvA)
 
-Polkadot 网络使用了一种分片模型，每个分片-被称为 "[平行链（parachain）](learn-parachains)" -在网络中具有独特的状态转换功能 (STF)。 基于 Polkadot 的设计，只要链的逻辑能够编译到 WASM，它就可以作为平行链连接到 Polkadot 网络。
+## How does Polkadot work?
 
-Polkadot 有中继链作为系统的主链。 平行链(parachain) 构造并向中继链上的验证人提议区块，而区块在被添加到最终链之前经过严格的可获得性和有效性检查。 由于中继链提供了安全保障，收集人没有任何安全责任，因此不需要强有力的奖励制度。
+The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)" - in the network have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm, then it can connect to the Polkadot network as a parachain.
 
-为了与其它的区块确认性程序的链条进行交互 (例如: 比特币)，Polkadot 有[桥接链（bridge parachains）](learn-bridges) 提供双向兼容性。
+Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, collators don't have any security responsibilities, and thus do not require a robust incentive system.
 
-跨链通信协议(XCMP) 允许平行链相互发送任何类型的信息。 中继链的共享安全和验证逻辑为去信任的信息传递提供了环境，开启了真正的跨链互操作性。
+In order to interact with chains that want to use their own finalization process (e.g. Bitcoin), Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
 
-## 深入了解
+The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
+
+> To watch a short, beginner-friendly animation on Polkadot, check out our [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
+
+## Why should you use Polkadot?
+
+Whether you're a blockchain developer or if you're interested in taking part of Polkadot's community, Polkadot offers a platform for everyone. This Wiki offers a place for Builders and Maintainers to utilize tools and for brand-new learners to dive into material. In fact, the best place to start is the [Getting Started](getting-started) page.
+
+## Digging deeper
 
 - [架构](learn-architecture) - Polkadot 架构概述。
 - [转接桥](learn-bridges) - 转接桥的概述。
 - [密码学](learn-cryptography) - 描述 Polkadot 中使用的密码学以及在协议中那里使用。
 - [共识](learn-consensus) - 描述 Polkadot 协议中使用的共识类型以及它与其它共识协议的比较。
-- [ DOT ](learn-DOT) 关于 DOT 的资料，即 Polkadot 协议的原生代币。
+- [DOT](learn-DOT) - Information on DOT, the native token of the Polkadot protocol.
 - [治理](learn-governance) - 什么是区块链治理及其在 Polkadot 中的方式。
 - [跨链通信](learn-crosschain) - 跨链消息传递的工作方式。
 - [平行链](learn-parachains) - 什么是平行链以及它们如何运作。
@@ -46,12 +60,3 @@ Polkadot 有中继链作为系统的主链。 平行链(parachain) 构造并向�
 - [抵押](learn-staking) - 抵押在 Polkadot 中的原理。
 - [财政部](learn-treasury) - 如何在 Polkadot 和 Kusama 上提出支出建议。
 - [ WebAssembly ](learn-wasm) - WebAssembly 的描述及其在 Polkadot 中的用法。
-
-## 资源
-
-- [Launch timeline](learn-launch) - find out about the Polkadot launch plans and schedule
-- [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
-- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
-- [Links](learn-relevant-links) - Comprehensive list of external links.
-- [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
-- [FAQ](faq) - Answers to some of the frequently asked questions about Polkadot.

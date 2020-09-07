@@ -25,6 +25,5 @@ sidebar_label: 维基索引
 ## 资源
 
 - [社区/生态](community)-可以与其他人谈论 Polkadot 社区的频道。
-- [新闻](news)-每周都会汇总到有关 Polkadot 最热门新闻的链接。
-- [应用程序例子](build-examples-index)-基于 Polkadot 构建或当前正在构建应用程序的例子。
-- [贡献指南](contributing)-向维基贡献的规则。
+- [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
+- [Contributing Guide](contributing) - Rules for contributing to the wiki.

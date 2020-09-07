@@ -17,10 +17,6 @@
         "title": "패러체인을 보고 배포하는 방법",
         "sidebar_label": "패러체인을 보고 배포하는 방법"
       },
-      "build-dev-roadmap": {
-        "title": "개발자들을 위한 로드맵",
-        "sidebar_label": "개발자들을 위한 로드맵"
-      },
       "build-examples-index": {
         "title": "사례들",
         "sidebar_label": "사례들"
@@ -32,6 +28,10 @@
       "build-index": {
         "title": "개발자 포탈",
         "sidebar_label": "개발자 포탈"
+      },
+      "build-integration": {
+        "title": "Polkadot Integration Guide",
+        "sidebar_label": "Integration Initiation"
       },
       "build-node-interaction": {
         "title": "Node Interaction",
@@ -81,6 +81,18 @@
         "title": "기여하기",
         "sidebar_label": "기여하기"
       },
+      "contributors": {
+        "title": "Contributors",
+        "sidebar_label": "Contributors"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions (FAQs)",
+        "sidebar_label": "Frequently Asked Questions (FAQs)"
+      },
+      "getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "glossary": {
         "title": "용어 정리",
         "sidebar_label": "용어 정리"
@@ -88,10 +100,6 @@
       "grants": {
         "title": "Web3 Foundation Grantees",
         "sidebar_label": "Grants"
-      },
-      "index": {
-        "title": "위키 목록",
-        "sidebar_label": "위키 목록"
       },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
@@ -121,13 +129,21 @@
         "title": "Kusama Faucet",
         "sidebar_label": "Faucet"
       },
+      "kusama-getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "Home"
       },
-      "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet",
+      "kusama-parameters": {
+        "title": "Kusama Parameters",
         "sidebar_label": "Parameters"
+      },
+      "kusama-social-recovery": {
+        "title": "Social Recovery",
+        "sidebar_label": "Account Recovery"
       },
       "kusama-timeline": {
         "title": "Kusama Timeline",
@@ -136,6 +152,10 @@
       "learn-account-generation": {
         "title": "Account Generation",
         "sidebar_label": "Account Generation"
+      },
+      "learn-account-restore": {
+        "title": "Backing up and Restoring Accounts",
+        "sidebar_label": "Backing up and Restoring Accounts"
       },
       "learn-accounts": {
         "title": "Polkadot Accounts",
@@ -189,10 +209,6 @@
         "title": "DOT",
         "sidebar_label": "DOT"
       },
-      "learn-faq": {
-        "title": "FAQ | 자주 묻는 문의사항",
-        "sidebar_label": "FAQ | 자주 묻는 문의사항"
-      },
       "learn-governance": {
         "title": "거버넌스 (Governance)",
         "sidebar_label": "거버넌스 (Governance)"
@@ -208,10 +224,6 @@
       "learn-implementers-guide": {
         "title": "Parachain Implementer's Guide",
         "sidebar_label": "Parachain Implementer's Guide"
-      },
-      "learn-introduction": {
-        "title": "폴카닷",
-        "sidebar_label": "폴카닷"
       },
       "learn-keys": {
         "title": "폴카닷 키들",
@@ -245,14 +257,6 @@
         "title": "무작위 선택",
         "sidebar_label": "무작위 선택"
       },
-      "learn-relevant-links": {
-        "title": "링크",
-        "sidebar_label": "링크"
-      },
-      "learn-roadmap": {
-        "title": "로드맵",
-        "sidebar_label": "로드맵"
-      },
       "learn-security": {
         "title": "네트워크의 보안",
         "sidebar_label": "네트워크의 보안"
@@ -272,6 +276,10 @@
       "learn-transaction-fees": {
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
+      },
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
       },
       "learn-treasury": {
         "title": "재무관리",
@@ -293,9 +301,17 @@
         "title": "Participate in Democracy",
         "sidebar_label": "Participate in Democracy"
       },
+      "maintain-guides-how-to-chill": {
+        "title": "How to Chill",
+        "sidebar_label": "How to Chill"
+      },
       "maintain-guides-how-to-join-council": {
         "title": "의회에 출마하는 법",
         "sidebar_label": "의회에 출마하는 법"
+      },
+      "maintain-guides-how-to-monitor-your-node": {
+        "title": "Monitor your node",
+        "sidebar_label": "Monitor your node"
       },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "노미네이터가 되어보세요 (알렉산더)",
@@ -331,11 +347,11 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "검증자 노드를 돌려보세요 (쿠사마)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "maintain-guides-how-to-validate-polkadot": {
         "title": "Run a Validator (Polkadot)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Polkadot"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "검증자 노드를 돌려보세요 (알렉산더)",
@@ -368,6 +384,10 @@
       "maintain-nominator": {
         "title": "노미네이터",
         "sidebar_label": "노미네이터"
+      },
+      "maintain-polkadot-parameters": {
+        "title": "Polkadot Parameters",
+        "sidebar_label": "Parameters"
       },
       "maintain-sync": {
         "title": "Set up a Full Node",
@@ -407,11 +427,11 @@
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",
-        "sidebar_label": "Validator Guide"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
-      "news": {
-        "title": "News Sources",
-        "sidebar_label": "News Sources"
+      "redenomination": {
+        "title": "Redenomination of DOT",
+        "sidebar_label": "Redenomination of DOT"
       },
       "research": {
         "title": "연구 자료들",
@@ -419,17 +439,18 @@
       }
     },
     "links": {
-      "Build": "개발",
+      "Get Started": "Get Started",
       "Learn": "학습",
+      "Build": "개발",
       "Maintain ": "Maintain ",
-      "Kusama": "Kusama"
+      "Kusama": "Kusama",
+      "Contribute": "Contribute"
     },
     "categories": {
-      "Main": "메인",
-      "Build": "개발",
+      "General": "General",
       "Learn": "학습",
-      "Maintain": "유지 및 보수",
-      "Kusama": "Kusama"
+      "Build": "개발",
+      "Maintain": "유지 및 보수"
     }
   },
   "pages-strings": {
@@ -441,17 +462,6 @@
     "Stay up to date|no description given": "최신 정보를 놓치지 마세요.",
     "Need help?|no description given": "도움이 필요하세요?",
     "This project is maintained by a dedicated group of people.|statement made to reader": "이 프로젝트는 이 분야에 집중하는 사람들에 의해서 유지 및 보수가 이루어지고 있습니다.",
-    "A scalable, heterogeneous multichain.|no description given": "스케일러블하고, 이종적인 멀티체인.",
-    "Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.|no description given": "폴카닷은 낮은 진입장벽으로 유연하고 자발적인 경제시스템들이 서로 폴카닷의 보호 아래 협력할 수 있도록 해주는 플랫폼입니다. 폴카닷은 블록체인 기술만이 아니며, 보다 합리적인 상호간의 디지털 의사 결정을 위한 혁명입니다.",
-    "Learn More|no description given": "더 알아보기",
-    "Build|no description given": "빌드해보세요",
-    "Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.|no description given": "폴카닷은 개발자들이 상호운용성과 공유되는 보안을 이용하여 그들의 입맛에 맞는 블록체인들을 만들 수 있게 해줍니다.",
-    "Builder's Portal|no description given": "개발자 포탈",
-    "Validators|no description given": "검증자",
-    "Run a validator and help to secure the Polkadot network while earning rewards.|no description given": "검증자 노드를 돌려서 폴카닷 네트워크를 지키며 보상을 받아보세요.",
-    "Collators|no description given": "전달자 (Collators)",
-    "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "전달자를 돌려서 패러체인의 블록을 만든 다음 검증을 위해 밸리데이터한테 보내세요.",
-    "Become a Maintainer|no description given": "메인테이너가 되어보세요",
     "Help Translate|recruit community translators for your project": "번역을 도와주세요",
     "Edit this Doc|recruitment message asking to edit the doc source": "편집",
     "Translate this Doc|recruitment message asking to translate the docs": "번역"

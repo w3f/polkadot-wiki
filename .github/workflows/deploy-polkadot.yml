@@ -1,7 +1,7 @@
 name: Deploy Polkadot
 
 # Triggered on commits to the main branch.
-on: 
+on:
   push:
     branches:
       - master
@@ -12,13 +12,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+
+      - name: Clone and run the site
+        run: |
+          sudo apt-get install netcat
+          yarn
+          yarn polkadot:start &
+          while ! nc -z localhost 3000; do
+              sleep 1
+              echo waiting for website up...
+          done
+          yarn polkadot:pdf
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: polkadot-wiki
+          path: website/static/polkadot-wiki.pdf
+
       - name: Build
         run: yarn; yarn polkadot:build
         env:
           BUILDING: true
 
       - name: Upload to IPFS
-        uses: aquiladev/ipfs-action@v0.1.2
+        uses: aquiladev/ipfs-action@v0.1.4
         with:
           path: ./website/build/polkadot-wiki
           timeout: 120000

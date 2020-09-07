@@ -25,6 +25,5 @@ Jika Anda mencari pengantar untuk Polkadot, harap [ lihat di sini ](learn-introd
 ## Sumber daya
 
 - [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
-- [ Berita ](news) - Tautan ke berita terpanas tentang Polkadot, dikumpulkan setiap minggu.
 - [Sample Applications](build-examples-index) - Sample applications that are built on or currently being built for Polkadot.
-- [ Panduan Berkontribusi ](contributing) - Aturan untuk berkontribusi ke wiki.
+- [Contributing Guide](contributing) - Rules for contributing to the wiki.

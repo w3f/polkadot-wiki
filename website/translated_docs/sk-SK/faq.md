@@ -30,7 +30,7 @@ The launch process is expected to be similar to that of the Kusama network. Kusa
 
 There is no central authority that decides on validators, so there is not per se an _application_ that you can fill out. Registering as a validator is permissionless; in order to become one you must only set up a validator node and mark your intention to validate on chain. For detailed instruction on how to do this you can consult the [wiki guide](maintain-guides-how-to-validate-kusama.md) on validating for Kusama.
 
-However, once you've set up a validator and have registered your intention it does not mean that you will be included in the _active set_ right away. The validators are elected to the active set based on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmen's method tries to accomplish two goals: 1) select `n` members from a larger set based on stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
+However, once you've set up a validator and have registered your intention it does not mean that you will be included in the _active set_ right away. The validators are elected to the active set based on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmén's method tries to accomplish two goals: 1) select `n` members from a larger set based on stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
 You will likely want to campaign your validator to the community in order to get more backing. You are looking for _nominators_ that will put up their tokens to increase the stake for your validator. For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation also run a joint program called [Thousand Validators](https://thousand-validators.kusama.network/#/) that will nominate validators if they apply and fit the requirements.
 
@@ -81,21 +81,25 @@ While the Polkadot Relay Chain does not implement smart contracts directly, undo
 
 One of the cornerstone interoperability technologies being research and developed for deployment on Polkadot is cross-chain bridges. Bridges come in a variety of flavors with varying levels of trust associated with them. Polkadot is predominantly researching the trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore makes it economically secure. Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually, there will be bridges between Polkadot and most of the other major chains.
 
-## DOTs
+## DOT
+
+### What is the difference between DOT (old) and new DOT?
+
+The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21 August, 2020, Denomiation Day, the DOT (old) value was redenominated to 1e10 (10'000'000'000, or ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the [redenomination](redenomination), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
 
 The inflation rate is 10% per year.
 
-A portion of the inflation is rewarded to validators for performing their duties, while another portion may go directly to the treasury. The exact percentage that goes into both varies and is based on the amount of DOTs that are staked. Please see the article on [inflation](learn-staking#inflation) for more information.
+A portion of the inflation is rewarded to validators for performing their duties, while another portion may go directly to the treasury. The exact percentage that goes into both varies and is based on the amount of DOT that are staked. Please see the article on [inflation](learn-staking#inflation) for more information.
 
 ### Can I buy or transfer DOT tokens?
 
 Testnet DOT tokens are freely available from a variety of sources. See the [DOT page](learn-DOT) for details.
 
-The Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+The Web3 Foundation will distribute up to 20% of mainnet DOT prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
 
-DOT tokens are not transferable until the launch of Polkadot Beta is complete. Any transfers of DOTs before that time are illegitimate and unauthorized. DOTs are currently represented on Ethereum as the DOT Indicator Token, these cannot be moved from the current allocation address. Individuals with an allocation of DOTs can always keep a copy of their private key, therefore it is extremely risky for individuals to participate in trading of DOTs before Polkadot launch.
+DOT tokens are not transferable until the launch of Polkadot Beta is complete. Any transfers of DOT before that time are illegitimate and unauthorized. DOT are currently represented on Ethereum as the DOT Indicator Token, these cannot be moved from the current allocation address. Individuals with an allocation of DOT can always keep a copy of their private key, therefore it is extremely risky for individuals to participate in trading of DOT before Polkadot launch.
 
 ## Governance
 
@@ -137,7 +141,7 @@ The Rust implementation of the specification was built and primarily maintained 
 
 Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol that is based on libp2p (specifically the Rust libp2p library). However, Substrate uses a mix of standard libp2p protocols and protocols that are homegrown and not official libp2p standards. Of the standards protocols, those which are shared with other implementations of libp2p such as IPFS, are connection-checking (ping), asking for information on a peer (identity), and Kademlia random walks (kad).
 
-Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a request-response for getting information on blocks (sync), a light client protocol, a notification protocol for transactions, and block announcement. For detailed information on how Substrate uses libp2p and the standard and custom protocols, please see the [networking documentation](https://crates.parity.io/sc_network/index.html).
+Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a request-response for getting information on blocks (sync), a light client protocol, a notification protocol for transactions, and block announcement. For detailed information on how Substrate uses libp2p and the standard and custom protocols, please see the [networking documentation](https://substrate.dev/rustdocs/v2.0.0-rc6/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 

@@ -10,6 +10,8 @@ This guide will walk you through the steps for either making a claim or attestin
 
 If you are making a claim on Polkadot for the first time, please read on below in the [making a claim](#making-a-claim) section. If you've already claimed during the pre-genesis claims period, please proceed to the [attesting to a statement](#attesting-to-a-statement) section instead.
 
+> To learn more on How to claim your DOT post genesis, check out our walkthrough [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22) and our video on [Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+
 ## Making a Claim
 
 If you did not make a claim in the pre-genesis claims period, then you are able to claim your DOT tokens after genesis. There is no time limit for making your claim so feel free to do this whenever you are most comfortable.
@@ -28,13 +30,13 @@ You should already have your Ethereum account that holds the DOT indicator token
 
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
 
-You will need a Polkadot account to claim your DOTs. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
+You will need a Polkadot account to claim your DOT. Please follow the instructions on the \[account generation\]\[\] page for generating a new Polkadot account.
 
 #### Claiming your DOT with MyCrypto
 
 The Polkadot JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
 
-Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOTs into and click the blue "Continue" button to proceed. Your screen should look something like this:
+Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
 ![claim-1](assets/new-claims/claim-1.png)
 
@@ -46,7 +48,7 @@ Next your screen should look the image below.
 
 ![claim-2-1](assets/new-claims/claim-2-1.png)
 
-The hex-encoded string that follows the sentence: "Pay DOTs to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
+The hex-encoded string that follows the sentence: "Pay DOT to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
 The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab.
 
@@ -72,35 +74,23 @@ A green box will appear telling you the amount to claim with a "Claim" button to
 
 ![claim-9](assets/new-claims/claim-9.png)
 
-If this claim succeeded, then you will see a success message and your DOTs will be in the account that you claimed to.
+If this claim succeeded, then you will see a success message and your DOT will be in the account that you claimed to.
 
 #### Verifying your Claim
 
-After you make an on-chain claim for DOTs, your balance should be updated on the Polkadot UI immediately.
+After you make an on-chain claim for DOT, your balance should be updated on the Polkadot UI immediately.
 
 Having trouble? Get support in the DOT [Claims Support]() channel.
 
 ![claim-10](assets/new-claims/claim-10.png)
 
-Congratulations, you have now completed the process for claiming and signing for your DOTs.
+Congratulations, you have now completed the process for claiming and signing for your DOT.
 
 ### Third Party Claims Processes
 
-#### Coinbase Custody
+**We do not recommend using third-party apps or processes to perform your claim or acquire DOT.**
 
-> Please note that using Coinbase Custody for the claims process requires your account to contain at least 1,000 DOTs. There are also fees associated with Coinbase Custody.
-
-1. To open an account please contact Coinbase Custody directly at sales@coinbase.com
-1. Once you’ve opened an account, Coinbase Custody will generate a DOT address for you to use in the claims process and send it to you.
-1. You may then claim your tokens using your Coinbase Custody DOT address and your tokens will appear in your Coinbase Custody account.
-
-For questions about claiming with Coinbase Custody, please contact sales@coinbase.com.
-
-#### Other Third Party Processes
-
-**We do not recommend using other third-party apps or processes to perform your claim or acquire DOT.**
-
-Claiming using other third-party processes can lead to the loss of your allocation; therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, or by using Coinbase Custody, is the only way to be certain that you will receive your allocation.
+Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation.
 
 ## Attesting to a Statement
 
@@ -136,7 +126,7 @@ Click "Continue" and you will see a green box appear on the right.
 
 ![claim-attest-4](assets/new-claims/new-attest-4.png)
 
-Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
 
 ![claim-attest-5](assets/new-claims/new-attest-5.png)
 
@@ -165,7 +155,7 @@ Open Parity Signer and choose "Polkadot" network.
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-Select the address that you have claimed DOTs to during pre-genesis.
+Select the address that you have claimed DOT to during pre-genesis.
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
@@ -203,7 +193,7 @@ First, you need to press the "QR Scanner" on the Parity Signer to scan the QR co
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
-When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
+When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
 
 [MyCrypto]: https://download.mycrypto.com/

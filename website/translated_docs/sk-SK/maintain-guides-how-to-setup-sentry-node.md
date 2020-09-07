@@ -4,6 +4,10 @@ title: Set Up a Sentry Node - Public Node
 sidebar_label: Set Up a Sentry Node
 ---
 
+## DEPRECATED
+
+> With the upcoming release of Substrate and Polkadot/Kusama, support for sentry nodes will be deprecated. Details can be found [here](https://github.com/paritytech/substrate/issues/6845). Please stay tuned for further updates.
+
 This guide assumes you have already set up a validator and would like to make it more resilient and protect against sybil attack or DDoS. It has same configuration of the [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator).
 
 In this guide, we will walk you through how to configure a validator that sits inside a VPN. The validator only talks to the public facing nodes to isolate it from the internet and reduce the chance of your validator being hacked.
@@ -116,6 +120,8 @@ wg-quick up wg0
 #[#] ip -4 address add 10.0.0.1/24 dev wg0
 #[#] ip link set mtu 1420 up dev wg0
 ```
+
+> Note: If you are not able to start Wireguard or getting any errors during start, restart the computer and run the above command again.
 
 You can check the status of the interface by running `wg` :
 

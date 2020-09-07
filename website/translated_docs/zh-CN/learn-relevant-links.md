@@ -8,18 +8,16 @@ sidebar_label: 链接
 
 ### 概述
 
-- [白皮书](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf)- Polkadot 介绍
-- [简短版](https://polkadot.network/Polkadot-lightpaper.pdf)- 非技术性 Polkadot 的简述，。
-- [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) - Epicenter interviews Gavin Wood。
-- [区块链架构](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/)-Gavin Wood在《软件日报》上介绍了Substrate。
-- [ Polkadot概述](https://www.zeroknowledge.fm/46)- Gavin Wood 聊 Polkadot 的历史，并在零知识播客进行了很好的概述。
-- [ Polkadot概述](https://www.youtube.com/watch?v=oiunBLGHlAU)- Epicenter 采访了 Web3 基金会的 Peter Czaban 关于 Polkadot。
-- [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood 博士展示了Substrate（区块链框架 + VM）和 Polkadot，并在15分钟内用 Substrate 构建可行的区块链。
-- [ Polkadot 概述](https://youtu.be/lIghiCmHz0U)-Gavin Wood 博士介绍了 Polkadot。(视频)
-- [ Polkadot 概述](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/)-Jutta Steiner 博士介绍了Polkadot。(视频)
-- [互操作性简介](https://www.youtube.com/watch?v=RSAFHhTwA8Q)-Rob Habermeier 提出 "互操作性：Dots"。
-- [ Polkadot 的共识和确定性](https://www.youtube.com/watch?v=qvoAf2uIF3c)-Rob Habermeier 的讲话详述了 Polkadot 的共识机制。
-- [首尔DOT日](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39)-首尔DOT日所有演讲的视频播放列表。
+- [Substrate, Polkadot & The Case for On-Chain Governance](https://www.youtube.com/watch?v=eP4mT19S_jg) - Epicenter interviews Gavin Wood.
+- [Blockchain Infrastructure](https://softwareengineeringdaily.com/2018/11/26/parity-blockchain-infrastructure-with-gavin-wood/) - Gavin Wood presents Substrate on Software Daily.
+- [Polkadot on Zero Knowledge](https://www.zeroknowledge.fm/46) - Gavin Wood chatted about the history of Polkadot and provided a great overview on Zero Knowledge podcast.
+- [Epicenter and Polkadot](https://www.youtube.com/watch?v=oiunBLGHlAU) - Epicenter interviews Peter Czaban of Web3 Foundation about Polkadot.
+- [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate. (Video)
+- [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
+- [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Dr. Jutta Steiner presents Polkadot. (Video)
+- [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interoperability: Connecting the Dots."
+- [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
+- [DOT Day Seoul](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39) - Video playlist of all talks at DOT Day Seoul.
 
 ### Kusama
 
@@ -39,8 +37,7 @@ sidebar_label: 链接
 - [为 Polkadot 的Substrate 发布做准备](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815)-如何在发布之前开始准备 Polkadot 的概述。
 - [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post that recaps information regarding Substrate and Polkadot.
 - [在Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Gavin Wood 视频上提供 Substrate 的路线图摘要和 MelonportM-1 会议在 Polkadot 上的更新。
-- [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8)
-- [How admin functions in Substrate chains work](https://www.youtube.com/watch?v=InekMjJpVdo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=13)
+- [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8) - Logan Saether, from the technical education team presents a technical explaination of the relationship between Rust, Substrate and Polkadot.
 
 ### 治理
 
@@ -70,7 +67,7 @@ sidebar_label: 链接
 
 - [ Polkadot Host 规范](https://github.com/w3f/polkadot-re-spec/blob/master/polkadot_re_spec.pdf)- Polkadot Host 的完整规范。
 - [ Polkadot.js ](https://polkadot.js.org/)-JS中的工具和客户端。Polkadot JS 是由德国的三人团队开发，正在构建 Polkadot 的 JavaScript 实现。
-- [ ChainSafe 的 Go PRE ](https://github.com/ChainSafeSystems/go-pre)是由25人组成的开发团队，位于多伦多。 ChainSafe 使用 TypeScript 构建以太坊2.0客户端的信标链实现和 Polkadot 的 Go 实现。
+- [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team based in Toronto, Canada. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0 client in TypeScript and this Go implementation of Polkadot.
 
 ### Cumulus
 

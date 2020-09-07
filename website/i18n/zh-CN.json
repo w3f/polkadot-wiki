@@ -17,10 +17,6 @@
         "title": "如何查看及部署平行链",
         "sidebar_label": "如何查看及部署平行链"
       },
-      "build-dev-roadmap": {
-        "title": "开发路线图",
-        "sidebar_label": "开发路线图"
-      },
       "build-examples-index": {
         "title": "例子",
         "sidebar_label": "例子"
@@ -32,6 +28,10 @@
       "build-index": {
         "title": "开发者专页",
         "sidebar_label": "开发者专页"
+      },
+      "build-integration": {
+        "title": "Polkadot Integration Guide",
+        "sidebar_label": "Integration Initiation"
       },
       "build-node-interaction": {
         "title": "节点互动",
@@ -81,6 +81,18 @@
         "title": "贡献",
         "sidebar_label": "贡献"
       },
+      "contributors": {
+        "title": "Contributors",
+        "sidebar_label": "Contributors"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions (FAQs)",
+        "sidebar_label": "Frequently Asked Questions (FAQs)"
+      },
+      "getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "glossary": {
         "title": "专业术语",
         "sidebar_label": "专业术语"
@@ -88,10 +100,6 @@
       "grants": {
         "title": "Web3 Foundation Grantees",
         "sidebar_label": "Grants"
-      },
-      "index": {
-        "title": "维基索引",
-        "sidebar_label": "维基索引"
       },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
@@ -121,13 +129,21 @@
         "title": "Kusama 水龙头",
         "sidebar_label": "水龙头"
       },
+      "kusama-getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "主页"
       },
-      "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet",
-        "sidebar_label": "参数"
+      "kusama-parameters": {
+        "title": "Kusama Parameters",
+        "sidebar_label": "Parameters"
+      },
+      "kusama-social-recovery": {
+        "title": "Social Recovery",
+        "sidebar_label": "Account Recovery"
       },
       "kusama-timeline": {
         "title": "Kusama 时间线",
@@ -136,6 +152,10 @@
       "learn-account-generation": {
         "title": "创建帐户",
         "sidebar_label": "创建帐户"
+      },
+      "learn-account-restore": {
+        "title": "Backing up and Restoring Accounts",
+        "sidebar_label": "Backing up and Restoring Accounts"
       },
       "learn-accounts": {
         "title": "Polkadot 账户",
@@ -189,10 +209,6 @@
         "title": "DOT",
         "sidebar_label": "DOT"
       },
-      "learn-faq": {
-        "title": "常见问题",
-        "sidebar_label": "常见问题"
-      },
       "learn-governance": {
         "title": "治理",
         "sidebar_label": "治理"
@@ -208,10 +224,6 @@
       "learn-implementers-guide": {
         "title": "Parachain Implementer's Guide",
         "sidebar_label": "Parachain Implementer's Guide"
-      },
-      "learn-introduction": {
-        "title": "Polkadot",
-        "sidebar_label": "Polkadot"
       },
       "learn-keys": {
         "title": "密匙",
@@ -245,14 +257,6 @@
         "title": "随机性",
         "sidebar_label": "随机性"
       },
-      "learn-relevant-links": {
-        "title": "相关链接",
-        "sidebar_label": "相关链接"
-      },
-      "learn-roadmap": {
-        "title": "路线图",
-        "sidebar_label": "路线图"
-      },
       "learn-security": {
         "title": "网络安全",
         "sidebar_label": "网络安全"
@@ -272,6 +276,10 @@
       "learn-transaction-fees": {
         "title": "交易费用",
         "sidebar_label": "交易费用"
+      },
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
       },
       "learn-treasury": {
         "title": "财政库",
@@ -293,9 +301,17 @@
         "title": "参与民主权利",
         "sidebar_label": "参与民主权利"
       },
+      "maintain-guides-how-to-chill": {
+        "title": "How to Chill",
+        "sidebar_label": "How to Chill"
+      },
       "maintain-guides-how-to-join-council": {
         "title": "加入议会",
         "sidebar_label": "加入议会"
+      },
+      "maintain-guides-how-to-monitor-your-node": {
+        "title": "Monitor your node",
+        "sidebar_label": "Monitor your node"
       },
       "maintain-guides-how-to-nominate-alexander": {
         "title": "成为提名人 (Alexander)",
@@ -331,11 +347,11 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "验证人指南"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
       "maintain-guides-how-to-validate-polkadot": {
         "title": "运行验证人 (Polkadot)",
-        "sidebar_label": "验证人指南"
+        "sidebar_label": "How to run a Validator on Polkadot"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
@@ -368,6 +384,10 @@
       "maintain-nominator": {
         "title": "提名人",
         "sidebar_label": "提名人"
+      },
+      "maintain-polkadot-parameters": {
+        "title": "Polkadot Parameters",
+        "sidebar_label": "Parameters"
       },
       "maintain-sync": {
         "title": "设置全节点",
@@ -407,11 +427,11 @@
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "验证人指南"
+        "sidebar_label": "How to run a Validator on Kusama"
       },
-      "news": {
-        "title": "News Sources",
-        "sidebar_label": "News Sources"
+      "redenomination": {
+        "title": "Redenomination of DOT",
+        "sidebar_label": "Redenomination of DOT"
       },
       "research": {
         "title": "研究专页",
@@ -419,17 +439,18 @@
       }
     },
     "links": {
-      "Build": "建立",
+      "Get Started": "Get Started",
       "Learn": "学习",
+      "Build": "建立",
       "Maintain ": "参与 ",
-      "Kusama": "Kusama"
+      "Kusama": "Kusama",
+      "Contribute": "Contribute"
     },
     "categories": {
-      "Main": "主要",
-      "Build": "建立",
+      "General": "General",
       "Learn": "学习",
-      "Maintain": "参与",
-      "Kusama": "Kusama"
+      "Build": "建立",
+      "Maintain": "参与"
     }
   },
   "pages-strings": {
@@ -441,17 +462,6 @@
     "Stay up to date|no description given": "保持最新",
     "Need help?|no description given": "需要协助?",
     "This project is maintained by a dedicated group of people.|statement made to reader": "该项目由一群专职人员维护",
-    "A scalable, heterogeneous multichain.|no description given": "可扩容的异构多链。",
-    "Polkadot is a platform with low barriers to entry for flexible, autonomous economies acting together within Polkadot’s shared security umbrella. Polkadot is a revolution, not just in blockchain technology but also towards enabling fairer peer-to-peer digital jurisdictions.|no description given": "Polkadot 是一个平台，对于在 Polkadot的 共享安全保护伞内共同行动的灵活，自治的经济体，入门槛低。Polkadot 不仅是区块链技术的革命，而且是朝着建立更公平的点对点数字管辖区迈进的革命。",
-    "Learn More|no description given": "了解更多",
-    "Build|no description given": "开发",
-    "Polkadot empowers builders and developers to create blockchains to suit their needs and to benefit from interoperability and shared security.|no description given": "Polkadot 使建设者和开发者能够创建适合他们需求的区块链，并从互操作性和共享安全性中受益。",
-    "Builder's Portal|no description given": "开发者入口",
-    "Validators|no description given": "验证人",
-    "Run a validator and help to secure the Polkadot network while earning rewards.|no description given": "运行验证人节点获得奖励同时帮助保护 Polkadot 网络。",
-    "Collators|no description given": "收集人",
-    "Run a collator to package the parachain blocks and pass them to validators for verification.|no description given": "运行收集人打包平行链的区块并将其传递给验证人以进行验证。",
-    "Become a Maintainer|no description given": "成为参与者",
     "Help Translate|recruit community translators for your project": "参与翻译",
     "Edit this Doc|recruitment message asking to edit the doc source": "修改",
     "Translate this Doc|recruitment message asking to translate the docs": "翻译"

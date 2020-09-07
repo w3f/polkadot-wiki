@@ -4,7 +4,11 @@ title: Kontrak pintar
 sidebar_label: Kontrak pintar
 ---
 
-The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://crates.parity.io/pallet_contracts/index.html), it is likely that more parachains will support this feature.
+The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_contracts/index.html), it is likely that more parachains will support this feature.
+
+Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine, thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this approach are [Moonbeam](https://moonbeam.network/) and [Frontier](https://github.com/paritytech/frontier).
+
+A video version of the recap of the smart contract situation on Polkadot and Kusama is available [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
 
 ## Sumber daya
 
@@ -12,7 +16,6 @@ Here is the list of current resources available to developers who want to get st
 
 - [ tinta! ](https://github.com/paritytech/ink) - Tinta Parity untuk menulis kontrak pintar.
 - [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you through the basics of writing and deploying an ERC20 token using `ink!`.
-- [Using Smart Contracts on Polkadot and Kusama](https://www.youtube.com/watch?v=fKHkFBXaUxQ&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=6)
 
 ## Contoh
 
@@ -20,7 +23,17 @@ Collected below are some community examples of smart contracts in `ink!`. Are yo
 
 - [ Dimiliki ](https://github.com/JesseAbram/foRust/) - Port kontrak OpenZeppelin ` Ownable `.
 
-## Apa perbedaan antara mengembangkan kontrak pintar versus parachain?
+## Storage Rent
+
+Storage rent limits the footprint that a contract can have on the blockchain's storage.
+
+A contract deployed to the chain produces a code hash from which new instances of the chain can be created, but there is currently no rent applied to the code hash itself. The rent applies only to instances of this contract which have their own _contract accounts_. Deploying a code hash currently has a one-time byte-fee applied to the transaction, but no recurring cost.
+
+An account of a contract instance is charged proportionally to the amount of storage its account uses. When a contract's balance goes below a defined limit, the contract's account is turned into a "tombstone" (a hash of the contract's current state) and its storage is cleaned up. A tombstone contract can be restored by providing the data that was cleaned up when it became a tombstone as well as any additional funds needed to keep the contract alive. This fee will retroactively apply to missed rent periods.
+
+Block producers or regular users of the chain can "poke" a smart contract if they think it ran out of funds for rent. This will initiate the cleanup process and the _poker_ will get a finder's fee.
+
+## What is the difference between developing a smart contract versus a parachain?
 
 ### Lapisan Abstraksi
 
@@ -38,6 +51,6 @@ Smart contracts must find a way to limit their own execution, or else full nodes
 
 Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
 
-## Sumber daya
+## Resources
 
 - [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) - From a technical standpoint answers the question of when a developer might choose to develop a runtime versus a smart contract.

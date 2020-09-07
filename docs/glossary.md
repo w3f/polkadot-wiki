@@ -4,6 +4,12 @@ title: Glossary
 sidebar_label: Glossary
 ---
 
+## Active Nomination
+
+A validator (or validators) that a nominator is actively validating this era. The nominator is
+placing their stake behind this validator for this era and will potentially receive staking rewards
+in return for doing so.
+
 ## Alexander
 
 The fourth (now defunct) proof of concept (PoC-4) testnet for Polkadot.
@@ -76,12 +82,12 @@ The consensus algorithm used by Polkadot is GRANDPA.
 A generic term for a decentralized application, that is, one that runs as part of a distributed
 network as opposed to being run on a specific system or set of systems.
 
-## DOTs
+## DOT
 
-The native token for Polkadot. DOTs serve three purposes: network governance (allowing them to vote
+The native token for Polkadot. DOT serve three purposes: network governance (allowing them to vote
 on network upgrades and other exceptional events), general operation (rewarding good actors and
-punishing bad actors), and bonding (adding new parachains by "freezing" DOTs while they are
-connected the Relay Chain).
+punishing bad actors), and bonding (adding new parachains by "freezing" DOT while they are connected
+the Relay Chain).
 
 ## Duty Roster
 
@@ -123,7 +129,7 @@ A mechanism that determines finality.
 ## Fisherman
 
 Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must
-stake a small amount of DOTs but can be rewarded greatly if they find bad behavior.
+stake a small amount of DOT but can be rewarded greatly if they find bad behavior.
 
 ## Frame
 
@@ -170,6 +176,19 @@ Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from
 not to compete, but to provide broad access." A non-contentious blockchain that inherits the state
 of the underlying blockchain and creates a new branch of _the same blockchain_.
 
+## Horizontal Relay-routed Message Passing
+
+Horizontal Relay-routed Message Passing, also known as HRMP, is a precursor to the complete XCMP
+implementation, that mimics the same interface and semantics of XCMP. It is similar to XCMP except
+for how it stores all messages in the Relay Chain storage, therefore making it more expensive and
+demanding more resources than XCMP. The plan is to retire HRMP once the implementation of XCMP is
+complete.
+
+## Inactive Nomination
+
+A validator (or validators) that a nominator has selected to nominate, but is not actively
+validating this era. This type of nomination may become active in a future era.
+
 ## Inherent
 
 Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into
@@ -177,6 +196,11 @@ blocks by the block author. They are not provably true the way that the desire t
 therefore they do not carry a signature. A blockchain's [runtime](#runtime) must have rules for
 validating inherents. For example, timestamps are inherents. They are validated by being within some
 margin that each validator deems reasonable.
+
+## Injected Account
+
+An account which is not directly managed by the Polkadot UI but can be accessed through it, such as
+accounts controlled by the Polkadot{.js} extension.
 
 ## KSM
 
@@ -223,7 +247,7 @@ the good behavior of the validator. Nominated Proof-of-Stake differs from the mo
 Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad
 validator; delegators are not subject to loss of stake based on the behavior of the validator. Note
 that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if
-delegators can be slashed. Polkadot uses the Phragmen method to allocate stake to nominees.
+delegators can be slashed. Polkadot uses the Phragmén method to allocate stake to nominees.
 
 ## Nominator
 
@@ -237,6 +261,12 @@ A governance system of a blockchain that is controlled by mechanisms on the bloc
 governance allows decisions to be made in a transparent manner. Note that there are a variety of
 different algorithms for making these decisions, such as simple majority voting, adaptive quorum
 biasing, or identity-based quadratic voting.
+
+## Oversubscribed
+
+If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64
+staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
+rewards for that era.
 
 ## Pallet
 
@@ -310,7 +340,7 @@ Polkadot protocol, most prominently in [BABE](#babe) the block production mechan
 
 A vote on whether or not a proposal should be accepted by the network. Referenda may be initiated by
 the Governance Council, by a member of the public, or as the result of a previous proposal.
-Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOTs held)
+Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOT held)
 and the amount of time they are willing to lock their tokens.
 
 ## Relay chain
@@ -359,11 +389,11 @@ commit messages.
 
 The security model that Polkadot uses whereby all chains are equally secured. This is acheived by
 placing proofs of validity of parachain blocks into the Relay Chain such that, in order to revert
-finality of a single parachain, an attacked would need to attack the entire Polkadot system.
+finality of a single parachain, an attacker would need to attack the entire Polkadot system.
 
 ## Slashing
 
-The removal of a percentage of an account's DOTs as a punishment for a validator acting maliciously
+The removal of a percentage of an account's DOT as a punishment for a validator acting maliciously
 or incompetently (e.g., equivocating or remaining offline for an extended period of time).
 
 ## Soft Fork
@@ -375,9 +405,9 @@ new consensus rules but upgraded clients are still compatible with old consensus
 
 ## Staking
 
-The act of bonding tokens (for Polkadot, DOTs) by putting them up as "collateral" for a chance to
-produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOTs
-in order to secure the network.
+The act of bonding tokens (for Polkadot, DOT) by putting them up as "collateral" for a chance to
+produce a valid block (and thus obtain a block reward). Validators and nominators stake their DOT in
+order to secure the network.
 
 ## State transition function
 
@@ -402,14 +432,28 @@ send funds to Bob by the fact that she signed a transfer-funds message with her 
 
 ## Validator
 
-A node that secures the Relay Chain by staking DOTs, validating proofs from collators on parachains
+A node that secures the Relay Chain by staking DOT, validating proofs from collators on parachains
 and voting on consensus along with other validators.
+
+## Vertical Message Passing
+
+Vertical message passing consists of two separate types of message passing, Downward Message Passing
+(DMP) and Upward Message Passing (UMP). Downward messages pass from the Relay Chain to a parachain,
+although they may also originate from another parachain via
+[HRMP](#horiztonal-relay-routed-message-passing). Upward messages originate from parachains and go
+up to the Relay Chain via runtime entry points.
 
 ## Voting
 
 The process of stakeholders determining whether or not a referendum should pass. Votes are weighted
-both by the number of DOTs that the stakeholder account controls and the amount of time they are
-willing to lock their DOTs.
+both by the number of DOT that the stakeholder account controls and the amount of time they are
+willing to lock their DOT.
+
+## Waiting Nomination
+
+The nominator has nominated this validator, but the validator was not elected into the active
+validator set this era and thus cannot produce blocks for the canonical chain. If the validator does
+get into the active set in a future era, this may turn into an active or inactive nomination.
 
 ## Wallet
 

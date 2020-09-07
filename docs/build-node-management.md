@@ -51,7 +51,7 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 The Parity Polkadot client implements a [Polkadot Host](learn-polkadot-host) and a native runtime.
 The runtime must compile to WebAssembly and is stored on-chain. If the client's runtime is the same
 spec as the runtime that is stored on-chain, then the client will execute blocks using the client
-binary. Otherwise, the client will execute the Wasm runtime.
+binary. Otherwise, the client will execute the Wasm runtime from the chain.
 
 Therefore, when syncing the chain, the client will execute blocks from past runtimes using their
 associated Wasm binary. This feature also allows forkless upgrades: the client can execute a new

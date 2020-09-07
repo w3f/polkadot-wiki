@@ -8,7 +8,7 @@ sidebar_label: 加入议会
 
 ## 成为候选人
 
-成为议会候选人需要绑定小量的 DOTs / KSMs。如果您没有成功获胜或成为亚军，则该绑定金额将被没收，但如果您成为了议会成员，绑定的金额将最终也会返回给你。每一轮选举都选出亚军成为备用议员，以防其中获胜者被撤离。
+Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be forfeited if your candidacy does not win or become a runner-up, but if you become a member of the council you will eventually get your bond back. Runner-ups are selected after every round and are reserved members in case one of the winners gets forcefully removed.
 
 > 目前提交参選议员在 Kusama 的綁定金額为1 KSM。
 
@@ -30,7 +30,7 @@ sidebar_label: 加入议会
 
 ![c](assets/council/vote.png)
 
-议会使用[弗拉格曼(Phragmen)](learn-phragmen) Approval Voting 方法选出议员，该投票也用于验证人选举。这意味着您最多可以选择16个不同的候选人，您的抵押将在候选人之间平均分配。关于本指南，当按下 "Vote" 之后，你会看到所有参选人包括你的帐户，你只需要在你户旁边的开关将其更改为 "Aye"，以示投票支持。
+The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 
 ![d](assets/council/vote_for_yourself.png)
 

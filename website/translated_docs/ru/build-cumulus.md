@@ -6,7 +6,7 @@ sidebar_label: Cumulus
 
 > Кучевые облака имеют форму точек и находятся в воздухе, как этот проект (поскольку это первоначальный прототип - ожидайте переименования, когда он станет круче.)
 
-[Cumulus](https://github.com/paritytech/cumulus) - это расширение для Substrate, которое позволяет легко сделать любую Substrate среду исполнения совместимой с парачейном Polkadot.
+[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
 
 ## Компоненты
 
@@ -31,3 +31,4 @@ runtime::register_validate_block!(Block, BlockExecutor);
 ## Ресурсы
 
 - [Rob рассказывает на EthCC о создании Cumulus](https://www.youtube.com/watch?v=thgtXq5YMOo)
+- [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot co-founder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.

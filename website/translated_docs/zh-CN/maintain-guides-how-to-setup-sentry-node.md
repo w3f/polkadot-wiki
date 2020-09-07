@@ -4,11 +4,15 @@ title: 设置哨兵节点
 sidebar_label: 设置哨兵节点
 ---
 
+## DEPRECATED
+
+> With the upcoming release of Substrate and Polkadot/Kusama, support for sentry nodes will be deprecated. Details can be found [here](https://github.com/paritytech/substrate/issues/6845). Please stay tuned for further updates.
+
 本教程假设你已经设置好验证人并且想把你的节点提高女巫攻击或 DDOs 防御保护。这个跟 [polkadot secure validator](https://github.com/w3f/polkadot-secure-validator) 配置一样。
 
 我们会一步一步把验证人设置在 VPN 网络内。验证人只会与哨兵节点沟通并与网络分隔，从而减低你的验证人被入侵机会。
 
-## VPN 安装 & 设置
+## VPN Installation & Configuration
 
 我们会使用 Wireguard 作为 VPN。 Wireguard 是快速和安全的 VPN ，它使用最新的密码学。如果你有兴趣想了解更多关于 Wireguard，前往[这里](https://www.wireguard.com/)。在我们前往下一步之前，先设置防火墙并打开所需要的端口。
 
@@ -79,7 +83,7 @@ AllowedIPs = 10.0.0.2/32
 PersistentKeepalive = 21
 ```
 
-> 注意：在本指南中，我们仅设置了 1 个对等点(公开节点)
+> Note: In this guide, we only set up 1 peer (public node)
 
 您需要在您的  **哨兵节点** 中再次执行之前的步骤(1和2)，但 `wg0.onf`配置文件会是像这样：
 
@@ -116,6 +120,8 @@ wg-quick up wg0
 #[#] ip -4 address add 10.0.0.1/24 dev wg0
 #[#] ip link set mtu 1420 up dev wg0
 ```
+
+> Note: If you are not able to start Wireguard or getting any errors during start, restart the computer and run the above command again.
 
 您可以通过运行 `wg` 来检查接口状态:
 

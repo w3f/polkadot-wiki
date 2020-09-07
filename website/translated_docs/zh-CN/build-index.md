@@ -13,18 +13,18 @@ Wiki 的这个部分分为以下:
 ## 主页
 
 - [入门指南](build-build-with-polkadot) - 有关您的项目应选择平行链，平行线程或智能合约的高级概述，以及现在有哪些资源可以使用。
-- [开发路线图](build-dev-roadmap) - 最重要开发工具的状态。
-- [平行链开发套件](build-pdk)- PDKs 是用于构建平行链和平行线程的工具套件。
-- [智能合约](build-smart-contracts) - 智能合约是用于制定逻辑使部署到现有的链中。
+- [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and parathreads.
+- [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can be deployed to a live chain.
 
 ## 集成指南
 
 本部分适用于希望学习如何将 Polkadot 集成到其系统中的服务提供商，例如钱包或节点运营商。
 
-- [Polkadot 协议信息](build-protocol-info) - 关于 Polkadot 协议的一般信息和常见问题如地址格式。
-- [节点管理](build-node-management) - 对 Parity Polkadot 客户端和 最相关的基础设施提供者选项/标志的简短概述。
-- [节点交互](build-node-interaction)-了解如何通过 RPC 与您的节点进行交互。
-- [交易结构和签名](build-transaction-construction) - 了解交易格式以及如何构建离线和签名交易。
+- [Integration Initiation](build-integration) - The guide to the guide.
+- [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the Polkadot protocol, e.g. address formats.
+- [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the most relevant options/flags for infrastructure providers.
+- [Node Interaction](build-node-interaction) - Learn how to interact with your node via RPC.
+- [Transaction Construction and Signing](build-transaction-construction) - Learn the transaction format for Polkadot and how to construct and sign transactions offline.
 
 ## 工具
 

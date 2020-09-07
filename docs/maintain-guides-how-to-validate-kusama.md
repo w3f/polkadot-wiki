@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-kusama
 title: Run a Validator (Kusama)
-sidebar_label: Validator Guide
+sidebar_label: How to run a Validator on Kusama
 ---
 
 This guide will instruct you how to set up a validator node on the Kusama network.
@@ -30,9 +30,9 @@ Riot. The team and other validators are there to help answer questions and provi
 
 You can have a rough estimate on that by using the methods listed
 [here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators
-are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a
+are elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
-[nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up
+[nominators](learn-nominator). This means that as a minimum, you will need enough KSM to set up
 Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for
 transaction fees. The rest can come from nominators.
 
@@ -55,8 +55,8 @@ resource constraints. The most important resource for your validator node is net
 followed by its storage and memory capabilities. The bare minimum requirements for a machine to run
 a validator are as follows:
 
-- **Storage:** 40GB - 80GB. Kusama doesn't have very heavy storage requirements yet so something in
-  this range will be fine, just keep in mind you may have to upgrade it later if the chain state
+- **Storage:** 160GB - 200GB. Kusama doesn't have very heavy storage requirements yet so something
+  in this range will be fine, just keep in mind you may have to upgrade it later if the chain state
   becomes very big.
 - **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with,
   anything less than this make build times too inconvenient. For better performance you can bump it
@@ -231,7 +231,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSM - make
   sure that your Stash account contains _at least_ this much. You can, of course, stake more than
   this.
 - **Controller account** - Select the Controller account created earlier. This account will also
@@ -349,7 +349,7 @@ node is selected to join the validator set, your node will become an active vali
 it will remain in the _waiting_ queue. If your validator is not selected to become part of the
 validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if
 you are not selected for the validator set in a particular era. However, it may be necessary to
-increase the number of KSMs staked or seek out nominators for your validator in order to join the
+increase the number of KSM staked or seek out nominators for your validator in order to join the
 validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the

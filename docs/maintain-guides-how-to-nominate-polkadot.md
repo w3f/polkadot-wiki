@@ -1,13 +1,10 @@
 ---
 id: maintain-guides-how-to-nominate-polkadot
-title: Nomination Guide
-sidebar_label: Nomination Guide
+title: How to Nominate on Polkadot
+sidebar_label: How to Nominate on Polkadot
 ---
 
-> The following information applies to the Polkadot network, which is currently in the soft launch
-> phase. During soft launch the network starts as a Proof-of-Authority network before transitioning
-> to Proof-of-Stake. You will be able to follow this guide to set up your nominator but the first
-> validator election and rewards will not start until later. If you want to nominate on Kusama,
+> The following information applies to the Polkadot network. If you want to nominate on Kusama,
 > check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
@@ -23,7 +20,7 @@ that they elect. When looking for validators to nominate, a nominator should pay
 own reward percentage for nominating a specific validator - as well as the risk that they bare of
 being slashed if the validator gets slashed.
 
-# Setting up Stash and Controller keys
+## Setting up Stash and Controller keys
 
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
@@ -32,17 +29,14 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
-# Using Polkadot UI
+## Using Polkadot UI
 
 ### Step 1: Bond your tokens
-
-> NOTE: Much of the information below will not be fully populated during Polkadot's
-> Proof-of-Authority phase since validator elections have not started yet.
 
 On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
 The "Staking Overview" subsection will show you all the active validators and their information -
-their identities, the amount of DOTs that are staking for them, amount that is their own provided
+their identities, the amount of DOT that are staking for them, amount that is their own provided
 stake, how much they charge in commission, the era points they've earned in the current era, and the
 last block number that they produced. If you click on the chart button it will take you to the
 "Validator Stats" page for that validator that shows you more detailed and historical information
@@ -60,7 +54,7 @@ estimate your earnings and this is where it's good to start picking favorites.
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough DOT backing them (as allocated through the
-[Phragmen election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible
+[Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible
 validator can remain in the queue for a very long time if they never get enough backing.
 
 The "Validator Stat's subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
@@ -72,8 +66,8 @@ Pick "Account actions", then click the grey "+ Nominator" button.
 You will see a modal window that looks like the below:
 ![nominator-update-1](assets/nominator-update-1.png)
 
-Select a "value bonded" that is **less** than the total amount of DOTs you have, so you have some
-left over to pay transaction fees. Transaction fees are currently around 0.01 DOTs, but they are
+Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some
+left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are
 dynamic based on a variety of factors including the load of recent blocks.
 
 Also be mindful of the reaping threshold - the amount that must remain in an account lest it be
@@ -95,7 +89,7 @@ slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select up to 16 validators. Although you may choose up to 16 validators, due to the
-[Phragmen][] election algorithm your stake may be dispersed in different proportions to any subset
+[Phragmén][] election algorithm your stake may be dispersed in different proportions to any subset
 or all of the validators your choose.
 
 ![Nominating validators](/img/NPoS/nominate.png)
@@ -117,7 +111,7 @@ At some point, you might decide to stop nominating one or more validators. You c
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond).
 
-# Using Command-Line Interface (CLI)
+## Using Command-Line Interface (CLI)
 
 Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI
 instead. The CLI approach allows you to interact with the Polkadot network without going to the
@@ -146,8 +140,8 @@ staking model.
 
 `NUMBER_OF_TOKENS`: The number of DOT you would like to stake to the network.
 
-> **Note**: DOT has twelve decimal places and is always represented as an integer with zeroes at the
-> end. So 1 DOT = 1,000,000,000,000 units.
+> **Note**: DOT has ten decimal places and is always represented as an integer with zeroes at the
+> end. So 1 DOT = 10,000,000,000 units.
 
 `REWARD_DESTINATION`:
 

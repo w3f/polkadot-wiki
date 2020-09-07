@@ -4,13 +4,13 @@ title: 提名人
 sidebar_label: 提名人
 ---
 
-Nominators secure the Relay Chain by selecting good validators and staking DOTs.
+Nominators secure the Relay Chain by selecting good validators and staking DOT.
 
-您的帐户可能拥有 DOT，并希望赚取新的 DOT。您可以作为验证人执行此操作，这需要全天候24小时运行节点。如果您没有这样的节点或不想费心，您仍然可以通过提名另一个验证人来赚取 DOT。
+You may have an account with DOT and want to earn fresh DOT. You could do so as validator, which requires a node running 24/7. If you do not have such node or do not want to bother, you can still earn DOT by nominating another validator.
 
-通过这样您就成为选择验证人的提名人。仔细挑选你的验证人 - 如果他们有不良的表现，他们将得到惩罚，你也将失去DOT。
+By doing so, you become a nominator for the validator of your choice. Pick your validator carefully - if they do not behave properly, they will get slashed and you will lose DOT as well.
 
-通过提名验证人来抵押您的 DOT 时，它们是被 "锁定" (绑定)。你可以在你的帐号接收新的 DOTs，但是您不能作为验证人进行抵押或将 DOTs 转帐出您的帐户。你可以在任何时间选择[取消提名](maintain-guides-how-to-unbond)从而解锁你的资金。请记住取消提名将在下一个时代生效。
+While your DOT are staked by nominating a validator, they are 'locked' (bonded). You can receive new DOT in your account but you cannot stake as validator or transfer DOT away from your account. You can [un-nominate at any time](maintain-guides-how-to-unbond) to unlock your funds. Keep in mind that the un-nomination is effective in the next era.
 
 ### Active vs. Inactive 提名
 
@@ -36,7 +36,7 @@ Nominators secure the Relay Chain by selecting good validators and staking DOTs.
 
 所以作为一个聪明的提名人，最好是会查看验证人的[历史](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8)例如创造区块，rewards and slashes 和[身份](learn-identity)(如果他们有设置)。另外提名人应对其候选验证人进行全面研究例如前往他们的网页查看一下他们是怎么样的团队，使用什么架构，声誉，验证人背后的愿景等等。
 
-> These concepts have been further explained in the [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4) and [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+> These concepts have been further explained in the [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4) and [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9) and [Nominating/Staking on Polkadot and Kusama](https://www.youtube.com/watch?v=NYs9oWAbzbE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=14)
 
 ### 指南
 

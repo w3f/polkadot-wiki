@@ -44,7 +44,7 @@ Cosmos (both the Hub and the zones) uses Tendermint consensus, a round-robin pro
 
 ## Staking Mechanics
 
-Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators using the [sequential Phragmen algorithm](learn-phragmen). The validator set size is set by governance (1,000 validators planned) and stakers who do not want to run validator infrastructure can nominate up to 16 validators. Phragmen's algorithm selects the optimal allocation of stake, where optimal is based on having the most evenly staked set.
+Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators using the [sequential Phragmén algorithm](learn-phragmen). The validator set size is set by governance (1,000 validators planned) and stakers who do not want to run validator infrastructure can nominate up to 16 validators. Phragmén's algorithm selects the optimal allocation of stake, where optimal is based on having the most evenly staked set.
 
 All validators in Polkadot have the same weight in the consensus protocols. That is, to reach greater than 2/3 of support for a chain, more than 2/3 of the _validators_ must commit to it, rather than 2/3 of the _stake._ Likewise, validator rewards are tied to their activity, primarily block production and finality justifications, not their amount of stake. This creates an incentive to nominate validators with lower stake, as they will earn higher returns on their staked tokens.
 
@@ -68,7 +68,7 @@ Cosmos uses a cross chain protocol called Inter-Blockchain Communication (IBC). 
 
 Polkadot has a multicameral [governance](learn-governance) system with several avenues to pass proposals. All proposals ultimately pass through a public referendum, where the majority of tokens can always control the outcome. For low-turnout referenda, Polkadot uses adaptive quorum biasing to set the passing threshold. Referenda can contain a variety of proposals, including fund allocation from an on-chain [Treasury](learn-treasury). Decisions get enacted on-chain and are binding and autonomous.
 
-Polkadot has several on-chain, permissionless bodies. The primary one is the Council, which comprises a set of accounts that are elected in Phragmen fashion. The Council represents minority interests and as such, proposals that are unanimously approved of by the Council have a lower passing threshold in the public referendum. There is also a Technical Committee for making technical recommendations (e.g. emergency runtime upgrade to fix a bug).
+Polkadot has several on-chain, permissionless bodies. The primary one is the Council, which comprises a set of accounts that are elected in Phragmén fashion. The Council represents minority interests and as such, proposals that are unanimously approved of by the Council have a lower passing threshold in the public referendum. There is also a Technical Committee for making technical recommendations (e.g. emergency runtime upgrade to fix a bug).
 
 Cosmos uses coin-vote signalling to pass referenda. The actual enactment of governance decisions is carried out via a protocol fork, much like other blockchains. All token holders can vote, however, if a delegator abstains from a vote then the validator they delegate to assume their voting power. Validators in Polkadot do not receive any voting power based on their nominators.
 
