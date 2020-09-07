@@ -334,7 +334,7 @@ and 21 days on Kusama. For more information on why this is so, see the page on
 ### Claiming Rewards
 
 If you go to the Staking payouts page on
-[Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of all validators
+[Polkadot-JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of all validators
 that you have nominated in the past 84 eras and for which you have not yet received a payout. Each
 one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone
 who was nominating that validator during those eras, and anyone can call it. Therefore, you may not
