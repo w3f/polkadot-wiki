@@ -334,10 +334,17 @@ and 21 days on Kusama. For more information on why this is so, see the page on
 ### Claiming Rewards
 
 If you go to the Staking payouts page on
-[Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of validators that
-you have nominated in the past 84 eras. Each one has the option to trigger the payout for all
-unclaimed eras. Note that this will pay everyone who was nominating that validator during those
-eras, and anyone can call it.
+[Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of all validators
+that you have nominated in the past 84 eras and for which you have not yet received a payout. Each
+one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone
+who was nominating that validator during those eras, and anyone can call it. Therefore, you may not
+see anything in this tab, yet still received a payout if somebody (generally, but not necessarily,
+another nominator or the validator operator) has triggered the payout for that validato for that
+era.
+
+If you wish to check if you received a payout, you will have to check via a block explorer. See
+[the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
+for details.
 
 ### Reward Distribution Example
 
@@ -369,8 +376,9 @@ For specific details about validator payouts, please see
 
 ## Inflation
 
-Inflation is designed to be 10% in the first year, with validator rewards being a function of amount
-staked and the remainder going to treasury.
+DOT is inflationary; there is no maximum number of DOT as in Bitcoin. Inflation is designed to be
+10% in the first year, with validator rewards being a function of amount staked and the remainder
+going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
