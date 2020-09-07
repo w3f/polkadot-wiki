@@ -90,6 +90,8 @@ ntpd will be started automatically after install. You can query ntpd for status 
 sudo ntpq -p
 ```
 
+> _WARNING_: Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks the validator produces may not get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but zero allocated blocks making it on chain.
+
 ### Building and Installing the `polkadot` Binary
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.8** branch.

@@ -90,13 +90,15 @@ ntpd 将在安装后自动启动。您可以查询 ntpd 获取状态信息以验
 sudo ntpq -p
 ```
 
+> _WARNING_: Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks the validator produces may not get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but zero allocated blocks making it on chain.
+
 ### 构建并安装 `polkadot` 二进制文件
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
 You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command (`git tag | grep "$v\0\.8"` - note that output is sorted ASCII-betically, _not_ numerically or chronologically) or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
 
-> 注意：如果您喜欢使用 SSH 而不是 HTTPS，则可以将下面的第一行替换为 `git clone git@github.com:paritytech/polkadot.git`。
+> Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
@@ -110,7 +112,7 @@ cargo build --release
 
 这步将需要一段时间(通常需要 10 - 40 分钟，具体取决于您的硬件)。
 
-> 注意如果您遇到编译错误，您可能不得不切换到一个没有那么近的 nightly。这可以是通过运行：
+> Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
 > 
 > ```sh
 rustup install nightly-2020-05-15
@@ -126,9 +128,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### 同步链数据
 
-> **注意:**验证人节点预设是以 archive 模式同步。如果您已经同步好并不是 archive 模式，您必须首先运行` polkadot purge-chain `删除之前的数据库，然后确保使用` --pruning=archive `运行 Polkadot。
+> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 > 
-> 您可以通过添加以下选项在非 archive 模式下运行验证人节点：`-unsafe-pruning --pruning OF BLOCKS>`，但请注意，archive 节点和非 archive 节点的数据库彼此不兼容，要进行切换，您将需要清除链数据。
+> You may run a validator node in non-archive mode by adding the following flags: `-unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 您可以通过运行以下指令来开始同步您的节点:
 
@@ -140,9 +142,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 `--pruning=archive`选项意味着` --validator `和`-sentry `选项，因此仅如果在没有这两个选项之一的情况下启动节点，则必须明确要求。 如果您不设置为 archive 节点，即使不在运行验证人和哨兵模式时，也需要切换时重新同步数据库。
 
-> **注意: **验证人应使用 rocksdb 后端同步。默认情况下这是隐式的，但可以显式绕过 `--database RocksDb`。 将来建议切换到使用更快，更有效的 ParityDb 选项。 在数据库后端之间切换将需要重新同步。
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
 > 
-> 如果要测试 ParityDB，可以添加` ---database paritydb `选项。
+> If you want to test out ParityDB you can add the flag `---database paritydb`.
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
@@ -152,7 +154,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ## Bond DOT
 
-> **注意: **在 Polkadot 的非正式发布阶段将禁用转帐。 这意味着如果您在这段时间内设置验证人，则可能无法按照建议的方式将 stash 和 controller 设置为两个单独的帐号。 您必须使它们成为同一帐号，这意味着您将把该帐号绑定到其自身。 但是强烈建议您尽快更换 controller。
+> **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you are setting up a validator during this time you may not be able to make your stash and controller two separate accounts, as is recommended. You must make them the same account, meaning that you will bond the account to itself. However it is highly recommended that you change your controller as soon as possible.
 
 强烈建议您将 controller 和 stash 帐号设为两个单独的帐号。 为此，您将创建两个帐号，并确保每个帐号至少有足够的资金来支付进行交易的费用。 将您的大部分资金保留在 stash 帐号中，因为这是您存入资金的托管人。
 
@@ -178,7 +180,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ## 设置 Session 密钥
 
-> **注意:** Session 密钥是共识的关键，因此如果不确定节点是否具有进行` setKeys `交易 当前 session 密钥，则可以使用以下之一: 有两种可用的 RPC 查询节点的方法: [ hasKey ](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)检查特定密钥，或[ hasSessionKeys ](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)检查完整的 session key 公钥字串。
+> **Note:** The session keys are consensus critical, so if you are not sure if your node has the current session keys that you made the `setKeys` transaction then you can use one of the two available RPC methods to query your node: [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) to check for a specific key or [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) to check the full session key public key string.
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you will now start running the node.
 
