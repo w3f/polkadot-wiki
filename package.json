@@ -5,10 +5,12 @@
     "kusama:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
     "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build/kusama-guide-hosting",
     "kusama:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
+    "kusama:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/kusama-index\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"kusama-guide/static/kusama-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
     "polkadot:start": "yarn mirror; cd website; docusaurus-start",
     "polkadot:build": "BUILDING=true; cd website; docusaurus-build; node ./postprocess",
     "polkadot:inject": "node scripts/inject.js --rootDir website/build/polkadot-wiki",
     "polkadot:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd website; docusaurus-publish",
+    "polkadot:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/learn-introduction\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"website/static/polkadot-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
     "mirror": "node scripts/mirror.js",
     "copy:translations": "cp -R website/translated_docs kusama-guide ",
     "publish-gh-pages": "cd website; docusaurus-publish",
@@ -20,17 +22,23 @@
     "postinstall": "patch-package"
   },
   "devDependencies": {
-    "docusaurus": "^1.12.0"
+    "docusaurus": "^1.14.6"
   },
   "dependencies": {
-    "@polkadot/api": "^1.25.1",
+    "@octokit/rest": "^18.0.4",
+    "@polkadot/api": "^1.31.1",
+    "axios": "^0.20.0",
     "fs-extra": "^9.0.1",
-    "ipfs-http-client": "^45.0.0",
+    "ipfs-http-client": "^46.0.0",
     "katex": "^0.11.1",
+    "mr-pdf": "^0.2.3",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.1.1",
+    "react-bootstrap": "^1.3.0",
     "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
+    "semver": "^7.3.2",
     "yargs": "^15.4.1"
   }
 }

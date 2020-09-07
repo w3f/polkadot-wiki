@@ -32,7 +32,7 @@ tries to optimize three metrics in its elections:
 1. Maximize the stake behind the minimally staked validator.
 1. Minimize the variance of the stake in the set.
 
-#### Off-Chain Phragmen
+#### Off-Chain Phragmén
 
 Given the large set of nominators and validators, Phragmén's method is a difficult optimization
 problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to

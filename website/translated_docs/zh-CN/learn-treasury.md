@@ -31,7 +31,9 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
-The proposer has to deposit 5% of the requested amount or 20 KSM (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future.
+The proposer has to deposit 5% of the requested amount or 100 DOT (whichever is higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance) so they may change in the future.
+
+Please note that there is no way for a user to revoke a treasury proposal after it has been submitted. The Council will either accept or reject the proposal, and if the proposal is rejected, the bonded funds are burned.
 
 ### Announcing the Proposal
 
@@ -106,5 +108,5 @@ Concretely there are a couple on-chain methods that resist this kind of attack. 
 
 ## Further Reading
 
-- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/master/pallet_treasury/index.html))
+- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_treasury/index.html))
 - [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) - Details the treasury in its first live environment on the Kusama network.

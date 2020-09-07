@@ -1,12 +1,8 @@
 ---
 id: learn-introduction
-title: Polkadot
-sidebar_label: Polkadot
+title: What is Polkadot?
+sidebar_label: What is Polkadot?
 ---
-
-Polkadot is a sharded blockchain based on the thesis that the world will have several blockchains that need to interact. Polkadot unites scalability, interoperability, and security.
-
-## Why Polkadot?
 
 Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a secure, trust-free environment.
 
@@ -16,7 +12,19 @@ Polkadot is a living network with the core pillars of governance and upgradabili
 
 By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users control their data and are not limited by trust bounds within the network.
 
-## What Is Polkadot?
+## Why Polkadot?
+
+The Polkadot network is heading towards a future with a secure ecosystem for decentralized applications (built with blockchain technology) to communicate and interact in. Polkadot has deep roots in the blockchain industry and working hard to build on existing blockchain concepts like governance, scalibility, and many more.
+
+Back in the early 2000's, when the internet was gaining popularity for the first time, the internet featured read-only, static, basic webpages. The online connected world at the time was only the beginning of virtual data, identities, and more. The internet during this time was also called the Web 1.0.
+
+As social media platforms and online businesses began to emerge, the internet transformed into the Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages, where users can read and write information plus publish their own for others to see. This version of the web though, comes with downsides dealing with data control, privacy issues, and trust. This is where the Web 3.0 comes into the picture.
+
+The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free protocols. The goal is to transform the internet into a decentralized web, where users control their own data and identity in a trust-free environment. The Web 3.0 movement aims to remove intermediaries and build a trustless infrastructure.
+
+> To learn more of the Web3 movement, check out this video from the [Web3 Summit](https://youtu.be/l44z35vabvA)
+
+## How does Polkadot work?
 
 The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)" - in the network have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm, then it can connect to the Polkadot network as a parachain.
 
@@ -26,13 +34,19 @@ In order to interact with chains that want to use their own finalization process
 
 The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
 
+> To watch a short, beginner-friendly animation on Polkadot, check out our [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
+
+## Why should you use Polkadot?
+
+Whether you're a blockchain developer or if you're interested in taking part of Polkadot's community, Polkadot offers a platform for everyone. This Wiki offers a place for Builders and Maintainers to utilize tools and for brand-new learners to dive into material. In fact, the best place to start is the [Getting Started](getting-started) page.
+
 ## Digging deeper
 
 - [Architecture](learn-architecture) - Overview of the Polkadot architecture.
 - [Bridges](learn-bridges) - Overview of bridges.
 - [Cryptography](learn-cryptography) - Describes the cryptography used in Polkadot and where it is employed in the protocol.
 - [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
-- [DOT](learn-DOT) - Information on DOTs, the native token of the Polkadot protocol.
+- [DOT](learn-DOT) - Information on DOT, the native token of the Polkadot protocol.
 - [Governance](learn-governance) - What blockchain governance is, and how it works in Polkadot.
 - [Cross-chain Communication](learn-crosschain) - Information regarding how cross-chain messaging works.
 - [Parachains](learn-parachains) - Overview of what a parachain is, and how they work.
@@ -46,12 +60,3 @@ The Cross-Chain Messaging Protocol (XCMP) allows parachains to send messages of 
 - [Staking](learn-staking) - How staking works in Polkadot.
 - [Treasury](learn-treasury) - How to make spending proposals on Polkadot and Kusama.
 - [WebAssembly](learn-wasm) - A description of WebAssembly and how it is used in Polkadot.
-
-## Resources
-
-- [Launch timeline](learn-launch) - find out about the Polkadot launch plans and schedule
-- [Glossary](glossary) - Definitions of domain specific terms used in Polkadot documentation.
-- [Implementations](learn-implementations) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
-- [Links](learn-relevant-links) - Comprehensive list of external links.
-- [Roadmap](learn-roadmap) - The implementation roadmap of Polkadot.
-- [FAQ](faq) - Answers to some of the frequently asked questions about Polkadot.

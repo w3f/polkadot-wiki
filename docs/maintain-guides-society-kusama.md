@@ -4,62 +4,58 @@ title: Join Kappa Sigma Mu
 sidebar_label: Join Kappa Sigma Mu
 ---
 
-Kappa Sigma Mu is a membership club using the Substrate [Society][substrate society] pallet. It is
-an economic game to incentivize users to join a society that coordinates around whatever the rules
-are decided to be. The members of the society are incentivized to participate in the society via the
+Kappa Sigma Mu is a membership club using the Substrate [Society][substrate pallet] pallet. It is an
+economic game to incentivize users to join a society that coordinates around whatever the rules are
+decided to be. The members of the society are incentivized to participate in the society via the
 rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to
 have multiple societies in the future through a runtime upgrade.
 
-![Society Dashboard](assets/society/dashboard.jpg)
+![Society Dashboard](assets/kusama/kusama_society_page.png)
+![Society Dashboard](assets/kusama/kusama_society_page2.png)
 
 Before joining the society, let's take a brief look at the
-[Society UI](https://polkadot.js.org/apps/#/society) on PolkadotJS apps and read through all the
+[Society UI](https://polkadot.js.org/apps/#/society) on Polkadot-JS apps and read through all the
 [rules][kappa rules] to become a member.
 
 ## UI Overview
 
-`Members`: The number of members in the society. Currently, the maximum number of members is set to
-`150`. It can be changed by using governance to increase the number.
-
-`Rotation`: The duration between each time the membership rotates.
-
-`Challenge`: The time period to randomly select one of the members to defend his membership in the
-society.
-
-`Pot`: Resource that is used to support the member of society.
-
-`Bids`: A list of users who submitted a bid to join the society.
+- `Members`: The number of members in the society. Currently, the maximum number of members is set
+  to `150`. It can be changed by using governance to increase the number.
+- `Rotation`: The duration between each time the membership rotates.
+- `Challenge`: The time period to randomly select one of the members to defend his membership in the
+  society.
+- `Pot`: Resource that is used to support the member of society.
+- `Bids`: A list of users who submitted a bid to join the society.
 
 ## User Types
 
 Below are the various types of users at different stages.
 
-`Bidder` - A token holder who intends to join the society by placing a bid.
-
-`Candidate` - The selected bidders that will be voted on by members of the society.
-
-`Suspended Candidate` - The candidates that failed to join the society.
-
-`Member` - Member of the society.
-
-`Suspender Member` - A member of the society who has accumulated too many strikes or failed their
-membership challenge.
-
-`Head` - One winning candidate will be randomly chosen as head of the members, weighted by the
-number of approvals the winning candidates accumulated.
-
-`Defender` - In every challenge period, one of the members will be randomly selected to defend their
-membership in the society. The rules for defending the membership are documented [in the
-rules][kappa rules].
+- `Bidder` - A token holder who intends to join the society by placing a bid.
+- `Candidate` - The selected bidders that will be voted on by members of the society.
+- `Suspended Candidate` - The candidates that failed to join the society.
+- `Member` - Member of the society.
+- `Suspender Member` - A member of the society who has accumulated too many strikes or failed their
+  membership challenge.
+- `Head` - One winning candidate will be randomly chosen as head of the members, weighted by the
+  number of approvals the winning candidates accumulated.
+- `Defender` - In every challenge period, one of the members will be randomly selected to defend
+  their membership in the society. The rules for defending the membership are documented [in the
+  rules][kappa rules].
 
 ## Procedure
 
-**Remember to take a look at the [rules][kapp rules] first. And since those rules are not enforced
+Remember to take a look at the [rules][kappa rules] first. And since those rules are not enforced
 entirely on-chain, it is recommended to join the
-[public chat room](https://matrix.to/#/!BUmiAAnAYSRGarqwOt:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
-to ask any questions if anything is unclear.**
+[Kappa Sigma Mu Lounge](https://app.element.io/#/room/!BUmiAAnAYSRGarqwOt:matrix.parity.io) to ask
+any questions if anything is unclear.
 
 ### 1. Bid Phase
+
+> Note: If you want to bid to join the society, you will need to be on the Extrinsics page for the
+> following functions. The page is found under "Developer" > "Extrinsics" in Polkadot-JS UI
+> navigation. Ensure that you are on the Kusama network by clicking on the network in the top-left
+> corner
 
 Anyone can submit a bid to join the society by reserving a deposit or finding an existing member to
 create a bid on their behalf by vouching for them. At every rotation period, as many bids the
@@ -83,7 +79,7 @@ bidding if you changed your mind about joining the society by calling `unbid`.
 > pos - The index of the bid.
 
 If you are not sure what your position is, you can check that by going to the
-[Society->bids chain state](https://polkadot.js.org/apps/#/chainstate) in the PolkadotJS apps.
+[Society -> bids chain state](https://polkadot.js.org/apps/#/chainstate) in the Polkadot-JS apps.
 
 You can find an existing member to place a bid on your behalf if you do not have KSM and you are
 willing to give them a tip. An existing member can submit a `vouch` transaction.
@@ -114,11 +110,8 @@ Bids selected in this phase will be voted on by the existing members to decide w
 will be approved to join the society. Members will vote for all the candidates and the final outcome
 will be randomly selected by one of the votes. Let's take a look the example shown below:
 
-> **_NOTE:_**
->
-> If the randomly selected member does not vote, it will be treated as a rejection.
->
-> For each rotation period, the maximum number of members that can be accepted is set as 10.
+> Note: If the randomly selected member does not vote, it will be treated as a rejection. For each
+> rotation period, the maximum number of members that can be accepted is set as 10.
 
 A - Accept, R - Reject, S - Skeptic
 
@@ -136,9 +129,7 @@ which means they may need to re-apply and their unclaimed payouts will be slashe
 member who voted opposite to the randomly selected vote will have their unclaimed payouts slashed
 and strikes increased. In this case, member 4 will be punished.
 
-> **_NOTE:_**
->
-> The maximum number of strikes you can have is on Kusama is 10.
+> Note: The maximum number of strikes you can have is on Kusama is 10.
 
 The slashed funds (2 KSM currently) will be given to a random member who voted the same as the
 selected vote as a reward for participating in the vote. The reward is escrowed for some period of
@@ -148,7 +139,7 @@ time - see below.
 
 It would take the number of members of the society as the variable to determine how many blocks you
 have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula
-is defined [in the society pallet][substrate society] if you would like to have a look.
+is defined [in the society pallet][substrate pallet] if you would like to have a look.
 
 Example:
 
@@ -168,7 +159,7 @@ placed by a voucher, they will get back the reward that was set during vouching 
 given to the candidate - both escrowed for some time.
 
 If the candidate loses the vote, they are suspended and it is up to the founder of the society (the
-`Suspension Judgment Origin`) to determine if the candidate should go through the bidding process
+`Suspension Judgement Origin`) to determine if the candidate should go through the bidding process
 again, should be accepted into the membership society, or rejected and their deposit slashed.
 
 ### 3. Member Phase
@@ -195,11 +186,8 @@ search for "Existing Members (Challenges)". Besides that, you can earn extra KSM
 apply for the membership and requesting a tip. This is useful when a user does not have enough
 balance to reserve a deposit. The tip will be given when a user successfully joins the society.
 
-> **_NOTE:_**
->
-> Each member can only vouch for one user at a time.
->
-> A member is not required to reserve the deposit when vouching for a user.
+> Note: Each member can only vouch for one user at a time. A member is not required to reserve the
+> deposit when vouching for a user.
 
 If a member accumulates too many strikes or fails their membership challenge, they will become
 suspended. While a member is suspended, they are unable to claim matured payouts. It is up to the
@@ -211,13 +199,10 @@ society with all their future payouts slashed.
 [Convention of Approval of Membership](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
 Rules about joining the Kusama society
 
-[Kappa Sigma Mu Lounge](https://matrix.to/#/!BUmiAAnAYSRGarqwOt:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
-A public chat room on Riot to talk about anything about the society.
-
 [Substrate Society](https://www.shawntabrizi.com/substrate-society/) - It shows the Kusama society
 information and allowing you to directly place a bid if you have installed the
-[PolkadotJS extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd).
+[Polkadot-JS extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd).
 
-[substrate society]: https://substrate.dev/rustdocs/master/pallet_society/index.html
+[substrate pallet]: https://substrate.dev/rustdocs/v2.0.0-rc6/pallet_society/index.html
 [kappa rules]:
   https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17

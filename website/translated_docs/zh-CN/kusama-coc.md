@@ -18,10 +18,12 @@ Kusama 社区成员来自全球各地，不分种族、性别、或 背景。 �
 
 请注意：这仅是几个示例，如果您有任何疑问，您总是可以咨询团队成员。
 
-在任何通信媒介上发表对个人或其他项目的愤怒的攻击性言论。 故意散布关于 Kusama 或其他项目的虚假信息。 恶意骚扰他人或项目。
+- Angry aggressive comments towards individuals or other projects on any medium of communication.
+- Knowingly distributing false information about Kusama or other projects.
+- Harassing other individuals or projects (trolling).
 
 ## 如果你见到或遭受到不可接受的行为，怎么做
 
-如果你受到骚扰，或注意到其他人正在受到骚扰，或有任何其他涉及骚扰的问题，请联系您所在频道的管理员。
+If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact the administrator of the channel you’re in.
 
-本行为守则可能随时修订。我们乐意根据 Kusama 参与者或波卡社区的反馈随时修订本文档。
+This Code of Conduct may be revised at any time. We are always willing to revise this document based on feedback from the Kusama participants and/or the Polkadot community.

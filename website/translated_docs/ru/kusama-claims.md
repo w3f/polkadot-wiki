@@ -4,34 +4,36 @@ title: Затребовать Kusama
 sidebar_label: Затребовать
 ---
 
-Сеть Kusama является экспериментальной сетью Polkadot's, ориентированной на сообщества R&D. Если Вы являетесь держателем токенов DOT, то Вы имеете право требовать эквивалентное количество KSM в сети Kusama. Это сделано для того, чтобы сеть Kusama совпала с существующими держателями и сообществом DOT.
+The Kusama network is Polkadot's experimental, community-focused R&D network. If you held the DOT indicator token at the time of the genesis block of Kusama, you are entitled to claim an equivalent amount of KSM on the Kusama network.
 
-You can claim KSMs by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
+You can claim KSM by signing a message with the Ethereum account that holds your DOT indicator tokens. There is no deadline for claiming KSM.
 
 ## Шаг 1. Создайте учётную запись Kusama
 
 Вам нужно сгенерировать учётную запись Kusama для приобретения KSM. Существует несколько способов её создания.
 
-Для большинства пользователей мы рекомендуем использовать [Интерфейс пользователя Polkadot](https://polkadot.js.org/apps/#/explorer), так как он позволит Вам хранить Ваши зашифрованные ключи локально.
+For most users, we recommend using the [Polkadot{.js} browser extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) since it will allow you to store your encrypted keystore locally.
 
-> ЗАМЕЧАНИЕ: К сожалению, в данный момент Kusama не имеет поддержки аппаратных кошельков. Надеемся, что это скоро изменится!
+> NOTICE: Unfortunately, at this time Kusama does not have hardware wallet support.
 
-Ещё один вариант, который Вы можете рассмотреть - это утилита командной строки `subkey`, которая позволит Вам предпринять дополнительные шаги для защиты безопасности Вашего ключа. Кроме того, ещё одним вариантом является мобильный кошелёк Polkawallet, хотя он требует дополнительного шага для генерации адресов Kusama.
+Another option you may consider using is the Subkey command line utility, which will allow you to take extra steps to protect the security of your key. Additionally, another option is the Polkawallet mobile wallet, although it requires an extra step to generate Kusama addresses.
 
-### Использование расширения polkadot{.js} (Chrome/Brave или Firefox)
+### Using Polkadot{.js} extension (Chrome/Brave or Firefox)
 
-1. Установите{.js} расширение polkadot из [Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) или [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
-1. Создайте новую учётную запись, нажав на `I want to create a new account with a new seed/я хочу создать новую учётную запись с новым seed`.
-1. Скопируйте ключ и сохраните его где-то в безопасном месте. Не делитесь с кем seed фразой, Вы можете использовать её для доступа к Вашей учетной записи, если Вы забыли пароль или хотите импортировать Ваш аккаунт снова.
-1. Введите имя учётной записи и пароль (минимум 6 символов).
-1. Нажмите `Add the account with the generated seed/Добавить учётную запись с созданным seed`.
-1. Вы можете скопировать адрес аккаунта в буфер обмена, нажав на его идентификатор.
+1. Install the Polkadot{.js} extension from the [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
+2. Click on the settings button to change the network to "Kusama (canary)". <img src="/img/kusama/kusama_polkadotjs_add_account-1.png" width=50% style="margin-left: 70px;" />
+3. Create a new account by clicking on "Create new account (root or derived)". <img src="/img/kusama/kusama_polkadotjs_create.png" width=50% style="margin-left: 70px;" />
+4. Uncheck the option to create an account dervied from another seed. <img src="/img/kusama/kusama_polkadotjs_uncheck.png" width=50% style="margin-left: 70px;" />
+5. Copy the seed phrase and store it somewhere safe. Don't share the seed phrase with anyone, you can use it to access your account if you forget your password or want to import your account again. <img src="/img/kusama/kusama_polkadotjs_mnemonicseed.jpg" width=50% style="margin-left: 70px;" />
+6. Enter a name for the account and type a strong password (at least 6 characters). <img src="/img/kusama/kusama_polkadotjs_final_account.png" width=50% style="margin-left: 70px;" />
+7. Click on "Add the account with the generated seed".
+8. You can copy the account's address to the clipboard by clicking on its identicon.
 
-### Использование `subkey`
+### Using Subkey
 
 #### Установка
 
-Вы можете установить `subkey` с помощью этой однострочной команды:
+You can install Subkey with this one-line command:
 
 ```
 cargo install --force --git https://github.com/paritytech/substrate subkey
@@ -48,15 +50,15 @@ rustup update stable
 cargo install --git https://github.com/alexcrichton/wasm-gc
 ```
 
-Кроме того, Вы можете собрать `subkey` из исходного кода.
+Alternatively, you can build Subkey from the source code.
 
 1. Follow the build instructions for [Substrate](https://substrate.dev/docs/en/knowledgebase/getting-started).
-2. When building, only build `subkey` by typing `cargo build -p subkey`.
+2. When building, only build Subkey by typing `cargo build -p subkey`.
 3. Исполняемый файл `./target/debug/subkey`.
 
 #### Использование
 
-Вы можете использовать subkey на компьютере, который не подключен к интернету, для дополнительной безопасности.
+You can use Subkey on a computer that is not connected to the internet for added security.
 
 Команда `subkey --network kusama generate` создаст новый ключ. Если Вы хотите создать более безопасный ключ, используйте 24 слова, `subkey --network kusama generate --words 24`.
 
@@ -70,90 +72,92 @@ Secret phrase `lobster flock few equip connect boost excuse glass machine find w
 
 Поле `Address (SS58)` - это то, что Вы должны использовать, чтобы получить Ваши токены KSM. Никогда не делитесь Вашей `Secret phrase/Секретной фразой` или `Secret seed/Секретным сидом`, так как с их помощью можно контролировать Ваши средства.
 
-ПРИМЕЧАНИЕ: Предыдущие версии `subkey` генерируют только Substrate адреса. Если Вы не хотите генерировать новый seed, Вы можете преобразовать адрес Substrate в адрес Kusama, следуя [этому разделу](#kusama-from-substrate-address).
+NOTE: Previous versions of Subkey only generated Substrate addresses. If you do not want to generate a new seed, you can convert the Substrate address to a Kusama address by following [this section](#kusama-from-substrate-address).
 
-See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) or enter `subkey --help` for more usage examples.
+See the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) or enter `subkey --help` for more usage examples.
 
-### Использование интерфейса пользователя Polkadot
+### Using Polkadot-JS UI
 
-1. Откройте [Интерфейс пользователя Polkadot](https://polkadot.js.org/apps) и перейдите в вкладку `Settings/Настройки`. Найдите раскрывающийся список конфигурации для `address network prefix/адрес префикса сети` и выберите `Kusama (canary)`. Нажмите `Save and reload/Сохранить и перезагрузить`.
+1. Open up the [Polkadot-JS UI](https://polkadot.js.org/apps) and navigate to the top left corner of the navigation. This will open up a panel of network options to select from. Select on "Kusama", either from Parity or Web3 Foundation, then "Switch".
 
-1. Перейдите на вкладку [Accounts/Аккаунты](https://polkadot.js.org/apps/#/accounts) нажмите на кнопку `Add account/Добавить аккаунт`.
+2. Navigate to the [Polkadot-JS UI Accounts Tab](https://polkadot.js.org/apps/#/accounts) and click on the "Add account" button.
 
-<img src="/img/kusama/polkadotui-find-the-accounts-page.png" width=50% />
+![kusama add account](assets/kusama/kusama_add_account.png)
 
-2. Введите имя учётной записи и создайте безопасный пароль. Этот пароль будет использоваться для расшифровки Вашей учетной записи.
+3. Enter a name for your account and create a secure password. This password will be used to decrypt your account. The required text fields to complete are highlighted in pink.
 
-<img src="/img/kusama/polkadotui-create-your-account.png" width=50% />
+![kusama create account](assets/kusama/kusama_create_account.png)
 
-3. Игнорируйте расширенные опции, если Вы не хотите изменить тип криптографии, используемый для Ваших ключей (мы рекомендуем "Schnorrkel (sr25519)").
+4. Ignore the advanced options unless you want to change the type of cryptography used for your keys (we recommend "Schnorrkel (sr25519)"). You will have to enter an Account Name and a password to protect your account. Be sure to select a secure and hard-to-guess password. Note that anything will be accepted as a password here. Please note: There are no checks to see if it is long enough or secure. You will need this password for any future interaction with or transaction from this account.
 
-4. Нажмите `Save/Сохранить` и `Create and backup account/Создать аккаунт и сохранить резервную копию`.
+5. Click "Save" and "Create and backup account".
 
-5. Сохраните зашифрованное хранилище ключей (англ. keystore) локально.
+![kusama save backup](assets/kusama/kusama_backup_account.png)
 
-6. Учетная запись теперь отображается во вкладке "Accounts/Аккаунты" и создается резервная копия хранилища ключей, который Вы только что сохранили.
+6. Save your encrypted keystore locally. Ideally, you would also save it on an external hard drive or thumb drive, or print it out and be able to re-enter it later. You should not store it in cloud storage, email it to yourself, etc. You can use this backup file to restore your account. The seed in the backup file is not readable unless it is decrypted with the password.
 
-7. Нажмите на идентификатор DOT для копирования адреса в буфер обмена. <img src="/img/kusama/polkadotui-copy-account-address.png" width=50% />
+7. The account now appears in your Accounts tab and is backed up to the keystore you just saved.
+
+8. Click on the DOT identicon to copy the address to the clipboard. ![kusama copy address](assets/kusama/kusama_copy_address.png)
 
 ### Использование Polkawallet
 
-1. Установите [Polkawallet](https://polkawallet.io). Нажмите `Download/Скачать` и выберите соответствующую платформу, которую Вы используете. На Android может потребоваться разрешить установку приложений из внешних источников. На iOS, Вам может понадобиться "trust/доверить" Polkawallet в `General > Profiles & Device Management > Enterprise App` разделе перед запуском приложения.
+1. Install [Polkawallet](https://polkawallet.io). Click "Download" and select the link corresponding to the platform you are using. On Android you may need to allow installing apps from external sources. On iOS, you may need to "trust" Polkawallet in the "General > Profiles & Device Management > Enterprise App" section before running the app.
 
-2. Когда приложение откроется, скопируйте seed фразу и сохраните её в надежном месте. Не делитесь с кем seed фразой, Вы можете использовать её для доступа к своей учётной записи, если забудете пароль или иначе потеряете Ваше хранилище ключей.
+2. Once the app is open, copy the seed phrase and store it in a safe place. Don't share the seed phrase with anyone, you can use it to access your account if you forget your password or otherwise lose your keystore.
 
 <img src="/img/kusama/polkawallet-create-account.jpg" width=50% />
 
-3. Назовите свой аккаунт и создайте надежный пароль, убедитесь что он записан в другом месте, а затем нажмите `Save/Сохранить`.
+3. Name your account and make a strong password, make sure to write it down in another place, then click "Save".
 
-4. Вам будет предложено подтвердить Вашу ключевую фразу для того, чтобы убедиться, что Вы скопировали её где-то в безопасном месте.
+4. You will be asked to confirm your seed phrase - this is to make sure you have copied it somewhere safe.
 
-5. Нажмите на розовый символ QR Code и выберите `Copy address/Копировать адрес`, чтобы скопировать адрес в буфер обмена.
+5. Click on the pink QR Code symbol and select "Copy address" to copy your address to clipboard.
 
 <img src="/img/kusama/polkawallet-accounts-page.jpg" width=50% />
 <img src="/img/kusama/polkawallet-copy-address.jpg" width=50% />
 
-6. [Получить адрес Kusama с адреса Substrate.](#kusama-from-substrate-address)
+6. [Get the Kusama address from the Substrate address.](#kusama-from-substrate-address)
 
 ### Kusama из Substrate адреса
 
-Если Вы использовали один из методов генерации, который дал Вам общий Substrate адрес (начинается с `5`), то вам нужно сделать дополнительный шаг, чтобы преобразовать это в правильно закодированный Kusama адрес.
+If you used one of the generation methods that gave you a generic Substrate address (begins with a `5`), then you will need to take an extra step to turn this into the properly encoded Kusama address.
 
-1. Скопируйте Ваш общий адрес Substrate в буфер обмена.
-2. Перейдите на [Интерфейс пользователя Polkadot](https://polkadot.js.org/apps).
-3. Перейдите на вкладку `Settings/Настройки` и найдите конфигурацию для `address network prefix/адрес префикса сети`.
-4. Выберите `Substrate (development)` и нажмите `Save and reload/Сохранить и перезагрузить`.
-5. Перейдите в `Address book/Адресная книга` и нажмите кнопку `Add contact/Добавить контакт`.
-6. Введите Ваш адрес и введите его имя как "Мой адрес".
-7. Вернитесь на вкладку `Settings/Настройки` и выберите опцию `Kusama (canary)` в `address network prefix/адрес префикса сети` и нажмите `Save and reload/Сохранить и перезагрузить`.
-8. Вернитесь в `Address book/Адресная книга` и найдите только что добавленную учётную запись (она будет иметь такое же имя).
-9. Адрес в настоящее время отформатирован как адрес Kusama.
+1. Copy your Substrate generic address to the clipboard.
+2. Go to the [Polkadot-JS UI](https://polkadot.js.org/apps).
+3. Go to the "Settings" tab and find the configuration for "address network prefix".
+4. Select "Substrate (development)" and click "Save and reload".
+5. Go to the "Address book" and click the "Add contact" button.
+6. Enter your address and give it a name like "My Address".
+7. Go back to the "Settings" tab and select the "Kusama (canary)" option in "address network prefix" and click "Save and reload".
+8. Go back to the "Address book" and find the account you just added (it will have the same name).
+9. The address is now formatted as a Kusama address.
 
 ## Шаг 2. Получить токены KSM
 
-Существует два метода получения KSM.
+There are two methods to claim KSM.
 
-### 1. Владелецы DOT:
+### DOT Holders
 
-Те, кто участвовал в продажах Polkadot и владеет распределёнными токенам DOT, могут получить пропорциональное количество KSM в сети Kusama.
+Those who participated in the Polkadot sales and have been allocated DOT indicator tokens can claim a proportional amount of KSM on the Kusama Network.
 
-Для этого необходимо подписать сообщение, содержащее адрес Вашей учетной записи Kusama. Вы можете сделать это, используя интерфейс пользователя Polkadot[Claims app](https://polkadot.js.org/apps/#/claims).
+To do this you must sign a message containing the address of your Kusama account. You can do this by using the Polkadot-JS UI [Claims app](https://polkadot.js.org/apps/#/claims).
 
 #### Создайте адрес Kusama
 
-Если Вы ещё не сделали этого, Вам нужно сгенерировать адрес Kusama. Смотрите эту страницу для подробной инструкции!
+If you haven't already done so, you will need to generate a Kusama address. See [step 1 above](kusama-claims#step-1-create-a-kusama-account) for detailed instructions first.
 
 #### Получить KSM с помощью MyCrypto
 
-Приложение Polkadot JS [Claims](https://polkadot.js.org/apps/#/claims) поможет Вам подписать сообщение от MyCrypto. MyCrypto хорошо использовать в случае, если Вы сохранили ключ учётной записи Ethereum, содержащий токены с индикатора DOT на аппаратном устройстве, например Ledger Nano S или Trezor. Он также поддерживает необработанные закрытые ключи, мнемонику и Parity signer.
+The Polkadot JS [Claims app](https://polkadot.js.org/apps/#/claims) helps you sign a message from MyCrypto. MyCrypto is good to use in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics and the Parity signer.
 
-**Обратите внимание **: гораздо безопаснее загружать и использовать приложение MyCrypto локально. Пожалуйста, не забудьте загрузить последнюю версию для Вашей операционной системы. Вы всегда можете найти самые последние версии настольного приложения на их [странице релизов](https://github.com/MyCryptoHQ/MyCrypto/releases).
+> **NOTICE**: It is much more secure to download and use the MyCrypto app locally. Please make sure to download the latest version for your operating system. You can always find the most up-to-date releases of the desktop app on their [releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
 
-После того как Вы загрузили MyCrypto и запустили его локально (мы рекомендуем перевести компьютер в режим авиаперелетов,  для обеспечения максимальной безопасности), Вы можете начать с перехода к приложению Claims пользовательском интерфейсе Polkadot JS. Выберите учётную запись, на которую Вы хотели бы получить KSM, и нажмите синюю кнопку "Continue/Продолжить", чтобы продолжиь работу. Ваш экран должен выглядеть примерно так:
+Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on the Polkadot JS UI. Select the account you would like to claim the KSM into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
 ![Получить шаг 1](assets/kusama/claim/claim-1.png)
 
-Шестнадцатеричная кодированная строка, которая следует за предложением: "Pay KSMs to the Kusama account/Оплатить KSM на счет Kusama:" - это открытый ключ в шестнадцатеричной кодировке Вашего счета Kusama, за вычетом префикса `0x`. Чтобы проверить правильность открытого ключа, Вы можете использовать инструмент `subkey` для проверки Вашего адреса.
+The hex encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key is correct you can use the Subkey tool to inspect your address.
 
 Следующий шаг - перейти в приложение MyCrypto и нажать на вкладку "Sign & Verify Message/Подписать & Заверить сообщение". Вам предложат выбрать способ разблокировки Вашего кошелька. После разблокировки кошелька, Вы должны скопировать и вставить выведенное предложение в поле ввода.
 
@@ -163,22 +167,22 @@ See the [`subkey` documentation](https://substrate.dev/docs/en/knowledgebase/int
 
 ![Получить шаг 3](assets/kusama/claim/claim_3.png)
 
-Скопируйте и вставьте вывод JSON из подписанного в MyCrypto сообщения в поле ввода интерфейса пользователя Polkadot JS и нажмите "Confirm Claim."
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
 ![Получить шаг 3](assets/kusama/claim/claim-3.png)
 
-На данный момент Вы увидите сообщение об успехе в том случае, если всё прошло правильно, и Ваши KSM теперь находятся в аккаунте, на который Вы запрашивали вывод. Поздравляем, Вы теперь можете участвовать во всех аспектах сети Kusama, например таких как [управление](learn-governance) и [стейкинг](learn-staking).
+At this point you will see a success message if everything went right and your KSM will now be in the account that you claimed to. Congratulations you can now participate in aspects of the Kusama network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch period balance transfers will not be enabled.
 
 ![Получить шаг 4](assets/kusama/claim/claim-4.png)]
 
 #### Проверьте получение
 
-После того, как Вы оформите требование на получение KSM, Ваш баланс должен быть сразу обновлен в интерфейсе Polkadot.
+After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps immediately.
 
 Проблемы? Получите поддержку в KSM [Канал поддержки](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders).
 
 ### Создание запроса на получение третьих сторон
 
-**Мы не рекомендуем использовать стороннее приложение или процесс выполнения Вашей заявки или приобретения KSM**
+**We do not recommend using a third-party app or process to perform your claim or acquire KSM.**
 
 Заявка на получение KSM c использованием стороннего процесса может привести к потере Вашего распределения, поэтому мы не рекомендуем использовать для этого какие-либо сторонние приложения. Ручное указание данных Вашей транзакции, как указано в нашем процессе обработки заявок, является единственным способом убедиться, что Вы получите своё распределение.

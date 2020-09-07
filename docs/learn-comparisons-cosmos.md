@@ -93,9 +93,9 @@ it has quadratic transport complexity, but can only finalize one block at a time
 ## Staking Mechanics
 
 Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators using the
-[sequential Phragmen algorithm](learn-phragmen). The validator set size is set by governance (1,000
+[sequential Phragmén algorithm](learn-phragmen). The validator set size is set by governance (1,000
 validators planned) and stakers who do not want to run validator infrastructure can nominate up to
-16 validators. Phragmen's algorithm selects the optimal allocation of stake, where optimal is based
+16 validators. Phragmén's algorithm selects the optimal allocation of stake, where optimal is based
 on having the most evenly staked set.
 
 All validators in Polkadot have the same weight in the consensus protocols. That is, to reach
@@ -150,7 +150,7 @@ from an on-chain [Treasury](learn-treasury). Decisions get enacted on-chain and 
 autonomous.
 
 Polkadot has several on-chain, permissionless bodies. The primary one is the Council, which
-comprises a set of accounts that are elected in Phragmen fashion. The Council represents minority
+comprises a set of accounts that are elected in Phragmén fashion. The Council represents minority
 interests and as such, proposals that are unanimously approved of by the Council have a lower
 passing threshold in the public referendum. There is also a Technical Committee for making technical
 recommendations (e.g. emergency runtime upgrade to fix a bug).

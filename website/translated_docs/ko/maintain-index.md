@@ -14,22 +14,29 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 
 ## Collator
 
-- [Collator Home](maintain-collator) - High level overview of collators and related links.
+- [Learn about Collators](learn-collator) - High level overview of collators and related links.
 
 ## Nominator
 
-- [Nominator Home](maintain-nominator) - High level overview of nominators and related links.
+- [Learn about Nominators](learn-nominator) - High level overview of nominators and related links.
 - [Nomination Guide (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Walkthrough on how to nominate on the Polkadot network.
 - [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama) - Walkthrough on how to nominate on the Kusama canary network.
+- [How to stop being a Nominator](maintain-guides-how-to-unbond) - Guide on how to stop nominating.
 
 ## Validator
 
-- [Validator Home](maintain-validator) - High level overview of validator and related links.
+- [Learn about Validators](learn-validator) - High level overview of validator and related links.
 - [Validator Payouts](maintain-guides-validator-payout) - Overview on how validator rewards are calculated and paid.
 - [Validation Guide (Polkadot)](maintain-guides-how-to-validate-polkadot) - Walkthrough on how to validate on the Polkadot network.
 - [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama) - Walkthrough on how to validate on the Kusama canary network.
+- [Using systemmd for the Validator Node](maintain-guides-how-to-systemd) - Configuring systemmd with the Validator node.
+- [Secure Validator](maintain-guides-secure-validator) - Best tips and practices for validating.
+- [How to use Polkadot Secure Validator] - Walkthrough on how to set up a validator securely.
+- [How to upgrade a Validator Node](maintain-guides-how-to-upgrade) - Guide on upgrading your validator node.
+- [How to Chill](maintain-guides-how-to-chill) - Walkthrough on how to chill as a validator.
 
 ## Governance
 
+- [How to pariticipate in Governance](maintain-guides-democracy) - Walkthrough on how to participate in governance.
 - [How to join the Council](maintain-guides-how-to-join-council) - Step by step guide for running for the Council.
 - [How to vote for a Councillor](maintain-guides-how-to-vote-councillor) - Step by step guide for voting for your favorite councillors.

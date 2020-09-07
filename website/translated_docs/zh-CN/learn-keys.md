@@ -12,6 +12,7 @@ sidebar_label: Polkadot 密钥
 
 - 使用 Schnorr 签名的原版` ed25519 `实现。
 - 使用 Schnorr 签名的 Schnorrkel / Ristretto ` sr25519 `。
+- ECDSA signatures on secp256k1
 
 对于简单签名，` ed25519 `和` sr25519 `之间的安全性没有区别。
 
@@ -21,9 +22,9 @@ sidebar_label: Polkadot 密钥
 
 ### "Controller" 和 "Stash" 密钥
 
-当我们说 "controller" 和 "stash" 密钥时，通常是在运行验证人或提名 DOT 的上下文中谈论，但是它们的概念对所有用户来说都是有用。这两个密钥都是帐户的类型。它们区别在于其预期用途，而不是根本的密码学差异。在上面部分提到的所有信息都适用于这些密钥。当创建新的 controller 或 stash 密钥时，所有密码学都是帐户密钥可用的选项。
+When we talk about "controller" and "stash" keys, we usually talk about them in the context of running a validator or nominating DOT, but they are useful concepts for all users to know. Both keys are types of account keys. They are distinguished by their intended use, not by an underlying cryptographic difference. All the info mentioned in the parent section applies to these keys. When creating new controller or stash keys, all cryptography supported by account keys are an available option.
 
-Controller 是半在线密钥，用来直接控制用户和提交交易。对于验证人或提名人，这意味着将使用 controller 密钥来开始或停止验证或提名。 controller 密钥需要保留小量 DOTS 作支付交易费，但它并不应持有大量的 DOTs。加上由于使用它的频率相对高并且它保存在互联网上，所以应谨慎留意，并偶尔使用新的密钥代替。
+The controller key is a semi-online key that will be in the direct control of a user, and used to submit manual extrinsics. For validators or nominators, this means that the controller key will be used to start or stop validating or nominating. Controller keys should hold some DOT to pay for fees, but they should not be used to hold huge amounts or life savings. Since they will be exposed to the internet with relative frequency, they should be treated carefully and occasionally replaced with new ones.
 
 Stash 密钥在大多数情况下是保存在冷钱包，写在纸上也可以受硬件安全保护。如果可以的话，它应该很少在互联网上或用于提交交易。 Stash 密钥用于存储大量资金，应该将它视为银行的储蓄帐户，只有在紧急情况下才使用该帐户。或者也许更恰当的隐喻是将其视为埋藏在某个岛屿上的藏宝，并且只有最初隐藏它的海盗才知道。
 

@@ -27,6 +27,7 @@ This section of the wiki is divided into the following parts:
 This section is for service providers like wallets or node operators who want to learn how to
 integrate Polkadot into their systems.
 
+- [Integration Initiation](build-integration) - The guide to the guide.
 - [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the
   Polkadot protocol, e.g. address formats.
 - [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the

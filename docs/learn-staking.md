@@ -33,8 +33,8 @@ validator set.
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
 
 As a nominator, you can nominate one or more (up to 16) validator candidates that you trust to help
-you earn rewards in DOTs. You can take a look at the [nominator guide](maintain-nominator) to
-understand what you are required to do when the mainnet launches.
+you earn rewards in DOT. You can take a look at the [nominator guide](learn-nominator) to understand
+what you are required to do when the mainnet launches.
 
 A validator node is required to be responsive 24/7, perform its expected duties in a timely manner,
 and avoid any slashable behavior. You can follow our
@@ -69,18 +69,18 @@ were `k` nominators in different pools, each backing a single validator `i` with
 each validator pool, we keep a list of nominators with the associated stakes.
 
 The general rule for rewards across validator pools is that two validator pools get paid the **same
-amount of DOTs** for equal work, i.e. they are NOT paid proportional to the stakes in each pool.
+amount of DOT** for equal work, i.e. they are NOT paid proportional to the stakes in each pool.
 Within a validator pool, a (configurable) part of the reward goes to pay the validator's commission
 fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the nominators and
 validator. Notice in particular that the validator is rewarded twice: once as commission fees for
 validating, and once for nominating itself with stake.
 
-To estimate the inflation rate and how many DOTs you can get each month as a nominator or validator,
-you can use this
-[Excel sheet](https://docs.google.com/spreadsheets/d/1-9Hc3kZ23EhZC3X6feRUKSTv6gj4xR7cvUbJD2zUEZk/edit?usp=sharing)
-as a reference and play around with it by changing some parameters (e.g. validator pools, total
-supply, commission fees, etc.) to have a better estimate. Even though it may not be entirely
-accurate since staking participation is changing dynamically, it works well as an indicator.
+To estimate the inflation rate and how many DOT you can get each month as a nominator or validator,
+you can use this [tool](https://www.stakingrewards.com/earn/polkadot/calculate) as a reference and
+play around with it by changing some parameters (e.g. how many days you would like to stake with
+your DOT, provider fees, compound rewards, etc.) to have a better estimate. Even though it may not
+be entirely accurate since staking participation is changing dynamically, it works well as an
+indicator.
 
 ### 4. Rewards Mechanism
 
@@ -97,9 +97,9 @@ will get paid more).
 The following example should clarify the above. For simplicity, we have the following assumptions:
 
 - These validators do not have a stake of their own.
-- They do NOT charge any commission fees
-- Reward amount is 100 DOT tokens
-- The least amount of DOTs to be a validator is 350
+- They do NOT charge any commission fees.
+- Reward amount is 100 DOT tokens.
+- The current minimum amount of DOT to be a validator is 350.
 
 |               | **A - Validator Pool** |                             |         |
 | :-----------: | :--------------------: | :-------------------------: | :-----: |
@@ -120,19 +120,28 @@ The following example should clarify the above. For simplicity, we have the foll
 _Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT
-than those in pool A because pool A has more overall stake. Sam has staked 50 DOTs in pool A, but he
+than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he
 only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
+
+There is an additional factor to consider in terms of rewards. While there is no limit to the number
+of nominators a validator may have, a validator does have a limit to how many nominators to which it
+can pay rewards. In Polkadot and Kusama, this limit is currently 64, although this can be modified
+via runtime upgrade. A validator with more than 64 nominators is _oversubscribed_. When payouts
+occur, only the top 64 nominators as measured by amount of stake allocated to that validator will
+receive rewards. All other nominators are essentially "wasting" their stake - they used their
+nomination to elect that validator to the active stake, but receive no rewards in exchange for doing
+so.
 
 We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator
 offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount of
-DOTs), which means that validator pools with more stake get slashed more DOTs. Again, this is done
-to provide nominators with an economic incentive to shift their preferences and back less popular
+DOT), which means that validator pools with more stake get slashed more DOT. Again, this is done to
+provide nominators with an economic incentive to shift their preferences and back less popular
 validators whom they consider to be trustworthy.
 
 The second point to note is that each validator candidate is free to name their desired commission
 fee (as a percentage of rewards) to cover operational costs. Since validator pools are paid the
 same, pools with lower commission fees pay more to nominators than pools with higher fees. Thus,
-each validator can choose between increasing their fees to earn more DOTs, or decreasing their fees
+each validator can choose between increasing their fees to earn more DOT, or decreasing their fees
 to attract more nominators and increase their chances of being elected. We will let the market
 regulate itself in this regard. In the long term, we expect that all validators will need to be cost
 efficient to remain competitive, and that validators with higher reputation will be able to charge
@@ -163,12 +172,12 @@ Polkadot and the cryptography behind it [see here](learn-keys).
 
 ## Validators and nominators
 
-Since validator slots will be limited, most of those who wish to stake their DOTs and contribute
+Since validator slots will be limited, most of those who wish to stake their DOT and contribute
 economic security to the network will be nominators. Validators do most of the heavy lifting: they
 produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state
 transition function of parachains, and possibly some other responsibilities regarding data
 availability and [XCMP](learn-crosschain). Nominators, on the other hand, do not need to do anything
-once they have bonded their DOTs. The experience of the nominator is similar to "set it and forget
+once they have bonded their DOT. The experience of the nominator is similar to "set it and forget
 it," while the validator will be doing active service for the network by performing the critical
 operations. For this reason, the validator has certain privileges regarding the payout of the
 staking mechanism and will be able to declare its own allocation before the share is divided to
@@ -176,18 +185,18 @@ nominators.
 
 ![staking](assets/NPoS/article-2.png)
 
-### Want to stake DOTs?
+### Want to stake DOT?
 
-- [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the
-  Kusama network.
-- [Validator Guide](mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the
-  Kusama network.
+- [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
+  network.
+- [Validator Guide](maintain-guides-how-to-validate-polkadot) - Become a validator on the Polkadot
+  network.
 
 ## Slashing
 
 Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs
 modified software) in the network. They and their nominators will get slashed by losing a percentage
-of their bonded/staked DOTs. Any slashed DOTs will be added to the Treasury. The rationale for this
+of their bonded/staked DOT. Any slashed DOT will be added to the Treasury. The rationale for this
 (rather than burning or distributing them as rewards) is that slashes may then be reverted by the
 Council by simply paying out from the Treasury. This would be useful in situations such as a faulty
 runtime causing slashing or forcing validators offline through no fault of their own. In the case of
@@ -281,6 +290,8 @@ Polkadot allows some validators to be disabled, but if the number of disabled va
 large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
 need to resubmit their intention to validate and regarner support from nominators.
 
+For more on chilling, see the [How to Chill][] page on this wiki.
+
 ### Slashing Across Eras
 
 There are 3 main difficulties to account for with slashing in NPoS:
@@ -323,10 +334,17 @@ and 21 days on Kusama. For more information on why this is so, see the page on
 ### Claiming Rewards
 
 If you go to the Staking payouts page on
-[Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of validators that
-you have nominated in the past 84 eras. Each one has the option to trigger the payout for all
-unclaimed eras. Note that this will pay everyone who was nominating that validator during those
-eras, and anyone can call it.
+[Polkadot-JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of all validators
+that you have nominated in the past 84 eras and for which you have not yet received a payout. Each
+one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone
+who was nominating that validator during those eras, and anyone can call it. Therefore, you may not
+see anything in this tab, yet still received a payout if somebody (generally, but not necessarily,
+another nominator or the validator operator) has triggered the payout for that validator for that
+era.
+
+If you wish to check if you received a payout, you will have to check via a block explorer. See
+[the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
+for details.
 
 ### Reward Distribution Example
 
@@ -343,29 +361,30 @@ percentage of the block reward, not an absolute value. After the value gets dedu
 portion is based on their staked value and split between the validator and all of the nominators who
 have voted for this validator.
 
-For example, assume the block reward for a validator is 10 DOTs. A validator may specify
-`validator_payment = 50%`, in which case the validator would receive 5 DOTs. The remaining 5 DOTs
+For example, assume the block reward for a validator is 10 DOT. A validator may specify
+`validator_payment = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT
 would then be split between the validator and their nominators based on the proportion of stake each
 nominator had. Note that validators can put up their own stake, and for this calculation, their
 stake acts just as if they were another nominator.
 
 Rewards can be directed to the same account (controller) or to the stash account (and either
 increasing the staked value or not increasing the staked value). It is also possible to top-up /
-withdraw some bonded DOTs without having to un-stake everything.
+withdraw some bonded DOT without having to un-stake everything.
 
 For specific details about validator payouts, please see
 [this guide](maintain-guides-validator-payout).
 
 ## Inflation
 
-Inflation is designed to be 10% in the first year, with validator rewards being a function of amount
-staked and the remainder going to treasury.
+DOT is inflationary; there is no maximum number of DOT as in Bitcoin. Inflation is designed to be
+10% in the first year, with validator rewards being a function of amount staked and the remainder
+going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
 <p style="text-align:center">Source: <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
 
-- **x-axis**: Proportion of DOTs staked
+- **x-axis**: Proportion of DOT staked
 - **y-axis**: Inflation, annualized percentage
 - **Blue line**: Inflation rewards to stakers
 - **Green line**: Staker rate of return
@@ -408,3 +427,4 @@ around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
 - [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
 
 [epoch]: glossary#epoch
+[how to chill]: maintain-guides-how-to-chill

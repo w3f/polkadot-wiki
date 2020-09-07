@@ -4,7 +4,7 @@ title: 设置安全远程 WebSocket 连接
 sidebar_label: 设置安全远程 WebSocket 连接
 ---
 
-您可能想要在服务器上设置节点，然后从另一个服务器上的用户界面连接。例如 [PolakdotJS UI](https://polkadot.js.org/apps)。 除非您为 websocket 连接设置一个安全的代理服务器，否则这是不可行。 让我们看看如何在 Substrate 节点上设置 WSS 。
+You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [PolkadotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
 
 _注意：**仅应**将同步节点用作某些 dapp 或项目的后端，才能执行此操作。 永远不要打开您的验证人节点 websockets - 并且没有理由这样做，这只会导致安全问题！_
 

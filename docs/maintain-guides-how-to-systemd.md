@@ -8,7 +8,7 @@ You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd)
 will automatically restart on server reboots or crashes (and helps to avoid getting slashed!).
 
 Before following this guide you should have already set up your validator by following the
-[How to validate](maintain-validator) article.
+[How to validate](learn-validator) article.
 
 First create a new unit file called `polkadot-validator.service` in `/etc/systemd/system/`.
 
@@ -25,10 +25,18 @@ Description=Polkadot Validator
 [Service]
 ExecStart=PATH_TO_POLKADOT_BIN --validator --name SHOW_ON_TELEMETRY
 Restart=always
+RestartSec=120
 
 [Install]
 WantedBy=multi-user.target
 ```
+
+> **WARNING:** It's recommended to delay the restart of a node with `RestartSec` in the case of node
+> crashes. It's possible that when a node crashes, consensus votes in GRANDPA aren't persisted to
+> disk. In this case, there is potential to equivocate when immediately restarting. What can happen
+> is the node will not recognize votes that didn't make it to disk, and will then cast conflicting
+> votes. Delaying the restart will allow the network to progress past potentially conflicting votes,
+> at which point other nodes will not accept them.
 
 To enable this to autostart on bootup run:
 

@@ -8,7 +8,7 @@ sidebar_label: 投票给选举议员
 
 ## 投票给选举议员
 
-在投票给议员期间，您需要锁定 DOT / KSM。像验证人选举一样，您最多可以提名16个不同的议员，您的选票将在所选组中平均分配。与验证人选举不同，您预留的余额代币没有解除绑定期限。一旦您的投票取消，代币将回复流动性。
+Voting for councillors requires you to lock your DOT / KSM for the duration of your vote. Like the validator elections, you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid again.
 
 > 警告: 当投票给议员时，您有责任不要把全部余额也放在预留余额。最好保持_至少_几个 KSM 来支付交易费用。
 

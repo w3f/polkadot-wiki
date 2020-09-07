@@ -16,9 +16,9 @@ nature, they are able to parallelize transaction processing and achieve scalabil
 system. They [share in the security](learn-security) of the entire Polkadot network and can
 communicate with other parachains through [XCMP](learn-crosschain).
 
-Parachains are maintained by a network maintainer known as a [collator](maintain-collator). The role
-of the collator node is to maintain a full-node of the parachain, retain all necessary information
-of the parachain, and produce new block candidates to pass to the Relay Chain validators for
+Parachains are maintained by a network maintainer known as a [collator](learn-collator). The role of
+the collator node is to maintain a full-node of the parachain, retain all necessary information of
+the parachain, and produce new block candidates to pass to the Relay Chain validators for
 verification and inclusion in the shared state of Polkadot. The incentivization of a collator node
 is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They
 are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the
@@ -67,12 +67,11 @@ the cap has been reached.
 
 Parachain campaigns may use caps when they are confident they will raise enough funds to reach the
 minimum amount needed for a raise but do not want to raise too much over this amount. As a
-simplified example, let's consider that the total supply of DOTs is 10 million. We can assume that 5
-million DOTs are bonded in the staking subsystem since that is what is optimized by the rewards. We
-are left with a maximum of 5 million DOTs to use in parachain auctions. If there were only 4 slots
-up for an auction then we can calculate that 1.25 million is enough to win any one of them. A
-parachain might choose to place this as their cap, so that no single parachain can be
-oversubscribed.
+simplified example, let's consider that the total supply of DOT is 10 million. We can assume that 5
+million DOT are bonded in the staking subsystem since that is what is optimized by the rewards. We
+are left with a maximum of 5 million DOT to use in parachain auctions. If there were only 4 slots up
+for an auction then we can calculate that 1.25 million is enough to win any one of them. A parachain
+might choose to place this as their cap, so that no single parachain can be oversubscribed.
 
 Once a crowdfunding campaign is open, anyone can contribute by sending a special transaction and
 depositing funds. Funds that are used to contribute must be transferrable (that is, not locked)
@@ -89,11 +88,11 @@ If a crowdfunding campaign is successful, that parachain will be on-boarded as a
 Polkadot. The funds that contributed to it will be locked in that parachain's account for the entire
 duration that it is active (up to two years). On one hand, this means that the parachain can do
 reliable accounting of contributors and reward them with parachain tokens in their local economies.
-On the other hand, the DOTs that contributors used will be essentially taken out of circulation for
+On the other hand, the DOT that contributors used will be essentially taken out of circulation for
 that time and cannot be used to stake or vote.
 
 At the end of the parachain's lifecycle, it will enter into a retirement phase. During this phase,
-contributors can begin to withdraw their locked DOTs. Contributors must withdraw their funds during
+contributors can begin to withdraw their locked DOT. Contributors must withdraw their funds during
 the retirement phase, otherwise they will be sent to the treasury when that parachain is dissolved.
 Likewise, any parachain that started a campaign but was unsuccessful at acquiring a slot will have a
 timeout during which contributors can withdraw their funds. If funds are not withdrawn during the

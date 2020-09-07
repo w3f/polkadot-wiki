@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-validate-kusama
 title: Run a Validator (Kusama)
-sidebar_label: Validator Guide
+sidebar_label: How to run a Validator on Kusama
 ---
 
 This guide will instruct you how to set up a validator node on the Kusama network.
@@ -16,7 +16,7 @@ If you need help, please reach out on the [Kusama validator chat](https://riot.i
 
 ### How Many KSM Do I Need?
 
-You can have a rough estimate on that by using the methods listed [here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
+You can have a rough estimate on that by using the methods listed [here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators are elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a minimum stake behind your validator. This stake can come from yourself or from [nominators](learn-nominator). This means that as a minimum, you will need enough KSM to set up Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or improper setup may result in loss of KSM tokens! If you are not confident in your ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node instead.
 
@@ -155,7 +155,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSM - make sure that your Stash account contains _at least_ this much. You can, of course, stake more than this.
 - **Controller account** - Select the Controller account created earlier. This account will also need a small amount of KSM in order to start and stop validating.
 - **Value bonded** - How much KSM from the Stash account you want to bond/stake. Note that you do not need to bond all of the KSM in that account. Also note that you can always bond _more_ KSM later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
@@ -224,7 +224,7 @@ If you go to the "Staking" tab, you will see a list of active validators current
 
 ![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
-The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of KSMs staked or seek out nominators for your validator in order to join the validator set.
+The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of KSM staked or seek out nominators for your validator in order to join the validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Kusama validator! If you need help, reach out on the [Kusama forum](https://forum.kusama.network/) or in the [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
 

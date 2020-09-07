@@ -20,7 +20,7 @@ standalone chain:
   protocol.
 
 Parachains can [lease the security](learn-security) of the Polkadot network by bonding
-[DOTs](learn-DOT) for a parachain slot. This means that the social costs of building a community
+[DOT](learn-DOT) for a parachain slot. This means that the social costs of building a community
 around your project and convincing validators to participate in your network security are reduced.
 It is anticipated that Polkadot will have strong security, and decentralized application projects
 wishing to benefit from this security would want to become a parachain. For more information on the
@@ -58,7 +58,7 @@ from iteration of the state transition function. They must remain online in orde
 the state and also of the XCMP messages that it will route between itself and other parachains.
 Collator nodes are responsible for passing the succinct proofs to the Relay Chain validators, and
 tracking the latest blocks from the Relay Chain. In essence, a collator node also acts as a light
-client for the Polkadot Relay Chain. For more on collator nodes see [here](maintain-collator).
+client for the Polkadot Relay Chain. For more on collator nodes see [here](learn-collator).
 
 ## What kind of PDKs exist?
 

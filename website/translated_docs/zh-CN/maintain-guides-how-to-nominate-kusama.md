@@ -8,13 +8,13 @@ Nominators are participants in the staking system that are responsible for elect
 
 While [validators](maintain-guides-how-to-validate-kusama) operate as active participants by taking part in the block production and finality voting mechanisms, nominators take more of a "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or worrying about online uptime. However, a good nominator performs diligence on the validators that it elects. When looking for validators to nominate, a nominator should pay attention to its own reward percentage for nominating a specific validator - as well as the risk that it bares of being slashed if the validator gets slashed.
 
-# Setting up Stash and Controller keys
+## Setting up Stash and Controller keys
 
 Nominators are recommended to set up two separate stash and controller accounts. Explanation and reasoning for generating distinct accounts for this purpose is elaborated in the [keys](learn-keys#controller-and-stash-keys) section of the Wiki.
 
 You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation](learn-account-generation) page.
 
-# Using Polkadot UI
+## Using Polkadot UI
 
 ### Step 1: Bond your tokens
 
@@ -26,7 +26,7 @@ The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)
 
 The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you estimate your earnings and this is where it's good to start picking favorites.
 
-The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough KSM backing them (as allocated through the [Phragmen election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
+The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough KSM backing them (as allocated through the [Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
 
 The "Validator Stat's subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you to query a validator's stash address and see historical charts on era points, elected stake, rewards, and slashes.
 
@@ -58,7 +58,7 @@ Assuming at least one of your nominations ends up in the active validator set, y
 
 At some point, you might decide to stop nominating one or more validators. You can always change who you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions are available [here](maintain-guides-how-to-unbond).
 
-# Using Command-Line Interface (CLI)
+## Using Command-Line Interface (CLI)
 
 Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to the PolkadoJS dashboard.
 
