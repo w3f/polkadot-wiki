@@ -339,7 +339,7 @@ that you have nominated in the past 84 eras and for which you have not yet recei
 one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone
 who was nominating that validator during those eras, and anyone can call it. Therefore, you may not
 see anything in this tab, yet still received a payout if somebody (generally, but not necessarily,
-another nominator or the validator operator) has triggered the payout for that validato for that
+another nominator or the validator operator) has triggered the payout for that validator for that
 era.
 
 If you wish to check if you received a payout, you will have to check via a block explorer. See
