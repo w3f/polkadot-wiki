@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { normalize } = require("path");
 
 const recursivelyGetAllPaths = (dir) => {
   const allPaths = [];
@@ -17,7 +18,7 @@ const recursivelyGetAllPaths = (dir) => {
   return allPaths;
 }
 
-const main = () => {
+const deleteUnusedImages = () => {
   const dirs = [
     "docs/assets",
   ];
@@ -46,4 +47,9 @@ const main = () => {
   }
 }
 
-main();
+switch (process.argv[2]) {
+  case "delete": deleteUnusedImages(); break;
+  case "normalize": normalize(); break;
+  case "other": break;
+  default: console.log("Use either `delete` or `normalize`.");
+}
