@@ -26,11 +26,6 @@ This is a list of what you will need before starting:
 
 ### Using Ledger Live
 
-> NOTE: If you are reading this notice the Kusama application has not been approved for Ledger Live
-> yet. If you would like to proceed with the pre-release installation please follow the "Using the
-> Developer Release" instructions below. Otherwise hold tight, the application should be approved
-> soon.
-
 - Open the "Manager" tab in Ledger Live.
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing the right button.
@@ -75,7 +70,7 @@ Again, navigate all the way to the right, verify the Identifier hash matches the
 in your terminal. Click both buttons on "Perform Installation" to install the application. It will
 ask again for your Pin code and you should enter it in the device.
 
-At the end of the process you should the newly installed Kusama application on the device.
+At the end of the process you should have the newly installed Kusama application on the device.
 
 ## Using on Polkadot-JS Apps
 
@@ -142,7 +137,7 @@ locked amounts.
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use [Polkadot-JS Apps][].
 
-- Click on the "Transfer" button on the left navigation menu.
+- Click on the "Transfer" button in "Accounts" dropdown in the top navigation menu.
 - In the top input, select "Ledger" as your sending account.
 - In the second input, select the account that you want to transfer funds to.
 - In the third input, enter the amount of KSM you want to transfer.
@@ -155,7 +150,7 @@ method is to use [Polkadot-JS Apps][].
 In order to receive a transfer on the account that is stored on your Ledger device, you will need to
 provide the sender (i.e. the payer) your address. You can copy your address to the clipboard after
 loading your device on Polkadot-JS Apps by clicking the account icon or by highlighting the address
-and pressing ctrl-c. Then you will provide your address to the payer so they can send a transfer.
+and pressing ctrl-c (command-c on Apple keyboards). Then you will provide your address to the payer so they can send a transfer.
 
 ## Support
 

@@ -134,23 +134,14 @@ locked amounts.
 
 ### Sending a Transfer
 
-If you would like to send a transfer from your account housed on the Ledger device, the easiest
-method is to use Polkadot-JS Apps.
-
-- Click on the "Transfer" button on the left navigation menu.
-- In the top input, select "Ledger" as your sending account.
-- In the second input, select the account that you want to transfer funds to.
-- In the third input, enter the amount of KSM you want to transfer.
-- Click the "Make Transfer" button.
-- Confirm the transaction on your device.
-- A green success notification will be displayed when the transaction is included in a block.
+Instructions to send a transfer can be found on the [balance transfer page](learn-transactions).
 
 ### Receiving a Transfer
 
 In order to receive a transfer on the account that is stored on your Ledger device, you will need to
 provide the sender (i.e. the payer) your address. You can copy your address to the clipboard after
 loading your device on Polkadot-JS Apps by clicking the account icon or by highlighting the address
-and pressing ctrl-c. Then you will provide your address to the payer so they can send a transfer.
+and pressing ctrl-c (command-c on Apple keyboards). Then you will provide your address to the payer so they can send a transfer.
 
 ## Support
 
