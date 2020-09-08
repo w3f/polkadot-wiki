@@ -11,7 +11,7 @@ hardware wallet if you are managing a significant amount of funds.
 
 The Kusama application allows you to manage Kusama's native asset, the KSM. It supports most of the
 available transaction types of the network (a notable exception is the "Batch" transaction from the
-Utilty pallet).
+Utility pallet).
 
 ## Requirements
 
