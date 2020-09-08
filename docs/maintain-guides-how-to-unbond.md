@@ -10,7 +10,7 @@ serves as a cooldown. You will not be able to transfer your tokens before this p
 
 ### Step 1: Stop Nominating
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+On the [Polkadot-JS Apps][] navigate to the "Staking" tab.
 
 On this tab click on the "Account Actions" tab at the top of the screen.
 
@@ -43,3 +43,25 @@ on Kusama as it is on Polkadot.
 
 Once this process is complete, you will have to issue another, final transaction: Withdraw Unbonded.
 Then, your transferrable balance will increase by the amount of tokens you've just fully unbonded.
+
+## Rebonding before the end of the unbonding period
+
+If you want to rebond your tokens before the unbonding period is over you can do this by issuing a
+`rebond` extrinsic. This allows you to bond your tokens that are still locked without waiting until
+the end of the unbonind period.
+
+In order to do this you will need to issue an extrinsic manually from [Polkadot-JS Apps][].
+
+Go to the "Extrinsics" option that's located in the "Developer" dropdown in the top menu.
+
+![extrinsic menu](assets/rebonding-1.png)
+
+Select the "staking" pallet and the "rebond" extrinsic. Enter the amount of tokens that are
+currently locked in unbonding that you want to rebond. Then click "Submit Transaction".
+
+![confirm](assets/rebonding-2.png)
+
+Confirm the transaction in the next pop-up. Once the transaction is included in the next block your
+tokens will be rebonded again and you can start staking with them.
+
+[polkadot-js apps]: https://polkadot.js.org/apps
