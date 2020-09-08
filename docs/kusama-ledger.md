@@ -76,7 +76,6 @@ in your terminal. Click both buttons on "Perform Installation" to install the ap
 ask again for your Pin code and you should enter it in the device.
 
 At the end of the process you should the newly installed Kusama application on the device.
-job!
 
 ## Using on Polkadot-JS Apps
 
