@@ -9,9 +9,9 @@ devices. Ledger devices are hardware wallets that keep your secret secured on a 
 does not expose it to your computer or the internet. It is strongly recommend to use a hardware
 wallet if you are managing a significant amount of funds.
 
-The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most
-of the transaction types of the network (a notable exception is the "Batch" transaction from the
-Utilty pallet).
+The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of
+the transaction types of the network (a notable exception is the "Batch" transaction from the Utilty
+pallet).
 
 ## Requirements
 
@@ -81,8 +81,8 @@ work with the browser interface after installation. The functionality is current
 feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
-tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from
-the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
+tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from the
+default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
 
 ![](assets/ledger.png)
 
