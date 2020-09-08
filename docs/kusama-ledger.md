@@ -153,6 +153,18 @@ loading your device on Polkadot-JS Apps by clicking the account icon or by highl
 and pressing ctrl-c (command-c on Apple keyboards). Then you will provide your address to the payer
 so they can send a transfer.
 
+### Staking
+
+Since Ledger does not support batch transactions, you must do two separate transactions when you want
+to stake using an account stored on a Ledger device.
+
+- Go to the "Staking" tab found under the "Network" dropdown in the top navigation menu.
+- Click the "Account Actions" pane in the inner navigation.
+- Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not work).
+- Input the amount of tokens to bond and confirm the transaction.
+- When the transaction is include you will see the newly bonded account in the "Account Actions" page.
+- Select "Start Nominating" or "Start Validating" to start nominating or validating.
+
 ## Support
 
 If you need support please send an email to [support@kusama.network](mailto:support@kusama.network).
