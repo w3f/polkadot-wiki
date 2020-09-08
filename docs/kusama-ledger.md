@@ -150,7 +150,8 @@ method is to use [Polkadot-JS Apps][].
 In order to receive a transfer on the account that is stored on your Ledger device, you will need to
 provide the sender (i.e. the payer) your address. You can copy your address to the clipboard after
 loading your device on Polkadot-JS Apps by clicking the account icon or by highlighting the address
-and pressing ctrl-c (command-c on Apple keyboards). Then you will provide your address to the payer so they can send a transfer.
+and pressing ctrl-c (command-c on Apple keyboards). Then you will provide your address to the payer
+so they can send a transfer.
 
 ## Support
 
