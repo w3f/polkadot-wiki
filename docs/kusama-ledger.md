@@ -99,7 +99,7 @@ the "Query Ledger" button.
 
 ![](assets/ledger-2.png)
 
-You will not get any feedback from the web page, but if all went fine you should be able to scroll
+You will not get any feedback from the web page, but if all went well you should be able to scroll
 down and find a new account on the page named "Ledger". Under the type column, the account will also
 show "ledger".
 
@@ -121,7 +121,7 @@ Apps.
 
 ### Checking Balance of Your Account
 
-There are a couple methods to check the balance of your account. You can use Polkadot-JS Apps or you
+There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you
 can use a block explorer like Polkascan.
 
 #### Using Polkadot-JS Apps

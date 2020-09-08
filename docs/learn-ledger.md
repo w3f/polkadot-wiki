@@ -9,7 +9,7 @@ devices. Ledger devices are hardware wallets that keep your secret secured on a 
 does not expose it to your computer or the internet. It is strongly recommend to use a hardware
 wallet if you are managing a significant amount of funds.
 
-The Polkadot application allows you to manage Polkadot's native currency, the DOT. It supports most
+The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most
 of the transaction types of the network (a notable exception is the "Batch" transaction from the
 Utilty pallet).
 
@@ -35,7 +35,7 @@ Here is a list of what you will need before starting:
 - Your device will display "Processing…"
 - The app installation is confirmed.
 
-Please proceed to the usage instruction below.
+Please proceed to the usage instructions below.
 
 ### Using the Developer Release
 
@@ -70,8 +70,7 @@ Again, navigate all the way to the right, verify the Identifier hash matches the
 in your terminal. Click both buttons on "Perform Installation" to install the application. It will
 ask again for your Pin code and you should enter it in the device.
 
-At the end of the process you should the newly installed Polkadot application on the device. Great
-job!
+At the end of the process you should have the newly installed Polkadot application on the device.
 
 ## Using on Polkadot-JS Apps
 
@@ -82,7 +81,7 @@ work with the browser interface after installation. The functionality is current
 feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
-tab in Polkadot-JS Apps. Find the option for attachting Ledger devices and switch the option from
+tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from
 the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
 
 ![](assets/ledger.png)
@@ -95,7 +94,7 @@ this button.
 
 ![](assets/ledger-2.png)
 
-You will not get any feedback from the web page, but if all went fine you should be able to scroll
+You will not get any feedback from the web page, but if all went well you should be able to scroll
 down and find a new account on the page named "Ledger". Under the type column, the account will also
 show "ledger".
 
@@ -117,8 +116,8 @@ Apps.
 
 ### Checking Balance of Your Account
 
-There are a couple methods to check the balance of your account. You can use Polkadot-JS Apps or you
-can use a block explorer like Polkascan.
+There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you
+can use a block explorer like [Polkascan][].
 
 #### Using Polkadot-JS Apps
 
@@ -128,9 +127,9 @@ open it will show details of your balance such as locks or reserve amounts.
 
 ### Using a Block Explorer
 
-You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the KSM balance of
+You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the DOT balance of
 your account. On these block explorers you can search for you account in the search box and click on
-it to reveal the details. It will show your KSM balance as well as details about your bonded or
+it to reveal the details. It will show your DOT balance as well as details about your bonded or
 locked amounts.
 
 ### Sending a Transfer
