@@ -37,7 +37,7 @@ This is a list of what you will need before starting:
 - Find Kusama in the app catalog.
 - Click the "Install" button of the app.
 - An installation window appears.
-- Your device will display "Processing…"
+- Your device will display "Processing…".
 - The app installation is confirmed.
 
 Please proceed to the usage instructions below.
