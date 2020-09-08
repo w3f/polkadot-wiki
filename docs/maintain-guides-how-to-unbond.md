@@ -1,12 +1,13 @@
 ---
 id: maintain-guides-how-to-unbond
-title: Stop Being a Nominator
-sidebar_label: Stop Being a Nominator
+title: Unbonding and Rebonding
+sidebar_label: Unbonding and Rebonding
 ---
 
-The following describes how to stop nominating and retrieve your tokens. Please note that all
-networks on which you can nominate have a delayed exit period, called the _unbonding period_, which
-serves as a cooldown. You will not be able to transfer your tokens before this period has elapsed.
+The following describes how to stop nominating or validating and retrieve your tokens. Please note
+that all networks on which you can nominate have a delayed exit period, called the _unbonding
+period_, which serves as a cooldown. You will not be able to transfer your tokens before this period
+has elapsed.
 
 ### Step 1: Stop Nominating
 
@@ -14,13 +15,14 @@ On the [Polkadot-JS Apps][] navigate to the "Staking" tab.
 
 On this tab click on the "Account Actions" tab at the top of the screen.
 
-Here, click "Stop Nominating" on an account you're nominating with and would like to free the funds
-for.
+Here, click "Stop Nominating" or "Stop Validating" (depending on your role) on an account you're
+staking with and would like to free the funds for.
 
 ![Stop Nominating Button](/img/NPoS/unbond1.png)
 
 After you confirm this transaction, your tokens will remain _bonded_. This means they stay ready to
-be distributed among nominees again. To actually withdraw them, you need to unbond.
+be distributed among nominees or used as validator self-stake again. To actually withdraw them, you
+need to unbond.
 
 ### Step 2: Unbonding an amount
 
