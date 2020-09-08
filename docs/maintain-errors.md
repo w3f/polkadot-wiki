@@ -19,7 +19,7 @@ Here's how to find out the detailed error description through Polkadot JS Apps.
 
 A typical failed transactions looks something like this:
 
-![Error while sending a transaction](/img/errors/01.jpg)
+![Error while sending a transaction](assets/errors/01.jpg)
 
 The image displays only the error name as defined in the code, not its error message. Despite this
 error being rather self-explanatory, let's find its details.
@@ -27,7 +27,7 @@ error being rather self-explanatory, let's find its details.
 In the [explorer tab](https://polkadot.js.org/apps/#/explorer), find the block in which this failure
 occured. Then, expand the `system.ExtrinsicFailed` frame:
 
-![Error described](/img/errors/02.jpg)
+![Error described](assets/errors/02.jpg)
 
 Notice how the `details` field contains a human-readable description of the error. Most errors will
 have this, if looked up this way.

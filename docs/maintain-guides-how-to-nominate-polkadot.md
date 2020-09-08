@@ -92,7 +92,7 @@ you to select up to 16 validators. Although you may choose up to 16 validators, 
 [Phragmén][] election algorithm your stake may be dispersed in different proportions to any subset
 or all of the validators your choose.
 
-![Nominating validators](/img/NPoS/nominate.png)
+![Nominating validators](assets/NPoS/nominate.png)
 
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
 will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you

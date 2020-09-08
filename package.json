@@ -28,6 +28,7 @@
     "@octokit/rest": "^18.0.5",
     "@polkadot/api": "^1.32.1",
     "axios": "^0.20.0",
+    "compressorjs": "^1.0.6",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^46.1.1",
     "katex": "^0.11.1",

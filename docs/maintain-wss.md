@@ -129,7 +129,7 @@ If you used the self-signed certificate approach, modern browsers will not let y
 websocket endpoint without that certificate being imported - they will emit an
 `NET:ERR_CERT_AUTHORITY_INVALID` message.
 
-![ERR_CERT_AUTHORITY_INVALID](/img/wss/wss04.png)
+![ERR_CERT_AUTHORITY_INVALID](assets/wss/wss04.png)
 
 Every websocket connection bootstraps itself with `https` first, so to allow the certificate, visit
 the IP of your machine in the browser prefixed with `https`, like so: `https://MY_IP`. This should
@@ -142,6 +142,6 @@ Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the to
 node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the
 IP address. Remember to prefix with `wss://`!
 
-![A sync-in-progress chain connected to Polkadot UI](/img/wss/wss01.jpg)
+![A sync-in-progress chain connected to Polkadot UI](assets/wss/wss01.jpg)
 
 Congratulations - you have a secure remote connect setup for your Substrate node.

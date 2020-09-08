@@ -27,7 +27,7 @@ page, you should see your bonded accounts and nomination status. If not, you can
 [this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be
 effective in the next era, that means roughly 6 hours on Kusama and 24 hours on Polkadot.
 
-![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
+![Nominations](assets/staking/polkadotjs-staking-account-actions.jpg)
 
 Suppose you have nominated five validator candidates, and three out of five were elected to the
 active validator set, then you should see two of your nominations as "waiting", and most likely one
@@ -67,7 +67,7 @@ none of your nominated validators being elected.
 
 ### What to take into consideration during nominating
 
-![Staking Returns](/img/staking/polkadotjs-staking-returns.jpg)
+![Staking Returns](assets/staking/polkadotjs-staking-returns.jpg)
 
 As a nominator, if you only want to know the profit each validator made for each era, you can go to
 the [Targets](https://polkadot.js.org/apps/#/staking/targets) section under the staking page by
@@ -80,7 +80,7 @@ fewer rewards than others. More importantly, when many validators are
 [unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be
 slashed.
 
-![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
+![Validator Stats](assets/staking/polkadotjs-staking-validator-stats.jpg)
 
 Thus, to be a smart nominator, it would be better to query their
 [histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks

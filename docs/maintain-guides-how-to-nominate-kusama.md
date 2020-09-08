@@ -81,7 +81,7 @@ slashed if your validator commits an offence.
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select some validators.
 
-![Nominating validators](/img/NPoS/nominate.png)
+![Nominating validators](assets/NPoS/nominate.png)
 
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
 will become active in the next era. Eras last six hours on Kusama - depending on when you do this,

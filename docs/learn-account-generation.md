@@ -248,7 +248,7 @@ the threshold and add signatories. The threshold must be less than or equal to t
 signatories. The threshold indicates how many members must be in agreement for an extrinsic
 submission to be successful. Click `Create` when done.
 
-![Multi-sig account creation](/img/accounts/create-multisig.png)
+![Multi-sig account creation](assets/accounts/create-multisig.png)
 
 This merely calculates the multi-signature's address and adds it to your UI. The account does not
 exist yet, and is subject to the same
@@ -257,12 +257,12 @@ accounts.
 
 Suppose we funded it with some tokens, and now want to send from the multi-sig to another account.
 
-![Sending from multi-sig account](/img/accounts/send-from-multi.png)
+![Sending from multi-sig account](assets/accounts/send-from-multi.png)
 
 The next step is to sign the transaction from with enough accounts to meet the threshold; in the
 above case, two out of three signatories must sign.
 
-![Signing from multi-sig account](/img/accounts/sign-from-multi-1.png)
+![Signing from multi-sig account](assets/accounts/sign-from-multi-1.png)
 
 There is currently no indication of a pending transaction from a multi-sig in the UI. This means the
 second signatory must **repeat the call in full** in order to sign it. In other words:

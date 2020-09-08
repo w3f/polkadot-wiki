@@ -143,7 +143,6 @@
       },
       "kusama-parameters": {
         "title": "Kusama Parameters",
-
         "sidebar_label": "Parameters"
       },
       "kusama-social-recovery": {
@@ -181,6 +180,10 @@
       "learn-bridges": {
         "title": "Bridges",
         "sidebar_label": "Bridges"
+      },
+      "learn-collator": {
+        "title": "Collator",
+        "sidebar_label": "Collator"
       },
       "learn-comparisons-dfinity": {
         "title": "Polkadot and Dfinity",
@@ -238,6 +241,14 @@
         "title": "Polkadot Launch Phases",
         "sidebar_label": "Polkadot Launch Phases"
       },
+      "learn-ledger": {
+        "title": "Using the Polkadot Ledger Application",
+        "sidebar_label": "Ledger Application"
+      },
+      "learn-nominator": {
+        "title": "Nominator",
+        "sidebar_label": "Nominator"
+      },
       "learn-parachains": {
         "title": "Parachains",
         "sidebar_label": "Parachains"
@@ -290,13 +301,13 @@
         "title": "Treasury",
         "sidebar_label": "Treasury"
       },
+      "learn-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
+      },
       "learn-wasm": {
         "title": "WebAssembly (Wasm)",
         "sidebar_label": "WebAssembly (Wasm)"
-      },
-      "maintain-collator": {
-        "title": "Collator",
-        "sidebar_label": "Collator"
       },
       "maintain-errors": {
         "title": "Errors and How to Resolve Them",
@@ -327,8 +338,8 @@
         "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-nominate-polkadot": {
-        "title": "Nomination Guide",
-        "sidebar_label": "Nomination Guide"
+        "title": "How to Nominate on Polkadot",
+        "sidebar_label": "How to Nominate on Polkadot"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Set Up a Sentry Node - Public Node",
@@ -386,10 +397,6 @@
         "title": "Networks",
         "sidebar_label": "Networks"
       },
-      "maintain-nominator": {
-        "title": "Nominator",
-        "sidebar_label": "Nominator"
-      },
       "maintain-polkadot-parameters": {
         "title": "Polkadot Parameters",
         "sidebar_label": "Parameters"
@@ -397,10 +404,6 @@
       "maintain-sync": {
         "title": "Set up a Full Node",
         "sidebar_label": "Set up a Full Node"
-      },
-      "maintain-validator": {
-        "title": "Validator",
-        "sidebar_label": "Validator"
       },
       "maintain-wss": {
         "title": "Set up Secure WebSocket for Remote Connections",
