@@ -35,7 +35,7 @@ This is a list of what you will need before starting:
 - Your device will display "Processing…".
 - The app installation is confirmed.
 
-Please proceed to the usage instructions below.
+Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ### Using the Developer Release
 
