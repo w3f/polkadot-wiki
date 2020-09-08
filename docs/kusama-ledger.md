@@ -106,7 +106,7 @@ ledger for confirmation when you initiate a transaction.
 ### Confirming the Address on your Device
 
 On the "Accounts" tab, find your Ledger-connected account (the one called "Ledger"). Click on the
-three vertical dots at the left of the row. This will open a new menu, here you can click the "Show
+three vertical dots at the end of the row. This will open a new menu, here you can click the "Show
 address on hardware device" option to display the address on your device.
 
 ![](assets/ledger-4.png)
