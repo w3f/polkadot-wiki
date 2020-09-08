@@ -96,7 +96,7 @@ Click "Save" to keep your settings.
 
 Now when you go to the "Accounts" tab you will see a new button that says "Query Ledger". Ensure
 that your Ledger device is unlocked and you have navigated into the Kusama application, then click
-this button.
+the "Query Ledger" button.
 
 ![](assets/ledger-2.png)
 
