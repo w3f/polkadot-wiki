@@ -134,7 +134,7 @@ open it will show details of your balance such as locks or reserve amounts.
 
 You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the KSM balance of
 your account. On these block explorers you can search for you account in the search box and click on
-it to reveal the details. It will show your KSM balance as well as details about your bonded or
+it to reveal the details. It will show your KSM balance as well as information about your bonded or
 locked amounts.
 
 ### Sending a Transfer
