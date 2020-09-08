@@ -134,7 +134,8 @@ locked amounts.
 
 ### Sending a Transfer
 
-Instructions to send a transfer can be found on the [balance transfer page](learn-balance-transfers).
+Instructions to send a transfer can be found on the
+[balance transfer page](learn-balance-transfers).
 
 ### Receiving a Transfer
 
