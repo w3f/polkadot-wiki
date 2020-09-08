@@ -122,7 +122,7 @@ can use a block explorer like [Polkascan][].
 #### Using Polkadot-JS Apps
 
 Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
-account. At the far right of the row is located your account's KSM balances. If you click the menu
+account. At the far right of the row is located your account's DOT balance. If you click the menu
 open it will show details of your balance such as locks or reserve amounts.
 
 ### Using a Block Explorer
