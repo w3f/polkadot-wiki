@@ -28,7 +28,7 @@ This is a list of what you will need before starting:
 
 > NOTE: If you are reading this notice the Kusama application has not been approved for Ledger Live
 > yet. If you would like to proceed with the pre-release installation please follow the "Using the
-> Developer Release" instruction below. Otherwise hold tight, the application should be approved
+> Developer Release" instructions below. Otherwise hold tight, the application should be approved
 > soon.
 
 - Open the "Manager" tab in Ledger Live.
