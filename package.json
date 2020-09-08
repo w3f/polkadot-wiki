@@ -28,9 +28,9 @@
     "@octokit/rest": "^18.0.5",
     "@polkadot/api": "^1.32.1",
     "axios": "^0.20.0",
-    "compressorjs": "^1.0.6",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^46.1.1",
+    "jimp": "^0.16.1",
     "katex": "^0.11.1",
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.2.2",
@@ -40,6 +40,7 @@
     "remarkable-katex": "^1.1.6",
     "replace-in-file": "^6.1.0",
     "semver": "^7.3.2",
+    "sharp": "^0.26.0",
     "yargs": "^15.4.1"
   }
 }

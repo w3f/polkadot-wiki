@@ -1,5 +1,6 @@
 const fs = require("fs");
-const { normalize } = require("path");
+const sharp = require("sharp");
+const Jimp = require("jimp");
 
 const recursivelyGetAllPaths = (dir) => {
   const allPaths = [];
@@ -47,9 +48,29 @@ const deleteUnusedImages = () => {
   }
 }
 
+const optimize = async () => {
+  const dir = "docs/assets";
+
+  const images = recursivelyGetAllPaths(dir);
+  for (const path of images) {
+    sharp(path)
+      .resize(800, 600, { fit: "inside" })
+      .toFile(path + ".testing", (err) => {
+        console.log(err);
+      });
+  }
+  
+  await Promise.all(
+    images.map(img => img+".testing").map(async img => {
+      const image = await Jimp.read(img);
+      await image.quality(80);
+    })
+  );
+}
+
 switch (process.argv[2]) {
   case "delete": deleteUnusedImages(); break;
-  case "normalize": normalize(); break;
+  case "optimize": optimize(); break;
   case "other": break;
   default: console.log("Use either `delete` or `normalize`.");
 }
