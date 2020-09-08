@@ -140,7 +140,7 @@ locked amounts.
 ### Sending a Transfer
 
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
-method is to use Polkadot-JS Apps.
+method is to use [Polkadot-JS Apps][].
 
 - Click on the "Transfer" button on the left navigation menu.
 - In the top input, select "Ledger" as your sending account.
