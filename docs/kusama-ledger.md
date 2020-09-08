@@ -5,7 +5,7 @@ sidebar_label: Ledger Devices
 ---
 
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
-devices. The Ledger devices are hardware wallets that keep your secret secured on a physical device
+devices. The Ledger devices are hardware wallets that keep your private key secured on a physical device
 that does not get exposed to your computer or the internet. It is strongly recommended to use a
 hardware wallet if you are managing a significant amount of funds.
 
