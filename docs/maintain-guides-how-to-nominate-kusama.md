@@ -23,11 +23,11 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
-## Using Polkadot UI
+## Using Polkadot-JS UI
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking
 Overview" subsection will show you all the active validators and their information - their
 identities, the amount of KSM that are staking for them, amount that is their own provided stake,
 how much they charge in commission, the era points they've earned in the current era, and the last
@@ -104,9 +104,9 @@ are available [here](maintain-guides-how-to-unbond).
 
 ## Using Command-Line Interface (CLI)
 
-Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI
-instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to
-the PolkadoJS dashboard.
+Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in
+CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without
+going to the PolkadoJS dashboard.
 
 ### Step 1: Install @polkadot/api-cli
 
@@ -157,7 +157,7 @@ Result:
 
 You can check the transaction status by using the value of the `InBlock` in
 [Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
+[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
 
 ### Step 3. Nominate a validator
 
@@ -172,7 +172,7 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 ```
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
-nomination status, you can check that on the PolkadotJS UI as well.
+nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-kusama
 [keys]: learn-keys#controller-and-stash-keys
