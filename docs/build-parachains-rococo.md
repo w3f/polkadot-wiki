@@ -6,11 +6,36 @@ sidebar_label: Building Parachains on Rococo
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing
 parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
-send transfers and messages between parachains.
+send transfers and messages between parachains and the Relay Chain. Every message is sent to the
+Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs the
+parachains Tick, Trick and Track.
 
 ## How to connect to a Parachains
 
-If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/), you may do so by heading over to the network selection at the top left hand corner of the navigation and selecting any parachain of choice. For the purpose of these following examples, we will be using the Rococo parachain testnet. 
+If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
+you may do so by heading over to the network selection at the top left hand corner of the navigation
+and selecting any parachain of choice. For the purpose of these following examples, we will be using
+the Rococo parachain testnet.
+
+![parachains polkadotjs](assets/polkadotjs_network_parachains.png)
+
+## Who are building Parachains?
+
+As of now, the list of Parachains are as follows:
+
+- Rococo (Tick, Trick, and Track)
+- Mandala
+- Darwinia
+- Plasm
+- Robonomics
+- Turbulence
+
+## Parachain Workshop
+
+If you are interested in running and launching your own parachain, Parity Technologies has created a
+[workshop tutorial](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling). There is also a
+[Rococo Element chat channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
+as well as [Rococo's GitHub repository](https://github.com/paritytech/cumulus#rococo) available.
 
 ## How to make Cross Chain transfers
 
@@ -57,7 +82,7 @@ tokens from chain 200 to chain 300, there must already be tokens owned by chain 
 chain 300.
 
 Before we can actually send funds from one parachain to another, we must ensure that the chain's
-account on the receiptent chain has some funds in it. In this example, Alice will be sending some
+account on the recipient chain has some funds in it. In this example, Alice will be sending some
 funds from her account on parachain 200 to her account on parachain 300.
 
 We can get that parachain account address, from our parachain 300's terminal:
