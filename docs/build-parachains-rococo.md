@@ -12,7 +12,7 @@ parachains Tick, Trick and Track.
 
 ## Who are building Parachains?
 
-As of now, the list of Parachains are as follows:
+As of now, the list of parachains are as follows:
 
 - Rococo (Tick, Trick, and Track)
 - Mandala
@@ -35,7 +35,7 @@ for the time being. It's recommended at this point to run your own parachains te
 
 ## How to connect to a Parachains
 
-If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
+If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
 you may do so by heading over to the network selection at the top left hand corner of the navigation
 and selecting any parachain of choice. For the purpose of these following examples, we will be using
 the Rococo testnet "Custom Node" underneath "Development", according to the
