@@ -39,11 +39,11 @@ that the wallet software is using the latest version of the
 | [AirGap](https://airgap.it/)                                       | Live              | AirGap       | IOS, Android, MacOS, Windows and Linux |
 | [SafePal](https://www.safepal.io/download)                         | Live              | SafePal      | Hardware                               |
 | [Crypto.com App](https://crypto.com/en/index.html)                 | Live              | Crypto.com   | IOS and Android                        |
+| [Ledger App](https://zondax.ch/kusama.html#overview)               | Live              | Zondax       | Hardware                               |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo         | IOS and Android                        |
 | [Polkadot{.js} extension](https://github.com/EthWorks/extension)   | Building          | EthWorks     | Browser extension                      |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask     | IOS, Android, and browser extension    |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle      | Browser extension                      |
-| [Ledger App](https://zondax.ch/kusama.html#overview)               | Building          | Zondax       | Hardware                               |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu        | Browser                                |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf          | CLI Wallet                             |
 | [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu    | IOS and Android                        |

@@ -24,7 +24,7 @@ that is also building an Eth2.0 Serenity client.
 
 [**Polkadot-JS**](https://github.com/polkadot-js) - A JavaScript
 [client](https://github.com/polkadot-js/client) and tool set developed by
-[Polkadot JS](https://polkadot.js.org/).
+[Polkadot-JS](https://polkadot.js.org/).
 
 ## Why build multiple implementations?
 
