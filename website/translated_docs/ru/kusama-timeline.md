@@ -10,7 +10,7 @@ Currently, Kusama is a healthy Proof-of-Stake network with over 500 validators a
 
 ## План выполнения
 
-Внедрение полной функциональности Kusama было приглушено, чтобы обеспечить безопасный переход. Первая фаза PoS началась с 20 валидаторов. Из 20 от Фонда Web3 было девять, от Parity Technologies - шесть. Пять из них были поддержаны членами сообщества с наибольшими стейками в ходе выборов в Phragmen.
+The rollout of full functionality of Kusama was staggered to allow for a safe transition. The first PoS phase began with 20 validators. Of the 20, the Web3 Foundation ran nine and Parity Technologies ran six. Five were ran by highly staked community members as voted in by the Phragmén election.
 
 Когда начальный переход был успешным, дополнительные места для валидаторов были открыты по 10 за 1 раз чтобы позволить участвовать большему количеству валидаторов.
 

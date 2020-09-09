@@ -16,9 +16,9 @@ nature, they are able to parallelize transaction processing and achieve scalabil
 system. They [share in the security](learn-security) of the entire Polkadot network and can
 communicate with other parachains through [XCMP](learn-crosschain).
 
-Parachains are maintained by a network maintainer known as a [collator](maintain-collator). The role
-of the collator node is to maintain a full-node of the parachain, retain all necessary information
-of the parachain, and produce new block candidates to pass to the Relay Chain validators for
+Parachains are maintained by a network maintainer known as a [collator](learn-collator). The role of
+the collator node is to maintain a full-node of the parachain, retain all necessary information of
+the parachain, and produce new block candidates to pass to the Relay Chain validators for
 verification and inclusion in the shared state of Polkadot. The incentivization of a collator node
 is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They
 are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the

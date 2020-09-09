@@ -12,7 +12,7 @@ candidacy to the council.
 
 ## Submit Candidacy
 
-Submitting your candidacy for the council requires a small bond of DOT / KSMs. The bond will be
+Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be
 forfeited if your candidacy does not win or become a runner-up, but if you become a member of the
 council you will eventually get your bond back. Runner-ups are selected after every round and are
 reserved members in case one of the winners gets forcefully removed.
@@ -42,7 +42,7 @@ to make a vote for yourself (optional).
 
 ![c](assets/council/vote.png)
 
-The council uses [Phragmen](learn-phragmen) approval voting, which is also used in the validator
+The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator
 elections. This means that you can choose up to 16 distinct candidates to vote for and your stake
 will equalize between them. For this guide, choose to approve your own candidacy by clicking on the
 switch next to your account and changing it to say "Aye."

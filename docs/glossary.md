@@ -4,6 +4,12 @@ title: Glossary
 sidebar_label: Glossary
 ---
 
+## Active Nomination
+
+A validator (or validators) that a nominator is actively validating this era. The nominator is
+placing their stake behind this validator for this era and will potentially receive staking rewards
+in return for doing so.
+
 ## Alexander
 
 The fourth (now defunct) proof of concept (PoC-4) testnet for Polkadot.
@@ -178,6 +184,11 @@ for how it stores all messages in the Relay Chain storage, therefore making it m
 demanding more resources than XCMP. The plan is to retire HRMP once the implementation of XCMP is
 complete.
 
+## Inactive Nomination
+
+A validator (or validators) that a nominator has selected to nominate, but is not actively
+validating this era. This type of nomination may become active in a future era.
+
 ## Inherent
 
 Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into
@@ -185,6 +196,11 @@ blocks by the block author. They are not provably true the way that the desire t
 therefore they do not carry a signature. A blockchain's [runtime](#runtime) must have rules for
 validating inherents. For example, timestamps are inherents. They are validated by being within some
 margin that each validator deems reasonable.
+
+## Injected Account
+
+An account which is not directly managed by the Polkadot UI but can be accessed through it, such as
+accounts controlled by the Polkadot{.js} extension.
 
 ## KSM
 
@@ -231,7 +247,7 @@ the good behavior of the validator. Nominated Proof-of-Stake differs from the mo
 Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad
 validator; delegators are not subject to loss of stake based on the behavior of the validator. Note
 that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if
-delegators can be slashed. Polkadot uses the Phragmen method to allocate stake to nominees.
+delegators can be slashed. Polkadot uses the Phragmén method to allocate stake to nominees.
 
 ## Nominator
 
@@ -245,6 +261,12 @@ A governance system of a blockchain that is controlled by mechanisms on the bloc
 governance allows decisions to be made in a transparent manner. Note that there are a variety of
 different algorithms for making these decisions, such as simple majority voting, adaptive quorum
 biasing, or identity-based quadratic voting.
+
+## Oversubscribed
+
+If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64
+staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
+rewards for that era.
 
 ## Pallet
 
@@ -262,8 +284,9 @@ chain.
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot. It has also
-released several other projects including Parity Ethereum and Parity Secret Store.
+A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate and
+Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret
+Store.
 
 ## Polkadot
 
@@ -426,6 +449,12 @@ up to the Relay Chain via runtime entry points.
 The process of stakeholders determining whether or not a referendum should pass. Votes are weighted
 both by the number of DOT that the stakeholder account controls and the amount of time they are
 willing to lock their DOT.
+
+## Waiting Nomination
+
+The nominator has nominated this validator, but the validator was not elected into the active
+validator set this era and thus cannot produce blocks for the canonical chain. If the validator does
+get into the active set in a future era, this may turn into an active or inactive nomination.
 
 ## Wallet
 

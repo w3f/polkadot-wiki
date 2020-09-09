@@ -12,6 +12,10 @@ La comunidad Polkadot se está expandiendo todos los días. A continuación se m
 - [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Repositorio mantenido por Parity que alberga la implementación de Rust del host Polkadot.
 - [Hub de reunión de Polkadot](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Información sobre organización de meetups o reuniones, solicitud de financiación y materiales para ejecutarlo.
 
+### Events
+
+The Web3 Foundation hosts many events online and in-person. To check out our current and past events, please refer to our public [Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
+
 ## Riot Chats
 
 ### Polkadot

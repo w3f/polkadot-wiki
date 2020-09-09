@@ -8,7 +8,7 @@ sidebar_label: DOT
 
 DOT 是 Polkadot 网络的原生代币，类似于 BTC 是比特币的原生代币或以太币是以太坊区块链的原生代币。
 
-The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT (also known as _New DOT_) are equal to 1e10 Planck.
+The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is like a bitcoin or an ether. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT are equal to 1e10 Planck.
 
 ### Polkadot
 
@@ -83,7 +83,7 @@ DOT are required to make transactions on the Polkadot network. Testnet DOT do no
 
 The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.im/app/#/room/!cJFtAIkwxuofiSYkPN:matrix.org).
 
-You can also make your own WNDs (testnet DOT) by [becoming a validator](maintain-validator).
+You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
 ## Kusama Tokens
 

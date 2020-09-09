@@ -30,7 +30,7 @@ The launch process is expected to be similar to that of the Kusama network. Kusa
 
 There is no central authority that decides on validators, so there is not per se an _application_ that you can fill out. Registering as a validator is permissionless; in order to become one you must only set up a validator node and mark your intention to validate on chain. For detailed instruction on how to do this you can consult the [wiki guide](maintain-guides-how-to-validate-kusama.md) on validating for Kusama.
 
-However, once you've set up a validator and have registered your intention it does not mean that you will be included in the _active set_ right away. The validators are elected to the active set based on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmen's method tries to accomplish two goals: 1) select `n` members from a larger set based on stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
+However, once you've set up a validator and have registered your intention it does not mean that you will be included in the _active set_ right away. The validators are elected to the active set based on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmén's method tries to accomplish two goals: 1) select `n` members from a larger set based on stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
 You will likely want to campaign your validator to the community in order to get more backing. You are looking for _nominators_ that will put up their tokens to increase the stake for your validator. For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation also run a joint program called [Thousand Validators](https://thousand-validators.kusama.network/#/) that will nominate validators if they apply and fit the requirements.
 
@@ -82,6 +82,10 @@ While the Polkadot Relay Chain does not implement smart contracts directly, undo
 One of the cornerstone interoperability technologies being research and developed for deployment on Polkadot is cross-chain bridges. Bridges come in a variety of flavors with varying levels of trust associated with them. Polkadot is predominantly researching the trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore makes it economically secure. Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually, there will be bridges between Polkadot and most of the other major chains.
 
 ## DOT
+
+### What is the difference between DOT (old) and new DOT?
+
+The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21 August, 2020, Denomiation Day, the DOT (old) value was redenominated to 1e10 (10'000'000'000, or ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the [redenomination](redenomination), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
 

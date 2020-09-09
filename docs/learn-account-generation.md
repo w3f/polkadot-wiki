@@ -7,10 +7,11 @@ description: Step-by-step guides on generating a Polkadot account.
 
 There are several ways to generate a Polkadot address:
 
-- [Polkadot.js Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
+- [Polkadot{.js} Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Polkadot.js Web Apps](#polkadotjs)
+- [Polkadot-JS Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
+- [Vanity Generator](#vanity-generator)
 
 > To learn more on how to create Polkadot accounts, head over to our
 > [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
@@ -43,12 +44,12 @@ is recommended that you store multiple copies of the seed in geographically sepa
 You should definitely not store your seed on any kind of computer that has or may have access to the
 internet in the future.
 
-## Polkadot.js Browser Plugin
+## Polkadot{.js} Browser Plugin
 
-The polkadot.js plugin provides a reasonable balance of security and usability. It provides a
+The Polkadot{.js} plugin provides a reasonable balance of security and usability. It provides a
 separate local mechanism to generate your address and interact with Polkadot.
 
-This method involves installing the polkadot.js plugin and using it as a “virtual vault," separate
+This method involves installing the Polkadot{.js} plugin and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows signing of transactions and similar
 functionality.
 
@@ -64,8 +65,8 @@ and [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extensi
 If you would like to know more or review the code of the plugin yourself, you can visit the Github
 source [repository](https://github.com/polkadot-js/extension).
 
-After installing the plugin, you should see the orange and white polkadot.js logo in the menu bar of
-your browser.
+After installing the plugin, you should see the orange and white Polkadot{.js} logo in the menu bar
+of your browser.
 
 ![plugin-02](assets/accounts/polkadot_plugin_js_02.jpg)
 
@@ -78,20 +79,20 @@ located in the sidebar on the left of your screen.
 
 ### Create Account
 
-Open the polkadot.js browser extension by clicking the logo on the top bar of your browser. You will
-see a separate browser window open. If you have used this extension before, you may see a list of
-previously generated accounts. In any case you will see two buttons: “I want to create an account
+Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You
+will see a separate browser window open. If you have used this extension before, you may see a list
+of previously generated accounts. In any case you will see two buttons: “I want to create an account
 with a new seed” and “I have a pre-existing seed, import the account."
 
 Click “I want to create an account with a new seed”.
 
 ![plugin-04](assets/accounts/polkadot_plugin_js_04.jpg)
 
-The polkadot.js plugin will then use system randomness to make a new seed for you and display it to
-you in the form of twelve words.
+The Polkadot{.js} plugin will then use system randomness to make a new seed for you and display it
+to you in the form of twelve words.
 
 You should back up these keys. It is imperative to store the seed somewhere safe, secret, and
-secure. If you cannot access your account via polkadot.js for some reason, you can simply re-enter
+secure. If you cannot access your account via Polkadot{.js} for some reason, you can simply re-enter
 your seed, and have access to your account once again.
 
 ![plugin-05](assets/accounts/polkadot_plugin_js_05.jpg)
@@ -176,21 +177,21 @@ For detailed build and usage instructions of subkey, please see
 
 ![subkey-01](assets/accounts/subkey_01.jpg)
 
-## Polkadot.js
+## Polkadot-JS
 
-> Please note! If you use Polkadot.js to create your account and clear your cookies in your browser,
+> Please note! If you use Polkadot-JS to create your account and clear your cookies in your browser,
 > your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you
 > store your seed phrase in a safe place, or download the account's JSON file if using the
-> PolkadotJS browser extension. Learn more about account backup and restoration
+> Polkadot{.js} browser extension. Learn more about account backup and restoration
 > [here](learn-account-restore).
 
-Using the Polkadot.js user interface without the plugin is not recommended. It is the least secure
+Using the Polkadot-JS user interface without the plugin is not recommended. It is the least secure
 way of generating an account. It should only be used if all of the other methods are not feasible in
 your situation.
 
-### Go to Polkadot Apps
+### Go to Polkadot-JS Apps
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the
+Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the
 Accounts tab. It is located in the navigation bar on the top of your screen.
 
 ![pjs-01](assets/accounts/polkadot_js_01.png)
@@ -339,7 +340,7 @@ identity.
 
 ### Your Address
 
-The address will be shown as a QR code. You can import your address to the PolkadotJS Apps by going
+The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going
 to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer
 and click "Add via QR", and following the instructions to add the account. An account created this
 way will always require you to sign messages with your Parity Signer device. It will do this only by
@@ -348,3 +349,30 @@ computer a very small and limited scope for interacting with the Parity Signer d
 continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
+
+## Vanity Generator
+
+Vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity) that
+lets you generate addresses which contain a specific substring.
+
+![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
+
+The vanity generator takes the following parameters:
+
+- "Search for": The substring that you would like to include in your new address.
+- "case sensitive": "Yes" if the search is case sensitive; "no" if not.
+- "keypair crypto type": Specifies the type of account you'd like to generate; Schnorrkel is
+  recommended in most cases for its security.
+
+If you've filled out all details above and hit the "Start generation" button, a list of accounts
+will start generating on your screen. Note that depending on the length of the substring and the
+processing speed of your computer, it may take some time before any accounts appear.
+
+![Vanity Generator search](assets/polkadot_vanity_generate.png)
+
+The "Save" button will allow you to save on the generated accounts - they are not saved if you do
+not choose to do this. The next steps are identical to the
+[steps above on creating an account on the UI](#polkadotjs), where a password and name need to be
+filled in, and a backup file of your account will be downloaded.
+
+![Vanity Generator chosen address](assets/polkadot_save_account.png)

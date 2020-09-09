@@ -93,13 +93,13 @@ Other than the extension and the default UI, Polkadot and Kusama addresses can a
 
 There is also the very secure [Parity Signer](https://www.parity.io/signer/) but it currently only supports Kusama addresses, not Polkadot or generic Substrate.
 
-Alternatively, you might find some wallets on the [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited** and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated. Keep in mind that the Web3 Foundation is not affiliated with PolkaProject.
+Alternatively, you might find some wallets on the [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited** and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated. PolkaProject is an independent site which is not affiliated with Web3 Foundation.
 
 Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
 
 ## Existential Deposit and Reaping
 
-When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 0.01 DOT (old) / 1 _New DOT_ (on Polkadot mainnet) .
+When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 1 DOT (on Polkadot mainnet) .
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account will be wiped from the blockchain's state to conserve space, along with any funds in that address. You do not lose access to the reaped address - as long as you have your private key or recovery phrase, you can still use the address - but it needs a top-up of another existential deposit to be able to interact with the chain.
 

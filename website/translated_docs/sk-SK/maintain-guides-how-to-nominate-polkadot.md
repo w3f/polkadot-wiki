@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-polkadot
-title: Nomination Guide
-sidebar_label: Nomination Guide
+title: How to Nominate on Polkadot
+sidebar_label: How to Nominate on Polkadot
 ---
 
 > The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
@@ -30,7 +30,7 @@ The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)
 
 The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you estimate your earnings and this is where it's good to start picking favorites.
 
-The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough DOT backing them (as allocated through the [Phragmen election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
+The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough DOT backing them (as allocated through the [Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
 
 The "Validator Stat's subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you to query a validator's stash address and see historical charts on era points, elected stake, rewards, and slashes.
 
@@ -50,7 +50,7 @@ Choose whatever payment destination that makes sense to you. If you're unsure, y
 
 You are now bonded. Being bonded means your tokens are locked and could be [slashed](learn-staking#slashing) if the validators you nominate misbehave. All bonded funds can now be distributed to up to 16 validators. Be careful about the validators you choose since you will be slashed if your validator commits an offence.
 
-Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select up to 16 validators. Although you may choose up to 16 validators, due to the \[Phragmen\]\[\] election algorithm your stake may be dispersed in different proportions to any subset or all of the validators your choose.
+Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select up to 16 validators. Although you may choose up to 16 validators, due to the \[Phragmén\]\[\] election algorithm your stake may be dispersed in different proportions to any subset or all of the validators your choose.
 
 ![Nominating validators](/img/NPoS/nominate.png)
 

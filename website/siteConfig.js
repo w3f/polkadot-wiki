@@ -20,18 +20,19 @@ const siteConfig = {
     { doc: "maintain-index", label: "Maintain " },
     { href: "https://guide.kusama.network", label: "Kusama" },
     { search: true },
+    { doc: "contributing", label: "Contribute" },
     { languages: true },
   ],
 
   /* path to images for header/footer */
-  headerIcon: "img/favicon.ico",
-  footerIcon: "img/favicon.ico",
+  headerIcon: "img/logo_polkadot_wiki.svg",
+  footerIcon: "img/logo-polkadot-light.svg",
   favicon: "img/favicon.ico",
 
   /* Colors for website */
   colors: {
-    primaryColor: "#E6007A",
-    secondaryColor: "#000000",
+    primaryColor: "#e6007a",
+    secondaryColor: "#172026",
   },
 
   algolia: {
@@ -44,21 +45,22 @@ const siteConfig = {
 
   /* Custom fonts for website */
   fonts: {
-    myFont: ["Muli", "sans-serif"],
+    myFont: ["Work Sans", "sans-serif"],
   },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Web3 Foundation`,
+  copyright: `© ${new Date().getFullYear()} Web3 Foundation`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: "default", 
+    theme: "default",
   },
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
+    "https://unpkg.com/aos@next/dist/aos.js",
     "/js/custom.js",
     "/js/klaro-config.js",
     "/js/klaro.js",
@@ -66,7 +68,10 @@ const siteConfig = {
 
   stylesheets: [
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
-    "https://fonts.googleapis.com/css?family=Muli&display=swap",
+    "https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap",
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+    "https://unpkg.com/aos@next/dist/aos.css",
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
     "/css/klaro.css",
   ],
 

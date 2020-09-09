@@ -184,15 +184,15 @@ corner and the DOT will be in your account.
 - Parity Signer
 - Your Polkadot account linked to Polkadot-JS Apps UI
 
-Before claiming, you should import your Polkadot address on Parity Signer to the PolkadotJS apps.
+Before claiming, you should import your Polkadot address on Parity Signer to the Polkadot-JS Apps.
 All operations will use Parity Signer to sign the transaction, but will broadcast it via the
-PolkadotJS apps remote node. If you do not have a Polkadot address, please follow the instructions
+Polkadot-JS Apps remote node. If you do not have a Polkadot address, please follow the instructions
 on the Parity Signer section in the [account generation][] page for generating a new Polkadot
 account.
 
 ### Go to Polkadot-JS Apps
 
-Proceed to [polkadot-js Apps][claims app]. You will need to import your address on Parity Signer to
+Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address on Parity Signer to
 the Accounts page first.
 
 ### Make the Attestation
@@ -214,7 +214,7 @@ Select the address that you have claimed DOT to during pre-genesis.
 ![ps-3](assets/new-claims/ps-03.jpg)
 
 Your address will be displayed in QR code format. You can move the QR code to the camera so that the
-PolkadotJS Apps can decode it.
+Polkadot-JS Apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
@@ -250,7 +250,7 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on
 the authorize transaction window to generate the raw transaction. Next, you may be required to input
 the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code
-to the camera on the PolkadotJS Apps to continue.
+to the camera on the Polkadot-JS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 

@@ -13,7 +13,7 @@ The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is 
 reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible
 distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is
 like a bitcoin or an ether. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT
-(also known as _New DOT_) are equal to 1e10 Planck.
+are equal to 1e10 Planck.
 
 ### Polkadot
 
@@ -123,7 +123,7 @@ The current testnet is called [Westend](maintain-networks#westend-test-network) 
 its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom
 [#westend_faucet:matrix.org](https://riot.im/app/#/room/!cJFtAIkwxuofiSYkPN:matrix.org).
 
-You can also make your own WNDs (testnet DOT) by [becoming a validator](maintain-validator).
+You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
 ## Kusama Tokens
 

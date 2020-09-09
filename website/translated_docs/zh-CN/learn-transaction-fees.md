@@ -61,7 +61,7 @@ Polkadot 使用缓慢调整费用机制并提供小费来平衡这两个考虑�
 - 绑定(Bonds)：有些交易，如投票，有可能需要绑定保证金， 并在链上发生事件后退还或惩罚。 在投票的例子中，选举结束时返回，或者如果选民试图恶意行事，就会被惩罚。
 - 存款(Deposits): 有些交易, 如设置[身份](learn-identity) 或认领索引, 无限期地使用存储空间。 如果用户决定释放存储空间，这些存款将会被退还。
 - 烧毁(Burns)：交易可能会根据其内部逻辑烧毁资金。例如如果交易创建了新的存储，从而增加了状态容量，则交易可能会从用户那里烧毁资金。
-- 限制(Limits)：一些限制是协议的一部分。例如，提名人只能提名16个验证人。这限制了 [Phragmen](learn-phragmen) 的复杂性。
+- Limits: Some limits are part of the protocol. For example, nominators can only nominate 16 validators. This limits the complexity of [Phragmén](learn-phragmen).
 
 ## 进阶
 

@@ -30,9 +30,9 @@ Riot. The team and other validators are there to help answer questions and provi
 
 You can have a rough estimate on that by using the methods listed
 [here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators
-are elected based on [Phragmen's algorithm](learn-phragmen). To be elected into the set, you need a
+are elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
-[nominators](maintain-nominator). This means that as a minimum, you will need enough KSM to set up
+[nominators](learn-nominator). This means that as a minimum, you will need enough KSM to set up
 Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for
 transaction fees. The rest can come from nominators.
 
@@ -208,7 +208,7 @@ If you are interested in determining how much longer you have to go, your server
 STDOUT from the `polkadot` process) will tell you the latest block your node has processed and
 verified. You can then compare that to the current highest block via
 [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
-[PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+[Polkadot-JS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 ## Bond KSM
 
@@ -231,7 +231,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSMs - make
+- **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSM - make
   sure that your Stash account contains _at least_ this much. You can, of course, stake more than
   this.
 - **Controller account** - Select the Controller account created earlier. This account will also
@@ -277,15 +277,15 @@ people are using telemetry, it is recommended that you choose something likely t
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
 associates your validator node with your Controller account on Polkadot.
 
-#### Option 1: PolkadotJS-APPS
+#### Option 1: Polkadot-JS Apps
 
 You can generate your
 [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the
-client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer
-attached to your validator node. You can configure the apps dashboard to connect to the endpoint of
-your validator in the Settings tab. If you are connected to a default endpoint hosted by Parity of
-Web3 Foundation, you will not be able to use this method since making RPC requests to this node
-would effect the local keystore hosted on a _public node_ and you want to make sure you are
+client via the apps RPC. If you are doing this, make sure that you have the Polkadot-JS Apps
+explorer attached to your validator node. You can configure the apps dashboard to connect to the
+endpoint of your validator in the Settings tab. If you are connected to a default endpoint hosted by
+Parity of Web3 Foundation, you will not be able to use this method since making RPC requests to this
+node would effect the local keystore hosted on a _public node_ and you want to make sure you are
 interacting with the keystore for _your node_.
 
 Once ensuring that you have connected to your node, the easiest way to set session keys for your
@@ -327,7 +327,7 @@ To verify that your node is live and synchronized, head to
 [Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all
 nodes on the Kusama network, which is why it is important to select a unique name!
 
-If everything looks good, go ahead and click on "Validate" in Polkadot UI.
+If everything looks good, go ahead and click on "Validate" in Polkadot-JS UI.
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
@@ -349,7 +349,7 @@ node is selected to join the validator set, your node will become an active vali
 it will remain in the _waiting_ queue. If your validator is not selected to become part of the
 validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if
 you are not selected for the validator set in a particular era. However, it may be necessary to
-increase the number of KSMs staked or seek out nominators for your validator in order to join the
+increase the number of KSM staked or seek out nominators for your validator in order to join the
 validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the

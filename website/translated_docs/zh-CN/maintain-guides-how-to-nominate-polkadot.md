@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-polkadot
-title: 提名人指南
-sidebar_label: 提名人指南
+title: How to Nominate on Polkadot
+sidebar_label: How to Nominate on Polkadot
 ---
 
 > The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-nominate-kusama) instead.
@@ -30,7 +30,7 @@ The "Staking Overview" subsection will show you all the active validators and th
 
 "Targets" 小节([链接](https://polkadot.js.org/apps/#/staking/targets)) 将帮助您估算收入，这是个不错的起点选择你喜欢的验证人。
 
-"Waiting" 小节 ([链接](https://polkadot.js.org/apps/#/staking/waiting)) 列出了所有等待更多提名成为验证人的等待队列。验证人将一直在等待队列，直到他们有足够的DOT支持（通过[ Phragmen 选举机制](https://wiki.polkadot.network/docs/en/learn-phragmen)分配)。 如果验证人从未得到足够的支持，很可能会在队列中保留很长时间。
+The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough DOT backing them (as allocated through the [Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
 
 "Validator Stat" 的子部分（[链接](https://polkadot.js.org/apps/#/staking/query)）允许您查询验证人的 stash 地址并查看历史记录例如每个时代所获得的分数，当选时的抵押数量，奖励和惩罚。
 
@@ -50,7 +50,7 @@ Select a "value bonded" that is **less** than the total amount of DOT you have, 
 
 您现在已经完成了绑定。完成绑定表示您的代币已被锁定，如果您提名的验证人有过失行为，该绑定的代币有可能被[惩罚(削减)](learn-staking#slashing) 。所有绑定资金现在可以分配给最多16个验证人。如果你提名的验证人恶意攻击网络，你也会被惩罚，所以请谨慎选择验证人。
 
-在已绑定的帐号上点击 "Nominate"，您将看到另一个弹出窗口，要求您选择最多16个验证人。 尽管您最多可以选择16个验证人，但是由于 \[Phragmen\] \[\] 选举算法的缘故，您参与抵押的代币可能会以不同的比例分散到部份或全部 您选择的任何验证人中。
+Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select up to 16 validators. Although you may choose up to 16 validators, due to the \[Phragmén\]\[\] election algorithm your stake may be dispersed in different proportions to any subset or all of the validators your choose.
 
 ![Nominating validators](/img/NPoS/nominate.png)
 

@@ -4,131 +4,143 @@ title: Термины и определения
 sidebar_label: Термины и определения
 ---
 
+## Active Nomination
+
+A validator (or validators) that a nominator is actively validating this era. The nominator is placing their stake behind this validator for this era and will potentially receive staking rewards in return for doing so.
+
 ## Alexander
 
-Четвертое (теперь отключено) доказательство концепции (PoC-4) testnet для Polkadot.
+The fourth (now defunct) proof of concept (PoC-4) testnet for Polkadot.
 
-## Аттестация/Attestation
+## Attestation
 
-В системе "Polkadot" _Аттестация_ - это тип сообщения, который транслируют валидаторы и сообщают, считают ли они блок кандидата парачейна действительным или недействительным.
+In the Polkadot validity system, an _attestation_ is a type of message that validators broadcast that says whether they think a parachain candidate block is valid or invalid.
 
-## Авторитеты/Authority
+## Authority
 
-Авторитеты — это общий термин для роли в блокчейне, способный участвовать в механизмах консенсуса. В GRANDPA авторитеты голосуют за финализацию цепочек. В BABE авторитеты являются производители блоков.  Настройки для авторитетов могут быть выбраны такими механизмами, как алгоритм NPoS в Polkadot.
+An authority is a generic term for the role in a blockchain that is able to participate in the consensus mechanisms. In GRANDPA, the authorities vote on chains they consider final. In BABE, the authorities are block producers. Authority sets can be chosen be mechanisms such as Polkadot's NPoS algorithm.
 
 ## BABE
 
-\_B_lind \_A_ssignment \_B_lock \_E_xtension - механизм производства блоков Polkadot'а.
+\_B_lind \_A_ssignment of \_B_lock \_E_xtension is Polkadot's block production mechanism.
 
-## Блок/Block
+## Block
 
-Набор данных, таких как транзакции, которые сигнализируют о переходе состояния блокчейна.
+A collection of data, such as transactions, that together indicates a state transition of the blockchain.
 
-## Блок эксплорер/Block explorer
+## Block explorer
 
-Приложение, которое позволяет пользователю исследовать различные блоки в блокчейне.
+An application that allows a user to explore the different blocks on a blockchain.
 
 ## BLS
 
-Подписи Boneh-Lynn-Shacham (BLS) достаточно медленные, и имеют очень медленную проверку, требуют медленных и гораздо менее безопасных спаренных кривых. Тем не менее, BLS допускает широкий спектр вариантов агрегирования подписей в сравнение с любой другой известной схемой подписи, что делает BLS предпочтительной для голосования в алгоритмах консенсуса и для пороговых подписей.
+Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a diverse array of signature aggregation options far beyond any other known signature scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
 
-## Бондинг/Bonding
+## Bonding
 
-Процесс, по которому токены могут быть "замороженными" в обмен на некоторые другие выгоды. Например, стейкинг - это форма связывания, за которую вы получаете награду в обмен на безопасность сети. Вы также можете привязать токены в обмен на парачейн слот.
+A process by which tokens can be "frozen" in exchange for some other benefit. For example, staking is a form of bonding for which you receive rewards in exchange for securing the network. You can also bond tokens in exchange for a parachain slot.
 
-## Мост/Bridge
+## Bridge
 
 A parachain that acts as an intermediary between the Polkadot Relay Chain and an external chain, in such a way that it appears to the Relay Chain that the external chain is a parachain (i.e., meets the Polkadot Host's requirements of parachains). Bridges allow for interaction between other blockchains, such as Ethereum and Bitcoin, that are not natively compatible with Polkadot.
 
-## Византийская Отказоустойчивость/Byzantine Fault Tolerance
+## Byzantine Fault Tolerance
 
-Свойство системы, которая устойчива к византийскому поведению; то есть система, где отдельные подсистемы могут быть злоумышленниками, но это может быть неизвестно, какая конкретно подсистема является злоумышленником. То есть разные наблюдатели в системе могут не прийти к единому мнению о состоянии системы. Обеспечение византийской отказоустойчивости является важной частью разработки любой распределенной системы.
+The property of a system that is tolerant of Byzantine faults; that is, a system where not only may individual subsystems fail, but it may not be clear if a particular subsystem has failed or not. That is, different observers on the system may not agree on whether or not the system has failed. Ensuring Byzantine fault tolerance is an important part of developing any distributed system.
 
-## Сборщик/Collator
+## Collator
 
-Нода, которая поддерживает парачейн, собирая его транзакции и производя доказательства перехода состояния для валидаторов.
+A node that maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
 
-## Консенсус/Consensus
+## Consensus
 
-Процесс группы субъектов для согласования конкретного значения данных (например, порядок и состав блоков в блокчейне). Существует множество алгоритмов, используемых для достижения консенсуса. Polkadot использует алгоритм консенсуса GRANDPA.
+The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
 
-## Децентрализованные приложения/Dapps
+## Dapps
 
-Общий обозначение для децентрализованного приложения, то есть такого, которое работает как часть распределенной сети в отличие от приложений, запускаемых на конкретной системе или наборе систем.
+A generic term for a decentralized application, that is, one that runs as part of a distributed network as opposed to being run on a specific system or set of systems.
 
 ## DOT
 
 The native token for Polkadot. DOT serve three purposes: network governance (allowing them to vote on network upgrades and other exceptional events), general operation (rewarding good actors and punishing bad actors), and bonding (adding new parachains by "freezing" DOT while they are connected the Relay Chain).
 
-## Список дежурств/Duty Roster
+## Duty Roster
 
-Таблица подстановки, указывающая задание, которое требуется выполнить конкретному валидатору (т. е. подтвердить валидность конкретного парачейна). Список дежурств регулярно перетасовывает набор валидаторов в различные подмножества на парачейне.
+A lookup table that specifies the job that a particular validator is required to do (i.e. attest to the validity of a specific paracahain). The duty roster routinely shuffles the validator set into different subsets per parachain.
 
-## Эпоха/Epoch
+## Epoch
 
-Эпоха - это продолжительность времени в протоколе BABE, которая разбивается на меньшие временные интервалы. В каждом слоте есть по крайней мере один лидер слота, который имеет право предложить лок. В Kusama эта продолжительность совпадает с [сессией](#session).
+An epoch is a time duration in the BABE protocol that is broken into smaller time slots. Each slot has at least one slot leader who has the right to propose a block. In Kusama, it is the same duration as a [session](#session).
 
-## Эра/Era
+## Era
 
-Пероид (количество сессий), в течение которого изменяется набор валидаторов (и активный набор номинаторов каждого валидатора) и выплачиваются вознаграждения.
+A (whole) number of sessions, which is the period that the validator set (and each validator's active nominator set) is recalculated and where rewards are paid out.
 
-## Неопределённость/Equivocation
+## Equivocation
 
-Предоставление противоречивой информации в сеть. Неопределённость в BABE влечет за собой создание нескольких блоков в одном слоте. Неопределённость в GRANDPA состояла бы в подписании нескольких конфликтующих цепочек.
+Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
 
-## Экстринзик/Extrinsic
+## Extrinsic
 
-Изменения состояния происходят из внешнего мира, то есть они не являются частью самой системы. Экстринзик может принимать две формы: "[неотъемлемые](#inherent)" и "[транзакции](#transaction)".
+State changes that come from the outside world, i.e. they are not part of the system itself. Extrinsics can take two forms, "[inherents](#inherent)" and "[transactions](#transaction)".
 
-## Финальность/Finality
+## Finality
 
 The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay Chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
 
-## Гаджет финальности/Finality Gadget
+## Finality Gadget
 
-Механизм, который определяет финальность.
+A mechanism that determines finality.
 
-## Рыбак/Fisherman
+## Fisherman
 
 Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must stake a small amount of DOT but can be rewarded greatly if they find bad behavior.
 
-## Фрейм/Frame
+## Frame
 
-Коллекция предоставляемых Substrate паллет (англ. pallet). SRM - модули среды исполнения Substrate.
+The collection of Substrate-provided pallets (Substrate Runtime Modules).
 
-## Генезис/Genesis
+## Genesis
 
-Начало блокчейна, также известного как блок 0. Он также может быть использован для ссылки на начальное состояние блокчейна при создании.
+The origin of a blockchain, also known as block 0. It can also be used to reference the initial state of the blockchain at origination.
 
 > Пример: "В состоянии _генезис_ Алиса, Боб и Чарли имели по 30 токенов каждый."
 
-## Управление/Governance
+## Governance
 
-Процесс определения того, какие изменения в сети допустимы, например, изменения кода или движение средств. Система управления в Polkadot организована ончейн и основывается на голосовании холдеров.
+The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Polkadot is on-chain and revolves around stakeholder voting.
 
-## Совет по вопросам управления/Governance Council
+## Governance Council
 
-Ончейн организация, состоящая из нескольких аккаунтов (начиная с 6, в конечном итоге переходя к 24), которая может выступать в качестве представителя для "пассивных" (неголосующих) холдеров. Перед членами совета стоят две основные задачи: предложение референдумов для голосования и отмена вредоносных референдумов.
+An on-chain entity that consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24). The Council can act as a representative for "passive" (non-voting) stakeholders. Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
-## Гаджет финальности GRANDPA/Governance Council
+## GRANDPA Finality Gadget
 
-GHOST-based Recursive Ancestor Deriving Prefix Agreement. Соглашение о получении префикса для рекурсивного предка на основе GHOST. Это механизм определения финальности в Polkadot, который позволяет асинхронную и безопасную финальность для блокчейна. Обзор GRANDPA смотрите в этой статье на Medium: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
-## Хардфорк/Hard Fork
+## Hard Fork
 
-Перманентное переключение блокчейна, которое может произойти быстро из-за высокоприоритетного изменения в консенсусном правиле. Клиенты, которые следуют за хардфорком, всегда должны модернизировать своих клиентов, чтобы продолжать следовать за обновлённой цепочкой. Хардфорками считаются постоянными расхождениями цепи, для которой не обновленные клиенты следуют консенсусным правилам, несовместимым с правилами, за которыми следуют обновлённые клиенты.
+A permanent diversion of a blockchain that can occur quickly due to a high priority change in a consensus rule. Clients who follow a hard fork always need to upgrade their clients in order to continue following the upgraded chain. Hard forks are considered permanent divergences of a chain for which non-upgraded clients are following consensus rules incompatible to the ones followed by upgraded clients.
 
-## Хардспун/Hard Spoon
+## Hard Spoon
 
-Jae Kwon из Cosmos называет так "новую цепочку, которая берет состояния из существующей цепочки; не для того, чтобы конкурировать, а чтобы обеспечить широкий доступ." Новый блокчейн, который наследует состояние базового блокчейна и создает новую ветвь _того же блокчейна_.
+Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain; not to compete, but to provide broad access." A non-contentious blockchain that inherits the state of the underlying blockchain and creates a new branch of _the same blockchain_.
 
 ## Horizontal Relay-routed Message Passing
 
 Horizontal Relay-routed Message Passing, also known as HRMP, is a precursor to the complete XCMP implementation, that mimics the same interface and semantics of XCMP. It is similar to XCMP except for how it stores all messages in the Relay Chain storage, therefore making it more expensive and demanding more resources than XCMP. The plan is to retire HRMP once the implementation of XCMP is complete.
 
+## Inactive Nomination
+
+A validator (or validators) that a nominator has selected to nominate, but is not actively validating this era. This type of nomination may become active in a future era.
+
 ## Inherent
 
 Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into blocks by the block author. They are not provably true the way that the desire to send funds is, therefore they do not carry a signature. A blockchain's [runtime](#runtime) must have rules for validating inherents. For example, timestamps are inherents. They are validated by being within some margin that each validator deems reasonable.
+
+## Injected Account
+
+An account which is not directly managed by the Polkadot UI but can be accessed through it, such as accounts controlled by the Polkadot{.js} extension.
 
 ## KSM
 
@@ -160,7 +172,7 @@ A tool that gives you information about a node, such as the latest blocks sealed
 
 ## Nominated Proof of Stake (NPoS)
 
-A Proof-of-Stake system where nominators back validators with their own stake as a show of faith in the good behavior of the validator. Nominated Proof-of-Stake differs from the more generic concept Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad validator; delegators are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if delegators can be slashed. Polkadot uses the Phragmen method to allocate stake to nominees.
+A Proof-of-Stake system where nominators back validators with their own stake as a show of faith in the good behavior of the validator. Nominated Proof-of-Stake differs from the more generic concept Delegated Proof-of-Stake in that nominators are subject to loss of stake if they nominate a bad validator; delegators are not subject to loss of stake based on the behavior of the validator. Note that some other blockchain technologies may use the term Delegated Proof-of-Stake, even if delegators can be slashed. Polkadot uses the Phragmén method to allocate stake to nominees.
 
 ## Nominator
 
@@ -169,6 +181,10 @@ Accounts that select a set of validators to nominate by bonding their tokens. No
 ## On-chain Governance
 
 A governance system of a blockchain that is controlled by mechanisms on the blockchain. On-chain governance allows decisions to be made in a transparent manner. Note that there are a variety of different algorithms for making these decisions, such as simple majority voting, adaptive quorum biasing, or identity-based quadratic voting.
+
+## Oversubscribed
+
+If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era.
 
 ## Pallet
 
@@ -301,6 +317,10 @@ Vertical message passing consists of two separate types of message passing, Down
 ## Voting
 
 The process of stakeholders determining whether or not a referendum should pass. Votes are weighted both by the number of DOT that the stakeholder account controls and the amount of time they are willing to lock their DOT.
+
+## Waiting Nomination
+
+The nominator has nominated this validator, but the validator was not elected into the active validator set this era and thus cannot produce blocks for the canonical chain. If the validator does get into the active set in a future era, this may turn into an active or inactive nomination.
 
 ## Wallet
 
