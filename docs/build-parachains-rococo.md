@@ -48,7 +48,7 @@ the Rococo testnet "Custom Node" underneath "Development", according to the
 To send a transfer between parachains, let's start with heading over to "Accounts" > "Transfer".
 From here, you'll need to select the parachain node that you are running. Next, enter in the amount
 that you'd like to send to another parachain. Be sure to select the correct parachain you'd like to
-send an amount to. Once you've hit the Submit button, you should see a green notification,
+send an amount to. Once you've hit the "Submit" button, you should see a green notification,
 indicating a successful transfer.
 
 ### Downward Transfers
