@@ -155,9 +155,11 @@ want to stake using an account stored on a Ledger device.
 - Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not
   work).
 - Input the amount of tokens to bond and confirm the transaction.
-- When the transaction is include you will see the newly bonded account in the "Account Actions"
+- Confirm the transaction on the Ledger devivce.
+- When the transaction is included you will see the newly bonded account in the "Account Actions"
   page.
 - Select "Start Nominating" or "Start Validating" to start nominating or validating.
+- Confirm the transaction on Apps and on the Ledger device.
 
 ## Support
 
