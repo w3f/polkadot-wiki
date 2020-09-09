@@ -149,11 +149,11 @@ If you haven't already done so, you will need to generate a Kusama address. See 
 
 #### Claiming your KSM with MyCrypto
 
-The Polkadot JS [Claims app](https://polkadot.js.org/apps/#/claims) helps you sign a message from MyCrypto. MyCrypto is good to use in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics and the Parity signer.
+The Polkadot-JS [Claims app](https://polkadot.js.org/apps/#/claims) helps you sign a message from MyCrypto. MyCrypto is good to use in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics and the Parity signer.
 
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. Please make sure to download the latest version for your operating system. You can always find the most up-to-date releases of the desktop app on their [releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
 
-Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on the Polkadot JS UI. Select the account you would like to claim the KSM into and click the blue "Continue" button to proceed. Your screen should look something like this:
+Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on the Polkadot-JS UI. Select the account you would like to claim the KSM into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
 ![Claim Step 1](assets/kusama/claim/claim-1.png)
 
