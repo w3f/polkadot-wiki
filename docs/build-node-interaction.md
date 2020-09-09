@@ -9,7 +9,7 @@ documentation for the tool you are using. This guide should _guide you to the pr
 seen as canonical reference.
 
 - [Substrate RPC API](https://substrate.dev/rustdocs/v2.0.0-rc6/sc_rpc_api/index.html)
-- [Polkadot JS RPC Documentation](https://polkadot.js.org/api/substrate/rpc.html)
+- [Polkadot-JS RPC Documentation](https://polkadot.js.org/api/substrate/rpc.html)
 - [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar)
 
 ## Polkadot RPC

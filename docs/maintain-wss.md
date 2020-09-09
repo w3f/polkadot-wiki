@@ -10,7 +10,7 @@ proxy for websocket connections. Let's see how we can set up WSS on a remote Sub
 
 _Note: this should **only** be done for sync nodes used as back-end for some dapps or projects.
 Never open websockets to your validator node - there's no reason to do that and it can only lead to
-security gaffes!_
+security gaffes._
 
 In this guide we'll be using Ubuntu 18.04 hosted on a \$10 DigitalOcean droplet. We'll assume you're
 using a similar OS, and that you have nginx installed (if not, run `sudo apt-get install nginx`).
@@ -138,10 +138,10 @@ produce a "Not private" warning which you can skip by going to "Advanced" and th
 
 ## Connecting to the node
 
-Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch
-node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the
-IP address. Remember to prefix with `wss://`!
+Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch the
+node. Activate the "Development" toggle and input your node's address - either the domain or the IP
+address. Remember to prefix with `wss://`.
 
-![A sync-in-progress chain connected to Polkadot UI](/img/wss/wss01.jpg)
+![A sync-in-progress chain connected to Polkadot-JS UI](assets/maintain-wss-image.png)
 
-Congratulations - you have a secure remote connect setup for your Substrate node.
+Now you have a secure remote connect setup for your Substrate node.

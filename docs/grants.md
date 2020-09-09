@@ -80,7 +80,7 @@ that not all of the accepted grants have already delivered software.
   ([GitHub](https://github.com/Blockdaemon/bpm-sdk))
 - [Zondax](http://zondax.ch/) - Ledger app for Polkadot
   ([GitHub](https://github.com/ZondaX/ledger-polkadot))
-- [Geefu](https://www.geefu.net/) - Vue JS components for Polkadot JS apps
+- [Geefu](https://www.geefu.net/) - Vue JS components for Polkadot-JS Apps
   ([GitHub](https://github.com/vue-polkadot))
 - [Centrifuge](https://centrifuge.io/) - Substrate Go API client
   ([GitHub](http://github.com/centrifuge))

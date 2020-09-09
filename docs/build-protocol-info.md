@@ -257,5 +257,5 @@ like locking or reserving tokens for operations that utilize state.
 
 **What is an external source to see the current chain height?**
 
-- [Polkadot JS explorer](https://polkadot.js.org/apps/#/explorer)
+- [Polkadot-JS explorer](https://polkadot.js.org/apps/#/explorer)
 - [Polkascan block explorer](https://polkascan.io/)

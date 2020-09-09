@@ -26,12 +26,11 @@ one else does.
 Go to [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and navigate to the "Council" tab.
 Click the button on the right that says "Submit Candidacy."
 
-![a](assets/council/submit_candidacy.png)
+![submit candidancy button](assets/council/polkadotjs_submit_candidancy.png)
 
-After making the transaction, you will see your account appear on the right column under
-"Candidates."
+After making the transaction, you will see your account appear underneath the row "Candidates."
 
-![b](assets/council/candidate.png)
+![candidates list](assets/council/polkadotjs_candidates.png)
 
 It is a good idea now to lead by example and give yourself a vote.
 
@@ -40,22 +39,22 @@ It is a good idea now to lead by example and give yourself a vote.
 Next to the button to submit candidacy is another button titled "Vote." You will click this button
 to make a vote for yourself (optional).
 
-![c](assets/council/vote.png)
+![voting button on UI](assets/council/polkadotjs_vote_button.png)
 
 The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator
 elections. This means that you can choose up to 16 distinct candidates to vote for and your stake
 will equalize between them. For this guide, choose to approve your own candidacy by clicking on the
 switch next to your account and changing it to say "Aye."
 
-![d](assets/council/vote_for_yourself.png)
+![voting pop up on UI](assets/council/polkadotjs_voting.png)
 
 ## Winning
 
-If you are one of the lucky ones to win a council election you will see your account move to the
-left column under the heading "Members."
+If you are one of the lucky ones to win a council election you will see your account move underneath
+the row "Members".
 
-![e](assets/council/member.png)
+![council members list](assets/council/polkadotjs_council_members.png)
 
-Congratulations! Now you are able to participate on the council by making motions or vetoing
-proposals. It's a good idea to now join the public
+Now you are able to participate on the council by making motions or voting proposals. To join in on
+the active discussions, join the
 [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).

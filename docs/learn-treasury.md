@@ -89,7 +89,7 @@ Polkadot, you may want to frequent the
 
 ### Creating the Proposal
 
-One way to create the proposal is to use the Polkadot JS Apps
+One way to create the proposal is to use the Polkadot-JS Apps
 [website](https://polkadot.js.org/apps). From the website, use either the
 [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and select the Treasury pallet, then
 `proposeSpend` and enter the desired amount and recipient, or use the
