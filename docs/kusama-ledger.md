@@ -31,7 +31,7 @@ Here is a list of what you will need before starting:
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing both buttons on the YES screen.
 - Find Kusama in the app catalog and install it.
-  ![The Kusama App in the Ledger Manager](/img/ledger/manager-app.png)
+  ![The Kusama App in the Ledger Manager](assets/ledger/manager-app-kusama.png)
 
 Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
@@ -90,17 +90,17 @@ Now when you go to the "Accounts" tab you will see a new button that says "Query
 that your Ledger device is unlocked and you have navigated into the Polkadot application, then click
 this button.
 
-![Query Ledger button in PolkadotJS](/img/ledger/query-ledger.png)
+![Query Ledger button in PolkadotJS](assets/ledger/query-ledger.png)
 
 Depending on your browser and its security settings, you might need to confirm the USB connection
 through a popup like the one below:
 
-![Display of the Ledger account in the Accounts list of PolkadotJS](/img/ledger/query-device.png)
+![Display of the Ledger account in the Accounts list of PolkadotJS](assets/ledger/query-device.png)
 
 You should be able to scroll down and find a new account on the page named "Ledger". Under the type
 column, the account will also show "ledger".
 
-![Confirm device connection popup](/img/ledger/ledger-balance.png)
+![Confirm device connection popup](assets/ledger/ledger-balance.png)
 
 You can now use this account to interact with Polkadot on Polkadot-JS Apps and it will prompt your
 ledger for confirmation when you initiate a transaction.
@@ -127,7 +127,7 @@ Once you have your account loaded on the "Accounts" tab it should show a row wit
 account. At the far right of the row is located your account's DOT balance. If you expand the
 balance arrow, it will show details of your balance such as locks or reserved amounts.
 
-![Account row showing empty balance](/img/ledger/ledger-balance.png)
+![Account row showing empty balance](assets/ledger/ledger-balance.png)
 
 #### Using a Block Explorer
 
