@@ -219,7 +219,7 @@ DOT is inflationary; there is no maximum number of DOT as in Bitcoin. Inflation 
 - **蓝线**: 参与抵押者的通涨奖励
 - **绿线**: 抵押参与者的收益率
 
-You can determine the inflation rewards by checking the current staking rate at [PolkadotJS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
+You can determine the inflation rewards by checking the current staking rate at [Polkadot-JS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
 
 For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
 
