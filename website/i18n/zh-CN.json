@@ -137,6 +137,10 @@
         "title": "Kusama",
         "sidebar_label": "主页"
       },
+      "kusama-ledger": {
+        "title": "Using Ledger Devices",
+        "sidebar_label": "Ledger Devices"
+      },
       "kusama-parameters": {
         "title": "Kusama Parameters",
         "sidebar_label": "Parameters"

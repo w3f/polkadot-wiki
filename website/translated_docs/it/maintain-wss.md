@@ -4,7 +4,7 @@ title: Set up Secure WebSocket for Remote Connections
 sidebar_label: Set up Secure WebSocket for Remote Connections
 ---
 
-You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [PolkadotJS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
+You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [Polkadot-JS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
 
 _Note: this should **only** be done for sync nodes used as back-end for some dapps or projects. Never open websockets to your validator node - there's no reason to do that and it can only lead to security gaffes!_
 
@@ -35,7 +35,7 @@ To get WSS (secure websocket), you need an SSL certificate. There are two possib
 
 ### Domain and Certbot
 
-The first approach is getting a dedicated domain, redirecting its nameservers to your IP address, setting up an Nginx server for that domain, and finally [following LetsEncrypt instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html) for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx configuration. This will let you connect PolkadotJS UI to a URL like mynode.mydomain.com rather than 82.196.8.192:9944, which is arguably more user friendly.
+The first approach is getting a dedicated domain, redirecting its nameservers to your IP address, setting up an Nginx server for that domain, and finally [following LetsEncrypt instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html) for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx configuration. This will let you connect Polkadot-JS UI to a URL like mynode.mydomain.com rather than 82.196.8.192:9944, which is arguably more user friendly.
 
 This is simple to do on cloud hosting providers or if you have a static IP, but harder to pull off when running things from your home server.
 
@@ -112,7 +112,7 @@ Every websocket connection bootstraps itself with `https` first, so to allow the
 
 ## Connecting to the node
 
-Open [PolkadotJS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`!
+Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`!
 
 ![A sync-in-progress chain connected to Polkadot UI](/img/wss/wss01.jpg)
 

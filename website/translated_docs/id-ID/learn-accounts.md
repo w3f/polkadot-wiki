@@ -52,12 +52,12 @@ The above information brings us to portability: the ability to use a mnemonic ph
 
 If you want to use the same mnemonic across multiple wallets, make sure that they follow compatible methods for generating keys and signing messages. If you cannot find understandable documentation, reach out to the project maintainers.
 
-|                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-|:--------------------- |:---------------:|:---------------:|:---------------:|:---------------------------:|
-| Polkadot-JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps      |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
+|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
+|:----------------------- |:---------------:|:---------------:|:---------------:|:---------------------------:|
+| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot-JS Apps        |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
+| Subkey                  |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
 
 \* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with BIP39.
 
@@ -83,9 +83,9 @@ Finally, let's look at Kusama addresses. Decoding `CpjsLDC1JFyrhm3ftC9Gs4QoyrkHK
 
 ## Obtaining and Managing an Address
 
-The **most user-friendly** way to create a Kusama address is through the [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
+The **most user-friendly** way to create a Kusama address is through the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
 
-A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [PolkadotJS extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
+A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
 
 Please note that as this keeps your accounts in the browser, it is not a safe place to keep large holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. Creating cold storage is as simple as securely stashing away the seed phrase for your accounts and removing all traces of the accounts from your computer.
 
@@ -164,7 +164,7 @@ Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 --------------------------------
 ```
 
-The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
+The Polkadot-JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
 
 ### Making Transactions with a Multi-signature Account
 

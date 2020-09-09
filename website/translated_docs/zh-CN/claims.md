@@ -137,11 +137,11 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 - Parity Signer
 - 已链接到 Polkadot-JS Apps UI 的 Polkadot 帐户
 
-在申领前，您应将您在Parity Signer上的 Polkadot 地址导入到 PolkadotJS 应用程序中。 所有操作都将使用Parity Signer来签署交易，但将通过PolkadotJS 的远程节点进行广播。 如果您没有 Polkadot 地址， 请按照 [创建账户][] 页面中Parity Signer部分的说明创建一个新的 Polkadot 账户。
+Before claiming, you should import your Polkadot address on Parity Signer to the Polkadot-JS Apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the Polkadot-JS Apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
 
 ### 前往 Polkadot-JS Apps
 
-继续使用 [polkadot-js Apps][claims app]。您需要先将您在Parity Signer上的地址导入到账户页面。
+Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
 
 ### 提交验证声明
 
@@ -161,7 +161,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![ps-3](assets/new-claims/ps-03.jpg)
 
-您的地址将以二维码的方式显示。 您可扫描二维码，以便 PolkadotJS 应用程序对其进行解码。
+Your address will be displayed in QR code format. You can move the QR code to the camera so that the Polkadot-JS Apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
@@ -189,7 +189,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-首先，您需要点击Parity Signer上的“QR Scanner”，扫描授权交易窗口上显示的二维码，生成原始交易。接下来，您可能需要在Parity Signer上输入PIN码，以二维码的形式生成签名交易。然后将二维码移动到PolkadotJS Apps上的镜头中以继续下一步。
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the Polkadot-JS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
@@ -199,6 +199,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 [ MyCrypto ]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[创建账户]: learn-account-generation
+[account generation]: learn-account-generation
 [Claims app]: https://polkadot.js.org/apps/#/claims
+[claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
