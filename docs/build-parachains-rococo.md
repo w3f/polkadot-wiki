@@ -24,18 +24,24 @@ As of now, the list of Parachains are as follows:
 ## Parachain Workshop
 
 If you are interested in running and launching your own parachain, Parity Technologies has created a
-[workshop tutorial](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling). There is also a
+[parachain workshop](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling). There is also a
 [Rococo Element chat channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
 as well as [Rococo's GitHub repository](https://github.com/paritytech/cumulus#rococo) available.
+
+### Obtaining ROC
+
+There isn't currently a faucet available for ROC and disbursements are limited to parachain builders
+for the time being. It's recommended at this point to run your own parachains testnet locally.
 
 ## How to connect to a Parachains
 
 If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
 you may do so by heading over to the network selection at the top left hand corner of the navigation
 and selecting any parachain of choice. For the purpose of these following examples, we will be using
-the Rococo parachain testnet.
+the Rococo testnet "Custom Node" underneath "Development", according to the
+[parachain workshop](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling).
 
-![parachains polkadotjs](assets/polkadotjs_network_parachains.png)
+![parachains on polkadotjs](assets/polkadotjs_network_parachains.png)
 
 ## How to make Cross Chain transfers
 
