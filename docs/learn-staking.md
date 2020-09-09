@@ -412,13 +412,13 @@ please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Ec
 - Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
-## How many validators will Polkadot have?
+## How many validators does Polkadot have?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more
-gradually. The top bound on the number of validators has not been determined yet, but should only be
-limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message
-passing. The estimate of the number of validators that Polkadot will have at maturity is
-around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
+Polkadot started with 20 open validator positions and has opened more gradually. The top bound on
+the number of validators has not been determined yet, but should only be limited by the bandwidth
+strain of the network due to peer-to-peer message passing. The estimate of the number of validators
+that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
+over 500 validator slots, and the plan is also to slowly grow this number to approximately 1000.
 
 ## Resources
 
