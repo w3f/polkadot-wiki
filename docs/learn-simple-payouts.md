@@ -32,10 +32,10 @@ distribute the rewards pro rata.
 > complexity of the staking set.
 
 These details are handled for you automatically if you use the
-[Polkadot JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
 batches of eras at once.
 
-To claim rewards on Polkadot JS UI, you will need to be in the "Payouts" tab underneath "Staking",
+To claim rewards on Polkadot-JS UI, you will need to be in the "Payouts" tab underneath "Staking",
 which will list all the pending payouts for your stashes.
 
 ![pending-payouts](assets/polkadotjs_payout_page.png)
