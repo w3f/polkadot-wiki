@@ -152,9 +152,9 @@ method is to use [Polkadot-JS Apps][].
 > Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
 > account will be unable to make transactions which would get its balance below the existential
 > deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
-> will be able to go below ED balance, causing your account to be deleted and any dust amount of KSM
-> to be burned. If you encounter KeepAlive errors when making transactions, this might be the
-> reason.
+> will be able to go below existential deposit balance, causing your account to be deleted and any
+> dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
+> might be the reason.
 
 ### Receiving a Transfer
 

@@ -98,7 +98,7 @@ through a popup like the one below:
 ![Display of the Ledger account in the Accounts list of PolkadotJS](/img/ledger/query-device.png)
 
 You should be able to scroll down and find a new account on the page named "Ledger". Under the type
-column, the account will also show "ledger".
+column, the account will also show "Ledger".
 
 ![Confirm device connection popup](/img/ledger/ledger-balance.png)
 
