@@ -10,15 +10,6 @@ send transfers and messages between parachains and the Relay Chain. Every messag
 Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs the
 parachains Tick, Trick and Track.
 
-## How to connect to a Parachains
-
-If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
-you may do so by heading over to the network selection at the top left hand corner of the navigation
-and selecting any parachain of choice. For the purpose of these following examples, we will be using
-the Rococo parachain testnet.
-
-![parachains polkadotjs](assets/polkadotjs_network_parachains.png)
-
 ## Who are building Parachains?
 
 As of now, the list of Parachains are as follows:
@@ -36,6 +27,15 @@ If you are interested in running and launching your own parachain, Parity Techno
 [workshop tutorial](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling). There is also a
 [Rococo Element chat channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
 as well as [Rococo's GitHub repository](https://github.com/paritytech/cumulus#rococo) available.
+
+## How to connect to a Parachains
+
+If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
+you may do so by heading over to the network selection at the top left hand corner of the navigation
+and selecting any parachain of choice. For the purpose of these following examples, we will be using
+the Rococo parachain testnet.
+
+![parachains polkadotjs](assets/polkadotjs_network_parachains.png)
 
 ## How to make Cross Chain transfers
 
