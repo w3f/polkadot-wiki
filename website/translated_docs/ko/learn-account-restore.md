@@ -55,12 +55,12 @@ If you've already created an account with Parity Signer or any other wallet, you
 
 On Parity Signer, click on the top right user icon on the screen. Proceed to "+ Add Identity". On this screen, tap on the "recover existing identity" button.
 
-![restore-using-parity](assets/parity_Signer_restore1.png)
+![restore-using-parity](assets/parity_Signer_restore1.PNG)
 
 Enter in the identity name and the mnemonic seed phrase from the account you'd like to restore respectively.
 
 Set an identity PIN that will be used to unlock this account when you need to.
 
-![restore-using-parity](assets/parity_Signer_restore1.png)
+![restore-using-parity](assets/parity_Signer_restore2.PNG)
 
 The identity has now been recovered and you can select a network to create the first account.

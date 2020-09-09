@@ -208,7 +208,7 @@ If you are interested in determining how much longer you have to go, your server
 STDOUT from the `polkadot` process) will tell you the latest block your node has processed and
 verified. You can then compare that to the current highest block via
 [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
-[PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+[Polkadot-JS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
 ## Bond KSM
 
@@ -277,15 +277,15 @@ people are using telemetry, it is recommended that you choose something likely t
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
 associates your validator node with your Controller account on Polkadot.
 
-#### Option 1: PolkadotJS-APPS
+#### Option 1: Polkadot-JS Apps
 
 You can generate your
 [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the
-client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer
-attached to your validator node. You can configure the apps dashboard to connect to the endpoint of
-your validator in the Settings tab. If you are connected to a default endpoint hosted by Parity of
-Web3 Foundation, you will not be able to use this method since making RPC requests to this node
-would effect the local keystore hosted on a _public node_ and you want to make sure you are
+client via the apps RPC. If you are doing this, make sure that you have the Polkadot-JS Apps
+explorer attached to your validator node. You can configure the apps dashboard to connect to the
+endpoint of your validator in the Settings tab. If you are connected to a default endpoint hosted by
+Parity of Web3 Foundation, you will not be able to use this method since making RPC requests to this
+node would effect the local keystore hosted on a _public node_ and you want to make sure you are
 interacting with the keystore for _your node_.
 
 Once ensuring that you have connected to your node, the easiest way to set session keys for your
@@ -327,7 +327,7 @@ To verify that your node is live and synchronized, head to
 [Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all
 nodes on the Kusama network, which is why it is important to select a unique name!
 
-If everything looks good, go ahead and click on "Validate" in Polkadot UI.
+If everything looks good, go ahead and click on "Validate" in Polkadot-JS UI.
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)

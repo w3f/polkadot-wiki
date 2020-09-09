@@ -25,11 +25,11 @@
     "docusaurus": "^1.14.6"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.4",
-    "@polkadot/api": "^1.31.1",
+    "@octokit/rest": "^18.0.5",
+    "@polkadot/api": "^1.32.1",
     "axios": "^0.20.0",
     "fs-extra": "^9.0.1",
-    "ipfs-http-client": "^46.0.0",
+    "ipfs-http-client": "^46.1.1",
     "katex": "^0.11.1",
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.2.2",
