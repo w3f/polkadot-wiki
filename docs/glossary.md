@@ -284,8 +284,9 @@ chain.
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate and Polkadot. It has also
-released several other projects including Parity Ethereum and Parity Secret Store.
+A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate and
+Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret
+Store.
 
 ## Polkadot
 
