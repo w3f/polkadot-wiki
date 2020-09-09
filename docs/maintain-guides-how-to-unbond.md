@@ -50,7 +50,7 @@ Then, your transferrable balance will increase by the amount of tokens you've ju
 
 If you want to rebond your tokens before the unbonding period is over you can do this by issuing a
 `rebond` extrinsic. This allows you to bond your tokens that are still locked without waiting until
-the end of the unbonind period.
+the end of the unbonding period.
 
 In order to do this you will need to issue an extrinsic manually from [Polkadot-JS Apps][].
 
