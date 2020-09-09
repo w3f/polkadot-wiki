@@ -10,7 +10,10 @@ send transfers and messages between parachains.
 
 ## How to connect to a Parachains
 
-If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/), you may do so by heading over to the network selection at the top left hand corner of the navigation and selecting any parachain of choice. For the purpose of these following examples, we will be using the Rococo parachain testnet. 
+If you would like to connect to a Parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
+you may do so by heading over to the network selection at the top left hand corner of the navigation
+and selecting any parachain of choice. For the purpose of these following examples, we will be using
+the Rococo parachain testnet.
 
 ## How to make Cross Chain transfers
 
