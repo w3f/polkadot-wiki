@@ -12,7 +12,7 @@ Voting for councillors requires you to lock your DOT / KSM for the duration of y
 
 > 警告: 当投票给议员时，您有责任不要把全部余额也放在预留余额。最好保持_至少_几个 KSM 来支付交易费用。
 
-前往到 [ Polkadot Apps ](https://polkadot.js.org/apps)，然后选择 "议会(Council)"。在右侧窗口中有两个蓝色按钮，按下 "投票(Vote)" 按钮。
+Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab. On the right side of the window there are two blue buttons, click on the one that says "Vote."
 
 ![](assets/council/vote.png)
 
@@ -26,10 +26,10 @@ Voting for councillors requires you to lock your DOT / KSM for the duration of y
 
 为了取回预留的代币，您需要取消你的投票。仅当您参加完选举并且不再希望预留的代币计入您支持的议员后，才可以取消投票。
 
-前往到[ Polkadot Apps ](https://polkadot.js.org/apps)上的 "Extrinsics"。
+Go to the "Developer" > "Extrinsics" tab on [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps).
 
 选择要取消投票的帐户，然后选择 "electionsPhragmen-> removeVoter()" 选项并提交交易。
 
-![](assets/council/remove_vote.png)
+![](assets/council/polkadotjs_removeVoter.png)
 
 当交易被确认在一个区块后，您应该会取回你的预留的代币，并且在下一次选举你对任何议员的投票都将不再计算在内。
