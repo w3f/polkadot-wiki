@@ -38,9 +38,9 @@ sidebar_label: Создание транзакций
 
 Parity предоставляет следующие инструменты для выполнения этих шагов.
 
-## Инструменты Polkadot JS
+## Polkadot-JS Tools
 
-[Polkadot JS Tools](https://github.com/polkadot-js/tools) содержит набор инструментов командной строки для взаимодействия с клиентом Substrate, включая тот, который называется "Signer CLI" для создания, подписания и трансляции транзакций.
+[Polkadot-JS Tools](https://github.com/polkadot-js/tools) contains a set of command line tools for interacting with a Substrate client, including one called "Signer CLI" to create, sign, and broadcast transactions.
 
 В этом примере будет использована команда `signer submit`, которая создаст и отправит транзакцию. Команда `signer sendOffline` имеет тот же API, но не будет транслировать транзакцию. `submit` и `sendOffline` должны быть подключены к узлу, чтобы получить текущие метаданные и построить действительную транзакцию. Их API имеет формат:
 
