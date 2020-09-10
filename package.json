@@ -27,6 +27,7 @@
   "dependencies": {
     "@octokit/rest": "^18.0.5",
     "@polkadot/api": "^1.32.1",
+    "@polkadot/keyring": "^3.4.1",
     "axios": "^0.20.0",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^46.1.1",

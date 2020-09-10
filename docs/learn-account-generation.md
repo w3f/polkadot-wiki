@@ -376,3 +376,11 @@ not choose to do this. The next steps are identical to the
 filled in, and a backup file of your account will be downloaded.
 
 ![Vanity Generator chosen address](assets/polkadot_save_account.png)
+
+## Address Changer
+
+You can use the tool below to change the format of your address for different networks.
+
+<div class="address-changer">
+  <input class="address-changer-input" /><input class="address-changer-button" /><span class="address-changer-output" />
+</div>
