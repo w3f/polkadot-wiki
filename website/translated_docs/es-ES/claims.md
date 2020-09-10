@@ -34,7 +34,7 @@ You will need a Polkadot account to claim your DOT. Please follow the instructio
 
 #### Reclamando tus DOTs con MyCrypto
 
-La aplicación [Polkadot JS Claims][] te ayuda a firmar un mensaje de MyCrypto. MyCrypto es una buena opción en caso de que hayas guardado la clave de la cuenta de Ethereum con tus tokens de DOT en un dispositivo de hardware como Ledger Nano S o Trezor. También soporta claves privadas en bruto, mnemotécnicos y Parity Signer.
+The Polkadot-JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
@@ -58,7 +58,7 @@ Esto te pedirá que selecciones un método para desbloquear tu cartera.
 
 ![claim-4](assets/new-claims/claim-4.png)
 
-Después de desbloquear tu cartera, pega el mensaje de Polkadot JS en el apartado "Message".
+After unlocking your wallet, paste the message from Polkadot-JS into the "Message" box.
 
 ![claim-5](assets/new-claims/claim-5.png)
 
@@ -66,7 +66,7 @@ Cuando hagas clic en "Sign Message" obtendrás una salida JSON como la de abajo:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-Copia y pega la salida JSON del mensaje firmado de MyCrypto en el recuadro de entrada de la interfaz Polkadot JS y haz clic en "Confirm Claim."
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
 ![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
 
@@ -200,6 +200,6 @@ When the transaction is included in the block, you will see a green success box 
 
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
-[Polkadot JS Claims]: https://polkadot.js.org/apps/#/claims
+[Claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
