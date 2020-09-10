@@ -16,7 +16,7 @@ While your DOT are staked by nominating a validator, they are 'locked' (bonded).
 
 当你前往到抵押页面的 [Account actions](https://polkadot.js.org/apps/#/staking/actions)，你应该会看到绑定了的帐号和提名状态。如果没有，您可以先跟随[这个](maintain-guides-how-to-nominate-kusama)教程设置。你的提名将会在下一个时代生效即是在 Kusama 上大概6小时而 Polkadot 是24小时。
 
-![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
+![Nominations](/img/staking/polkadotjs_nominator_account.png)
 
 Suppose you have nominated five validator candidates, and three out of five were elected to the active validator set, then you should see two of your nominations as "waiting", and most likely one as "active" and the rest as "inactive". Active or inactive nomination means your nominated validators have been elected to be in the validator set, whereas waiting means they did not get elected. Generally, you will only have a single validator have an active nomination, which means that you are directly supporting it with your stake this era and thus potentially receiving staking rewards. Every era, a new election will take place and you may have be assigned a different active nomination from among the validators you have selected.
 
@@ -34,13 +34,13 @@ As long as you have nominated more than one validator candidate and at least one
 
 ### What to take into consideration during nominating
 
-![Staking Returns](/img/staking/polkadotjs-staking-returns.jpg)
+![Staking Returns](/img/staking/polkadotjs_nominators_target.png)
 
 As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Targets](https://polkadot.js.org/apps/#/staking/targets) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
 
 One example would be if a validator is regularly offline, their nominators most likely would get fewer rewards than others. More importantly, when many validators are [unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be slashed.
 
-![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
+![Validator Stats](/img/staking/polkadotjs_validator_stats.png)
 
 Thus, to be a smart nominator, it would be better to query their [histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
 
