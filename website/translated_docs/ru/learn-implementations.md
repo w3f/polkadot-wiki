@@ -12,7 +12,7 @@ There are Polkadot implementations developed in Rust, C++, Go, and JavaScript.
 
 [**Gossamer**](https://github.com/ChainSafeSystems/gossamer) - A Go implementation being built by [ChainSafe Systems](https://github.com/ChainSafeSystems), a 23-person development team in Toronto that is also building an Eth2.0 Serenity client. [Grant announcement](https://medium.com/web3foundation/w3f-grants-chainsafe-to-implement-polkadot-runtime-environment-in-go-ca4973c9edaf).
 
-[**Polkadot-JS**](https://github.com/polkadot-js) - A JavaScript [client](https://github.com/polkadot-js/client) and tool set developed by [Polkadot JS](https://polkadot.js.org/).
+[**Polkadot-JS**](https://github.com/polkadot-js) - A JavaScript [client](https://github.com/polkadot-js/client) and tool set developed by [Polkadot-JS](https://polkadot.js.org/).
 
 ## Why build multiple implementations?
 
