@@ -48,7 +48,7 @@ you will like to send funds from.
 ![transfer](assets/transfer-3.png)
 
 Now you will see the same modal window as if using the "Transfer" tab. Fill in the inputs correctly
-and hit "Make Transfer" then confirm the transaction. You will see a green notification in the
+and hit "Make Transfer" then confirm the balance transfer. You will see a green notification in the
 top-right corner of the screen when the transfer is included in a block.
 
 [polkadot-js apps]: https://polkadot.js.org/apps
