@@ -16,11 +16,11 @@ sidebar_label: How to Nominate on Polkadot
 
 您可以通过 [帐户生成][]页上详细介绍的任何推荐方法来生成 stash 和 controller 帐户。
 
-## Using Polkadot UI
+## Using Polkadot-JS UI
 
 ### 第一步: 绑定您的代币
 
-在 [Polkadot UI](https://polkadot.js.org/apps) 前往 "Staking" 标签
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
 The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of DOT that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
@@ -32,11 +32,11 @@ The "Staking Overview" subsection will show you all the active validators and th
 
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough DOT backing them (as allocated through the [Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
 
-"Validator Stat" 的子部分（[链接](https://polkadot.js.org/apps/#/staking/query)）允许您查询验证人的 stash 地址并查看历史记录例如每个时代所获得的分数，当选时的抵押数量，奖励和惩罚。
+The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you to query a validator's stash address and see historical charts on era points, elected stake, rewards, and slashes.
 
-选择 "Account Actions"，然后点击灰色 "+ Nominator" 按钮。
+Pick "Account actions", then click the "+ Nominator" button.
 
-您将看到一个如下所示的窗口:![nominator-update-1](assets/nominator-update-1.png)
+您将看到一个如下所示的窗口:![nominator-update-1](assets/polkadotjs_nominate_button.png)
 
 Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are dynamic based on a variety of factors including the load of recent blocks.
 
@@ -50,9 +50,9 @@ Select a "value bonded" that is **less** than the total amount of DOT you have, 
 
 您现在已经完成了绑定。完成绑定表示您的代币已被锁定，如果您提名的验证人有过失行为，该绑定的代币有可能被[惩罚(削减)](learn-staking#slashing) 。所有绑定资金现在可以分配给最多16个验证人。如果你提名的验证人恶意攻击网络，你也会被惩罚，所以请谨慎选择验证人。
 
-Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select up to 16 validators. Although you may choose up to 16 validators, due to the \[Phragmén\]\[\] election algorithm your stake may be dispersed in different proportions to any subset or all of the validators your choose.
+Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select up to 16 validators. Although you may choose up to 16 validators, due to the [Phragmén](learn-phragmen) election algorithm your stake may be dispersed in different proportions to any subset or all of the validators your choose.
 
-![Nominating validators](/img/NPoS/nominate.png)
+![Nominating validators](assets/polkadotjs_setup_nominator2.png)
 
 选择它们，确认交易，然后完成 - 您现在已成功提名。 您的提名将在下一个时代生效。 每个时代在 Polkadot 上是二十四小时-根据您执行此操作的时间，您的提名可能会立即生效，或者您可能必须等待整整二十四个小时才能生效。 您可以在[ Staking 页面](https://polkadot.js.org/apps/#/staking)中查看当前 Polkadot 时代的距离。
 
@@ -64,7 +64,7 @@ Click on "Nominate" on an account you've bonded and you will be presented with a
 
 ## Using Command-Line Interface (CLI)
 
-除了使用 Polkadot-JS Apps 参与抵押，您还可以在 CLI 中完成所有这些操作。 CLI 方法使您无需进入 Polkado-JS Apps 即可与 Polkadot 网络进行交互。
+Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot network without going to the Polkadot-JS Apps dashboard.
 
 ### 第一步: 安装 @polkadot/api-cli
 
@@ -110,7 +110,7 @@ Result:
     }
 ```
 
-You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
+You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
 
 ### 第三步: 提名验证人
 
@@ -124,7 +124,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRES
 polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.polkadot.io
 ```
 
-几秒钟后，您应该看到交易的哈希值，并且如果您想验证提名状态，也可以在 PolkadotJS UI 上进行检查。
+After a few seconds, you should see the hash of the transaction and if you would like to verify the nomination status, you can check that on the Polkadot-JS UI as well.
 
 [ 验证人 ]: maintain-guides-how-to-validate-kusama
 [密钥]: learn-keys#controller-and-stash-keys

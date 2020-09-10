@@ -52,7 +52,7 @@ id: grants title: Web3 Foundation Grantees sidebar_label: Grants
 - [Dock](http://dock.io/) - Verifiable Claims
 - [Blockdaemon](https://blockdaemon.com/) - Polkadot Package Manager ([GitHub](https://github.com/Blockdaemon/bpm-sdk))
 - [Zondax](http://zondax.ch/) - Ledger app for Polkadot ([GitHub](https://github.com/ZondaX/ledger-polkadot))
-- [Geefu](https://www.geefu.net/) - Vue JS components for Polkadot JS apps ([GitHub](https://github.com/vue-polkadot))
+- [Geefu](https://www.geefu.net/) - Vue JS components for Polkadot-JS Apps ([GitHub](https://github.com/vue-polkadot))
 - [Centrifuge](https://centrifuge.io/) - Substrate Go API client ([GitHub](http://github.com/centrifuge))
 - [Litentry](https://www.litentry.com/) - Identity modules and corresponding UIs ([GitHub](https://github.com/litentry/litentry-runtime))
 - [Subsocial](http://subsocial.network) - Substrate modules with web UI for decentralized social networks and marketplaces ([GitHub](https://github.com/dappforce/dappforce-subsocial))

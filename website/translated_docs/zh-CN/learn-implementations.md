@@ -12,7 +12,7 @@ sidebar_label: Polkadot 实现
 
 [** Gossamer ** ](https://github.com/ChainSafeSystems/gossamer) - 由[ ChainSafe Systems ](https://github.com/ChainSafeSystems)，23人组成在多伦多的开发团队也正在开发 Eth2.0 Serenity 客户程序。[拨款公告](https://medium.com/web3foundation/w3f-grants-chainsafe-to-implement-polkadot-runtime-environment-in-go-ca4973c9edaf)。
 
-[ ** Polkadot-JS ** ](https://github.com/polkadot-js) - JavaScript [客户端](https://github.com/polkadot-js/client)和由[ Polkadot JS ](https://polkadot.js.org/)开发的工具。
+[**Polkadot-JS**](https://github.com/polkadot-js) - A JavaScript [client](https://github.com/polkadot-js/client) and tool set developed by [Polkadot-JS](https://polkadot.js.org/).
 
 ## 为什么要把 Polkadot 实现多个语言？
 

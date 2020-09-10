@@ -34,7 +34,7 @@ You will need a Polkadot account to claim your DOT. Please follow the instructio
 
 #### Claiming your DOT with MyCrypto
 
-The Polkadot JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
+The Polkadot-JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
@@ -58,7 +58,7 @@ This will prompt you to select a method for unlocking your wallet.
 
 ![claim-4](assets/new-claims/claim-4.png)
 
-After unlocking your wallet, paste the message from Polkadot JS into the "Message" box.
+After unlocking your wallet, paste the message from Polkadot-JS into the "Message" box.
 
 ![claim-5](assets/new-claims/claim-5.png)
 
@@ -66,7 +66,7 @@ When you click "Sign Message" you will get a JSON output like the one below:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot JS UI and click "Confirm Claim."
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
 ![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
 
