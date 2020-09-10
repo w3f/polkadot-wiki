@@ -11,7 +11,7 @@ will be transferred.
 
 ## Polkadot-JS Apps
 
-Let's begin by opening up the [Polkadot-JS Apps][]. There are two ways to make a transaction:
+Let's begin by opening up the [Polkadot-JS Apps][]. There are two ways to make a balance transfer:
 
 1. By using the "Transfer" tab in the "Accounts" dropdown (located on the top navigational menu).
 2. Clicking the "send" button while in the "Accounts" page.
