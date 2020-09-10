@@ -33,9 +33,8 @@ it to remain active. See the [existential deposit][] section for more informatio
 
 ![transfer](assets/transfer-2.png)
 
-After setting your inputs correctly, click the "Make Transfer" button and confirm. Once the
-transfer is included in a block you will see a green notification on the top-right corner of your
-screen.
+After setting your inputs correctly, click the "Make Transfer" button and confirm. Once the transfer
+is included in a block you will see a green notification on the top-right corner of your screen.
 
 ### From the Accounts Page
 
