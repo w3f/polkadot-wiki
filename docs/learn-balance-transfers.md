@@ -49,7 +49,7 @@ you will like to send funds from.
 
 Now you will see the same modal window as if using the "Transfer" tab. Fill in the inputs correctly
 and hit "Make Transfer" then confirm the transaction. You will see a green notification in the
-top-right corner of the screen when the transaction is included in a block.
+top-right corner of the screen when the transfer is included in a block.
 
 [polkadot-js apps]: https://polkadot.js.org/apps
 [existential deposit]: build-protocol-info#existential-deposit
