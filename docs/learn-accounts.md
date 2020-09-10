@@ -353,3 +353,17 @@ need to place the deposit and Alice will receive her deposit back.
 - [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
   explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill
   Laboon and Chinmay Patel of BlockX Labs.
+
+## Address Changer
+
+You can use the tool below to change the format of your address for different networks.
+
+<div class="address-changer">
+  <input class="address-changer-input" id="input" placeholder="Paste your address" oninput="globalThis.addressChanger()" />
+  <select class="address-changer-select" id="prefix-select" oninput="globalThis.addressChanger()">
+    <option value="0">Polkadot</option>
+    <option value="2">Kusama</option>
+    <option value="42">Substrate</option>
+  </select>
+  <span class="address-changer-output" id="output" />
+</div>

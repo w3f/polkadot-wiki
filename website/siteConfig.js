@@ -64,6 +64,7 @@ const siteConfig = {
     "/js/custom.js",
     "/js/klaro-config.js",
     "/js/klaro.js",
+    '/js/packaged/addressChanger.js'
   ],
 
   stylesheets: [
