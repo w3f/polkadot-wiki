@@ -40,6 +40,7 @@ that the wallet software is using the latest version of the
 | [SafePal](https://www.safepal.io/download)                         | Live              | SafePal      | Hardware                               |
 | [Crypto.com App](https://crypto.com/en/index.html)                 | Live              | Crypto.com   | IOS and Android                        |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Live              | Zondax       | Hardware                               |
+| [Batch Paper Wallet](https://globaldefi.io/paperwalletc.php)       | Live              | GlobalDefi.io| Browser                                |
 | [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo         | IOS and Android                        |
 | [Polkadot{.js} extension](https://github.com/EthWorks/extension)   | Building          | EthWorks     | Browser extension                      |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask     | IOS, Android, and browser extension    |
