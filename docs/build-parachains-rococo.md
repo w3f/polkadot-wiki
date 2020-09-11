@@ -26,7 +26,7 @@ As of now, the list of parachains are as follows:
 If you are interested in running and launching your own parachain, Parity Technologies has created a
 [parachain workshop](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling). There is also a
 [Rococo Element chat channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
-as well as [Rococo's GitHub repository](https://github.com/paritytech/cumulus#rococo) available.
+as well as [Cumulus' GitHub repository](https://github.com/paritytech/cumulus#rococo) available.
 
 ### Obtaining ROC
 
