@@ -30,7 +30,9 @@ has access to the Internet of Value and Trust. Bruno is passionate about decentr
 censorship resistance, and transparency coupled with accountability, so he's found his passion in
 immutable ledgers of the present and future. He holds masters' degrees in Computer Science and
 English Language and Literature and likes to dabble in virtual reality when possible. He can be
-found on Twitter at @bitfalls.
+found on Twitter at [@bitfalls](https://twitter.com/bitfalls) and on Oculus and Steam as TheSwader.
+He also runs a weekly-ish newsletter covering all things Web3 at
+[Dot Leap](https://dotleap.substack.com).
 
 ## Joe Petrowski
 
