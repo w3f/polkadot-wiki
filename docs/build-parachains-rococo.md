@@ -7,7 +7,7 @@ sidebar_label: Building Parachains on Rococo
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing
 parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
 send transfers and messages between parachains and the Relay Chain. Every message is sent to the
-Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs the
+Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs
 parachains Tick, Trick and Track.
 
 ## Who are building Parachains?
@@ -30,7 +30,7 @@ as well as [Cumulus' GitHub repository](https://github.com/paritytech/cumulus#ro
 
 ### Obtaining ROC
 
-There isn't currently a faucet available for ROC and disbursements are limited to parachain builders
+There currently isn't a faucet available for ROC and disbursements are only limited to parachain builders
 for the time being. It's recommended at this point to run your own parachains testnet locally.
 
 ## How to connect to a Parachains
