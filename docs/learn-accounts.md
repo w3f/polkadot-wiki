@@ -348,12 +348,6 @@ When doing this Alice will have to deposit 0.20152 DOT while she waits for eithe
 also approve the call. When Bob comes to approve the call and execute the transaction, he will not
 need to place the deposit and Alice will receive her deposit back.
 
-## Resources
-
-- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
-  explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill
-  Laboon and Chinmay Patel of BlockX Labs.
-
 ## Address Changer
 
 You can use the tool below to change the format of your address for different networks.
@@ -363,7 +357,18 @@ You can use the tool below to change the format of your address for different ne
   <select class="address-changer-select" id="prefix-select" oninput="globalThis.addressChanger()">
     <option value="0">Polkadot</option>
     <option value="2">Kusama</option>
+    <option value="5">Plasm</option>
+    <option value="10">Acala</option>
+    <option value="16">Kulupu</option>
+    <option value="28">Subsocial</option>
+    <option value="36">Centrifuge</option>
     <option value="42">Substrate</option>
   </select>
   <span class="address-changer-output" id="output" />
 </div>
+
+## Resources
+
+- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
+  explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill
+  Laboon and Chinmay Patel of BlockX Labs.
