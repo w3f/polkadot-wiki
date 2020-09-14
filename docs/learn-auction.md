@@ -105,8 +105,11 @@ into its own `lease period`. More than one continuous `period` is a `range`.
 Several auctions will take place in the preceding six months before a set of parachain slot leases
 begin.
 
-Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up
-and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+Bidders will submit a configuration of bids specifying the DOT amount they are willing to bond and
+for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+
+> Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
+> case, you don't pay DOT for a parachain slot.
 
 A bidder configuration for a single bidder may look like this:
 
