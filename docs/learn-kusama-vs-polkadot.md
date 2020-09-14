@@ -24,7 +24,7 @@ There are a few important distinctions to be made.
 ### Speed
 
 The first key technical difference between Polkadot and Kusama is that Kusama has modified governance parameters that allow for faster upgrades.
-Kusama is up to four times faster than Polkadot, with seven days for token holders to vote on referendums followed by an enactment period of eight days, after which the referendum will be enected on the chain. This means stakeholders need to stay active and vigilant if they want to keep up with all the proposals, referenda , and upgrades, and validators on Kusama often need to update on short notice.
+Kusama is up to four times faster than Polkadot, with seven days for token holders to vote on referendums followed by an enactment period of eight days, after which the referendum will be enacted on the chain. This means stakeholders need to stay active and vigilant if they want to keep up with all the proposals, referenda , and upgrades, and validators on Kusama often need to update on short notice.
 On Polkadot, votes last 28 days followed by an enactment period of 28 days.
 This does not mean that the Kusama blockchain itself is faster, in the sense of faster block times or transaction throughput (these are the same on both networks), but that there's a shorter amount of time between governance events such as proposing new referenda, voting, and enacting approved upgrades. This allows Kusama to adapt and evolve faster than Polkadot.
 
