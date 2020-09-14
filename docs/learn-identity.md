@@ -22,11 +22,11 @@ information, so the data must be less than that. When inputting the data manuall
 The easiest way to add the built-in fields is to click the gear icon next to one's account and
 select "Set on-chain identity".
 
-![Gear icon provides the option to set identity](/img/identity/01.jpg)
+![Gear icon provides the option to set identity](/img/identity/new1.jpg)
 
 A popup will appear, offering the default fields.
 
-![Identity field setup popup](/img/identity/02.jpg)
+![Identity field setup popup](/img/identity/new2.jpg)
 
 To add custom fields beyond the default ones, use the Extrinsics UI to submit a raw transaction by
 first clicking "Add Item" and adding any field name you like. The example below adds a field
