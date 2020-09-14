@@ -109,7 +109,8 @@ Bidders will submit a configuration of bids specifying the DOT amount they are w
 for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
 
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
-> case, you don't pay DOT for a parachain slot.
+> way, you pay for the parachain slot by forfeiting the profit opportunity from staking the bonded
+> tokens.
 
 A bidder configuration for a single bidder may look like this:
 
