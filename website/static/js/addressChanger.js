@@ -1,4 +1,5 @@
-const { decodeAddress, encodeAddress } = require("@polkadot/keyring");
+const decodeAddress = require("@polkadot/util-crypto/address/decode").default;
+const encodeAddress = require("@polkadot/util-crypto/address/encode").default;
 
 const addressChanger = () => {
   const inEl = document.getElementById('input');
@@ -15,15 +16,14 @@ const addressChanger = () => {
     console.log(err);
   }
 }
-
 globalThis.addressChanger = addressChanger;
 
-const test = () => {
-  const addr = "5CJK5pSJWjZ7V3tiuo6jJPZKX7hxSPhNQds1g28icsrmUXaT";
-  const decoded = decodeAddress(addr);
-  const encoded = encodeAddress(decoded, "2");
-  console.log(encoded.toString())
-}
+// const test = () => {
+//   const addr = "5CJK5pSJWjZ7V3tiuo6jJPZKX7hxSPhNQds1g28icsrmUXaT";
+//   const decoded = decodeAddress(addr);
+//   const encoded = encodeAddress(decoded, "2");
+//   console.log(encoded.toString())
+// }
 
 // test();
 
