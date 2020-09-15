@@ -52,6 +52,6 @@ Web3 Foundation and Parity Technologies remain committed to both networks going 
 
 ## Explore more
 
-..*[About Kusama](kusama.network/)
-..*[The Kusama Wiki](guide.kusama.network/)
-..*[Kusama on polkadot.js](dotapps.io/?kusama)
+- [About Kusama](https://kusama.network)
+- [The Kusama Wiki](https://guide.kusama.network)
+- [Kusama on polkadot.js](https://kusama.dotapps.io)
