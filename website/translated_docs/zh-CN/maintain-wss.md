@@ -6,7 +6,7 @@ sidebar_label: 设置安全远程 WebSocket 连接
 
 You might want to host a node on one server and then connect to it from a UI hosted on another, e.g. [Polkadot-JS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
 
-_注意：**仅应**将同步节点用作某些 dapp 或项目的后端，才能执行此操作。 永远不要打开您的验证人节点 websockets - 并且没有理由这样做，这只会导致安全问题！_
+_Note: this should **only** be done for sync nodes used as back-end for some dapps or projects. Never open websockets to your validator node - there's no reason to do that and it can only lead to security gaffes._
 
 在本指南中，我们将使用在 $10 DigitalOcean 上的 Ubuntu 18.04。 我们将假定你正在使用类似的操作系统，并且你已经安装 nginx (如果没有，运行 `sudo apt-get install nginx`)。
 
@@ -112,8 +112,8 @@ Every websocket connection bootstraps itself with `https` first, so to allow the
 
 ## Connecting to the node
 
-Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch node. Activate the "Custom Endpoint" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`!
+Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch the node. Activate the "Development" toggle and input your node's address - either the domain or the IP address. Remember to prefix with `wss://`.
 
-![A sync-in-progress chain connected to Polkadot UI](/img/wss/wss01.jpg)
+![A sync-in-progress chain connected to Polkadot-JS UI](assets/maintain-wss-image.png)
 
-Congratulations - you have a secure remote connect setup for your Substrate node.
+Now you have a secure remote connect setup for your Substrate node.

@@ -235,9 +235,9 @@ For those who are interested in knowing more about the design of inflation model
 - 如果发现验证人行为不当，将执行处罚（请参见[ #slashing ](#slashing)）。
 - 您将想代币用于平行链插槽。
 
-## 波卡会有多少链验证人数量?
+## How many validators does Polkadot have?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
+Polkadot started with 20 open validator positions and has opened more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has over 500 validator slots, and the plan is also to slowly grow this number to approximately 1000.
 
 ## 资源
 
