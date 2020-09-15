@@ -185,6 +185,11 @@ nominators.
 
 ![staking](assets/NPoS/article-2.png)
 
+> Note: while the experience of a nominator is _similar_ to "set it and forget it", in reality there
+> are many reasons to keep an eye on one's validators and keep optimizing the nominations for best
+> returns and reduced risk. We talk more about this on the
+> [How to Nominate](maintain-guides-how-to-nominate-polkadot) page.
+
 ### Want to stake DOT?
 
 - [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
@@ -367,9 +372,9 @@ would then be split between the validator and their nominators based on the prop
 nominator had. Note that validators can put up their own stake, and for this calculation, their
 stake acts just as if they were another nominator.
 
-Rewards can be directed to the same account (controller) or to the stash account (and either
-increasing the staked value or not increasing the staked value). It is also possible to top-up /
-withdraw some bonded DOT without having to un-stake everything.
+Rewards can be directed to the same account (controller), to the stash account (and either
+increasing the staked value or not increasing the staked value), or to a completely custom account.
+It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
 
 For specific details about validator payouts, please see
 [this guide](maintain-guides-validator-payout).
