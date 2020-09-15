@@ -4,6 +4,9 @@ title: Using Ledger Devices
 sidebar_label: Ledger Devices
 ---
 
+> Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
+> browsers like Brave and Chrome.
+
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
 device that does not get directly exposed to your computer or the internet. It is strongly
