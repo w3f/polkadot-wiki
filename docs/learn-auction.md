@@ -88,9 +88,9 @@ slot for any contiguous range of the slot duration. Parachains may lease more th
 time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by
 leasing a contiguous slot.
 
-> Note: Individual parachain slots are not unique with each other, this means that parachains do not
-> need to always inhabit the same slot, but as long as it inhabits any slot it can continue as a
-> parachain.
+> Note: Individual parachain slots are fungible. This means that parachains do not
+> need to always inhabit the same slot, but as long as a parachain inhabits any slot 
+> it can continue as a parachain.
 
 ## How does bidding work?
 
