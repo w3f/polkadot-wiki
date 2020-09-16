@@ -4,6 +4,13 @@ title: Parachain Slots Auction
 sidebar_label: Parachain Slots Auction
 ---
 
+For a [parachain](learn-parachains) to be added to Polkadot it must inhabit one of the available
+_parachain slots_. A parachain slot is a scarce resource on Polkadot and only a limited amount will
+be available. As parachains ramp up there may only be a few slots that are unlocked every few
+months. The goal is to eventually have 100 parachain slots available on Polkadot (these will be
+split between parachains and the [parathread pool](learn-parathreads)). If a parachain wants to have
+guarenteed block inclusion at every Relay Chain block, it must acquire a parachain slot.
+
 The parachain slots of Polkadot will be sold according to an unpermissioned
 [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
 secure on a blockchain.
@@ -81,6 +88,10 @@ slot for any contiguous range of the slot duration. Parachains may lease more th
 time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by
 leasing a contiguous slot.
 
+> Note: Individual parachain slots are not unique with each other, this means that parachains do not
+> need to always inhabit the same slot, but as long as it inhabits any slot it can continue as a
+> parachain.
+
 ## How does bidding work?
 
 ```
@@ -111,24 +122,28 @@ for which ranges. The slot ranges may be any continuous range of the periods 1 -
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
 > way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
-A bidder configuration for a single bidder may look like this:
+A bidder configuration for a single bidder may look like the following psuedocode example:
 
 ```js
-Bids[
-  ({
+const bids = [
+  {
     range: [1, 2, 3, 4],
-    bond_amount: 300, //DOT
+    bond_amount: 300, // DOT
   },
   {
     range: [1, 2],
-    bond_amount: 777, //DOT
+    bond_amount: 777, // DOT
   },
   {
     range: [2, 3, 4],
     bond_amount: 450, // DOT
-  })
+  },
 ];
 ```
+
+The important concept to understand from this example is that bidders may submit different
+configurations at different prices (`bond_amounts`). However, only one of these bids would be
+eligible to win exclusive of the others.
 
 The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the
 amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the
