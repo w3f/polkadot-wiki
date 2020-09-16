@@ -231,10 +231,11 @@ latter is what Polkadot uses as a base for its randomness.
 
 ### Are there other ways of acquiring a slot besides the candle auction?
 
-The only other way besides the candle auction to acquire a parachain slot is through a secondary market
-where an actor who has already won a parachain slot can resell the slot along with the associated deposit
-of DOT that is locked up to another bidder. This would allow the seller to get liquid DOT in exchange
-for the parachain slot and the buyer to acquire the slot as well as the deposited DOT.
+The only other way besides the candle auction to acquire a parachain slot is through a secondary
+market where an actor who has already won a parachain slot can resell the slot along with the
+associated deposit of DOT that is locked up to another buyer. This would allow the seller to get
+liquid DOT in exchange for the parachain slot and the buyer to acquire the slot as well as the
+deposited DOT.
 
 ## Resources
 
