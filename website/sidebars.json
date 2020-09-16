@@ -8,8 +8,9 @@
       "research",
       "community",
       "contributing",
-      "contributors",	
+      "contributors",
       "glossary",
+      "ens",
       "learn-ledger",
       "faq"
     ],
@@ -114,7 +115,7 @@
     ],
     "Maintain": [
       "maintain-index",
-	"maintain-polkadot-parameters",	
+      "maintain-polkadot-parameters",
       {
         "type": "subcategory",
         "label": "Nodes and Dapps",
