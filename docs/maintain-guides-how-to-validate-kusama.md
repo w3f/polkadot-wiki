@@ -242,10 +242,11 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](https://wiki.polkadot.network/en/latest/polkadot/learn-staking/#reward-distribution).
-  Starting with runtime [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23),
-  payouts can go to any custom address. If you'd like to redirect payments to an account that is
-  neither the controller nor the stash account, set one up beforehand. Note that it is extremely
-  unsafe to set an exchange address as the recipient of the staking rewards.
+  Starting with runtime version v2023 natively included in client version
+  [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any
+  custom address. If you'd like to redirect payments to an account that is neither the controller
+  nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as
+  the recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
