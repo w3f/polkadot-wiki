@@ -60,7 +60,9 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 
 在开始一组平行链插槽租赁之前的六个月中，将进行几次拍卖。
 
-投标人将提交一份投标配置，以指定他们愿意锁定的 DOT 金额以及范围。 时隙范围可以是时段1-4的任何连续范围。
+Bidders will submit a configuration of bids specifying the DOT amount they are willing to bond and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+
+> Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
 单个投标人的投标人配置可能如下所示：
 
