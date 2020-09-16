@@ -64,8 +64,10 @@ const siteConfig = {
     "/js/custom.js",
     "/js/klaro-config.js",
     "/js/klaro.js",
+    '/js/packaged/addressChanger.js',
     "/js/clipboard.min.js",
     "/js/copycode.js",
+
   ],
 
   stylesheets: [
