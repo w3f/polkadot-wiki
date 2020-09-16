@@ -60,7 +60,9 @@ Each parachain slot has a maximum duration of 2 years. Each 6 month interval in 
 
 Several auctions will take place in the preceding six months before a set of parachain slot leases begin.
 
-Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+Bidders will submit a configuration of bids specifying the DOT amount they are willing to bond and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+
+> Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
 Konfigurasi penawar untuk satu penawar mungkin terlihat seperti ini:
 
