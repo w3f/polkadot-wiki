@@ -154,3 +154,37 @@ the primary account could just set a new proxy to replace it.
 By creating multiple accounts that act for a single account, it lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
 participate in a network.
+
+## Proxy Deposits
+
+Proxies require deposits in the native currency (i.e. DOT or KSM) in order to be created. The
+deposit is required because adding a proxy requires some storage space on-chain, which must be
+replicated across every peer in the network. Due to the costly nature of this, these functions could
+open up the network to a Denial-of-Service attack. In order to defend against this attack, proxies
+require a deposit to be locked while the storage space is consumed over the life time of the proxy.
+When the proxy is removed, so is the storage space, and therefore the deposit is returned.
+
+The deposits are calculated in the runtime, and the function can be found
+[in the runtime code](https://github.com/paritytech/polkadot/blob/e75ae5b712ea4faffce753a04d81b636a22066d0/runtime/polkadot/src/lib.rs#L751).
+For example, the deposits are calculated in Polkadot with the following functions:
+
+```rust
+// One storage item; key size 32, value size 8; .
+pub const ProxyDepositBase: Balance = deposit(1, 8);
+// Additional storage item size of 33 bytes.
+pub const ProxyDepositFactor: Balance = deposit(0, 33);
+```
+
+The `ProxyDepositBase` is the required amount to be locked up for an account to have a proxy list.
+For every proxy the account has an additonal amount defined by the `ProxyDepositFactor` is locked up
+as well.
+
+On Polkadot the `ProxyDepositBase` is {{dot_proxy_deposit_base}} and the `ProxyDepositFactor` is
+{{dot_proxy_deposit_factor}}.
+
+So what this boils down to is that the required deposit amount for one proxy on Polkadot is equal to
+(in DOT):
+
+```
+{{dot_proxy_deposit_base}} + {{dot_proxy_deposit_factor}} * num_proxies
+```
