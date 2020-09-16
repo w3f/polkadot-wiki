@@ -94,6 +94,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ![staking](assets/NPoS/article-2.png)
 
+> Note: while the experience of a nominator is _similar_ to "set it and forget it", in reality there are many reasons to keep an eye on one's validators and keep optimizing the nominations for best returns and reduced risk. We talk more about this on the [How to Nominate](maintain-guides-how-to-nominate-polkadot) page.
+
 ### Want to stake DOT?
 
 - [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot network.
@@ -202,7 +204,7 @@ Validators can create a cut of the reward that is not shared with the nominators
 
 For example, assume the block reward for a validator is 10 DOT. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT would then be split between the validator and their nominators based on the proportion of stake each nominator had. Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
 
-Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
+Rewards can be directed to the same account (controller), to the stash account (and either increasing the staked value or not increasing the staked value), or to a completely custom account. It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
 
 For specific details about validator payouts, please see [this guide](maintain-guides-validator-payout).
 
