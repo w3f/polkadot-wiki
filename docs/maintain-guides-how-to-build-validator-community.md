@@ -9,7 +9,7 @@ Validators are welcome to promote their node in the channels listed below or oth
 platforms to let more people know about your validator stats, what have you done for the
 network, and why nominators should support your work. There are multiple ways to help you to get
 nominations from the community, for example, write a staking tutorial in a specific language that
-targets those communities, provide staking tooling to the community, etc..
+targets those communities, provide staking tooling to the community, etc.
 
 ## Channels
 
