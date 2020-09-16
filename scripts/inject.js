@@ -41,12 +41,12 @@ api.ApiPromise.create({provider: wsProvider}).then(function (instance) {
             let result = null;
             try {
                 const key = computed.toCamelCase(replacement.tpl);
-                console.log(key)
+                console.log('Getting', key)
                 result = computed[key];
             } catch (e) {
                 console.log(e)
             }
-            filledDict["{{" + replacement.tpl + "}}"] = result || replacement.default;
+            filledDict["{{ " + replacement.tpl + " }}"] = result || replacement.default;
             return;
         }
 

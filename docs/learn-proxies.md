@@ -179,12 +179,12 @@ The `ProxyDepositBase` is the required amount to be locked up for an account to 
 For every proxy the account has an additonal amount defined by the `ProxyDepositFactor` is locked up
 as well.
 
-On Polkadot the `ProxyDepositBase` is {{dot_proxy_deposit_base}} and the `ProxyDepositFactor` is
-{{dot_proxy_deposit_factor}}.
+On Polkadot the `ProxyDepositBase` is {{ dot_proxy_deposit_base }} and the `ProxyDepositFactor` is
+{{ dot_proxy_deposit_factor }}.
 
 So what this boils down to is that the required deposit amount for one proxy on Polkadot is equal to
 (in DOT):
 
 ```
-{{dot_proxy_deposit_base}} + {{dot_proxy_deposit_factor}} * num_proxies
+{{ dot_proxy_deposit_base }} + {{ dot_proxy_deposit_factor }} * num_proxies
 ```
