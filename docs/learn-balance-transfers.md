@@ -10,6 +10,10 @@ already [created an account](learn-account-generation) and have some funds that 
 
 ## Polkadot-JS Apps
 
+> NOTE: In this walkthrough we will be using the Polkadot network. If you would like to switch to
+> Kusama or a different network, you can change it by clicking the top left navigation dropdown and
+> selecting a different network.
+
 Let's begin by opening up the [Polkadot-JS Apps][]. There are two ways to make a balance transfer:
 
 1. By using the "Transfer" tab in the "Accounts" dropdown (located on the top navigational menu).
