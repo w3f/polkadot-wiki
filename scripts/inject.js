@@ -2,6 +2,7 @@ const replace = require('replace-in-file');
 const yargs = require('yargs');
 const replacements = require("./inject-dict.json");
 const api = require("@polkadot/api");
+const computed = require("./computed");
 
 const argv = yargs
     .option('node', {
@@ -36,6 +37,18 @@ api.ApiPromise.create({provider: wsProvider}).then(function (instance) {
 
     console.log("Connected");
     replacements.forEach(async function (replacement) {
+        if (replacement.computed) {
+            let result = null;
+            try {
+                const key = computed.toCamelCase(replacement.tpl);
+                console.log(key)
+                result = computed[key];
+            } catch (e) {
+                console.log(e)
+            }
+            filledDict["{{" + replacement.tpl + "}}"] = result || replacement.default;
+            return;
+        }
 
         let chainValue = undefined;
         try {
@@ -61,6 +74,7 @@ api.ApiPromise.create({provider: wsProvider}).then(function (instance) {
         filledDict["{{ " + replacement.tpl + " }}"] = chainValue || replacement.default;
     });
 }).catch(function(e){
+    console.log(e);
     console.error("Error connecting! Check your node URL and make sure its websockets are open, secure if remote (wss), and allow RPC from all.");
     process.exit(1);
 });
