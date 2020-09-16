@@ -7,6 +7,11 @@ sidebar_label: Ledger Devices
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
 > browsers like Brave and Chrome.
 
+> Warning: Because of a recent runtime upgrade to Kusama, the Ledger app hosted on Ledger's app
+> store in Ledger Live does not work. A fix has already been submitted and is pending review, but if
+> you urgently need to interact with your Ledger account, follow the
+> [manual installation instructions](#using-the-developer-release).
+
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
 device that does not get directly exposed to your computer or the internet. It is strongly
@@ -89,30 +94,38 @@ default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
 
 Click "Save" to keep your settings.
 
-Now when you go to the "Accounts" tab you will see a new button that says "Query Ledger". Ensure
-that your Ledger device is unlocked and you have navigated into the Polkadot application, then click
-this button.
+Now when you go to the "Accounts" tab you will see a new button that says "Add Ledger". Ensure that
+your Ledger device is unlocked and you have navigated into the Polkadot application, then click this
+button.
 
-![Query Ledger button in PolkadotJS](assets/ledger/query-ledger.png)
+![Add Ledger button in PolkadotJS](assets/ledger/query-ledger.png)
 
-Depending on your browser and its security settings, you might need to confirm the USB connection
-through a popup like the one below:
+A popup will appear asking you to select an account and derivation path.
 
-![Display of the Ledger account in the Accounts list of PolkadotJS](assets/ledger/query-device.png)
+![Picking an account and derivation path](assets/ledger/add-account.png)
 
-You should be able to scroll down and find a new account on the page named "Ledger". Under the type
-column, the account will also show "ledger".
+The first option lets you select an account. You can have multiple accounts on a single Ledger
+device. The second dropdown lets you pick a derivation path - think of it like a formula from which
+child accounts are generated. If in doubt, pick the first option for both.
 
-![Confirm device connection popup](assets/ledger/ledger-balance.png)
+Once you confirm your selection, depending on your browser and its security settings, you might need
+to confirm the USB connection through a popup like the one below when adding the Ledger device for
+the first time:
+
+![Display the device connection popup](assets/ledger/query-device.png)
+
+You should now be able to scroll down and find a new account on the page with the type "ledger".
+
+![Displaying the Ledger account in the list](assets/ledger/ledger-balance.png)
 
 You can now use this account to interact with Polkadot on Polkadot-JS Apps and it will prompt your
 ledger for confirmation when you initiate a transaction.
 
 ### Confirming the Address on your Device
 
-On the "Accounts" tab, find your Ledger-connected account (the one called "Ledger"). Click on the
-three vertical dots at the end of the row. This will open a new menu, here you can click the "Show
-address on hardware device" option to display the address on your device.
+On the "Accounts" tab, find your Ledger-connected account. Click on the three vertical dots at the
+end of the row. This will open a new menu, here you can click the "Show address on hardware device"
+option to display the address on your device.
 
 ![Options menu of an account in the Accounts screen of PolkadotJS](assets/ledger-4.png)
 
@@ -161,13 +174,12 @@ method is to use [Polkadot-JS Apps][].
 
 ### Receiving a Transfer
 
-In order to receive a transfer on the account that is stored on your Ledger device, you will need to
+In order to receive a transfer on the accounts stored on your Ledger device, you will need to
 provide the sender (i.e. the payer) with your address.
 
-The easiest way to get your address is to click on the account name (Ledger) which will open a
-sidebar. Your address will be shown in this sidebar, along with some other information. Another
-method is just clicking on your account's avatar icon - this immediately copies your address to the
-clipboard.
+The easiest way to get your address is to click on the account name which will open a sidebar. Your
+address will be shown in this sidebar, along with some other information. Another method is just
+clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
 > **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
 > by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
