@@ -161,7 +161,7 @@ Proxies require deposits in the native currency (i.e. DOT or KSM) in order to be
 deposit is required because adding a proxy requires some storage space on-chain, which must be
 replicated across every peer in the network. Due to the costly nature of this, these functions could
 open up the network to a Denial-of-Service attack. In order to defend against this attack, proxies
-require a deposit to be locked while the storage space is consumed over the life time of the proxy.
+require a deposit to be reserved while the storage space is consumed over the life time of the proxy.
 When the proxy is removed, so is the storage space, and therefore the deposit is returned.
 
 The deposits are calculated in the runtime, and the function can be found
