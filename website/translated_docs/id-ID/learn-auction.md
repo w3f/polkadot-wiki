@@ -4,6 +4,8 @@ title: Slot lelang Parachain
 sidebar_label: Slot lelang Parachain
 ---
 
+For a [parachain](learn-parachains) to be added to Polkadot it must inhabit one of the available _parachain slots_. A parachain slot is a scarce resource on Polkadot and only a limited amount will be available. As parachains ramp up there may only be a few slots that are unlocked every few months. The goal is to eventually have 100 parachain slots available on Polkadot (these will be split between parachains and the [parathread pool](learn-parathreads)). If a parachain wants to have guarenteed block inclusion at every Relay Chain block, it must acquire a parachain slot.
+
 The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be secure on a blockchain.
 
 ## Mekanisme lelang lilin
@@ -38,6 +40,8 @@ When an account bids, they can place bids for any of the available periods or ra
 
 The slot durations are capped to 2 years and divided into 6-month periods. Parachains may lease a slot for any contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by leasing a contiguous slot.
 
+> Note: Individual parachain slots are fungible. This means that parachains do not need to always inhabit the same slot, but as long as a parachain inhabits any slot it can continue as a parachain.
+
 ## Bagaimana cara kerja penawaran?
 
 ```
@@ -64,24 +68,26 @@ Bidders will submit a configuration of bids specifying the DOT amount they are w
 
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
-Konfigurasi penawar untuk satu penawar mungkin terlihat seperti ini:
+A bidder configuration for a single bidder may look like the following psuedocode example:
 
 ```js
-Bids[
-  ({
+const bids = [
+  {
     range: [1, 2, 3, 4],
-    bond_amount: 300, //DOT
+    bond_amount: 300, // DOT
   },
   {
     range: [1, 2],
-    bond_amount: 777, //DOT
+    bond_amount: 777, // DOT
   },
   {
     range: [2, 3, 4],
     bond_amount: 450, // DOT
-  })
+  },
 ];
 ```
+
+The important concept to understand from this example is that bidders may submit different configurations at different prices (`bond_amounts`). However, only one of these bids would be eligible to win exclusive of the others.
 
 The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
@@ -91,13 +97,13 @@ A random number, which is based on the VRF used by Polkadot, is determined at ea
 
 #### Non-bersaing
 
-Ada satu slot parachain yang tersedia.
+There is one parachain slot available.
 
 Alice bids `20 DOT` for the range 1 - 2.
 
 Bob bids `30 DOT` for the range 3 - 4.
 
-Lelang berakhir.
+The auction ends.
 
 Alice bonds `20 DOT` and will have the parachain slot for the first year.
 
@@ -105,7 +111,7 @@ Bob bonds `30 DOT` and will have the parachain slot for the second year.
 
 #### Bersaing
 
-Ada satu slot parachain yang tersedia.
+There is one parachain slot available.
 
 Charlie bids `75 DOT` for the range 1 - 4.
 
@@ -138,6 +144,10 @@ The method for dividing the parachain slots into six month intervals was partly 
 ### Mengapa keacakan sulit pada blockchain?
 
 Randomness is problematic for blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify opens the possibility for actors to attempt to alter or manipulate the randomness. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.
+
+### Are there other ways of acquiring a slot besides the candle auction?
+
+The only other way besides the candle auction to acquire a parachain slot is through a secondary market where an actor who has already won a parachain slot can resell the slot along with the associated deposit of DOT that is locked up to another buyer. This would allow the seller to get liquid DOT in exchange for the parachain slot and the buyer to acquire the slot as well as the deposited DOT.
 
 ## Sumber daya
 
