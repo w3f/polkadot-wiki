@@ -18,8 +18,8 @@ does not expose it to your computer or the internet. It is strongly recommend to
 wallet if you are managing a significant amount of funds.
 
 The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of
-the transaction types of the network (a notable exception is the "Batch" transaction from the Utility
-pallet).
+the transaction types of the network (a notable exception is the "Batch" transaction from the
+Utility pallet).
 
 ## Requirements
 
