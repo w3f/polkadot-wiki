@@ -161,12 +161,11 @@ Proxies require deposits in the native currency (i.e. DOT or KSM) in order to be
 deposit is required because adding a proxy requires some storage space on-chain, which must be
 replicated across every peer in the network. Due to the costly nature of this, these functions could
 open up the network to a Denial-of-Service attack. In order to defend against this attack, proxies
-require a deposit to be reserved while the storage space is consumed over the life time of the proxy.
-When the proxy is removed, so is the storage space, and therefore the deposit is returned.
+require a deposit to be reserved while the storage space is consumed over the life time of the
+proxy. When the proxy is removed, so is the storage space, and therefore the deposit is returned.
 
-The deposits are calculated in the runtime, and the function can be found
-in the runtime code.
-For example, the deposits are calculated in Polkadot with the following functions:
+The deposits are calculated in the runtime, and the function can be found in the runtime code. For
+example, the deposits are calculated in Polkadot with the following functions:
 
 ```rust
 // One storage item; key size 32, value size 8; .
@@ -175,9 +174,9 @@ pub const ProxyDepositBase: Balance = deposit(1, 8);
 pub const ProxyDepositFactor: Balance = deposit(0, 33);
 ```
 
-The `ProxyDepositBase` is the required amount to be locked up for an account to have a proxy list.
-For every proxy the account has an additonal amount defined by the `ProxyDepositFactor` is reserved
-as well.
+The `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy list
+(creates one new item in storage). For every proxy the account has, an additonal amount defined by
+the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
 On Polkadot the `ProxyDepositBase` is {{ dot_proxy_deposit_base }} and the `ProxyDepositFactor` is
 {{ dot_proxy_deposit_factor }}.
