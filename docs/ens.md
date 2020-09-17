@@ -12,7 +12,9 @@ layer of usability on top of the regular wallet user experience.
 > Note: You will need an ENS name and an Ethereum account with some ether in it to follow along with
 > this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
 > subdomain registrars like [Nameth](https://nameth.io). You will also need some way to use the
-> Ethereum address - we recommend [Frame](https://frame.sh/) or [Metamask](https://metamask.io).
+> Ethereum address - following this guide on a personal computer is recommended. Wallets like
+> [Frame](https://frame.sh/) and [Metamask](https://metamask.io) are safe and will make interacting
+> with the Ethereum blockchain through your browser very easy.
 
 Despite living on the Ethereum blockchain, the ENS system has multi-chain support. In this guide
 you'll go through the process of adding a KSM and DOT address to ENS. We cover both KSM and DOT to
