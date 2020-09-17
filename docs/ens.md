@@ -9,10 +9,10 @@ users to claim domain names like `bruno.eth`. Supporting wallets can then allow 
 domains instead of long and unwieldy addresses. This prevents phishing, fraud, typos, and adds a
 layer of usability on top of the regular wallet user experience.
 
-_Note: You will need an ENS name and an Ethereum account with some ether in it to follow along with
-this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
-subdomain registrars like [Nameth](https://nameth.io). You will also need some way to use the
-Ethereum address - we recommend [Frame](https://frame.sh/) or [Metamask](https://metamask.io)._
+> Note: You will need an ENS name and an Ethereum account with some ether in it to follow along with
+> this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
+> subdomain registrars like [Nameth](https://nameth.io). You will also need some way to use the
+> Ethereum address - we recommend [Frame](https://frame.sh/) or [Metamask](https://metamask.io).
 
 Despite living on the Ethereum blockchain, the ENS system has multi-chain support. In this guide
 you'll go through the process of adding a KSM and DOT address to ENS. We cover both KSM and DOT to
@@ -93,7 +93,7 @@ wallet decide to implement ENS before the official ENS App does, the resolving w
 
 ### Wallet Support
 
-- no wallets support ENS names for KSM and DOT transfers yet
+There is no wallet support for ENS names for either KSM or DOT at this time.
 
 ### Relevant links
 
