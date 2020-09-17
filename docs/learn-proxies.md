@@ -176,7 +176,7 @@ pub const ProxyDepositFactor: Balance = deposit(0, 33);
 ```
 
 The `ProxyDepositBase` is the required amount to be locked up for an account to have a proxy list.
-For every proxy the account has an additonal amount defined by the `ProxyDepositFactor` is locked up
+For every proxy the account has an additonal amount defined by the `ProxyDepositFactor` is reserved
 as well.
 
 On Polkadot the `ProxyDepositBase` is {{ dot_proxy_deposit_base }} and the `ProxyDepositFactor` is
