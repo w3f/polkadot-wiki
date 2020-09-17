@@ -7,8 +7,8 @@ sidebar_label: Building Parachains on Rococo
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing
 parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
 send transfers and messages between parachains and the Relay Chain. Every message is sent to the
-Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs parachains
-Tick, Trick and Track.
+Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs three test
+parachains (Tick Trick and Track), as well as several externally developed parachains.
 
 ## Who are building Parachains?
 
@@ -86,7 +86,7 @@ XCMP, lateral transfers would allow for messages to be sent directly from one pa
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
 being. Lateral transfers work through the depository model, which means that in order to transfer
 tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited on
-chain 300.
+chain 300. Lateral transfers are called HRMP, Horizontal Relay-Chain Message Passing.
 
 Before we can actually send funds from one parachain to another, we must ensure that the chain's
 account on the recipient chain has some funds in it. In this example, Alice will be sending some
