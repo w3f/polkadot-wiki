@@ -19,19 +19,19 @@ Governance on both Polkadot and Kusama is designed to be decentralized and permi
 
 There are a few important distinctions to be made.
 
-![polkadot_vs_kusama](/img/polkadot_vs_kusama.png)
+![polkadot_vs_kusama](assets/Cousins_2.png)
 
 ### Speed
 
 The first key technical difference between Polkadot and Kusama is that Kusama has modified governance parameters that allow for faster upgrades.
-Kusama is up to four times faster than Polkadot, with seven days for token holders to vote on referendums followed by an enactment period of eight days, after which the referendum will be enacted on the chain. This means stakeholders need to stay active and vigilant if they want to keep up with all the proposals, referenda , and upgrades, and validators on Kusama often need to update on short notice.
+Kusama is up to four times faster than Polkadot, with seven days for token holders to vote on referendums followed by an enactment period of eight days, after which the referendum will be enacted on the chain. This means stakeholders need to stay active and vigilant if they want to keep up with all the proposals, referenda , and upgrades, and validators on Kusama often need to update at short notice.
 On Polkadot, votes last 28 days followed by an enactment period of 28 days.
 This does not mean that the Kusama blockchain itself is faster, in the sense of faster block times or transaction throughput (these are the same on both networks), but that there's a shorter amount of time between governance events such as proposing new referenda, voting, and enacting approved upgrades. This allows Kusama to adapt and evolve faster than Polkadot.
 
 ### Lean setups
 
 Teams wishing to run a parachain need to bond tokens as security. The bonding requirement on Kusama is likely to be lower than on Polkadot.
-Kusama validators can also benefit from the [1000 Validators Program](?utm_source=Twitter&utm_medium=social%20media&utm_campaign=1000_validator_program), which helps them kickstart their Kusama nodes with nominations from Web3 Foundation and Parity Technologies.
+Kusama validators can also benefit from the [1000 Validators Program](https://polkadot.network/join-kusamas-thousand-validators-programme/), which helps them kickstart their Kusama nodes with nominations from Web3 Foundation and Parity Technologies.
 For those who want to validate on Kusama *and* Polkadot, the same setup and infrastructure can be used for both networks.
 
 ### Use cases
