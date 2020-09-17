@@ -137,6 +137,10 @@
         "title": "Kusama",
         "sidebar_label": "主页"
       },
+      "kusama-ledger": {
+        "title": "Using Ledger Devices",
+        "sidebar_label": "Ledger Devices"
+      },
       "kusama-parameters": {
         "title": "Kusama Parameters",
         "sidebar_label": "Parameters"
@@ -173,9 +177,17 @@
         "title": "可用性和有效性",
         "sidebar_label": "可用性和有效性"
       },
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
+      },
       "learn-bridges": {
         "title": "桥接",
         "sidebar_label": "桥接"
+      },
+      "learn-collator": {
+        "title": "Collator",
+        "sidebar_label": "Collator"
       },
       "learn-comparisons-dfinity": {
         "title": "Dfinity 与 Polkadot 区别",
@@ -233,6 +245,14 @@
         "title": "Polkadot 上线流程",
         "sidebar_label": "Polkadot 上线流程"
       },
+      "learn-ledger": {
+        "title": "Using the Polkadot Ledger Application",
+        "sidebar_label": "Ledger Application"
+      },
+      "learn-nominator": {
+        "title": "Nominator",
+        "sidebar_label": "Nominator"
+      },
       "learn-parachains": {
         "title": "平行链",
         "sidebar_label": "平行链"
@@ -277,21 +297,17 @@
         "title": "交易费用",
         "sidebar_label": "交易费用"
       },
-      "learn-balance-transfers": {
-        "title": "Balance Transfers",
-        "sidebar_label": "How to transfer Balances"
-      },
       "learn-treasury": {
         "title": "财政库",
         "sidebar_label": "财政库"
       },
+      "learn-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
+      },
       "learn-wasm": {
         "title": "WebAssembly (Wasm)",
         "sidebar_label": "WebAssembly (Wasm)"
-      },
-      "maintain-collator": {
-        "title": "收集人",
-        "sidebar_label": "收集人"
       },
       "maintain-errors": {
         "title": "错误和如何解决",
@@ -322,8 +338,8 @@
         "sidebar_label": "成为提名人 (Kusama)"
       },
       "maintain-guides-how-to-nominate-polkadot": {
-        "title": "成为提名人 (Polkadot)",
-        "sidebar_label": "成为提名人 (Polkadot)"
+        "title": "How to Nominate on Polkadot",
+        "sidebar_label": "How to Nominate on Polkadot"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "设置哨兵节点",
@@ -334,8 +350,8 @@
         "sidebar_label": "如何把节点设定为 `systemd` 进程运行"
       },
       "maintain-guides-how-to-unbond": {
-        "title": "停止作为提名人",
-        "sidebar_label": "停止作为提名人"
+        "title": "Unbonding and Rebonding",
+        "sidebar_label": "Unbonding and Rebonding"
       },
       "maintain-guides-how-to-upgrade": {
         "title": "如何升级验证人节点",
@@ -381,10 +397,6 @@
         "title": "网络",
         "sidebar_label": "网络"
       },
-      "maintain-nominator": {
-        "title": "提名人",
-        "sidebar_label": "提名人"
-      },
       "maintain-polkadot-parameters": {
         "title": "Polkadot Parameters",
         "sidebar_label": "Parameters"
@@ -392,10 +404,6 @@
       "maintain-sync": {
         "title": "设置全节点",
         "sidebar_label": "设置全节点"
-      },
-      "maintain-validator": {
-        "title": "验证人",
-        "sidebar_label": "验证人"
       },
       "maintain-wss": {
         "title": "Set up Secure WebSocket for Remote Connections",

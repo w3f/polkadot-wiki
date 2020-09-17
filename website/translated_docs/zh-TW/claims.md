@@ -34,7 +34,7 @@ You will need a Polkadot account to claim your DOT. Please follow the instructio
 
 #### Claiming your DOT with MyCrypto
 
-The Polkadot JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
+The Polkadot-JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
@@ -58,7 +58,7 @@ This will prompt you to select a method for unlocking your wallet.
 
 ![claim-4](assets/new-claims/claim-4.png)
 
-After unlocking your wallet, paste the message from Polkadot JS into the "Message" box.
+After unlocking your wallet, paste the message from Polkadot-JS into the "Message" box.
 
 ![claim-5](assets/new-claims/claim-5.png)
 
@@ -66,7 +66,7 @@ When you click "Sign Message" you will get a JSON output like the one below:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot JS UI and click "Confirm Claim."
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
 ![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
 
@@ -137,11 +137,11 @@ Click on "I Agree" and then "Sign and Submit" to make your free attest transacti
 - Parity Signer
 - Your Polkadot account linked to Polkadot-JS Apps UI
 
-Before claiming, you should import your Polkadot address on Parity Signer to the PolkadotJS apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the PolkadotJS apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
+Before claiming, you should import your Polkadot address on Parity Signer to the Polkadot-JS Apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the Polkadot-JS Apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
 
 ### Go to Polkadot-JS Apps
 
-Proceed to [polkadot-js Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
+Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
 
 ### Make the Attestation
 
@@ -161,7 +161,7 @@ Select the address that you have claimed DOT to during pre-genesis.
 
 ![ps-3](assets/new-claims/ps-03.jpg)
 
-Your address will be displayed in QR code format. You can move the QR code to the camera so that the PolkadotJS Apps can decode it.
+Your address will be displayed in QR code format. You can move the QR code to the camera so that the Polkadot-JS Apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
@@ -189,7 +189,7 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the PolkadotJS Apps to continue.
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the Polkadot-JS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
@@ -201,4 +201,5 @@ When the transaction is included in the block, you will see a green success box 
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
 [Claims app]: https://polkadot.js.org/apps/#/claims
+[claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

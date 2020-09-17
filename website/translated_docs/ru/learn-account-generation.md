@@ -7,9 +7,9 @@ description: Step-by-step guides on generating a Polkadot account.
 
 There are several ways to generate a Polkadot address:
 
-- [Polkadot.js Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
+- [Polkadot{.js} Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Polkadot.js Web Apps](#polkadotjs)
+- [Polkadot-JS Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
 
@@ -29,11 +29,11 @@ For maximum security, the seed should be written down on paper or another non-di
 
 You should definitely not store your seed on any kind of computer that has or may have access to the internet in the future.
 
-## Polkadot.js Browser Plugin
+## Polkadot{.js} Browser Plugin
 
-The polkadot.js plugin provides a reasonable balance of security and usability. It provides a separate local mechanism to generate your address and interact with Polkadot.
+The Polkadot{.js} plugin provides a reasonable balance of security and usability. It provides a separate local mechanism to generate your address and interact with Polkadot.
 
-This method involves installing the polkadot.js plugin and using it as a “virtual vault," separate from your browser, to store your private keys. It also allows signing of transactions and similar functionality.
+This method involves installing the Polkadot{.js} plugin and using it as a “virtual vault," separate from your browser, to store your private keys. It also allows signing of transactions and similar functionality.
 
 It is still running on the same computer you use to connected to the internet with and thus is less secure than using Parity Signer or other air-gapped protocols.
 
@@ -43,7 +43,7 @@ The browser plugin is available for both [Google Chrome](https://chrome.google.c
 
 If you would like to know more or review the code of the plugin yourself, you can visit the Github source [repository](https://github.com/polkadot-js/extension).
 
-After installing the plugin, you should see the orange and white polkadot.js logo in the menu bar of your browser.
+After installing the plugin, you should see the orange and white Polkadot{.js} logo in the menu bar of your browser.
 
 ![plugin-02](assets/accounts/polkadot_plugin_js_02.jpg)
 
@@ -55,15 +55,15 @@ Navigate to [Polkadot Apps](https://polkadot.js.org/apps). Click on the "Account
 
 ### Create Account
 
-Open the polkadot.js browser extension by clicking the logo on the top bar of your browser. You will see a separate browser window open. If you have used this extension before, you may see a list of previously generated accounts. In any case you will see two buttons: “I want to create an account with a new seed” and “I have a pre-existing seed, import the account."
+Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You will see a separate browser window open. If you have used this extension before, you may see a list of previously generated accounts. In any case you will see two buttons: “I want to create an account with a new seed” and “I have a pre-existing seed, import the account."
 
 Click “I want to create an account with a new seed”.
 
 ![plugin-04](assets/accounts/polkadot_plugin_js_04.jpg)
 
-The polkadot.js plugin will then use system randomness to make a new seed for you and display it to you in the form of twelve words.
+The Polkadot{.js} plugin will then use system randomness to make a new seed for you and display it to you in the form of twelve words.
 
-You should back up these keys. It is imperative to store the seed somewhere safe, secret, and secure. If you cannot access your account via polkadot.js for some reason, you can simply re-enter your seed, and have access to your account once again.
+You should back up these keys. It is imperative to store the seed somewhere safe, secret, and secure. If you cannot access your account via Polkadot{.js} for some reason, you can simply re-enter your seed, and have access to your account once again.
 
 ![plugin-05](assets/accounts/polkadot_plugin_js_05.jpg)
 
@@ -127,15 +127,15 @@ For detailed build and usage instructions of subkey, please see [here](https://g
 
 ![subkey-01](assets/accounts/subkey_01.jpg)
 
-## Polkadot.js
+## Polkadot-JS
 
-> Please note! If you use Polkadot.js to create your account and clear your cookies in your browser, your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you store your seed phrase in a safe place, or download the account's JSON file if using the PolkadotJS browser extension. Learn more about account backup and restoration [here](learn-account-restore).
+> Please note! If you use Polkadot-JS to create your account and clear your cookies in your browser, your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you store your seed phrase in a safe place, or download the account's JSON file if using the Polkadot{.js} browser extension. Learn more about account backup and restoration [here](learn-account-restore).
 
-Using the Polkadot.js user interface without the plugin is not recommended. It is the least secure way of generating an account. It should only be used if all of the other methods are not feasible in your situation.
+Using the Polkadot-JS user interface without the plugin is not recommended. It is the least secure way of generating an account. It should only be used if all of the other methods are not feasible in your situation.
 
-### Go to Polkadot Apps
+### Go to Polkadot-JS Apps
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar on the top of your screen.
+Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar on the top of your screen.
 
 ![pjs-01](assets/accounts/polkadot_js_01.png)
 
@@ -237,7 +237,7 @@ Choose which network you would like to create an address on by clicking the name
 
 ### Your Address
 
-The address will be shown as a QR code. You can import your address to the PolkadotJS Apps by going to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
+The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
 

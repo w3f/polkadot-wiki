@@ -43,9 +43,9 @@ Once you have all the necessary information, you will need to:
 
 Parity provides the following tools to help perform these steps.
 
-## Polkadot JS Tools
+## Polkadot-JS Tools
 
-[Polkadot JS Tools](https://github.com/polkadot-js/tools) contains a set of command line tools for
+[Polkadot-JS Tools](https://github.com/polkadot-js/tools) contains a set of command line tools for
 interacting with a Substrate client, including one called "Signer CLI" to create, sign, and
 broadcast transactions.
 

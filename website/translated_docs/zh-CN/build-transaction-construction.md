@@ -38,9 +38,9 @@ Polkadot 有一些所有交易的基本交易信息。
 
 Parity 提供了以下工具来帮助执行这些步骤。
 
-## Polkadot JS 工具
+## Polkadot-JS Tools
 
-[Polkadot JS 工具](https://github.com/polkadot-js/tools) 包含一组命令行工具，用于与 Substrate 客户端交互， 包括一个叫做" Signer CLI"的交易，创建、签名和广播交易。
+[Polkadot-JS Tools](https://github.com/polkadot-js/tools) contains a set of command line tools for interacting with a Substrate client, including one called "Signer CLI" to create, sign, and broadcast transactions.
 
 This example will use the `signer submit` command, which will create and submit the transaction. The `signer sendOffline` command has the exact same API, but will not broadcast the transaction. `submit` and `sendOffline` must be connected to a node to fetch the current metadata and construct a valid transaction. Their API has the format:
 

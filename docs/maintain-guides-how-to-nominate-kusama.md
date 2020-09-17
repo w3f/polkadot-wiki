@@ -23,6 +23,12 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
+Starting with runtime version v2023 natively included in client version
+[0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
+address. If you'd like to redirect payments to an account that is neither the controller nor the
+stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
+recipient of the staking rewards.
+
 ## Using Polkadot-JS UI
 
 ### Step 1: Bond your tokens
@@ -68,8 +74,14 @@ Also be mindful of the reaping threshold - the amount that must remain in an acc
 burned. That amount is 0.01 in Kusama, so it's recommended to keep at least 0.1 KSM in your account
 to be on the safe side.
 
-Choose whatever payment destination sounds good to you. If you're unsure, you can choose "Stash
-account (increase amount at stake)".
+Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash
+account (increase amount at stake)" to simply accrue the rewards into the amount you're staking and
+earn compound interest.
+
+![Payout account selection dropdown with the custom account option highlighted](assets/payout/01.png)
+
+> These concepts have been further explained in Polkadot's
+> [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
 
 ### Step 2: Nominate a validator
 
@@ -137,6 +149,8 @@ has twelve decimal places and is always represented as an integer with zeroes at
 
 - `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
+- `Account` - Pay into a custom account, like so:
+  `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX`.
 - `Controller` - Pay into the controller account.
 
 Example:
