@@ -37,20 +37,20 @@ locally.
 ## How to connect to a Parachains
 
 If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
-you may do so by heading over to the network selection at the top left hand corner of the navigation
-and selecting any parachain of choice. For the purpose of these following examples, we will be using
-the Rococo testnet "Custom Node" underneath "Development", according to the
+you may do so by clicking on the network selection at the top left hand corner of the navigation and
+selecting any parachain of choice. For the purpose of these following examples, we will be using the
+Rococo testnet "Custom Node" underneath "Development", according to the
 [parachain workshop](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling).
 
 ![parachains on polkadotjs](assets/polkadotjs_network_parachains.png)
 
 ## How to make Cross Chain transfers
 
-To send a transfer between parachains, let's start with heading over to "Accounts" > "Transfer".
-From here, you'll need to select the parachain node that you are running. Next, enter in the amount
-that you'd like to send to another parachain. Be sure to select the correct parachain you'd like to
-send an amount to. Once you've hit the "Submit" button, you should see a green notification,
-indicating a successful transfer.
+To send a transfer between parachains, navigate to "Accounts" > "Transfer". From here, you'll need
+to select the parachain node that you are running. Next, enter in the amount that you'd like to send
+to another parachain. Be sure to select the correct parachain you'd like to send an amount to. Once
+you've hit the "Submit" button, you should see a green notification, indicating a successful
+transfer.
 
 ### Downward Transfers
 
