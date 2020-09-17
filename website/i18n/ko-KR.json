@@ -177,9 +177,17 @@
         "title": "Availability and Validity",
         "sidebar_label": "Availability and Validity"
       },
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
+      },
       "learn-bridges": {
         "title": "브릿지들",
         "sidebar_label": "브릿지들"
+      },
+      "learn-collator": {
+        "title": "Collator",
+        "sidebar_label": "Collator"
       },
       "learn-comparisons-dfinity": {
         "title": "Polkadot and Dfinity",
@@ -237,6 +245,14 @@
         "title": "Polkadot Launch Phases",
         "sidebar_label": "Polkadot Launch Phases"
       },
+      "learn-ledger": {
+        "title": "Using the Polkadot Ledger Application",
+        "sidebar_label": "Ledger Application"
+      },
+      "learn-nominator": {
+        "title": "Nominator",
+        "sidebar_label": "Nominator"
+      },
       "learn-parachains": {
         "title": "패러체인 (Parachains)",
         "sidebar_label": "패러체인 (Parachains)"
@@ -281,21 +297,17 @@
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
       },
-      "learn-balance-transfers": {
-        "title": "Balance Transfers",
-        "sidebar_label": "How to transfer Balances"
-      },
       "learn-treasury": {
         "title": "재무관리",
         "sidebar_label": "재무관리"
       },
+      "learn-validator": {
+        "title": "Validator",
+        "sidebar_label": "Validator"
+      },
       "learn-wasm": {
         "title": "웹어셈블리 (WASM; Web Assembly)",
         "sidebar_label": "웹어셈블리 (WASM; Web Assembly)"
-      },
-      "maintain-collator": {
-        "title": "전달자 (Collator)",
-        "sidebar_label": "전달자 (Collator)"
       },
       "maintain-errors": {
         "title": "Errors and How to Resolve Them",
@@ -326,8 +338,8 @@
         "sidebar_label": "Nominator Guide"
       },
       "maintain-guides-how-to-nominate-polkadot": {
-        "title": "Nomination Guide",
-        "sidebar_label": "Nomination Guide"
+        "title": "How to Nominate on Polkadot",
+        "sidebar_label": "How to Nominate on Polkadot"
       },
       "maintain-guides-how-to-setup-sentry-node": {
         "title": "Set Up a Sentry Node - Public Node",
@@ -338,8 +350,8 @@
         "sidebar_label": "Using systemd for the Validator Node"
       },
       "maintain-guides-how-to-unbond": {
-        "title": "Stop Being a Nominator",
-        "sidebar_label": "Stop Being a Nominator"
+        "title": "Unbonding and Rebonding",
+        "sidebar_label": "Unbonding and Rebonding"
       },
       "maintain-guides-how-to-upgrade": {
         "title": "검증자 노드를 업그레이드하는 방법",
@@ -385,10 +397,6 @@
         "title": "Networks",
         "sidebar_label": "Networks"
       },
-      "maintain-nominator": {
-        "title": "노미네이터",
-        "sidebar_label": "노미네이터"
-      },
       "maintain-polkadot-parameters": {
         "title": "Polkadot Parameters",
         "sidebar_label": "Parameters"
@@ -396,10 +404,6 @@
       "maintain-sync": {
         "title": "Set up a Full Node",
         "sidebar_label": "Set up a Full Node"
-      },
-      "maintain-validator": {
-        "title": "Validator",
-        "sidebar_label": "Validator"
       },
       "maintain-wss": {
         "title": "Set up Secure WebSocket for Remote Connections",
