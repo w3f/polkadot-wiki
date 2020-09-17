@@ -84,7 +84,7 @@ enter your address into the `AccountId to Hex` left field, then copy the output 
 ![Filled out information in the contract's write interface](assets/ens/08-min.png)
 
 Clicking Write will initiate a transaction. Note that Etherescan's UI is in beta and might throw a
-GasLimit error. If this happens, modify the gas limit in your wallet to something like 10x the
+"GasLimit" error. If this happens, modify the gas limit in your wallet to something like 10x the
 default. A third or so will get spent, with the rest refunded.
 
 Once the transaction is confirmed, your DOT address will be bound to your ENS domain. Because the
