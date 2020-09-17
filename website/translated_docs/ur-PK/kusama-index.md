@@ -56,5 +56,5 @@ As a KSM holder, you are able to interact with all the features of the Kusama ne
 ### Get updates
 
 - [@kusamanetwork](https://twitter.com/kusamanetwork)
-- [Kusama newsletter](https://kusama.network/newsletter)
+- [Kusama newsletter](http://info.polkadot.network/subscribe)
 - [r/kusama](https://reddit.com/r/kusama)
