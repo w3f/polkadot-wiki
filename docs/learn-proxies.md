@@ -165,7 +165,7 @@ require a deposit to be reserved while the storage space is consumed over the li
 When the proxy is removed, so is the storage space, and therefore the deposit is returned.
 
 The deposits are calculated in the runtime, and the function can be found
-[in the runtime code](https://github.com/paritytech/polkadot/blob/e75ae5b712ea4faffce753a04d81b636a22066d0/runtime/polkadot/src/lib.rs#L751).
+in the runtime code.
 For example, the deposits are calculated in Polkadot with the following functions:
 
 ```rust
