@@ -21,6 +21,8 @@ show two different approaches.
 > Note: DOT can currently only be added using the Resolver method. KSM can be added through both
 > methods described below.
 
+This guide is also available in video format [on Youtube](https://youtu.be/XKjZk-5_mQc).
+
 ## Adding via the UI
 
 The [ENS App](https://app.ens.domains) allows an ENS domain owner to inspect all records bound to
