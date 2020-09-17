@@ -57,7 +57,7 @@ you can double check on the domain's ENS page.
 
 Next, you need to go to the
 [resolver contract's Write Contract interface](https://etherscan.io/address/0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41#writeContract)
-by clicking on _Contract -> Write Contract_, or appending `#writeContract` to the resolver's URL in
+by clicking on "_Contract -> Write Contract_", or appending `#writeContract` to the resolver's URL in
 Etherescan, like so:
 https://etherscan.io/address/0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41#writeContract
 
