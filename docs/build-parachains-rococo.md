@@ -10,7 +10,7 @@ send transfers and messages between parachains and the Relay Chain. Every messag
 Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs three test
 parachains (Tick Trick and Track), as well as several externally developed parachains.
 
-## Who are building Parachains?
+## Who is building Parachains?
 
 As of now, the list of parachains are as follows:
 
