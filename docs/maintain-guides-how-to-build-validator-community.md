@@ -8,7 +8,7 @@ description: Build a Community for Your Validator
 Validators are welcome to promote their node in the channels listed below or other social media
 platforms to let more people know about their validator stats, what they have done for the network,
 and why nominators should support their work. There are multiple ways to help you to get nominations
-from the community For example, write a staking tutorial in a specific language that targets those
+from the community. For example, write a staking tutorial in a specific language that targets those
 communities, provide staking tooling to the community, etc.
 
 ## Channels
