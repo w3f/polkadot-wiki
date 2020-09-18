@@ -27,8 +27,9 @@ Here is a list of what you will need before starting:
 
 - A Ledger Nano S or a Ledger Nano X.
 - The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on
-  the Nano X).- Ledger Live is installed and at version 2.1 or newer (see settings -> about to find
-  out if you're up to date).
+  the Nano X).
+- Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
+  up to date).
 - A web browser is installed that you can use to access [Polkadot-JS Apps][].
 
 ## Installing the Ledger Application
@@ -141,7 +142,7 @@ can use a block explorer like [Polkascan][].
 
 Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
 account. At the far right of the row is located your account's DOT balance. If you expand the
-balance arrow, it will show details of your balance such as locks or reserved amounts. <<<<<<< HEAD
+balance arrow, it will show details of your balance such as locks or reserved amounts.
 
 ![Account row showing empty balance](assets/ledger/ledger-balance.png)
 
