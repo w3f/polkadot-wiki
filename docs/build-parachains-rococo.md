@@ -8,7 +8,7 @@ sidebar_label: Building Parachains on Rococo
 parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
 send transfers and messages between parachains and the Relay Chain. Every message is sent to the
 Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs three test
-parachains (Tick Trick and Track), as well as several externally developed parachains.
+parachains (Tick, Trick, and Track), as well as several externally developed parachains.
 
 ## Who is building Parachains?
 
