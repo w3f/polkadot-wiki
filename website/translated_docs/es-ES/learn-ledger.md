@@ -10,7 +10,7 @@ sidebar_label: Ledger Application
 
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that does not expose it to your computer or the internet. It is strongly recommend to use a hardware wallet if you are managing a significant amount of funds.
 
-The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utilty pallet).
+The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utility pallet).
 
 ## Requirements
 
