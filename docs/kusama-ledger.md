@@ -147,16 +147,10 @@ balance arrow, it will show details of your balance such as locks or reserved am
 
 #### Using a Block Explorer
 
-=======
-
-![Account row showing empty balance](assets/ledger/ledger-balance.png)
-
-#### Using a Block Explorer
-
-> > > > > > > master You can also use a block explorer such as [Polkascan][] or [Subscan][] to check
-> > > > > > > the DOT balance of your account. On these block explorers you can search for your
-> > > > > > > account in the search box and click on it to reveal the details. It will show your DOT
-> > > > > > > balance as well as details about your bonded or locked amounts.
+You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the DOT balance of
+your account. On these block explorers you can search for your account in the search box and click
+on it to reveal the details. It will show your DOT balance as well as details about your bonded or
+locked amounts.
 
 ### Sending a Transfer
 
@@ -180,27 +174,17 @@ method is to use [Polkadot-JS Apps][].
 
 ### Receiving a Transfer
 
-<<<<<<< HEAD In order to receive a transfer on the account that is stored on your Ledger device, you
-will need to provide the sender (i.e. the payer) with your address.
-
-The easiest way to get your address is to click on the account name (Ledger) which will open a
-sidebar. Your address will be shown in this sidebar, along with some other information. Another
-method is just clicking on your account's avatar icon - this immediately copies your address to the
-clipboard. ======= In order to receive a transfer on the accounts stored on your Ledger device, you
-will need to provide the sender (i.e. the payer) with your address.
+In order to receive a transfer on the accounts stored on your Ledger device, you will need to
+provide the sender (i.e. the payer) with your address.
 
 The easiest way to get your address is to click on the account name which will open a sidebar. Your
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-> > > > > > > master
-
 > **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
 > by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
 > will intercept clicks and clipboard requests and can change your copied value in-flight, so being
 > extra vigilant around copy-paste operations makes sense.
-
-# <<<<<<< HEAD
 
 ### Staking
 
@@ -217,7 +201,6 @@ want to stake using an account stored on a Ledger device.
   page.
 - Select "Start Nominating" or "Start Validating" to start nominating or validating.
 - Confirm the transaction on Apps and on the Ledger device.
-  > > > > > > > master
 
 ## Support
 
