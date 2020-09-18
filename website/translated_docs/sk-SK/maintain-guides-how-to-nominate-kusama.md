@@ -14,11 +14,13 @@ Nominators are recommended to set up two separate stash and controller accounts.
 
 You can generate your stash and controller account via any of the recommended methods that are detailed on the [account generation](learn-account-generation) page.
 
-## Using Polkadot UI
+Starting with runtime version v2023 natively included in client version [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom address. If you'd like to redirect payments to an account that is neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as the recipient of the staking rewards.
+
+## Using Polkadot-JS UI
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of KSM that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of KSM that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
 The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you to stake and nominate.
 
@@ -40,7 +42,11 @@ Select a "value bonded" that is **less** than the total amount of KSM you have, 
 
 Also be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 0.01 in Kusama, so it's recommended to keep at least 0.1 KSM in your account to be on the safe side.
 
-Choose whatever payment destination sounds good to you. If you're unsure, you can choose "Stash account (increase amount at stake)".
+Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash account (increase amount at stake)" to simply accrue the rewards into the amount you're staking and earn compound interest.
+
+![Payout account selection dropdown with the custom account option highlighted](assets/payout/01.png)
+
+> These concepts have been further explained in Polkadot's [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
 
 ### Step 2: Nominate a validator
 
@@ -60,7 +66,7 @@ At some point, you might decide to stop nominating one or more validators. You c
 
 ## Using Command-Line Interface (CLI)
 
-Apart from using the PolkadotJS UI to participate in the staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to the PolkadoJS dashboard.
+Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without going to the PolkadoJS dashboard.
 
 ### Step 1: Install @polkadot/api-cli
 
@@ -86,6 +92,7 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMB
 
 - `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
+- `Account` - Pay into a custom account, like so: `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX`.
 - `Controller` - Pay into the controller account.
 
 Example:
@@ -104,7 +111,7 @@ Result:
     }
 ```
 
-You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
+You can check the transaction status by using the value of the `InBlock` in [Polkascan](https://polkascan.io/pre/kusama). Also, you can verify the bonding state under the [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
 
 ### Step 3. Nominate a validator
 
@@ -118,4 +125,4 @@ polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRES
 polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://kusama-rpc.polkadot.io/
 ```
 
-After a few seconds, you should see the hash of the transaction and if you would like to verify the nomination status, you can check that on the PolkadotJS UI as well.
+After a few seconds, you should see the hash of the transaction and if you would like to verify the nomination status, you can check that on the Polkadot-JS UI as well.

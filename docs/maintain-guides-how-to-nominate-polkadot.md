@@ -29,11 +29,17 @@ the Wiki.
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
-## Using Polkadot UI
+Starting with runtime version v23 natively included in client version
+[0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
+address. If you'd like to redirect payments to an account that is neither the controller nor the
+stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
+recipient of the staking rewards.
+
+## Using Polkadot-JS UI
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
 The "Staking Overview" subsection will show you all the active validators and their information -
 their identities, the amount of DOT that are staking for them, amount that is their own provided
@@ -57,14 +63,14 @@ stay in the waiting queue until they have enough DOT backing them (as allocated 
 [Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible
 validator can remain in the queue for a very long time if they never get enough backing.
 
-The "Validator Stat's subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
+The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
 rewards, and slashes.
 
-Pick "Account actions", then click the grey "+ Nominator" button.
+Pick "Account actions", then click the "+ Nominator" button.
 
 You will see a modal window that looks like the below:
-![nominator-update-1](assets/nominator-update-1.png)
+![nominator-update-1](assets/polkadotjs_nominate_button.png)
 
 Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some
 left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are
@@ -75,7 +81,10 @@ burned. That amount is 0.01 DOT on Polkadot, so it's recommended to keep around 
 account to be on the safe side.
 
 Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash
-account (increase amount at stake)" to simply accrue the rewards into the amount you're staking.
+account (increase amount at stake)" to simply accrue the rewards into the amount you're staking and
+earn compound interest.
+
+![Payout account selection dropdown with the custom account option highlighted](assets/payout/01.png)
 
 > These concepts have been further explained in Polkadot's
 > [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
@@ -89,10 +98,10 @@ slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select up to 16 validators. Although you may choose up to 16 validators, due to the
-[Phragmén][] election algorithm your stake may be dispersed in different proportions to any subset
-or all of the validators your choose.
+[Phragmén](learn-phragmen) election algorithm your stake may be dispersed in different proportions
+to any subset or all of the validators your choose.
 
-![Nominating validators](/img/NPoS/nominate.png)
+![Nominating validators](assets/polkadotjs_setup_nominator2.png)
 
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
 will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you
@@ -115,7 +124,7 @@ are available [here](maintain-guides-how-to-unbond).
 
 Apart from using Polkadot-JS Apps to participate in staking, you can do all these things in CLI
 instead. The CLI approach allows you to interact with the Polkadot network without going to the
-Polkado-JS Apps dashboard.
+Polkadot-JS Apps dashboard.
 
 ### Step 1: Install @polkadot/api-cli
 
@@ -147,6 +156,8 @@ staking model.
 
 - `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
+- `Account` - Pay into a custom account, like so:
+  `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX`.
 - `Controller` - Pay into the controller account.
 
 Example:
@@ -167,7 +178,7 @@ Result:
 
 You can check the transaction status by using the value of the `InBlock` in
 [Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the PolkadotJS Apps Dashboard.
+[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
 
 ### Step 3. Nominate a validator
 
@@ -182,7 +193,7 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 ```
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
-nomination status, you can check that on the PolkadotJS UI as well.
+nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-kusama
 [keys]: learn-keys#controller-and-stash-keys

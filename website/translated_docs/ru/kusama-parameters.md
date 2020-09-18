@@ -59,7 +59,7 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 | ----------------------- | ------ | ------ | ------------------------------------------------------------------------- |
 | Периоды между расходами | 6 дней | 86,400 | Когда казначейство может потратить средства снова после предидущей траты. |
 
-Burn percentage is currently `0.20%`.
+Burn percentage is currently `0.20%`, though instead of being burned this amount is temporarily redirected into the [Society](maintain-guides-society-kusama)'s treasury to fund growth.
 
 ### Precision
 

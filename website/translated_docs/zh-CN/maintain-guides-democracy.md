@@ -60,7 +60,7 @@ Once the transaction is included you should see the UI update with the informati
 
 ## 支持议案
 
-Seconding a proposal means that you are agreeing with the proposal and backing it with an equal amount of deposit as was originally locked. By seconding a proposal you will move it higher up the rank of proposals. The most seconded proposal - in value, not number of supporters - will be tabled as a referendum to be voted on every launch period.
+Seconding a proposal means that you are agreeing with the proposal and backing it with an equal amount of deposit as was originally locked. The bonded tokens will be released once the proposal is tabled (that is, brought to a vote). By seconding a proposal you will move it higher up the rank of proposals. The most seconded proposal - in value, not number of supporters - will be tabled as a referendum to be voted on every launch period.
 
 To second a proposal, navigate to the proposal you want to second and click on the "Second" button.
 

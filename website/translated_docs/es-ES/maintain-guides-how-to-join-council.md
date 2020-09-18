@@ -16,11 +16,11 @@ Es una buena idea anunciar tu intención de presentarte al Consejo antes de envi
 
 Ve a [Polkadot Apps Dashboard](https://polkadot.js.org/apps) y navega a la pestaña "Council". Haz clic en el botón de la derecha que dice "Submit Candidacy"
 
-![a](assets/council/submit_candidacy.png)
+![submit candidancy button](assets/council/polkadotjs_submit_candidancy.png)
 
-Después de realizar la transacción, verás que tu cuenta aparece en la columna derecha debajo de "Candidates."
+After making the transaction, you will see your account appear underneath the row "Candidates."
 
-![b](assets/council/candidate.png)
+![candidates list](assets/council/polkadotjs_candidates.png)
 
 Ahora es una buena idea dar ejemplo y votar.
 
@@ -28,16 +28,16 @@ Ahora es una buena idea dar ejemplo y votar.
 
 Al lado del botón para presentar candidatura hay otro botón titulado "Vote." Haz clic en este botón para votar por ti mismo (opcional).
 
-![c](assets/council/vote.png)
+![voting button on UI](assets/council/polkadotjs_vote_button.png)
 
 The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 
-![d](assets/council/vote_for_yourself.png)
+![voting pop up on UI](assets/council/polkadotjs_voting.png)
 
 ## Victorioso
 
-Si eres uno de los afortunados en ganar una elección del Consejo verás que tu cuenta se mueve a la columna de la izquierda bajo el título "Miembros."
+If you are one of the lucky ones to win a council election you will see your account move underneath the row "Members".
 
-![e](assets/council/member.png)
+![council members list](assets/council/polkadotjs_council_members.png)
 
-Congratulations! Now you are able to participate on the council by making motions or vetoing proposals. It's a good idea to now join the public [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+Now you are able to participate on the council by making motions or voting proposals. To join in on the active discussions, join the [Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).

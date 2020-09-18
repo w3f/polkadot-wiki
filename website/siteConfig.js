@@ -64,6 +64,10 @@ const siteConfig = {
     "/js/custom.js",
     "/js/klaro-config.js",
     "/js/klaro.js",
+    '/js/packaged/addressChanger.js',
+    "/js/clipboard.min.js",
+    "/js/copycode.js",
+
   ],
 
   stylesheets: [
@@ -73,6 +77,7 @@ const siteConfig = {
     "https://unpkg.com/aos@next/dist/aos.css",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
     "/css/klaro.css",
+    "/css/copycode.css",
   ],
 
   // On page navigation for the current documentation page.

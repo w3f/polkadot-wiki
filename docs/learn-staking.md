@@ -185,6 +185,11 @@ nominators.
 
 ![staking](assets/NPoS/article-2.png)
 
+> Note: while the experience of a nominator is _similar_ to "set it and forget it", in reality there
+> are many reasons to keep an eye on one's validators and keep optimizing the nominations for best
+> returns and reduced risk. We talk more about this on the
+> [How to Nominate](maintain-guides-how-to-nominate-polkadot) page.
+
 ### Want to stake DOT?
 
 - [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
@@ -367,9 +372,9 @@ would then be split between the validator and their nominators based on the prop
 nominator had. Note that validators can put up their own stake, and for this calculation, their
 stake acts just as if they were another nominator.
 
-Rewards can be directed to the same account (controller) or to the stash account (and either
-increasing the staked value or not increasing the staked value). It is also possible to top-up /
-withdraw some bonded DOT without having to un-stake everything.
+Rewards can be directed to the same account (controller), to the stash account (and either
+increasing the staked value or not increasing the staked value), or to a completely custom account.
+It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
 
 For specific details about validator payouts, please see
 [this guide](maintain-guides-validator-payout).
@@ -412,13 +417,13 @@ please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Ec
 - Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
-## How many validators will Polkadot have?
+## How many validators does Polkadot have?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more
-gradually. The top bound on the number of validators has not been determined yet, but should only be
-limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message
-passing. The estimate of the number of validators that Polkadot will have at maturity is
-around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
+Polkadot started with 20 open validator positions and has opened more gradually. The top bound on
+the number of validators has not been determined yet, but should only be limited by the bandwidth
+strain of the network due to peer-to-peer message passing. The estimate of the number of validators
+that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
+over 500 validator slots, and the plan is also to slowly grow this number to approximately 1000.
 
 ## Resources
 

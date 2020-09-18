@@ -1027,3 +1027,28 @@ footer .list-social-links a {
     transform: translateY(0);
   }
 }
+
+.address-changer {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.address-changer-input {
+  width: 74%;
+}
+
+.address-changer-select {
+  height: 30px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address-changer-output {
+  height: 30px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}

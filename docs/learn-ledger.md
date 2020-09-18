@@ -4,14 +4,22 @@ title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
 ---
 
+> Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
+> browsers like Brave and Chrome.
+
+> Warning: Because of a recent runtime upgrade to Polkadot, the Ledger app hosted on Ledger's app
+> store in Ledger Live does not work. A fix has already been submitted and is pending review, but if
+> you urgently need to interact with your Ledger account, follow the
+> [manual installation instructions](#using-the-developer-release).
+
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
 devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that
 does not expose it to your computer or the internet. It is strongly recommend to use a hardware
 wallet if you are managing a significant amount of funds.
 
 The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of
-the transaction types of the network (a notable exception is the "Batch" transaction from the Utilty
-pallet).
+the transaction types of the network (a notable exception is the "Batch" transaction from the
+Utility pallet).
 
 ## Requirements
 
@@ -86,30 +94,38 @@ default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
 
 Click "Save" to keep your settings.
 
-Now when you go to the "Accounts" tab you will see a new button that says "Query Ledger". Ensure
-that your Ledger device is unlocked and you have navigated into the Polkadot application, then click
-this button.
+Now when you go to the "Accounts" tab you will see a new button that says "Add Ledger". Ensure that
+your Ledger device is unlocked and you have navigated into the Polkadot application, then click this
+button.
 
-![Query Ledger button in PolkadotJS](assets/ledger/query-ledger.png)
+![Add Ledger button in PolkadotJS](assets/ledger/query-ledger.png)
 
-Depending on your browser and its security settings, you might need to confirm the USB connection
-through a popup like the one below:
+A popup will appear asking you to select an account and derivation path.
 
-![Display of the Ledger account in the Accounts list of PolkadotJS](assets/ledger/query-device.png)
+![Picking an account and derivation path](assets/ledger/add-account.png)
 
-You should be able to scroll down and find a new account on the page named "Ledger". Under the type
-column, the account will also show "Ledger".
+The first option lets you select an account. You can have multiple accounts on a single Ledger
+device. The second dropdown lets you pick a derivation path - think of it like a formula from which
+child accounts are generated. If in doubt, pick the first option for both.
 
-![Confirm device connection popup](assets/ledger/ledger-balance.png)
+Once you confirm your selection, depending on your browser and its security settings, you might need
+to confirm the USB connection through a popup like the one below when adding the Ledger device for
+the first time:
+
+![Display the device connection popup](assets/ledger/query-device.png)
+
+You should now be able to scroll down and find a new account on the page with the type "ledger".
+
+![Displaying the Ledger account in the list](assets/ledger/ledger-balance.png)
 
 You can now use this account to interact with Polkadot on Polkadot-JS Apps and it will prompt your
 ledger for confirmation when you initiate a transaction.
 
 ### Confirming the Address on your Device
 
-On the "Accounts" tab, find your Ledger-connected account (the one called "Ledger"). Click on the
-three vertical dots at the end of the row. This will open a new menu, here you can click the "Show
-address on hardware device" option to display the address on your device.
+On the "Accounts" tab, find your Ledger-connected account. Click on the three vertical dots at the
+end of the row. This will open a new menu, here you can click the "Show address on hardware device"
+option to display the address on your device.
 
 ![Options menu of an account in the Accounts screen of PolkadotJS](assets/ledger-4.png)
 
@@ -143,18 +159,33 @@ Instructions to send a transfer can be found on the
 
 ### Receiving a Transfer
 
-In order to receive a transfer on the account that is stored on your Ledger device, you will need to
+In order to receive a transfer on the accounts stored on your Ledger device, you will need to
 provide the sender (i.e. the payer) with your address.
 
-The easiest way to get your address is to click on the account name (Ledger) which will open a
-sidebar. Your address will be shown in this sidebar, along with some other information. Another
-method is just clicking on your account's avatar icon - this immediately copies your address to the
-clipboard.
+The easiest way to get your address is to click on the account name which will open a sidebar. Your
+address will be shown in this sidebar, along with some other information. Another method is just
+clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
 > **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
 > by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
 > will intercept clicks and clipboard requests and can change your copied value in-flight, so being
 > extra vigilant around copy-paste operations makes sense.
+
+### Staking
+
+Since Ledger does not support batch transactions, you must do two separate transactions when you
+want to stake using an account stored on a Ledger device.
+
+- Go to the "Staking" tab found under the "Network" dropdown in the top navigation menu.
+- Click the "Account Actions" pane in the inner navigation.
+- Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not
+  work).
+- Input the amount of tokens to bond and confirm the transaction.
+- Confirm the transaction on the Ledger devivce.
+- When the transaction is included you will see the newly bonded account in the "Account Actions"
+  page.
+- Select "Start Nominating" or "Start Validating" to start nominating or validating.
+- Confirm the transaction on Apps and on the Ledger device.
 
 ## Support
 
