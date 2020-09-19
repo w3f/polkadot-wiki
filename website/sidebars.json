@@ -8,7 +8,7 @@
       "research",
       "community",
       "contributing",
-      "contributors",	
+      "contributors",
       "glossary",
       "learn-ledger",
       "faq"
@@ -114,7 +114,7 @@
     ],
     "Maintain": [
       "maintain-index",
-	"maintain-polkadot-parameters",	
+      "maintain-polkadot-parameters",
       {
         "type": "subcategory",
         "label": "Nodes and Dapps",
@@ -123,11 +123,7 @@
       {
         "type": "subcategory",
         "label": "Nominator Guides",
-        "ids": [
-          "maintain-guides-how-to-nominate-polkadot",
-          "maintain-guides-how-to-chill",
-          "maintain-guides-how-to-unbond"
-        ]
+        "ids": ["maintain-guides-how-to-nominate-polkadot", "maintain-guides-how-to-unbond"]
       },
       {
         "type": "subcategory",
