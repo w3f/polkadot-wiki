@@ -13,5 +13,15 @@
     "tpl": "babe_epoch_duration",
     "default": 500,
     "path": "consts.babe.epochDuration"
+  },
+  {
+    "tpl": "dot_proxy_deposit_base",
+    "default": 0,
+    "computed": true
+  },
+  {
+    "tpl": "dot_proxy_deposit_factor",
+    "default": 0,
+    "computed": true
   }
 ]
