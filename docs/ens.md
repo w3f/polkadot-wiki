@@ -11,7 +11,10 @@ layer of usability on top of the regular wallet user experience.
 
 > Note: You will need an ENS name and an Ethereum account with some ether in it to follow along with
 > this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
-> subdomain registrars like [Nameth](https://nameth.io). You will also need some way to use the
+> subdomain registrars like [Nameth](https://nameth.io). Note that if you're using an older ENS
+> name, you should make sure you're using the
+> [new resolver](https://medium.com/the-ethereum-name-service/ens-registry-migration-is-over-now-what-a-few-things-to-know-fb05f921872a).
+> Visiting the ENS App will warn you about this if not. You will also need some way to use your
 > Ethereum address - following this guide on a personal computer is recommended. Wallets like
 > [Frame](https://frame.sh/) and [Metamask](https://metamask.io) are safe and will make interacting
 > with the Ethereum blockchain through your browser very easy.
@@ -88,7 +91,8 @@ enter your address into the `AccountId to Hex` left field, then copy the output 
 ![Filled out information in the contract's write interface](assets/ens/08-min.png)
 
 Clicking "Write" will initiate a transaction. Note that Etherescan's UI is in beta and might throw a
-"GasLimit" error. If this happens, modify the gas limit in your wallet to 80,000.
+"GasLimit" error. If this happens, modify the gas limit in your wallet to 80,000. You can leave the
+gas fee as is - any wallet you use will usually be good at estimating the required fee.
 
 Once the transaction is confirmed, your DOT address will be bound to your ENS domain. Because the
 ENS App UI is currently missing support for DOT, this entry will not be visible. However, should a
