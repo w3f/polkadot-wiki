@@ -21,7 +21,8 @@ Utility pallet).
 Here is a list of what you will need before starting:
 
 - A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed (at the time of writing this is 1.6.1).
+- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on
+  the Nano X).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
 - A web browser is installed that you can use to access [Polkadot-JS Apps][].
