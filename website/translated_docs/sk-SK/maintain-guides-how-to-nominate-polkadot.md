@@ -42,7 +42,7 @@ You will see a modal window that looks like the below: ![nominator-update-1](ass
 
 Select a "value bonded" that is **less** than the total amount of DOT you have, so you have some left over to pay transaction fees. Transaction fees are currently around 0.01 DOT, but they are dynamic based on a variety of factors including the load of recent blocks.
 
-Also be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 0.01 DOT on Polkadot, so it's recommended to keep around 0.1 DOT in your account to be on the safe side.
+Also be mindful of the reaping threshold - the amount that must remain in an account lest it be burned. That amount is 1 DOT on Polkadot, so it's recommended to keep at least 1.5 DOT in your account to be on the safe side.
 
 Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash account (increase amount at stake)" to simply accrue the rewards into the amount you're staking and earn compound interest.
 
