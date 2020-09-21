@@ -77,7 +77,7 @@ left over to pay transaction fees. Transaction fees are currently around 0.01 DO
 dynamic based on a variety of factors including the load of recent blocks.
 
 Also be mindful of the reaping threshold - the amount that must remain in an account lest it be
-burned. That amount is 0.01 DOT on Polkadot, so it's recommended to keep around 0.1 DOT in your
+burned. That amount is 1 DOT on Polkadot, so it's recommended to keep at least 1.5 DOT in your
 account to be on the safe side.
 
 Choose whatever payment destination that makes sense to you. If you're unsure, you can choose "Stash
