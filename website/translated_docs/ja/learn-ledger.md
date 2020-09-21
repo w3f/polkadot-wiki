@@ -6,8 +6,6 @@ sidebar_label: Ledger Application
 
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers like Brave and Chrome.
 
-> Warning: Because of a recent runtime upgrade to Polkadot, the Ledger app hosted on Ledger's app store in Ledger Live does not work. A fix has already been submitted and is pending review, but if you urgently need to interact with your Ledger account, follow the [manual installation instructions](#using-the-developer-release).
-
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that does not expose it to your computer or the internet. It is strongly recommend to use a hardware wallet if you are managing a significant amount of funds.
 
 The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utility pallet).
@@ -17,7 +15,7 @@ The Polkadot application allows you to manage Polkadot's native token, the DOT. 
 Here is a list of what you will need before starting:
 
 - A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed (at the time of writing this is 1.6.1).
+- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on the Nano X).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're up to date).
 - A web browser is installed that you can use to access [Polkadot-JS Apps][].
 
