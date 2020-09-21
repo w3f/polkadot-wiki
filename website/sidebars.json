@@ -109,7 +109,11 @@
       {
         "type": "subcategory",
         "label": "Resources",
-        "ids": ["build-examples-index", "build-hackathon"]
+        "ids": [
+          "build-examples-index",
+          "build-hackathon",
+          "build-ss58-registry"
+        ]
       }
     ],
     "Maintain": [
