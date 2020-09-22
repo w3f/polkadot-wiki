@@ -40,7 +40,7 @@ Many projects will maintain parachains on both networks, experimenting and testi
 Some teams will decide just to stay on Kusama, which is likely to be a place where we see some exciting experimentation with new technologies going forward.
 Projects that require high-throughput but don’t necessarily require bank-like security, such as some gaming, social networking, and content distribution applications, are particularly good candidates for this use case.
 Kusama may also prove to be the perfect environment for ambitious experiments with new ideas and new innovations in areas like governance, incentives, monetary policy, and DAOs (decentralized autonomous organizations).
-Future upgrades to the Polkadot runtime will also likely be deployed to Kusama before Polkadot mainnet. This way, not only will we be able to see how these new technologies and features will perform under real-world conditions before bringing them to Polkadot, but teams who have deployed to both networks will also get an advanced look at how their own technology will perform under those upgrades.
+Future upgrades to the Polkadot runtime will also likely be deployed to Kusama before Polkadot mainnet. This way, not only will we be able to see how these new technologies and features will perform under real-world conditions before bringing them to Polkadot, but teams who have deployed to both networks will also get an advance look at how their own technology will perform under those upgrades.
 
 ## Going forward
 
