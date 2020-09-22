@@ -146,7 +146,7 @@ locked in democracy are unlocked lazily. This means that you, the user, must exp
 unlock extrinsic to make your funds available again after the lock expires.
 
 You can do this from the "Accounts" page in [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has
-"democracy" lock by opening the details on your balance. In the example below the account has 150
+a "democracy" lock by opening the details on your balance. In the example below the account has 150
 KSM locked in democracy.
 
 ![democracy balance details](assets/democracy_balance_details.png)
