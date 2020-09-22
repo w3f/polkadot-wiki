@@ -80,3 +80,15 @@ research could include:
 - Nested or heirarchical Relay Chains, where Relay Chains could be connected through parachains.
 - Support for three tiers of parachains, each working in parallel to one another.
 - A Verifiable Delay Function (VDF) inside the protocol.
+
+With the release of Polkadot 1.0, researchers have begun research for the next version of the
+Polkadot network. With many questions yet to be answered, as of now, some big areas of research will
+be in:
+
+- Zero Knowledge
+- Economics and Networking: how will scalability work in Polkadot 2.0?
+- Horizontal vs. vertical scalability: What is the breaking point of the maximum number of
+  parachains buit with horizontal scalability?
+- Nested Relay Chain: can multiple Relay Chain's exist connected thru parachains? How many tiers of
+  Relay Chains can be nested? How will validators work together to validate blocks on various Relay
+  Chains?
