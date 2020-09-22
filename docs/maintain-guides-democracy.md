@@ -145,8 +145,9 @@ Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), th
 locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an
 unlock extrinsic to make your funds available again after the lock expires.
 
-You can do this from the "Accounts" page in [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has
-a "democracy" lock by opening the details on your balance. In the example below the account has 150
+You can do this from the "Accounts" page in
+[Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a
+"democracy" lock by opening the details on your balance. In the example below the account has 150
 KSM locked in democracy.
 
 ![democracy balance details](assets/democracy_balance_details.png)
