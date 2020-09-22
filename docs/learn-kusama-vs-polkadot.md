@@ -38,7 +38,7 @@ Polkadot is and always will be the primary network for the deployment of enterpr
 The initial use case for Kusama is as a pre-production environment, a “canary network”. Building on Kusama first allows teams to test things out in a live, fully decentralized and community-controlled network with real-world conditions and lower stakes in the event of problems or bugs than on Polkadot.
 Many projects will maintain parachains on both networks, experimenting and testing new technologies and features on Kusama before deploying them to Polkadot.
 Some teams will decide just to stay on Kusama, which is likely to be a place where we see some exciting experimentation with new technologies going forward.
-Projects that require high-throughput but don’t necessarily require bank-like security, such as some gaming, social networking, and content distribution applications, are particularly good candidates for this use-case.
+Projects that require high-throughput but don’t necessarily require bank-like security, such as some gaming, social networking, and content distribution applications, are particularly good candidates for this use case.
 Kusama may also prove to be the perfect environment for ambitious experiments with new ideas and new innovations in areas like governance, incentives, monetary policy, and DAOs (decentralized autonomous organizations).
 Future upgrades to the Polkadot runtime will also likely be deployed to Kusama before Polkadot mainnet. This way, not only will we be able to see how these new technologies and features will perform under real-world conditions before bringing them to Polkadot, but teams who have deployed to both networks will also get an advanced look at how their own technology will perform under those upgrades.
 
