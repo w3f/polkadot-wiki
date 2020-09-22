@@ -108,11 +108,13 @@ voting on it.
 Remember that the proposal has no metadata, so it's up to the proposer to create a description and
 purpose that the council could study and base their votes on.
 
-At this point, a Council member can turn this proposal into a motion to accept, or a motion to
-reject. It is possible (but unlikely) that a motion for both acceptance and rejection is created.
-After being turned into a council motion, the proposal needs 51% of the council to approve it to
-pass, or 51% to reject it to fail. If majority is not reached, the proposal remains in limbo -
-neither accepted nor rejected until more council members weigh in.
+At this point, a Council member can create a motion to accept or to reject the treasury proposal. It
+is possible that one motion to accept and another motion to reject are both created. The proportions
+to accept and reject council proposals varies between accept or reject and possibly depending on
+which network the Treasury is implemented on.
+
+On Polkadot and Kusama, the threshold for accepting a treasury proposal is at least three-fifths of
+the council. The threshold for rejecting a proposal is at least one-half of the council.
 
 ![Motion in action](/img/treasury/motion.jpg)
 
