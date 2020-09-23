@@ -20,7 +20,7 @@ Starting with runtime version v2023 natively included in client version [0.8.23]
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab. The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of KSM that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" (underneath "Network") tab. The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of KSM that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
 The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you to stake and nominate.
 
@@ -30,13 +30,13 @@ The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)
 
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending validators that are awaiting more nominations to enter the active validator set. Validators will stay in the waiting queue until they have enough KSM backing them (as allocated through the [Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible validator can remain in the queue for a very long time if they never get enough backing.
 
-The "Validator Stat's subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you to query a validator's stash address and see historical charts on era points, elected stake, rewards, and slashes.
+The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you to query a validator's stash address and see historical charts on era points, elected stake, rewards, and slashes.
 
-Pick "Account actions", then click the grey "+ Nominator" button.
+Pick "Account actions" underneath "Network" > "Staking", then click the "+ Nominator" button.
 
 You will see a modal window that looks like the below:
 
-![nominator-update-1](assets/nominator-update-1.png)
+![nominator-update-1](assets/kusama/kusama_nominator_popup.png)
 
 Select a "value bonded" that is **less** than the total amount of KSM you have, so you have some left over to pay transaction fees. Transaction fees are currently at least 0.01 KSM, but they are dynamic based on a variety of factors including the load of recent blocks.
 
@@ -54,7 +54,7 @@ You are now bonded. Being bonded means your tokens are locked and could be [slas
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking you to select some validators.
 
-![Nominating validators](/img/NPoS/nominate.png)
+![Nominating validators](assets/kusama/kusama_nominator_selection.png)
 
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations will become active in the next era. Eras last six hours on Kusama - depending on when you do this, your nominations may become active almost immediately, or you may have to wait almost the entire six hours before your nominations are active. You can check how far along Kusama is in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
 
