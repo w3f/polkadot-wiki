@@ -88,6 +88,18 @@ When you are comfortable with the decision you have made, click the blue "Vote" 
 
 ![voting](assets/democracy/voting.png)
 
+## Unlocking Locked Tokens
+
+Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires.
+
+You can do this from the "Accounts" page in [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a "democracy" lock by opening the details on your balance. In the example below the account has 150 KSM locked in democracy.
+
+![democracy balance details](assets/democracy_balance_details.png)
+
+Now you can click the menu button on Apps and find the option that says "Clear expired democracy locks". After selecting this option you may confirm the transaction and your locks will be cleared when successful.
+
+![democracy clear locks](assets/democracy_clear_locks.png)
+
 ## Delegate a Vote
 
 If you are too busy to keep up and vote on upcoming referenda, there is an option to delegate your vote to another account whose opinion you trust. When you delegate to another account, that account gets the added voting power of your tokens along with the conviction that you set. The conviction for delegation works just like the conviction for regular voting, except your tokens may be locked longer than they would normally since locking resets when you undelegate your vote.
