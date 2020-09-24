@@ -28,11 +28,11 @@ username, email, Youtube channel name, etc. If something seems fishy, that's bec
 ### Check twice before sending DOT/KSM
 
 A good practice to take in consideration is to verify the address you are sending crypto to. If you
-don't know that account, you probably shouldn't be sending your assets there. It is very
-important to understand that crypto is a decentralized space, if you lose your assets, that is on
-you.
+don't know that account, you probably shouldn't be sending your assets there. It is very important
+to understand that crypto is a decentralized space, if you lose your assets, that is on you.
 
 ### Keep your personal data secure
 
-One should *never*, share their secret key with anyone, nor any other personal data that is associated
-with you. It's recommended to store your information safe on paper or on a hardware wallet.
+One should _never_, share their secret key with anyone, nor any other personal data that is
+associated with you. It's recommended to store your information safe on paper or on a hardware
+wallet.
