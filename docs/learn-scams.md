@@ -50,7 +50,7 @@ wallet. Never enter your seed or mnemonic phrase on a website.
 
 ### Essential rules:
 
-1. Never, ever, ever share your seed phrase or account password
+1. Never, ever, ever share your seed phrase or account password.
 2. Do not trust anyone online. It is trivial for them to lie, change identities.
 3. If you are scammed, there is likely nothing that can be done to recover your funds. If a scammer
    gets a hold of your seed phrase, they can transfer all of your funds to their account in seconds.
