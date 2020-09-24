@@ -28,8 +28,7 @@ username, email, Youtube channel name, etc. If something seems fishy, that's bec
 ### Check twice before sending DOT/KSM
 
 A good practice to take in consideration is to verify the address you are sending crypto to. If you
-don't know that account, you probably shouldn't be sending your assets there. It is very important
-to understand that crypto is a decentralized space, if you lose your assets, that is on you.
+don't know that account, you probably shouldn't be sending your assets there. It's your responsibility to make sure that you understand where you are sending your funds to, crypto is a decentralized space and your only recourse if a mistake is made is by appealing to the council (who usually will not get involved in matters of mistaken transfers).
 
 ### Keep your personal data secure
 
