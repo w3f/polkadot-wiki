@@ -77,3 +77,8 @@ polkadot-wiki.pdf
 kusama-wiki.pdf
 polkadot-wiki.zip
 kusama-wiki.zip
+
+*.testing
+*.testing.png
+*.o.png
+*.r.png
