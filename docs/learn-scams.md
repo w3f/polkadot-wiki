@@ -14,7 +14,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 - 'Send us DOT/KSM, we'll send you double'
 - Emails asking for DOT/KSM addresses, posing as a member of our team
 
-### Admin will never contact you over Telegram
+### Admins will never contact you over Telegram, Twitter, etc.
 
 If you've received a message from an admin over Telegram, ignore it. Our Polkadot team will never
 personally message you first. Our social media's are posted on our website and any new social media's will
