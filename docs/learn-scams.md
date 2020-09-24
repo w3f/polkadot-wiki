@@ -5,7 +5,7 @@ sidebar_label: How to Protect Yourself from Scams
 ---
 
 Scams have unfortunately made an impact on our community. It's important to stay alert and protect
-yourself and your non-refundable crypto assets from scammers.
+yourself and your non-refundable crypto assets from scammers. If you ever feel you are being scammed, please email us [at our support email](mailto:support@web3.foundation).
 
 ### Types of Scams
 
