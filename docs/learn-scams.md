@@ -16,9 +16,9 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 
 ### Admins will never contact you over Telegram, Twitter, etc.
 
-If you've received a message from a "Polkadot admin" or "Polkadot support", block and report it. Our Polkadot team will never
-personally message you first. Our social media's are posted on our website and any new social media's will
-be announced by our team.
+If you've received a message from a "Polkadot admin" or "Polkadot support", block and report it. Our
+Polkadot team will never personally message you first. Our social media's are posted on our website
+and any new social media's will be announced by our team.
 
 ### Always check the source
 
@@ -28,10 +28,13 @@ username, email, Youtube channel name, etc. If something seems fishy, that's bec
 ### Check twice before sending DOT/KSM
 
 A good practice to take in consideration is to verify the address you are sending crypto to. If you
-don't know that account, you probably shouldn't be sending your assets there. It's your responsibility to make sure that you understand where you are sending your funds to, crypto is a decentralized space and your only recourse if a mistake is made is by appealing to the council (who usually will not get involved in matters of mistaken transfers).
+don't know that account, you probably shouldn't be sending your assets there. It's your
+responsibility to make sure that you understand where you are sending your funds to, crypto is a
+decentralized space and your only recourse if a mistake is made is by appealing to the council (who
+usually will not get involved in matters of mistaken transfers).
 
 ### Keep your personal data secure
 
-One should _never_, share their secret key, seed, mnemonic phrase, etc. with anyone, nor any other personal data that is
-associated with you. It's recommended to store your information safe on paper or on a hardware
-wallet.
+One should _never_, share their secret key, seed, mnemonic phrase, etc. with anyone, nor any other
+personal data that is associated with you. It's recommended to store your information safe on paper
+or on a hardware wallet.
