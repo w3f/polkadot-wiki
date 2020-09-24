@@ -12,10 +12,14 @@ from the community. For example, write a staking tutorial in a specific language
 communities, provide staking tooling to the community, helping others with understanding Polkadot on
 Telegram or Element, etc.
 
-## Channels
+## Social Channels
 
-Riot: [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org)
-/
-[Kusama Validator Lounge](https://riot.im/app/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
+### Element
 
-Telegram: [English](https://t.me/PolkadotOfficial) / [Chinese](https://t.me/polkadotChi)
+- [Polkadot Validator Lounge](https://riot.im/app/#/room/#polkadot-validator-lounge:matrix.org)
+- [Kusama Validator Lounge](https://riot.im/app/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
+
+### Telegram
+
+- [English](https://t.me/PolkadotOfficial)
+- [Chinese](https://t.me/polkadotChi)
