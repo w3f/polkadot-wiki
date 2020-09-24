@@ -102,6 +102,9 @@ only a small amount of DOT tokens does not mean that the holder cannot influence
 result, thanks to time-locking. You can read more about this at
 [Voluntary Locking](#voluntary-locking).
 
+> To learn more on voting on referenda, please check out our
+> [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
+
 ```
 Example:
 
@@ -284,6 +287,9 @@ that the proposal would institute.
 
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
+
+> For information on council, please head over to our
+> [technical explainer video](https://www.youtube.com/watch?v=837Vv3gdRzI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=32&ab_channel=Polkadot).
 
 ### How to be a council member?
 
