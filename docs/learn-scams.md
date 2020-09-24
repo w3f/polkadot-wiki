@@ -32,6 +32,6 @@ don't know that account, you probably shouldn't be sending your assets there. It
 
 ### Keep your personal data secure
 
-One should _never_, share their secret key with anyone, nor any other personal data that is
+One should _never_, share their secret key, seed, mnemonic phrase, etc. with anyone, nor any other personal data that is
 associated with you. It's recommended to store your information safe on paper or on a hardware
 wallet.
