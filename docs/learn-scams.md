@@ -17,7 +17,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 ### Admin will never contact you over Telegram
 
 If you've received a message from an admin over Telegram, ignore it. Our Polkadot team will never
-personally message you. Our social media's are posted on our website and any new social media's will
+personally message you first. Our social media's are posted on our website and any new social media's will
 be announced by our team.
 
 ### Always check the source
