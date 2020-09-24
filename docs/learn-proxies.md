@@ -9,6 +9,9 @@ actions on their behalf. Much like the Stash and Controller account relationship
 [staking](learn-staking), proxies allow users to keep one account in cold storage and actively
 participate in the network with the weight of the tokens in that account.
 
+> Check out our Polkadot Youtube video that explains
+> [what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
+
 ## Proxy Types
 
 You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of
@@ -41,7 +44,8 @@ The "Governance" type will allow proxies to make transactions related to governa
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
 > See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance
-> proxies.
+> proxies or watch our
+> [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
 
 ### Staking Proxies
 
@@ -66,6 +70,9 @@ proxy. That is, it generates an address but no corresponding private key. Normal
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+
+> Learn more about anonymous proxies from our
+> [technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
 
 ![anonymous proxy](assets/proxy_anonymous_diagram.png)
 

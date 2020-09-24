@@ -14,6 +14,9 @@ that is twelve decimal places. After this date, DOT is denominated as 1e10 Planc
 decimal places. DOT denominated to twelve decimal places is referred to as "DOT (old)" and DOT
 denominated to ten decimal places is referred to as "_New DOT_".
 
+> Check out our
+> [technical explainer video that explains more of Redenomination](https://www.youtube.com/watch?v=xXIcnBV4uUE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22&ab_channel=Polkadot).
+
 The change in denomination, henceforth referred to as the _redenomination_, was voted on by the
 community of DOT holders. The community decided between four options, to change the DOT denomination
 by a factor of ten, one hundred, one thousand, or not at all. The end result was to change the
