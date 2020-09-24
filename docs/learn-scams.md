@@ -10,7 +10,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 
 ### Types of Scams
 
-- Personal messages over Telegram, and other social medias
+- Personal messages over Telegram, Twitter, and other social media
 - 'Send us DOT/KSM, we'll send you double'
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of our team
 - Scammers will take official videos, add text to it so that it looks like an official video
