@@ -8,24 +8,54 @@ Scams have unfortunately made an impact on our community. It's important to stay
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
 scammed, please email [our support team](mailto:support@web3.foundation).
 
-### Types of Scams
+### Essential rules:
 
-- Personal messages over Telegram, Twitter, and other social media
-- 'Send us DOT/KSM, we'll send you double'
+1. Never, ever, ever share your seed phrase or account password.
+2. Do not trust anyone online. It is trivial for them to lie and change identities.
+3. If you are scammed, there is likely nothing that can be done to recover your funds. If a scammer
+   gets a hold of your seed phrase, they can transfer all of your funds to their account in seconds.
+   It is better to be safe than to risk all of DOT and KSM.
+4. If it sounds too good to be true, it probably is. People, especially celebrities, do not give
+   away crypto for free. Even if they wanted to, they could just ask for your address as opposed to
+   having you send them tokens.
+5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
+   one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
+
+### Some Common Types of Scams
+
+- Private messages sent to you over Telegram, Twitter, and other social media
+- "Giveaways" advertising that you 'send us some DOT/KSM, we'll send you double back'
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of our team
-- Scammers will take official videos, add text to it so that it looks like an official video
-- Many scammers will create nearly perfect imitations of sites - triple-check the URL
+- Scammers will take official videos, add "giveaway" text around it so that it looks like the
+  giveaway is supported by Polkadot, Web3 Foundation, Parity, or other well-known entity
+- Many scammers will create nearly perfect imitations of sites - always triple-check the URL
 - People offering to help you stake or get rewards
-- People answering questions you asked publicly in a private chat
-- Scammers will often make it seem like the 'deal' is only available for a limited time. Do not be
-  tricked by this, it is always better to confirm than to risk losing everything
+- People responding to questions that you asked publicly in a private chat
+- Advertisements pointing to imitations of sites asking you to enter your seed words
+
+These are just some of the types of scams. Scammers are inventing new ones all of the time. In
+general, do not trust anyone messaging you that you did not message yourself, and be wary of anyone
+attempting to "help" you or offer you a deal.
+
+Scammers will often imitate usernames, profile pictures, etc. of well-known members of the
+community. Often the differences in these accounts will be very minor, such as `joe_sm1th` or
+`jo_smith` instead of `joe_smith`.
+
+Scammers will often make it seem like the 'deal' is only available for a limited time. Do not be
+tricked by this, it is always better to confirm than to risk losing everything.
 
 ### Admin will never contact you over Telegram, nor any other Social Media
 
 If you've received a message from an admin over Telegram, ignore it. Our Polkadot team will never
-personally message you. Our social media's are posted on our website and any new social media's will
-be announced by our team. We will never offer to sell you DOTs at a discount, air-drop "rewards", or
-message you privately to help with a problem you posted publicly.
+personally message you. Our social media accounts are posted on our website and any new social media
+accounts will be announced by our team. We will never offer to sell you DOTs at a discount, air-drop
+"rewards", or message you privately to help with a problem you posted publicly.
+
+### Keep your personal data secure
+
+One should _never_ share their secret key with anyone, nor any other personal data that is
+associated with you. It is recommended to store your information safe on paper or on a hardware
+wallet. Never enter your seed or mnemonic phrase directly on a website.
 
 ### Always check the source
 
@@ -41,22 +71,3 @@ don't know that account, you probably shouldn't be sending your assets there. It
 responsibility to make sure that you understand where you are sending your funds to, crypto is a
 decentralized space and your only recourse if a mistake is made is by appealing to the council (who
 usually will not get involved in matters of mistaken transfers).
-
-### Keep your personal data secure
-
-One should _never_, share their secret key with anyone, nor any other personal data that is
-associated with you. It's recommended to store your information safe on paper or on a hardware
-wallet. Never enter your seed or mnemonic phrase on a website.
-
-### Essential rules:
-
-1. Never, ever, ever share your seed phrase or account password.
-2. Do not trust anyone online. It is trivial for them to lie, change identities.
-3. If you are scammed, there is likely nothing that can be done to recover your funds. If a scammer
-   gets a hold of your seed phrase, they can transfer all of your funds to their account in seconds.
-   It is better to be safe than to risk all of DOT and KSM.
-4. If it sounds too good to be true, it probably is. People, especially celebrities, do not give
-   away crypto for free. Even if they wanted to, they could just ask for your address as opposed to
-   having you send them tokens.
-5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
-   one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
