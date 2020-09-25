@@ -5,7 +5,8 @@ sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
 _This FAQ focuses on technical questions for users interested in developing applications for
-Polkadot. If you have a more general question, you may wish to search for the answer on our support [Knowledge Base](https://support.polkadot.network/support/home) or the main
+Polkadot. If you have a more general question, you may wish to search for the answer on our support
+[Knowledge Base](https://support.polkadot.network/support/home) or the main
 [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
 [Element channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email
@@ -13,13 +14,21 @@ please feel free to ask on the Polkadot Watercooler
 
 ## Polkadot Launch
 
-The Genesis block of the Polkadot network was launched on May 26, 2020, as a Proof of Authority (PoA) network, with governance controlled by the single Sudo (super-user) account. During this time, validators started joining the network and signaling their intention to participate in consensus.
+The Genesis block of the Polkadot network was launched on May 26, 2020, as a Proof of Authority
+(PoA) network, with governance controlled by the single Sudo (super-user) account. During this time,
+validators started joining the network and signaling their intention to participate in consensus.
 
-The network evolved to become a Proof of Stake (PoS) network on June 18, 2020. With the chain secured by the decentralized community of validators, the Sudo module was removed on July 20, 2020, transitioning the governance of the chain into the hands of the token (DOT) holders. This is the point where Polkadot became decentralized.
+The network evolved to become a Proof of Stake (PoS) network on June 18, 2020. With the chain
+secured by the decentralized community of validators, the Sudo module was removed on July 20, 2020,
+transitioning the governance of the chain into the hands of the token (DOT) holders. This is the
+point where Polkadot became decentralized.
 
-The final step of the transition to full-functioning Polkadot was the enabling of transfer functionality, which occurred on  Polkadot at block number 1,205,128 on August 18, 2020, at 16:39 UTC.
+The final step of the transition to full-functioning Polkadot was the enabling of transfer
+functionality, which occurred on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39
+UTC.
 
-On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new DOT.
+On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new
+DOT.
 
 ## Validators
 
