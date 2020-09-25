@@ -67,6 +67,14 @@ none of your nominated validators being elected.
 
 ### What to take into consideration during nominating
 
+One thing to keep in mind as a nominator is the validator's commission. The commission is the
+percentage of the validator reward which is taken by the validator before the rewards are split
+among the nominators. As a nominator you may think that the lowest commission is best. However, this
+is not always true. Validators must be able to run at break-even in order to sustainably continue
+operation. Independent validators that rely on the commission to cover their server costs help to
+keep the network decentralized. Commission is just one piece of the puzzle that you should consider
+when picking validators to nominate.
+
 ![Staking Returns](/img/staking/polkadotjs_nominators_target.png)
 
 As a nominator, if you only want to know the profit each validator made for each era, you can go to
