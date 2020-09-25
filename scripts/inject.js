@@ -138,6 +138,21 @@ let v = setInterval(function () {
           .map((result) => result.file);
         console.log("Modified files:", changedFiles);
 
+        let from = [/{{ kusama: ([\s\S]*) :kusama }}/gim, /{{ polkadot: ([\s\S]*) :polkadot }}/gim];
+        let to =
+          argv.rootDir.indexOf("kusama-guide") !== -1
+            ? [(match) => match.replace("{{ kusama: ", "").replace(" :kusama }}", ""), ""]
+            : ["", (match) => match.replace("{{ polkadot: ", "").replace(" :polkadot }}", "")];
+        let results2 = replace.sync({
+          files: [`${argv.rootDir}/docs/**/**/*.html`],
+          from: from,
+          to: to,
+        });
+        const changedFiles2 = results2
+          .filter((result) => result.hasChanged)
+          .map((result) => result.file);
+        console.log("Modified files for kusama/polkadot difference:", changedFiles2);
+
         process.exit(0);
       } catch (error) {
         console.error("Error occurred:", error);

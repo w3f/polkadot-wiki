@@ -14,10 +14,11 @@ its duration is subject to [governance](learn-governance), with current defaults
 attempts to spend as many proposals in the queue as it can without running out of funds.
 
 If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
-percentage of its funds -- thereby causing deflationary pressure. This percentage is currently at 1%
-on Polkadot, and 0.2% on Kusama, with the caveat of the 0.2% on Kusama going to
+percentage of its funds -- thereby causing deflationary pressure.
+{{ polkadot: This percentage is currently at 1%
+on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the caveat of the 0.2% on Kusama going to
 [Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
-burned.
+burned. :kusama }}
 
 When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling
 5% of the proposed spend (see below for variations). This deposit will be slashed if the proposal is
