@@ -18,7 +18,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 - People offering to help you stake or get rewards
 - People answering questions you asked publicly in a private chat
 - Scammers will often make it seem like the 'deal' is only available for a limited time. Do not be
-  tricked by this, it is always better to confirm than to risk losing everything.
+  tricked by this, it is always better to confirm than to risk losing everything
 
 ### Admin will never contact you over Telegram, nor any other Social Media
 
