@@ -48,7 +48,7 @@ tricked by this, it is always better to confirm than to risk losing everything.
 
 If you've received a message from an admin over Telegram, ignore it. Our Polkadot team will never
 personally message you. Our social media accounts are posted on our website and any new social media
-accounts will be announced by our team. We will never offer to sell you DOTs at a discount, air-drop
+accounts will be announced by our team. We will never offer to sell you DOT at a discount, air-drop
 "rewards", or message you privately to help with a problem you posted publicly.
 
 ### Keep your personal data secure
