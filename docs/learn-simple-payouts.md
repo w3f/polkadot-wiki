@@ -25,10 +25,10 @@ after they were earned. This means that all rewards must be claimed within 84 er
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
 fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will
-automatically calculate that validator's reward, find the top 64 nominators for that era, and
+automatically calculate that validator's reward, find the top 256 nominators for that era, and
 distribute the rewards pro rata.
 
-> Note: The Staking system only applies the highest 64 nominations to each validator to reduce the
+> Note: The Staking system only applies the highest 256 nominations to each validator to reduce the
 > complexity of the staking set.
 
 These details are handled for you automatically if you use the
