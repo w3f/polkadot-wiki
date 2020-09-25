@@ -95,7 +95,7 @@ One way to create the proposal is to use the Polkadot-JS Apps
 `proposeSpend` and enter the desired amount and recipient, or use the
 [Treasury tab](https://polkadot.js.org/apps/#/treasury) and its dedicated Submit Proposal button:
 
-![An example of a proposal being created](/img/treasury/propose.jpg)
+![An example of a proposal being created](assets/treasury/propose.jpg)
 
 The system will automatically take the required deposit, picking the higher of the following two
 values: 20 KSM or 5% of the requested amount.
@@ -103,7 +103,7 @@ values: 20 KSM or 5% of the requested amount.
 Once created, your proposal will become visible in the Treasury screen and the council can start
 voting on it.
 
-![A pending proposal](/img/treasury/proposal.jpg)
+![A pending proposal](assets/treasury/new-proposal.jpg)
 
 Remember that the proposal has no metadata, so it's up to the proposer to create a description and
 purpose that the council could study and base their votes on.
@@ -116,7 +116,9 @@ which network the Treasury is implemented on.
 On Polkadot and Kusama, the threshold for accepting a treasury proposal is at least three-fifths of
 the council. The threshold for rejecting a proposal is at least one-half of the council.
 
-![Motion in action](/img/treasury/motion.jpg)
+![Council](assets/treasury/new-council.jpg)
+
+![Motion in action](assets/treasury/new-motion.jpg)
 
 ## Tipping
 
