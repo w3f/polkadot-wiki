@@ -46,9 +46,9 @@ details.
 ### Oversubscribed Validators
 
 Validators can only pay out to 256 nominators per era. If more than 256 nominators nominate the same
-validator, it is "oversubscribed", and only the top 256 staked nominators (ranked by amount of stake)
-are paid rewards. Other nominators will receive no rewards for that era, although their stake will
-still be used to calculate entry into the active validator set.
+validator, it is "oversubscribed", and only the top 256 staked nominators (ranked by amount of
+stake) are paid rewards. Other nominators will receive no rewards for that era, although their stake
+will still be used to calculate entry into the active validator set.
 
 Although it is difficult to determine exactly how many nominators will nominate a given validator in
 the next era, one can estimate based on the current number of nominators. A nominator with only 5

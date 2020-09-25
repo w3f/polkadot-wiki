@@ -264,8 +264,8 @@ biasing, or identity-based quadratic voting.
 
 ## Oversubscribed
 
-If more than 256 nominators nominate the same validator, it is "oversubscribed", and only the top 256
-staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
+If more than 256 nominators nominate the same validator, it is "oversubscribed", and only the top
+256 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
 rewards for that era.
 
 ## Pallet
