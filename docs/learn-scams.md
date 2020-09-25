@@ -31,8 +31,8 @@ message you privately to help with a problem you posted publicly.
 
 For any potential scam, always be sure to do a background check on the source, i.e, look at any
 username, email, Youtube channel name, URL, etc. If something seems fishy, that's because it likely
-is. Never enter any personal data after clicking on a link, always type it in yourself. Feel free to
-check with support@polkadot.network.
+is. Never enter any personal data after clicking on a link, always type personal data in yourself.
+Feel free to check with [support@polkadot.network](mailto:support@web3.foundation).
 
 ### Check twice before sending DOT/KSM
 
