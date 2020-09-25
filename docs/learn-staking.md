@@ -38,8 +38,8 @@ what you are required to do when the mainnet launches.
 
 A validator node is required to be responsive 24/7, perform its expected duties in a timely manner,
 and avoid any slashable behavior. You can follow our
-[Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a
-validator on Kusama.
+[Kusama validator guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama)
+if you would like to run a validator on Kusama.
 
 ### 2. Nomination period
 
