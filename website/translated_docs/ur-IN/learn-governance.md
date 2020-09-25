@@ -61,6 +61,8 @@ Multiple referenda cannot be voted upon in the same time period, excluding emerg
 
 To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. It is possible to vote without locking at all, but your vote is worth a small fraction of a normal vote, given your stake. At the same time, holding only a small amount of DOT tokens does not mean that the holder cannot influence the referendum result, thanks to time-locking. You can read more about this at [Voluntary Locking](#voluntary-locking).
 
+> To learn more on voting on referenda, please check out our [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
+
 ```
 Example:
 
@@ -199,6 +201,8 @@ For a referendum to be proposed by the council, a strict majority of members mus
 A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
+
+> For information on council, please head over to our [technical explainer video](https://www.youtube.com/watch?v=837Vv3gdRzI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=32&ab_channel=Polkadot).
 
 ### How to be a council member?
 

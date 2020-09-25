@@ -8,6 +8,8 @@ sidebar_label: Redenomination of DOT
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12 Planks, that is twelve decimal places. After this date, DOT is denominated as 1e10 Plancks, as in ten decimal places. DOT denominated to twelve decimal places is referred to as "DOT (old)" and DOT denominated to ten decimal places is referred to as "_New DOT_".
 
+> Check out our [technical explainer video that explains more of Redenomination](https://www.youtube.com/watch?v=xXIcnBV4uUE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22&ab_channel=Polkadot).
+
 The change in denomination, henceforth referred to as the _redenomination_, was voted on by the community of DOT holders. The community decided between four options, to change the DOT denomination by a factor of ten, one hundred, one thousand, or not at all. The end result was to change the denomination by a factor of one hundred.
 
 The overall effect of this change was that the number of Polkadot's smallest unit, the Planck, remains constant, while the DOT balance for all holders was increased by a factor of one hundred. As one can see from the example below, the number of Planks that a user has does not change, only the number of Planks that constitute a single DOT. So, a user with 1,000,000,000,000 Plancks still has the same number of Plancks, but will have 100 DOT under the new denomination.

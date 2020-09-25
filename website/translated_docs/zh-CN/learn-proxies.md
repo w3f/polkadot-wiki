@@ -6,6 +6,8 @@ sidebar_label: 代理账户
 
 Polkadot 提供了一个模块，允许用户设置代理帐户以代表其执行有限数量的操作。 与[ Stakeing ](learn-staking)中的 Stash 和 Controller 帐户关系非常相似，代理允许用户将一个帐户保留在冷存储中，并利用该帐户中代币的权重积极参与网络。
 
+> Check out our Polkadot Youtube video that explains [what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
+
 ## 代理类型
 
 您可以通过代理模块设置代理账户。当您设置代理时，您必须选择代理关系的 类型: Polkadot 提供：
@@ -30,7 +32,7 @@ Proxies that are of the type "non-transfer" are accounts that allow any type of 
 
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
-> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance proxies.
+> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance proxies or watch our [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
 
 ### Staking Proxies
 
@@ -43,6 +45,8 @@ The "Staking" type allows staking-related transactions, but do not confuse a sta
 ### Anonymous Proxies
 
 Polkadot includes a function to create an anonymous proxy, an account that can only be accessed via proxy. That is, it generates an address but no corresponding private key. Normally, a primary account designates a proxy account, but anonymous proxies are the opposite. The account that creates the proxy relationship is the proxy account and the new account is the primary. Use extreme care with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+
+> Learn more about anonymous proxies from our [technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
 
 ![anonymous proxy](assets/proxy_anonymous_diagram.png)
 
