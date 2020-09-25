@@ -9,9 +9,9 @@ The treasury is a pot of funds collected through transaction fees, slashing,
 [staking inefficiencies](learn-staking#inflation), etc. The funds held in the treasury can be spent
 by making a spending proposal that, if approved by the [Council](learn-governance#Council, will
 enter a waiting period before distribution. This waiting period is known as the budget period, and
-its duration is subject to [governance](learn-governance), with current defaults set to 24 days for
-Polkadot mainnet, and 6 days for Kusama. The treasury attempts to spend as many proposals in the
-queue as it can without running out of funds.
+its duration is subject to [governance](learn-governance), with current defaults set to
+{{ spend_period }} days for Polkadot mainnet, and {{ spend_period }} days for Kusama. The treasury
+attempts to spend as many proposals in the queue as it can without running out of funds.
 
 If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
 percentage of its funds -- thereby causing deflationary pressure. This percentage is currently at 1%
@@ -107,7 +107,7 @@ values: 20 KSM or 5% of the requested amount.
 Once created, your proposal will become visible in the Treasury screen and the Council can start
 voting on it.
 
-![Pending proposals](assets/treasury/proposals.jpg)
+![Pending proposals](assets/treasury/proposals.png)
 
 Remember that the proposal has no metadata, so it's up to the proposer to create a description and
 purpose that the Council could study and base their votes on.
@@ -120,7 +120,7 @@ network the Treasury is implemented.
 On Polkadot and Kusama, the threshold for accepting a treasury proposal is at least three-fifths of
 the Council. The threshold for rejecting a proposal is at least one-half of the Council.
 
-![Motions in action](assets/treasury/proposals.jpg)
+![Motions in action](assets/treasury/motion.png)
 
 ## Tipping
 
@@ -139,9 +139,9 @@ be paid out.
 
 There are two types of tips: public and tipper-initiated. With public tips, a small bond is required
 to place them. This bond depends on the tip message length, and a fixed bond constant defined on
-chain: 0.166 KSM on Kusama and 1 DOT on Polkadot. Public tips carry a finder's fee of 20% which is
-paid out from the total amount. Tipper-initiated, i.e. tips that a Council member published do not
-have a finder's fee or a bond.
+chain, currently {{ tip_deposit_amount }}. Public tips carry a finder's fee of
+{{ tip_finders_fee }}% which is paid out from the total amount. Tipper-initiated, i.e. tips that a
+Council member published do not have a finder's fee or a bond.
 
 To better understand the process a tip goes through until it is paid out, let's consider an example.
 
