@@ -184,7 +184,7 @@ A governance system of a blockchain that is controlled by mechanisms on the bloc
 
 ## Oversubscribed
 
-If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era.
+If more than 256 nominators nominate the same validator, it is "oversubscribed", and only the top 256 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era.
 
 ## Pallet
 
