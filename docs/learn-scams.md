@@ -24,7 +24,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 ### Some Common Types of Scams
 
 - Private messages sent to you over Telegram, Twitter, and other social media
-- "Giveaways" advertising that you 'send us some DOT/KSM, we'll send you double back'
+- "Giveaways" advertising that you "send us some DOT/KSM, we'll send you double back"
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of our team
 - Scammers will take official videos, add "giveaway" text around it so that it looks like the
   giveaway is supported by Polkadot, Web3 Foundation, Parity, or other well-known entity
