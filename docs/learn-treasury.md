@@ -16,7 +16,7 @@ attempts to spend as many proposals in the queue as it can without running out o
 If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
 percentage of its funds -- thereby causing deflationary pressure.
 {{ polkadot: This percentage is currently at 1%
-on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the caveat of the 0.2% on Kusama going to
+on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
 [Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
 burned. :kusama }}
 
