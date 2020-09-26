@@ -110,6 +110,30 @@ The templates to replace in the text take the following format:
 - `filters` is an array of filters to apply on the value after it's been fetched (does not apply to
   defaults). Filters are defined in `applyFilters` or `inject.js`.
 
+To test the injection, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
+`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
+`kusama-guide`.
+
+### Conditional Rendering
+
+The two wikis support conditional rendering depending on which wiki is being deployed. This is
+useful for mirrored pages that have most content in common, but some minor differences. To use this
+functionality, surround Kusama specific content with {{ kusama: :kusama }}, and polkadot specific
+content with {{ polkadot: :polkadot }}. Example:
+
+```md
+If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
+percentage of its funds -- thereby causing deflationary pressure.
+{{ polkadot: This percentage is currently at 1%
+on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
+[Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
+burned. :kusama }}
+```
+
+To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
+`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
+`kusama-guide`.
+
 ### Mirror pages
 
 A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
