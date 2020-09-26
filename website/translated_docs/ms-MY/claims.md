@@ -38,15 +38,15 @@ The Polkadot-JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto 
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
-![claim-1](assets/new-claims/claim-1.png)
+![claim-1](assets/new-claims/claim-1.jpg)
 
 Now you will need to provide the Ethereum address that is associated with the DOT indicator tokens that you will claim. Enter the Ethereum address into the box and click "Continue".
 
-![claim-2](assets/new-claims/claim-2.png)
+![claim-2](assets/new-claims/claim-2.jpg)
 
 Next your screen should look the image below.
 
-![claim-2-1](assets/new-claims/claim-2-1.png)
+![claim-2-1](assets/new-claims/claim-2-1.jpg)
 
 The hex-encoded string that follows the sentence: "Pay DOT to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
@@ -68,11 +68,11 @@ When you click "Sign Message" you will get a JSON output like the one below:
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
-![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
+![claim-7](assets/new-claims/claim-7.jpg) ![claim-8](assets/new-claims/claim-8.jpg)
 
 A green box will appear telling you the amount to claim with a "Claim" button to make the claim. Click on the "Claim" button and click "Submit (no signature)" to complete the claim.
 
-![claim-9](assets/new-claims/claim-9.png)
+![claim-9](assets/new-claims/claim-9.jpg)
 
 If this claim succeeded, then you will see a success message and your DOT will be in the account that you claimed to.
 
@@ -82,7 +82,7 @@ After you make an on-chain claim for DOT, your balance should be updated on the 
 
 Having trouble? Get support in the DOT [Claims Support]() channel.
 
-![claim-10](assets/new-claims/claim-10.png)
+![claim-10](assets/new-claims/claim-10.jpg)
 
 Congratulations, you have now completed the process for claiming and signing for your DOT.
 
@@ -112,7 +112,7 @@ Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to
 
 After entering your account, you should see a red counter appear on the "Claim Tokens" tab on the left navigation drawer.
 
-![claim-attest-1](assets/new-claims/new-attest-1.png)
+![claim-attest-1](assets/new-claims/new-attest-1.jpg)
 
 Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
@@ -122,13 +122,13 @@ The notification will display one or more Polkadot addresses that you have loade
 
 Click "Continue" and you will see a green box appear on the right.
 
-![claim-attest-3](assets/new-claims/new-attest-3.png)
+![claim-attest-3](assets/new-claims/new-attest-3.jpg)
 
-![claim-attest-4](assets/new-claims/new-attest-4.png)
+![claim-attest-4](assets/new-claims/new-attest-4.jpg)
 
 Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
 
-![claim-attest-5](assets/new-claims/new-attest-5.png)
+![claim-attest-5](assets/new-claims/new-attest-5.jpg)
 
 ## Using Parity Signer
 
@@ -145,7 +145,7 @@ Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address 
 
 ### Make the Attestation
 
-![ps-claim-1](assets/new-claims/ps-claim-1.png)
+![ps-claim-1](assets/new-claims/ps-claim-1.jpg)
 
 Click "Add via Qr" on the right side.
 
@@ -167,9 +167,7 @@ Your address will be displayed in QR code format. You can move the QR code to th
 
 Once decoded successfully, input the name for your address and click "Create".
 
-![ps-claim-4](assets/new-claims/ps-claim-4.png)
-
-You will notice that the digit beside the "Claim Tokens" menu changed to 2. It means the number of addresses on the Accounts page that need to do attestations.
+You will notice that the digit beside the "Claim Tokens" menu increased by 1. It means the number of addresses on the Accounts page that need to do attestations.
 
 Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
