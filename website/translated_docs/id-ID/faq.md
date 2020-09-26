@@ -4,25 +4,17 @@ title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
-_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered, please feel free to ask on the Polkadot Watercooler [Riot channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email [support](mailto:support@polkadot.network)._
+_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on our support [Knowledge Base](https://support.polkadot.network/support/home) or the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered, please feel free to ask on the Polkadot Watercooler [Element channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email [support](mailto:support@polkadot.network)._
 
 ## Polkadot Launch
 
-### What is the launch process of Polkadot?
+The Genesis block of the Polkadot network was launched on May 26, 2020, as a Proof of Authority (PoA) network, with governance controlled by the single Sudo (super-user) account. During this time, validators started joining the network and signaling their intention to participate in consensus.
 
-The Polkadot network will launch first as a Proof-of-Authority (PoA) chain. During this time, governance will be controlled by the single Sudo (super-user) account, and functionality will be restricted. Among other things, transfer of funds will not be enabled during this period.
+The network evolved to become a Proof of Stake (PoS) network on June 18, 2020. With the chain secured by the decentralized community of validators, the Sudo module was removed on July 20, 2020, transitioning the governance of the chain into the hands of the token (DOT) holders. This is the point where Polkadot became decentralized.
 
-During this time, validators can start joining the network and signaling their intention to participate in consensus. When a sufficient number of validators are sourced from the community, the Sudo account will initiate the transition of the chain security from PoA to Proof-of-Stake (PoS). After this happens, the first validator elections will begin, and from that time onward, the chain will be secured by the economic stake that is bonded by validators and nominators.
+The final step of the transition to full-functioning Polkadot was the enabling of transfer functionality, which occurred on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39 UTC.
 
-After the chain has been secured by the decentralized community of validators, the next step is to transition the governance of the chain into the hands of the token holders. The Sudo account will initiate an upgrade that erases the Sudo logic from the chain entirely and replaces it with the stakeholder governance modules. From this point, the network is entirely in the hands of the token holders and no longer under control of any centralized authority.
-
-The final step to transition to full-functioning Polkadot is the enabling of transfer functionality. The community will need to propose a runtime upgrade and vote upon it in order to accomplish this. If the vote to enable transfers passes, then it will be enacted shortly thereafter. When this takes place, Polkadot will be fully live and move out of its Beta release label.
-
-### How many validators will be validating at Polkadot Beta launch?
-
-Initially only a few authorized validators will be securing the network. However, as [detailed in the answer above](#what-is-the-launch-process-of-polkadot-beta), the network will right away be available to validators that want to register their intention to validate. The transition to Proof-of-Stake will largely depend on when a sufficient number of validators have registered and are ready to take over the security of the network. This number can be as low as 50 but probably closer to 100.
-
-The launch process is expected to be similar to that of the Kusama network. Kusama transitioned to PoS when there were 50 validators ready, but in a matter of months scaled up the validator count to 350. Polkadot's validator count is expected to scale up in a similar fashion.
+On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Validators
 
