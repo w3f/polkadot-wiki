@@ -105,7 +105,7 @@ A popup will appear asking you to select an account and derivation path.
 
 The first option lets you select an account. You can have multiple accounts on a single Ledger
 device. The second dropdown lets you pick a derivation path - think of it like a formula from which
-child accounts are generated. If in doubt, pick the first option for both.
+child accounts are generated. If in doubt, pick the first option for both. 0 / 0 is a good default.
 
 Once you confirm your selection, depending on your browser and its security settings, you might need
 to confirm the USB connection through a popup like the one below when adding the Ledger device for
