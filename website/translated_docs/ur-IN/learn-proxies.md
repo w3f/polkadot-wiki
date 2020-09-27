@@ -90,6 +90,12 @@ If you want to remove a proxy, there are a few functions on the extrinsic page t
 
 ![remove proxies](assets/polkadot_remove_proxy.png)
 
+## How to view your Proxies
+
+To view your proxy, head over to the Chain State (underneath "Developer") page on [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If you've created your proxy on a Kusama account, it is required to change your network accordingly using the top left navigation button. On this page, the proxy pallet should be selected, returning the announcements and proxies functions. The proxies function will allow you to see your created proxies for either one account or for all accounts (using the toggle will enable this). Proxy announcements are what time lock proxies do to announce they are going to conduct an action.
+
+![view proxies](assets/polkadot_view_proxies.png)
+
 ## Putting It All Together
 
 If the idea of proxy types and their application seems abstract, it is. Here is an example of how you might use these accounts. Imagine you have one account as your primary token-holding account, and don't want to access it very often, but you do want to participate in governance and staking. You could set Governance and Staking proxies.

@@ -18,6 +18,12 @@ For most users, we recommend using the [Polkadot{.js} browser extension](https:/
 
 Another option you may consider using is the Subkey command line utility, which will allow you to take extra steps to protect the security of your key. Additionally, another option is the Polkawallet mobile wallet, although it requires an extra step to generate Kusama addresses.
 
+You can also use the Kusama Ledger application.
+
+### Using Kusama Ledger application
+
+Please follow the instructions for [installing the Kusama Ledger application](kusama-ledger) and then proceed to step 2 below.
+
 ### Using Polkadot{.js} extension (Chrome/Brave or Firefox)
 
 1. Install the Polkadot{.js} extension from the [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
