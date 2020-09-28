@@ -80,6 +80,6 @@ be in:
 - Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
 - Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of
   parachains built with horizontal scalability?
-- Nested Relay Chain: How can multiple Relay Chain's exist connected through parachains? How many
+- Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
   tiers of Relay Chains can be nested? How will validators work together to validate blocks on
   various Relay Chains? How is XCMP working in the nested setup? How is AnV going to work there?
