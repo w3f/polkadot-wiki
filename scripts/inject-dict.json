@@ -23,5 +23,22 @@
     "tpl": "dot_proxy_deposit_factor",
     "default": 0,
     "computed": true
+  },
+  {
+    "tpl": "tip_deposit_amount",
+    "default": { "kusama": 0.166, "polkadot": 1 },
+    "path": "consts.treasury.tipReportDepositBase",
+    "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "tip_finders_fee",
+    "default": { "kusama": 20, "polkadot": 20 },
+    "path": "consts.treasury.tipFindersFee"
+  },
+  {
+    "tpl": "spend_period",
+    "default": { "kusama": 6, "polkadot": 24 },
+    "path": "consts.treasury.spendPeriod",
+    "filters": ["blocksToDays"]
   }
 ]

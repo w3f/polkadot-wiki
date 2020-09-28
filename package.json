@@ -3,7 +3,7 @@
     "start": "yarn polkadot:start",
     "kusama:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
     "kusama:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
-    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build/kusama-guide-hosting",
+    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build",
     "kusama:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
     "kusama:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/kusama-index\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"kusama-guide/static/kusama-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
     "kusama:remove": "node scripts/removeUneeded.js ksm",
@@ -27,9 +27,12 @@
     "docusaurus": "^1.14.6"
   },
   "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
     "@polkadot/keyring": "^3.5.1",
     "@octokit/rest": "^18.0.6",
     "@polkadot/api": "^2.0.1",
+    "@polkadot/keyring": "^3.4.1",
     "axios": "^0.20.0",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^47.0.1",
