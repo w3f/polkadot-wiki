@@ -77,9 +77,9 @@ With the release of Polkadot 1.0, researchers have begun research for the next v
 Polkadot network. With many questions yet to be answered, as of now, some big areas of research will
 be in:
 
-- Zero Knowledge, Economics, and Networking: how will scalability work in Polkadot 2.0?
-- Horizontal vs. vertical scalability: What is the breaking point of the maximum number of
+- Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
+- Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of
   parachains buit with horizontal scalability?
-- Nested Relay Chain: can multiple Relay Chain's exist connected thru parachains? How many tiers of
-  Relay Chains can be nested? How will validators work together to validate blocks on various Relay
-  Chains?
+- Nested Relay Chain: How can multiple Relay Chain's exist connected thru parachains? How many tiers
+  of Relay Chains can be nested? How will validators work together to validate blocks on various
+  Relay Chains? How is XCMP working in the nested setup? How is AnV going to work there?
