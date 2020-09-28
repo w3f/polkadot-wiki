@@ -105,8 +105,8 @@ The templates to replace in the text take the following format:
   braces.
 - `default` is either a literal value or an object with chain-specific defaults.
 - `path` is the query to run on the chain
-- `computed` is a value that should be set to `true` is the value does not need a `path`. Computer
-  properties are computed in `computed.js`.
+- `computed` is a value that should be set to `true` is the value does not need a `path`. Computed
+  properties are exported from `computed.js`.
 - `filters` is an array of filters to apply on the value after it's been fetched (does not apply to
   defaults). Filters are defined in `applyFilters` or `inject.js`.
 
