@@ -301,7 +301,7 @@ it will be left to the stakeholders _en masse_ to determine the fate of the prop
 
 ### Blacklisting
 
-A proposal can be blacklisted by Root origin (sudo or Council). A blacklisted proposal and its
+A proposal can be blacklisted by Root origin (e.g. sudo or Council). A blacklisted proposal and its
 related referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted
 proposal's hash cannot re-appear in the proposal queue. Blacklisting is useful when removing
 removing erroneous proposals that could be submitted with the same hash, i.e.
