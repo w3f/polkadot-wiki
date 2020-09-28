@@ -1,0 +1,14 @@
+name: Check docs for stale pages (those that have not been updated in more than 21 days)
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  check-stale:
+    name: Checks for stale files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Check for stale files.
+        run: yarn; node scripts/stalecheck.js

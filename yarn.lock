@@ -2,6 +2,28 @@
 # yarn lockfile v1
 
 
+"@actions/core@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.2.6.tgz#a78d49f41a4def18e88ce47c2cac615d5694bf09"
+  integrity sha512-ZQYitnqiyBc3D+k7LsgSBmMDVkOVidaagDG7j3fOym77jNunWRuYx7VSHa9GNfFZh+zh61xsCjRj4JxMZlDqTA==
+
+"@actions/github@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@actions/github/-/github-4.0.0.tgz#d520483151a2bf5d2dc9cd0f20f9ac3a2e458816"
+  integrity sha512-Ej/Y2E+VV6sR9X7pWL5F3VgEWrABaT292DRqRU6R4hnQjPtC/zD3nagxVdXWiRQvYDh8kHXo7IDmG42eJ/dOMA==
+  dependencies:
+    "@actions/http-client" "^1.0.8"
+    "@octokit/core" "^3.0.0"
+    "@octokit/plugin-paginate-rest" "^2.2.3"
+    "@octokit/plugin-rest-endpoint-methods" "^4.0.0"
+
+"@actions/http-client@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-1.0.8.tgz#8bd76e8eca89dc8bcf619aa128eba85f7a39af45"
+  integrity sha512-G4JjJ6f9Hb3Zvejj+ewLLKLf99ZC+9v+yCxoYf9vSyH+WkzPLB2LuUtRMGNkooMqdugGBFStIKXOuvH1W+EctA==
+  dependencies:
+    tunnel "0.0.6"
+
 "@babel/code-frame@7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
@@ -991,7 +1013,7 @@
     "@octokit/types" "^5.0.0"
     universal-user-agent "^6.0.0"
 
-"@octokit/plugin-paginate-rest@^2.2.0":
+"@octokit/plugin-paginate-rest@^2.2.0", "@octokit/plugin-paginate-rest@^2.2.3":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-2.4.0.tgz#92f951ddc8a1cd505353fa07650752ca25ed7e93"
   integrity sha512-YT6Klz3LLH6/nNgi0pheJnUmTFW4kVnxGft+v8Itc41IIcjl7y1C8TatmKQBbCSuTSNFXO5pCENnqg6sjwpJhg==
@@ -1003,7 +1025,7 @@
   resolved "https://registry.yarnpkg.com/@octokit/plugin-request-log/-/plugin-request-log-1.0.0.tgz#eef87a431300f6148c39a7f75f8cfeb218b2547e"
   integrity sha512-ywoxP68aOT3zHCLgWZgwUJatiENeHE7xJzYjfz8WI0goynp96wETBF+d95b8g/uL4QmS6owPVlaxiz3wyMAzcw==
 
-"@octokit/plugin-rest-endpoint-methods@4.2.0":
+"@octokit/plugin-rest-endpoint-methods@4.2.0", "@octokit/plugin-rest-endpoint-methods@^4.0.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-4.2.0.tgz#c5a0691b3aba5d8b4ef5dffd6af3649608f167ba"
   integrity sha512-1/qn1q1C1hGz6W/iEDm9DoyNoG/xdFDt78E3eZ5hHeUfJTLJgyAMdj9chL/cNBHjcjd+FH5aO1x0VCqR2RE0mw==
@@ -7951,6 +7973,11 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+tunnel@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
+  integrity sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
