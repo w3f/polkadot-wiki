@@ -95,7 +95,7 @@ There is also the very secure [Parity Signer](https://www.parity.io/signer/) but
 
 Alternatively, you might find some wallets on the [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited** and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated. PolkaProject is an independent site which is not affiliated with Web3 Foundation.
 
-Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
+Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger).
 
 ## Existential Deposit and Reaping
 
@@ -107,7 +107,7 @@ Here's another way to think about existential deposits. Ever notice those `Thumb
 
 ## Indices
 
-A Kusama address can have an index. An index is like a short and easy to remember version of an address.
+A Kusama or Polkadot address can have an index. An index is like a short and easy to remember version of an address. Claiming an index requires a deposit which is released when the index is cleared.
 
 Indices are populated in order. Think of them like slots going from 0 to any arbitrary number:
 
@@ -122,7 +122,13 @@ If slots 0-2 are populated by addresses A, B and C respectively, and I add an ex
 
 But what if an account gets reaped as explained above? In that case, the index is emptied. In other words, the slot frees up again. If someone creates a new account, they may end up using the same index another address was using before.
 
-Because of this unreliability of indices, they **may not be present** in Polkadot mainnet.
+It is possible to _freeze_ an index and permanently assign it to an address. This action consumes a deposit but makes sure that the index can never be reclaimed unless released by the holding account.
+
+To register an index, submit a `claim` extrinsic to the `indices` pallet, and follow up with a `freeze` extrinsic. The easiest way to do this is via PolkadotJS UI through the _Developer -> Extrinsics_ menu:
+
+![Indices extrinsics](assets/accounts/index.png)
+
+To find available indices to claim, [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
 
 ## Identities
 

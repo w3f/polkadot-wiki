@@ -70,3 +70,17 @@ parachain slot auctions, parathreads, and cross-chain message passing. These upg
 runtime upgrades that will pass through Polkadot's normal governance processes. The core
 functionality does not have to be unlocked sequentially &mdash; several features can be unlocked
 with a single proposal.
+
+## Polkadot 2.0
+
+With the release of Polkadot 1.0, researchers have begun research for the next version of the
+Polkadot network. With many questions yet to be answered, as of now, some big areas of research will
+be in:
+
+- Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
+- Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of
+  parachains built with horizontal scalability?
+- Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
+  tiers of Relay Chains can be nested? How will validators work together to validate blocks on
+  various Relay Chains? How is [XCMP](learn-crosschain) working in the nested setup? How is
+  [AnV](learn-availability) going to work there?
