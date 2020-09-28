@@ -82,4 +82,5 @@ be in:
   parachains built with horizontal scalability?
 - Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
   tiers of Relay Chains can be nested? How will validators work together to validate blocks on
-  various Relay Chains? How is XCMP working in the nested setup? How is AnV going to work there?
+  various Relay Chains? How is [XCMP](learn-crosschain) working in the nested setup? How is
+  [AnV](learn-availability) going to work there?
