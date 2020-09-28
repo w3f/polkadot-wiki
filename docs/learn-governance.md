@@ -289,7 +289,7 @@ becomes a referundum with negative adaptive quorum biasing.
 ### Canceling
 
 A proposal can be canceled if the [technical committee](#technical-committee) unanimously agrees to
-do so, or if Root origin (sudo or Council) triggers this functionality. A canceled proposal's
+do so, or if Root origin (e.g. sudo or Council) triggers this functionality. A canceled proposal's
 deposit is burned.
 
 Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
