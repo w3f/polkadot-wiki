@@ -58,7 +58,9 @@ for (const lang of langDirectories) {
     const mirror = `./website/translated_docs/${lang}/mirror-${file}.md`;
     // console.log(mirror);
     if (!fs.existsSync(doc)) {
-      throw new Error(`${doc} doesn't exist!`);
+      // Disable for now, tends to fail due to unmerged crowdin
+      //throw new Error(`${doc} doesn't exist!`);
+      continue;
     }
 
     const content = fs.readFileSync(doc, { encoding: "utf-8" });
