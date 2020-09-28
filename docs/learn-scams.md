@@ -49,13 +49,23 @@ tricked by this, it is always better to confirm than to risk losing everything.
 If you've received a message from an admin over Telegram, ignore it. Our Polkadot team will never
 personally message you. Our social media accounts are posted on our website and any new social media
 accounts will be announced by our team. We will never offer to sell you DOT at a discount, air-drop
-"rewards", or message you privately to help with a problem you posted publicly.
+"rewards", or message you privately to help with a problem you posted publicly. Our social media can
+be found below:
+
+- [Twitter](https://twitter.com/Polkadot)
+- [Reddit](https://www.reddit.com/r/dot)
+- [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
+- [Offical Polkadot Telegram](https://t.me/polkadotofficial)
+- [Polkadot Medium](https://medium.com/polkadot-network)
+- [Our Community Page](community) also lists more social media accounts that Web3 Foundation,
+  Polkadot, and Kusama have.
 
 ### Keep your personal data secure
 
 One should _never_ share their secret key with anyone, nor any other personal data that is
 associated with you. It is recommended to store your information safe on paper or on a hardware
-wallet. Never enter your seed or mnemonic phrase directly on a website.
+wallet. Never enter your seed or mnemonic phrase directly on a website. If you are concerned a
+wallet could be fake, please check out our official list of supported wallets [here](build-wallets).
 
 ### Always check the source
 
