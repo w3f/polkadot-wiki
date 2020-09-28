@@ -48,7 +48,7 @@ Referenda can be started in one of several ways:
 All referenda have an _enactment delay_ associated with them. This is the period of time between the
 referendum ending and, assuming the proposal was approved, the changes being enacted. For the first
 two ways that a referendum is launched, this is a fixed time. For Kusama, it is 8 days; in Polkadot,
-it is planned to be 28 days. For the third type, it can be set as desired.
+it is 28 days. For the third type, it can be set as desired.
 
 Emergency proposals deal with major problems with the network that need to be "fast-tracked". These
 will have a shorter enactment time.
@@ -57,12 +57,14 @@ will have a shorter enactment time.
 
 #### Public Referenda
 
-Anyone can propose a referendum by depositing the minimum amount of DOT for a certain period (number
-of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to
-support it. The proposal with the highest amount of bonded support will be selected to be a
+Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
+(number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
+to support it. The proposal with the highest amount of bonded support will be selected to be a
 referendum. Note that this may be different than the absolute number of seconds; for instance, three
 accounts bonding 20 DOT each would "outweigh" ten accounts bonding a single DOT each. The bonded
 tokens will be released once the proposal is tabled (that is, brought to a vote).
+
+There can be a maximum of 100 public proposals in the proposal queue.
 
 #### Council Referenda
 
@@ -96,13 +98,14 @@ council-proposed) is the only time that multiple referenda will be able to be vo
 
 To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond
 the end of the referendum. This is in order to ensure that some minimal economic buy-in to the
-result is needed and to dissuade vote selling. It is possible to vote without locking at all, but
-your vote is worth a small fraction of a normal vote, given your stake. At the same time, holding
-only a small amount of DOT tokens does not mean that the holder cannot influence the referendum
-result, thanks to time-locking. You can read more about this at
-[Voluntary Locking](#voluntary-locking).
+result is needed and to dissuade vote selling.
 
-> To learn more on voting on referenda, please check out our
+It is possible to vote without locking at all, but your vote is worth a small fraction of a normal
+vote, given your stake. At the same time, holding only a small amount of tokens does not mean that
+the holder cannot influence the referendum result, thanks to time-locking. You can read more about
+this at [Voluntary Locking](#voluntary-locking).
+
+> To learn more about voting on referenda, please check out our
 > [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
 
 ```
@@ -208,8 +211,8 @@ period.
 #### Voluntary Locking
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their
-voting power by declaring how long they are willing to lock-up their DOT, hence, the maximum number
-of votes for each token holder will be calculated by the following formula:
+voting power by declaring how long they are willing to lock-up their tokens, hence, the maximum
+number of votes for each token holder will be calculated by the following formula:
 
 ```
 Max votes = tokens * vote_multiplier
@@ -227,8 +230,8 @@ The conviction multiplier increases the vote multiplier by one every time the lo
 |      16      |        5        |
 |      32      |        6        |
 
-Based on the genesis runtime, the maximum number of lock periods is set to 6 and the lock period is
-30 days on Polkadot and eight days on Kusama.
+The maximum number of lock periods is set to 6 and the lock period is 30 days on Polkadot and eight
+days on Kusama.
 
 #### Adaptive Quorum Biasing
 
@@ -264,11 +267,13 @@ against - equate to a simple majority-carries system at 100% turnout.
 
 ## Council
 
+> [Video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
+
 To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
 on-chain entity comprising a number of actors, each represented as an on-chain account. On Polkadot,
 the council currently consists of 13 members. This is expected to increase over the next few months
 to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
-will be 24 seats while on Kusama it is 17 seats.
+will be 24 seats while on Kusama it is 19 seats.
 
 The council is called upon primarily for three tasks of governance: proposing sensible referenda,
 cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
@@ -281,30 +286,47 @@ support - will move to a public referendum under a neutral, majority-carries vot
 case that all members of the council vote in favor of a motion, the vote is considered unanimous and
 becomes a referundum with negative adaptive quorum biasing.
 
-A two-thirds majority of the council can cancel a referendum. This may function as a last-resort if
-there is an issue found late in a referendum's proposal such as a bug in the code of the runtime
-that the proposal would institute.
+### Canceling
+
+A proposal can be canceled if the [technical committee](#technical-committee) unanimously agrees to
+do so, or if Root origin (e.g. sudo or Council) triggers this functionality. A canceled proposal's
+deposit is burned.
+
+Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
+last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of
+the runtime that the proposal would institute.
 
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders _en masse_ to determine the fate of the proposal.
 
-> For information on council, please head over to our
-> [technical explainer video](https://www.youtube.com/watch?v=837Vv3gdRzI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=32&ab_channel=Polkadot).
+### Blacklisting
+
+A proposal can be blacklisted by Root origin (e.g. sudo or Council). A blacklisted proposal and its
+related referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted
+proposal's hash cannot re-appear in the proposal queue. Blacklisting is useful when removing
+removing erroneous proposals that could be submitted with the same hash, i.e.
+[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
+text to make a suggestion. Upon seeing their proposal removed, a submitter who is not properly
+introduced to the democracy system of Polkadot might be tempted to re-submit the same proposal. That
+said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a
+single changed character in a proposal's text will also change the hash of the proposal, rendering
+the per-hash blacklist invalid.
 
 ### How to be a council member?
 
 ![](assets/governance/approval-vote.png)
 
-Currently there are 13 seats on the council. All stakeholders are free to signal their approval of
-any of the registered candidates.
+All stakeholders are free to signal their approval of any of the registered candidates.
 
 Council elections are handled by the same [Phragmén election](learn-phragmen) process that selects
 validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
-for one day. At the end of each term, Phragmén election algorithm runs and the result will choose
-the new councillors based on the vote configurations of all voters. The election also chooses a set
-number of runners up (currently seven on Kusama and fifteen on Polkadot) that will remain in the
-queue with their votes intact.
+for one day on Kusama and one week on Polkadot.
+
+At the end of each term, Phragmén election algorithm runs and the result will choose the new
+councillors based on the vote configurations of all voters. The election also chooses a set number
+of runners up (currently 19 on Kusama and 20 on Polkadot) that will remain in the queue with their
+votes intact.
 
 As opposed to a "first past the post", where voters must decide only on a single candidate chosen
 from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders
@@ -367,17 +389,15 @@ The Technical Committee was introduced in the
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 Technical Committee is composed of the teams that have successfully implemented or specified either
 a Polkadot/Kusama runtime or Polkadot Host. Teams are added or removed from the Technical Committee
-via simple majority vote of the council.
+via simple majority vote of the [Council](#council).
 
-The Technical Committee can, along with the Polkadot Council, produce emergency referenda, which are
+The Technical Committee can, along with the Council, produce emergency referenda, which are
 fast-tracked for voting and implementation. These emergency referenda are intended for use only
 under urgent circumstances.
 
 Fast-tracked referenda are the only type of referenda that can be active alongside another active
 referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
-
-## [Usage of DOT](learn-DOT#DOT-for-governance)
 
 ## Frequently Asked Questions
 
