@@ -126,8 +126,8 @@ It is possible to almost quadruple synchronization speed by using an additional 
 
 ## Using Docker
 
-Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so it's best left up to those that either already have familiarity with docker, or have completed the other set-up instructions in this guide.
+Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so it's best left up to those that either already have familiarity with docker, or have completed the other set-up instructions in this guide. If you would like to connect to your node's WebSockets ensure that you run you node with the `--rpc-external` and `--ws-external` commands.
 
 ```zsh
-docker run -p 9944:9944 parity/polkadot:v0.8.3 --name "calling_home_from_a_docker_container"
+docker run -p 9944:9944 parity/polkadot:v0.8.24 --name "calling_home_from_a_docker_container" --rpc-external --ws-external
 ```

@@ -12,6 +12,7 @@
       "glossary",
       "ens",
       "learn-ledger",
+      "learn-scams",
       "faq"
     ],
     "Learn": [
@@ -69,6 +70,7 @@
         "type": "subcategory",
         "label": "Polkadot Comparisons",
         "ids": [
+          "learn-kusama-vs-polkadot",
           "learn-comparisons-ethereum-2",
           "learn-comparisons-cosmos",
           "learn-comparisons-dfinity",
@@ -86,6 +88,7 @@
           "build-pdk",
           "learn-implementers-guide",
           "build-cumulus",
+          "build-parachains-rococo",
           "build-smart-contracts",
           "build-oracle",
           "build-wallets"

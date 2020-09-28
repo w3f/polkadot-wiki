@@ -12,9 +12,9 @@ Simple payouts requires one transaction per validator per era to claim rewards. 
 
 Polkadot stores up to 84 eras of reward info like maps of era number to validator points, inflationary rewards, and nomination exposures. Rewards will not be claimable more than 84 eras after they were earned. This means that all rewards must be claimed within 84 eras.
 
-Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will automatically calculate that validator's reward, find the top 64 nominators for that era, and distribute the rewards pro rata.
+Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will automatically calculate that validator's reward, find the top 256 nominators for that era, and distribute the rewards pro rata.
 
-> Note: The Staking system only applies the highest 64 nominations to each validator to reduce the complexity of the staking set.
+> Note: The Staking system only applies the highest 256 nominations to each validator to reduce the complexity of the staking set.
 
 These details are handled for you automatically if you use the [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit batches of eras at once.
 

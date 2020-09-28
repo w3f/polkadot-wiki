@@ -12,6 +12,7 @@ There are several ways to generate a Polkadot address:
 - [Polkadot-JS Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
+- [Ledger Hardware Wallet](learn-ledger)
 
 > To learn more on how to create Polkadot accounts, head over to our [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
 
@@ -240,6 +241,10 @@ Choose which network you would like to create an address on by clicking the name
 The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
+
+## Ledger Hardware Wallet
+
+To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow the instructions on our [Ledger hardware wallet guide page](learn-ledger).
 
 ## Vanity Generator
 

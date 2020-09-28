@@ -6,6 +6,8 @@ sidebar_label: Proxy Accounts
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of actions on their behalf. Much like the Stash and Controller account relationship in [staking](learn-staking), proxies allow users to keep one account in cold storage and actively participate in the network with the weight of the tokens in that account.
 
+> Check out our Polkadot Youtube video that explains [what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
+
 ## Proxy Types
 
 You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of proxy for the relationship. Polkadot offers:
@@ -30,7 +32,7 @@ Proxies that are of the type "non-transfer" are accounts that allow any type of 
 
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
-> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance proxies.
+> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance proxies or watch our [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
 
 ### Staking Proxies
 
@@ -43,6 +45,8 @@ The "Staking" type allows staking-related transactions, but do not confuse a sta
 ### Anonymous Proxies
 
 Polkadot includes a function to create an anonymous proxy, an account that can only be accessed via proxy. That is, it generates an address but no corresponding private key. Normally, a primary account designates a proxy account, but anonymous proxies are the opposite. The account that creates the proxy relationship is the proxy account and the new account is the primary. Use extreme care with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+
+> Learn more about anonymous proxies from our [technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
 
 ![anonymous proxy](assets/proxy_anonymous_diagram.png)
 
@@ -85,6 +89,12 @@ There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" 
 If you want to remove a proxy, there are a few functions on the extrinsic page that will help do this. The `killAnonymous()` function will let you remove an anonymous proxy. Both the `removeProxies()` and the `removeProxy()` will remove any other type of proxy but the former will remove all proxies made while the latter will remove one selected proxy.
 
 ![remove proxies](assets/polkadot_remove_proxy.png)
+
+## How to view your Proxies
+
+To view your proxy, head over to the Chain State (underneath "Developer") page on [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If you've created your proxy on a Kusama account, it is required to change your network accordingly using the top left navigation button. On this page, the proxy pallet should be selected, returning the announcements and proxies functions. The proxies function will allow you to see your created proxies for either one account or for all accounts (using the toggle will enable this). Proxy announcements are what time lock proxies do to announce they are going to conduct an action.
+
+![view proxies](assets/polkadot_view_proxies.png)
 
 ## Putting It All Together
 

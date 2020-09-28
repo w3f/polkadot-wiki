@@ -38,8 +38,8 @@ what you are required to do when the mainnet launches.
 
 A validator node is required to be responsive 24/7, perform its expected duties in a timely manner,
 and avoid any slashable behavior. You can follow our
-[Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a
-validator on Kusama.
+[Kusama validator guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama)
+if you would like to run a validator on Kusama.
 
 ### 2. Nomination period
 
@@ -125,9 +125,9 @@ only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
 
 There is an additional factor to consider in terms of rewards. While there is no limit to the number
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In Polkadot and Kusama, this limit is currently 64, although this can be modified
-via runtime upgrade. A validator with more than 64 nominators is _oversubscribed_. When payouts
-occur, only the top 64 nominators as measured by amount of stake allocated to that validator will
+can pay rewards. In Polkadot and Kusama, this limit is currently 256, although this can be modified
+via runtime upgrade. A validator with more than 256 nominators is _oversubscribed_. When payouts
+occur, only the top 256 nominators as measured by amount of stake allocated to that validator will
 receive rewards. All other nominators are essentially "wasting" their stake - they used their
 nomination to elect that validator to the active stake, but receive no rewards in exchange for doing
 so.

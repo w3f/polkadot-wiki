@@ -12,6 +12,7 @@ There are several ways to generate a Polkadot address:
 - [Polkadot-JS Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
+- [Ledger Hardware Wallet](learn-ledger)
 
 > To learn more on how to create Polkadot accounts, head over to our
 > [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
@@ -349,6 +350,11 @@ computer a very small and limited scope for interacting with the Parity Signer d
 continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
+
+## Ledger Hardware Wallet
+
+To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
+the instructions on our [Ledger hardware wallet guide page](learn-ledger).
 
 ## Vanity Generator
 

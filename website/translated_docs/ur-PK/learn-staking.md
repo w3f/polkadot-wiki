@@ -22,7 +22,7 @@ In staking, you can be either a [nominator or a validator](#validators-and-nomin
 
 As a nominator, you can nominate one or more (up to 16) validator candidates that you trust to help you earn rewards in DOT. You can take a look at the [nominator guide](learn-nominator) to understand what you are required to do when the mainnet launches.
 
-A validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a validator on Kusama.
+A validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [Kusama validator guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama) if you would like to run a validator on Kusama.
 
 ### 2. Nomination period
 
@@ -69,7 +69,7 @@ _Both validator pools A & B have 4 nominators with the total stake 600 and 400 r
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
 
-There is an additional factor to consider in terms of rewards. While there is no limit to the number of nominators a validator may have, a validator does have a limit to how many nominators to which it can pay rewards. In Polkadot and Kusama, this limit is currently 64, although this can be modified via runtime upgrade. A validator with more than 64 nominators is _oversubscribed_. When payouts occur, only the top 64 nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators are essentially "wasting" their stake - they used their nomination to elect that validator to the active stake, but receive no rewards in exchange for doing so.
+There is an additional factor to consider in terms of rewards. While there is no limit to the number of nominators a validator may have, a validator does have a limit to how many nominators to which it can pay rewards. In Polkadot and Kusama, this limit is currently 256, although this can be modified via runtime upgrade. A validator with more than 256 nominators is _oversubscribed_. When payouts occur, only the top 256 nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators are essentially "wasting" their stake - they used their nomination to elect that validator to the active stake, but receive no rewards in exchange for doing so.
 
 We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount of DOT), which means that validator pools with more stake get slashed more DOT. Again, this is done to provide nominators with an economic incentive to shift their preferences and back less popular validators whom they consider to be trustworthy.
 

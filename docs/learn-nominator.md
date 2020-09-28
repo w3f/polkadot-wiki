@@ -45,15 +45,15 @@ details.
 
 ### Oversubscribed Validators
 
-Validators can only pay out to 64 nominators per era. If more than 64 nominators nominate the same
-validator, it is "oversubscribed", and only the top 64 staked nominators (ranked by amount of stake)
-are paid rewards. Other nominators will receive no rewards for that era, although their stake will
-still be used to calculate entry into the active validator set.
+Validators can only pay out to 256 nominators per era. If more than 256 nominators nominate the same
+validator, it is "oversubscribed", and only the top 256 staked nominators (ranked by amount of
+stake) are paid rewards. Other nominators will receive no rewards for that era, although their stake
+will still be used to calculate entry into the active validator set.
 
 Although it is difficult to determine exactly how many nominators will nominate a given validator in
 the next era, one can estimate based on the current number of nominators. A nominator with only 5
-nominators in this era, for instance, is unlikely to have more than 64 in the next era. An
-already-oversubscribed validator with 100 nominators this era, however, is much more likely to be
+nominators in this era, for instance, is unlikely to have more than 256 in the next era. An
+already-oversubscribed validator with 500 nominators this era, however, is much more likely to be
 oversubscribed in the next era as well.
 
 ### Possible effect of inactive nominations on rewards
@@ -66,6 +66,14 @@ generally wise to choose as many trustworthy validators as you can (up to 16) to
 none of your nominated validators being elected.
 
 ### What to take into consideration during nominating
+
+One thing to keep in mind as a nominator is the validator's commission. The commission is the
+percentage of the validator reward which is taken by the validator before the rewards are split
+among the nominators. As a nominator you may think that the lowest commission is best. However, this
+is not always true. Validators must be able to run at break-even in order to sustainably continue
+operation. Independent validators that rely on the commission to cover their server costs help to
+keep the network decentralized. Commission is just one piece of the puzzle that you should consider
+when picking validators to nominate.
 
 ![Staking Returns](/img/staking/polkadotjs_nominators_target.png)
 

@@ -10,6 +10,8 @@ The Polkadot [Ledger][] application is compatible with both the Ledger Nano S an
 
 The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utility pallet).
 
+> Please check out our [intro to Ledger video on Youtube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
+
 ## Requirements
 
 Here is a list of what you will need before starting:
@@ -76,7 +78,7 @@ A popup will appear asking you to select an account and derivation path.
 
 ![Picking an account and derivation path](assets/ledger/add-account.png)
 
-The first option lets you select an account. You can have multiple accounts on a single Ledger device. The second dropdown lets you pick a derivation path - think of it like a formula from which child accounts are generated. If in doubt, pick the first option for both.
+The first option lets you select an account. You can have multiple accounts on a single Ledger device. The second dropdown lets you pick a derivation path - think of it like a formula from which child accounts are generated. If in doubt, pick the first option for both. 0 / 0 is a good default.
 
 Once you confirm your selection, depending on your browser and its security settings, you might need to confirm the USB connection through a popup like the one below when adding the Ledger device for the first time:
 
