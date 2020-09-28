@@ -129,9 +129,9 @@ Next to the proposals process, a separate system for making tips exists for the 
 be suggested by anyone and are supported by members of the Council. Tips do not have any definite
 value, the final value of the tip is decided based on the median of all tips issued by the tippers.
 
-Currently on Kusama, the tippers are the same as the members of the Council. However, being a tipper
-is not the direct responsibility of the Council, and at some point the Council and the tippers may
-be different groups of accounts.
+Currently on Kusama and Polkadot, the tippers are the same as the members of the Council. However,
+being a tipper is not the direct responsibility of the Council, and at some point the Council and
+the tippers may be different groups of accounts.
 
 A tip will enter a closing phase when more than a half plus one of the tipping group have endorsed a
 tip. During that timeframe, the other members of the tipping group can still issue their tips, but
@@ -220,5 +220,3 @@ migration to a minority fork. However, the possibility of this scenario is quite
 - [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) -
   The Rust implementation of the treasury.
   ([Docs](https://substrate.dev/rustdocs/v2.0.0/pallet_treasury/index.html))
-- [Gavin Wood's Kusama Rollout Plan](https://medium.com/@gavofyork/kusama-rollout-and-governance-31eb18041044) -
-  Details the treasury in its first live environment on the Kusama network.
