@@ -303,7 +303,14 @@ it will be left to the stakeholders _en masse_ to determine the fate of the prop
 
 A proposal can be blacklisted by Root origin (sudo or Council). A blacklisted proposal and its
 related referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted
-proposal's hash can never re-appear in the proposal queue.
+proposal's hash cannot re-appear in the proposal queue. Blacklisting is useful when removing
+removing erroneous proposals that could be submitted with the same hash, i.e.
+[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
+text to make a suggestion. Upon seeing their proposal removed, a submitter who is not properly
+introduced to the democracy system of Polkadot might be tempted to re-submit the same proposal. That
+said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a
+single changed character in a proposal's text will also change the hash of the proposal, rendering
+the per-hash blacklist invalid.
 
 ### How to be a council member?
 
