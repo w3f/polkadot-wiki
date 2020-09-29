@@ -34,19 +34,19 @@ sidebar_label: 认领
 
 #### 使用 MyCrypto 认领您的 DOT
 
-Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持有 DOT 代币的以太坊帐户的密钥存储在 Ledger Nano S 或 Trezor 等冷钱包上，MyCrypto 是个不错的选择。它还支持私钥，助记词和 Parity signer。
+The Polkadot-JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
 
 一旦下载了 MyCrypto 并使其在本地运行(为了获得最大的安全性，我们建议使用完全离线的电脑)，您可以先访问 Polkadot-JS Apps 上的 Claims 程序。选择您要申请认领 DOT 的帐户，然后点蓝色的 "Continue" 按钮继续。您的屏幕应如下图所示:
 
-![claim-1](assets/new-claims/claim-1.png)
+![claim-1](assets/new-claims/claim-1.jpg)
 
 现在您将需要提供与您将认领 DOT 代币的以太坊地址。在框中输入以太坊地址，然后点击 "Continue"。
 
-![claim-2](assets/new-claims/claim-2.png)
+![claim-2](assets/new-claims/claim-2.jpg)
 
 接下来，屏幕应如下图所示。
 
-![claim-2-1](assets/new-claims/claim-2-1.png)
+![claim-2-1](assets/new-claims/claim-2-1.jpg)
 
 句子后面的十六进制编码字符串: "Pay DOTs to the Polkadot account:" 是您 Polkadot 帐户的十六进制编码公钥，去除 `0x` 前缀。
 
@@ -58,7 +58,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![claim-4](assets/new-claims/claim-4.png)
 
-解锁钱包后，将来自 Polkadot JS 的信息粘贴到 "Message" 框中。
+After unlocking your wallet, paste the message from Polkadot-JS into the "Message" box.
 
 ![claim-5](assets/new-claims/claim-5.png)
 
@@ -66,13 +66,13 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-将来自 MyCrypto 的签名信息的 JSON 结果复制并粘贴到 Polkadot JS UI 的输入框中，然后点击 "Confirm Claim"。
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
-![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
+![claim-7](assets/new-claims/claim-7.jpg) ![claim-8](assets/new-claims/claim-8.jpg)
 
 将会出现一个绿色框，告诉您要认领的金额，并带有 "Claim" 按钮以提出认领。 点击 "Claim" 按钮，然后按 "Submit (no signature)" 以完成认领。
 
-![claim-9](assets/new-claims/claim-9.png)
+![claim-9](assets/new-claims/claim-9.jpg)
 
 若申领成功，那么您将看到提示成功的消息，同时您的DOT将会出现在您在申领时提交的账户中。
 
@@ -82,7 +82,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 遇到麻烦? 在 DOT [Claims Support]()渠道寻求帮助。
 
-![claim-10](assets/new-claims/claim-10.png)
+![claim-10](assets/new-claims/claim-10.jpg)
 
 恭喜，您现在已经完成了 DOT 申领及签名的流程。
 
@@ -112,7 +112,7 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 当输入帐户后，您应该会在左侧导航栏的 "Claim Tokens" 标签上看到红色的提示。
 
-![claim-attest-1](assets/new-claims/new-attest-1.png)
+![claim-attest-1](assets/new-claims/new-attest-1.jpg)
 
 点击 "Claims Tokens" 选项，您将在页面顶部看到一个大型通知，告诉您需要签署验证声明。
 
@@ -122,13 +122,13 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 点击 "Continue"，您将看到右侧的绿弹框。
 
-![claim-attest-3](assets/new-claims/new-attest-3.png)
+![claim-attest-3](assets/new-claims/new-attest-3.jpg)
 
-![claim-attest-4](assets/new-claims/new-attest-4.png)
+![claim-attest-4](assets/new-claims/new-attest-4.jpg)
 
 点击 "I Agree"，然后点击 "Sign and Submit" 提交您无交易费用的验证交易。当交易打包入区块中后，您将看到绿色的成功弹框出现在右上角，同时 DOT 将出现在您的帐户中。
 
-![claim-attest-5](assets/new-claims/new-attest-5.png)
+![claim-attest-5](assets/new-claims/new-attest-5.jpg)
 
 ## 使用Parity Signer
 
@@ -137,15 +137,15 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 - Parity Signer
 - 已链接到 Polkadot-JS Apps UI 的 Polkadot 帐户
 
-在申领前，您应将您在Parity Signer上的 Polkadot 地址导入到 PolkadotJS 应用程序中。 所有操作都将使用Parity Signer来签署交易，但将通过PolkadotJS 的远程节点进行广播。 如果您没有 Polkadot 地址， 请按照 [创建账户][] 页面中Parity Signer部分的说明创建一个新的 Polkadot 账户。
+Before claiming, you should import your Polkadot address on Parity Signer to the Polkadot-JS Apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the Polkadot-JS Apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
 
 ### 前往 Polkadot-JS Apps
 
-继续使用 [polkadot-js Apps][claims app]。您需要先将您在Parity Signer上的地址导入到账户页面。
+Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
 
 ### 提交验证声明
 
-![ps-claim-1](assets/new-claims/ps-claim-1.png)
+![ps-claim-1](assets/new-claims/ps-claim-1.jpg)
 
 点击右侧的“Add via Qr”。
 
@@ -161,44 +161,43 @@ Polkadot JS [Claims app][]可帮助您从 MyCrypto 签名消息。 万一您持�
 
 ![ps-3](assets/new-claims/ps-03.jpg)
 
-您的地址将以二维码的方式显示。 您可扫描二维码，以便 PolkadotJS 应用程序对其进行解码。
+Your address will be displayed in QR code format. You can move the QR code to the camera so that the Polkadot-JS Apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
 当二维码信息读取成功后，输入您的地址名称并点击“创建”。
 
-![ps-claim-4](assets/new-claims/ps-claim-4.png)
+You will notice that the digit beside the "Claim Tokens" menu increased by 1. It means the number of addresses on the Accounts page that need to do attestations.
 
-您会注意到“申领代币”菜单旁的数字已更改为2。 这代表着账户页面上需要进行验证的地址数量。
+Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
-转到 [申领代币](https://polkadot.js.org/apps/#/claims) 页面，您将在页面顶部看到一个大的通知，告诉您需要签署验证声明。
-
-使用下拉选择选择刚刚导入用以进行申领的Polkadot账户。 如果没有看到通知或者没有看到选择器，请仔细检查该账户是否已经加载到Polkadot-JS中并且其已在创世块前进行了申领。同时，请随时在[Claims Support]()中寻求帮助。
+Select the Polkadot account that you just have imported with a claim using the drop-down selection. If you don't see a notification or don't see the selector, please double check that the account has been loaded into Polkadot-JS and that it has already claimed during the pre-genesis period. As always, feel free to reach out for help in the [Claims Support]() channel.
 
 ![ps-claim-5](assets/new-claims/ps-claim-5.png)
 
-随后点击 "Continue"，您将看到右侧的绿色弹框。
+Then click "Continue" and you will see a green box appear on the right.
 
 ![ps-claim-6](assets/new-claims/ps-claim-6.png)
 
-点击“I Agree”，然后点击“Sign via Qr”。
+Click on "I Agree" and then "Sign via Qr".
 
 ![ps-claim-7](assets/new-claims/ps-claim-7.png)
 
-现在您需要使用已加载您Polkadot地址的 Parity Signer 来签署交易。
+Now you need to sign the transaction using the Parity Signer with your Polkadot address.
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-首先，您需要点击Parity Signer上的“QR Scanner”，扫描授权交易窗口上显示的二维码，生成原始交易。接下来，您可能需要在Parity Signer上输入PIN码，以二维码的形式生成签名交易。然后将二维码移动到PolkadotJS Apps上的镜头中以继续下一步。
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the Polkadot-JS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
-当交易被成功打包后，您将看到绿色成功框出现在右上角，同时DOT 将出现在您的帐户中。
+When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
   https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
 
 [ MyCrypto ]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[创建账户]: learn-account-generation
+[account generation]: learn-account-generation
 [Claims app]: https://polkadot.js.org/apps/#/claims
+[claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

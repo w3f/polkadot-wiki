@@ -38,8 +38,8 @@ what you are required to do when the mainnet launches.
 
 A validator node is required to be responsive 24/7, perform its expected duties in a timely manner,
 and avoid any slashable behavior. You can follow our
-[Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a
-validator on Kusama.
+[Kusama validator guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama)
+if you would like to run a validator on Kusama.
 
 ### 2. Nomination period
 
@@ -125,9 +125,9 @@ only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
 
 There is an additional factor to consider in terms of rewards. While there is no limit to the number
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In Polkadot and Kusama, this limit is currently 64, although this can be modified
-via runtime upgrade. A validator with more than 64 nominators is _oversubscribed_. When payouts
-occur, only the top 64 nominators as measured by amount of stake allocated to that validator will
+can pay rewards. In Polkadot and Kusama, this limit is currently 256, although this can be modified
+via runtime upgrade. A validator with more than 256 nominators is _oversubscribed_. When payouts
+occur, only the top 256 nominators as measured by amount of stake allocated to that validator will
 receive rewards. All other nominators are essentially "wasting" their stake - they used their
 nomination to elect that validator to the active stake, but receive no rewards in exchange for doing
 so.
@@ -184,6 +184,11 @@ staking mechanism and will be able to declare its own allocation before the shar
 nominators.
 
 ![staking](assets/NPoS/article-2.png)
+
+> Note: while the experience of a nominator is _similar_ to "set it and forget it", in reality there
+> are many reasons to keep an eye on one's validators and keep optimizing the nominations for best
+> returns and reduced risk. We talk more about this on the
+> [How to Nominate](maintain-guides-how-to-nominate-polkadot) page.
 
 ### Want to stake DOT?
 
@@ -367,9 +372,9 @@ would then be split between the validator and their nominators based on the prop
 nominator had. Note that validators can put up their own stake, and for this calculation, their
 stake acts just as if they were another nominator.
 
-Rewards can be directed to the same account (controller) or to the stash account (and either
-increasing the staked value or not increasing the staked value). It is also possible to top-up /
-withdraw some bonded DOT without having to un-stake everything.
+Rewards can be directed to the same account (controller), to the stash account (and either
+increasing the staked value or not increasing the staked value), or to a completely custom account.
+It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
 
 For specific details about validator payouts, please see
 [this guide](maintain-guides-validator-payout).
@@ -390,7 +395,7 @@ going to treasury.
 - **Green line**: Staker rate of return
 
 You can determine the inflation rewards by checking the current staking rate at
-[PolkadotJS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation
+[Polkadot-JS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation
 model of the network. Depending on the staking participation, the distribution of the inflation to
 validators versus the treasury will change dynamically to provide incentives to participate (or not
 participate) in staking. For instance, all of the inflation would go to the validators if 50% of all
@@ -412,13 +417,13 @@ please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Ec
 - Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
-## How many validators will Polkadot have?
+## How many validators does Polkadot have?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more
-gradually. The top bound on the number of validators has not been determined yet, but should only be
-limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message
-passing. The estimate of the number of validators that Polkadot will have at maturity is
-around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
+Polkadot started with 20 open validator positions and has opened more gradually. The top bound on
+the number of validators has not been determined yet, but should only be limited by the bandwidth
+strain of the network due to peer-to-peer message passing. The estimate of the number of validators
+that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
+over 500 validator slots, and the plan is also to slowly grow this number to approximately 1000.
 
 ## Resources
 

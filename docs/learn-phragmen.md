@@ -610,7 +610,7 @@ an optimal manner.
 
 There are several further restrictions put in place to limit the complexity of the election and
 payout. As already mentioned, any given nominator can only select up to 16 validators to nominate.
-Conversely, a single validator can have only 64 nominators. A drawback to this is that it is
+Conversely, a single validator can have only 256 nominators. A drawback to this is that it is
 possible, if the number of nominators is very high or the number of validators is very low, that all
 available validators may be "saturated" and unable to accept more nominations. In this case, one may
 need a larger amount of stake to participate in staking, since nominations are priority-ranked in

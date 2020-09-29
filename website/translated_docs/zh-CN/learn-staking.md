@@ -22,7 +22,7 @@ In staking, you can be either a [nominator or a validator](#validators-and-nomin
 
 As a nominator, you can nominate one or more (up to 16) validator candidates that you trust to help you earn rewards in DOT. You can take a look at the [nominator guide](learn-nominator) to understand what you are required to do when the mainnet launches.
 
-A validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [Kusama validator guide](maintain-guides-how-to-validate-kusama) if you would like to run a validator on Kusama.
+A validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [Kusama validator guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama) if you would like to run a validator on Kusama.
 
 ### 2. 提名期
 
@@ -69,7 +69,7 @@ _Both validator pools A & B have 4 nominators with the total stake 600 and 400 r
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
 
-There is an additional factor to consider in terms of rewards. While there is no limit to the number of nominators a validator may have, a validator does have a limit to how many nominators to which it can pay rewards. In Polkadot and Kusama, this limit is currently 64, although this can be modified via runtime upgrade. A validator with more than 64 nominators is _oversubscribed_. When payouts occur, only the top 64 nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators are essentially "wasting" their stake - they used their nomination to elect that validator to the active stake, but receive no rewards in exchange for doing so.
+There is an additional factor to consider in terms of rewards. While there is no limit to the number of nominators a validator may have, a validator does have a limit to how many nominators to which it can pay rewards. In Polkadot and Kusama, this limit is currently 256, although this can be modified via runtime upgrade. A validator with more than 256 nominators is _oversubscribed_. When payouts occur, only the top 256 nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators are essentially "wasting" their stake - they used their nomination to elect that validator to the active stake, but receive no rewards in exchange for doing so.
 
 We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount of DOT), which means that validator pools with more stake get slashed more DOT. Again, this is done to provide nominators with an economic incentive to shift their preferences and back less popular validators whom they consider to be trustworthy.
 
@@ -93,6 +93,8 @@ Controller and Stash account keys can be either sr25519 or ed25519. For more on 
 Since validator slots will be limited, most of those who wish to stake their DOT and contribute economic security to the network will be nominators. Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of parachains, and possibly some other responsibilities regarding data availability and [XCMP](learn-crosschain). Nominators, on the other hand, do not need to do anything once they have bonded their DOT. The experience of the nominator is similar to "set it and forget it," while the validator will be doing active service for the network by performing the critical operations. For this reason, the validator has certain privileges regarding the payout of the staking mechanism and will be able to declare its own allocation before the share is divided to nominators.
 
 ![staking](assets/NPoS/article-2.png)
+
+> Note: while the experience of a nominator is _similar_ to "set it and forget it", in reality there are many reasons to keep an eye on one's validators and keep optimizing the nominations for best returns and reduced risk. We talk more about this on the [How to Nominate](maintain-guides-how-to-nominate-polkadot) page.
 
 ### Want to stake DOT?
 
@@ -180,11 +182,13 @@ Rewards are calculated based on era points, which have a probabilistic component
 
 In order to be paid your staking rewards, someone must claim them for each validator that you nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot and 21 days on Kusama. For more information on why this is so, see the page on [simple payouts](learn-simple-payouts).
 
-> 警告：如果此时没有人领取您的抵押奖励，那么您将无法领取它们，并且您的某些抵押奖励将会丢失。
+> WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim them and some of your staking rewards will be lost.
 
 ### 领取奖励
 
-If you go to the Staking payouts page on [Polkadot JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of validators that you have nominated in the past 84 eras. Each one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone who was nominating that validator during those eras, and anyone can call it.
+If you go to the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of all validators that you have nominated in the past 84 eras and for which you have not yet received a payout. Each one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone who was nominating that validator during those eras, and anyone can call it. Therefore, you may not see anything in this tab, yet still received a payout if somebody (generally, but not necessarily, another nominator or the validator operator) has triggered the payout for that validator for that era.
+
+If you wish to check if you received a payout, you will have to check via a block explorer. See [the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-) for details.
 
 ### 奖励分配例子
 
@@ -200,13 +204,13 @@ Validators can create a cut of the reward that is not shared with the nominators
 
 For example, assume the block reward for a validator is 10 DOT. A validator may specify `validator_payment = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT would then be split between the validator and their nominators based on the proportion of stake each nominator had. Note that validators can put up their own stake, and for this calculation, their stake acts just as if they were another nominator.
 
-Rewards can be directed to the same account (controller) or to the stash account (and either increasing the staked value or not increasing the staked value). It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
+Rewards can be directed to the same account (controller), to the stash account (and either increasing the staked value or not increasing the staked value), or to a completely custom account. It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything.
 
 For specific details about validator payouts, please see [this guide](maintain-guides-validator-payout).
 
 ## 通胀率
 
-Inflation is designed to be 10% in the first year, with validator rewards being a function of amount staked and the remainder going to treasury.
+DOT is inflationary; there is no maximum number of DOT as in Bitcoin. Inflation is designed to be 10% in the first year, with validator rewards being a function of amount staked and the remainder going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
@@ -217,7 +221,7 @@ Inflation is designed to be 10% in the first year, with validator rewards being 
 - **蓝线**: 参与抵押者的通涨奖励
 - **绿线**: 抵押参与者的收益率
 
-You can determine the inflation rewards by checking the current staking rate at [PolkadotJS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
+You can determine the inflation rewards by checking the current staking rate at [Polkadot-JS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces validator payouts.
 
 For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
 
@@ -233,9 +237,9 @@ For those who are interested in knowing more about the design of inflation model
 - 如果发现验证人行为不当，将执行处罚（请参见[ #slashing ](#slashing)）。
 - 您将想代币用于平行链插槽。
 
-## 波卡会有多少链验证人数量?
+## How many validators does Polkadot have?
 
-The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, has over 300 validator slots.
+Polkadot started with 20 open validator positions and has opened more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has over 500 validator slots, and the plan is also to slowly grow this number to approximately 1000.
 
 ## 资源
 

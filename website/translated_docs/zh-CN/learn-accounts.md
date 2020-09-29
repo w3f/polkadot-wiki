@@ -52,12 +52,12 @@ The above information brings us to portability: the ability to use a mnemonic ph
 
 If you want to use the same mnemonic across multiple wallets, make sure that they follow compatible methods for generating keys and signing messages. If you cannot find understandable documentation, reach out to the project maintainers.
 
-|                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-|:--------------------- |:---------------:|:---------------:|:---------------:|:---------------------------:|
-| Polkadot-JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps      |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
+|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
+|:----------------------- |:---------------:|:---------------:|:---------------:|:---------------------------:|
+| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot-JS Apps        |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
+| Subkey                  |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
 
 \* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with BIP39.
 
@@ -83,9 +83,9 @@ Finally, let's look at Kusama addresses. Decoding `CpjsLDC1JFyrhm3ftC9Gs4QoyrkHK
 
 ## Obtaining and Managing an Address
 
-The **most user-friendly** way to create a Kusama address is through the [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
+The **most user-friendly** way to create a Kusama address is through the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
 
-A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [PolkadotJS extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
+A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
 
 Please note that as this keeps your accounts in the browser, it is not a safe place to keep large holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. Creating cold storage is as simple as securely stashing away the seed phrase for your accounts and removing all traces of the accounts from your computer.
 
@@ -95,7 +95,7 @@ There is also the very secure [Parity Signer](https://www.parity.io/signer/) but
 
 Alternatively, you might find some wallets on the [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited** and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated. PolkaProject is an independent site which is not affiliated with Web3 Foundation.
 
-Hardware wallet integration from [Ledger](https://ledger.com) is coming soon.
+Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger).
 
 ## Existential Deposit and Reaping
 
@@ -107,7 +107,7 @@ Here's another way to think about existential deposits. Ever notice those `Thumb
 
 ## Indices
 
-A Kusama address can have an index. An index is like a short and easy to remember version of an address.
+A Kusama or Polkadot address can have an index. An index is like a short and easy to remember version of an address. Claiming an index requires a deposit which is released when the index is cleared.
 
 Indices are populated in order. Think of them like slots going from 0 to any arbitrary number:
 
@@ -122,7 +122,13 @@ If slots 0-2 are populated by addresses A, B and C respectively, and I add an ex
 
 But what if an account gets reaped as explained above? In that case, the index is emptied. In other words, the slot frees up again. If someone creates a new account, they may end up using the same index another address was using before.
 
-Because of this unreliability of indices, they **may not be present** in Polkadot mainnet.
+It is possible to _freeze_ an index and permanently assign it to an address. This action consumes a deposit but makes sure that the index can never be reclaimed unless released by the holding account.
+
+To register an index, submit a `claim` extrinsic to the `indices` pallet, and follow up with a `freeze` extrinsic. The easiest way to do this is via PolkadotJS UI through the _Developer -> Extrinsics_ menu:
+
+![Indices extrinsics](assets/accounts/index.png)
+
+To find available indices to claim, [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
 
 ## Identities
 
@@ -137,6 +143,8 @@ Polkadot comes with a generalized proxy account system that allows users to keep
 It is possible to create a multi-signature account in Substrate-based chains. A multi-signature account is composed of one or more addresses and a threshold. The threshold defines how many signatories (participating addresses) need to agree on the submission of an extrinsic in order for the call to be successful.
 
 For example, Alice, Bob, and Charlie set up a multi-sig with a threshold of 2. This means Alice and Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute any call without Alice. A threshold is typically a number smaller than the total number of members but can also be equal to it, which means they all have to be in agreement.
+
+> Learn more about multisig accounts from our [technical explainer video](https://www.youtube.com/watch?v=ZJLqszvhMyM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=25&ab_channel=Polkadot).
 
 Multi-signature accounts have several uses:
 
@@ -164,7 +172,7 @@ Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 --------------------------------
 ```
 
-The Polkadot JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
+The Polkadot-JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
 
 ### Making Transactions with a Multi-signature Account
 
@@ -215,6 +223,25 @@ Thus the deposit values can be calculated as shown in the table below.
 | DepositFactor | 320000000    | 5333333312      |
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob, and Charlie. First Alice will create the call on chain by calling `as_multi` with the raw call. When doing this Alice will have to deposit 0.20152 DOT while she waits for either Bob or Charlie to also approve the call. When Bob comes to approve the call and execute the transaction, he will not need to place the deposit and Alice will receive her deposit back.
+
+## Address Changer
+
+You can use the tool below to change the format of your address for different networks.
+
+<div class="address-changer">
+  <input class="address-changer-input" id="input" placeholder="Paste your address" oninput="globalThis.addressChanger()" />
+  <select class="address-changer-select" id="prefix-select" oninput="globalThis.addressChanger()">
+    <option value="0">Polkadot</option>
+    <option value="2">Kusama</option>
+    <option value="5">Plasm</option>
+    <option value="10">Acala</option>
+    <option value="16">Kulupu</option>
+    <option value="28">Subsocial</option>
+    <option value="36">Centrifuge</option>
+    <option value="42">Substrate</option>
+  </select>
+  <span class="address-changer-output" id="output" />
+</div>
 
 ## Resources
 

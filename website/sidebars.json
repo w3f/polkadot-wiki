@@ -8,12 +8,14 @@
       "research",
       "community",
       "contributing",
-      "contributors",	
+      "contributors",
       "glossary",
+      "ens",
+      "learn-ledger",
+      "learn-scams",
       "faq"
     ],
     "Learn": [
-      "learn-introduction",
       "learn-launch",
       {
         "type": "subcategory",
@@ -68,6 +70,7 @@
         "type": "subcategory",
         "label": "Polkadot Comparisons",
         "ids": [
+          "learn-kusama-vs-polkadot",
           "learn-comparisons-ethereum-2",
           "learn-comparisons-cosmos",
           "learn-comparisons-dfinity",
@@ -85,6 +88,7 @@
           "build-pdk",
           "learn-implementers-guide",
           "build-cumulus",
+          "build-parachains-rococo",
           "build-smart-contracts",
           "build-oracle",
           "build-wallets"
@@ -114,7 +118,7 @@
     ],
     "Maintain": [
       "maintain-index",
-	"maintain-polkadot-parameters",	
+      "maintain-polkadot-parameters",
       {
         "type": "subcategory",
         "label": "Nodes and Dapps",
@@ -123,11 +127,7 @@
       {
         "type": "subcategory",
         "label": "Nominator Guides",
-        "ids": [
-          "maintain-guides-how-to-nominate-polkadot",
-          "maintain-guides-how-to-chill",
-          "maintain-guides-how-to-unbond"
-        ]
+        "ids": ["maintain-guides-how-to-nominate-polkadot", "maintain-guides-how-to-unbond"]
       },
       {
         "type": "subcategory",

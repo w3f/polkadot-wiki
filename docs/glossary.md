@@ -264,8 +264,8 @@ biasing, or identity-based quadratic voting.
 
 ## Oversubscribed
 
-If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64
-staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
+If more than 256 nominators nominate the same validator, it is "oversubscribed", and only the top
+256 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no
 rewards for that era.
 
 ## Pallet
@@ -284,8 +284,9 @@ chain.
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot. It has also
-released several other projects including Parity Ethereum and Parity Secret Store.
+A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate and
+Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret
+Store.
 
 ## Polkadot
 

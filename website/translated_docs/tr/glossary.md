@@ -184,7 +184,7 @@ A governance system of a blockchain that is controlled by mechanisms on the bloc
 
 ## Oversubscribed
 
-If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era.
+If more than 256 nominators nominate the same validator, it is "oversubscribed", and only the top 256 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era.
 
 ## Pallet
 
@@ -200,7 +200,7 @@ A relatively simple database-like construct that holds both static and dynamic i
 
 ## Parity Technologies
 
-A company, founded by Dr. Gavin Wood, that is developing Substrate and Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret Store.
+A company, founded by Dr. Gavin Wood and Dr. Jutta Steiner, that is developing Substrate and Polkadot. It has also released several other projects including Parity Ethereum and Parity Secret Store.
 
 ## Polkadot
 

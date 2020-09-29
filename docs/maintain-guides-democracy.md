@@ -94,9 +94,10 @@ submitted proposal.
 ## Seconding a Proposal
 
 Seconding a proposal means that you are agreeing with the proposal and backing it with an equal
-amount of deposit as was originally locked. By seconding a proposal you will move it higher up the
-rank of proposals. The most seconded proposal - in value, not number of supporters - will be tabled
-as a referendum to be voted on every launch period.
+amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
+tabled (that is, brought to a vote). By seconding a proposal you will move it higher up the rank of
+proposals. The most seconded proposal - in value, not number of supporters - will be tabled as a
+referendum to be voted on every launch period.
 
 To second a proposal, navigate to the proposal you want to second and click on the "Second" button.
 
@@ -137,6 +138,25 @@ When you are comfortable with the decision you have made, click the blue "Vote" 
 your transaction and wait for it to be included in a block.
 
 ![voting](assets/democracy/voting.png)
+
+## Unlocking Locked Tokens
+
+Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are
+locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an
+unlock extrinsic to make your funds available again after the lock expires.
+
+You can do this from the "Accounts" page in
+[Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a
+"democracy" lock by opening the details on your balance. In the example below the account has 150
+KSM locked in democracy.
+
+![democracy balance details](assets/democracy_balance_details.png)
+
+Now you can click the menu button on Apps and find the option that says "Clear expired democracy
+locks". After selecting this option you may confirm the transaction and your locks will be cleared
+when successful.
+
+![democracy clear locks](assets/democracy_clear_locks.png)
 
 ## Delegate a Vote
 

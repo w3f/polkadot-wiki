@@ -22,9 +22,9 @@ After cloning the source locally, you can start the websites with each of these 
 
 ```zsh
 # For the Polkadot Wiki:
-$ yarn polkadot:start
+yarn polkadot:start
 # For the Kusama Guide:
-$ yarn kusama:start
+yarn kusama:start
 ```
 
 ### Style Guide
@@ -38,7 +38,7 @@ Use [Prettier](https://prettier.io/) to format markdown pages. To run Prettier o
 run:
 
 ```bash
-$ npx prettier --write ./docs/
+npx prettier --write ./docs/
 ```
 
 ### Automated Deployments
@@ -60,9 +60,9 @@ To use the replace script:
 
 ```bash
 # For Polkadot Wiki
-$ yarn polkadot:inject
+yarn polkadot:inject
 # For Kusama Guide
-$ yarn kusama:inject
+yarn kusama:inject
 ```
 
 This will read the dictionary and do the replacements for the respective website.
@@ -72,14 +72,14 @@ they resolve to values first and don't throw query errors. To use dry run (no re
 of templates and their resolved potential replacements), use the `--dry` or `-d` flag:
 
 ```bash
-$ yarn polkadot:inject --dry
+yarn polkadot:inject --dry
 ```
 
 The script defaults to the websocket URL `wss://kusama-rpc.polkadot.io/`. To change to another URL
 or to connect to a local node, use the `--node/-n` flag:
 
 ```bash
-$ yarn polkadot:inject -n ws://localhost:9944
+yarn polkadot:inject -n ws://localhost:9944
 ```
 
 > Note: make sure you're running an archive node if you're querying into the past!
@@ -87,8 +87,52 @@ $ yarn polkadot:inject -n ws://localhost:9944
 See other available options by using the `help` command.
 
 ```bash
-$ yarn polkadot:inject help
+yarn polkadot:inject help
 ```
+
+The templates to replace in the text take the following format:
+
+```json
+  {
+    "tpl": "tip_deposit_amount",
+    "default": { "kusama": 0.166, "polkadot": 1 },
+    "path": "consts.treasury.tipReportDepositBase",
+    "filters": ["humanReadableToken"]
+  },
+```
+
+- `tpl` is the template you want replaced in the text, it should be placed between `{{ }}` curly
+  braces.
+- `default` is either a literal value or an object with chain-specific defaults.
+- `path` is the query to run on the chain
+- `computed` is a value that should be set to `true` is the value does not need a `path`. Computed
+  properties are exported from `computed.js`.
+- `filters` is an array of filters to apply on the value after it's been fetched (does not apply to
+  defaults). Filters are defined in `applyFilters` or `inject.js`.
+
+To test the injection, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
+`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
+`kusama-guide`.
+
+### Conditional Rendering
+
+The two wikis support conditional rendering depending on which wiki is being deployed. This is
+useful for mirrored pages that have most content in common, but some minor differences. To use this
+functionality, surround Kusama specific content with {{ kusama: :kusama }}, and polkadot specific
+content with {{ polkadot: :polkadot }}. Example:
+
+```md
+If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
+percentage of its funds -- thereby causing deflationary pressure.
+{{ polkadot: This percentage is currently at 1%
+on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
+[Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
+burned. :kusama }}
+```
+
+To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
+`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
+`kusama-guide`.
 
 ### Mirror pages
 
@@ -102,7 +146,7 @@ The new pages are prefixed with `mirror`, and first need to be declared in `mirr
 the relevant sidebar section. To run the script:
 
 ```bash
-$ yarn mirror
+yarn mirror
 ```
 
 > Note: This command runs automatically when using `polkadot:start` or `kusama:start` development

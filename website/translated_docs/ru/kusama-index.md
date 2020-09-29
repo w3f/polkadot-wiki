@@ -56,5 +56,5 @@ Kusama - это общедоступная сеть и любой может п�
 ### Получить обновления
 
 - [@kusamanetwork](https://twitter.com/kusamanetwork)
-- [Kusama newsletter](https://kusama.network/newsletter)
+- [Kusama newsletter](http://info.polkadot.network/subscribe)
 - [r/kusama](https://reddit.com/r/kusama)

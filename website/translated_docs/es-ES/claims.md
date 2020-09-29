@@ -34,19 +34,19 @@ You will need a Polkadot account to claim your DOT. Please follow the instructio
 
 #### Reclamando tus DOTs con MyCrypto
 
-La aplicación [Polkadot JS Claims][] te ayuda a firmar un mensaje de MyCrypto. MyCrypto es una buena opción en caso de que hayas guardado la clave de la cuenta de Ethereum con tus tokens de DOT en un dispositivo de hardware como Ledger Nano S o Trezor. También soporta claves privadas en bruto, mnemotécnicos y Parity Signer.
+The Polkadot-JS [Claims app][] helps you sign a message from MyCrypto. MyCrypto is a good choice in case you have stored the key to the Ethereum account holding your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports raw private keys, mnemonics, and Parity signer.
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for maximum security), you can start by navigating to the Claims app on Polkadot-JS Apps. Select the account you would like to claim the DOT into and click the blue "Continue" button to proceed. Your screen should look something like this:
 
-![claim-1](assets/new-claims/claim-1.png)
+![claim-1](assets/new-claims/claim-1.jpg)
 
 Ahora tendrás que proporcionar la dirección de Ethereum que está asociada con los tokens DOTs que reclamarás. Introduce la dirección de Ethereum en la casilla y haz clic en "Continue".
 
-![claim-2](assets/new-claims/claim-2.png)
+![claim-2](assets/new-claims/claim-2.jpg)
 
 A continuación, tu pantalla debe mostrar la imagen de abajo.
 
-![claim-2-1](assets/new-claims/claim-2-1.png)
+![claim-2-1](assets/new-claims/claim-2-1.jpg)
 
 The hex-encoded string that follows the sentence: "Pay DOT to the Polkadot account:" is the hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
@@ -58,7 +58,7 @@ Esto te pedirá que selecciones un método para desbloquear tu cartera.
 
 ![claim-4](assets/new-claims/claim-4.png)
 
-Después de desbloquear tu cartera, pega el mensaje de Polkadot JS en el apartado "Message".
+After unlocking your wallet, paste the message from Polkadot-JS into the "Message" box.
 
 ![claim-5](assets/new-claims/claim-5.png)
 
@@ -66,13 +66,13 @@ Cuando hagas clic en "Sign Message" obtendrás una salida JSON como la de abajo:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-Copia y pega la salida JSON del mensaje firmado de MyCrypto en el recuadro de entrada de la interfaz Polkadot JS y haz clic en "Confirm Claim."
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
-![claim-7](assets/new-claims/claim-7.png) ![claim-8](assets/new-claims/claim-8.png)
+![claim-7](assets/new-claims/claim-7.jpg) ![claim-8](assets/new-claims/claim-8.jpg)
 
 Aparecerá un cuadro verde que te indicará la cantidad a reclamar con un botón "Claim" para hacer la solicitud. Haz clic en el botón "Claim" y luego en "Submit (no signature)" para completar la solicitud.
 
-![claim-9](assets/new-claims/claim-9.png)
+![claim-9](assets/new-claims/claim-9.jpg)
 
 If this claim succeeded, then you will see a success message and your DOT will be in the account that you claimed to.
 
@@ -82,7 +82,7 @@ After you make an on-chain claim for DOT, your balance should be updated on the 
 
 ¿Tienes problemas? Consigue ayuda en el [canal de soporte de reclamaciones]() de DOT.
 
-![claim-10](assets/new-claims/claim-10.png)
+![claim-10](assets/new-claims/claim-10.jpg)
 
 Congratulations, you have now completed the process for claiming and signing for your DOT.
 
@@ -112,7 +112,7 @@ Proceed to [polkadot-js Apps][claims app]. You will need to grant Apps access to
 
 After entering your account, you should see a red counter appear on the "Claim Tokens" tab on the left navigation drawer.
 
-![claim-attest-1](assets/new-claims/new-attest-1.png)
+![claim-attest-1](assets/new-claims/new-attest-1.jpg)
 
 Click on the "Claim Tokens" tab and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
@@ -122,13 +122,13 @@ The notification will display one or more Polkadot addresses that you have loade
 
 Click "Continue" and you will see a green box appear on the right.
 
-![claim-attest-3](assets/new-claims/new-attest-3.png)
+![claim-attest-3](assets/new-claims/new-attest-3.jpg)
 
-![claim-attest-4](assets/new-claims/new-attest-4.png)
+![claim-attest-4](assets/new-claims/new-attest-4.jpg)
 
 Click on "I Agree" and then "Sign and Submit" to make your free attest transaction. When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
 
-![claim-attest-5](assets/new-claims/new-attest-5.png)
+![claim-attest-5](assets/new-claims/new-attest-5.jpg)
 
 ## Using Parity Signer
 
@@ -137,15 +137,15 @@ Click on "I Agree" and then "Sign and Submit" to make your free attest transacti
 - Parity Signer
 - Your Polkadot account linked to Polkadot-JS Apps UI
 
-Before claiming, you should import your Polkadot address on Parity Signer to the PolkadotJS apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the PolkadotJS apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
+Before claiming, you should import your Polkadot address on Parity Signer to the Polkadot-JS Apps. All operations will use Parity Signer to sign the transaction, but will broadcast it via the Polkadot-JS Apps remote node. If you do not have a Polkadot address, please follow the instructions on the Parity Signer section in the [account generation][] page for generating a new Polkadot account.
 
 ### Go to Polkadot-JS Apps
 
-Proceed to [polkadot-js Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
+Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address on Parity Signer to the Accounts page first.
 
 ### Make the Attestation
 
-![ps-claim-1](assets/new-claims/ps-claim-1.png)
+![ps-claim-1](assets/new-claims/ps-claim-1.jpg)
 
 Click "Add via Qr" on the right side.
 
@@ -161,15 +161,13 @@ Select the address that you have claimed DOT to during pre-genesis.
 
 ![ps-3](assets/new-claims/ps-03.jpg)
 
-Your address will be displayed in QR code format. You can move the QR code to the camera so that the PolkadotJS Apps can decode it.
+Your address will be displayed in QR code format. You can move the QR code to the camera so that the Polkadot-JS Apps can decode it.
 
 ![ps-claim-3](assets/new-claims/ps-claim-3.png)
 
 Once decoded successfully, input the name for your address and click "Create".
 
-![ps-claim-4](assets/new-claims/ps-claim-4.png)
-
-You will notice that the digit beside the "Claim Tokens" menu changed to 2. It means the number of addresses on the Accounts page that need to do attestations.
+You will notice that the digit beside the "Claim Tokens" menu increased by 1. It means the number of addresses on the Accounts page that need to do attestations.
 
 Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
@@ -189,7 +187,7 @@ Now you need to sign the transaction using the Parity Signer with your Polkadot 
 
 ![ps-claim-8](assets/new-claims/ps-claim-8.png)
 
-First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the PolkadotJS Apps to continue.
+First, you need to press the "QR Scanner" on the Parity Signer to scan the QR code that's shown on the authorize transaction window to generate the raw transaction. Next, you may be required to input the PIN on the Parity Signer to generate the signed transaction as a QR code. Then move the QR code to the camera on the Polkadot-JS Apps to continue.
 
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
@@ -200,5 +198,6 @@ When the transaction is included in the block, you will see a green success box 
 
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
-[Polkadot JS Claims]: https://polkadot.js.org/apps/#/claims
+[Claims app]: https://polkadot.js.org/apps/#/claims
+[claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

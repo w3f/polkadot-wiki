@@ -9,6 +9,9 @@ actions on their behalf. Much like the Stash and Controller account relationship
 [staking](learn-staking), proxies allow users to keep one account in cold storage and actively
 participate in the network with the weight of the tokens in that account.
 
+> Check out our Polkadot Youtube video that explains
+> [what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
+
 ## Proxy Types
 
 You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of
@@ -41,7 +44,8 @@ The "Governance" type will allow proxies to make transactions related to governa
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
 > See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance
-> proxies.
+> proxies or watch our
+> [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
 
 ### Staking Proxies
 
@@ -66,6 +70,9 @@ proxy. That is, it generates an address but no corresponding private key. Normal
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
+
+> Learn more about anonymous proxies from our
+> [technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
 
 ![anonymous proxy](assets/proxy_anonymous_diagram.png)
 
@@ -132,6 +139,18 @@ remove all proxies made while the latter will remove one selected proxy.
 
 ![remove proxies](assets/polkadot_remove_proxy.png)
 
+## How to view your Proxies
+
+To view your proxy, head over to the Chain State (underneath "Developer") page on
+[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
+you've created your proxy on a Kusama account, it is required to change your network accordingly
+using the top left navigation button. On this page, the proxy pallet should be selected, returning
+the announcements and proxies functions. The proxies function will allow you to see your created
+proxies for either one account or for all accounts (using the toggle will enable this). Proxy
+announcements are what time lock proxies do to announce they are going to conduct an action.
+
+![view proxies](assets/polkadot_view_proxies.png)
+
 ## Putting It All Together
 
 If the idea of proxy types and their application seems abstract, it is. Here is an example of how
@@ -154,3 +173,36 @@ the primary account could just set a new proxy to replace it.
 By creating multiple accounts that act for a single account, it lets you come up with more granular
 security practices around how you protect private keys while still being able to actively
 participate in a network.
+
+## Proxy Deposits
+
+Proxies require deposits in the native currency (i.e. DOT or KSM) in order to be created. The
+deposit is required because adding a proxy requires some storage space on-chain, which must be
+replicated across every peer in the network. Due to the costly nature of this, these functions could
+open up the network to a Denial-of-Service attack. In order to defend against this attack, proxies
+require a deposit to be reserved while the storage space is consumed over the life time of the
+proxy. When the proxy is removed, so is the storage space, and therefore the deposit is returned.
+
+The deposits are calculated in the runtime, and the function can be found in the runtime code. For
+example, the deposits are calculated in Polkadot with the following functions:
+
+```rust
+// One storage item; key size 32, value size 8; .
+pub const ProxyDepositBase: Balance = deposit(1, 8);
+// Additional storage item size of 33 bytes.
+pub const ProxyDepositFactor: Balance = deposit(0, 33);
+```
+
+The `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy list
+(creates one new item in storage). For every proxy the account has, an additonal amount defined by
+the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
+
+On Polkadot the `ProxyDepositBase` is {{ dot_proxy_deposit_base }} and the `ProxyDepositFactor` is
+{{ dot_proxy_deposit_factor }}.
+
+So what this boils down to is that the required deposit amount for one proxy on Polkadot is equal to
+(in DOT):
+
+```
+{{ dot_proxy_deposit_base }} + {{ dot_proxy_deposit_factor }} * num_proxies
+```

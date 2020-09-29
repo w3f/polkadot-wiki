@@ -8,11 +8,15 @@ The council is an elected body of on-chain accounts that are intended to represe
 
 ## Voting for Councillors
 
-Voting for councillors requires you to lock your DOT / KSM for the duration of your vote. Like the validator elections, you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid again.
+Voting for councillors requires you to lock 5 DOT on Polkadot or 0.0083 KSM on Kusama for the duration of your vote.
+
+> Warning: If your balance is vesting, you cannot use unvested tokens for this lock. You will have to wait until you have at least that many **free** tokens to vote.
+
+Like the validator elections, you can approve up to 16 different councillors and your vote will be equalized among the chosen group. Unlike validator elections, there is no unbonding period for your reserved tokens. Once you remove your vote, your tokens will be liquid again.
 
 > Warning: It is your responsibility not to put your entire balance into the reserved value when you make a vote for councillors. It's best to keep _at least_ a few KSM to pay for transaction fees.
 
-Go to the [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab. On the right side of the window there are two blue buttons, click on the one that says "Vote."
+Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab. On the right side of the window there are two blue buttons, click on the one that says "Vote."
 
 ![](assets/council/vote.png)
 
@@ -26,10 +30,10 @@ You should see your vote appear in the interface immediately after your transact
 
 In order to get your reserved tokens back, you will need to remove your vote. Only remove your vote when you're done participating in elections and you no longer want your reserved tokens to count for the councillors that you approve.
 
-Go to the "Extrinsics" tab on [Polkadot Apps Dashboard](https://polkadot.js.org/apps).
+Go to the "Developer" > "Extrinsics" tab on [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps).
 
 Choose the account you want to remove the vote of and select the "electionsPhragmen -> removeVoter()" options and submit the transaction.
 
-![](assets/council/remove_vote.png)
+![](assets/council/polkadotjs_removeVoter.png)
 
 When the transaction is included in a block you should have your reserved tokens made liquid again and your vote will no longer be counting for any councillors in the elections starting in the next term.

@@ -16,7 +16,7 @@ While your DOT are staked by nominating a validator, they are 'locked' (bonded).
 
 当你前往到抵押页面的 [Account actions](https://polkadot.js.org/apps/#/staking/actions)，你应该会看到绑定了的帐号和提名状态。如果没有，您可以先跟随[这个](maintain-guides-how-to-nominate-kusama)教程设置。你的提名将会在下一个时代生效即是在 Kusama 上大概6小时而 Polkadot 是24小时。
 
-![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
+![Nominations](/img/staking/polkadotjs_nominator_account.png)
 
 Suppose you have nominated five validator candidates, and three out of five were elected to the active validator set, then you should see two of your nominations as "waiting", and most likely one as "active" and the rest as "inactive". Active or inactive nomination means your nominated validators have been elected to be in the validator set, whereas waiting means they did not get elected. Generally, you will only have a single validator have an active nomination, which means that you are directly supporting it with your stake this era and thus potentially receiving staking rewards. Every era, a new election will take place and you may have be assigned a different active nomination from among the validators you have selected.
 
@@ -24,9 +24,9 @@ If you are committing a very large amount of stake, then you may have more than 
 
 ### Oversubscribed Validators
 
-Validators can only pay out to 64 nominators per era. If more than 64 nominators nominate the same validator, it is "oversubscribed", and only the top 64 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era, although their stake will still be used to calculate entry into the active validator set.
+Validators can only pay out to 256 nominators per era. If more than 256 nominators nominate the same validator, it is "oversubscribed", and only the top 256 staked nominators (ranked by amount of stake) are paid rewards. Other nominators will receive no rewards for that era, although their stake will still be used to calculate entry into the active validator set.
 
-Although it is difficult to determine exactly how many nominators will nominate a given validator in the next era, one can estimate based on the current number of nominators. A nominator with only 5 nominators in this era, for instance, is unlikely to have more than 64 in the next era. An already-oversubscribed validator with 100 nominators this era, however, is much more likely to be oversubscribed in the next era as well.
+Although it is difficult to determine exactly how many nominators will nominate a given validator in the next era, one can estimate based on the current number of nominators. A nominator with only 5 nominators in this era, for instance, is unlikely to have more than 256 in the next era. An already-oversubscribed validator with 500 nominators this era, however, is much more likely to be oversubscribed in the next era as well.
 
 ### Possible effect of inactive nominations on rewards
 
@@ -34,13 +34,15 @@ As long as you have nominated more than one validator candidate and at least one
 
 ### What to take into consideration during nominating
 
-![Staking Returns](/img/staking/polkadotjs-staking-returns.jpg)
+One thing to keep in mind as a nominator is the validator's commission. The commission is the percentage of the validator reward which is taken by the validator before the rewards are split among the nominators. As a nominator you may think that the lowest commission is best. However, this is not always true. Validators must be able to run at break-even in order to sustainably continue operation. Independent validators that rely on the commission to cover their server costs help to keep the network decentralized. Commission is just one piece of the puzzle that you should consider when picking validators to nominate.
+
+![Staking Returns](/img/staking/polkadotjs_nominators_target.png)
 
 As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Targets](https://polkadot.js.org/apps/#/staking/targets) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
 
 One example would be if a validator is regularly offline, their nominators most likely would get fewer rewards than others. More importantly, when many validators are [unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be slashed.
 
-![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
+![Validator Stats](/img/staking/polkadotjs_validator_stats.png)
 
 Thus, to be a smart nominator, it would be better to query their [histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
 

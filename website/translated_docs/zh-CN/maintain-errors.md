@@ -4,13 +4,13 @@ title: 出现错误如何解决
 sidebar_label: 解决错误
 ---
 
-基于 Substrate 链中的错误通常伴随着具描述性消息。 但是要读取这些消息，解析区块链数据的工具需要从节点请求_链元数据(chain metadata)_。 该元数据说明了如何阅读消息。 [ Polkadot JS Apps UI ](https://polkadot.js.org/apps)是带有用于链元数据的内置解析器的工具。
+Errors in Substrate-based chains are usually accompanied by descriptive messages. However, to read these messages, a tool parsing the blockchain data needs to request _chain metadata_ from a node. That metadata explains how to read the messages. One such tool with a built-in parser for chain metadata is the [Polkadot-JS Apps UI](https://polkadot.js.org/apps).
 
 If this page does not answer your question, try searching for your problem at the [Polkadot Knowledge Base](https://support.polkadot.network/) for more information on troubleshooting your issue.
 
 ## PolkadotJS Apps 浏览器
 
-Here's how to find out the detailed error description through Polkadot JS Apps.
+Here's how to find out the detailed error description through Polkadot-JS Apps.
 
 A typical failed transactions looks something like this:
 

@@ -71,7 +71,7 @@ everything else.
 ### Get updates
 
 - [@kusamanetwork](https://twitter.com/kusamanetwork)
-- [Kusama newsletter](https://kusama.network/newsletter)
+- [Kusama newsletter](http://info.polkadot.network/subscribe)
 - [r/kusama](https://reddit.com/r/kusama)
 
 [kappa]: https://polkascan.io/pre/kusama/council/motion/94

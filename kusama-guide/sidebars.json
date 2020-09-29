@@ -5,12 +5,7 @@
       {
         "type": "subcategory",
         "label": "Get Started",
-        "ids": [
-          "kusama-getting-started",
-          "kusama-faucet",
-          "kusama-claims",
-          "kusama-endpoints"
-        ]
+        "ids": ["kusama-getting-started", "kusama-faucet", "kusama-claims", "kusama-endpoints"]
       },
       {
         "type": "subcategory",
@@ -29,12 +24,10 @@
       {
         "type": "subcategory",
         "label": "What to Break",
-        "ids": [
-          "mirror-maintain-errors",
-          "kusama-bug-bounty",
-          "kusama-adverserial-cheatsheet"
-        ]
+        "ids": ["mirror-maintain-errors", "kusama-bug-bounty", "kusama-adverserial-cheatsheet"]
       },
+      "mirror-ens",
+      "kusama-ledger",
       "kusama-timeline",
       "kusama-community",
       "kusama-parameters",
