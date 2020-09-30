@@ -5,8 +5,7 @@ sidebar_label: Polkadot Launch Phases
 description: An explanation of Polkadot's launch process and its individual phases
 ---
 
-The Polkadot network had a phased roll-out plan, with important milestones toward
-decentralization marking each phase.
+The Polkadot network had a phased roll-out plan, with important milestones toward decentralization marking each phase.
 
 ## The PoA Launch
 
@@ -15,7 +14,6 @@ The Genesis block of the Polkadot network was launched on May 26, 2020, as a Pro
 ## Nominated Proof of Stake
 
 Once Web3 Foundation was confident in the stability of the network and there was a sufficient number of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) - a superuser account with access to governance functions - to initiate the first validator election. Following this election, the network transitioned from PoA into its second phase, [Nominated Proof of Stake (NPoS)](learn-staking), on June 18, 2020.
-
 
 ## Governance
 
