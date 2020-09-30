@@ -49,19 +49,19 @@ async function stalecheck() {
     // Pick a random technical educator
     let assignee = techedu[Math.floor(Math.random() * techedu.length)];
     // Create issue
-    let creation = await octokit.issues
-      .create({
-        owner: "w3f",
-        repo: "polkadot-wiki",
-        title: title,
-        body: `Last edit happened ${oldFiles[file]} days ago 😬`,
-        assignees: [assignee],
-        labels: ["stale"],
-      })
-      .catch((e) => {
-        console.error(e);
-        process.exit(1);
-      });
+    // let creation = await octokit.issues
+    //   .create({
+    //     owner: "w3f",
+    //     repo: "polkadot-wiki",
+    //     title: title,
+    //     body: `Last edit happened ${oldFiles[file]} days ago 😬`,
+    //     assignees: [assignee],
+    //     labels: ["stale"],
+    //   })
+    //   .catch((e) => {
+    //     console.error(e);
+    //     process.exit(1);
+    //   });
 
     console.log(`Created issue for ${file}`);
     created++;
@@ -82,6 +82,8 @@ function sleep(ms) {
 function agePerPage() {
   let oldFiles = {};
   files = fs.readdirSync(dir);
+  console.log("Files in docs:");
+  console.log(files);
 
   for (file of files) {
     if (file.indexOf("mirror") === 0 || !file.endsWith(".md")) {
