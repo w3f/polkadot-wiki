@@ -14,7 +14,7 @@ The Genesis block of the Polkadot network was launched on May 26, 2020, as a Pro
 
 ## Nominated Proof of Stake
 
-Once Web3 Foundation was confident in the stability of the network and there was a sufficient number of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) - a superuser account with access to governance functions - to initiate the first validator election. This election transitioned the network from PoA into its second phase, [Nominated Proof of Stake (NPoS)](learn-staking) on June 18, 2020.
+Once Web3 Foundation was confident in the stability of the network and there was a sufficient number of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) - a superuser account with access to governance functions - to initiate the first validator election. Following this election, the network transitioned from PoA into its second phase, [Nominated Proof of Stake (NPoS)](learn-staking), on June 18, 2020.
 
 
 ## Governance
@@ -31,14 +31,13 @@ From this point, the network has been entirely in the hands of the token holders
 
 To enable balance transfers, the community [made a public proposal](maintain-guides-democracy) for a runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was subsequently enabled on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39 UTC.
 
-##Redenomination
+## Redenomination
 
-On August 21, 2020 Redenomination of DOT, the native token on Polkadot, occurred. From this date, one DOT (old) equals 100 new DOT.
+On August 21, 2020, redenomination of DOT, the native token on Polkadot, occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
 
-Polkadot is now moving to the next stage of opening up its core functionality, like parachain slot auctions, parathreads, and cross-chain message passing. These upgrades will require runtime upgrades that will pass through Polkadot's normal governance processes. The core functionality does not have to be unlocked sequentially &mdash; several features can be unlocked
-with a single proposal.
+Polkadot is now moving to the next stage of opening up its core functionality, like parachain slot auctions, parathreads, and cross-chain message passing. These upgrades will require runtime upgrades that will pass through Polkadot's normal governance processes. The core functionality does not have to be unlocked sequentially &mdash; several features can be unlocked with a single proposal.
 
 ## Polkadot 2.0
 
