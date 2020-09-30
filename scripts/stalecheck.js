@@ -36,10 +36,13 @@ async function stalecheck() {
       currentStaleTitles.push(issue.title);
     }
   }
+  console.log("Old files found:");
+  console.log(oldFiles);
   let created = 0;
   for (file of Object.keys(oldFiles)) {
     sleep(500);
     // Check if issue for file exists
+    console.log(`Checking existing issues for ${file}`);
     let title = `[STALE] ${file}`;
     if (currentStaleTitles.includes(title)) continue;
     // Pick a random technical educator
@@ -58,6 +61,7 @@ async function stalecheck() {
         console.error(e);
         process.exit(1);
       });
+    console.log(`Created issue for ${file}`);
     created++;
     if (created == 2) {
       process.exit(0);
