@@ -103,7 +103,7 @@ One way to create the proposal is to use the Polkadot-JS Apps
 ![A proposal being created](assets/treasury/submit-new.png)
 
 The system will automatically take the required deposit, picking the higher of the following two
-values: 20 KSM or 5% of the requested amount.
+values: 3.3 KSM or 5% of the requested amount.
 
 Once created, your proposal will become visible in the Treasury screen and the Council can start
 voting on it.
