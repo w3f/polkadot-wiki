@@ -38,3 +38,11 @@ runtime 升级 &mdash; 可以通过治理流程或从 Sudo 本身 &mdash; 将从
 ## 核心功能
 
 一旦启用了余额转账，Polkadot 便可以开始开放其核心功能，例如平行链插槽拍卖，平行线程和跨链消息传递。 这些升级将需要通过 Polkadot 的常规治理流程进行的 runtime 升级。 核心功能不必按顺序解锁 &mdash; 可以用一个议案解锁多个功能。
+
+## Polkadot 2.0
+
+With the release of Polkadot 1.0, researchers have begun research for the next version of the Polkadot network. With many questions yet to be answered, as of now, some big areas of research will be in:
+
+- Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
+- Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of parachains built with horizontal scalability?
+- Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many tiers of Relay Chains can be nested? How will validators work together to validate blocks on various Relay Chains? How is [XCMP](learn-crosschain) working in the nested setup? How is [AnV](learn-availability) going to work there?
