@@ -91,6 +91,8 @@ will include this block for parachain B into the Relay Chain.
 
 Check out our animated video below that explores how XCMP works.
 
+<!-- Made with Adobe Animate and Canvas -->
+
 <video 
       controls="controls"  
       name="XCMP Animated Video" 
