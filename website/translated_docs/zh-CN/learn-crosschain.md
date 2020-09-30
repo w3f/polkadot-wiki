@@ -55,6 +55,24 @@ During processing, the message will execute the smart contract on parachain B an
 
 The collator now hands this block to the validator, which itself will verify that this message was processed. If the message was processed and all other aspects of the block are valid, the validator will include this block for parachain B into the Relay Chain.
 
+Check out our animated video below that explores how XCMP works.
+
+<!-- Made with Adobe Animate and Canvas -->
+
+<video 
+      controls="controls"  
+      name="XCMP Animated Video" 
+      width="560" height="315"
+      src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
+doesn't support embedded videos. </video>
+
+<style>
+video::-webkit-media-controls-fullscreen-button
+{
+        display: none !important;
+}
+</style>
+
 ## Resources
 
 - [XCMP 方案](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Web3 基金会研究维基上的跨链通信的完整技术描述。
