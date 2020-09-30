@@ -23,7 +23,7 @@ After the chain had been running well with the validator set, the Sudo key issue
 
 The Sudo module was removed by a runtime upgrade on July 20, 2020, transitioning the [governance](learn-governance) of the chain into the hands of the token (DOT) holders.
 
-From this point, the network has been entirely in the hands of the token holders and no longer under control of any centralized authority.
+From this point, the network has been entirely in the hands of the token holders and is no longer under control of any centralized authority.
 
 ## Balance Transfers
 
