@@ -82,8 +82,6 @@ function sleep(ms) {
 function agePerPage() {
   let oldFiles = {};
   files = fs.readdirSync(dir);
-  console.log("Files in docs:");
-  console.log(files);
 
   for (file of files) {
     if (file.indexOf("mirror") === 0 || !file.endsWith(".md")) {
@@ -91,6 +89,7 @@ function agePerPage() {
     } else {
       try {
         let output = cp.execSync('git log -1 --pretty="format:%ct" ' + dir + "/" + file);
+        console.log(output);
         let age = Math.round((Date.now() / 1000 - output) / 86400);
         //console.log(`${file} is ${age} days old`);
         if (age >= maxAgeDays) {
