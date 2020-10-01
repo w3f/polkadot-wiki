@@ -36,8 +36,8 @@ async function stalecheck() {
       currentStaleTitles.push(issue.title);
     }
   }
-  console.log("Old files found:");
-  console.log(oldFiles);
+  //console.log("Old files found:");
+  //console.log(oldFiles);
   let created = 0;
   for (file of Object.keys(oldFiles)) {
     sleep(500);
@@ -49,19 +49,19 @@ async function stalecheck() {
     // Pick a random technical educator
     let assignee = techedu[Math.floor(Math.random() * techedu.length)];
     // Create issue
-    // let creation = await octokit.issues
-    //   .create({
-    //     owner: "w3f",
-    //     repo: "polkadot-wiki",
-    //     title: title,
-    //     body: `Last edit happened ${oldFiles[file]} days ago 😬`,
-    //     assignees: [assignee],
-    //     labels: ["stale"],
-    //   })
-    //   .catch((e) => {
-    //     console.error(e);
-    //     process.exit(1);
-    //   });
+    let creation = await octokit.issues
+      .create({
+        owner: "w3f",
+        repo: "polkadot-wiki",
+        title: title,
+        body: `Last edit happened ${oldFiles[file]} days ago 😬`,
+        assignees: [assignee],
+        labels: ["stale"],
+      })
+      .catch((e) => {
+        console.error(e);
+        process.exit(1);
+      });
 
     console.log(`Created issue for ${file}`);
     created++;
@@ -91,7 +91,7 @@ function agePerPage() {
     } else {
       try {
         let output = cp.execSync('git log -1 --pretty="format:%ct" ' + dir + "/" + file);
-        console.log(output.toString());
+        //console.log(output.toString());
         let age = Math.round((Date.now() / 1000 - output) / 86400);
         //console.log(`${file} is ${age} days old`);
         if (age >= maxAgeDays) {
