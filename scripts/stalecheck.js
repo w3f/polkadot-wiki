@@ -91,7 +91,7 @@ function agePerPage() {
     } else {
       try {
         let output = cp.execSync('git log -1 --pretty="format:%ct" ' + dir + "/" + file);
-        console.log(output);
+        console.log(output.toString());
         let age = Math.round((Date.now() / 1000 - output) / 86400);
         //console.log(`${file} is ${age} days old`);
         if (age >= maxAgeDays) {
