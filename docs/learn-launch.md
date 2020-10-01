@@ -31,7 +31,7 @@ To enable balance transfers, the community [made a public proposal](maintain-gui
 
 ## Redenomination
 
-On August 21, 2020, redenomination of DOT, the native token on Polkadot, occurred. From this date, one DOT (old) equals 100 new DOT.
+On August 21, 2020, [redenomination](redenomination) of DOT, the native token on Polkadot, occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
 
