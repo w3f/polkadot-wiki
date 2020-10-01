@@ -82,6 +82,8 @@ function sleep(ms) {
 function agePerPage() {
   let oldFiles = {};
   files = fs.readdirSync(dir);
+  console.log("Files in docs:");
+  console.log(files);
 
   for (file of files) {
     if (file.indexOf("mirror") === 0 || !file.endsWith(".md")) {

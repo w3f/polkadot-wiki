@@ -5,71 +5,57 @@ sidebar_label: Polkadot Launch Phases
 description: An explanation of Polkadot's launch process and its individual phases
 ---
 
-The Polkadot network will have a phased roll-out plan, with important milestones toward
-decentralization marking each phase. Until Sudo is removed, the chain will be considered a _chain
-candidate_ (CC), and not fully launched. During the CC phase, the chain may reset and change
-dramatically due to critical bugs, important changes in the code, or other circumstances.
+The Polkadot network had a phased roll-out plan, with important milestones toward decentralization
+marking each phase.
 
 ## The PoA Launch
 
-Web3 Foundation will launch Polkadot in Proof of Authority (PoA) mode. Chain functionality will be
-limited to claiming and staking DOT tokens. For those who plan to run validators, they can also set
-their session keys.
-
-During this time, governance is restricted to the Sudo key, which will be held by Web3 Foundation to
-issue the commands and upgrades necessary to complete the launch process. There are no inflation or
-rewards during this period.
-
-The purpose of PoA is to ensure the network starts properly and allow community
-[validators](learn-validator) to claim their tokens, set up their infrastructure, and start
-receiving nominations.
+The Genesis block of the Polkadot network was launched on May 26, 2020, as a Proof of Authority
+(PoA) network. Governance was restricted to the single Sudo (super-user) key, which was held by Web3
+Foundation to issue the commands and upgrades necessary to complete the launch process. During this
+time, validators started joining the network and signaling their intention to participate in
+consensus.
 
 ## Nominated Proof of Stake
 
-Once Web3 Foundation is confident in the stability of the network and there are a sufficient number
-of validator intentions, Web3 Foundation will use [Sudo](https://youtu.be/InekMjJpVdo) - a superuser
-account with access to [governance](learn-governance) functions - to initiate the first validator
-election. This election will transition the network from PoA into its second phase,
-[Nominated Proof of Stake (NPoS)](learn-staking), where the network is
-[secured by the economic stake](learn-security) that is bonded to the validators by the
-[nominators](learn-nominator) and the validators themselves.
-
-Time-wise, the transition to Proof of Stake will largely depend on when a sufficient number of
-validators are ready to take over the security of the network. This transition will probably require
-at least 100 well backed validators.
+Once Web3 Foundation was confident in the stability of the network and there was a sufficient number
+of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) - a superuser
+account with access to governance functions - to initiate the first validator election. Following
+this election, the network transitioned from PoA into its second phase,
+[Nominated Proof of Stake (NPoS)](learn-staking), on June 18, 2020.
 
 ## Governance
 
-After the chain has been running well with a sufficiently large validator set, the Sudo key will
-issue a runtime upgrade that enables the suite of governance modules in Polkadot; namely, the
-modules to enable a [Council](learn-governance#council), a
-[Technical Committee](learn-governance#technical-committee), and
-[public referenda](learn-governance#public-referenda). Once a Council and governance tools are in
-place, the public has the avenues to effect changes in the system.
+After the chain had been running well with the validator set, the Sudo key issued a runtime upgrade
+that enabled the suite of governance modules in Polkadot; namely, the modules to enable a
+[Council](learn-governance#council), a [Technical Committee](learn-governance#technical-committee),
+and [public referenda](learn-governance#public-referenda).
 
 ## Removal of Sudo
 
-A runtime upgrade &mdash; either via governance processes or from Sudo itself &mdash; will remove
-the Sudo module from the runtime.
+The Sudo module was removed by a runtime upgrade on July 20, 2020, transitioning the
+[governance](learn-governance) of the chain into the hands of the token (DOT) holders.
 
-From this point, the network is entirely in the hands of the token holders and no longer under
-control of any centralized authority. Without Sudo, the chain will no longer be a candidate (CC) and
-will be a live, decentralized network.
+From this point, the network has been entirely in the hands of the token holders and is no longer
+under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community will have to come together and
-[make a public proposal](maintain-guides-democracy) for a runtime upgrade that would lift the
-restriction on balance transfers. Once the proposal passes referendum, there will be an enactment
-period after which the change will automatically come into effect.
+To enable balance transfers, the community [made a public proposal](maintain-guides-democracy) for a
+runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
+subsequently enabled on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39 UTC.
+
+## Redenomination
+
+On August 21, 2020, [redenomination](redenomination) of DOT, the native token on Polkadot, occurred.
+From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
 
-Once balance transfers are enabled, Polkadot can start to open up its core functionality, like
-parachain slot auctions, parathreads, and cross-chain message passing. These upgrades will require
-runtime upgrades that will pass through Polkadot's normal governance processes. The core
-functionality does not have to be unlocked sequentially &mdash; several features can be unlocked
-with a single proposal.
+Polkadot is now moving to the next stage of opening up its core functionality, like parachain slot
+auctions, parathreads, and cross-chain message passing. These upgrades will require runtime upgrades
+that will pass through Polkadot's normal governance processes. The core functionality does not have
+to be unlocked sequentially &mdash; several features can be unlocked with a single proposal.
 
 ## Polkadot 2.0
 
