@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Check for stale files.
-        run: yarn; node scripts/stalecheck.js
+        run: yarn; pwd; node scripts/stalecheck.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
