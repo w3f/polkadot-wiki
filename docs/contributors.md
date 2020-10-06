@@ -7,9 +7,9 @@ sidebar_label: Contributors
 ## Current Contributors
 
 The following is a list of regular contributors to the Polkadot Wiki and Kusama Guide. Each
-contributor's contact information is listed as a precaution - if one these people ever contacts you
-directly, first check the contact information to see that it matches the origin of the message, and
-then feel free to get in touch with someone else on this list to verify the legitimacy of the
+contributor's contact information is listed as a precaution - if one of these people ever contacts
+you directly, first check the contact information to see that it matches the origin of the message,
+and then feel free to get in touch with someone else on this list to verify the legitimacy of the
 original inquiry. **Employee impersonation is a very common type of scam**.
 
 > For other ways of protecting yourself, please see [How to Avoid Being Scammed](learn-scams).
@@ -69,7 +69,7 @@ runs a weekly newsletter covering all things Web3 at [Dot Leap](https://dotleap.
 
 - email: [joe@parity.io](mailto:joe@parity.io)
 - matrix / riot / element: [@joe:matrix.parity.io](https://matrix.to/#/@joe:matrix.parity.io)
-- twitter: [@joepetrowski](https://twitter.com/joepetrowski)
+- telegram: [@joepetrowski](https://t.me/joepetrowski)
 
 Joe is a research analyst at Parity Technologies, where he focuses on making Substrate chain
 integration as smooth as possible, from educating users on Substrate and Polkadot fundamentals to
