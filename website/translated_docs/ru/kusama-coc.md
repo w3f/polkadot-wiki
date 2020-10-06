@@ -4,25 +4,29 @@ title: Кодекс поведения Kusama
 sidebar_label: Кодекс поведения
 ---
 
-Kusama является совершенно новой сетью, это один большой эксперимент, и нам нужно Ваше участие в нём для достижения больших успехов.
+While Kusama has been its own network and has had its own ecosystem for a while now, it is still one big experiment and we need your participation for it to continue being a great success.
 
-Предполагается, что член сообщества Kusama будет уважать других. Мы хотим укрепить чувство сотрудничества между собой и сообществом с открытым исходным кодом. Участники Kusama существуют, чтобы поощрять открытый обмен идеями и выражением и требуют среды, которая признает присущую каждому человеку и группе. Мы здесь, чтобы сотрудничать, обсуждать и даже не соглашаться. Главное, чтобы это было сделано так, что всё основывается на уважении и профессионализме. Участники сети Kusama могут состоять из участников онлайн-форума, участников ончейн управления, команд развертывания парчейнов, валидаторов, энтузиастов и разработчиков инструментов экосистемы. Мы ожидаем, что там будет участие из всех слоев общества, но хотели бы установить некоторые социальные границы того, как относиться к Вам и относиться к другим.
+## Community
 
-## Сообщество Kusama
+We want to foster a sense of collaboration amongst ourselves and the open source community. Kusma participants exist to encourage the open exchange of ideas and expression and require an environment that recognizes the inherent worth of every person and group. We are here to collaborate, discuss, and even disagree. The key is doing this is a manner that comes from a place of respect and professionalism. Participants in the Kusama network may consist of participants in an online forum, on-chain governance participants, parachain deployment teams, validators, enthusiasts, and ecosystem tool builders. We expect for there to be participation from all backgrounds but like to set some social boundaries on how you may be treated and treat others.
 
 Члены сообщества Kusama со всего земного шара и не ограничиваются расой, полом или происхождением. Участники сообщества ознакомились с необходимыми ресурсами и получили достаточные знания о Kusama и всём сопутствующем контенте. Эти знания снабжают сообщество необходимой информацией, необходимой для выполнения его обязанностей в качестве участника.
 
-Пожалуйста, поймите, что эта сеть - эксперимент с потенциальными недостатками, поэтому очень важно, чтобы члены сообщества сообщали о любых уязвимостях непосредственно команде, прежде чем делиться ими публично. Пожалуйста, посмотрите на программу вознаграждений за найденные ошибки.
+## Bugs
 
-## Примеры недопустимого поведения
+Please understand that this network is, despite its success, an experiment with potential flaws, so it’s appreciated that community members help report any sort of exploits directly to the team before sharing publicly. Please see the [bug bounty program](kusama-bug-bounty).
+
+## Examples of Unacceptable Behavior
 
 Пожалуйста, обратите внимание, что это всего несколько примеров, и Вы всегда можете проконсультироваться с членом команды, если у Вас есть вопросы:
 
 - Angry aggressive comments towards individuals or other projects on any medium of communication.
 - Knowingly distributing false information about Kusama or other projects.
-- Harassing other individuals or projects (trolling).
+- Harassing other individuals or projects.
 
-## Что делать, если Вы стали свидетелем или подверглись неприемлемому поведению?
+That said, please note that Kusama is an edgy and meme-friendly network and community member actions shouldn't be taken too seriously - try to assume jest before malice.
+
+## What To Do If You Witness or Are Subject To Unacceptable Behavior
 
 If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact the administrator of the channel you’re in.
 
