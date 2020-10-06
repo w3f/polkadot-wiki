@@ -4,7 +4,7 @@ title: Contributors
 sidebar_label: Contributors
 ---
 
-## Anson Lau
+## Anson Lau [[email](mailto:anson@web3.foundation)]
 
 Anson is a Technical Educator at Web3 Foundation. Before that, he worked as a Hyperledger blockchain
 developer to deliver B2B application at IBM. He is passionate about staking, governance,
@@ -12,14 +12,15 @@ cryptoeconomics, and privacy areas. Anson has been actively participating in the
 since 2017 and creating video content to help different people to understand how decentralization
 could deliver us a better future.
 
-## Bill Laboon
+## Bill Laboon [[email](mailto:bill@web3.foundation)]
 
 Bill Laboon is the Technical Education Lead at Web3 Foundation, after spending the previous five
 years teaching Computer Science at the University of Pittsburgh. He is the author of two books: A
 Friendly Introduction to Software Testing, an undergraduate textbook; and Strength in Numbers, a
 near-future novel set in a world in which cryptocurrency has eliminated traditional money.
 
-## Bruno Skvorc
+## Bruno Skvorc [[email](mailto:bruno@web3.foundation)]
+
 
 Bruno is a blockchain developer and educator from Croatia. He joined the ecosystem full time in 2015
 with the advent of Ethereum, and created educational resources, programming courses, tutorials and
@@ -34,7 +35,7 @@ found on Twitter at [@bitfalls](https://twitter.com/bitfalls) and on Oculus and 
 He also runs a weekly-ish newsletter covering all things Web3 at
 [Dot Leap](https://dotleap.substack.com).
 
-## Joe Petrowski
+## Joe Petrowski [[email](mailto:joe@parity.io)]
 
 Joe is a research analyst at Parity Technologies, where he focuses on making Substrate chain
 integration as smooth as possible, from educating users on Substrate and Polkadot fundamentals to
@@ -43,7 +44,7 @@ hosts the [Relay Chain](https://relaychain.fm) podcast. Prior to working at Pari
 shock and vibration simulation for satellite launch, algorithmic trading, and professional cycling.
 He has a Bachelor of Science in Aeronautical and Mechanical Engineering.
 
-## Logan Saether
+## Logan Saether [[email](mailto:logan@web3.foundation)]
 
 Logan is a Technical Educator at Web3 Foundation where he works on creating material for supporting
 the development of the next generation of distributed technologies. At Web3 Technical Education,
