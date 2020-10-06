@@ -21,7 +21,6 @@ near-future novel set in a world in which cryptocurrency has eliminated traditio
 
 ## Bruno Skvorc [[email](mailto:bruno@web3.foundation)]
 
-
 Bruno is a blockchain developer and educator from Croatia. He joined the ecosystem full time in 2015
 with the advent of Ethereum, and created educational resources, programming courses, tutorials and
 newsletters for budding developers of the industry. Since 2018 he had been working on one of the
