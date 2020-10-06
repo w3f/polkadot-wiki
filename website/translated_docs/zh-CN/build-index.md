@@ -6,7 +6,7 @@ sidebar_label: 开发者专页
 
 欢迎访问Polkadot维基网站的构建者部份。
 
-在这里，您可以了解 Polkadot 生态系统中开发工具的最新状态。我们一直致力于学习新的工具和框架，并将它们添加进网站内容中。如您有认为应包含在内的信息，请在[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)上联系我们。
+Here you will be able to find the most up-to-date information on the status of the development tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about them so if you are working on something that should be included please reach out to us on [Element](https://app.element.io/#/room/#polkadot-watercooler:matrix.org).
 
 Wiki 的这个部分分为以下:
 
@@ -30,6 +30,7 @@ Wiki 的这个部分分为以下:
 
 - [工具](build-tools-index)-维护的工具。
 - [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) - Command line utility for generating and inspecting key pairs.
+- [JS tools](https://github.com/polkadot-js/tools) - TypeScript tools for offline signing of transactions, RPC calls, and more.
 
 ## 资源
 
