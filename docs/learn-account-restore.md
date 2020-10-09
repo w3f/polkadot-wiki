@@ -12,8 +12,8 @@ instructions [here](learn-account-generation). In general, however, as long as y
 created your account, and have the seed phrase (mnemonic phrase) or JSON file (and password) stored
 securely, you will be able to restore your account.
 
-This page covers backing up and restoring accounts in Polkadot{.js} Browser Plugin, Polkadot{.js}
-Apps, and Parity Signer. For other wallet applications, please see their specific documentation.
+This page covers backing up and restoring accounts in Polkadot{.js} Browser Plugin, Polkadot-JS UI,
+and Parity Signer. For other wallet applications, please see their specific documentation.
 
 ## Polkadot{.js} Browser Plugin
 
