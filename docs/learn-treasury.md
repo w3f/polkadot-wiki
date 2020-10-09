@@ -7,7 +7,7 @@ description: Details about Polkadot's on-chain treasury.
 
 The treasury is a pot of funds collected through transaction fees, slashing,
 [staking inefficiencies](learn-staking#inflation), etc. The funds held in the treasury can be spent
-by making a spending proposal that, if approved by the [Council](learn-governance#Council, will
+by making a spending proposal that, if approved by the [Council](learn-governance#Council), will
 enter a waiting period before distribution. This waiting period is known as the budget period, and
 its duration is subject to [governance](learn-governance), with current defaults set to
 {{ spend_period }} days for Polkadot mainnet, and {{ spend_period }} days for Kusama. The treasury
