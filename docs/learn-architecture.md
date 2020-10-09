@@ -45,6 +45,25 @@ those of the Relay Chain validator set, and no other. Since the validator set on
 expected to be secure with a large amount of stake put up to back it, it is desirable for parachains
 to benefit from this security.
 
+## Roles
+
+### Validators
+
+Validators, if elected to the validator set, produce blocks on the Relay Chain. They also accept
+proofs of valid state transition from collators. In return, they will receive staking rewards.
+
+### Collators
+
+Collators are full nodes on both a parachain and the Relay Chain. They collect parachain
+transactions and produce state transition proofs for the validators on the Relay Chain. They can
+also send and receive messages from other parachains using XCMP.
+
+### Nominators
+
+Nominators bond their stake to particular validators in order to help them get into the active
+validator set and thus produce blocks for the chain. In return, nominators are generally rewarded
+with the portion of the staking rewards from that validator.
+
 ## Whiteboard Series
 
 For a video overview of the architecture of Polkadot watch the video below for the whiteboard
