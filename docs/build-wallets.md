@@ -38,12 +38,17 @@ that the wallet software is using the latest version of the
 | [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit       | iOS and Android                        |
 | [AirGap](https://airgap.it/)                                       | Live              | AirGap       | IOS, Android, MacOS, Windows and Linux |
 | [SafePal](https://www.safepal.io/download)                         | Live              | SafePal      | IOS, Android, and Hardware             |
-| [Crypto.com App](https://crypto.com/en/index.html)                 | Live              | Crypto.com   | IOS and Android                        |
+| [Crypto.com](https://crypto.com/en/index.html)                     | Live              | Crypto.com   | IOS and Android                        |
 | [Ledger App](https://zondax.ch/kusama.html#overview)               | Live              | Zondax       | Hardware                               |
-| [Cobo Wallet](https://cobo.com/)                                   | Building          | Cobo         | IOS and Android                        |
+| [Atomic Wallet](https://atomicwallet.io)                           | Live              | Atomic Wallet| Desktop                                |
+| [Dether](https://dether.io/)                                       | Live              | Dether       | IOS and Android                        |
+| [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo         | IOS and Android                        |
+| [Swipe](https://swipe.io/)                                         | Live              | Swipe        | IOS and Android                        |
 | [Polkadot{.js} extension](https://github.com/EthWorks/extension)   | Building          | EthWorks     | Browser extension                      |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask     | IOS, Android, and browser extension    |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle      | Browser extension                      |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu        | Browser                                |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf          | CLI Wallet                             |
 | [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu    | IOS and Android                        |
+| [Spatium](https://spatium.net/)                                    | Building          | Spatium      | IOS and Android                        |
+| [Blockchain.com](https://www.blockchain.com/)                      | Building          | Blockchain.com | IOS and Android                      |
