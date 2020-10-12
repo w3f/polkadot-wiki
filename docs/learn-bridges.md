@@ -14,7 +14,7 @@ While bridge designs are now getting to a place where they are sufficiently plan
 not been too many that have been used heavily in production. For this reason, you can consider this
 page a work in progress. It will be updated as more information is determined and available.
 
-> Bridges are specifically for making the Polkadot ecosystem compatible for external blockchains
+> Bridges are specifically for making the Polkadot ecosystem compatible with external blockchains
 > such as Bitcoin, Ethereum, or Tezos (among others). For information on XCMP, the native
 > interoperability technology that allows parachains to trustlessly communicate, please see the
 > dedicated [crosschain][] page on the Wiki.
@@ -34,29 +34,28 @@ Receiving messages on Polkadot from an external, non-parachain blockchain can be
 parachain module. The parachain module can then be deployed to Polkadot either as a system-level
 parachain (native extension to the core Polkadot software) or as a community-operated parachain.
 
-Bridge modules allow for non-parachains to act as a "virtual parachain" and extends the external
+Bridge modules allow for non-parachains to act as a "virtual parachain" and extend the external
 chain's functionality with the interoperability benefits of Polkadot.
 
 Bridge modules will be written with particular chains in mind such as Bitcoin or Ethereum. This
-means that blockchains that are based of these will likely be easily supported as well (e.g.
+means that blockchains that are based on these will likely be easily supported as well (e.g.
 Litecoin and other Bitcoin-forks).
 
 > To learn more on how Bitcoin and Ethereum can Cooperate and Collaborate Through Polkadot, check
-> out this explainer video
-> [here](https://www.youtube.com/watch?v=rvoFUiOR3cM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=3)
+> out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
 
 For the standalone chains that will not have a parachain bridging module on Polkadot, it will be
 necessary to deploy bridge contracts (see below).
 
 ## Bridge contracts
 
-Those who are already familiar with Ethereum may know of the [Parity Bridge][] and the efforts being
-made to connect PoA sidechains to the Ethereum mainnet. The bridge is a combination of two smart
-contracts, one deployed on each chain, that allow for cross-chain transfers of value. As an example
-of usage, the initial Parity Bridge proof of concept connects two Ethereum chains, `main` and
-`side`. Ether deposited into the contract on `main` generates a balance denominated in ERC-20 tokens
-on `side`. Conversely, ERC-20 tokens deposited back into the contract on `side` can free up Ether on
-`main`.
+Those who are already familiar with Ethereum may know of the now archived [Parity Bridge][] and the
+efforts being made to connect PoA sidechains to the Ethereum mainnet. The Parity bridge is a
+combination of two smart contracts, one deployed on each chain, that allow for cross-chain transfers
+of value. As an example of usage, the initial Parity Bridge proof of concept connects two Ethereum
+chains, `main` and `side`. Ether deposited into the contract on `main` generates a balance
+denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract
+on `side` can free up Ether on `main`.
 
 In the case of Polkadot, it should be possible to have a bridge contract deployed on, say, an
 EVM-based standalone chain and a contract deployed on a smart contract capable parachain. This would
@@ -102,12 +101,12 @@ welcome.
 
 ### Smart Contract Bridges
 
-- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to
-  Edgeware chain (a Substrate-based chain).
-- [Parity Bridge](https://github.com/paritytech/parity-bridge)
+- [Parity Bridges Common Resources](https://github.com/paritytech/parity-bridges-common)
 - [POA Network](https://poa.network/)
 - [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA
   Network's implementation of Parity's bridge chain solution.
+- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to
+  Edgeware chain (a Substrate-based chain) - now defunct and not maintained, but a good example.
 
 ### Runtime Module Bridges
 
@@ -115,12 +114,12 @@ welcome.
   bridge to EOS.
 - [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe and Centrifuge
   were awarded a grant in W3F Grants [Wave 5][] to build a Substrate to Ethereum two-way bridge.
-- [Tendermint Bridge](https://github.com/ChorusOne) - ChorusOne was awarded a grant in [Wave 5][] to
-  build a GRANDPA light client in Tendermint.
+- [Tendermint Bridge](https://github.com/ChorusOne/tendermint-light-cliente) - ChorusOne was awarded
+  a grant in [Wave 5][] to build a GRANDPA light client in Tendermint.
 - [Interlay BTC Bridge][interlay] - The Interlay team was awarded a grant in W3F grants [Wave 5][]
   to build a trust-minimized BTC bridge.
-- [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX
-  have implemented a BTC to Substrate bridge for their parachain.
+- [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/master/xrml/xbridge/bitcoin) -
+  ChainX have implemented a BTC to Substrate bridge for their parachain.
 
 ### Design
 
