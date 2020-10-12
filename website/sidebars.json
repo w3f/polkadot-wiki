@@ -113,7 +113,7 @@
       {
         "type": "subcategory",
         "label": "Resources",
-        "ids": ["build-examples-index", "build-hackathon"]
+        "ids": ["build-hackathon"]
       }
     ],
     "Maintain": [
