@@ -48,7 +48,7 @@ We primarily use Matrix across the organization and to communicate with communit
 
 ### Social media and forums
 
-- [Polkadot Twitter](https://twitter.com/polkadotnetwork)
+- [Polkadot Twitter](https://twitter.com/Polkadot)
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
 - [Web3 Foundation Twitter](https://twitter.com/web3foundation)
 
