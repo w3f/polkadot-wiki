@@ -8,7 +8,7 @@ Polkadot and Ethereum 2.0 are both sharded blockchain protocols. As such, they p
 
 ## Model
 
-The shards in Ethereum 2.0 all have the same state transition function (STF), as in the rules governing how the blockchain can change state with each block. This STF provides an interface for smart contract execution. Contracts exist on a single shard (and can send asynchronous messages between shards) and thus scales by executing shards in parallel.
+The shards in Ethereum 2.0 all have the same state transition function (STF), as in the rules governing how the blockchain can change state with each block. This STF provides an interface for smart contract execution. Contracts exist on a single shard and can send asynchronous messages between shards.
 
 Likewise, in Polkadot, each shard hosts core logic, the shards are executed in parallel, and Polkadot can send cross-shard asynchronous messages. However, each shard in the protocol has a unique STF. Applications can exist either within a single shard or across shards by composing logic. Polkadot uses WebAssembly (Wasm) as a "meta-protocol". A shard's STF can be abstract as long as the validators on Polkadot can execute it within a Wasm environment.
 
@@ -26,7 +26,7 @@ The network will also have "side chains" to interact with chains that are not un
 
 Like Ethereum 2.0, Polkadot also has a main chain, called the Relay Chain, with a number of shards, called "[parachains](learn-parachains)". Parachains are not restricted to a single interface like eWasm. Instead, they can define their own logic and interface, as long as they provide their STF to the Relay Chain validators so that they can execute it.
 
-Polkadot plans to launch with the ability to validate up to 100 shards per block. Besides parachains, which are scheduled for execution every block, Polkadot also has [parathreads](learn-parathreads), which are scheduled on a dynamic basis. This allows chains to share the sharded slots, much like multiple small airlines might share a gate at an airport.
+Polkadot, now live as a Relay Chain only, plans to launch the ability to validate up to 20 shards per block, gradually scaling up to 100 shards per block. Besides parachains, which are scheduled for execution every block, Polkadot also has [parathreads](learn-parathreads), which are scheduled on a dynamic basis. This allows chains to share the sharded slots, much like multiple small airlines might share a gate at an airport.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin), Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
 
@@ -57,7 +57,7 @@ Shards in Ethereum 2.0 will have access to each other's state via their crosslin
 
 Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain) for parachains to send arbitrary messages to each other. Parachains open connections with each other and can send messages via their established channels. If two parachains have any full nodes in common, they can gossip messages via the full nodes. Otherwise, Relay Chain validators will handle message delivery. Messages do not pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.) go into the Relay Chain. This enhances scalability by keeping data on the edges of the system.
 
-Polkadot has an additional protocol called [SPREE](learn-spree) that provides shared logic for cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and interpretation by the receiving chain.
+Polkadot will add an additional protocol called [SPREE](learn-spree) that provides shared logic for cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and interpretation by the receiving chain.
 
 ## Governance
 
