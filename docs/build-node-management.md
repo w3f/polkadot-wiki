@@ -19,13 +19,14 @@ guide will always refer to the executable as `polkadot`.
 
 Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or
 a custom chain spec. By default, the client will start Polkadot.
+Watch [How a single codebase can power four different blockchains](https://www.youtube.com/watch?v=i9vNCHz6wO4) to learn more about how the chain selection works internally.
 
 **Archive node**
 
 An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of
-nodes, like validators and sentries, must run in archive mode. Likewise, all
-[events](build-protocol-info#events) are cleared from state in each block, so if you want to store
-events then you will need an archive node.
+nodes like validators must run in archive mode. Likewise, all [events](build-protocol-info#events)
+are cleared from state in each block, so if you want to store events then you will need an archive
+node.
 
 > To upgrade a node, please refer to this
 > [video](https://www.youtube.com/watch?v=5LtcdBR9F40&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=5)
@@ -89,6 +90,10 @@ To delete your DB and re-sync from genesis, run:
 polkadot purge-chain
 ```
 
+An alternative database implementation, ParityDB, is available and activated with the
+`--database paritydb` option. This database uses more disk space than the default RocksBD, but is
+more efficient in reads and writes.
+
 ## Deployment Tools
 
 Web3 Foundation maintains [Polkadot Deployer](https://github.com/w3f/polkadot-deployer), which
@@ -142,7 +147,7 @@ puts your node at higher risk of attack. You can run your own, private
 `substrate-telemetry` instance to a Kubernetes cluster using
 [this Helm chart](https://github.com/w3f/substrate-telemetry-chart).
 
-The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). You can
-expose metrics via Parity's [DOT exporter](https://github.com/paritytech/dotexporter). Substrate has
-a
-[vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualize-node-metrics/).
+The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). Substrate
+has a
+[vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualize-node-metrics/)
+which uses this endpoint.
