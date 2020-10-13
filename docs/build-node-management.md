@@ -18,8 +18,9 @@ guide will always refer to the executable as `polkadot`.
 **Selecting a chain**
 
 Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or
-a custom chain spec. By default, the client will start Polkadot.
-Watch [How a single codebase can power four different blockchains](https://www.youtube.com/watch?v=i9vNCHz6wO4) to learn more about how the chain selection works internally.
+a custom chain spec. By default, the client will start Polkadot. Watch
+[How a single codebase can power four different blockchains](https://www.youtube.com/watch?v=i9vNCHz6wO4)
+to learn more about how the chain selection works internally.
 
 **Archive node**
 
