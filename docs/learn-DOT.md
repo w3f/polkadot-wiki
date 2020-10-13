@@ -40,9 +40,11 @@ See [Redenomination of DOT](redenomination) for more details._
 
 ## What are the uses of DOT?
 
-DOT serve three key functions in Polkadot, (i) to be used for governance of the network, (ii) to be
-staked for operation of the network, and (iii) to be bonded to connect a chain to Polkadot as a
-parachain.
+DOT serve three key functions in Polkadot:
+
+- to be used for governance of the network,
+- to be staked for operation of the network,
+- to be bonded to connect a chain to Polkadot as a parachain.
 
 DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT
 stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
@@ -67,7 +69,7 @@ DOT will be used to facilitate the consensus mechanism that underpins Polkadot. 
 platform to function and allow for valid transactions to be carried out across parachains, Polkadot
 will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via
 staking) to perform these functions. The staking of DOT acts as a disincentive for malicious
-participants whom will be punished by the network by getting their DOT slashed. The DOT required to
+participants who will be punished by the network by getting their DOT slashed. The DOT required to
 participate in the network will vary depending on the activity that is being performed, the duration
 the DOT will be staked for, and the total number of DOT staked.
 
@@ -75,7 +77,9 @@ the DOT will be staked for, and the total number of DOT staked.
 
 DOT will have the ability to be bonded for a duration of time in order to add a new parachain to the
 network. The DOT will be locked during their bonding period and will be released back to the account
-that bonded them after the duration of the bond has elapsed and the parachain is removed.
+that bonded them after the duration of the bond has elapsed and the parachain is removed. You can
+learn more about this aspect by
+[reading about the auctions that govern parachain slots](learn-auction).
 
 ### Vesting
 
@@ -125,13 +129,20 @@ its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
+### Getting Rococo Tokens
+
+Rococo is a parachain testnet. It does not have a faucet, and tokens are given only to teams working
+on parachains or exploring the [crosschain](learn-crosschain) message passing aspects of this
+testnet. Learn more about Rococo on the [matching wiki page](build-parachains-rococo).
+
 ## Kusama Tokens
 
-Unlike testnet DOT (WND), Kusama tokens are not freely given away. Kusama tokens are available via
-the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis)
-or through the [Treasury](learn-treasury).
+Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are available via the
+[claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or
+through the [Treasury](learn-treasury). Alternatively, they can be obtained on the open market.
 
 ## Polkadot Mainnet DOT
 
 Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you
-may claim them via the [Polkadot claims process](https://claims.polkadot.network/).
+may claim them via the [Polkadot claims process](https://claims.polkadot.network/). Alternatively,
+they are available on the open market.
