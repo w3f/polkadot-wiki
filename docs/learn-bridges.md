@@ -114,7 +114,7 @@ welcome.
   bridge to EOS.
 - [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe and Centrifuge
   were awarded a grant in W3F Grants [Wave 5][] to build a Substrate to Ethereum two-way bridge.
-- [Tendermint Bridge](https://github.com/ChorusOne/tendermint-light-cliente) - ChorusOne was awarded
+- [Tendermint Bridge](https://github.com/ChorusOne/tendermint-light-client) - ChorusOne was awarded
   a grant in [Wave 5][] to build a GRANDPA light client in Tendermint.
 - [Interlay BTC Bridge][interlay] - The Interlay team was awarded a grant in W3F grants [Wave 5][]
   to build a trust-minimized BTC bridge.
