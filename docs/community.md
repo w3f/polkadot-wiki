@@ -37,6 +37,8 @@ application we use most often to interact with the Matrix protocol is the
   Room for validators learning about setting up a node.
 - [Polkadot Direction](https://app.element.io/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   Governance, and a place to discuss the future of Polkadot.
+- [Polkadot Digest](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - News about what is
+  happening in the Polkadot ecosystem, published every weekday except holidays
 
 ### Kusama
 
