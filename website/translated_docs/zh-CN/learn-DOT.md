@@ -33,7 +33,11 @@ _Note: This changed at block #1,248,328. Previously, DOT were denominated as equ
 
 ## What are the uses of DOT?
 
-DOT serve three key functions in Polkadot, (i) to be used for governance of the network, (ii) to be staked for operation of the network, and (iii) to be bonded to connect a chain to Polkadot as a parachain.
+DOT serve three key functions in Polkadot:
+
+- to be used for governance of the network,
+- to be staked for operation of the network,
+- to be bonded to connect a chain to Polkadot as a parachain.
 
 DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
@@ -47,11 +51,11 @@ Polkadot will enable any holder of DOT to participate in governance. For details
 
 ### DOT for consensus
 
-DOT will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via staking) to perform these functions. The staking of DOT acts as a disincentive for malicious participants whom will be punished by the network by getting their DOT slashed. The DOT required to participate in the network will vary depending on the activity that is being performed, the duration the DOT will be staked for, and the total number of DOT staked.
+DOT will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via staking) to perform these functions. The staking of DOT acts as a disincentive for malicious participants who will be punished by the network by getting their DOT slashed. The DOT required to participate in the network will vary depending on the activity that is being performed, the duration the DOT will be staked for, and the total number of DOT staked.
 
 ### DOT for bonding
 
-DOT will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOT will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed.
+DOT will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOT will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed. You can learn more about this aspect by [reading about the auctions that govern parachain slots](learn-auction).
 
 ### 锁仓 (Vesting)
 
@@ -61,8 +65,8 @@ Vesting funds are on a linear release schedule and unlock a constant number of t
 
 There are two ways that vesting schedules can be created.
 
-- 一种方法是作为链的创世配置的一部分。 在 Polkadot 和 Kusama 的情况下，链规范生成脚本读取以太坊区块链上存在的 Polkadot Claims 合約的状态，并生成所有创世代币的分配和锁仓时间表。
-- 第二种方式是通过锁仓 pallet, `vested_transfer`的外在类型。 vested 转账功能允许任何人创建带有资金锁仓计划。为只要创建锁仓时间表的帐户还没有锁仓，转移至少指定在链上的 `MinVestedTransfer` 资金。
+- One way is as part of the genesis configuration of the chain. In the case of Polkadot and Kusama, the chain specification genesis script reads the state of the Polkadot Claims contract that exists on the Ethereum blockchain and creates vesting schedules in genesis for all the allocations registered as being vested.
+- A second way is through an extrinsic type available in the Vesting pallet, `vested_transfer`. The vested transfer function allows anyone to create a vesting schedule with a transfer of funds, as long as the account for which the vesting schedule will be created does not already have one and the transfer moves at least `MinVestedTransfer` funds, which is specified as a chain constant.
 
 Vesting schedules have three parameters, `locked`, `per_block`, and `starting_block`. The configuration of these three fields dictate the amount of funds that are originally locked, the slope of the unlock line, and the block number for when the unlocking begins.
 
@@ -70,8 +74,8 @@ Vesting schedules have three parameters, `locked`, `per_block`, and `starting_bl
 
 Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that someone must explicitly call an extrinsic to update the lock that is placed on an account.
 
-- `vest` 外部交易将更新呼叫者之前锁上的资金
-- `vest_other` 将更新放在另一个"目标"账户资金上的锁定。
+- The `vest` extrinsic will update the lock that is placed on the caller.
+- The `vest_other` will update the lock that is placed on another "target" account's funds.
 
 These extrinsics are exposed from the Vesting pallet.
 
@@ -85,10 +89,14 @@ The current testnet is called [Westend](maintain-networks#westend-test-network) 
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
+### Getting Rococo Tokens
+
+Rococo is a parachain testnet. It does not have a faucet, and tokens are given only to teams working on parachains or exploring the [crosschain](learn-crosschain) message passing aspects of this testnet. Learn more about Rococo on the [matching wiki page](build-parachains-rococo).
+
 ## Kusama Tokens
 
-Unlike testnet DOT (WND), Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or through the [Treasury](learn-treasury).
+Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are available via the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or through the [Treasury](learn-treasury). Alternatively, they can be obtained on the open market.
 
 ## Polkadot Mainnet DOT
 
-Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you may claim them via the [Polkadot claims process](https://claims.polkadot.network/).
+Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you may claim them via the [Polkadot claims process](https://claims.polkadot.network/). Alternatively, they are available on the open market.
