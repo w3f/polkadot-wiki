@@ -23,8 +23,8 @@ specific parachain implementations that handle various use cases. Polkadot place
 over what parachains are able to do besides that they must be able to generate a proof that can be
 validated by the validators assigned to the parachain. This proof verifies the state transition of
 the parachain. Some parachains may be specific to a particular application, others may focus on
-specific features like smart contracts, privacy or scalability -- still others might be
-experimental architectures that are not necessarily blockchain in nature.
+specific features like smart contracts, privacy or scalability -- still others might be experimental
+architectures that are not necessarily blockchain in nature.
 
 In order to remain connected to the Relay Chain, parachains must win a
 [parachain slot auction](https://wiki.polkadot.network/docs/en/learn-auction) to secure a slot for a
