@@ -9,10 +9,10 @@ _parachain slots_. A parachain slot is a scarce resource on Polkadot and only a 
 be available. As parachains ramp up there may only be a few slots that are unlocked every few
 months. The goal is to eventually have 100 parachain slots available on Polkadot (these will be
 split between parachains and the [parathread pool](learn-parathreads)). If a parachain wants to have
-guarenteed block inclusion at every Relay Chain block, it must acquire a parachain slot.
+guaranteed block inclusion at every Relay Chain block, it must acquire a parachain slot.
 
 The parachain slots of Polkadot will be sold according to an unpermissioned
-[Candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
+[candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
 secure on a blockchain.
 
 ## Mechanics of a Candle auction
@@ -25,17 +25,17 @@ from the "inch of a candle" that determined the open period of the auction. When
 extinguished and the candle went out, the auction would suddenly terminate and the standing bid at
 that point would win.
 
-When Candle auctions are used online, they require a random number to decide the moment of
+When candle auctions are used online, they require a random number to decide the moment of
 termination.
 
-Parachain slot auctions will differ slightly from a normal Candle auction in that it does not use
+Parachain slot auctions will differ slightly from a normal candle auction in that it does not use
 the random number to decide the duration of its opening phase. Instead, it has a known open phase
 and will be retroactively determined (at the normal close) to have ended at some point in the past.
 So during the open phase, bids will continue to be accepted but, later bids have higher probability
 of losing since the retroactively determined close moment may be found to have preceded the time
 that a bid was submitted.
 
-## Why use a Candle auction?
+## Why use a candle auction?
 
 The open and transparent nature of blockchain systems opens attack vectors that are non-existent in
 traditional auction formats. Normal open auctions in particular can be vulnerable to _auction
@@ -60,9 +60,9 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](https://ens.domains). The Candle auction is another solution that does not need
-the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason
-allows smart contracts to participate.
+names on the [ENS](ens). The Candle auction is another solution that does not need the two-step
+commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart
+contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but not when the auction will
 be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids
@@ -113,7 +113,7 @@ Each period of the range 1 - 4 represents a 6-month duration for a total of 2 ye
 Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided
 into its own `lease period`. More than one continuous `period` is a `range`.
 
-Several auctions will take place in the preceding six months before a set of parachain slot leases
+Several auctions will take place in the preceding months before a set of parachain slot leases
 begin.
 
 Bidders will submit a configuration of bids specifying the DOT amount they are willing to bond and
@@ -236,6 +236,10 @@ market where an actor who has already won a parachain slot can resell the slot a
 associated deposit of DOT that is locked up to another buyer. This would allow the seller to get
 liquid DOT in exchange for the parachain slot and the buyer to acquire the slot as well as the
 deposited DOT.
+
+A number of system-level parachains may be granted slots by the [governing bodies](learn-governance)
+of the Relay Chain. Such parachains would not have to bid for or renew their slots as they would be
+considered essential to the ecosystem's future.
 
 ## Resources
 
