@@ -26,6 +26,7 @@ We primarily use Matrix across the organization and to communicate with communit
 - [Polkadot Watercooler Chat](https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - General room for talk about Polkadot.
 - [Polkadot Validator Lounge](https://app.element.io/#/room/#polkadot-validator-lounge:matrix.org) - Room for validators learning about setting up a node.
 - [Polkadot Direction](https://app.element.io/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Polkadot.
+- [Polkadot Digest](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - News about what is happening in the Polkadot ecosystem, published every weekday except holidays
 
 ### Kusama
 
