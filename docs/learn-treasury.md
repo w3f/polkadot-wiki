@@ -175,15 +175,15 @@ In general terms, curators are expected to have a well-balanced track record rel
 
 After the Council has activated a bounty, it delegates the work that requires expertise to the curator who gets to close the active bounty. Closing the active bounty enacts a delayed payout to the payout address and a payout of the curator fee. The delay phase allows the Council to act if any issues arise.
 
-To minimize storage on chain in the same way as any proposal, bounties don't contain contextual information. When a user submits a bounty spending proposal, they will probably need to find an off-chain way to explain the proposal (any of the available community forums serve this purpose). This template can help as a reminder of all needed information for the Council to make an informed decision.
+To minimize storage on chain in the same way as any proposal, bounties don't contain contextual information. When a user submits a bounty spending proposal, they will probably need to find an off-chain way to explain the proposal (any of the available community forums serve this purpose). [This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing) can help as a reminder of all needed information for the Council to make an informed decision.
 
-The bounty has a predetermined duration of 90 days with the possibility of being extended by the curator. Aiming to maintain flexibility on the tasks’ curation, the curator can create sub-bounties for more granularity and allocation.    
+The bounty has a predetermined duration of 90 days with the possibility of being extended by the curator. Aiming to maintain flexibility on the tasks’ curation, the curator will be able to create sub-bounties for more granularity and allocation in the next iteration of the mechanism.    
 
 ### Creating a Bounty Proposal
 
-One way to create the Bounty proposal is to use the Polkadot JS Apps website. From the website, use either the extrinsics tab and select the Treasury pallet, then `Propose_bounty` and enter the value, reason for the proposal (usually linked to a forum) and curator's fee. Alternatively, you can use the treasury tab and its dedicated Submit Bounty Proposal button.
+One way to create the Bounty proposal is to use the Polkadot JS Apps website. From the website, use either the extrinsics tab and select the Treasury pallet, then `Propose_bounty` and enter the value and description of the proposal (usually linked to a forum). Alternatively, you can use the treasury tab and its dedicated Submit Bounty Proposal function under Governance.
 
-A bounty can be cancelled by deleting the earmark for a specific treasury amount and closing the bounty. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active. 
+A bounty can be cancelled by deleting the earmark for a specific treasury amount of be closed if the tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active. 
 
 ### Closing a bounty
 
