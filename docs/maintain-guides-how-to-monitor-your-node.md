@@ -129,14 +129,14 @@ scrape_configs:
   - job_name: "substrate_node"
     scrape_interval: 5s
     static_configs:
-      - targets: ["localhost:9165"]
+      - targets: ["localhost:9615"]
 ```
 
 With the above configuration file, the first exporter is the one that Prometheus exports to monitor
 itself. As we want to have more precise information about the state of the Prometheus server we
 reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and
 `targets` determine where the exporters are running. The second exporter is capturing the data from
-your node, and the port by default is `9165`.
+your node, and the port by default is `9615`.
 
 You can check the validity of this configuration file by running
 `promtool check config /etc/prometheus/prometheus.yml`.
