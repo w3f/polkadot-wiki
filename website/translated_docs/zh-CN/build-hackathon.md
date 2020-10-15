@@ -4,7 +4,7 @@ title: 黑客马拉松
 sidebar_label: 黑客马拉松
 ---
 
-作为我们在 Web3 基金会中的目标之一，我们正在推动 [Web3技术栈](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/)，我们想支持任何个人或团队组织黑客活动，让更多的开发者在你的城市了解 Polkadot/Substrate。
+As one of our objectives in the Web3 Foundation is promoting the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot and Substrate in your city or online.
 
 我们不仅为您提供技术资源，而且还可以安排我们团队的人来做具体的技术工作坊和讲解介绍我们的技术，从而帮助参与者可以更快地开始hacking。
 
@@ -46,18 +46,18 @@ sidebar_label: 黑客马拉松
 - 找场地。
 - 确保黑客马拉松顺利举行
 
-## 即将的黑客马拉松活动
+## Upcoming Hackathons
 
-即将到来
+- [Hello World! by Polkadot](https://gitcoin.co/hackathon/polkadot/onboard) - A collaborative hackathon celebrating the integration of Polkadot and Kusama into the Gitcoin platform. Has many sets of smaller challenges that will reward in either DOT or KSM. Open from 15 October - 12 November 2020.
 
-## 模板 / 入门包
+## Past Hackathons
 
-即将到来
+- [Hackusama](https://hackusama.devpost.com/) - A 7-week online hackathon being launched for developers to "Build a Blockchain" or submit your wildest tools, visualizations, and ideas to the "Open Hack" category. Many high quality submissions were received.
 
 ## 资源
 
-- [Substrate 知识库](https://substrate.dev/docs/en/)
+- [Substrate Knowledge Base](https://substrate.dev/docs/en/)
 
 ## 支持 / 联系
 
-如果您对举办黑客马拉松有任何疑问，请随时通过[邮件](mailto:events@web3.foundation)或通过[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)与我们联系。
+If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
