@@ -4,13 +4,13 @@ title: 工具索引
 sidebar_label: 工具索引
 ---
 
-在这里我们提供了满足您开发需求的工具列表，它将按照编程语言进行分类。目前，Rust 生态系统最为成熟，您可以现在就开始在 Substrate 上进行构建。随着围绕其它编程语言的生态系统不断扩展，我们将陆续完善以下章节。
+Here we provide a list of tools available for your development needs. They are sorted by context. If you're actively maintaining a tool that might be useful to other Substrate and Web3 developers, feel free to [add it in](contributing).
 
 ## 区块资源管理器
 
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot 区块链浏览器。当前默认连接到 Kusama 测试网，您可以自行配置以连接到其它远程或本地端点。
-- [Polkascan](https://polkascan.io/) - 用于 Polkadot, Kusama 或其它链的区块链浏览器。
-- [Subscan.io](https://subscan.io) - 基于 Substrate 链的浏览器。
+- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related chains. [Repo](https://github.com/polkascan/polkascan-os).
+- [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains. [Repo](https://github.com/itering/subscan-essentials).
 
 ## 钱包
 
@@ -19,62 +19,102 @@ sidebar_label: 工具索引
 ## 网络监控 & 报告
 
 - [Polkadot Telemetry 服务](https://telemetry.polkadot.io/) - 提供网络信息，包括当前正在运行链的节点、节点正在运行的软件版本、同步状态，以及显示节点位置的地图。
-- Polkabot - Polkabot 使用 Riot 聊天来进行网络监控和报告，用户可以自定义创建 bot 插件。[博文](https://medium.com/polkadot-network/polkabot-a3dba18c20c8)，[ Github 库](https://gitlab.com/Polkabot/polkabot)
-- [PolkaStats](https://polkastats.io/) - Polkadot 网络统计(包括 Kusama). 显示网络信息和来自验证人和意图的数据。 [ Github 库](https://github.com/Colm3na/polkastats-v2/)
+- Polkabot - Polkadot network monitoring and reporting using Matrix (Riot / Element) chat. Users may create custom bot plugins. [Blogpost](https://medium.com/polkadot-network/polkabot-a3dba18c20c8).
+- [Ryabina's Telegram Bot](https://github.com/Ryabina-io/substratebot) - a Telegram bot for monitoring on-chain events of Substrate chains. [Github Repository](https://gitlab.com/Polkabot/polkabot)
+- [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows network information and staking details from validators and intentions. [Github Repository](https://github.com/Colm3na/polkastats-v2/).
+- [Panic](https://github.com/SimplyVC/panic_polkadot) - a node monitoring and alerting server for validators.
+- [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - a CLI tool & JS library to monitor on chian states and events.
 
-## Rust
-
-### 客户端
+## Clients
 
 - [Polkadot](https://github.com/paritytech/polkadot) - Polkadot Host 的 Rust 实现。
+- [Kagome](https://github.com/soramitsu/kagome) - A C++ Polkadot client developed by [Soramitsu](https://github.com/soramitsu).
+- [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Host.
+- [Polkadot-JS client](https://github.com/polkadot-js/client) - Alternative client for JavaScript enthusiasts.
+- [TX Wrapper](https://github.com/paritytech/txwrapper) - Helper funtions for offline transaction generation.
 
-### 工具
+## Tools
 
 - [Substrate](https://github.com/paritytech/substrate) - 区块链开发平台使用 Rust 编写。Polkadot 基于在 Substrate 上开发。
 - [Substrate 知识库](https://substrate.dev/docs/en/) - 使用 Substrate 构建区块链的全面文档和教程。
+- [Substrate VSCode plugin](https://github.com/paritytech/vscode-substrate).
+- [Substrate Debug Kit](https://github.com/paritytech/substrate-debug-kit) - A collection of debug tools and libraries around substrate chains. Includes tools to calculate NPoS elections offline, disk usage monitoring, test templates against chain state and other pallet-specific helper.
+- [Diener](https://crates.io/crates/diener) - a tool for easy changing of Polkadot or Substrate dependency versions.
+- [Polkadot Launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to easily launch custom local parachain-enabled Polkadot versions.
+- [Halva](https://github.com/halva-suite/halva) - a Truffle-inspired local development environment for Substrate.
+- [Fork-off Substrate](https://github.com/maxsam4/fork-off-substrate) - copies the state of an existing chain into your local version and lets you further experiment on it.
+- [srtool](https://www.chevdor.com/tags/srtool/) - a tool for verifying runtime versions against on-chain proposal hashes.
+- [sub-bench](https://github.com/nikvolf/sub-bench) - a tool to spam your node with transactions for the sake of benchmarking.
 
-## C++
+## UI
 
-- [Kagome](https://github.com/soramitsu/kagome) - 由[Soramitsu](https://github.com/soramitsu)开发的 C++ Polkadot 客户端。
-- [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - 使用 Polkadot 的 C++ API
+- [Polkadash](https://github.com/Swader/polkadash) - VueJS-based starter kit for custom user interfaces for Substrate chains. [Tutorials](https://dotleap.com/tag/tutorial/).
+- [Polkadot JS Apps UI](https://github.com/polkadot-js/apps) - Repository of the [polkadot.js.org/apps](https://polkadot.js.org/apps) UI.
+- [Substrate Front-end Template](https://github.com/substrate-developer-hub/substrate-front-end-template) - ReactJS-based starter UI for custom user interfaces for Substrate chains.
+- [Polkadot JS Browser Extension](https://github.com/polkadot-js/extension) - key management in a Chrome extension.
 
-## C
-
-- [Polkadot API - .NET](https://github.com/usetech-llc/polkadot_api_dotnet) - 为 .NET 的 Polkadot Substrate API
-
-## Go
-
-- [Gossamer](https://github.com/ChainSafe/gossamer) - Polkadot Host 的 Go 实现。
-- [Golkadot](https://github.com/opennetsys/golkadot) - Polkadot Substrate的 Go 实现。
-- [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC 客户端在 Go, a.k.a. GSRPC
-
-## JS
-
-### 客户端
-
-- [Polkadot-JS客户端](https://github.com/polkadot-js/client) - JavaScript 爱好者的备选客户端。
-
-在深入研究[Polkadot-JS](https://polkadot.js.org)之前，您可以先浏览相关文档。
-
-在您完成配置并开始运行本地节点时，可以借助通用 polkadot[浏览器](https://polkadot.js.org/apps/#/explorer)进行交互。
-
-### 相关的库
+## Libraries
 
 ### Polkadot-JS Common
 
-Polkadot-JS Common 提供各种实用型效用函数，便于在`@polkadot`namespace（命名空间）所有项目中加以使用。它包含多个实用程序包，具体如下所示。文档和使用说明可在[ Polkadot-JS/Common API 文档](https://polkadot.js.org/common/)中查看。
+Polkadot-JS Common provides various utility functions that are used across all projects in the `@polkadot` namespace and is split into a number of internal utility packages. The documentation and usage instructions are provided at [Polkadot-JS/Common API Documentation](https://polkadot.js.org/common/).
 
-- [@polkadot/keyring](https://polkadot.js.org/common/keyring/)用 JavaScript 创建/加载帐户，有助于创建钱包或任何要求用户编写链的应用程序。[范例](https://polkadot.js.org/common/examples/keyring/)
-- [@polkadot/util](https://polkadot.js.org/common/util/)实用型效用函数，例如检查字符串是否十六进制编码。
-- [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/)便于在 Polkadot 上开发使用的加密实用程序。
+- [@polkadot/keyring](https://polkadot.js.org/common/keyring/) To create / load accounts in JavaScript, helpful for creating wallets or any application that will require the user to write to chain. [Examples](https://polkadot.js.org/docs/keyring/start/create).
+- [@polkadot/util](https://polkadot.js.org/common/util/) Utility functions like checking if a string is hex-encoded.
+- [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Crypto utilities that will come in handy while developing with Polkadot.
 
-### 命令行工具
+### CLI Tools
 
-- [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli)用于 Polkadot API 的简易命令行界面。[文档](https://polkadot.js.org/api/api/)
-- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc)用于 Polkadot 的简易 RPC 监控。更多信息，请参阅下文的 RPC 工具。
-- [@polkadot/signer-cli](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli) 工具来构造、签署和广播交易。签名可以离线完成。
+- [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Command line interface for the polkadot API. [Documentation](https://polkadot.js.org/docs/api/start).
+- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) RPC monitor for Polkadot. See the RPC tools below for additional information.
+- [@polkadot/signer-cli](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli) Tool to construct, sign, and broadcast transactions. Signing can be done offline.
+- [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot, can build `clip`, a command line tool.
 
-### RPC工具
+### WASM
 
-- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - 说明 JS 工具如何通过 RPC 与节点交互。
-- [RPC 文档](https://polkadot.js.org/api/substrate/rpc.html)
+Webassembly related tools and projects.
+
+- [ink!](https://github.com/paritytech/ink/) - an eDSL to write WebAssembly based smart contracts using the Rust programming language.
+- [parity-wasm](https://github.com/paritytech/parity-wasm) - Low-level WebAssembly format library.
+- [wasm-utils](https://github.com/paritytech/wasm-utils) - Collection of WASM utilities used in pwasm-ethereum and substrate contract development.
+- [wasmi](https://github.com/paritytech/wasmi) - a Wasm interpreter conceived as a component of parity-ethereum (ethereum-like contracts in wasm) and substrate.
+
+### RPC and API Tools
+
+- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) Demonstrates how the JS tools interact with the node over RPC.
+- [RPC documentation](https://polkadot.js.org/docs/substrate/rpc).
+- [Polkadot API Server by SimplyVC](https://github.com/SimplyVC/polkadot_api_server).
+- [Go: Subscan API](https://github.com/itering/substrate-api-rpc).
+- [C++ Polkadot API](https://github.com/usetech-llc/polkadot_api_cpp) - С++ API for Polkadot.
+- [.NET Polkadot API](https://github.com/usetech-llc/polkadot_api_dotnet) - Polkadot Substrate API for .NET.
+- [Python Polkadot API](https://github.com/polkascan/py-substrate-interface).
+- [GSRPC](https://github.com/centrifuge/go-substrate-rpc-client/) - Substrate RPC client in Go, a.k.a. GSRPC.
+- [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar) - an HTTP wrapper for Substrate, abstracting some complex RPC calls into simple REST calls.
+- [Subxt](https://github.com/paritytech/substrate-subxt) - a Rust library to submit extrinsics to a Substrate node via RPC.
+
+### SCALE Codec
+
+The [SCALE](https://substrate.dev/docs/en/knowledgebase/advanced/codec) (Simple Concatenated Aggregate Little-Endian) Codec is a lightweight, efficient, binary serialization and deserialization codec.
+
+It is designed for high-performance, copy-free encoding and decoding of data in resource-constrained execution contexts, like the Substrate runtime. It is not self-describing in any way and assumes the decoding context has all type knowledge about the encoded data.
+
+It is used in almost all communication to/from Substrate nodes, so implementations in different languages exist:
+
+- [Ruby](https://github.com/itering/scale.rb)
+- [Rust](https://github.com/paritytech/parity-scale-codec)
+- [Go](https://github.com/itering/scale.go)
+- [C++](https://github.com/soramitsu/kagome/tree/master/core/scale)
+- [TypeScript](https://github.com/polkadot-js/api)
+- [AssemblyScript](https://github.com/LimeChain/as-scale-codec)
+- [Haskell](https://github.com/airalab/hs-web3/tree/master/src/Codec)
+- [Java](https://github.com/emeraldpay/polkaj)
+- [Python](https://github.com/polkascan/py-scale-codec)
+
+## Data Crawling and Conversion
+
+The following tools help you extract and structure data from a Substrate node.
+
+- [Polkascan PRE Harvester](https://github.com/polkascan/polkascan-pre-harvester) ([matching explorer for harvested data](https://github.com/polkascan/polkascan-pre-explorer-gui)).
+- [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive).
+- [Hydra: GraphQL Builder](https://github.com/Joystream/joystream).
+- [Polka-store](https://github.com/TheGoldenEye/polka-store) - a tool which scans a Substrate chain and stores balance-relevant transactions in an SQLite database.
