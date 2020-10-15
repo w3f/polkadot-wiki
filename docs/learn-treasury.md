@@ -165,7 +165,7 @@ the closing period for the tip. This extrinsic may be called by anyone.
 
 There are practical limits to Council Members curation capabilities when it comes to treasury proposals: Council members likely do not have the expertise to make a proper assessment of the activities described in all proposals. Even if individual Councillors have that expertise, it is highly unlikely that a majority of members are capable in such diverse topics.
 
-Bounties Spending proposals aim to delegate the curation activity of spending proposals to an expert called a Curator. Curators can be defined as addresses with agency over a portion of the treasury with the goal of fixing a bug, vulnerability, develop a strategy or monitoring a set of tasks related to a specific topic: all for the benefit of the Polkadot ecosystem. 
+Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts called Curators: They can be defined as addresses with agency over a portion of the treasury with the goal of fixing a bug, vulnerability, develop a strategy or monitoring a set of tasks related to a specific topic: all for the benefit of the Polkadot ecosystem. 
 
 A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined after whose background and expertise is such that they are capable of determining when the task is complete. Curators are selected by the Council after the bounty proposal passes, and need to add an upfront payment to take the position. This deposit can be used to punish them if they act maliciously. But if they are successful in their task of getting someone to complete the bounty work, they will receive their deposit back and part of the bounty reward.
 
@@ -175,13 +175,13 @@ In general terms, curators are expected to have a well-balanced track record rel
 
 After the Council has activated a bounty, it delegates the work that requires expertise to the curator who gets to close the active bounty. Closing the active bounty enacts a delayed payout to the payout address and a payout of the curator fee. The delay phase allows the Council to act if any issues arise.
 
-To minimize storage on chain in the same way as any proposal, bounties don't contain contextual information. When a user submits a bounty spending proposal, they will probably need to find an off-chain way to explain the proposal (any of the available community forums serve this purpose). [This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing) can help as a reminder of all needed information for the Council to make an informed decision.
+To minimize storage on chain in the same way as any proposal, bounties don't contain contextual information. When a user submits a bounty spending proposal, they will probably need to find an off-chain way to explain the proposal (any of the available community forums serve this purpose). [This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing) can help as a checklist of all needed information for the Council to make an informed decision.
 
 The bounty has a predetermined duration of 90 days with the possibility of being extended by the curator. Aiming to maintain flexibility on the tasks’ curation, the curator will be able to create sub-bounties for more granularity and allocation in the next iteration of the mechanism.    
 
 ### Creating a Bounty Proposal
 
-One way to create the Bounty proposal is to use the Polkadot JS Apps website. From the website, use either the extrinsics tab and select the Treasury pallet, then `Propose_bounty` and enter the value and description of the proposal (usually linked to a forum). Alternatively, you can use the treasury tab and its dedicated Submit Bounty Proposal function under Governance.
+Anyone can create a Bounty proposal using Polkadot JS Apps: From the website, use the Extrinsics tab and select the Treasury pallet, then `Propose_bounty` and enter the value and description of the proposal (usually linked to a forum). In the near future, users can use the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is on its way: It will serve Council members, Curators and Beneficiaries of the bounties, as well as all Kusama users observing the on-chain treasury governance. For now, 
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount of be closed if the tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active. 
 
@@ -190,6 +190,8 @@ A bounty can be cancelled by deleting the earmark for a specific treasury amount
 The curator can close the bounty once it approves the completion of its tasks. The curator should make sure to set up the payout address on the active bounty beforehand. Closing the Active bounty enacts a delayed payout to the payout address and a payout of the curator fee.
 
 A bounty can be closed by using the extrinsics tab and selecting the Treasury pallet, then `Award_bounty`, making sure the right bounty is to be closed and finally sign the transaction. It is important to note that those who received a reward after the bounty is completed, must claim the specific amount of the payout from the payour address, by calling `Claim_bounty` after the curator closed the allocation. 
+
+To understand more about Bounties and how this new mechanism works, visit [Polkadot Blog](https://polkadot.network/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/). 
 
 ## FAQ
 
