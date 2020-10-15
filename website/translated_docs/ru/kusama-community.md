@@ -4,28 +4,28 @@ title: Сообщество Kusama
 sidebar_label: Сообщество
 ---
 
+The following is a list of official chats, forums, and social channels for the Kusama community. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior contact and anyone doing so is likely trying to scam you.
+
 ## Общее
 
-[Kusama форум](https://forum.kusama.network/)
+- [Kusama Discussion and Governance on Polkassembly](https://kusama.polkassembly.io/)
+- [Kusama forum](https://forum.kusama.network/)
 
-[Kusama чат](https://riot.im/app/#/room/#kusamawatercooler:polkadot.builders)
+### Chat
 
-## Получить помощь если вы претендуете на KSM
+- [Kusama Watercooler Chat](https://app.element.io/#/room/%23kusamawatercooler:polkadot.builders) - General room for talk about Kusama.
+- [Kusama Validator Lounge](https://app.element.io/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Room for validators learning about setting up a node.
+- [Kusama Direction](https://app.element.io/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Kusama.
+- [KSM Claims Support chat](https://app.element.io/#/room/#KSMAClaims:polkadot.builders)
+- To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
+- [Kusama Telegram](https://t.me/kusamanetworkofficial)
 
-[Чат поддержки KSM Claims](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders)
+## Report an issue or submit bugs
 
-## Сообщить о проблеме или отправить ошибки
+- [sos@kusama.network](mailto:sos@kusama.network)
 
-[sos@kusama.network](mailto:sos@kusama.network)
+## Social
 
-## Чат валидаторов
-
-[Чат валидаторов (на английском языке)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders)
-
-[Чат валидаторов (на аглийском языке)](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) Чтобы присоединиться  китайкому чату валидаторов отправьте сообщение[Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
-
-## Социальные сети
-
-[@kusamanetwork](https://twitter.com/kusamanetwork)
-
-[r/kusama](https://reddit.com/r/kusama)
+- Twitter: [@kusamanetwork](https://twitter.com/kusamanetwork)
+- Reddit: [r/kusama](https://reddit.com/r/kusama)
+- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
