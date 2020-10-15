@@ -4,13 +4,13 @@ title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 ---
 
-_This article is the up-to-date version of the blog post:
+_This article is the maintained version of the blog post:
 [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain).
 With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop
-and launch a new chain has dropped significantly. Whereas before it would take years to launch a new
+and launch a new chain has dropped significantly. While before it would take years to launch a new
 chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision
@@ -25,20 +25,22 @@ application in anticipation of the Polkadot mainnet launch later this year.
 - Canary network: **Kusama**
 - Current major testnets: **Westend** (Polkadot clone) and **Rococo** (parachains)
 - Substrate: **2.0.0**
-- ink!: **In development**
-  ([Documentation](https://substrate.dev/docs/en/knowledgebase/smart-contracts))
+- ink!: **3.0** ([Documentation](https://substrate.dev/docs/en/knowledgebase/smart-contracts))
 
 ## What you need to know
 
 Polkadot mainnet has been released. There are also two major testnets - **Westend**, which aims to
 run similarly to the current Polkadot mainnet, and **Rococo**, which is used specifically for
-testing parachains. Additionally, there is a value-bearing canary network called Kusama. Polkadot is
-being built with [implementations in various programming languages](learn-implementations) ranging
-from Rust to JavaScript. Currently the leading implementation is built in Rust and built on the
-Substrate framework. Substrate is a library that allows developers to develop entire blockchain
-applications with ease by bundling together a networking protocol, consensus, and Wasm interpreter.
-Cumulus, an extension to Substrate, allows any Substrate built chain to connect to Polkadot and
-become a parachain. Substrate is currently on its 2.0.0 tagged release that solidified its API.
+testing parachains. Additionally, there is a value-bearing canary network called [Kusama][] that
+gets features before Polkadot does.
+
+Polkadot has [implementations in various programming languages](learn-implementations) ranging from
+Rust to JavaScript. Currently the leading implementation is built in Rust and built using the
+Substrate framework. Substrate is a framework that allows developers to develop entire blockchain
+applications with ease. This is accomplished by bundling core essientials such as the networking
+protocol, consensus layer, Wasm interpreter, and runtime modules (called pallets). Cumulus, an
+extension to Substrate, allows any Substrate built chain to connect to Polkadot and become a
+parachain. Substrate is currently on its 2.0.0 tagged release that stabilized its API for now.
 
 Polkadot does not natively support smart contracts, however there will be parachains that do.
 Substrate chains can include smart contract functionality by using the
@@ -60,9 +62,10 @@ Polkadot provides a few ways for you to deploy your application: as a smart cont
 parachain, as your own parachain, or as a parathread. There are trade-offs when working with each of
 these and reading this section will help you understand them.
 
-Parachains are individual chains containing their own runtime logic that benefit from the shared
+Parachains are "parallel" chains containing their own runtime logic and can benefit from the shared
 security and the cross-chain messaging provided by the Polkadot Relay Chain. Parachains permit a
-high degree of flexibility and customization but will require more effort to create and maintain.
+high degree of flexibility and customization but require more effort to create and maintain over
+time.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of
 their application. The main difference between the two is economic, since parathreads will be much
@@ -81,7 +84,7 @@ characteristics of their host chain.
 If there is a need to have a large amount of control over the design and features of your
 application, a parachain is a better choice. Keep in mind, smart contracts can be used as a testing
 ground before later being turned into full-fledged parachains. Smart contract platforms will usually
-have more convenient tooling like IDEs to facilitate quick iterations. A smart contract MVP could be
+have convenient tooling like IDEs to facilitate quick iterations. A smart contract MVP could be
 created to gauge user interest before putting in the work to build out a parachain.
 
 Parachains grant the creators more space to build the monetary system and other aspects of the chain
@@ -103,7 +106,9 @@ Some examples of features you can have on a parachain or parathread:
 Parachains open possibilities to construct complex runtime logic that would be too expensive to
 execute with smart contracts. However, unlike smart contracts, parachains lack a mandatory gas
 metering system entirely and could potentially be vulnerable to bugs that cause infinite loops
-(something that is prevented by design in smart contracts).
+(something that is prevented by design in smart contracts). This vulnerability is mitigated by the
+weight system that is implemented in Substrate -- although it places more of a burden on the
+developer of the parachain to properly perform benchmarks.
 
 You may also decide to harness a combination of parachain, parathread, and smart contract. If you
 have certain logic that requires loops and it cannot be removed, use the native parachain runtime to
@@ -148,22 +153,23 @@ like there are multiple [implementations](learn-implementations.md) of the Polka
 
 Substrate is the underlying framework on which Polkadot itself is built. It is a toolset for
 blockchain innovators that provides the necessary building blocks for constructing a chain. It
-includes a library of modular plug-ins from which you can compose your chain logic and allows you to
-write your own pallets to use or publish to the community.
+includes a library of modular runtime plug-ins from which you can compose your chain logic and
+allows you to write your own pallets to use or publish to the community.
 
 The best way to get started with Substrate is to explore the
 [Substrate Knowledge Base](https://substrate.dev/docs/en/), an online resource built and maintained
 by Parity Technologies.
 
 We recommend that you poke around in there to become familiar with the common patterns. Once you
-have a solid understanding, you can challenge yourself by progressing through the Substratekitties
-workshop then advancing to the TCR Dappchain tutorial or one of the others.
+have a solid understanding, you can challenge yourself by progressing through the tutorials that are
+provided.
 
 ### How to set up your parachain
 
-After creating your chain logic with Substrate, you will be able to compile it down to a Wasm
-executable. This Wasm code blob will contain the entire state transition function of your chain, and
-is what you will need to deploy your project to Polkadot as either a parachain or parathread.
+After creating your chain runtime logic with Substrate, you will be able to compile it down to a
+Wasm executable. This Wasm code blob will contain the entire state transition function of your
+chain, and is what you will need to deploy your project to Polkadot as either a parachain or
+parathread.
 
 Validators on Polkadot will use the submitted Wasm code to validate the state transitions of your
 chain or thread, but doing this requires some additional infrastructure. A validator needs some way
@@ -194,11 +200,6 @@ connected to Polkadot. This includes:
 - Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on
   Polkadot with minimal modification, possibly as little work as importing a crate and adding a
   single line.
-
-Rob Habermeier, a co-founder of Polkadot, last year gave a talk at EthCC that introduced Cumulus,
-which you can watch below.
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/thgtXq5YMOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### How to deploy your parachain or parathread in Polkadot
 
@@ -270,6 +271,15 @@ Polkadot ecosystem through [XCMP](learn-crosschain).
 
 Edgeware documentation can be found [here][edgeware documentation].
 
+## Moonbeam
+
+[Moonbeam][] is another project that is planning to deploy to Polkadot as a parachain and will
+support smart contracts. Since Moonbeam uses [Frontier][], an interoperability layer with existing
+Ethereum tooling, it will support all applications that are written to target the EVM environment
+with little friction.
+
+Try deploying a contract to Moonbeam by following their [documentation][moonbeam docs].
+
 ### Ink
 
 [ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts
@@ -326,7 +336,8 @@ It’s still very early for smart contracts on Polkadot and the development is o
 We are actively producing content to help developers get up to speed and will maintain the wiki with
 the latest resources. You should also keep up to date with the following links:
 
-- [Edgeware](https://edgewa.re).
+- [Edgeware][].
+- [Moonbeam][]
 - [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
 - [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
 
@@ -346,8 +357,12 @@ questions. As always, keep up to date with Polkadot by following the [social cha
 
 Good luck!
 
+[kusama]: https://kusama.network
 [substrate contracts]: https://github.com/paritytech/substrate/tree/master/frame/contracts
 [substrate evm]: https://github.com/paritytech/substrate/tree/master/frame/evm
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
 [plasm plasma]: https://github.com/staketechnologies/Plasm
+[moonbeam]: https://moonbeam.network
+[moonbeam docs]: https://docs.moonbeam.network/
+[frontier]: https://github.com/paritytech/frontier
