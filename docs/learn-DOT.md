@@ -124,8 +124,8 @@ beside allowing you to experiment with the network.
 ### Getting Westies
 
 The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain
-its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom
-[#westend_faucet:matrix.org](https://riot.im/app/#/room/!cJFtAIkwxuofiSYkPN:matrix.org).
+its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
+[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org).
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
