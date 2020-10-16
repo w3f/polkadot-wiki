@@ -118,3 +118,4 @@ The following tools help you extract and structure data from a Substrate node.
 - [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive).
 - [Hydra: GraphQL Builder](https://github.com/Joystream/joystream).
 - [Polka-store](https://github.com/TheGoldenEye/polka-store) - a tool which scans a Substrate chain and stores balance-relevant transactions in an SQLite database.
+- [Substrate-graph](https://github.com/playzero/substrate-graph) - A compact indexer for Substrate based nodes providing a GraphQL interface.
