@@ -9,6 +9,8 @@ Having an on-chain identity would be a good way to build up a reputation and let
 The whole process of doing the verification is done by the bot. You will have an hour to complete the verification. If you are not able
 to finish it within an hour, the judgment will be issued as "Erroneous". Then you would have to call `clearIdentity` transaction first and redo everything again. 
 
+> Note: The registrar bot will not ask you to send any DOT!
+
 If you have provided `display name`, `email`, `twitter`, or `riot name` when setting an on-chain identity, these will be required to verify one by one by signing a challenge message. Just be aware of the `display name` cannot be too similar to others that have verified already. 
 
 Free feel to join the [Polkadot's community](community#polkadot) to ask questions if there is anything unclear.
