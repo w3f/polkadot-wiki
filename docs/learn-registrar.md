@@ -6,7 +6,7 @@ sidebar_label: How to use W3F Registrar
 
 An on-chain identity is a good way to build up your reputation and let the community know
 more about you if you plan on running a validator or being a councilor. Web3 Foundation is providing
-registrar service in the Polkadot network for free, so if you want your identity that is being
+registrar service in the Polkadot network for free, so if you want your identity to be
 verified, follow the steps below to start. In case you would like to learn the basics of identity,
 go [here](learn-identity).
 
