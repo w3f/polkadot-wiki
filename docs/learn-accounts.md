@@ -174,7 +174,7 @@ On Polkadot there are four different balance types that indicate whether your ba
 for transfers, to pay fees, or must remain frozen and not used due to an on-chain requirement.
 
 The balance types are defined by the `AccountData` struct in Substrate. The four types of balances
-include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen` (`feeFrozen
+include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen` (`feeFrozen`
 in camel-case).
 
 In general, the **usable** balance of the account is the amount that is `free` minus any funds that
