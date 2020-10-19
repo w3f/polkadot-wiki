@@ -168,6 +168,27 @@ PolkaProject is an independent site which is not affiliated with Web3 Foundation
 
 Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger).
 
+## Balance Types
+
+On Polkadot there are four different balance types that indicate whether your balance can be used
+for transfers, to pay fees, or must remain frozen and not used due to an on-chain requirement.
+
+The balance types are defined by the `AccountData` struct in Substrate. The four types of balances
+include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen`
+(`feeFrozen` in camel-case).
+
+In general, the **usable** balance of the account is the amount that is `free` minus any funds that
+are considered frozen (either `misc_frozen` or `free_frozen`) and depends on the reason for which
+the funds are to be used. If the funds are to be used for transfers then the usable amount is the
+"free" amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction
+fees than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
+
+The "total" balance of the account is considered the amount of "free" funds in the account
+subtracted by any funds that are "reserved." Reserved funds are held due to on-chain requirements
+and can usually be freed by making some on-chain action. For example, the "Identity" pallet reserves
+funds while an on-chain identity is registered, but by clearing the identity you can unreserve the
+funds and make them free again.
+
 ## Existential Deposit and Reaping
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
