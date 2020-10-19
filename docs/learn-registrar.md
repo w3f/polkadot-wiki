@@ -103,9 +103,10 @@ for reference.
 
 ![registrar](assets/registrar/9.jpg)
 
-Again just like what you did in the above. By pasting the "Challenge" data that you received on
-Twitter to the "sign the following data" field and click "Sign message" in the
-[Sign and Verify](https://polkadot.js.org/apps/#/signing) page.
+You would do what you did in the above again. Copy the "Challenge" data and go to
+[Sign and Verify](https://polkadot.js.org/apps/#/signing) under the Developer tab in the PolkadotJS
+and select your account, paste the "Challenge" data to the "sign the following data" field and click
+"Sign message"
 
 ![registrar](assets/registrar/10.jpg)
 
@@ -129,9 +130,8 @@ And then wait for 1 to 2 minutes, the Twitter bot would send a challenge message
 
 ![registrar](assets/registrar/13.jpg)
 
-Then you would do the same thing as the previous step to go to the
-[Sign and Verify](https://polkadot.js.org/apps/#/signing) and paste the "Challenge" data that you
-received on Twitter to the "sign the following data" field and click "Sign message".
+Again just like how you did in the above. By using your account to sign the "Challenge" data that
+you received on Twitter in the [Sign and Verify](https://polkadot.js.org/apps/#/signing) page.
 
 ![registrar](assets/registrar/14.jpg)
 
