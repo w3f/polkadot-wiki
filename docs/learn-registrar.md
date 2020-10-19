@@ -115,7 +115,7 @@ successfully.
 
 ## Twitter Verification
 
-Lastly, if you provided Twitter handle, you would have to follow
+Lastly, if you have provided Twitter handle, you would have to follow
 [@w3f_registrar](https://twitter.com/w3f_registrar) first.
 
 ![registrar](assets/registrar/12.jpg)
