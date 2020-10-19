@@ -21,8 +21,8 @@ again.
 If you have provided `display name`, `email`, `twitter`, or `element name (previously called Riot)`
 when setting an on-chain identity, these will be required to verify one by one by signing a
 challenge message. Just be aware of the `display name` cannot be too similar to others that have
-verified already. Also, there is no need to have all this information when doing the verification.
-You are free to set whichever field you like.
+verified already. Also, there is no need to set all this information when using the service. You are
+free to set whichever field you like.
 
 Free feel to join the [Polkadot's community](community#polkadot) to ask questions if there is
 anything unclear.
