@@ -26,7 +26,7 @@ anything unclear.
 
 ## Setting an On-chain Identity
 
-Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in the PolkadotJS. The easiest
+Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest
 way to add the built-in fields is to click the gear icon next to one's account and select "Set
 on-chain identity".
 
