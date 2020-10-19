@@ -72,6 +72,8 @@ See the [Wallets](build-wallets.md) page.
   on-chain proposal hashes.
 - [sub-bench](https://github.com/nikvolf/sub-bench) - a tool to spam your node with transactions for
   the sake of benchmarking.
+- [substrate-devhub-utils](https://github.com/danforbes/substrate-devhub-utils) - a set of
+  JavaScript utilities making life with Substrate a little easier.
 
 ## UI
 
