@@ -15,20 +15,26 @@ the verification. If you are not able to finish it within an hour, the judgment 
 "Erroneous". Then you would have to call `clearIdentity` transaction first and redo everything
 again.
 
-> Note: The registrar bot will not ask you to send any DOT!
+> Note: The registrar bot will not ask you to send any DOT, and never expose your private keys to
+> anyone!
 
-If you have provided `display name`, `email`, `twitter`, or `riot name` when setting an on-chain
-identity, these will be required to verify one by one by signing a challenge message. Just be aware
-of the `display name` cannot be too similar to others that have verified already.
+If you have provided `display name`, `email`, `twitter`, or `element name (previously called Riot)`
+when setting an on-chain identity, these will be required to verify one by one by signing a
+challenge message. Just be aware of the `display name` cannot be too similar to others that have
+verified already. Also, there is no need to have all this information when doing the verification.
+You are free to set whichever field you like.
 
 Free feel to join the [Polkadot's community](community#polkadot) to ask questions if there is
 anything unclear.
 
 ## Setting an On-chain Identity
 
+> Note: Since we do not support KYC at the moment, the judgment will be marked as "erroneous"
+> immediately if you have set the `legal name`.
+
 Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest
-way to add the built-in fields is to click the gear icon next to one's account and select "Set
-on-chain identity".
+way to add the built-in fields is to click the vertical three dots next to one's account and select
+"Set on-chain identity".
 
 ![registrar](assets/registrar/1.jpg)
 
@@ -97,10 +103,9 @@ for reference.
 
 ![registrar](assets/registrar/9.jpg)
 
-You would do what you did in the above again. Copy the "Challenge" data and go to
-[Sign and Verify](https://polkadot.js.org/apps/#/signing) under the Developer tab in the PolkadotJS
-and select your account, paste the "Challenge" data to the "sign the following data" field and click
-"Sign message"
+Again just like what you did in the above. By pasting the "Challenge" data that you received on
+Twitter to the "sign the following data" field and click "Sign message" in the
+[Sign and Verify](https://polkadot.js.org/apps/#/signing) page.
 
 ![registrar](assets/registrar/10.jpg)
 
@@ -125,9 +130,8 @@ And then wait for 1 to 2 minutes, the Twitter bot would send a challenge message
 ![registrar](assets/registrar/13.jpg)
 
 Then you would do the same thing as the previous step to go to the
-[Sign and Verify](https://polkadot.js.org/apps/#/signing) under the Developer tab in the PolkadotJS
-and select your account, paste the "Challenge" data that you received in the Twitter to the "sign
-the following data" field and click "Sign message".
+[Sign and Verify](https://polkadot.js.org/apps/#/signing) and paste the "Challenge" data that you
+received on Twitter to the "sign the following data" field and click "Sign message".
 
 ![registrar](assets/registrar/14.jpg)
 
