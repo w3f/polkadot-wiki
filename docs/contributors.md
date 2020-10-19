@@ -12,7 +12,7 @@ you directly, first check the contact information to see that it matches the ori
 and then feel free to get in touch with someone else on this list to verify the legitimacy of the
 original inquiry. **Employee impersonation is a very common type of scam**.
 
-> For other ways of protecting yourself, please see [How to Avoid Being Scammed](learn-scams).
+> For other ways of protecting yourself, please see [How to Protect Yourself from Scams](learn-scams).
 
 ### Anson Lau
 
