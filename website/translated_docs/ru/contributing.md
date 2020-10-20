@@ -4,9 +4,9 @@ title: Помощь в развитии
 sidebar_label: Помощь в развитии
 ---
 
-Вики-сайт был запущен и поддерживается Фондом Web3 Foundation. Это открытый проект с открытым исходным кодом и нацелен на то, чтобы стать самым обширным ресурсом знаний о Polkadot и экосистеме Polkadot. Большая часть материала в настоящее время сосредоточена непосредственно на Polkadot, но никто не против того, чтобы освещать информационные материалы проектов сообщества. Но, пожалуйста, не пытайтесь разместить какой-либо маркетинговый материал, это будет отклонено.
+The wiki was started and is maintained by Web3 Foundation. It is an Open-ish open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to cover informational material for community projects. But please do not try to pull request any marketing material as this will be rejected.
 
-Поощряются запросы на слияние, обсуждения и вклад со стороны сообщества. Для некоторых активных членов сообщества, которые делают полезные вклады, может быть предоставлен доступ на запись в репозиторий. В противном случае, Web3 Foundation пользуясь административными средствами выносит окончательное слово по включенному контенту. В частности, команда Технического Образования в фонде принимает самое непосредственное участие.
+Pull requests, discussions and contributions from the community are encouraged. For certain active community members who demonstrate a record of good contributions, they may be given write access to the repository. Otherwise, Web3 Foundation holds the administrative position and final say on the content that is included. Specifically the Technical Education team at the foundation are most directly involved.
 
 ## Как принять участие
 
