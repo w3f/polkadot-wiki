@@ -16,6 +16,10 @@ The final step of the transition to full-functioning Polkadot was the enabling o
 
 On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new DOT.
 
+## Polkadot Roadmap
+
+For more information on the Polkadot roadmap please visit the [official Polkadot website](https://polkadot.network/technology/#roadmap).
+
 ## Validators
 
 ### How do I apply to be a validator?
