@@ -4,9 +4,9 @@ title: 参与贡献
 sidebar_label: 参与贡献
 ---
 
-Wiki 是由 Web3 基金会开始并维护。这是开源项目并旨在成为有关 Polkadot 和 Polkadot 生态系统中最广泛的学习资源，但请不要试图 pull request 任何营销资料，这将会被拒绝。
+The wiki was started and is maintained by Web3 Foundation. It is an Open-ish open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to cover informational material for community projects. But please do not try to pull request any marketing material as this will be rejected.
 
-鼓励社区提交 pull requests，讨论和参与贡献。对于某些良好贡献的活跃社区成员，我们可以授予 Github 库的写权限。否则 Web3 基金会将对所有内容拥有管理权和最终决定权。具体来说，基金会的技术教育团队是最直接地参与。
+Pull requests, discussions and contributions from the community are encouraged. For certain active community members who demonstrate a record of good contributions, they may be given write access to the repository. Otherwise, Web3 Foundation holds the administrative position and final say on the content that is included. Specifically the Technical Education team at the foundation are most directly involved.
 
 ## 如何参与贡献
 

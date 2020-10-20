@@ -81,9 +81,11 @@ To be judged after submitting your identity information, go to the ["Extrinsics 
 
 If you don't know which registrar to pick, first check the available registrars by going to ["Chain State UI"]() and selecting `identity.registrars()` to get the full list.
 
+### Kusama Registrars
+
 ![Showing all registrars](assets/identity/14.jpg)
 
-The image above reveals two registrars:
+The image above reveals there are two registrars on Kusama:
 
 - Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL charges 25 KSM per judgement
 - Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn charges 5 KSM per judgement
@@ -96,7 +98,18 @@ Gavin Wood is registrar #0.
 
 ![Chevdor is registrar #1](assets/identity/16.jpg)
 
-Chevdor is registrar #1. We pick that one.
+Chevdor is registrar #1.
+
+### Polkadot Registrars
+
+On Polkadot there are two registrars:
+
+- Web3 Foundation is registrar #0. The W3F registrar service is still under development, follow the blog for the latest announcement. Using this registrar in the meantime will not work.
+- Chevdor is registrar #1.
+
+### Requesting Judgement
+
+Requesting judement follows the same process regardless of whether you're on the Kusama or Polkadot networks. Select one of the registrars from the query you made above.
 
 ![Requesting judgement](assets/identity/08.jpg)
 
