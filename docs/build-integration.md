@@ -13,9 +13,9 @@ but it will be useful to any infrastructure provider such as validators or chain
 The guide focuses on Polkadot and Kusama, but the principles will apply to parachains and other
 Substrate-based chains. The guide contains four sections:
 
-1. [Protocol Info](build-protocol): The entry point to the guide. Please read it carefully as it
-   provides information about Polkadot that differentiates it from other blockchains. Use this page
-   to check your assumptions.
+1. [Protocol Info](build-protocol-info): The entry point to the guide. Please read it carefully as
+   it provides information about Polkadot that differentiates it from other blockchains. Use this
+   page to check your assumptions.
 1. [Node Management](build-node-management): This page will guide you to starting and monitoring a
    node.
 1. [Node Interaction](build-node-interaction): This page will teach you to interact with your node
