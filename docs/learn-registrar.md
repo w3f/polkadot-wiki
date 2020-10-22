@@ -6,9 +6,9 @@ sidebar_label: How to use W3F Registrar
 
 An on-chain identity is a good way to build up your reputation and let the community know more about
 you if you plan on running a validator or being a councilor. Web3 Foundation is providing registrar
-service in the Polkadot network for free, so if you want your identity to be verified, follow the
-steps below to start. In case you would like to learn the basics of identity, go
-[here](learn-identity).
+service in the Polkadot network that only charges a small amount of fee (0.5 DOT per account) to
+cover the operational cost, so if you want your identity to be verified, follow the steps below to
+start. In case you would like to learn the basics of identity, go [here](learn-identity).
 
 The whole process of doing the verification is done by the bot. You will have an hour to complete
 the verification. If you are not able to finish it within an hour, the judgment will be issued as
@@ -63,7 +63,7 @@ transaction. This will request the registrar to validate the information you set
 ```
 reg_index - the position of the registrar. For W3F, use 0
 
-max_fee - the amount of DOT you are going to pay for the registrar. For W3F, it does not cost anything, so 0.
+max_fee - the amount of DOT you are going to pay for the registrar. For W3F registrar, it is 0.5 DOT.
 ```
 
 > Friendly reminder: Once you have submitted "requestJudgement" transaction, if you are not able to
@@ -75,6 +75,9 @@ max_fee - the amount of DOT you are going to pay for the registrar. For W3F, it 
 Since I have provided the Element, Twitter, and Email information in this example, I would start to
 receive the verification requests from those platforms. As for Element, an invitation will be sent
 by the bot named "W3F Registrar Verification".
+
+> Note: The handle of the W3F bot is called @registrar:web3.foundation. If you are not sure whether
+> that is ours, ask in the Polkadot community chat first.
 
 ![registrar](assets/registrar/5.jpg)
 
@@ -100,6 +103,8 @@ address has been verified. This basically proves you are the owner of the accoun
 
 Next, you should receive an email called "W3F Registrar Verification Service". Below is an example
 for reference.
+
+> Note: Please double-check the sender is "registrar@web3.foundation", not the others.
 
 ![registrar](assets/registrar/9.jpg)
 
