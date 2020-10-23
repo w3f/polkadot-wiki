@@ -77,7 +77,7 @@ receive the verification requests from those platforms. As for Element, an invit
 by the bot named "W3F Registrar Verification".
 
 > Note: The handle of the W3F bot is called @registrar:web3.foundation. If you are not sure whether
-> that is ours, ask in the Polkadot community chat first.
+> that is ours or not, ask in the Polkadot community chat first.
 
 ![registrar](assets/registrar/5.jpg)
 
