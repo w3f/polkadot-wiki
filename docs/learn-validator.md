@@ -68,8 +68,9 @@ exchange for their activities.
 
 ## Validator Stats
 
-- [HashQuark Staking Strategy](https://polkacube.hashquark.io/#/polkadot/strategy) - The HashQuark staking
-  strategy dashboard helps you choose the optimal set-up to maximize rewards, and provides other useful network monitoring tools.
+- [HashQuark Staking Strategy](https://polkacube.hashquark.io/#/polkadot/strategy) - The HashQuark
+  staking strategy dashboard helps you choose the optimal set-up to maximize rewards, and provides
+  other useful network monitoring tools.
 - [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator
   statistics.
 - [Polkanalytics](https://polkanalytics.com/#/dashboard) - A validator dashboard that displays the
