@@ -29,8 +29,9 @@ anything unclear.
 
 ## Setting an On-chain Identity
 
-> Note: Since we do not support KYC at the moment, the judgment will be marked as "erroneous"
-> immediately if you have set the `legal name`.
+> Note: The W3F Registrar currently **does not** support KYC so your judgement will be marked
+> "erroneous" immediately if you set "legal name". Make sure to leave it blank when you fill in your
+> identity information.
 
 Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest
 way to add the built-in fields is to click the vertical three dots next to one's account and select
@@ -39,6 +40,13 @@ way to add the built-in fields is to click the vertical three dots next to one's
 ![registrar](assets/registrar/1.jpg)
 
 A popup will appear, offering the default fields.
+
+Currently, the registrar only supports the following fields:
+
+- Display Name.
+- Element (formerly known as Riot)
+- Email
+- Twitter
 
 ![registrar](assets/registrar/2.jpg)
 
@@ -53,6 +61,10 @@ submitting the judgment request to the W3F's registrar.
 
 ## Request Judgement
 
+> Friendly reminder: Once you have submitted "requestJudgement" transaction, if you are not able to
+> complete the verification procedure in an hour, you would have to submit the "clearidentity"
+> transaction first and then redo the whole thing from the beginning again.
+
 ![registrar](assets/registrar/4.jpg)
 
 Go to
@@ -60,19 +72,14 @@ Go to
 and select your account to submit the `identity -> requestJudgement(reg_index, max_fee)`
 transaction. This will request the registrar to validate the information you set on-chain earlier.
 
-```
-reg_index - the position of the registrar. For W3F, use 0
+The `reg_index` is the position of the registrar. For W3F, use 0.
 
-max_fee - the amount of DOT you are going to pay for the registrar. For W3F registrar, it is 0.5 DOT.
-```
-
-> Friendly reminder: Once you have submitted "requestJudgement" transaction, if you are not able to
-> complete the verification procedure in an hour, you would have to submit the "clearidentity"
-> transaction first and then redo the whole thing from the beginning again.
+The `max_fee` is the amount of DOT or KSM to pay the registrar. For Kusama use **0.04 KSM** and for
+Polkadot use **1 DOT**.
 
 ## Element Verification
 
-Since I have provided the Element, Twitter, and Email information in this example, I would start to
+Since we provided the Element, Twitter, and Email information in this example, we would start to
 receive the verification requests from those platforms. As for Element, an invitation will be sent
 by the bot named "W3F Registrar Verification".
 
@@ -129,9 +136,12 @@ successfully.
 Lastly, if you have provided Twitter handle, you would have to follow
 [@w3f_registrar](https://twitter.com/w3f_registrar) first.
 
+After following the Registrar account on Twitter, you will need to send it a DM. A simple "hello"
+will do the trick.
+
 ![registrar](assets/registrar/12.jpg)
 
-And then wait for 1 to 2 minutes, the Twitter bot would send a challenge message to you.
+After waiting a few mintues you should receive a challenge similar to the previous two.
 
 ![registrar](assets/registrar/13.jpg)
 
@@ -149,4 +159,4 @@ been marked as "reasonable" with a green tick icon on the
 
 ![registrar](assets/registrar/15.jpg)
 
-Congratulations!
+Congratulations! Your identity should now show as a green "verified" checkmark on Polkadot-JS Apps.
