@@ -160,8 +160,9 @@ Chevdor is registrar #1.
 
 On Polkadot there are two registrars:
 
-- Web3 Foundation is registrar #0. The W3F registrar service is available on the Kusama at the moment, follow the
-  guide written [here](learn-registrar) on how to use it. The service will be available on the Polkadot shortly.
+- Web3 Foundation is registrar #0. The W3F registrar service is available on the Kusama at the
+  moment, follow the guide written [here](learn-registrar) on how to use it. The service will be
+  available on the Polkadot shortly.
 - Chevdor is registrar #1.
 
 ### Requesting Judgement
