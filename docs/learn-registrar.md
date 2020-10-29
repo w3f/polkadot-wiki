@@ -4,8 +4,8 @@ title: Using W3F Registrar
 sidebar_label: How to use W3F Registrar
 ---
 
-> **Note**: Currently the Registrar is only deployed on the **Kusama network**. In the next couple days
-> the registrar will be deployed to the Polkadot network and this note will be removed. In the
+> **Note**: Currently the Registrar is only deployed on the **Kusama network**. In the next couple
+> days the registrar will be deployed to the Polkadot network and this note will be removed. In the
 > meantime please only follow the below instructions for Kusama.
 
 An on-chain identity is a good way to build up your reputation and let the community know more about
@@ -20,8 +20,8 @@ the verification. If you are not able to finish it within an hour, the judgment 
 "Erroneous". Then you would have to call `clearIdentity` transaction first and redo everything
 again.
 
-> **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys to
-> anyone!
+> **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys
+> to anyone!
 
 If you have provided `display name`, `email`, `twitter`, or `element name (previously called Riot)`
 when setting an on-chain identity, these will be required to verify one by one by signing a
@@ -34,9 +34,9 @@ anything unclear.
 
 ## Setting an On-chain Identity
 
-> **Note**: The W3F Registrar currently **does not** support KYC or web verification, so your judgement
-> will be marked "erroneous" immediately if you set "legal name" or "web". Make sure to leave it blank
-> when you fill in your identity information.
+> **Note**: The W3F Registrar currently **does not** support KYC or web verification, so your
+> judgement will be marked "erroneous" immediately if you set "legal name" or "web". Make sure to
+> leave it blank when you fill in your identity information.
 
 Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest
 way to add the built-in fields is to click the vertical three dots next to one's account and select
