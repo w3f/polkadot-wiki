@@ -4,11 +4,11 @@ title: Kusama Endpoints
 sidebar_label: Kusama Endpoints
 ---
 
-When interacting with the [Kusama network](https://kusama.network) via [Polkadot Apps](https://polkadot.js.org/apps) or other UIs and programmatic methods, you'd ideally be running your own node ([text guide](maintain-sync), [video guide](https://www.youtube.com/watch?v=31DdfcxbAVs)). Granted, that's not something everyone wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusama has several public endpoints you can use for your apps.
+When interacting with the [Kusama network](https://kusama.network) via [Polkadot-JS Apps](https://polkadot.js.org/apps) or other UIs and programmatic methods, you'd ideally be running your own node ([text guide](maintain-sync), [video guide](https://www.youtube.com/watch?v=31DdfcxbAVs)). Granted, that's not something everyone wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusama has several public endpoints you can use for your apps.
 
 ## Parity Archive Node
 
-The development company Parity maintains an archive node at endpoint `wss://kusama-rpc.polkadot.io/`.
+[Parity](https://parity.io), the company that develops the Polkadot Rust client, maintains an archive node at endpoint `wss://kusama-rpc.polkadot.io/`.
 
 To connect to the Parity node, use the endpoint in your JavaScript apps like so:
 
@@ -21,7 +21,7 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api')
     // ...
 ```
 
-or in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the appropriate option:
+or in Polkadot-JS Apps by clicking the top-left corner of the screen and selecting the appropriate option:
 
 <img src="/img/endpoints/kusama_endpoint_parity.png" width=40% />
 
