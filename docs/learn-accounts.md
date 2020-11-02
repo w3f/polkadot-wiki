@@ -149,7 +149,7 @@ Please note that as this keeps your accounts in the browser, it is not a safe pl
 holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so
 keep your funds in cold storage when dealing with non-trivial amounts. For improved security, you
 can securely stash away the seed phrase for your accounts and remove all traces of the accounts from
-your computer after creating
+your computer after creating it.
 
 Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with
 the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
