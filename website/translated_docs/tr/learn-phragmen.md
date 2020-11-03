@@ -111,7 +111,7 @@ Voter V5:       X X X  0  1/4
 
 We are now down to candidates `A`, `C`, and `D` for two open seats. There is only one voter (`V4`) for `A`, with load `1/4`. `C` has two voters, `V2` and `V5`, with loads of `0` and `1/4`. `D` has three voters approving of them, `V2`, `V3`, and `V5`, with loads of `0`, `1/4`, and `1/4`, respectively.
 
-If Candidate `A` wins, the average load would be `(1/4 + 1/1) / 1`, or `5/4`. If candidate `C` wins, the average load would be `(0 + 1/2) + (1/4 + 1/2) / 2`, or `5/8`. If candidate `D` wins, the average load would be `(0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3) / 3`, or `1/2`. Since `1/2` is the lowest average load, candidate D wins the second round.
+If Candidate `A` wins, the average load would be `(1/4 + 1/1) / 1`, or `5/4`. If candidate `C` wins, the average load would be `((0 + 1/2) + (1/4 + 1/2)) / 2`, or `5/8`. If candidate `D` wins, the average load would be `((0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3)) / 3`, or `1/2`. Since `1/2` is the lowest average load, candidate D wins the second round.
 
 Now everybody who voted for Candidate `D` has their load set to the average, `1/2` of all the loads.
 
