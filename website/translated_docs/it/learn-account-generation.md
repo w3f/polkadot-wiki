@@ -18,7 +18,7 @@ There are several ways to generate a Polkadot address:
 
 ## DISCLAIMER: Key Security
 
-Your secret seed is the _only_ way to get access to your account. You must keep the secret both secure and private. If you share you secret with anyone they will be able to have full access to your account, including all of your funds. The secret, for this reason, is a target from hackers and others with bad intentions to steal your funds. We recommend a variety of account generation methods that have various convienience and security tradeoffs. Please review this page carefully before making your address so that you understand the risks of the account generation method you choose and how to properly mitigate them in order to keep your funds safe.
+Your secret seed is the _only_ way to get access to your account. You must keep the secret both secure and private. If you share your secret with anyone they will be able to have full access to your account, including all of your funds. The secret, for this reason, is a target from hackers and others with bad intentions to steal your funds. We recommend a variety of account generation methods that have various convienience and security tradeoffs. Please review this page carefully before making your address so that you understand the risks of the account generation method you choose and how to properly mitigate them in order to keep your funds safe.
 
 ### Storing your key safely
 
