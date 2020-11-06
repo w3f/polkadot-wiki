@@ -53,3 +53,4 @@ that the wallet software is using the latest version of the
 | [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu      | IOS and Android                                            |
 | [Spatium](https://spatium.net/)                                    | Building          | Spatium        | IOS and Android                                            |
 | [Blockchain.com](https://www.blockchain.com/)                      | Building          | Blockchain.com | IOS and Android                                            |
+| [TokenPocket](https://www.tokenpocket.pro/)                        | Building          | TokenPocket    | IOS and Android                                            |
