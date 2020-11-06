@@ -22,7 +22,7 @@ Some recently generated `JSON` account files cannot be imported (restored) into 
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity         | Browser                                                    |
 | [Polkadot{.js}](https://github.com/polkadot-js/extension)          | Live              | Parity         | Browser extension                                          |
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet    | IOS and Android                                            |
-| [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet    | Browser extension                                          |
+| [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet    | IOS, Android, Browser extension                            |
 | [Lunie](https://lunie.io/)                                         | Live              | Lunie          | Browser extension                                          |
 | [Trust Wallet](https://trustwallet.com/)                           | Live              | Trust Wallet   | IOS and Android                                            |
 | [ImToken](https://token.im/)                                       | Live              | ImToken        | IOS and Android                                            |
