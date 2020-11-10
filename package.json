@@ -31,7 +31,7 @@
     "@actions/github": "^4.0.0",
     "@polkadot/keyring": "^3.6.1",
     "@octokit/rest": "^18.0.6",
-    "@polkadot/api": "^2.4.1",
+    "@polkadot/api": "^2.6.1",
     "axios": "^0.21.0",
     "fs-extra": "^9.0.1",
     "ipfs-http-client": "^47.0.1",
