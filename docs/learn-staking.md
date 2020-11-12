@@ -212,7 +212,12 @@ Validator pools with larger total stake backing them will get slashed more harsh
 ones, so we encourage nominators to shift their nominations to less popular validators to reduce the
 possible losses.
 
-Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this via [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes). The UI shows it per validator and then all the affected nominators along with the amounts. While unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28 days on Polkadot). After the grace period, the slashes are applied.
+Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
+via
+[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
+The UI shows it per validator and then all the affected nominators along with the amounts. While
+unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
+days on Polkadot). After the grace period, the slashes are applied.
 
 The following levels of offence are
 [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for specific
