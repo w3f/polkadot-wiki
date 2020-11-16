@@ -150,10 +150,9 @@ You will need to build the `polkadot` binary from the
 code available in the **v0.8** branch.
 
 You should generally use the latest **0.8.x** tag. You should either review the output from the "git
-tag" command (`git tag | grep "$v\0\.8"` - note that output is sorted ASCII-betically, _not_
-numerically or chronologically) or visit the
-[Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8
-releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
+tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list
+of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e.,
+the highest number).
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com:paritytech/polkadot.git`.
@@ -161,7 +160,7 @@ releases. You should replace `VERSION` below with the latest build (i.e., the hi
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.8"
+git tag -l | sort -V | grep -v -- '-rc'
 echo Get the latest version and replace VERSION (below) with it.
 git checkout VERSION
 ./scripts/init.sh
