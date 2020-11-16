@@ -49,7 +49,7 @@ Once this process is complete, you will have to issue another, final transaction
 
 You can also check how long you have to wait in order to withdraw your stake in the
 [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page by
-expanding your account balance. There is a tiny icon beside the "unbonding" would eventually become
+expanding your account balance. There is a tiny icon beside the word "unbonding" that will eventually become
 an unlock icon once the remaning blocks get passed.
 
 Then, you can click that icon directly to submit the withdraw transaction. Finally, your
