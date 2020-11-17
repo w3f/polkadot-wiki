@@ -189,7 +189,7 @@ A bounty can be cancelled by deleting the earmark for a specific treasury amount
 
 The curator can close the bounty once it approves the completion of its tasks. The curator should make sure to set up the payout address on the active bounty beforehand. Closing the Active bounty enacts a delayed payout to the payout address and a payout of the curator fee.
 
-A bounty can be closed by using the extrinsics tab and selecting the Treasury pallet, then `Award_bounty`, making sure the right bounty is to be closed and finally sign the transaction. It is important to note that those who received a reward after the bounty is completed, must claim the specific amount of the payout from the payour address, by calling `Claim_bounty` after the curator closed the allocation. 
+A bounty can be closed by using the extrinsics tab and selecting the Treasury pallet, then `Award_bounty`, making sure the right bounty is to be closed and finally sign the transaction. It is important to note that those who received a reward after the bounty is completed, must claim the specific amount of the payout from the payout address, by calling `Claim_bounty` after the curator closed the allocation. 
 
 To understand more about Bounties and how this new mechanism works, visit [Polkadot Blog](https://polkadot.network/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/). 
 
