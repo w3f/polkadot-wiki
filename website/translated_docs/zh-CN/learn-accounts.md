@@ -87,15 +87,15 @@ The **most user-friendly** way to create a Kusama address is through the [Polkad
 
 A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
 
-Please note that as this keeps your accounts in the browser, it is not a safe place to keep large holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. Creating cold storage is as simple as securely stashing away the seed phrase for your accounts and removing all traces of the accounts from your computer.
+Please note that as this keeps your accounts in the browser, it is not a safe place to keep large holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. For improved security, you can securely stash away the seed phrase for your accounts and remove all traces of the accounts from your computer after creating them.
 
 Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is intended for users comfortable with using the command line and can seem intimidating, but is quite approachable. Follow the instructions in the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey). When used properly, Subkey is the **most secure** available method of creating an account.
 
-There is also the very secure [Parity Signer](https://www.parity.io/signer/) but it currently only supports Kusama addresses, not Polkadot or generic Substrate.
-
-Alternatively, you might find some wallets on the [Polkaproject.com page](http://www.polkaproject.com/) but bear in mind that these are **unaudited** and not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated. PolkaProject is an independent site which is not affiliated with Web3 Foundation.
+There is also the very secure [Parity Signer](https://www.parity.io/signer/). This keeps your keys on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible phone that you are comfortable using only for Parity Signer.
 
 Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger).
+
+Alternatively, you might find other wallets on the [Wallet](build-wallets) page, but bear in mind that some of these are **unaudited** and are not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated.
 
 ## Balance Types
 
