@@ -191,7 +191,7 @@ The curator can close the bounty once they approve the completion of its tasks. 
 
 A bounty can be closed by using the extrinsics tab and selecting the Treasury pallet, then `Award_bounty`, making sure the right bounty is to be closed and finally sign the transaction. It is important to note that those who received a reward after the bounty is completed, must claim the specific amount of the payout from the payout address, by calling `Claim_bounty` after the curator closed the allocation. 
 
-To understand more about Bounties and how this new mechanism works, visit [Polkadot Blog](https://polkadot.network/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/). 
+To understand more about Bounties and how this new mechanism works, read this [Polkadot Blog post](https://polkadot.network/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/). 
 
 ## FAQ
 
