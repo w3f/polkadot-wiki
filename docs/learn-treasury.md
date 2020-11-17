@@ -165,7 +165,7 @@ the closing period for the tip. This extrinsic may be called by anyone.
 
 There are practical limits to Council Members curation capabilities when it comes to treasury proposals: Council members likely do not have the expertise to make a proper assessment of the activities described in all proposals. Even if individual Councillors have that expertise, it is highly unlikely that a majority of members are capable in such diverse topics.
 
-Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts called Curators: They can be defined as addresses with agency over a portion of the treasury with the goal of fixing a bug, vulnerability, develop a strategy or monitoring a set of tasks related to a specific topic: all for the benefit of the Polkadot ecosystem. 
+Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts called Curators: They can be defined as addresses with agency over a portion of the treasury with the goal of fixing a bug, vulnerability, develop a strategy, or monitoring a set of tasks related to a specific topic: all for the benefit of the Polkadot ecosystem. 
 
 A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined after whose background and expertise is such that they are capable of determining when the task is complete. Curators are selected by the Council after the bounty proposal passes, and need to add an upfront payment to take the position. This deposit can be used to punish them if they act maliciously. But if they are successful in their task of getting someone to complete the bounty work, they will receive their deposit back and part of the bounty reward.
 
