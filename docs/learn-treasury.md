@@ -183,7 +183,7 @@ The bounty has a predetermined duration of 90 days with the possibility of being
 
 Anyone can create a Bounty proposal using Polkadot JS Apps: From the website, use the Extrinsics tab and select the Treasury pallet, then `Propose_bounty` and enter the value and description of the proposal (usually linked to a forum). In the near future, users can use the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is on its way: It will serve Council members, Curators and Beneficiaries of the bounties, as well as all Kusama users observing the on-chain treasury governance. For now, 
 
-A bounty can be cancelled by deleting the earmark for a specific treasury amount of be closed if the tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active. 
+A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active. 
 
 ### Closing a bounty
 
