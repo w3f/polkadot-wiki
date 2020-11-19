@@ -248,7 +248,7 @@ In more depth, the algorithm operates like so:
 3. Now we start electing candidates. For the list of all candidates who have not been elected, get
    their score, which is equal to `1 / approval_stake`.
 4. For each voter, update the score of each candidate they support by adding their total budget
-   (stake) multiplied by the load of the candidate and then dividing by that candidate's approval
+   (stake) multiplied by the load of the voter and then dividing by that candidate's approval
    stake (`voter_budget * voter_load / candidate_approval_stake`.
 5. Determine the candidate with the lowest score and elect that candidate. Remove the elected
    candidate from the pool of potential candidates.
