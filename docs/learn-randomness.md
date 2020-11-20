@@ -37,7 +37,7 @@ numbers as a clock emulator, estimating time.
 Here's how it works in detail:
 
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
-Slots make up epochs - on Kusama, 2400 slots make one epoch, which makes epochs four hours long.
+Slots make up epochs - on Polkadot, 2400 slots make one epoch, which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
 the following:
