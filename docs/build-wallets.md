@@ -45,6 +45,7 @@ that the wallet software is using the latest version of the
 | [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo           | IOS and Android                                            |
 | [Swipe](https://swipe.io/)                                         | Live              | Swipe          | IOS and Android                                            |
 | [Guarda](https://guarda.com/)                                      | Live              | Guarda         | IOS, Android, MacOS, Windows, Linux, and Browser extention |
+| [Mixin](https://mixin.one/messenger/)                              | Live              | Mixin          | iOS and Android                                            |
 | [Polkadot{.js} extension](https://github.com/EthWorks/extension)   | Building          | EthWorks       | Browser extension                                          |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask       | IOS, Android, and browser extension                        |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle        | Browser extension                                          |
