@@ -7,8 +7,8 @@ sidebar_label: Bug Bounty
 We call on our community and all bug bounty hunters to help identify bugs in Kusama.
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it
-to [sos@kusama.network](mailto:sos@kusama.network). Disclosure to any third parties disqualifies bug
-bounty eligibility.
+as per [instructions on the Web3 Foundation website](https://web3.foundation/security-report/).
+Disclosure to any third parties disqualifies bug bounty eligibility.
 
 ## Eligibility
 
@@ -30,10 +30,10 @@ parties disqualifies bug bounty eligibility.
 isn't limited to, the following:
 
 - Don't violate the privacy of other users, destroy data, etc.
-- Don’t defraud or harm Kusama network or its users during your research; you should make a good
+- Don't defraud or harm Kusama network or its users during your research; you should make a good
   faith effort to not interrupt or degrade our services.
-- Don't target the validators’ physical security measures, or attempt to use social engineering,
-  spam, distributed denial of service (DDOS) attacks, etc.
+- Don't target the validators' physical security measures, or attempt to use social engineering,
+  spam, distributed denial of service (DDoS) attacks, etc.
 - Initially report the bug only to us and not to anyone else.
 - Give us a reasonable amount of time to fix the bug before disclosing it to anyone else, and give
   us adequate written warning before disclosing it to anyone else.
@@ -43,6 +43,5 @@ isn't limited to, the following:
 
 ## How to report a bug
 
-Please email your submission with all details to [sos@kusama.network](mailto:sos@kusama.network).
-
-Pseudonymous and anonymous submissions are welcome.
+Please follow the instructions at
+[web3.foundation/security-report/](https://web3.foundation/security-report/).
