@@ -8,14 +8,26 @@ const maxAgeDays = 21;
 const techedu = ["swader", "swader", "lsaether", "lsaether", "ansonla3", "ansonla3", "laboon"];
 
 const getStaleIssues = async (octokit) => {
-  const { data } = await octokit.issues.listForRepo({
-    owner: "w3f",
-    repo: "polkadot-wiki",
-    state: "open",
-    labels: "stale",
-  });
+  let page = 0;
+  let fullData = [];
 
-  return data;
+  while (true) {
+    const { data } = await octokit.issues.listForRepo({
+      owner: "w3f",
+      repo: "polkadot-wiki",
+      state: "open",
+      labels: "stale",
+      per_page: 100,
+      page,
+    });
+
+    if (!data.length) break;
+
+    fullData.push(...data);
+    page++;
+  }
+
+  return fullData;
 }
 
 async function stalecheck() {
@@ -42,7 +54,7 @@ async function stalecheck() {
     // Pick a random technical educator
     let assignee = techedu[Math.floor(Math.random() * techedu.length)];
     // Create issue
-    let creation = await octokit.issues
+    await octokit.issues
       .create({
         owner: "w3f",
         repo: "polkadot-wiki",
