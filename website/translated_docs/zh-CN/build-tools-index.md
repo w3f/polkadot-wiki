@@ -46,6 +46,7 @@ Here we provide a list of tools available for your development needs. They are s
 - [srtool](https://www.chevdor.com/tags/srtool/) - a tool for verifying runtime versions against on-chain proposal hashes.
 - [sub-bench](https://github.com/nikvolf/sub-bench) - a tool to spam your node with transactions for the sake of benchmarking.
 - [substrate-devhub-utils](https://github.com/danforbes/substrate-devhub-utils) - a set of JavaScript utilities making life with Substrate a little easier.
+- [sub-flood](https://github.com/NikVolf/sub-flood) - a tool to benchmark Substrate by flooding it with requests.
 
 ## UI
 
