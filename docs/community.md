@@ -5,7 +5,8 @@ sidebar_label: Community
 ---
 
 The Polkadot community is expanding every day. Below are the most essential links to the community
-channels.
+channels. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without
+prior contact and anyone doing so is likely trying to scam you.
 
 ## General
 
@@ -63,6 +64,7 @@ application we use most often to interact with the Matrix protocol is the
 - [Polkadot Discord](https://discord.gg/wGUDt2p) (RECOMMENDED)
 - [Polkadot Telegram](https://t.me/PolkadotOfficial)
 - [Kusama Telegram](https://t.me/kusamanetworkofficial)
+- [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
 ### Social media and forums
 
