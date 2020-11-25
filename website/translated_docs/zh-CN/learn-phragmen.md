@@ -167,7 +167,7 @@ In more depth, the algorithm operates like so:
 1. Create a list of all voters, their total amount of stake, and which validators they support.
 2. Generate an initial edge-weighted graph mapping from voters to candidates, where each edge weight is the total _potential_ weight (stake) given by that voter. The sum of all potential weight for a given candidate is called their _approval stake_.
 3. Now we start electing candidates. For the list of all candidates who have not been elected, get their score, which is equal to `1 / approval_stake`.
-4. For each voter, update the score of each candidate they support by adding their total budget (stake) multiplied by the load of the candidate and then dividing by that candidate's approval stake (`voter_budget * voter_load / candidate_approval_stake`.
+4. For each voter, update the score of each candidate they support by adding their total budget (stake) multiplied by the load of the voter and then dividing by that candidate's approval stake (`voter_budget * voter_load / candidate_approval_stake`.
 5. Determine the candidate with the lowest score and elect that candidate. Remove the elected candidate from the pool of potential candidates.
 6. The load for each edge connecting to the winning candidate is updated, with the edge load set to the score of the candidate minus the voter's load, and the voter's load then set to the candidate's score.
 7. If there are more candidates to elect, go to Step 3. Otherwise, continue to step 8.
