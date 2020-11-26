@@ -4,7 +4,7 @@ title: Comunidad
 sidebar_label: Comunidad
 ---
 
-La comunidad Polkadot se está expandiendo todos los días. A continuación se muestran los enlaces más esenciales de los canales de la comunidad.
+The Polkadot community is expanding every day. Below are the most essential links to the community channels. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior contact and anyone doing so is likely trying to scam you.
 
 ## General
 
@@ -46,6 +46,7 @@ We primarily use Matrix across the organization and to communicate with communit
 - [Polkadot Discord](https://discord.gg/wGUDt2p) (RECOMMENDED)
 - [Polkadot Telegram](https://t.me/PolkadotOfficial)
 - [Kusama Telegram](https://t.me/kusamanetworkofficial)
+- [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
 ### Social media and forums
 
