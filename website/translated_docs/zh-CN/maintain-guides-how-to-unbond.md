@@ -20,7 +20,7 @@ After you confirm this transaction, your tokens will remain _bonded_. This means
 
 ### 第2步：取消绑定
 
-要取消绑定，请点击您要取消其资金绑定的帐户旁边的图标，然后选择 "Unbond funds"。
+To unbond the amount, click the little gear icon next to the account you want to unbond tokens for, and select "Unbond funds".
 
 ![Unbonding](/img/NPoS/unbond2.png)
 

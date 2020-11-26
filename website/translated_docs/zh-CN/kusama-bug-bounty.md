@@ -6,7 +6,7 @@ sidebar_label: Bug Bounty
 
 We call on our community and all bug bounty hunters to help identify bugs in Kusama.
 
-If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it to [sos@kusama.network](mailto:sos@kusama.network). Disclosure to any third parties disqualifies bug bounty eligibility.
+If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it as per [instructions on the Web3 Foundation website](https://web3.foundation/security-report/). Disclosure to any third parties disqualifies bug bounty eligibility.
 
 ## Eligibility
 
@@ -19,14 +19,12 @@ Please note: The submission quality will be a large factor in the level of consi
 **Responsible investigation and reporting** Responsible investigation and reporting includes, but isn't limited to, the following:
 
 - Don't violate the privacy of other users, destroy data, etc.
-- Don’t defraud or harm Kusama network or its users during your research; you should make a good faith effort to not interrupt or degrade our services.
-- Don't target the validators’ physical security measures, or attempt to use social engineering, spam, distributed denial of service (DDOS) attacks, etc.
+- Don't defraud or harm Kusama network or its users during your research; you should make a good faith effort to not interrupt or degrade our services.
+- Don't target the validators' physical security measures, or attempt to use social engineering, spam, distributed denial of service (DDoS) attacks, etc.
 - Initially report the bug only to us and not to anyone else.
 - Give us a reasonable amount of time to fix the bug before disclosing it to anyone else, and give us adequate written warning before disclosing it to anyone else.
 - In general, please investigate and report bugs in a way that makes a reasonable, good faith effort not to be disruptive or harmful to us or our users. Otherwise your actions might be interpreted as an attack rather than an effort to be helpful.
 
 ## How to report a bug
 
-Please email your submission with all details to [sos@kusama.network](mailto:sos@kusama.network).
-
-Pseudonymous and anonymous submissions are welcome.
+Please follow the instructions at [web3.foundation/security-report/](https://web3.foundation/security-report/).

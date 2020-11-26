@@ -20,7 +20,7 @@ After you confirm this transaction, your tokens will remain _bonded_. This means
 
 ### Step 2: Unbonding an amount
 
-To unbond the amount, click the little gear icon next to the account you want to unbond money for, and select "Unbond funds".
+To unbond the amount, click the little gear icon next to the account you want to unbond tokens for, and select "Unbond funds".
 
 ![Unbonding](/img/NPoS/unbond2.png)
 

@@ -64,3 +64,6 @@ Burn percentage is currently `0.20%`, though instead of being burned this amount
 ### Precision
 
 KSM have 12 decimals of precision. In other words, 1e12 (1,000,000,000,000 or one trillion) Plancks make up a single KSM.
+
+<!-- Update to resolve Stale. Remove this in a future update. -->
+
