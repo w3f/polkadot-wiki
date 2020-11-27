@@ -432,8 +432,6 @@ is your responsibility to make a strong case for why the change should be made.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
   explaining how governance works in Polkadot and Kusama.
-- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - An explanation of
-  how governance works in Polkadot and Kusama, with Bill Laboon.
 
 [polkadot direction]: https://matrix.to/#/!OwgojQyBzTlUQGGLhq:matrix.parity.io
 [polkassembly]: https://polkadot.polkassembly.io/
