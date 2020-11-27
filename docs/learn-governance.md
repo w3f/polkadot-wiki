@@ -328,11 +328,11 @@ councillors based on the vote configurations of all voters. The election also ch
 of runners up (currently 19 on Kusama and 20 on Polkadot) that will remain in the queue with their
 votes intact.
 
-As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single candidate
-from a list, a Phragmén election is a more expressive way to include each voters' views. Token holders
-can treat it as a way to support as many candidates as they want. The election algorithm
-will find a fair subset of the candidates that most closely matches the expressed indications of the
-electorate as a whole.
+As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
+candidate from a list, a Phragmén election is a more expressive way to include each voters' views.
+Token holders can treat it as a way to support as many candidates as they want. The election
+algorithm will find a fair subset of the candidates that most closely matches the expressed
+indications of the electorate as a whole.
 
 Let's take a look at the example below.
 
