@@ -162,7 +162,8 @@ applications as parachains. For more info see [here](build-pdk).
 
 ### Deploying parachains
 
-Please see the builder's article on [deploying parachains](build-deploy-parachains).
+Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for
+information on compiling and deploying a parachain.
 
 ## Resources
 
