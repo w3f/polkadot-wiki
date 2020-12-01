@@ -16,10 +16,11 @@ smart contract execution. Contracts exist on a single shard and can send asynchr
 between shards.
 
 Likewise, in Polkadot, each shard hosts core logic, the shards are executed in parallel, and
-Polkadot can send cross-shard asynchronous messages. However, each Polkadot shard (in Polkadot terminology, "[parachain](learn-parachains)") has a
-unique STF. Applications can exist either within a single shard or across shards by composing logic.
-Polkadot uses WebAssembly (Wasm) as a "meta-protocol". A shard's STF can be abstract as long as the
-validators on Polkadot can execute it within a Wasm environment.
+Polkadot can send cross-shard asynchronous messages. However, each Polkadot shard (in Polkadot
+terminology, "[parachain](learn-parachains)") has a unique STF. Applications can exist either within
+a single shard or across shards by composing logic. Polkadot uses WebAssembly (Wasm) as a
+"meta-protocol". A shard's STF can be abstract as long as the validators on Polkadot can execute it
+within a Wasm environment.
 
 ## Architecture
 
@@ -29,10 +30,11 @@ Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Be
 attestations, which are votes on availability of shard data and Beacon Chain validity. Each shard in
 Ethereum 2 is simply a blockchain with the Ethereum Wasm (eWasm) interface.
 
-Ethereum 2.0 launched Phase 0 on 1 December 2020 with just a Beacon Chain. In Phase 1, it will launch 64 shards as
-simple chains to test the Beacon Chain's finality. Each shard submits "crosslinks" to the Beacon
-Chain, which contain the information to finalize shard data. Later, in Phase 2, the shards will
-implement the eWasm interface, finally making the system usable to end users. [1]
+Ethereum 2.0 launched Phase 0 on 1 December 2020 with just a Beacon Chain. In Phase 1, it will
+launch 64 shards as simple chains to test the Beacon Chain's finality. Each shard submits
+"crosslinks" to the Beacon Chain, which contain the information to finalize shard data. Later, in
+Phase 2, the shards will implement the eWasm interface, finally making the system usable to end
+users. [1]
 
 The network will also have "side chains" to interact with chains that are not under the finality
 protocol of Ethereum 2.0.
@@ -90,10 +92,11 @@ and 256 validators per shard to finalize all shards within one epoch. With 64 sh
 validators (given 256 validators per shard). [3][4]
 
 Polkadot is able to provide strong finality and availability guarantees with much fewer validators.
-Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators from
-a smaller set, letting smaller holders nominate validators to run infrastructure while still
-claiming the rewards of the system, without running a node of their own. Polkadot plans to have
-1,000 validators by the end of its first year of operation, and needs about ten validators for each parachain in the network.
+Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators from a smaller
+set, letting smaller holders nominate validators to run infrastructure while still claiming the
+rewards of the system, without running a node of their own. Polkadot plans to have 1,000 validators
+by the end of its first year of operation, and needs about ten validators for each parachain in the
+network.
 
 ## Shards
 
@@ -135,11 +138,12 @@ like Github discussions, All Core Devs calls, and Ethereum Magicians to make dec
 protocol. [8]
 
 Polkadot uses on-chain [governance](learn-governance) with a multicameral system. There are several
-avenues to issue proposals, e.g. from the on-chain Council, the Technical Committee, or from the public.
-All proposals ultimately pass through a public referendum, where the majority of tokens can always
-control the outcome. For low-turnout referenda, Polkadot uses adaptive quorum biasing to set the
-passing threshold. Referenda can cover a variety of topics, including fund allocation from an
-on-chain [Treasury](learn-treasury) or modifying the underlying runtime code of the chain. Decisions get enacted on-chain and are binding and autonomous.
+avenues to issue proposals, e.g. from the on-chain Council, the Technical Committee, or from the
+public. All proposals ultimately pass through a public referendum, where the majority of tokens can
+always control the outcome. For low-turnout referenda, Polkadot uses adaptive quorum biasing to set
+the passing threshold. Referenda can cover a variety of topics, including fund allocation from an
+on-chain [Treasury](learn-treasury) or modifying the underlying runtime code of the chain. Decisions
+get enacted on-chain and are binding and autonomous.
 
 ## Upgrades
 
@@ -156,10 +160,10 @@ Ethereum 2.0 and Polkadot both use a sharded model where shard chains ("shards" 
 "parachains/parathreads" in Polkadot) are secured by a main chain by linking shard state in the
 blocks of the main chains. The two protocols differ in a few main areas. First, all shards in
 Ethereum 2.0 have the same STF, while Polkadot lets shards have an abstract STF. Second, governance
-processes in Ethereum 2.0 are planned to be off-chain and thus require coordination for a hard fork to enact governance
-decisions, while in Polkadot the decisions are on-chain and enacted autonomously. Third, the
-validator selection mechanisms are different because Polkadot can provide strong availability and
-validity guarantees with a smaller number of validators per shard.
+processes in Ethereum 2.0 are planned to be off-chain and thus require coordination for a hard fork
+to enact governance decisions, while in Polkadot the decisions are on-chain and enacted
+autonomously. Third, the validator selection mechanisms are different because Polkadot can provide
+strong availability and validity guarantees with a smaller number of validators per shard.
 
 ## References
 
