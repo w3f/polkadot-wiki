@@ -159,8 +159,7 @@ group to vote on and cancelling malicious referenda.
 
 GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot,
 which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of
-GRANDPA, see this Medium post:
-[https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+GRANDPA, see [this Medium post](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## Hard Fork
 
