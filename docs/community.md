@@ -97,8 +97,9 @@ community members. The application we use most often to interact with the Matrix
 
 ## Ecosystem
 
-- [Teams Building on Polkadot](https://polkaproject.com/) -
-  Community maintained list of teams building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's unofficial)
+- [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams
+  building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
+  unofficial)
 - [Polkadot Stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md) -
   if you're interested in seeing what's under development and where there's room for your
   contributions.
