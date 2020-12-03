@@ -18,7 +18,7 @@ In the Polkadot validity system, an _attestation_ is a type of message that vali
 
 ## Authority
 
-An authority is a generic term for the role in a blockchain that is able to participate in the consensus mechanisms. In GRANDPA, the authorities vote on chains they consider final. In BABE, the authorities are block producers. Authority sets can be chosen be mechanisms such as Polkadot's NPoS algorithm.
+An authority is a generic term for the role in a blockchain that is able to participate in the consensus mechanisms. In [GRANDPA](#grandpa-finality-gadget), the authorities vote on chains they consider final. In BABE, the authorities are block producers. Authority sets can be chosen be mechanisms such as Polkadot's NPoS algorithm.
 
 ## BABE
 
@@ -54,7 +54,7 @@ A node that maintains a parachain by collecting parachain transactions and produ
 
 ## Consensus
 
-The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is GRANDPA.
+The process of a group of entities to agree on a particular data value (such as the ordering and makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus. The consensus algorithm used by Polkadot is [GRANDPA](#grandpa-finality-gadget).
 
 ## Dapps
 
@@ -78,7 +78,7 @@ A (whole) number of sessions, which is the period that the validator set (and ea
 
 ## Equivocation
 
-Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
+Providing conflicting information to the network. BABE equivocation entails creating multiple blocks in the same slot. [GRANDPA](#grandpa-finality-gadget) equivocation would consist of signing multiple conflicting chains.
 
 ## Extrinsic
 
@@ -86,7 +86,7 @@ State changes that come from the outside world, i.e. they are not part of the sy
 
 ## Finality
 
-The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay Chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
+The property of a block that cannot be reverted. Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay Chain uses a deterministic finality gadget known as [GRANDPA](#grandpa-finality-gadget).
 
 ## Finality Gadget
 
@@ -116,7 +116,7 @@ An on-chain entity that consists of several on-chain accounts (starting at 6, ev
 
 ## GRANDPA Finality Gadget
 
-GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see this Medium post: [https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot, which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of GRANDPA, see [this Medium post](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## Hard Fork
 
@@ -256,7 +256,7 @@ A module that implements specific transition functions and features one might wa
 
 ## Safety
 
-The property of a distributed system indicating that a particular state transition will not be reverted. GRANDPA provides _deterministic_ safety. That is, for a state changed marked as "safe" or "final", one would require a hard fork to revert that change.
+The property of a distributed system indicating that a particular state transition will not be reverted. [GRANDPA](#grandpa-finality-gadget) provides _deterministic_ safety. That is, for a state changed marked as "safe" or "final", one would require a hard fork to revert that change.
 
 ## Sealing
 
@@ -272,7 +272,7 @@ A message containing a signature on the concatenation of all the Session keys. S
 
 ## Session Key
 
-Hot keys that are used for performing network operations by validators, for example signing GRANDPA commit messages.
+Hot keys that are used for performing network operations by validators, for example signing [GRANDPA](#grandpa-finality-gadget) commit messages.
 
 ## Shared Security
 
