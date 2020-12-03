@@ -22,7 +22,7 @@ that says whether they think a parachain candidate block is valid or invalid.
 ## Authority
 
 An authority is a generic term for the role in a blockchain that is able to participate in the
-consensus mechanisms. In GRANDPA, the authorities vote on chains they consider final. In BABE, the
+consensus mechanisms. In [GRANDPA](#grandpa-finality-gadget), the authorities vote on chains they consider final. In BABE, the
 authorities are block producers. Authority sets can be chosen be mechanisms such as Polkadot's NPoS
 algorithm.
 
@@ -75,7 +75,7 @@ transition proofs for the validators.
 
 The process of a group of entities to agree on a particular data value (such as the ordering and
 makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus.
-The consensus algorithm used by Polkadot is GRANDPA.
+The consensus algorithm used by Polkadot is [GRANDPA](#grandpa-finality-gadget).
 
 ## Dapps
 
@@ -109,7 +109,7 @@ active nominator set) is recalculated and where rewards are paid out.
 ## Equivocation
 
 Providing conflicting information to the network. BABE equivocation entails creating multiple blocks
-in the same slot. GRANDPA equivocation would consist of signing multiple conflicting chains.
+in the same slot. [GRANDPA](#grandpa-finality-gadget) equivocation would consist of signing multiple conflicting chains.
 
 ## Extrinsic
 
@@ -120,7 +120,7 @@ Extrinsics can take two forms, "[inherents](#inherent)" and "[transactions](#tra
 
 The property of a block that cannot be reverted. Generally, created blocks are not final until some
 point in the future - perhaps never, in the case of "probabilistic finality". The Polkadot Relay
-Chain uses a deterministic finality gadget known as [GRANDPA](#GRANDPA-consensus-algorithm).
+Chain uses a deterministic finality gadget known as [GRANDPA](#grandpa-finality-gadget).
 
 ## Finality Gadget
 
@@ -159,8 +159,7 @@ group to vote on and cancelling malicious referenda.
 
 GHOST-based Recursive ANcestor Deriving Prefix Agreement. It is the finality gadget for Polkadot,
 which allows asynchronous, accountable, and safe finality to the blockchain. For an overview of
-GRANDPA, see this Medium post:
-[https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
+GRANDPA, see [this Medium post](https://medium.com/polkadot-network/polkadot-proof-of-concept-3-a-better-consensus-algorithm-e81c380a2372)
 
 ## Hard Fork
 
@@ -363,7 +362,7 @@ deal with accounts and balances. In Substrate, modules are called "pallets".
 ## Safety
 
 The property of a distributed system indicating that a particular state transition will not be
-reverted. GRANDPA provides _deterministic_ safety. That is, for a state changed marked as "safe" or
+reverted. [GRANDPA](#grandpa-finality-gadget) provides _deterministic_ safety. That is, for a state changed marked as "safe" or
 "final", one would require a hard fork to revert that change.
 
 ## Sealing
@@ -383,7 +382,7 @@ Controller.
 
 ## Session Key
 
-Hot keys that are used for performing network operations by validators, for example signing GRANDPA
+Hot keys that are used for performing network operations by validators, for example signing [GRANDPA](#grandpa-finality-gadget)
 commit messages.
 
 ## Shared Security
