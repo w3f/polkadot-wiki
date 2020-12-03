@@ -19,7 +19,7 @@ The Web3 Foundation hosts many events online and in-person. To check out our cur
 
 ## Matrix Chats
 
-We primarily use Matrix across the organization and to communicate with community members. The application we use most often to interact with the Matrix protocol is the [Element](https://app.element.io) messenger.
+We primarily use [Matrix](https://matrix.org) across the organization and to communicate with community members. The application we use most often to interact with the Matrix protocol is the [Element](https://app.element.io) messenger.
 
 ### Polkadot
 
@@ -78,5 +78,5 @@ We primarily use Matrix across the organization and to communicate with communit
 
 ## 生态
 
-- [Teams Building on Polkadot](https://forum.web3.foundation/t/teams-building-on-polkadot/67) - Maintained list of teams building on Polkadot and/or Substrate.
+- [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's unofficial)
 - [Polkadot Stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md) - if you're interested in seeing what's under development and where there's room for your contributions.
