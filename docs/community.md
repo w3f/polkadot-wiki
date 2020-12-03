@@ -26,8 +26,8 @@ events, please refer to our public
 
 ## Matrix Chats
 
-We primarily use [Matrix](https://matrix.org) across the organization and to communicate with community members. The
-application we use most often to interact with the Matrix protocol is the
+We primarily use [Matrix](https://matrix.org) across the organization and to communicate with
+community members. The application we use most often to interact with the Matrix protocol is the
 [Element](https://app.element.io) messenger.
 
 ### Polkadot
