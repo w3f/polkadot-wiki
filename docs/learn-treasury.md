@@ -10,7 +10,7 @@ The treasury is a pot of funds collected through transaction fees, slashing,
 by making a spending proposal that, if approved by the [Council](learn-governance#Council), will
 enter a waiting period before distribution. This waiting period is known as the budget period, and
 its duration is subject to [governance](learn-governance), with current defaults set to
-{{ spend_period }} days for Polkadot mainnet, and {{ spend_period }} days for Kusama. The treasury
+{{ spend_period }} days for Polkadot mainnet, and 6 days for Kusama. The treasury
 attempts to spend as many proposals in the queue as it can without running out of funds.
 
 If the treasury ends a budget period without spending all of its funds, it suffers a burn of a
