@@ -6,13 +6,17 @@ sidebar_label: 与其它链比较
 
 Polkadot 是区块链技术，但带有一些创新使它与其他主流的链不一样。
 
-## [Cosmos](learn-comparisons-ethereum-2)
+## In-Depth Comparisons
 
-## [Dfinity](learn-comparisons-cosmos)
+### [Ethereum 2.0](learn-comparisons-ethereum-2)
 
-## [Dfinity](learn-comparisons-dfinity)
+### [Cosmos](learn-comparisons-cosmos)
 
-## Tezos
+### [Dfinity](learn-comparisons-dfinity)
+
+## Other Comparisons
+
+### Ethereum 1.x
 
 [以太坊](https://ethereum.org)是个智能合约区块链平台，允许通用 计算将被部署在链上并在 p2p 网络中运行。 以太坊1.x是指当前的以太坊版本(在撰写Muir Glacier 硬分叉时)和计划未来的升级。
 
@@ -26,4 +30,4 @@ Polkadot 是区块链技术，但带有一些创新使它与其他主流的链�
 
 Tezos 被描述为**自我修正 (self-amending)**，因为链进行升级时，而无需分叉。同样 Polkadot 允许任何平行链集成此功能，并且中继链本身可以通过链上治理进行升级。Polkadot 状态转换函数只是执行 Wasm Blob(在治理系统通过之后)升级，仅意味着切换验证人程序所针对的 Blob 代码。
 
-Tezos 的另一个功能是它的智能合约语言[Michelson ](https://tezos.gitlab.io/whitedoc/michelson.html)，它有助于编写形式验证的逻辑。形式验证是一种工具，帮助防止可能导致不良状态转换的错误。虽然 Polkadot 当前是用 Rust 语言编写，但是这种语言缺乏与 Tezos 的实现 OCaml 相同级别的形式验证工具，Rust 被认为是比 C 或 C++ 更安全的语言。此外 Polkadot 对使用友好的语言编写的平行链进行形式验证没有任何限制 - 唯一的要求的逻辑是必须编译为 Wasm。可以预见一些带有形式验证的链条将作为第一类属性出现。此外 Rust 和 Wasm 周围的工具生态系统都已经成熟，并且形式验证工具可能会在某个时候变得更加适用于这些语言。
+Another feature of Tezos is its smart contract language [Michelson](https://tezos.gitlab.io/whitedoc/michelson.html), which facilitates formal verification of the written logic. Formal verification is a tool that can help to prevent bugs that could lead to unwanted state transitions. Although Polkadot is currently written in the Rust language, which lacks the same level of formal verification tools as Tezos' implementation language OCaml, Rust is considered a safer language than C or C++ for systems programming. Furthermore, Polkadot makes no restrictions to parachains written in more friendly languages for formal verification-- the only requirement is that the logic must compile to Wasm. It is expected that some chains will emerge with formal verification as a first class property. Additionally, the tooling ecosystem around both Rust and Wasm are both maturing and formal verification tools may at some point become more widely available for these languages.
