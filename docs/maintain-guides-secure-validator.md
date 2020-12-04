@@ -93,10 +93,6 @@ avoid equivocation, even if an attacker gained access to a validator node.
 
 ## Conclusions
 
-- Do not expose validators to the public internet, they should only be accessible by allowed
-  parties. Therefore, we propose a layered approach in which the validators are isolated from the
-  internet and connect to the Polkadot network via an intermediate layer of public-facing nodes.
-
 - At the moment, Polkadot/Substrate can't interact with HSM/SGX, so we need to provide the signing
   key seeds to the validator machine. This key is kept in memory for signing operations and
   persisted to disk (encrypted with a password).
@@ -121,29 +117,7 @@ avoid equivocation, even if an attacker gained access to a validator node.
 
 - Polkadot should run as non-root user.
 
-- Each validator should connect to the Polkadot network through a set of at least 2 public-facing
-  nodes. The connection is done through a VPN and the machine can't access the public internet, thus
-  the only possible connection is through the VPN.
-
-### Public Facing Nodes
-
-- At least two nodes associated with each validator run on at least two different cloud providers
-  and they only publicly expose the p2p port.
-
-- They can run as a container on Kubernetes and we can define the desired state (number of replicas
-  always up, network and storage settings); the connection between the validator and the
-  public-facing nodes is done through a VPN. They have the common Kubernetes security setup in place
-  (restrictive service account, pod security policy and network policy).
-
-- Node keys should be provided in a secure way.
-
-- Only run the Polkadot container, no additional services. The VPN agent should run on a sidecar in
-  the same pod (sharing the same network stack).
-
 ### Monitoring
-
-- Public-facing nodes and the validator should be monitored and alerts set for several failure
-  conditions defined.
 
 - There should be an on-call rotation for managing the alerts.
 
