@@ -54,8 +54,6 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 ## 结论
 
-- Do not expose validators to the public internet, they should only be accessible by allowed parties. Therefore, we propose a layered approach in which the validators are isolated from the internet and connect to the Polkadot network via an intermediate layer of public-facing nodes.
-
 - At the moment, Polkadot/Substrate can't interact with HSM/SGX, so we need to provide the signing key seeds to the validator machine. This key is kept in memory for signing operations and persisted to disk (encrypted with a password).
 
 - Given that HA setups would always be at risk of double-signing and there's currently no built-in mechanism to prevent it, we propose having a single instance of the validator to avoid slashing. Slashing penalties for being offline are much less than those for equivocation.
@@ -72,30 +70,16 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 
 - Polkadot 应该以非 root 用户身份运行。
 
-- Each validator should connect to the Polkadot network through a set of at least 2 public-facing nodes. The connection is done through a VPN and the machine can't access the public internet, thus the only possible connection is through the VPN.
+### Monitoring
 
-### 面向公众的节点
-
-- At least two nodes associated with each validator run on at least two different cloud providers and they only publicly expose the p2p port.
-
-- They can run as a container on Kubernetes and we can define the desired state (number of replicas always up, network and storage settings); the connection between the validator and the public-facing nodes is done through a VPN. They have the common Kubernetes security setup in place (restrictive service account, pod security policy and network policy).
-
-- 应以安全的方式提供节点密钥。
-
-- Only run the Polkadot container, no additional services. The VPN agent should run on a sidecar in the same pod (sharing the same network stack).
-
-### 监测
-
-- Public-facing nodes and the validator should be monitored and alerts set for several failure conditions defined.
-
-- 应该有用于管理警报的待命轮换。
+- There should be an on-call rotation for managing the alerts.
 
 - There should be a clear protocol with actions to perform for each level of each alert and an escalation policy.
 
 ## 资源
 
-- [Figment Network 对 Cosmos 验证人基础结构的全面披露](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
-- [Certus One 的知识库](https://kb.certus.one/)
-- [EOS 区块生产者安全性列表](https://github.com/slowmist/eos-bp-nodes-security-checklist)
-- [哨兵节点架构概述](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
-- [HSM 政策和验证人安全的重要性](https://medium.com/loom-network/hsm-policies-and-the-importance-of-validator-security-ec8a4cc1b6f)
+- [Figment Network's Full Disclosure of Cosmos Validator Infrastructure](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
+- [Certus One's Knowledge Base](https://kb.certus.one/)
+- [EOS Block Producer Security List](https://github.com/slowmist/eos-bp-nodes-security-checklist)
+- [Sentry Node Architecture Overview](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
+- [HSM Policies and the Important of Validator Security](https://medium.com/loom-network/hsm-policies-and-the-importance-of-validator-security-ec8a4cc1b6f)
