@@ -21,7 +21,7 @@ are equal to 1e10 Planck.
 | --------------- | -------------- | ------------ |
 | Planck          | 1              | 0.0000000001 |
 | Microdot (uDOT) | 4              | 0.0000001000 |
-| Millidot (mDOT) | 7              | 0.0001000000 |
+| Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
 
 _Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck,
