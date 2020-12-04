@@ -32,11 +32,11 @@ See [Redenomination of DOT](redenomination) for more details._
 
 | Unit            | Decimal Places | Example        |
 | --------------- | -------------- | -------------- |
-| Planck          | 1              | 0.000000000001 |
-| Point           | 3              | 0.000000000100 |
-| MicroKSM (uKSM) | 6              | 0.000000100000 |
-| MilliKSM (mKSM) | 9              | 0.000100000000 |
-| KSM             | 12             | 0.100000000000 |
+| Planck          | 0              | 0.000000000001 |
+| Point           | 3              | 0.000000001000 |
+| MicroKSM (uKSM) | 6              | 0.000001000000 |
+| MilliKSM (mKSM) | 9              | 0.001000000000 |
+| KSM             | 12             | 1.000000000000 |
 
 ## What are the uses of DOT?
 
