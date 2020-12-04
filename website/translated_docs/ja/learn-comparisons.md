@@ -6,13 +6,17 @@ sidebar_label: Other comparisons
 
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular chains.
 
-## [Ethereum 2.0](learn-comparisons-ethereum-2)
+## In-Depth Comparisons
 
-## [Cosmos](learn-comparisons-cosmos)
+### [Ethereum 2.0](learn-comparisons-ethereum-2)
 
-## [Dfinity](learn-comparisons-dfinity)
+### [Cosmos](learn-comparisons-cosmos)
 
-## Ethereum 1.x
+### [Dfinity](learn-comparisons-dfinity)
+
+## Other Comparisons
+
+### Ethereum 1.x
 
 [Ethereum](https://ethereum.org) is a smart contract platform blockchain that allows for general computation to be deployed on-chain and operated across the p2p network. Ethereum 1.x refers to the current Ethereum release (at the time of writing at the Muir Glacier hard fork) and the immediately planned future upgrades.
 
@@ -26,4 +30,4 @@ In practical terms, this means that the layer of abstraction between these two p
 
 Tezos is described as **self-amending** because it can enact an upgrade to the chain without having to fork. Likewise, Polkadot allows for any parachain to integrate this functionality and the Relay Chain itself is able to be upgraded through an on-chain process. Since Polkadot state transition functions are just Wasm blobs to perform an upgrade (after it has been approved by the governance system) simply means switching out the code blob for which validators are validating against.
 
-Another feature of Tezos is its smart contract language [Michelson](https://tezos.gitlab.io/whitedoc/michelson.html), which facilitates formal verification of the written logic. Formal verification is a tool that can help to prevent bugs that could lead to unwanted state transitions. Although Polkadot is currently written in the Rust language, which lacks the same level of formal verification tools as Tezos' implementation language OCaml, Rust is considered a safer language than C or C++ for systems programming. Furthermore, Polkadot makes no restrictions to parachains written in more friendly languages for formal verification-- the only requirement is that the logic must compile to Wasm. It is expected that some chains will emerge written with formal verification as a first class property. Additionally, the tooling ecosystem around both Rust and Wasm are both maturing and formal verification tools may at some point become more widely available for these languages.
+Another feature of Tezos is its smart contract language [Michelson](https://tezos.gitlab.io/whitedoc/michelson.html), which facilitates formal verification of the written logic. Formal verification is a tool that can help to prevent bugs that could lead to unwanted state transitions. Although Polkadot is currently written in the Rust language, which lacks the same level of formal verification tools as Tezos' implementation language OCaml, Rust is considered a safer language than C or C++ for systems programming. Furthermore, Polkadot makes no restrictions to parachains written in more friendly languages for formal verification-- the only requirement is that the logic must compile to Wasm. It is expected that some chains will emerge with formal verification as a first class property. Additionally, the tooling ecosystem around both Rust and Wasm are both maturing and formal verification tools may at some point become more widely available for these languages.
