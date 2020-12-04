@@ -144,7 +144,7 @@ your transaction and wait for it to be included in a block.
 Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are
 locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an
 unlock extrinsic to make your funds available again after the lock expires. Unbonding is another
-term you heard a lot in Polkadot, where you would like to withdraw your DOT that used in Staking. To
+term you hear a lot in Polkadot, it means withdrawing your DOT that was used in staking. To
 know more about it, please see [here](maintain-guides-how-to-unbond).
 
 You can do this from the "Accounts" page in
