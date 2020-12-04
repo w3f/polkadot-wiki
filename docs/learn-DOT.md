@@ -17,12 +17,12 @@ are equal to 1e10 Planck.
 
 ### Polkadot
 
-| Unit            | Decimal Places | Example        |
-| --------------- | -------------- | -------------- |
-| Planck          | 1              | 0.0000000001   |
-| Microdot (uDOT) | 4              | 0.0000001000   |
-| Millidot (mDOT) | 7              | 0.0001000000   |
-| Dot (DOT)       | 10             | 0.1000000000   |
+| Unit            | Decimal Places | Example      |
+| --------------- | -------------- | ------------ |
+| Planck          | 1              | 0.0000000001 |
+| Microdot (uDOT) | 4              | 0.0000001000 |
+| Millidot (mDOT) | 7              | 0.0001000000 |
+| Dot (DOT)       | 10             | 0.1000000000 |
 
 _Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck,
 just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)".
