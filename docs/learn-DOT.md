@@ -19,7 +19,7 @@ are equal to 1e10 Planck.
 
 | Unit            | Decimal Places | Example      |
 | --------------- | -------------- | ------------ |
-| Planck          | 1              | 0.0000000001 |
+| Planck          | 0              | 0.0000000001 |
 | Microdot (uDOT) | 4              | 0.0000001000 |
 | Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
