@@ -90,7 +90,7 @@ When you are comfortable with the decision you have made, click the blue "Vote" 
 
 ## Unlocking Locked Tokens
 
-Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires.
+Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires. Unbonding is another term you hear a lot in Polkadot, it means withdrawing your DOT that was used in staking. To know more about it, please see [here](maintain-guides-how-to-unbond).
 
 You can do this from the "Accounts" page in [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a "democracy" lock by opening the details on your balance. In the example below the account has 150 KSM locked in democracy.
 
