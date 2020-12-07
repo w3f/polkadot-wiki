@@ -30,8 +30,7 @@ anything unclear.
 
 ## Setting an On-chain Identity
 
-> **Note**: The W3F Registrar currently **does not** support KYC or web verification, so your
-> judgement will be marked "erroneous" immediately if you set "legal name" or "web". Make sure to
+> **Note**: The W3F Registrar currently **does not** support KYC or web verification. Make sure to
 > leave it blank when you fill in your identity information.
 
 Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest
