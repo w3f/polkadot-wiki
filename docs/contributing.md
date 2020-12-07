@@ -36,7 +36,8 @@ will either merge it in or request changes very soon.
 
 ![](assets/contributing.png) ![](assets/creating-pull-request.png)
 
-Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the next page.
+Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the
+next page.
 
 ![](assets/creating-pull-request-2.png)
 
