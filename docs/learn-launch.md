@@ -5,6 +5,8 @@ sidebar_label: Polkadot Launch Phases
 description: An explanation of Polkadot's launch process and its individual phases
 ---
 
+test
+
 The Polkadot network had a phased roll-out plan, with important milestones toward decentralization
 marking each phase.
 
