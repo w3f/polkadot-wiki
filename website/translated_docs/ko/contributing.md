@@ -22,6 +22,10 @@ Once logged in, you'll be taken to the GitHub text editor in which you can make 
 
 ![](assets/contributing.png) ![](assets/creating-pull-request.png)
 
+Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the next page.
+
+![](assets/creating-pull-request-2.png)
+
 ## 규칙
 
 There are a few basic ground-rules for contributors:
