@@ -4,10 +4,6 @@ title: Using W3F Registrar
 sidebar_label: How to use W3F Registrar
 ---
 
-> **Note**: Currently the Registrar is only deployed on the **Kusama network**. In the next couple
-> days the registrar will be deployed to the Polkadot network and this note will be removed. In the
-> meantime please only follow the below instructions for Kusama.
-
 An on-chain identity is a good way to build up your reputation and let the community know more about
 you if you plan on running a validator or being a councilor. Web3 Foundation is providing registrar
 service in the Kusama and Polkadot networks that only charges a small amount of fee (0.04 KSM and 1
@@ -34,8 +30,7 @@ anything unclear.
 
 ## Setting an On-chain Identity
 
-> **Note**: The W3F Registrar currently **does not** support KYC or web verification, so your
-> judgement will be marked "erroneous" immediately if you set "legal name" or "web". Make sure to
+> **Note**: The W3F Registrar currently **does not** support KYC or web verification. Make sure to
 > leave it blank when you fill in your identity information.
 
 Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest
