@@ -8,7 +8,7 @@ Many of these parameter values can be updated via on-chain governance. If you re
 
 ### Периоды общих действий и атрибутов
 
-_NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See [Polkadot Parameters](polkadot-parameters) for more details on how Kusama's parameters differ from Polkadot's._
+_NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See [Polkadot Parameters](https://wiki.polkadot.network/docs/en/maintain-polkadot-parameters) for more details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Эпоха: 1 час (600 слотов x 6 секунд)
