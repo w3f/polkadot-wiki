@@ -12,8 +12,8 @@ certainty as to their values, it is recommended you directly check the constants
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See
-[Polkadot Parameters](https://wiki.polkadot.network/docs/en/maintain-polkadot-parameters) for more details on how Kusama's parameters differ from
-Polkadot's._
+[Polkadot Parameters](https://wiki.polkadot.network/docs/en/maintain-polkadot-parameters) for more
+details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 1 hour (600 slots x 6 seconds)
