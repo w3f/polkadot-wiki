@@ -158,22 +158,30 @@ when successful.
 
 ![democracy clear locks](assets/democracy_clear_locks.png)
 
-If you don not see an option to clear expired democracy votes, it may be that the lock is very old. You then must clear it by directly issuing the correct extrinsics.
+If you don not see an option to clear expired democracy votes, it may be that the lock is very old.
+You then must clear it by directly issuing the correct extrinsics.
 
-Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the following extrinsic: `democracy.removeVote(index)` using the account that you voted with.  For the index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the image below).
+Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the
+following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the
+index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the
+image below).
 
-You need to press the "Submit Transaction" button to submit the extrinsic. 
+You need to press the "Submit Transaction" button to submit the extrinsic.
 
 ![democracy clear_lock_extrinsic_1](assets/democracy_clear_lock_extrinsic_1.png)
 
-Now submit the following extrinsic: `democracy.unlock(target)`, where target is your your account address.
+Now submit the following extrinsic: `democracy.unlock(target)`, where target is your your account
+address.
 
 ![democracy clear_lock_extrinsic_2](assets/democracy_clear_lock_extrinsic_2.png)
 
+If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), you should see that
+the democracy lock has been released.
 
-If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), you should see that the democracy lock has been released.
-
-Note that this applies only to locked DOT that were used for voting on referenda. In order to unlock DOT locked by voting for Polkadot Council members, you need to go to the [Council](https://polkadot.js.org/apps/#/council) page, click "Vote", and then click on "Unvote All".
+Note that this applies only to locked DOT that were used for voting on referenda. In order to unlock
+DOT locked by voting for Polkadot Council members, you need to go to the
+[Council](https://polkadot.js.org/apps/#/council) page, click "Vote", and then click on "Unvote
+All".
 
 ## Delegate a Vote
 
