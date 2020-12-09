@@ -45,16 +45,18 @@ details.
 
 ### Oversubscribed Validators
 
-Validators can only pay out to a certain number of nominators per era. This is currently set to {{ polkadot_max_nominators }}, but can be modified via governance. If more than {{ polkadot_max_nominators }} nominators nominate the same
-validator, it is "oversubscribed", and only the top {{ polkadot_max_nominators }} staked nominators (ranked by amount of
-stake) are paid rewards. Other nominators will receive no rewards for that era, although their stake
-will still be used to calculate entry into the active validator set.
+Validators can only pay out to a certain number of nominators per era. This is currently set to
+{{ polkadot_max_nominators }}, but can be modified via governance. If more than
+{{ polkadot_max_nominators }} nominators nominate the same validator, it is "oversubscribed", and
+only the top {{ polkadot_max_nominators }} staked nominators (ranked by amount of stake) are paid
+rewards. Other nominators will receive no rewards for that era, although their stake will still be
+used to calculate entry into the active validator set.
 
 Although it is difficult to determine exactly how many nominators will nominate a given validator in
 the next era, one can estimate based on the current number of nominators. A nominator with only 5
-nominators in this era, for instance, is unlikely to have more than {{ polkadot_max_nominators }} in the next era. An
-already-oversubscribed validator with 1000 nominators this era, however, is much more likely to be
-oversubscribed in the next era as well.
+nominators in this era, for instance, is unlikely to have more than {{ polkadot_max_nominators }} in
+the next era. An already-oversubscribed validator with 1000 nominators this era, however, is much
+more likely to be oversubscribed in the next era as well.
 
 ### Possible effect of inactive nominations on rewards
 

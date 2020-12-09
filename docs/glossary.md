@@ -264,9 +264,11 @@ biasing, or identity-based quadratic voting.
 
 ## Oversubscribed
 
-If more than the maximum number nominators nominate the same validator, it is "oversubscribed", and only the top
-staked nominators (ranked by amount of stake, up the maximum number of nominators) are paid rewards. Other nominators will receive no
-rewards for that era. The current maximum number of nominators is {{ kusama_max_nominators }} on Kusama and {{ polkadot_max_nominators }} on Polkadot, but it can be modified via governance.
+If more than the maximum number nominators nominate the same validator, it is "oversubscribed", and
+only the top staked nominators (ranked by amount of stake, up the maximum number of nominators) are
+paid rewards. Other nominators will receive no rewards for that era. The current maximum number of
+nominators is {{ kusama_max_nominators }} on Kusama and {{ polkadot_max_nominators }} on Polkadot,
+but it can be modified via governance.
 
 ## Pallet
 
