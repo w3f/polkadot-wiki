@@ -8,7 +8,7 @@ Many of these parameter values can be updated via on-chain governance. If you re
 
 ### Periods of common actions and attributes
 
-_NOTE: Kusama runs 4x as fast as Polkadot, except Polkadot also has 6 second blocktimes. See [Kusama Parameters](kusama-parameters) for more details on how Kusama's parameters differ from Polkadot's._
+_NOTE: Kusama runs 4x as fast as Polkadot, except Polkadot also has 6 second blocktimes. See [Kusama Parameters](https://guide.kusama.network/docs/en/kusama-parameters) for more details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 4 hours (2,400 slots x 6 seconds)
