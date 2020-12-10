@@ -137,8 +137,8 @@ If you don't know which registrar to pick, first check the available registrars 
 
 ## Cancelling Judgements
 
-You may decide that you actually do not want to be judged by a Registar (for instance, because you
-realize you entered incorrect data or selected the wrong Registrar). In this case, after submitting
+You may decide that you actually do not want to be judged by a registrar (for instance, because you
+realize you entered incorrect data or selected the wrong registrar). In this case, after submitting
 the request for judgement but before your identity has been judged, you can issue a call to cancel
 the judgement using an extrinsic.
 
