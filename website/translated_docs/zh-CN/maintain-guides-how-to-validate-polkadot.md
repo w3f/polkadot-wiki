@@ -115,9 +115,9 @@ cargo build --release
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
 > 
 > ```sh
-rustup install nightly-2020-05-15
-rustup override set nightly-2020-05-15
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+rustup install nightly-2020-10-06
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+cargo +nightly-2020-10-06 build --release
 ```
 
 如果您想在本地生成密钥，您还可以在同一目录安装` subkey `。然后您可以把生成好的` subkey `可执行文件，并将其转移到与世隔绝的电脑中，以提高安全性。
