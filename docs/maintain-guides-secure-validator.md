@@ -16,25 +16,19 @@ This primarily means that validators:
 
 ## High Availability
 
-The best way to keep your validator available is to have it behind a layer of "sentry nodes". Sentry
-nodes are full nodes that can be provisioned on cloud infrastructure, e.g. AWS, GCP, Azure. Your
-validator node should be placed in a private data center and limit its connections to the sentry
-nodes.
+High availability set-ups that involve redundant validator nodes may seem attractive at first.
+However, they can be **very dangerous** if they are not set up perfectly. The reason for this is
+that the session keys used by a validator should always be isolated to just a single node.
+Replicating session keys across multiple nodes could lead to equivocation slashes, or soon to
+parachain validity slashes which can make you lose **100% of your staked funds**.
 
-Sentry nodes can filter the messages that they send to the validator, never sending duplicates so
-that the validator doesn't get spammed. Likewise, if a sentry node is attacked and goes offline,
-other instances can be provisioned to replace it. DDoS attacks should never make it to the
-validator.
+The good news is that 100% uptime of your validator is not really needed, as it has some buffer
+within eras in order to go offline for a little while and upgrade. For this reason, we advise that
+you only attempt a high availability set-up if you're confident you know exactly what you're doing.
+Many expert validators have made mistakes in the past due to the handling of session keys.
 
-As validators are expected to have 100% uptime, node operators may want to have failovers. In this
-setup, there would be one primary validator, and a second one that only responds to messages if the
-primary goes offline.
-
-If multiple validators do end up online at the same time, your validator may end up signing multiple
-blocks and will thus get slashed for equivocation. A properly configured, highly available setup
-like this will reduce your chances of getting slashed for non-responsiveness, but a misconfigured
-setup will increase your chances of getting slashed for equivocation. This is a trade-off, and we
-expect that different validators will make different decisions on which side they err towards.
+Remember, even if your validator goes offline for some time, the offline slash is much more
+forgiving than the equivocation or parachain validity slashing.
 
 ## Key Management
 
