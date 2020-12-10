@@ -5,7 +5,7 @@
       {
         "type": "subcategory",
         "label": "Get Started",
-        "ids": ["kusama-getting-started", "kusama-faucet", "kusama-claims", "kusama-endpoints"]
+        "ids": ["kusama-getting-started", "kusama-faucet", "kusama-claims", "kusama-endpoints", "mirror-thousand-validators"]
       },
       {
         "type": "subcategory",
