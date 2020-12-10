@@ -172,6 +172,8 @@ information on compiling and deploying a parachain.
   form of blockchain, which attaches to the security provided by a Relay Chain rather than providing
   its own. The Relay Chain provides security to attached parachains, but also provides a guarantee
   of secure message-passing between them."
+- [The Path of a Parachain Block](https://medium.com/polkadot-network/the-path-of-a-parachain-block-47d05765d7a) -
+  A technical warkthrough of how parachains inteact with Relay Chains. 
 
 [crowdfunding pallet]:
   https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs
