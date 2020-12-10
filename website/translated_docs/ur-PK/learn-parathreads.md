@@ -50,3 +50,7 @@ Parathreads help ease the sharp stop of the parachain slot term by allowing para
 The off-boarding is always in the following order: Parachain -> Parathread -> Dormant thread. This process is not automatic due to a thread requiring a deposit, so an expired parachain will skip right to _dormant thread_ if for some reason there isn't a single operational entity of that chain left (no sudo or member of democracy to make that deposit).
 
 When going dormant, the ParaId and the original genesis, as well as all the historically finalized blocks stay on the Relay Chain, so a dormant thread or chain can continue where it left off if it rebuilds its community and gathers the necessary funds for a new lease or parathread deposit.
+
+## Resources
+
+- [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
