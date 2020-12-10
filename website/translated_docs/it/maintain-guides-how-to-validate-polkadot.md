@@ -115,9 +115,9 @@ This step will take a while (generally 10 - 40 minutes, depending on your hardwa
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
 > 
 > ```sh
-rustup install nightly-2020-05-15
-rustup override set nightly-2020-05-15
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+rustup install nightly-2020-10-06
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+cargo +nightly-2020-10-06 build --release
 ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same directory. You may then take the generated `subkey` executable and transfer it to an air-gapped machine for extra security.
