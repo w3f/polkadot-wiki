@@ -44,6 +44,6 @@
     "remarkable-katex": "^1.1.7",
     "replace-in-file": "^6.1.0",
     "semver": "^7.3.4",
-    "yargs": "^16.1.1"
+    "yargs": "^16.2.0"
   }
 }
