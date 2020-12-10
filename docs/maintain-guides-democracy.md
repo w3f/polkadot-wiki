@@ -179,7 +179,7 @@ If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), y
 the democracy lock has been released.
 
 Note that this applies only to locked DOT that were used for voting on referenda. In order to unlock
-DOT locked by voting for Polkadot Council members, you need to go to the
+DOT locked by voting for members of the Polkadot Council, you need to go to the
 [Council](https://polkadot.js.org/apps/#/council) page, click "Vote", and then click on "Unvote
 All".
 
