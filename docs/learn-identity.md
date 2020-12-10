@@ -135,6 +135,22 @@ for the `max_fee` put the maximum you're willing to pay for these confirmations.
 If you don't know which registrar to pick, first check the available registrars by going to
 ["Chain State UI"]() and selecting `identity.registrars()` to get the full list.
 
+## Cancelling Judgements
+
+You may decide that you actually do not want to be judged by a registrar (for instance, because you
+realize you entered incorrect data or selected the wrong registrar). In this case, after submitting
+the request for judgement but before your identity has been judged, you can issue a call to cancel
+the judgement using an extrinsic.
+
+![Cancel Registrar](assets/registrar_cancel_judgement.png)
+
+To do this, first go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select
+the `identity` pallet, then `cancelRequest`. Ensure that you are calling this from the correct
+account (the one for which you initially requested judgement). For the `reg_index`, put the index of
+the registrar from which you requested judgement.
+
+Submit the transaction, and the requested judgement will be cancelled.
+
 ### Kusama Registrars
 
 ![Showing all registrars](assets/identity/14.jpg)
