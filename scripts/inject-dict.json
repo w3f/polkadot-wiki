@@ -40,5 +40,13 @@
     "default": { "kusama": 6, "polkadot": 24 },
     "path": "consts.treasury.spendPeriod",
     "filters": ["blocksToDays"]
+  },
+  {
+    "tpl": "kusama_max_nominators",
+    "default": "128"
+  },
+  {
+    "tpl": "polkadot_max_nominators",
+    "default": "128"
   }
 ]
