@@ -159,7 +159,7 @@ when successful.
 ![democracy clear locks](assets/democracy_clear_locks.png)
 
 If you do not see an option to clear expired democracy votes, it may be that the lock is very old.
-You then must clear it by directly issuing the correct extrinsics.
+You then must clear the lock by directly issuing the correct extrinsics.
 
 Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the
 following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the
