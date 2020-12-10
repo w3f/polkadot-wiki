@@ -13,6 +13,7 @@ Scams have unfortunately made an impact on our community. It's important to stay
 3. If you are scammed, there is likely nothing that can be done to recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all of your funds to their account in seconds. It is better to be safe than to risk all of DOT and KSM.
 4. If it sounds too good to be true, it probably is. People, especially celebrities, do not give away crypto for free. Even if they wanted to, they could just ask for your address as opposed to having you send them tokens.
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
+6. If you can, try to always verify new information that you see with an official source, such as Polkadot Network's official blog or Web3 Foundation support. Often scammers will fake a website or a blog post, but if you check it against a secondary source the chances that you are being scammed are reduced.
 
 ### Some Common Types of Scams
 
