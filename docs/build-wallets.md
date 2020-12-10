@@ -45,11 +45,11 @@ that the wallet software is using the latest version of the
 | [Swipe](https://swipe.io/)                                         | Live              | Swipe         | IOS and Android                                            |
 | [Guarda](https://guarda.com/)                                      | Live              | Guarda        | IOS, Android, MacOS, Windows, Linux, and Browser extention |
 | [Mixin](https://mixin.one/messenger/)                              | Live              | Mixin         | iOS and Android                                            |
-| [Polkadot{.js} extension](https://github.com/EthWorks/extension)   | Building          | EthWorks      | Browser extension                                          |
+| [Fearless](https://soramitsu.co.jp/fearless)                       | Live              | Soramitsu     | IOS and Android                                            |
+| [Polkadot{.js} (EthWorks)](https://github.com/EthWorks/extension)  | Building          | EthWorks      | Browser extension                                          |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask      | IOS, Android, and browser extension                        |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle       | Browser extension                                          |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu         | Browser                                                    |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf           | CLI Wallet                                                 |
-| [Fearless](https://soramitsu.co.jp/fearless)                       | Building          | Soramitsu     | IOS and Android                                            |
 | [Spatium](https://spatium.net/)                                    | Building          | Spatium       | IOS and Android                                            |
 | [TokenPocket](https://www.tokenpocket.pro/)                        | Building          | TokenPocket   | IOS and Android                                            |
