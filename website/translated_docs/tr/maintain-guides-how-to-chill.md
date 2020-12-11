@@ -4,7 +4,7 @@ title: How to Chill
 sidebar_label: How to Chill
 ---
 
-Stakers can assume any one of the three states: validating, nominating, or chilling. When a staker does not want to actively engage in staking - but does not want to unbond their funds either - they can choose to temporarily become inactive while keeping their funds staked. The act of stopping either nominating or validating is known as _chilling_.
+Stakers can be in any one of the three states: validating, nominating, or chilling. When a staker wants to temporarily pause their active engagement in staking, but does not want to unbond their funds, they can choose to "chill" their involvement and keep their funds staked.
 
 An account can step back from participating in active staking by calling the `chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to chill, they will become inactive in the next era. The call must be signed by the _controller_ account, not the _stash_.
 
@@ -26,7 +26,7 @@ When you become an active validator you will also need to reset your validator p
 
 ### Involuntary Chills
 
-If a validator was unresponsive or found to have committed a slashable offense within two Eras, the validator will be removed from the active set in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it is necessary for the nominators that were previously nominating that validator to re-issue the nominate call.
+If a validator was unresponsive or found to have committed a slashable offense within two eras, the validator will be removed from the active set in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it is necessary for the nominators that were previously nominating that validator to re-issue the nominate call.
 
 Nominators who have the option to renominate an involuntarily chilled validator will have a display row to do so using Polkadot-JS Apps. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Redenomination required". If your validator has been involuntarily chilled, you will need to request your nominators to re-issue the nominate call in order to start nominating you again.
 
