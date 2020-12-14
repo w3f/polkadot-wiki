@@ -10,7 +10,7 @@ Polkadot is a heterogeneous multichain with shared security and interoperability
 
 The Relay Chain is the central chain of Polkadot. All validators of Polkadot are staked on the Relay Chain in DOT and validate for the Relay Chain. The Relay Chain is composed of a relatively small number of transaction types that include ways to interact with the governance mechanism, parachain auctions, and participating in NPoS. The Relay Chain has deliberately minimal functionality - for instance, smart contracts are not supported. The main responsibility is to coordinate the system as a whole, including parachains. Other specific work is delegated to the parachains, which have differing implementations and features.
 
-## [Parachains](build-deploy-parachains) and [Parathreads](learn-parathreads)
+## [Parachains](learn-parachains) and [Parathreads](learn-parathreads)
 
 Most of the computation that happens across the Polkadot network as a whole will be delegated to specific parachain implementations that handle various use cases. Polkadot places no constraints over what parachains are able to do besides that they must be able to generate a proof that can be validated by the validators assigned to the parachain. This proof verifies the state transition of the parachain. Some parachains may be specific to a particular application, others may focus on specific features like smart contracts, privacy or scalability -- still others might be experimental architectures that are not necessarily blockchain in nature.
 
