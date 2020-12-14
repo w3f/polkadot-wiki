@@ -99,6 +99,21 @@ nominator should do comprehensive research on their validator candidates - they 
 validators' websites to see who they are, what kind of infrastructure setup they are using,
 reputation, the vision behind the validator, and more.
 
+If you are not nominating with a large number of DOT, you should try to avoid
+[oversubscribed](glossary#oversubscribed) validators. It is not always easy to calculate if the
+validator selected will be oversubscribed in the next session; one way to avoid choosing potentially
+oversubscribed validators is to filter out any that are [at capacity](glossary#capacity) on the
+Targets page.
+
+Finally, if you have a very small amount of DOT, you may not be able to have your nomination fit
+into the election set. The nominator to validator mapping has to fit in a single block, and if there
+are too many nominators, the lowest-staked nominations will be dropped. This value is obviously
+dynamic and will vary over time. If you review the lowest amount of nominations that are occurring
+on current validators, you can get a good idea of how many DOT will likely be necessary to have your
+nomination earn you rewards. You can read the blog post
+["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
+details.
+
 > These concepts have been further explained in the
 > [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
 > and
