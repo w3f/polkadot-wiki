@@ -352,6 +352,10 @@ and the amount of time they are willing to lock their tokens.
 The chain that coordinates consensus and communication between parachains (and external chains, via
 bridges).
 
+## Rococo
+
+The testnet set aside for testing parachains, cumulus, and related technology.
+
 ## Runtime
 
 The state transition function of a blockchain. It defines a valid algorithm for determining the
