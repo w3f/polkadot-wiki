@@ -246,6 +246,10 @@ A vote on whether or not a proposal should be accepted by the network. Referenda
 
 The chain that coordinates consensus and communication between parachains (and external chains, via bridges).
 
+## Rococo
+
+The testnet set aside for testing parachains, cumulus, and related technology.
+
 ## Runtime
 
 The state transition function of a blockchain. It defines a valid algorithm for determining the state of the next block given the previous state.
