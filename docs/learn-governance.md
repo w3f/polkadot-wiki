@@ -211,14 +211,15 @@ period.
 #### Voluntary Locking
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their
-voting power by declaring how long they are willing to lock-up their tokens, hence, the
-number of votes for each token holder will be calculated by the following formula:
+voting power by declaring how long they are willing to lock-up their tokens, hence, the number of
+votes for each token holder will be calculated by the following formula:
 
 ```
 votes = tokens * conviction_multiplier
 ```
 
-The conviction multiplier increases the vote multiplier by one every time the number of lock periods double.
+The conviction multiplier increases the vote multiplier by one every time the number of lock periods
+double.
 
 | Lock Periods | Vote Multiplier |
 | :----------: | :-------------: |
@@ -230,7 +231,9 @@ The conviction multiplier increases the vote multiplier by one every time the nu
 |      16      |        5        |
 |      32      |        6        |
 
-The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in total), and the lock period is 28 days on Polkadot and 7 days on Kusama. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
+total), and the lock period is 28 days on Polkadot and 8 days on Kusama. Only doublings are allowed;
+you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
 
 #### Adaptive Quorum Biasing
 
