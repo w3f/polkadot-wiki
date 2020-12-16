@@ -48,6 +48,10 @@ A parachain that acts as an intermediary between the Polkadot Relay Chain and an
 
 The property of a system that is tolerant of Byzantine faults; that is, a system where not only may individual subsystems fail, but it may not be clear if a particular subsystem has failed or not. That is, different observers on the system may not agree on whether or not the system has failed. Ensuring Byzantine fault tolerance is an important part of developing any distributed system.
 
+## Capacity
+
+The maximum number of nominators signalling intent to nominate a validator (and thus could potentially actively nominate that validator in the next session). This maximum number will equal the number of nominators necessary to oversubscribe a validator. Any validator which is "at capacity" or higher may potentially be oversubscribed in the next session; a validator which is not at capacity cannot be oversubscribed, unless more nominators select it before the next election.
+
 ## Collator
 
 A node that maintains a parachain by collecting parachain transactions and producing state transition proofs for the validators.
