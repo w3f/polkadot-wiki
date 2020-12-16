@@ -42,9 +42,9 @@ For more information on the Polkadot roadmap please visit the
 There is no central authority that decides on validators, so there is not per se an _application_
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
-on how to do this you can consult the [Kusama validator guide](maintain-guides-how-to-validate-kusama.md) on
-validating for Kusama or the [Polkadot validator guide](maintain-guides-how-to-validate-polkadot) for
-validating on Polkadot.
+on how to do this you can consult the
+[Kusama validator guide](maintain-guides-how-to-validate-kusama.md) on validating for Kusama or the
+[Polkadot validator guide](maintain-guides-how-to-validate-polkadot) for validating on Polkadot.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
@@ -52,11 +52,11 @@ on the results of an election algorithm known as [Phragmén's method](learn-phra
 method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
-You will likely want to campaign for your validator to the community in order to get more backing. You
-are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
-For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint program called [Thousand Validators][thousand validators] that will nominate
-validators if they apply and fit the requirements.
+You will likely want to campaign for your validator to the community in order to get more backing.
+You are looking for _nominators_ that will put up their tokens to increase the stake for your
+validator. For validators who cannot acquire the minimum stake from the community, Parity and Web3
+Foundation also run a joint program called [Thousand Validators][thousand validators] that will
+nominate validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
@@ -108,18 +108,20 @@ each validator is running their own validating node and performing full verifica
 Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state
 transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
-Finally, individuals may participate in the block production process indirectly by [nominating](https://wiki.polkadot.network/docs/en/learn-nominator) validators. In this way, individuals who are not running a node can still share in staking rewards.
+Finally, individuals may participate in the block production process indirectly by
+[nominating](https://wiki.polkadot.network/docs/en/learn-nominator) validators. In this way,
+individuals who are not running a node can still share in staking rewards.
 
 ## Relay Chain
 
 ### What is the block time of the Relay Chain?
 
-Both the Kusama and Polkadot networks are currently operating at a
-rate of one block every six seconds.
+Both the Kusama and Polkadot networks are currently operating at a rate of one block every six
+seconds.
 
-This may be changed in the future. It may go as low as two to three seconds after
-optimizations, or potentially increase in order to handle the capacity of the parachain
-networking in a live environment.
+This may be changed in the future. It may go as low as two to three seconds after optimizations, or
+potentially increase in order to handle the capacity of the parachain networking in a live
+environment.
 
 ### Does Polkadot have smart contracts?
 
@@ -174,8 +176,8 @@ The Web3 Foundation will distribute up to 20% of mainnet DOT prior to network la
 [polkadot.network](https://polkadot.network/) for further updates.
 
 DOT tokens were not transferable until the launch of Polkadot was complete. Any transfers of DOT
-before that time were illegitimate and unauthorized. DOT represented on Ethereum as
-DOT Indicator Tokens cannot be moved from the current allocation address. 
+before that time were illegitimate and unauthorized. DOT represented on Ethereum as DOT Indicator
+Tokens cannot be moved from the current allocation address.
 
 ## Governance
 
