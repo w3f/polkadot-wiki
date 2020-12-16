@@ -85,8 +85,32 @@ inputting the number of tokens you would like to stake to check it. Then, nomina
 higher profit. However, that does not guarantee the right way to evaluate the validators' overall
 performance.
 
-One example would be if a validator is regularly offline, their nominators most likely would get
-fewer rewards than others. More importantly, when many validators are
+### Filter Out Validators With Undesirable Traits
+
+On the Targets page, you can filter out validators that have traits that may indicate an issue with
+you nominating them. You can turn these filters off and on to help narrow down which validators you
+should nominate. It is important to note that none of these traits are necessarily "bad"; however,
+depending on your validator selection methodology, they may be characteristics that you would be
+interested in filtering out.
+
+- **Single from operator** - Do not show groups of validators run by a single operator.
+- **No 20%+ comm** - Do not show any validators with a commission of 20% or higher.
+- **No at capacity** - Do not show any validators who are currently operating
+  [at capacity](glossary#capacity) (i.e., could potentially be oversubscribed).
+- **Recent payouts** - Only show validators that have recently caused a
+  [payout to be issued](learn-simple-payouts). Note that anyone can cause a payout to occur; it does
+  not have to be the operator of a validator.
+- **Only elected** - Only show validators that are currently in the active set (i.e., they have been
+  elected to produce blocks this era).
+- **Only with an identity** - Only show validators that have set an [identity](learn-identity). Note
+  that this identity does not have to be verified by a registrar for the validator to show up in the
+  list.
+
+### Review Your Validators' History
+
+How the validator acted in the past may be a good indicator of how they will act in the future. An
+example of problematic behavior would be if a validator is regularly offline, their nominators most
+likely would get fewer rewards than others. More importantly, when many validators are
 [unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be
 slashed.
 
@@ -98,6 +122,32 @@ produced, rewards and slashes, and [identity](learn-identity) (if they have it s
 nominator should do comprehensive research on their validator candidates - they should go over the
 validators' websites to see who they are, what kind of infrastructure setup they are using,
 reputation, the vision behind the validator, and more.
+
+### Be Aware of Risks of Multiple Validators
+
+Recall that slashing is an additive function; the more validators that are offline or equivocate in
+a given session, the harsher the penalties. Since validators that are controlled by a single entity
+are more at risk of a "synchronized" failure, nominating them implies a greater risk of having a
+large slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is
+independent from others in as many ways as possible (different hardware, geographic location, owner,
+etc.).
+
+### Avoiding Oversubscribed Validators
+
+If you are not nominating with a large number of DOTs, you should try to avoid
+[oversubscribed](glossary#oversubscribed) validators. It is not always easy to calculate if the
+validator selected will be oversubscribed in the next session; one way to avoid choosing potentially
+oversubscribed validators is to filter out any that are [at capacity](glossary#capacity) on the
+Targets page.
+
+Finally, if you have a very small amount of DOTs, you may not be able to have your nomination fit
+into the election set. The nominator to validator mapping has to fit in a single block, and if there
+are too many nominators, the lowest-staked nominations will be dropped. This value is obviously
+dynamic and will vary over time. If you review the lowest amount of nominations that are occurring
+on current validators, you can get a good idea of how many DOTs will likely be necessary to have
+your nomination earn you rewards. You can read the blog post
+["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
+details.
 
 > These concepts have been further explained in the
 > [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
