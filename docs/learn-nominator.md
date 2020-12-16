@@ -102,7 +102,7 @@ interested in filtering out.
   not have to be the operator of a validator.
 - **Only elected** - Only show validators that are currently in the active set (i.e., they have been
   elected to produce blocks this era).
-- **Only with an identy** - Only show validators that have set an [identity](learn-identity). Note
+- **Only with an identity** - Only show validators that have set an [identity](learn-identity). Note
   that this identity does not have to be verified by a registrar for the validator to show up in the
   list.
 
