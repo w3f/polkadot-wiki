@@ -5,25 +5,26 @@ sidebar_label: How to use W3F Registrar
 ---
 
 An on-chain identity is a good way to build up your reputation and let the community know more about
-you if you plan on running a validator or being a councilor. Web3 Foundation is providing registrar
-service in the Kusama and Polkadot networks that only charges a small amount of fee (0.04 KSM and 1
-DOT per account) to cover the operational cost, so if you want your identity to be verified, follow
-the steps below to start. In case you would like to learn the basics of identity, go
-[here](learn-identity).
+you if you plan on running a validator or being a councilor. Web3 Foundation provides a registrar
+service in the Kusama and Polkadot networks that only charges a small fee (0.04 KSM) on Kusama, and
+no fees on Polkadot (although there may be a small fee in the future). However, you will of course
+need to reserve some DOT in your account while you have an identity, no matter which registrar you
+use. For details on amount necessary to reserve, as well as the identity system as a whole, see the
+[identity](learn-identity) page.
 
-The whole process of doing the verification is done by the bot. You will have an hour to complete
-the verification. If you are not able to finish it within an hour, the judgment will be issued as
-"Erroneous". Then you would have to call `clearIdentity` transaction first and redo everything
-again.
+The whole process of doing the verification is done by the bot. You will have one hour to complete
+the verification. If you are not able to finish it within an hour, the judgement will be issued as
+"Erroneous". If this occurs, you will have to submit a `clearIdentity` transaction and redo
+everything.
 
 > **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys
 > to anyone!
 
 If you have provided `display name`, `email`, `twitter`, or `element name (previously called Riot)`
 when setting an on-chain identity, these will be required to verify one by one by signing a
-challenge message. Just be aware of the `display name` cannot be too similar to others that have
-verified already. Also, there is no need to set all this information when using the service. You are
-free to set whichever field you like.
+challenge message. Be aware that the `display name` cannot be too similar to others that have
+verified already. There is no need to set all of the fields when using the service. You are free to
+set whichever field or fields that you like.
 
 Free feel to join the [Polkadot's community](community#polkadot) to ask questions if there is
 anything unclear.
@@ -75,7 +76,9 @@ transaction. This will request the registrar to validate the information you set
 The `reg_index` is the position of the registrar. For W3F, use 0.
 
 The `max_fee` is the amount of DOT or KSM to pay the registrar. For Kusama use **0.04 KSM** and for
-Polkadot use **1 DOT**.
+Polkadot use **0 DOT**.
+
+Note that in the future, a fee may be charged for the Polkadot registrar.
 
 ## Element Verification
 
@@ -128,7 +131,7 @@ And reply with your signed data only in the email. Then click "Send".
 
 ![registrar](assets/registrar/11.jpg)
 
-Wait for 1 to 2 minutes. You would receive another email that shows your email has been verified
+Wait 1 or 2 minutes. You should receive another email that shows your email has been verified
 successfully.
 
 ## Twitter Verification
@@ -145,13 +148,13 @@ After waiting a few mintues you should receive a challenge similar to the previo
 
 ![registrar](assets/registrar/13.jpg)
 
-Again just like how you did in the above. By using your account to sign the "Challenge" data that
+Again, just like how you did in the above. By using your account to sign the "Challenge" data that
 you received on Twitter in the [Sign and Verify](https://polkadot.js.org/apps/#/signing) page.
 
 ![registrar](assets/registrar/14.jpg)
 
 Paste the signed data to the chat and you would receive the verification status after 1 to 2
-minutues.
+minutes.
 
 If everything has been verified successfully, you would see your account verification status has
 been marked as "reasonable" with a green tick icon on the
