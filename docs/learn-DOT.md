@@ -116,6 +116,25 @@ explicitly call an extrinsic to update the lock that is placed on an account.
 
 These extrinsics are exposed from the Vesting pallet.
 
+#### Calculating When Vesting DOT Will Be Available
+
+Generally, you should be able to see from the [Accounts](https://polkadot.js.org/apps/#/accounts) by
+looking at your accounts and seeing when the vesting will finish. However, some DOT vest with
+"cliffs" - a single block where all the DOT are released, instead of vesting over time. In this
+case, you will have to query the chain state directly to see when they will be available (since
+technically, the vesting has not yet started - all of the vesting will occur in a single block in
+the future).
+
+1. Navigate to the
+   [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate) page on
+   Polkadot-JS.
+2. Query chain state for vesting.vesting(ACCOUNT_ID)
+3. Note the `startingBlock` where the unlock starts, and how much DOT is unlocked per block
+   (`perBlock`).
+4. You will have to calculate the result into “human time". To do this, remember that there are
+   approximately 14’400 blocks per day, and you can see what the latest block is shown on the
+   [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
+
 ## Obtaining Testnet DOT
 
 DOT are required to make transactions on the Polkadot network. Testnet DOT do not have any value
@@ -143,6 +162,6 @@ through the [Treasury](learn-treasury). Alternatively, they can be obtained on t
 
 ## Polkadot Mainnet DOT
 
-Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you
-may claim them via the [Polkadot claims process](https://claims.polkadot.network/). Alternatively,
-they are available on the open market.
+Polkadot Mainnet DOT are not freely given away. If you purchased DOT in the original 2017 offering,
+you may claim them via the [Polkadot claims process](https://claims.polkadot.network/).
+Alternatively, they are available on the open market.
