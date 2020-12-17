@@ -16,6 +16,12 @@ The Kusama application allows you to manage Kusama's native asset, the KSM. It s
 available transaction types of the network (a notable exception is the "Batch" transaction from the
 Utility pallet).
 
+If you have trouble using Ledger or following the directions below, you can try searching for your
+issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
+
+> Please check out our
+> [intro to Ledger video on Youtube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
+
 ## Requirements
 
 Here is a list of what you will need before starting:
