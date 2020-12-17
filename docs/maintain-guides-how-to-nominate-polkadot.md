@@ -14,7 +14,7 @@ for appointing their stake to the validators who are the second type of particip
 their stake, they are able to elect the active set of validators and share in the rewards that are
 paid out.
 
-While the [validators][] are active participants in the network that take part in the block
+While the [validators][] are active participants in the network that engage in the block
 production and finality mechanisms, nominators take a more passive role with a
 "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or
 worrying about online uptime. However, a good nominator performs due diligence on the validators
@@ -41,7 +41,7 @@ recipient of the staking rewards.
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the "Network" menu).
 
 The "Staking Overview" subsection will show you all the active validators and their information -
 their identities, the amount of DOT that are staking for them, amount that is their own provided
