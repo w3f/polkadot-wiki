@@ -363,6 +363,12 @@ validator set, you are now running a Kusama validator! If you need help, reach o
 [Kusama forum](https://forum.kusama.network/) or in the
 [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
 
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
+to provide support for community validators. If you are interested in applying for the programme,
+you can find more information [on the wiki page](thousand-validators.md).
+
 ## FAQ
 
 ### Why am I unable to synchronize the chain with 0 peers?
