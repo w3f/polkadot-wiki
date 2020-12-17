@@ -16,9 +16,16 @@ The nominating backend will routinely change its nominations at every era (or ev
 Kusama). It will nominate validators which fit all the requirements and are eligbile. Of this pool,
 it will nominate as many as possible although some validators which are eligible might not receive
 nominations every round (due to the constraint of nominating a maximum of 16 validators per
-nominator). If a validator performs well during a single nomination period (the time after a new
-nomination and before the next one), it will have its rank increased by 1. Validators with higher
-rank have performed well within the programme for a longer period of time.
+nominator). If a validator is active during a single nomination period (the time after a new
+nomination and before the next one) and does not break any of the requirements, it will have its
+rank increased by 1. Validators with higher rank have performed well within the programme for a
+longer period of time.
+
+## Setting up a Validator
+
+Please see the wiki page for [setting up a validator](maintain-guides-how-to-validate-polkadot.md)
+as well as additional information on
+[making your validator secure](maintain-guides-secure-validator.md).
 
 ## How to Apply
 
@@ -29,13 +36,18 @@ fill in the [application form][kusama 1kv form]. You will hear back from the tea
 
 #### Requirements
 
-- Verified identity
-- Connect to dedicated telemetry
+- Verified identity (see [here][identity instructions] for instructions)
+- Connect to dedicated telemetry (use
+  `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Minimum of 50 KSM self-stake
 - No more than 10% commission
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on latest release
 - Max two nodes (under same sub/super identity)
+
+#### Leaderboard
+
+The leaderboard is available at https://thousand-validators.kusama.network/#/leaderboard.
 
 ### Polkadot
 
@@ -47,8 +59,9 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 
 #### Requirements
 
-- Verified identity
-- Connect to dedicated Telemetry
+- Verified identity (see [here][identity instructions] for instructions)
+- Connect to dedicated Telemetry (use
+  `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Rank 25 or higher on Kusama Thousand Validators Programme
 - Mininmum of 10K DOTs self stake (exceptions by approval for good intentions)
 - Reward destination 'Staked'
@@ -59,3 +72,5 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
 [polkadot 1kv form]:
   https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform
+[identity instructions]:
+  https://guide.kusama.network/docs/en/mirror-learn-identity#setting-an-identity
