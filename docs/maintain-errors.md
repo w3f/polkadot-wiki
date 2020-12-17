@@ -50,7 +50,7 @@ which the error originated. The `error` is likewise the index of that pallet's e
 exact one we're looking for. Both of these indices start counting from 0.
 
 For example, if `index` is 5 and `error` is 3, as in the example linked above, we need to
-look at the runtime for the 4th error in the pallet at index 5.
+look at the runtime for the fourth error (index 3) in the sixth pallet (index 5).
 
 By looking at the
 [runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L914)
