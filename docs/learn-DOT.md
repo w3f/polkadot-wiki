@@ -128,7 +128,7 @@ the future).
 1. Navigate to the
    [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate) page on
    Polkadot-JS.
-2. Query chain state for vesting.vesting(ACCOUNT_ID)
+2. Query chain state for `vesting.vesting(ACCOUNT_ID)`
 3. Note the `startingBlock` where the unlock starts, and how much DOT is unlocked per block
    (`perBlock`).
 4. You will have to calculate the result into “human time". To do this, remember that there are
