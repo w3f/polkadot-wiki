@@ -411,7 +411,8 @@ KSM / DOT are staked, but any deviation from the 50% - positive or negative - se
 remainder to the treasury and effectively reduces validator payouts.
 
 For those who are interested in knowing more about the design of inflation model for the network,
-please see [here](https://research.web3.foundation/en/latest/polkadot/economics/1-token-economics.html#npos-payments-and-inflation).
+please see
+[here](https://research.web3.foundation/en/latest/polkadot/economics/1-token-economics.html#npos-payments-and-inflation).
 
 ## Why stake?
 
