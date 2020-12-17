@@ -211,6 +211,11 @@ margin that each validator deems reasonable.
 An account which is not directly managed by the Polkadot UI but can be accessed through it, such as
 accounts controlled by the Polkadot{.js} extension.
 
+## Keep-Alive Check
+
+The keep-alive check is used to indicate whether or not a transfer can allow the sending account to
+be reduced to less than the existential deposit, causing it to be reaped.
+
 ## KSM
 
 The abbreviation for Kusama network tokens.
