@@ -4562,10 +4562,10 @@ ipaddr.js@1.9.1:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
-ipfs-core-utils@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.5.3.tgz#1590301675cb7f0d5103f49c6543b1dfd9a4c04d"
-  integrity sha512-JuJz+sp+9+g7U5j0+M6+biBnVtbJnlRNuBrqku/RcwoH4IIMTX99PctGGyo8AjCo5ZK+j0om1Pp2cWTZrlSdAQ==
+ipfs-core-utils@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.5.4.tgz#c7fa508562086be65cebb51feb13c58abbbd3d8d"
+  integrity sha512-V+OHCkqf/263jHU0Fc9Rx/uDuwlz3PHxl3qu6a5ka/mNi6gucbFuI53jWsevCrOOY9giWMLB29RINGmCV5dFeQ==
   dependencies:
     any-signal "^2.0.0"
     blob-to-it "^1.0.1"
@@ -4582,17 +4582,17 @@ ipfs-core-utils@^0.5.3:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^1.1.0"
 
-ipfs-http-client@^48.1.2:
-  version "48.1.2"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-48.1.2.tgz#7cdb731e792e4d235be1e19726ccaf12e55ff0b6"
-  integrity sha512-eeqHhjYUgPNBKxkS29xYS7Mtc9JxzLKI9Bua2nphB5vG1l6W2hjDTntfVl4ddY07XqZogDu6yTL3UsFj0WJFeg==
+ipfs-http-client@^48.1.3:
+  version "48.1.3"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-48.1.3.tgz#d9b91b1f65d54730de92290d3be5a11ef124b400"
+  integrity sha512-+JV4cdMaTvYN3vd4r6+mcVxV3LkJXzc4kn2ToVbObpVpdqmG34ePf1KlvFF8A9gjcel84WpiP5xCEV/IrisPBA==
   dependencies:
     any-signal "^2.0.0"
     bignumber.js "^9.0.0"
     cids "^1.0.0"
     debug "^4.1.1"
     form-data "^3.0.0"
-    ipfs-core-utils "^0.5.3"
+    ipfs-core-utils "^0.5.4"
     ipfs-utils "^5.0.0"
     ipld-block "^0.11.0"
     ipld-dag-cbor "^0.17.0"
