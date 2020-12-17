@@ -40,7 +40,7 @@ table below.
 
 ## Polkascan and Subscan
 
-Polkascan and Subscan show the `ExtrnsicFailed` event when a transaction does not succeed
+Polkascan and Subscan show the `ExtrinsicFailed` event when a transaction does not succeed
 ([example](https://polkascan.io/polkadot/event/2836233-3)). This event gives us the `error` and
 `index` indices of the error but does not give us a nice message to understand what it means. We
 will look up the error in the codebase ourselves to understand what went wrong.
