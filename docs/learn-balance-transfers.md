@@ -46,9 +46,9 @@ are `transfer` and `transfer_keep_alive`. `transfer` will allow you to send DOTs
 consequence; `transfer_keep_alive` will not allow you to send an amount that would allow the sending
 account to be removed due to it going below the existential deposit.
 
-By default, Polkadot-JS Apps will use `transfer_keep_alive`, ensuring that the account you send
-from cannot drop below the existential deposit (1 DOT or 0.01 KSM). However, it may be that you do
-not want to keep this account alive (for example, because you are moving all of your funds to a
+By default, Polkadot-JS Apps will use `transfer_keep_alive`, ensuring that the account you send from
+cannot drop below the existential deposit (1 DOT or 0.01 KSM). However, it may be that you do not
+want to keep this account alive (for example, because you are moving all of your funds to a
 different address). In this case, click on the "keep-alive" toggle at the bottom of the modal
 window. The label should switch from "Transfer with account keep-alive checks"(`transfer_keep_alive`
 will be used) to "Normal transfer without keep-alive checks" (`transfer` extrinsic will be used). As
