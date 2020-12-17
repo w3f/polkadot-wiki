@@ -49,7 +49,7 @@ First, we should understand that the `index` number is the index of the pallet i
 which the error originated. The `error` is likewise the index of that pallet's errors which is the
 exact one we're looking for. Both of these indices start counting from 0.
 
-For example, if we have `index` is 5 and `index` is 3 like in the example linked above, we need to
+For example, if `index` is 5 and `error` is 3, as in the example linked above, we need to
 look at the runtime for the 4th error in the pallet at index 5.
 
 By looking at the
