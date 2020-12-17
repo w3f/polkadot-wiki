@@ -55,7 +55,7 @@ look at the runtime for the 4th error in the pallet at index 5.
 By looking at the
 [runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L914)
 we see that the pallet at index 5 is "Balances". Now we will check the Balances pallet's code
-which is hosted in the Substrate repository. According to
+which is hosted in the Substrate repository, and look for the fourth error in the Error enum. According to
 [its source](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs#L270) the
 error that we got is `InsufficientBalance` or in other words "Balance too low to send value".
 
