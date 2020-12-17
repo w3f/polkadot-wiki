@@ -10,6 +10,8 @@ The Polkadot [Ledger][] application is compatible with both the Ledger Nano S an
 
 The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utility pallet).
 
+If you have trouble using Ledger or following the directions below, you can try searching for your issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
+
 > Please check out our [intro to Ledger video on Youtube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
 
 ## Requirements
