@@ -8,7 +8,7 @@ sidebar_label: How to Nominate on Polkadot
 
 提名人是 Polkadot 抵押子系统的一种参与者。 他们负责将会参与抵押中的代币分配给第二种参与者的验证人。 通过抵押他们的代币，他们能够选举活跃的验证人并分享抵押所支付的奖励。
 
-当[ 验证人 ][]是网络中的活跃参与者，他们参与了出区和最终确定。 在提名机制中，提名者通过 "一劳永逸" 的方法承担着更为被动的角色。 成为提名人不需要运行自己的节点或担心在线运行时间。 但是好的提名人会对他们选出的验证人进行尽职调查。 在寻找要提名的验证人时，提名人应注意自己提名特定验证人的报酬百分比-以及如果验证人被惩罚，他们也有被惩罚的风险。
+While the [validators][] are active participants in the network that engage in the block production and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or worrying about online uptime. However, a good nominator performs due diligence on the validators that they elect. When looking for validators to nominate, a nominator should pay attention to their own reward percentage for nominating a specific validator - as well as the risk that they bare of being slashed if the validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
@@ -22,7 +22,7 @@ Starting with runtime version v23 natively included in client version [0.8.23](h
 
 ### 第一步: 绑定您的代币
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the "Network" menu).
 
 The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of DOT that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
@@ -131,6 +131,6 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the nomination status, you can check that on the Polkadot-JS UI as well.
 
-[ 验证人 ]: maintain-guides-how-to-validate-kusama
+[validators]: maintain-guides-how-to-validate-kusama
 [密钥]: learn-keys#controller-and-stash-keys
 [帐户生成]: learn-account-generation
