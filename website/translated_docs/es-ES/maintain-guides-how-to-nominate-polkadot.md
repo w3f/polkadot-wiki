@@ -8,7 +8,7 @@ sidebar_label: How to Nominate on Polkadot
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible for appointing their stake to the validators who are the second type of participant. By appointing their stake, they are able to elect the active set of validators and share in the rewards that are paid out.
 
-While the [validators][] are active participants in the network that take part in the block production and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or worrying about online uptime. However, a good nominator performs due diligence on the validators that they elect. When looking for validators to nominate, a nominator should pay attention to their own reward percentage for nominating a specific validator - as well as the risk that they bare of being slashed if the validator gets slashed.
+While the [validators][] are active participants in the network that engage in the block production and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach. Being a nominator does not require running a node of your own or worrying about online uptime. However, a good nominator performs due diligence on the validators that they elect. When looking for validators to nominate, a nominator should pay attention to their own reward percentage for nominating a specific validator - as well as the risk that they bare of being slashed if the validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
@@ -22,7 +22,7 @@ Starting with runtime version v23 natively included in client version [0.8.23](h
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the "Network" menu).
 
 The "Staking Overview" subsection will show you all the active validators and their information - their identities, the amount of DOT that are staking for them, amount that is their own provided stake, how much they charge in commission, the era points they've earned in the current era, and the last block number that they produced. If you click on the chart button it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards and slashes.
 
