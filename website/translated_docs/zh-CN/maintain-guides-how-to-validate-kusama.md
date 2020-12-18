@@ -229,6 +229,10 @@ The validator set is refreshed every era. In the next era, if there is a slot av
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Kusama validator! If you need help, reach out on the [Kusama forum](https://forum.kusama.network/) or in the [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
 
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies to provide support for community validators. If you are interested in applying for the programme, you can find more information [on the wiki page](thousand-validators.md).
+
 ## FAQ
 
 ### Why am I unable to synchronize the chain with 0 peers?
