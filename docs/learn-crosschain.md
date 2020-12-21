@@ -31,7 +31,7 @@ architecture and design decisions are as follows:
   processing of the expected ingress messages to that parachain.
 
 XCMP queues must be initiated by first opening a channel between two parachains. The channel is
-identified by both the sender and recipeient parachains, meaning that it's a one-way channel. A pair
+identified by both the sender and recipient parachains, meaning that it's a one-way channel. A pair
 of parachains can have at most two channels between them, one for sending messages to the other
 chain and another for receiving messages. The channel will require a deposit in DOT to be opened,
 which will get returned when the channel is closed.
