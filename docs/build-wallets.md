@@ -46,6 +46,7 @@ that the wallet software is using the latest version of the
 | [Guarda](https://guarda.com/)                                      | Live              | Guarda        | IOS, Android, MacOS, Windows, Linux, and Browser extention |
 | [Mixin](https://mixin.one/messenger/)                              | Live              | Mixin         | iOS and Android                                            |
 | [Fearless Wallet](https://fearlesswallet.io/)                      | Live              | Soramitsu     | iOS and Android                                            |
+| [ONTO Wallet](https://www.onto.app/en)                             | Live              | Ontology      | iOS, Android, and Browser extention                     |
 | [Polkadot{.js} (EthWorks)](https://github.com/EthWorks/extension)  | Building          | EthWorks      | Browser extension                                          |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask      | IOS, Android, and browser extension                        |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle       | Browser extension                                          |
