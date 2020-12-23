@@ -243,7 +243,7 @@ considered essential to the ecosystem's future.
 
 ## Resources
 
-- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) -
+- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/economics/2-parachain-allocation.html) -
   W3F research page on parachain allocation that goes more in depth to the mechanism.
 - [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request
   introducing the parachain slots code.
