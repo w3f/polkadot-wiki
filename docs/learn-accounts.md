@@ -133,7 +133,7 @@ wildly, but it's just a quirk of Base58-check encoding.
 
 ## Obtaining and Managing an Address
 
-The **most user-friendly** way to create a Kusama address is through the
+The **most user-friendly** way to create a Polkadot or Kusama address is through the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
 to generate your account - the accounts are stored only in your browser, so purging the cache will
 wipe your accounts as well. You would then have to recreate them using the seed phrase given to you
