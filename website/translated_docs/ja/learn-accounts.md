@@ -83,7 +83,7 @@ Finally, let's look at Kusama addresses. Decoding `CpjsLDC1JFyrhm3ftC9Gs4QoyrkHK
 
 ## Obtaining and Managing an Address
 
-The **most user-friendly** way to create a Kusama address is through the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
+The **most user-friendly** way to create a Polkadot or Kusama address is through the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
 
 A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
 
