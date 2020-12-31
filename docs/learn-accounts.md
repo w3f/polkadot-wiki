@@ -250,7 +250,7 @@ To find available indices to claim,
 ## Identities
 
 The [_Identities pallet_](https://github.com/paritytech/substrate/tree/master/frame/identity) 
-built into Polkadot allows users to attach on-chain metadata to theiraccounts.
+built into Polkadot allows users to attach on-chain metadata to their accounts.
 This metadata can be verified by independent registrars to provide trustworthiness. To
 learn more about how to set or release an identity, how to define sub-accounts, or how to become a
 registrar, please read [this guide](learn-identity).
