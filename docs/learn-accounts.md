@@ -29,7 +29,7 @@ representations of the same public key in a private-public keypair** generated b
 generation tool. This makes the addresses compatible across Substrate-based chains as long as you
 convert the format.
 
-> To convert between formats, many wallets provide tools to do so. There are also stand-alone tools to do this, find them in the [address formatin tools](#address-conversion-tools) section.
+> Many wallets allow you to convert between formats. Stand-alone tools exist as well, you can find them in the [address coversion tools](#address-conversion-tools) section.
 
 ## Address Generation, Derivation, and Portability
 
