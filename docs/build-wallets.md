@@ -47,10 +47,10 @@ that the wallet software is using the latest version of the
 | [Mixin](https://mixin.one/messenger/)                              | Live              | Mixin         | iOS and Android                                            |
 | [Fearless Wallet](https://fearlesswallet.io/)                      | Live              | Soramitsu     | iOS and Android                                            |
 | [ONTO Wallet](https://www.onto.app/en)                             | Live              | Ontology      | iOS, Android, and Browser extention                        |
+| [TokenPocket](https://www.tokenpocket.pro/)                        | Live              | TokenPocket   | IOS and Android                                            |
 | [Polkadot{.js} (EthWorks)](https://github.com/EthWorks/extension)  | Building          | EthWorks      | Browser extension                                          |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask      | IOS, Android, and browser extension                        |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle       | Browser extension                                          |
 | [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu         | Browser                                                    |
 | [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf           | CLI Wallet                                                 |
 | [Spatium](https://spatium.net/)                                    | Building          | Spatium       | IOS and Android                                            |
-| [TokenPocket](https://www.tokenpocket.pro/)                        | Building          | TokenPocket   | IOS and Android                                            |
