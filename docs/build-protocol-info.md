@@ -214,6 +214,24 @@ and interact directly with the chain data or implement your own codec, Polkadot 
 transaction data using the
 [SCALE codec](https://substrate.dev/docs/en/knowledgebase/advanced/codec).
 
+## Runtime Upgrades
+
+- Runtime upgrade vs. hard fork
+
+Runtime upgrades allow Polkadot to change the logic of the chain without the need for a hard fork which would require node operators to stop their execution and manually upgrade their nodes to the latest Runtime version. In a distributed system, this is a complex process to coordinate and communicate.  
+Substrate enables Polkadot to perform a “forkless runtime upgrade”  where existing runtime logic is followed to update the Wasm runtime stored on the blockchain to a new version. This upgrade is then included in the blockchain itself, meaning that all the nodes on the network execute it.
+
+- Node upgrade requirements
+
+Generally there is no need to upgrade your nodes manually after the runtime upgrade as they will automatically start to follow the new logic of the chain. 
+However, some runtime upgrades change the transaction version which means certain groups like hardware wallets, exchanges and infrastructure providers need to update their API libraries but not the nodes themselves. 
+The only scenario that requires node upgrades would be a change in consensus or networking logic (this information will be available in release notes). This happens infrequently.
+
+- Transaction broadcasting effects
+
+Pending transactions constructed before a certain runtime upgrade will be ignored/removed.  If you don't think you can submit it before the upgrade, it is better to wait and construct it after the upgrade takes place.
+
+
 ## Smart Contracts
 
 The Polkadot Relay Chain does not support smart contracts.
