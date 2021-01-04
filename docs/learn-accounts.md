@@ -388,7 +388,7 @@ need to place the deposit and Alice will receive her deposit back.
 
 ## Address Conversion Tools
 
-You can use the tool below to convert any SS58 address for any network for use different on networks.
+You can use the tool below to convert any SS58 address for any network for use on different networks.
 
 <div class="address-changer">
   <input class="address-changer-input" id="input" placeholder="Paste your address" oninput="globalThis.addressChanger()" />
