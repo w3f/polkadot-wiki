@@ -217,7 +217,7 @@ transaction data using the
 ## Runtime Upgrades
 
 Runtime upgrades allow Polkadot to change the logic of the chain without the need for a hard fork. A
-hard fork would require node operators to manually upgrade their nodes to the latest Runtime
+hard fork would require node operators to manually upgrade their nodes to the latest runtime
 version. In a distributed system, this is a complex process to coordinate and communicate.  
 
 Polkadot upgrades are generally forkless. The existing runtime logic is followed to update the Wasm
