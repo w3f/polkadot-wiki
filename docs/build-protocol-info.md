@@ -216,20 +216,20 @@ transaction data using the
 
 ## Runtime Upgrades
 
-- Runtime upgrade vs. hard fork
-
-Runtime upgrades allow Polkadot to change the logic of the chain without the need for a hard fork. A hard fork would require node operators to manually upgrade their nodes to the latest Runtime version. In a distributed system, this is a complex process to coordinate and communicate.  
-Substrate enables Polkadot to perform a “forkless runtime upgrade”  where existing runtime logic is followed to update the Wasm runtime stored on the blockchain to a new version. This upgrade is then included in the blockchain itself, meaning that all the nodes on the network execute it.
-
-- Node upgrade requirements
-
-Generally there is no need to upgrade your nodes manually after the runtime upgrade as they will automatically start to follow the new logic of the chain. 
-The only scenario that requires node upgrades would be a change in consensus or networking logic (this information will be available in release notes). This happens infrequently.
-
-- Transaction broadcasting effects
-
-Pending transactions constructed before a certain runtime upgrade will be ignored/removed.  If you don't think you can submit it before the upgrade, it is better to wait and construct it after the upgrade takes place.
-
+Runtime upgrades allow Polkadot to change the logic of the chain without the need for a hard fork. A
+hard fork would require node operators to manually upgrade their nodes to the latest Runtime
+version. In a distributed system, this is a complex process to coordinate and communicate.  
+Polkadot upgrades are generally forkless. The existing runtime logic is followed to update the Wasm
+runtime stored on the blockchain to a new version. The upgrade is then included in the blockchain
+itself, meaning that all the nodes on the network execute it. Generally there is no need to upgrade
+your nodes manually before the runtime upgrade as they will automatically start to follow the new
+logic of the chain. Nodes only need to be updated when the runtime requires new host functions or
+there is a change in networking or consensus. Transactions constructed for a given runtime version
+will not work on later versions. Therefore, a transaction constructed based on a runtime version
+will not be valid in later runtime versions. If you don't think you can submit a transaction before
+the upgrade, it is better to wait and construct it after the upgrade takes place. Although upgrading
+your nodes is generally not necessary to follow an upgrade, we recommend following the Polkadot
+releases and upgrading in a timely manner, especially for high priority or critical releases.
 
 ## Smart Contracts
 
