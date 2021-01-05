@@ -48,6 +48,7 @@ that the wallet software is using the latest version of the
 | [Fearless Wallet](https://fearlesswallet.io/)                      | Live              | Soramitsu     | iOS and Android                                            |
 | [ONTO Wallet](https://www.onto.app/en)                             | Live              | Ontology      | iOS, Android, and Browser extention                        |
 | [TokenPocket](https://www.tokenpocket.pro/)                        | Live              | TokenPocket   | IOS and Android                                            |
+| [Ellipal](https://www.ellipal.com/)                                | Live              | Ellipal       | Hardware                                                   |
 | [Polkadot{.js} (EthWorks)](https://github.com/EthWorks/extension)  | Building          | EthWorks      | Browser extension                                          |
 | [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask      | IOS, Android, and browser extension                        |
 | [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle       | Browser extension                                          |
