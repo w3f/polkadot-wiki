@@ -55,8 +55,8 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Term duration        | 6 hours | 3,600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
-| Nomination period    | 6 hours | 3,600   | How often a new validator set is elected according to Phragmén's method.                                                                                                                            |
+| Term duration        | 6 hours | 3,600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case the a validator misbehaves.                                                      |
+| Nomination period    | 6 hours | 3,600   | How often a new validator set is [elected](learn-phragmen).                                                                                                                                         |
 | Bonding duration     | 7 days  | 604,800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 7 days  | 604,800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 
@@ -73,5 +73,3 @@ redirected into the [Society](maintain-guides-society-kusama)'s treasury to fund
 
 KSM have 12 decimals of precision. In other words, 1e12 (1,000,000,000,000 or one trillion) Plancks
 make up a single KSM.
-
-<!-- Update to resolve Stale. Remove this in a future update. -->

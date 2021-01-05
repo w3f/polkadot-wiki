@@ -6,7 +6,7 @@ sidebar_label: Community
 
 The following is a list of official chats, forums, and social channels for the Kusama community.
 Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior
-contact and anyone doing so is likely trying to scam you.
+public contact and anyone doing so is likely trying to scam you.
 
 ## General
 
@@ -71,3 +71,4 @@ application we use most often to interact with the Matrix protocol is the
 - [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) -
   official, infrequent, includes Kusama.
 - [Dot Leap Newsletter](https://dotleap.substack.com/) - less official, weekly.
+- [NFT Review](https://news.nft.review) - Covering the evolution of the NFT ecosystem on Kusama

@@ -153,5 +153,5 @@ A number of system-level parachains may be granted slots by the [governing bodie
 
 ## Sumber daya
 
-- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/Parachain-Allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
+- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/economics/2-parachain-allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
 - [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.

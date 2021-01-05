@@ -4,7 +4,7 @@ title: 기여하기
 sidebar_label: 기여하기
 ---
 
-The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to covering informational material for community projects. Please do not try to pull request any marketing material as this will be rejected.
+The wiki was started and is maintained by the Web3 Foundation. It is an open source project and aims to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of the material currently focuses on Polkadot directly but it is not opposed to covering informational material for community projects. Please do not try to pull request any marketing material as this will be rejected.
 
 Pull requests, discussions, and contributions from the community are encouraged. Active community members who demonstrate a record of good contributions may be given write access to the repository. Otherwise, Web3 Foundation holds the administrative position and final say on the content that is included. Specifically the Technical Education team at the foundation are most directly involved.
 
@@ -14,7 +14,7 @@ Pull requests, discussions, and contributions from the community are encouraged.
 
 Contributing to the wiki is easy with a GitHub account. Every page is a MarkDown file, which is a [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
-Each page has an "Edit" button in the top right corner of the content. By clicking this button you are taken to the GitHub sign in page, where you can either login or create an account.
+Each page has an "Edit" button in the top right corner of the content. By clicking this button you are taken to the GitHub sign in page, where you can either log in or create an account.
 
 ![](assets/edit_button.png)
 
@@ -32,8 +32,8 @@ There are a few basic ground-rules for contributors:
 
 1. **절대 `--force`를 사용한 푸쉬를 사용하거나** 깃헙 히스토리를 어떤 연유로든 바꾸시면 안됩니다.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
-3. **마스터가 아닌 브랜치들은** 아직 안정화가 되지 않은 작업들을 포함하고 있으며 풀 리퀘스트를 보내는 것을 지양합니다.
-4. **Significant modifications** ought to be subject to a **pull request** to solicit feedback from other contributors.
+3. Only use **non-master branches**.
+4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to solicit feedback from other contributors.
 5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but left to the discretion of the contributor.
 6. Contributors should attempt to adhere to the prevailing MarkDown style, language, and layout.
 7. Correct grammar should be used at all times. Pull requests with typos will not be merged until fixed.
