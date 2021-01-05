@@ -14,7 +14,7 @@ candidacy to the council.
 
 Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be
 forfeited if your candidacy does not win or become a runner-up and will be kept otherwise. You only
-receive your bond back, if you manually renounce your candidacy before losing. Runner-ups are
+receive your bond back, if you manually renounce your candidacy before losing. Runners-up are
 selected after every round and are reserved members in case one of the winners gets forcefully
 removed.
 
