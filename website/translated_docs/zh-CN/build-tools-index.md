@@ -23,7 +23,7 @@ Here we provide a list of tools available for your development needs. They are s
 - [Ryabina's Telegram Bot](https://github.com/Ryabina-io/substratebot) - A Telegram bot for monitoring on-chain events of Substrate chains. [Github Repository](https://gitlab.com/Polkabot/polkabot)
 - [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows network information and staking details from validators and intentions. [Github Repository](https://github.com/Colm3na/polkastats-v2/).
 - [Panic](https://github.com/SimplyVC/panic_polkadot) - A node monitoring and alert server for validators.
-- [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to monitor on chian states and events.
+- [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to monitor on chain states and events.
 
 ## Clients
 

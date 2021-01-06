@@ -148,13 +148,13 @@ Since the above example is a public referendum, `Super-Majority Approve` would b
 
 #### Voluntary Locking
 
-Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their tokens, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their tokens, hence, the number of votes for each token holder will be calculated by the following formula:
 
 ```
-Max votes = tokens * vote_multiplier
+votes = tokens * conviction_multiplier
 ```
 
-The conviction multiplier increases the vote multiplier by one every time the lock period doubles.
+The conviction multiplier increases the vote multiplier by one every time the number of lock periods double.
 
 | Lock Periods | Vote Multiplier |
 |:------------:|:---------------:|
@@ -166,7 +166,11 @@ The conviction multiplier increases the vote multiplier by one every time the lo
 |      16      |        5        |
 |      32      |        6        |
 
-The maximum number of lock periods is set to 6 and the lock period is 30 days on Polkadot and eight days on Kusama.
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in total), and one lock period equals 28 days on Polkadot and 8 days on Kusama. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
+
+While a token is locked, you can still use it for voting and staking; you are only prohibited from transferring these tokens to another account.
+
+Votes are still "counted" at the same time (at the end of the voting period), no matter for how long the tokens are locked.
 
 #### Adaptive Quorum Biasing
 

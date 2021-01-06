@@ -102,13 +102,7 @@ The image above reveals there are two registrars on Kusama:
 
 To find out how to contact the registrar after the application for judgement or to learn who they are, we can check their identity by adding them to our Address Book. Their identity will be automatically loaded.
 
-![Gav is a registrar](assets/identity/15.jpg)
-
-Gavin Wood is registrar #0.
-
 ![Chevdor is registrar #1](assets/identity/16.jpg)
-
-Chevdor is registrar #1.
 
 ### Polkadot Registrars
 
