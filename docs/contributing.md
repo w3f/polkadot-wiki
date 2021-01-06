@@ -4,11 +4,11 @@ title: Contributing
 sidebar_label: Contributing
 ---
 
-The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims to
-be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part of
-the material currently focuses on Polkadot directly but it is not opposed to covering informational
-material for community projects. Please do not try to pull request any marketing material as this
-will be rejected.
+The wiki was started and is maintained by the Web3 Foundation. It is an open source project and aims
+to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part
+of the material currently focuses on Polkadot directly but it is not opposed to covering
+informational material for community projects. Please do not try to pull request any marketing
+material as this will be rejected.
 
 Pull requests, discussions, and contributions from the community are encouraged. Active community
 members who demonstrate a record of good contributions may be given write access to the repository.
@@ -25,7 +25,7 @@ Contributing to the wiki is easy with a GitHub account. Every page is a MarkDown
 plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
 Each page has an "Edit" button in the top right corner of the content. By clicking this button you
-are taken to the GitHub sign in page, where you can either login or create an account.
+are taken to the GitHub sign in page, where you can either log in or create an account.
 
 ![](assets/edit_button.png)
 
@@ -48,9 +48,9 @@ There are a few basic ground-rules for contributors:
 1. **No `--force` pushes** or modifying the Git history in any way.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should
    be used for generic or broad-based changes or missing content.
-3. **Non-master branches** ought to be used for ongoing work.
-4. **Significant modifications** ought to be subject to a **pull request** to solicit feedback from
-   other contributors.
+3. Only use **non-master branches**.
+4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to
+   solicit feedback from other contributors.
 5. Pull requests to solicit feedback are _encouraged_ for any other non-trivial contribution but
    left to the discretion of the contributor.
 6. Contributors should attempt to adhere to the prevailing MarkDown style, language, and layout.

@@ -4,7 +4,7 @@ title: Research Pages
 sidebar_label: Research Pages
 ---
 
-The Polkadot [research pages](https://research.polkadot.network) are edited directly by the researchers at W3F and contains papers, articles and documents that are sources for the information on the wiki.
+The Polkadot [research pages](https://research.polkadot.network) are edited directly by the researchers at W3F and contain papers, articles and documents that are sources for the information on the wiki.
 
 The following papers and articles may be of special interest for those interested in investigating Polkadot from a research or academic perspective.
 
@@ -15,7 +15,7 @@ The following papers and articles may be of special interest for those intereste
 - [GRANDPA: A Byzantine Finality Gadget](https://arxiv.org/abs/2007.01560) - GHOST-based Recursive Ancestor Deriving Prefix Agreement, Polkadot's finality gadget. Authors: Alistair Stewart and Lefteris Kokoris Kogias
 - [A Verifiably Secure and Proportional Committee Election Rule](https://arxiv.org/abs/2004.12990) - Validator Election in Nominated Proof of Stake. Authors: Alfonso Cevallos and Alistair Stewart
 - [Network Time with a Consensus on Clock](https://arxiv.org/abs/2007.01560) - Consensus on Clock in Universally Composable Timing. Author: Handan Kılınç Alper
-- [Delay Encryption](https://eprint.iacr.org/2020/638) - Delay Encryption roughly be described as “identity based encryption with slow derived private key issuance”. Authors: Jeff Burdges and Luca de Feo
+- [Delay Encryption](https://eprint.iacr.org/2020/638) - Delay Encryption can roughly be described as “identity based encryption with slow derived private key issuance”. Authors: Jeff Burdges and Luca de Feo
 
 ## Research Blogs
 
