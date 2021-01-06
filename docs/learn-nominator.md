@@ -26,8 +26,8 @@ Polkadot before bonded funds can be transferred after issuing an unbond transact
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be
-effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
+[this](maintain-guides-how-to-nominate-polkadot) guide to configure it first. Your nominations will
+be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](/img/staking/polkadotjs_nominator_account.png)
 
