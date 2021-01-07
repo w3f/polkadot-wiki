@@ -57,7 +57,7 @@ economic case for their token, not Polkadot.
 
 While Polkadot enables crosschain functionality amongst the parachains, it necessitates that there
 is some latency between the dispatch of a message from one parachain until the destination parachain
-recieves the message. In the optimistic scenario, the latency for this message should be at least 2
+receives the message. In the optimistic scenario, the latency for this message should be at least 2
 blocks, one block for the message to be dispatched and one block for the receiving parachain to
 process and produce a block that acts upon the message. However, in some cases we may see that the
 latency for messages are higher if there is a lot of messages that are in queue to be processed, or
