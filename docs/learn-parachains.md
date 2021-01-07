@@ -61,7 +61,7 @@ receives the message. In the optimistic scenario, the latency for this message s
 blocks - one block for the message to be dispatched and one block for the receiving parachain to
 process and produce a block that acts upon the message. However, in some cases we may see that the
 latency for messages is higher if there are many messages that are in queue to be processed, or
-if there exists no nodes that are running both of the parachain networks that can quickly gossip the
+if there exist no nodes that are running both of the parachain networks that can quickly gossip the
 message across the networks.
 
 Due to the neccesary latency involved in sending crosschain messages, some parachains are planning
