@@ -44,5 +44,5 @@ Validators perform two functions. First, verifying that the information containe
 
 - [HashQuark Staking Strategy](https://polkacube.hashquark.io/#/polkadot/strategy) - The HashQuark staking strategy dashboard helps you choose the optimal set-up to maximize rewards, and provides other useful network monitoring tools.
 - [ Polkastats ](https://polkastats.io/) - Polkastats 是验证程序的精心设计的网页
-- [ Polkanalytics ](https://polkanalytics.com/#/dashboard) - 验证人网页，显示所有提名人的每日收入。
+- [YieldScan](https://yieldscan.onrender.com/) - Staking yield maximization platform, designed to minimize effort.
 - [ Subscan 验证人页面](https://kusama.subscan.io/validator) - 显示当前验证人的信息 - 不像其他站点那样适合验证人。
