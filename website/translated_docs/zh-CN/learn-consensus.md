@@ -11,11 +11,11 @@ description: 对 Polkadot 和 Kusama 所用的共识解释
 
 ## 什么是 PoW 和 PoS？
 
-Proof of Work (PoW) and Proof of Stake (PoS) have been inaccurately used as short hand to refer to consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method for agreeing on a block author and part of the fuller [Nakamoto consensus](#nakamoto-consensus) that also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a set of rules for selecting the validator set and does not specify a chain selection rule or how a chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos) is a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection method.
+工作量证明(PoW) 和权益证明(PoS) 已被用来作为区块链共识机制的简称，但这并不能完整地描述其全貌。 PoW是达成区块创造者共识的方法，也是[中本聪共识](#nakamoto-consensus)的一部分，该共识还包含链选择算法(根据比特币中最长链的规则)。同样PoS是用于选择验证人的一组规则并且没有指定链的选择规则或如何达到链的终点。传统上PoS算法已被融合到实现节点之间的拜占庭协议的算法配对。例如[Tendermint](learn-comparisons-cosmos)是实用性拜占庭容错算法，它使用PoS作为其验证人的选择方法。
 
 ## 为什么不使用工作量证明(PoW)?
 
-Although simple and effective in coming to a decentralized consensus on the next block producer, proof of work with Nakamoto consensus consumes an incredible amount of energy, has no economic or provable finality, and has no effective strategy in resisting cartels.
+尽管在下一个区块生产者达成去中心化共识方面既简单又有效，但中本聪共识实现的工作量证明却消耗了大量的能源，没有经济的或可证明的终结性，也没有有效的策略来抵抗卡特尔。
 
 ## 概率性 vs 可证明的最终性
 
@@ -51,65 +51,65 @@ Polkadot 的验证人将会参与在每次的[抽奖](learn-randomness)去决定
 
 有关更多 BABE 的详细信息，请参见[正在研究的草案](http://research.web3.foundation/zh/latest/polkadot/BABE/Babe/)。
 
-#### Difference of BABE secondary blocks between Kusama and Polkadot
+#### Kusama 和 Polkadot 的 BABE 次生块的区别
 
-Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is a slight difference in the secondary blocks that are produced between the two networks. Polkadot attaches the VRF output to secondary blocks (and therefore every block contributes to the Era randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary blocks contribute to Era randomness). The Polkadot method should give stronger randomness as more inputs are collected during every Era. Eventually, this change should make its way into Kusama too.
+Kusama 和 Polkadot 均使用上面概述的BABE块生产机制。但是，两个网络之间产生的次级块之间存在细微差异。 Polkadot 将 VRF 输出附加到次级块 (因此每个块都对 Era 的随机性有所贡献)，Kusama 让 VRF 输出远离次级块 (这意味着只有主要块会造成 Era 的随机性)。 Polkadot 方法应提供更强的随机性，因为在每个 Era 都会收集更多的输入。最终，这种改变也将进入 Kusama。
 
 ### GRANDPA: 最终决定性工具
 
-GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot Relay Chain.
+GRANDPA (基于 GHOST 的递归祖先派生前缀协议) 是为 Polkadot 中继链实现的最终性工具。
 
-It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope with 1/5 Byzantine nodes in an asynchronous setting.
+只要2/3的节点是诚实的，并且可以在异步设置中处理1/5的拜占庭节点，它就可以作为同步的网络模型中的一部分运行。
 
-A notable distinction is that GRANDPA reaches agreements on chains rather than blocks, greatly speeding up the finalization process, even after long-term network partitioning or other networking failures.
+一个明显的区别是，即使在长期的网络分区或其他网络故障之后，GRANDPA 还是在链上达成协议，而不是在区块上达成协议，从而大大加快了最终性确定的过程。
 
-In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block, all blocks leading up to that one are finalized at once.
+换句话说，一旦超过2/3的验证者证明包含某个块的链，则导致该块的所有块都会立即完成。
 
-#### Protocol
+#### 协议
 
-Please refer to heading 3 in [the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol.
+请参阅[该文件](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)中的标题3以获取该协议的完整说明。
 
-#### Implementation
+#### 实施
 
-The [Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs) is part of Substrate Frame.
+[Rust 的执行](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)是 Substrate 框架的一部分。
 
-For even more detail, see the [GRANDPA research page](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html) on the W3F Research pages.
+更多详细的相关信息，请参见W3F研究页面上的[GRANDPA 研究页面](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html)。
 
 ### 分叉选择
 
-Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always build on the chain that has been finalized by GRANDPA. When there are forks after the finalized head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
+将 BABE 和 GRANDPA 结合在一起，Polkadot 的分叉选择变得很清晰。 BABE 必 须始终建立在 GRANDPA 最终确定的链条上。当最终确定的头后面有分叉时， BABE 通过在具有最主要区块的链上做构建来提供概率的确定。
 
-![Best chain choice](assets/best_chain.png)
+![最佳链的选择](assets/best_chain.png)
 
-In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks. Even though the topmost chain is the longest chain on the latest finalized block, it does not qualify because it has fewer primaries at the time of evaluation than the one below it.
+在上图中，黑色块已确认。一个是主要的，两个是次要的块。即使最上面的链是最新确定的区块上的最长链，它仍然不符合条件，因为在评估时它的基数比下面的基数少。
 
 ## 共识比较
 
 ### 中本聪共识
 
-Nakamoto consensus consists of the longest chain rule using proof of work as its sybil resistance mechanism and leader election.
+中本聪共识包括最长链规则，该规则以工作量证明作为其 sybil 反抗机制和领导者选举。
 
-Nakamoto consensus only gives us probabilistic finality. Probabilistic finality states that a block in the past is only as safe as the number of confirmations it has, or the number of blocks that have been built on top of it. As more blocks are built on top of a specific block in a Proof of Work chain, more computational work has been expended behind this particular chain. However, it does not guarantee that the chain containing the block will always remain the agreed-upon chain, since an actor with unlimited resources could potentially build a competing chain and expend enough computational resources to create a chain that did not contain a specific block. In such a situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to this new chain as the canonical one.
+中本聪共识只给了我们概率上的终局性。概率终局性指出，过去的区块仅与其确认数或在其之上构建的区块数一样安全。由于在工作量证明链中特定块之上构建了更多块，因此在此特定链之后花费了更多的计算工作。但是，它不能保证包含该块的链将始终保持商定后的链，因为拥有无限资源的参与者可能会构建竞争链并消耗足够的计算资源以创建不包含特定块的链。在这种情况下，比特币和其他工作链证明中采用的最长链规则将作为规范转移到这一新链上。
 
 ### PBFT / Tendermint
 
-Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cosmos comparison article.
+请参阅 Cosmos 的比较文章中的[相关部分](learn-comparisons-cosmos#consensus)。
 
 <!-- ### HoneyBadgerBFT -->
 
 ### Casper FFG
 
-The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
+GRANDPA 和 Casper FFG (友好结局小工具) 之间的两个主要区别是：
 
 - 在GRANDPA中，不同的选民可以同时为不同高度的区块投票
 - GRANDPA 依靠最终的区块来影响底层区块生产机制的分叉选择规则
 
 ### Casper CBC
 
-_Coming soon!_
+_未完待续!_
 
 ## 资源
 
 - [ GRANDPA 论文](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)- GRANDPA 最终确定性工具的描述。 包含算法证明。
 - [Finality Grandpa - Rust 实现](https://github.com/paritytech/finality-grandpa) - 及[ Substrate Runtime 模块](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs)。
-- [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) - An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama, with Bill Laboon.
+- [Polkadot中的区块生产和确认](https://www.crowdcast.io/e/polkadot-block-production) - 说明了 BABE 和 GRANDPA 如何与 Bill Laboon 合作在Kusama 上生产和确认区块的。
