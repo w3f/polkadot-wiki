@@ -133,7 +133,7 @@ The minimal requirements for any parachain candidate to be considered for the pa
             1. `cargo build --release --features=real-overseer`
             1. `./target/release/polkadot --validator --chain rococo --name <your_rococo_validator_name>`
         1. Use Docker:
-            1. docker run ```-d parity/rococo:<tag_following_polkadot> --validator --chain rococo --name <your_rococo_validator_name>```
+            1. `docker run -d parity/rococo:<tag_following_polkadot> --validator --chain rococo --name <your_rococo_validator_name>`
     1. Check your node on the [Rococo Telemetry](https://telemetry.polkadot.io/#list/Rococo)
     1. Generate your [Rococo V1 ValidatorId Address](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#launching-the-validators)
     1. Follow [Rococo Validator Lounge](https://matrix.to/#/!mAfyXPbSILyZLvZwSJ:matrix.parity.io?via=matrix.parity.io) announcements for Rococo V1 validator updates, which can require one of the following scenarios
