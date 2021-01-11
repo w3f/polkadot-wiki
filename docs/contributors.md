@@ -46,6 +46,7 @@ a near-future novel set in a world in which cryptocurrency has eliminated tradit
 ### Bruno Skvorc
 
 - email: [bruno@web3.foundation](mailto:bruno@web3.foundation)
+- telegram: [@swader](https://t.me/swader)
 - matrix / riot / element: [@bruno:web3.foundation](https://matrix.to/#/@bruno:web3.foundation)
 - twitter: [@bitfalls](https://twitter.com/bitfalls)
 
