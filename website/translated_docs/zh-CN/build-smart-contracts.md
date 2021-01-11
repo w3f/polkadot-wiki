@@ -4,54 +4,54 @@ title: 智能合约
 sidebar_label: 智能合约
 ---
 
-The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://substrate.dev/rustdocs/v2.0.0/pallet_contracts/index.html), it is likely that more parachains will support this feature.
+Polkadot 中继链本身并不支持原生智能合约。然而，Polkadot 的平行链可以支持智能合约。现在已有如[Edgeware](https://edgewa.re)等多个项目支持智能合约。同时，得益于 Substrate 的内置[Contract Pallet](https://substrate.dev/rustdocs/v2.0.0/pallet_contracts/index.html)，未来会有更多的平行链支持智能合约。
 
-Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine, thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this approach are [Edgeware](https://edgewa.re), [Moonbeam](https://moonbeam.network/) and [Frontier](https://github.com/paritytech/frontier).
+此外，还有一个 EVM 模块可以让平行链实现以太坊虚拟机，得以支持几乎以太坊合约的直接接口。一些项目用到了[Edgeware](https://edgewa.re)，[Moonbeam](https://moonbeam.network/)和[Frontier](https://github.com/paritytech/frontier)这些方法。
 
-A video version of the recap of the smart contract situation on Polkadot and Kusama is available [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
+[这里](https://www.youtube.com/watch?v=fKHkFBXaUxQ)提供了有关 Polkadot 和 Kusama 的智能合约情况摘要的视频版本。
 
 ## 资源
 
-Here is the list of current resources available to developers who want to get started writing smart contracts to deploy on parachains based on Substrate.
+如果开发者想要开始在基于 Substrate 的平行链上开发并部署智能合约，可以参考这个列表的资源：
 
-- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
-- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you through the basics of writing and deploying an ERC20 token using `ink!`.
+- [Edgeware 合约](https://contracts.edgewa.re) - Edgeware合约的文档。
+- [ink!](https://github.com/paritytech/ink) - Parity 提供的编写智能合约的ink。
+- [Substrate 合约工作坊](https://substrate.dev/substrate-contracts-workshop/#/) - 指导您使用`ink!`编写和部署ERC20令牌的基础知识。
 
 ## 例子
 
-Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!
+以下收集的是社区中关于`ink!`的一些智能合约示例。您正在研究智能合约示例吗？请联系我们将其添加到此页面！
 
 - [Ownable](https://github.com/JesseAbram/foRust/) - OpenZeppelin `Ownable`合约的端口。
 
-## Storage Rent
+## 存储空间的租用
 
-Storage rent limits the footprint that a contract can have on the blockchain's storage.
+存储租金限制了一个合约可以在区块链存储上所占用的空间。
 
-A contract deployed to the chain produces a code hash from which new instances of the chain can be created, but there is currently no rent applied to the code hash itself. The rent applies only to instances of this contract which have their own _contract accounts_. Deploying a code hash currently has a one-time byte-fee applied to the transaction, but no recurring cost.
+部署到链上的合同会生成一个代码哈希，可以从中创建链的新实例，但是当前没有租金适用于代码哈希本身。租金仅适用于具有自己的_合约帐户_的本合约实例。当前，部署代码哈希将用到一笔一次性的字节费应用于交易，但是没有反复性的开销。
 
-An account of a contract instance is charged proportionally to the amount of storage its account uses. When a contract's balance goes below a defined limit, the contract's account is turned into a "tombstone" (a hash of the contract's current state) and its storage is cleaned up. A tombstone contract can be restored by providing the data that was cleaned up when it became a tombstone as well as any additional funds needed to keep the contract alive. This fee will retroactively apply to missed rent periods.
+合约实例的帐户按其帐户使用的存储量按比例收费。当合约的余额低于指定的限额时，合约的帐户将变成“墓碑” (合约当前状态的哈希值)，并且将清理其存储。处于“墓碑”状态的合约，可以通过提供转为“墓碑”状态后被清除的数据从而得到恢复，同时也要提供保持合同有效性所需的资金。该项费用将追溯到错过的租期。
 
-Block producers or regular users of the chain can "poke" a smart contract if they think it ran out of funds for rent. This will initiate the cleanup process and the _poker_ will get a finder's fee.
+如果区块链生产商或链上的常规用户认为用来租用智能合约的资金花完了，他们可以poke一下该智能合约。这将启动清理过程，_poker_将收取发起者的费用。
 
-## What is the difference between developing a smart contract versus a parachain?
+## 开放只能合约和平行链的区别
 
 ### 抽象层
 
-When you write a smart contract you are creating the instructions that will be deployed and associated to a specific chain address.
+编写智能合约时，您正在创建将被部署并关联到特定链地址的指令。
 
-In comparison, a runtime module is the entire logic of a chain's state transitions (what's called a state transition function).
+相比之下，运行模块是链状态转换的全部逻辑 (所谓的a状态转换函数)。
 
-Smart contracts must consciously implement upgradeability while parachains will have the ability to swap out their code entirely through a root command or via the governance pallet.
+智能合约必须有意识地实现可升级性，而平行链则有能力完全通过根命令或通过管理面板来交换代码。
 
-When you build a smart contract, it will eventually be deployed to a target chain with its own environment. Parachains allow the developer to declare the environment of their own chain, even allowing others to write smart contracts for it.
+当您构建智能合约时，它将最终被部署到具有其自身环境的目标链中。平行链允许开发人员声明自己的链环境，甚至允许其他人为其编写智能合约。
 
 ### Gas 费用
 
-Smart contracts must find a way to limit their own execution, or else full nodes are vulnerable to DOS attacks. An infinite loop in a smart contract, for example, could consume the computational resources of an entire chain, preventing others from using it. The [halting problem](https://en.wikipedia.org/wiki/Halting_problem) shows that with a powerful enough language, it is impossible to know ahead of time whether or not a program will ever cease execution. Some platforms, such as Bitcoin, get around this constraint by providing a very restricted scripting language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute their code. If a smart contract does get into a state where execution will never halt, it eventually runs out of gas, ceases execution, and any state transition that would have been made by the smart contract is rolled back.
+智能合约必须找到一种方法来限制自己的执行，否则完整的节点很容易受到DOS攻击。例如，智能合约中的无限循环可能会消耗整个链的计算资源，从而阻止其他人使用它。[停机问题](https://en.wikipedia.org/wiki/Halting_problem)表明使用足够强大的语言，还是无法提前知道程序是否将停止执行。某些平台（例如比特币）通过提供一种非常受限制的脚本语言来解决此限制。以太坊等其他平台则向智能合约索取“燃气”，以收取执行其代码的权利。如果智能合约确实进入了永不终止的状态，那么它最终将耗尽燃气费，停止执行，并且将回退任何由智能合约产生的状态转换。
 
-Parachains can implement arbitrarily powerful programming languages and also contain no notion of gas for their own native logic. This means that some functionality is easier to implement for the developer, but it also means there are some constructs, such as a loop without a terminating condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it entirely, will often be a wiser choice.
+平行链可以采用任意且强大的编程语言，且其自身逻辑中不采用gas概念。这意味着开发者更易于实现部分功能，但也意味着无终止条件的循环等结构将_永不_能实现。将某些例如可能无限运行的复杂循环的逻辑，置于非智能合约层，或者尝试将它们完全消除，往往是更明智的选择。
 
-## Resources
+## 资源
 
 - [应该在什么时候构建 Substrate runtime 或构建 Substrate 智能合约](https://stackoverflow.com/a/56041305) - 从技术角度回答了开发者什么时候可以选择开发 runtime 或智能合约。
