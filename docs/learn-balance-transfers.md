@@ -14,7 +14,7 @@ already [created an account](learn-account-generation) and have some funds that 
 > Kusama or a different network, you can change it by clicking the top left navigation dropdown and
 > selecting a different network.
 
-Let's begin by opening up the [Polkadot-JS Apps][]. There are two ways to make a balance transfer:
+Let's begin by opening [Polkadot-JS Apps][]. There are two ways to make a balance transfer:
 
 1. By using the "Transfer" tab in the "Accounts" dropdown (located on the top navigational menu).
 2. Clicking the "send" button while in the "Accounts" page.
@@ -41,28 +41,28 @@ is included in a block you will see a green notification in the top-right corner
 
 ### Keep-Alive Checks
 
-At an extrinsic level, there are two main ways to transfer funds from one account to another. These
-are `transfer` and `transfer_keep_alive`. `transfer` will allow you to send DOTs regardless of the
-consequence; `transfer_keep_alive` will not allow you to send an amount that would allow the sending
-account to be removed due to it going below the existential deposit.
+At an [extrinsic](glossary#extrinsic) level, there are two main ways to transfer funds from one
+account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you to
+send DOTs regardless of the consequence; `transfer_keep_alive` will not allow you to send an amount
+that would allow the sending account to be removed due to it going below the existential deposit.
 
 By default, Polkadot-JS Apps will use `transfer_keep_alive`, ensuring that the account you send from
-cannot drop below the existential deposit (1 DOT or 0.01 KSM). However, it may be that you do not
-want to keep this account alive (for example, because you are moving all of your funds to a
+cannot drop below the existential deposit (1 DOT or 0.001666 KSM). However, it may be that you do
+not want to keep this account alive (for example, because you are moving all of your funds to a
 different address). In this case, click on the "keep-alive" toggle at the bottom of the modal
 window. The label should switch from "Transfer with account keep-alive checks"(`transfer_keep_alive`
 will be used) to "Normal transfer without keep-alive checks" (`transfer` extrinsic will be used). As
 a common use case for using normal transfers is to entirely clear out the account, a second toggle
-will appear if you have the keep-alive check turned off that will send all the DOTs in the account,
-minus a transaction fee, to the destination address.
+will appear if you have the keep-alive check turned off that will send all the tokens in the
+account, minus a transaction fee, to the destination address.
 
 Note that attempting to send less than the existential deposit to an account with 0 DOT will always
 fail, no matter if the keep-alive check is on or not. For instance, attempting to transfer 0.1 DOT
 to an account you just generated (and thus has no DOT) will fail, since 0.1 is less than the
-existential deposit of 1 DOT.
+existential deposit of 1 DOT and the account cannot be initialized with such a low balance.
 
-Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the
-sending account if you attempt to transfer.
+Note that even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
+from the sending account if you attempt to transfer.
 
 ### From the Accounts Page
 
