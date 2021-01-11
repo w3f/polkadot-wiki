@@ -9,12 +9,11 @@ sidebar_label: Ledger Devices
 
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
-device that does not get directly exposed to your computer or the internet. It is strongly
-recommended to use a hardware wallet if you are managing a significant amount of funds.
+device that does not get directly exposed to your computer or the internet.
 
-The Kusama application allows you to manage Kusama's native asset, the KSM. It supports most of the
-available transaction types of the network (a notable exception is the "Batch" transaction from the
-Utility pallet).
+The Kusama application allows you to manage Kusama's native asset, the KSM token. It supports most
+of the available transaction types of the network (a notable exception is the "Batch" transaction
+from the Utility pallet).
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -27,9 +26,9 @@ issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 Here is a list of what you will need before starting:
 
 - A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on
+- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-5 on
   the Nano X).
-- Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
+- Ledger Live is installed and at version 2.19 or newer (see settings -> about to find out if you're
   up to date).
 - A web browser is installed that you can use to access [Polkadot-JS Apps][].
 
@@ -67,8 +66,8 @@ Zondax Installer [Kusama-1.2011.1] [Warning: use only for test/demo apps]
 ```
 
 Next, you must make sure your Ledger device is plugged in and unlocked and you're using the latest
-firmware (1.6.1 at the time of writing). If everything is prepared, then type
-`./install_app.sh load` and accept the prompts on your Ledger device to install the application.
+firmware. If everything is prepared, then type `./install_app.sh load` and accept the prompts on
+your Ledger device to install the application.
 
 First it will prompt you to allow an unsafe manager - confirm this by switching the screen to the
 allow screen and pressing the corresponding buttons.
@@ -137,7 +136,7 @@ Apps.
 ### Checking the Balance of Your Account
 
 There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you
-can use a block explorer like [Polkascan][].
+can use a block explorer like [Polkascan][] or [Subscan][].
 
 #### Using Polkadot-JS Apps
 
@@ -146,13 +145,6 @@ account. At the far right of the row is located your account's DOT balance. If y
 balance arrow, it will show details of your balance such as locks or reserved amounts.
 
 ![Account row showing empty balance](assets/ledger/ledger-balance.png)
-
-#### Using a Block Explorer
-
-You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the DOT balance of
-your account. On these block explorers you can search for your account in the search box and click
-on it to reveal the details. It will show your DOT balance as well as details about your bonded or
-locked amounts.
 
 ### Sending a Transfer
 
@@ -173,6 +165,8 @@ method is to use [Polkadot-JS Apps][].
 > will be able to go below existential deposit balance, causing your account to be deleted and any
 > dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
 > might be the reason.
+
+A detailed guide on doing transfers is available [here](learn-balance-transfers).
 
 ### Receiving a Transfer
 
