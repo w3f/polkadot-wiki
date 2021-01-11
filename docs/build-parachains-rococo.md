@@ -127,7 +127,7 @@ The minimal requirements for any parachain candidate to be considered for the pa
     1. Treat this like a production grade Polkadot node - see [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
     1. Node Setup - use one of the options below
          1. Build from source:
-            1. `git clone [https://github.com/paritytech/polkadot](https://github.com/paritytech/polkadot)`
+            1. `git clone https://github.com/paritytech/polkadot`
             1. `cd polkadot`
             1. `git checkout master`
             1. `cargo build --release --features=real-overseer`
