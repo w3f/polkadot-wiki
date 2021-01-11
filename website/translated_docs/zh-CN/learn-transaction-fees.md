@@ -24,7 +24,7 @@ Polkadot 中继链的费用是根据以下四个参数计算的:
 
 长度费是每字节的固定费用和交易的字节大小的结果。
 
-权重是个固定数字，旨在管理验证块所花费的时间。 每笔交易都有基本权重，该权重考虑了包含(例如签名验证)的开销，而派遣权重则说明了执行交易的时间。 将总重量权重乘以每个重量费用即可计算交易的重量费用。
+Weights are a fixed number designed to manage the time it takes to validate a block. Each transaction has a base weight that accounts for the overhead of inclusion (e.g. signature verification) as well as a dispatch weight that accounts for the time to execute the transaction. The total weight is multiplied by a per-weight fee to calculate the transaction's weight fee.
 
 小费是一种可选的交易费，用户可以添加来给予交易更优先的处理。
 
