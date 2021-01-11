@@ -31,7 +31,6 @@ deliver us a better future.
 ### Bill Laboon
 
 - email: [bill@web3.foundation](mailto:bill@web3.foundation)
-- telegram: [@billlaboon](https://t.me/billlaboon)
 - matrix / riot / element: [@bill:web3.foundation](https://matrix.to/#/@bill:web3.foundation)
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
 
@@ -47,7 +46,6 @@ a near-future novel set in a world in which cryptocurrency has eliminated tradit
 ### Bruno Skvorc
 
 - email: [bruno@web3.foundation](mailto:bruno@web3.foundation)
-- telegram: [@swader](https://t.me/swader)
 - matrix / riot / element: [@bruno:web3.foundation](https://matrix.to/#/@bruno:web3.foundation)
 - twitter: [@bitfalls](https://twitter.com/bitfalls)
 

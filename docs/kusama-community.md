@@ -43,7 +43,6 @@ application we use most often to interact with the Matrix protocol is the
   happening in the Polkadot ecosystem, published every weekday except holidays, includes Kusama.
 - To join the Chinese Validator chat, message
   [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
-- [Kusama Telegram](https://t.me/kusamanetworkofficial)
 - [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
 ### Technical
