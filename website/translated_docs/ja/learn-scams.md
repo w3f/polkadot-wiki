@@ -38,6 +38,7 @@ If you've received a message from an admin over Telegram, ignore it. Our Polkado
 
 - [Twitter](https://twitter.com/Polkadot)
 - [Reddit](https://www.reddit.com/r/dot)
+- [Discord](https://discord.gg/wGUDt2p)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Offical Polkadot Telegram](https://t.me/polkadotofficial)
 - [Polkadot Medium](https://medium.com/polkadot-network)
