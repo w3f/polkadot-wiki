@@ -96,8 +96,8 @@ submitted proposal.
 Seconding a proposal means that you are agreeing with the proposal and backing it with an equal
 amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
 tabled (that is, brought to a vote). By seconding a proposal you will move it higher up the rank of
-proposals. The most seconded proposal &mdash; in value, not number of supporters &mdash; will be brought to
-a referendum every launch period.
+proposals. The most seconded proposal &mdash; in value, not number of supporters &mdash; will be
+brought to a referendum every launch period.
 
 Note that it is possible for a single account to second a proposal multiple times. This is by
 design; it is the value, not the number of seconds _per se_, that counts in terms of weighting. If
