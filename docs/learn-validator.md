@@ -73,7 +73,7 @@ exchange for their activities.
   other useful network monitoring tools.
 - [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator
   statistics.
-- [Polkanalytics](https://polkanalytics.com/#/dashboard) - A validator dashboard that displays the
-  daily earnings of all nominators.
+- [YieldScan](https://yieldscan.onrender.com/) - Staking yield maximization platform, designed to
+  minimize effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.

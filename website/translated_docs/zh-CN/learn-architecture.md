@@ -4,38 +4,38 @@ title: 架构
 sidebar_label: 架构
 ---
 
-Polkadot is a heterogeneous multichain with shared security and interoperability.
+Polkadot 采用共享安全性和可互操作的异构多链结构。
 
 ## 中继链 (Relay Chain)
 
-The Relay Chain is the central chain of Polkadot. All validators of Polkadot are staked on the Relay Chain in DOT and validate for the Relay Chain. The Relay Chain is composed of a relatively small number of transaction types that include ways to interact with the governance mechanism, parachain auctions, and participating in NPoS. The Relay Chain has deliberately minimal functionality - for instance, smart contracts are not supported. The main responsibility is to coordinate the system as a whole, including parachains. Other specific work is delegated to the parachains, which have differing implementations and features.
+中继链是 Polkadot 的中心链。所有的验证者都在中继链上抵押DOT并验证中继链。中继链仅由相对少量的交易类型构成，包括和治理机制互交，平行链拍卖，参与NPo'S。中继链是可以被设计成具有最精简的功能的 - 例如，中继链并不支持智能合约。中继链的主要只能是负责协调整个系统，包括各个平行链。其他的具体工作应该交予实现不同功能的平行链来执行。
 
 ## [Parachains](learn-parachains) and [Parathreads](learn-parathreads)
 
-Most of the computation that happens across the Polkadot network as a whole will be delegated to specific parachain implementations that handle various use cases. Polkadot places no constraints over what parachains are able to do besides that they must be able to generate a proof that can be validated by the validators assigned to the parachain. This proof verifies the state transition of the parachain. Some parachains may be specific to a particular application, others may focus on specific features like smart contracts, privacy or scalability -- still others might be experimental architectures that are not necessarily blockchain in nature.
+整个 Polkadot 网络处理的许多运算都将根据不同的应用场景，交由不同的平行链来执行处理。只要平行链可以生成证明，以通过指定给该平行链的验证者的验证，Polkadot 将不会限制哪些平行链可以做什么。这些证明验证了平行链上的状态改变。有些平行链被设计成仅服务于特定的应用，另外一些可能专注于某些具体的功能，例如智能合约，隐私保护或可拓展性——其他一些也可能仅是具有实验性质的结构，并不一定是区块链结构。
 
-In order to remain connected to the Relay Chain, parachains must win a [parachain slot auction](https://wiki.polkadot.network/docs/en/learn-auction) to secure a slot for a particular length of time. Parathreads do not remain connected, but must win auctions for individual blocks. There is thus an economic difference between parathreads and parachains. Parachains will have to bond a large up-front deposit for the right to connect to the Relay Chain; parathreads will pay on a per-block basis. Parathreads can become parachains, and vice-versa.
+为确保和中继链保持连接，平行链必须赢取[平行链位竞拍](https://wiki.polkadot.network/docs/en/learn-auction)以确保一段时间内接入中继链。而并行线程并不需要时刻保持链接，但依然需要针对某一特定区块赢取竞拍。所以平行链和并行线程有不同的使用成本。平行链必须锁定一大笔前期投入以确保可以接入中继链；平行线程则仅需要根据使用的区块付费。平行线程可以转化成平行链，反之亦然。
 
-## Shared Security
+## 共享安全性
 
-Parachains connected to the Polkadot Relay Chain all share in the security of the Relay Chain. Polkadot has a shared state between the Relay Chain and all of the connected parachains. If the Relay Chain must revert for any reason, then all of the parachains would also revert. This is to ensure that the validity of the entire system can persist and no individual part is corruptible.
+接入 Polkadot 中继链的平行链共享中继链的安全性。Polkadot 的中继链和所有连接中的平行链有一个共享状态。如果中继链因为某些原因必须被回滚，那么所有的平行链也将回滚。这一机制确保了整体状态的一致性和有效性，并不会具有某一个部分的破坏而失效。
 
-The shared state makes it so that the trust assumptions when using Polkadot parachains are only those of the Relay Chain validator set, and no other. Since the validator set on the Relay Chain is expected to be secure with a large amount of stake put up to back it, it is desirable for parachains to benefit from this security.
+共享状态使得使用 Polkadot 平行链时的信任假设仅是中继链上的验证人，而没有其他。由于预期中继链上设置的验证人是安全的，并且要有大量 DOT 抵押支持该验证人，因此平行链最好受益于这种安全性。
 
-## Roles
+## 角色
 
-### Validators
+### 验证人
 
-Validators, if elected to the validator set, produce blocks on the Relay Chain. They also accept proofs of valid state transition from collators. In return, they will receive staking rewards.
+被选中的验证人负责生成中继链上的区块。验证人同样接受核对者提交的状态变化证明有效性验证任务。作为回报，验证人可以从质押当中获取奖励。
 
-### Collators
+### 收集人
 
-Collators are full nodes on both a parachain and the Relay Chain. They collect parachain transactions and produce state transition proofs for the validators on the Relay Chain. They can also send and receive messages from other parachains using XCMP.
+核对人是同时运行平行链和中继链的全节点。核对人负责收集平行链上的交易，并且将状态转化有效性证明提交给验证人进行验证。核对者可以通过 XCMP 来发送和接受来自其他平行链的消息。
 
-### Nominators
+### 提名人
 
-Nominators bond their stake to particular validators in order to help them get into the active validator set and thus produce blocks for the chain. In return, nominators are generally rewarded with the portion of the staking rewards from that validator.
+提名人通过绑定其自身的质押资产以支持验证人，使其进行中继链上的区块生成任务。作为回报，验证人所获得的部分质押奖励将作为奖励分配给其提名人。
 
-## Whiteboard Series
+## 白板系列
 
-For a video overview of the architecture of Polkadot watch the video below for the whiteboard interview with W3F researcher Alistair Stewart: <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+有关 Polkadot 架构的视频概述，请观看下面的视频，W3F 研究员 Alistair Stewart 的白板访问: <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>

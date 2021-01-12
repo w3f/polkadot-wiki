@@ -28,7 +28,7 @@ Fees on the Polkadot Relay Chain are calculated based on three parameters:
 
 The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
 
-Weights are a fixed number designed to manage the time is takes to validate a block. Each
+Weights are a fixed number designed to manage the time it takes to validate a block. Each
 transaction has a base weight that accounts for the overhead of inclusion (e.g. signature
 verification) as well as a dispatch weight that accounts for the time to execute the transaction.
 The total weight is multiplied by a per-weight fee to calculate the transaction's weight fee.

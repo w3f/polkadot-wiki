@@ -116,6 +116,12 @@ explicitly call an extrinsic to update the lock that is placed on an account.
 
 These extrinsics are exposed from the Vesting pallet.
 
+If you are using Polkadot-JS, when there are DOT available to vest for an account, then you will
+have the ability to unlock DOT which have already vested from the
+[Accounts](https://polkadot.js.org/apps/#/accounts) page.
+
+![unbond](assets/unlock-vesting.png)
+
 #### Calculating When Vesting DOT Will Be Available
 
 Generally, you should be able to see from the [Accounts](https://polkadot.js.org/apps/#/accounts) by

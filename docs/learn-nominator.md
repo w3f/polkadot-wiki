@@ -26,8 +26,8 @@ Polkadot before bonded funds can be transferred after issuing an unbond transact
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be
-effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
+[this](maintain-guides-how-to-nominate-polkadot) guide to configure it first. Your nominations will
+be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](/img/staking/polkadotjs_nominator_account.png)
 
@@ -56,7 +56,7 @@ rewards. Other nominators will receive no rewards for that era, although their s
 used to calculate entry into the active validator set.
 
 Although it is difficult to determine exactly how many nominators will nominate a given validator in
-the next era, one can estimate based on the current number of nominators. A nominator with only 5
+the next era, one can estimate based on the current number of nominators. A validator with only 5
 nominators in this era, for instance, is unlikely to have more than {{ polkadot_max_nominators }} in
 the next era. An already-oversubscribed validator with 1000 nominators this era, however, is very
 likely to be oversubscribed in the next era as well.

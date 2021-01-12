@@ -9,7 +9,7 @@ description: 账户、账户索引、账户身份和回收机制的解释
 
 ## 地址格式
 
-The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check from Bitcoin with some minor modifications. Notably, the format contains an _address type_ prefix that identifies an address as belonging to a specific network.
+基于 Substrate 的链的地址格式是SS58。SS58 是一种对于比特币的 Base-58-Check 进行小幅修改的格式。需要注意，此格式包含_地址类型_前缀，可以识别地址具体属于哪一个网络。
 
 例如:
 
@@ -23,156 +23,156 @@ It's important to understand that the different formats for different networks a
 
 > Many wallets allow you to convert between formats. Stand-alone tools exist as well, you can find them in the [address coversion tools](#address-conversion-tools) section.
 
-## Address Generation, Derivation, and Portability
+## 地址的生成，派生和迁移
 
-A valid account only requires a private key that can sign on one of the [supported curves and signature schemes](build-protocol-info#cryptography). Most wallets take many steps from a mnemonic phrase to account key, which affects the ability to use the same mnemonic phrase in multiple wallets. Wallets that use different steps will arrive at a different set of addresses from the same mnemonic.
+一个有效的账户只需要一个可以在[supported curves and signature scheme](build-protocol-info#cryptography)签名的私钥。多数钱包然间从助记词到生成账户需要经由许多步骤。同一组助记词，不同钱包采用不同步骤生成的账户也不会相同。
 
-### Seed Generation
+### 助记词(种子) 生成
 
 Most wallets generate a mnemonic phrase for users to back up their wallets and generate a private key from the mnemonic. Not all wallets use the same algorithm to convert from mnemonic phrase to private key.
 
-Subkey and Polkadot-JS based wallets use the BIP39 dictionary for mnemonic generation, but use the entropy byte array to generate the private key, while full BIP39 wallets (like Ledger) use 2048 rounds of PBKDF2 on the mnemonic. As such, the same mnemonic will not generate the same private keys. See [Substrate BIP39](https://github.com/paritytech/substrate-bip39) for more information.
+基于 Subkey 和 Polkadot-JS 的钱包采用BIP39词典来生成助记词，使用熵字节数组来生成私钥，这有别于其他 BIP39 钱包软件(如Ledger)采用 PBKDF2。所以，同一组助记词在经由这两种算法后并不能产生同样的私钥。更多相关细节请参阅[Substrate BIP39](https://github.com/paritytech/substrate-bip39)
 
-### Derivation Paths
+### 衍生路径
 
-Many Polkadot key generation tools support hard and soft derivation. See the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) for details and examples of derivation path formats. The Polkadot-JS Apps and Extension as well as Parity Signer support custom derivation paths using the same syntax as Subkey.
+许多 Polkadot 密钥生成工具支持硬派和软派生。更多关于派生路径的细节和例子请参考 [Subkey 文档](https://substrate. dev/docs/en/knowledgebase/integrate/subkey) 。Polkadot-JS 的应用和拓展同 Parity Signer 也支持采用和 Subkey 相同语法的自定义派生路径。
 
-Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase. This will generate separate seeds for separate paths, which allows separate signing keys with the same mnemonic, e.g. `<mnemonic phrase>//polkadot` and `<mnemonic phrase>//kusama`. Although you may correctly save the mnemonic phrase, using it in another wallet will not generate the same addresses unless both wallets use the same derivation paths.
+一些钱包会自动将派生路径添加到生成的助记词短语的末尾。这将为单独的路径生成单独的种子，从而允许使用相同的助记符，例如`<mnemonic phrase>//Polkadot` 和 `<mnemonic phrase>//Kusama`。尽管您可以正确保存助记词短语，但除非在两个钱包中使用相同的派生路径，否则在另一个钱包中使用它将不会生成相同的地址。
 
-Polkadot and Kusama both have paths registered in the [BIP44 registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
+Polkadot 和 Kusama 都在[BIP44注册表](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)中注册了路径。
 
 > **Warning:** You must have both the parent private key as well as the derivation path to arrive at the key for an address. Do not use custom derivation paths unless you are comfortable with your understanding of this topic.
 
-### Portability
+### 可移植性
 
-The above information brings us to portability: the ability to use a mnemonic phrase or seed across multiple wallets. Portability depends on a number of factors:
+以上信息为我们带来了可移植性：在多个钱包中使用助记词或种子的能力。可移植性取决于许多因素：
 
-- Derivation path
-- Mnemonic format
-- Seed derivation
-- Signature scheme
+- 派生路径
+- 助记符格式
+- 种子衍生
+- 签名方案
 
-If you want to use the same mnemonic across multiple wallets, make sure that they follow compatible methods for generating keys and signing messages. If you cannot find understandable documentation, reach out to the project maintainers.
+如果要在多个钱包中使用相同的助记符，请确保它们遵循兼容生成密钥和签名消息的方法。如果找不到可理解的文档，请与项目维护人员联系。
 
-|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-|:----------------------- |:---------------:|:---------------:|:---------------:|:---------------------------:|
-| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps        |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                  |  Standard\*   |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
+|                  | 助记符格式  |     派生路径      |     种子衍生      |            签名支持             |
+|:---------------- |:------:|:-------------:|:-------------:|:---------------------------:|
+| Polkadot{.js} 扩展 |   标准   |     用户自定义     |     BIP32     |           sr25519           |
+| Polkadot-JS 应用程序 | 标准\* |     用户自定义     |     BIP32     | sr25519, ed25519, secp256k  |
+| 账本               | BIP39  | BIP44&dagger; | BIP32&Dagger; |        ed25519&sect;        |
+| Subkey           | 标准\* |     用户自定义     |     BIP32     | sr25519, ed25519, secp256k1 |
 
-\* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with BIP39.
+\ * 附带 BIP39 的 Ed25519 密钥具有[有限的兼容性](https://github.com/paritytech/substrate-bip39)。
 
-&dagger; [BIP44 Registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
+&dagger; [BIP44 注册表](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 
-&Dagger; Ed25519 and BIP32 based on [Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)
+&Dagger; 基于[Khovratovich](https://github.com/LedgerHQ/orakolo/blob/master/papers/Ed25519_BIP%20Final.pdf)的 Ed25519 和 BIP32
 
-&sect; Sr25519 planned
+&sect; Sr25519 计划
 
-### For the Curious: How Prefixes Work
+### 好奇：前缀的工作原理
 
-The [SS58 document](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) states that:
+这是[ SS58 文档](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58))的申明：
 
-- Polkadot has an address type of `00000000b`, so `0` in decimal.
-- Kusama (Polkadot Canary) has an address type of `00000010b`, so `2` in decimal.
-- Generic Substrate has `00101010b` as address type, which is `42` in decimal.
+- Polkadot 的地址类型为`000000000`，所以`0`是十进制。
+- Kusama (Polkadot 金丝雀) 的地址类型为`00000010b`，因此`2`以十进制表示。
+- 通用 Substrate 的地址类型为`00101010b`，十进制为`42`。
 
-Because Base58-check alphabet has no number 0, the lowest value is indeed 1. So `00000000b` is 1 in Base58-check. If we try to [decode](https://www.better-converter.com/Encoders-Decoders/Base58Check-to-Hexadecimal-Decoder) a Polkadot address like `1FRMM8PEiWXYax7rpS6X4XZX1aAAxSWx1CrKTyrVYhV24fg`, the result is `000aff6865635ae11013a83835c019d44ec3f865145943f487ae82a8e7bed3a66b29d7`. The first byte is `00`, which is indeed `00000000` in binary and `0` in decimal and thus matches the address type of Polkadot.
+因为 Base58-check 字母没有数字0，所以最小值确实是1。因此，`00000000b`在 Base58 中是1。如果我们尝试[解码](https://www.better-converter.com/Encoders-Decoders/Base58Check-to-Hexadecimal-Decoder)诸如` 1FRMM8PEiWXYax7rpS6X4XZX1aAAxSWx1CrKTyrVYhV24fg `的Polkadot地址，则结果为` 000aff6865635ae11013a83835c019d44ec3f865145943f487ae82a8b7e7bed`。第一个字节是`00`，实际上既是二进制的`00000000`又是十进制的`0`，因此它与 Polkadot 的地址类型匹配。
 
-Let's take a look at Substrate addresses. If we decode `5CK8D1sKNwF473wbuBP6NuhQfPaWUetNsWUNAAzVwTfxqjfr`, we get `2a0aff6865635ae11013a83835c019d44ec3f865145943f487ae82a8e7bed3a66b77e5`. The first byte is `2a` which when [converted from hex to decimal](https://www.rapidtables.com/convert/number/hex-to-decimal.html) is 42. 42 is `00101010` in binary, just as the SS58 document states.
+让我们看一下 Substrate 的地址。如果我们解码` 5CK8D1sKNwF473wbuBP6NuhQfPaWUetNsWUNAAzVwTfxqjfr`，则会得到` 2a0aff6865635ae11013a83835c019d44ec3f865145943f487ae82a8e7bed3a66b77e5`。第一个字节是`2a`，当[从十六进制转换为十进制](https://www.rapidtables.com/convert/number/hex-to-decimal.html)时是42。42的二进制是`00101010`，就像 SS58 文档所述的那样。
 
-Finally, let's look at Kusama addresses. Decoding `CpjsLDC1JFyrhm3ftC9Gs4QoyrkHKhZKtK7YqGTRFtTafgp` gives us `020aff6865635ae11013a83835c019d44ec3f865145943f487ae82a8e7bed3a66b0985` with the first byte being `02`, just as specified. If we try a Kusama address that starts with a completely different letter, like `J4iggBtsWsb61RemU2TDWDXTNHqHNfBSAkGvVZBtn1AJV1a`, we still get `02` as the first byte: `02f2d606a67f58fa0b3ad2b556195a0ef905676efd4e3ec62f8fa1b8461355f1142509`. It seems counterintuitive that some addresses always have the same prefix and others like Kusama can vary wildly, but it's just a quirk of Base58-check encoding.
+最后，让我们看一下 Kusama 的地址。解码` CpjsLDC1JFyrhm3ftC9Gs4QoyrkHKhZKtK7YqGTRFtTafgp`会让我们得到` 020aff6865635ae11013a83835c019d44ec3f865145943f487ae82a8e7bed3a66b0985`，正如被指定的那样，其中第一个字节为`02`。如果我们尝试以完全不同的字母，例如` J4iggBtsWsb61RemU2TDWDXTNHqHNfBSAkGvVZBtn1AJV1a`，我们仍然将`02`作为第一个字节：` 02f2d606a67f58fa0b3ad2b556195a0ef905676efd4e2114`。从直觉上看，有些地址总是有相同的前缀，而其他一些地址像是用 Kusama 生成的却可能千差万别，但这只是对于 Base58-check 编码的怪癖。
 
-## Obtaining and Managing an Address
+## 获取和管理地址
 
 The **most user-friendly** way to create a Polkadot or Kusama address is through the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
 
-A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
+**更方便和推荐**的将帐户保存在计算机上方法是使用[ Polkadot {.js}扩展名](https://github.com/polkadot-js/extension)。此扩展程序可以记住您的帐户，让您不必担心即可清除浏览器缓存。不过，不要忘记备份您的种子短语 - 如果您无法使用这台计算机，或者扩展名以某种方式崩溃而无法修复，则该短语将派上用场。
 
-Please note that as this keeps your accounts in the browser, it is not a safe place to keep large holdings. By definition, a browser is a "hot wallet" and susceptible to a wide range of attacks, so keep your funds in cold storage when dealing with non-trivial amounts. For improved security, you can securely stash away the seed phrase for your accounts and remove all traces of the accounts from your computer after creating them.
+请注意，由于这会将您的帐户保留在浏览器中，因此这里不是一个存放大量资产的安全之地。根据定义，浏览器是一个“热钱包”，容易受到各种各样的攻击，因此，在处理不重要的数额时，请将资金保存在冷库中。为了提高安全性，您可以安全地隐藏帐户的种子短语，并在创建帐户后从计算机中删除所有帐户痕迹。
 
-Other than the extension and the default UI, Polkadot and Kusama addresses can also be created with the [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is intended for users comfortable with using the command line and can seem intimidating, but is quite approachable. Follow the instructions in the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey). When used properly, Subkey is the **most secure** available method of creating an account.
+除了扩展名和默认UI外，还可以使用[ 子键工具](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey)。子键旨在供用户熟悉使用命令行使用，并且看起来令人生畏，但相当平易近人。请按照[子键文档](https://substrate.dev/docs/en/knowledgebase/integrate/subkey)。如果使用得当，子键是创建帐户的**最安全**的可用方法。
 
-There is also the very secure [Parity Signer](https://www.parity.io/signer/). This keeps your keys on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible phone that you are comfortable using only for Parity Signer.
+还有一个非常安全的[奇偶校验签名人](https://www.parity.io/signer/)。这样可以将您的钥匙保持在气密的手机上。但是，这确实需要获得您常用的且仅用于 Parity Signer 的旧 Android 或 iOS 兼容手机。
 
-Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger).
+账本可以与硬件钱包集成。完整指南可在[此处](learn-ledger)获得。
 
-Alternatively, you might find other wallets on the [Wallet](build-wallets) page, but bear in mind that some of these are **unaudited** and are not officially affiliated with Web3 Foundation or the Polkadot project unless otherwise stated.
+另外，您可能会在[钱包](build-wallets)页面上找到其他钱包，但请记住，其中一些是**未经审计的**，除非另有说明，否则它们并不隶属于Web3 Foundation或Polkadot的正式项目。
 
-## Balance Types
+## 余额类型
 
-On Polkadot there are four different balance types that indicate whether your balance can be used for transfers, to pay fees, or must remain frozen and not used due to an on-chain requirement.
+在 Polkadot 上，有四种不同的余额类型，提示您的余额是否可以用于转账，支付费用，或者由于链上要求而必须冻结且不被使用。
 
-The balance types are defined by the `AccountData` struct in Substrate. The four types of balances include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee_frozen` (`feeFrozen` in camel-case).
+余额类型由 Substrate 中的`AccountData`结构定义。四种类型的余额包括`free`，`reserved`，`misc_frozen` (驼峰体为`miscFrozen`) 和` fee_frozen` (驼峰体为`feeFrozen`)。
 
-In general, the **usable** balance of the account is the amount that is `free` minus any funds that are considered frozen (either `misc_frozen` or `free_frozen`) and depends on the reason for which the funds are to be used. If the funds are to be used for transfers then the usable amount is the "free" amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction fees than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
+通常，帐户的**可用**余额是`自由`的金额减去任何被视为冻结的资金 (`misc_frozen`或`free_frozen`) ，具体取决于使用资金的原因。如果资金将用于转账，则可用金额为“自由”金额减去任何`misc_frozen`资金。但是，如果要使用这些资金来支付交易费用，则可用金额将是“自由”资金减去`fee_frozen `的任何资金。
 
-The "total" balance of the account is considered the amount of "free" funds in the account subtracted by any funds that are "reserved." Reserved funds are held due to on-chain requirements and can usually be freed by making some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity is registered, but by clearing the identity you can unreserve the funds and make them free again.
+帐户的“总”余额被认为是帐户中“自由”资金的数量减去任何“保留”的资金。保留的资金是根据链上的要求持有的，通常可以通过执行一些链上操作来释放。例如，“身份”模块在注册链上身份时保留资金，但是通过清除身份，您可以取消保留资金并再次释放它们。
 
-## Existential Deposit and Reaping
+## 现有存款和回收
 
-When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 1 DOT (on Polkadot mainnet) .
+生成帐户 (地址) 时，仅生成一个_密钥_，您可以使用该密钥进行访问。该帐户尚不存在，为此，它需要0.001666666667个KSM(在kusama上) 或1个DOT(在Polkadot主网上) 使其被生成。
 
-Having an account go below the existential deposit causes that account to be _reaped_. The account will be wiped from the blockchain's state to conserve space, along with any funds in that address. You do not lose access to the reaped address - as long as you have your private key or recovery phrase, you can still use the address - but it needs a top-up of another existential deposit to be able to interact with the chain.
+如果帐户低于现有存款，则会导致该帐户_被回收_。该帐户以及该地址中的所有资金将从区块链状态中删除，以节省空间。您不会失去对回收地址的访问权限 - 只要您拥有私钥或恢复短语，您仍然可以使用该地址 - 但它需要充值额外的存续金额才能与链进行交互。
 
-Here's another way to think about existential deposits. Ever notice those `Thumbs.db` files on Windows or `.DS_Store` files on Mac? Those are junk, they serve no specific purpose other than making previews a bit faster. If a folder is completely empty save for such a file, you can remove the folder to clear junk off your hard drive. That does not mean you lose access to this folder forever - you can always recreate it. You have the _key_, after all - you're the computer's owner. It just means you want to keep your computer clean until you maybe end up needing this folder again, and then recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it, but gets put back when it has at least the existential deposit.
+这是考虑存量的另一种方法。您是否曾经注意到Windows上的`Thumbs.db `文件或Mac上的`.DS_Store`文件？这些都是垃圾邮件，除了使预览速度更快之外，它们没有其他目的。如果保存该文件的文件夹是完全空的，则可以删除该文件夹以清除硬盘驱动器上的垃圾。这并不意味着您将永远失去对该文件夹的访问权限 - 您可以随时重新创建该文件夹。毕竟，您拥有_密钥_ - 您是计算机的所有者。这只是意味着您要保持计算机清洁，直到您可能再次需要此文件夹，然后重新创建它为止。您的地址就像这个文件夹 - 当其中没有任何内容时，会将其从链中删除，但当它至少具有使账户存续的资金时，它将被释放。
 
-## Indices
+## 索引
 
-A Kusama or Polkadot address can have an index. An index is like a short and easy to remember version of an address. Claiming an index requires a deposit which is released when the index is cleared.
+Kusama 或 Polkadot 地址可以具有索引。索引就像一个简短易记版本的地址。索取索引需要保证金，当索引清除时保证金得到释放。
 
-Indices are populated in order. Think of them like slots going from 0 to any arbitrary number:
+索引是按顺序填充的。可以将它们视为从0到任意数字的插槽：
 
 `[0][1][2][3][4][5][6]...`
 
-If slots 0-2 are populated by addresses A, B and C respectively, and I add an existential deposit to address X, that address will automatically be put into slot 3. Henceforth, you can send me money by just sending to `[3]` rather than remembering my whole address.
+如果插槽0-2分别由地址A，B和C填充，并且我在地址X上添加了一个存续资金，那么该地址将自动放入插槽3。此后，您可以通过发送至`[3]`而不是记住我的完整地址。
 
 ```js
 [0][1][2][3][4][5][6]...
 [A][B][C][X][ ][ ][ ]...
 ```
 
-But what if an account gets reaped as explained above? In that case, the index is emptied. In other words, the slot frees up again. If someone creates a new account, they may end up using the same index another address was using before.
+但是，如果如上所述获得了帐户怎么办？在这种情况下，索引将被清空。换句话说，插槽再次释放。如果有人创建了一个新帐户，则他们可能最终会使用另一个地址曾经用过的相同的索引。
 
-It is possible to _freeze_ an index and permanently assign it to an address. This action consumes a deposit but makes sure that the index can never be reclaimed unless released by the holding account.
+可以_冻结_一个索引并将其永久分配给一个地址。此操作会消耗一笔保证金，但要确保除非持有帐户释放该索引，否则永不收回该索引。
 
-To register an index, submit a `claim` extrinsic to the `indices` pallet, and follow up with a `freeze` extrinsic. The easiest way to do this is via PolkadotJS UI through the _Developer -> Extrinsics_ menu:
+要注册索引，请将外部的`申明`提交给`索引`模块，然后从外部进行`冻结`。最简单的方法是通过_Developer-> 的PolkadotJS UI。外部_菜单：
 
-![Indices extrinsics](assets/accounts/index.png)
+![外部索引](assets/accounts/index.png)
 
-To find available indices to claim, [this helper tool may come in handy](https://www.shawntabrizi.com/substrate-js-utilities/indices/).
+要查找可用的索引， [此帮助器工具可能会派上用场](https://www.shawntabrizi.com/substrate-js-utilities/indices/)。
 
-## Identities
+## 身份
 
 The [_Identities pallet_](https://github.com/paritytech/substrate/tree/master/frame/identity) built into Polkadot allows users to attach on-chain metadata to their accounts. This metadata can be verified by independent registrars to provide trustworthiness. To learn more about how to set or release an identity, how to define sub-accounts, or how to become a registrar, please read [this guide](learn-identity).
 
-## Proxy Accounts
+## 代理账户
 
-Polkadot comes with a generalized proxy account system that allows users to keep keys in cold storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the [proxies](learn-proxies) page for more information.
+Polkadot 带有通用的代理帐户系统，该系统允许用户将密钥保留在冷存储中，而代理则使用受限制的 (或不受限制的) 功能代表他们。更多相关信息，请参见[代理](learn-proxies)页面。
 
-## Multi-signature Accounts
+## 多签名账户
 
-It is possible to create a multi-signature account in Substrate-based chains. A multi-signature account is composed of one or more addresses and a threshold. The threshold defines how many signatories (participating addresses) need to agree on the submission of an extrinsic in order for the call to be successful.
+可以在基于 Substrate 的链中创建一个多重签名帐户。多重签名帐户由一个或多个地址和一个阈值组成。阈值定义了需要多少签名者 (参与地址) 同意外部提交才能成功进行呼叫。
 
-For example, Alice, Bob, and Charlie set up a multi-sig with a threshold of 2. This means Alice and Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie and Bob can execute any call without Alice. A threshold is typically a number smaller than the total number of members but can also be equal to it, which means they all have to be in agreement.
+例如，爱丽丝 (Alice)，鲍勃 (Bob) 和查理 (Charlie) 设置了一个阈值为2的多重信号。这意味着即使查理 (Charlie) 不同意，爱丽丝 (Alice) 和鲍勃 (Bob) 也可以执行任何呼叫。同样，查理 (Charlie) 和鲍勃 (Bob) 可以在没有爱丽丝 (Alice) 的情况下执行任何呼叫。阈值通常小于成员总数，但也可以等于成员总数，这意味着它们必须完全一致。
 
 > Learn more about multisig accounts from our [technical explainer video](https://www.youtube.com/watch?v=ZJLqszvhMyM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=25&ab_channel=Polkadot).
 
-Multi-signature accounts have several uses:
+多签名账户有以下用途：
 
-- securing your own stash: use additional signatories as a 2FA mechanism to secure your funds. One signer can be on one computer, another can be on another, or in cold storage. This slows down your interactions with the chain, but is orders of magnitude more secure.
-- board decisions: legal entities such as businesses and foundations use multi-sigs to collectively govern over the entity's treasury.
-- group participation in governance: a multi-sig account can do everything a regular account can. A multi-sig account could be a council member in Kusama's governance, where a set of community members could vote as one entity.
+- 保护您自己的藏匿处：使用其他签署人作为2FA机制来保护您的资金。一个签名者可以在一台计算机上，另一个可以在另一台计算机上，或在冷库中。这减慢了您与链的交互速度，但是安全性提高了几个数量级。
+- 董事会决策：诸如企业和基金会之类的法人实体使用多重签名来共同管理实体的国库。
+- 团体参与治理：多签名帐户可以执行常规帐户可以执行的所有操作。具有多重签名的帐户可以是 Kusama 治理中的理事​​会成员，在该理事会中，一组社区成员可以作为一个实体进行投票。
 
-Multi-signature accounts **cannot be modified after being created**. Changing the set of members or altering the threshold is not possible and instead requires the dissolution of the current multi-sig and creation of a new one. As such, multi-sig account addresses are **deterministic**, i.e. you can always calculate the address of a multi-sig just by knowing the members and the threshold, without the account existing yet. This means one can send tokens to an address that does not exist yet, and if the entities designated as the recipients come together in a new multi-sig under a matching threshold, they will immediately have access to these tokens.
+多签名帐户**创建后无法修改**。不可能更改成员集或更改阈值，而是需要解散当前的多重签名并创建一个新信号。因此，多签名帐户的地址是**确定的**，即您始终可以通过知道成员和阈值来计算多签名的地址，而无需使用该帐户。这意味着可以将令牌发送到尚不存在的地址，并且如果指定为接收方的实体在匹配的阈值下以新的多重签名形式出现，则它们将立即能够访问这些令牌。
 
-### Generating Addresses of Multi-signature Accounts
+### 生成多重签名帐户的地址
 
 > NOTE: Addresses that are provided to the multi-sig wallets must be sorted. The below methods for generating sort the accounts for you, but if you are implementing your own sorting then be aware that the public keys are compared byte-for-byte and sorted ascending before being inserted in the payload that is hashed.
 
-Addresses are deterministically generated from the signers and threshold of the multisig wallet. For a code example (in TypeScript) of generating you can view the internals of `@w3f/msig-util` [here](https://github.com/lsaether/msig-util/blob/master/src/actions/deriveAddress.ts).
+地址是根据多重签名钱包的签名者和阈值来确定生成的。对于生成的代码示例 (在TypeScript 中) 可以查看`@w3f/msig-util`[此处](https://github.com/lsaether/msig-util/blob/master/src/actions/deriveAddress.ts)。
 
-The `@w3f/msig-util` is a small CLI tool that can determine the multisignature address based on your inputs.
+`@w3f/msig-util`是一个小型的CLI工具，可以根据您的输入确定多重签名地址。
 
 ```zsh
 $ npx @w3f/msig-util@1.0.7 derive --addresses 15o5762QE4UPrUaYcM83HERK7Wzbmgcsxa93NJjkHGH1unvr,1TMxLj56NtRg3scE7rRo8H9GZJMFXdsJk1GyxCuTRAxTTzU --threshold 1
@@ -184,31 +184,31 @@ Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 --------------------------------
 ```
 
-The Polkadot-JS Apps UI also supports multi-sig accounts, as documented in the [Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than generating them manually.
+如[帐户生成”页面](learn-account-generation#multi-signature-accounts)中所述，Polkadot-JS Apps UI也支持多签名帐户。这比手动生成它们容易。
 
-### Making Transactions with a Multi-signature Account
+### 使用多重签名帐户进行交易
 
-There are three types of actions you can take with a multi-sig account:
+多重签名帐户可以执行三种类型的操作：
 
-- Executing a call.
-- Approving a call.
-- Cancelling a call.
+- 执行一笔交易
+- 授权一笔交易
+- 撤销一笔交易
 
-In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1` should be used. This function takes only the other signatories and the raw call as its arguments.
+在仅需要一次批准的情况下，应使用便捷方法`as_multi_threshold_1`。此函数仅将其他签名者和原始调用作为其参数。
 
-However, in anything but the simple one approval case, you will likely need more than one of the signatories to approve the call before finally executing it. When you create a new call or approve a call as a multi-sig, you will need to place a small deposit. The deposit stays locked in the pallet until the call is executed. The reason for the deposit is to place an economic cost on the storage space that the multi-sig call takes up on the chain and discourage users from creating dangling multi-sig operations that never get executed. The deposit will be reserved in the caller's accounts so participants in multi-signature wallets should have spare funds available.
+但是，除了简单的一次批准情况以外，您可能需要的不止一种签名者在最终执行交易之前批准该交易。当您创建一笔新交易或授权一笔交易作为多签名，您需要存入少量保证金。存款将保持锁定在托盘中，直到执行交易为止。需要存款的原因是多重签名调用占用链上存储空间付出了经济成本，并阻止用户创建从未执行的悬空多重签名操作。押金将保留在呼叫者的帐户中，因此多签名钱包的参与者应准备可用的备用资金。
 
-The deposit is dependent on the `threshold` parameter and is calculated as follows:
+保证金取决于`threshold`参数，其计算方法如下：
 
 ```
-Deposit = DepositBase + threshold * DepositFactor
+存款=存款基数+阈值*存款因子
 ```
 
-Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
+其中，`存款基数`和`DepositFactor`是在运行时代码中设置的链常量。
 
-Currently, the DepositBase is equal to `deposit(1, 88)` and the DepositFactor is equal to `deposit(0,32)`.
+当前，存款基数等于`存款(1,88)`，而存款因子等于`存款(0,32)`。
 
-The deposit function in JavaScript is defined below, cribbed from the [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/constants.rs#L26).
+JavaScript 的存款功能定义如下，来自[Rust资源](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/constants.rs#L26)。
 
 ```js
 // Polkadot
@@ -227,21 +227,21 @@ console.log("DepositBase", deposit(1, 88));
 console.log("DepositFactor", deposit(0, 32));
 ```
 
-Thus the deposit values can be calculated as shown in the table below.
+因此，可以如下表所示计算存款值。
 
-|               | Polkadot     | Kusama          |
-| ------------- | ------------ | --------------- |
-| DepositBase   | 200880000000 | 3347999999941.4 |
-| DepositFactor | 320000000    | 5333333312      |
+|      | Polkadot     | Kusama          |
+| ---- | ------------ | --------------- |
+| 存款基数 | 200880000000 | 3347999999941.4 |
+| 存款因子 | 320000000    | 5333333312      |
 
-Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob, and Charlie. First Alice will create the call on chain by calling `as_multi` with the raw call. When doing this Alice will have to deposit 0.20152 DOT while she waits for either Bob or Charlie to also approve the call. When Bob comes to approve the call and execute the transaction, he will not need to place the deposit and Alice will receive her deposit back.
+让我们构想一个在 Polkadot 上进行多重签名的例子，该签名的阈值为2个和3个签名者：Alice(爱丽丝)，Bob(鲍勃) 和Charlie(查理)。 首先爱丽丝(Alice) 将通过使用原始调用`as_multi`来创建链上交易。这样做时，爱丽丝(Alice) 在等待鲍勃(Bob) 或查理(Charlie) 也授权交易时必须存入0.20152 DOT。当鲍勃(Bob) 批准交易并执行交易时，他将不需要存入保证金，而爱丽丝(Alice) 将收回她的保证金。
 
 ## Address Conversion Tools
 
 You can use the tool below to convert any SS58 address for any network for use on different networks.
 
 <div class="address-changer">
-  <input class="address-changer-input" id="input" placeholder="Paste your address" oninput="globalThis.addressChanger()" />
+  <input class="address-changer-input" id="input" placeholder="贴下你的地址" oninput="globalThis.addressChanger()" />
   <select class="address-changer-select" id="prefix-select" oninput="globalThis.addressChanger()">
     <option value="0">Polkadot</option>
     <option value="2">Kusama</option>
@@ -257,6 +257,6 @@ You can use the tool below to convert any SS58 address for any network for use o
 
 Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform).
 
-## Resources
+## 资源
 
-- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill Laboon and Chinmay Patel of BlockX Labs.
+- [了解 Polkadot 中的帐户和密钥](https://www.crowdcast.io/e/polkadot-keys)-解释了 Polkadot 中不同类型的帐户和密钥的用途，与 BlockX Labs 的 Bill Laboon 和 Chinmay Patel 合作。
