@@ -44,8 +44,6 @@ We primarily use [Matrix](https://matrix.org) across the organization and to com
 ### Chat
 
 - [Polkadot Discord](https://discord.gg/wGUDt2p) (RECOMMENDED)
-- [Polkadot Telegram](https://t.me/PolkadotOfficial)
-- [Kusama Telegram](https://t.me/kusamanetworkofficial)
 - [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
 ### Social media and forums

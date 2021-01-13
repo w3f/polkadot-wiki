@@ -22,7 +22,6 @@ Anson is a Technical Educator at Web3 Foundation. Before that, he worked as a Hy
 ### Bill Laboon
 
 - email: [bill@web3.foundation](mailto:bill@web3.foundation)
-- telegram: [@billlaboon](https://t.me/billlaboon)
 - matrix / riot / element: [@bill:web3.foundation](https://matrix.to/#/@bill:web3.foundation)
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
 
