@@ -21,7 +21,8 @@
     "rename-version": "docusaurus-rename-version",
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "generateErrorTable": "node scripts/generateErrorTable.js >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write"
   },
   "devDependencies": {
     "docusaurus": "^1.14.6"
