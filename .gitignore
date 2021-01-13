@@ -82,3 +82,6 @@ kusama-wiki.zip
 *.testing.png
 *.o.png
 *.r.png
+
+# autogenerates at each run / build
+docs/build-ss58-registry.md
