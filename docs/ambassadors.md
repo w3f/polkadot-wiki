@@ -12,6 +12,7 @@ the Polkadot community and ecosystem (Ambassadors).
 If you are enthusiastic about Polkadot and Web3 and are willing to help the community grow you can
 join the program and receive funding for hosting events, access to communication channels of
 core-team members, expanded access to Polkadot events.  
+
 There are many ways you can be involved in expanding Polkadot’s ecosystem, for example by:
 
 - Contributing code and documentation related to the ecosystem
