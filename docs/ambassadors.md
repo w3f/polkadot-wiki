@@ -4,7 +4,7 @@ title: Polkadot Ambassador Programme
 sidebar_label: Polkadot Ambassador Programme
 ---
 
-The Polkadot Ambassador Programme is an initiative run by Web3Foundation to support contributors to
+The Polkadot Ambassador Programme is an initiative run by Web3 Foundation to support contributors to
 the Polkadot community and ecosystem (Ambassadors).
 
 ## How it works
