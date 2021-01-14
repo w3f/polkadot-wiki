@@ -33,6 +33,7 @@ deliver us a better future.
 - email: [bill@web3.foundation](mailto:bill@web3.foundation)
 - matrix / riot / element: [@bill:web3.foundation](https://matrix.to/#/@bill:web3.foundation)
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
+- telegram: [@BillLaboon](https://t.me/BillLaboon)
 
 Bill Laboon is the Technical Education Lead at Web3 Foundation, after spending the previous five
 years teaching Computer Science at the University of Pittsburgh. He is the author of two books:

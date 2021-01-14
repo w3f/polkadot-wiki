@@ -72,3 +72,52 @@ From Alice's account on the Relay Chain, she is able to send some amount to para
 Alice is now able to send from her account on parachain 200 to her account on parachain 300.
 
 ![rococo lateral transfer part 2](assets/rococo/rococo-lateral-transfer2.png)
+
+# Rococo V1 Parachain Requirements
+
+The purpose of this document is to clearly describe the requirements for chain builders who wish to participate as [parachains](https://wiki.polkadot.network/docs/en/learn-parachains#docsNav) in the [Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769). Furthermore, this document aims to provide helpful guidance in order to create a more successful outcome for all involved.
+
+[Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain#overview-of-xcmp) testing and will undergo rapid changes, updates and chain state resets as it develops. After the initial tests are successful on Rococo, we envision that in the long run it will be integrated into the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) test network.
+
+## General Strategy
+
+In order to improve Rococo quickly the network will be regularly updated and restarted. This generally involves the update of the client and runtime code as well as the reset of the chain state. The initial parachains will be onboarded every few days, with new parachains only added when the network is running stably. During periods of instability we may de-register parachains to de-load the network, with the intent of re-registering those parachains once stability has improved. When the network appears to be scaling smoothly we will register parachains on a first-come, first-serve basis.
+
+The minimal requirements for any parachain candidate to be considered for the parachain registration process are the following:
+
+1. Maintain at least one Rococo V1 validator
+2. Maintain at least one parachain collator
+3. Sign-up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
+
+### Requirements as an example walk-through
+
+1. Maintain **at least one** validator (full block authoring node) for [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
+   1. Treat this like a production grade Polkadot node - see [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
+   1. Node Setup - use one of the options below
+      1. Build from source:
+         1. `git clone https://github.com/paritytech/polkadot`
+         1. `cd polkadot`
+         1. `git checkout master`
+         1. `cargo build --release --features=real-overseer`
+         1. `./target/release/polkadot --validator --chain rococo --name <your_rococo_validator_name>`
+      1. Use Docker:
+         1. `docker run -d parity/rococo:<tag_following_polkadot> --validator --chain rococo --name <your_rococo_validator_name>`
+   1. Check your node on the [Rococo Telemetry](https://telemetry.polkadot.io/#list/Rococo)
+   1. Generate your [Rococo V1 ValidatorId Address](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#launching-the-validators)
+   1. Follow [Rococo Validator Lounge](https://matrix.to/#/!mAfyXPbSILyZLvZwSJ:matrix.parity.io?via=matrix.parity.io) announcements for Rococo V1 validator updates, which can require one of the following scenarios
+      1. Update client
+      1. Update client and purge-chain
+1. Maintain at least one collator (full block authoring node) for your team’s parachain.
+   1. `cd <root_cumulus_based_parachain_code>`
+   1. `cargo build --release`
+   1. `./target/release/<parachain_collator_name> --version`
+   1. `./target/release/<parachain_collator_name> export-genesis-state --parachain-id <your_registered_parachain_id> > genesis-state`
+   1. `./target/release/<parachain_collator_name> export-genesis-wasm > genesis-wasm`
+   1. `./target/release/<parachain_collator_name> --collator --parachain-id <your_registered_parachain_id> --execution wasm --chain rococo`
+1. Sign up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
+1. After receiving ROC’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#submitting-the-setkeys-transaction)in [Rococo Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/extrinsics)
+1. Follow the [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#request-parachain-registration)
+
+### Tips
+
+If you would like to test your setup first on a local machine, you should be able to do so by following the instructions in the readme [launch a local setup](https://github.com/paritytech/cumulus#launch-a-local-setup-including-a-relay-chain-and-a-parachain).

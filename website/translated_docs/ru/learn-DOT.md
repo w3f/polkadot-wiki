@@ -79,6 +79,10 @@ Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that
 
 These extrinsics are exposed from the Vesting pallet.
 
+If you are using Polkadot-JS, when there are DOT available to vest for an account, then you will have the ability to unlock DOT which have already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+
+![unbond](assets/unlock-vesting.png)
+
 #### Calculating When Vesting DOT Will Be Available
 
 Generally, you should be able to see from the [Accounts](https://polkadot.js.org/apps/#/accounts) by looking at your accounts and seeing when the vesting will finish. However, some DOT vest with "cliffs" - a single block where all the DOT are released, instead of vesting over time. In this case, you will have to query the chain state directly to see when they will be available (since technically, the vesting has not yet started - all of the vesting will occur in a single block in the future).
