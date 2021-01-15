@@ -58,7 +58,8 @@ that will pass through Polkadot's normal governance processes. The core function
 to be unlocked sequentially &mdash; several features can be unlocked with a single proposal.
 
 Parachains will first roll out on Kusama with a common good parachain, followed by the first slot
-auction and winner's onboarding. Once those parachains are working well on Kusama, the first common good parachain will launch, and then the first slot auction will take place on Polkadot.
+auction and winner's onboarding. Once those parachains are working well on Kusama, the first common
+good parachain will launch, and then the first slot auction will take place on Polkadot.
 
 ## Polkadot 2.0
 
