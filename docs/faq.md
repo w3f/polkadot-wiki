@@ -49,7 +49,7 @@ stake-weighted votes and 2) equalize the stake backing each validator as much as
 You will likely want to campaign your validator to the community in order to get more backing. You
 are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
 For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint program called [Thousand Validators][thousand validators] that will nominate
+also run a joint program called [Thousand Validators](thousand-validators) that will nominate
 validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
