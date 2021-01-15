@@ -18,7 +18,7 @@ Polkadot 中使用的 VRF 与 Ouroboros Praos 中的大致相同。 Ouroboros �
 
 具体操作如下:
 
-时隙长度为 6 秒的时间单位。每个时隙可以包含一个区块，但可以不包含区块。时隙构成了时期(epochs) - 在 Kusama 中，2400时隙构成一个时期，这使一个时期长达六个小时。
+Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not. Slots make up epochs - on Polkadot, 2400 slots make one epoch, which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input the following:
 

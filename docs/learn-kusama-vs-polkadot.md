@@ -14,12 +14,13 @@ conservative, prioritizing stability and dependability.
 
 Kusama was released as an early version of the same code to be used in Polkadot, which means they
 share the same underlying architecture: a multichain, heterogeneously-sharded design based on
-Nominated Proof of Stake (NPoS). Both networks also share key innovations like on-chain governance,
-hot-swappable runtimes for forkless, on-chain upgrades, and Cross-Chain Message Passing (XCMP) for
-interoperability. Governance on both Polkadot and Kusama is designed to be decentralized and
-permissionless, giving a say in how the network is run to everyone who owns the native token (DOT
-for Polkadot, KSM for Kusama). Therefore, **over time the networks will evolve independently,
-converging or diverging according to the decisions of their respective communities.**
+[Nominated Proof of Stake (NPoS)](learn-consensus). Both networks also share key innovations like
+on-chain [governance](learn-governance), hot-swappable runtimes for forkless, on-chain upgrades, and
+[Cross-Chain Message Passing (XCMP)](learn-crosschain) for interoperability. Governance on both
+Polkadot and Kusama is designed to be decentralized and permissionless, giving a say in how the
+network is run to everyone who owns the native token (DOT for Polkadot, KSM for Kusama). Therefore,
+**over time the networks will evolve independently, converging or diverging according to the
+decisions of their respective communities.**
 
 ## Key differences
 
@@ -33,22 +34,19 @@ The first key technical difference between Polkadot and Kusama is that Kusama ha
 governance parameters that allow for faster upgrades. Kusama is up to four times faster than
 Polkadot, with seven days for token holders to vote on referendums followed by an enactment period
 of eight days, after which the referendum will be enacted on the chain. This means stakeholders need
-to stay active and vigilant if they want to keep up with all the proposals, referenda , and
-upgrades, and validators on Kusama often need to update at short notice. On Polkadot, votes last 28
-days followed by an enactment period of 28 days. This does not mean that the Kusama blockchain
-itself is faster, in the sense of faster block times or transaction throughput (these are the same
-on both networks), but that there's a shorter amount of time between governance events such as
-proposing new referenda, voting, and enacting approved upgrades. This allows Kusama to adapt and
-evolve faster than Polkadot.
+to stay active and vigilant if they want to keep up with all the proposals, referenda, and upgrades,
+and validators on Kusama often need to update on short notice.
+
+On Polkadot, votes last 28 days followed by an enactment period of 28 days. This does not mean that
+the Kusama blockchain itself is faster, in the sense of faster block times or transaction throughput
+(these are the same on both networks), but that there's a shorter amount of time between governance
+events such as proposing new referenda, voting, and enacting approved upgrades. This allows Kusama
+to adapt and evolve faster than Polkadot.
 
 ### Lean setups
 
 Teams wishing to run a parachain need to bond tokens as security. The bonding requirement on Kusama
-is likely to be lower than on Polkadot. Kusama validators can also benefit from the
-[1000 Validators Program](https://polkadot.network/join-kusamas-thousand-validators-programme/),
-which helps them kickstart their Kusama nodes with nominations from Web3 Foundation and Parity
-Technologies. For those who want to validate on Kusama _and_ Polkadot, the same setup and
-infrastructure can be used for both networks.
+is likely to be lower than on Polkadot.
 
 ### Use cases
 
@@ -57,19 +55,22 @@ applications and those that entail high-value transactions requiring bank-level 
 stability. The initial use case for Kusama is as a pre-production environment, a “canary network”.
 Building on Kusama first allows teams to test things out in a live, fully decentralized and
 community-controlled network with real-world conditions and lower stakes in the event of problems or
-bugs than on Polkadot. Many projects will maintain parachains on both networks, experimenting and
-testing new technologies and features on Kusama before deploying them to Polkadot. Some teams will
-decide just to stay on Kusama, which is likely to be a place where we see some exciting
-experimentation with new technologies going forward. Projects that require high-throughput but don’t
-necessarily require bank-like security, such as some gaming, social networking, and content
-distribution applications, are particularly good candidates for this use case. Kusama may also prove
-to be the perfect environment for ambitious experiments with new ideas and new innovations in areas
-like governance, incentives, monetary policy, and DAOs (decentralized autonomous organizations).
-Future upgrades to the Polkadot runtime will also likely be deployed to Kusama before Polkadot
-mainnet. This way, not only will we be able to see how these new technologies and features will
-perform under real-world conditions before bringing them to Polkadot, but teams who have deployed to
-both networks will also get an advance look at how their own technology will perform under those
-upgrades.
+bugs than on Polkadot.
+
+Many projects will maintain parachains on both networks, experimenting and testing new technologies
+and features on Kusama before deploying them to Polkadot. Some teams will decide just to stay on
+Kusama, which is likely to be a place where we see some exciting experimentation with new
+technologies going forward. Projects that require high-throughput but don’t necessarily require
+bank-like security, such as some gaming, social networking, and content distribution applications,
+are particularly good candidates for this use case.
+
+Kusama may also prove to be the perfect environment for ambitious experiments with new ideas and new
+innovations in areas like governance, incentives, monetary policy, and DAOs (decentralized
+autonomous organizations). Future upgrades to the Polkadot runtime will also likely be deployed to
+Kusama before Polkadot mainnet. This way, not only will we be able to see how these new technologies
+and features will perform under real-world conditions before bringing them to Polkadot, but teams
+who have deployed to both networks will also get an advance look at how their own technology will
+perform under those upgrades.
 
 ## Going forward
 

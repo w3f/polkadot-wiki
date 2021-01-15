@@ -77,8 +77,9 @@ Parachain Development Kits are a set of tools that enable developers to create t
 
 ### Deploying parachains
 
-Please see the builder's article on [deploying parachains](build-deploy-parachains).
+Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for information on compiling and deploying a parachain.
 
 ## Resources
 
 - [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Blog post by Polkadot co-founder Rob Habermeier that introduced parachains in 2017 as "a simpler form of blockchain, which attaches to the security provided by a Relay Chain rather than providing its own. The Relay Chain provides security to attached parachains, but also provides a guarantee of secure message-passing between them."
+- [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A technical walkthrough of how parachains interact with the Relay Chain.

@@ -133,10 +133,10 @@ You will need to build the `polkadot` binary from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
 code available in the **v0.8** branch.
 
-You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but
-you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list
-of all the potential 0.8 releases. You should replace `v0.8.8` with the latest build (i.e., the
-highest number). You can also find the latest Kusama version on the
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.26-1**,
+but you should review the output from the "git tag" command to see a list of all the potential 0.8
+releases. You should replace `VERSION` with the latest build (i.e., the highest number). You can
+also find the latest Kusama version on the
 [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
@@ -145,8 +145,9 @@ highest number). You can also find the latest Kusama version on the
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.8"
-git checkout v0.8.8
+git tag -l | sort -V | grep -v -- '-rc'
+echo Get the latest version and replace VERSION (below) with it.
+git checkout VERSION
 ./scripts/init.sh
 cargo build --release
 ```
@@ -361,6 +362,12 @@ validator set.
 validator set, you are now running a Kusama validator! If you need help, reach out on the
 [Kusama forum](https://forum.kusama.network/) or in the
 [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
+
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
+to provide support for community validators. If you are interested in applying for the programme,
+you can find more information [on the wiki page](thousand-validators.md).
 
 ## FAQ
 

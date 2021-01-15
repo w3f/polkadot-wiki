@@ -14,11 +14,11 @@ You can claim KSM by signing a message with the Ethereum account that holds your
 
 For most users, we recommend using the [Polkadot{.js} browser extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) since it will allow you to store your encrypted keystore locally.
 
-> NOTICE: Unfortunately, at this time Kusama does not have hardware wallet support.
+In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger), or [Parity Signer](https://wiki.polkadot.network/docs/en/learn-account-generation#parity-signer).
 
-Another option you may consider using is the Subkey command line utility, which will allow you to take extra steps to protect the security of your key. Additionally, another option is the Polkawallet mobile wallet, although it requires an extra step to generate Kusama addresses.
+Another option you may consider using is the Subkey command line utility, which will allow you to take extra steps to protect the security of your key.
 
-You can also use the Kusama Ledger application.
+There are a variety of other wallets that you can use; see the [Polkadot Wiki Wallets page](https://wiki.polkadot.network/docs/en/build-wallets). Many of these wallets support generating Kusama accounts as well.
 
 ### Using Kusama Ledger application
 
@@ -171,7 +171,7 @@ The next step is to go to the MyCrypto application and click on "Sign & Verify M
 
 When you click "Sign Message" you will get a JSON output like the below:
 
-![Получить шаг 3](assets/kusama/claim/claim_3.png)
+![Claim Step 3](assets/kusama/claim/claim_3.png)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
 
@@ -185,7 +185,7 @@ At this point you will see a success message if everything went right and your K
 
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps immediately.
 
-Having trouble? Get support in the KSM [Claims Support](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders) channel.
+Having trouble? Send an email to [support@polkadot.network](mailto:support@polkadot.network).
 
 ### Third Party Claims Processes
 

@@ -162,7 +162,8 @@ applications as parachains. For more info see [here](build-pdk).
 
 ### Deploying parachains
 
-Please see the builder's article on [deploying parachains](build-deploy-parachains).
+Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for
+information on compiling and deploying a parachain.
 
 ## Resources
 
@@ -171,6 +172,8 @@ Please see the builder's article on [deploying parachains](build-deploy-parachai
   form of blockchain, which attaches to the security provided by a Relay Chain rather than providing
   its own. The Relay Chain provides security to attached parachains, but also provides a guarantee
   of secure message-passing between them."
+- [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A
+  technical walkthrough of how parachains interact with the Relay Chain.
 
 [crowdfunding pallet]:
   https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs

@@ -4,7 +4,7 @@ title: Unbonding and Rebonding
 sidebar_label: Unbonding and Rebonding
 ---
 
-The following describes how to stop nominating or validating and retrieve your tokens. Please note that all networks on which you can nominate have a delayed exit period, called the _unbonding period_, which serves as a cooldown. You will not be able to transfer your tokens before this period has elapsed.
+The following describes how to stop nominating or validating and retrieve your tokens. Please note that all networks on which you can nominate have a delayed exit period, called the _unbonding period_, which serves as a cooldown. You will not be able to transfer your tokens before this period has elapsed, and you will not receive any staking rewards during this period (as you are not nominating any validators).
 
 ### Step 1: Stop Nominating
 
@@ -20,7 +20,7 @@ After you confirm this transaction, your tokens will remain _bonded_. This means
 
 ### Step 2: Unbonding an amount
 
-To unbond the amount, click the little gear icon next to the account you want to unbond money for, and select "Unbond funds".
+To unbond the amount, click the little gear icon next to the account you want to unbond tokens for, and select "Unbond funds".
 
 ![Unbonding](/img/NPoS/unbond2.png)
 
@@ -34,7 +34,13 @@ If successful, your balance will show as "unbonding" with an indicator of how ma
 
 This duration will vary depending on the network you're on and will typically be four times as fast on Kusama as it is on Polkadot.
 
-Once this process is complete, you will have to issue another, final transaction: Withdraw Unbonded. Then, your transferrable balance will increase by the amount of tokens you've just fully unbonded.
+Once this process is complete, you will have to issue another, final transaction: Withdraw Unbonded.
+
+![Unbonding withdraw](/img/NPoS/unbond5.png)
+
+You can also check how long you have to wait in order to withdraw your stake in the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page by expanding your account balance. There is a tiny icon beside the word "unbonding" that will eventually become an unlock icon once the remaning blocks get passed.
+
+Then, you can click that icon directly to submit the withdraw transaction. Finally, your transferrable balance will increase by the amount of tokens you've just fully unbonded.
 
 ## Rebonding before the end of the unbonding period
 

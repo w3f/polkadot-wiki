@@ -96,14 +96,14 @@ sudo ntpq -p
 
 您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
 
-You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command (`git tag | grep "$v\0\.8"` - note that output is sorted ASCII-betically, _not_ numerically or chronologically) or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
+You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.8"
+git tag -l | sort -V | grep -v -- '-rc'
 echo Get the latest version and replace VERSION (below) with it.
 git checkout VERSION
 ./scripts/init.sh
@@ -115,9 +115,9 @@ cargo build --release
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
 > 
 > ```sh
-rustup install nightly-2020-05-15
-rustup override set nightly-2020-05-15
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+rustup install nightly-2020-10-06
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+cargo +nightly-2020-10-06 build --release
 ```
 
 如果您想在本地生成密钥，您还可以在同一目录安装` subkey `。然后您可以把生成好的` subkey `可执行文件，并将其转移到与世隔绝的电脑中，以提高安全性。
@@ -244,13 +244,17 @@ The validator set is refreshed every era. In the next era, if there is a slot av
 
 **恭喜你!** 如果你有按照以上步骤操作，你经已设定好 Polkadot 网络的验证人！若果你需要帮助，请前往 <a href="[Polkadot 验证人聊天室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)
 
-## 常见问题
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies to provide support for community validators. If you are interested in applying for the programme, you can find more information [on the wiki page](thousand-validators.md).
+
+## FAQ
 
 ### 为什么我无法同步链？
 
 ![zero-peer](assets/guides/how-to-validate/polkadot-zero-peer.jpg)
 
-确保 libp2p 端口 `30333` 打开，可能需要一点时间发现网络上其它的 peers。
+Make sure to enable `30333` libp2p port. Eventually, it will take a little bit of time to discover other peers over the network.
 
 ### 如何清除链的所有数据？
 
@@ -258,7 +262,7 @@ The validator set is refreshed every era. In the next era, if there is a slot av
 ./target/release/polkadot purge-chain
 ```
 
-## VPS 服务器
+## VPS List
 
 - [OVH](https://www.ovh.com.au/)
 - [Digital Ocean](https://www.digitalocean.com/)
@@ -267,9 +271,9 @@ The validator set is refreshed every era. In the next era, if there is a slot av
 - [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
 
-## 使用 Docker
+## Using Docker
 
-如果安装了 Docker，则可以使用它启动验证人节点，而无需要构建二进制文件。您可以使用简单的指令执行:
+If you have Docker installed, you can use it to start your validator node without needing to build the binary. You can do this with a simple one line command:
 
 ```sh
 $ docker run parity/polkadot:latest --validator --name "name on telemetry"

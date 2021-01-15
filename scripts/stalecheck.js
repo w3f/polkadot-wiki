@@ -1,12 +1,34 @@
 const fs = require("fs");
 const cp = require("child_process");
-const core = require("@actions/core");
 const github = require("@actions/github");
 
 const dir = "docs";
-const maxAgeDays = 21;
+const maxAgeDays = 45;
 // Rigged to leave Bill alone
 const techedu = ["swader", "swader", "lsaether", "lsaether", "ansonla3", "ansonla3", "laboon"];
+
+const getStaleIssues = async (octokit) => {
+  let page = 0;
+  let fullData = [];
+
+  while (true) {
+    const { data } = await octokit.issues.listForRepo({
+      owner: "w3f",
+      repo: "polkadot-wiki",
+      state: "open",
+      labels: "stale",
+      per_page: 100,
+      page,
+    });
+
+    if (!data.length) break;
+
+    fullData.push(...data);
+    page++;
+  }
+
+  return fullData;
+}
 
 async function stalecheck() {
   const myToken = process.env.GITHUB_TOKEN;
@@ -20,36 +42,19 @@ async function stalecheck() {
     process.exit(0);
   }
   const octokit = github.getOctokit(myToken);
-  const staleIssues = await octokit.issues
-    .listForRepo({
-      owner: "w3f",
-      repo: "polkadot-wiki",
-      state: "open",
-      labels: "stale",
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  let currentStaleTitles = [];
-  for (issue of staleIssues.data) {
-    if (!issue["pull_request"]) {
-      currentStaleTitles.push(issue.title);
-    }
-  }
-  //console.log("Old files found:");
-  //console.log(oldFiles);
+  const staleIssues = await getStaleIssues(octokit);
+
   let created = 0;
   for (file of Object.keys(oldFiles)) {
     sleep(500);
     // Check if issue for file exists
-
     console.log(`Checking existing issues for ${file}`);
     let title = `[STALE] ${file}`;
-    if (currentStaleTitles.includes(title)) continue;
+    if (!!staleIssues.find(issue => issue.title === title)) continue;
     // Pick a random technical educator
     let assignee = techedu[Math.floor(Math.random() * techedu.length)];
     // Create issue
-    let creation = await octokit.issues
+    await octokit.issues
       .create({
         owner: "w3f",
         repo: "polkadot-wiki",
@@ -70,8 +75,6 @@ async function stalecheck() {
     }
   }
 }
-
-stalecheck();
 
 function sleep(ms) {
   return new Promise((resolve) => {
@@ -104,3 +107,7 @@ function agePerPage() {
   }
   return oldFiles;
 }
+
+try {
+  stalecheck();
+} catch (err) { console.error(err); }

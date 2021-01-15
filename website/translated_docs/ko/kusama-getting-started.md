@@ -22,6 +22,8 @@ For brand-new learners of Kusama:
 
 For brand-new learners of Kusama's cousin network, Polkadot, please head over to our [Polkadot Wiki][polkadot wiki].
 
+While Kusama does not support smart contracts natively, building apps on it is still possible (example: [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into _proper_ development however, the [builders guide from Polkadot's wiki][polkadot-builders] applies to Kusama as well.
+
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [overview]: kusama-index
 [medium]: https://medium.com/polkadot-network/kusama-network-7446706b8f4c
@@ -31,3 +33,4 @@ For brand-new learners of Kusama's cousin network, Polkadot, please head over to
 [validator]: mirror-maintain-guides-how-to-validate-kusama
 [nominator]: mirror-maintain-guides-how-to-nominate-kusama
 [polkadot wiki]: https://wiki.polkadot.network/
+[polkadot-builders]: https://wiki.polkadot.network/docs/en/build-index

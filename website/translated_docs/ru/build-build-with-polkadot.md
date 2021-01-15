@@ -132,7 +132,7 @@ The experience of deploying to an EVM-based chain may be more familiar to develo
 
 3. **Кэширование**. Контракты кэшируются по умолчанию и поэтому они должны быть развернуты только один раз, а затем создаваться столько раз, сколько Вы хотите. Это помогает свести нагрузку за хранение на цепочку к минимуму. Кроме того, когда контракт больше не используется и _экзистенциальный депозит_ истощается, код будет стерт из хранилища (известного как жатва).
 
-You will likely want to set up a local test environment to start writing your smart contracts. This can be done using a Substrate node with one of the two smart contracts pallets including. After development you will want to look into projects such as [Edgware])(#edgeware) for deploying your smart contract to a live environment.
+You will likely want to set up a local test environment to start writing your smart contracts. This can be done using a Substrate node with one of the two smart contracts pallets. After development you will want to look into projects such as [Edgeware for deploying your smart contract](https://contracts.edgewa.re/) to a live environment.
 
 ### Edgeware
 
@@ -140,7 +140,7 @@ One project that is live today with the smart contracts pallet is [Edgeware](htt
 
 Edgeware intends to at some point connect to Polkadot as a parachain that allows for smart contracts. At this point, the smart contracts would be able to interact with other pieces of the Polkadot ecosystem through [XCMP](learn-crosschain).
 
-Edgeware documentation can be found [here](https://docs.edgewa.re/).
+Edgeware general documentation can be found [here](https://docs.edgewa.re/) and [how to deploy smart contracts on Edgeware here](https://contracts.edgewa.re/).
 
 ## Moonbeam
 

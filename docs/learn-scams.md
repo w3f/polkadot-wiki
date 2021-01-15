@@ -20,6 +20,10 @@ scammed, please email [our support team](mailto:support@web3.foundation).
    having you send them tokens.
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
+6. If you can, try to always verify new information that you see with an official source, such as
+   Polkadot Network's official blog or Web3 Foundation support. Often scammers will fake a website
+   or a blog post, but if you check it against a secondary source the chances that you are being
+   scammed are reduced.
 
 ### Some Common Types of Scams
 
@@ -54,8 +58,8 @@ be found below:
 
 - [Twitter](https://twitter.com/Polkadot)
 - [Reddit](https://www.reddit.com/r/dot)
+- [Discord](https://discord.gg/wGUDt2p)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
-- [Offical Polkadot Telegram](https://t.me/polkadotofficial)
 - [Polkadot Medium](https://medium.com/polkadot-network)
 - [Our Community Page](community) also lists more social media accounts that Web3 Foundation,
   Polkadot, and Kusama have.

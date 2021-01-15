@@ -254,9 +254,9 @@ design of the EVM. Namely these are:
    reaping).
 
 You will likely want to set up a local test environment to start writing your smart contracts. This
-can be done using a Substrate node with one of the two smart contracts pallets including. After
-development you will want to look into projects such as [Edgware])(#edgeware) for deploying your
-smart contract to a live environment.
+can be done using a Substrate node with one of the two smart contracts pallets. After development
+you will want to look into projects such as [Edgeware for deploying your smart
+contract][edgeware contracts documentation] to a live environment.
 
 ### Edgeware
 
@@ -269,7 +269,8 @@ Edgeware intends to at some point connect to Polkadot as a parachain that allows
 contracts. At this point, the smart contracts would be able to interact with other pieces of the
 Polkadot ecosystem through [XCMP](learn-crosschain).
 
-Edgeware documentation can be found [here][edgeware documentation].
+Edgeware general documentation can be found [here][edgeware documentation] and [how to deploy smart
+contracts on Edgeware here][edgeware contracts documentation].
 
 ## Moonbeam
 
@@ -362,6 +363,7 @@ Good luck!
 [substrate evm]: https://github.com/paritytech/substrate/tree/master/frame/evm
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
+[edgeware contracts documentation]: https://contracts.edgewa.re/
 [plasm plasma]: https://github.com/staketechnologies/Plasm
 [moonbeam]: https://moonbeam.network
 [moonbeam docs]: https://docs.moonbeam.network/

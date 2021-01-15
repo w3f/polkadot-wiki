@@ -96,8 +96,20 @@ submitted proposal.
 Seconding a proposal means that you are agreeing with the proposal and backing it with an equal
 amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
 tabled (that is, brought to a vote). By seconding a proposal you will move it higher up the rank of
-proposals. The most seconded proposal - in value, not number of supporters - will be tabled as a
-referendum to be voted on every launch period.
+proposals. The most seconded proposal &mdash; in value, not number of supporters &mdash; will be
+brought to a referendum every launch period.
+
+It is important to note that there is no way to stop or cancel seconding a proposal once it has been
+done. Therefore, the DOT that was seconded will be reserved until the proposal is tabled as a
+referendum. This is an indeterminate amount of time, since there is no guarantee that a proposal
+will become a referendum for a given period, as other proposals may be proposed and tabled before
+it.
+
+Note that it is possible for a single account to second a proposal multiple times. This is by
+design; it is the value, not the number of seconds _per se_, that counts in terms of weighting. If
+there were a limit of one second per account, it would be trivial for a user with, for example, 1000
+DOT to create ten accounts with 100 DOT instead of a single account with 1000 DOT. Thus, no
+restrictions are made on the number of times a single account can second a proposal.
 
 To second a proposal, navigate to the proposal you want to second and click on the "Second" button.
 
@@ -143,7 +155,9 @@ your transaction and wait for it to be included in a block.
 
 Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are
 locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an
-unlock extrinsic to make your funds available again after the lock expires.
+unlock extrinsic to make your funds available again after the lock expires. Unbonding is another
+term you hear a lot in Polkadot, it means withdrawing your DOT that was used in staking. To know
+more about it, please see [here](maintain-guides-how-to-unbond).
 
 You can do this from the "Accounts" page in
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a
@@ -157,6 +171,31 @@ locks". After selecting this option you may confirm the transaction and your loc
 when successful.
 
 ![democracy clear locks](assets/democracy_clear_locks.png)
+
+If you do not see an option to clear expired democracy votes, it may be that the lock is very old.
+You then must clear the lock by directly issuing the correct extrinsics.
+
+Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the
+following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the
+index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the
+image below).
+
+You need to press the "Submit Transaction" button to submit the extrinsic.
+
+![democracy clear_lock_extrinsic_1](assets/democracy_clear_lock_extrinsic_1.png)
+
+Now submit the following extrinsic: `democracy.unlock(target)`, where target is your your account
+address.
+
+![democracy clear_lock_extrinsic_2](assets/democracy_clear_lock_extrinsic_2.png)
+
+If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), you should see that
+the democracy lock has been released.
+
+Note that this applies only to locked DOT that were used for voting on referenda. In order to unlock
+DOT locked by voting for members of the Polkadot Council, you need to go to the
+[Council](https://polkadot.js.org/apps/#/council) page, click "Vote", and then click on "Unvote
+All".
 
 ## Delegate a Vote
 

@@ -165,8 +165,8 @@ three voters approving of them, `V2`, `V3`, and `V5`, with loads of `0`, `1/4`, 
 respectively.
 
 If Candidate `A` wins, the average load would be `(1/4 + 1/1) / 1`, or `5/4`. If candidate `C` wins,
-the average load would be `(0 + 1/2) + (1/4 + 1/2) / 2`, or `5/8`. If candidate `D` wins, the
-average load would be `(0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3) / 3`, or `1/2`. Since `1/2` is the
+the average load would be `((0 + 1/2) + (1/4 + 1/2)) / 2`, or `5/8`. If candidate `D` wins, the
+average load would be `((0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3)) / 3`, or `1/2`. Since `1/2` is the
 lowest average load, candidate D wins the second round.
 
 Now everybody who voted for Candidate `D` has their load set to the average, `1/2` of all the loads.
@@ -248,8 +248,8 @@ In more depth, the algorithm operates like so:
 3. Now we start electing candidates. For the list of all candidates who have not been elected, get
    their score, which is equal to `1 / approval_stake`.
 4. For each voter, update the score of each candidate they support by adding their total budget
-   (stake) multiplied by the load of the candidate and then dividing by that candidate's approval
-   stake (`voter_budget * voter_load / candidate_approval_stake`.
+   (stake) multiplied by the load of the voter and then dividing by that candidate's approval stake
+   (`voter_budget * voter_load / candidate_approval_stake`.
 5. Determine the candidate with the lowest score and elect that candidate. Remove the elected
    candidate from the pool of potential candidates.
 6. The load for each edge connecting to the winning candidate is updated, with the edge load set to
@@ -610,11 +610,11 @@ an optimal manner.
 
 There are several further restrictions put in place to limit the complexity of the election and
 payout. As already mentioned, any given nominator can only select up to 16 validators to nominate.
-Conversely, a single validator can have only 256 nominators. A drawback to this is that it is
-possible, if the number of nominators is very high or the number of validators is very low, that all
-available validators may be "saturated" and unable to accept more nominations. In this case, one may
-need a larger amount of stake to participate in staking, since nominations are priority-ranked in
-terms of amount of stake.
+Conversely, a single validator can have only {{ polkadot_max_nominators }} nominators. A drawback to
+this is that it is possible, if the number of nominators is very high or the number of validators is
+very low, that all available validators may be "oversubscribed" and unable to accept more
+nominations. In this case, one may need a larger amount of stake to participate in staking, since
+nominations are priority-ranked in terms of amount of stake.
 
 ## External Resources
 

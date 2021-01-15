@@ -28,6 +28,16 @@ Notice how the `details` field contains a human-readable description of the erro
 
 If you cannot look up the error this way, or there is no message in the `details` field, consult the table below.
 
+## Polkascan and Subscan
+
+Polkascan and Subscan show the `ExtrinsicFailed` event when a transaction does not succeed ([example](https://polkascan.io/polkadot/event/2836233-3)). This event gives us the `error` and `index` indices of the error but does not give us a nice message to understand what it means. We will look up the error in the codebase ourselves to understand what went wrong.
+
+First, we should understand that the `index` number is the index of the pallet in the runtime from which the error originated. The `error` is likewise the index of that pallet's errors which is the exact one we're looking for. Both of these indices start counting from 0.
+
+For example, if `index` is 5 and `error` is 3, as in the example linked above, we need to look at the runtime for the fourth error (index 3) in the sixth pallet (index 5).
+
+By looking at the [runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L914) we see that the pallet at index 5 is "Balances". Now we will check the Balances pallet's code which is hosted in the Substrate repository, and look for the fourth error in the Error enum. According to [its source](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs#L270) the error that we got is `InsufficientBalance` or in other words "Balance too low to send value".
+
 ## Common Errors
 
 The table below lists the most commonly encountered errors and ways to resolve them.

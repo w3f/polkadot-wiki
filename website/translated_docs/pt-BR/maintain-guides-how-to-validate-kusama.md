@@ -88,15 +88,16 @@ sudo ntpq -p
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.8** branch.
 
-You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.3**, but you should review the output from the "git tag" command (`git tag | grep "$v\0\.8"`) to see a list of all the potential 0.8 releases. You should replace `v0.8.8` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
+You should generally use the latest **0.8.x** tag. At the time of writing, this was **0.8.26-1**, but you should review the output from the "git tag" command to see a list of all the potential 0.8 releases. You should replace `VERSION` with the latest build (i.e., the highest number). You can also find the latest Kusama version on the [release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.8"
-git checkout v0.8.8
+git tag -l | sort -V | grep -v -- '-rc'
+echo Get the latest version and replace VERSION (below) with it.
+git checkout VERSION
 ./scripts/init.sh
 cargo build --release
 ```
@@ -227,6 +228,10 @@ If you go to the "Staking" tab, you will see a list of active validators current
 The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of KSM staked or seek out nominators for your validator in order to join the validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Kusama validator! If you need help, reach out on the [Kusama forum](https://forum.kusama.network/) or in the [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
+
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies to provide support for community validators. If you are interested in applying for the programme, you can find more information [on the wiki page](thousand-validators.md).
 
 ## FAQ
 

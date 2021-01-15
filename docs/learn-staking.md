@@ -125,10 +125,11 @@ only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
 
 There is an additional factor to consider in terms of rewards. While there is no limit to the number
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
-can pay rewards. In Polkadot and Kusama, this limit is currently 256, although this can be modified
-via runtime upgrade. A validator with more than 256 nominators is _oversubscribed_. When payouts
-occur, only the top 256 nominators as measured by amount of stake allocated to that validator will
-receive rewards. All other nominators are essentially "wasting" their stake - they used their
+can pay rewards. In Polkadot and Kusama, this limit is currently {{ polkadot_max_nominators }},
+although this can be modified via runtime upgrade. A validator with more than
+{{ polkadot_max_nominators }} nominators is _oversubscribed_. When payouts occur, only the top
+{{ polkadot_max_nominators }} nominators as measured by amount of stake allocated to that validator
+will receive rewards. All other nominators are essentially "wasting" their stake - they used their
 nomination to elect that validator to the active stake, but receive no rewards in exchange for doing
 so.
 
@@ -211,6 +212,13 @@ through the normal Treasury process.
 Validator pools with larger total stake backing them will get slashed more harshly than less popular
 ones, so we encourage nominators to shift their nominations to less popular validators to reduce the
 possible losses.
+
+Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
+via
+[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
+The UI shows it per validator and then all the affected nominators along with the amounts. While
+unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
+days on Polkadot). After the grace period, the slashes are applied.
 
 The following levels of offence are
 [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for specific
@@ -403,7 +411,8 @@ KSM / DOT are staked, but any deviation from the 50% - positive or negative - se
 remainder to the treasury and effectively reduces validator payouts.
 
 For those who are interested in knowing more about the design of inflation model for the network,
-please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html).
+please see
+[here](https://research.web3.foundation/en/latest/polkadot/economics/1-token-economics.html#npos-payments-and-inflation).
 
 ## Why stake?
 

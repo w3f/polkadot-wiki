@@ -16,15 +16,19 @@ The final step of the transition to full-functioning Polkadot was the enabling o
 
 On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new DOT.
 
+## Polkadot Roadmap
+
+For more information on the Polkadot roadmap please visit the [official Polkadot website](https://polkadot.network/technology/#roadmap).
+
 ## Validators
 
 ### How do I apply to be a validator?
 
-There is no central authority that decides on validators, so there is not per se an _application_ that you can fill out. Registering as a validator is permissionless; in order to become one you must only set up a validator node and mark your intention to validate on chain. For detailed instruction on how to do this you can consult the [wiki guide](maintain-guides-how-to-validate-kusama.md) on validating for Kusama.
+There is no central authority that decides on validators, so there is not per se an _application_ that you can fill out. Registering as a validator is permissionless; in order to become one you must only set up a validator node and mark your intention to validate on chain. For detailed instruction on how to do this you can consult the [Kusama validator guide](maintain-guides-how-to-validate-kusama.md) on validating for Kusama or the [Polkadot validator guide](maintain-guides-how-to-validate-polkadot) for validating on Polkadot.
 
 However, once you've set up a validator and have registered your intention it does not mean that you will be included in the _active set_ right away. The validators are elected to the active set based on the results of an election algorithm known as [Phragmén's method](learn-phragmen). Phragmén's method tries to accomplish two goals: 1) select `n` members from a larger set based on stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
-You will likely want to campaign your validator to the community in order to get more backing. You are looking for _nominators_ that will put up their tokens to increase the stake for your validator. For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation also run a joint program called [Thousand Validators](https://thousand-validators.kusama.network/#/) that will nominate validators if they apply and fit the requirements.
+You will likely want to campaign for your validator to the community in order to get more backing. You are looking for _nominators_ that will put up their tokens to increase the stake for your validator. For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation also run a joint program called [Thousand Validators](https://thousand-validators.kusama.network/#/) that will nominate validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
@@ -53,13 +57,15 @@ It is also worth mentioning that one thousand validators is more than the number
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator is running their own validating node and performing full verification of the Relay Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
+Finally, individuals may participate in the block production process indirectly by [nominating](https://wiki.polkadot.network/docs/en/learn-nominator) validators. In this way, individuals who are not running a node can still share in staking rewards.
+
 ## Relay Chain
 
-### What is the expected block time on the Relay Chain?
+### What is the block time of the Relay Chain?
 
-The Kusama network, an early and unaudited release of the Polkadot code is currently operating at a rate of one block every six seconds.
+Both the Kusama and Polkadot networks are currently operating at a rate of one block every six seconds.
 
-We expect that Polkadot will target its block production rate to produce a block every six seconds. However, it is still subject to change. It may go as low as two to three seconds after optimizations, or it may potentially increase in order to handle the capacity of the parachain networking in a live environment.
+This may be changed in the future. It may go as low as two to three seconds after optimizations, or potentially increase in order to handle the capacity of the parachain networking in a live environment.
 
 ### Does Polkadot have smart contracts?
 
@@ -81,7 +87,7 @@ The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 
 
 ### What is the inflation rate of the DOT?
 
-The inflation rate is 10% per year.
+The inflation rate is approximately 10% per year.
 
 A portion of the inflation is rewarded to validators for performing their duties, while another portion may go directly to the treasury. The exact percentage that goes into both varies and is based on the amount of DOT that are staked. Please see the article on [inflation](learn-staking#inflation) for more information.
 
@@ -91,13 +97,13 @@ Testnet DOT tokens are freely available from a variety of sources. See the [DOT 
 
 The Web3 Foundation will distribute up to 20% of mainnet DOT prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
 
-DOT tokens are not transferable until the launch of Polkadot Beta is complete. Any transfers of DOT before that time are illegitimate and unauthorized. DOT are currently represented on Ethereum as the DOT Indicator Token, these cannot be moved from the current allocation address. Individuals with an allocation of DOT can always keep a copy of their private key, therefore it is extremely risky for individuals to participate in trading of DOT before Polkadot launch.
+DOT tokens were not transferable until the launch of Polkadot was complete. Any transfers of DOT before that time were illegitimate and unauthorized. DOT represented on Ethereum as DOT Indicator Tokens cannot be moved from the current allocation address.
 
 ## Governance
 
 ### What prevents Polkadot governance from failing?
 
-Polkadot's governance has already been shown to work. Examples can be found in the runtime upgrades that have successfully taken place through on the testnets as well as in a real economic environment on [Kusama](kusama-index).
+Polkadot's governance has already been shown to work. Examples can be found in the runtime upgrades that have successfully taken place through on the testnets as well as in a real economic environment on [Kusama](kusama-index) and Polkadot itself.
 
 It is fair to say that the field of on-chain blockchain governance is still new, and no one can claim to know exactly what is the optimal version of on-chain governance yet. However, Polkadot takes a brave step forward in pioneering thought-through mechanisms for evolving a blockchain.
 

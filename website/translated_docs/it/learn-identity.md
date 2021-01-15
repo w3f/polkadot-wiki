@@ -81,22 +81,39 @@ To be judged after submitting your identity information, go to the ["Extrinsics 
 
 If you don't know which registrar to pick, first check the available registrars by going to ["Chain State UI"]() and selecting `identity.registrars()` to get the full list.
 
+## Cancelling Judgements
+
+You may decide that you actually do not want to be judged by a registrar (for instance, because you realize you entered incorrect data or selected the wrong registrar). In this case, after submitting the request for judgement but before your identity has been judged, you can issue a call to cancel the judgement using an extrinsic.
+
+![Cancel Registrar](assets/registrar_cancel_judgement.png)
+
+To do this, first go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
+
+Submit the transaction, and the requested judgement will be cancelled.
+
+### Kusama Registrars
+
 ![Showing all registrars](assets/identity/14.jpg)
 
-The image above reveals two registrars:
+The image above reveals there are two registrars on Kusama:
 
-- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL charges 25 KSM per judgement
+- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL charges 0.04 KSM per judgement
 - Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn charges 5 KSM per judgement
 
 To find out how to contact the registrar after the application for judgement or to learn who they are, we can check their identity by adding them to our Address Book. Their identity will be automatically loaded.
 
-![Gav is a registrar](assets/identity/15.jpg)
-
-Gavin Wood is registrar #0.
-
 ![Chevdor is registrar #1](assets/identity/16.jpg)
 
-Chevdor is registrar #1. We pick that one.
+### Polkadot Registrars
+
+On Polkadot there are two registrars:
+
+- Web3 Foundation is registrar #0. The W3F registrar service is available on the Kusama at the moment, follow the guide written [here](learn-registrar) on how to use it. The service will be available on the Polkadot shortly.
+- Chevdor is registrar #1.
+
+### Requesting Judgement
+
+Requesting judement follows the same process regardless of whether you're on the Kusama or Polkadot networks. Select one of the registrars from the query you made above.
 
 ![Requesting judgement](assets/identity/08.jpg)
 

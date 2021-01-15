@@ -66,8 +66,8 @@
         "sidebar_label": "交易创建"
       },
       "build-wallets": {
-        "title": "Polkadot Wallets",
-        "sidebar_label": "Polkadot Wallets"
+        "title": "Polkadot 钱包",
+        "sidebar_label": "Polkadot 钱包"
       },
       "claims": {
         "title": "Polkadot 认领",
@@ -86,20 +86,20 @@
         "sidebar_label": "Contributors"
       },
       "faq": {
-        "title": "Frequently Asked Questions (FAQs)",
-        "sidebar_label": "Frequently Asked Questions (FAQs)"
+        "title": "常见问题(FAQ)",
+        "sidebar_label": "常见问题(FAQ)"
       },
       "getting-started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
+        "title": "入门教程",
+        "sidebar_label": "入门教程"
       },
       "glossary": {
         "title": "专业术语",
         "sidebar_label": "专业术语"
       },
       "grants": {
-        "title": "Web3 Foundation Grantees",
-        "sidebar_label": "Grants"
+        "title": "Web3 基金会受赠者",
+        "sidebar_label": "奖助金计划"
       },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
@@ -122,16 +122,16 @@
         "sidebar_label": "社区"
       },
       "kusama-endpoints": {
-        "title": "Kusama Endpoints",
-        "sidebar_label": "Kusama Endpoints"
+        "title": "Kusama 终端",
+        "sidebar_label": "Kusama 终端"
       },
       "kusama-faucet": {
         "title": "Kusama 水龙头",
         "sidebar_label": "水龙头"
       },
       "kusama-getting-started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
+        "title": "入门教程",
+        "sidebar_label": "入门教程"
       },
       "kusama-index": {
         "title": "Kusama",
@@ -146,8 +146,8 @@
         "sidebar_label": "Parameters"
       },
       "kusama-social-recovery": {
-        "title": "Social Recovery",
-        "sidebar_label": "Account Recovery"
+        "title": "Social 恢复",
+        "sidebar_label": "账户恢复"
       },
       "kusama-timeline": {
         "title": "Kusama 时间线",
@@ -158,8 +158,8 @@
         "sidebar_label": "创建帐户"
       },
       "learn-account-restore": {
-        "title": "Backing up and Restoring Accounts",
-        "sidebar_label": "Backing up and Restoring Accounts"
+        "title": "备份和恢复账户",
+        "sidebar_label": "备份和恢复账户"
       },
       "learn-accounts": {
         "title": "Polkadot 账户",
@@ -178,8 +178,8 @@
         "sidebar_label": "可用性和有效性"
       },
       "learn-balance-transfers": {
-        "title": "Balance Transfers",
-        "sidebar_label": "How to transfer Balances"
+        "title": "转账",
+        "sidebar_label": "如何转账"
       },
       "learn-bridges": {
         "title": "桥接",
@@ -234,8 +234,8 @@
         "sidebar_label": "其它程序语言实现"
       },
       "learn-implementers-guide": {
-        "title": "Parachain Implementer's Guide",
-        "sidebar_label": "Parachain Implementer's Guide"
+        "title": "平行链构建指南",
+        "sidebar_label": "平行链构建指南"
       },
       "learn-keys": {
         "title": "密匙",
@@ -270,8 +270,8 @@
         "sidebar_label": "Polkadot 主机 (PH)"
       },
       "learn-proxies": {
-        "title": "Proxy Accounts",
-        "sidebar_label": "Proxy Accounts"
+        "title": "代理账户",
+        "sidebar_label": "代理账户"
       },
       "learn-randomness": {
         "title": "随机性",
@@ -363,11 +363,11 @@
       },
       "maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "How to run a Validator on Kusama"
+        "sidebar_label": "如何在 Kusama 上运行验证节点"
       },
       "maintain-guides-how-to-validate-polkadot": {
         "title": "运行验证人 (Polkadot)",
-        "sidebar_label": "How to run a Validator on Polkadot"
+        "sidebar_label": "如何在 Polkadot 上运行验证节点"
       },
       "maintain-guides-how-to-validate-alexander": {
         "title": "运行验证人 (Alexander)",
@@ -406,8 +406,8 @@
         "sidebar_label": "设置全节点"
       },
       "maintain-wss": {
-        "title": "Set up Secure WebSocket for Remote Connections",
-        "sidebar_label": "Set up Secure WebSocket for Remote Connections"
+        "title": "为远程连接设置安全的 WebSocket",
+        "sidebar_label": "为远程连接设置安全的 WebSocket"
       },
       "mirror-build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
@@ -435,7 +435,7 @@
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "运行验证人 (Kusama)",
-        "sidebar_label": "How to run a Validator on Kusama"
+        "sidebar_label": "如何在 Kusama 上运行验证节点"
       },
       "redenomination": {
         "title": "Redenomination of DOT",
@@ -447,7 +447,7 @@
       }
     },
     "links": {
-      "Get Started": "Get Started",
+      "Get Started": "入门指南",
       "Learn": "学习",
       "Build": "建立",
       "Maintain ": "参与 ",
@@ -455,7 +455,7 @@
       "Contribute": "Contribute"
     },
     "categories": {
-      "General": "General",
+      "General": "概述",
       "Learn": "学习",
       "Build": "建立",
       "Maintain": "参与"

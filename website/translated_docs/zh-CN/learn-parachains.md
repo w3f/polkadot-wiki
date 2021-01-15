@@ -77,8 +77,9 @@ Parachain Development Kits are a set of tools that enable developers to create t
 
 ### Deploying parachains
 
-Please see the builder's article on [deploying parachains](build-deploy-parachains).
+Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for information on compiling and deploying a parachain.
 
 ## 资源
 
 - [Polkadot: 平行链](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Polkadot 联合创始人 Rob Habermeier 在2017年撰写的博客文章，将平行链介绍为 "一种更简单的区块链形式，它附加于中继链提供的安全性，而不是提供其自身的安全性。中继链为附加的平行链提供安全性，但是还为它们之间的安全消息传递提供了保证。"
+- [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A technical walkthrough of how parachains interact with the Relay Chain.

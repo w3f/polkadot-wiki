@@ -4,15 +4,15 @@ title: Cumulus
 sidebar_label: Cumulus
 ---
 
-> Cumulus clouds are shaped sort of like dots and are up in the air, like this project (as it is an initial prototype -- expect a rename when it gets cooler.)
+> "Cumulus clouds are shaped sort of like dots; together they form a system that is intricate, beautiful and functional."
 
-[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot compatible parachain.
+[Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to make any Substrate built runtime into a Polkadot-compatible parachain. See the [Overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a more technical but still high-level description of Cumulus.
 
 ## 컴포넌트(Components)
 
 ### 뭉게구름 컨센서스 (Cumulus Consensus)
 
-Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain. This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as best.
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain (i.e., parachains). This will run a Polkadot node internally, and dictate to the client and synchronization algorithms which chain to follow, finalize, and treat as correct.
 
 ### 뭉게구름 런타임 (Cumulus Runtime)
 
@@ -26,7 +26,11 @@ runtime::register_validate_block!(Block, BlockExecutor);
 
 ### 뭉게구름 검사기 (Cumulus Collator)
 
-패러체인을 위한 폴카닷(Polkadot) 검사기(collator)가 준비중입니다.
+A Polkadot collator for a parachain is implemented in the Cumulus repository [here](https://github.com/paritytech/cumulus/tree/master/collator).
+
+## Rococo
+
+The Rococo testnet (available via Polkadot-JS) is the testnet set aside specifically for parachains.
 
 ## Resources
 

@@ -4,10 +4,9 @@ title: How to Chill
 sidebar_label: How to Chill
 ---
 
-Stakers can assume any one of the three states: validating, nominating, or chilling. When a staker
-does not want to actively engage in staking - but does not want to unbond their funds either - they
-can choose to temporarily become inactive while keeping their funds staked. The act of stopping
-either nominating or validating is known as _chilling_.
+Stakers can be in any one of the three states: validating, nominating, or chilling. When a staker
+wants to temporarily pause their active engagement in staking, but does not want to unbond their
+funds, they can choose to "chill" their involvement and keep their funds staked.
 
 An account can step back from participating in active staking by calling the `chill` extrinsic in
 the [staking pallet][chill extrinsic]. When an account chooses to chill, they will become inactive
@@ -45,7 +44,7 @@ totally different.
 
 ### Involuntary Chills
 
-If a validator was unresponsive or found to have committed a slashable offense within two Eras, the
+If a validator was unresponsive or found to have committed a slashable offense within two eras, the
 validator will be removed from the active set in a process known as _involuntary chilling._ When a
 validator has been involuntarily chilled, it is necessary for the nominators that were previously
 nominating that validator to re-issue the nominate call.

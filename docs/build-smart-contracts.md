@@ -12,7 +12,7 @@ that more parachains will support this feature.
 
 Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine,
 thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this
-approach are [Moonbeam](https://moonbeam.network/) and
+approach are [Edgeware](https://edgewa.re), [Moonbeam](https://moonbeam.network/) and
 [Frontier](https://github.com/paritytech/frontier).
 
 A video version of the recap of the smart contract situation on Polkadot and Kusama is available
@@ -23,6 +23,7 @@ A video version of the recap of the smart contract situation on Polkadot and Kus
 Here is the list of current resources available to developers who want to get started writing smart
 contracts to deploy on parachains based on Substrate.
 
+- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
 - [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you
   through the basics of writing and deploying an ERC20 token using `ink!`.

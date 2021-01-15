@@ -9,9 +9,10 @@ the ultimate behest of its assembled stakeholders. The stated goal is to ensure 
 the stake can always command the network.
 
 To do this, we bring together various novel mechanisms, including an amorphous state-transition
-function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly)
-and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and
-batch approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
+function stored on-chain and defined in a platform-neutral intermediate language (i.e.
+[WebAssembly](learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive
+super-majority thresholds and batch approval voting. All changes to the protocol must be agreed upon
+by stake-weighted referenda.
 
 ## Mechanism
 
@@ -19,12 +20,6 @@ In order to make any changes to the network, the idea is to compose active token
 council together to administrate a network upgrade decision. No matter whether the proposal is
 proposed by the public (DOT holders) or the council, it finally will have to go through a referendum
 to let all DOT holders, weighted by stake, make the decision.
-
-The following steps are the governance procedure in the Polkadot network:
-
-- [Proposing Referenda](#proposing-a-referendum)
-- [Voting for a proposal](#voting-on-a-referendum)
-- [Tallying](#tallying)
 
 To better understand how the council is formed, please read [this section](#council).
 
@@ -59,10 +54,11 @@ will have a shorter enactment time.
 
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
 (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it. The proposal with the highest amount of bonded support will be selected to be a
-referendum. Note that this may be different than the absolute number of seconds; for instance, three
-accounts bonding 20 DOT each would "outweigh" ten accounts bonding a single DOT each. The bonded
-tokens will be released once the proposal is tabled (that is, brought to a vote).
+to support it - this action is called _seconding_. The proposal with the highest amount of bonded
+support will be selected to be a referendum in the next voting cycle. Note that this may be
+different than the absolute number of seconds; for instance, three accounts bonding 20 DOT each
+would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will be released once the
+proposal is tabled (that is, brought to a vote).
 
 There can be a maximum of 100 public proposals in the proposal queue.
 
@@ -74,17 +70,17 @@ stake voting, the smaller the amount necessary for it to pass - see "Adaptive Qu
 below).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the
-referendum can also be voted upon, but it will be majority-carries.
+referendum can also be voted upon, but it will be majority-carries (51% wins).
 
 There can only be one active referendum at any given time, except when there is also an emergency
 referendum in progress.
 
 #### Voting Timetable
 
-Every 28 days, a new referendum will come up for a vote, assuming there is at least one proposal in
-one of the queues. There is a queue for Council-approved proposals and a queue for publicly
-submitted proposals. The referendum to be voted upon alternates between the top proposal in the two
-queues.
+Every 28 days on Polkadot or 7 days on Kusama, a new referendum will come up for a vote, assuming
+there is at least one proposal in one of the queues. There is a queue for Council-approved proposals
+and a queue for publicly submitted proposals. The referendum to be voted upon alternates between the
+top proposal in the two queues.
 
 The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose
 turn it is to create a referendum has no proposals (is empty), and there are proposals waiting in
@@ -118,8 +114,8 @@ Logan: Votes `Yes` with 20 DOT for a 4 week lock period => 20 * 1 = 20 Votes
 Kevin: Votes `Yes` with 15 DOT for a 8 week lock period => 15 * 2 = 30 Votes
 ```
 
-Even though combining both Logan and Kevin vote with more DOT than Peter, the lock period for both
-of them is less than Peter, leading to their voting power counting as less.
+Even though combined both Logan and Kevin vote with more DOT than Peter, the lock period for both of
+them is less than Peter, leading to their voting power counting as less.
 
 #### Tallying
 
@@ -142,7 +138,7 @@ approve - the number of aye votes
 
 against - the number of nay votes
 
-turnout - the total number of voting tokens (Does not include conviction)
+turnout - the total number of voting tokens (does not include conviction)
 
 electorate - the total number of DOT tokens issued in the network
 ```
@@ -211,14 +207,15 @@ period.
 #### Voluntary Locking
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their
-voting power by declaring how long they are willing to lock-up their tokens, hence, the maximum
-number of votes for each token holder will be calculated by the following formula:
+voting power by declaring how long they are willing to lock-up their tokens, hence, the number of
+votes for each token holder will be calculated by the following formula:
 
 ```
-Max votes = tokens * vote_multiplier
+votes = tokens * conviction_multiplier
 ```
 
-The conviction multiplier increases the vote multiplier by one every time the lock period doubles.
+The conviction multiplier increases the vote multiplier by one every time the number of lock periods
+double.
 
 | Lock Periods | Vote Multiplier |
 | :----------: | :-------------: |
@@ -230,8 +227,15 @@ The conviction multiplier increases the vote multiplier by one every time the lo
 |      16      |        5        |
 |      32      |        6        |
 
-The maximum number of lock periods is set to 6 and the lock period is 30 days on Polkadot and eight
-days on Kusama.
+The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
+total), and one lock period equals 28 days on Polkadot and 8 days on Kusama. Only doublings are
+allowed; you cannot lock for, say, 24 periods and increase your conviction by 5.5, for instance.
+
+While a token is locked, you can still use it for voting and staking; you are only prohibited from
+transferring these tokens to another account.
+
+Votes are still "counted" at the same time (at the end of the voting period), no matter for how long
+the tokens are locked.
 
 #### Adaptive Quorum Biasing
 
@@ -275,8 +279,9 @@ the council currently consists of 13 members. This is expected to increase over 
 to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
 will be 24 seats while on Kusama it is 19 seats.
 
-The council is called upon primarily for three tasks of governance: proposing sensible referenda,
-cancelling uncontroversially dangerous or malicious referenda, and electing the technical committee.
+Along with [controlling the treasury](learn-treasury), the council is called upon primarily for
+three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
+malicious referenda, and electing the technical committee.
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
@@ -284,13 +289,13 @@ if, after a cool-down period, the proposal is resubmitted, they may not veto it 
 Council motions which pass with a 3/5 (60%) super-majority - but without reaching unanimous
 support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
 case that all members of the council vote in favor of a motion, the vote is considered unanimous and
-becomes a referundum with negative adaptive quorum biasing.
+becomes a referendum with negative adaptive quorum biasing.
 
 ### Canceling
 
 A proposal can be canceled if the [technical committee](#technical-committee) unanimously agrees to
-do so, or if Root origin (e.g. sudo or Council) triggers this functionality. A canceled proposal's
-deposit is burned.
+do so, or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
+burned.
 
 Additionally, a two-thirds majority of the council can cancel a referendum. This may function as a
 last-resort if there is an issue found late in a referendum's proposal such as a bug in the code of
@@ -301,16 +306,18 @@ it will be left to the stakeholders _en masse_ to determine the fate of the prop
 
 ### Blacklisting
 
-A proposal can be blacklisted by Root origin (e.g. sudo or Council). A blacklisted proposal and its
-related referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted
-proposal's hash cannot re-appear in the proposal queue. Blacklisting is useful when removing
-removing erroneous proposals that could be submitted with the same hash, i.e.
+A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
+referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+hash cannot re-appear in the proposal queue. Blacklisting is useful when removing removing erroneous
+proposals that could be submitted with the same hash, i.e.
 [proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
-text to make a suggestion. Upon seeing their proposal removed, a submitter who is not properly
-introduced to the democracy system of Polkadot might be tempted to re-submit the same proposal. That
-said, this is far from a fool-proof method of preventing invalid proposals from being submitted - a
-single changed character in a proposal's text will also change the hash of the proposal, rendering
-the per-hash blacklist invalid.
+text to make a suggestion.
+
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
+system of Polkadot might be tempted to re-submit the same proposal. That said, this is far from a
+fool-proof method of preventing invalid proposals from being submitted - a single changed character
+in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist
+invalid.
 
 ### How to be a council member?
 
@@ -323,16 +330,16 @@ validators from the available pool based on nominations. However, token holders'
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one day on Kusama and one week on Polkadot.
 
-At the end of each term, Phragmén election algorithm runs and the result will choose the new
-councillors based on the vote configurations of all voters. The election also chooses a set number
-of runners up (currently 19 on Kusama and 20 on Polkadot) that will remain in the queue with their
-votes intact.
+At the end of each term, [Phragmén election algorithm](learn-phragmen) runs and the result will
+choose the new councillors based on the vote configurations of all voters. The election also chooses
+a set number of runners up (currently 19 on Kusama and 20 on Polkadot) that will remain in the queue
+with their votes intact.
 
-As opposed to a "first past the post", where voters must decide only on a single candidate chosen
-from a list, a Phragmén election is a more expressive way to indicate voters' views. Token holders
-can treat it as Yes or No voting to support as many candidates as they want. The election algorithm
-will find a fair subset of the candidates that closely matches the expressed indications of the
-electorate as a whole.
+As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
+candidate from a list, a Phragmén election is a more expressive way to include each voters' views.
+Token holders can treat it as a way to support as many candidates as they want. The election
+algorithm will find a fair subset of the candidates that most closely matches the expressed
+indications of the electorate as a whole.
 
 Let's take a look at the example below.
 
@@ -364,9 +371,9 @@ next election. After round 2, even though candidates A & B get the same number o
 round, candidate A gets elected because after adding the older unused approvals, it is higher than
 B.
 
-This is the tentative governance configuration for Polkadot in the initial genesis. It will be
-changed if any security loopholes have been found after third-party auditing. Further changes can be
-made through on-chain governance.
+This is the tentative governance configuration for Polkadot post-genesis. It will be changed if any
+security loopholes have been found after several rounds of third-party auditing. Further changes can
+be made through on-chain governance.
 
 ### Prime Members
 
@@ -420,7 +427,7 @@ your behalf.
 
 At some point you will likely need a place for a longer form discussion. For this, making a post on
 [Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
-you present all the evidence for your circumstance and state clearly what kind of change you would
+you present all the evidence for your circumstances and state clearly what kind of change you would
 suggest to the councillors to enact. Remember - the councillors do not need to make the change, it
 is your responsibility to make a strong case for why the change should be made.
 
@@ -432,8 +439,6 @@ is your responsibility to make a strong case for why the change should be made.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
   explaining how governance works in Polkadot and Kusama.
-- [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - An explanation of
-  how governance works in Polkadot and Kusama, with Bill Laboon.
 
 [polkadot direction]: https://matrix.to/#/!OwgojQyBzTlUQGGLhq:matrix.parity.io
 [polkassembly]: https://polkadot.polkassembly.io/

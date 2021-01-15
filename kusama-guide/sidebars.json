@@ -5,7 +5,7 @@
       {
         "type": "subcategory",
         "label": "Get Started",
-        "ids": ["kusama-getting-started", "kusama-faucet", "kusama-claims", "kusama-endpoints"]
+        "ids": ["kusama-getting-started", "kusama-faucet", "kusama-claims", "kusama-endpoints", "mirror-thousand-validators"]
       },
       {
         "type": "subcategory",
@@ -16,6 +16,7 @@
           "mirror-learn-governance",
           "mirror-learn-identity",
           "mirror-learn-treasury",
+          "mirror-learn-registrar",
           "mirror-build-build-with-polkadot",
           "maintain-guides-society-kusama",
           "kusama-social-recovery"

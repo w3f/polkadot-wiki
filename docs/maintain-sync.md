@@ -66,7 +66,7 @@ https://github.com/paritytech/substrate-light-ui
   git clone https://github.com/paritytech/polkadot kusama
   cd kusama
   ./scripts/init.sh
-  cargo build –-release
+  cargo build --release
   ```
 - Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama

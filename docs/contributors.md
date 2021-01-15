@@ -12,7 +12,8 @@ you directly, first check the contact information to see that it matches the ori
 and then feel free to get in touch with someone else on this list to verify the legitimacy of the
 original inquiry. **Employee impersonation is a very common type of scam**.
 
-> For other ways of protecting yourself, please see [How to Avoid Being Scammed](learn-scams).
+> For other ways of protecting yourself, please see
+> [How to Protect Yourself from Scams](learn-scams).
 
 ### Anson Lau
 
@@ -30,9 +31,9 @@ deliver us a better future.
 ### Bill Laboon
 
 - email: [bill@web3.foundation](mailto:bill@web3.foundation)
-- telegram: [@billlaboon](https://t.me/billlaboon)
 - matrix / riot / element: [@bill:web3.foundation](https://matrix.to/#/@bill:web3.foundation)
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
+- telegram: [@BillLaboon](https://t.me/BillLaboon)
 
 Bill Laboon is the Technical Education Lead at Web3 Foundation, after spending the previous five
 years teaching Computer Science at the University of Pittsburgh. He is the author of two books:

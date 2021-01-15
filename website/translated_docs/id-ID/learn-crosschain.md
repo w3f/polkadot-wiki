@@ -21,7 +21,7 @@ XCMP is currently under development and the details are subject to change. Howev
 - When a collator produces a new block to hand off to a validator, it will collect the latest ingress queue information and process it.
 - Validators will check a proof that the new candidate for the next parachain block includes the processing of the expected ingress messages to that parachain.
 
-XCMP queues must be initiated by first opening a channel between two parachains. The channel is identified by both the sender and recipeient parachains, meaning that it's a one-way channel. A pair of parachains can have at most two channels between them, one for sending messages to the other chain and another for receiving messages. The channel will require a deposit in DOT to be opened, which will get returned when the channel is closed.
+XCMP queues must be initiated by first opening a channel between two parachains. The channel is identified by both the sender and recipient parachains, meaning that it's a one-way channel. A pair of parachains can have at most two channels between them, one for sending messages to the other chain and another for receiving messages. The channel will require a deposit in DOT to be opened, which will get returned when the channel is closed.
 
 ## Horizontal Relay-routed Message Passing (HRMP)
 

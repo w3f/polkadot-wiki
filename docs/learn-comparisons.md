@@ -7,13 +7,17 @@ sidebar_label: Other comparisons
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular
 chains.
 
-## [Ethereum 2.0](learn-comparisons-ethereum-2)
+## In-Depth Comparisons
 
-## [Cosmos](learn-comparisons-cosmos)
+### [Ethereum 2.0](learn-comparisons-ethereum-2)
 
-## [Dfinity](learn-comparisons-dfinity)
+### [Cosmos](learn-comparisons-cosmos)
 
-## Ethereum 1.x
+### [Dfinity](learn-comparisons-dfinity)
+
+## Other Comparisons
+
+### Ethereum 1.x
 
 [Ethereum](https://ethereum.org) is a smart contract platform blockchain that allows for general
 computation to be deployed on-chain and operated across the p2p network. Ethereum 1.x refers to the
@@ -50,7 +54,7 @@ unwanted state transitions. Although Polkadot is currently written in the Rust l
 the same level of formal verification tools as Tezos' implementation language OCaml, Rust is
 considered a safer language than C or C++ for systems programming. Furthermore, Polkadot makes no
 restrictions to parachains written in more friendly languages for formal verification-- the only
-requirement is that the logic must compile to Wasm. It is expected that some chains will emerge
-written with formal verification as a first class property. Additionally, the tooling ecosystem
-around both Rust and Wasm are both maturing and formal verification tools may at some point become
-more widely available for these languages.
+requirement is that the logic must compile to Wasm. It is expected that some chains will emerge with
+formal verification as a first class property. Additionally, the tooling ecosystem around both Rust
+and Wasm are both maturing and formal verification tools may at some point become more widely
+available for these languages.

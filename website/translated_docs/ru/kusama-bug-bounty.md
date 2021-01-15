@@ -6,7 +6,7 @@ sidebar_label: Bug Bounty
 
 Мы призываем наше сообщество и всех охотников за bug bounty помочь выявить ошибки в Kusama.
 
-Если Вы обнаружили ошибку, мы ценим Ваше сотрудничество в ответственном расследовании и сообщении об этом [sos@kusama.network](mailto:sos@kusama.network). Объявление третьим лицам дисквалифицирует Ваше право на участие в программе.
+If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it as per [instructions on the Web3 Foundation website](https://web3.foundation/security-report/). Disclosure to any third parties disqualifies bug bounty eligibility.
 
 ## Правомочность
 
@@ -19,14 +19,12 @@ sidebar_label: Bug Bounty
 **Ответственное расследование и отчетность** включает в себя ответственное расследование и отчеты, но не ограничивается следующими:
 
 - Не нарушать конфиденциальность других пользователей, уничтожать данные и т.д.
-- Не обманывайте и не причиняйте вреда сети Kusama или её пользователям во время Вашего исследования; Вам следует приложить усилия для того, чтобы не прерывать или не ухудшать качество наших услуг.
-- Не испытывайте физическую безопасность валидаторов и не пытайтесь использовать социальную инженерию, спам, распределенные атаки типа "отказ в обслуживании" (DDOS) и т. д.
+- Don't defraud or harm Kusama network or its users during your research; you should make a good faith effort to not interrupt or degrade our services.
+- Don't target the validators' physical security measures, or attempt to use social engineering, spam, distributed denial of service (DDoS) attacks, etc.
 - Первоначально сообщите об ошибке только нам, а не кому-либо ещё.
 - Дайте нам достаточно времени для исправления ошибки, прежде чем раскрыть её кому-либо ещё, и подать нам соответствующее письменное предупреждение, прежде чем раскрыть её кому-либо еще.
 - В целом, пожалуйста, расследуйте и сообщайте об ошибках таким образом, чтобы разумные, добросовестные усилия не были разрушительными или вредными для нас или наших пользователей. В противном случае Ваши действия могут быть истолкованы как нападение, а не как попытка быть полезным.
 
 ## Как сообщить об ошибке
 
-Пожалуйста, отправьте письмо со всеми деталями на адрес [sos@kusama.network](mailto:sos@kusama.network).
-
-Псевдонимы и анонимные сообщения приветствуются.
+Please follow the instructions at [web3.foundation/security-report/](https://web3.foundation/security-report/).

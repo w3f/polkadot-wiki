@@ -166,7 +166,7 @@ class Footer extends React.Component {
               <FooterLink content="Blog" href="https://polkadot.network/blog" />
               <FooterLink
                 content="Element Chat"
-                href="https://riot.im/app/#/room/#polkadot-watercooler:matrix.org"
+                href="https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation"
               />
               <FooterLink content="Medium" href="https://medium.com/polkadot-network" />
             </FooterNavColumn>

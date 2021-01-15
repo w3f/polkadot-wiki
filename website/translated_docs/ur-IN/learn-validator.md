@@ -42,7 +42,7 @@ Validators perform two functions. First, verifying that the information containe
 
 ## Validator Stats
 
-- [HashQuark Staking Strategy](https://labs.hashquark.io/#/polka/strategy) - The HashQuark staking strategy dashboard helps you choose the optimal set-up to maximize rewards.
+- [HashQuark Staking Strategy](https://polkacube.hashquark.io/#/polkadot/strategy) - The HashQuark staking strategy dashboard helps you choose the optimal set-up to maximize rewards, and provides other useful network monitoring tools.
 - [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator statistics.
-- [Polkanalytics](https://polkanalytics.com/#/dashboard) - A validator dashboard that displays the daily earnings of all nominators.
+- [YieldScan](https://yieldscan.onrender.com/) - Staking yield maximization platform, designed to minimize effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the current validators - not as tailored for validators as the other sites.

@@ -111,7 +111,7 @@ Voter V5:       X X X  0  1/4
 
 We are now down to candidates `A`, `C`, and `D` for two open seats. There is only one voter (`V4`) for `A`, with load `1/4`. `C` has two voters, `V2` and `V5`, with loads of `0` and `1/4`. `D` has three voters approving of them, `V2`, `V3`, and `V5`, with loads of `0`, `1/4`, and `1/4`, respectively.
 
-If Candidate `A` wins, the average load would be `(1/4 + 1/1) / 1`, or `5/4`. If candidate `C` wins, the average load would be `(0 + 1/2) + (1/4 + 1/2) / 2`, or `5/8`. If candidate `D` wins, the average load would be `(0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3) / 3`, or `1/2`. Since `1/2` is the lowest average load, candidate D wins the second round.
+If Candidate `A` wins, the average load would be `(1/4 + 1/1) / 1`, or `5/4`. If candidate `C` wins, the average load would be `((0 + 1/2) + (1/4 + 1/2)) / 2`, or `5/8`. If candidate `D` wins, the average load would be `((0 + 1/3) + (1/4 + 1/3) + (1/4 + 1/3)) / 3`, or `1/2`. Since `1/2` is the lowest average load, candidate D wins the second round.
 
 Now everybody who voted for Candidate `D` has their load set to the average, `1/2` of all the loads.
 
@@ -167,7 +167,7 @@ In more depth, the algorithm operates like so:
 1. Create a list of all voters, their total amount of stake, and which validators they support.
 2. Generate an initial edge-weighted graph mapping from voters to candidates, where each edge weight is the total _potential_ weight (stake) given by that voter. The sum of all potential weight for a given candidate is called their _approval stake_.
 3. Now we start electing candidates. For the list of all candidates who have not been elected, get their score, which is equal to `1 / approval_stake`.
-4. For each voter, update the score of each candidate they support by adding their total budget (stake) multiplied by the load of the candidate and then dividing by that candidate's approval stake (`voter_budget * voter_load / candidate_approval_stake`.
+4. For each voter, update the score of each candidate they support by adding their total budget (stake) multiplied by the load of the voter and then dividing by that candidate's approval stake (`voter_budget * voter_load / candidate_approval_stake`.
 5. Determine the candidate with the lowest score and elect that candidate. Remove the elected candidate from the pool of potential candidates.
 6. The load for each edge connecting to the winning candidate is updated, with the edge load set to the score of the candidate minus the voter's load, and the voter's load then set to the candidate's score.
 7. If there are more candidates to elect, go to Step 3. Otherwise, continue to step 8.
@@ -438,7 +438,7 @@ In contrast, imagine a different result with the same amount of total stake, but
 
 Running the Phragmén algorithm is time-consuming, and often cannot be completed within the time limits of production of a single block. Waiting for calculation to complete would jeopardize the constant block production time of the network. Therefore, as much computation as possible is moved to an offchain worker, which validators can work on the problem without impacting block production time. By restricting the ability of users to make any modifications in the last 25% of an era, and running the selection of validators by nominators as an offchain process, validators have a significant amount of time to calculate the new active validator set and allocate the nominators in an optimal manner.
 
-There are several further restrictions put in place to limit the complexity of the election and payout. As already mentioned, any given nominator can only select up to 16 validators to nominate. Conversely, a single validator can have only 256 nominators. A drawback to this is that it is possible, if the number of nominators is very high or the number of validators is very low, that all available validators may be "saturated" and unable to accept more nominations. In this case, one may need a larger amount of stake to participate in staking, since nominations are priority-ranked in terms of amount of stake.
+There are several further restrictions put in place to limit the complexity of the election and payout. As already mentioned, any given nominator can only select up to 16 validators to nominate. Conversely, a single validator can have only {{ polkadot_max_nominators }} nominators. A drawback to this is that it is possible, if the number of nominators is very high or the number of validators is very low, that all available validators may be "oversubscribed" and unable to accept more nominations. In this case, one may need a larger amount of stake to participate in staking, since nominations are priority-ranked in terms of amount of stake.
 
 ## External Resources
 

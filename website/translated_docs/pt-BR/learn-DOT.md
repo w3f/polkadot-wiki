@@ -12,24 +12,24 @@ The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is 
 
 ### Polkadot
 
-| Unit            | Decimal Places |
-| --------------- | -------------- |
-| Planck          | 1              |
-| Microdot (uDOT) | 4              |
-| Millidot (mDOT) | 7              |
-| Dot (DOT)       | 10             |
+| Unit            | Decimal Places | Example      |
+| --------------- | -------------- | ------------ |
+| Planck          | 0              | 0.0000000001 |
+| Microdot (uDOT) | 4              | 0.0000010000 |
+| Millidot (mDOT) | 7              | 0.0010000000 |
+| Dot (DOT)       | 10             | 1.0000000000 |
 
 _Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck, just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)". See [Redenomination of DOT](redenomination) for more details._
 
 ### Kusama
 
-| Unit            | Decimal Places |
-| --------------- | -------------- |
-| Planck          | 1              |
-| Point           | 3              |
-| MicroKSM (uKSM) | 6              |
-| MilliKSM (mKSM) | 9              |
-| KSM             | 12             |
+| Unit            | Decimal Places | Example        |
+| --------------- | -------------- | -------------- |
+| Planck          | 0              | 0.000000000001 |
+| Point           | 3              | 0.000000001000 |
+| MicroKSM (uKSM) | 6              | 0.000001000000 |
+| MilliKSM (mKSM) | 9              | 0.001000000000 |
+| KSM             | 12             | 1.000000000000 |
 
 ## What are the uses of DOT?
 
@@ -79,13 +79,26 @@ Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that
 
 These extrinsics are exposed from the Vesting pallet.
 
+If you are using Polkadot-JS, when there are DOT available to vest for an account, then you will have the ability to unlock DOT which have already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+
+![unbond](assets/unlock-vesting.png)
+
+#### Calculating When Vesting DOT Will Be Available
+
+Generally, you should be able to see from the [Accounts](https://polkadot.js.org/apps/#/accounts) by looking at your accounts and seeing when the vesting will finish. However, some DOT vest with "cliffs" - a single block where all the DOT are released, instead of vesting over time. In this case, you will have to query the chain state directly to see when they will be available (since technically, the vesting has not yet started - all of the vesting will occur in a single block in the future).
+
+1. Navigate to the [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate) page on Polkadot-JS.
+2. Query chain state for `vesting.vesting(ACCOUNT_ID)`
+3. Note the `startingBlock` where the unlock starts, and how much DOT is unlocked per block (`perBlock`).
+4. You will have to calculate the result into “human time". To do this, remember that there are approximately 14’400 blocks per day, and you can see what the latest block is shown on the [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
+
 ## Obtaining Testnet DOT
 
 DOT are required to make transactions on the Polkadot network. Testnet DOT do not have any value beside allowing you to experiment with the network.
 
 ### Getting Westies
 
-The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Riot chatroom [#westend_faucet:matrix.org](https://riot.im/app/#/room/!cJFtAIkwxuofiSYkPN:matrix.org).
+The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org).
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
 
@@ -99,4 +112,4 @@ Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are a
 
 ## Polkadot Mainnet DOT
 
-Polkadot Mainnet DOT are not freely given away. If you purchased DOT in original 2017 offering, you may claim them via the [Polkadot claims process](https://claims.polkadot.network/). Alternatively, they are available on the open market.
+Polkadot Mainnet DOT are not freely given away. If you purchased DOT in the original 2017 offering, you may claim them via the [Polkadot claims process](https://claims.polkadot.network/). Alternatively, they are available on the open market.

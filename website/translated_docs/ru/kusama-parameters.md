@@ -8,7 +8,7 @@ Many of these parameter values can be updated via on-chain governance. If you re
 
 ### Периоды общих действий и атрибутов
 
-_NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See [Polkadot Parameters](polkadot-parameters) for more details on how Kusama's parameters differ from Polkadot's._
+_NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See [Polkadot Parameters](https://wiki.polkadot.network/docs/en/maintain-polkadot-parameters) for more details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Эпоха: 1 час (600 слотов x 6 секунд)
@@ -48,8 +48,8 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 | Kusama                         | Время   | Слоты   | Описание                                                                                                                                                                                            |
 | ------------------------------ | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Срок действия                  | 6 часов | 3,600   | Время, в течение которого валидатор находится в наборе после избрания. Обратите внимание, что эта продолжительность может быть сокращена в том случае, если валидатор плохо себя ведет.             |
-| Период номинации               | 6 часов | 3,600   | How often a new validator set is elected according to Phragmén's method.                                                                                                                            |
+| Срок действия                  | 6 часов | 3,600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case the a validator misbehaves.                                                      |
+| Период номинации               | 6 часов | 3,600   | How often a new validator set is [elected](learn-phragmen).                                                                                                                                         |
 | Длительность бондинга          | 7 дней  | 604,800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Длительность отсрочки слэшинга | 7 дней  | 604,800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 

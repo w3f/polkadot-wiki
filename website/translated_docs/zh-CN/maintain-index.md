@@ -31,7 +31,7 @@ sidebar_label: 网络参与者
 - [验证人指南 (Kusama)](maintain-guides-how-to-validate-kusama)-逐步介绍如何在 Kusama 金丝雀网络上运行节点。
 - [Using systemmd for the Validator Node](maintain-guides-how-to-systemd) - Configuring systemmd with the Validator node.
 - [Secure Validator](maintain-guides-secure-validator) - Best tips and practices for validating.
-- [How to use Polkadot Secure Validator] - Walkthrough on how to set up a validator securely.
+- [How to use Polkadot Secure Validator](maintain-guides-how-to-use-polkadot-secure-validator) - Walkthrough on how to set up a validator securely.
 - [How to upgrade a Validator Node](maintain-guides-how-to-upgrade) - Guide on upgrading your validator node.
 - [How to Chill](maintain-guides-how-to-chill) - Walkthrough on how to chill as a validator.
 

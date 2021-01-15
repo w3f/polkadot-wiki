@@ -20,8 +20,6 @@ By connecting these dots, Polkadot serves as a foundational part of a decentrali
 
 ## Why Polkadot?
 
-The Polkadot network is heading towards a future with a secure ecosystem for decentralized applications (built with blockchain technology) to communicate and interact in. Polkadot has deep roots in the blockchain industry and working hard to build on existing blockchain concepts like governance, scalibility, and many more.
-
 Back in the early 2000's, when the internet was gaining popularity for the first time, the internet featured read-only, static, basic webpages. The online connected world at the time was only the beginning of virtual data, identities, and more. The internet during this time was also called the Web 1.0.
 
 As social media platforms and online businesses began to emerge, the internet transformed into the Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages, where users can read and write information plus publish their own for others to see. This version of the web though, comes with downsides dealing with data control, privacy issues, and trust. This is where the Web 3.0 comes into the picture.
@@ -32,9 +30,9 @@ The Web 3.0 is taking centralized applications and turning them into decentraliz
 
 ## How does Polkadot work?
 
-The Polkadot network uses a sharded model where shards - called "[parachains](learn-parachains)", allows transactions to be processed in parallel instead of one-by-one. Each parachain in the network have unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
+The Polkadot network uses a [sharded model](https://en.wikipedia.org/wiki/Shard_(database_architecture)) where shards - called "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of sequentially. Each parachain in the network has a unique state transition functions (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
 
-Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous availability and validity checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, collators don't have any security responsibilities, and thus do not require a robust incentive system. This is how the entire network stays up to date with the many transactions that take place.
+Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous [availability and validity](learn-availability) checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, [collators](learn-collator) - full nodes of these parachains - don't have any security responsibilities, and thus do not require a robust incentive system. This is how the entire network stays up to date with the many transactions that take place.
 
 ![polkadot-relay-chain](assets/polkadot_relay_chain.png)
 
@@ -46,7 +44,7 @@ The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain) allows parachains 
 
 ## Why should you use Polkadot?
 
-Whether you're a blockchain developer or if you're interested in taking part of Polkadot's community, Polkadot offers a platform for everyone. The Polkadot Wiki offers a place for builders and maintainers to utilize tools and for brand-new learners to dive into educational material.
+Whether you're a blockchain developer or if you're interested in taking part of [Polkadot's community](https://polkadot.network/polkadot-ambassador-program/), Polkadot offers a platform for everyone. This wiki offers a place for builders and maintainers to utilize [tools](build-tools-index) and for brand-new learners to dive into educational material.
 
 ## Getting Started
 
@@ -73,7 +71,7 @@ For brand-new learners of Polkadot:
 - [Voting for Councillors][council voting]
 - [Using the Treasury][treasury]
 
-For brand-new learners of Kusama: To learn more about how to build and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
+For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
 
 ## Resources
 

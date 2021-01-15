@@ -8,9 +8,9 @@ sidebar_label: 加入议会
 
 ## 成为候选人
 
-Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be forfeited if your candidacy does not win or become a runner-up, but if you become a member of the council you will eventually get your bond back. Runner-ups are selected after every round and are reserved members in case one of the winners gets forcefully removed.
+Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be forfeited if your candidacy does not win or become a runner-up and will be kept otherwise. You only receive your bond back, if you manually renounce your candidacy before losing. Runners-up are selected after every round and are reserved members in case one of the winners gets forcefully removed.
 
-> 目前提交参選议员在 Kusama 的綁定金額为1 KSM。
+> Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.1666 KSM on Kusama.
 
 在提交参选候选人之前，最好先宣布您的意向，使您的支持者知道何时可以开始投票。如果没有其他人投票给你，你也可以投票给自己。
 

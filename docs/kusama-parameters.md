@@ -12,8 +12,8 @@ certainty as to their values, it is recommended you directly check the constants
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 second slots. See
-[Polkadot Parameters](polkadot-parameters) for more details on how Kusama's parameters differ from
-Polkadot's._
+[Polkadot Parameters](https://wiki.polkadot.network/docs/en/maintain-polkadot-parameters) for more
+details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 1 hour (600 slots x 6 seconds)
@@ -55,8 +55,8 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Term duration        | 6 hours | 3,600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
-| Nomination period    | 6 hours | 3,600   | How often a new validator set is elected according to Phragmén's method.                                                                                                                            |
+| Term duration        | 6 hours | 3,600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case the a validator misbehaves.                                                      |
+| Nomination period    | 6 hours | 3,600   | How often a new validator set is [elected](learn-phragmen).                                                                                                                                         |
 | Bonding duration     | 7 days  | 604,800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 7 days  | 604,800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 

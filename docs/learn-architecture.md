@@ -16,7 +16,7 @@ instance, smart contracts are not supported. The main responsibility is to coord
 a whole, including parachains. Other specific work is delegated to the parachains, which have
 differing implementations and features.
 
-## [Parachains](build-deploy-parachains) and [Parathreads](learn-parathreads)
+## [Parachains](learn-parachains) and [Parathreads](learn-parathreads)
 
 Most of the computation that happens across the Polkadot network as a whole will be delegated to
 specific parachain implementations that handle various use cases. Polkadot places no constraints

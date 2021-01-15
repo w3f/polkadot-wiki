@@ -96,14 +96,14 @@ sudo ntpq -p
 
 You will need to build the `polkadot` binary from the [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source code available in the **v0.8** branch.
 
-You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command (`git tag | grep "$v\0\.8"` - note that output is sorted ASCII-betically, _not_ numerically or chronologically) or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
+You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with `git clone git@github.com:paritytech/polkadot.git`.
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.8"
+git tag -l | sort -V | grep -v -- '-rc'
 echo Get the latest version and replace VERSION (below) with it.
 git checkout VERSION
 ./scripts/init.sh
@@ -115,9 +115,9 @@ This step will take a while (generally 10 - 40 minutes, depending on your hardwa
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
 > 
 > ```sh
-rustup install nightly-2020-05-15
-rustup override set nightly-2020-05-15
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+rustup install nightly-2020-10-06
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+cargo +nightly-2020-10-06 build --release
 ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same directory. You may then take the generated `subkey` executable and transfer it to an air-gapped machine for extra security.
@@ -243,6 +243,10 @@ If you go to the "Staking" tab, you will see a list of active validators current
 The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the _waiting_ queue. If your validator is not selected to become part of the validator set, it will remain in the _waiting_ queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of DOT staked or seek out nominators for your validator in order to join the validator set.
 
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Polkadot validator! If you need help, reach out on the [Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies to provide support for community validators. If you are interested in applying for the programme, you can find more information [on the wiki page](thousand-validators.md).
 
 ## FAQ
 

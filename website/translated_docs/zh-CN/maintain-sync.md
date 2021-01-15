@@ -35,7 +35,7 @@ Archive 节点是供需要过去信息的实用程序使用，例如区块浏览
   git clone https://github.com/paritytech/polkadot kusama
   cd kusama
   ./scripts/init.sh
-  cargo build –-release
+  cargo build --release
   ```
 - 运行以下命令以启动您的节点: `./target/release/polkadot --name "我节点的名称" `
 - 在 https://telemetry.polkadot.io/#list/Kusama 找您的节点

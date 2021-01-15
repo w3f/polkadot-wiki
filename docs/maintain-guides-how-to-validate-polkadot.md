@@ -150,10 +150,9 @@ You will need to build the `polkadot` binary from the
 code available in the **v0.8** branch.
 
 You should generally use the latest **0.8.x** tag. You should either review the output from the "git
-tag" command (`git tag | grep "$v\0\.8"` - note that output is sorted ASCII-betically, _not_
-numerically or chronologically) or visit the
-[Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8
-releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
+tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list
+of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e.,
+the highest number).
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com:paritytech/polkadot.git`.
@@ -161,7 +160,7 @@ releases. You should replace `VERSION` below with the latest build (i.e., the hi
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
-git tag | grep "$v\0\.8"
+git tag -l | sort -V | grep -v -- '-rc'
 echo Get the latest version and replace VERSION (below) with it.
 git checkout VERSION
 ./scripts/init.sh
@@ -174,9 +173,9 @@ This step will take a while (generally 10 - 40 minutes, depending on your hardwa
 > done by running:
 >
 > ```sh
-> rustup install nightly-2020-05-15
-> rustup override set nightly-2020-05-15
-> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+> rustup install nightly-2020-10-06
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+> cargo +nightly-2020-10-06 build --release
 > ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
@@ -388,6 +387,12 @@ validator set.
 **Congratulations!** If you have followed all of these steps, and been selected to be a part of the
 validator set, you are now running a Polkadot validator! If you need help, reach out on the
 [Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+
+## Thousand Validators Programme
+
+The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
+to provide support for community validators. If you are interested in applying for the programme,
+you can find more information [on the wiki page](thousand-validators.md).
 
 ## FAQ
 
