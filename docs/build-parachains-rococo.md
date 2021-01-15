@@ -152,7 +152,7 @@ process are the following:
 - You will have 2 days to get everything up and running after the Rococo team lets you know
 - Make sure you build, run, and test a local setup based on the `rococo-v1` branch for a while (you will be asked for proof)
 - Together with the Rococo team this thing will get deployed
-- Don't worry, if you registered your slot is secured
+- Don't worry, if you registered, your slot is secured
 - If your chain doesn't start to produce blocks within 5 hours after approval, the Rococo team reserves the right to de-register your proposal at any time
 - The Rococo team reserves a right for this timing to change, but everybody will try their best to notify you
 
