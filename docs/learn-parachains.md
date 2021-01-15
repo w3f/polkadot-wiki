@@ -6,8 +6,6 @@ sidebar_label: Parachains
 
 ![One parachain](assets/network/one_parachain.png)
 
-## What is a parachain?
-
 A parachain is an application-specific data structure that is globally coherent and validatable by
 the validators of the Polkadot Relay Chain. Most commonly a parachain will take the form of a
 blockchain, but there is no specific need for them to be actual blockchains. They take their name
@@ -20,20 +18,19 @@ Parachains are maintained by a network maintainer known as a [collator](learn-co
 the collator node is to maintain a full-node of the parachain, retain all necessary information of
 the parachain, and produce new block candidates to pass to the Relay Chain validators for
 verification and inclusion in the shared state of Polkadot. The incentivization of a collator node
-is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They
-are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the
-parachain implementation.
+is an implementation detail of the parachain. They are not required to be staked on the Relay Chain
+or own DOT tokens unless stipulated to do so by the parachain implementation.
 
-The Polkadot Host (PH) allows for the state transitions performed on parachains to be specified as a
-Wasm executable. Proofs of new state transitions that occur on a parachain must be validated against
-the registered state transition function (STF) that is stored on the Relay Chain by the validators
-before Polkadot acknowledges a state transition has occurred on a parachain. The only constraint to
-the logic that a parachain is allowed to implement is that it must be verifiable by the Relay Chain
-validators. Verification most commonly takes the form of a bundled proof of a state transition known
-as a Proof-of-Verification (PoV) block, which is submitted to the validators from one or more of the
-parachain collators to be checked.
+The Polkadot Host (PH) requires that the state transitions performed on parachains to be specified
+as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated
+against the registered state transition function (STF) that is stored on the Relay Chain by the
+validators before Polkadot acknowledges a state transition has occurred on a parachain. The only
+constraint to the logic that a parachain is allowed to implement is that it must be verifiable by
+the Relay Chain validators. Verification most commonly takes the form of a bundled proof of a state
+transition known as a Proof-of-Verification (PoV) block, which is submitted to the validators from
+one or more of the parachain collators to be checked.
 
-## Parachain economies
+## Parachain Economies
 
 Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake
 are usually used to select the validator set in order to handle validation and finalization;
@@ -53,63 +50,46 @@ could not include that in their implementation and Polkadot would still enforce 
 Parachains are not required to have their own token. If they do, is up to the parachain to make the
 economic case for their token, not Polkadot.
 
-## Crowdfunding parachains
+## Parachain Slot Acquisition
 
-Polkadot allows for parachains to crowdfund their slots in a decentralized and safe way. The logic
-for this is handled in the [crowdfunding pallet][].
+Polkadot supports a limited number of parachains, currently estimated to be about 100. As the number
+of slots is limited, Polkadot has several ways to allocate the slots:
 
-During a parachain auction, anyone can create a new crowdfunding campaign for a parachain slot. When
-a campaign is created, the range of slots (i.e. the duration of the lease) is specified. Up to four
-slots, for a total time duration of roughly two years, can be selected. The creator of the crowdfund
-becomes the owner of the campaign, and can later upload the parachain's code. When creating a
-campaign, a crowdfunding "cap" is also specified. The crowdfund will refuse to accept funds after
-the cap has been reached.
+- System level parachains
+- Auction granted parachains
+- Parathreads
 
-Parachain campaigns may use caps when they are confident they will raise enough funds to reach the
-minimum amount needed for a raise but do not want to raise too much over this amount. As a
-simplified example, let's consider that the total supply of DOT is 10 million. We can assume that 5
-million DOT are bonded in the staking subsystem since that is what is optimized by the rewards. We
-are left with a maximum of 5 million DOT to use in parachain auctions. If there were only 4 slots up
-for an auction then we can calculate that 1.25 million is enough to win any one of them. A parachain
-might choose to place this as their cap, so that no single parachain can be oversubscribed.
+System parachains are those deemed as a "common good" for the network, such as bridges to other
+networks or chains that remove functionality from the Relay Chain, e.g. a governance parachain.
+These typically do not have an economic model of their own and help remove transactions from the
+Relay Chain, allowing for more efficient parachain processing.
 
-Once a crowdfunding campaign is open, anyone can contribute by sending a special transaction and
-depositing funds. Funds that are used to contribute must be transferrable (that is, not locked)
-because they will be moved into a module controlled account that was generated uniquely for this
-campaign.
+Auction granted parachains are granted in a permissionless [auction](learn-auction). Parachain teams
+can either bid with their own DOT tokens, or source them from the community using the
+[crowdloan functionality](learn-crowdloan).
 
-During some point of the crowdfund campaign the owner will upload the parachain data. Ideally, the
-owner does this before soliciting contributions to the campaign so that the contributors can verify
-it. The data can only be uploaded once during the course of the campaign and it will be what is
-deployed for the parachain. Of course, once the parachain is running it can always change via
-runtime upgrades (as determined through its own local governance).
+[Parathreads](learn-parathreads) have the same API as parachains, but are scheduled for execution on
+a pay-as-you-go basis with an auction for each block.
 
-If a crowdfunding campaign is successful, that parachain will be on-boarded as a parachain in
-Polkadot. The funds that contributed to it will be locked in that parachain's account for the entire
-duration that it is active (up to two years). On one hand, this means that the parachain can do
-reliable accounting of contributors and reward them with parachain tokens in their local economies.
-On the other hand, the DOT that contributors used will be essentially taken out of circulation for
-that time and cannot be used to stake or vote.
+### Slot Expiration
 
-At the end of the parachain's lifecycle, it will enter into a retirement phase. During this phase,
-contributors can begin to withdraw their locked DOT. Contributors must withdraw their funds during
-the retirement phase, otherwise they will be sent to the treasury when that parachain is dissolved.
-Likewise, any parachain that started a campaign but was unsuccessful at acquiring a slot will have a
-timeout during which contributors can withdraw their funds. If funds are not withdrawn during the
-timeout, they are dissolved to the treasury.
+When a parachain wins an auction, the DOT that it bid gets reserved until the end of the lease.
+Reserved balances are non-transferrable and cannot be used for staking. At the end of the lease, the
+DOT is unreserved. Parachains that have not secured a new lease to extend their slot will
+automatically become parathreads.
 
 ## Examples
 
 Some examples of parachains:
 
-- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any
+- **Encrypted Consortium Chains**: These are possibly private chains that do not leak any
   information to the public, but still can be interacted with trustlessly due to the nature of the
   XCMP protocol.
-- **High Frequency Chains** - These are chains that can compute many transactions in a short amount
+- **High Frequency Chains**: These are chains that can compute many transactions in a short amount
   of time by taking certain trade-offs or making optimizations.
-- **Privacy Chains** - These are chains that do not leak any information to the public through use
-  of novel cryptography.
-- **Smart Contract Chains** - These are chains that can have additional logic implemented on them
+- **Privacy Chains**: These are chains that do not leak any information to the public through use of
+  novel cryptography.
+- **Smart Contract Chains**: These are chains that can have additional logic implemented on them
   through the deployment of code known as _smart contracts_.
 
 ## FAQ
@@ -125,7 +105,7 @@ over how blocks are authored and by whom.
 
 Parachain slots will be acquirable through auction, please see the [parachain slots](learn-auction)
 article. Additionally, some parachain slots will be set aside to run
-[parathreads](learn-parathreads) - parathreads that bid on a per-block basis to be included in the
+[parathreads](learn-parathreads) &mdash; chains that bid on a per-block basis to be included in the
 Relay Chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
@@ -174,6 +154,3 @@ information on compiling and deploying a parachain.
   of secure message-passing between them."
 - [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A
   technical walkthrough of how parachains interact with the Relay Chain.
-
-[crowdfunding pallet]:
-  https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs
