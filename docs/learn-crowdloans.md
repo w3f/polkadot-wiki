@@ -9,9 +9,9 @@ Polkadot allows parachains to source DOT for their parachain bids in a decentral
 Anyone can create a new crowdloan campaign for a parachain slot. A campaign is configured as a range
 of slots (i.e. the duration the parachain will bid for), a cap, and a duraction. The duration can
 last over several auctions, meaning that the team will not need to restart the campaign just because
-they do not secure a slot on their first attempt. A created campaign will have an index.
+they do not secure a slot on their first attempt.
 
-Once a crowdloan campaign is open, anyone can participate by sending a special transaction that
+Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate by sending a special transaction that
 references the campaign's index. DOT used to participate must be transferrable &mdash; that is, not
 locked for any reason, including staking, vesting, and governance &mdash; because they will be moved
 into a module-controlled account that was generated uniquely for this campaign.
@@ -20,7 +20,7 @@ into a module-controlled account that was generated uniquely for this campaign.
 > campaign is identified by index, not by address. **Never transfer DOT to an address in support of
 > a campaign.**
 
-It is up to individual parachain teams to decide how they want to reward participants who forgo
+It is up to individual parachain teams to decide if and how they want to reward participants who forgo
 staking and choose to lock their DOT in support of the parachain’s campaign. As one can imagine,
 rewards will take many forms and may vary widely among projects.
 
