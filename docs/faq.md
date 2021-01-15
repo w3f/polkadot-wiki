@@ -243,15 +243,15 @@ more on parathreads see [the parathreads page](learn-parathreads).
 
 ### What is libp2p?
 
-[Libp2p](https://libp2p.io) is a modular and extensible networking stack that is used by IPFS, Substrate, and
-many other projects. It is a collection of peer-to-peer protocols for finding peers and connecting
-to them. Its modules have logic for content routing, peer routing, peer discovery, different
-transports, and NAT traversals. It is intended to be used by applications for building large scale
-peer-to-peer networks by only selecting the parts of the protocol suite that are needed.
+[Libp2p](https://libp2p.io) is a modular and extensible networking stack that is used by IPFS,
+Substrate, and many other projects. It is a collection of peer-to-peer protocols for finding peers
+and connecting to them. Its modules have logic for content routing, peer routing, peer discovery,
+different transports, and NAT traversals. It is intended to be used by applications for building
+large scale peer-to-peer networks by only selecting the parts of the protocol suite that are needed.
 
 The Rust implementation of the specification was built and primarily maintained by a team of
 contributors at Parity Technologies. The Go and JavaScript versions are maintained by Protocol Labs
-as well as community contributors. A [Nim](https://github.com/status-im/nim-libp2p) version of the 
+as well as community contributors. A [Nim](https://github.com/status-im/nim-libp2p) version of the
 library also exists. Libp2p as a whole is an open source project that is actively developed and
 expanded on various code repositories hosted on [their GitHub](https://github.com/libp2p).
 
@@ -267,8 +267,8 @@ connection-checking (ping), asking for information on a peer (identity), and Kad
 Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a
 request-response for getting information on blocks (sync), a light client protocol, a notification
 protocol for transactions, and block announcement. For detailed information on how Substrate uses
-libp2p and the standard and custom protocols, please see the [networking
-documentation](https://substrate.dev/rustdocs/v2.0.0/sc_network/index.html).
+libp2p and the standard and custom protocols, please see the
+[networking documentation](https://substrate.dev/rustdocs/v2.0.0/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 
@@ -302,8 +302,8 @@ follows the following formula:
 base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
-Please see the [fee calculation](https://substrate.dev/docs/en/knowledgebase/runtime/fees) page 
-in the Substrate documentation for more detailed information.
+Please see the [fee calculation](https://substrate.dev/docs/en/knowledgebase/runtime/fees) page in
+the Substrate documentation for more detailed information.
 
 ## Answered by Gav series
 
