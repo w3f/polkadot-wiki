@@ -5,10 +5,6 @@
     "previous": "Previous",
     "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
-      "ambassadors": {
-        "title": "Polkadot Ambassador Programme",
-        "sidebar_label": "Polkadot Ambassador Programme"
-      },
       "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
@@ -16,6 +12,14 @@
       "build-cumulus": {
         "title": "Cumulus",
         "sidebar_label": "Cumulus"
+      },
+      "build-deploy-parachains": {
+        "title": "How to view and deploy parachains",
+        "sidebar_label": "How to view and deploy parachains"
+      },
+      "build-examples-index": {
+        "title": "Examples",
+        "sidebar_label": "Examples"
       },
       "build-hackathon": {
         "title": "Hackathon",
@@ -40,10 +44,6 @@
       "build-oracle": {
         "title": "Oracles",
         "sidebar_label": "Oracles"
-      },
-      "build-parachains-rococo": {
-        "title": "Building Parachains on Rococo",
-        "sidebar_label": "Building Parachains on Rococo"
       },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
@@ -84,10 +84,6 @@
       "contributors": {
         "title": "Contributors",
         "sidebar_label": "Contributors"
-      },
-      "ens": {
-        "title": "Adding accounts to an ENS domain",
-        "sidebar_label": "Using ENS with DOT/KSM accounts"
       },
       "faq": {
         "title": "Frequently Asked Questions (FAQs)",
@@ -141,12 +137,24 @@
         "title": "Kusama",
         "sidebar_label": "Home"
       },
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "kusama-social-recovery": {
+        "title": "Social Recovery",
+        "sidebar_label": "Account Recovery"
+      },
+      "kusama-time-periods": {
+        "title": "Time Period Cheat Sheet",
+=======
+=======
       "kusama-ledger": {
         "title": "Using Ledger Devices",
         "sidebar_label": "Ledger Devices"
       },
+>>>>>>> b162263eaf74252fa0b210540b86d972868c3f0c
       "kusama-parameters": {
         "title": "Kusama Parameters",
+>>>>>>> e40a12ef17c1b506ac5e450ae20153f4cc631722
         "sidebar_label": "Parameters"
       },
       "kusama-social-recovery": {
@@ -245,10 +253,6 @@
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
       },
-      "learn-kusama-vs-polkadot": {
-        "title": "What is the difference between Polkadot and Kusama?",
-        "sidebar_label": "Comparing Polkadot and Kusama"
-      },
       "learn-launch": {
         "title": "Polkadot Launch Phases",
         "sidebar_label": "Polkadot Launch Phases"
@@ -285,14 +289,6 @@
         "title": "Randomness",
         "sidebar_label": "Randomness"
       },
-      "learn-registrar": {
-        "title": "Using W3F Registrar",
-        "sidebar_label": "How to use W3F Registrar"
-      },
-      "learn-scams": {
-        "title": "How to Protect Yourself from Scams",
-        "sidebar_label": "How to Protect Yourself from Scams"
-      },
       "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
@@ -313,6 +309,19 @@
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
       },
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "learn-transactions": {
+        "title": "Transactions",
+        "sidebar_label": "Transactions"
+=======
+      "learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
+>>>>>>> e40a12ef17c1b506ac5e450ae20153f4cc631722
+      },
+=======
+>>>>>>> b162263eaf74252fa0b210540b86d972868c3f0c
       "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
@@ -429,10 +438,6 @@
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
-      "mirror-ens": {
-        "title": "Adding accounts to an ENS domain",
-        "sidebar_label": "Using ENS with DOT/KSM accounts"
-      },
       "mirror-learn-governance": {
         "title": "Governance",
         "sidebar_label": "Governance"
@@ -440,10 +445,6 @@
       "mirror-learn-identity": {
         "title": "Identity",
         "sidebar_label": "Identity"
-      },
-      "mirror-learn-registrar": {
-        "title": "Using W3F Registrar",
-        "sidebar_label": "How to use W3F Registrar"
       },
       "mirror-learn-treasury": {
         "title": "Treasury",
@@ -461,21 +462,16 @@
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "How to run a Validator on Kusama"
       },
-      "mirror-thousand-validators": {
-        "title": "Thousand Validators Programme",
-        "sidebar_label": "Thousand Validators Programme"
-      },
+<<<<<<< HEAD
+=======
       "redenomination": {
         "title": "Redenomination of DOT",
         "sidebar_label": "Redenomination of DOT"
       },
+>>>>>>> e40a12ef17c1b506ac5e450ae20153f4cc631722
       "research": {
         "title": "Research Pages",
         "sidebar_label": "Research Pages"
-      },
-      "thousand-validators": {
-        "title": "Thousand Validators Programme",
-        "sidebar_label": "Thousand Validators Programme"
       }
     },
     "links": {
