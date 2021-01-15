@@ -144,11 +144,11 @@ process are the following:
 *Update: 15. Jan. 2021*
 
 - If you are considered to be included, the Rococo team will get in touch with you through the Element handle provided in the sign-up form, a rough estimate of going forward will be (in no certain order):
-  - first batch: Kilt, Interlay (week of 18. January 2021)
-  - second batch: Darwinia, Phala, Crust, HydraDX
-  - third batch: Bifrost, Starks Network, Clover, Zenlink
-  - fourth batch: ChainX, Robonomics, Patract Hub, MathWallet
-  - fith batch: we will communicate timely
+  - second batch: Kilt, Interlay (week of 18. January 2021)
+  - third batch: Darwinia, Phala, Crust, HydraDX
+  - fourth batch: Bifrost, Starks Network, Clover, Zenlink
+  - fith batch: ChainX, Robonomics, Patract Hub, MathWallet
+  - sixth batch: we will communicate timely
 - You will have 2 days to get everything up and running after the Rococo team lets you know
 - Make sure you build, run, and test a local setup based on the `rococo-v1` branch for a while (you will be asked for proof)
 - The Rococo team will help you get your chain deployed
