@@ -149,7 +149,7 @@ process are the following:
   - third batch: Bifrost, Starks Network, Clover, Zenlink
   - fourth batch: ChainX, Robonomics, Patract Hub, MathWallet
   - fith batch: we will communicate timely
-- You will have 2 days to get everything up and running after the Rococo team let's you know
+- You will have 2 days to get everything up and running after the Rococo team lets you know
 - Make sure you build, run and test a local setup based on the `rococo-v1` branch for a while (a proof will be asked for at time)
 - Together with the Rococo team this thing will get deployed
 - Don't worry, if you registered your slot is secured
