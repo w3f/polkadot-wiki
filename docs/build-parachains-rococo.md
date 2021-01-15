@@ -143,8 +143,8 @@ process are the following:
 
 *Update: 15. Jan. 2021*
 
-- If you are considered to be included, the Rococo team will get in touch with you through the Element handle provided in the sign-up form, a rough estimate of going forward will be (in no certain order within the batch and please be assure of 5., 6., 7.):
-  - first batch: Kilt, Interlay (next week)
+- If you are considered to be included, the Rococo team will get in touch with you through the Element handle provided in the sign-up form, a rough estimate of going forward will be (in no certain order):
+  - first batch: Kilt, Interlay (week of 18. January 2021)
   - second batch: Darwinia, Phala, Crust, HydraDX
   - third batch: Bifrost, Starks Network, Clover, Zenlink
   - fourth batch: ChainX, Robonomics, Patract Hub, MathWallet
