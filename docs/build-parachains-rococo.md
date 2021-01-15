@@ -141,20 +141,25 @@ process are the following:
 2. Maintain at least one parachain collator
 3. Sign-up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
 
-*Update: 15. Jan. 2021*
+_Update: 15. Jan. 2021_
 
-- If you are considered to be included, the Rococo team will get in touch with you through the Element handle provided in the sign-up form, a rough estimate of going forward will be (in no certain order):
+- If you are considered to be included, the Rococo team will get in touch with you through the
+  Element handle provided in the sign-up form, a rough estimate of going forward will be (in no
+  certain order):
   - second batch: Kilt, Interlay (week of 18. January 2021)
   - third batch: Darwinia, Phala, Crust, HydraDX
   - fourth batch: Bifrost, Starks Network, Clover, Zenlink
   - fith batch: ChainX, Robonomics, Patract Hub, MathWallet
   - sixth batch: we will communicate timely
 - You will have 2 days to get everything up and running after the Rococo team lets you know
-- Make sure you build, run, and test a local setup based on the `rococo-v1` branch for a while (you will be asked for proof)
+- Make sure you build, run, and test a local setup based on the `rococo-v1` branch for a while (you
+  will be asked for proof)
 - The Rococo team will help you get your chain deployed
 - Don't worry, if you registered, your slot is secured
-- If your chain doesn't start to produce blocks within 5 hours after approval, the Rococo team reserves the right to de-register your proposal at any time
-- The Rococo team reserves a right for this timing to change, but everybody will try their best to notify you
+- If your chain doesn't start to produce blocks within 5 hours after approval, the Rococo team
+  reserves the right to de-register your proposal at any time
+- The Rococo team reserves a right for this timing to change, but everybody will try their best to
+  notify you
 
 ### Requirements as an example walk-through
 
@@ -193,7 +198,8 @@ process are the following:
    [Rococo Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/extrinsics)
 1. Follow the
    [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#request-parachain-registration)
-1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on features later on
+1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on
+   features later on
 
 ### Tips
 
