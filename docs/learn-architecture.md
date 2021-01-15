@@ -16,22 +16,28 @@ instance, smart contracts are not supported. The main responsibility is to coord
 a whole, including parachains. Other specific work is delegated to the parachains, which have
 differing implementations and features.
 
-## [Parachains](learn-parachains) and [Parathreads](learn-parathreads)
+## [Parachain](learn-parachains) and [Parathread](learn-parathreads) Slots
+
+Polkadot can support a number of execution slots. These slots are like cores on a computer (a modern
+laptop may have eight cores, for example). Each one of these cores can run one process at a time.
+Polkadot allots these slots using two subscription models: parachains and parathreads. Parachains
+have a dedicated slot (core) for their chain and are like a process that runs constantly.
+Parathreads share slots amongst a group, and are thus more like processes that need to be woken up
+and run less frequently.
 
 Most of the computation that happens across the Polkadot network as a whole will be delegated to
-specific parachain implementations that handle various use cases. Polkadot places no constraints
-over what parachains are able to do besides that they must be able to generate a proof that can be
-validated by the validators assigned to the parachain. This proof verifies the state transition of
-the parachain. Some parachains may be specific to a particular application, others may focus on
-specific features like smart contracts, privacy or scalability -- still others might be experimental
-architectures that are not necessarily blockchain in nature.
+specific parachain or parathread implementations that handle various use cases. Polkadot places no
+constraints over what parachains are able to do besides that they must be able to generate a proof
+that can be validated by the validators assigned to the parachain. This proof verifies the state
+transition of the parachain. Some parachains may be specific to a particular application, others may
+focus on specific features like smart contracts, privacy, or scalability &mdash; still others might
+be experimental architectures that are not necessarily blockchain in nature.
 
-In order to remain connected to the Relay Chain, parachains must win a
-[parachain slot auction](https://wiki.polkadot.network/docs/en/learn-auction) to secure a slot for a
-particular length of time. Parathreads do not remain connected, but must win auctions for individual
-blocks. There is thus an economic difference between parathreads and parachains. Parachains will
-have to bond a large up-front deposit for the right to connect to the Relay Chain; parathreads will
-pay on a per-block basis. Parathreads can become parachains, and vice-versa.
+Polkadot provides many ways to secure a slot for a parachain slot for a particular length of time.
+Parathreads are part of a pool that shares slots and must win auctions for individual blocks.
+Parathreads and parachains have the exact same API; their difference is economic. Parachains will
+have to reserve DOT for duration of their slot lease; parathreads will pay on a per-block basis.
+Parathreads can become parachains, and vice-versa.
 
 ## Shared Security
 
