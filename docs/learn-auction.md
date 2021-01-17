@@ -88,7 +88,7 @@ leasing a contiguous slot.
 
 Parachains, or parachain teams, can bid in the auction by specifying the slot range that they want
 to lease as well as the number of DOT they are willing to reserve. Bidders can be either ordinary
-accounts, or use the [crowdloan functionality](learn-crowdloan) to source DOT from the community.
+accounts, or use the [crowdloan functionality](learn-crowdloans) to source DOT from the community.
 
 ```
 Parachain slots at genesis
