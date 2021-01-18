@@ -62,7 +62,7 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an
 account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce
-reset. Polkadot's ED is 1 DOT, while Kusama's is 0.01 KSM.
+reset. Polkadot's ED is 1 DOT, while Kusama's is 0.0016666 KSM.
 
 Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial
 wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful
