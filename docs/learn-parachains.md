@@ -2,6 +2,7 @@
 id: learn-parachains
 title: Parachains
 sidebar_label: Parachains
+description: An introductory guide to Polkadot Parachains.
 ---
 
 ![One parachain](assets/network/one_parachain.png)
