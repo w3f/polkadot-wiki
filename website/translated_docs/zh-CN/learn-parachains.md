@@ -2,6 +2,7 @@
 id: learn-parachains
 title: 平行链
 sidebar_label: 平行链
+description: An introductory guide to Polkadot Parachains.
 ---
 
 ![One parachain](assets/network/one_parachain.png)
