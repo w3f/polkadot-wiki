@@ -68,5 +68,5 @@ On the hardware end of requirements, a moderately powerful machine should be cap
 
 ## Further Resources
 
-- [Life of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - Article by Parity analyst Joe Petrowski expounding on the validity checks that a parachain block must pass in order to progress the parachain.
+- [Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - Article by Parity analyst Joe Petrowski expounding on the validity checks that a parachain block must pass in order to progress the parachain.
 -   [Availability and Validity](https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV) - Paper by the W3F Research Team that specifies the availability and validity protocol in detail.
