@@ -25,8 +25,8 @@ that the wallet software is using the latest version of the
 
 ### Supported Wallets
 
-| Wallet Name                                                        | Development State | Team Name     | Description                                                | Custody       | Supports |     |
-| ------------------------------------------------------------------ | ----------------- | ------------- | ---------------------------------------------------------- | ------------- | -------- | --- |
+| Wallet Name                                                        | Development State | Team Name     | Description                                                | Custody       | Supports |
+| ------------------------------------------------------------------ | ----------------- | ------------- | ---------------------------------------------------------- | ------------- | -------- |
 | [Signer](https://www.parity.io/signer/)                            | Live              | Parity        | IOS and Android                                            | Non-custodial |
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity        | Browser                                                    | Non-Custodial | Staking  |
 | [Polkadot{.js}](https://github.com/polkadot-js/extension)          | Live              | Parity        | Browser extension                                          | Non-custodial | Staking  |
