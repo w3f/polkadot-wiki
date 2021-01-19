@@ -137,24 +137,16 @@
         "title": "Kusama",
         "sidebar_label": "Home"
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "kusama-social-recovery": {
-        "title": "Social Recovery",
-        "sidebar_label": "Account Recovery"
-      },
       "kusama-time-periods": {
         "title": "Time Period Cheat Sheet",
-=======
-=======
+        "sidebar_label": "Parameters"
+      },
       "kusama-ledger": {
         "title": "Using Ledger Devices",
         "sidebar_label": "Ledger Devices"
       },
->>>>>>> b162263eaf74252fa0b210540b86d972868c3f0c
       "kusama-parameters": {
         "title": "Kusama Parameters",
->>>>>>> e40a12ef17c1b506ac5e450ae20153f4cc631722
         "sidebar_label": "Parameters"
       },
       "kusama-social-recovery": {
@@ -309,19 +301,10 @@
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
       "learn-transactions": {
         "title": "Transactions",
         "sidebar_label": "Transactions"
-=======
-      "learn-balance-transfers": {
-        "title": "Balance Transfers",
-        "sidebar_label": "How to transfer Balances"
->>>>>>> e40a12ef17c1b506ac5e450ae20153f4cc631722
       },
-=======
->>>>>>> b162263eaf74252fa0b210540b86d972868c3f0c
       "learn-treasury": {
         "title": "Treasury",
         "sidebar_label": "Treasury"
@@ -462,13 +445,10 @@
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "How to run a Validator on Kusama"
       },
-<<<<<<< HEAD
-=======
       "redenomination": {
         "title": "Redenomination of DOT",
         "sidebar_label": "Redenomination of DOT"
       },
->>>>>>> e40a12ef17c1b506ac5e450ae20153f4cc631722
       "research": {
         "title": "Research Pages",
         "sidebar_label": "Research Pages"

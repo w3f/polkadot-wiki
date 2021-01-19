@@ -52,11 +52,11 @@ on the results of an election algorithm known as [Phragmén's method](learn-phra
 method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
-You will likely want to campaign for your validator to the community in order to get more backing.
-You are looking for _nominators_ that will put up their tokens to increase the stake for your
-validator. For validators who cannot acquire the minimum stake from the community, Parity and Web3
-Foundation also run a joint program called [Thousand Validators][thousand validators] that will
-nominate validators if they apply and fit the requirements.
+You will likely want to campaign your validator to the community in order to get more backing. You
+are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
+For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
+also run a joint program called [Thousand Validators](thousand-validators) that will nominate
+validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
@@ -243,17 +243,17 @@ more on parathreads see [the parathreads page](learn-parathreads).
 
 ### What is libp2p?
 
-[Libp2p][libp2p] is a modular and extensible networking stack that is used by IPFS, Substrate, and
-many other projects. It is a collection of peer-to-peer protocols for finding peers and connecting
-to them. Its modules have logic for content routing, peer routing, peer discovery, different
-transports, and NAT traversals. It is intended to be used by applications for building large scale
-peer-to-peer networks by only selecting the parts of the protocol suite that are needed.
+[Libp2p](https://libp2p.io) is a modular and extensible networking stack that is used by IPFS,
+Substrate, and many other projects. It is a collection of peer-to-peer protocols for finding peers
+and connecting to them. Its modules have logic for content routing, peer routing, peer discovery,
+different transports, and NAT traversals. It is intended to be used by applications for building
+large scale peer-to-peer networks by only selecting the parts of the protocol suite that are needed.
 
 The Rust implementation of the specification was built and primarily maintained by a team of
 contributors at Parity Technologies. The Go and JavaScript versions are maintained by Protocol Labs
-as well as community contributors. A [Nim][nim libp2p] version of the library also exists. Libp2p as
-a whole is an open source project that is actively developed and expanded on various code
-repositories hosted on [GitHub][libp2p github].
+as well as community contributors. A [Nim](https://github.com/status-im/nim-libp2p) version of the
+library also exists. Libp2p as a whole is an open source project that is actively developed and
+expanded on various code repositories hosted on [their GitHub](https://github.com/libp2p).
 
 ### Does Polkadot use libp2p?
 
@@ -267,8 +267,8 @@ connection-checking (ping), asking for information on a peer (identity), and Kad
 Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a
 request-response for getting information on blocks (sync), a light client protocol, a notification
 protocol for transactions, and block announcement. For detailed information on how Substrate uses
-libp2p and the standard and custom protocols, please see the [networking
-documentation][substrate network].
+libp2p and the standard and custom protocols, please see the
+[networking documentation](https://substrate.dev/rustdocs/v2.0.1/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 
@@ -302,8 +302,8 @@ follows the following formula:
 base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
-Please see the [fee calculation][fee calculation] page in the Substrate documentation for more
-detailed information.
+Please see the [fee calculation](https://substrate.dev/docs/en/knowledgebase/runtime/fees) page in
+the Substrate documentation for more detailed information.
 
 ## Answered by Gav series
 
@@ -317,10 +317,3 @@ asked in the Polkadot Watercooler Riot channel and answered by Polkadot founder 
 - [Also is there any detailed overview of how exactly a token transfer from ETH could be exchanged with another chain's currency?](https://www.reddit.com/r/dot/comments/b87ds8/answered_by_gav_also_is_there_any_detailed/)
 - [Can I run multiple Validators with the same Session Key?](https://www.reddit.com/r/dot/comments/bcqrx9/answered_by_gav_can_i_run_multiple_validators/)
 - [How to tackle the concentration risk of Validators in data centers?](https://www.reddit.com/r/dot/comments/bcqwit/answered_by_gav_how_to_tackle_the_concentration/)
-
-[fee calculation]: https://substrate.dev/docs/en/knowledgebase/runtime/fees
-[libp2p]: https://libp2p.io
-[nim libp2p]: https://github.com/status-im/nim-libp2p
-[libp2p github]: https://github.com/libp2p
-[substrate network]: https://substrate.dev/rustdocs/v2.0.0/sc_network/index.html
-[thousand validators]: https://thousand-validators.kusama.network/#/

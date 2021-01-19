@@ -4,7 +4,7 @@ title: Parachain Slots Auction
 sidebar_label: Parachain Slots Auction
 ---
 
-For a [parachain](learn-parachains) to be added to Polkadot it must inhabit one of the available _parachain slots_. A parachain slot is a scarce resource on Polkadot and only a limited amount will be available. As parachains ramp up there may only be a few slots that are unlocked every few months. The goal is to eventually have 100 parachain slots available on Polkadot (these will be split between parachains and the [parathread pool](learn-parathreads)). If a parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a parachain slot.
+For a [parachain](learn-parachains) to be added to Polkadot it must inhabit one of the available parachain slots. A parachain slot is a scarce resource on Polkadot and only a limited number will be available. As parachains ramp up there may only be a few slots that are unlocked every few months. The goal is to eventually have 100 parachain slots available on Polkadot (these will be split between parachains and the [parathread pool](learn-parathreads)). If a parachain wants to have guaranteed block inclusion at every Relay Chain block, it must acquire a parachain slot.
 
 The parachain slots of Polkadot will be sold according to an unpermissioned [candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be secure on a blockchain.
 
@@ -16,9 +16,9 @@ Candle auctions were originally employed in 16th century for the sale of ships a
 
 When candle auctions are used online, they require a random number to decide the moment of termination.
 
-Parachain slot auctions will differ slightly from a normal candle auction in that it does not use the random number to decide the duration of its opening phase. Instead, it has a known open phase and will be retroactively determined (at the normal close) to have ended at some point in the past. So during the open phase, bids will continue to be accepted but, later bids have higher probability of losing since the retroactively determined close moment may be found to have preceded the time that a bid was submitted.
+Parachain slot auctions will differ slightly from a normal candle auction in that it does not use the random number to decide the duration of its opening phase. Instead, it has a known open phase and will be retroactively determined (at the normal close) to have ended at some point in the past. So during the open phase, bids will continue to be accepted, but later bids have higher probability of losing since the retroactively determined close moment may be found to have preceded the time that a bid was submitted.
 
-## Why use a candle auction?
+## Rationale
 
 The open and transparent nature of blockchain systems opens attack vectors that are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
@@ -30,19 +30,19 @@ On blockchains this problem may be even worse, since it potentially gives the pr
 
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](ens). The Candle auction is another solution that does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
 
-Candle auctions allow everyone to always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise, they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
+Candle auctions allow everyone to always know the states of the bid, but not when the auction will be determined to have ended. This helps to ensure that bidders are willing to bid their true bids early. Otherwise, they might find themselves in the situation that the auction was determined to have ended before they even bid.
 
-## How it's used in Polkadot
+## Polkadot Implementation
 
-Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness, which will retroactively determine the "end-time" of the auction.
-
-When an account bids, they can place bids for any of the available periods or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous period or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid from an external account.
+Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness, which will retroactively determine the end-time of the auction.
 
 The slot durations are capped to 2 years and divided into 6-month periods. Parachains may lease a slot for any contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by leasing a contiguous slot.
 
 > Note: Individual parachain slots are fungible. This means that parachains do not need to always inhabit the same slot, but as long as a parachain inhabits any slot it can continue as a parachain.
 
-## How does bidding work?
+## Bidding
+
+Parachains, or parachain teams, can bid in the auction by specifying the slot range that they want to lease as well as the number of DOT they are willing to reserve. Bidders can be either ordinary accounts, or use the [crowdloan functionality](learn-crowdloans) to source DOT from the community.
 
 ```
 Parachain slots at genesis
@@ -60,9 +60,7 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 Each period of the range 1 - 4 represents a 6-month duration for a total of 2 years
 ```
 
-Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `lease period`. More than one continuous `period` is a `range`.
-
-Several auctions will take place in the preceding months before a set of parachain slot leases begin.
+Each parachain slot has a maximum duration of 2 years, divided into 6-month periods. More than one continuous period is a range.
 
 Bidders will submit a configuration of bids specifying the DOT amount they are willing to bond and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
 
@@ -87,29 +85,13 @@ const bids = [
 ];
 ```
 
-The important concept to understand from this example is that bidders may submit different configurations at different prices (`bond_amounts`). However, only one of these bids would be eligible to win exclusive of the others.
+The important concept to understand from this example is that bidders may submit different configurations at different prices (`bond_amount`). However, only one of these bids would be eligible to win exclusive of the others.
 
-The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
+The winner selection algorithm will pick bids that may be non-overlapping in order to maximize the amount of DOT held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#examples)).
 
 A random number, which is based on the VRF used by Polkadot, is determined at each block. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
 ### Examples
-
-#### Non-compete
-
-There is one parachain slot available.
-
-Alice bids `20 DOT` for the range 1 - 2.
-
-Bob bids `30 DOT` for the range 3 - 4.
-
-The auction ends.
-
-Alice bonds `20 DOT` and will have the parachain slot for the first year.
-
-Bob bonds `30 DOT` and will have the parachain slot for the second year.
-
-#### Compete
 
 There is one parachain slot available.
 
@@ -119,7 +101,7 @@ Dave bids `100 DOT` for the range 3 - 4.
 
 Emily bids `40 DOT` for the range 1 - 2.
 
-Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of periods in the specified range of the bid.
+Let's calculate each bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the number of periods in the specified range of the bid.
 
 Charlie - 75 \* 4 = 300 for range 1 - 4
 
@@ -135,7 +117,7 @@ Charlie's valuation for the entire range is `300` therefore Charlie is awarded t
 
 ### Why doesn't everyone bid for the max length?
 
-For the duration of the slot the `DOT` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOT` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
+For the duration of the slot the DOT bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those DOT for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot Relay Chain.
 
 ### How does this mechanism help ensure parachain diversity?
 
@@ -154,4 +136,3 @@ A number of system-level parachains may be granted slots by the [governing bodie
 ## Resources
 
 - [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/economics/2-parachain-allocation.html) - W3F research page on parachain allocation that goes more in depth to the mechanism.
-- [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.
