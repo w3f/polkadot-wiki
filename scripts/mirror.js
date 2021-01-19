@@ -26,6 +26,7 @@ const mirrored = [
   "learn-governance",
   "learn-treasury",
   "learn-registrar",
+  "learn-registrar-1",
   "maintain-guides-how-to-nominate-kusama",
   "maintain-guides-how-to-validate-kusama",
   "maintain-errors",

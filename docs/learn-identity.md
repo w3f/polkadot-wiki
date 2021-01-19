@@ -157,8 +157,10 @@ Submit the transaction, and the requested judgement will be cancelled.
 
 The image above reveals there are two registrars on Kusama:
 
-- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL charges 0.04 KSM per judgement
-- Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn charges 5 KSM per judgement
+- Registrar #0, `FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL` charges 0.04 KSM per judgement
+- Registrar #1, `Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn` charges 1 KSM per judgement
+
+> **Note** Registrar fees may change at anytime so you should get the correct values on chain to be sure.
 
 To find out how to contact the registrar after the application for judgement or to learn who they
 are, we can check their identity by adding them to our Address Book. Their identity will be
@@ -173,12 +175,14 @@ On Polkadot there are two registrars:
 - Web3 Foundation is registrar #0. The W3F registrar service is available on the Kusama at the
   moment, follow the guide written [here](learn-registrar) on how to use it. The service will be
   available on the Polkadot shortly.
-- Chevdor is registrar #1.
+- `Registrar #1` is operated by Chevdor and **available on Polkadot, Kusama & Westend**. This registrar is accessible via `reg_index = 1`. You can learn more in [How to use Registrar #1](learn-registrar-1).
 
 ### Requesting Judgement
 
 Requesting judement follows the same process regardless of whether you're on the Kusama or Polkadot
 networks. Select one of the registrars from the query you made above.
+
+You will need to decide which registrar you want to use and set `reg_index` accordingly as well as the `max_fee` matching the registrar you selected. Using one registrar is not exclusive and you may request a judgement to several.
 
 ![Requesting judgement](assets/identity/08.jpg)
 
@@ -228,6 +232,8 @@ Note that a deposit of 2.5KSM is required for every sub-account.
 
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.
+
+> **Warning**: Clearing your identity will remove all information and also void any previous judgement you received from registrars. Your green check-mark will disappear.
 
 ![Clearing an identity](assets/identity/clear.gif)
 
