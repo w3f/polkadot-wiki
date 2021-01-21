@@ -22,14 +22,17 @@ uniquely for this campaign.
 > a campaign.**
 
 It is up to individual parachain teams to decide if and how they want to reward participants who
-forgo staking and choose to lock their DOT in support of the parachain’s campaign. As one can
+accept the opportunity cost in not [staking on Polkadot](learn-staking) and instead choose to
+lock their DOT in support of the parachain’s campaign. As one can
 imagine, rewards will take many forms and may vary widely among projects.
 
-During some point of the crowdloan campaign the owner will upload the parachain data. Ideally, the
-owner does this before soliciting contributions to the campaign so that the contributors can verify
-it. The data can only be uploaded once during the course of the campaign and it will be what is
-deployed as the parachain's runtime. Of course, once the parachain is running it can always change
-via runtime upgrades (as determined through its own local governance).
+During some point of the crowdloan campaign the owner will upload the parachain's runtime data. Ideally, the
+owner does this before soliciting contributions to the campaign so that the contributors can review and 
+verify it matches with the source code used to compile it. The data can only be uploaded once during the
+course of the campaign and it will be what is deployed as the parachain's runtime.
+Of course, once the parachain is running it can always change
+via [runtime upgrades](build-protocol-info#runtime-upgrades)
+(as determined through its own local governance).
 
 If a crowdloan campaign is successful, that parachain will be on-boarded in Polkadot. The collective
 DOT will be locked in that parachain's account for the entire duration that it is active (up to two
@@ -44,7 +47,7 @@ Participants will be able to reclaim their DOT in one of two ways:
 
 Note that withdrawing DOT requires a transaction for each participant. Anyone can make the
 transactions, so a parachain team could free every participant's DOT in a batch. Tokens that are not
-withdrawn within a certain amount of time will go to the Polkadot Treasury.
+withdrawn within a certain amount of time will go to the [Polkadot Treasury](learn-treasury).
 
 Several teams in the ecosystem are preparing dashboards to track auctions and crowdloan campaigns.
 Check back to this page for updates as these are released.
