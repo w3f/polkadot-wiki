@@ -13,9 +13,10 @@ they do not secure a slot on their first attempt.
 
 Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate
 by sending a special transaction that references the campaign's index. DOT used to participate must
-be transferrable &mdash; that is, not locked for any reason, including staking, vesting, and
-governance &mdash; because they will be moved into a module-controlled account that was generated
-uniquely for this campaign.
+be transferrable &mdash; that is, not
+[locked](build-protocol-info#free-vs-reserved-vs-locked-vs-vesting-balance) for any reason, 
+including staking, vesting, and governance &mdash; because they will be moved into a
+module-controlled account that was generated uniquely for this campaign.
 
 > Important: All crowdloan contributions are handled by the Crowdloan module’s logic where a
 > campaign is identified by index, not by address. **Never transfer DOT to an address in support of
