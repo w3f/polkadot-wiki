@@ -68,7 +68,7 @@ class FooterSocialColumn extends React.Component {
           </a>
         </li>
         <li className="text-white">
-          <a href="https://discord.gg/jC949aH6" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/wGUDt2p" target="_blank" rel="noopener noreferrer">
             <i className="socicon-discord"></i>
           </a>
         </li>
