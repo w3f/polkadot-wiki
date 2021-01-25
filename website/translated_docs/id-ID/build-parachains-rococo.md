@@ -85,19 +85,34 @@ In order to improve Rococo quickly the network will be regularly updated and res
 
 The minimal requirements for any parachain candidate to be considered for the parachain registration process are the following:
 
-1. Maintain at least one Rococo V1 validator
-2. Maintain at least one parachain collator
+1. Maintain at least two Rococo V1 validator nodes
+2. Maintain at least one parachain collator nodes
 3. Sign-up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
+
+_Update: 15. Jan. 2021_
+
+- If you are considered to be included, the Rococo team will get in touch with you through the Element handle provided in the sign-up form, a rough estimate of going forward will be (in no certain order):
+  - second batch: Kilt, Interlay (week of 18. January 2021)
+  - third batch: Darwinia, Phala, Crust, HydraDX
+  - fourth batch: Bifrost, Starks Network, Clover, Zenlink
+  - fith batch: ChainX, Robonomics, Patract Hub, MathWallet
+  - sixth batch: we will communicate timely
+- You will have 2 days to get everything up and running after the Rococo team lets you know
+- Make sure you build, run, and test a local setup based on the `rococo-v1` branch for a while (you will be asked for proof)
+- The Rococo team will help you get your chain deployed
+- Don't worry, if you registered, your slot is secured
+- If your chain doesn't start to produce blocks within 5 hours after approval, the Rococo team reserves the right to de-register your proposal at any time
+- The Rococo team reserves a right for this timing to change, but everybody will try their best to notify you
 
 ### Requirements as an example walk-through
 
-1. Maintain **at least one** validator (full block authoring node) for [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
+1. Maintain **at least two** validator (full block authoring node) for [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
    1. Treat this like a production grade Polkadot node - see [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
    1. Node Setup - use one of the options below
       1. Build from source:
          1. `git clone https://github.com/paritytech/polkadot`
          1. `cd polkadot`
-         1. `git checkout master`
+         1. `git checkout rococo-v1`
          1. `cargo build --release --features=real-overseer`
          1. `./target/release/polkadot --validator --chain rococo --name <your_rococo_validator_name>`
       1. Use Docker:
@@ -117,6 +132,7 @@ The minimal requirements for any parachain candidate to be considered for the pa
 1. Sign up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
 1. After receiving ROC’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#submitting-the-setkeys-transaction)in [Rococo Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/extrinsics)
 1. Follow the [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#request-parachain-registration)
+1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on features later on
 
 ### Tips
 

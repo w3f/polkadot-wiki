@@ -19,9 +19,9 @@ consensus.
 ## Nominated Proof of Stake
 
 Once Web3 Foundation was confident in the stability of the network and there was a sufficient number
-of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) - a superuser
-account with access to governance functions - to initiate the first validator election. Following
-this election, the network transitioned from PoA into its second phase,
+of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) &mdash; a
+superuser account with access to governance functions &mdash; to initiate the first validator
+election. Following this election, the network transitioned from PoA into its second phase,
 [Nominated Proof of Stake (NPoS)](learn-staking), on June 18, 2020.
 
 ## Governance
@@ -56,6 +56,10 @@ Polkadot is now moving to the next stage of opening up its core functionality, l
 auctions, parathreads, and cross-chain message passing. These upgrades will require runtime upgrades
 that will pass through Polkadot's normal governance processes. The core functionality does not have
 to be unlocked sequentially &mdash; several features can be unlocked with a single proposal.
+
+Parachains will first roll out on Kusama with a common good parachain, followed by the first slot
+auction and winner's onboarding. Once those parachains are working well on Kusama, the first common
+good parachain will launch, and then the first slot auction will take place on Polkadot.
 
 ## Polkadot 2.0
 

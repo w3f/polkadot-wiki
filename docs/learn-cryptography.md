@@ -2,6 +2,7 @@
 id: learn-cryptography
 title: Cryptography Explainer
 sidebar_label: Cryptography Explainer
+description: An overview of the cryptographic functions used in Polkadot
 ---
 
 This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some

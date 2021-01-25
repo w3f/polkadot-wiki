@@ -880,53 +880,6 @@ body {
    Footer Social
    ========================================================================== */
 
-@font-face {
-  font-family: "Socicon";
-  src: url("../fonts/Socicon.eot?484r1f");
-  src: url("../fonts/Socicon.eot?484r1f#iefix") format("embedded-opentype"),
-    url("../fonts/Socicon.woff2?484r1f") format("woff2"),
-    url("../fonts/Socicon.ttf?484r1f") format("truetype"),
-    url("../fonts/Socicon.woff?484r1f") format("woff"),
-    url("../fonts/Socicon.svg?484r1f#Socicon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="socicon-"],
-[class*=" socicon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "Socicon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.socicon-twitter:before {
-  content: "\e08d";
-}
-
-.socicon-reddit:before {
-  content: "\e06c";
-}
-
-.socicon-github:before {
-  content: "\e032";
-}
-
-.socicon-youtube:before {
-  content: "\e0a5";
-}
-
-.socicon-telegram:before {
-  content: "\e087";
-}
-
 .list-social-links {
   padding: 0;
   list-style: none;

@@ -6,6 +6,7 @@
       "redenomination",
       "grants",
       "thousand-validators",
+      "ambassadors",
       "research",
       "community",
       "contributing",
@@ -22,10 +23,11 @@
         "type": "subcategory",
         "label": "Basics",
         "ids": [
+          "learn-architecture",
           "learn-accounts",
           "learn-account-generation",
           "learn-account-restore",
-          "learn-architecture",
+          "learn-DOT",
           "learn-security",
           "learn-consensus",
           "learn-nominator",
@@ -33,14 +35,22 @@
           "learn-collator",
           "learn-governance",
           "learn-identity",
-          "learn-bridges",
-          "learn-parachains",
-          "learn-parathreads",
           "learn-balance-transfers",
           "learn-transaction-fees",
           "learn-polkadot-host",
           "learn-treasury",
           "learn-registrar"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Parachains",
+        "ids": [
+          "learn-parachains",
+          "learn-parathreads",
+          "learn-bridges",
+          "learn-auction",
+          "learn-crowdloans"
         ]
       },
       {
@@ -62,11 +72,6 @@
         "type": "subcategory",
         "label": "Cryptography",
         "ids": ["learn-cryptography", "learn-keys"]
-      },
-      {
-        "type": "subcategory",
-        "label": "Economics",
-        "ids": ["learn-DOT", "learn-auction"]
       },
       {
         "type": "subcategory",

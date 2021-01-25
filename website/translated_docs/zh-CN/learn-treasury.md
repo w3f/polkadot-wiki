@@ -125,7 +125,11 @@ The bounty has a predetermined duration of 90 days with the possibility of being
 
 ### Creating a Bounty Proposal
 
-Anyone can create a Bounty proposal using Polkadot JS Apps: Users will be able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is on its way and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all Kusama users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
+Anyone can create a Bounty proposal using Polkadot JS Apps: Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
+
+To submit a bounty, please visit [Polkadot JS Apps](https://polkadot.js.org/apps) and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
+
+After this, a Council member will need to assist you to pass the bounty proposal for vote as a motion. You can contact the Council by joining the Direcion channel for [Polkadot](https://parity.link/polkadot-direction) or [Kusama](https://parity.link/kusama-direction) in Element or joining our [Kusama](https://parity.link/kusama-discord) or [Polkadot](https://parity.link/polkadot-discord) Discord servers and publishing a short description of your bounty with a link to one of the forums in the Direction channels for contextual information.
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active.
 
@@ -151,4 +155,4 @@ Concretely there are a couple on-chain methods that resist this kind of attack. 
 
 ## Further Reading
 
-- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/v2.0.0/pallet_treasury/index.html))
+- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/v2.0.1/pallet_treasury/index.html))
