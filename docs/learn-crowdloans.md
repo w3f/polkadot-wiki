@@ -7,13 +7,13 @@ sidebar_label: Parachain Crowdloans
 Polkadot allows parachains to source DOT for their parachain bids in a decentralized crowdloan.
 
 Anyone can create a new crowdloan campaign for a parachain slot. A campaign is configured as a range
-of slots (i.e. the duration the parachain will bid for), a cap, and a duraction. The duration can
+of slots (i.e. the duration the parachain will bid for), a cap, and a duration. The duration can
 last over several auctions, meaning that the team will not need to restart the campaign just because
 they do not secure a slot on their first attempt.
 
 Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate
 by sending a special transaction that references the campaign's index. DOT used to participate must
-be transferrable &mdash; that is, not locked for any reason, including staking, vesting, and
+be transferable &mdash; that is, not locked for any reason, including staking, vesting, and
 governance &mdash; because they will be moved into a module-controlled account that was generated
 uniquely for this campaign.
 
@@ -39,7 +39,7 @@ Participants will be able to reclaim their DOT in one of two ways:
 
 - If the campaign was successful, then the parachain will enter a retirement phase at the end of its
   lease. During this phase, participants can withdraw the DOT with which they participated.
-- If the campaign was not succsesful, then this retirement phase will begin at the campaign's
+- If the campaign was not successful, then this retirement phase will begin at the campaign's
   configured end, and participants can likewise withdraw their DOT.
 
 Note that withdrawing DOT requires a transaction for each participant. Anyone can make the
