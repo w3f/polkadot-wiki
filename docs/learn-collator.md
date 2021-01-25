@@ -5,11 +5,12 @@ sidebar_label: Collator
 ---
 
 Collators maintain parachains by collecting parachain transactions from users and producing state
-transition proofs for validators.
+transition proofs for Relay Chain validators. In other words, collators maintain parachains by
+aggregating parachain transactions into parachain block candidates and producing state transition
+proofs for validators based on those blocks.
 
-These participants will sit atop parachains and provide proofs to validators based on transactions
-from parachains. Collators maintain parachains by aggregating parachain transactions into parachain
-block candidates and producing state transition proofs for validators based on those blocks.
+A collator cannot continue building blocks on a parachain until the block candidate they proposed to
+the Relay Chain validators has been validated.
 
 Collators maintain a full-node for the Relay Chain, and a full-node for their particular parachain;
 meaning they retain all necessary information to be able to author new blocks and execute
