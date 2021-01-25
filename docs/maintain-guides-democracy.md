@@ -45,6 +45,10 @@ the user to "revoke" their proposal and get the bond back before it has become a
 it is essentially impossible to predict definitely when a proposal may become a referendum (if
 ever), this means that any tokens bonded will be locked for an indeterminate amount of time.
 
+> Proposals cannot be revoked by the proposer, even if they never turn into a referendum. It is
+> important to realize that there is no guarantee that DOT you use for proposing or seconding
+> a proposal will be returned to that account in any given timeframe.
+
 On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order to submit a
 proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the
 hash of the proposal to be enacted. The easiest way to get the preimage hash is by clicking on the
