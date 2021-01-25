@@ -85,8 +85,8 @@ In order to improve Rococo quickly the network will be regularly updated and res
 
 The minimal requirements for any parachain candidate to be considered for the parachain registration process are the following:
 
-1. Maintain at least one Rococo V1 validator
-2. Maintain at least one parachain collator
+1. Maintain at least two Rococo V1 validator nodes
+2. Maintain at least one parachain collator nodes
 3. Sign-up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
 
 _Update: 15. Jan. 2021_
@@ -106,7 +106,7 @@ _Update: 15. Jan. 2021_
 
 ### Requirements as an example walk-through
 
-1. Maintain **at least one** validator (full block authoring node) for [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
+1. Maintain **at least two** validator (full block authoring node) for [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
    1. Treat this like a production grade Polkadot node - see [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
    1. Node Setup - use one of the options below
       1. Build from source:
