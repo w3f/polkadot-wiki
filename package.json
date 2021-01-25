@@ -22,7 +22,7 @@
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "postinstall": "patch-package",
-    "generateRegistryTable": "node scripts/generateRegistryTable.js >> docs/build-ss58-registry.md; npx prettier docs/build-ss58-registry.md --write"
+    "generateRegistryTable": "node scripts/generateRegistryTable.js > docs/build-ss58-registry.md; npx prettier docs/build-ss58-registry.md --write"
   },
   "devDependencies": {
     "docusaurus": "^1.14.6"
