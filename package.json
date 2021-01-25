@@ -7,8 +7,8 @@
     "kusama:publish-gh-pages": "yarn mirror; yarn kusama:inject; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
     "kusama:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/kusama-index\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"kusama-guide/static/kusama-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
     "kusama:remove": "node scripts/removeUneeded.js ksm",
-    "polkadot:start": "yarn mirror; cd website; docusaurus-start",
-    "polkadot:build": "BUILDING=true; cd website; docusaurus-build; node ./postprocess",
+    "polkadot:start": "yarn generateRegistryTable; yarn mirror; cd website; docusaurus-start",
+    "polkadot:build": "yarn generateRegistryTable; BUILDING=true; cd website; docusaurus-build; node ./postprocess",
     "polkadot:inject": "node scripts/inject.js --rootDir website/build/polkadot-wiki --node wss://rpc.polkadot.io",
     "polkadot:publish-gh-pages": "yarn mirror; yarn polkadot:inject; PUBLISHING=true; cd website; docusaurus-publish",
     "polkadot:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/learn-introduction\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"website/static/polkadot-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
@@ -22,6 +22,7 @@
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "postinstall": "patch-package",
+    "generateRegistryTable": "node scripts/generateRegistryTable.js > docs/build-ss58-registry.md; npx prettier docs/build-ss58-registry.md --write",
     "generateErrorTable": "node scripts/generateErrorTable.js >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write"
   },
   "devDependencies": {

@@ -98,6 +98,7 @@
           "build-parachains-rococo",
           "build-smart-contracts",
           "build-oracle",
+          "build-ss58-registry",
           "build-wallets"
         ]
       },

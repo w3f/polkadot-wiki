@@ -57,6 +57,10 @@
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
       },
+      "build-ss58-registry": {
+        "title": "SS58 Registry",
+        "sidebar_label": "SS58 Registry"
+      },
       "build-tools-index": {
         "title": "Tool Index",
         "sidebar_label": "Tool Index"
