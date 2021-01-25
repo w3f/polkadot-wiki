@@ -973,6 +973,11 @@
   resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-2.2.0.tgz#123e0438a0bc718ccdac3b5a2e69b3dd00daa85b"
   integrity sha512-274lNUDonw10kT8wHg8fCcUc1ZjZHbWv0/TbAwb0ojhBQqZYc1cQ/4yqTVTtPMDeZ//g7xVEYe/s3vURkRghPg==
 
+"@octokit/openapi-types@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-3.2.0.tgz#d62d0ff7147dbf4d218616b2484ee2a5d023055d"
+  integrity sha512-X7yW/fpzF3uTAE+LbPD3HEeeU+/49o0V4kNA/yv8jQ3BDpFayv/osTOhY1y1mLXljW2bOJcOCSGZo4jFKPJ6Vw==
+
 "@octokit/plugin-paginate-rest@^2.2.3", "@octokit/plugin-paginate-rest@^2.6.2":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-2.7.0.tgz#6bb7b043c246e0654119a6ec4e72a172c9e2c7f3"
@@ -985,20 +990,12 @@
   resolved "https://registry.yarnpkg.com/@octokit/plugin-request-log/-/plugin-request-log-1.0.2.tgz#394d59ec734cd2f122431fbaf05099861ece3c44"
   integrity sha512-oTJSNAmBqyDR41uSMunLQKMX0jmEXbwD1fpz8FG27lScV3RhtGfBa1/BBLym+PxcC16IBlF7KH9vP1BUYxA+Eg==
 
-"@octokit/plugin-rest-endpoint-methods@4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-4.4.1.tgz#105cf93255432155de078c9efc33bd4e14d1cd63"
-  integrity sha512-+v5PcvrUcDeFXf8hv1gnNvNLdm4C0+2EiuWt9EatjjUmfriM1pTMM+r4j1lLHxeBQ9bVDmbywb11e3KjuavieA==
+"@octokit/plugin-rest-endpoint-methods@4.8.0", "@octokit/plugin-rest-endpoint-methods@^4.0.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-4.8.0.tgz#c1f24f940fc265f0021c8f544e3d8755f3253759"
+  integrity sha512-2zRpXDveJH8HsXkeeMtRW21do8wuSxVn1xXFdvhILyxlLWqGQrdJUA1/dk5DM7iAAYvwT/P3bDOLs90yL4S2AA==
   dependencies:
-    "@octokit/types" "^6.1.0"
-    deprecation "^2.3.1"
-
-"@octokit/plugin-rest-endpoint-methods@^4.0.0":
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-4.4.3.tgz#0160979b500eb10b024f4e5580efd1112b7d2544"
-  integrity sha512-qzGV1D8m8pRc3BLcKQIGeCMO2VfzcG5s0l5aXnmguTg6I7/x9sCAUNzhpeIOnHGrDTpF2STqB7duYJm4CxUo3Q==
-  dependencies:
-    "@octokit/types" "^6.1.0"
+    "@octokit/types" "^6.5.0"
     deprecation "^2.3.1"
 
 "@octokit/request-error@^2.0.0":
@@ -1024,22 +1021,30 @@
     once "^1.4.0"
     universal-user-agent "^6.0.0"
 
-"@octokit/rest@^18.0.12":
-  version "18.0.12"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-18.0.12.tgz#278bd41358c56d87c201e787e8adc0cac132503a"
-  integrity sha512-hNRCZfKPpeaIjOVuNJzkEL6zacfZlBPV8vw8ReNeyUkVvbuCvvrrx8K8Gw2eyHHsmd4dPlAxIXIZ9oHhJfkJpw==
+"@octokit/rest@^18.0.14":
+  version "18.0.14"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-18.0.14.tgz#a152478465746542e80697b5a5576ccb6151dc4d"
+  integrity sha512-62mKIaBb/XD2Z2KCBmAPydEk/d0IBMOnwk6DJVo36ICTnxlRPTdQwFE2LzlpBPDR52xOKPlGqb3Bnhh99atltA==
   dependencies:
     "@octokit/core" "^3.2.3"
     "@octokit/plugin-paginate-rest" "^2.6.2"
     "@octokit/plugin-request-log" "^1.0.2"
-    "@octokit/plugin-rest-endpoint-methods" "4.4.1"
+    "@octokit/plugin-rest-endpoint-methods" "4.8.0"
 
-"@octokit/types@^6.0.0", "@octokit/types@^6.0.1", "@octokit/types@^6.0.3", "@octokit/types@^6.1.0":
+"@octokit/types@^6.0.0", "@octokit/types@^6.0.1", "@octokit/types@^6.0.3":
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/@octokit/types/-/types-6.2.1.tgz#7f881fe44475ab1825776a4a59ca1ae082ed1043"
   integrity sha512-jHs9OECOiZxuEzxMZcXmqrEO8GYraHF+UzNVH2ACYh8e/Y7YoT+hUf9ldvVd6zIvWv4p3NdxbQ0xx3ku5BnSiA==
   dependencies:
     "@octokit/openapi-types" "^2.2.0"
+    "@types/node" ">= 8"
+
+"@octokit/types@^6.5.0":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@octokit/types/-/types-6.5.0.tgz#8f27c52d57eb4096fb05a290f4afc90194e08b19"
+  integrity sha512-mzCy7lkYQv+kM58W37uTg/mWoJ4nvRDRCkjSdqlrgA28hJEYNJTMYiGTvmq39cdtnMPJd0hshysBEAaH4D5C7w==
+  dependencies:
+    "@octokit/openapi-types" "^3.2.0"
     "@types/node" ">= 8"
 
 "@pdf-lib/standard-fonts@^1.0.0":
@@ -4431,26 +4436,26 @@ ipaddr.js@1.9.1:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
-ipfs-core-types@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.2.0.tgz#7985c89aa0e8004ccbc4cf18a14a2e4483541258"
-  integrity sha512-Cen7q8rEhXBRrhM5VWOtIVNsTw7dQvs7E6guXTKFpWAqzTeV39KOO5rC69HY2Boiom9pqVMZRxeqq2UKVvCACw==
+ipfs-core-types@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.2.1.tgz#460bf2116477ce621995468c962c685dbdc4ac6f"
+  integrity sha512-q93+93qSybku6woZaajE9mCrHeVoMzNtZ7S5m/zx0+xHRhnoLlg8QNnGGsb5/+uFQt/RiBArsIw/Q61K9Jwkzw==
   dependencies:
     cids "^1.1.5"
     multiaddr "^8.0.0"
     peer-id "^0.14.1"
 
-ipfs-core-utils@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.6.0.tgz#b89e7decf49f92b3539a47c01479494d891fb8d9"
-  integrity sha512-w5uoE3RLO5ReNt0E9BwIRdSGbjz9NzFxGqMDCW9zMPUAkiDWC8FTksYOifAVQcdekI4oP8kMHVDzJ/5YKyba/Q==
+ipfs-core-utils@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.6.1.tgz#59d1ca9ff4a33bbf6497c4abe024573c3fd7d784"
+  integrity sha512-UFIklwE3CFcsNIhYFDuz0qB7E2QtdFauRfc76kskgiqhGWcjqqiDeND5zBCrAy0u8UMaDqAbFl02f/mIq1yKXw==
   dependencies:
     any-signal "^2.0.0"
     blob-to-it "^1.0.1"
     browser-readablestream-to-it "^1.0.1"
     cids "^1.1.5"
     err-code "^2.0.3"
-    ipfs-core-types "^0.2.0"
+    ipfs-core-types "^0.2.1"
     ipfs-utils "^5.0.0"
     it-all "^1.0.4"
     it-map "^1.0.4"
@@ -4461,18 +4466,18 @@ ipfs-core-utils@^0.6.0:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^1.1.0"
 
-ipfs-http-client@^48.2.0:
-  version "48.2.0"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-48.2.0.tgz#36bdde46cc41e4fa1f55fa216084b4b7c9ba745f"
-  integrity sha512-7t8Ju5LGUNP9AdSs3WzeKkcqKXhwPamQJO+YGLMplYXzlk3+L13nM5O/fi37kRBpWkGYAdNAMv4dNslQhzI1Mw==
+ipfs-http-client@^48.2.2:
+  version "48.2.2"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-48.2.2.tgz#b570fb99866f94df1c394a6101a2eb750ff46599"
+  integrity sha512-f3ppfWe913SJLvunm0UgqdA1dxVZSGQJPaEVJtqgjxPa5x0fPDiBDdo60g2MgkW1W6bhF9RGlxvHHIE9sv/tdg==
   dependencies:
     any-signal "^2.0.0"
     bignumber.js "^9.0.0"
     cids "^1.1.5"
     debug "^4.1.1"
     form-data "^3.0.0"
-    ipfs-core-types "^0.2.0"
-    ipfs-core-utils "^0.6.0"
+    ipfs-core-types "^0.2.1"
+    ipfs-core-utils "^0.6.1"
     ipfs-utils "^5.0.0"
     ipld-block "^0.11.0"
     ipld-dag-cbor "^0.17.0"
