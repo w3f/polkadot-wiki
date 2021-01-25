@@ -2,6 +2,7 @@
 id: learn-comparisons
 title: Polkadot Comparisons
 sidebar_label: Other comparisons
+description: How does Polkadot compare to Ethereum 2, Cosmos, and other chains?
 ---
 
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular
@@ -9,20 +10,19 @@ chains.
 
 ## In-Depth Comparisons
 
-### [Ethereum 2.0](learn-comparisons-ethereum-2)
+- [vs Ethereum 2.0](learn-comparisons-ethereum-2)
 
-### [Cosmos](learn-comparisons-cosmos)
+- [vs Cosmos](learn-comparisons-cosmos)
 
-### [Dfinity](learn-comparisons-dfinity)
+- [vs Dfinity](learn-comparisons-dfinity)
 
 ## Other Comparisons
 
 ### Ethereum 1.x
 
-[Ethereum](https://ethereum.org) is a smart contract platform blockchain that allows for general
-computation to be deployed on-chain and operated across the p2p network. Ethereum 1.x refers to the
-current Ethereum release (at the time of writing at the Muir Glacier hard fork) and the immediately
-planned future upgrades.
+[Ethereum](https://ethereum.org) is a smart contract blockchain that allows for general computation
+to be deployed on-chain and operated across the p2p network. Ethereum 1.x refers to the current
+Ethereum release and the immediately planned future upgrades.
 
 The difference between Ethereum 1.x and Polkadot is quite large. Ethereum is a single chain that
 allows developers to extend its functionality through the deployment of blobs of code onto the chain
@@ -34,27 +34,8 @@ remarkably different for developers. In Ethereum, developers write smart contrac
 on a single virtual machine. In Polkadot, however, developers write their logic into individual
 blockchains, where the interface is part of the state transition function of the blockchain itself.
 Polkadot will also support smart contract blockchains for Wasm and EVM to provide compatibility with
-existing contracts.
+existing contracts, but will not have smart contract functionality on its core chain, the Relay
+Chain.
 
-## Tezos
-
-[Tezos](https://tezos.com) is a blockchain that can evolve by upgrading itself. Two interesting
-feature to compare Polkadot to is its governance mechanism and smart contracts.
-
-Tezos is described as **self-amending** because it can enact an upgrade to the chain without having
-to fork. Likewise, Polkadot allows for any parachain to integrate this functionality and the Relay
-Chain itself is able to be upgraded through an on-chain process. Since Polkadot state transition
-functions are just Wasm blobs to perform an upgrade (after it has been approved by the governance
-system) simply means switching out the code blob for which validators are validating against.
-
-Another feature of Tezos is its smart contract language
-[Michelson](https://tezos.gitlab.io/whitedoc/michelson.html), which facilitates formal verification
-of the written logic. Formal verification is a tool that can help to prevent bugs that could lead to
-unwanted state transitions. Although Polkadot is currently written in the Rust language, which lacks
-the same level of formal verification tools as Tezos' implementation language OCaml, Rust is
-considered a safer language than C or C++ for systems programming. Furthermore, Polkadot makes no
-restrictions to parachains written in more friendly languages for formal verification-- the only
-requirement is that the logic must compile to Wasm. It is expected that some chains will emerge with
-formal verification as a first class property. Additionally, the tooling ecosystem around both Rust
-and Wasm are both maturing and formal verification tools may at some point become more widely
-available for these languages.
+As such, Polkadot is a possible augmentation and scaling method for Ethereum 1.x, rather than
+competition.

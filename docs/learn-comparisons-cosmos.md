@@ -39,8 +39,7 @@ the Relay Chain. Parachains have collators, who construct and propose parachain 
 validators. Collators don't have any security responsibilities, and thus do not require a robust
 incentive system. Collators can submit a single parachain block for every Relay Chain block every 6
 seconds. Once a parachain submits a block, validators perform a series of availability and validity
-checks before committing it to the final chain. Polkadot also has actors called fishermen to flag
-any blocks and demand additional validity checks.
+checks before committing it to the final chain.
 
 Parachain slots are limited, and thus parachain candidates participate in an auction to reserve a
 slot for up to two years. For chains that do not have the funding for a parachain slot or the
@@ -81,9 +80,9 @@ complexity for both block production and finalization. BABE has linear complexit
 scale to thousands of block producers with low networking overhead. GRANDPA has quadratic
 complexity, but reduced by a factor of the latency, or how many blocks it finalizes in one batch.
 
-Second, having the capacity to extend the chain with unfinalized blocks allows fishermen and other
-validators to perform extensive availability and validity checks to ensure that no invalid state
-transitions make their way into the final chain.
+Second, having the capacity to extend the chain with unfinalized blocks allows other validators to
+perform extensive availability and validity checks to ensure that no invalid state transitions make
+their way into the final chain.
 
 Cosmos (both the Hub and the zones) uses Tendermint consensus, a round-robin protocol that provides
 instant finality. Block production and finalization are on the same path of the algorithm, meaning
@@ -121,11 +120,10 @@ nominating a validator does not assign any governance voting rights to the valid
 
 Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain) for parachains to send
 arbitrary messages to each other. Parachains open connections with each other and can send messages
-via their established channels. If two parachains have any full nodes in common, they can gossip
-messages via the full nodes. Otherwise, Relay Chain validators will handle message delivery.
-Messages do not pass through the Relay Chain, only proofs of post and channel operations (open,
-close, etc.) go into the Relay Chain. This enhances scalability by keeping data on the edges of the
-system.
+via their established channels. [Collators](learn-collators) are full nodes of parachains and full
+nodes of the relay chain, so collator nodes are a key component of message passing. Messages do not
+pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.) go into
+the Relay Chain. This enhances scalability by keeping data on the edges of the system.
 
 In the case of a chain re-organization, messages can be rolled back to the point of the
 re-organization based on the proofs of post in the Relay Chain. The shared state amongst parachains
@@ -181,7 +179,7 @@ modules (e.g. staking, governance, etc.) that can be included in a chain's STF. 
 top of Tendermint.
 
 The primary development framework for parachains is [Substrate](https://substrate.dev/docs/en/),
-written in Rust. Substrate comes with FRAME, a set of about 35 modules (called "pallets") to use in
+written in Rust. Substrate comes with FRAME, a set of about 40 modules (called "pallets") to use in
 a chain's STF. Beyond simply using the pallets, Substrate adds a further layer of abstraction that
 allows developers to compose FRAME's pallets by adding custom modules and configuring the parameters
 and initial storage values for the chain.
