@@ -54,7 +54,7 @@ intermediaries and build a trustless infrastructure.
 The Polkadot network uses a
 [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
 "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of
-sequentially. Each parachain in the network has a unique state transition functions (STF). Based on
+sequentially. Each parachain in the network has a unique state transition function (STF). Based on
 Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain
 API, then it can connect to the Polkadot network as a parachain.
 
