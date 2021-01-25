@@ -12,7 +12,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 
 1. Never, ever, ever share your seed phrase or account password.
 2. Do not trust anyone online. It is trivial for them to lie and change identities.
-3. If you are scammed, there is [likely nothing](#i-got-scammed-what-can-i-do) that can be done to
+3. If you are scammed, there is [likely nothing](#i-got-scammed---what-can-i-do) that can be done to
    recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all of your
    funds to their account in seconds. It is better to be safe than to risk all of your DOT and KSM.
 4. If it sounds too good to be true, it probably is. People, especially celebrities, do not give
