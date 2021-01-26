@@ -94,13 +94,15 @@ In the unfortunate case of having fallen for a scam, there is likely nothing any
 you restore your funds. Polkadot and Kusama are decentralized platforms and while we do have
 governance functionality which could technically allow for funds freezing or refunds, it is
 impossible to prove that you are the original owner, or that you did not sell the tokens and are
-trying to reclaim them. Additionally, even with addresses that are obviousy in possession of a
-scammer, the thief could easily monitor the network for governance proposals that would affect their
-ill-gotten gains and move them to a new address before the proposal is enacted.
+trying to reclaim them. Additionally, even with addresses that are obviously in possession of a
+scammer, governance is a slow-moving process; even under ideal conditions, it would take over 56 days 
+to come into effect. The thief could easily monitor the network for governance proposals that would affect their
+ill-gotten gains and move them to a new address before the proposal is enacted. 
 
 You could put together a full account of the transactions and chat messages accompanied by
-screenshots and explanations, but there's no guarantee the Council will help you restore the funds
-as it would set a dangerous precedent. It is safer for the network and for future users to consider
+screenshots and explanations, but there is no guarantee stakeholders on the network will help you restore the funds
+as it would set a dangerous precedent. In fact, there have been several attempts on Polkadot in the past and none have
+been passed. It is safer for the network and for future users to consider
 the money lost. Still, your detailed account of the situation might be helpful in preventing others
 from falling for the same thing so we definitely recommend retracing your steps and talking publicly
 about them, if it's not too private.
