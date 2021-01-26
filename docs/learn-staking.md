@@ -64,18 +64,20 @@ To explain how rewards are paid to validators and nominators, we need to conside
 pools**, where a validator pool consists of an elected validator together with the nominators
 backing it. (Note: if a nominator `n` with stake `s` backs several elected validators, say `k`, the
 NPoS election mechanism will split its stakes into pieces `s_1`, `s_2`, …, `s_k`, so that it backs
-validator `i` with stake `s_i`. In that case, nominator `n` will be rewarded essentially the same as if there
-were `k` nominators in different pools, each backing a single validator `i` with stake `s_i`).  For
-each validator pool, we keep a list of nominators with the associated stakes.
+validator `i` with stake `s_i`. In that case, nominator `n` will be rewarded essentially the same as
+if there were `k` nominators in different pools, each backing a single validator `i` with stake
+`s_i`). For each validator pool, we keep a list of nominators with the associated stakes.
 
-The general rule for rewards across validator pools is that two validator pools get paid essentially the **same
-amount of DOT** for equal work, i.e. they are NOT paid proportional to the stakes in each pool. There is a 
-probabilistic component to staking rewards in the form of [era points](maintain-guides-validator-payout#era-points)
-and [tips](https://wiki.polkadot.network/docs/en/learn-transaction-fees#fee-calculation) but these should 
-average out over time. Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's commission
-fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the nominators and
-validator. Notice in particular that the validator is rewarded twice: once in commission fees for
-validating (if their commission rate is above 0%), and once for nominating itself with stake.
+The general rule for rewards across validator pools is that two validator pools get paid essentially
+the **same amount of DOT** for equal work, i.e. they are NOT paid proportional to the stakes in each
+pool. There is a probabilistic component to staking rewards in the form of
+[era points](maintain-guides-validator-payout#era-points) and
+[tips](https://wiki.polkadot.network/docs/en/learn-transaction-fees#fee-calculation) but these
+should average out over time. Within a validator pool, a (configurable) percentage of the reward
+goes to pay the validator's commission fees and the remainder is paid **pro-rata** (i.e.
+proportional to stake) to the nominators and validator. Notice in particular that the validator is
+rewarded twice: once in commission fees for validating (if their commission rate is above 0%), and
+once for nominating itself with stake.
 
 To estimate the inflation rate and how many DOT you can get each month as a nominator or validator,
 you can use this [tool](https://www.stakingrewards.com/earn/polkadot/calculate) as a reference and
