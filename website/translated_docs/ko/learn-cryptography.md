@@ -2,6 +2,7 @@
 id: learn-cryptography
 title: 암호화체계 부연 설명
 sidebar_label: 암호화체계 부연 설명
+description: An overview of the cryptographic functions used in Polkadot
 ---
 
 This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some knowledge about cryptographic primitives that are used in blockchains generally such as hashes, elliptic curve cryptography (ECC), and public-private keypairs.
