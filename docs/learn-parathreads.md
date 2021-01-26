@@ -8,8 +8,8 @@ Parathreads are an idea for parachains to temporarily participate (on a block by
 Polkadot security without needing to lease a dedicated parachain slot. This is done through
 economically sharing the scarce resource of a _parachain slot_ among a number of competing resources
 (parathreads). Chains that otherwise would not be able to acquire a full parachain slot, or do not
-find it economically sensible to do so, are enabled to still participate in Polkadot's shared
-security -- albeit with an associated fee per block. It also offers a graceful off-ramp to
+find it economically sensible to do so, are enabled to participate in Polkadot's shared security
+&mdash; albeit with an associated fee per executed block. It also offers a graceful off-ramp to
 parachains that no longer require a dedicated parachain slot, but would like to continue using the
 Relay Chain.
 
@@ -25,10 +25,10 @@ the trade-off that some processes will take longer to progress.
 ## Parachain vs. Parathread
 
 Parachains and parathreads are very similar from a development perspective. One can imagine that a
-chain developed with Substrate can at different points in its lifetime assume one of three
-states: 1) independent chain with secured bridge, 2) parachain, or 3) parathread. It can switch
-between these last two states with relatively minimal effort on behalf of developers since the
-difference is more of an economic distinction than a technological one.
+chain developed with Substrate can at different points in its lifetime assume one of three states:
+an independent chain with secured bridge, a parachain, or a parathread. It can switch between these
+last two states with relatively minimal effort since the difference is more of an economic
+distinction than a technological one.
 
 Parathreads have the exact same benefits for connecting to Polkadot that a full parachain has.
 Namely, it is able to send messages to other para{chain,threads} through XCMP and it is secured
@@ -37,9 +37,9 @@ under the full economic security of Polkadot's validator set.
 The difference between parachains and parathreads is economic. Parachains must be registered through
 a normal means of Polkadot, i.e. governance proposal or parachain slot auction. Parathreads have a
 fixed fee for registration that would realistically be much lower than the cost of acquiring a
-parachain slot. Similarly to how DOT are locked for the duration of parachain slots and then
-returned to the winner of the auction, the deposit for a parathread will be returned to the
-parathread after the conclusion of its term.
+parachain slot. Similar to how DOT are locked for the duration of parachain slots and then returned
+to the winner of the auction, the deposit for a parathread will be returned to the parathread after
+the conclusion of its term.
 
 Registration of the parathread does not guarantee anything more than the registration of the
 parathread code to the Polkadot Relay Chain. When a parathread progresses by producing a new block,
@@ -69,9 +69,6 @@ them the most profit. The tokens from the parathread bids will likely be split 8
 applies also to transaction fees and, like many other parameters in Polkadot, can be changed through
 a governance mechanism.
 
-For a precise description of the parathread protocol, see
-[here](https://hackmd.io/UcOOzoyDR9WJpQBZICtg3Q?both#Parathread-Protocol).
-
 ## Parathread Economics
 
 There are two sources of compensation for collators:
@@ -88,16 +85,14 @@ There are two sources of compensation for collators:
 
 Collators may be paid in local parathread currency. However, the Relay Chain transacts with the
 Polkadot universal currency (DOT) only. Collators must then submit block candidates with an
-associated bid in DOT. This means that if the parathread offers a local currency, the collator will
-need to understand the exchange rate between this currency and DOT in order to place a proper DOT
-bid on the Relay Chain and ensure that they make a profit.
+associated bid in DOT.
 
 ## Parachain Slot Swaps
 
 It will be possible for a parachain that holds a parachain slot to swap this slot with a parathread
 so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread. The
 chain can also stop being a chain and continue as a thread without swapping the slot. The slot, if
-unoccupied, would be [auctioned off in the next auction period](learn-auction).
+unoccupied, would be auctioned off in the next [auction period](learn-auction).
 
 This provides a graceful off-ramp for parachains that have reached the end of their lease and do not
 have sufficient usage to justify renewal; they can remain registered on the Relay Chain but only
@@ -106,15 +101,6 @@ produce new blocks when they need to.
 Parathreads help ease the sharp stop of the parachain slot term by allowing parachains that are
 still doing something useful to produce blocks, even if it is no longer economically viable to rent
 a parachain slot.
-
-The off-boarding is always in the following order: Parachain -> Parathread -> Dormant thread. This
-process is not automatic due to a thread requiring a deposit, so an expired parachain will skip
-right to _dormant thread_ if for some reason there isn't a single operational entity of that chain
-left (no sudo or member of democracy to make that deposit).
-
-When going dormant, the ParaId and the original genesis, as well as all the historically finalized
-blocks stay on the Relay Chain, so a dormant thread or chain can continue where it left off if it
-rebuilds its community and gathers the necessary funds for a new lease or parathread deposit.
 
 ## Resources
 

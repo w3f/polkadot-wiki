@@ -22,9 +22,9 @@ Anson is a Technical Educator at Web3 Foundation. Before that, he worked as a Hy
 ### Bill Laboon
 
 - email: [bill@web3.foundation](mailto:bill@web3.foundation)
-- telegram: [@billlaboon](https://t.me/billlaboon)
 - matrix / riot / element: [@bill:web3.foundation](https://matrix.to/#/@bill:web3.foundation)
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
+- telegram: [@BillLaboon](https://t.me/BillLaboon)
 
 Bill Laboon is the Technical Education Lead at Web3 Foundation, after spending the previous five years teaching Computer Science at the University of Pittsburgh. He is the author of two books: [A Friendly Introduction to Software Testing](https://www.amazon.com/Friendly-Introduction-Software-Testing/dp/1523477377), an undergraduate textbook; and [Strength in Numbers](https://www.amazon.com/Strength-Numbers-Cryptocurrency-Bill-Laboon/dp/1981526730/), a near-future novel set in a world in which cryptocurrency has eliminated traditional money.
 

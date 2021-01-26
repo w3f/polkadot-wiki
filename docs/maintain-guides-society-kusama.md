@@ -21,10 +21,10 @@ Before joining the society, let's take a brief look at the
 
 - `Members`: The number of members in the society. Currently, the maximum number of members is set
   to `150`. It can be changed by using governance to increase the number.
-- `Rotation`: The duration between each time the membership rotates.
+- `Rotation`: The time period for membership rotations.
 - `Challenge`: The time period to randomly select one of the members to defend his membership in the
   society.
-- `Pot`: Resource that is used to support the member of society.
+- `Pot`: Resource balance that is used to support members of the society.
 - `Bids`: A list of users who submitted a bid to join the society.
 
 ## User Types
@@ -52,18 +52,14 @@ any questions if anything is unclear.
 
 ### 1. Bid Phase
 
-> Note: If you want to bid to join the society, you will need to be on the Extrinsics page for the
-> following functions. The page is found under "Developer" > "Extrinsics" in Polkadot-JS UI
-> navigation. Ensure that you are on the Kusama network by clicking on the network in the top-left
-> corner
+To submit a bid, click the Submit Bid button on the
+[Society page](https://ipfs.io/ipns/kusama.dotapps.io/#/society).
 
 Anyone can submit a bid to join the society by reserving a deposit or finding an existing member to
-create a bid on their behalf by vouching for them. At every rotation period, as many bids the
+create a bid on their behalf by vouching for them. At every rotation period, as many bids as the
 society pot can support will be selected. The selected bids will be moved to the candidate phase,
 whereas bids that were not selected will stay in the bidder pool until they are selected or a user
 chooses to unbid.
-
-![Society Dashboard](assets/society/submit_bid.jpg)
 
 Anyone who wants to join the society is required to deposit 10 KSM for reserve on Kusama and place
 the bid amount (1 KSM in this case) that they want to get when joining the society.
@@ -71,18 +67,13 @@ the bid amount (1 KSM in this case) that they want to get when joining the socie
 ![Society Dashboard](assets/society/test_bid.jpg)
 
 Once you have submitted the transaction, your bid will be shown on the
-[Society page](https://polkadot.js.org/apps/#/society) under the bids section. You can cancel the
-bidding if you changed your mind about joining the society by calling `unbid`.
-
-> unbid(pos)
->
-> pos - The index of the bid.
-
-If you are not sure what your position is, you can check that by going to the
-[Society -> bids chain state](https://polkadot.js.org/apps/#/chainstate) in the Polkadot-JS apps.
+[Society page](https://ipfs.io/ipns/kusama.dotapps.io/#/society) under the bids section. You can
+cancel the bidding if you changed your mind about joining the society by calling `unbid` on the same
+page.
 
 You can find an existing member to place a bid on your behalf if you do not have KSM and you are
-willing to give them a tip. An existing member can submit a `vouch` transaction.
+willing to give them a tip. An existing member can submit a `vouch` transaction through the
+Extrinsics page.
 
 > vouch(who,value,tip)
 >
@@ -97,14 +88,6 @@ willing to give them a tip. An existing member can submit a `vouch` transaction.
 ![Society Dashboard](assets/society/vouch.jpg)
 
 ### 2. Candidate Phase
-
-![Society Vote Candidate](assets/society/vote_candidate.jpg)
-
-> vote(candidate,approve)
->
-> candidate - Select the candidate you would like to vote
->
-> approve - Yes / No
 
 Bids selected in this phase will be voted on by the existing members to decide whether or not you
 will be approved to join the society. Members will vote for all the candidates and the final outcome
@@ -122,12 +105,14 @@ A - Accept, R - Reject, S - Skeptic
 
 In this example, a candidate will be approved to join the society since member 3 was selected as a
 final voting outcome. A number of members will also be randomly chosen as "skeptics" to vote for the
-candidates during the rotation period. Since member 5 was chosen as a skeptic, they are required to
-participate in the voting process. If they do not participate in voting, they will be punished with
-one strike per missing vote. If one accumulates too many strikes, one's membership is suspended
-which means they may need to re-apply and their unclaimed payouts will be slashed. Moreover, each
-member who voted opposite to the randomly selected vote will have their unclaimed payouts slashed
-and strikes increased. In this case, member 4 will be punished.
+candidates during the rotation period.
+
+Since member 5 was chosen as a skeptic, they are required to participate in the voting process. If
+they do not participate in voting, they will be punished with one strike per missing vote. If one
+accumulates too many strikes, one's membership is suspended which means they may need to re-apply
+and their unclaimed payouts will be slashed. Moreover, each member who voted opposite to the
+randomly selected vote will have their unclaimed payouts slashed and strikes increased. In this
+case, member 4 will be punished.
 
 > Note: The maximum number of strikes you can have is on Kusama is 10.
 
@@ -138,7 +123,7 @@ time - see below.
 #### Lock-up Time
 
 It would take the number of members of the society as the variable to determine how many blocks you
-have to wait in order to get the payout. The longest lock-up time is closer to 3 years. The formula
+have to wait in order to get the payout. The longest lock-up time is close to 3 years. The formula
 is defined [in the society pallet][substrate pallet] if you would like to have a look.
 
 Example:
@@ -168,12 +153,6 @@ Once you become a member of the society, you will get back the deposit that you 
 the bidding. A few things you need to be aware of. First, you should vote on candidates who applied
 for the membership in every rotation period.
 
-![Society Vote Defender](assets/society/vote_defender.jpg)
-
-> defenderVote(approve)
->
-> approve - Yes / No
-
 Second, you will need to claim your payout manually by calling `payout` after the lock-up time. It
 is the same as the above mentioned lock-up formula.
 
@@ -181,7 +160,7 @@ is the same as the above mentioned lock-up formula.
 
 Third, there will be a membership challenge every seven days on Kusama. So one of the members will
 be randomly selected as a defender. Then, other members can vote whether this defender should stay
-in society or not. A simple majority wins the vote. You can take a look [here][kappa rules] and
+in the society or not. A simple majority wins the vote. You can take a look [here][kappa rules] and
 search for "Existing Members (Challenges)". Besides that, you can earn extra KSM by helping a user
 apply for the membership and requesting a tip. This is useful when a user does not have enough
 balance to reserve a deposit. The tip will be given when a user successfully joins the society.
@@ -199,10 +178,6 @@ society with all their future payouts slashed.
 [Convention of Approval of Membership](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
 Rules about joining the Kusama society
 
-[Substrate Society](https://www.shawntabrizi.com/substrate-society/) - It shows the Kusama society
-information and allowing you to directly place a bid if you have installed the
-[Polkadot-JS extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd).
-
-[substrate pallet]: https://substrate.dev/rustdocs/v2.0.0/pallet_society/index.html
+[substrate pallet]: https://substrate.dev/rustdocs/v2.0.1/pallet_society/index.html
 [kappa rules]:
   https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17

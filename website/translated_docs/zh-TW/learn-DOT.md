@@ -41,21 +41,21 @@ DOT serve three key functions in Polkadot:
 
 DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
-> These concepts have been further explained in the video [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7)
+> These concepts have been further explained in the video [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
 
-### DOT for governance
+### DOT for Governance
 
 The first function of DOT is to entitle holders to control of the governance of the platform. Some functions that are included under the governance mechanism include determining the fees of the network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to the Polkadot platform.
 
 Polkadot will enable any holder of DOT to participate in governance. For details on how holders can participate in governance, as well as their rights and responsibilities, see the [governance page](learn-governance).
 
-### DOT for consensus
+### DOT for Consensus
 
 DOT will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via staking) to perform these functions. The staking of DOT acts as a disincentive for malicious participants who will be punished by the network by getting their DOT slashed. The DOT required to participate in the network will vary depending on the activity that is being performed, the duration the DOT will be staked for, and the total number of DOT staked.
 
-### DOT for bonding
+### DOT for Parachain Slot Acquisition
 
-DOT will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOT will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed. You can learn more about this aspect by [reading about the auctions that govern parachain slots](learn-auction).
+DOT will have the ability to be locked for a duration in order to secure a parachain slot in the network. The DOT will be reserved during slot lease and will be released back to the account that reserved them after the duration of the lease has elapsed and the parachain is removed. You can learn more about this aspect by reading about the [auctions](learn-auction) that govern parachain slots.
 
 ### Vesting
 
@@ -78,6 +78,10 @@ Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that
 - The `vest_other` will update the lock that is placed on another "target" account's funds.
 
 These extrinsics are exposed from the Vesting pallet.
+
+If you are using Polkadot-JS, when there are DOT available to vest for an account, then you will have the ability to unlock DOT which have already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+
+![unbond](assets/unlock-vesting.png)
 
 #### Calculating When Vesting DOT Will Be Available
 

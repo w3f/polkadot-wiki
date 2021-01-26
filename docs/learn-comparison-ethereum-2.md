@@ -32,9 +32,9 @@ Ethereum 2 is simply a blockchain with the Ethereum Wasm (eWasm) interface.
 
 Ethereum 2.0 launched Phase 0 on 1 December 2020 with just a Beacon Chain. In Phase 1, it will
 launch 64 shards as simple chains to test the Beacon Chain's finality. Each shard submits
-"crosslinks" to the Beacon Chain, which contain the information to finalize shard data. Later, in
-Phase 2, the shards will implement the eWasm interface, finally making the system usable to end
-users. [1]
+"crosslinks" to the Beacon Chain, which contain the information to finalize shard data. It will also
+"fold in" Eth 1 in that it will finalize the proof-of-work chain's blocks. Later, in Phase 2, the
+shards will implement the eWasm interface, finally making the system usable to end users. [1]
 
 The network will also have "side chains" to interact with chains that are not under the finality
 protocol of Ethereum 2.0.
@@ -59,7 +59,7 @@ Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility
 
 Both Ethereum 2.0 and Polkadot use hybrid consensus models where block production and finality each
 have their own protocol. The finality protocols - Casper FFG for Ethereum 2.0 and GRANDPA for
-Polkadot - are both GHOST-based. and can both finalize batches of blocks in one round. For block
+Polkadot - are both GHOST-based and can both finalize batches of blocks in one round. For block
 production, both protocols use slot-based protocols that randomly assign validators to a slot and
 provide a fork choice rule for unfinalized blocks - RandDAO/LMD for Ethereum 2.0 and BABE for
 Polkadot.
@@ -83,12 +83,12 @@ There are two main differences between Ethereum 2.0 and Polkadot consensus:
 
 ## Staking Mechanics
 
-Ethereum 2.0 will be a proof-of-stake network that requires 32 ETH to stake for each validator
-instance. Validators will run a primary Beacon Chain node and multiple validator clients - one for
-each 32 ETH. These validators get assigned to "committees", which are randomly selected groups to
-validate shards in the network. Ethereum 2.0 relies on having a large validator set to provide
-availability and validity guarantees: They need at least 111 validators per shard to run the network
-and 256 validators per shard to finalize all shards within one epoch. With 64 shards, that's 16,384
+Ethereum 2.0 is a proof-of-stake network that requires 32 ETH to stake for each validator instance.
+Validators run a primary Beacon Chain node and multiple validator clients - one for each 32 ETH.
+These validators get assigned to "committees", which are randomly selected groups to validate shards
+in the network. Ethereum 2.0 relies on having a large validator set to provide availability and
+validity guarantees: They need at least 111 validators per shard to run the network and 256
+validators per shard to finalize all shards within one epoch. With 64 shards, that's 16,384
 validators (given 256 validators per shard). [3][4]
 
 Polkadot is able to provide strong finality and availability guarantees with much fewer validators.
@@ -121,11 +121,11 @@ nodes pass messages between shards.
 
 Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain) for parachains to send
 arbitrary messages to each other. Parachains open connections with each other and can send messages
-via their established channels. If two parachains have any full nodes in common, they can gossip
-messages via the full nodes. Otherwise, Relay Chain validators will handle message delivery.
-Messages do not pass through the Relay Chain, only proofs of post and channel operations (open,
-close, etc.) go into the Relay Chain. This enhances scalability by keeping data on the edges of the
-system.
+via their established channels. Given that collators will need to be full nodes of the Relay Chain
+as well, they will be connected to one another and will be able to relay messages from parachain A
+to parachain B.. Messages do not pass through the Relay Chain, only proofs of post and channel
+operations (open, close, etc.) go into the Relay Chain. This enhances scalability by keeping data on
+the edges of the system.
 
 Polkadot will add an additional protocol called [SPREE](learn-spree) that provides shared logic for
 cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and

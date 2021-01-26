@@ -6,9 +6,9 @@ sidebar_label: Ledger Application
 
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers like Brave and Chrome.
 
-The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that does not expose it to your computer or the internet. It is strongly recommend to use a hardware wallet if you are managing a significant amount of funds.
+The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that does not expose it to your computer or the internet.
 
-The Polkadot application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utility pallet).
+The Polkadot Ledger application allows you to manage Polkadot's native token, the DOT. It supports most of the transaction types of the network (a notable exception is the "Batch" transaction from the Utility pallet).
 
 If you have trouble using Ledger or following the directions below, you can try searching for your issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
@@ -21,7 +21,7 @@ Here is a list of what you will need before starting:
 - A Ledger Nano S or a Ledger Nano X.
 - The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on the Nano X).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're up to date).
-- A web browser is installed that you can use to access [Polkadot-JS Apps][].
+- A Chromium-based web browser is installed that you can use to access [Polkadot-JS Apps][].
 
 ## Installing the Ledger Application
 
@@ -30,7 +30,9 @@ Here is a list of what you will need before starting:
 - Open the "Manager" tab in Ledger Live.
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing both buttons on the YES screen.
-- Find Polkadot in the app catalog and install it. ![The Polkadot App in the Ledger Manager](assets/ledger/manager-app-polkadot.png)
+- Find Polkadot in the app catalog and install it.
+
+![The Polkadot App in the Ledger Manager](assets/ledger/manager-app-polkadot.png)
 
 Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
@@ -56,7 +58,7 @@ Next, you must make sure your Ledger device is plugged in and unlocked and you'r
 
 First it will prompt you to allow an unsafe manager - confirm this by switching the screen to the allow screen and pressing the corresponding buttons.
 
-After some processing time, the screen of your device will update to say "Install app Polkadot". Navigate all the way to the right, verify the Identifier hash matches the one that is printed in your terminal. Click both buttons on "Perform Installation" to install the application. It will ask again for your Pin code and you should enter it in the device.
+After some processing time, the screen of your device will update to say "Install app Polkadot". Navigate all the way to the right, verify the Identifier hash matches the one that is printed in your terminal. Click both buttons on "Perform Installation" to install the application. It will ask again for your PIN code.
 
 At the end of the process you should have the newly installed Polkadot application on the device.
 
@@ -86,6 +88,8 @@ Once you confirm your selection, depending on your browser and its security sett
 
 ![Display the device connection popup](assets/ledger/query-device.png)
 
+Click on the "Unknown device" line and the "Connect" button will become available.
+
 You should now be able to scroll down and find a new account on the page with the type "ledger".
 
 ![Displaying the Ledger account in the list](assets/ledger/ledger-balance.png)
@@ -102,17 +106,13 @@ Here you can scroll through and make sure the address matches to what is display
 
 ### Checking the Balance of Your Account
 
-There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you can use a block explorer like [Polkascan][].
+There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you can use a block explorer like [Polkascan][] or [Subscan][].
 
 #### Using Polkadot-JS Apps
 
 Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger account. At the far right of the row is located your account's DOT balance. If you expand the balance arrow, it will show details of your balance such as locks or reserved amounts.
 
 ![Account row showing empty balance](assets/ledger/ledger-balance.png)
-
-#### Using a Block Explorer
-
-You can also use a block explorer such as [Polkascan][] or [Subscan][] to check the DOT balance of your account. On these block explorers you can search for your account in the search box and click on it to reveal the details. It will show your DOT balance as well as details about your bonded or locked amounts.
 
 ### Sending a Transfer
 
@@ -134,7 +134,7 @@ Since Ledger does not support batch transactions, you must do two separate trans
 - Click the "Account Actions" pane in the inner navigation.
 - Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not work).
 - Input the amount of tokens to bond and confirm the transaction.
-- Confirm the transaction on the Ledger devivce.
+- Confirm the transaction on the Ledger device.
 - When the transaction is included you will see the newly bonded account in the "Account Actions" page.
 - Select "Start Nominating" or "Start Validating" to start nominating or validating.
 - Confirm the transaction on Apps and on the Ledger device.

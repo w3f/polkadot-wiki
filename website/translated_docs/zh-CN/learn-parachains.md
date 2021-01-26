@@ -2,19 +2,18 @@
 id: learn-parachains
 title: 平行链
 sidebar_label: 平行链
+description: An introductory guide to Polkadot Parachains.
 ---
 
 ![One parachain](assets/network/one_parachain.png)
 
-## 什么是平行链?
-
 平行链是特定于应用程序的数据结构，它在上下上是一致的，并且可以由 Polkadot 中继链的验证人进行验证。通常平行链会是一条区块链, 但并没有特别要求它们必须是一条链，之所以叫他们平行链是因为它们于中继链并行运行。由于它们的并行性质，它们能够并行地处理交易并实现 Polkadot 系统的可伸缩性。它们[与 Polkadot 网络共享安全](learn-security)，并且可以通过[ XCMP ](learn-crosschain)与其它平行链进行通信。
 
-Parachains are maintained by a network maintainer known as a [collator](learn-collator). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the Relay Chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain (see [parachain economies](#parachain-economies)). They are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the parachain implementation.
+Parachains are maintained by a network maintainer known as a [collator](learn-collator). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the Relay Chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain. They are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the parachain implementation.
 
-Polkadot Host (PH) 允许将在平行链上执行的状态转换指定为 Wasm 可执行文件。 在Polkadot 确认在平行链上发生状态转换之前，必须通过验证程序根据在中继链上存储的注册状态转换函数 (STF) 验证在平行链上发生的新状态转换的证据。允许执行平行链的逻辑的唯一约束是中继链验证程序必须可以验证该逻辑。 验证通常采用状态转换的捆绑式证明的形式，即验证的证明 (PoV) 区块，该验证从一个或多个平行链的收集人核对提交给验证人，以进行检查。
+The Polkadot Host (PH) requires that the state transitions performed on parachains to be specified as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated against the registered state transition function (STF) that is stored on the Relay Chain by the validators before Polkadot acknowledges a state transition has occurred on a parachain. The only constraint to the logic that a parachain is allowed to implement is that it must be verifiable by the Relay Chain validators. Verification most commonly takes the form of a bundled proof of a state transition known as a Proof-of-Verification (PoV) block, which is submitted to the validators from one or more of the parachain collators to be checked.
 
-## 平行链经济学
+## Parachain Economies
 
 平行链可能有自己的经济体和自己的原生币。方案像权益证明通常用于选择验证人以便用于验证区块和确定性。平行链并不需要处理以上功能。但是由于 Polkadot 对于平行链可以实现的内容也是通用的，因此平行链可以选择实现抵押代币，但通常没有必要。
 
@@ -24,40 +23,42 @@ Polkadot Host (PH) 允许将在平行链上执行的状态转换指定为 Wasm �
 
 平行链并不需要拥有它们自己的代币。如果它们拥有自己的代币，那将会是平行链决定如何使它们的代币有经济用途，需不是 Polkadot。
 
-## 群众募资平行链
+## Parachain Slot Acquisition
 
-Polkadot 允许平行链以分散和安全的方式将他们的插槽募资。 这个逻辑 是在 [众筹 pallet](https://github.com/paritytech/polkadot/blob/master/runtime/common/src/crowdfund.rs) 中处理。
+Polkadot supports a limited number of parachains, currently estimated to be about 100. As the number of slots is limited, Polkadot has several ways to allocate the slots:
 
-在平行链拍卖期间，任何人都可以为平行链插槽创建新的众筹活动。当活动创建时，将插槽范围(例如租期)指定。 最多可以选择四个插槽，总持续时间约为两年。 众筹的创建者成为活动的拥有者，并可以稍后上传平行链的代码。 在创建活动时，还指定了众筹"上限"。 达到上限后，众筹将拒绝接受资金。
+- System level parachains
+- Auction granted parachains
+- Parathreads
 
-Parachain campaigns may use caps when they are confident they will raise enough funds to reach the minimum amount needed for a raise but do not want to raise too much over this amount. As a simplified example, let's consider that the total supply of DOT is 10 million. We can assume that 5 million DOT are bonded in the staking subsystem since that is what is optimized by the rewards. We are left with a maximum of 5 million DOT to use in parachain auctions. If there were only 4 slots up for an auction then we can calculate that 1.25 million is enough to win any one of them. A parachain might choose to place this as their cap, so that no single parachain can be oversubscribed.
+System parachains are those deemed as a "common good" for the network, such as bridges to other networks or chains that remove functionality from the Relay Chain, e.g. a governance parachain. These typically do not have an economic model of their own and help remove transactions from the Relay Chain, allowing for more efficient parachain processing.
 
-一旦众筹活动开始，任何人都可以通过发送特殊交易和存入资金来贡献。 用于贡献的资金必须是可转移的(即未锁定)，因为它们将被转移到为此活动系列唯一生成的模块控制帐户中。
+Auction granted parachains are granted in a permissionless [auction](learn-auction). Parachain teams can either bid with their own DOT tokens, or source them from the community using the [crowdloan functionality](learn-crowdloan).
 
-在众筹活动的某个阶段，拥有者将上传平行链数据。 理想情况下，拥有者在向活动征集贡献之前进行此操作，以便贡献者可以对其进行验证。 在活动过程中，数据只能上传一次，这将是为平行链部署的。 当然，一旦平行链运行，它总是可以通过 runtime 升级来更改 (由其自身的本地治理确定)。
+[Parathreads](learn-parathreads) have the same API as parachains, but are scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
-If a crowdfunding campaign is successful, that parachain will be on-boarded as a parachain in Polkadot. The funds that contributed to it will be locked in that parachain's account for the entire duration that it is active (up to two years). On one hand, this means that the parachain can do reliable accounting of contributors and reward them with parachain tokens in their local economies. On the other hand, the DOT that contributors used will be essentially taken out of circulation for that time and cannot be used to stake or vote.
+### Slot Expiration
 
-At the end of the parachain's lifecycle, it will enter into a retirement phase. During this phase, contributors can begin to withdraw their locked DOT. Contributors must withdraw their funds during the retirement phase, otherwise they will be sent to the treasury when that parachain is dissolved. Likewise, any parachain that started a campaign but was unsuccessful at acquiring a slot will have a timeout during which contributors can withdraw their funds. If funds are not withdrawn during the timeout, they are dissolved to the treasury.
+When a parachain wins an auction, the DOT that it bid gets reserved until the end of the lease. Reserved balances are non-transferrable and cannot be used for staking. At the end of the lease, the DOT is unreserved. Parachains that have not secured a new lease to extend their slot will automatically become parathreads.
 
-## 例子
+## Examples
 
-平行链例子
+Some examples of parachains:
 
-- **加密联盟链** - 对于不希望泄漏信息的私有链, 基于 XCMP 的性质它们也能去信任地进行交互.
-- **高频链** - 这些链可以通过进行某些权衡或进行优化，在短时间内大量计算。
-- **隐私链** - 这些链通过使用新颖的加密技术不会向公众泄露任何信息。
-- **智能合约链** - 这些链可以通过部署称为 _智能合约_的代码来实现额外的逻辑。
+- **Encrypted Consortium Chains**: These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the XCMP protocol.
+- **High Frequency Chains**: These are chains that can compute many transactions in a short amount of time by taking certain trade-offs or making optimizations.
+- **Privacy Chains**: These are chains that do not leak any information to the public through use of novel cryptography.
+- **Smart Contract Chains**: These are chains that can have additional logic implemented on them through the deployment of code known as _smart contracts_.
 
-## 常见问题
+## FAQ
 
-### 平行链共识是什么?
+### What is "parachain consensus"?
 
-"平行链共识"的特殊之处在于它将遵循 Polkadot 中继链。平行链不能使用其他提供确定性的共识算法。只有主权链 (必须通过转接桥的平行链接到中继链) 能够控制它们的共识。平行链可以控制区块的创作方式和通过谁。
+"Parachain consensus" is special in that it will follow the Polkadot Relay Chain. Parachains cannot use other consensus algorithms that provide their own finality. Only sovereign chains (that must bridge to the Relay Chain via a parachain) can control their own consensus. Parachains have control over how blocks are authored and by whom.
 
-### 平行链插槽如何分配？
+### How will parachain slots be distributed?
 
-平行链插槽通过使用拍卖方式获取。请查看[平行链插槽](learn-auction)文章。如此，一些平行链插槽将会运行[平行线程](learn-parathreads) - 平行线程通过以竞标每个区块方式包括在中继链内。
+Parachain slots will be acquirable through auction, please see the [parachain slots](learn-auction) article. Additionally, some parachain slots will be set aside to run [parathreads](learn-parathreads) &mdash; chains that bid on a per-block basis to be included in the Relay Chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
@@ -79,7 +80,7 @@ Parachain Development Kits are a set of tools that enable developers to create t
 
 Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for information on compiling and deploying a parachain.
 
-## 资源
+## Resources
 
-- [Polkadot: 平行链](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Polkadot 联合创始人 Rob Habermeier 在2017年撰写的博客文章，将平行链介绍为 "一种更简单的区块链形式，它附加于中继链提供的安全性，而不是提供其自身的安全性。中继链为附加的平行链提供安全性，但是还为它们之间的安全消息传递提供了保证。"
+- [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Blog post by Polkadot co-founder Rob Habermeier that introduced parachains in 2017 as "a simpler form of blockchain, which attaches to the security provided by a Relay Chain rather than providing its own. The Relay Chain provides security to attached parachains, but also provides a guarantee of secure message-passing between them."
 - [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A technical walkthrough of how parachains interact with the Relay Chain.

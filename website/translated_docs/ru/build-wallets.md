@@ -16,32 +16,33 @@ Some recently generated `JSON` account files cannot be imported (restored) into 
 
 ### Supported Wallets
 
-| Wallet Name                                                        | Development State | Team Name     | Description                                                |
-| ------------------------------------------------------------------ | ----------------- | ------------- | ---------------------------------------------------------- |
-| [Signer](https://www.parity.io/signer/)                            | Live              | Parity        | IOS and Android                                            |
-| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity        | Browser                                                    |
-| [Polkadot{.js}](https://github.com/polkadot-js/extension)          | Live              | Parity        | Browser extension                                          |
-| [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet   | IOS and Android                                            |
-| [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet   | IOS, Android, Browser extension                            |
-| [Trust Wallet](https://trustwallet.com/)                           | Live              | Trust Wallet  | IOS and Android                                            |
-| [ImToken](https://token.im/)                                       | Live              | ImToken       | IOS and Android                                            |
-| [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit        | iOS and Android                                            |
-| [AirGap](https://airgap.it/)                                       | Live              | AirGap        | IOS, Android, MacOS, Windows and Linux                     |
-| [SafePal](https://www.safepal.io/download)                         | Live              | SafePal       | IOS, Android, and Hardware                                 |
-| [Crypto.com](https://crypto.com/en/index.html)                     | Live              | Crypto.com    | IOS and Android                                            |
-| [Ledger App](https://zondax.ch/kusama.html#overview)               | Live              | Zondax        | Hardware                                                   |
-| [Atomic Wallet](https://atomicwallet.io)                           | Live              | Atomic Wallet | Desktop                                                    |
-| [Dether](https://dether.io/)                                       | Live              | Dether        | IOS and Android                                            |
-| [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo          | IOS and Android                                            |
-| [Swipe](https://swipe.io/)                                         | Live              | Swipe         | IOS and Android                                            |
-| [Guarda](https://guarda.com/)                                      | Live              | Guarda        | IOS, Android, MacOS, Windows, Linux, and Browser extention |
-| [Mixin](https://mixin.one/messenger/)                              | Live              | Mixin         | iOS and Android                                            |
-| [Fearless Wallet](https://fearlesswallet.io/)                      | Live              | Soramitsu     | iOS and Android                                            |
-| [ONTO Wallet](https://www.onto.app/en)                             | Live              | Ontology      | iOS, Android, and Browser extention                        |
-| [Polkadot{.js} (EthWorks)](https://github.com/EthWorks/extension)  | Building          | EthWorks      | Browser extension                                          |
-| [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask      | IOS, Android, and browser extension                        |
-| [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle       | Browser extension                                          |
-| [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu         | Browser                                                    |
-| [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf           | CLI Wallet                                                 |
-| [Spatium](https://spatium.net/)                                    | Building          | Spatium       | IOS and Android                                            |
-| [TokenPocket](https://www.tokenpocket.pro/)                        | Building          | TokenPocket   | IOS and Android                                            |
+| Wallet Name                                                        | Development State | Team Name     | Description                                                | Custody       | Supports |
+| ------------------------------------------------------------------ | ----------------- | ------------- | ---------------------------------------------------------- | ------------- | -------- |
+| [Signer](https://www.parity.io/signer/)                            | Live              | Parity        | IOS and Android                                            | Non-custodial |          |
+| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity        | Browser                                                    | Non-Custodial | Staking  |
+| [Polkadot{.js}](https://github.com/polkadot-js/extension)          | Live              | Parity        | Browser extension                                          | Non-custodial | Staking  |
+| [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet   | IOS and Android                                            | Non-custodial | Staking  |
+| [Math Wallet](https://www.mathwallet.org/kusama-wallet/en/)        | Live              | Math Wallet   | IOS, Android, Browser extension                            | Non-custodial | Staking  |
+| [Trust Wallet](https://trustwallet.com/)                           | Live              | Trust Wallet  | IOS and Android                                            | Non-custodial |          |
+| [ImToken](https://token.im/)                                       | Live              | ImToken       | IOS and Android                                            | Non-custodial | Staking  |
+| [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit        | iOS and Android                                            | Non-custodial |          |
+| [AirGap](https://airgap.it/)                                       | Live              | AirGap        | IOS, Android, MacOS, Windows and Linux                     | Non-custodial | Staking  |
+| [SafePal](https://www.safepal.io/download)                         | Live              | SafePal       | IOS, Android, and Hardware                                 | Non-custodial |          |
+| [Crypto.com](https://crypto.com/en/index.html)                     | Live              | Crypto.com    | IOS and Android                                            | Non-custodial |          |
+| [Ledger App](https://zondax.ch/kusama.html#overview)               | Live              | Zondax        | Hardware                                                   | Non-custodial |          |
+| [Atomic Wallet](https://atomicwallet.io)                           | Live              | Atomic Wallet | Desktop                                                    | Non-custodial | Staking  |
+| [Dether](https://dether.io/)                                       | Live              | Dether        | IOS and Android                                            | Non-custodial |          |
+| [Cobo Wallet](https://cobo.com/)                                   | Live              | Cobo          | IOS and Android                                            | Custodial     |          |
+| [Swipe](https://swipe.io/)                                         | Live              | Swipe         | IOS and Android                                            | Custodial     |          |
+| [Guarda](https://guarda.com/)                                      | Live              | Guarda        | IOS, Android, MacOS, Windows, Linux, and Browser extention | Non-custodial |          |
+| [Mixin](https://mixin.one/messenger/)                              | Live              | Mixin         | iOS and Android                                            | Non-custodial |          |
+| [Fearless Wallet](https://fearlesswallet.io/)                      | Live              | Soramitsu     | iOS and Android                                            | Non-custodial | Staking  |
+| [ONTO Wallet](https://www.onto.app/en)                             | Live              | Ontology      | iOS, Android, and Browser extention                        | Non-custodial |          |
+| [TokenPocket](https://www.tokenpocket.pro/)                        | Live              | TokenPocket   | IOS and Android                                            | Non-custodial |          |
+| [Ellipal](https://www.ellipal.com/)                                | Live              | Ellipal       | Hardware                                                   | Non-custodial |          |
+| [Polkadot{.js} (EthWorks)](https://github.com/EthWorks/extension)  | Building          | EthWorks      | Browser extension                                          | Non-custodial |          |
+| [MetaMask](https://metamask.io/index.html)                         | Building          | MetaMask      | IOS, Android, and browser extension                        | Non-custodial |          |
+| [Speckle](https://github.com/GetSpeckle/speckle-browser-extension) | Building          | Speckle       | Browser extension                                          | Non-custodial |          |
+| [KodaDot](https://kodadot.netlify.app/#/accounts)                  | Building          | Geefu         | Browser                                                    | Non-custodial | Staking  |
+| [Subwallet](https://github.com/yxf/subwallet)                      | Building          | yxf           | CLI Wallet                                                 | Non-custodial |          |
+| [Spatium](https://spatium.net/)                                    | Building          | Spatium       | IOS and Android                                            | Non-custodial |          |

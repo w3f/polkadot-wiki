@@ -25,6 +25,12 @@
     "computed": true
   },
   {
+    "tpl": "proposal_min_bond",
+    "default": { "kusama": 3.333, "polkadot": 100 },
+    "path": "consts.treasury.proposalBondMinimum",
+    "filters": ["humanReadableToken"]
+  },
+  {
     "tpl": "tip_deposit_amount",
     "default": { "kusama": 0.166, "polkadot": 1 },
     "path": "consts.treasury.tipReportDepositBase",

@@ -111,7 +111,7 @@ guide on setting one up once it becomes possible.
 
 ## Further Resources
 
-- [Life of a Parachain Block][life of] - Article by Parity analyst Joe Petrowski expounding on the
+- [Path of a Parachain Block][life of] - Article by Parity analyst Joe Petrowski expounding on the
   validity checks that a parachain block must pass in order to progress the parachain.
 - [Availability and Validity][anv paper] - Paper by the W3F Research Team that specifies the
   availability and validity protocol in detail.

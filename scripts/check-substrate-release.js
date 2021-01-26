@@ -10,12 +10,19 @@ const fs = require("fs");
   });
   let latestTag = releases.data[0].tag_name;
   let pass = false;
+  const maxErrors = 10;
+  let numErrors = 0;
   while (!pass) {
+    if (numErrors === maxErrors) {
+      console.log("max errors reached");
+      process.exit(1);
+    }
     let testUrl = `http://substrate.dev/rustdocs/${latestTag}/sc_service/index.html`;
     try {
       const res = await axios.get(testUrl);
       if (res.status === 200) pass = true;
     } catch (err) {
+      numErrors++;
       latestTag = latestTag.slice(0, -1);
     }
   }

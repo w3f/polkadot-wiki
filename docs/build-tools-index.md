@@ -38,7 +38,7 @@ See the [Wallets](build-wallets.md) page.
 - [Panic](https://github.com/SimplyVC/panic_polkadot) - A node monitoring and alert server for
   validators.
 - [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to
-  monitor on chian states and events.
+  monitor on chain states and events.
 
 ## Clients
 

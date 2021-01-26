@@ -96,8 +96,20 @@ submitted proposal.
 Seconding a proposal means that you are agreeing with the proposal and backing it with an equal
 amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
 tabled (that is, brought to a vote). By seconding a proposal you will move it higher up the rank of
-proposals. The most seconded proposal - in value, not number of supporters - will be tabled as a
-referendum to be voted on every launch period.
+proposals. The most seconded proposal &mdash; in value, not number of supporters &mdash; will be
+brought to a referendum every launch period.
+
+It is important to note that there is no way to stop or cancel seconding a proposal once it has been
+done. Therefore, the DOT that was seconded will be reserved until the proposal is tabled as a
+referendum. This is an indeterminate amount of time, since there is no guarantee that a proposal
+will become a referendum for a given period, as other proposals may be proposed and tabled before
+it.
+
+Note that it is possible for a single account to second a proposal multiple times. This is by
+design; it is the value, not the number of seconds _per se_, that counts in terms of weighting. If
+there were a limit of one second per account, it would be trivial for a user with, for example, 1000
+DOT to create ten accounts with 100 DOT instead of a single account with 1000 DOT. Thus, no
+restrictions are made on the number of times a single account can second a proposal.
 
 To second a proposal, navigate to the proposal you want to second and click on the "Second" button.
 

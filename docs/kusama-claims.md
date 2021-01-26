@@ -256,8 +256,7 @@ period balance transfers will not be enabled.
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
 immediately.
 
-Having trouble? Get support in the KSM
-[Claims Support](https://riot.im/app/#/room/#KSMAClaims:polkadot.builders) channel.
+Having trouble? Send an email to [support@polkadot.network](mailto:support@polkadot.network).
 
 ### Third Party Claims Processes
 

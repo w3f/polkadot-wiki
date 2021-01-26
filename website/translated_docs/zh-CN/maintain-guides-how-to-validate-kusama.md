@@ -261,5 +261,5 @@ Make sure to enable `30333` libp2p port. Eventually, it will take a little bit o
 If you have Docker installed, you can use it to start your validator node without needing to build the binary. You can do this with a simple one line command:
 
 ```sh
-$ docker run parity/polkadot:v0.7.28 --validator --name "name on telemetry"
+$ docker run parity/polkadot:latest --validator --name "name on telemetry" --chain kusama
 ```

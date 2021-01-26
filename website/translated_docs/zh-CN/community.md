@@ -4,79 +4,77 @@ title: 社区
 sidebar_label: 社区
 ---
 
-The Polkadot community is expanding every day. Below are the most essential links to the community channels. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior contact and anyone doing so is likely trying to scam you.
+Polkadot社区每天都在壮大。以下是社区频道最重要的链接。请记住，没有任何管理员或主持人不会因任何原因在没有事先联系的情况下欺骗您，任何这样做的人都可能试图欺骗您。
 
 ## 一般
 
-- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
-- [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
-- [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and [Polkadot Support Email](mailto:support@polkadot.network)
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/)
+- [Polkadot GitHub](https://github.com/paritytech/polkadot/) - 由 Parity 负责管理和维护的 Rust 实现的 Polkadot 主机的代码库
+- [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) -关于主办聚会，申请资金的相关信息。
+- [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) 和 [ Polkadot Support Email](mailto:support@polkadot.network)
+- [Polkadot 最新的研究](https://research.web3.foundation/en/latest/polkadot/)
 
-### Events
+### 活动
 
-The Web3 Foundation hosts many events online and in-person. To check out our current and past events, please refer to our public [Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
+Web3 基金会主办了许多线上和线下的活动。你可以通过[这个Notion Page](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d)来查看我们之前和现在举办的活动。
 
-## Matrix Chats
+## Matrix 聊天
 
-We primarily use [Matrix](https://matrix.org) across the organization and to communicate with community members. The application we use most often to interact with the Matrix protocol is the [Element](https://app.element.io) messenger.
+我们整个组织中主要使用[Matrix](https://matrix.org)与社区成员进行沟通。我们最常与Matrix协议进行交互的应用程序是[Element](https://app.element.io)信使。
 
 ### Polkadot
 
-- [Polkadot Watercooler Chat](https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - General room for talk about Polkadot.
-- [Polkadot Validator Lounge](https://app.element.io/#/room/#polkadot-validator-lounge:matrix.org) - Room for validators learning about setting up a node.
-- [Polkadot Direction](https://app.element.io/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Polkadot.
-- [Polkadot Digest](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - News about what is happening in the Polkadot ecosystem, published every weekday except holidays
+- [PolkadotWatercooler Chat](https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 一般性问题聊天室
+- [Polkadot Validator Lounge](https://app.element.io/#/room/#polkadot-validator-lounge:matrix.org) - 验证者可以在这里学习如何架设节点
+- [Polkadot Direction](https://app.element.io/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 社区治理，以及探讨 Polkadot 未来方向的聊天室
+- [Polkadot摘要](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - 有关 Polkadot 生态发生的事件新闻，每个工作日（节假日除外）发布
 
 ### Kusama
 
-- [Kusama Watercooler Chat](https://app.element.io/#/room/%23kusamawatercooler:polkadot.builders) - General room for talk about Kusama.
-- [Kusama Validator Lounge](https://app.element.io/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Room for validators learning about setting up a node.
-- [Kusama Direction](https://app.element.io/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Kusama.
+- [Kusama Watercooler Chat](https://app.element.io/#/room/%23kusamawatercooler:polkadot.builders) - 关于 Kusama 的一般性问题聊天室
+- [Kusama Validator Lounge](https://app.element.io/#/room/!LhjZccBOqFNYKLdmbb:polkadot.builders?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Kusama 的验证者可以在这里学习如何架设节点
+- [Kusama Direction](https://app.element.io/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 关于 Kusama 的社区治理，以及探讨 Kusama 未来方向的聊天室
 
-### Technical
+### 技术
 
-- [Substrate Technical](https://app.element.io/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
-- [Smart Contracts & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A room to discuss developing Substrate smart contracts using Parity Ink!
+- [Substract Technical](https://app.element.io/#/room/#substrate-technical:matrix.org) - 关于 Substrate 的更深入的技术问题讨论聊天室
+- [Smart Contract & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 讨论基于 Parity Ink! 开发的 Substrate 智能合约的聊天室
 
 ## 媒体
 
-### Chat
+### 聊天
 
-- [Polkadot Discord](https://discord.gg/wGUDt2p) (RECOMMENDED)
-- [Polkadot Telegram](https://t.me/PolkadotOfficial)
-- [Kusama Telegram](https://t.me/kusamanetworkofficial)
+- [Polkadot Discord](https://discord.gg/wGUDt2p) (推荐）
 - [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
-### Social media and forums
+### 社交媒体和论坛
 
-- [Polkadot Twitter](https://twitter.com/Polkadot)
-- [Kusama Twitter](https://twitter.com/kusamanetwork)
-- [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+- [Polkadot 推特](https://twitter.com/Polkadot)
+- [Kusama 推特](https://twitter.com/kusamanetwork)
+- [Web3 基金会推特](https://twitter.com/web3foundation)
 
 - [Polkadot Reddit](https://www.reddit.com/r/dot/)
 - [Kusama Reddit](https://www.reddit.com/r/Kusama)
 
-- [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
+- [Web3 基金会 YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
-- [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
+- [Kusama YouTube 频道](http://youtube.com/c/kusamanetwork)
 
-- [Polkadot Forum](https://forum.polkadot.network)
-- [Kusama Forum](https://forum.kusama.network)
+- [Polkadot 论坛](https://forum.polkadot.network)
+- [Kusama 论坛](https://forum.kusama.network)
 
-### Blogs and tutorials
+### 博客和教程
 
-- [Web3 Medium Blog](https://medium.com/@web3)
-- [Polkadot Blog](https://polkadot.network/blog/)
-- [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-- [Dotleap.com Tutorials](https://dotleap.com)
+- [Web3 Medium 博客](https://medium.com/@web3)
+- [Polkadot 博客](https://polkadot.network/blog/)
+- [Gavin Wood Medium 博客](https://medium.com/@gavofyork)
+- [Dotleap.com 教程](https://dotleap.com)
 
-### Newsletters
+### 邮件公告
 
-- [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - official, infrequent
-- [Dot Leap Newsletter](https://dotleap.substack.com/) - less official, weekly
+- [订阅 Polkadot 电子报](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - 在这里订阅我们的电子报。
+- [Dot Leap Newsletter](https://dotleap.substack.com/) - 非官方，每周。
 
 ## 生态
 
-- [Teams Building on Polkadot](https://polkaproject.com/) - Community maintained list of teams building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's unofficial)
-- [Polkadot Stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md) - if you're interested in seeing what's under development and where there's room for your contributions.
+- [Polkadot上的团队建设](https://polkaproject.com/) - 社区维护的团队列表建立在Polkadot和/或Substrate上。(请注意，这里可能有些不准确，因为它是非官方的)
+- [Polkadot Stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md) - 如果你对正在进行的开发感兴趣，或是想要了解你可以怎样参与贡献。

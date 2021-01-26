@@ -5,7 +5,7 @@ sidebar_label: SPREE
 ---
 
 Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "trust wormholes," are
-fragments of logic comparable to runtime modules in Substrate, but live on the Polkadot Relaychain
+fragments of logic comparable to runtime modules in Substrate, but live on the Polkadot Relay Chain
 and may be opted into by parachains.
 
 SPREE in brief was described with the following properties and functions:
@@ -13,7 +13,7 @@ SPREE in brief was described with the following properties and functions:
 - Parachains can opt-in to special runtime logic fragments (like smart contracts).
 - These fragments have their own storage and own [XCMP](learn-crosschain) endpoint.
 - All instances across parachains have identical logic.
-- It executes alongside parachain.
+- It executes alongside parachain logic.
 - Protected: storage can not be altered by parachain logic; messages can not be faked from them by
   parachains.
 
@@ -23,17 +23,17 @@ On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on
 [r/dot][polkadot reddit] called "SmartProtocols Idea" and laid out a proposal for [Smart
 Protocols][smart protocols reddit post]. The core insight of the post was that XCMP had a
 complication in that it was difficult to verify and prove code was executed on a parachain without
-trust. A solution was to install the SmartProtocols in the Relaychain that would be isolated blobs
+trust. A solution was to install the SmartProtocols in the Relay Chain that would be isolated blobs
 of code with their own storage per instance that could only be changed through an interface with
 each parachain. SmartProtocols are the precursor to SPREE.
 
 ## What is a SPREE module?
 
-SPREE modules are fragments of logic (in concrete terms they are blobs of WebAssembly code) that are
-uploaded onto Polkadot through a governance mechanism or by parachains. Once the blob is uploaded to
-Polkadot, all other parachains can decide to opt-in to the logic. The SPREE module would retain its
-own storage independent of the parachain, but would be able to be called through an interface with
-the parachain. Parachains will send messages to the SPREE module synchronously.
+SPREE modules are fragments of logic (in concrete terms they are blobs of [WebAssembly](learn-wasm)
+code) that are uploaded onto Polkadot through a governance mechanism or by parachains. Once the blob
+is uploaded to Polkadot, all other parachains can decide to opt-in to the logic. The SPREE module
+would retain its own storage independent of the parachain, but would be callable through an
+interface with the parachain. Parachains will send messages to the SPREE module synchronously.
 
 SPREE modules are important to the overall XCMP architecture because they give guarentee to the code
 that will be executed on destination parachains. While XCMP guarantees the delivery of a message, it
@@ -96,27 +96,6 @@ with the previous state root of the SPREE module instances, the data of the XCMP
 instances, and the next state root of the instance. They do this validation be checking it against
 the `validate` function as provided by the SPREE module API. Collators are expected to be able to
 provide this information in order to progress their parachains.
-
-## Metaphor
-
-SPREE modules are like recipes in cookbooks. Let’s consider an example for comparison. We are at a
-restaurant and we give an order to a cook to make a soufflé. We're sufficiently confident in the
-cook’s ability and we have a vague idea of what will be made, but no actual surety how it will be
-made. If we want to be sure on the exact execution of the making of the soufflé, then we would need
-to inspect the cook’s kitchen before hand and verify ourselves how the cook makes the soufflé. This
-is comparable to sending XCMP messages without SPREE, as the sending party is responsible for
-verifying themselves the receiving chain’s code.
-
-However, let's say that a cook has the Soufflé Maker's Manual; on their bookshelf and has committed
-themselves to only making soufflés from this book. One can now examine the book and have a precise
-understanding of what will happen when we tell the cook to make a soufflé. When we place an order to
-make a soufflé as is written on page 10 of the manual, we then know exactly what will be executed in
-the cook’s kitchen and the finished product that will come back to the table. Additionally, any
-kitchen we go to we can ask if the cook owns this book and if so we can order the standard recipe
-and be sure of the execution in the cook’s kitchen. Like the recipe in the cookbook, we only need to
-verify a SPREE module once in order to be sure of its execution across all parachains. If we know a
-parachain uses a specific SPREE module, it’s not necessary to know any other details on how the
-parachain is implemented.
 
 [polkadot reddit]: https://www.reddit.com/r/dot/
 [smart protocols reddit post]: https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/

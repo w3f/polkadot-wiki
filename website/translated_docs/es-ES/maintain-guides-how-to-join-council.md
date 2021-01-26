@@ -8,7 +8,7 @@ El Consejo es un cuerpo electo de cuentas on-chain que están destinadas a repre
 
 ## Enviar Candidatura
 
-Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be forfeited if your candidacy does not win or become a runner-up. However, if you manually renounce your candidacy before losing, you receive your bond back. Runner-ups are selected after every round and are reserved members in case one of the winners gets forcefully removed.
+Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be forfeited if your candidacy does not win or become a runner-up and will be kept otherwise. You only receive your bond back, if you manually renounce your candidacy before losing. Runners-up are selected after every round and are reserved members in case one of the winners gets forcefully removed.
 
 > Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.1666 KSM on Kusama.
 

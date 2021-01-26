@@ -4,7 +4,7 @@ title: Kusama Community
 sidebar_label: Community
 ---
 
-The following is a list of official chats, forums, and social channels for the Kusama community. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior contact and anyone doing so is likely trying to scam you.
+The following is a list of official chats, forums, and social channels for the Kusama community. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior public contact and anyone doing so is likely trying to scam you.
 
 ## General
 
@@ -28,7 +28,6 @@ We primarily use Matrix across the organization and to communicate with communit
 - [Kusama Direction](https://app.element.io/#/room/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - Governance, and a place to discuss the future of Kusama.
 - [Polkadot Digest](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - News about what is happening in the Polkadot ecosystem, published every weekday except holidays, includes Kusama.
 - To join the Chinese Validator chat, message [Anson](https://raw.githubusercontent.com/kusamanetwork/userguide/master/chinese-language-validators-wechat.png?token=ABIBK6VM3MAOKWE43GM3JHC5G3ARG)
-- [Kusama Telegram](https://t.me/kusamanetworkofficial)
 - [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
 ### Technical
@@ -53,3 +52,4 @@ We primarily use Matrix across the organization and to communicate with communit
 
 - [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) - official, infrequent, includes Kusama.
 - [Dot Leap Newsletter](https://dotleap.substack.com/) - less official, weekly.
+- [NFT Review](https://news.nft.review) - Covering the evolution of the NFT ecosystem on Kusama

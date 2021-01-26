@@ -12,11 +12,6 @@ need to reserve some DOT in your account while you have an identity, no matter w
 use. For details on amount necessary to reserve, as well as the identity system as a whole, see the
 [identity](learn-identity) page.
 
-The whole process of doing the verification is done by the bot. You will have one hour to complete
-the verification. If you are not able to finish it within an hour, the judgement will be issued as
-"Erroneous". If this occurs, you will have to submit a `clearIdentity` transaction and redo
-everything.
-
 > **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys
 > to anyone!
 
@@ -61,10 +56,6 @@ a little grey icon beside your name. It is the time to interact with the W3F's v
 submitting the judgment request to the W3F's registrar.
 
 ## Request Judgement
-
-> Friendly reminder: Once you have submitted "requestJudgement" transaction, if you are not able to
-> complete the verification procedure in an hour, you would have to submit the "clearidentity"
-> transaction first and then redo the whole thing from the beginning again.
 
 ![registrar](assets/registrar/4.jpg)
 

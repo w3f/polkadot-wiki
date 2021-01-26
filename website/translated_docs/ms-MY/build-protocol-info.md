@@ -46,7 +46,7 @@ Note that the address for a secp256k1 key is the SS58 encoding of the _hash of t
 
 ## Existential Deposit
 
-Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 0.01 KSM.
+Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 0.0016666 KSM.
 
 Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful withdrawals.
 
@@ -54,7 +54,7 @@ Wallets and custodians who track account nonces for auditing purposes should tak
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
-Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.0/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
+Account balance information is stored in [`AccountData`](https://substrate.dev/rustdocs/v2.0.1/pallet_balances/struct.AccountData.html). Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in staking and governance, for example. Reserved balance represents funds that have been set aside by some operation and still belong to the account holder, but cannot be used.
 
@@ -66,9 +66,9 @@ Vesting is another abstraction that uses locks on free balance. Vesting sets a l
 
 More info:
 
-- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.0/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.0/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://substrate.dev/rustdocs/v2.0.0/pallet_vesting/struct.Vesting.html)
+- [Lockable Currency](https://substrate.dev/rustdocs/v2.0.1/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/v2.0.1/frame_support/traits/enum.WithdrawReason.html)
+- [Vesting](https://substrate.dev/rustdocs/v2.0.1/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
 
@@ -114,7 +114,7 @@ Imagine this contrived example with a [reaped account](#existential-deposit). Th
 
 In addition, not every extrinsic in a Substrate-based chain comes from an account as a public/private key pair; Substrate, rather, has the concept of dispatch “origin”, which could be created from a public key account, but could also form from other means such as governance. These origins do not have a nonce associated with them the way that an account does. For example, governance might dispatch the same call with the same arguments multiple times, like “increase the validator set by 10%.” This dispatch information (and therefore its hash) would be the same, and the hash would be a reliable representative of the call, but its execution would have different effects depending on the chain’s state at the time of dispatch.
 
-The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.0/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
+The correct way to uniquely identify an extrinsic on a Substrate-based chain is to use the block ID (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a transaction. This methodology is reflected in the Substrate codebase itself, for example to [reference a previous transaction](https://substrate.dev/rustdocs/v2.0.1/pallet_multisig/struct.Timepoint.html) from the Multisig pallet.
 
 ### Events
 
@@ -129,6 +129,16 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 ### Encoding
 
 Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them and interact directly with the chain data or implement your own codec, Polkadot encodes block and transaction data using the [SCALE codec](https://substrate.dev/docs/en/knowledgebase/advanced/codec).
+
+## Runtime Upgrades
+
+Runtime upgrades allow Polkadot to change the logic of the chain without the need for a hard fork. A hard fork would require node operators to manually upgrade their nodes to the latest runtime version. In a distributed system, this is a complex process to coordinate and communicate. Polkadot can upgrade without a hard fork. The existing runtime logic is followed to update the Wasm runtime stored on the blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all the nodes on the network execute it.
+
+Generally there is no need to upgrade your nodes manually before the runtime upgrade as they will automatically start to follow the new logic of the chain. Nodes only need to be updated when the runtime requires new host functions or there is a change in networking or consensus.
+
+Transactions constructed for a given runtime version will not work on later versions. Therefore, a transaction constructed based on a runtime version will not be valid in later runtime versions. If you don't think you can submit a transaction before the upgrade, it is better to wait and construct it after the upgrade takes place.
+
+Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend following the Polkadot releases and upgrading in a timely manner, especially for high priority or critical releases.
 
 ## Smart Contracts
 

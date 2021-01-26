@@ -6,8 +6,6 @@ sidebar_label: How to use W3F Registrar
 
 An on-chain identity is a good way to build up your reputation and let the community know more about you if you plan on running a validator or being a councilor. Web3 Foundation provides a registrar service in the Kusama and Polkadot networks that only charges a small fee (0.04 KSM) on Kusama, and no fees on Polkadot (although there may be a small fee in the future). However, you will of course need to reserve some DOT in your account while you have an identity, no matter which registrar you use. For details on amount necessary to reserve, as well as the identity system as a whole, see the [identity](learn-identity) page.
 
-The whole process of doing the verification is done by the bot. You will have one hour to complete the verification. If you are not able to finish it within an hour, the judgement will be issued as "Erroneous". If this occurs, you will have to submit a `clearIdentity` transaction and redo everything.
-
 > **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys to anyone!
 
 If you have provided `display name`, `email`, `twitter`, or `element name (previously called Riot)` when setting an on-chain identity, these will be required to verify one by one by signing a challenge message. Be aware that the `display name` cannot be too similar to others that have verified already. There is no need to set all of the fields when using the service. You are free to set whichever field or fields that you like.
@@ -40,8 +38,6 @@ Once you have filled in the information you would like to store on-chain, click 
 Now you have set the identity information on-chain, but that is not verified yet, so you should see a little grey icon beside your name. It is the time to interact with the W3F's verification bot by submitting the judgment request to the W3F's registrar.
 
 ## Request Judgement
-
-> Friendly reminder: Once you have submitted "requestJudgement" transaction, if you are not able to complete the verification procedure in an hour, you would have to submit the "clearidentity" transaction first and then redo the whole thing from the beginning again.
 
 ![registrar](assets/registrar/4.jpg)
 

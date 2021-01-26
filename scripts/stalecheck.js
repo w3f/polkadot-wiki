@@ -3,7 +3,7 @@ const cp = require("child_process");
 const github = require("@actions/github");
 
 const dir = "docs";
-const maxAgeDays = 21;
+const maxAgeDays = 45;
 // Rigged to leave Bill alone
 const techedu = ["swader", "swader", "lsaether", "lsaether", "ansonla3", "ansonla3", "laboon"];
 

@@ -6,7 +6,7 @@ description: Details about Polkadot's on-chain treasury.
 ---
 
 The treasury is a pot of funds collected through transaction fees, slashing, [staking inefficiencies](learn-staking#inflation), etc. The funds held in the treasury can be spent by making a spending proposal that, if approved by the [Council](learn-governance#Council), will enter a waiting period before distribution. This waiting period is known as the budget period, and its duration is subject to [governance](learn-governance), with current defaults set to
-{{ spend_period }} days for Polkadot mainnet, and 6 days for Kusama. The treasury attempts to spend as many proposals in the queue as it can without running out of funds.
+{{ spend_period }} days for Polkadot. The treasury attempts to spend as many proposals in the queue as it can without running out of funds.
 
 If the treasury ends a budget period without spending all of its funds, it suffers a burn of a percentage of its funds -- thereby causing deflationary pressure.
 {{ polkadot: This percentage is currently at 1% on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to [Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being burned. :kusama }}
@@ -125,7 +125,11 @@ The bounty has a predetermined duration of 90 days with the possibility of being
 
 ### Creating a Bounty Proposal
 
-Anyone can create a Bounty proposal using Polkadot JS Apps: Users will be able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is on its way and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all Kusama users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
+Anyone can create a Bounty proposal using Polkadot JS Apps: Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
+
+To submit a bounty, please visit [Polkadot JS Apps](https://polkadot.js.org/apps) and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
+
+After this, a Council member will need to assist you to pass the bounty proposal for vote as a motion. You can contact the Council by joining the Direcion channel for [Polkadot](https://parity.link/polkadot-direction) or [Kusama](https://parity.link/kusama-direction) in Element or joining our [Kusama](https://parity.link/kusama-discord) or [Polkadot](https://parity.link/polkadot-discord) Discord servers and publishing a short description of your bounty with a link to one of the forums in the Direction channels for contextual information.
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by amending the expiry block number of the bounty to stay active.
 
@@ -151,4 +155,4 @@ Concretely there are a couple on-chain methods that resist this kind of attack. 
 
 ## Further Reading
 
-- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/v2.0.0/pallet_treasury/index.html))
+- [Substrate's Treasury Pallet](https://github.com/paritytech/substrate/blob/master/frame/treasury/src/lib.rs) - The Rust implementation of the treasury. ([Docs](https://substrate.dev/rustdocs/v2.0.1/pallet_treasury/index.html))

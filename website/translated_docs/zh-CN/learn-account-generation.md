@@ -1,128 +1,128 @@
 ---
 id: learn-account-generation
-title: Account Generation
-sidebar_label: Account Generation
+title: 开始生成帐户
+sidebar_label: 创建帐户
 description: Step-by-step guides on generating a Polkadot account.
 ---
 
-There are several ways to generate a Polkadot address:
+在波卡中有多种方法可以生成Polkadot地址，该章节主要详细介绍波卡账户地址的：
 
-- [Polkadot{.js} Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
-- [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Polkadot-JS Apps](#polkadotjs)
+- 推荐给大多数用户的Polkadot {.js}浏览器插件
+- **最安全的** [Subkey](#subkey)
+- [Polkadot-JS 应用](#polkadotjs)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
-- [Ledger Hardware Wallet](learn-ledger)
+- [硬件钱包](learn-ledger)
 
-> To learn more on how to create Polkadot accounts, head over to our [video](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
+> 要了解有关如何创建 Polkadot 帐户的更多信息，请观看我们的[视频](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
 
-## DISCLAIMER: Key Security
+## 免责声明：密钥安全
 
-Your secret seed is the _only_ way to get access to your account. You must keep the secret both secure and private. If you share your secret with anyone they will be able to have full access to your account, including all of your funds. The secret, for this reason, is a target from hackers and others with bad intentions to steal your funds. We recommend a variety of account generation methods that have various convienience and security tradeoffs. Please review this page carefully before making your address so that you understand the risks of the account generation method you choose and how to properly mitigate them in order to keep your funds safe.
+用户的密钥种子是访问账户的_唯一_方法，所以大家一定要确保密钥的隐私安全，如果密钥种子外泄，获得密钥的人可以获得账户操控权，并威胁到账户里的资金安全。这里提出多种账户生成方法，这些方法在便利性和安全性上各有不同，在生成账户地址之前建议仔细研究，以保证选择的账户生成方式不会造成账户安全威胁，确保资金安全。
 
-### Storing your key safely
+### 密钥的安全存储
 
-The seed is your **key** to the account. Knowing the seed allows you, or anyone else who knows the seed, to re-generate and control this account.
+种子是您账户的 **密钥** 。 知道种子可以让您或任何知道 种子的人重新生成和控制这个帐户。
 
-It is imperative to store the seed somewhere safe, secret, and secure. If you lose access to your account, you can re-create it by entering the seed. This also means that somebody else can have control over your account if they have access to your seed.
+必须将种子存放在安全、秘密和安全的地方。 如果您无法访问您的 账户，您可以通过输入种子重新创建它。 这也意味着，如果其他人能够访问您的种子，就可以对您的帐户拥有 控制权。
 
-For maximum security, the seed should be written down on paper or another non-digital device and stored in a safe place. You may also want to protect your seed from physical damage, as well (e.g. by storing in a sealed plastic bag to prevent water damage, storing it in a fireproof safe, etc.) It is recommended that you store multiple copies of the seed in geographically separate locations (e.g., one in your home safe and one in a safety deposit box at your bank).
+为了获得最大的安全性，应将种子记录在纸上或其他非数字设备上，并存放在安全的地方。您可能还希望保护种子免受物理损坏（例如，通过存储在密封的塑料袋中以防止水损坏，将其存储在防火保险箱中等）。建议您将种子的多个副本存储在在地理位置上分开的位置（例如，一个放在您的家庭保险箱中，一个放在您的银行保险箱中）。
 
-You should definitely not store your seed on any kind of computer that has or may have access to the internet in the future.
+绝不建议将种子存储在将来可以访问或可以访问互联网的任何类型的计算机上。
 
-## Polkadot{.js} Browser Plugin
+## Polkadot{.js} 浏览器插件
 
-The Polkadot{.js} plugin provides a reasonable balance of security and usability. It provides a separate local mechanism to generate your address and interact with Polkadot.
+Polkadot {.js}插件提供了安全性和可用性之间的合理平衡。它提供了一个单独的本地机制来生成您的地址并与 Polkadot 交互。
 
-This method involves installing the Polkadot{.js} plugin and using it as a “virtual vault," separate from your browser, to store your private keys. It also allows signing of transactions and similar functionality.
+此方法涉及安装Polkadot {.js}插件，并将其用作“虚拟保管库”，与您的浏览器分开，以存储私钥，还可以进行交易签名和类似功能。
 
-It is still running on the same computer you use to connected to the internet with and thus is less secure than using Parity Signer or other air-gapped protocols.
+它仍在您用于连接到 Internet 的同一台计算机上运行，因此比使用 Parity Signer 或其他空白协议的安全性低。
 
-### Install the Browser Plugin
+### 安装浏览器插件
 
-The browser plugin is available for both [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) and [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension).
+浏览器插件可用于 [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) 和 [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension)。
 
-If you would like to know more or review the code of the plugin yourself, you can visit the Github source [repository](https://github.com/polkadot-js/extension).
+如果你想要了解更多或查看你自己的插件代码， 您可以访问 Github [源代码仓库](https://github.com/polkadot-js/extension)
 
-After installing the plugin, you should see the orange and white Polkadot{.js} logo in the menu bar of your browser.
+安装插件后，您应该在浏览器的菜单栏 中看到橙色和白色 Polkadot{.js} 的图标。
 
 ![plugin-02](assets/accounts/polkadot_plugin_js_02.jpg)
 
-### Open Accounts
+### 打开账户
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps). Click on the "Accounts" tab. This is located in the sidebar on the left of your screen.
+导航到[Polkadot Apps](https://polkadot.js.org/apps)。点击“帐户”标签。它位于屏幕左侧的侧栏中。
 
 ![plugin-03](assets/accounts/polkadot_plugin_js_03.jpg)
 
-### Create Account
+### 创建新账户
 
-Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You will see a separate browser window open. If you have used this extension before, you may see a list of previously generated accounts. In any case you will see two buttons: “I want to create an account with a new seed” and “I have a pre-existing seed, import the account."
+点击浏览器顶部栏上的徽标打开Polkadot{.js} 浏览器扩展。 您将看到一个单独的浏览器窗口打开。 如果您以前使用过此扩展，您可以看到以前生成的帐户的列表。无论如何，您将看到两个按钮：“我想用新的助记词创建一个帐户”和“我有一个原有的助记词， 导入帐户。"
 
-Click “I want to create an account with a new seed”.
+单击“我想要用新的助记词创建一个帐户”。
 
 ![plugin-04](assets/accounts/polkadot_plugin_js_04.jpg)
 
-The Polkadot{.js} plugin will then use system randomness to make a new seed for you and display it to you in the form of twelve words.
+然后，Polkadot {.js}插件将使用系统随机性为您创建一个新助记词，并以十二个单词的形式向您显示。
 
-You should back up these keys. It is imperative to store the seed somewhere safe, secret, and secure. If you cannot access your account via Polkadot{.js} for some reason, you can simply re-enter your seed, and have access to your account once again.
+您应该备份这些密钥。必须将助记词存储在安全，秘密和安全的地方。如果由于某种原因无法通过Polkadot {.js}访问帐户，则只需重新输入助记词即可再次访问您的帐户。
 
 ![plugin-05](assets/accounts/polkadot_plugin_js_05.jpg)
 
-Please see above for information on [storing your key safely](#disclaimer-key-security).
+请查看之前提到的关于[如何安全存储您的密钥](#disclaimer-key-security) 的信息。
 
-### Name Account
+### 账户命名
 
-You are not able to edit the seed words. However, you should add a descriptive name for this account in the lower textbox (e.g. “Bob”, “Jane”, or “Office Account”).
+您无法编辑助记词。然而，您应该在下面的文本框中添加此账户 的描述性名称 (e). “Bob”、“Jane”或“Office Account”）。
 
-### Enter Password
+### 输入密码
 
-After typing a name for the account, a new textbox will appear in which you can enter a password. When you start typing, a new textbox will appear underneath it. Enter the same password in the second textbox. If your passwords do not match, the plugin will not allow you to generate the account.
+在输入帐户名称后，您可以输入密码的文本框将会出现。当您开始输入时，新的文本框将出现在下方，在第二个文本框中输入相同的密码。 如果您的密码不匹配，插件将不允许您生成账户。
 
-Note that this password will protect your data in the plugin, and any backup file you export from the plugin. It does NOT protect your seed phrase. If someone knows the twelve words in your mnemonic seed, they still have control over your account even if they do not know the password.
+请注意，此密码将保护你在插件中的数据以及你从插件中导出的任何备份文件。 它不会保护您的助记词。 如果有人知道你的十二个单词助记词， 即使他们不知道密码，他们仍然可以控制您的帐户。
 
 ![plugin-06](assets/accounts/polkadot_plugin_js_06.jpg)
 
-### Review Account
+### 查看帐户
 
-Once both of your passwords match, the program will display information about the account that will be generated for you.
+一旦您的两次密码匹配，程序将显示将为您生成的帐户信息。
 
 ![plugin-07](assets/accounts/polkadot_plugin_js_07.jpg)
 
-Click on “Add the account with the generated seed”. You will be taken back to the main page of the plugin, which should now include your generated account.
+单击“用生成的种子添加帐户”。 您将被带回插件的主页，现在应该包含您生成的帐户。
 
-### Set Address for Polkadot Mainnet
+### 将 Polkadot 主网设置为地址
 
-Now we will ensure that the addresses are displayed as Polkadot mainnet addresses.
+现在我们得确保地址是 Polkadot 主网地址。
 
-Click on "Options" at the top of the plugin window.
+点击插件窗口顶部的“选项”。
 
 ![plugin-08](assets/accounts/polkadot_plugin_js_08.jpg)
 
-In the "display addresses formatted for" dropdown, select "Polkadot (live) and then click "Back".
+在“显示格式化地址”下拉菜单中，选择"Polkadot (live)，然后单击"后退"。
 
 ![plugin-09](assets/accounts/polkadot_plugin_js_09.jpg)
 
-### Get Address
+### 获取地址
 
-Verify that your address has a “1” as the first character. This indicates that it is a Polkadot mainnet address.
+验证您的地址第一个字符是否是“1”，这表示它是 Polkadot 主网地址。
 
 ![plugin-10](assets/accounts/polkadot_plugin_js_10.jpg)
 
-You can copy the address by double-clicking on the string representation of the address itself, and then copying (e.g. with Control-C on Windows or Linux, Command-C on OS X). DO NOT click on the icon representing your account (the colorful hexagon of differently-colored dots) - this will copy a Kusama version of your address.
+您可以通过双击地址本身的字符串来复制地址( 例如,在 Windows 或 Linux, OS X 上使用Control-C)。 不要点击表示您账户的图标(不同颜色点的六边形) - 这将复制一个 Kusama 版本的地址。
 
-Be sure that you select the ENTIRE displayed address. Note that when you paste it, you will see even more characters than are displayed.
+请确保您选择了显示出来地址得全部字符。请注意，当您粘贴它时，您会看到比显示的更多的 个字符。
 
 ![plugin-11](assets/accounts/polkadot_plugin_js_11.jpg)
 
-### Copy Address
+### 复制地址
 
-You can now copy and paste the address from the address textbox, and you now have a plain-text copy of your Polkadot mainnet address.
+您现在可以从地址文本框复制并粘贴地址，现在您有一个 纯文本得 Polkadot 主网地址 。
 
-Note that an address in a different format can always be converted to a Polkadot address, since the same public key can be used for generating addresses on different networks. However, for ease of use and understanding, it is best to ensure that you are always using Polkadot mainnet addresses.
+注意一个不同格式的地址总是可以转换为 Polkadot 地址，这是由于相同的公钥可以用于在不同的网络上生成地址。 然而，为了便于使用和理解，最好确保您总是使用 Polkadot 主网地址。
 
 ## Subkey
 
-Subkey is recommended for technically advanced users who are comfortable with command line and compiling Rust code. Subkey allows you to generate keys on any device that can compile the code. Subkey may also be useful for automated account generation, using an air-gapped device other than one running iOS or Android or other specific purposes. It is not recommended for general users.
+推荐习惯用命令行和编译Rust 代码的极客们使用子密钥。 子密钥允许您在任何可以编译代码的设备上生成密钥。子密钥也有助于在 iOS 或 Android 或其他特定用途的设备上自动生成账户。 但不推荐普通用户使用。
 
 For detailed build and usage instructions of subkey, please see [here](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey).
 
@@ -130,138 +130,138 @@ For detailed build and usage instructions of subkey, please see [here](https://g
 
 ## Polkadot-JS
 
-> Please note! If you use Polkadot-JS to create your account and clear your cookies in your browser, your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you store your seed phrase in a safe place, or download the account's JSON file if using the Polkadot{.js} browser extension. Learn more about account backup and restoration [here](learn-account-restore).
+> 请注意！ 如果您使用 Polkadot-JS 在您的浏览器中创建您的帐户并清除您的 cookie， 如果您不 [备份](learn-account-restore)，您的账户将会永远丢失。请确保您 将您的种子短语存储在一个安全的地方，或者使用Polkadot{.js} 浏览器扩展应用下载账户的 JSON 密钥文件。   [在这里](learn-account-restore)了解更多关于帐户备份和恢复的信息
 
-Using the Polkadot-JS user interface without the plugin is not recommended. It is the least secure way of generating an account. It should only be used if all of the other methods are not feasible in your situation.
+不建议在没有插件的情况下使用 Polkadot-JS 用户界面。这是生成帐户的最不安全的方法。仅在您遇到其他所有方法都不可行时才应使用该方法。
 
-### Go to Polkadot-JS Apps
+### 转到 Polkadot-JS 应用程序
 
-Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar on the top of your screen.
+导航到 [Polkadot-JS 应用程序](https://polkadot.js.org/apps) 并点击位于您屏幕顶部的导航栏账户选项卡下面的“帐户”。
 
 ![pjs-01](assets/accounts/polkadot_js_01.png)
 
-> Note: For these screenshots, I am currently connected to the Polkadot network. To create an account on a different network, you'll need to click on the network selection in the top left corner of the navigation menu. A pop-up sidebar will appear listing live, testing, and custom node to choose from. Do remember to hit the "Switch" button when you want to switch your network.
+> 注意：以上的屏幕截图显示已连接到 Polkadot 网络。要在其他网络上创建帐户，您需要单击导航菜单左上角的网络选择。将会出现一个弹出式侧边栏，其中列出了可供选择的实时，测试和自定义节点。当您要切换网络时，请记住点击“切换”按钮。
 
-### Start Account Generation
+### 开始生成帐户
 
-Click on the "Add Account" button.
+点击"添加帐户"按钮。
 
 ![pjs-02](assets/accounts/polkadot_js_02.png)
 
-You should see a pop-up that looks like the one here. The required text fields to complete are highlighted in pink.
+您应该会看到一个类似于此处的弹出窗口，必填的文本字段以粉红色高亮显示。
 
 ![pjs-03](assets/accounts/polkadot_js_03.jpg)
 
-You can ignore the Advanced creation options; the defaults are fine. You will have to enter an Account Name and a password to protect your account. Be sure to select a secure and hard-to-guess password. Note that anything will be accepted as a password here. Please note: There are no checks to see if it is long enough or secure. You will need this password for any future interaction with or transaction from this account.
+您可以忽略“高级”创建选项。您将必须输入一个帐户名和一个密码来保护您的帐户。确保选择一个安全且难以猜测的密码。请注意，此处将接受任何内容作为密码。请注意：不会检查它是否足够长或安全。您将来与该帐户进行任何互动或从该帐户进行交易时都需要此密码。
 
-When you have entered valid information for both, the color of the text boxes will turn from pink to white.
+当您输入了两者的有效信息时，文字框的颜色将会从粉红色转为 白色。
 
 ![pjs-04](assets/accounts/polkadot_js_04.jpg)
 
-Please see above for information on [storing your key safely](#disclaimer-key-security).
+请查看之前提到的关于[如何安全存储您的密钥](#disclaimer-key-security) 的信息。
 
-### Create and Back Up Account
+### 创建和备份账户
 
-Click “Save” and your account will be created. It will also generate a backup file that you should save to your computer. Ideally, you would also save it on an external hard drive or thumb drive, or print it out and be able to re-enter it later. You should not store it in cloud storage, email it to yourself, etc.
+点击“保存”，您的帐户将被创建。它还会生成一个备份文件，您应该将其保存到计算机中。理想情况下，您还可以将其保存在外部硬盘驱动器或拇指驱动器上，或者将其打印出来，以便以后重新输入。您不应该将其存储在云存储中，也不要通过电子邮件发送给自己，等等。
 
-You can use this backup file to restore your account. This backup file is not readable unless it is decrypted with the password.
+您可以使用此备份文件来还原您的帐户。除非用密码解密，否则此备份文件不可读。
 
 ![pjs-05](assets/accounts/polkadot_js_05.png)
 
-### Multi-signature Accounts
+### 多签账户
 
-Multi-signature accounts are accounts created from several standard accounts (or even other multi-sig accounts). For a full explanation, please see the [Accounts Explainer section on multi-sigs](learn-accounts#multi-signature-accounts).
+多签账户是由多个标准账户（或甚至其他 多签名账户）创建的账户。 想了解关于多重签名的完整讲解，请参阅 [多重签名的账户解释部分](learn-accounts#multi-signature-accounts)。
 
-On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter the threshold and add signatories. The threshold must be less than or equal to the number of signatories. The threshold indicates how many members must be in agreement for an extrinsic submission to be successful. Click `Create` when done.
+在 [账户](https://polkadot.js.org/apps/#/accounts) 标签页上，点击 `Multisig(多签)` 按钮, 输入阈值并添加签名者。阈值（表示要成功提交外部必须有多少成员同意）必须小于或等于签名者的数目。 然后，点击 `创建`。
 
 ![Multi-sig account creation](/img/accounts/create-multisig.png)
 
-This merely calculates the multi-signature's address and adds it to your UI. The account does not exist yet, and is subject to the same [Existential Deposit and Reaping](learn-accounts#existential-deposit-and-reaping) rules as regular accounts.
+这只是计算多签名地址并将其添加到您的用户界面。 帐户目前还不存在，和普通账户一样需要满足 [账户存款和回收](learn-accounts#existential-deposit-and-reaping) 规则。
 
-Suppose we funded it with some tokens, and now want to send from the multi-sig to another account.
+假定我们这个账号已经有一些余额了，现在我们想要从多签账户发送到另一个账户。
 
-![Sending from multi-sig account](/img/accounts/send-from-multi.png)
+![从多签名帐户发送](/img/accounts/send-from-multi.png)
 
-The next step is to sign the transaction from with enough accounts to meet the threshold; in the above case, two out of three signatories must sign.
+下一步是用满足阈值的多个帐户签名交易； 在上面的 例子中，三个人中必须有两个签名。
 
-![Signing from multi-sig account](/img/accounts/sign-from-multi-1.png)
+![从多签名帐户签名](/img/accounts/sign-from-multi-1.png)
 
-There is currently no indication of a pending transaction from a multi-sig in the UI. This means the second signatory must **repeat the call in full** in order to sign it. In other words:
+当前 UI 中显示没有多签账户 有待处理的交易。 这意味着 第二签名者必须 **完整重复调用** 才能签名。换句话说：
 
-- if Alice initiates a transaction from the multi-sig to Ferdie for 150 tokens, there will be a pending transaction in the chain.
-- if Bob initiates a transaction from the multi-sig to Ferdie for 250 tokens, there will be **another** pending transaction in the chain, and the first one will not complete.
-- because the threshold is 2/3, Charlie can now finalize either or both of these by repeating the desired transaction.
+- 如果 Alice 发起了从多钱账户给 Ferdie 转账150个币的交易，链中将有一 个待处理的交易。
+- 如果 Bob 发起了从多钱账户给 Ferdie 转账250个币的交易，链中将有**另一个** 待处理的交易，并且第一个交易还没有完成。
+- 因为阈值是 2/3，Charlie 现在可以通过重复 执行所需交易来完成任意这两笔交易。
 
-Other calls work exactly the same - if a multi-sig wants to become a Council member, the candidacy request has to come from the multi-sig, but be signed (re-requested) from each signatory until the threshold is reached.
+其它调用方式完全一样――如果一个多签账户想要成为理事会成员的话， 候选人 必须来自多签账户， 但每个签名人都得签名(重新请求)，直到达到 个阈值。
 
-Signatories should communicate off-chain to prevent many pending transactions and crossed communication lines on-chain.
+各方签名参与人应在链外进行沟通，以防止交易无法执行和链上冲突的交易。
 
 ## Parity Signer
 
-Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after installing it. If you have any communications methods turned on, you will see an "unshielded" icon in red on the top-right corner that indicates your connection may not be secure.
+Parity Signer 是一个将你的 DOT 安全存储在物理设备上的方法。 强烈建议 您在安装 后关闭 wifi、蜂窝网络、蓝牙、NFC 和任何其他通信方法。 如果您已开启任何通信方式， 您将在右上角的红色中看到一个“未屏蔽”图标，这 表示您的连接可能不安全。
 
-### Create Account
+### 创建帐号
 
-Click "Create" to create an identity, or "recover" if you have previously backed up the recovery phrase. You can have multiple identities on one device. Each identity can manage multiple addresses on different networks.
+点击“创建”来创建身份，如果您以前备份过了助记词，则点击“恢复”。 您可以在一个设备上拥有多个账户，每个账户可以管理不同的网络上的多个地址。
 
 ![Parity Signer Create Account 1](assets/accounts/ps-create-1.jpg)
 
-### Name Account
+### 账户命名
 
-Input the name for your identity and then click "Create".
+输入您的身份名称，然后点击“创建”。
 
 ![Parity Signer Create Account 2](assets/accounts/ps-create-2.jpg)
 
-### Back Up Account
+### 备份账户
 
-Parity Signer will then generate a recovery phrase for you and display it in the form of 12 or 24 words.
+Parity Signer 将为您生成一个用于恢复账户的助记词，并以12或24个单词 的形式显示它。
 
-You should write down this recovery phrase on paper and store it somewhere safe, secret, and secure. If you cannot access your account via your phone for some reason, you can simply re-enter your recovery phrase on another phone that has Parity Signer installed, and have access to your account once again. This is the only way to recover your account, and anyone who has access to these words will also have access to your account. Therefore, it is a good idea to write them down and store them in multiple secure places!
+您应该在纸上写下这个助记词，并将其存储在某个安全和秘密的地方，。 出于某种原因您不能通过您的手机访问您的帐户。 您可以在另一个安装了 Parity Signer 的手机上重新输入您的恢复助记词，并再次访问您的帐户。这是恢复您的帐户的唯一途径，任何有权访问这些单词 的人也可以访问您的帐户。 因此，最好把它们写下来并在多个安全的地方存储 它们！
 
 ![Parity Signer Create Account 3](assets/accounts/ps-create-3.jpg)
 
-Please see above for information on [storing your key safely](#disclaimer-key-security).
+请查看之前提到的关于[如何安全存储您的密钥](#disclaimer-key-security) 的信息。
 
-### Set PIN
+### 设置 PIN 码
 
-After confirming that you have backed up your seed, a new textbox will appear in which you can set a PIN. The PIN code should contain at least 6 digits. If the PIN codes do not match, it will not allow you to create an account. The PIN code will be used for when signing any transaction, or to protect sensitive operations such as deleting an identity or revealing the recovery phrase.
+在确认您已备份您的助记词后，将出现一个新的文本框，您可以在其中设置一个 PIN，PIN 码应至少包含 6 位数字。 如果 PIN 码不匹配，它将不允许 您创建一个帐户。 在签名任何交易时，或者保护敏感操作（例如删除一个身份或显示助记词）将会使用PIN码。
 
-Note that if someone knows the 12/24 words in your recovery phrase, they will still have control over your account, even if they do not know the PIN.
+注意，如果有人知道您助记词中的 12/24单词， 即使他们不知道 PIN，他们仍然可以控制您的帐户 。
 
 ![Parity Signer Create Account 4](assets/accounts/ps-create-4.jpg)
 
-### Get Address
+### 获取地址
 
-Choose which network you would like to create an address on by clicking the name of the network. For example, if you select "Polkadot", a new Polkadot address will be created for you under this identity.
+通过单击网络名称，选择要在其上创建地址的网络。例如，如果您选择“ Polkadot”，则将以该身份为您创建一个新的 Polkadot 地址。
 
 ![Parity Signer Create Account 5](assets/accounts/ps-create-5.jpg)
 
-### Your Address
+### 您的地址
 
-The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
+地址将显示为 QR 码。您可以通过以下方法将地址导入 Polkadot-JS Apps：访问已连接Internet的计算机上的[账户(Accounts)](https://polkadot.js.org/apps/#/accounts) 页面，然后单击“通过QR添加”，然后按照说明添加帐户。以这种方式创建的帐户将始终要求您使用 Parity Signer 设备签名邮件。它只会通过扫描和显示QR码来做到这一点，即使是完全控制您连接互联网的计算机的人，也可以与 Parity Signer 设备进行交互的范围非常小且范围有限，这可以继续保护您的密钥安全。
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
 
-## Ledger Hardware Wallet
+## 硬件钱包
 
-To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow the instructions on our [Ledger hardware wallet guide page](learn-ledger).
+要使用 Ledger 硬件钱包创建地址并将令牌保存在冷库中，请按照[Ledger 硬件钱包指南页面](learn-ledger)上的说明进行操作。
 
-## Vanity Generator
+## 靓号地址(Vanity Generator)
 
-Vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity) that lets you generate addresses which contain a specific substring.
+靓号地址是[Polkadot-JS UI上](https://polkadot.js.org/apps/#/accounts/vanity) 的工具，可让您生成包含特定子字符串的地址。
 
-![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
+![Vanity Generator page ](assets/polkadot_vanity_generator_page.png)
 
-The vanity generator takes the following parameters:
+可变性生成器具有以下参数：
 
-- "Search for": The substring that you would like to include in your new address.
-- "case sensitive": "Yes" if the search is case sensitive; "no" if not.
-- "keypair crypto type": Specifies the type of account you'd like to generate; Schnorrkel is recommended in most cases for its security.
+- “搜索”: 您想要在您的新地址中包含的子字符串。
+- "区分大小写": "是", 如果搜索是区分大小写; "否" 如果不是。
+- “密钥对加密类型”：指定您要生成的帐户类型；建议在大多数情况下使用Schnorrkel，以确保安全。
 
-If you've filled out all details above and hit the "Start generation" button, a list of accounts will start generating on your screen. Note that depending on the length of the substring and the processing speed of your computer, it may take some time before any accounts appear.
+如果您已填写上面的所有详细信息并单击“开始生成”按钮，则将在屏幕上开始生成帐户列表。请注意，取决于子字符串的长度和计算机的处理速度，可能需要一些时间才能生成帐户。
 
 ![Vanity Generator search](assets/polkadot_vanity_generate.png)
 
-The "Save" button will allow you to save on the generated accounts - they are not saved if you do not choose to do this. The next steps are identical to the [steps above on creating an account on the UI](#polkadotjs), where a password and name need to be filled in, and a backup file of your account will be downloaded.
+"保存"按钮将允许您保存生成的帐户- 如果您不选择 不会保存它。 下一步和[在UI界面创建帐户](#polkadotjs)的步骤是完全相同的，需要输入密码和名称，并且自动下载您的帐户的备份文件。
 
 ![Vanity Generator chosen address](assets/polkadot_save_account.png)
