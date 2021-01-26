@@ -35,7 +35,7 @@ const main = () => {
 
   console.log(items);
 
-  const rootDir = process.argv[2] == 'dot' ? 'website/build/polkadot-wiki' : 'kusama-guide/build/kusama-guide';
+  const rootDir = process.argv[2] == 'dot' ? 'website/build/polkadot-wiki' : 'kusama-guide/build/kusama-guide-hosting';
 
   const deleteWithin = (folder) => {
     for (const entry of fs.readdirSync(folder)) {

@@ -3,7 +3,7 @@
     "start": "yarn polkadot:start",
     "kusama:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
     "kusama:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
-    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build",
+    "kusama:inject": "node scripts/inject.js --rootDir kusama-guide/build/kusama-guide-hosting",
     "kusama:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
     "kusama:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/kusama-index\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"kusama-guide/static/kusama-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
     "kusama:remove": "node scripts/removeUneeded.js ksm",
