@@ -138,7 +138,7 @@ let v = setInterval(function () {
           .map((result) => result.file);
         console.log("Modified files:", changedFiles);
 
-        let from = [/{{ kusama: ([\s\S]*) :kusama }}/gim, /{{ polkadot: ([\s\S]*) :polkadot }}/gim];
+        let from = [/\{\{ kusama: [\s\S]+? :kusama \}\}/gim, /\{\{ polkadot: [\s\S]+? :polkadot \}\}/gim];
         let to =
           argv.rootDir.indexOf("kusama-guide") !== -1
             ? [(match) => match.replace("{{ kusama: ", "").replace(" :kusama }}", ""), ""]
