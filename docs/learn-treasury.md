@@ -251,12 +251,14 @@ button '+ Add Bounty' on the upper-right side of the interface. Complete the bou
 requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
-motion. You can contact the Council by joining the Direcion channel for
-[Polkadot](https://parity.link/polkadot-direction) or [Kusama](https://parity.link/kusama-direction)
-in Element or joining our [Kusama](https://parity.link/kusama-discord) or
-[Polkadot](https://parity.link/polkadot-discord) Discord servers and publishing a short description
-of your bounty with a link to one of the forums in the Direction channels for contextual
-information.
+motion. You can contact the Council by joining the
+{{ polkadot: Polkadot Direction [channel](https://parity.link/polkadot-direction) :polkadot }}
+{{ kusama: Kusama Direction [channel](https://parity.link/kusama-direction) :kusama }} in Element or
+joining our
+{{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot }}
+{{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and publishing a
+short description of your bounty, with a link to one of the [forums](#announcing-the-proposal) for
+contextual information.
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the
 tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by

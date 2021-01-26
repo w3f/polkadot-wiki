@@ -123,7 +123,7 @@ higher proportion of the total stake allocated to that validator.
 
 To clarify this, let us imagine two validators, `v1` and `v2`. Assume both are in the active set,
 have commission set to 0%, and are well-behaved. The only difference is that `v1` has 90 DOT
-nominating it and `v1` only has 10. If you nominate `v1`, it now has `90 + 10 = 100` DOT, and you
+nominating it and `v2` only has 10. If you nominate `v1`, it now has `90 + 10 = 100` DOT, and you
 will get 10% of the staking rewards for the next era. If you nominate `v2`, it now has
 `10 + 10 = 20` DOT nominating it, and you will get 50% of the staking rewards for the next era. In
 actuality, it would be quite rare to see such a large difference between the stake of validators,
