@@ -2,6 +2,7 @@
 id: learn-cryptography
 title: 密码学解释
 sidebar_label: 密码学解释
+description: An overview of the cryptographic functions used in Polkadot
 ---
 
 这是 Polkadot 中使用密码学技术的高级概述。假设你已了解在区块链中常用的密码学术语例如哈希，椭圆曲线密码学(ECC)和公私密钥对。
