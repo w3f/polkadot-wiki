@@ -85,3 +85,12 @@ kusama-wiki.zip
 
 # autogenerates at each run / build
 docs/build-ss58-registry.md
+
+# Other Yarn files
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
