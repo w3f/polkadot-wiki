@@ -2,6 +2,7 @@
 id: learn-cryptography
 title: Penjelasan Kriptografi
 sidebar_label: Penjelasan Kriptografi
+description: An overview of the cryptographic functions used in Polkadot
 ---
 
 This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some knowledge about cryptographic primitives that are used in blockchains generally such as hashes, elliptic curve cryptography (ECC), and public-private keypairs.
