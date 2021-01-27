@@ -4,7 +4,7 @@ title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 ---
 
-_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on our support [Knowledge Base](https://support.polkadot.network/support/home) or the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered, please feel free to ask on the Polkadot Watercooler [Element channel](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) or email [support](mailto:support@polkadot.network)._
+_This FAQ focuses on technical questions for users interested in developing applications for Polkadot. If you have a more general question, you may wish to search for the answer on our support [Knowledge Base](https://support.polkadot.network/support/home) or the main [Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered, please feel free to ask on the Polkadot Watercooler [Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or email [support](mailto:support@polkadot.network)._
 
 ## Polkadot Launch
 
@@ -40,11 +40,11 @@ The minimum stake that is necessary to be elected as an active validator is dyna
 
 There are a few ways to estimate the minimum stake.
 
-One way can be to navigate to the [Polkadot Apps](https://polkadot.js.org/apps) and click on the Staking tab. Scroll all the way down to the bottom and look at the stake backing the validator at the end of the list. That's roughly the minimum stake required to enter the active set at that era.
+One way can be to navigate to the [Polkadot Apps Targets tab](https://ipfs.io/ipns/polkadot.dotapps.io/#/staking/targets). The value at the top of the screen saying "Lowest" is the least staked validator. You need at least this much + 1 to enter the set.
 
 You can also use some tools some to perform estimations.
 
-- [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) can provide exact results of running an election on the current set of validators using the same Rust code that is ran in Polkadot.
+- [Offline Election](https://github.com/paritytech/substrate-debug-kit/tree/master/offline-election) can provide exact results of running an election on the current set of validators using the same Rust code that is ran in Polkadot.
 
 - [Validator stats script](https://github.com/ansonla3/kusama-validator-stats) can give you an estimate that is based on the currently elected set, as well as some statistics about Kusama validators.
 
@@ -52,7 +52,7 @@ You can also use some tools some to perform estimations.
 
 Polkadot's goal to have 1000 validators is set to be something that is practically achievable in the short term with high confidence of good performance in a live environment. Furthermore, validators in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible on Polkadot the number can scale up to hundreds of thousands. Since validators are performing critical consensus work to maintain the security of the chain including all of its shards, a more modest number of validators is estimated to start. Upon later improvements, such as implementing signature aggregation for finalization messages, the number of validators could reasonably scale up. However, increasing validators above one thousand remains a goal for later iterations of Polkadot.
 
-It is also worth mentioning that one thousand validators is more than the number of validators of similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders are operating with around 150 validators, while Kusama is securely running with
+It is also worth mentioning that one thousand validators is more than the number of validators of similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders are operating with around 150 validators, while Polkadot is already securely running with
 {{ num_validators }}.
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator is running their own validating node and performing full verification of the Relay Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
@@ -77,7 +77,7 @@ While the Polkadot Relay Chain does not implement smart contracts directly, undo
 
 ### How will the Polkadot Relay Chain connect to external chains in the ecosystem?
 
-One of the cornerstone interoperability technologies being research and developed for deployment on Polkadot is cross-chain bridges. Bridges come in a variety of flavors with varying levels of trust associated with them. Polkadot is predominantly researching the trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore makes it economically secure. Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually, there will be bridges between Polkadot and most of the other major chains.
+One of the cornerstone interoperability technologies being researched and developed for deployment on Polkadot is cross-chain bridges. Bridges come in a variety of flavors with varying levels of trust associated with them. Polkadot is predominantly researching the trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore makes it economically secure. Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually, there will be bridges between Polkadot and most of the other major chains.
 
 ## DOT
 
@@ -91,21 +91,13 @@ The inflation rate is approximately 10% per year.
 
 A portion of the inflation is rewarded to validators for performing their duties, while another portion may go directly to the treasury. The exact percentage that goes into both varies and is based on the amount of DOT that are staked. Please see the article on [inflation](learn-staking#inflation) for more information.
 
-### Can I buy or transfer DOT tokens?
-
-Testnet DOT tokens are freely available from a variety of sources. See the [DOT page](learn-DOT) for details.
-
-The Web3 Foundation will distribute up to 20% of mainnet DOT prior to network launch (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
-
-DOT tokens were not transferable until the launch of Polkadot was complete. Any transfers of DOT before that time were illegitimate and unauthorized. DOT represented on Ethereum as DOT Indicator Tokens cannot be moved from the current allocation address.
-
 ## Governance
 
 ### What prevents Polkadot governance from failing?
 
-Polkadot's governance has already been shown to work. Examples can be found in the runtime upgrades that have successfully taken place through on the testnets as well as in a real economic environment on [Kusama](kusama-index) and Polkadot itself.
+Polkadot's governance has already been shown to work. Examples can be found in the runtime upgrades that have successfully taken place through on the testnets as well as in a real economic environment on [Kusama](https://guide.kusama.network) and Polkadot itself.
 
-It is fair to say that the field of on-chain blockchain governance is still new, and no one can claim to know exactly what is the optimal version of on-chain governance yet. However, Polkadot takes a brave step forward in pioneering thought-through mechanisms for evolving a blockchain.
+It is fair to say that the field of on-chain blockchain governance is still new, and no one can claim to know exactly what the optimal version of on-chain governance is yet. However, Polkadot takes a brave step forward in pioneering thought-through mechanisms for evolving a blockchain.
 
 Blockchains need a method to adapt and evolve. Therefore, an on-chain governance system was necessary for the long-term success of Polkadot. Ultimately, it is the token holders that are responsible for preventing Polkadot's governance from failing by using their economic value and conviction to sway the progression of the protocol.
 
@@ -119,7 +111,7 @@ There are several other mechanisms that are built-in to the governance system to
 
 ### How do parachain economics work?
 
-Parachains have the flexibility to implement their own monetary system or incentive structure for collators. However, this is not strictly necessary. Since the collator's job is to continue to give recent state transitions to the validators on the Relay Chain who validate each transition, the security of the parachain and the Polkadot network is completely separate from parachain economics. Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them incentivize collator nodes in some way but the specific mechanism is completely up to parachain implementers.
+Parachains have the flexibility to implement their own monetary system or incentive structure for collators. However, this is not strictly necessary. Since the collator's job is to continue to give recent state transitions to the validators on the Relay Chain who validate each transition, the security of the parachain and the Polkadot network is completely separate from parachain economics. Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them incentivize collator nodes in some way, but the specific mechanism is completely up to parachain implementers.
 
 ### Are parachains ephemeral? What happens when a parachain loses the next auction?
 
@@ -139,7 +131,7 @@ The Rust implementation of the specification was built and primarily maintained 
 
 Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol that is based on libp2p (specifically the Rust libp2p library). However, Substrate uses a mix of standard libp2p protocols and protocols that are homegrown and not official libp2p standards. Of the standards protocols, those which are shared with other implementations of libp2p such as IPFS, are connection-checking (ping), asking for information on a peer (identity), and Kademlia random walks (kad).
 
-Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a request-response for getting information on blocks (sync), a light client protocol, a notification protocol for transactions, and block announcement. For detailed information on how Substrate uses libp2p and the standard and custom protocols, please see the [networking documentation](https://substrate.dev/rustdocs/v2.0.0/sc_network/index.html).
+Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a request-response for getting information on blocks (sync), a light client protocol, a notification protocol for transactions, and block announcement. For detailed information on how Substrate uses libp2p and the standard and custom protocols, please see the [networking documentation](https://substrate.dev/rustdocs/v2.0.1/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 
@@ -147,9 +139,9 @@ The \[Interplanetary Filesystem][ipfs\] (IPFS) is a peer-to-peer hypermedia prot
 
 ## Kusama
 
-### What is the minimum amount of KSM I can have in my account?
+### What is the minimum amount of KSM / DOT I can have in my account?
 
-We recommend users always keep at least 0.1 KSM in their account in order to avoid the reaping threshold of 0.01 KSM. If you have less than 0.01 KSM in your account, that account will be "reaped" - it will be removed and no longer occupy space on the chain. In other words, no accounts are allowed on-chain with an account balance of less than 0.01 KSM. This is a dust prevention measure, in order to ensure that the chain is not full of accounts with minuscule amounts of KSM taking up space. Since the blockchain is copied to every person running a full node, any savings of space provide dramatic benefits in terms of scalability.
+Please see information about [Existential Deposits](build-protocol-info#existential-deposit).
 
 ### What are the transfer fees for Kusama?
 

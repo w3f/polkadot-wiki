@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "The hub for those interested in learning, building, or running a node on Polkadot.",
     "docs": {
+      "ambassadors": {
+        "title": "Polkadot Ambassador Programme",
+        "sidebar_label": "Polkadot Ambassador Programme"
+      },
       "build-build-with-polkadot": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
@@ -12,14 +16,6 @@
       "build-cumulus": {
         "title": "Cumulus",
         "sidebar_label": "Cumulus"
-      },
-      "build-deploy-parachains": {
-        "title": "How to view and deploy parachains",
-        "sidebar_label": "How to view and deploy parachains"
-      },
-      "build-examples-index": {
-        "title": "Examples",
-        "sidebar_label": "Examples"
       },
       "build-hackathon": {
         "title": "Hackathon",
@@ -45,6 +41,10 @@
         "title": "Oracles",
         "sidebar_label": "Oracles"
       },
+      "build-parachains-rococo": {
+        "title": "Building Parachains on Rococo",
+        "sidebar_label": "Building Parachains on Rococo"
+      },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
         "sidebar_label": "Parachain Development Kits (PDKs)"
@@ -56,6 +56,10 @@
       "build-smart-contracts": {
         "title": "Smart Contracts",
         "sidebar_label": "Smart Contracts"
+      },
+      "build-ss58-registry": {
+        "title": "SS58 Registry",
+        "sidebar_label": "SS58 Registry"
       },
       "build-tools-index": {
         "title": "Tool Index",
@@ -84,6 +88,10 @@
       "contributors": {
         "title": "Contributors",
         "sidebar_label": "Contributors"
+      },
+      "ens": {
+        "title": "Adding accounts to an ENS domain",
+        "sidebar_label": "Using ENS with DOT/KSM accounts"
       },
       "faq": {
         "title": "Frequently Asked Questions (FAQs)",
@@ -136,10 +144,6 @@
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "Home"
-      },
-      "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet",
-        "sidebar_label": "Parameters"
       },
       "kusama-ledger": {
         "title": "Using Ledger Devices",
@@ -217,6 +221,10 @@
         "title": "Cross-chain Message Passing (XCMP)",
         "sidebar_label": "Cross-chain Message Passing (XCMP)"
       },
+      "learn-crowdloans": {
+        "title": "Parachain Crowdloans",
+        "sidebar_label": "Parachain Crowdloans"
+      },
       "learn-cryptography": {
         "title": "Cryptography Explainer",
         "sidebar_label": "Cryptography Explainer"
@@ -244,6 +252,10 @@
       "learn-keys": {
         "title": "Polkadot Keys",
         "sidebar_label": "Polkadot Keys"
+      },
+      "learn-kusama-vs-polkadot": {
+        "title": "What is the difference between Polkadot and Kusama?",
+        "sidebar_label": "Comparing Polkadot and Kusama"
       },
       "learn-launch": {
         "title": "Polkadot Launch Phases",
@@ -281,6 +293,14 @@
         "title": "Randomness",
         "sidebar_label": "Randomness"
       },
+      "learn-registrar": {
+        "title": "Using W3F Registrar",
+        "sidebar_label": "How to use W3F Registrar"
+      },
+      "learn-scams": {
+        "title": "How to Protect Yourself from Scams",
+        "sidebar_label": "How to Protect Yourself from Scams"
+      },
       "learn-security": {
         "title": "Security of the network",
         "sidebar_label": "Security of the network"
@@ -300,10 +320,6 @@
       "learn-transaction-fees": {
         "title": "Transaction Fees",
         "sidebar_label": "Transaction Fees"
-      },
-      "learn-transactions": {
-        "title": "Transactions",
-        "sidebar_label": "Transactions"
       },
       "learn-treasury": {
         "title": "Treasury",
@@ -421,6 +437,10 @@
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
+      "mirror-ens": {
+        "title": "Adding accounts to an ENS domain",
+        "sidebar_label": "Using ENS with DOT/KSM accounts"
+      },
       "mirror-learn-governance": {
         "title": "Governance",
         "sidebar_label": "Governance"
@@ -428,6 +448,10 @@
       "mirror-learn-identity": {
         "title": "Identity",
         "sidebar_label": "Identity"
+      },
+      "mirror-learn-registrar": {
+        "title": "Using W3F Registrar",
+        "sidebar_label": "How to use W3F Registrar"
       },
       "mirror-learn-treasury": {
         "title": "Treasury",
@@ -445,6 +469,10 @@
         "title": "Run a Validator (Kusama)",
         "sidebar_label": "How to run a Validator on Kusama"
       },
+      "mirror-thousand-validators": {
+        "title": "Thousand Validators Programme",
+        "sidebar_label": "Thousand Validators Programme"
+      },
       "redenomination": {
         "title": "Redenomination of DOT",
         "sidebar_label": "Redenomination of DOT"
@@ -452,6 +480,10 @@
       "research": {
         "title": "Research Pages",
         "sidebar_label": "Research Pages"
+      },
+      "thousand-validators": {
+        "title": "Thousand Validators Programme",
+        "sidebar_label": "Thousand Validators Programme"
       }
     },
     "links": {

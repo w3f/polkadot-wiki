@@ -5,6 +5,10 @@
     "previous": "上一页",
     "tagline": "這裡是給学习，開發或运行 Polkadot 协议上的节点感兴趣的人的中心",
     "docs": {
+      "ambassadors": {
+        "title": "Polkadot Ambassador Programme",
+        "sidebar_label": "Polkadot Ambassador Programme"
+      },
       "build-build-with-polkadot": {
         "title": "Polkadot 開發者入门指南",
         "sidebar_label": "Polkadot 開發者入门指南"
@@ -12,14 +16,6 @@
       "build-cumulus": {
         "title": "Cumulus",
         "sidebar_label": "Cumulus"
-      },
-      "build-deploy-parachains": {
-        "title": "如何查看及部署平行链",
-        "sidebar_label": "如何查看及部署平行链"
-      },
-      "build-examples-index": {
-        "title": "例子",
-        "sidebar_label": "例子"
       },
       "build-hackathon": {
         "title": "黑客马拉松",
@@ -45,6 +41,10 @@
         "title": "预言机",
         "sidebar_label": "预言机"
       },
+      "build-parachains-rococo": {
+        "title": "Building Parachains on Rococo",
+        "sidebar_label": "Building Parachains on Rococo"
+      },
       "build-pdk": {
         "title": "平行链开发套件 (PDKs)",
         "sidebar_label": "平行链开发套件(PDKs)"
@@ -56,6 +56,10 @@
       "build-smart-contracts": {
         "title": "智能合约",
         "sidebar_label": "智能合约"
+      },
+      "build-ss58-registry": {
+        "title": "SS58 Registry",
+        "sidebar_label": "SS58 Registry"
       },
       "build-tools-index": {
         "title": "工具索引",
@@ -84,6 +88,10 @@
       "contributors": {
         "title": "Contributors",
         "sidebar_label": "Contributors"
+      },
+      "ens": {
+        "title": "Adding accounts to an ENS domain",
+        "sidebar_label": "Using ENS with DOT/KSM accounts"
       },
       "faq": {
         "title": "常见问题(FAQ)",
@@ -136,10 +144,6 @@
       "kusama-index": {
         "title": "Kusama",
         "sidebar_label": "主页"
-      },
-      "kusama-time-periods": {
-        "title": "Time Period Cheat Sheet",
-        "sidebar_label": "Parameters"
       },
       "kusama-ledger": {
         "title": "Using Ledger Devices",
@@ -217,6 +221,10 @@
         "title": "跨链消息传递 (XCMP)",
         "sidebar_label": "跨链消息传递 (XCMP)"
       },
+      "learn-crowdloans": {
+        "title": "Parachain Crowdloans",
+        "sidebar_label": "Parachain Crowdloans"
+      },
       "learn-cryptography": {
         "title": "密码学讲解",
         "sidebar_label": "密码学讲解"
@@ -244,6 +252,10 @@
       "learn-keys": {
         "title": "密匙",
         "sidebar_label": "密匙"
+      },
+      "learn-kusama-vs-polkadot": {
+        "title": "What is the difference between Polkadot and Kusama?",
+        "sidebar_label": "Comparing Polkadot and Kusama"
       },
       "learn-launch": {
         "title": "Polkadot 上线流程",
@@ -281,6 +293,14 @@
         "title": "随机性",
         "sidebar_label": "随机性"
       },
+      "learn-registrar": {
+        "title": "Using W3F Registrar",
+        "sidebar_label": "How to use W3F Registrar"
+      },
+      "learn-scams": {
+        "title": "How to Protect Yourself from Scams",
+        "sidebar_label": "How to Protect Yourself from Scams"
+      },
       "learn-security": {
         "title": "网络安全",
         "sidebar_label": "网络安全"
@@ -300,10 +320,6 @@
       "learn-transaction-fees": {
         "title": "交易费用",
         "sidebar_label": "交易费用"
-      },
-      "learn-transactions": {
-        "title": "Transactions",
-        "sidebar_label": "Transactions"
       },
       "learn-treasury": {
         "title": "财政库",
@@ -421,6 +437,10 @@
         "title": "Polkadot 開發者入门指南",
         "sidebar_label": "Polkadot 開發者入门指南"
       },
+      "mirror-ens": {
+        "title": "Adding accounts to an ENS domain",
+        "sidebar_label": "Using ENS with DOT/KSM accounts"
+      },
       "mirror-learn-governance": {
         "title": "治理",
         "sidebar_label": "治理"
@@ -428,6 +448,10 @@
       "mirror-learn-identity": {
         "title": "身份",
         "sidebar_label": "身份"
+      },
+      "mirror-learn-registrar": {
+        "title": "Using W3F Registrar",
+        "sidebar_label": "How to use W3F Registrar"
       },
       "mirror-learn-treasury": {
         "title": "国库",
@@ -445,6 +469,10 @@
         "title": "运行验证人 (Kusama)",
         "sidebar_label": "如何在 Kusama 上运行验证节点"
       },
+      "mirror-thousand-validators": {
+        "title": "Thousand Validators Programme",
+        "sidebar_label": "Thousand Validators Programme"
+      },
       "redenomination": {
         "title": "Redenomination of DOT",
         "sidebar_label": "Redenomination of DOT"
@@ -452,6 +480,10 @@
       "research": {
         "title": "研究专页",
         "sidebar_label": "研究专页"
+      },
+      "thousand-validators": {
+        "title": "Thousand Validators Programme",
+        "sidebar_label": "Thousand Validators Programme"
       }
     },
     "links": {

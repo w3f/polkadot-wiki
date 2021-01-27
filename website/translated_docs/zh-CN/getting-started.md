@@ -30,7 +30,7 @@ Web 3.0 正在将中心化应用转化为去中心化应用、 去信任协议�
 
 ## Polkadot 如何运作？
 
-Polkadot 网络使用了一种[分片模型](https://en.wikipedia.org/wiki/Shard_(database_architecture))，其每个分片被称为"[平行链](learn-parachains)"，平行链允许并行处理交易。每个平行链在网络中都有独有的状态转换功能 (STF)。 基于 Polkadot 的设计，只要某一条链的逻辑可被编译到 WASM，并遵循中继链的API，它就可以作为平行链连接到 Polkadot 网络中。
+The Polkadot network uses a [sharded model](https://en.wikipedia.org/wiki/Shard_(database_architecture)) where shards - called "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of sequentially. Each parachain in the network has a unique state transition function (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
 
 Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous [availability and validity](learn-availability) checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, [collators](learn-collator) - full nodes of these parachains - don't have any security responsibilities, and thus do not require a robust incentive system. This is how the entire network stays up to date with the many transactions that take place.
 
