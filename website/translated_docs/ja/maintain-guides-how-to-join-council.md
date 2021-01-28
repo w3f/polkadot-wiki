@@ -28,7 +28,7 @@ Go to [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and navigate to th
 
 Next to the button to submit candidacy is another button titled "Vote." You will click this button to make a vote for yourself (optional).
 
-![voting button on UI](assets/council/polkadotjs_vote_button.png)
+![UIの投票ボタン](assets/council/polkadotjs_vote_button.png)
 
 The council uses [Phragmén](learn-phragmen) approval voting, which is also used in the validator elections. This means that you can choose up to 16 distinct candidates to vote for and your stake will equalize between them. For this guide, choose to approve your own candidacy by clicking on the switch next to your account and changing it to say "Aye."
 
