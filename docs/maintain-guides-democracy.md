@@ -39,7 +39,15 @@ vetoed.
 ## Proposing an Action
 
 Proposing an action to be taken requires you to bond some tokens. In order to ensure you have enough
-tokens to make the minimum deposit you can check the parameter in the chain state.
+tokens to make the minimum deposit you can check the parameter in the chain state. The bonded tokens
+will only be released once the proposal is tabled (that is, brought to a vote); there is no way for
+the user to "revoke" their proposal and get the bond back before it has become a referendum. Since
+it is essentially impossible to predict definitely when a proposal may become a referendum (if
+ever), this means that any tokens bonded will be locked for an indeterminate amount of time.
+
+> Proposals cannot be revoked by the proposer, even if they never turn into a referendum. It is
+> important to realize that there is no guarantee that DOT you use for proposing or seconding a
+> proposal will be returned to that account in any given timeframe.
 
 On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order to submit a
 proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the
@@ -95,9 +103,9 @@ submitted proposal.
 
 Seconding a proposal means that you are agreeing with the proposal and backing it with an equal
 amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
-tabled (that is, brought to a vote). By seconding a proposal you will move it higher up the rank of
-proposals. The most seconded proposal &mdash; in value, not number of supporters &mdash; will be
-brought to a referendum every launch period.
+tabled (that is, brought to a vote), just like the original proposer's bond. By seconding a proposal
+you will move it higher up the rank of proposals. The most seconded proposal &mdash; in value, not
+number of supporters &mdash; will be brought to a referendum every launch period.
 
 It is important to note that there is no way to stop or cancel seconding a proposal once it has been
 done. Therefore, the DOT that was seconded will be reserved until the proposal is tabled as a
