@@ -15,6 +15,7 @@ parachains (Tick, Trick, and Track), as well as several externally developed par
 As of now, the list of parachains are as follows:
 
 - Rococo (Tick, Trick, and Track)
+- DataHighway (MXC and DHX)
 - Mandala
 - Darwinia
 - Plasm
