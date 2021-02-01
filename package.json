@@ -44,7 +44,7 @@
     "prettier": "^2.2.1",
     "react-bootstrap": "^1.4.3",
     "remarkable-katex": "^1.1.7",
-    "replace-in-file": "^6.1.0",
+    "replace-in-file": "^6.2.0",
     "semver": "^7.3.4",
     "yargs": "^16.2.0"
   }
