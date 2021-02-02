@@ -155,3 +155,5 @@ information on compiling and deploying a parachain.
   of secure message-passing between them."
 - [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A
   technical walkthrough of how parachains interact with the Relay Chain.
+
+<!-- This message is to satisfy the stale checker -->
