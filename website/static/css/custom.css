@@ -1005,3 +1005,29 @@ footer .list-social-links a {
   justify-content: center;
   align-items: center;
 }
+
+.guide-container{
+    display: grid;
+    grid-template-columns: 300px 300px ;
+    grid-template-rows: auto; 
+    row-gap: 5vh;
+    column-gap: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-divider{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-image{
+    width: 310px;
+    height: 175px; 
+    transition: transform 0.7s;
+}
+.guide-image:hover{
+    transform: scale(1.02);   
+}
