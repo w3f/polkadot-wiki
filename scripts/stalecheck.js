@@ -5,7 +5,7 @@ const github = require("@actions/github");
 const dir = "docs";
 const maxAgeDays = 45;
 // Rigged to leave Bill alone
-const techedu = ["swader", "swader", "lsaether", "lsaether", "ansonla3", "ansonla3", "laboon"];
+const techedu = ["swader", "swader", "ansonla3", "ansonla3", "laboon"];
 
 const getStaleIssues = async (octokit) => {
   let page = 0;
