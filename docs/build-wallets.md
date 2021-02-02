@@ -31,7 +31,7 @@ that the wallet software is using the latest version of the
 | [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)             | Live              | Parity        | Browser                                                    | Non-Custodial | Staking  |
 | [Polkadot{.js}](https://github.com/polkadot-js/extension)          | Live              | Parity        | Browser extension                                          | Non-custodial | Staking  |
 | [Polkawallet](https://polkawallet.io/)                             | Live              | Polkawallet   | IOS and Android                                            | Non-custodial | Staking  |
-| [Math Wallet](https://www.mathwallet.net)        | Live              | Math Wallet   | IOS, Android, Browser extension                            | Non-custodial | Staking  |
+| [Math Wallet](https://www.mathwallet.net)                          | Live              | Math Wallet   | IOS, Android, Browser extension                            | Non-custodial | Staking  |
 | [Trust Wallet](https://trustwallet.com/)                           | Live              | Trust Wallet  | IOS and Android                                            | Non-custodial |          |
 | [ImToken](https://token.im/)                                       | Live              | ImToken       | IOS and Android                                            | Non-custodial | Staking  |
 | [Ownbit](https://ownbit.io/)                                       | Live              | Ownbit        | iOS and Android                                            | Non-custodial |          |
