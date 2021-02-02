@@ -10,7 +10,7 @@ sidebar_label: How to Nominate on Polkadot
 > instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
-for appointing their stake to the validators who are the second type of participant. By appointing
+for appointing their stake to the validators who perform the work of maintaining the chain. By appointing
 their stake, they are able to elect the active set of validators and share in the rewards that are
 paid out.
 
@@ -28,6 +28,11 @@ Nominators are recommended to set up separate stash and controller accounts. Exp
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
 
+> Note: Although setting up a separate stash and controller is recommended, you can achieve basically
+> the same security management if you choose to use the same account for stash and controller and opt
+> into using only a "Staking"proxy account instead to control it. If you're interested in this solution
+> you can read more on proxies [here](./learn-proxies).
+
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
 
@@ -35,7 +40,7 @@ Starting with runtime version v23 natively included in client version
 [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any custom
 address. If you'd like to redirect payments to an account that is neither the controller nor the
 stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
-recipient of the staking rewards.
+recipient of the staking rewards, and should usually be avoided.
 
 ## Using Polkadot-JS UI
 
