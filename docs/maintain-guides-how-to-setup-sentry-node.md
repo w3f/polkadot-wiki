@@ -9,3 +9,5 @@ sidebar_label: Set Up a Sentry Node
 > With a recent release of Substrate and Polkadot/Kusama, support for sentry nodes are deprecated.
 > Details can be found [here](https://github.com/paritytech/substrate/issues/6845). Please stay
 > tuned for further updates.
+
+<!-- Remove this message to reset the stale checker -->
