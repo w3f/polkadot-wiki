@@ -2,6 +2,7 @@
   "docs": {
     "General": [
       "getting-started",
+      "polkadot-guide",
       "claims",
       "redenomination",
       "grants",
