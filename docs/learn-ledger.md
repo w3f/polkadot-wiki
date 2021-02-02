@@ -90,7 +90,9 @@ feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
 tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from the
-default "Do not attach Ledger devices" to "Attach Ledger via WebUSB". Be aware: if you are not seeing this it is because there is [no Ledger support](https://github.com/polkadot-js/apps/issues/3771) on FireFox.
+default "Do not attach Ledger devices" to "Attach Ledger via WebUSB". Be aware: if you are not
+seeing this it is because there is
+[no Ledger support](https://github.com/polkadot-js/apps/issues/3771) on FireFox.
 
 ![Dropdown selector for allowing Ledger connections in PolkadotJS Settings](assets/ledger.png)
 
@@ -107,8 +109,8 @@ A popup will appear asking you to select an account and derivation path.
 ![Picking an account and derivation path](assets/ledger/add-account.png)
 
 The first input will let you name your account if you have not done so already. If you have already
-named your account, this will not change the existing name. The first dropdown lets you select an 
-account. You can have multiple accounts on a single Ledger device. The second dropdown lets you pick 
+named your account, this will not change the existing name. The first dropdown lets you select an
+account. You can have multiple accounts on a single Ledger device. The second dropdown lets you pick
 a derivation path - think of it like a formula from which child accounts are generated. If in doubt,
 pick the first option for both. 0 / 0 is a good default.
 
