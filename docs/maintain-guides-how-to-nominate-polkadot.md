@@ -10,9 +10,9 @@ sidebar_label: How to Nominate on Polkadot
 > instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
-for appointing their stake to the validators who perform the work of maintaining the chain. By appointing
-their stake, they are able to elect the active set of validators and share in the rewards that are
-paid out.
+for appointing their stake to the validators who perform the work of maintaining the chain. By
+appointing their stake, they are able to elect the active set of validators and share in the rewards
+that are paid out.
 
 While the [validators][] are active participants in the network that engage in the block production
 and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach.
@@ -28,10 +28,10 @@ Nominators are recommended to set up separate stash and controller accounts. Exp
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
 
-> Note: Although setting up a separate stash and controller is recommended, you can achieve basically
-> the same security management if you choose to use the same account for stash and controller and opt
-> into using only a "Staking"proxy account instead to control it. If you're interested in this solution
-> you can read more on proxies [here](./learn-proxies).
+> Note: Although setting up a separate stash and controller is recommended, you can achieve
+> basically the same security management if you choose to use the same account for stash and
+> controller and opt into using only a "Staking"proxy account instead to control it. If you're
+> interested in this solution you can read more on proxies [here](./learn-proxies).
 
 You can generate your stash and controller account via any of the recommended methods that are
 detailed on the [account generation][] page.
