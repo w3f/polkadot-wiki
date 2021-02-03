@@ -50,7 +50,7 @@ Whether you're a blockchain developer or if you're interested in taking part of 
 
 For brand-new learners of Blockchain technology:
 
-- [Blockchain Fundamentals MOOC 课程][mooc] 内包含了很多关于加密技术、区块链概念、去中心化网络、数字货币等相关知识的高质量的、免费内容，推荐给大家去学习了解。
+- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to familiarizing yourself with cryptography, blockchain concepts, decentralization, networks, crytocurrency, and so much more. This is recommended for users with backgrounds of all levels, and is also a free course.
 
 For brand-new learners of Polkadot:
 
