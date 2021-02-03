@@ -286,8 +286,8 @@ corresponds to the funds bonded by the Stash account.
 > **Note:** The session keys are consensus critical, so if you are not sure if your node has the
 > current session keys that you made the `setKeys` transaction then you can use one of the two
 > available RPC methods to query your node:
-> [hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool)
-> to check for a specific key or
+> [hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
+> check for a specific key or
 > [hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
 > to check the full session key public key string.
 
