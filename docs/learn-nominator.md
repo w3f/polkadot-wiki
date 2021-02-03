@@ -48,9 +48,12 @@ occur often, so you should almost always see only a single active nomination per
 
 ### Required Minimum Stake
 
-To be considered a Nominator there is minimum amount of DOT you must stake.
+Due to the overwhelming demand and the way the algorithm optimizes the nominator set,
+there is a minimum number of DOT you must nominate with in order to be effective.
 
-As of Februrary 2021, this minimum is 104 DOT.
+This number fluctuates day by day, and the most recent and up to date version can be
+found out using [this community-developed tool](https://polkaview.network/dot) or
+through [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine.
 
 ### Oversubscribed Validators
 
