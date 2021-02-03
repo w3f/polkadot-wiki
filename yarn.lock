@@ -4447,10 +4447,10 @@ ipfs-core-utils@^0.7.0:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^2.0.5"
 
-ipfs-http-client@^49.0.0:
-  version "49.0.0"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-49.0.0.tgz#fe0383e57906442d4710c5cc0a885b7397224d56"
-  integrity sha512-2XkJIopI+C7H4nG1fjOFoyqFJBynpY39AmhqVtqf0ZOOqwKWJu1isq8eVieQ0Zghmkout0iyMPXL+xqBzvQIWw==
+ipfs-http-client@^49.0.1:
+  version "49.0.1"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-49.0.1.tgz#26d8e4100348795a6c79213b0a0a88a092664712"
+  integrity sha512-CDfed7Vbkomgzp5t0oFm6uKe6bjjgW10LgUzmpby2Ai3O1Zryhwbj3RQpYQQGKqub+fG76jEtpteVNZ8HBc9Mg==
   dependencies:
     any-signal "^2.0.0"
     bignumber.js "^9.0.0"
