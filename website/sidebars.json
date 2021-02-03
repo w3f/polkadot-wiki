@@ -2,7 +2,6 @@
   "docs": {
     "General": [
       "getting-started",
-      "polkadot-guide",
       "claims",
       "redenomination",
       "grants",
@@ -17,6 +16,9 @@
       "learn-ledger",
       "learn-scams",
       "faq"
+    ],
+    "Guide":[
+      "polkadot-guide"
     ],
     "Learn": [
       "learn-launch",
