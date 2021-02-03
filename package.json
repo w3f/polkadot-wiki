@@ -32,7 +32,7 @@
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
     "@octokit/rest": "^18.0.15",
-    "@polkadot/api": "^3.7.1",
+    "@polkadot/api": "^3.7.3",
     "@polkadot/keyring": "^5.5.1",
     "axios": "^0.21.1",
     "fs-extra": "^9.1.0",
