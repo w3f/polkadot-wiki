@@ -31,7 +31,7 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
-    "@octokit/rest": "^18.0.15",
+    "@octokit/rest": "^18.1.0",
     "@polkadot/api": "^3.7.1",
     "@polkadot/keyring": "^5.5.1",
     "axios": "^0.21.1",
