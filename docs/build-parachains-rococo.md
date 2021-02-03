@@ -12,8 +12,10 @@ parachains (Tick, Trick, and Track), as well as several externally developed par
 
 ## Who is building Parachains?
 
-You can see the list of included parachains [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains).
-A list of proposed parachains is available [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
+You can see the list of included parachains
+[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains). A list of
+proposed parachains is available
+[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
 
 ## Parachain Workshop
 
