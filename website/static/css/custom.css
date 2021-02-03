@@ -1017,8 +1017,9 @@ footer .list-social-links a {
 }
 
 .guide-divider{
-    background-color: #172026;
-
+    /*background-color: var(--secondaryColor);*/
+    /*#172026*/
+    border: 1px solid var(--primaryColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1026,16 +1027,22 @@ footer .list-social-links a {
     width: 350px;
     height: 80px;
 
-    transition: transform 0.7s;
 
     border-radius: 10px;
 
     margin: 5px;
     padding: 10px;
+
+    transition: top 0.2s ease, box-shadow 0.2s ease;
 }
+
+.guide-divider:hover{
+    transform: scale(1.02);   
+}
+
 .inner-guide-container{
     flex: 1 auto;
-    color: white;
+    color: black;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -1043,13 +1050,9 @@ footer .list-social-links a {
 
     margin-left: 5px;
 }
-.guide-divider:hover{
-    transform: scale(1.02);   
-}
 
 .guide-image{
-    width: 50px;
-    height: 50px;
+
 }
 .guide-title{
     margin: 1px;
@@ -1062,4 +1065,5 @@ footer .list-social-links a {
 }
 
 .guide-image:hover{
+
 }
