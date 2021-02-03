@@ -237,7 +237,7 @@ _Note: in terms of validator selection, for the following algorithm, you can thi
    won a "seat"). This aspect of the algorithm is very similar to the "basic Phragmén" algorithm
    described above.
 2. However, as candidates are elected, a weighted mapping is built, defining the weights of each
-   selection of a validator by each candidate.
+   selection of a nominator by each candidate.
 
 In more depth, the algorithm operates like so:
 
