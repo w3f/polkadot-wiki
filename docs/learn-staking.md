@@ -17,8 +17,8 @@ Validators assume the role of producing new blocks in [BABE](learn-consensus#bab
 parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
 their stake.
 
-The staking system pays out rewards equally to all validators regardless of stake. In other words,
-having more stake on a validator does not influence the block rewards they receive. However, there
+The staking system pays out rewards essentially equally to all validators regardless of stake. 
+Having more stake on a validator does not influence the amount of block rewards it receives. However, there
 is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly
 equal for all validators in a given era.
 
