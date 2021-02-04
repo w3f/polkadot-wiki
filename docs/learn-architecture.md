@@ -18,8 +18,8 @@ differing implementations and features.
 
 ## [Parachain](learn-parachains) and [Parathread](learn-parathreads) Slots
 
-Polkadot can support a number of execution slots. These slots are like cores on a computer (a modern
-laptop may have eight cores, for example). Each one of these cores can run one process at a time.
+Polkadot can support a number of execution slots. These slots are like cores on a computer's processor (a modern
+laptop's processor may have eight cores, for example). Each one of these cores can run one process at a time.
 Polkadot allots these slots using two subscription models: parachains and parathreads. Parachains
 have a dedicated slot (core) for their chain and are like a process that runs constantly.
 Parathreads share slots amongst a group, and are thus more like processes that need to be woken up
