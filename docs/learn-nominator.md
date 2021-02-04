@@ -64,7 +64,7 @@ likely to be oversubscribed in the next era as well.
 ### The Election Solution Set
 
 Determining which validators are in the active set and which nominators are nominating them creates
-a cery large graph mapping nominators to their respective validators. This "solution set" is
+a very large graph mapping nominators to their respective validators. This "solution set" is
 computed off-chain and submitted to the chain, which means it must fit in a single block. If there
 are a large number of nominators, this means that some nominators must be eliminated. Currently,
 nominators are sorted by amount of DOT staked and those with more DOT are prioritized. This means
