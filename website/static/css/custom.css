@@ -1007,7 +1007,7 @@ footer .list-social-links a {
 }
 
 /*Guide Section*/
-.guide-container{
+.cards-container{
     display: flex;
     flex-flow: row wrap;
     max-width: 100%;
@@ -1016,29 +1016,30 @@ footer .list-social-links a {
     justify-content: center;
 }
 
-.guide-divider{
+.cards{
     border: 1px solid var(--primaryColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 350px;
     height: 80px;
     border-radius: 10px;
+    box-shadow: 0 0.1rem 0.1rem rgba(0,0,0,0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin: 5px;
     padding: 10px;
-
 
     position: relative;
     top: 0;
     transition: top 0.2s ease;
-    box-shadow: 0 0.1rem 0.1rem rgba(0,0,0,0.4);
 }
 
-.guide-divider:hover{
+.cards:hover{
     top: -5px;
 }
 
-.inner-guide-container{
+.cards-body{
     flex: 1 auto;
     color: black;
     display: flex;
@@ -1047,12 +1048,12 @@ footer .list-social-links a {
     margin-left: 5px;
 }
 
-.guide-title{
+.cards-title{
     margin: 1px;
     margin-left: 5px;
     margin-bottom: 3px;
 }
-.guide-text{
+.cards-text{
     margin: 1px;
     margin-left: 5px;
 }
