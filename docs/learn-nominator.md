@@ -50,7 +50,7 @@ occur often, so you should almost always see only a single active nomination per
 
 Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set,
 and due to the fact that the solution set must fit in a single block, 
-there is a minimum number of DOT you must nominate with in order to be effective.
+there is a minimum number of DOT you must nominate with in order to receive staking rewards.
 
 This number fluctuates day by day, and the most recent and up to date version can be
 found out using [this community-developed tool](https://polkaview.network/dot) or
