@@ -48,7 +48,8 @@ occur often, so you should almost always see only a single active nomination per
 
 ### Required Minimum Stake
 
-Due to the overwhelming demand and the way the algorithm optimizes the nominator set,
+Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set,
+and due to the fact that the solution set must fit in a single block, 
 there is a minimum number of DOT you must nominate with in order to be effective.
 
 This number fluctuates day by day, and the most recent and up to date version can be
