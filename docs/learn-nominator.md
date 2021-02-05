@@ -55,7 +55,7 @@ there is a minimum number of DOT you must nominate with in order to receive stak
 This number fluctuates every era, and the most recent and up to date version can be
 found out using [this community-developed tool](https://polkaview.network/dot) or
 through [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine.
-
+See the [Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set) section on the Nominator page for more details.
 ### Oversubscribed Validators
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to
