@@ -52,7 +52,7 @@ Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution s
 and due to the fact that the solution set must fit in a single block, 
 there is a minimum number of DOT you must nominate with in order to receive staking rewards.
 
-This number fluctuates day by day, and the most recent and up to date version can be
+This number fluctuates every era, and the most recent and up to date version can be
 found out using [this community-developed tool](https://polkaview.network/dot) or
 through [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine.
 
