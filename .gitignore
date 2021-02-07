@@ -95,3 +95,6 @@ docs/build-ss58-registry.md
 !.yarn/versions
 .pnp.*
 
+# IDEs
+
+.idea
