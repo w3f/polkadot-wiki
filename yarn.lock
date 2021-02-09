@@ -1510,13 +1510,13 @@ ansi-wrap@0.1.0:
   resolved "https://registry.yarnpkg.com/ansi-wrap/-/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
   integrity sha1-qCJQ3bABXponyoLoLqYDu/pF768=
 
-any-signal@^2.0.0, any-signal@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/any-signal/-/any-signal-2.1.1.tgz#6458f7ce08cfdd8df21953016ae03ca129b07e35"
-  integrity sha512-kjyMTtHQsB3yZAVDZlLVucPJnmnrXhamB/rm3Td3jse5Q+16FXXolP4elWU0yLFDyrxTkjjDXtIdjSPiEznf3w==
+any-signal@^2.1.0, any-signal@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/any-signal/-/any-signal-2.1.2.tgz#8d48270de0605f8b218cf9abe8e9c6a0e7418102"
+  integrity sha512-B+rDnWasMi/eWcajPcCWSlYc7muXOrcYrqgyzcdKisl2H/WTlQ0gip1KyQfr0ZlxJdsuWCj/LWwQm7fhyhRfIQ==
   dependencies:
     abort-controller "^3.0.0"
-    native-abort-controller "0.0.3"
+    native-abort-controller "^1.0.3"
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -4447,18 +4447,18 @@ ipfs-core-types@^0.3.0:
     multiaddr "^8.0.0"
     peer-id "^0.14.1"
 
-ipfs-core-utils@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.7.0.tgz#935fcd37785f3d4fa17d1c178706a488d2b4245a"
-  integrity sha512-0EtNteZ2sTCkgg2KEA5EFTo+vJSOzecyF2g8uES0viyg8Smf3Ym+Cn/nl6vKiimjNR943H9BXKcMxs2GvA1b9g==
+ipfs-core-utils@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.7.1.tgz#c7f5e9976ea21c0dddf2d64a80811c3f01a667c4"
+  integrity sha512-FC8g9NqGqjCCGG/xqVfZicygqa9tI8dNuDXY3va367UjZ9tLS8uKv1xxmSlGSxgG3G2dqow3wFUu6Eezyv6BQQ==
   dependencies:
-    any-signal "^2.0.0"
+    any-signal "^2.1.2"
     blob-to-it "^1.0.1"
     browser-readablestream-to-it "^1.0.1"
     cids "^1.1.5"
     err-code "^2.0.3"
     ipfs-core-types "^0.3.0"
-    ipfs-utils "^6.0.0"
+    ipfs-utils "^6.0.1"
     it-all "^1.0.4"
     it-map "^1.0.4"
     it-peekable "^1.0.1"
@@ -4468,19 +4468,20 @@ ipfs-core-utils@^0.7.0:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^2.0.5"
 
-ipfs-http-client@^49.0.1:
-  version "49.0.1"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-49.0.1.tgz#26d8e4100348795a6c79213b0a0a88a092664712"
-  integrity sha512-CDfed7Vbkomgzp5t0oFm6uKe6bjjgW10LgUzmpby2Ai3O1Zryhwbj3RQpYQQGKqub+fG76jEtpteVNZ8HBc9Mg==
+ipfs-http-client@^49.0.2:
+  version "49.0.2"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-49.0.2.tgz#b74c2fd24f2395a40a9eaf4b8e5906157605eb9d"
+  integrity sha512-Q7OOFO2laqL2hZCDGVSF+ObQ/xptO6L/qbe0WkXfM1OZypw2Bah1BbChPTjmDTrXeicNYgua85EbQqtv1C/WSw==
   dependencies:
-    any-signal "^2.0.0"
+    abort-controller "^3.0.0"
+    any-signal "^2.1.2"
     bignumber.js "^9.0.0"
     cids "^1.1.5"
     debug "^4.1.1"
     form-data "^3.0.0"
     ipfs-core-types "^0.3.0"
-    ipfs-core-utils "^0.7.0"
-    ipfs-utils "^6.0.0"
+    ipfs-core-utils "^0.7.1"
+    ipfs-utils "^6.0.1"
     ipld-block "^0.11.0"
     ipld-dag-cbor "^0.17.0"
     ipld-dag-pb "^0.20.0"
@@ -4495,15 +4496,15 @@ ipfs-http-client@^49.0.1:
     multicodec "^2.0.1"
     multihashes "^3.0.1"
     nanoid "^3.1.12"
-    native-abort-controller "~0.0.3"
+    native-abort-controller "^1.0.3"
     parse-duration "^0.4.4"
     stream-to-it "^0.2.2"
     uint8arrays "^2.0.5"
 
-ipfs-utils@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/ipfs-utils/-/ipfs-utils-6.0.0.tgz#196469a13b13fd1cbdbc35afb4d7177ed1cac1de"
-  integrity sha512-i47dVKS2rYFIQgWNBV+fMqBUNoDwUuvQz9YIQ1GtYgX6kmffTJx+d4lSn7R/WlVVxq83+zAIFGdh3W/9Y27VeQ==
+ipfs-utils@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/ipfs-utils/-/ipfs-utils-6.0.1.tgz#1c1d2b5da5600d00407ad2262ce59a9f58a0f9d1"
+  integrity sha512-u6fJDi/LpCEj96JM//cdDWJV44YR7jLdxQ6I0d8Hj/BCPIQPTWsjQeSppKxudMjYRpX4kzdv9WxrNM8dc4rtlQ==
   dependencies:
     abort-controller "^3.0.0"
     any-signal "^2.1.0"
@@ -4517,7 +4518,7 @@ ipfs-utils@^6.0.0:
     it-to-stream "^0.1.2"
     merge-options "^3.0.4"
     nanoid "^3.1.20"
-    native-abort-controller "0.0.3"
+    native-abort-controller "^1.0.3"
     native-fetch "2.0.1"
     node-fetch "^2.6.1"
     stream-to-it "^0.2.2"
@@ -5796,12 +5797,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-abort-controller@0.0.3, native-abort-controller@~0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/native-abort-controller/-/native-abort-controller-0.0.3.tgz#4c528a6c9c7d3eafefdc2c196ac9deb1a5edf2f8"
-  integrity sha512-YIxU5nWqSHG1Xbu3eOu3pdFRD882ivQpIcu6AiPVe2oSVoRbfYW63DVkZm3g1gHiMtZSvZzF6THSzTGEBYl8YA==
-  dependencies:
-    globalthis "^1.0.1"
+native-abort-controller@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/native-abort-controller/-/native-abort-controller-1.0.3.tgz#35974a2e189c0d91399c8767a989a5bf058c1435"
+  integrity sha512-fd5LY5q06mHKZPD5FmMrn7Lkd2H018oBGKNOAdLpctBDEPFKsfJ1nX9ke+XRa8PEJJpjqrpQkGjq2IZ27QNmYA==
 
 native-fetch@2.0.1, native-fetch@^2.0.1:
   version "2.0.1"
