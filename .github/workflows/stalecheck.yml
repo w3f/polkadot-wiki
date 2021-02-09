@@ -8,11 +8,23 @@ jobs:
   check-stale:
     name: Checks for stale files
     runs-on: ubuntu-latest
+    env: 
+      REPO: ${{ github.repository }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Check for stale files.
-        run: yarn; pwd; node scripts/stalecheck.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Find Docs
+        id:   find
+        uses: w3f/action-find-old-files@master
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Stale docs
+          path: ${{ steps.find.outputs.files }}
+      - name: Create Issues
+        uses: w3f/action-create-issues-for-old-files@master
+        with:
+          randAssignees: ["swader", "lsaether", "ansonla3", "laboon"]
+          files: ${{ steps.find.outputs.files }}
+
