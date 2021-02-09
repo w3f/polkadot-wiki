@@ -13,8 +13,8 @@ on-chain account and subsequently ask for verification of this information by
 Users can register some default fields like legal name, display name, website, Twitter handle, Riot
 handle, etc. along with extra, custom fields for which they would like attestations (see
 [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain -
-10 KSM per identity, and 2.5 KSM per each field beyond the legal name. These funds are _locked_, not
-spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of
+1.666 KSM per identity, and 0.416666 KSM per each field beyond the legal name. These funds are _locked_, 
+not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of
 information, so the data must be less than that. When inputting the data manually through the
 [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
 [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
@@ -157,8 +157,8 @@ Submit the transaction, and the requested judgement will be cancelled.
 
 The image above reveals there are two registrars on Kusama:
 
-- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL charges 0.04 KSM per judgement
-- Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn charges 5 KSM per judgement
+- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL
+- Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn
 
 To find out how to contact the registrar after the application for judgement or to learn who they
 are, we can check their identity by adding them to our Address Book. Their identity will be
