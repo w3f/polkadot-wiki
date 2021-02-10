@@ -22,6 +22,12 @@ Suppose you have nominated five validator candidates, and three out of five were
 
 If you are committing a very large amount of stake, then you may have more than one active nomination. However, the election algorithm attempts to minimize this situation, and it should not occur often, so you should almost always see only a single active nomination per era. See the [section on Phragmén optimization](learn-phragmen#optimizations) for more details.
 
+### Required Minimum Stake
+
+Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, and due to the fact that the solution set must fit in a single block, there is a minimum number of DOT you must nominate with in order to receive staking rewards.
+
+This number fluctuates every era, and the most recent and up to date version can be found out using [this community-developed tool](https://polkaview.network/dot) or through [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine. See the [Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set) section on the Nominator page for more details.
+
 ### Oversubscribed Validators
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to
@@ -32,7 +38,7 @@ Although it is difficult to determine exactly how many nominators will nominate 
 
 ### The Election Solution Set
 
-Determining which validators are in the active set and which nominators are nominating them creates a cery large graph mapping nominators to their respective validators. This "solution set" is computed off-chain and submitted to the chain, which means it must fit in a single block. If there are a large number of nominators, this means that some nominators must be eliminated. Currently, nominators are sorted by amount of DOT staked and those with more DOT are prioritized. This means that if you are staking with a small amount of DOT, you may not receive rewards. This minimal amount is dynamic based on the number of validators, number of nominators, amount nominated, and other factors.
+Determining which validators are in the active set and which nominators are nominating them creates a very large graph mapping nominators to their respective validators. This "solution set" is computed off-chain and submitted to the chain, which means it must fit in a single block. If there are a large number of nominators, this means that some nominators must be eliminated. Currently, nominators are sorted by amount of DOT staked and those with more DOT are prioritized. This means that if you are staking with a small amount of DOT, you may not receive rewards. This minimal amount is dynamic based on the number of validators, number of nominators, amount nominated, and other factors.
 
 ### Receiving Rewards
 
