@@ -56,7 +56,7 @@ Fetch a block using the `block/number` endpoint. To get the chain tip, omit the 
 import requests
 import json
 
-url = 'http://127.0.0.1:8080/block/2077200'
+url = 'http://127.0.0.1:8080/blocks/2077200'
 response = requests.get(url)
 if response.ok:
     block_info = json.loads(response.text)
@@ -164,7 +164,7 @@ Submit a serialized transaction using the `tx` endpoint with an HTTP POST reques
 import requests
 import json
 
-url = 'http://127.0.0.1:8080/tx/'
+url = 'http://127.0.0.1:8080/transaction/'
 tx_headers = {'Content-type' : 'application/json', 'Accept' : 'text/plain'}
 response = requests.post(
     url,
