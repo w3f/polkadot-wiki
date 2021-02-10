@@ -32,9 +32,9 @@ Proposing an action to be taken requires you to bond some tokens. In order to en
 
 > Proposals cannot be revoked by the proposer, even if they never turn into a referendum. It is important to realize that there is no guarantee that DOT you use for proposing or seconding a proposal will be returned to that account in any given timeframe.
 
-On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order to submit a proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the hash of the proposal to be enacted. The easiest way to get the preimage hash is by clicking on the "Submit preimage" button and configuring the action that you are proposing.
+Polkadot Uygulamalarında yeni bir teklif yapmak için "Demokrasi" sekmesini kullanabilirsiniz. Bir teklif göndermek için, preimage karması denen şeyi göndermeniz gerekecektir. Preimage karması, basitçe ifade etmek gerekirse yürürlüğe konulacak teklifin hash'idir. Preimage karmasını almanın en kolay yolu, "Preimage'ı gönder" düğmesine tıklamak ve önerdiğiniz eylemi yapılandırmaktır.
 
-For example, if you wanted to propose that the account "Dave" would have a balance of 10 tokens your proposal may look something like the below image. The preimage hash would be `0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0`. You can copy this preimage hash and save it for the next step. There is no need to click Submit Preimage at this point, though you could. We'll go over that in the next section.
+Örneğin, "Dave" hesabının 10 token'lik bir bakiyeye sahip olmasını önermek istiyorsanız, teklifiniz aşağıdaki görsele benzeyebilir. Preimage karması değeri `0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0` olacaktır. Bu preimage karmasını kopyalayabilir ve bir sonraki adım için kaydedebilirsiniz. Ancak bu noktada Preimage Gönder seçeneğine tıklamanıza gerek yoktur. Sonraki bölümde buna ayrıca değinilecektir.
 
 ![submit preimage](assets/democracy/submit_preimage.png)
 
