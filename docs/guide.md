@@ -14,23 +14,9 @@ description: A short and simple guide to Polkadot
             </div>
         </div></a>
     <a class="guide-link" href=""><div class="cards">
-            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Ambassadors.png" alt="">
-            <div class="cards-body">
-                <h5 class="cards-title">Become an Ambassador</h5>
-                <p class="cards-text">Some Short Text</p>
-            </div>
-        </div></a>
-    <a class="guide-link" href=""><div class="cards">
             <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Whitepaper.png" alt="">
             <div class="cards-body">
                 <h5 class="cards-title">Polkadot Whitepaper</h5>
-                <p class="cards-text">Some Short Text</p>
-            </div>
-        </div></a>
-    <a class="guide-link" href=""><div class="cards">
-            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Transfer.png" alt="">
-            <div class="cards-body">
-                <h5 class="cards-title">Balance Transfers</h5>
                 <p class="cards-text">Some Short Text</p>
             </div>
         </div></a>
@@ -42,9 +28,30 @@ description: A short and simple guide to Polkadot
             </div>
         </div></a>
     <a class="guide-link" href=""><div class="cards">
+            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Transfer.png" alt="">
+            <div class="cards-body">
+                <h5 class="cards-title">Balance Transfers</h5>
+                <p class="cards-text">Some Short Text</p>
+            </div>
+        </div></a>
+    <a class="guide-link" href=""><div class="cards">
             <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Identity.png" alt="">
             <div class="cards-body">
                 <h5 class="cards-title">Setting an Identity</h5>
+                <p class="cards-text">Some Short Text</p>
+            </div>
+        </div></a>
+    <a class="guide-link" href=""><div class="cards">
+            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Parachain.png" alt="">
+            <div class="cards-body">
+                <h5 class="cards-title">Parachains</h5>
+                <p class="cards-text">Some Short Text</p>
+            </div>
+        </div></a>
+    <a class="guide-link" href=""><div class="cards">
+            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Bridges.png" alt="">
+            <div class="cards-body">
+                <h5 class="cards-title">Bridges</h5>
                 <p class="cards-text">Some Short Text</p>
             </div>
         </div></a>
@@ -70,13 +77,6 @@ description: A short and simple guide to Polkadot
             </div>
         </div></a>
     <a class="guide-link" href=""><div class="cards">
-            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Video.png" alt="">
-            <div class="cards-body">
-                <h5 class="cards-title">Videos</h5>
-                <p class="cards-text">Some Short Text</p>
-            </div>
-        </div></a>
-    <a class="guide-link" href=""><div class="cards">
             <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Treasury.png" alt="">
             <div class="cards-body">
                 <h5 class="cards-title">Treasury</h5>
@@ -86,21 +86,21 @@ description: A short and simple guide to Polkadot
     <a class="guide-link" href=""><div class="cards">
             <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Proxy.png" alt="">
             <div class="cards-body">
-                <h5 class="cards-title">Proxy</h5>
+                <h5 class="cards-title">Proxy Accounts</h5>
                 <p class="cards-text">Some Short Text</p>
             </div>
         </div></a>
     <a class="guide-link" href=""><div class="cards">
-            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/LightPaper.png" alt="">
+            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Kusama.svg" alt="" width="48" height="48">
             <div class="cards-body">
-                <h5 class="cards-title">Some Title</h5>
+                <h5 class="cards-title">Kusama</h5>
                 <p class="cards-text">Some Short Text</p>
             </div>
         </div></a>
     <a class="guide-link" href=""><div class="cards">
-            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Proxy.png" alt="">
+            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Ambassadors.png" alt="">
             <div class="cards-body">
-                <h5 class="cards-title">OTHER</h5>
+                <h5 class="cards-title">Become an Ambassador</h5>
                 <p class="cards-text">Some Short Text</p>
             </div>
         </div></a>
