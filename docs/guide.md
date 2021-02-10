@@ -14,13 +14,6 @@ description: A short and simple guide to Polkadot
             </div>
         </div></a>
     <a class="guide-link" href=""><div class="cards">
-            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Whitepaper.png" alt="">
-            <div class="cards-body">
-                <h5 class="cards-title">Polkadot Whitepaper</h5>
-                <p class="cards-text">Some Short Text</p>
-            </div>
-        </div></a>
-    <a class="guide-link" href=""><div class="cards">
             <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Account.png" alt="">
             <div class="cards-body">
                 <h5 class="cards-title">Create an Account</h5>
@@ -31,6 +24,13 @@ description: A short and simple guide to Polkadot
             <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Transfer.png" alt="">
             <div class="cards-body">
                 <h5 class="cards-title">Balance Transfers</h5>
+                <p class="cards-text">Some Short Text</p>
+            </div>
+        </div></a>
+    <a class="guide-link" href=""><div class="cards">
+            <img class="guide-image" src="/docs/assets/guides/polkadot-guide/Stake.png" alt="">
+            <div class="cards-body">
+                <h5 class="cards-title">Stake Your Funds</h5>
                 <p class="cards-text">Some Short Text</p>
             </div>
         </div></a>

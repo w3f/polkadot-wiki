@@ -1006,7 +1006,9 @@ footer .list-social-links a {
   align-items: center;
 }
 
-/*Guide Section*/
+/* ==========================================================================
+   Guide Section
+   ========================================================================== */
 .cards-container{
     display: flex;
     flex-flow: row wrap;
