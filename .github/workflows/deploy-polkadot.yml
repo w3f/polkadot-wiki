@@ -35,6 +35,17 @@ jobs:
         env:
           BUILDING: true
 
+      - name: Upload PDF to IPFS
+        id: ipfs_pdf
+        run: yarn; yarn polkadot:uploadPdf
+        with:
+          file: polkadot-wiki.pdf
+        
+      - name: Inject
+        run: yarn; yarn polkadot:inject
+        with:
+          ipfs_pdf_url: ${{ steps.ipfs_pdf.url }}
+
       - name: Upload to IPFS
         uses: aquiladev/ipfs-action@v0.1.4
         with:
