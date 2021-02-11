@@ -2,7 +2,7 @@ name: Check docs for stale pages (those that have not been updated in more than 
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   check-stale:
