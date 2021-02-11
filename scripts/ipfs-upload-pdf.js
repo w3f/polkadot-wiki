@@ -9,7 +9,7 @@ const main = async () => {
     protocol: 'https',
     timeout: 60000 * 3}
   );
-  const file = core.getInput('file')
+  const file = process.env.FILE
   const glob = globSource(`./website/static/${file}`);
   const result = await ipfs.add(glob, { pin: true, timeout: 60000 * 3, progress: console.log })
   const url = `https://ipfs.io/ipfs/${result.cid}?filename=${file}`
