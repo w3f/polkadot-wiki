@@ -193,7 +193,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 > that you run Polkadot with the `--pruning=archive` option.
 >
 > You may run a validator node in non-archive mode by adding the following flags:
-> `-unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's
+> `--unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's
 > databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 You can begin syncing your node by running the following command:
@@ -286,9 +286,9 @@ corresponds to the funds bonded by the Stash account.
 > **Note:** The session keys are consensus critical, so if you are not sure if your node has the
 > current session keys that you made the `setKeys` transaction then you can use one of the two
 > available RPC methods to query your node:
-> [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)
-> to check for a specific key or
-> [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)
+> [hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
+> check for a specific key or
+> [hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
 > to check the full session key public key string.
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you

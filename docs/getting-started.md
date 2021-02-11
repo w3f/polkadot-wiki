@@ -90,7 +90,7 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 For brand-new learners of Blockchain technology:
 
 - The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to familiarizing yourself
-  with crytography, blockchain concepts, decentralization, networks, crytocurrency, and so much
+  with cryptography, blockchain concepts, decentralization, networks, crytocurrency, and so much
   more. This is recommended for users with backgrounds of all levels, and is also a free course.
 
 For brand-new learners of Polkadot:
