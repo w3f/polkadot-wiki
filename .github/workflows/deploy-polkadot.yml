@@ -45,7 +45,7 @@ jobs:
       - name: Inject
         run: yarn; yarn polkadot:inject
         env:
-          IPFS_PDF_HASH: ${{ steps.ipfs_pdf.hash }}
+          IPFS_PDF_HASH: ${{ steps.ipfs_pdf.outputs.hash }}
 
       - name: Upload to IPFS
         uses: aquiladev/ipfs-action@v0.1.4
