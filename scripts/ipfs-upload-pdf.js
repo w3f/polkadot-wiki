@@ -12,10 +12,10 @@ const main = async () => {
   const file = process.env.FILE
   const glob = globSource(`./website/static/${file}`);
   const result = await ipfs.add(glob, { pin: true, timeout: 60000 * 3, progress: console.log })
-  const url = `https://ipfs.io/ipfs/${result.cid}?filename=${file}`
+  const url = `https://ipfs.io/ipfs/${result.cid.toString()}?filename=${file}`
   
-  console.log(result)
   core.setOutput('url', url)
+  console.log(url)
 }
 
 try {
