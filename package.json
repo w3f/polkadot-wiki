@@ -12,7 +12,7 @@
     "polkadot:inject": "node scripts/inject.js --rootDir website/build/polkadot-wiki --node wss://rpc.polkadot.io",
     "polkadot:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd website; docusaurus-publish",
     "polkadot:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/getting-started\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext,.navigationSlider,#klaro,#footer\" --pdfFormat=\"A4\" --outputPDFFilename=\"website/static/polkadot-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
-    "polkadot:uploadPdf": "node scripts/uploadPdf.js",
+    "polkadot:uploadPdf": "node scripts/ipfs-upload-pdf.js",
     "polkadot:remove": "node scripts/removeUneeded.js dot",
     "mirror": "node scripts/mirror.js",
     "copy:translations": "cp -R website/translated_docs kusama-guide ",
