@@ -4,8 +4,6 @@ const replacements = require("./inject-dict.json");
 const api = require("@polkadot/api");
 const computed = require("./computed");
 
-console.log(`ENV, ${process.env.IPFS_PDF_URL}`)
-
 const argv = yargs
   .option("node", {
     alias: "n",
