@@ -23,7 +23,7 @@ const ksmDeposit = (items, bytes) => {
   return items* 20 * KSM_DOLLARS + bytes * 100 * KSM_MILLICENTS
 }
 
-const dotIpfsPdfUrl = process.env.IPFS_PDF_URL
+const dotIpfsPdfUrl = `https://ipfs.io/ipfs/${process.env.IPFS_PDF_HASH}?filename=polkadot-wiki.pdf`
 
 // Kusama
 // https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L758

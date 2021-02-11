@@ -37,14 +37,15 @@ jobs:
 
       - name: Upload PDF to IPFS
         id: ipfs_pdf
-        run: yarn; yarn polkadot:uploadPdf
-        env:
-          FILE: polkadot-wiki.pdf
+        uses: aquiladev/ipfs-action@v0.1.4
+        with:
+          path: ./website/static/polkadot-wiki.pdf
+          timeout: 120000
         
       - name: Inject
         run: yarn; yarn polkadot:inject
         env:
-          IPFS_PDF_URL: ${{ steps.ipfs_pdf.url }}
+          IPFS_PDF_HASH: ${{ steps.ipfs_pdf.hash }}
 
       - name: Upload to IPFS
         uses: aquiladev/ipfs-action@v0.1.4
