@@ -146,7 +146,7 @@ class Footer extends React.Component {
                 content="Grants and Bounties"
                 href="https://github.com/w3f/General-Grants-Program"
               />
-              <FooterLink content="Carrers" href="https://polkadot.network/jobs" />
+              <FooterLink content="Careers" href="https://polkadot.network/jobs" />
             </FooterNavColumn>
             <FooterNavColumn headline="Technology">
               <FooterLink content="Technology" href="https://polkadot.network/technology" />
@@ -216,6 +216,7 @@ class Footer extends React.Component {
                   content="Testnet disclaimer"
                   href="https://polkadot.network/testnetdisclaimer"
                 />
+                <FooterLegalLink content="PDF version" href="{{ polkadot_wiki_ipfs }}" />
               </ul>
             </Col>
           </Row>
