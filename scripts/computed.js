@@ -1,3 +1,5 @@
+const core = require('@actions/core')
+
 const DOTS = 1000000000000;
 const DOLLARS = DOTS / 100;
 const CENTS = DOLLARS / 100;
@@ -23,6 +25,8 @@ const ksmDeposit = (items, bytes) => {
   return items* 20 * KSM_DOLLARS + bytes * 100 * KSM_MILLICENTS
 }
 
+const dotIpfsPdfUrl = core.getInput('ipfs_pdf_url')
+
 // Kusama
 // https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L758
 const ksmProxyDepositBase = ksmDeposit(1, 8) / KsmDecimals;
@@ -39,5 +43,6 @@ module.exports = {
   dotProxyDepositFactor,
   ksmProxyDepositBase,
   ksmProxyDepositFactor,
+  dotIpfsPdfUrl,
   toCamelCase,
 };

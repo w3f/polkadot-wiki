@@ -216,7 +216,7 @@ class Footer extends React.Component {
                   content="Testnet disclaimer"
                   href="https://polkadot.network/testnetdisclaimer"
                 />
-                <FooterLegalLink content="PDF version" href="{{ polkadot_wiki_ipfs }}" />
+                <FooterLegalLink content="PDF version" href="{{ dot_ipfs_pdf_url }}" />
               </ul>
             </Col>
           </Row>
