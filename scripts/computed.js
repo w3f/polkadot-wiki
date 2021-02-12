@@ -23,6 +23,8 @@ const ksmDeposit = (items, bytes) => {
   return items* 20 * KSM_DOLLARS + bytes * 100 * KSM_MILLICENTS
 }
 
+const dotIpfsPdfUrl = `https://ipfs.io/ipfs/${process.env.IPFS_PDF_HASH}?filename=polkadot-wiki.pdf`
+
 // Kusama
 // https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L758
 const ksmProxyDepositBase = ksmDeposit(1, 8) / KsmDecimals;
@@ -39,5 +41,6 @@ module.exports = {
   dotProxyDepositFactor,
   ksmProxyDepositBase,
   ksmProxyDepositFactor,
+  dotIpfsPdfUrl,
   toCamelCase,
 };
