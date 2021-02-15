@@ -209,18 +209,18 @@ Chachacha is a Rococo based network configured and supported by Centrifuge.
 The purpose of Chachacha is to serve as a support network to ease and speed up the onboarding of new parachains in Rococo.
 
 It helps:
-- Getting the parachains in the waiting list to a state that is ready to be added to Rococo for further performance and stability testing
-- Parachains to found issues beforehand, by integrating earlier.
+- To get the parachains in the waiting list to a state that is ready to be added to Rococo for further performance and stability testing
+- Parachains to find issues beforehand, by integrating earlier.
 
 ## Characteristics
 - Chachacha will be at par with the latest Rococo polkadot/cumulus/substrate version
 - The network will be refreshed and restarted frequently
-- Inclusion process is analog to Rococo's
-- Notifications and Support will be given in the Rococo and Rococo Validator Lounge
+- Inclusion process is analogous to Rococo's
+- Notifications and Support will be given in the Rococo and Rococo Validator Lounge Element channels
 
 ## How to include your parachain in Chachacha
 
-1. Maintain **at least two** validator (full block authoring node) for
+1. Maintain **at least two** validators (full block authoring node) for
    [Chachacha](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/explorer).
    1. Treat this like a production grade Polkadot node - see
       [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
