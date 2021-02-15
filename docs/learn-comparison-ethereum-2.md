@@ -67,7 +67,7 @@ Polkadot.
 There are two main differences between Ethereum 2.0 and Polkadot consensus:
 
 1. Ethereum 2.0 finalizes batches of blocks according to periods of time called "epochs". The
-   current plan is to have 64 blocks per epoch, and finalize them all in one round. With a predicted
+   current plan is to have 32 blocks per epoch, and finalize them all in one round. With a predicted
    block time of 12 seconds, this means the expected time to finality is 6 minutes (12 minutes
    maximum). [2] Polkadot's finality protocol, GRANDPA, finalizes batches of blocks based on
    availability and validity checks that happen as the proposed chain grows. The time to finality
