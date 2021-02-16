@@ -25,11 +25,16 @@ that the wallet software is using the latest version of the
 
 ### Supported Wallets
 
-| Wallet Name                                                       | Development State | Team Name | Description       | Custody       | Supports |
-| ----------------------------------------------------------------- | ----------------- | --------- | ----------------- | ------------- | -------- |
-| [Parity Signer](https://www.parity.io/signer/)                    | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
-| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)       | Live              | Parity    | Browser           | Non-Custodial | Staking  |
-| [Polkadot-js extension](https://github.com/polkadot-js/extension) | Live              | Parity    | Browser extension | Non-custodial | Staking  |
+| Wallet Name                                                        | Development State | Team Name | Description       | Custody       | Supports |
+| ------------------------------------------------------------------ | ----------------- | --------- | ----------------- | ------------- | -------- |
+| [Parity Signer](https://www.parity.io/signer/) (see warning below) | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
+| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)        | Live              | Parity    | Browser           | Non-Custodial | Staking  |
+| [Polkadot-js extension](https://github.com/polkadot-js/extension)  | Live              | Parity    | Browser extension | Non-custodial | Staking  |
+
+> Warning: Parity Signer currently does not allow you to see the transaction you are signing. This
+> means that you are at risk if connected to a compromised version of Polkadot-JS. A fix is being
+> worked on; please see [this GitHub issue](https://github.com/paritytech/parity-signer/issues/724)
+> for more details.
 
 > Note: the wallets page is currently being reviewed. Currently only Parity-developed wallets are
 > listed.
