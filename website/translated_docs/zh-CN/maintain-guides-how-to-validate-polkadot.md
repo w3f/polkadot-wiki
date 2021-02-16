@@ -144,7 +144,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 > **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
 > 
-> If you want to test out ParityDB you can add the flag `---database paritydb`.
+> If you want to test out ParityDB you can add the flag `--database paritydb`.
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
