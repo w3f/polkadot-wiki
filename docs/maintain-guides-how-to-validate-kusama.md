@@ -200,7 +200,7 @@ re-sync your database when you switch.
 > to using the faster and more efficient ParityDb option. Switching between database backends will
 > require a resync.
 >
-> If you want to test out ParityDB you can add the flag `---database paritydb`.
+> If you want to test out ParityDB you can add the flag `--database paritydb`.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
