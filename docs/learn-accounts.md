@@ -407,7 +407,8 @@ networks.
   <span class="address-changer-output" id="output" />
 </div>
 
-Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) or [this simple address address convertor](https://polkadot-address-convertor.netlify.app/).
+Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) or
+[this simple address address convertor](https://polkadot-address-convertor.netlify.app/).
 
 ## Resources
 
