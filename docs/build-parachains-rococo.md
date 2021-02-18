@@ -112,7 +112,8 @@ participate as [parachains](https://wiki.polkadot.network/docs/en/learn-parachai
 [Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769).
 Furthermore, this document aims to provide helpful guidance in order to create a more successful
 outcome for all involved, for rather Parachain Host specific implementations it is recommended to
-look at the [Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
+look at the
+[Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
 
 [Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment
 for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain#overview-of-xcmp)
