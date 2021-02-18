@@ -111,7 +111,8 @@ The purpose of this document is to clearly describe the requirements for chain b
 participate as [parachains](https://wiki.polkadot.network/docs/en/learn-parachains#docsNav) in the
 [Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769).
 Furthermore, this document aims to provide helpful guidance in order to create a more successful
-outcome for all involved.
+outcome for all involved, for rather Parachain Host specific implementations it is recommended to
+look at the [Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
 
 [Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment
 for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain#overview-of-xcmp)
@@ -137,12 +138,10 @@ process are the following:
 2. Maintain at least one parachain collator nodes
 3. Sign-up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
 
-_Update: 15. Jan. 2021_
-
 - If you are considered to be included, the Rococo team will get in touch with you through the
   Element handle provided in the sign-up form, a rough estimate of going forward will be (in no
   certain order):
-  - second batch: Kilt, Interlay (week of 18. January 2021)
+  - second batch: Kilt, Interlay
   - third batch: Darwinia, Phala, Crust, HydraDX
   - fourth batch: Bifrost, Starks Network, Clover, Zenlink
   - fith batch: ChainX, Robonomics, Patract Hub, MathWallet
