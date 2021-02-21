@@ -115,7 +115,7 @@ for which ranges. The slot ranges may be any continuous range of the periods 1 -
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
 > way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
-A bidder configuration for a single bidder may look like the following psuedocode example:
+A bidder configuration for a single bidder may look like the following pseudocode example:
 
 ```js
 const bids = [
