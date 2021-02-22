@@ -436,10 +436,11 @@ going to treasury.
 You can determine the inflation rewards by checking the current staking rate at
 [Polkadot-JS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation
 model of the network. Depending on the staking participation, the distribution of the inflation to
-validators/nominators versus the treasury will change dynamically to provide incentives to participate (or not
-participate) in staking. For instance, all of the inflation would go to the validators/nominators if 50% of all
-KSM / DOT are staked, but any deviation from the 50% - positive or negative - sends the proportional
-remainder to the treasury and effectively reduces staking rewards.
+validators/nominators versus the treasury will change dynamically to provide incentives to
+participate (or not participate) in staking. For instance, all of the inflation would go to the
+validators/nominators if 50% of all KSM / DOT are staked, but any deviation from the 50% - positive
+or negative - sends the proportional remainder to the treasury and effectively reduces staking
+rewards.
 
 For those who are interested in knowing more about the design of inflation model for the network,
 please see
