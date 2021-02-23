@@ -233,7 +233,7 @@ It helps:
          1. `./target/release/polkadot --validator --chain chachacha --name <your_chachacha_validator_name>`
       1. Use Docker:
          1. `docker run -d centrifugeio/rococo:chachacha-v1 --validator --chain chachacha --name <your_chachacha_validator_name>`
-   1. Check your node on the [Chachacha Telemetry](https://telemetry.polkadot.io/#list/Chachacha)
+   1. Check your node on the [Chachacha Telemetry](https://telemetry.polkadot.io/#list/Chachacha%20Staging%20Testnet)
    1. Generate your
       [Chachacha V1 ValidatorId Address](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#launching-the-validators)
    1. Follow
