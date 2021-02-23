@@ -250,7 +250,7 @@ It helps:
    1. `./target/release/<parachain_collator_name> export-genesis-wasm > genesis-wasm`
    1. `wget -O rococo-chachacha.json https://storage.googleapis.com/centrifuge-artifact-releases/rococo-chachacha.json`
    1. `./target/release/<parachain_collator_name> --collator --parachain-id <your_registered_parachain_id> --execution wasm --chain rococo-chachacha.json`
-1. Sign up through the [Chachacha V1 Parachain Registration](add_form) form
+1. Sign up through the [Chachacha V1 Parachain Registration](https://forms.gle/1fZTAaA312pkYCtV7) form
 1. After receiving CHA’s to the ValidatorId Address initiate the
    [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#submitting-the-setkeys-transaction)in
    [Chachacha Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/extrinsics)
