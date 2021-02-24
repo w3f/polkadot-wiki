@@ -243,8 +243,8 @@ It helps:
    1. Generate your
       [Chachacha V1 ValidatorId Address](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#launching-the-validators)
    1. Follow
-      [Rococo Validator Lounge](https://matrix.to/#/!mAfyXPbSILyZLvZwSJ:matrix.parity.io?via=matrix.parity.io)
-      announcements for Rococo V1 validator updates, which can require one of the following
+      [Chachacha](https://matrix.to/#/!bNsgeAIUuMfcyVXKAu:matrix.org?via=matrix.org&via=matrix.parity.io)
+      announcements for Chachacha V1 validator updates, which can require one of the following
       scenarios
       1. Update client
       1. Update client and purge-chain
