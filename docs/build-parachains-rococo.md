@@ -221,7 +221,8 @@ It helps:
 - Chachacha will be at par with the latest Rococo polkadot/cumulus/substrate version
 - The network will be refreshed and restarted frequently
 - Inclusion process is analogous to Rococo's
-- Notifications and Support will be given in the Rococo and Rococo Validator Lounge Element channels
+- Notifications and Support will be given in the Rococo and Rococo Validator Lounge Element channels:
+    - Tag your question using the following user handle: @mikiquantum:matrix.org
 
 ## How to include your parachain in Chachacha
 
