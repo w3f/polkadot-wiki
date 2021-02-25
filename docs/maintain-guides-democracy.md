@@ -151,7 +151,7 @@ approve" option.
 
 The second option is to select your conviction for this vote. The longer you are willing to lock
 your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means that
-your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 256 days
+your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days
 means you can make your vote count for 600% of the tokens that you hold.
 
 When you are comfortable with the decision you have made, click the blue "Vote" button to submit
