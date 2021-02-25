@@ -180,6 +180,8 @@ when successful.
 
 ![democracy clear locks](assets/democracy_clear_locks.png)
 
+#### Unlocking Very Old Locks
+
 If you do not see an option to clear expired democracy votes, it may be that the lock is very old.
 You then must clear the lock by directly issuing the correct extrinsics.
 
