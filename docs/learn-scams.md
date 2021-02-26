@@ -91,7 +91,7 @@ usually will not get involved in matters of mistaken transfers - see below).
 ### Install the Polkadot{.js} extension
 
 The extension uses crowd-sourced [anti-phishing measures](https://polkadot.js.org/phishing/) to
-automatically prevent your browser from displaying known phishing or scam sites. They will be 
+automatically prevent your browser from displaying known phishing or scam sites. They will be
 blocked upon loading, helping to prevent you from visiting these sites and thus falling for them.
 
 ## I Got Scammed - What Can I Do?
