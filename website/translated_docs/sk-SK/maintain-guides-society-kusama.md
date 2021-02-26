@@ -39,7 +39,7 @@ To submit a bid, click the Submit Bid button on the [Society page](https://ipfs.
 
 Anyone can submit a bid to join the society by reserving a deposit or finding an existing member to create a bid on their behalf by vouching for them. At every rotation period, as many bids as the society pot can support will be selected. The selected bids will be moved to the candidate phase, whereas bids that were not selected will stay in the bidder pool until they are selected or a user chooses to unbid.
 
-Anyone who wants to join the society is required to deposit 1.6 KSM for reserve on Kusama and place the bid amount (1 KSM in this case) that they want to get when joining the society.
+Anyone who wants to join the society is required to deposit 1.6 KSM for reserve on Kusama and declare the bid amount (1 KSM in this case) that they will receive for joining the society.
 
 ![Society Dashboard](assets/society/test_bid.jpg)
 

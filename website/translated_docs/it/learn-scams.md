@@ -55,6 +55,10 @@ For any potential scam, always be sure to do a background check on the source, i
 
 A good practice to take in consideration is to verify the address you are sending crypto to. If you don't know that account, you probably shouldn't be sending your assets there. It's your responsibility to make sure that you understand where you are sending your funds, crypto is a decentralized space and your only recourse if a mistake is made is by appealing to the council (who usually will not get involved in matters of mistaken transfers - see below).
 
+### Install the Polkadot{.js} extension
+
+The extension uses crowd-sourced [anti-phishing measures](https://polkadot.js.org/phishing/) to automatically prevent your browser from displaying known phishing or scam sites. They will be blocked upon loading, helping to prevent you from visiting these sites and thus falling for them.
+
 ## I Got Scammed - What Can I Do?
 
 In the unfortunate case of having fallen for a scam, there is likely nothing anyone can do to help you restore your funds. Polkadot and Kusama are decentralized platforms and while we do have governance functionality which could technically allow for funds freezing or refunds, it is impossible to prove that you are the original owner, or that you did not sell the tokens and are trying to reclaim them. Additionally, even with addresses that are obviously in possession of a scammer, governance is a slow-moving process; even under ideal conditions, it would take over 56 days to come into effect. The thief could easily monitor the network for governance proposals that would affect their ill-gotten gains and move them to a new address before the proposal is enacted.

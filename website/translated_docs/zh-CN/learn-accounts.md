@@ -255,7 +255,7 @@ You can use the tool below to convert any SS58 address for any network for use o
   <span class="address-changer-output" id="output" />
 </div>
 
-Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform).
+Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) or [this simple address address convertor](https://polkadot-address-convertor.netlify.app/).
 
 ## 资源
 

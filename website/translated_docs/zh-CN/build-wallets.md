@@ -16,10 +16,13 @@ Some recently generated `JSON` account files cannot be imported (restored) into 
 
 ### Supported Wallets
 
-| Wallet Name                                               | Development State | Team Name | Description       | Custody       | Supports |
-| --------------------------------------------------------- | ----------------- | --------- | ----------------- | ------------- | -------- |
-| [Signer](https://www.parity.io/signer/)                   | Live              | Parity    | IOS and Android   | Non-custodial |          |
-| [Polkadot-JS](https://polkadot.js.org/apps/#/accounts)    | Live              | Parity    | Browser           | Non-Custodial | Staking  |
-| [Polkadot{.js}](https://github.com/polkadot-js/extension) | Live              | Parity    | Browser extension | Non-custodial | Staking  |
+| Wallet Name                                                         | Development State | Team Name | Description       | Custody       | Supports |
+| ------------------------------------------------------------------- | ----------------- | --------- | ----------------- | ------------- | -------- |
+| [Parity Signer](https://www.parity.io/signer/) (see warning below)  | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
+| [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Non-custodial | Staking  |
+| [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Non-custodial | Staking  |
+| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Non-Custodial | Staking  |
+
+> Warning: Parity Signer currently does not allow you to see the transaction you are signing. This means that you are at risk if connected to a compromised version of Polkadot-JS. A fix is being worked on; please see [this GitHub issue](https://github.com/paritytech/parity-signer/issues/724) for more details.
 
 > Note: the wallets page is currently being reviewed. Currently only Parity-developed wallets are listed.
