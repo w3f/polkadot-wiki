@@ -238,9 +238,9 @@ It helps:
          1. `cd polkadot`
          1. `git checkout rococo-v1`
          1. `cargo build --release --features=real-overseer`
-         1. `./target/release/polkadot --validator --chain rococo-chachacha --name <your_chachacha_validator_name>`
+         1. `./target/release/polkadot --validator --chain rococo-chachacha --name <your_chachacha_validator_name> --bootnodes <bootnodes_addr_from_above>`
       1. Use Docker:
-         1. `docker run -d centrifugeio/rococo:chachacha-v1 --validator --chain rococo-chachacha --name <your_chachacha_validator_name>`
+         1. `docker run -d centrifugeio/rococo:chachacha-v1 --validator --chain rococo-chachacha --name <your_chachacha_validator_name> --bootnodes <bootnodes_addr_from_above>`
    1. Check your node on the
       [Chachacha Telemetry](https://telemetry.polkadot.io/#list/Chachacha%20Staging%20Testnet)
    1. Generate your
