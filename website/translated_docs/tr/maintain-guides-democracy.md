@@ -88,7 +88,7 @@ To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](http
 
 If you would like to cast your vote for the proposal select the "Aye, I approve" option. If you would like to cast your vote against the proposal in referendum you will select "Nay, I do not approve" option.
 
-The second option is to select your conviction for this vote. The longer you are willing to lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means that your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 256 days means you can make your vote count for 600% of the tokens that you hold.
+The second option is to select your conviction for this vote. The longer you are willing to lock your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means that your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days means you can make your vote count for 600% of the tokens that you hold.
 
 When you are comfortable with the decision you have made, click the blue "Vote" button to submit your transaction and wait for it to be included in a block.
 
@@ -105,6 +105,8 @@ You can do this from the "Accounts" page in [Polkadot-JS Apps](https://polkadot.
 Now you can click the menu button on Apps and find the option that says "Clear expired democracy locks". After selecting this option you may confirm the transaction and your locks will be cleared when successful.
 
 ![democracy clear locks](assets/democracy_clear_locks.png)
+
+#### Unlocking Very Old Locks
 
 If you do not see an option to clear expired democracy votes, it may be that the lock is very old. You then must clear the lock by directly issuing the correct extrinsics.
 
