@@ -128,3 +128,55 @@ The minimal requirements for any parachain candidate to be considered for the pa
 ### Tips
 
 If you would like to test your setup first on a local machine, you should be able to do so by following the instructions in the readme [launch a local setup](https://github.com/paritytech/cumulus#launch-a-local-setup-including-a-relay-chain-and-a-parachain).
+
+# Chachacha V1 - The pre-rococo environment
+
+Chachacha is a Rococo based network configured and supported by Centrifuge.
+
+The purpose of Chachacha is to serve as a support network to ease and speed up the onboarding of new parachains in Rococo.
+
+It helps:
+
+- To get the parachains in the waiting list to a state that is ready to be added to Rococo for further performance and stability testing
+- Parachains to find issues beforehand, by integrating earlier.
+
+## Characteristics
+
+- Chachacha will be at par with the latest Rococo polkadot/cumulus/substrate version
+- The network will be refreshed and restarted frequently
+- Inclusion process is analogous to Rococo's
+- Notifications and Support will be given in the [Chachacha](https://matrix.to/#/!bNsgeAIUuMfcyVXKAu:matrix.org?via=matrix.org&via=matrix.parity.io) Element channel
+
+## How to include your parachain in Chachacha
+
+1. Maintain **at least two** validators (full block authoring node) for [Chachacha](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/explorer).
+   1. Treat this like a production grade Polkadot node - see [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
+   1. Chachacha Bootnodes
+      1. `/ip4/34.89.248.129/tcp/30333/p2p/12D3KooWD8CAZBgpeZiSVVbaj8mijR6mfgUsHNAmCKwsRoRnFod4`
+      1. `/ip4/35.242.217.240/tcp/30333/p2p/12D3KooWBthdCz4JshkMb4GxJXVwrHPv9GpWAgfh2hAdkyXQDKyN`
+   1. Node Setup - use one of the options below
+      1. Build from source:
+         1. `git clone https://github.com/centrifuge/polkadot`
+         1. `cd polkadot`
+         1. `git checkout rococo-v1`
+         1. `cargo build --release --features=real-overseer`
+         1. `./target/release/polkadot --validator --chain rococo-chachacha --name <your_chachacha_validator_name> --bootnodes <bootnodes_addr_from_above>`
+      1. Use Docker:
+         1. `docker run -d centrifugeio/rococo:chachacha-v1 --validator --chain rococo-chachacha --name <your_chachacha_validator_name> --bootnodes <bootnodes_addr_from_above>`
+   1. Check your node on the [Chachacha Telemetry](https://telemetry.polkadot.io/#list/Chachacha%20Staging%20Testnet)
+   1. Generate your [Chachacha V1 ValidatorId Address](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#launching-the-validators)
+   1. Follow [Chachacha](https://matrix.to/#/!bNsgeAIUuMfcyVXKAu:matrix.org?via=matrix.org&via=matrix.parity.io) announcements for Chachacha V1 validator updates, which can require one of the following scenarios
+      1. Update client
+      1. Update client and purge-chain
+1. Maintain at least one collator (full block authoring node) for your team’s parachain.
+   1. `cd <root_cumulus_based_parachain_code>`
+   1. `cargo build --release`
+   1. `./target/release/<parachain_collator_name> --version`
+   1. `./target/release/<parachain_collator_name> export-genesis-state --parachain-id <your_registered_parachain_id> > genesis-state`
+   1. `./target/release/<parachain_collator_name> export-genesis-wasm > genesis-wasm`
+   1. `wget -O rococo-chachacha.json https://storage.googleapis.com/centrifuge-artifact-releases/rococo-chachacha.json`
+   1. `./target/release/<parachain_collator_name> --collator --parachain-id <your_registered_parachain_id> --execution wasm --chain rococo-chachacha.json`
+1. Sign up through the [Chachacha V1 Parachain Registration](https://forms.gle/1fZTAaA312pkYCtV7) form
+1. After receiving CHA’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#submitting-the-setkeys-transaction)in [Chachacha Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/extrinsics)
+1. Follow the [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/6-register/1-register.md#request-parachain-registration)
+1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on features later on
