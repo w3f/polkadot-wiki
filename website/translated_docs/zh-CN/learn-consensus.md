@@ -53,7 +53,7 @@ Polkadot 的验证人将会参与在每次的[抽奖](learn-randomness)去决定
 
 #### Kusama 和 Polkadot 的 BABE 次生块的区别
 
-Kusama 和 Polkadot 均使用上面概述的BABE块生产机制。但是，两个网络之间产生的次级块之间存在细微差异。 Polkadot 将 VRF 输出附加到次级块 (因此每个块都对 Era 的随机性有所贡献)，Kusama 让 VRF 输出远离次级块 (这意味着只有主要块会造成 Era 的随机性)。 Polkadot 方法应提供更强的随机性，因为在每个 Era 都会收集更多的输入。最终，这种改变也将进入 Kusama。
+Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is a slight difference in the secondary blocks that are produced between the two networks. Polkadot attaches the VRF output to secondary blocks (and therefore every block contributes to the Epoch randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary blocks contribute to Epoch randomness). The Polkadot method should give stronger randomness as more inputs are collected during every Epoch. Eventually, this change should make its way into Kusama too.
 
 ### GRANDPA: 最终决定性工具
 
