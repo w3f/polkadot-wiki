@@ -53,7 +53,7 @@ For more details on BABE, please see the [working research draft](https://resear
 
 #### Difference of BABE secondary blocks between Kusama and Polkadot
 
-Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is a slight difference in the secondary blocks that are produced between the two networks. Polkadot attaches the VRF output to secondary blocks (and therefore every block contributes to the Era randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary blocks contribute to Era randomness). The Polkadot method should give stronger randomness as more inputs are collected during every Era. Eventually, this change should make its way into Kusama too.
+Both Kusama and Polkadot uses the BABE block production mechanism outlined above. However, there is a slight difference in the secondary blocks that are produced between the two networks. Polkadot attaches the VRF output to secondary blocks (and therefore every block contributes to the Epoch randomness), while Kusama keeps the VRF output off the secondary blocks (meaning only the primary blocks contribute to Epoch randomness). The Polkadot method should give stronger randomness as more inputs are collected during every Epoch. Eventually, this change should make its way into Kusama too.
 
 ### GRANDPA: Gadget finalitas
 
