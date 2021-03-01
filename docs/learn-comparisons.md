@@ -60,6 +60,6 @@ built and benefit from shared security, interoperability and scalability. Intero
 Polkadot is based on pooled security on Polkadot, and the security of the entire Polkadot network,
 and has much stronger economic security.
 
-Scalability based on bridges relies on each bridged chain finding its own set of validators
+Scalability based on bridges relies on each bridged chain finding its own set of validators,
 therefore duplicate resources are required. Scalability on Polkadot is based on the security of the
 Relay Chain, and as the number of validators in the active set on Polkadot are increased, more parachains can be supported.
