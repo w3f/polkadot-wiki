@@ -44,7 +44,7 @@ competition.
 
 [Binance Chain](https://www.binance.com) is a Proof of Stake Authority blockchain used to
 exchange digital assets on Binance DEX. Binance Smart Chain is an
-Ethereum-compatible smart contract chain bridged to Binance Chain. Together they form the Binance
+EVM-compatible smart contract chain bridged to Binance Chain. Together they form the Binance
 Dual Chain System. Binance Smart Chain is also a Proof of Stake Authority chain and allows users to
 create smart contracts and dapps.
 
