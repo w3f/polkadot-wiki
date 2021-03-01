@@ -49,7 +49,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - There are no tips for any transactions processed.
 - They do NOT charge any commission fees.
 - Total reward amount is 100 DOT tokens.
-- The current minimum amount of DOT to be a validator is 350 (for understanding how the actual minimal stake is calculated, see [here](https://wiki.polkadot.network/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
+- The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual value, which fluctuates, but merely an assumption for purposes of this example; to understand how the actual minimal stake is calculated, see [here](https://wiki.polkadot.network/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
 |         | **验证人池 A** |        |      |
 |:-------:|:----------:|:------:|:----:|
