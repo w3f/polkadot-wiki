@@ -51,7 +51,7 @@ class FooterSocialColumn extends React.Component {
         </li>
         <li className="text-white">
           <a
-            href="https://wiki.polkadot.network/en/latest/polkadot/learn/implementations/"
+            href="https://github.com/paritytech/polkadot"
             target="_blank"
             rel="noopener noreferrer"
           >
