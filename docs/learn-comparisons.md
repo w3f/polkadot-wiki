@@ -58,7 +58,7 @@ Polkadot has an entirely different purpose because it was built to connect and s
 blockchains. It is a protocol on which single blockchains (such as Binance Smart Chain) could be
 built and benefit from shared security, interoperability and scalability. Interoperability within
 Polkadot is based on pooled security on Polkadot, and the security of the entire Polkadot network,
-and has much stronger trust assumptions.
+and has much stronger economic security.
 
 Scalability based on bridges relies on each bridged chain finding its own set of validators
 therefore duplicate resources are required. Scalability on Polkadot is based on the security of the
