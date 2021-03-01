@@ -42,11 +42,10 @@ competition.
 
 ## Binance Smart Chain
 
-[Binance Chain](https://www.binance.com) is a Proof of Stake Authority blockchain used to
-exchange digital assets on Binance DEX. Binance Smart Chain is an
-EVM-compatible smart contract chain bridged to Binance Chain. Together they form the Binance
-Dual Chain System. Binance Smart Chain is also a Proof of Stake Authority chain and allows users to
-create smart contracts and dapps.
+[Binance Chain](https://www.binance.com) is a Proof of Stake Authority blockchain used to exchange
+digital assets on Binance DEX. Binance Smart Chain is an EVM-compatible smart contract chain bridged
+to Binance Chain. Together they form the Binance Dual Chain System. Binance Smart Chain is also a
+Proof of Stake Authority chain and allows users to create smart contracts and dapps.
 
 Both chains are built with Cosmos SDK and therefore are a part of the
 [Cosmos](https://wiki.polkadot.network/docs/en/learn-comparisons-cosmos) ecosystem. Due to specifics
@@ -62,4 +61,5 @@ and has much stronger economic security.
 
 Scalability based on bridges relies on each bridged chain finding its own set of validators,
 therefore duplicate resources are required. Scalability on Polkadot is based on the security of the
-Relay Chain, and as the number of validators in the active set on Polkadot are increased, more parachains can be supported.
+Relay Chain, and as the number of validators in the active set on Polkadot are increased, more
+parachains can be supported.
