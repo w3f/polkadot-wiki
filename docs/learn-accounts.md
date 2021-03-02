@@ -355,7 +355,7 @@ Currently, the DepositBase is equal to `deposit(1, 88)` and the DepositFactor is
 `deposit(0,32)`.
 
 The deposit function in JavaScript is defined below, cribbed from the
-[Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/constants.rs#L26).
+[Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/constants.rs#L26).
 
 ```js
 // Polkadot
