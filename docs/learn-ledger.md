@@ -82,7 +82,8 @@ At the end of the process you should have the newly installed Polkadot applicati
 
 ## Using on Polkadot-JS Apps
 
-> Note: Ledger Live should be off while using Ledger with Polkadot JS Apps as it can interfere with normal operation.
+> Note: Ledger Live should be off while using Ledger with Polkadot JS Apps as it can interfere with
+> normal operation.
 
 ### Loading Your Account
 
