@@ -142,9 +142,9 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 `--pruning=archive`选项意味着` --validator `和`-sentry `选项，因此仅如果在没有这两个选项之一的情况下启动节点，则必须明确要求。 如果您不设置为 archive 节点，即使不在运行验证人和哨兵模式时，也需要切换时重新同步数据库。
 
-> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
 > 
-> If you want to test out ParityDB you can add the flag `--database paritydb`.
+> In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note that **ParityDB is still experimental and should not be used in production.** If you want to test out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will require a resync.
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
