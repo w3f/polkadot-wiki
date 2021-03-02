@@ -111,9 +111,11 @@ The "total" balance of the account is considered the amount of "free" funds in t
 
 ## Existential Deposit and Reaping
 
-When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 1 DOT (on Polkadot mainnet) .
+When you generate an account (address), you only generate a _key_ that lets you access it. The account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM (on Kusama) or 1 DOT (on Polkadot mainnet).
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account will be wiped from the blockchain's state to conserve space, along with any funds in that address. You do not lose access to the reaped address - as long as you have your private key or recovery phrase, you can still use the address - but it needs a top-up of another existential deposit to be able to interact with the chain.
+
+Transaction fees cannot cause an account to be reaped. Since fees are deducted from the account before any other transaction logic, accounts with balances _equal to_ the existential deposit cannot construct a valid transaction. Additional funds will need to be added to cover the transaction fees.
 
 Here's another way to think about existential deposits. Ever notice those `Thumbs.db` files on Windows or `.DS_Store` files on Mac? Those are junk, they serve no specific purpose other than making previews a bit faster. If a folder is completely empty save for such a file, you can remove the folder to clear junk off your hard drive. That does not mean you lose access to this folder forever - you can always recreate it. You have the _key_, after all - you're the computer's owner. It just means you want to keep your computer clean until you maybe end up needing this folder again, and then recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it, but gets put back when it has at least the existential deposit.
 
