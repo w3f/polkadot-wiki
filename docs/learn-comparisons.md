@@ -39,3 +39,27 @@ Chain.
 
 As such, Polkadot is a possible augmentation and scaling method for Ethereum 1.x, rather than
 competition.
+
+## Binance Smart Chain
+
+[Binance Chain](https://www.binance.com) is a Proof of Stake Authority blockchain used to exchange
+digital assets on Binance DEX. Binance Smart Chain is an EVM-compatible smart contract chain bridged
+to Binance Chain. Together they form the Binance Dual Chain System. Binance Smart Chain is also a
+Proof of Stake Authority chain and allows users to create smart contracts and dapps.
+
+Both chains are built with Cosmos SDK and therefore are a part of the
+[Cosmos](https://wiki.polkadot.network/docs/en/learn-comparisons-cosmos) ecosystem. Due to specifics
+of the Cosmos architecture, interoperability of Binance Smart Chain is based on bridges. This means
+all validators of both chains are also bridge operators, therefore the security of the system relies
+on trusting validators. At the moment, there are 21 Binance Smart Chain validator nodes.
+
+Polkadot has an entirely different purpose, as it was built to connect and secure unique
+blockchains. It is a protocol on which single blockchains (such as Binance Smart Chain) could be
+built and benefit from shared security, interoperability and scalability. Interoperability within
+Polkadot is based on pooled security on Polkadot, and the security of the entire Polkadot network,
+and has much stronger economic security.
+
+Scalability based on bridges relies on each bridged chain finding its own set of validators,
+therefore duplicate resources are required. Scalability on Polkadot is based on the security of the
+Relay Chain, and as the number of validators in the active set on Polkadot are increased, more
+parachains can be supported.
