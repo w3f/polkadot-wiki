@@ -8,7 +8,7 @@ Here we provide a list of tools available for your development needs. They are s
 
 ## Block Explorers
 
-- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to Kusama by default, but can be configured to connect to Polkadot, Westend, or other remote or local endpoints.
+- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Supports dozens of other networks, including Kusama, Westend, and other remote or local endpoints. [Access via IPFS](https://ipfs.io/ipns/dotapps.io)
 - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains. [Repo](https://github.com/itering/subscan-essentials).
 
