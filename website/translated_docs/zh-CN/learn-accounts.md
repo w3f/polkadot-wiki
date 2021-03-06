@@ -208,9 +208,9 @@ The deposit is dependent on the `threshold` parameter and is calculated as follo
 
 Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
 
-Currently, the DepositBase is equal to `deposit(1, 88)` and the DepositFactor is equal to `deposit(0,32)`.
+Currently, the DepositBase is equal to `deposit(1, 88)` (key size is 32; value is size 4+4+16+32 = 56 bytes) and the DepositFactor is equal to `deposit(0,32)` (additional address of 32 bytes).
 
-The deposit function in JavaScript is defined below, cribbed from the [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/constants.rs#L26).
+The deposit function in JavaScript is defined below, cribbed from the [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/constants.rs#L26).
 
 ```js
 // Polkadot
@@ -231,12 +231,98 @@ console.log("DepositFactor", deposit(0, 32));
 
 Thus the deposit values can be calculated as shown in the table below.
 
-|      | Polkadot     | Kusama          |
-| ---- | ------------ | --------------- |
-| 存款基数 | 200880000000 | 3347999999941.4 |
-| 存款因子 | 320000000    | 5333333312      |
+|      | Polkadot (DOT) | Kusama (KSM)   | Polkadot (planck) | Kusama (planck) |
+| ---- | -------------- | -------------- | ----------------- | --------------- |
+| 存款基数 | 20.088         | 3.347999999942 | 200880000000      | 3347999999942   |
+| 存款因子 | .032           | 0.005333333312 | 320000000         | 5333333312      |
 
-Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob, and Charlie. First Alice will create the call on chain by calling `as_multi` with the raw call. When doing this Alice will have to deposit 0.20152 DOT while she waits for either Bob or Charlie to also approve the call. When Bob comes to approve the call and execute the transaction, he will not need to place the deposit and Alice will receive her deposit back.
+Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice, Bob, and Charlie. First, Alice will create the call on chain by calling `as_multi` with the raw call. When doing this Alice will have to deposit `DepositBase + (2 * DepositFactor) = 20.152 DOT` while she waits for either Bob or Charlie to also approve the call. When Bob comes to approve the call and execute the transaction, he will not need to place the deposit and Alice will receive her deposit back.
+
+### Example with Polkadot.JS
+
+For this example, we will be using the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) testnet and [Polkadot.JS Apps](https://wiki.polkadot.network/docs/en/learn-balance-transfers#polkadot-js-apps) to create a 2-of-3 multisig address and send a transaction with it.
+
+> While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few notable differences:
+> 
+> - Existential deposit is equal to 0.01 WND (Westies; Westend's native coin) instead of 1 DOT.
+> - The multisignature transaction deposit is equal to ~1 WND instead of ~20.2 DOT.
+> 
+> The photos below reflects values in WND, but instructions are the same for DOT.
+
+**To create a multisig address and send a transaction using it, you will need the following:**
+
+- List of the multisig member's addresses. We will use Alice, Bob, and Charlie.
+- DOT to deposit into the multisig address.
+- ~20.2 DOT refundable deposit to send a multisig tarnsaction. This needs to be in the address that initiates a multisignature transaction (in this example, Alice).
+
+You should already have your own account with some coins in it.
+
+![Account page](assets/accounts/multisig-addy.png)
+
+To generate the multisig address, we need to **add the multisig member addresses to the contact book** under "Accounts > Address book".
+
+![Address book](assets/accounts/multisig-1.png)
+
+For each address, click "Add contact" in the upper right and provide the address and a name.
+
+![Add Contact](assets/accounts/multisig-2.png)
+
+Here, Bob and Charlie have been added.
+
+![Address books 2](assets/accounts/multisig-3.png)
+
+**Next, we need to create the new multisignature address.** Navitage to the Accounts page (from the toolbar, "Accounts > Accounts") and click the "+ Multisig" button. We will supply the three multisig member addresses, with a value '2' for the threshold.
+
+![New multisig](assets/accounts/multisig-4.png)
+
+Click 'Create', and you should see the new multisig address appear on this Accounts page.
+
+![5](assets/accounts/multisig-5.png)
+
+**Let's fund the address now.** For this example, we will transfer some coins from Alice's account to the multisig address. Under Alice's address, click 'Send', select the multisig wallet as the destination, and provide an amount. Then, click 'Make Transfer', and then 'Sign and Submit'.
+
+![6](assets/accounts/multisig-6.png) ![7](assets/accounts/multisig-7.png)
+
+We can see that the multisig account now has a balance.
+
+![9](assets/accounts/multisig-9.png)
+
+**To send a transaction, we need one of the members to initiate it.** Let's use Alice to initiate the transaction.
+
+Make sure Alice has enough coins to cover the multisig transaction deposit and the transaction fees. Then, click 'Send' under the "Multisig Test Address", select a destination address (we generated an address locally) and a transfer amount, and click 'Make Transfer'.
+
+![10](assets/accounts/multisig-10.png)
+
+To sign as Alice, make sure she is selected as the 'multisig signatory', click 'Sign and Submit', and sign the transaction.
+
+![11](assets/accounts/multisig-11.png)
+
+You will now see a pending transaction the 'Multisig Test Address' (the red '1' icon), and if you click the dropdown under Alice's balance, you will see that a value equivalent to the multisig deposit has been 'reserved', rendering that value untransferable until the multisig transaction completes.
+
+![12](assets/accounts/multisig-12.png)
+
+**Next, we need a second signature.** Let's get it from Bob. In Bob's browser, repeat the following from the above steps.
+
+1. Add Alice, Charlie, and the multisig transaction destination addresses to Bob's Address book.
+2. Create a new multisig address with the same parameters (Bob, Alice, and Charlie's addresses, and a threshold value of '2').
+
+> NOTE: Since multisig address genereation is deterministic, if Bob (or any other member), on his computer, were to generate a multisig address using Alice's, Charlie's and his addresses, with a threshold value of '2', he would produce the **same** multisig address that Alice has here.
+
+If done correctly, we should see that the **same** multisig address is produced in Bob's browser, and that a pending transaction is displayed, too.
+
+![13](assets/accounts/multisig-13.png)
+
+Next, to get Bob's signature, he needs to craft the same multisig transaction that Alice did by providing the same destination address and transfer amount (together, transaction parameters), signing, and submitting it. Alice initiated the transaction by uploading a signature of the hash of the transaction and the hash. These transaction parameters will allow Bob to produce and sign the same transaction (the same hash) that Alice signed earlier.
+
+![14](assets/accounts/multisig-14.png)
+
+Click 'Make Transfer', ensure that Bob is the 'multisig signatory', and click 'Sign and Submit'. Note that 'Multisig message with call (for final approval)' is automatically enabled; this means that, since the transaction will reached the signature threshold, it will execute the actual transaction on chain after adding the second signature.
+
+![15](assets/accounts/multisig-15.png)
+
+Assuming no errors, 'Multisig Destination Account' has a balance of 0.3 WND, and Alice's account has released the multisig transaction deposit.
+
+![16](assets/accounts/multisig-16.png)
 
 ## Address Conversion Tools
 
@@ -261,4 +347,4 @@ Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/s
 
 ## 资源
 
-- [了解 Polkadot 中的帐户和密钥](https://www.crowdcast.io/e/polkadot-keys)-解释了 Polkadot 中不同类型的帐户和密钥的用途，与 BlockX Labs 的 Bill Laboon 和 Chinmay Patel 合作。
+- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill Laboon and Chinmay Patel of BlockX Labs.
