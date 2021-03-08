@@ -58,6 +58,16 @@ Follow the instruction [here](learn-DOT#getting-westies) for instructions on acq
 Check your node is connected by viewing it on
 [Telemetry](https://telemetry.polkadot.io/#list/Westend).
 
+### Differences
+
+Runtime differences (ie. existential and multisignature deposit sizes) between the different
+networks can be found by doing a `diff` between the `src/lib.rs` of the respositories. For example,
+to compare the Polkadot and Westend runtimes:
+
+- `git clone https://github.com/paritytech/polkadot && cd polkadot/runtime`
+- `ls` - show the available runtimes
+- `diff polkadot/src/lib.rs westend/src/lib.rs`
+
 ## Substrate Networks
 
 To connect to a Substrate public network first follow the [instructions][substrate install] for
