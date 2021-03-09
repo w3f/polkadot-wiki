@@ -16,5 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        with:
+          node-version: '14.x'
       - name: Check latest substrate links
-        run: yarn; babel-node scripts/update-substrate.js; node scripts/check-substrate-release.js
+        run: yarn; node scripts/update-substrate.js; node scripts/check-substrate-release.js
