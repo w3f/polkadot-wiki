@@ -48,7 +48,7 @@ import fs from "fs";
   if (!!foundFiles.length) {
     console.log("\nThe following files need to be updated for latest Substrate release:");
     console.log(foundFiles.join("\n"));
-    console.log("\nPlease run `node scripts/update-substrate.js` to update them.");
+    console.log("\nPlease run `babel-node scripts/update-substrate.js` to update them.");
     process.exit(1);
   }
 })();

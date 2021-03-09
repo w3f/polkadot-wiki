@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Check latest substrate links
-        run: yarn; node scripts/update-substrate.js; node scripts/check-substrate-release.js
+        run: yarn; babel-node scripts/update-substrate.js; node scripts/check-substrate-release.js
