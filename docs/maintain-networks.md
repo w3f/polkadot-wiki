@@ -60,7 +60,7 @@ Check your node is connected by viewing it on
 
 ### Differences
 
-Runtime differences (ie. existential and multisignature deposit sizes) between the different
+Runtime differences (e.g. existential and multisignature deposit sizes) between the different
 networks can be found by doing a `diff` between the `src/lib.rs` of the respositories. For example,
 to compare the Polkadot and Westend runtimes:
 
