@@ -1,6 +1,6 @@
-const fs = require("fs");
-const cp = require("child_process");
-const github = require("@actions/github");
+import fs from "fs";
+import cp from "child_process";
+import github from "@actions/github";
 
 const dir = "docs";
 const maxAgeDays = 45;
@@ -28,7 +28,7 @@ const getStaleIssues = async (octokit) => {
   }
 
   return fullData;
-}
+};
 
 async function stalecheck() {
   const myToken = process.env.GITHUB_TOKEN;
@@ -50,7 +50,7 @@ async function stalecheck() {
     // Check if issue for file exists
     console.log(`Checking existing issues for ${file}`);
     let title = `[STALE] ${file}`;
-    if (!!staleIssues.find(issue => issue.title === title)) continue;
+    if (!!staleIssues.find((issue) => issue.title === title)) continue;
     // Pick a random technical educator
     let assignee = techedu[Math.floor(Math.random() * techedu.length)];
     // Create issue
@@ -110,4 +110,6 @@ function agePerPage() {
 
 try {
   stalecheck();
-} catch (err) { console.error(err); }
+} catch (err) {
+  console.error(err);
+}

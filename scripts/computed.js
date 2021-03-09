@@ -36,11 +36,11 @@ const toCamelCase = (str) => {
     .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 }
 
-module.exports = {
+export {
   dotProxyDepositBase,
   dotProxyDepositFactor,
   ksmProxyDepositBase,
   ksmProxyDepositFactor,
   dotIpfsPdfUrl,
   toCamelCase,
-};
+}

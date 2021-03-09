@@ -1,4 +1,4 @@
-const { ApiPromise, WsProvider } = require("@polkadot/api");
+import { ApiPromise, WsProvider } from "@polkadot/api";
 
 // A big string to put all of the output.
 let output = `

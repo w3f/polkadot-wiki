@@ -1,6 +1,6 @@
-const { Octokit } = require("@octokit/rest");
-const axios = require("axios");
-const fs = require("fs");
+import { Octokit } from "@octokit/rest";
+import axios from "axions";
+import fs from "fs";
 
 (async () => {
   const ghApi = new Octokit();
@@ -28,7 +28,7 @@ const fs = require("fs");
   }
 
   console.log("Latest tag:", latestTag);
-  
+
   // Now read through all files.
   const dir = fs.readdirSync("docs");
   const foundFiles = [];

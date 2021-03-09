@@ -1,8 +1,8 @@
-const replace = require("replace-in-file");
-const yargs = require("yargs");
-const replacements = require("./inject-dict.json");
-const api = require("@polkadot/api");
-const computed = require("./computed");
+import replace from "replace-in-file";
+import yargs from "yargs";
+import replacements from "./inject-dict.json";
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import * as computed from "./computed";
 
 const argv = yargs
   .option("node", {
@@ -33,8 +33,8 @@ console.log("Connecting to node " + node);
 let filledDict = {};
 
 // Connect to a node
-const wsProvider = new api.WsProvider(node);
-api.ApiPromise.create({ provider: wsProvider })
+const wsProvider = new WsProvider(node);
+ApiPromise.create({ provider: wsProvider })
   .then(function (instance) {
     console.log("Connected");
 
