@@ -137,7 +137,9 @@ execution using DOT as the native asset with which to pay gas. A generic assets 
 anyone to place a deposit in DOT to deploy their asset on-chain. Assets on this chain could be
 backed by physical goods like artwork, real estate, or gold; or by paper goods like shares in a
 company or fiat currency held by a trusted party, providing a stable, permanent launchpad for
-stablecoins and Central Bank Digital Currencies. Public utility parachains would typically grant
+stablecoins and Central Bank Digital Currencies.
+
+Public utility parachains would typically grant
 privileged business logic to Polkadot’s governance. Just as the Polkadot Relay Chain has several
 privileged functions like setting the validator count or allocating DOT from the Treasury, these
 parachains can have privileged functions like changing system parameters or registering an asset.
