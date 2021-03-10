@@ -27,14 +27,14 @@
     "generateErrorTable": "babel-node scripts/generateErrorTable.js >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/node": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
     "docusaurus": "^1.14.6"
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
     "@octokit/rest": "^18.3.4",
     "@polkadot/api": "^4.0.3",
     "@polkadot/keyring": "^5.8.1",
