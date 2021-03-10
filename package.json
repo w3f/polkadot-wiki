@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "scripts": {
     "start": "yarn polkadot:start",
     "kusama:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
