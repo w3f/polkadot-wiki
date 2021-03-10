@@ -15,35 +15,6 @@ jobs:
             yarn
             ./scripts/ci-prettier.sh
 
-  check-links:
-    docker:
-      - image: web3f/link-checker:v1.0.1
-    steps:
-      - checkout
-      - run:
-          name: build
-          command: |
-            yarn
-
-      - run:
-          name: serve
-          background: true
-          command: |
-            yarn polkadot:start
-
-      - run:
-          name: wait website up
-          command: |
-            while ! nc -z localhost 3000; do
-              sleep 1
-              echo waiting for website up...
-            done
-
-      - run:
-          name: check links
-          command: |
-            linkchecker --ignore-url="^(?:(?!\/en\/).)*$" --check-extern http://localhost:3000/
-
   deploy-website:
     docker:
       # specify the version you desire here
