@@ -1,3 +1,5 @@
+import fs from "fs";
+
 /**
  * The wiki hosts both the Polkadot Wiki and the Kusama User Guide. This means
  * that we can "mirror" the same document between the two. However, due to
@@ -14,8 +16,6 @@
  * 4) Add `mirror-DOCUMENT_NAME` to the sidebar for Kusama in `sidebars.json`.
  *
  */
-
-const fs = require("fs");
 
 // List of mirrored files that should be in both the Polkadot wiki and the Kusama
 // user guide.

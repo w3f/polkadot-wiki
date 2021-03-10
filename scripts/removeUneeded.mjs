@@ -1,6 +1,6 @@
-const dotSidebar = require("../website/sidebars.json");
-const ksmSidebar = require("../kusama-guide/sidebars.json");
-const fs = require('fs');
+import dotSidebar from "../website/sidebars.json";
+import ksmSidebar from "../kusama-guide/sidebars.json";
+import fs from 'fs';
 
 const Save = [
   "assets"

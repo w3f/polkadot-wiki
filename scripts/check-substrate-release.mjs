@@ -1,6 +1,6 @@
-const { Octokit } = require("@octokit/rest");
-const axios = require("axios");
-const fs = require("fs");
+import { Octokit } from "@octokit/rest";
+import axios from "axios";
+import fs from "fs";
 
 (async () => {
   const ghApi = new Octokit();
@@ -28,7 +28,7 @@ const fs = require("fs");
   }
 
   console.log("Latest tag:", latestTag);
-  
+
   // Now read through all files.
   const dir = fs.readdirSync("docs");
   const foundFiles = [];
@@ -48,7 +48,7 @@ const fs = require("fs");
   if (!!foundFiles.length) {
     console.log("\nThe following files need to be updated for latest Substrate release:");
     console.log(foundFiles.join("\n"));
-    console.log("\nPlease run `node scripts/update-substrate.js` to update them.");
+    console.log("\nPlease run `node scripts/update-substrate.mjs` to update them.");
     process.exit(1);
   }
 })();
