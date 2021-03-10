@@ -82,7 +82,7 @@ automatically become parathreads.
 
 ## Common Good Parachains
 
-"Common Good" parachains are parachain slots reserved for functionality that benefits the the Web3
+"Common Good" parachains are parachain slots reserved for functionality that benefits the the Polkadot
 ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
 network can realize the benefit of valuable parachains that would otherwise be underfunded due to
 the free-rider problem. They are not allocated via the parachain auction process, but by Polkadot's
