@@ -53,10 +53,6 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - check-links:
-          filters:
-            tags:
-              only: /.*/
       - deploy-website:
           filters:
             branches:
