@@ -2,9 +2,9 @@ import replace from "replace-in-file";
 import yargs from "yargs";
 import replacements from "./inject-dict.json";
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import * as computed from "./computed";
+import * as computed from "./computed.mjs";
 
-const argv = yargs
+const argv = yargs(process.argv)
   .option("node", {
     alias: "n",
     description: "Websocket node URL to query",
