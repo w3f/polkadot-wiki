@@ -1,6 +1,6 @@
-import path from "path";
-import fs from "fs-extra";
-import recursiveReaddir from "recursive-readdir";
+const path = require("path");
+const fs = require("fs-extra");
+const recursiveReaddir = require("recursive-readdir");
 
 const baseUrlPattern = "/_baseUrlPattern_/";
 const baseUrlRegExp = new RegExp(baseUrlPattern, "g");
@@ -30,7 +30,7 @@ const postProcess = async (buildDirectory) => {
   );
 };
 
-export {
+module.exports = {
   baseUrlPattern,
   postProcess,
 };
