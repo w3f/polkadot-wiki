@@ -82,11 +82,11 @@ automatically become parathreads.
 
 ## Common Good Parachains
 
-"Common Good" parachains are parachain slots reserved for functionality that benefits the the Polkadot
-ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
-network can realize the benefit of valuable parachains that would otherwise be underfunded due to
-the free-rider problem. They are not allocated via the parachain auction process, but by Polkadot's
-on-chain governance system.
+"Common Good" parachains are parachain slots reserved for functionality that benefits the the
+Polkadot ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the
+entire network can realize the benefit of valuable parachains that would otherwise be underfunded
+due to the free-rider problem. They are not allocated via the parachain auction process, but by
+Polkadot's on-chain governance system.
 
 The purpose of these parachains will probably fall into one of two categories: system level chains
 or public utility chains.
@@ -127,25 +127,26 @@ Public utility chains will always be fully aligned with their Relay Chain stakeh
 means that they will adopt the Relay Chain's native token (i.e. DOT or KSM) as their native token
 and respect any messages incoming from the Relay Chain and system level parachains at face value.
 
-Some examples of potential public utility chains are bridges, generic asset chains, and
-DOT-denominated smart contract platforms. All of these could operate without a new token:
+Some examples of potential public utility chains are bridges, DOT-denominated smart contract
+platforms, and generic asset chains. All of these could operate without a new token:
 
-A bridge could add its own native token to charge as a toll, but in many cases that would be
-arbitrary value capture, when it could just as well use DOT and/or the bridged chain’s assets in its
-fee mechanism. A DOT-denominated smart contract layer-one blockchain would allow Wasm smart contract
-execution using DOT as the native asset with which to pay gas. A generic assets chain would allow
-anyone to place a deposit in DOT to deploy their asset on-chain. Assets on this chain could be
-backed by physical goods like artwork, real estate, or gold; or by paper goods like shares in a
-company or fiat currency held by a trusted party, providing a stable, permanent launchpad for
-stablecoins and Central Bank Digital Currencies.
+- A bridge could add its own native token to charge as a toll, but in many cases that would be
+  arbitrary value capture, when it could just as well use DOT and/or the bridged chain’s assets in
+  its fee mechanism.
+- A DOT-denominated smart contract layer-one blockchain would allow Wasm smart contract execution
+  using DOT as the native asset with which to pay gas.
+- A generic assets chain would allow anyone to place a deposit in DOT to deploy their asset
+  on-chain. Assets on this chain could be backed by physical goods like artwork, real estate, or
+  gold; or by paper goods like shares in a company or fiat currency held by a trusted party,
+  providing a stable, permanent launchpad for stablecoins and Central Bank Digital Currencies.
 
-Public utility parachains would typically grant
-privileged business logic to Polkadot’s governance. Just as the Polkadot Relay Chain has several
-privileged functions like setting the validator count or allocating DOT from the Treasury, these
-parachains can have privileged functions like changing system parameters or registering an asset.
+Public utility parachains would typically grant privileged business logic to Polkadot’s governance.
+Just as the Polkadot Relay Chain has several privileged functions like setting the validator count
+or allocating DOT from the Treasury, these parachains can have privileged functions like changing
+system parameters or registering an asset.
 
-Because public utility chains add functionality beyond the scope of the Relay Chain, we expect the
-network stakeholders to approve them only in rare scenarios.
+Because public utility chains add functionality beyond the scope of the Relay Chain, they will
+likely be approved by the network stakeholders only in rare scenarios.
 
 ## Examples
 
