@@ -27,7 +27,7 @@
     "generateErrorTable": "node scripts/generateErrorTable.js >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.6"
+    "docusaurus": "^1.14.7"
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
