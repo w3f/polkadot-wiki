@@ -229,9 +229,12 @@ Note that a deposit of 2.5KSM is required for every sub-account.
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.
 
-![Clearing an identity](assets/identity/clear.gif)
+To clear an identity:
 
-Clearing is done through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics).
+1. Navigate to the [Accounts UI](https://polkadot.js.org/apps/#/accounts).
+2. Click the three dots corosponding to the account you want to clear and select 'Set on-chain
+   identity'.
+3. Select 'Clear Identity', and sign and submit the transaction.
 
 **Killing:** The Council can kill an identity that it deems erroneous. This results in a slash of
 the deposit.
