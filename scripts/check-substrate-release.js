@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest";
-import axios from "axions";
+import axios from "axios";
 import fs from "fs";
 
 (async () => {
