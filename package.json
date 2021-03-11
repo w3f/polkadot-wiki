@@ -37,7 +37,7 @@
     "@polkadot/keyring": "^6.0.5",
     "axios": "^0.21.1",
     "fs-extra": "^9.1.0",
-    "ipfs-http-client": "^49.0.3",
+    "ipfs-http-client": "^49.0.4",
     "katex": "^0.13.0",
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.4.6",
