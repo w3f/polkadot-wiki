@@ -27,19 +27,51 @@ The Polkadot Host (PH) requires that the state transitions performed on parachai
 
 Polkadot supports a limited number of parachains, currently estimated to be about 100. As the number of slots is limited, Polkadot has several ways to allocate the slots:
 
-- System level parachains
+- Polkadot governance granted parachains, or "common good" parachains
 - Auction granted parachains
 - Parathreads
 
-System parachains are those deemed as a "common good" for the network, such as bridges to other networks or chains that remove functionality from the Relay Chain, e.g. a governance parachain. These typically do not have an economic model of their own and help remove transactions from the Relay Chain, allowing for more efficient parachain processing.
+["Common Good" parachains](learn-parachains#common-good-parachains) are allocated by Polkadot's on-chain governance system, and are deemed as a "common good" for the network, such as bridges to other networks or chains. They are usually considered system level chains or public utility chains. These typically do not have an economic model of their own and help remove transactions from the Relay Chain, allowing for more efficient parachain processing.
 
-Auction granted parachains are granted in a permissionless [auction](learn-auction). Parachain teams can either bid with their own DOT tokens, or source them from the community using the [crowdloan functionality](learn-crowdloan).
+[Auction granted parachains](learn-auction) are granted in a permissionless auction. Parachain teams can either bid with their own DOT tokens, or source them from the community using the [crowdloan functionality](learn-crowdloan).
 
 [Parathreads](learn-parathreads) have the same API as parachains, but are scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
 ### Slot Expiration
 
 When a parachain wins an auction, the DOT that it bid gets reserved until the end of the lease. Reserved balances are non-transferrable and cannot be used for staking. At the end of the lease, the DOT is unreserved. Parachains that have not secured a new lease to extend their slot will automatically become parathreads.
+
+## Common Good Parachains
+
+"Common Good" parachains are parachain slots reserved for functionality that benefits the the Polkadot ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire network can realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider problem. They are not allocated via the parachain auction process, but by Polkadot's on-chain governance system.
+
+The purpose of these parachains will probably fall into one of two categories: system level chains or public utility chains.
+
+### System Level Chains
+
+System level chains move functionality from the Relay Chain into parachains, minimizing the administrative use of the Relay Chain. For example, a governance parachain could move all the Polkadot governance processes from the Relay Chain into a parachain. Adding a system level chain is generally uncontroversial, because they merely move functionality that the stakeholders already agreed was useful from one place (the Relay Chain) to another (a parachain).
+
+Moving the logic from the Relay Chain to a parachain is an optimization that makes the entire network more efficient. All validators need to process all Relay Chain transactions, but split into small groups to validate parachains in parallel. By moving system level logic to a parachain, and allowing the processing to be done by a subgroup of validators instead of all, it frees capacity in the Relay Chain for its primary function: validating parachains. Adding a system level chain could make the network capable of processing several more parachains. Rather than taking a slice of a 100 parachain pie, a system level chain takes one slice and bakes a bigger pie.
+
+Examples of potential system level chains include parachains for balances, elections (for both staking and Council), governance, and identity. Eventually, the Relay Chain could become transactionless, as in, it would only validate parachain state transitions and all of its current transactional functionality would exist within parachains.
+
+The vast majority of common good chains will likely be the unopinionated system level chains.
+
+### Public Utility Chains
+
+Public utility chains add functionality that doesn’t exist yet, but that the stakeholders believe will add value to the entire network. Because public utility chains add new functionality, there is a subjective component to their addition: the stakeholders of the network must believe that it is worth allocating a slot that would otherwise go to the winners of an auction, and thus would have an objective expression of conviction from its backers. Governance provides the means to internalize the value of the parachain slot and distribute it across all members of the network.
+
+Public utility chains will always be fully aligned with their Relay Chain stakeholder base. This means that they will adopt the Relay Chain's native token (i.e. DOT or KSM) as their native token and respect any messages incoming from the Relay Chain and system level parachains at face value.
+
+Some examples of potential public utility chains are bridges, DOT-denominated smart contract platforms, and generic asset chains. All of these could operate without a new token:
+
+- A bridge could add its own native token to charge as a toll, but in many cases that would be arbitrary value capture, when it could just as well use DOT and/or the bridged chain’s assets in its fee mechanism.
+- A DOT-denominated smart contract layer-one blockchain would allow Wasm smart contract execution using DOT as the native asset with which to pay gas.
+- A generic assets chain would allow anyone to place a deposit in DOT to deploy their asset on-chain. Assets on this chain could be backed by physical goods like artwork, real estate, or gold; or by paper goods like shares in a company or fiat currency held by a trusted party, providing a stable, permanent launchpad for stablecoins and Central Bank Digital Currencies.
+
+Public utility parachains would typically grant privileged business logic to Polkadot’s governance. Just as the Polkadot Relay Chain has several privileged functions like setting the validator count or allocating DOT from the Treasury, these parachains can have privileged functions like changing system parameters or registering an asset.
+
+Because public utility chains add functionality beyond the scope of the Relay Chain, they will likely be approved by the network stakeholders only in rare scenarios.
 
 ## Examples
 
