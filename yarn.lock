@@ -928,10 +928,10 @@
     pirates "^4.0.0"
     source-map-support "^0.5.16"
 
-"@babel/runtime@^7.12.1", "@babel/runtime@^7.13.9", "@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  version "7.13.9"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.9.tgz#97dbe2116e2630c489f22e0656decd60aaa1fcee"
-  integrity sha512-aY2kU+xgJ3dJ1eU6FMB9EH8dIe8dmusF1xEku52joLvw6eAFN0AI+WxCLDnpev2LEejWBAy2sBvBOBAjI3zmvA==
+"@babel/runtime@^7.12.1", "@babel/runtime@^7.13.8", "@babel/runtime@^7.13.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+  version "7.13.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
+  integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1377,7 +1377,7 @@
   resolved "https://registry.yarnpkg.com/@restart/context/-/context-2.1.4.tgz#a99d87c299a34c28bd85bb489cb07bfd23149c02"
   integrity sha512-INJYZQJP7g+IoDUh/475NlGiTeMfwTXUEr3tmRneckHIxNolGOW9CTq83S8cxq0CgJwwcMzMJFchxvlwe7Rk8Q==
 
-"@restart/hooks@^0.3.21", "@restart/hooks@^0.3.25":
+"@restart/hooks@^0.3.25", "@restart/hooks@^0.3.26":
   version "0.3.26"
   resolved "https://registry.yarnpkg.com/@restart/hooks/-/hooks-0.3.26.tgz#ade155a7b0b014ef1073391dda46972c3a14a129"
   integrity sha512-7Hwk2ZMYm+JLWcb7R9qIXk1OoUg1Z+saKWqZXlrvFwT3w6UArVNWgxYOzf+PJoK9zZejp8okPAKTctthhXLt5g==
@@ -1442,10 +1442,10 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@types/react-transition-group@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.0.tgz#882839db465df1320e4753e6e9f70ca7e9b4d46d"
-  integrity sha512-/QfLHGpu+2fQOqQaXh8MG9q03bFENooTb/it4jr5kKaZlDQfWvjqWZg48AwzPVMBHlRuTRAY7hRHCEOXz5kV6w==
+"@types/react-transition-group@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.1.tgz#e1a3cb278df7f47f17b5082b1b3da17170bd44b1"
+  integrity sha512-vIo69qKKcYoJ8wKCJjwSgCTM+z3chw3g18dkrDfVX665tMH7tmbDxEAnPdey4gTlwZz5QuHGzd+hul0OVZDqqQ==
   dependencies:
     "@types/react" "*"
 
@@ -7298,19 +7298,19 @@ raw-body@~1.1.0:
     bytes "1"
     string_decoder "0.10"
 
-react-bootstrap@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-1.5.1.tgz#47cda280b5208c8a9f24d04dafd38d9d90c9695c"
-  integrity sha512-jbJNGx9n4JvKgxlvT8DLKSeF3VcqnPJXS9LFdzoZusiZCCGoYecZ9qSCBH5n2A+kjmuura9JkvxI9l7HD+bIdQ==
+react-bootstrap@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-1.5.2.tgz#07dabec53d10491a520c49f102170b440fa89008"
+  integrity sha512-mGKPY5+lLd7Vtkx2VFivoRkPT4xAHazuFfIhJLTEgHlDfIUSePn7qrmpZe5gXH9zvHV0RsBaQ9cLfXjxnZrOpA==
   dependencies:
-    "@babel/runtime" "^7.4.2"
+    "@babel/runtime" "^7.13.8"
     "@restart/context" "^2.1.4"
-    "@restart/hooks" "^0.3.21"
+    "@restart/hooks" "^0.3.26"
     "@types/classnames" "^2.2.10"
     "@types/invariant" "^2.2.33"
     "@types/prop-types" "^15.7.3"
     "@types/react" ">=16.9.35"
-    "@types/react-transition-group" "^4.4.0"
+    "@types/react-transition-group" "^4.4.1"
     "@types/warning" "^3.0.0"
     classnames "^2.2.6"
     dom-helpers "^5.1.2"
@@ -7319,7 +7319,7 @@ react-bootstrap@^1.5.1:
     prop-types-extra "^1.1.0"
     react-overlays "^5.0.0"
     react-transition-group "^4.4.1"
-    uncontrollable "^7.0.0"
+    uncontrollable "^7.2.1"
     warning "^4.0.3"
 
 react-dev-utils@^11.0.1:
@@ -8626,10 +8626,10 @@ unbzip2-stream@^1.0.9:
     buffer "^5.2.1"
     through "^2.3.8"
 
-uncontrollable@^7.0.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/uncontrollable/-/uncontrollable-7.2.0.tgz#89459b3cda01489bba43f00d295009440221d787"
-  integrity sha512-PX0BS7opRjIDoYRfe89vMa6OziCpBBQhTxLjIeyebwQTiIslUqL2FuckNqIpsYY4qs4dSFT1gyC+TLTnQSQPpw==
+uncontrollable@^7.0.0, uncontrollable@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/uncontrollable/-/uncontrollable-7.2.1.tgz#1fa70ba0c57a14d5f78905d533cf63916dc75738"
+  integrity sha512-svtcfoTADIB0nT9nltgjujTi7BzVmwjZClOmskKu/E8FW9BXzg9os8OLr4f8Dlnk0rYWJIWr4wv9eKUXiQvQwQ==
   dependencies:
     "@babel/runtime" "^7.6.3"
     "@types/react" ">=16.9.11"
