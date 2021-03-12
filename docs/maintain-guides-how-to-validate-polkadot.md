@@ -20,7 +20,7 @@ very rewarding, knowing that you contribute to the security of a decentralized n
 your stash.
 
 Since security is so important to running a successful validator, you should take a look at the
-[secure validator](maintain-guides-secure-validator) information to make you understand the factors
+[secure validator](maintain-guides-secure-validator) information to make sure you understand the factors
 to consider when constructing your infrastructure. The Web3 Foundation also maintains a
 [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator)
 that you can use by deploying yourself (video walkthrough is available
