@@ -50,28 +50,38 @@ polkadot --chain westend
 
 通过在 [Telemetry](https://telemetry.polkadot.io/#list/Westend) 查看您的节点是否已经连接。
 
+### Differences
+
+Runtime differences (e.g. existential and multisignature deposit sizes) between the different networks can be found by doing a `diff` between the `src/lib.rs` of the respositories. For example, to compare the Polkadot and Westend runtimes:
+
+- `git clone https://github.com/paritytech/polkadot && cd polkadot/runtime`
+- `ls` - show the available runtimes
+- `diff polkadot/src/lib.rs westend/src/lib.rs`
+
+You can also paste the runtimes ([Polkadot](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs), [Westend](https://github.com/paritytech/polkadot/blob/master/runtime/westend/src/lib.rs)) into a web-based diff tool like [Diffchecker](https://www.diffchecker.com/) if you're not comfortable with the CLI.
+
 ## Substrate 网络
 
 To connect to a Substrate public network first follow the [instructions](https://substrate.dev/docs/en/knowledgebase/getting-started) for installing the Substrate executable.
 
 ### Flaming Fir
 
-Flaming Fir 是公开的 Substrate 测试网络。它包含一些不在 Polkadot runtime 包含的 pallets。
+Flaming Fir is the public Substrate test network. It contains some pallets that will not be included in the Polkadot runtime.
 
-Flaming Fir 是从 master 构建的，是运行 Substrate 时的默认选项。
+Flaming Fir is built from the tip of master and is the default option when running the Substrate executable.
 
-运行 Substrate 不带标志或表明状态 `fir`:
+Run Substrate without a flag or explicitly state `fir`:
 
 ```
 substrate --chain fir
 ```
 
-并且您将连接并开始同步 Flaming Fir。
+and you will connect and start syncing Flaming Fir.
 
 ## Telemetry 监察
 
-如果您连接到公開网络，节点的默认配置将连接到公開 [Telemetry](https://telemetry.polkadot.io/) 服务。
+If you connect to the public networks, the default configuration for your node will connect it to the public [Telemetry](https://telemetry.polkadot.io/) service.
 
-您可以通过正确的网络网页上找到您的节点名称来验证您的节点是否已连接。
+You can verify that your node is connected by navigating to the correct network on the dashboard and finding the name of your node.
 
-节点页面有个内置的搜索功能。只需在主窗口中输入即可使用。
+There is a built-in search function for the nodes page. Simply start typing keystrokes in the main window to make it available.
