@@ -227,19 +227,7 @@ verified. You can then compare that to the current highest block via
 [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the
 [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
-> **Note:** If you do not already have DOT, this is as far as you will be able to go until the end
-> of the soft launch period. You can still run a node, but you will need to have a minimal amount of
-> DOT to continue, as balance transfers are disabled during the soft launch. Please keep in mind
-> that even for those with DOT, they will only be indicating their _intent_ to validate; they will
-> also not be able to run a validator until the NPoS phase starts.
-
 ## Bond DOT
-
-> **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you
-> are setting up a validator during this time you may not be able to make your stash and controller
-> two separate accounts, as is recommended. You must make them the same account, meaning that you
-> will bond the account to itself. However it is highly recommended that you change your controller
-> as soon as possible.
 
 It is highly recommended that you make your controller and stash accounts be two separate accounts.
 For this, you will create two accounts and make sure each of them have at least enough funds to pay
@@ -256,7 +244,7 @@ It is now time to set up our validator. We will do the following:
 - Select the Controller. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
-"Account Actions", and then the "New stake" button.
+"Account Actions", and then the "+ Stash" button.
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
