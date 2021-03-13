@@ -150,11 +150,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 如果您想估计还需要再多少时间，服务器日志(在 ` polkadot ` STDOUT 程序中显示)显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Polkadot%20CC1)或当前[ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
 
-> **Note:** If you do not already have DOT, this is as far as you will be able to go until the end of the soft launch period. You can still run a node, but you will need to have a minimal amount of DOT to continue, as balance transfers are disabled during the soft launch. Please keep in mind that even for those with DOT, they will only be indicating their _intent_ to validate; they will also not be able to run a validator until the NPoS phase starts.
-
 ## Bond DOT
-
-> **Note:** Transfers are disabled during the soft launch phase of Polkadot. This means that if you are setting up a validator during this time you may not be able to make your stash and controller two separate accounts, as is recommended. You must make them the same account, meaning that you will bond the account to itself. However it is highly recommended that you change your controller as soon as possible.
 
 强烈建议您将 controller 和 stash 帐号设为两个单独的帐号。 为此，您将创建两个帐号，并确保每个帐号至少有足够的资金来支付进行交易的费用。 将您的大部分资金保留在 stash 帐号中，因为这是您存入资金的托管人。
 
@@ -165,7 +161,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 - Bond the DOT of the Stash account. These DOT will be put at stake for the security of the network and can be slashed.
 - 选择 Controller，Controller 是决定何时开始或停止验证的帐户。
 
-首先前往[ Staking ](https://polkadot.js.org/apps/#/staking/actions)部分。按下 "Account Actions"，然后再按 "New stake" 按钮。
+First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on "Account Actions", and then the "+ Stash" button.
 
 ![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
