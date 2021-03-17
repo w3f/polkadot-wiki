@@ -31,6 +31,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 - Private messages sent to you over Telegram, Twitter, and other social media - admins or employees
   will never contact you.
 - "Giveaways" advertising that you "send us some DOT/KSM, we'll send you double back".
+- Sites where you need to enter your seed phrase in order to "sync" your account, claim tokens, unblock a transactions etc.
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of any of our teams.
 - Scammers will take official videos, add "giveaway" text around it so that it looks like the
   giveaway is supported by Polkadot, Web3 Foundation, Parity, or another well-known entity.
@@ -68,10 +69,18 @@ be found below:
 
 ### Keep your personal data secure
 
-One should _never_ share their secret key with anyone, nor any other personal data. It is
-recommended to store your information safe on paper or on a hardware wallet. Never enter your seed
-or mnemonic phrase directly into a website. If you are concerned a wallet could be fake, please
+You should _never_ share your seed phrase, password, private keys or any other personal data with anyone. If you are concerned a wallet could be fake, please
 check out our official list of supported wallets [here](build-wallets).
+
+Some simple things that you can do to keep your assets and information secure from hackers:
+- Keep your seed phrase only on paper, in a secret and secure location.
+- DO NOT keep your seed phrase on any electronic medium, like the cloud, on your computer, on a USB drive etc.
+- Never enter your seed or mnemonic phrase directly into a website.
+- Your seed phrase is meant as a backup in case you lose access to your wallet. Use it only for that purpose and only in wallets you've used before and trust.
+- Your passwords should be strong and unique. It is recommended that you use a [password manager app](https://www.howtogeek.com/141500/why-you-should-use-a-password-manager-and-how-to-get-started/) to create and store your passwords.
+- Keep your computer free of malware. Although an antivirus can be of great help, it's not a panacea. Safe browsing and downloading is the only way to be sure your computer is clean.
+- Avoid installing browser extensions from sources you don't trust explicitly. 
+- Store your assets in cold storage, like a hardware wallet or [Parity Signer](https://www.parity.io/signer/). 
 
 ### Always check the source
 
@@ -84,7 +93,7 @@ is. Never enter any personal data if you feel the source could be a scam. Feel f
 
 A good practice to take in consideration is to verify the address you are sending crypto to. If you
 don't know that account, you probably shouldn't be sending your assets there. It's your
-responsibility to make sure that you understand where you are sending your funds, crypto is a
+responsibility to make sure that you understand where you are sending your funds. Crypto is a
 decentralized space and your only recourse if a mistake is made is by appealing to the council (who
 usually will not get involved in matters of mistaken transfers - see below).
 
