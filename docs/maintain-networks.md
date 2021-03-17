@@ -16,47 +16,56 @@ Polkadot executable.
 
 ### Polkadot Mainnet
 
-The Polkadot mainnet is not released yet. Instructions will be here once the network is available.
+Currently Polkadot is built from the tip of master and is the default option when starting a node.
+
+To start a Polkadot node, run the Polkadot binary:
+
+```bash
+polkadot
+```
+
+and you will connect and start syncing to Polkadot.
+
+Check your node is connected by viewing it on
+[Telemetry](https://telemetry.polkadot.io/#/Polkadot%20CC3) (you can set a custom name by specifying
+`--name "my custom name"`)
 
 ### Kusama Canary Network
 
-The Kusama canary network is an early, unaudited version of Polkadot that is running today and holds
-real economic value.
+Kusama is a canary network and holds real economic value.
 
-Currently Kusama is built from the tip of master and is the default option when starting a node.
+Run the Polkadot binary and specify `kusama` as the chain:
 
-Run the Polkadot binary:
-
-```
-polkadot
+```bash
+polkadot --chain=kusama
 ```
 
 and you will connect and start syncing to Kusama.
 
 Check your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3).
+[Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) (you can set a custom name by specifying
+`--name "my custom name"`)
 
 ### Westend Test Network
 
 Westend is the latest test network for Polkadot. The tokens on this network are called _Westies_ and
 they purposefully hold no economic value.
 
-Currently Westend is built from the tip of master and requires a commandline flag to access.
+Run the Polkadot binary and specify `westend` as the chain:
 
-Run the Polkadot binary with a `chain` option:
-
-```
-polkadot --chain westend
+```bash
+polkadot --chain=westend
 ```
 
 and you will connect and start syncing to Westend.
 
+Check your node is connected by viewing it on
+[Telemetry](https://telemetry.polkadot.io/#list/Westend) (you can set a custom name by specifying
+`--name "my custom name"`)
+
 #### Westend Faucet
 
 Follow the instruction [here](learn-DOT#getting-westies) for instructions on acquiring Westies.
-
-Check your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#list/Westend).
 
 ### Differences
 
@@ -89,7 +98,7 @@ executable.
 
 Run Substrate without a flag or explicitly state `fir`:
 
-```
+```bash
 substrate --chain fir
 ```
 
