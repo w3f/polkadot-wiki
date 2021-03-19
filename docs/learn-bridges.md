@@ -19,35 +19,36 @@ page a work in progress. It will be updated as more information is determined an
 > interoperability technology that allows parachains to trustlessly communicate, please see the
 > dedicated [crosschain][] page on the Wiki.
 
-# Types of bridges
+## Bridging Methods
 
-There are two types of bridges in the Polkadot ecosystem.
+Building a bridge that is as decentralized and trustless as possible can be done through any of the
+following methods (ordered by suggested methodology):
 
-- _Bridge modules_ - Bridge modules are possibly system-level or community-deployed parachains that
-  serve a distinct purpose as consensus-adaptors to external chains.
-- _Bridge contracts_ - Similar to bridge modules, however they exist on specific parachains that
-  support smart contracts.
+- _Bridge pallets_ - For Substrate-native chains, use a bridge pallet (eg. Kusama <> Polkadot
+  bridge, since both networks parachains use Substrate).
+- _Smart contracts_ - If the chain is not on Substrate, you should have smart contracts on the
+  non-Substrate chain to bridge (eg. Ethereum mainnet will have a bridge smart contract that
+  initiates Eth transactions based on incoming XCMP messages).
+- _Higher-order protocols_ - If your chain does not support smart contracts (eg. Bitcoin), you
+  should use [XClaim][xclaim] or similar protocols to bridge.
 
-## Bridge modules
+### via Bridge Pallets
 
-Receiving messages on Polkadot from an external, non-parachain blockchain can be built as a
-parachain module. The parachain module can then be deployed to Polkadot either as a system-level
+Receiving messages on Polkadot from an external, non-parachain blockchain can be possible through a
+Substrate pallet. The Substrate instance can then be deployed to Polkadot either as a system-level
 parachain (native extension to the core Polkadot software) or as a community-operated parachain.
 
-Bridge modules allow for non-parachains to act as a "virtual parachain" and extend the external
-chain's functionality with the interoperability benefits of Polkadot.
+An example of a bridge that would strictly use bridge pallets would be a Kusama <> Polkadot bridge,
+since both use parachains based on Substrate.
 
-Bridge modules will be written with particular chains in mind such as Bitcoin or Ethereum. This
-means that blockchains that are based on these will likely be easily supported as well (e.g.
-Litecoin and other Bitcoin-forks).
+For the standalone chains that will not have a parachain bridging module on Polkadot
+(non-Substrate), it will be necessary to deploy bridge contracts (see below).
 
-> To learn more on how Bitcoin and Ethereum can Cooperate and Collaborate Through Polkadot, check
-> out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
+### via Smart Contracts
 
-For the standalone chains that will not have a parachain bridging module on Polkadot, it will be
-necessary to deploy bridge contracts (see below).
-
-## Bridge contracts
+Given the generality of blockchain platforms with Turing-complete smart contract languages, it is
+possible to bridge Polkadot and any other smart contract capable blockchain (Ethereum, EOS, Tezos,
+etc).
 
 Those who are already familiar with Ethereum may know of the now archived [Parity Bridge][] and the
 efforts being made to connect PoA sidechains to the Ethereum mainnet. The Parity bridge is a
@@ -57,16 +58,35 @@ chains, `main` and `side`. Ether deposited into the contract on `main` generates
 denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract
 on `side` can free up Ether on `main`.
 
-In the case of Polkadot, it should be possible to have a bridge contract deployed on, say, an
-EVM-based standalone chain and a contract deployed on a smart contract capable parachain. This would
-not necessarily be the most efficient method of bridging, but given the generality of a
-Turing-complete parachain it would be possible to bridge Polkadot and any other smart contract
-capable blockchain.
+> To learn more on how Bitcoin and Ethereum can Cooperate and Collaborate Through Polkadot, check
+> out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
 
-## Bitcoin Bridge
+### via Higher-Order Protocols
+
+Higher-order protocols (like [XCLAIM][xclaim]) can be used to bridge, but should only be used when
+other options are not available. XCLAIM, in particular, requires any swappable asset to be backed by
+a collateral of higher value than the swappable assets, which adds additional overhead.
+
+An example of a network that would be well-suited for higher-order protocols would be Bitcoin, since
+it does not support smart-contracts and it's not based on Substrate.
+
+## Examples
+
+### Ethereum Bridge (Smart Contracts <> Polkadot)
+
+As explained by Dr. Gavin Wood in a [blog post][eth bridging blog] from late 2019, there are three
+ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ecosystem.
+
+1. Polkadot <-> Ethereum Public Bridge.
+1. Substrate <-> Parity Ethereum (Openethereum) Bridge.
+1. The Substrate EVM module.
+
+Please read the blog article for fuller descriptions of each one of these options.
+
+### Bitcoin Bridge (XCLAIM <> Substrate <> Polkadot)
 
 The Interlay team has written a [specification][interlay] on a Bitcoin bridge that is based on the
-[XClaim][] design paper. The protocol enables a two-way bridge between Polkadot and Bitcoin. It
+[XCLAIM][] design paper. The protocol enables a two-way bridge between Polkadot and Bitcoin. It
 allows holders of BTC to "teleport" their assets to Polkadot as PolkaBTC, and holders of PolkaBTC to
 burn their assets for BTC on the Bitcoin chain.
 
@@ -78,18 +98,9 @@ components:
 
 For full details on how it works please refer to the specification.
 
-## Ethereum Bridge
+## Additional Resources and Examples
 
-As explained by Dr. Gavin Wood in a [blog post][eth bridging blog] from late 2019, there are three
-ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ecosystem.
-
-1. Polkadot <-> Ethereum Public Bridge.
-1. Substrate <-> Parity Ethereum (Openethereum) Bridge.
-1. The Substrate EVM module.
-
-Please read the blog article for fuller descriptions of each one of these options.
-
-## Bridge Builders
+### For Bridge Builders
 
 If your team is interested in building a bridge between an external chain and Polkadot, there may be
 funding available from the W3F [grants program][]. Please first check that the chain you are
@@ -97,33 +108,27 @@ intending to bridge between hasn't already been built or is in the process of be
 team. More popular chains with clear use cases will be given priority, and novel bridge designs are
 welcome.
 
-## Resources
-
-### Smart Contract Bridges
+### Resources and Examples
 
 - [Parity Bridges Common Resources](https://github.com/paritytech/parity-bridges-common)
-- [POA Network](https://poa.network/)
-- [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA
-  Network's implementation of Parity's bridge chain solution.
-- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to
-  Edgeware chain (a Substrate-based chain) - now defunct and not maintained, but a good example.
-
-### Runtime Module Bridges
-
-- [Bifrost][bifrost] - The Bifrost team was awarded a grant in W3F Grants [Wave 5][] to build a
-  bridge to EOS.
 - [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe and Centrifuge
   were awarded a grant in W3F Grants [Wave 5][] to build a Substrate to Ethereum two-way bridge.
+- [PolkaBTC (Bitcoin <> Polkadot Bridge)](https://docs.polkabtc.io/#/)
+- [EOS Bridge][bifrost] - The Bifrost team was awarded a grant in W3F Grants [Wave 5][] to build a
+  bridge to EOS.
 - [Tendermint Bridge](https://github.com/ChorusOne/tendermint-light-client) - ChorusOne was awarded
   a grant in [Wave 5][] to build a GRANDPA light client in Tendermint.
 - [Interlay BTC Bridge][interlay] - The Interlay team was awarded a grant in W3F grants [Wave 5][]
   to build a trust-minimized BTC bridge.
 - [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/master/xrml/xbridge/bitcoin) -
   ChainX have implemented a BTC to Substrate bridge for their parachain.
-
-### Design
-
-- [XClaim][] - XClaim design for bridging Proof-of-Work chains in a trustless way.
+- [POA Network](https://poa.network/)
+- [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA
+  Network's implementation of Parity's bridge chain solution.
+- [Edgeth Bridge](https://github.com/hicommonwealth/edgeth_bridge/) - a bridge from Ethereum to
+  Edgeware chain (a Substrate-based chain) - now defunct and not maintained, but a good example.
+- [XCLAIM][] - XCLAIM is a framework for achieving trustless and efficient cross-chain exchanges
+  using cryptocurrency-backed assets.
 
 [crosschain]: learn-crosschain
 [parity bridge]: https://github.com/paritytech/parity-bridge
