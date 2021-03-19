@@ -46,13 +46,14 @@ In order to get your reserved tokens back, you will need to remove your vote. On
 when you're done participating in elections and you no longer want your reserved tokens to count for
 the councillors that you approve.
 
-Go to the "Developer" > "Extrinsics" tab on
+Go to the "Governance" > "Council" tab on the
 [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps).
 
-Choose the account you want to remove the vote of and select the "electionsPhragmen ->
-removeVoter()" options and submit the transaction.
+Under the "Council overview" tab, click on "Vote".
 
 ![](assets/council/polkadotjs_removeVoter.png)
+
+Issue the "Unvote all" option.
 
 When the transaction is included in a block you should have your reserved tokens made liquid again
 and your vote will no longer be counting for any councillors in the elections starting in the next
