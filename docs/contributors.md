@@ -70,6 +70,16 @@ He has a Bachelor of Science in Aeronautical and Mechanical Engineering.
 
 ---
 
+### Danny Salman
+
+- email: [danny@web3.foundation](mailto:danny@web3.foundation)
+- matrix / riot / element: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
+
+Danny is a Technical Educator at the Web3 Foundation from Canada. He has a keen interest for blockchain 
+technologies and has an admiration for the web 3.0 vision. Danny focuses on educational content at the 
+Web3 Foundation and acts on his passion for education. He is completing a B.Eng in Computer Engineering 
+with a minor in Philosophy at Ryerson University. 
+
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
