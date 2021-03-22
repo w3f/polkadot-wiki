@@ -6,7 +6,7 @@ sidebar_label: Glossary
 
 ## Active Nomination
 
-A validator (or validators) that a nominator is actively validating this era. The nominator is
+A validator (or validators) that a nominator has selected to nominate and is actively validating this era. The nominator is
 placing their stake behind this validator for this era and will potentially receive staking rewards
 in return for doing so.
 
@@ -28,7 +28,7 @@ mechanisms such as Polkadot's NPoS algorithm.
 
 ## BABE
 
-\_B_lind \_A_ssignment of \_B_lock \_E_xtension is Polkadot's block production mechanism.
+Blind Assignment of Block Extension is Polkadot's block production mechanism.
 
 ## Block
 
