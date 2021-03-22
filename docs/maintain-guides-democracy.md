@@ -269,7 +269,7 @@ For more material on adding and removing Governance proxies, as well as other ty
 
 ## Interpreting On-Chain Voting Data
 
-Consider the following example showcasing how votes would be displayed on a block explorer. 
+Consider the following example showcasing how votes would be displayed on a block explorer.
 
 ```
 Nay 0.1x => 0
@@ -288,10 +288,10 @@ Aye 5x => 133
 Aye 6x => 134
 ```
 
-At first glance, it may be difficult to interpret what you voted on. We need to take a step back and 
+At first glance, it may be difficult to interpret what you voted on. We need to take a step back and
 consider the "voting data" at the binary level.
 
-The vote is stored as a byte using a bitfield data structure and displayed on the block explorer as a 
-decimal integer. The bitfield stores both the conviction and aye/nay boolean, where the boolean is 
-represented using the MSB of the byte. This would mean that the grouping of the 7 remaining bits is 
-used to store the conviction. 
+The vote is stored as a byte using a bitfield data structure and displayed on the block explorer as
+a decimal integer. The bitfield stores both the conviction and aye/nay boolean, where the boolean is
+represented using the MSB of the byte. This would mean that the grouping of the 7 remaining bits is
+used to store the conviction.
