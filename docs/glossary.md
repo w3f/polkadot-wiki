@@ -6,9 +6,9 @@ sidebar_label: Glossary
 
 ## Active Nomination
 
-A validator (or validators) that a nominator has selected to nominate and is actively validating this era. The nominator is
-placing their stake behind this validator for this era and will potentially receive staking rewards
-in return for doing so.
+A validator (or validators) that a nominator has selected to nominate and is actively validating
+this era. The nominator is placing their stake behind this validator for this era and will
+potentially receive staking rewards in return for doing so.
 
 ## Alexander
 
