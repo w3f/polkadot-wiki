@@ -24,12 +24,12 @@ page a work in progress. It will be updated as more information is determined an
 Building a bridge that is as decentralized and trustless as possible can be done through any of the
 following methods (ordered by suggested methodology):
 
-- _Bridge pallets_ - For Substrate-native chains, use a bridge pallet (eg. Kusama <> Polkadot
+- _Bridge pallets_ - For Substrate-native chains, use a bridge pallet (e.g. Kusama <> Polkadot
   bridge, since both networks parachains use Substrate).
 - _Smart contracts_ - If the chain is not on Substrate, you should have smart contracts on the
-  non-Substrate chain to bridge (eg. Ethereum mainnet will have a bridge smart contract that
+  non-Substrate chain to bridge (e.g. Ethereum mainnet will have a bridge smart contract that
   initiates Eth transactions based on incoming XCMP messages).
-- _Higher-order protocols_ - If your chain does not support smart contracts (eg. Bitcoin), you
+- _Higher-order protocols_ - If your chain does not support smart contracts (e.g. Bitcoin), you
   should use [XClaim][xclaim] or similar protocols to bridge.
 
 ### via Bridge Pallets
