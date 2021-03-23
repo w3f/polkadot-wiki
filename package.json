@@ -46,7 +46,7 @@
     "react-bootstrap": "^1.5.2",
     "remarkable-katex": "^1.1.7",
     "replace-in-file": "^6.2.0",
-    "semver": "^7.3.4",
+    "semver": "^7.3.5",
     "yargs": "^16.2.0"
   }
 }
