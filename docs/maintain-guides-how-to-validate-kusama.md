@@ -15,7 +15,7 @@ very rewarding, knowing that you contribute to the security of a decentralized n
 your stash.
 
 Since security is so important to running a successful validator, you should take a look at the
-[secure validator](maintain-guides-secure-validator) information to make you understand the factors
+[secure validator](docs/maintain-guides-secure-validator.md) information to make you understand the factors
 to consider when constructing your infrastructure. The Web3 Foundation also maintains a
 [reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator)
 that you can use by deploying yourself. As you progress in your journey as a validator, you will
@@ -29,11 +29,11 @@ Riot. The team and other validators are there to help answer questions and provi
 ### How Many KSM Do I Need?
 
 You can have a rough estimate on that by using the methods listed
-[here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators
-are elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
+[here](docs/faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators
+are elected based on [Phragmén's algorithm](docs/learn-phragmen.md). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
-[nominators](learn-nominator). This means that as a minimum, you will need enough KSM to set up
-Stash and Controller [accounts](learn-keys) with the existential deposit, plus a little extra for
+[nominators](docs/learn-nominator.md). This means that as a minimum, you will need enough KSM to set up
+Stash and Controller [accounts](docs/learn-keys.md) with the existential deposit, plus a little extra for
 transaction fees. The rest can come from nominators.
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an
@@ -242,7 +242,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
-  [here](https://wiki.polkadot.network/en/latest/polkadot/learn-staking/#reward-distribution).
+  [here](docs/learn-simple-payouts.md).
   Starting with runtime version v2023 natively included in client version
   [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any
   custom address. If you'd like to redirect payments to an account that is neither the controller
@@ -367,7 +367,7 @@ validator set, you are now running a Kusama validator! If you need help, reach o
 
 The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
 to provide support for community validators. If you are interested in applying for the programme,
-you can find more information [on the wiki page](thousand-validators.md).
+you can find more information [on the wiki page](docs/thousand-validators.md).
 
 ## FAQ
 
