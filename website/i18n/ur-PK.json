@@ -106,7 +106,7 @@
         "sidebar_label": "Glossary"
       },
       "grants": {
-        "title": "Web3 Foundation Grantees",
+        "title": "Web3 Foundation Grants",
         "sidebar_label": "Grants"
       },
       "kusama-adverserial-cheatsheet": {
@@ -353,10 +353,6 @@
         "title": "Monitor your node",
         "sidebar_label": "Monitor your node"
       },
-      "maintain-guides-how-to-nominate-alexander": {
-        "title": "Be a Nominator (Alexander)",
-        "sidebar_label": "Be a Nominator (Alexander)"
-      },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",
         "sidebar_label": "Nominator Guide"
@@ -392,10 +388,6 @@
       "maintain-guides-how-to-validate-polkadot": {
         "title": "Run a Validator (Polkadot)",
         "sidebar_label": "How to run a Validator on Polkadot"
-      },
-      "maintain-guides-how-to-validate-alexander": {
-        "title": "Run a Validator (Alexander)",
-        "sidebar_label": "Run a Validator (Alexander)"
       },
       "maintain-guides-how-to-vote-councillor": {
         "title": "Voting for Councillors",

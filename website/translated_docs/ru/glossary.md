@@ -6,7 +6,7 @@ sidebar_label: Термины и определения
 
 ## Active Nomination
 
-A validator (or validators) that a nominator is actively validating this era. The nominator is placing their stake behind this validator for this era and will potentially receive staking rewards in return for doing so.
+A validator (or validators) that a nominator has selected to nominate and is actively validating this era. The nominator is placing their stake behind this validator for this era and will potentially receive staking rewards in return for doing so.
 
 ## Alexander
 
@@ -22,7 +22,7 @@ An authority is a generic term for the role in a blockchain that is able to part
 
 ## BABE
 
-\_B_lind \_A_ssignment of \_B_lock \_E_xtension is Polkadot's block production mechanism.
+Blind Assignment of Block Extension is Polkadot's block production mechanism.
 
 ## Block
 
