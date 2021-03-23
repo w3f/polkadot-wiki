@@ -70,6 +70,19 @@ He has a Bachelor of Science in Aeronautical and Mechanical Engineering.
 
 ---
 
+### Jake Hemmerle
+
+- email: [jake@web3.foundation](mailto:jake@web3.foundation)
+- matrix / riot / element: [@jake:web3.foundation](https://matrix.to/#/@jake:web3.foundation)
+- twitter: [@jakehemmerle](https://twitter.com/jakehemmerle)
+- telegram: [@jakehemmerle](https://t.me/jakehemmerle)
+
+Jake is a technical education intern at the Web3 Foundation and is completing his Bachelors in
+Computer science from the University of Cincinnati. He has been learning about blockchain technology
+since 2018 and has long personal interests in peer-to-peer systems, network protocols, applied
+cryptography and privacy enhancing technologies. Jake helps maintain the Wiki and is contributing to
+the w3f/schnorrkel library.
+
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
