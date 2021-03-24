@@ -461,7 +461,7 @@ and voting on consensus along with other validators.
 Vertical message passing consists of two separate types of message passing, Downward Message Passing
 (DMP) and Upward Message Passing (UMP). Downward messages pass from the Relay Chain to a parachain,
 although they may also originate from another parachain via
-[HRMP](#horiztonal-relay-routed-message-passing). Upward messages originate from parachains and go
+[HRMP](#horizotonal-relay-routed-message-passing). Upward messages originate from parachains and go
 up to the Relay Chain via runtime entry points.
 
 ## Voting
@@ -483,8 +483,7 @@ blockchain networks.
 
 ## Wasm
 
-An instruction format for a virtual, stack-based machine. Polkadot Runtime Modules are compiled to
-Wasm.
+The abbreviation for [WebAssembly](#webassembly).
 
 ## Watermark
 
