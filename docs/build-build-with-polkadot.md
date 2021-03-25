@@ -187,8 +187,8 @@ Polkadot as either a parachain or parathread.
 
 #### Cumulus
 
-The goal of [Cumulus](build-cumulus) is to be an extension of Substrate that will make any Substrate
-runtime compatible with Polkadot.
+The goal of [Cumulus](https://wiki.polkadot.network/docs/en/build-cumulus) is to be an extension of
+Substrate that will make any Substrate runtime compatible with Polkadot.
 
 It handles the network compatibility overhead that any parachain would need to implement to be
 connected to Polkadot. This includes:
@@ -209,7 +209,8 @@ In order to include your parachain into the Polkadot network, you will need to a
 slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
-[parachain auction](learn-auction) page of the wiki.
+{{ polkadot: [parachain auction](learn-auction) :polkadot }}
+{{ kusama: [parachain auction](mirror-learn-auction) :kusama }} page of the wiki.
 
 #### Parathread
 
@@ -219,7 +220,8 @@ and from then be able to start participating in the per-block auctions for inclu
 transition into the Relaychain.
 
 For more information on how parathread per-block auctions work, see the more detailed
-[parathread](learn-parathreads) page.
+{{ polkadot: [parathread](learn-parathreads) :polkadot }}
+{{ kusama: [parathread](mirror-learn-parathreads) :kusama }} page.
 
 ## So you want to build a smart contract...
 
@@ -267,7 +269,7 @@ and want to deploy to a live environment.
 
 Edgeware intends to at some point connect to Polkadot as a parachain that allows for smart
 contracts. At this point, the smart contracts would be able to interact with other pieces of the
-Polkadot ecosystem through [XCMP](learn-crosschain).
+Polkadot ecosystem through [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain).
 
 Edgeware general documentation can be found [here][edgeware documentation] and [how to deploy smart
 contracts on Edgeware here][edgeware contracts documentation].
@@ -354,7 +356,8 @@ the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matr
 about them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their
-questions. As always, keep up to date with Polkadot by following the [social channels](community).
+questions. As always, keep up to date with Polkadot and Kusamaby following the
+[social channels](https://wiki.polkadot.network/docs/en/community).
 
 Good luck!
 

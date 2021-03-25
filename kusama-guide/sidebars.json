@@ -5,7 +5,17 @@
       {
         "type": "subcategory",
         "label": "Get Started",
-        "ids": ["kusama-getting-started", "kusama-faucet", "kusama-claims", "kusama-endpoints", "mirror-thousand-validators"]
+        "ids": [
+          "kusama-getting-started",
+          "kusama-faucet",
+          "kusama-claims",
+          "kusama-endpoints",
+          "mirror-thousand-validators",
+          "mirror-learn-auction",
+          "mirror-learn-parachains",
+          "mirror-learn-parathreads",
+          "mirror-learn-crowdloans"
+        ]
       },
       {
         "type": "subcategory",

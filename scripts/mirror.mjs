@@ -30,6 +30,10 @@ const mirrored = [
   "maintain-guides-how-to-validate-kusama",
   "maintain-errors",
   "thousand-validators",
+  "learn-auction",
+  "learn-parachains",
+  "learn-parathreads",
+  "learn-crowdloans",
 ];
 
 for (const file of mirrored) {
