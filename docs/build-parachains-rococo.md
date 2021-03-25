@@ -82,9 +82,7 @@ XCMP, lateral transfers would allow for messages to be sent directly from one pa
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
 being. Lateral transfers work through the depository model, which means that in order to transfer
 tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited on
-chain 300. The reasoning behind this can be found on this
-[page here](https://substrate.dev/cumulus-workshop/#/4-cross-chain/3-lateral?id=depository-model).
-Lateral transfers are called HRMP, Horizontal Relay-Chain Message Passing.
+chain 300. Lateral transfers are called HRMP, Horizontal Relay-Chain Message Passing.
 
 Before we can actually send funds from one parachain to another, we must ensure that the chain's
 account on the recipient chain has some funds in it. In this example, Alice will be sending some
