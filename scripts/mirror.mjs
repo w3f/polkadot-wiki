@@ -34,6 +34,7 @@ const mirrored = [
   "learn-parachains",
   "learn-parathreads",
   "learn-crowdloans",
+  "build-parachains-rococo",
 ];
 
 for (const file of mirrored) {

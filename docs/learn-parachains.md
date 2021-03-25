@@ -5,6 +5,10 @@ sidebar_label: Parachains
 description: An introductory guide to Polkadot Parachains.
 ---
 
+> Note: For information on how to participate in the crowdloan and parachain auction testing on
+> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo) :polkadot }}
+> {{ kusama: [Rococo page](mirror-build-parachains-rococo) :kusama }}.
+
 ![One parachain](assets/network/one_parachain.png)
 
 A parachain is an application-specific data structure that is globally coherent and validatable by

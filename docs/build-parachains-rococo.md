@@ -105,15 +105,7 @@ Alice is now able to send from her account on parachain 200 to her account on pa
 
 ![rococo lateral transfer part 2](assets/rococo/rococo-lateral-transfer2.png)
 
-# Rococo V1 Parachain Requirements
-
-The purpose of this document is to clearly describe the requirements for chain builders who wish to
-participate as [parachains](https://wiki.polkadot.network/docs/en/learn-parachains#docsNav) in the
-[Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769).
-Furthermore, this document aims to provide helpful guidance in order to create a more successful
-outcome for all involved, for rather Parachain Host specific implementations it is recommended to
-look at the
-[Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
+# Rococo Parachain Requirements
 
 [Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment
 for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain#overview-of-xcmp)
@@ -122,80 +114,152 @@ initial tests are successful on Rococo, we envision that in the long run it will
 the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) test
 network.
 
-## General Strategy
+Below you will find a general plan on how we approach onboarding parachains within this new
+environment.
 
-In order to improve Rococo quickly the network will be regularly updated and restarted. This
-generally involves the update of the client and runtime code as well as the reset of the chain
-state. The initial parachains will be onboarded every few days, with new parachains only added when
-the network is running stably. During periods of instability we may de-register parachains to
-de-load the network, with the intent of re-registering those parachains once stability has improved.
-When the network appears to be scaling smoothly we will register parachains on a first-come,
-first-serve basis.
+## Relevant Values and Calculations
 
-The minimal requirements for any parachain candidate to be considered for the parachain registration
-process are the following:
+- Lease Period Length: 1 Day = 14400 Blocks
+- Ending Period: 15 Min = 150 Blocks
+- Current Lease Period Index = Current Block Number / 14400
 
-1. Maintain at least two Rococo V1 validator nodes
-2. Maintain at least one parachain collator nodes
-3. Sign-up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
+## Registration
 
-- If you are considered to be included, the Rococo team will get in touch with you through the
-  Element handle provided in the sign-up form, a rough estimate of going forward will be (in no
-  certain order):
-  - second batch: Kilt, Interlay
-  - third batch: Darwinia, Phala, Crust, HydraDX
-  - fourth batch: Bifrost, Starks Network, Clover, Zenlink
-  - fith batch: ChainX, Robonomics, Patract Hub, MathWallet
-  - sixth batch: we will communicate timely
-- You will have 2 days to get everything up and running after the Rococo team lets you know
-- Make sure you build, run, and test a local setup based on the `rococo-v1` branch for a while (you
-  will be asked for proof)
-- The Rococo team will help you get your chain deployed
-- Don't worry, if you registered, your slot is secured
-- If your chain doesn't start to produce blocks within 5 hours after approval, the Rococo team
-  reserves the right to de-register your proposal at any time
-- The Rococo team reserves a right for this timing to change, but everybody will try their best to
-  notify you
+All Parachains will need to Register as a "Parathread" first.
 
-### Requirements as an example walk-through
+![](https://i.imgur.com/1orqcCx.png)
 
-1. Maintain **at least two** validator (full block authoring node) for
-   [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
-   1. Treat this like a production grade Polkadot node - see
-      [Run a Validator (Polkadot)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#docsNav)
-   1. Node Setup - use one of the options below
-      1. Build from source:
-         1. `git clone https://github.com/paritytech/polkadot`
-         1. `cd polkadot`
-         1. `git checkout rococo-v1`
-         1. `cargo build --release --features=real-overseer`
-         1. `./target/release/polkadot --validator --chain rococo --name <your_rococo_validator_name>`
-      1. Use Docker:
-         1. `docker run -d parity/rococo:<tag_following_polkadot> --validator --chain rococo --name <your_rococo_validator_name>`
-   1. Check your node on the [Rococo Telemetry](https://telemetry.polkadot.io/#list/Rococo)
-   1. Generate your
-      [Rococo V1 ValidatorId Address](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/en/6-register/1-register.md#launching-the-validators)
-   1. Follow
-      [Rococo Validator Lounge](https://matrix.to/#/!mAfyXPbSILyZLvZwSJ:matrix.parity.io?via=matrix.parity.io)
-      announcements for Rococo V1 validator updates, which can require one of the following
-      scenarios
-      1. Update client
-      1. Update client and purge-chain
-1. Maintain at least one collator (full block authoring node) for your team’s parachain.
-   1. `cd <root_cumulus_based_parachain_code>`
-   1. `cargo build --release`
-   1. `./target/release/<parachain_collator_name> --version`
-   1. `./target/release/<parachain_collator_name> export-genesis-state --parachain-id <your_registered_parachain_id> > genesis-state`
-   1. `./target/release/<parachain_collator_name> export-genesis-wasm > genesis-wasm`
-   1. `./target/release/<parachain_collator_name> --collator --parachain-id <your_registered_parachain_id> --execution wasm --chain rococo`
-1. Sign up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
-1. After receiving ROC’s to the ValidatorId Address initiate the
-   [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-polkadot#submitting-the-setkeys-transaction)in
-   [Rococo Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/extrinsics)
-1. Follow the
-   [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/en/6-register/1-register.md#request-parachain-registration)
-1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on
-   features later on
+To do this, they need:
+
+- A unique Parachain ID (one that has not been previously registered)
+- Runtime Wasm
+- Initial Head Data
+
+After submission of this data, it will take 2 sessions (30 min x 2) for the candidate to fully
+onboard to a Parathread.
+
+> Note: All transitions of a Para into different states will take at least 2 sessions (onboarding,
+> offboarding, upgrading, downgrading, etc.)
+
+## Slots
+
+To start, we will only have 5 or 6 slots available on Rococo to ensure that the chain functions
+properly.
+
+3 of these slots will be our "system chains": Tick, Track, and Trick
+
+This means only 2 or 3 slots will be available for parachain auctions.
+
+### System Chains
+
+The system chains were given a lease through `Slots > force_lease`, bypassing the auction process.
+
+Once they are a parathreads, we can call `force_lease` like so:
+
+```
+fn force_lease(origin,
+	para: ParaId,
+	leaser: T::AccountId,
+	amount: BalanceOf<T>,
+	period_begin: LeasePeriodOf<T>,
+	period_count: LeasePeriodOf<T>,
+)
+```
+
+- `origin`: Must be root
+- `para`: The registered ParaId for the Parachain
+- `leaser`: The person who will pay the deposit `amount`.
+- `amount`: How much we reserve from `leaser`.
+- `period_begin`: The first lease period for the slot.
+- `period_count`: The number of lease periods to reserve.
+
+So assuming we start at genesis, and Trick is `ParaId(0)` something like:
+
+```
+force_lease(ParaId(0), Alice, 0, 0, 100)
+```
+
+Would give Trick 100 lease periods, starting at lease period 0, but it wouldn't start until period 1
+anyway, since lease period 0 will be in progress starting with block 0.
+
+### Auctioned Chains
+
+For the rest of the slots, we can set up auctions with `Auctions > new_auction`:
+
+```
+pub fn new_auction(
+    origin,
+	#[compact] duration: T::BlockNumber,
+	#[compact] lease_period_index: LeasePeriodOf<T>,
+)
+```
+
+- `origin`: Must be root
+- `duration`: How long the auction will last
+- `lease_period_index`: Which lease period is up for auction
+
+Auctions on Rococo should be relatively short, but since it is configurable per auction, we can
+adjust this based on community feedback. A duration of 12 hours - 24 hours should be good.
+
+Lease Period Index needs to be for some future lease period that we want to auction. The input is
+the FIRST of the 4 index periods that will be made available for auction.
+
+For example, if we call:
+
+```
+new_auction(3600, 2)
+```
+
+This will be an auction for 6 hours (10 blocks per min \* 60 min per hour \* 6 hours = 3600 blocks),
+which will auction lease periods 2, 3, 4, and 5.
+
+On top of the base 6 hours of the auction, there will be an additional ending period where final
+potentially winning bids can occur. So if the ending period is 150 blocks, then the total end to end
+auction time will be 3750 blocks.
+
+We should make sure that whatever lease period we select, and all the timelines for doing an
+auction, that the lease period will not have started.
+
+We can only run one auction at a time, but we can run an auction for the same lease period multiple
+times to add more slots. So we may make the exact same call again.
+
+Once we have saturated the slots we want for any particular lease period, we can then start auctions
+for the further future:
+
+```
+new_auction(3600, 6)
+```
+
+Since we previously auctioned slots 2 - 5, now we can start auctioning 6 - 9.
+
+#### Bidding
+
+Anyone can make a bid to win a Parachain slot for a Para ID.
+
+![](https://i.imgur.com/jOFjhnI.png)
+
+Pick the Para ID, how much you want to bid, and the slots you want to bid for.
+
+#### Crowdloan
+
+You can also make a crowdloan for your Para ID, but this part of the process is still unrefined and
+you may encounter problems.
+
+![](https://i.imgur.com/dfYPBQ4.png)
+
+- You can only create a crowdloan for a Para ID that you own / have registered.
+- The crowdfund cap is the MAXIMUM amount your crowdloan can collect. You can still win a bid if you
+  have less than your maximum, as long as your bid is the best in the auction.
+- Ending Block is when you want your crowdloan to end. If you know an auction will start in 3 days,
+  and will last for 5 days, you probably want to set your crowdloan to end in 10 days, or a similar
+  timescale. This way you will be sure that your crowdloan is active during the entire auction
+  process.
+- You don't want to set your crowdloan to be too long, or else you will lock up users funds for a
+  long time and they may not want to participate.
+- The first slot must be the first slot you want to bid for. So if the current auction is for slots
+  (3, 4, 5, 6), your first slot can be at least 3.
+- Last slot must be with within that range too.
+- You can cancel a crowdloan (if you made a mistake), as long as you did not receive a contribution.
 
 ### Tips
 

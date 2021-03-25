@@ -7,6 +7,10 @@ sidebar_label: Parachain Crowdloans
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} allows parachains to source DOT for
 their parachain bids in a decentralized crowdloan.
 
+> Note: For information on how to participate in the crowdloan and parachain auction testing on
+> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo) :polkadot }} >
+> {{ kusama: [Rococo page](mirror-build-parachains-rococo) :kusama }}.
+
 Anyone can create a new crowdloan campaign for a parachain
 slot{{ kusama:  by depositing 10 KSM :kusama }}. A campaign is configured as a range of slots (i.e.
 the duration the {{ polkadot: [parachain](learn-parachains) :polkadot }}
