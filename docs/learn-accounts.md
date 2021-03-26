@@ -531,6 +531,45 @@ networks.
 Alternatively, use [this handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) or
 [this simple address address convertor](https://polkadot-address-convertor.netlify.app/).
 
+### How to Verify a Public Key's Associated Address
+
+You can verify your public key's associated address through a series of conversion steps, where 
+the key is a base-16 (hexadecimal) address. Start by prefixing your public key with "**0x**" 
+so it can be interpreted as a hexadecimal string.
+
+#### Consider the following example:
+
+![17](assets/accounts/pubkey-1.png)
+
+From: `Pay DOTs to the Polkadot account:192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`, 
+we prefix the address by "0x" -> `0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`.
+
+Now, your prefixed string can use [Substrate Utilities](https://www.shawntabrizi.com/substrate-js-utilities/) 
+to verify your address. Copy your prefixed string.
+
+Scroll down to "AccountId to Hex" and paste your prefixed string to "Hex"; the right textbox 
+of "AccountID to Hex", then click the center "**<>**" button. This will 
+show your Substrate address on your left (note: not the Polkadot address). 
+Copy this address for the final step.
+
+![18](assets/accounts/pubkey-2.png)
+
+On that same page, scroll down to "Change Address Prefix" and paste your Substrate address to 
+the left textbox. Enter the address prefix of 0 for Polkadot (or 2 for Kusama), then click the 
+center "**->**" button. *The address on the right should be the same Polkadot address you initially entered.*
+
+![19](assets/accounts/pubkey-3.png)
+
+You can verify your own public key verification by recalling that Polkadot addresses start 
+with a '1', whereas Substrate addresses generally start with a '5' (Kusama addresses start 
+with a capital letter). 
+See [Addresses](https://wiki.polkadot.network/docs/en/build-protocol-info#addresses) for more details.
+
+Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced 
+for how the verification is performed: 
+[pubkeyToAddress.js](https://github.com/w3f/utility-scripts/blob/master/src/misc/pubkeyToAddress.js) 
+demonstrates how a Polkadot, Substrate or Kusama address is interpreted by a single public key.  
+
 ## Resources
 
 - [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
