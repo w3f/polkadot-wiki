@@ -26,9 +26,12 @@ as well as [Cumulus' GitHub repository](https://github.com/paritytech/cumulus#ro
 
 ### Obtaining ROC
 
-There currently isn't a faucet available for ROC and disbursements are only limited to parachain
-builders for the time being. It's recommended at this point to run your own parachains testnet
-locally.
+ROC are available in the [Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org)
+channel on Matrix. To receive ROC tokens, use the command:
+
+```
+!drip YOUR_ROCOCO_ADDRESS
+```
 
 ## How to connect to a Parachains
 
