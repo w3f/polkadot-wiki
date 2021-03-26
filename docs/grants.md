@@ -18,7 +18,7 @@ found at the above links.
 Accepted applications for both programs can be found
 [here](https://github.com/w3f/General-Grants-Program/blob/master/grants/accepted_grant_applications.md).
 
-## Alternitive Funding Sources
+## Alternative Funding Sources
 
 ### Treasury
 
