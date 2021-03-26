@@ -12,43 +12,49 @@ Polkadot 是建立在 Substrate 上面，Substrate 是个区块链框架。 Subs
 
 ### Polkadot 主网
 
-Polkadot 主网尚未发布。一旦主网上线， 简介将在此处。
+Currently Polkadot is built from the tip of master and is the default option when starting a node.
 
-### Kusama Canary 网络
+To start a Polkadot node, run the Polkadot binary:
 
-Kusama 网络是个早期未经审核的 Polkadot 版本，今天正在运行，拥有真正的经济价值。
-
-Kusama 目前是通过掌握技巧构建的，是启动节点时的默认选项。
-
-执行 Polkadot binary：
-
-```
+```bash
 polkadot
 ```
 
-并且您将连接和开始同步到 Kusama。
+and you will connect and start syncing to Polkadot.
 
-通过在 [Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) 查看您的节点是否已经连接。
+Check your node is connected by viewing it on [Telemetry](https://telemetry.polkadot.io/#/Polkadot%20CC3) (you can set a custom name by specifying `--name "my custom name"`)
+
+### Kusama Canary 网络
+
+Kusama is a canary network and holds real economic value.
+
+Run the Polkadot binary and specify `kusama` as the chain:
+
+```bash
+polkadot --chain=kusama
+```
+
+and you will connect and start syncing to Kusama.
+
+Check your node is connected by viewing it on [Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) (you can set a custom name by specifying `--name "my custom name"`)
 
 ### Western 测试网络
 
-Westend 是 Polkadot 的最新测试网络。 此网络上的代币叫做 _Westies_ 和没有经济价值。
+Westend is the latest test network for Polkadot. The tokens on this network are called _Westies_ and they purposefully hold no economic value.
 
-Westend 目前是从 master 构建的，并且需要命令行标志才能访问。
+Run the Polkadot binary and specify `westend` as the chain:
 
-执行 Polkadot 时，使用 `chain` 选项：
-
-```
-polkadot --chain westend
+```bash
+polkadot --chain=westend
 ```
 
-并且您将连接并开始同步 Westend。
+and you will connect and start syncing to Westend.
+
+Check your node is connected by viewing it on [Telemetry](https://telemetry.polkadot.io/#list/Westend) (you can set a custom name by specifying `--name "my custom name"`)
 
 #### Westend 水龙头
 
-按照[此处](learn-DOT#getting-westies)的说明获取有关 Westies 的说明。
-
-通过在 [Telemetry](https://telemetry.polkadot.io/#list/Westend) 查看您的节点是否已经连接。
+Follow the instruction [here](learn-DOT#getting-westies) for instructions on acquiring Westies.
 
 ### Differences
 
@@ -72,7 +78,7 @@ Flaming Fir is built from the tip of master and is the default option when runni
 
 Run Substrate without a flag or explicitly state `fir`:
 
-```
+```bash
 substrate --chain fir
 ```
 

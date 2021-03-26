@@ -106,7 +106,7 @@
         "sidebar_label": "용어 정리"
       },
       "grants": {
-        "title": "Web3 Foundation Grantees",
+        "title": "Web3 Foundation Grants",
         "sidebar_label": "Grants"
       },
       "kusama-adverserial-cheatsheet": {
@@ -353,10 +353,6 @@
         "title": "Monitor your node",
         "sidebar_label": "Monitor your node"
       },
-      "maintain-guides-how-to-nominate-alexander": {
-        "title": "노미네이터가 되어보세요 (알렉산더)",
-        "sidebar_label": "노미네이터가 되어보세요 (알렉산더)"
-      },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "노미네이터가 되어보세요 (쿠사마)",
         "sidebar_label": "Nominator Guide"
@@ -392,10 +388,6 @@
       "maintain-guides-how-to-validate-polkadot": {
         "title": "Run a Validator (Polkadot)",
         "sidebar_label": "How to run a Validator on Polkadot"
-      },
-      "maintain-guides-how-to-validate-alexander": {
-        "title": "검증자 노드를 돌려보세요 (알렉산더)",
-        "sidebar_label": "검증자 노드를 돌려보세요 (알렉산더)"
       },
       "maintain-guides-how-to-vote-councillor": {
         "title": "의회원들에 투표하기",

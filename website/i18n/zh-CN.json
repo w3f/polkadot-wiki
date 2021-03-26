@@ -106,7 +106,7 @@
         "sidebar_label": "专业术语"
       },
       "grants": {
-        "title": "Web3 基金会受赠者",
+        "title": "Web3 Foundation Grants",
         "sidebar_label": "奖助金计划"
       },
       "kusama-adverserial-cheatsheet": {
@@ -353,10 +353,6 @@
         "title": "Monitor your node",
         "sidebar_label": "Monitor your node"
       },
-      "maintain-guides-how-to-nominate-alexander": {
-        "title": "成为提名人 (Alexander)",
-        "sidebar_label": "成为提名人 (Alexander)"
-      },
       "maintain-guides-how-to-nominate-kusama": {
         "title": "成为提名人 (Kusama)",
         "sidebar_label": "成为提名人 (Kusama)"
@@ -392,10 +388,6 @@
       "maintain-guides-how-to-validate-polkadot": {
         "title": "运行验证人 (Polkadot)",
         "sidebar_label": "如何在 Polkadot 上运行验证节点"
-      },
-      "maintain-guides-how-to-validate-alexander": {
-        "title": "运行验证人 (Alexander)",
-        "sidebar_label": "运行验证人 (Alexander)"
       },
       "maintain-guides-how-to-vote-councillor": {
         "title": "投票选举议员",

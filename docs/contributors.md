@@ -15,17 +15,6 @@ original inquiry. **Employee impersonation is a very common type of scam**.
 > For other ways of protecting yourself, please see
 > [How to Protect Yourself from Scams](learn-scams).
 
-### Anson Lau
-
-- email: [anson@web3.foundation](mailto:anson@web3.foundation)
-- matrix / riot / element: [@anson:web3.foundation](https://matrix.to/#/@anson:web3.foundation)
-
-Anson is a Technical Educator at Web3 Foundation. Before that, he worked as a Hyperledger blockchain
-developer to deliver B2B applications at IBM. He is passionate about staking, governance,
-cryptoeconomics, and privacy areas. Anson has been actively participating in the blockchain space
-since 2017 and creating video content to help different people understand how decentralization could
-deliver us a better future.
-
 ---
 
 ### Bill Laboon
@@ -81,26 +70,68 @@ He has a Bachelor of Science in Aeronautical and Mechanical Engineering.
 
 ---
 
-### Logan Saether
+### Jake Hemmerle
 
-- email: [logan@web3.foundation](mailto:logan@web3.foundation)
-- matrix / riot / element: [@logan:web3.foundation](https://matrix.to/#/@logan:web3.foundation)
-- twitter: [@logansaether](https://twitter.com/logansaether)
+- email: [jake@web3.foundation](mailto:jake@web3.foundation)
+- matrix / riot / element: [@jake:web3.foundation](https://matrix.to/#/@jake:web3.foundation)
+- twitter: [@jakehemmerle](https://twitter.com/jakehemmerle)
+- telegram: [@jakehemmerle](https://t.me/jakehemmerle)
 
-Logan is a Technical Educator at Web3 Foundation where he works on creating material for supporting
-the development of the next generation of distributed technologies. At Web3 Technical Education,
-Logan focuses on creating the Polkadot Wiki as the central source of truth and knowledge for the
-Polkadot protocol. He contributes to the creation of written content and example applications that
-demonstrate how to use these new technologies.
+Jake is a technical education intern at the Web3 Foundation and is completing his Bachelors in
+Computer science from the University of Cincinnati. He has been learning about blockchain technology
+since 2018 and has long personal interests in peer-to-peer systems, network protocols, applied
+cryptography and privacy enhancing technologies. Jake helps maintain the Wiki and is contributing to
+the w3f/schnorrkel library.
 
 ---
+
+### Danny Salman
+
+- email: [danny@web3.foundation](mailto:danny@web3.foundation)
+- matrix / riot / element: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
+
+Danny is a Technical Educator at the Web3 Foundation from Canada. He has a keen interest for
+blockchain technologies and has an admiration for the web 3.0 vision. Danny focuses on educational
+content at the Web3 Foundation and acts on his passion for education. He is completing a B.Eng in
+Computer Engineering with a minor in Philosophy at Ryerson University.
+
+<br/><br/>
 
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
+
+---
+
+### Anson Lau
+
+- email: [anson@web3.foundation](mailto:anson@web3.foundation)
+- matrix / riot / element: [@anson:web3.foundation](https://matrix.to/#/@anson:web3.foundation)
+
+Anson was a Technical Educator at Web3 Foundation. Before that, he worked as a Hyperledger
+blockchain developer to deliver B2B applications at IBM. He is passionate about staking, governance,
+cryptoeconomics, and privacy areas. Anson has been actively participating in the blockchain space
+since 2017 and creating video content to help different people understand how decentralization could
+deliver us a better future.
+
+---
 
 ### Kirsten Richard
 
 Kirsten was a Technical Educator intern at Web3 Foundation from Canada. She's passionate about
 teaching and technology, while still studying her Computer Science bachelor's degree. She focused on
 curating educational content around blockchain and Polkadot concepts.
+
+---
+
+### Logan Saether
+
+- email: [logan@web3.foundation](mailto:logan@web3.foundation)
+- matrix / riot / element: [@logan:web3.foundation](https://matrix.to/#/@logan:web3.foundation)
+- twitter: [@logansaether](https://twitter.com/logansaether)
+
+Logan was a Technical Educator at Web3 Foundation where he worked on creating material for
+supporting the development of the next generation of distributed technologies. At Web3 Technical
+Education, Logan focussed on creating the Polkadot Wiki as the central source of truth and knowledge
+for the Polkadot protocol. He contributed to the creation of written content and example
+applications that demonstrate how to use these new technologies.
