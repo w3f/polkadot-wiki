@@ -26,7 +26,8 @@ as well as [Cumulus' GitHub repository](https://github.com/paritytech/cumulus#ro
 
 ### Obtaining ROC
 
-ROC are available in the [Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org) channel on Matrix. To receive ROC tokens, use the command:
+ROC are available in the [Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org)
+channel on Matrix. To receive ROC tokens, use the command:
 
 ```
 !drip YOUR_ROCOCO_ADDRESS
