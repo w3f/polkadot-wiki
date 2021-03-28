@@ -563,7 +563,7 @@ center "**->**" button. *The address on the right should be the same Polkadot ad
 You can verify your own public key verification by recalling that Polkadot addresses start 
 with a '1', whereas Substrate addresses generally start with a '5' (Kusama addresses start 
 with a capital letter). 
-See [Addresses](https://wiki.polkadot.network/docs/en/build-protocol-info#addresses) for more details.
+See [Addresses](https://wiki.polkadot.network/docs/en/learn-accounts#address-format) for more details.
 
 Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced 
 for how the verification is performed: 
