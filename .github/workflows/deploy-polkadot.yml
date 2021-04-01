@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "14"
 
       - name: Clone and run the site
         run: |
@@ -44,7 +44,7 @@ jobs:
         with:
           path: ./website/static/polkadot-wiki.pdf
           timeout: 120000
-        
+
       - name: Inject
         run: yarn; yarn polkadot:inject
         env:
@@ -55,3 +55,10 @@ jobs:
         with:
           path: ./website/build/polkadot-wiki
           timeout: 120000
+
+      - name: Publish
+        run: |
+          git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
+          git config --global user.name "Polkadot Wiki CI"
+          echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
+          yarn && GIT_USER=w3fdeploy PUBLISHING=true yarn run polkadot:publish-gh-pages
