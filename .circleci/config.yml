@@ -15,34 +15,34 @@ jobs:
             yarn
             ./scripts/ci-prettier.sh
 
-  deploy-website:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:14.15.4
+  # deploy-website:
+  #   docker:
+  #     # specify the version you desire here
+  #     - image: circleci/node:14.15.4
 
-    steps:
-      - checkout
-      - run:
-          name: Deploying to GitHub Pages
-          command: |
-            git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
-            git config --global user.name "Polkadot Wiki CI"
-            echo "machine github.com login w3fbot password $GITHUB_TOKEN" > ~/.netrc
-            yarn && GIT_USER=w3fbot PUBLISHING=true yarn run polkadot:publish-gh-pages
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Deploying to GitHub Pages
+  #         command: |
+  #           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
+  #           git config --global user.name "Polkadot Wiki CI"
+  #           echo "machine github.com login w3fbot password $GITHUB_TOKEN" > ~/.netrc
+  #           yarn && GIT_USER=w3fbot PUBLISHING=true yarn run polkadot:publish-gh-pages
 
-  deploy-kusama:
-    docker:
-      - image: circleci/node:14.15.4
+  # deploy-kusama:
+  #   docker:
+  #     - image: circleci/node:14.15.4
 
-    steps:
-      - checkout
-      - run:
-          name: Deploying to GitHub Pages
-          command: |
-            git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
-            git config --global user.name "Polkadot Wiki CI"
-            echo "machine github.com login w3fbot password $GITHUB_TOKEN" > ~/.netrc
-            yarn && GIT_USER=w3fbot PUBLISHING=true PROJECT_NAME=kusama-guide-hosting yarn run kusama:publish-gh-pages
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Deploying to GitHub Pages
+  #         command: |
+  #           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
+  #           git config --global user.name "Polkadot Wiki CI"
+  #           echo "machine github.com login w3fbot password $GITHUB_TOKEN" > ~/.netrc
+  #           yarn && GIT_USER=w3fbot PUBLISHING=true PROJECT_NAME=kusama-guide-hosting yarn run kusama:publish-gh-pages
 
 workflows:
   version: 2
