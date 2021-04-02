@@ -15,6 +15,7 @@ jobs:
             yarn
             ./scripts/ci-prettier.sh
 
+  # test
   # deploy-website:
   #   docker:
   #     # specify the version you desire here
