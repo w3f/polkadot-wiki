@@ -14,7 +14,7 @@ jobs:
           command: |
             yarn
             ./scripts/ci-prettier.sh
-
+  # test
   # deploy-website:
   #   docker:
   #     # specify the version you desire here
@@ -33,7 +33,6 @@ jobs:
   # deploy-kusama:
   #   docker:
   #     - image: circleci/node:14.15.4
-
   #   steps:
   #     - checkout
   #     - run:
