@@ -117,6 +117,8 @@ environment.
 
 ## Relevant Values and Calculations
 
+Note that these are example values; all are subject to change.
+
 - Lease Period Length: 1 Day = 14400 Blocks
 - Ending Period: 15 Min = 150 Blocks
 - Current Lease Period Index = Current Block Number / 14400
