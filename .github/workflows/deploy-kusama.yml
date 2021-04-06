@@ -13,30 +13,37 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Clone and run the site
+      # - name: Clone and run the site
+      #   run: |
+      #     sudo apt-get install netcat
+      #     yarn
+      #     yarn kusama:start &
+      #     while ! nc -z localhost 3000; do
+      #         sleep 1
+      #         echo waiting for website up...
+      #     done
+      #     yarn kusama:pdf
+
+      # - name: Upload PDF
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: kusama-wiki
+      #     path: kusama-guide/static/kusama-wiki.pdf
+
+      # - name: Build
+      #   run: yarn; yarn kusama:build
+      #   env:
+      #     BUILDING: true
+
+      # - name: Upload to IPFS
+      #   uses: aquiladev/ipfs-action@v0.1.4
+      #   with:
+      #     path: ./kusama-guide/build
+      #     timeout: 120000
+
+      - name: Publish
         run: |
-          sudo apt-get install netcat
-          yarn
-          yarn kusama:start &
-          while ! nc -z localhost 3000; do
-              sleep 1
-              echo waiting for website up...
-          done
-          yarn kusama:pdf
-
-      - name: Upload PDF
-        uses: actions/upload-artifact@v2
-        with:
-          name: kusama-wiki
-          path: kusama-guide/static/kusama-wiki.pdf
-
-      - name: Build
-        run: yarn; yarn kusama:build
-        env:
-          BUILDING: true
-
-      - name: Upload to IPFS
-        uses: aquiladev/ipfs-action@v0.1.4
-        with:
-          path: ./kusama-guide/build
-          timeout: 120000
+          git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
+          git config --global user.name "Polkadot Wiki CI"
+          echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
+          yarn && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=kusama-guide-hosting yarn run kusama:publish-gh-pages
