@@ -110,7 +110,7 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 
 _Each period of the range 1 - 4 represents a
 {{ polkadot: 6-month duration for a total of 2 years :polkadot }}
-{{ kusama: 6-week duration for a total of 24 weeks :kusama }}_
+or a shorter duration on Kusama_
 
 More than one continuous period is a range.
 
