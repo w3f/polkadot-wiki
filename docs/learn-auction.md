@@ -76,8 +76,8 @@ Polkadot will use a _random beacon_ based on the VRF that's used also in other p
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
-The slot durations are capped to {{ polkadot: 2 years and divided into 6-month periods :polkadot }}
-{{ kusama: 24 weeks and divided into 6-week periods :kusama }}. Parachains may lease a slot for any
+The slot durations are capped to {{ polkadot: 2 years and divided into 6-month periods :polkadot }}; 
+Kusama slots durations and periods will be less than on Polkadot. Parachains may lease a slot for any
 contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning
 that they could extend their lease to Polkadot past the maximum duration by leasing a contiguous
 slot.
