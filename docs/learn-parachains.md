@@ -33,8 +33,8 @@ The Polkadot Host (PH) requires that the state transitions performed on parachai
 as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated
 against the registered state transition function (STF) that is stored on the Relay Chain by the
 validators before {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} acknowledges a
-state transition has occurred on a parachain. The only constraint to the logic that a parachain is
-allowed to implement is that it must be verifiable by the Relay Chain validators. Verification most
+state transition has occurred on a parachain. The key constraint regarding the logic of a parachain is
+that it must be verifiable by the Relay Chain validators. Verification most
 commonly takes the form of a bundled proof of a state transition known as a Proof-of-Verification
 (PoV) block, which is submitted to the validators from one or more of the parachain collators to be
 checked.
