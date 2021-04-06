@@ -143,7 +143,7 @@ onboard to a Parathread.
 
 ## Slots
 
-To start, we will only have 5 or 6 slots available on Rococo to ensure that the chain functions
+To start, only 5 or 6 slots are planned to be available on Rococo to ensure that the chain functions
 properly.
 
 3 of these slots will be our "system chains": Tick, Track, and Trick
