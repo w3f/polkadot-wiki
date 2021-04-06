@@ -356,7 +356,7 @@ the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matr
 about them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) to ask their
-questions. As always, keep up to date with Polkadot and Kusamaby following the
+questions. As always, keep up to date with Polkadot and Kusama by following the
 [social channels](https://wiki.polkadot.network/docs/en/community).
 
 Good luck!
