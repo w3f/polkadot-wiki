@@ -179,7 +179,7 @@ So assuming we start at genesis, and Trick is `ParaId(0)` something like:
 force_lease(ParaId(0), Alice, 0, 0, 100)
 ```
 
-Would give Trick 100 lease periods, starting at lease period 0, but it wouldn't start until period 1
+would give Trick 100 lease periods, starting at lease period 0, but it wouldn't start until period 1
 anyway, since lease period 0 will be in progress starting with block 0.
 
 ### Auctioned Chains
