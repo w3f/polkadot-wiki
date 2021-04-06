@@ -44,7 +44,7 @@ checked.
 Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake
 are usually used to select the validator set in order to handle validation and finalization;
 parachains will not be required to do either of those things. However, since
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} is general over what the parachain
+{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} is not overly particular about what the parachain
 can implement, it may be the choice of the parachain to implement a staking token, but it's not
 generally necessary.
 
