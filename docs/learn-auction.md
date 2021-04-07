@@ -78,7 +78,7 @@ end-time of the auction.
 
 The slot durations are capped to {{ polkadot: 2 years and divided into 6-month periods :polkadot }}; 
 Kusama slots durations and periods will be less than on Polkadot. Parachains may lease a slot for any
-contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning
+combination of periods of the slot duration. Parachains may lease more than one slot over time, meaning
 that they could extend their lease to Polkadot past the maximum duration by leasing a contiguous
 slot.
 
@@ -155,8 +155,6 @@ of the auction withing the so-called _ending period_. Additionally, the VRF will
 the last epoch to take the state of bids from (to mitigate some types of attacks from malicious
 validators).
 
-{{ kusama: On Kusama, the ending period is 1 hour long. :kusama }}
-
 ### Examples
 
 There is one parachain slot available.
@@ -197,8 +195,7 @@ Relay Chain.
 The method for dividing the parachain slots into intervals was partly inspired by the desire to
 allow for a greater amount of parachain diversity, and prevent particularly large and well-funded
 parachains from hoarding slots. By making each period a {{ polkadot: six-month duration but the
-overall slot a 2-year duration :polkadot }} {{ kusama: six-week duration but the
-overall slot a 24-week duration :kusama }}, the mechanism can cope with well-funded parachains that
+overall slot a 2-year duration :polkadot }} {{ kusama: short duration :kusama }}, the mechanism can cope with well-funded parachains that
 will ensure they secure a slot at the end of their lease, while gradually allowing other parachains
 to enter the ecosystem to occupy the durations that are not filled. For example, if a large,
 well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in
