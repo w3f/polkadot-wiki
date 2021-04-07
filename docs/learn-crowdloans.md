@@ -49,8 +49,8 @@ Participants will be able to reclaim their tokens in one of two ways:
 - If the campaign was not successful, then this retirement phase will begin at the campaign's
   configured end, and participants can likewise withdraw their tokens.
 
-Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without 
-winning a slot, anyone can trigger the refund of crowdloan contributions back to their original 
+Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without
+winning a slot, anyone can trigger the refund of crowdloan contributions back to their original
 owners. All contributions must be returned before the crowdloan is fully deleted from the system.
 
 Several teams in the ecosystem are preparing dashboards to track auctions and crowdloan campaigns.
