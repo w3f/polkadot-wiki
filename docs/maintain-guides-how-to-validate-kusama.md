@@ -24,9 +24,9 @@ customizations.
 
 If you need help, please reach out on the
 [Kusama validator chat](https://app.element.io/#/room/#KusamaValidatorLounge:polkadot.builders) on
-Matrix. The team and other validators are there to help answer questions and provide experience.
-You can join directly in your web browser (link above) or using a client such as Element 
-(formerly Riot.im) using [this link](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders).
+Matrix. The team and other validators are there to help answer questions and provide experience. You
+can join directly in your web browser (link above) or using a client such as Element (formerly
+Riot.im) using [this link](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders).
 
 ### How Many KSM Do I Need?
 
