@@ -27,7 +27,7 @@ them to send messages from parachain A to parachain B.
 
 ### Guides and Tools
 
-- [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling)
+- [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/)
 - [Rococo tesnet guide](https://wiki.polkadot.network/docs/en/build-parachains-rococo)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.

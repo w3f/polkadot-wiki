@@ -111,10 +111,10 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 _Each period of the range 1 - 4 represents a
 {{ polkadot: 6-month duration for a total of 2 years :polkadot }} or a shorter duration on Kusama_
 
-More than one continuous period is a range.
-
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
-for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
+periods available for a slot (`n` will be 4 on Polkadot, but has not yet been determined for
+Kusama).
 
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
 > way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
@@ -213,11 +213,11 @@ latter is what Polkadot uses as a base for its randomness.
 
 ### Are there other ways of acquiring a slot besides the candle auction?
 
-The only other way besides the candle auction to acquire a parachain slot is through a secondary
-market where an actor who has already won a parachain slot can resell the slot along with the
-associated deposit of tokens that is locked up to another buyer. This would allow the seller to get
-liquid tokens in exchange for the parachain slot and the buyer to acquire the slot as well as the
-deposited tokens.
+Another way, besides the candle auction, to acquire a parachain slot is through a secondary market
+where an actor who has already won a parachain slot can resell the slot along with the associated
+deposit of tokens that is locked up to another buyer. This would allow the seller to get liquid
+tokens in exchange for the parachain slot and the buyer to acquire the slot as well as the deposited
+tokens.
 
 A number of system-level parachains may be granted slots by the [governing bodies](learn-governance)
 of the Relay Chain. Such parachains would not have to bid for or renew their slots as they would be
