@@ -4,16 +4,16 @@ title: Parachain Crowdloans
 sidebar_label: Parachain Crowdloans
 ---
 
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} allows parachains to source KSM for
-their parachain bids in a decentralized crowdloan.
+{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} allows parachains to source tokens
+for their parachain bids in a decentralized crowdloan.
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
 > Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo) :polkadot }} >
 > {{ kusama: [Rococo page](mirror-build-parachains-rococo) :kusama }}.
 
-Anyone can create a new crowdloan campaign for a parachain
-slot. A campaign is configured as a range of slots (i.e.
-the duration the {{ polkadot: [parachain](learn-parachains) :polkadot }}
+Anyone can create a new crowdloan campaign for a parachain slot
+{{ kusama:  by depositing a specified number of tokens :kusama }}. A campaign is configured as a
+range of slots (i.e. the duration of the {{ polkadot: [parachain](learn-parachains) :polkadot }}
 {{ kusama: [parachain](mirror-learn-parachains) :kusama }} will bid for), a cap, and a duration. The
 duration can last over several auctions, meaning that the team will not need to restart the campaign
 just because they do not secure a slot on their first attempt.
@@ -23,8 +23,6 @@ by sending a special transaction that references the campaign's index. Tokens us
 must be transferable &mdash; that is, not locked for any reason, including staking, vesting, and
 governance &mdash; because they will be moved into a module-controlled account that was generated
 uniquely for this campaign.
-
-{{ kusama: On Kusama, the minimum contribution is 1 KSM. :kusama }}
 
 > Important: All crowdloan contributions are handled by the Crowdloan module’s logic where a
 > campaign is identified by index, not by address. **Never transfer tokens to an address in support
@@ -51,8 +49,9 @@ Participants will be able to reclaim their tokens in one of two ways:
 - If the campaign was not successful, then this retirement phase will begin at the campaign's
   configured end, and participants can likewise withdraw their tokens.
 
-
-Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without winning a slot, anyone can trigger the refund of crowdloan contributions back to their original owners. All contributions must be returned before the crowdloan is fully deleted from the system.
+Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without 
+winning a slot, anyone can trigger the refund of crowdloan contributions back to their original 
+owners. All contributions must be returned before the crowdloan is fully deleted from the system.
 
 Several teams in the ecosystem are preparing dashboards to track auctions and crowdloan campaigns.
 Check back with this page for updates as these are released.

@@ -76,11 +76,11 @@ Polkadot will use a _random beacon_ based on the VRF that's used also in other p
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
-The slot durations are capped to {{ polkadot: 2 years and divided into 6-month periods :polkadot }}; 
-Kusama slots durations and periods will be less than on Polkadot. Parachains may lease a slot for any
-contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning
-that they could extend their lease to Polkadot past the maximum duration by leasing a contiguous
-slot.
+The slot durations are capped to {{ polkadot: 2 years and divided into 6-month periods :polkadot }};
+Kusama slots durations and periods will be less than on Polkadot. Parachains may lease a slot for
+any combination of periods of the slot duration. Parachains may lease more than one slot over time,
+meaning that they could extend their lease to Polkadot past the maximum duration by leasing a
+contiguous slot.
 
 > Note: Individual parachain slots are fungible. This means that parachains do not need to always
 > inhabit the same slot, but as long as a parachain inhabits any slot it can continue as a
@@ -109,8 +109,7 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 ```
 
 _Each period of the range 1 - 4 represents a
-{{ polkadot: 6-month duration for a total of 2 years :polkadot }}
-or a shorter duration on Kusama_
+{{ polkadot: 6-month duration for a total of 2 years :polkadot }} or a shorter duration on Kusama_
 
 More than one continuous period is a range.
 
@@ -155,8 +154,6 @@ of the auction withing the so-called _ending period_. Additionally, the VRF will
 the last epoch to take the state of bids from (to mitigate some types of attacks from malicious
 validators).
 
-{{ kusama: On Kusama, the ending period is 1 hour long. :kusama }}
-
 ### Examples
 
 There is one parachain slot available.
@@ -197,12 +194,11 @@ Relay Chain.
 The method for dividing the parachain slots into intervals was partly inspired by the desire to
 allow for a greater amount of parachain diversity, and prevent particularly large and well-funded
 parachains from hoarding slots. By making each period a {{ polkadot: six-month duration but the
-overall slot a 2-year duration :polkadot }} {{ kusama: six-week duration but the
-overall slot a 24-week duration :kusama }}, the mechanism can cope with well-funded parachains that
-will ensure they secure a slot at the end of their lease, while gradually allowing other parachains
-to enter the ecosystem to occupy the durations that are not filled. For example, if a large,
-well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in
-getting the next slot that would open for 2 - 5. Under this mechanism that parachain could acquire
+overall slot a 2-year duration :polkadot }} {{ kusama: short duration :kusama }}, the mechanism can cope
+with well-funded parachains that will ensure they secure a slot at the end of their lease, while gradually
+allowing other parachains to enter the ecosystem to occupy the durations that are not filled. For example,
+if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested
+in getting the next slot that would open for 2 - 5. Under this mechanism that parachain could acquire
 period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to
 be occupied by another.
 
@@ -217,11 +213,11 @@ latter is what Polkadot uses as a base for its randomness.
 
 ### Are there other ways of acquiring a slot besides the candle auction?
 
-The only other way besides the candle auction to acquire a parachain slot is through a secondary
-market where an actor who has already won a parachain slot can resell the slot along with the
-associated deposit of tokens that is locked up to another buyer. This would allow the seller to get
-liquid tokens in exchange for the parachain slot and the buyer to acquire the slot as well as the
-deposited tokens.
+Another way, besides the candle auction, to acquire a parachain slot is through a secondary market
+where an actor who has already won a parachain slot can resell the slot along with the associated
+deposit of tokens that is locked up to another buyer. This would allow the seller to get liquid
+tokens in exchange for the parachain slot and the buyer to acquire the slot as well as the deposited
+tokens.
 
 A number of system-level parachains may be granted slots by the [governing bodies](learn-governance)
 of the Relay Chain. Such parachains would not have to bid for or renew their slots as they would be
