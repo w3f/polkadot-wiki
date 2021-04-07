@@ -5,12 +5,12 @@ sidebar_label: Dfinity
 ---
 
 Dfinity calls itself "the internet computer" and positions itself as a sister project to Ethereum.
-Dfinity has been in development since 2016, with a release called "Copper" supposed to have come out
-in 2017 but never seemed to have landed. In 2019, the world has yet to see the majority of Dfinity's
-closed source code for their client since they only publish helper libraries on [their
-GitHub][dfinity github]. The closed source nature of development is in stark contrast to the
-development of Polkadot, which has developed its Rust reference implementation in [the open on
-GitHub][polkadot github] from the start in 2017.
+Dfinity has been in development since 2016, and has had several releases so far, none of which have
+led to a mainnet. In 2021, the world has yet to see the majority of Dfinity's closed source code for
+their client since they only publish helper libraries on [their GitHub][dfinity github]. The closed
+source nature of development is in stark contrast to the development of Polkadot, which has
+developed its Rust reference implementation in [the open on GitHub][polkadot github] from the start
+in 2017.
 
 ### Algorithmic Governance
 
@@ -19,7 +19,7 @@ Dfinity is a strong proponent of algorithmic governance, having published
 [blog](https://medium.com/dfinity/future-governance-integrating-traditional-ai-technology-into-the-blockchain-nervous-system-825ababf9d9)
 posts explicitly on the topic.
 
-Dfinitiy proposes a governance framework called the Blockchain Nervous System (BNS). However, they
+Dfinity proposes a governance framework called the Blockchain Nervous System (BNS). However, they
 have not come forward with any definite algorithms or further information following the publishing
 of the two previous blog posts in 2018.
 
