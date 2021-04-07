@@ -113,7 +113,9 @@ automatically prevent your browser from displaying known phishing or scam sites.
 blocked upon loading, helping to prevent you from visiting these sites and thus falling for them.
 
 ### Our official sites
-You can use the following list of our official domains to make sure that you're visiting an official site:
+
+You can use the following list of our official domains to make sure that you're visiting an official
+site:
 
 - polkadot.network
 - polkadot.io
@@ -123,9 +125,12 @@ You can use the following list of our official domains to make sure that you're 
 - substrate.dev
 - substrate.io
 
-Of course, there are many projects building on Polkadot and Kusama that use similar names. If, however, a site poses as Polkadot, Kusama, Web3 Foundation or Parity on a domain not listed above, then it's most likely a scam.
+Of course, there are many projects building on Polkadot and Kusama that use similar names. If,
+however, a site poses as Polkadot, Kusama, Web3 Foundation or Parity on a domain not listed above,
+then it's most likely a scam.
 
-Besides those, there are also `polkadot.js.org` and `dotapps.io` that host our web wallet and other tools.
+Besides those, there are also `polkadot.js.org` and `dotapps.io` that host our web wallet and other
+tools.
 
 ## I Got Scammed - What Can I Do?
 
