@@ -13,7 +13,7 @@ for their parachain bids in a decentralized crowdloan.
 
 Anyone can create a new crowdloan campaign for a parachain slot
 {{ kusama:  by depositing a specified number of tokens :kusama }}. A campaign is configured as a
-range of slots (i.e. the duration the {{ polkadot: [parachain](learn-parachains) :polkadot }}
+range of slots (i.e. the duration of the {{ polkadot: [parachain](learn-parachains) :polkadot }}
 {{ kusama: [parachain](mirror-learn-parachains) :kusama }} will bid for), a cap, and a duration. The
 duration can last over several auctions, meaning that the team will not need to restart the campaign
 just because they do not secure a slot on their first attempt.
@@ -49,11 +49,9 @@ Participants will be able to reclaim their tokens in one of two ways:
 - If the campaign was not successful, then this retirement phase will begin at the campaign's
   configured end, and participants can likewise withdraw their tokens.
 
-Note that withdrawing tokens requires a transaction for each participant. Anyone can make the
-transactions, so a parachain team could free every participant's token in a batch. Tokens that are
-not withdrawn within a certain amount of time will go to the
-{{ polkadot: [Treasury](learn-treasury) :polkadot }}
-{{ kusama: [Treasury](mirror-learn-treasury) :kusama }}.
+Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without 
+winning a slot, anyone can trigger the refund of crowdloan contributions back to their original 
+owners. All contributions must be returned before the crowdloan is fully deleted from the system.
 
 Several teams in the ecosystem are preparing dashboards to track auctions and crowdloan campaigns.
 Check back with this page for updates as these are released.
