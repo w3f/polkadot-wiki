@@ -111,10 +111,8 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 _Each period of the range 1 - 4 represents a
 {{ polkadot: 6-month duration for a total of 2 years :polkadot }} or a shorter duration on Kusama_
 
-More than one continuous period is a range.
-
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
-for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
+for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of periods available for a slot (`n` will be 4 on Polkadot, but has not yet been determined for Kusama).
 
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
 > way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
