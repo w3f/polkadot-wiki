@@ -33,20 +33,19 @@ The Polkadot Host (PH) requires that the state transitions performed on parachai
 as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated
 against the registered state transition function (STF) that is stored on the Relay Chain by the
 validators before {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} acknowledges a
-state transition has occurred on a parachain. The key constraint regarding the logic of a parachain is
-that it must be verifiable by the Relay Chain validators. Verification most
-commonly takes the form of a bundled proof of a state transition known as a Proof-of-Verification
-(PoV) block, which is submitted to the validators from one or more of the parachain collators to be
-checked.
+state transition has occurred on a parachain. The key constraint regarding the logic of a parachain
+is that it must be verifiable by the Relay Chain validators. Verification most commonly takes the
+form of a bundled proof of a state transition known as a Proof-of-Verification (PoV) block, which is
+submitted to the validators from one or more of the parachain collators to be checked.
 
 ## Parachain Economies
 
 Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake
 are usually used to select the validator set in order to handle validation and finalization;
 parachains will not be required to do either of those things. However, since
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} is not overly particular about what the parachain
-can implement, it may be the choice of the parachain to implement a staking token, but it's not
-generally necessary.
+{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} is not overly particular about what
+the parachain can implement, it may be the choice of the parachain to implement a staking token, but
+it's not generally necessary.
 
 Collators may be incentivized through inflation of a native parachain token. There may be other ways
 to incentivize the collator nodes that do not involve inflating the native parachain token.
