@@ -13,21 +13,24 @@ guide will always refer to the executable as `polkadot`.
 > Other client implementation teams: Feel free to make a PR to this page with instructions (or a
 > link to instructions) for your client.
 
+If you are trying to run a validator, refer to this tutorial
+[here](maintain-guides-how-to-validate-polkadot).
+
 ## Basic Node Operations
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or
-a custom chain spec. By default, the client will start Polkadot. Watch
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`,
+`rococo`, or a custom chain spec. By default, the client will start Polkadot. Watch
 [How a single codebase can power four different blockchains](https://www.youtube.com/watch?v=i9vNCHz6wO4)
 to learn more about how the chain selection works internally.
 
 **Archive node**
 
-An archive node does not prune any block or state data. Use the `--archive` flag. Certain types of
-nodes like validators must run in archive mode. Likewise, all [events](build-protocol-info#events)
-are cleared from state in each block, so if you want to store events then you will need an archive
-node.
+An archive node does not prune any block or state data. Use the `--pruning archive` flag. Certain
+types of nodes like validators must run in archive mode. Likewise, all
+[events](build-protocol-info#events) are cleared from state in each block, so if you want to store
+events then you will need an archive node.
 
 > To upgrade a node, please refer to this
 > [video](https://www.youtube.com/watch?v=5LtcdBR9F40&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=5)
@@ -91,9 +94,12 @@ To delete your DB and re-sync from genesis, run:
 polkadot purge-chain
 ```
 
-An alternative database implementation, ParityDB, is available and activated with the
-`--database paritydb` option. This database uses more disk space than the default RocksBD, but is
-more efficient in reads and writes.
+> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can
+> be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch
+> to using the faster and more efficient ParityDb option. Switching between database backends will
+> require a resync.
+>
+> If you want to test out ParityDB you can add the flag `--database paritydb`.
 
 ## Deployment Tools
 
