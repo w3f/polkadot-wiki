@@ -10,7 +10,7 @@ started.
 For brand-new learners of Blockchain technology:
 
 - The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to familiarizing yourself
-  with crytography, blockchain concepts, decentralization, networks, cryptocurrency, and so much
+  with cryptography, blockchain concepts, decentralization, networks, cryptocurrency, and so much
   more. This is recommended for users with backgrounds of all levels, and is also a free course.
 
 For brand-new learners of Kusama:
@@ -28,7 +28,7 @@ Wiki][polkadot wiki].
 
 While Kusama does not support smart contracts natively, building apps on it is still possible
 (example: [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into _proper_
-development however, the [builders guide from Polkadot's wiki][polkadot-builders] applies to Kusama
+development, however, the [builders guide from Polkadot's wiki][polkadot-builders] applies to Kusama
 as well.
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
