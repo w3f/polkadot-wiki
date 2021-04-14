@@ -4,6 +4,8 @@ title: Security of the network
 sidebar_label: Security of the network
 ---
 
+<!-- no change needed -->
+
 ## Shared security
 
 Shared security, sometimes referred in documentation as _pooled security_, is one of the unique
