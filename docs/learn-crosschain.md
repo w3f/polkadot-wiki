@@ -59,7 +59,13 @@ DMP is used to move it down to another parachain.
 
 For a description of the XCMP message format please see the [xcm-format][] repository on GitHub.
 
-## Example of XCMP
+## How To Make Cross Chain Transfers
+
+You can try out cross-chain transfers on the the [Rococo](build-parachains-rococo) testnet. A
+tutorial on downward, upward, and lateral transfers can be found
+[here](build-parachains-rococo#how-to-make-cross-chain-transfers).
+
+## High Level XCMP
 
 A smart contract that exists on parachain A will route a message to parachain B in which another
 smart contract is called that makes a transfer of some assets within that chain.
