@@ -4,6 +4,8 @@ title: SPREE
 sidebar_label: SPREE
 ---
 
+<!-- no change needed -->
+
 Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "trust wormholes," are
 fragments of logic comparable to runtime modules in Substrate, but live on the Polkadot Relay Chain
 and may be opted into by parachains.
