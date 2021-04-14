@@ -103,7 +103,7 @@ produces a primary block from a [VRF-selected](learn-randomness) validator. Thus
 either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
-[working research draft](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html).
+[working research draft](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
 
 #### Difference of BABE secondary blocks between Kusama and Polkadot
 
