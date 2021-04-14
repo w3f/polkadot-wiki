@@ -4,6 +4,8 @@ title: WebAssembly (Wasm)
 sidebar_label: WebAssembly (Wasm)
 ---
 
+<!-- no changes -->
+
 WebAssembly is used in Polkadot and Substrate as the compilation target for the runtime.
 
 ## What is WebAssembly?
