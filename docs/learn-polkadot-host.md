@@ -4,6 +4,8 @@ title: Polkadot Host (PH)
 sidebar_label: Polkadot Host (PH)
 ---
 
+<!-- no change -->
+
 The architecture of Polkadot can be divided into two different parts, the Polkadot _runtime_ and the
 Polkadot _host_. The Polkadot runtime is the core state transition logic of the chain and can be
 upgraded over the course of time and without the need for a hard fork. In comparison, the Polkadot
