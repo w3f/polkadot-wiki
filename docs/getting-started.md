@@ -118,18 +118,18 @@ This is recommended for users with backgrounds of all levels, and the course is 
 - Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
 
-  ### To start interacting with Polkadot:
+  #### To start interacting with Polkadot:
 
-- [Creating a Polkadot Account][account generation]
-- [Sending a Balance transfer][transfer]
-- [Staking as Nominator][nominator]
-- [Running a Validator][validator]
-- [Setting an Identity][identity]
-- [Creating a Proxy Account][proxy]
-- [Making Proposals and Voting for Referenda][democracy]
-- [Running for the Council][council]
-- [Voting for Councillors][council voting]
-- [Using the Treasury][treasury]
+  - [Creating a Polkadot Account][account generation]
+  - [Sending a Balance transfer][transfer]
+  - [Staking as Nominator][nominator]
+  - [Running a Validator][validator]
+  - [Setting an Identity][identity]
+  - [Creating a Proxy Account][proxy]
+  - [Making Proposals and Voting for Referenda][democracy]
+  - [Running for the Council][council]
+  - [Voting for Councillors][council voting]
+  - [Using the Treasury][treasury]
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
 and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
