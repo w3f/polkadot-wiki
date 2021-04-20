@@ -19,6 +19,13 @@ circumstances, they will collate and execute transactions to create an unsealed 
 it, together with a proof of state transition, to one or more validators responsible for proposing a
 parachain block.
 
+Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
+will get rejected by validators. Therefore the assumption that having more collators is better or
+more secure is not correct. On the contrary, too many collators may slow down the network. The only
+nefarious power collators have is transaction censorship. To prevent censorship, a parachain only
+need ensure that there exist some neutral collators - but not necessarily a majority. Theoretically
+the censorship problem is solved with having just one honest collator.
+
 ### XCMP
 
 Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-crosschain). By being
