@@ -91,7 +91,7 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 - Connect to dedicated Telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Rank 25 or higher on Kusama Thousand Validators Programme
-- Mininmum of 5,000 DOTs self stake (exceptions by approval for good intentions)
+- Mininmum of 5_000 DOTs self stake (exceptions by approval for good intentions)
 - Reward destination 'Staked'
 - No more than 3% commission
 - Separate stash and controller (or have a Staking proxy set up)
