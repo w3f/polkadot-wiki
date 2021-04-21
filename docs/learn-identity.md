@@ -96,7 +96,7 @@ Copy the preimage hash. In the above image, that's
 a transaction.
 
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
-field needs to be at least 10 KSM. You can find out the minimum by querying the chain state under
+field needs to be at least 1.66 KSM. You can find out the minimum by querying the chain state under
 [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy ->
 minimumDeposit.
 
