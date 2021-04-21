@@ -5,7 +5,7 @@ sidebar_label: Redenomination of DOT
 ---
 
 > Note: The DOT redenomination took place on 21 August, now known as Denomination Day, at block
-> #1,248,328.
+> #1_248_328.
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting
 with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is
@@ -26,7 +26,7 @@ denomination by a factor of one hundred.
 The overall effect of this change was that the number of Polkadot's smallest unit, the Planck,
 remained constant, while the DOT balance for all holders was increased by a factor of one hundred.
 As one can see from the example below, the number of Plancks that a user has does not change, only
-the number of Plancks that constitute a single DOT. A user with 1,000,000,000,000 Plancks still has
+the number of Plancks that constitute a single DOT. A user with 1_000_000_000_000 Plancks still has
 the same number of Plancks, but will have 100 DOT under the new denomination, as opposed to one DOT
 under the old denomination.
 
@@ -116,7 +116,7 @@ third of the total DOT in the network participated in the vote. The redenominato
 with 86% of the voters favoring a 100x factor increase (or two decimal places of precision loss).
 
 Polkadot's redenomination then took place on 21 August, now known as Denomination Day, at block
-#1,248,328.
+#1_248_328.
 
 ### What This Means for the Community
 

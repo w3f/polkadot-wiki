@@ -24,7 +24,7 @@ transitioning the governance of the chain into the hands of the token (DOT) hold
 point where Polkadot became decentralized.
 
 The final step of the transition to full-functioning Polkadot was the enabling of transfer
-functionality, which occurred on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39
+functionality, which occurred on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39
 UTC.
 
 On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new
@@ -153,7 +153,7 @@ there will be bridges between Polkadot and most of the other major chains.
 ### What is the difference between DOT (old) and new DOT?
 
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
-August, 2020, Denomiation Day, the DOT (old) value was redenominated to 1e10 (10'000'000'000, or ten
+August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or ten
 billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
 [redenomination](redenomination), the new DOT is called DOT.
 

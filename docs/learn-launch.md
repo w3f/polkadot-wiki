@@ -43,7 +43,7 @@ under control of any centralized authority.
 
 To enable balance transfers, the community [made a public proposal](maintain-guides-democracy) for a
 runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
-subsequently enabled on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39 UTC.
+subsequently enabled on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Redenomination
 
@@ -58,8 +58,7 @@ that will pass through Polkadot's normal governance processes. The core function
 to be unlocked sequentially &mdash; several features can be unlocked with a single proposal.
 
 Parachains will first roll out on Kusama with a common good parachain, followed by the first slot
-auction and winner's onboarding. Once those parachains are working well on Kusama, the first common
-good parachain will launch, and then the first slot auction will take place on Polkadot.
+auction and winner's onboarding. 
 
 ## Polkadot 2.0
 

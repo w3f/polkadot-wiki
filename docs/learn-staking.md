@@ -398,9 +398,8 @@ for details.
 ```
     PER_ERA * BLOCK_TIME = **Reward Distribution Time**
 
-    3600 * 6 seconds = 21,600 s = 6 hours
+    3_600 * 6 seconds = 21_600 s = 6 hours
 
-    ***These parameters can be changed by proposing a referendum***
 ```
 
 Validators can create a cut of the reward that is not shared with the nominators. This cut is a

@@ -92,7 +92,7 @@ it has quadratic transport complexity, but can only finalize one block at a time
 ## Staking Mechanics
 
 Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators using the
-[sequential Phragmén algorithm](learn-phragmen). The validator set size is set by governance (1,000
+[sequential Phragmén algorithm](learn-phragmen). The validator set size is set by governance (1_000
 validators planned) and stakers who do not want to run validator infrastructure can nominate up to
 16 validators. Phragmén's algorithm selects the optimal allocation of stake, where optimal is based
 on having the most evenly staked set.

@@ -131,10 +131,10 @@ Example:
 ```
 Let's assume we have 5 members in the society.
 
-lock_duration = 100 - 50,000 / (5 + 500)
+lock_duration = 100 - 50_000 / (5 + 500)
 lock_duration * MAX_LOCK_DURATION_IN_BLOCKS
 
-Result = 1% * 15,552,000 ~ 11 days
+Result = 1% * 15_552_000 ~ 11 days
 ```
 
 Based on the above calculation, it is required to wait close to 11 days to get the slashed funds.
