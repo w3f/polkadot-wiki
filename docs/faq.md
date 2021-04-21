@@ -259,7 +259,7 @@ libp2p and the standard and custom protocols, please see the
 
 ### How does libp2p differ from IPFS?
 
-The [Interplanetary Filesystem][ipfs] (IPFS) is a peer-to-peer hypermedia protocol used primarily
+The [Interplanetary Filesystem](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used primarily
 for storage of files. It allows one to upload a file onto the network and share it with its content
 addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on the
 technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate
