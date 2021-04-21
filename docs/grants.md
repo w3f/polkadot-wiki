@@ -6,7 +6,7 @@ sidebar_label: Grants
 
 The Web3 Foundation offers two types of grants:
 
-- The [Open Grants Program](https://github.com/w3f/Open-Grants-Program) is the standard program,
+- The [Open Grants Program](https://github.com/w3f/Open-Grants-Program) is Web3 Foundation's standard program,
   which offers fast funding of up to \$30k for initial grants and \$100k for follow-up ones.
   Applications are tracked transparently on GitHub and disbursed in cryptocurrencies.
 - The [General Grants Program](https://github.com/w3f/General-Grants-Program) offers funding of up
