@@ -11,7 +11,7 @@ certainty of these parameter values, it is recommended you directly check the co
 
 ### Periods of common actions and attributes
 
-_NOTE: Kusama generally runs 4x as fast as Polkadot, where Polkadot has a slot time duration of 6 seconds. See
+_NOTE: Kusama generally runs 4x as fast as Polkadot, except in the time slot duration itself. See
 [Polkadot Parameters](https://wiki.polkadot.network/docs/en/maintain-polkadot-parameters) for more
 details on how Kusama's parameters differ from Polkadot's._
 
