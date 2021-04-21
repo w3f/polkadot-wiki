@@ -356,7 +356,7 @@ Deposit = DepositBase + threshold * DepositFactor
 Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
 
 Currently, the DepositBase is equal to `deposit(1, 88)` (key size is 32; value is size 4+4+16+32 =
-56 bytes) and the DepositFactor is equal to `deposit(0,32)` (additional address of 32 bytes).
+56 bytes) and the DepositFactor is equal to `deposit(0, 32)` (additional address of 32 bytes).
 
 The deposit function in JavaScript is defined below, cribbed from the
 [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/constants.rs#L26).

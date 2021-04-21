@@ -171,7 +171,7 @@ _To know more about where these above formulas come from, please read the
 Example:
 
 Assume:
-- We only have 1,500 DOT tokens in total.
+- We only have 1_500 DOT tokens in total.
 - Public proposal
 
 John  - 500 DOT

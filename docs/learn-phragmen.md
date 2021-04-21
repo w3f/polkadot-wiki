@@ -560,8 +560,8 @@ like to dive even more deeply, you can review the
 Paying out rewards for staking from every validator to all of their nominators can cost a
 non-trivial amount of chain resources (in terms of space on chain and resources to compute). Assume
 a system with 200 validators and 1000 nominators, where each of the nominators has nominated 10
-different validators. Payout would thus require `1000 * 10`, or 10,000 transactions. In an ideal
-scenario, if every nominator selects a single validator, only 1,000 transactions would need to take
+different validators. Payout would thus require `1_000 * 10`, or 10_000 transactions. In an ideal
+scenario, if every nominator selects a single validator, only 1_000 transactions would need to take
 place - an order of magnitude fewer. Empirically, network slowdown at the beginning of an era has
 occurred due to the large number of individual payouts by validators to nominators. In extreme
 cases, this could be an attack vector on the system, where nominators nominate many different
@@ -585,7 +585,7 @@ Another issue is that we want to ensure that as equal a distribution of votes as
 the elected validators or council members. This helps us increase the security of the system by
 ensuring that the minimum amount of tokens in order to join the active validator set or council is
 as high as possible. For example, assume a result of five validators being elected, where validators
-have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1,050. In this case, a
+have the following stake: `{1_000, 20, 10, 10, 10}`, for a total stake of 1_050. In this case, a
 potential attacker could join the active validator set with only 11 tokens, and could obtain a
 majority of validators with only 33 tokens (since the attacker only has to have enough stake to
 "kick out" the three lowest validators).

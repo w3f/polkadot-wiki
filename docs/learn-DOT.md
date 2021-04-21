@@ -24,7 +24,7 @@ are equal to 1e10 Planck.
 | Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
 
-_Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck,
+_Note: This changed at block #1_248_328. Previously, DOT were denominated as equal to 1e12 Planck,
 just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)".
 See [Redenomination of DOT](redenomination) for more details._
 
