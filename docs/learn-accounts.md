@@ -382,7 +382,7 @@ Thus the deposit values can be calculated as shown in the table below.
 
 |               | Polkadot (DOT) | Kusama (KSM)   | Polkadot (planck) | Kusama (planck) |
 | ------------- | -------------- | -------------- | ----------------- | --------------- |
-| DepositBase   | 20.088         | 3.347999999942 | 200880000000      | 3347999999942   |
+| DepositBase   | 20.088         | 3.3401         | 200880000000      | 3347999999942   |
 | DepositFactor | .032           | 0.005333333312 | 320000000         | 5333333312      |
 
 Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3 signers: Alice,
