@@ -17,7 +17,7 @@ On the [Polkadot-JS Apps][] navigate to the "Staking" tab.
 On this tab click on the "Account Actions" tab at the top of the screen.
 
 Here, click "Stop Nominating" or "Stop Validating" (depending on your role) on an account you're
-staking with and would like to free the funds for.
+staking with and would like to free the funds for. This will "chill" the tokens.
 
 ![Stop Nominating Button](/img/NPoS/unbond1.png)
 

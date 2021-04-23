@@ -28,6 +28,7 @@ const mirrored = [
   "learn-registrar",
   "maintain-guides-how-to-nominate-kusama",
   "maintain-guides-how-to-validate-kusama",
+  "maintain-guides-how-to-stop-validating",
   "maintain-errors",
   "thousand-validators",
   "learn-auction",
