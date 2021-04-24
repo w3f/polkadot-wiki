@@ -64,6 +64,55 @@ existential deposit of 1 DOT and the account cannot be initialized with such a l
 Note that even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
 from the sending account if you attempt to transfer.
 
+### Existing Reference Error
+
+<!-- These will be useful for future updates to this section: -->
+<!-- https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/issues/965 -->
+<!-- https://github.com/w3f/polkadot-wiki/issues/1101 -->
+
+If you are trying to reap an account and you recieve an error similar to "There is an existing
+reference count on the sender account. As such the account cannot be reaped from the state", then
+you have existing references to this account that must first be removed before it can be reaped.
+References may still exist from:
+
+- Bonded tokens (most likely)
+- Unpurged session keys (if you were prevously a validator)
+- Token Locks
+- Existing recovery info
+- Existing Assets
+
+#### Bonded Tokens
+
+If you have tokens that are bonded, you will need to unbond them before you can reap your account.
+Follow the instructions at [Unbonding and Rebonding](#maintain-guides-how-to-unbond) to check if you
+have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+
+#### Purging Session Keys
+
+If you used this account to setup a validator and you did not purge your keys before unbonding your
+tokens, you need to purge your keys. You can do this by seeing the
+[How to Stop Validating](#maintain-guides-how-to-stop-validating) page. This can also be checked by
+checking `session.nextKeys` in the chain state for an existing key.
+
+#### Checking for Locks
+
+You can check for locks by navigating to `Accounts > Accounts` in
+[PolkadotJS Apps](https://polkadot.js.org/apps/#/). Then, click the dropdown arrow of the relevant
+account under the 'balances' colum. If it shows that some tokens are in a 'locked' state, you can
+see why by hovering over the information icon next to it.
+
+#### Existing Recovery Info
+
+Currently, Polkadot does not use the
+[Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is
+probably not why your tokens have existing references.
+
+#### Existing Non-DOT Assets
+
+Currently, Polkadot does not use the
+[Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is
+probably not why your tokens have existing references.
+
 ### From the Accounts Page
 
 Navigate to the "Accounts" page by selecting the "Accounts" tab from the "Accounts" dropdown located
