@@ -76,7 +76,7 @@ Polkadot will use a _random beacon_ based on the VRF that's used also in other p
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
-The slot durations are capped to 2 years and divided into 3-month periods on Polkadot;
+The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }};
 Kusama slot durations will be capped to 1 year and divided into 6-week periods. Parachains may 
 lease a slot for any combination of periods of the slot duration. Parachains may lease more than 
 one slot over time, meaning that they could extend their lease to Polkadot past the maximum duration 
@@ -96,25 +96,24 @@ community.
 ```
 Parachain slots at genesis
 
-       --6 months--
+       --3 months--
        v          v
-Slot A |     1    |     2    |     3     |     4     |...
-Slot B |     1    |     2    |     3     |     4     |...
-Slot C |__________|     1    |     2     |     3     |     4     |...
-Slot D |__________|     1    |     2     |     3     |     4     |...
-Slot E |__________|__________|     1     |     2     |     3     |     4     |...
-       ^                                             ^
-       ---------------------max lease-------------------
+Slot A |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |...
+Slot B |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |...
+Slot C |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |...
+Slot D |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |...
+Slot E |__________|___________|     1     |     2     |     3     |     4    |     5     |     6     |     7     |     8     |...
+       ^                                                                                             ^
+       ---------------------------------------------max lease-----------------------------------------
 
 ```
 
 _Each period of the range 1 - 4 represents a
-{{ polkadot: 6-month duration for a total of 2 years :polkadot }} or a shorter duration on Kusama_
+{{ polkadot: 3-month duration for a total of 2 years :polkadot }} and a 6-week duration on Kusama_
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
-periods available for a slot (`n` will be 4 on Polkadot, but has not yet been determined for
-Kusama).
+periods available for a slot (`n` will be 8 for both Polkadot and Kusama).
 
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
 > way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
@@ -124,15 +123,15 @@ A bidder configuration for a single bidder may look like the following pseudocod
 ```js
 const bids = [
   {
-    range: [1, 2, 3, 4],
+    range: [1, 2, 3, 4, 5, 6, 7, 8],
     bond_amount: 300,
   },
   {
-    range: [1, 2],
+    range: [1, 2, 3, 4],
     bond_amount: 777,
   },
   {
-    range: [2, 3, 4],
+    range: [2, 3, 4, 5, 6, 7],
     bond_amount: 450,
   },
 ];
@@ -158,26 +157,26 @@ validators).
 
 There is one parachain slot available.
 
-Charlie bids `75` for the range 1 - 4.
+Charlie bids `75` for the range 1 - 8.
 
-Dave bids `100` for the range 3 - 4.
+Dave bids `100` for the range 5 - 8.
 
-Emily bids `40` for the range 1 - 2.
+Emily bids `40` for the range 1 - 4.
 
 Let's calculate each bidder's valuation according to the algorithm. We do this by multiplying the
 bond amount by the number of periods in the specified range of the bid.
 
-Charlie - 75 \* 4 = 300 for range 1 - 4
+Charlie - 75 \* 8 = 600 for range 1 - 8
 
-Dave - 100 \* 2 = 200 for range 3 - 4
+Dave - 100 \* 4 = 400 for range 5 - 8
 
-Emily - 40 \* 2 = 80 for range 1 - 2
+Emily - 40 \* 4 = 160 for range 1 - 4
 
 Although Dave had the highest bid in accordance to token amount, when we do the calculations we see
-that since he only bid for a range of 2, he would need to share the slot with Emily who bid much
-less. Together Dave's and Emily's bids only equal a valuation of `280`.
+that since he only bid for a range of 4, he would need to share the slot with Emily who bid much
+less. Together Dave's and Emily's bids only equal a valuation of `560`.
 
-Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of
+Charlie's valuation for the entire range is `600` therefore Charlie is awarded the complete range of
 the parachain slot.
 
 ## FAQ
