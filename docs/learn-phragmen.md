@@ -7,7 +7,8 @@ sidebar_label: Sequential Phragmén Method
 ## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
-the 1890s.
+the 1890s. While sequential Phragmén is currently in use on Polkadot and Kusama, an improvement on
+the sequential Phragmén method named [BalPhragmms](#external-resources) will be used in the future.
 
 The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
 of the sequential Phragmén method:
@@ -249,7 +250,7 @@ In more depth, the algorithm operates like so:
    their score, which is equal to `1 / approval_stake`.
 4. For each voter, update the score of each candidate they support by adding their total budget
    (stake) multiplied by the load of the voter and then dividing by that candidate's approval stake
-   (`voter_budget * voter_load / candidate_approval_stake`.
+   `(voter_budget * voter_load / candidate_approval_stake)`.
 5. Determine the candidate with the lowest score and elect that candidate. Remove the elected
    candidate from the pool of potential candidates.
 6. The load for each edge connecting to the winning candidate is updated, with the edge load set to
@@ -618,8 +619,10 @@ nominations are priority-ranked in terms of amount of stake.
 
 ## External Resources
 
-- [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html) -
-  The formal adaptation of the Phragmén method as applied to Polkadot validators.
+- [BalPhragmms](https://arxiv.org/pdf/2004.12990.pdf) - W3F research paper that expands on the
+  sequential Phragmén method.
+- [W3F Research Page on NPoS](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html) -
+  An overview of Nominated Proof of Stake as its applied to Polkadot.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
   implementations of Simple and Complicated Phragmén methods.
 - [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs) -
@@ -627,7 +630,7 @@ nominations are priority-ranked in terms of amount of stake.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
 - [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
-  This paper by Brill _et al._ is the source for the simple Phragmén algorithm, along with proofs
-  about its properties.
+  This paper by Brill _et al._ is the source for the simple Phragmén method, along with proofs about
+  its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
   Phragmén validator election outcome before the start of an era.
