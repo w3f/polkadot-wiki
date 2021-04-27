@@ -41,12 +41,12 @@ some assumptions about the network and participants, if we see a few blocks buil
 block, we can estimate the probability that it is final. Eventual consensus means that at some point
 in the future, all nodes will agree on the truthfulness of one set of data. This eventual consensus
 may take a long time and will not be able to be determined how long it will take ahead of time.
-However, finality gadgets such as GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) or Ethereum's Casper FFG (the Friendly Finality Gadget) are designed to give stronger and
+However, finality gadgets such as GRANDPA or Ethereum's Casper FFG are designed to give stronger and
 quicker guarantees on the finality of blocks - specifically, that they can never be reverted after
 some process of Byzantine agreements has taken place. The notion of irreversible consensus is known
 as _provable finality._
 
-In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf), it is phrased in this way:
+In the GRANDPA paper, it is phrased in this way:
 
 > We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
 > participants after some unspecified time.
@@ -55,8 +55,8 @@ In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.
 
 ### Hybrid Consensus
 
-There are two protocols we use when we talk about the consensus protocol of Polkadot, GRANDPA and
-BABE (Blind Assignment for Blockchain Extension). We talk about both of these  because Polkadot uses what is known as _hybrid
+There are two acronyms we use when we talk about the consensus protocol of Polkadot, GRANDPA and
+BABE. We talk about both of these acronyms because Polkadot uses what is known as _hybrid
 consensus_. Hybrid consensus splits up the finality gadget from the block production mechanism.
 
 This is a way of getting the benefits of probabilistic finality (the ability to always produce new
@@ -79,7 +79,7 @@ Ouroboros Praos, with some key differences in chain selection rule and slot time
 assigns block production slots to validators according to stake and using the Polkadot
 [randomness cycle](learn-randomness).
 
-Validators in Polkadot will participate in a lottery in every slot that will
+Validators in Polkadot will participate in a [lottery](learn-randomness) in every slot that will
 tell them whether or not they are the block producer candidate for that slot. Slots are discrete
 units of time, nominally 6 seconds in length. Because of this randomness mechanism, multiple
 validators could be candidates for the same slot. Other times, a slot could be empty, resulting in
@@ -103,7 +103,7 @@ produces a primary block from a [VRF-selected](learn-randomness) validator. Thus
 either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
-[BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
+[working research draft](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
 
 #### Difference of BABE secondary blocks between Kusama and Polkadot
 
@@ -132,16 +132,19 @@ all blocks leading up to that one are finalized at once.
 
 #### Protocol
 
-Please refer to 
-[the GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of
+Please refer to heading 3 in
+[the paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of
 the protocol.
 
 #### Implementation
 
 The
-[Substrate implementation of GRANDPA](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)
+[Rust implementation](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)
 is part of Substrate Frame.
 
+For even more detail, see the
+[GRANDPA research page](https://research.web3.foundation/en/latest/polkadot/GRANDPA.html) on the W3F
+Research pages.
 
 ### Fork Choice
 
@@ -151,7 +154,7 @@ head, BABE provides probabilistic finality by building on the chain with the mos
 
 ![Best chain choice](assets/best_chain.png)
 
-In the above image, the black blocks are finalized, and the yellow blocks are not. Blocks marked with a "1" are primary blocks; those marked with a "2" are secondary blocks.
+In the above image, the black blocks are finalized. Ones are primary, twos are secondary blocks.
 Even though the topmost chain is the longest chain on the latest finalized block, it does not
 qualify because it has fewer primaries at the time of evaluation than the one below it.
 
@@ -177,18 +180,22 @@ this new chain as the canonical one.
 Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cosmos comparison
 article.
 
+<!-- ### HoneyBadgerBFT -->
+
 ### Casper FFG
 
-The two main differences between GRANDPA and Casper FFG are:
+The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
 
 - in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
 - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block
   production mechanism
 
+### Casper CBC
+
+_Coming soon!_
+
 ## Resources
 
-- [BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html) - The academic
-  description of the BABE protocol.
 - [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - The academic
   description of the GRANDPA finality gadget. Contains formal proofs of the algorithm.
 - [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference
@@ -197,4 +204,3 @@ The two main differences between GRANDPA and Casper FFG are:
 - [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) -
   An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama,
   with Bill Laboon.
-- [Block Production and Finalization in Polkadot: Understanding the BABE and GRANDPA Protocols](https://www.youtube.com/watch?v=1CuTSluL7v4&t=4s) - An academic talk by Bill Laboon, given at MIT Cryptoeconomic Systems 2020, describing Polkadot's hybrid consensus model in-depth.
