@@ -33,7 +33,7 @@ channel on Matrix. To receive ROC tokens, use the command:
 !drip YOUR_ROCOCO_ADDRESS
 ```
 
-## How to connect to a Parachains
+## How to connect to a Parachain
 
 If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
 you may do so by clicking on the network selection at the top left hand corner of the navigation and
