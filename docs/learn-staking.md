@@ -428,7 +428,7 @@ going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<p style="text-align:center">Source: <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
+<p style="text-align:center">Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of DOT staked
 - **y-axis**: Inflation, annualized percentage
@@ -446,7 +446,7 @@ rewards.
 
 For those who are interested in knowing more about the design of inflation model for the network,
 please see
-[here](https://research.web3.foundation/en/latest/polkadot/economics/1-token-economics.html#npos-payments-and-inflation).
+[here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).
 
 ## Why stake?
 
