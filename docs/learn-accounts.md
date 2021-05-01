@@ -181,7 +181,7 @@ include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee
 (`feeFrozen` in camel-case).
 
 In general, the **usable** balance of the account is the amount that is `free` minus any funds that
-are considered frozen (either `misc_frozen` or `free_frozen`) and depends on the reason for which
+are considered frozen (either `misc_frozen` or `fee_frozen`) and depends on the reason for which
 the funds are to be used. If the funds are to be used for transfers then the usable amount is the
 "free" amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction
 fees than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
