@@ -11,7 +11,7 @@ and the [technical committee](learn-governance#technical-committee).
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
 tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to
-the public referenda table will it can be voted upon. Voters who are willing to lock up their tokens
+the public referenda table where it can be voted upon. Voters who are willing to lock up their tokens
 for a greater duration of time can do so and get their vote amplified. For more details on the
 governance system please see [here](learn-governance).
 
