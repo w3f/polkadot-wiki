@@ -49,12 +49,11 @@ occur often, so you should almost always see only a single active nomination per
 ### Required Minimum Stake
 
 Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, and due to the
-fact that the solution set must fit in a single block, there is a minimum number of DOT you must
+fact that the solution set must fit in a single block, in some eras, a minimum number of DOT will be required to 
 nominate with in order to receive staking rewards.
 
 This number fluctuates every era, and the most recent and up to date version can be found out using
-[this community-developed tool](https://polkaview.network/dot) or through
-[these scripts](https://github.com/w3f/validator-stats) which you can run on your machine. See the
+[these scripts](https://github.com/w3f/validator-stats) which you can run on your machine and looking for the "lowest minimal nominator". See the
 [Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set)
 section on the Nominator page for more details.
 
