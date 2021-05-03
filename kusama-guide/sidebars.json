@@ -22,6 +22,7 @@
         "label": "What to Try",
         "ids": [
           "mirror-maintain-guides-how-to-validate-kusama",
+          "mirror-maintain-guides-how-to-stop-validating",
           "mirror-maintain-guides-how-to-nominate-kusama",
           "mirror-learn-governance",
           "mirror-learn-identity",
