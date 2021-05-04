@@ -46,18 +46,6 @@ nomination. However, the election algorithm attempts to minimize this situation,
 occur often, so you should almost always see only a single active nomination per era. See the
 [section on Phragmén optimization](learn-phragmen#optimizations) for more details.
 
-### Required Minimum Stake
-
-Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, and due to the
-fact that the solution set must fit in a single block, there is a minimum number of DOT you must
-nominate with in order to receive staking rewards.
-
-This number fluctuates every era, and the most recent and up to date version can be found out using
-[this community-developed tool](https://polkaview.network/dot) or through
-[these scripts](https://github.com/w3f/validator-stats) which you can run on your machine. See the
-[Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set)
-section on the Nominator page for more details.
-
 ### Oversubscribed Validators
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to
@@ -98,6 +86,20 @@ Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards 
 validator's nominators. Any account can do this, although in practice validator operators often do
 this as a service to their nominators. See the page on [Simple Payouts](learn-simple-payouts) for
 more information and instructions for claiming rewards.
+
+
+#### Required Minimum Stake
+
+Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, there was
+**previously** a minimum number of DOT needed to nominate with in order to receive staking
+rewards due to the fact that the solution set need to be both proccessed and stored within
+a single block, 6 seconds on Polkadot.
+
+A [runtime upgrade](build-protocol-info#runtime-upgrades) moved the logic to process the rewards
+for nominators to an [off-chain worker](learn-phragmen#off-chain-phragmén), and now the minumum
+DOT required is only limited by the [existential deposit](build-protocol-info#existential-deposit)
+See the [Election Solution Set](learn-nominator#the-election-solution-set) section on the
+Nominator page for more details.
 
 ### What to Take Into Consideration When Nominating
 
