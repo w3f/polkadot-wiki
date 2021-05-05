@@ -10,8 +10,8 @@ that want to build on Polkadot), and Maintain (for people that want to maintain 
 
 ## What is Polkadot?
 
-Polkadot is a network protocol that enables interoperability and scalability by allowing specialized 
-blockchains to communicate with each other in a secure, trust-free environment.
+Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a
+secure, trust-free environment.
 
 Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less
 networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet
