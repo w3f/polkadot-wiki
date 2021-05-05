@@ -42,9 +42,9 @@ the latest release by going to their GitHub repository under the
 
 ```bash
 sudo apt-get update && apt-get upgrade
-wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
 tar xfz prometheus-*.tar.gz
-cd prometheus-2.20.1.linux-amd64
+cd prometheus-2.26.0.linux-amd64
 ```
 
 The following two binaries are in the directory:
@@ -160,24 +160,30 @@ The following messages indicate the status of the server. If you see the followi
 server is set up properly.
 
 ```bash
-level=info ts=2020-08-12T21:39:05.453Z caller=main.go:308 msg="No time or size retention was set so using the default time retention" duration=15d
-level=info ts=2020-08-12T21:39:05.453Z caller=main.go:343 msg="Starting Prometheus" version="(version=2.20.1, branch=HEAD, revision=983ebb4a513302315a8117932ab832815f85e3d2)"
-level=info ts=2020-08-12T21:39:05.453Z caller=main.go:344 build_context="(go=go1.14.6, user=root@7cbd4d1c15e0, date=20200805-17:26:58)"
-level=info ts=2020-08-12T21:39:05.453Z caller=main.go:345 host_details="(Linux 4.15.0-88-generic #88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64 Ethereum-Archive-Node (none))"
-level=info ts=2020-08-12T21:39:05.453Z caller=main.go:346 fd_limits="(soft=1024, hard=1048576)"
-level=info ts=2020-08-12T21:39:05.453Z caller=main.go:347 vm_limits="(soft=unlimited, hard=unlimited)"
-level=info ts=2020-08-12T21:39:05.455Z caller=web.go:524 component=web msg="Start listening for connections" address=0.0.0.0:9090
-level=info ts=2020-08-12T21:39:05.455Z caller=main.go:684 msg="Starting TSDB ..."
-level=info ts=2020-08-12T21:39:05.459Z caller=head.go:641 component=tsdb msg="Replaying on-disk memory mappable chunks if any"
-level=info ts=2020-08-12T21:39:05.459Z caller=head.go:655 component=tsdb msg="On-disk memory mappable chunks replay completed" duration=2.846µs
-level=info ts=2020-08-12T21:39:05.459Z caller=head.go:661 component=tsdb msg="Replaying WAL, this may take a while"
-level=info ts=2020-08-12T21:39:05.464Z caller=head.go:713 component=tsdb msg="WAL segment loaded" segment=0 maxSegment=0
-level=info ts=2020-08-12T21:39:05.464Z caller=head.go:716 component=tsdb msg="WAL replay completed" checkpoint_replay_duration=26.822µs wal_replay_duration=4.649295ms total_replay_duration=4.737874ms
-level=info ts=2020-08-12T21:39:05.466Z caller=main.go:700 fs_type=EXT4_SUPER_MAGIC
-level=info ts=2020-08-12T21:39:05.466Z caller=main.go:701 msg="TSDB started"
-level=info ts=2020-08-12T21:39:05.466Z caller=main.go:805 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
-level=info ts=2020-08-12T21:39:05.467Z caller=main.go:833 msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml
-level=info ts=2020-08-12T21:39:05.467Z caller=main.go:652 msg="Server is ready to receive web requests."
+level=info ts=2021-04-16T19:02:20.167Z caller=main.go:380 msg="No time or size retention was set so using the default time retention" duration=15d
+level=info ts=2021-04-16T19:02:20.167Z caller=main.go:418 msg="Starting Prometheus" version="(version=2.26.0, branch=HEAD, revision=3cafc58827d1ebd1a67749f88be4218f0bab3d8d)"
+level=info ts=2021-04-16T19:02:20.167Z caller=main.go:423 build_context="(go=go1.16.2, user=root@a67cafebe6d0, date=20210331-11:56:23)"
+level=info ts=2021-04-16T19:02:20.167Z caller=main.go:424 host_details="(Linux 5.4.0-42-generic #46-Ubuntu SMP Fri Jul 10 00:24:02 UTC 2020 x86_64 ubuntu2004 (none))"
+level=info ts=2021-04-16T19:02:20.167Z caller=main.go:425 fd_limits="(soft=1024, hard=1048576)"
+level=info ts=2021-04-16T19:02:20.167Z caller=main.go:426 vm_limits="(soft=unlimited, hard=unlimited)"
+level=info ts=2021-04-16T19:02:20.169Z caller=web.go:540 component=web msg="Start listening for connections" address=0.0.0.0:9090
+level=info ts=2021-04-16T19:02:20.170Z caller=main.go:795 msg="Starting TSDB ..."
+level=info ts=2021-04-16T19:02:20.171Z caller=tls_config.go:191 component=web msg="TLS is disabled." http2=false
+level=info ts=2021-04-16T19:02:20.174Z caller=head.go:696 component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+level=info ts=2021-04-16T19:02:20.175Z caller=head.go:710 component=tsdb msg="On-disk memory mappable chunks replay completed" duration=1.391446ms
+level=info ts=2021-04-16T19:02:20.175Z caller=head.go:716 component=tsdb msg="Replaying WAL, this may take a while"
+level=info ts=2021-04-16T19:02:20.178Z caller=head.go:768 component=tsdb msg="WAL segment loaded" segment=0 maxSegment=4
+level=info ts=2021-04-16T19:02:20.193Z caller=head.go:768 component=tsdb msg="WAL segment loaded" segment=1 maxSegment=4
+level=info ts=2021-04-16T19:02:20.221Z caller=head.go:768 component=tsdb msg="WAL segment loaded" segment=2 maxSegment=4
+level=info ts=2021-04-16T19:02:20.224Z caller=head.go:768 component=tsdb msg="WAL segment loaded" segment=3 maxSegment=4
+level=info ts=2021-04-16T19:02:20.229Z caller=head.go:768 component=tsdb msg="WAL segment loaded" segment=4 maxSegment=4
+level=info ts=2021-04-16T19:02:20.229Z caller=head.go:773 component=tsdb msg="WAL replay completed" checkpoint_replay_duration=43.716µs wal_replay_duration=53.973285ms total_replay_duration=55.445308ms
+level=info ts=2021-04-16T19:02:20.233Z caller=main.go:815 fs_type=EXT4_SUPER_MAGIC
+level=info ts=2021-04-16T19:02:20.233Z caller=main.go:818 msg="TSDB started"
+level=info ts=2021-04-16T19:02:20.233Z caller=main.go:944 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+level=info ts=2021-04-16T19:02:20.234Z caller=main.go:975 msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml totalDuration=824.115µs remote_storage=3.131µs web_handler=401ns query_engine=1.056µs scrape=236.454µs scrape_sd=45.432µs notify=723ns notify_sd=2.61µs rules=956ns
+level=info ts=2021-04-16T19:02:20.234Z caller=main.go:767 msg="Server is ready to receive web requests."
+
 ```
 
 Go to `http://SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus
@@ -228,23 +234,25 @@ following commands to install it first.
 
 ```bash
 sudo apt-get install -y adduser libfontconfig1
-wget https://dl.grafana.com/oss/release/grafana_7.1.3_amd64.deb
-sudo dpkg -i grafana_7.1.3_amd64.deb
+wget https://dl.grafana.com/oss/release/grafana_7.5.4_amd64.deb
+sudo dpkg -i grafana_7.5.4_amd64.deb
 ```
 
-If everything is fine, start the Grafana server and access it by going to the
-`http://SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
+If everything is fine, configure Grafana to auto-start on boot and then start the service.
 
-Now configure Grafana to auto-start on boot.
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
+```
+
+You can now access it by going to the `http://SERVER_IP_ADDRESS:3000/login`. The default user and
+password is admin/admin.
 
 > Note: If you want to change the port on which Grafana runs (3000 is a popular port), edit the file
 > `/usr/share/grafana/conf/defaults.ini` with a command like
 > `sudo vim /usr/share/grafana/conf/defaults.ini` and change the `http_port` value to something
 > else. Then restart grafana with `sudo systemctl restart grafana-server`.
-
-```bash
-sudo systemctl daemon-reload && sudo systemctl enable grafana-server && sudo systemctl start grafana-server
-```
 
 ![grafana-1](assets/guides/how-to-monitor/1-grafana-login.png)
 
@@ -296,8 +304,8 @@ node goes down.
 
 First, download the latest binary of AlertManager and unzip it by running the command below:
 
-```
-wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-amd64.tar.gz)
+```bash
+wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-amd64.tar.gz
 tar -xvzf alertmanager-0.21.0.linux-amd64.tar.gz
 mv alertmanager-0.21.0.linux-amd64.tar.gz/alertmanager /usr/local/bin/
 ```
@@ -372,7 +380,7 @@ WantedBy=multi-user.target
 To the start the Alertmanager, run the following commands:
 
 ```
-sudo systemctl daemon-reload && systemctl start alertmanager && systemctl enable alertmanager && systemctl status alertmanager
+sudo systemctl daemon-reload && sudo systemctl enable alertmanager && sudo systemctl start alertmanager && sudo systemctl status alertmanager
 ```
 
 ```
@@ -396,7 +404,7 @@ sudo grafana-cli plugins install camptocamp-prometheus-alertmanager-datasource
 And restart Grafana once the plugin is successfully installed.
 
 ```
-sudo service grafana-server restart
+sudo systemctl restart grafana-server
 ```
 
 Now go to your Grafana dashboard `SERVER_IP:3000` and configure the Alertmanager datasource.
@@ -489,20 +497,20 @@ groups:
 
 Change the ownership of this file to `prometheus` instead of `root` by running:
 
-```
+```bash
 sudo chown prometheus:prometheus rules.yml
 ```
 
 To check the rules defined in the "rules.yml" is syntactically correct, run the following command:
 
-```
-promtool check rules rules.yml
+```bash
+sudo -u prometheus promtool check rules rules.yml
 ```
 
 Finally, restart everthing by running:
 
-```
-sudo systemctl stop prometheus && systemctl start prometheus &&  systemctl stop alertmanager && systemctl start alertmanager
+```bash
+sudo systemctl restart prometheus && sudo systemctl restart alertmanager
 ```
 
 Now if one of your target instances down, you will receive an alert on the AlertManager and Gmail

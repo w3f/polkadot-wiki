@@ -60,6 +60,30 @@ and Polkadot would still enforce its validity.
 Parachains are not required to have their own token. If they do, is up to the parachain to make the
 economic case for their token, not {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
 
+## Parachain Hubs
+
+While Polkadot enables crosschain functionality amongst the parachains, it necessitates that there
+is some latency between the dispatch of a message from one parachain until the destination parachain
+receives the message. In the optimistic scenario, the latency for this message should be at least 2
+blocks - one block for the message to be dispatched and one block for the receiving parachain to
+process and produce a block that acts upon the message. However, in some cases we may see that the
+latency for messages is higher if there are many messages that are in queue to be processed, or if
+there exist no nodes that are running both of the parachain networks that can quickly gossip the
+message across the networks.
+
+Due to the neccesary latency involved in sending crosschain messages, some parachains are planning
+to become _hubs_ for an entire industry. For example, a parachain project
+[Acala](https://acala.network) is planning to become a hub for decentralized finance (DeFi)
+applications. Many DeFi applications take advantage of a property known as _composability_ which
+means that functions of one application can be composed with others in a synergistic way to create
+new applications. One example of this include flash loans, which borrow funds to execute some
+on-chain logic as long as the loan is repaid at the end of the transaction.
+
+An issue with crosschain latency means that the property of composability is weakened among
+parachains compared to a single blockchain. **This implication is common to all sharded blockchain
+designs, including Polkadot, Eth2.0, and others.** The solution to this is the introduction of
+parachain hubs which maintain the stronger property of single block composability.
+
 ## Parachain Slot Acquisition
 
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} supports a limited number of

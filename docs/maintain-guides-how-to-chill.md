@@ -8,9 +8,11 @@ Stakers can be in any one of the three states: validating, nominating, or chilli
 wants to temporarily pause their active engagement in staking, but does not want to unbond their
 funds, they can choose to "chill" their involvement and keep their funds staked.
 
-An account can step back from participating in active staking by calling the `chill` extrinsic in
-the [staking pallet][chill extrinsic]. When an account chooses to chill, they will become inactive
-in the next era. The call must be signed by the _controller_ account, not the _stash_.
+An account can step back from participating in active staking by clicking "Stop" under the
+`Network > Staking > Account actions` page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by
+calling the `chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to
+chill, they will become inactive in the next era. The call must be signed by the _controller_
+account, not the _stash_.
 
 > Note: If you need a refresher on the different responsibilities of the stash and controller
 > account when staking, take a look at the [accounts][] section in the general staking guide.

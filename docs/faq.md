@@ -24,7 +24,7 @@ transitioning the governance of the chain into the hands of the token (DOT) hold
 point where Polkadot became decentralized.
 
 The final step of the transition to full-functioning Polkadot was the enabling of transfer
-functionality, which occurred on Polkadot at block number 1,205,128 on August 18, 2020, at 16:39
+functionality, which occurred on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39
 UTC.
 
 On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new
@@ -153,7 +153,7 @@ there will be bridges between Polkadot and most of the other major chains.
 ### What is the difference between DOT (old) and new DOT?
 
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
-August, 2020, Denomiation Day, the DOT (old) value was redenominated to 1e10 (10'000'000'000, or ten
+August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or ten
 billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
 [redenomination](redenomination), the new DOT is called DOT.
 
@@ -259,7 +259,7 @@ libp2p and the standard and custom protocols, please see the
 
 ### How does libp2p differ from IPFS?
 
-The [Interplanetary Filesystem][ipfs] (IPFS) is a peer-to-peer hypermedia protocol used primarily
+The [Interplanetary Filesystem](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used primarily
 for storage of files. It allows one to upload a file onto the network and share it with its content
 addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on the
 technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate

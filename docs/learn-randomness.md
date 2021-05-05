@@ -43,7 +43,7 @@ In every slot, each validator "rolls a die". They execute a function (the VRF) t
 the following:
 
 - **The "secret key",** a key specifically made for these die rolls.
-- **An epoch randomness value,** which is The hash of VRF values from the blocks in the epoch before
+- **An epoch randomness value,** which is the hash of VRF values from the blocks in the epoch before
   last (N-2), so past randomness has an effect on the current pending randomness (N).
 - **The slot number.**
 

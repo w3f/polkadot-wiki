@@ -398,9 +398,8 @@ for details.
 ```
     PER_ERA * BLOCK_TIME = **Reward Distribution Time**
 
-    3600 * 6 seconds = 21,600 s = 6 hours
+    3_600 * 6 seconds = 21_600 s = 6 hours
 
-    ***These parameters can be changed by proposing a referendum***
 ```
 
 Validators can create a cut of the reward that is not shared with the nominators. This cut is a
@@ -429,7 +428,7 @@ going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<p style="text-align:center">Source: <a href="https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html">Research - Web3 Foundation</a></p>
+<p style="text-align:center">Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of DOT staked
 - **y-axis**: Inflation, annualized percentage
@@ -447,7 +446,7 @@ rewards.
 
 For those who are interested in knowing more about the design of inflation model for the network,
 please see
-[here](https://research.web3.foundation/en/latest/polkadot/economics/1-token-economics.html#npos-payments-and-inflation).
+[here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).
 
 ## Why stake?
 
