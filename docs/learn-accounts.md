@@ -555,24 +555,30 @@ Public Key URI `1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F` is account:
   SS58 Address:       1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F
 ```
 
-Take note of the hexadecimal string for "Public key (hex)".
+Take note of the hexadecimal string for "Public key (hex)". This is your account's public key.
 
-Next, use the [simple address convertor](https://polkadot-address-convertor.netlify.app/) 
-to retrieve your account's associated Substrate address from your Polkadot address.
+Running the `inspect` command on your public key, the default SS58 address that is returned the 
+associated Substrate address.
+ 
+`subkey inspect 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`
 
-![17](assets/accounts/pubkey-1.png)
+Secret Key URI `0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce` is account:
+  Secret seed:      0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Public key (hex): 0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  Account ID:       0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  SS58 Address:     5E6kwKEhrpVMnZvkBRFCzCcRnMXcft4HSaogYQtgtaw6QJ5s
 
-Now, inspect the associated Substrate address running `inspect` again:
+Using the `--network` flag, you can define the network that you would like to inspect, where the 
+SS58 address will be based on that network. Now, running the `inspect` command with `--network polkadot`
+return your original Polkadot address, thus verifying the public key.
 
-`subkey inspect 5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp`
+`subkey inspect 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce --network polkadot`
 
-```
-Public Key URI `5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp` is account:
-  Network ID/version: substrate
-  Public key (hex):   0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
-  Account ID:         0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
-  SS58 Address:       5CdiCGvTEuzut954STAXRfL8Lazs3KCZa5LPpkPeqqJXdTHp
-```
+Secret Key URI `0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce` is account:
+  Secret seed:      0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Public key (hex): 0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  Account ID:       0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  SS58 Address:     13345eVmibkqE6wG94JD8MSadyXGNBcRX5YAhht3Sfxcaw9U
 
 You will notice that the Subkey Tool recognizes the correct network of the address
 and returns the associated public key. The public key is returned as a hexadecimal string 
@@ -582,7 +588,7 @@ and returns the associated public key. The public key is returned as a hexadecim
 
 ##### Consider the following example: 
 
-![18](assets/accounts/pubkey-2.png)
+![17](assets/accounts/pubkey-1.png)
 
 If you are comfortable enough to distinguish between each account parameter,
 you can prefix the public key string with **"0x"** on your own:
@@ -596,7 +602,7 @@ verify both address associations to your public key. Copy your public key into t
 side, the addresses for Polkadot and Substrate that are returned based on your public key should match 
 with the ones you inspected.
 
-![19](assets/accounts/pubkey-3.png)
+![18](assets/accounts/pubkey-2.png)
 
 > Note: You may have to scroll down to the bottom of the menu to find the Substrate 
 > address based on the menu listings. You will notice that there are many networks 
@@ -610,7 +616,7 @@ See [Addresses](https://wiki.polkadot.network/docs/en/learn-accounts#address-for
 Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced 
 for how the verification is performed: 
 [pubkeyToAddress.js](https://github.com/w3f/utility-scripts/blob/master/src/misc/pubkeyToAddress.js) 
-demonstrates how a Polkadot, Substrate or Kusama address is interpreted by a single public key.  
+demonstrates how a Polkadot, Substrate, or Kusama address is interpreted by a single public key.  
 
 ## Resources
 
