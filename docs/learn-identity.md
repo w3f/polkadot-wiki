@@ -12,11 +12,14 @@ on-chain account and subsequently ask for verification of this information by
 
 Users can set an identity by registering through default fields such as legal name, display 
 name, website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which 
-they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond 
-to store their information on chain (for both Polkadot and Kusama) - 20 DOT or 1.666 KSM per identity, 
-and 1 DOT or 0.416666 KSM per each field beyond the legal name. These funds are _locked_, not spent - 
-they are returned when the identity is cleared. Each field can store up to 32 bytes of information, 
-so the data must be less than that. When inputting the data manually through the 
+they would like attestations (see [Judgements](#judgements)). 
+
+Users must reserve funds in a bond to store their information on chain (for both Polkadot and Kusama):
+{{ polkadot_identity_reserve_funds }} DOT or {{ kusama_identity_reserve_funds }} KSM per identity, and 
+{{ polkadot_identity_field_funds }} DOT or {{ kusama_identity_field_funds }} KSM per each field beyond 
+the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. 
+Each field can store up to 32 bytes of information, so the data must be less than that. When inputting 
+the data manually through the 
 [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
 [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
