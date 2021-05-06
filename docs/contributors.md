@@ -95,6 +95,19 @@ blockchain technologies and has an admiration for the web 3.0 vision. Danny focu
 content at the Web3 Foundation and acts on his passion for education. He is completing a B.Eng in
 Computer Engineering with a minor in Philosophy at Ryerson University.
 
+---
+
+### Emre Surmeli
+
+- email: [emre@web3.foundation](mailto:emre@web3.foundation)
+- matrix / riot / element: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
+- twitter: [@semres8](https://twitter.com/semres8)
+
+Emre is a Technical Educator at the Web3 Foundation. His background is in full stack software
+development, education, and blockchain technology consulting. He is passionate about learning and
+teaching and has always kept a foot in education by designing and delivering software development
+and blockchain classes at General Assembly, Code Fellows, and Columbia University.
+
 <br/><br/>
 
 ## Past Contributors
