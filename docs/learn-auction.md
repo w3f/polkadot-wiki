@@ -77,10 +77,10 @@ protocol. The VRF will provide the base of the randomness, which will retroactiv
 end-time of the auction.
 
 The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }};
-Kusama slot durations will be capped to 1 year and divided into 6-week periods. Parachains may 
-lease a slot for any combination of periods of the slot duration. Parachains may lease more than 
-one slot over time, meaning that they could extend their lease to Polkadot past the maximum duration 
-by leasing a contiguous slot.
+Kusama slot durations will be capped to 1 year and divided into 6-week periods. Parachains may lease
+a slot for any combination of periods of the slot duration. Parachains may lease more than one slot
+over time, meaning that they could extend their lease to Polkadot past the maximum duration by
+leasing a contiguous slot.
 
 > Note: Individual parachain slots are fungible. This means that parachains do not need to always
 > inhabit the same slot, but as long as a parachain inhabits any slot it can continue as a
@@ -98,11 +98,11 @@ Parachain slots at genesis
 
        --3 months--
        v          v
-Slot A |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |...
-Slot B |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |...
-Slot C |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |...
-Slot D |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |...
-Slot E |__________|___________|     1     |     2     |     3     |     4    |     5     |     6     |     7     |     8     |...
+Slot A |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |     9     |...
+Slot B |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |     9     |...
+Slot C |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |     9     |...
+Slot D |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |     9     |...
+Slot E |__________|___________|     1     |     2     |     3     |     4    |     5     |     6     |     7     |     8     |     9     |...
        ^                                                                                             ^
        ---------------------------------------------max lease-----------------------------------------
 
@@ -193,13 +193,13 @@ Relay Chain.
 The method for dividing the parachain slots into intervals was partly inspired by the desire to
 allow for a greater amount of parachain diversity, and prevent particularly large and well-funded
 parachains from hoarding slots. By making each period a {{ polkadot: three-month duration but the
-overall slot a 2-year duration :polkadot }} {{ kusama: 6-week duration but the overall slot a 1-year 
-duration :kusama }}, the mechanism can cope with well-funded parachains that will ensure they secure 
-a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem to 
-occupy the durations that are not filled. For example, if a large, well-funded parachain has already 
-acquired a slot for range 1 - 8, they would be very interested in getting the next slot that would open 
-for 2 - 5(?? Ask Bill). Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) 
-and allow range 2 - 4 of the second parachain slot to be occupied by another.
+overall slot a 2-year duration :polkadot }} {{ kusama: 6-week duration but the overall slot a 1-year
+duration :kusama }}, the mechanism can cope with well-funded parachains that will ensure they secure
+a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem
+to occupy the durations that are not filled. For example, if a large, well-funded parachain has
+already acquired a slot for range 1 - 8, they would be very interested in getting the next slot that
+would open for 2 - 9. Under this mechanism that parachain could acquire period 5 (since that is the
+only one it needs) and allow range 2 - 8 of the second parachain slot to be occupied by another.
 
 ### Why is randomness difficult on blockchains?
 
