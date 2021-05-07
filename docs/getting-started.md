@@ -5,7 +5,7 @@ sidebar_label: Getting Started
 ---
 
 Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the
-core functionality. Our wiki has three main sections: Learn (for learners), Build (for individuals
+core functionality. Our wiki has three main sections: Learn (for learners), Build (for people
 that want to build on Polkadot), and Maintain (for people that want to maintain the network).
 
 ## What is Polkadot?
@@ -37,8 +37,8 @@ Web 1.0.
 
 As social media platforms and online businesses began to emerge, the internet transformed into the
 Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages,
-where users can read and write information plus publish their own for others to see. This version of
-the web though, comes with downsides dealing with data control, privacy issues, and trust. This is
+where users can read and write information plus publish their own for others to see. However, this 
+version of the web comes with downsides, dealing with data control, privacy issues, and trust. This is
 where the Web 3.0 comes into the picture.
 
 The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free
@@ -54,16 +54,17 @@ intermediaries and build a trustless infrastructure.
 The Polkadot network uses a
 [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
 "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of
-sequentially. Each parachain in the network has a unique state transition function (STF). Based on
+sequentially. Each parachain in the network has a unique state transition function (STF).
+Polkadot has a Relay Chain acting as the main chain of the system. Based on
 Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain
 API, then it can connect to the Polkadot network as a parachain.
 
-Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose
-blocks to validators on the Relay Chain, where the blocks undergo rigorous
-[availability and validity](learn-availability) checks before being added to the finalized chain. As
-the Relay Chain provides the security guarantees, [collators](learn-collator) - full nodes of these
-parachains - don't have any security responsibilities, and thus do not require a robust incentive
-system. This is how the entire network stays up to date with the many transactions that take place.
+Parachains construct and propose blocks to validators on the Relay Chain, where the blocks 
+undergo rigorous [availability and validity](learn-availability) checks before being added to the 
+finalized chain. As the Relay Chain provides the security guarantees, 
+[collators](learn-collator) - full nodes of these parachains - don't have any security 
+responsibilities, and thus do not require a robust incentive system. This is how the entire 
+network stays up to date with the many transactions that take place.
 
 ![polkadot-relay-chain](assets/polkadot_relay_chain.png)
 
@@ -89,11 +90,13 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 
 For brand-new learners of Blockchain technology:
 
-- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to familiarizing yourself
-  with cryptography, blockchain concepts, decentralization, networks, cryptocurrency, and so much
-  more. This is recommended for users with backgrounds of all levels, and is also a free course.
+- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing yourself 
+with blockchain concepts such as cryptography and networks, and how these play into things like 
+decentralization and cryptocurrency.
 
-For brand-new learners of Polkadot:
+This is recommended for users with backgrounds of all levels, and the course is free!
+
+### For brand-new learners of Polkadot:
 
 - [Polkadot's original white paper][white-paper] is a technical summary around one possible
   direction of implementing the Polkadot network. This paper uses rationale and technical details to
@@ -114,16 +117,19 @@ For brand-new learners of Polkadot:
   explain and demonstrate how to use Polkadot and its [User Interface][ui].
 - Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
-- [Creating a Polkadot Account][account generation]
-- [Sending a Balance transfer][transfer]
-- [Staking as Nominator][nominator]
-- [Running a Validator][validator]
-- [Setting an Identity][identity]
-- [Creating a Proxy Account][proxy]
-- [Making Proposals and Voting for Referenda][democracy]
-- [Running for the Council][council]
-- [Voting for Councillors][council voting]
-- [Using the Treasury][treasury]
+
+  #### To start interacting with Polkadot:
+
+  - [Creating a Polkadot Account][account generation]
+  - [Sending a Balance transfer][transfer]
+  - [Staking as Nominator][nominator]
+  - [Running a Validator][validator]
+  - [Setting an Identity][identity]
+  - [Creating a Proxy Account][proxy]
+  - [Making Proposals and Voting for Referenda][democracy]
+  - [Running for the Council][council]
+  - [Voting for Councillors][council voting]
+  - [Using the Treasury][treasury]
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
 and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
