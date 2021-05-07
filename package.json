@@ -38,7 +38,7 @@
     "axios": "^0.21.1",
     "fs-extra": "^10.0.0",
     "ipfs-http-client": "^49.0.4",
-    "katex": "^0.13.6",
+    "katex": "^0.13.9",
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
