@@ -244,12 +244,12 @@ connect to Polkadot can support arbitrary state transitions, they can support sm
 
 Substrate presently supports smart contracts out-of-the-box in two ways:
 
-- The EVM pallet offered by [Frontier][frontier site]. 
+- The EVM pallet offered by [Frontier][]. 
 - The [Contracts pallet][substrate contracts] in the FRAME library for Wasm based contracts.
 
 ### Frontier EVM Contracts
 
-[Frontier][frontier site] is suit of tools that enables a Substrate chain to run Ethereum contacts 
+[Frontier][] is suit of tools that enables a Substrate chain to run Ethereum contacts 
 (EVM) natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses
 can also be mapped directly to and from Substrate's SS58 sceme from existing accounts.
 
@@ -350,4 +350,3 @@ Good luck!
 [moonbeam]: https://moonbeam.network
 [moonbeam docs]: https://docs.moonbeam.network/
 [frontier]: https://github.com/paritytech/frontier
-[frontier site]: https://frontier.xyz/
