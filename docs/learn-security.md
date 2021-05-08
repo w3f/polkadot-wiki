@@ -4,6 +4,8 @@ title: Security of the network
 sidebar_label: Security of the network
 ---
 
+<!-- no change needed -->
+
 ## Shared security
 
 Shared security, sometimes referred in documentation as _pooled security_, is one of the unique
@@ -21,7 +23,7 @@ fill their blocks. A major flaw in this idea is that the lower market cap coins 
 economic security attached, and be easier to attack. A real life example of a 51% attack occurred
 recently (
 [Ethereum Classic attack on January 10](https://cointelegraph.com/news/ethereum-classic-51-attack-the-reality-of-proof-of-work)
-), in which an unknown attacker double spent 219,500 ETC (~1.1M USD). This was followed by two more
+), in which an unknown attacker double spent 219_500 ETC (~1.1 million USD). This was followed by two more
 51% attacks on ETC.
 
 Polkadot overcomes security scalability concerns since it gravitates all the economic incentives to

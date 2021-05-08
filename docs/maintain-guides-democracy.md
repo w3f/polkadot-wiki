@@ -11,7 +11,7 @@ and the [technical committee](learn-governance#technical-committee).
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
 tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to
-the public referenda table will it can be voted upon. Voters who are willing to lock up their tokens
+the public referenda table where it can be voted upon. Voters who are willing to lock up their tokens
 for a greater duration of time can do so and get their vote amplified. For more details on the
 governance system please see [here](learn-governance).
 
@@ -168,9 +168,9 @@ term you hear a lot in Polkadot, it means withdrawing your DOT that was used in 
 more about it, please see [here](maintain-guides-how-to-unbond).
 
 You can do this from the "Accounts" page in
-[Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a
-"democracy" lock by opening the details on your balance. In the example below the account has 150
-KSM locked in democracy.
+[Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts), unless you use Ledger (see below).
+First check that your account has a "democracy" lock by opening the details on your balance. In the
+example below the account has 150 KSM locked in democracy.
 
 ![democracy balance details](assets/democracy_balance_details.png)
 
@@ -180,15 +180,20 @@ when successful.
 
 ![democracy clear locks](assets/democracy_clear_locks.png)
 
-#### Unlocking Very Old Locks
+#### With a Ledger hardware wallet or Unlocking Very Old Locks
 
 If you do not see an option to clear expired democracy votes, it may be that the lock is very old.
-You then must clear the lock by directly issuing the correct extrinsics.
+Or, if you are using the Ledger hardware wallet, you will not be able to issue the batch Unlock
+action from the UI.
+
+Instead, you must clear the lock by directly issuing the correct extrinsics.
 
 Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the
 following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the
 index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the
 image below).
+
+The number of the referendum for which you voted is visible in an explorer such as Polkascan.
 
 You need to press the "Submit Transaction" button to submit the extrinsic.
 

@@ -153,7 +153,7 @@ staking model.
 `NUMBER_OF_TOKENS`: The number of DOT you would like to stake to the network.
 
 > **Note**: DOT has ten decimal places and is always represented as an integer with zeroes at the
-> end. So 1 DOT = 10,000,000,000 units.
+> end. So 1 DOT = 10_000_000_000 Plancks.
 
 `REWARD_DESTINATION`:
 

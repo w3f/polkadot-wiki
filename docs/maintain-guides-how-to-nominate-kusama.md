@@ -153,7 +153,7 @@ staking model.
 
 `NUMBER_OF_TOKENS`: The number of KSM / DOT you would like to stake to the network. **Note**: KSM
 has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
-1,000,000,000,000 units.
+1_000_000_000_000 Plancks.
 
 `REWARD_DESTINATION`:
 

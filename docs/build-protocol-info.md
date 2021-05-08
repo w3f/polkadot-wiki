@@ -18,14 +18,14 @@ practical information for dealing with the chain.
 
 ### Redenomination
 
-Polkadot conducted a poll, which ended on 27 July 2020 (block 888,888), in which the stakeholders
+Polkadot conducted a poll, which ended on 27 July 2020 (block 888_888), in which the stakeholders
 decided to redenominate the DOT token. The redenomination does not change the number of base units
 (called "plancks" in Polkadot) in the network. The only change is that a single DOT token will be
 1e10 plancks instead of the original 1e12 plancks. See the Polkadot blog posts explaining the
 [details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the
 [results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
 
-The redenomination took effect 72 hours after transfers were enabled, at block 1,248,326, which
+The redenomination took effect 72 hours after transfers were enabled, at block 1_248_326, which
 occurred at approximately 16:50 UTC on 21 Aug 2020.
 
 ## Addresses

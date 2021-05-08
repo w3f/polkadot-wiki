@@ -32,8 +32,6 @@ exchange for their activities.
 - [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading
   your validator when you want to switch to a different machine or begin running the latest version
   of client code.
-- [How to Set up a Sentry Node](maintain-guides-how-to-setup-sentry-node) - Guide for setting up a
-  sentry node for your validator.
 - [How to Use Secure Validator Setup](maintain-guides-how-to-use-polkadot-secure-validator) - Guide
   on how to use Polkadot / Kusama secure validator setup.
 
@@ -73,7 +71,7 @@ exchange for their activities.
   other useful network monitoring tools.
 - [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator
   statistics.
-- [YieldScan](https://yieldscan.onrender.com/) - Staking yield maximization platform, designed to
-  minimize effort.
+- [YieldScan](https://yieldscan.app/) - Staking yield maximization platform, designed to minimize
+  effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.

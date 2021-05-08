@@ -7,7 +7,8 @@ sidebar_label: Sequential Phragmén Method
 ## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
-the 1890s.
+the 1890s. While sequential Phragmén is currently in use on Polkadot and Kusama, an improvement on
+the sequential Phragmén method named [BalPhragmms](#external-resources) will be used in the future.
 
 The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
 of the sequential Phragmén method:
@@ -249,7 +250,7 @@ In more depth, the algorithm operates like so:
    their score, which is equal to `1 / approval_stake`.
 4. For each voter, update the score of each candidate they support by adding their total budget
    (stake) multiplied by the load of the voter and then dividing by that candidate's approval stake
-   (`voter_budget * voter_load / candidate_approval_stake`.
+   `(voter_budget * voter_load / candidate_approval_stake)`.
 5. Determine the candidate with the lowest score and elect that candidate. Remove the elected
    candidate from the pool of potential candidates.
 6. The load for each edge connecting to the winning candidate is updated, with the edge load set to
@@ -560,8 +561,8 @@ like to dive even more deeply, you can review the
 Paying out rewards for staking from every validator to all of their nominators can cost a
 non-trivial amount of chain resources (in terms of space on chain and resources to compute). Assume
 a system with 200 validators and 1000 nominators, where each of the nominators has nominated 10
-different validators. Payout would thus require `1000 * 10`, or 10,000 transactions. In an ideal
-scenario, if every nominator selects a single validator, only 1,000 transactions would need to take
+different validators. Payout would thus require `1_000 * 10`, or 10_000 transactions. In an ideal
+scenario, if every nominator selects a single validator, only 1_000 transactions would need to take
 place - an order of magnitude fewer. Empirically, network slowdown at the beginning of an era has
 occurred due to the large number of individual payouts by validators to nominators. In extreme
 cases, this could be an attack vector on the system, where nominators nominate many different
@@ -585,7 +586,7 @@ Another issue is that we want to ensure that as equal a distribution of votes as
 the elected validators or council members. This helps us increase the security of the system by
 ensuring that the minimum amount of tokens in order to join the active validator set or council is
 as high as possible. For example, assume a result of five validators being elected, where validators
-have the following stake: `{1000, 20, 10, 10, 10}`, for a total stake of 1,050. In this case, a
+have the following stake: `{1_000, 20, 10, 10, 10}`, for a total stake of 1_050. In this case, a
 potential attacker could join the active validator set with only 11 tokens, and could obtain a
 majority of validators with only 33 tokens (since the attacker only has to have enough stake to
 "kick out" the three lowest validators).
@@ -618,8 +619,10 @@ nominations are priority-ranked in terms of amount of stake.
 
 ## External Resources
 
-- [W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html) -
-  The formal adaptation of the Phragmén method as applied to Polkadot validators.
+- [BalPhragmms](https://arxiv.org/pdf/2004.12990.pdf) - W3F research paper that expands on the
+  sequential Phragmén method.
+- [W3F Research Page on NPoS](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html) -
+  An overview of Nominated Proof of Stake as its applied to Polkadot.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Python
   implementations of Simple and Complicated Phragmén methods.
 - [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs) -
@@ -627,7 +630,7 @@ nominations are priority-ranked in terms of amount of stake.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
 - [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
-  This paper by Brill _et al._ is the source for the simple Phragmén algorithm, along with proofs
-  about its properties.
+  This paper by Brill _et al._ is the source for the simple Phragmén method, along with proofs about
+  its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
   Phragmén validator election outcome before the start of an era.

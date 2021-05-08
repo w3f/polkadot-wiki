@@ -181,7 +181,7 @@ include `free`, `reserved`, `misc_frozen` (`miscFrozen` in camel-case), and `fee
 (`feeFrozen` in camel-case).
 
 In general, the **usable** balance of the account is the amount that is `free` minus any funds that
-are considered frozen (either `misc_frozen` or `free_frozen`) and depends on the reason for which
+are considered frozen (either `misc_frozen` or `fee_frozen`) and depends on the reason for which
 the funds are to be used. If the funds are to be used for transfers then the usable amount is the
 "free" amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction
 fees than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
@@ -356,7 +356,7 @@ Deposit = DepositBase + threshold * DepositFactor
 Where `DepositBase` and `DepositFactor` are chain constants set in the runtime code.
 
 Currently, the DepositBase is equal to `deposit(1, 88)` (key size is 32; value is size 4+4+16+32 =
-56 bytes) and the DepositFactor is equal to `deposit(0,32)` (additional address of 32 bytes).
+56 bytes) and the DepositFactor is equal to `deposit(0, 32)` (additional address of 32 bytes).
 
 The deposit function in JavaScript is defined below, cribbed from the
 [Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/constants.rs#L26).

@@ -24,7 +24,7 @@ are equal to 1e10 Planck.
 | Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
 
-_Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck,
+_Note: This changed at block #1_248_328. Previously, DOT were denominated as equal to 1e12 Planck,
 just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)".
 See [Redenomination of DOT](redenomination) for more details._
 
@@ -156,9 +156,12 @@ You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-va
 
 ### Getting Rococo Tokens
 
-Rococo is a parachain testnet. It does not have a faucet, and tokens are given only to teams working
-on parachains or exploring the [crosschain](learn-crosschain) message passing aspects of this
-testnet. Learn more about Rococo on the [matching wiki page](build-parachains-rococo).
+Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or 
+exploring the [crosschain](learn-crosschain) message passing aspects of this
+testnet. General users can can obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the 
+Matrix chatroom [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
+
+Learn more about Rococo on its [dedicated wiki page](build-parachains-rococo).
 
 ## Kusama Tokens
 

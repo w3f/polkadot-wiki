@@ -26,11 +26,10 @@ issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 Here is a list of what you will need before starting:
 
 - A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-5 on
-  the Nano X).
+- The latest firmware installed.
 - Ledger Live is installed and at version 2.19 or newer (see settings -> about to find out if you're
   up to date).
-- A web browser is installed that you can use to access [Polkadot-JS Apps][].
+- A web browser is installed that you can use to access [Polkadot-JS Apps UI][apps].
 
 ## Installing the Ledger Application
 
@@ -79,27 +78,27 @@ again for your Pin code and you should enter it in the device.
 
 At the end of the process you should have the newly installed Kusama application on the device.
 
-## Using on Polkadot-JS Apps
+## Using on Polkadot-JS Apps UI
 
 ### Loading Your Account
 
-[Polkadot-JS Apps][] already has an integration with the Ledger application so that your device will
-work with the browser interface after installation. The functionality is currently gated behind a
-feature setting that you will need to turn on.
+[Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
+device will work with the browser interface after installation. The functionality is currently gated
+behind a feature setting that you will need to turn on.
 
-In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
-tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from the
-default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
+In order to turn on the interoperability with the Kusama Ledger application, go to the "Settings"
+tab in [Polkadot-JS Apps UI][apps]. Find the option for attaching Ledger devices and switch the
+option from the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB".
 
-![Dropdown selector for allowing Ledger connections in PolkadotJS Settings](assets/ledger.png)
+![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](assets/ledger.png)
 
 Click "Save" to keep your settings.
 
 Now when you go to the "Accounts" tab you will see a new button that says "Add Ledger". Ensure that
-your Ledger device is unlocked and you have navigated into the Polkadot application, then click this
+your Ledger device is unlocked and you have navigated into the Kusama application, then click this
 button.
 
-![Add Ledger button in PolkadotJS](assets/ledger/query-ledger.png)
+![Add Ledger button in Polkadot-JS Apps UI](assets/ledger/query-ledger.png)
 
 A popup will appear asking you to select an account and derivation path.
 
@@ -119,8 +118,8 @@ You should now be able to scroll down and find a new account on the page with th
 
 ![Displaying the Ledger account in the list](assets/ledger/ledger-balance.png)
 
-You can now use this account to interact with Polkadot on Polkadot-JS Apps and it will prompt your
-ledger for confirmation when you initiate a transaction.
+You can now use this account to interact with Kusama on [Polkadot-JS Apps UI][apps] and it will
+prompt your ledger for confirmation when you initiate a transaction.
 
 ### Confirming the Address on your Device
 
@@ -128,10 +127,10 @@ On the "Accounts" tab, find your Ledger-connected account. Click on the three ve
 end of the row. This will open a new menu, here you can click the "Show address on hardware device"
 option to display the address on your device.
 
-![Options menu of an account in the Accounts screen of PolkadotJS](assets/ledger-4.png)
+![Options menu of an account in the Accounts screen of Polkadot-JS Apps UI](assets/ledger-4.png)
 
-Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS
-Apps.
+Here you can scroll through and make sure the address matches to what is displayed on [Polkadot-JS
+Apps UI][apps].
 
 ### Checking the Balance of Your Account
 
@@ -149,7 +148,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 ### Sending a Transfer
 
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
-method is to use [Polkadot-JS Apps][].
+method is to use [Polkadot-JS Apps UI][apps].
 
 - Click on the "Transfer" button in "Accounts" dropdown in the top navigation menu.
 - In the top input, select "Ledger" as your sending account.
@@ -204,7 +203,7 @@ If you need support please send an email to [support@kusama.network](mailto:supp
 or visit [our Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
-[polkadot-js apps]: https://polkadot.js.org/apps
+[apps]: https://kusama.dotapps.io
 [prerelease instructions]: https://github.com/Zondax/ledger-kusama#download-and-install
 [releases page]: https://github.com/Zondax/ledger-kusama/releases
 [polkascan]: https://polkascan.io/kusama

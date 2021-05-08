@@ -14,8 +14,6 @@ chains.
 
 - [vs Cosmos](learn-comparisons-cosmos)
 
-- [vs Dfinity](learn-comparisons-dfinity)
-
 ## Other Comparisons
 
 ### Ethereum 1.x

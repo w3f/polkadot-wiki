@@ -43,7 +43,7 @@ In every slot, each validator "rolls a die". They execute a function (the VRF) t
 the following:
 
 - **The "secret key",** a key specifically made for these die rolls.
-- **An epoch randomness value,** which is The hash of VRF values from the blocks in the epoch before
+- **An epoch randomness value,** which is the hash of VRF values from the blocks in the epoch before
   last (N-2), so past randomness has an effect on the current pending randomness (N).
 - **The slot number.**
 
@@ -100,7 +100,7 @@ unneccessary friction for users of the blockchains opting for this method.
 
 ## Resources
 
-- [Polkadot's research on blockchain randomness and sortition](https://research.web3.foundation/en/latest/polkadot/BABE/Babe.html) -
+- [Polkadot's research on blockchain randomness and sortition](https://w3f-research.readthedocs.io/en/latest/polkadot/block-production/Babe.html) -
   contains reasoning for choices made along with proofs
 - [Discussion on Randomness used in Polkadot](https://github.com/paritytech/ink/issues/57) - W3F
   researchers discuss the randomness in Polkadot and when it is usable and under which assumptions.

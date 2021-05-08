@@ -14,6 +14,9 @@ slashed, your money and your reputation will be at risk. However, running a vali
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
+**Warning:** It is highly recommended that you have significant system administration experience before 
+attempting to run your own validator.
+
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator) information to make you understand the factors
 to consider when constructing your infrastructure. The Web3 Foundation also maintains a
@@ -23,8 +26,10 @@ likely want to use this repository as a _starting point_ for your own modificati
 customizations.
 
 If you need help, please reach out on the
-[Kusama validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders) on
-Riot. The team and other validators are there to help answer questions and provide experience.
+[Kusama validator chat](https://app.element.io/#/room/#KusamaValidatorLounge:polkadot.builders) on
+Matrix. The team and other validators are there to help answer questions and provide experience. You
+can join directly in your web browser (link above) or using a client such as Element (formerly
+Riot.im) using [this link](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders).
 
 ### How Many KSM Do I Need?
 

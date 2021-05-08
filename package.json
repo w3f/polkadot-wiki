@@ -30,15 +30,15 @@
     "docusaurus": "^1.14.7"
   },
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0",
-    "@octokit/rest": "^18.3.5",
-    "@polkadot/api": "^4.1.1",
-    "@polkadot/keyring": "^6.0.5",
+    "@octokit/rest": "^18.5.3",
+    "@polkadot/api": "^4.9.2",
+    "@polkadot/keyring": "^6.3.1",
     "axios": "^0.21.1",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.0.0",
     "ipfs-http-client": "^49.0.4",
-    "katex": "^0.13.0",
+    "katex": "^0.13.9",
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
@@ -47,6 +47,6 @@
     "remarkable-katex": "^1.1.7",
     "replace-in-file": "^6.2.0",
     "semver": "^7.3.4",
-    "yargs": "^16.2.0"
+    "yargs": "^17.0.1"
   }
 }

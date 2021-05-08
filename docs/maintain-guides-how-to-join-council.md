@@ -12,11 +12,10 @@ candidacy to the council.
 
 ## Submit Candidacy
 
-Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be
-forfeited if your candidacy does not win or become a runner-up and will be kept otherwise. You only
-receive your bond back, if you manually renounce your candidacy before losing. Runners-up are
-selected after every round and are reserved members in case one of the winners gets forcefully
-removed.
+Submitting your candidacy for the council requires a small bond of DOT / KSM. Unless your candidacy
+wins, the bond will be forfeited. You can receive your bond back if you manually renounce your
+candidacy before losing. Runners-up are selected after every round and are reserved members in case
+one of the winners gets forcefully removed.
 
 > Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.1666 KSM on
 > Kusama.
@@ -59,4 +58,4 @@ the row "Members".
 
 Now you are able to participate on the council by making motions or voting proposals. To join in on
 the active discussions, join the
-[Kusama governance channel](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+[Polkadot Direction channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io).

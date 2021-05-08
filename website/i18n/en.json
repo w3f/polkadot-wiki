@@ -429,9 +429,21 @@
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
+      "mirror-build-parachains-rococo": {
+        "title": "Building Parachains on Rococo",
+        "sidebar_label": "Building Parachains on Rococo"
+      },
       "mirror-ens": {
         "title": "Adding accounts to an ENS domain",
         "sidebar_label": "Using ENS with DOT/KSM accounts"
+      },
+      "mirror-learn-auction": {
+        "title": "Parachain Slots Auction",
+        "sidebar_label": "Parachain Slots Auction"
+      },
+      "mirror-learn-crowdloans": {
+        "title": "Parachain Crowdloans",
+        "sidebar_label": "Parachain Crowdloans"
       },
       "mirror-learn-governance": {
         "title": "Governance",
@@ -440,6 +452,14 @@
       "mirror-learn-identity": {
         "title": "Identity",
         "sidebar_label": "Identity"
+      },
+      "mirror-learn-parachains": {
+        "title": "Parachains",
+        "sidebar_label": "Parachains"
+      },
+      "mirror-learn-parathreads": {
+        "title": "Parathreads",
+        "sidebar_label": "Parathreads"
       },
       "mirror-learn-registrar": {
         "title": "Using W3F Registrar",

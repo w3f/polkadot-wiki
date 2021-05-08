@@ -19,15 +19,28 @@ circumstances, they will collate and execute transactions to create an unsealed 
 it, together with a proof of state transition, to one or more validators responsible for proposing a
 parachain block.
 
+Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it
+will get rejected by validators. Therefore the assumption that having more collators is better or
+more secure is not correct. On the contrary, too many collators may slow down the network. The only
+nefarious power collators have is transaction censorship. To prevent censorship, a parachain only
+need ensure that there exist some neutral collators - but not necessarily a majority. Theoretically
+the censorship problem is solved with having just one honest collator.
+
 ### XCMP
 
 Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-crosschain). By being
 full-nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for
 them to send messages from parachain A to parachain B.
 
+### Collators in the Wild
+
+Collators are being used on the [Rococo](build-parachains-rococo) testnet, and you can learn more
+about how they are used with Cumulus via the [Cumulus](https://github.com/paritytech/cumulus/)
+repository.
+
 ### Guides and Tools
 
-- [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling)
+- [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/)
 - [Rococo tesnet guide](https://wiki.polkadot.network/docs/en/build-parachains-rococo)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.
