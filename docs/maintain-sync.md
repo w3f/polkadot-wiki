@@ -68,7 +68,7 @@ https://github.com/paritytech/substrate-light-ui
   ./scripts/init.sh
   cargo build --release
   ```
-- Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
+- Run the following command to start your node: `./target/release/polkadot --name "My node's name" --chain kusama`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 ### Fast Install Instructions (Windows)
@@ -86,7 +86,7 @@ https://github.com/paritytech/substrate-light-ui
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
-- Run the following: `./polkadot --name "Your Node Name Here"`
+- Run the following: `./polkadot --name "Your Node Name Here" --chain kusama`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 ### Fast Install Instructions (Linux)
@@ -110,7 +110,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
-- Run the following: `./polkadot --name "Your Node Name Here"`
+- Run the following: `./polkadot --name "Your Node Name Here" --chain kusama`
 - Find your node at https://telemetry.polkadot.io/#list/Kusama
 
 ## Get Substrate
@@ -154,7 +154,7 @@ cargo build --release
 The built binary will be in the `target/release` folder, called `polkadot`.
 
 ```bash
-./target/release/polkadot --name "My node's name"
+./target/release/polkadot --name "My node's name" --chain kusama
 ```
 
 Use the `--help` flag to find out which flags you can use when running the node. For example, if
@@ -174,7 +174,7 @@ validating, it defaults to [archive mode](#types-of-nodes). To keep the full sta
 `--pruning` flag:
 
 ```bash
-./target/release/polkadot --name "My node's name" --pruning archive
+./target/release/polkadot --name "My node's name" --chain kusama --pruning archive
 ```
 
 It is possible to almost quadruple synchronization speed by using an additional flag:
