@@ -49,11 +49,11 @@
   },
   {
     "tpl": "kusama_max_nominators",
-    "default": "128"
+    "default": "256"
   },
   {
     "tpl": "polkadot_max_nominators",
-    "default": "128"
+    "default": "256"
   },
   {
     "tpl": "dot_ipfs_pdf_url",
