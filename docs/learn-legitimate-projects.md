@@ -10,7 +10,7 @@ Telling legitimate projects from the "not so honest" ones isn't always an easy t
 
 Finally, a project being legitimate doesn't necessarily mean it will be a successful one too and this guide is definitely not meant to be viewed as financial or investment advice. Besides doing your own reserch in the legitimacy of a project, you need to do it for its success prospects too, before deciding to invest.
 
-## Powered by Polkadot
+### "Powered by Polkadot" clarification
 This statement on many projects' sites is often cause of confusion. This usually means that the project is building, or intends to build, on the Polkadot ecosystem, using Substrate. But any project can claim that, so the existence of this statement on a project's site infers no information about the legitimacy of the project and it's certainly not a "seal of approval" by Web3 Foundation.
 
 ## Signs of a legitimate project
@@ -57,6 +57,6 @@ There are, however, several projects that advertise a "multi-chain" solution. In
 
 #### 7. Parachain candidate
 
-There are many ways a project can build on Polkadot. But the most direct and impactful is by aiming to be a parachain. And finding whether a project is actually building a parachain is the easiest one: through the [Rococo testnet parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains) page on polkadot.js.org. Every project that aims to be a parachain will test their chain on Rococo as a parachain and a [parathread](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/parathreads) before moving over to Kusama and eventually Polkadot.
+There are many ways a project can build on Polkadot. But the most direct and impactful is by aiming to be a parachain. And finding whether a project is actually building a parachain is the easiest one: through the [Rococo testnet parachains](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains) and [parathreads](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/parathreads) pages on polkadot.js.org. Every project that aims to be a parachain will test their chain on Rococo as a parachain and a parathread before moving over to Kusama and eventually Polkadot.
 
 Of course, getting a parachain slot on either of the two main networks is not guaranteed and the project will need to win the [auction](learn-auction) for the slots they're interested in, or they may choose to be a [parathread](learn-parathreads) instead (although this should be clarified to their community). But testing their software on the Rococo testnet is certainly a strong indicator of the legitimacy of the project.
