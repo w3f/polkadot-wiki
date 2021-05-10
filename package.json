@@ -42,7 +42,7 @@
     "mr-pdf": "^0.2.3",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "react-bootstrap": "^1.5.2",
     "remarkable-katex": "^1.1.7",
     "replace-in-file": "^6.2.0",
