@@ -77,9 +77,9 @@ References may still exist from:
 
 - Bonded tokens (most likely)
 - Unpurged session keys (if you were prevously a validator)
-- Token Locks
+- Token locks
 - Existing recovery info
-- Existing Assets
+- Existing assets
 
 #### Bonded Tokens
 
@@ -96,9 +96,14 @@ checking `session.nextKeys` in the chain state for an existing key.
 
 #### Checking for Locks
 
-You can check for locks by navigating to `Accounts > Accounts` in
+You can check for locks by querying `system.account(AccountId)` under `Developer > Chain state`.
+Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
+JSON object. If you see a non-zero value for anything other than `free`, you have locks on your
+account that need to get resolved.
+
+You can also check for locks by navigating to `Accounts > Accounts` in
 [PolkadotJS Apps](https://polkadot.js.org/apps/#/). Then, click the dropdown arrow of the relevant
-account under the 'balances' colum. If it shows that some tokens are in a 'locked' state, you can
+account under the 'balances' column. If it shows that some tokens are in a 'locked' state, you can
 see why by hovering over the information icon next to it.
 
 #### Existing Recovery Info
