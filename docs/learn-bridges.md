@@ -25,7 +25,7 @@ Building a bridge that is as decentralized and trustless as possible can be done
 following methods (ordered by suggested methodology):
 
 - _Bridge pallets_ - For Substrate-native chains, use a bridge pallet (e.g. Kusama <> Polkadot
-  bridge, since both networks parachains use Substrate).
+  bridge, since both networks' parachains use Substrate).
 - _Smart contracts_ - If the chain is not on Substrate, you should have smart contracts on the
   non-Substrate chain to bridge (e.g. Ethereum mainnet will have a bridge smart contract that
   initiates Eth transactions based on incoming XCMP messages).
@@ -98,6 +98,9 @@ components:
 
 For full details on how it works please refer to the specification.
 
+There is now a
+[reference implementation and testnet available](https://medium.com/interlay/polkabtc-beta-testnet-launch-2cc9ea7431b7).
+
 ## Additional Resources and Examples
 
 ### For Bridge Builders
@@ -120,7 +123,7 @@ welcome.
   a grant in [Wave 5][] to build a GRANDPA light client in Tendermint.
 - [Interlay BTC Bridge][interlay] - The Interlay team was awarded a grant in W3F grants [Wave 5][]
   to build a trust-minimized BTC bridge.
-- [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/master/xrml/xbridge/bitcoin) -
+- [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/master/xpallets/gateway/bitcoin) -
   ChainX have implemented a BTC to Substrate bridge for their parachain.
 - [POA Network](https://poa.network/)
 - [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA
