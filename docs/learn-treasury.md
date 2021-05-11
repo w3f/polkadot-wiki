@@ -6,12 +6,12 @@ description: Details about Polkadot's on-chain treasury.
 ---
 
 The Treasury is a pot of funds collected through transaction fees, slashing,
-[staking inefficiencies](learn-staking#inflation), etc. The funds held in the Treasury can be spent
-by making a spending proposal that, if approved by the [Council](learn-governance#Council), will
-enter a waiting period before distribution. This waiting period is known as the budget period, and
-its duration is subject to [governance](learn-governance), with the current default set to
-{{ spend_period }} days. The Treasury attempts to spend as many proposals in the queue as it can
-without running out of funds.
+[staking inefficiencies](https://wiki.polkadot.network/docs/en/learn-staking/#inflation), etc. The
+funds held in the Treasury can be spent by making a spending proposal that, if approved by the
+[Council](learn-governance#Council), will enter a waiting period before distribution. This waiting
+period is known as the budget period, and its duration is subject to [governance](learn-governance),
+with the current default set to {{ spend_period }} days. The Treasury attempts to spend as many
+proposals in the queue as it can without running out of funds.
 
 If the Treasury ends a budget period without spending all of its funds, it suffers a burn of a
 percentage of its funds -- thereby causing deflationary pressure.
@@ -20,9 +20,9 @@ on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama
 [Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
 burned. :kusama }}
 
-When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit totaling
-5% of the proposed spend (see below for variations). This deposit will be slashed if the proposal is
-rejected, and returned if it is accepted.
+When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
+least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
+proposal is rejected, and returned if it is accepted.
 
 Proposals may consist of (but are not limited to):
 
@@ -41,16 +41,17 @@ will be spent is up to their judgment.
 The Treasury is funded from different sources:
 
 1. Slashing: When a validator is slashed for any reason, the slashed amount is sent to the Treasury
-   with a reward going to the entity that reported the validator (another validator or a fisherman).
-   The reward is taken from the slash amount and varies per offence and number of reporters.
+   with a reward going to the entity that reported the validator (another validator). The reward is
+   taken from the slash amount and varies per offence and number of reporters.
 2. Transaction fees: A portion of each block's transaction fees goes to the Treasury, with the
    remainder going to the block author.
-3. Staking inefficiency: [Inflation](learn-staking#inflation) is designed to be 10% in the first
-   year, and the ideal staking ratio is set at 50%, meaning half of all tokens should be locked in
-   staking. Any deviation from this ratio will cause a proportional amount of the inflation to go to
-   the Treasury. In other words, if 50% of all tokens are staked, then 100% of the inflation goes to
-   the validators as reward. If the staking rate is greater than or less than 50%, then the
-   validators will receive less, with the remainder going to the Treasury.
+3. Staking inefficiency: [Inflation](https://wiki.polkadot.network/docs/en/learn-staking/#inflation)
+   is designed to be 10% in the first year, and the ideal staking ratio is set at 50%, meaning half
+   of all tokens should be locked in staking. Any deviation from this ratio will cause a
+   proportional amount of the inflation to go to the Treasury. In other words, if 50% of all tokens
+   are staked, then 100% of the inflation goes to the validators as reward. If the staking rate is
+   greater than or less than 50%, then the validators will receive less, with the remainder going to
+   the Treasury.
 4. Parathreads: [Parathreads](learn-parathreads) participate in a per-block auction for block
    inclusion. Part of this bid goes to the validator that accepts the block and the remainder goes
    to the Treasury.
@@ -73,17 +74,12 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-  [Kusama Element (previously Riot)](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat.
-- The [Polkassembly](https://kusama.polkassembly.io) discussion platform that allows users to log in
-  with their KSM address and automatically reads proposals from the chain, turning them into
-  discussion threads. It also offers a sentiment gauge poll to get a feel for a proposal before
-  committing to a vote.
-- The {{ polkadot: [Polkadot forum](https://forum.polkadot.network) :polkadot }}
-  {{ kusama: [Kusama forum](https://forum.kusama.network) :kusama }} can be used for proposal
-  explanations.
-- [Commonwealth.im](https://commonwealth.im) is a community site that allows users to log in with
-  their {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} address and automatically
-  reads proposals from the chain, turning them into discussion threads.
+  [Kusama Element (previously Riot)](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat or
+  [Polkadot Element](https://riot.w3f.tech/#/room/#polkadot:matrix.parity.io).
+- The [Polkassembly](https://polkassembly.io) discussion platform that allows users to log in with
+  their Web3 address and automatically reads proposals from the chain, turning them into discussion
+  threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
+  vote.
 
 Spreading the word about the proposal's explanation is ultimately up to the proposer - the
 recommended way is using official Element channels like {{ polkadot: the
@@ -168,8 +164,8 @@ was cheaper for her to do so.
 For her trouble, Alice is able to claim the eventual finder's fee if the tip is approved by the
 tippers.
 
-Since the tipper group is the same as the Council on Kusama, the Council must now collectively (but
-also independently) decide on the value of the tip that Bob deserves.
+Since the tipper group is the same as the Council, the Council must now collectively (but also
+independently) decide on the value of the tip that Bob deserves.
 
 Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of
 the benefit Bob has provided to Kusama.
