@@ -14,9 +14,8 @@ Users can set an identity by registering through default fields such as legal na
 name, website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which 
 they would like attestations (see [Judgements](#judgements)). 
 
-Users must reserve funds in a bond to store their information on chain (for both Polkadot and Kusama):
-{{ polkadot_identity_reserve_funds }} DOT or {{ kusama_identity_reserve_funds }} KSM per identity, and 
-{{ polkadot_identity_field_funds }} DOT or {{ kusama_identity_field_funds }} KSM per each field beyond 
+Users must reserve funds in a bond to store their information on chain:
+{{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond 
 the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. 
 Each field can store up to 32 bytes of information, so the data must be less than that. When inputting 
 the data manually through the 
