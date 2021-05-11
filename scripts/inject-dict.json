@@ -48,6 +48,18 @@
     "filters": ["blocksToDays"]
   },
   {
+    "tpl": "identity_reserve_funds",
+    "default": { "kusama": 1.666, "polkadot": 20 },
+    "path": "consts.identity.reserveFunds",
+    "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "identity_field_funds",
+    "default": { "kusama": 0.41666, "polkadot": 1 },
+    "path": "consts.identity.reserveFieldFunds",
+    "filters": ["humanReadableToken"]
+  },
+  {
     "tpl": "kusama_max_nominators",
     "default": "256"
   },
