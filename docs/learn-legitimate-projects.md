@@ -19,7 +19,7 @@ This statement on many projects' sites is often cause of confusion. This usually
 
 [Web3 Foundation Grants](https://github.com/w3f/Open-Grants-Program) are a way to subsidise projects that are building on Polkadot. They have very specific criteria in order to apply and are thorougly reviewed by the review team. So, having their application approved is a first indication that the team is committed to their project. Once they have delivered their first milestone, they can add the ["Web3 Grants" badge](https://github.com/w3f/General-Grants-Program/blob/master/grants/grant-badge-guidelines.md) on their project's site.
 
-Having received a grant is a strong indicator that a project is legitimate. And if they have delivered all of their milestones, then it's most likely of reasonable quality. However, a grant is not a guarantee on the continuity of the proejct. Also, it can be terminated at any point if they violate the rules of the program, so that's something to look out for. 
+Having received a grant is a strong indicator that a project is legitimate. And if they have delivered all of their milestones, then it's most likely of reasonable quality. However, a grant is not a guarantee on the continuity of the proejct and it can be terminated at any point if they violate the rules of the program, so that's something to look out for. 
 
 Finally, a grant **is not** an endorsement by or a partnership with Web3 Foundation. 
 
@@ -43,11 +43,11 @@ And, as mentioned above, an open source project has the additional advantage tha
 
 The existence of a whitepaper should be considered mandatory for any project that wants to be taken seriously. However, the whitepaper needs to be more than a few infographics, some bullet points and tokenomics. A legitimate project, and even more so a serious project, will deeply analyse all aspects of their project, its use cases, what problems it aims to solve, as well as the technical aspects of the project.
 
-A well-written, detailed whitepaper that focus more on the technology and less on tokenomics, is always a good sign that the project is legitimate.
+A well-written, detailed whitepaper that focus more on the technology and less on tokenomics, is always a good sign that the project is legitimate. And, of course, this applies to the project as whole, meaning focusing on the technology and not on token sales, is always a big plus.
 
 #### 5. Visible and reputable team
 
-Legitimate projects usually display their team members prominently on their site, along with their social media (usually LinkedIn) and GitHub profiles, for development team members. This gives prospective users and investors the ability to verify the team's credentials, track records and expertise. Furthermore, having members of the core team engage directly with the community promotes trust and transparency for the project.
+Legitimate projects usually display their team members prominently on their site, along with their social media profiles (usually LinkedIn) and GitHub accounts, for development team members. This gives prospective users and investors the ability to verify the team's credentials, track records and expertise. Furthermore, having members of the core team engage directly with the community promotes trust and transparency for the project.
 
 Besides their own community, projects that are serious about building on Polkadot usually engage with the broader Polkadot community. They are active in the various Polkadot and Kusama channels and if any of them are [Ambassadors](https://polkadot.network/polkadot-ambassador-program/), that is always a good sign.
 
@@ -91,7 +91,7 @@ If the project's email, or the team members emails, are from Gmail or Yahoo or s
 
 #### 5. They've copied code without attribution
 
-A forked repo is easy to spot since it points to the original repo. A project that uses forked code and tries to pass it as their own, is a big red flag. In some cases using someone else's code is okay, but in these cases attribution to the original project is a must for any legitimate project. And the same is true if only part of the code is copied from another project.
+A forked repo is easy to spot since it points to the original repo. A project that uses forked code and tries to pass it as their own waves a big red flag. In some cases using someone else's code is okay, but in these cases attribution to the original project is a must for any legitimate project. And the same is true if only part of the code is copied from another project.
 
 In fact, this is reason for termination of a Web3 grant and has happened in the past.
 
@@ -105,4 +105,4 @@ The surest way to participate in a parachain crowdloan is the native way through
 
 A legitimate team will never ask you to send them funds in order to participate in a crowdloan. That being said, some teams have been doing token sales or swaps in an attempt to get a head start in raising funds for the upcoming auctions, but these are not crowdloans and they imply full trust in the team. So, if you plan to participate in these token swaps make sure the project is reputable and that you're getting the correct information through their official site and social media channels.
 
-Similarly, several centralised exchanges are creating ways to participate to crowdloans through their platforms, but also some wallets are integrating crowdloan functionality to their apps and more are sure to follow. Any legitimate effort should be using the native crowdloans module in the background and simply offer a more streamlined experience for the user. Making sure that's the case is necessary before using these services, but in any case it still involves trusting the exchange or the service provider.
+Similarly, several centralised exchanges are creating ways to participate in crowdloans through their platforms, but also some wallets are integrating crowdloan functionality to their apps and more are sure to follow. Any legitimate effort should be using the native crowdloans module in the background and simply offer a more streamlined experience for the user. Making sure that's the case is necessary before using these services, but in any case it still involves trusting the exchange or the service provider.
