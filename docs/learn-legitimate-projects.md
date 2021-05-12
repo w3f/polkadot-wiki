@@ -43,7 +43,7 @@ And, as mentioned above, an open source project has the additional advantage tha
 
 The existence of a whitepaper should be considered mandatory for any project that wants to be taken seriously. However, the whitepaper needs to be more than a few infographics, some bullet points and tokenomics. A legitimate project, and even more so a serious project, will deeply analyse all aspects of their project, its use cases, what problems it aims to solve, as well as the technical aspects of the project.
 
-A well-written, detailed whitepaper that focus more on the technology and less on tokenomics, is always a good sign that the project is legitimate. And, of course, this applies to the project as whole, meaning focusing on the technology and not on token sales, is always a big plus.
+A well-written, detailed whitepaper that focuses more on the technology and less on tokenomics, is always a good sign that the project is legitimate. And, of course, this applies to the project as whole, meaning focusing on the technology and not on token sales, is always a big plus.
 
 #### 5. Visible and reputable team
 
