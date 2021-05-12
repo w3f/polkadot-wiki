@@ -23,7 +23,7 @@ Having received a grant is a strong indicator that a project is legitimate. And 
 
 Finally, a grant **is not** an endorsement by or a partnership with Web3 Foundation. 
 
-The full list of projects that have successfully applied for a grant can be found [here](https://github.com/w3f/General-Grants-Program/blob/master/grants/accepted_grant_applications.md).
+The full list of projects that have successfully applied for a grant can be found [here](https://github.com/w3f/General-Grants-Program/blob/master/grants/accepted_grant_applications.md), where you can see what each project has delivered and which ones had their grant terminated.
 
 #### 2. Open source
 
