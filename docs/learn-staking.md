@@ -414,8 +414,9 @@ stake acts just as if they were another nominator.
 
 Rewards can be directed to the same account (controller), to the stash account (and either
 increasing the staked value or not increasing the staked value), or to a completely custom account.
-It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything. You
-can also send rewards to "None", effectively burning them.
+It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything. By
+using the Extrinsics tab (`Developer -> Extrinsics -> Staking -> Bond`) you can also send rewards to
+"None", effectively burning them.
 
 For specific details about validator payouts, please see
 [this guide](maintain-guides-validator-payout).
