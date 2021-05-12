@@ -249,7 +249,7 @@ Substrate presently supports smart contracts out-of-the-box in two ways:
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suit of tools that enables a Substrate chain to run Ethereum contacts 
+[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts 
 (EVM) natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses
 can also be mapped directly to and from Substrate's SS58 sceme from existing accounts.
 
