@@ -19,7 +19,7 @@ This statement on many projects' sites is often cause of confusion. This usually
 
 [Web3 Foundation Grants](https://github.com/w3f/Open-Grants-Program) are a way to subsidise projects that are building on Polkadot. They have very specific criteria in order to apply and are thorougly reviewed by the review team. So, having their application approved is a first indication that the team is committed to their project. Once they have delivered their first milestone, they can add the ["Web3 Grants" badge](https://github.com/w3f/General-Grants-Program/blob/master/grants/grant-badge-guidelines.md) on their project's site.
 
-Having received a grant is a strong indicator that a project is legitimate. And if they have delivered all of their milestones, then it's most likely of reasonable quality. However, a grant is not a guarantee on the continuity of the proejct and it can be terminated at any point if they violate the rules of the program, so that's something to look out for. 
+Having received a grant is a strong indicator that a project is legitimate. And if they have delivered all of their milestones, then it's most likely of reasonable quality. However, a grant is not a guarantee on the continuity of the project and it can be terminated at any point if they violate the rules of the program, so that's something to look out for. 
 
 Finally, a grant **is not** an endorsement by or a partnership with Web3 Foundation. 
 
