@@ -89,7 +89,7 @@ have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 #### Purging Session Keys
 
-If you used this account to setup a validator and you did not purge your keys before unbonding your
+If you used this account to set up a validator and you did not purge your keys before unbonding your
 tokens, you need to purge your keys. You can do this by seeing the
 [How to Stop Validating](#maintain-guides-how-to-stop-validating) page. This can also be checked by
 checking `session.nextKeys` in the chain state for an existing key.
