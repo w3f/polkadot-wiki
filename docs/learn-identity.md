@@ -10,20 +10,19 @@ on-chain account and subsequently ask for verification of this information by
 
 ## Setting an Identity
 
-Users can set an identity by registering through default fields such as legal name, display 
-name, website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which 
-they would like attestations (see [Judgements](#judgements)). 
+Users can set an identity by registering through default fields such as legal name, display name,
+website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which they would
+like attestations (see [Judgements](#judgements)).
 
 Users must reserve funds in a bond to store their information on chain:
-{{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond 
-the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. 
-Each field can store up to 32 bytes of information, so the data must be less than that. When inputting 
-the data manually through the 
-[Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
+{{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
+These funds are _locked_, not spent - they are returned when the identity is cleared. Each field can
+store up to 32 bytes of information, so the data must be less than that. When inputting the data
+manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
 [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
-The easiest way to add the built-in fields is to click the gear icon next to your account and
-select "Set on-chain identity".
+The easiest way to add the built-in fields is to click the gear icon next to your account and select
+"Set on-chain identity".
 
 ![Gear icon provides the option to set identity](assets/identity/01.jpg)
 
@@ -96,9 +95,9 @@ Copy the preimage hash. In the above image, that's
 a transaction.
 
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
-field needs to be at least 1.66 KSM. You can find out the minimum by querying the chain state under
-[Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy ->
-minimumDeposit.
+field needs to be at least {{ identity_reserve_funds }} KSM. You can find out the minimum by
+querying the chain state under [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants
+-> democracy -> minimumDeposit.
 
 ![Submitting a proposal](assets/identity/13.jpg)
 
@@ -140,10 +139,10 @@ If you don't know which registrar to pick, first check the available registrars 
 
 ## Cancelling Judgements
 
-You may decide that you do not want to be judged by a registrar (for instance, because you
-realize you entered incorrect data or selected the wrong registrar). In this case, after submitting
-the request for judgement but before your identity has been judged, you can issue a call to cancel
-the judgement using an extrinsic.
+You may decide that you do not want to be judged by a registrar (for instance, because you realize
+you entered incorrect data or selected the wrong registrar). In this case, after submitting the
+request for judgement but before your identity has been judged, you can issue a call to cancel the
+judgement using an extrinsic.
 
 ![Cancel Registrar](assets/registrar_cancel_judgement.png)
 
