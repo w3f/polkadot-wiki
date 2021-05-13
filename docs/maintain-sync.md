@@ -26,9 +26,7 @@ An **archive node** keeps all the past blocks. An archive node makes it convenie
 state of the chain at any point in time. Finding out what an account's balance at a certain block
 was, or which extrinsics resulted in a certain state change are fast operations when using an
 archive node. However, an archive node takes up a lot of disk space - around Kusama's 1.6 millionth
-block this was around 15 to 20GB. When running a validator, this requirement doubles as
-[the sentry node](maintain-guides-how-to-setup-sentry-node) in front of a validator should be an
-archive node too.
+block this was around 15 to 20GB.
 
 A **full node** is _pruned_, meaning it discards all information older than 256 blocks, but keeps
 the extrinsics for all past blocks, and the genesis block. A node that is pruned this way requires
