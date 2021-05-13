@@ -19,8 +19,8 @@ slashed, your money and your reputation will be at risk. However, running a vali
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
-**Warning:** It is highly recommended that you have significant system administration experience before 
-attempting to run your own validator.
+**Warning:** It is highly recommended that you have significant system administration experience
+before attempting to run your own validator.
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator) information to make sure you understand the
