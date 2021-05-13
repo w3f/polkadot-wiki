@@ -20,7 +20,7 @@ Democracy module as it's implemented in Kusama.
 
 ## Important Parameters
 
-The important parameters to be aware of when voting using the Democracry module are as follow:
+The important parameters to be aware of when voting using the Democracy module are as follow:
 
 **Launch Period** - How often new public referenda are launched.
 
@@ -150,7 +150,9 @@ would like to cast your vote against the proposal in referendum you will select 
 approve" option.
 
 The second option is to select your conviction for this vote. The longer you are willing to lock
-your tokens, the stronger your vote will be weighted. Unwillingness to lock your tokens means that
+your tokens, the stronger your vote will be weighted. The timeline for the conviction starts after 
+the voting period ends; tokens used for voting will always be locked until the end of the voting 
+period, no matter what conviction you vote with. Unwillingness to lock your tokens means that
 your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days
 means you can make your vote count for 600% of the tokens that you hold.
 
