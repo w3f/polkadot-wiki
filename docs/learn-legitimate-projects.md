@@ -101,9 +101,9 @@ In fact, this is reason for termination of a Web3 grant and has happened in the 
 
 Many illegitimate projects will try to elevate and bring validity to themselves by claiming all sorts of things that simply aren't true. And usually that's accomplished by associating themselves with well-known entities. 
 
-If you see that a project has partnered with Web3 Foundation, you can know from the start that this is a false claim. Web3 Foundation does not endorse nor partners with any projects in the ecosystem. 
+If you see that a project has partnered with Web3 Foundation, you can know from the start that this is a false claim. Web3 Foundation does not endorse, nor partners with any projects in the ecosystem. 
 
-For all other claims, you should check their validity. If they claim they have received a grant, check to see if that's true and that they have not been terminated. If they claim partnerships with or funding from various companies and VC funds, check those claims on those companies' sites. If they prominently display that they've been featured in reputable media, verify that this is genuine press coverage and not paid press releases.
+For all other claims, you should check their validity. If they claim they have received a grant, check to see if that's true and that they have not been terminated. If they claim partnerships with or funding from various companies and VC funds, cross-reference those claims on those companies' sites. If they prominently display that they've been featured in reputable media, verify that this is genuine press coverage and not paid press releases.
 
 This last point, probably encompasses all others: Don't trust what is shown on the surface. Dig deep and **always verify**.
 
