@@ -10,6 +10,7 @@
           "kusama-faucet",
           "kusama-claims",
           "kusama-endpoints",
+          "mirror-learn-balance-transfers",
           "mirror-thousand-validators",
           "mirror-learn-auction",
           "mirror-learn-parachains",
