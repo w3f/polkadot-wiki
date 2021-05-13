@@ -10,9 +10,9 @@ already [created an account](learn-account-generation) and have some funds that 
 
 ## Polkadot-JS Apps
 
-> NOTE: In this walkthrough we will be using the Polkadot network. If you would like to switch to
-> Kusama or a different network, you can change it by clicking the top left navigation dropdown and
-> selecting a different network.
+> NOTE: In this walkthrough we will be using the Polkadot network, but this is the same process for
+> Kusama. If you would like to switch to a different network, you can change it by clicking the top
+> left navigation dropdown and selecting a different network.
 
 Let's begin by opening [Polkadot-JS Apps][]. There are two ways to make a balance transfer:
 
@@ -108,16 +108,16 @@ see why by hovering over the information icon next to it.
 
 #### Existing Recovery Info
 
-{{ polkadot: Currently, Polkadot does not use the
-[Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is
-probably not why your tokens have existing references. :polkadot}}
+{{ polkadot: Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use
+the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this
+is probably not why your tokens have existing references. :polkadot}}
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
 chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama}}
 
-#### Existing Non-DOT Assets
+#### Existing {{ polkadot: Non-DOT :polkadot}} {{ kusama: Non-KSM :Kusama }} Assets
 
-Currently, Polkadot does not use the
+Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is
 probably not why your tokens have existing references.
 
