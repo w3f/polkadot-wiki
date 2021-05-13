@@ -108,9 +108,12 @@ see why by hovering over the information icon next to it.
 
 #### Existing Recovery Info
 
-Currently, Polkadot does not use the
+{{ polkadot: Currently, Polkadot does not use the
 [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is
-probably not why your tokens have existing references.
+probably not why your tokens have existing references. :polkadot}}
+
+{{ kusama: On Kusama, you can check if recovery has been setup by checking the `recovery.recoverable(AccountId)`
+chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama}}
 
 #### Existing Non-DOT Assets
 
