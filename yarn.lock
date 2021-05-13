@@ -7420,10 +7420,10 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-remarkable-katex@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/remarkable-katex/-/remarkable-katex-1.1.7.tgz#fabf5c855ca3688df57c4b26bc049a93719ba2d2"
-  integrity sha512-qyvOsUm7gf9ZOXbyHVmwgT+XtECQNGpw2gvBhQPvv1vSLBTnxBP5iHqJkQNBEg8RaiiSu/GazbT19O7+pWw2dA==
+remarkable-katex@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/remarkable-katex/-/remarkable-katex-1.1.8.tgz#ace896c841314b3fe1ee1a4025f566d02a92c3de"
+  integrity sha512-NdzPcO2ybt9TsLx/I5wwb2CIpG3LhLc8GhYzfpG50FryTok5ZJrgBo3iroW20hen0eZx1bhZkatxSo7+wBBJlQ==
 
 remarkable@^1.7.1:
   version "1.7.4"
