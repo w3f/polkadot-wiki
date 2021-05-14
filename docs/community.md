@@ -70,7 +70,7 @@ community members. The application we use most often to interact with the Matrix
 - [Kusama Twitter](https://twitter.com/kusamanetwork)
 - [Web3 Foundation Twitter](https://twitter.com/web3foundation)
 
-- [Polkadot Reddit](https://www.reddit.com/r/dot/)
+- [Polkadot Reddit](https://www.reddit.com/r/polkadot)
 - [Kusama Reddit](https://www.reddit.com/r/Kusama)
 
 - [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
