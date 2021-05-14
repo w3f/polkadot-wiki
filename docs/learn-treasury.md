@@ -74,8 +74,8 @@ proposal, they will probably need to find an off-chain way to explain the propos
 takes place on the following platforms:
 
 - Many community members participate in discussion in the
-  [Kusama Element (previously Riot)](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat or
-  [Polkadot Element](https://riot.w3f.tech/#/room/#polkadot:matrix.parity.io).
+  [Kusama Element (previously Riot)](https://matrix.to/#/#kusama:matrix.parity.io) chat or
+  [Polkadot Element](https://matrix.to/#//#polkadot:matrix.parity.io).
 - The [Polkassembly](https://polkassembly.io) discussion platform that allows users to log in with
   their Web3 address and automatically reads proposals from the chain, turning them into discussion
   threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a
@@ -83,11 +83,11 @@ takes place on the following platforms:
 
 Spreading the word about the proposal's explanation is ultimately up to the proposer - the
 recommended way is using official Element channels like {{ polkadot: the
-[Polkadot Watercooler](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) and
-[Polkadot Direction room](https://app.element.io/#/room/#polkadot-direction:matrix.parity.io) :polkadot }}
+[Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) and
+[Polkadot Direction room](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
 {{ kusama: the
-[Kusama Direction room](https://app.element.io/#/room/#kusama:matrix.parity.io) or the
-[Kusama Watercooler](https://app.element.io/#/room/#kusamawatercooler:polkadot.builders) :kusama }}.
+[Kusama Direction room](https://matrix.to/#/#kusama:matrix.parity.io) or the
+[Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:polkadot.builders) :kusama }}.
 
 ### Creating the Proposal
 
@@ -248,8 +248,8 @@ requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
 motion. You can contact the Council by joining the
-{{ polkadot: Polkadot Direction [channel](https://parity.link/polkadot-direction) :polkadot }}
-{{ kusama: Kusama Direction [channel](https://parity.link/kusama-direction) :kusama }} in Element or
+{{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#polkadot-direction:matrix.parity.io) :polkadot }}
+{{ kusama: Kusama Direction [channel](https://matrix.to/#/#kusama:matrix.parity.io) :kusama }} in Element or
 joining our
 {{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot }}
 {{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and publishing a
