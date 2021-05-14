@@ -276,7 +276,7 @@ For more material on adding and removing Governance proxies, as well as other ty
 
 ## Interpreting On-Chain Voting Data
 
-Consider the following example showcasing how votes would be displayed on a block explorer.
+Consider the following example showcasing how votes would be displayed on a block explorer. 
 
 ```
 Nay 0.1x => 0
