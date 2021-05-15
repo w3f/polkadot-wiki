@@ -42,8 +42,8 @@
         "sidebar_label": "Oracles"
       },
       "build-parachains-rococo": {
-        "title": "Building Parachains on Rococo",
-        "sidebar_label": "Building Parachains on Rococo"
+        "title": "Rococo Parachain Testnet",
+        "sidebar_label": "Rococo Parachain Test Network"
       },
       "build-pdk": {
         "title": "Parachain Development Kits (PDKs)",
@@ -197,10 +197,6 @@
         "title": "Collator",
         "sidebar_label": "Collator"
       },
-      "learn-comparisons-dfinity": {
-        "title": "Polkadot and Dfinity",
-        "sidebar_label": "Dfinity"
-      },
       "learn-comparisons-ethereum-2": {
         "title": "Polkadot and Ethereum 2.0",
         "sidebar_label": "Ethereum 2.0"
@@ -264,6 +260,10 @@
       "learn-ledger": {
         "title": "Using the Polkadot Ledger Application",
         "sidebar_label": "Ledger Application"
+      },
+      "learn-legitimate-projects": {
+        "title": "How to Identify Legitimate Projects",
+        "sidebar_label": "How to Identify Legitimate Projects"
       },
       "learn-nominator": {
         "title": "Nominator",
@@ -365,6 +365,10 @@
         "title": "Set Up a Sentry Node - Public Node",
         "sidebar_label": "Set Up a Sentry Node"
       },
+      "maintain-guides-how-to-stop-validating": {
+        "title": "How to Stop Validating",
+        "sidebar_label": "How to Stop Validating"
+      },
       "maintain-guides-how-to-systemd": {
         "title": "Using systemd for the Validator Node",
         "sidebar_label": "Using systemd for the Validator Node"
@@ -430,8 +434,8 @@
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
       "mirror-build-parachains-rococo": {
-        "title": "Building Parachains on Rococo",
-        "sidebar_label": "Building Parachains on Rococo"
+        "title": "Rococo Parachain Testnet",
+        "sidebar_label": "Rococo Parachain Test Network"
       },
       "mirror-ens": {
         "title": "Adding accounts to an ENS domain",
@@ -440,6 +444,10 @@
       "mirror-learn-auction": {
         "title": "Parachain Slots Auction",
         "sidebar_label": "Parachain Slots Auction"
+      },
+      "mirror-learn-balance-transfers": {
+        "title": "Balance Transfers",
+        "sidebar_label": "How to transfer Balances"
       },
       "mirror-learn-crowdloans": {
         "title": "Parachain Crowdloans",
@@ -476,6 +484,10 @@
       "mirror-maintain-guides-how-to-nominate-kusama": {
         "title": "Be a Nominator (Kusama)",
         "sidebar_label": "Nominator Guide"
+      },
+      "mirror-maintain-guides-how-to-stop-validating": {
+        "title": "How to Stop Validating",
+        "sidebar_label": "How to Stop Validating"
       },
       "mirror-maintain-guides-how-to-validate-kusama": {
         "title": "Run a Validator (Kusama)",

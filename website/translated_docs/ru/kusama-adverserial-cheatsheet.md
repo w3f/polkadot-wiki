@@ -1,5 +1,5 @@
 ---
-id: kusama-adverserial-cheatsheet
+id: kusama-adversarial-cheatsheet
 title: Список вероятных атак
 sidebar_label: Шпаргалка враждебности
 ---
