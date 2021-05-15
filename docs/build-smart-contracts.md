@@ -4,11 +4,10 @@ title: Smart Contracts
 sidebar_label: Smart Contracts
 ---
 
-The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot
-will support smart contracts. There are already announced projects such as
-[Edgeware](https://edgewa.re), and thanks to the Substrate built-in
-[contract pallet](https://substrate.dev/rustdocs/v3.0.0/pallet_contracts/index.html), it is likely
-that more parachains will support this feature.
+The Polkadot Relay Chain does not support smart contracts natively. However, parachains on Polkadot
+support smart contracts, such as [Edgeware](https://edgewa.re), and thanks to the Substrate
+built-in [contract pallet](https://substrate.dev/rustdocs/v3.0.0/pallet_contracts/index.html),
+it is very likely that more parachains will support this feature.
 
 Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine,
 thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this
@@ -17,23 +16,6 @@ approach are [Edgeware](https://edgewa.re), [Moonbeam](https://moonbeam.network/
 
 A video version of the recap of the smart contract situation on Polkadot and Kusama is available
 [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
-
-## Resources
-
-Here is the list of current resources available to developers who want to get started writing smart
-contracts to deploy on parachains based on Substrate.
-
-- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
-- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you
-  through the basics of writing and deploying an ERC20 token using `ink!`.
-
-## Examples
-
-Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart
-contract example? Ask us to add it to this page!
-
-- [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
 ## Storage Rent
 
@@ -91,8 +73,19 @@ condition, which should _never_ be implemented. Leaving certain logic, such as c
 could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it
 entirely, will often be a wiser choice.
 
+
 ## Resources
 
-- [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) -
-  From a technical standpoint answers the question of when a developer might choose to develop a
-  runtime versus a smart contract.
+[When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305)?
+This post answers the question more technically of when a developer might choose to develop a
+runtime versus a smart contract.
+
+Here is the list of current resources available to developers who want to get started writing smart
+contracts to deploy on parachains based on Substrate.
+
+- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
+- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
+- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/) - Walks you
+  through the basics of writing and deploying an ERC20 token using `ink!`.
+
+
