@@ -99,7 +99,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Integrate",
+        "label": "Integration Guide",
         "ids": [
           "build-integration",
           "build-protocol-info",
