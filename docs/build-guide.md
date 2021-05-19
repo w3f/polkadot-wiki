@@ -1,11 +1,8 @@
 ---
-id: build-build-with-polkadot
+id: build-guide
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 ---
-
-_This article is the maintained version of the blog post:
-[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain).
@@ -214,27 +211,7 @@ Integrating Cumulus with your Substrate chain will port it into a parachain capa
 Polkadot with minimal modification, possibly as little work as importing a crate and adding a few
 lines!
 
-### How to deploy your parachain or parathread in Polkadot
 
-#### Parachain
-
-In order to include your parachain into the Polkadot network, you will need to acquire a parachain
-slot.
-
-Parachain slots will be sold in open auctions, the mechanics of which can be found on the
-{{ polkadot: [parachain auction](learn-auction) :polkadot }}
-{{ kusama: [parachain auction](mirror-learn-auction) :kusama }} page of the wiki.
-
-#### Parathread
-
-Parathreads will not require a parachain slot, so you will not need to engage in the candle auction
-mechanism. Instead, you will be able to register your parathread code to the relay chain for a fee
-and from then be able to start participating in the per-block auctions for inclusion of your state
-transition into the relay chain.
-
-For more information on how parathread per-block auctions work, see the more detailed
-{{ polkadot: [parathread](learn-parathreads) :polkadot }}
-{{ kusama: [parathread](mirror-learn-parathreads) :kusama }} page.
 
 ## So you want to build a smart contract...
 
@@ -248,9 +225,9 @@ Substrate presently supports smart contracts out-of-the-box in two ways:
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts (EVM)
-natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses can also
-be mapped directly to and from Substrate's SS58 sceme from existing accounts.
+[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts 
+(EVM) natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses
+can also be mapped directly to and from Substrate's SS58 scheme from existing accounts.
 
 ### Contracts Pallet
 

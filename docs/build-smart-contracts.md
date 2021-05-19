@@ -18,23 +18,6 @@ Ethereum contracts. Some of the projects using this approach are [Edgeware](http
 A video version of the recap of the smart contract situation on Polkadot and Kusama is available
 [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
 
-## Resources
-
-Here is the list of current resources available to developers who want to get started writing smart
-contracts to deploy on parachains based on Substrate.
-
-- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
-- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - a walkthrough
-  of the basics of writing and deploying an ERC20 token using `ink!`.
-
-## Examples
-
-Collected below are some community examples of smart contracts in `ink!`. 
-__Are you working on a smart contract example? Ask us to add it to this page!__
-
-- [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
-
 ## Storage Rent
 
 Storage rent limits the footprint that a contract can have on the blockchain's storage.
@@ -92,8 +75,19 @@ could possibly run indefinitely, to a non-smart contract layer, or even trying t
 entirely, will often be a wiser choice. Parachains try to be proactive, while smart contract platforms 
 are event-driven.
 
+
 ## Resources
 
-- [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) -
-  A technical standpoint that answers the question of when a developer might choose to develop a
-  runtime versus a smart contract.
+[When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305)?
+This post answers the question more technically of when a developer might choose to develop a
+runtime versus a smart contract.
+
+Here is the list of current resources available to developers who want to get started writing smart
+contracts to deploy on parachains based on Substrate.
+
+- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
+- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
+- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/) - Walks you
+  through the basics of writing and deploying an ERC20 token using `ink!`.
+
+
