@@ -15,7 +15,7 @@ This section of the wiki is divided into the following parts:
 
 ## Development Guide
 
-- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain,
+- [Starter's Guide](build-guide) - High level overview on choosing a parachain,
   parathread, or smart contract for your project and how to get started.
 - [Parachain Development](build-parachains) - Tools for building parachains and
   parathreads.

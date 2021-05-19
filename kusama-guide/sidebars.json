@@ -29,8 +29,8 @@
           "mirror-learn-identity",
           "mirror-learn-treasury",
           "mirror-learn-registrar",
-          "mirror-build-build-with-polkadot",
-          "mirror-build-parachains-rococo",
+          "mirror-build-guide",
+          "mirror-build-parachains",
           "maintain-guides-society-kusama",
           "kusama-social-recovery"
         ]

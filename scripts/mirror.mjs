@@ -20,7 +20,7 @@ import fs from "fs";
 // List of mirrored files that should be in both the Polkadot wiki and the Kusama
 // user guide.
 const mirrored = [
-  "build-build-with-polkadot",
+  "build-guide",
   "learn-identity",
   "learn-balance-transfers",
   "ens",
@@ -36,7 +36,7 @@ const mirrored = [
   "learn-parachains",
   "learn-parathreads",
   "learn-crowdloans",
-  "build-parachains-rococo",
+  "build-parachains",
 ];
 
 for (const file of mirrored) {

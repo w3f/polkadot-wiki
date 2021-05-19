@@ -34,13 +34,13 @@ them to send messages from parachain A to parachain B.
 
 ### Collators in the Wild
 
-Collators are being used on the [Rococo](build-parachains-rococo) testnet, and you can learn more
-about how they are used with Cumulus via the [Cumulus](https://github.com/paritytech/cumulus/)
-repository.
+Collators are being used on many production and testing relay chains now!
+You can learn more about how they are used with Cumulus via the
+[Cumulus repository](https://github.com/paritytech/cumulus/).
 
 ### Guides and Tools
 
 - [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/)
-- [Rococo tesnet guide](https://wiki.polkadot.network/docs/build-parachains-rococo)
-- [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
+- [Parachain Builders guide](build-parachains)
+- [polkadot-launch](https://github.com/paritytech/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.

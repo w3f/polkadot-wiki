@@ -5,10 +5,6 @@ sidebar_label: Parachains
 description: An introductory guide to Polkadot Parachains.
 ---
 
-> Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo) :polkadot }} >
-> {{ kusama: [Rococo page](mirror-build-parachains-rococo) :kusama }}.
-
 ![One parachain](assets/network/one_parachain.png)
 
 A parachain is an application-specific data structure that is globally coherent and validatable by
@@ -193,15 +189,10 @@ Likewise, it should be easy for them to recongize when it's safe to restart bloc
 perhaps based on finality delay, validator set size, or some other factor that is yet to be decided
 within [Cumulus](https://github.com/paritytech/cumulus).
 
-### Parachain Development Kits (PDKs)
+### Parachain Development
 
-Parachain Development Kits are a set of tools that enable developers to create their own
-applications as parachains. For more info see [here](build-pdk).
+Please see the [Parachain Development page](build-parachains) for more information.
 
-### Deploying parachains
-
-Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for
-information on compiling and deploying a parachain.
 
 ## Resources
 
