@@ -47,7 +47,7 @@ integrate Polkadot into their systems.
 
 ## Resources
 
-- [Examples](build-examples-index) - Example projects sourced from the community -- see what others
+- [Examples](#) - Example projects sourced from the community -- see what others
   are building.
 
 ### Grants

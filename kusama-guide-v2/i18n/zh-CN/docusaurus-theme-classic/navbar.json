@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Guide",
+    "description": "The title in the navbar"
+  },
+  "item.label.Get Started": {
+    "message": "Get Started",
+    "description": "Navbar item with label Get Started"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  }
+}

@@ -129,7 +129,7 @@ If you used the self-signed certificate approach, modern browsers will not let y
 websocket endpoint without that certificate being imported - they will emit an
 `NET:ERR_CERT_AUTHORITY_INVALID` message.
 
-![ERR_CERT_AUTHORITY_INVALID](/img/wss/wss04.png)
+![ERR_CERT_AUTHORITY_INVALID](assets/wss/wss04.png)
 
 Every websocket connection bootstraps itself with `https` first, so to allow the certificate, visit
 the IP of your machine in the browser prefixed with `https`, like so: `https://MY_IP`. This should

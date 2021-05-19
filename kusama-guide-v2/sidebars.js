@@ -1,0 +1,55 @@
+module.exports = {
+  docs: [
+    {
+      type: "category",
+      label: "Kumasa",
+      items: [
+        "kusama-index",
+        {
+          type: "category",
+          label: "Get Started",
+          items: [
+            "kusama-getting-started",
+            "kusama-faucet",
+            "kusama-claims",
+            "kusama-endpoints",
+            "mirror-learn-balance-transfers",
+            "mirror-thousand-validators",
+            "mirror-learn-auction",
+            "mirror-learn-parachains",
+            "mirror-learn-parathreads",
+            "mirror-learn-crowdloans",
+          ],
+        },
+        {
+          type: "category",
+          label: "What to Try",
+          items: [
+            "mirror-maintain-guides-how-to-validate-kusama",
+            "mirror-maintain-guides-how-to-stop-validating",
+            "mirror-maintain-guides-how-to-nominate-kusama",
+            "mirror-learn-governance",
+            "mirror-learn-identity",
+            "mirror-learn-treasury",
+            "mirror-learn-registrar",
+            "mirror-build-build-with-polkadot",
+            "mirror-build-parachains-rococo",
+            "maintain-guides-society-kusama",
+            "kusama-social-recovery",
+          ],
+        },
+        {
+          type: "category",
+          label: "What to Break",
+          items: ["mirror-maintain-errors", "kusama-bug-bounty", "kusama-adversarial-cheatsheet"],
+        },
+        "mirror-ens",
+        "kusama-ledger",
+        "kusama-timeline",
+        "kusama-community",
+        "kusama-parameters",
+        "kusama-coc",
+      ],
+    },
+  ],
+};

@@ -106,13 +106,6 @@ Check out our animated video below that explores how XCMP works.
       src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
 doesn't support embedded videos. </video>
 
-<style>
-video::-webkit-media-controls-fullscreen-button
-{
-        display: none !important;
-}
-</style>
-
 ## Resources
 
 - [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical

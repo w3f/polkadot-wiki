@@ -23,7 +23,7 @@ trust to help you recover the account when you lose the private key. To create a
 account, you will be required to set a `threshold` that is the number of your friends who need to
 approve the recovery process in order to recover your account.
 
-![](/img/recovery/social-recovery-diag-1.png)
+![](assets/recovery/social-recovery-diag-1.png)
 
 > Note: If you are recovering an account, ensure that your network is set to Kusama. You can do this
 > by selecting the network from the top right corner in the Polkadot-JS UI.
@@ -68,7 +68,7 @@ recovery process.
 This section would be showing you how to initiate a recovery process and get back the balance that
 held in the lost account to the new account.
 
-![](/img/recovery/social-recovery-diag-2.png)
+![](assets/recovery/social-recovery-diag-2.png)
 
 The above diagram shows the whole process of recovering an account.
 
@@ -87,54 +87,54 @@ recovery".
 
 Once the transaction went through, some KSM will be locked to prevent malicious behavior.
 
-![](/img/recovery/social-recovery-6.png)
+![](assets/recovery/social-recovery-6.png)
 
 Now call your friends that you have set in the first section, but heading over to "Developer" >
 "Extrinsics" and using the recovery pallet. They are required to submit a `vouchRecovery`
 transaction.
 
-![](/img/recovery/social-recovery-7.png)
+![](assets/recovery/social-recovery-7.png)
 
 Once the threshold is reached and the block delay is passed, use the new account to submit a
 `claimRecovery` transaction that would set a proxy on behalf of your lost account. It means that you
 can still use the lost account in an indirect way to interact with the network.
 
-![](/img/recovery/social-recovery-8.png)
+![](assets/recovery/social-recovery-8.png)
 
 To see the proxy information, use your new account by calling the "recovery->proxy(Accountid)"
 function at the [Chain state](https://polkadot.js.org/apps/#/chainstate) page. It should point to
 your lost account.
 
-![](/img/recovery/social-recovery-9.png)
+![](assets/recovery/social-recovery-9.png)
 
 Next, in order to call the "closeRecovery" transaction, you can make use of the "asRecovered"
 function as your lost account to get the locked KSM.
 
-![](/img/recovery/social-recovery-10.png)
+![](assets/recovery/social-recovery-10.png)
 
 Once the transaction goes through, the reserved KSM from the "NEW-ACC" will have been moved to the
 lost account. This is a way of preventing someone from recovering other accounts maliciously.
 Imagine if someone tried to initiate recovery on your account, you can do this to slash their locked
 KSM.
 
-![](/img/recovery/social-recovery-11.png)
+![](assets/recovery/social-recovery-11.png)
 
 Moving on, we use the `asRecovered` function to submit the `removeRecovery` transaction on behalf of
 the lost account to release the reserved KSM from your lost account.
 
-![](/img/recovery/social-recovery-12.png)
+![](assets/recovery/social-recovery-12.png)
 
 Now all your account balance should be transferable.
 
-![](/img/recovery/social-recovery-13.png)
+![](assets/recovery/social-recovery-13.png)
 
 Finally, transfer all of your available balance from the lost account to the new account.
 
-![](/img/recovery/social-recovery-14.png)
+![](assets/recovery/social-recovery-14.png)
 
 The recovery process is now complete and successful.
 
-![](/img/recovery/social-recovery-15.png)
+![](assets/recovery/social-recovery-15.png)
 
 > Note: There is still one possible way to recover the account without going through the recovery
 > process. That is by using the `Root` origin. However, in order to use root permissions you will
