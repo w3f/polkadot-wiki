@@ -67,7 +67,7 @@ sudo apt-get install python -y
 The first step is to clone the `polkadot-secure-validator` guide locally.
 
 ```zsh
-$ git clone git@github.com:w3f/polkadot-secure-validator.git
+$ git clone https://github.com/w3f/polkadot-validator-setup
 ```
 
 Now you can `cd` into the `polkadot-secure-validator` directory and start to change the
