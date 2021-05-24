@@ -36,7 +36,7 @@ runtime::register_validate_block!(Block, BlockExecutor);
 ### Cumulus Collator
 
 A Polkadot collator for a parachain is implemented in the Cumulus repository
-[here](https://github.com/paritytech/cumulus/tree/master/collator).
+[here](https://github.com/paritytech/cumulus/tree/master/client/collator).
 
 ## Rococo
 
