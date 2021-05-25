@@ -91,7 +91,7 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 - Connect to dedicated Telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Rank 25 or higher on Kusama Thousand Validators Programme
-- Minimum  of 5_000 DOTs self stake (exceptions by approval for good intentions)
+- Minimum of 5_000 DOTs self stake (exceptions by approval for good intentions)
 - Reward destination 'Staked'
 - No more than 3% commission
 - Separate stash and controller (or have a Staking proxy set up)
@@ -113,7 +113,8 @@ A time delay proxy is used as the main interaction method for all of these accou
 
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
-can be anywhere from a few validators receiving nominations from a single nominator to the max of 16.
+can be anywhere from a few validators receiving nominations from a single nominator to the max
+of 16.
 
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
 [polkadot 1kv form]:
