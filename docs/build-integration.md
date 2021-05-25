@@ -16,6 +16,7 @@ Substrate-based chains. The guide contains four sections:
 1. [Protocol Info](build-protocol-info): The entry point to the guide. Please read it carefully as
    it provides information about Polkadot that differentiates it from other blockchains. Use this
    page to check your assumptions.
+1. [Assets](build-integrate-assets): The guide to integrating assets on Polkadot into your systems.
 1. [Node Management](build-node-management): This page will guide you to starting and monitoring a
    node.
 1. [Node Interaction](build-node-interaction): This page will teach you to interact with your node
@@ -31,7 +32,7 @@ solution that is best for you.
 
 That said, the easiest path to integration is almost always to use
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar) to interact with your
-node and [TxWrapper](https://github.com/paritytech/txwrapper) to construct and sign transactions.
+node and [TxWrapper Core](https://github.com/paritytech/txwrapper-core/) to construct and sign transactions.
 Parity and Web3 Foundation will be able to provide the best support if you use these tools.
 
 If your team would like support, join some of our [community channels](community) or contact

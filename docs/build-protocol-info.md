@@ -62,7 +62,7 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 Polkadot uses an _existential deposit_ (ED) to prevent dust accounts from bloating state. If an
 account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the nonce
-reset. Polkadot's ED is 1 DOT, while Kusama's is 0.0016666 KSM.
+reset. Polkadot's ED is 1 DOT, while Kusama's is 0.00003333 KSM.
 
 Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial
 wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful
@@ -72,6 +72,10 @@ Wallets and custodians who track account nonces for auditing purposes should tak
 accounts reaped, as users could refund the address and try making transactions from it. The Balances
 pallet provides a `transfer_keep_alive` function that will return an error and abort rather than
 make the transfer if doing so would result in reaping the sender's account.
+
+> Note: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT and
+> 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
+> transfers on Statemint. Statemint integration is discussed in the next page of the guide.
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 

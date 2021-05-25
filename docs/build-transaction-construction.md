@@ -85,13 +85,13 @@ signature field, and send the transaction (or just return the serialized transac
 ## Tx Wrapper
 
 If you do not want to use the CLI for signing operations, Parity provides an SDK called
-[TxWrapper](https://github.com/paritytech/txwrapper) to generate and sign transactions offline. See
-the [examples](https://github.com/paritytech/txwrapper/tree/master/examples) for a guide.
+[TxWrapper Core](https://github.com/paritytech/txwrapper-core) to generate and sign transactions offline. See
+the [examples](https://github.com/paritytech/txwrapper-core/blob/main/packages/txwrapper-examples/README.md) for a guide.
 
 **Import a private key**
 
 ```ts
-import { importPrivateKey } from '@substrate/txwrapper';
+import { importPrivateKey } from '@substrate/txwrapper-polkadot';
 
 const keypair = importPrivateKey(“pulp gaze fuel ... mercy inherit equal”);
 ```
@@ -99,7 +99,7 @@ const keypair = importPrivateKey(“pulp gaze fuel ... mercy inherit equal”);
 **Derive an address from a public key**
 
 ```ts
-import { deriveAddress } from '@substrate/txwrapper';
+import { deriveAddress } from '@substrate/txwrapper-polkadot';
 
 // Public key, can be either hex string, or Uint8Array
 const publicKey = “0x2ca17d26ca376087dc30ed52deb74bf0f64aca96fe78b05ec3e720a72adb1235”;
@@ -109,7 +109,7 @@ const address = deriveAddress(publicKey);
 **Construct a transaction offline**
 
 ```ts
-import { methods } from "@substrate/txwrapper";
+import { methods } from "@substrate/txwrapper-polkadot";
 
 const unsigned = methods.balances.transferKeepAlive(
   {
@@ -138,7 +138,7 @@ const unsigned = methods.balances.transferKeepAlive(
 **Construct a signing payload**
 
 ```ts
-import { methods, createSigningPayload } from '@substrate/txwrapper';
+import { methods, createSigningPayload } from '@substrate/txwrapper-polkadot';
 
 // See "Construct a transaction offline" for "{...}"
 const unsigned = methods.balances.transferKeepAlive({...}, {...}, {...});
@@ -148,11 +148,11 @@ const signingPayload = createSigningPayload(unsigned, { registry });
 **Serialize a signed transaction**
 
 ```ts
-import { createSignedTx } from "@substrate/txwrapper";
+import { createSignedTx } from "@substrate/txwrapper-polkadot";
 
 // Example code, replace `signWithAlice` with actual remote signer.
 // An example is given here:
-// https://github.com/paritytech/txwrapper/blob/630c38d/examples/index.ts#L50-L68
+// https://github.com/paritytech/txwrapper-core/blob/b213cabf50f18f0fe710817072a81596e1a53cae/packages/txwrapper-core/src/test-helpers/signWithAlice.ts
 const signature = await signWithAlice(signingPayload);
 const signedTx = createSignedTx(unsigned, signature, { metadataRpc, registry });
 ```
@@ -162,7 +162,7 @@ const signedTx = createSignedTx(unsigned, signature, { metadataRpc, registry });
 You may want to decode payloads to verify their contents prior to submission.
 
 ```ts
-import { decode } from "@substrate/txwrapper";
+import { decode } from "@substrate/txwrapper-polkadot";
 
 // Decode an unsigned tx
 const txInfo = decode(unsigned, { metadataRpc, registry });
@@ -177,7 +177,7 @@ const txInfo = decode(signedTx, { metadataRpc, registry });
 **Check a transaction's hash**
 
 ```ts
-import { getTxHash } from ‘@substrate/txwrapper’;
+import { getTxHash } from ‘@substrate/txwrapper-polkadot’;
 const txHash = getTxHash(signedTx);
 ```
 
