@@ -1,5 +1,5 @@
 ---
-id: kusama-adverserial-cheatsheet
+id: kusama-adversarial-cheatsheet
 title: 对抗备忘单
 sidebar_label: 对抗备忘单
 ---

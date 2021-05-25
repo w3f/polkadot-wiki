@@ -10,6 +10,7 @@
           "kusama-faucet",
           "kusama-claims",
           "kusama-endpoints",
+          "mirror-learn-balance-transfers",
           "mirror-thousand-validators",
           "mirror-learn-auction",
           "mirror-learn-parachains",
@@ -37,7 +38,7 @@
       {
         "type": "subcategory",
         "label": "What to Break",
-        "ids": ["mirror-maintain-errors", "kusama-bug-bounty", "kusama-adverserial-cheatsheet"]
+        "ids": ["mirror-maintain-errors", "kusama-bug-bounty", "kusama-adversarial-cheatsheet"]
       },
       "mirror-ens",
       "kusama-ledger",

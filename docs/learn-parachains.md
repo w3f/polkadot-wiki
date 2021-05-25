@@ -167,7 +167,7 @@ basis to be included in the Relay Chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
-The minimal safe ratio of validator per parachain is 5:1. With a sufficiently large set of
+The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
 [availability and validity](https://wiki.polkadot.network/docs/en/learn-availability) will make sure
 security is on-par. However, should there be a big outage of a popular cloud provider or another

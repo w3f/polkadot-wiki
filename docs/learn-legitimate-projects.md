@@ -71,7 +71,9 @@ Of course, getting a parachain slot on either of the two main networks is not gu
 
 #### 1. Poor site quality
 
-One of the first and strongest indicators that a project is not legitimate is the quality of their site. A poorly constructed site, with typos and grammatical errors, or poor styling, a site that's a template without any serious effort to improve or change it, a site that holds little information about the project, without links to their GitHub or other resources, and generally a site that doesn't feel professional, are indications that the team is not serious about this project.
+An easy way to recognise an illegitimate project is by the quality of their site. A poorly constructed site, with typos and grammatical errors, or poor styling, a site that's a template without any serious effort to improve or change it, a site that holds little information about the project, without links to their GitHub or other resources, and generally a site that doesn't feel professional, are indications that the team is not serious about this project.
+
+However, be careful! Many projects that don't have any plans to build anything substantial, still have nice, or even beautiful, looking sites. They put a lot of resources on how they present themselves visually in order to mislead. So, a nice site doesn't necessarily indicate a legitimate project, a poor site usually indicates an illegitimate one, but you always need to check all the things listed here before drawing a conclusion.
 
 #### 2. Invisible or fake team
 
@@ -85,15 +87,25 @@ Although having a vibrant community is a good indication of a legitimate project
 
 So, don't rely just on Telegram or Discord engagement and what people say in these channels. They could very easily be bot accounts.
 
-#### 4. They use public provider emails
+#### 4. Public provider emails
 
 If the project's email, or the team members emails, are from Gmail or Yahoo or some other public email provider, this is an indication the project is not serious, especially if the emails don't appear to be personal emails or even valid ones. Any team that's even a bit serious about their project will register emails using their domain.
 
-#### 5. They've copied code without attribution
+#### 5. Copied code without attribution
 
 A forked repo is easy to spot since it points to the original repo. A project that uses forked code and tries to pass it as their own waves a big red flag. In some cases using someone else's code is okay, but in these cases attribution to the original project is a must for any legitimate project. And the same is true if only part of the code is copied from another project.
 
 In fact, this is reason for termination of a Web3 grant and has happened in the past.
+
+#### 6. False claims
+
+Many illegitimate projects will try to elevate and bring validity to themselves by claiming all sorts of things that simply aren't true. And usually that's accomplished by associating themselves with well-known entities. 
+
+If you see that a project has partnered with Web3 Foundation, you can know from the start that this is a false claim. Web3 Foundation does not endorse, nor partners with any projects in the ecosystem. 
+
+For all other claims, you should check their validity. If they claim they have received a grant, check to see if that's true and that they have not been terminated. If they claim partnerships with or funding from various companies and VC funds, cross-reference those claims on those companies' sites. If they prominently display that they've been featured in reputable media, verify that this is genuine press coverage and not paid press releases.
+
+This last point, probably encompasses all others: Don't trust what is shown on the surface. Dig deep and **always verify**.
 
 ## Crowdloans
 

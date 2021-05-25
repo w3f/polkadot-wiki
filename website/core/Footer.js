@@ -45,7 +45,7 @@ class FooterSocialColumn extends React.Component {
           </a>
         </li>
         <li className="text-white">
-          <a href="https://www.reddit.com/r/dot" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.reddit.com/r/polkadot" target="_blank" rel="noopener noreferrer">
             <i className="socicon-reddit"></i>
           </a>
         </li>

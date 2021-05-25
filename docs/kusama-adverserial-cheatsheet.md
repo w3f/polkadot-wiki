@@ -1,7 +1,7 @@
 ---
-id: kusama-adverserial-cheatsheet
-title: Adverserial Cheatsheet
-sidebar_label: Adverserial Cheatsheet
+id: kusama-adversarial-cheatsheet
+title: Adversarial Cheatsheet
+sidebar_label: Adversarial Cheatsheet
 ---
 
 Expect things to break on Kusama. To help you break some things, take a look at the following threat

@@ -55,16 +55,16 @@ and how they can make use of it.
 
 ## Upcoming Hackathons
 
-- [Hello World! by Polkadot](https://gitcoin.co/hackathon/polkadot/onboard) - A collaborative
-  hackathon celebrating the integration of Polkadot and Kusama into the Gitcoin platform. Has many
-  sets of smaller challenges that will reward in either DOT or KSM. Open from 15 October - 12
-  November 2020.
 
 ## Past Hackathons
 
 - [Hackusama](https://hackusama.devpost.com/) - A 7-week online hackathon being launched for
   developers to "Build a Blockchain" or submit your wildest tools, visualizations, and ideas to the
   "Open Hack" category. Many high quality submissions were received.
+- [Hello World! by Polkadot](https://gitcoin.co/hackathon/polkadot/onboard) - A collaborative
+  hackathon celebrating the integration of Polkadot and Kusama into the Gitcoin platform. Has many
+  sets of smaller challenges that will reward in either DOT or KSM. Open from 15 October - 12
+  November 2020.
 
 ## Resources
 
