@@ -27,10 +27,10 @@ uncontroversial, because they merely move functionality that the stakeholders al
 useful from one place (the Relay Chain) to another (a parachain).
 
 Moving the logic from the Relay Chain to a parachain is an optimization that makes the entire
-network more efficient. Moving system level logic to a parachain frees capacity in
-the Relay Chain for its primary function: validating parachains. Adding a system level chain could
-make the network capable of processing several more parachains. Rather than taking a slice of a 100
-parachain pie, a system level chain takes one slice and bakes a bigger pie.
+network more efficient. Moving system level logic to a parachain frees capacity in the Relay Chain
+for its primary function: validating parachains. Adding a system level chain could make the network
+capable of processing several more parachains. Rather than taking a slice of a 100 parachain pie, a
+system level chain takes one slice and bakes a bigger pie.
 
 The vast majority of common good chains will likely be the unopinionated system level chains.
 
@@ -62,18 +62,27 @@ likely be approved by the network stakeholders only in rare scenarios.
 
 ### Statemint
 
-[Statemint](https://github.com/paritytech/statemint) (and its cousin _Statemine_ on Kusama) will likely be one of the first common good parachains. Statemint is a public utility chain in that it adds functionality not available in the Relay Chain, namely the creation and management of assets.
+[Statemint](https://github.com/paritytech/statemint) (and its cousin _Statemine_ on Kusama) will
+likely be one of the first common good parachains. Statemint is a public utility chain in that it
+adds functionality not available in the Relay Chain, namely the creation and management of assets.
 
-Statemint will support both funglible and non-fungible assets. The chain offers an interface similar to ERC-20 for fungible assets and ERC-721 for non-fungible tokens. These interfaces are in the logic of the chain itself; by encoding this logic directly 
-into the Statemint runtime, token storage and actions can happen faster and cheaper.
+Statemint will support both funglible and non-fungible assets. The chain offers an interface similar
+to ERC-20 for fungible assets and ERC-721 for non-fungible tokens. These interfaces are in the logic
+of the chain itself; by encoding this logic directly into the Statemint runtime, token storage and
+actions can happen faster and cheaper.
 
-Like most common good chains, Statemint will use the DOT token as its native token, i.e. represented in its 
-instance of the Balance pallet. Statemint trusts messages about balances from the Relay Chain, and vice versa, so users can transfer DOT from the Relay Chain to their address on Statemint and back.
+Like most common good chains, Statemint will use the DOT token as its native token, i.e. represented
+in its instance of the Balance pallet. Statemint trusts messages about balances from the Relay
+Chain, and vice versa, so users can transfer DOT from the Relay Chain to their address on Statemint
+and back.
 
-Because of the efficiency of executing logic in a parachain, the transaction fees and deposits (including the existential deposit) are about 1/10 of their value on the Relay Chain. These low fee levels mean that Statemint is well suited to handling DOT balances and transfers as well as managing on-chain assets.
+Because of the efficiency of executing logic in a parachain, the transaction fees and deposits
+(including the existential deposit) are about 1/10 of their value on the Relay Chain. These low fee
+levels mean that Statemint is well suited to handling DOT balances and transfers as well as managing
+on-chain assets.
 
-As a common good parachain, Statemint must stay fully aligned with the Relay Chain. Upgrades to 
-Statemint will require the Relay Chain's "root origin", i.e. a referendum. Some of the other logic 
+As a common good parachain, Statemint must stay fully aligned with the Relay Chain. Upgrades to
+Statemint will require the Relay Chain's "root origin", i.e. a referendum. Some of the other logic
 (like privileged asset functionality) will defer to the Relay Chain's Council.
 
 ### Bridges

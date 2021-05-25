@@ -85,8 +85,10 @@ signature field, and send the transaction (or just return the serialized transac
 ## Tx Wrapper
 
 If you do not want to use the CLI for signing operations, Parity provides an SDK called
-[TxWrapper Core](https://github.com/paritytech/txwrapper-core) to generate and sign transactions offline. See
-the [examples](https://github.com/paritytech/txwrapper-core/blob/main/packages/txwrapper-examples/README.md) for a guide.
+[TxWrapper Core](https://github.com/paritytech/txwrapper-core) to generate and sign transactions
+offline. See the
+[examples](https://github.com/paritytech/txwrapper-core/blob/main/packages/txwrapper-examples/README.md)
+for a guide.
 
 **Import a private key**
 

@@ -129,7 +129,9 @@ on-chain {{ polkadot: [governance](learn-governance) :polkadot }}
 {{ kusama: [governance](mirror-learn-governance) :kusama }} system. Generally, a common good
 parachain's lease would not expire; it would only be removed via governance.
 
-See the [Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/) and the [common good parachains](learn-common-good-chains) page for more information.
+See the
+[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+and the [common good parachains](learn-common-good-chains) page for more information.
 
 ## Examples
 

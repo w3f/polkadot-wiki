@@ -5,8 +5,8 @@ sidebar_label: Integration Initiation
 ---
 
 Welcome to the Polkadot integration guide. This guide will provide all the information you need to
-get started on your integration. The target audiences for this guide are wallets and custodians,
-but it will be useful to any infrastructure provider such as validators or chain indexers.
+get started on your integration. The target audiences for this guide are wallets and custodians, but
+it will be useful to any infrastructure provider such as validators or chain indexers.
 
 ## Structure
 
@@ -32,8 +32,9 @@ solution that is best for you.
 
 That said, the easiest path to integration is almost always to use
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar) to interact with your
-node and [TxWrapper Core](https://github.com/paritytech/txwrapper-core/) to construct and sign transactions.
-Parity and Web3 Foundation will be able to provide the best support if you use these tools.
+node and [TxWrapper Core](https://github.com/paritytech/txwrapper-core/) to construct and sign
+transactions. Parity and Web3 Foundation will be able to provide the best support if you use these
+tools.
 
 If your team would like support, join some of our [community channels](community) or contact
 support@polkadot.network.
