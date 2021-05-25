@@ -548,9 +548,9 @@ address.
 Start by inspecting your account's Polkadot address by running the inspect command against your
 account's address:
 
-`subkey inspect 1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F`
+```bash
+$ subkey inspect 1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F
 
-```
 Public Key URI `1a1LcBX6hGPKg5aQ6DXZpAHCCzWjckhea4sz3P1PvL3oc4F` is account:
   Network ID/version: polkadot
   Public key (hex):   0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
@@ -563,25 +563,29 @@ Take note of the hexadecimal string for "Public key (hex)". This is your account
 Running the `inspect` command on your public key, the default SS58 address that is returned the
 associated Substrate address.
 
-`subkey inspect 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`
+```bash
+$ subkey inspect 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
 
 Secret Key URI `0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce` is account:
-Secret seed: 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce Public key (hex):
-0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c Account ID:
-0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c SS58 Address:
-5E6kwKEhrpVMnZvkBRFCzCcRnMXcft4HSaogYQtgtaw6QJ5s
+  Secret seed: 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Public key (hex): 0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  Account ID: 0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  SS58 Address: 5E6kwKEhrpVMnZvkBRFCzCcRnMXcft4HSaogYQtgtaw6QJ5s
+```
 
 Using the `--network` flag, you can define the network that you would like to inspect, where the
 SS58 address will be based on that network. Now, running the `inspect` command with
 `--network polkadot` return your original Polkadot address, thus verifying the public key.
 
-`subkey inspect 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce --network polkadot`
+```bash
+subkey inspect 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce --network polkadot
 
 Secret Key URI `0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce` is account:
-Secret seed: 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce Public key (hex):
-0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c Account ID:
-0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c SS58 Address:
-13345eVmibkqE6wG94JD8MSadyXGNBcRX5YAhht3Sfxcaw9U
+  Secret seed: 0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce
+  Public key (hex): 0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  Account ID: 0x5a095388156e3a68d4fb7cbaef981478e1a0be6d4998f00dffc3e4e9c60c104c
+  SS58 Address: 13345eVmibkqE6wG94JD8MSadyXGNBcRX5YAhht3Sfxcaw9U
+```
 
 You will notice that the Subkey Tool recognizes the correct network of the address and returns the
 associated public key. The public key is returned as a hexadecimal string (i.e. prefixed with
