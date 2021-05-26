@@ -5,8 +5,8 @@ sidebar_label: Parameters
 ---
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
-certainty of these parameter values, it is recommended you directly check the constants by looking at the
-[chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
+certainty of these parameter values, it is recommended you directly check the constants by looking
+at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 [storage](https://polkadot.js.org/apps/#/chainstate).
 
 ### Periods of common actions and attributes
@@ -27,9 +27,9 @@ details on how Kusama's parameters differ from Polkadot's._
 | Session | 1 hour    | 600     |
 | Era     | 6 hours   | 3_600   |
 
-\*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be
-without a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus)
-for more details._
+\*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
+a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus) for
+more details._
 
 ### Governance
 

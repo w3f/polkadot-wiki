@@ -8,7 +8,8 @@ sidebar_label: Rococo Parachain Test Network
 parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
 send transfers and messages between parachains and the Relay Chain. Every message is sent to the
 Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs four test
-system parachains (Statemint, Tick, Trick, and Track), as well as several externally developed parachains.
+system parachains (Statemint, Tick, Trick, and Track), as well as several externally developed
+parachains.
 
 ## What Parachains are on Rococo Now?
 
@@ -29,13 +30,13 @@ channel on Matrix. To receive ROC tokens, use the command:
 ## Build and Register a Rococo Parathread
 
 [Cumulus](https://github.com/paritytech/cumulus#rococo) is set of tools for writing Substrate-based
-parachains. 
+parachains.
 
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created a [cumulus parachain workshop](https://substrate.dev/cumulus-workshop/) to show you how.
 Get stuck or need support along the way? Join the
-[Rococo matrix chat channel](https://matrix.to/#/#rococo:matrix.parity.io)
-and connect with other builders there.
+[Rococo matrix chat channel](https://matrix.to/#/#rococo:matrix.parity.io) and connect with other
+builders there.
 
 ## How to connect to a Parachain
 

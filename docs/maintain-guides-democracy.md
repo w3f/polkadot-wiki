@@ -11,9 +11,9 @@ and the [technical committee](learn-governance#technical-committee).
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
 tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to
-the public referenda table where it can be voted upon. Voters who are willing to lock up their tokens
-for a greater duration of time can do so and get their vote amplified. For more details on the
-governance system please see [here](learn-governance).
+the public referenda table where it can be voted upon. Voters who are willing to lock up their
+tokens for a greater duration of time can do so and get their vote amplified. For more details on
+the governance system please see [here](learn-governance).
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Democracy module as it's implemented in Kusama.
@@ -150,11 +150,11 @@ would like to cast your vote against the proposal in referendum you will select 
 approve" option.
 
 The second option is to select your conviction for this vote. The longer you are willing to lock
-your tokens, the stronger your vote will be weighted. The timeline for the conviction starts after 
-the voting period ends; tokens used for voting will always be locked until the end of the voting 
-period, no matter what conviction you vote with. Unwillingness to lock your tokens means that
-your vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days
-means you can make your vote count for 600% of the tokens that you hold.
+your tokens, the stronger your vote will be weighted. The timeline for the conviction starts after
+the voting period ends; tokens used for voting will always be locked until the end of the voting
+period, no matter what conviction you vote with. Unwillingness to lock your tokens means that your
+vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days means
+you can make your vote count for 600% of the tokens that you hold.
 
 When you are comfortable with the decision you have made, click the blue "Vote" button to submit
 your transaction and wait for it to be included in a block.
@@ -276,7 +276,7 @@ For more material on adding and removing Governance proxies, as well as other ty
 
 ## Interpreting On-Chain Voting Data
 
-Consider the following example showcasing how votes would be displayed on a block explorer. 
+Consider the following example showcasing how votes would be displayed on a block explorer.
 
 ```
 Nay 0.1x => 0

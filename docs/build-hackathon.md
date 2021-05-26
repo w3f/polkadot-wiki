@@ -55,7 +55,6 @@ and how they can make use of it.
 
 ## Upcoming Hackathons
 
-
 ## Past Hackathons
 
 - [Hackusama](https://hackusama.devpost.com/) - A 7-week online hackathon being launched for
