@@ -25,7 +25,8 @@ First, select `identity` as the `selected constant query`.
 
 ![Identity as the selected constant query](assets/identity/17.jpg)
 
-Then on the right-hand side, you can select the constants that you would like to view and add them onto the webpage by clicking the "plus" icon at the end of the bar.
+Then on the right-hand side, you can select the constants that you would like to view and add them onto the 
+webpage by clicking the "plus" icon at the end of the bar.
 
 ![Identity as the selected constant query](assets/identity/18.jpg)
 
