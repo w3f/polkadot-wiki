@@ -5,8 +5,8 @@ sidebar_label: Getting Started
 ---
 
 Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the
-core functionality. Our wiki has three main sections: Learn (for learners), Build (for people
-that want to build on Polkadot), and Maintain (for people that want to maintain the network).
+core functionality. Our wiki has three main sections: Learn (for learners), Build (for people that
+want to build on Polkadot), and Maintain (for people that want to maintain the network).
 
 ## What is Polkadot?
 
@@ -37,9 +37,9 @@ Web 1.0.
 
 As social media platforms and online businesses began to emerge, the internet transformed into the
 Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages,
-where users can read and write information plus publish their own for others to see. However, this 
-version of the web comes with downsides, dealing with data control, privacy issues, and trust. This is
-where the Web 3.0 comes into the picture.
+where users can read and write information plus publish their own for others to see. However, this
+version of the web comes with downsides, dealing with data control, privacy issues, and trust. This
+is where the Web 3.0 comes into the picture.
 
 The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free
 protocols. The goal is to transform the internet into a decentralized web, where users control their
@@ -54,17 +54,17 @@ intermediaries and build a trustless infrastructure.
 The Polkadot network uses a
 [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
 "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of
-sequentially. Each parachain in the network has a unique state transition function (STF).
-Polkadot has a Relay Chain acting as the main chain of the system. Based on
-Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain
-API, then it can connect to the Polkadot network as a parachain.
+sequentially. Each parachain in the network has a unique state transition function (STF). Polkadot
+has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as long as a
+chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the
+Polkadot network as a parachain.
 
-Parachains construct and propose blocks to validators on the Relay Chain, where the blocks 
-undergo rigorous [availability and validity](learn-availability) checks before being added to the 
-finalized chain. As the Relay Chain provides the security guarantees, 
-[collators](learn-collator) - full nodes of these parachains - don't have any security 
-responsibilities, and thus do not require a robust incentive system. This is how the entire 
-network stays up to date with the many transactions that take place.
+Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
+rigorous [availability and validity](learn-availability) checks before being added to the finalized
+chain. As the Relay Chain provides the security guarantees, [collators](learn-collator) - full nodes
+of these parachains - don't have any security responsibilities, and thus do not require a robust
+incentive system. This is how the entire network stays up to date with the many transactions that
+take place.
 
 ![polkadot-relay-chain](assets/polkadot_relay_chain.png)
 
@@ -90,9 +90,9 @@ platform for everyone. This wiki offers a place for builders and maintainers to 
 
 For brand-new learners of Blockchain technology:
 
-- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing yourself 
-with blockchain concepts such as cryptography and networks, and how these play into things like 
-decentralization and cryptocurrency.
+- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing
+  yourself with blockchain concepts such as cryptography and networks, and how these play into
+  things like decentralization and cryptocurrency.
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
