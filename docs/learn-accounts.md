@@ -195,7 +195,7 @@ funds and make them free again.
 ## Existential Deposit and Reaping
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
-account does not exist yet on-chain. For that, it needs the existential deposit: 0.001666666667 KSM
+account does not exist yet on-chain. For that, it needs the existential deposit: 0.0000333333 KSM
 (on Kusama) or 1 DOT (on Polkadot mainnet).
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account
