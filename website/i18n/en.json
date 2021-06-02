@@ -421,13 +421,17 @@
         "title": "Set up Secure WebSocket for Remote Connections",
         "sidebar_label": "Set up Secure WebSocket for Remote Connections"
       },
+      "mirror-build-build-with-polkadot": {
+        "title": "Polkadot Builders Starter's Guide",
+        "sidebar_label": "Polkadot Builders Starter's Guide"
+      },
       "mirror-build-guide": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
       "mirror-build-parachains-rococo": {
-        "title": "Rococo Parachain Testnet",
-        "sidebar_label": "Rococo Parachain Test Network"
+        "title": "Building Parachains on Rococo",
+        "sidebar_label": "Building Parachains on Rococo"
       },
       "mirror-build-parachains": {
         "title": "Parachain Development",
