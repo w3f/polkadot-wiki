@@ -30,15 +30,15 @@ may be better suited for your application over the other).
   - **Rococo** - Parachains and XCM testnet.
 
 Polkadot mainnet has been running since May 2020 and has
-[implementations in various programming languages](learn-implementations) ranging from
-Rust to JavaScript. Currently, the leading implementation is built in Rust and built using the
-Substrate framework.
+[implementations in various programming languages](learn-implementations) ranging from Rust to
+JavaScript. Currently, the leading implementation is built in Rust and built using the Substrate
+framework.
 
 Tooling is rapidly evolving to interact with the network; there are so many ways to get started!
 
 But before you jump head-first into the code, you should consider the _kind_ of decentralized
-application you want to make and understand the different paradigms available to developers who
-want to build on Polkadot.
+application you want to make and understand the different paradigms available to developers who want
+to build on Polkadot.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
@@ -102,7 +102,7 @@ this comparison chart as a cheat sheet:
 > deploy and maintain. So if they had a column on the table above, it would look like the parachain
 > column with "Ease of deployment" and "Maintenance overhead" changed to `+`.
 
-### Smart Contracts 
+### Smart Contracts
 
 A smart contract is simply some code that exists at an address on a chain and is callable by
 external actors. The key part is that you actually have to put the code on chain before anyone can
@@ -173,8 +173,8 @@ blockchain innovators that provides the necessary building blocks for constructi
 includes a library of modular runtime plug-ins from which you can compose your chain logic.
 
 The best way to get started with Substrate is to explore the
-[Substrate Developer Hub](https://substrate.dev/docs/en/), an online resource built and
-maintained by [Parity Technologies](https://parity.io).
+[Substrate Developer Hub](https://substrate.dev/docs/en/), an online resource built and maintained
+by [Parity Technologies](https://parity.io).
 
 ### How to set up your parachain
 
@@ -210,10 +210,9 @@ connected to Polkadot. This includes:
 - An embedded full client of the Relay Chain.
 - Polkadot block authorship compatibility.
 
-
 Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on
-Polkadot with minimal modification, possibly as little work as importing a crate and adding a
-few lines!
+Polkadot with minimal modification, possibly as little work as importing a crate and adding a few
+lines!
 
 ### How to deploy your parachain or parathread in Polkadot
 
@@ -244,14 +243,14 @@ connect to Polkadot can support arbitrary state transitions, they can support sm
 
 Substrate presently supports smart contracts out-of-the-box in two ways:
 
-- The EVM pallet offered by [Frontier][]. 
+- The EVM pallet offered by [Frontier][].
 - The [Contracts pallet][substrate contracts] in the FRAME library for Wasm based contracts.
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts 
-(EVM) natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses
-can also be mapped directly to and from Substrate's SS58 sceme from existing accounts.
+[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts (EVM)
+natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses can also
+be mapped directly to and from Substrate's SS58 sceme from existing accounts.
 
 ### Contracts Pallet
 
@@ -269,10 +268,9 @@ design of the EVM:
    deleted outright along with its storage if it does not maintain these requirements.
 
 3. **Caching**. Contracts are cached by default and therefore means they only need to be deployed
-   once and afterward be instantiated as many times as you want. This helps to keep the storage
-   load on the chain down to the minimum. On top of this, when a contract is no longer being used
-   and the _existential deposit_ is drained, the code will be erased from storage (known as
-   reaping).
+   once and afterward be instantiated as many times as you want. This helps to keep the storage load
+   on the chain down to the minimum. On top of this, when a contract is no longer being used and the
+   _existential deposit_ is drained, the code will be erased from storage (known as reaping).
 
 ### Ink
 
@@ -333,11 +331,11 @@ maturing, the advantage of being early will be the familiarity and head start on
 allowing you to innovate and create something truly new.
 
 If you have interesting ideas for parachains or smart contracts on Polkadot feel free to drop into
-the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) to talk
-about them. Developers may be interested in joining the
+the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) to talk about them.
+Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their
-questions. As always, keep up to date with Polkadot and Kusama by following the
+[Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
+As always, keep up to date with Polkadot and Kusama by following the
 [social channels](https://wiki.polkadot.network/docs/en/community).
 
 Good luck!

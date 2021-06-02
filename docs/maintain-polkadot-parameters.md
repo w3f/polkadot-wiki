@@ -5,8 +5,8 @@ sidebar_label: Parameters
 ---
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
-certainty of these parameter values, it is recommended you directly check the constants by looking at the
-[chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
+certainty of these parameter values, it is recommended you directly check the constants by looking
+at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 [storage](https://polkadot.js.org/apps/#/chainstate).
 
 ### Periods of common actions and attributes
@@ -27,9 +27,9 @@ details on how Kusama's parameters differ from Polkadot's._
 | Session  | 4 hours   | 2_400   |
 | Era      | 24 hours  | 14_400  |
 
-\*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be
-without a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus)
-for more details._
+\*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
+a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus) for
+more details._
 
 ### Governance
 
@@ -73,5 +73,5 @@ Burn percentage is currently `1.00%`.
 DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
 Plancks make up a DOT.
 
-The denomination of DOT was changed from 12 decimals of precision at block #1_248_328 in an event
-known as _Denomination Day_. See [Redenomination](redenomination) for details.
+The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
+known as \_Denomination Day*. See [Redenomination](redenomination) for details.

@@ -153,8 +153,8 @@ there will be bridges between Polkadot and most of the other major chains.
 ### What is the difference between DOT (old) and new DOT?
 
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
-August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or ten
-billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
+August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
+ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
 [redenomination](redenomination), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
@@ -259,10 +259,10 @@ libp2p and the standard and custom protocols, please see the
 
 ### How does libp2p differ from IPFS?
 
-The [Interplanetary Filesystem](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used primarily
-for storage of files. It allows one to upload a file onto the network and share it with its content
-addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on the
-technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate
+The [Interplanetary Filesystem](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used
+primarily for storage of files. It allows one to upload a file onto the network and share it with
+its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on
+the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate
 "uses" IPFS since besides sharing the underlying library for networking there is no native
 integration between the two applications.
 

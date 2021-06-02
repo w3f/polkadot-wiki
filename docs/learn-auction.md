@@ -77,9 +77,10 @@ protocol. The VRF will provide the base of the randomness, which will retroactiv
 end-time of the auction.
 
 The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }}
-{{ kusama: 1 year and divided into 6-week periods :kusama }}; Parachains may lease a slot for any combination of
-periods of the slot duration. Parachains may lease more than one slot over time, meaning that they
-could extend their lease to Polkadot past the maximum duration by leasing a contiguous slot.
+{{ kusama: 1 year and divided into 6-week periods :kusama }}; Parachains may lease a slot for any
+combination of periods of the slot duration. Parachains may lease more than one slot over time,
+meaning that they could extend their lease to Polkadot past the maximum duration by leasing a
+contiguous slot.
 
 > Note: Individual parachain slots are fungible. This means that parachains do not need to always
 > inhabit the same slot, but as long as a parachain inhabits any slot it can continue as a
