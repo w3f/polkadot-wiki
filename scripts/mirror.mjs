@@ -22,6 +22,7 @@ import fs from "fs";
 const mirrored = [
   "build-build-with-polkadot",
   "learn-identity",
+  "learn-balance-transfers",
   "ens",
   "learn-governance",
   "learn-treasury",

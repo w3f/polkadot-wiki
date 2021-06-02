@@ -23,8 +23,8 @@ fill their blocks. A major flaw in this idea is that the lower market cap coins 
 economic security attached, and be easier to attack. A real life example of a 51% attack occurred
 recently (
 [Ethereum Classic attack on January 10](https://cointelegraph.com/news/ethereum-classic-51-attack-the-reality-of-proof-of-work)
-), in which an unknown attacker double spent 219_500 ETC (~1.1 million USD). This was followed by two more
-51% attacks on ETC.
+), in which an unknown attacker double spent 219_500 ETC (~1.1 million USD). This was followed by
+two more 51% attacks on ETC.
 
 Polkadot overcomes security scalability concerns since it gravitates all the economic incentives to
 the Relay Chain and allows the parachains to tap into stronger guarantees at genesis. Sovereign

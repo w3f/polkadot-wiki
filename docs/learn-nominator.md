@@ -46,6 +46,18 @@ nomination. However, the election algorithm attempts to minimize this situation,
 occur often, so you should almost always see only a single active nomination per era. See the
 [section on Phragmén optimization](learn-phragmen#optimizations) for more details.
 
+### Required Minimum Stake
+
+Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, and due to the
+fact that the solution set must fit in a single block, in some eras, a minimum number of DOT will be
+required to nominate with in order to receive staking rewards.
+
+This number fluctuates every era, and the most recent and up to date version can be found out using
+[these scripts](https://github.com/w3f/validator-stats) which you can run on your machine and
+looking for the "lowest minimal nominator". See the
+[Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set)
+section on the Nominator page for more details.
+
 ### Oversubscribed Validators
 
 Validators can only pay out to a certain number of nominators per era. This is currently set to

@@ -55,7 +55,7 @@ you should still protect it and change it regularly.
 
 ## Session Keys
 
-Session keys are hot keys that be must kept online by a validator to perform network operations.
+Session keys are hot keys that must be kept online by a validator to perform network operations.
 Session keys are typically generated in the client, although they don't have to be. They are _not_
 meant to control funds and should only be used for their intended purpose. They can be changed
 regularly; your controller only need create a certificate by signing a session public key and
@@ -116,7 +116,7 @@ implementation of more complex protocols.
 
 Conveniently, [Mike Hamburg's Decaf paper](https://www.shiftleft.org/papers/decaf/index.xhtml)
 provides a possible path forward to solving this potential bug. Decaf is basically a way to take
-Twisted Edward's Curves cofactor and mathematical change it with little cost to performance and
+Twisted Edward's Curves cofactor and mathematically change it with little cost to performance and
 gains to security.
 
 The Decaf paper approach by the [Ristretto Group](https://ristretto.group/) was extended and

@@ -5,8 +5,8 @@ sidebar_label: Integration Initiation
 ---
 
 Welcome to the Polkadot integration guide. This guide will provide all the information you need to
-get started on your integration. The target audiences for this article are wallets and custodians,
-but it will be useful to any infrastructure provider such as validators or chain indexers.
+get started on your integration. The target audiences for this guide are wallets and custodians, but
+it will be useful to any infrastructure provider such as validators or chain indexers.
 
 ## Structure
 

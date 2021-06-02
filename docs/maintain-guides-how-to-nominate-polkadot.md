@@ -24,6 +24,11 @@ validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
+> If you prefer a video format, the following videos related to staking are available:
+>
+> - [Staking with a Ledger and PolkadotJS Apps](https://www.youtube.com/watch?v=VN4S8MofEW8)
+> - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=obZyGeHrm_M&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=43)
+
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
 the Wiki.
@@ -198,6 +203,6 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
 nomination status, you can check that on the Polkadot-JS UI as well.
 
-[validators]: maintain-guides-how-to-validate-kusama
+[validators]: maintain-guides-how-to-validate-polkadot
 [keys]: learn-keys#controller-and-stash-keys
 [account generation]: learn-account-generation

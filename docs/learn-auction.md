@@ -76,9 +76,9 @@ Polkadot will use a _random beacon_ based on the VRF that's used also in other p
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
-The slot durations are capped to {{ polkadot: 2 years and divided into 6-month periods :polkadot }};
-Kusama slots durations and periods will be less than on Polkadot. Parachains may lease a slot for
-any combination of periods of the slot duration. Parachains may lease more than one slot over time,
+The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }}
+{{ kusama: 1 year and divided into 6-week periods :kusama }}; Parachains may lease a slot for any
+combination of periods of the slot duration. Parachains may lease more than one slot over time,
 meaning that they could extend their lease to Polkadot past the maximum duration by leasing a
 contiguous slot.
 
@@ -96,25 +96,25 @@ community.
 ```
 Parachain slots at genesis
 
-       --6 months--
+       --3 months--
        v          v
-Slot A |     1    |     2    |     3     |     4     |...
-Slot B |     1    |     2    |     3     |     4     |...
-Slot C |__________|     1    |     2     |     3     |     4     |...
-Slot D |__________|     1    |     2     |     3     |     4     |...
-Slot E |__________|__________|     1     |     2     |     3     |     4     |...
-       ^                                             ^
-       ---------------------max lease-------------------
+Slot A |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |     9     |...
+Slot B |     1    |     2     |     3     |     4     |     5     |     6    |     7     |     8     |     9     |...
+Slot C |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |     9     |...
+Slot D |__________|     1     |     2     |     3     |     4     |     5    |     6     |     7     |     8     |     9     |...
+Slot E |__________|___________|     1     |     2     |     3     |     4    |     5     |     6     |     7     |     8     |     9     |...
+       ^                                                                                             ^
+       ---------------------------------------------max lease-----------------------------------------
 
 ```
 
 _Each period of the range 1 - 4 represents a
-{{ polkadot: 6-month duration for a total of 2 years :polkadot }} or a shorter duration on Kusama_
+{{ polkadot: 3-month duration for a total of 2 years :polkadot }}
+{{ kusama: 6-week duration for a total of 1 year :kusama }} _
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
-periods available for a slot (`n` will be 4 on Polkadot, but has not yet been determined for
-Kusama).
+periods available for a slot (`n` will be 8 for both Polkadot and Kusama).
 
 > Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
 > way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
@@ -124,15 +124,15 @@ A bidder configuration for a single bidder may look like the following pseudocod
 ```js
 const bids = [
   {
-    range: [1, 2, 3, 4],
+    range: [1, 2, 3, 4, 5, 6, 7, 8],
     bond_amount: 300,
   },
   {
-    range: [1, 2],
+    range: [1, 2, 3, 4],
     bond_amount: 777,
   },
   {
-    range: [2, 3, 4],
+    range: [2, 3, 4, 5, 6, 7],
     bond_amount: 450,
   },
 ];
@@ -158,26 +158,26 @@ validators).
 
 There is one parachain slot available.
 
-Charlie bids `75` for the range 1 - 4.
+Charlie bids `75` for the range 1 - 8.
 
-Dave bids `100` for the range 3 - 4.
+Dave bids `100` for the range 5 - 8.
 
-Emily bids `40` for the range 1 - 2.
+Emily bids `40` for the range 1 - 4.
 
 Let's calculate each bidder's valuation according to the algorithm. We do this by multiplying the
 bond amount by the number of periods in the specified range of the bid.
 
-Charlie - 75 \* 4 = 300 for range 1 - 4
+Charlie - 75 \* 8 = 600 for range 1 - 8
 
-Dave - 100 \* 2 = 200 for range 3 - 4
+Dave - 100 \* 4 = 400 for range 5 - 8
 
-Emily - 40 \* 2 = 80 for range 1 - 2
+Emily - 40 \* 4 = 160 for range 1 - 4
 
 Although Dave had the highest bid in accordance to token amount, when we do the calculations we see
-that since he only bid for a range of 2, he would need to share the slot with Emily who bid much
-less. Together Dave's and Emily's bids only equal a valuation of `280`.
+that since he only bid for a range of 4, he would need to share the slot with Emily who bid much
+less. Together Dave's and Emily's bids only equal a valuation of `560`.
 
-Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of
+Charlie's valuation for the entire range is `600` therefore Charlie is awarded the complete range of
 the parachain slot.
 
 ## FAQ
@@ -193,14 +193,14 @@ Relay Chain.
 
 The method for dividing the parachain slots into intervals was partly inspired by the desire to
 allow for a greater amount of parachain diversity, and prevent particularly large and well-funded
-parachains from hoarding slots. By making each period a {{ polkadot: six-month duration but the
-overall slot a 2-year duration :polkadot }} {{ kusama: short duration :kusama }}, the mechanism can cope
-with well-funded parachains that will ensure they secure a slot at the end of their lease, while gradually
-allowing other parachains to enter the ecosystem to occupy the durations that are not filled. For example,
-if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested
-in getting the next slot that would open for 2 - 5. Under this mechanism that parachain could acquire
-period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to
-be occupied by another.
+parachains from hoarding slots. By making each period a {{ polkadot: three-month duration but the
+overall slot a 2-year duration :polkadot }} {{ kusama: 6-week duration but the overall slot a 1-year
+duration :kusama }}, the mechanism can cope with well-funded parachains that will ensure they secure
+a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem
+to occupy the durations that are not filled. For example, if a large, well-funded parachain has
+already acquired a slot for range 1 - 8, they would be very interested in getting the next slot that
+would open for 2 - 9. Under this mechanism that parachain could acquire period 5 (since that is the
+only one it needs) and allow range 2 - 8 of the second parachain slot to be occupied by another.
 
 ### Why is randomness difficult on blockchains?
 

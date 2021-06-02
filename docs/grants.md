@@ -6,9 +6,10 @@ sidebar_label: Grants
 
 The Web3 Foundation offers two types of grants:
 
-- The [Open Grants Program](https://github.com/w3f/Open-Grants-Program) is our standard program,
-  which offers fast funding of up to \$30k for initial grants and \$100k for follow-up ones.
-  Applications are tracked transparently on GitHub and disbursed in cryptocurrencies.
+- The [Open Grants Program](https://github.com/w3f/Open-Grants-Program) is Web3 Foundation's
+  standard program, which offers fast funding of up to \$30k for initial grants and \$100k for
+  follow-up ones. Applications are tracked transparently on GitHub and disbursed in
+  cryptocurrencies.
 - The [General Grants Program](https://github.com/w3f/General-Grants-Program) offers funding of up
   to \$100k per grant and covers all other cases, including private applications and fiat payments.
 
@@ -20,10 +21,10 @@ Accepted applications for both programs can be found
 
 ## Alternative Funding Sources
 
-### Treasury
+### Polkadot Treasury
 
-The treasury is a pot of on-chain funds collected through transaction fees, slashing, staking
-inefficiencies, etc. The funds held in the treasury can be spent on spending proposals. Both
+The Polkadot Treasury is a pot of on-chain funds collected through transaction fees, slashing,
+staking inefficiencies, etc. The funds held in the treasury can be spent on spending proposals. Both
 Polkadot and Kusama offer everyone the opportunity to apply for funding via the treasury. See:
 
 - [Treasury Wiki](https://wiki.polkadot.network/docs/en/learn-treasury)

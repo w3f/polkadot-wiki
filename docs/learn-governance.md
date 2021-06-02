@@ -18,8 +18,8 @@ by stake-weighted referenda.
 
 In order to make any changes to the network, the idea is to compose active token holders and the
 council together to administrate a network upgrade decision. No matter whether the proposal is
-proposed by the public (DOT holders) or the council, it finally will have to go through a referendum
-to let all DOT holders, weighted by stake, make the decision.
+proposed by the public (token holders) or the council, it finally will have to go through a
+referendum to let all holders, weighted by stake, make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
 
@@ -28,10 +28,11 @@ To better understand how the council is formed, please read [this section](#coun
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
 _proposal_ associated with it that takes the form of a privileged function call in the runtime (that
 includes the most powerful call: `set_code`, which is able to switch out the entire code of the
-runtime, achieving what would otherwise require a "hard fork"). They are discrete events, have a
-fixed period where voting happens, and then are tallied and the function call is made if the vote is
-approved. Referenda are always binary; your only options in voting are "aye", "nay", or abstaining
-entirely.
+runtime, achieving what would otherwise require a "hard fork").
+
+Referenda are discrete events, have a fixed period where voting happens, and then are tallied and
+the function call is made if the vote is approved. Referenda are always binary; your only options in
+voting are "aye", "nay", or abstaining entirely.
 
 Referenda can be started in one of several ways:
 
@@ -55,10 +56,11 @@ will have a shorter enactment time.
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
 (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
 to support it - this action is called _seconding_. The proposal with the highest amount of bonded
-support will be selected to be a referendum in the next voting cycle. Note that this may be
-different than the absolute number of seconds; for instance, three accounts bonding 20 DOT each
-would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will be released once the
-proposal is tabled (that is, brought to a vote).
+support will be selected to be a referendum in the next voting cycle.
+
+Note that this may be different than the absolute number of seconds; for instance, three accounts
+bonding 20 DOT each would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will
+be released once the proposal is tabled (that is, brought to a vote).
 
 There can be a maximum of 100 public proposals in the proposal queue.
 
@@ -286,6 +288,7 @@ malicious referenda, and electing the technical committee.
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
 if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time.
+
 Council motions which pass with a 3/5 (60%) super-majority - but without reaching unanimous
 support - will move to a public referendum under a neutral, majority-carries voting scheme. In the
 case that all members of the council vote in favor of a motion, the vote is considered unanimous and
@@ -371,15 +374,12 @@ next election. After round 2, even though candidates A & B get the same number o
 round, candidate A gets elected because after adding the older unused approvals, it is higher than
 B.
 
-This is the tentative governance configuration for Polkadot post-genesis. It will be changed if any
-security loopholes have been found after several rounds of third-party auditing. Further changes can
-be made through on-chain governance.
-
 ### Prime Members
 
-The council, being an instantiation of Substrate's Collective pallet, implements what's called a
-_prime member_ whose vote acts as the default for other members that fail to vote before the
-timeout.
+The council, being an instantiation of
+[Substrate's Collective pallet](https://github.com/paritytech/substrate/tree/master/frame/collective),
+implements what's called a _prime member_ whose vote acts as the default for other members that fail
+to vote before the timeout.
 
 The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
 
@@ -399,8 +399,8 @@ a Polkadot/Kusama runtime or Polkadot Host. Teams are added or removed from the 
 via simple majority vote of the [Council](#council).
 
 The Technical Committee can, along with the Council, produce emergency referenda, which are
-fast-tracked for voting and implementation. These emergency referenda are intended for use only
-under urgent circumstances.
+fast-tracked for voting and implementation. These are used for emergency bug fixes, or rapid
+implementation of new but battle-tested features into the runtime.
 
 Fast-tracked referenda are the only type of referenda that can be active alongside another active
 referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the

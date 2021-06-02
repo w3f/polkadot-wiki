@@ -10,9 +10,9 @@ already [created an account](learn-account-generation) and have some funds that 
 
 ## Polkadot-JS Apps
 
-> NOTE: In this walkthrough we will be using the Polkadot network. If you would like to switch to
-> Kusama or a different network, you can change it by clicking the top left navigation dropdown and
-> selecting a different network.
+> NOTE: In this walkthrough we will be using the Polkadot network, but this is the same process for
+> Kusama. If you would like to switch to a different network, you can change it by clicking the top
+> left navigation dropdown and selecting a different network.
 
 Let's begin by opening [Polkadot-JS Apps][]. There are two ways to make a balance transfer:
 
@@ -63,6 +63,63 @@ existential deposit of 1 DOT and the account cannot be initialized with such a l
 
 Note that even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
 from the sending account if you attempt to transfer.
+
+### Existing Reference Error
+
+<!-- These will be useful for future updates to this section: -->
+<!-- https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/issues/965 -->
+<!-- https://github.com/w3f/polkadot-wiki/issues/1101 -->
+
+If you are trying to reap an account and you recieve an error similar to "There is an existing
+reference count on the sender account. As such the account cannot be reaped from the state", then
+you have existing references to this account that must first be removed before it can be reaped.
+References may still exist from:
+
+- Bonded tokens (most likely)
+- Unpurged session keys (if you were prevously a validator)
+- Token locks
+- Existing recovery info
+- Existing assets
+
+#### Bonded Tokens
+
+If you have tokens that are bonded, you will need to unbond them before you can reap your account.
+Follow the instructions at [Unbonding and Rebonding](#maintain-guides-how-to-unbond) to check if you
+have bonded tokens, stop nominating (if necessary) and unbond your tokens.
+
+#### Purging Session Keys
+
+If you used this account to set up a validator and you did not purge your keys before unbonding your
+tokens, you need to purge your keys. You can do this by seeing the
+[How to Stop Validating](#maintain-guides-how-to-stop-validating) page. This can also be checked by
+checking `session.nextKeys` in the chain state for an existing key.
+
+#### Checking for Locks
+
+You can check for locks by querying `system.account(AccountId)` under `Developer > Chain state`.
+Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
+JSON object. If you see a non-zero value for anything other than `free`, you have locks on your
+account that need to get resolved.
+
+You can also check for locks by navigating to `Accounts > Accounts` in
+[PolkadotJS Apps](https://polkadot.js.org/apps/#/). Then, click the dropdown arrow of the relevant
+account under the 'balances' column. If it shows that some tokens are in a 'locked' state, you can
+see why by hovering over the information icon next to it.
+
+#### Existing Recovery Info
+
+{{ polkadot: Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use
+the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this
+is probably not why your tokens have existing references. :polkadot}}
+
+{{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
+chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama}}
+
+#### Existing {{ polkadot: Non-DOT :polkadot}} {{ kusama: Non-KSM :Kusama }} Assets
+
+Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
+[Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is
+probably not why your tokens have existing references.
 
 ### From the Accounts Page
 

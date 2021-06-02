@@ -13,7 +13,7 @@ validators on Kusama and Polkadot and 2) to further decentralize the validator a
 ## How it Works
 
 The nominating backend will routinely change its nominations at every era (or every 4 eras on
-Kusama). It will nominate validators which fit all the requirements and are eligbile. Of this pool,
+Kusama). It will nominate validators which fit all the requirements and are eligible. Of this pool,
 it will nominate as many as possible although some validators which are eligible might not receive
 nominations every round (due to the constraint of nominating a maximum of 16 validators per
 nominator). If a validator is active during a single nomination period (the time after a new
@@ -42,7 +42,7 @@ fill in the [application form][kusama 1kv form]. You will hear back from the tea
 - Minimum of 50 KSM self-stake
 - No more than 10% commission
 - Separate controller and stash (or have a Staking proxy set up)
-- Must be on latest release
+- Must be on the latest release
 - Max two nodes (under same sub/super identity)
 
 #### Leaderboard
@@ -91,11 +91,11 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 - Connect to dedicated Telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Rank 25 or higher on Kusama Thousand Validators Programme
-- Mininmum of 5_000 DOTs self stake (exceptions by approval for good intentions)
+- Minimum of 5_000 DOTs self stake (exceptions by approval for good intentions)
 - Reward destination 'Staked'
 - No more than 3% commission
 - Separate stash and controller (or have a Staking proxy set up)
-- Must be on latest release
+- Must be on the latest release
 
 #### Nominators
 
@@ -113,7 +113,8 @@ A time delay proxy is used as the main interaction method for all of these accou
 
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
-can be anywhere from a few validators receiving nomination from a single nominator to the max of 16.
+can be anywhere from a few validators receiving nominations from a single nominator to the max
+of 16.
 
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
 [polkadot 1kv form]:

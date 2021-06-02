@@ -10,17 +10,19 @@ on-chain account and subsequently ask for verification of this information by
 
 ## Setting an Identity
 
-Users can register some default fields like legal name, display name, website, Twitter handle, Riot
-handle, etc. along with extra, custom fields for which they would like attestations (see
-[Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain -
-1.666 KSM per identity, and 0.416666 KSM per each field beyond the legal name. These funds are
-_locked_, not spent - they are returned when the identity is cleared. Each field can store up to 32
-bytes of information, so the data must be less than that. When inputting the data manually through
-the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
+Users can set an identity by registering through default fields such as legal name, display name,
+website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which they would
+like attestations (see [Judgements](#judgements)).
+
+Users must reserve funds in a bond to store their information on chain:
+{{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
+These funds are _locked_, not spent - they are returned when the identity is cleared. Each field can
+store up to 32 bytes of information, so the data must be less than that. When inputting the data
+manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
 [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
-The easiest way to add the built-in fields is to click the gear icon next to one's account and
-select "Set on-chain identity".
+The easiest way to add the built-in fields is to click the gear icon next to your account and select
+"Set on-chain identity".
 
 ![Gear icon provides the option to set identity](assets/identity/01.jpg)
 
@@ -32,7 +34,7 @@ To add custom fields beyond the default ones, use the Extrinsics UI to submit a 
 first clicking "Add Item" and adding any field name you like. The example below adds a field
 `steam`, which is a user's [Steam](https://store.steampowered.com) username. The first value is the
 field name in bytes ("steam") and the second is the account name in bytes ("theswader"). The display
-name also has to be provided, otherwise the Identity pallet would consider it wiped if we submitted
+name also has to be provided, otherwise, the Identity pallet would consider it wiped if we submitted
 it with the "None" option still selected. That is to say, every time you make a change to your
 identity values, you need to re-submit the entire set of fields: the write operation is always
 "overwrite", never "append".
@@ -48,7 +50,7 @@ PolkadotJS, the team prefers to only show official fields for now. If you want t
 values are still stored, use the [Chain State UI](https://polkadot.js.org/apps/#/chainstate) to
 query the active account's identity info:
 
-![Raw values of custom fileds are available on-chain](assets/identity/05.jpg)
+![Raw values of custom fields are available on-chain](assets/identity/05.jpg)
 
 It is up to your own UI or dapp to then do with this data as it pleases. The data will remain
 available for querying via the Polkadot API, so you don't have to rely on the PolkadotJS UI.
@@ -60,7 +62,7 @@ You can have a maximum of 100 custom fields.
 Please note the following caveat: because the fields support different formats, from raw bytes to
 various hashes, a UI has no way of telling how to encode a given field it encounters. The PolkadotJS
 UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these values readable
-on screen. However, given that there are no restrictions on the values that can be placed into these
+on-screen. However, given that there are no restrictions on the values that can be placed into these
 fields, a different UI may interpret them as, for example, IPFS hashes or encoded bitmaps. This
 means any field stored as raw bytes will become unreadable by that specific UI. As field standards
 crystallize, things will become easier to use but for now, every custom implementation of displaying
@@ -93,9 +95,9 @@ Copy the preimage hash. In the above image, that's
 a transaction.
 
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
-field needs to be at least 10 KSM. You can find out the minimum by querying the chain state under
-[Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy ->
-minimumDeposit.
+field needs to be at least {{ identity_reserve_funds }} KSM. You can find out the minimum by
+querying the chain state under [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants
+-> democracy -> minimumDeposit.
 
 ![Submitting a proposal](assets/identity/13.jpg)
 
@@ -137,14 +139,14 @@ If you don't know which registrar to pick, first check the available registrars 
 
 ## Cancelling Judgements
 
-You may decide that you actually do not want to be judged by a registrar (for instance, because you
-realize you entered incorrect data or selected the wrong registrar). In this case, after submitting
-the request for judgement but before your identity has been judged, you can issue a call to cancel
-the judgement using an extrinsic.
+You may decide that you do not want to be judged by a registrar (for instance, because you realize
+you entered incorrect data or selected the wrong registrar). In this case, after submitting the
+request for judgement but before your identity has been judged, you can issue a call to cancel the
+judgement using an extrinsic.
 
 ![Cancel Registrar](assets/registrar_cancel_judgement.png)
 
-To do this, first go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select
+To do this, first, go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select
 the `identity` pallet, then `cancelRequest`. Ensure that you are calling this from the correct
 account (the one for which you initially requested judgement). For the `reg_index`, put the index of
 the registrar from which you requested judgement.
@@ -224,7 +226,7 @@ the sub-account. If omitted, the sub-account will inherit the parent's name and 
 
 Note that a deposit of 2.5KSM is required for every sub-account.
 
-## Clearing and Killing
+## Clearing and Killing an Identity
 
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.
@@ -232,7 +234,7 @@ an identity also clears all sub accounts and returns their deposits.
 To clear an identity:
 
 1. Navigate to the [Accounts UI](https://polkadot.js.org/apps/#/accounts).
-2. Click the three dots corosponding to the account you want to clear and select 'Set on-chain
+2. Click the three dots corresponding to the account you want to clear and select 'Set on-chain
    identity'.
 3. Select 'Clear Identity', and sign and submit the transaction.
 

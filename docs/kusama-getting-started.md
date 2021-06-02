@@ -9,11 +9,13 @@ started.
 
 For brand-new learners of Blockchain technology:
 
-- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to familiarizing yourself
-  with cryptography, blockchain concepts, decentralization, networks, cryptocurrency, and so much
-  more. This is recommended for users with backgrounds of all levels, and is also a free course.
+- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing
+  yourself with blockchain concepts such as cryptography and networks, and how these play into
+  things like decentralization and cryptocurrency.
 
-For brand-new learners of Kusama:
+  This is recommended for users with backgrounds of all levels, and the course is free!
+
+For brand-new learners of Kusama, check out:
 
 - [Reading the Kusama Overview page][overview]
 - [Reading the "What is Kusama"][medium] article on Medium.

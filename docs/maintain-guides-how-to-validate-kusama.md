@@ -14,8 +14,8 @@ slashed, your money and your reputation will be at risk. However, running a vali
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
-**Warning:** It is highly recommended that you have significant system administration experience before 
-attempting to run your own validator.
+**Warning:** It is highly recommended that you have significant system administration experience
+before attempting to run your own validator.
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator) information to make you understand the factors
@@ -34,7 +34,7 @@ Riot.im) using [this link](https://matrix.to/#/#KusamaValidatorLounge:polkadot.b
 ### How Many KSM Do I Need?
 
 You can have a rough estimate on that by using the methods listed
-[here](faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators). Validators
+[here](faq#What-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator-?). Validators
 are elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
 [nominators](learn-nominator). This means that as a minimum, you will need enough KSM to set up
