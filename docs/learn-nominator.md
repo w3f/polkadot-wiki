@@ -90,16 +90,20 @@ more information and instructions for claiming rewards.
 
 #### Required Minimum Stake
 
-Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, there was
-**previously** a minimum number of DOT needed to nominate with in order to receive staking
-rewards due to the fact that the solution set need to be both proccessed and stored within
-a single block, 6 seconds on Polkadot.
+Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, there _may_
+exist a minimum number of DOT needed to nominate with in order to receive staking
+rewards due to the fact that the solution set needs to be both processed and stored within
+a single block: [a target of 6 seconds on Polkadot](faq#what-is-the-block-time-of-the-relay-chain).
 
 A [runtime upgrade](build-protocol-info#runtime-upgrades) moved the logic to process the rewards
-for nominators to an [off-chain worker](learn-phragmen#off-chain-phragmén), and now the minumum
-DOT required is only limited by the [existential deposit](build-protocol-info#existential-deposit)
+for nominators to an [off-chain worker](learn-phragmen#off-chain-phragmén), and now the minimum
+DOT required is only limited by the [existential deposit](build-protocol-info#existential-deposit).
+If the number of nominators increases dramatically, the solution will be pruned and nominators with
+the least amount of stake will once again be pruned and receive no staking rewards to ensure that 
+block times remain on target.
+
 See the [Election Solution Set](learn-nominator#the-election-solution-set) section on the
-Nominator page for more details.
+nominator page for more details.
 
 ### What to Take Into Consideration When Nominating
 
