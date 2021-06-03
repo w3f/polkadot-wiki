@@ -39,7 +39,7 @@
     "fs-extra": "^10.0.0",
     "ipfs-http-client": "^50.1.0",
     "katex": "^0.13.11",
-    "mr-pdf": "^0.2.3",
+    "mr-pdf": "^1.0.0",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.3.0",
