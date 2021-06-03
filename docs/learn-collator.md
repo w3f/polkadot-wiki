@@ -46,11 +46,6 @@ nominator page for more details.
 full-nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for
 them to send messages from parachain A to parachain B.
 
-### Collators in the Wild
-
-Collators are being used on by parachains on many
-[Polkadot ecosystem networks](build-guide#polkadot-ecosystem-networks).
-
 ### Further Resources
 
 - The primary collator reference implementation is in the 
