@@ -76,7 +76,7 @@ with anonymous proxies; once you remove the proxy relationship, the account will
 
 ![anonymous proxy](assets/proxy_anonymous_diagram.png)
 
-### Time Delay Proxies
+### Time Delayed Proxies
 
 We can add an aditional layer of security to proxies by giving them a delay time. The delay will be
 quantified in number of blocks (blockNumber). Polkadot and Kusama both have
@@ -129,7 +129,7 @@ like to set up if you choose, as well as the index.
 
 ![proxy generation](assets/polkadot_anon_proxy.png)
 
-### Using Time Delay Proxies
+### Using Time Delayed Proxies
 
 When creating a proxy through the PolkadotJS application, we are provided a delay field. In this 
 example we are creating a proxy with a delay value of 100, which means 100 blocks. 
