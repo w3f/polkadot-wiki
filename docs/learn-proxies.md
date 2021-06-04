@@ -131,9 +131,9 @@ like to set up if you choose, as well as the index.
 
 ### Using Time Delayed Proxies
 
-When creating a proxy through the PolkadotJS application, we are provided a delay field. In this 
-example we are creating a proxy with a delay value of 100, which means 100 blocks. 
-100 * 6(minutes) = 600 minutes, or 10 hours.
+When creating a proxy through the PolkadotJS application, we are provided a delay field. In this
+example we are creating a proxy with a delay value of 100, which means 100 blocks. 100 \* 6(minutes)
+= 600 minutes, or 10 hours.
 
 ![creating a time delayed proxy](assets/time_delay_proxy_screenshot.png)
 
