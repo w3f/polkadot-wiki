@@ -24,7 +24,8 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "postinstall": "patch-package",
     "generateRegistryTable": "node --experimental-json-modules scripts/generateRegistryTable.mjs > docs/build-ss58-registry.md; npx prettier docs/build-ss58-registry.md --write",
-    "generateErrorTable": "node --experimental-json-modules scripts/generateErrorTable.mjs >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write"
+    "generateErrorTable": "node --experimental-json-modules scripts/generateErrorTable.mjs >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write",
+    "pretty": "npx prettier --write ./docs/"
   },
   "devDependencies": {
     "docusaurus": "^1.14.7"
