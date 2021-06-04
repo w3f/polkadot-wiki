@@ -1,5 +1,9 @@
 [
   {
+    "tpl": "block_target_in_seconds",
+    "default": 6
+  },
+  {
     "tpl": "num_validators",
     "default": 150,
     "path": "query.staking.validatorCount"
