@@ -43,7 +43,7 @@
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.3.0",
-    "react-bootstrap": "^1.6.0",
+    "react-bootstrap": "^1.6.1",
     "remarkable-katex": "^1.1.8",
     "replace-in-file": "^6.2.0",
     "semver": "^7.3.4",
