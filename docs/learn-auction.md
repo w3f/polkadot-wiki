@@ -225,5 +225,5 @@ considered essential to the ecosystem's future.
 
 ## Resources
 
-- [Parachain Allocation](https://research.web3.foundation/en/latest/polkadot/economics/2-parachain-allocation.html) -
+- [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
   W3F research page on parachain allocation that goes more in depth to the mechanism.
