@@ -15,7 +15,7 @@ their stake, they are able to elect the active set of validators and share in th
 paid out.
 
 While the [validators][] are active participants in the network that engage in the block production
-and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach.
+and finality mechanisms, nominators take a slightly more passive role.
 Being a nominator does not require running a node of your own or worrying about online uptime.
 However, a good nominator performs due diligence on the validators that they elect. When looking for
 validators to nominate, a nominator should pay attention to their own reward percentage for
