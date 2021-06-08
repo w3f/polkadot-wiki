@@ -140,7 +140,7 @@ produce a "Not private" warning which you can skip by going to "Advanced" and th
 
 Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch the
 node. Activate the "Development" toggle and input your node's address - either the domain or the IP
-address. Remember to prefix with `wss://example.com:443`.
+address. Remember to prefix with `wss://` and if you're using the 443 port, append `:443`, like so: `wss://example.com:443`.
 
 ![A sync-in-progress chain connected to Polkadot-JS UI](assets/maintain-wss-image.png)
 
