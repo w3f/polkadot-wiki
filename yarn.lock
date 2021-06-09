@@ -5958,10 +5958,10 @@ moo@^0.5.0:
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.1.tgz#7aae7f384b9b09f620b6abf6f74ebbcd1b65dbc4"
   integrity sha512-I1mnb5xn4fO80BH9BLcF0yLypy2UKl+Cb01Fu0hJRkJjlCRtxZMWkTdAtDd5ZqCOxtCkhmRwyI57vWT+1iZ67w==
 
-mr-pdf@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.4.tgz#58244d076f97a2ea691009ca4ea4880221c455bd"
-  integrity sha512-oo5bBI0DXLDe/YV+tzAoMeIB7H22QBnABNdQ3a9QJVNy5BCuU+Oe0mGM1ejTU3HKmhmcYIb2yNekl00N2IB9jQ==
+mr-pdf@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.5.tgz#e82bf205293789c5f656d86b6b88e8f85826fa9b"
+  integrity sha512-npyAGEtxm+TeFojk1CVPMm6mlAW4zfc+QqetD40rxMoQlM/gmQNkSlX2ISijaSlfkX6nPgh3ZOfb1TyF0o+brQ==
   dependencies:
     chalk "^3.0.0"
     commander "^4.1.1"
