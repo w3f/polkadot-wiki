@@ -186,8 +186,8 @@ funds are to be used. If the funds are to be used for transfers then the usable 
 amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction fees
 than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
 
-The "total" balance of the account is considered the amount of "free" funds in the account
-subtracted by any funds that are "reserved." Reserved funds are held due to on-chain requirements
+The **total** balance of the account is considered to be the sum of `free` and `reserved` funds in the account. 
+Reserved funds are held due to on-chain requirements
 and can usually be freed by making some on-chain action. For example, the "Identity" pallet reserves
 funds while an on-chain identity is registered, but by clearing the identity you can unreserve the
 funds and make them free again.
