@@ -199,7 +199,11 @@ Those who participated in the Polkadot sales before 2020 and have been allocated
 tokens on Ethereum can claim a proportional amount of KSM on the Kusama Network.
 
 To do this you must sign a message containing the address of your Kusama account. You can do this by
-using the Polkadot-JS UI [Claims app](https://polkadot.js.org/apps/#/claims).
+using the Polkadot-JS UI
+[Claims app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/claims). Ensure
+that you are connected to the Kusama network (displayed in the upper-left hand corner of the
+screen). If you are not, change the network to Kusama by clicking in the network change tab in the
+upper left-hand corner..
 
 #### Generate a Kusama address
 
