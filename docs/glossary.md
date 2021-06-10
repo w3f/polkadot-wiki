@@ -19,6 +19,10 @@ The fourth (now defunct) proof of concept (PoC-4) testnet for Polkadot.
 In the Polkadot validity system, an _attestation_ is a type of message that validators broadcast
 that says whether they think a parachain candidate block is valid or invalid.
 
+## Auction (Parachain)
+
+Parachain auctions are how non-common-good parathreads win a slot to become a parachain.
+
 ## Authority
 
 An authority is a generic term for the role in a blockchain that is able to participate in the
@@ -39,6 +43,11 @@ blockchain.
 
 An application that allows a user to explore the different blocks on a blockchain.
 
+## Blocks Nominations
+
+This indicates that a validator does not currently allow any more nominations. This is controlled by
+the validator.
+
 ## BLS
 
 Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much
@@ -51,6 +60,12 @@ makes BLS a preferred scheme for voting in consensus algorithms and for threshol
 A process by which tokens can be "frozen" in exchange for some other benefit. For example, staking
 is a form of bonding for which you receive rewards in exchange for securing the network. You can
 also bond tokens in exchange for a parachain slot.
+
+## Bounty
+
+A mechanism which works in some sense as the reverse of a Treasury Proposal, allowing the Polkadot
+Council to indicate that there is a need to do some task for the Polkadot network, and allowing
+users to receive DOT in return for working on that task.
 
 ## Bridge
 
@@ -79,11 +94,32 @@ at capacity cannot be oversubscribed, unless more nominators select it before th
 A node that maintains a parachain by collecting parachain transactions and producing state
 transition proofs for the validators.
 
+## Common Good (Parachain)
+
+A parachain which does not win a parachain slot due to winning a slot auction, but is allowed on due
+to providing a common good service for the network.
+
+## Community Queue
+
+The queue for proposals originating from individual accounts (i.e. not the Council) which are
+waiting to become referenda. Compare the External queue.
+
 ## Consensus
 
 The process of a group of entities to agree on a particular data value (such as the ordering and
 makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus.
 The consensus algorithm used by Polkadot is [GRANDPA](#grandpa-finality-gadget).
+
+## Crowdloan
+
+A mechanism for potential parachains to temporarily source tokens to win an auction for a parachain
+slot. Tokens gathered in this way are programmatically returned to the lender after the lease period
+is over or the crowdloan period ends.
+
+## Curator
+
+A person, group, or other entity charged with judging and verifying the successful completion of a
+Bounty.
 
 ## Dapps
 
@@ -119,6 +155,11 @@ active nominator set) is recalculated and where rewards are paid out.
 Providing conflicting information to the network. BABE equivocation entails creating multiple blocks
 in the same slot. [GRANDPA](#grandpa-finality-gadget) equivocation would consist of signing multiple
 conflicting chains.
+
+## External Queue
+
+The queue for proposals originating with the Polkadot Council which are waiting to become referenda.
+Compare the Community queue.
 
 ## Extrinsic
 
@@ -226,6 +267,10 @@ The "canary network" for Polkadot. It consists of an early-release, unaudited ve
 Polkadot software. It is not a testnet - after the transition to NPoS, the network is entirely in
 the hands of the community (i.e., Kusama token holders).
 
+## Lease Period
+
+A particular amount of time that a parachain for which the parachain can connect to the relay chain.
+
 ## LIBP2P
 
 An open-source library for encrypted peer-to-peer communications and other networking functionality.
@@ -248,6 +293,10 @@ set.
 
 In Polkadot's XCMP protocol, a _message queue_ is the list of messages waiting to be process by a
 particular receiving parachain over a channel.
+
+## Next Session
+
+Indicates that the validator will be a member of the active set in the next session.
 
 ## Node Explorer
 
@@ -276,6 +325,18 @@ governance allows decisions to be made in a transparent manner. Note that there 
 different algorithms for making these decisions, such as simple majority voting, adaptive quorum
 biasing, or identity-based quadratic voting.
 
+## Online Message
+
+This is a message that is broadcast by a validator to verify to the network that the validator is
+online, even if they haven't published a block this epoch. This is sometimes referred to as
+"ImOnline".
+
+## Origin
+
+The initiator of an extrinsic. A simple origin would be the account that is sending a token to
+another account. Polkadot also supports more complex origin types, such as the root origin, from
+which privileged functions can be called.
+
 ## Oversubscribed
 
 If more than the maximum number nominators nominate the same validator, it is "oversubscribed", and
@@ -292,6 +353,16 @@ A Substrate runtime module.
 
 A blockchain that meets several characteristics that allow it work within the confines of the
 Polkadot Host. Also known as "parallelized chain."
+
+## ParaID
+
+A unique numeric (nonnegative integer) identifier for a parathread.
+
+## Parathread
+
+A blockchain which works within the confines of the Polkadot Host, thus allowing it to connect to
+the Polkadot Relay Chain. This can be done either by becoming a parachain or connecting on a "pay as
+you go" basis. All parachains start their lifecycle as a parathread.
 
 ## Parachain Registry
 
@@ -435,6 +506,11 @@ order to secure the network.
 A function that describes how the state of a blockchain can be transformed. For example, it may
 describe how tokens can be transferred from one account to another.
 
+## Statemint
+
+A common good parachain used for asset management. The Kusama version is called Statemine; the
+Westend version is called Westmint.
+
 ## Substrate
 
 A modular framework for building blockchains. Polkadot is built using Substrate. Chains built with
@@ -444,6 +520,16 @@ Substrate will be easy to connect as parachains.
 
 In Polkadot governance, bringing a proposal to a vote via referendum. Note that this is the British
 meaning of "tabling", which is different than the US version, which means "to postpone" a measure.
+
+## Teleport
+
+Send an asset from an account on one chain to an account on a different chain. This occurs by
+burning an amount on the sending chain and minting an equivalent amount on the destination chain.
+
+## Transfer
+
+Send an asset from one account to another. This generally refers to transfers that occur only on the
+same chain.
 
 ## Transaction
 
