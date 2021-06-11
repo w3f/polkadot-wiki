@@ -219,7 +219,7 @@ deposit of tokens that is locked up to another buyer. This would allow the selle
 tokens in exchange for the parachain slot and the buyer to acquire the slot as well as the deposited
 tokens.
 
-A number of system-level parachains may be granted slots by the [governing bodies](learn-governance)
+A number of system-level parachains may be granted slots by the [governing bodies](https://wiki.polkadot.network/docs/en/learn-governance)
 of the Relay Chain. Such parachains would not have to bid for or renew their slots as they would be
 considered essential to the ecosystem's future.
 
