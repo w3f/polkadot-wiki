@@ -17,7 +17,7 @@ wins, the bond will be forfeited. You can receive your bond back if you manually
 candidacy before losing. Runners-up are selected after every round and are reserved members in case
 one of the winners gets forcefully removed.
 
-> Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.1666 KSM on
+> Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.0033 KSM on
 > Kusama.
 
 It is a good idea to announce your council intention before submitting your candidacy so that your

@@ -61,7 +61,7 @@ accounts will be announced by our team. We will never offer to sell you DOT at a
 be found below:
 
 - [Twitter](https://twitter.com/Polkadot)
-- [Reddit](https://www.reddit.com/r/dot)
+- [Reddit](https://www.reddit.com/r/polkadot)
 - [Discord](https://discord.gg/wGUDt2p)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Polkadot Medium](https://medium.com/polkadot-network)
