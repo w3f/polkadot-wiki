@@ -4,7 +4,7 @@ title: Kusama
 sidebar_label: Home
 ---
 
-Kusama is a "canary network" for Polkadot; an early, unaudited release of the code that is available
+Kusama is a "canary network" for Polkadot; an early release of the code that is available
 first and holds real economic value. For developers, Kusama is a proving ground for runtime
 upgrades, on-chain governance, and parachains.
 
