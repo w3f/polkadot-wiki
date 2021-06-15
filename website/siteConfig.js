@@ -67,6 +67,11 @@ const siteConfig = {
     "/js/packaged/addressChanger.js",
     "/js/clipboard.min.js",
     "/js/copycode.js",
+    {
+      src: "https://apisa.web3.foundation/latest.js",
+      async: true,
+      defer: true,
+    },
   ],
 
   stylesheets: [
