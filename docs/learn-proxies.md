@@ -78,7 +78,7 @@ with anonymous proxies; once you remove the proxy relationship, the account will
 
 ### Time Delayed Proxies
 
-We can add an aditional layer of security to proxies by giving them a delay time. The delay will be
+We can add an additional layer of security to proxies by giving them a delay time. The delay will be
 quantified in number of blocks (blockNumber). Polkadot and Kusama both have
 {{ block_target_in_seconds }} second blocks, hence a delay value of 10 will mean 10 blocks which
 will equal 1 minute of delay. The proxy will announce it's intended action and wait for the number
