@@ -28,25 +28,30 @@ was, or which extrinsics resulted in a certain state change are fast operations 
 archive node. However, an archive node takes up a lot of disk space - around Kusama's 1.6 millionth
 block this was around 15 to 20GB.
 
-A **full node** is _pruned_, meaning it discards all information older than 256 blocks, but keeps
-the extrinsics for all past blocks, and the genesis block. A node that is pruned this way requires
-much less space than an archive node. In order to query past state through a full node, a user would
-have to wait for the node to rebuild the chain up until that block. A full node _can_ rebuild the
-entire chain with no additional input from other nodes and become an archive node. One caveat is
-that if finality stalled for some reason and the last finalized block is more than 256 blocks
-behind, a pruned full node will not be able to sync to the network.
-
 Archive nodes are used by utilities that need past information - like block explorers, council
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
-to be able to look at past on-chain data. Full nodes are used by everyone else - they allow you to
-read the current state of the chain and to submit transactions directly to the chain without relying
-on a centralized infrastructure provider.
+to be able to look at past on-chain data.
+
+A **full node** is _pruned_, meaning it discards all information older than a specific number of
+blocks (256 blocks by default), and the genesis block. A node that is pruned this way requires
+much less space than an archive node. One important caveat is that if finality stalled for some
+reason and the last finalized block is more than 256 blocks behind, a pruned full node will not be
+able to sync to the network.
+
+A full node may eventually be able to rebuild the entire chain with no additional information,
+and become an archive node, but at he time of writing, this is not implemented. If you need to
+query historical blocks past what you pruned, you need to purge your database and resync your node
+starting in archive mode.
+
+Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
+directly on the network without relying on a centralized infrastructure provider.
 
 Another type of node is a **light node**. A light node has only the runtime and the current state,
-but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes
-are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome
-extension, which is a node in its own right, running the runtime in WASM format:
-https://github.com/paritytech/substrate-light-ui
+but does not store past blocks and so cannot read historical data without requesting it from a node
+that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
+light nodes is a Chrome extension, which is a node in its own right, running the runtime in WASM format:
+https://github.com/paritytech/substrate-light-ui as well as a full or light node that is completely
+encapsulated in WASM and can be integrated into webapps: https://github.com/paritytech/smoldot#wasm-light-node
 
 ### Fast Install Instructions (Mac)
 
