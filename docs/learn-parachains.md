@@ -154,20 +154,20 @@ transactional functionality would exist within parachains.
 
 The vast majority of common good chains will likely be the unopinionated system level chains.
 
-### Public Utility Chains
+### Common Good Chains
 
-Public utility chains add functionality that doesn’t exist yet, but that the stakeholders believe
+Common good chains add functionality that doesn’t exist yet, but that the stakeholders believe
 will add value to the entire network. Because public utility chains add new functionality, there is
 a subjective component to their addition: the stakeholders of the network must believe that it is
 worth allocating a slot that would otherwise go to the winners of an auction, and thus would have an
 objective expression of conviction from its backers. Governance provides the means to internalize
 the value of the parachain slot and distribute it across all members of the network.
 
-Public utility chains will always be fully aligned with their Relay Chain stakeholder base. This
+Common goodchains will always be fully aligned with their Relay Chain stakeholder base. This
 means that they will adopt the Relay Chain's native token (i.e. DOT or KSM) as their native token
 and respect any messages incoming from the Relay Chain and system level parachains at face value.
 
-Some examples of potential public utility chains are bridges, DOT/KSM-denominated smart contract
+Some examples of potential common good chains are bridges, DOT/KSM-denominated smart contract
 platforms, and generic asset chains. All of these could operate without a new token:
 
 - A bridge could add its own native token to charge as a toll, but in many cases that would be
@@ -180,12 +180,12 @@ platforms, and generic asset chains. All of these could operate without a new to
   gold; or by paper goods like shares in a company or fiat currency held by a trusted party,
   providing a stable, permanent launchpad for stablecoins and Central Bank Digital Currencies.
 
-Public utility parachains would typically grant privileged business logic to Polkadot’s governance.
+Common good parachains would typically grant privileged business logic to Polkadot’s governance.
 Just as the Polkadot Relay Chain has several privileged functions like setting the validator count
 or allocating DOT from the Treasury, these parachains can have privileged functions like changing
 system parameters or registering an asset.
 
-Because public utility chains add functionality beyond the scope of the Relay Chain, they will
+Because common good chains add functionality beyond the scope of the Relay Chain, they will
 likely be approved by the network stakeholders only in rare scenarios.
 
 ## Examples
@@ -213,12 +213,13 @@ over how blocks are authored and by whom.
 
 ### How will parachain slots be distributed?
 
-Parachain slots will be acquirable through auction, please see the
+Parachain slots will generally be acquirable through auction, please see the
 {{ polkadot: [parachain slots](learn-auction) :polkadot }}
 {{ kusama: [parachain slots](mirror-learn-auction) :kusama }} article. Additionally, some parachain
 slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads) :polkadot }}
 {{ kusama: [parathreads](mirror-learn-parathreads) :kusama }} &mdash; chains that bid on a per-block
-basis to be included in the Relay Chain.
+basis to be included in the Relay Chain. Common good and system parachains will also 
+take up some slots.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
@@ -248,12 +249,32 @@ Likewise, it should be easy for them to recongize when it's safe to restart bloc
 perhaps based on finality delay, validator set size, or some other factor that is yet to be decided
 within [Cumulus](https://github.com/paritytech/cumulus).
 
-### Parachain Development Kits (PDKs)
+### What is a system parachain?
+
+This is a parachain which is used directly for supporting the Relay Chain, generally by offloading 
+functionality that was previously handled by the Relay Chain onto the parachain. For instance,
+a parachain which handles governance or account balances for the Relay Chain would be a system 
+parachain. These will generally be onboarded by act of governance as opposed to an auction.
+
+System parachains can be recognized by their parachain ID, which will be less than 1_000.
+
+### What is a common-good parachain?
+
+This is a parachain allocated a slot not through the auction process, but because it will provide
+a common good to the entire ecosystem. Examples of potential common-good parachains may be 
+bridges or identity services, and will be onboarded by act of governance, not a parachain auction. 
+
+Common-good parachains can be recognized by their parachain ID, which will be between 1_000 and 1_999.
+
+For a good review of common good parachains, see the article [Common Good Parachains: An Introduction
+to Governance Allocated Parachain Slots](https://medium.com/polkadot-network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots-88e01812160d).
+
+## Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
 applications as parachains. For more info see [here](build-pdk).
 
-### Deploying parachains
+## Deploying parachains
 
 Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for
 information on compiling and deploying a parachain.
