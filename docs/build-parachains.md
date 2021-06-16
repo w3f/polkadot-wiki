@@ -116,7 +116,7 @@ parachains.
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created a [cumulus parachain workshop](https://substrate.dev/cumulus-workshop/) to show you how.
 Get stuck or need support along the way? Join the
-[Rococo matrix chat channel](https://matrix.to/#/#rococo:matrix.parity.io)
+[Parachain Technical matrix chat channel](https://matrix.to/#/#parachain-technical:matrix.parity.io)
 and connect with other builders there.
 
 ### How to connect to a Parachain
