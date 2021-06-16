@@ -145,7 +145,7 @@ get smaller as `n` increases. For this first example round, for instance, candid
 ballot vote for them. Thus, the average load for candidate A is `1/1`, or 1. Candidate C has two
 ballots approving of them, so the average load is `1/2`. Candidate B has the lowest average load, at
 `1/4` and they get the first seat. Ballots loads are now averaged out, although for the first
-iteration, this will have not have any effect.
+iteration, this will not have any effect.
 
 ```
 Filled seats: 1 (B)
