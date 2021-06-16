@@ -32,12 +32,6 @@ Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-crossc
 full-nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for
 them to send messages from parachain A to parachain B.
 
-### Collators in the Wild
-
-Collators are being used on the [Rococo](build-parachains-rococo) testnet, and you can learn more
-about how they are used with Cumulus via the [Cumulus](https://github.com/paritytech/cumulus/)
-repository.
-
 ### Guides and Tools
 
 - [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/)
