@@ -34,9 +34,7 @@ to be able to look at past on-chain data.
 
 A **full node** is _pruned_, meaning it discards all information older than a specific number of
 blocks (256 blocks by default), and the genesis block. A node that is pruned this way requires
-much less space than an archive node. One important caveat is that if finality stalled for some
-reason and the last finalized block is more than 256 blocks behind, a pruned full node will not be
-able to sync to the network.
+much less space than an archive node.
 
 A full node may eventually be able to rebuild the entire chain with no additional information,
 and become an archive node, but at he time of writing, this is not implemented. If you need to
