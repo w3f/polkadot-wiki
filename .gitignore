@@ -75,6 +75,12 @@ website/translated-docs/
 website/i18n/*
 kusama-guide/i18n/*
 
+.docusaurus
+computed-dict.json
+website-v2/i18n/
+!website-v2/i18n/en/
+kusama-guide-v2/i18n/zh-CN/docusaurus-plugin-content-docs/current/
+
 # Ignore because we don't need a 10MB file in VCS
 polkadot-wiki.pdf
 kusama-wiki.pdf

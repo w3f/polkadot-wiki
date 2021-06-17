@@ -29,14 +29,12 @@ reserved tokens. Once you remove your vote, your tokens will be liquid again.
 Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab.
 On the right side of the window there are two blue buttons, click on the one that says "Vote."
 
-![](assets/council/vote.png)
 
 Since the council uses approval voting, when you vote you signal which of the candidates you approve
 of and your voted tokens will be equalized among the selected candidates. Select up to 16 council
 candidates by moving the slider to "Aye" for each one that you want to be elected. When you've made
 the proper configuration submit your transaction.
 
-![](assets/council/vote_for_yourself.png)
 
 You should see your vote appear in the interface immediately after your transaction is included.
 

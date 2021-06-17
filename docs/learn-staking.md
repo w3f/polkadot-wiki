@@ -169,7 +169,7 @@ There are two different accounts for managing your funds: `Stash` and `Controlle
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
   Controller. As a result, you may actively participate with a Stash key kept in a cold wallet,
   meaning it stays offline all the time. You can also designate a Proxy account to vote in
-  [governance](./learn-governance) proposals.
+  [governance](learn-governance) proposals.
 - **Controller** This account acts on behalf of the Stash account, signalling decisions about
   nominating and validating. It sets preferences like payout account and commission. If you are a
   validator, it also sets your [session keys](learn-keys#session-keys). It only needs enough funds
@@ -429,7 +429,7 @@ going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
-<p style="text-align:center">Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
+<p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of DOT staked
 - **y-axis**: Inflation, annualized percentage

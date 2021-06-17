@@ -16,7 +16,7 @@ like attestations (see [Judgements](#judgements)).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
-These funds are _locked_, not spent - they are returned when the identity is cleared. 
+These funds are *locked*, not spent - they are returned when the identity is cleared. 
 
 These amounts can also be extracted by querying constants through
 the [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on polkadot.js/apps. 
@@ -149,7 +149,7 @@ To be judged after submitting your identity information, go to the
 for the `max_fee` put the maximum you're willing to pay for these confirmations.
 
 If you don't know which registrar to pick, first check the available registrars by going to
-["Chain State UI"]() and selecting `identity.registrars()` to get the full list.
+["Chain State UI"](#) and selecting `identity.registrars()` to get the full list.
 
 ## Cancelling Judgements
 

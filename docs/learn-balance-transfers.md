@@ -114,9 +114,9 @@ the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#
 is probably not the reason for your tokens having existing references.
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
-chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama}}
+chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
 
-#### Existing {{ polkadot: Non-DOT :polkadot}} {{ kusama: Non-KSM :Kusama }} Assets
+#### Existing {{ polkadot: Non-DOT :polkadot }} {{ kusama: Non-KSM :kusama }} Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is

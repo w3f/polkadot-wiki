@@ -40,17 +40,17 @@ then proceed to step 2 below.
    [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
    or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
 2. Click on the settings button to change the network to "Kusama (canary)".
-   <img src="/img/kusama/kusama_polkadotjs_add_account-1.png" width=50% style="margin-left: 70px;"/>
+   <img src={require('./assets/kusama/kusama_polkadotjs_add_account-1.png').default} style={{marginLeft: "70px", width: "50%"}}/>
 3. Create a new account by clicking on "Create new account (root or derived)".
-   <img src="/img/kusama/kusama_polkadotjs_create.png" width=50% style="margin-left: 70px;"/>
+   <img src={require('./assets/kusama/kusama_polkadotjs_create.png').default} style={{marginLeft: "70px", width: "50%"}} />
 4. Uncheck the option to create an account dervied from another seed.
-   <img src="/img/kusama/kusama_polkadotjs_uncheck.png" width=50% style="margin-left: 70px;"/>
+   <img src={require('./assets/kusama/kusama_polkadotjs_uncheck.png').default} style={{marginLeft: "70px", width: "50%"}} />
 5. Copy the seed phrase and store it somewhere safe. Don't share the seed phrase with anyone, you
    can use it to access your account if you forget your password or want to import your account
    again.
-   <img src="/img/kusama/kusama_polkadotjs_mnemonicseed.jpg" width=50% style="margin-left: 70px;"/>
+   <img src={require('./assets/kusama/kusama_polkadotjs_mnemonicseed.jpg').default} style={{marginLeft: "70px", width: "50%"}} />
 6. Enter a name for the account and type a strong password (at least 6 characters).
-   <img src="/img/kusama/kusama_polkadotjs_final_account.png" width=50% style="margin-left: 70px;"/>
+   <img src={require('./assets/kusama/kusama_polkadotjs_final_account.png').default} style={{marginLeft: "70px", width: "50%"}} />
 7. Click on "Add the account with the generated seed".
 8. You can copy the account's address to the clipboard by clicking on its identicon.
 
@@ -157,7 +157,7 @@ enter `subkey --help` for more usage examples.
    phrase with anyone, you can use it to access your account if you forget your password or
    otherwise lose your keystore.
 
-<img src="/img/kusama/polkawallet-create-account.jpg" width=50% />
+<img src={require('./assets/kusama/polkawallet-create-account.jpg').default} width="50%" />
 
 3. Name your account and make a strong password, make sure to write it down in another place, then
    click "Save".
@@ -167,8 +167,8 @@ enter `subkey --help` for more usage examples.
 
 5. Click on the pink QR Code symbol and select "Copy address" to copy your address to clipboard.
 
-<img src="/img/kusama/polkawallet-accounts-page.jpg" width=50% />
-<img src="/img/kusama/polkawallet-copy-address.jpg" width=50% />
+<img src={require('./assets/kusama/polkawallet-accounts-page.jpg').default} width="50%" />
+<img src={require('./assets/kusama/polkawallet-copy-address.jpg').default} width="50%" />
 
 6. [Get the Kusama address from the Substrate address.](#kusama-from-substrate-address)
 
