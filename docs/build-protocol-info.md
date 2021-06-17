@@ -76,6 +76,10 @@ accounts reaped, as users could refund the address and try making transactions f
 pallet provides a `transfer_keep_alive` function that will return an error and abort rather than
 make the transfer if doing so would result in reaping the sender's account.
 
+> Note: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT and
+> 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
+> transfers on Statemint. Statemint integration is discussed in the next page of the guide.
+
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
 Account balance information is stored in
