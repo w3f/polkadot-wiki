@@ -7,7 +7,7 @@ description: Common Good Parachains
 
 ## Overview
 
-"Common Good" parachains are parachain slots reserved for functionality that benefits the the
+"Common Good" parachains are parachain slots reserved for functionality that benefits the
 ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
 network can realize the benefit of valuable parachains that would otherwise be underfunded due to
 the free-rider problem. They are not allocated via the parachain auction process, but by the
@@ -69,10 +69,10 @@ adds functionality not available in the Relay Chain, namely the creation and man
 Statemint will support both funglible and non-fungible assets. The chain offers an interface similar
 to ERC-20 for fungible assets and ERC-721 for non-fungible tokens. These interfaces are in the logic
 of the chain itself; by encoding this logic directly into the Statemint runtime, token storage and
-actions can happen faster and cheaper.
+actions do not need to be metered and can happen faster and cheaper.
 
 Like most common good chains, Statemint will use the DOT token as its native token, i.e. represented
-in its instance of the Balance pallet. Statemint trusts messages about balances from the Relay
+in its instance of the Balances pallet. Statemint trusts messages about balances from the Relay
 Chain, and vice versa, so users can transfer DOT from the Relay Chain to their address on Statemint
 and back.
 

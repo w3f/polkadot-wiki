@@ -82,11 +82,11 @@ Save the output and bring it to the machine that you will broadcast from, enter 
 signature field, and send the transaction (or just return the serialized transaction if using
 `sendOffline`).
 
-## Tx Wrapper
+## Tx Wrapper Polkadot
 
 If you do not want to use the CLI for signing operations, Parity provides an SDK called
 [TxWrapper Core](https://github.com/paritytech/txwrapper-core) to generate and sign transactions
-offline. See the
+offline. For Polkadot, Kusama, and select parachains, use the `txwrapper-polkadot` package. Other Substrate-based chains will have their own `txwrapper-{chain}` implementations. See the
 [examples](https://github.com/paritytech/txwrapper-core/blob/main/packages/txwrapper-examples/README.md)
 for a guide.
 
