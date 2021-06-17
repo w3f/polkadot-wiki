@@ -28,7 +28,7 @@ Statemint and use it natively. The Relay Chain will also accept DOT transfers fr
 the Relay Chain to use for staking, governance, or any other activity taking place there.
 
 Using Statemint for DOT/KSM balance transfers will be much more efficent than the Relay Chain and is
-highly recommended. The Relay Chain will still need to be used for staking/governance.
+highly recommended. Until domain specific parachains are built, the Relay Chain will still need to be used for staking and governance.
 
 ## Assets Basics
 
@@ -62,7 +62,7 @@ The Assets pallet also provides an `approve_transfer`, `cancel_approval`, and `t
 interface for non-custodial operations.
 
 Asset transfers will result in an `assets.transferred` event. The same instructions for
-[monitoring events and not transactions](build-protocol-info#events) applies to asset transfers.
+[monitoring events and **not** transactions](build-protocol-info#events) applies to asset transfers.
 
 Note that you can use the same addresses (except anonymous proxies!) on Statemint that you use on
 the Relay Chain. The SS58 encodings are the same, only the chain information (genesis hash, etc.)
@@ -98,7 +98,7 @@ database directory, so provision disks accordingly.
 API Sidecar is a REST service for relay chain and parachain nodes; It comes with endpoints to query
 info about assets and asset balances on Statemint.
 
-- Asset lookups will always use the `AssetId` to refer to an asset class. Metadata information is
+- Asset lookups will always use the `AssetId` to refer to an asset class. On-chain metadata is
   subject to change and thus not suitable as a canonical index.
 - Please refer to [docs](https://paritytech.github.io/substrate-api-sidecar/dist/) for full usage
   information. Details on options like how to make a historical query are not included here.
