@@ -6,7 +6,7 @@ sidebar_label: How to transfer Balances
 
 Balance transfers are used to send balance from one account to another account. To start
 transferring balances, we will begin by using [Polkadot-JS Apps][]. This guide assumes that you've
-already [created an account](learn-account-generation) and have some funds that will be transferred.
+already [created an account](learn-account-generation) and have some funds that are ready to be transferred.
 
 ## Polkadot-JS Apps
 
@@ -31,8 +31,9 @@ Now a modal window will appear on the page. The modal asks you to enter 3 inputs
 - "send to address": The address of the account that will receive the funds.
 - "amount": The amount of tokens you will transfer.
 
-The "existential deposit" box shows you the minimum amount of funds you must keep in the account for
-it to remain active. See the [existential deposit][] section for more information.
+The "existential deposit" box shows you the 
+__minimum amount of funds you must keep in the account for it to remain active.__ 
+See the [existential deposit][] section for more information.
 
 ![transfer](assets/transfer-2.png)
 
@@ -56,13 +57,13 @@ a common use case for using normal transfers is to entirely clear out the accoun
 will appear if you have the keep-alive check turned off that will send all the tokens in the
 account, minus a transaction fee, to the destination address.
 
-Note that attempting to send less than the existential deposit to an account with 0 DOT will always
+Attempting to send less than the existential deposit to an account with 0 DOT will always
 fail, no matter if the keep-alive check is on or not. For instance, attempting to transfer 0.1 DOT
 to an account you just generated (and thus has no DOT) will fail, since 0.1 is less than the
 existential deposit of 1 DOT and the account cannot be initialized with such a low balance.
 
-Note that even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
-from the sending account if you attempt to transfer.
+> NOTE: Even if the transfer fails due to a keep-alive check, the transaction fee will 
+> be deducted from the sending account if you attempt to transfer.
 
 ### Existing Reference Error
 
@@ -108,18 +109,18 @@ see why by hovering over the information icon next to it.
 
 #### Existing Recovery Info
 
-{{ polkadot: Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use
+Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use
 the [Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this
-is probably not why your tokens have existing references. :polkadot}}
+is probably not the reason for your tokens having existing references.
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
-chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama}}
+chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
 
-#### Existing {{ polkadot: Non-DOT :polkadot}} {{ kusama: Non-KSM :Kusama }} Assets
+#### Existing {{ polkadot: Non-DOT :polkadot }} {{ kusama: Non-KSM :kusama }} Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is
-probably not why your tokens have existing references.
+probably not the reason for your tokens having existing references.
 
 ### From the Accounts Page
 

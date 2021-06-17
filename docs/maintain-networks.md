@@ -59,9 +59,9 @@ polkadot --chain=westend
 
 and you will connect and start syncing to Westend.
 
-Check your node is connected by viewing it on
+Check that your node is connected by viewing it on
 [Telemetry](https://telemetry.polkadot.io/#list/Westend) (you can set a custom name by specifying
-`--name "my custom name"`)
+`--name "my custom name"`).
 
 #### Westend Faucet
 
@@ -85,8 +85,8 @@ the CLI.
 
 ## Substrate Networks
 
-To connect to a Substrate public network first follow the [instructions][substrate install] for
-installing the Substrate executable.
+To connect to a Substrate public network, follow the [instructions][substrate install] for
+installing the Substrate executable first.
 
 ### Flaming Fir
 
@@ -112,7 +112,7 @@ the public [Telemetry][telemetry] service.
 You can verify that your node is connected by navigating to the correct network on the dashboard and
 finding the name of your node.
 
-There is a built-in search function for the nodes page. Simply start typing keystrokes in the main
+There is a built-in search function on the nodes page. Simply start typing keystrokes in the main
 window to make it available.
 
 [substrate install]: https://substrate.dev/docs/en/knowledgebase/getting-started

@@ -19,7 +19,7 @@ Here's how to find out the detailed error description through Polkadot-JS Apps.
 
 A typical failed transactions looks something like this:
 
-![Error while sending a transaction](/img/errors/01.jpg)
+![Error while sending a transaction](assets/errors/01.jpg)
 
 The image displays only the error name as defined in the code, not its error message. Despite this
 error being rather self-explanatory, let's find its details.
@@ -27,7 +27,7 @@ error being rather self-explanatory, let's find its details.
 In the [explorer tab](https://polkadot.js.org/apps/#/explorer), find the block in which this failure
 occured. Then, expand the `system.ExtrinsicFailed` frame:
 
-![Error described](/img/errors/02.jpg)
+![Error described](assets/errors/02.jpg)
 
 Notice how the `details` field contains a human-readable description of the error. Most errors will
 have this, if looked up this way.
@@ -54,9 +54,9 @@ the runtime for the fourth error (index 3) in the sixth pallet (index 5).
 
 By looking at the
 [runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L965)
-we see that the pallet at index 5 is
-[Balances](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L981). Now
-we will check the Balances pallet's code which is hosted in the Substrate repository, and look for
+we see that the pallet at index 5 is 
+[Balances](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L981). 
+Now we will check the Balances pallet's code which is hosted in the Substrate repository, and look for
 the fourth error in the Error enum. According to
 [its source](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs#L396) the
 error that we got is

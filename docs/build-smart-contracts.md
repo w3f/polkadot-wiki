@@ -4,16 +4,16 @@ title: Smart Contracts
 sidebar_label: Smart Contracts
 ---
 
-The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot
+The Polkadot Relay Chain will not natively support smart contracts. However, parachains on Polkadot
 will support smart contracts. There are already announced projects such as
 [Edgeware](https://edgewa.re), and thanks to the Substrate built-in
 [contract pallet](https://substrate.dev/rustdocs/v3.0.0/pallet_contracts/index.html), it is likely
-that more parachains will support this feature.
+that more parachains will support WebAssembly smart contracts.
 
-Additionally, there is the EVM pallet which lets a parachain implement the Ethereum Virtual Machine,
-thereby supporting almost direct ports of Ethereum contracts. Some of the projects using this
-approach are [Edgeware](https://edgewa.re), [Moonbeam](https://moonbeam.network/) and
-[Frontier](https://github.com/paritytech/frontier).
+Additionally, there is the [EVM Pallet](https://substrate.dev/docs/en/knowledgebase/smart-contracts/evm-pallet), 
+which allows a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of 
+Ethereum contracts. Some of the projects using this approach are [Edgeware](https://edgewa.re), 
+[Moonbeam](https://moonbeam.network/) and [Frontier](https://github.com/paritytech/frontier).
 
 A video version of the recap of the smart contract situation on Polkadot and Kusama is available
 [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
@@ -25,13 +25,13 @@ contracts to deploy on parachains based on Substrate.
 
 - [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - Walks you
-  through the basics of writing and deploying an ERC20 token using `ink!`.
+- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - a walkthrough
+  of the basics of writing and deploying an ERC20 token using `ink!`.
 
 ## Examples
 
-Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart
-contract example? Ask us to add it to this page!
+Collected below are some community examples of smart contracts in `ink!`. 
+__Are you working on a smart contract example? Ask us to add it to this page!__
 
 - [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
@@ -46,13 +46,13 @@ has a one-time byte-fee applied to the transaction, but no recurring cost.
 
 An account of a contract instance is charged proportionally to the amount of storage its account
 uses. When a contract's balance goes below a defined limit, the contract's account is turned into a
-"tombstone" (a hash of the contract's current state) and its storage is cleaned up. A tombstone
+_tombstone_ (a hash of the contract's current state) and its storage is cleaned up. A tombstone
 contract can be restored by providing the data that was cleaned up when it became a tombstone as
 well as any additional funds needed to keep the contract alive. This fee will retroactively apply to
 missed rent periods.
 
 Block producers or regular users of the chain can "poke" a smart contract if they think it ran out
-of funds for rent. This will initiate the cleanup process and the _poker_ will get a finder's fee.
+of funds for rent. This will initiate the clean-up process and the _poker_ will get a finder's fee.
 
 ## What is the difference between developing a smart contract versus a parachain?
 
@@ -82,17 +82,18 @@ Some platforms, such as Bitcoin, get around this constraint by providing a very 
 language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute
 their code. If a smart contract does get into a state where execution will never halt, it eventually
 runs out of gas, ceases execution, and any state transition that would have been made by the smart
-contract is rolled back.
+contract is rolled back. Polkadot uses a *weight-fee model* and not a  *gas-metering model*.
 
 Parachains can implement arbitrarily powerful programming languages and also contain no notion of
 gas for their own native logic. This means that some functionality is easier to implement for the
 developer, but it also means there are some constructs, such as a loop without a terminating
 condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that
 could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it
-entirely, will often be a wiser choice.
+entirely, will often be a wiser choice. Parachains try to be proactive, while smart contract platforms 
+are event-driven.
 
 ## Resources
 
 - [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) -
-  From a technical standpoint answers the question of when a developer might choose to develop a
+  A technical standpoint that answers the question of when a developer might choose to develop a
   runtime versus a smart contract.

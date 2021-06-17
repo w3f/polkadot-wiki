@@ -1,0 +1,74 @@
+#klaro .cookie-notice {
+    z-index: 9999;
+    background: #1e1e1e;
+  }
+  @media (min-width: 990px) {
+    #klaro .cookie-notice {
+      border-radius: 15px;
+    }
+  }
+  #klaro .cookie-notice a {
+    color: #e6007a !important;
+  }
+  #klaro .cookie-notice button {
+    border-radius: 10px;
+    background: #e6007a;
+    margin-bottom: 2px;
+  }
+  #klaro .cookie-notice button.cn-decline {
+    background: #c40061;
+  }
+  
+  #klaro .cookie-modal {
+    z-index: 999999;
+  }
+  #klaro .cookie-modal .slider {
+    padding-top: 0;
+    min-height: auto;
+    visibility: visible;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19) !important;
+  }
+  #klaro .cookie-modal input {
+    outline: none;
+    background: none;
+    box-shadow: none;
+  }
+  #klaro .cookie-modal input:focus {
+    outline: none;
+    background: none;
+    box-shadow: none;
+  }
+  #klaro .cookie-modal .cm-modal {
+    background: #1e1e1e;
+  }
+  @media (min-width: 990px) {
+    #klaro .cookie-modal .cm-modal {
+      border-radius: 2rem;
+      padding: 2rem 3rem;
+    }
+  }
+  #klaro .cookie-modal .cm-modal .cm-btn {
+    border-radius: 10px;
+  }
+  #klaro .cookie-modal .cm-header a {
+    color: #e6007a !important;
+  }
+  @media (min-width: 990px) {
+    #klaro .cookie-modal .cm-header {
+      padding-left: 0;
+      padding-top: 0;
+    }
+    #klaro .cookie-modal .cm-body {
+      padding-left: 0;
+    }
+    #klaro .cookie-modal .cm-footer {
+      padding-left: 0;
+    }
+    #klaro .cookie-modal .cm-powered-by {
+      right: 3rem;
+    }
+  }
+  
+  #klaro .cm-toggle-all {
+    display: none !important;
+  }

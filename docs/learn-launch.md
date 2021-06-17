@@ -5,8 +5,11 @@ sidebar_label: Polkadot Launch Phases
 description: An explanation of Polkadot's launch process and its individual phases
 ---
 
-The Polkadot network had a phased roll-out plan, with important milestones toward decentralization
-marking each phase.
+The Polkadot network has a phased roll-out plan, with important milestones toward decentralization
+marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the 
+[roadmap](https://polkadot.network/launch-roadmap/)
+
+__Current Phase: Parachain Rollout__
 
 ## The PoA Launch
 
@@ -53,9 +56,10 @@ From this date, one DOT (old) equals 100 new DOT.
 ## Core Functionality
 
 Polkadot is now moving to the next stage of opening up its core functionality, like parachain slot
-auctions, parathreads, and cross-chain message passing. These upgrades will require runtime upgrades
-that will pass through Polkadot's normal governance processes. The core functionality does not have
-to be unlocked sequentially &mdash; several features can be unlocked with a single proposal.
+auctions, parathreads, and cross-chain message passing. Polkadot is now on track to launch several 
+parachains in 2021. These upgrades will require runtime upgrades that will pass through Polkadot's 
+normal governance processes. The core functionality does not have to be unlocked sequentially &mdash; 
+several features can be unlocked with a single proposal.
 
 Parachains will first roll out on Kusama with a common good parachain, followed by the first slot
 auction and winner's onboarding.

@@ -94,7 +94,7 @@ Validator 3 Stake (v3): 9 DOT
 Validator 4 Stake (v4): 8 DOT
 Payout (p): 8 DOT
 
-Your payout = (p / v) * 1 = (8 / 4) * 2 = 4
+Your payout = (p / v) * 2 = (8 / 4) * 2 = 4
 ```
 
 With enough stake, you could run more than two validators. However, each validator must have enough

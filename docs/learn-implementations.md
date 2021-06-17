@@ -13,9 +13,9 @@ Parity Technologies in concert with their work on
 [**Kagome**](https://github.com/soramitsu/kagome) - C++ implementation of the Polkadot Host being
 built by [Soramitsu](https://github.com/soramitsu), a Japanese digital identity company that
 previously developed [Hyperledger Iroha](https://iroha.tech). They were awarded a grant from the
-Web3 Foundation and plan to release Kagome by
-[November 2019](https://medium.com/web3foundation/w3f-grants-soramitsu-to-implement-polkadot-runtime-environment-in-c-cf3baa08cbe6).
-As part of the process they are developing a libp2p networking layer in C++.
+Web3 Foundation and released the first version of Kagome in April 2020. 
+As part of the process they also released a [libp2p](https://github.com/soramitsu/libp2p-grpc) 
+networking layer in C++.
 
 [**Gossamer**](https://github.com/ChainSafeSystems/gossamer) - A Go implementation being built by
 [ChainSafe Systems](https://github.com/ChainSafeSystems), a 23-person development team in Toronto

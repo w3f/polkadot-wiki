@@ -1,0 +1,26 @@
+{
+  "item.label.Get Started": {
+    "message": "Get Started",
+    "description": "Navbar item with label Get Started"
+  },
+  "item.label.Learn": {
+    "message": "Learn",
+    "description": "Navbar item with label Learn"
+  },
+  "item.label.Build": {
+    "message": "Build",
+    "description": "Navbar item with label Build"
+  },
+  "item.label.Maintain ": {
+    "message": "Maintain ",
+    "description": "Navbar item with label Maintain "
+  },
+  "item.label.Kusama": {
+    "message": "Kusama",
+    "description": "Navbar item with label Kusama"
+  },
+  "item.label.Contribute": {
+    "message": "Contribute",
+    "description": "Navbar item with label Contribute"
+  }
+}

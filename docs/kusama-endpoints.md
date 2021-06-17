@@ -5,7 +5,7 @@ sidebar_label: Kusama Endpoints
 ---
 
 When interacting with the [Kusama network][] via [Polkadot-JS Apps][] or other UIs and programmatic
-methods, you'd ideally be running your own node ([text guide](maintain-sync),
+methods, you'd ideally be running your own node ([text guide](https://wiki.polkadot.network/docs/en/maintain-sync),
 [video guide](https://www.youtube.com/watch?v=31DdfcxbAVs)). Granted, that's not something everyone
 wants to do, so convenience trumps ideals in most cases. To facilitate this convenience, Kusama has
 several public endpoints you can use for your apps.
@@ -29,7 +29,7 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api')
 or in Polkadot-JS Apps by clicking the top-left corner of the screen and selecting the appropriate
 option:
 
-<img src="/img/endpoints/kusama_endpoint_parity.png" width=40%/>
+<img src={require('./assets/endpoints/kusama_endpoint_parity.png').default} width="40%" />
 
 ## Web3 Foundation Archive Node
 
@@ -49,7 +49,7 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api')
 Connect to it in Polkadot Apps UI by clicking the top-left corner of the screen and selecting the
 appropriate option:
 
-<img src="/img/endpoints/kusama_endpoint_web3.png" width=40%/>
+<img src={require('./assets/endpoints/kusama_endpoint_web3.png').default} width="40%" />
 
 [kusama network]: https://kusama.network
 [parity]: https://parity.io

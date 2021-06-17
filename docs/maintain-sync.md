@@ -9,7 +9,7 @@ Substrate implementation, you probably want the ability to run a node-as-a-back-
 always better to rely on your own infrastructure than on a third-party-hosted one in this brave new
 decentralized world.
 
-This guide will show you how to connect to [Kusama network](https://kusama.network), but the same
+This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the same
 process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First, let's
 clarify the term _full node_.
 
@@ -59,15 +59,15 @@ https://github.com/paritytech/substrate-light-ui
 - Then run: `brew install openssl cmake llvm`
 - Install Rust in your terminal by running:
   `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Once Rust is installed, run the following command to clone and build the kusama code:
+- Once Rust is installed, run the following command to clone and build the polkadot code:
   ```
-  git clone https://github.com/paritytech/polkadot kusama
-  cd kusama
+  git clone https://github.com/paritytech/polkadot polkadot
+  cd polkadot
   ./scripts/init.sh
   cargo build --release
   ```
 - Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
-- Find your node at https://telemetry.polkadot.io/#list/Kusama
+- Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ### Fast Install Instructions (Windows)
 
@@ -85,7 +85,7 @@ https://github.com/paritytech/substrate-light-ui
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
-- Find your node at https://telemetry.polkadot.io/#list/Kusama
+- Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ### Fast Install Instructions (Linux)
 
@@ -109,7 +109,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: `./polkadot --name "Your Node Name Here"`
-- Find your node at https://telemetry.polkadot.io/#list/Kusama
+- Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ## Get Substrate
 
@@ -127,11 +127,11 @@ cargo 1.41.0 (626f0f40e 2019-12-03)
 ## Clone and Build
 
 The [paritytech/polkadot](https://github.com/paritytech/polkadot) repo's master branch contains the
-latest Kusama code.
+latest Polkadot code.
 
 ```bash
-git clone https://github.com/paritytech/polkadot kusama
-cd kusama
+git clone https://github.com/paritytech/polkadot polkadot
+cd polkadot
 ./scripts/init.sh
 cargo build --release
 ```
@@ -140,8 +140,8 @@ Alternatively, if you wish to use a specific release, you can check out a specif
 the example below):
 
 ```bash
-git clone https://github.com/paritytech/polkadot kusama
-cd kusama
+git clone https://github.com/paritytech/polkadot polkadot
+cd polkadot
 git checkout tags/v0.8.3
 ./scripts/init.sh
 cargo build --release
@@ -162,7 +162,7 @@ Use the `--help` flag to find out which flags you can use when running the node.
 The syncing process will take a while depending on your bandwidth, processing power, disk speed and
 RAM. On a \$10 DigitalOcean droplet, the process can complete in some 36 hours.
 
-Congratulations, you're now syncing with Kusama. Keep in mind that the process is identical when
+Congratulations, you're now syncing with Polkadot. Keep in mind that the process is identical when
 using any other Substrate chain.
 
 ## Running an Archive Node
