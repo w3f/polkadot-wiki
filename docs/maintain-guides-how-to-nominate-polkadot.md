@@ -114,7 +114,7 @@ to any subset or all of the validators your choose.
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
 will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you
 do this, your nominations may become active almost immediately, or you may have to wait almost the
-entire twenty-four hours before your nominations are active. You can chek how far along Polkadot is
+entire twenty-four hours before your nominations are active. You can check how far along Polkadot is
 in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
