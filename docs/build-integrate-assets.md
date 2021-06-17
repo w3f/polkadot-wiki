@@ -28,7 +28,8 @@ Statemint and use it natively. The Relay Chain will also accept DOT transfers fr
 the Relay Chain to use for staking, governance, or any other activity taking place there.
 
 Using Statemint for DOT/KSM balance transfers will be much more efficent than the Relay Chain and is
-highly recommended. Until domain specific parachains are built, the Relay Chain will still need to be used for staking and governance.
+highly recommended. Until domain specific parachains are built, the Relay Chain will still need to
+be used for staking and governance.
 
 ## Assets Basics
 
