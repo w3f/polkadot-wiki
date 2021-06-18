@@ -52,7 +52,7 @@
   "devDependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",
-    "@docusaurus/module-type-aliases": "^2.0.0-beta.0",
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.1",
     "chalk": "^4.1.1",
     "cross-env": "^7.0.3",
     "docusaurus": "^1.14.7",
