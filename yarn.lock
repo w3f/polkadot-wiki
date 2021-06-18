@@ -7954,10 +7954,10 @@ ipaddr.js@1.9.1, ipaddr.js@^1.9.0:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
-ipfs-core-types@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.5.1.tgz#e6fa489aed9cd2aa989de672f04179f2496ff92f"
-  integrity sha512-HE5iE4j9Qa6c/4mfaD1cYYx8mbRRkrrcWekDG1JAP7mEK2wPnMvMemmFTgFF4KN6bW9gIusJjqPpCweesORPuA==
+ipfs-core-types@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.5.2.tgz#e1e026f32c9799e9fa5d6a2556d49558bd5b16d6"
+  integrity sha512-DOQeL+GFGYMTlnbdtMeBzvfVnyAalSgCfPr8XUCI+FVBZZWwzkt5jZZzGDmF87HVRrMR3FuVyBKZj772mcXKyQ==
   dependencies:
     cids "^1.1.6"
     interface-datastore "^4.0.0"
@@ -7965,17 +7965,17 @@ ipfs-core-types@^0.5.1:
     multiaddr "^9.0.1"
     multibase "^4.0.2"
 
-ipfs-core-utils@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.8.2.tgz#47d20d29e383a4b097675f9340867904b0070c23"
-  integrity sha512-vz3BugR4ykoJzoWQPcAyGjoW8RfUNWDyjqd51GgfcYICTFATh4c2k8Md1aEGuKdOUJNvCpOL48j1lXv8KNIp7A==
+ipfs-core-utils@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.8.3.tgz#7033266e17156600effb794c703a4164ecbd8387"
+  integrity sha512-PY7PkCgCtVYtNOe1C3ew1+5D9NqXqizb886R/lyGWe+KsmWtBQkQIk0ZIDwKyHGvG2KA2QQeIDzdOmzBQBJtHQ==
   dependencies:
     any-signal "^2.1.2"
     blob-to-it "^1.0.1"
     browser-readablestream-to-it "^1.0.1"
     cids "^1.1.6"
     err-code "^3.0.1"
-    ipfs-core-types "^0.5.1"
+    ipfs-core-types "^0.5.2"
     ipfs-unixfs "^4.0.3"
     ipfs-utils "^8.1.2"
     it-all "^1.0.4"
@@ -7987,18 +7987,18 @@ ipfs-core-utils@^0.8.2:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^2.1.3"
 
-ipfs-http-client@^50.1.1:
-  version "50.1.1"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-50.1.1.tgz#6155e1044b393d9f35688d895ed53ade9763372c"
-  integrity sha512-rKKu6a5hxtJOfNeMEUwkMzhKGe9/v/kU5CSenzuIjdyNNALvlMYdDcivsZ9X4943J8t6r21b0AdNUWVM21dBFg==
+ipfs-http-client@^50.1.2:
+  version "50.1.2"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-50.1.2.tgz#31b60f4bd301b2addbc6fd1288f5f973d57afc2a"
+  integrity sha512-ZbJlED4wqwFXQFVB9FQDs20ygdq7O/zSq4AvO9KRAmkqUj2TsCWCteUz2fBMnGWLh2tExxeSl/rQbHbJptb8JQ==
   dependencies:
     abort-controller "^3.0.0"
     any-signal "^2.1.2"
     cids "^1.1.6"
     debug "^4.1.1"
     form-data "^4.0.0"
-    ipfs-core-types "^0.5.1"
-    ipfs-core-utils "^0.8.2"
+    ipfs-core-types "^0.5.2"
+    ipfs-core-utils "^0.8.3"
     ipfs-unixfs "^4.0.3"
     ipfs-utils "^8.1.2"
     ipld-block "^0.11.0"
