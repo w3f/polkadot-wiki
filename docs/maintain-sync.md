@@ -32,7 +32,7 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** is _pruned_, meaning it discards all information older than a specific number of
+A **full node** is _pruned_: it discards all finalized blocks older than a configurable
 blocks (256 blocks by default), and the genesis block. A node that is pruned this way requires
 much less space than an archive node.
 
