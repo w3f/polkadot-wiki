@@ -114,7 +114,8 @@ cargo build --release
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
 > 
-> ```sh
+
+```sh
 rustup install nightly-2020-10-06
 rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
 cargo +nightly-2020-10-06 build --release
