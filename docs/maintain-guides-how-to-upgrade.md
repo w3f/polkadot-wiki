@@ -74,5 +74,3 @@ finalized. You should see log messages like this to indicate the change:
 2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
 2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities
 ```
-
-If you would like to perform maintaince on one server, which requires an activity where you cannot continue running the node on that server
