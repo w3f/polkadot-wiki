@@ -6,10 +6,15 @@ sidebar_label: How to Upgrade Your Validator
 
 Validators perform critical functions for the network, and as such, have strict uptime requirements.
 Validators may have to go offline for periods of time to upgrade the client software or the host
-machine. This guide will walk you through upgrading your machine and keeping your validator online.
+machine. Usually, standard upgrades will only require you to stop your server, replace the binary and 
+spin it up again. Validators may also need to perform maintenance, such as resizing a disk, where you 
+cannot continue running the node on the current server. This guide will walk you through upgrading your 
+machine and keeping your validator online.
 
-The process will take several hours, so make sure you understand the instructions first and plan
+The process can take several hours, so make sure you understand the instructions first and plan
 accordingly.
+
+> Note: keep an eye out on new releases from the community and upgrade/downgrade accordingly. 
 
 ## Key Components
 
@@ -69,3 +74,5 @@ finalized. You should see log messages like this to indicate the change:
 2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
 2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities
 ```
+
+If you would like to perform maintaince on one server, which requires an activity where you cannot continue running the node on that server
