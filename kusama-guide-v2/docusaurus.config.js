@@ -9,7 +9,7 @@ module.exports = {
   title: "Guide",
   titleDelimiter: "·",
   tagline: "One-stop-shop for Kusama information.",
-  url: isPub ? "https://guide.kusama.network" : "",
+  url: isPub ? "https://guide.kusama.network" : "/",
   baseUrl: isBuilding ? baseUrlPattern : "/",
   projectName: isPub ? "kusama-guide-hosting" : "",
   organizationName: "w3f",
