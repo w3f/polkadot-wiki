@@ -53,26 +53,17 @@ Note: When the lease periods won by the crowdloan have finished, or the crowdloa
 winning a slot, anyone can trigger the refund of crowdloan contributions back to their original
 owners. All contributions must be returned before the crowdloan is fully deleted from the system.
 
-Several teams in the ecosystem are preparing dashboards to track auctions and crowdloan campaigns.
-Crowdloan campaigns are currently ongoing on Kusama. Here are the available dashboards and guides for 
-the candidate Kusama parachains running crowdloans:
-- [Karura](https://acala.network/karura/join-karura)
-- [Moonriver](https://moonbeam.foundation/moonriver-crowdloan/)
-- [Shiden](https://crowdloan.plasmnet.io/)
-- [Bifrost](https://ksm.vtoken.io/)
-- [Khala](https://crowdloan.phala.network/)
-- [Crust Shadow](https://medium.com/crustnetwork/join-the-crust-shadow-crowdloan-for-the-kusama-parachain-slot-auction-e0f041ae9627)
-- [Robonomic](https://robonomics.network/kusama-slot)
-- [PolkaSmith](https://forum.polkafoundry.com/t/the-ultimate-guide-for-polkasmith-crowdloan/286)
-- [Sakura](https://auction.clover.finance/#/)
-- [Darwinina Crab](https://crab.network/)
-- [Genshiro](https://genshiro.equilibrium.io/gateway/en/crowdloan)
-
-> This list will be updated regularly to reflect all projects running a crowdloan. 
-
-
 Here is an exmaple of the crowdloans in play during the very first Kusama auction.
+
 ![crowdloan dashboard](assets/kusama-crowdloans.png)
+
+The following diagram illustrates the key parts of the crowdloan function on PolkadotJS apps.
+
+![crowdloan page explained](assets/crowdloan-polkadotjs-explained.png)
+
+> Taken from: [The Crowdloan page on PolkadotJS explained](https://www.reddit.com/r/Polkadot/comments/o4vvh8/the_crowdloan_page_on_polkadotjs_explained/)
 
 Furthermore, check out this video on [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM)
 for steps on how to access available crowdloans on PolkadotJS apps.  
+
+Many projects will also have dashboards available that allow users to participate in their crowdloans.
