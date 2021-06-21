@@ -57,13 +57,13 @@ Here is an exmaple of the crowdloans in play during the very first Kusama auctio
 
 ![crowdloan dashboard](assets/kusama-crowdloans.png)
 
+Furthermore, check out this video on [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM)
+for steps on how to access available crowdloans on PolkadotJS apps.  
+
 The following diagram illustrates the key parts of the crowdloan function on PolkadotJS apps.
 
 ![crowdloan page explained](assets/crowdloan-polkadotjs-explained.png)
 
 > Taken from: [The Crowdloan page on PolkadotJS explained](https://www.reddit.com/r/Polkadot/comments/o4vvh8/the_crowdloan_page_on_polkadotjs_explained/)
-
-Furthermore, check out this video on [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM)
-for steps on how to access available crowdloans on PolkadotJS apps.  
 
 Many projects will also have dashboards available that allow users to participate in their crowdloans.
