@@ -64,7 +64,6 @@ module.exports = {
           customCss: [
             require.resolve("./static/css/custom.css"),
             require.resolve("./static/css/copycode.css"),
-            require.resolve("./static/css/klaro.css"),
             require.resolve("./static/css/socicon.css"),
           ],
         },

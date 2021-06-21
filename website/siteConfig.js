@@ -80,7 +80,6 @@ const siteConfig = {
     "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
     "https://unpkg.com/aos@next/dist/aos.css",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
-    "/css/klaro.css",
     "/css/copycode.css",
     "/css/socicon.css",
   ],
