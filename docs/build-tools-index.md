@@ -16,6 +16,7 @@ developers, feel free to [add it in](contributing).
 - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related
   chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
+- [DotScanner](https://dotscanner.com) - Polkadot Blockchain explorer.
   [Repo](https://github.com/itering/subscan-essentials).
 
 ## Wallets
