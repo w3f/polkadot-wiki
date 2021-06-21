@@ -291,15 +291,6 @@ export default function Footer() {
                 })}
                 href="https://polkadot.network/privacy"
               />
-              <li>
-                <a className="text-white text-small" href="#" onClick={() => klaro.show()}>
-                  {translate({
-                    message: "Cookie Settings",
-                    id: "footer.footerLegal.cookieSettings",
-                    description: "Cookie Settings Button Label in Footer Legal",
-                  })}
-                </a>
-              </li>
               {/* TODO: FIX the replacement */}
               <FooterLegalLink content="PDF version" href="{{ dot_ipfs_pdf_url }}" />
             </ul>
