@@ -34,7 +34,7 @@
     "kusama2:i18n:copy-translations": "cp -R website-v2/i18n/zh-CN/docusaurus-plugin-content-docs/current kusama-guide-v2/i18n/zh-CN/docusaurus-plugin-content-docs/current",
     "kusama2:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/kusama-index\" --outputPDFFilename=\"kusama-guide-v2/static/kusama-wiki.pdf\" --coverTitle=\"KUSAMA GUIDE\"",
     "polkadot2:clean": "shx rm -rf node_modules/.cache; docusaurus clear website-v2",
-    "polkadot2:start": "docusaurus start website-v2",
+    "polkadot2:start": "yarn generateRegistryTable; docusaurus start website-v2",
     "prepolkadot2:build": "npm-run-all -ln polkadot2:clean polkadot2:crowdin:download:* -p fetch generateRegistryTable mirror2 polkadot2:copy-assets:* --aggregate-output",
     "polkadot2:build": "cross-env BUILDING=true docusaurus build website-v2; node website-v2/postprocess",
     "polkadot2:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy website-v2",
