@@ -197,21 +197,6 @@ class Footer extends React.Component {
                 <FooterLegalLink content="Impressum" href="https://polkadot.network/impressum" />
                 <FooterLegalLink content="Disclaimer" href="https://polkadot.network/disclaimer" />
                 <FooterLegalLink content="Privacy" href="https://polkadot.network/privacy" />
-                <li>
-                  <a className="text-white text-small" href="#" id="cookie-settings">
-                    Cookie Settings
-                  </a>
-                  <script
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        var cookieSettings = document.getElementById('cookie-settings');
-                        cookieSettings.onclick = function() {
-                          return klaro.show();
-                        };
-                        `,
-                    }}
-                  />
-                </li>
                 <FooterLegalLink content="PDF version" href="{{ dot_ipfs_pdf_url }}" />
               </ul>
             </Col>
