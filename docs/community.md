@@ -30,6 +30,8 @@ We primarily use [Matrix](https://matrix.org) across the organization and to com
 community members. The application we use most often to interact with the Matrix protocol is the
 [Element](https://app.element.io) messenger.
 
+- This wiki's public Matrix room is [here](https://app.element.io/#/room/!nAtXmWUBTeFqgSKGgp:web3.foundation?via=web3.foundation).
+
 ### Polkadot
 
 - [Polkadot Watercooler Chat](https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
