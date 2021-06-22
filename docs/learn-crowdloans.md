@@ -53,11 +53,12 @@ Note: When the lease periods won by the crowdloan have finished, or the crowdloa
 winning a slot, anyone can trigger the refund of crowdloan contributions back to their original
 owners. All contributions must be returned before the crowdloan is fully deleted from the system.
 
+Many projects will have dashboards available that allow users to participate in their crowdloans. PolkadotJS apps also offers
+a breakdown of ongoing crowdloans on the [Apps page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan).
+
 Here is an exmaple of the crowdloans in play during the very first Kusama auction.
 
 ![crowdloan dashboard](assets/kusama-crowdloans.png)
 
 Furthermore, check out this video on [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM)
 for steps on how to access available crowdloans on PolkadotJS apps.  
-
-Many projects will also have dashboards available that allow users to participate in their crowdloans.
