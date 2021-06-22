@@ -9,8 +9,8 @@ module.exports = {
   title: "Guide",
   titleDelimiter: "·",
   tagline: "One-stop-shop for Kusama information.",
-  url: isPub ? "https://guide.kusama.network" : "/",
-  baseUrl: isBuilding ? baseUrlPattern : "/",
+  url: "https://guide.kusama.network",
+  baseUrl: "/",
   projectName: isPub ? "kusama-guide-hosting" : "",
   organizationName: "w3f",
   i18n,
@@ -38,9 +38,9 @@ module.exports = {
     "https://fonts.googleapis.com/css?family=Muli&display=swap",
   ],
   favicon: "img/Kusama_Canary_white.png",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
-  onDuplicateRoutes: "throw",
+  onBrokenLinks: "log",
+  onBrokenMarkdownLinks: "log",
+  onDuplicateRoutes: "log",
 
   presets: [
     [

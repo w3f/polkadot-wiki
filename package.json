@@ -26,7 +26,7 @@
     "generateErrorTable": "node --experimental-json-modules scripts/generateErrorTable.mjs >> docs/maintain-errors.md ; npx prettier docs/maintain-errors.md --write",
     "kusama2:clean": "shx rm -rf node_modules/.cache; docusaurus clear kusama-guide-v2",
     "kusama2:start": "yarn mirror2; docusaurus start kusama-guide-v2",
-    "prekusama2:build": "npm-run-all -ln kusama2:clean -p \"fetch --isPolkadot=false\" mirror2 kusama2:copy-assets kusama2:i18n:* --aggregate-output",
+    "prekusama2:build": "npm-run-all -ln kusama2:clean -p \"fetch --isPolkadot=false\" mirror2 kusama2:copy-assets --aggregate-output",
     "kusama2:build": "cross-env BUILDING=true docusaurus build kusama-guide-v2; node kusama-guide-v2/postprocess",
     "kusama2:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy kusama-guide-v2",
     "kusama2:copy-assets": "cp -R docs/assets kusama-guide-v2/i18n/zh-CN/docusaurus-plugin-content-docs/current",
@@ -35,7 +35,7 @@
     "kusama2:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/kusama-index\" --outputPDFFilename=\"kusama-guide-v2/static/kusama-wiki.pdf\" --coverTitle=\"KUSAMA GUIDE\"",
     "polkadot2:clean": "shx rm -rf node_modules/.cache; docusaurus clear website-v2",
     "polkadot2:start": "yarn generateRegistryTable; docusaurus start website-v2",
-    "prepolkadot2:build": "npm-run-all -ln polkadot2:clean polkadot2:crowdin:download:* -p fetch generateRegistryTable mirror2 polkadot2:copy-assets:* --aggregate-output",
+    "prepolkadot2:build": "npm-run-all -ln polkadot2:clean -p fetch generateRegistryTable mirror2 polkadot2:copy-assets:* --aggregate-output",
     "polkadot2:build": "cross-env BUILDING=true docusaurus build website-v2; node website-v2/postprocess",
     "polkadot2:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy website-v2",
     "polkadot2:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/getting-started\" --outputPDFFilename=\"website-v2/static/polkadot-wiki.pdf\" --coverTitle=\"POLKADOT WIKI\"",
@@ -47,7 +47,8 @@
     "pdf": "npx mr-pdf --contentSelector=\"article\" --paginationSelector=\".pagination-nav__item--next > a\" --pdfFormat=\"A4\" --pdfMargin=\"90,60,80,60\"",
     "fetch": "node --experimental-json-modules scripts/fetch.mjs --isPolkadot",
     "mirror2": "node --experimental-json-modules scripts/mirror2.mjs",
-    "crowdin": "crowdin"
+    "crowdin": "crowdin",
+    "docusaurus": "docusaurus"
   },
   "devDependencies": {
     "@actions/core": "^1.4.0",
