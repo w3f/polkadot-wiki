@@ -22,9 +22,18 @@ jobs:
         with:
           name: Stale docs
           path: ${{ steps.find.outputs.files }}
+      - uses: w3f/action-create-issues-for-old-files@master
+        name: Check if Stale Issue Exists
+        id: check_if_issue_exists
+        with:
+          REPO: ${{ github.repository }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: STALE
+          labels: stale
       - name: Create Issues
+        if: steps.check_if_issue_exists.outputs.exists == 'false'
         uses: w3f/action-create-issues-for-old-files@master
         with:
-          randAssignees: '["swader", "jakehemmerle", "jakehemmerle", "swader", "laboon"]'
+          randAssignees: '["swader", "jakehemmerle", "dannys03", "emresurmeli"]'
           files: ${{ steps.find.outputs.files }}
 
