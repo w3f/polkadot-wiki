@@ -10,7 +10,7 @@ module.exports = {
   tagline: "The hub for those interested in learning, building, or running a node on Polkadot.",
   titleDelimiter: "·",
   url: "https://wiki.polkadot.network",
-  baseUrl: "/",
+  baseUrl: "/en/",
   projectName: "polkadot-wiki",
   organizationName: "w3f",
   scripts: [
