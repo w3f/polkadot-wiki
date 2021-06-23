@@ -1,6 +1,5 @@
 const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
-const { redirect } = require("../scripts/redirect");
 
 const i18n = require("./i18n");
 
@@ -71,7 +70,14 @@ module.exports = {
     [
       "@docusaurus/plugin-client-redirects",
       {
-        createRedirects: redirect(i18n.locales.filter((lang) => lang !== "en")),
+        createRedirects: function (existingPath) {
+          if (existingPath.startsWith("/docs/")) {
+            return [existingPath.replace("/docs/", "/docs/en/")];
+          }
+          if (existingPath.startsWith("/zh-CN/docs/")) {
+            return [existingPath.replace("/zh-CN/docs/", "/docs/zh-CN/")];
+          }
+        },
       },
     ],
   ],
