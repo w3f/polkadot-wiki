@@ -6,7 +6,7 @@ sidebar_label: How to Nominate on Polkadot
 
 > The following information applies to the Polkadot network. If you want to nominate on Kusama,
 > check out the
-> [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-nominate-kusama)
+> [Kusama guide](https://guide.kusama.network/docs/mirror-maintain-guides-how-to-nominate-kusama)
 > instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
@@ -68,7 +68,7 @@ estimate your earnings and this is where it's good to start picking favorites.
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough DOT backing them (as allocated through the
-[Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible
+[Phragmén election mechanism](https://wiki.polkadot.network/docs/learn-phragmen)). It is possible
 validator can remain in the queue for a very long time if they never get enough backing.
 
 The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you

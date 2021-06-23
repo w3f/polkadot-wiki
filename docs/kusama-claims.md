@@ -20,13 +20,13 @@ For most users, we recommend using the
 since it will allow you to store your encrypted keystore locally.
 
 In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger), or
-[Parity Signer](https://wiki.polkadot.network/docs/en/learn-account-generation#parity-signer).
+[Parity Signer](https://wiki.polkadot.network/docs/learn-account-generation#parity-signer).
 
 Another option you may consider using is the Subkey command line utility, which will allow you to
 take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](https://wiki.polkadot.network/docs/en/build-wallets). Many of these
+[Polkadot Wiki Wallets page](https://wiki.polkadot.network/docs/build-wallets). Many of these
 wallets support generating Kusama accounts as well.
 
 ### Using Kusama Ledger application

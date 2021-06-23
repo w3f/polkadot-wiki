@@ -6,7 +6,7 @@ sidebar_label: How to run a Validator on Polkadot
 
 > The following information applies to the Polkadot network. If you want to set up a validator on
 > Kusama, check out the
-> [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama)
+> [Kusama guide](https://guide.kusama.network/docs/mirror-maintain-guides-how-to-validate-kusama)
 > instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
@@ -39,7 +39,7 @@ experience.
 ### How many DOT do I need?
 
 You can have a rough estimate on that by using the methods listed
-[here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are
+[here](faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are
 elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
 [nominators](learn-nominator). This means that as a minimum, you will need enough DOT to set up

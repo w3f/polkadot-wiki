@@ -42,7 +42,7 @@ is included in a block you will see a green notification in the top-right corner
 
 ### Keep-Alive Checks
 
-At an [extrinsic](glossary#extrinsic) level, there are two main ways to transfer funds from one
+At an [extrinsic](./glossary.md#extrinsic) level, there are two main ways to transfer funds from one
 account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you to
 send DOTs regardless of the consequence; `transfer_keep_alive` will not allow you to send an amount
 that would allow the sending account to be removed due to it going below the existential deposit.

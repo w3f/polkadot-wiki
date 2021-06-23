@@ -82,6 +82,10 @@ button.menu__button {
   margin: 0 auto 0;
 }
 
+.navbar__inner a.navbar__item svg[class^="iconExternalLink"] {
+  display: none
+}
+
 .navbar__link {
   background-color: black;
   transition: background-color 0.3s

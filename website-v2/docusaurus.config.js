@@ -1,5 +1,6 @@
 const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
+const { redirect } = require("../scripts/redirect");
 const i18n = require("./i18n");
 
 const isBuilding = process.env.BUILDING === "true";
@@ -68,6 +69,12 @@ module.exports = {
             require.resolve("./static/css/socicon.css"),
           ],
         },
+      },
+    ],
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects: redirect(i18n.locales.filter((lang) => lang !== "en")),
       },
     ],
   ],

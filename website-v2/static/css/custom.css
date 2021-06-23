@@ -70,6 +70,10 @@ button.menu__button {
   margin-right: auto;
 }
 
+.navbar__inner a.navbar__item svg[class^="iconExternalLink"] {
+  display: none
+}
+
 /*  Contribute button */
 @media only screen and (min-width: 1024px) {
   .navbar__inner a.navbar__item[href*="contributing"] {

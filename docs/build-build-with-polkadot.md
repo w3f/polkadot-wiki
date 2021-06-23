@@ -199,7 +199,7 @@ Polkadot as either a parachain or parathread.
 
 #### Cumulus
 
-The goal of [Cumulus](https://wiki.polkadot.network/docs/en/build-cumulus) is to be an extension of
+The goal of [Cumulus](https://wiki.polkadot.network/docs/build-cumulus) is to be an extension of
 Substrate that will make any Substrate runtime compatible with Polkadot.
 
 It handles the network compatibility overhead that any parachain would need to implement to be
@@ -309,7 +309,7 @@ and want to deploy to a live environment.
 
 Edgeware intends to at some point connect to Polkadot as a parachain that allows for smart
 contracts. At this point, the smart contracts would be able to interact with other pieces of the
-Polkadot ecosystem through [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain).
+Polkadot ecosystem through [XCMP](https://wiki.polkadot.network/docs/learn-crosschain).
 
 Edgeware general documentation can be found [here][edgeware documentation] and [how to deploy smart
 contracts on Edgeware here][edgeware contracts documentation].
@@ -336,7 +336,7 @@ Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
-[social channels](https://wiki.polkadot.network/docs/en/community).
+[social channels](https://wiki.polkadot.network/docs/community).
 
 Good luck!
 
