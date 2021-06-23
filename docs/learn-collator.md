@@ -41,6 +41,6 @@ repository.
 ### Guides and Tools
 
 - [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/)
-- [Rococo tesnet guide](https://wiki.polkadot.network/docs/en/build-parachains-rococo)
+- [Rococo tesnet guide](https://wiki.polkadot.network/docs/build-parachains-rococo)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.

@@ -27,3 +27,5 @@ const redirect = (supportedLanguages) => (existingPath) => {
     return `/docs/en/${match.groups.article}`;
   }
 };
+
+module.exports = { redirect };

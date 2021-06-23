@@ -55,7 +55,7 @@ required to nominate with in order to receive staking rewards.
 This number fluctuates every era, and the most recent and up to date version can be found out using
 [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine and
 looking for the "lowest minimal nominator". See the
-[Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set)
+[Election Solution Set](https://wiki.polkadot.network/docs/learn-nominator#the-election-solution-set)
 section on the Nominator page for more details.
 
 ### Oversubscribed Validators

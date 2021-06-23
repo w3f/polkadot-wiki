@@ -65,7 +65,7 @@ Check that your node is connected by viewing it on
 
 #### Westend Faucet
 
-Follow the instruction [here](learn-DOT#getting-westies) for instructions on acquiring Westies.
+Follow the instruction [here](learn-DOT.md/#getting-westies) for instructions on acquiring Westies.
 
 ### Differences
 

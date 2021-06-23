@@ -42,4 +42,4 @@ as well.
 [validator]: mirror-maintain-guides-how-to-validate-kusama
 [nominator]: mirror-maintain-guides-how-to-nominate-kusama
 [polkadot wiki]: https://wiki.polkadot.network/
-[polkadot-builders]: https://wiki.polkadot.network/docs/en/build-index
+[polkadot-builders]: https://wiki.polkadot.network/docs/build-index

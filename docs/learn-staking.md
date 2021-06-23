@@ -11,7 +11,7 @@ who are interested in maintaining the network can run a validator node.
 The system encourages DOT holders to participate as nominators. Nominators may back up to 16
 validators as trusted validator candidates.
 
-Validators assume the role of producing new blocks in [BABE](learn-consensus#babe), validating
+Validators assume the role of producing new blocks in [BABE](learn-consensus.md/#babe), validating
 parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
 their stake.
 
@@ -69,8 +69,8 @@ For each validator pool, we keep a list of nominators with the associated stakes
 The general rule for rewards across validator pools is that two validator pools get paid essentially
 the **same amount of tokens** for equal work, i.e. they are NOT paid proportional to the stakes in
 each pool. There is a probabilistic component to staking rewards in the form of
-[era points](maintain-guides-validator-payout#era-points) and
-[tips](https://wiki.polkadot.network/docs/en/learn-transaction-fees#fee-calculation) but these
+[era points](maintain-guides-validator-payout.md/#era-points) and
+[tips](https://wiki.polkadot.network/docs/learn-transaction-fees#fee-calculation) but these
 should average out over time.
 
 Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's
@@ -111,7 +111,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual
   value, which fluctuates, but merely an assumption for purposes of this example; to understand how
   the actual minimal stake is calculated, see
-  [here](https://wiki.polkadot.network/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
+  [here](https://wiki.polkadot.network/docs/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
 |               | **A - Validator Pool** |                             |         |
 | :-----------: | :--------------------: | :-------------------------: | :-----: |
@@ -172,7 +172,7 @@ There are two different accounts for managing your funds: `Stash` and `Controlle
   [governance](learn-governance) proposals.
 - **Controller** This account acts on behalf of the Stash account, signalling decisions about
   nominating and validating. It sets preferences like payout account and commission. If you are a
-  validator, it also sets your [session keys](learn-keys#session-keys). It only needs enough funds
+  validator, it also sets your [session keys](learn-keys.md/#session-keys). It only needs enough funds
   to pay transaction fees.
 
 We designed this hierarchy of separate key types so that validator operators and nominators can
@@ -290,7 +290,7 @@ Validators should have a well-architected network infrastructure to ensure the n
 reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on secure validator setup is
-available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
+available [here](https://wiki.polkadot.network/docs/maintain-guides-secure-validator).
 
 ### GRANDPA Equivocation
 
@@ -475,7 +475,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
+- [Secure validator setup](https://wiki.polkadot.network/docs/maintain-guides-secure-validator)
 
 [epoch]: glossary#epoch
 [how to chill]: maintain-guides-how-to-chill
