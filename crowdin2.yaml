@@ -1,4 +1,4 @@
-project_id: CROWDIN_DOCUSAURUS_PROJECT_ID
+project_id: 371273
 api_token: CROWDIN_DOCUSAURUS_API_KEY
 base_path: "./"
 preserve_hierarchy: true
