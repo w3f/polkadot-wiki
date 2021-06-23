@@ -66,6 +66,12 @@ module.exports = {
         },
       },
     ],
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects: redirect(i18n.locales.filter((lang) => lang !== "en")),
+      },
+    ],
   ],
   plugins: [],
   themeConfig: {
