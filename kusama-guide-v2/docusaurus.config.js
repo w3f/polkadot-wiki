@@ -67,21 +67,22 @@ module.exports = {
         },
       },
     ],
+  ],
+  plugins: [
     [
       "@docusaurus/plugin-client-redirects",
       {
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
-            return [existingPath.replace("/docs/", "/docs/en/")];
-          }
-          if (existingPath.startsWith("/zh-CN/docs/")) {
-            return [existingPath.replace("/zh-CN/docs/", "/docs/zh-CN/")];
+            return [
+              existingPath.replace("/docs/", "/docs/en/"),
+              existingPath.replace("/docs/", "/docs/zh-CN/"),
+            ];
           }
         },
       },
     ],
   ],
-  plugins: [],
   themeConfig: {
     announcementBar: {
       isCloseable: false,
