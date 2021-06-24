@@ -33,8 +33,8 @@ scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and
 to be able to look at past on-chain data.
 
 A **full node** is _pruned_: it discards all finalized blocks older than a configurable
-number (256 blocks by default), and the genesis block. A node that is pruned this way requires
-much less space than an archive node.
+number except the genesis block: This is 256 blocks from the last finalized one, by default.
+A node that is pruned this way requires much less space than an archive node.
 
 A full node may eventually be able to rebuild the entire chain with no additional information,
 and become an archive node, but at he time of writing, this is not implemented. If you need to
