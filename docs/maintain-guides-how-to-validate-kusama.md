@@ -444,32 +444,35 @@ in the field and click "Set Session Key".
 
 Submit this extrinsic and you are now ready to start validating.
 
-## Validate
+### Setup via Validator Tab
 
-To verify that your node is live and synchronized, head to
-[Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all
-nodes on the Kusama network, which is why it is important to select a unique name!
+![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-validate-1.png)
 
-In this example, we used the name `techedtest` and have successfully located it upon searching:
+Here you will need to input the Keys from `rotateKeys`, which
+is the Hex output from `author_rotateKeys`. The keys will show 
+as pending until applied at the start of a new session.
 
-![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-telemetry.png)
+The "reward commission percentage" is the commission percentage
+that you can declare against your validator's rewards. This is the rate that your validator will be commissioned with. 
+- **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
+  The remaining will be split among your nominators.
 
-If everything looks good, go ahead and click on "Validate" in Polkadot-JS UI.
+> Note: setting a commission rate of 100% suggests that you do not
+> want your validator to receive nominations.
 
-![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
-![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
+You can also determine if you would like to receive nominations
+with the "allows new nominations" option.
 
-- **Payment preferences** - Rewards you will keep, the rest will be shared among you and your
-  nominators.
+![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-validate-1.png)
 
-Click "Validate".
+Click "Bond & Validate".
 
 If you go to the "Staking" tab, you will see a list of active validators currently running on the
 network. At the top of the page, it shows how many validator slots are available as well as how many
 nodes have signaled their intention to be a validator. You can also go to the "Waiting" tab to
 double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/kusama-dashboard-staking.png)
+![staking queue](assets/guides/how-to-validate/kusama-dashboard-validate-2.png)
 
 The validator set is refreshed every era. In the next era, if there is a slot available and your
 node is selected to join the validator set, your node will become an active validator. Until then,
