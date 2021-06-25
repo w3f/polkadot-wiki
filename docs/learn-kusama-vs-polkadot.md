@@ -10,6 +10,8 @@ networks with different priorities.
 Kusama is wild and fast; great for bold experimentation and early-stage deployment. Polkadot is more
 conservative, prioritizing stability and dependability.
 
+Cousins have their differences afterall.
+
 ## What the two networks have in common
 
 Kusama was released as an early version of the same code to be used in Polkadot, which means they
@@ -27,6 +29,8 @@ decisions of their respective communities.**
 There are a few important distinctions to be made.
 
 ![polkadot_vs_kusama](assets/Cousins_2.png)
+
+Both networks also have different circulating supplies.
 
 ### Speed
 

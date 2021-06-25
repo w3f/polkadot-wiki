@@ -170,7 +170,8 @@ code available in the **v0.9** branch.
 You should generally use the latest **0.9.x** tag. You should either review the output from the "git
 tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list
 of all the potential 0.9 releases. You should replace `VERSION` below with the latest build (i.e.,
-the highest number).
+the highest number). You can also find the latest Kusama version on the
+[release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com:paritytech/polkadot.git`.
@@ -381,8 +382,6 @@ Similarly:
 ```
 2021-06-17 03:12:16 🔍 Discovered new external address for our node: /ip4/10.26.11.1/tcp/30333/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u    
 2021-06-17 03:12:17 ⚙️  Syncing, target=#5553810 (14 peers), best: #65068 (0x6da5…0662), finalized #65024 (0x4e84…d170), ⬇ 352.2kiB/s ⬆ 75.6kiB/s    
-2021-06-17 03:12:18 🔍 Discovered new external address for our node: /ip4/10.26.19.1/tcp/30333/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u    
-2021-06-17 03:12:22 ⚙️  Syncing 157.4 bps, target=#5553811 (15 peers), best: #65855 (0xe831…83e3), finalized #65536 (0x5c8f…1904), ⬇ 368.1kiB/s ⬆ 54.2kiB/s 
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and

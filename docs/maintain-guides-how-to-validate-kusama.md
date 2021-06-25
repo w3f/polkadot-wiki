@@ -50,48 +50,67 @@ instead.
 
 ### Requirements
 
-You will likely run your validator on a cloud server running Linux. You may choose whatever
-[VPS](#vps-list) provider that your prefer, and whatever operating system you are comfortable with.
-For this guide we will be using **Ubuntu 18.04**, but the instructions should be similar for other
-platforms.
+The most common way for a beginner to run a validator is on a cloud server running Linux. You may
+choose whatever [VPS](#vps-list) provider that your prefer, and whatever operating system you are
+comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
+similar for other platforms.
 
-You will not need a very powerful machine to run your validator, but you should be aware of the
-resource constraints. The most important resource for your validator node is networking bandwidth,
-followed by its storage and memory capabilities. The bare minimum requirements for a machine to run
-a validator are as follows:
+The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that
+validators run at least the standard hardware in order to ensure they are able to process all blocks
+in time. The following are not _minimum requirements_ but if you decide to run with less than this
+beware that you might have performance issue.
 
-- **Storage:** 160GB - 200GB. Kusama doesn't have very heavy storage requirements yet so something
-  in this range will be fine, just keep in mind you may have to upgrade it later if the chain state
-  becomes very big.
-- **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with,
-  anything less than this make build times too inconvenient. For better performance you can bump it
-  up to 4GB or 8GB, but anything more than that is probably over-kill. In order to compile the
-  binary yourself you will likely need ~8GB.
-- **CPU:** 1 - 2. One CPU is okay, but 2 is better. Again, this is a performance preference.
+#### Standard Hardware
 
-On most cloud service providers, these specs are usually within the $10 - $20 per month range.
+For the full details of the standard hardware please see
+[here](https://github.com/paritytech/substrate/pull/5848).
 
-### Install Rust
+- **CPU** - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+- **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth.
+  Starting around 80GB - 160GB will be okay for the first six months of Polkadot, but will need to
+  be re-evaluated every six months.
+- **Memory** - 64GB.
+
+The specs posted above are by no means the minimum specs that you could use when running a
+validator, however you should be aware that if you are using less you may need to toggle some extra
+optimizations in order to be equal to other validators that are running the standard.
+
+### Node Prerequisites: Install Rust and Dependencies
 
 Once you choose your cloud service provider and set-up your new server, the first thing you will do
 is install Rust.
 
-If you have never installed Rust, you should do this first. This command will fetch the latest
-version of Rust and install it.
+If you have never installed Rust, you should do this first. 
 
-```sh
-curl https://sh.rustup.rs -sSf | sh
-```
-
-Otherwise, if you have already installed Rust, run the following command to make sure you are using
+If you have already installed Rust, run the following command to make sure you are using
 the latest version.
 
 ```sh
 rustup update
 ```
 
-Finally, run this command to install the necessary dependencies for compiling and running the Kusama
-node software.
+If not, this command will fetch the latest version of Rust and install it.
+
+```sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y 
+```
+
+> If you do not have "curl" installed, run "sudo apt install curl"
+
+To configure your shell, run the following command.
+
+```sh
+source $HOME/.cargo/env
+```
+
+Verify your installation.
+
+```sh
+rustc --version
+```
+
+Finally, run this command to install the necessary dependencies for compiling and running the
+Polkadot node software.
 
 ```sh
 sudo apt install make clang pkg-config libssl-dev build-essential
@@ -132,6 +151,11 @@ verify that everything is working:
 sudo ntpq -p
 ```
 
+> _WARNING_: Skipping this can result in the validator node missing block authorship opportunities.
+> If the clock is out of sync (even by a small amount), the blocks the validator produces may not
+> get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
+> zero allocated blocks making it on chain.
+
 ### Building and Installing the `polkadot` Binary
 
 You will need to build the `polkadot` binary from the
@@ -150,22 +174,45 @@ also find the latest Kusama version on the
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
+```
+
+Run the following command to find the latest version.
+
+```sh
 git tag -l | sort -V | grep -v -- '-rc'
-echo Get the latest version and replace VERSION (below) with it.
+```
+
+Find the latest version; replace "VERSION" in the commmand below and 
+run to change your branch.
+
+```sh
 git checkout VERSION
 ./scripts/init.sh
+```
+
+Build native code with the cargo release profile.
+
+```sh
 cargo build --release
 ```
 
-This step will take a while (generally 10 - 40 minutes, depending on your hardware).
+***This step will take a while (generally 10 - 40 minutes, depending on your hardware).***
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be
 > done by running:
 >
 > ```sh
-> rustup install nightly-2020-05-15
-> rustup override set nightly-2020-05-15
-> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+> rustup install nightly-2021-06-09
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-09
+> cargo +nightly-2021-06-09 build --release
+> ```
+>
+> You may also need to run the build more than once. 
+> 
+> If you would like to execute the tests, run the following command: 
+> 
+> ```sh
+> cargo test --all
 > ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
@@ -195,17 +242,53 @@ You can begin syncing your node by running the following command:
 
 if you do not want to start in validator mode right away.
 
+```
+2021-06-17 02:34:25 ----------------------------    
+2021-06-17 02:34:25 This chain is not in any way    
+2021-06-17 02:34:25       endorsed by the           
+2021-06-17 02:34:25      KUSAMA FOUNDATION          
+2021-06-17 02:34:25 ----------------------------    
+2021-06-17 02:34:25 Parity Polkadot    
+2021-06-17 02:34:25 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu    
+2021-06-17 02:34:25 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021    
+2021-06-17 02:34:25 📋 Chain specification: Kusama    
+2021-06-17 02:34:25 🏷 Node name: obtainable-kitten-0716    
+2021-06-17 02:34:25 👤 Role: FULL    
+2021-06-17 02:34:25 💾 Database: RocksDb at /root/.local/share/polkadot/chains/ksmcc3/db    
+2021-06-17 02:34:25 ⛓  Native runtime: kusama-9050 (parity-kusama-0.tx5.au2)    
+2021-06-17 02:34:25 🔨 Initializing Genesis block/state (state: 0xb000…ef6b, header-hash: 0xb0a8…dafe)    
+2021-06-17 02:34:25 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
+2021-06-17 02:34:26 ⏱  Loaded block-time = 6s from block 0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe    
+2021-06-17 02:34:26 👶 Creating empty BABE epoch changes on what appears to be first startup.    
+2021-06-17 02:34:26 🏷 Local node identity is: 12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+2021-06-17 02:34:26 📦 Highest known block at #0    
+2021-06-17 02:34:26 〽️ Prometheus server started at 127.0.0.1:9615    
+2021-06-17 02:34:26 Listening for new connections on 127.0.0.1:9944.  
+```
+
+Example of node sync:
+```
+2021-06-17 02:34:34 🔍 Discovered new external address for our node: /ip4/100.102.231.64/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+2021-06-17 02:34:36 ⚙️  Syncing 409.2 bps, target=#8062689 (5 peers), best: #3477 (0x63ad…e046), finalized #3072 (0x0e4c…f587), ⬇ 153.2kiB/s ⬆ 12.9kiB/s    
+2021-06-17 02:34:37 🔍 Discovered new external address for our node: /ip4/100.111.175.0/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+2021-06-17 02:34:38 🔍 Discovered new external address for our node: /ip4/100.100.176.0/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+2021-06-17 02:34:41 ⚙️  Syncing 386.2 bps, target=#8062690 (7 peers), best: #5409 (0x1d76…8c3d), finalized #5121 (0x8ad1…b6dc), ⬇ 96.1kiB/s ⬆ 10.9kiB/s    
+2021-06-17 02:34:46 ⚙️  Syncing 394.8 bps, target=#8062691 (11 peers), best: #7383 (0x0689…6f1e), finalized #7168 (0x72a9…8d8c), ⬇ 352.9kiB/s ⬆ 5.1kiB/s    
+2021-06-17 02:34:51 ⚙️  Syncing 347.0 bps, target=#8062692 (12 peers), best: #9118 (0x66fc…cce3), finalized #8704 (0x14c9…705e), ⬇ 62.7kiB/s ⬆ 1.7kiB/s 
+```
+
 The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only
 required explicitly if you start your node without one of these two options. If you do not set your
 pruning to archive node, even when not running in validator and sentry mode, you will need to
 re-sync your database when you switch.
 
 > **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can
-> be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch
-> to using the faster and more efficient ParityDb option. Switching between database backends will
-> require a resync.
+> be explicit by passing the `--database RocksDb` flag.
 >
-> If you want to test out ParityDB you can add the flag `--database paritydb`.
+> In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note
+> that **ParityDB is still experimental and should not be used in production.** If you want to test
+> out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will
+> require a resync.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
@@ -235,7 +318,7 @@ It is now time to set up our validator. We will do the following:
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "New stake" button.
 
-![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
+![dashboard bonding](assets/guides/how-to-validate/kusama-dashboard-bonding.png)
 
 - **Stash account** - Select your Stash account. In this example, we will bond 100 milliKSM - make
   sure that your Stash account contains _at least_ this much. You can, of course, stake more than
@@ -249,7 +332,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](https://wiki.polkadot.network/en/latest/polkadot/learn-staking/#reward-distribution).
   Starting with runtime version v2023 natively included in client version
-  [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can go to any
+  [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3), payouts can go to any
   custom address. If you'd like to redirect payments to an account that is neither the controller
   nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as
   the recipient of the staking rewards.
@@ -277,6 +360,35 @@ some advanced operations.
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry" --chain kusama
+```
+
+Similarly:
+
+```
+2021-06-17 02:47:05 ----------------------------    
+2021-06-17 02:47:05 This chain is not in any way    
+2021-06-17 02:47:05       endorsed by the           
+2021-06-17 02:47:05      KUSAMA FOUNDATION          
+2021-06-17 02:47:05 ----------------------------    
+2021-06-17 02:47:05 Parity Polkadot    
+2021-06-17 02:47:05 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu    
+2021-06-17 02:47:05 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021    
+2021-06-17 02:47:05 📋 Chain specification: Kusama    
+2021-06-17 02:47:05 🏷 Node name: techedtest    
+2021-06-17 02:47:05 👤 Role: AUTHORITY    
+2021-06-17 02:47:05 💾 Database: RocksDb at /root/.local/share/polkadot/chains/ksmcc3/db   
+2021-06-17 02:47:05 ⛓  Native runtime: kusama-9050 (parity-kusama-0.tx5.au2)    
+2021-06-17 02:47:07 🏷 Local node identity is: 12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+2021-06-17 02:47:07 📦 Highest known block at #139917    
+2021-06-17 02:47:07 〽️ Prometheus server started at 127.0.0.1:9615    
+2021-06-17 02:47:07 Listening for new connections on 127.0.0.1:9944.    
+2021-06-17 02:47:07 👶 Starting BABE Authorship worker  
+```
+
+```
+2021-06-17 02:48:15 🔍 Discovered new external address for our node: /ip4/10.2.99.4/tcp/30333/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+
+2021-06-17 02:48:17 ⚙️  Syncing 235.6 bps, target=#8062826 (49 peers), best: #155136 (0x23ea…e4fc), finalized #154624 (0x234f…f6a0), ⬇ 380.0kiB/s ⬆ 57.4kiB/s
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and
@@ -327,8 +439,8 @@ Go to [Staking > Account Actions](https://polkadot.js.org/apps/#/staking/actions
 Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys`
 in the field and click "Set Session Key".
 
-![staking-change-session](assets/guides/how-to-validate/set-session-key-1.jpg)
-![staking-session-result](assets/guides/how-to-validate/set-session-key-2.jpg)
+![staking-change-session](assets/guides/how-to-validate/kusama-set-session-key-1.png)
+![staking-session-result](assets/guides/how-to-validate/kusama-set-session-key-2.png)
 
 Submit this extrinsic and you are now ready to start validating.
 
@@ -353,7 +465,7 @@ network. At the top of the page, it shows how many validator slots are available
 nodes have signaled their intention to be a validator. You can also go to the "Waiting" tab to
 double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
+![staking queue](assets/guides/how-to-validate/kusama-dashboard-staking.png)
 
 The validator set is refreshed every era. In the next era, if there is a slot available and your
 node is selected to join the validator set, your node will become an active validator. Until then,
