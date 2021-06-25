@@ -451,7 +451,7 @@ In this example, we used the name `techedtest` and have successfully located it 
 
 ### Setup via Validator Tab
 
-![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-1.jpg)
+![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
 
 Here you will need to input the Keys from `rotateKeys`, which
 is the Hex output from `author_rotateKeys`. The keys will show 
@@ -468,7 +468,7 @@ that you can declare against your validator's rewards. This is the rate that you
 You can also determine if you would like to receive nominations
 with the "allows new nominations" option.
 
-![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-2.jpg)
+![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-2.png)
 
 Click "Bond & Validate".
 
