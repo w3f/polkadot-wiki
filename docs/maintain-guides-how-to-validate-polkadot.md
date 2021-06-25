@@ -477,7 +477,7 @@ network. At the top of the page, it shows the number of validator slots that are
 as the number of nodes that have signaled their intention to be a validator. You can go to the
 "Waiting" tab to double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/polkadot-dashboard-validate-2.png)
+![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.png)
 
 The validator set is refreshed every era. In the next era, if there is a slot available and your
 node is selected to join the validator set, your node will become an active validator. Until then,

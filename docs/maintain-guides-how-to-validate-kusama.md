@@ -463,7 +463,7 @@ that you can declare against your validator's rewards. This is the rate that you
 You can also determine if you would like to receive nominations
 with the "allows new nominations" option.
 
-![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-validate-1.png)
+![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-validate-2.png)
 
 Click "Bond & Validate".
 
@@ -472,7 +472,7 @@ network. At the top of the page, it shows how many validator slots are available
 nodes have signaled their intention to be a validator. You can also go to the "Waiting" tab to
 double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/kusama-dashboard-validate-2.png)
+![staking queue](assets/guides/how-to-validate/kusama-dashboard-staking.png)
 
 The validator set is refreshed every era. In the next era, if there is a slot available and your
 node is selected to join the validator set, your node will become an active validator. Until then,
