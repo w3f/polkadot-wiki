@@ -450,6 +450,10 @@ To verify that your node is live and synchronized, head to
 [Telemetry](https://telemetry.polkadot.io/#/Kusama) and find your node. Note that this will show all
 nodes on the Kusama network, which is why it is important to select a unique name!
 
+In this example, we used the name `techedtest` and have successfully located it upon searching:
+
+![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-telemetry.png)
+
 If everything looks good, go ahead and click on "Validate" in Polkadot-JS UI.
 
 ![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
