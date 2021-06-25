@@ -1,5 +1,6 @@
 const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
+
 const i18n = require("./i18n");
 
 const isBuilding = process.env.BUILDING === "true";
@@ -9,8 +10,8 @@ module.exports = {
   title: "Guide",
   titleDelimiter: "·",
   tagline: "One-stop-shop for Kusama information.",
-  url: isPub ? "https://guide.kusama.network" : "",
-  baseUrl: isBuilding ? baseUrlPattern : "/",
+  url: "https://guide.kusama.network",
+  baseUrl: "/",
   projectName: isPub ? "kusama-guide-hosting" : "",
   organizationName: "w3f",
   i18n,
@@ -38,9 +39,9 @@ module.exports = {
     "https://fonts.googleapis.com/css?family=Muli&display=swap",
   ],
   favicon: "img/Kusama_Canary_white.png",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
-  onDuplicateRoutes: "throw",
+  onBrokenLinks: "log",
+  onBrokenMarkdownLinks: "log",
+  onDuplicateRoutes: "log",
 
   presets: [
     [
@@ -67,7 +68,21 @@ module.exports = {
       },
     ],
   ],
-  plugins: [],
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects: function (existingPath) {
+          if (existingPath.startsWith("/docs/")) {
+            return [
+              existingPath.replace("/docs/", "/docs/en/"),
+              existingPath.replace("/docs/", "/docs/zh-CN/"),
+            ];
+          }
+        },
+      },
+    ],
+  ],
   themeConfig: {
     announcementBar: {
       isCloseable: false,

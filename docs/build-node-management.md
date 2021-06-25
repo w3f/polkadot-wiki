@@ -29,7 +29,7 @@ to learn more about how the chain selection works internally.
 
 An archive node does not prune any block or state data. Use the `--pruning archive` flag. Certain
 types of nodes like validators must run in archive mode. Likewise, all
-[events](build-protocol-info#events) are cleared from state in each block, so if you want to store
+[events](build-protocol-info.md/#events) are cleared from state in each block, so if you want to store
 events then you will need an archive node.
 
 > To upgrade a node, please refer to this
@@ -77,7 +77,7 @@ can set a custom path with `--base-path <path>`.
 
 The keystore stores session keys, which are important for validator operations.
 
-- [Polkadot documentation](learn-keys#session-keys)
+- [Polkadot documentation](learn-keys.md/#session-keys)
 - [Substrate documentation](https://substrate.dev/docs/en/knowledgebase/learn-substrate/session-keys)
 
 **`db`**

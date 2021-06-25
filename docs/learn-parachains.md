@@ -17,12 +17,12 @@ there is no specific need for them to be actual blockchains. They take their nam
 of parallelized chains that run parallel to the Relay Chain. Due to their parallel nature, they are
 able to parallelize transaction processing and achieve scalability of the
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} system. They
-[share in the security](https://wiki.polkadot.network/docs/en/learn-security) of the entire network
+[share in the security](https://wiki.polkadot.network/docs/learn-security) of the entire network
 and can communicate with other parachains through
-[XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain).
+[XCMP](https://wiki.polkadot.network/docs/learn-crosschain).
 
 Parachains are maintained by a network maintainer known as a
-[collator](https://wiki.polkadot.network/docs/en/learn-collator). The role of the collator node is
+[collator](https://wiki.polkadot.network/docs/learn-collator). The role of the collator node is
 to maintain a full-node of the parachain, retain all necessary information of the parachain, and
 produce new block candidates to pass to the Relay Chain validators for verification and inclusion in
 the shared state of Polkadot. The incentivization of a collator node is an implementation detail of
@@ -131,7 +131,7 @@ parachain's lease would not expire; it would only be removed via governance.
 
 See the
 [Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
-and the [common good parachains](learn-common-good-chains) page for more information.
+and the [common good parachains](learn-common-good-chains.md) page for more information.
 
 ## Examples
 
@@ -169,7 +169,7 @@ basis to be included in the Relay Chain.
 
 The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
-[availability and validity](https://wiki.polkadot.network/docs/en/learn-availability) will make sure
+[availability and validity](https://wiki.polkadot.network/docs/learn-availability) will make sure
 security is on-par. However, should there be a big outage of a popular cloud provider or another
 network connectivity catastrophe, it is reasonable to expect that the number of validators per chain
 will drop.

@@ -31,7 +31,7 @@ Validators keep a database with all of their votes. If two machines have the sam
 different databases, they risk equivocating. For this reason, we will generate new Session keys each
 time we change machines.
 
-[More info about equivocation.](learn-staking#slashing)
+[More info about equivocation.](learn-staking.md/#slashing)
 
 ## Steps
 

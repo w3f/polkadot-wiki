@@ -10,7 +10,7 @@ module.exports = {
   tagline: "The hub for those interested in learning, building, or running a node on Polkadot.",
   titleDelimiter: "·",
   url: "https://wiki.polkadot.network",
-  baseUrl: isBuilding ? baseUrlPattern : "/",
+  baseUrl: "/",
   projectName: "polkadot-wiki",
   organizationName: "w3f",
   scripts: [
@@ -67,6 +67,22 @@ module.exports = {
             require.resolve("./static/css/klaro.css"),
             require.resolve("./static/css/socicon.css"),
           ],
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects: function (existingPath) {
+          if (existingPath.startsWith("/docs/")) {
+            return [
+              existingPath.replace("/docs/", "/docs/en/"),
+              existingPath.replace("/docs/", "/docs/zh-CN/"),
+              existingPath.replace("/docs/", "/docs/ru-RU/"),
+            ];
+          }
         },
       },
     ],

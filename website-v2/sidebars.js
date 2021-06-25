@@ -57,6 +57,7 @@ module.exports = {
             "learn-parachains",
             "learn-parathreads",
             "learn-bridges",
+            "learn-common-goods",
             "learn-auction",
             "learn-crowdloans",
           ],
@@ -119,6 +120,7 @@ module.exports = {
           items: [
             "build-integration",
             "build-protocol-info",
+            "build-integrate-assets",
             "build-node-management",
             "build-node-interaction",
             "build-transaction-construction",
