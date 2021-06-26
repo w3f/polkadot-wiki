@@ -29,8 +29,6 @@ module.exports = {
       defer: true,
     },
     "/js/custom.js",
-    "/js/klaro-config.js",
-    "/js/klaro.js",
     "/js/clipboard.min.js",
     "/js/copycode.js",
   ],
@@ -62,7 +60,6 @@ module.exports = {
           customCss: [
             require.resolve("./static/css/custom.css"),
             require.resolve("./static/css/copycode.css"),
-            require.resolve("./static/css/klaro.css"),
           ],
         },
       },
