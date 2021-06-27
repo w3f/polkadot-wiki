@@ -63,9 +63,6 @@ export default function Footer() {
         <a className="item homepage-font" href="https://polkadot.network/privacy/">
           Privacy Policy
         </a>
-        <a className="item homepage-font" href="#" id="cookie-settings">
-          Cookie Settings
-        </a>
       </section>
     </footer>
   );
