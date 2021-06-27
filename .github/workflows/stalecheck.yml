@@ -25,6 +25,6 @@ jobs:
       - name: Create Issues
         uses: w3f/action-create-issues-for-old-files@master
         with:
-          randAssignees: '["swader", "jakehemmerle", "jakehemmerle", "swader", "laboon"]'
+          randAssignees: '["jakehemmerle", "dannys03", "emresurmeli"]'
           files: ${{ steps.find.outputs.files }}
 
