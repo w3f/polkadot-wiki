@@ -64,6 +64,10 @@ button.menu__button {
    Navigation bar
    ========================================================================== */
 
+.navbar.navbar--fixed-top {
+  height: auto;
+}
+
 .navbar__inner {
   max-width: var(--custom-content-max-width);
   margin-left: auto;
