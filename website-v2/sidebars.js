@@ -60,6 +60,7 @@ module.exports = {
             "learn-common-goods",
             "learn-auction",
             "learn-crowdloans",
+            "learn-teleport",
           ],
         },
         {
