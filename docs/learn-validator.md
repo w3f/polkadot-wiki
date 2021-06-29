@@ -4,13 +4,14 @@ title: Validator
 sidebar_label: Validator
 ---
 
-Validators secure the Relay Chain by staking DOT, validating proofs from collators and participating
-in consensus with other validators.
+Validators secure the [Relay Chain](learn-architecture#relay-chain) by staking DOT, validating proofs from 
+collators and participating in consensus with other validators. 
 
-These participants will play a crucial role in adding new blocks to the Relay Chain and, by
+These participants play a crucial role in adding new blocks to the Relay Chain and, by
 extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay
 Chain. Parachain validators participate in some form of off-chain consensus, and submit candidate receipts 
-to the tx pool for a block producer to include on-chain. 
+to the tx pool for a block producer to include on-chain. The Relay Chain validators guarantee that 
+each parachain follows its unique rules and can pass messages between shards in a trust-free environment.
 
 Validators perform two functions: 
 1. **Verifying** that the information contained in an assigned set of parachain blocks is valid 
