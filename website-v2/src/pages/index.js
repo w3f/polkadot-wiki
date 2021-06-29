@@ -46,25 +46,6 @@ function HomeNav() {
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("build-index")} aosDelay="0">
-        <NavItemTitle>
-          <Translate
-            id="homePage.navContainer.build.title"
-            description="Title of Build Navigator in Home page"
-          >
-            Build
-          </Translate>
-        </NavItemTitle>
-        <NavItemContent>
-          <Translate
-            id="homePage.navContainer.build.content"
-            description="Content of Build Navigator in Home page"
-          >
-            Most up-to-date information on the status of the development tools in the Polkadot
-            ecosystem.
-          </Translate>
-        </NavItemContent>
-      </NavItem>
       <NavItem href={useDocUrl("learn-launch")} aosDelay="300">
         <NavItemTitle>
           <Translate
@@ -81,6 +62,25 @@ function HomeNav() {
           >
             Polkadot is a sharded protocol that enables blockchain networks to operate together
             seamlessly.
+          </Translate>
+        </NavItemContent>
+      </NavItem>
+      <NavItem href={useDocUrl("build-index")} aosDelay="0">
+        <NavItemTitle>
+          <Translate
+            id="homePage.navContainer.build.title"
+            description="Title of Build Navigator in Home page"
+          >
+            Build
+          </Translate>
+        </NavItemTitle>
+        <NavItemContent>
+          <Translate
+            id="homePage.navContainer.build.content"
+            description="Content of Build Navigator in Home page"
+          >
+            Most up-to-date information on the status of the development tools in the Polkadot
+            ecosystem.
           </Translate>
         </NavItemContent>
       </NavItem>
