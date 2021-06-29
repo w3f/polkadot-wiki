@@ -19,8 +19,10 @@ slashed, your money and your reputation will be at risk. However, running a vali
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
-**Warning:** It is highly recommended that you have significant system administration experience
-before attempting to run your own validator.
+⚠️ **`Warning: It is highly recommended that you have significant system administration experience
+before attempting to run your own validator.` You must be able to handle technical issues and 
+anomalies with your node which you must be able to tackle yourself. Being a validator involves more than 
+just executing the Polkadot binary.**
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator) information to make sure you understand the
@@ -161,7 +163,7 @@ sudo ntpq -p
 > get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
 > zero allocated blocks making it on chain.
 
-### Building and Installing the `polkadot` Binary
+### Building and Installing the `polkadot` binary
 
 You will need to build the `polkadot` binary from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
