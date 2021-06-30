@@ -46,7 +46,7 @@ function HomeNav() {
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("learn-launch")} aosDelay="300">
+      <NavItem href={useDocUrl("learn-launch")} aosDelay="0">
         <NavItemTitle>
           <Translate
             id="homePage.navContainer.learn.title"
@@ -65,7 +65,7 @@ function HomeNav() {
           </Translate>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("build-index")} aosDelay="0">
+      <NavItem href={useDocUrl("build-index")} aosDelay="200">
         <NavItemTitle>
           <Translate
             id="homePage.navContainer.build.title"
@@ -84,7 +84,7 @@ function HomeNav() {
           </Translate>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("maintain-index")} aosDelay="600">
+      <NavItem href={useDocUrl("maintain-index")} aosDelay="400">
         <NavItemTitle>
           <Translate
             id="homePage.navContainer.maintain.title"
