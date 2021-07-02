@@ -133,7 +133,7 @@ welcome.
 - [XCLAIM][] - XCLAIM is a framework for achieving trustless and efficient cross-chain exchanges
   using cryptocurrency-backed assets.
 
-[crosschain]: learn-crosschain
+[crosschain]: learn-crosschain.md
 [parity bridge]: https://github.com/paritytech/parity-bridge
 [interlay]: https://interlay.gitlab.io/polkabtc-spec/
 [xclaim]: https://eprint.iacr.org/2018/643.pdf

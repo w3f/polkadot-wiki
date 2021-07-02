@@ -17,7 +17,7 @@ generate.
 
 While your DOT are staked by nominating a validator, they are 'locked' (bonded). You can receive new
 DOT in your account but you cannot stake as validator or transfer DOT away from your account. You
-can [un-nominate at any time](maintain-guides-how-to-unbond) to stop staking your funds. Keep in
+can [un-nominate at any time](maintain-guides-how-to-unbond.md) to stop staking your funds. Keep in
 mind that the un-nomination is effective in the next era, and that un-nominating does not
 automatically unbond your funds. There is an unbonding period of 7 days on Kusama and 28 days on
 Polkadot before bonded funds can be transferred after issuing an unbond transaction.
@@ -26,7 +26,7 @@ Polkadot before bonded funds can be transferred after issuing an unbond transact
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](maintain-guides-how-to-nominate-polkadot) guide to configure it first. Your nominations will
+[this](maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your nominations will
 be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](assets/staking/polkadotjs_nominator_account.png)
@@ -44,18 +44,18 @@ active nomination from among the validators you have selected.
 If you are committing a very large amount of stake, then you may have more than one active
 nomination. However, the election algorithm attempts to minimize this situation, and it should not
 occur often, so you should almost always see only a single active nomination per era. See the
-[section on Phragmén optimization](learn-phragmen#optimizations) for more details.
+[section on Phragmén optimization](learn-phragmen.md#optimizations) for more details.
 
 ### Required Minimum Stake
 
-Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, and due to the
+Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to the
 fact that the solution set must fit in a single block, in some eras, a minimum number of DOT will be
 required to nominate with in order to receive staking rewards.
 
 This number fluctuates every era, and the most recent and up to date version can be found out using
 [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine and
 looking for the "lowest minimal nominator". See the
-[Election Solution Set](https://wiki.polkadot.network/docs/learn-nominator#the-election-solution-set)
+[Election Solution Set](learn-nominator.md#the-election-solution-set)
 section on the Nominator page for more details.
 
 ### Oversubscribed Validators
@@ -96,7 +96,7 @@ none of your nominated validators being elected.
 
 Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go all of the
 validator's nominators. Any account can do this, although in practice validator operators often do
-this as a service to their nominators. See the page on [Simple Payouts](learn-simple-payouts) for
+this as a service to their nominators. See the page on [Simple Payouts](learn-simple-payouts.md) for
 more information and instructions for claiming rewards.
 
 ### What to Take Into Consideration When Nominating
@@ -128,13 +128,13 @@ interested in filtering out.
 - **Single from operator** - Do not show groups of validators run by a single operator.
 - **No 20%+ comm** - Do not show any validators with a commission of 20% or higher.
 - **No at capacity** - Do not show any validators who are currently operating
-  [at capacity](glossary#capacity) (i.e., could potentially be oversubscribed).
+  [at capacity](glossary.md#capacity) (i.e., could potentially be oversubscribed).
 - **Recent payouts** - Only show validators that have recently caused a
-  [payout to be issued](learn-simple-payouts). Note that anyone can cause a payout to occur; it does
+  [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it does
   not have to be the operator of a validator.
 - **Only elected** - Only show validators that are currently in the active set (i.e., they have been
   elected to produce blocks this era).
-- **Only with an identity** - Only show validators that have set an [identity](learn-identity). Note
+- **Only with an identity** - Only show validators that have set an [identity](learn-identity.md). Note
   that this identity does not have to be verified by a registrar for the validator to show up in the
   list.
 
@@ -143,14 +143,14 @@ interested in filtering out.
 How the validator acted in the past may be a good indicator of how they will act in the future. An
 example of problematic behavior would be if a validator is regularly offline, their nominators most
 likely would get fewer rewards than others. More importantly, when many validators are
-[unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be
+[unreachable](learn-staking.md#unresponsiveness), those nominators who staked with them will be
 slashed.
 
 ![Validator Stats](assets/staking/polkadotjs_validator_stats.png)
 
 Thus, to be a smart nominator, it would be better to query their
 [histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks
-produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a
+produced, rewards and slashes, and [identity](learn-identity.md) (if they have it set). Moreover, a
 nominator should do comprehensive research on their validator candidates - they should go over the
 validators' websites to see who they are, what kind of infrastructure setup they are using,
 reputation, the vision behind the validator, and more.
@@ -167,9 +167,9 @@ etc.).
 ### Avoiding Oversubscribed Validators
 
 If you are not nominating with a large number of DOTs, you should try to avoid
-[oversubscribed](glossary#oversubscribed) validators. It is not always easy to calculate if the
+[oversubscribed](glossary.md#oversubscribed) validators. It is not always easy to calculate if the
 validator selected will be oversubscribed in the next session; one way to avoid choosing potentially
-oversubscribed validators is to filter out any that are [at capacity](glossary#capacity) on the
+oversubscribed validators is to filter out any that are [at capacity](glossary.md#capacity) on the
 Targets page.
 
 Finally, if you have a very small amount of DOTs, you may not be able to have your nomination fit
@@ -190,7 +190,7 @@ details.
 
 ### Guides
 
-- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot) - Guide on nominating on the
+- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Guide on nominating on the
   Kusama canary network.
-- [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond) - Guide on stopping
+- [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond.md) - Guide on stopping
   nominations and withdrawing tokens.

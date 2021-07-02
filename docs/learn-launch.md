@@ -25,32 +25,32 @@ Once Web3 Foundation was confident in the stability of the network and there was
 of validator intentions, Web3 Foundation used [Sudo](https://youtu.be/InekMjJpVdo) &mdash; a
 superuser account with access to governance functions &mdash; to initiate the first validator
 election. Following this election, the network transitioned from PoA into its second phase,
-[Nominated Proof of Stake (NPoS)](learn-staking), on June 18, 2020.
+[Nominated Proof of Stake (NPoS)](learn-staking.md), on June 18, 2020.
 
 ## Governance
 
 After the chain had been running well with the validator set, the Sudo key issued a runtime upgrade
 that enabled the suite of governance modules in Polkadot; namely, the modules to enable a
-[Council](learn-governance#council), a [Technical Committee](learn-governance#technical-committee),
-and [public referenda](learn-governance#public-referenda).
+[Council](learn-governance.md#council), a [Technical Committee](learn-governance.md#technical-committee),
+and [public referenda](learn-governance.md#public-referenda).
 
 ## Removal of Sudo
 
 The Sudo module was removed by a runtime upgrade on July 20, 2020, transitioning the
-[governance](learn-governance) of the chain into the hands of the token (DOT) holders.
+[governance](learn-governance.md) of the chain into the hands of the token (DOT) holders.
 
 From this point, the network has been entirely in the hands of the token holders and is no longer
 under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community [made a public proposal](maintain-guides-democracy) for a
+To enable balance transfers, the community [made a public proposal](maintain-guides-democracy.md) for a
 runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
 subsequently enabled on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Redenomination
 
-On August 21, 2020, [redenomination](redenomination) of DOT, the native token on Polkadot, occurred.
+On August 21, 2020, [redenomination](redenomination.md) of DOT, the native token on Polkadot, occurred.
 From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
@@ -75,5 +75,5 @@ be in:
   parachains built with horizontal scalability?
 - Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many
   tiers of Relay Chains can be nested? How will validators work together to validate blocks on
-  various Relay Chains? How is [XCMP](learn-crosschain) working in the nested setup? How is
-  [AnV](learn-availability) going to work there?
+  various Relay Chains? How is [XCMP](learn-crosschain.md) working in the nested setup? How is
+  [AnV](learn-availability.md) going to work there?

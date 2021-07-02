@@ -165,7 +165,7 @@ method is to use [Polkadot-JS Apps UI][apps].
 > dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
 > might be the reason.
 
-A detailed guide on doing transfers is available [here](learn-balance-transfers).
+A detailed guide on doing transfers is available [here](learn-balance-transfers.md).
 
 ### Receiving a Transfer
 

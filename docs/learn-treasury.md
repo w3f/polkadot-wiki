@@ -6,10 +6,10 @@ description: Details about Polkadot's on-chain treasury.
 ---
 
 The Treasury is a pot of funds collected through transaction fees, slashing,
-[staking inefficiencies](https://wiki.polkadot.network/docs/learn-staking/#inflation), etc. The
+[staking inefficiencies](learn-staking.md#inflation), etc. The
 funds held in the Treasury can be spent by making a spending proposal that, if approved by the
-[Council](learn-governance#Council), will enter a waiting period before distribution. This waiting
-period is known as the budget period, and its duration is subject to [governance](learn-governance),
+[Council](learn-governance.md#council), will enter a waiting period before distribution. This waiting
+period is known as the budget period, and its duration is subject to [governance](learn-governance.md),
 with the current default set to {{ spend_period }} days. The Treasury attempts to spend as many
 proposals in the queue as it can without running out of funds.
 
@@ -33,7 +33,7 @@ Proposals may consist of (but are not limited to):
 - Community events and outreach (meetups, pizza parties, hackerspaces).
 - Software development (wallets and wallet integration, clients and client upgrades).
 
-The Treasury is ultimately controlled by the [Council](learn-governance#Council), and how the funds
+The Treasury is ultimately controlled by the [Council](learn-governance#council), and how the funds
 will be spent is up to their judgment.
 
 ## Funding the Treasury
@@ -45,14 +45,14 @@ The Treasury is funded from different sources:
    taken from the slash amount and varies per offence and number of reporters.
 2. Transaction fees: A portion of each block's transaction fees goes to the Treasury, with the
    remainder going to the block author.
-3. Staking inefficiency: [Inflation](https://wiki.polkadot.network/docs/learn-staking/#inflation)
+3. Staking inefficiency: [Inflation](learn-staking.md#inflation)
    is designed to be 10% in the first year, and the ideal staking ratio is set at 50%, meaning half
    of all tokens should be locked in staking. Any deviation from this ratio will cause a
    proportional amount of the inflation to go to the Treasury. In other words, if 50% of all tokens
    are staked, then 100% of the inflation goes to the validators as reward. If the staking rate is
    greater than or less than 50%, then the validators will receive less, with the remainder going to
    the Treasury.
-4. Parathreads: [Parathreads](learn-parathreads) participate in a per-block auction for block
+4. Parathreads: [Parathreads](learn-parathreads.md) participate in a per-block auction for block
    inclusion. Part of this bid goes to the validator that accepts the block and the remainder goes
    to the Treasury.
 
@@ -60,7 +60,7 @@ The Treasury is funded from different sources:
 
 The proposer has to deposit 5% of the requested amount or {{ proposal_min_bond }} (whichever is
 higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded
-otherwise. These values are subject to [governance](learn-governance) so they may change in the
+otherwise. These values are subject to [governance](learn-governance.md) so they may change in the
 future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been

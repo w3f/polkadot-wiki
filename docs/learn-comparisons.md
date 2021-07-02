@@ -10,9 +10,9 @@ chains.
 
 ## In-Depth Comparisons
 
-- [vs Ethereum 2.0](learn-comparisons-ethereum-2)
+- [vs Ethereum 2.0](learn-comparisons-ethereum-2.md)
 
-- [vs Cosmos](learn-comparisons-cosmos)
+- [vs Cosmos](learn-comparisons-cosmos.md)
 
 ## Other Comparisons
 
@@ -47,7 +47,7 @@ to Binance Chain. Together, they form the Binance Dual Chain System. Binance Sma
 Proof of Stake Authority chain and allows users to create smart contracts and dapps.
 
 Both chains are built with Cosmos SDK and therefore are a part of the
-[Cosmos](https://wiki.polkadot.network/docs/learn-comparisons-cosmos) ecosystem. Due to specifics
+[Cosmos](learn-comparisons-cosmos.md) ecosystem. Due to specifics
 of the Cosmos architecture, interoperability of Binance Smart Chain is based on bridges. This means
 all validators of both chains are also bridge operators, therefore the security of the system relies
 on trusting validators. At the moment, there are 21 Binance Smart Chain validator nodes.

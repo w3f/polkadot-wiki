@@ -15,7 +15,7 @@ Polkadot uses a sharded model where each shard in the protocol has an abstract s
 function (STF). Polkadot uses WebAssembly (Wasm) as a "meta-protocol". A shard's STF can be abstract
 as long as the validators on Polkadot can execute it within a Wasm environment.
 
-The shards of Polkadot are called "[parachains](learn-parachains)". Every time a parachain wants to
+The shards of Polkadot are called "[parachains](learn-parachains.md)". Every time a parachain wants to
 make a state transition, it submits a block (batch of state transitions) along with a state proof
 that Polkadot validators can independently verify. These blocks are finalized for the parachains
 when they are finalized by Polkadot's Relay Chain, the main chain of the system. As such, all
@@ -44,11 +44,11 @@ checks before committing it to the final chain.
 Parachain slots are limited, and thus parachain candidates participate in an auction to reserve a
 slot for up to two years. For chains that do not have the funding for a parachain slot or the
 necessity to execute with a six-second block time, Polkadot also has
-[parathreads](learn-parathreads). Parathreads execute on a pay-as-you-go basis, only paying to
+[parathreads](learn-parathreads.md). Parathreads execute on a pay-as-you-go basis, only paying to
 execute a block when they need to.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
+Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibility.
 
 ### Cosmos
 
@@ -67,7 +67,7 @@ parachains.
 
 ## Consensus
 
-Polkadot uses a hybrid [consensus](learn-consensus) protocol with two sub-protocols: BABE and
+Polkadot uses a hybrid [consensus](learn-consensus.md) protocol with two sub-protocols: BABE and
 GRANDPA, together called "Fast Forward". BABE (Blind Assignment for Blockchain Extension) uses a
 verifiable random function (VRF) to assign slots to validators and a fallback round-robin pattern to
 guarantee that each slot has an author. GRANDPA (GHOST-based Recursive Ancestor Deriving Prefix
@@ -91,8 +91,8 @@ it has quadratic transport complexity, but can only finalize one block at a time
 
 ## Staking Mechanics
 
-Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators using the
-[sequential Phragmén algorithm](learn-phragmen). The validator set size is set by governance (1_000
+Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators using the
+[sequential Phragmén algorithm](learn-phragmen.md). The validator set size is set by governance (1_000
 validators planned) and stakers who do not want to run validator infrastructure can nominate up to
 16 validators. Phragmén's algorithm selects the optimal allocation of stake, where optimal is based
 on having the most evenly staked set.
@@ -118,9 +118,9 @@ nominating a validator does not assign any governance voting rights to the valid
 
 ## Message Passing
 
-Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain) for parachains to send
+Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain.md) for parachains to send
 arbitrary messages to each other. Parachains open connections with each other and can send messages
-via their established channels. [Collators](learn-collator) are full nodes of parachains and full
+via their established channels. [Collators](learn-collator.md) are full nodes of parachains and full
 nodes of the relay chain, so collator nodes are a key component of message passing. Messages do not
 pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.) go into
 the Relay Chain. This enhances scalability by keeping data on the edges of the system.
@@ -129,7 +129,7 @@ In the case of a chain re-organization, messages can be rolled back to the point
 re-organization based on the proofs of post in the Relay Chain. The shared state amongst parachains
 means that messages are free from trust bounds; they all operate in the same context.
 
-Polkadot has an additional protocol called [SPREE](learn-spree) that provides shared logic for
+Polkadot has an additional protocol called [SPREE](learn-spree.md) that provides shared logic for
 cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and
 interpretation by the receiving chain.
 
@@ -140,11 +140,11 @@ chains must trust the security of a message's origin.
 
 ## Governance
 
-Polkadot has a multicameral [governance](learn-governance) system with several avenues to pass
+Polkadot has a multicameral [governance](learn-governance.md) system with several avenues to pass
 proposals. All proposals ultimately pass through a public referendum, where the majority of tokens
 can always control the outcome. For low-turnout referenda, Polkadot uses adaptive quorum biasing to
 set the passing threshold. Referenda can contain a variety of proposals, including fund allocation
-from an on-chain [Treasury](learn-treasury). Decisions get enacted on-chain and are binding and
+from an on-chain [Treasury](learn-treasury.md). Decisions get enacted on-chain and are binding and
 autonomous.
 
 Polkadot has several on-chain, permissionless bodies. The primary one is the Council, which

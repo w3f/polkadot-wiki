@@ -6,8 +6,8 @@ description: An introductory guide to Polkadot Parachains.
 ---
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo) :polkadot }} >
-> {{ kusama: [Rococo page](mirror-build-parachains-rococo) :kusama }}.
+> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo.md) :polkadot }} >
+> {{ kusama: [Rococo page](mirror-build-parachains-rococo.md) :kusama }}.
 
 ![One parachain](assets/network/one_parachain.png)
 
@@ -17,12 +17,12 @@ there is no specific need for them to be actual blockchains. They take their nam
 of parallelized chains that run parallel to the Relay Chain. Due to their parallel nature, they are
 able to parallelize transaction processing and achieve scalability of the
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} system. They
-[share in the security](https://wiki.polkadot.network/docs/learn-security) of the entire network
+[share in the security](learn-security.md) of the entire network
 and can communicate with other parachains through
-[XCMP](https://wiki.polkadot.network/docs/learn-crosschain).
+[XCMP](learn-crosschain.md).
 
 Parachains are maintained by a network maintainer known as a
-[collator](https://wiki.polkadot.network/docs/learn-collator). The role of the collator node is
+[collator](learn-collator.md). The role of the collator node is
 to maintain a full-node of the parachain, retain all necessary information of the parachain, and
 produce new block candidates to pass to the Relay Chain validators for verification and inclusion in
 the shared state of Polkadot. The incentivization of a collator node is an implementation detail of
@@ -95,21 +95,21 @@ several ways to allocate them:
 - Parathreads
 
 ["Common Good" parachains](#common-good-parachains) are allocated by Polkadot's on-chain
-{{ polkadot: [governance](learn-governance) :polkadot }}
-{{ kusama: [governance](mirror-learn-governance) :kusama }} system, and are deemed as a "common
+{{ polkadot: [governance](learn-governance.md) :polkadot }}
+{{ kusama: [governance](mirror-learn-governance.md) :kusama }} system, and are deemed as a "common
 good" for the network, such as bridges to other networks or chains. They are usually considered
 system level chains or public utility chains. These typically do not have an economic model of their
 own and help remove transactions from the Relay Chain, allowing for more efficient parachain
 processing.
 
-{{ polkadot: [Auction granted parachains](learn-auction) :polkadot }}
-{{ kusama: [Auction granted parachains](mirror-learn-auction) :kusama }} are granted in a
+{{ polkadot: [Auction granted parachains](learn-auction.md) :polkadot }}
+{{ kusama: [Auction granted parachains](mirror-learn-auction.md) :kusama }} are granted in a
 permissionless auction. Parachain teams can either bid with their own DOT tokens, or source them
-from the community using the {{ polkadot: [crowdloan functionality](learn-crowdloans) :polkadot }}
-{{ kusama: [crowdloan functionality](mirror-learn-crowdloans) :kusama }}.
+from the community using the {{ polkadot: [crowdloan functionality](learn-crowdloans.md) :polkadot }}
+{{ kusama: [crowdloan functionality](mirror-learn-crowdloans.md) :kusama }}.
 
-{{ polkadot: [Parathreads](learn-parathreads) :polkadot }}
-{{ kusama: [Parathreads](mirror-learn-parathreads) :kusama }} have the same API as parachains, but
+{{ polkadot: [Parathreads](learn-parathreads.md) :polkadot }}
+{{ kusama: [Parathreads](mirror-learn-parathreads.md) :kusama }} have the same API as parachains, but
 are scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
 ### Slot Expiration
@@ -125,8 +125,8 @@ automatically become parathreads.
 ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
 network can realize the benefit of valuable parachains that would otherwise be underfunded due to
 the free-rider problem. They are not allocated via the parachain auction process, but by the
-on-chain {{ polkadot: [governance](learn-governance) :polkadot }}
-{{ kusama: [governance](mirror-learn-governance) :kusama }} system. Generally, a common good
+on-chain {{ polkadot: [governance](learn-governance.md) :polkadot }}
+{{ kusama: [governance](mirror-learn-governance.md) :kusama }} system. Generally, a common good
 parachain's lease would not expire; it would only be removed via governance.
 
 See the
@@ -159,17 +159,17 @@ over how blocks are authored and by whom.
 ### How will parachain slots be distributed?
 
 Parachain slots will be acquirable through auction, please see the
-{{ polkadot: [parachain slots](learn-auction) :polkadot }}
-{{ kusama: [parachain slots](mirror-learn-auction) :kusama }} article. Additionally, some parachain
-slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads) :polkadot }}
-{{ kusama: [parathreads](mirror-learn-parathreads) :kusama }} &mdash; chains that bid on a per-block
+{{ polkadot: [parachain slots](learn-auction.md) :polkadot }}
+{{ kusama: [parachain slots](mirror-learn-auction.md) :kusama }} article. Additionally, some parachain
+slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
+{{ kusama: [parathreads](mirror-learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
 basis to be included in the Relay Chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
 The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
-[availability and validity](https://wiki.polkadot.network/docs/learn-availability) will make sure
+[availability and validity](learn-availability.md) will make sure
 security is on-par. However, should there be a big outage of a popular cloud provider or another
 network connectivity catastrophe, it is reasonable to expect that the number of validators per chain
 will drop.
@@ -196,7 +196,7 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 ### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
-applications as parachains. For more info see [here](build-pdk).
+applications as parachains. For more info see [here](build-pdk.md).
 
 ### Deploying parachains
 

@@ -63,7 +63,7 @@ The Assets pallet also provides an `approve_transfer`, `cancel_approval`, and `t
 interface for non-custodial operations.
 
 Asset transfers will result in an `assets.transferred` event. The same instructions for
-[monitoring events and **not** transactions](build-protocol-info#events) applies to asset transfers.
+[monitoring events and **not** transactions](build-protocol-info.md#events) applies to asset transfers.
 
 Note that you can use the same addresses (except anonymous proxies!) on Statemint that you use on
 the Relay Chain. The SS58 encodings are the same, only the chain information (genesis hash, etc.)

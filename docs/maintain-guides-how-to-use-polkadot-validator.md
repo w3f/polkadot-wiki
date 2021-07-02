@@ -1,10 +1,10 @@
 ---
-id: maintain-guides-how-to-use-polkadot-secure-validator
-title: How to use Polkadot Secure Validator Setup
-sidebar_label: How to use Polkadot Secure Validator Setup
+id: maintain-guides-how-to-use-polkadot-validator
+title: How to use Polkadot Validator Setup
+sidebar_label: How to use Polkadot Validator Setup
 ---
 
-The following guide will walk you through using [polkadot secure validator][] to deploy your
+The following guide will walk you through using [polkadot validator setup][] to deploy your
 validator in a secure way. It will work for Kusama (and later Polkadot) out of the box, and if
 you're using another Substrate-based chain, should work with some tweaking. We assume you will be
 deploying on Kusama.
@@ -269,8 +269,8 @@ it.
 Congratulations! You have successfully deployed a secure validator. Free feel to open an issue if
 you have any suggestions.
 
-[polkadot secure validator]: https://github.com/w3f/polkadot-secure-validator
-[issue]: https://github.com/w3f/polkadot-secure-validator/issues
+[polkadot validator setup]: https://github.com/w3f/polkadot-validator-setup
+[issue]: https://github.com/w3f/polkadot-validator-setup/issues
 [ssh]: https://en.wikipedia.org/wiki/Secure_Shell
 [nvm]: https://github.com/nvm-sh/nvm
 [w3f polkadot]: https://github.com/w3f/polkadot/releases
@@ -278,4 +278,4 @@ you have any suggestions.
 [gcp machine types]: https://cloud.google.com/compute/docs/machine-types
 [gcp regions]: https://cloud.google.com/compute/docs/regions-zones/
 [substrate telemetry source]: https://github.com/paritytech/substrate-telemetry
-[readme]: https://github.com/w3f/polkadot-secure-validator#prerequisites
+[readme]: https://github.com/w3f/polkadot-validator-setup#prerequisites

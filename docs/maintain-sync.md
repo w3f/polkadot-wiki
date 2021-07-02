@@ -28,30 +28,34 @@ was, or which extrinsics resulted in a certain state change are fast operations 
 archive node. However, an archive node takes up a lot of disk space - around Kusama's 1.6 millionth
 block this was around 15 to 20GB.
 
-A **full node** is _pruned_, meaning it discards all information older than 256 blocks, but keeps
-the extrinsics for all past blocks, and the genesis block. A node that is pruned this way requires
-much less space than an archive node. In order to query past state through a full node, a user would
-have to wait for the node to rebuild the chain up until that block. A full node _can_ rebuild the
-entire chain with no additional input from other nodes and become an archive node. One caveat is
-that if finality stalled for some reason and the last finalized block is more than 256 blocks
-behind, a pruned full node will not be able to sync to the network.
-
 Archive nodes are used by utilities that need past information - like block explorers, council
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
-to be able to look at past on-chain data. Full nodes are used by everyone else - they allow you to
-read the current state of the chain and to submit transactions directly to the chain without relying
-on a centralized infrastructure provider.
+to be able to look at past on-chain data.
+
+A **full node** is _pruned_: it discards all finalized blocks older than a configurable
+number except the genesis block: This is 256 blocks from the last finalized one, by default.
+A node that is pruned this way requires much less space than an archive node.
+
+A full node may eventually be able to rebuild the entire chain with no additional information,
+and become an archive node, but at he time of writing, this is not implemented. If you need to
+query historical blocks past what you pruned, you need to purge your database and resync your node
+starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to
+avoid needing to sync from genesis with the network, and only need the blocks past that snapshot. 
+
+Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
+directly on the network without relying on a centralized infrastructure provider.
 
 Another type of node is a **light node**. A light node has only the runtime and the current state,
-but does not store past extrinsics and so cannot restore the full chain from genesis. Light nodes
-are useful for resource restricted devices. An interesting use-case of light nodes is a Chrome
-extension, which is a node in its own right, running the runtime in WASM format:
-https://github.com/paritytech/substrate-light-ui
+but does not store past blocks and so cannot read historical data without requesting it from a node
+that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
+light nodes is a Chrome extension, which is a node in its own right, running the runtime in WASM format:
+https://github.com/paritytech/substrate-light-ui as well as a full or light node that is completely
+encapsulated in WASM and can be integrated into webapps: https://github.com/paritytech/smoldot#wasm-light-node
 
 ### Fast Install Instructions (Mac)
 
 > Not recommended if you're a validator. Please see
-> [secure validator setup](maintain-guides-secure-validator)
+> [validator setup](maintain-guides-validator.md)
 
 - Type terminal in the ios searchbar/searchlight to open the 'terminal' application
 - Install Homebrew within the terminal by running:
@@ -74,7 +78,7 @@ https://github.com/paritytech/substrate-light-ui
 > This works only on Windows Pro with virtualization enabled.
 
 > Not recommended if you're a validator. Please see
-> [secure validator setup](maintain-guides-secure-validator)
+> [validator setup](maintain-guides-validator.md)
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
@@ -90,7 +94,7 @@ https://github.com/paritytech/substrate-light-ui
 ### Fast Install Instructions (Linux)
 
 > Not recommended if you're a validator. Please see
-> [secure validator setup](maintain-guides-secure-validator)
+> [secure validator setup](maintain-guides-secure-validator.md)
 
 For the most recent binary please see the
 [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL
@@ -156,7 +160,7 @@ The built binary will be in the `target/release` folder, called `polkadot`.
 ```
 
 Use the `--help` flag to find out which flags you can use when running the node. For example, if
-[connecting to your node remotely](maintain-wss), you'll probably want to use `--ws-external` and
+[connecting to your node remotely](maintain-wss.md), you'll probably want to use `--ws-external` and
 `--rpc-cors all`.
 
 The syncing process will take a while depending on your bandwidth, processing power, disk speed and

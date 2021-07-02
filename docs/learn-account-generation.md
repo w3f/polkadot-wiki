@@ -15,7 +15,7 @@ There are several ways to generate a Polkadot account:
 - [Polkadot-JS Apps](#polkadotjs)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
-- [Ledger Hardware Wallet](learn-ledger)
+- [Ledger Hardware Wallet](learn-ledger.md)
 
 > If you prefer video instructions, we have an easy to follow guide
 > [on YouTube](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
@@ -26,7 +26,7 @@ The _only_ ways to get access to your account are via your secret seed or your a
 in combination with a password. You must keep them both secure and private. If you share them with
 anyone they will have full access to your account, including all of your funds. This information is
 a target for hackers and others with bad intentions - see also
-[How to Recognize Scams](learn-scams).
+[How to Recognize Scams](learn-scams.md).
 
 On this page we recommend a variety of account generation methods that have various convienience and
 security tradeoffs. Please review this page carefully before making your account so that you
@@ -142,7 +142,7 @@ Your address' format is only visual - the data used to derive this representatio
 are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
 recommend creating a new address for each chain you're using.
 
-Our [Accounts page](learn-accounts#address-conversion-tools) also has a tool you can use to convert
+Our [Accounts page](learn-accounts.md#address-conversion-tools) also has a tool you can use to convert
 your address between the different chain formats.
 
 You can copy your address by clicking on the account's icon while the desired chain format is
@@ -165,10 +165,10 @@ For detailed build and usage instructions of subkey, please see
 ## Polkadot-JS Apps
 
 > Please note! If you use this method to create your account and clear your cookies in your browser,
-> your account will be lost forever if you do not [back it up](learn-account-restore). Make sure you
+> your account will be lost forever if you do not [back it up](learn-account-restore.md). Make sure you
 > store your seed phrase in a safe place, or download the account's JSON file if using the
 > Polkadot{.js} browser extension. Learn more about account backup and restoration
-> [here](learn-account-restore).
+> [here](learn-account-restore.md).
 
 Using the Polkadot-JS user interface without the plugin is not recommended. It is the least secure
 way of generating an account. It should only be used if all of the other methods are not feasible in
@@ -205,7 +205,7 @@ decrypted with the password.
 
 Multi-signature accounts are accounts created from several standard accounts (or even other
 multi-sig accounts). For a full explanation, please see the
-[Accounts Explainer section on multi-sigs](learn-accounts#multi-signature-accounts).
+[Accounts Explainer section on multi-sigs](learn-accounts.md#multi-signature-accounts).
 
 On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter
 the threshold and add signatories. The threshold must be less than or equal to the number of
@@ -216,7 +216,7 @@ submission to be successful. Click `Create` when done.
 
 This merely calculates the multi-signature's address and adds it to your UI. The account does not
 exist yet, and is subject to the same
-[Existential Deposit and Reaping](learn-accounts#existential-deposit-and-reaping) rules as regular
+[Existential Deposit and Reaping](learn-accounts.md#existential-deposit-and-reaping) rules as regular
 accounts.
 
 Suppose we funded it with some tokens, and now want to send from the multi-sig to another account.
@@ -251,7 +251,7 @@ communication lines on-chain.
 > initiator. The deposit is not taken from the multi-sig's balance, but from the initiator.
 
 For a more in-depth introduction into multi signature accounts on Polkadot, please see
-[the accounts page section on Multi-sigs](learn-accounts#multi-signature-accounts).
+[the accounts page section on Multi-sigs](learn-accounts.md#multi-signature-accounts).
 
 ## Parity Signer
 
@@ -322,7 +322,7 @@ continue to keep your key safe.
 ## Ledger Hardware Wallet
 
 To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on our [Ledger hardware wallet guide page](learn-ledger).
+the instructions on our [Ledger hardware wallet guide page](learn-ledger.md).
 
 ## Vanity Generator
 
