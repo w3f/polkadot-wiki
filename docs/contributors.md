@@ -86,6 +86,19 @@ development, education, and blockchain technology consulting. He is passionate a
 teaching and has always kept a foot in education by designing and delivering software development
 and blockchain classes at General Assembly, Code Fellows, and Columbia University.
 
+---
+
+### Radhakrishna Dasari
+
+- email: [radha@web3.foundation](mailto:radha@web3.foundation)
+- matrix / riot / element: [@radha:web3.foundation](https://matrix.to/#/@radha:web3.foundation)
+- twitter: [@DrW3RK](https://twitter.com/DrW3RK)
+
+Radha is a Technical Educator at the Web3 Foundation. Radha has a PhD in Computer Science and has 
+three years of experience teaching Computer Science courses. He also taught a Massively Open Online 
+Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). He is excited to
+contribute to Web3 Foundation's vision by educating professionals and the general public about Web 3.0 Technology Stack.
+
 <br/><br/>
 
 ## Past Contributors
