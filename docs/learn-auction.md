@@ -4,12 +4,12 @@ title: Parachain Slots Auction
 sidebar_label: Parachain Slots Auction
 ---
 
-For a [parachain](learn-parachains) to be added to Polkadot it must inhabit one of the available
+For a [parachain](learn-parachains.md) to be added to Polkadot it must inhabit one of the available
 parachain slots. A parachain slot is a scarce resource on Polkadot and only a limited number will be
 available. As parachains ramp up there may only be a few slots that are unlocked every few months.
 The goal is to eventually have 100 parachain slots available on {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} (these will be split between parachains and the
-[parathread pool](learn-parathreads)). If a parachain wants to have guaranteed block inclusion at
+[parathread pool](learn-parathreads.md)). If a parachain wants to have guaranteed block inclusion at
 every Relay Chain block, it must acquire a parachain slot.
 
 The parachain slots will be sold according to an unpermissioned
@@ -61,7 +61,7 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](ens). The Candle auction is another solution that does not need the two-step
+names on the [ENS](ens.md). The Candle auction is another solution that does not need the two-step
 commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart
 contracts to participate.
 
@@ -90,7 +90,7 @@ contiguous slot.
 
 Parachains, or parachain teams, can bid in the auction by specifying the slot range that they want
 to lease as well as the number of tokens they are willing to reserve. Bidders can be either ordinary
-accounts, or use the [crowdloan functionality](learn-crowdloans) to source tokens from the
+accounts, or use the [crowdloan functionality](learn-crowdloans.md) to source tokens from the
 community.
 
 ```
