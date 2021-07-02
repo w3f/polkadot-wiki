@@ -10,7 +10,7 @@ the stake can always command the network.
 
 To do this, we bring together various novel mechanisms, including an amorphous state-transition
 function stored on-chain and defined in a platform-neutral intermediate language (i.e.
-[WebAssembly](learn-wasm)) and several on-chain voting mechanisms such as referenda with adaptive
+[WebAssembly](learn-wasm.md)) and several on-chain voting mechanisms such as referenda with adaptive
 super-majority thresholds and batch approval voting. All changes to the protocol must be agreed upon
 by stake-weighted referenda.
 
@@ -281,7 +281,7 @@ the council currently consists of 13 members. This is expected to increase over 
 to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
 will be 24 seats while on Kusama it is 19 seats.
 
-Along with [controlling the treasury](learn-treasury), the council is called upon primarily for
+Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
 malicious referenda, and electing the technical committee.
 
@@ -328,12 +328,12 @@ invalid.
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election](learn-phragmen) process that selects
+Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that selects
 validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one day on Kusama and one week on Polkadot.
 
-At the end of each term, [Phragmén election algorithm](learn-phragmen) runs and the result will
+At the end of each term, [Phragmén election algorithm](learn-phragmen.md) runs and the result will
 choose the new councillors based on the vote configurations of all voters. The election also chooses
 a set number of runners up (currently 19 on Kusama and 20 on Polkadot) that will remain in the queue
 with their votes intact.

@@ -7,7 +7,7 @@ description: An explanation of accounts, indices, identity, and reaping
 
 This document covers the basics of Polkadot and Kusama account addresses and how they exist
 on-chain. For a more in-depth explanation of the cryptography behind them, please see
-[the cryptography page](learn-cryptography).
+[the cryptography page](learn-cryptography.md).
 
 ## Address Format
 
@@ -35,7 +35,7 @@ as you convert the format.
 ## Address Generation, Derivation, and Portability
 
 A valid account only requires a private key that can sign on one of the
-[supported curves and signature schemes](build-protocol-info#cryptography). Most wallets take many
+[supported curves and signature schemes](build-protocol-info.md#cryptography). Most wallets take many
 steps from a mnemonic phrase to account key, which affects the ability to use the same mnemonic
 phrase in multiple wallets. Wallets that use different steps will arrive at a different set of
 addresses from the same mnemonic.
@@ -165,9 +165,9 @@ There is also the very secure [Parity Signer](https://www.parity.io/signer/). Th
 on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible
 phone that you are comfortable using only for Parity Signer.
 
-Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger).
+Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger.md).
 
-Alternatively, you might find other wallets on the [Wallet](build-wallets) page, but bear in mind
+Alternatively, you might find other wallets on the [Wallet](build-wallets.md) page, but bear in mind
 that some of these are **unaudited** and are not officially affiliated with Web3 Foundation or the
 Polkadot project unless otherwise stated.
 
@@ -258,13 +258,13 @@ The [_Identities pallet_](https://github.com/paritytech/substrate/tree/master/fr
 into Polkadot allows users to attach on-chain metadata to their accounts. This metadata can be
 verified by independent registrars to provide trustworthiness. To learn more about how to set or
 release an identity, how to define sub-accounts, or how to become a registrar, please read
-[this guide](learn-identity).
+[this guide](learn-identity.md).
 
 ## Proxy Accounts
 
 Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
 storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the
-[proxies](learn-proxies) page for more information.
+[proxies](learn-proxies.md) page for more information.
 
 ## Multi-signature Accounts
 
@@ -325,7 +325,7 @@ Multisig Address (SS58: 0): 15FKUKXC6kwaXxJ1tXNywmFy4ZY6FoDFCnU3fMbibFdeqwGw
 ```
 
 The Polkadot-JS Apps UI also supports multi-sig accounts, as documented in the
-[Account Generation page](learn-account-generation#multi-signature-accounts). This is easier than
+[Account Generation page](learn-account-generation.md#multi-signature-accounts). This is easier than
 generating them manually.
 
 ### Making Transactions with a Multi-signature Account
@@ -395,8 +395,8 @@ deposit back.
 ### Example with Polkadot.JS
 
 For this example, we will be using the
-[Westend](https://wiki.polkadot.network/docs/maintain-networks#westend-test-network) testnet and
-[Polkadot.JS Apps](https://wiki.polkadot.network/docs/learn-balance-transfers#polkadot-js-apps)
+[Westend](maintain-networks.md#westend-test-network) testnet and
+[Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps)
 to create a 2-of-3 multisig address and send a transaction with it.
 
 > While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
@@ -618,7 +618,7 @@ and Substrate that are returned based on your public key should match with the o
 
 You can verify your own public key verification by recalling that Polkadot addresses start with a
 '1', whereas Substrate addresses generally start with a '5' (Kusama addresses start with a capital
-letter). See [Addresses](https://wiki.polkadot.network/docs/learn-accounts#address-format) for
+letter). See [Addresses](learn-accounts.md#address-format) for
 more details.
 
 Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced for how

@@ -34,12 +34,12 @@ development, however, the [builders guide from Polkadot's wiki][polkadot-builder
 as well.
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
-[overview]: kusama-index
+[overview]: kusama-index.md
 [medium]: https://medium.com/polkadot-network/kusama-network-7446706b8f4c
-[create-account]: kusama-claims
-[endpoints]: kusama-endpoints
+[create-account]: kusama-claims.md
+[endpoints]: kusama-endpoints.md
 [tokens]: https://claim.kusama.network/
-[validator]: mirror-maintain-guides-how-to-validate-kusama
-[nominator]: mirror-maintain-guides-how-to-nominate-kusama
+[validator]: mirror-maintain-guides-how-to-validate-kusama.md
+[nominator]: mirror-maintain-guides-how-to-nominate-kusama.md
 [polkadot wiki]: https://wiki.polkadot.network/
-[polkadot-builders]: https://wiki.polkadot.network/docs/build-index
+[polkadot-builders]: build-index.md

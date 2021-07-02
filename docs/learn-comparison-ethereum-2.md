@@ -17,7 +17,7 @@ between shards.
 
 Likewise, in Polkadot, each shard hosts core logic, the shards are executed in parallel, and
 Polkadot can send cross-shard asynchronous messages. However, each Polkadot shard (in Polkadot
-terminology, "[parachain](learn-parachains)") has a unique STF. Applications can exist either within
+terminology, "[parachain](learn-parachains.md)") has a unique STF. Applications can exist either within
 a single shard or across shards by composing logic. Polkadot uses WebAssembly (Wasm) as a
 "meta-protocol". A shard's STF can be abstract as long as the validators on Polkadot can execute it
 within a Wasm environment. Polkadot will support smart contracts through parachains. To offer some 
@@ -45,18 +45,18 @@ protocol of Ethereum 2.0.
 ### Polkadot
 
 Like Ethereum 2.0, Polkadot also has a main chain, called the Relay Chain, with several shards,
-called [parachains](learn-parachains). Parachains are not restricted to a single interface like
+called [parachains](learn-parachains.md). Parachains are not restricted to a single interface like
 eWasm. Instead, they can define their own logic and interface, as long as they provide their STF to
 the Relay Chain validators so that they can execute it.
 
 Polkadot, now live as a Relay Chain, only plans to launch the ability to validate up to 20 shards
 per block, gradually scaling up to 100 shards per block. Besides parachains, which are scheduled for
-execution every block, Polkadot also has [parathreads](learn-parathreads), which are scheduled on a
+execution every block, Polkadot also has [parathreads](learn-parathreads.md), which are scheduled on a
 dynamic basis. This allows chains to share the sharded slots, much like multiple small airlines
 might share a gate at an airport.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](learn-bridges) that offer two-way compatibility.
+Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibility.
 
 ## Consensus
 
@@ -95,7 +95,7 @@ validators per shard to finalize all shards within one epoch. With 64 shards, th
 validators (given 256 validators per shard). [3][4]
 
 Polkadot can provide strong finality and availability guarantees with much fewer validators.
-Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking) to select validators from a smaller
+Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a smaller
 set, letting smaller holders nominate validators to run infrastructure while still claiming the
 rewards of the system, without running a node of their own. Polkadot plans to have 1_000 validators
 by the end of its first year of operation, and needs about ten validators for each parachain in the
@@ -122,7 +122,7 @@ every block, [4] meaning that shards could contain logic that executes based on 
 proof of a transaction on another shard. [7] Ethereum 2.0 has not released a specification for which
 nodes pass messages between shards.
 
-Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain) for parachains to send
+Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain.md) for parachains to send
 arbitrary messages to each other. Parachains open connections with each other and can send messages
 via their established channels. Given that collators will need to be full nodes of the Relay Chain
 as well, they will be connected and will be able to relay messages from parachain A
@@ -130,7 +130,7 @@ to parachain B.. Messages do not pass through the Relay Chain, only proofs of po
 operations (open, close, etc.) go into the Relay Chain. This enhances scalability by keeping data on
 the edges of the system.
 
-Polkadot will add a protocol called [SPREE](learn-spree) that provides shared logic for
+Polkadot will add a protocol called [SPREE](learn-spree.md) that provides shared logic for
 cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and
 interpretation by the receiving chain.
 
@@ -140,12 +140,12 @@ Ethereum 2.0 governance is still unresolved. Ethereum currently uses off-chain g
 like Github discussions, All Core Devs calls, and Ethereum Magicians to make decisions about the
 protocol. [8]
 
-Polkadot uses on-chain [governance](learn-governance) with a multicameral system. There are several
+Polkadot uses on-chain [governance](learn-governance.md) with a multicameral system. There are several
 avenues to issue proposals, e.g. from the on-chain Council, the Technical Committee, or from the
 public. All proposals ultimately pass through a public referendum, where the majority of tokens can
 always control the outcome. For low-turnout referenda, Polkadot uses adaptive quorum biasing to set
 the passing threshold. Referenda can cover a variety of topics, including fund allocation from an
-on-chain [Treasury](learn-treasury) or modifying the underlying runtime code of the chain. Decisions
+on-chain [Treasury](learn-treasury.md) or modifying the underlying runtime code of the chain. Decisions
 get enacted on-chain and are binding and autonomous.
 
 ## Upgrades

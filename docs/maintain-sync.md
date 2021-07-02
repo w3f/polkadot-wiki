@@ -55,7 +55,7 @@ encapsulated in WASM and can be integrated into webapps: https://github.com/pari
 ### Fast Install Instructions (Mac)
 
 > Not recommended if you're a validator. Please see
-> [secure validator setup](maintain-guides-secure-validator)
+> [validator setup](maintain-guides-validator.md)
 
 - Type terminal in the ios searchbar/searchlight to open the 'terminal' application
 - Install Homebrew within the terminal by running:
@@ -78,7 +78,7 @@ encapsulated in WASM and can be integrated into webapps: https://github.com/pari
 > This works only on Windows Pro with virtualization enabled.
 
 > Not recommended if you're a validator. Please see
-> [secure validator setup](maintain-guides-secure-validator)
+> [validator setup](maintain-guides-validator.md)
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
@@ -94,7 +94,7 @@ encapsulated in WASM and can be integrated into webapps: https://github.com/pari
 ### Fast Install Instructions (Linux)
 
 > Not recommended if you're a validator. Please see
-> [secure validator setup](maintain-guides-secure-validator)
+> [secure validator setup](maintain-guides-secure-validator.md)
 
 For the most recent binary please see the
 [release page](https://github.com/paritytech/polkadot/releases/) on the polkadot repository. The URL
@@ -160,7 +160,7 @@ The built binary will be in the `target/release` folder, called `polkadot`.
 ```
 
 Use the `--help` flag to find out which flags you can use when running the node. For example, if
-[connecting to your node remotely](maintain-wss), you'll probably want to use `--ws-external` and
+[connecting to your node remotely](maintain-wss.md), you'll probably want to use `--ws-external` and
 `--rpc-cors all`.
 
 The syncing process will take a while depending on your bandwidth, processing power, disk speed and

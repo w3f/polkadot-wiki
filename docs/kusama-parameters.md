@@ -12,7 +12,7 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except in the time slot duration itself. See
-[Polkadot Parameters](https://wiki.polkadot.network/docs/maintain-polkadot-parameters) for more
+[Polkadot Parameters](maintain-polkadot-parameters.md) for more
 details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
@@ -28,7 +28,7 @@ details on how Kusama's parameters differ from Polkadot's._
 | Era     | 6 hours   | 3_600   |
 
 \*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
-a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus) for
+a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus.md) for
 more details._
 
 ### Governance
@@ -56,7 +56,7 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 6 hours | 3_600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case the a validator misbehaves.                                                      |
-| Nomination period    | 6 hours | 3_600   | How often a new validator set is [elected](learn-phragmen).                                                                                                                                         |
+| Nomination period    | 6 hours | 3_600   | How often a new validator set is [elected](learn-phragmen.md).                                                                                                                                         |
 | Bonding duration     | 7 days  | 604_800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 7 days  | 604_800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 
@@ -67,7 +67,7 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 | Periods between spends | 6 days | 86_400 | When the treasury can spend again after spending previously. |
 
 Burn percentage is currently `0.20%`, though instead of being burned this amount is temporarily
-redirected into the [Society](maintain-guides-society-kusama)'s treasury to fund growth.
+redirected into the [Society](maintain-guides-society-kusama.md)'s treasury to fund growth.
 
 ### Precision
 

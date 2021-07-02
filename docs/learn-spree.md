@@ -13,7 +13,7 @@ and may be opted into by parachains.
 SPREE in brief was described with the following properties and functions:
 
 - Parachains can opt-in to special runtime logic fragments (like smart contracts).
-- These fragments have their own storage and own [XCMP](learn-crosschain) endpoint.
+- These fragments have their own storage and own [XCMP](learn-crosschain.md) endpoint.
 - All instances across parachains have identical logic.
 - It executes alongside parachain logic.
 - Protected: storage can not be altered by parachain logic; messages can not be faked from them by
@@ -31,7 +31,7 @@ each parachain. SmartProtocols are the precursor to SPREE.
 
 ## What is a SPREE module?
 
-SPREE modules are fragments of logic (in concrete terms they are blobs of [WebAssembly](learn-wasm)
+SPREE modules are fragments of logic (in concrete terms they are blobs of [WebAssembly](learn-wasm.md)
 code) that are uploaded onto Polkadot through a governance mechanism or by parachains. Once the blob
 is uploaded to Polkadot, all other parachains can decide to opt-in to the logic. The SPREE module
 would retain its own storage independent of the parachain, but would be callable through an

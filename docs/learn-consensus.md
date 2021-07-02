@@ -24,7 +24,7 @@ for agreeing on a block author and part of the fuller [Nakamoto consensus](#naka
 also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a
 set of rules for selecting the validator set and does not specify a chain selection rule or how a
 chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for
-coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos) is
+coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos.md) is
 a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection method.
 
 ## Why not Proof of Work?
@@ -80,7 +80,7 @@ BABE (Blind Assignment for Blockchain Extension) is the block production mechani
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
 Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments. BABE
 assigns block production slots to validators according to stake and using the Polkadot
-[randomness cycle](learn-randomness).
+[randomness cycle](learn-randomness.md).
 
 Validators in Polkadot will participate in a lottery in every slot that will tell them whether or
 not they are the block producer candidate for that slot. Slots are discrete units of time, nominally
@@ -101,7 +101,7 @@ When no validators have rolled low enough in the randomness lottery to qualify f
 a slot can remain seemingly blockless. We avoid this by running a secondary, round-robin style
 validator selection algorithm in the background. The validators selected to produce blocks through
 this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also
-produces a primary block from a [VRF-selected](learn-randomness) validator. Thus, a slot can have
+produces a primary block from a [VRF-selected](learn-randomness.md) validator. Thus, a slot can have
 either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
@@ -165,7 +165,7 @@ this new chain as the canonical one.
 
 ### PBFT / Tendermint
 
-Please see the [relevant section](learn-comparisons-cosmos#consensus) in the Cosmos comparison
+Please see the [relevant section](learn-comparisons-cosmos.md#consensus) in the Cosmos comparison
 article.
 
 ### Casper FFG

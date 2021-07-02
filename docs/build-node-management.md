@@ -14,7 +14,7 @@ guide will always refer to the executable as `polkadot`.
 > link to instructions) for your client.
 
 If you are trying to run a validator, refer to this tutorial
-[here](maintain-guides-how-to-validate-polkadot).
+[here](maintain-guides-how-to-validate-polkadot.md).
 
 ## Basic Node Operations
 
@@ -53,7 +53,7 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 
 **Execution**
 
-The Parity Polkadot client implements a [Polkadot Host](learn-polkadot-host) and a native runtime.
+The Parity Polkadot client implements a [Polkadot Host](learn-polkadot-host.md) and a native runtime.
 The runtime must compile to WebAssembly and is stored on-chain. If the client's runtime is the same
 spec as the runtime that is stored on-chain, then the client will execute blocks using the client
 binary. Otherwise, the client will execute the Wasm runtime from the chain.
@@ -84,7 +84,7 @@ The keystore stores session keys, which are important for validator operations.
 
 The database stores blocks and the state trie. If you are running a validator node, it also stores
 GRANDPA pre-votes and pre-commits and the offchain-worker DB. Use caution when
-[migrating validator nodes](maintain-guides-how-to-upgrade) to avoid equivocation. If you want to
+[migrating validator nodes](maintain-guides-how-to-upgrade.md) to avoid equivocation. If you want to
 start a new machine without resyncing, you can stop your node, back up the DB, and move it to a new
 machine.
 
@@ -107,7 +107,7 @@ Web3 Foundation maintains [Polkadot Deployer](https://github.com/w3f/polkadot-de
 allows you to create local or remote cloud deployments of Polkadot nodes. See the README for
 instructions.
 
-Validators, see the [secure setup guide](maintain-guides-how-to-use-polkadot-secure-validator) for
+Validators, see the [secure setup guide](maintain-guides-how-to-use-polkadot-validator.md) for
 information specific to deploying validator nodes.
 
 ## Monitoring and Telemetry

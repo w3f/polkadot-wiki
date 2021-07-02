@@ -20,8 +20,8 @@ extrinsics.
 ## Chill Validator
 
 To chill your validator or nominator, call the `staking.chill()` extrinsic. See the
-[How to Chill](maintain-guides-how-to-chill) page for more information. You can also
-[claim your rewards](learn-simple-payouts#claiming-rewards) at this time.
+[How to Chill](maintain-guides-how-to-chill.md) page for more information. You can also
+[claim your rewards](learn-simple-payouts.md#claiming-rewards) at this time.
 
 ## Purge validator session keys
 
@@ -30,7 +30,7 @@ through the `session.purgeKeys()` extrinsic with the controller account.
 
 > NOTE: **If you skip this step, you will not be able to reap your stash account**, and you will
 > need to rebond, purge the session keys, unbond, and wait the unbonding period again before being
-> able to transfer your tokens. See [Unbonding and Rebonding](maintain-guides-how-to-unbond) for
+> able to transfer your tokens. See [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) for
 > more details.
 
 ## Unbond your tokens

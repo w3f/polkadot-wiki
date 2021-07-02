@@ -66,4 +66,4 @@ transaction.
    claim them. If you want to maximize compounding, then you will need to claim often or nominate
    validators which regularly claim for you.
 4. Staking operations at the end of an era are closed to allow the off-chain validator election to
-   take place. See [Off-chain Phragmén](learn-phragmen#off-chain-phragmen) for more information.
+   take place. See [Off-chain Phragmén](learn-phragmen.md#off-chain-phragmen) for more information.

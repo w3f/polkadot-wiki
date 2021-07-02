@@ -25,7 +25,7 @@ longer period of time.
 
 Please see the wiki page for [setting up a validator](maintain-guides-how-to-validate-polkadot.md)
 as well as additional information on
-[making your validator secure](maintain-guides-secure-validator.md).
+[validator secure](maintain-guides-validator.md).
 
 ## How to Apply
 

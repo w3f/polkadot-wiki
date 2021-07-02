@@ -10,7 +10,7 @@ service in the Kusama and Polkadot networks that only charges a small fee (0.04 
 no fees on Polkadot (although there may be a small fee in the future). However, you will of course
 need to reserve some DOT in your account while you have an identity, no matter which registrar you
 use. For details on amount necessary to reserve, as well as the identity system as a whole, see the
-[identity](learn-identity) page.
+[identity](learn-identity.md) page.
 
 > **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys
 > to anyone!
@@ -21,7 +21,7 @@ challenge message. Be aware that the `display name` cannot be too similar to oth
 verified already. There is no need to set all of the fields when using the service. You are free to
 set whichever field or fields that you like.
 
-Free feel to join the [Polkadot's community](community#polkadot) to ask questions if there is
+Free feel to join the [Polkadot's community](community.md#polkadot) to ask questions if there is
 anything unclear.
 
 ## Setting an On-chain Identity

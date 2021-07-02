@@ -26,7 +26,7 @@ are equal to 1e10 Planck.
 
 _Note: This changed at block #1_248_328. Previously, DOT were denominated as equal to 1e12 Planck,
 just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)".
-See [Redenomination of DOT](redenomination) for more details._
+See [Redenomination of DOT](redenomination.md) for more details._
 
 ### Kusama
 
@@ -61,7 +61,7 @@ the Polkadot platform.
 
 Polkadot will enable any holder of DOT to participate in governance. For details on how holders can
 participate in governance, as well as their rights and responsibilities, see the
-[governance page](learn-governance).
+[governance page](learn-governance.md).
 
 ### DOT for Consensus
 
@@ -78,7 +78,7 @@ the DOT will be staked for, and the total number of DOT staked.
 DOT will have the ability to be locked for a duration in order to secure a parachain slot in the
 network. The DOT will be reserved during slot lease and will be released back to the account that
 reserved them after the duration of the lease has elapsed and the parachain is removed. You can
-learn more about this aspect by reading about the [auctions](learn-auction) that govern parachain
+learn more about this aspect by reading about the [auctions](learn-auction.md) that govern parachain
 slots.
 
 ### Vesting
@@ -108,7 +108,7 @@ slope of the unlock line, and the block number for when the unlocking begins.
 
 #### Lazy Vesting
 
-Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that someone must
+Like [simple payouts](learn-simple-payouts.md), vesting is _lazy_, which means that someone must
 explicitly call an extrinsic to update the lock that is placed on an account.
 
 - The `vest` extrinsic will update the lock that is placed on the caller.
@@ -148,26 +148,26 @@ beside allowing you to experiment with the network.
 
 ### Getting Westies
 
-The current testnet is called [Westend](maintain-networks#westend-test-network) and you can obtain
+The current testnet is called [Westend](maintain-networks.md#westend-test-network) and you can obtain
 its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org).
 
-You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator).
+You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator.md).
 
 ### Getting Rococo Tokens
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
-the [crosschain](learn-crosschain) message passing aspects of this testnet. General users can can
+the [crosschain](learn-crosschain.md) message passing aspects of this testnet. General users can can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
 
-Learn more about Rococo on its [dedicated wiki page](build-parachains-rococo).
+Learn more about Rococo on its [dedicated wiki page](build-parachains-rococo.md).
 
 ## Kusama Tokens
 
 Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are available via the
 [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or
-through the [Treasury](learn-treasury). Alternatively, they can be obtained on the open market.
+through the [Treasury](learn-treasury.md). Alternatively, they can be obtained on the open market.
 
 ## Polkadot Mainnet DOT
 

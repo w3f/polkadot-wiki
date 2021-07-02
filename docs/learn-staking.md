@@ -31,8 +31,8 @@ validator set.
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
 
 As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
-chain's native token. You can take a look at the [nominator guide](learn-nominator) to understand
-your responsibilities as a nominator, and the [validator docs](learn-validator) to understand what
+chain's native token. You can take a look at the [nominator guide](learn-nominator.md) to understand
+your responsibilities as a nominator, and the [validator docs](learn-validator.md) to understand what
 you need to do as a validator.
 
 ### 2. Nomination period
@@ -70,7 +70,7 @@ The general rule for rewards across validator pools is that two validator pools 
 the **same amount of tokens** for equal work, i.e. they are NOT paid proportional to the stakes in
 each pool. There is a probabilistic component to staking rewards in the form of
 [era points](maintain-guides-validator-payout.md/#era-points) and
-[tips](https://wiki.polkadot.network/docs/learn-transaction-fees#fee-calculation) but these
+[tips](learn-transaction-fees.md#fee-calculation) but these
 should average out over time.
 
 Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's
@@ -111,7 +111,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual
   value, which fluctuates, but merely an assumption for purposes of this example; to understand how
   the actual minimal stake is calculated, see
-  [here](https://wiki.polkadot.network/docs/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
+  [here](faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
 |               | **A - Validator Pool** |                             |         |
 | :-----------: | :--------------------: | :-------------------------: | :-----: |
@@ -289,8 +289,8 @@ Note that if less than 10% of all validators are offline, no penalty is enacted.
 Validators should have a well-architected network infrastructure to ensure the node is running to
 reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
-and being slashed for equivocation - see below). A comprehensive guide on secure validator setup is
-available [here](https://wiki.polkadot.network/docs/maintain-guides-secure-validator).
+and being slashed for equivocation - see below). A comprehensive guide on validator setup is
+available [here](maintain-guides-validator.md).
 
 ### GRANDPA Equivocation
 
@@ -366,13 +366,13 @@ rewards will be calculated four times per day on Kusama and once per day on Polk
 Rewards are calculated based on era points, which have a probabilistic component. In other words,
 there may be slight differences in your rewards from era to era, and even amongst validators in the
 active set at the same time. These variations should cancel out over a long enough timeline. See the
-page on [Validator Payout Guide](maintain-guides-validator-payout) for more information on how these
+page on [Validator Payout Guide](maintain-guides-validator-payout.md) for more information on how these
 are calculated.
 
 In order to be paid your staking rewards, someone must claim them for each validator that you
 nominate. Staking rewards are kept available for 84 eras, which is approximately 84 days on Polkadot
 and 21 days on Kusama. For more information on why this is so, see the page on
-[simple payouts](learn-simple-payouts).
+[simple payouts](learn-simple-payouts.md).
 
 > WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim
 > them and some of your staking rewards will be lost.
@@ -419,7 +419,7 @@ using the Extrinsics tab (`Developer -> Extrinsics -> Staking -> Bond`) you can 
 "None", effectively burning them.
 
 For specific details about validator payouts, please see
-[this guide](maintain-guides-validator-payout).
+[this guide](maintain-guides-validator-payout.md).
 
 ## Inflation
 
@@ -475,7 +475,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Secure validator setup](https://wiki.polkadot.network/docs/maintain-guides-secure-validator)
+- [Validator setup](maintain-guides-validator.md)
 
-[epoch]: glossary#epoch
-[how to chill]: maintain-guides-how-to-chill
+[epoch]: glossary.md#epoch
+[how to chill]: maintain-guides-how-to-chill.md

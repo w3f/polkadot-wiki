@@ -187,7 +187,7 @@ automatically loaded.
 On Polkadot there are two registrars:
 
 - Web3 Foundation is registrar #0. The W3F registrar service is available on the Kusama at the
-  moment, follow the guide written [here](learn-registrar) on how to use it. The service will be
+  moment, follow the guide written [here](learn-registrar.md) on how to use it. The service will be
   available on the Polkadot shortly.
 - Chevdor is registrar #1.
 
@@ -224,7 +224,7 @@ while the judgement is going on - it's up to the registrar to keep an eye on the
 Users can also link accounts by setting "sub accounts", each with its own identity, under a primary
 account. The system reserves a bond for each sub account. An example of how you might use this would
 be a validation company running multiple validators. A single entity, "My Staking Company", could
-register multiple sub accounts that represent the [Stash accounts](learn-keys) of each of their
+register multiple sub accounts that represent the [Stash accounts](learn-keys.md) of each of their
 validators.
 
 An account can have a maximum of 100 sub-accounts.

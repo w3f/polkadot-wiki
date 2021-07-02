@@ -11,7 +11,7 @@ to connect to and join.
 
 ## Polkadot Networks
 
-To connect to a Polkadot network please follow the [instructions](maintain-sync) for installing the
+To connect to a Polkadot network please follow the [instructions](maintain-sync.md) for installing the
 Polkadot executable.
 
 ### Polkadot Mainnet
@@ -65,7 +65,7 @@ Check that your node is connected by viewing it on
 
 #### Westend Faucet
 
-Follow the instruction [here](learn-DOT.md/#getting-westies) for instructions on acquiring Westies.
+Follow the instruction [here](learn-DOT.md#getting-westies) for instructions on acquiring Westies.
 
 ### Differences
 

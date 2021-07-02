@@ -13,15 +13,15 @@ it will be useful to any infrastructure provider such as validators or chain ind
 The guide focuses on Polkadot and Kusama, but the principles will apply to parachains and other
 Substrate-based chains. The guide contains four sections:
 
-1. [Protocol Info](build-protocol-info): The entry point to the guide. Please read it carefully as
+1. [Protocol Info](build-protocol-info.md): The entry point to the guide. Please read it carefully as
    it provides information about Polkadot that differentiates it from other blockchains. Use this
    page to check your assumptions.
-1. [Assets](build-integrate-assets): The guide to integrating assets on Polkadot into your systems.
-1. [Node Management](build-node-management): This page will guide you to starting and monitoring a
+1. [Assets](build-integrate-assets.md): The guide to integrating assets on Polkadot into your systems.
+1. [Node Management](build-node-management.md): This page will guide you to starting and monitoring a
    node.
-1. [Node Interaction](build-node-interaction): This page will teach you to interact with your node
+1. [Node Interaction](build-node-interaction.md): This page will teach you to interact with your node
    via multiple RPC tooling options.
-1. [Transaction Construction](build-transaction-construction): A guide to transaction construction,
+1. [Transaction Construction](build-transaction-construction.md): A guide to transaction construction,
    signing, decoding, and serialization using several available tools.
 
 ## Recommendation
@@ -36,5 +36,5 @@ node and [TxWrapper Core](https://github.com/paritytech/txwrapper-core/) to cons
 transactions. Parity and Web3 Foundation will be able to provide the best support if you use these
 tools.
 
-If your team would like support, join some of our [community channels](community) or contact
+If your team would like support, join some of our [community channels](community.md) or contact
 support@polkadot.network.

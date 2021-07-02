@@ -12,7 +12,7 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except in the time slot duration itself. See
-[Polkadot Parameters](https://wiki.polkadot.network/docs/maintain-polkadot-parameters) for more
+[Polkadot Parameters](maintain-polkadot-parameters.md) for more
 details on how Kusama's parameters differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
@@ -28,7 +28,7 @@ details on how Kusama's parameters differ from Polkadot's._
 | Era      | 24 hours  | 14_400  |
 
 \*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
-a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus) for
+a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus.md) for
 more details._
 
 ### Governance
@@ -74,4 +74,4 @@ DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or
 Plancks make up a DOT.
 
 The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
-known as \_Denomination Day*. See [Redenomination](redenomination) for details.
+known as \_Denomination Day*. See [Redenomination](redenomination.md) for details.

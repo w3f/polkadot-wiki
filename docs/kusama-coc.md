@@ -27,7 +27,7 @@ requisite information needed in the dispense of their duties as a participant.
 
 Please understand that this network is, despite its success, an experiment with potential flaws, so
 it’s appreciated that community members help report any sort of exploits directly to the team before
-sharing publicly. Please see the [bug bounty program](kusama-bug-bounty).
+sharing publicly. Please see the [bug bounty program](kusama-bug-bounty.md).
 
 ## Examples of Unacceptable Behavior
 

@@ -8,7 +8,7 @@ description: Step-by-step guides on backing up and restoring a Polkadot account.
 Depending on what software you are using to access your account, there are various ways to back up
 and restore your account. It is a good idea to back your information up and keep it in a secure
 place.. Note that in order to recover an account, you should create your account according to the
-instructions [here](learn-account-generation). In general, however, as long as you know how you
+instructions [here](learn-account-generation.md). In general, however, as long as you know how you
 created your account, and have the seed phrase (mnemonic phrase) or JSON file (and password) stored
 securely, you will be able to restore your account.
 

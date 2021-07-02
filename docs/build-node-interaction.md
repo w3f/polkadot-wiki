@@ -86,9 +86,9 @@ if response.ok:
 This returns a fully decoded block.
 
 In the `balances.transfer` extrinsic, the `partialFee` item is the transaction fee. It is called
-"partial fee" because the [total fee](build-protocol-info#fees) would include the `tip` field.
+"partial fee" because the [total fee](build-protocol-info.md#fees) would include the `tip` field.
 Notice that some extrinsics do not have a signature. These are
-[inherents](build-protocol-info#extrinsics).
+[inherents](build-protocol-info.md#extrinsics).
 
 > When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining
 > if the extrinsic had a fee. This field only means that it would require a fee if submitted as a

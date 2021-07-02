@@ -6,7 +6,7 @@ sidebar_label: How to transfer Balances
 
 Balance transfers are used to send balance from one account to another account. To start
 transferring balances, we will begin by using [Polkadot-JS Apps][]. This guide assumes that you've
-already [created an account](learn-account-generation) and have some funds that are ready to be transferred.
+already [created an account](learn-account-generation.md) and have some funds that are ready to be transferred.
 
 ## Polkadot-JS Apps
 
@@ -85,14 +85,14 @@ References may still exist from:
 #### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at [Unbonding and Rebonding](#maintain-guides-how-to-unbond) to check if you
+Follow the instructions at [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) to check if you
 have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 #### Purging Session Keys
 
 If you used this account to set up a validator and you did not purge your keys before unbonding your
 tokens, you need to purge your keys. You can do this by seeing the
-[How to Stop Validating](#maintain-guides-how-to-stop-validating) page. This can also be checked by
+[How to Stop Validating](maintain-guides-how-to-stop-validating.md) page. This can also be checked by
 checking `session.nextKeys` in the chain state for an existing key.
 
 #### Checking for Locks
