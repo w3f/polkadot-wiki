@@ -6,10 +6,10 @@ description: An overview of the cryptographic functions used in Polkadot
 ---
 
 This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some
-knowledge about cryptographic primitives that are used in blockchains generally such as hashes,
+knowledge about cryptographic primitives that are generally used in blockchains such as hashes,
 elliptic curve cryptography (ECC), and public-private keypairs.
 
-For detailed descriptions on the cryptography used please see the more advanced
+For detailed descriptions on the cryptography used in Polkadot please see the more advanced
 [research wiki](https://research.web3.foundation).
 
 ## Hashing Algorithm
