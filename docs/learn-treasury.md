@@ -6,7 +6,7 @@ description: Details about Polkadot's on-chain treasury.
 ---
 
 The Treasury is a pot of funds collected through transaction fees, slashing,
-[staking inefficiencies](https://wiki.polkadot.network/docs/en/learn-staking/#inflation), etc. The
+[staking inefficiencies](https://wiki.polkadot.network/docs/learn-staking/#inflation), etc. The
 funds held in the Treasury can be spent by making a spending proposal that, if approved by the
 [Council](learn-governance#Council), will enter a waiting period before distribution. This waiting
 period is known as the budget period, and its duration is subject to [governance](learn-governance),
@@ -17,7 +17,7 @@ If the Treasury ends a budget period without spending all of its funds, it suffe
 percentage of its funds -- thereby causing deflationary pressure.
 {{ polkadot: This percentage is currently at 1%
 on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
-[Society](https://guide.kusama.network/docs/en/maintain-guides-society-kusama) rather than being
+[Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
 burned. :kusama }}
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
@@ -45,7 +45,7 @@ The Treasury is funded from different sources:
    taken from the slash amount and varies per offence and number of reporters.
 2. Transaction fees: A portion of each block's transaction fees goes to the Treasury, with the
    remainder going to the block author.
-3. Staking inefficiency: [Inflation](https://wiki.polkadot.network/docs/en/learn-staking/#inflation)
+3. Staking inefficiency: [Inflation](https://wiki.polkadot.network/docs/learn-staking/#inflation)
    is designed to be 10% in the first year, and the ideal staking ratio is set at 50%, meaning half
    of all tokens should be locked in staking. Any deviation from this ratio will cause a
    proportional amount of the inflation to go to the Treasury. In other words, if 50% of all tokens

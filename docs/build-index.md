@@ -4,7 +4,7 @@ title: Builder's Portal
 sidebar_label: Builder's Portal
 ---
 
-Welcome to the builders section of the Polkadot Wiki.
+Welcome to the builder's section of the Polkadot Wiki.
 
 Here, you will be able to find the most up-to-date information on the status of the development
 tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about
@@ -21,6 +21,7 @@ This section of the wiki is divided into the following parts:
   parathreads.
 - [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can
   be deployed to a live chain.
+- [Polkadot Wallets](build-wallets) - Learn about the supported wallets and how to manage accounts.
 
 ## Integration Guide
 
@@ -46,8 +47,7 @@ integrate Polkadot into their systems.
 
 ## Resources
 
-- [Examples](build-examples-index) - Example projects sourced from the community -- see what others
-  are building.
+- [Examples](#) - Example projects sourced from the community -- see what others are building.
 
 ### Grants
 

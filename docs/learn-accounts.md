@@ -186,8 +186,8 @@ funds are to be used. If the funds are to be used for transfers then the usable 
 amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction fees
 than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
 
-The "total" balance of the account is considered the amount of "free" funds in the account
-subtracted by any funds that are "reserved." Reserved funds are held due to on-chain requirements
+The **total** balance of the account is considered to be the sum of `free` and `reserved` funds in the account. 
+Reserved funds are held due to on-chain requirements
 and can usually be freed by making some on-chain action. For example, the "Identity" pallet reserves
 funds while an on-chain identity is registered, but by clearing the identity you can unreserve the
 funds and make them free again.
@@ -395,8 +395,8 @@ deposit back.
 ### Example with Polkadot.JS
 
 For this example, we will be using the
-[Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) testnet and
-[Polkadot.JS Apps](https://wiki.polkadot.network/docs/en/learn-balance-transfers#polkadot-js-apps)
+[Westend](https://wiki.polkadot.network/docs/maintain-networks#westend-test-network) testnet and
+[Polkadot.JS Apps](https://wiki.polkadot.network/docs/learn-balance-transfers#polkadot-js-apps)
 to create a 2-of-3 multisig address and send a transaction with it.
 
 > While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
@@ -618,7 +618,7 @@ and Substrate that are returned based on your public key should match with the o
 
 You can verify your own public key verification by recalling that Polkadot addresses start with a
 '1', whereas Substrate addresses generally start with a '5' (Kusama addresses start with a capital
-letter). See [Addresses](https://wiki.polkadot.network/docs/en/learn-accounts#address-format) for
+letter). See [Addresses](https://wiki.polkadot.network/docs/learn-accounts#address-format) for
 more details.
 
 Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced for how

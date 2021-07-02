@@ -110,7 +110,7 @@ Chain, voting on finality, producing blocks in their decided slots, and verifyin
 transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
 Finally, individuals may participate in the block production process indirectly by
-[nominating](https://wiki.polkadot.network/docs/en/learn-nominator) validators. In this way,
+[nominating](https://wiki.polkadot.network/docs/learn-nominator) validators. In this way,
 individuals who are not running a node can still share in staking rewards.
 
 ## Relay Chain
@@ -164,7 +164,7 @@ The inflation rate is approximately 10% per year.
 A portion of the inflation is rewarded to validators for performing their duties, while another
 portion may go directly to the treasury. The exact percentage that goes into both varies and is
 based on the amount of DOT that are staked. Please see the article on
-[inflation](learn-staking#inflation) for more information.
+[inflation](learn-staking.md/#inflation) for more information.
 
 ## Governance
 
@@ -270,7 +270,7 @@ integration between the two applications.
 
 ### What is the minimum amount of KSM / DOT I can have in my account?
 
-Please see information about [Existential Deposits](build-protocol-info#existential-deposit).
+Please see information about [Existential Deposits](build-protocol-info.md/#existential-deposit).
 
 ### What are the transfer fees for Kusama?
 

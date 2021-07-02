@@ -47,6 +47,7 @@ guides to set up a node and run the network.
 - [How to upgrade a Validator Node](maintain-guides-how-to-upgrade) - Guide on upgrading your
   validator node.
 - [How to Chill](maintain-guides-how-to-chill) - Walkthrough on how to chill as a validator.
+- [How to Stop Validating](maintain-guides-how-to-stop-validating) - Proper way to stop validating.
 
 ## Governance
 

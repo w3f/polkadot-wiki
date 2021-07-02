@@ -85,19 +85,6 @@ class Footer extends React.Component {
           <a className="item homepage-font" href="https://polkadot.network/privacy/">
             Privacy Policy
           </a>
-          <a className="item homepage-font" href="#" id="cookie-settings">
-            Cookie Settings
-          </a>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              var cookieSettings = document.getElementById('cookie-settings');
-              cookieSettings.onclick = function() {
-                return klaro.show();
-              };
-              `,
-            }}
-          />
         </section>
       </footer>
     );

@@ -6,7 +6,7 @@ sidebar_label: How to run a Validator on Polkadot
 
 > The following information applies to the Polkadot network. If you want to set up a validator on
 > Kusama, check out the
-> [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama)
+> [Kusama guide](https://guide.kusama.network/docs/mirror-maintain-guides-how-to-validate-kusama)
 > instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
@@ -19,8 +19,10 @@ slashed, your money and your reputation will be at risk. However, running a vali
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
-**Warning:** It is highly recommended that you have significant system administration experience
-before attempting to run your own validator.
+⚠️ **`Warning: It is highly recommended that you have significant system administration experience
+before attempting to run your own validator.` You must be able to handle technical issues and 
+anomalies with your node which you must be able to tackle yourself. Being a validator involves more than 
+just executing the Polkadot binary.**
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator) information to make sure you understand the
@@ -39,7 +41,7 @@ experience.
 ### How many DOT do I need?
 
 You can have a rough estimate on that by using the methods listed
-[here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are
+[here](faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Validators are
 elected based on [Phragmén's algorithm](learn-phragmen). To be elected into the set, you need a
 minimum stake behind your validator. This stake can come from yourself or from
 [nominators](learn-nominator). This means that as a minimum, you will need enough DOT to set up
@@ -80,23 +82,38 @@ The specs posted above are by no means the minimum specs that you could use when
 validator, however you should be aware that if you are using less you may need to toggle some extra
 optimizations in order to be equal to other validators that are running the standard.
 
-### Install Rust
+### Node Prerequisites: Install Rust and Dependencies
 
 Once you choose your cloud service provider and set-up your new server, the first thing you will do
 is install Rust.
 
-If you have never installed Rust, you should do this first. This command will fetch the latest
-version of Rust and install it.
+If you have never installed Rust, you should do this first. 
 
-```sh
-curl https://sh.rustup.rs -sSf | sh
-```
-
-Otherwise, if you have already installed Rust, run the following command to make sure you are using
+If you have already installed Rust, run the following command to make sure you are using
 the latest version.
 
 ```sh
 rustup update
+```
+
+If not, this command will fetch the latest version of Rust and install it.
+
+```sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y 
+```
+
+> If you do not have "curl" installed, run "sudo apt install curl"
+
+To configure your shell, run the following command.
+
+```sh
+source $HOME/.cargo/env
+```
+
+Verify your installation.
+
+```sh
+rustc --version
 ```
 
 Finally, run this command to install the necessary dependencies for compiling and running the
@@ -146,16 +163,17 @@ sudo ntpq -p
 > get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
 > zero allocated blocks making it on chain.
 
-### Building and Installing the `polkadot` Binary
+### Building and Installing the `polkadot` binary
 
 You will need to build the `polkadot` binary from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
-code available in the **v0.8** branch.
+code available in the **v0.9** branch.
 
-You should generally use the latest **0.8.x** tag. You should either review the output from the "git
+You should generally use the latest **0.9.x** tag. You should either review the output from the "git
 tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list
-of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e.,
-the highest number).
+of all the potential 0.9 releases. You should replace `VERSION` below with the latest build (i.e.,
+the highest number). You can also find the latest Kusama version on the
+[release](https://github.com/paritytech/polkadot/releases) tab.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com:paritytech/polkadot.git`.
@@ -163,22 +181,45 @@ the highest number).
 ```sh
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
+```
+
+Run the following command to find the latest version.
+
+```sh
 git tag -l | sort -V | grep -v -- '-rc'
-echo Get the latest version and replace VERSION (below) with it.
+```
+
+Find the latest version; replace "VERSION" in the commmand below and 
+run to change your branch.
+
+```sh
 git checkout VERSION
 ./scripts/init.sh
+```
+
+Build native code with the cargo release profile.
+
+```sh
 cargo build --release
 ```
 
-This step will take a while (generally 10 - 40 minutes, depending on your hardware).
+***This step will take a while (generally 10 - 40 minutes, depending on your hardware).***
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be
 > done by running:
 >
 > ```sh
-> rustup install nightly-2020-10-06
-> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
-> cargo +nightly-2020-10-06 build --release
+> rustup install nightly-2021-06-09
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-09
+> cargo +nightly-2021-06-09 build --release
+> ```
+>
+> You may also need to run the build more than once. 
+> 
+> If you would like to execute the tests, run the following command: 
+> 
+> ```sh
+> cargo test --all
 > ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
@@ -207,6 +248,31 @@ You can begin syncing your node by running the following command:
 ```
 
 if you do not want to start in validator mode right away.
+
+```
+2021-06-17 03:07:07 Parity Polkadot    
+2021-06-17 03:07:07 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu    
+2021-06-17 03:07:07 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021    
+2021-06-17 03:07:07 📋 Chain specification: Polkadot    
+2021-06-17 03:07:07 🏷 Node name: boiling-pet-7554    
+2021-06-17 03:07:07 👤 Role: FULL    
+2021-06-17 03:07:07 💾 Database: RocksDb at /root/.local/share/polkadot/chains/polkadot/db    
+2021-06-17 03:07:07 ⛓  Native runtime: polkadot-9050 (parity-polkadot-0.tx7.au0)    
+2021-06-17 03:07:10 🏷 Local node identity is: 12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u    
+2021-06-17 03:07:10 📦 Highest known block at #17914    
+2021-06-17 03:07:10 〽️ Prometheus server started at 127.0.0.1:9615    
+2021-06-17 03:07:10 Listening for new connections on 127.0.0.1:9944.  
+```
+
+Example of node sync:
+```
+2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u    
+2021-06-17 03:07:40 ⚙️  Syncing 218.8 bps, target=#5553764 (17 peers), best: #24034 (0x08af…dcf5), finalized #23552 (0xd4f0…2642), ⬇ 173.5kiB/s ⬆ 12.7kiB/s    
+2021-06-17 03:07:45 ⚙️  Syncing 214.8 bps, target=#5553765 (20 peers), best: #25108 (0xb272…e800), finalized #25088 (0x94e6…8a9f), ⬇ 134.3kiB/s ⬆ 7.4kiB/s    
+2021-06-17 03:07:50 ⚙️  Syncing 214.8 bps, target=#5553766 (21 peers), best: #26182 (0xe7a5…01a2), finalized #26112 (0xcc29…b1a9), ⬇ 5.0kiB/s ⬆ 1.1kiB/s    
+2021-06-17 03:07:55 ⚙️  Syncing 138.4 bps, target=#5553767 (21 peers), best: #26874 (0xcf4b…6553), finalized #26624 (0x9dd9…27f8), ⬇ 18.9kiB/s ⬆ 2.0kiB/s    
+2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s    
+```
 
 The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only
 required explicitly if you start your node without one of these two options. If you do not set your
@@ -249,11 +315,11 @@ It is now time to set up our validator. We will do the following:
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "+ Stash" button.
 
-![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
+![dashboard bonding](assets/guides/how-to-validate/polkadot-dashboard-bonding.png)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliDOT - make
-  sure that your Stash account contains _at least_ this much. You can, of course, stake more than
-  this.
+- **Stash account** - Select your Stash account. In this example, we will bond 1 DOT, where the minimum 
+  bonding amount is 1. Make sure that your Stash account contains _at least_ this much. You can, of course, 
+  stake more than this.
 - **Controller account** - Select the Controller account created earlier. This account will also
   need a small amount of DOT in order to start and stop validating.
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
@@ -262,7 +328,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](learn-staking/#reward-distribution). Starting with runtime version v23 natively included in
-  client version [0.8.23](https://github.com/paritytech/polkadot/releases/tag/v0.8.23), payouts can
+  client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3), payouts can
   go to any custom address. If you'd like to redirect payments to an account that is neither the
   controller nor the stash account, set one up. Note that it is extremely unsafe to set an exchange
   address as the recipient of the staking rewards.
@@ -270,9 +336,15 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
 
-After a few seconds, you should see an "ExtrinsicSuccess" message. You should now see a new card
-with all your accounts (note: you may need to refresh the screen). The bonded amount on the right
-corresponds to the funds bonded by the Stash account.
+![sign transaction](assets/guides/how-to-validate/polkadot-authorize-transaction-stash.png)
+
+After a few seconds, you should see an `ExtrinsicSuccess` message.
+
+Your bonded account will available under `Stashes`. You should now see a new card
+with all your accounts (note: you may need to refresh the screen). The bonded amount on the 
+right corresponds to the funds bonded by the Stash account.
+
+![stash overview](assets/guides/how-to-validate/polkadot-stash-overview.png)
 
 ## Set Session Keys
 
@@ -289,6 +361,29 @@ will now start running the node.
 
 ```sh
 ./target/release/polkadot --validator --name "name on telemetry"
+```
+
+Similarly: 
+
+```
+2021-06-17 03:12:08 Parity Polkadot    
+2021-06-17 03:12:08 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu    
+2021-06-17 03:12:08 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021    
+2021-06-17 03:12:08 📋 Chain specification: Polkadot    
+2021-06-17 03:12:08 🏷 Node name: nateched-test    
+2021-06-17 03:12:08 👤 Role: AUTHORITY    
+2021-06-17 03:12:08 💾 Database: RocksDb at /root/.local/share/polkadot/chains/polkadot/db    
+2021-06-17 03:12:08 ⛓  Native runtime: polkadot-9050 (parity-polkadot-0.tx7.au0)    
+2021-06-17 03:12:12 🏷 Local node identity is: 12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u    
+2021-06-17 03:12:12 📦 Highest known block at #64673    
+2021-06-17 03:12:12 〽️ Prometheus server started at 127.0.0.1:9615    
+2021-06-17 03:12:12 Listening for new connections on 127.0.0.1:9944.    
+2021-06-17 03:12:12 👶 Starting BABE Authorship worker    
+```
+
+```
+2021-06-17 03:12:16 🔍 Discovered new external address for our node: /ip4/10.26.11.1/tcp/30333/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u    
+2021-06-17 03:12:17 ⚙️  Syncing, target=#5553810 (14 peers), best: #65068 (0x6da5…0662), finalized #65024 (0x4e84…d170), ⬇ 352.2kiB/s ⬆ 75.6kiB/s    
 ```
 
 You can give your validator any name that you like, but note that others will be able to see it, and
@@ -341,8 +436,8 @@ Go to [Staking > Account Actions](https://polkadot.js.org/apps/#/staking/actions
 Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys`
 in the field and click "Set Session Key".
 
-![staking-change-session](assets/guides/how-to-validate/set-session-key-1.jpg)
-![staking-session-result](assets/guides/how-to-validate/set-session-key-2.jpg)
+![staking-change-session](assets/guides/how-to-validate/set-session-key-1.png)
+![staking-session-result](assets/guides/how-to-validate/set-session-key-2.png)
 
 Submit this extrinsic and you are now ready to start validating.
 
@@ -352,22 +447,39 @@ To verify that your node is live and synchronized, head to
 [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) and find your node. Note that this
 will show all nodes on the Polkadot network, which is why it is important to select a unique name!
 
-If everything looks good, go ahead and click on "Validate" in Polkadot UI.
+In this example, we used the name `techedtest` and have successfully located it upon searching:
 
-![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
-![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
+![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-telemetry.png)
 
+### Setup via Validator Tab
+
+![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-1.png)
+
+Here you will need to input the Keys from `rotateKeys`, which
+is the Hex output from `author_rotateKeys`. The keys will show 
+as pending until applied at the start of a new session.
+
+The "reward commission percentage" is the commission percentage
+that you can declare against your validator's rewards. This is the rate that your validator will be commissioned with. 
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-Click "Validate".
+> Note: setting a commission rate of 100% suggests that you do not
+> want your validator to receive nominations.
+
+You can also determine if you would like to receive nominations
+with the "allows new nominations" option.
+
+![dashboard validate](assets/guides/how-to-validate/polkadot-dashboard-validate-2.png)
+
+Click "Bond & Validate".
 
 If you go to the "Staking" tab, you will see a list of active validators currently running on the
 network. At the top of the page, it shows the number of validator slots that are available as well
 as the number of nodes that have signaled their intention to be a validator. You can go to the
 "Waiting" tab to double check to see whether your node is listed there.
 
-![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
+![staking queue](assets/guides/how-to-validate/polkadot-dashboard-staking.png)
 
 The validator set is refreshed every era. In the next era, if there is a slot available and your
 node is selected to join the validator set, your node will become an active validator. Until then,

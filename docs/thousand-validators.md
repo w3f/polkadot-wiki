@@ -120,4 +120,4 @@ of 16.
 [polkadot 1kv form]:
   https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform
 [identity instructions]:
-  https://guide.kusama.network/docs/en/mirror-learn-identity#setting-an-identity
+  https://guide.kusama.network/docs/mirror-learn-identity#setting-an-identity

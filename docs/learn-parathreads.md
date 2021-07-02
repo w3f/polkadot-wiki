@@ -22,6 +22,21 @@ needs more, the computer can create virtual memory by using _swap space_ on a ha
 allows the capacity of a computer's memory to expand and for more processes to run concurrently with
 the trade-off that some processes will take longer to progress.
 
+## How will Parathreads Operate?
+
+A portion of the parachain slots on the Relay Chain will be designated as part of the parathread
+pool. In other words, some parachain slots will have no parachain attached to them and rather will
+be used as a space for which the winner(s) of the block-by-block parathread fee auction can have
+their block candidate included.
+
+Collators will offer a bid designated in DOT for inclusion of a parathread block candidate. The
+Relay Chain block author is able to select from these bids to include a parathread block. The
+obvious incentive is for them to accept the block candidate with the highest bid, which would bring
+them the most profit. The tokens from the parathread bids will likely be split 80-20, meaning that
+80% goes into Polkadot treasury and 20% goes to the block author. This is the same split that
+applies also to transaction fees and, like many other parameters in Polkadot, can be changed through
+a governance mechanism.
+
 ## Parachain vs. Parathread
 
 Parachains and parathreads are very similar from a development perspective. One can imagine that a
@@ -53,21 +68,6 @@ fee market will likely develop, which means that busier times will drive the pri
 inclusion up, while times of low activity will require lower fees. Two, this mechanism is markedly
 different from the parachain mechanism, which guarantees inclusion as long as a parachain slot is
 held; parathread registration grants no such right to the parathread.
-
-## How Will Parathreads be Operated?
-
-A portion of the parachain slots on the Relay Chain will be designated as part of the parathread
-pool. In other words, some parachain slots will have no parachain attached to them and rather will
-be used as a space for which the winner(s) of the block-by-block parathread fee auction can have
-their block candidate included.
-
-Collators will offer a bid designated in DOT for inclusion of a parathread block candidate. The
-Relay Chain block author is able to select from these bids to include a parathread block. The
-obvious incentive is for them to accept the block candidate with the highest bid, which would bring
-them the most profit. The tokens from the parathread bids will likely be split 80-20, meaning that
-80% goes into Polkadot treasury and 20% goes to the block author. This is the same split that
-applies also to transaction fees and, like many other parameters in Polkadot, can be changed through
-a governance mechanism.
 
 ## Parathread Economics
 

@@ -20,15 +20,15 @@ jobs:
       - name: Clone and run the site
         run: |
           yarn
-          yarn polkadot:start &
+          yarn polkadot2:start &
           while ! nc -z localhost 3000; do
               sleep 1
               echo waiting for website up...
           done
-          yarn polkadot:pdf
+          yarn polkadot2:pdf
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
           name: polkadot-wiki
-          path: website/static/polkadot-wiki.pdf
+          path: website-v2/static/polkadot-wiki.pdf

@@ -4,21 +4,22 @@ title: Validator
 sidebar_label: Validator
 ---
 
-Validators secure the Relay Chain by staking DOT, validating proofs from collators and participating
-in consensus with other validators.
+Validators secure the [Relay Chain](learn-architecture#relay-chain) by staking DOT, validating proofs from 
+collators and participating in consensus with other validators. 
 
-These participants will play a crucial role in adding new blocks to the Relay Chain and, by
+These participants play a crucial role in adding new blocks to the Relay Chain and, by
 extension, to all parachains. This allows parties to complete cross-chain transactions via the Relay
-Chain.
+Chain. Parachain validators participate in some form of off-chain consensus, and submit candidate receipts 
+to the tx pool for a block producer to include on-chain. The Relay Chain validators guarantee that 
+each parachain follows its unique rules and can pass messages between shards in a trust-free environment.
 
-Validators perform two functions. First, verifying that the information contained in an assigned set
-of parachain blocks is valid (such as the identities of the transacting parties and the subject
-matter of the contract). Their second role is to participate in the consensus mechanism to produce
-the Relay Chain blocks based on validity statements from other validators. Any instances of
-non-compliance with the consensus algorithms result in punishment by removal of some or all of the
-validator’s staked DOT, thereby discouraging bad actors. Good performance, however, will be
-rewarded, with validators receiving block rewards (including transaction fees) in the form of DOT in
-exchange for their activities.
+Validators perform two functions: 
+1. **Verifying** that the information contained in an assigned set of parachain blocks is valid 
+   (such as the identities of the transacting parties and the subject matter of the contract). 
+2. **Participating** in the consensus mechanism to produce the Relay Chain blocks based on validity statements 
+   from other validators. Any instances of non-compliance with the consensus algorithms result in punishment 
+   by removal of some or all of the validator’s staked DOT, thereby discouraging bad actors. Good performance, however, will be rewarded, with validators receiving block rewards (including transaction fees) in the form 
+   of DOT in exchange for their activities.
 
 ## Guides
 
@@ -43,7 +44,7 @@ exchange for their activities.
 - [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A place to chat about being a validator.
-- [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more
+- [Slashing Consequences](https://wiki.polkadot.network/docs/learn-staking#slashing) - Learn more
   about slashing consequences for running a validator node.
 - [Why You Should be A Validator on Polkadot and Kusama](https://www.youtube.com/watch?v=0EmP0s6JOW4&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=2)
 - [Roles and Responsibilities of a Validator](https://www.youtube.com/watch?v=riVg_Up_fCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=15)

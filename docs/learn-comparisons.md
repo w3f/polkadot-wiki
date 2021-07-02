@@ -29,8 +29,9 @@ scalable blockchain network that provides security and interoperability through 
 
 In practical terms, this means that the layer of abstraction between these two projects is
 remarkably different for developers. In Ethereum, developers write smart contracts that all execute
-on a single virtual machine. In Polkadot, however, developers write their logic into individual
-blockchains, where the interface is part of the state transition function of the blockchain itself.
+on a single virtual machine, called the Ethereum Virtual Machine (EVM). 
+In Polkadot, however, developers write their logic into individual blockchains, where the interface 
+is part of the state transition function of the blockchain itself.
 Polkadot will also support smart contract blockchains for Wasm and EVM to provide compatibility with
 existing contracts, but will not have smart contract functionality on its core chain, the Relay
 Chain.
@@ -40,13 +41,13 @@ competition.
 
 ## Binance Smart Chain
 
-[Binance Chain](https://www.binance.com) is a Proof of Stake Authority blockchain used to exchange
+[Binance Chain](https://www.binance.com) is a Proof of Stake Authority (PoSA) blockchain used to exchange
 digital assets on Binance DEX. Binance Smart Chain is an EVM-compatible smart contract chain bridged
-to Binance Chain. Together they form the Binance Dual Chain System. Binance Smart Chain is also a
+to Binance Chain. Together, they form the Binance Dual Chain System. Binance Smart Chain is also a
 Proof of Stake Authority chain and allows users to create smart contracts and dapps.
 
 Both chains are built with Cosmos SDK and therefore are a part of the
-[Cosmos](https://wiki.polkadot.network/docs/en/learn-comparisons-cosmos) ecosystem. Due to specifics
+[Cosmos](https://wiki.polkadot.network/docs/learn-comparisons-cosmos) ecosystem. Due to specifics
 of the Cosmos architecture, interoperability of Binance Smart Chain is based on bridges. This means
 all validators of both chains are also bridge operators, therefore the security of the system relies
 on trusting validators. At the moment, there are 21 Binance Smart Chain validator nodes.

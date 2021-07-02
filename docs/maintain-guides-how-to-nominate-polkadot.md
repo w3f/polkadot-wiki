@@ -6,7 +6,7 @@ sidebar_label: How to Nominate on Polkadot
 
 > The following information applies to the Polkadot network. If you want to nominate on Kusama,
 > check out the
-> [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-nominate-kusama)
+> [Kusama guide](https://guide.kusama.network/docs/mirror-maintain-guides-how-to-nominate-kusama)
 > instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
@@ -15,7 +15,7 @@ their stake, they are able to elect the active set of validators and share in th
 paid out.
 
 While the [validators][] are active participants in the network that engage in the block production
-and finality mechanisms, nominators take a more passive role with a "set-it-and-forget-it" approach.
+and finality mechanisms, nominators take a slightly more passive role.
 Being a nominator does not require running a node of your own or worrying about online uptime.
 However, a good nominator performs due diligence on the validators that they elect. When looking for
 validators to nominate, a nominator should pay attention to their own reward percentage for
@@ -68,7 +68,7 @@ estimate your earnings and this is where it's good to start picking favorites.
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough DOT backing them (as allocated through the
-[Phragmén election mechanism](https://wiki.polkadot.network/docs/en/learn-phragmen)). It is possible
+[Phragmén election mechanism](https://wiki.polkadot.network/docs/learn-phragmen)). It is possible
 validator can remain in the queue for a very long time if they never get enough backing.
 
 The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
@@ -114,7 +114,7 @@ to any subset or all of the validators your choose.
 Select them, confirm the transaction, and you're done - you are now nominating. Your nominations
 will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you
 do this, your nominations may become active almost immediately, or you may have to wait almost the
-entire twenty-four hours before your nominations are active. You can chek how far along Polkadot is
+entire twenty-four hours before your nominations are active. You can check how far along Polkadot is
 in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get

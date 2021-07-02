@@ -7,7 +7,7 @@ sidebar_label: Oracles
 In the blockchain context, an _oracle_ is a way to bring real-world data onto the blockchain so that
 it can be used by a decentralized application.
 
-Oracles serve many purposes for application builders. For example,
+Oracles serve many purposes for application builders. For example:
 
 - Most stablecoin designs use an oracle to bring in data of the exchange rate of assets, in order to
   peg their value to a real world currency.
@@ -24,7 +24,8 @@ dictate the real-world data on-chain. On the decentralized end, a [complex game 
 "chicken"][schellingcoin] can be played among various staked actors who risk getting slashed if they
 don't submit the same data as everyone else. Solutions such as [ChainLink][chainlink] fit somewhere
 in the middle, where the amount of trust you put into the reporting oracles can be adjusted based on
-your preferences.
+your preferences. A Chainlink [Feed Pallet][feed pallet] was recently released to allow smart contract 
+applications across Polkadot to access price reference data, made available as a Substrate oracle pallet.
 
 When using an oracle in your application you should be aware of the benefits and risks that are
 baked into its specific model. As the Polkadot ecosystem develops and oracle parachains begin to
@@ -34,3 +35,4 @@ and drawbacks that each provide.
 [schellingcoin]:
   https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/
 [chainlink]: https://polkadot.network/chainlink-reaches-milestone-with-polkadot/
+[feed pallet]: https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md

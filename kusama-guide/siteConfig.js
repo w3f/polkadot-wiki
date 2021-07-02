@@ -57,16 +57,18 @@ const siteConfig = {
     "https://buttons.github.io/buttons.js",
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.js",
     "/js/custom.js",
-    "/js/klaro-config.js",
-    "/js/klaro.js",
     "/js/clipboard.min.js",
     "/js/copycode.js",
+    {
+      src: "https://apisa.web3.foundation/latest.js",
+      async: true,
+      defer: true,
+    },
   ],
 
   stylesheets: [
     "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
     "https://fonts.googleapis.com/css?family=Muli&display=swap",
-    "/css/klaro.css",
     "/css/copycode.css",
   ],
 

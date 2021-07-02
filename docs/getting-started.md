@@ -152,7 +152,7 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
   on-stage in 30 minutes using Substrate. (Video)
 - [Community / Ecosystem](community) - List of community rooms and channels to talk to others about
   Polkadot.
-- [Sample Applications](build-examples-index) - Sample applications that are built on or currently
+- [Sample Applications](#) - Sample applications that are built on or currently
   being built for Polkadot.
 - [Contributing Guide](contributing) - Rules for contributing to the wiki.
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for

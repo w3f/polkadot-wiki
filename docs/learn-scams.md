@@ -11,10 +11,10 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 ## Essential rules:
 
 1. Never, ever, ever share your seed phrase or account password.
-2. Do not trust anyone online. It is trivial for them to lie and change identities.
-3. If you are scammed, there is [likely nothing](#i-got-scammed---what-can-i-do) that can be done to
+2. Do not trust anyone online. It is trivial for them to lie and change their identities.
+3. [If you are scammed]((#i-got-scammed---what-can-i-do), there is **likely nothing** that can be done to
    recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all of your
-   funds to their account in seconds. It is better to be safe than to risk all of your DOT and KSM.
+   funds to their account in seconds. It is better to be safe than to risk all of your tokens.
 4. If it sounds too good to be true, it probably is. People, especially celebrities, do not give
    away crypto for free. Even if they wanted to, they could just ask for your address as opposed to
    having you send them tokens.
@@ -25,6 +25,13 @@ scammed, please email [our support team](mailto:support@web3.foundation).
    [Web3 Foundation support](mailto:support@polkadot.network). Often scammers will fake a website or
    a blog post, but if you check it against a secondary source you will reduce the chances of being
    scammed.
+   
+   > Important: With crowdloans active on the network, it is very important to know how to safely participate.
+   > Fake crowdloan campaigns may present an attractive target for scammers. If you are participating in a 
+   > network-native crowdloan, **never send your tokens to an address.** 
+   > Native crowdloan contributions are made with a special transaction using a campaign index, where the 
+   > contributed assets remain locked until the end of the lease period. Legitimate teams will not ask you 
+   > to send your assets to an address to participate in a network-native crowdloan.
 
 ### Some Common Types of Scams
 
@@ -32,7 +39,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
   will never contact you.
 - "Giveaways" advertising that you "send us some DOT/KSM, we'll send you double back".
 - Sites where you need to enter your seed phrase in order to "sync" your account, claim tokens,
-  unblock a transactions etc.
+  unblock transactions etc.
 - Emails asking for DOT/KSM private keys/seeds/etc., posing as a member of any of our teams.
 - Scammers will take official videos, add "giveaway" text around it so that it looks like the
   giveaway is supported by Polkadot, Web3 Foundation, Parity, or another well-known entity.
@@ -61,16 +68,16 @@ accounts will be announced by our team. We will never offer to sell you DOT at a
 be found below:
 
 - [Twitter](https://twitter.com/Polkadot)
-- [Reddit](https://www.reddit.com/r/dot)
+- [Reddit](https://www.reddit.com/r/polkadot)
 - [Discord](https://discord.gg/wGUDt2p)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Polkadot Medium](https://medium.com/polkadot-network)
 - [Our Community Page](community) also lists more social media accounts that Web3 Foundation,
   Polkadot, and Kusama have.
 
-### Keep your personal data secure
+### Keep your data secure
 
-You should _never_ share your seed phrase, password, private keys or any other personal data with
+You should _never_ share your seed phrase, password, private keys, or any other personal data with
 anyone. If you are concerned a wallet could be fake, please check out our official list of supported
 wallets [here](build-wallets).
 
@@ -78,7 +85,7 @@ Some simple things that you can do to keep your assets and information secure fr
 
 - Keep your seed phrase only on paper, in a secret and secure location.
 - DO NOT keep your seed phrase on any electronic medium, like the cloud, on your computer, on a USB
-  drive etc.
+  drive, etc.
 - Never enter your seed or mnemonic phrase directly into a website.
 - Your seed phrase is meant as a backup in case you lose access to your wallet. Use it only for that
   purpose and only in wallets you've used before and trust.
@@ -100,7 +107,7 @@ is. Never enter any personal data if you feel the source could be a scam. Feel f
 
 ### Check twice before sending DOT/KSM
 
-A good practice to take in consideration is to verify the address you are sending crypto to. If you
+A good practice to take into consideration is to verify the address you are sending crypto to. If you
 don't know that account, you probably shouldn't be sending your assets there. It's your
 responsibility to make sure that you understand where you are sending your funds. Crypto is a
 decentralized space and your only recourse if a mistake is made is by appealing to the council (who
@@ -125,8 +132,8 @@ site:
 - substrate.dev
 - substrate.io
 
-Of course, there are many projects building on Polkadot and Kusama that use similar names. If,
-however, a site poses as Polkadot, Kusama, Web3 Foundation or Parity on a domain not listed above,
+Of course, many projects building on Polkadot and Kusama that use similar names. If,
+however, a site poses as Polkadot, Kusama, Web3 Foundation, or Parity on a domain not listed above,
 then it's most likely a scam.
 
 Besides those, there are also `polkadot.js.org` and `dotapps.io` that host our web wallet and other
@@ -136,7 +143,7 @@ tools.
 
 In the unfortunate case of having fallen for a scam, there is likely nothing anyone can do to help
 you restore your funds. Polkadot and Kusama are decentralized platforms and while we do have
-governance functionality which could technically allow for funds freezing or refunds, it is
+governance functionality that could technically allow for funds freezing or refunds, it is
 impossible to prove that you are the original owner, or that you did not sell the tokens and are
 trying to reclaim them. Additionally, even with addresses that are obviously in possession of a
 scammer, governance is a slow-moving process; even under ideal conditions, it would take over 56
@@ -144,9 +151,9 @@ days to come into effect. The thief could easily monitor the network for governa
 would affect their ill-gotten gains and move them to a new address before the proposal is enacted.
 
 You could put together a full account of the transactions and chat messages accompanied by
-screenshots and explanations, but there is no guarantee stakeholders on the network will help you
+screenshots and explanations, but there are no guarantee stakeholders on the network will help you
 restore the funds as it would set a dangerous precedent. In fact, there have been several attempts
 on Polkadot in the past and none have been passed. It is safer for the network and for future users
-to consider the money lost. Still, your detailed account of the situation might be helpful in
-preventing others from falling for the same thing so we definitely recommend retracing your steps
+to consider the money lost. Still, your detailed account of the situation might help prevent others from 
+falling for the same thing so we recommend retracing your steps
 and talking publicly about them, if it's not too private.
