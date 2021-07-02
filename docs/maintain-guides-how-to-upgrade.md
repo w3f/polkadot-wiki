@@ -23,7 +23,7 @@ accordingly.
 Session keys are stored in the client and used to sign validator operations. They are what link your
 validator node to your Controller account. You cannot change them mid-Session.
 
-[More info about keys in Polkadot.](learn-keys)
+[More info about keys in Polkadot.](learn-keys.md)
 
 ### Database
 

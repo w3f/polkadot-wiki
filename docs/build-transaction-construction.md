@@ -13,16 +13,16 @@ tools. **Always refer to each tool's documentation when integrating.**
 Polkadot has some basic transaction information that is common to all transactions.
 
 - Address: The SS58-encoded address of the sending account.
-- Block Hash: The hash of the [checkpoint](build-protocol-info#transaction-mortality) block.
+- Block Hash: The hash of the [checkpoint](build-protocol-info.md#transaction-mortality) block.
 - Block Number: The number of the checkpoint block.
 - Genesis Hash: The genesis hash of the chain.
 - Metadata: The SCALE-encoded metadata for the runtime when submitted.
 - Nonce: The nonce for this transaction.\*
 - Spec Version: The current spec version for the runtime.
 - Transaction Version: The current version for transaction format.
-- Tip: Optional, the [tip](build-protocol-info#fees) to increase transaction priority.
+- Tip: Optional, the [tip](build-protocol-info.md#fees) to increase transaction priority.
 - Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid.
-  If zero, the transaction is [immortal](build-protocol-info#transaction-mortality).
+  If zero, the transaction is [immortal](build-protocol-info.md#transaction-mortality).
 
 \*The nonce queried from the System module does not account for pending transactions. You must track
 and increment the nonce manually if you want to submit multiple valid transactions at the same time.

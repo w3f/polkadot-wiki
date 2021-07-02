@@ -33,14 +33,14 @@ forgiving than the equivocation or parachain validity slashing.
 
 ## Key Management
 
-See the [Polkadot Keys guide](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/) for more
+See the [Polkadot Keys guide](learn-keys.md) for more
 information on keys. The keys that are of primary concern for validator infrastructure are the
 Session keys. These keys sign messages related to consensus and parachains. Although Session keys
 are _not_ account keys and therefore cannot transfer funds, an attacker could use them to commit
 slashable behavior.
 
 Session keys are generated inside the node via RPC call. See the
-[How to Validate guide](maintain-guides-how-to-validate-polkadot#set-session-keys)
+[How to Validate guide](maintain-guides-how-to-validate-polkadot.md#set-session-keys)
 
 for instructions on setting Session keys. These should be generated and kept within your client.
 When you generate new Session keys, you must submit an extrinsic (a Session certificate) from your

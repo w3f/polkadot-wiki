@@ -72,7 +72,7 @@ the threshold).
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.
 We clarify how we resolve this issue and make sure that Polkadot block times remain near
-constant-time in the [wiki page on consensus](learn-consensus).
+constant-time in the [wiki page on consensus](learn-consensus.md).
 
 ## RANDAO
 

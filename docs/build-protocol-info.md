@@ -48,7 +48,7 @@ Relevant SS58 prefixes for this guide:
 
 ### Cryptography
 
-Polkadot supports the following [cryptographic](learn-cryptography) key pairs and signing
+Polkadot supports the following [cryptographic](learn-cryptography.md) key pairs and signing
 algorithms:
 
 - Ed25519
@@ -212,7 +212,7 @@ Monitor events instead of transaction names to ensure that you can properly cred
 
 Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Users can also add a
 "tip" to increase transaction priority during congested periods. See the
-[transaction fee](learn-transaction-fees) page for more info.
+[transaction fee](learn-transaction-fees.md) page for more info.
 
 ### Encoding
 

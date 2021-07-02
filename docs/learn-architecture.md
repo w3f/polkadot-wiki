@@ -16,7 +16,7 @@ instance, smart contracts are not supported. The main responsibility is to coord
 a whole, including parachains. Other specific work is delegated to the parachains, which have
 differing implementations and features.
 
-## [Parachain](learn-parachains) and [Parathread](learn-parathreads) Slots
+## [Parachain](learn-parachains.md) and [Parathread](learn-parathreads.md) Slots
 
 Polkadot can support a number of execution slots. These slots are like cores on a computer's
 processor (a modern laptop's processor may have eight cores, for example). Each one of these cores

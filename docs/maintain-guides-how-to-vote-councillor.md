@@ -7,7 +7,7 @@ sidebar_label: Voting for Councillors
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
-[governance page](learn-governance#council). This guide will walk you through voting for councillors
+[governance page](learn-governance.md#council). This guide will walk you through voting for councillors
 in the elections.
 
 ## Voting for Councillors

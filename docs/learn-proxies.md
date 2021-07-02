@@ -6,7 +6,7 @@ sidebar_label: Proxy Accounts
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of
 actions on their behalf. Much like the Stash and Controller account relationship in
-[staking](learn-staking), proxies allow users to keep one account in cold storage and actively
+[staking](learn-staking.md), proxies allow users to keep one account in cold storage and actively
 participate in the network with the weight of the tokens in that account.
 
 > Check out our Polkadot Youtube video that explains
@@ -43,7 +43,7 @@ balance transfers (including vested transfers).
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
-> See [Governance](maintain-guides-democracy#governance-proxies) for more information on governance
+> See [Governance](maintain-guides-democracy.md#governance-proxies) for more information on governance
 > proxies or watch our
 > [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
 
@@ -61,7 +61,7 @@ Controller accounts, but does allow the Stash to be accessed even less frequentl
 
 "Identity Judgement" proxies are in charge of allowing registars to make judgement on an account's
 identity. If you are unfamiliar with judgements and identities on chain, please refer to
-[this page](learn-identity#judgements).
+[this page](learn-identity.md#judgements).
 
 ### Anonymous Proxies
 

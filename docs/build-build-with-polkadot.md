@@ -8,8 +8,8 @@ _This article is the maintained version of the blog post:
 [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
-parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain).
-With the advent of [PDKs](build-pdk) like Parity Substrate and Cumulus, the time it takes to develop
+parachains and allowing all connected chains to **interoperate** by using [XCMP](learn-crosschain.md).
+With the advent of [PDKs](build-pdk.md) like Parity Substrate and Cumulus, the time it takes to develop
 and launch a new chain has dropped significantly. While before it would take years to launch a new
 chain, now it may only take weeks or even days.
 
@@ -30,7 +30,7 @@ may be better suited for your application over the other).
   - **Rococo** - Parachains and XCM testnet.
 
 Polkadot mainnet has been running since May 2020 and has
-[implementations in various programming languages](learn-implementations) ranging from Rust to
+[implementations in various programming languages](learn-implementations.md) ranging from Rust to
 JavaScript. Currently, the leading implementation is built in Rust and built using the Substrate
 framework.
 
@@ -156,7 +156,7 @@ applicable to you.
 
 Now that you have determined that building a parachain or parathread is the right approach for your
 new project, the next step is to decide which framework to use. Frameworks for building a parachain
-or parathread are known as parachain development kits ([PDK](build-pdk)s). Currently, the only PDK
+or parathread are known as parachain development kits ([PDK](build-pdk.md)s). Currently, the only PDK
 available is Substrate and Cumulus from Parity Technologies.
 
 In the future, there will be many different PDKs available in different programming languages, just
@@ -199,7 +199,7 @@ Polkadot as either a parachain or parathread.
 
 #### Cumulus
 
-The goal of [Cumulus](https://wiki.polkadot.network/docs/build-cumulus) is to be an extension of
+The goal of [Cumulus](build-cumulus.md) is to be an extension of
 Substrate that will make any Substrate runtime compatible with Polkadot.
 
 It handles the network compatibility overhead that any parachain would need to implement to be
@@ -222,8 +222,8 @@ In order to include your parachain into the Polkadot network, you will need to a
 slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
-{{ polkadot: [parachain auction](learn-auction) :polkadot }}
-{{ kusama: [parachain auction](mirror-learn-auction) :kusama }} page of the wiki.
+{{ polkadot: [parachain auction](learn-auction.md) :polkadot }}
+{{ kusama: [parachain auction](mirror-learn-auction.md) :kusama }} page of the wiki.
 
 #### Parathread
 
@@ -233,8 +233,8 @@ and from then be able to start participating in the per-block auctions for inclu
 transition into the relay chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
-{{ polkadot: [parathread](learn-parathreads) :polkadot }}
-{{ kusama: [parathread](mirror-learn-parathreads) :kusama }} page.
+{{ polkadot: [parathread](learn-parathreads.md) :polkadot }}
+{{ kusama: [parathread](mirror-learn-parathreads.md) :kusama }} page.
 
 ## So you want to build a smart contract...
 
@@ -309,7 +309,7 @@ and want to deploy to a live environment.
 
 Edgeware intends to at some point connect to Polkadot as a parachain that allows for smart
 contracts. At this point, the smart contracts would be able to interact with other pieces of the
-Polkadot ecosystem through [XCMP](https://wiki.polkadot.network/docs/learn-crosschain).
+Polkadot ecosystem through [XCMP](learn-crosschain.md).
 
 Edgeware general documentation can be found [here][edgeware documentation] and [how to deploy smart
 contracts on Edgeware here][edgeware contracts documentation].
@@ -336,7 +336,7 @@ Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
-[social channels](https://wiki.polkadot.network/docs/community).
+[social channels](community.md).
 
 Good luck!
 

@@ -6,7 +6,7 @@ sidebar_label: Nominator Guide
 
 > The following information applies to the Kusama network. If you want to nominate on Polkadot,
 > check out the
-> [Polkadot guide](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot)
+> [Polkadot guide](maintain-guides-how-to-validate-polkadot.md)
 > instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
@@ -68,7 +68,7 @@ estimate your earnings and this is where it's good to start picking favorites.
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough KSM backing them (as allocated through the
-[Phragmén election mechanism](https://wiki.polkadot.network/docs/learn-phragmen)). It is possible
+[Phragmén election mechanism](learn-phragmen.md)). It is possible
 validator can remain in the queue for a very long time if they never get enough backing.
 
 The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
@@ -101,7 +101,7 @@ earn compound interest.
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be
-[slashed](learn-staking#slashing) if the validators you nominate misbehave. All bonded funds can now
+[slashed](learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can now
 be distributed to up to 16 validators. Be careful about the validators you choose since you will be
 slashed if your validator commits an offence.
 
@@ -120,14 +120,14 @@ Assuming at least one of your nominations ends up in the active validator set, y
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
 claim them. To initiate a claim, you can do it yourself or have the validator that you staked for
 initiate a claim. This is to help optimize the effectiveness and storage of payouts on Kusama. See
-the [Claiming Rewards](learn-staking#claiming-rewards) section of the Staking wiki page for more
+the [Claiming Rewards](learn-staking.md#claiming-rewards) section of the Staking wiki page for more
 details.
 
 ### Step 3: Stop nominating
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
-are available [here](maintain-guides-how-to-unbond).
+are available [here](maintain-guides-how-to-unbond.md).
 
 ## Using Command-Line Interface (CLI)
 
@@ -203,6 +203,6 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
 nomination status, you can check that on the Polkadot-JS UI as well.
 
-[validators]: maintain-guides-how-to-validate-kusama
-[keys]: learn-keys#controller-and-stash-keys
-[account generation]: learn-account-generation
+[validators]: maintain-guides-how-to-validate-kusama.md
+[keys]: learn-keys#controller-and-stash-keys.md
+[account generation]: learn-account-generation.md

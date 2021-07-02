@@ -4,7 +4,7 @@ title: Validator
 sidebar_label: Validator
 ---
 
-Validators secure the [Relay Chain](learn-architecture#relay-chain) by staking DOT, validating proofs from 
+Validators secure the [Relay Chain](learn-architecture.md#relay-chain) by staking DOT, validating proofs from 
 collators and participating in consensus with other validators. 
 
 These participants play a crucial role in adding new blocks to the Relay Chain and, by
@@ -23,28 +23,28 @@ Validators perform two functions:
 
 ## Guides
 
-- [How to Validate on Polkadot](maintain-guides-how-to-validate-polkadot) - Guide on how to set up a
+- [How to Validate on Polkadot](maintain-guides-how-to-validate-polkadot.md) - Guide on how to set up a
   validator on the Polkadot live network.
-- [Validator Payout Overview](maintain-guides-validator-payout) - A short overview on how the
+- [Validator Payout Overview](maintain-guides-validator-payout.md) - A short overview on how the
   validator payout mechanism works.
-- [How to run your validator as a systemd process](maintain-guides-how-to-systemd) - Guide on
+- [How to run your validator as a systemd process](maintain-guides-how-to-systemd.md) - Guide on
   running your validator as a `systemd` process so that it will run in the background and start
   automatically on reboots.
-- [How to Upgrade your Validator](maintain-guides-how-to-upgrade) - Guide for securely upgrading
+- [How to Upgrade your Validator](maintain-guides-how-to-upgrade.md) - Guide for securely upgrading
   your validator when you want to switch to a different machine or begin running the latest version
   of client code.
-- [How to Use Secure Validator Setup](maintain-guides-how-to-use-polkadot-secure-validator) - Guide
-  on how to use Polkadot / Kusama secure validator setup.
+- [How to Use Validator Setup](maintain-guides-how-to-use-polkadot-validator.md) - Guide
+  on how to use Polkadot / Kusama validator setup.
 
 ## Other References
 
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) -
   Blog that details how to create a robust failover solution for running validators.
-- [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
+- [VPS list](maintain-guides-how-to-validate-kusama.md#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A place to chat about being a validator.
-- [Slashing Consequences](https://wiki.polkadot.network/docs/learn-staking#slashing) - Learn more
+- [Slashing Consequences](learn-staking#slashing) - Learn more
   about slashing consequences for running a validator node.
 - [Why You Should be A Validator on Polkadot and Kusama](https://www.youtube.com/watch?v=0EmP0s6JOW4&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=2)
 - [Roles and Responsibilities of a Validator](https://www.youtube.com/watch?v=riVg_Up_fCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=15)

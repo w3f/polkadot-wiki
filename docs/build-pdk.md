@@ -5,7 +5,7 @@ sidebar_label: Parachain Development Kits (PDKs)
 ---
 
 Parachain development kits (PDKs) are a set of tools that make it easy for developers to create
-Polkadot compatible [parachains](learn-parachains).
+Polkadot compatible [parachains](learn-parachains.md).
 
 ## Why create a parachain?
 
@@ -19,18 +19,18 @@ standalone chain:
 - _Cross-chain communication_ - allows parachains to interoperate with each other through the XCMP
   protocol.
 
-Parachains can [lease the security](learn-security) of the Polkadot network by bonding
-[DOT](learn-DOT) for a parachain slot. This means that the social costs of building a community
+Parachains can [lease the security](learn-security.md) of the Polkadot network by bonding
+[DOT](learn-DOT.md) for a parachain slot. This means that the social costs of building a community
 around your project and convincing validators to participate in your network security are reduced.
 It is anticipated that Polkadot will have strong security, and decentralized application projects
 wishing to benefit from this security would want to become a parachain. For more information on the
-mechanic of leasing a parachain slot through a candle auction see [here](learn-auction).
+mechanic of leasing a parachain slot through a candle auction see [here](learn-auction.md).
 
 Any decentralized application or chain that wants to enable trustless messaging to other parachains
 already connected to Polkadot would want to become a parachain. Interoperability between sovereign
 chains involves certain constraints and complex protocols to enable across a wide breadth of chains.
 With Polkadot, you will get this feature out of the box if your build your application as a
-parachain. The [XCMP protocol](learn-crosschain) will allow any parachains to interoperate by
+parachain. The [XCMP protocol](learn-crosschain.md) will allow any parachains to interoperate by
 passing messages between them. Furthermore, as bridges to other chains are launched (such as those
 to Bitcoin or Ethereum) the parachains will be able to operate with these as well.
 
@@ -58,7 +58,7 @@ from iteration of the state transition function. They must remain online in orde
 the state and also of the XCMP messages that it will route between itself and other parachains.
 Collator nodes are responsible for passing the succinct proofs to the Relay Chain validators, and
 tracking the latest blocks from the Relay Chain. In essence, a collator node also acts as a light
-client for the Polkadot Relay Chain. For more on collator nodes see [here](learn-collator).
+client for the Polkadot Relay Chain. For more on collator nodes see [here](learn-collator.md).
 
 ## What kind of PDKs exist?
 

@@ -92,7 +92,7 @@ associated bid in DOT.
 It will be possible for a parachain that holds a parachain slot to swap this slot with a parathread
 so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread. The
 chain can also stop being a chain and continue as a thread without swapping the slot. The slot, if
-unoccupied, would be auctioned off in the next [auction period](learn-auction).
+unoccupied, would be auctioned off in the next [auction period](learn-auction.md).
 
 This provides a graceful off-ramp for parachains that have reached the end of their lease and do not
 have sufficient usage to justify renewal; they can remain registered on the Relay Chain but only

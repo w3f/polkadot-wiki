@@ -9,10 +9,10 @@ sidebar_label: Security of the network
 ## Shared security
 
 Shared security, sometimes referred in documentation as _pooled security_, is one of the unique
-value propositions for chains considering to become a [parachain](learn-parachains) and join the
+value propositions for chains considering to become a [parachain](learn-parachains.md) and join the
 Polkadot network. On a high level, shared security means that all parachains that are connected to
 the Polkadot Relay Chain by leasing a parachain slot will benefit from the economic security
-provided by the Relay Chain [validators](learn-validator).
+provided by the Relay Chain [validators](learn-validator.md).
 
 The notion of shared security is different from interchain protocols that build on an architecture
 of bridges. For bridge protocols, each chain is considered sovereign and must maintain its own

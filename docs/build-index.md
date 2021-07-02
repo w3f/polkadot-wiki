@@ -15,31 +15,31 @@ This section of the wiki is divided into the following parts:
 
 ## Development Guide
 
-- [Starter's Guide](build-build-with-polkadot) - High level overview on choosing a parachain,
+- [Starter's Guide](build-build-with-polkadot.md) - High level overview on choosing a parachain,
   parathread, or smart contract for your project and how to get started.
-- [Parachain Development Kits](build-pdk) - PDKs are toolkits for building parachains and
+- [Parachain Development Kits](build-pdk.md) - PDKs are toolkits for building parachains and
   parathreads.
-- [Smart Contracts](build-smart-contracts) - Smart contracts are fragments of custom logic that can
+- [Smart Contracts](build-smart-contracts.md) - Smart contracts are fragments of custom logic that can
   be deployed to a live chain.
-- [Polkadot Wallets](build-wallets) - Learn about the supported wallets and how to manage accounts.
+- [Polkadot Wallets](build-wallets.md) - Learn about the supported wallets and how to manage accounts.
 
 ## Integration Guide
 
 This section is for service providers like wallets or node operators who want to learn how to
 integrate Polkadot into their systems.
 
-- [Integration Initiation](build-integration) - The guide to the guide.
-- [Polkadot Protocol Information](build-protocol-info) - General information and F.A.Q.s about the
+- [Integration Initiation](build-integration.md) - The guide to the guide.
+- [Polkadot Protocol Information](build-protocol-info.md) - General information and F.A.Q.s about the
   Polkadot protocol, e.g. address formats.
-- [Node Management](build-node-management) - A short overview of the Parity Polkadot client and the
+- [Node Management](build-node-management.md) - A short overview of the Parity Polkadot client and the
   most relevant options/flags for infrastructure providers.
-- [Node Interaction](build-node-interaction) - Learn how to interact with your node via RPC.
-- [Transaction Construction and Signing](build-transaction-construction) - Learn the transaction
+- [Node Interaction](build-node-interaction.md) - Learn how to interact with your node via RPC.
+- [Transaction Construction and Signing](build-transaction-construction.md) - Learn the transaction
   format for Polkadot and how to construct and sign transactions offline.
 
 ## Tools
 
-- [Tools](build-tools-index) - Maintained list of tools.
+- [Tools](build-tools-index.md) - Maintained list of tools.
 - [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) - Command line utility for
   generating and inspecting key pairs.
 - [JS tools](https://github.com/polkadot-js/tools) - TypeScript tools for offline signing of
@@ -51,7 +51,7 @@ integrate Polkadot into their systems.
 
 ### Grants
 
-- [Grants](grants) - A list of all Polkadot-related projects given grants by the Web3 Foundation.
+- [Grants](grants.md) - A list of all Polkadot-related projects given grants by the Web3 Foundation.
 
 ### PSPs
 
@@ -62,4 +62,4 @@ Polkadot Standards Proposals (PSPs) are standards for the Polkadot ecosystem.
 
 ### Hackathon
 
-- [Resources For Running a Hackathon](build-hackathon)
+- [Resources For Running a Hackathon](build-hackathon.md)

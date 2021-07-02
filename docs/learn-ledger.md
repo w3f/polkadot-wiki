@@ -159,7 +159,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 ### Sending a Transfer
 
 Instructions to send a transfer can be found on the
-[balance transfer page](learn-balance-transfers).
+[balance transfer page](learn-balance-transfers.md).
 
 ### Receiving a Transfer
 
