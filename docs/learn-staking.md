@@ -31,8 +31,8 @@ validator set.
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
 
 As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
-chain's native token. You can take a look at the [nominator guide](learn-nominator) to understand
-your responsibilities as a nominator, and the [validator docs](learn-validator) to understand what
+chain's native token. You can take a look at the [nominator guide](learn-nominator.md) to understand
+your responsibilities as a nominator, and the [validator docs](learn-validator.md) to understand what
 you need to do as a validator.
 
 ### 2. Nomination period
