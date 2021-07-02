@@ -33,28 +33,6 @@ a near-future novel set in a world in which cryptocurrency has eliminated tradit
 
 ---
 
-### Bruno Skvorc
-
-- email: [bruno@web3.foundation](mailto:bruno@web3.foundation)
-- telegram: [@swader](https://t.me/swader)
-- matrix / riot / element: [@bruno:web3.foundation](https://matrix.to/#/@bruno:web3.foundation)
-- twitter: [@bitfalls](https://twitter.com/bitfalls)
-
-Bruno joined the crypto ecosystem full time in 2015 with the advent of Ethereum, and created
-educational resources, tutorials and newsletters for budding developers of the industry. Since 2019
-he's been a technical educator at Web3 Foundation. He is passionate about decentralization,
-censorship resistance, and transparency coupled with accountability, so he's found his passion in
-immutable ledgers of the present and future.
-
-In a previous life, he was a web developer and senior PHP editor at SitePoint, which culminated in a
-[book about web-dev-friendly virtual environments](https://www.amazon.com/Jump-Start-PHP-Environment-Language/dp/0994182643).
-
-In his [quest for developer health](https://bruno.id/an-endomorphs-journey-to-health-part-2/), he
-likes to combine fitness and gaming and can be found in VR on Oculus and Steam as TheSwader. He also
-runs a weekly newsletter covering all things Web3 at [Dot Leap](https://dotleap.substack.com).
-
----
-
 ### Joe Petrowski
 
 - email: [joe@parity.io](mailto:joe@parity.io)
@@ -92,8 +70,8 @@ the w3f/schnorrkel library.
 
 Danny is a Technical Educator at the Web3 Foundation from Canada. He has a keen interest for
 blockchain technologies and has an admiration for the web 3.0 vision. Danny focuses on educational
-content at the Web3 Foundation and acts on his passion for education. He is completing a B.Eng in
-Computer Engineering with a minor in Philosophy at Ryerson University.
+content at the Web3 Foundation and acts on his passion for learning & education. He has a background
+in computer engineering, politics, and philosophy.
 
 ---
 
@@ -108,11 +86,49 @@ development, education, and blockchain technology consulting. He is passionate a
 teaching and has always kept a foot in education by designing and delivering software development
 and blockchain classes at General Assembly, Code Fellows, and Columbia University.
 
+---
+
+### Radhakrishna Dasari
+
+- email: [radha@web3.foundation](mailto:radha@web3.foundation)
+- matrix / riot / element: [@radha:web3.foundation](https://matrix.to/#/@radha:web3.foundation)
+- twitter: [@DrW3RK](https://twitter.com/DrW3RK)
+
+Radha is a Technical Educator at the Web3 Foundation. Radha has a PhD in Computer Science and has 
+three years of experience teaching Computer Science courses. He also taught a Massively Open Online 
+Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). He is excited to
+contribute to Web3 Foundation's vision by educating professionals and the general public about Web 3.0 Technology Stack.
+
 <br/><br/>
 
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
+
+---
+
+### Bruno Skvorc
+
+- email: [bruno@web3.foundation](mailto:bruno@web3.foundation)
+- telegram: [@swader](https://t.me/swader)
+- matrix / riot / element: [@bitfalls:matrix.org](https://matrix.to/#/@bitfalls:matrix.org)
+- twitter: [@bitfalls](https://twitter.com/bitfalls)
+
+Bruno joined the crypto ecosystem full time in 2015 with the advent of Ethereum, and created
+educational resources, tutorials and newsletters for budding developers of the industry. Since 2019
+he's been a technical educator at Web3 Foundation. He is passionate about decentralization,
+censorship resistance, and transparency coupled with accountability, so he's found his passion in
+immutable ledgers of the present and future.
+
+In a previous life, he was a web developer and senior PHP editor at SitePoint, which culminated in a
+[book about web-dev-friendly virtual environments](https://www.amazon.com/Jump-Start-PHP-Environment-Language/dp/0994182643).
+
+In his [quest for developer health](https://bruno.id/an-endomorphs-journey-to-health-part-2/), he
+likes to combine fitness and gaming and can be found in VR on Oculus and Steam as TheSwader. He also
+runs a weekly newsletter covering all things Web3 at [Dot Leap](https://dotleap.substack.com). 
+
+You can now find Bruno hacking the NFT universe by leading the way at [RMRK](https://rmrk.app/)
+to create the NFT standard in the Polkadot ecosystem.
 
 ---
 
