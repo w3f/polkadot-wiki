@@ -164,7 +164,6 @@ module.exports = {
             "maintain-guides-how-to-systemd",
             "maintain-guides-secure-validator",
             "maintain-guides-how-to-use-polkadot-secure-validator",
-            "maintain-guides-how-to-setup-sentry-node",
             "maintain-guides-how-to-upgrade",
             "maintain-guides-how-to-monitor-your-node",
             "maintain-guides-how-to-chill",

@@ -289,7 +289,7 @@ Note that if less than 10% of all validators are offline, no penalty is enacted.
 Validators should have a well-architected network infrastructure to ensure the node is running to
 reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
-and being slashed for equivocation - see below). A comprehensive guide on secure validator setup is
+and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](https://wiki.polkadot.network/docs/maintain-guides-secure-validator).
 
 ### GRANDPA Equivocation
