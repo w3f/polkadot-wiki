@@ -41,6 +41,7 @@ module.exports = {
   ],
   i18n,
   favicon: "img/favicon.ico",
+  trailingSlash: false,
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
   onDuplicateRoutes: "log",
