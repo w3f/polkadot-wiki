@@ -43,7 +43,7 @@ candidates that it supports. In the next epoch (lasting 4 hours on Polkadot, 1 h
 certain number of validators having the most DOT backing get elected and become active.
 
 There are no particular requirements to become a nominator, though we expect each nominator to
-carefully track the performance and reputation of the validators the back.
+carefully track the performance and reputation of the validators they back.
 
 Once the nomination period ends, the NPoS election mechanism takes the nominators and their
 associated votes as input, and outputs a set of validators of the required size, that maximizes the
