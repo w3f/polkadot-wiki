@@ -9,10 +9,10 @@ big experiment and we need your participation for it to continue being a great s
 
 ## Community
 
-We want to foster a sense of collaboration amongst ourselves and the open source community. Kusma
+We want to foster a sense of collaboration amongst ourselves and the open-source community. Kusma
 participants exist to encourage the open exchange of ideas and expression and require an environment
 that recognizes the inherent worth of every person and group. We are here to collaborate, discuss,
-and even disagree. The key is doing this is a manner that comes from a place of respect and
+and even disagree. The key is doing this in a manner that comes from a place of respect and
 professionalism. Participants in the Kusama network may consist of participants in an online forum,
 on-chain governance participants, parachain deployment teams, validators, enthusiasts, and ecosystem
 tool builders. We expect for there to be participation from all backgrounds but like to set some
@@ -38,7 +38,7 @@ questions.
 - Knowingly distributing false information about Kusama or other projects.
 - Harassing other individuals or projects.
 
-That said, please note that Kusama is an edgy and meme-friendly network and community member actions
+That said, please note that Kusama is an edgy and meme-friendly network, and community member actions
 shouldn't be taken too seriously - try to assume jest before malice.
 
 ## What To Do If You Witness or Are Subject To Unacceptable Behavior
