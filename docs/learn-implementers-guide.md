@@ -4,7 +4,7 @@ title: Parachain Implementer's Guide
 sidebar_label: Parachain Implementer's Guide
 ---
 
-The Parachain Implementer's Guide is still heavily work in progress and maintained by Parity.
+The Parachain Implementer's Guide is still a significant work in progress and maintained by [Parity](glossary.md##parity-technologies).
 
 ## Live version
 

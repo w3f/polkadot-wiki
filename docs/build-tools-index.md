@@ -3,7 +3,7 @@ id: build-tools-index
 title: Tool Index
 sidebar_label: Tool Index
 ---
-
+<!-- Page being reformatted -->
 Here we provide a list of tools available for your development needs. They are sorted by context. If
 you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
 developers, feel free to [add it in](contributing).
