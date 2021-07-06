@@ -1167,10 +1167,10 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@crowdin/cli@^3.6.2":
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.6.2.tgz#90bb6f932846623280634c90de012e2df71b6d68"
-  integrity sha512-AfGihBalB2QBCjUKV+WHyQmMbXC2MF3E7GdmoRDO6FspkfTJTYVSzVqkxC4V94z0NYRBOIfPCnIfMb3gcPCAQQ==
+"@crowdin/cli@^3.6.3":
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-3.6.3.tgz#091a836c9308054e411acd8f325a5cfb3cb75121"
+  integrity sha512-//0EY1RaMoxG3fb9tVPHDhqxtY+7Z5e9E5CxE6vw5LDrwi5dRJCYrVYrW66fp2BghQaXTVuj12lryV2VoiZ2mg==
   dependencies:
     shelljs "^0.8.4"
 
@@ -1780,7 +1780,7 @@
     "@polkadot/x-rxjs" "^6.11.1"
     eventemitter3 "^4.0.7"
 
-"@polkadot/keyring@^6.11.1", "@polkadot/keyring@^6.11.1":
+"@polkadot/keyring@^6.11.1":
   version "6.11.1"
   resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-6.11.1.tgz#2510c349c965c74cc2f108f114f1048856940604"
   integrity sha512-rW8INl7pO6Dmaffd6Df1yAYCRWa2RmWQ0LGfJeA/M6seVIkI6J3opZqAd4q2Op+h9a7z4TESQGk8yggOEL+Csg==
@@ -1923,13 +1923,6 @@
     node-fetch "^2.6.1"
 
 "@polkadot/x-global@6.11.1", "@polkadot/x-global@^6.11.1":
-  version "6.11.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-6.11.1.tgz#c292b3825fea60e9b33fff1790323fc57de1ca5d"
-  integrity sha512-lsBK/e4KbjfieyRmnPs7bTiGbP/6EoCZz7rqD/voNS5qsJAaXgB9LR+ilubun9gK/TDpebyxgO+J19OBiQPIRw==
-  dependencies:
-    "@babel/runtime" "^7.14.6"
-
-"@polkadot/x-global@6.11.1":
   version "6.11.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-6.11.1.tgz#c292b3825fea60e9b33fff1790323fc57de1ca5d"
   integrity sha512-lsBK/e4KbjfieyRmnPs7bTiGbP/6EoCZz7rqD/voNS5qsJAaXgB9LR+ilubun9gK/TDpebyxgO+J19OBiQPIRw==
