@@ -53,7 +53,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
-As of June 30, 2021, the staking parameters have been modified to a minimum of 40 DOT to nominate, and a maximum of 22_500 total nominators. For more information, see the [Referendum 28 Polkassembly post](https://polkadot.polkassembly.io/referendum/28)
+As of June 30, 2021, the staking parameters have been modified to a minimum of 40 DOT to nominate, and a maximum of 22_500 total nominators. As most of these parameters can be updated via on-chain governance, please check the latest parameters on [chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query - staking - minimumNominatorBond and maxNominatorsCount)
 
 | Polkadot               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
