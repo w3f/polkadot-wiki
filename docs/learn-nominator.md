@@ -52,11 +52,7 @@ Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solutio
 fact that the solution set must fit in a single block, in some eras, a minimum number of DOT will be
 required to nominate with in order to receive staking rewards.
 
-This number fluctuates every era, and the most recent and up to date version can be found out using
-[these scripts](https://github.com/w3f/validator-stats) which you can run on your machine and
-looking for the "lowest minimal nominator". See the
-[Election Solution Set](learn-nominator.md#the-election-solution-set)
-section on the Nominator page for more details.
+This parameter can be updated via on-chain governance and the most recent and up to date version can be found on [chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query - staking - minimumNominatorBond)
 
 ### Oversubscribed Validators
 
