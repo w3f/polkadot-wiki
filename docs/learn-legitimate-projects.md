@@ -1,242 +1,162 @@
 ---
-id: learn-legitimate-projects
-title: How to Identify Legitimate Projects
-sidebar_label: How to Identify Legitimate Projects
+id: how-to-dyor
+title: How to Do Your Own Research (DYOR)
+sidebar_label: How to Do Your Own Research
 ---
 
-There are many projects that are being built, or intend to build, on both Polkadot and Kusama.
-However, there are also many that claim to do so, but actually have either no such intention, they
-don't have the resources to pull it through or they're outright trying to scam people by misusing
-the Polkadot and Kusama brands.
+Many projects are being built, or intend to build, on both Polkadot and Kusama. However, many claim to do so but have either no such intention, they don't have the resources to pull it through, or they're outright trying to scam people by misusing the Polkadot and Kusama brands.
 
-Telling legitimate projects from the "not so honest" ones isn't always an easy task. This guide is
-meant to help you in your own research in identifying whether a project is legitimate. What it's
-**not** meant to do, is characterise any single project as legitimate or not, or make that decision
-for you. It's simply a list of usual telltale signs of a legitimate project as opposed to one that's
-not, to help you make your own decisions.
+Telling legitimate projects from the "not so honest" ones isn't always an easy task. This guide is meant to help you find out how to do your research better when you come across a project that seems interesting. What it's **not** meant to do, is characterise any single project as legitimate or not, or make that decision for you. 
 
-Finally, a project being legitimate doesn't necessarily mean it will be a successful one too and
-this guide is definitely not meant to be viewed as financial or investment advice. Besides doing
-your own reserch in the legitimacy of a project, you need to do it for its success prospects too,
-before deciding to invest.
+Furthermore, a legitimate project doesn't necessarily mean it will be a successful one too, and this guide is not meant to be viewed as financial or investment advice. 
 
-### "Powered by Polkadot" clarification
+### "Powered by Polkadot" or "Polka" prefix clarification
 
-This statement on many projects' sites is often cause of confusion. This usually means that the
-project is building, or intends to build, on the Polkadot ecosystem, using Substrate. But any
-project can claim that, so the existence of this statement on a project's site infers no information
-about the legitimacy of the project and it's certainly not a "seal of approval" by Web3 Foundation.
+The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This usually means that the project is building, or intends to build, on the Polkadot ecosystem, using Substrate. But any project can claim that, so the existence of this statement on a project's site infers no information about the project's legitimacy, and it's certainly not a "seal of approval" by Web3 Foundation.
 
-## Signs of a legitimate project
+The same thing goes for projects that have the "Polka" prefix in their name. Many projects use that to associate themselves with the ecosystem, some legitimately and others only to piggyback on Polkadot's reputation.
 
-#### 1. It has received a Web3 Grant
+## "Hard" metrics to look for when you DYOR
 
-[Web3 Foundation Grants](https://github.com/w3f/Open-Grants-Program) are a way to subsidise projects
-that are building on Polkadot. They have very specific criteria in order to apply and are thorougly
-reviewed by the review team. So, having their application approved is a first indication that the
-team is committed to their project. Once they have delivered their first milestone, they can add the
-["Web3 Grants" badge](https://github.com/w3f/General-Grants-Program/blob/master/grants/grant-badge-guidelines.md)
-on their project's site.
+#### 1. Association with entities you trust
 
-Having received a grant is a strong indicator that a project is legitimate. And if they have
-delivered all of their milestones, then it's most likely of reasonable quality. However, a grant is
-not a guarantee on the continuity of the project and it can be terminated at any point if they
-violate the rules of the program, so that's something to look out for.
+New projects usually try to increase their credibility by associating themselves with well-known entities. The thinking is simple: "These entities that have a good reputation trust us, so if you trust them, by association, you should trust us too". And that's a valid argument and a strong indicator of the legitimacy of a project.
 
-Finally, a grant **is not** an endorsement by or a partnership with Web3 Foundation.
+For example, if a project has received a [Web3 Foundation Grant](https://github.com/w3f/Open-Grants-Program), this is an indication that the project is indeed building on the Polkadot ecosystem, and if they have delivered all of their milestones, then their code is most likely of reasonable quality. 
 
-The full list of projects that have successfully applied for a grant can be found
-[here](https://github.com/w3f/General-Grants-Program/blob/master/grants/accepted_grant_applications.md),
-where you can see what each project has delivered and which ones had their grant terminated.
+And Web3 Foundation is not the only entity in the ecosystem that gives grants. There are other reputable teams in the ecosystem that have developed platforms or prospective parachains and give grants for projects to build on or expand their project. These are also indicators that a project is committed to building on the broader Polkadot ecosystem. 
+
+Or receiving funding from VCs that you trust and are known to be involved with other reputable Polkadot projects can also be a good indicator. Or participating in the [Substrate Builders Program](https://www.substrate.io/builders-program/).
+
+**However**, claiming such associations and having them is not always the same thing. **You always need to verify any claims a project makes**, and that's probably the most critical takeaway from this guide.
+
+For example, if a project has the [Web3 Foundation Grant badge](https://github.com/w3f/General-Grants-Program/blob/master/grants/grant-badge-guidelines.md) on their site or claims to have received a grant, check to see if they have received one and that it hasn't been terminated. The complete list of projects that have successfully applied for a grant can be found [here](https://github.com/w3f/General-Grants-Program/blob/master/grants/accepted_grant_applications.md), where you can see what each project has delivered and if, perhaps, their grant has been terminated.
+
+The same thing goes for VC funding or another grant, or any advertised association. Check on the corresponding sites to make sure such claims are valid.
+
+Also, make sure you understand the *scope* of the association. Going back to the Web3 grants example, they have a precise scope. They are granted for specific deliverables, and the review team only checks the code and evaluates these deliverables *of the particular project*. So, having received a Web3 grant provides no information about the general practices of a team, the longevity of the project besides the scope of the grant, or other projects the team might be building, which is why the badge rules clearly state that it shouldn't be displayed on the team's landing page.
+
+Similarly, if a project claims to have partnered with a reputable entity, verify its scope and if it is indeed a partnership by searching their site for projects they have partnered with, their press releases, or by contacting them directly. And if you see such claims about Web3 Foundation, you can be sure they're false because Web3 Foundation **does not** partner with, or endorse, ecosystem projects.
+
 
 #### 2. Open source
 
-An open source project promotes transparency, builds trust and ensures the project team isn't doing
-something suspicious behind the scenes. Additionally, it makes it very easy to track the progress of
-the project and see how active the team is in developing it.
+An open-source project promotes transparency, builds trust and ensures the project team isn't doing something suspicious behind the scenes. Additionally, it makes it very easy to track the project's progress and see how active the team is in developing it.
 
-That doesn't mean, though, that any closed source project isn't legitimate or the team behind it has
-something to hide. Many teams choose to keep their code private in order to protect their
-intellectual property. And several teams that do so have gotten a
-[General Grant](https://github.com/w3f/General-Grants-Program), under which their private code is
-reviewed by members of the grants review team.
+That doesn't mean, though, that any closed source project isn't legitimate or the team behind it has something to hide. Many teams choose to keep their code private to protect their intellectual property. And several teams that do so have gotten a [General Grant](https://github.com/w3f/General-Grants-Program), under which members of the grants review team review their private code.
 
-So, a project being closed source isn't necessarily a red flag, but being open source is certainly a
-big plus.
+Another thing that an open-source project allows you to see is if they have copied any code from other open sources. This isn't necessarily bad since no one re-invents the wheel but copied code should attribute to the source. If it doesn't, this should raise some red flags because the project team tries to feign expertise by passing someone else's code as their own.
+
+A forked repo is easy to spot since it points to the original repo, but partially copied code might not be as easy to find. A quick [search](https://duckduckgo.com/?q=search+for+copied+source+code+plagiarism&t=ffab&ia=web) can provide you with some ways and tools to look for plagiarism.
+
+So, a project being closed source isn't necessarily a red flag, it just limits the ability to verify the project in that regard, but there are indirect ways as described below. However, a project being open source is undoubtedly a good, strong indicator of its legitimacy because shady or poor practices seldom stay hidden for long in open source code.
 
 #### 3. Active development
 
-If a project team constantly updates their product, this is always a good indication that the
-project is legitimate. Regularly releasing new features and upgrades, fixing bugs, updating their
-site and notifying the community of these changes, are all good earmarks of a legitimate project.
+If a project team constantly updates their product, it is always a good indication that they are serious and passionate about building. Regularly releasing new features and upgrades, fixing bugs, updating their site and notifying the community of these changes are good earmarks of a legitimate project.
 
-And, as mentioned above, an open source project has the additional advantage that the development
-activity can be easily monitored through its GitHub repo.
+Additionally, active development *usually* also means good development to be used as an *indirect* indicator for a closed source project.
 
-#### 4. Whitepaper
+An open-source project, of course, provides the ability to monitor the development activity through its GitHub repo directly.
 
-The existence of a whitepaper should be considered mandatory for any project that wants to be taken
-seriously. However, the whitepaper needs to be more than a few infographics, some bullet points and
-tokenomics. A legitimate project, and even more so a serious project, will deeply analyse all
-aspects of their project, its use cases, what problems it aims to solve, as well as the technical
-aspects of the project.
+#### 4. Solid documentation
 
-A well-written, detailed whitepaper that focuses more on the technology and less on tokenomics, is
-always a good sign that the project is legitimate. And, of course, this applies to the project as
-whole, meaning focusing on the technology and not on token sales, is always a big plus.
+The existence of solid documentation should be considered mandatory for any project that wants to be taken seriously. A couple of years ago, this meant a whitepaper, but lately, we've seen a shift to other forms of documentation, like wiki pages describing the various aspects.
 
-#### 5. Visible and reputable team
+No matter the form of the documentation, it needs to exist, and the more detailed it is, the better. This is where the project is explained in detail, and the prospective investor and user can read how it works, its goals and how the team aims to attain them.
 
-Legitimate projects usually display their team members prominently on their site, along with their
-social media profiles (usually LinkedIn) and GitHub accounts, for development team members. This
-gives prospective users and investors the ability to verify the team's credentials, track records
-and expertise. Furthermore, having members of the core team engage directly with the community
-promotes trust and transparency for the project.
+The documentation will give you an idea of the technical expertise of the team, too. If they analyse their technology and the technical aspects, they indicate that they know what they're doing. On the other hand, if they focus only on tokenomics or analyse their project only in broad, vague terms, perhaps that's an indication that they don't have a clear path to their goals.
 
-Besides their own community, projects that are serious about building on Polkadot usually engage
-with the broader Polkadot community. They are active in the various Polkadot and Kusama channels and
-if any of them are [Ambassadors](https://polkadot.network/polkadot-ambassador-program/), that is
-always a good sign.
+If you're looking for an example of what good documentation looks like, look no further than our own [wiki](https://wiki.polkadot.network). Of course, you shouldn't expect to find such extensive documentation on newly launched projects. Our wiki, after all, covers a whole ecosystem and was populated over the course of years. And it's still updated all the time. But it's a good example of the emphasis a good project should give on documentating what it does and how.
 
-#### 6. Haven't issued a token on another chain
+#### 5. Reputable team
 
-Since Polkadot and Kusama don't support smart contracts yet, it is a common practice for projects to
-issue tokens on Ethereum, or other chains, like Binance Smart Chain, as a means to gather funds,
-with the promise to migrate to a Polkadot token when that's possible.
+Some teams display their team members prominently on their site, along with their social media profiles (usually LinkedIn) and GitHub accounts, for development team members. This gives prospective users and investors the ability to verify the team's credentials, track records and expertise. 
 
-However, if a project has not issued tokens on another chain, this shows their dedication to the
-ecosystem and their commitment to actually build on Polkadot. They have no failsafe to fall to,
-which limits delays and removes the possibility that they may decide to not build on Polkadot after
-all, in favor of another blockchain.
+But the keyword here is **verify**! Don't take what you see on the project's team at face value. Look them up and verify their track record. Do a Google search for the team members mentioned. If it comes up empty, or the only results are regarding the project, it's an indication that their team members are fake. Their photos on their site, if there are any, will also probably be stock photos, or in other words, also fake. These are usually easily recognisable, but here is a [guide](https://helpdeskgeek.com/how-to/free-reverse-image-search-tools/) on how to do a reverse image search, if you want to be thorough.
 
-There are, however, several projects that advertise a "multi-chain" solution. In these cases it's
-natural for the project to issue tokens on multiple chains, but at the same time it increases the
-possibility that the project may not build on Polkadot in the end.
+In some other cases, some developers prefer to maintain their anonymity, using pseudonyms, or the team members aren't mentioned at all. This isn't necessarily a bad thing. Perhaps the team is a strong proponent of privacy, or they want their work to speak for itself. Still, you should try and find out who's behind the project and what they're doing. For developers, their Github activity might speak louder than being mentioned by name. Other team members might be heavily engaged in their community, providing guidance and answers, which is always a good sign.
 
-#### 7. Parachain candidate
+But if the team are ghosts that don't show up anywhere and only engage with the community through proxies, that's a red flag right there, and you should be very sceptical. 
 
-There are many ways a project can build on Polkadot. But the most direct and impactful is by aiming
-to be a parachain. And finding whether a project is actually building a parachain is the easiest
-one: through the
-[Rococo testnet parachains](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains)
-and
-[parathreads](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/parathreads)
-pages on polkadot.js.org. Every project that aims to be a parachain will test their chain on Rococo
-as a parachain and a parathread before moving over to Kusama and eventually Polkadot.
+Besides their community, projects that are serious about building on Polkadot usually engage with the broader Polkadot community. They are active in the various [Polkadot and Kusama channels](https://wiki.polkadot.network/docs/community/), and some of them are [Polkadot Ambassadors](https://polkadot.network/polkadot-ambassador-program/), or generally prominent members of the ecosystem.
 
-They will also be trying out
-[crowdloans](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/crowdloan)
-and
-[auctions](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/auctions)
-on the Rococo testnet and they should be active in the
-[Rococo channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
+#### 6. Clear integration with Polkadot
 
-Of course, getting a parachain slot on either of the two main networks is not guaranteed and the
-project will need to win the [auction](learn-auction.md) for the slots they're interested in, or they
-may choose to be a [parathread](learn-parathreads.md) instead (although this should be clarified to
-their community). But testing their software on the Rococo testnet is certainly a strong indicator
-of the legitimacy of the project.
+There are many ways for a project to build on Polkadot and Kusama. Perhaps the most direct one is to aim to become a parachain. Some of the most notable Polkadot projects are already parachains on Kusama or gearing up to become one, and most of them will shoot for a Polkadot parachain too when they become live.
 
-## Signs of an illegitimate project
+Of course, getting a parachain slot on either of the two main networks is not guaranteed, and all projects will need to win an [auction](https://kusama.network/auctions/) for a parachain slot.
 
-#### 1. Poor site quality
+Verifying which projects are currently parachains on Kusama can be quickly done by visiting the [parachains](https://polkadot.js.org/apps/#/parachains) page on polkadot.js.org/apps. In the [parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) page you can see which projects are gearing up to claim a parachain slot, the [auctions](https://polkadot.js.org/apps/#/parachains/auctions) page shows which projects are bidding for the next slot, and the [crowdloan](https://polkadot.js.org/apps/#/parachains/crowdloan) page which projects are gathering funds from their community to participate in auctions.
 
-An easy way to recognise an illegitimate project is by the quality of their site. A poorly
-constructed site, with typos and grammatical errors, or poor styling, a site that's a template
-without any serious effort to improve or change it, a site that holds little information about the
-project, without links to their GitHub or other resources, and generally a site that doesn't feel
-professional, are indications that the team is not serious about this project.
+But not all projects that build a chain using [Substrate](https://substrate.dev) aim to become a parachain. Some use it simply because of its infrastructure to build their customised chain, without any plans to connect to the Relay Chain. And other projects may aim to become a parachain only on Kusama or directly on Polkadot. 
 
-However, be careful! Many projects that don't have any plans to build anything substantial, still
-have nice, or even beautiful, looking sites. They put a lot of resources on how they present
-themselves visually in order to mislead. So, a nice site doesn't necessarily indicate a legitimate
-project, a poor site usually indicates an illegitimate one, but you always need to check all the
-things listed here before drawing a conclusion.
+However, building a potential parachain is not the only way to build on Polkadot and expand its ecosystem. A project might aim to build a DeFi platform on a parachain, launch a stablecoin or other token on Statemint, build a decentralised exchange, or any other dApp that one might think of, without ever touching the Relay Chain. And that's the beauty of Polkadot!
 
-#### 2. Invisible or fake team
+But in all of those cases, their plans to build on Polkadot, whatever they may be, should be clearly stated on their site and in their documentation. Most importantly, though, you should look for an explanation of *how* they plan to achieve that integration. A roadmap that places the integration at some point in the future means close to nothing without clearly stating the steps to get there. And these should be evaluated in tandem with your research on the technical expertise of the team.
 
-Contrary to a visible and engaged team, if a project mentions the team members but offers no
-information about them or no links to social media or GitHub accounts, that's an indication that
-there's something fishy going on. Do a Google search for the team members. If it comes up empty, or
-the only results are with reference to the project, then it's an indication their team members are
-fake. Their photos on their site, if there are any, will also probably be stock photos, or in other
-words, also fake. These are usually easily recognisable, but here is a
-[guide](https://helpdeskgeek.com/how-to/free-reverse-image-search-tools/) on how to do a reverse
-image search, if you want to be thorough.
+This is especially true for projects that are already running on another network, like on Ethereum or Binance Smart Chain, and have issued tokens there. Many projects do that either to raise funds and test their infrastructure or because they aim to build a "multi-chain" solution or both. But because those projects aren't currently built on Substrate, the existence of a clear and robust integration plan with Polkadot should be essential in your research to ensure that they will indeed build on Polkadot one day.
 
-Of course, a red flag is also if the team members aren't mentioned at all, and can be found only in
-their Telegram group under pseudonyms.
+## "Soft" metrics
+The items above are what you should look at first when evaluating a project and should carry most of the weight in your decision. The reason is that they are hard to fake or manipulate, provided, of course, that you are able to verify the information found. Hence we called them "hard" metrics.
 
-#### 3. Don't trust social media engagement
+But there are other things to look for that might point to a project's legitimacy but can be more easily manipulated, so they shouldn't affect your decision heavily. These are called "soft" metrics.
 
-Although having a vibrant community is a good indication of a legitimate project, many fake projects
-will use bots to populate their channels to show high member count and engagement. This is
-particularly common in Telegram and Discord, although according to Discord terms any bot users need
-to be idintified as such, but scammers don't really care about terms and conditions.
+#### 1. Site quality
 
-So, don't rely just on Telegram or Discord engagement and what people say in these channels. They
-could very easily be bot accounts.
+The quality of a project's site could sometimes provide insights into the legitimacy of a project. A poorly constructed site, with typos and grammatical errors, or poor styling, a site that's a template without any serious effort to improve or change it, a site that holds little information about the project, without links to their GitHub or other resources, and generally a site that doesn't feel professional, are indications that the team is not serious about this project.
 
-#### 4. Public provider emails
+But that doesn't mean that all well-designed sites are also solid projects. This is a soft metric, after all. Many projects that don't have any plans to build anything substantial still have excellent, or even beautiful-looking, sites. They put many resources into how they present themselves visually to mislead. So, an excellent site doesn't necessarily indicate a legitimate project, a poor site might indicate an illegitimate one, but the site quality alone usually isn't enough to reach a conclusion. None of these metrics are; you need to look into all of them to make an educated decision.
 
-If the project's email, or the team members emails, are from Gmail or Yahoo or some other public
-email provider, this is an indication the project is not serious, especially if the emails don't
-appear to be personal emails or even valid ones. Any team that's even a bit serious about their
-project will register emails using their domain.
+#### 2. Social media presence
 
-#### 5. Copied code without attribution
+Having a vibrant community is a good indication of a legitimate project. A team that engages with their community gives updates, answers questions, holds AMAs, posts articles, is a team that's interested in keeping their community members engaged and informed. 
 
-A forked repo is easy to spot since it points to the original repo. A project that uses forked code
-and tries to pass it as their own waves a big red flag. In some cases using someone else's code is
-okay, but in these cases attribution to the original project is a must for any legitimate project.
-And the same is true if only part of the code is copied from another project.
+At the same time, though, social media presence and engagement can be easily faked and manipulated. Creating a Telegram group or a Discord server and filling it with thousands of bots is very easy. Although any bot users need to be identified on Discord according to its terms, scammers don't care about terms and conditions.
 
-In fact, this is reason for termination of a Web3 grant and has happened in the past.
+A team that tweets five times a day or posts a Medium article every other day isn't necessarily building something substantial. 
 
-#### 6. False claims
+So, make sure that you verify that their social media presence and engagement is genuine. Join their channels, ask questions and see first-hand what the community and the admins look like. If you're seeing a lot of users posting very brief comments, like "Good project", "To the moon", "Thank you" etc, without really engaging, be very skeptical and watch more closely, as these are probably bots. Additionally, verify any information shared by the team on social media and check what other people are saying. But verify those comments too, whether they're positive or negative.
 
-Many illegitimate projects will try to elevate and bring validity to themselves by claiming all
-sorts of things that simply aren't true. And usually that's accomplished by associating themselves
-with well-known entities.
+#### 3. Media presence
+Close to social media presence is media presence; third-party articles, mentions in YouTube videos and general promotions of the project.
 
-If you see that a project has partnered with Web3 Foundation, you can know from the start that this
-is a false claim. Web3 Foundation does not endorse, nor partners with any projects in the ecosystem.
+When it comes to articles, the first thing to check is if the article is genuine coverage or a paid press release, especially when a project puts this coverage prominently on their page. Or if the author has any vested interest in promoting the project. You can check their previous articles to see if they systematically "shill" this project or projects in general. 
 
-For all other claims, you should check their validity. If they claim they have received a grant,
-check to see if that's true and that they have not been terminated. If they claim partnerships with
-or funding from various companies and VC funds, cross-reference those claims on those companies'
-sites. If they prominently display that they've been featured in reputable media, verify that this
-is genuine press coverage and not paid press releases.
+The same thing, if not even more, goes for YouTubers and influencers in general. Many of them do this for a living or as a way to "pump" projects they have invested in. Finding good influencers that provide as objective info as possible usually involves its own separate research.
 
-This last point, probably encompasses all others: Don't trust what is shown on the surface. Dig deep
-and **always verify**.
+That's not to say that media exposure is terrible. It is probably the most abundant source of information outside the project itself, but at the same time, it requires extensive cross-checking and verification of information.
+
+#### 4. Email communication
+
+Nowadays, many projects use Telegram or Discord or similar apps for community engagement, as well as the sole channel for communication and support. But having an email registered with their domain, besides providing another channel of communication, can be considered an additional credibility criterion.
+
+Furthermore, receiving emails from the project's domain makes it easy to verify that the communication is authentic (but look out for spoofed emails!). On the other hand, communicating through personal emails or using a public email provider, like Google or Yahoo, might point to a not-too serious team or one that's spread too thin and could only be overlooked if the project is in its very early stages.
 
 ## Crowdloans
 
-With the imminent launch of parachains many projects that aim to become a parachain launch a
-crowdloan in order to gather the necessary funds to participate in the parachain auctions. But with
-all the buzz around this imminent launch, it's possible that many scams will also surface. So,
-crowdloans need their own section in order to make sure that you're participating in a safe way.
+With the recent launch of parachains on Kusama, many projects that aim to become a parachain launched a crowdloan to gather the necessary funds to participate in the parachain auctions. But with all the buzz around the Kusama parachain launch and the imminent Polkadot launch, many scams may also surface. So, crowdloans need their own section to make sure that you're participating safely.
 
-First of all, only projects that aim to become a parachain should have a crowdloan. If a project
-isn't a parachain candidate, there shouldn't be a crowdloan associated with it.
+First of all, only projects that aim to become a parachain should have a crowdloan. If a project isn't a parachain candidate, there shouldn't be a crowdloan associated with it.
 
-The surest way to participate in a parachain crowdloan is the native way through the Crowdloan
-module on polkadot.js.org, which you can test on the Rococo testnet
-[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/crowdloan).
-This issues a special transaction that locks your funds until the parachain slot lease period ends.
-You can learn more about crowdloans [here](https://kusama.network/auctions) and on our
-[wiki](https://guide.kusama.network/docs/mirror-learn-crowdloans).
+The surest way to participate in a parachain crowdloan is the native way through the [Crowdloan module](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan) on polkadot.js.org. This issues a special extrinsic that locks your funds until the parachain slot lease period ends and guarantees that you'll get your stake back after that. You can learn more about crowdloans [here](https://kusama.network/auctions) and on our [wiki](https://guide.kusama.network/docs/mirror-learn-crowdloans).
 
-A legitimate team will never ask you to send them funds in order to participate in a crowdloan. That
-being said, some teams have been doing token sales or swaps in an attempt to get a head start in
-raising funds for the upcoming auctions, but these are not crowdloans and they imply full trust in
-the team. So, if you plan to participate in these token swaps make sure the project is reputable and
-that you're getting the correct information through their official site and social media channels.
+Many parachain candidates offer a way to participate through their site as well. But you should ensure that they are using the crowdloan pallet in the background, and they're simply wrapping that in a nicer, more user-friendly UI. If instead, their crowdloan interface *transfers* funds to an account, these funds will be totally under their control, and this means you need to fully trust that the team will use the funds for the crowdloan, return your share to you when the lease period ends or if they don’t get a spot, and will secure them properly! And if they're doing something like that, it should be explicitly mentioned in their site and documentation.
 
-Similarly, several centralised exchanges are creating ways to participate in crowdloans through
-their platforms, but also some wallets are integrating crowdloan functionality to their apps and
-more are sure to follow. Any legitimate effort should be using the native crowdloans module in the
-background and simply offer a more streamlined experience for the user. Making sure that's the case
-is necessary before using these services, but in any case it still involves trusting the exchange or
-the service provider.
+That being said, some teams have been doing token sales or swaps in an attempt to get a head start in raising funds for the auctions, but these are not crowdloans and still require full trust in the team. So, if you plan to participate in these token swaps, make sure the project is reputable and that you're getting the correct information through their official site and social media channels.
+
+Similarly, several centralised exchanges are creating ways to participate in crowdloans through their platforms, some wallets are integrating crowdloan functionality to their apps, and more are sure to follow. Any legitimate effort should be using the native crowdloans module in the background and offering a more streamlined user experience. Making sure that's the case is necessary before using these services, but in any case, it still involves trusting the exchange or the service provider.
+
+### Additional material
+If you're interested in learning more about how to check facts and verify claims, have a look at the following material. Fact-checking is a skill necessary not only for DYOR but for filtering out the ton of information that we come across daily on the internet.
+
+1. A very nice YouTube series on the art of fact-checking that covers a lot of ground can be found [here](https://www.youtube.com/watch?v=L4aNmdL3Hr0&list=PL8dPuuaLjXtN07XYqqWSKpPrtNDiCHTzU).
+2. Another great resource on fact-checking, for those who prefer to read, can be found [here](https://webliteracy.pressbooks.com).
+3. Wikipedia article on [fact-checking](https://en.wikipedia.org/wiki/Fact-checking)
+
+Finally, you should also check our complementary guide on [how to identify scams](learn-scams). It's not about projects but how to identify outright scams and avoid them, as well as how to protect your sensitive information.
+
+### One last piece of advice
+Once you've read all this material and have done your research and have identified a project as legitimate, one more thing you need to make sure of is that you understand what the project does and what new thing it aims to bring to the ecosystem. 
+
+This doesn't fall under fact-checking and verifying claims, but it's important to mention: fully understanding what something does and its prospecive impact is an integral part of making an informed decision, so don't overlook it.
