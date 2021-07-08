@@ -319,6 +319,8 @@ continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
 
+(placeholder for a tutorial video)
+
 ## Ledger Hardware Wallet
 
 To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
