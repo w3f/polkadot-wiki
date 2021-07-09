@@ -18,7 +18,7 @@ module.exports = {
         "ens",
         "learn-ledger",
         "learn-scams",
-        "learn-legitimate-projects",
+        "how-to-dyor",
         "faq",
       ],
     },
