@@ -41,7 +41,7 @@ Here is a list of what you will need before starting:
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing both buttons on the YES screen.
 - Search for Statemine in the app catalog.
-- Install either the normal (light) version or the XL version.
+- If you are using a Ledger Nano S, install either the normal (light) version or the XL version. For Ledger Nano X, there will only be one app available.
 
 Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
@@ -94,14 +94,14 @@ behind a feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Statemine Ledger application, go to the "Settings"
 tab in [Polkadot-JS Apps UI][apps]. Find the option for attaching Ledger devices and switch the
-option from the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB" (*see note above*).
+option from the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB" (**but see note above**).
 
 ![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](assets/ledger.png)
 
 Click "Save" to keep your settings.
 
 Now when you go to the "Accounts" tab you will see a new button that says "Add via Ledger". Ensure that
-your Ledger device is unlocked, Ledger Live is *closed* and you have [switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes) to the Statemine application, then click this button.
+your Ledger device is unlocked, Ledger Live is **closed** and you have [switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes) to the Statemine application, then click this button.
 
 ![Add Ledger button in Polkadot-JS Apps UI](assets/ledger/query-ledger.png)
 
@@ -150,7 +150,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use [Polkadot-JS Apps UI][apps]. 
 
-> *Important:* Transfering in this way sends tokens to another account on the Statemine parachain. If you need to transfer KSM between Statemine and Kusama, see "Teleporting KSM" below.
+> *Important:* Transfering in this way sends tokens to another account on the Statemine parachain. If you need to transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting) section below.
 
 - Click on the "Send" button next to your account. 
 - In the second input, select one of the accounts from the drop-down menu or paste the address that you want to transfer funds to.
@@ -177,6 +177,8 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
+**Please note** that your Statemine address is the same as your Kusama address. So make sure that you clarify to the sender that you wish to receive your tokens on the Statemine parachain, otherwise (if you're receiving KSM tokens) they could be sent on the Kusama chain.
+
 > **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
 > by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
 > will intercept clicks and clipboard requests and can change your copied value in-flight, so being
@@ -184,14 +186,16 @@ clicking on your account's avatar icon - this immediately copies your address to
 
 ### Teleporting
 
-Teleporting allows you to send tokens between the Relay chain and a parachain, or betwween different parachains. 
+Teleporting allows you to send tokens between the Relay chain and a parachain, or between different parachains. 
 
 The Statemine Ledger app doesn't support the `teleport` extrinsic at this point, so an intermediary account needs to be created first.
 
 To teleport KSM to the Relay chain follow these steps:
-- Create an account outside your Ledger. Instructions can be found [here](learn-account-generation)
+- Create an account outside your Ledger. Instructions can be found [here](learn-account-generation).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly the amount you want to teleport, don't forget take into account the fees for teleporting that will be deducted in the next step.
 - Teleport your tokens following the instructions you will find [here](learn-teleport).
+
+Teleporting **to** a Ledger account from a non-Ledger account doesn't require these extra steps.
 
 ## Support
 
