@@ -12,7 +12,7 @@ devices. The Ledger devices are hardware wallets that keep your private key secu
 device that does not get directly exposed to your computer or the internet.
 
 The Statemine application allows you to manage your KSM and other tokens on the Statemine parachain. It supports most
-of the available transaction types of the network in the XL version of the app (details below). 
+of the available transaction types of the network in the XL version of the app (details [below](#installing-the-ledger-application)). 
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -34,20 +34,14 @@ Here is a list of what you will need before starting:
 
 ### Using Ledger Live
 
-> Note for *Ledger Nano S*: Ledger Nano S users will install the "light" version of the app by default. It is a smaller app that supports only basic functionality. > If you want access to all the supported extrinsics, you need to install the XL version of the app.
-
-#### Installing the light version
+> Note for **Ledger Nano S**: There are two versions of the Statemine app: the normal (light) version and the XL version. The light version has smaller size but it supports only basic functionality. If you want access to all the supported extrinsics, you need to install the XL version of the app.
+> You can see [here][prerelease instructions] a full list of the extrinsics supported by both versions.
 
 - Open the "Manager" tab in Ledger Live.
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing both buttons on the YES screen.
-- Find Statemine in the app catalog and install it.
-
-#### Installing the XL version
-
-- Go to Settings > Experimental features
-- Enable "Developer mode"
-- Follow the steps as above, but select "Statemine XL" and install it
+- Search for Statemine in the app catalog.
+- Install either the normal (light) version or the XL version.
 
 Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
@@ -90,7 +84,7 @@ At the end of the process you should have the newly installed Statemine applicat
 
 ### Adding Your Account
 
-> *IMPORTANT:* WebUSB doesn't work with Chromium version 91.xx. For this reason there is a new option "WebHID" that 
+> **IMPORTANT:** WebUSB doesn't work with Chromium version 91.xx. For this reason there is a new option "WebHID" that 
 > needs to be selected in this version of Chromium for your Ledger device to work. 
 > This option doesn't work currently with the Polkadot extension.
 
