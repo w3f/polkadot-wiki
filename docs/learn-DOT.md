@@ -38,6 +38,16 @@ See [Redenomination of DOT](redenomination.md) for more details._
 | MilliKSM (mKSM) | 9              | 0.001000000000 |
 | KSM             | 12             | 1.000000000000 |
 
+### Westend
+
+| Unit            | Decimal Places | Example        |
+| --------------- | -------------- | -------------- |
+| Planck          | 0              | 0.000000000001 |
+| Point           | 3              | 0.000000001000 |
+| MicroWND (uWND) | 6              | 0.000001000000 |
+| MilliWND (mWND) | 9              | 0.001000000000 |
+| WND             | 12             | 1.000000000000 |
+
 ## What are the uses of DOT?
 
 DOT serve three key functions in Polkadot:
