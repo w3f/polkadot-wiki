@@ -45,6 +45,7 @@ module.exports = {
         },
         "mirror-ens",
         "kusama-ledger",
+        "kusama-statemine-ledger",
         "kusama-timeline",
         "kusama-community",
         "kusama-parameters",
