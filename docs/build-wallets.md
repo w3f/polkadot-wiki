@@ -6,9 +6,9 @@ sidebar_label: Polkadot Wallets
 
 ## Polkadot Wallets
 
-The integration of a [wallet](glossary.md#wallet) with Polkadot
-allows for simple and easy access to private keys and signing transactions. Below are some wallets
-that support Polkadot along with their development statuses.
+The integration of a [wallet](glossary.md#wallet) with Polkadot allows for simple and easy access to
+private keys and signing transactions. Below are some wallets that support Polkadot along with their
+development statuses.
 
 Note that inclusion does not necessarily imply endorsement of that wallet. Polkadot support can
 provide assistance with issues related to Polkadot-JS, the Polkadot{.js} extension, or Parity

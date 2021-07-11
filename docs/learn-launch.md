@@ -6,10 +6,10 @@ description: An explanation of Polkadot's launch process and its individual phas
 ---
 
 The Polkadot network has a phased roll-out plan, with important milestones toward decentralization
-marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the 
+marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the
 [roadmap](https://polkadot.network/launch-roadmap/)
 
-__Current Phase: Parachain Rollout__
+**Current Phase: Parachain Rollout**
 
 ## The PoA Launch
 
@@ -31,8 +31,9 @@ election. Following this election, the network transitioned from PoA into its se
 
 After the chain had been running well with the validator set, the Sudo key issued a runtime upgrade
 that enabled the suite of governance modules in Polkadot; namely, the modules to enable a
-[Council](learn-governance.md#council), a [Technical Committee](learn-governance.md#technical-committee),
-and [public referenda](learn-governance.md#public-referenda).
+[Council](learn-governance.md#council), a
+[Technical Committee](learn-governance.md#technical-committee), and
+[public referenda](learn-governance.md#public-referenda).
 
 ## Removal of Sudo
 
@@ -44,22 +45,22 @@ under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community [made a public proposal](maintain-guides-democracy.md) for a
-runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
+To enable balance transfers, the community [made a public proposal](maintain-guides-democracy.md)
+for a runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
 subsequently enabled on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Redenomination
 
-On August 21, 2020, [redenomination](redenomination.md) of DOT, the native token on Polkadot, occurred.
-From this date, one DOT (old) equals 100 new DOT.
+On August 21, 2020, [redenomination](redenomination.md) of DOT, the native token on Polkadot,
+occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
 
 Polkadot is now moving to the next stage of opening up its core functionality, like parachain slot
-auctions, parathreads, and cross-chain message passing. Polkadot is now on track to launch several 
-parachains in 2021. These upgrades will require runtime upgrades that will pass through Polkadot's 
-normal governance processes. The core functionality does not have to be unlocked sequentially &mdash; 
-several features can be unlocked with a single proposal.
+auctions, parathreads, and cross-chain message passing. Polkadot is now on track to launch several
+parachains in 2021. These upgrades will require runtime upgrades that will pass through Polkadot's
+normal governance processes. The core functionality does not have to be unlocked sequentially
+&mdash; several features can be unlocked with a single proposal.
 
 Parachains will first roll out on Kusama with a common good parachain, followed by the first slot
 auction and winner's onboarding.

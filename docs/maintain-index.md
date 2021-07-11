@@ -23,12 +23,14 @@ guides to set up a node and run the network.
 
 ## Nominator
 
-- [Learn about Nominators](learn-nominator.md) - High level overview of nominators and related links.
+- [Learn about Nominators](learn-nominator.md) - High level overview of nominators and related
+  links.
 - [Nomination Guide (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Walkthrough on how to
   nominate on the Polkadot network.
 - [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how to
   nominate on the Kusama canary network.
-- [How to stop being a Nominator](maintain-guides-how-to-unbond.md) - Guide on how to stop nominating.
+- [How to stop being a Nominator](maintain-guides-how-to-unbond.md) - Guide on how to stop
+  nominating.
 
 ## Validator
 
@@ -47,12 +49,13 @@ guides to set up a node and run the network.
 - [How to upgrade a Validator Node](maintain-guides-how-to-upgrade.md) - Guide on upgrading your
   validator node.
 - [How to Chill](maintain-guides-how-to-chill.md) - Walkthrough on how to chill as a validator.
-- [How to Stop Validating](maintain-guides-how-to-stop-validating.md) - Proper way to stop validating.
+- [How to Stop Validating](maintain-guides-how-to-stop-validating.md) - Proper way to stop
+  validating.
 
 ## Governance
 
-- [How to pariticipate in Governance](maintain-guides-democracy.md) - Walkthrough on how to participate
-  in governance.
+- [How to pariticipate in Governance](maintain-guides-democracy.md) - Walkthrough on how to
+  participate in governance.
 - [How to join the Council][join the council] - Step by step guide for running for the Council.
 - [How to vote for a Councillor][vote for councillors] - Step by step guide for voting for your
   favorite councillors.

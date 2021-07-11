@@ -12,9 +12,10 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 
 1. Never, ever, ever share your seed phrase or account password.
 2. Do not trust anyone online. It is trivial for them to lie and change their identities.
-3. [If you are scammed]((#i-got-scammed---what-can-i-do), there is **likely nothing** that can be done to
-   recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all of your
-   funds to their account in seconds. It is better to be safe than to risk all of your tokens.
+3. [If you are scammed]((#i-got-scammed---what-can-i-do), there is **likely nothing** that can be
+   done to recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all
+   of your funds to their account in seconds. It is better to be safe than to risk all of your
+   tokens.
 4. If it sounds too good to be true, it probably is. People, especially celebrities, do not give
    away crypto for free. Even if they wanted to, they could just ask for your address as opposed to
    having you send them tokens.
@@ -25,13 +26,13 @@ scammed, please email [our support team](mailto:support@web3.foundation).
    [Web3 Foundation support](mailto:support@polkadot.network). Often scammers will fake a website or
    a blog post, but if you check it against a secondary source you will reduce the chances of being
    scammed.
-   
-   > Important: With crowdloans active on the network, it is very important to know how to safely participate.
-   > Fake crowdloan campaigns may present an attractive target for scammers. If you are participating in a 
-   > network-native crowdloan, **never send your tokens to an address.** 
-   > Native crowdloan contributions are made with a special transaction using a campaign index, where the 
-   > contributed assets remain locked until the end of the lease period. Legitimate teams will not ask you 
-   > to send your assets to an address to participate in a network-native crowdloan.
+
+   > Important: With crowdloans active on the network, it is very important to know how to safely
+   > participate. Fake crowdloan campaigns may present an attractive target for scammers. If you are
+   > participating in a network-native crowdloan, **never send your tokens to an address.** Native
+   > crowdloan contributions are made with a special transaction using a campaign index, where the
+   > contributed assets remain locked until the end of the lease period. Legitimate teams will not
+   > ask you to send your assets to an address to participate in a network-native crowdloan.
 
 ### Some Common Types of Scams
 
@@ -107,8 +108,8 @@ is. Never enter any personal data if you feel the source could be a scam. Feel f
 
 ### Check twice before sending DOT/KSM
 
-A good practice to take into consideration is to verify the address you are sending crypto to. If you
-don't know that account, you probably shouldn't be sending your assets there. It's your
+A good practice to take into consideration is to verify the address you are sending crypto to. If
+you don't know that account, you probably shouldn't be sending your assets there. It's your
 responsibility to make sure that you understand where you are sending your funds. Crypto is a
 decentralized space and your only recourse if a mistake is made is by appealing to the council (who
 usually will not get involved in matters of mistaken transfers - see below).
@@ -132,9 +133,9 @@ site:
 - substrate.dev
 - substrate.io
 
-Of course, many projects building on Polkadot and Kusama that use similar names. If,
-however, a site poses as Polkadot, Kusama, Web3 Foundation, or Parity on a domain not listed above,
-then it's most likely a scam.
+Of course, many projects building on Polkadot and Kusama that use similar names. If, however, a site
+poses as Polkadot, Kusama, Web3 Foundation, or Parity on a domain not listed above, then it's most
+likely a scam.
 
 Besides those, there are also `polkadot.js.org` and `dotapps.io` that host our web wallet and other
 tools.
@@ -154,6 +155,6 @@ You could put together a full account of the transactions and chat messages acco
 screenshots and explanations, but there are no guarantee stakeholders on the network will help you
 restore the funds as it would set a dangerous precedent. In fact, there have been several attempts
 on Polkadot in the past and none have been passed. It is safer for the network and for future users
-to consider the money lost. Still, your detailed account of the situation might help prevent others from 
-falling for the same thing so we recommend retracing your steps
-and talking publicly about them, if it's not too private.
+to consider the money lost. Still, your detailed account of the situation might help prevent others
+from falling for the same thing so we recommend retracing your steps and talking publicly about
+them, if it's not too private.

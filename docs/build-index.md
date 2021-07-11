@@ -19,9 +19,10 @@ This section of the wiki is divided into the following parts:
   parathread, or smart contract for your project and how to get started.
 - [Parachain Development Kits](build-pdk.md) - PDKs are toolkits for building parachains and
   parathreads.
-- [Smart Contracts](build-smart-contracts.md) - Smart contracts are fragments of custom logic that can
-  be deployed to a live chain.
-- [Polkadot Wallets](build-wallets.md) - Learn about the supported wallets and how to manage accounts.
+- [Smart Contracts](build-smart-contracts.md) - Smart contracts are fragments of custom logic that
+  can be deployed to a live chain.
+- [Polkadot Wallets](build-wallets.md) - Learn about the supported wallets and how to manage
+  accounts.
 
 ## Integration Guide
 
@@ -29,10 +30,10 @@ This section is for service providers like wallets or node operators who want to
 integrate Polkadot into their systems.
 
 - [Integration Initiation](build-integration.md) - The guide to the guide.
-- [Polkadot Protocol Information](build-protocol-info.md) - General information and F.A.Q.s about the
-  Polkadot protocol, e.g. address formats.
-- [Node Management](build-node-management.md) - A short overview of the Parity Polkadot client and the
-  most relevant options/flags for infrastructure providers.
+- [Polkadot Protocol Information](build-protocol-info.md) - General information and F.A.Q.s about
+  the Polkadot protocol, e.g. address formats.
+- [Node Management](build-node-management.md) - A short overview of the Parity Polkadot client and
+  the most relevant options/flags for infrastructure providers.
 - [Node Interaction](build-node-interaction.md) - Learn how to interact with your node via RPC.
 - [Transaction Construction and Signing](build-transaction-construction.md) - Learn the transaction
   format for Polkadot and how to construct and sign transactions offline.

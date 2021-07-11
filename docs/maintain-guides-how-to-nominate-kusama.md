@@ -5,9 +5,7 @@ sidebar_label: Nominator Guide
 ---
 
 > The following information applies to the Kusama network. If you want to nominate on Polkadot,
-> check out the
-> [Polkadot guide](maintain-guides-how-to-validate-polkadot.md)
-> instead.
+> check out the [Polkadot guide](maintain-guides-how-to-validate-polkadot.md) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
 for appointing their stake to the validators who are the second type of participant. By appointing
@@ -68,8 +66,8 @@ estimate your earnings and this is where it's good to start picking favorites.
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough KSM backing them (as allocated through the
-[Phragmén election mechanism](learn-phragmen.md)). It is possible
-validator can remain in the queue for a very long time if they never get enough backing.
+[Phragmén election mechanism](learn-phragmen.md)). It is possible validator can remain in the queue
+for a very long time if they never get enough backing.
 
 The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
@@ -101,9 +99,9 @@ earn compound interest.
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be
-[slashed](learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can now
-be distributed to up to 16 validators. Be careful about the validators you choose since you will be
-slashed if your validator commits an offence.
+[slashed](learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
+now be distributed to up to 16 validators. Be careful about the validators you choose since you will
+be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select some validators.

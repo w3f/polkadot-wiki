@@ -4,9 +4,9 @@ title: Kusama
 sidebar_label: Home
 ---
 
-Kusama is a "canary network" for Polkadot; an early release of the code that is available
-first and holds real economic value. For developers, Kusama is a proving ground for runtime
-upgrades, on-chain governance, and parachains.
+Kusama is a "canary network" for Polkadot; an early release of the code that is available first and
+holds real economic value. For developers, Kusama is a proving ground for runtime upgrades, on-chain
+governance, and parachains.
 
 No Promises.
 
@@ -14,8 +14,8 @@ No Promises.
 
 On Kusama you can:
 
-- Explore the politics. Campaign as a councillor or vote for new runtime proposals using 
-[Democracy](maintain-guides-democracy.md).
+- Explore the politics. Campaign as a councillor or vote for new runtime proposals using
+  [Democracy](maintain-guides-democracy.md).
 - Hone your validator set-up. The minimum requirement for staking as a validator on Kusama is much
   lower than it is expected for Polkadot. There are also programs in place such as [Thousand
   Validators][thousand validators] to help community validators rise the ranks.
@@ -23,8 +23,8 @@ On Kusama you can:
   This includes participating in a parachain slot auction and composable applications.
 - Join a cyber secret society. The [Kappa Sigma Mu][kappa] fraternity asks you to get a Kusama
   tattoo to join.
-- __Expect Chaos__. Kusama is getting more battle tested day-by-day but it's built on the foundations of
-  moving fast and trying new things.
+- **Expect Chaos**. Kusama is getting more battle tested day-by-day but it's built on the
+  foundations of moving fast and trying new things.
 
 Kusama is owned by those who hold the Kusama tokens (KSM). There's no central kill switch and all
 changes are made through the protocol's on-chain governance. Kusama is experimental. There are no

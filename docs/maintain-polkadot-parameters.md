@@ -12,8 +12,8 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except in the time slot duration itself. See
-[Polkadot Parameters](maintain-polkadot-parameters.md) for more
-details on how Kusama's parameters differ from Polkadot's._
+[Polkadot Parameters](maintain-polkadot-parameters.md) for more details on how Kusama's parameters
+differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 4 hours (2_400 slots x 6 seconds)
@@ -53,9 +53,13 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
-As of June 30, 2021, the staking parameters have been modified to a minimum of 40 DOT to nominate, and a maximum of 22_500 total nominators. As most of these parameters can be updated via on-chain governance, please check the latest parameters on [chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query - staking - minimumNominatorBond and maxNominatorsCount)
+As of June 30, 2021, the staking parameters have been modified to a minimum of 40 DOT to nominate,
+and a maximum of 22_500 total nominators. As most of these parameters can be updated via on-chain
+governance, please check the latest parameters on
+[chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query - staking -
+minimumNominatorBond and maxNominatorsCount)
 
-| Polkadot               | Time    | Slots   | Description                                                                                                                                                                                         |
+| Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 1 Day   | 14_400  | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
 | Nomination period    | 1 Day   | 14_400  | How often a new validator set is elected according to Phragmén's method.                                                                                                                            |

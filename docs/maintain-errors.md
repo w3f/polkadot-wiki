@@ -54,9 +54,9 @@ the runtime for the fourth error (index 3) in the sixth pallet (index 5).
 
 By looking at the
 [runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L965)
-we see that the pallet at index 5 is 
-[Balances](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L981). 
-Now we will check the Balances pallet's code which is hosted in the Substrate repository, and look for
+we see that the pallet at index 5 is
+[Balances](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L981). Now
+we will check the Balances pallet's code which is hosted in the Substrate repository, and look for
 the fourth error in the Error enum. According to
 [its source](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs#L396) the
 error that we got is

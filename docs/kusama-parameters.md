@@ -12,8 +12,8 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Kusama generally runs 4x as fast as Polkadot, except in the time slot duration itself. See
-[Polkadot Parameters](maintain-polkadot-parameters.md) for more
-details on how Kusama's parameters differ from Polkadot's._
+[Polkadot Parameters](maintain-polkadot-parameters.md) for more details on how Kusama's parameters
+differ from Polkadot's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 1 hour (600 slots x 6 seconds)
@@ -56,7 +56,7 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 6 hours | 3_600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case the a validator misbehaves.                                                      |
-| Nomination period    | 6 hours | 3_600   | How often a new validator set is [elected](learn-phragmen.md).                                                                                                                                         |
+| Nomination period    | 6 hours | 3_600   | How often a new validator set is [elected](learn-phragmen.md).                                                                                                                                      |
 | Bonding duration     | 7 days  | 604_800 | How long until your funds will be transferrable after unbonding. Note that the bonding duration is defined in eras, not directly by slots.                                                          |
 | Slash defer duration | 7 days  | 604_800 | Prevents overslashing and validators "escaping" and getting their nominators slashed with no repercussions to themselves. Note that the bonding duration is defined in eras, not directly by slots. |
 

@@ -9,9 +9,9 @@ Substrate implementation, you probably want the ability to run a node-as-a-back-
 always better to rely on your own infrastructure than on a third-party-hosted one in this brave new
 decentralized world.
 
-This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the same
-process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First, let's
-clarify the term _full node_.
+This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
+same process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First,
+let's clarify the term _full node_.
 
 ### Types of Nodes
 
@@ -32,15 +32,15 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** is _pruned_: it discards all finalized blocks older than a configurable
-number except the genesis block: This is 256 blocks from the last finalized one, by default.
-A node that is pruned this way requires much less space than an archive node.
+A **full node** is _pruned_: it discards all finalized blocks older than a configurable number
+except the genesis block: This is 256 blocks from the last finalized one, by default. A node that is
+pruned this way requires much less space than an archive node.
 
-A full node may eventually be able to rebuild the entire chain with no additional information,
-and become an archive node, but at he time of writing, this is not implemented. If you need to
-query historical blocks past what you pruned, you need to purge your database and resync your node
+A full node may eventually be able to rebuild the entire chain with no additional information, and
+become an archive node, but at he time of writing, this is not implemented. If you need to query
+historical blocks past what you pruned, you need to purge your database and resync your node
 starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to
-avoid needing to sync from genesis with the network, and only need the blocks past that snapshot. 
+avoid needing to sync from genesis with the network, and only need the blocks past that snapshot.
 
 Full nodes allow you to read the current state of the chain and to submit and validate extrinsics
 directly on the network without relying on a centralized infrastructure provider.
@@ -48,14 +48,14 @@ directly on the network without relying on a centralized infrastructure provider
 Another type of node is a **light node**. A light node has only the runtime and the current state,
 but does not store past blocks and so cannot read historical data without requesting it from a node
 that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
-light nodes is a Chrome extension, which is a node in its own right, running the runtime in WASM format:
-https://github.com/paritytech/substrate-light-ui as well as a full or light node that is completely
-encapsulated in WASM and can be integrated into webapps: https://github.com/paritytech/smoldot#wasm-light-node
+light nodes is a Chrome extension, which is a node in its own right, running the runtime in WASM
+format: https://github.com/paritytech/substrate-light-ui as well as a full or light node that is
+completely encapsulated in WASM and can be integrated into webapps:
+https://github.com/paritytech/smoldot#wasm-light-node
 
 ### Fast Install Instructions (Mac)
 
-> Not recommended if you're a validator. Please see
-> [validator setup](maintain-guides-validator.md)
+> Not recommended if you're a validator. Please see [validator setup](maintain-guides-validator.md)
 
 - Type terminal in the ios searchbar/searchlight to open the 'terminal' application
 - Install Homebrew within the terminal by running:
@@ -77,8 +77,7 @@ encapsulated in WASM and can be integrated into webapps: https://github.com/pari
 
 > This works only on Windows Pro with virtualization enabled.
 
-> Not recommended if you're a validator. Please see
-> [validator setup](maintain-guides-validator.md)
+> Not recommended if you're a validator. Please see [validator setup](maintain-guides-validator.md)
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10

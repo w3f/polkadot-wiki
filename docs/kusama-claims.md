@@ -19,15 +19,15 @@ For most users, we recommend using the
 [Polkadot{.js} browser extension](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
 since it will allow you to store your encrypted keystore locally.
 
-In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger.md), or
-[Parity Signer](learn-account-generation.md#parity-signer).
+In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger.md),
+or [Parity Signer](learn-account-generation.md#parity-signer).
 
 Another option you may consider using is the Subkey command line utility, which will allow you to
 take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](build-wallets.md). Many of these
-wallets support generating Kusama accounts as well.
+[Polkadot Wiki Wallets page](build-wallets.md). Many of these wallets support generating Kusama
+accounts as well.
 
 ### Using Kusama Ledger application
 
@@ -39,18 +39,22 @@ then proceed to step 2 below.
 1. Install the Polkadot{.js} extension from the
    [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
    or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
-2. Click on the settings button to change the network to "Kusama (canary)".
-   <img src={require('./assets/kusama/kusama_polkadotjs_add_account-1.png').default} style={{marginLeft: "70px", width: "50%"}}/>
-3. Create a new account by clicking on "Create new account (root or derived)".
-   <img src={require('./assets/kusama/kusama_polkadotjs_create.png').default} style={{marginLeft: "70px", width: "50%"}} />
-4. Uncheck the option to create an account dervied from another seed.
-   <img src={require('./assets/kusama/kusama_polkadotjs_uncheck.png').default} style={{marginLeft: "70px", width: "50%"}} />
+2. Click on the settings button to change the network to "Kusama (canary)". <img
+   src={require('./assets/kusama/kusama_polkadotjs_add_account-1.png').default}
+   style={{marginLeft: "70px", width: "50%"}}/>
+3. Create a new account by clicking on "Create new account (root or derived)". <img
+   src={require('./assets/kusama/kusama_polkadotjs_create.png').default}
+   style={{marginLeft: "70px", width: "50%"}} />
+4. Uncheck the option to create an account dervied from another seed. <img
+   src={require('./assets/kusama/kusama_polkadotjs_uncheck.png').default}
+   style={{marginLeft: "70px", width: "50%"}} />
 5. Copy the seed phrase and store it somewhere safe. Don't share the seed phrase with anyone, you
    can use it to access your account if you forget your password or want to import your account
-   again.
-   <img src={require('./assets/kusama/kusama_polkadotjs_mnemonicseed.jpg').default} style={{marginLeft: "70px", width: "50%"}} />
-6. Enter a name for the account and type a strong password (at least 6 characters).
-   <img src={require('./assets/kusama/kusama_polkadotjs_final_account.png').default} style={{marginLeft: "70px", width: "50%"}} />
+   again. <img src={require('./assets/kusama/kusama_polkadotjs_mnemonicseed.jpg').default}
+   style={{marginLeft: "70px", width: "50%"}} />
+6. Enter a name for the account and type a strong password (at least 6 characters). <img
+   src={require('./assets/kusama/kusama_polkadotjs_final_account.png').default}
+   style={{marginLeft: "70px", width: "50%"}} />
 7. Click on "Add the account with the generated seed".
 8. You can copy the account's address to the clipboard by clicking on its identicon.
 
@@ -167,8 +171,8 @@ enter `subkey --help` for more usage examples.
 
 5. Click on the pink QR Code symbol and select "Copy address" to copy your address to clipboard.
 
-<img src={require('./assets/kusama/polkawallet-accounts-page.jpg').default} width="50%" />
-<img src={require('./assets/kusama/polkawallet-copy-address.jpg').default} width="50%" />
+<img src={require('./assets/kusama/polkawallet-accounts-page.jpg').default} width="50%" /> <img
+src={require('./assets/kusama/polkawallet-copy-address.jpg').default} width="50%" />
 
 6. [Get the Kusama address from the Substrate address.](#kusama-from-substrate-address)
 
@@ -250,8 +254,8 @@ Polkadot-JS UI and click "Confirm Claim."
 
 At this point you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama
-network such as [governance](learn-governance) and [staking](learn-staking.md). During the soft launch
-period balance transfers will not be enabled.
+network such as [governance](learn-governance) and [staking](learn-staking.md). During the soft
+launch period balance transfers will not be enabled.
 
 ![Claim Step 4](assets/kusama/claim/claim-4.png)]
 

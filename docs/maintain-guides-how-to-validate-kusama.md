@@ -18,8 +18,8 @@ your stash.
 before attempting to run your own validator.
 
 Since security is so important to running a successful validator, you should take a look at the
-[validator setup](maintain-guides-validator.md) information to make you understand the factors
-to consider when constructing your infrastructure. The Web3 Foundation also maintains a
+[validator setup](maintain-guides-validator.md) information to make you understand the factors to
+consider when constructing your infrastructure. The Web3 Foundation also maintains a
 [reference implementation for a validator set-up](https://github.com/w3f/polkadot-validator-setup)
 that you can use by deploying yourself. As you progress in your journey as a validator, you will
 likely want to use this repository as a _starting point_ for your own modifications and
@@ -34,9 +34,9 @@ Riot.im) using [this link](https://matrix.to/#/#KusamaValidatorLounge:polkadot.b
 ### How Many KSM Do I Need?
 
 You can have a rough estimate on that by using the methods listed
-[here](faq.md#What-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator-?). Validators
-are elected based on [Phragmén's algorithm](learn-phragmen.md). To be elected into the set, you need a
-minimum stake behind your validator. This stake can come from yourself or from
+[here](faq.md#What-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator-?).
+Validators are elected based on [Phragmén's algorithm](learn-phragmen.md). To be elected into the
+set, you need a minimum stake behind your validator. This stake can come from yourself or from
 [nominators](learn-nominator.md). This means that as a minimum, you will need enough KSM to set up
 Stash and Controller [accounts](learn-keys.md) with the existential deposit, plus a little extra for
 transaction fees. The rest can come from nominators.
@@ -80,10 +80,10 @@ optimizations in order to be equal to other validators that are running the stan
 Once you choose your cloud service provider and set-up your new server, the first thing you will do
 is install Rust.
 
-If you have never installed Rust, you should do this first. 
+If you have never installed Rust, you should do this first.
 
-If you have already installed Rust, run the following command to make sure you are using
-the latest version.
+If you have already installed Rust, run the following command to make sure you are using the latest
+version.
 
 ```sh
 rustup update
@@ -92,7 +92,7 @@ rustup update
 If not, this command will fetch the latest version of Rust and install it.
 
 ```sh
-curl https://sh.rustup.rs -sSf | sh -s -- -y 
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 ```
 
 > If you do not have "curl" installed, run "sudo apt install curl"
@@ -182,8 +182,7 @@ Run the following command to find the latest version.
 git tag -l | sort -V | grep -v -- '-rc'
 ```
 
-Find the latest version; replace "VERSION" in the commmand below and 
-run to change your branch.
+Find the latest version; replace "VERSION" in the commmand below and run to change your branch.
 
 ```sh
 git checkout VERSION
@@ -196,7 +195,7 @@ Build native code with the cargo release profile.
 cargo build --release
 ```
 
-***This step will take a while (generally 10 - 40 minutes, depending on your hardware).***
+**_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be
 > done by running:
@@ -207,10 +206,10 @@ cargo build --release
 > cargo +nightly-2021-06-09 build --release
 > ```
 >
-> You may also need to run the build more than once. 
-> 
-> If you would like to execute the tests, run the following command: 
-> 
+> You may also need to run the build more than once.
+>
+> If you would like to execute the tests, run the following command:
+>
 > ```sh
 > cargo test --all
 > ```
@@ -243,38 +242,39 @@ You can begin syncing your node by running the following command:
 if you do not want to start in validator mode right away.
 
 ```
-2021-06-17 02:34:25 ----------------------------    
-2021-06-17 02:34:25 This chain is not in any way    
-2021-06-17 02:34:25       endorsed by the           
-2021-06-17 02:34:25      KUSAMA FOUNDATION          
-2021-06-17 02:34:25 ----------------------------    
-2021-06-17 02:34:25 Parity Polkadot    
-2021-06-17 02:34:25 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu    
-2021-06-17 02:34:25 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021    
-2021-06-17 02:34:25 📋 Chain specification: Kusama    
-2021-06-17 02:34:25 🏷 Node name: obtainable-kitten-0716    
-2021-06-17 02:34:25 👤 Role: FULL    
-2021-06-17 02:34:25 💾 Database: RocksDb at /root/.local/share/polkadot/chains/ksmcc3/db    
-2021-06-17 02:34:25 ⛓  Native runtime: kusama-9050 (parity-kusama-0.tx5.au2)    
-2021-06-17 02:34:25 🔨 Initializing Genesis block/state (state: 0xb000…ef6b, header-hash: 0xb0a8…dafe)    
-2021-06-17 02:34:25 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
-2021-06-17 02:34:26 ⏱  Loaded block-time = 6s from block 0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe    
-2021-06-17 02:34:26 👶 Creating empty BABE epoch changes on what appears to be first startup.    
-2021-06-17 02:34:26 🏷 Local node identity is: 12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
-2021-06-17 02:34:26 📦 Highest known block at #0    
-2021-06-17 02:34:26 〽️ Prometheus server started at 127.0.0.1:9615    
-2021-06-17 02:34:26 Listening for new connections on 127.0.0.1:9944.  
+2021-06-17 02:34:25 ----------------------------
+2021-06-17 02:34:25 This chain is not in any way
+2021-06-17 02:34:25       endorsed by the
+2021-06-17 02:34:25      KUSAMA FOUNDATION
+2021-06-17 02:34:25 ----------------------------
+2021-06-17 02:34:25 Parity Polkadot
+2021-06-17 02:34:25 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu
+2021-06-17 02:34:25 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021
+2021-06-17 02:34:25 📋 Chain specification: Kusama
+2021-06-17 02:34:25 🏷 Node name: obtainable-kitten-0716
+2021-06-17 02:34:25 👤 Role: FULL
+2021-06-17 02:34:25 💾 Database: RocksDb at /root/.local/share/polkadot/chains/ksmcc3/db
+2021-06-17 02:34:25 ⛓  Native runtime: kusama-9050 (parity-kusama-0.tx5.au2)
+2021-06-17 02:34:25 🔨 Initializing Genesis block/state (state: 0xb000…ef6b, header-hash: 0xb0a8…dafe)
+2021-06-17 02:34:25 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.
+2021-06-17 02:34:26 ⏱  Loaded block-time = 6s from block 0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe
+2021-06-17 02:34:26 👶 Creating empty BABE epoch changes on what appears to be first startup.
+2021-06-17 02:34:26 🏷 Local node identity is: 12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB
+2021-06-17 02:34:26 📦 Highest known block at #0
+2021-06-17 02:34:26 〽️ Prometheus server started at 127.0.0.1:9615
+2021-06-17 02:34:26 Listening for new connections on 127.0.0.1:9944.
 ```
 
 Example of node sync:
+
 ```
-2021-06-17 02:34:34 🔍 Discovered new external address for our node: /ip4/100.102.231.64/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
-2021-06-17 02:34:36 ⚙️  Syncing 409.2 bps, target=#8062689 (5 peers), best: #3477 (0x63ad…e046), finalized #3072 (0x0e4c…f587), ⬇ 153.2kiB/s ⬆ 12.9kiB/s    
-2021-06-17 02:34:37 🔍 Discovered new external address for our node: /ip4/100.111.175.0/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
-2021-06-17 02:34:38 🔍 Discovered new external address for our node: /ip4/100.100.176.0/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
-2021-06-17 02:34:41 ⚙️  Syncing 386.2 bps, target=#8062690 (7 peers), best: #5409 (0x1d76…8c3d), finalized #5121 (0x8ad1…b6dc), ⬇ 96.1kiB/s ⬆ 10.9kiB/s    
-2021-06-17 02:34:46 ⚙️  Syncing 394.8 bps, target=#8062691 (11 peers), best: #7383 (0x0689…6f1e), finalized #7168 (0x72a9…8d8c), ⬇ 352.9kiB/s ⬆ 5.1kiB/s    
-2021-06-17 02:34:51 ⚙️  Syncing 347.0 bps, target=#8062692 (12 peers), best: #9118 (0x66fc…cce3), finalized #8704 (0x14c9…705e), ⬇ 62.7kiB/s ⬆ 1.7kiB/s 
+2021-06-17 02:34:34 🔍 Discovered new external address for our node: /ip4/100.102.231.64/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB
+2021-06-17 02:34:36 ⚙️  Syncing 409.2 bps, target=#8062689 (5 peers), best: #3477 (0x63ad…e046), finalized #3072 (0x0e4c…f587), ⬇ 153.2kiB/s ⬆ 12.9kiB/s
+2021-06-17 02:34:37 🔍 Discovered new external address for our node: /ip4/100.111.175.0/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB
+2021-06-17 02:34:38 🔍 Discovered new external address for our node: /ip4/100.100.176.0/tcp/30333/ws/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB
+2021-06-17 02:34:41 ⚙️  Syncing 386.2 bps, target=#8062690 (7 peers), best: #5409 (0x1d76…8c3d), finalized #5121 (0x8ad1…b6dc), ⬇ 96.1kiB/s ⬆ 10.9kiB/s
+2021-06-17 02:34:46 ⚙️  Syncing 394.8 bps, target=#8062691 (11 peers), best: #7383 (0x0689…6f1e), finalized #7168 (0x72a9…8d8c), ⬇ 352.9kiB/s ⬆ 5.1kiB/s
+2021-06-17 02:34:51 ⚙️  Syncing 347.0 bps, target=#8062692 (12 peers), best: #9118 (0x66fc…cce3), finalized #8704 (0x14c9…705e), ⬇ 62.7kiB/s ⬆ 1.7kiB/s
 ```
 
 The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only
@@ -330,12 +330,11 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
-  [here](learn-staking.md#reward-distribution).
-  Starting with runtime version v2023 natively included in client version
-  [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3), payouts can go to any
-  custom address. If you'd like to redirect payments to an account that is neither the controller
-  nor the stash account, set one up. Note that it is extremely unsafe to set an exchange address as
-  the recipient of the staking rewards.
+  [here](learn-staking.md#reward-distribution). Starting with runtime version v2023 natively
+  included in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3),
+  payouts can go to any custom address. If you'd like to redirect payments to an account that is
+  neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set
+  an exchange address as the recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
@@ -365,28 +364,28 @@ some advanced operations.
 Similarly:
 
 ```
-2021-06-17 02:47:05 ----------------------------    
-2021-06-17 02:47:05 This chain is not in any way    
-2021-06-17 02:47:05       endorsed by the           
-2021-06-17 02:47:05      KUSAMA FOUNDATION          
-2021-06-17 02:47:05 ----------------------------    
-2021-06-17 02:47:05 Parity Polkadot    
-2021-06-17 02:47:05 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu    
-2021-06-17 02:47:05 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021    
-2021-06-17 02:47:05 📋 Chain specification: Kusama    
-2021-06-17 02:47:05 🏷 Node name: techedtest    
-2021-06-17 02:47:05 👤 Role: AUTHORITY    
-2021-06-17 02:47:05 💾 Database: RocksDb at /root/.local/share/polkadot/chains/ksmcc3/db   
-2021-06-17 02:47:05 ⛓  Native runtime: kusama-9050 (parity-kusama-0.tx5.au2)    
-2021-06-17 02:47:07 🏷 Local node identity is: 12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
-2021-06-17 02:47:07 📦 Highest known block at #139917    
-2021-06-17 02:47:07 〽️ Prometheus server started at 127.0.0.1:9615    
-2021-06-17 02:47:07 Listening for new connections on 127.0.0.1:9944.    
-2021-06-17 02:47:07 👶 Starting BABE Authorship worker  
+2021-06-17 02:47:05 ----------------------------
+2021-06-17 02:47:05 This chain is not in any way
+2021-06-17 02:47:05       endorsed by the
+2021-06-17 02:47:05      KUSAMA FOUNDATION
+2021-06-17 02:47:05 ----------------------------
+2021-06-17 02:47:05 Parity Polkadot
+2021-06-17 02:47:05 ✌️  version 0.9.5-95f6aa201-x86_64-linux-gnu
+2021-06-17 02:47:05 ❤️  by Parity Technologies <admin@parity.io>, 2017-2021
+2021-06-17 02:47:05 📋 Chain specification: Kusama
+2021-06-17 02:47:05 🏷 Node name: techedtest
+2021-06-17 02:47:05 👤 Role: AUTHORITY
+2021-06-17 02:47:05 💾 Database: RocksDb at /root/.local/share/polkadot/chains/ksmcc3/db
+2021-06-17 02:47:05 ⛓  Native runtime: kusama-9050 (parity-kusama-0.tx5.au2)
+2021-06-17 02:47:07 🏷 Local node identity is: 12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB
+2021-06-17 02:47:07 📦 Highest known block at #139917
+2021-06-17 02:47:07 〽️ Prometheus server started at 127.0.0.1:9615
+2021-06-17 02:47:07 Listening for new connections on 127.0.0.1:9944.
+2021-06-17 02:47:07 👶 Starting BABE Authorship worker
 ```
 
 ```
-2021-06-17 02:48:15 🔍 Discovered new external address for our node: /ip4/10.2.99.4/tcp/30333/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB    
+2021-06-17 02:48:15 🔍 Discovered new external address for our node: /ip4/10.2.99.4/tcp/30333/p2p/12D3KooWLE7ivpuXJQpFVP4fuuutAqEsk8nrNEpuR3tddqnXgLPB
 
 2021-06-17 02:48:17 ⚙️  Syncing 235.6 bps, target=#8062826 (49 peers), best: #155136 (0x23ea…e4fc), finalized #154624 (0x234f…f6a0), ⬇ 380.0kiB/s ⬆ 57.4kiB/s
 ```
@@ -402,14 +401,13 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: Polkadot-JS Apps
 
-You can generate your
-[Session keys](learn-keys.md#session-keys) in the
-client via the apps RPC. If you are doing this, make sure that you have the Polkadot-JS Apps
-explorer attached to your validator node. You can configure the apps dashboard to connect to the
-endpoint of your validator in the Settings tab. If you are connected to a default endpoint hosted by
-Parity of Web3 Foundation, you will not be able to use this method since making RPC requests to this
-node would effect the local keystore hosted on a _public node_ and you want to make sure you are
-interacting with the keystore for _your node_.
+You can generate your [Session keys](learn-keys.md#session-keys) in the client via the apps RPC. If
+you are doing this, make sure that you have the Polkadot-JS Apps explorer attached to your validator
+node. You can configure the apps dashboard to connect to the endpoint of your validator in the
+Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you
+will not be able to use this method since making RPC requests to this node would effect the local
+keystore hosted on a _public node_ and you want to make sure you are interacting with the keystore
+for _your node_.
 
 Once ensuring that you have connected to your node, the easiest way to set session keys for your
 node is by calling the `author_rotateKeys` RPC request to create new keys in your validator's
@@ -448,20 +446,20 @@ Submit this extrinsic and you are now ready to start validating.
 
 ![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-validate-1.png)
 
-Here you will need to input the Keys from `rotateKeys`, which
-is the Hex output from `author_rotateKeys`. The keys will show 
-as pending until applied at the start of a new session.
+Here you will need to input the Keys from `rotateKeys`, which is the Hex output from
+`author_rotateKeys`. The keys will show as pending until applied at the start of a new session.
 
-The "reward commission percentage" is the commission percentage
-that you can declare against your validator's rewards. This is the rate that your validator will be commissioned with. 
+The "reward commission percentage" is the commission percentage that you can declare against your
+validator's rewards. This is the rate that your validator will be commissioned with.
+
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-> Note: setting a commission rate of 100% suggests that you do not
-> want your validator to receive nominations.
+> Note: setting a commission rate of 100% suggests that you do not want your validator to receive
+> nominations.
 
-You can also determine if you would like to receive nominations
-with the "allows new nominations" option.
+You can also determine if you would like to receive nominations with the "allows new nominations"
+option.
 
 ![dashboard validate](assets/guides/how-to-validate/kusama-dashboard-validate-2.png)
 

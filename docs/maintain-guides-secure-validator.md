@@ -19,25 +19,25 @@ This primarily means that validators:
 High availability set-ups that involve redundant validator nodes may seem attractive at first.
 However, they can be **very dangerous** if they are not set up perfectly. The reason for this is
 that the session keys used by a validator should always be isolated to just a single node.
-Replicating session keys across multiple nodes could lead to equivocation slashes, or parachain 
+Replicating session keys across multiple nodes could lead to equivocation slashes, or parachain
 validity slashes which can make you lose **100% of your staked funds**.
 
 The good news is that 100% uptime of your validator is not really needed, as it has some buffer
 within eras in order to go offline for a little while and upgrade. For this reason, we advise that
-you only attempt a high availability set-up if **you're confident you know exactly what you're doing.**
+you only attempt a high availability set-up if **you're confident you know exactly what you're
+doing.**
 
 Many expert validators have made mistakes in the past due to the handling of session keys.
 
-Remember, even if your validator goes offline for some time, the offline slash is much more 
+Remember, even if your validator goes offline for some time, the offline slash is much more
 forgiving than the equivocation or parachain validity slashing.
 
 ## Key Management
 
-See the [Polkadot Keys guide](learn-keys.md) for more
-information on keys. The keys that are of primary concern for validator infrastructure are the
-Session keys. These keys sign messages related to consensus and parachains. Although Session keys
-are _not_ account keys and therefore cannot transfer funds, an attacker could use them to commit
-slashable behavior.
+See the [Polkadot Keys guide](learn-keys.md) for more information on keys. The keys that are of
+primary concern for validator infrastructure are the Session keys. These keys sign messages related
+to consensus and parachains. Although Session keys are _not_ account keys and therefore cannot
+transfer funds, an attacker could use them to commit slashable behavior.
 
 Session keys are generated inside the node via RPC call. See the
 [How to Validate guide](maintain-guides-how-to-validate-polkadot.md#set-session-keys)

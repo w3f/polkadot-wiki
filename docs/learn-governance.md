@@ -328,8 +328,8 @@ invalid.
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that selects
-validators from the available pool based on nominations. However, token holders' votes for
+Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that
+selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one day on Kusama and one week on Polkadot.
 
