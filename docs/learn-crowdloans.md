@@ -11,7 +11,7 @@ for their parachain bids in a decentralized crowdloan.
 > Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo.md) :polkadot }} >
 > {{ kusama: [Rococo page](mirror-build-parachains-rococo.md) :kusama }}.
 
-Anyone can create a new crowdloan campaign for a parachain slot
+Anyone who has registered a parachain can create a new crowdloan campaign for a slot
 {{ kusama:  by depositing a specified number of tokens :kusama }}. A campaign is configured as a
 range of slots (i.e. the duration of the {{ polkadot: [parachain](learn-parachains.md) :polkadot }}
 {{ kusama: [parachain](mirror-learn-parachains.md) :kusama }} will bid for), a cap, and a duration. The
@@ -30,11 +30,9 @@ uniquely for this campaign.
 
 It is up to individual parachain teams to decide if and how they want to reward participants who
 forgo staking and choose to lock their tokens in support of the parachain’s campaign. As one can
-imagine, rewards will take many forms and may vary widely among projects.
+imagine, rewards will take many forms and may vary widely among projects. 
 
-During some point of the crowdloan campaign the owner will upload the parachain data. Ideally, the
-owner does this before soliciting contributions to the campaign so that the contributors can verify
-it. The data can only be uploaded once during the course of the campaign and it will be what is
+Prior to the start of the crowdloan campaign the owner will upload the parachain data. Once the crowdloan is live, the parachain configuration will be locked and it will be what is
 deployed as the parachain's runtime. Of course, once the parachain is running it can always change
 via runtime upgrades (as determined through its own local governance).
 
@@ -62,3 +60,18 @@ Here is an exmaple of the crowdloans in play during the very first Kusama auctio
 
 Furthermore, check out this video on [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM)
 for steps on how to access available crowdloans on PolkadotJS apps.  
+
+## Starting a crowdloan campaign
+When setting the parameters of a crowdloan campaign, consider: 
+
+ - The campaign creation form requires setting a crowdloan cap &mdash; the maximum amount a campaign can collect. A team can still win an auction if the cap has not been reached. 
+ - Set the desired end of the crowdloan in the "Ending block" field. This helps to ensure that the crowdloan is live during the entire duration of the auction. For example, if an auction starts in three days and will last for five days, you may want to set your crowdloan to end in 10 days, or a similar timescale.  One way of calculating the ending block number is adding ```(10*60*24*7)*(x*6) + y```, &mdash;  where ```x``` is the number of auction periods you want the crowdloan to continue for and ```y``` is the current block number (```(Blocks/Min  * Hour/Min * Day/Hour * Week/Day) * (x * Week/Period)```).
+- "First slot" field refers to the first slot you want to bid for. If the current auction encompasses slots ```(3, 4, 5, 6)```, your first slot can be at least ```3```. The last slot must also be within that range.
+- You can only cancel  an ongoing crowdloan  if no contributions have been made. Your deposit will be returned to you.
+
+
+
+
+
+
+
