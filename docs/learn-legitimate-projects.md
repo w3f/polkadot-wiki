@@ -1,5 +1,5 @@
 ---
-id: how-to-dyor
+id: learn-dyor
 title: How to Do Your Own Research (DYOR)
 sidebar_label: How to Do Your Own Research
 ---
