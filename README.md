@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/w3f/polkadot-wiki.svg?style=svg)](https://circleci.com/gh/w3f/polkadot-wiki)
-
 # Polkadot Wiki
 
 The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative
@@ -43,7 +41,7 @@ npx prettier --write ./docs/
 
 ### Automated Deployments
 
-The wiki is automatically deployed to GitHub Pages via the CircleCI job on each new commit to the
+The wiki is automatically built and deployed via Github Actions for new commits on the
 master branch. The Kusama guide is also deployed to GitHub Pages (via a separate repository). Both
 websites are also uploaded to IPFS via GitHub actions.
 
