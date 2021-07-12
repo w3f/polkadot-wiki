@@ -6,13 +6,13 @@ sidebar_label: How to Do Your Own Research
 
 Many projects are being built, or intend to build, on both Polkadot and Kusama. However, many claim to do so but have either no such intention, they don't have the resources to pull it through, or they're outright trying to scam people by misusing the Polkadot and Kusama brands.
 
-Telling legitimate projects from the "not so honest" ones isn't always an easy task. This guide is meant to help you find out how to do your research better when you come across a project that seems interesting. What it's **not** meant to do, is characterise any single project as legitimate or not, or make that decision for you. 
+Telling legitimate projects from the "not so honest" ones isn't always an easy task. This guide is meant to help you find out how to do your research better when you come across a project that seems interesting. What it's **not** meant to do, is label any single project as legitimate or not, or make that decision for you. 
 
-Furthermore, a legitimate project doesn't necessarily mean it will be a successful one too, and this guide is not meant to be viewed as financial or investment advice. 
+Furthermore, a legitimate project doesn't necessarily mean it will also be a successful one, and **this guide is not meant to be viewed as financial or investment advice.**
 
 ### "Powered by Polkadot" or "Polka" prefix clarification
 
-The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This usually means that the project is building, or intends to build, on the Polkadot ecosystem, using Substrate. But any project can claim that, so the existence of this statement on a project's site infers no information about the project's legitimacy, and it's certainly not a "seal of approval" by Web3 Foundation.
+The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This usually means that the project is building, or intends to build, on the Polkadot ecosystem, using [Substrate](https://substrate.dev). But any project can claim that, so the existence of this statement on a project's site infers no information about the project's legitimacy, and it's certainly not a "seal of approval" by Web3 Foundation.
 
 The same thing goes for projects that have the "Polka" prefix in their name. Many projects use that to associate themselves with the ecosystem, some legitimately and others only to piggyback on Polkadot's reputation.
 
@@ -20,7 +20,7 @@ The same thing goes for projects that have the "Polka" prefix in their name. Man
 
 #### 1. Association with entities you trust
 
-New projects usually try to increase their credibility by associating themselves with well-known entities. The thinking is simple: "These entities that have a good reputation trust us, so if you trust them, by association, you should trust us too". And that's a valid argument and a strong indicator of the legitimacy of a project.
+New projects usually try to increase their credibility by associating themselves with well-known entities. The thinking is simple: "These entities that have a good reputation trust us, so if you trust them, by association, you should trust us too". Indeed, association with a trusted entity can be a strong indicator of the legitimacy of a project.
 
 For example, if a project has received a [Web3 Foundation Grant](https://github.com/w3f/Open-Grants-Program), this is an indication that the project is indeed building on the Polkadot ecosystem, and if they have delivered all of their milestones, then their code is most likely of reasonable quality. 
 
@@ -32,7 +32,7 @@ Or receiving funding from VCs that you trust and are known to be involved with o
 
 For example, if a project has the [Web3 Foundation Grant badge](https://github.com/w3f/General-Grants-Program/blob/master/grants/grant-badge-guidelines.md) on their site or claims to have received a grant, check to see if they have received one and that it hasn't been terminated. The complete list of projects that have successfully applied for a grant can be found [here](https://github.com/w3f/General-Grants-Program/blob/master/grants/accepted_grant_applications.md), where you can see what each project has delivered and if, perhaps, their grant has been terminated.
 
-The same thing goes for VC funding or another grant, or any advertised association. Check on the corresponding sites to make sure such claims are valid.
+The same thing goes for VC funding or another grant, or any advertised association for that matter. Check on the corresponding sites to make sure such claims are valid.
 
 Also, make sure you understand the *scope* of the association. Going back to the Web3 grants example, they have a precise scope. They are granted for specific deliverables, and the review team only checks the code and evaluates these deliverables *of the particular project*. So, having received a Web3 grant provides no information about the general practices of a team, the longevity of the project besides the scope of the grant, or other projects the team might be building, which is why the badge rules clearly state that it shouldn't be displayed on the team's landing page.
 
@@ -41,11 +41,11 @@ Similarly, if a project claims to have partnered with a reputable entity, verify
 
 #### 2. Open source
 
-An open-source project promotes transparency, builds trust and ensures the project team isn't doing something suspicious behind the scenes. Additionally, it makes it very easy to track the project's progress and see how active the team is in developing it.
+An open-source project promotes transparency, builds trust, and ensures the project team isn't doing something suspicious behind the scenes. Additionally, it makes it very easy to track the project's progress and see how active the team is in developing it.
 
 That doesn't mean, though, that any closed source project isn't legitimate or the team behind it has something to hide. Many teams choose to keep their code private to protect their intellectual property. And several teams that do so have gotten a [General Grant](https://github.com/w3f/General-Grants-Program), under which members of the grants review team review their private code.
 
-Another thing that an open-source project allows you to see is if they have copied any code from other open sources. This isn't necessarily bad since no one re-invents the wheel but copied code should attribute to the source. If it doesn't, this should raise some red flags because the project team tries to feign expertise by passing someone else's code as their own.
+Another thing that an open-source project allows you to see is if they have copied any code from other open sources. This isn't necessarily bad, since no one re-invents the wheel, but copied code should attribute to the source. If it doesn't, this should raise some red flags because the project team tries to feign expertise by passing someone else's code as their own.
 
 A forked repo is easy to spot since it points to the original repo, but partially copied code might not be as easy to find. A quick [search](https://duckduckgo.com/?q=search+for+copied+source+code+plagiarism&t=ffab&ia=web) can provide you with some ways and tools to look for plagiarism.
 
@@ -129,32 +129,32 @@ That's not to say that media exposure is terrible. It is probably the most abund
 
 #### 4. Email communication
 
-Nowadays, many projects use Telegram or Discord or similar apps for community engagement, as well as the sole channel for communication and support. But having an email registered with their domain, besides providing another channel of communication, can be considered an additional credibility criterion.
+Nowadays, many projects use Telegram, Discord, or similar apps for community engagement, as well as the sole channel for communication and support. But having an email registered with their domain, besides providing another channel of communication, can be considered an additional credibility criterion.
 
 Furthermore, receiving emails from the project's domain makes it easy to verify that the communication is authentic (but look out for spoofed emails!). On the other hand, communicating through personal emails or using a public email provider, like Google or Yahoo, might point to a not-too serious team or one that's spread too thin and could only be overlooked if the project is in its very early stages.
 
 ## Crowdloans
 
-With the recent launch of parachains on Kusama, many projects that aim to become a parachain launched a crowdloan to gather the necessary funds to participate in the parachain auctions. But with all the buzz around the Kusama parachain launch and the imminent Polkadot launch, many scams may also surface. So, crowdloans need their own section to make sure that you're participating safely.
+With the recent launch of [parachains](mirror-learn-parachains.md) on Kusama, many projects that aim to become a parachain launched a [crowdloan](mirror-learn-crowdloans.md) to gather the necessary funds to participate in the [parachain auctions](mirror-learn-auction.md). But with all the buzz around the Kusama parachain launch and the imminent Polkadot launch, many scams may also surface. So, crowdloans need their own section to make sure that you're participating safely.
 
 First of all, only projects that aim to become a parachain should have a crowdloan. If a project isn't a parachain candidate, there shouldn't be a crowdloan associated with it.
 
-The surest way to participate in a parachain crowdloan is the native way through the [Crowdloan module](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan) on polkadot.js.org. This issues a special extrinsic that locks your funds until the parachain slot lease period ends and guarantees that you'll get your stake back after that. You can learn more about crowdloans [here](https://kusama.network/auctions) and on our [wiki](https://guide.kusama.network/docs/mirror-learn-crowdloans).
+The surest way to participate in a parachain crowdloan is the native way through the [Crowdloan module](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan) on Polkadot-JS Apps. This issues a special extrinsic that locks your funds until the parachain slot lease period ends and guarantees that you'll get your stake back after that. You can learn more about crowdloans through the link above and [here](https://kusama.network/auctions).
 
-Many parachain candidates offer a way to participate through their site as well. But you should ensure that they are using the crowdloan pallet in the background, and they're simply wrapping that in a nicer, more user-friendly UI. If instead, their crowdloan interface *transfers* funds to an account, these funds will be totally under their control, and this means you need to fully trust that the team will use the funds for the crowdloan, return your share to you when the lease period ends or if they don’t get a spot, and will secure them properly! And if they're doing something like that, it should be explicitly mentioned in their site and documentation.
+Many parachain candidates offer a way to participate through their site as well. But you should ensure that they are using the crowdloan pallet in the background, and they're simply wrapping that in a nicer, more user-friendly UI. If instead, their crowdloan interface *transfers* funds to an account, these funds will be totally under their control, and this means you need to fully trust that the team will use the funds for the crowdloan, return your share to you when the lease period ends or if they don’t get a spot, and will secure them properly. If they're doing something like that, it should be explicitly mentioned in their site and documentation.
 
-That being said, some teams have been doing token sales or swaps in an attempt to get a head start in raising funds for the auctions, but these are not crowdloans and still require full trust in the team. So, if you plan to participate in these token swaps, make sure the project is reputable and that you're getting the correct information through their official site and social media channels.
+That being said, some teams have been doing token sales or swaps in an attempt to get a head start in raising funds for the auctions, but these are **not crowdloans** and still require full trust in the team. So, if you plan to participate in these token swaps, make sure the project is reputable and that you're getting the correct information through their official site and social media channels.
 
-Similarly, several centralised exchanges are creating ways to participate in crowdloans through their platforms, some wallets are integrating crowdloan functionality to their apps, and more are sure to follow. Any legitimate effort should be using the native crowdloans module in the background and offering a more streamlined user experience. Making sure that's the case is necessary before using these services, but in any case, it still involves trusting the exchange or the service provider.
+Similarly, several centralised exchanges are creating ways to participate in crowdloans through their platforms, while some wallets are integrating crowdloan functionality to their apps. And more are sure to follow. Any legitimate effort should be using the native crowdloans module in the background and offering a more streamlined user experience. Making sure that's the case is necessary before using these services, but in any case, it still involves trusting the exchange or the service provider.
 
 ### Additional material
-If you're interested in learning more about how to check facts and verify claims, have a look at the following material. Fact-checking is a skill necessary not only for DYOR but for filtering out the ton of information that we come across daily on the internet.
+Fact-checking is a skill necessary not only for DYOR but for filtering out the ton of information that we come across daily on the internet. If you're interested in learning more about how to check facts and verify claims, have a look at the following material. 
 
 1. A very nice YouTube series on the art of fact-checking that covers a lot of ground can be found [here](https://www.youtube.com/watch?v=L4aNmdL3Hr0&list=PL8dPuuaLjXtN07XYqqWSKpPrtNDiCHTzU).
 2. Another great resource on fact-checking, for those who prefer to read, can be found [here](https://webliteracy.pressbooks.com).
 3. Wikipedia article on [fact-checking](https://en.wikipedia.org/wiki/Fact-checking)
 
-Finally, you should also check our complementary guide on [how to identify scams](learn-scams). It's not about projects but how to identify outright scams and avoid them, as well as how to protect your sensitive information.
+Finally, you should also check our complementary guide on [how to identify scams](learn-scams.md). It's not about projects but how to identify outright scams and avoid them, as well as how to protect your sensitive information.
 
 ### One last piece of advice
 Once you've read all this material and have done your research and have identified a project as legitimate, one more thing you need to make sure of is that you understand what the project does and what new thing it aims to bring to the ecosystem. 
