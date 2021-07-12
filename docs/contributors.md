@@ -94,10 +94,11 @@ and blockchain classes at General Assembly, Code Fellows, and Columbia Universit
 - matrix / riot / element: [@radha:web3.foundation](https://matrix.to/#/@radha:web3.foundation)
 - twitter: [@DrW3RK](https://twitter.com/DrW3RK)
 
-Radha is a Technical Educator at the Web3 Foundation. Radha has a PhD in Computer Science and has 
-three years of experience teaching Computer Science courses. He also taught a Massively Open Online 
+Radha is a Technical Educator at the Web3 Foundation. Radha has a PhD in Computer Science and has
+three years of experience teaching Computer Science courses. He also taught a Massively Open Online
 Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). He is excited to
-contribute to Web3 Foundation's vision by educating professionals and the general public about Web 3.0 Technology Stack.
+contribute to Web3 Foundation's vision by educating professionals and the general public about Web
+3.0 Technology Stack.
 
 <br/><br/>
 
@@ -125,10 +126,10 @@ In a previous life, he was a web developer and senior PHP editor at SitePoint, w
 
 In his [quest for developer health](https://bruno.id/an-endomorphs-journey-to-health-part-2/), he
 likes to combine fitness and gaming and can be found in VR on Oculus and Steam as TheSwader. He also
-runs a weekly newsletter covering all things Web3 at [Dot Leap](https://dotleap.substack.com). 
+runs a weekly newsletter covering all things Web3 at [Dot Leap](https://dotleap.substack.com).
 
-You can now find Bruno hacking the NFT universe by leading the way at [RMRK](https://rmrk.app/)
-to create the NFT standard in the Polkadot ecosystem.
+You can now find Bruno hacking the NFT universe by leading the way at [RMRK](https://rmrk.app/) to
+create the NFT standard in the Polkadot ecosystem.
 
 ---
 

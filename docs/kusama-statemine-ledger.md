@@ -11,8 +11,9 @@ Statemine has a [Ledger][] application that is compatible with the Ledger Nano S
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
 device that does not get directly exposed to your computer or the internet.
 
-The Statemine application allows you to manage your KSM and other tokens on the Statemine parachain. It supports most
-of the available transaction types of the network in the XL version of the app (details [below](#installing-the-ledger-application)). 
+The Statemine application allows you to manage your KSM and other tokens on the Statemine parachain.
+It supports most of the available transaction types of the network in the XL version of the app
+(details [below](#installing-the-ledger-application)).
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -34,14 +35,18 @@ Here is a list of what you will need before starting:
 
 ### Using Ledger Live
 
-> Note for **Ledger Nano S**: There are two versions of the Statemine app: the normal (light) version and the XL version. The light version has smaller size but it supports only basic functionality. If you want access to all the supported extrinsics, you need to install the XL version of the app.
-> You can see [here][prerelease instructions] a full list of the extrinsics supported by both versions.
+> Note for **Ledger Nano S**: There are two versions of the Statemine app: the normal (light)
+> version and the XL version. The light version has smaller size but it supports only basic
+> functionality. If you want access to all the supported extrinsics, you need to install the XL
+> version of the app. You can see [here][prerelease instructions] a full list of the extrinsics
+> supported by both versions.
 
 - Open the "Manager" tab in Ledger Live.
 - Connect and unlock your Ledger device.
 - If asked, allow the manager on your device by pressing both buttons on the YES screen.
 - Search for Statemine in the app catalog.
-- If you are using a Ledger Nano S, install either the normal (light) version or the XL version. For Ledger Nano X, there will only be one app available.
+- If you are using a Ledger Nano S, install either the normal (light) version or the XL version. For
+  Ledger Nano X, there will only be one app available.
 
 Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
@@ -84,9 +89,9 @@ At the end of the process you should have the newly installed Statemine applicat
 
 ### Adding Your Account
 
-> **IMPORTANT:** WebUSB doesn't work with Chromium version 91.xx. For this reason there is a new option "WebHID" that 
-> needs to be selected in this version of Chromium for your Ledger device to work. 
-> This option doesn't work currently with the Polkadot extension.
+> **IMPORTANT:** WebUSB doesn't work with Chromium version 91.xx. For this reason there is a new
+> option "WebHID" that needs to be selected in this version of Chromium for your Ledger device to
+> work. This option doesn't work currently with the Polkadot extension.
 
 [Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
 device will work with the browser interface after installation. The functionality is currently gated
@@ -94,14 +99,17 @@ behind a feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Statemine Ledger application, go to the "Settings"
 tab in [Polkadot-JS Apps UI][apps]. Find the option for attaching Ledger devices and switch the
-option from the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB" (**but see note above**).
+option from the default "Do not attach Ledger devices" to "Attach Ledger via WebUSB" (**but see note
+above**).
 
 ![Dropdown selector for allowing Ledger connections in Polkadot-JS Apps UI Settings](assets/ledger.png)
 
 Click "Save" to keep your settings.
 
-Now when you go to the "Accounts" tab you will see a new button that says "Add via Ledger". Ensure that
-your Ledger device is unlocked, Ledger Live is **closed** and you have [switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes) to the Statemine application, then click this button.
+Now when you go to the "Accounts" tab you will see a new button that says "Add via Ledger". Ensure
+that your Ledger device is unlocked, Ledger Live is **closed** and you have
+[switched over](https://support.polkadot.network/support/solutions/articles/65000169778-how-to-switch-network-nodes)
+to the Statemine application, then click this button.
 
 ![Add Ledger button in Polkadot-JS Apps UI](assets/ledger/query-ledger.png)
 
@@ -148,12 +156,15 @@ balance arrow, it will show details of your balance such as locks or reserved am
 ### Sending a Transfer
 
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
-method is to use [Polkadot-JS Apps UI][apps]. 
+method is to use [Polkadot-JS Apps UI][apps].
 
-> *Important:* Transfering in this way sends tokens to another account on the Statemine parachain. If you need to transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting) section below.
+> _Important:_ Transfering in this way sends tokens to another account on the Statemine parachain.
+> If you need to transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting)
+> section below.
 
-- Click on the "Send" button next to your account. 
-- In the second input, select one of the accounts from the drop-down menu or paste the address that you want to transfer funds to.
+- Click on the "Send" button next to your account.
+- In the second input, select one of the accounts from the drop-down menu or paste the address that
+  you want to transfer funds to.
 - In the third input, enter the amount of KSM you want to transfer.
 - Click the "Make Transfer" button.
 - Confirm the transaction on your device.
@@ -177,7 +188,9 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-**Please note** that your Statemine address is the same as your Kusama address. So make sure that you clarify to the sender that you wish to receive your tokens on the Statemine parachain, otherwise (if you're receiving KSM tokens) they could be sent on the Kusama chain.
+**Please note** that your Statemine address is the same as your Kusama address. So make sure that
+you clarify to the sender that you wish to receive your tokens on the Statemine parachain, otherwise
+(if you're receiving KSM tokens) they could be sent on the Kusama chain.
 
 > **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
 > by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
@@ -186,13 +199,18 @@ clicking on your account's avatar icon - this immediately copies your address to
 
 ### Teleporting
 
-Teleporting allows you to send tokens between the Relay chain and a parachain, or between different parachains. 
+Teleporting allows you to send tokens between the Relay chain and a parachain, or between different
+parachains.
 
-The Statemine Ledger app doesn't support the `teleport` extrinsic at this point, so an intermediary account needs to be created first.
+The Statemine Ledger app doesn't support the `teleport` extrinsic at this point, so an intermediary
+account needs to be created first.
 
 To teleport KSM to the Relay chain follow these steps:
+
 - Create an account outside your Ledger. Instructions can be found [here](learn-account-generation).
-- Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly the amount you want to teleport, don't forget take into account the fees for teleporting that will be deducted in the next step.
+- Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
+  the amount you want to teleport, don't forget take into account the fees for teleporting that will
+  be deducted in the next step.
 - Teleport your tokens following the instructions you will find [here](learn-teleport).
 
 Teleporting **to** a Ledger account from a non-Ledger account doesn't require these extra steps.
@@ -203,6 +221,7 @@ If you need support please send an email to [support@kusama.network](mailto:supp
 or visit [our Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
-[apps]: https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
+[apps]:
+  https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
 [prerelease instructions]: https://github.com/Zondax/ledger-statemine
 [releases page]: https://github.com/Zondax/ledger-statemine/releases

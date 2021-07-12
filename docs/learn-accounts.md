@@ -35,8 +35,8 @@ as you convert the format.
 ## Address Generation, Derivation, and Portability
 
 A valid account only requires a private key that can sign on one of the
-[supported curves and signature schemes](build-protocol-info.md#cryptography). Most wallets take many
-steps from a mnemonic phrase to account key, which affects the ability to use the same mnemonic
+[supported curves and signature schemes](build-protocol-info.md#cryptography). Most wallets take
+many steps from a mnemonic phrase to account key, which affects the ability to use the same mnemonic
 phrase in multiple wallets. Wallets that use different steps will arrive at a different set of
 addresses from the same mnemonic.
 
@@ -165,7 +165,8 @@ There is also the very secure [Parity Signer](https://www.parity.io/signer/). Th
 on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible
 phone that you are comfortable using only for Parity Signer.
 
-Hardware wallet integration is possible with Ledger. A full guide is available [here](learn-ledger.md).
+Hardware wallet integration is possible with Ledger. A full guide is available
+[here](learn-ledger.md).
 
 Alternatively, you might find other wallets on the [Wallet](build-wallets.md) page, but bear in mind
 that some of these are **unaudited** and are not officially affiliated with Web3 Foundation or the
@@ -186,11 +187,10 @@ funds are to be used. If the funds are to be used for transfers then the usable 
 amount minus any `misc_frozen` funds. However, if the funds are to be used to pay transaction fees
 than the usable amount would be the "free" funds minus any funds that are `fee_frozen`.
 
-The **total** balance of the account is considered to be the sum of `free` and `reserved` funds in the account. 
-Reserved funds are held due to on-chain requirements
-and can usually be freed by making some on-chain action. For example, the "Identity" pallet reserves
-funds while an on-chain identity is registered, but by clearing the identity you can unreserve the
-funds and make them free again.
+The **total** balance of the account is considered to be the sum of `free` and `reserved` funds in
+the account. Reserved funds are held due to on-chain requirements and can usually be freed by making
+some on-chain action. For example, the "Identity" pallet reserves funds while an on-chain identity
+is registered, but by clearing the identity you can unreserve the funds and make them free again.
 
 ## Existential Deposit and Reaping
 
@@ -394,10 +394,9 @@ deposit back.
 
 ### Example with Polkadot.JS
 
-For this example, we will be using the
-[Westend](maintain-networks.md#westend-test-network) testnet and
-[Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps)
-to create a 2-of-3 multisig address and send a transaction with it.
+For this example, we will be using the [Westend](maintain-networks.md#westend-test-network) testnet
+and [Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps) to create a 2-of-3 multisig
+address and send a transaction with it.
 
 > While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
 > notable differences:
@@ -618,8 +617,7 @@ and Substrate that are returned based on your public key should match with the o
 
 You can verify your own public key verification by recalling that Polkadot addresses start with a
 '1', whereas Substrate addresses generally start with a '5' (Kusama addresses start with a capital
-letter). See [Addresses](learn-accounts.md#address-format) for
-more details.
+letter). See [Addresses](learn-accounts.md#address-format) for more details.
 
 Furthermore, the [Utility Scripts](https://github.com/w3f/utility-scripts) can be referenced for how
 the verification is performed:

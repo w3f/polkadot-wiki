@@ -38,8 +38,8 @@ Receiving messages on Polkadot from an external, non-parachain blockchain can be
 Substrate pallet. The Substrate instance can then be deployed to Polkadot either as a system-level
 parachain (native extension to the core Polkadot software) or as a community-operated parachain.
 
-An example of a bridge that would strictly use bridge pallets would be a Kusama `\<\>` Polkadot bridge,
-since both use parachains based on Substrate.
+An example of a bridge that would strictly use bridge pallets would be a Kusama `\<\>` Polkadot
+bridge, since both use parachains based on Substrate.
 
 For the standalone chains that will not have a parachain bridging module on Polkadot
 (non-Substrate), it will be necessary to deploy bridge contracts (see below).

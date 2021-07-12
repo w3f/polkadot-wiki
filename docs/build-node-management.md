@@ -29,8 +29,8 @@ to learn more about how the chain selection works internally.
 
 An archive node does not prune any block or state data. Use the `--pruning archive` flag. Certain
 types of nodes like validators must run in archive mode. Likewise, all
-[events](build-protocol-info.md/#events) are cleared from state in each block, so if you want to store
-events then you will need an archive node.
+[events](build-protocol-info.md/#events) are cleared from state in each block, so if you want to
+store events then you will need an archive node.
 
 > To upgrade a node, please refer to this
 > [video](https://www.youtube.com/watch?v=5LtcdBR9F40&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=5)
@@ -53,10 +53,10 @@ with the `--rpc-port` and `--ws-port` options. To limit the hosts who can access
 
 **Execution**
 
-The Parity Polkadot client implements a [Polkadot Host](learn-polkadot-host.md) and a native runtime.
-The runtime must compile to WebAssembly and is stored on-chain. If the client's runtime is the same
-spec as the runtime that is stored on-chain, then the client will execute blocks using the client
-binary. Otherwise, the client will execute the Wasm runtime from the chain.
+The Parity Polkadot client implements a [Polkadot Host](learn-polkadot-host.md) and a native
+runtime. The runtime must compile to WebAssembly and is stored on-chain. If the client's runtime is
+the same spec as the runtime that is stored on-chain, then the client will execute blocks using the
+client binary. Otherwise, the client will execute the Wasm runtime from the chain.
 
 Therefore, when syncing the chain, the client will execute blocks from past runtimes using their
 associated Wasm binary. This feature also allows forkless upgrades: the client can execute a new

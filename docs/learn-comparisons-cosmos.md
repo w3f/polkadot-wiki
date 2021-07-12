@@ -15,8 +15,8 @@ Polkadot uses a sharded model where each shard in the protocol has an abstract s
 function (STF). Polkadot uses WebAssembly (Wasm) as a "meta-protocol". A shard's STF can be abstract
 as long as the validators on Polkadot can execute it within a Wasm environment.
 
-The shards of Polkadot are called "[parachains](learn-parachains.md)". Every time a parachain wants to
-make a state transition, it submits a block (batch of state transitions) along with a state proof
+The shards of Polkadot are called "[parachains](learn-parachains.md)". Every time a parachain wants
+to make a state transition, it submits a block (batch of state transitions) along with a state proof
 that Polkadot validators can independently verify. These blocks are finalized for the parachains
 when they are finalized by Polkadot's Relay Chain, the main chain of the system. As such, all
 parachains share state with the entire system, meaning that a chain re-organization of a single
@@ -92,10 +92,10 @@ it has quadratic transport complexity, but can only finalize one block at a time
 ## Staking Mechanics
 
 Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators using the
-[sequential Phragmén algorithm](learn-phragmen.md). The validator set size is set by governance (1_000
-validators planned) and stakers who do not want to run validator infrastructure can nominate up to
-16 validators. Phragmén's algorithm selects the optimal allocation of stake, where optimal is based
-on having the most evenly staked set.
+[sequential Phragmén algorithm](learn-phragmen.md). The validator set size is set by governance
+(1_000 validators planned) and stakers who do not want to run validator infrastructure can nominate
+up to 16 validators. Phragmén's algorithm selects the optimal allocation of stake, where optimal is
+based on having the most evenly staked set.
 
 All validators in Polkadot have the same weight in the consensus protocols. That is, to reach
 greater than 2/3 of support for a chain, more than 2/3 of the _validators_ must commit to it, rather

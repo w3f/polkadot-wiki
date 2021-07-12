@@ -5,8 +5,9 @@ sidebar_label: Participate in Democracy
 ---
 
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
-in Polkadot and Kusama. The other two bodies are the [council](maintain-guides-how-to-join-council.md)
-and the [technical committee](learn-governance.md#technical-committee).
+in Polkadot and Kusama. The other two bodies are the
+[council](maintain-guides-how-to-join-council.md) and the
+[technical committee](learn-governance.md#technical-committee).
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
@@ -163,11 +164,11 @@ your transaction and wait for it to be included in a block.
 
 ## Unlocking Locked Tokens
 
-Like [vesting](learn-DOT.md#lazy-vesting), the tokens that are
-locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an
-unlock extrinsic to make your funds available again after the lock expires. Unbonding is another
-term you hear a lot in Polkadot, it means withdrawing your DOT that was used in staking. To know
-more about it, please see [here](maintain-guides-how-to-unbond.md).
+Like [vesting](learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are unlocked
+lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds
+available again after the lock expires. Unbonding is another term you hear a lot in Polkadot, it
+means withdrawing your DOT that was used in staking. To know more about it, please see
+[here](maintain-guides-how-to-unbond.md).
 
 You can do this from the "Accounts" page in
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts), unless you use Ledger (see below).

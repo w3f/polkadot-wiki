@@ -142,8 +142,8 @@ Your address' format is only visual - the data used to derive this representatio
 are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
 recommend creating a new address for each chain you're using.
 
-Our [Accounts page](learn-accounts.md#address-conversion-tools) also has a tool you can use to convert
-your address between the different chain formats.
+Our [Accounts page](learn-accounts.md#address-conversion-tools) also has a tool you can use to
+convert your address between the different chain formats.
 
 You can copy your address by clicking on the account's icon while the desired chain format is
 active. E.g. selecting "Substrate" as the format will change your address to start with the number
@@ -165,8 +165,8 @@ For detailed build and usage instructions of subkey, please see
 ## Polkadot-JS Apps
 
 > Please note! If you use this method to create your account and clear your cookies in your browser,
-> your account will be lost forever if you do not [back it up](learn-account-restore.md). Make sure you
-> store your seed phrase in a safe place, or download the account's JSON file if using the
+> your account will be lost forever if you do not [back it up](learn-account-restore.md). Make sure
+> you store your seed phrase in a safe place, or download the account's JSON file if using the
 > Polkadot{.js} browser extension. Learn more about account backup and restoration
 > [here](learn-account-restore.md).
 
@@ -216,8 +216,8 @@ submission to be successful. Click `Create` when done.
 
 This merely calculates the multi-signature's address and adds it to your UI. The account does not
 exist yet, and is subject to the same
-[Existential Deposit and Reaping](learn-accounts.md#existential-deposit-and-reaping) rules as regular
-accounts.
+[Existential Deposit and Reaping](learn-accounts.md#existential-deposit-and-reaping) rules as
+regular accounts.
 
 Suppose we funded it with some tokens, and now want to send from the multi-sig to another account.
 

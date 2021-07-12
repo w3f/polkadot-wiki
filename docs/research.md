@@ -4,9 +4,9 @@ title: Research Pages
 sidebar_label: Research Pages
 ---
 
-The Polkadot [research pages](https://w3f-research.readthedocs.io/en/latest/Publications.html) are edited directly by the
-researchers at W3F and contain papers, articles and documents that are sources for the information
-on the wiki.
+The Polkadot [research pages](https://w3f-research.readthedocs.io/en/latest/Publications.html) are
+edited directly by the researchers at W3F and contain papers, articles and documents that are
+sources for the information on the wiki.
 
 The following papers and articles may be of special interest for those interested in investigating
 Polkadot from a research or academic perspective.
