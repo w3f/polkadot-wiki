@@ -1,5 +1,5 @@
 ---
-id: learn-legitimate-projects
+id: how-to-dyor
 title: How to Identify Legitimate Projects
 sidebar_label: How to Identify Legitimate Projects
 ---
