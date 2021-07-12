@@ -154,6 +154,16 @@ its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator.md).
 
+### Westend
+
+| Unit            | Decimal Places | Example        |
+| --------------- | -------------- | -------------- |
+| Planck          | 0              | 0.000000000001 |
+| Point           | 3              | 0.000000001000 |
+| MicroWND (uWND) | 6              | 0.000001000000 |
+| MilliWND (mWND) | 9              | 0.001000000000 |
+| WND             | 12             | 1.000000000000 |
+
 ### Getting Rococo Tokens
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
