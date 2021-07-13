@@ -4,7 +4,7 @@ title: 智能合约
 sidebar_label: 智能合约
 ---
 
-The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://substrate.dev/rustdocs/v3.0.0/pallet_contracts/index.html), it is likely that more parachains will support this feature.
+The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), and thanks to the Substrate built-in [contract pallet](https://substrate.dev/rustdocs/latest/pallet_contracts/index.html), it is likely that more parachains will support this feature.
 
 此外，还有一个 EVM 模块可以让平行链实现以太坊虚拟机，得以支持几乎以太坊合约的直接接口。一些项目用到了[Edgeware](https://edgewa.re)，[Moonbeam](https://moonbeam.network/)和[Frontier](https://github.com/paritytech/frontier)这些方法。
 

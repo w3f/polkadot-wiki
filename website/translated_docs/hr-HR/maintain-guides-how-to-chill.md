@@ -30,5 +30,5 @@ If a validator was unresponsive or found to have committed a slashable offense w
 
 Nominators who have the option to renominate an involuntarily chilled validator will have a display row to do so using Polkadot-JS Apps. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Redenomination required". If your validator has been involuntarily chilled, you will need to request your nominators to re-issue the nominate call in order to start nominating you again.
 
-[chill extrinsic]: https://substrate.dev/rustdocs/v3.0.0/pallet_staking/enum.Call.html#variant.chill
+[chill extrinsic]: https://substrate.dev/rustdocs/latest/pallet_staking/enum.Call.html#variant.chill
 [accounts]: learn-staking#accounts
