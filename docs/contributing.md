@@ -24,7 +24,7 @@ Contributing to the wiki is easy with a GitHub account. Every page is a MarkDown
 [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to
 plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
-Each page has an "Edit" button in the top right corner of the content. By clicking this button you
+Each page has an "Edit this page" link at the bottom of the content. By clicking it you
 are taken to the GitHub sign in page, where you can either log in or create an account.
 
 ![](assets/edit_button.png)
