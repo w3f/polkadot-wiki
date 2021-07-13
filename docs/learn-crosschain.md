@@ -112,6 +112,6 @@ doesn't support embedded videos. </video>
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
-- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the XCMP format.
+- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format sent via XCMP.
 
 [xcm-format]: https://github.com/paritytech/xcm-format
