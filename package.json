@@ -63,7 +63,7 @@
     "@polkadot/keyring": "^7.0.1",
     "@octokit/rest": "^18.6.7",
     "@polkadot/api": "^5.0.1",
-    "@polkadot/keyring": "^6.11.1",
+    "@polkadot/keyring": "^7.0.1",
     "axios": "^0.21.1",
     "chalk": "^4.1.1",
     "cross-env": "^7.0.3",
