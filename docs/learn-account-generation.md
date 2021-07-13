@@ -12,7 +12,7 @@ There are several ways to generate a Polkadot account:
 
 - [Polkadot{.js} Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Polkadot-JS Apps](#polkadotjs)
+- [Polkadot-JS Apps](#polkadot-js-apps)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
 - [Ledger Hardware Wallet](learn-ledger.md)
@@ -90,9 +90,6 @@ of your browser.
 
 ![plugin-02](assets/accounts/polkadot_plugin_js_02.jpg)
 
-### Open Accounts
-
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps). Click on the "Accounts" tab.
 
 ### Create Account
 
