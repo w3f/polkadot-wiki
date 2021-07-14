@@ -4,7 +4,7 @@ title: Governance
 sidebar_label: Governance
 ---
 
-Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at
+Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
 the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of
 the stake can always command the network.
 
@@ -16,7 +16,7 @@ by stake-weighted referenda.
 
 ## Mechanism
 
-In order to make any changes to the network, the idea is to compose active token holders and the
+To make any changes to the network, the idea is to compose active token holders and the
 council together to administrate a network upgrade decision. No matter whether the proposal is
 proposed by the public (token holders) or the council, it finally will have to go through a
 referendum to let all holders, weighted by stake, make the decision.
@@ -27,7 +27,7 @@ To better understand how the council is formed, please read [this section](#coun
 
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
 _proposal_ associated with it that takes the form of a privileged function call in the runtime (that
-includes the most powerful call: `set_code`, which is able to switch out the entire code of the
+includes the most powerful call: `set_code`, which can switch out the entire code of the
 runtime, achieving what would otherwise require a "hard fork").
 
 Referenda are discrete events, have a fixed period where voting happens, and then are tallied and
@@ -41,7 +41,7 @@ Referenda can be started in one of several ways:
 - Proposals submitted as part of the enactment of a prior referendum;
 - Emergency proposals submitted by the Technical Committee and approved by the Council.
 
-All referenda have an _enactment delay_ associated with them. This is the period of time between the
+All referenda have an _enactment delay_ associated with them. This is the period between the
 referendum ending and, assuming the proposal was approved, the changes being enacted. For the first
 two ways that a referendum is launched, this is a fixed time. For Kusama, it is 8 days; in Polkadot,
 it is 28 days. For the third type, it can be set as desired.
@@ -58,7 +58,7 @@ Anyone can propose a referendum by depositing the minimum amount of tokens for a
 to support it - this action is called _seconding_. The proposal with the highest amount of bonded
 support will be selected to be a referendum in the next voting cycle.
 
-Note that this may be different than the absolute number of seconds; for instance, three accounts
+Note that this may be different from the absolute number of seconds; for instance, three accounts
 bonding 20 DOT each would "outweigh" ten accounts bonding a single DOT each. The bonded tokens will
 be released once the proposal is tabled (that is, brought to a vote).
 
@@ -85,10 +85,10 @@ and a queue for publicly submitted proposals. The referendum to be voted upon al
 top proposal in the two queues.
 
 The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose
-turn it is to create a referendum has no proposals (is empty), and there are proposals waiting in
+turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in
 the other queue, the top proposal in the other queue will become a referendum.
 
-Multiple referenda cannot be voted upon in the same time period, excluding emergency referenda. An
+Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
 emergency referendum occurring at the same time as a regular referendum (either public- or
 council-proposed) is the only time that multiple referenda will be able to be voted on at once.
 
@@ -122,7 +122,7 @@ them is less than Peter, leading to their voting power counting as less.
 #### Tallying
 
 Depending on which entity proposed the proposal and whether all council members voted yes, there are
-three different scenarios. We can use following table for reference.
+three different scenarios. We can use the following table for reference.
 
 |          **Entity**          |                   **Metric**                   |
 | :--------------------------: | :--------------------------------------------: |
@@ -133,7 +133,7 @@ three different scenarios. We can use following table for reference.
 Also, we need the following information and apply one of the formulas listed below to calculate the
 voting result. For example, let's use the public proposal as an example, so the
 `Super-Majority Approve` formula will be applied. There is no strict quorum, but the super-majority
-required increases as turnout lowers.
+required increases with lower turnout.
 
 ```
 approve - the number of aye votes
@@ -202,14 +202,14 @@ Since the above example is a public referendum, `Super-Majority Approve` would b
 the result. `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout
 is low, therefore, based on the above result, the referendum will be rejected. In addition, only the
 winning voter's tokens are locked. If the voters on the losing side of the referendum believe that
-the outcome will have negative effects, their tokens are transferrable so they will not be locked in
-to the decision. Moreover, winning proposals are autonomously enacted only after some enactment
+the outcome will have negative effects, their tokens are transferrable so they will not be locked 
+into the decision. Moreover, winning proposals are autonomously enacted only after some enactment
 period.
 
 #### Voluntary Locking
 
 Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their
-voting power by declaring how long they are willing to lock-up their tokens, hence, the number of
+voting power by declaring how long they are willing to lock up their tokens, hence, the number of
 votes for each token holder will be calculated by the following formula:
 
 ```
@@ -250,23 +250,23 @@ against it.
 
 Let's use the above image as an example.
 
-If a publicly submitted referendum only has 25% turnout, the tally of "aye" votes has to reach 66%
+If a publicly submitted referendum only has a 25% turnout, the tally of "aye" votes has to reach 66%
 for it to pass since we applied `Positive Turnout Bias`.
 
-In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that
+In contrast, when it has a 75% turnout, the tally of "aye" votes has to reach 54%, which means that
 the super-majority required decreases as the turnout increases.
 
 When the council proposes a new proposal through unanimous consent, the referendum would be put to a
-vote using "Negative Turnout Bias". In this case it is easier to pass this proposal with low turnout
+vote using "Negative Turnout Bias". In this case, it is easier to pass this proposal with low turnout
 and requires a super-majority to reject. As more token holders participate in voting, the bias
 approaches a plain majority carries.
 
 Referring to the above image, when a referendum only has 25% turnout, the tally of "aye" votes has
 to reach 34% for it to pass.
 
-In short, when turnout rate is low, a super-majority is required to reject the proposal, which means
+In short, when the turnout rate is low, a super-majority is required to reject the proposal, which means
 a lower threshold of "aye" votes have to be reached, but as turnout increases towards 100%, it
-becomes a simple-majority.
+becomes a simple majority.
 
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority
 against - equate to a simple majority-carries system at 100% turnout.
@@ -276,7 +276,7 @@ against - equate to a simple majority-carries system at 100% turnout.
 > [Video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
 
 To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
-on-chain entity comprising a number of actors, each represented as an on-chain account. On Polkadot,
+on-chain entity comprising several actors, each represented as an on-chain account. On Polkadot,
 the council currently consists of 13 members. This is expected to increase over the next few months
 to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
 will be 24 seats while on Kusama it is 19 seats.
@@ -328,8 +328,8 @@ invalid.
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that selects
-validators from the available pool based on nominations. However, token holders' votes for
+Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that
+selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one day on Kusama and one week on Polkadot.
 
@@ -356,7 +356,7 @@ Let's take a look at the example below.
 |      Kelvin       |  X  |                |  X  |     |     |
 |     **Total**     |  2  |       1        |  3  |  2  |  2  |
 
-The above example shows that candidate C wins the election in round 1, while candidate A, B, D & E
+The above example shows that candidate C wins the election in round 1, while candidates A, B, D & E
 keep remaining on the candidates' list for the next round.
 
 |      Round 2      |     |                |     |     |
@@ -396,21 +396,21 @@ The Technical Committee was introduced in the
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 Technical Committee is composed of the teams that have successfully implemented or specified either
 a Polkadot/Kusama runtime or Polkadot Host. Teams are added or removed from the Technical Committee
-via simple majority vote of the [Council](#council).
+via a simple majority vote of the [Council](#council).
 
 The Technical Committee can, along with the Council, produce emergency referenda, which are
-fast-tracked for voting and implementation. These are used for emergency bug fixes, or rapid
+fast-tracked for voting and implementation. These are used for emergency bug fixes or rapid
 implementation of new but battle-tested features into the runtime.
 
 Fast-tracked referenda are the only type of referenda that can be active alongside another active
-referendum. Thus, with fast tracked referenda it is possible to have two active referendums at the
+referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
 
 ## Frequently Asked Questions
 
 ### How can I appeal to the council to enact a change on my behalf?
 
-In some circumstances you may want to appeal to the on-chain council to enact a change on your
+In some circumstances, you may want to appeal to the on-chain council to enact a change on your
 behalf. One example of this circumstance is the case of lost or locked funds when the funds were
 lost due to a human interface error (such as inputting an address for another network). Another
 example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does not
@@ -421,11 +421,11 @@ The first step to appeal to the council is to get in contact with the councillor
 singular place where you are guaranteed to grab every councillor's ear with your message. However,
 there are a handful of good places to start where you can get the attention of some of them. The
 [Polkadot Direction][] matrix room is one such place. After creating an account and joining this
-room, you can post a well thought-through message here that lays down your case and provides
+room, you can post a well-thought-through message here that lays down your case and provides
 justification for why you think the council should consider enacting a change to the protocol on
 your behalf.
 
-At some point you will likely need a place for a longer form discussion. For this, making a post on
+At some point you will likely need a place for a longer-form discussion. For this, making a post on
 [Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
 you present all the evidence for your circumstances and state clearly what kind of change you would
 suggest to the councillors to enact. Remember - the councillors do not need to make the change, it

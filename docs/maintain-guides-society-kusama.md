@@ -3,7 +3,7 @@ id: maintain-guides-society-kusama
 title: Join Kappa Sigma Mu
 sidebar_label: Join Kappa Sigma Mu
 ---
-
+<!-- no changes -->
 Kappa Sigma Mu is a membership club using the Substrate [Society][substrate pallet] pallet. It is an
 economic game to incentivize users to join a society that coordinates around whatever the rules are
 decided to be. The members of the society are incentivized to participate in the society via the
@@ -178,6 +178,6 @@ society with all their future payouts slashed.
 [Convention of Approval of Membership](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
 Rules about joining the Kusama society
 
-[substrate pallet]: https://substrate.dev/rustdocs/v3.0.0/pallet_society/index.html
+[substrate pallet]: https://substrate.dev/rustdocs/latest/pallet_society/index.html
 [kappa rules]:
   https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17
