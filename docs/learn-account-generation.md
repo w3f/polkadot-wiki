@@ -167,7 +167,7 @@ For detailed build and usage instructions of subkey, please see
 > Polkadot{.js} browser extension. Learn more about account backup and restoration
 > [here](learn-account-restore.md).
 
-Using the Polkadot-JS user interface without the plugin is not recommended. It is the least secure
+Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least secure
 way of generating an account. It should only be used if all of the other methods are not feasible in
 your situation.
 
@@ -254,7 +254,8 @@ For a more in-depth introduction into multi signature accounts on Polkadot, plea
 
 Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it. If you have any communications methods turned on, you will see an "unshielded" icon
+installing it. The device needs to be offline and only you should be viewing the device screen.
+If you have any communications methods turned on, you will see an "unshielded" icon
 in red in the top-right corner that indicates your connection may not be secure.
 
 ### Create Account
@@ -316,7 +317,6 @@ continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
 
-(placeholder for a tutorial video)
 
 ## Ledger Hardware Wallet
 
