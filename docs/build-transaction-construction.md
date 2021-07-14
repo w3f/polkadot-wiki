@@ -3,7 +3,7 @@ id: build-transaction-construction
 title: Transaction Construction and Signing
 sidebar_label: Transaction Construction
 ---
-
+<!-- no updates -->
 This page will discuss the transaction format in Polkadot and how to create, sign, and broadcast
 transactions. Like the other pages in this guide, this page demonstrates some of the available
 tools. **Always refer to each tool's documentation when integrating.**
