@@ -26,8 +26,8 @@ Polkadot before bonded funds can be transferred after issuing an unbond transact
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your nominations will
-be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
+[this](maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your nominations
+will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](assets/staking/polkadotjs_nominator_account.png)
 
@@ -48,15 +48,13 @@ occur often, so you should almost always see only a single active nomination per
 
 ### Required Minimum Stake
 
-Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to the
-fact that the solution set must fit in a single block, in some eras, a minimum number of DOT will be
-required to nominate with in order to receive staking rewards.
+Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to
+the fact that the solution set must fit in a single block, in some eras, a minimum number of DOT
+will be required to nominate with in order to receive staking rewards.
 
-This number fluctuates every era, and the most recent and up to date version can be found out using
-[these scripts](https://github.com/w3f/validator-stats) which you can run on your machine and
-looking for the "lowest minimal nominator". See the
-[Election Solution Set](learn-nominator.md#the-election-solution-set)
-section on the Nominator page for more details.
+This parameter can be updated via on-chain governance and the most recent and up to date version can
+be found on [chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query -
+staking - minimumNominatorBond)
 
 ### Oversubscribed Validators
 
@@ -130,13 +128,13 @@ interested in filtering out.
 - **No at capacity** - Do not show any validators who are currently operating
   [at capacity](glossary.md#capacity) (i.e., could potentially be oversubscribed).
 - **Recent payouts** - Only show validators that have recently caused a
-  [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it does
-  not have to be the operator of a validator.
+  [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it
+  does not have to be the operator of a validator.
 - **Only elected** - Only show validators that are currently in the active set (i.e., they have been
   elected to produce blocks this era).
-- **Only with an identity** - Only show validators that have set an [identity](learn-identity.md). Note
-  that this identity does not have to be verified by a registrar for the validator to show up in the
-  list.
+- **Only with an identity** - Only show validators that have set an [identity](learn-identity.md).
+  Note that this identity does not have to be verified by a registrar for the validator to show up
+  in the list.
 
 ### Review Your Validators' History
 
@@ -190,7 +188,7 @@ details.
 
 ### Guides
 
-- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Guide on nominating on the
-  Kusama canary network.
+- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Guide on nominating on
+  the Kusama canary network.
 - [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond.md) - Guide on stopping
   nominations and withdrawing tokens.

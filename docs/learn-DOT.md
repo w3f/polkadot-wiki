@@ -148,11 +148,21 @@ beside allowing you to experiment with the network.
 
 ### Getting Westies
 
-The current testnet is called [Westend](maintain-networks.md#westend-test-network) and you can obtain
-its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
+The current testnet is called [Westend](maintain-networks.md#westend-test-network) and you can
+obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
 [#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org).
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator.md).
+
+### Westend
+
+| Unit            | Decimal Places | Example        |
+| --------------- | -------------- | -------------- |
+| Planck          | 0              | 0.000000000001 |
+| Point           | 3              | 0.000000001000 |
+| MicroWND (uWND) | 6              | 0.000001000000 |
+| MilliWND (mWND) | 9              | 0.001000000000 |
+| WND             | 12             | 1.000000000000 |
 
 ### Getting Rococo Tokens
 

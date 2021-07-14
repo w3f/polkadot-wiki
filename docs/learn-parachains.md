@@ -17,17 +17,15 @@ there is no specific need for them to be actual blockchains. They take their nam
 of parallelized chains that run parallel to the Relay Chain. Due to their parallel nature, they are
 able to parallelize transaction processing and achieve scalability of the
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} system. They
-[share in the security](learn-security.md) of the entire network
-and can communicate with other parachains through
-[XCMP](learn-crosschain.md).
+[share in the security](learn-security.md) of the entire network and can communicate with other
+parachains through [XCMP](learn-crosschain.md).
 
-Parachains are maintained by a network maintainer known as a
-[collator](learn-collator.md). The role of the collator node is
-to maintain a full-node of the parachain, retain all necessary information of the parachain, and
-produce new block candidates to pass to the Relay Chain validators for verification and inclusion in
-the shared state of Polkadot. The incentivization of a collator node is an implementation detail of
-the parachain. They are not required to be staked on the Relay Chain or own DOT tokens unless
-stipulated to do so by the parachain implementation.
+Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
+of the collator node is to maintain a full-node of the parachain, retain all necessary information
+of the parachain, and produce new block candidates to pass to the Relay Chain validators for
+verification and inclusion in the shared state of Polkadot. The incentivization of a collator node
+is an implementation detail of the parachain. They are not required to be staked on the Relay Chain
+or own DOT tokens unless stipulated to do so by the parachain implementation.
 
 The Polkadot Host (PH) requires that the state transitions performed on parachains to be specified
 as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated
@@ -105,12 +103,13 @@ processing.
 {{ polkadot: [Auction granted parachains](learn-auction.md) :polkadot }}
 {{ kusama: [Auction granted parachains](mirror-learn-auction.md) :kusama }} are granted in a
 permissionless auction. Parachain teams can either bid with their own DOT tokens, or source them
-from the community using the {{ polkadot: [crowdloan functionality](learn-crowdloans.md) :polkadot }}
+from the community using the
+{{ polkadot: [crowdloan functionality](learn-crowdloans.md) :polkadot }}
 {{ kusama: [crowdloan functionality](mirror-learn-crowdloans.md) :kusama }}.
 
 {{ polkadot: [Parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [Parathreads](mirror-learn-parathreads.md) :kusama }} have the same API as parachains, but
-are scheduled for execution on a pay-as-you-go basis with an auction for each block.
+{{ kusama: [Parathreads](mirror-learn-parathreads.md) :kusama }} have the same API as parachains,
+but are scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
 ### Slot Expiration
 
@@ -160,19 +159,19 @@ over how blocks are authored and by whom.
 
 Parachain slots will be acquirable through auction, please see the
 {{ polkadot: [parachain slots](learn-auction.md) :polkadot }}
-{{ kusama: [parachain slots](mirror-learn-auction.md) :kusama }} article. Additionally, some parachain
-slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [parathreads](mirror-learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
-basis to be included in the Relay Chain.
+{{ kusama: [parachain slots](mirror-learn-auction.md) :kusama }} article. Additionally, some
+parachain slots will be set aside to run
+{{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
+{{ kusama: [parathreads](mirror-learn-parathreads.md) :kusama }} &mdash; chains that bid on a
+per-block basis to be included in the Relay Chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
 The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
-[availability and validity](learn-availability.md) will make sure
-security is on-par. However, should there be a big outage of a popular cloud provider or another
-network connectivity catastrophe, it is reasonable to expect that the number of validators per chain
-will drop.
+[availability and validity](learn-availability.md) will make sure security is on-par. However,
+should there be a big outage of a popular cloud provider or another network connectivity
+catastrophe, it is reasonable to expect that the number of validators per chain will drop.
 
 Depending on how many validators went offline, the outcome differs.
 

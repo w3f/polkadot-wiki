@@ -110,8 +110,8 @@ Chain, voting on finality, producing blocks in their decided slots, and verifyin
 transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
 Finally, individuals may participate in the block production process indirectly by
-[nominating](learn-nominator.md) validators. In this way,
-individuals who are not running a node can still share in staking rewards.
+[nominating](learn-nominator.md) validators. In this way, individuals who are not running a node can
+still share in staking rewards.
 
 ## Relay Chain
 
@@ -223,8 +223,8 @@ blocks when their usage and throughput makes it necessary.
 When a parachain loses an auction for renewal, that parachain has a few options. In most cases,
 becoming a parathread instead would be a suitable choice. Parathreads are still secured by the Relay
 Chain, but don't need to hold a parachain slot and can produce a block when its economically
-feasible for them. For more on parachains please see the [parachains page](learn-parachains.md) and for
-more on parathreads see [the parathreads page](learn-parathreads.md).
+feasible for them. For more on parachains please see the [parachains page](learn-parachains.md) and
+for more on parathreads see [the parathreads page](learn-parathreads.md).
 
 ## Networking
 
@@ -255,7 +255,7 @@ Of the protocols that are custom to Substrate, there are the legacy Substrate st
 request-response for getting information on blocks (sync), a light client protocol, a notification
 protocol for transactions, and block announcement. For detailed information on how Substrate uses
 libp2p and the standard and custom protocols, please see the
-[networking documentation](https://substrate.dev/rustdocs/v3.0.0/sc_network/index.html).
+[networking documentation](https://substrate.dev/rustdocs/latest/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 

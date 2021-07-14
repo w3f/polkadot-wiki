@@ -1,5 +1,5 @@
 ---
-id: learn-legitimate-projects
+id: how-to-dyor
 title: How to Identify Legitimate Projects
 sidebar_label: How to Identify Legitimate Projects
 ---
@@ -132,10 +132,10 @@ on the Rococo testnet and they should be active in the
 [Rococo channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 
 Of course, getting a parachain slot on either of the two main networks is not guaranteed and the
-project will need to win the [auction](learn-auction.md) for the slots they're interested in, or they
-may choose to be a [parathread](learn-parathreads.md) instead (although this should be clarified to
-their community). But testing their software on the Rococo testnet is certainly a strong indicator
-of the legitimacy of the project.
+project will need to win the [auction](learn-auction.md) for the slots they're interested in, or
+they may choose to be a [parathread](learn-parathreads.md) instead (although this should be
+clarified to their community). But testing their software on the Rococo testnet is certainly a
+strong indicator of the legitimacy of the project.
 
 ## Signs of an illegitimate project
 

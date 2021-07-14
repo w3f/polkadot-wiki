@@ -7,7 +7,7 @@ sidebar_label: Redenomination of DOT
 > Note: The DOT redenomination took place on 21 August, now known as Denomination Day, at block
 > #1_248_328.
 
-While [DOT](learn-dot.md) is the unit of currency on Polkadot that most people use when interacting
+While [DOT](learn-DOT.md) is the unit of currency on Polkadot that most people use when interacting
 with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is
 like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12
 Plancks, that is twelve decimal places. After this date, DOT is denominated as 1e10 Plancks, as in
@@ -127,9 +127,10 @@ every account.
 
 ### What This Means for Builders of Tools
 
-If you are the builder of a tool that consumes the `@polkadot/api` package &mdash; then there should
-be no real changes that need to be made in your application. The denomination is technically a
-cosmetic change and every value is still a constant amount of Plancks.
+If you are the builder of a tool that consumes the
+[`@polkadot/api`](https://yarnpkg.com/package/@polkadot/api) package &mdash; then there should be no
+real changes that need to be made in your application. The denomination is technically a cosmetic
+change and every value is still a constant amount of Plancks.
 
 However &mdash; if you are a builder of a tool that displays DOT balances to users (e.g. a wallet)
 or handles DOT balances in an off-chain or custodial way, then you will need to ensure that you

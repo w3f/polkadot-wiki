@@ -1,3 +1,8 @@
+/**
+ * This script should replace substrate rustdoc links in the md files for the latest version of substrate.
+ */
+
+
 import { Octokit } from "@octokit/rest";
 import axios from "axios";
 import fs from "fs";
@@ -10,30 +15,28 @@ import fs from "fs";
   });
   let latestTag = releases.data[0].tag_name;
   let pastTag = releases.data[1].tag_name;
-  let pass = false;
-  while (!pass) {
-    let testUrl = `http://substrate.dev/rustdocs/${latestTag}/sc_service/index.html`;
-    try {
-      const res = await axios.get(testUrl);
-      if (res.status === 200) pass = true;
-    } catch (err) {
-      latestTag = latestTag.slice(0, -1);
+
+  const testSubstrateDocsVersion = async (tag) => {
+    let tagTemp = tag;
+    let pass = false;
+    
+    while (!pass) {
+      let testUrl = `http://substrate.dev/rustdocs/${tagTemp}/sc_service/index.html`;
+      try {
+        const res = await axios.get(testUrl);
+        if (res.status === 200) pass = true;
+      } catch (err) {
+        tagTemp = tagTemp.slice(0, -1);
+        if (tagTemp.length === 0) {
+          console.log(`NOTE: '${tag}' and variants of its prefixes are not valid Substrate rustdoc version numbers. No links to update!`);
+          process.exit(0);
+        }
+      }
     }
   }
 
-  let passTwo = false;
-  while (!passTwo) {
-    let testUrl = `http://substrate.dev/rustdocs/${pastTag}/sc_service/index.html`;
-    try {
-      const res = await axios.get(testUrl);
-      if (res.status === 200) passTwo = true;
-    } catch (err) {
-      pastTag = pastTag.slice(0, -1);
-    }
-  }
-
-  console.log("Latest tag:", latestTag);
-  console.log("Previous tag:", pastTag);
+  await testSubstrateDocsVersion(latestTag);
+  await testSubstrateDocsVersion(pastTag);
 
   // Now read through all files.
   const dir = fs.readdirSync("docs");

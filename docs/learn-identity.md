@@ -16,24 +16,24 @@ like attestations (see [Judgements](#judgements)).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
-These funds are *locked*, not spent - they are returned when the identity is cleared. 
+These funds are _locked_, not spent - they are returned when the identity is cleared.
 
-These amounts can also be extracted by querying constants through
-the [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on polkadot.js/apps. 
+These amounts can also be extracted by querying constants through the
+[Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on
+polkadot.js/apps.
 
-First, select `identity` as the `selected constant query`. 
+First, select `identity` as the `selected constant query`.
 
 ![Identity as the selected constant query](assets/identity/17.jpg)
 
-Then on the right-hand side, you can select the constants that you would like to view and add them onto the 
-webpage by clicking the "plus" icon at the end of the bar.
+Then on the right-hand side, you can select the constants that you would like to view and add them
+onto the webpage by clicking the "plus" icon at the end of the bar.
 
 ![Identity as the selected constant query](assets/identity/18.jpg)
 
-Each field can
-store up to 32 bytes of information, so the data must be less than that. When inputting the data
-manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a
-[UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
+Each field can store up to 32 bytes of information, so the data must be less than that. When
+inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics),
+a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
 The easiest way to add the built-in fields is to click the gear icon next to your account and select
 "Set on-chain identity".
@@ -240,7 +240,9 @@ the sub-account. If omitted, the sub-account will inherit the parent's name and 
 
 Note that a deposit of {{ identity_sub_reserve_funds }} is required for every sub-account.
 
-You can use [polkadot.js/apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants) again to verify this amount by querying the `identity.subAccountDeposit` constant.
+You can use
+[polkadot.js/apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants)
+again to verify this amount by querying the `identity.subAccountDeposit` constant.
 
 ![Sub account constant](assets/identity/19.jpg)
 

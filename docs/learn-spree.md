@@ -29,11 +29,12 @@ each parachain. SmartProtocols are the precursor to SPREE.
 
 ## What is a SPREE module?
 
-SPREE modules are fragments of logic (in concrete terms they are blobs of [WebAssembly](learn-wasm.md)
-code) that are uploaded onto Polkadot through a governance mechanism or by parachains. Once the blob
-is uploaded to Polkadot, all other parachains can decide to opt-in to the logic. The SPREE module
-would retain its own storage independent of the parachain but would be callable through an
-interface with the parachain. Parachains will send messages to the SPREE module synchronously.
+SPREE modules are fragments of logic (in concrete terms they are blobs of
+[WebAssembly](learn-wasm.md) code) that are uploaded onto Polkadot through a governance mechanism or
+by parachains. Once the blob is uploaded to Polkadot, all other parachains can decide to opt-in to
+the logic. The SPREE module would retain its own storage independent of the parachain, but would be
+callable through an interface with the parachain. Parachains will send messages to the SPREE module
+synchronously.
 
 SPREE modules are important to the overall XCMP architecture because they give a guarantee to the code
 that will be executed on destination parachains. While XCMP guarantees the delivery of a message, it

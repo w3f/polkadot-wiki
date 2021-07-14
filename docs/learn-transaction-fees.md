@@ -37,8 +37,8 @@ Tips are an optional transaction fee that users can add to give a transaction hi
 
 Together, these three fees constitute the inclusion fee. This fee is deducted from the sender's
 account prior to transaction execution. A portion of the fee will go to the block producer and the
-remainder will go to the [Treasury](learn-treasury.md). At Polkadot's genesis, this is set to 20% and
-80%, respectively.
+remainder will go to the [Treasury](learn-treasury.md). At Polkadot's genesis, this is set to 20%
+and 80%, respectively.
 
 ## Block Limits and Transaction Priority
 
@@ -77,13 +77,13 @@ situations where shards themselves make transactions on the Relay Chain.
 [Parachains](learn-parachains.md) have a dedicated slot on the Relay Chain for execution, so their
 collators do not need to own DOT in order to include blocks. The parachain will make some
 transactions itself, for example, opening or closing an [XCMP](learn-crosschain.md) channel,
-participating in an [auction](learn-auction.md) to renew its slot, or upgrading its runtime. Parachains
-have their own accounts on the Relay Chain and will need to use those funds to issue transactions on
-the parachain's behalf.
+participating in an [auction](learn-auction.md) to renew its slot, or upgrading its runtime.
+Parachains have their own accounts on the Relay Chain and will need to use those funds to issue
+transactions on the parachain's behalf.
 
-[Parathreads](learn-parathreads.md) will also make all the same transactions that a parachain might. In
-addition, the collators need to participate in an auction every block to progress their chain. The
-collators will need to have DOT to participate in these auctions.
+[Parathreads](learn-parathreads.md) will also make all the same transactions that a parachain might.
+In addition, the collators need to participate in an auction every block to progress their chain.
+The collators will need to have DOT to participate in these auctions.
 
 ## Other Resource Limitation Strategies
 
@@ -93,9 +93,9 @@ logic. Some transactions warrant limiting resources with other strategies. For e
 - Bonds: Some transactions, like voting, may require a bond that will be returned or slashed after
   an on-chain event. In the voting example, returned at the end of the election or slashed if the
   voter tried anything malicious.
-- Deposits: Some transactions, like setting an [identity](learn-identity.md) or claiming an index, use
-  storage space indefinitely. These require a deposit that will be returned if the user decides to
-  free storage (e.g. clear their ide).
+- Deposits: Some transactions, like setting an [identity](learn-identity.md) or claiming an index,
+  use storage space indefinitely. These require a deposit that will be returned if the user decides
+  to free storage (e.g. clear their ide).
 - Burns: A transaction may burn funds internally based on its logic. For example, a transaction may
   burn funds from the sender if it creates new storage entries, thus increasing the state size.
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16

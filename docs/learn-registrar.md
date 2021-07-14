@@ -30,9 +30,9 @@ anything unclear.
 > **Note**: The W3F Registrar currently **does not** support KYC or web verification. Make sure to
 > leave it blank when you fill in your identity information.
 
-Go to [Accounts](https://polkadot.js.org/apps/#/accounts) page in Polkadot-JS Apps. The easiest
-way to add the built-in fields is to click the vertical three dots next to one's account and select
-"Set on-chain identity".
+Go to [Accounts](https://polkadot.js.org/apps/#/accounts) page in Polkadot-JS Apps. The easiest way
+to add the built-in fields is to click the vertical three dots next to one's account and select "Set
+on-chain identity".
 
 A popup will appear, offering the default fields.
 

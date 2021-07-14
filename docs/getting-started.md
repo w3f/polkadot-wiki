@@ -60,11 +60,11 @@ chain's logic can compile to Wasm and adheres to the Relay Chain API, then it ca
 Polkadot network as a parachain.
 
 Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](learn-availability.md) checks before being added to the finalized
-chain. As the Relay Chain provides the security guarantees, [collators](learn-collator.md) - full nodes
-of these parachains - don't have any security responsibilities, and thus do not require a robust
-incentive system. This is how the entire network stays up to date with the many transactions that
-take place.
+rigorous [availability and validity](learn-availability.md) checks before being added to the
+finalized chain. As the Relay Chain provides the security guarantees,
+[collators](learn-collator.md) - full nodes of these parachains - don't have any security
+responsibilities, and thus do not require a robust incentive system. This is how the entire network
+stays up to date with the many transactions that take place.
 
 ![polkadot-relay-chain](assets/polkadot_relay_chain.png)
 
@@ -72,8 +72,8 @@ In order to interact with chains that want to use their own finalization process
 Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibility, meaning that
 transactions can be made between different parachains.
 
-The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain.md) allows parachains to send messages of
-any type to each other. The shared security and validation logic of the Relay Chain provide the
+The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain.md) allows parachains to send messages
+of any type to each other. The shared security and validation logic of the Relay Chain provide the
 environment for trust-free message passing that opens up true interoperability.
 
 > To watch a short, beginner-friendly animation on Polkadot, check out our
@@ -150,10 +150,10 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) -
   Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain
   on-stage in 30 minutes using Substrate. (Video)
-- [Community / Ecosystem](community.md) - List of community rooms and channels to talk to others about
+- [Community / Ecosystem](community.md) - List of community rooms and channels to talk to others
+  about Polkadot.
+- [Sample Applications](#) - Sample applications that are built on or currently being built for
   Polkadot.
-- [Sample Applications](#) - Sample applications that are built on or currently
-  being built for Polkadot.
 - [Contributing Guide](contributing.md) - Rules for contributing to the wiki.
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
   specific errors and problems.

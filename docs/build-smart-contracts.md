@@ -7,12 +7,13 @@ sidebar_label: Smart Contracts
 The Polkadot Relay Chain will not natively support smart contracts. However, parachains on Polkadot
 will support smart contracts. There are already announced projects such as
 [Edgeware](https://edgewa.re), and thanks to the Substrate built-in
-[contract pallet](https://substrate.dev/rustdocs/v3.0.0/pallet_contracts/index.html), it is likely
+[contract pallet](https://substrate.dev/rustdocs/latest/pallet_contracts/index.html), it is likely
 that more parachains will support WebAssembly smart contracts.
 
-Additionally, there is the [EVM Pallet](https://substrate.dev/docs/en/knowledgebase/smart-contracts/evm-pallet), 
-which allows a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of 
-Ethereum contracts. Some of the projects using this approach are [Edgeware](https://edgewa.re), 
+Additionally, there is the
+[EVM Pallet](https://substrate.dev/docs/en/knowledgebase/smart-contracts/evm-pallet), which allows a
+parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
+Ethereum contracts. Some of the projects using this approach are [Edgeware](https://edgewa.re),
 [Moonbeam](https://moonbeam.network/) and [Frontier](https://github.com/paritytech/frontier).
 
 A video version of the recap of the smart contract situation on Polkadot and Kusama is available
@@ -25,13 +26,13 @@ contracts to deploy on parachains based on Substrate.
 
 - [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - a walkthrough
-  of the basics of writing and deploying an ERC20 token using `ink!`.
+- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/#/) - a
+  walkthrough of the basics of writing and deploying an ERC20 token using `ink!`.
 
 ## Examples
 
-Collected below are some community examples of smart contracts in `ink!`. 
-__Are you working on a smart contract example? Ask us to add it to this page!__
+Collected below are some community examples of smart contracts in `ink!`. **Are you working on a
+smart contract example? Ask us to add it to this page!**
 
 - [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
@@ -82,15 +83,15 @@ Some platforms, such as Bitcoin, get around this constraint by providing a very 
 language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute
 their code. If a smart contract does get into a state where execution will never halt, it eventually
 runs out of gas, ceases execution, and any state transition that would have been made by the smart
-contract is rolled back. Polkadot uses a *weight-fee model* and not a  *gas-metering model*.
+contract is rolled back. Polkadot uses a _weight-fee model_ and not a _gas-metering model_.
 
 Parachains can implement arbitrarily powerful programming languages and also contain no notion of
 gas for their own native logic. This means that some functionality is easier to implement for the
 developer, but it also means there are some constructs, such as a loop without a terminating
 condition, which should _never_ be implemented. Leaving certain logic, such as complex loops that
 could possibly run indefinitely, to a non-smart contract layer, or even trying to eliminate it
-entirely, will often be a wiser choice. Parachains try to be proactive, while smart contract platforms 
-are event-driven.
+entirely, will often be a wiser choice. Parachains try to be proactive, while smart contract
+platforms are event-driven.
 
 ## Resources
 
