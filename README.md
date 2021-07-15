@@ -6,13 +6,19 @@
 
 # Polkadot Wiki
 
-The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative
-led by Web3 Foundation to keep an up-to-date resource on the best information for learning, building, or maintaining on Polkadot.
+The Polkadot Wiki is the central source of truth for Polkadot.
+
+It is a community-focused initiative led by Web3 Foundation to keep an up-to-date resource on the best information for 
+learning, building, or maintaining on Polkadot.
+
+<img src="docs/assets/less-trust-more-truth.png" width="900"> 
+
 
 ## Contributing to Documentation
 
-The Wiki is a community-focused initiative and we will review all issues and pull-requests created
-in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with these corrections. 
+The Wiki is an open source project and we will review all issues and pull-requests created
+in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with 
+these corrections. 
 
 Larger contributions may start as issues to test the waters on the subject with the maintainers. 
 It is generally preferable to create a pull request over an issue to propose a change to the wiki content.
@@ -43,6 +49,11 @@ run:
 ```bash
 npx prettier --write ./docs/
 ```
+
+### Static Site Generator
+
+The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website 
+generator to convert the Markdown docs into a documentation website.
 
 ### Automated Deployments
 
@@ -118,7 +129,7 @@ To test the injection, run `polkadot:build` and `kusama:build`, then `polkadot:i
 `kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
 `kusama-guide`.
 
-### Mirror pages
+### Mirror Pages
 
 A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
 Thus, our Kusama section will either hijack some content it shares with the rest of the wiki, or
@@ -169,3 +180,5 @@ If you do not see the language you would like to translate, please let us know v
 ## License
 
 The Polkadot Wiki is licensed under the [GPL-3.0](LICENSE) free software license.
+
+<img src="docs/assets/blockchain-unbounded.png" width="900"> 
