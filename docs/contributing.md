@@ -27,8 +27,6 @@ plain text that makes creating links, rendering images, and nice-looking formatt
 Each page has an "Edit this page" link at the bottom of the content. By clicking it you
 are taken to the GitHub sign in page, where you can either log in or create an account.
 
-![](assets/edit_button.png)
-
 Once logged in, you'll be taken to the GitHub text editor in which you can make your edits directly.
 When you've completed your changes, you can add any specific details on what was changed and commit
 to a new branch to create a new Pull Request to the repository. From there one of the maintainers
