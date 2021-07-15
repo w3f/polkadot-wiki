@@ -48,16 +48,12 @@ Currently, the registrar **only supports the following fields**:
 ---
 If you try to register the other fields, such as:
 
-<p align="center">
-  <img width="550" height="400" src="assets/registrar/2.jpg">
-</p>
+![registrar](assets/registrar/2.jpg)
 
 You will eventually be asked to update your information,
 as these are not yet supported by the registrar.
 
-<p align="center">
-  <img width="550" height="400" src="assets/registrar/6.jpg">
-</p>
+![registrar](assets/registrar/6.jpg)
 
 ---
 ### Invoke transaction to set identity
