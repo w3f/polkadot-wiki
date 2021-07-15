@@ -23,16 +23,13 @@ included. Specifically, the Technical Education team at the foundation are most 
 
 ## How to Contribute
 
-Contributing to the wiki is easy with a GitHub account. Every page is a 
-[MarkDown](https://guides.github.com/features/mastering-markdown/) file, which is an
+You can contribute to the wiki on the [w3f/polkadot-wiki GitHub repository](https://github.com/w3f/polkadot-wiki). 
+Every page is a [MarkDown](https://guides.github.com/features/mastering-markdown/) file, which is an
 easy to learn syntax extension to plain text that makes creating links, rendering images, 
 and nice-looking formatting simple. 
 
-Each page has an "Edit" button on the top right corner of the file content. 
-Clicking the edit option will prompt you to the GitHub sign-in page, where you can either log in or 
-create an account.
-
-![](assets/edit_button.png)
+Each page has an "Edit this page" link at the bottom of the content. By clicking it you
+are taken to the GitHub sign-in page, where you can either log in or create an account.
 
 Once logged in, you'll be taken to the GitHub built-in text editor where you can make your edits 
 directly. When you've completed your changes, you can add any specific details on what was changed 
