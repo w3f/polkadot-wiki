@@ -10,7 +10,7 @@ networks with different priorities.
 Kusama is wild and fast; great for bold experimentation and early-stage deployment. Polkadot is more
 conservative, prioritizing stability and dependability.
 
-Cousins have their differences afterall.
+Cousins have their differences after all.
 
 ## What the two networks have in common
 
@@ -50,14 +50,14 @@ to adapt and evolve faster than Polkadot.
 ### Lean setups
 
 Teams wishing to run a parachain need to bond tokens as security. The bonding requirement on Kusama
-is likely to be lower than on Polkadot.
+is likely to be lower than on Polkadot. 
 
 ### Use cases
 
 Polkadot is and always will be the primary network for the deployment of enterprise-level
 applications and those that entail high-value transactions requiring bank-level security and
 stability. The initial use case for Kusama is as a pre-production environment, a “canary network”.
-Building on Kusama first allows teams to test things out in a live, fully decentralized and
+Building on Kusama first allows teams to test things out in a live, fully decentralized, and
 community-controlled network with real-world conditions and lower stakes in the event of problems or
 bugs than on Polkadot.
 
@@ -68,12 +68,12 @@ technologies going forward. Projects that require high-throughput but don’t ne
 bank-like security, such as some gaming, social networking, and content distribution applications,
 are particularly good candidates for this use case.
 
-Kusama may also prove to be the perfect environment for ambitious experiments with new ideas and new
+Kusama may also prove to be the perfect environment for ambitious experiments with new ideas and
 innovations in areas like governance, incentives, monetary policy, and DAOs (decentralized
 autonomous organizations). Future upgrades to the Polkadot runtime will also likely be deployed to
 Kusama before Polkadot mainnet. This way, not only will we be able to see how these new technologies
 and features will perform under real-world conditions before bringing them to Polkadot, but teams
-who have deployed to both networks will also get an advance look at how their own technology will
+who have deployed to both networks will also get an advanced look at how their own technology will
 perform under those upgrades.
 
 ## Going forward

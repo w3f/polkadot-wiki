@@ -4,16 +4,16 @@ title: DOT
 sidebar_label: DOT
 ---
 
-## What are DOT?
+## What is DOT?
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
-Bitcoin or ether is the native token of the Ethereum blockchain.
+Bitcoin or Ether is the native token of the Ethereum blockchain.
 
 The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck (a
 reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest possible
-distance in the physical Universe). You can compare the Planck to satoshis or wei, while the DOT is
+distance in the physical Universe). You can compare the Planck to Satoshis or Wei, while the DOT is
 like a bitcoin or an ether. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT
-are equal to 1e10 Planck.
+is equal to 1e10 Planck.
 
 ### Polkadot
 
@@ -24,9 +24,9 @@ are equal to 1e10 Planck.
 | Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
 
-_Note: This changed at block #1_248_328. Previously, DOT were denominated as equal to 1e12 Planck,
-just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)".
-See [Redenomination of DOT](redenomination.md) for more details._
+> Note: This changed at block #1_248_328. Previously, DOT was denominated as equal to 1e12 Planck,
+> just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".
+> See [Redenomination of DOT](redenomination.md) for more details._
 
 ### Kusama
 
@@ -40,10 +40,10 @@ See [Redenomination of DOT](redenomination.md) for more details._
 
 ## What are the uses of DOT?
 
-DOT serve three key functions in Polkadot:
+DOT serves three key functions in Polkadot:
 
 - to be used for governance of the network,
-- to be staked for operation of the network,
+- to be staked for the operation of the network,
 - to be bonded to connect a chain to Polkadot as a parachain.
 
 DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT
@@ -54,7 +54,7 @@ stored in the Treasury can be sent to teams working on relevant projects for the
 
 ### DOT for Governance
 
-The first function of DOT is to entitle holders to control of the governance of the platform. Some
+The first function of DOT is to entitle holders to control the governance of the platform. Some
 functions that are included under the governance mechanism include determining the fees of the
 network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to
 the Polkadot platform.
@@ -65,7 +65,7 @@ participate in governance, as well as their rights and responsibilities, see the
 
 ### DOT for Consensus
 
-DOT will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the
+DOT will be used to facilitate the consensus mechanism that underpins Polkadot. For the
 platform to function and allow for valid transactions to be carried out across parachains, Polkadot
 will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via
 staking) to perform these functions. The staking of DOT acts as a disincentive for malicious
@@ -76,7 +76,7 @@ the DOT will be staked for, and the total number of DOT staked.
 ### DOT for Parachain Slot Acquisition
 
 DOT will have the ability to be locked for a duration in order to secure a parachain slot in the
-network. The DOT will be reserved during slot lease and will be released back to the account that
+network. The DOT will be reserved during the slot lease and will be released back to the account that
 reserved them after the duration of the lease has elapsed and the parachain is removed. You can
 learn more about this aspect by reading about the [auctions](learn-auction.md) that govern parachain
 slots.
@@ -89,7 +89,7 @@ governance or being staked as a validator or nominator.
 
 Vesting funds are on a linear release schedule and unlock a constant number of tokens at each block.
 Although the tokens are released in this manner, it does not get reflected on-chain automatically
-due to the fact that locks are [lazy](#lazy-vesting) and require an extrinsic to update.
+since locks are [lazy](#lazy-vesting) and require an extrinsic to update.
 
 There are two ways that vesting schedules can be created.
 
@@ -104,7 +104,7 @@ There are two ways that vesting schedules can be created.
 
 Vesting schedules have three parameters, `locked`, `per_block`, and `starting_block`. The
 configuration of these three fields dictate the amount of funds that are originally locked, the
-slope of the unlock line, and the block number for when the unlocking begins.
+slope of the unlock line and the block number for when the unlocking begins.
 
 #### Lazy Vesting
 
@@ -117,7 +117,7 @@ explicitly call an extrinsic to update the lock that is placed on an account.
 These extrinsics are exposed from the Vesting pallet.
 
 If you are using Polkadot-JS, when there are DOT available to vest for an account, then you will
-have the ability to unlock DOT which have already vested from the
+have the ability to unlock DOT which has already vested from the
 [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 ![unbond](assets/unlock-vesting.png)
@@ -167,7 +167,7 @@ You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-va
 ### Getting Rococo Tokens
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
-the [crosschain](learn-crosschain.md) message passing aspects of this testnet. General users can can
+the [crosschain](learn-crosschain.md) message passing aspects of this testnet. General users can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
 

@@ -8,7 +8,7 @@ Kusama network started as a Proof-of-Authority network and was transitioned to P
 October 2019 at approximately 18:43 Zurich time (CET). The first successful validator set rotation
 took place at 22:45 CET.
 
-Currently, Kusama is a healthy Proof-of-Stake network with over 500 validators and over two million
+Currently, Kusama is a healthy Proof-of-Stake network with over 900 validators and over eight million
 blocks produced. If you are curious about the history of the Kusama network, you will find more
 information in the sections below.
 
@@ -48,3 +48,11 @@ The above plan was executed successfully on the 7th of January. Due to the time 
 missed blocks in the sessions directly following
 [block #516558](https://polkascan.io/kusama/block/516558) was significantly higher. This is partly
 what contributes to the much higher ratio of missed blocks on Kusama versus Polkadot today.
+
+## Kusama's Current Adventure
+
+Kusama promised chaos, and it delivered on that promise. On 15th June 2021, the roll out of the first public parachain slot auction commenced, marking the beginning of the end to deliver on the last piece of core functionality outlined in the Polkadot whitepaper: purpose-built, interoperable parachains. 
+
+Teams and projects looking to become an official parachain on the Kusama network have been working hard to bring their technologies to life, many of whom started a [crowdloan campaign](learn-crowdloans.md##starting-a-crowdloan-campaign) in order to participate in the slot auctions.
+
+Once parachains are live, the community will determine which additional features and network upgrades should be added over time.

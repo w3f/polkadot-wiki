@@ -13,9 +13,9 @@ transactions would allow the block construction algorithm to process only a limi
 and ensure that the network maintains a constant block time. If all rewards were sent out in one
 block, this could cause serious issues with the stability of the network.
 
-Simple payouts requires one transaction per validator per era to claim rewards. The reason Polkadot
-requires this is to avoid an attack where someone has several thousand accounts nominating a single
-validator. The major cost in reward distribution is mutating the accounts in storage, and Polkadot
+Simple payouts require one transaction per validator, per [era](glossary.md##era), to claim rewards. 
+The reason Polkadot requires this is to avoid an attack where someone has several thousand accounts nominating 
+a single validator. The major cost in reward distribution is mutating the accounts in storage, and Polkadot
 cannot pay out several thousand accounts in a single transaction.
 
 ## Claiming Rewards

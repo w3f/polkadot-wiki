@@ -16,7 +16,7 @@ For most users, we recommend using the [Polkadot{.js} browser extension](https:/
 
 In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger), or [Parity Signer](https://wiki.polkadot.network/docs/en/learn-account-generation#parity-signer).
 
-Another option you may consider using is the Subkey command line utility, which will allow you to take extra steps to protect the security of your key.
+Another option you may consider using is the Subkey command-line utility, which will allow you to take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the [Polkadot Wiki Wallets page](https://wiki.polkadot.network/docs/en/build-wallets). Many of these wallets support generating Kusama accounts as well.
 
@@ -27,7 +27,7 @@ Please follow the instructions for [installing the Kusama Ledger application](ku
 ### Using Polkadot{.js} extension (Chrome/Brave or Firefox)
 
 1. Install the Polkadot{.js} extension from the [Chrome store](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) or [Firefox store](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/).
-2. Click on the settings button to change the network to "Kusama (canary)". <img src="/img/kusama/kusama_polkadotjs_add_account-1.png" width=50% style="margin-left: 70px;" />
+2. Click on the settings button to change the network to "Kusama Relay Chain". <img src="/img/kusama/kusama_polkadotjs_add_account-1.png" width=50% style="margin-left: 70px;" />
 3. Create a new account by clicking on "Create new account (root or derived)". <img src="/img/kusama/kusama_polkadotjs_create.png" width=50% style="margin-left: 70px;" />
 4. Uncheck the option to create an account dervied from another seed. <img src="/img/kusama/kusama_polkadotjs_uncheck.png" width=50% style="margin-left: 70px;" />
 5. Copy the seed phrase and store it somewhere safe. Don't share the seed phrase with anyone, you can use it to access your account if you forget your password or want to import your account again. <img src="/img/kusama/kusama_polkadotjs_mnemonicseed.jpg" width=50% style="margin-left: 70px;" />
@@ -66,7 +66,7 @@ Alternatively, you can build Subkey from the source code.
 
 You can use Subkey on a computer that is not connected to the internet for added security.
 
-The command `subkey --network kusama generate` will generate a new key-pair. If you want to be more secure, use 24 words, `subkey --network kusama generate --words 24`.
+The command `subkey --network kusama generate` will generate a new key pair. If you want to be more secure, use 24 words, `subkey --network kusama generate --words 24`.
 
 ```
 $ subkey --network kusama generate
@@ -108,7 +108,7 @@ See the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integ
 
 ### Using Polkawallet
 
-1. Install [Polkawallet](https://polkawallet.io). Click "Download" and select the link corresponding to the platform you are using. On Android you may need to allow installing apps from external sources. On iOS, you may need to "trust" Polkawallet in the "General > Profiles & Device Management > Enterprise App" section before running the app.
+1. Install [Polkawallet](https://polkawallet.io). Click "Download" and select the link corresponding to the platform you are using. On Android, you may need to allow installing apps from external sources. On iOS, you may need to "trust" Polkawallet in the "General > Profiles & Device Management > Enterprise App" section before running the app.
 
 2. Once the app is open, copy the seed phrase and store it in a safe place. Don't share the seed phrase with anyone, you can use it to access your account if you forget your password or otherwise lose your keystore.
 
@@ -118,7 +118,7 @@ See the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integ
 
 4. You will be asked to confirm your seed phrase - this is to make sure you have copied it somewhere safe.
 
-5. Click on the pink QR Code symbol and select "Copy address" to copy your address to clipboard.
+5. Click on the pink QR Code symbol and select "Copy address" to copy your address to the clipboard.
 
 <img src="/img/kusama/polkawallet-accounts-page.jpg" width=50% />
 <img src="/img/kusama/polkawallet-copy-address.jpg" width=50% />
@@ -163,7 +163,7 @@ Once you've downloaded MyCrypto and have it running locally (we recommend an air
 
 ![Claim Step 1](assets/kusama/claim/claim-1.png)
 
-The hex encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key is correct you can use the Subkey tool to inspect your address.
+The hex-encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key is correct you can use the Subkey tool to inspect your address.
 
 The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab. This will prompt you to select a method for unlocking your wallet. After unlocking your wallet, you will copy and paste the outputted sentence into the input box.
 
@@ -177,7 +177,7 @@ Copy and paste the JSON output of the signed message from MyCrypto into the inpu
 
 ![Claim Step 3](assets/kusama/claim/claim-3.png)
 
-At this point you will see a success message if everything went right and your KSM will now be in the account that you claimed to. Congratulations you can now participate in aspects of the Kusama network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch period balance transfers will not be enabled.
+At this point, you will see a success message if everything went right and your KSM will now be in the account that you claimed to. Congratulations you can now participate in aspects of the Kusama network such as [governance](learn-governance) and [staking](learn-staking). During the soft launch, period balance transfers will not be enabled.
 
 ![Claim Step 4](assets/kusama/claim/claim-4.png)]
 
@@ -187,8 +187,8 @@ After you make an on-chain claim for KSM, your balance should be updated on Polk
 
 Having trouble? Send an email to [support@polkadot.network](mailto:support@polkadot.network).
 
-### Third Party Claims Processes
+### Third-Party Claims Processes
 
 **We do not recommend using a third-party app or process to perform your claim or acquire KSM.**
 
-Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation.
+Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot recommend using any third-party apps to do so. Manually specifying your transaction data, as specified in our claims process, is the only way to be certain you will receive your allocation.
