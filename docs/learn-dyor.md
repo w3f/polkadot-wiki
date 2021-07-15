@@ -38,14 +38,16 @@ trust them, by association, you should trust us too". Indeed, association with a
 be a strong indicator of the legitimacy of a project.
 
 For example, if a project has received a
-[Web3 Foundation Grant](https://github.com/w3f/Open-Grants-Program), this is an indication that the
-project is indeed building on the Polkadot ecosystem, and if they have delivered all of their
-milestones, then their code is most likely of reasonable quality.
+[Web3 Foundation Grant](https://github.com/w3f/Open-Grants-Program) and has achieved at least one
+milestone, this is an indication that the project is indeed building on the Polkadot ecosystem, and
+if they have delivered all of their milestones, then their code is most likely of reasonable
+quality.
 
 And Web3 Foundation is not the only entity in the ecosystem that gives grants. There are other
 reputable teams in the ecosystem that have developed platforms or prospective parachains and give
-grants for projects to build on or expand their project. These are also indicators that a project is
-committed to building on the broader Polkadot ecosystem.
+[grants](https://github.com/w3f/Open-Grants-Program#other-grant-programs) for projects to build on
+or expand their project. These are also indicators that a project is committed to building on the
+broader Polkadot ecosystem.
 
 Or receiving funding from VCs that you trust and are known to be involved with other reputable
 Polkadot projects can also be a good indicator. Or participating in the
@@ -68,10 +70,15 @@ Check on the corresponding sites to make sure such claims are valid.
 
 Also, make sure you understand the _scope_ of the association. Going back to the Web3 grants
 example, they have a precise scope. They are granted for specific deliverables, and the review team
-only checks the code and evaluates these deliverables _of the particular project_. So, having
-received a Web3 grant provides no information about the general practices of a team, the longevity
-of the project besides the scope of the grant, or other projects the team might be building, which
-is why the badge rules clearly state that it shouldn't be displayed on the team's landing page.
+only checks the code and evaluates these deliverables _of the particular project_. To make this more
+tangible, you can check the scope of every Open Grants project
+[here](https://github.com/w3f/Open-Grants-Program/tree/master/applications) and their evaluations
+[here](https://github.com/w3f/Grant-Milestone-Delivery/tree/master/evaluations).
+
+So, having received a Web3 grant provides no information about the general practices of a team, the
+longevity of the project besides the scope of the grant, or other projects the team might be
+building, which is why the badge rules clearly state that it shouldn't be displayed on the team's
+landing page.
 
 Similarly, if a project claims to have partnered with a reputable entity, verify its scope and if it
 is indeed a partnership by searching their site for projects they have partnered with, their press
@@ -87,9 +94,9 @@ progress and see how active the team is in developing it.
 
 That doesn't mean, though, that any closed source project isn't legitimate or the team behind it has
 something to hide. Many teams choose to keep their code private to protect their intellectual
-property. And several teams that do so have gotten a
-[General Grant](https://github.com/w3f/General-Grants-Program), under which members of the grants
-review team review their private code.
+property. Several teams that wish to keep what what they're doing under wraps apply for a
+[General Grant](https://github.com/w3f/General-Grants-Program). The applications are private, as is
+their evaluation by the review team, but their deliverables are still open source.
 
 Another thing that an open-source project allows you to see is if they have copied any code from
 other open sources. This isn't necessarily bad, since no one re-invents the wheel, but copied code
