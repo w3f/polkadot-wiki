@@ -4,8 +4,6 @@ title: WebAssembly (Wasm)
 sidebar_label: WebAssembly (Wasm)
 ---
 
-<!-- no changes -->
-
 WebAssembly is used in Polkadot and Substrate as the compilation target for the runtime.
 
 ## What is WebAssembly?
@@ -29,7 +27,7 @@ near-native speeds.
 By using Wasm in Substrate, the framework powering Polkadot, Kusama, and many connecting chains, the
 chains are given the ability to upgrade their runtime logic without hard forking. Hard forking is a
 standard method of upgrading a blockchain that is slow, inefficient, and error prone due to the
-levels of offline coordination required, and thus the propensity to bundle many upgrades into one
+levels of offline coordination required, and thus, the propensity to bundle many upgrades into one
 large-scale event. By deploying Wasm on-chain and having nodes auto-enact the new logic at a certain
 block height, upgrades can be small, isolated, and very specific.
 

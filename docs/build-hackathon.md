@@ -4,9 +4,8 @@ title: Hackathon
 sidebar_label: Hackathon
 ---
 
-As one of our objectives in the Web3 Foundation is promoting the [Web3 technology stack][], we would
-like to support any individual or team who wants to organize a hackathon that gets more developers
-to understand Polkadot and Substrate in your city or online.
+As one of our objectives at Web3 Foundation is promoting the [Web3 technology stack][], we would
+like to support any individual or team who wants to organize a hackathon that encourages more developers to understand Polkadot and Substrate in your region or online.
 
 We are not only providing technical resources for you, but we can have someone from our team give a
 hands-on workshop/presentation about the technology to help participants get started hacking on it
@@ -35,10 +34,8 @@ more quickly.
 
 ## How do hackathons differ from workshops?
 
-Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas
-to reality in a short period (few hours - one day). Workshops are more for getting developers
-familiar with the tooling and understanding more about what are the resources currently available
-and how they can make use of it.
+A hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas
+to reality in a short period (few hours - one day). Workshops are aimed at familiarizing developers with the underlying knowledge and tooling about the resources currently available for certain technologies and how they can make use of it.
 
 ## How can you run a hackathon in your city?
 
@@ -47,22 +44,20 @@ and how they can make use of it.
 3. Decision
 4. Follow up
 
-## How we can help you
+## How we can help
 
 - Provide technical resources/materials.
 - Find a venue.
-- Ensure the hackathon run smoothly.
-
-## Upcoming Hackathons
+- Ensure the hackathon runs smoothly.
 
 ## Past Hackathons
 
-- [Hackusama](https://hackusama.devpost.com/) - A 7-week online hackathon being launched for
-  developers to "Build a Blockchain" or submit your wildest tools, visualizations, and ideas to the
+- [Hackusama](https://hackusama.devpost.com/) - A 7-week online hackathon that was launched for
+  developers to "Build a Blockchain" or submit their wildest tools, visualizations, and ideas to the
   "Open Hack" category. Many high quality submissions were received.
 - [Hello World! by Polkadot](https://gitcoin.co/hackathon/polkadot/onboard) - A collaborative
-  hackathon celebrating the integration of Polkadot and Kusama into the Gitcoin platform. Has many
-  sets of smaller challenges that will reward in either DOT or KSM. Open from 15 October - 12
+  hackathon celebrating the integration of Polkadot and Kusama into the Gitcoin platform. Had many
+  sets of smaller challenges that rewarded in either DOT or KSM. Opened from 15 October - 12
   November 2020.
 
 ## Resources

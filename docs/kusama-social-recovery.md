@@ -4,13 +4,13 @@ title: Social Recovery
 sidebar_label: Account Recovery
 ---
 
-Managing an account is not an easy task. Many people have lost their private key due to improper key
+Managing an account is not an easy task. Many people have lost their private keys due to improper key
 management over the past few years. Kusama provides a method that allows users to recover their
 accounts by setting up a social recovery. It is an M-of-N recovery tool that is based on the
-multisignature wallet to get back access of your lost account.
+multi-signature wallet to get back access of your lost account.
 
 > Note: There is no way to get back your private key by using this method. This is just a way of
-> performing transactions on behalf of the lost account, so you can think of it like a proxy
+> performing transactions on behalf of the lost account, so you can think of it as a proxy
 > instead.
 
 In this guide, you will learn how to create a recoverable account, how to recover it, and what you
@@ -28,14 +28,14 @@ approve the recovery process in order to recover your account.
 > Note: If you are recovering an account, ensure that your network is set to Kusama. You can do this
 > by selecting the network from the top right corner in the Polkadot-JS UI.
 
-First, go to [Polkadot-JS -> Accounts -> Accounts](https://polkadot.js.org/apps/#/accounts) page
+First, go to [Polkadot-JS Apps -> Accounts -> Accounts](https://polkadot.js.org/apps/#/accounts) page
 that shows all available accounts on your browser's local storage and Polkadot-JS extension. To
 create a recoverable account, make sure that you have some KSMs to pay for the transaction fees. You
 will also need some for the reserve required by the account recovery setup.
 
 ![kusama accounts page](assets/kusama/kusama_social_recovery_accounts_page.png)
 
-Then click the menu that is located besides the "send" button, and choose "Make recoverable".
+Then click the menu that is located beside the "send" button, and choose "Make recoverable".
 
 ![kusama accounts make recoverable](assets/kusama/kusama_make_recoverable.png)
 
@@ -75,13 +75,13 @@ The above diagram shows the whole process of recovering an account.
 > Note: Ensure that your new account has enough KSM to pay for the transaction fees and the amount
 > that is used for reserve when doing the recovery.
 
-Navigate to the menu that is located besides the send button in the row of your new account and
+Navigate to the menu that is located beside the send button in the row of your new account and
 click the "Initiate recover for another" option.
 
 ![kusama accounts initial recoverable](assets/kusama/kusama_make_recoverable.png)
 
-Then input the address you would like to recover in "recover this account" field and click "Start
-recovery".
+Then input the address you would like to recover in the "recover this account" field and click 
+"Start recovery".
 
 ![kusama accounts initial recoverable2](assets/kusama/kusama_make_account_initial.png)
 
@@ -97,7 +97,7 @@ transaction.
 
 Once the threshold is reached and the block delay is passed, use the new account to submit a
 `claimRecovery` transaction that would set a proxy on behalf of your lost account. It means that you
-can still use the lost account in an indirect way to interact with the network.
+can still indirectly use the lost account to interact with the network.
 
 ![](assets/recovery/social-recovery-8.png)
 
@@ -124,7 +124,7 @@ the lost account to release the reserved KSM from your lost account.
 
 ![](assets/recovery/social-recovery-12.png)
 
-Now all your account balance should be transferable.
+Now your account balance should be transferable.
 
 ![](assets/recovery/social-recovery-13.png)
 
@@ -137,7 +137,7 @@ The recovery process is now complete and successful.
 ![](assets/recovery/social-recovery-15.png)
 
 > Note: There is still one possible way to recover the account without going through the recovery
-> process. That is by using the `Root` origin. However, in order to use root permissions you will
+> process. That is by using the `Root` origin. However, in order to use root permissions, you will
 > need to either go through the council or submit a public proposal. To learn more about governance,
 > see [here](learn-governance.md).
 

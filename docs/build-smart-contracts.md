@@ -7,7 +7,7 @@ sidebar_label: Smart Contracts
 The Polkadot Relay Chain will not natively support smart contracts. However, parachains on Polkadot
 will support smart contracts. There are already announced projects such as
 [Edgeware](https://edgewa.re), and thanks to the Substrate built-in
-[contract pallet](https://substrate.dev/rustdocs/v3.0.0/pallet_contracts/index.html), it is likely
+[contract pallet](https://substrate.dev/rustdocs/latest/pallet_contracts/index.html), it is likely
 that more parachains will support WebAssembly smart contracts.
 
 Additionally, there is the

@@ -28,7 +28,7 @@ tokens after genesis. There is no time limit for making your claim so feel free 
 you are most comfortable.
 
 > Note: When you make a claim, you will also attest to the agreement that corresponds to your DOT
-> allocation. The two actions "claim" and "attest" are done in a single transaction, but for the
+> allocation. The two actions, "claim" and "attest", are done in a single transaction, but for the
 > most part this is simplified from the perspective of the user.
 
 ### What You Will Need
@@ -50,6 +50,8 @@ patches.
 
 You will need a Polkadot account to claim your DOT. Please follow the instructions on the [account
 generation][] page for generating a new Polkadot account.
+
+You can use the [claims guide](https://claims.polkadot.network/) to claim DOT that were purchased in the form of DOT Allocation Indicators on Ethereum before June 30, 2020. These steps are broken down in the remaining sections of this page.
 
 #### Claiming your DOT with MyCrypto
 

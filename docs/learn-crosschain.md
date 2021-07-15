@@ -10,7 +10,7 @@ queue of one parachain into the input queue of the destination parachain. Howeve
 associated metadata is stored as a hash in the Relay Chain storage.
 
 The input and output queue are sometimes referred to in the codebase and associated documentation as
-"ingress" and "egress" messages respectively.
+`ingress` and `egress` messages respectively.
 
 ## Overview of XCMP
 
@@ -36,14 +36,14 @@ of parachains can have at most two channels between them, one for sending messag
 chain and another for receiving messages. The channel will require a deposit in DOT to be opened,
 which will get returned when the channel is closed.
 
-## Horizontal Relay-routed Message Passing (HRMP)
+## XCMP-Lite (HRMP)
 
-While XCMP is still being implemented, a stop-gap protocol (see definition below) known as HRMP
-exists in its place. HRMP has the same interface and functionality as XCMP but is much more
-demanding on resources since it stores all messages in the Relay Chain storage. When XCMP has been
-implemented, HRMP is planned to be deprecated and phased out in favor of it.
+While XCMP is still being implemented, a stop-gap protocol (see definition below) known as 
+**Horizontal Relay-routed Message Passing (HRMP)** exists in its place. HRMP has the same interface 
+and functionality as XCMP but is much more demanding on resources since it stores all messages in 
+the Relay Chain storage. When XCMP has been implemented, HRMP is planned to be deprecated and phased out in favor of it.
 
-> Note: A stop-gap protocol is a temporary subsitute for the functionality that is not fully
+> Note: A stop-gap protocol is a temporary substitute for the functionality that is not fully
 > complete. While XCMP proper is still in development, HRMP is a working replacement.
 
 ## Vertical Message Passing
@@ -65,7 +65,7 @@ You can try out cross-chain transfers on the the [Rococo](build-parachains-rococ
 tutorial on downward, upward, and lateral transfers can be found
 [here](build-parachains-rococo.md#how-to-make-cross-chain-transfers).
 
-## High Level XCMP
+## High-Level XCMP
 
 A smart contract that exists on parachain A will route a message to parachain B in which another
 smart contract is called that makes a transfer of some assets within that chain.
@@ -112,6 +112,6 @@ doesn't support embedded videos. </video>
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
-- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the XCMP format.
+- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format sent via XCMP.
 
 [xcm-format]: https://github.com/paritytech/xcm-format

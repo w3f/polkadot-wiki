@@ -9,7 +9,7 @@ Transaction fees prevent individual users from consuming too many resources. Pol
 weight-based fee model as opposed to a gas-metering model. As such, fees are charged prior to
 transaction execution; once the fee is paid, nodes will execute the transaction.
 
-[Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html)
+[Web3 Foundation Research](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html?highlight=transaction%20fee)
 designed the Polkadot fee system with the following objectives:
 
 - Each Relay Chain block should be processed efficiently to avoid delays in block production.
@@ -22,9 +22,9 @@ designed the Polkadot fee system with the following objectives:
 
 Fees on the Polkadot Relay Chain are calculated based on three parameters:
 
-- A per-byte fee (also known as the "length fee")
-- A weight fee
-- A tip (optional)
+- A per-byte fee (also known as the "length fee").
+- A weight fee.
+- A tip (optional).
 
 The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
 
@@ -61,10 +61,10 @@ Transaction volume on blockchains is highly irregular, and therefore transaction
 mechanism to adjust. However, users should be able to predict transaction fees.
 
 Polkadot uses a slow-adjusting fee mechanism with tips to balance these two considerations. In
-addition to block _limits,_ Polkadot also has a block fullness _target._ Fees increase or decrease
+addition to block _limits_, Polkadot also has a block fullness _target._ Fees increase or decrease
 for the next block based on the fullness of the current block relative to the target. The per-weight
 fee can change up to 30% in a 24 hour period. This rate captures long-term trends in demand, but not
-short-term spikes. To consider short term spikes, Polkadot uses tips on top of the length and weight
+short-term spikes. To consider short-term spikes, Polkadot uses tips on top of the length and weight
 fees. Users can optionally add a tip to the fee to give the transaction a higher priority.
 
 ## Shard Transactions
