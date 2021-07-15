@@ -25,9 +25,9 @@ After cloning the source locally, you can start the websites with each of these 
 
 ```zsh
 # For the Polkadot Wiki:
-yarn polkadot2:start
+yarn polkadot:start
 # For the Kusama Guide:
-yarn kusama2:start
+yarn kusama:start
 ```
 
 ### Style Guide
@@ -64,9 +64,9 @@ To use the replace script:
 
 ```bash
 # For Polkadot Wiki
-yarn polkadot2:inject
+yarn polkadot:inject
 # For Kusama Guide
-yarn kusama2:inject
+yarn kusama:inject
 ```
 
 This will read the dictionary and do the replacements for the respective website.
@@ -76,14 +76,14 @@ they resolve to values first and don't throw query errors. To use dry run (no re
 of templates and their resolved potential replacements), use the `--dry` or `-d` flag:
 
 ```bash
-yarn polkadot2:inject --dry
+yarn polkadot:inject --dry
 ```
 
 The script defaults to the websocket URL `wss://kusama-rpc.polkadot.io/`. To change to another URL
 or to connect to a local node, use the `--node/-n` flag:
 
 ```bash
-yarn polkadot2:inject -n ws://localhost:9944
+yarn polkadot:inject -n ws://localhost:9944
 ```
 
 > Note: make sure you're running an archive node if you're querying into the past!
@@ -91,7 +91,7 @@ yarn polkadot2:inject -n ws://localhost:9944
 See other available options by using the `help` command.
 
 ```bash
-yarn polkadot2:inject help
+yarn polkadot:inject help
 ```
 
 The templates to replace in the text take the following format:
@@ -114,8 +114,8 @@ The templates to replace in the text take the following format:
 - `filters` is an array of filters to apply on the value after it's been fetched (does not apply to
   defaults). Filters are defined in `applyFilters` or `inject.js`.
 
-To test the injection, run `polkadot2:build` and `kusama2:build`, then `polkadot2:inject` and
-`kusama2:inject`. Inspect the built files in the corresponding `build` folder under `website` or
+To test the injection, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
+`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
 `kusama-guide`.
 
 ### Mirror pages
@@ -133,7 +133,7 @@ the relevant sidebar section. To run the script:
 yarn mirror
 ```
 
-> Note: This command runs automatically when using `polkadot2:start` or `kusama2:start` development
+> Note: This command runs automatically when using `polkadot:start` or `kusama:start` development
 > scripts, so you don't need to worry about running it manually if you start the development site
 > with one of these commands.
 
@@ -153,8 +153,8 @@ on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama
 burned. :kusama }}
 ```
 
-To test the resolution, run `polkadot2:build` and `kusama2:build`, then `polkadot2:inject` and
-`kusama2:inject`. Inspect the built files in the corresponding `build` folder under `website` or
+To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
+`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
 `kusama-guide`.
 
 ## Internationalization
