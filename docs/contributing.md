@@ -20,7 +20,7 @@ included. Specifically the Technical Education team at the foundation are most d
 
 ## How to Contribute
 
-Contributing to the wiki is easy with a GitHub account. Every page is a MarkDown file, which is a
+You can contribute to the wiki on the [w3f/polkadot-wiki GitHub repository](https://github.com/w3f/polkadot-wiki). Every page is a MarkDown file, which is a
 [very easy to learn](https://guides.github.com/features/mastering-markdown/) syntax extension to
 plain text that makes creating links, rendering images, and nice-looking formatting simple.
 
