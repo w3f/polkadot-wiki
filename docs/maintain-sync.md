@@ -55,7 +55,7 @@ https://github.com/paritytech/smoldot#wasm-light-node
 
 ### Fast Install Instructions (Mac)
 
-> Not recommended if you're a validator. Please see [validator setup](maintain-guides-validator.md)
+> Not recommended if you're a validator. Please see [validator setup](maintain-guides-secure-validator.md)
 
 - Type terminal in the ios searchbar/searchlight to open the 'terminal' application
 - Install Homebrew within the terminal by running:
@@ -77,7 +77,7 @@ https://github.com/paritytech/smoldot#wasm-light-node
 
 > This works only on Windows Pro with virtualization enabled.
 
-> Not recommended if you're a validator. Please see [validator setup](maintain-guides-validator.md)
+> Not recommended if you're a validator. Please see [validator setup](maintain-guides-secure-validator.md)
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
