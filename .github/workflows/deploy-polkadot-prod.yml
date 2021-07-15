@@ -1,0 +1,24 @@
+name: Deploy Polkadot
+
+# Triggered on commits to the main branch.
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  build:
+    name: build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          
+      - name: Publish
+        run: |
+          git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
+          git config --global user.name "Polkadot Wiki CI"
+          echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
+          yarn && yarn polkadot2:build && GIT_USER=w3fdeploy PUBLISHING=true yarn run polkadot2:publish-gh-pages
