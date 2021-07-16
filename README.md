@@ -55,6 +55,30 @@ npx prettier --write ./docs/
 The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website 
 generator to convert the Markdown docs into a documentation website.
 
+### Search Engine
+
+[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which 
+is built into Docusaurus. Indexing via Algolia provides faster lookup; the actual configuration
+for lookup is located in another repository that's maintained by Algolia DocSearch.
+
+We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js` 
+file in `scripts`, and defining an API key and index name that are provided by DocSearch.
+
+```js
+  algolia: {
+    apiKey: "53c6a4ab0d77c0755375a971c9b7cc3d",
+    indexName: "kusama_guide",
+    algoliaOptions: {
+      facetFilters: ["language:LANGUAGE"],
+    }, // Optional, if provided by Algolia
+  }
+```
+
+If you would like to access and modify this, you can re-submit the documentation url via 
+[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send 
+a JavaScript snippet that you can re-integrate into the configuration, similar to the 
+one shown above.
+
 ### Automated Deployments
 
 The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
@@ -181,4 +205,4 @@ If you do not see the language you would like to translate, please let us know v
 
 The Polkadot Wiki is licensed under the [GPL-3.0](LICENSE) free software license.
 
-<img src="docs/assets/blockchain-unbounded.png" width="900"> 
+<img src="docs/assets/polkadot-img.png" width="900" height="385"> 
