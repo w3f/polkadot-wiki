@@ -17,7 +17,7 @@ and Parity Signer. For other wallet applications, please see their specific docu
 
 ## Polkadot{.js} Browser Plugin
 
-To back up an account using the Polkadot{.js} browser plugin, open the extension and selecting the
+To back up an account using the Polkadot{.js} browser plugin, open the extension and select the
 desired account to back up. Click on the three dots beside the address to open up the account
 options menu.
 
@@ -33,7 +33,7 @@ restore it.
 
 To restore the account from this JSON file, once again open the Polkadot{.js} browser plugin. Click
 on the + button at the top. This will open up a menu wih several choices - select "Restore account
-from backup JSON file". The program then prompt you for the `.json` file which was download earlier
+from backup JSON file". The program then prompts you for the `.json` file which was download earlier
 and the password for that account.
 
 ![restore-account-plugin](assets/accounts/polkadot.js_restore_account.png)
@@ -69,11 +69,11 @@ To do this with Polkadot-JS, navigate to the
 [Polkadot-JS Accounts Page](https://polkadot.js.org/apps/#/accounts). Click on the "Add Account"
 button, and enter a name and password for the account. The name and the password of this added
 account can be set to whatever you'd like, it does not need to be the same name and password as when
-this account was initilly created.
+this account was initially created.
 
 After this, delete the generated mnemonic phrase (seed words) and replace them with your _existing
-seed words_. When you replace the generated mnemonic seed with your existing one, you aren't
-actually creating a new account, rather adding that account onto the Polkadot-JS UI. Any account
+seed words_. When you replace the generated mnemonic seed with your existing one, you are not
+creating a new account, rather adding that account onto the Polkadot-JS UI. Any account
 using the same seed words will have control over that account on-chain. This is why it is so
 important to keep your seed words secret and safe.
 
@@ -82,7 +82,7 @@ important to keep your seed words secret and safe.
 Finally, click the "Save" button, then click the "Create and backup account" button. This will
 download the `.json` file which contains the data to be used in account restoration. You can use
 this JSON file to restore this account in the future using the instructions above, or simply delete
-the file and continue to use the mnemnonic phrase to restore the account again if necessary.
+the file and continue to use the mnemonic phrase to restore the account if necessary.
 
 ## Parity Signer
 
@@ -92,7 +92,7 @@ setting the derivation path: see
 [this document](https://github.com/paritytech/parity-signer/blob/master/docs/tutorials/Recover-Account-Polkadotjs.md)
 for details.
 
-On Parity Signer, click on the top right user icon on the screen. Proceed to "+ Add Identity". On
+On Parity Signer, click on the top-right user icon on the screen. Proceed to "+ Add Identity". On
 this screen, tap on the "recover existing identity" button.
 
 ![restore-using-parity](assets/parity_Signer_restore1.PNG)
