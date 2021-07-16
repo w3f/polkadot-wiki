@@ -3,7 +3,7 @@ id: learn-collator
 title: Collator
 sidebar_label: Collator
 ---
-
+<!-- page being updated -->
 Collators maintain parachains by collecting parachain transactions from users and producing state
 transition proofs for Relay Chain validators. In other words, collators maintain parachains by
 aggregating parachain transactions into parachain block candidates and producing state transition
