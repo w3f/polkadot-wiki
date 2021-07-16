@@ -18,7 +18,7 @@ your stash.
 before attempting to run your own validator.
 
 Since security is so important to running a successful validator, you should take a look at the
-[validator setup](maintain-guides-validator.md) information to make you understand the factors to
+[validator setup](maintain-guides-secure-validator.md) information to make you understand the factors to
 consider when constructing your infrastructure. The Web3 Foundation also maintains a
 [reference implementation for a validator set-up](https://github.com/w3f/polkadot-validator-setup)
 that you can use by deploying yourself. As you progress in your journey as a validator, you will
