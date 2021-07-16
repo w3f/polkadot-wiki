@@ -4,6 +4,7 @@ title: Polkadot Protocol Information
 sidebar_label: Polkadot Protocol
 ---
 
+<!-- page in the process of being updated -->
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
 specific to Polkadot, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.

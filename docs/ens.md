@@ -4,9 +4,13 @@ title: Adding accounts to an ENS domain
 sidebar_label: Using ENS with DOT/KSM accounts
 ---
 
-ENS (Ethereum Name Service) is a system of smart contracts on the Ethereum blockchain which allows
-users to claim domain names like `bruno.eth`. Supporting wallets can then allow senders to input ENS
-domains instead of long and unwieldy addresses. This prevents phishing, fraud, typos, and adds a
+ENS (Ethereum Name Service) is a distributed and open system of smart contracts on the 
+Ethereum blockchain which allows users to claim domain names like `bruno.eth`. 
+
+The ENS is a domain that is equivalent to a DNS (Domain Name System) domain. 
+Instead, it offers a decentralized and secure way to translate text via smart contracts.
+Supporting wallets can then allow senders to input ENS domains instead of long and unwieldy 
+addresses. This prevents phishing, fraud, typos, and adds a
 layer of usability on top of the regular wallet user experience.
 
 > Note: You will need an ENS name and an Ethereum account with some ether in it to follow along with
@@ -19,12 +23,12 @@ layer of usability on top of the regular wallet user experience.
 > [Frame](https://frame.sh/) and [Metamask](https://metamask.io) are safe and will make interacting
 > with the Ethereum blockchain through your browser very easy.
 
-Despite living on the Ethereum blockchain, the ENS system has multi-chain support. In this guide
+Despite living on the Ethereum blockchain, the ENS system has multi-chain support. In this guide,
 you'll go through the process of adding a KSM and DOT address to ENS. We cover both KSM and DOT to
 show two different approaches.
 
 > Note: DOT can currently only be added using the Resolver method. KSM can be added through both
-> methods described below.
+> methods are described below.
 
 This guide is also available in video format [on Youtube](https://youtu.be/XKjZk-5_mQc).
 
