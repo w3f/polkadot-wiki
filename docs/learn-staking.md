@@ -289,7 +289,7 @@ Validators should have a well-architected network infrastructure to ensure the n
 reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
-available [here](maintain-guides-validator.md).
+available [here](maintain-guides-secure-validator.md).
 
 ### GRANDPA Equivocation
 
@@ -474,7 +474,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Validator setup](maintain-guides-validator.md)
+- [Validator setup](maintain-guides-secure-validator.md)
 
 [epoch]: glossary.md#epoch
 [how to chill]: maintain-guides-how-to-chill.md
