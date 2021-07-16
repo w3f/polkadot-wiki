@@ -10,7 +10,7 @@ chains.
 
 ## In-Depth Comparisons
 
-- [vs Ethereum 2.0](learn-comparisons-ethereum-2.md)
+- [vs Ethereum 2.0](learn-comparison-ethereum-2.md)
 
 - [vs Cosmos](learn-comparisons-cosmos.md)
 
