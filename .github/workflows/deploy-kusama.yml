@@ -46,4 +46,4 @@ jobs:
           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
           git config --global user.name "Polkadot Wiki CI"
           echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
-          yarn && yarn kusama2:build && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=kusama-guide-hosting yarn run kusama2:publish-gh-pages
+          yarn && yarn kusama:build && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=kusama-guide-hosting yarn run kusama:publish-gh-pages
