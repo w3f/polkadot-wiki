@@ -3,7 +3,7 @@ id: kusama-adversarial-cheatsheet
 title: Adversarial Cheatsheet
 sidebar_label: Adversarial Cheatsheet
 ---
-
+<!-- no updates -->
 Expect things to break on Kusama. To help you break some things, take a look at the following threat
 model.
 
