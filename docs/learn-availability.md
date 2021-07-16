@@ -40,7 +40,7 @@ eventually be included into the Relay Chain state. It includes:
 - The parachain ID.
 - The collator's ID and signature.
 - A hash of the parent block's candidate receipt.
-- A Merkle root of the block's erasure coded pieces.
+- A Merkle root of the block's erasure-coded pieces.
 - A Merkle root of any outgoing messages.
 - A hash of the block.
 - The state root of the parachain before block execution.
@@ -72,7 +72,7 @@ any missing data due to inconsistencies on the disk face such as dust particles 
 In Polkadot, the erasure codes are used to keep parachain state available to the system without
 requiring all validators to keep tabs on all the parachains. Instead, validators share smaller
 pieces of the data and can later reconstruct the entire data under the assumption that 1/3+1 of the
-validators can provide their individual pieces of the data.
+validators can provide their pieces of the data.
 
 **Note:** The 1/3+1 threshold of validators that must be responsive in order to construct the full
 parachain state data corresponds to Polkadot's security assumption in regard to Byzantine nodes.
@@ -80,7 +80,7 @@ parachain state data corresponds to Polkadot's security assumption in regard to 
 ## Fishermen
 
 Fishermen are full nodes of parachains, same as collators, but perform a different role in
-relationship to the Polkadot network. Instead of packaging the state transitions and producing the
+relation to the Polkadot network. Instead of packaging the state transitions and producing the
 next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state
 transitions are included. Fishermen will be moderately staked on the Relay Chain, unlike collators
 that require no stake on the Relay Chain. Fishermen will submit invalidity reports if they find that
@@ -102,7 +102,7 @@ On the hardware end of requirements, a moderately powerful machine should be cap
 full node of one or more parachains. The biggest requirement will likely be the storage of data for
 each of the parachains that are being fished. However, improvements such as [pruning][pruning] mean
 that the eventual storage size needed to maintain a full node of a parachain will level off at a
-non-exorbitant amount. RAM and CPU requirements will likely scale with the amount of parachains
+non-exorbitant amount. RAM and CPU requirements will likely scale with the number of parachains
 being fished, with low to moderate requirements for fishing one parachain and increasing from there.
 A $10 or $20 /month cloud instance will be enough to get started.
 

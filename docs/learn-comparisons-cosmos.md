@@ -54,7 +54,7 @@ Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibil
 
 Cosmos has a main chain called a "Hub" that connects other blockchains called "zones". Cosmos can
 have multiple hubs, but this overview will consider a single hub. Each zone must maintain its own
-state, and therefore have its own validator community. When a zone wants to communicate with another
+state and therefore have its own validator community. When a zone wants to communicate with another
 zone, it sends packets over IBC. The Hub maintains a multi-token ledger of token balances
 (non-transfer messages are relayed but their state not stored in the Hub).
 
@@ -62,7 +62,7 @@ Zones monitor the state of the Hub with a light client, but the Hub does not tra
 Zones must use a deterministic finality algorithm (currently, all use Tendermint) and implement the
 IBC interface to be able to send messages to other chains through the Hub.
 
-Cosmos can also interact with external chains by using "peg zones", which are similar to bridge
+Cosmos can also interact with external chains by using "peg zones", which are similar to bridged
 parachains.
 
 ## Consensus
@@ -78,7 +78,7 @@ blocks at a time).
 This isolation of tasks provides several benefits. First, it represents a reduction in transport
 complexity for both block production and finalization. BABE has linear complexity, making it easy to
 scale to thousands of block producers with low networking overhead. GRANDPA has quadratic
-complexity, but reduced by a factor of the latency, or how many blocks it finalizes in one batch.
+complexity, but is reduced by a factor of the latency, or how many blocks it finalizes in one batch.
 
 Second, having the capacity to extend the chain with unfinalized blocks allows other validators to
 perform extensive availability and validity checks to ensure that no invalid state transitions make
@@ -101,7 +101,7 @@ All validators in Polkadot have the same weight in the consensus protocols. That
 greater than 2/3 of support for a chain, more than 2/3 of the _validators_ must commit to it, rather
 than 2/3 of the _stake._ Likewise, validator rewards are tied to their activity, primarily block
 production and finality justifications, not their amount of stake. This creates an incentive to
-nominate validators with lower stake, as they will earn higher returns on their staked tokens.
+nominate validators with lower stakes, as they will earn higher returns on their staked tokens.
 
 The Cosmos Hub uses Bonded Proof of Stake (a variant of Delegated PoS) to elect validators. Stakers
 must bond funds and submit a delegate transaction for each validator they would like to delegate to
@@ -133,7 +133,7 @@ Polkadot has an additional protocol called [SPREE](learn-spree.md) that provides
 cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and
 interpretation by the receiving chain.
 
-Cosmos uses a cross chain protocol called Inter-Blockchain Communication (IBC). The current
+Cosmos uses a cross-chain protocol called Inter-Blockchain Communication (IBC). The current
 implementation of Cosmos uses the Hub to pass tokens between zones. However, Cosmos does have a new
 specification for passing arbitrary data. Nonetheless, as chains do not share state, receiving
 chains must trust the security of a message's origin.
@@ -169,10 +169,10 @@ mechanism.
 
 ## Development Framework
 
-Both Cosmos and Polkadot are designed such that each chain has its own STF and both provide support
+Both Cosmos and Polkadot are designed such that each chain has its STF and both provide support
 for smart contracts in both Wasm and the Ethereum Virtual Machine (EVM). Polkadot provides an
 ahead-of-time Wasm compiler as well as an interpreter (Wasmi) for execution, while Cosmos only
-excutes smart contracts in an interpreter.
+executes smart contracts in an interpreter.
 
 Cosmos chains can be developed using the Cosmos SDK, written in Go. The Cosmos SDK contains about 10
 modules (e.g. staking, governance, etc.) that can be included in a chain's STF. The SDK builds on
