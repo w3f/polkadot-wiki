@@ -59,16 +59,6 @@ Thousand Validators programme. They are formatted like "`stash` / `controller`".
   `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ`
 - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` /
   `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V`
-- `H4635Bjj3X7TjnQhd55p9DyFPK39JiRypmCnsDhS3NHSMS5` /
-  `CeB8SLnJivXRtC5PgXchrece8j3TBQRaqfGqHngvhD3LRHD`
-- `Hs94zeHrSUWG1VBzsvHPxR2VRN5mq1Rib1PEfjH7wkGzv2Z` /
-  `HCbe2ZFujLNYsrKGub8XKGJuky3LTAF6NhWnRTs6NyDaVkQ`
-- `CdWjVn5J9ct4D3yK8HbwXmmGyLcxjkDitaBLxwH5g5Vh7pi` /
-  `Dicn4AxJRsnJ6sRsYPNZvC3xrRhvNBanfPP79haVL7ywyPn`
-- `HxRmQTVrMxMkhyZquYLu2hSL1QDYvVwSpDfBHvVJhEMVzRj` /
-  `CbFFE91fYzkKsuFjSjfQrc7Bz2bbM9vYcQgzijxHd4LtoKw`
-- `FJbKWFGCfZFZiNQtAZ5uqbUhKeB3P3a6RVRw6GqTbgiqtem` /
-  `Gt2p2gZHPvHCvPUuT2BKaeAAADPgVEa9eXMQBn74RwMa6mX`
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
