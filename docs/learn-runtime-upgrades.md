@@ -70,7 +70,10 @@ For validators, keeping in sync with the network is key. At times, upgrades will
 to upgrade within a specific time frame to ensure continued sync with their node. It is essential to 
 check the release notes, starting with the upgrade priority and acting accordingly.
 
-For general infrastructure providers, aside from following the Polkadot releases and upgrading in a timely manner, somethings to keep an eye out on is updating your parsing logic and acknowledging changes to the available RPC clients, such as the [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar). 
+For general infrastructure providers, aside from following the Polkadot releases and upgrading in a 
+timely manner, somethings to keep an eye out on is updating your parsing logic and acknowledging changes 
+to the available RPC clients, such as the 
+[Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar). 
 
 ### For [Nominators](maintain-guides-how-to-nominate-polkadot.md)
 
@@ -92,11 +95,17 @@ steps relate to [subscan](https://polkadot.subscan.io/).
 > In general, an action has two components: the module (such as `democracy`) and the event (such as `Started`).
 
 Monitor the chain for: 
-1. `democracy(Started)` events and log `index` and `blockNumber`. Get `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` from `Sidecar` to get the referendum info. It should have a status of `Ongoing`. Find the ending block number (`end`) and the enactment `delay` (delay), where the execution block number will be `end + delay`.
+1. `democracy(Started)` events and log `index` and `blockNumber`. 
+Get `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` from `Sidecar` to get the 
+referendum info. It should have a status of `Ongoing`. Find the ending block number (`end`) and the 
+enactment `delay` (delay), where the execution block number will be `end + delay`.
 
-2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index. If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for
+2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index. 
+If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for
 the enactment block.
 
-3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. This may be up to the last block before execution, but it will not work if this is missing.
+3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. 
+This may be up to the last block before execution, but it will not work if this is missing.
    
-4.  `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will also be a `system(CodeUpdated)` event.
+4.  `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will 
+also be a `system(CodeUpdated)` event.
