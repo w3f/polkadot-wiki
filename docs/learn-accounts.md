@@ -71,6 +71,10 @@ Polkadot and Kusama both have paths registered in the
 > the key for an address. Do not use custom derivation paths unless you are comfortable with your
 > understanding of this topic.
 
+### Soft vs Hard Derivation Paths
+
+Add content here
+
 ### Portability
 
 The above information brings us to portability: the ability to use a mnemonic phrase or seed across
