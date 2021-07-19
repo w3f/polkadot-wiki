@@ -17,6 +17,7 @@ developers, feel free to [add it in](contributing).
   chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
+- [DotScanner](https://dotscanner.com) - Polkadot Blockchain explorer.
 
 ## Wallets
 
