@@ -10,10 +10,10 @@ This repository hosts both the Kusama Guide and the Polkadot Wiki.
 
 ### IPFS
 
-- Run `yarn kusama2:build`
-- Run `yarn polkadot2:build`
+- Run `yarn kusama:build`
+- Run `yarn polkadot:build`
 
 ### GH Pages
 
-- Run `yarn kusama2:publish-gh-pages`
-- Run `yarn polkadot2:publish-gh-pages`
+- Run `yarn kusama:publish-gh-pages`
+- Run `yarn polkadot:publish-gh-pages`
