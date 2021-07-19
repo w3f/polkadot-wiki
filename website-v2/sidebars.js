@@ -48,6 +48,7 @@ module.exports = {
             "learn-polkadot-host",
             "learn-treasury",
             "learn-registrar",
+            "learn-runtime-upgrades",
           ],
         },
         {
