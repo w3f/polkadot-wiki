@@ -276,7 +276,7 @@ ok: [34.80.70.172] => {
 ```
 
 The result "0xf126b68841f5…..95f54249" is your session key. Set this to your controller account in
-[polkadot-js Apps](https://polkadot.js.org/apps/#/staking/actions).
+[Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking/actions).
 
 After accessing one of the machines through SSH, you can keep track of the node’s status by running
 `journalctl --follow -u polkadot`, which will show the latest synced block information.
