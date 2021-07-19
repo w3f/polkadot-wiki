@@ -1,13 +1,11 @@
-name: Stale Check
-# - stale pages (those that have not been updated in more than 21 days)
-# - stale issues (60 days of no activity)
+name: Stale Check # stale pages (those that have not been updated in more than 21 days)
 
 on:
   schedule:
     - cron: "0 0 * * *"
 
 jobs:
-  # check for inactive issues and mark as stale - close if still no activity
+  # check for stale pages
   check-stale:
     name: Checks for stale files
     runs-on: ubuntu-latest
@@ -30,22 +28,3 @@ jobs:
         with:
           randAssignees: '["jakehemmerle", "dannys03", "emresurmeli", "DrW3RK"]'
           files: ${{ steps.find.outputs.files }}
-  # check for inactive issues and mark as stale - close if still no activity
-  check-issues:
-    name: check for stale issues
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
-    steps:
-      - uses: w3f/action-create-issues-for-old-files@master
-        with:
-          days-before-issue-stale: 60
-          days-before-issue-close: 15
-          stale-issue-label: "stale issue"
-          stale-issue-message: "This issue has been marked stale because it has been open for 60 days with no activity."
-          close-issue-message: "This issue has been closed because of being inactive for 15 days since being stale."
-          days-before-pr-stale: -1
-          days-before-pr-close: -1
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-

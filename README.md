@@ -1,16 +1,27 @@
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE) [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](https://www.markdownguide.org/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/general/CONTRIBUTING.md) 
+
+<a href="https://wiki.polkadot.network/" rel="some text">![Polkadot Wiki](docs/assets/polkadot-wiki.png)</a> | <a href="https://guide.kusama.network/" rel="some text">![Kusama Guide](docs/assets/kusama-guide.png)</a>
+:----------------------------------:|:--------------------------------:
+
 # Polkadot Wiki
 
-The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative
-led by the Web3 Foundation to keep an up-to-date resource on the best information for building on
-Polkadot, learning about Polkadot, or maintaining a node on Polkadot.
+The Polkadot Wiki is the central source of truth for Polkadot.
+
+It is a community-focused initiative led by Web3 Foundation to keep an up-to-date resource on the best information for 
+learning, building, or maintaining on Polkadot.
+
+<img src="docs/assets/less-trust-more-truth.png" width="900"> 
+
 
 ## Contributing to Documentation
 
-The Wiki is a community-focused initiative and we will review all pull-requests and issues created
-in this repository. If you notice typos or grammatical errors, please feel free to directly create
-pull requests with these corrections. Larger contributions may start as issues to test the waters on
-the subject with the maintainers. It is generally preferable to create a pull request over an issue
-to propose a change to the wiki content.
+The Wiki is an open source project and we will review all issues and pull-requests created
+in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with 
+these corrections. 
+
+Larger contributions may start as issues to test the waters on the subject with the maintainers. 
+It is generally preferable to create a pull request over an issue to propose a change to the wiki content.
 
 ### Running Locally
 
@@ -39,78 +50,58 @@ run:
 npx prettier --write ./docs/
 ```
 
+### Static Site Generator
+
+The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website 
+generator to convert the Markdown docs into a documentation website.
+
+### Search Engine
+
+[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which 
+is built into Docusaurus. Indexing via Algolia provides faster lookup; the actual configuration
+for lookup is located in another repository that's maintained by Algolia DocSearch.
+
+We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js` 
+file in `scripts`, and defining an API key and index name that are provided by DocSearch.
+
+```js
+  algolia: {
+    apiKey: "53c6a4ab0d77c0755375a971c9b7cc3d",
+    indexName: "kusama_guide",
+    algoliaOptions: {
+      facetFilters: ["language:LANGUAGE"],
+    }, // Optional, if provided by Algolia
+  }
+```
+
+If you would like to access and modify this, you can re-submit the documentation url via 
+[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send 
+a JavaScript snippet that you can re-integrate into the configuration, similar to the 
+one shown above.
+
 ### Automated Deployments
 
-The wiki is automatically built and deployed via Github Actions for new commits on the
-master branch. The Kusama guide is also deployed to GitHub Pages (via a separate repository). Both
-websites are also uploaded to IPFS via GitHub actions.
+The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
+The Kusama wiki is also deployed to GitHub Pages (via a separate repository). 
 
-### Dynamic Value Inserts
+### Mirror Pages
 
-This documentation sometimes makes references to on-chain values that may change over time. For
-example, it might reference the current number of validators. A custom script exists to populate
-these values post-build. To avoid conflicts in source files, the replacement is done on **built**
-files, not the MD files. The value placeholders are defined in
-[scripts/inject-dict.json](scripts/inject-dict.json). The placeholders should be included in text
-surrounded by double curly braces, like so: `{{ num_validators }}`.
+A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
+Thus, our Kusama section will either hijack some content it shares with the rest of the wiki, or
+lack that content.
 
-To use the replace script:
-
-```bash
-# For Polkadot Wiki
-yarn polkadot:inject
-# For Kusama Guide
-yarn kusama:inject
-```
-
-This will read the dictionary and do the replacements for the respective website.
-
-It is recommended to use the dry run option when adding new values and templates in, to make sure
-they resolve to values first and don't throw query errors. To use dry run (no replace, just output
-of templates and their resolved potential replacements), use the `--dry` or `-d` flag:
+To solve this, the repo mirrors some pages and includes them in additional sidebars. The `scripts`
+folder contains a `mirror.js` script that creates a copy of the pages to duplicate across sidebars.
+The new pages are prefixed with `mirror` and first need to be declared in `mirror.js`, then added to
+the relevant sidebar section. To run the script:
 
 ```bash
-yarn polkadot:inject --dry
+yarn mirror
 ```
 
-The script defaults to the websocket URL `wss://kusama-rpc.polkadot.io/`. To change to another URL
-or to connect to a local node, use the `--node/-n` flag:
-
-```bash
-yarn polkadot:inject -n ws://localhost:9944
-```
-
-> Note: make sure you're running an archive node if you're querying into the past!
-
-See other available options by using the `help` command.
-
-```bash
-yarn polkadot:inject help
-```
-
-The templates to replace in the text take the following format:
-
-```json
-  {
-    "tpl": "tip_deposit_amount",
-    "default": { "kusama": 0.166, "polkadot": 1 },
-    "path": "consts.treasury.tipReportDepositBase",
-    "filters": ["humanReadableToken"]
-  },
-```
-
-- `tpl` is the template you want replaced in the text, it should be placed between `{{ }}` curly
-  braces.
-- `default` is either a literal value or an object with chain-specific defaults.
-- `path` is the query to run on the chain
-- `computed` is a value that should be set to `true` is the value does not need a `path`. Computed
-  properties are exported from `computed.js`.
-- `filters` is an array of filters to apply on the value after it's been fetched (does not apply to
-  defaults). Filters are defined in `applyFilters` or `inject.js`.
-
-To test the injection, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
-`kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
-`kusama-guide`.
+> Note: This command runs automatically when using `polkadot:start` or `kusama:start` development
+> scripts, so you don't need to worry about running it manually if you start the development site
+> with one of these commands.
 
 ### Conditional Rendering
 
@@ -132,25 +123,6 @@ To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:
 `kusama:inject`. Inspect the built files in the corresponding `build` folder under `website` or
 `kusama-guide`.
 
-### Mirror pages
-
-A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
-Thus, our Kusama section will either hijack some content it shares with the rest of the wiki, or
-lack that content.
-
-To solve this, the repo mirrors some pages and includes them in additional sidebars. The `scripts`
-folder contains a `mirror.js` script that creates a copy of the pages to duplicate across sidebars.
-The new pages are prefixed with `mirror`, and first need to be declared in `mirror.js` and added to
-the relevant sidebar section. To run the script:
-
-```bash
-yarn mirror
-```
-
-> Note: This command runs automatically when using `polkadot:start` or `kusama:start` development
-> scripts, so you don't need to worry about running it manually if you start the development site
-> with one of these commands.
-
 ## Internationalization
 
 We are using Crowdin to manage all different translations. You can go to the
@@ -162,4 +134,6 @@ If you do not see the language you would like to translate, please let us know v
 
 ## License
 
-The Polkadot Wiki is licensed under the GPL-3.0 free software license.
+The Polkadot Wiki is licensed under the [GPL-3.0](LICENSE) free software license.
+
+<img src="docs/assets/polkadot-img.png" width="900" height="385"> 
