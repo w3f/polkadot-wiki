@@ -81,19 +81,22 @@ keeping an eye on how the nodes on the network are reacting to a new upgrade.
 ### For [Wallets](build-wallets.md)
 
 Wallets should look out for updates to the transaction lifecycle, such as tx broadcasting. An example
-would be constructing a transaction with a new spec, "n", but broadcasting it with a spec " > n" -
+would be constructing a transaction with a new spec, "n", but broadcasting it with a spec " > n " -
 transactions could be propagated, or even rejected by peers on the network.
 
 ## Monitoring Changes
 
-1. Monitor chain for `democracy.Started` events and log `index` and `blockNumber`.
+Using a Polkadot blockchain explorer, you can monitor the chain for on-chain changes. The following
+steps relate to [subscan](https://polkadot.subscan.io/). 
 
-2. Get `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` from Sidecar to get the referendum info. It should have a status of `Ongoing`. Find ending block number (`end`) and the enactment `delay` (delay).
+> In general, an action has two components: the module (such as `democracy`) and the event (such as `Started`).
 
-3. Execution block number will be `end + delay`.
+Monitor the chain for: 
+1. `democracy(Started)` events and log `index` and `blockNumber`. Get `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` from `Sidecar` to get the referendum info. It should have a status of `Ongoing`. Find the ending block number (`end`) and the enactment `delay` (delay), where the execution block number will be `end + delay`.
 
-4. Monitor chain for `democracy.Passed`, `democracy.NotPassed`, or `democracy.Cancelled` events citing the index. If `Passed`, need to look at `scheduler.Scheduled` event in same block for enactment block.
+2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index. If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for
+the enactment block.
 
-5. Monitor chain for `democracy.PreimageNoted` events with the same hash as the `ReferendumInfoOf(index)` item, may be up to the last block before execution, but will not work if this is missing.
-
-6. Monitor chain for `democracy.Executed` events for actual execution. In the case of a runtime upgrade, there will also be a `system.CodeUpdated` event.
+3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. This may be up to the last block before execution, but it will not work if this is missing.
+   
+4.  `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will also be a `system(CodeUpdated)` event.
