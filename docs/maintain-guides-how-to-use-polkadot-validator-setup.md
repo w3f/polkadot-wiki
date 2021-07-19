@@ -1,5 +1,5 @@
 ---
-id: maintain-guides-how-to-use-polkadot-validator-setup
+id: maintain-guides-polkadot-validator-setup
 title: How to use Polkadot Validator Setup
 sidebar_label: How to use Polkadot Validator Setup
 ---
