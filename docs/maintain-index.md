@@ -44,7 +44,7 @@ guides to set up a node and run the network.
 - [Using systemmd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
   with the Validator node.
 - [Secure Validator](maintain-guides-secure-validator.md) - Best tips and practices for validating.
-- [How to use Polkadot Secure Validator](maintain-guides-how-to-use-polkadot-validator.md) -
+- [How to use Polkadot Validator Setup](maintain-guides-how-to-use-polkadot-validator-setup.md) -
   Walkthrough on how to set up a validator securely.
 - [How to upgrade a Validator Node](maintain-guides-how-to-upgrade.md) - Guide on upgrading your
   validator node.

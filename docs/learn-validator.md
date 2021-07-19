@@ -36,8 +36,8 @@ Validators perform two functions:
 - [How to Upgrade your Validator](maintain-guides-how-to-upgrade.md) - Guide for securely upgrading
   your validator when you want to switch to a different machine or begin running the latest version
   of client code.
-- [How to Use Validator Setup](maintain-guides-how-to-use-polkadot-validator.md) - Guide on how to
-  use Polkadot / Kusama validator setup.
+- [How to Use Validator Setup](maintain-guides-how-to-use-polkadot-validator-setup.md) - Guide on how 
+  to use Polkadot / Kusama validator setup.
 
 ## Other References
 
