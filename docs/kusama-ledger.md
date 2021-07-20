@@ -200,7 +200,7 @@ want to stake using an account stored on a Ledger device.
 ### Removing Expired Democracy Locks
 
 Since Ledger does not support batch transactions, you must issue several extrinsics manually when you
-want remove expired democracy locks on an account stored on a Ledger device.
+want to remove expired democracy locks on an account stored on a Ledger device.
 
 - Go to https://polkadot.js.org/apps/#/accounts. Look at your expired locks and note which referenda
   they were for.
