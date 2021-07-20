@@ -5,7 +5,8 @@ sidebar_label: Hackathon
 ---
 
 As one of our objectives at Web3 Foundation is promoting the [Web3 technology stack][], we would
-like to support any individual or team who wants to organize a hackathon that encourages more developers to understand Polkadot and Substrate in your region or online.
+like to support any individual or team who wants to organize a hackathon that encourages more
+developers to understand Polkadot and Substrate in your region or online.
 
 We are not only providing technical resources for you, but we can have someone from our team give a
 hands-on workshop/presentation about the technology to help participants get started hacking on it
@@ -35,7 +36,9 @@ more quickly.
 ## How do hackathons differ from workshops?
 
 A hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas
-to reality in a short period (few hours - one day). Workshops are aimed at familiarizing developers with the underlying knowledge and tooling about the resources currently available for certain technologies and how they can make use of it.
+to reality in a short period (few hours - one day). Workshops are aimed at familiarizing developers
+with the underlying knowledge and tooling about the resources currently available for certain
+technologies and how they can make use of it.
 
 ## How can you run a hackathon in your city?
 

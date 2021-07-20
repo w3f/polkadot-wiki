@@ -9,8 +9,8 @@ you if you plan on running a validator or being a councilor. Web3 Foundation pro
 service in the Kusama and Polkadot networks that only charges a small fee (0.04 KSM) on Kusama, and
 no fees on Polkadot (although there may be a small fee in the future). However, you will of course
 need to reserve some DOT in your account while you have an identity, no matter which registrar you
-use. For details on the amount necessary to reserve, as well as the identity system as a whole, see the
-[identity](learn-identity.md) page.
+use. For details on the amount necessary to reserve, as well as the identity system as a whole, see
+the [identity](learn-identity.md) page.
 
 > **Note**: The registrar bot will not ask you to send any DOT, and never expose your private keys
 > to anyone!
@@ -25,6 +25,7 @@ Free feel to join the [Polkadot's community](community.md#polkadot) to ask quest
 anything unclear.
 
 ## Setting an On-chain Identity
+
 ### Filling out information
 
 > **Note**: The W3F Registrar currently **does not** support KYC or web verification. Make sure to
@@ -46,28 +47,30 @@ Currently, the registrar **only supports the following fields**:
 ![registrar](assets/registrar/1.jpg)
 
 ---
+
 If you try to register the other fields, such as:
 
 ![registrar](assets/registrar/2.jpg)
 
-You will eventually be asked to update your information,
-as these are not yet supported by the registrar.
+You will eventually be asked to update your information, as these are not yet supported by the
+registrar.
 
 ![registrar](assets/registrar/6.jpg)
 
 ---
+
 ### Invoke transaction to set identity
 
 Once you have filled in the information you would like to store on-chain, click `Set Identity` to
 submit the transaction.
 
 Now you have set the identity information on-chain, but that is not verified yet, so you should see
-a little grey icon beside your name. 
+a little grey icon beside your name.
 
 ![registrar](assets/registrar/3.jpg)
 
-It is the time to interact with the W3F's verification bot by
-submitting the judgment request to the W3F's registrar.
+It is the time to interact with the W3F's verification bot by submitting the judgment request to the
+W3F's registrar.
 
 ## Request Judgement
 
@@ -147,7 +150,6 @@ will do the trick.
 
 After waiting for a few minutes you should receive a challenge similar to the previous two.
 
-
 ![registrar](assets/registrar/12.jpg)
 
 Again, just like how you did in the above. By using your account to sign the "Challenge" data that
@@ -158,7 +160,8 @@ you received on Twitter in the [Sign and Verify](https://polkadot.js.org/apps/#/
 Paste the signed data to the chat and you would receive the verification status after 1 to 2
 minutes.
 
-If everything has been verified successfully, you will see that your account verification status has been marked as "reasonable" with a **green tick icon** on the
+If everything has been verified successfully, you will see that your account verification status has
+been marked as "reasonable" with a **green tick icon** on the
 [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 Congratulations! Your identity should now show as a green "verified" checkmark on Polkadot-JS Apps.

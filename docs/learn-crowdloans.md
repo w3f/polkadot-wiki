@@ -28,18 +28,18 @@ When setting the parameters of a crowdloan campaign, consider the following:
   crowdloan is live during the entire duration of the auction. For example, if an auction starts in
   three days and will last for five days, you may want to set your crowdloan to end in 10 days, or a
   similar timescale. One way of calculating the ending block number is adding
-  `(10 * 60 * 24 * 7) * (x * 6) + y`, &mdash; where `x` is the number of auction periods you want the
-  crowdloan to continue for and `y` is the current block number
+  `(10 * 60 * 24 * 7) * (x * 6) + y`, &mdash; where `x` is the number of auction periods you want
+  the crowdloan to continue for and `y` is the current block number
   (`(Blocks/Min * Hour/Min * Day/Hour * Week/Day) * (x * Week/Period)`).
 - "First period" field refers to the first period you want to bid for. If the current auction
-  encompasses periods `(3, 4, 5, 6)`, your first period can be at least `3`. The last slot must also be
-  within that range.
+  encompasses periods `(3, 4, 5, 6)`, your first period can be at least `3`. The last slot must also
+  be within that range.
 - You can only cancel an ongoing crowdloan if no contributions have been made. Your deposit will be
   returned to you.
 
 Prior to the start of the crowdloan campaign, the owner will upload the parachain data. Once the
-crowdloan is live, __the parachain configuration will be locked__ and it will be what is deployed as the
-parachain's runtime. Of course, once the parachain is running it can always change via runtime
+crowdloan is live, **the parachain configuration will be locked** and it will be what is deployed as
+the parachain's runtime. Of course, once the parachain is running it can always change via runtime
 upgrades (as determined through its own local governance).
 
 ## Suporting a crowdloan campaign
@@ -84,7 +84,3 @@ Here is an exmaple of the crowdloans in play during the very first Kusama auctio
 Furthermore, check out this video on
 [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM) for steps on how to
 access available crowdloans on PolkadotJS apps.
-
-
-
-

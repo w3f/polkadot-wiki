@@ -3,7 +3,9 @@ id: kusama-ledger
 title: Using Ledger Devices
 sidebar_label: Ledger Devices
 ---
+
 <!-- page being updated -->
+
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
 > browsers like Brave and Chrome.
 

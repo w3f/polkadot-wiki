@@ -38,8 +38,8 @@ questions.
 - Knowingly distributing false information about Kusama or other projects.
 - Harassing other individuals or projects.
 
-That said, please note that Kusama is an edgy and meme-friendly network, and community member actions
-shouldn't be taken too seriously - try to assume jest before malice.
+That said, please note that Kusama is an edgy and meme-friendly network, and community member
+actions shouldn't be taken too seriously - try to assume jest before malice.
 
 ## What To Do If You Witness or Are Subject To Unacceptable Behavior
 

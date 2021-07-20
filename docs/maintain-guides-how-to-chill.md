@@ -11,8 +11,8 @@ funds, they can choose to "chill" their involvement and keep their funds staked.
 An account can step back from participating in active staking by clicking "Stop" under the
 `Network > Staking > Account actions` page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by
 calling the `chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to
-chill, it becomes inactive in the next era. The call must be signed by the _controller_
-account, not the _stash_.
+chill, it becomes inactive in the next era. The call must be signed by the _controller_ account, not
+the _stash_.
 
 > Note: If you need a refresher on the different responsibilities of the stash and controller
 > account when staking, take a look at the [accounts][] section in the general staking guide.
@@ -27,8 +27,8 @@ can be the same validators if you prefer, or, a completely new set. Just be awar
 will not persist across chills.
 
 Your nominator will remain bonded when it is chilled. When you are ready to nominate again, you will
-not need to go through the whole process of bonding again, rather, you will issue a new nominate call
-that specifies the new targets to nominate.
+not need to go through the whole process of bonding again, rather, you will issue a new nominate
+call that specifies the new targets to nominate.
 
 ## Chilling as a Validator
 
@@ -57,5 +57,6 @@ nominator under a heading that says "Redenomination required". If your validator
 involuntarily chilled, you will need to request your nominators to re-issue the nominate call in
 order to start nominating you again.
 
-[chill extrinsic]: https://substrate.dev/rustdocs/latest/pallet_staking/pallet/enum.Call.html#variant.chill
+[chill extrinsic]:
+  https://substrate.dev/rustdocs/latest/pallet_staking/pallet/enum.Call.html#variant.chill
 [accounts]: learn-staking.md#accounts

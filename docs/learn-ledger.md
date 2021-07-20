@@ -3,7 +3,9 @@ id: learn-ledger
 title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
 ---
+
 <!-- page being updated -->
+
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
 > browsers like Brave and Chrome.
 
