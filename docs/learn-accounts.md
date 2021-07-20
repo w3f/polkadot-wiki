@@ -68,7 +68,7 @@ rounds of PBKDF2 on the mnemonic. As such, the same mnemonic may generate differ
 If you would like to create and manage several accounts on the network using the same mnemonic seed phrase, you can use derivation paths. We can think of the derived accounts as the child accounts of the root account created using the original mnemonic seed phrase. Many Polkadot key generation tools support hard and soft derivation. For instance, if you intend to create an account to be used on the Polkadot chain, you can derive a **hard key** child account using **//** after the mnemonic phrase.
 
 ```js
-"caution juice atom organ advance problem want pledge someone senior holiday very//polkadot//0"
+"caution juice atom organ advance problem want pledge someone senior holiday very//0"
 ```
 
 and a **soft key** child account using **/** after the mnemonic phrase
