@@ -81,6 +81,14 @@ module.exports = {
               existingPath.replace("/docs/", "/docs/ru-RU/"),
             ];
           }
+          else if (existingPath.startsWith("/en/")) {
+            return [
+              existingPath.replace('/docs/getting-started/', "/en/"),
+              existingPath.replace('/docs/getting-started/', "/en/latest/"),
+            ];
+
+          }
+
         },
       },
     ],
