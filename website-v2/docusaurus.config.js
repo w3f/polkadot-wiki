@@ -73,6 +73,12 @@ module.exports = {
     [
       "@docusaurus/plugin-client-redirects",
       {
+        redirects: [
+          {
+            to: '/',
+            from: '/en/latest',
+          },
+        ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
             return [
@@ -80,13 +86,6 @@ module.exports = {
               existingPath.replace("/docs/", "/docs/zh-CN/"),
               existingPath.replace("/docs/", "/docs/ru-RU/"),
             ];
-          }
-          else if (existingPath.startsWith("/en/")) {
-            return [
-              existingPath.replace('/docs/getting-started/', "/en/"),
-              existingPath.replace('/docs/getting-started/', "/en/latest/"),
-            ];
-
           }
 
         },
