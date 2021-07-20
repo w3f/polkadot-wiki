@@ -208,7 +208,7 @@ want to remove expired democracy locks on an account stored on a Ledger device.
 - For each referendum with an expired lock, issue a "democracy.removeVote(X)" extrinsic, where X =
   the referendum you voted on and has an expired lock. Make sure you do it from the account with the
   expired locks - you can't do it from another account.
-- Once you have removed all of the votes, issue a "democracy.unlock(ACCOUNT)" extrinsic, where
+- Once you have removed all of the votes, issue a `democracy.unlock(ACCOUNT)` extrinsic, where
   ACCOUNT is the account you just removed the votes from.
 - Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
 
