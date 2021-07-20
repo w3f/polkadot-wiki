@@ -81,6 +81,7 @@ module.exports = {
               existingPath.replace("/docs/", "/docs/ru-RU/"),
             ];
           }
+          //placeholder for redirects to fix polkadot.network link issues
         },
       },
     ],
