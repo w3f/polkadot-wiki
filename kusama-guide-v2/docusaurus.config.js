@@ -12,7 +12,7 @@ module.exports = {
   tagline: "One-stop-shop for Kusama information.",
   url: "https://guide.kusama.network",
   baseUrl: "/",
-  projectName: isPub ? "kusama-guide-hosting" : "",
+  projectName: isPub ? "kusama-guide-staging" : "",
   organizationName: "w3f",
   i18n,
   scripts: [
