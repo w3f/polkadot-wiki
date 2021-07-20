@@ -76,7 +76,9 @@ module.exports = {
         redirects: [
           {
             to: '/',
+
             from: ['/en/latest','/en/'],
+
           },
         ],
         createRedirects: function (existingPath) {
