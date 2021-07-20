@@ -74,7 +74,7 @@ If you would like to create and manage several accounts on the network using the
 and a **soft key** child account using **/** after the mnemonic phrase
 
 ```js
-"caution juice atom organ advance problem want pledge someone senior holiday very/polkadot/0"
+"caution juice atom organ advance problem want pledge someone senior holiday very/0"
 ```
 If you would like to create another account for usage on the Polkadot chain, you can change the number at the end of the string above from 0 to 1. You can use any words or numbers in the derivation path as long as they make sense to you. A soft derivation allows you to "go backwards" to figure out previous private keys IF you know the second private key, and it's possible to determine that different accounts generated from the same seed are linked to that seed. A hard derivation path does not allow either of these - if you know a derived private key, it's not feasible to figure out the initial private key of the root address, and it's impossible to prove that the first account is linked with the second. Both of these derivation methods have their use cases, given the private keys for all the derived accounts are fully secure. If it is likely that you may use a derived account in a less secure setting, it is recommended to generate the account using a hard derivation path.
 
