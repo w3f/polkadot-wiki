@@ -91,7 +91,7 @@ https://github.com/paritytech/smoldot#wasm-light-node
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: 
   {{ polkadot: `./polkadot --name "Your Node Name Here"` :polkadot }}
-  {{ kusama: `./polkadot --name "Your Node Name Here"` :kusama }}
+  {{ kusama: `./polkadot --name "Your Node Name Here" --chain kusama` :kusama }}
 - Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ### Fast Install Instructions (Linux)
@@ -117,7 +117,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
 - Run the following: `sudo chmod +x polkadot`
 - Run the following: 
   {{ polkadot: `./polkadot --name "Your Node Name Here"` :polkadot }}
-  {{ kusama: `./polkadot --name "Your Node Name Here"` :kusama }}
+  {{ kusama: `./polkadot --name "Your Node Name Here" --chain kusama` :kusama }}
 - Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ## Get Substrate
