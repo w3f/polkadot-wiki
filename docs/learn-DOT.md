@@ -24,9 +24,9 @@ is equal to 1e10 Planck.
 | Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
 
-> Note: This changed at block #1_248_328. Previously, DOT was denominated as equal to 1e12 Planck,
+> Note: This changed at block #1*248_328. Previously, DOT was denominated as equal to 1e12 Planck,
 > just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".
-> See [Redenomination of DOT](redenomination.md) for more details._
+> See [Redenomination of DOT](redenomination.md) for more details.*
 
 ### Kusama
 
@@ -65,19 +65,19 @@ participate in governance, as well as their rights and responsibilities, see the
 
 ### DOT for Consensus
 
-DOT will be used to facilitate the consensus mechanism that underpins Polkadot. For the
-platform to function and allow for valid transactions to be carried out across parachains, Polkadot
-will rely on holders of DOT to play active roles. Participants will put their DOT at risk (via
-staking) to perform these functions. The staking of DOT acts as a disincentive for malicious
-participants who will be punished by the network by getting their DOT slashed. The DOT required to
-participate in the network will vary depending on the activity that is being performed, the duration
-the DOT will be staked for, and the total number of DOT staked.
+DOT will be used to facilitate the consensus mechanism that underpins Polkadot. For the platform to
+function and allow for valid transactions to be carried out across parachains, Polkadot will rely on
+holders of DOT to play active roles. Participants will put their DOT at risk (via staking) to
+perform these functions. The staking of DOT acts as a disincentive for malicious participants who
+will be punished by the network by getting their DOT slashed. The DOT required to participate in the
+network will vary depending on the activity that is being performed, the duration the DOT will be
+staked for, and the total number of DOT staked.
 
 ### DOT for Parachain Slot Acquisition
 
 DOT will have the ability to be locked for a duration in order to secure a parachain slot in the
-network. The DOT will be reserved during the slot lease and will be released back to the account that
-reserved them after the duration of the lease has elapsed and the parachain is removed. You can
+network. The DOT will be reserved during the slot lease and will be released back to the account
+that reserved them after the duration of the lease has elapsed and the parachain is removed. You can
 learn more about this aspect by reading about the [auctions](learn-auction.md) that govern parachain
 slots.
 

@@ -90,7 +90,6 @@ of your browser.
 
 ![plugin-02](assets/accounts/polkadot_plugin_js_02.jpg)
 
-
 ### Create Account
 
 Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You
@@ -167,9 +166,9 @@ For detailed build and usage instructions of subkey, please see
 > Polkadot{.js} browser extension. Learn more about account backup and restoration
 > [here](learn-account-restore.md).
 
-Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least secure
-way of generating an account. It should only be used if all of the other methods are not feasible in
-your situation.
+Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least
+secure way of generating an account. It should only be used if all of the other methods are not
+feasible in your situation.
 
 ### Go to Polkadot-JS Apps
 
@@ -254,9 +253,9 @@ For a more in-depth introduction into multi-signature accounts on Polkadot, plea
 
 Parity Signer is a secure way of storing your DOT on an air-gapped device. It is highly recommended
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it. The device needs to be offline and only you should be viewing the device screen.
-If you have any communications methods turned on, you will see an "unshielded" icon
-in red in the top-right corner that indicates your connection may not be secure.
+installing it. The device needs to be offline and only you should be viewing the device screen. If
+you have any communications methods turned on, you will see an "unshielded" icon in red in the
+top-right corner that indicates your connection may not be secure.
 
 ### Create Account
 
@@ -316,7 +315,6 @@ computer has a very small and limited scope for interacting with the Parity Sign
 continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
-
 
 ## Ledger Hardware Wallet
 
