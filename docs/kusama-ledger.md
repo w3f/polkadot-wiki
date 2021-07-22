@@ -225,6 +225,7 @@ If you need support please send an email to [support@kusama.network](mailto:supp
 or visit [our Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
+[repo by Zondax]: https://github.com/Zondax/ledger-polkadot#democracy
 [apps]: https://kusama.dotapps.io
 [prerelease instructions]: https://github.com/Zondax/ledger-kusama#download-and-install
 [releases page]: https://github.com/Zondax/ledger-kusama/releases

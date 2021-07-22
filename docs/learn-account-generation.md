@@ -6,7 +6,7 @@ description: Step-by-step guides on generating a Polkadot account.
 ---
 
 An address is the public part of a Polkadot account. The private part is the key used to access this
-address. The public and private part together make up a Polkadot account.
+address. The public and private parts together make up a Polkadot account.
 
 There are several ways to generate a Polkadot account:
 
@@ -28,7 +28,7 @@ anyone they will have full access to your account, including all of your funds. 
 a target for hackers and others with bad intentions - see also
 [How to Recognize Scams](learn-scams.md).
 
-On this page we recommend a variety of account generation methods that have various convienience and
+On this page, we recommend a variety of account generation methods that have various convenience and
 security tradeoffs. Please review this page carefully before making your account so that you
 understand the risks of the account generation method you choose and how to properly mitigate them
 in order to keep your funds safe.
@@ -49,15 +49,15 @@ by storing in a sealed plastic bag to prevent water damage, storing it in a fire
 it in metal, etc.) It is recommended that you store multiple copies of the seed in geographically
 separate locations (e.g., one in your home safe and one in a safety deposit box at your bank).
 
-You should definitely not store your seed on any kind of computer that has or may have access to the
-internet in the future.
+You should 
+**not store your seed on any kind of computer that has or may have access to the internet in the future.**
 
 ### Storing your account's JSON file
 
 The JSON file is encrypted with a password, which means you can import it into any wallet which
 supports JSON imports, but to then use it, you need the password. You don't have to be as careful
 with your JSON file's storage as you would with your seed (i.e. it can be on a USB drive near you),
-but remember that in this case your account is only as secure as the password you used to encrypt
+but remember that in this case, your account is only as secure as the password you used to encrypt
 it. Do not use easy to guess or hard to remember passwords. It is good practice to use a
 [mnemonic password of four to five words](https://xkcd.com/936/). These are nearly impossible for
 computers to guess due to the number of combinations possible, but much easier for humans to
@@ -69,17 +69,17 @@ The Polkadot{.js} plugin provides a reasonable balance of security and usability
 separate local mechanism to generate your address and interact with Polkadot.
 
 This method involves installing the Polkadot{.js} plugin and using it as a “virtual vault," separate
-from your browser, to store your private keys. It also allows signing of transactions and similar
+from your browser, to store your private keys. It also allows the signing of transactions and similar
 functionality.
 
-It is still running on the same computer you use to connected to the internet with and thus is less
+It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
 
 ### Install the Browser Plugin
 
 The browser plugin is available for both
 [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
-(and Chromium based browsers like Brave) and
+(and Chromium-based browsers like Brave) and
 [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension).
 
 If you would like to know more or review the code of the plugin yourself, you can visit the
@@ -93,7 +93,7 @@ of your browser.
 ### Create Account
 
 Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You
-will see a browser popup not unlike the one below.
+will see a browser popup, not unlike the one below.
 
 ![Initial PolkadotJS popup](assets/accounts/polkadot_plugin_js_new_01.png)
 
@@ -188,7 +188,7 @@ Click on the "Add Account" button. You should see a pop-up similar to the proces
 using the [Polkadot JS Extension method](#polkadotjs-browser-plugin) above. Follow the same
 instructions and remember to [store your seed safely](#storing-your-key-safely)!
 
-### Create and Back Up Account
+### Create and Back-Up Account
 
 Click “Save” and your account will be created. It will also generate a
 [backup JSON file](#storing-your-accounts-json-file) that you should safely store, ideally on a USB
@@ -205,7 +205,7 @@ multi-sig accounts). For a full explanation, please see the
 
 On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter
 the threshold and add signatories. The threshold must be less than or equal to the number of
-signatories. The threshold indicates how many members must be in agreement for an extrinsic
+signatories. The threshold indicates how many members must agree for an extrinsic
 submission to be successful. Click `Create` when done.
 
 ![Multi-sig account creation](assets/accounts/create-multisig.png)
@@ -234,7 +234,7 @@ second signatory must **repeat the call in full** in order to sign it. In other 
 - because the threshold is 2/3, Charlie can now finalize either or both of these by repeating the
   desired transaction.
 
-Other calls work exactly the same - if a multi-sig wants to become a Council member, the candidacy
+Other calls work the same - if a multi-sig wants to become a Council member, the candidacy
 request has to come from the multi-sig, but be signed (re-requested) from each signatory until the
 threshold is reached.
 
@@ -244,9 +244,9 @@ communication lines on-chain.
 > The bigger the multisig, the more of a deposit an account needs to put down when initiating a
 > multi-sig call. This is to prevent chain storage spam with pending but never-resolved multi-sig
 > transactions. Once a call is resolved (canceled or executed) the deposit is returned to the
-> initiator. The deposit is not taken from the multi-sig's balance, but from the initiator.
+> initiator. The deposit is not taken from the multi-sig's balance but from the initiator.
 
-For a more in-depth introduction into multi signature accounts on Polkadot, please see
+For a more in-depth introduction into multi-signature accounts on Polkadot, please see
 [the accounts page section on Multi-sigs](learn-accounts.md#multi-signature-accounts).
 
 ## Parity Signer
@@ -285,7 +285,7 @@ You should write down this recovery phrase on paper and
 
 After confirming that you have backed up your seed, a new textbox will appear in which you can set a
 PIN. The PIN code should contain at least 6 digits. If the PIN codes do not match, it will not allow
-you to create an account. The PIN code will be used for when signing any transaction, or to protect
+you to create an account. The PIN code will be used when signing any transaction, or to protect
 sensitive operations such as deleting an identity or revealing the recovery phrase.
 
 Note that if someone knows the 12/24 words in your recovery phrase, they will still have control
@@ -301,7 +301,7 @@ identity.
 
 ![Parity Signer Create Account 5](assets/accounts/ps-create-5.jpg)
 
-There is currently no way to copy your address from Parity signer in plain-text in order to send it
+There is currently no way to copy your address from Parity signer in plain text in order to send it
 via text or email. You must use the QR method.
 
 ### Your Address
@@ -311,7 +311,7 @@ to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-c
 and click "Add via QR", and following the instructions to add the account. An account created this
 way will always require you to sign messages with your Parity Signer device. It will do this only by
 scanning and displaying QR codes, leaving even someone with total control of your internet-connected
-computer a very small and limited scope for interacting with the Parity Signer device, which can
+computer has a very small and limited scope for interacting with the Parity Signer device, which can
 continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
@@ -324,7 +324,7 @@ the instructions on our [Ledger hardware wallet guide page](learn-ledger.md).
 ## Vanity Generator
 
 The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
-that lets you generate addresses which contain a specific substring.
+that lets you generate addresses that contain a specific substring.
 
 ![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
 
