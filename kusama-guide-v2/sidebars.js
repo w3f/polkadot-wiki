@@ -2,7 +2,7 @@ module.exports = {
   docs: [
     {
       type: "category",
-      label: "Kumasa",
+      label: "Kusama",
       items: [
         "kusama-index",
         {
