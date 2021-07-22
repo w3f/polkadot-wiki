@@ -55,7 +55,7 @@ https://github.com/paritytech/smoldot#wasm-light-node
 
 ### Fast Install Instructions (Mac)
 
-> Not recommended if you're a validator. Please see [validator setup](maintain-guides-secure-validator.md)
+> Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator.md)
 
 - Type terminal in the ios searchbar/searchlight to open the 'terminal' application
 - Install Homebrew within the terminal by running:
@@ -70,14 +70,16 @@ https://github.com/paritytech/smoldot#wasm-light-node
   ./scripts/init.sh
   cargo build --release
   ```
-- Run the following command to start your node: `./target/release/polkadot --name "My node's name"`
+- Run the following command to start your node: 
+  {{ polkadot: `./target/release/polkadot --name "My node's name"` :polkadot }}
+  {{ kusama: `./target/release/polkadot --name "My node's name" --chain kusama` :kusama }}
 - Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ### Fast Install Instructions (Windows)
 
 > This works only on Windows Pro with virtualization enabled.
 
-> Not recommended if you're a validator. Please see [validator setup](maintain-guides-secure-validator.md)
+> Not recommended if you're a validator. Please see [secure validator setup](maintain-guides-secure-validator.md)
 
 - Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Ubuntu (same webpage): https://docs.microsoft.com/en-us/windows/wsl/install-win10
@@ -87,7 +89,9 @@ https://github.com/paritytech/smoldot#wasm-light-node
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
-- Run the following: `./polkadot --name "Your Node Name Here"`
+- Run the following: 
+  {{ polkadot: `./polkadot --name "Your Node Name Here"` :polkadot }}
+  {{ kusama: `./polkadot --name "Your Node Name Here" --chain kusama` :kusama }}
 - Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ### Fast Install Instructions (Linux)
@@ -111,7 +115,9 @@ your system. You will either need to compile the [source code yourself](#clone-a
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
   `curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot`
 - Run the following: `sudo chmod +x polkadot`
-- Run the following: `./polkadot --name "Your Node Name Here"`
+- Run the following: 
+  {{ polkadot: `./polkadot --name "Your Node Name Here"` :polkadot }}
+  {{ kusama: `./polkadot --name "Your Node Name Here" --chain kusama` :kusama }}
 - Find your node at https://telemetry.polkadot.io/#list/Polkadot
 
 ## Get Substrate
@@ -154,9 +160,16 @@ cargo build --release
 
 The built binary will be in the `target/release` folder, called `polkadot`.
 
+{{ polkadot:
 ```bash
 ./target/release/polkadot --name "My node's name"
 ```
+:polkadot }}
+{{ kusama:
+```bash
+./target/release/polkadot --name "My node's name" --chain kusama
+```
+:kusama }}
 
 Use the `--help` flag to find out which flags you can use when running the node. For example, if
 [connecting to your node remotely](maintain-wss.md), you'll probably want to use `--ws-external` and
@@ -174,9 +187,16 @@ When running as a simple sync node (above), only the state of the past 256 block
 validating, it defaults to [archive mode](#types-of-nodes). To keep the full state use the
 `--pruning` flag:
 
+{{ polkadot:
 ```bash
 ./target/release/polkadot --name "My node's name" --pruning archive
 ```
+:polkadot }}
+{{ kusama:
+```bash
+./target/release/polkadot --name "My node's name" --pruning archive --chain kusama
+```
+:kusama }}
 
 It is possible to almost quadruple synchronization speed by using an additional flag:
 `--wasm-execution Compiled`. Note that this uses much more CPU and RAM, so it should be turned off
