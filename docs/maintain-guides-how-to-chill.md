@@ -57,5 +57,9 @@ nominator under a heading that says "Redenomination required". If your validator
 involuntarily chilled, you will need to request your nominators to re-issue the nominate call in
 order to start nominating you again.
 
+## Chill Other
+
+(placeholder for content)
+
 [chill extrinsic]: https://substrate.dev/rustdocs/latest/pallet_staking/pallet/enum.Call.html#variant.chill
 [accounts]: learn-staking.md#accounts
