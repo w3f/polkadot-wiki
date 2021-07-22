@@ -59,7 +59,7 @@ order to start nominating you again.
 
 ## Chill Other
 
-(placeholder for content)
+Due to constraints in the runtime, an unbounded and unlimited number of nominators and validators is just not possible. Multiple checks are incorporated to keep the size of staking system manageable, like mandating minimum active bond requirements for both nominators and validators. When these requirements are modified through on-chain governance, they can be enforced only on the accounts that newly call `nominate` or `validate` after the update. The changes to the parameters would not automatically chill the active accounts on chain that do not meet the bonding requirements. `chill_other` extrinsic was incorporated to keep things backwards compatible and safe. `chill_other` extrinsic is permissionless and any third party user can target it on an account where the minimum active bond is not satisfied, and chill that account. 
 
 [chill extrinsic]: https://substrate.dev/rustdocs/latest/pallet_staking/pallet/enum.Call.html#variant.chill
 [accounts]: learn-staking.md#accounts

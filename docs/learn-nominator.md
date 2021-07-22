@@ -53,8 +53,8 @@ the fact that the solution set must fit in a single block, in some eras, a minim
 will be required to nominate with in order to receive staking rewards.
 
 This parameter can be updated via on-chain governance and the most recent and up to date version can
-be found on [chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query -
-staking - minimumNominatorBond)
+be found on [chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query >
+staking > minimumNominatorBond**)
 
 ### Oversubscribed Validators
 
