@@ -73,9 +73,9 @@ this account was initially created.
 
 After this, delete the generated mnemonic phrase (seed words) and replace them with your _existing
 seed words_. When you replace the generated mnemonic seed with your existing one, you are not
-creating a new account, rather adding that account onto the Polkadot-JS UI. Any account
-using the same seed words will have control over that account on-chain. This is why it is so
-important to keep your seed words secret and safe.
+creating a new account, rather adding that account onto the Polkadot-JS UI. Any account using the
+same seed words will have control over that account on-chain. This is why it is so important to keep
+your seed words secret and safe.
 
 ![restore-using-json](assets/accounts/polkadot-js-existing-json.png)
 

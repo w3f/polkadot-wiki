@@ -169,8 +169,8 @@ mechanism.
 
 ## Development Framework
 
-Both Cosmos and Polkadot are designed such that each chain has its STF and both provide support
-for smart contracts in both Wasm and the Ethereum Virtual Machine (EVM). Polkadot provides an
+Both Cosmos and Polkadot are designed such that each chain has its STF and both provide support for
+smart contracts in both Wasm and the Ethereum Virtual Machine (EVM). Polkadot provides an
 ahead-of-time Wasm compiler as well as an interpreter (Wasmi) for execution, while Cosmos only
 executes smart contracts in an interpreter.
 
