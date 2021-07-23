@@ -164,7 +164,7 @@ module.exports = {
             "maintain-guides-validator-payout",
             "maintain-guides-how-to-systemd",
             "maintain-guides-secure-validator",
-            "maintain-guides-how-to-use-polkadot-validator",
+            "maintain-guides-how-to-use-polkadot-validator-setup",
             "maintain-guides-how-to-upgrade",
             "maintain-guides-how-to-monitor-your-node",
             "maintain-guides-how-to-chill",

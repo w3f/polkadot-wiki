@@ -5,23 +5,27 @@ sidebar_label: Rococo Parachain Test Network
 ---
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing
-parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
-send transfers and messages between parachains and the Relay Chain. Every message is sent to the
-Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs four test
-system parachains (Statemint, Tick, Trick, and Track), as well as several externally developed
+parachains. Unlike other testnets, Rococo allows parachains to interact with the [Relay Chain](glossary.md##relay-chain) 
+rather than running in isolation. Rococo utilizes [Cumulus](build-cumulus.md) and HRMP (Horizontal Relay-routed Message 
+Passing), which is also known as [XCMP-lite](learn-crosschain.md##xcmp-lite(hrmp)), in order to send transfers and messages 
+between parachains and the Relay Chain.
+
+Messages are sent to the Relay Chain -> then from the Relay Chain to the desired parachain. Rococo 
+currently runs three test system parachains: Tick, Trick, and Track, as well as several externally developed 
 parachains.
 
 ## What Parachains are on Rococo Now?
 
-You can see the list of included parachains
-[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains). A list of
-proposed parachains is available
-[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
+You can view the list of included parachains on
+[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains), 
+and a list of
+[proposed parachains](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
 
 ## Obtaining ROC
 
-ROC are available in the [Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org)
-channel on Matrix. To receive ROC tokens, use the command:
+ROC is the native testnet token on the Rococo testnet, and are available in the 
+[Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org) channel on Matrix. 
+To receive ROC tokens, send the following command on the channel:
 
 ```
 !drip YOUR_ROCOCO_ADDRESS
@@ -34,6 +38,7 @@ parachains.
 
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created a [cumulus parachain workshop](https://substrate.dev/cumulus-workshop/) to show you how.
+
 Get stuck or need support along the way? Join the
 [Rococo matrix chat channel](https://matrix.to/#/#rococo:matrix.parity.io) and connect with other
 builders there.
@@ -41,7 +46,7 @@ builders there.
 ## How to connect to a Parachain
 
 If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
-you may do so by clicking on the network selection at the top left hand corner of the navigation and
+you may do so by clicking on the network selection at the top-left hand corner of the navigation and
 selecting any parachain of choice. For the purpose of these following examples, we will be using the
 Rococo testnet "Custom Node" underneath "Development", following the
 [parachain workshop](https://substrate.dev/cumulus-workshop/).
@@ -85,11 +90,11 @@ another parachain.
 
 ### Lateral Transfers
 
-This type of transfer is only possible with at least two different registered parachains. In true
+Lateral transfers are only possible with at least two different registered parachains. In true
 XCMP, lateral transfers would allow for messages to be sent directly from one parachain to another.
 However, this is not yet implemented, so the Relay Chain is helping us deliver messages for the time
 being. Lateral transfers work through the depository model, which means that in order to transfer
-tokens from chain 200 to chain 300, there must already be tokens owned by chain 200 deposited on
+tokens from chain 200 to chain 300, tokens must already be owned by chain 200 deposited on
 chain 300. Lateral transfers are called HRMP, Horizontal Relay-Chain Message Passing.
 
 Before we can actually send funds from one parachain to another, we must ensure that the chain's

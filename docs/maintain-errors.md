@@ -3,7 +3,9 @@ id: maintain-errors
 title: Errors and How to Resolve Them
 sidebar_label: Resolving Errors
 ---
+
 <!-- no updates -->
+
 Errors in Substrate-based chains are usually accompanied by descriptive messages. However, to read
 these messages, a tool parsing the blockchain data needs to request _chain metadata_ from a node.
 That metadata explains how to read the messages. One such tool with a built-in parser for chain
