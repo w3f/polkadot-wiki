@@ -3,7 +3,9 @@ id: build-tools-index
 title: Tool Index
 sidebar_label: Tool Index
 ---
+
 <!-- Page being reformatted -->
+
 Here we provide a list of tools available for your development needs. They are sorted by context. If
 you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
 developers, feel free to [add it in](contributing).
@@ -17,7 +19,7 @@ developers, feel free to [add it in](contributing).
   chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
-- [DotScanner](https://dotscanner.com) - Polkadot Blockchain explorer.
+- [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain explorer.
 
 ## Wallets
 

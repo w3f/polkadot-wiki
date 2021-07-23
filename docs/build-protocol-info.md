@@ -5,6 +5,7 @@ sidebar_label: Polkadot Protocol
 ---
 
 <!-- page in the process of being updated -->
+
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
 specific to Polkadot, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.
@@ -224,8 +225,8 @@ transaction data using the
 
 ## Runtime Upgrades
 
-Polkadot allows [runtime upgrades](learn-runtime-upgrades.md) without a hard fork. The runtime 
-is a Wasm binary stored on-chain and can be updated using your chain’s governance mechanism.
+Polkadot allows [runtime upgrades](learn-runtime-upgrades.md) without a hard fork. The runtime is a
+Wasm binary stored on-chain and can be updated using your chain’s governance mechanism.
 
 ## Smart Contracts
 

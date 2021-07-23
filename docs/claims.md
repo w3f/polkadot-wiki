@@ -51,7 +51,9 @@ patches.
 You will need a Polkadot account to claim your DOT. Please follow the instructions on the [account
 generation][] page for generating a new Polkadot account.
 
-You can use the [claims guide](https://claims.polkadot.network/) to claim DOT that were purchased in the form of DOT Allocation Indicators on Ethereum before June 30, 2020. These steps are broken down in the remaining sections of this page.
+You can use the [claims guide](https://claims.polkadot.network/) to claim DOT that were purchased in
+the form of DOT Allocation Indicators on Ethereum before June 30, 2020. These steps are broken down
+in the remaining sections of this page.
 
 #### Claiming your DOT with MyCrypto
 

@@ -3,7 +3,9 @@ id: kusama-community
 title: Kusama Community
 sidebar_label: Community
 ---
+
 <!-- no changes -->
+
 The following is a list of official chats, forums, and social channels for the Kusama community.
 Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without prior
 public contact and anyone doing so is likely trying to scam you.

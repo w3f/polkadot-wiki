@@ -13,16 +13,26 @@ transactions would allow the block construction algorithm to process only a limi
 and ensure that the network maintains a constant block time. If all rewards were sent out in one
 block, this could cause serious issues with the stability of the network.
 
-Simple payouts require one transaction per validator, per [era](glossary.md##era), to claim rewards. 
-The reason Polkadot requires this is to avoid an attack where someone has several thousand accounts nominating 
-a single validator. The major cost in reward distribution is mutating the accounts in storage, and Polkadot
-cannot pay out several thousand accounts in a single transaction.
+Simple payouts require one transaction per validator, per [era](glossary.md##era), to claim rewards.
+The reason Polkadot requires this is to avoid an attack where someone has several thousand accounts
+nominating a single validator. The major cost in reward distribution is mutating the accounts in
+storage, and Polkadot cannot pay out several thousand accounts in a single transaction.
 
 ## Claiming Rewards
 
-Polkadot stores up to 84 eras of reward info like maps of era number to validator points,
-inflationary rewards, and nomination exposures. Rewards will not be claimable more than 84 eras
-after they were earned. This means that all rewards must be claimed within 84 eras.
+Polkadot stores the last 84 eras of reward information (e.g. maps of era number to validator points,
+staking rewards, nomination exposure, etc.). Rewards will not be claimable more than 84 eras after
+they were earned. This means that all rewards must be claimed within a maximum of 84 eras, although
+under certain circumstances (described below) this may be as low as 28 eras.
+
+If a validator kills their stash, any remaining rewards will no longer be claimable. Before doing
+this, however, they would need to first stop validating and then unbond the funds in their stash,
+which takes 28 eras. If a validator were to immediately chill and start unbonding after rewards are
+calculated, and nobody issued a payout for that era from that validator in the next 28 eras, the
+reward would no longer be claimable.
+
+> In order be absolutely sure that staking rewards can be claimed, users should trigger a payout
+> before 28 eras have passed.
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
 fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will

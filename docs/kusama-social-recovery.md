@@ -4,14 +4,13 @@ title: Social Recovery
 sidebar_label: Account Recovery
 ---
 
-Managing an account is not an easy task. Many people have lost their private keys due to improper key
-management over the past few years. Kusama provides a method that allows users to recover their
+Managing an account is not an easy task. Many people have lost their private keys due to improper
+key management over the past few years. Kusama provides a method that allows users to recover their
 accounts by setting up a social recovery. It is an M-of-N recovery tool that is based on the
 multi-signature wallet to get back access of your lost account.
 
 > Note: There is no way to get back your private key by using this method. This is just a way of
-> performing transactions on behalf of the lost account, so you can think of it as a proxy
-> instead.
+> performing transactions on behalf of the lost account, so you can think of it as a proxy instead.
 
 In this guide, you will learn how to create a recoverable account, how to recover it, and what you
 need to be aware of when using it.
@@ -28,8 +27,8 @@ approve the recovery process in order to recover your account.
 > Note: If you are recovering an account, ensure that your network is set to Kusama. You can do this
 > by selecting the network from the top right corner in the Polkadot-JS UI.
 
-First, go to [Polkadot-JS Apps -> Accounts -> Accounts](https://polkadot.js.org/apps/#/accounts) page
-that shows all available accounts on your browser's local storage and Polkadot-JS extension. To
+First, go to [Polkadot-JS Apps -> Accounts -> Accounts](https://polkadot.js.org/apps/#/accounts)
+page that shows all available accounts on your browser's local storage and Polkadot-JS extension. To
 create a recoverable account, make sure that you have some KSMs to pay for the transaction fees. You
 will also need some for the reserve required by the account recovery setup.
 
@@ -75,12 +74,12 @@ The above diagram shows the whole process of recovering an account.
 > Note: Ensure that your new account has enough KSM to pay for the transaction fees and the amount
 > that is used for reserve when doing the recovery.
 
-Navigate to the menu that is located beside the send button in the row of your new account and
-click the "Initiate recover for another" option.
+Navigate to the menu that is located beside the send button in the row of your new account and click
+the "Initiate recover for another" option.
 
 ![kusama accounts initial recoverable](assets/kusama/kusama_make_recoverable.png)
 
-Then input the address you would like to recover in the "recover this account" field and click 
+Then input the address you would like to recover in the "recover this account" field and click
 "Start recovery".
 
 ![kusama accounts initial recoverable2](assets/kusama/kusama_make_account_initial.png)
