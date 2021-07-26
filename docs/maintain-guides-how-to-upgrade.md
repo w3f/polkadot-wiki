@@ -41,11 +41,10 @@ one as "Validator B."
 
 ### Session `N`
 
-1. Start a second node and connect it to your sentry nodes. Once it is synced, use the `--validator`
-   flag. This is "Validator B."
-1. Generate Session keys in Validator B.
-1. Submit a `set_key` extrinsic from your Controller account with your new Session keys.
-1. Take note of the Session that this extrinsic was executed in.
+1. Start a second node. Once it is synced, use the `--validator` flag. This is "Validator B."
+2. Generate Session keys in Validator B.
+3. Submit a `set_key` extrinsic from your Controller account with your new Session keys.
+4. Take note of the Session that this extrinsic was executed in.
 
 **It is imperative that your Validator A keep running in this Session.** `set_key` only takes effect
 in the next Session.
@@ -57,11 +56,11 @@ bottom.
 
 1. Stop Validator A.
 1. Perform your system or client upgrade.
-1. Start Validator A, sync the database, and connect it to your sentry nodes.
-1. Generate new Session keys in Validator A.
-1. Submit a `set_key` extrinsic from your Controller account with your new Session keys for
+2. Start Validator A and sync the database.
+3. Generate new Session keys in Validator A.
+4. Submit a `set_key` extrinsic from your Controller account with your new Session keys for
    Validator A.
-1. Take note of the Session that this extrinsic was executed in.
+5. Take note of the Session that this extrinsic was executed in.
 
 **Again, it is imperative that Validator B keep running until the next Session.**
 
