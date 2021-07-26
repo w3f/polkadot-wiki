@@ -94,6 +94,7 @@ module.exports = {
             "learn-comparisons",
           ],
         },
+        "learn-video-tutorials",
       ],
     },
     {
