@@ -77,13 +77,11 @@ machines.
 
 ### Step Two: Generate the SSH keys
 
-We will use [SSH][], a remote shell tool, to access our validator and public sentry nodes. You will
-first use the `ssh-keygen` command to generate two keys, one for your validator and one for the
-sentry nodes.
+We will use [SSH][], a remote shell tool, to access our validator. You will first use the 
+`ssh-keygen` command to generate a key for your validator..
 
 ```zsh
 $ ssh-keygen -m pem -f id_rsa_validator
-$ ssh-keygen -m pem -f id_rsa_public
 ```
 
 Be sure to add these keys to your SSH agent. First make sure your SSH agent is evaluated, then add
@@ -92,7 +90,6 @@ the keys to them.
 ```zsh
 $ eval $(ssh-agent)
 $ ssh-add id_rsa_validator
-$ ssh-add id_rsa_public
 ```
 
 For this tutorial we will not set a passphrase for the SSH key, although usually that would be
