@@ -76,6 +76,17 @@ with anonymous proxies; once you remove the proxy relationship, the account will
 
 ![anonymous proxy](assets/proxy_anonymous_diagram.png)
 
+### Time Delayed Proxies
+
+We can add an additional layer of security to proxies by giving them a delay time. The delay will be
+quantified in number of blocks (blockNumber). Polkadot and Kusama both have
+{{ block_target_in_seconds }} second blocks, hence a delay value of 10 will mean 10 blocks which
+will equal 1 minute of delay. The proxy will announce it's intended action and wait for the number
+of blocks defined in the delay time before executing it. The proxy will include the hash of the
+intended function call in the announcement. Within this time window, the intended action may be
+cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
+actions can be noticed and reverted within a delay period.
+
 ## Why use a Proxy?
 
 Proxies are great to use for specific purposes because they add in a layer of security. Rather than
@@ -117,6 +128,14 @@ For anonymous proxies, a different function will need to be called, the
 like to set up if you choose, as well as the index.
 
 ![proxy generation](assets/polkadot_anon_proxy.png)
+
+### Using Time Delayed Proxies
+
+When creating a proxy through the PolkadotJS application, we are provided a delay field. In this
+example we are creating a proxy with a delay value of 100, which means 100 blocks. 100 \* 6(minutes)
+= 600 minutes, or 10 hours.
+
+![creating a time delayed proxy](assets/time_delay_proxy_screenshot.png)
 
 ### Another way to create Proxies
 
