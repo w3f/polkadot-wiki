@@ -79,14 +79,14 @@ parachain state data corresponds to Polkadot's security assumption in regard to 
 
 ## Fishermen
 
-Fishermen are full nodes of parachains, same as collators, but perform a different role in
-relation to the Polkadot network. Instead of packaging the state transitions and producing the
-next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state
-transitions are included. Fishermen will be moderately staked on the Relay Chain, unlike collators
-that require no stake on the Relay Chain. Fishermen will submit invalidity reports if they find that
-misconduct has occurred during the production of a parachain. If they are proven right about the
-reported misconduct, they will be handsomely rewarded, but they risk losing their stake if they're
-proven wrong. For this reason, fishermen are similar to bounty hunters that get a large payout on
+Fishermen are full nodes of parachains, same as collators, but perform a different role in relation
+to the Polkadot network. Instead of packaging the state transitions and producing the next parachain
+blocks as collators do, fishermen will watch this process and ensure no invalid state transitions
+are included. Fishermen will be moderately staked on the Relay Chain, unlike collators that require
+no stake on the Relay Chain. Fishermen will submit invalidity reports if they find that misconduct
+has occurred during the production of a parachain. If they are proven right about the reported
+misconduct, they will be handsomely rewarded, but they risk losing their stake if they're proven
+wrong. For this reason, fishermen are similar to bounty hunters that get a large payout on
 completing a job but no steady payout otherwise.
 
 ### How to run a fisherman node

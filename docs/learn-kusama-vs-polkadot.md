@@ -50,7 +50,7 @@ to adapt and evolve faster than Polkadot.
 ### Lean setups
 
 Teams wishing to run a parachain need to bond tokens as security. The bonding requirement on Kusama
-is likely to be lower than on Polkadot. 
+is likely to be lower than on Polkadot.
 
 ### Use cases
 

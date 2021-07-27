@@ -16,10 +16,10 @@ by stake-weighted referenda.
 
 ## Mechanism
 
-To make any changes to the network, the idea is to compose active token holders and the
-council together to administrate a network upgrade decision. No matter whether the proposal is
-proposed by the public (token holders) or the council, it finally will have to go through a
-referendum to let all holders, weighted by stake, make the decision.
+To make any changes to the network, the idea is to compose active token holders and the council
+together to administrate a network upgrade decision. No matter whether the proposal is proposed by
+the public (token holders) or the council, it finally will have to go through a referendum to let
+all holders, weighted by stake, make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
 
@@ -27,8 +27,8 @@ To better understand how the council is formed, please read [this section](#coun
 
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
 _proposal_ associated with it that takes the form of a privileged function call in the runtime (that
-includes the most powerful call: `set_code`, which can switch out the entire code of the
-runtime, achieving what would otherwise require a "hard fork").
+includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
+achieving what would otherwise require a "hard fork").
 
 Referenda are discrete events, have a fixed period where voting happens, and then are tallied and
 the function call is made if the vote is approved. Referenda are always binary; your only options in
@@ -85,8 +85,8 @@ and a queue for publicly submitted proposals. The referendum to be voted upon al
 top proposal in the two queues.
 
 The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose
-turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in
-the other queue, the top proposal in the other queue will become a referendum.
+turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in the
+other queue, the top proposal in the other queue will become a referendum.
 
 Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
 emergency referendum occurring at the same time as a regular referendum (either public- or
@@ -202,7 +202,7 @@ Since the above example is a public referendum, `Super-Majority Approve` would b
 the result. `Super-Majority Approve` requires more `aye` votes to pass the referendum when turnout
 is low, therefore, based on the above result, the referendum will be rejected. In addition, only the
 winning voter's tokens are locked. If the voters on the losing side of the referendum believe that
-the outcome will have negative effects, their tokens are transferrable so they will not be locked 
+the outcome will have negative effects, their tokens are transferrable so they will not be locked
 into the decision. Moreover, winning proposals are autonomously enacted only after some enactment
 period.
 
@@ -257,15 +257,15 @@ In contrast, when it has a 75% turnout, the tally of "aye" votes has to reach 54
 the super-majority required decreases as the turnout increases.
 
 When the council proposes a new proposal through unanimous consent, the referendum would be put to a
-vote using "Negative Turnout Bias". In this case, it is easier to pass this proposal with low turnout
-and requires a super-majority to reject. As more token holders participate in voting, the bias
-approaches a plain majority carries.
+vote using "Negative Turnout Bias". In this case, it is easier to pass this proposal with low
+turnout and requires a super-majority to reject. As more token holders participate in voting, the
+bias approaches a plain majority carries.
 
 Referring to the above image, when a referendum only has 25% turnout, the tally of "aye" votes has
 to reach 34% for it to pass.
 
-In short, when the turnout rate is low, a super-majority is required to reject the proposal, which means
-a lower threshold of "aye" votes have to be reached, but as turnout increases towards 100%, it
+In short, when the turnout rate is low, a super-majority is required to reject the proposal, which
+means a lower threshold of "aye" votes have to be reached, but as turnout increases towards 100%, it
 becomes a simple majority.
 
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority
@@ -276,10 +276,10 @@ against - equate to a simple majority-carries system at 100% turnout.
 > [Video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
 
 To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
-on-chain entity comprising several actors, each represented as an on-chain account. On Polkadot,
-the council currently consists of 13 members. This is expected to increase over the next few months
-to 24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this
-will be 24 seats while on Kusama it is 19 seats.
+on-chain entity comprising several actors, each represented as an on-chain account. On Polkadot, the
+council currently consists of 13 members. This is expected to increase over the next few months to
+24 seats. In general, the council will end up having a fixed number of seats. On Polkadot, this will
+be 24 seats while on Kusama it is 19 seats.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
