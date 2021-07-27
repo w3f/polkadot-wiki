@@ -1,25 +1,43 @@
 ---
-id: maintain-guides-how-to-use-polkadot-validator
+id: maintain-guides-how-to-use-polkadot-validator-setup
 title: How to use Polkadot Validator Setup
 sidebar_label: How to use Polkadot Validator Setup
 ---
 
-The following guide will walk you through using [polkadot validator setup][] to deploy your
-validator in a secure way. It will work for Kusama (and later Polkadot) out of the box, and if
-you're using another Substrate-based chain, should work with some tweaking. We assume you will be
-deploying on Kusama.
+# Polkadot Validator Setup 
 
-It uses Terraform for defining and managing your infrastructure. Ansible, an automation tool, is
-used for setting up the VPN, Firewall, and the validator node. It supports a few different cloud
-providers such as AWS, Microsoft Azure, GCP, and Packet. The code is publicly hosted on GitHub, so
-please file an [issue][] if you would like to make a feature request or report a bug.
+The following guide will walk you through using Web3 Foundation's [polkadot validator setup][] to 
+offer a potential setup for your validator that aims to prevent some types of potential attacks 
+at the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and, 
+if you're using another Substrate-based chain, it should work with some tweaks.
+
+> NOTE: This setup should not be assumed to include the best security practices. It is up to 
+> you to add additional security hardening.
+
+> Also, the current version of polkadot validator setup doesn't allow for the creation and 
+> configuration of sentry nodes.
+
+There are two ways that the setup can be configured:
+
+1. **Platform & Application Layer** which allows for configuring the credentials for 
+   infrastructure providers, then executes the Terraform process to automatically deploy 
+   the required machines (Platform Layer) and setup the Application Layer. This configuration 
+   uses [Terraform](https://www.terraform.io/) for defining and managing your infrastructure.
+
+2. **Application Layer** which allows for setting up Debian-based machines, where you only 
+   need basic SSH access and configure those in an inventory. The Ansible scripts will setup 
+   the entire Application Layer. This configuration uses [Ansible](https://www.ansible.com/) 
+   as an automation tool for setting up the VPN, Firewall, and the validator node. It supports 
+   a few different cloud providers such as AWS, Microsoft Azure, GCP, and Packet.
+
+> Please file an [issue][] if you would like to make a feature request or report a bug for this setup.
 
 ## Dependencies
 
-The next step is to install the software dependencies for running the secure validator scripts. We
-will need to acquire NodeJS, Yarn, Terraform, and Ansible. Usually these are readily available using
-your operating system's package manager. Instructions may vary depending on which system you are on,
-the instructions below demonstrate the commands for a user of a Debian or Ubuntu based system.
+The initial step is to install the software dependencies for running the validator setup scripts. We
+will need to acquire NodeJS, Yarn, Terraform, and Ansible. Usually, these are readily available using
+your operating system's package manager. Instructions may vary depending on which system you are on;
+the instructions below demonstrate the commands for a user of a _Debian_ or _Ubuntu-based_ system.
 
 ### NodeJS
 
@@ -64,24 +82,25 @@ sudo apt-get install python -y
 
 ### Step One: Clone the repository
 
-The first step is to clone the `polkadot-secure-validator` guide locally.
+The first step is to clone the `polkadot-validator-setup` guide locally.
 
 ```zsh
 $ git clone git@github.com:w3f/polkadot-secure-validator.git
 ```
 
-Now you can `cd` into the `polkadot-secure-validator` directory and start to change the
+Now you can `cd` into the `polkadot-validator-setup` directory and start to change the
 configurations to match your custom deployment. However, before we start tweaking those, let's start
 by creating two new SSH keys that we (or rather, the ansible playbooks) will use to access the
 machines.
 
 ### Step Two: Generate the SSH keys
 
-We will use [SSH][], a remote shell tool, to access our validator. You will first use the 
-`ssh-keygen` command to generate a key for your validator..
+We will use [SSH][], a remote shell tool, to access our validator. You will
+first use the `ssh-keygen` command to generate a key for your validator.
 
 ```zsh
 $ ssh-keygen -m pem -f id_rsa_validator
+$ ssh-keygen -m pem -f id_rsa_public
 ```
 
 Be sure to add these keys to your SSH agent. First make sure your SSH agent is evaluated, then add
@@ -90,6 +109,7 @@ the keys to them.
 ```zsh
 $ eval $(ssh-agent)
 $ ssh-add id_rsa_validator
+$ ssh-add id_rsa_public
 ```
 
 For this tutorial we will not set a passphrase for the SSH key, although usually that would be
@@ -99,7 +119,7 @@ recommended.
 
 After you have installed all the required software and made your ssh keys, you can start to
 configure your infrastructure deployment by following the instructions. Start by cloning the
-`polkadot-secure-validator` repository locally, and installing the package dependencies. Then
+`polkadot-validator-setup` repository locally, and installing the package dependencies. Then
 customize the configuration how you want it.
 
 First run yarn to install the NodeJS dependencies:
@@ -121,7 +141,7 @@ the user to use for SSH.
 
 #### Getting the authorization keys
 
-The secure validator set up supports Google Cloud, AWS, Microsoft Azure, and Packet. For this
+The validator setup supports Google Cloud, AWS, Microsoft Azure, and Packet. For this
 tutorial we will be using Google Cloud.
 
 ##### Log in to the Google Cloud console
@@ -255,7 +275,7 @@ ok: [34.80.70.172] => {
 ```
 
 The result "0xf126b68841f5…..95f54249" is your session key. Set this to your controller account in
-[polkadot-js Apps](https://polkadot.js.org/apps/#/staking/actions).
+[Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking/actions).
 
 After accessing one of the machines through SSH, you can keep track of the node’s status by running
 `journalctl --follow -u polkadot`, which will show the latest synced block information.
