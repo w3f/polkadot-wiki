@@ -274,9 +274,9 @@ Example of node sync:
 2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s
 ```
 
-The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only
+The `--pruning=archive` flag is implied by the `--validator` flag, so it is only
 required explicitly if you start your node without one of these two options. If you do not set your
-pruning to archive node, even when not running in validator and sentry mode, you will need to
+pruning to archive node, even when not running in validator mode, you will need to
 re-sync your database when you switch.
 
 > **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can

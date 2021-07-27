@@ -60,10 +60,6 @@ however, Session key signatures are performed within the client.
 > whatever payload they receive. Therefore, an attacker who gains access to your validator node
 > could still commit slashable behavior.
 
-An example of highly available, secure setup would be a layer of sentry nodes in front of multiple
-validators connected to a single signing machine. This machine could implement signing logic to
-avoid equivocation, even if an attacker gained access to a validator node.
-
 ## Monitoring Tools
 
 - [Telemetry](https://github.com/paritytech/substrate-telemetry) This tracks your node details
@@ -125,5 +121,4 @@ avoid equivocation, even if an attacker gained access to a validator node.
 - [Figment Network's Full Disclosure of Cosmos Validator Infrastructure](https://medium.com/figment-networks/full-disclosure-figments-cosmos-validator-infrastructure-3bc707283967)
 - [Certus One's Knowledge Base](https://kb.certus.one/)
 - [EOS Block Producer Security List](https://github.com/slowmist/eos-bp-nodes-security-checklist)
-- [Sentry Node Architecture Overview](https://forum.cosmos.network/t/sentry-node-architecture-overview/454)
 - [HSM Policies and the Important of Validator Security](https://medium.com/loom-network/hsm-policies-and-the-importance-of-validator-security-ec8a4cc1b6f)

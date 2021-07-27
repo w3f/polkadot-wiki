@@ -95,9 +95,8 @@ machines.
 
 ### Step Two: Generate the SSH keys
 
-We will use [SSH][], a remote shell tool, to access our validator and public sentry nodes. You will
-first use the `ssh-keygen` command to generate two keys, one for your validator and one for the
-sentry nodes.
+We will use [SSH][], a remote shell tool, to access our validator. You will
+first use the `ssh-keygen` command to generate a key for your validator.
 
 ```zsh
 $ ssh-keygen -m pem -f id_rsa_validator
