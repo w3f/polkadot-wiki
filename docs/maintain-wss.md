@@ -92,7 +92,8 @@ server {
 
         location / {
           try_files $uri $uri/ =404;
-
+          
+          proxy_buffering off;
           proxy_pass http://localhost:9944;
           proxy_set_header X-Real-IP $remote_addr;
           proxy_set_header Host $host;
