@@ -166,6 +166,7 @@ module.exports = {
             "maintain-guides-how-to-systemd",
             "maintain-guides-secure-validator",
             "maintain-guides-how-to-use-polkadot-validator-setup",
+            "maintain-guides-how-to-setup-a-validator-with-reverse-proxy",
             "maintain-guides-how-to-upgrade",
             "maintain-guides-how-to-monitor-your-node",
             "maintain-guides-how-to-chill",
