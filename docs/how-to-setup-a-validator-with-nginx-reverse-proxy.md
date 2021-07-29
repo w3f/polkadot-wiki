@@ -141,7 +141,7 @@ specifies wanting the network to reach the validator IPv4 address with TCP packe
 
 ##### listen-addr
 
-`listen-addr` - A `public-addr` is the specification of what port the polkadot application will connect to the reverse proxy.
+`listen-addr` -  the specification of what port the polkadot application will connect to the reverse proxy.
 In our example, `/ip4/127.0.0.1/tcp/<P2P_PORT>` means that
 specifies you want to listen to NGINX on the localhost address `127.0.0.1` with tcp packets on the predefined p2p port.
 
