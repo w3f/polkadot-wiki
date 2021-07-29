@@ -102,7 +102,7 @@ server {
 }
 ```
 
-Change the permissions of the file `polkadot-proxy.conf` accordingly.
+Change the permissions of the file `polkadot-proxy.conf` accordingly:
 
 ```bash
 chmod 0600 polkadot-proxy.conf
