@@ -107,7 +107,7 @@ Change the permissions of the file `polkadot-proxy.conf` accordingly.
 chmod 0600 polkadot-proxy.conf
 ```
 
-Finally, restart NGINX with the following command
+Finally, restart NGINX with the following command:
 
 ```bash
 service nginx restart
