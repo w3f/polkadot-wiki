@@ -33,6 +33,7 @@ ufw verbose
 The `verbose` option shows some extra information about the firewall's behavior. 
 ### 2. Basic log viewing
 
+We use [journald](https://www.loggly.com/blog/why-journald/) logs for basic log viewing.
 Create a file called `journald.conf` file inside the `/etc/systemd/` directory with the following content:
 
 ```bash
