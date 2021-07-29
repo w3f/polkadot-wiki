@@ -4,7 +4,7 @@ title: Set Up a Validator with NGINX Reverse Proxy
 sidebar_label: Set Up a Validator with NGINX Reverse Proxy
 ---
 
-This guide assumes you have already the hardware ready with the appropriate specs. It has same configuration of the
+This guide assumes that you have already configured your hardware with the appropriate specs. It has same configuration as the
 [polkadot validator setup](https://github.com/w3f/polkadot-secure-validator).
 
 We will walk you through how to configure a reverse proxy using NGINX in front of your validator node. The
