@@ -145,7 +145,7 @@ specifies you want to listen to NGINX on the localhost address `127.0.0.1` with 
 
 - `P2P_PORT` - This is the port that the polkadot application will connect to NGINX.
 
-#### Starting Validator with the NGINX Proxy
+#### Starting the validator with the NGINX proxy
 
 After retrieving the appropriate `IP_ADDRESS`, `PROXY_PORT` and `P2P_PORT` of the validator node, we can start the validator
 using the following flags:
