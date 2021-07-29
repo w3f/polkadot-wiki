@@ -56,7 +56,7 @@ systemctl restart systemd-journald
 
 ### 3. NGINX reverse proxy setup
 
-First install NGINX with the following command.
+First, install NGINX with the following command:
 
 ```
 apt install nginx
