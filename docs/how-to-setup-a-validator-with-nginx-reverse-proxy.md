@@ -135,7 +135,7 @@ messages, but uses NGINX as a load balancer which acts as a *first listener* of 
 readable addressing scheme. In our example, `/ip4/<VALIDATOR_IP>/tcp/<PROXY_PORT>` is a valid `public-addr` that
 specifies wanting the network to reach the validator IPv4 address with TCP packets on the pre-defined proxy port.
 
-- `IP_ADDRESS` - The public IP address of the validator.
+- `IP_ADDRESS` - the public IP address of the validator.
 
 - `PROXY_PORT` - This is the port that nodes will send p2p messages over the network and will be read by the NGINX reverse proxy.
 
