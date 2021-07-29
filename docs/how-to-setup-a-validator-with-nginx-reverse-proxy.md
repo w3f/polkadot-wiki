@@ -81,7 +81,7 @@ events{
 }
 ```
 
-This will import and make use of the [NGINX stream module](https://nginx.org/en/docs/stream/ngx_stream_core_module.html). In a nutshell, this module will allow continous streaming of data in or out of the validator machine with all the benefits of having an optimized reverse proxy.
+This will import and make use of the [NGINX stream module](https://nginx.org/en/docs/stream/ngx_stream_core_module.html). In a nutshell, this module allows for continuous streaming of data in or out of the validator machine with all the benefits of having an optimized reverse proxy.
 
 Next, create a folder called `/streams-enabled/` inside the `/etc/nginx/` directory and remove the default NGINX site.
 
