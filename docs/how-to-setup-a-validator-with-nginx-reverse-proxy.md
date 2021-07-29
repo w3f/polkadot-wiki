@@ -163,7 +163,7 @@ polkadot \
 
 ```
 
-You should see your validator's peers, and the p2p port you are using to connect to NGINX.
+You should see your validator's peers, as well as the p2p port you are using to connect to NGINX.
 
 ```
 2020-12-17 19:04:36  __ Imported #2940151 (0x14c5_f472)
