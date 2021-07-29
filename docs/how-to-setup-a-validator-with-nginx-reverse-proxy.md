@@ -48,7 +48,7 @@ SystemMaxFiles=100
 
 Check out the [example journald configuration file](https://github.com/w3f/polkadot-secure-validator/blob/master/ansible/roles/polkadot-validator/files/journald.conf) for more available options.
 
-finally, run the following command to restart the journald service.
+Finally, run the following command to restart the journald service:
 
 ```bash
 systemctl restart systemd-journald
