@@ -147,7 +147,7 @@ specifies you want to listen to NGINX on the localhost address `127.0.0.1` with 
 
 #### Starting the validator with the NGINX proxy
 
-After retrieving the appropriate `IP_ADDRESS`, `PROXY_PORT` and `P2P_PORT` of the validator node, we can start the validator
+After retrieving the appropriate `IP_ADDRESS`, `PROXY_PORT` and `P2P_PORT` of the validator node, we can start the validator.
 
 Start your validator with the `--validator` flag:
 
