@@ -126,7 +126,7 @@ will use to connect to the NGINX reverse proxy.
 #### P2P Networking
 
 Nodes will use [libp2p](https://libp2p.io/) as the networking layer to establish peers and gossip
-messages but will need to go through NGINX first as a first listener of the streaming data to help balance the load.
+messages, but uses NGINX as a load balancer which acts as a *first listener* of the streaming data to help balance the load.
 
 ##### public-addr
 
