@@ -133,7 +133,7 @@ messages, but uses NGINX as a load balancer which acts as a *first listener* of 
 
 `public-addr` - a flexible encoding of multiple layers of protocols into a human
 readable addressing scheme. In our example, `/ip4/<VALIDATOR_IP>/tcp/<PROXY_PORT>` is a valid `public-addr` that
-specifies you want the network to reach the Validator IPv4 address with tcp packets on the predefined proxy port.
+specifies wanting the network to reach the validator IPv4 address with TCP packets on the pre-defined proxy port.
 
 - `IP_ADDRESS` - The public IP address of the validator.
 
