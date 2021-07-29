@@ -62,7 +62,7 @@ First, install NGINX with the following command:
 sudo apt-get install nginx
 ```
 
-Next, create an NGINX configuration file called `nginx.conf` file inside the `/etc/nginx/` directory with the following content.
+Next, create an NGINX configuration file called `nginx.conf` inside the `/etc/nginx/` directory with the following content:
 
 ```bash
 user www-data www-data;
