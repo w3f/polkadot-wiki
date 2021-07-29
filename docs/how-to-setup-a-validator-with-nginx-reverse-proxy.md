@@ -12,7 +12,12 @@ validator uses the reverse proxy only to talk to the public facing nodes, to pro
 
 ### 1. Firewall configuration
 
-We will configure the firewall with ufw. There needs to be three main ports for this setup. The SSH port commonly is 22 which must be allowed, the proxy port which also must be allowed and the p2p port which in turn must be denied at the firewall level. In this example we will assign the port number `2435` to the proxy port and the port number `30333` to the p2p port.
+We will configure the firewall with [ufw](https://wiki.ubuntu.com/UncomplicatedFirewall). There needs to be three main ports for this setup. 
+- An SSH port, commonly ssh/tcp port `22`.
+- A proxy port 
+- p2p port: must be denied at the firewall level. 
+
+In this example, we will assign the port number `2435` to the proxy port and the port number `30333` to the p2p port. To enable the firewall and the use of the ports, allow SSH access.
 
 ```bash
 # ssh port
