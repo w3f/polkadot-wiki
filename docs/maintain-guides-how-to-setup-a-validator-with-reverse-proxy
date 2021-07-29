@@ -20,13 +20,14 @@ We will configure the firewall with [ufw](https://wiki.ubuntu.com/UncomplicatedF
 In this example, we will assign the port number `2435` to the proxy port and the port number `30333` to the p2p port. To enable the firewall and the use of the ports, allow SSH access.
 
 ```bash
+ufw enable
 # ssh port
 ufw allow 22/tcp
 # proxy port
 ufw allow 2435/tcp
 # libp2p port
 ufw deny 30333/tcp
-ufw enable
+ufw reload
 # double check the firewall rules
 ufw verbose
 ```
