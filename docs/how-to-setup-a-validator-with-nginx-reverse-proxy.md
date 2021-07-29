@@ -137,7 +137,7 @@ specifies wanting the network to reach the validator IPv4 address with TCP packe
 
 - `IP_ADDRESS` - the public IP address of the validator.
 
-- `PROXY_PORT` - This is the port that nodes will send p2p messages over the network and will be read by the NGINX reverse proxy.
+- `PROXY_PORT` - the port that nodes will send p2p messages over the network and are read by the NGINX reverse proxy.
 
 ##### listen-addr
 
