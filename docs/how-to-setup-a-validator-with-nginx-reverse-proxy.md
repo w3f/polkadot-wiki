@@ -116,7 +116,7 @@ service nginx restart
 
 ### 4. Defining your proxy port and p2p port in the polkadot command
 
-These are some of the flags you are going to use.
+These are some of the flags you are going to use when executing the command.
 
 `--public-addr <VALIDATOR_IP>, <PROXY_PORT>` - This flag defines the validator's IP and the proxy port
 that all other nodes in the network will connect to.
