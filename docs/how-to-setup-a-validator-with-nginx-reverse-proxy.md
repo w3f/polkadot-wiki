@@ -1,5 +1,5 @@
 ---
-id: maintain-guides-how-to-setup-a-Validator-with-NGINX-reverse-proxy
+id: maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 title: Set Up a Validator with NGINX Reverse Proxy
 sidebar_label: Set Up a Validator with NGINX Reverse Proxy
 ---
