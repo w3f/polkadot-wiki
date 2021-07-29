@@ -59,7 +59,7 @@ systemctl restart systemd-journald
 First, install NGINX with the following command:
 
 ```
-apt install nginx
+sudo apt-get install nginx
 ```
 
 Next, create an NGINX configuration file called `nginx.conf` file inside the `/etc/nginx/` directory with the following content.
