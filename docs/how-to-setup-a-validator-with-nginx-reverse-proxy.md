@@ -92,7 +92,8 @@ mkdir /etc/nginx/streams-enabled
 /etc/nginx/sites-enabled/default
 ```
 
-Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create the proxy service file called `polkadot-proxy.conf` with the following content and the previously defined ports. The port number `2435` to the proxy port and the port number `30333` to the p2p port.
+Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create the proxy service file called `polkadot-proxy.conf` with the following content: 
+> Use the previously defined ports: port `2435` for the proxy port & port number `30333` for the p2p port.
 
 ```bash
 server {
