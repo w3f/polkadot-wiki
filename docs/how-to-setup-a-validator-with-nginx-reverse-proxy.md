@@ -30,7 +30,7 @@ ufw enable
 # double check the firewall rules
 ufw verbose
 ```
-
+The `verbose` option shows some extra information about the firewall's behavior. 
 ### 2. Configure journald logs
 
 Create a file called `journald.conf` file inside the `/etc/systemd/` directory with the following content:
