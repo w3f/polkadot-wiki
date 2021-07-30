@@ -139,6 +139,6 @@ If you do not see the language you would like to translate, please let us know v
 The Polkadot Wiki is licensed under the [GPL-3.0](LICENSE) free software license.
 
 <p float="center">
-  <img src="docs/assets/polkadot.gif" width="560" height="285"> 
-  <img src="docs/assets/kusama.gif" width="560" height="285"> 
+  <img src="docs/assets/polkadot.gif" width="460" height="285"> 
+  <img src="docs/assets/kusama.gif" width="460" height="285"> 
 </p>
