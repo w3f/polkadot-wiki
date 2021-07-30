@@ -27,7 +27,6 @@ if (!argv.websiteDir || !argv.pinName || !argv.auth) {
 
 const main = async () => {
   // js-cluster-api doesn't support libp2p so we have to use go shell version...
-  // CLUSTER_BASIC_AUTH_USER and CLUSTER_BASIC_AUTH_PASSWORD should match the clusters "basic_auth_credentials" service.json value
   const runCommandOnCluster = async (command) => execSync(
     `ipfs-cluster-ctl \
     --enc json \
