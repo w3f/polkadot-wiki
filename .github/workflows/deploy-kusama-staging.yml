@@ -56,5 +56,6 @@ jobs:
           tar xf ./ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
+          which ipfs-cluster-ctl
 
           node ./scripts/ipfs-cluster-pin.js --websiteDir ./kusama-guide-v2/build --pinName kusama-guide-staging --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}}
