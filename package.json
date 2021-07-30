@@ -58,9 +58,9 @@
     "@docusaurus/module-type-aliases": "^2.0.0-beta.3",
     "@docusaurus/plugin-client-redirects": "^2.0.0-beta.3",
     "@docusaurus/preset-classic": "2.0.0-beta.4",
-    "@polkadot/keyring": "^7.0.3",
     "@octokit/rest": "^18.7.1",
     "@polkadot/api": "^5.2.1",
+    "@polkadot/keyring": "^7.0.3",
     "axios": "^0.21.1",
     "chalk": "^4.1.1",
     "cross-env": "^7.0.3",
@@ -78,5 +78,10 @@
     "shx": "^0.3.3",
     "unist-util-visit": "2.0.3",
     "yargs": "^17.0.1"
+  },
+  "dependencies": {
+    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.4",
+    "docusaurus-preset-name": "^1.0.0",
+    "remark-docusaurus-tabs": "^0.1.0"
   }
 }

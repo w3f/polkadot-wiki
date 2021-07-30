@@ -94,6 +94,17 @@ module.exports = {
       },
     ],
   ],
+  plugins: ['remark-docusaurus-tabs'],
+  plugins: ['@docusaurus/theme-live-codeblock'],
+  themeConfig: {
+    liveCodeBlock: {
+      /**
+       * The position of the live playground, above or under the editor
+       * Possible values: "top" | "bottom"
+       */
+      playgroundPosition: 'bottom',
+    },
+  },
   themeConfig: {
     colorMode: {
       disableSwitch: true,
