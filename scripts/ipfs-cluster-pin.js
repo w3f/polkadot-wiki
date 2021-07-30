@@ -21,8 +21,8 @@ const argv = yargs(process.argv)
   .help()
   .alias("help", "h").argv;
 
-if (!argv.websiteDir || !argv.pinName) {
-  throw new Error("Must pass --websiteDir and --pinName arguments.");
+if (!argv.websiteDir || !argv.pinName || !argv.auth) {
+  throw new Error("Must pass --websiteDir, --auth, and --pinName arguments.");
 }
 
 const main = async () => {
