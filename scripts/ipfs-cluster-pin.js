@@ -13,6 +13,11 @@ const argv = yargs(process.argv)
     description: "required. eg. polkadot-wiki",
     type: "string",
   })
+  .option("auth", {
+    alias: "n",
+    description: "required. eg. asdf:1234",
+    type: "string",
+  })
   .help()
   .alias("help", "h").argv;
 
@@ -33,7 +38,7 @@ const main = async () => {
   const runCommandOnCluster = async (command) => execSync(
     `ipfs-cluster-ctl \
     --enc json \
-    --basic-auth ${process.env.CLUSTER_BASIC_AUTH_USER}:${process.env.CLUSTER_BASIC_AUTH_PASSWORD} \
+    --basic-auth ${argv.auth} \
     --host /dns4/hemmerle.dev/tcp/9097/p2p/12D3KooWBxH7hKkvvp2oCDay9jSh8gw5FkdBsdgPytXFjRgqDvf8 \
     ${command}`,
     { encoding: 'utf-8' });
