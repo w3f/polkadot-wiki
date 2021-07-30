@@ -28,4 +28,4 @@ jobs:
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
 
-          node ./scripfs/ipfs-cluster-pin.js --websiteDir ./website-v2/build --pinName polkadot-wiki
+          node ./scripts/ipfs-cluster-pin.js --websiteDir ./website-v2/build --pinName polkadot-wiki

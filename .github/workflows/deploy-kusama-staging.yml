@@ -57,4 +57,4 @@ jobs:
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
 
-          node ./scripfs/ipfs-cluster-pin.js --websiteDir ./kusama-guide-v2/build --pinName kusama-guide-staging
+          node ./scripts/ipfs-cluster-pin.js --websiteDir ./kusama-guide-v2/build --pinName kusama-guide-staging
