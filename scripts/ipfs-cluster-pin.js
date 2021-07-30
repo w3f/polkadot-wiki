@@ -14,7 +14,7 @@ const argv = yargs(process.argv)
     type: "string",
   })
   .option("auth", {
-    alias: "n",
+    alias: "a",
     description: "required. eg. asdf:1234",
     type: "string",
   })
