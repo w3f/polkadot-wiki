@@ -23,6 +23,7 @@ is equal to 1e10 Planck.
 | Microdot (uDOT) | 4              | 0.0000010000 |
 | Millidot (mDOT) | 7              | 0.0010000000 |
 | Dot (DOT)       | 10             | 1.0000000000 |
+| Million (MDOT)  | 16             | 1,000,000.00 |
 
 > Note: This changed at block #1*248_328. Previously, DOT was denominated as equal to 1e12 Planck,
 > just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".
