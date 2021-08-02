@@ -546,6 +546,7 @@ released the multisig transaction deposit.
 You can use the tool below to convert any SS58 address for any network for use on different
 networks.
 
+(placeholder for address changer)
 <div class="address-changer">
   <input class="address-changer-input" id="input" placeholder="Paste your address" oninput="globalThis.addressChanger()" />
   <select class="address-changer-select" id="prefix-select" oninput="globalThis.addressChanger()">
