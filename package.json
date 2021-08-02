@@ -50,6 +50,7 @@
     "crowdin": "crowdin",
     "docusaurus": "docusaurus"
   },
+  "type": "module",
   "devDependencies": {
     "@actions/core": "^1.4.0",
     "@actions/github": "^5.0.0",
