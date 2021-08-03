@@ -160,7 +160,7 @@ polkadot \
   --name My_Validator_Name \
   --validator \
   --public-addr=/ip4/IP_ADDRESS/tcp/2435 \
-  --listen-addr=/ip4/127.0.0.1/tcp/30333 \
+  --listen-addr=/ip4/0.0.0.0/tcp/30333 \
   --rpc-methods=Unsafe \
   --chain=Polkadot
 
