@@ -87,6 +87,7 @@ module.exports = {
               existingPath.replace("/docs/", "/docs/en/"),
               existingPath.replace("/docs/", "/docs/zh-CN/"),
               existingPath.replace("/docs/", "/docs/ru-RU/"),
+              existingPath.replace("/js/", "/docs/js/"),
             ];
           }
 
