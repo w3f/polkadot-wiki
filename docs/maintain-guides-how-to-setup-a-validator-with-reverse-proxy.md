@@ -8,7 +8,7 @@ This guide assumes that you have already configured your hardware with the appro
 [polkadot validator setup](https://github.com/w3f/polkadot-secure-validator).
 
 We will walk you through how to configure a reverse proxy using NGINX in front of your validator node. The
-validator uses the reverse proxy only to talk to the public facing nodes, to protect it from certain types of attacks.
+validator uses the reverse proxy to filter traffic, whereby additional adjustments can be made to respond to a DDoS attack.
 
 ### 1. Firewall configuration
 
