@@ -20,15 +20,15 @@ import fs from "fs";
 // List of mirrored files that should be in both the Polkadot wiki and the Kusama
 // user guide.
 const mirrored = [
-  "build/build-build-with-polkadot",
+  "build-build-with-polkadot",
   "learn/learn-identity",
   "learn/learn-balance-transfers",
   "general/ens",
   "learn/learn-governance",
   "learn/learn-treasury",
   "learn/learn-registrar",
-  "maintain/maintain-guides-how-to-nominate-kusama",
-  "maintain/maintain-guides-how-to-validate-kusama",
+  "maintain/kusama/maintain-guides-how-to-nominate-kusama",
+  "maintain/kusama/maintain-guides-how-to-validate-kusama",
   "maintain/maintain-guides-how-to-stop-validating",
   "maintain/maintain-errors",
   "general/thousand-validators",
@@ -40,6 +40,9 @@ const mirrored = [
 ];
 
 for (const file of mirrored) {
+
+  // Create the mirrored file.
+
   const doc = "./docs/" + file + ".md";
   const mirror = "./docs/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
