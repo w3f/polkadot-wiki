@@ -80,7 +80,8 @@ parachain state data corresponds to Polkadot's security assumption in regard to 
 
 The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a different role in relation to the Polkadot network. Instead of packaging the state transitions and producing the next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state transitions are included. 
 
-**Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation, depsite previous proposals in the [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
+**Fishermen implemention is currently unavailable on Polkadot and Kusama. There are plans to create and implement
+an incentivisation model for fishermen in the future. Ref: [Overview of Polkadot and its Design Considerations](https://arxiv.org/pdf/2005.13456.pdf),[AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
 
 ## Further Resources
 
