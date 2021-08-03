@@ -118,22 +118,22 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/getting-started",
+          to: "docs/general/getting-started",
           label: "Get Started",
           position: "right",
         },
         {
-          to: "docs/learn-launch",
+          to: "docs/learn/learn-launch",
           label: "Learn",
           position: "right",
         },
         {
-          to: "docs/build-index",
+          to: "docs/build/build-index",
           label: "Build",
           position: "right",
         },
         {
-          to: "docs/maintain-index",
+          to: "docs/maintain/maintain-index",
           label: "Maintain ",
           position: "right",
         },
@@ -147,7 +147,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/contributing",
+          to: "docs/general/contributing",
           label: "Contribute",
           position: "right",
         },
