@@ -58,7 +58,7 @@ parachains.
 
 Teams and projects looking to become an official parachain on the Kusama network have been working
 hard to bring their technologies to life, many of whom started a
-[crowdloan campaign](learn-crowdloans.md##starting-a-crowdloan-campaign) in order to participate in
+[crowdloan campaign](../../learn/learn-crowdloans.md##starting-a-crowdloan-campaign) in order to participate in
 the slot auctions.
 
 Once parachains are live, the community will determine which additional features and network

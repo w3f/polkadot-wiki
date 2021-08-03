@@ -62,9 +62,9 @@ For a description of the XCMP message format please see the [xcm-format][] repos
 
 ## How To Make Cross Chain Transfers
 
-You can try out cross-chain transfers on the the [Rococo](build-parachains-rococo.md) testnet. A
+You can try out cross-chain transfers on the the [Rococo](../build/build-parachains-rococo.md) testnet. A
 tutorial on downward, upward, and lateral transfers can be found
-[here](build-parachains-rococo.md#how-to-make-cross-chain-transfers).
+[here](../build/build-parachains-rococo.md#how-to-make-cross-chain-transfers).
 
 ## High-Level XCMP
 

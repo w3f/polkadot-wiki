@@ -61,7 +61,7 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](ens.md). The Candle auction is another solution that does not need the two-step
+names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the two-step
 commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart
 contracts to participate.
 

@@ -132,8 +132,8 @@ on the Rococo testnet and they should be active in the
 [Rococo channel](https://matrix.to/#/!WuksvCDImqYSxvNmua:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 
 Of course, getting a parachain slot on either of the two main networks is not guaranteed and the
-project will need to win the [auction](learn-auction.md) for the slots they're interested in, or
-they may choose to be a [parathread](learn-parathreads.md) instead (although this should be
+project will need to win the [auction](../learn/learn-auction.md) for the slots they're interested in, or
+they may choose to be a [parathread](../learn/learn-parathreads.md) instead (although this should be
 clarified to their community). But testing their software on the Rococo testnet is certainly a
 strong indicator of the legitimacy of the project.
 
@@ -226,7 +226,7 @@ module on polkadot.js.org, which you can test on the Rococo testnet
 [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/crowdloan).
 This issues a special transaction that locks your funds until the parachain slot lease period ends.
 You can learn more about crowdloans [here](https://kusama.network/auctions) and on our
-[wiki](https://guide.kusama.network/docs/mirror-learn-crowdloans).
+[wiki](mirror-learn-crowdloans.md).
 
 A legitimate team will never ask you to send them funds in order to participate in a crowdloan. That
 being said, some teams have been doing token sales or swaps in an attempt to get a head start in

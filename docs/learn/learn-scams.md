@@ -22,7 +22,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
 6. If you can, try to always verify new information that you see with an official source, such as
-   [Polkadot Network's official blog](community.md) or
+   [Polkadot Network's official blog](../general/community.md) or
    [Web3 Foundation support](mailto:support@polkadot.network). Often scammers will fake a website or
    a blog post, but if you check it against a secondary source you will reduce the chances of being
    scammed.
@@ -73,14 +73,14 @@ be found below:
 - [Discord](https://discord.gg/wGUDt2p)
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Polkadot Medium](https://medium.com/polkadot-network)
-- [Our Community Page](community.md) also lists more social media accounts that Web3 Foundation,
+- [Our Community Page](../general/community.md) also lists more social media accounts that Web3 Foundation,
   Polkadot, and Kusama have.
 
 ### Keep your data secure
 
 You should _never_ share your seed phrase, password, private keys, or any other personal data with
 anyone. If you are concerned a wallet could be fake, please check out our official list of supported
-wallets [here](build-wallets.md).
+[wallets](../build/build-wallets.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 

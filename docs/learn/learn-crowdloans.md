@@ -8,7 +8,7 @@ sidebar_label: Parachain Crowdloans
 for their parachain bids in a decentralized crowdloan.
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo.md) :polkadot }} >
+> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains-rococo.md) :polkadot }} >
 > {{ kusama: [Rococo page](mirror-build-parachains-rococo.md) :kusama }}.
 
 ## Starting a crowdloan campaign

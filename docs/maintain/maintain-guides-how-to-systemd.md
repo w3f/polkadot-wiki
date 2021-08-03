@@ -10,7 +10,7 @@ You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd)
 will automatically restart on server reboots or crashes (and helps to avoid getting slashed!).
 
 Before following this guide you should have already set up your validator by following the
-[How to validate](learn-validator.md) article.
+[How to validate](../learn/learn-validator.md) article.
 
 First create a new unit file called `polkadot-validator.service` in `/etc/systemd/system/`.
 

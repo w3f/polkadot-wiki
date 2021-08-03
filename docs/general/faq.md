@@ -43,26 +43,26 @@ There is no central authority that decides on validators, so there is not per se
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
 on how to do this you can consult the
-[Kusama validator guide](maintain-guides-how-to-validate-kusama.md) on validating for Kusama or the
-[Polkadot validator guide](maintain-guides-how-to-validate-polkadot.md) for validating on Polkadot.
+[Kusama validator guide](../maintain/maintain-guides-how-to-validate-kusama.md) on validating for Kusama or the
+[Polkadot validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md) for validating on Polkadot.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
-on the results of an election algorithm known as [Phragmén's method](learn-phragmen.md). Phragmén's
+on the results of an election algorithm known as [Phragmén's method](../learn/learn-phragmen.md). Phragmén's
 method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
 You will likely want to campaign your validator to the community in order to get more backing. You
 are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
 For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint program called [Thousand Validators](thousand-validators.md) that will nominate
+also run a joint program called [Thousand Validators](../general/thousand-validators.md) that will nominate
 validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
 Validators are rewarded from the inflation of the Relay Chain, transaction fees, and tips. However,
 they only take a percentage of the former two. More details can be read on the page for
-[validator payouts](maintain-guides-validator-payout.md).
+[validator payouts](../maintain/maintain-guides-validator-payout.md).
 
 ### What is the minimum stake necessary to be elected as an active validator?
 
@@ -110,7 +110,7 @@ Chain, voting on finality, producing blocks in their decided slots, and verifyin
 transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
 Finally, individuals may participate in the block production process indirectly by
-[nominating](learn-nominator.md) validators. In this way, individuals who are not running a node can
+[nominating](../learn/learn-nominator.md) validators. In this way, individuals who are not running a node can
 still share in staking rewards.
 
 ## Relay Chain
@@ -155,7 +155,7 @@ there will be bridges between Polkadot and most of the other major chains.
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
 August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
 ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
-[redenomination](redenomination.md), the new DOT is called DOT.
+[redenomination](../general/redenomination.md), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
 
@@ -164,7 +164,7 @@ The inflation rate is approximately 10% per year.
 A portion of the inflation is rewarded to validators for performing their duties, while another
 portion may go directly to the treasury. The exact percentage that goes into both varies and is
 based on the amount of DOT that are staked. Please see the article on
-[inflation](learn-staking.md/#inflation) for more information.
+[inflation](../learn/learn-staking.md/#inflation) for more information.
 
 ## Governance
 
@@ -199,7 +199,7 @@ determined minority to overrule the vote of an apathetic majority in certain sit
 mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
 approval or rejection based on what part of the governance protocol the proposal originated in. For
 details on the subtleties of Polkadot's governance system, please see the
-[governance page](learn-governance.md).
+[governance page](../learn/learn-governance.md).
 
 ## Parachains
 
@@ -223,8 +223,8 @@ blocks when their usage and throughput makes it necessary.
 When a parachain loses an auction for renewal, that parachain has a few options. In most cases,
 becoming a parathread instead would be a suitable choice. Parathreads are still secured by the Relay
 Chain, but don't need to hold a parachain slot and can produce a block when its economically
-feasible for them. For more on parachains please see the [parachains page](learn-parachains.md) and
-for more on parathreads see [the parathreads page](learn-parathreads.md).
+feasible for them. For more on parachains please see the [parachains page](../learn/learn-parachains.md) and
+for more on parathreads see [the parathreads page](../learn/learn-parathreads.md).
 
 ## Networking
 

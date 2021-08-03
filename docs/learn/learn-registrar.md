@@ -21,7 +21,7 @@ challenge message. Be aware that the `display name` cannot be too similar to oth
 verified already. There is no need to set all of the fields when using the service. You are free to
 set whichever field or fields that you like.
 
-Free feel to join the [Polkadot's community](community.md#polkadot) to ask questions if there is
+Free feel to join the [Polkadot's community](../general/community.md#polkadot) to ask questions if there is
 anything unclear.
 
 ## Setting an On-chain Identity

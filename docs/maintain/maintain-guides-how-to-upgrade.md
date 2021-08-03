@@ -23,7 +23,7 @@ accordingly.
 Session keys are stored in the client and used to sign validator operations. They are what link your
 validator node to your Controller account. You cannot change them mid-Session.
 
-[More info about keys in Polkadot.](learn-keys.md)
+[More info about keys in Polkadot.](../learn/learn-keys.md)
 
 ### Database
 
@@ -31,7 +31,7 @@ Validators keep a database with all of their votes. If two machines have the sam
 different databases, they risk equivocating. For this reason, we will generate new Session keys each
 time we change machines.
 
-[More info about equivocation.](learn-staking.md/#slashing)
+[More info about equivocation.](../learn/learn-staking.md/#slashing)
 
 ## Steps
 

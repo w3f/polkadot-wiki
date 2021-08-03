@@ -19,11 +19,11 @@ guides to set up a node and run the network.
 
 ## Collator
 
-- [Learn about Collators](learn-collator.md) - High level overview of collators and related links.
+- [Learn about Collators](../learn/learn-collator.md) - High level overview of collators and related links.
 
 ## Nominator
 
-- [Learn about Nominators](learn-nominator.md) - High level overview of nominators and related
+- [Learn about Nominators](../learn/learn-nominator.md) - High level overview of nominators and related
   links.
 - [Nomination Guide (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Walkthrough on how to
   nominate on the Polkadot network.
@@ -34,7 +34,7 @@ guides to set up a node and run the network.
 
 ## Validator
 
-- [Learn about Validators](learn-validator.md) - High level overview of validator and related links.
+- [Learn about Validators](../learn/learn-validator.md) - High level overview of validator and related links.
 - [Validator Payouts](maintain-guides-validator-payout.md) - Overview on how validator rewards are
   calculated and paid.
 - [Validation Guide (Polkadot)](maintain-guides-how-to-validate-polkadot.md) - Walkthrough on how to

@@ -23,8 +23,8 @@ longer period of time.
 
 ## Setting up a Validator
 
-Please see the wiki page for [setting up a validator](maintain-guides-how-to-validate-polkadot.md)
-as well as additional information on [validator secure](maintain-guides-secure-validator.md).
+Please see the wiki page for [setting up a validator](../maintain/maintain-guides-how-to-validate-polkadot.md)
+as well as additional information on [validator secure](../maintain/maintain-guides-secure-validator.md).
 
 ## How to Apply
 
@@ -108,4 +108,4 @@ of 16.
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
 [polkadot 1kv form]:
   https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform
-[identity instructions]: https://guide.kusama.network/docs/mirror-learn-identity#setting-an-identity
+[identity instructions]: ../learn/mirror-learn-identity.md#setting-an-identity

@@ -177,7 +177,7 @@ method is to use [Polkadot-JS Apps UI][apps].
 > dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
 > might be the reason.
 
-A detailed guide on doing transfers is available [here](learn-balance-transfers.md).
+A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
 
 ### Receiving a Transfer
 
@@ -207,7 +207,7 @@ account needs to be created first.
 
 To teleport KSM to the Relay chain follow these steps:
 
-- Create an account outside your Ledger. Instructions can be found [here](learn-account-generation.md).
+- Create an account outside your Ledger. Instructions can be found [here](../../learn/learn-account-generation.md).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
   the amount you want to teleport, don't forget take into account the fees for teleporting that will
   be deducted in the next step.

@@ -6,8 +6,8 @@ description: An introductory guide to Polkadot Parachains.
 ---
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](build-parachains-rococo.md) :polkadot }} >
-> {{ kusama: [Rococo page](mirror-build-parachains-rococo.md) :kusama }}.
+> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains-rococo.md) :polkadot }} >
+> {{ kusama: [Rococo page](../build/mirror-build-parachains-rococo.md) :kusama }}.
 
 ![One parachain](../assets/network/one_parachain.png)
 

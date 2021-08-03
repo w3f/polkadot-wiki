@@ -15,7 +15,7 @@ No Promises.
 On Kusama you can:
 
 - Explore the politics. Campaign as a councillor or vote for new runtime proposals using
-  [Democracy](maintain-guides-democracy.md).
+  [Democracy](../../maintain/maintain-guides-democracy.md).
 - Hone your validator set-up. The minimum requirement for staking as a validator on Kusama is much
   lower than it is expected for Polkadot. There are also programs in place such as [Thousand
   Validators][thousand validators] to help community validators rise the ranks.

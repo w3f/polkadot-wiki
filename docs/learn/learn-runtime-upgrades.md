@@ -72,13 +72,13 @@ timely manner, somethings to keep an eye out on is updating your parsing logic a
 changes to the available RPC clients, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
-### For [Nominators](maintain-guides-how-to-nominate-polkadot.md)
+### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
 Runtime upgrades don't require any actions by a nominator, though, it is always encouraged to keep
 up-to-date and participate with the latest runtime upgrade motions and releases, while keeping an
 eye on how the nodes on the network are reacting to a new upgrade.
 
-### For [Wallets](build-wallets.md)
+### For [Wallets](../build/build-wallets.md)
 
 Wallets should look out for updates to the transaction lifecycle, such as tx broadcasting. An
 example would be constructing a transaction with a new spec, "n", but broadcasting it with a spec

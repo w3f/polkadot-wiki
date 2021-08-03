@@ -7,14 +7,14 @@ sidebar_label: Participate in Democracy
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the
 [council](maintain-guides-how-to-join-council.md) and the
-[technical committee](learn-governance.md#technical-committee).
+[technical committee](../learn/learn-governance.md#technical-committee).
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
 tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to
 the public referenda table where it can be voted upon. Voters who are willing to lock up their
 tokens for a greater duration of time can do so and get their vote amplified. For more details on
-the governance system please see [here](learn-governance.md).
+the governance system please see [here](../learn/learn-governance.md).
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Democracy module as it's implemented in Kusama.
@@ -164,7 +164,7 @@ your transaction and wait for it to be included in a block.
 
 ## Unlocking Locked Tokens
 
-Like [vesting](learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are unlocked
+Like [vesting](../learn/learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are unlocked
 lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds
 available again after the lock expires. Unbonding is another term you hear a lot in Polkadot, it
 means withdrawing your DOT that was used in staking. To know more about it, please see
@@ -273,7 +273,7 @@ pallet, and you will specify the index of the referendum that is being voted, th
 "Aye" for approval or "Nay" for rejection), and the conviction, just like a normal vote.
 
 For more material on adding and removing Governance proxies, as well as other types, please see the
-[Proxy page](learn-proxies.md).
+[Proxy page](../learn/learn-proxies.md).
 
 ## Interpreting On-Chain Voting Data
 

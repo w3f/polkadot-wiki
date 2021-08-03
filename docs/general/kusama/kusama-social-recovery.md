@@ -138,7 +138,7 @@ The recovery process is now complete and successful.
 > Note: There is still one possible way to recover the account without going through the recovery
 > process. That is by using the `Root` origin. However, in order to use root permissions, you will
 > need to either go through the council or submit a public proposal. To learn more about governance,
-> see [here](learn-governance.md).
+> see [here](../../learn/learn-governance.md).
 
 ## Further Reading
 

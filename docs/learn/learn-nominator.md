@@ -17,7 +17,7 @@ generate.
 
 While your DOT are staked by nominating a validator, they are 'locked' (bonded). You can receive new
 DOT in your account but you cannot stake as validator or transfer DOT away from your account. You
-can [un-nominate at any time](maintain-guides-how-to-unbond.md) to stop staking your funds. Keep in
+can [un-nominate at any time](../maintain/maintain-guides-how-to-unbond.md) to stop staking your funds. Keep in
 mind that the un-nomination is effective in the next era, and that un-nominating does not
 automatically unbond your funds. There is an unbonding period of 7 days on Kusama and 28 days on
 Polkadot before bonded funds can be transferred after issuing an unbond transaction.
@@ -26,7 +26,7 @@ Polkadot before bonded funds can be transferred after issuing an unbond transact
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your nominations
+[this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your nominations
 will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](../assets/staking/polkadotjs_nominator_account.png)
@@ -126,7 +126,7 @@ interested in filtering out.
 - **Single from operator** - Do not show groups of validators run by a single operator.
 - **No 20%+ comm** - Do not show any validators with a commission of 20% or higher.
 - **No at capacity** - Do not show any validators who are currently operating
-  [at capacity](glossary.md#capacity) (i.e., could potentially be oversubscribed).
+  [at capacity](../general/glossary.md#capacity) (i.e., could potentially be oversubscribed).
 - **Recent payouts** - Only show validators that have recently caused a
   [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
@@ -165,9 +165,9 @@ etc.).
 ### Avoiding Oversubscribed Validators
 
 If you are not nominating with a large number of DOTs, you should try to avoid
-[oversubscribed](glossary.md#oversubscribed) validators. It is not always easy to calculate if the
+[oversubscribed](../general/glossary.md#oversubscribed) validators. It is not always easy to calculate if the
 validator selected will be oversubscribed in the next session; one way to avoid choosing potentially
-oversubscribed validators is to filter out any that are [at capacity](glossary.md#capacity) on the
+oversubscribed validators is to filter out any that are [at capacity](../general/glossary.md#capacity) on the
 Targets page.
 
 Finally, if you have a very small amount of DOTs, you may not be able to have your nomination fit
@@ -188,7 +188,7 @@ details.
 
 ### Guides
 
-- [Be a Nominator (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Guide on nominating on
+- [Be a Nominator (Polkadot)](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Guide on nominating on
   the Kusama canary network.
-- [Stop Being a Nominator (all networks)](maintain-guides-how-to-unbond.md) - Guide on stopping
+- [Stop Being a Nominator (all networks)](../maintain/maintain-guides-how-to-unbond.md) - Guide on stopping
   nominations and withdrawing tokens.

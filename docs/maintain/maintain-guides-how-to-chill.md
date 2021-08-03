@@ -66,4 +66,4 @@ For instance, let us consider a scenario where the minimum staking requirement f
 
 [chill extrinsic]: https://substrate.dev/rustdocs/latest/pallet_staking/pallet/enum.Call.html#variant.chill
 
-[accounts]: learn-staking.md#accounts
+[accounts]: ../learn/learn-staking.md#accounts

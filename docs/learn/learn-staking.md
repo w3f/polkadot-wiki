@@ -69,7 +69,7 @@ For each validator pool, we keep a list of nominators with the associated stakes
 The general rule for rewards across validator pools is that two validator pools get paid essentially
 the **same amount of tokens** for equal work, i.e. they are NOT paid proportional to the stakes in
 each pool. There is a probabilistic component to staking rewards in the form of
-[era points](maintain-guides-validator-payout.md/#era-points) and
+[era points](../maintain/maintain-guides-validator-payout.md/#era-points) and
 [tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
 
 Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's
@@ -110,7 +110,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual
   value, which fluctuates, but merely an assumption for purposes of this example; to understand how
   the actual minimal stake is calculated, see
-  [here](faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
+  [here](../general/faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
 |               | **A - Validator Pool** |                             |         |
 | :-----------: | :--------------------: | :-------------------------: | :-----: |
@@ -289,7 +289,7 @@ Validators should have a well-architected network infrastructure to ensure the n
 reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
-available [here](maintain-guides-secure-validator.md).
+available [here](../maintain/maintain-guides-secure-validator.md).
 
 ### GRANDPA Equivocation
 
@@ -365,7 +365,7 @@ rewards will be calculated four times per day on Kusama and once per day on Polk
 Rewards are calculated based on era points, which have a probabilistic component. In other words,
 there may be slight differences in your rewards from era to era, and even amongst validators in the
 active set at the same time. These variations should cancel out over a long enough timeline. See the
-page on [Validator Payout Guide](maintain-guides-validator-payout.md) for more information on how
+page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md) for more information on how
 these are calculated.
 
 In order to be paid your staking rewards, someone must claim them for each validator that you
@@ -418,7 +418,7 @@ using the Extrinsics tab (`Developer -> Extrinsics -> Staking -> Bond`) you can 
 "None", effectively burning them.
 
 For specific details about validator payouts, please see
-[this guide](maintain-guides-validator-payout.md).
+[this guide](../maintain/maintain-guides-validator-payout.md).
 
 ## Inflation
 
@@ -474,7 +474,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Validator setup](maintain-guides-secure-validator.md)
+- [Validator setup](../maintain/maintain-guides-secure-validator.md)
 
-[epoch]: glossary.md#epoch
-[how to chill]: maintain-guides-how-to-chill.md
+[epoch]: ../general/glossary.md#epoch
+[how to chill]: ../maintain/maintain-guides-how-to-chill.md

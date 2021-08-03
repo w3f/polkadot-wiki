@@ -31,7 +31,7 @@ required to be deployed onto Polkadot.
 
 With this in mind, we can point to some other implementations of Polkadot. Having different implementations 
 inherently promotes the decentralization of the technology and progresses it in a meaningful way. Other 
-implementations of Polkadot that exist, many of whom have received a [grant](grants.md) from the Web3 Foundation, 
+implementations of Polkadot that exist, many of whom have received a [grant](../general/grants.md) from the Web3 Foundation, 
 are in programming languages like Go, C++, and JavaScript.
 
 As stated in the Soramitsu grant announcement:

@@ -42,7 +42,7 @@ is included in a block you will see a green notification in the top-right corner
 
 ### Keep-Alive Checks
 
-At an [extrinsic](./glossary.md#extrinsic) level, there are two main ways to transfer funds from one
+At an [extrinsic](../general/glossary.md#extrinsic) level, there are two main ways to transfer funds from one
 account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you to
 send DOTs regardless of the consequence; `transfer_keep_alive` will not allow you to send an amount
 that would allow the sending account to be removed due to it going below the existential deposit.
@@ -85,14 +85,14 @@ References may still exist from:
 #### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
-Follow the instructions at [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) to check if
+Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-unbond.md) to check if
 you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 #### Purging Session Keys
 
 If you used this account to set up a validator and you did not purge your keys before unbonding your
 tokens, you need to purge your keys. You can do this by seeing the
-[How to Stop Validating](maintain-guides-how-to-stop-validating.md) page. This can also be checked
+[How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also be checked
 by checking `session.nextKeys` in the chain state for an existing key.
 
 #### Checking for Locks

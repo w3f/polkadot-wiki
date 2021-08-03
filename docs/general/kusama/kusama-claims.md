@@ -20,13 +20,13 @@ For most users, we recommend using the
 since it will allow you to store your encrypted keystore locally.
 
 In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger.md),
-or [Parity Signer](learn-account-generation.md#parity-signer).
+or [Parity Signer](../../learn/learn-account-generation.md#parity-signer).
 
 Another option you may consider using is the Subkey command line utility, which will allow you to
 take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](build-wallets.md). Many of these wallets support generating Kusama
+[Polkadot Wiki Wallets page](../../build/build-wallets.md). Many of these wallets support generating Kusama
 accounts as well.
 
 ### Using Kusama Ledger application
@@ -254,7 +254,7 @@ Polkadot-JS UI and click "Confirm Claim."
 
 At this point you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama
-network such as [governance](learn-governance.md) and [staking](learn-staking.md). During the soft
+network such as [governance](../../learn/learn-governance.md) and [staking](../../learn/learn-staking.md). During the soft
 launch period balance transfers will not be enabled.
 
 ![Claim Step 4](../../assets/kusama/claim/claim-4.png)]

@@ -45,13 +45,13 @@ under control of any centralized authority.
 
 ## Balance Transfers
 
-To enable balance transfers, the community [made a public proposal](maintain-guides-democracy.md)
+To enable balance transfers, the community [made a public proposal](../maintain/maintain-guides-democracy.md)
 for a runtime upgrade that lifted the restriction on balance transfers. Transfer functionality was
 subsequently enabled on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39 UTC.
 
 ## Redenomination
 
-On August 21, 2020, [redenomination](redenomination.md) of DOT, the native token on Polkadot,
+On August 21, 2020, [redenomination](../general/redenomination.md) of DOT, the native token on Polkadot,
 occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality

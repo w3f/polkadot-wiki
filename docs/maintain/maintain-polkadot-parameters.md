@@ -28,7 +28,7 @@ differ from Kusama's._
 | Era      | 24 hours  | 14_400  |
 
 \*_A maximum of one block per slot can be in a canonical chain. Occasionally, a slot will be without
-a block in the chain. Thus, the times given are *estimates*. See [Consensus](learn-consensus.md) for
+a block in the chain. Thus, the times given are *estimates*. See [Consensus](../learn/learn-consensus.md) for
 more details._
 
 ### Governance
@@ -80,4 +80,4 @@ DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or
 Plancks make up a DOT.
 
 The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
-known as \_Denomination Day*. See [Redenomination](redenomination.md) for details.
+known as \_Denomination Day*. See [Redenomination](../general/redenomination.md) for details.

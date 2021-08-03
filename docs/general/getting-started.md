@@ -23,7 +23,7 @@ standard as a "meta-protocol", can autonomously deploy network upgrades. Polkado
 growing needs without the risks of network forks.
 
 > Note: If you haven't heard of Governance before, a great place to start is the
-> [Governance page](learn-governance.md)
+> [Governance page](../learn/learn-governance.md)
 
 By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
@@ -53,26 +53,26 @@ intermediaries and build a trustless infrastructure.
 
 The Polkadot network uses a
 [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
-"[parachains](learn-parachains.md)", allow transactions to be processed in parallel instead of
+"[parachains](../learn/learn-parachains.md)", allow transactions to be processed in parallel instead of
 sequentially. Each parachain in the network has a unique state transition function (STF). Polkadot
 has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as long as a
 chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the
 Polkadot network as a parachain.
 
 Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](learn-availability.md) checks before being added to the
+rigorous [availability and validity](../learn/learn-availability.md) checks before being added to the
 finalized chain. As the Relay Chain provides the security guarantees,
-[collators](learn-collator.md) - full nodes of these parachains - don't have any security
+[collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
 stays up to date with the many transactions that take place.
 
 ![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibility, meaning that
+Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
 transactions can be made between different parachains.
 
-The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain.md) allows parachains to send messages
+The [Cross-Chain Messaging Protocol (XCMP)](../learn/learn-crosschain.md) allows parachains to send messages
 of any type to each other. The shared security and validation logic of the Relay Chain provide the
 environment for trust-free message passing that opens up true interoperability.
 
@@ -150,11 +150,11 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) -
   Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain
   on-stage in 30 minutes using Substrate. (Video)
-- [Community / Ecosystem](community.md) - List of community rooms and channels to talk to others
+- [Community / Ecosystem](../general/community.md) - List of community rooms and channels to talk to others
   about Polkadot.
 - [Sample Applications](#) - Sample applications that are built on or currently being built for
   Polkadot.
-- [Contributing Guide](contributing.md) - Rules for contributing to the wiki.
+- [Contributing Guide](../general/contributing.md) - Rules for contributing to the wiki.
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
   specific errors and problems.
 
@@ -168,14 +168,14 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 [p medium]: https://medium.com/polkadot-network
 [w medium]: https://medium.com/web3foundation
 [ui]: https://polkadot.js.org/apps/
-[account generation]: learn-account-generation.md
-[transfer]: learn-balance-transfers.md
-[nominator]: maintain-guides-how-to-nominate-polkadot.md
-[validator]: maintain-guides-how-to-validate-polkadot.md
-[identity]: learn-identity.md
-[proxy]: learn-proxies.md
-[democracy]: maintain-guides-democracy.md
-[council]: maintain-guides-how-to-join-council.md
-[council voting]: maintain-guides-how-to-vote-councillor.md
-[treasury]: learn-treasury.md
+[account generation]: ../learn/learn-account-generation.md
+[transfer]: ../learn/learn-balance-transfers.md
+[nominator]: ../maintain/maintain-guides-how-to-nominate-polkadot.md
+[validator]: ../maintain/maintain-guides-how-to-validate-polkadot.md
+[identity]: ../learn/learn-identity.md
+[proxy]: ../learn/learn-proxies.md
+[democracy]: ../maintain/maintain-guides-democracy.md
+[council]: ../maintain/maintain-guides-how-to-join-council.md
+[council voting]: ../maintain/maintain-guides-how-to-vote-councillor.md
+[treasury]: ../learn/learn-treasury.md
 [kusama guide]: https://guide.kusama.network/

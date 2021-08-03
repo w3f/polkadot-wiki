@@ -35,7 +35,7 @@ as you convert the format.
 ## Address Generation, Derivation, and Portability
 
 A valid account only requires a private key that can sign on one of the
-[supported curves and signature schemes](build-protocol-info.md#cryptography). Most wallets take
+[supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Most wallets take
 many steps from a mnemonic phrase to account key, which affects the ability to use the same mnemonic
 phrase in multiple wallets. Wallets that use different steps will arrive at a different set of
 addresses from the same mnemonic.
@@ -202,7 +202,7 @@ phone that you are comfortable using only for Parity Signer.
 Hardware wallet integration is possible with Ledger. A full guide is available
 [here](learn-ledger.md).
 
-Alternatively, you might find other wallets on the [Wallet](build-wallets.md) page, but bear in mind
+Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but bear in mind
 that some of these are **unaudited** and are not officially affiliated with Web3 Foundation or the
 Polkadot project unless otherwise stated.
 
@@ -428,7 +428,7 @@ deposit back.
 
 ### Example with Polkadot.JS
 
-For this example, we will be using the [Westend](maintain-networks.md#westend-test-network) testnet
+For this example, we will be using the [Westend](../maintain/maintain-networks.md#westend-test-network) testnet
 and [Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps) to create a 2-of-3 multisig
 address and send a transaction with it.
 
