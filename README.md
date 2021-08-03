@@ -9,7 +9,7 @@
 
 # Polkadot Wiki
 
-<img align="right" src="docs/assets/web3-logo.png" width="550" height="285">
+<img align="right" src="docs/assets/web3-logo.png" width="518" height="285">
 
 <p align="left">
   The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by Web3 Foundation to 
@@ -31,12 +31,25 @@ Both the Polkadot Wiki and the Kusama Guide are built from the source files in t
 After cloning the source locally, you can start the websites with each of these respective commands
 (ensure you run `yarn` at the root of the repository first to install dependencies):
 
+> The site is built using Docusaurus: you may need to install Docusaurus before running 
+> the Wiki locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`. 
+
 ```zsh
 # For the Polkadot Wiki:
 yarn polkadot:start
 # For the Kusama Guide:
 yarn kusama:start
 ```
+
+#### Building IPFS
+
+- Run `yarn kusama:build`
+- Run `yarn polkadot:build`
+
+#### Running GitHub Pages
+
+- Run `yarn kusama:publish-gh-pages`
+- Run `yarn polkadot:publish-gh-pages`
 
 ### Style Guide
 
