@@ -36,6 +36,10 @@ ufw allow 22/tcp
 ufw allow 2435/tcp
 # libp2p port
 ufw deny 30333/tcp
+# default port for HTTP
+ufw deny 9933
+# default port for WS
+ufw deny 9944
 ufw reload
 # double check the firewall rules
 ufw verbose
