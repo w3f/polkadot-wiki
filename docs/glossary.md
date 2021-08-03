@@ -426,6 +426,11 @@ the Governance Council, by a member of the public, or as the result of a previou
 Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOT held)
 and the amount of time they are willing to lock their tokens.
 
+
+## Re-genesis
+
+placeholder for the content
+
 ## Relay chain
 
 The chain that coordinates consensus and communication between parachains (and external chains, via
