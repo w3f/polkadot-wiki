@@ -59,23 +59,12 @@ The `RESULT` is then compared to a _threshold_ defined in the implementation of 
 (specifically, in the Polkadot Host). If the value is less than the threshold, then the validator
 who rolled this number is a viable block production candidate for that slot. The validator then
 attempts to create a block and submits this block into the network along with the previously
-obtained `PROOF` and `RESULT`.
-
-The fishermen - nodes watching the network for collator and validator wrongdoing - will be verifying
-Relay Chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will
-have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for
-them to automatically report cheating validators.
-
-To summarize: under VRF, every validator rolls a number for themselves, checks it against a
-threshold, and produces a block if the random roll is under that threshold. Fishermen who observe
-the network and report bad behavior to verify the validity of these rolls post hoc, reporting any
-cheaters to the system (e.g. someone pretends to be a block producer despite rolling a number over
-the threshold).
+obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it against a threshold, and produces a block if the random roll is under that threshold. 
 
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.
 We clarify how we resolve this issue and make sure that Polkadot block times remain near
-constant-time in the [wiki page on consensus](learn-consensus.md).
+constant-time in the wiki page on [consensus](learn-consensus.md).
 
 ## RANDAO
 

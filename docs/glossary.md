@@ -176,11 +176,6 @@ Chain uses a deterministic finality gadget known as [GRANDPA](#grandpa-finality-
 
 A mechanism that determines finality.
 
-## Fisherman
-
-Nodes that monitor the network for validators or collators who are behaving badly. Fishermen must
-stake a small amount of DOT but can be rewarded greatly if they find bad behavior.
-
 ## Frame
 
 The collection of Substrate-provided pallets (Substrate Runtime Modules).
