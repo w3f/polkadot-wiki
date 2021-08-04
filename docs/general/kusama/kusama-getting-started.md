@@ -39,7 +39,7 @@ as well.
 [create-account]: kusama-claims.md
 [endpoints]: kusama-endpoints.md
 [tokens]: https://claim.kusama.network/
-[validator]: ../../mirror-maintain-guides-how-to-validate-kusama.md
-[nominator]: ../../mirror-maintain-guides-how-to-nominate-kusama.md
+[validator]: ../../maintain/kusama/mirror-maintain-guides-how-to-validate-kusama.md
+[nominator]: ../../maintain/kusama/mirror-maintain-guides-how-to-nominate-kusama.md
 [polkadot wiki]: https://wiki.polkadot.network/
 [polkadot-builders]: ../../build/build-index.md
