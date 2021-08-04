@@ -55,7 +55,7 @@ const mirrored_maintain_kusama = [
 // Mirror general docs
 for (const file of mirrored_general) {
   const doc = "./docs/general/" + file + ".md";
-  const mirror = "./docs/mirror-" + file + ".md";
+  const mirror = "./docs/general/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
@@ -76,7 +76,7 @@ for (const file of mirrored_general) {
 // Mirror learn docs
 for (const file of mirrored_learn) {
   const doc = "./docs/learn/" + file + ".md";
-  const mirror = "./docs/mirror-" + file + ".md";
+  const mirror = "./docs/learn/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
@@ -97,7 +97,7 @@ for (const file of mirrored_learn) {
 // Mirror build docs
 for (const file of mirrored_build) {
   const doc = "./docs/build/" + file + ".md";
-  const mirror = "./docs/mirror-" + file + ".md";
+  const mirror = "./docs/build/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
@@ -118,7 +118,7 @@ for (const file of mirrored_build) {
 // Mirror maintain docs
 for (const file of mirrored_maintain) {
   const doc = "./docs/maintain/" + file + ".md";
-  const mirror = "./docs/mirror-" + file + ".md";
+  const mirror = "./docs/maintain/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
@@ -139,7 +139,7 @@ for (const file of mirrored_maintain) {
 // Mirror kusama maintain docs
 for (const file of mirrored_maintain_kusama) {
   const doc = "./docs/maintain/kusama/" + file + ".md";
-  const mirror = "./docs/mirror-" + file + ".md";
+  const mirror = "./docs/maintain/kusama/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }
