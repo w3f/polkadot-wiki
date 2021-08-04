@@ -384,7 +384,7 @@ Notice that some extrinsics do not have a signature. These are
 
 ### Submitting a Transaction
 
-Submit a serialized transaction using the `tx` endpoint with an HTTP POST request.
+Submit a serialized transaction using the `transaction` endpoint with an HTTP POST request.
 
 ```python
 import requests
