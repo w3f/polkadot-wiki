@@ -21,28 +21,25 @@ import fs from "fs";
 // user guide.
 const mirrored = [
   "build-build-with-polkadot",
-  "learn/learn-identity",
-  "learn/learn-balance-transfers",
-  "general/ens",
-  "learn/learn-governance",
-  "learn/learn-treasury",
-  "learn/learn-registrar",
-  "maintain/kusama/maintain-guides-how-to-nominate-kusama",
-  "maintain/kusama/maintain-guides-how-to-validate-kusama",
-  "maintain/maintain-guides-how-to-stop-validating",
-  "maintain/maintain-errors",
-  "general/thousand-validators",
-  "learn/learn-auction",
-  "learn/learn-parachains",
-  "learn/learn-parathreads",
-  "learn/learn-crowdloans",
-  "build/build-parachains-rococo",
+  "learn-identity",
+  "learn-balance-transfers",
+  "ens",
+  "learn-governance",
+  "learn-treasury",
+  "learn-registrar",
+  "maintain-guides-how-to-nominate-kusama",
+  "maintain-guides-how-to-validate-kusama",
+  "maintain-guides-how-to-stop-validating",
+  "maintain-errors",
+  "thousand-validators",
+  "learn-auction",
+  "learn-parachains",
+  "learn-parathreads",
+  "learn-crowdloans",
+  "build-parachains-rococo",
 ];
 
 for (const file of mirrored) {
-
-  // Create the mirrored file.
-
   const doc = "./docs/" + file + ".md";
   const mirror = "./docs/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {

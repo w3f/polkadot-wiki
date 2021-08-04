@@ -226,7 +226,7 @@ module on polkadot.js.org, which you can test on the Rococo testnet
 [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/crowdloan).
 This issues a special transaction that locks your funds until the parachain slot lease period ends.
 You can learn more about crowdloans [here](https://kusama.network/auctions) and on our
-[wiki](mirror-learn-crowdloans.md).
+[wiki](../mirror-learn-crowdloans.md).
 
 A legitimate team will never ask you to send them funds in order to participate in a crowdloan. That
 being said, some teams have been doing token sales or swaps in an attempt to get a head start in

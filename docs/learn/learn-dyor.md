@@ -298,9 +298,9 @@ its very early stages.
 
 ## Crowdloans
 
-With the recent launch of [parachains](mirror-learn-parachains.md) on Kusama, many projects that aim
-to become a parachain launched a [crowdloan](mirror-learn-crowdloans.md) to gather the necessary
-funds to participate in the [parachain auctions](mirror-learn-auction.md). But with all the buzz
+With the recent launch of [parachains](../mirror-learn-parachains.md) on Kusama, many projects that aim
+to become a parachain launched a [crowdloan](../mirror-learn-crowdloans.md) to gather the necessary
+funds to participate in the [parachain auctions](../mirror-learn-auction.md). But with all the buzz
 around the Kusama parachain launch and the imminent Polkadot launch, many scams may also surface.
 So, crowdloans need their own section to make sure that you're participating safely.
 
