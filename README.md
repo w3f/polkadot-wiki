@@ -58,14 +58,22 @@ Use the style guide from the
 
 #### Formatting
 
-Use [Prettier](https://prettier.io/) to format markdown pages. To run Prettier on the `docs` folder,
+Use [pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
+as a pre-commit formatting tool.
+
+There is an automatic `pretty-quick` check that occurs when you want formatting
+on your changed/staged files.
+
+To run manually: ` npx pretty-quick --staged`
+
+To format markdown pages. To run Prettier on the `docs` folder,
 run:
 
 ```bash
 npx prettier --write ./docs/
 ```
 
-There is a
+There is an automatic `pretty-quick` check that occurs when you want an entire file formatting on your changed/staged files.
 
 ### Static Site Generator
 
