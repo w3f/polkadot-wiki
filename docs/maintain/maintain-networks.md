@@ -11,7 +11,7 @@ to connect to and join.
 
 ## Polkadot Networks
 
-To connect to a Polkadot network please follow the [instructions](maintain-sync.md) for installing
+To connect to a Polkadot network please follow the [instructions](maintain-sync.mdx) for installing
 the Polkadot executable.
 
 ### Polkadot Mainnet

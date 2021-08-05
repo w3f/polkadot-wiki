@@ -11,7 +11,7 @@ guides to set up a node and run the network.
 
 - [Networks Guide](maintain-networks.md) - A list of the available Polkadot networks that you can
   connect to with a node.
-- [Set up a Full Node](maintain-sync.md) - Get up and started by syncing a full node for the Kusama
+- [Set up a Full Node](maintain-sync.mdx) - Get up and started by syncing a full node for the Kusama
   network. The steps in the guide will broadly apply also to any Substrate-based network (like
   Polkadot).
 - [Set up WSS using Nginx](maintain-wss.md) - Set up a Secure WebSockets server for your node's
@@ -27,7 +27,7 @@ guides to set up a node and run the network.
   links.
 - [Nomination Guide (Polkadot)](maintain-guides-how-to-nominate-polkadot.md) - Walkthrough on how to
   nominate on the Polkadot network.
-- [Nomination Guide (Kusama)](maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how to
+- [Nomination Guide (Kusama)](kusama/maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how to
   nominate on the Kusama canary network.
 - [How to stop being a Nominator](maintain-guides-how-to-unbond.md) - Guide on how to stop
   nominating.
@@ -39,7 +39,7 @@ guides to set up a node and run the network.
   calculated and paid.
 - [Validation Guide (Polkadot)](maintain-guides-how-to-validate-polkadot.md) - Walkthrough on how to
   validate on the Polkadot network.
-- [Validation Guide (Kusama)](maintain-guides-how-to-validate-kusama.md) - Walkthrough on how to
+- [Validation Guide (Kusama)](kusama/maintain-guides-how-to-validate-kusama.md) - Walkthrough on how to
   validate on the Kusama canary network.
 - [Using systemmd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
   with the Validator node.

@@ -43,7 +43,7 @@ There is no central authority that decides on validators, so there is not per se
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
 on how to do this you can consult the
-[Kusama validator guide](../maintain/maintain-guides-how-to-validate-kusama.md) on validating for Kusama or the
+[Kusama validator guide](../maintain/kusama/maintain-guides-how-to-validate-kusama.md) on validating for Kusama or the
 [Polkadot validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md) for validating on Polkadot.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
@@ -55,7 +55,7 @@ stake-weighted votes and 2) equalize the stake backing each validator as much as
 You will likely want to campaign your validator to the community in order to get more backing. You
 are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
 For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint program called [Thousand Validators](../general/thousand-validators.md) that will nominate
+also run a joint program called [Thousand Validators](thousand-validators.md) that will nominate
 validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
@@ -155,7 +155,7 @@ there will be bridges between Polkadot and most of the other major chains.
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
 August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
 ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
-[redenomination](../general/redenomination.md), the new DOT is called DOT.
+[redenomination](redenomination.md), the new DOT is called DOT.
 
 ### What is the inflation rate of the DOT?
 
@@ -270,7 +270,7 @@ integration between the two applications.
 
 ### What is the minimum amount of KSM / DOT I can have in my account?
 
-Please see information about [Existential Deposits](build-protocol-info.md/#existential-deposit).
+Please see information about [Existential Deposits](../build/build-protocol-info.md).
 
 ### What are the transfer fees for Kusama?
 

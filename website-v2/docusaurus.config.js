@@ -133,7 +133,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/maintain/maintain-index",
+          to: "docs/maintain/maintain/maintain-index",
           label: "Maintain ",
           position: "right",
         },

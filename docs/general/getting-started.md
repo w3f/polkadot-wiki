@@ -84,7 +84,7 @@ environment for trust-free message passing that opens up true interoperability.
 Whether you're a blockchain developer or if you're interested in taking part of
 [Polkadot's community](https://polkadot.network/polkadot-ambassador-program/), Polkadot offers a
 platform for everyone. This wiki offers a place for builders and maintainers to utilize
-[tools](build-tools-index.md) and for brand-new learners to dive into educational material.
+[tools](../build/build-tools-index.md) and for brand-new learners to dive into educational material.
 
 ## Getting Started
 
@@ -150,11 +150,11 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) -
   Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain
   on-stage in 30 minutes using Substrate. (Video)
-- [Community / Ecosystem](../general/community.md) - List of community rooms and channels to talk to others
+- [Community / Ecosystem](community.md) - List of community rooms and channels to talk to others
   about Polkadot.
 - [Sample Applications](#) - Sample applications that are built on or currently being built for
   Polkadot.
-- [Contributing Guide](../general/contributing.md) - Rules for contributing to the wiki.
+- [Contributing Guide](contributing.md) - Rules for contributing to the wiki.
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
   specific errors and problems.
 

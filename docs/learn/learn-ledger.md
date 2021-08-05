@@ -207,7 +207,7 @@ want remove expired democracy locks on an account stored on a Ledger device.
 - Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
 
 __NOTE__: Despite the Polkadot ledger application being compatible with both the Ledger Nano S and the 
-Ledger Nano X, none of the [Democracy](maintain-guides-democracy.md) extrinsics are available in the 
+Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics are available in the 
 light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on 
 the full ledger.
 

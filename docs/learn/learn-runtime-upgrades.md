@@ -58,7 +58,7 @@ releases.
 
 Infrastructure services including but not limited to the following:
 
-- [Validators](maintain-guides-how-to-upgrade.md)
+- [Validators](../maintain/maintain-guides-how-to-upgrade.md)
 - API services
 - Node-as-a-Service (NaaS)
 - General infrastructure management (e.g. block explorers, exchanges)
