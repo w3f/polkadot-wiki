@@ -66,7 +66,8 @@ typings/
 # Emacs backup files
 *~
 
-build
+website-v2/build
+kusama-guide-v2/build
 build-script*
 **/mirror*.md
 .DS_Store
