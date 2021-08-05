@@ -39,24 +39,25 @@ what you need to do as a validator.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of any number of
-candidates that it supports. In the next epoch (lasting 4 hours on Polkadot, 1 hour on Kusama), a
-certain number of validators having the most DOT backing get elected and become active.
+candidates that it supports. In the next era, a certain number of validators having the most DOT
+backing get elected and become active.
 
 There are no particular requirements to become a nominator, though we expect each nominator to
-carefully track the performance and reputation of the validators they back.
+carefully track the performance and reputation of the validators they back. Nominating is _not_ a
+"set and forget" operation.
 
 Once the nomination period ends, the NPoS election mechanism takes the nominators and their
-associated votes as input, and outputs a set of validators of the required size, that maximizes the
-stake backing of any validator, and that makes the stakes backing validators as evenly distributed
-as possible. The objectives of this election mechanism are to maximize the security of the network,
-and achieve fair representation of the nominators. If you want to know more about how NPoS works
-(e.g. election, running time complexity, etc.), please read
+associated votes as input, and outputs a set of validators. This "election solution" has to meet
+certain requirements, such as maximizing the amount of stake to nominate validators and distributing
+the stake backing validators as evenly as possible. The objectives of this election mechanism are to
+maximize the security of the network, and achieve fair representation of the nominators. If you want
+to know more about how NPoS works (e.g. election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
 
 ### 3. Staking Rewards Distribution
 
 To explain how rewards are paid to validators and nominators, we need to consider **validator
-pools**, where a validator pool consists of an elected validator together with the nominators
+pools**. A validator pool consists of the stake of an elected validator together with the nominators
 backing it.
 
 If a nominator `n` with stake `s` backs several elected validators, say `k`, the NPoS election
@@ -67,8 +68,8 @@ with stake `s_i`. In that case, nominator `n` will be rewarded essentially the s
 For each validator pool, we keep a list of nominators with the associated stakes.
 
 The general rule for rewards across validator pools is that two validator pools get paid essentially
-the **same amount of tokens** for equal work, i.e. they are NOT paid proportional to the stakes in
-each pool. There is a probabilistic component to staking rewards in the form of
+the **same amount of tokens** for equal work; they are NOT paid proportional to the stakes in each
+pool. There is a probabilistic component to staking rewards in the form of
 [era points](maintain-guides-validator-payout.md/#era-points) and
 [tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
 
@@ -76,7 +77,8 @@ Within a validator pool, a (configurable) percentage of the reward goes to pay t
 commission fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the
 nominators and validator. Notice in particular that the validator is rewarded twice: once in
 commission fees for validating (if their commission rate is above 0%), and once for nominating
-itself with stake.
+itself with stake. If a validator's commission is set to 100%, no tokens will be paid out to any
+nominations in the validator pool.
 
 To estimate the inflation rate and how many tokens you can get each month as a nominator or
 validator, you can use this [tool](https://www.stakingrewards.com/earn/polkadot/calculate) as a
@@ -194,7 +196,8 @@ responsibilities regarding data availability and [XCMP](learn-crosschain).
 Nominators, on the other hand, have far fewer responsibilities. Those include monitoring their
 validators' performance (uptime), keeping an eye on changing commission rates (a validator can
 change commission at any time), and general health monitoring of their and their validators'
-account. Thus, while not exactly set-it-and-forget-it, a nominator's experience is pretty hands-off.
+account. Thus, while not set-it-and-forget-it, a nominator's experience is relatively hands-off
+compared to a validator's.
 
 ![staking](assets/NPoS/article-2.png)
 
@@ -219,8 +222,8 @@ legitimate slashing, it moves tokens away from malicious validators to those bui
 through the normal Treasury process.
 
 Validator pools with larger total stake backing them will get slashed more harshly than less popular
-ones, so we encourage nominators to shift their nominations to less popular validators to reduce the
-possible losses.
+ones, so we encourage nominators to shift their nominations to less popular validators to reduce
+their possible losses.
 
 It is important to realize that slashing only occurs for active validations for a given nominator,
 and slashes are not mitigated by having other inactive or waiting nominations. They are also not
@@ -255,11 +258,13 @@ unapplied, a governance proposal can be made to reverse it during this period (7
 days on Polkadot). After the grace period, the slashes are applied.
 
 The following levels of offence are
-[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for specific
-slash amounts, see the equations in the section below):
+[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html). However, these
+particular levels are not implemented or referred to in the code or in the system; they are meant as
+guidelines for different levels of severity for offences. To understand how slash amounts are
+calculated, see the equations in the section below.
 
-- Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch][]. No slashing, only
-  [_chilling_](#chilling).
+- Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch][]. Generally no
+  slashing, only [_chilling_](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the
   stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
@@ -279,17 +284,20 @@ offline during the epoch, slashing may occur.
 
 Here is the formula for calculation:
 
-    Let x = offenders, n = total no. validators
+    Let x = offenders, n = total no. validators in the active set
 
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
+
+Let us run through a few examples to understand this equation. In all of the examples, assume that
+there are 100 validators in the active set.
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
 Validators should have a well-architected network infrastructure to ensure the node is running to
-reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
-nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
-and being slashed for equivocation - see below). A comprehensive guide on validator setup is
-available [here](maintain-guides-secure-validator.md).
+reduce the risk of being slashed or chilled. A high availability setup is desirable, perhaps with
+backup nodes that kick in **only once the original node is verifiably offline** (to avoid
+double-signing and being slashed for equivocation - see below). A comprehensive guide on validator
+setup is available [here](maintain-guides-secure-validator.md).
 
 ### GRANDPA Equivocation
 
@@ -299,37 +307,59 @@ A validator signs two or more votes in the same round on different chains.
 
 A validator produces two or more blocks on the Relay Chain in the same time slot.
 
-GRANDPA and BABE equivocation slashing penalty is calculated as below:
+Both GRANDPA and BABE equivocation use the same formula for calculating the slashing penalty:
 
-    Let x = offenders, n = total no. validators
+    Let x = offenders, n = total no. validators in active set
 
     Min( (3 * x / n )^2, 1)
 
+As an example, assume that there are 100 validators in the active set, and one of them equivocates
+in a slot (for our purposes, it does not matter whether it was a BABE or GRANDPA equivocation). This
+is unlikely to be an attack on the network, but much more likely to be a misconfiguration of a
+validator. The penalty would be Min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% slash for that
+validator pool (i.e., all stake held by the validator and its nominators).
+
+Now assume that there is a group runnning several validators, and all of them have an issue in the
+same slot. The penalty would be Min((3 _ 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
+equivocate, this is a much more serious offence and possibly indicates a coordinated attack on the
+network, and so the slash will be much greater - Min((3 _ 20 / 100)^2, 1) = 0.36, or a 36% slash on
+all of these validators and their nominators. All slashed validators will also be chilled.
+
+From the example above, the risk in nominating or running many validators in the active set are
+apparent. While rewards grow linearly (two validators will get you approximately twice as many
+staking rewards as one), slashing grows exponentially. A single validator equivocating causes a
+0.09% slash, two validators equivocating does not cause a 0.09 \* 2 = 0.18% slash, but rather a
+0.36% slash - 4x as much as the single validator.
+
 Validators may run their nodes on multiple machines to make sure they can still perform validation
-work in case one of their nodes goes down. It should be noted that if they do not have good
-coordination to manage signing machines, then equivocation is possible.
+work in case one of their nodes goes down, but validator operators should be extremely careful in
+setting these up. If they do not have good coordination to manage signing machines, equivocation is
+possible, and equivocation offences are slashed at much higher rates than equivalent offline
+offences.
 
 If a validator is reported for any one of the offences they will be removed from the validator set
 ([chilled](#chilling)) and they will not be paid while they are out. They will be considered
 inactive immediately and will lose their nominators. They need to re-issue intent to validate and
-gather support from nominators.
+again gather support from nominators.
 
 If you want to know more details about slashing, please look at our
 [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
 ### Chilling
 
-Chilling is the act of removing a validator from the active validator set, also disqualifying them
+Chilling is the act of stepping back from any nominating or validating. It can be done by a
+validator or nominator at any time themselves, taking effect in the next era. It can also specifally
+mean removing a validator from the active validator set by another validator, disqualifying them
 from the set of electable candidates in the next NPoS cycle.
 
-This may be voluntary and validator-initiated, e.g. if there is a planned outage in the validator's
-surroundings or hosting provider, and the validator wants to exit to protect themselves against
-slashing. When voluntary, chilling will keep the validator active in the current session, but will
-move them to the inactive set in the next. The validator will not lose their nominators.
+Chilling may be voluntary and validator-initiated, e.g. if there is a planned outage in the
+validator's surroundings or hosting provider, and the validator wants to exit to protect themselves
+against slashing. When voluntary, chilling will keep the validator active in the current session,
+but will move them to the inactive set in the next. The validator will not lose their nominators.
 
-When used as part of a punishment, being chilled carries an implied penalty of being un-nominated.
-It also disables the validator for the remainder of the current era and removes the offending
-validator from the next election.
+When used as part of a punishment (initiated externally), being chilled carries an implied penalty
+of being un-nominated. It also disables the validator for the remainder of the current era and
+removes the offending validator from the next election.
 
 Polkadot allows some validators to be disabled, but if the number of disabled validators gets too
 large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
@@ -374,7 +404,9 @@ and 21 days on Kusama. For more information on why this is so, see the page on
 [simple payouts](learn-simple-payouts.md).
 
 > WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim
-> them and some of your staking rewards will be lost.
+> them and some of your staking rewards will be lost. Additionally, if the validator unbonds all
+> their own stake, any pending payouts will be lost. Since unbonding takes 28 days on Polkadot,
+> nominators should check if they have pending payouts at least this often.
 
 ### Claiming Rewards
 
@@ -400,22 +432,22 @@ for details.
 
 ```
 
-Validators can create a cut of the reward that is not shared with the nominators. This cut is a
-percentage of the block reward, not an absolute value. After the value gets deducted, the remaining
-portion is based on their staked value and split between the validator and all of the nominators who
-have voted for this validator.
+Validators can create a cut of the reward (a commission) that is not shared with the nominators.
+This cut is a percentage of the block reward, not an absolute value. After the commission gets
+deducted, the remaining portion is based on their staked value and split between the validator and
+all of the nominators who have voted for this validator.
 
 For example, assume the block reward for a validator is 10 DOT. A validator may specify
-`validator_payment = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT
+`validator_commission = 50%`, in which case the validator would receive 5 DOT. The remaining 5 DOT
 would then be split between the validator and their nominators based on the proportion of stake each
 nominator had. Note that validators can put up their own stake, and for this calculation, their
 stake acts just as if they were another nominator.
 
 Rewards can be directed to the same account (controller), to the stash account (and either
-increasing the staked value or not increasing the staked value), or to a completely custom account.
-It is also possible to top-up / withdraw some bonded DOT without having to un-stake everything. By
-using the Extrinsics tab (`Developer -> Extrinsics -> Staking -> Bond`) you can also send rewards to
-"None", effectively burning them.
+increasing the staked value or not increasing the staked value), or to a completely unrelated
+account. By using the Extrinsics tab (`Developer -> Extrinsics -> Staking -> Bond`) you can also
+send rewards to "None", effectively burning them. It is also possible to top-up / withdraw some
+bonded DOT without having to un-stake all staked DOT.
 
 For specific details about validator payouts, please see
 [this guide](maintain-guides-validator-payout.md).
@@ -423,8 +455,8 @@ For specific details about validator payouts, please see
 ## Inflation
 
 DOT is inflationary; there is no maximum number of DOT as in Bitcoin. Inflation is designed to be
-10% in the first year, with validator rewards being a function of amount staked and the remainder
-going to treasury.
+approximately 10% annually, with validator rewards being a function of amount staked and the
+remainder going to treasury.
 
 ![staking](assets/NPoS/staking-participation-rate.png)
 
@@ -442,9 +474,9 @@ The above chart shows the inflation model of the network. Depending on the staki
 the distribution of the inflation to validators/nominators versus the treasury will change
 dynamically to provide incentives to participate (or not participate) in staking.
 
-For instance, all of the inflation would go to the validators/nominators if 50% of all KSM / DOT are
-staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to
-the treasury and effectively reduces staking rewards.
+For instance, assuming that the ideal staking rate is 50%, all of the inflation would go to the
+validators/nominators if 50% of all KSM / DOT are staked. Any deviation from the 50% - positive or
+negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
 
 For those who are interested in knowing more about the design of inflation model for the network,
 please see
@@ -454,7 +486,7 @@ please see
 
 - 10% inflation/year when the network launches
 - 50% targeted active staking
-- ~20% annual return
+- ~20% annual nominal return
 
 ## Why not stake?
 
@@ -464,11 +496,11 @@ please see
 
 ## How many validators does Polkadot have?
 
-Polkadot started with 20 open validator positions and has opened more gradually. The top bound on
-the number of validators has not been determined yet, but should only be limited by the bandwidth
+Polkadot started with 20 open validator positions and has increased gradually to 297. The top bound
+on the number of validators has not been determined yet, but should only be limited by the bandwidth
 strain of the network due to peer-to-peer message passing. The estimate of the number of validators
 that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
-900 validator slots.
+900 validator slots in the active set.
 
 ## Resources
 
