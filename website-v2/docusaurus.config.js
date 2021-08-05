@@ -7,7 +7,8 @@ const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Polkadot Wiki",
-  tagline: "The hub for those interested in learning, building, or running a node on Polkadot.",
+  tagline:
+    "The hub for those interested in learning, building, or running a node on Polkadot.",
   titleDelimiter: "·",
   url: "https://wiki.polkadot.network",
   baseUrl: "/",
@@ -57,7 +58,10 @@ module.exports = {
           path: "../docs",
           sidebarPath: "./sidebars.js",
           routeBasePath: "docs",
-          remarkPlugins: isBuilding || isPublishing ? [injectPlugin({ isPolkadot: true })] : [],
+          remarkPlugins:
+            isBuilding || isPublishing
+              ? [injectPlugin({ isPolkadot: true })]
+              : [],
         },
         theme: {
           customCss: [
@@ -75,10 +79,9 @@ module.exports = {
       {
         redirects: [
           {
-            to: '/',
+            to: "/",
 
-            from: ['/en/latest','/en/'],
-
+            from: ["/en/latest", "/en/"],
           },
         ],
         createRedirects: function (existingPath) {
@@ -89,20 +92,19 @@ module.exports = {
               existingPath.replace("/docs/", "/docs/ru-RU/"),
             ];
           }
-
         },
       },
     ],
   ],
-  plugins: ['remark-docusaurus-tabs'],
-  plugins: ['@docusaurus/theme-live-codeblock'],
+  plugins: ["remark-docusaurus-tabs"],
+  plugins: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
     liveCodeBlock: {
       /**
        * The position of the live playground, above or under the editor
        * Possible values: "top" | "bottom"
        */
-      playgroundPosition: 'bottom',
+      playgroundPosition: "bottom",
     },
   },
   themeConfig: {

@@ -20,10 +20,7 @@ import fs from "fs";
 // List of mirrored files that should be in both the Polkadot wiki and the Kusama
 // user guide.
 
-const mirrored_general = [
-  "ens",
-  "thousand-validators",
-];
+const mirrored_general = ["ens", "thousand-validators"];
 
 const mirrored_learn = [
   "learn-identity",
@@ -37,10 +34,7 @@ const mirrored_learn = [
   "learn-crowdloans",
 ];
 
-const mirrored_build = [
-  "build-build-with-polkadot",
-  "build-parachains-rococo",
-];
+const mirrored_build = ["build-build-with-polkadot", "build-parachains-rococo"];
 
 const mirrored_maintain = [
   "maintain-guides-how-to-stop-validating",

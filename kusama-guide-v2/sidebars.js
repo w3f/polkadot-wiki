@@ -41,7 +41,11 @@ module.exports = {
         {
           type: "category",
           label: "What to Break",
-          items: ["maintain/mirror-maintain-errors", "general/kusama/kusama-bug-bounty", "general/kusama/kusama-adversarial-cheatsheet"],
+          items: [
+            "maintain/mirror-maintain-errors",
+            "general/kusama/kusama-bug-bounty",
+            "general/kusama/kusama-adversarial-cheatsheet",
+          ],
         },
         "general/mirror-ens",
         "general/kusama/kusama-ledger",

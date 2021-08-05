@@ -76,8 +76,9 @@ each pool. There is a probabilistic component to staking rewards in the form of
 the **same amount of tokens** for equal work; they are NOT paid proportional to the stakes in each
 pool. There is a probabilistic component to staking rewards in the form of
 [era points](maintain-guides-validator-payout.md/#era-points) and
->>>>>>> master:docs/learn-staking.md
-[tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
+
+> > > > > > > master:docs/learn-staking.md
+> > > > > > > [tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
 
 Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's
 commission fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the
@@ -310,7 +311,8 @@ reduce the risk of being slashed or chilled. A high availability setup is desira
 backup nodes that kick in **only once the original node is verifiably offline** (to avoid
 double-signing and being slashed for equivocation - see below). A comprehensive guide on validator
 setup is available [here](maintain-guides-secure-validator.md).
->>>>>>> master:docs/learn-staking.md
+
+> > > > > > > master:docs/learn-staking.md
 
 ### GRANDPA Equivocation
 

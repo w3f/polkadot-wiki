@@ -2,7 +2,6 @@
 id: build-pdk
 title: Parachain Development Kits (PDKs)
 sidebar_label: Parachain Development Kits (PDKs)
-
 ---
 
 Parachain development kits (PDKs) are a set of tools that make it easy for developers to create

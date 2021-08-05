@@ -31,7 +31,8 @@ Below are the various types of users at different stages.
 - `Defender` - In every challenge period, one of the members will be randomly selected to defend their membership in the society. The rules for defending the membership are documented [in the rules](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17).
 
 ## Procedure
-  Remember to take a look at the [rules](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) first. And since those rules are not enforced entirely on-chain, it is recommended to join the [Kappa Sigma Mu Lounge](https://app.element.io/#/room/!BUmiAAnAYSRGarqwOt:matrix.parity.io) to ask any questions if anything is unclear.
+
+Remember to take a look at the [rules](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) first. And since those rules are not enforced entirely on-chain, it is recommended to join the [Kappa Sigma Mu Lounge](https://app.element.io/#/room/!BUmiAAnAYSRGarqwOt:matrix.parity.io) to ask any questions if anything is unclear.
 
 ### 1. Bid Phase
 
@@ -48,13 +49,13 @@ Once you have submitted the transaction, your bid will be shown on the [Society 
 You can find an existing member to place a bid on your behalf if you do not have KSM and you are willing to give them a tip. An existing member can submit a `vouch` transaction through the Extrinsics page.
 
 > vouch(who,value,tip)
-> 
+>
 > who - The user you are vouching for
-> 
+>
 > value - The value that the user would like to get when joining the society
-> 
+>
 > tip - Fees you get
-> 
+>
 > Note: The final value that the candidate will get = (value - tip)
 
 ![Society Dashboard](assets/society/vouch.jpg)
@@ -67,10 +68,10 @@ Bids selected in this phase will be voted on by the existing members to decide w
 
 A - Accept, R - Reject, S - Skeptic
 
-| Member   | 1 | 2 | 3 | 4 | 5 |
-| -------- | - | - | - | - | - |
-| Vote     | A | A | A | R | S |
-| Selected |   |   | X |   |   |
+| Member   | 1   | 2   | 3   | 4   | 5   |
+| -------- | --- | --- | --- | --- | --- |
+| Vote     | A   | A   | A   | R   | S   |
+| Selected |     |     | X   |     |     |
 
 In this example, a candidate will be approved to join the society since member 3 was selected as a final voting outcome. A number of members will also be randomly chosen as "skeptics" to vote for the candidates during the rotation period.
 

@@ -33,8 +33,6 @@ baked into its specific model. As the Polkadot ecosystem develops and oracle par
 appear, this article will be updated with a comparison of the different solutions and the benefits
 and drawbacks that each provide.
 
-[schellingcoin]:
-  https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/
+[schellingcoin]: https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/
 [chainlink]: https://polkadot.network/chainlink-reaches-milestone-with-polkadot/
-[feed pallet]:
-  https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md
+[feed pallet]: https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md

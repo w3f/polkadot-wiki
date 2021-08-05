@@ -20,7 +20,7 @@ The Polkadot extrinsic format is:
 [ address (1/3/5/9/33-bytes, dependent on first byte), index (4-bytes), call (dynamic-length), signature on *original* fields (64 bytes) ]
 ```
 
-The *original* fields refer to the following from the old extrinsic format:
+The _original_ fields refer to the following from the old extrinsic format:
 
 ```
 [ account-id (32-bytes), index (4-bytes), call (dynamic-length) ]

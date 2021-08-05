@@ -262,5 +262,4 @@ right corner and the DOT will be in your account.
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
 [claims app]: https://polkadot.js.org/apps/#/claims
-[claims support]:
-  https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
+[claims support]: https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io

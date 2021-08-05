@@ -4,30 +4,30 @@ title: How to use Polkadot Validator Setup
 sidebar_label: How to use Polkadot Validator Setup
 ---
 
-# Polkadot Validator Setup 
+# Polkadot Validator Setup
 
-The following guide will walk you through using Web3 Foundation's [polkadot validator setup][] to 
-offer a potential setup for your validator that aims to prevent some types of potential attacks 
-at the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and, 
+The following guide will walk you through using Web3 Foundation's [polkadot validator setup][] to
+offer a potential setup for your validator that aims to prevent some types of potential attacks
+at the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and,
 if you're using another Substrate-based chain, it should work with some tweaks.
 
-> NOTE: This setup should not be assumed to include the best security practices. It is up to 
+> NOTE: This setup should not be assumed to include the best security practices. It is up to
 > you to add additional security hardening.
 
-> Also, the current version of polkadot validator setup doesn't allow for the creation and 
+> Also, the current version of polkadot validator setup doesn't allow for the creation and
 > configuration of sentry nodes.
 
 There are two ways that the setup can be configured:
 
-1. **Platform & Application Layer** which allows for configuring the credentials for 
-   infrastructure providers, then executes the Terraform process to automatically deploy 
-   the required machines (Platform Layer) and setup the Application Layer. This configuration 
+1. **Platform & Application Layer** which allows for configuring the credentials for
+   infrastructure providers, then executes the Terraform process to automatically deploy
+   the required machines (Platform Layer) and setup the Application Layer. This configuration
    uses [Terraform](https://www.terraform.io/) for defining and managing your infrastructure.
 
-2. **Application Layer** which allows for setting up Debian-based machines, where you only 
-   need basic SSH access and configure those in an inventory. The Ansible scripts will setup 
-   the entire Application Layer. This configuration uses [Ansible](https://www.ansible.com/) 
-   as an automation tool for setting up the VPN, Firewall, and the validator node. It supports 
+2. **Application Layer** which allows for setting up Debian-based machines, where you only
+   need basic SSH access and configure those in an inventory. The Ansible scripts will setup
+   the entire Application Layer. This configuration uses [Ansible](https://www.ansible.com/)
+   as an automation tool for setting up the VPN, Firewall, and the validator node. It supports
    a few different cloud providers such as AWS, Microsoft Azure, GCP, and Packet.
 
 > Please file an [issue][] if you would like to make a feature request or report a bug for this setup.

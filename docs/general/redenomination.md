@@ -145,5 +145,4 @@ assistance in making sure your software is compatible with the redenomination.
 [blog 1]: https://polkadot.network/results-of-dot-redenomination-referendum/
 [blog 2]: https://polkadot.network/the-first-polkadot-vote/
 [blog 3]: https://polkadot.network/the-results-are-in/
-[ecosystem guide]:
-  https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#
+[ecosystem guide]: https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#

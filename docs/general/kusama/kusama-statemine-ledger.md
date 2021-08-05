@@ -221,7 +221,6 @@ If you need support please send an email to [support@kusama.network](mailto:supp
 or visit [our Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
-[apps]:
-  https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
+[apps]: https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
 [prerelease instructions]: https://github.com/Zondax/ledger-statemine
 [releases page]: https://github.com/Zondax/ledger-statemine/releases

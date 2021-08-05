@@ -78,7 +78,7 @@ parachain state data corresponds to Polkadot's security assumption in regard to 
 
 ## Fishermen: Deprecated
 
-The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a different role in relation to the Polkadot network. Instead of packaging the state transitions and producing the next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state transitions are included. 
+The idea of Fishermen is that they are full nodes of parachains, like collators, but perform a different role in relation to the Polkadot network. Instead of packaging the state transitions and producing the next parachain blocks as collators do, fishermen will watch this process and ensure no invalid state transitions are included.
 
 **Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation, depsite previous proposals in the [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
 
@@ -92,5 +92,4 @@ The idea of Fishermen is that they are full nodes of parachains, like collators,
 [reed solomon]: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
 [pruning]: https://example.org
 [life of]: https://polkadot.network/the-path-of-a-parachain-block/
-[anv paper]:
-  https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV
+[anv paper]: https://github.com/w3f/research/tree/85cd4adfccb7d435f21cd9fd249cd1b7f5167537/docs/papers/AnV

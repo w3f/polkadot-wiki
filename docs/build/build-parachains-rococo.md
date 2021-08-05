@@ -5,26 +5,26 @@ sidebar_label: Rococo Parachain Test Network
 ---
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing
-parachains. Unlike other testnets, Rococo allows parachains to interact with the [Relay Chain](../general/glossary.md##relay-chain) 
-rather than running in isolation. Rococo utilizes [Cumulus](build-cumulus.md) and HRMP (Horizontal Relay-routed Message 
-Passing), which is also known as [XCMP-lite](../learn/learn-crosschain.md##xcmp-lite(hrmp)), in order to send transfers and messages 
+parachains. Unlike other testnets, Rococo allows parachains to interact with the [Relay Chain](../general/glossary.md##relay-chain)
+rather than running in isolation. Rococo utilizes [Cumulus](build-cumulus.md) and HRMP (Horizontal Relay-routed Message
+Passing), which is also known as [XCMP-lite](<../learn/learn-crosschain.md##xcmp-lite(hrmp)>), in order to send transfers and messages
 between parachains and the Relay Chain.
 
-Messages are sent to the Relay Chain -> then from the Relay Chain to the desired parachain. Rococo 
-currently runs three test system parachains: Tick, Trick, and Track, as well as several externally developed 
+Messages are sent to the Relay Chain -> then from the Relay Chain to the desired parachain. Rococo
+currently runs three test system parachains: Tick, Trick, and Track, as well as several externally developed
 parachains.
 
 ## What Parachains are on Rococo Now?
 
 You can view the list of included parachains on
-[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains), 
+[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains),
 and a list of
 [proposed parachains](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
 
 ## Obtaining ROC
 
-ROC is the native testnet token on the Rococo testnet, and are available in the 
-[Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org) channel on Matrix. 
+ROC is the native testnet token on the Rococo testnet, and are available in the
+[Rococo Faucet](https://app.element.io/#/room/#rococo-faucet:matrix.org) channel on Matrix.
 To receive ROC tokens, send the following command on the channel:
 
 ```

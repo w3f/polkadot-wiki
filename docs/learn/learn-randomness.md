@@ -59,7 +59,7 @@ The `RESULT` is then compared to a _threshold_ defined in the implementation of 
 (specifically, in the Polkadot Host). If the value is less than the threshold, then the validator
 who rolled this number is a viable block production candidate for that slot. The validator then
 attempts to create a block and submits this block into the network along with the previously
-obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it against a threshold, and produces a block if the random roll is under that threshold. 
+obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it against a threshold, and produces a block if the random roll is under that threshold.
 
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.

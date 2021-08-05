@@ -49,7 +49,7 @@ by storing in a sealed plastic bag to prevent water damage, storing it in a fire
 it in metal, etc.) It is recommended that you store multiple copies of the seed in geographically
 separate locations (e.g., one in your home safe and one in a safety deposit box at your bank).
 
-You should 
+You should
 **not store your seed on any kind of computer that has or may have access to the internet in the future.**
 
 ### Storing your account's JSON file

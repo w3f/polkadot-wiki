@@ -8,9 +8,9 @@ sidebar_label: Polkadot 实现
 
 [** Parity Polkadot **](https://github.com/paritytech/polkadot) - Rust 客户端由 Parity 与他们在[ Substrate ](https://github.com/paritytech/substrate)上的工作。
 
-[ ** Kagome **](https://github.com/soramitsu/kagome) - 由 [ Soramitsu ](https://github.com/soramitsu) 实现 C++ Polkadot Host 环境 ，他们是日本的数字身份识别公司，之前开发了[ Hyperledger Iroha ](https://iroha.tech)。他们获得了 Web3 基金会的资助，并计划在[ 2019年11月](https://medium.com/web3foundation/w3f-grants-soramitsu-to-implement-polkadot-runtime-environment-in-c-cf3baa08cbe6)发布。他们正在用 C ++ 开发 libp2p 网络层。
+[ ** Kagome **](https://github.com/soramitsu/kagome) - 由 [ Soramitsu ](https://github.com/soramitsu) 实现 C++ Polkadot Host 环境 ，他们是日本的数字身份识别公司，之前开发了[ Hyperledger Iroha ](https://iroha.tech)。他们获得了 Web3 基金会的资助，并计划在[ 2019 年 11 月](https://medium.com/web3foundation/w3f-grants-soramitsu-to-implement-polkadot-runtime-environment-in-c-cf3baa08cbe6)发布。他们正在用 C ++ 开发 libp2p 网络层。
 
-[** Gossamer ** ](https://github.com/ChainSafeSystems/gossamer) - 由[ ChainSafe Systems ](https://github.com/ChainSafeSystems)，23人组成在多伦多的开发团队也正在开发 Eth2.0 Serenity 客户程序。[拨款公告](https://medium.com/web3foundation/w3f-grants-chainsafe-to-implement-polkadot-runtime-environment-in-go-ca4973c9edaf)。
+[** Gossamer ** ](https://github.com/ChainSafeSystems/gossamer) - 由[ ChainSafe Systems ](https://github.com/ChainSafeSystems)，23 人组成在多伦多的开发团队也正在开发 Eth2.0 Serenity 客户程序。[拨款公告](https://medium.com/web3foundation/w3f-grants-chainsafe-to-implement-polkadot-runtime-environment-in-go-ca4973c9edaf)。
 
 [**Polkadot-JS**](https://github.com/polkadot-js) - A JavaScript [client](https://github.com/polkadot-js/client) and tool set developed by [Polkadot-JS](https://polkadot.js.org/).
 

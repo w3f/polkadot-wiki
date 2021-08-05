@@ -4,18 +4,17 @@ title: Web3 Foundation Grants
 sidebar_label: Grants
 ---
 
-The Web3 Foundation offers grants for open source software development and research around Substrate, 
-Polkadot, and Kusama. 
+The Web3 Foundation offers grants for open source software development and research around Substrate,
+Polkadot, and Kusama.
 
 Applications and deliveries are tracked transparently on GitHub and disbursed in BTC, USDT or DAI. However,
-you can also apply in private, get paid out in fiat and seek funding above the regular limits ($30,000 for 
-first-time applications and $100,000 for follow-up ones), if needed. 
+you can also apply in private, get paid out in fiat and seek funding above the regular limits ($30,000 for
+first-time applications and $100,000 for follow-up ones), if needed.
 
-More information regarding requirements, the application process, deliveries, etc., can be found in the 
-[Grants Program README](https://github.com/w3f/Open-Grants-Program). For guidance, there is also a list of 
-[previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/docs/accepted_grant_applications.md) 
+More information regarding requirements, the application process, deliveries, etc., can be found in the
+[Grants Program README](https://github.com/w3f/Open-Grants-Program). For guidance, there is also a list of
+[previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/docs/accepted_grant_applications.md)
 and a list of [frequently asked questions](https://github.com/w3f/Grants-Program/blob/master/docs/faq.md).
-
 
 ## Alternative Funding Sources
 

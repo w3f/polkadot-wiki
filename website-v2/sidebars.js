@@ -150,12 +150,20 @@ module.exports = {
         {
           type: "category",
           label: "Nodes and Dapps",
-          items: ["maintain/maintain-sync", "maintain/maintain-networks", "maintain/maintain-wss", "maintain/maintain-errors"],
+          items: [
+            "maintain/maintain-sync",
+            "maintain/maintain-networks",
+            "maintain/maintain-wss",
+            "maintain/maintain-errors",
+          ],
         },
         {
           type: "category",
           label: "Nominator Guides",
-          items: ["maintain/maintain-guides-how-to-nominate-polkadot", "maintain/maintain-guides-how-to-unbond"],
+          items: [
+            "maintain/maintain-guides-how-to-nominate-polkadot",
+            "maintain/maintain-guides-how-to-unbond",
+          ],
         },
         {
           type: "category",

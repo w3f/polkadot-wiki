@@ -56,11 +56,11 @@ bottom.
 
 1. Stop Validator A.
 1. Perform your system or client upgrade.
-2. Start Validator A and sync the database.
-3. Generate new Session keys in Validator A.
-4. Submit a `set_key` extrinsic from your Controller account with your new Session keys for
+1. Start Validator A and sync the database.
+1. Generate new Session keys in Validator A.
+1. Submit a `set_key` extrinsic from your Controller account with your new Session keys for
    Validator A.
-5. Take note of the Session that this extrinsic was executed in.
+1. Take note of the Session that this extrinsic was executed in.
 
 **Again, it is imperative that Validator B keep running until the next Session.**
 

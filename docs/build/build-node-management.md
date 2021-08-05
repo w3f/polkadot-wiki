@@ -107,7 +107,7 @@ Web3 Foundation maintains [Polkadot Deployer](https://github.com/w3f/polkadot-de
 allows you to create local or remote cloud deployments of Polkadot nodes. See the README for
 instructions.
 
-Validators, see the [validator setup guide](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md) 
+Validators, see the [validator setup guide](../maintain/maintain-guides-how-to-use-polkadot-validator-setup.md)
 for information specific to deploying validator nodes.
 
 ## Monitoring and Telemetry
