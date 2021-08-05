@@ -1,20 +1,5 @@
 {
   "scripts": {
-    "start": "yarn polkadot1:start",
-    "kusama1:start": "yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-start",
-    "kusama1:build": "BUILDING=true; yarn mirror; yarn copy:translations; cd kusama-guide; docusaurus-build; node ./postprocess",
-    "kusama1:inject": "node --experimental-json-modules scripts/inject.mjs --rootDir kusama-guide/build/kusama-guide-hosting",
-    "kusama1:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd kusama-guide; docusaurus-publish",
-    "kusama1:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/kusama-index\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext\" --pdfFormat=\"A4\" --outputPDFFilename=\"kusama-guide/static/kusama-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
-    "kusama1:remove": "node --experimental-json-modules scripts/removeUneeded.mjs ksm",
-    "polkadot1:start": "yarn generateRegistryTable; yarn mirror; cd website; docusaurus-start",
-    "polkadot1:build": "yarn generateRegistryTable; BUILDING=true; cd website; docusaurus-build; node ./postprocess",
-    "polkadot1:inject": "node --experimental-json-modules scripts/inject.mjs --rootDir website/build/polkadot-wiki --node wss://rpc.polkadot.io",
-    "polkadot1:publish-gh-pages": "yarn mirror; PUBLISHING=true; cd website; docusaurus-publish",
-    "polkadot1:pdf": "yarn mr-pdf --initialDocsURL=\"http://localhost:3000/docs/en/getting-started\" --paginationSelector=\".docs-next.button\" --excludeSelectors=\".docs-prevnext,.navigationSlider,#footer\" --pdfFormat=\"A4\" --outputPDFFilename=\"website/static/polkadot-wiki.pdf\" --pdfMargin=\"30, 5, 10, 5\"",
-    "polkadot1:uploadPdf": "node --experimental-json-modules scripts/ipfs-upload-pdf.mjs",
-    "polkadot1:remove": "node --experimental-json-modules scripts/removeUneeded.mjs dot",
-    "mirror1": "node --experimental-json-modules scripts/mirror.mjs",
     "copy:translations": "cp -R website/translated_docs kusama-guide ",
     "publish-gh-pages": "cd website; docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
@@ -48,7 +33,8 @@
     "fetch": "node --experimental-json-modules scripts/fetch.mjs --isPolkadot",
     "mirror": "node --experimental-json-modules scripts/mirror.mjs",
     "crowdin": "crowdin",
-    "docusaurus": "docusaurus"
+    "docusaurus": "docusaurus",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@actions/core": "^1.4.0",
@@ -65,12 +51,14 @@
     "chalk": "^4.1.2",
     "cross-env": "^7.0.3",
     "fs-extra": "^10.0.0",
+    "husky": "^7.0.0",
     "ipfs-http-client": "^51.0.1",
     "katex": "^0.13.13",
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.0.6",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
@@ -83,5 +71,10 @@
     "@docusaurus/theme-live-codeblock": "^2.0.0-beta.4",
     "docusaurus-preset-name": "^1.0.0",
     "remark-docusaurus-tabs": "^0.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
