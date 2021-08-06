@@ -170,13 +170,14 @@ Submit the transaction, and the requested judgement will be cancelled.
 ### Kusama Registrars
 
 There are multiple Registrars on Kusama. Unless no additional information is available here, you must
-reach out those specific registrars individually.
+reach out to specific registrars individually.
 
 - Registrar 0:
   - URL: https://registrar.web3.foundation/
   - Account: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,
   - Fee: 0.04 KSM
 - Registrar 1:
+  - URL: https://registrar.d11d.net/
   - Account: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn,
   - Fee: 0.65 KSM,
 - Registrar 2:
@@ -197,10 +198,20 @@ automatically loaded.
 
 ### Polkadot Registrars
 
-On Polkadot there are two registrars:
+There are multiple Registrars on Polkadot. Unless no additional information is available here, you must
+reach out to specific registrars individually.
 
-- The Web3 Foundation is registrar #0 and available at https://registrar.web3.foundation/.
-- Chevdor is registrar #1.
+- Registrar 0:
+  - URL: https://registrar.web3.foundation/
+  - Account: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,
+  - Fee: 0,
+- Registrar 1:
+  - URL: https://registrar.d11d.net/
+  - Account: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,
+  - Fee: 10 DOT,
+- Registrar 2:
+  - Account: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,
+  - Fee: 0,
 
 ### Requesting Judgement
 
