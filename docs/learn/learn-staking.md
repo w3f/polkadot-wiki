@@ -68,7 +68,6 @@ with stake `s_i`. In that case, nominator `n` will be rewarded essentially the s
 For each validator pool, we keep a list of nominators with the associated stakes.
 
 The general rule for rewards across validator pools is that two validator pools get paid essentially
-<<<<<<< HEAD:docs/learn/learn-staking.md
 the **same amount of tokens** for equal work, i.e. they are NOT paid proportional to the stakes in
 each pool. There is a probabilistic component to staking rewards in the form of
 [era points](../maintain/maintain-guides-validator-payout.md/#era-points) and
@@ -204,7 +203,7 @@ Nominators, on the other hand, have far fewer responsibilities. Those include mo
 validators' performance (uptime), keeping an eye on changing commission rates (a validator can
 change commission at any time), and general health monitoring of their and their validators'
 account. Thus, while not set-it-and-forget-it, a nominator's experience is relatively hands-off
-compared to a validator's.
+compared to a validators.
 
 ![staking](../assets/NPoS/article-2.png)
 
@@ -301,12 +300,10 @@ there are 100 validators in the active set.
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
 Validators should have a well-architected network infrastructure to ensure the node is running to
-<<<<<<< HEAD:docs/learn/learn-staking.md
 reduce the risk of being slashed. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
-=======
 reduce the risk of being slashed or chilled. A high availability setup is desirable, perhaps with
 backup nodes that kick in **only once the original node is verifiably offline** (to avoid
 double-signing and being slashed for equivocation - see below). A comprehensive guide on validator
