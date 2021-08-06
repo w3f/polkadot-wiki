@@ -204,14 +204,14 @@ reach out to specific registrars individually if you want to be judged by those.
 - Registrar 0:
   - URL: https://registrar.web3.foundation/
   - Account: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,
-  - Fee: 0,
+  - Fee: 0 DOT,
 - Registrar 1:
   - URL: https://registrar.d11d.net/
   - Account: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,
   - Fee: 10 DOT,
 - Registrar 2:
   - Account: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,
-  - Fee: 0,
+  - Fee: 0 DOT,
 
 ### Requesting Judgement
 
