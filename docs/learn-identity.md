@@ -169,12 +169,26 @@ Submit the transaction, and the requested judgement will be cancelled.
 
 ### Kusama Registrars
 
-![Showing all registrars](assets/identity/14.jpg)
+There are multiple registrars on Kusama. Unless no additional information is available here, you must
+reach out to specific registrars individually if you want to be judged by those.
 
-The image above reveals there are two registrars on Kusama:
-
-- Registrar 0, FcxNWVy5RESDsErjwyZmPCW6Z8Y3fbfLzmou34YZTrbcraL
-- Registrar 1, Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn
+- Registrar 0:
+  - URL: https://registrar.web3.foundation/
+  - Account: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,
+  - Fee: 0.04 KSM
+- Registrar 1:
+  - URL: https://registrar.d11d.net/
+  - Account: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn,
+  - Fee: 0.65 KSM,
+- Registrar 2:
+  - Account: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7,
+  - Fee: 1 KSM,
+- Registrar 3:
+  - Account: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM,
+  - Fee: 1 KSM,
+- Registrar 4:
+  - Account: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6,
+  - Fee: 0.04 KSM,
 
 To find out how to contact the registrar after the application for judgement or to learn who they
 are, we can check their identity by adding them to our Address Book. Their identity will be
@@ -184,12 +198,20 @@ automatically loaded.
 
 ### Polkadot Registrars
 
-On Polkadot there are two registrars:
+There are multiple registrars on Polkadot. Unless no additional information is available here, you must
+reach out to specific registrars individually if you want to be judged by those.
 
-- Web3 Foundation is registrar #0. The W3F registrar service is available on the Kusama at the
-  moment, follow the guide written [here](learn-registrar.md) on how to use it. The service will be
-  available on the Polkadot shortly.
-- Chevdor is registrar #1.
+- Registrar 0:
+  - URL: https://registrar.web3.foundation/
+  - Account: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,
+  - Fee: 0 DOT,
+- Registrar 1:
+  - URL: https://registrar.d11d.net/
+  - Account: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,
+  - Fee: 10 DOT,
+- Registrar 2:
+  - Account: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,
+  - Fee: 0 DOT,
 
 ### Requesting Judgement
 
