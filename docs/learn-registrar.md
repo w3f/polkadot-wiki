@@ -4,6 +4,10 @@ title: Using W3F Registrar
 sidebar_label: How to use W3F Registrar
 ---
 
+> **Warning**: The beta version of the new registrar service is available at
+> https://registrar.web3.foundation/. The service as described in this guide is currently halted
+> and will be deprecated soon.
+
 An on-chain identity is a good way to build up your reputation and let the community know more about
 you if you plan on running a validator or being a councilor. Web3 Foundation provides a registrar
 service in the Kusama and Polkadot networks that only charges a small fee (0.04 KSM) on Kusama, and
