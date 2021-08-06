@@ -4,8 +4,6 @@ title: DOT
 sidebar_label: DOT
 ---
 
-<!--test-->
-
 ## What is DOT?
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
