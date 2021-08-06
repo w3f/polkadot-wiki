@@ -169,8 +169,8 @@ Submit the transaction, and the requested judgement will be cancelled.
 
 ### Kusama Registrars
 
-There are multiple Registrars on Kusama. Unless no additional information is available here, you must
-reach out to specific registrars individually.
+There are multiple registrars on Kusama. Unless no additional information is available here, you must
+reach out to specific registrars individually if you want to be judged by those.
 
 - Registrar 0:
   - URL: https://registrar.web3.foundation/
@@ -198,8 +198,8 @@ automatically loaded.
 
 ### Polkadot Registrars
 
-There are multiple Registrars on Polkadot. Unless no additional information is available here, you must
-reach out to specific registrars individually.
+There are multiple registrars on Polkadot. Unless no additional information is available here, you must
+reach out to specific registrars individually if you want to be judged by those.
 
 - Registrar 0:
   - URL: https://registrar.web3.foundation/
