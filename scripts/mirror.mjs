@@ -19,29 +19,121 @@ import fs from "fs";
 
 // List of mirrored files that should be in both the Polkadot wiki and the Kusama
 // user guide.
-const mirrored = [
-  "build-build-with-polkadot",
+
+const mirrored_general = ["ens", "thousand-validators"];
+
+const mirrored_learn = [
   "learn-identity",
   "learn-balance-transfers",
-  "ens",
   "learn-governance",
   "learn-treasury",
   "learn-registrar",
-  "maintain-guides-how-to-nominate-kusama",
-  "maintain-guides-how-to-validate-kusama",
-  "maintain-guides-how-to-stop-validating",
-  "maintain-errors",
-  "thousand-validators",
   "learn-auction",
   "learn-parachains",
   "learn-parathreads",
   "learn-crowdloans",
-  "build-parachains-rococo",
 ];
 
-for (const file of mirrored) {
-  const doc = "./docs/" + file + ".md";
-  const mirror = "./docs/mirror-" + file + ".md";
+const mirrored_build = ["build-build-with-polkadot", "build-parachains-rococo"];
+
+const mirrored_maintain = [
+  "maintain-guides-how-to-stop-validating",
+  "maintain-errors",
+];
+
+const mirrored_maintain_kusama = [
+  "maintain-guides-how-to-nominate-kusama",
+  "maintain-guides-how-to-validate-kusama",
+];
+
+// Mirror general docs
+for (const file of mirrored_general) {
+  const doc = "./docs/general/" + file + ".md";
+  const mirror = "./docs/general/mirror-" + file + ".md";
+  if (!fs.existsSync(doc)) {
+    throw new Error(`${doc} doesn't exist!`);
+  }
+
+  const content = fs.readFileSync(doc, "utf8");
+  const mirroredContent = content
+    .split("\n")
+    .map((line) => {
+      if (line.startsWith("id:")) {
+        const [before, after] = line.split(" ");
+        return before + " mirror-" + after;
+      } else return line;
+    })
+    .join("\n");
+
+  fs.writeFileSync(mirror, mirroredContent);
+}
+// Mirror learn docs
+for (const file of mirrored_learn) {
+  const doc = "./docs/learn/" + file + ".md";
+  const mirror = "./docs/learn/mirror-" + file + ".md";
+  if (!fs.existsSync(doc)) {
+    throw new Error(`${doc} doesn't exist!`);
+  }
+
+  const content = fs.readFileSync(doc, "utf8");
+  const mirroredContent = content
+    .split("\n")
+    .map((line) => {
+      if (line.startsWith("id:")) {
+        const [before, after] = line.split(" ");
+        return before + " mirror-" + after;
+      } else return line;
+    })
+    .join("\n");
+
+  fs.writeFileSync(mirror, mirroredContent);
+}
+// Mirror build docs
+for (const file of mirrored_build) {
+  const doc = "./docs/build/" + file + ".md";
+  const mirror = "./docs/build/mirror-" + file + ".md";
+  if (!fs.existsSync(doc)) {
+    throw new Error(`${doc} doesn't exist!`);
+  }
+
+  const content = fs.readFileSync(doc, "utf8");
+  const mirroredContent = content
+    .split("\n")
+    .map((line) => {
+      if (line.startsWith("id:")) {
+        const [before, after] = line.split(" ");
+        return before + " mirror-" + after;
+      } else return line;
+    })
+    .join("\n");
+
+  fs.writeFileSync(mirror, mirroredContent);
+}
+// Mirror maintain docs
+for (const file of mirrored_maintain) {
+  const doc = "./docs/maintain/" + file + ".md";
+  const mirror = "./docs/maintain/mirror-" + file + ".md";
+  if (!fs.existsSync(doc)) {
+    throw new Error(`${doc} doesn't exist!`);
+  }
+
+  const content = fs.readFileSync(doc, "utf8");
+  const mirroredContent = content
+    .split("\n")
+    .map((line) => {
+      if (line.startsWith("id:")) {
+        const [before, after] = line.split(" ");
+        return before + " mirror-" + after;
+      } else return line;
+    })
+    .join("\n");
+
+  fs.writeFileSync(mirror, mirroredContent);
+}
+// Mirror kusama maintain docs
+for (const file of mirrored_maintain_kusama) {
+  const doc = "./docs/maintain/kusama/" + file + ".md";
+  const mirror = "./docs/maintain/kusama/mirror-" + file + ".md";
   if (!fs.existsSync(doc)) {
     throw new Error(`${doc} doesn't exist!`);
   }

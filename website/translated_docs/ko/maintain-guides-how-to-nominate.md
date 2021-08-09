@@ -12,7 +12,7 @@ It has been updated for the Alexander testnet and Polkadot release PoC-4.
 
 We will assume that you will be starting with two fresh accounts. Click [here](learn-staking#accounts) to learn more about what `stash` and `controller` accounts mean.
 
-The first step is to create two accounts by going to the *Accounts* tab on the Polkadot Dashboard and clicking on [*Add account*](https://polkadot.js.org/apps/#/accounts). Make sure to use `stash` and `controller` in the names of your accounts to identify them easily.
+The first step is to create two accounts by going to the _Accounts_ tab on the Polkadot Dashboard and clicking on [_Add account_](https://polkadot.js.org/apps/#/accounts). Make sure to use `stash` and `controller` in the names of your accounts to identify them easily.
 
 ![Creating an account](assets/guides/how-to-nominate/polkadot-dashboard-create-account.jpg)
 
@@ -21,6 +21,7 @@ Once you've created your accounts you will need to acquire some DOTs. See the [D
 ## Nominating
 
 It is now time to setup our nominator. We will do the following:
+
 - Bound the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Select the `controller`. This is the account that will decide when to start or stop nominating.
 
@@ -39,20 +40,20 @@ Once everything is filled properly, click `Bond` and sign the transaction (with 
 
 ## Nominating a validator
 
-Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signaled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
+Go to the _Staking Overview_ tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signaled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
 
 ![Validators](assets/guides/how-to-nominate/validators.png)
 
-Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
+Go back to the _Account Actions_ tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
 
 ![Nominating](assets/guides/how-to-nominate/nominating.jpg)
 
 **Congratulations!** You are now a nominator.
 
-If you return to the *Staking Overview* tab after an era has changed and scroll until you find your validator you should see your own `stash` account appear as one of the nominators.
+If you return to the _Staking Overview_ tab after an era has changed and scroll until you find your validator you should see your own `stash` account appear as one of the nominators.
 
 ![Nominating2](assets/guides/how-to-nominate/nominating2.jpg)
 
 ## How to stop nominating
 
-To stop nominating simply return to the *Account Actions* tab and click the `Stop Nominating` button. Your account will be set to `chill` and at the next era will no longer be nominating to the validator. This may take up to an hour to take effect!
+To stop nominating simply return to the _Account Actions_ tab and click the `Stop Nominating` button. Your account will be set to `chill` and at the next era will no longer be nominating to the validator. This may take up to an hour to take effect!

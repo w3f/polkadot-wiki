@@ -11,7 +11,7 @@ sidebar_label: 维基索引
 ## 想了解更多？
 
 - [浏览维基](learn-introduction)-阅读维基的信息部分。
-- [相关链接](learn-relevant-links)-**有关Polkadot 的综合链接。**
+- [相关链接](learn-relevant-links)-**有关 Polkadot 的综合链接。**
 
 ## 想在 Polkadot 建立？
 

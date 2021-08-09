@@ -4,7 +4,7 @@ title: 社区
 sidebar_label: 社区
 ---
 
-Polkadot社区每天都在壮大。以下是社区频道最重要的链接。请记住，没有任何管理员或主持人不会因任何原因在没有事先联系的情况下欺骗您，任何这样做的人都可能试图欺骗您。
+Polkadot 社区每天都在壮大。以下是社区频道最重要的链接。请记住，没有任何管理员或主持人不会因任何原因在没有事先联系的情况下欺骗您，任何这样做的人都可能试图欺骗您。
 
 ## 一般
 
@@ -15,18 +15,18 @@ Polkadot社区每天都在壮大。以下是社区频道最重要的链接。请
 
 ### 活动
 
-Web3 基金会主办了许多线上和线下的活动。你可以通过[这个Notion Page](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d)来查看我们之前和现在举办的活动。
+Web3 基金会主办了许多线上和线下的活动。你可以通过[这个 Notion Page](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d)来查看我们之前和现在举办的活动。
 
 ## Matrix 聊天
 
-我们整个组织中主要使用[Matrix](https://matrix.org)与社区成员进行沟通。我们最常与Matrix协议进行交互的应用程序是[Element](https://app.element.io)信使。
+我们整个组织中主要使用[Matrix](https://matrix.org)与社区成员进行沟通。我们最常与 Matrix 协议进行交互的应用程序是[Element](https://app.element.io)信使。
 
 ### Polkadot
 
 - [PolkadotWatercooler Chat](https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 一般性问题聊天室
 - [Polkadot Validator Lounge](https://app.element.io/#/room/#polkadot-validator-lounge:matrix.org) - 验证者可以在这里学习如何架设节点
 - [Polkadot Direction](https://app.element.io/#/room/!OwgojQyBzTlUQGGLhq:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 社区治理，以及探讨 Polkadot 未来方向的聊天室
-- [Polkadot摘要](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - 有关 Polkadot 生态发生的事件新闻，每个工作日（节假日除外）发布
+- [Polkadot 摘要](https://matrix.to/#/!vMpYyTkvjXcevxSdsQ:web3.foundation) - 有关 Polkadot 生态发生的事件新闻，每个工作日（节假日除外）发布
 
 ### Kusama
 
@@ -76,5 +76,5 @@ Web3 基金会主办了许多线上和线下的活动。你可以通过[这个No
 
 ## 生态
 
-- [Polkadot上的团队建设](https://polkaproject.com/) - 社区维护的团队列表建立在Polkadot和/或Substrate上。(请注意，这里可能有些不准确，因为它是非官方的)
+- [Polkadot 上的团队建设](https://polkaproject.com/) - 社区维护的团队列表建立在 Polkadot 和/或 Substrate 上。(请注意，这里可能有些不准确，因为它是非官方的)
 - [Polkadot Stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md) - 如果你对正在进行的开发感兴趣，或是想要了解你可以怎样参与贡献。

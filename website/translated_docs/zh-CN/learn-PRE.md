@@ -4,7 +4,7 @@ title: Polkadot Runtime 环境 (PRE)
 sidebar_label: Polkadot Runtime 环境 (PRE)
 ---
 
-Polkadot Runtime 环境是 Polkadot 协议的重要组成部分。 它由网络层，共识和 Wasm VM 子系统组成，并充当 Polkadot runtime 和平行链 runtime 的基础堆栈底层。Polkadot RE 可以视为运行Polkadot 中继链的虚拟机的同义词（尽管如下所述，链逻辑本身与其运行的 PRE 之间有明显的分隔）。
+Polkadot Runtime 环境是 Polkadot 协议的重要组成部分。 它由网络层，共识和 Wasm VM 子系统组成，并充当 Polkadot runtime 和平行链 runtime 的基础堆栈底层。Polkadot RE 可以视为运行 Polkadot 中继链的虚拟机的同义词（尽管如下所述，链逻辑本身与其运行的 PRE 之间有明显的分隔）。
 
 Polkadot RE 组件为：
 

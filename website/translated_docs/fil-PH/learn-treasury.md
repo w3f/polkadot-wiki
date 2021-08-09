@@ -46,7 +46,7 @@ To minimize storage on chain, proposals don't contain contextual information. Wh
 - Many community members participate in discussion in the [Kusama Element (previously Riot)](https://riot.w3f.tech/#/room/#kusama:matrix.parity.io) chat.
 - The [Polkassembly](https://kusama.polkassembly.io) discussion platform that allows users to log in with their KSM address and automatically reads proposals from the chain, turning them into discussion threads. It also offers a sentiment gauge poll to get a feel for a proposal before committing to a vote.
 - The {{ polkadot: [Polkadot forum](https://forum.polkadot.network) :polkadot }}
-{{ kusama: [Kusama forum](https://forum.kusama.network) :kusama }} can be used for proposal explanations.
+  {{ kusama: [Kusama forum](https://forum.kusama.network) :kusama }} can be used for proposal explanations.
 - [Commonwealth.im](https://commonwealth.im) is a community site that allows users to log in with their {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} address and automatically reads proposals from the chain, turning them into discussion threads.
 
 Spreading the word about the proposal's explanation is ultimately up to the proposer - the recommended way is using official Element channels like {{ polkadot: the [Polkadot Watercooler](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) and [Polkadot Direction room](https://app.element.io/#/room/#polkadot-direction:matrix.parity.io) :polkadot }}

@@ -6,7 +6,7 @@ sidebar_label: 黑客马拉松
 
 As one of our objectives in the Web3 Foundation is promoting the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot and Substrate in your city or online.
 
-我们不仅为您提供技术资源，而且还可以安排我们团队的人来做具体的技术工作坊和讲解介绍我们的技术，从而帮助参与者可以更快地开始hacking。
+我们不仅为您提供技术资源，而且还可以安排我们团队的人来做具体的技术工作坊和讲解介绍我们的技术，从而帮助参与者可以更快地开始 hacking。
 
 ## 一些想法
 

@@ -10,13 +10,13 @@ sidebar_label: 认领
 
 如果您是首次认领 DOT，请阅读下面[认领](#making-a-claim)的部分继续。如果您在创世块之前已经认领，请前往[证明声明](#attesting-to-a-statement)部分。
 
-> 了解更多如何认领您的DOT，请查看我们的攻略  [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22)和视频 [Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+> 了解更多如何认领您的 DOT，请查看我们的攻略 [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22)和视频 [Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
 
 ## 认领
 
 如果您在创世块之前期间没有认领，那么您就可以在创世块后的任何时间认领。认领没有时间限制，因此任何时候您都可以这样做。
 
-> 注意: 申领时，您还需验证您的DOT代币分配协议。申领及验证将在一个同交易里完成，从用户的角度来看，这已是极度简化的流程。
+> 注意: 申领时，您还需验证您的 DOT 代币分配协议。申领及验证将在一个同交易里完成，从用户的角度来看，这已是极度简化的流程。
 
 ### 您将需要什么
 
@@ -30,7 +30,7 @@ sidebar_label: 认领
 
 > **注意**: 在本地下载和使用 MyCrypto 应用程序更加安全。 您可以在其[releases page][mycrypto]上找到桌面应用程序的最新版本。
 
-您需要一个 Polkadot 帐户作为获取申领的DOT的账户。请根据\[创建账户\]\[\] 页面上的说明生成新的 Polkadot 帐户。
+您需要一个 Polkadot 帐户作为获取申领的 DOT 的账户。请根据\[创建账户\]\[\] 页面上的说明生成新的 Polkadot 帐户。
 
 #### 使用 MyCrypto 认领您的 DOT
 
@@ -74,7 +74,7 @@ Copy and paste the JSON output of the signed message from MyCrypto into the inpu
 
 ![claim-9](assets/new-claims/claim-9.jpg)
 
-若申领成功，那么您将看到提示成功的消息，同时您的DOT将会出现在您在申领时提交的账户中。
+若申领成功，那么您将看到提示成功的消息，同时您的 DOT 将会出现在您在申领时提交的账户中。
 
 #### 确认您的认领
 
@@ -88,9 +88,9 @@ Copy and paste the JSON output of the signed message from MyCrypto into the inpu
 
 ### 第三方认领程序
 
-**我们不建议使用其它第三方应用程序或流程来进行您DOT的申领或获取。**
+**我们不建议使用其它第三方应用程序或流程来进行您 DOT 的申领或获取。**
 
-使用第三方程序进行申领可能会导致代币分配失败，因此我们不建议您使用任何第三方应用程序这样做。按照我们的申领流程，手动指定您的交易数据，是确保您将收到DOT代币的唯一方法。
+使用第三方程序进行申领可能会导致代币分配失败，因此我们不建议您使用任何第三方应用程序这样做。按照我们的申领流程，手动指定您的交易数据，是确保您将收到 DOT 代币的唯一方法。
 
 ## 证明声明
 
@@ -106,7 +106,7 @@ Copy and paste the JSON output of the signed message from MyCrypto into the inpu
 
 ### 前往 Polkadot-JS 程序
 
-继续使用 [polkadot-js Apps][claims app]。您需要授予应用程序对您账户的访问权限。一种方法是前往到 Accounts 页面并 "创建" 新帐户，将生成的种子或助记词替换为您的帐户的seed或助记词。另一种方法是使用 Polkadot-JS 扩展程序，然后在其输入您的seed或助记词，这通常比直接在程序页面中输入更安全。
+继续使用 [polkadot-js Apps][claims app]。您需要授予应用程序对您账户的访问权限。一种方法是前往到 Accounts 页面并 "创建" 新帐户，将生成的种子或助记词替换为您的帐户的 seed 或助记词。另一种方法是使用 Polkadot-JS 扩展程序，然后在其输入您的 seed 或助记词，这通常比直接在程序页面中输入更安全。
 
 ### 提交证明
 
@@ -130,7 +130,7 @@ Copy and paste the JSON output of the signed message from MyCrypto into the inpu
 
 ![claim-attest-5](assets/new-claims/new-attest-5.jpg)
 
-## 使用Parity Signer
+## 使用 Parity Signer
 
 ### 您需要准备什么
 
@@ -151,11 +151,11 @@ Proceed to [Polkadot-JS Apps][claims app]. You will need to import your address 
 
 ![ps-claim-2](assets/new-claims/ps-claim-2.png)
 
-打开Parity Signer并选择 "Polkadot" 网络。
+打开 Parity Signer 并选择 "Polkadot" 网络。
 
 ![ps-1](assets/new-claims/ps-01.jpg)
 
-选择你在创世块前申领DOT的地址。
+选择你在创世块前申领 DOT 的地址。
 
 ![ps-2](assets/new-claims/ps-02.jpg)
 
@@ -192,12 +192,11 @@ First, you need to press the "QR Scanner" on the Parity Signer to scan the QR co
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
 When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOT will be in your account.
-  https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
+https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
 
-[ MyCrypto ]: https://download.mycrypto.com/
-
+[ mycrypto ]: https://download.mycrypto.com/
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
-[Claims app]: https://polkadot.js.org/apps/#/claims
+[claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

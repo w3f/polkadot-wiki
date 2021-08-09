@@ -14,11 +14,11 @@ _NOTE: Kusama is 4x as fast as Polkadot will be, except for blocktimes where Pol
 - Era: 6 hours (3600 slots x 6 seconds)
 
 | Kusama  | Time      | Slots\* |
-| ------- | --------- | --------- |
-| Block   | 6 seconds | 1         |
-| Epoch   | 1 hour    | 600       |
-| Session | 1 hour    | 600       |
-| Era     | 6 hours   | 3,600     |
+| ------- | --------- | ------- |
+| Block   | 6 seconds | 1       |
+| Epoch   | 1 hour    | 600     |
+| Session | 1 hour    | 600     |
+| Era     | 6 hours   | 3,600   |
 
 \*_A maximum of one block per slot can be in a chain._
 

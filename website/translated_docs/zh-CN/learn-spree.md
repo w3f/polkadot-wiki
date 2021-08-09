@@ -44,7 +44,7 @@ In this diagram we see that the Wasm code for SPREE module "X" has been uploaded
 
 在示例中，我们假设此 SPREE 模块 "X" 包含用于递增或递减该模块特定资产的余额。
 
-通过在 A.X 处发起交易以将特定余额减少1，XCMP上的消息可以去信任发送到 B.X 以使余额增加1。
+通过在 A.X 处发起交易以将特定余额减少 1，XCMP 上的消息可以去信任发送到 B.X 以使余额增加 1。
 
 Collators, represented as the green triangle are responsible for relaying this message from parachain A to parachain B, as well as mantaining the storage for each particular instance of A.X and B.X for their respective parachains. They provide proofs of valid state transitions to the Relay Chain validators, represented as blue diamonds.
 

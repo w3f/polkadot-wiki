@@ -4,7 +4,7 @@ title: 新闻来源
 sidebar_label: 新闻来源
 ---
 
-查看 Polkadot 和 Web3基金会相关的新闻来源列表。
+查看 Polkadot 和 Web3 基金会相关的新闻来源列表。
 
 - [Web3 Medium 博客](https://medium.com/@web3)
 - [Web3 基金会推特](https://twitter.com/web3foundation)

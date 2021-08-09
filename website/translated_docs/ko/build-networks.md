@@ -24,7 +24,7 @@ http://github.com/paritytech/polka-ui나 http://github.com/paritytech/polkadot-u
 
 ## Krumme Lanke (베를린 남서쪽에 있는 호수 이름 - 역자 주 )
 
-Krumme Lanke는 PoC-2의 개발단계에서 사용했던 테스트넷 네트워크 입니다. 다음 명령어로 Polkadot PoC-2를 설치하고  `polkadot` 바이너리를 `PATH`에 등록하세요.
+Krumme Lanke는 PoC-2의 개발단계에서 사용했던 테스트넷 네트워크 입니다. 다음 명령어로 Polkadot PoC-2를 설치하고 `polkadot` 바이너리를 `PATH`에 등록하세요.
 
 글로벌 "Krumme Lanke" 테스트넷에 기본적으로 연결되어서 동작합니다. 명령어는 아래와 같습니다.
 
@@ -32,7 +32,7 @@ Krumme Lanke는 PoC-2의 개발단계에서 사용했던 테스트넷 네트워�
 cargo install --git https://github.com/paritytech/substrate.git --branch v0.2 polkadot
 ```
 
-Alexander 는 PoC-3와 PoC-4 개발단계에서 사용했던 테스트넷 네트워크 입니다. 다음 명령어로 Polkadot PoC-4를 설치하고  `polkadot` 바이너리를 `PATH`에 등록하세요.
+Alexander 는 PoC-3와 PoC-4 개발단계에서 사용했던 테스트넷 네트워크 입니다. 다음 명령어로 Polkadot PoC-4를 설치하고 `polkadot` 바이너리를 `PATH`에 등록하세요.
 
 ```bash
 polkadot

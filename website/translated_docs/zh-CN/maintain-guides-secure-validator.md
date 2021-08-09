@@ -46,7 +46,7 @@ An example of highly available, secure setup would be a layer of sentry nodes in
 - 永不使用 root 用户
 - 保持更新系统的安全补丁
 - 启动并设置防火墙
-- 永不允许基于密码的ssh，只能使用基于密钥的访问。
+- 永不允许基于密码的 ssh，只能使用基于密钥的访问。
 - Disable non-essential SSH subsystems (banner, motd, scp, X11 forwarding) and harden your SSH configuration ([reasonable guide to begin with](https://stribika.github.io/2015/01/04/secure-secure-shell.html)).
 - 定期备份您的存储。
 

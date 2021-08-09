@@ -28,9 +28,9 @@ To better understand how the council is formed, please read [this section](#coun
 
 - **[Council](#council)**:
 
-    Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
+  Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
 
-    Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.)
+  Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.)
 
 ### Voting for a proposal
 
@@ -53,7 +53,7 @@ According to the above scenario, even though combining both Logan and Kevin's DO
 Depending on which entity proposed the proposal and whether all council members voted yes, there are three different scenarios. We can use following table for reference.
 
 |          **Entity**          |                   **Metric**                   |
-|:----------------------------:|:----------------------------------------------:|
+| :--------------------------: | :--------------------------------------------: |
 |            Public            | Positive Turnout Bias (Super-Majority Approve) |
 | Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
 | Council (Majority agreement) |                Simple Majority                 |
@@ -82,7 +82,7 @@ A `negative turnout bias`, whereby a heavy super-majority of nay votes is requir
 
 Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried. $${approve} > {against}$$
 
-*To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
+_To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)_.
 
 ```
 Example:
@@ -125,7 +125,6 @@ Based on the current testnet setting, the maximum number of lock periods is set 
 
 **Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
-
 ## Adaptive Quorum Biasing
 
 Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
@@ -152,7 +151,7 @@ Since not everyone is interested in participating in governance, there is a coun
 
 ![](assets/governance/approval-vote.png)
 
- At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
+At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
 
 To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election.
 
@@ -180,5 +179,7 @@ This would be the tentative governance configuration for Polkadot in the initial
 ## Guides
 
 ### [How to create a proposal]()
+
 ### [How to join the council]()
+
 ### [How to propose a referenda]()

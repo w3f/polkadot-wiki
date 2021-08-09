@@ -20,7 +20,7 @@ sidebar_label: Polkadot Extrinsic Format aka Transaction Format
 [ address (1/3/5/9/33-bytes, 첫번째 바이트에 따라 다름), index (4-bytes), call (dynamic-length), *오리지널* 필드에 서명함 (64 bytes) ]
 ```
 
-*오리지널* 필드들은 예전 트랜잭션 포맷에서 다음과 같은 요소들을 참조합니다.
+_오리지널_ 필드들은 예전 트랜잭션 포맷에서 다음과 같은 요소들을 참조합니다.
 
 ```
 [ account-id (32-bytes), index (4-bytes), call (dynamic-length) ]

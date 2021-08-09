@@ -35,7 +35,7 @@ Hackathon is aimed at participants who want to deliver their prototype and demon
 
 ## 어떻게 당신의 도시에서 해커톤을 열 수 있나요?
 
-1. 해커톤 지원서를 제출합니다  (Coming soon.)
+1. 해커톤 지원서를 제출합니다 (Coming soon.)
 2. 리뷰하고
 3. 결정한 뒤
 4. 진행합니다.

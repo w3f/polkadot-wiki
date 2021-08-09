@@ -9,4 +9,3 @@ sidebar_label: การเป็นผู้เสนอชื่อ (Nominator
 If you are interested in nominating, please see our page on [how to nominate on Kusama](maintain-guides-how-to-nominate-kusama).
 
 <!-- No update needed -->
-
