@@ -70,6 +70,8 @@ module.exports = {
     ],
   ],
   plugins: [
+    "remark-docusaurus-tabs",
+    "@docusaurus/theme-live-codeblock",
     [
       "@docusaurus/plugin-client-redirects",
       {
@@ -94,23 +96,19 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['remark-docusaurus-tabs'],
-  plugins: ['@docusaurus/theme-live-codeblock'],
-  themeConfig: {
-    liveCodeBlock: {
-      /**
-       * The position of the live playground, above or under the editor
-       * Possible values: "top" | "bottom"
-       */
-      playgroundPosition: 'bottom',
-    },
-  },
   themeConfig: {
     colorMode: {
       disableSwitch: true,
     },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
+    },
+    liveCodeBlock: {
+      /**
+      * The position of the live playground, above or under the editor
+      * Possible values: "top" | "bottom"
+      */
+      playgroundPosition: 'bottom',
     },
     navbar: {
       logo: {
