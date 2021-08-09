@@ -68,12 +68,12 @@ This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
 <Tabs
-  groupId="operating-systems"
-  values={[
-    {label: 'macOS', value: 'mac'},
-    {label: 'Windows', value: 'win'},
-    {label: 'Linux', value: 'linux'},
-  ]}>
+groupId="operating-systems"
+values={[
+{label: 'macOS', value: 'mac'},
+{label: 'Windows', value: 'win'},
+{label: 'Linux', value: 'linux'},
+]}>
 <TabItem value="mac">
 
 - Install Homebrew within the terminal by running:
