@@ -70,7 +70,7 @@ To format markdown pages, run the following in the `docs` folder:
 npx pretty-quick --staged
 ```
 
-To run pretty on the whole project, `npx pretty-quick`
+To run pretty on the whole project, `npx pretty-quick`.
 
 ### Static Site Generator
 
