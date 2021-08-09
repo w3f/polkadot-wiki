@@ -260,6 +260,6 @@ When the transaction is included in the block, you will see a green success box 
 right corner and the DOT will be in your account.
 
 [mycrypto]: https://download.mycrypto.com/
-[account generation]: learn-account-generation
+[account generation]: ../learn/learn-account-generation.md
 [claims app]: https://polkadot.js.org/apps/#/claims
 [claims support]: https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
