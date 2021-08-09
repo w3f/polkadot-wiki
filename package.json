@@ -59,7 +59,7 @@
     "@docusaurus/plugin-client-redirects": "^2.0.0-beta.3",
     "@docusaurus/preset-classic": "2.0.0-beta.4",
     "@polkadot/keyring": "^7.1.1",
-    "@octokit/rest": "^18.8.0",
+    "@octokit/rest": "^18.9.0",
     "@polkadot/api": "^5.4.1",
     "@polkadot/keyring": "^7.0.3",
     "axios": "^0.21.1",
@@ -78,7 +78,7 @@
     "remarkable-katex": "^1.1.8",
     "shx": "^0.3.3",
     "unist-util-visit": "2.0.3",
-    "yargs": "^17.0.1"
+    "yargs": "^17.1.0"
   },
   "dependencies": {
     "@docusaurus/theme-live-codeblock": "^2.0.0-beta.4",
