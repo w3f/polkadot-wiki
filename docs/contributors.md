@@ -110,7 +110,7 @@ contribute to Web3 Foundation's vision by educating professionals and the genera
 Alex is a Technical Education Intern at the Web3 Foundation. He is preparing to receive his Computer Science B.S. 
 from San Francisco State University. Outside of his formal education, Alex has developed a deep passion for educating others
 on decentralized systems and pushing forward the Web 3.0 vision. He has educational experience in cryptography, data privacy, 
-and enterprise security.
+and enterprise security. 
 
 <br/><br/>
 
