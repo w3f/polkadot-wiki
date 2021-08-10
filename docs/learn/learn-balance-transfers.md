@@ -137,4 +137,4 @@ and hit "Make Transfer" then confirm the balance transfer. You will see a green 
 top-right corner of the screen when the transfer is included in a block.
 
 [polkadot-js apps]: https://polkadot.js.org/apps
-[existential deposit]: build-protocol-info#existential-deposit
+[existential deposit]: ../build/build-protocol-info.md#existential-deposit

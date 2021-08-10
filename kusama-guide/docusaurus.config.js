@@ -55,7 +55,7 @@ module.exports = {
           path: "../docs",
           sidebarPath: "./sidebars.js",
           remarkPlugins:
-            isBuilding || isPub ? [injectPlugin({ isPolkadot: false })] : [],
+            isBuilding || isPub ? [injectPlugin({ isPolkadot: true })] : [],
         },
         theme: {
           customCss: [

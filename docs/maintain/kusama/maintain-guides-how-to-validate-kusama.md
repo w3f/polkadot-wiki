@@ -489,7 +489,7 @@ validator set, you are now running a Kusama validator! If you need help, reach o
 
 The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
 to provide support for community validators. If you are interested in applying for the programme,
-you can find more information [on the wiki page](thousand-validators).
+you can find more information [on the wiki page](../../general/thousand-validators.md).
 
 ## FAQ
 
