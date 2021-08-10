@@ -32,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: polkadot-wiki
-          path: website/static/polkadot-wiki.pdf
+          path: polkadot-wiki/static/polkadot-wiki.pdf
