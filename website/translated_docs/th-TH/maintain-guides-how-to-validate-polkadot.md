@@ -113,23 +113,25 @@ cargo build --release
 This step will take a while (generally 10 - 40 minutes, depending on your hardware).
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
-> 
+>
 > ```sh
-rustup install nightly-2020-10-06
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
-cargo +nightly-2020-10-06 build --release
-```
+> rustup install nightly-2020-10-06
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+> cargo +nightly-2020-10-06 build --release
+> ```
+
+````
 
 If you are interested in generating keys locally, you can also install `subkey` from the same directory. You may then take the generated `subkey` executable and transfer it to an air-gapped machine for extra security.
 
 ```sh
 cargo install --force --git https://github.com/paritytech/substrate subkey
-```
+````
 
 ### Synchronize Chain Data
 
 > **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
-> 
+>
 > You may run a validator node in non-archive mode by adding the following flags: `--unsafe-pruning --pruning <NUM OF BLOCKS>`, a reasonable value being 1000. Note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 You can begin syncing your node by running the following command:
@@ -143,7 +145,7 @@ if you do not want to start in validator mode right away.
 The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
 > **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
-> 
+>
 > In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note that **ParityDB is still experimental and should not be used in production.** If you want to test out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will require a resync.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.

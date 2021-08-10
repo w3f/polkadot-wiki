@@ -52,7 +52,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual value, which fluctuates, but merely an assumption for purposes of this example; to understand how the actual minimal stake is calculated, see [here](https://wiki.polkadot.network/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
 |               | **A - Validator Pool** |                             |         |
-|:-------------:|:----------------------:|:---------------------------:|:-------:|
+| :-----------: | :--------------------: | :-------------------------: | :-----: |
 | Nominator (4) |      Stake (600)       | Fraction of the Total Stake | Rewards |
 |      Jin      |          100           |            0.167            |  16.7   |
 |    **Sam**    |           50           |            0.083            |   8.3   |
@@ -60,7 +60,7 @@ The following example should clarify the above. For simplicity, we have the foll
 |     Bobby     |          200           |            0.333            |  33.3   |
 
 |               | **B - Validator Pool** |                             |         |
-|:-------------:|:----------------------:|:---------------------------:|:-------:|
+| :-----------: | :--------------------: | :-------------------------: | :-----: |
 | Nominator (4) |      Stake (400)       | Fraction of the Total Stake | Rewards |
 |     Alice     |          100           |            0.25             |   25    |
 |     Peter     |          100           |            0.25             |   25    |
@@ -135,12 +135,12 @@ For every session, validators will send an "I'm Online" heartbeat to indicate th
 Here is the formula for calculation:
 
     Let x = offenders, n = total no. validators
-    
+
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
-Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below). 
+Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below).
 A comprehensive guide on validator setup is available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
 
 ### GRANDPA Equivocation
@@ -154,7 +154,7 @@ A validator produces two or more blocks on the Relay Chain in the same time slot
 GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
     Let x = offenders, n = total no. validators
-    
+
     Min( (3 * x / n )^2, 1)
 
 Validators may run their nodes on multiple machines to make sure they can still perform validation work in case one of their nodes goes down. It should be noted that if they do not have good coordination to manage signing machines, then equivocation is possible.

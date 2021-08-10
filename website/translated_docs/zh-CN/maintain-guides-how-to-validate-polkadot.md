@@ -12,7 +12,7 @@ sidebar_label: How to run a Validator on Polkadot
 
 在主网上运行验证人有很大的责任！你不仅要对自己抵押的 DOTs 负责，还有目前提名你的提名人抵押。如果你犯了错误并且被惩罚，你的钱和声誉将处于危险之中。但是运行验证人也有非常可观的回报，您为安全性做出了贡献，使网络更分散。
 
-由于安全性对运行验证人至关重要，因此您最好看一下[设定安全验证人](maintain-guides-secure-validator)资料使您了解在构建网络架构时要考虑的要素。 Web3 基金会也会保持更新[安全验证人设置的参考](https://github.com/w3f/polkadot-secure-validator)使您也可以自己部署来使用(视频教程在[这里](https://www.youtube.com/watch?v=tTn8P6t7JYc))。随着您成为验证人愈长时间，您可能使用此库作为自己的_起点_进行修改和自定义。
+由于安全性对运行验证人至关重要，因此您最好看一下[设定安全验证人](maintain-guides-secure-validator)资料使您了解在构建网络架构时要考虑的要素。 Web3 基金会也会保持更新[安全验证人设置的参考](https://github.com/w3f/polkadot-secure-validator)使您也可以自己部署来使用(视频教程在[这里](https://www.youtube.com/watch?v=tTn8P6t7JYc))。随着您成为验证人愈长时间，您可能使用此库作为自己的*起点*进行修改和自定义。
 
 如果您需要帮助，请前往 [ Riot 上的 Polkadot 验证人聊天室](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) 。团队和其他验证人在那里帮助回答问题并提供经验。
 
@@ -28,7 +28,7 @@ You can have a rough estimate on that by using the methods listed [here](faq#wha
 
 初学者运行验证人的最常见方法是在 Linux 云服务器 上。 您可以选择自己喜欢的[ VPS ](#vps-list)服务商，以及自己喜欢的操作系统。 在本指南中，我们将使用** Ubuntu 18.04 **，但其他平台的设置应相似。
 
-Polkadot 中的交易权重以标准硬件为基准。 建议验证人至少运行标准硬件，以确保它们能够及时处理所有区块。以下不是_最低要求_，但是如果您决定以低于此的速度运行，则可能会遇到性能问题。
+Polkadot 中的交易权重以标准硬件为基准。 建议验证人至少运行标准硬件，以确保它们能够及时处理所有区块。以下不是*最低要求*，但是如果您决定以低于此的速度运行，则可能会遇到性能问题。
 
 #### 标准硬件
 
@@ -94,7 +94,7 @@ sudo ntpq -p
 
 ### 构建并安装 `polkadot` 二进制文件
 
-您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 ` polkadot ` 二进制文件。
+您需要从[ paritytech/polkadot ](https://github.com/paritytech/polkadot) GitHub 库的** v0.8 **分支中构建 `polkadot` 二进制文件。
 
 You should generally use the latest **0.8.x** tag. You should either review the output from the "git tag" command or visit the [Releases](https://github.com/paritytech/polkadot/releases) to see a list of all the potential 0.8 releases. You should replace `VERSION` below with the latest build (i.e., the highest number).
 
@@ -113,23 +113,25 @@ cargo build --release
 这步将需要一段时间(通常需要 10 - 40 分钟，具体取决于您的硬件)。
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
-> 
+>
 > ```sh
-rustup install nightly-2020-10-06
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
-cargo +nightly-2020-10-06 build --release
-```
+> rustup install nightly-2020-10-06
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06
+> cargo +nightly-2020-10-06 build --release
+> ```
+
+````
 
 如果您想在本地生成密钥，您还可以在同一目录安装` subkey `。然后您可以把生成好的` subkey `可执行文件，并将其转移到与世隔绝的电脑中，以提高安全性。
 
 ```sh
 cargo install --force --git https://github.com/paritytech/substrate subkey
-```
+````
 
 ### 同步链数据
 
 > **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
-> 
+>
 > You may run a validator node in non-archive mode by adding the following flags: `--unsafe-pruning --pruning <NUM OF BLOCKS>`, a reasonable value being 1000. Note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 您可以通过运行以下指令来开始同步您的节点:
@@ -140,15 +142,15 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 如果您不想马上运行验证模式下。
 
-`--pruning=archive`选项意味着` --validator `和`-sentry `选项，因此仅如果在没有这两个选项之一的情况下启动节点，则必须明确要求。 如果您不设置为 archive 节点，即使不在运行验证人和哨兵模式时，也需要切换时重新同步数据库。
+`--pruning=archive`选项意味着`--validator`和`-sentry `选项，因此仅如果在没有这两个选项之一的情况下启动节点，则必须明确要求。 如果您不设置为 archive 节点，即使不在运行验证人和哨兵模式时，也需要切换时重新同步数据库。
 
 > **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
-> 
+>
 > In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note that **ParityDB is still experimental and should not be used in production.** If you want to test out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will require a resync.
 
 根据当时链的大小，此步可能需要几分钟到几个小时不等。
 
-如果您想估计还需要再多少时间，服务器日志(在 ` polkadot ` STDOUT 程序中显示)显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Polkadot%20CC1)或当前[ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
+如果您想估计还需要再多少时间，服务器日志(在 `polkadot` STDOUT 程序中显示)显示了您的节点已处理和最新验证的区块。 然后您可以与[ Telemetry ](https://telemetry.polkadot.io/#list/Polkadot%20CC1)或当前[ PolkadotJS 区块链浏览器](https://polkadot.js.org/apps/#/explorer)比较。
 
 ## Bond DOT
 
@@ -192,9 +194,9 @@ Once your node is fully synced, stop the process by pressing Ctrl-C. At your ter
 
 #### 选项 1: PolkadotJS-APPS
 
-您可以使用客户端通过 RPC 生成[ Session 密钥](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key)。 如果执行此操作，确保已将 PolkadotJS-Apps 浏览器连接到验证人节点。 您可以在 "Settings" 标签中将应用程序设置连接到验证人的地址。如果您连接到 Web3 Foundation 的 Parity 托管的地址，则不能使用此方法，因为向该节点发出 RPC 请求是_公开节点_上托管的 keystore，因此您需要确认正在与_您的节点_的 keystore 连接。
+您可以使用客户端通过 RPC 生成[ Session 密钥](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key)。 如果执行此操作，确保已将 PolkadotJS-Apps 浏览器连接到验证人节点。 您可以在 "Settings" 标签中将应用程序设置连接到验证人的地址。如果您连接到 Web3 Foundation 的 Parity 托管的地址，则不能使用此方法，因为向该节点发出 RPC 请求是*公开节点*上托管的 keystore，因此您需要确认正在与*您的节点*的 keystore 连接。
 
-一旦确定已连接到节点，最简单为节点设置 session 密钥的方法是调用 ` author_rotateKeys ` RPC 请求在验证人的 keystore 中创建新密钥。前往到工具箱选项卡并调用 RPC，然后选择 author > rotateKeys() 选项并记住保存回传结果。
+一旦确定已连接到节点，最简单为节点设置 session 密钥的方法是调用 `author_rotateKeys` RPC 请求在验证人的 keystore 中创建新密钥。前往到工具箱选项卡并调用 RPC，然后选择 author > rotateKeys() 选项并记住保存回传结果。
 
 ![Explorer RPC call](assets/guides/how-to-validate/polkadot-explorer-rotatekeys-rpc.jpg)
 
@@ -210,11 +212,11 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 You can restart your node at this point.
 
-### 提交` setKeys `交易
+### 提交`setKeys`交易
 
 您需要通过签名并提交交易设定你的 Session 密钥。 这是把您的 Controller 帳戶与验证人连接起来。
 
-前往 [ Stake > Account Actions](https://polkadot.js.org/apps/#/staking/actions)，然后在您先前生成的绑定(Stash)帐户。 按下 "Set Session Key" 之后输入之前在` author_rotateKeys `的结果。
+前往 [ Stake > Account Actions](https://polkadot.js.org/apps/#/staking/actions)，然后在您先前生成的绑定(Stash)帐户。 按下 "Set Session Key" 之后输入之前在`author_rotateKeys`的结果。
 
 ![staking-change-session](assets/guides/how-to-validate/set-session-key-1.jpg) ![staking-session-result](assets/guides/how-to-validate/set-session-key-2.jpg)
 

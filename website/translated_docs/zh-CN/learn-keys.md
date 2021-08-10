@@ -10,15 +10,15 @@ sidebar_label: Polkadot 密钥
 
 帐户密钥是用来控制资金的密钥，它们可以是：
 
-- 使用 Schnorr 签名的原版` ed25519 `实现。
-- 使用 Schnorr 签名的 Schnorrkel / Ristretto ` sr25519 `。
+- 使用 Schnorr 签名的原版`ed25519`实现。
+- 使用 Schnorr 签名的 Schnorrkel / Ristretto `sr25519`。
 - ECDSA signatures on secp256k1
 
-对于简单签名，` ed25519 `和` sr25519 `之间的安全性没有区别。
+对于简单签名，`ed25519`和`sr25519`之间的安全性没有区别。
 
-我们希望在可预见将来，商用 HSM 将更好地支持` ed25519 `。
+我们希望在可预见将来，商用 HSM 将更好地支持`ed25519`。
 
-同时，` sr25519 `使实施更复杂的协议更加安全。 特别是` sr25519 `带有许多协议的安全版本，例如比特币和以太坊生态系统中常见的 HDKD。
+同时，`sr25519`使实施更复杂的协议更加安全。 特别是`sr25519`带有许多协议的安全版本，例如比特币和以太坊生态系统中常见的 HDKD。
 
 ### "Controller" 和 "Stash" 密钥
 
@@ -32,7 +32,7 @@ Stash 密钥在大多数情况下是保存在冷钱包，写在纸上也可以�
 
 ## Session 密钥
 
-Session 密钥是热钥，验证人必须将其保持在线才能执行网络操作。 Session 密钥通常在客户端中生成，尽管不是必须。它们_不是_意在控制资金，仅应用于其预期目的。它们可以定期更改。 Controller 仅需要通过 session 公钥签名来创建证书，然后通过外部广播该证书。
+Session 密钥是热钥，验证人必须将其保持在线才能执行网络操作。 Session 密钥通常在客户端中生成，尽管不是必须。它们*不是*意在控制资金，仅应用于其预期目的。它们可以定期更改。 Controller 仅需要通过 session 公钥签名来创建证书，然后通过外部广播该证书。
 
 Polkadot 使用四款 session 密钥:
 
@@ -47,27 +47,27 @@ BABE 需要适用于[可验证随机函数 (VRF)](learn-randomness#vrfs)以及�
 
 ## 常见问题
 
-### 为什么在` secp256k1 `上选择了` ed25519 `？
+### 为什么在`secp256k1`上选择了`ed25519`？
 
-为 Polkadot 和 Substrate 链实现的原有密钥导出密码学是` ed25519 `，这是在 Edward's 曲线 25519上实现的 Schnorr 签名算法(由于曲线方程的参数而命名)。
+为 Polkadot 和 Substrate 链实现的原有密钥导出密码学是`ed25519`，这是在 Edward's 曲线 25519 上实现的 Schnorr 签名算法(由于曲线方程的参数而命名)。
 
-大部份加密货币包括比特币, 以太币现在是在 secp256k1 曲线上使用 ECDSA 签名。这曲线被认为比 NIST 曲线安全得多，因为 [NSA 可能有 NIST 曲线的后门](#appendix-a-on-the-security-of-curves)。Curve25519 被认为可能比这_更安全_，并且可以更轻松地实现 Schnorr 签名。最近它的专利即将到期，使它成为在 Polkadot 使用的首选。
+大部份加密货币包括比特币, 以太币现在是在 secp256k1 曲线上使用 ECDSA 签名。这曲线被认为比 NIST 曲线安全得多，因为 [NSA 可能有 NIST 曲线的后门](#appendix-a-on-the-security-of-curves)。Curve25519 被认为可能比这*更安全*，并且可以更轻松地实现 Schnorr 签名。最近它的专利即将到期，使它成为在 Polkadot 使用的首选。
 
 使用 Schnorr 签名而不是使用 ECDSA 的选择并非人们所预料的。正如 Jeff Burdges (Web3 研究员)所述，[论坛帖子](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70/2):
 
-> 我们在帐户密钥中选择 Schnorr 签名而不是 ECDSA 做了些牺牲: 两者都需要64字节，但是只有 ECDSA 签名才能传递其公钥。有些过时的 Schnorr 变体支持从签名中恢复公钥，但它们破坏了诸如分层确定性密钥导出之类重要的功能。因此 Schnorr 签名通常会为公钥占用额外的32个字节。
+> 我们在帐户密钥中选择 Schnorr 签名而不是 ECDSA 做了些牺牲: 两者都需要 64 字节，但是只有 ECDSA 签名才能传递其公钥。有些过时的 Schnorr 变体支持从签名中恢复公钥，但它们破坏了诸如分层确定性密钥导出之类重要的功能。因此 Schnorr 签名通常会为公钥占用额外的 32 个字节。
 
 但最终使用 Schnorr 签名的好处大于权衡，将来优化可能会解决上述指出的低效率问题。
 
 ### 什么是 `sr25519` 并它是从何而来?
 
-某些情况下: Twisted Edward's 曲线25519上的 Schnorr 签名被认为是安全，但是 Ed25519 并没有完全解决其错误。最值得注意的是，[ Monero 和所有其他 CryptoNote 货币](https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html)很容易受到双花的利用，这有可能导致未被发现的无限通胀。
+某些情况下: Twisted Edward's 曲线 25519 上的 Schnorr 签名被认为是安全，但是 Ed25519 并没有完全解决其错误。最值得注意的是，[ Monero 和所有其他 CryptoNote 货币](https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html)很容易受到双花的利用，这有可能导致未被发现的无限通胀。
 
-这些漏洞的源于是由于 Ed25519 中的特点，即其8的协因子。曲线的协因子是深奥的细节，这可能对更复杂协议的安全实现产生可怕的后果。
+这些漏洞的源于是由于 Ed25519 中的特点，即其 8 的协因子。曲线的协因子是深奥的细节，这可能对更复杂协议的安全实现产生可怕的后果。
 
 更方便的是，[ Mike Hamburg's Decaf 论文](https://www.shiftleft.org/paper/decaf/index.xhtml)提供了解决这个潜在错误的途径。 Decaf 基本上是种采用 Twisted Edward's 曲线的协因子和数学变化，以很少的成本性能和获得安全的方法。
 
-[ Ristretto Group ](https://ristretto.group/)的 Decaf 论文中的方法得到延伸，并在Rust 中实現，以包含诸如 Curve25519 之类的协因子8曲线，并在 Edward's 曲线上做出 Schnorr 签名使它更安全。
+[ Ristretto Group ](https://ristretto.group/)的 Decaf 论文中的方法得到延伸，并在 Rust 中实現，以包含诸如 Curve25519 之类的协因子 8 曲线，并在 Edward's 曲线上做出 Schnorr 签名使它更安全。
 
 Web3 基金会已在[ Schnorrkel ](https://github.com/w3f/schnorrkel)库中的 Curve25519 上使用更安全的 Ristretto 压缩实现了 Schnorr 签名库。 Schnorrkel 在此曲线压缩的基础上实现了相关的协议，例如 HDKD，MuSig 和 VRF。它还包括各种较小的改进，例如哈希方案 STROBE，该方案理论上可以通过 Wasm 进行一次调用就可以处理大量数据。
 
@@ -85,11 +85,11 @@ Web3 基金会已在[ Schnorrkel ](https://github.com/w3f/schnorrkel)库中的 C
 
 ## 资源
 
-- [对BIP32-Ed25519](https://forum.web3.foundation/t/key-recovery-attack-on-bip32-ed25519/44) - 论坛帖子详细描述了对 BIP32-Ed25519 的潜在攻击。 向 sr25519 变量过渡的动机。
+- [对 BIP32-Ed25519](https://forum.web3.foundation/t/key-recovery-attack-on-bip32-ed25519/44) - 论坛帖子详细描述了对 BIP32-Ed25519 的潜在攻击。 向 sr25519 变量过渡的动机。
 - [在 Polkadot 中的账户签名和密钥](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70) - Web3 研究人员 Jeff Burdges 的帖子。
 - [Schnorr 签名有抗量子计算吗?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 
-## 附录A: 曲线安全
+## 附录 A: 曲线安全
 
 From the [introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10) into `libssl`:
 

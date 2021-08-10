@@ -1,15 +1,15 @@
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE) 
-[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](https://www.markdownguide.org/) 
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](https://www.markdownguide.org/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/general/CONTRIBUTING.md) 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/general/CONTRIBUTING.md)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id)
 
-<a href="https://wiki.polkadot.network/" rel="some text">![Polkadot Wiki](docs/assets/polkadot-wiki.png)</a> | <a href="https://guide.kusama.network/" rel="some text">![Kusama Guide](docs/assets/kusama-guide.png)</a>
-:----------------------------------:|:--------------------------------:
+| <a href="https://wiki.polkadot.network/" rel="some text">![Polkadot Wiki](docs/assets/polkadot-wiki.png)</a> | <a href="https://guide.kusama.network/" rel="some text">![Kusama Guide](docs/assets/kusama-guide.png)</a> |
+| :----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
 
 # Polkadot Wiki
 
-<img align="right" src="docs/assets/web3-logo.png" width="550" height="285">
+<img align="right" src="docs/assets/web3-logo.png" width="518" height="285">
 
 <p align="left">
   The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by Web3 Foundation to 
@@ -19,10 +19,10 @@
 ## Contributing to Documentation
 
 The Wiki is an open source project and we will review all issues and pull-requests created
-in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with 
-these corrections. 
+in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with
+these corrections.
 
-Larger contributions may start as issues to test the waters on the subject with the maintainers. 
+Larger contributions may start as issues to test the waters on the subject with the maintainers.
 It is generally preferable to create a pull request over an issue to propose a change to the wiki content.
 
 ### Running Locally
@@ -31,12 +31,25 @@ Both the Polkadot Wiki and the Kusama Guide are built from the source files in t
 After cloning the source locally, you can start the websites with each of these respective commands
 (ensure you run `yarn` at the root of the repository first to install dependencies):
 
+> The site is built using Docusaurus: you may need to install Docusaurus before running
+> the Wiki locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
+
 ```zsh
 # For the Polkadot Wiki:
 yarn polkadot:start
 # For the Kusama Guide:
 yarn kusama:start
 ```
+
+#### Building IPFS
+
+- Run `yarn kusama:build`
+- Run `yarn polkadot:build`
+
+#### Running GitHub Pages
+
+- Run `yarn kusama:publish-gh-pages`
+- Run `yarn polkadot:publish-gh-pages`
 
 ### Style Guide
 
@@ -45,25 +58,35 @@ Use the style guide from the
 
 #### Formatting
 
-Use [Prettier](https://prettier.io/) to format markdown pages. To run Prettier on the `docs` folder,
+Use [pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
+as a pre-commit formatting tool.
+
+There is an automatic `pretty-quick` check that occurs when you want formatting
+on your changed/staged files.
+
+To run manually: ` npx pretty-quick --staged`
+
+To format markdown pages. To run Prettier on the `docs` folder,
 run:
 
 ```bash
 npx prettier --write ./docs/
 ```
 
+There is an automatic `pretty-quick` check that occurs when you want an entire file formatting on your changed/staged files.
+
 ### Static Site Generator
 
-The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website 
+The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website
 generator to convert the Markdown docs into a documentation website.
 
 ### Search Engine
 
-[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which 
+[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which
 is built into Docusaurus. Indexing via Algolia provides faster lookup; the actual configuration
 for lookup is located in another repository that's maintained by Algolia DocSearch.
 
-We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js` 
+We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js`
 file in `scripts`, and defining an API key and index name that are provided by DocSearch.
 
 ```js
@@ -76,15 +99,15 @@ file in `scripts`, and defining an API key and index name that are provided by D
   }
 ```
 
-If you would like to access and modify this, you can re-submit the documentation url via 
-[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send 
-a JavaScript snippet that you can re-integrate into the configuration, similar to the 
+If you would like to access and modify this, you can re-submit the documentation url via
+[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send
+a JavaScript snippet that you can re-integrate into the configuration, similar to the
 one shown above.
 
 ### Automated Deployments
 
 The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
-The Kusama wiki is also deployed to GitHub Pages (via a separate repository). 
+The Kusama wiki is also deployed to GitHub Pages (via a separate repository).
 
 ### Mirror Pages
 

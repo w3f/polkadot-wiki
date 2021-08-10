@@ -9,7 +9,7 @@ An address is the public part of a Polkadot account. The private part is the key
 
 There are several ways to generate a Polkadot account:
 
-- 推荐给大多数用户的Polkadot {.js}浏览器插件
+- 推荐给大多数用户的 Polkadot {.js}浏览器插件
 - **最安全的** [Subkey](#subkey)
 - [Polkadot-JS 应用](#polkadotjs)
 - [Parity Signer](#parity-signer)
@@ -150,8 +150,8 @@ The next step is to sign the transaction from with enough accounts to meet the t
 
 There is currently no indication of a pending transaction from a multi-sig in the UI. This means the second signatory must **repeat the call in full** in order to sign it. In other words:
 
-- 如果 Alice 发起了从多钱账户给 Ferdie 转账150个币的交易，链中将有一 个待处理的交易。
-- 如果 Bob 发起了从多钱账户给 Ferdie 转账250个币的交易，链中将有**另一个** 待处理的交易，并且第一个交易还没有完成。
+- 如果 Alice 发起了从多钱账户给 Ferdie 转账 150 个币的交易，链中将有一 个待处理的交易。
+- 如果 Bob 发起了从多钱账户给 Ferdie 转账 250 个币的交易，链中将有**另一个** 待处理的交易，并且第一个交易还没有完成。
 - 因为阈值是 2/3，Charlie 现在可以通过重复 执行所需交易来完成任意这两笔交易。
 
 Other calls work exactly the same - if a multi-sig wants to become a Council member, the candidacy request has to come from the multi-sig, but be signed (re-requested) from each signatory until the threshold is reached.
@@ -222,7 +222,7 @@ The vanity generator takes the following parameters:
 
 - “搜索”: 您想要在您的新地址中包含的子字符串。
 - "区分大小写": "是", 如果搜索是区分大小写; "否" 如果不是。
-- “密钥对加密类型”：指定您要生成的帐户类型；建议在大多数情况下使用Schnorrkel，以确保安全。
+- “密钥对加密类型”：指定您要生成的帐户类型；建议在大多数情况下使用 Schnorrkel，以确保安全。
 
 If you've filled out all details above and hit the "Start generation" button, a list of accounts will start generating on your screen. Note that depending on the length of the substring and the processing speed of your computer, it may take some time before any accounts appear.
 

@@ -29,14 +29,14 @@ sidebar_label: 链接
 ### Substrate
 
 - [什么是 Substrate?](https://medium.com/paritytech/what-is-substrate-29af4231d7e0)-介绍用于搭建 Polkadot 的框架。
-- [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支75人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中40％的节点服务。 Parity 还为[比特币](https://github.com/paritytech/parity-bitcoin)维护客户端，并为[Zcash ](https://github.com/ZcashFoundation/zebra)建立客户端。
+- [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支 75 人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中 40％的节点服务。 Parity 还为[比特币](https://github.com/paritytech/parity-bitcoin)维护客户端，并为[Zcash ](https://github.com/ZcashFoundation/zebra)建立客户端。
 - [Substrate Developer Hub](https://substrate.dev/docs/en/) - Overviews, tutorials and reference documentation for Substrate.
 - [Substrate 介绍](https://youtu.be/iUMZyL5kTwc)-Gavin Wood 博士介绍 Substrate ，这是 Polkadot 的底层技术。
-- [Substrate 与Polkadot 的关系](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - 关于两种技术的详细描述
-- [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood博士展示了Substrate（区块链框架 + VM）和 Polkadot，并在15分钟内用 Substrate 构建可行的区块链系统
-- [为 Polkadot 的Substrate 发布做准备](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815)-如何在发布之前开始准备 Polkadot 的概述。
+- [Substrate 与 Polkadot 的关系](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - 关于两种技术的详细描述
+- [Polkadot & Substrate 概述](https://www.youtube.com/watchv=0iouzddi5is&feature=youtu.be)-Gavin Wood 博士展示了 Substrate（区块链框架 + VM）和 Polkadot，并在 15 分钟内用 Substrate 构建可行的区块链系统
+- [为 Polkadot 的 Substrate 发布做准备](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815)-如何在发布之前开始准备 Polkadot 的概述。
 - [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post that recaps information regarding Substrate and Polkadot.
-- [在Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Gavin Wood 视频上提供 Substrate 的路线图摘要和 MelonportM-1 会议在 Polkadot 上的更新。
+- [在 Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Gavin Wood 视频上提供 Substrate 的路线图摘要和 MelonportM-1 会议在 Polkadot 上的更新。
 - [The Relationship between Rust, Substrate and Polkadot](https://www.youtube.com/watch?v=aVW_eG-IH7o&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=8) - Logan Saether, from the technical education team presents a technical explaination of the relationship between Rust, Substrate and Polkadot.
 
 ### 治理
@@ -56,27 +56,27 @@ sidebar_label: 链接
 
 ## 开发
 
-- [在 Polkadot 构建的团队](https://forum.web3.foundation/t/teams-building-on-polkadot/67)-在 Polkadot上 构建的团队名单。
+- [在 Polkadot 构建的团队](https://forum.web3.foundation/t/teams-building-on-polkadot/67)-在 Polkadot 上 构建的团队名单。
 
 ### Kusama
 
-- [在 Polkadot 构建的团队](https://forum.web3.foundation/t/teams-building-on-polkadot/67)-在 Polkadot上 构建的团队名单。
+- [在 Polkadot 构建的团队](https://forum.web3.foundation/t/teams-building-on-polkadot/67)-在 Polkadot 上 构建的团队名单。
 - [样式指南](https://github.com/paritytech/polkadot/wiki/Style-Guide)-为 Polkadot 的 Rust 做贡献。
 
 ### Polkadot Host
 
 - [ Polkadot Host 规范](https://github.com/w3f/polkadot-re-spec/blob/master/polkadot_re_spec.pdf)- Polkadot Host 的完整规范。
-- [ Polkadot.js ](https://polkadot.js.org/)-JS中的工具和客户端。Polkadot JS 是由德国的三人团队开发，正在构建 Polkadot 的 JavaScript 实现。
+- [ Polkadot.js ](https://polkadot.js.org/)-JS 中的工具和客户端。Polkadot JS 是由德国的三人团队开发，正在构建 Polkadot 的 JavaScript 实现。
 - [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team based in Toronto, Canada. ChainSafe is building an implementation of the beacon chain for Ethereum 2.0 client in TypeScript and this Go implementation of Polkadot.
 
 ### Cumulus
 
 - [ Cumulus ](https://github.com/paritytech/cumulus)-使 Substrate 构建的链与 Polkadot 兼容的库。
-- [Cumulus: 深入学习](https://www.youtube.com/watch?v=thgtXq5YMOo)-Polkadot 联合创始人 Robert Habermeier 于2019年3月在EthCC 上的讲话，详细介绍 Cumulus 与平行链的最新进展。
+- [Cumulus: 深入学习](https://www.youtube.com/watch?v=thgtXq5YMOo)-Polkadot 联合创始人 Robert Habermeier 于 2019 年 3 月在 EthCC 上的讲话，详细介绍 Cumulus 与平行链的最新进展。
 
 ### Substrate
 
-- [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支75人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中40％的节点服务。 Parity 还为比特币维护客户端，并为Zcash 建立客户端。
+- [ Parity Substrate ](https://github.com/paritytech/substrate)-第一个用 Rust 编写。Parity Technologies 是一支 75 人的开发团队，总部位于英国和德国。 Parity 的技术负责运行以太坊的主要客户端，为网络中 40％的节点服务。 Parity 还为比特币维护客户端，并为 Zcash 建立客户端。
 - [Parity Wasm](https://github.com/paritytech/parity-Wasm)- Rust 中的 WebAssembly 序列化/反序列化。
 - [ Wasm utils ](https://github.com/paritytech/Wasm-utils)-用于 Parity 和 Wasm 合同开发的 Wasm 实用程序合集。
 
@@ -95,20 +95,20 @@ sidebar_label: 链接
 
 ### 用户界面与浏览器
 
-- [Polkadot 浏览器](https://polkadot.js.org/apps/#/explorer)-Polkadot 网络浏览器，可用于Alexander、Kusama 网络或您的网络。
+- [Polkadot 浏览器](https://polkadot.js.org/apps/#/explorer)-Polkadot 网络浏览器，可用于 Alexander、Kusama 网络或您的网络。
 - [Telemetry](http://telemetry.polkadot.io/)-节点的信息服务网站。
-- [ Polkascan ](http://polkascan.io/) - Polkadot 的中继链和Parity Substrate 链上的实时多链数据。
+- [ Polkascan ](http://polkascan.io/) - Polkadot 的中继链和 Parity Substrate 链上的实时多链数据。
 - [Subscan.io](https://subscan.io) - 基于 Substrate 链的资源管理器。
 
 ### Crowdcast 网络研讨会
 
-- [Polkadot 首页](https://www.crowdcast.io/polkadot) - Web3基金会所有过去 Crowdcast 网络研讨会的列表。
+- [Polkadot 首页](https://www.crowdcast.io/polkadot) - Web3 基金会所有过去 Crowdcast 网络研讨会的列表。
 - [Polkadot 上的治理](https://www.crowdcast.io/e/governance-on-polkadot--) - 网络研讨会解释治理如何在 Polkadot 和 Kusama 中起作用。
 - [Kusama](https://www.crowdcast.io/e/qpz8aran) - Anson Lau 的 Kusama 概述。
 - [Polkadot 上的出块和最终确定性](https://www.crowdcast.io/e/polkadot-block-production) - Bill Laboon 解释在 Kusama BABE 和 GRANDPA 如何一起运作出块和区块确定性。
-- [在 Polkadot 上验证](https://www.crowdcast.io/e/validating-on-polkadot) - 讲解如何在 Polkadot 上验证 与Joe Petrowski 和 Equity Technologies 的 David Dorgan 以及 与 Staked 的 Tim Ogilvie 合作。
-- [了解 Polkadot 中的账户和密钥](https://www.crowdcast.io/e/polkadot-keys) - 解释在 Polkadot 中使用的不同类型的账户和密钥 -  Bill Laboon 和 BlockX Labs 的 Chinmay Patel。
-- [参与 Kusama](https://www.crowdcast.io/e/participating-on-kusama) - 如何参与 在 Kusama 不同的角色 -  Logan Saether 。
-- [开发应用程序与 Polkadot 交互](https://www.crowdcast.io/e/developing-apps-on-polkadot) 。Bill Laboon 讲解如何通过 Polkadot API 编写你自己的脚本和程序与Polkadot 交互。
+- [在 Polkadot 上验证](https://www.crowdcast.io/e/validating-on-polkadot) - 讲解如何在 Polkadot 上验证 与 Joe Petrowski 和 Equity Technologies 的 David Dorgan 以及 与 Staked 的 Tim Ogilvie 合作。
+- [了解 Polkadot 中的账户和密钥](https://www.crowdcast.io/e/polkadot-keys) - 解释在 Polkadot 中使用的不同类型的账户和密钥 - Bill Laboon 和 BlockX Labs 的 Chinmay Patel。
+- [参与 Kusama](https://www.crowdcast.io/e/participating-on-kusama) - 如何参与 在 Kusama 不同的角色 - Logan Saether 。
+- [开发应用程序与 Polkadot 交互](https://www.crowdcast.io/e/developing-apps-on-polkadot) 。Bill Laboon 讲解如何通过 Polkadot API 编写你自己的脚本和程序与 Polkadot 交互。
 - [将 Web3 登录添加到 Web2.0 应用程序](https://www.crowdcast.io/e/web3-logins-workshop) Bruno Skvorc 解释如何将登录过程添加到 Web2.0 应用程序中。
 - [A Distributed Drawing Program on Kusama](https://www.crowdcast.io/e/distributed-drawing) - Expanding on his previous talk, Bill Laboon uses Shawn Tabrizi's `remarkable` codebase to make a node.js app that listens to the Kusama chain and allows users to set pixels to programmatically draw a shared picture.

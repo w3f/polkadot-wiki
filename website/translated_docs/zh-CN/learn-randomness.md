@@ -4,7 +4,7 @@ title: 随机性
 sidebar_label: 随机性
 ---
 
-权益证明(PoS)区块链的随机性对于验证人责任的公平并且不可预测的分配是非常重要。 ，因为计算机是确定性设备，所以它们在随机数方面很差(同样输入总是会产生同样输出)。大部份人通常在计算机上(例如游戏应用程序中)称随机数实际上是_伪随机_- 也就是说它们依赖用户或其他类型的_Oracle_ 提供足够随机的_seed_，例如[气象站的大气噪声](https://www.random.org/randomness/), [心跳率](https://mdpi.altmetric.com/details/47574324)或什至[熔岩灯](https://en.wikipedia.org/wiki/Lavarand)，就可以从中产生一系列看似随机的数字。但是如果给相同的种子，结果将会是一样。
+权益证明(PoS)区块链的随机性对于验证人责任的公平并且不可预测的分配是非常重要。 ，因为计算机是确定性设备，所以它们在随机数方面很差(同样输入总是会产生同样输出)。大部份人通常在计算机上(例如游戏应用程序中)称随机数实际上是*伪随机*- 也就是说它们依赖用户或其他类型的*Oracle* 提供足够随机的*seed*，例如[气象站的大气噪声](https://www.random.org/randomness/), [心跳率](https://mdpi.altmetric.com/details/47574324)或什至[熔岩灯](https://en.wikipedia.org/wiki/Lavarand)，就可以从中产生一系列看似随机的数字。但是如果给相同的种子，结果将会是一样。
 
 这些输入将根据时间和空间而变化，但是不可能将相同的结果输入到全球特定区块链的所有节点中。如果节点获得不同的输入以创建区块，则会发生分叉。显然现实世界中的熵不适合用作区块链随机性的种子。
 
@@ -28,9 +28,9 @@ In every slot, each validator "rolls a die". They execute a function (the VRF) t
 
 ![](assets/VRF_babe.png)
 
-输出为两个数值: ` RESULT `(随机值)和` PROOF `(证明随机数值已正确生成的证明)。
+输出为两个数值: `RESULT`(随机值)和`PROOF`(证明随机数值已正确生成的证明)。
 
-然后将` RESULT `与该协议实现中定义的_阈值 (threshold) _(在 Polkadot Host)进行比较。如果该值小于阈值，那么掷此数字的验证人将是可在该插槽的区块生产候选者。然后，验证人尝试创建一个区块，并将该区块与先前获得的` PROOF `和` RESULT `一起提交到网络中。
+然后将`RESULT`与该协议实现中定义的*阈值 (threshold) *(在 Polkadot Host)进行比较。如果该值小于阈值，那么掷此数字的验证人将是可在该插槽的区块生产候选者。然后，验证人尝试创建一个区块，并将该区块与先前获得的`PROOF`和`RESULT`一起提交到网络中。
 
 The fishermen - nodes watching the network for collator and validator wrongdoing - will be verifying Relay Chain blocks. Since an illegal roll will generate an illegal block, and since fishermen will have access to the `RESULT` and `PROOF` in every block produced by a validator, it'll be easy for them to automatically report cheating validators.
 
@@ -42,7 +42,7 @@ The fishermen - nodes watching the network for collator and validator wrongdoing
 
 [ RANDAO ](https://github.com/randao/randao) - RANDAO 要求每个验证人通过对某些种子执行一系列哈希操作来进行准备。 验证人然后在一个回合中发布最终的哈希值，加上随机数是从每个参与者进入游戏中得出。只要有一名诚实的验证人参加，随机性就被认为是安全（在经济上进行攻击是不可行）。Polkadot 不选用 VRF 的随机性方法是因为从每个区块生产者处揭示每个时隙的哈希值需要二次带宽或至少二次计算。
 
-RANDAO 可选增加VDF。
+RANDAO 可选增加 VDF。
 
 ### VDFs
 
