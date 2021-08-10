@@ -14,7 +14,7 @@
     "polkadot:start": "yarn generateRegistryTable; docusaurus start polkadot-wiki",
     "prepolkadot:build": "npm-run-all -ln polkadot:clean -p fetch generateRegistryTable mirror polkadot:copy-assets:* --aggregate-output",
     "polkadot:build": "cross-env BUILDING=true docusaurus build polkadot-wiki; node polkadot-wiki/postprocess",
-    "polkadot1:inject": "node --experimental-json-modules scripts/inject.mjs --rootDir polkadot-wiki/build/polkadot-wiki --node wss://rpc.polkadot.io",
+    "polkadot:inject": "node --experimental-json-modules scripts/inject.mjs --rootDir polkadot-wiki/build/polkadot-wiki --node wss://rpc.polkadot.io",
     "polkadot:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy polkadot-wiki",
     "polkadot:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/getting-started\" --outputPDFFilename=\"polkadot-wiki/static/polkadot-wiki.pdf\" --coverTitle=\"POLKADOT WIKI\"",
     "copy:translations": "cp -R polkadot-wiki/translated_docs kusama-guide ",
@@ -59,6 +59,7 @@
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.0.6",
     "npm-run-all": "^4.1.5",
+    "prettier": "2.3.2",
     "pretty-quick": "^3.1.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
@@ -71,7 +72,8 @@
   "dependencies": {
     "@docusaurus/theme-live-codeblock": "^2.0.0-beta.4",
     "docusaurus-preset-name": "^1.0.0",
-    "remark-docusaurus-tabs": "^0.1.0"
+    "remark-docusaurus-tabs": "^0.1.0",
+    "replace-in-file": "^6.2.0"
   },
   "husky": {
     "hooks": {
