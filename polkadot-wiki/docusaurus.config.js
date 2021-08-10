@@ -87,12 +87,6 @@ module.exports = {
             from: ["/en/latest", "/en/"],
           },
         ],
-        redirects: [
-          {
-            to: "/",
-            from: ["/docs/general/", "/docs/learn/"],
-          },
-        ],
         createRedirects: function (existPath) {
           if (existPath === "/docs/general") {
             return ["/docs/"];
