@@ -46,6 +46,8 @@ module.exports = {
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
   onDuplicateRoutes: "log",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "throw",
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -58,7 +60,10 @@ module.exports = {
           path: "../docs",
           sidebarPath: "./sidebars.js",
           routeBasePath: "docs",
-          remarkPlugins: injectPlugin({ isPolkadot: true }),
+          remarkPlugins:
+            isBuilding || isPublishing
+              ? [injectPlugin({ isPolkadot: true })]
+              : [],
         },
         theme: {
           customCss: [
@@ -79,10 +84,20 @@ module.exports = {
         redirects: [
           {
             to: "/",
-
             from: ["/en/latest", "/en/"],
           },
         ],
+        redirects: [
+          {
+            to: "/",
+            from: ["/docs/general/", "/docs/learn/"],
+          },
+        ],
+        createRedirects: function (existPath) {
+          if (existPath === "/docs/general") {
+            return ["/docs/"];
+          }
+        },
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
             return [
