@@ -24,10 +24,10 @@ may be better suited for your application over the other).
   - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
     Polkadot does... _expect chaos_...
 - Official testnets:
-  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
-    testing of features from time to time that will eventually migrate onto Polkadot.
+  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation 
+    testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet (is not reset back to genesis block).
   - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for `ink!` development.
-  - **Rococo** - Parachains and XCM testnet.
+  - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new genesis block).
 
 Polkadot mainnet has been running since May 2020 and has
 [implementations in various programming languages](../learn/learn-implementations.md) ranging from Rust to
@@ -42,13 +42,13 @@ to build on Polkadot.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
-Polkadot provides a few ways for you to deploy your application: as a smart contract on an existing
+Polkadot provides several ways for you to deploy your application: as a smart contract on an existing
 parachain, as your own parachain, or as a parathread. There are trade-offs when working with each of
 these and reading this section will help you understand them.
 
 ### Parachains & Parathreads
 
-Parachains are "parallel" chains containing their own runtime logic and can benefit from the shared
+Parachains are "parallel" chains containing their own runtime logic and benefit from the shared
 security and the cross-chain messaging provided by the Polkadot Relay Chain. Parachains permit a
 high degree of flexibility and customization but require more effort to create and maintain over
 time.
