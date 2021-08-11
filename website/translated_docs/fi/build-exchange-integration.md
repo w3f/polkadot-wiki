@@ -72,7 +72,7 @@ struct ConsensusItem:
     data: Vec<u8>
 ```
 
-It also relies on `Extrinsic`. An _extrinsic_ is a generalisation of a transaction and other (unsigned) external information. It is a highly extensible type which doesn't have a fixed format per se. To ensure future format compatibility, metadata concerning the extrinsic format is provided through an RPC `state_getMetadata`.
+It also relies on `Extrinsic`. An *extrinsic* is a generalisation of a transaction and other (unsigned) external information. It is a highly extensible type which doesn't have a fixed format per se. To ensure future format compatibility, metadata concerning the extrinsic format is provided through an RPC `state_getMetadata`.
 
 The metadata itself is provided encoded in SCALE. Its format is:
 
@@ -138,15 +138,15 @@ struct Event:
 
 `Type` is just a `String`, but the contents of the string are to be interpreted as the name of a type.
 
-Substrate chains (actually, specifically Substrate chains built using the SRML) such as Polkadot are composed of various _modules_. Each module can be imagined a little bit like a smart contract, with various kinds of transactions (or, in Substrate terms, _extrinsics_), data items that persist between transactions and blocks, events and constant parameters. The metadata encodes all of these things, allowing your client code to both create particular transactions or interpret what has happened on the chain, even between different Substrate blockchains or over many different upgrades or forks of the same chain.
+Substrate chains (actually, specifically Substrate chains built using the SRML) such as Polkadot are composed of various *modules*. Each module can be imagined a little bit like a smart contract, with various kinds of transactions (or, in Substrate terms, *extrinsics*), data items that persist between transactions and blocks, events and constant parameters. The metadata encodes all of these things, allowing your client code to both create particular transactions or interpret what has happened on the chain, even between different Substrate blockchains or over many different upgrades or forks of the same chain.
 
 There are two modules a wallet needs to be aware of: Balances and Indices. Balances allows you to send and receive funds between different accounts. Indices allows you to interpret user addresses.
 
 ## 3. Working with SS58 and account addresses
 
-In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit) _AccountId_. This is simply the public key for the x25519 cryptography used by Substrate.
+In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit) *AccountId*. This is simply the public key for the x25519 cryptography used by Substrate.
 
-However, to keep the addresses small, we index every account with a non-zero balance on Polkadot and use just this _index_ to identify the account. This index is much smaller than the 32-byte _AccountId_, and can usually be encoded in just a couple of bytes.
+However, to keep the addresses small, we index every account with a non-zero balance on Polkadot and use just this *index* to identify the account. This index is much smaller than the 32-byte *AccountId*, and can usually be encoded in just a couple of bytes.
 
 Where Bitcoin has the Check58 address format and Ethereum used the `0x...` hex format, Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to handle many different cryptographies and chains. It has much in common with Bitcoin's Check58 format such as a version prefix, a hash-based checksum suffix and base-58 encoding. Further information on it can be found here [TODO]. Of the many supported "version codes", only one particular family of subformats is especially important for Polkadot support in wallets.
 
@@ -162,6 +162,7 @@ The SS58 format is a base-58 encoding (using the same alphabet as Bitcoin) of a 
 | 4           | 1             | 2             | 1              | Index        |
 | 6           | 1             | 4             | 1              | Index        |
 | 35          | 1             | 32            | 2              | AccountId    |
+
 
 NOTE: This table contains only the most common commbinations; SS58 includes several more uncommon ones. For maximum compatibility then implement according to the full SS58 specification.
 
@@ -189,20 +190,20 @@ In Polkadot, account balances can be looked up within the `Balances` module usin
 
 NOTE: `FreeBalance` gives the total balance controlled by that account, but does not account for temporarily locked portions of balance, such as those locked for staking, voting or vesting. This information can be queried from the chain, but it is outside the scope of this document.
 
-The balance encodes the DOT token with 12 decimal places. To get the actual number of DOTs, you need to divide the 128-bit balance by 1,000,000,000,000 (10\*\*12). For completeness, The exact denominations of the Polkadot currency are:
+The balance encodes the DOT token with 12 decimal places. To get the actual number of DOTs, you need to divide the 128-bit balance by 1,000,000,000,000 (10**12). For completeness, The exact denominations of the Polkadot currency are:
 
-| Balance value | Name      |
-| ------------- | --------- |
-|               |           |
-| 1             | Planck 10 |
+| Balance value | Name |
+| ------------- | ---- |
+|               |      |
+ 1 | Planck 10
 
-**3 | Point 10**6 | Microdot (UDOT) 10**9 | Millidot (MDOT) 10**12 | Dot (DOT) 10\*\*15 | Blob
+**3 | Point 10**6 | Microdot (UDOT) 10**9 | Millidot (MDOT) 10**12 | Dot (DOT) 10**15 | Blob
 
 ### Transferring balances
 
 To transfer a balance, a transaction must be constructed and sent. In constructing a transaction, there are two key parts: the general part of the transaction and the module-specific `function` part of the transaction with the latter generally needing information from the chain's metadata must generally.
 
-In general, Polkadot's transactions are encoded as _signed_ `Extrinsic`s in SCALE. To facilitate forward compatibility, extrinsics are double-encoded, so the initial encoding is passed back into SCALE (as a `Vec<u8>`) and the output of that is used. This has the effect of adding a small length prefix onto it allowing systems that cannot interpret the transaction data itself to still be able to pass them around as opaque packets of data.
+In general, Polkadot's transactions are encoded as *signed* `Extrinsic`s in SCALE. To facilitate forward compatibility, extrinsics are double-encoded, so the initial encoding is passed back into SCALE (as a `Vec<u8>`) and the output of that is used. This has the effect of adding a small length prefix onto it allowing systems that cannot interpret the transaction data itself to still be able to pass them around as opaque packets of data.
 
 The SCALE format is given by `Extrinsic`:
 
@@ -232,7 +233,7 @@ Era is a one or two byte item, again with a special SCALE encoding format and it
 
 The nonce is the number of transactions send so far by the sender account, much like in Ethereum. It is of type `Nonce`, logically equivalent to a `u64`. To get the correct value, the appropriate storage item must be queried, much like when querying an account's balance. In this case, it is the `System` module's `AccountNonce` item; thus the storage key required is the Blake2 256 hash of the string `System AccountNonce<ID>` where `<ID>` is the 32-byte `AccountId`. It will return a `Nonce` which may be decoded and used here.
 
-NOTE: The nonce retrieved from storage does not take into account _pending_ transactions. If you are sending more than one transaction from a single account at a time, then you will need to increment and track this value manually.
+NOTE: The nonce retrieved from storage does not take into account *pending* transactions. If you are sending more than one transaction from a single account at a time, then you will need to increment and track this value manually.
 
 The `tip` is a `Balance` (logically equivalent to the `u128` type in SCALE), which denotes some additional fees paid to the block author for prioritized inclusion at busy times. It will typically be zero.
 
@@ -241,11 +242,10 @@ The `checkpoint_hash` is the hash of the "checkpoint block", which is to say the
 Finally, the `function` is a `Function` type (sometimes known as a `Call` or `Proposal` in certain contexts) which describes what action shall be dispatched. It must be constructed according to metadata. In this case, we want our transaction to effect the `transfer` function in the `Balances` module, to transfer a balance from one account to another. It is important to check the index of the Balances module itself in the list of modules. In this case, it is the 6th item, or index 5. It is also necessary to inspect the `calls` field of the Balances `Module` in the metadata, and determine what index in the list of calls the transfer function is. As it happens, it is first in the list, and thus has an index of 0.
 
 Finally, we need to know what parameters to this function are expected in order to construct the rest of the transaction. This is provided in the `Call` item of the metadata that we just located. Two parameters are expected:
-
 - `dest` with a type of `<T::Lookup as StaticLookup>::Source` (aka `Address`); and
 - `value` with a type of `Compact<T::Balance>` (aka `Compact Balance`).
 
-The `function` _in this case_ (i.e. specifically and only for the Balance transfer transaction on Polkadot as of right now) would be the struct:
+The `function` *in this case* (i.e. specifically and only for the Balance transfer transaction on Polkadot as of right now) would be the struct:
 
 ```
 struct BalanceTransferFunction:

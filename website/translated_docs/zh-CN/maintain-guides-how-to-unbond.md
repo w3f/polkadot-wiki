@@ -6,7 +6,7 @@ sidebar_label: Unbonding and Rebonding
 
 The following describes how to stop nominating or validating and retrieve your tokens. Please note that all networks on which you can nominate have a delayed exit period, called the _unbonding period_, which serves as a cooldown. You will not be able to transfer your tokens before this period has elapsed, and you will not receive any staking rewards during this period (as you are not nominating any validators).
 
-### 第 1 步：停止提名
+### 第1步：停止提名
 
 On the [Polkadot-JS Apps](https://polkadot.js.org/apps) navigate to the "Staking" tab.
 
@@ -18,7 +18,7 @@ Here, click "Stop Nominating" or "Stop Validating" (depending on your role) on a
 
 After you confirm this transaction, your tokens will remain _bonded_. This means they stay ready to be distributed among nominees or used as validator self-stake again. To actually withdraw them, you need to unbond.
 
-### 第 2 步：取消绑定
+### 第2步：取消绑定
 
 To unbond the amount, click the little gear icon next to the account you want to unbond tokens for, and select "Unbond funds".
 

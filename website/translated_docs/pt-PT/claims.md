@@ -194,10 +194,11 @@ First, you need to press the "QR Scanner" on the Parity Signer to scan the QR co
 ![ps-3r](assets/new-claims/ps-3r.jpg)
 
 When the transaction is included in the block, you will see a green success box appear in the upper right corner and the DOTs will be in your account.
-https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
+  https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundation&via=matrix.org&via=matrix.parity.io
+
+[MyCrypto]: https://download.mycrypto.com/
 
 [mycrypto]: https://download.mycrypto.com/
-[mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
-[claims app]: https://polkadot.js.org/apps/#/claims
+[Claims app]: https://polkadot.js.org/apps/#/claims
 [claims app]: https://polkadot.js.org/apps/#/claims

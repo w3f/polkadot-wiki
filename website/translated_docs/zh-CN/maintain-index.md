@@ -9,8 +9,8 @@ sidebar_label: 网络参与者
 ## 节点
 
 - [网络指南](maintain-networks) - 可以连接到 Polkadot 网络的节点列表。
-- [设置全节点](maintain-sync)-通过运行全节点，同步 Kusama 网络来开始。 该指南中的步骤还将广泛应用于任何基于 Substrate 的网络 (如 Polkadot)。
-- [使用 Nginx 设置 WSS](maintain-wss) - 为您的节点设置安全连接 WebSockets 的服务器。
+- [设置全节点](maintain-sync)-通过运行全节点，同步 Kusama 网络来开始。 该指南中的步骤还将广泛应用于任何基于 Substrate 的网络 (如Polkadot)。
+- [使用 Nginx 设置WSS](maintain-wss) - 为您的节点设置安全连接 WebSockets 的服务器。
 
 ## 收集人
 

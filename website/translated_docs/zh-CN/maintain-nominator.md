@@ -14,15 +14,15 @@ While your DOT are staked by nominating a validator, they are 'locked' (bonded).
 
 ### Active vs. Inactive 提名
 
-当你前往到抵押页面的 [Account actions](https://polkadot.js.org/apps/#/staking/actions)，你应该会看到绑定了的帐号和提名状态。如果没有，您可以先跟随[这个](maintain-guides-how-to-nominate-kusama)教程设置。你的提名将会在下一个时代生效即是在 Kusama 上大概 6 小时而 Polkadot 是 24 小时。
+当你前往到抵押页面的 [Account actions](https://polkadot.js.org/apps/#/staking/actions)，你应该会看到绑定了的帐号和提名状态。如果没有，您可以先跟随[这个](maintain-guides-how-to-nominate-kusama)教程设置。你的提名将会在下一个时代生效即是在 Kusama 上大概6小时而 Polkadot 是24小时。
 
 ![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
 
-假设你已经提名了 5 个侯选验证人，但是只有 3 个当选成为验证人，那你应该会看见有 2 个提名被标为 inactive。 Active nomination 意思是你提名的验证人成功当选，而 inactive 则是没有成功当选。
+假设你已经提名了5个侯选验证人，但是只有3个当选成为验证人，那你应该会看见有2个提名被标为 inactive。 Active nomination 意思是你提名的验证人成功当选，而 inactive 则是没有成功当选。
 
 ### 无效提名对奖励的可能影响
 
-只要你有提名多个侯选验证人并且有至少一个当选，你绑定的 DOTs 将会全部抵押到当选的验证人身上。话虽如此，如果你只提名很少侯选验证人并且没有人当选，你仍然有机会没有奖励，所以最安全做法是尽可能提名愈多验证人(最多 16)愈好从而减少没有一个当选的风险。
+只要你有提名多个侯选验证人并且有至少一个当选，你绑定的 DOTs 将会全部抵押到当选的验证人身上。话虽如此，如果你只提名很少侯选验证人并且没有人当选，你仍然有机会没有奖励，所以最安全做法是尽可能提名愈多验证人(最多16)愈好从而减少没有一个当选的风险。
 
 ### 提名时要考虑的因素
 

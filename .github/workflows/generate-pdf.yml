@@ -20,7 +20,6 @@ jobs:
       - name: Clone and run the site
         run: |
           yarn
-          yarn mirror
           yarn polkadot:start &
           while ! nc -z localhost 3000; do
               sleep 1
@@ -32,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: polkadot-wiki
-          path: website/static/polkadot-wiki.pdf
+          path: website-v2/static/polkadot-wiki.pdf

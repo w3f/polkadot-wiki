@@ -30,7 +30,7 @@ Remember that after you click "Propose Changes", you must also click on "Create 
 
 There are a few basic ground-rules for contributors:
 
-1. **没有`--force` pushes **或以任何方式修改 Git 历史记录。
+1. **没有` --force ` pushes **或以任何方式修改 Git 历史记录。
 2. 对于某些问题，尤其是对于诸如错别字之类的较小更改，优先使用 Pull requests。 问题适用于一般或广泛的更改或内容缺少。
 3. Only use **non-master branches**.
 4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to solicit feedback from other contributors.

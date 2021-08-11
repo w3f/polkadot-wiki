@@ -47,8 +47,7 @@ The Bitcoin bridge as documented in the specification is composed of two logical
 For full details on how it works please refer to the specification.
 
 ## Ethereum Bridge
-
-As explained by Dr. Gavin Wood in a [blog post](https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13) from late 2019, there are three ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ecosystem.
+  As explained by Dr. Gavin Wood in a [blog post](https://medium.com/polkadot-network/polkadot-substrate-and-ethereum-f0bf1ccbfd13) from late 2019, there are three ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ecosystem.
 
 1. Polkadot <-> Ethereum Public Bridge.
 1. Substrate <-> Parity Ethereum (Openethereum) Bridge.

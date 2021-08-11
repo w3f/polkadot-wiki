@@ -155,9 +155,9 @@ Since Ledger does not support batch transactions, you must issue several extrins
 
 If you need support please send an email to [support@polkadot.network](mailto:support@polkadot.network) or visit our [Support Page](https://support.polkadot.network).
 
-[ledger]: https://www.ledger.com/
-[polkadot-js apps]: https://polkadot.js.org/apps
+[Ledger]: https://www.ledger.com/
+[Polkadot-JS Apps]: https://polkadot.js.org/apps
 [prerelease instructions]: https://github.com/Zondax/ledger-polkadot#download-and-install
 [releases page]: https://github.com/Zondax/ledger-polkadot/releases
-[polkascan]: https://polkascan.io/polkadot
-[subscan]: https://polkadot.subscan.io/
+[Polkascan]: https://polkascan.io/polkadot
+[Subscan]: https://polkadot.subscan.io/

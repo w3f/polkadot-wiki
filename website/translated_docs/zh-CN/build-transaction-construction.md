@@ -15,7 +15,7 @@ Polkadot 有一些所有交易的基本交易信息。
 - 区块编号(Block Number)：检查站区块的数量。
 - 创世纪哈希 (Genesis Hash)：链的创世纪哈希。
 - 元数据 (Metadata)：提交 runtime 的 SCALE 编码元数据。
-- Nonce：此交易的 nonce。
+- Nonce：此交易的nonce。
 - Spec 版本：当前 runtime 的 spec 版本。
 - 交易版本：交易格式的当前版本。
 - 提示：提高交易优先级的[提示](build-protocol-info#fees)(可选项)。
@@ -40,9 +40,9 @@ Parity 提供了以下工具来帮助执行这些步骤。
 
 ## Polkadot-JS 工具
 
-[Polkadot-JS 工具](https://github.com/polkadot-js/tools)包含一组用于与 Substrate 客户端进行交互的命令行工具，包括一个用于创建，签名和广播交易的名为“ Signer CLI”的工具。
+[Polkadot-JS 工具](https://github.com/polkadot-js/tools)包含一组用于与Substrate 客户端进行交互的命令行工具，包括一个用于创建，签名和广播交易的名为“ Signer CLI”的工具。
 
-本示例将使用`signer submit`命令，该命令将创建并提交交易。 `signer sendOffline`命令具有完全相同的 API，但不会广播交易。 `submit`和`sendOffline`必须连接到节点以获取当前元数据并构造一个有效交易。他们的 API 具有以下格式：
+本示例将使用`signer submit`命令，该命令将创建并提交交易。 `signer sendOffline`命令具有完全相同的API，但不会广播交易。 `submit`和`sendOffline`必须连接到节点以获取当前元数据并构造一个有效交易。他们的 API 具有以下格式：
 
 ```bash
 yarn run:signer <submit|sendOffline> --account <from-account-ss58> --ws <endpoint> <module.method> [param1] [...] [paramX]
@@ -54,7 +54,7 @@ yarn run:signer <submit|sendOffline> --account <from-account-ss58> --ws <endpoin
 yarn run:signer sign --account <from-account-ss58> --seed <seed> --type <sr25519|ed25519> <payload>
 ```
 
-例如我们从 `121X5bEgTZcGQx5NZjwuTjqkoiG8B2wEAvrUFjuw24ZGZf2` 发送 0.5 DOT 到 `15vrtLsCQF3qRYUcaEeh4JwepolNJkpsrqojqnZPc2y`
+例如我们从 `121X5bEgTZcGQx5NZjwuTjqkoiG8B2wEAvrUFjuw24ZGZf2` 发送0.5 DOT 到 `15vrtLsCQF3qRYUcaEeh4JwepolNJkpsrqojqnZPc2y`
 
 ```bash
 yarn run:signer submit --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 --ws ws://127.0.0.1:9944 balances.transferKeepAlive 15vrtLsCQFG3qRYUcaEeeEih4JwepocNJHkpsrqojqnZPc2y 500000000000
@@ -70,7 +70,7 @@ yarn run:signer sign --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 
 
 ## Tx Wrapper
 
-如果您不想使用 CLI 进行签名操作，Parity 提供了一个称为[TxWrapper](https://github.com/paritytech/txwrapper)的 SDK，它可以离线生成和签名交易。请参阅[示例](https://github.com/paritytech/txwrapper/tree/master/examples)以获取指南。
+如果您不想使用 CLI 进行签名操作，Parity 提供了一个称为[TxWrapper](https://github.com/paritytech/txwrapper)的SDK，它可以离线生成和签名交易。请参阅[示例](https://github.com/paritytech/txwrapper/tree/master/examples)以获取指南。
 
 **导入私钥:**
 
@@ -102,11 +102,9 @@ const unsigned = methods.balances.transferKeepAlive(
   },
   {
     address: "121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2",
-    blockHash:
-      "0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582",
+    blockHash: "0x1fc7493f3c1e9ac758a183839906475f8363aafb1b1d3e910fe16fab4ae1b582",
     blockNumber: 4302222,
-    genesisHash:
-      "0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636",
+    genesisHash: "0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636",
     metadataRpc, // must import from client RPC call state_getMetadata
     nonce: 2,
     specVersion: 1019,

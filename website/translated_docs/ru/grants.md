@@ -1,8 +1,6 @@
----
-
+- - -
 id: grants title: Web3 Foundation Grants sidebar_label: Grants
-
----
+- - -
 
 The Web3 Foundation offers two types of grants:
 

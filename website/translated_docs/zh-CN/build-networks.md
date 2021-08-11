@@ -48,7 +48,7 @@ Alexander 是一个在 PoC-3 和 PoC-4 开发期间使用的测试网络。
 cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot
 ```
 
-通过默认运行以下代码来连接到全球 "Alexander 测试网:"
+通过默认运行以下代码来连接到全球 "Alexander测试网:"
 
 ```bash
 Polkadot
@@ -68,4 +68,4 @@ polkadot --chain=local --validator --key Alice -d /tmp/alice
 polkadot --chain=local --validator --key Bob -d /tmp/bob --port 30334 --bootnodes '/ip4/127.0.0.1/tcp/30333/p2p/ALICE_BOOTNODE_ID_HERE'
 ```
 
-请确保将第一个终端的输出结果中的节点 ID 替换为`ALICE_BOOTNODE_ID_HERE` 。
+请确保将第一个终端的输出结果中的节点ID替换为`ALICE_BOOTNODE_ID_HERE` 。

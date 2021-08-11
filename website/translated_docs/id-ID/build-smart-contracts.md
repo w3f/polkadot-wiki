@@ -22,7 +22,7 @@ Here is the list of current resources available to developers who want to get st
 
 Collected below are some community examples of smart contracts in `ink!`. Are you working on a smart contract example? Ask us to add it to this page!
 
-- [ Dimiliki ](https://github.com/JesseAbram/foRust/) - Port kontrak OpenZeppelin `Ownable`.
+- [ Dimiliki ](https://github.com/JesseAbram/foRust/) - Port kontrak OpenZeppelin ` Ownable `.
 
 ## Storage Rent
 

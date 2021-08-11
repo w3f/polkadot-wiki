@@ -2,7 +2,6 @@
 id: maintain-index
 title: Network Maintainers
 sidebar_label: Network Maintainers
-slug: /
 ---
 
 Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and guides to set up a node and run the network.

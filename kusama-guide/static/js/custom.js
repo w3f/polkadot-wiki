@@ -77,17 +77,42 @@
 })("docReady", window);
 
 docReady(function () {
-  setTimeout(function () {
-    // Custom logic goes here
+  // Custom logic goes here
 
-    // Insert "Improve this wiki ribbon": Done in docusaurus.config.js
+  // Insert "Improve this wiki ribbon"
+  if (
+    window.location.pathname !== "/" &&
+    window.location.pathname !== "/index.html" &&
+    window.location.pathname !== "/en" &&
+    window.location.pathname !== "/en/"
+  ) {
+    let link = document.createElement("a");
+    link.classList = "github-fork-ribbon";
+    link.setAttribute("href", "contributing");
+    link.setAttribute("title", "Contribute to this wiki");
+    link.dataset.ribbon = "Contribute to this wiki";
+    link.innerText = "Contribute to this wiki";
+    document.querySelector("body").appendChild(link);
+  } else {
+    document.querySelector(".fixedHeaderContainer").classList += " nomargin";
+  }
+  // -----------------
 
-    // Add fathom to footer
-    let script = document.createElement("script");
-    script.setAttribute("src", "https://lion.kusama.network/script.js");
-    script.setAttribute("site", "PNZSQVUV");
-    document.querySelector("#footer").appendChild(script);
+  // Add fathom to footer
 
-    // Force edit button to go to non-mirror page: Done in docusaurus.config.js
-  }, 1000);
+  let script = document.createElement("script");
+  script.setAttribute("src", "https://lion.kusama.network/script.js");
+  script.setAttribute("site", "PNZSQVUV");
+  document.querySelector("body footer").appendChild(script);
+
+  // Force edit button to go to non-mirror page
+  let button = document.querySelector("a.edit-page-link.button");
+  if (button) {
+    button.setAttribute("href", button.getAttribute("href").replace("mirror-", ""));
+  }
 });
+
+// Redirects
+if (!location.href.indexOf("docs") === -1) {
+  location.href = "test/docs/en/kusama-index.html";
+}

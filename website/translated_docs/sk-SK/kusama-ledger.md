@@ -151,9 +151,9 @@ Since Ledger does not support batch transactions, you must do two separate trans
 
 If you need support please send an email to [support@kusama.network](mailto:support@kusama.network) or visit [our Support page](https://support.polkadot.network).
 
-[ledger]: https://www.ledger.com/
-[polkadot-js apps]: https://polkadot.js.org/apps
+[Ledger]: https://www.ledger.com/
+[Polkadot-JS Apps]: https://polkadot.js.org/apps
 [prerelease instructions]: https://github.com/Zondax/ledger-kusama#download-and-install
 [releases page]: https://github.com/Zondax/ledger-kusama/releases
-[polkascan]: https://polkascan.io/kusama
-[subscan]: https://kusama.subscan.io/
+[Polkascan]: https://polkascan.io/kusama
+[Subscan]: https://kusama.subscan.io/

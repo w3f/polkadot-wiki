@@ -4,13 +4,13 @@ title: Dfinity 与 Polkadot 区别
 sidebar_label: Dfinity
 ---
 
-Dfinity 自称 "互联网计算机" 并与以太坊定位为姐妹项目。 Dfinity 一直自 2016 年起开发，该产品的发布版本 "Copper" 本应于 2017 年问世，但似乎从未发布。 2019 年大众尚未看到 Dfinity 的大部分客户端代码，因为他们仅在 [GitHub](https://github.com/dfinity) 发布帮助库。 封闭代码的开发本質与 Polkadot 从 2017 年初开始在[ GitHub 上开放](https://github.com/paritytech/polkadot)了 Rust 参考实现。
+Dfinity 自称 "互联网计算机" 并与以太坊定位为姐妹项目。 Dfinity 一直自2016年起开发，该产品的发布版本 "Copper" 本应于2017年问世，但似乎从未发布。 2019年大众尚未看到 Dfinity 的大部分客户端代码，因为他们仅在 [GitHub](https://github.com/dfinity) 发布帮助库。 封闭代码的开发本質与 Polkadot 从2017年初开始在[ GitHub 上开放](https://github.com/paritytech/polkadot)了 Rust 参考实现。
 
 ### 算法治理
 
 Dfinity 是算法治理的有力支持者，已经发布了[两篇](https://medium.com/dfinity/the-dfinity-blockchain-nervous-system-a5dd1783288e#.duzxztt9k)关于该主题的[博客文章](https://medium.com/dfinity/future-governance-integrating-traditional-ai-technology-into-the-blockchain-nervous-system-825ababf9d9)。
 
-Dfinitiy 提出了称为 "区块链神经系统(BNS)" 的治理框架，但是它们没有在 2018 年发布前两篇博客文章后，确定使用任何的算法或更多信息。
+Dfinitiy 提出了称为 "区块链神经系统(BNS)" 的治理框架，但是它们没有在2018年发布前两篇博客文章后，确定使用任何的算法或更多信息。
 
 与 Polkadot 广泛的治理机制相比，博客文章中描述的 BNS 简化了链上治理， 它仅通过 "信任专家" 跟随最重神经元的方法来决定分叉链。
 
@@ -28,4 +28,4 @@ The blockchain and fork resolution layer used in Dfinity is known as _probablist
 
 Finally, in the notarization and _near-instant finality_ layer of Dfinity, the blocks that are produced in the previous layer are notarized by the committee of validators. The notarization is a timestamp and a proof that the block has been published to the network, which prevents a malicious validator from creating a private chain and revealing it later. The notarization mechanism aims to solve the selfish mining attack and the nothing at stake problem. The notarized blocks are then agreed on in a further finalization mechanism.
 
-大家不用太在意术语*接近即时确认性*，因为这术语跟"即时确认性"基本上只是拜占庭协议的营销术语，并且掩盖了确认性工具的实际功能。例如可以将 Dfinity 共识的公证和最终回合与标准 BFT 协议的 pre-commit 和 pre-vote 进行比较。虽然由于 Dfinity 具有用于生成和最终确认区块的两步机制(跟 Polkadot 在 BABE 和 GRANDPA 上的做法非常类似)，因此两种协议的最终确认时间应该是可比的。 GRANDPA 有不错的性能，例如可以一次确认整个链的区块，而不是一次一个区块，这使其对 Dfinity 概述的最终确认性机制有所改进。
+大家不用太在意术语_接近即时确认性_，因为这术语跟"即时确认性"基本上只是拜占庭协议的营销术语，并且掩盖了确认性工具的实际功能。例如可以将 Dfinity 共识的公证和最终回合与标准 BFT 协议的 pre-commit 和 pre-vote 进行比较。虽然由于 Dfinity 具有用于生成和最终确认区块的两步机制(跟 Polkadot 在 BABE 和 GRANDPA 上的做法非常类似)，因此两种协议的最终确认时间应该是可比的。 GRANDPA 有不错的性能，例如可以一次确认整个链的区块，而不是一次一个区块，这使其对 Dfinity 概述的最终确认性机制有所改进。

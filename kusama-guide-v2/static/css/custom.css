@@ -1,0 +1,559 @@
+:root {
+  --ifm-color-primary: #e6007a;
+  --ifm-color-primary-dark: #cf006e;
+  --ifm-color-primary-darker: #c40068;
+  --ifm-color-primary-darkest: #a10055;
+  --ifm-color-primary-light: #fd0086;
+  --ifm-color-primary-lighter: #ff0a8c;
+  --ifm-color-primary-lightest: #ff2c9c;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #ffffff;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-text-color: rgb(2,2,2);
+}
+
+@font-face {
+  font-family: "SpaceMono-Regular";
+  src: url("../fonts/SpaceMono-Regular.ttf");
+  src: url("../fonts/SpaceMono-Regular.ttf?#iefix") format("embedded-opentype"),
+    url("../fonts/SpaceMono-Regular.ttf") format("woff"),
+    url("../fonts/SpaceMono-Regular.ttf") format("truetype"),
+    url("../fonts/SpaceMono-Regular.ttf") format("svg");
+}
+
+/* ==========================================================================
+   General components
+   ========================================================================== */
+
+/* Back to top button */
+#back-to-top {
+  left: 16px;
+  bottom: 26px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  height: 48px;
+  width: 48px;
+  z-index: 999;
+}
+
+#back-to-top svg {
+  margin-top: 12px;
+}
+
+#support_us {
+  color: white;
+  text-decoration: none;
+  font-weight: bold
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+button.menu__button {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+
+.menu--responsive .menu__button {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.navbar-sidebar__brand  {
+  background-color: black;
+  height: 50px;
+}
+
+.navbar-sidebar--show .navbar__link--active {
+  color: #606770;
+}
+
+/* ==========================================================================
+   Navigation bar
+   ========================================================================== */
+
+.navbar.navbar--fixed-top {
+  background: black;
+}
+
+.navbar.navbar--fixed-top .navbar__inner {
+  max-width: 1360px;
+  margin: 0 auto 0;
+}
+
+.navbar__inner a.navbar__item svg[class^="iconExternalLink"] {
+  display: none
+}
+
+.navbar__link {
+  background-color: black;
+  transition: background-color 0.3s
+}
+
+.navbar__link:hover {
+  background-color: var(--ifm-color-primary);
+}
+
+/* Menu button */
+button.navbar__toggle {
+  color: white;
+}
+
+/* Logo */
+.navbar__brand:hover {
+  color: white
+}
+
+.navbar__brand strong:hover {
+  color: white;
+}
+
+.navbar .navbar__title {
+  display:block;
+  font-size:1.25em;
+  line-height:18px;
+  margin:0;
+  position:relative;
+}
+
+/* Search bar */
+@media only screen and (max-width: 750px) {
+  .DocSearch.DocSearch-Button {
+    width: 36px;
+    padding-left: 8px;
+  }
+}
+
+.DocSearch-Button-Keys {
+  display: none !important;
+}
+
+button.DocSearch {
+  background-color:rgba(0,0,0,.2);
+  box-shadow: var(--docsearch-searchbox-shadow);
+  border-radius:20px;
+  color: white;
+  font-size:14px;
+  font-weight:300;
+  line-height:20px;
+  outline:none;
+  padding-left:25px;
+  position:relative;
+  transition:width .5s ease;
+  width:170px
+}
+
+button.DocSearch-Button:active, button.DocSearch-Button:focus, button.DocSearch-Button:hover {
+  background: rgba(0,0,0,.2);
+  color: white;
+}
+button.DocSearch svg {
+  color: white !important;
+}
+
+/* Languages menu */
+
+.dropdown > a {
+  margin-left: 12px;
+  padding: 4px 8px !important;
+}
+
+.dropdown__menu {
+  top: 35px;
+  text-align: center;
+  background-color: black;
+  padding: 0;
+  box-shadow: 0 4px 7px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dropdown__menu a {
+  color: white;
+  border-radius: 0;
+}
+
+.dropdown__menu a:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.dropdown__menu a.dropdown__link--active {
+  background-color: black;
+}
+
+.dropdown__menu a.dropdown__link--active:hover {
+  background-color: var(--ifm-color-primary);
+}
+
+.dropdown a:first-child::after {
+  display: none !important
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.nav-footer {
+  background: black;
+}
+
+.nav-footer .row {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-footer .row .item {
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-footer p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-footer .row .item:hover {
+  color: #ffffff;
+}
+
+#footer section.row {
+  margin: 0 !important
+}
+
+.nav-footer {
+  background:#000;
+  border:none;
+  color:#202020;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  line-height:24px;
+  padding-bottom:2em;
+  padding-top:2em;
+  position:relative
+}
+@media only screen and (min-width:1024px) {
+  .nav-footer {
+    flex-shrink:0
+  }
+}
+.nav-footer .sitemap {
+  display:flex;
+  justify-content:space-between;
+  margin:0 auto 3em;
+  max-width:1080px
+}
+.nav-footer .sitemap div {
+  flex:1
+}
+.nav-footer .sitemap .nav-home {
+  display:table;
+  height:72px;
+  margin:-12px 20px 0 0;
+  opacity:.4;
+  padding:10px;
+  transition:opacity .15s ease-in-out;
+  width:72px
+}
+.nav-footer .sitemap .nav-home:focus,
+.nav-footer .sitemap .nav-home:hover {
+  opacity:1
+}
+@media only screen and (max-width:735px) {
+  .nav-footer .sitemap {
+    display:flex;
+    flex-direction:column;
+    margin:0 2em 3em;
+    width:calc(100% - 4em)
+  }
+  .nav-footer .sitemap>div {
+    margin-bottom:18px
+  }
+}
+.nav-footer .sitemap a {
+  color:hsla(0,0%,100%,.6);
+  display:block;
+  margin:2px 0;
+  padding:3px 0
+}
+.nav-footer .sitemap a:focus,
+.nav-footer .sitemap a:hover,
+.nav-footer .sitemap h5>a:focus,
+.nav-footer .sitemap h5>a:hover {
+  color:#fff;
+  text-decoration:none
+}
+.nav-footer .sitemap h5,
+.nav-footer .sitemap h6 {
+  margin:0 0 10px
+}
+.nav-footer .sitemap h5,
+.nav-footer .sitemap h5>a,
+.nav-footer .sitemap h6,
+.nav-footer .sitemap h6>a {
+  color:#fff
+}
+.nav-footer .sitemap h5>a,
+.nav-footer .sitemap h6>a {
+  margin:0 -10px
+}
+.nav-footer .fbOpenSource {
+  display:block;
+  margin:1em auto;
+  opacity:.4;
+  transition:opacity .15s ease-in-out;
+  width:170px
+}
+.nav-footer .fbOpenSource:hover {
+  opacity:1
+}
+.nav-footer .copyright {
+  color:hsla(0,0%,100%,.4);
+  text-align:center
+}
+.nav-footer .social {
+  padding:5px 0
+}
+
+.bgColor {
+  background-color: black;
+}
+
+.no-margin {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.main-wrapper {
+  left:0;
+  min-height: 100%;
+  position: relative;
+  z-index: 99
+}
+
+.main-wrapper::after {
+  background:rgba(0,0,0,.4);
+  content:"";
+  height:0;
+  opacity:0;
+  position:absolute;
+  right:0;
+  top:0;
+  transition:opacity .5s,width .1s .5s,height .1s .5s;
+  width:0
+}
+
+body {
+  font-family: "Muli", sans-serif !important;
+}
+
+/* ==========================================================================
+   Doc page
+   ========================================================================== */
+
+.docs-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+article blockquote {
+  background-color: rgba(255,229,100,.3);
+  border-left: 8px solid #ffe564;
+  padding: 15px 30px 15px 15px;
+}
+
+
+article iframe, article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%
+}
+
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+.homepage-font {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+}
+
+.homeContainer {
+  background: white;
+  height: 50vh;
+}
+
+.kusamaHomeContainer {
+  background: black;
+}
+
+.main-wrapper .kusamaHomeContainer .wrapper {
+  margin:0 auto;
+  max-width:1360px;
+  padding:0 20px
+}
+
+.main-wrapper .kusama-mainpage-row-validator {
+  background-color: white;
+}
+
+.kusama-full-width {
+  width: 100%;
+  text-align: center;
+  margin: 50px;
+}
+
+.kusama-full-width-main {
+  width: 60%;
+  text-align: center;
+  margin: 50px;
+  height: auto;
+}
+
+.mainpage-row-placeholder {
+  background: black;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+}
+
+.kusama-mainpage-row-learn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 1% 0;
+  color: white;
+  background: black;
+}
+
+.kusama-mainpage-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: url("../img/kusama-pink-row.svg") center black;
+}
+
+.kusama-mainpage-cyber-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: url("../img/Kusama-white-stencil.png") left center no-repeat black;
+  background-size: 40%;
+}
+
+.kusama-mainpage-row-validator {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: black;
+}
+
+.kusama-mainpage-row-more {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: black;
+  border-bottom: 10px solid var(--ifm-color-primary);
+}
+
+.kusama-mainpage-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  text-align: center;
+  flex-flow: column;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  .mainpage-column {
+    width: 100% !important;
+  }
+}
+
+.kusama-mainpage-build-btn {
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  width: 100%;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 24px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0.75rem !important;
+  display: inline-block;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.kusama-mainpage-build-btn:hover {
+  color: #00ffe1;
+  border-color: #00ffe1;
+}
+
+.mainpage-build-btn:hover {
+  color: #00ffe1;
+  border: 1px solid #00ffe1;
+}
+
+.mainpage-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  text-align: center;
+  flex-flow: column;
+}
+@media only screen and (max-width: 700px) {
+  .docsContainer > .wrapper > .post {
+    padding-top: 50px;
+  }
+
+  #docsNav {
+    top: 130px;
+  }
+
+  a.navbar__link, a.navbar__link:hover, a.navbar__link:active {
+    color: black !important
+  }
+}
+
+.nomargin {
+  margin: 0;
+}
+
+@media print {
+  .docsNavContainer,
+  .navbar.navbar--fixed-top,
+  .github-fork-ribbon,
+  .toc,
+  .slidingNav,
+  .edit-page-link,
+  .docLastUpdate,
+  footer,
+  #back-to-top {
+    padding-top: 0;
+    display: none;
+  }
+
+  .main-wrapper {
+    padding-top: 0;
+  }
+}

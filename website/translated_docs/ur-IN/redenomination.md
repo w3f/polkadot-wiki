@@ -5,7 +5,7 @@ sidebar_label: Redenomination of DOT
 ---
 
 > Note: The DOT redenomination took place on 21 August, now known as Denomination Day, at block
->
+> 
 > # 1,248,328.
 
 While [DOT](learn-dot) is the unit of currency on Polkadot that most people use when interacting with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12 Plancks, that is twelve decimal places. After this date, DOT is denominated as 1e10 Plancks, as in ten decimal places. DOT denominated to twelve decimal places is referred to as "DOT (old)" and DOT denominated to ten decimal places is generally referred to as "DOT". When the difference must be made explicit, the current ten-decimal-denominated DOT is referred to as "_New DOT_".
@@ -70,7 +70,6 @@ With a voting period of two weeks set, the redenomination was now in the hands o
 After two weeks of voting, the [results][blog 3] of the redenomination vote were tallied. About one third of the total DOT in the network participated in the vote. The redenominaton proposal passed with 86% of the voters favoring a 100x factor increase (or two decimal places of precision loss).
 
 Polkadot's redenomination then took place on 21 August, now known as Denomination Day, at block
-
 # 1,248,328.
 
 ### What This Means for the Community
@@ -86,7 +85,7 @@ However &mdash; if you are a builder of a tool that displays DOT balances to use
 Please see our [Ecosystem Redenomination Guide]() for recommendations.
 
 Please reach out to [support@polkadot.network](mailto:support@polkadot.network) if you need any assistance in making sure your software is compatible with the redenomination.
-https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#
+  https://docs.google.com/document/d/1yAzoDh99PgR_7dYAKTWLMVu2Fy5Ga-J6t9lof4f4JUw/edit#
 
 [referendum 52]: https://kusama.polkassembly.io/referendum/52
 [blog 1]: https://polkadot.network/results-of-dot-redenomination-referendum/
