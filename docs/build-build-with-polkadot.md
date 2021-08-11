@@ -24,10 +24,10 @@ may be better suited for your application over the other).
   - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
     Polkadot does... _expect chaos_...
 - Official testnets:
-  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
-    testing of features from time to time that will eventually migrate onto Polkadot.
+  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation 
+    testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet (is not reset back to genesis block).
   - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for `ink!` development.
-  - **Rococo** - Parachains and XCM testnet.
+  - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new genesis block).
 
 Polkadot mainnet has been running since May 2020 and has
 [implementations in various programming languages](learn-implementations.md) ranging from Rust to
@@ -42,13 +42,13 @@ to build on Polkadot.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
-Polkadot provides a few ways for you to deploy your application: as a smart contract on an existing
+Polkadot provides several ways for you to deploy your application: as a smart contract on an existing
 parachain, as your own parachain, or as a parathread. There are trade-offs when working with each of
 these and reading this section will help you understand them.
 
 ### Parachains & Parathreads
 
-Parachains are "parallel" chains containing their own runtime logic and can benefit from the shared
+Parachains are "parallel" chains containing their own runtime logic and benefit from the shared
 security and the cross-chain messaging provided by the Polkadot Relay Chain. Parachains permit a
 high degree of flexibility and customization but require more effort to create and maintain over
 time.
@@ -75,7 +75,7 @@ Some examples of features you can have on a parachain or parathread:
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
   treasury.
 
-![build 1](assets/build-1.png)
+![build 1](../assets/build-1.png)
 
 Parachains open possibilities to construct complex runtime logic that would be too expensive to
 execute with smart contracts. However, unlike smart contracts, parachains lack a mandatory gas
@@ -95,7 +95,7 @@ Most likely you’ve already realized that your application is better suited to 
 (or a hybrid of them both), but if you need a quick recap to digest the information, you can use
 this comparison chart as a cheat sheet:
 
-![build 2](assets/build-2.png)
+![build 2](../assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the
 > benefits of parachains apply just as well to parathreads. Parathreads, however, _are_ cheaper to
@@ -336,7 +336,7 @@ Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
-[social channels](community.md).
+[social channels](../general/community.md).
 
 Good luck!
 
