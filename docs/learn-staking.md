@@ -502,6 +502,18 @@ strain of the network due to peer-to-peer message passing. The estimate of the n
 that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
 900 validator slots in the active set.
 
+## Motion #103: New Minimum Nomination Bond
+
+At the time of writing (#6,339,031), Polkadot has a maximum nominator count of 22,500, and the current staking configuration prevents new nominators from joing. Motion #103 proposes new nomination limits to the Polkadot network, offering a temporary solution to increasing the stability and security of the network. Note that this motion **does not** increase the maximum nominator count.
+
+The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to particpate in the network's security. This motion will update the value of the minimum nominator bond from 40 DOTs to 80 DOTs and set a new parameter named chill-threshold. With chill-threshold, the permissionless chill_other may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded, number of nominators, etc.) to adjust to this change. A more permanent solution is in progress. 
+
+**Parameters changed:**
+minimum nominator bond : `40` -> `80`
+
+**Parameters added:**
+chill-threshold: `90%`
+
 ## Resources
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
