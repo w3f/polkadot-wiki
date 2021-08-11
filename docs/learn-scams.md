@@ -12,7 +12,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 
 1. Never, ever, ever share your seed phrase or account password.
 2. Do not trust anyone online. It is trivial for them to lie and change their identities.
-3. [If you are scammed]((#i-got-scammed---what-can-i-do), there is **likely nothing** that can be
+3. [If you are scammed](#i-got-scammed---what-can-i-do), there is **likely nothing** that can be
    done to recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all
    of your funds to their account in seconds. It is better to be safe than to risk all of your
    tokens.
