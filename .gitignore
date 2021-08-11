@@ -66,8 +66,7 @@ typings/
 # Emacs backup files
 *~
 
-website/build
-kusama-guide/build
+build
 build-script*
 **/mirror*.md
 .DS_Store
@@ -78,9 +77,9 @@ kusama-guide/i18n/*
 
 .docusaurus
 computed-dict.json
-website/i18n/
-!website/i18n/en/
-kusama-guide/i18n/zh-CN/docusaurus-plugin-content-docs/current/
+website-v2/i18n/
+!website-v2/i18n/en/
+kusama-guide-v2/i18n/zh-CN/docusaurus-plugin-content-docs/current/
 
 # Ignore because we don't need a 10MB file in VCS
 polkadot-wiki.pdf

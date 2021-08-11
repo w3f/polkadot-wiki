@@ -30,7 +30,7 @@ You will not need a very powerful machine to run your validator, but you should 
 
 - **Storage:** 160GB - 200GB. Kusama doesn't have very heavy storage requirements yet so something in this range will be fine, just keep in mind you may have to upgrade it later if the chain state becomes very big.
 - **Memory:** 2GB - 8GB. 2GB is really the minimum memory you should operate your validator with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill. In order to compile the binary yourself you will likely need ~8GB.
-- ** 中央处理器:** 1 - 2。一个 CPU 是可以，但是 2 个更好。 同样地这是一种性能偏好。
+- ** 中央处理器:** 1 - 2。一个 CPU 是可以，但是2个更好。 同样地这是一种性能偏好。
 
 On most cloud service providers, these specs are usually within the $10 - $20 per month range.
 
@@ -105,8 +105,11 @@ cargo build --release
 This step will take a while (generally 10 - 40 minutes, depending on your hardware).
 
 > Note if you run into compile errors, you may have to switch to a less recent nightly. This can be done by running:
->
-> `sh rustup install nightly-2020-05-15 rustup override set nightly-2020-05-15 rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15`
+> 
+> `sh
+  rustup install nightly-2020-05-15
+  rustup override set nightly-2020-05-15
+  rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15`
 
 If you are interested in generating keys locally, you can also install `subkey` from the same directory. You may then take the generated `subkey` executable and transfer it to an air-gapped machine for extra security.
 
@@ -117,7 +120,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 ### Synchronize Chain Data
 
 > **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
->
+> 
 > You may run a validator node in non-archive mode by adding the following flags: `--unsafe-pruning --pruning <NUMBER OF BLOCKS>`, but note that an archive node and non-archive node's databases are not compatible with each other, and to switch you will need to purge the chain data.
 
 You can begin syncing your node by running the following command:
@@ -131,7 +134,7 @@ if you do not want to start in validator mode right away.
 The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only required explicitly if you start your node without one of these two options. If you do not set your pruning to archive node, even when not running in validator and sentry mode, you will need to re-sync your database when you switch.
 
 > **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch to using the faster and more efficient ParityDb option. Switching between database backends will require a resync.
->
+> 
 > If you want to test out ParityDB you can add the flag `--database paritydb`.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.

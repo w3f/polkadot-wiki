@@ -278,7 +278,7 @@ Copy and save it somewhere else first.
 There is a configuration file named `alertmanager.yml` inside the directory that you just extracted in the previous command, but that is not of our use. We will create our `alertmanager.yml` file under `/etc/alertmanager` with the following config.
 
 > Ensure to change the ownership of "/etc/alertmanager" to `prometheus` by executing
->
+> 
 > sudo chown -R prometheus:prometheus /etc/alertmanager
 
 ```

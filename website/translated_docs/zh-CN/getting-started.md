@@ -10,7 +10,7 @@ sidebar_label: 开始
 
 Polkadot 允许多条专用区块链在安全的、无信任环境中相互沟通，从而实现可扩展性。
 
-创建 Polkadot 的目的是为了连接及保护公链、非许可网络、企业集团私有链或是预言机及其他基于 Web3 科技的区块链。它构建了一个可让不同区块链在公共安全保障下，进行信息交换的网络。
+创建 Polkadot 的目的是为了连接及保护公链、非许可网络、企业集团私有链或是预言机及其他基于 Web3科技的区块链。它构建了一个可让不同区块链在公共安全保障下，进行信息交换的网络。
 
 Polkadot 是一个有生命力的网络，其核心支柱是社区治理和可迭代性。 该网络拥有一套先进的治理工具，以 [WebAssembly](https://webassembly.org/)标准作为“元协议”，可以自动部署网络升级。 Polkadot 会适应您不断增长的需求，同时不会产生区块链网络分叉的风险。
 
@@ -30,7 +30,7 @@ Web 3.0 正在将中心化应用转化为去中心化应用、 去信任协议�
 
 ## Polkadot 如何运作？
 
-The Polkadot network uses a [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of sequentially. Each parachain in the network has a unique state transition function (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
+The Polkadot network uses a [sharded model](https://en.wikipedia.org/wiki/Shard_(database_architecture)) where shards - called "[parachains](learn-parachains)", allow transactions to be processed in parallel instead of sequentially. Each parachain in the network has a unique state transition function (STF). Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
 
 Polkadot has a Relay Chain acting as the main chain of the system. Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo rigorous [availability and validity](learn-availability) checks before being added to the finalized chain. As the Relay Chain provides the security guarantees, [collators](learn-collator) - full nodes of these parachains - don't have any security responsibilities, and thus do not require a robust incentive system. This is how the entire network stays up to date with the many transactions that take place.
 
@@ -40,7 +40,7 @@ Polkadot has a Relay Chain acting as the main chain of the system. Parachains co
 
 The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
 
-> 观看一个有关 Polkadot 简短的，适合初学者的动画，请访问我们的网站。 [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
+> 观看一个有关 Polkadot 简短的，适合初学者的动画，请访问我们的网站。  [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
 
 ## 为何要使用 Polkadot？
 
@@ -54,12 +54,12 @@ For brand-new learners of Blockchain technology:
 
 For brand-new learners of Polkadot:
 
-- [Polkadot 原始白皮书][white paper] 是一篇技术文档，描述了 Polkadot 网络技术可能的发展方向。文档通过对原理的阐述和技术实现的细节说明来验证其可行性。原始白皮书也描述了 Polkadot 的核心团队是如何协同合作来构建这个去中心化网络的。
+- [Polkadot 原始白皮书][white paper] 是一篇技术文档，描述了 Polkadot 网络技术可能的发展方向。文档通过对原理的阐述和技术实现的细节说明来验证其可行性。原始白皮书也描述了Polkadot的核心团队是如何协同合作来构建这个去中心化网络的。
 - [Polkadot's overview paper][overview-paper] 是更新版本的白皮书，用更专业的方式描述了该网络协议。若您有兴趣深入研究协议本身，我们建议您阅读这份白皮书。
 - [Polkadot's lightpaper ][light paper]是一个更直观，方便阅读文档。这份文档比较少使用技术数据，可以让你不需要了解太多技术知识的情况下，就可以对 Polkadot 有更深入的理解。
-- [Polkadot's specification][spec]是一个 Github 代码库，其中包含最新的 Polkadot 主机协议规范、Polkadot 对网络中许多组件的测试规范，以及 Polkadot Runtime 规范。该代码库存有算法，并探讨各种进程如何在 Polkadot 网络中发挥作用。Polkadot 规范将 Polkadot 的思想和概念从聚光灯下和白皮书中提取出来，聚焦于技术规范的技术说明。
+- [Polkadot's specification][spec]是一个Github代码库，其中包含最新的Polkadot主机协议规范、Polkadot对网络中许多组件的测试规范，以及Polkadot Runtime规范。该代码库存有算法，并探讨各种进程如何在Polkadot网络中发挥作用。Polkadot规范将Polkadot的思想和概念从聚光灯下和白皮书中提取出来，聚焦于技术规范的技术说明。
 - [观看技术演示][teched videos]: 这些是解释及演示如何使用 Polkadot 及其 [用户界面][ui]的介绍视频。
-- 在 Medium 上阅读 [What is Polkadot? A Brief Introduction][article] 。您也可以在 [Polkadot's Medium][p medium] 或 [Web3 Foundation's Medium][w medium]上阅读其余优质文章。
+- 在Medium上阅读 [What is Polkadot? A Brief Introduction][article] 。您也可以在 [Polkadot's Medium][p medium] 或 [Web3 Foundation's Medium][w medium]上阅读其余优质文章。
 - [创建 Polkadot 帐户][account generation]
 - [发起转账][transfer]
 - [作为提名人进行抵押 (Staking)][nominator]
@@ -75,20 +75,19 @@ For brand-new learners of Kusama, Polkadot's canary cousin network: To learn mor
 
 ## 相关阅读
 
-- [Polkadot Crowdcast](https://www.crowdcast.io/polkadot) - Web3 基金会过往 Crowdcast 网络会议列表
+- [Polkadot Crowdcast](https://www.crowdcast.io/polkadot) - Web3基金会过往 Crowdcast 网络会议列表
 - [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer)-Polkadot 网络浏览器，可用于 Polkadot、Kusama 或其他基于 Substrate 的区块链网络。
 - [Polkascan](http://polkascan.io/) - Polkadot 中继链及其他 Substrate 链的实时多链数据。
 - [Subscan.io](https://subscan.io) - Substrate 链浏览器。
-- [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Gavin Wood 博士对 Polkadot 的视频介绍。（视频）
+- [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Gavin Wood 博士对Polkadot 的视频介绍。（视频）
 - [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Jutta Steiner 博士对 Polkadot 的视频介绍。（视频）
-- [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Gavin Wood 博士对 Substrate（区块链框架及 VM）和 Polkadot，并在 30 分钟内基于 Substrate 构建了一个可运行的区块链。（视频）
+- [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Gavin Wood博士对 Substrate（区块链框架及VM）和 Polkadot，并在30分钟内基于 Substrate 构建了一个可运行的区块链。（视频）
 - [社区/生态 ](community) - 谈论 Polkadot 的社区频道列表。
 - [范例程序](build-examples-index) - 基于 Polkadot 的应用案例及开发中的案例。
 - [贡献手册](contributing) - wiki 贡献者奖励规则。
 - [Polkadot 知识库](https://support.polkadot.network/) - 一些特定错误和问题的疑难解答。
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
-
 [white paper]: https://polkadot.network/PolkaDotPaper. pdf
 [overview-paper]: https://github.com/w3f/research/blob/master/docs/papers/OverviewPaper-V1.pdf
 [light paper]: https://polkadot.network/Polkadot-lightpaper.pdf

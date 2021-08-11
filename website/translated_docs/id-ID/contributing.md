@@ -30,7 +30,7 @@ Remember that after you click "Propose Changes", you must also click on "Create 
 
 There are a few basic ground-rules for contributors:
 
-1. ** Tidak ada `- memaksa` mendorong ** atau memodifikasi riwayat Git dengan cara apa pun.
+1. ** Tidak ada ` - memaksa ` mendorong ** atau memodifikasi riwayat Git dengan cara apa pun.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should be used for generic or broad-based changes or missing content.
 3. Only use **non-master branches**.
 4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to solicit feedback from other contributors.

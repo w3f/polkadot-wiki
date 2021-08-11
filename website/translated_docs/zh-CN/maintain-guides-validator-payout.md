@@ -6,7 +6,7 @@ sidebar_label: 验证人奖励发放概述
 
 ## Era Points
 
-对于每个时代(era) (在 Kusama 大约 6 小时，在 Polkadot 大约 24 小时），验证人将按照他们的*era points*的数量按比例支付。era points 是指通过以下方式获得的奖励积分:
+对于每个时代(era) (在 Kusama 大约6小时，在 Polkadot 大约24小时），验证人将按照他们的_era points_的数量按比例支付。era points 是指通过以下方式获得的奖励积分:
 
 - 为[ 平行链 ](learn-parachains)区块发布有效性声明。
 - producing a non-uncle block in the Relay Chain.

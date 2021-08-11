@@ -78,7 +78,7 @@ Even though combined both Logan and Kevin vote with more DOT than Peter, the loc
 Depending on which entity proposed the proposal and whether all council members voted yes, there are three different scenarios. We can use following table for reference.
 
 |          **Entity**          |                   **Metric**                   |
-| :--------------------------: | :--------------------------------------------: |
+|:----------------------------:|:----------------------------------------------:|
 |            Public            | Positive Turnout Bias (Super-Majority Approve) |
 | Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
 | Council (Majority agreement) |                Simple Majority                 |
@@ -157,7 +157,7 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods double.
 
 | Lock Periods | Vote Multiplier |
-| :----------: | :-------------: |
+|:------------:|:---------------:|
 |      0       |       0.1       |
 |      1       |        1        |
 |      2       |        2        |
@@ -230,27 +230,27 @@ As opposed to a "first-past-the-post" electoral system, where voters can only vo
 
 Let's take a look at the example below.
 
-|      Round 1      |     |                |     |     |     |
-| :---------------: | :-: | :------------: | :-: | :-: | :-: |
-| **Token Holders** |     | **Candidates** |     |     |     |
-|                   |  A  |       B        |  C  |  D  |  E  |
-|       Peter       |  X  |                |  X  |  X  |  X  |
-|       Alice       |     |       X        |     |     |     |
-|        Bob        |     |                |  X  |  X  |  X  |
-|      Kelvin       |  X  |                |  X  |     |     |
-|     **Total**     |  2  |       1        |  3  |  2  |  2  |
+|      Round 1      |   |                |   |   |   |
+|:-----------------:|:-:|:--------------:|:-:|:-:|:-:|
+| **Token Holders** |   | **Candidates** |   |   |   |
+|                   | A |       B        | C | D | E |
+|       Peter       | X |                | X | X | X |
+|       Alice       |   |       X        |   |   |   |
+|        Bob        |   |                | X | X | X |
+|      Kelvin       | X |                | X |   |   |
+|     **Total**     | 2 |       1        | 3 | 2 | 2 |
 
 The above example shows that candidate C wins the election in round 1, while candidate A, B, D & E keep remaining on the candidates' list for the next round.
 
-|      Round 2      |     |                |     |     |
-| :---------------: | :-: | :------------: | :-: | :-: |
-| **Token Holders** |     | **Candidates** |     |     |
-|                   |  A  |       B        |  D  |  E  |
-|       Peter       |  X  |       X        |     |     |
-|       Alice       |  X  |       X        |     |     |
-|        Bob        |  X  |       X        |  X  |  X  |
-|      Kelvin       |  X  |       X        |     |     |
-|     **Total**     |  4  |       4        |  1  |  1  |
+|      Round 2      |   |                |   |   |
+|:-----------------:|:-:|:--------------:|:-:|:-:|
+| **Token Holders** |   | **Candidates** |   |   |
+|                   | A |       B        | D | E |
+|       Peter       | X |       X        |   |   |
+|       Alice       | X |       X        |   |   |
+|        Bob        | X |       X        | X | X |
+|      Kelvin       | X |       X        |   |   |
+|     **Total**     | 4 |       4        | 1 | 1 |
 
 For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 

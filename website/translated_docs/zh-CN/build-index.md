@@ -4,7 +4,7 @@ title: 开发者专页
 sidebar_label: 开发者专页
 ---
 
-欢迎访问 Polkadot 维基网站的构建者部份。
+欢迎访问Polkadot维基网站的构建者部份。
 
 Here you will be able to find the most up-to-date information on the status of the development tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about them so if you are working on something that should be included please reach out to us on [Element](https://app.element.io/#/room/#polkadot-watercooler:matrix.org).
 
@@ -38,7 +38,7 @@ Wiki 的这个部分分为以下:
 
 ### Grants
 
-- [Grants](grants) - Web3 基金会提供赠款的所有 Polkadot 相关的项目列表。
+- [Grants](grants) - Web3基金会提供赠款的所有 Polkadot 相关的项目列表。
 
 ### PSPs
 

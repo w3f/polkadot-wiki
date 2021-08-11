@@ -12,24 +12,24 @@ The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is 
 
 ### Polkadot
 
-| 单位            | 小数位 | Example      |
-| --------------- | ------ | ------------ |
-| Planck          | 0      | 0.0000000001 |
-| Microdot (uDOT) | 4      | 0.0000010000 |
-| Millidot (mDOT) | 7      | 0.0010000000 |
-| Dot (DOT)       | 10     | 1.0000000000 |
+| 单位              | 小数位 | Example      |
+| --------------- | --- | ------------ |
+| Planck          | 0   | 0.0000000001 |
+| Microdot (uDOT) | 4   | 0.0000010000 |
+| Millidot (mDOT) | 7   | 0.0010000000 |
+| Dot (DOT)       | 10  | 1.0000000000 |
 
 _Note: This changed at block #1,248,328. Previously, DOT were denominated as equal to 1e12 Planck, just like Kusama. This denomination is deprecrated, and, if necessary, referred to as "DOT (old)". See [Redenomination of DOT](redenomination) for more details._
 
 ### Kusama
 
-| 单位            | 小数位 | Example        |
-| --------------- | ------ | -------------- |
-| Planck          | 0      | 0.000000000001 |
-| Point           | 3      | 0.000000001000 |
-| MicroKSM (uKSM) | 6      | 0.000001000000 |
-| MilliKSM (mKSM) | 9      | 0.001000000000 |
-| KSM             | 12     | 1.000000000000 |
+| 单位              | 小数位 | Example        |
+| --------------- | --- | -------------- |
+| Planck          | 0   | 0.000000000001 |
+| Point           | 3   | 0.000000001000 |
+| MicroKSM (uKSM) | 6   | 0.000001000000 |
+| MilliKSM (mKSM) | 9   | 0.001000000000 |
+| KSM             | 12  | 1.000000000000 |
 
 ## What are the uses of DOT?
 

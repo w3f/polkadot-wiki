@@ -16,11 +16,11 @@ _NOTE: Kusama generally runs 4x as fast as Polkadot, except Polkadot also has 6 
 - Эра: 6 часов (3600 слотов x 6 секунд)
 
 | Kusama | Время    | Слоты\* |
-| ------ | -------- | ------- |
-| Slot   | 6 секунд | 1       |
-| Эпоха  | 1 час    | 600     |
-| Сессия | 1 час    | 600     |
-| Эра    | 6 часов  | 3,600   |
+| ------ | -------- | --------- |
+| Slot   | 6 секунд | 1         |
+| Эпоха  | 1 час    | 600       |
+| Сессия | 1 час    | 600       |
+| Эра    | 6 часов  | 3,600     |
 
 \*_A maximum of one block per slot can be in a canonical chain. However, occasionally a slot will be without a block in the chain. Thus, the times given are estimates. See [Consensus](learn-consensus) for more details._
 

@@ -42,15 +42,15 @@ By looking at the [runtime code](https://github.com/paritytech/polkadot/blob/mas
 
 The table below lists the most commonly encountered errors and ways to resolve them.
 
-| 錯誤               | 描述                                                     | 解决方案                                                                                                                                                                                                                                             |
-| ------------------ | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BadOrigin          | 不允许您执行此操作，例如尝试使用非议会帐户创建议会动议。 | 要么切换到具有必要权限的帐户，要么检查您试图执行的操作是否被允许(例如调用 `system.setCode` 直接进行 runtime 升级，无需通过投票)。                                                                                                                    |
-| BadProof           | 交易签名似乎无效。                                       | 您所连接的节点可能会跟随一个过时的分叉—通常待它同步好后再次尝试问题会被解决。 要检查更大的问题，检查您所连接的节点的最后一个最终确定了和当前最佳的区块，并将这些值与其他公开的节点数据进行比较 - 它们是否在同步？ 如果没有，请尝试连接到另一个节点。 |
-| Future             | 交易 nonce 太高。                                        | 减少 nonce 为当前 +1。检查您正在使用的发送交易的地址。                                                                                                                                                                                               |
-| Stale              | 交易 nonce 太低。                                        | 将当前的 nonce +1。检查您正在使用发送交易地址的 nonce。                                                                                                                                                                                              |
-| ExhaustsResources  | 当前的区块没有足够的资源来提交这笔交易。                 | 请在下一个区块中再试一次。                                                                                                                                                                                                                           |
-| Payment            | 无法支付交易费用。                                       | 您可能没有足够可用的余额来支付这笔交易所需的费用。                                                                                                                                                                                                   |
-| Temporarily banned | The transaction is temporarily banned.                   | The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.                                                                                                                                   |
+| 錯誤                 | 描述                                     | 解决方案                                                                                                                          |
+| ------------------ | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| BadOrigin          | 不允许您执行此操作，例如尝试使用非议会帐户创建议会动议。           | 要么切换到具有必要权限的帐户，要么检查您试图执行的操作是否被允许(例如调用 `system.setCode` 直接进行 runtime 升级，无需通过投票)。                                               |
+| BadProof           | 交易签名似乎无效。                              | 您所连接的节点可能会跟随一个过时的分叉—通常待它同步好后再次尝试问题会被解决。 要检查更大的问题，检查您所连接的节点的最后一个最终确定了和当前最佳的区块，并将这些值与其他公开的节点数据进行比较 - 它们是否在同步？ 如果没有，请尝试连接到另一个节点。 |
+| Future             | 交易 nonce 太高。                           | 减少 nonce 为当前 +1。检查您正在使用的发送交易的地址。                                                                                              |
+| Stale              | 交易 nonce 太低。                           | 将当前的 nonce +1。检查您正在使用发送交易地址的 nonce。                                                                                           |
+| ExhaustsResources  | 当前的区块没有足够的资源来提交这笔交易。                   | 请在下一个区块中再试一次。                                                                                                                 |
+| Payment            | 无法支付交易费用。                              | 您可能没有足够可用的余额来支付这笔交易所需的费用。                                                                                                     |
+| Temporarily banned | The transaction is temporarily banned. | The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.            |
 
 ## Error Table
 

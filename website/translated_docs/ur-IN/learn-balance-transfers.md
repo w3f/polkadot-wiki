@@ -53,5 +53,5 @@ You will see a list of accounts you have loaded. Click the "Send" button in the 
 
 Now you will see the same modal window as if using the "Transfer" tab. Fill in the inputs correctly and hit "Make Transfer" then confirm the balance transfer. You will see a green notification in the top-right corner of the screen when the transfer is included in a block.
 
-[polkadot-js apps]: https://polkadot.js.org/apps
+[Polkadot-JS Apps]: https://polkadot.js.org/apps
 [existential deposit]: build-protocol-info#existential-deposit

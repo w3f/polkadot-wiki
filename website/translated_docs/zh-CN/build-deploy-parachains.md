@@ -4,13 +4,13 @@ title: 如何部署平行链
 sidebar_label: 如何部署平行链
 ---
 
-这个指南经已更新到 Alexander 测试网络
+这个指南经已更新到Alexander测试网络
 
 ## 如何查询平行链
 
 前往[Polkadot UI](https://polkadot.js.org/apps/#/explorer)的`Chain State`，选择`parachains`模组和`parachains(）`之后按下`+`按钮，之后会回传有效的平行链。
 
-## 如何部署 Adder 平行链
+## 如何部署Adder平行链
 
 **You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOT.**
 
@@ -20,13 +20,13 @@ The `adder` parachain is a simple parachain that will keep a value in storage an
 
 ### 代码生成
 
-第一步首先下载 Polkadot 代码到你本地目录
+第一步首先下载Polkadot代码到你本地目录
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
 ```
 
-确保你经己安装好了 Rust
+确保你经己安装好了Rust
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -34,14 +34,14 @@ sudo apt install make clang pkg-config libssl-dev
 rustup update
 ```
 
-现在前往在 Polkadot 代码库裹的`test-parachains`资料夹并执行生成脚本
+现在前往在Polkadot代码库裹的`test-parachains`资料夹并执行生成脚本
 
 ```bash
 cd polkadot/test-parachains
 ./build.sh
 ```
 
-它会在这个资料夹建立简单`adder`平行链的 Wasm 可执行文件，它将简单地添加发送到给它的消息。Wasm 可执行文件会在`parachains/test/res/adder.wasm`路径，所以确保你能在那找到。
+它会在这个资料夹建立简单`adder`平行链的Wasm可执行文件，它将简单地添加发送到给它的消息。Wasm可执行文件会在`parachains/test/res/adder.wasm`路径，所以确保你能在那找到。
 
 你需要生成并运行校对人(Collator)节点从而取得平行链的创世纪状态。
 
@@ -62,11 +62,11 @@ Dec: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 Hex: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000011b4d03dd8c01f1049143cf9c4c817e4b167f1d1b83e5c6f0f10d89ba1e7bce
 ```
 
-最重要的资料是 Hex 字串，这是你的创世纪状态，你需要将它保存用于接下来步骤。
+最重要的资料是Hex字串，这是你的创世纪状态，你需要将它保存用于接下来步骤。
 
 ### 部署平行链
 
-前往[Polkadot UI](https://polkadot.js.org/apps/#/extrinsics)的`Extrinsics`标签，选择你要从中部署 parachain 的帐户，你需要创建公投从而部署平行链。
+前往[Polkadot UI](https://polkadot.js.org/apps/#/extrinsics)的`Extrinsics`标签，选择你要从中部署parachain的帐户，你需要创建公投从而部署平行链。
 
 Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 
@@ -86,6 +86,6 @@ In the `id` input enter in the id of the parachain. In the case of the simple ad
 
 ![parachain info](assets/parachain/info.png)
 
-### 与 Parachain 互动
+### 与Parachain互动
 
 _Coming soon_

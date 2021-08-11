@@ -10,7 +10,7 @@ While Kusama has been its own network and has had its own ecosystem for a while 
 
 We want to foster a sense of collaboration amongst ourselves and the open source community. Kusma participants exist to encourage the open exchange of ideas and expression and require an environment that recognizes the inherent worth of every person and group. We are here to collaborate, discuss, and even disagree. The key is doing this is a manner that comes from a place of respect and professionalism. Participants in the Kusama network may consist of participants in an online forum, on-chain governance participants, parachain deployment teams, validators, enthusiasts, and ecosystem tool builders. We expect for there to be participation from all backgrounds but like to set some social boundaries on how you may be treated and treat others.
 
-Kusama 社区成员来自全球各地，不分种族、性别、或 背景。 社区参与者通过必要的资源阅读了解有关 Kusama 的知识及其所有相关内容。这些知识使社区具备履行参与者职责时所需的必要信息。
+Kusama 社区成员来自全球各地，不分种族、性别、或 背景。 社区参与者通过必要的资源阅读了解有关Kusama 的知识及其所有相关内容。这些知识使社区具备履行参与者职责时所需的必要信息。
 
 ## Bugs
 

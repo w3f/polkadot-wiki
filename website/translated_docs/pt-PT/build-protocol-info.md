@@ -19,7 +19,7 @@ Polkadot conducted a poll, which ended on 27 July 2020 (block 888,888), in which
 The redenomination will take effect 72 hours after transfers are enabled. The projected block numbers and times are:
 
 | Event             | Block Number |  Earliest Time   |
-| :---------------- | :----------: | :--------------: |
+|:----------------- |:------------:|:----------------:|
 | Transfers enabled |  1,205,128   | 18 Aug 13:15 UTC |
 | Redenomination    |  1,248,328   | 21 Aug 13:15 UTC |
 
@@ -35,7 +35,7 @@ In Polkadot (and most Substrate chains), user accounts are identified by a 32-by
 
 Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to handle many different cryptographies and chains. It has much in common with Bitcoin's Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
-See the [SS58 page](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>) in the Substrate wiki for encoding information and a more comprehensive list of network prefixes.
+See the [SS58 page](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) in the Substrate wiki for encoding information and a more comprehensive list of network prefixes.
 
 Relevant SS58 prefixes for this guide:
 
@@ -112,7 +112,7 @@ Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a
 Imagine this contrived example with a [reaped account](#existential-deposit). The first and last transactions are identical, and both valid.
 
 | Index | Hash | Origin    | Nonce | Call                | Results                       |
-| :---: | :--: | :-------- | :---: | :------------------ | :---------------------------- |
+|:-----:|:----:|:--------- |:-----:|:------------------- |:----------------------------- |
 |   0   | 0x01 | Account A |   0   | Transfer 5 DOT to B | Account A reaped              |
 |   1   | 0x02 | Account B |   4   | Transfer 7 DOT to A | Account A created (nonce = 0) |
 |   2   | 0x01 | Account A |   0   | Transfer 5 DOT to B | Successful transaction        |

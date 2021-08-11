@@ -9,3 +9,4 @@ sidebar_label: Be a Nominator (Alexander)
 If you are interested in nominating, please see our page on [how to nominate on Kusama](maintain-guides-how-to-nominate-kusama).
 
 <!-- No update needed -->
+

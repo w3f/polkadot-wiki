@@ -76,17 +76,15 @@
   };
 })("docReady", window);
 
-docReady(() =>
-  setTimeout(function () {
-    // Custom logic goes here
+docReady(function () {
+  // Custom logic goes here
 
-    AOS.init();
+  AOS.init();
 
-    // Add fathom to footer
+  // Add fathom to footer
 
-    let script = document.createElement("script");
-    script.setAttribute("src", "https://mammal.polkadot.network/script.js");
-    script.setAttribute("site", "YOUKYIQA");
-    document.querySelector("body footer").appendChild(script);
-  }, 500)
-);
+  let script = document.createElement("script");
+  script.setAttribute("src", "https://mammal.polkadot.network/script.js");
+  script.setAttribute("site", "YOUKYIQA");
+  document.querySelector("body footer").appendChild(script);
+});

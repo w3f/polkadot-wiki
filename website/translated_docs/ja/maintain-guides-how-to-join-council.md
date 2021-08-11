@@ -4,13 +4,13 @@ title: 協議会への参加
 sidebar_label: 協議会への参加
 ---
 
-協議会は、Polkadot および Kusama のステークホルダーたちを代表するチェーン上のアカウントから選ばれたもので構成されています。協議会にはガバナンスにおける主な役割が主に二つあります。それは、1) 投票を提案すること、2) 危険および悪意のある投票を拒否権を使い否認することです。協議会についてより詳しく知るためには[ガバナンスページ](learn-governance#council)　をご覧下さい。このガイドは協議会に立候補する方法について説明します。
+協議会は、PolkadotおよびKusamaのステークホルダーたちを代表するチェーン上のアカウントから選ばれたもので構成されています。協議会にはガバナンスにおける主な役割が主に二つあります。それは、1) 投票を提案すること、2) 危険および悪意のある投票を拒否権を使い否認することです。協議会についてより詳しく知るためには[ガバナンスページ](learn-governance#council)　をご覧下さい。このガイドは協議会に立候補する方法について説明します。
 
 ## 立候補を表明する
 
 Submitting your candidacy for the council requires a small bond of DOT / KSM. The bond will be forfeited if your candidacy does not win or become a runner-up and will be kept otherwise. You only receive your bond back, if you manually renounce your candidacy before losing. Runners-up are selected after every round and are reserved members in case one of the winners gets forcefully removed.
 
-> 現在 Polkadot において協議会に立候補する場合の担保額は 100DOT、Kusama において協議会に立候補する場合の担保額は 0.1666KSM です。
+> 現在Polkadotにおいて協議会に立候補する場合の担保額は100DOT、Kusamaにおいて協議会に立候補する場合の担保額は0.1666KSMです。
 
 協議会に立候補をする前には、選挙が開始され、すぐに投票してもらえるように、前以て出馬することをアナウンスし、サポーターに対し周知活動しておくことが良いでしょう。万が一、誰も投票してくれない場合は自分で自身に対し票をいれることができます。
 
@@ -40,4 +40,4 @@ If you are one of the lucky ones to win a council election you will see your acc
 
 ![council members list](assets/council/polkadotjs_council_members.png)
 
-これであなたも協議会に参加し、提案を行うことができます。よりアクティブなディスカッションに参加するには[Kusama ガバナンスチャンネル](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)まで。
+これであなたも協議会に参加し、提案を行うことができます。よりアクティブなディスカッションに参加するには[Kusamaガバナンスチャンネル](https://matrix.to/#/!QXMnIJzxlnVrvRzhUA:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation)まで。

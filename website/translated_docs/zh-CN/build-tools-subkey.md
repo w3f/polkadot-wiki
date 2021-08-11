@@ -4,9 +4,9 @@ title: Subkey
 sidebar_label: Subkey
 ---
 
-Subkey 是 Substrate 中包含的命令行实用程序，用于生成或恢复 Substrate 密钥。
+Subkey是Substrate中包含的命令行实用程序，用于生成或恢复Substrate密钥。
 
-`subkey`默认使用[sr25519](learn-cryptography#keypairs-and-signing)加密。如果您需要使用较旧的 ed25519 加密技术来生成或恢复密钥，或生成供验证程序使用的会话密钥（session key），请将`--ed25519`标志传递给命令。
+`subkey`默认使用[sr25519](learn-cryptography#keypairs-and-signing)加密。如果您需要使用较旧的ed25519加密技术来生成或恢复密钥，或生成供验证程序使用的会话密钥（session key），请将`--ed25519`标志传递给命令。
 
 ## 用法
 
@@ -22,7 +22,7 @@ subkey generate
 
 ### 检查一个私钥
 
-您可以检查给定的 URI（助记词，种子，公钥或地址）并恢复公钥和地址。
+您可以检查给定的URI（助记词，种子，公钥或地址）并恢复公钥和地址。
 
 ```bash
 echo <msg> | subkey sign <seed,mnemonic>

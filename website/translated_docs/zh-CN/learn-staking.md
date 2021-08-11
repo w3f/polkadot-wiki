@@ -6,7 +6,7 @@ sidebar_label: 抵押
 
 波卡(Polkadot) 使用 NPoS(提名权益证明)机制选择验证人，该机制为了**验证人**和 **提名人**两种角色，以实现链安全性的最大化。对网络维护感兴趣的参与者可以负责运行验证人节点。在创世区块中，波卡链将为验证人提供有限位置，位置数量将逐步增加至 1000 以上。
 
-系统鼓励 DOT 持有者作为提名人参与。提名人可以支持最多 16 个他们相信的验证候选人。
+系统鼓励 DOT 持有者作为提名人参与。提名人可以支持最多16个他们相信的验证候选人。
 
 验证人角色是在 [BABE](learn-consensus#babe) 负责生成区块，验证平行链区块和确保最终性。提名人可以根据验证人抵押量而作选择。
 
@@ -51,21 +51,21 @@ The following example should clarify the above. For simplicity, we have the foll
 - Total reward amount is 100 DOT tokens.
 - The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual value, which fluctuates, but merely an assumption for purposes of this example; to understand how the actual minimal stake is calculated, see [here](https://wiki.polkadot.network/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
-|            | **验证人池 A** |              |      |
-| :--------: | :------------: | :----------: | :--: |
-| 提名人 (4) |   权益 (600)   | 所占总权益比 | 奖励 |
-|    Jin     |      100       |    0.167     | 16.7 |
-|  **Sam**   |       50       |    0.083     | 8.3  |
-|   Anson    |      250       |    0.417     | 41.7 |
-|   Bobby    |      200       |    0.333     | 33.3 |
+|         | **验证人池 A** |        |      |
+|:-------:|:----------:|:------:|:----:|
+| 提名人 (4) |  权益 (600)  | 所占总权益比 |  奖励  |
+|   Jin   |    100     | 0.167  | 16.7 |
+| **Sam** |     50     | 0.083  | 8.3  |
+|  Anson  |    250     | 0.417  | 41.7 |
+|  Bobby  |    200     | 0.333  | 33.3 |
 
-|            | **验证人池 B** |              |      |
-| :--------: | :------------: | :----------: | :--: |
-| 提名人 (4) |   权益 (400)   | 所占总权益比 | 奖励 |
-|   Alice    |      100       |     0.25     |  25  |
-|   Peter    |      100       |     0.25     |  25  |
-|    John    |      150       |    0.375     | 37.5 |
-| **Kitty**  |       50       |    0.125     | 12.5 |
+|           | **验证人池 B** |        |      |
+|:---------:|:----------:|:------:|:----:|
+|  提名人 (4)  |  权益 (400)  | 所占总权益比 |  奖励  |
+|   Alice   |    100     |  0.25  |  25  |
+|   Peter   |    100     |  0.25  |  25  |
+|   John    |    150     | 0.375  | 37.5 |
+| **Kitty** |     50     | 0.125  | 12.5 |
 
 _Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
 
@@ -135,7 +135,7 @@ For every session, validators will send an "I'm Online" heartbeat to indicate th
 Here is the formula for calculation:
 
     Let x = offenders, n = total no. validators
-
+    
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
 Note that if less than 10% of all validators are offline, no penalty is enacted.
@@ -154,7 +154,7 @@ A validator produces two or more blocks on the Relay Chain in the same time slot
 GRANDPA and BABE equivocation slashing penalty is calculated as below:
 
     设 x = 出错节点, n = 验证人总数
-
+    
     Min( (3 * x / n )^2, 1)
 
 Validators may run their nodes on multiple machines to make sure they can still perform validation work in case one of their nodes goes down. It should be noted that if they do not have good coordination to manage signing machines, then equivocation is possible.
@@ -246,7 +246,7 @@ For those who are interested in knowing more about the design of inflation model
 
 ## 为什么不参与抵押?
 
-- 代币解锁在 Kusama 需要 7 天，而 Polkadot 则是 28 天。
+- 代币解锁在 Kusama 需要7天，而 Polkadot 则是28天。
 - 如果发现验证人行为不当，将执行处罚（请参见[ #slashing ](#slashing)）。
 - 您将想代币用于平行链插槽。
 

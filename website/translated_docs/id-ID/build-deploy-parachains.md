@@ -20,7 +20,7 @@ The `adder` parachain is a simple parachain that will keep a value in storage an
 
 ### Membangun kode
 
-Langkah pertama adalah mengunduh secara lokal kode Polkadot dan beralih ke cabang `v0.4`.
+Langkah pertama adalah mengunduh secara lokal kode Polkadot dan beralih ke cabang ` v0.4 `.
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
@@ -47,7 +47,7 @@ This will create the Wasm executable of the simple `adder` parachain contained i
 
 You will need to build and run the collator node in order to get the genesis state of this parachain.
 
-Navigasikan ke direktori `test-parachains / adder / collator` dan jalankan perintah `build` dan `run`.
+Navigasikan ke direktori ` test-parachains / adder / collator ` dan jalankan perintah ` build ` dan ` run `.
 
 ```bash
 cargo build
