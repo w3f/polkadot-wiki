@@ -19,7 +19,7 @@ and finality mechanisms, nominators take a slightly more passive role. Being a n
 require running a node of your own or worrying about online uptime. However, a good nominator
 performs due diligence on the validators that they elect. When looking for validators to nominate, a
 nominator should pay attention to their own reward percentage for nominating a specific validator -
-as well as the risk that they bare of being slashed if the validator gets slashed.
+as well as the risk that they bear of being slashed if the validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
