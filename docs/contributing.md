@@ -38,12 +38,12 @@ directly. When you've completed your changes, you can add any specific details o
 and commit to a **new branch** to create a new Pull Request to the repository. From there one of the
 maintainers will review your changes, and either merge them or request changes.
 
-![](assets/contributing.png) ![](assets/creating-pull-request.png)
+![](../assets/contributing.png) ![](../assets/creating-pull-request.png)
 
 Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the
 next page.
 
-![](assets/creating-pull-request-2.png)
+![](../assets/creating-pull-request-2.png)
 
 ## Rules
 
@@ -51,7 +51,8 @@ There are a few basic ground-rules for contributors:
 
 1. **No `--force` pushes** or modifying the Git history in any way.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should
-   be used for generic or broad-based changes or missing content.
+   be used for generic or broad-based changes or missing content. Suggestions and requests are
+   encouraged.
 3. Only use **non-master branches**.
 4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to
    solicit feedback from other contributors.
@@ -63,8 +64,8 @@ There are a few basic ground-rules for contributors:
 8. Care should be taken to remain as objective and informative as possible. There should be no
    editorializing, and external bias should not be present.
 9. We use a plugin called Prettier to standardize the style across documents. You can run this on
-   your local copy with `npx run prettier --save`, but for simplicity we also have a bot which runs
-   this for us in your PRs.
+   your local copy with `npx pretty-quick --staged`, but for simplicity we also have a bot which
+   runs this for us in your PRs.
 
 ## Heritage
 
