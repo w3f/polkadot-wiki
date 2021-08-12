@@ -38,12 +38,12 @@ directly. When you've completed your changes, you can add any specific details o
 and commit to a **new branch** to create a new Pull Request to the repository. From there one of the
 maintainers will review your changes, and either merge them or request changes.
 
-![](../assets/contributing.png) ![](../assets/creating-pull-request.png)
+![](./assets/contributing.png) ![](./assets/creating-pull-request.png)
 
 Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the
 next page.
 
-![](../assets/creating-pull-request-2.png)
+![](./assets/creating-pull-request-2.png)
 
 ## Rules
 
