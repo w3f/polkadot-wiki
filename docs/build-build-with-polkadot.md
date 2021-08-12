@@ -75,7 +75,7 @@ Some examples of features you can have on a parachain or parathread:
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
   treasury.
 
-![build 1](../assets/build-1.png)
+![build 1](./assets/build-1.png)
 
 Parachains open possibilities to construct complex runtime logic that would be too expensive to
 execute with smart contracts. However, unlike smart contracts, parachains lack a mandatory gas
@@ -95,7 +95,7 @@ Most likely you’ve already realized that your application is better suited to 
 (or a hybrid of them both), but if you need a quick recap to digest the information, you can use
 this comparison chart as a cheat sheet:
 
-![build 2](../assets/build-2.png)
+![build 2](./assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the
 > benefits of parachains apply just as well to parathreads. Parathreads, however, _are_ cheaper to
