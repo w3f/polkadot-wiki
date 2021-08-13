@@ -4,9 +4,9 @@ base_path: "./"
 preserve_hierarchy: true
 
 files:
-  - source: "/website/i18n/en/**/*.json"
-    translation: "/website/i18n/%locale%/**/%original_file_name%"
+  - source: "/polkadot-wiki/i18n/en/**/*.json"
+    translation: "/polkadot-wiki/i18n/%locale%/**/%original_file_name%"
     content_segmentation: 0
   - source: "/docs/*.md"
-    translation: "/website/i18n/%locale%/docusaurus-plugin-content-docs/current/%original_file_name%"
+    translation: "/polkadot-wiki/i18n/%locale%/docusaurus-plugin-content-docs/current/%original_file_name%"
     content_segmentation: 0

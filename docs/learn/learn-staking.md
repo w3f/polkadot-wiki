@@ -70,14 +70,8 @@ For each validator pool, we keep a list of nominators with the associated stakes
 The general rule for rewards across validator pools is that two validator pools get paid essentially
 the **same amount of tokens** for equal work, i.e. they are NOT paid proportional to the stakes in
 each pool. There is a probabilistic component to staking rewards in the form of
-[era points](../maintain/maintain-guides-validator-payout.md/#era-points) and
-=======
-the **same amount of tokens** for equal work; they are NOT paid proportional to the stakes in each
-pool. There is a probabilistic component to staking rewards in the form of
-[era points](maintain-guides-validator-payout.md/#era-points) and
-
-> > > > > > > master:docs/learn-staking.md
-> > > > > > > [tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
+[era points](../maintain/maintain-guides-validator-payout.md##era-points) and
+[tips](learn-transaction-fees.md#fee-calculation) but these should average out over time.
 
 Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's
 commission fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the
@@ -209,9 +203,9 @@ compared to a validators.
 
 ### Want to stake DOT?
 
-- [Nominator Guide](maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
+- [Nominator Guide](../maintain/maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
   network.
-- [Validator Guide](maintain-guides-how-to-validate-polkadot) - Become a validator on the Polkadot
+- [Validator Guide](../maintain/maintain-guides-how-to-validate-polkadot) - Become a validator on the Polkadot
   network.
 
 ## Slashing
@@ -307,7 +301,7 @@ available [here](../maintain/maintain-guides-secure-validator.md).
 reduce the risk of being slashed or chilled. A high availability setup is desirable, perhaps with
 backup nodes that kick in **only once the original node is verifiably offline** (to avoid
 double-signing and being slashed for equivocation - see below). A comprehensive guide on validator
-setup is available [here](maintain-guides-secure-validator.md).
+setup is available [here](../maintain/maintain-guides-secure-validator.md).
 
 > > > > > > > master:docs/learn-staking.md
 

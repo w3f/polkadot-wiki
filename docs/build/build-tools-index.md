@@ -8,7 +8,7 @@ sidebar_label: Tool Index
 
 Here we provide a list of tools available for your development needs. They are sorted by context. If
 you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
-developers, feel free to [add it in](contributing).
+developers, feel free to [add it in](../general/contributing.md).
 
 ## Block Explorers
 

@@ -51,8 +51,7 @@ There are a few basic ground-rules for contributors:
 
 1. **No `--force` pushes** or modifying the Git history in any way.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should
-   be used for generic or broad-based changes or missing content. Suggestions and requests are
-   encouraged.
+   be used for generic or broad-based changes or missing content. Suggestions and requests are encouraged.
 3. Only use **non-master branches**.
 4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to
    solicit feedback from other contributors.

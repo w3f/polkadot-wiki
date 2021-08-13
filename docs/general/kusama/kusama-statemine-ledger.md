@@ -211,7 +211,7 @@ To teleport KSM to the Relay chain follow these steps:
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
   the amount you want to teleport, don't forget take into account the fees for teleporting that will
   be deducted in the next step.
-- Teleport your tokens following the instructions you will find [here](learn-teleport).
+- Teleport your tokens following the instructions you will find [here](../../learn/learn-teleport.md).
 
 Teleporting **to** a Ledger account from a non-Ledger account doesn't require these extra steps.
 

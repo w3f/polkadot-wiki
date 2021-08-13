@@ -62,19 +62,16 @@ Use the style guide from the
 Use [pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
 as a pre-commit formatting tool.
 
-There is an automatic `pretty-quick` check that occurs when you want formatting
-on your changed/staged files.
+There is an automatic `pretty-quick` check that occurs pre-commit to format 
+your changed/staged files.
 
-To run manually: ` npx pretty-quick --staged`
-
-To format markdown pages. To run Prettier on the `docs` folder,
-run:
+To format markdown pages, run the following in the `docs` folder:
 
 ```bash
 npx pretty-quick --staged
 ```
 
-There is an automatic `pretty-quick` check that occurs when you want an entire file formatting on your changed/staged files.
+To run pretty on the whole project, `npx pretty-quick`.
 
 ### Static Site Generator
 
@@ -146,8 +143,9 @@ burned. :kusama }}
 ```
 
 To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
-`kusama:inject`, respectively. Inspect the built files in the corresponding `build` folder under
-`website` or `kusama-guide`.
+`kusama:inject`, respectively. 
+Inspect the built files in the corresponding `build` folder under `website` or
+`kusama-guide`.
 
 ## Internationalization
 
