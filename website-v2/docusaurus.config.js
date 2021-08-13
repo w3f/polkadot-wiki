@@ -7,7 +7,8 @@ const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Polkadot Wiki",
-  tagline: "The hub for those interested in learning, building, or running a node on Polkadot.",
+  tagline:
+    "The hub for those interested in learning, building, or running a node on Polkadot.",
   titleDelimiter: "·",
   url: "https://wiki.polkadot.network",
   baseUrl: "/",
@@ -50,12 +51,12 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
           editUrl: ({ docPath }) =>
             `https://github.com/w3f/polkadot-wiki/edit/master/docs/${docPath}`,
           path: "../docs",
-          sidebarPath: "./sidebars.js",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "docs",
           remarkPlugins: [injectPlugin({ isPolkadot: true })],
         },
@@ -77,10 +78,9 @@ module.exports = {
       {
         redirects: [
           {
-            to: '/',
+            to: "/",
 
-            from: ['/en/latest','/en/'],
-
+            from: ["/en/latest", "/en/"],
           },
         ],
         createRedirects: function (existingPath) {
@@ -91,7 +91,6 @@ module.exports = {
               existingPath.replace("/docs/", "/docs/ru-RU/"),
             ];
           }
-
         },
       },
     ],
@@ -105,10 +104,10 @@ module.exports = {
     },
     liveCodeBlock: {
       /**
-      * The position of the live playground, above or under the editor
-      * Possible values: "top" | "bottom"
-      */
-      playgroundPosition: 'bottom',
+       * The position of the live playground, above or under the editor
+       * Possible values: "top" | "bottom"
+       */
+      playgroundPosition: "bottom",
     },
     navbar: {
       logo: {
