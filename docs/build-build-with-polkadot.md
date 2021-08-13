@@ -24,7 +24,7 @@ may be better suited for your application over the other).
   - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
     Polkadot does... _expect chaos_...
 - Official testnets:
-  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation 
+  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet (is not reset back to genesis block).
   - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for `ink!` development.
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new genesis block).
@@ -259,8 +259,7 @@ written smart contracts before. However, the Contracts pallet makes some notable
 design of the EVM:
 
 1. **Wasm**. The Contracts pallet uses WebAssembly as its compilation target. Any language that
-   compiles to Wasm can potentially be used to write smart contracts. Although it's better to have a
-   dedicated domain-specific language and for that reason Parity offers the [ink!](#ink) language.
+   compiles to Wasm can potentially be used to write smart contracts. Nevertheless, it is better to have a dedicated domain-specific language, and for that reason Parity offers the [ink!](#ink) language.
 
 2. **Rent**. Contracts must pay rent or else hold a deposit suitably large enough in order to
    justify its existence on-chain. When a contract does not uphold this, it may create what's called
@@ -289,7 +288,7 @@ parachains.
 ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual
 machine and compatible with Substrate chains.
 
-### It's still early
+### Smart Contract Parachains
 
 It’s still very early for smart contracts on Polkadot and the development is only now stabilizing.
 We are actively producing content to help developers get up to speed and will maintain the wiki with
@@ -300,28 +299,40 @@ the latest resources. You should also keep up to date with the following links:
 - [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
 - [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
 
-#### Edgeware
+There are many smart contract platforms being built with the intent of becoming a parachain on the Polkadot and/or Kusama networks. A community created and maintained list of different smart contract platforms building on Polkadot can be found at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
-One project that is live today with the smart contracts pallet is [Edgeware][edgeware]. Edgeware is
-a permissionless platform for smart contracts and is conducting experiments with on-chain
-governance. It is currently the best option for developers who have created their smart contracts
-and want to deploy to a live environment.
+### Edgeware
 
-Edgeware intends to at some point connect to Polkadot as a parachain that allows for smart
-contracts. At this point, the smart contracts would be able to interact with other pieces of the
-Polkadot ecosystem through [XCMP](learn-crosschain.md).
+[Edgeware][edgeware] is a permissionless smart contract platform. It is an option for smart contract developers and want to deploy to a live environment. Users can deploy both EVM and WASM smart contracts on Edgeware. Edgeware intends to connect to Polkadot and Kusama as a smart contract parachain.
 
-Edgeware general documentation can be found [here][edgeware documentation] and [how to deploy smart
-contracts on Edgeware here][edgeware contracts documentation].
+Try deploying a smart contract on Edgeware by following their [documentation][edgeware contracts documentation].
 
 ### Moonbeam
 
 [Moonbeam][] is another project that is planning to deploy to Polkadot as a parachain and will
-support smart contracts. Since Moonbeam uses [Frontier][], an interoperability layer with existing
-Ethereum tooling, it will support all applications that are written to target the EVM environment
-with little friction.
+support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier][], an interoperability layer with existing Ethereum tooling, it will support all applications that are written to target the EVM environment with little friction.
 
-Try deploying a contract to Moonbeam by following their [documentation][moonbeam docs].
+[Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam, launched as a parachain on Kusama. Parachain functionality is live, and features are being incrementally released. The final phase of the launch will include EVM functionality and balance transfers.
+
+Try deploying a smart contract to Moonbeam by following their [documentation][moonbeam docs].
+
+### Astar
+
+[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform and intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is currently live on Kusama, and supports EVM, WASM, and Layer 2 solutions. Astar aims to house all layer 2 scaling solutions and support all layer 2 protocols through the [OVM](Optimistic Virtual Machine).
+
+Try deploying an Ethereum or ink! smart contract by following their [documentation](https://docs.astar.network/build/smart-contracts).
+
+### Acala
+
+[Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain delivering a set of protocols to serve as DeFi hub on Polkadot. [Karura](https://acala.network/karura), Acala's canary network, is live as a parachain on Kusama. Interested teams are now able to deploy DApps and smart contracts on Karura's platform. Acala is also implementing the [Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
+
+Try deploying an Acala EVM smart contract by following their [documentation](https://wiki.acala.network/build/development-guide/smart-contracts).
+
+### Phala
+
+[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala will enable the use of confidential smart contracts on Polkadot. [Khala](https://phala.network/en/khala) is Phala's canary network and is live as a parachain on Kusama.
+
+Try deploying a confidential smart contract by following their [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
 
 ## Conclusion
 
@@ -343,7 +354,7 @@ Good luck!
 [substrate contracts]: https://github.com/paritytech/substrate/tree/master/frame/contracts
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
-[edgeware contracts documentation]: https://contracts.edgewa.re/
+[edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts
 [plasm plasma]: https://github.com/staketechnologies/Plasm
 [moonbeam]: https://moonbeam.network
 [moonbeam docs]: https://docs.moonbeam.network/
