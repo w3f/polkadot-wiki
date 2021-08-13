@@ -109,6 +109,10 @@
         "title": "Web3 Foundation Grants",
         "sidebar_label": "Grants"
       },
+      "polkadot-guide": {
+        "title": "Polkadot Guide",
+        "sidebar_label": "Polkadot Guide"
+      },
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
         "sidebar_label": "Adverserial Cheatsheet"
@@ -520,6 +524,7 @@
     },
     "categories": {
       "General": "General",
+      "Guide": "Guide",
       "Learn": "Learn",
       "Build": "Build",
       "Maintain": "Maintain"
