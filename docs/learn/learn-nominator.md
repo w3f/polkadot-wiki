@@ -115,6 +115,12 @@ inputting the number of tokens you would like to stake to check it. Then, nomina
 higher profit. However, that does not guarantee the right way to evaluate the validators' overall
 performance.
 
+It is worth taking into consideration "own stake" of a validator. This refers to the quantity of DOT 
+the validator has put up at stake themselves. A higher "own stake" amount can be considered 
+as having more "skin in the game". This can imply increased trustworthiness. However, a validator not
+having a large amount of "own stake" is not automatically untrustworthy, as the validator could be 
+nominating from a different address.   
+
 ### Filter Out Validators With Undesirable Traits
 
 On the Targets page, you can filter out validators that have traits that may indicate an issue with

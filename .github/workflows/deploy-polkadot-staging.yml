@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -14,6 +17,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       # - name: Clone and run the site
       #   run: |
@@ -68,4 +74,8 @@ jobs:
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
 
+<<<<<<< HEAD
           node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./website/build --pinName polkadot-wiki-staging
+=======
+          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./website-v2/build --pinName polkadot-wiki-staging
+>>>>>>> master

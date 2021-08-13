@@ -51,17 +51,14 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
           editUrl: ({ docPath }) =>
             `https://github.com/w3f/polkadot-wiki/edit/master/docs/${docPath}`,
           path: "../docs",
-          sidebarPath: "./sidebars.js",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "docs",
-          remarkPlugins:
-            isBuilding || isPublishing
-              ? [injectPlugin({ isPolkadot: true })]
-              : [],
+          remarkPlugins: [injectPlugin({ isPolkadot: true })],
         },
         theme: {
           customCss: [

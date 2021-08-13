@@ -51,8 +51,8 @@ There are a few basic ground-rules for contributors:
 
 1. **No `--force` pushes** or modifying the Git history in any way.
 2. Pull requests are preferred to issues, especially for small changes such as typos. Issues should
-   be used for generic or broad-based changes or missing content. Suggestions and requests are encouraged,
-   a feature request can be requested by following the [Issue Template](../../.github/ISSUE_TEMPLATE/feature-request.md)
+   be used for generic or broad-based changes or missing content. Suggestions and requests are
+   encouraged.
 3. Only use **non-master branches**.
 4. **Significant modifications**, even by contributors, ought to be subject to a **pull request** to
    solicit feedback from other contributors.
@@ -64,8 +64,8 @@ There are a few basic ground-rules for contributors:
 8. Care should be taken to remain as objective and informative as possible. There should be no
    editorializing, and external bias should not be present.
 9. We use a plugin called Prettier to standardize the style across documents. You can run this on
-   your local copy with `npx pretty-quick --staged`, but for simplicity we also have a bot which runs
-   this for us in your PRs.
+   your local copy with `npx pretty-quick --staged`, but for simplicity we also have a bot which
+   runs this for us in your PRs.
 
 ## Heritage
 
