@@ -63,8 +63,8 @@ There are a few basic ground-rules for contributors:
 8. Care should be taken to remain as objective and informative as possible. There should be no
    editorializing, and external bias should not be present.
 9. We use a plugin called Prettier to standardize the style across documents. You can run this on
-   your local copy with `npx pretty-quick --staged`, but for simplicity we also have a bot which runs
-   this for us in your PRs.
+   your local copy with `npx pretty-quick --staged`, but for simplicity we also have a bot which
+   runs this for us in your PRs.
 
 ## Heritage
 

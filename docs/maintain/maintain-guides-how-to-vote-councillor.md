@@ -4,8 +4,6 @@ title: Voting for Councillors
 sidebar_label: Voting for Councillors
 ---
 
-<!-- no updates -->
-
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
@@ -16,6 +14,10 @@ councillors in the elections.
 
 Voting for councillors requires you to lock 5 DOT on Polkadot or 0.0083 KSM on Kusama for the
 duration of your vote.
+
+> NOTE: Voting and staking locks **can overlap**
+> A user can use staked funds to vote for Councillors and/or use those funds in referenda).
+> A user is only prohibited from transferring these funds to another account.
 
 > Warning: If your balance is vesting, you cannot use unvested tokens for this lock. You will have
 > to wait until you have at least that many **free** tokens to vote.

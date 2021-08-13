@@ -98,7 +98,7 @@ const conditionalReplace = (node, file, options) => {
 
 function transform(options) {
   return (tree, file) => {
-    visit(tree, "paragraph", (node) => {
+    visit(tree, ["paragraph", "emphasis", "heading"], (node) => {
       conditionalReplace(node, file, options);
     });
 

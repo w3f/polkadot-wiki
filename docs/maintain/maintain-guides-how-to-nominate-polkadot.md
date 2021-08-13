@@ -19,7 +19,7 @@ and finality mechanisms, nominators take a slightly more passive role. Being a n
 require running a node of your own or worrying about online uptime. However, a good nominator
 performs due diligence on the validators that they elect. When looking for validators to nominate, a
 nominator should pay attention to their own reward percentage for nominating a specific validator -
-as well as the risk that they bare of being slashed if the validator gets slashed.
+as well as the risk that they bear of being slashed if the validator gets slashed.
 
 ## Setting up Stash and Controller keys
 
@@ -203,5 +203,10 @@ After a few seconds, you should see the hash of the transaction and if you would
 nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-polkadot.md
+<<<<<<< HEAD:docs/maintain/maintain-guides-how-to-nominate-polkadot.md
 [keys]: ../learn/learn-keys.md###"controller"-and-"stash"-keys
 [account generation]: ../learn/learn-account-generation.md
+=======
+[keys]: learn-keys.md###"controller"-and-"stash"-keys
+[account generation]: learn-account-generation.md
+>>>>>>> master:docs/maintain-guides-how-to-nominate-polkadot.md
