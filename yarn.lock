@@ -7038,10 +7038,10 @@ module-alias@^2.2.2:
   resolved "https://registry.yarnpkg.com/module-alias/-/module-alias-2.2.2.tgz#151cdcecc24e25739ff0aa6e51e1c5716974c0e0"
   integrity sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==
 
-mr-pdf@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.6.tgz#31f6dbe69a08a2e47b9de682625f5586fb8f1d3b"
-  integrity sha512-/Z8I23yO8rfmYB0caAFQ+gADNBmu4SJb6sderBvtoM8JuPg+iVpl92Oe1jLjbXo+7mKhRXrdn/0pw4lpTzxdzQ==
+mr-pdf@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.7.tgz#dd697221746b5e47850c63ca516644f6d64190d8"
+  integrity sha512-kt0nBI/21IWe6J8sjlbdMYZcIetTU2odxe3i7+5dxY+mSnbocUfkhsRItOuveZMxcou0YD+d+JZXxIzFe8on9Q==
   dependencies:
     chalk "^3.0.0"
     commander "^4.1.1"
