@@ -1,7 +1,8 @@
 ---
-id: learn-ledger
+id: ledger
 title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
+slug: ../ledger
 ---
 
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
@@ -159,7 +160,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 ### Sending a Transfer
 
 Instructions to send a transfer can be found on the
-[balance transfer page](learn-balance-transfers.md).
+[balance transfer page](../learn/learn-balance-transfers.md).
 
 ### Receiving a Transfer
 

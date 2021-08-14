@@ -2,6 +2,7 @@
 id: kusama-adversarial-cheatsheet
 title: Adversarial Cheatsheet
 sidebar_label: Adversarial Cheatsheet
+slug: ../../kusama-adversarial-cheatsheet
 ---
 
 <!-- no updates -->

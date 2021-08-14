@@ -3,6 +3,7 @@ id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
 description: Step-by-step guides on generating a Polkadot account.
+slug: ../learn-account-generation
 ---
 
 An address is the public part of a Polkadot account. The private part is the key used to access this
@@ -15,7 +16,7 @@ There are several ways to generate a Polkadot account:
 - [Polkadot-JS Apps](#polkadot-js-apps)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
-- [Ledger Hardware Wallet](learn-ledger.md)
+- [Ledger Hardware Wallet](../general/ledger.md)
 
 > If you prefer video instructions, we have an easy to follow guide
 > [on YouTube](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
@@ -26,7 +27,7 @@ The _only_ ways to get access to your account are via your secret seed or your a
 in combination with a password. You must keep them both secure and private. If you share them with
 anyone they will have full access to your account, including all of your funds. This information is
 a target for hackers and others with bad intentions - see also
-[How to Recognize Scams](learn-scams.md).
+[How to Recognize Scams](../general/scams.md).
 
 On this page, we recommend a variety of account generation methods that have various convenience and
 security tradeoffs. Please review this page carefully before making your account so that you
@@ -319,7 +320,7 @@ continue to keep your key safe.
 ## Ledger Hardware Wallet
 
 To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on our [Ledger hardware wallet guide page](learn-ledger.md).
+the instructions on our [Ledger hardware wallet guide page](../general/ledger.md).
 
 ## Vanity Generator
 

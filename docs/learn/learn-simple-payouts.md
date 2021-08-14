@@ -2,6 +2,7 @@
 id: learn-simple-payouts
 title: Simple Payouts
 sidebar_label: Simple Payouts
+slug: ../learn-simple-payouts
 ---
 
 Polkadot and Kusama make stakers claim their rewards for past eras by submitting a transaction. This

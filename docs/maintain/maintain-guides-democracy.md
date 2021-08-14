@@ -2,6 +2,7 @@
 id: maintain-guides-democracy
 title: Participate in Democracy
 sidebar_label: Participate in Democracy
+slug: ../maintain-guides-democracy
 ---
 
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated

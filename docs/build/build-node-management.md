@@ -2,6 +2,7 @@
 id: build-node-management
 title: Node Management
 sidebar_label: Node Management
+slug: ../build-node-management
 ---
 
 This page contains basic information about running a Parity Polkadot client. There are a lot of ways

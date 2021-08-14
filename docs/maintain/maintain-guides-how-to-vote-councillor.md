@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-vote-councillor
 title: Voting for Councillors
 sidebar_label: Voting for Councillors
+slug: ../maintain-guides-how-to-vote-councillor
 ---
 
 The council is an elected body of on-chain accounts that are intended to represent the passive

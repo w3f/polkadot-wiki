@@ -2,6 +2,7 @@
 id: research
 title: Research Pages
 sidebar_label: Research Pages
+slug: ../research
 ---
 
 The Polkadot [research pages](https://w3f-research.readthedocs.io/en/latest/Publications.html) are

@@ -2,6 +2,7 @@
 id: learn-collator
 title: Collator
 sidebar_label: Collator
+slug: ../learn-collator
 ---
 
 Collators maintain parachains by collecting parachain transactions from users and producing state

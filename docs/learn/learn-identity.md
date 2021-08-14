@@ -2,6 +2,7 @@
 id: learn-identity
 title: Identity
 sidebar_label: Identity
+slug: ../learn-identity
 ---
 
 Polkadot provides a naming system that allows participants to add personal information to their

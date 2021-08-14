@@ -2,6 +2,7 @@
 id: learn-crosschain
 title: Cross-chain Message Passing (XCMP)
 sidebar_label: Cross-chain Message Passing (XCMP)
+slug: ../learn-crosschain
 ---
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to

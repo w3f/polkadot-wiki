@@ -2,6 +2,7 @@
 id: learn-registrar
 title: Using W3F Registrar
 sidebar_label: How to use W3F Registrar
+slug: ../learn-registrar
 ---
 
 > **Warning**: The beta version of the new registrar service is available at

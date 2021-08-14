@@ -2,6 +2,7 @@
 id: learn-balance-transfers
 title: Balance Transfers
 sidebar_label: How to transfer Balances
+slug: ../learn-balance-transfers
 ---
 
 Balance transfers are used to send balance from one account to another account. To start

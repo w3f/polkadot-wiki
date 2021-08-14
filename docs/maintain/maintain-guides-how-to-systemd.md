@@ -2,9 +2,8 @@
 id: maintain-guides-how-to-systemd
 title: Using systemd for the Validator Node
 sidebar_label: Using systemd for the Validator Node
+slug: ../maintain-guides-how-to-systemd
 ---
-
-<!-- no changes -->
 
 You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it
 will automatically restart on server reboots or crashes (and helps to avoid getting slashed!).

@@ -2,6 +2,7 @@
 id: build-integration
 title: Polkadot Integration Guide
 sidebar_label: Integration Initiation
+slug: ../build-integration
 ---
 
 Welcome to the Polkadot integration guide. This guide will provide all the information you need to

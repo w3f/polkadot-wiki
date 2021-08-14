@@ -2,6 +2,7 @@
 id: redenomination
 title: Redenomination of DOT
 sidebar_label: Redenomination of DOT
+slug: ../redenomination
 ---
 
 > Note: The DOT redenomination took place on 21 August, now known as Denomination Day, at block

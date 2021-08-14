@@ -2,6 +2,7 @@
 id: learn-parathreads
 title: Parathreads
 sidebar_label: Parathreads
+slug: ../learn-parathreads
 ---
 
 Parathreads are an idea for parachains to temporarily participate (on a block by block basis) in

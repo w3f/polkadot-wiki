@@ -2,6 +2,7 @@
 id: kusama-claims
 title: Kusama Claims
 sidebar_label: Claims
+slug: ../../kusama-claims
 ---
 
 The Kusama network is Polkadot's experimental, community-focused R&D network. If you held the DOT

@@ -2,6 +2,7 @@
 id: maintain-polkadot-parameters
 title: Polkadot Parameters
 sidebar_label: Parameters
+slug: ../maintain-polkadot-parameters
 ---
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute

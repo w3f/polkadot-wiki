@@ -2,6 +2,7 @@
 id: learn-proxies
 title: Proxy Accounts
 sidebar_label: Proxy Accounts
+slug: ../learn-proxies
 ---
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of

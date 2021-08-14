@@ -2,6 +2,7 @@
 id: learn-wasm
 title: WebAssembly (Wasm)
 sidebar_label: WebAssembly (Wasm)
+slug: ../learn-wasm
 ---
 
 WebAssembly is used in Polkadot and Substrate as the compilation target for the runtime.

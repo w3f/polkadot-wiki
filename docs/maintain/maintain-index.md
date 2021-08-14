@@ -2,6 +2,7 @@
 id: maintain-index
 title: Network Maintainers
 sidebar_label: Network Maintainers
+slug: ../maintain-index
 ---
 
 Welcome to the network maintainers section of the Polkadot wiki. Here you will find information and

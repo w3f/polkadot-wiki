@@ -2,6 +2,7 @@
 id: contributors
 title: Contributors
 sidebar_label: Contributors
+slug: ../contributors
 ---
 
 ## Current Contributors
@@ -13,7 +14,7 @@ and then feel free to get in touch with someone else on this list to verify the 
 original inquiry. **Employee impersonation is a very common type of scam**.
 
 > For other ways of protecting yourself, please see
-> [How to Protect Yourself from Scams](../learn/learn-scams.md).
+> [How to Protect Yourself from Scams](scams.md).
 
 ---
 
@@ -107,10 +108,10 @@ contribute to Web3 Foundation's vision by educating professionals and the genera
 - email: [alexander@web3.foundation](mailto:alexander@web3.foundation)
 - matrix / riot / element: [@alexander:web3.foundation](https://matrix.to/#/@alexander:web3.foundation)
 
-Alex is a Technical Education Intern at the Web3 Foundation. He is preparing to receive his Computer Science B.S. 
+Alex is a Technical Education Intern at the Web3 Foundation. He is preparing to receive his Computer Science B.S.
 from San Francisco State University. Outside of his formal education, Alex has developed a deep passion for educating others
-on decentralized systems and pushing forward the Web 3.0 vision. He has educational experience in cryptography, data privacy, 
-and enterprise security. 
+on decentralized systems and pushing forward the Web 3.0 vision. He has educational experience in cryptography, data privacy,
+and enterprise security.
 
 <br/><br/>
 

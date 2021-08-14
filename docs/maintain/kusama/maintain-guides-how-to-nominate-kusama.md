@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-nominate-kusama
 title: Be a Nominator (Kusama)
 sidebar_label: Nominator Guide
+slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
 > The following information applies to the Kusama network. If you want to nominate on Polkadot,

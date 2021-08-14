@@ -3,6 +3,7 @@ id: learn-parachains
 title: Parachains
 sidebar_label: Parachains
 description: An introductory guide to Polkadot Parachains.
+slug: ../learn-parachains
 ---
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on

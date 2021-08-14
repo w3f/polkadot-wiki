@@ -2,6 +2,7 @@
 id: learn-randomness
 title: Randomness
 sidebar_label: Randomness
+slug: ../learn-randomness
 ---
 
 Randomness in Proof of Stake blockchains is important for a fair and unpredictable distribution of

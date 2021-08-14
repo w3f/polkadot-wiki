@@ -2,6 +2,7 @@
 id: learn-transaction-fees
 title: Transaction Fees
 sidebar_label: Transaction Fees
+slug: ../learn-transaction-fees
 ---
 
 Several resources in a blockchain network are limited, for example, storage and computation.

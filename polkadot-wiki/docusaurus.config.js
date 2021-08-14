@@ -121,22 +121,22 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/general/getting-started",
+          to: "docs/getting-started",
           label: "Get Started",
           position: "right",
         },
         {
-          to: "docs/learn/learn-launch",
+          to: "docs/learn-launch",
           label: "Learn",
           position: "right",
         },
         {
-          to: "docs/build/build-index",
+          to: "docs/build-index",
           label: "Build",
           position: "right",
         },
         {
-          to: "docs/maintain/maintain-index",
+          to: "docs/maintain-index",
           label: "Maintain ",
           position: "right",
         },

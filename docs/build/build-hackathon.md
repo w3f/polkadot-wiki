@@ -2,6 +2,7 @@
 id: build-hackathon
 title: Hackathon
 sidebar_label: Hackathon
+slug: ../build-hackathon
 ---
 
 As one of our objectives at Web3 Foundation is promoting the [Web3 technology stack][], we would

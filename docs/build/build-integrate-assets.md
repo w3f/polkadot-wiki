@@ -2,6 +2,7 @@
 id: build-integrate-assets
 title: Assets on Polkadot
 sidebar_label: Integrating Assets
+slug: ../build-integrate-assets
 ---
 
 The Polkadot Relay Chain does not natively support assets beyond DOT (likewise, KSM for Kusama).

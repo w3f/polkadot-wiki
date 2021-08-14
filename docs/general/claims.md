@@ -2,6 +2,7 @@
 id: claims
 title: Polkadot Claims
 sidebar_label: Claims
+slug: ../claims
 ---
 
 If you made a DOT purchase in one of the pre-launch sales, then you will need to claim your DOT

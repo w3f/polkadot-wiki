@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 title: Set Up a Validator with NGINX Reverse Proxy
 sidebar_label: Set Up a Validator with NGINX Reverse Proxy
+slug: ../maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 ---
 
 This guide assumes that you have already configured your hardware with the appropriate specs. It has the same configuration

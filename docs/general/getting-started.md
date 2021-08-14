@@ -2,6 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
+slug: ../getting-started
 ---
 
 Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the

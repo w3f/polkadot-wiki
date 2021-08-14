@@ -2,6 +2,7 @@
 id: how-to-dyor
 title: How to Identify Legitimate Projects
 sidebar_label: How to Identify Legitimate Projects
+slug: ../how-to-dyor
 ---
 
 There are many projects that are being built, or intend to build, on both Polkadot and Kusama.

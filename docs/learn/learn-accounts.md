@@ -3,6 +3,7 @@ id: learn-accounts
 title: Polkadot Accounts
 sidebar_label: Polkadot Accounts
 description: An explanation of accounts, indices, identity, and reaping
+slug: ../learn-accounts
 ---
 
 This document covers the basics of Polkadot and Kusama account addresses and how they exist
@@ -198,7 +199,7 @@ on an air-gapped mobile phone. However, it does require obtaining an old Android
 phone that you are comfortable using only for Parity Signer.
 
 Hardware wallet integration is possible with Ledger. A full guide is available
-[here](learn-ledger.md).
+[here](../general/ledger.md).
 
 Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but bear in mind
 that some of these are **unaudited** and are not officially affiliated with Web3 Foundation or the

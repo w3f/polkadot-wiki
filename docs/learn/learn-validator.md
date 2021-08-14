@@ -2,6 +2,7 @@
 id: learn-validator
 title: Validator
 sidebar_label: Validator
+slug: ../learn-validator
 ---
 
 Validators secure the [Relay Chain](learn-architecture.md#relay-chain) by staking DOT, validating

@@ -2,6 +2,7 @@
 id: faq
 title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
+slug: ../faq
 ---
 
 _This FAQ focuses on technical questions for users interested in developing applications for

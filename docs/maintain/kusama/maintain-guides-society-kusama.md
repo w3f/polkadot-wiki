@@ -2,6 +2,7 @@
 id: maintain-guides-society-kusama
 title: Join Kappa Sigma Mu
 sidebar_label: Join Kappa Sigma Mu
+slug: ../../maintain-guides-society-kusama
 ---
 
 Kappa Sigma Mu is a membership club using the Substrate [Society][substrate pallet] pallet. It is an

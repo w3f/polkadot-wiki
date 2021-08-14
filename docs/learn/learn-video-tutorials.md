@@ -2,6 +2,7 @@
 id: learn-video-tutorials
 title: Video Tutorials
 sidebar_label: Video Tutorials
+slug: ../learn-video-tutorials
 ---
 
 ## Getting Started

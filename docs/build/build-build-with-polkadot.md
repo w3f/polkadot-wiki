@@ -2,6 +2,7 @@
 id: build-build-with-polkadot
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
+slug: ../build-build-with-polkadot
 ---
 
 _This article is the maintained version of the blog post:
@@ -24,7 +25,7 @@ may be better suited for your application over the other).
   - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
     Polkadot does... _expect chaos_...
 - Official testnets:
-  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation 
+  - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet (is not reset back to genesis block).
   - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for `ink!` development.
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new genesis block).

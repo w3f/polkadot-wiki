@@ -2,6 +2,7 @@
 id: kusama-coc
 title: Kusama Code of Conduct
 sidebar_label: Code of Conduct
+slug: ../../kusama-coc
 ---
 
 While Kusama has been its own network and has had its own ecosystem for a while now, it is still one

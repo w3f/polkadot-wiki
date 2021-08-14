@@ -2,6 +2,7 @@
 id: maintain-guides-secure-validator
 title: Secure Validator
 sidebar_label: Secure Validator
+slug: ../maintain-guides-secure-validator
 ---
 
 Validators in a Proof of Stake network are responsible for keeping the network in consensus and

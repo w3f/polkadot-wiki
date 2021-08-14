@@ -2,6 +2,7 @@
 id: learn-teleport
 title: Teleporting Assets To Other Parachains
 sidebar_label: Teleporting Assets
+slug: ../learn-teleport
 ---
 
 One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralied

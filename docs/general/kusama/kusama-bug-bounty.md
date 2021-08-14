@@ -2,6 +2,7 @@
 id: kusama-bug-bounty
 title: Bug Bounty
 sidebar_label: Bug Bounty
+slug: ../../kusama-bug-bounty
 ---
 
 We call on our community and all bug bounty hunters to help identify bugs in Kusama.

@@ -2,6 +2,7 @@
 id: kusama-faucet
 title: Kusama Faucet
 sidebar_label: Faucet
+slug: ../../kusama-faucet
 ---
 
 Due to high demand and spamming issues, the Kusama faucet is no longer in operation. The Web3

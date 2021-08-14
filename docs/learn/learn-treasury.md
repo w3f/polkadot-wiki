@@ -3,6 +3,7 @@ id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
 description: Details about Polkadot's on-chain treasury.
+slug: ../learn-treasury
 ---
 
 The Treasury is a pot of funds collected through transaction fees, slashing,

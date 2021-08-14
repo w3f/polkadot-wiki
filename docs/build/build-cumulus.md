@@ -2,6 +2,7 @@
 id: build-cumulus
 title: Cumulus
 sidebar_label: Cumulus
+slug: ../build-cumulus
 ---
 
 <!-- page being updated -->

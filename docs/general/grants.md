@@ -2,6 +2,7 @@
 id: grants
 title: Web3 Foundation Grants
 sidebar_label: Grants
+slug: ../grants
 ---
 
 The Web3 Foundation offers grants for open source software development and research around Substrate,

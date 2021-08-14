@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-chill
 title: How to Chill
 sidebar_label: How to Chill
+slug: ../maintain-guides-how-to-chill
 ---
 
 Stakers can be in any one of the three states: validating, nominating, or chilling. When a staker

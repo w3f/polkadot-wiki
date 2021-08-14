@@ -1,7 +1,8 @@
 ---
-id: learn-scams
+id: scams
 title: How to Protect Yourself from Scams
 sidebar_label: How to Protect Yourself from Scams
+slug: ../scams
 ---
 
 Scams have unfortunately made an impact on our community. It's important to stay alert and protect

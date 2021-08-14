@@ -2,6 +2,7 @@
 id: build-transaction-construction
 title: Transaction Construction and Signing
 sidebar_label: Transaction Construction
+slug: ../build-transaction-construction
 ---
 
 <!-- no updates -->

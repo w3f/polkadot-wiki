@@ -2,6 +2,7 @@
 id: learn-implementations
 title: Polkadot Implementations
 sidebar_label: Polkadot Implementations
+slug: ../learn-implementations
 ---
 
 # Polkadot Implementations

@@ -2,6 +2,7 @@
 id: kusama-getting-started
 title: Getting Started
 sidebar_label: Getting Started
+slug: ../../kusama-getting-started
 ---
 
 It's time to get started on the Kusama network! Please check out our recommended list for getting

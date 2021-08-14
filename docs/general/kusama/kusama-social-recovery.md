@@ -2,6 +2,7 @@
 id: kusama-social-recovery
 title: Social Recovery
 sidebar_label: Account Recovery
+slug: ../../kusama-social-recovery
 ---
 
 Managing an account is not an easy task. Many people have lost their private keys due to improper

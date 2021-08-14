@@ -2,6 +2,7 @@
 id: build-smart-contracts
 title: Smart Contracts
 sidebar_label: Smart Contracts
+slug: ../build-smart-contracts
 ---
 
 The Polkadot Relay Chain will not natively support smart contracts. However, parachains on Polkadot

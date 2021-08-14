@@ -2,6 +2,7 @@
 id: learn-availability
 title: Availability and Validity
 sidebar_label: Availability and Validity
+slug: ../learn-availability
 ---
 
 The Availability and Validity (AnV) protocol of Polkadot is what allows for the network to be

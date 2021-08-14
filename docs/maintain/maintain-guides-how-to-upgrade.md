@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-upgrade
 title: How to Upgrade Your Validator
 sidebar_label: How to Upgrade Your Validator
+slug: ../maintain-guides-how-to-upgrade
 ---
 
 Validators perform critical functions for the network, and as such, have strict uptime requirements.

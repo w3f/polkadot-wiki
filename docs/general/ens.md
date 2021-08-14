@@ -2,6 +2,7 @@
 id: ens
 title: Adding accounts to an ENS domain
 sidebar_label: Using ENS with DOT/KSM accounts
+slug: ../ens
 ---
 
 ENS (Ethereum Name Service) is a distributed and open system of smart contracts on the Ethereum

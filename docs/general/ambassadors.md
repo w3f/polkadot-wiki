@@ -2,6 +2,7 @@
 id: ambassadors
 title: Polkadot Ambassador Programme
 sidebar_label: Polkadot Ambassador Programme
+slug: ../ambassadors
 ---
 
 The Polkadot Ambassador Programme is an initiative ran by the Web3 Foundation to support potential

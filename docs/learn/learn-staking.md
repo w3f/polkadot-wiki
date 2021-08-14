@@ -2,6 +2,7 @@
 id: learn-staking
 title: Staking
 sidebar_label: Staking
+slug: ../learn-staking
 ---
 
 Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
@@ -142,7 +143,7 @@ can pay rewards.
 
 In Polkadot and Kusama, this limit is currently {{ polkadot_max_nominators }}, although this can be
 modified via runtime upgrade. A validator with more than {{ polkadot_max_nominators }} nominators is
-*oversubscribed*. When payouts occur, only the top {{ polkadot_max_nominators }} nominators as
+_oversubscribed_. When payouts occur, only the top {{ polkadot_max_nominators }} nominators as
 measured by amount of stake allocated to that validator will receive rewards. All other nominators
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
@@ -512,7 +513,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 At the time of writing (#6,339,031), Polkadot has a maximum nominator count of 22,500, and the current staking configuration prevents new nominators from joining. Motion #103 proposes new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count.
 
-The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to particpate in the network's security. This motion will update the value of the minimum nominator bond from 40 DOTs to 80 DOTs and set a new parameter named `chill-threshold`. With `chill-threshold`, the permissionless `chill_other` may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded, number of nominators, etc.) to adjust to this change. A more permanent solution is in progress. 
+The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to particpate in the network's security. This motion will update the value of the minimum nominator bond from 40 DOTs to 80 DOTs and set a new parameter named `chill-threshold`. With `chill-threshold`, the permissionless `chill_other` may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded, number of nominators, etc.) to adjust to this change. A more permanent solution is in progress.
 
 **Parameters changed:**
 minimum nominator bond : `40` -> `80`

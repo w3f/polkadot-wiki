@@ -46,19 +46,19 @@ class HomeNav extends React.Component {
     return (
       <NavContainer>
         <NavItem
-          href={this.props.docUrl("build/build-index")}
+          href={this.props.docUrl("build-index")}
           title="Build"
           content="Most up-to-date information on the status of the development tools in the Polkadot ecosystem."
           aosDelay="0"
         />
         <NavItem
-          href={this.props.docUrl("learn/learn-launch")}
+          href={this.props.docUrl("learn-launch")}
           content="Polkadot is a sharded protocol that enables blockchain networks to operate together seamlessly."
           title="Learn"
           aosDelay="300"
         />
         <NavItem
-          href={this.props.docUrl("maintain/maintain-index")}
+          href={this.props.docUrl("maintain-index")}
           title="Maintain"
           content="Information and guides on how to deploy a node and run the network."
           aosDelay="600"

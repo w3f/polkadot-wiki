@@ -2,6 +2,7 @@
 id: build-ss58-registry
 title: SS58 Registry
 sidebar_label: SS58 Registry
+slug: ../build-ss58-registry
 ---
 
 Substrate-based chains, including the Polkadot and Kusama relay chains, use an

@@ -2,6 +2,7 @@
 id: learn-phragmen
 title: Sequential Phragmén Method
 sidebar_label: Sequential Phragmén Method
+slug: ../learn-phragmen
 ---
 
 ## What is the sequential Phragmén method?

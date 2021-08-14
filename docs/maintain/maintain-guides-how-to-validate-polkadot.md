@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-validate-polkadot
 title: Run a Validator (Polkadot)
 sidebar_label: How to run a Validator on Polkadot
+slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
 > The following information applies to the Polkadot network. If you want to set up a validator on

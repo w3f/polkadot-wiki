@@ -2,6 +2,7 @@
 id: learn-auction
 title: Parachain Slots Auction
 sidebar_label: Parachain Slots Auction
+slug: ../learn-auction
 ---
 
 For a [parachain](learn-parachains.md) to be added to Polkadot it must inhabit one of the available

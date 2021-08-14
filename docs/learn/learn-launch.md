@@ -3,6 +3,7 @@ id: learn-launch
 title: Polkadot Launch Phases
 sidebar_label: Polkadot Launch Phases
 description: An explanation of Polkadot's launch process and its individual phases
+slug: ../learn-launch
 ---
 
 The Polkadot network has a phased roll-out plan, with important milestones toward decentralization

@@ -2,6 +2,7 @@
 id: build-node-interaction
 title: Node Interaction
 sidebar_label: Node Interaction
+slug: ../build-node-interaction
 ---
 
 This page will guide you through some basic interactions with your node. Always refer to the proper

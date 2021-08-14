@@ -3,6 +3,7 @@ id: learn-comparisons
 title: Polkadot Comparisons
 sidebar_label: Other comparisons
 description: How does Polkadot compare to Ethereum 2, Cosmos, and other chains?
+slug: ../learn-comparisons
 ---
 
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular

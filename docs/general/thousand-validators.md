@@ -2,6 +2,7 @@
 id: thousand-validators
 title: Thousand Validators Programme
 sidebar_label: Thousand Validators Programme
+slug: ../thousand-validators
 ---
 
 The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use

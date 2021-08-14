@@ -2,6 +2,7 @@
 id: learn-kusama-vs-polkadot
 title: What is the difference between Polkadot and Kusama?
 sidebar_label: Comparing Polkadot and Kusama
+slug: ../learn-kusama-vs-polkadot
 ---
 
 Although they share many parts of their code, Polkadot and Kusama are independent, standalone

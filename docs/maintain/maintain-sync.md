@@ -2,6 +2,7 @@
 id: maintain-sync
 title: Set up a Full Node
 sidebar_label: Set up a Full Node
+slug: ../maintain-sync
 ---
 
 import Tabs from "@theme/Tabs";

@@ -2,6 +2,7 @@
 id: maintain-networks
 title: Networks
 sidebar_label: Networks
+slug: ../maintain-networks
 ---
 
 Polkadot is built on top of Substrate, a modular framework for blockchains. One feature of Substrate

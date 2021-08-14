@@ -2,6 +2,7 @@
 id: learn-comparisons-ethereum-2
 title: Polkadot and Ethereum 2.0
 sidebar_label: Ethereum 2.0
+slug: ../learn-comparisons-ethereum-2
 ---
 
 Polkadot and Ethereum 2.0 are both sharded blockchain protocols. As such, they provide scalability

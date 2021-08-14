@@ -2,6 +2,7 @@
 id: learn-governance
 title: Governance
 sidebar_label: Governance
+slug: ../learn-governance
 ---
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at

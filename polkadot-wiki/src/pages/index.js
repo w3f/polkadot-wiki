@@ -50,7 +50,7 @@ function HomeNav() {
 
   return (
     <NavContainer>
-      <NavItem href={useDocUrl("learn/learn-launch")} aosDelay="0">
+      <NavItem href={useDocUrl("learn-launch")} aosDelay="0">
         <NavItemTitle>
           <Translate
             id="homePage.navContainer.learn.title"

@@ -2,6 +2,7 @@
 id: learn-implementers-guide
 title: Parachain Implementer's Guide
 sidebar_label: Parachain Implementer's Guide
+slug: ../learn-implementers-guide
 ---
 
 The Parachain Implementer's Guide is still a significant work in progress and maintained by

@@ -2,6 +2,7 @@
 id: kusama-parameters
 title: Kusama Parameters
 sidebar_label: Parameters
+slug: ../../kusama-parameters
 ---
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute

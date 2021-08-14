@@ -2,6 +2,7 @@
 id: build-wallets
 title: Polkadot Wallets
 sidebar_label: Polkadot Wallets
+slug: ../build-wallets
 ---
 
 ## Polkadot Wallets

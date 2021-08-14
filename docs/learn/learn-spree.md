@@ -2,6 +2,7 @@
 id: learn-spree
 title: SPREE
 sidebar_label: SPREE
+slug: ../learn-spree
 ---
 
 Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "trust wormholes," are

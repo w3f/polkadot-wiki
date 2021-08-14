@@ -2,6 +2,7 @@
 id: learn-DOT
 title: DOT
 sidebar_label: DOT
+slug: ../learn-DOT
 ---
 
 ## What is DOT?

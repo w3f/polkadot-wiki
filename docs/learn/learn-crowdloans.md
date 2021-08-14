@@ -2,6 +2,7 @@
 id: learn-crowdloans
 title: Parachain Crowdloans
 sidebar_label: Parachain Crowdloans
+slug: ../learn-crowdloans
 ---
 
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} allows parachains to source tokens

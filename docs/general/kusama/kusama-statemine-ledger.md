@@ -2,6 +2,7 @@
 id: kusama-statemine-ledger
 title: Using Ledger Devices with Statemine
 sidebar_label: Ledger Devices with Statemine
+slug: ../../kusama-statemine-ledger
 ---
 
 > Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based

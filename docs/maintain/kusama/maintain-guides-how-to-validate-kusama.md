@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-validate-kusama
 title: Run a Validator (Kusama)
 sidebar_label: How to run a Validator on Kusama
+slug: ../../maintain-guides-how-to-validate-kusama
 ---
 
 This guide will instruct you how to set up a validator node on the Kusama network.

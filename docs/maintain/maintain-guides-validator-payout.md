@@ -2,6 +2,7 @@
 id: maintain-guides-validator-payout
 title: Validator Payout Overview
 sidebar_label: Validator Payout Overview
+slug: ../maintain-guides-validator-payout
 ---
 
 ## Era Points

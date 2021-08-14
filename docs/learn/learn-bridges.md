@@ -2,6 +2,7 @@
 id: learn-bridges
 title: Bridges
 sidebar_label: Bridges
+slug: ../learn-bridges
 ---
 
 A cornerstone technology of blockchain interoperability is the blockchain bridge. Blockchain bridges

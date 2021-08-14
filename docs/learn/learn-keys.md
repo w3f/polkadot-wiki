@@ -2,6 +2,7 @@
 id: learn-keys
 title: Polkadot Keys
 sidebar_label: Polkadot Keys
+slug: ../learn-keys
 ---
 
 Public and private keys are an important aspect of most crypto-systems and an essential component

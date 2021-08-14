@@ -2,6 +2,7 @@
 id: kusama-timeline
 title: Kusama Timeline
 sidebar_label: Timeline
+slug: ../../kusama-timeline
 ---
 
 Kusama network started as a Proof-of-Authority network and was transitioned to Proof-of-Stake on 28

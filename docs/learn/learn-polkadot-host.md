@@ -2,6 +2,7 @@
 id: learn-polkadot-host
 title: Polkadot Host (PH)
 sidebar_label: Polkadot Host (PH)
+slug: ../learn-polkadot-host
 ---
 
 The architecture of Polkadot can be divided into two different parts, the Polkadot _runtime_ and the

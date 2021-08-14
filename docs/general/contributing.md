@@ -2,6 +2,7 @@
 id: contributing
 title: Contributing
 sidebar_label: Contributing
+slug: ../contributing
 ---
 
 The wiki was started and is maintained by the Web3 Foundation. It is an open source project and aims

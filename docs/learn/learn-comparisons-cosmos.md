@@ -2,6 +2,7 @@
 id: learn-comparisons-cosmos
 title: Polkadot and Cosmos
 sidebar_label: Cosmos
+slug: ../learn-comparisons-cosmos
 ---
 
 Polkadot and Cosmos are both protocols that provide an interface for different state machines to

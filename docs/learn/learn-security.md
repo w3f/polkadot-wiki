@@ -2,9 +2,8 @@
 id: learn-security
 title: Security of the network
 sidebar_label: Security of the network
+slug: ../learn-security
 ---
-
-<!-- no change needed -->
 
 ## Shared security
 

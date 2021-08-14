@@ -2,6 +2,7 @@
 id: build-oracle
 title: Oracles
 sidebar_label: Oracles
+slug: ../build-oracle
 ---
 
 In the blockchain context, an _oracle_ is a way to bring real-world data onto the blockchain so that

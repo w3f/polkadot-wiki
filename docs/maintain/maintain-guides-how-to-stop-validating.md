@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-stop-validating
 title: How to Stop Validating
 sidebar_label: How to Stop Validating
+slug: ../maintain-guides-how-to-stop-validating
 ---
 
 If you wish to remain a validator or nominator (e.g. you're only stopping for planned downtime or

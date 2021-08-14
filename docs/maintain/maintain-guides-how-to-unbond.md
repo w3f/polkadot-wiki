@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-unbond
 title: Unbonding and Rebonding
 sidebar_label: Unbonding and Rebonding
+slug: ../maintain-guides-how-to-unbond
 ---
 
 The following describes how to stop nominating or validating and retrieve your stake. Please note

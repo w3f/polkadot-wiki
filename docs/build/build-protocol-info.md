@@ -2,9 +2,8 @@
 id: build-protocol-info
 title: Polkadot Protocol Information
 sidebar_label: Polkadot Protocol
+slug: ../build-protocol-info
 ---
-
-<!-- page in the process of being updated -->
 
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
 specific to Polkadot, notable differences to other chains that you may have worked with, and

@@ -2,6 +2,7 @@
 id: kusama-endpoints
 title: Kusama Endpoints
 sidebar_label: Kusama Endpoints
+slug: ../../kusama-endpoints
 ---
 
 When interacting with the [Kusama network][] via [Polkadot-JS Apps][] or other UIs and programmatic

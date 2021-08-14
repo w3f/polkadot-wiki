@@ -2,6 +2,7 @@
 id: maintain-wss
 title: Set up Secure WebSocket for Remote Connections
 sidebar_label: Set up Secure WebSocket for Remote Connections
+slug: ../maintain-wss
 ---
 
 You might want to host a node on one server and then connect to it from a UI hosted on another, e.g.
