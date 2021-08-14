@@ -46,8 +46,6 @@ module.exports = {
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
   onDuplicateRoutes: "log",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -81,14 +79,10 @@ module.exports = {
         redirects: [
           {
             to: "/",
+
             from: ["/en/latest", "/en/"],
           },
         ],
-        createRedirects: function (existPath) {
-          if (existPath === "/docs/general") {
-            return ["/docs/"];
-          }
-        },
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
             return [
@@ -150,7 +144,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/general/contributing",
+          to: "docs/contributing",
           label: "Contribute",
           position: "right",
         },
