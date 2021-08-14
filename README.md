@@ -19,13 +19,12 @@
 
 ## Contributing to Documentation
 
-The Wiki is an open source project and we will review all issues and pull-requests created in this
-repository. If you notice typos or grammatical errors, please feel free to directly create pull
-requests with these corrections.
+The Wiki is an open source project and we will review all issues and pull-requests created
+in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with
+these corrections.
 
-Larger contributions may start as issues to test the waters on the subject with the maintainers. It
-is generally preferable to create a pull request over an issue to propose a change to the wiki
-content.
+Larger contributions may start as issues to test the waters on the subject with the maintainers.
+It is generally preferable to create a pull request over an issue to propose a change to the wiki content.
 
 ### Running Locally
 
@@ -33,8 +32,8 @@ Both the Polkadot Wiki and the Kusama Guide are built from the source files in t
 After cloning the source locally, you can start the websites with each of these respective commands
 (ensure you run `yarn` at the root of the repository first to install dependencies):
 
-> The site is built using Docusaurus: you may need to install Docusaurus before running the Wiki
-> locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
+> The site is built using Docusaurus: you may need to install Docusaurus before running
+> the Wiki locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
 
 ```zsh
 # For the Polkadot Wiki:
@@ -60,12 +59,11 @@ Use the style guide from the
 
 #### Formatting
 
-Use
-[pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
+Use [pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
 as a pre-commit formatting tool.
 
-There is an automatic `pretty-quick` check that occurs pre-commit to format your changed/staged
-files.
+There is an automatic `pretty-quick` check that occurs pre-commit to format 
+your changed/staged files.
 
 To format markdown pages, run the following in the `docs` folder:
 
@@ -77,17 +75,17 @@ To run pretty on the whole project, `npx pretty-quick`.
 
 ### Static Site Generator
 
-The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website generator to
-convert the Markdown docs into a documentation website.
+The Wiki's latest version uses the [Docusaurus](https://docusaurus.io/) static website
+generator to convert the Markdown docs into a documentation website.
 
 ### Search Engine
 
-[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which is
-built into Docusaurus. Indexing via Algolia provides faster lookup; the actual configuration for
-lookup is located in another repository that's maintained by Algolia DocSearch.
+[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which
+is built into Docusaurus. Indexing via Algolia provides faster lookup; the actual configuration
+for lookup is located in another repository that's maintained by Algolia DocSearch.
 
-We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js` file
-in `scripts`, and defining an API key and index name that are provided by DocSearch.
+We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js`
+file in `scripts`, and defining an API key and index name that are provided by DocSearch.
 
 ```js
   algolia: {
@@ -100,13 +98,14 @@ in `scripts`, and defining an API key and index name that are provided by DocSea
 ```
 
 If you would like to access and modify this, you can re-submit the documentation url via
-[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send a JavaScript snippet
-that you can re-integrate into the configuration, similar to the one shown above.
+[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send
+a JavaScript snippet that you can re-integrate into the configuration, similar to the
+one shown above.
 
 ### Automated Deployments
 
-The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages. The
-Kusama wiki is also deployed to GitHub Pages (via a separate repository).
+The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
+The Kusama wiki is also deployed to GitHub Pages (via a separate repository).
 
 ### Mirror Pages
 
@@ -144,8 +143,9 @@ burned. :kusama }}
 ```
 
 To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
-`kusama:inject`, respectively. Inspect the built files in the corresponding `build` folder under
-`website` or `kusama-guide`.
+`kusama:inject`, respectively. 
+Inspect the built files in the corresponding `build` folder under `website` or
+`kusama-guide`.
 
 ## Internationalization
 

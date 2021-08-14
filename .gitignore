@@ -36,7 +36,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+node_modules/*
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -66,20 +66,21 @@ typings/
 # Emacs backup files
 *~
 
-build
+polkadot-wiki/build
+kusama-guide/build
 build-script*
 **/mirror*.md
 .DS_Store
 kusama-guide/translated_docs/
-website/translated-docs/
-website/i18n/*
+polkadot-wiki/translated-docs/
+polkadot-wiki/i18n/*
 kusama-guide/i18n/*
 
 .docusaurus
 computed-dict.json
-website-v2/i18n/
-!website-v2/i18n/en/
-kusama-guide-v2/i18n/zh-CN/docusaurus-plugin-content-docs/current/
+polkadot-wiki/i18n/
+!polkadot-wiki/i18n/en/
+kusama-guide/i18n/zh-CN/docusaurus-plugin-content-docs/current/
 
 # Ignore because we don't need a 10MB file in VCS
 polkadot-wiki.pdf
