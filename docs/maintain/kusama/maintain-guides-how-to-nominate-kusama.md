@@ -4,8 +4,6 @@ title: Be a Nominator (Kusama)
 sidebar_label: Nominator Guide
 ---
 
-<!-- page being updated -->
-
 > The following information applies to the Kusama network. If you want to nominate on Polkadot,
 > check out the [Polkadot guide](../maintain-guides-how-to-validate-polkadot.md) instead.
 
@@ -101,13 +99,8 @@ earn compound interest.
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be
-<<<<<<< HEAD:docs/maintain/kusama/maintain-guides-how-to-nominate-kusama.md
 [slashed](../../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
 now be distributed to up to 16 validators. Be careful about the validators you choose since you will
-=======
-[slashed](learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
-now be distributed to up to 24 validators. Be careful about the validators you choose since you will
->>>>>>> master:docs/maintain-guides-how-to-nominate-kusama.md
 be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking

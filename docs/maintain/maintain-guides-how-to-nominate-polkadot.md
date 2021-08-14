@@ -203,10 +203,5 @@ After a few seconds, you should see the hash of the transaction and if you would
 nomination status, you can check that on the Polkadot-JS UI as well.
 
 [validators]: maintain-guides-how-to-validate-polkadot.md
-<<<<<<< HEAD:docs/maintain/maintain-guides-how-to-nominate-polkadot.md
 [keys]: ../learn/learn-keys.md###"controller"-and-"stash"-keys
 [account generation]: ../learn/learn-account-generation.md
-=======
-[keys]: learn-keys.md###"controller"-and-"stash"-keys
-[account generation]: learn-account-generation.md
->>>>>>> master:docs/maintain-guides-how-to-nominate-polkadot.md
