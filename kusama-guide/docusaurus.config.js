@@ -107,12 +107,12 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/general/kusama/kusama-getting-started",
+          to: "docs/kusama-getting-started",
           label: "Get Started",
           position: "right",
         },
         {
-          to: "docs/general/kusama/kusama-index",
+          to: "docs/kusama-index",
           label: "Docs",
           position: "right",
         },

@@ -82,7 +82,7 @@ export default function Index() {
                 Polkadot. This includes participating in a parachain slot
                 auction and composable applications.
               </p>
-              <a href={docUrl("learn/mirror-learn-parachains")}>
+              <a href={docUrl("mirror-learn-parachains")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Parachains
                 </button>
@@ -94,7 +94,7 @@ export default function Index() {
                 Campaign as a councillor or vote for new runtime proposals using
                 Democracy.
               </p>
-              <a href={docUrl("learn/mirror-learn-governance")}>
+              <a href={docUrl("mirror-learn-governance")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Politics
                 </button>
@@ -108,9 +108,7 @@ export default function Index() {
                 The Kappa Sigma Mu fraternity asks you to get a Kusama tattoo to
                 join.
               </p>
-              <a
-                href={docUrl("maintain/kusama/maintain-guides-society-kusama")}
-              >
+              <a href={docUrl("maintain-guides-society-kusama")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
                   See Kappa Sigma Mu
                 </button>
