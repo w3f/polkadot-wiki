@@ -54,7 +54,7 @@ nominating that validator to re-issue the nominate call.
 
 Nominators who have the option to renominate an involuntarily chilled validator will have a display
 row to do so using Polkadot-JS Apps. This row is displayed in the "Account Actions" tab for the
-nominator under a heading that says "Redenomination required". If your validator has been
+nominator under a heading that says "Renomination required". If your validator has been
 involuntarily chilled, you will need to request your nominators to re-issue the nominate call in
 order to start nominating you again.
 
