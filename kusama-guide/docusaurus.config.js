@@ -65,21 +65,6 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
-    [
-      "@docusaurus/plugin-client-redirects",
-      {
-        createRedirects: function (existingPath) {
-          if (existingPath.startsWith("/docs/")) {
-            return [
-              existingPath.replace("/docs/", "/docs/en/"),
-              existingPath.replace("/docs/", "/docs/zh-CN/"),
-            ];
-          }
-        },
-      },
-    ],
-  ],
   themeConfig: {
     announcementBar: {
       isCloseable: false,

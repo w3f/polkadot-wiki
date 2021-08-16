@@ -83,15 +83,6 @@ module.exports = {
             from: ["/en/latest", "/en/"],
           },
         ],
-        createRedirects: function (existingPath) {
-          if (existingPath.startsWith("/docs/")) {
-            return [
-              existingPath.replace("/docs/", "/docs/en/"),
-              existingPath.replace("/docs/", "/docs/zh-CN/"),
-              existingPath.replace("/docs/", "/docs/ru-RU/"),
-            ];
-          }
-        },
       },
     ],
   ],
