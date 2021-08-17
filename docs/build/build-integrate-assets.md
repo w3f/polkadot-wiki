@@ -7,7 +7,7 @@ slug: ../build-integrate-assets
 
 The Polkadot Relay Chain does not natively support assets beyond DOT (likewise, KSM for Kusama).
 This functionality exists in parachains. On Polkadot, this parachain is called Statemint, and on
-Kusama it is called Statemine. All information in this guide applies equally to Kusama/Statemine.
+Kusama it is called Statemint. All information in this guide applies equally to Kusama/Statemint.
 
 Statemint provides a first-class interface for creating, managing, and using both fungible and
 non-fungible assets. The fungible interface is similar to Ethereum's ERC-20 standard. However, the
