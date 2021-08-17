@@ -542,28 +542,10 @@ released the multisig transaction deposit.
 
 ## Address Conversion Tools
 
-You can use the tool below to convert any SS58 address for any network for use on different
-networks.
-
-(placeholder for address changer)
-
-<div class="address-changer">
-  <input class="address-changer-input" id="input" placeholder="Paste your address" oninput="globalThis.addressChanger()" />
-  <select class="address-changer-select" id="prefix-select" oninput="globalThis.addressChanger()">
-    <option value="0">Polkadot</option>
-    <option value="2">Kusama</option>
-    <option value="5">Plasm</option>
-    <option value="10">Acala</option>
-    <option value="16">Kulupu</option>
-    <option value="28">Subsocial</option>
-    <option value="36">Centrifuge</option>
-    <option value="42">Substrate</option>
-  </select>
-  <span class="address-changer-output" id="output" />
-</div>
-
-Alternatively, use this [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) or
-this [simple address convertor](https://polkadot-address-convertor.netlify.app/).
+You can use the tools below to convert any SS58 address for any network for use on different
+networks
+- [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) 
+- [simple address convertor](https://polkadot-address-convertor.netlify.app/)
 
 ### How to Verify a Public Key's Associated Address
 
