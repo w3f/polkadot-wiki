@@ -2,7 +2,6 @@
 id: build-build-with-polkadot
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
-slug: ../build-build-with-polkadot
 ---
 
 _This article is the maintained version of the blog post:
@@ -10,7 +9,7 @@ _This article is the maintained version of the blog post:
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
-[XCMP](../learn/learn-crosschain.md). With the advent of [PDKs](build-pdk.md) like Parity Substrate and
+[XCMP](learn-crosschain.md). With the advent of [PDKs](build-pdk.md) like Parity Substrate and
 Cumulus, the time it takes to develop and launch a new chain has dropped significantly. While before
 it would take years to launch a new chain, now it may only take weeks or even days.
 
@@ -31,7 +30,7 @@ may be better suited for your application over the other).
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new genesis block).
 
 Polkadot mainnet has been running since May 2020 and has
-[implementations in various programming languages](../learn/learn-implementations.md) ranging from Rust to
+[implementations in various programming languages](learn-implementations.md) ranging from Rust to
 JavaScript. Currently, the leading implementation is built in Rust and built using the Substrate
 framework.
 
@@ -76,7 +75,7 @@ Some examples of features you can have on a parachain or parathread:
 - A governance mechanism that could manage a DAO that is responsible for allocating your on-chain
   treasury.
 
-![build 1](../assets/build-1.png)
+![build 1](./assets/build-1.png)
 
 Parachains open possibilities to construct complex runtime logic that would be too expensive to
 execute with smart contracts. However, unlike smart contracts, parachains lack a mandatory gas
@@ -96,7 +95,7 @@ Most likely you’ve already realized that your application is better suited to 
 (or a hybrid of them both), but if you need a quick recap to digest the information, you can use
 this comparison chart as a cheat sheet:
 
-![build 2](../assets/build-2.png)
+![build 2](./assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the
 > benefits of parachains apply just as well to parathreads. Parathreads, however, _are_ cheaper to
@@ -161,7 +160,7 @@ or parathread are known as parachain development kits ([PDK](build-pdk.md)s). Cu
 PDK available is Substrate and Cumulus from Parity Technologies.
 
 In the future, there will be many different PDKs available in different programming languages, just
-like there are multiple [implementations of the Polkadot Host](../learn/learn-implementations.md).
+like there are multiple [implementations of the Polkadot Host](learn-implementations.md).
 
 > **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3
 > Foundation is giving grants to teams who are doing this, learn more and apply on the
@@ -223,8 +222,8 @@ In order to include your parachain into the Polkadot network, you will need to a
 slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
-{{ polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}
-{{ kusama: [parachain auction](../learn/mirror-learn-auction.md) :kusama }} page of the wiki.
+{{ polkadot: [parachain auction](learn-auction.md) :polkadot }}
+{{ kusama: [parachain auction](mirror-learn-auction.md) :kusama }} page of the wiki.
 
 #### Parathread
 
@@ -234,8 +233,8 @@ and from then be able to start participating in the per-block auctions for inclu
 transition into the relay chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
-{{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
-{{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
+{{ polkadot: [parathread](learn-parathreads.md) :polkadot }}
+{{ kusama: [parathread](mirror-learn-parathreads.md) :kusama }} page.
 
 ## So you want to build a smart contract...
 
@@ -251,7 +250,7 @@ Substrate presently supports smart contracts out-of-the-box in two ways:
 
 [Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts (EVM)
 natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses can also
-be mapped directly to and from Substrate's SS58 scheme from existing accounts.
+be mapped directly to and from Substrate's SS58 sceme from existing accounts.
 
 ### Contracts Pallet
 
@@ -289,24 +288,16 @@ parachains.
 ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual
 machine and compatible with Substrate chains.
 
-### It is still early
+### Smart Contract Parachains
 
-It is still very early for smart contracts on Polkadot and the development is only now stabilizing.
+It’s still very early for smart contracts on Polkadot and the development is only now stabilizing.
 We are actively producing content to help developers get up to speed and will maintain the wiki with
 the latest resources. You should also keep up to date with the following links:
 
-#### Parity Tech
-
-- [ink!](https://github.com/paritytech/ink)
-- [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts)
-
-#### Parachains
-
-- [Edgeware][]
+- [Edgeware][].
 - [Moonbeam][]
-- [Astar](https://astar.network/)
-- [Acala](https://acala.network/)
-- [Phala](https://phala.network)
+- [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
+- [Substrate contracts pallet](https://github.com/paritytech/substrate/tree/master/frame/contracts).
 
 There are many smart contract platforms being built with the intent of becoming a parachain on the Polkadot and/or Kusama networks. A community created and maintained list of different smart contract platforms building on Polkadot can be found at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
@@ -327,13 +318,13 @@ Try deploying a smart contract to Moonbeam by following their [documentation][mo
 
 ### Astar
 
-[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform and intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is the sister network to Astar, is currently live on Kusama, and supports EVM, WASM, and Layer 2 solutions. Astar aims to house all layer 2 scaling solutions and support all layer 2 protocols through the [OVM](https://docs.astar.network/learn/layer2/optimistic-virtual-machine) (Optimistic Virtual Machine).
+[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform and intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is currently live on Kusama, and supports EVM, WASM, and Layer 2 solutions. Astar aims to house all layer 2 scaling solutions and support all layer 2 protocols through the [OVM](Optimistic Virtual Machine).
 
 Try deploying an Ethereum or ink! smart contract by following their [documentation](https://docs.astar.network/build/smart-contracts).
 
 ### Acala
 
-[Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain delivering a set of protocols to serve as the DeFi hub on Polkadot. [Karura](https://acala.network/karura), Acala's canary network, is live as a parachain on Kusama. Interested teams are now able to deploy DApps and smart contracts on Karura's platform. Acala is also implementing the [Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
+[Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain delivering a set of protocols to serve as DeFi hub on Polkadot. [Karura](https://acala.network/karura), Acala's canary network, is live as a parachain on Kusama. Interested teams are now able to deploy DApps and smart contracts on Karura's platform. Acala is also implementing the [Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
 
 Try deploying an Acala EVM smart contract by following their [documentation](https://wiki.acala.network/build/development-guide/smart-contracts).
 
@@ -356,7 +347,7 @@ Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
 [Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
-[social channels](../general/community.md).
+[social channels](community.md).
 
 Good luck!
 
