@@ -42,6 +42,11 @@ the shards will implement the eWasm interface, finally making the system usable 
 The network will also have "side chains" to interact with chains that are not under the finality
 protocol of Ethereum 2.0.
 
+> **Update**: The Ethereum 2.0 development roadmap has changed from the phases detailed above. 
+> Under the new roadmap, the merge of the Eth 1 and Eth 2 chain will be accelerated (expected in 
+> Q1 2022) and precede the rollout of sharding, effectively transitioning the system to proof of 
+> stake [9]
+
 ### Polkadot
 
 Like Ethereum 2.0, Polkadot also has a main chain, called the Relay Chain, with several shards,
@@ -178,3 +183,4 @@ strong availability and validity guarantees with a smaller number of validators 
 6. [eWasm Design](https://github.com/ewasm/design)
 7. [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
 8. [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
+9. [Ethereum 2.0 Merge](https://ethereum.org/en/eth2/merge/)
