@@ -17,7 +17,7 @@ like attestations (see [Judgements](#judgements)).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
-These funds are _locked_, not spent - they are returned when the identity is cleared.
+These funds are *locked*, not spent - they are returned when the identity is cleared.
 
 These amounts can also be extracted by querying constants through the
 [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on

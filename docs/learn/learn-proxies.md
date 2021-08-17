@@ -55,7 +55,7 @@ Controller account. Within the Staking pallet, some transactions must come from 
 others must come from the Controller. The Stash account is meant to stay in cold storage, while the
 Controller account makes day-to-day transactions like setting session keys or deciding which
 validators to nominate. The Stash account still needs to make some transactions, though, like
-bonding extra funds or designating a new Controller. A proxy doesn't change the _roles_ of Stash and
+bonding extra funds or designating a new Controller. A proxy doesn't change the *roles* of Stash and
 Controller accounts, but does allow the Stash to be accessed even less frequently.
 
 ### Identity Judgement Proxies
