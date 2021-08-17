@@ -302,7 +302,7 @@ the latest resources. You should also keep up to date with the following links:
 
 #### Parachains
 
-- [Edgeware][].
+- [Edgeware][]
 - [Moonbeam][]
 - [Astar](https://astar.network/)
 - [Acala](https://acala.network/)
