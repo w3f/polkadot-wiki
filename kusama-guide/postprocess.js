@@ -1,11 +1,11 @@
 // postprocess.js
-'use strict';
+"use strict";
 
-require('loud-rejection/register');
+require("loud-rejection/register");
 
-const path = require('path');
-const { postProcess } = require('../scripts/utils');
+const path = require("path");
+const { postProcess } = require("../scripts/utils");
 
-const buildDirectory = path.join(__dirname, 'build');
+const buildDirectory = path.join(__dirname, "build");
 
 postProcess(buildDirectory);

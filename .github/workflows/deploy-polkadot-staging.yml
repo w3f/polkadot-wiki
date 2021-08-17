@@ -36,7 +36,7 @@ jobs:
       #   uses: actions/upload-artifact@v2
       #   with:
       #     name: polkadot-wiki
-      #     path: website/static/polkadot-wiki.pdf
+      #     path: polkadot-wiki/static/polkadot-wiki.pdf
 
       # - name: Build
       #   run: yarn; yarn polkadot:build
@@ -47,7 +47,7 @@ jobs:
       #   id: ipfs_pdf
       #   uses: aquiladev/ipfs-action@v0.1.4
       #   with:
-      #     path: ./website/static/polkadot-wiki.pdf
+      #     path: ./polkadot-wiki/static/polkadot-wiki.pdf
       #     timeout: 120000
 
       # - name: Inject
@@ -58,7 +58,7 @@ jobs:
       # - name: Upload to IPFS
       #   uses: aquiladev/ipfs-action@v0.1.4
       #   with:
-      #     path: ./website/build/polkadot-wiki
+      #     path: ./polkadot-wiki/build/polkadot-wiki
       #     timeout: 120000
 
       - name: Publish
@@ -66,7 +66,7 @@ jobs:
           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
           git config --global user.name "Polkadot Wiki CI"
           echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
-          yarn && yarn polkadot:build && echo "staging.polkadot.network" > website-v2/static/CNAME && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=polkadot-wiki-staging yarn run polkadot:publish-gh-pages
+          yarn && yarn polkadot:build && echo "staging.polkadot.network" > polkadot-wiki/static/CNAME && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=polkadot-wiki-staging yarn run polkadot:publish-gh-pages
 
           # setup ipfs cluster tools
           wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.0/ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
@@ -74,4 +74,4 @@ jobs:
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
 
-          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./website-v2/build --pinName polkadot-wiki-staging
+          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./polkadot-wiki/build --pinName polkadot-wiki-staging

@@ -14,7 +14,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
-          
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Publish
         run: |
           git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
@@ -28,4 +31,4 @@ jobs:
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
 
-          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./website-v2/build --pinName polkadot-wiki
+          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./polkadot-wiki/build --pinName polkadot-wiki

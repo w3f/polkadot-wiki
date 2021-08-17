@@ -1,0 +1,60 @@
+module.exports = {
+  docs: [
+    {
+      type: "category",
+      label: "Kusama",
+      items: [
+        "general/kusama/kusama-index",
+        {
+          type: "category",
+          label: "Get Started",
+          items: [
+            "general/kusama/kusama-getting-started",
+            "general/kusama/kusama-faucet",
+            "general/kusama/kusama-claims",
+            "general/kusama/kusama-endpoints",
+            "learn/learn-balance-transfers",
+            "learn/learn-auction",
+            "learn/learn-parachains",
+            "learn/learn-parathreads",
+            "learn/learn-crowdloans",
+            "general/thousand-validators",
+          ],
+        },
+        {
+          type: "category",
+          label: "What to Try",
+          items: [
+            "maintain/kusama/maintain-guides-how-to-validate-kusama",
+            "maintain/maintain-guides-how-to-stop-validating",
+            "maintain/kusama/maintain-guides-how-to-nominate-kusama",
+            "learn/learn-governance",
+            "learn/learn-identity",
+            "learn/learn-treasury",
+            "learn/learn-registrar",
+            "build/build-build-with-polkadot",
+            "build/build-parachains-rococo",
+            "maintain/kusama/maintain-guides-society-kusama",
+            "general/kusama/kusama-social-recovery",
+          ],
+        },
+        {
+          type: "category",
+          label: "What to Break",
+          items: [
+            "maintain/maintain-errors",
+            "general/kusama/kusama-bug-bounty",
+            "general/kusama/kusama-adversarial-cheatsheet",
+          ],
+        },
+        "general/ens",
+        "general/kusama/kusama-ledger",
+        "general/kusama/kusama-statemine-ledger",
+        "general/kusama/kusama-timeline",
+        "general/kusama/kusama-community",
+        "general/kusama/kusama-parameters",
+        "general/kusama/kusama-coc",
+      ],
+    },
+  ],
+};
