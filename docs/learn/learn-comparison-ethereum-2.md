@@ -37,7 +37,7 @@ Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operati
 legacy Ethereum 1.0 chain:
 - **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing 
   proof-of-stake consensus, eventually among many shards. 
-- **Phase 1** launchs 64 shards as simple chains, to test the Beacon Chain's finality. Each shard 
+- **Phase 1** launches 64 shards as simple chains, to test the Beacon Chain's finality. Each shard 
   submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data. 
 - **Phase 1.5** integrates Eth 1 as a shard to finalize the proof-of-work chain's blocks. 
 - **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system 
