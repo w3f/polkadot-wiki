@@ -41,7 +41,7 @@ legacy Ethereum 1.0 chain:
   submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data. 
 - **Phase 1.5** integrates Eth 1 as a shard to finalize the proof-of-work chain's blocks. 
 - **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system 
-  usable to end users. [1]
+  usable to end-users. [1]
 
 After the launch of the Beacon Chain in phase 0, the roadmap was altered to prioritize the 
 transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum 2.0's Proof-of-Stake 
