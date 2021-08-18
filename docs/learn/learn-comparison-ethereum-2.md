@@ -33,11 +33,19 @@ Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Be
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
 shard in Ethereum 2 is simply a blockchain with the Ethereum Wasm (eWasm) interface.
 
-Ethereum 2.0 launched Phase 0 on 1 December 2020 with just a Beacon Chain. In Phase 1, it will
-launch 64 shards as simple chains to test the Beacon Chain's finality. Each shard submits
-"crosslinks" to the Beacon Chain, which contains the information to finalize shard data. It will
-also "fold in" Eth 1 in that it will finalize the proof-of-work chain's blocks. Later, in Phase 2,
-the shards will implement the eWasm interface, finally making the system usable to end users. [1]
+Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operating in parallel to the 
+legacy Ethereum 1.0 chain:
+- **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing 
+  proof-of-stake consensus, eventually among many shards. 
+- **Phase 1** launches 64 shards as simple chains, to test the Beacon Chain's finality. Each shard 
+  submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data. 
+- **Phase 1.5** integrates Eth 1 as a shard to finalize the proof-of-work chain's blocks. 
+- **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system 
+  usable to end-users. [1]
+
+After the launch of the Beacon Chain in phase 0, the roadmap was altered to prioritize the 
+transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum 2.0's Proof-of-Stake 
+consensus, preceding the rollout of shards on the network. [2]
 
 The network will also have "side chains" to interact with chains that are not under the finality
 protocol of Ethereum 2.0.
@@ -72,7 +80,7 @@ There are two main differences between Ethereum 2.0 and Polkadot consensus:
 1. Ethereum 2.0 finalizes batches of blocks according to periods of time called "epochs". The
    current plan is to have 32 blocks per epoch, and finalize them all in one round. With a predicted
    block time of 12 seconds, this means the expected time to finality is 6 minutes (12 minutes
-   maximum). [2] Polkadot's finality protocol, GRANDPA, finalizes batches of blocks based on
+   maximum). [3] Polkadot's finality protocol, GRANDPA, finalizes batches of blocks based on
    availability and validity checks that happen as the proposed chain grows. The time to finality
    varies with the number of checks that need to be performed (and invalidity reports cause the
    protocol to require extra checks). The expected time to finality is 12-60 seconds.
@@ -92,7 +100,7 @@ These validators get assigned to "committees", which are randomly selected group
 in the network. Ethereum 2.0 relies on having a large validator set to provide availability and
 validity guarantees: They need at least 111 validators per shard to run the network and 256
 validators per shard to finalize all shards within one epoch. With 64 shards, that's 16_384
-validators (given 256 validators per shard). [3][4]
+validators (given 256 validators per shard). [4][5]
 
 Polkadot can provide strong finality and availability guarantees with much fewer validators.
 Polkadot uses [Nominated Proof of Stake (NPoS)](learn-staking.md) to select validators from a
@@ -103,11 +111,10 @@ parachain in the network.
 
 ## Shards
 
-Every shard in Ethereum 2.0 has the same STF. During phase 1 (expected 2021 [5]), the shards will be
-simple data containers that provide crosslinks to the Beacon Chain. In phase 2 (expected 2023), they
-will implement the eWasm execution environment. EWasm is a restricted subset of Wasm for contracts
-in Ethereum. The eWasm interface provides a set of methods available to contracts. There should be a
-similar set of development tools like Truffle and Ganache to develop for eWasm. [6]
+Every shard in Ethereum 2.0 has the same STF. Each shards will submit "crosslinks" to the beacon chain
+and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for contracts in 
+Ethereum. The eWasm interface provides a set of methods available to contracts. There should be a 
+similar set of development tools like Truffle and Ganache to develop for eWasm. [7]
 
 Every shard in Polkadot has an abstract STF based on Wasm. Each shard can expose a custom interface,
 as long as the logic compiles to Wasm and the shard provides an "execute block" function to Polkadot
@@ -119,7 +126,7 @@ with a suite of modules that can be configured, composed, and extended to develo
 Shards in Ethereum 2.0 will have access to each other's state via their crosslinks and state proofs.
 In the model of Ethereum 2.0 with 64 shards, each one posts a crosslink in the Beacon Chain for
 every block, [4] meaning that shards could contain logic that executes based on some light client
-proof of a transaction on another shard. [7] Ethereum 2.0 has not released a specification for which
+proof of a transaction on another shard. [8] Ethereum 2.0 has not released a specification for which
 nodes pass messages between shards.
 
 Polkadot uses [Cross-Chain Message Passing (XCMP)](learn-crosschain.md) for parachains to send
@@ -138,7 +145,7 @@ interpretation by the receiving chain.
 
 Ethereum 2.0 governance is still unresolved. Ethereum currently uses off-chain governance procedures
 like Github discussions, All Core Devs calls, and Ethereum Magicians to make decisions about the
-protocol. [8]
+protocol. [9]
 
 Polkadot uses on-chain [governance](learn-governance.md) with a multicameral system. There are
 several avenues to issue proposals, e.g. from the on-chain Council, the Technical Committee, or from
@@ -171,10 +178,11 @@ strong availability and validity guarantees with a smaller number of validators 
 ## References
 
 1. [Ethereum 2.0 Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/)
-2. [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
-3. [Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
-4. [Buterin, Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS)
-5. [Messari Crypto Theses for 2020](https://messari.io/report/crypto-theses-for-2020)
-6. [eWasm Design](https://github.com/ewasm/design)
-7. [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
-8. [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
+2. [Ethereum 2.0 Merge](https://ethereum.org/en/eth2/merge/)
+3. [Ethereum 2 Block Time](https://github.com/ethereum/eth2.0-specs/blob/676e216/specs/phase0/beacon-chain.md#time-parameters)
+4. [Ethereum 2.0 Economics](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-economics/)
+5. [Buterin, Eth2 shard chain simplification proposal](https://notes.ethereum.org/@vbuterin/HkiULaluS)
+6. [Messari Crypto Theses for 2020](https://messari.io/report/crypto-theses-for-2020)
+7. [eWasm Design](https://github.com/ewasm/design)
+8. [Sharding FAQ](https://github.com/ethereum/wiki/wiki/Sharding-FAQ#how-would-synchronous-cross-shard-messages-work)
+9. [Ethereum Governance Compendium](https://github.com/ethereum/wiki/wiki/Governance-compendium)
