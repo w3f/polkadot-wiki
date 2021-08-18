@@ -62,7 +62,7 @@ Use the style guide from the
 Use [pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
 as a pre-commit formatting tool.
 
-There is an automatic `pretty-quick` check that occurs pre-commit to format 
+There is an automatic `pretty-quick` check that occurs pre-commit to format
 your changed/staged files.
 
 To format markdown pages, run the following in the `docs` folder:
@@ -107,6 +107,14 @@ one shown above.
 The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
 The Kusama wiki is also deployed to GitHub Pages (via a separate repository).
 
+Development servers exist at `https://staging.polkadot.network` and `https://staging.kusama.network`.
+The servers will reflect the latest `master` commit or PR put up against the master branch by a member of the Technical Education team.
+When the latest `master` is ready to be pushed to production, merge/rebase `master` into `prod` and push. CICD will deploy `prod` to
+`https://wiki.polkadot.network` and `https://guide.kusama.network`, respectively.
+
+When merging `master` to `prod`, you should not see anything other than a [fast-forward](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
+If it gives you an error or generates a merge commit, you probably have a commit directly on `prod` that should not be there.
+
 ### Mirror Pages
 
 A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
@@ -143,7 +151,7 @@ burned. :kusama }}
 ```
 
 To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
-`kusama:inject`, respectively. 
+`kusama:inject`, respectively.
 Inspect the built files in the corresponding `build` folder under `website` or
 `kusama-guide`.
 
