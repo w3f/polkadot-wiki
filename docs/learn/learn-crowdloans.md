@@ -78,7 +78,7 @@ Many projects will have dashboards available that allow users to participate in 
 PolkadotJS apps also offers a breakdown of ongoing crowdloans on the
 [Apps page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan).
 
-Here is an exmaple of the crowdloans in play during the very first Kusama auction.
+Here is an example of the crowdloans in play during the very first Kusama auction.
 
 ![crowdloan dashboard](../assets/kusama-crowdloans.png)
 
