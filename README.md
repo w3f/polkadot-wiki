@@ -112,7 +112,6 @@ The servers will reflect the latest `master` commit or PR put up against the mas
 When the latest `master` is ready to be pushed to production, merge/rebase `master` into `prod` and push. CICD will deploy `prod` to
 `https://wiki.polkadot.network` and `https://guide.kusama.network`, respectively.
 
-When merging `master` to `prod`, you should not see anything other than a [fast-forward](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
 ### Mirror Pages
 
