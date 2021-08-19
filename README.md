@@ -109,7 +109,7 @@ The Kusama wiki is also deployed to GitHub Pages (via a separate repository).
 
 Development servers exist at `https://staging.polkadot.network` and `https://staging.kusama.network`.
 The servers will reflect the latest `master` commit or PR put up against the master branch by a member of the Technical Education team.
-When the latest `master` is ready to be pushed to production, merge/rebase `master` into `prod` and push. CICD will deploy `prod` to
+The latest version of `master` is staged and checked by the team. If all is well, the new commits on `master` are transferred into the production branch,`prod`, by rebasing `master` on `prod`. The CICD production workflow will deploy `prod` to the public sites:
 [Polkadot Wiki](https://wiki.polkadot.network) and [Kusama Guide](https://guide.kusama.network), respectively.
 
 
