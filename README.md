@@ -113,7 +113,6 @@ When the latest `master` is ready to be pushed to production, merge/rebase `mast
 `https://wiki.polkadot.network` and `https://guide.kusama.network`, respectively.
 
 When merging `master` to `prod`, you should not see anything other than a [fast-forward](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
-If it gives you an error or generates a merge commit, you probably have a commit directly on `prod` that should not be there.
 
 ### Mirror Pages
 
