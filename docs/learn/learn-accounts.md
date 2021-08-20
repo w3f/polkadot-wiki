@@ -30,7 +30,7 @@ different representations of the same public key in a private-public keypair** g
 address generation tool. This makes the addresses compatible across Substrate-based chains as long
 as you convert the format.
 
-As of runtime 28 on Polkadot/Kusama, the current default address format in the Polkadot/Kusama and Substrate master is the `MultiAddress`(https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/multiaddress.rs) type. This `enum` is a multi-format address wrapper for on-chain accounts and allows us to desribe Polkadot's default address format to represent many different address types. This includes 20 byte, 32 byte, and arbitrary raw byte variants. It also allows an enhancement to the original `Indices`(https://wiki.polkadot.network/docs/learn-accounts#indices) look up.
+As of runtime 28 on Polkadot/Kusama, the current default address format in the Polkadot/Kusama and Substrate master is the [`MultiAddress`](https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/multiaddress.rs) type. This `enum` is a multi-format address wrapper for on-chain accounts and allows us to desribe Polkadot's default address format to represent many different address types. This includes 20 byte, 32 byte, and arbitrary raw byte variants. It also allows an enhancement to the original [`Indices`](https://wiki.polkadot.network/docs/learn-accounts#indices) look up.
 
 > Many wallets allow you to convert between formats. Stand-alone tools exist as well, you can find
 > them in the [address coversion tools](#address-conversion-tools) section.
