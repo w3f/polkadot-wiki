@@ -51,6 +51,8 @@ guides to set up a node and run the network.
 - [How to Chill](maintain-guides-how-to-chill.md) - Walkthrough on how to chill as a validator.
 - [How to Stop Validating](maintain-guides-how-to-stop-validating.md) - Proper way to stop
   validating.
+- [Community Building](maintain-guides-validator-community.md) - How to build a Nominator Community
+  and attract nominations.
 
 ## Governance
 
