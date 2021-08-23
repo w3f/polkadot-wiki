@@ -30,6 +30,8 @@ different representations of the same public key in a private-public keypair** g
 address generation tool. This makes the addresses compatible across Substrate-based chains as long
 as you convert the format.
 
+As of Runtime 28, the default [address format](learn-accounts.md##address-format) is the [`MultiAddress`](https://github.com/paritytech/substrate/blob/master/primitives/runtime/src/multiaddress.rs) type. This `enum` is a multi-format address wrapper for on-chain accounts and allows us to describe Polkadot's default address format to represent many different address types. This includes 20 byte, 32 byte, and arbitrary raw byte variants. It also allows an enhancement to the original [`indices`](learn-accounts.md##indices) look up.
+
 > Many wallets allow you to convert between formats. Stand-alone tools exist as well, you can find
 > them in the [address coversion tools](#address-conversion-tools) section.
 
@@ -544,7 +546,8 @@ released the multisig transaction deposit.
 
 You can use the tools below to convert any SS58 address for any network for use on different
 networks
-- [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform) 
+
+- [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform)
 - [simple address convertor](https://polkadot-address-convertor.netlify.app/)
 
 ### How to Verify a Public Key's Associated Address
