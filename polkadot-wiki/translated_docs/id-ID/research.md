@@ -14,7 +14,7 @@ The following papers and articles may be of special interest for those intereste
 - [Intro to Nominated Proof of Stake](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) - A description of the NPoS scheme which selects which validators are allowed to participate in the consensus protocol of Polkadot. Author: Alfonso Cevallos
 - [GRANDPA: A Byzantine Finality Gadget](https://arxiv.org/abs/2007.01560) - GHOST-based Recursive Ancestor Deriving Prefix Agreement, Polkadot's finality gadget. Authors: Alistair Stewart and Lefteris Kokoris Kogias
 - [A Verifiably Secure and Proportional Committee Election Rule](https://arxiv.org/abs/2004.12990) - Validator Election in Nominated Proof of Stake. Authors: Alfonso Cevallos and Alistair Stewart
-- [Network Time with a Consensus on Clock](https://arxiv.org/abs/2007.01560) - Consensus on Clock in Universally Composable Timing. Author: Handan Kılınç Alper
+- [Network Time with a Consensus on Clock](https://eprint.iacr.org/2019/1348.pdf) - Consensus on Clock in Universally Composable Timing. Author: Handan Kılınç Alper
 - [Delay Encryption](https://eprint.iacr.org/2020/638) - Delay Encryption can roughly be described as “identity based encryption with slow derived private key issuance”. Authors: Jeff Burdges and Luca de Feo
 
 ## Research Blogs
