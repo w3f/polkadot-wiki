@@ -60,7 +60,7 @@ corresponding field in their identity so nominators can find it easily.
 ## Transparency & Establishing Trust
 
 Considering the risks involved for both Validators and Nominators, establishing trust is one of the
-most important factors in building up validator services.
+most important factors in running quality validator services.
 
 ### Self Stake
 
