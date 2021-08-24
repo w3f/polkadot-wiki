@@ -69,7 +69,7 @@ function HomeNav() {
           </Translate>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("build/build-index")} aosDelay="200">
+      <NavItem href={useDocUrl("build-index")} aosDelay="200">
         <NavItemTitle>
           <Translate
             id="homePage.navContainer.build.title"
@@ -88,7 +88,7 @@ function HomeNav() {
           </Translate>
         </NavItemContent>
       </NavItem>
-      <NavItem href={useDocUrl("maintain/maintain-index")} aosDelay="400">
+      <NavItem href={useDocUrl("maintain-index")} aosDelay="400">
         <NavItemTitle>
           <Translate
             id="homePage.navContainer.maintain.title"
