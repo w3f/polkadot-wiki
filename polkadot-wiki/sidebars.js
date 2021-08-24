@@ -16,7 +16,7 @@ module.exports = {
         "general/glossary",
         "general/ens",
         "general/ledger",
-        "general/scams",
+        "general/learn-scams",
         "general/how-to-dyor",
         "general/doc-thousand-validators",
         "general/faq",
