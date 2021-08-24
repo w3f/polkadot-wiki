@@ -12,7 +12,6 @@ public contact and anyone doing so is likely trying to scam you.
 ## General
 
 - [Kusama Discussion and Governance on Polkassembly](https://kusama.polkassembly.io/)
-- [Kusama forum](https://forum.kusama.network/)
 - [Polkadot GitHub](https://github.com/paritytech/polkadot/) - Parity maintained repository that
   houses the Rust implementation of the Polkadot and Kusama Host.
 - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) -
