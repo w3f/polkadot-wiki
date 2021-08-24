@@ -83,7 +83,7 @@ The idea of Fishermen is that they are full nodes of parachains, like collators,
 
 **Fishermen are not available on Kusama or Polkadot and are not planned for formal implementation, depsite previous proposals in the [AnV protocol](https://w3f-research.readthedocs.io/en/latest/polkadot/Availability_and_Validity.html).**
 
-To address the motivation behind the Fishermen concept, the current secondary backing checkers perform a similar role in relation to the Polkadot network. From a security standpoint, security is based on having at least one honest validator either among parachain validators or secondary checker.
+To address the motivation behind the Fishermen design consideration, the current secondary backing checkers perform a similar role in relation to the Polkadot network. From a security standpoint, security is based on having at least one honest validator either among parachain validators or secondary checker.
 
 ## Further Resources
 
