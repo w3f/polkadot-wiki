@@ -522,6 +522,7 @@ other peers over the network.
 - [Linode](https://www.linode.com/)
 - [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
+- [OnFinality](https://onfinality.io/)
 
 ## Using Docker
 
