@@ -43,7 +43,7 @@ crowdloan is live, **the parachain configuration will be locked** and it will be
 the parachain's runtime. Of course, once the parachain is running it can always change via runtime
 upgrades (as determined through its own local governance).
 
-## Suporting a crowdloan campaign
+## Supporting a crowdloan campaign
 
 Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate
 by sending a special transaction that references the campaign's index. Tokens used to participate
