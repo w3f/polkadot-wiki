@@ -55,7 +55,7 @@ Controller account. Within the Staking pallet, some transactions must come from 
 others must come from the Controller. The Stash account is meant to stay in cold storage, while the
 Controller account makes day-to-day transactions like setting session keys or deciding which
 validators to nominate. The Stash account still needs to make some transactions, though, like
-bonding extra funds or designating a new Controller. A proxy doesn't change the *roles* of Stash and
+bonding extra funds or designating a new Controller. A proxy doesn't change the _roles_ of Stash and
 Controller accounts, but does allow the Stash to be accessed even less frequently.
 
 ### Identity Judgement Proxies
@@ -153,11 +153,43 @@ where you will be able to select the type of proxy for that specific account.
 ### Removing Proxies
 
 If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
-this. The `killAnonymous()` function will let you remove an anonymous proxy. Both the
-`removeProxies()` and the `removeProxy()` will remove any other type of proxy but the former will
-remove all proxies made while the latter will remove one selected proxy.
+this.
 
-![remove proxies](../assets/polkadot_remove_proxy.png)
+For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the `killAnonymous` function for anonymous proxies. This must be called **from** the _anonymous_ proxy. This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
+
+The following steps can be used to remove your proxy:
+
+> WARNING: there is no way to get access to the proxy after deleting it.
+
+- **Step 0**: You need to know the following information:
+
+  - the **account** you created the anonymous proxy from
+  - **type of proxy**, index (almost always 0)
+  - **block height** it was created at
+  - the **extrinsic index** in the block (on most block explorers, you will see the extrinsic ID listed as something along the lines of "9000-2" -> 9000 is the block height (block number) and 2 is the extrinsic index. You can find this information by looking up your account in a block explorer.
+
+  ![anon proxy info](../assets/kill-proxy-1.png)
+
+- **Step 1**: Go to https://polkadot.js.org/apps/#/accounts (make sure you are on correct network).
+- **Step 2**: Click `Proxied` and add your address, name it `ANON PROXY`. You should now see this address
+  in accounts. Now you need to call `killAnonymous` from the anonymous proxy. It is important to note that anonymous proxies _work backwards_; the original account acts as the proxy.
+
+  ![add proxy to delete](../assets/kill-proxy-2.png)
+
+- **Step 3**: Go to https://polkadot.js.org/apps/#/extrinsics
+- **Step 4**: Call extrinsic `proxy.killAnonymous` using the selected account ANON PROXY and the following parameters:
+
+  - Spawner: (original account)
+  - Proxy type (kind of proxy)
+  - Index 0 (almost always, but can be seen in creating extrinsic)
+  - Block number x
+  - Extrinsic index y
+
+  ![call extrinsic](../assets/kill-proxy-3.png)
+
+- **Step 5**: Submit and sign extrinsic
+
+  ![sign extrinsic](../assets/kill-proxy-3.png)
 
 ## How to view your Proxies
 
