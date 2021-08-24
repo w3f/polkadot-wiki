@@ -1,5 +1,5 @@
 ---
-id: thousand-validators
+id: doc-thousand-validators
 title: Thousand Validators Programme
 sidebar_label: Thousand Validators Programme
 slug: ../thousand-validators
@@ -54,12 +54,9 @@ The leaderboard is available at https://thousand-validators.kusama.network/#/lea
 The below addresses are the stash / controller pairs for the nominators involved in the Kusama
 Thousand Validators programme. They are formatted like "`stash` / `controller`".
 
-- `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` /
-  `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq`
-- `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` /
-  `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ`
-- `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` /
-  `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V`
+- `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `H9BFvNPTqDEmWZ63M82ohrFmvEFASm25ErUMzmXDrbAr1kq`
+- `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `H4UgNEEN92YXz96AyQgwkJQSpXGdptYLkj9jXVKrNXjQHRJ`
+- `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `H54GA3nq3xeNrdbHkepAufSPMjaCxxkmfej4PosqD84bY3V`
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
@@ -69,7 +66,7 @@ can be anywhere from a few validators receiving nomination from a single nominat
 
 ### Polkadot
 
-> Note: Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.
+> NOTE: Entrance to the Polkadot programme requires a rank of 25 or higher in the Kusama programme.
 > This usually takes about a month.
 
 In order to apply to the Polkadot programme, set up your node to adhere to the requirements below
@@ -92,12 +89,9 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 The below addresses are the stash / controller pairs for the nominators involved in the Polkadot
 Thousand Validators programme. They are formatted like "`stash` / `controller`".
 
-- `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` /
-  `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw`
-- `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` /
-  `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU`
-- `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` /
-  `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd`
+- `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `16XJHQ58dEPnZn5J5YqmRcJmKtvVFFMoMrXgj6fWJfeGGkQw`
+- `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `13GLXK1TZKKDM9aRBBK3VYZymHjKChtQjJznsRqaR9dwwrQU`
+- `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `16eM1npMwKzpGy48NDna1jC6P71S783wjpbdeKT8RgzQx8Jd`
 
 A time delay proxy is used as the main interaction method for all of these accounts.
 

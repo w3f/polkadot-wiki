@@ -18,7 +18,7 @@ module.exports = {
             "learn/learn-parachains",
             "learn/learn-parathreads",
             "learn/learn-crowdloans",
-            "general/thousand-validators",
+            "general/doc-thousand-validators",
           ],
         },
         {
