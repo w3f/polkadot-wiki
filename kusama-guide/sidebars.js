@@ -36,6 +36,7 @@ module.exports = {
             "build/build-parachains-rococo",
             "maintain/kusama/maintain-guides-society-kusama",
             "general/kusama/kusama-social-recovery",
+            "maintain-guides-validator-community",
           ],
         },
         {
