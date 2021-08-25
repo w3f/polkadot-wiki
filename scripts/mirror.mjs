@@ -39,6 +39,7 @@ const mirrored_build = ["build-build-with-polkadot", "build-parachains-rococo"];
 const mirrored_maintain = [
   "maintain-guides-how-to-stop-validating",
   "maintain-errors",
+  "maintain-guides-validator-community",
 ];
 
 const mirrored_maintain_kusama = [
