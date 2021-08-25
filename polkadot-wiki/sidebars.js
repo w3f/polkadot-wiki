@@ -179,7 +179,7 @@ module.exports = {
             "maintain/maintain-guides-how-to-monitor-your-node",
             "maintain/maintain-guides-how-to-chill",
             "maintain/maintain-guides-how-to-stop-validating",
-            "maintain/maintain-guides-validator-community",
+            "maintain/doc-maintain-guides-validator-community",
           ],
         },
         {

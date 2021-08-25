@@ -1,5 +1,5 @@
 ---
-id: maintain-guides-validator-community
+id: doc-maintain-guides-validator-community
 title: Validator Community Overview
 sidebar_label: Validator Community Overview
 slug: ../maintain-guides-validator-community
