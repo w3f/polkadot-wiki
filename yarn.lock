@@ -5824,17 +5824,17 @@ ipfs-core-types@^0.7.0:
     multiaddr "^10.0.0"
     multiformats "^9.4.1"
 
-ipfs-core-utils@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.10.1.tgz#d28d68d7fe663283c3ab613d6c1d60daaf64cf59"
-  integrity sha512-p9Jhz9kKRY7y9Ond4j8JIssuvKNsO/vNeL0v2+AV2tPZRuYtcgdNhZFeixPL5GnTyFGr7M4KAgqNtiZrt+KG/w==
+ipfs-core-utils@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.10.2.tgz#30ec189ebef319722269575c2a7eed49cfa979c5"
+  integrity sha512-xyTqw9epOJZsa2opFp9L+7Ul/xRmWnqT8uiFW51O40jXNo95MLPgZJAOH4W5FgOR/ckpHHse+Yvqab+2YXsH3A==
   dependencies:
     any-signal "^2.1.2"
     blob-to-it "^1.0.1"
     browser-readablestream-to-it "^1.0.1"
     err-code "^3.0.1"
     ipfs-core-types "^0.7.0"
-    ipfs-unixfs "^5.0.0"
+    ipfs-unixfs "^6.0.3"
     ipfs-utils "^8.1.4"
     it-all "^1.0.4"
     it-map "^1.0.4"
@@ -5844,12 +5844,12 @@ ipfs-core-utils@^0.10.1:
     multiformats "^9.4.1"
     parse-duration "^1.0.0"
     timeout-abort-controller "^1.1.1"
-    uint8arrays "^2.1.6"
+    uint8arrays "^3.0.0"
 
-ipfs-http-client@^52.0.1:
-  version "52.0.1"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-52.0.1.tgz#a45bac51aaca02316accbf0ebfb8abed1df1fd8f"
-  integrity sha512-ZaTVIaidxbzDKyVT9S+XC2pvCEq/m1QV94vZD544hVcElpUt5ZQHIKSLmEo454R2wEeXGTp0N99oagFuzQVGZQ==
+ipfs-http-client@^52.0.2:
+  version "52.0.2"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-52.0.2.tgz#29345d95680deb6df40a4fb7a7616b54b8f9906b"
+  integrity sha512-KdtKqGxu3AvfrButz1RVTwcaAgk09ageelQeEFDjknNIZYmOHi1TdC2r2rnf9sbPuyPqM20OTVtsXb/OSc0iYg==
   dependencies:
     "@ipld/dag-cbor" "^6.0.5"
     "@ipld/dag-pb" "^2.1.3"
@@ -5859,7 +5859,7 @@ ipfs-http-client@^52.0.1:
     err-code "^3.0.1"
     form-data "^4.0.0"
     ipfs-core-types "^0.7.0"
-    ipfs-core-utils "^0.10.1"
+    ipfs-core-utils "^0.10.2"
     ipfs-utils "^8.1.4"
     it-first "^1.0.6"
     it-last "^1.0.4"
@@ -5871,12 +5871,12 @@ ipfs-http-client@^52.0.1:
     native-abort-controller "^1.0.3"
     parse-duration "^1.0.0"
     stream-to-it "^0.2.2"
-    uint8arrays "^2.1.6"
+    uint8arrays "^3.0.0"
 
-ipfs-unixfs@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ipfs-unixfs/-/ipfs-unixfs-5.0.0.tgz#f4019050a9c1722615edae9e9ef91a5383f0123b"
-  integrity sha512-6FpBtsxB/9R7o7LGmSMaIoYkWO/cK+JYcj22QYIZaiA5dlk28Dvqme18bA43A7UKEc0M8I7mwD92ZXrlhJ/C7Q==
+ipfs-unixfs@^6.0.3:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/ipfs-unixfs/-/ipfs-unixfs-6.0.4.tgz#9630ba6c3171dc03d4dce6f5b15636901065b259"
+  integrity sha512-5ARPcTtDGgFK6jPYWAitgDTxIjEcrqz3+ReIPuFZCcekglt2jS8osoZYSLNtpGDtjGevQtaJAgce+BQDY3ymBA==
   dependencies:
     err-code "^3.0.1"
     protobufjs "^6.10.2"
@@ -9897,10 +9897,17 @@ ua-parser-js@^0.7.18:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
   integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
-uint8arrays@^2.1.3, uint8arrays@^2.1.5, uint8arrays@^2.1.6:
+uint8arrays@^2.1.3, uint8arrays@^2.1.5:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/uint8arrays/-/uint8arrays-2.1.8.tgz#79394390ba93c7d858ce5703705dcf9012f0c9d4"
   integrity sha512-qpZ/B88mSea11W3LvoimtnGWIC2i3gGuXby5wBkn8jY+OFulbaQwyjpOYSyrASqgcNEvKdAkLiOwiUt5cPSdcQ==
+  dependencies:
+    multiformats "^9.4.2"
+
+uint8arrays@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/uint8arrays/-/uint8arrays-3.0.0.tgz#260869efb8422418b6f04e3fac73a3908175c63b"
+  integrity sha512-HRCx0q6O9Bfbp+HHSfQQKD7wU70+lydKVt4EghkdOvlK/NlrF90z+eXV34mUd48rNvVJXwkrMSPpCATkct8fJA==
   dependencies:
     multiformats "^9.4.2"
 
