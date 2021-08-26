@@ -11,7 +11,7 @@ address. The public and private parts together make up a Polkadot account.
 
 There are several ways to generate a Polkadot account:
 
-- [Polkadot{.js} Browser Plugin](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
+- [Polkadot{.js} Browser Extenstion](#polkadotjs-browser-plugin) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
 - [Polkadot-JS Apps](#polkadot-js-apps)
 - [Parity Signer](#parity-signer)
@@ -64,9 +64,9 @@ it. Do not use easy to guess or hard to remember passwords. It is good practice 
 computers to guess due to the number of combinations possible, but much easier for humans to
 remember.
 
-## Polkadot{.js} Browser Plugin
+## Polkadot{.js} Browser Extension
 
-The Polkadot{.js} plugin provides a reasonable balance of security and usability. It provides a
+The Polkadot{.js} Extension provides a reasonable balance of security and usability. It provides a
 separate local mechanism to generate your address and interact with Polkadot.
 
 This method involves installing the Polkadot{.js} plugin and using it as a “virtual vault," separate
@@ -76,9 +76,9 @@ functionality.
 It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
 
-### Install the Browser Plugin
+### Install the Browser Extension
 
-The browser plugin is available for both
+The browser extension is available for both
 [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en)
 (and Chromium-based browsers like Brave) and
 [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension).
