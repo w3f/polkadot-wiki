@@ -141,9 +141,9 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards.
 
-In Polkadot and Kusama, this limit is currently {{ polkadot_max_nominators }}, although this can be
-modified via runtime upgrade. A validator with more than {{ polkadot_max_nominators }} nominators is
-_oversubscribed_. When payouts occur, only the top {{ polkadot_max_nominators }} nominators as
+In Polkadot and Kusama, this limit is currently {{ polkadot\_max\_nominators }}, although this can be
+modified via runtime upgrade. A validator with more than {{ polkadot\_max\_nominators }} nominators is
+_oversubscribed_. When payouts occur, only the top {{ polkadot\_max\_nominators }} nominators as
 measured by amount of stake allocated to that validator will receive rewards. All other nominators
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
