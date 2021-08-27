@@ -44,7 +44,7 @@
     "@crowdin/cli": "^3.6.5",
     "@docusaurus/core": "^2.0.0-beta.4",
     "@docusaurus/module-type-aliases": "^2.0.0-beta.5",
-    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.4",
+    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.5",
     "@docusaurus/preset-classic": "^2.0.0-beta.4",
     "@octokit/rest": "^18.9.1",
     "@polkadot/api": "^5.6.1",
@@ -70,7 +70,7 @@
     "yargs": "^17.1.1"
   },
   "dependencies": {
-    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.4",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.5",
     "remark-docusaurus-tabs": "^0.1.0",
     "replace-in-file": "^6.2.0"
   },
