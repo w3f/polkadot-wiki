@@ -6,7 +6,7 @@ description: An explanation of the consensus model used in Polkadot and Kusama
 slug: ../learn-consensus
 ---
 
-## Why do we need consensus?
+## Why do we need Consensus?
 
 Consensus is a method for coming to agreement over a shared state. In order for the state of the
 blockchain to continue to build and move forward, all nodes in the network must agree and come to
@@ -50,7 +50,7 @@ Validators assume the role of producing new blocks in [BABE](learn-consensus.md/
 parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
 their stake. Nominators can approve candidates that they trust and back them with their tokens.
 
-## Probabilistic vs. provable finality
+## Probabilistic vs. Provable Finality
 
 A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of
 _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under
@@ -70,9 +70,7 @@ in this way:
 > We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
 > participants after some unspecified time.
 
-## What is GRANDPA/BABE?
-
-### Hybrid Consensus
+# Hybrid Consensus
 
 There are two protocols we use when we talk about the consensus protocol of Polkadot, GRANDPA and
 BABE (Blind Assignment for Blockchain Extension). We talk about both of these because Polkadot uses
@@ -91,7 +89,7 @@ Hybrid consensus has been proposed in the past. Notably, it was proposed (now de
 Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
 specified [Casper FFG](#casper-ffg).
 
-### BABE
+## Block Production: BABE
 
 BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
@@ -104,7 +102,7 @@ not they are the block producer candidate for that slot. Slots are discrete unit
 6 seconds in length. Because of this randomness mechanism, multiple validators could be candidates
 for the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
 
-#### Multiple Validators per Slot
+### Multiple Validators per Slot
 
 When multiple validators are block producer candidates in a given slot, all will produce a block and
 broadcast it to the network. At that point, it's a race. The validator whose block reaches most of
@@ -112,7 +110,7 @@ the network first wins. Depending on network topology and latency, both chains w
 build in some capacity, until finalization kicks in and amputates a fork. See Fork Choice below for
 how that works.
 
-#### No Validators in Slot
+### No Validators in Slot
 
 When no validators have rolled low enough in the randomness lottery to qualify for block production,
 a slot can remain seemingly blockless. We avoid this by running a secondary, round-robin style
@@ -124,7 +122,14 @@ either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 For more details on BABE, please see the
 [BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
 
-### GRANDPA: Finality gadget
+### BADASS BABE: SASSAFRAS
+
+BADASS BABE is an extention of BABE and acts as a constant-time block production protocol.
+This approach tries to address the shortcomings of BABE by ensuring that exactly one
+block is produced with time-constant intervals. The protocol utiliies zk-SNARKs to construct a
+ring-VRF and is a work in progres. This section will be updated as progress progresses.
+
+## Finality Gadget: GRANDPA
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
 implemented for the Polkadot Relay Chain.
@@ -139,18 +144,18 @@ failures.
 In other words, as soon as more than 2/3 of validators attest to a chain containing a certain block,
 all blocks leading up to that one are finalized at once.
 
-#### Protocol
+### Protocol
 
 Please refer to [the GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)
 for a full description of the protocol.
 
-#### Implementation
+### Implementation
 
 The
 [Substrate implementation of GRANDPA](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs)
 is part of Substrate Frame.
 
-### Fork Choice
+## Fork Choice
 
 Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always
 build on the chain that has been finalized by GRANDPA. When there are forks after the finalized
@@ -163,9 +168,9 @@ with a "1" are primary blocks; those marked with a "2" are secondary blocks. Eve
 chain is the longest chain on the latest finalized block, it does not qualify because it has fewer
 primaries at the time of evaluation than the one below it.
 
-## Comparisons
+# Comparisons
 
-### Nakamoto consensus
+## Nakamoto consensus
 
 Nakamoto consensus consists of the longest chain rule using proof of work as its sybil resistance
 mechanism and leader election.
@@ -180,12 +185,12 @@ computational resources to create a chain that did not contain a specific block.
 situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to
 this new chain as the canonical one.
 
-### PBFT / Tendermint
+## PBFT / Tendermint
 
 Please see the [relevant section](learn-comparisons-cosmos.md#consensus) in the Cosmos comparison
 article.
 
-### Casper FFG
+## Casper FFG
 
 The two main differences between GRANDPA and Casper FFG are:
 
@@ -193,7 +198,7 @@ The two main differences between GRANDPA and Casper FFG are:
 - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block
   production mechanism
 
-## Resources
+# Resources
 
 - [BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html) - The
   academic description of the BABE protocol.
