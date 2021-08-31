@@ -57,8 +57,24 @@ is likely to be lower than on Polkadot.
 
 Polkadot is and always will be the primary network for the deployment of enterprise-level
 applications and those that entail high-value transactions requiring bank-level security and
-stability. The initial use case for Kusama is as a pre-production environment, a “canary network”.
-Building on Kusama first allows teams to test things out in a live, fully decentralized, and
+stability.
+
+The initial use case for Kusama is as a pre-production environment, a “canary network”.
+For the average developer, this seems like it could be a testnet, what is the difference?
+What does _canary_ even mean?
+
+Canary is a type of bird: back in the day, coal miners would put canaries into coal mines as a way to measure the amount of toxic gases that were present. Similarly, canary testing is a way to validate software by releasing software to a limited number of users, or perhaps, an isolated environment - without hurting any birds.
+
+Releases made onto Kusama can be thought of [CanaryReleases](https://martinfowler.com/bliki/CanaryRelease.html).
+These releases are usually staged. In Kusama's early days, the network won't just be used for parachain candidates to innovate and test changes, but a proof of concept for Polkadot's sharded model.
+
+In a typical blockchain development pipeline, Kusama would sit in between a "testnet" and a "mainnet"
+
+```
+Testnet -> Kusama -> Polkadot
+```
+
+As you can imagine, building on Kusama first allows teams to test things out in a live, fully decentralized, and
 community-controlled network with real-world conditions and lower stakes in the event of problems or
 bugs than on Polkadot.
 
