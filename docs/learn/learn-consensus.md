@@ -35,6 +35,21 @@ Although simple and effective in coming to a decentralized consensus on the next
 proof of work with Nakamoto consensus consumes an incredible amount of energy, has no economic or
 provable finality, and has no effective strategy in resisting cartels.
 
+## Nominated Proof of Stake
+
+In traditional PoS systems, block production participation is dependant on token holdings as opposed to computational power. While PoS developers usually have a proponent for equitable participation in a decentralized manner, most projects end up proposing some level of centralized operation, where the number of validators with full participation rights is limited. These validators are often seen to be the most wealthy, and, as a result, influence the PoS network as they are the most staked. Usually, the number of candidates to maintain the network with the necessary knowledge (and equipment) is limited; this can directly increase operational costs as well. Systems with a large number of validators tend to form pools to decrease the variance of their revenue and profit from economies of scale. These pools are often off-chain.
+
+A way to alleviate this is to implement pool formation on-chain and allow token holders to vote [with
+their stake] for validators to represent them.
+
+Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
+is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
+who are interested in maintaining the network can run a validator node.
+
+Validators assume the role of producing new blocks in [BABE](learn-consensus.md/#babe), validating
+parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
+their stake. Nominators can approve candidates that they trust and back them with their tokens.
+
 ## Probabilistic vs. provable finality
 
 A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of

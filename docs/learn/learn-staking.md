@@ -5,16 +5,10 @@ sidebar_label: Staking
 slug: ../learn-staking
 ---
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
-is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
-who are interested in maintaining the network can run a validator node.
-
+Polkadot uses NPoS (Nominated Proof-of-Stake) as its [consensus](learn-consensus.md) mechanism.
 The system encourages DOT holders to participate as nominators. Nominators may back up to 16
-validators as trusted validator candidates.
-
-Validators assume the role of producing new blocks in [BABE](learn-consensus.md/#babe), validating
-parachain blocks, and guaranteeing finality. Nominators can choose to back select validators with
-their stake.
+validators as trusted validator candidates. Both validators and nominators lock their tokens as
+collateral and receive staking rewards.
 
 The staking system pays out rewards essentially equally to all validators regardless of stake.
 Having more stake on a validator does not influence the amount of block rewards it receives.
