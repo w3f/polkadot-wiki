@@ -50,7 +50,9 @@ missed blocks in the sessions directly following
 [block #516558](https://polkascan.io/kusama/block/516558) was significantly higher. This is partly
 what contributes to the much higher ratio of missed blocks on Kusama versus Polkadot today.
 
-## Kusama's Current Adventure
+## Kusama's Current Adventure: Auctions
+
+### Round One
 
 Kusama promised chaos, and it delivered on that promise. On 15th June 2021, the roll out of the
 first public parachain slot auction commenced, marking the beginning of the end to deliver on the
@@ -62,5 +64,17 @@ hard to bring their technologies to life, many of whom started a
 [crowdloan campaign](../../learn/learn-crowdloans.md##starting-a-crowdloan-campaign) in order to participate in
 the slot auctions.
 
-Once parachains are live, the community will determine which additional features and network
-upgrades should be added over time.
+The five Kusama parachain winners were: Karura, Moonriver, Shiden, Khala, and Bifrost.
+
+Kusama made history with a permissionless launch of 5 independent parachains. As parachains become operational, the community will determine which additional features and network upgrades should be added over time.
+
+### Round Two
+
+While Kusama’s first five parachains are taking advantage of the built-in features of the network and forkless upgradability provided by Substrate, chaos continues...
+
+And in the spirit of chaos, more teams are eager to deploy on Kusama.
+The launch of the second batch of parachain slot auctions will officially go live in Septmeber 2021,
+with the sixth parachain slot auction to officially begin on 1st September 2021. Five more slot auctions
+will occur over five weeks with a pause for evaluation of overall network performance before a third batch of five auctions begins in a similar schedule.
+
+The path of Kusama deployment will pave the way to Polkadot's parachains as the technology becomes proven.
