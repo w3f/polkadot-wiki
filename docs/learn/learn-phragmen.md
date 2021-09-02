@@ -47,14 +47,14 @@ A powerful feature of this algorithm is the fact that both its approximation gua
 
 ## Algorithm
 
-The `BalPhragmms` algorithm iterates through the available seats, starting with an empty committee of size _k_:
+The `BalPhragmms` algorithm iterates through the available seats, starting with an empty committee of size `k`:
 
-1. Initialize an empty committee _A_ and a weighted edge vector _w_.
-2. Find the candidate with the highest score _cmax_ and its threshold or max score _tmax_ with `MaxScore(A, w)`.
-3. Optionally, call `Insert(A, w, cmax, tmax)` to return a feasible solution `(A' + c', w')`, where c' is a new, unelected candidate. `Insert` ensures that we avoid increasing the number of validators with support below _tmax_.
-4. Update the partial solution _(A, w)_.
-5. Rebalance by replacing _w_ with a balanced weight vector for _A_.
-6. If there are more seats available, go back to step 2. Otherwise, return the balanced solution _(A, w)_.
+1. Initialize an empty committee `A` and a weighted edge vector `w`.
+2. Find the candidate with the highest score `cmax` and its threshold or max score `tmax` with `MaxScore(A, w)`.
+3. Optionally, call `Insert(A, w, cmax, tmax)` to return a feasible solution `(A' + c', w')`, where c' is a new, unelected candidate. `Insert` ensures that we avoid increasing the number of validators with support below `tmax`.
+4. Update the partial solution `(A, w)`.
+5. Rebalance by replacing `w` with a balanced weight vector for `A`.
+6. If there are more seats available, go back to step 2. Otherwise, return the balanced solution `(A, w)`.
 
 ## Where is the Phragmén method used in Polkadot?
 
