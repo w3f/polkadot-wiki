@@ -22,25 +22,39 @@ of the sequential Phragmén method:
 
 ### BalPhragmms
 
-`BalPhragmms` is a new election rule inspired by Phragmen, and aims to achieve a constant-factor approximation guarantee for the _maximin support objective_ and the closely related _proportional justified representation_ (PJR) property. The maximin support objective is based on maximizing the support of the least-supported elected candidate. The PJR property considers proportionality of the voter’s decision power.
+`BalPhragmms` is a new election rule inspired by Phragmén, and aims to achieve a constant-factor approximation guarantee for the _maximin support objective_ and the closely related _proportional justified representation_ (PJR) property. The maximin support objective is based on maximizing the support of the least-supported elected candidate. The PJR property considers proportionality of the voter’s decision power.
 
 The security of a distributed and decentralized system such as Polkadot is directly related to the goal of avoiding _overrepresentation_ of any minority. This is a stark contrast to classical approaches to proportional representation axioms, which only seek to avoid underrepresentation.
 
-Sequential Phragmen and MMS are two efficient election rules that both achieve PJR.
+Sequential Phragmén and MMS are two efficient election rules that both achieve PJR.
 
-Previously, Polkadot employed the sequential Phragmen (`seqPhragmen`) method for validator and council elections. Although `seqPhramen` is very fast with a runtime of `O(|E| * k)`, it does not provide constant-factor approximation for the maximin support problem.
+Previously, Polkadot employed the sequential Phragmén (`seqPhragmen`) method for validator and council elections. Although `seqPhramen` is very fast with a runtime of `O(|E| * k)`, it does not provide constant-factor approximation for the maximin support problem.
 
 In contrast, `MMS` is another standard greedy algorithm that simultaneously achieves the PJR property and provides a 2-factor approximation for maximin support, although with a considerably slower runtime of `O(Bal * |C| * k)` where Bal is the time complexity of computing a balanced weight vector.
 
 We introduce a new heuristic inspired by `seqPhragmen`, `PhragMMS`, which maintains a comparable runtime to `seqPhragmen` and achieves maximin support and PJR. It is a 3.15-approximation algorithm with a time complexity of `O(Bal * k)`. This is the fastest known algorithm to achieve a constant-factor guarantee for maximin support.
 
-`BalPhragmms` is an iterative greedy algorithm that starts with an empty committee and alternates between the `Phragmms` heuristic for inserting a new candidate and replacing the weight vector with a balanced one. In addition to satisfying the PJR property, it also executes in `O(Bal * k)` time, assuming `Bal = Ω(|E| * log k)`. This can be further improved such that each iteration can be made to run in `O(|E| + Bal)`.
+`BalPhragmms` is an iterative greedy algorithm that starts with an empty committee and alternates between the `Phragmms` heuristic for inserting a new candidate and _rebalancing_ by replacing the weight vector with a balanced one. In addition to satisfying the PJR property, it also executes in `O(Bal * k)` time, assuming `Bal = Ω(|E| * log k)`. This can be further improved such that each iteration can be made to run in `O(|E| + Bal)`.
 
-BalPhragmms pseudocode:
+The computation is executed by off-chain workers privately and separately from block production, and the validators only need to submit and verify the solutions on-chain. Observing on-chain, only one solution needs to be tracked at any given time, and a block producer can submit new solution _(A, w)_ in the block only if the block passes all three of these checks:
 
-TODO
+1. Feasibility
+2. Balancedness (`supp_w(A) > supp_w'(A')`)
+3. Local optimality
+   It _(A, w)_ passes the tests, then it replaces _(A', w')_ as the current tentative winner. The official winning solution is declared at the end of the election window.
 
-The computation is executed by off-chain workers privately and separately from block production, and the validators only need to verify the output on-chain. Testing the feasibility, balancedness, and previous inequality can be done in O(|E|) time with algorithm `MaxPrescore`.
+A powerful feature of this algorithm is the fact that both its approximation guarantee for maxim support and the above checks passing can be efficiently verified. This allows for a more scalable solution for secure and proportional committee elections. `Balphragmms` can be seen as a natural complication of the `seqPhragmen` algorithm, which always grants higher score values to candidates and thus inserting them with higher support values.
+
+## Algorithm
+
+The `BalPhragmms` algorithm iterates through the available seats, starting with an empty committee of size _k_:
+
+1. Initialize an empty committee _A_ and a weighted edge vector _w_.
+2. Find the candidate with the highest score _cmax_ and its threshold or max score _tmax_ with `MaxScore(A, w)`.
+3. Optionally, call `Insert(A, w, cmax, tmax)` to return a feasible solution `(A' + c', w')`, where c' is a new, unelected candidate. `Insert` ensures that we avoid increasing the number of validators with support below _tmax_.
+4. Update the partial solution _(A, w)_.
+5. Rebalance by replacing _w_ with a balanced weight vector for _A_.
+6. If there are more seats available, go back to step 2. Otherwise, return the balanced solution _(A, w)_.
 
 ## Where is the Phragmén method used in Polkadot?
 
