@@ -13,7 +13,7 @@ documentation for the tool you are using:
 - [Polkadot-JS RPC](https://polkadot.js.org/docs/substrate/rpc)
 - [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar)
 
-**Polkadot-JS RPC** is JavaScript library for interacting with **Substrate RPC API** endpoint, distributed as `@polkadot/api` Node.js package.  
+**Polkadot-JS RPC** is a JavaScript library for interacting with the **Substrate RPC API** endpoint, distributed as `@polkadot/api` Node.js package.  
 **Substrate API Sidecar** is using the **Polkadot-JS RPC** to provide separately runnable REST services.
 
 
