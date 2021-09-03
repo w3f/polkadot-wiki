@@ -1596,13 +1596,13 @@
     fs-extra "^10.0.0"
     tslib "^2.1.0"
 
-"@docusaurus/theme-live-codeblock@^2.0.0-beta.5":
-  version "2.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@docusaurus/theme-live-codeblock/-/theme-live-codeblock-2.0.0-beta.5.tgz#a8686d3a672a51e6c72e035345a3abba0b731c4e"
-  integrity sha512-hTkZDeBafCQY6E8xcajgoJ5APwcJDD0+3XzmWdnqqjzMXQhCgQjefNhhduXM1a87+YK3N1fN0j3hF33K7DWoMg==
+"@docusaurus/theme-live-codeblock@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-live-codeblock/-/theme-live-codeblock-2.0.0-beta.6.tgz#f46e83f230470d6dd741dc309e415541aeee3862"
+  integrity sha512-TDHZbaKDR9S5uVtjiM5QZbOOKGUfAGHo+1KSZ8dIaIjAsA55sayYmX9MxbhUvQCkAb3vKKvnr8S9cv1Vi1l/gA==
   dependencies:
-    "@docusaurus/core" "2.0.0-beta.5"
-    "@docusaurus/utils-validation" "2.0.0-beta.5"
+    "@docusaurus/core" "2.0.0-beta.6"
+    "@docusaurus/utils-validation" "2.0.0-beta.6"
     "@philpl/buble" "^0.19.7"
     clsx "^1.1.1"
     parse-numeric-range "^1.2.0"
