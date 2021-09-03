@@ -1274,7 +1274,7 @@
     webpack-merge "^5.8.0"
     webpackbar "^5.0.0-3"
 
-"@docusaurus/core@^2.0.0-beta.6":
+"@docusaurus/core@2.0.0-beta.6", "@docusaurus/core@^2.0.0-beta.6":
   version "2.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.0.0-beta.6.tgz#9847ae211a04f1d2b057f8e5ba650e76b9c2df83"
   integrity sha512-XMeI+lJKeJBGYBNOfO/Tc+5FMf21E5p1xZjfe75cgYcfZdERZ+W7aemXquwReno8xxHb4Rnfmi9dxkbOLDjqDA==
@@ -1406,16 +1406,16 @@
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.5.tgz#d215c9dd4f64ee9b9d41d28983ca72735319746a"
   integrity sha512-XTTDws3FBCLyZBqoP1k36rCOgH4D+74llIgkOdfSwxUjYdTfvMbkSniYKWUzD6otIPcWANCrncvADf5u9hpbvg==
 
-"@docusaurus/plugin-client-redirects@^2.0.0-beta.5":
-  version "2.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.5.tgz#fbef807b382afb6bf8b186d7a92412b86fd9bd34"
-  integrity sha512-tWYde0PLUULMW7tCVWxZosjLvE42MLOrt6QGz1YVGzOrSCkY54hozn5zJgRASdzh+9zdtdJbq52cIv7284ET9g==
+"@docusaurus/plugin-client-redirects@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.6.tgz#c982cc50643bdd93d32d9eaecec8e6ea0ad5ad31"
+  integrity sha512-/tryRByGwuPjrqHf5cSh1VS9oUX+SVHF8ElW8N7CDiTDyjUagffxTumKDMvZiWEzv0++l/MRwSc/PkZk0mOBWQ==
   dependencies:
-    "@docusaurus/core" "2.0.0-beta.5"
-    "@docusaurus/types" "2.0.0-beta.5"
-    "@docusaurus/utils" "2.0.0-beta.5"
-    "@docusaurus/utils-common" "2.0.0-beta.5"
-    "@docusaurus/utils-validation" "2.0.0-beta.5"
+    "@docusaurus/core" "2.0.0-beta.6"
+    "@docusaurus/types" "2.0.0-beta.6"
+    "@docusaurus/utils" "2.0.0-beta.6"
+    "@docusaurus/utils-common" "2.0.0-beta.6"
+    "@docusaurus/utils-validation" "2.0.0-beta.6"
     chalk "^4.1.1"
     eta "^1.11.0"
     fs-extra "^10.0.0"
