@@ -112,7 +112,6 @@ The servers will reflect the latest `master` commit or PR put up against the mas
 The latest version of `master` is staged and checked by the team. If all is well, the new commits on `master` are transferred into the production branch,`prod`, by rebasing `master` on `prod`. The CICD production workflow will deploy `prod` to the public sites:
 [Polkadot Wiki](https://wiki.polkadot.network) and [Kusama Guide](https://guide.kusama.network), respectively.
 
-
 ### Mirror Pages
 
 A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.

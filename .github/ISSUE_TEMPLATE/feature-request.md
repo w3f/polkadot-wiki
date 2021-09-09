@@ -3,8 +3,7 @@ name: Feature Request
 about: Suggest an idea for the Wiki
 title: "[Feature Request]"
 labels: docs
-assignees: ''
-
+assignees: ""
 ---
 
 **Is your feature request related to a problem? Please describe.**

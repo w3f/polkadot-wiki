@@ -16,7 +16,6 @@ documentation for the tool you are using:
 **Polkadot-JS RPC** is a JavaScript library for interacting with the **Substrate RPC API** endpoint, distributed as `@polkadot/api` Node.js package.  
 **Substrate API Sidecar** is using the **Polkadot-JS RPC** to provide separately runnable REST services.
 
-
 ## Polkadot RPC
 
 The Parity Polkadot client exposes HTTP and WS endpoints for RPC connections. The default ports are
