@@ -73,6 +73,8 @@
     "@docusaurus/theme-live-codeblock": "^2.0.0-beta.6",
     "@polkadot/util": "^7.3.1",
     "@polkadot/wasm-crypto": "^4.2.1",
+    "ansi-html": "^0.0.7",
+    "immer": "^9.0.6",
     "remark-docusaurus-tabs": "^0.1.0",
     "replace-in-file": "^6.2.0"
   },
