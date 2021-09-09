@@ -37,24 +37,10 @@ smart contract example? Ask us to add it to this page!**
 
 - [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
-## Storage Rent
+### Storage Rent: Deprecated
 
-Storage rent limits the footprint that a contract can have on the blockchain's storage.
-
-A contract deployed to the chain produces a code hash from which new instances of the chain can be
-created, but there is currently no rent applied to the code hash itself. The rent applies only to
-instances of this contract which have their own _contract accounts_. Deploying a code hash currently
-has a one-time byte-fee applied to the transaction, but no recurring cost.
-
-An account of a contract instance is charged proportionally to the amount of storage its account
-uses. When a contract's balance goes below a defined limit, the contract's account is turned into a
-_tombstone_ (a hash of the contract's current state) and its storage is cleaned up. A tombstone
-contract can be restored by providing the data that was cleaned up when it became a tombstone as
-well as any additional funds needed to keep the contract alive. This fee will retroactively apply to
-missed rent periods.
-
-Block producers or regular users of the chain can "poke" a smart contract if they think it ran out
-of funds for rent. This will initiate the clean-up process and the _poker_ will get a finder's fee.
+`pallet_contracts` was originally designed to combat unbounded state growth by charging contracts for the
+state they consume, but has since been deprecated. See the associated [pull request](https://github.com/paritytech/substrate/pull/9669) for more details.
 
 ## What is the difference between developing a smart contract versus a parachain?
 
