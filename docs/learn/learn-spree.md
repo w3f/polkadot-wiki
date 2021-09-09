@@ -41,7 +41,7 @@ SPREE modules are important to the overall XCMP architecture because they give a
 code that will be executed on destination parachains. While XCMP guarantees the delivery of a
 message, it does not guarantee what code will be executed, i.e. how the receiving parachain will
 interpret the message. While XCMP accomplishes trustless message passing, SPREE is the trustless
-interpenetration of the message and a key part of the usefulness of XCMP.
+interpretation of the message and a key part of the usefulness of XCMP.
 
 SPREE modules are like recipes in cookbooks. For example, if we give an order to a cook to make a
 soufflé, and we’re decently confident in the ability of the cook, we have a vague idea of what will
