@@ -127,7 +127,7 @@ For more details on BABE, please see the
 BADASS BABE is an extention of BABE and acts as a constant-time block production protocol.
 This approach tries to address the shortcomings of BABE by ensuring that exactly one
 block is produced with time-constant intervals. The protocol utilizes zk-SNARKs to construct a
-ring-VRF and is a work in progress. This section will be updated as progress progresses.
+ring-VRF and is a work in progress. This section will be updated as progress ensues.
 
 ## Finality Gadget: GRANDPA
 
