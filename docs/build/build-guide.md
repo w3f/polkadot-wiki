@@ -2,7 +2,7 @@
 id: build-guide
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
-slug: ../build
+slug: ../build-build-with-polkadot
 ---
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
