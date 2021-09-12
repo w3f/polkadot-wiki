@@ -173,7 +173,11 @@ the [crosschain](learn-crosschain.md) message passing aspects of this testnet. G
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
 
+<<<<<<< HEAD:docs/learn/learn-DOT.md
 Learn more about Rococo on its [dedicated wiki page](../build/build-parachains-rococo.md).
+=======
+Learn more about Rococo on the [Parachaion Builders page](build-parachains).
+>>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253:docs/learn-DOT.md
 
 ## Kusama Tokens
 

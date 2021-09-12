@@ -19,10 +19,15 @@ import fs from "fs";
 
 // List of mirrored files that should be in both the Polkadot wiki and the Kusama
 // user guide.
+<<<<<<< HEAD
 
 const mirrored_general = ["ens", "thousand-validators"];
 
 const mirrored_learn = [
+=======
+const mirrored = [
+  "build-guide",
+>>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253
   "learn-identity",
   "learn-balance-transfers",
   "learn-governance",
@@ -32,6 +37,10 @@ const mirrored_learn = [
   "learn-parachains",
   "learn-parathreads",
   "learn-crowdloans",
+<<<<<<< HEAD
+=======
+  "build-parachains",
+>>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253
 ];
 
 const mirrored_build = ["build-build-with-polkadot", "build-parachains-rococo"];

@@ -94,17 +94,11 @@
       "build-index",
       {
         "type": "subcategory",
-        "label": "Development Guide",
+        "label": "Develop",
         "ids": [
-          "build-build-with-polkadot",
-          "build-pdk",
-          "learn-implementers-guide",
-          "build-cumulus",
-          "build-parachains-rococo",
-          "build-smart-contracts",
-          "build-oracle",
-          "build-ss58-registry",
-          "build-wallets"
+          "build-guide",
+          "build-parachains",
+          "build-smart-contracts"
         ]
       },
       {
@@ -122,12 +116,20 @@
       {
         "type": "subcategory",
         "label": "Tools",
-        "ids": ["build-tools-index"]
+        "ids": [
+          "build-tools-index",
+          "build-wallets"
+        ]
       },
       {
         "type": "subcategory",
         "label": "Resources",
-        "ids": ["build-hackathon"]
+        "ids": [
+          "build-oracle",
+          "build-ss58-registry",
+          "build-hackathon",
+          "learn-implementers-guide"
+        ]
       }
     ],
     "Maintain": [
