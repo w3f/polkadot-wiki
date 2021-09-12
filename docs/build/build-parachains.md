@@ -2,6 +2,7 @@
 id: build-parachains
 title: Parachain Development
 sidebar_label: Parachain Development
+slug: ../build-parachains
 ---
 
 This section will cover the motivation to build a parachian or parathread, the tools available
@@ -9,18 +10,18 @@ to facilitate this, and the steps to test, and finally launch your network on Po
 
 ## Why Create a Parachain?
 
-Parachains can [lease the security](learn-security) of the Polkadot network by bonding
-[DOT](learn-DOT) for a parachain slot. This means that the social costs of building a community
+Parachains can [lease the security](../learn/learn-security.md) of the Polkadot network by bonding
+[DOT](../learn/learn-DOT.md) for a parachain slot. This means that the social costs of building a community
 around your project and convincing validators to participate in your network security are reduced.
 Polkadot has strong security, and decentralized application projects wishing to benefit from this
 security would want to become a parachain to share in that pooled security. For more information
-on the mechanic of leasing a parachain slot through a candle auction see [here](learn-auction).
+on the mechanic of leasing a parachain slot through a candle auction see [here](../learn/learn-auction.md).
 
 Any decentralized application or chain that wants to enable trustless messaging to other parachains
 already connected to Polkadot would want to become a parachain. Interoperability between sovereign
 chains involves certain constraints and complex protocols to enable across a wide breadth of chains.
 With Polkadot, you will get this feature out of the box if your build your application as a
-parachain. The [XCMP protocol](learn-crosschain) allows any parachains to communicate by
+parachain. The [XCMP protocol](../learn/learn-crosschain.md) allows any parachains to communicate by
 passing messages between them. Furthermore, as bridges to other chains are connected (such as those
 to Bitcoin or Ethereum) Polkadot's parachains will be able to communicate with these as well!
 
@@ -48,7 +49,7 @@ from iteration of the state transition function. They must remain online in orde
 the state and also of the XCMP messages that it will route between itself and other parachains.
 Collator nodes are responsible for passing the succinct proofs to the relay chain's validators, and
 tracking the latest blocks from the relay chain. In essence, a collator node also acts as a light
-client for the relay chain. For more on collator nodes see [here](learn-collator).
+client for the relay chain. For more on collator nodes see [here](../learn/learn-collator.md).
 
 ## What PDKs exist?
 
@@ -81,7 +82,7 @@ parachains). This runs a Polkadot node internally, and dictate to the client and
 algorithms which chain to follow, finalize, and treat as correct.
 
 See the [Cumulus overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a
-more detailed description of Cumulus, and for those with experience in Substrate, give the 
+more detailed description of Cumulus, and for those with experience in Substrate, give the
 [Cumulus Workshop](https://substrate.dev/cumulus-workshop/) a go!
 
 ## Parachain Testing: Rococo
@@ -111,7 +112,7 @@ channel on Matrix. To receive ROC tokens, use the command:
 ### Build and Register a Rococo Parathread
 
 [Cumulus](https://github.com/paritytech/cumulus#rococo) is set of tools for writing Substrate-based
-parachains. 
+parachains.
 
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
 has created a [cumulus parachain workshop](https://substrate.dev/cumulus-workshop/) to show you how.
@@ -127,7 +128,7 @@ selecting any parachain of choice. For the purpose of these following examples, 
 Rococo testnet "Custom Node" underneath "Development", following the
 [parachain workshop](https://substrate.dev/cumulus-workshop/).
 
-![parachains on polkadotjs](assets/polkadotjs_network_parachains.png)
+![parachains on polkadotjs](../assets/polkadotjs_network_parachains.png)
 
 ## Deploy your parachain or parathread on Polkadot
 
@@ -142,8 +143,8 @@ In order to include your parachain into the Polkadot network, you will need to a
 slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
-{{ polkadot: [parachain auction](learn-auction) :polkadot }}
-{{ kusama: [parachain auction](mirror-learn-auction) :kusama }} page of the wiki.
+{{ polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}
+{{ kusama: [parachain auction](../learn/mirror-learn-auction.md) :kusama }} page of the wiki.
 
 ### Parathread
 
@@ -153,9 +154,8 @@ and from then be able to start participating in the per-block auctions for inclu
 transition into a relay chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
-{{ polkadot: [parathread](learn-parathreads) :polkadot }}
-{{ kusama: [parathread](mirror-learn-parathreads) :kusama }} page.
-
+{{ polkadot: [parathread](../learn-parathreads.md) :polkadot }}
+{{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
 
 ## Future PDKs
 
