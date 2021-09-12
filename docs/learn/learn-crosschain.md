@@ -61,6 +61,7 @@ DMP is used to move it down to another parachain.
 
 For a description of the XCMP message format please see the [xcm-format][] repository on GitHub.
 
+<<<<<<< HEAD:docs/learn/learn-crosschain.md
 ## How To Make Cross Chain Transfers
 
 You can try out cross-chain transfers on the the [Rococo](../build/build-parachains-rococo.md) testnet. A
@@ -68,6 +69,9 @@ tutorial on downward, upward, and lateral transfers can be found
 [here](../build/build-parachains-rococo.md#how-to-make-cross-chain-transfers).
 
 ## High-Level XCMP
+=======
+## High Level XCMP
+>>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253:docs/learn-crosschain.md
 
 A smart contract that exists on parachain A will route a message to parachain B in which another
 smart contract is called that makes a transfer of some assets within that chain.
@@ -114,7 +118,11 @@ doesn't support embedded videos. </video>
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
+<<<<<<< HEAD:docs/learn/learn-crosschain.md
 - [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format
   sent via XCMP.
 
 [xcm-format]: https://github.com/paritytech/xcm-format
+=======
+- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the XCMP format.
+>>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253:docs/learn-crosschain.md

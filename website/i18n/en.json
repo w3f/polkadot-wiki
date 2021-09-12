@@ -9,21 +9,17 @@
         "title": "Polkadot Ambassador Programme",
         "sidebar_label": "Polkadot Ambassador Programme"
       },
-      "build-build-with-polkadot": {
+      "build-guide": {
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
-      "build-cumulus": {
-        "title": "Cumulus",
-        "sidebar_label": "Cumulus"
-      },
       "build-hackathon": {
-        "title": "Hackathon",
-        "sidebar_label": "Hackathon"
+        "title": "Polkadot Hackathons",
+        "sidebar_label": "Polkadot Hackathons"
       },
       "build-index": {
-        "title": "Builder's Portal",
-        "sidebar_label": "Builder's Portal"
+        "title": "Builder's Guides",
+        "sidebar_label": "Builder's Guides"
       },
       "build-integration": {
         "title": "Polkadot Integration Guide",
@@ -41,13 +37,9 @@
         "title": "Oracles",
         "sidebar_label": "Oracles"
       },
-      "build-parachains-rococo": {
-        "title": "Rococo Parachain Testnet",
-        "sidebar_label": "Rococo Parachain Test Network"
-      },
-      "build-pdk": {
-        "title": "Parachain Development Kits (PDKs)",
-        "sidebar_label": "Parachain Development Kits (PDKs)"
+      "build-parachains": {
+        "title": "Parachain Development",
+        "sidebar_label": "Parachain Development"
       },
       "build-protocol-info": {
         "title": "Polkadot Protocol Information",
@@ -109,6 +101,7 @@
         "title": "Web3 Foundation Grants",
         "sidebar_label": "Grants"
       },
+<<<<<<< HEAD
       "polkadot-guide": {
         "title": "Polkadot Guide",
         "sidebar_label": "Polkadot Guide"
@@ -116,6 +109,11 @@
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
         "sidebar_label": "Adverserial Cheatsheet"
+=======
+      "kusama-adversarial-cheatsheet": {
+        "title": "Adversarial Cheatsheet",
+        "sidebar_label": "Adversarial Cheatsheet"
+>>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253
       },
       "kusama-bug-bounty": {
         "title": "Bug Bounty",
@@ -437,9 +435,17 @@
         "title": "Polkadot Builders Starter's Guide",
         "sidebar_label": "Polkadot Builders Starter's Guide"
       },
+      "mirror-build-guide": {
+        "title": "Polkadot Builders Starter's Guide",
+        "sidebar_label": "Polkadot Builders Starter's Guide"
+      },
       "mirror-build-parachains-rococo": {
-        "title": "Rococo Parachain Testnet",
-        "sidebar_label": "Rococo Parachain Test Network"
+        "title": "Building Parachains on Rococo",
+        "sidebar_label": "Building Parachains on Rococo"
+      },
+      "mirror-build-parachains": {
+        "title": "Parachain Development",
+        "sidebar_label": "Parachain Development"
       },
       "mirror-ens": {
         "title": "Adding accounts to an ENS domain",
