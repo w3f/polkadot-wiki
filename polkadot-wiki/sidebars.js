@@ -106,11 +106,9 @@ module.exports = {
           type: "category",
           label: "Development Guide",
           items: [
-            "build/build-build-with-polkadot",
-            "build/build-pdk",
+            "build/build-guide",
             "learn/learn-implementers-guide",
             "build/build-cumulus",
-            "build/build-parachains-rococo",
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-ss58-registry",
