@@ -20,7 +20,6 @@ Ethereum contracts. Some of the projects using this approach are [Edgeware](http
 A video version of the recap of the smart contract situation on Polkadot and Kusama is available
 [here](https://www.youtube.com/watch?v=fKHkFBXaUxQ).
 
-<<<<<<< HEAD:docs/build/build-smart-contracts.md
 ## Resources
 
 Here is the list of current resources available to developers who want to get started writing smart
@@ -39,9 +38,6 @@ smart contract example? Ask us to add it to this page!**
 - [Ownable](https://github.com/JesseAbram/foRust/) - Port of the OpenZeppelin `Ownable` contract.
 
 ### Storage Rent: Deprecated
-=======
-## Storage Rent
->>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253:docs/build-smart-contracts.md
 
 `pallet_contracts` was originally designed to combat unbounded state growth by charging contracts for the
 state they consume, but has since been deprecated. See the associated [pull request](https://github.com/paritytech/substrate/pull/9669) for more details.
@@ -84,7 +80,6 @@ could possibly run indefinitely, to a non-smart contract layer, or even trying t
 entirely, will often be a wiser choice. Parachains try to be proactive, while smart contract
 platforms are event-driven.
 
-
 ## Resources
 
 [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305)?
@@ -98,5 +93,3 @@ contracts to deploy on parachains based on Substrate.
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
 - [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/) - Walks you
   through the basics of writing and deploying an ERC20 token using `ink!`.
-
-

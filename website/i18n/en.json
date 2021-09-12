@@ -101,7 +101,6 @@
         "title": "Web3 Foundation Grants",
         "sidebar_label": "Grants"
       },
-<<<<<<< HEAD
       "polkadot-guide": {
         "title": "Polkadot Guide",
         "sidebar_label": "Polkadot Guide"
@@ -109,11 +108,6 @@
       "kusama-adverserial-cheatsheet": {
         "title": "Adverserial Cheatsheet",
         "sidebar_label": "Adverserial Cheatsheet"
-=======
-      "kusama-adversarial-cheatsheet": {
-        "title": "Adversarial Cheatsheet",
-        "sidebar_label": "Adversarial Cheatsheet"
->>>>>>> 7ca6b774855d956577bc91f0d67a67972d883253
       },
       "kusama-bug-bounty": {
         "title": "Bug Bounty",
