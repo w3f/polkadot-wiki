@@ -5,10 +5,10 @@ sidebar_label: Decentralised Storage
 slug: ../build-storage
 ---
 
-Storage is an integral part of modern computer system, and the same is true for distributed
+Storage is an integral part of modern computer systems, and the same is true for distributed
 and decentralised systems like a blockchain. When interacting with the Polkadot ecosystem, it
-will be helpful if you famailarize yourself with the current Web 3.0 approach to decentralised
-storage systems, and how these systems can support your endeavours.
+will be helpful if you familiarize yourself with the current Web 3.0 approach to decentralised
+storage systems, and how these systems can support your endeavors.
 
 ## DCS (Decentralized cloud storage)
 
@@ -20,7 +20,7 @@ _content-centric_ approach.
 ### IPFS (Interplanetary File System)
 
 IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the
-same system of files, by utilizing features such as content-addressing, content-signing and enhanced security methods through encryption. IPFS aims to address the current hurdles of the HTTP-based Internet.
+same system of files, by utilizing features such as content-addressing, content-signing, and enhanced security methods through encryption. IPFS aims to address the current hurdles of the HTTP-based Internet.
 
 #### Brief comparison of IPFS & HTTP:
 
@@ -33,11 +33,11 @@ same system of files, by utilizing features such as content-addressing, content-
 ### Filecoin
 
 Like IPFS, [Filecoin](https://filecoin.io/) is a protocol developed by [Protocol Labs](https://protocol.ai/)
-that offers a decentralised storage network. Filecoin's main focus is storage itself, and uses IPFS as a [complementary] back-end protocol.
+that offers a decentralised storage network. Filecoin's main focus is storage itself and uses IPFS as a [complementary] back-end protocol.
 
 ### Storj
 
-[Storj](https://www.storj.io/) is a decentralized cloud storage system that encrypts all files before being uploaded and distributes them in a robust and reliable way.
+[Storj](https://www.storj.io/) is a decentralized cloud storage system that encrypts all files before being uploaded and distributes them irobustly and reliably
 
 ### Sia
 
@@ -55,14 +55,14 @@ built on the key-value store.
 
 The key-value data store is backed by [RocksDB](https://rocksdb.org/), and it also supports an experimental [Parity database](https://github.com/paritytech/parity-db).
 
-> The databse is used for components that require persistent storage: Substrate clients, Substrate light-clients
+> The database is used for components that require persistent storage: Substrate clients, Substrate light-clients
 > & off-chain workers. Check out Substrate Developer Hub's [Storage Page](https://substrate.dev/docs/en/knowledgebase/advanced/storage) for more information.
 
-When building on Substrate, _runtime developers_ can take advanatge of Substrate's FRAME `Storage pallet` which gives access to Substrate's storage APIs. These storage items support values that are encoded by Parity's `SCALE (Simple Concatenated Aggregate Little-Endian) Codec`.
+When building on Substrate, _runtime developers_ can take advantage of Substrate's FRAME `Storage pallet` which gives access to Substrate's storage APIs. These storage items support values that are encoded by Parity's `SCALE (Simple Concatenated Aggregate Little-Endian) Codec`.
 
-There is a [`Storage Value`](https://substrate.dev/rustdocs/latest/frame_support/storage/trait.StorageValue.html) API that is used to store single values, a [`Storage Map`](https://substrate.dev/rustdocs/latest/frame_support/storage/trait.StorageMap.html) API that is used to a key-value hash map, a [`Storage Double Map`](https://substrate.dev/rustdocs/latest/frame_support/storage/trait.StorageDoubleMap.html) API that is creates a `storage map` with two keys to provide the ability to efficiently remove all entries that have a common first key, and a [`Storage N Map`](https://crates.parity.io/frame_support/storage/trait.StorageNMap.html) API that can be used to store a hash map with any arbitrary number of keys.
+There is a [`Storage Value`](https://substrate.dev/rustdocs/latest/frame_support/storage/trait.StorageValue.html) API that is used to store single values, a [`Storage Map`](https://substrate.dev/rustdocs/latest/frame_support/storage/trait.StorageMap.html) API that is used to a key-value hash map, a [`Storage Double Map`](https://substrate.dev/rustdocs/latest/frame_support/storage/trait.StorageDoubleMap.html) API that creates a `storage map` with two keys to provide the ability to efficiently remove all entries that have a common first key, and a [`Storage N Map`](https://crates.parity.io/frame_support/storage/trait.StorageNMap.html) API that can be used to store a hash map with any arbitrary number of keys.
 
-These layered APIs are act as runtime storage that allow you to store data in your blockchain. More information can be found at the [`Runtime Storage Page`](https://substrate.dev/docs/en/knowledgebase/runtime/storage) on Substrate Developer Hub.
+These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can be found at the [`Runtime Storage Page`](https://substrate.dev/docs/en/knowledgebase/runtime/storage) on Substrate Developer Hub.
 
 ### PolkadotJS Storage
 
