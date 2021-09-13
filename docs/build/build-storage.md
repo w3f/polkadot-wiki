@@ -1,8 +1,8 @@
 ---
-id: learn-storage
+id: build-storage
 title: Decentralised Storage Systems
 sidebar_label: Decentralised Storage
-slug: ../learn-storage
+slug: ../build-storage
 ---
 
 Storage is an integral part of modern computer system, and the same is true for distributed
