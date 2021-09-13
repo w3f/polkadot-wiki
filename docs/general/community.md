@@ -81,8 +81,8 @@ community members. The application we use most often to interact with the Matrix
 - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 - [Kusama YouTube Channel](http://youtube.com/c/kusamanetwork)
 
-- [Polkadot Forum](https://forum.polkadot.network)
-- [Kusama Forum](https://forum.kusama.network)
+- [Polkadot Forum](https://matrix.to/#/#polkadot-watercooler:web3.foundation)
+- [Kusama Forum](https://matrix.to/#/#kusamawatercooler:web3.foundation)
 
 ### Blogs and tutorials
 
