@@ -5,6 +5,8 @@ sidebar_label: Cross-Consensus Message Format (XCM)
 slug: ../learn-crosschain
 ---
 
+<!-- Page being updated -->
+
 > A Format, not a Protocol
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
