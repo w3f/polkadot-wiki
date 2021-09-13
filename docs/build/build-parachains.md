@@ -264,7 +264,7 @@ and from then be able to start participating in the per-block auctions for inclu
 transition into a relay chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
-{{ polkadot: [parathread](../learn-parathreads.md) :polkadot }}
+{{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
 {{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
 
 ## Future PDKs

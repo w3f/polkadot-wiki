@@ -292,9 +292,9 @@ its very early stages.
 
 ## Crowdloans
 
-With the recent launch of [parachains](mirror-learn-parachains.md) on Kusama, many projects that aim
-to become a parachain launched a [crowdloan](mirror-learn-crowdloans.md) to gather the necessary
-funds to participate in the [parachain auctions](mirror-learn-auction.md). But with all the buzz
+With the recent launch of [parachains](../learn/mirror-learn-parachains.md) on Kusama, many projects that aim
+to become a parachain launched a [crowdloan](../learn/mirror-learn-crowdloans.md) to gather the necessary
+funds to participate in the [parachain auctions](../learn/mirror-learn-auction.md). But with all the buzz
 around the Kusama parachain launch and the imminent Polkadot launch, many scams may also surface.
 So, crowdloans need their own section to make sure that you're participating safely.
 
@@ -340,7 +340,7 @@ facts and verify claims, have a look at the following material.
    [here](https://webliteracy.pressbooks.com).
 3. Wikipedia article on [fact-checking](https://en.wikipedia.org/wiki/Fact-checking)
 
-Finally, you should also check our complementary guide on [how to identify scams](learn-scams.md).
+Finally, you should also check our complementary guide on [how to identify scams](../learn/learn-scams.md).
 It's not about projects but how to identify outright scams and avoid them, as well as how to protect
 your sensitive information.
 

@@ -7,7 +7,7 @@ slug: ../learn-parachains
 ---
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains.md##testing-a-parachains:-rococo-testnet):polkadot }} >
+> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains.md#testing-a-parachains:-rococo-testnet):polkadot }} >
 > {{ kusama: [Rococo page](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
 
 ![One parachain](../assets/network/one_parachain.png)
