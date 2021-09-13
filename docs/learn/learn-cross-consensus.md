@@ -5,9 +5,76 @@ sidebar_label: Cross-Consensus Message Format (XCM)
 slug: ../learn-crosschain
 ---
 
-<!-- Page being updated -->
+What started as an approach to _cross-chain communication_, has evolved into a format for
+**Cross-Consensus**. Communication is not only conducted between chains, but also smart contracts,
+pallets, bridges, and even sharded enclaves like [SPREE](learn-spree.md).
 
-> A Format, not a Protocol
+## Overview of XCM: A Format, Not a Protocol
+
+**XCM is related to cross-chain in the same way that REST is related RESTful.**
+XCM cannot actually send messages between systems. It is a format for how message
+transfer should be performed, similar to how RESTful services use REST as an architectural style
+of deployment.
+
+    XCM aims to be a language communicating ideas between consensus systems, hence, "Cross-Consensus"
+
+- A format for sending messages between chains
+- Transacting with a chain whose transaction format is unknown. XCM is well-versioned, abstract and general:
+  it can be used as a means of providing a long-lasting transaction format for wallets to use to create many common transactions.
+  - As a result, XCM should be general enough for it to be properly useful throughout a growing ecosystem. It should be _extensible_, and, in turn, _future-proof_ and _forwards-compatible_.
+- Efficient enough to run on-chain, and in a metered environment.
+
+  > XCM is not designed in that every system supporting the format is expected to be able to interpret any
+  > possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable
+  > interpretations under some systems or will be intentionally unsupported.
+
+- Still, XCM offers a format for _general_ systems, including gas-metered smart contract platform and community
+  parachains - all the way to trusted interactions between system parachains and their relay chain.
+  > Although, the format should not bake elements, such as fee payment, too deep and irreversibly in the protocol.
+
+### General Use-Cases
+
+- The optional payment of fees
+- Conduct some **platform-specific actions**
+- Support a number of **token transfer models**
+- **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an address on the
+  remote chain for receiving funds and to eventually transfer those funds it controls into other accounts on that remote chain.
+- **Teleporting**: movement of an asset happens by destroying it on one side and creating a clone on the other
+  side.
+- **Reverse-Based Transfer**: there may be two chains that want to nominate a third chain, where one
+  includes a native asset that can be used as a reserve for that asset. Then, the derivative form of the
+  asset on each of those chains would be fully backed, allowing the derivative asset to be exchanged for the underlying asset on the reserve chain backing it.
+
+### XCVM (Cross-Chain Virtual Machine)
+
+An ultra-high level non-Turing-complete computer whose instructions are designed in a way to be roughly at
+the same level as transactions.
+
+A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more XCM instructions. To learn more about the XCVM and the XCM Format, see the latest [blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) by Dr. Gavin Wood.
+
+      Polkadot comes with three distinct systems for actually communicating XCM messages between
+      its constituent chains.
+
+The following diagram shows the XCM tech stack:
+
+![xcm tech stack](../assets/cross-consensus-tech-stack.png)
+
+### VMP (Vertical Message Passing)
+
+There are two kinds of vertical message-passing transport protocols:
+
+- **UMP (Upward Message Passing)**: allows parachains to send messages to their relay chain.
+- **DMP (Downward Message Passing)**: allows the relay chain to pass messages down to one of their
+  parachains.
+
+Messages that are passed via `DMP` may originate from a parachain. In which case, first `UMP` is used to
+communicate the message to the Relay Chain and `DMP` is used to move it down to another parachain.
+
+### XCMP (Cross-Chain Message Passing)
+
+The cross-chain message-passing transport protocol:
+
+- **XCMP** (Cross-Chain Message Passing): allows the parachains to send messages between themselves.
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
 ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output
@@ -17,7 +84,9 @@ associated metadata is stored as a hash in the Relay Chain storage.
 The input and output queue are sometimes referred to in the codebase and associated documentation as
 `ingress` and `egress` messages respectively.
 
-## Overview of XCM
+> XCM can be used to express the meaning of the messages over each of these three communication channels.
+
+#### Overview of XCMP
 
 XCMP is currently under development and the details are subject to change. However, the overall
 architecture and design decisions are as follows:
@@ -32,7 +101,7 @@ architecture and design decisions are as follows:
 - On each block, parachains are expected to route messages from some subset of all other parachains.
 - When a collator produces a new block to hand off to a validator, it will collect the latest
   ingress queue information and process it.
-- Validators will check a proof that the new candidate for the next parachain block includes the
+- Validators will check the proof that the new candidate for the next parachain block includes the
   processing of the expected ingress messages to that parachain.
 
 XCMP queues must be initiated by first opening a channel between two parachains. The channel is
@@ -41,7 +110,7 @@ of parachains can have at most two channels between them, one for sending messag
 chain and another for receiving messages. The channel will require a deposit in DOT to be opened,
 which will get returned when the channel is closed.
 
-## XCMP-Lite (HRMP)
+#### `XCMP-Lite (HRMP)`
 
 While XCMP is still being implemented, a stop-gap protocol (see definition below) known as
 **Horizontal Relay-routed Message Passing (HRMP)** exists in its place. HRMP has the same interface
@@ -52,26 +121,17 @@ out in favor of it.
 > Note: A stop-gap protocol is a temporary substitute for the functionality that is not fully
 > complete. While XCMP proper is still in development, HRMP is a working replacement.
 
-## Vertical Message Passing
-
-There are two kinds of Vertical Message Passing, Upward Message Passing (UMP) and Downward Message
-Passing (DMP). UMP is used when a message originates on a parachain or a parathread to go from that
-parachain up to the Relay Chain. DMP is used to go the other way around, when a message originates
-from the Relay Chain and is destined for a parachain. Messages that are passed via DMP may originate
-from a parachain. In which case, first UMP is used to communicate the message to the Relay Chain and
-DMP is used to move it down to another parachain.
-
-## XCMP Message Format
+#### `XCMP Message Format`
 
 For a description of the XCMP message format please see the [xcm-format][] repository on GitHub.
 
-## How To Make Cross Chain Transfers
+#### How To Make `Cross-Chain Transfers`
 
 You can try out cross-chain transfers on the the [Rococo](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) testnet. A
 tutorial on downward, upward, and lateral transfers can be found
 [here](../build/build-parachains.md###how-to-make-cross-chain-transfers).
 
-## High-Level XCMP
+#### `High-Level XCMP`
 
 A smart contract that exists on parachain A will route a message to parachain B in which another
 smart contract is called that makes a transfer of some assets within that chain.
@@ -105,7 +165,7 @@ Check out our animated video below that explores how XCMP works.
 
 <!-- Made with Adobe Animate and Canvas -->
 
-<video 
+<video
       controls="controls"  
       name="XCMP Animated Video" 
       width="560" height="315"
@@ -114,11 +174,12 @@ doesn't support embedded videos. </video>
 
 ## Resources
 
+- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) - Detailed blog post by Dr. Gavin Wood about the XCM Format.
+- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format
+  sent via XCMP.
 - [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
-- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format
-  sent via XCMP.
 
 [xcm-format]: https://github.com/paritytech/xcm-format
