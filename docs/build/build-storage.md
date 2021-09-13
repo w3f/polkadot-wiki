@@ -25,11 +25,11 @@ methods through encryption. IPFS aims to address the current hurdles of the HTTP
 
 #### Brief comparison of IPFS & HTTP:
 
-| IPFS                                                                                                                                     | HTTP                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| network: peer-to-peer model (decentralised)                                                                                              | network: client-server model (centralised)                                                                                                                                   |
-| requests: use a cryptographic hash of that data                                                                                          | requests: use the address on which data is hosted                                                                                                                            |
-| accessibility: data is distributed to multiple nodes and can be accessed at any time. Bandwidth is high: nearest peer can serve the data | accessibility: data can only be accessed if the server is live and there are no interruptions in transmission Bandwidth is limited: clients send requests to the same server |
+| IPFS                                                                                                                                     | HTTP                                                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| network: peer-to-peer model (decentralised)                                                                                              | network: client-server model (centralised)                                                                                                                                    |
+| requests: use a cryptographic hash of that data                                                                                          | requests: use the address on which data is hosted                                                                                                                             |
+| accessibility: data is distributed to multiple nodes and can be accessed at any time. Bandwidth is high: nearest peer can serve the data | accessibility: data can only be accessed if the server is live and there are no interruptions in transmission. Bandwidth is limited: clients send requests to the same server |
 
 ### Filecoin
 
@@ -54,8 +54,8 @@ storage and communication service for a sovereign digital society.
 
 ### BitTorrent File System (BTFS)
 
-[BTFS](https://www.bittorrent.com/token/bittorrent-file-system/) file-sharing protocol that uses the
-TRON network and the BitTorrent ecosystem.
+[BTFS](https://www.bittorrent.com/token/bittorrent-file-system/) is a file-sharing protocol that uses
+the TRON network and the BitTorrent ecosystem.
 
 ## Substrate Storage
 

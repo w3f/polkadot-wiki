@@ -7,7 +7,7 @@ slug: ../build-build-with-polkadot
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
-[XCMP](../learn/learn-crosschain.md). With the advent of [PDKs](build-pdk.md) like Parity Substrate and
+[XCM](../learn/learn-cross-consensus.md). With the advent of [PDKs](<build-parachains.md##parachain-development-kit-(PDK)>) like Parity Substrate and
 Cumulus, the time it takes to develop and launch a new chain has dropped significantly. While before
 it would take years to launch a new chain, now it may only take weeks or even days.
 
@@ -154,7 +154,7 @@ applicable to you.
 
 Now that you have determined that building a parachain or parathread is the right approach for your
 new project, the next step is to decide which framework to use. Frameworks for building a parachain
-or parathread are known as parachain development kits ([PDK](build-pdk.md)s). Currently, the only
+or parathread are known as parachain development kits ([PDKs](<build-parachains.md##parachain-development-kit-(PDK)>). Currently, the only
 PDK available is Substrate and Cumulus from Parity Technologies.
 
 In the future, there will be many different PDKs available in different programming languages, just
@@ -197,7 +197,7 @@ Polkadot as either a parachain or parathread.
 
 #### Cumulus
 
-The goal of [Cumulus](build-cumulus.md) is to be an extension of Substrate that will make any
+The goal of [Cumulus](build-parachains.md###cumulus) is to be an extension of Substrate that will make any
 Substrate runtime compatible with Polkadot.
 
 It handles the network compatibility overhead that any parachain would need to implement to be

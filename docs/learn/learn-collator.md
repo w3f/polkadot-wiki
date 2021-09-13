@@ -26,9 +26,10 @@ the censorship problem is solved with having just one honest collator.
 
 ### XCM
 
-Collators are a key element of [XCM (Cross-Chain Message Passing)](learn-crosschain.md). By being
-full nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for
-them to send messages from parachain A to parachain B.
+Collators are a key element of the
+[XCM (Cross-Consensus Message Passing Format)](learn-cross-consensus.md).
+By being full nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible
+for them to send messages from parachain A to parachain B.
 
 ## Taking the case for one Parachain
 
@@ -50,13 +51,14 @@ A block is produced every 6 seconds.
 
 Blockchains that are built using Substrate are unable to hook onto the Relay Chain on their own.
 The Parity team built the [Cumulus library](https://github.com/paritytech/cumulus/) to address this.
-Collators are being used on the [Rococo](../build/build-parachains-rococo.md) testnet, and you can learn more
+Collators are being used on the [Rococo](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) testnet, and you can learn more
 about how they are used with Cumulus via the [Cumulus](https://github.com/paritytech/cumulus/)
-repository. More information can be found on the [Cumulus page](../build/build-cumulus.md).
+repository. More information can be found under the [Cumulus section](../build/build-parachains.md###cumulus) on
+the build parachain page.
 
 ## Guides and Tools
 
 - [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/)
-- [Rococo tesnet guide](../build/build-parachains-rococo.md)
+- [Rococo tesnet guide](../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.

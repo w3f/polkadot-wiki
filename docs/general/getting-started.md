@@ -73,7 +73,7 @@ In order to interact with chains that want to use their own finalization process
 Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
 transactions can be made between different parachains.
 
-The [Cross-Chain Messaging Protocol (XCMP)](../learn/learn-crosschain.md) allows parachains to send messages
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to send messages
 of any type to each other. The shared security and validation logic of the Relay Chain provide the
 environment for trust-free message passing that opens up true interoperability.
 

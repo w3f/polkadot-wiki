@@ -1,11 +1,11 @@
 ---
-id: learn-crosschain
-title: Cross-chain Message Passing (XCMP)
-sidebar_label: Cross-chain Message Passing (XCMP)
+id: learn-cross-consensus
+title: Cross-Consensus Message Format (XCM)
+sidebar_label: Cross-Consensus Message Format (XCM)
 slug: ../learn-crosschain
 ---
 
-<!-- Page Being Updated To Reflect Latest XCM Content -->
+> A Format, not a Protocol
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
 ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output
@@ -15,7 +15,7 @@ associated metadata is stored as a hash in the Relay Chain storage.
 The input and output queue are sometimes referred to in the codebase and associated documentation as
 `ingress` and `egress` messages respectively.
 
-## Overview of XCMP
+## Overview of XCM
 
 XCMP is currently under development and the details are subject to change. However, the overall
 architecture and design decisions are as follows:
@@ -65,9 +65,9 @@ For a description of the XCMP message format please see the [xcm-format][] repos
 
 ## How To Make Cross Chain Transfers
 
-You can try out cross-chain transfers on the the [Rococo](../build/build-parachains-rococo.md) testnet. A
+You can try out cross-chain transfers on the the [Rococo](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) testnet. A
 tutorial on downward, upward, and lateral transfers can be found
-[here](../build/build-parachains-rococo.md#how-to-make-cross-chain-transfers).
+[here](../build/build-parachains.md###how-to-make-cross-chain-transfers).
 
 ## High-Level XCMP
 

@@ -8,8 +8,8 @@ slug: ../learn-teleport
 One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralied
 blockchain interoperability. This interoperability allows for asset teleportation: the process of
 moving assets, such as coins, tokens, or NTFs, between chains (parachains) to use them as you would
-any other asset native to that chain. Interoperability is possible through [XCMP] and [SPREE
-modules], which together ensure that assets are not lost or duplicated across multiple chain.
+any other asset native to that chain. Interoperability is possible through [XCM][]
+and [SPREE modules][], which together ensure that assets are not lost or duplicated across multiple chain.
 
 ## How to Teleport
 
@@ -40,5 +40,5 @@ selected does not support teleportation yet. As of June 2021, unsupported chains
 mainnet, Rococo testnet, and their respective parachains.
 
 [polkadotjs apps]: https://polkadot.js.org/apps/
-[xcmp]: learn-crosschain.md
+[xcm]: learn-cross-consensuss.md
 [spree modules]: learn-spree.md
