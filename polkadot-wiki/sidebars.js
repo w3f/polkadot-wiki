@@ -72,7 +72,7 @@ module.exports = {
             "learn/learn-proxies",
             "learn/learn-availability",
             "learn/learn-randomness",
-            "learn/learn-crosschain",
+            "learn/learn-cross-consensus",
             "learn/learn-spree",
             "learn/learn-wasm",
             "learn/learn-phragmen",
