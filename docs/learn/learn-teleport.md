@@ -40,5 +40,5 @@ selected does not support teleportation yet. As of June 2021, unsupported chains
 mainnet, Rococo testnet, and their respective parachains.
 
 [polkadotjs apps]: https://polkadot.js.org/apps/
-[xcm]: learn-cross-consensuss.md
+[xcm]: learn-cross-consensus.md
 [spree modules]: learn-spree.md

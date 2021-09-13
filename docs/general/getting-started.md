@@ -285,7 +285,3 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 [council voting]: ../maintain/maintain-guides-how-to-vote-councillor.md
 [treasury]: ../learn/learn-treasury.md
 [kusama guide]: https://guide.kusama.network/
-[1]: ../learn/account-generation.md
-
-[2]:
-[3]:
