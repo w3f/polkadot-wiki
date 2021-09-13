@@ -15,11 +15,11 @@ decentralized world.
 
 This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
 same process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First,
-let's clarify the term *full node*.
+let's clarify the term _full node_.
 
 ### Types of Nodes
 
-A blockchain's growth comes from a *genesis block*, *extrinsics*, and *events*.
+A blockchain's growth comes from a _genesis block_, _extrinsics_, and _events_.
 
 When a validator seals block 1, it takes the blockchain's state at block 0. It then applies all
 pending changes on top of it, and emits the events that are the result of these changes. Later, the
@@ -36,7 +36,7 @@ Archive nodes are used by utilities that need past information - like block expl
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
 to be able to look at past on-chain data.
 
-A **full node** is *pruned*: it discards all finalized blocks older than a configurable number
+A **full node** is _pruned_: it discards all finalized blocks older than a configurable number
 except the genesis block: This is 256 blocks from the last finalized one, by default. A node that is
 pruned this way requires much less space than an archive node.
 
@@ -68,12 +68,13 @@ https://github.com/paritytech/smoldot#wasm-light-node
 This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
-> NOTE: The bash commands that are provided to run against **your node** use 
-> `Polkadot` as the default chain. 
+> NOTE: The bash commands that are provided to run against **your node** use
+> `Polkadot` as the default chain.
 
-> Use the `--chain` flag if you are 
-> following the setup instructions to setup a `Kusama` node. 
-> For example: 
+> Use the `--chain` flag if you are
+> following the setup instructions to setup a `Kusama` node.
+> For example:
+>
 > ```bash
 > ./target/release/polkadot --name "Your Node's Name" --chain kusama
 > ```
@@ -109,7 +110,7 @@ values={[
   cargo build --release
   ```
 - Start your node:
-  
+
   ```bash
   ./target/release/polkadot --name "Your Node's Name"
   ```
@@ -160,7 +161,7 @@ values={[
 
 - Run the following: `sudo chmod +x polkadot`
 - Run the following:
-  
+
   ```bash
   ./target/release/polkadot --name "Your Node's Name"
   ```
@@ -211,6 +212,7 @@ cargo build --release
 The built binary will be in the `target/release` folder, called `polkadot`.
 
 **Polkadot**:
+
 ```bash
 ./target/release/polkadot --name "Your Node's Name"
 ```

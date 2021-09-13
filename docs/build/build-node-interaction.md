@@ -5,13 +5,16 @@ sidebar_label: Node Interaction
 slug: ../build-node-interaction
 ---
 
-This page will guide you through some basic interactions with your node. Always refer to the proper
-documentation for the tool you are using. This guide should _guide you to the proper tools,_ not be
-seen as canonical reference.
+This page will guide you through some basic interactions with your node. This guide should _guide you to the proper tools,_ not be
+seen as canonical reference. Always refer to the proper
+documentation for the tool you are using:
 
 - [Substrate RPC API](https://substrate.dev/rustdocs/latest/sc_rpc_api/index.html)
-- [Polkadot-JS RPC Documentation](https://polkadot.js.org/docs/substrate/rpc)
+- [Polkadot-JS RPC](https://polkadot.js.org/docs/substrate/rpc)
 - [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar)
+
+**Polkadot-JS RPC** is a JavaScript library for interacting with the **Substrate RPC API** endpoint, distributed as `@polkadot/api` Node.js package.  
+**Substrate API Sidecar** is using the **Polkadot-JS RPC** to provide separately runnable REST services.
 
 ## Polkadot RPC
 

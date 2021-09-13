@@ -1,29 +1,26 @@
 ---
 id: build-index
-title: Builder's Portal
-sidebar_label: Builder's Portal
+title: Builder's Guides
+sidebar_label: Builder's Guides
 slug: ../build-index
 ---
 
 Welcome to the builder's section of the Polkadot Wiki.
 
-Here, you will be able to find the most up-to-date information on the status of the development
-tools in the Polkadot ecosystem. We are always adding new tools and frameworks as we learn about
-them so if you are working on something that should be included please reach out to us on
-[Element](https://app.element.io/#/room/#polkadot-watercooler:matrix.org).
+Here, you will discover many development tools and resources in the Polkadot ecosystem.
+We are always adding new tools and frameworks as we learn about them so if you are working
+on something that should be included please reach out to us on
+[Element](https://matrix.to/#/#polkadot-watercooler:matrix.org)!
 
 This section of the wiki is divided into the following parts:
 
 ## Development Guide
 
-- [Starter's Guide](build-build-with-polkadot.md) - High level overview on choosing a parachain,
+- [Starter's Guide](build-guide) - High level overview on choosing a parachain,
   parathread, or smart contract for your project and how to get started.
-- [Parachain Development Kits](build-pdk.md) - PDKs are toolkits for building parachains and
+- [Parachain Development](build-parachains) - Tools for building parachains and
   parathreads.
-- [Smart Contracts](build-smart-contracts.md) - Smart contracts are fragments of custom logic that
-  can be deployed to a live chain.
-- [Polkadot Wallets](build-wallets.md) - Learn about the supported wallets and how to manage
-  accounts.
+- [Polkadot Smart Contracts](build-smart-contracts) - Tools to deploy contracts to a Polkadot parachain.
 
 ## Integration Guide
 
@@ -39,16 +36,15 @@ integrate Polkadot into their systems.
 - [Transaction Construction and Signing](build-transaction-construction.md) - Learn the transaction
   format for Polkadot and how to construct and sign transactions offline.
 
-## Tools
+## Tools & Resources
 
 - [Tools](build-tools-index.md) - Maintained list of tools.
 - [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) - Command line utility for
   generating and inspecting key pairs.
 - [JS tools](https://github.com/polkadot-js/tools) - TypeScript tools for offline signing of
   transactions, RPC calls, and more.
-
-## Resources
-
+- [PSP GitHub Repository](https://github.com/w3f/PSPs) - Polkadot Standards Proposals
+  (PSPs) are standards for the Polkadot ecosystem.
 - [Examples](#) - Example projects sourced from the community -- see what others are building.
 
 ### Grants

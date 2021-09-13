@@ -33,18 +33,19 @@ Ethereum 2.0's main chain is called the Beacon Chain. The primary load on the Be
 attestations, which are votes on the availability of shard data and Beacon Chain validity. Each
 shard in Ethereum 2 is simply a blockchain with the Ethereum Wasm (eWasm) interface.
 
-Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operating in parallel to the 
+Ethereum 2.0 launched phase 0 of a multi-phase rollout in December 2020, operating in parallel to the
 legacy Ethereum 1.0 chain:
-- **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing 
-  proof-of-stake consensus, eventually among many shards. 
-- **Phase 1** launches 64 shards as simple chains, to test the Beacon Chain's finality. Each shard 
-  submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data. 
-- **Phase 1.5** integrates Eth 1 as a shard to finalize the proof-of-work chain's blocks. 
-- **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system 
+
+- **Phase 0** provisioned the Beacon Chain, accepting deposits from validators and implementing
+  proof-of-stake consensus, eventually among many shards.
+- **Phase 1** launches 64 shards as simple chains, to test the Beacon Chain's finality. Each shard
+  submits "crosslinks" to the Beacon Chain, which contains the information to finalize shard data.
+- **Phase 1.5** integrates Eth 1 as a shard to finalize the proof-of-work chain's blocks.
+- **Phase 2** implements the eWasm interface, phasing out proof-of-work, finally making the system
   usable to end-users. [1]
 
-After the launch of the Beacon Chain in phase 0, the roadmap was altered to prioritize the 
-transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum 2.0's Proof-of-Stake 
+After the launch of the Beacon Chain in phase 0, the roadmap was altered to prioritize the
+transition of the legacy Ethereum 1.0 chain from Proof-of-Work to Ethereum 2.0's Proof-of-Stake
 consensus, preceding the rollout of shards on the network. [2]
 
 The network will also have "side chains" to interact with chains that are not under the finality
@@ -112,8 +113,8 @@ parachain in the network.
 ## Shards
 
 Every shard in Ethereum 2.0 has the same STF. Each shards will submit "crosslinks" to the beacon chain
-and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for contracts in 
-Ethereum. The eWasm interface provides a set of methods available to contracts. There should be a 
+and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for contracts in
+Ethereum. The eWasm interface provides a set of methods available to contracts. There should be a
 similar set of development tools like Truffle and Ganache to develop for eWasm. [7]
 
 Every shard in Polkadot has an abstract STF based on Wasm. Each shard can expose a custom interface,

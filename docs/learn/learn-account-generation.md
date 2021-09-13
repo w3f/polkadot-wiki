@@ -18,8 +18,8 @@ There are several ways to generate a Polkadot account:
 - [Vanity Generator](#vanity-generator)
 - [Ledger Hardware Wallet](../general/ledger.md)
 
-> If you prefer video instructions, we have an easy to follow guide
-> [on YouTube](https://www.youtube.com/watch?v=hhUZ40ZWqkE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=19)
+> If you prefer video instructions for creating an account using Polkadot JS, we have an easy to follow guide for beginners
+> [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 
 ## DISCLAIMER: Key Security
 

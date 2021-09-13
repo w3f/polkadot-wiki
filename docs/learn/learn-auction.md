@@ -7,7 +7,7 @@ slug: ../learn-auction
 
 For a [parachain](learn-parachains.md) to be added to Polkadot it must inhabit one of the available
 parachain slots. A parachain slot is a scarce resource on Polkadot and only a limited number will be
-available. As parachains ramp up there may only be a few slots that are unlocked every few months.
+available. As parachains ramp up, there may only be a few slots that are unlocked every few months.
 The goal is to eventually have 100 parachain slots available on {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} (these will be split between parachains and the
 [parathread pool](learn-parathreads.md)). If a parachain wants to have guaranteed block inclusion at
@@ -151,7 +151,7 @@ highest bidder for any given slot lease period might not always win (see the
 A random number, which is based on the VRF used by Polkadot, is determined at each block.
 Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random
 number produced by the VRF is examined next to the threshold to determine if that block is the end
-of the auction withing the so-called _ending period_. Additionally, the VRF will pick a block from
+of the auction within the so-called _ending period_. Additionally, the VRF will pick a block from
 the last epoch to take the state of bids from (to mitigate some types of attacks from malicious
 validators).
 
@@ -176,9 +176,9 @@ Emily - 40 \* 4 = 160 for range 1 - 4
 
 Although Dave had the highest bid in accordance to token amount, when we do the calculations we see
 that since he only bid for a range of 4, he would need to share the slot with Emily who bid much
-less. Together Dave's and Emily's bids only equal a valuation of `560`.
+less. Together Dave's and Emily's bids only equals a valuation of `560`.
 
-Charlie's valuation for the entire range is `600` therefore Charlie is awarded the complete range of
+Charlie's valuation for the entire range is `600`. Therefore Charlie is awarded the complete range of
 the parachain slot.
 
 ## FAQ
@@ -200,7 +200,7 @@ duration :kusama }}, the mechanism can cope with well-funded parachains that wil
 a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem
 to occupy the durations that are not filled. For example, if a large, well-funded parachain has
 already acquired a slot for range 1 - 8, they would be very interested in getting the next slot that
-would open for 2 - 9. Under this mechanism that parachain could acquire period 5 (since that is the
+would open for 2 - 9. Under this mechanism that parachain could acquire just the period 9 (since that is the
 only one it needs) and allow range 2 - 8 of the second parachain slot to be occupied by another.
 
 ### Why is randomness difficult on blockchains?
@@ -229,4 +229,4 @@ their slots as they would be considered essential to the ecosystem's future.
 ## Resources
 
 - [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
-  W3F research page on parachain allocation that goes more in depth to the mechanism.
+  W3F research page on parachain allocation that goes more in depth to the mechanism

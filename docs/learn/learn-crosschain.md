@@ -5,6 +5,8 @@ sidebar_label: Cross-chain Message Passing (XCMP)
 slug: ../learn-crosschain
 ---
 
+<!-- Page Being Updated To Reflect Latest XCM Content -->
+
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
 ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output
 queue of one parachain into the input queue of the destination parachain. However, only the

@@ -154,7 +154,17 @@ Some examples of parachains:
 "Parachain consensus" is special in that it will follow the Polkadot Relay Chain. Parachains cannot
 use other consensus algorithms that provide their own finality. Only sovereign chains (that must
 bridge to the Relay Chain via a parachain) can control their own consensus. Parachains have control
-over how blocks are authored and by whom.
+over how blocks are authored and by whom. Polkadot guarantees valid state transitions. Executing a
+block finality outside the context of the relay chain is outside the scope of trust
+that Polkadot provides.
+
+#### How about parachains that are not Substrate-based?
+
+Substrate provides [FRAME Pallets](https://substrate.dev/docs/en/knowledgebase/runtime/frame#pallets) as
+part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
+that can be used for consensus. Polkadot being a Substrate-based chain relies on BABE as the block
+production scheme and GRANDPA as the finality gadget as part of its consensus mechanism. Collectively,
+this is a [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block finality are separate. Parachains only need to produce blocks as they can rely on the relay chain to validate the state transitions. Thus, parachains can have their own block production where the [collators](learn-collator.md) act as the block producers, even if the parachain is not Substrate-based.
 
 ### How will parachain slots be distributed?
 
@@ -198,10 +208,7 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 Parachain Development Kits are a set of tools that enable developers to create their own
 applications as parachains. For more info see [here](../build/build-pdk.md).
 
-### Deploying parachains
-
-Please see the [Cumulus repository](https://github.com/paritytech/cumulus#rococo) README for
-information on compiling and deploying a parachain.
+Please see the [Parachain Development page](../build/build-parachains) for more information.
 
 ## Resources
 
