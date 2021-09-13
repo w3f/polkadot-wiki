@@ -241,7 +241,7 @@ connect to Polkadot can support arbitrary state transitions, they can support sm
 
 Substrate presently supports smart contracts out-of-the-box in two ways:
 
-- The EVM pallet offered by [Frontier](https://github.com/paritytech/frontier).
+- The EVM pallet offered by [Frontier][].
 - The [Contracts pallet][substrate contracts] in the FRAME library for Wasm based contracts.
 
 ### Frontier EVM Contracts
@@ -363,3 +363,4 @@ Good luck!
 [plasm plasma]: https://github.com/staketechnologies/Plasm
 [moonbeam]: https://moonbeam.network
 [moonbeam docs]: https://docs.moonbeam.network/
+[frontier]: (https://github.com/paritytech/frontier)
