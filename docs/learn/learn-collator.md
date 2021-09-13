@@ -24,9 +24,9 @@ nefarious power collators have is transaction censorship. To prevent censorship,
 needs to ensure that there exist some neutral collators - but not necessarily a majority. Theoretically,
 the censorship problem is solved with having just one honest collator.
 
-### XCMP
+### XCM
 
-Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-crosschain.md). By being
+Collators are a key element of [XCM (Cross-Chain Message Passing)](learn-crosschain.md). By being
 full nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for
 them to send messages from parachain A to parachain B.
 

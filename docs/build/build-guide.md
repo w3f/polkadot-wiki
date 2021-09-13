@@ -1,12 +1,9 @@
 ---
-id: build-build-with-polkadot
+id: build-guide
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 slug: ../build-build-with-polkadot
 ---
-
-_This article is the maintained version of the blog post:
-[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
@@ -249,9 +246,9 @@ Substrate presently supports smart contracts out-of-the-box in two ways:
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts (EVM)
-natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses can also
-be mapped directly to and from Substrate's SS58 scheme from existing accounts.
+[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts
+(EVM) natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses
+can also be mapped directly to and from Substrate's SS58 scheme from existing accounts.
 
 ### Contracts Pallet
 
@@ -360,11 +357,10 @@ As always, keep up to date with Polkadot and Kusama by following the
 
 Good luck!
 
-[substrate contracts]: https://github.com/paritytech/substrate/tree/master/frame/contracts
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
 [edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts
 [plasm plasma]: https://github.com/staketechnologies/Plasm
 [moonbeam]: https://moonbeam.network
 [moonbeam docs]: https://docs.moonbeam.network/
-[frontier]: https://github.com/paritytech/frontier
+[frontier]: (https://github.com/paritytech/frontier)

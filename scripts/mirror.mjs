@@ -34,7 +34,7 @@ const mirrored_learn = [
   "learn-crowdloans",
 ];
 
-const mirrored_build = ["build-build-with-polkadot", "build-parachains-rococo"];
+const mirrored_build = ["build-guide", "build-parachains"];
 
 const mirrored_maintain = [
   "maintain-guides-how-to-stop-validating",
