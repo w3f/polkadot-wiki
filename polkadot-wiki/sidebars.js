@@ -111,6 +111,7 @@ module.exports = {
             "learn/learn-implementers-guide",
             "build/build-cumulus",
             "build/build-parachains-rococo",
+            "build/build-storage",
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-ss58-registry",
