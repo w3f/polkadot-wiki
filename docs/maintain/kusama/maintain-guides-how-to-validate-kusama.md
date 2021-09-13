@@ -159,6 +159,60 @@ sudo ntpq -p
 
 ### Building and Installing the `polkadot` Binary
 
+#### Optional: Installation via Package Managers
+
+The Polkadot Binary in included in `Debian` derivatives (i.e. **Debain**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
+
+#### Debian-based (Debian, Ubuntu)
+
+Run the following commands as the root user:
+
+```ssh
+# Import the security@parity.io GPG key
+gpg --recv-keys --keyserver hkps://keys.mailvelope.com 9D4B2B6EB8F97156D19669A9FF0812D491B96798
+gpg --export 9D4B2B6EB8F97156D19669A9FF0812D491B96798 > /usr/share/keyrings/parity.gpg
+# Add the Parity repository and update the package index
+echo 'deb [signed-by=/usr/share/keyrings/parity.gpg] https://releases.parity.io/deb release main' > /etc/apt/sources.list.d/parity.list
+apt update
+# Install the `parity-keyring` package - This will ensure the GPG key
+# used by APT remains up-to-date
+apt install parity-keyring
+# Install polkadot
+apt install polkadot
+```
+
+#### RPM-based (Fedora, CentOS)
+
+Run the following commands as the root user:
+
+```bash
+# Install dnf-plugins-core (This might already be installed)
+dnf install dnf-plugins-core
+# Add the repository and enable it
+dnf config-manager --add-repo https://releases.parity.io/rpm/polkadot.repo
+dnf config-manager --set-enabled polkadot
+# Install polkadot (You may have to confirm the import of the GPG key, which
+# should have the following fingerprint: 9D4B2B6EB8F97156D19669A9FF0812D491B96798)
+dnf install polkadot
+```
+
+After installing Polkadot, you can verify the installation by running
+
+```bash
+which polkadot
+```
+
+It should return
+
+```bash
+/usr/bin/polkadot
+```
+
+> By default, the Polkadot systemd service is disabled.
+> To start the service, run `sudo systemctl start polkadot.service`.
+
+### Polkadot Binary
+
 You will need to build the `polkadot` binary from the
 [paritytech/polkadot](https://github.com/paritytech/polkadot) repository on GitHub using the source
 code available in the **v0.8** branch.
