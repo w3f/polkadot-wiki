@@ -169,11 +169,11 @@ You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-va
 ### Getting Rococo Tokens
 
 Rococo is a parachain testnet. Tokens are given directly to teams working on parachains or exploring
-the [crosschain](learn-crosschain.md) message passing aspects of this testnet. General users can
+the [cross consensus](learn-cross-consensus.md) message passing aspects of this testnet. General users can
 obtain ROC by posting `!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
 [#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org).
 
-Learn more about Rococo on its [dedicated wiki page](../build/build-parachains-rococo.md).
+Learn more about Rococo on its [dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
 ## Kusama Tokens
 

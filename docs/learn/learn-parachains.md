@@ -7,8 +7,8 @@ slug: ../learn-parachains
 ---
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains-rococo.md) :polkadot }} >
-> {{ kusama: [Rococo page](../build/mirror-build-parachains-rococo.md) :kusama }}.
+> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains.md##testing-a-parachains:-rococo-testnet):polkadot }} >
+> {{ kusama: [Rococo page](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
 
 ![One parachain](../assets/network/one_parachain.png)
 
@@ -19,7 +19,7 @@ of parallelized chains that run parallel to the Relay Chain. Due to their parall
 able to parallelize transaction processing and achieve scalability of the
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} system. They
 [share in the security](learn-security.md) of the entire network and can communicate with other
-parachains through [XCMP](learn-crosschain.md).
+parachains through [XCM](learn-cross-consensus.md).
 
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
 of the collator node is to maintain a full-node of the parachain, retain all necessary information
@@ -206,7 +206,7 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 ### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
-applications as parachains. For more info see [here](../build/build-pdk.md).
+applications as parachains. For more info see [PDK content](<../build/build-parachains.md##parachain-development-kit-(PDK)>).
 
 Please see the [Parachain Development page](../build/build-parachains) for more information.
 
