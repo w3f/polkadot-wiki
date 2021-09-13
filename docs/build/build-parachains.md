@@ -2,7 +2,7 @@
 id: build-parachains
 title: Parachain Development
 sidebar_label: Parachain Development
-slug: ../build-parachains
+slug: ../build-pdk
 ---
 
 This section will cover the motivation to build a parachian or parathread, the tools available
@@ -29,6 +29,8 @@ heterogeneous multi-chain approach will play a key part in the overall advanceme
 decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
 internet of the future will have many different types of blockchains working together.
 
+### Benefits of Deploying on Polkadot
+
 > The parachain model attempts to alleviate five key _build_ failures of present technology stacks,
 > as described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper.pdf):
 >
@@ -40,8 +42,6 @@ internet of the future will have many different types of blockchains working tog
 >   decentralised system?
 > - **Applicability**: Does the technology address a burning need on its own? Is other “middleware”
 >   required to bridge the gap to actual applications?
-
-### Benefits of Deploying on Polkadot
 
 #### Pooled Security
 

@@ -33,7 +33,7 @@ module.exports = {
             "learn/learn-treasury",
             "learn/learn-registrar",
             "build/build-guide",
-            "build-parachains",
+            "build/build-parachains",
             "maintain/kusama/maintain-guides-society-kusama",
             "general/kusama/kusama-social-recovery",
             "maintain/doc-maintain-guides-validator-community",
