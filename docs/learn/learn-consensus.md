@@ -70,7 +70,7 @@ in this way:
 > We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
 > participants after some unspecified time.
 
-# Hybrid Consensus
+## Hybrid Consensus
 
 There are two protocols we use when we talk about the consensus protocol of Polkadot, GRANDPA and
 BABE (Blind Assignment for Blockchain Extension). We talk about both of these because Polkadot uses
