@@ -67,7 +67,7 @@ likely be approved by the network stakeholders only in rare scenarios.
 likely be one of the first common good parachains. Statemint is a public utility chain in that it
 adds functionality not available in the Relay Chain, namely the creation and management of assets.
 
-Statemint will support both funglible and non-fungible assets. The chain offers an interface similar
+Statemint will support both fungible and non-fungible assets. The chain offers an interface similar
 to ERC-20 for fungible assets and ERC-721 for non-fungible tokens. These interfaces are in the logic
 of the chain itself; by encoding this logic directly into the Statemint runtime, token storage and
 actions do not need to be metered and can happen faster and cheaper.
@@ -78,7 +78,7 @@ Chain, and vice versa, so users can transfer DOT from the Relay Chain to their a
 and back.
 
 Because of the efficiency of executing logic in a parachain, the transaction fees and deposits
-(including the existential deposit) are about 1/10 of their value on the Relay Chain. These low fee
+(including the existential deposit) are about 1/10th of their value on the Relay Chain. These low fee
 levels mean that Statemint is well suited to handling DOT balances and transfers as well as managing
 on-chain assets.
 
