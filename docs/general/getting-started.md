@@ -124,7 +124,7 @@ This is recommended for users with backgrounds of all levels, and the course is 
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-account-generation"> 
-      <img src="/docs/assets/guides/polkadot-guide/account.png" alt="Drawing" width="250" height="150"/>
+      <img src="/img/polkadot-guide/account.png" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Creating an Account</h5>
         </div> 
