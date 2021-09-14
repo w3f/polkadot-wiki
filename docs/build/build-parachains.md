@@ -240,6 +240,22 @@ Rococo testnet "Custom Node" underneath "Development", following the
 
 ![parachains on polkadotjs](../assets/polkadotjs_network_parachains.png)
 
+### Parachain Playground
+
+You can also take advanatge of the account functions offered on PolkadotJS Apps
+to test the entire Parachain onboarding process (e.g. crowdloans, auctions, registrations).
+
+Start a local node on [Westend](../maintain/maintain-networks.md###westend-test-network)
+by running:
+
+```bash
+polkadot --chain=westend-dev --alice
+```
+
+Then, connect your local node with PolkadotJS Apps.
+
+![parachains playground](../assets/parachain-playground.png)
+
 ## Deploy a Parachain or Parathread on Polkadot
 
 Substrate-based chains, including the Polkadot and Kusama relay chains, use an
