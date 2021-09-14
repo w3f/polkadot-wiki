@@ -1,16 +1,13 @@
 ---
-id: build-build-with-polkadot
+id: build-guide
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
 slug: ../build-build-with-polkadot
 ---
 
-_This article is the maintained version of the blog post:
-[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)._
-
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
-[XCMP](../learn/learn-crosschain.md). With the advent of [PDKs](build-pdk.md) like Parity Substrate and
+[XCM](../learn/learn-cross-consensus.md). With the advent of [PDKs](<build-parachains.md##parachain-development-kit-(PDK)>) like Parity Substrate and
 Cumulus, the time it takes to develop and launch a new chain has dropped significantly. While before
 it would take years to launch a new chain, now it may only take weeks or even days.
 
@@ -157,7 +154,7 @@ applicable to you.
 
 Now that you have determined that building a parachain or parathread is the right approach for your
 new project, the next step is to decide which framework to use. Frameworks for building a parachain
-or parathread are known as parachain development kits ([PDK](build-pdk.md)s). Currently, the only
+or parathread are known as parachain development kits ([PDKs](<build-parachains.md##parachain-development-kit-(PDK)>). Currently, the only
 PDK available is Substrate and Cumulus from Parity Technologies.
 
 In the future, there will be many different PDKs available in different programming languages, just
@@ -200,7 +197,7 @@ Polkadot as either a parachain or parathread.
 
 #### Cumulus
 
-The goal of [Cumulus](build-cumulus.md) is to be an extension of Substrate that will make any
+The goal of [Cumulus](build-parachains.md###cumulus) is to be an extension of Substrate that will make any
 Substrate runtime compatible with Polkadot.
 
 It handles the network compatibility overhead that any parachain would need to implement to be
@@ -249,9 +246,9 @@ Substrate presently supports smart contracts out-of-the-box in two ways:
 
 ### Frontier EVM Contracts
 
-[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts (EVM)
-natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses can also
-be mapped directly to and from Substrate's SS58 scheme from existing accounts.
+[Frontier][] is the suite of tools that enables a Substrate chain to run Ethereum contacts
+(EVM) natively with the same API/RPC interface Ethereum exposes on Substrate. Ethereum Addresses
+can also be mapped directly to and from Substrate's SS58 scheme from existing accounts.
 
 ### Contracts Pallet
 
@@ -360,11 +357,10 @@ As always, keep up to date with Polkadot and Kusama by following the
 
 Good luck!
 
-[substrate contracts]: https://github.com/paritytech/substrate/tree/master/frame/contracts
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
 [edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts
 [plasm plasma]: https://github.com/staketechnologies/Plasm
 [moonbeam]: https://moonbeam.network
 [moonbeam docs]: https://docs.moonbeam.network/
-[frontier]: https://github.com/paritytech/frontier
+[frontier]: (https://github.com/paritytech/frontier)

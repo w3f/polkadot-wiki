@@ -19,7 +19,7 @@ Kusama was released as an early version of the same code to be used in Polkadot,
 share the same underlying architecture: a multichain, heterogeneously-sharded design based on
 [Nominated Proof of Stake (NPoS)](learn-consensus.md). Both networks also share key innovations like
 on-chain [governance](learn-governance.md), hot-swappable runtimes for forkless, on-chain upgrades,
-and [Cross-Chain Message Passing (XCMP)](learn-crosschain.md) for interoperability. Governance on
+and [Cross-Conesnsus Message Passing (XCM)](learn-cross-consensus.md) for interoperability. Governance on
 both Polkadot and Kusama is designed to be decentralized and permissionless, giving a say in how the
 network is run to everyone who owns the native token (DOT for Polkadot, KSM for Kusama). Therefore,
 **over time the networks will evolve independently, converging or diverging according to the

@@ -1,0 +1,1069 @@
+:root {
+  --primaryColor: #e6007a;
+  --secondaryColor: #172026;
+  --snowColor: #efefef;
+  --silverColor: #b7b8bb;
+  --nickelColor: #6d7278;
+  --sansFontFamily: "Work Sans", sans-serif !important;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  .mainpage-column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+body {
+  font-family: var(--sansFontFamily);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+}
+
+.text-dark {
+  color: var(--secondaryColor) !important;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.fixedHeaderContainer {
+  background: white;
+}
+
+.fixedHeaderContainer .headerWrapper {
+  max-width: 1400px !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .fixedHeaderContainer {
+    /* border-bottom: solid 1px transparent; */
+    border-bottom: solid 1px var(--snowColor);
+  }
+  body.sideNavVisible.separateOnPageNav .fixedHeaderContainer {
+    border-bottom: solid 1px var(--snowColor);
+  }
+}
+
+.fixedHeaderContainer header .headerTitleWithLogo {
+  display: none;
+}
+
+/*
+   Navigation
+   ========================================================================== */
+
+.navigationSlider .slidingNav ul li > a {
+  color: var(--silverColor);
+}
+
+.navigationSlider .slidingNav ul li > a:visited {
+  color: var(--silverColor);
+}
+
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li > a:focus {
+  background: none;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+  background: none;
+  color: var(--silverColor);
+}
+
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a:hover {
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.navigationSlider .slidingNav ul li.siteNavItemActive > a {
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navigationSlider .slidingNav ul li > a {
+    color: var(--silverColor);
+  }
+
+  .navigationSlider .slidingNav ul li > a:visited {
+    color: var(--silverColor);
+  }
+
+  .navigationSlider .slidingNav ul li > a:hover,
+  .navigationSlider .slidingNav ul li > a:focus {
+    color: var(--secondaryColor);
+  }
+
+  .navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+    color: var(--silverColor);
+  }
+
+  .navigationSlider .slidingNav ul li.siteNavGroupActive > a:hover {
+    color: var(--secondaryColor);
+  }
+
+  .navigationSlider .slidingNav ul li.siteNavItemActive > a {
+    color: var(--secondaryColor);
+  }
+}
+
+/*
+   Search
+   ========================================================================== */
+
+.navSearchWrapper.reactNavSearchWrapper::before {
+  border: 3px solid var(--silverColor);
+  transition: border 0.2s ease-in-out;
+  width: 13px;
+  height: 13px;
+}
+
+.navSearchWrapper.reactNavSearchWrapper:hover::before {
+  border: 3px solid var(--secondaryColor);
+}
+
+.navSearchWrapper.reactNavSearchWrapper::after {
+  background: var(--silverColor);
+  transition: background 0.2s ease-in-out;
+}
+
+.navSearchWrapper.reactNavSearchWrapper:hover::after {
+  background: var(--secondaryColor);
+}
+
+.reactNavSearchWrapper input#search_input_react {
+  color: var(--secondaryColor);
+  background: white;
+  border: solid 1px var(--snowColor);
+  font-family: var(--sansFontFamily);
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.reactNavSearchWrapper input#search_input_react::placeholder {
+  color: var(--silverColor);
+}
+
+.reactNavSearchWrapper input#search_input_react:hover::placeholder {
+  /* color: var(--secondaryColor); */
+}
+
+.reactNavSearchWrapper input#search_input_react:focus,
+.reactNavSearchWrapper input#search_input_react:active {
+  color: var(--secondaryColor);
+  border: solid 1px var(--snowColor);
+  background: var(--snowColor);
+}
+
+/*
+   Algolia search widget
+   ========================================================================== */
+/*! docsearch 1.5.0 | © Algolia | github.com/algolia/docsearch */
+
+.navSearchWrapper .aa-dropdown-menu {
+  /* background: var(--snowColor); */
+  background: white;
+  border: none;
+  color: #393939;
+  font-size: 14px;
+  left: auto !important;
+  line-height: 1.2em;
+  right: 0 !important;
+  border-radius: 32px;
+  padding: 0 32px 22px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border-radius: 1.5rem;
+  margin-top: 15px;
+}
+
+.navSearchWrapper .aa-dropdown-menu[style*="display: block;"] {
+  -webkit-animation: fade-in-up 0.2s linear forwards;
+  animation: fade-in-up 0.2s linear forwards;
+}
+
+.algolia-docsearch-suggestion {
+  color: #333;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.algolia-docsearch-suggestion__secondary {
+  border-top: none !important;
+}
+
+.algolia-docsearch-suggestion--category-header {
+  display: none;
+  background: white !important;
+  border-bottom: solid 1px var(--snowColor);
+  color: black !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  padding: 30px 0 15px 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.algolia-docsearch-suggestion__main
+  .algolia-docsearch-suggestion--category-header {
+  display: block;
+  color: black !important;
+}
+
+.algolia-docsearch-suggestion--highlight {
+  padding: 0;
+  color: #0064e1 !important;
+  background: none;
+  font-weight: 700;
+  background: white !important;
+}
+
+.algolia-docsearch-suggestion--category-header
+  .algolia-docsearch-suggestion--highlight {
+  color: inherit;
+  background: white !important;
+}
+
+.aa-cursor .algolia-docsearch-suggestion--content {
+  color: #0064e1;
+  background: white !important;
+}
+
+.aa-cursor .algolia-docsearch-suggestion--content {
+  color: var(--primaryColor) !important;
+}
+
+.aa-cursor .algolia-docsearch-suggestion {
+  background: white !important;
+}
+
+.algolia-docsearch-suggestion--subcategory-column {
+  display: none;
+  cursor: default;
+  background: white !important;
+  text-align: left !important;
+  padding-left: 0 !important;
+  border-right: solid 1px var(--snowColor) !important;
+}
+
+.algolia-docsearch-suggestion--text {
+  display: none;
+}
+
+.algolia-docsearch-suggestion--content {
+  padding: 3px 5px;
+  width: 100%;
+  border-top: none !important;
+  border-bottom: none;
+}
+
+.algolia-docsearch-suggestion__main .algolia-docsearch-suggestion--content,
+.algolia-docsearch-suggestion__secondary
+  .algolia-docsearch-suggestion--content {
+  border-top: 0;
+}
+
+.algolia-docsearch-suggestion--subcategory-inline {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.algolia-docsearch-suggestion--subcategory-inline:after {
+  content: " › ";
+}
+
+.algolia-docsearch-suggestion--title {
+  display: inline;
+}
+
+.algolia-docsearch-footer {
+  border-top: none !important;
+  text-align: right;
+  font-size: 12px;
+  padding: 30px 2px 0 0;
+  color: var(--snowColor) !important;
+}
+
+.algolia-docsearch-footer .algolia-docsearch-footer--logo {
+  display: inline-block !important;
+  width: 111px;
+  height: 15px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 130 18' xmlns='http://www.w3.org/2000/svg'><defs><linearGradient x1='-36.868%' y1='134.936%' x2='129.432%' y2='-27.7%' id='a'><stop stop-color='%2300AEFF' offset='0%'/><stop stop-color='%233369E7' offset='100%'/></linearGradient></defs><g fill='none' fill-rule='evenodd'><path d='M59.399.022h13.299a2.372 2.372 0 0 1 2.377 2.364V15.62a2.372 2.372 0 0 1-2.377 2.364H59.399a2.372 2.372 0 0 1-2.377-2.364V2.381A2.368 2.368 0 0 1 59.399.022z' fill='url(%23a)'/><path d='M66.257 4.56c-2.815 0-5.1 2.272-5.1 5.078 0 2.806 2.284 5.072 5.1 5.072 2.815 0 5.1-2.272 5.1-5.078 0-2.806-2.279-5.072-5.1-5.072zm0 8.652c-1.983 0-3.593-1.602-3.593-3.574 0-1.972 1.61-3.574 3.593-3.574 1.983 0 3.593 1.602 3.593 3.574a3.582 3.582 0 0 1-3.593 3.574zm0-6.418v2.664c0 .076.082.131.153.093l2.377-1.226c.055-.027.071-.093.044-.147a2.96 2.96 0 0 0-2.465-1.487c-.055 0-.11.044-.11.104l.001-.001zm-3.33-1.956l-.312-.311a.783.783 0 0 0-1.106 0l-.372.37a.773.773 0 0 0 0 1.101l.307.305c.049.049.121.038.164-.011.181-.245.378-.479.597-.697.225-.223.455-.42.707-.599.055-.033.06-.109.016-.158h-.001zm5.001-.806v-.616a.781.781 0 0 0-.783-.779h-1.824a.78.78 0 0 0-.783.779v.632c0 .071.066.12.137.104a5.736 5.736 0 0 1 1.588-.223c.52 0 1.035.071 1.534.207a.106.106 0 0 0 .131-.104z' fill='%23FFF'/><path d='M102.162 13.762c0 1.455-.372 2.517-1.123 3.193-.75.676-1.895 1.013-3.44 1.013-.564 0-1.736-.109-2.673-.316l.345-1.689c.783.163 1.819.207 2.361.207.86 0 1.473-.174 1.84-.523.367-.349.548-.866.548-1.553v-.349a6.374 6.374 0 0 1-.838.316 4.151 4.151 0 0 1-1.194.158 4.515 4.515 0 0 1-1.616-.278 3.385 3.385 0 0 1-1.254-.817 3.744 3.744 0 0 1-.811-1.351c-.192-.539-.29-1.504-.29-2.212 0-.665.104-1.498.307-2.054a3.925 3.925 0 0 1 .904-1.433 4.124 4.124 0 0 1 1.441-.926 5.31 5.31 0 0 1 1.945-.365c.696 0 1.337.087 1.961.191a15.86 15.86 0 0 1 1.588.332v8.456h-.001zm-5.954-4.206c0 .893.197 1.885.592 2.299.394.414.904.621 1.528.621.34 0 .663-.049.964-.142a2.75 2.75 0 0 0 .734-.332v-5.29a8.531 8.531 0 0 0-1.413-.18c-.778-.022-1.369.294-1.786.801-.411.507-.619 1.395-.619 2.223zm16.12 0c0 .719-.104 1.264-.318 1.858a4.389 4.389 0 0 1-.904 1.52c-.389.42-.854.746-1.402.975-.548.229-1.391.36-1.813.36-.422-.005-1.26-.125-1.802-.36a4.088 4.088 0 0 1-1.397-.975 4.486 4.486 0 0 1-.909-1.52 5.037 5.037 0 0 1-.329-1.858c0-.719.099-1.411.318-1.999.219-.588.526-1.09.92-1.509.394-.42.865-.741 1.402-.97a4.547 4.547 0 0 1 1.786-.338 4.69 4.69 0 0 1 1.791.338c.548.229 1.019.55 1.402.97.389.42.69.921.909 1.509.23.588.345 1.28.345 1.999h.001zm-2.191.005c0-.921-.203-1.689-.597-2.223-.394-.539-.948-.806-1.654-.806-.707 0-1.26.267-1.654.806-.394.539-.586 1.302-.586 2.223 0 .932.197 1.558.592 2.098.394.545.948.812 1.654.812.707 0 1.26-.272 1.654-.812.394-.545.592-1.166.592-2.098h-.001zm6.962 4.707c-3.511.016-3.511-2.822-3.511-3.274L113.583.926l2.142-.338v10.003c0 .256 0 1.88 1.375 1.885v1.792h-.001zm3.774 0h-2.153V5.072l2.153-.338v9.534zm-1.079-10.542c.718 0 1.304-.578 1.304-1.291 0-.714-.581-1.291-1.304-1.291-.723 0-1.304.578-1.304 1.291 0 .714.586 1.291 1.304 1.291zm6.431 1.013c.707 0 1.304.087 1.786.262.482.174.871.42 1.156.73.285.311.488.735.608 1.182.126.447.186.937.186 1.476v5.481a25.24 25.24 0 0 1-1.495.251c-.668.098-1.419.147-2.251.147a6.829 6.829 0 0 1-1.517-.158 3.213 3.213 0 0 1-1.178-.507 2.455 2.455 0 0 1-.761-.904c-.181-.37-.274-.893-.274-1.438 0-.523.104-.855.307-1.215.208-.36.487-.654.838-.883a3.609 3.609 0 0 1 1.227-.49 7.073 7.073 0 0 1 2.202-.103c.263.027.537.076.833.147v-.349c0-.245-.027-.479-.088-.697a1.486 1.486 0 0 0-.307-.583c-.148-.169-.34-.3-.581-.392a2.536 2.536 0 0 0-.915-.163c-.493 0-.942.06-1.353.131-.411.071-.75.153-1.008.245l-.257-1.749c.268-.093.668-.185 1.183-.278a9.335 9.335 0 0 1 1.66-.142l-.001-.001zm.181 7.731c.657 0 1.145-.038 1.484-.104v-2.168a5.097 5.097 0 0 0-1.978-.104c-.241.033-.46.098-.652.191a1.167 1.167 0 0 0-.466.392c-.121.169-.175.267-.175.523 0 .501.175.79.493.981.323.196.75.289 1.293.289h.001zM84.109 4.794c.707 0 1.304.087 1.786.262.482.174.871.42 1.156.73.29.316.487.735.608 1.182.126.447.186.937.186 1.476v5.481a25.24 25.24 0 0 1-1.495.251c-.668.098-1.419.147-2.251.147a6.829 6.829 0 0 1-1.517-.158 3.213 3.213 0 0 1-1.178-.507 2.455 2.455 0 0 1-.761-.904c-.181-.37-.274-.893-.274-1.438 0-.523.104-.855.307-1.215.208-.36.487-.654.838-.883a3.609 3.609 0 0 1 1.227-.49 7.073 7.073 0 0 1 2.202-.103c.257.027.537.076.833.147v-.349c0-.245-.027-.479-.088-.697a1.486 1.486 0 0 0-.307-.583c-.148-.169-.34-.3-.581-.392a2.536 2.536 0 0 0-.915-.163c-.493 0-.942.06-1.353.131-.411.071-.75.153-1.008.245l-.257-1.749c.268-.093.668-.185 1.183-.278a8.89 8.89 0 0 1 1.66-.142l-.001-.001zm.186 7.736c.657 0 1.145-.038 1.484-.104v-2.168a5.097 5.097 0 0 0-1.978-.104c-.241.033-.46.098-.652.191a1.167 1.167 0 0 0-.466.392c-.121.169-.175.267-.175.523 0 .501.175.79.493.981.318.191.75.289 1.293.289h.001zm8.682 1.738c-3.511.016-3.511-2.822-3.511-3.274L89.461.926l2.142-.338v10.003c0 .256 0 1.88 1.375 1.885v1.792h-.001z' fill='%23182359'/><path d='M5.027 11.025c0 .698-.252 1.246-.757 1.644-.505.397-1.201.596-2.089.596-.888 0-1.615-.138-2.181-.414v-1.214c.358.168.739.301 1.141.397.403.097.778.145 1.125.145.508 0 .884-.097 1.125-.29a.945.945 0 0 0 .363-.779.978.978 0 0 0-.333-.747c-.222-.204-.68-.446-1.375-.725-.716-.29-1.221-.621-1.515-.994-.294-.372-.44-.82-.44-1.343 0-.655.233-1.171.698-1.547.466-.376 1.09-.564 1.875-.564.752 0 1.5.165 2.245.494l-.408 1.047c-.698-.294-1.321-.44-1.869-.44-.415 0-.73.09-.945.271a.89.89 0 0 0-.322.717c0 .204.043.379.129.524.086.145.227.282.424.411.197.129.551.299 1.063.51.577.24.999.464 1.268.671.269.208.466.442.591.704.125.261.188.569.188.924l-.001.002zm3.98 2.24c-.924 0-1.646-.269-2.167-.808-.521-.539-.782-1.281-.782-2.226 0-.97.242-1.733.725-2.288.483-.555 1.148-.833 1.993-.833.784 0 1.404.238 1.858.714.455.476.682 1.132.682 1.966v.682H7.357c.018.577.174 1.02.467 1.329.294.31.707.465 1.241.465.351 0 .678-.033.98-.099a5.1 5.1 0 0 0 .975-.33v1.026a3.865 3.865 0 0 1-.935.312 5.723 5.723 0 0 1-1.08.091l.002-.001zm-.231-5.199c-.401 0-.722.127-.964.381s-.386.625-.432 1.112h2.696c-.007-.491-.125-.862-.354-1.115-.229-.252-.544-.379-.945-.379l-.001.001zm7.692 5.092l-.252-.827h-.043c-.286.362-.575.608-.865.739-.29.131-.662.196-1.117.196-.584 0-1.039-.158-1.367-.473-.328-.315-.491-.761-.491-1.337 0-.612.227-1.074.682-1.386.455-.312 1.148-.482 2.079-.51l1.026-.032v-.317c0-.38-.089-.663-.266-.851-.177-.188-.452-.282-.824-.282-.304 0-.596.045-.876.134a6.68 6.68 0 0 0-.806.317l-.408-.902a4.414 4.414 0 0 1 1.058-.384 4.856 4.856 0 0 1 1.085-.132c.756 0 1.326.165 1.711.494.385.329.577.847.577 1.552v4.002h-.902l-.001-.001zm-1.88-.859c.458 0 .826-.128 1.104-.384.278-.256.416-.615.416-1.077v-.516l-.763.032c-.594.021-1.027.121-1.297.298s-.406.448-.406.814c0 .265.079.47.236.615.158.145.394.218.709.218h.001zm7.557-5.189c.254 0 .464.018.628.054l-.124 1.176a2.383 2.383 0 0 0-.559-.064c-.505 0-.914.165-1.227.494-.313.329-.47.757-.47 1.284v3.105h-1.262V7.218h.988l.167 1.047h.064c.197-.354.454-.636.771-.843a1.83 1.83 0 0 1 1.023-.312h.001zm4.125 6.155c-.899 0-1.582-.262-2.049-.787-.467-.525-.701-1.277-.701-2.259 0-.999.244-1.767.733-2.304.489-.537 1.195-.806 2.119-.806.627 0 1.191.116 1.692.349l-.381 1.015c-.534-.208-.974-.312-1.321-.312-1.028 0-1.542.682-1.542 2.046 0 .666.128 1.166.384 1.501.256.335.631.502 1.125.502a3.23 3.23 0 0 0 1.595-.419v1.101a2.53 2.53 0 0 1-.722.285 4.356 4.356 0 0 1-.932.086v.002zm8.277-.107h-1.268V9.506c0-.458-.092-.8-.277-1.026-.184-.226-.477-.338-.878-.338-.53 0-.919.158-1.168.475-.249.317-.373.848-.373 1.593v2.949h-1.262V4.801h1.262v2.122c0 .34-.021.704-.064 1.09h.081a1.76 1.76 0 0 1 .717-.666c.306-.158.663-.236 1.072-.236 1.439 0 2.159.725 2.159 2.175v3.873l-.001-.001zm7.649-6.048c.741 0 1.319.269 1.732.806.414.537.62 1.291.62 2.261 0 .974-.209 1.732-.628 2.275-.419.542-1.001.814-1.746.814-.752 0-1.336-.27-1.751-.811h-.086l-.231.704h-.945V4.801h1.262v1.987l-.021.655-.032.553h.054c.401-.591.992-.886 1.772-.886zm-.328 1.031c-.508 0-.875.149-1.098.448-.224.299-.339.799-.346 1.501v.086c0 .723.115 1.247.344 1.571.229.324.603.486 1.123.486.448 0 .787-.177 1.018-.532.231-.354.346-.867.346-1.536 0-1.35-.462-2.025-1.386-2.025l-.001.001zm3.244-.924h1.375l1.209 3.368c.183.48.304.931.365 1.354h.043c.032-.197.091-.436.177-.717.086-.281.541-1.616 1.364-4.004h1.364l-2.541 6.73c-.462 1.235-1.232 1.853-2.31 1.853-.279 0-.551-.03-.816-.091v-.999c.19.043.406.064.65.064.609 0 1.037-.353 1.284-1.058l.22-.559-2.385-5.941h.001z' fill='%231D3657'/></g></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  padding: 0px !important;
+}
+
+@media (min-width: 568px) {
+  .aa-dropdown-menu {
+    min-width: 400px;
+  }
+  .algolia-docsearch-suggestion--text {
+    display: block;
+    font-size: 0.9em;
+    padding: 2px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .aa-dropdown-menu {
+    min-width: 600px;
+  }
+  .algolia-docsearch-suggestion {
+    display: table;
+    width: 100%;
+  }
+  .algolia-docsearch-suggestion__secondary {
+    border-top: 1px solid #606060;
+  }
+  .algolia-docsearch-suggestion--subcategory-column {
+    border-right: 1px solid #606060;
+    background: #f1f3f5;
+    color: #555;
+    display: table-cell;
+    overflow: hidden;
+    padding: 5px 7px 5px 5px;
+    text-align: right;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    width: 135px;
+    max-width: 135px;
+    min-width: 135px;
+    /* background: black !important; */
+  }
+  .algolia-docsearch-suggestion--subcategory-column-text {
+    display: none;
+  }
+  .algolia-docsearch-suggestion__secondary
+    .algolia-docsearch-suggestion--subcategory-column-text {
+    display: block;
+  }
+  .algolia-docsearch-suggestion--content {
+    display: table-cell;
+    padding: 5px 10px;
+  }
+  .algolia-docsearch-suggestion--subcategory-inline {
+    display: none;
+  }
+  .algolia-docsearch-suggestion--title {
+    font-weight: 600;
+  }
+  .algolia-docsearch-suggestion--text {
+    display: block;
+    font-weight: normal;
+    padding: 2px;
+  }
+}
+
+/*
+   Contribute button
+   ========================================================================== */
+
+@media only screen and (min-width: 1024px) {
+  .navigationSlider .slidingNav > ul > li a[href*="contributing"] {
+    background: white;
+    height: 100%;
+    border: solid 1px var(--primaryColor);
+    border-radius: 20px;
+    color: var(--primaryColor);
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    padding: 0 16px;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+
+  .navigationSlider .slidingNav > ul > li a[href*="contributing"]:hover {
+    background: var(--primaryColor);
+    color: white;
+  }
+}
+
+/*
+   Languages
+   ========================================================================== */
+
+#languages-menu {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#languages-menu img {
+  opacity: 0.7;
+}
+
+#languages-dropdown {
+  border: none;
+  background: white;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border-radius: 1.5rem;
+  width: auto;
+  right: 0;
+  top: 90px;
+  margin: 0 15px;
+}
+
+#languages-dropdown.visible {
+  -webkit-animation: fade-in-up 0.2s linear forwards;
+  animation: fade-in-up 0.2s linear forwards;
+}
+
+#languages-dropdown-items {
+  margin: 12px 0;
+  background: transparent;
+}
+
+#languages-dropdown-items > li a {
+  padding: 12px 24px;
+  color: var(--secondaryColor);
+}
+
+#languages-dropdown-items > li a:visited {
+  color: var(--secondaryColor);
+}
+
+#languages-dropdown-items > li a:hover {
+  color: var(--primaryColor);
+}
+
+@media only screen and (min-width: 1024px) {
+  #languages-menu {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #languages-menu img {
+    display: none;
+  }
+
+  #languages-dropdown {
+    top: 50px;
+    margin: 0;
+  }
+}
+
+/* ==========================================================================
+   Docs Navigation
+   ========================================================================== */
+
+.docsNavContainer .toggleNav h2 i {
+  display: none;
+}
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
+
+.homeContainer {
+  background: white;
+}
+
+/*
+   Home Nav
+   ========================================================================== */
+
+.homeNavContainer {
+  padding: 3rem 0;
+}
+
+.homeNavItem {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  padding: 3rem 0;
+  border-radius: 3.25rem !important;
+}
+
+.homeNavItem p {
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .homeNavContainer {
+    height: 90vh;
+    min-height: 600px;
+    max-height: 900px;
+  }
+
+  .homeNavItem {
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    height: 60vh;
+    max-height: 500px;
+    border-radius: 3.25rem !important;
+    margin-top: -3rem;
+  }
+
+  .homeNavItem::after {
+    font-size: 1.5rem;
+    font-family: "Material Icons";
+    content: "arrow_upward";
+    -webkit-font-feature-settings: "liga";
+    position: absolute;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 3rem;
+    color: var(--snowColor);
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .homeNavItem:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.04);
+    transform: translateY(-1rem);
+  }
+
+  .homeNavItem:hover::after {
+    opacity: 1;
+  }
+
+  .homeNavItem h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homeNavItem h2 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+
+/*
+   Home Footer
+   ========================================================================== */
+
+.homeFooterContainer {
+  padding: 6rem 0;
+  background-image: linear-gradient(
+      217deg,
+      rgba(196, 0, 97, 0.8),
+      rgba(196, 0, 97, 0) 70%
+    ),
+    linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
+    linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
+  background-color: #e6007a;
+}
+
+/* ==========================================================================
+   Mainpage
+   ========================================================================== */
+
+.mainpage-row {
+  width: 100%;
+  display: flex;
+  padding: 10%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.mainpage-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  text-align: center;
+  flex-flow: column;
+}
+
+.mainpage-maintain-btn {
+  background: black;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.mainpage-maintain-btn:hover {
+  background: #e6007a;
+  cursor: pointer;
+}
+
+.mainpage-build-btn {
+  background: #e6007a;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.mainpage-build-btn:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.mainpage-row-build {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: linear-gradient(#aaa, #777);
+  color: white;
+}
+
+.mainpage-row-learn {
+  width: 100%;
+  display: flex;
+  padding: 0%;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: linear-gradient(#fff, #aaa);
+  color: black;
+}
+
+.full-width {
+  width: 100%;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+.myButton {
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+.myButton:hover {
+  background: #e6007a;
+  cursor: pointer;
+}
+
+.projectTitle {
+  color: black;
+}
+
+.nav-footer .row {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-footer .row .item {
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-footer .row .item:hover {
+  color: #ffffff;
+}
+
+/*
+   Button
+   ========================================================================== */
+
+.btn {
+  font-weight: 700;
+  border-radius: 1.5rem;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.btn:before {
+  width: 42px;
+  left: -42px;
+  border-radius: 1.5rem;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  border-radius: 2rem;
+  padding: 16px 20px;
+}
+.btn-lg:before,
+.btn-group-lg > .btn:before {
+  width: 58px;
+  left: -58px;
+  border-radius: 2rem;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+  border-radius: 1.5rem;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.btn-sm:before,
+.btn-group-sm > .btn:before {
+  width: 42px;
+  left: -42px;
+  border-radius: 1.5rem;
+}
+.btn-primary {
+  color: var(--primaryColor);
+  background-color: transparent;
+  border-color: var(--primaryColor);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: solid 1px var(--primaryColor);
+  transition: all 0.2s ease, border 1ms ease;
+  will-change: transform;
+  transform: scale(0.999);
+}
+.btn-primary:before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: var(--primaryColor);
+  transition: all 0.2s ease;
+  will-change: transform;
+  color: transparent;
+  z-index: -1;
+  border: solid 1px var(--primaryColor);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: none;
+  color: white;
+  will-change: transform;
+  transform: scale(1.05);
+  border: solid 1px transparent;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: transparent;
+}
+.btn-primary[type="submit"]:hover,
+.btn-primary[type="submit"]:focus,
+.btn-primary[type="submit"]:active {
+  background: var(--primaryColor);
+}
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before {
+  left: 0;
+  width: 100%;
+}
+.btn-bg-primary.btn-primary {
+  color: white !important;
+  border-color: white;
+  border: solid 1px white;
+}
+.btn-bg-primary.btn-primary:hover,
+.btn-bg-primary.btn-primary:focus,
+.btn-bg-primary.btn-primary:active {
+  background: white;
+  color: var(--primaryColor) !important;
+}
+.btn-bg-primary.btn-primary:before {
+  content: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: white;
+  transition: all 0.2s ease;
+  will-change: transform;
+  color: transparent;
+  z-index: -1;
+  border: solid 1px white;
+}
+.btn-white {
+  color: white !important;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.nav-footer {
+  background: var(--secondaryColor);
+  border: none;
+  color: #202020;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+/*
+    Bootstrap fix
+    ========================================================================== */
+
+.nav-footer.spacer-y-4 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.nav-footer.pb-4 {
+  padding-bottom: 2.25rem !important;
+}
+
+.nav-footer .text-small {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .nav-footer.spacer-y-4 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .nav-footer .py-md-1 {
+    padding-bottom: 0.375rem !important;
+    padding-top: 0.375rem !important;
+  }
+}
+
+/*
+   Footer Nav
+   ========================================================================== */
+
+.nav-footer h5 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+}
+
+.nav-footer a.text-white {
+  color: #b7b8bb !important;
+}
+
+.nav-footer a.text-white:visited {
+  color: #b7b8bb !important;
+}
+
+.nav-footer a.text-white:hover {
+  color: white !important;
+}
+
+/*
+   Footer Social
+   ========================================================================== */
+
+.list-social-links {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+footer .list-social-links i {
+  font-size: 1.2rem;
+}
+
+footer .list-social-links a {
+  padding: 0.25rem 0.9rem;
+}
+
+footer [class^="socicon-"] {
+  line-height: 2;
+}
+
+footer .list-social-links {
+  margin-left: 0rem;
+}
+footer .list-social-links li {
+  margin-top: 0 !important;
+}
+
+footer .list-social-links a {
+  background: transparent !important;
+  border: 1px solid white;
+  color: white;
+  padding: 0.25rem 0.9rem;
+  display: block;
+  border-radius: 50%;
+}
+
+/*
+  Footer Legal
+  ========================================================================== */
+
+.footer-legal .navbar-brand {
+  display: block;
+  padding-bottom: 0;
+}
+
+.footer-legal ul {
+  margin-bottom: 0;
+}
+
+.footer-legal li + li {
+  margin-top: 0;
+}
+
+.footer-legal .list-pipe-separator > li:not(:last-child) > a:after {
+  content: "|";
+  margin: 0 0.375rem;
+  opacity: 0.5;
+}
+
+.footer-legal .text-white {
+  color: #b5aeae !important;
+}
+
+.footer-legal .text-white:visited {
+  color: #b5aeae !important;
+}
+
+.footer-legal .text-white:hover {
+  color: #fff !important;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.address-changer {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.address-changer-input {
+  width: 74%;
+}
+
+.address-changer-select {
+  height: 30px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address-changer-output {
+  height: 30px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Guide Section
+   ========================================================================== */
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  border: 1px solid var(--primaryColor);
+  width: 350px;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px;
+  padding: 10px;
+
+  position: relative;
+  top: 0;
+  transition: top 0.2s ease;
+}
+
+.cards:hover {
+  top: -5px;
+}
+
+.cards-body {
+  flex: 1 auto;
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+.cards-title {
+  margin: 1px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+.cards-text {
+  margin: 1px;
+  margin-left: 5px;
+}

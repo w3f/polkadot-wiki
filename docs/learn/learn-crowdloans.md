@@ -9,8 +9,8 @@ slug: ../learn-crowdloans
 for their parachain bids in a decentralized crowdloan.
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains-rococo.md) :polkadot }} >
-> {{ kusama: [Rococo page](../build/mirror-build-parachains-rococo.md) :kusama }}.
+> Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }} >
+> {{ kusama: [Rococo content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
 
 ## Starting a crowdloan campaign
 

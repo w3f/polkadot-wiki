@@ -82,6 +82,14 @@ platforms are event-driven.
 
 ## Resources
 
-- [When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305) -
-  A technical standpoint that answers the question of when a developer might choose to develop a
-  runtime versus a smart contract.
+[When should I build a Substrate runtime versus a Substrate smart contract](https://stackoverflow.com/a/56041305)?
+This post answers the question more technically of when a developer might choose to develop a
+runtime versus a smart contract.
+
+Here is the list of current resources available to developers who want to get started writing smart
+contracts to deploy on parachains based on Substrate.
+
+- [Edgeware Contracts](https://contracts.edgewa.re) - Edgeware's documentation on Smart Contracts
+- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
+- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/) - Walks you
+  through the basics of writing and deploying an ERC20 token using `ink!`.

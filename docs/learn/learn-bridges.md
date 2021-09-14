@@ -18,7 +18,7 @@ page a work in progress. It will be updated as more information is determined an
 > Bridges are specifically for making the Polkadot ecosystem compatible with external blockchains
 > such as Bitcoin, Ethereum, or Tezos (among others). For information on XCMP, the native
 > interoperability technology that allows parachains to trustlessly communicate, please see the
-> dedicated [crosschain][] page on the Wiki.
+> dedicated [cross consensus][] page on the Wiki.
 
 ## Bridging Methods
 
@@ -134,7 +134,7 @@ welcome.
 - [XCLAIM][] - XCLAIM is a framework for achieving trustless and efficient cross-chain exchanges
   using cryptocurrency-backed assets.
 
-[crosschain]: learn-crosschain.md
+[cross consensus]: learn-cross-consensus.md
 [parity bridge]: https://github.com/paritytech/parity-bridge
 [interlay]: https://interlay.gitlab.io/polkabtc-spec/
 [xclaim]: https://eprint.iacr.org/2018/643.pdf

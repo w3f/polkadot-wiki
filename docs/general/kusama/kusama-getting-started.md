@@ -16,6 +16,124 @@ For brand-new learners of Blockchain technology:
 
   This is recommended for users with backgrounds of all levels, and the course is free!
 
+### Interact with Kusama
+
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="../docs/learn-account-generation"> 
+      <img src="/docs/assets/guides/polkadot-guide/account.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Creating an Account</h5>
+        </div> 
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-balance-transfers"> 
+      <img src="/docs/assets/guides/polkadot-guide/transfer.png" alt="Drawing" width="250" height="150"/> 
+        <div class="cards-body">
+            <h5 class="cards-title">Balance Transfers</h5>
+        </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/learn-staking"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/stake.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Staking</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="../docs/learn-parachains">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/parachain.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Parachains</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-bridges">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/bridges.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Bridges</h5>
+              </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/maintain-guides-how-to-vote-councillor"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/voting.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Vote for Councilors</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
+  <td> 
+  <a class="guide-link" href="../docs/learn-treasury#creating-the-proposal"> 
+    <img class="guide-image" src="/docs/assets/guides/polkadot-guide/proposal.png" alt="Drawing" width="250" height="150"/>
+            <div class="cards-body">
+                <h5 class="cards-title">Make Proposals</h5>
+            </div>
+  </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/maintain-guides-how-to-join-council#submit-candidacy">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/council.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Council Candidacy</h5>
+              </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/learn-treasury">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/treasury.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Treasury</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
+  <td> 
+    <a class="guide-link" href="../docs/learn-identity"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/identity.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                 <h5 class="cards-title">Set an Identity</h5>
+              </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/learn-proxies"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/proxy.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Proxy Accounts</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+  <a class="guide-link" href="../docs/ambassadors">  
+    <img class="guide-image" src="/docs/assets/guides/polkadot-guide/ambassadors.png" alt="Drawing" width="250" height="150"/>
+            <div class="cards-body">
+                <h5 class="cards-title">Become an Ambassador</h5>
+            </div>
+  </a>
+  </td>
+</tr>
+
+<br />
+
 For brand-new learners of Kusama, check out:
 
 - [Reading the Kusama Overview page][overview]

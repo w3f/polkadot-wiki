@@ -73,7 +73,7 @@ In order to interact with chains that want to use their own finalization process
 Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
 transactions can be made between different parachains.
 
-The [Cross-Chain Messaging Protocol (XCMP)](../learn/learn-crosschain.md) allows parachains to send messages
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to send messages
 of any type to each other. The shared security and validation logic of the Relay Chain provide the
 environment for trust-free message passing that opens up true interoperability.
 
@@ -87,7 +87,7 @@ Whether you're a blockchain developer or if you're interested in taking part of
 platform for everyone. This wiki offers a place for builders and maintainers to utilize
 [tools](../build/build-tools-index.md) and for brand-new learners to dive into educational material.
 
-## Getting Started
+# Getting Started
 
 For brand-new learners of Blockchain technology:
 
@@ -97,7 +97,7 @@ For brand-new learners of Blockchain technology:
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
-### For brand-new learners of Polkadot:
+## Brand-New Polkadot learners:
 
 - [Polkadot's original white paper][white-paper] is a technical summary around one possible
   direction of implementing the Polkadot network. This paper uses rationale and technical details to
@@ -119,18 +119,123 @@ This is recommended for users with backgrounds of all levels, and the course is 
 - Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
 
-  #### To start interacting with Polkadot:
+### Interact with Polkadot
 
-  - [Creating a Polkadot Account][account generation]
-  - [Sending a Balance transfer][transfer]
-  - [Staking as Nominator][nominator]
-  - [Running a Validator][validator]
-  - [Setting an Identity][identity]
-  - [Creating a Proxy Account][proxy]
-  - [Making Proposals and Voting for Referenda][democracy]
-  - [Running for the Council][council]
-  - [Voting for Councillors][council voting]
-  - [Using the Treasury][treasury]
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="../docs/learn-account-generation"> 
+      <img src="/docs/assets/guides/polkadot-guide/account.png" alt="Drawing" width="250" height="150"/>
+        <div class="cards-body">
+            <h5 class="cards-title">Creating an Account</h5>
+        </div> 
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-balance-transfers"> 
+      <img src="/docs/assets/guides/polkadot-guide/transfer.png" alt="Drawing" width="250" height="150"/> 
+        <div class="cards-body">
+            <h5 class="cards-title">Balance Transfers</h5>
+        </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/learn-staking"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/stake.png" alt="Drawing" width="250" height="150" />
+              <div class="cards-body">
+                  <h5 class="cards-title">Staking</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
+  <td>
+    <a class="guide-link" href="../docs/learn-parachains">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/parachain.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Parachains</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/learn-bridges">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/bridges.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Bridges</h5>
+              </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/maintain-guides-how-to-vote-councillor"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/voting.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Vote for Councilors</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
+  <td> 
+  <a class="guide-link" href="../docs/learn-treasury#creating-the-proposal"> 
+    <img class="guide-image" src="/docs/assets/guides/polkadot-guide/proposal.png" alt="Drawing" width="250" height="150"/>
+            <div class="cards-body">
+                <h5 class="cards-title">Make Proposals</h5>
+            </div>
+  </a>
+  </td>
+  <td>
+    <a class="guide-link" href="../docs/maintain-guides-how-to-join-council#submit-candidacy">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/council.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Council Candidacy</h5>
+              </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/learn-treasury">  
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/treasury.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Treasury</h5>
+              </div>
+    </a>
+  </td>
+</tr>
+
+<br />
+
+<tr class="cards-container">
+  <td> 
+    <a class="guide-link" href="../docs/learn-identity"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/identity.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                 <h5 class="cards-title">Set an Identity</h5>
+              </div>
+    </a>
+  </td>
+  <td> 
+    <a class="guide-link" href="../docs/learn-proxies"> 
+      <img class="guide-image" src="/docs/assets/guides/polkadot-guide/proxy.png" alt="Drawing" width="250" height="150"/>
+              <div class="cards-body">
+                  <h5 class="cards-title">Proxy Accounts</h5>
+              </div>
+    </a>
+  </td>
+  <td>
+  <a class="guide-link" href="../docs/ambassadors">  
+    <img class="guide-image" src="/docs/assets/guides/polkadot-guide/ambassadors.png" alt="Drawing" width="250" height="150"/>
+            <div class="cards-body">
+                <h5 class="cards-title">Become an Ambassador</h5>
+            </div>
+  </a>
+  </td>
+</tr>
+
+<br />
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
 and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].

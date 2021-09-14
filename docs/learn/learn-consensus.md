@@ -70,7 +70,7 @@ in this way:
 > We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
 > participants after some unspecified time.
 
-# Hybrid Consensus
+## Hybrid Consensus
 
 There are two protocols we use when we talk about the consensus protocol of Polkadot, GRANDPA and
 BABE (Blind Assignment for Blockchain Extension). We talk about both of these because Polkadot uses
@@ -126,8 +126,8 @@ For more details on BABE, please see the
 
 BADASS BABE is an extention of BABE and acts as a constant-time block production protocol.
 This approach tries to address the shortcomings of BABE by ensuring that exactly one
-block is produced with time-constant intervals. The protocol utiliies zk-SNARKs to construct a
-ring-VRF and is a work in progres. This section will be updated as progress progresses.
+block is produced with time-constant intervals. The protocol utilizes zk-SNARKs to construct a
+ring-VRF and is a work in progress. This section will be updated as progress ensues.
 
 ## Finality Gadget: GRANDPA
 
