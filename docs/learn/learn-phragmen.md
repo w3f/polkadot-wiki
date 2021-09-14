@@ -39,10 +39,10 @@ We introduce a new heuristic inspired by `seqPhragmen`, `PhragMMS`, which mainta
 The computation is executed by off-chain workers privately and separately from block production, and the validators only need to submit and verify the solutions on-chain. Observing on-chain, only one solution needs to be tracked at any given time, and a block producer can submit new solution _(A, w)_ in the block only if the block passes all three of these checks:
 
 1. Feasibility
-2. Balancedness (`supp_w(A) > supp_w'(A')`)
+2. Balancedness
+   - `supp_w(A) > supp_w'(A')`
 3. Local optimality
-
-It _(A, w)_ passes the tests, then it replaces _(A', w')_ as the current tentative winner. The official winning solution is declared at the end of the election window.
+   - It _(A, w)_ passes the tests, then it replaces _(A', w')_ as the current tentative winner. The official winning solution is declared at the end of the election window.
 
 A powerful feature of this algorithm is the fact that both its approximation guarantee for maxim support and the above checks passing can be efficiently verified. This allows for a more scalable solution for secure and proportional committee elections. `Balphragmms` can be seen as a natural complication of the `seqPhragmen` algorithm, which always grants higher score values to candidates and thus inserting them with higher support values.
 
