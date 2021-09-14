@@ -230,7 +230,8 @@ body {
   text-align: left;
 }
 
-.algolia-docsearch-suggestion__main .algolia-docsearch-suggestion--category-header {
+.algolia-docsearch-suggestion__main
+  .algolia-docsearch-suggestion--category-header {
   display: block;
   color: black !important;
 }
@@ -243,7 +244,8 @@ body {
   background: white !important;
 }
 
-.algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
+.algolia-docsearch-suggestion--category-header
+  .algolia-docsearch-suggestion--highlight {
   color: inherit;
   background: white !important;
 }
@@ -282,7 +284,8 @@ body {
 }
 
 .algolia-docsearch-suggestion__main .algolia-docsearch-suggestion--content,
-.algolia-docsearch-suggestion__secondary .algolia-docsearch-suggestion--content {
+.algolia-docsearch-suggestion__secondary
+  .algolia-docsearch-suggestion--content {
   border-top: 0;
 }
 
@@ -361,7 +364,8 @@ body {
   .algolia-docsearch-suggestion--subcategory-column-text {
     display: none;
   }
-  .algolia-docsearch-suggestion__secondary .algolia-docsearch-suggestion--subcategory-column-text {
+  .algolia-docsearch-suggestion__secondary
+    .algolia-docsearch-suggestion--subcategory-column-text {
     display: block;
   }
   .algolia-docsearch-suggestion--content {
@@ -569,7 +573,11 @@ body {
 
 .homeFooterContainer {
   padding: 6rem 0;
-  background-image: linear-gradient(217deg, rgba(196, 0, 97, 0.8), rgba(196, 0, 97, 0) 70%),
+  background-image: linear-gradient(
+      217deg,
+      rgba(196, 0, 97, 0.8),
+      rgba(196, 0, 97, 0) 70%
+    ),
     linear-gradient(127deg, rgba(230, 0, 122, 0.8), rgba(230, 0, 122, 0) 70%),
     linear-gradient(336deg, rgba(103, 69, 210, 0.7), rgba(103, 69, 210, 0) 70%);
   background-color: #e6007a;
@@ -1009,54 +1017,53 @@ footer .list-social-links a {
 /* ==========================================================================
    Guide Section
    ========================================================================== */
-.cards-container{
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 100%;
-    min-width: 0;
-    align-items: center;
-    justify-content: center;
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
 }
 
-.cards{
-    border: 1px solid var(--primaryColor);
-    width: 350px;
-    height: 80px;
-    border-radius: 10px;
-    box-shadow: 0 0.1rem 0.1rem rgba(0,0,0,0.4);
+.cards {
+  border: 1px solid var(--primaryColor);
+  width: 350px;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    margin: 5px;
-    padding: 10px;
+  margin: 5px;
+  padding: 10px;
 
-    position: relative;
-    top: 0;
-    transition: top 0.2s ease;
+  position: relative;
+  top: 0;
+  transition: top 0.2s ease;
 }
 
-.cards:hover{
-    top: -5px;
+.cards:hover {
+  top: -5px;
 }
 
-.cards-body{
-    flex: 1 auto;
-    color: black;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    margin-left: 5px;
+.cards-body {
+  flex: 1 auto;
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin-left: 5px;
 }
 
-.cards-title{
-    margin: 1px;
-    margin-left: 5px;
-    margin-bottom: 3px;
+.cards-title {
+  margin: 1px;
+  margin-left: 5px;
+  margin-bottom: 3px;
 }
-.cards-text{
-    margin: 1px;
-    margin-left: 5px;
+.cards-text {
+  margin: 1px;
+  margin-left: 5px;
 }
-

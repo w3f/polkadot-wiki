@@ -18,9 +18,7 @@
       "how-to-dyor",
       "faq"
     ],
-    "Guide":[
-      "polkadot-guide"
-    ],
+    "Guide": ["polkadot-guide"],
     "Learn": [
       "learn-launch",
       {
@@ -95,11 +93,7 @@
       {
         "type": "subcategory",
         "label": "Develop",
-        "ids": [
-          "build-guide",
-          "build-parachains",
-          "build-smart-contracts"
-        ]
+        "ids": ["build-guide", "build-parachains", "build-smart-contracts"]
       },
       {
         "type": "subcategory",
@@ -116,10 +110,7 @@
       {
         "type": "subcategory",
         "label": "Tools",
-        "ids": [
-          "build-tools-index",
-          "build-wallets"
-        ]
+        "ids": ["build-tools-index", "build-wallets"]
       },
       {
         "type": "subcategory",
@@ -138,12 +129,20 @@
       {
         "type": "subcategory",
         "label": "Nodes and Dapps",
-        "ids": ["maintain-sync", "maintain-networks", "maintain-wss", "maintain-errors"]
+        "ids": [
+          "maintain-sync",
+          "maintain-networks",
+          "maintain-wss",
+          "maintain-errors"
+        ]
       },
       {
         "type": "subcategory",
         "label": "Nominator Guides",
-        "ids": ["maintain-guides-how-to-nominate-polkadot", "maintain-guides-how-to-unbond"]
+        "ids": [
+          "maintain-guides-how-to-nominate-polkadot",
+          "maintain-guides-how-to-unbond"
+        ]
       },
       {
         "type": "subcategory",
