@@ -211,7 +211,7 @@ This is recommended for users with backgrounds of all levels, and the course is 
 <tr class="cards-container">
   <td>
     <a class="guide-link" href="../docs/learn-identity">
-      <img class="guide-image" src="/img/polkadot-guide/identity.png" alt="Drawing" width="250" height="150"/>
+      <img class="guide-image" src="/img/polkadot-guide/Identity.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                  <h5 class="cards-title">Set an Identity</h5>
               </div>
