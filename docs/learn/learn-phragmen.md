@@ -41,7 +41,8 @@ The computation is executed by off-chain workers privately and separately from b
 1. Feasibility
 2. Balancedness (`supp_w(A) > supp_w'(A')`)
 3. Local optimality
-   It _(A, w)_ passes the tests, then it replaces _(A', w')_ as the current tentative winner. The official winning solution is declared at the end of the election window.
+
+It _(A, w)_ passes the tests, then it replaces _(A', w')_ as the current tentative winner. The official winning solution is declared at the end of the election window.
 
 A powerful feature of this algorithm is the fact that both its approximation guarantee for maxim support and the above checks passing can be efficiently verified. This allows for a more scalable solution for secure and proportional committee elections. `Balphragmms` can be seen as a natural complication of the `seqPhragmen` algorithm, which always grants higher score values to candidates and thus inserting them with higher support values.
 
