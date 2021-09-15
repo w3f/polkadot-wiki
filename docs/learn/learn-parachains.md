@@ -208,7 +208,7 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 Parachain Development Kits are a set of tools that enable developers to create their own
 applications as parachains. For more info see [PDK content](../build/build-parachains.md#parachain-development-kit-pdk).
 
-Please see the [Parachain Development page](/docs/build-pdk) for more information.
+Please see the [Parachain Development page](../build/build-parachains.md) for more information.
 
 ## Resources
 
