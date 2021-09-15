@@ -7,8 +7,8 @@ slug: ../learn-parachains
 ---
 
 > Note: For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo page](../build/build-parachains.md##testing-a-parachains:-rococo-testnet):polkadot }} >
-> {{ kusama: [Rococo page](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
+> Rococo, please see the
+> {{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }} > {{ kusama: [Rococo Content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
 
 ![One parachain](../assets/network/one_parachain.png)
 
@@ -206,9 +206,9 @@ within [Cumulus](https://github.com/paritytech/cumulus).
 ### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
-applications as parachains. For more info see [PDK content](<../build/build-parachains.md##parachain-development-kit-(PDK)>).
+applications as parachains. For more info see [PDK content](../build/build-parachains.md#parachain-development-kit-pdk).
 
-Please see the [Parachain Development page](../build/build-parachains) for more information.
+Please see the [Parachain Development page](../build/build-parachains.md) for more information.
 
 ## Resources
 
