@@ -59,6 +59,8 @@ The following diagram shows the XCM tech stack:
 
 ![xcm tech stack](../assets/cross-consensus-tech-stack.png)
 
+> XCM can be used to express the meaning of the messages over each of these three communication channels.
+
 ### VMP (Vertical Message Passing)
 
 There are two kinds of vertical message-passing transport protocols:
@@ -83,8 +85,6 @@ associated metadata is stored as a hash in the Relay Chain storage.
 
 The input and output queue are sometimes referred to in the codebase and associated documentation as
 `ingress` and `egress` messages respectively.
-
-> XCM can be used to express the meaning of the messages over each of these three communication channels.
 
 #### Overview of XCMP
 

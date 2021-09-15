@@ -5,7 +5,7 @@ sidebar_label: Parachain Development
 slug: ../build-pdk
 ---
 
-This section will cover the motivation to build a parachian or parathread, the tools available
+This section will cover the motivation to build a parachain or parathread, the tools available
 to facilitate this, the steps to test, and finally, how to launch your network on Polkadot.
 
 ## Why Create a Parachain?
@@ -66,7 +66,73 @@ to Bitcoin or Ethereum) Polkadot's parachains will be able to communicate with t
 > becoming a parachain, and whether building a blockchain with an end goal of becoming a
 > parachain is a viable one for their project.
 
+On Polkadot, you are able to put your blockchain’s latest block head onto the relay chain.
+As a parachain, the blocks you submit are verified by validators with a Wasm runtime, which can
+be stored on the relay chain. You also get the ability to communicate with other parachains using the
+[XCM](../learn/learn-cross-consensus.md) format: an abstract message passing system.
+Message passing is tracked on the relay chain - as such, you can prove the delivery of messages and
+facilitate trustless interactions.
+
+As you can place your blockchain’s latest block head, you can achieve deterministic finalization
+for your chain. The hard part of reaching finalization for blockchains tends to be the consensus, where,
+in the parachain model, a blockchain can offload consensus to the overall shared network, and focus on
+block production. Since the validators have the Wasm runtime for all the parachains, your parachain
+shares the security of the validator pool with everyone on the relay chain.
+
+Any validator in the validator pool can help validate your blockchain.
+
 # Creating a Parachain
+
+## Things to Consider
+
+### Para-Economics
+
+Parachains can be seen as autonomous agents; networks that act as decentralised digital nation states.
+Parachains have their own communities, rules, economies, governance, treasuries, and relationships
+with external chains. As a result, the economic policies within parachain ecosystems are subject to the
+developers and overall community of that parachain ecosystem; there isn't necessarily a go-to economic
+model a parachain should follow.
+
+Nonetheless, _becoming a parachain_ has an opportunity cost associated. Ideally, you can increase the value
+of the network by participating in the parachain selection process, and this should serve as a good return
+on investment.
+
+[Collators](../learn/learn-collator.md) are incentivized with a native token payout from:
+
+- Transaction fees collected
+- Parathread token sponsorship
+  - Blocks are naturally produced when a parathread bid is less than the native token payout.
+
+### Para-objects
+
+The Polkadot network will encourage the connection and interoperability between different _para-objects_.
+
+> Here, para-objects is referring to objects on the network that operate in parallel.
+
+These could be in the form of:
+
+- System level chains (permanent chains):
+  [leased slots](../learn/learn-auction.md),
+  [parathread pool](learn-parathreads.md)
+- [Bridge](../learn/learn-bridges.md) Hubs
+- Nested Relay Chains: [Polkadot 2.0](../learn/learn-launch.md##polkadot2.0)
+
+### Migration
+
+Projects that are already functioning as solochains or in isolated environments may be interested
+in migrating onto Polkadot as a para-object. While the parachain model has its benefits, it may
+not be the go-to strategy for some projects.
+
+As a path for migration onto Polkadot, it may be more viable to migrate to one of the
+chains in one of the reserved slots.
+
+For instance, there are currently options for smart contract deployment on Kusama through the
+networks that have secured a slot in the latest slot auctions.
+
+Check out their documentation:
+
+- [Moonriver](https://moonbeam.network/networks/moonriver/)
+- [Shiden](https://docs.astar.network/)
 
 ## Parachain Development Kit (PDK)
 
@@ -90,7 +156,7 @@ integral insights that allows Polkadot to scale while keeping high-security guar
 
 A collator node is one of the types of network maintainers in the Polkadot protocol. They are
 responsible for **keeping availability** of the state of the parachain and the new states returned
-from the iteration of the state transition function. They must remain online in order to keep track of
+from the iteration of the state transition function. They must remain online to keep track of
 the state and also of the XCMP messages that it will route between itself and other parachains.
 Collator nodes are responsible for passing the succinct proofs to the relay chain's validators and
 tracking the latest blocks from the relay chain. In essence, a collator node also acts as a light
@@ -130,7 +196,7 @@ algorithms which chain to follow, finalize, and treat as correct.
 
 See the [Cumulus overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a
 more detailed description of Cumulus, and for those with experience in Substrate, give the
-[Cumulus Workshop](https://substrate.dev/cumulus-workshop/) a go!
+[Cumulus Workshop](https://substrate.dev/cumulus-workshop/) a try.
 
 ## Testing a Parachain: Rococo Testnet
 
@@ -211,7 +277,7 @@ being. Lateral transfers work through the depository model, which means that in 
 tokens from chain 200 to chain 300, tokens must already be owned by chain 200 deposited on
 chain 300. Lateral transfers are called HRMP, Horizontal Relay-Chain Message Passing.
 
-Before we can actually send funds from one parachain to another, we must ensure that the chain's
+Before we can send funds from one parachain to another, we must ensure that the chain's
 account on the recipient chain has some funds in it. In this example, Alice will be sending some
 funds from her account on parachain 200 to her account on parachain 300.
 
@@ -221,7 +287,7 @@ We can get that parachain account address, from our parachain 300's terminal:
 2020-08-26 14:46:34 Parachain Account: 5Ec4AhNv5ArwGxtngtW8qcVgzpCAu8nokvnh6vhtvvFkJtpq
 ```
 
-From Alice's account on the Relay Chain, she is able to send some amount to parachain 200's
+From Alice's account on the Relay Chain, she can send some amount to parachain 200's
 depository.
 
 ![rococo lateral transfer](../assets/rococo/rococo-lateral-transfer.png)
@@ -249,7 +315,7 @@ serves as the canonical registry for teams to see which chain corresponds to a g
 
 ### Parachain
 
-In order to include your parachain into the Polkadot network, you will need to acquire a parachain
+To include your parachain into the Polkadot network, you will need to acquire a parachain
 slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
