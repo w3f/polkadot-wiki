@@ -116,7 +116,7 @@ for the `max_fee` put the maximum you're willing to pay for these confirmations.
 If you don't know which registrar to pick, first check the available registrars by going to
 ["Chain State UI"](#) and selecting `identity.registrars()` to get the full list.
 
-### Requesting Judgement
+### Requesting a Judgement
 
 Requesting judgement follows the same process regardless of whether you're on the Kusama or Polkadot
 networks. Select one of the registrars from the query you made above.
@@ -144,7 +144,7 @@ _Note that changing even a single field's value after you've been verified will 
 account and you will need to start the judgement process anew. However, you can still change fields
 while the judgement is going on - it's up to the registrar to keep an eye on the changes._
 
-## Cancelling Judgements
+### Cancelling a Judgement
 
 You may decide that you do not want to be judged by a registrar (for instance, because you realize
 you entered incorrect data or selected the wrong registrar). In this case, after submitting the
