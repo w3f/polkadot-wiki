@@ -61,10 +61,10 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 ## Existential Deposit
 
-Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust accounts from bloating chain state.
-If an account drops below the ED, it will be _reaped,_ i.e. completely removed from storage and the
-nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 33.3333 microKSM (0.0000333333 KSM). You can
-always verify the existential deposit by checking the
+Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust accounts 
+from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed 
+from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 33.3333 microKSM 
+(0.0000333333 KSM). You can always verify the existential deposit by checking the
 [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
 `balances.existentialDeposit`.
 
