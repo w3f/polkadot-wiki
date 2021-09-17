@@ -105,13 +105,6 @@ multisig would be created.
 
 ## How to set up a Proxy
 
-> NOTE: The first proxy you add should always be of _type_ `Any`.
-> Also, if there are multiple proxies for the proxied account, you should not remove _all_ `Any`
-> types unless you are prepared to kill the relationship.
-> Without having an `Any` type proxy, you won't be able to send funds, add new proxies, kill the
-> anonymous proxy or take any action not specifically allowed by the types of the proxies the
-> account has.
-
 ### Using the Polkadot-JS UI
 
 To set up a proxy, navigate to the [Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and
@@ -132,6 +125,13 @@ selected account at the top is the account that will be the primary account.
 **Please be aware of how critical it is to set up an anonymous proxy and the overall dangers.**
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
+
+> NOTE: The first proxy you add should always be of _type_ `Any`.
+> Also, if there are multiple proxies for the proxied account, you should not remove _all_ `Any`
+> types unless you are prepared to kill the relationship.
+> Without having an `Any` type proxy, you won't be able to send funds, add new proxies, kill the
+> anonymous proxy or take any action not specifically allowed by the types of the proxies the
+> account has.
 
 For anonymous proxies, a different function will need to be called, the
 `anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would
