@@ -5823,25 +5823,25 @@ ipaddr.js@1.9.1, ipaddr.js@^1.9.0:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
-ipfs-core-types@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.7.1.tgz#08504d3b2b65fb910516f310049a0b022759ad21"
-  integrity sha512-vG3cX+mLjULYAKlGF/3P3uqr6GxhWZRrg+LQrUUZmf9kjBI5ikIuNnhtPqX6sbTNHLQFqTZb7NhCxFFNOud75g==
+ipfs-core-types@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.7.2.tgz#20d7cca654a207d9f795f664e14ce1c49f6a987c"
+  integrity sha512-cyD4fOZ3lvahJWvjtPrWfldhNXN9VJNHPXUY5RRhxoXkuHGrMnTV2t5W3RtBOqRcTB6iRPtdjq7VervVDUlr6w==
   dependencies:
     interface-datastore "^5.0.0"
     multiaddr "^10.0.0"
     multiformats "^9.4.1"
 
-ipfs-core-utils@^0.10.3:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.10.3.tgz#bbc2d19bdb2fd5f1a5b047645923b3436d9e4879"
-  integrity sha512-3LnoycWyJGbdZIDKhzbGmoGnIJWTJznNP3Z7Xvc7n9GyJYeBGqNIVVlnY0EmppiDEg92rAyT7GVF0/G9dKpAlg==
+ipfs-core-utils@^0.10.4:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/ipfs-core-utils/-/ipfs-core-utils-0.10.4.tgz#bcccbbf92d163297d6c84a280534c63d9e86ee4d"
+  integrity sha512-B6iQ7ZWsTTuNmjEl/mgoUdgsYgT38M5r6VRdLDgOxGWp82z6Urxzq/5SysaojW3Eo8Nf2jqpPGR3sCqhOY/DpQ==
   dependencies:
     any-signal "^2.1.2"
     blob-to-it "^1.0.1"
     browser-readablestream-to-it "^1.0.1"
     err-code "^3.0.1"
-    ipfs-core-types "^0.7.1"
+    ipfs-core-types "^0.7.2"
     ipfs-unixfs "^6.0.3"
     ipfs-utils "^8.1.4"
     it-all "^1.0.4"
@@ -5854,10 +5854,10 @@ ipfs-core-utils@^0.10.3:
     timeout-abort-controller "^1.1.1"
     uint8arrays "^3.0.0"
 
-ipfs-http-client@^52.0.2:
-  version "52.0.3"
-  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-52.0.3.tgz#359ff558adf4d92421cfb0e9e58f3b934ed124f5"
-  integrity sha512-pMLDTz54MIUQk+9N4huSzMBfp+Gg33sk69nm6uaHfyO91InbFSlerwXL31CplpqRXW9vIjk8Jl4X1ZgMLnfs+w==
+ipfs-http-client@^52.0.4:
+  version "52.0.4"
+  resolved "https://registry.yarnpkg.com/ipfs-http-client/-/ipfs-http-client-52.0.4.tgz#33b24beb91106ad920859fd1e1d072d974da1581"
+  integrity sha512-HdW0Zs5q8mUhxHIb0D1UYnbX/7r+RMeIibv8DvjSjRNAW3i+k+EsH4Jtjr+cU77dq+6GLmq1S2Zoo4wuWLWVIQ==
   dependencies:
     "@ipld/dag-cbor" "^6.0.5"
     "@ipld/dag-pb" "^2.1.3"
@@ -5866,8 +5866,8 @@ ipfs-http-client@^52.0.2:
     debug "^4.1.1"
     err-code "^3.0.1"
     form-data "^4.0.0"
-    ipfs-core-types "^0.7.1"
-    ipfs-core-utils "^0.10.3"
+    ipfs-core-types "^0.7.2"
+    ipfs-core-utils "^0.10.4"
     ipfs-utils "^8.1.4"
     it-first "^1.0.6"
     it-last "^1.0.4"
@@ -9160,8 +9160,8 @@ set-blocking@^2.0.0:
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
 
-set-value@^4.0.1:
-  version "4.0.1"
+set-value@^2.0.0, set-value@^2.0.1:
+  version "2.0.1"
   resolved "https://registry.yarnpkg.com/set-value/-/set-value-2.0.1.tgz#a18d40530e6f07de4228c7defe4227af8cad005b"
   integrity sha512-JxHc1weCN68wRY0fhCoXpyK55m/XPHafOmK4UWD7m2CI14GMcFypt4w/0+NV5f/ZMby2F6S2wwA7fgynh9gWSw==
   dependencies:
