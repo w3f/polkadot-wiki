@@ -2,7 +2,7 @@
 id: build-smart-contracts
 title: Smart Contracts
 sidebar_label: Smart Contracts
-description: How smart contracts play a role in the Polkadot ecosystem.
+description: How smart contracts play their role in the Polkadot ecosystem.
 slug: ../build-smart-contracts
 ---
 

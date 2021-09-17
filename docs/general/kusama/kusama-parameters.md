@@ -2,7 +2,7 @@
 id: kusama-parameters
 title: Kusama Parameters
 sidebar_label: Parameters
-description:
+description: Learn about common Kusama parameters
 slug: ../../kusama-parameters
 ---
 
