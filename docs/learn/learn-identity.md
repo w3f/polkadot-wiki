@@ -2,6 +2,7 @@
 id: learn-identity
 title: Identity
 sidebar_label: Identity
+description: Learn about on-chain identity, judgements and registrars.
 slug: ../learn-identity
 ---
 
@@ -170,7 +171,7 @@ provide judgement.
 
 ### Becoming a Registrar
 
-To become a registrar, submit a pre-image and proposal into 
+To become a registrar, submit a pre-image and proposal into
 [Democracy](../maintain/maintain-guides-democracy.md), then wait for people to vote
 on it. For best results, write a post about your identity and intentions beforehand, and once the
 proposal is in the queue ask people to second it so that it gets ahead in the referendum queue.

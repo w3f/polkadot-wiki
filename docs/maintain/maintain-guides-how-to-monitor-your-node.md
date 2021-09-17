@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-monitor-your-node
 title: Monitor your node
 sidebar_label: Monitor your node
+descriptions: Tips on how to monitor your node.
 slug: ../maintain-guides-how-to-monitor-your-node
 ---
 

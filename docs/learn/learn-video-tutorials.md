@@ -2,6 +2,7 @@
 id: learn-video-tutorials
 title: Video Tutorials
 sidebar_label: Video Tutorials
+description: Links to useful tutorial videos for all learners.
 slug: ../learn-video-tutorials
 ---
 

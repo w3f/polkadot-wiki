@@ -2,6 +2,7 @@
 id: kusama-bug-bounty
 title: Bug Bounty
 sidebar_label: Bug Bounty
+description: An overview of how you can help catch bugs.
 slug: ../../kusama-bug-bounty
 ---
 

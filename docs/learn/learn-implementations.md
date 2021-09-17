@@ -2,6 +2,7 @@
 id: learn-implementations
 title: Polkadot Implementations
 sidebar_label: Polkadot Implementations
+description: Learn about the different Polkadot implementations.
 slug: ../learn-implementations
 ---
 

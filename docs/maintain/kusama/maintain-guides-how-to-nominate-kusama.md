@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-nominate-kusama
 title: Be a Nominator (Kusama)
 sidebar_label: Nominator Guide
+description: Steps on how to nominate on Kusama.
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 

@@ -2,6 +2,7 @@
 id: learn-crowdloans
 title: Parachain Crowdloans
 sidebar_label: Parachain Crowdloans
+description: Learn about crowdloans and how to interact with one.
 slug: ../learn-crowdloans
 ---
 

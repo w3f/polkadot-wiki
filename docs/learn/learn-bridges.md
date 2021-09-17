@@ -2,6 +2,7 @@
 id: learn-bridges
 title: Bridges
 sidebar_label: Bridges
+description: Learn about bridges and common bridge examples.
 slug: ../learn-bridges
 ---
 

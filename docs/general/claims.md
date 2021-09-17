@@ -2,6 +2,7 @@
 id: claims
 title: Polkadot Claims
 sidebar_label: Claims
+description: Step-by-step guide on how to claim your DOT tokens.
 slug: ../claims
 ---
 

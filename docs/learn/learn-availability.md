@@ -2,6 +2,7 @@
 id: learn-availability
 title: Availability and Validity
 sidebar_label: Availability and Validity
+description: Learn about Polkadot's approach to sharding.
 slug: ../learn-availability
 ---
 

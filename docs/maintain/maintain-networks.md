@@ -2,6 +2,7 @@
 id: maintain-networks
 title: Networks
 sidebar_label: Networks
+description: Information about the different networks of the Polkadot ecosystem.
 slug: ../maintain-networks
 ---
 

@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-chill
 title: How to Chill
 sidebar_label: How to Chill
+description: Steps on chilling as a network participant.
 slug: ../maintain-guides-how-to-chill
 ---
 

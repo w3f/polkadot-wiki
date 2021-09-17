@@ -2,6 +2,7 @@
 id: learn-collator
 title: Collator
 sidebar_label: Collator
+description: Learn about how collators maintain the network.
 slug: ../learn-collator
 ---
 

@@ -2,6 +2,7 @@
 id: learn-governance
 title: Governance
 sidebar_label: Governance
+description: Learn about Polkadot's thought-through governance model.
 slug: ../learn-governance
 ---
 

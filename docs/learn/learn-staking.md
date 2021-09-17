@@ -2,6 +2,7 @@
 id: learn-staking
 title: Staking
 sidebar_label: Staking
+description: An introduction on staking in Polkadot's NPoS consensus model.
 slug: ../learn-staking
 ---
 

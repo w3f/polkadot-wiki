@@ -2,6 +2,7 @@
 id: scams
 title: How to Protect Yourself from Scams
 sidebar_label: How to Protect Yourself from Scams
+description: Learn about the essentials in protecting yourself against scams.
 slug: ../learn-scams
 ---
 

@@ -2,6 +2,7 @@
 id: kusama-timeline
 title: Kusama Timeline
 sidebar_label: Timeline
+description: Stay up-to-date with the latest action on Kusama.
 slug: ../../kusama-timeline
 ---
 

@@ -2,6 +2,7 @@
 id: maintain-guides-secure-validator
 title: Secure Validator
 sidebar_label: Secure Validator
+description: Tips for running a secure validator.
 slug: ../maintain-guides-secure-validator
 ---
 

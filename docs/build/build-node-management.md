@@ -2,6 +2,7 @@
 id: build-node-management
 title: Node Management
 sidebar_label: Node Management
+description: Steps on how to manage your Polkadot node.
 slug: ../build-node-management
 ---
 

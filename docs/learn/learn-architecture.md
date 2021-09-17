@@ -2,6 +2,7 @@
 id: learn-architecture
 title: Architecture
 sidebar_label: Architecture
+description: Learn about the key components to Polkadot's Architecture.
 slug: ../learn-architecture
 ---
 

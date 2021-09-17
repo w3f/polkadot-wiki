@@ -2,10 +2,11 @@
 id: kusama-statemine-ledger
 title: Using Ledger Devices with Statemine
 sidebar_label: Ledger Devices with Statemine
+description: Learn how to use Ledger with Statemine.
 slug: ../../kusama-statemine-ledger
 ---
 
-> Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
+> NOTE: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
 > browsers like Brave, Chrome or Edge.
 
 Statemine has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X

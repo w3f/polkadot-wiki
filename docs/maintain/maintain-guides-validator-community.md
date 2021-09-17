@@ -2,6 +2,7 @@
 id: doc-maintain-guides-validator-community
 title: Validator Community Overview
 sidebar_label: Validator Community Overview
+description: An extensive guide to help you start and build a validator community.
 slug: ../maintain-guides-validator-community
 ---
 

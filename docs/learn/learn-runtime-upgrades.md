@@ -2,6 +2,7 @@
 id: learn-runtime-upgrades
 title: Runtime Upgrades
 sidebar_label: Runtime Upgrades
+description: Learn about how runtime upgrades work on Polkadot.
 slug: ../learn-runtime-upgrades
 ---
 

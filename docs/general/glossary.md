@@ -2,6 +2,7 @@
 id: glossary
 title: Glossary
 sidebar_label: Glossary
+description: Common terms and concepts you may come across in the Polkadot ecosystem.
 slug: ../glossary
 ---
 

@@ -2,6 +2,7 @@
 id: maintain-guides-democracy
 title: Participate in Democracy
 sidebar_label: Participate in Democracy
+description: Steps on how to participate in democracy.
 slug: ../maintain-guides-democracy
 ---
 

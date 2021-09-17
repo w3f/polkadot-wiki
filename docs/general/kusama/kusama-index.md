@@ -2,6 +2,7 @@
 id: kusama-index
 title: Kusama
 sidebar_label: Home
+description: Reference point for Kusama content.
 slug: ../../kusama-index
 ---
 
