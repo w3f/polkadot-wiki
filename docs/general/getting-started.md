@@ -29,96 +29,6 @@ growing needs without the risks of network forks.
 By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
 
-## Why Polkadot?
-
-Back in the early 2000's, when the internet was gaining popularity for the first time, the internet
-featured read-only, static, basic webpages. The online connected world at the time was only the
-beginning of virtual data, identities, and more. The internet during this time was also called the
-Web 1.0.
-
-As social media platforms and online businesses began to emerge, the internet transformed into the
-Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages,
-where users can read and write information plus publish their own for others to see. However, this
-version of the web comes with downsides, dealing with data control, privacy issues, and trust. This
-is where the Web 3.0 comes into the picture.
-
-The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free
-protocols. The goal is to transform the internet into a decentralized web, where users control their
-own data and identity in a trust-free environment. The Web 3.0 movement aims to remove
-intermediaries and build a trustless infrastructure.
-
-> To learn more of the Web3 movement, check out this video from the
-> [Web3 Summit](https://youtu.be/l44z35vabvA)
-
-## How does Polkadot work?
-
-The Polkadot network uses a
-[sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
-"[parachains](../learn/learn-parachains.md)", allow transactions to be processed in parallel instead of
-sequentially. Each parachain in the network has a unique state transition function (STF). Polkadot
-has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as long as a
-chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the
-Polkadot network as a parachain.
-
-Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](../learn/learn-availability.md) checks before being added to the
-finalized chain. As the Relay Chain provides the security guarantees,
-[collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
-responsibilities, and thus do not require a robust incentive system. This is how the entire network
-stays up to date with the many transactions that take place.
-
-![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
-
-In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
-transactions can be made between different parachains.
-
-The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to send messages
-of any type to each other. The shared security and validation logic of the Relay Chain provide the
-environment for trust-free message passing that opens up true interoperability.
-
-> To watch a short, beginner-friendly animation on Polkadot, check out our
-> [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
-
-## Why should you use Polkadot?
-
-Whether you're a blockchain developer or if you're interested in taking part of
-[Polkadot's community](https://polkadot.network/polkadot-ambassador-program/), Polkadot offers a
-platform for everyone. This wiki offers a place for builders and maintainers to utilize
-[tools](../build/build-tools-index.md) and for brand-new learners to dive into educational material.
-
-# Getting Started
-
-For brand-new learners of Blockchain technology:
-
-- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing
-  yourself with blockchain concepts such as cryptography and networks, and how these play into
-  things like decentralization and cryptocurrency.
-
-This is recommended for users with backgrounds of all levels, and the course is free!
-
-## Brand-New Polkadot learners:
-
-- [Polkadot's original white paper][white-paper] is a technical summary around one possible
-  direction of implementing the Polkadot network. This paper uses rationale and technical details to
-  support why this direction is beneficial. This original white paper also explains how Polkadot's
-  core components work together to build this decentralized network.
-- [Polkadot's overview paper][overview-paper] is an updated version of the white paper that
-  describes the protocol in more technical terms. We would recommend reading this overview paper if
-  you are interested in digging more into the protocol itself.
-- [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
-  into its blockchain technology. This paper dives into the components of Polkadot but is
-  understandable for both a non-technical and technical reader.
-- [Polkadot's specification][spec] is a Github repository that holds the latest Polkadot Host
-  protocol specification, Polkadot's specification tests of the many components of the network, and
-  the Polkadot Runtime specification. This repo holds algorithms and explores how various processes
-  function in the Polkadot network. The Polkadot specification takes Polkadot's ideas and concepts
-  from the light and the white paper but focuses on the technical specs of the technology.
-- [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Polkadot and its [User Interface][ui].
-- Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
-  articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
-
 ### Interact with Polkadot
 
 <tr class="cards-container">
@@ -236,6 +146,96 @@ This is recommended for users with backgrounds of all levels, and the course is 
 </tr>
 
 <br />
+
+## Why Polkadot?
+
+Back in the early 2000's, when the internet was gaining popularity for the first time, the internet
+featured read-only, static, basic webpages. The online connected world at the time was only the
+beginning of virtual data, identities, and more. The internet during this time was also called the
+Web 1.0.
+
+As social media platforms and online businesses began to emerge, the internet transformed into the
+Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages,
+where users can read and write information plus publish their own for others to see. However, this
+version of the web comes with downsides, dealing with data control, privacy issues, and trust. This
+is where the Web 3.0 comes into the picture.
+
+The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free
+protocols. The goal is to transform the internet into a decentralized web, where users control their
+own data and identity in a trust-free environment. The Web 3.0 movement aims to remove
+intermediaries and build a trustless infrastructure.
+
+> To learn more of the Web3 movement, check out this video from the
+> [Web3 Summit](https://youtu.be/l44z35vabvA)
+
+## How does Polkadot work?
+
+The Polkadot network uses a
+[sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
+"[parachains](../learn/learn-parachains.md)", allow transactions to be processed in parallel instead of
+sequentially. Each parachain in the network has a unique state transition function (STF). Polkadot
+has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as long as a
+chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the
+Polkadot network as a parachain.
+
+Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
+rigorous [availability and validity](../learn/learn-availability.md) checks before being added to the
+finalized chain. As the Relay Chain provides the security guarantees,
+[collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
+responsibilities, and thus do not require a robust incentive system. This is how the entire network
+stays up to date with the many transactions that take place.
+
+![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
+
+In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
+Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
+transactions can be made between different parachains.
+
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to send messages
+of any type to each other. The shared security and validation logic of the Relay Chain provide the
+environment for trust-free message passing that opens up true interoperability.
+
+> To watch a short, beginner-friendly animation on Polkadot, check out our
+> [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
+
+## Why should you use Polkadot?
+
+Whether you're a blockchain developer or if you're interested in taking part of
+[Polkadot's community](https://polkadot.network/polkadot-ambassador-program/), Polkadot offers a
+platform for everyone. This wiki offers a place for builders and maintainers to utilize
+[tools](../build/build-tools-index.md) and for brand-new learners to dive into educational material.
+
+# Getting Started
+
+For brand-new learners of Blockchain technology:
+
+- The [Blockchain Fundamentals MOOC course][mooc] is a great introduction to start familiarizing
+  yourself with blockchain concepts such as cryptography and networks, and how these play into
+  things like decentralization and cryptocurrency.
+
+This is recommended for users with backgrounds of all levels, and the course is free!
+
+## Brand-New Polkadot learners:
+
+- [Polkadot's original white paper][white-paper] is a technical summary around one possible
+  direction of implementing the Polkadot network. This paper uses rationale and technical details to
+  support why this direction is beneficial. This original white paper also explains how Polkadot's
+  core components work together to build this decentralized network.
+- [Polkadot's overview paper][overview-paper] is an updated version of the white paper that
+  describes the protocol in more technical terms. We would recommend reading this overview paper if
+  you are interested in digging more into the protocol itself.
+- [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
+  into its blockchain technology. This paper dives into the components of Polkadot but is
+  understandable for both a non-technical and technical reader.
+- [Polkadot's specification][spec] is a Github repository that holds the latest Polkadot Host
+  protocol specification, Polkadot's specification tests of the many components of the network, and
+  the Polkadot Runtime specification. This repo holds algorithms and explores how various processes
+  function in the Polkadot network. The Polkadot specification takes Polkadot's ideas and concepts
+  from the light and the white paper but focuses on the technical specs of the technology.
+- [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
+  explain and demonstrate how to use Polkadot and its [User Interface][ui].
+- Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
+  articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
 and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
