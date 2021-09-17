@@ -2,6 +2,7 @@
 id: build-hackathon
 title: Polkadot Hackathons
 sidebar_label: Polkadot Hackathons
+description: Join or host a Hackathon.
 slug: ../build-hackathon
 ---
 

@@ -2,6 +2,7 @@
 id: learn-implementers-guide
 title: Parachain Implementer's Guide
 sidebar_label: Parachain Implementer's Guide
+description: Resources for parachain implementation.
 slug: ../learn-implementers-guide
 ---
 

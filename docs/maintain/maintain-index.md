@@ -2,6 +2,7 @@
 id: maintain-index
 title: Network Maintainers
 sidebar_label: Network Maintainers
+description: Reference point for network maintenance guides.
 slug: ../maintain-index
 ---
 

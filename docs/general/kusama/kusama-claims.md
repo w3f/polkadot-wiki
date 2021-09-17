@@ -2,6 +2,7 @@
 id: kusama-claims
 title: Kusama Claims
 sidebar_label: Claims
+description: Step-by-step guide on how to claim your KSM tokens.
 slug: ../../kusama-claims
 ---
 

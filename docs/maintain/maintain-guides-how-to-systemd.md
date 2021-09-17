@@ -1,7 +1,8 @@
 ---
 id: maintain-guides-how-to-systemd
-title: Using systemd for the Validator Node
-sidebar_label: Using systemd for the Validator Node
+title: Using systemd for a Validator Node
+sidebar_label: Using systemd for a Validator Node
+description: Using a service manager for your validator node.
 slug: ../maintain-guides-how-to-systemd
 ---
 

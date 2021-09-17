@@ -2,7 +2,7 @@
 id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
-description: Step-by-step guides on generating a Polkadot account.
+description: Steps on generating a Polkadot account.
 slug: ../learn-account-generation
 ---
 

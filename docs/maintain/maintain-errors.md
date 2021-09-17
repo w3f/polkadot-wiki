@@ -2,6 +2,7 @@
 id: maintain-errors
 title: Errors and How to Resolve Them
 sidebar_label: Resolving Errors
+description: Common errors you might encounter and how they can be resolved.
 slug: ../maintain-errors
 ---
 

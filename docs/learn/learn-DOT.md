@@ -2,6 +2,7 @@
 id: learn-DOT
 title: DOT
 sidebar_label: DOT
+description: Learn about the tokenomics of the Polkadot ecosystem.
 slug: ../learn-DOT
 ---
 

@@ -2,6 +2,7 @@
 id: learn-teleport
 title: Teleporting Assets To Other Parachains
 sidebar_label: Teleporting Assets
+description: Steps on how to teleport assets across parachains.
 slug: ../learn-teleport
 ---
 

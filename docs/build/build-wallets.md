@@ -2,6 +2,7 @@
 id: build-wallets
 title: Polkadot Wallets
 sidebar_label: Polkadot Wallets
+description: An overview of the current supported wallets on Polkadot.
 slug: ../build-wallets
 ---
 

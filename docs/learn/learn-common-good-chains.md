@@ -2,7 +2,7 @@
 id: learn-common-goods
 title: Common Good Parachains
 sidebar_label: Common Good Parachains
-description: Common Good Parachains
+description: Learn about Common Good Parachains and ones currently on the network.
 slug: ../learn-common-goods
 ---
 

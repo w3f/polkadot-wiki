@@ -2,6 +2,7 @@
 id: maintain-guides-how-to-vote-councillor
 title: Voting for Councillors
 sidebar_label: Voting for Councillors
+description: Steps on how to vote for councillors.
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 

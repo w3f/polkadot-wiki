@@ -2,6 +2,7 @@
 id: build-storage
 title: Decentralised Storage Systems
 sidebar_label: Decentralised Storage
+description: Information about building with decentralised storage.
 slug: ../build-storage
 ---
 

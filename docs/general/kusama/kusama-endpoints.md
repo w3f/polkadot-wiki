@@ -2,6 +2,7 @@
 id: kusama-endpoints
 title: Kusama Endpoints
 sidebar_label: Kusama Endpoints
+description: An overview of useful Kusama endpoints.
 slug: ../../kusama-endpoints
 ---
 

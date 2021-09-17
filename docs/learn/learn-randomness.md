@@ -2,6 +2,7 @@
 id: learn-randomness
 title: Randomness
 sidebar_label: Randomness
+description: Learn about the approach to randomness in Polkadot's NPoS.
 slug: ../learn-randomness
 ---
 

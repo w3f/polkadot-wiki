@@ -2,6 +2,7 @@
 id: learn-spree
 title: SPREE
 sidebar_label: SPREE
+description: Learn about the fundamentals of SPREE.
 slug: ../learn-spree
 ---
 

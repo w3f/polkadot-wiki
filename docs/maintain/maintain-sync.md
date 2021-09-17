@@ -2,6 +2,7 @@
 id: maintain-sync
 title: Set up a Full Node
 sidebar_label: Set up a Full Node
+description: Steps on how to set up a full node.
 slug: ../maintain-sync
 ---
 

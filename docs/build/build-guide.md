@@ -2,6 +2,7 @@
 id: build-guide
 title: Polkadot Builders Starter's Guide
 sidebar_label: Polkadot Builders Starter's Guide
+description: Start building with Polkadot.
 slug: ../build-build-with-polkadot
 ---
 

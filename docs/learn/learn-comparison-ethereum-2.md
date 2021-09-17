@@ -2,6 +2,7 @@
 id: learn-comparisons-ethereum-2
 title: Polkadot and Ethereum 2.0
 sidebar_label: Ethereum 2.0
+description: A high-level comparison between Polkadot and Ethereum 2.0.
 slug: ../learn-comparisons-ethereum-2
 ---
 

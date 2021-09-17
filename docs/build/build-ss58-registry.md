@@ -2,6 +2,7 @@
 id: build-ss58-registry
 title: SS58 Registry
 sidebar_label: SS58 Registry
+description: Information about SS58 encoding.
 slug: ../build-ss58-registry
 ---
 

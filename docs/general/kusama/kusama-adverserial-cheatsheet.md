@@ -2,10 +2,9 @@
 id: kusama-adversarial-cheatsheet
 title: Adversarial Cheatsheet
 sidebar_label: Adversarial Cheatsheet
+description: A cheatsheet to help you create chaos.
 slug: ../../kusama-adversarial-cheatsheet
 ---
-
-<!-- no updates -->
 
 Expect things to break on Kusama. To help you break some things, take a look at the following threat
 model.

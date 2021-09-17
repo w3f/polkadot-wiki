@@ -2,6 +2,7 @@
 id: kusama-faucet
 title: Kusama Faucet
 sidebar_label: Faucet
+description: Deprecated page about Kusama's faucet.
 slug: ../../kusama-faucet
 ---
 

@@ -2,10 +2,11 @@
 id: ledger
 title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
+description: How to use the Polkadot application on Ledger.
 slug: ../ledger
 ---
 
-> Note: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
+> NOTE: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
 > browsers like Brave and Chrome.
 
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X

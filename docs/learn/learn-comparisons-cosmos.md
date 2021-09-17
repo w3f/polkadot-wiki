@@ -2,6 +2,7 @@
 id: learn-comparisons-cosmos
 title: Polkadot and Cosmos
 sidebar_label: Cosmos
+description: Learn about the differences between Polkadot and Cosmos.
 slug: ../learn-comparisons-cosmos
 ---
 

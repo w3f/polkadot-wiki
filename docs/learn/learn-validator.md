@@ -2,6 +2,7 @@
 id: learn-validator
 title: Validator
 sidebar_label: Validator
+description: An introduction about validators.
 slug: ../learn-validator
 ---
 

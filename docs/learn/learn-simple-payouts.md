@@ -2,6 +2,7 @@
 id: learn-simple-payouts
 title: Simple Payouts
 sidebar_label: Simple Payouts
+description: An overview of how payouts work for those staking.
 slug: ../learn-simple-payouts
 ---
 
@@ -40,7 +41,7 @@ fee. Someone must submit a transaction with a validator ID and an era index. Pol
 automatically calculate that validator's reward, find the top {{ polkadot_max_nominators }}
 nominators for that era, and distribute the rewards pro rata.
 
-> Note: The Staking system only applies the highest {{ polkadot_max_nominators }} nominations to
+> NOTE: The Staking system only applies the highest {{ polkadot_max_nominators }} nominations to
 > each validator to reduce the complexity of the staking set.
 
 These details are handled for you automatically if you use the
