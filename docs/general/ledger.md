@@ -20,9 +20,6 @@ the Utility pallet).
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
-> Please check out our
-> [intro to Ledger video on Youtube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
-
 ## Requirements
 
 Here is a list of what you will need before starting:
@@ -45,7 +42,9 @@ Here is a list of what you will need before starting:
 
 ![The Polkadot App in the Ledger Manager](../assets/ledger/manager-app-polkadot.png)
 
-Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
+Watch the instructions on how to create an account, send/receive and state/unstake DOTs in the video below
+
+[![Polkadot on Ledger Live](https://img.youtube.com/vi/jL-N_IWiYVA/0.jpg)](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
 ### Using the Developer Release
 
