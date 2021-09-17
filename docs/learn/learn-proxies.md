@@ -105,6 +105,13 @@ multisig would be created.
 
 ## How to set up a Proxy
 
+> NOTE: The first proxy you add should always be of _type_ `Any`.
+> Also, if there are multiple proxies for the proxied account, you should not remove _all_ `Any`
+> types unless you are prepared to kill the relationship.
+> Without having an `Any` type proxy, you won't be able to send funds, add new proxies, kill the
+> anonymous proxy or take any action not specifically allowed by the types of the proxies the
+> account has.
+
 ### Using the Polkadot-JS UI
 
 To set up a proxy, navigate to the [Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and
@@ -118,9 +125,11 @@ next to it). The `addProxy(proxy, proxy_type)` function will need to be selected
 a proxy. The chosen proxy account that you set will be the account that has the proxy on it. The
 selected account at the top is the account that will be the primary account.
 
-> Note: If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an
-> empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
+> NOTE: If you see an `unused` option when adding in a proxy, this is not a proxy type. This is an
+> empty `enum`, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
 > created.
+
+**Please be aware of how critical it is to set up an anonymous proxy and the overall dangers.**
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
@@ -147,7 +156,7 @@ where you will be able to select the type of proxy for that specific account.
 
 ![proxy generation part 2](../assets/polkadot_add_another_proxy.png)
 
-> Note: You cannot create an anonymous function from the Accounts page, you must be on the
+> NOTE: You cannot create an anonymous function from the Accounts page, you must be on the
 > Extrinsics page.
 
 ### Removing Proxies
