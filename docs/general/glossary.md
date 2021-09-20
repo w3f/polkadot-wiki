@@ -458,6 +458,10 @@ the Governance Council, by a member of the public, or as the result of a previou
 Stakeholders vote on referenda, weighted by both the size of their stake (i.e. number of DOT held)
 and the amount of time they are willing to lock their tokens.
 
+## Re-Genesis
+
+Re-Genesis is the process of exporting the current chain state, and creating a new chain that builds on it. Re-Genesis will involve stop-the-world migration, which results in a period of time when no actual blocks are added to the blockchain. In a way, regenesis can be viewed as a hard fork process. A formal design of Re-Genesis on Substrate is still under development - [Re-Genesis Rationale and Design](https://github.com/paritytech/substrate/issues/7458).
+
 ## Relay chain
 
 The chain that coordinates consensus and communication between parachains (and external chains, via
