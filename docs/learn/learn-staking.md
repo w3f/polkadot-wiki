@@ -295,7 +295,6 @@ nodes that kick in **only once the original node is verifiably offline** (to avo
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
 
-> > > > > > > master:docs/learn-staking.md
 
 ### GRANDPA Equivocation
 
