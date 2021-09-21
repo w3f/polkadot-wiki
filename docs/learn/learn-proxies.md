@@ -123,13 +123,13 @@ selected account at the top is the account that will be the primary account.
 > empty `enum`, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
 > created.
 
-**Please be aware of how critical it is to set up an anonymous proxy and the overall dangers.**
+**It is critical to setup Anonymous Proxies with appropriate permissions**
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
-> NOTE: The first proxy you add should always be of _type_ `Any`.
-> Also, if there are multiple proxies for the proxied account, you should not remove _all_ `Any`
-> types unless you are prepared to kill the relationship.
+> NOTE: The first anonymous proxy you add should always be of _type_ `Any`.
+> Also, if there are multiple anonymous proxies for the proxied account, you should keep at least  _one_ `Any`
+> type.
 > Without having an `Any` type proxy, you won't be able to send funds, add new proxies, kill the
 > anonymous proxy or take any action not specifically allowed by the types of the proxies the
 > account has.
