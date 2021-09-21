@@ -123,7 +123,7 @@ selected account at the top is the account that will be the primary account.
 > empty `enum`, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
 > created.
 
-**It is critical to setup Anonymous Proxies with appropriate permissions**
+**It is critical to setup Anonymous Proxies with appropriate permissions and be aware of potential dangers**
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
