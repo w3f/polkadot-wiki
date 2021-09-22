@@ -1,7 +1,7 @@
 ---
 id: kusama-getting-started
 title: Getting Started
-sidebar_label: Getting Started
+sidebar_label: Home
 description: Get started with Kusama.
 slug: ../../kusama-getting-started
 ---
