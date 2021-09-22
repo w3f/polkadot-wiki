@@ -64,9 +64,9 @@ export default function Index() {
                 nominators are rewarded from the block production rewards that
                 their nominatations are entitled to.
               </p>
-              <a href={docUrl("maintain-how-to-nominate-kusama")}>
+              <a href={docUrl("maintain-guides-how-to-nominate-kusama")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
-                  Read more on Parachains
+                  Read more on Nominating
                 </button>
               </a>
             </div>

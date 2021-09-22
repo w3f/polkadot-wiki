@@ -733,7 +733,10 @@ article img {
   margin-left: 5px;
 }
 
-/* Test */
+/* ==========================================================================
+       Typing Style for Main Page
+========================================================================== */
+
 .wrapper {
   height: 67vh;
   /*This part is important for centering*/
@@ -762,147 +765,4 @@ article img {
   50% {
     border-color: transparent;
   }
-}
-
-/*  ==========================================================================
-    Bootstrap fix
-    ========================================================================== */
-
-.nav-footer.spacer-y-4 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.nav-footer.pb-4 {
-  padding-bottom: 2.25rem !important;
-}
-
-.nav-footer .text-small {
-  font-size: 0.875rem;
-}
-
-@media (min-width: 768px) {
-  .nav-footer.spacer-y-4 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .nav-footer .py-md-1 {
-    padding-bottom: 0.375rem !important;
-    padding-top: 0.375rem !important;
-  }
-}
-
-/* ==========================================================================
-       Footer
-       ========================================================================== */
-
-.nav-footer {
-  background: black;
-  border: none;
-  color: white;
-  font-size: 16px;
-  line-height: 24px;
-  position: relative;
-}
-
-/*
-       Footer Nav
-       ========================================================================== */
-
-.nav-footer h5 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  margin-top: 0;
-}
-
-.nav-footer a:hover {
-  text-decoration: none;
-}
-
-.nav-footer a.text-white {
-  color: var(--silverColor) !important;
-}
-
-.nav-footer a.text-white:visited {
-  color: var(--silverColor) !important;
-}
-
-.nav-footer a.text-white:hover {
-  color: white !important;
-}
-
-/*
-       Footer Social
-       ========================================================================== */
-
-.list-social-links {
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-footer .list-social-links i {
-  font-size: 1.2rem;
-}
-
-footer .list-social-links a {
-  padding: 0.25rem 0.9rem;
-  text-decoration: none;
-}
-
-footer [class^="socicon-"] {
-  line-height: 2;
-}
-
-footer .list-social-links {
-  margin-left: 0;
-}
-footer .list-social-links li {
-  margin-top: 0 !important;
-}
-
-footer .list-social-links a {
-  background: transparent !important;
-  border: 1px solid white;
-  color: white;
-  padding: 0.25rem 0.9rem;
-  display: block;
-  border-radius: 50%;
-}
-
-/*
-      Footer Legal
-      ========================================================================== */
-
-.footer-legal .navbar-brand {
-  display: block;
-  padding-bottom: 0;
-}
-
-.footer-legal ul {
-  margin-bottom: 0;
-}
-
-.footer-legal li + li {
-  margin-top: 0;
-}
-
-.footer-legal .list-pipe-separator > li:not(:last-child) > a:after {
-  content: "|";
-  margin: 0 0.375rem;
-  opacity: 0.5;
-}
-
-.footer-legal a.text-white {
-  color: #b5aeae !important;
-}
-
-.footer-legal a.text-white:visited {
-  color: #b5aeae !important;
-}
-
-.footer-legal a.text-white:hover {
-  color: #fff !important;
 }
