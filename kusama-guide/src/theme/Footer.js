@@ -61,9 +61,6 @@ export default function Footer() {
             Kusama Watercooler (Element Chat)
           </a>
         </div>
-        <a href="/kusama-wiki.zip" target="_blank" rel="noreferrer noopener">
-          Download this Guide as PDF
-        </a>
       </section>
 
       <section className="row">

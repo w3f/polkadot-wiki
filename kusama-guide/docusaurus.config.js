@@ -66,18 +66,6 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    announcementBar: {
-      isCloseable: false,
-      backgroundColor: "#e6007a",
-      content: `<a
-          id="support_us"
-          href="/docs/contributing"
-          title="Contribute to this wiki"
-          data-ribbon="Contribute to this wiki"
-        >
-          Contribute to this wiki
-        </a>`,
-    },
     colorMode: {
       defaultMode: "light",
       disableSwitch: true,

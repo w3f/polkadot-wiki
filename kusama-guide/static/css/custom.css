@@ -154,6 +154,28 @@ button.DocSearch svg {
   color: white !important;
 }
 
+/*  Contribute button */
+@media only screen and (min-width: 1024px) {
+  .navbar__inner a.navbar__item[href*="contributing"] {
+    background: white;
+    color: var(--ifm-color-primary);
+    border: solid 1px var(--ifm-color-primary);
+    border-radius: 20px;
+
+    height: 35px;
+    padding: 0 16px;
+    margin-left: 16px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .navbar__inner a.navbar__item[href*="contributing"]:hover {
+    background: var(--ifm-color-primary);
+    color: white;
+  }
+}
+
 /* Languages menu */
 
 .dropdown > a {
@@ -383,6 +405,16 @@ article img {
   font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
 }
 
+.homepage-font-left {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  text-align: left;
+}
+
+.homepage-font-right {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  text-align: right;
+}
+
 .homeContainer {
   background: white;
   height: 50vh;
@@ -399,19 +431,23 @@ article img {
 }
 
 .main-wrapper .kusama-mainpage-row-validator {
-  background-color: white;
+  background: black;
+}
+
+.main-wrapper .kusama-mainpage-row-nominator {
+  background-color: black;
 }
 
 .kusama-full-width {
   width: 100%;
   text-align: center;
-  margin: 50px;
+  margin: 115px;
 }
 
 .kusama-full-width-main {
   width: 60%;
   text-align: center;
-  margin: 50px;
+  margin: 40px;
   height: auto;
 }
 
@@ -439,7 +475,8 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/kusama-pink-row.svg") center black;
+  background: url("../img/Kusama_header_pink.png") center black;
+  background-position: 185px -110px;
 }
 
 .kusama-mainpage-cyber-row {
@@ -449,17 +486,33 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama-white-stencil.png") left center no-repeat black;
+  background: black;
   background-size: 40%;
+  border-top: 10px solid var(--ifm-color-primary);
 }
 
 .kusama-mainpage-row-validator {
-  width: 100%;
   display: flex;
-  padding: 0;
   flex-flow: row wrap;
   justify-content: center;
-  color: black;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
+  background: black;
+}
+
+.kusama-mainpage-row-nominator {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
+  background: black;
 }
 
 .kusama-mainpage-row-more {
@@ -469,8 +522,9 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
   background: black;
-  border-bottom: 10px solid var(--ifm-color-primary);
 }
 
 .kusama-mainpage-column {

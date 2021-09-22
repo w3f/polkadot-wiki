@@ -14,7 +14,7 @@ function HomeSplash() {
     <SplashContainer>
       <div className="inner">
         <img
-          src={require("@site/static/img/Kusama_header_pink.png").default}
+          src={require("@site/static/img/kusama-gifs.gif").default}
           style={{ width: "100%" }}
         />
       </div>
@@ -37,25 +37,37 @@ export default function Index() {
         <div className="mainContainer" style={{ padding: "0" }}>
           <div className="kusama-mainpage-row-learn">
             <p className="kusama-full-width-main homepage-font">
-              Kusama is an early, unaudited and unrefined release of Polkadot.
-              Kusama will serve as a proving ground, allowing teams and
-              developers to build and deploy a parachain or try out Polkadot’s
-              governance, staking, nomination and validation functionality in a
-              real environment.
+              Kusama is an early release of Polkadot. Kusama will serve as a
+              proving ground, allowing teams and developers to build and deploy
+              a parachain or try out Polkadot’s governance and NPoS
+              functionality in a real environment. Expect Chaos.
             </p>
           </div>
           <div className="mainpage-row-placeholder" />
           <div className="kusama-mainpage-row">
             <h1 className="kusama-full-width homepage-font">
-              What can you do with Kusama?
+              The Scalable, Multichain Network for Radical Innovation.
             </h1>
           </div>
-          <div className="kusama-mainpage-row-validator">
+          <div className="kusama-mainpage-row-more">
             <div className="mainpage-column">
-              <h2 className="homepage-font">Become a Validator</h2>
+              <h2 className="homepage-font">Become a Nominator</h2>
+              <p className="homepage-font">
+                Help maintain the network by participating as a nominator.
+                Nomination is the process of staking your tokens behind a
+                validator to support and secure the network. As a result,
+                nominators are rewarded from the block production rewards that
+                their nominatations are entitled to.
+              </p>
+              <a href={docUrl("maintain-how-to-nominate-kusama")}>
+                <button className="kusama-mainpage-build-btn homepage-font">
+                  Read more on Parachains
+                </button>
+              </a>
             </div>
             <div className="mainpage-column">
-              <p className="homepage-font">
+              <h2 className="homepage-font">Become a Validator</h2>
+              <p className="homepage-font-right">
                 The minimum requirement for staking as a validator on Kusama is
                 much lower than it is expected for Polkadot. There are also
                 programs in place such as{" "}
@@ -67,7 +79,7 @@ export default function Index() {
                 </a>{" "}
                 to help community validators rise the ranks.
               </p>
-              <a href={docUrl("mirror-maintain-guides-how-to-validate-kusama")}>
+              <a href={docUrl("maintain-guides-how-to-validate-kusama")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Validators
                 </button>
@@ -78,23 +90,24 @@ export default function Index() {
             <div className="mainpage-column">
               <h2 className="homepage-font">Deploy Parachains</h2>
               <p className="homepage-font">
-                Kusama will get the functionality required for parachains before
-                Polkadot. This includes participating in a parachain slot
-                auction and composable applications.
+                Kusama Parachains are live. Chaos has been welcomed and
+                continues with no promises. The path of Kusama deployment is
+                paving the way to Polkadot's parachains as the technology
+                becomes proven.
               </p>
-              <a href={docUrl("mirror-learn-parachains")}>
+              <a href={docUrl("learn-parachains")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Parachains
                 </button>
               </a>
             </div>
             <div className="mainpage-column">
-              <h2 className="homepage-font">Explore the politics</h2>
+              <h2 className="homepage-font">Explore the Politics</h2>
               <p className="homepage-font">
-                Campaign as a councillor or vote for new runtime proposals using
-                Democracy.
+                Learn about Kusama's on-chain governance. Campaign as a
+                councillor or vote for new runtime proposals using Democracy.
               </p>
-              <a href={docUrl("mirror-learn-governance")}>
+              <a href={docUrl("learn-governance")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Politics
                 </button>
