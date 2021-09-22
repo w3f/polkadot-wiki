@@ -66,18 +66,6 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    announcementBar: {
-      isCloseable: false,
-      backgroundColor: "#e6007a",
-      content: `<a
-          id="support_us"
-          href="/docs/contributing"
-          title="Contribute to this wiki"
-          data-ribbon="Contribute to this wiki"
-        >
-          Contribute to this wiki
-        </a>`,
-    },
     colorMode: {
       defaultMode: "light",
       disableSwitch: true,
@@ -92,17 +80,17 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/kusama-getting-started",
-          label: "Get Started",
-          position: "right",
-        },
-        {
           to: "docs/kusama-index",
           label: "Docs",
           position: "right",
         },
         {
           type: "search",
+          position: "right",
+        },
+        {
+          to: "docs/contributing",
+          label: "Contribute",
           position: "right",
         },
         {

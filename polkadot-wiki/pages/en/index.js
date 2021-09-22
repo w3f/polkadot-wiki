@@ -89,11 +89,11 @@ class HomeFooter extends React.Component {
             Learn about Polkadot’s canary network Kusama
           </h3>
           <p className="mb-5">
-            Kusama is Polkadot’s “canary network”, a scalable, multi-chain
-            network for radical innovation and early stage Polkadot deployments.
-            For developers, Kusama is a proving ground for all things Polkadot
-            I.e runtime upgrades, on-chain governance, parachains, parathreads,
-            etc.
+            Kusama is Polkadot’s canary network; a scalable, multi-chain network
+            for radical innovation and early stage Polkadot deployments. For
+            developers, Kusama is a proving ground for all things Polkadot (i.e.
+            runtime upgrades, on-chain governance, parachains, parathreads,
+            etc.).
           </p>
         </Col>
         <Col>

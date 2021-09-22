@@ -326,11 +326,6 @@ export default function Footer() {
                 })}
                 href="https://polkadot.network/privacy"
               />
-              {/* TODO: FIX the replacement */}
-              <FooterLegalLink
-                content="PDF version"
-                href="{{ dot_ipfs_pdf_url }}"
-              />
             </ul>
           </Col>
         </Row>

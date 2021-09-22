@@ -154,6 +154,28 @@ button.DocSearch svg {
   color: white !important;
 }
 
+/*  Contribute button */
+@media only screen and (min-width: 1024px) {
+  .navbar__inner a.navbar__item[href*="contributing"] {
+    background: white;
+    color: var(--ifm-color-primary);
+    border: solid 1px var(--ifm-color-primary);
+    border-radius: 20px;
+
+    height: 35px;
+    padding: 0 16px;
+    margin-left: 16px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .navbar__inner a.navbar__item[href*="contributing"]:hover {
+    background: var(--ifm-color-primary);
+    color: white;
+  }
+}
+
 /* Languages menu */
 
 .dropdown > a {
@@ -383,6 +405,29 @@ article img {
   font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
 }
 
+.homepage-font-left {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  text-align: left;
+}
+
+.homepage-font-right {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  text-align: right;
+}
+
+.homepage-font-start {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.homepage-font-footer {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  font-size: 17.25px;
+}
+
 .homeContainer {
   background: white;
   height: 50vh;
@@ -399,26 +444,30 @@ article img {
 }
 
 .main-wrapper .kusama-mainpage-row-validator {
-  background-color: white;
+  background: black;
+}
+
+.main-wrapper .kusama-mainpage-row-nominator {
+  background-color: black;
 }
 
 .kusama-full-width {
   width: 100%;
   text-align: center;
-  margin: 50px;
+  margin: 75px;
 }
 
 .kusama-full-width-main {
   width: 60%;
   text-align: center;
-  margin: 50px;
+  margin: 40px;
   height: auto;
 }
 
 .mainpage-row-placeholder {
   background: black;
   width: 100%;
-  height: 100px;
+  height: 10px;
   padding: 0;
 }
 
@@ -438,8 +487,9 @@ article img {
   justify-content: center;
   width: 100%;
   padding: 0;
-  color: white;
-  background: url("../img/kusama-pink-row.svg") center black;
+  color: var(--ifm-color-primary);
+  background: url("../img/Kusama-Alexandra-Heller.gif") center black;
+  background-position: center;
 }
 
 .kusama-mainpage-cyber-row {
@@ -449,17 +499,32 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama-white-stencil.png") left center no-repeat black;
-  background-size: 40%;
+  background: black;
+  background-size: 20%;
 }
 
 .kusama-mainpage-row-validator {
-  width: 100%;
   display: flex;
-  padding: 0;
   flex-flow: row wrap;
   justify-content: center;
-  color: black;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
+  background: black;
+}
+
+.kusama-mainpage-row-nominator {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: white;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
+  background: black;
 }
 
 .kusama-mainpage-row-more {
@@ -469,8 +534,21 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
   background: black;
-  border-bottom: 10px solid var(--ifm-color-primary);
+}
+
+.kusama-mainpage-row-extra {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: black;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
+  background: white;
 }
 
 .kusama-mainpage-column {
@@ -489,6 +567,43 @@ article img {
 }
 
 .kusama-mainpage-build-btn {
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  width: 100%;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 24px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0.75rem !important;
+  display: inline-block;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.kusama-mainpage-build-btn-main {
+  background: transparent;
+  border: 3.7px black;
+  color: white;
+  width: 75%;
+  font-weight: 500;
+  font-weight: bold;
+  padding: 50px;
+  font-size: 47px;
+  margin-top: 50px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 1rem !important;
+  display: inline-block;
+  line-height: 7;
+  cursor: pointer;
+  background: url("../img/kusama-gifs.gif");
+  background-position: center;
+}
+
+.kusama-mainpage-build-btn-footer {
   background: transparent;
   border: 1px solid var(--ifm-color-primary);
   color: var(--ifm-color-primary);
@@ -616,4 +731,38 @@ article img {
 .cards-text {
   margin: 1px;
   margin-left: 5px;
+}
+
+/* ==========================================================================
+       Typing Style for Main Page
+========================================================================== */
+
+.wrapper {
+  height: 67vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 3s steps(15), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
