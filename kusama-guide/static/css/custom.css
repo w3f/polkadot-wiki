@@ -415,6 +415,19 @@ article img {
   text-align: right;
 }
 
+.homepage-font-start {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.homepage-font-footer {
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  font-size: 17.25px;
+}
+
 .homeContainer {
   background: white;
   height: 50vh;
@@ -441,7 +454,7 @@ article img {
 .kusama-full-width {
   width: 100%;
   text-align: center;
-  margin: 115px;
+  margin: 75px;
 }
 
 .kusama-full-width-main {
@@ -454,7 +467,7 @@ article img {
 .mainpage-row-placeholder {
   background: black;
   width: 100%;
-  height: 100px;
+  height: 10px;
   padding: 0;
 }
 
@@ -474,9 +487,9 @@ article img {
   justify-content: center;
   width: 100%;
   padding: 0;
-  color: white;
-  background: url("../img/Kusama_header_pink.png") center black;
-  background-position: 185px -110px;
+  color: var(--ifm-color-primary);
+  background: url("../img/Kusama-Alexandra-Heller.gif") center black;
+  background-position: center;
 }
 
 .kusama-mainpage-cyber-row {
@@ -487,8 +500,7 @@ article img {
   padding: 0;
   color: white;
   background: black;
-  background-size: 40%;
-  border-top: 10px solid var(--ifm-color-primary);
+  background-size: 20%;
 }
 
 .kusama-mainpage-row-validator {
@@ -527,6 +539,18 @@ article img {
   background: black;
 }
 
+.kusama-mainpage-row-extra {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  color: black;
+  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
+  background-position: 115px 1px;
+  background: white;
+}
+
 .kusama-mainpage-column {
   width: 50%;
   display: flex;
@@ -543,6 +567,43 @@ article img {
 }
 
 .kusama-mainpage-build-btn {
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  width: 100%;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 24px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0.75rem !important;
+  display: inline-block;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.kusama-mainpage-build-btn-main {
+  background: transparent;
+  border: 3.7px black;
+  color: white;
+  width: 75%;
+  font-weight: 500;
+  font-weight: bold;
+  padding: 50px;
+  font-size: 47px;
+  margin-top: 50px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 1rem !important;
+  display: inline-block;
+  line-height: 7;
+  cursor: pointer;
+  background: url("../img/kusama-gifs.gif");
+  background-position: center;
+}
+
+.kusama-mainpage-build-btn-footer {
   background: transparent;
   border: 1px solid var(--ifm-color-primary);
   color: var(--ifm-color-primary);
@@ -670,4 +731,178 @@ article img {
 .cards-text {
   margin: 1px;
   margin-left: 5px;
+}
+
+/* Test */
+.wrapper {
+  height: 67vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 3s steps(15), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*  ==========================================================================
+    Bootstrap fix
+    ========================================================================== */
+
+.nav-footer.spacer-y-4 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.nav-footer.pb-4 {
+  padding-bottom: 2.25rem !important;
+}
+
+.nav-footer .text-small {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .nav-footer.spacer-y-4 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .nav-footer .py-md-1 {
+    padding-bottom: 0.375rem !important;
+    padding-top: 0.375rem !important;
+  }
+}
+
+/* ==========================================================================
+       Footer
+       ========================================================================== */
+
+.nav-footer {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+/*
+       Footer Nav
+       ========================================================================== */
+
+.nav-footer h5 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+}
+
+.nav-footer a:hover {
+  text-decoration: none;
+}
+
+.nav-footer a.text-white {
+  color: var(--silverColor) !important;
+}
+
+.nav-footer a.text-white:visited {
+  color: var(--silverColor) !important;
+}
+
+.nav-footer a.text-white:hover {
+  color: white !important;
+}
+
+/*
+       Footer Social
+       ========================================================================== */
+
+.list-social-links {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+footer .list-social-links i {
+  font-size: 1.2rem;
+}
+
+footer .list-social-links a {
+  padding: 0.25rem 0.9rem;
+  text-decoration: none;
+}
+
+footer [class^="socicon-"] {
+  line-height: 2;
+}
+
+footer .list-social-links {
+  margin-left: 0;
+}
+footer .list-social-links li {
+  margin-top: 0 !important;
+}
+
+footer .list-social-links a {
+  background: transparent !important;
+  border: 1px solid white;
+  color: white;
+  padding: 0.25rem 0.9rem;
+  display: block;
+  border-radius: 50%;
+}
+
+/*
+      Footer Legal
+      ========================================================================== */
+
+.footer-legal .navbar-brand {
+  display: block;
+  padding-bottom: 0;
+}
+
+.footer-legal ul {
+  margin-bottom: 0;
+}
+
+.footer-legal li + li {
+  margin-top: 0;
+}
+
+.footer-legal .list-pipe-separator > li:not(:last-child) > a:after {
+  content: "|";
+  margin: 0 0.375rem;
+  opacity: 0.5;
+}
+
+.footer-legal a.text-white {
+  color: #b5aeae !important;
+}
+
+.footer-legal a.text-white:visited {
+  color: #b5aeae !important;
+}
+
+.footer-legal a.text-white:hover {
+  color: #fff !important;
 }

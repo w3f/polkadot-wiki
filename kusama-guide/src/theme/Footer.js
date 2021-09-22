@@ -25,24 +25,20 @@ export default function Footer() {
           />
         </a>
         <div>
-          <p className="homepage-font">
-            Kusama is an experimental <br />
-            community research and
-            <br /> development network.
-          </p>
-          <a
-            href={docUrl("kusama-index")}
-            target="_blank"
-            className="homepage-font"
-          >
-            Docs
-          </a>
           <a
             href="https://kusama.network/"
             target="_blank"
             className="homepage-font"
           >
             Kusama Network
+          </a>
+          <a
+            href="https://polkadot.network/faq/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="homepage-font"
+          >
+            FAQ
           </a>
           <a
             href="https://twitter.com/kusamanetwork"
@@ -53,13 +49,45 @@ export default function Footer() {
             Twitter
           </a>
           <a
+            href="https://www.notion.so/web3foundation/Polkadot-Kusama-Community-Hub-ee1fd077ff6c42c381940404f6aa9f1c"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="homepage-font"
+          >
+            Community Hub
+          </a>
+          <a
             href="https://matrix.to/#/!HfRYKXBoPmDBCAWUEJ:polkadot.builders"
             target="_blank"
             rel="noreferrer noopener"
             className="homepage-font"
           >
-            Kusama Watercooler (Element Chat)
+            Kusama Watercooler
           </a>
+          <a
+            href="https://github.com/w3f/General-Grants-Program"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="homepage-font"
+          >
+            Grants and Bounties
+          </a>
+        </div>
+        <div className="kusama-mainpage-cyber-row">
+          <div className="kusama-mainpage-column">
+            <h2 className="homepage-font-footer">
+              Join a cyber secret society
+            </h2>
+            <p className="homepage-font-footer">
+              The Kappa Sigma Mu fraternity asks you to get a Kusama tattoo to
+              join.
+            </p>
+            <a href={docUrl("maintain-guides-society-kusama")}>
+              <button className="kusama-mainpage-build-footer">
+                See Kappa Sigma Mu
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 

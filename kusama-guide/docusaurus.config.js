@@ -80,17 +80,17 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/kusama-getting-started",
-          label: "Get Started",
-          position: "right",
-        },
-        {
           to: "docs/kusama-index",
           label: "Docs",
           position: "right",
         },
         {
           type: "search",
+          position: "right",
+        },
+        {
+          to: "docs/contributing",
+          label: "Contribute",
           position: "right",
         },
         {

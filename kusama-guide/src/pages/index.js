@@ -12,12 +12,14 @@ function HomeSplash() {
 
   return (
     <SplashContainer>
-      <div className="inner">
-        <img
-          src={require("@site/static/img/kusama-gifs.gif").default}
-          style={{ width: "100%" }}
-        />
-      </div>
+      <button className="kusama-mainpage-build-btn-main homepage-font">
+        <a
+          className="homepage-font-start"
+          href="https://guide.kusama.network/docs/kusama-getting-started"
+        >
+          GET STARTED WITH KUSAMA
+        </a>
+      </button>
     </SplashContainer>
   );
 }
@@ -37,16 +39,19 @@ export default function Index() {
         <div className="mainContainer" style={{ padding: "0" }}>
           <div className="kusama-mainpage-row-learn">
             <p className="kusama-full-width-main homepage-font">
-              Kusama is an early release of Polkadot. Kusama will serve as a
-              proving ground, allowing teams and developers to build and deploy
-              a parachain or try out Polkadot’s governance and NPoS
-              functionality in a real environment. Expect Chaos.
+              Kusama is an early release of Polkadot: a scalable, multichain
+              network for radical innovation. Kusama serves as a proving ground
+              that allows teams and developers to build and deploy a parachain,
+              and experiment with Polkadot’s governance and NPoS functionality
+              in a real environment.
             </p>
           </div>
           <div className="mainpage-row-placeholder" />
           <div className="kusama-mainpage-row">
             <h1 className="kusama-full-width homepage-font">
-              The Scalable, Multichain Network for Radical Innovation.
+              <div className="wrapper">
+                <div className="typing-demo">Join the chaos.</div>
+              </div>
             </h1>
           </div>
           <div className="kusama-mainpage-row-more">
@@ -80,6 +85,7 @@ export default function Index() {
                 to help community validators rise the ranks.
               </p>
               <a href={docUrl("maintain-guides-how-to-validate-kusama")}>
+                <br />
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Validators
                 </button>
@@ -108,22 +114,42 @@ export default function Index() {
                 councillor or vote for new runtime proposals using Democracy.
               </p>
               <a href={docUrl("learn-governance")}>
+                <br />
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Politics
                 </button>
               </a>
             </div>
           </div>
-          <div className="kusama-mainpage-cyber-row">
-            <div className="kusama-mainpage-column">
-              <h2 className="homepage-font">Join a cyber secret society</h2>
+          <div className="kusama-mainpage-row-extra">
+            <div className="mainpage-column">
+              <h2 className="homepage-font">
+                Learn about Kusama's Cousin, Polkadot
+              </h2>
               <p className="homepage-font">
-                The Kappa Sigma Mu fraternity asks you to get a Kusama tattoo to
-                join.
+                Kusama is Polkadot’s canary network. Polkadot development is on
+                track to deliver the most robust platform for security,
+                scalability and innovation. With the help of Kusama, Polkadot
+                will become a scalable, interoperable & secure network protocol
+                for web 3.0.
               </p>
-              <a href={docUrl("maintain-guides-society-kusama")}>
+              <a href={docUrl("getting-started")}>
                 <button className="kusama-mainpage-build-btn homepage-font">
-                  See Kappa Sigma Mu
+                  Learn more on Polkadot
+                </button>
+              </a>
+            </div>
+            <div className="mainpage-column">
+              <h2 className="homepage-font">Help Improve this Wiki</h2>
+              <p className="homepage-font">
+                This wiki was started by and is maintained by Web3 Foundation.
+                It is an open-source project and aims to be the most extensive
+                resource of knowledge on Kusama and the Kusama ecosystem.
+              </p>
+              <a href={docUrl("contributing")}>
+                <br />
+                <button className="kusama-mainpage-build-btn homepage-font">
+                  Learn more on Contributions
                 </button>
               </a>
             </div>
