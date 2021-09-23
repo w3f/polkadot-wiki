@@ -12,14 +12,16 @@ function HomeSplash() {
 
   return (
     <SplashContainer>
-      <button className="kusama-mainpage-build-btn-main homepage-font">
-        <a
-          className="homepage-font-start"
-          href="https://guide.kusama.network/docs/kusama-getting-started"
-        >
-          GET STARTED WITH KUSAMA
-        </a>
-      </button>
+      <div className="mainContainer" style={{ padding: "0" }}>
+        <button className="kusama-mainpage-build-btn-main homepage-font">
+          <a
+            className="homepage-font-start"
+            href="https://guide.kusama.network/docs/kusama-getting-started"
+          >
+            GET STARTED WITH KUSAMA
+          </a>
+        </button>
+      </div>
     </SplashContainer>
   );
 }

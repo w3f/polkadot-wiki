@@ -448,9 +448,9 @@ article img {
 }
 
 .kusama-full-width-main {
-  width: 60%;
+  width: 50%;
   text-align: center;
-  margin: 40px;
+  margin: 20px;
   height: auto;
 }
 
@@ -577,12 +577,10 @@ article img {
   background: transparent;
   border: 3.7px black;
   color: white;
-  width: 75%;
-  font-weight: 500;
+  width: 100%;
   font-weight: bold;
-  padding: 50px;
-  font-size: 10px;
-  margin-top: 50px;
+  padding: 40px;
+  margin-top: 40px;
   text-align: center;
   vertical-align: middle;
   margin-bottom: 1rem !important;
