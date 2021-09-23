@@ -72,7 +72,7 @@ export default function Index() {
             </div>
             <div className="mainpage-column">
               <h2 className="homepage-font">Become a Validator</h2>
-              <p className="homepage-font-right">
+              <p className="homepage-font">
                 The minimum requirement for staking as a validator on Kusama is
                 much lower than it is expected for Polkadot. There are also
                 programs in place such as{" "}
