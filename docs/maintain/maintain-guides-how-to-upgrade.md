@@ -70,4 +70,3 @@ Once this time has elapsed Validator A will take over. You can safely stop Valid
 2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities
 ```
 
-
