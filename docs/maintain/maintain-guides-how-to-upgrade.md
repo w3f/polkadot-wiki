@@ -26,7 +26,7 @@ Session keys are stored in the client and used to sign validator operations. The
 
 ### Keystore
 
-Each validator server contains essential private keys in a folder called the keystore. These keys are used by a validator to sign transactions at the network level.  If two or more validators sign certain transactions using the same keys it can lead to an equivocation slash.
+Each validator server contains essential private keys in a folder called the *keystore*. These keys are used by a validator to sign transactions at the network level.  If two or more validators sign certain transactions using the same keys, it can lead to an [equivocation slash](../learn/learn-staking.md/#slashing).
 
 For this reason, it is advised that validators DO NOT CLONE or COPY the *keystore* folder and instead generate session keys for each new validator instance.
 
