@@ -476,7 +476,7 @@ article img {
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 0;
+  padding: 50;
   color: var(--ifm-color-primary);
   background: url("../img/Kusama-Alexandra-Heller.gif") center black;
   background-position: center;
@@ -500,7 +500,6 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: black;
 }
@@ -512,7 +511,6 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: black;
 }
@@ -524,7 +522,6 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: black;
 }
@@ -536,7 +533,6 @@ article img {
   width: 100%;
   padding: 0;
   color: black;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: white;
 }
