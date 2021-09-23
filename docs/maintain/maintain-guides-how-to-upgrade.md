@@ -8,7 +8,7 @@ slug: ../maintain-guides-how-to-upgrade
 
 Validators perform critical functions for the network, and as such, have strict uptime requirements. Validators may have to go offline for short-periods of time to upgrade client software or to upgrade the host machine. Usually, standard client upgrades will only require you to stop the service, replace the binary and restart the service.  This operation can be executed within a session and if performed correctly will not produce a slashable event.
 
-Validators may also need to perform long-lead maintenance tasks that will span more than one session.  Under these circumstances an active validator may chill his stash and be removed from the active set of validators.  Alternatively, the validator may substitue the active validator server with another allowing the former to undergo maintainance activities.
+Validators may also need to perform long-lead maintenance tasks that will span more than one session.  Under these circumstances, an active validator may chill their stash and be removed from the active validator set.  Alternatively, the validator may substitute the active validator server with another allowing the former to undergo maintenance activities.
 
 This guide will provide an option for validators to seamlessly substitute an active validator server to allow for maintenance operations. 
 
