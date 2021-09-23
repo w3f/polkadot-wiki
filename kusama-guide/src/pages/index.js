@@ -144,7 +144,7 @@ export default function Index() {
             <div className="mainpage-column">
               <h2 className="homepage-font">Help Improve this Wiki</h2>
               <p className="homepage-font">
-                This wiki was started by and is maintained by Web3 Foundation.
+                This Wiki was started by and is maintained by Web3 Foundation.
                 It is an open-source project and aims to be the most extensive
                 resource of knowledge on Kusama and the Kusama ecosystem.
               </p>
