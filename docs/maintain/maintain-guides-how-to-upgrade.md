@@ -36,7 +36,7 @@ Default keystore path - `/home/polkadot/.local/share/polkadot/chains/<chain>/key
 
 ## Steps
 
-This following steps require a second validator which will be referred to as `Validator B`, the original server that is in the active set will be referred to as `Validator A`.
+The following steps require a second validator which will be referred to as `Validator B`; the original server that is in the active set will be referred to as `Validator A`.
 
 ### Session `N`
 
