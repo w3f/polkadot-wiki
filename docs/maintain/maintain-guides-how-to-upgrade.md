@@ -49,7 +49,7 @@ The following steps require a second validator which will be referred to as `Val
 
 ### Session `N+2`
 
-Validator B is now acting as your validator. You can safely perform operations on Validator A. See note at bottom.
+**Validator B** is now acting as your validator - you can safely perform operations on **Validator A**.
 
 When you are ready to restore Validator A
 
