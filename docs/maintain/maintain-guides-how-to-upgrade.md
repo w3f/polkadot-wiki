@@ -51,7 +51,7 @@ The following steps require a second validator which will be referred to as `Val
 
 **Validator B** is now acting as your validator - you can safely perform operations on **Validator A**.
 
-When you are ready to restore Validator A
+When you are ready to restore **Validator A**:
 
 1. Start Validator A, sync the database and ensure that it is operating with the `--validator` flag.
 2. Generate new Session keys for **Validator A**.
