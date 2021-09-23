@@ -61,7 +61,7 @@ When you are ready to restore Validator A
 
 **Again, it is imperative that Validator B is kept running until the current session finishes and two further full sessions have elapsed.**
 
-Once this time has elapsed Validator A will take over. You can safely stop Validator B.
+Once this time has elapsed, **Validator A** will take over. You can safely stop Validator B.
 
 **NOTE:** To verify that the Session has changed, make sure that a block in the new Session is finalised. You should see log messages like the ones below to confirm the change:
 
