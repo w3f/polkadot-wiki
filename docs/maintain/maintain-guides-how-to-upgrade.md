@@ -55,7 +55,7 @@ Validator B is now acting as your validator. You can safely perform operations o
 When you are ready to restore Validator A
 
 1. Start Validator A, sync the database and ensure that it is operating with the `--validator` flag.
-2. Generate new Session keys for Validator A.
+2. Generate new Session keys for **Validator A**.
 3. Submit a `set_key` extrinsic from your Controller account with the session key generated from **Validator A**.
 4. Take note of the Session that this extrinsic was executed in.
 
