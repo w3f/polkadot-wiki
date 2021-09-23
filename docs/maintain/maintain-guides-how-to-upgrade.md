@@ -42,7 +42,7 @@ The following steps require a second validator which will be referred to as `Val
 
 1. Start a second node. Once it is synced, use the `--validator` flag. This is now "Validator B."
 2. Generate Session keys for **Validator B**.
-3. Submit a `set_key` extrinsic from your Controller account with the session key generated from Validator B.
+3. Submit a `set_key` extrinsic from your Controller account with the session key generated from **Validator B**.
 4. Take note of the Session that this extrinsic was executed in.
 5. Allow the current session to elapse and then wait two full sessions
 
