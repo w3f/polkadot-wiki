@@ -32,7 +32,6 @@ For this reason, it is advised that validators DO NOT CLONE or COPY the *keystor
 
 Default keystore path - `/home/polkadot/.local/share/polkadot/chains/<chain>/keystore`
    
-[More info about equivocation.](../learn/learn-staking.md/#slashing)
 
 ## Steps
 
