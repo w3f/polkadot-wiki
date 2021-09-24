@@ -501,7 +501,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 ## Motion #108: New Minimum Nomination Bond
 
-[Motion #108](https://polkadot.polkassembly.io/motion/108) proposes new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count.
+[Motion #108](https://polkadot.polkassembly.io/motion/108) proposed new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count.
 
 The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to particpate in the network's security. This motion will update the value of the minimum nominator bond from 80 DOTs to 120 DOTs. Prior to this, [Motion #103](https://polkadot.polkassembly.io/motion/103) set a new parameter named `chill-threshold`. With `chill-threshold`, the permissionless `chill_other` may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded) to adjust to this change. A more [permanent solution](https://github.com/paritytech/substrate/issues/9511) for lowering the minimum bond requirement for nominators is in progress.
 
