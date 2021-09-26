@@ -14,7 +14,7 @@ efficiently sharded among parachains while maintaining strong security guarantee
 There are five phases of the Availability and the Validity protocol.
 
 1. Parachain phase.
-2. Relay chain submission phase.
+2. Relay Chain submission phase.
 3. Availability and unavailability subprotocols.
 4. Secondary GRANDPA approval validity checks.
 5. Invocation of a Byzantine fault tolerant _finality gadget_ to cement the chain.
@@ -27,7 +27,7 @@ validators that are currently assigned to the parachain.
 > A **candidate block** is a new block from a parachain collator that may or may not be valid and
 > must go through validity checks before being included into the Relay Chain.
 
-### Relay chain submission phase
+### Relay Chain submission phase
 
 The validators then check the candidate block against the verification function exposed by that
 parachain's registered code. If the verification succeeds, then the validators will pass the

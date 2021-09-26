@@ -60,7 +60,7 @@ this security.
 A blockchain [bridge](../general/glossary.md##bridge) is a connection that allows for arbitrary data to
 transfer from one network to another. These chains are interoperable through the bridge but can
 exist as standalone chains with different protocols, rules, and governance models. In Polkadot,
-bridges connect to the relay chain and are secured through the Polkadot consensus mechanism,
+bridges connect to the Relay Chain and are secured through the Polkadot consensus mechanism,
 maintained by [collators](##collators).
 
 Polkadot uses bridges to bridge the future of Web 3.0, as bridges are fundamental to Polkadot's

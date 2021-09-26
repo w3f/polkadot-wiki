@@ -30,7 +30,7 @@ of deployment.
   > interpretations under some systems or will be intentionally unsupported.
 
 - Still, XCM offers a format for _general_ systems, including gas-metered smart contract platform and community
-  parachains - all the way to trusted interactions between system parachains and their relay chain.
+  parachains - all the way to trusted interactions between system parachains and their Relay Chain.
   > Although, the format should not bake elements, such as fee payment, too deep and irreversibly in the protocol.
 
 ### General Use-Cases
@@ -66,8 +66,8 @@ The following diagram shows the XCM tech stack:
 
 There are two kinds of vertical message-passing transport protocols:
 
-- **UMP (Upward Message Passing)**: allows parachains to send messages to their relay chain.
-- **DMP (Downward Message Passing)**: allows the relay chain to pass messages down to one of their
+- **UMP (Upward Message Passing)**: allows parachains to send messages to their Relay Chain.
+- **DMP (Downward Message Passing)**: allows the Relay Chain to pass messages down to one of their
   parachains.
 
 Messages that are passed via `DMP` may originate from a parachain. In which case, first `UMP` is used to

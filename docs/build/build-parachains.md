@@ -67,18 +67,18 @@ to Bitcoin or Ethereum) Polkadot's parachains will be able to communicate with t
 > becoming a parachain, and whether building a blockchain with an end goal of becoming a
 > parachain is a viable one for their project.
 
-On Polkadot, you are able to put your blockchain’s latest block head onto the relay chain.
+On Polkadot, you are able to put your blockchain’s latest block head onto the Relay Chain.
 As a parachain, the blocks you submit are verified by validators with a Wasm runtime, which can
-be stored on the relay chain. You also get the ability to communicate with other parachains using the
+be stored on the Relay Chain. You also get the ability to communicate with other parachains using the
 [XCM](../learn/learn-cross-consensus.md) format: an abstract message passing system.
-Message passing is tracked on the relay chain - as such, you can prove the delivery of messages and
+Message passing is tracked on the Relay Chain - as such, you can prove the delivery of messages and
 facilitate trustless interactions.
 
 As you can place your blockchain’s latest block head, you can achieve deterministic finalization
 for your chain. The hard part of reaching finalization for blockchains tends to be the consensus, where,
 in the parachain model, a blockchain can offload consensus to the overall shared network, and focus on
 block production. Since the validators have the Wasm runtime for all the parachains, your parachain
-shares the security of the validator pool with everyone on the relay chain.
+shares the security of the validator pool with everyone on the Relay Chain.
 
 Any validator in the validator pool can help validate your blockchain.
 
@@ -159,9 +159,9 @@ A collator node is one of the types of network maintainers in the Polkadot proto
 responsible for **keeping availability** of the state of the parachain and the new states returned
 from the iteration of the state transition function. They must remain online to keep track of
 the state and also of the XCMP messages that it will route between itself and other parachains.
-Collator nodes are responsible for passing the succinct proofs to the relay chain's validators and
-tracking the latest blocks from the relay chain. In essence, a collator node also acts as a light
-client for the relay chain. For more on collator nodes, see the [collator page](../learn/learn-collator.md).
+Collator nodes are responsible for passing the succinct proofs to the Relay Chain's validators and
+tracking the latest blocks from the Relay Chain. In essence, a collator node also acts as a light
+client for the Relay Chain. For more on collator nodes, see the [collator page](../learn/learn-collator.md).
 
 ### What PDKs Exist?
 
@@ -191,7 +191,7 @@ Interested in building a PDK? See the [future PDKs](##future-pdks) section for d
 [Cumulus](https://github.com/paritytech/cumulus) is an extension to Substrate that makes it easy to
 make any Substrate-built runtime into a Polkadot-compatible parachain.
 
-Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot relay chain (i.e.,
+Cumulus Consensus is a consensus engine for Substrate that follows a Polkadot Relay Chain (i.e.,
 parachains). This runs a Polkadot node internally, and dictates to the client and synchronization
 algorithms which chain to follow, finalize, and treat as correct.
 
@@ -203,8 +203,8 @@ more detailed description of Cumulus, and for those with experience in Substrate
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a Polkadot testnet built for testing
 parachains. Rococo utilizes Cumulus and HRMP (Horizontal Relay-routed Message Passing) in order to
-send transfers and messages between parachains and a relay chain. Every message is sent to the
-relay chain, then from the relay chain to the desired parachain. Rococo currently runs four test
+send transfers and messages between parachains and a Relay Chain. Every message is sent to the
+Relay Chain, then from the Relay Chain to the desired parachain. Rococo currently runs four test
 system parachains (Statemint, Tick, Trick, and Track), as well as several externally developed parachains.
 
 ### What Parachains are on Rococo Now?
@@ -325,7 +325,7 @@ Then, connect your local node with PolkadotJS Apps.
 
 ## Deploy a Parachain or Parathread on Polkadot
 
-Substrate-based chains, including the Polkadot and Kusama relay chains, use an
+Substrate-based chains, including the Polkadot and Kusama Relay Chains, use an
 [SS58 encoding](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>) for
 their address formats. [This page](https://github.com/paritytech/substrate/blob/master/ss58-registry.json)
 serves as the canonical registry for teams to see which chain corresponds to a given prefix, and which prefixes are available.
@@ -342,9 +342,9 @@ Parachain slots will be sold in open auctions, the mechanics of which can be fou
 ### Parathread
 
 Parathreads will not require a parachain slot, so you will not need to engage in the candle auction
-mechanism. Instead, you will be able to register your parathread code to a relay chain for a fee
+mechanism. Instead, you will be able to register your parathread code to a Relay Chain for a fee
 and from then be able to start participating in the per-block auctions for inclusion of your state
-transition into a relay chain.
+transition into a Relay Chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
 {{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
@@ -360,7 +360,7 @@ updates** into a single on-chain update. It should be straightforward to see how
 this to the parachain terms. The state transition function for a roll-up-like parachain would be
 updating the state (in practice, most likely a Merkle tree, which would be easily verifiable) from
 the user inputs. The operator would act as the collator node, which would aggregate the state and
-create the zk-SNARK proof that it would hand to a relay chain's validators for verification.
+create the zk-SNARK proof that it would hand to a Relay Chain's validators for verification.
 
 If you or your team are interested in developing a PDK feel free to open an issue on the
 [W3F collaboration repository](https://github.com/w3f/Web3-collaboration) for comment.

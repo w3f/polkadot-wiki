@@ -189,10 +189,10 @@ to also be nodes of your chain.
 
 This is where the collator node comes into play. A collator is a maintainer of your parachain and
 performs the critical action of producing new block candidates for your chain and passing them to
-Polkadot validators for inclusion in the Polkadot relay chain.
+Polkadot validators for inclusion in the Polkadot Relay Chain.
 
 Substrate comes with its own networking layer built-in but unfortunately only supports solo chains
-(that is, chains that do not connect to the relay chain). However, there is the Cumulus extension
+(that is, chains that do not connect to the Relay Chain). However, there is the Cumulus extension
 that includes a collator node and allows for your Substrate-built logic to be compatible with
 Polkadot as either a parachain or parathread.
 
@@ -227,9 +227,9 @@ Parachain slots will be sold in open auctions, the mechanics of which can be fou
 #### Parathread
 
 Parathreads will not require a parachain slot, so you will not need to engage in the candle auction
-mechanism. Instead, you will be able to register your parathread code to the relay chain for a fee
+mechanism. Instead, you will be able to register your parathread code to the Relay Chain for a fee
 and from then be able to start participating in the per-block auctions for inclusion of your state
-transition into the relay chain.
+transition into the Relay Chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
 {{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
@@ -237,7 +237,7 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## So you want to build a smart contract...
 
-The Polkadot relay chain itself will not support smart contracts. However, since the parachains that
+The Polkadot Relay Chain itself will not support smart contracts. However, since the parachains that
 connect to Polkadot can support arbitrary state transitions, they can support smart contracts.
 
 Substrate presently supports smart contracts out-of-the-box in two ways:
