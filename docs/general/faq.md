@@ -196,7 +196,7 @@ plutocracy (rule of the rich).
 There are several other mechanisms that are built-in to the governance system to resist this
 plutocratic tendency. One of these mechanisms is called conviction voting, and imbues greater voting
 power to token holders who are willing to lock their tokens on the protocol for longer lengths of
-time. Longer lock-ups display _conviction_ in a vote. Conviction voting could allow a highly
+time. Longer lockups display _conviction_ in a vote. Conviction voting could allow a highly
 determined minority to overrule the vote of an apathetic majority in certain situations. Another
 mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
 approval or rejection based on what part of the governance protocol the proposal originated in. For

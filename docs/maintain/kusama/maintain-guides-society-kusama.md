@@ -125,7 +125,7 @@ time - see below.
 #### Lock-up Time
 
 It would take the number of members of the society as the variable to determine how many blocks you
-have to wait in order to get the payout. The longest lock-up time is close to 3 years. The formula
+have to wait in order to get the payout. The longest lockup time is close to 3 years. The formula
 is defined [in the society pallet][substrate pallet] if you would like to have a look.
 
 Example:
@@ -155,8 +155,8 @@ Once you become a member of the society, you will get back the deposit that you 
 the bidding. A few things you need to be aware of. First, you should vote on candidates who applied
 for the membership in every rotation period.
 
-Second, you will need to claim your payout manually by calling `payout` after the lock-up time. It
-is the same as the above mentioned lock-up formula.
+Second, you will need to claim your payout manually by calling `payout` after the lockup time. It
+is the same as the above mentioned lockup formula.
 
 ![Society Payout](../../assets/society/payout.jpg)
 
