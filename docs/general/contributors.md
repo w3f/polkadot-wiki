@@ -71,7 +71,7 @@ the w3f/schnorrkel library.
 - matrix / riot / element: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
 
 Danny is a Technical Educator at Web3 Foundation from Canada. He has a keen interest for
-blockchain technologies and has an admiration for the web 3.0 vision. Danny focuses on educational
+blockchain technologies and has an admiration for the Web 3.0 vision. Danny focuses on educational
 content at Web3 Foundation and acts on his passion for learning & education. He has a background
 in computer engineering, politics, and philosophy.
 
