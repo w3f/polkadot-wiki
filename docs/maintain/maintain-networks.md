@@ -11,7 +11,7 @@ is to allow for connection to different networks using a single executable and c
 start-up flag. Here are some of the networks associated with Polkadot or Substrate that you may want
 to connect to and join.
 
-## Polkadot Networks
+## Polkadot networks
 
 To connect to a Polkadot network please follow the [instructions](maintain-sync.md) for installing
 the Polkadot executable.
