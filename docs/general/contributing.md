@@ -6,7 +6,7 @@ description: Steps on how to contribute to the Polkadot Wiki and the code of con
 slug: ../contributing
 ---
 
-The wiki was started and is maintained by the Web3 Foundation. It is an open source project and aims
+The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims
 to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part
 of the material currently focuses on Polkadot directly but it is not opposed to covering
 informational material for community projects.

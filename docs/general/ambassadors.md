@@ -6,7 +6,7 @@ description: Simple user guide on Polkadot's Ambassador Programme and how to par
 slug: ../ambassadors
 ---
 
-The Polkadot Ambassador Programme is an initiative ran by the Web3 Foundation to support potential
+The Polkadot Ambassador Programme is an initiative ran by Web3 Foundation to support potential
 contributors to the Polkadot community and ecosystem.
 
 ## How it works

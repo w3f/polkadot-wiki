@@ -9,7 +9,7 @@ slug: ../../kusama-bug-bounty
 We call on our community and all bug bounty hunters to help identify bugs in Kusama.
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it
-as per [instructions on the Web3 Foundation website](https://web3.foundation/security-report/).
+as per [instructions on Web3 Foundation website](https://web3.foundation/security-report/).
 Disclosure to any third parties disqualifies bug bounty eligibility.
 
 ## Eligibility

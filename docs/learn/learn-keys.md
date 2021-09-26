@@ -125,7 +125,7 @@ The Decaf paper approach by the [Ristretto Group](https://ristretto.group/) was 
 implemented in Rust to include cofactor-8 curves like the Curve25519 and makes Schnorr signatures
 over the Edward's curve more secure.
 
-The Web3 Foundation has implemented a Schnorr signature library using the more secure Ristretto
+Web3 Foundation has implemented a Schnorr signature library using the more secure Ristretto
 compression over the Curve25519 in the [Schnorrkel](https://github.com/w3f/schnorrkel) repository.
 Schnorrkel implements related protocols on top of this curve compression such as HDKD, MuSig, and a
 verifiable random function (VRF). It also includes various minor improvements such as the hashing

@@ -28,12 +28,12 @@ can support parachains that are not built on Substrate, and, chains can also be 
 required to be deployed onto Polkadot.
 
 > Parity focuses on blockchain infrastructure for the decentralised web, where they initially offered an
-> Ethereum client (Parity Ethereum). Parity was hired by the Web3 Foundation to foster the development of the
+> Ethereum client (Parity Ethereum). Parity was hired by Web3 Foundation to foster the development of the
 > first implementation of Polkadot.
 
 With this in mind, we can point to some other implementations of Polkadot. Having different implementations
 inherently promotes the decentralization of the technology and progresses it in a meaningful way. Other
-implementations of Polkadot that exist, many of whom have received a [grant](../general/grants.md) from the Web3 Foundation,
+implementations of Polkadot that exist, many of whom have received a [grant](../general/grants.md) from Web3 Foundation,
 are in programming languages like Go, C++, and JavaScript.
 
 As stated in the Soramitsu grant announcement:
@@ -55,7 +55,7 @@ Foundation.
 ### SORAMITSU: [Kagome][]
 
 **Kagome** is a C++ implementation of the Polkadot Host being built by [Soramitsu][], a Japanese digital identity
-company that previously developed [Hyperledger Iroha][]. They were awarded a grant from the Web3 Foundation and released
+company that previously developed [Hyperledger Iroha][]. They were awarded a grant from Web3 Foundation and released
 the first version of Kagome in April 2020. As part of the process, they also released a [libp2p][] networking layer in C++.
 
 ### Polkadot-JS Project: [Polkadot-JS][]

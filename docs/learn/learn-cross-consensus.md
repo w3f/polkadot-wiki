@@ -179,7 +179,7 @@ doesn't support embedded videos. </video>
 - [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format
   sent via XCMP.
 - [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
-  description of cross-chain communication on the Web3 Foundation research wiki.
+  description of cross-chain communication on Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
 
