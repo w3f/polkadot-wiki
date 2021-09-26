@@ -234,14 +234,14 @@ sub-bounties for more granularity and allocation in the next iteration of the me
 
 ### Creating a Bounty Proposal
 
-Anyone can create a Bounty proposal using Polkadot JS Apps: Users are able to submit a proposal on
+Anyone can create a Bounty proposal using Polkadot-JS Apps: Users are able to submit a proposal on
 the dedicated Bounty section under Governance. The development of a robust user interface to view
 and manage bounties in the Polkadot Apps is still under development and it will serve Council
 members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain
 treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a
 motion to be voted.
 
-To submit a bounty, please visit [Polkadot JS Apps](https://polkadot.js.org/apps) and click on the
+To submit a bounty, please visit [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on the
 governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the
 button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the
 requested allocation (including curator's fee) and confirm the call.
