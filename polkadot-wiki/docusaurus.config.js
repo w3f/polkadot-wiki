@@ -1,5 +1,4 @@
 const { baseUrlPattern } = require("../scripts/utils");
-const { injectPlugin } = require("../scripts/injectPlugin");
 const i18n = require("./i18n");
 
 const isBuilding = process.env.BUILDING === "true";
