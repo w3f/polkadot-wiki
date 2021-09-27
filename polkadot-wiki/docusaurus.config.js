@@ -57,7 +57,6 @@ module.exports = {
           showLastUpdateTime: true,
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "docs",
-          remarkPlugins: [injectPlugin({ isPolkadot: true })],
         },
         theme: {
           customCss: [
