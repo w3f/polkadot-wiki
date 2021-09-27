@@ -22,6 +22,28 @@ validator set.
 
 ## How does staking work in Polkadot?
 
+There is an _ideal staking rate_ that the network tries to maintain.
+The goal is to have the _real staking rate_ meet the _ideal staking rate_.
+
+The _real staking rate_ would be the total amount staked over the total token supply, where the
+total amount staked is the stake of all validators and nominators on the network. An ideal staking
+rate should account for having sufficient backing of the native token to prevent the possible
+compromise of security on the network while keeping the native token liquid.
+
+The ideal staking rate on Polkadot varies with the number of parachains (50% is the current
+estimation of all DOT that should be staked, per parachain slot).
+
+> In the absence of parachains, the suggested ideal staking rate is 75%, as liquidity is not
+> constrained by locked parachain bonds.
+
+If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators
+goes up. On the contrary, if it goes above, staking rewards drop. This is a result of the change
+in the percentage of staking rewards that go to the Treasury.
+
+> NOTE: Keep in mind, DOT and KSM are inflationary assets with an uncapped max supply.
+> The ideal staking rate also takes the inflation rate into account. More information is available
+> in the [inflation](##inflation) section.
+
 ### 1. Identifying which role you are
 
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
@@ -294,7 +316,6 @@ reduce the risk of being slashed or chilled. A high availability setup is desira
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
-
 
 ### GRANDPA Equivocation
 
