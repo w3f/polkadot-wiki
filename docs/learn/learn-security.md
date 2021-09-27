@@ -2,7 +2,7 @@
 id: learn-security
 title: Security of the network
 sidebar_label: Security of the network
-description: Learn about pooled security and how its maintained.
+description: Learn about pooled security and how it is maintained.
 slug: ../learn-security
 ---
 
