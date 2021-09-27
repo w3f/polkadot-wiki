@@ -22,28 +22,6 @@ validator set.
 
 ## How does staking work in Polkadot?
 
-There is an _ideal staking rate_ that the network tries to maintain.
-The goal is to have the _real staking rate_ meet the _ideal staking rate_.
-
-The _real staking rate_ would be the total amount staked over the total token supply, where the
-total amount staked is the stake of all validators and nominators on the network. An ideal staking
-rate should account for having sufficient backing of the native token to prevent the possible
-compromise of security on the network while keeping the native token liquid.
-
-The ideal staking rate on Polkadot varies with the number of parachains (50% is the current
-estimation of all DOT that should be staked, per parachain slot).
-
-> In the absence of parachains, the suggested ideal staking rate is 75%, as liquidity is not
-> constrained by locked parachain bonds.
-
-If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators
-goes up. On the contrary, if it goes above, staking rewards drop. This is a result of the change
-in the percentage of staking rewards that go to the Treasury.
-
-> NOTE: Keep in mind, DOT and KSM are inflationary assets with an uncapped max supply.
-> The ideal staking rate also takes the inflation rate into account. More information is available
-> in the [inflation](##inflation) section.
-
 ### 1. Identifying which role you are
 
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
@@ -472,21 +450,55 @@ For specific details about validator payouts, please see
 
 ## Inflation
 
-DOT is inflationary; there is no maximum number of DOT as in Bitcoin. Inflation is designed to be
-approximately 10% annually, with validator rewards being a function of amount staked and the
-remainder going to treasury.
+{{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
+to be approximately 10% annually, with validator rewards being a function of the amount staked
+and the remainder going to treasury. The current token supply of DOT is ~1,000,000,000, as
+a result of [redenomination](../learn/learn-redomination.md).
+
+:polkadot }}
+
+{{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
+to be approximately 10% annually, with validator rewards being a function of the amount staked
+and the remainder going to treasury. The current token supply of KSM is ~10,000,000.
+
+:kusama }}
+
+There is an _ideal staking rate_ that the network tries to maintain.
+The goal is to have the _system staking rate_ meet the _ideal staking rate_.
+
+The _system staking rate_ would be the total amount staked over the total token supply, where
+the total amount staked is the stake of all validators and nominators on the network. The ideal
+staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
+{{kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
+token liquid. An **ideal staking rate of 50% stabilizes the network**.
+{{ polkadot: DOT :polkadot }} {{kusama: KSM :kusama }} is inflated according to the system
+staking rate of the entire network.
+
+> According to the inflation model, this would suggest that if you do not use your
+> {{ polkadot: DOT :polkadot }} {{kusama: KSM :kusama }} for staking, your tokens
+> dilute over time.
+
+The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
+estimation of all DOT that should be staked, per parachain slot).
+
+> In the absence of parachains, the suggested ideal staking rate is 75%, as liquidity is not
+> constrained by locked parachain bonds.
+
+If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators
+goes up. On the contrary, if it goes above, staking rewards drop. This is a result of the change
+in the percentage of staking rewards that go to the Treasury.
 
 ![staking](../assets/NPoS/staking-participation-rate.png)
 
 <p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
-- **x-axis**: Proportion of DOT staked
+- **x-axis**: Proportion of {{ polkadot: DOT :polkadot }} {{kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
 - **Blue line**: Inflation rewards to stakers
 - **Green line**: Staker rate of return
 
-You can determine the inflation rewards by checking the staking overview at
-[Polkadot-JS](https://polkadot.js.org/apps/#/staking).
+You can determine the inflation rewards by checking the staking overview on
+[Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking).
 
 The above chart shows the inflation model of the network. Depending on the staking participation,
 the distribution of the inflation to validators/nominators versus the treasury will change
@@ -500,13 +512,18 @@ For those who are interested in knowing more about the design of inflation model
 please see
 [here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).
 
-## Why stake?
+### Why stake?
 
 - 10% inflation/year when the network launches
 - 50% targeted active staking
-- ~20% annual nominal return
+- 20% annual nominal return
 
-## Why not stake?
+> Keep in mind that when the system's staking rate is lower than the ideal staking rate, the
+> annual nominal return rate will be higher than 20%, encouraging more users to use their tokens
+> for staking. On the contrary, when the system staking rate is higher than the ideal staking rate,
+> the annual nominal return of will be less than 20%, encouraging some users to withdraw.
+
+### Why not stake?
 
 - Tokens will be locked for about 28 days on Polkadot after unbonding, seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [#slashing](#slashing)).
