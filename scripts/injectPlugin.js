@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-import {visit} from 'unist-util-visit';
+const visit = require("unist-util-visit");
 const { yellow, cyan } = require("chalk");
 
 const R_POLKADOT = /{{ polkadot: ([\s\S]+?) :polkadot }}/gim;
