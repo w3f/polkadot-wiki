@@ -21,7 +21,7 @@ may be better suited for your application over the other).
 - Mainnet: **Polkadot**
 - Canary network: **Kusama**
   - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
-    Polkadot does... *expect chaos*...
+    Polkadot does... _expect chaos_...
 - Official testnets:
   - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet (is not reset back to genesis block).
@@ -35,7 +35,7 @@ framework.
 
 Tooling is rapidly evolving to interact with the network; there are so many ways to get started!
 
-But before you jump head-first into the code, you should consider the *kind* of decentralized
+But before you jump head-first into the code, you should consider the _kind_ of decentralized
 application you want to make and understand the different paradigms available to developers who want
 to build on Polkadot.
 
@@ -97,7 +97,7 @@ this comparison chart as a cheat sheet:
 ![build 2](../assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the
-> benefits of parachains apply just as well to parathreads. Parathreads, however, *are* cheaper to
+> benefits of parachains apply just as well to parathreads. Parathreads, however, _are_ cheaper to
 > deploy and maintain. So if they had a column on the table above, it would look like the parachain
 > column with "Ease of deployment" and "Maintenance overhead" changed to `+`.
 
@@ -262,13 +262,13 @@ design of the EVM:
 
 2. **Rent**. Contracts must pay rent or else hold a deposit suitably large enough in order to
    justify its existence on-chain. When a contract does not uphold this, it may create what's called
-   a *tombstone* which is a reference to the contract. In some conditions, the contract will be
+   a _tombstone_ which is a reference to the contract. In some conditions, the contract will be
    deleted outright along with its storage if it does not maintain these requirements.
 
 3. **Caching**. Contracts are cached by default and therefore means they only need to be deployed
    once and afterward be instantiated as many times as you want. This helps to keep the storage load
    on the chain down to the minimum. On top of this, when a contract is no longer being used and the
-   *existential deposit* is drained, the code will be erased from storage (known as reaping).
+   _existential deposit_ is drained, the code will be erased from storage (known as reaping).
 
 ### Ink
 
