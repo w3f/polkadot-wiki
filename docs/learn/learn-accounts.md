@@ -12,9 +12,9 @@ on-chain. For a more in-depth explanation of the cryptography behind them, pleas
 
 ## Address Format
 
-The address format used in Substrate-based chains is `SS58`. `SS58` is a modification of
-`Base-58-check` from Bitcoin with some minor changes. Notably, the form contains an _address type_
-prefix that identifies an address belonging to a specific network.
+The address format used in Substrate-based chains is SS58. SS58 is a modification of
+Base-58-check from Bitcoin with some minor changes. Notably, the format contains an _address type_
+prefix that identifies an address as belonging to a specific network.
 
 For example:
 
