@@ -18,7 +18,7 @@ The fourth (now defunct) proof of concept (PoC-4) [testnet](##testnet) for Polka
 
 ## Attestation
 
-In the Polkadot validity system, an _attestation_ is a type of message that validators broadcast
+In the Polkadot validity system, an *attestation* is a type of message that validators broadcast
 that says whether they think a parachain candidate block is valid or invalid.
 
 ## Auction (Parachain)
@@ -194,7 +194,7 @@ The collection of Substrate-provided pallets (Substrate Runtime Modules).
 The origin of a blockchain, also known as block 0. It can also be used to reference the initial
 state of the blockchain at origination.
 
-> Example: "In the _genesis_ state Alice, Bob, and Charlie had 30 tokens each."
+> Example: "In the *genesis* state Alice, Bob, and Charlie had 30 tokens each."
 
 ## Governance
 
@@ -227,7 +227,7 @@ clients are following consensus rules incompatible to the ones followed by upgra
 
 Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain;
 not to compete, but to provide broad access." A non-contentious blockchain that inherits the state
-of the underlying blockchain and creates a new branch of _the same blockchain_.
+of the underlying blockchain and creates a new branch of *the same blockchain*.
 
 ## Horizontal Relay-routed Message Passing
 
@@ -297,13 +297,13 @@ Short for "main network": the fully functional and acting chain that runs its ow
 
 ## Message
 
-In Polkadot's XCMP protocol, a _message_ is arbitrary data that is sent from one parachain (the
+In Polkadot's XCMP protocol, a *message* is arbitrary data that is sent from one parachain (the
 egress chain) to another (the ingress chain) through a channel and ensured delivery by the validator
 set.
 
 ## Message Queue
 
-In Polkadot's XCMP protocol, a _message queue_ is the list of messages waiting to be processed by a
+In Polkadot's XCMP protocol, a *message queue* is the list of messages waiting to be processed by a
 particular receiving parachain over a channel.
 
 ## Metadata
@@ -485,7 +485,7 @@ deal with accounts and balances. In Substrate, modules are called "pallets".
 ## Safety
 
 The property of a distributed system indicating that a particular state transition will not be
-reverted. [GRANDPA](##grandpa-finality-gadget) provides _deterministic_ safety. That is, for a state
+reverted. [GRANDPA](##grandpa-finality-gadget) provides *deterministic* safety. That is, for a state
 changed marked as "safe" or "final", one would require a hard fork to revert that change.
 
 ## Scalability
@@ -623,7 +623,7 @@ The abbreviation for [WebAssembly](##webassembly).
 
 ## Watermark
 
-In Polkadot's parachain messaging scheme, the _watermark_ is the minimum processed send-height of
+In Polkadot's parachain messaging scheme, the *watermark* is the minimum processed send-height of
 the receiving parachain. All messages on all channels that are sending to this parachain at or
 before the watermark are guaranteed to be processed.
 
