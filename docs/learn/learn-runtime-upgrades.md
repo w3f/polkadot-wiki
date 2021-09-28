@@ -14,13 +14,13 @@ Runtime upgrades allow Polkadot to change the logic of the chain, without the ne
 
 You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs
 when a blockchain's logic changes such that nodes that do not include the new changes will not be
-able to remain in consensus with nodes that do. Such changes are backwards incompatible. Hard forks
+able to remain in consensus with nodes that do. Such changes are backward incompatible. Hard forks
 can be political due to the nature of the upgrades, as well as logistically onerous due to the
 number (potentially thousands) of nodes in the network that need to upgrade their software.
 
 Rather than encode the runtime (a chain's "business logic") in the nodes, Polkadot nodes contain a
 WebAssembly [execution host](learn-polkadot-host). They maintain consensus on a very low level and
-well established instruction set. The Polkadot runtime is stored on the Polkadot blockchain itself.
+well-established instruction set. The Polkadot runtime is stored on the Polkadot blockchain itself.
 
 As such, Polkadot can upgrade its runtime by upgrading the logic stored on-chain, and removes the
 coordination challenge of requiring thousands of node operators to upgrade in advance of a given
@@ -72,7 +72,7 @@ the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
-Runtime upgrades don't require any actions by a nominator, though, it is always encouraged to keep
+Runtime upgrades don't require any actions by a nominator, though it is always encouraged to keep
 up-to-date and participate with the latest runtime upgrade motions and releases, while keeping an
 eye on how the nodes on the network are reacting to a new upgrade.
 
@@ -81,10 +81,11 @@ eye on how the nodes on the network are reacting to a new upgrade.
 You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
 proposals related to any on-chain upgrades for easy matching. Monitor the chain for:
 
-1. `democracy(Started)` events and log `index` and `blockNumber`. This indicates that a referendum
-   has started (although does not mean that it is a runtime upgrade). Get the referendum info\*; it
-   should have a status of `Ongoing`. Find the ending block number (`end`) and the enactment `delay`
-   (delay). If the referendum passes, it will execute on block number `end + delay`.
+1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
+   referendum has started (although does not mean that it is a runtime upgrade). Get the referendum
+   info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
+   enactment `delay` (delay). If the referendum passes, it will execute on block number `end +
+   delay`.
 2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
    If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
    enactment block.
