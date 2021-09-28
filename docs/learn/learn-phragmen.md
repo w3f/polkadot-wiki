@@ -23,9 +23,9 @@ of the sequential Phragmén method:
 
 ### BalPhragmms
 
-`BalPhragmms` is a new election rule inspired by Phragmén, and aims to achieve a constant-factor approximation guarantee for the _maximin support objective_ and the closely related _proportional justified representation_ (PJR) property. The maximin support objective is based on maximizing the support of the least-supported elected candidate. The PJR property considers proportionality of the voter’s decision power.
+`BalPhragmms` is a new election rule inspired by Phragmén, and aims to achieve a constant-factor approximation guarantee for the *maximin support objective* and the closely related *proportional justified representation* (PJR) property. The maximin support objective is based on maximizing the support of the least-supported elected candidate. The PJR property considers proportionality of the voter’s decision power.
 
-The security of a distributed and decentralized system such as Polkadot is directly related to the goal of avoiding _overrepresentation_ of any minority. This is a stark contrast to classical approaches to proportional representation axioms, which only seek to avoid underrepresentation.
+The security of a distributed and decentralized system such as Polkadot is directly related to the goal of avoiding *overrepresentation* of any minority. This is a stark contrast to classical approaches to proportional representation axioms, which only seek to avoid underrepresentation.
 
 Sequential Phragmén and MMS are two efficient election rules that both achieve PJR.
 
@@ -35,15 +35,15 @@ In contrast, `MMS` is another standard greedy algorithm that simultaneously achi
 
 We introduce a new heuristic inspired by `seqPhragmen`, `PhragMMS`, which maintains a comparable runtime to `seqPhragmen` and achieves maximin support and PJR. It is a 3.15-approximation algorithm with a time complexity of `O(Bal * k)`. This is the fastest known algorithm to achieve a constant-factor guarantee for maximin support.
 
-`BalPhragmms` is an iterative greedy algorithm that starts with an empty committee and alternates between the `Phragmms` heuristic for inserting a new candidate and _rebalancing_ by replacing the weight vector with a balanced one. In addition to satisfying the PJR property, it also executes in `O(Bal * k)` time, assuming `Bal = Ω(|E| * log k)`. This can be further improved such that each iteration can be made to run in `O(|E| + Bal)`.
+`BalPhragmms` is an iterative greedy algorithm that starts with an empty committee and alternates between the `Phragmms` heuristic for inserting a new candidate and *rebalancing* by replacing the weight vector with a balanced one. In addition to satisfying the PJR property, it also executes in `O(Bal * k)` time, assuming `Bal = Ω(|E| * log k)`. This can be further improved such that each iteration can be made to run in `O(|E| + Bal)`.
 
-The computation is executed by off-chain workers privately and separately from block production, and the validators only need to submit and verify the solutions on-chain. Observing on-chain, only one solution needs to be tracked at any given time, and a block producer can submit new solution _(A, w)_ in the block only if the block passes all three of these checks:
+The computation is executed by off-chain workers privately and separately from block production, and the validators only need to submit and verify the solutions on-chain. Observing on-chain, only one solution needs to be tracked at any given time, and a block producer can submit new solution *(A, w)* in the block only if the block passes all three of these checks:
 
 1. Feasibility
 2. Balancedness
    - `supp_w(A) > supp_w'(A')`
 3. Local optimality
-   - If _(A, w)_ passes the tests, then it replaces _(A', w')_ as the current tentative winner. The official winning solution is declared at the end of the election window.
+   - If *(A, w)* passes the tests, then it replaces *(A', w')* as the current tentative winner. The official winning solution is declared at the end of the election window.
 
 A powerful feature of this algorithm is the fact that both its approximation guarantee for maxim support and the above checks passing can be efficiently verified. This allows for a more scalable solution for secure and proportional committee elections. `Balphragmms` can be seen as a natural complication of the `seqPhragmen` algorithm, which always grants higher score values to candidates and thus inserting them with higher support values.
 
@@ -135,7 +135,7 @@ weighting can be "simulated" by having multiple voters vote for the same slate o
 instance, five people voting for a particular candidate is mathematically the same as a single
 person with weight `5` voting for that candidate.
 
-The particular algorithm we call here the "Basic Phragmén" was first described by Brill _et al._ in
+The particular algorithm we call here the "Basic Phragmén" was first described by Brill *et al.* in
 their paper
 ["Phragmén’s Voting Methods and Justified Representation"](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791).
 
@@ -147,8 +147,8 @@ The Phragmén method will iterate, selecting one seat at a time, according to th
    modified after submission.
 2. An initial load of 0 is set for each ballot.
 3. The candidate who wins the next available seat is the one where the ballots of their supporters
-   would have the _least average (mean) cost_ if that candidate wins.
-4. The _n_ ballots that approved that winning candidate get _1/n_ added to their load.
+   would have the *least average (mean) cost* if that candidate wins.
+4. The *n* ballots that approved that winning candidate get *1/n* added to their load.
 5. The load of all ballots that supported the winner of this round are averaged out so that they are
    equal.
 6. If there are any more seats, go back to step 3. Otherwise, the selection ends.
@@ -270,8 +270,8 @@ Weighted Phragmén is similar to Basic Phragmén in that it selects candidates s
 round, until the maximum number of candidates are elected. However, it has additional features to
 also allocate weight (stake) behind the candidates.
 
-_Note: in terms of validator selection, for the following algorithm, you can think of "voters" as
-"nominators" and "candidates" as "validators"._
+*Note: in terms of validator selection, for the following algorithm, you can think of "voters" as
+"nominators" and "candidates" as "validators".*
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have
    won a "seat"). This aspect of the algorithm is very similar to the "basic Phragmén" algorithm
@@ -283,8 +283,8 @@ In more depth, the algorithm operates like so:
 
 1. Create a list of all voters, their total amount of stake, and which validators they support.
 2. Generate an initial edge-weighted graph mapping from voters to candidates, where each edge weight
-   is the total _potential_ weight (stake) given by that voter. The sum of all potential weight for
-   a given candidate is called their _approval stake_.
+   is the total *potential* weight (stake) given by that voter. The sum of all potential weight for
+   a given candidate is called their *approval stake*.
 3. Now we start electing candidates. For the list of all candidates who have not been elected, get
    their score, which is equal to `1 / approval_stake`.
 4. For each voter, update the score of each candidate they support by adding their total budget
@@ -303,11 +303,11 @@ In more depth, the algorithm operates like so:
 
 ### Example
 
-_Note: All numbers in this example are rounded off to three decimal places._
+*Note: All numbers in this example are rounded off to three decimal places.*
 
 In the following example, there are five voters and five candidates vying for three potential seats.
 Each voter `V1 - V5` has an amount of stake equal to their number (e.g., `V1` has stake of 1, `V2`
-has stake of 2, etc.). Every voter is also going to have a _load,_ which initially starts at `0`.
+has stake of 2, etc.). Every voter is also going to have a *load,* which initially starts at `0`.
 
 ```
 Filled seats: 0
@@ -387,7 +387,7 @@ the voters, and then calculate the new scores of the candidates.
 Any voter who had one of their choices for candidate fill the seat in this round (i.e., voters `V1`,
 `V2`, `V3`, and `V5`, who all voted for `A`) will have their load increased. This load increase will
 blunt the impact of their vote in future rounds, and the edge (which will be used in determining
-stake allocation later) is set to the score of the elected candidate minus the _current_ voter load.
+stake allocation later) is set to the score of the elected candidate minus the *current* voter load.
 
 ```
 edge_load = elected_candidate_score - voter_load
@@ -669,7 +669,7 @@ nominations are priority-ranked in terms of amount of stake.
 - [Phragmén's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper
   explaining Phragmén's election methods in detail.
 - [Phragmén’s Voting Methods and Justified Representation](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14757/13791) -
-  This paper by Brill _et al._ is the source for the simple Phragmén method, along with proofs about
+  This paper by Brill *et al.* is the source for the simple Phragmén method, along with proofs about
   its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
   Phragmén validator election outcome before the start of an era.
