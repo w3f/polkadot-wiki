@@ -10,35 +10,24 @@ slug: ../learn-runtime-upgrades
 
 Runtime upgrades allow Polkadot to change the logic of the chain, without the need for a hard fork.
 
-## Forking vs Forkless
+## Forkless Upgrades
 
-When we talk about "forking", we are referring to the act of invoking the `fork` system call [within
-a system], where a process creates a copy of itself. In software development, this is the act of
-forking source code from one software package that creates a separate piece of that software.
+You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs
+when a blockchain's logic changes such that nodes that do not include the new changes will not be
+able to remain in consensus with nodes that do. Such changes are backward incompatible. Hard forks
+can be political due to the nature of the upgrades, as well as logistically onerous due to the
+number (potentially thousands) of nodes in the network that need to upgrade their software.
 
-You may have come across the terms "hard fork" and "soft fork" before in the blockchain space.
+Rather than encode the runtime (a chain's "business logic") in the nodes, Polkadot nodes contain a
+WebAssembly [execution host](learn-polkadot-host). They maintain consensus on a very low level and
+well-established instruction set. The Polkadot runtime is stored on the Polkadot blockchain itself.
 
-A **hard fork** sees the blockchain's underlying technology (i.e. the protocol) radically changed
-and exists as a _different_ or _new_ version. This version is meant to be incompatible with the
-original version. This means that both blockchains exist simultaneously. Henceforth, a hard fork
-requires node operators to manually upgrade their nodes to the latest runtime version. In a
-distributed system, this is a complex process to coordinate and communicate.
+As such, Polkadot can upgrade its runtime by upgrading the logic stored on-chain, and removes the
+coordination challenge of requiring thousands of node operators to upgrade in advance of a given
+block number. Polkadot stakeholders propose and approve upgrades through the
+[on-chain governance](learn-governance.md) system, which also enacts them autonomously.
 
-A **soft fork** sees an upgrade or update in the blockchain's underlying technology. Unlike a hard
-fork, a soft fork is a backward-compatible upgrade; the upgraded nodes can communicate with the
-non-upgraded ones.
-
-Upgrading conventional blockchains often requires forking the network, which is time-consuming and
-can break up communities. Something that conventional networks also lack is the ability to perform
-thought-through governance that would allow for effective decision-making and signalling for runtime
-upgrades.
-
-Polkadot sees itself as a next-generation blockchain because it addresses these obstacles in a
-meaningful way - revolutionizing the runtime upgrading process by enabling blockchains to upgrade
-themselves without the need to fork the chain. These forkless upgrades are enacted through
-Polkadot’s transparent [on-chain governance](learn-governance.md) system.
-
-## New [Client Release](https://github.com/paritytech/polkadot/releases)
+## New [Client Releases](https://github.com/paritytech/polkadot/releases)
 
 The existing runtime logic is followed to update the [Wasm](learn-wasm.md) runtime stored on the
 blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all
@@ -56,56 +45,56 @@ Although upgrading your nodes is generally not necessary to follow an upgrade, w
 following the Polkadot releases and upgrading promptly, especially for high priority or critical
 releases.
 
+## Runtime Upgrades for Various Users
+
 ### For Infrastructure Providers
 
-Infrastructure services including but not limited to the following:
+Infrastructure services include but are not limited to the following:
 
 - [Validators](../maintain/maintain-guides-how-to-upgrade.md)
 - API services
 - Node-as-a-Service (NaaS)
-- General infrastructure management (e.g. block explorers, exchanges)
+- General infrastructure management (e.g. block explorers, custodians)
+- [Wallets](../build/build-wallets.md)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
-to upgrade within a specific time frame to ensure continued sync with their node. It is essential to
-check the release notes, starting with the upgrade priority and acting accordingly.
+to upgrade their clients within a specific time frame, for example if a release includes breaking
+changes to networking. It is essential to check the release notes, starting with the upgrade
+priority and acting accordingly.
 
-For general infrastructure providers, aside from following the Polkadot releases and upgrading in a
-timely manner, somethings to keep an eye out on is updating your parsing logic and acknowledging
-changes to the available RPC clients, such as the
+General infrastructure providers, aside from following the Polkadot releases and upgrading in a
+timely manner, should monitor changes to runtime events and auxilliary tooling, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
+
+Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
+occurs before broadcasting a priorly constructed transaction, you will need to reconstruct it with
+the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
-Runtime upgrades don't require any actions by a nominator, though, it is always encouraged to keep
+Runtime upgrades don't require any actions by a nominator, though it is always encouraged to keep
 up-to-date and participate with the latest runtime upgrade motions and releases, while keeping an
 eye on how the nodes on the network are reacting to a new upgrade.
 
-### For [Wallets](../build/build-wallets.md)
-
-Wallets should look out for updates to the transaction lifecycle, such as tx broadcasting. An
-example would be constructing a transaction with a new spec, "n", but broadcasting it with a spec
-" > n " - transactions could be propagated, or even rejected by peers on the network.
-
 ## Monitoring Changes
 
-Using a Polkadot blockchain explorer, you can monitor the chain for on-chain changes. The following
-steps relate to [subscan](https://polkadot.subscan.io/).
+You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
+proposals related to any on-chain upgrades for easy matching. Monitor the chain for:
 
-> In general, an action has two components: the module (such as `democracy`) and the event (such as
-> `Started`).
-
-Monitor the chain for:
-
-1. `democracy(Started)` events and log `index` and `blockNumber`. Get
-   `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` from `Sidecar` to get the
-   referendum info. It should have a status of `Ongoing`. Find the ending block number (`end`) and
-   the enactment `delay` (delay), where the execution block number will be `end + delay`.
-
+1. `democracy(Started)` events and log `index` and `blockNumber`. This event indicates that a
+   referendum has started (although does not mean that it is a runtime upgrade). Get the referendum
+   info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and the
+   enactment `delay` (delay). If the referendum passes, it will execute on block number `end +
+   delay`.
 2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
    If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
    enactment block.
-
 3. `democracy(PreimageNoted)` events with the same hash as the `ReferendumInfoOf(index)` item. This
    may be up to the last block before execution, but it will not work if this is missing.
 4. `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will
    also be a `system(CodeUpdated)` event.
+
+You can also monitor [Polkassembly](https://polkadot.polkassembly.io/) for discussions on on-chain
+proposals and referenda.
+
+\* E.g. via `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` on Sidecar.
