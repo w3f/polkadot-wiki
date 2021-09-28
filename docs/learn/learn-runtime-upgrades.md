@@ -10,7 +10,7 @@ slug: ../learn-runtime-upgrades
 
 Runtime upgrades allow Polkadot to change the logic of the chain, without the need for a hard fork.
 
-## Forking vs Forkless
+## Forkless Upgrades
 
 You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs
 when a blockchain's logic changes such that nodes that do not include the new changes will not be
@@ -67,8 +67,8 @@ timely manner, should monitor changes to runtime events and auxilliary tooling, 
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
 Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
-occurs before broadcasting a priorly constructed transaction, you will need to reconstruct with the
-appropriate runtime version and corresponding metadata.
+occurs before broadcasting a priorly constructed transaction, you will need to reconstruct it with
+the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
