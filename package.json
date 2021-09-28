@@ -76,7 +76,8 @@
     "ansi-html": "^0.0.7",
     "immer": "^9.0.6",
     "remark-docusaurus-tabs": "^0.1.0",
-    "replace-in-file": "^6.2.0"
+    "replace-in-file": "^6.2.0",
+    "require-extension-hooks": "^0.3.3"
   },
   "husky": {
     "hooks": {
