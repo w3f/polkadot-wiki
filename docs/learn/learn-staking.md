@@ -138,7 +138,7 @@ can pay rewards.
 
 In Polkadot and Kusama, this limit is currently {{ polkadot\_max\_nominators }}, although this can be
 modified via runtime upgrade. A validator with more than {{ polkadot\_max\_nominators }} nominators is
-*oversubscribed*. When payouts occur, only the top {{ polkadot\_max\_nominators }} nominators as
+_oversubscribed_. When payouts occur, only the top {{ polkadot\_max\_nominators }} nominators as
 measured by amount of stake allocated to that validator will receive rewards. All other nominators
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
