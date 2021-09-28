@@ -12,11 +12,20 @@ Runtime upgrades allow Polkadot to change the logic of the chain, without the ne
 
 ## Forking vs Forkless
 
-You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs when a blockchain's logic changes such that nodes that do not include the new changes will not be able to remain in consensus with nodes that do. Such changes are backwards incompatible. Hard forks can be political due to the nature of the upgrades, as well as logistically onerous due to the number (potentially thousands) of nodes in the network that need to upgrade their software.
+You may have come across the term "hard fork" before in the blockchain space. A **hard fork** occurs
+when a blockchain's logic changes such that nodes that do not include the new changes will not be
+able to remain in consensus with nodes that do. Such changes are backwards incompatible. Hard forks
+can be political due to the nature of the upgrades, as well as logistically onerous due to the
+number (potentially thousands) of nodes in the network that need to upgrade their software.
 
-Rather than encode the runtime (a chain's "business logic") in the nodes, Polkadot nodes contain a WebAssembly [execution host](learn-polkadot-host). They maintain consensus on a very low level and well established instruction set. The Polkadot runtime is stored on the Polkadot blockchain itself.
+Rather than encode the runtime (a chain's "business logic") in the nodes, Polkadot nodes contain a
+WebAssembly [execution host](learn-polkadot-host). They maintain consensus on a very low level and
+well established instruction set. The Polkadot runtime is stored on the Polkadot blockchain itself.
 
-As such, Polkadot can upgrade its runtime by upgrading the logic stored on-chain, and removes the coordination challenge of requiring thousands of node operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve upgrades through the [on-chain governance](learn-governance.md) system, which also enacts them autonomously.
+As such, Polkadot can upgrade its runtime by upgrading the logic stored on-chain, and removes the
+coordination challenge of requiring thousands of node operators to upgrade in advance of a given
+block number. Polkadot stakeholders propose and approve upgrades through the
+[on-chain governance](learn-governance.md) system, which also enacts them autonomously.
 
 ## New [Client Releases](https://github.com/paritytech/polkadot/releases)
 
@@ -49,14 +58,17 @@ Infrastructure services include but are not limited to the following:
 - [Wallets](../build/build-wallets.md)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
-to upgrade their clients within a specific time frame, for example if a release includes breaking changes to networking. It is essential to
-check the release notes, starting with the upgrade priority and acting accordingly.
+to upgrade their clients within a specific time frame, for example if a release includes breaking
+changes to networking. It is essential to check the release notes, starting with the upgrade
+priority and acting accordingly.
 
 General infrastructure providers, aside from following the Polkadot releases and upgrading in a
 timely manner, should monitor changes to runtime events and auxilliary tooling, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
-Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade occurs before broadcasting a priorly constructed transaction, you will need to reconstruct with the appropriate runtime version and corresponding metadata.
+Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
+occurs before broadcasting a priorly constructed transaction, you will need to reconstruct with the
+appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)
 
@@ -66,10 +78,13 @@ eye on how the nodes on the network are reacting to a new upgrade.
 
 ## Monitoring Changes
 
-You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any proposals related to any on-chain upgrades for easy matching. Monitor the chain for:
+You can monitor the chain for upcoming upgrades. The client release notes include the hashes of any
+proposals related to any on-chain upgrades for easy matching. Monitor the chain for:
 
-1. `democracy(Started)` events and log `index` and `blockNumber`. This indicates that a referendum has started (although does not mean that it is a runtime upgrade). Get the referendum info\*; it should have a status of `Ongoing`. Find the ending block number (`end`) and
-   the enactment `delay` (delay). If the referendum passes, it will execute on block number `end + delay`.
+1. `democracy(Started)` events and log `index` and `blockNumber`. This indicates that a referendum
+   has started (although does not mean that it is a runtime upgrade). Get the referendum info\*; it
+   should have a status of `Ongoing`. Find the ending block number (`end`) and the enactment `delay`
+   (delay). If the referendum passes, it will execute on block number `end + delay`.
 2. `democracy(Passed)`, `democracy(NotPassed)`, or, `democracy(Cancelled)` events citing the index.
    If `Passed`, you need to look at the `scheduler(Scheduled)` event in the same block for the
    enactment block.
@@ -78,6 +93,7 @@ You can monitor the chain for upcoming upgrades. The client release notes includ
 4. `democracy(Executed)` events for actual execution. In the case of a runtime upgrade, there will
    also be a `system(CodeUpdated)` event.
 
-You can also monitor [Polkassembly](https://polkadot.polkassembly.io/) for discussions on on-chain proposals and referenda.
+You can also monitor [Polkassembly](https://polkadot.polkassembly.io/) for discussions on on-chain
+proposals and referenda.
 
 \* E.g. via `pallets/democracy/storage/ReferendumInfoOf?key1=index&at=blockNumber` on Sidecar.
