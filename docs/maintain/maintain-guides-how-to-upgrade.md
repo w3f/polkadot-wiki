@@ -47,7 +47,7 @@ The following steps require a second validator which will be referred to as `Val
 
 **It is imperative that you keep Validator A running during this time.** `set_key` does not have an immediate effect and requires two full sessions to elapse before it does.  If you do switch off Validator A too early you may risk being chilled and face a fault within the Thousand Validator Programme.
 
-### Session `N+2`
+### Session `N+3`
 
 **Validator B** is now acting as your validator - you can safely perform operations on **Validator A**.
 
