@@ -10,7 +10,7 @@ slug: ../learn-phragmen
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
 the 1890s. While sequential Phragmén is currently in use on Polkadot and Kusama, an improvement on
-the sequential Phragmén method named [Phragmms](#external-resources) will be used in the future.
+the sequential Phragmén method named [Phragmms](#phragmms-fka-balphragmms) will be used in the future.
 
 The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
 of the sequential Phragmén method:
@@ -637,9 +637,9 @@ The PJR property considers the proportionality of the voter’s decision power. 
 
 #### Comparing Sequential Phragmén, MMS, and Phragmms
 
-_Sequential Phragmén_ (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve PJR.
+Sequential Phragmén (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve PJR.
 
-Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although `seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the maximin support problem. This is due to `seqPhramen` only performing an _approximate_ rebalancing of the distribution of stake.
+Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although `seqPhragmen` has a very fast runtime, it does not provide constant-factor approximation for the maximin support problem. This is due to `seqPhragmen` only performing an _approximate_ rebalancing of the distribution of stake.
 
 In contrast, `MMS` is another standard greedy algorithm that simultaneously achieves the PJR property and provides a constant factor approximation for maximin support, although with a considerably slower runtime. This is because for a given partial solution, `MMS` computes a balanced edge weight vector for each possible augmented committee when a new candidate is added, which is computationally expensive.
 
@@ -655,7 +655,7 @@ The computation is executed by off-chain workers privately and separately from b
 2. Balancedness, and
 3. Local Optimality - The least stake backing of _A_ is higher than the highest score among unelected candidates
 
-If the partial solution passes the tests, then it replaces the current solution as the tentative winner. The official winning solution is declared at the end of the election window.
+If the tentative solution passes the tests, then it replaces the current solution as the tentative winner. The official winning solution is declared at the end of the election window.
 
 A powerful feature of this algorithm is the fact that both its approximation guarantee for maximin support and the above checks passing can be efficiently verified in linear time. This allows for a more scalable solution for secure and proportional committee elections. While `seqPhragmen` also has a notion of score for unelected candidates, `Phragmms` can be seen as a natural complication of the `seqPhragmen` algorithm, where `Phragmms` always grants higher score values to candidates and thus inserts them with higher support values.
 
@@ -671,13 +671,14 @@ The `Phragmms` election rule is currently being implemented on Polkadot. Once co
 
 The `Phragmms` algorithm iterates through the available seats, starting with an empty committee of size _k_:
 
-Repeat _k_ times:
+1. Initialize an empty committee _A_ and zero edge weight vector _w = 0_.
 
-1. Initialize an empty committee _A_ and zero edge weight vector _w = 0_
-2. Find the unelected candidate with highest score and add it to committee _A_
-3. Re-balance the weight vector _w_ for the new committee _A_
+2. Repeat _k_ times:
 
-Return _A_ and _w_.
+   - Find the unelected candidate with highest score and add it to committee _A_.
+   - Re-balance the weight vector _w_ for the new committee _A_.
+
+3. Return _A_ and _w_.
 
 ## External Resources
 
