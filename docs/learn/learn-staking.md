@@ -516,7 +516,7 @@ please see
 
 - 10% inflation/year when the network launches
 - 50% targeted active staking
-- 20% annual nominal return
+- ~20% annual nominal return
 
 > Keep in mind that when the system's staking rate is lower than the ideal staking rate, the
 > annual nominal return rate will be higher than 20%, encouraging more users to use their tokens
