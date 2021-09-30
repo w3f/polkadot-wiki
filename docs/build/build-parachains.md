@@ -82,11 +82,11 @@ shares the security of the validator pool with everyone on the relay chain.
 
 Any validator in the validator pool can help validate your blockchain.
 
-# Creating a Parachain
+## Creating a Parachain
 
-## Things to Consider
+### Things to Consider
 
-### Para-Economics
+#### Para-Economics
 
 Parachains can be seen as autonomous agents; networks that act as decentralised digital nation states.
 Parachains have their own communities, rules, economies, governance, treasuries, and relationships
@@ -104,7 +104,7 @@ on investment.
 - Parathread token sponsorship
   - Blocks are naturally produced when a parathread bid is less than the native token payout.
 
-### Para-objects
+#### Para-objects
 
 The Polkadot network will encourage the connection and interoperability between different *para-objects*.
 
@@ -118,7 +118,7 @@ These could be in the form of:
 - [Bridge](../learn/learn-bridges.md) Hubs
 - Nested Relay Chains: [Polkadot 2.0](../learn/learn-launch.md##polkadot2.0)
 
-### Migration
+#### Migration
 
 Projects that are already functioning as solochains or in isolated environments may be interested
 in migrating onto Polkadot as a para-object. While the parachain model has its benefits, it may
