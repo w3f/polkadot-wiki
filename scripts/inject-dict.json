@@ -9,16 +9,6 @@
     "path": "query.staking.validatorCount"
   },
   {
-    "tpl": "treasury_proposal_total",
-    "default": 10,
-    "path": "query.treasury.proposalCount"
-  },
-  {
-    "tpl": "babe_epoch_duration",
-    "default": 500,
-    "path": "consts.babe.epochDuration"
-  },
-  {
     "tpl": "dot_proxy_deposit_base",
     "default": 0,
     "computed": true
@@ -53,19 +43,19 @@
   },
   {
     "tpl": "identity_reserve_funds",
-    "default": { "kusama": 0.033333, "polkadot": 20.2580 },
+    "default": { "kusama": 0.033333, "polkadot": 20.258 },
     "path": "consts.identity.reserveFunds",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "identity_sub_reserve_funds",
-    "default": { "kusama": 0.006666, "polkadot": 20.0530 },
+    "default": { "kusama": 0.006666, "polkadot": 20.053 },
     "path": "consts.identity.reserveFunds",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "identity_field_funds",
-    "default": { "kusama": 0.008333, "polkadot": 0.0660 },
+    "default": { "kusama": 0.008333, "polkadot": 0.066 },
     "path": "consts.identity.reserveFieldFunds",
     "filters": ["humanReadableToken"]
   },
@@ -76,10 +66,5 @@
   {
     "tpl": "polkadot_max_nominators",
     "default": "256"
-  },
-  {
-    "tpl": "dot_ipfs_pdf_url",
-    "computed": true,
-    "default": "https://ipfs.io/ipfs/QmeUFdSfuY9Ds78Zof4UN8VWoR9mN5Kuzgrtc93eyoDF9v?filename=polkadot-wiki.pdf"
   }
 ]

@@ -127,8 +127,8 @@ selected account at the top is the account that will be the primary account.
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
-> NOTE: The first anonymous proxy you add should always be of _type_ `Any`.
-> Also, if there are multiple anonymous proxies for the proxied account, you should keep at least  _one_ `Any`
+> NOTE: The first anonymous proxy you add should always be of *type* `Any`.
+> Also, if there are multiple anonymous proxies for the proxied account, you should keep at least  *one* `Any`
 > type.
 > Without having an `Any` type proxy, you won't be able to send funds, add new proxies, kill the
 > anonymous proxy or take any action not specifically allowed by the types of the proxies the
@@ -165,7 +165,7 @@ where you will be able to select the type of proxy for that specific account.
 If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
 this.
 
-For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the `killAnonymous` function for anonymous proxies. This must be called **from** the _anonymous_ proxy. This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
+For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the `killAnonymous` function for anonymous proxies. This must be called **from** the *anonymous* proxy. This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
 
 The following steps can be used to remove your proxy:
 
@@ -182,7 +182,7 @@ The following steps can be used to remove your proxy:
 
 - **Step 1**: Go to https://polkadot.js.org/apps/#/accounts (make sure you are on correct network).
 - **Step 2**: Click `Proxied` and add your address, name it `ANON PROXY`. You should now see this address
-  in accounts. Now you need to call `killAnonymous` from the anonymous proxy. It is important to note that anonymous proxies _work backwards_; the original account acts as the proxy.
+  in accounts. Now you need to call `killAnonymous` from the anonymous proxy. It is important to note that anonymous proxies *work backwards*; the original account acts as the proxy.
 
   ![add proxy to delete](../assets/kill-proxy-2.png)
 
