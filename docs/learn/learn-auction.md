@@ -43,8 +43,8 @@ have preceded the time that a bid was submitted.
 ## Rationale
 
 The open and transparent nature of blockchain systems opens attack vectors that are non-existent in
-traditional auction formats. Normal open auctions in particular can be vulnerable to _auction
-sniping_ when implemented over the internet or on a blockchain.
+traditional auction formats. Normal open auctions in particular can be vulnerable to *auction
+sniping* when implemented over the internet or on a blockchain.
 
 Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid
 their true price early, in hopes of paying less than they actually value the item.
@@ -60,7 +60,7 @@ item has not gone to the actor who valued it the most.
 On blockchains this problem may be even worse, since it potentially gives the producer of the block
 an opportunity to snipe any auction at the last concluding block by adding it themselves and/or
 ignoring other bids. There is also the possibility of a malicious bidder or a block producer trying
-to _grief_ honest bidders by sniping auctions.
+to *grief* honest bidders by sniping auctions.
 
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
@@ -76,7 +76,7 @@ have ended before they even bid.
 
 ## Polkadot Implementation
 
-Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the
+Polkadot will use a *random beacon* based on the VRF that's used also in other places of the
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
@@ -112,9 +112,9 @@ Slot E |__________|___________|     1     |     2     |     3     |     4    |  
 
 ```
 
-_Each period of the range 1 - 4 represents a
+*Each period of the range 1 - 4 represents a
 {{ polkadot: 3-month duration for a total of 2 years :polkadot }}
-{{ kusama: 6-week duration for a total of 1 year :kusama }} _
+{{ kusama: 6-week duration for a total of 1 year :kusama }} *
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
@@ -154,7 +154,7 @@ highest bidder for any given slot lease period might not always win (see the
 A random number, which is based on the VRF used by Polkadot, is determined at each block.
 Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random
 number produced by the VRF is examined next to the threshold to determine if that block is the end
-of the auction within the so-called _ending period_. Additionally, the VRF will pick a block from
+of the auction within the so-called *ending period*. Additionally, the VRF will pick a block from
 the last epoch to take the state of bids from (to mitigate some types of attacks from malicious
 validators).
 
