@@ -572,12 +572,14 @@ other peers over the network.
 ## VPS List
 
 - [OVH](https://www.ovh.com.au/)
-- [Digital Ocean](https://www.digitalocean.com/)
+- [Digital Ocean](https://www.digitalocean.com/)*
 - [Vultr](https://www.vultr.com/)
 - [Linode](https://www.linode.com/)
 - [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
+
+*Beware that Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/), and if your account is considered to be in conflict with that, it may be locked and your server shut down.
 
 ## Using Docker
 
