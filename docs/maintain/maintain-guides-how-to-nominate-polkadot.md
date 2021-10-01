@@ -26,7 +26,8 @@ as well as the risk that they bear of being slashed if the validator gets slashe
 ## Setting up Stash and Controller keys
 
 > If you prefer a video format, the following videos related to staking are available:
->
+> 
+> - [Secure Staking with PolkadotJS Apps](https://youtu.be/FCXC0CDhyS4)
 > - [Staking with a Ledger and PolkadotJS Apps](https://www.youtube.com/watch?v=VN4S8MofEW8)
 > - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
