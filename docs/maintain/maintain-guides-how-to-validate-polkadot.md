@@ -572,7 +572,7 @@ other peers over the network.
 ## VPS List
 
 - [OVH](https://www.ovh.com.au/)
-- [Digital Ocean](https://www.digitalocean.com/)*
+- [Digital Ocean](https://www.digitalocean.com/)
 - [Vultr](https://www.vultr.com/)
 - [Linode](https://www.linode.com/)
 - [Contabo](https://contabo.com/)
