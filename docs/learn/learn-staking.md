@@ -31,6 +31,11 @@ chain's native token. You can take a look at the [nominator guide](learn-nominat
 your responsibilities as a nominator, and the [validator docs](learn-validator.md) to understand
 what you need to do as a validator.
 
+If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the 
+video below
+
+[![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
+
 ### 2. Nomination period
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
