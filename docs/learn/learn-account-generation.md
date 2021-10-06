@@ -30,7 +30,7 @@ a target for hackers and others with bad intentions - see also
 [How to Recognize Scams](../general/scams.md).
 
 On this page, we recommend a variety of account generation methods that have various convenience and
-security tradeoffs. Please review this page carefully before making your account so that you
+security trade-offs. Please review this page carefully before making your account so that you
 understand the risks of the account generation method you choose and how to properly mitigate them
 in order to keep your funds safe.
 
@@ -84,7 +84,7 @@ The browser extension is available for both
 [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension).
 
 If you would like to know more or review the code of the plugin yourself, you can visit the
-[Github source repository](https://github.com/polkadot-js/extension).
+[GitHub source repository](https://github.com/polkadot-js/extension).
 
 After installing the plugin, you should see the orange and white Polkadot{.js} logo in the menu bar
 of your browser.
@@ -96,7 +96,7 @@ of your browser.
 Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You
 will see a browser popup, not unlike the one below.
 
-![Initial PolkadotJS popup](../assets/accounts/polkadot_plugin_js_new_01.png)
+![Initial Polkadot-JS popup](../assets/accounts/polkadot_plugin_js_new_01.png)
 
 Click the big plus button or select "Create new account" from the small plus icon in the top right.
 The Polkadot{.js} plugin will then use system randomness to make a new seed for you and display it

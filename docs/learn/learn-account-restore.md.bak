@@ -33,7 +33,7 @@ restore it.
 ![enter-password-plugin](../assets/accounts/polkadot.js_enter_password.png)
 
 To restore the account from this JSON file, once again open the Polkadot{.js} browser plugin. Click
-on the + button at the top. This will open up a menu with several choices - select "Restore account
+on the + button at the top. This will open up a menu wih several choices - select "Restore account
 from backup JSON file". The program then prompts you for the `.json` file which was download earlier
 and the password for that account.
 

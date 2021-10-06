@@ -155,7 +155,7 @@ interests and as such, proposals that are unanimously approved of by the Council
 passing threshold in the public referendum. There is also a Technical Committee for making technical
 recommendations (e.g. emergency runtime upgrade to fix a bug).
 
-Cosmos uses coin-vote signaling to pass referenda. The actual enactment of governance decisions is
+Cosmos uses coin-vote signalling to pass referenda. The actual enactment of governance decisions is
 carried out via a protocol fork, much like other blockchains. All token holders can vote, however,
 if a delegator abstains from a vote then the validator they delegate to assume their voting power.
 Validators in Polkadot do not receive any voting power based on their nominators.

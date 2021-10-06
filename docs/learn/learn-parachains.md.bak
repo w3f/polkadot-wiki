@@ -70,7 +70,7 @@ latency for messages is higher if there are many messages that are in queue to b
 there exist no nodes that are running both of the parachain networks that can quickly gossip the
 message across the networks.
 
-Due to the necessary latency involved in sending crosschain messages, some parachains are planning
+Due to the neccesary latency involved in sending crosschain messages, some parachains are planning
 to become *hubs* for an entire industry. For example, a parachain project
 [Acala](https://acala.network) is planning to become a hub for decentralized finance (DeFi)
 applications. Many DeFi applications take advantage of a property known as *composability* which
@@ -199,7 +199,7 @@ validators is in the validator set again, parachains will resume block productio
 
 Given that collators are full nodes of the relay chain and the parachain they are running, they will
 be able to recognize a disruption as soon as it occurs and should stop producing block candidates.
-Likewise, it should be easy for them to recognize when it's safe to restart block production -
+Likewise, it should be easy for them to recongize when it's safe to restart block production -
 perhaps based on finality delay, validator set size, or some other factor that is yet to be decided
 within [Cumulus](https://github.com/paritytech/cumulus).
 

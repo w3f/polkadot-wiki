@@ -6,9 +6,9 @@ description: Steps on how to teleport assets across parachains.
 slug: ../learn-teleport
 ---
 
-One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralized
+One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralied
 blockchain interoperability. This interoperability allows for asset teleportation: the process of
-moving assets, such as coins, tokens, or NFTs, between chains (parachains) to use them as you would
+moving assets, such as coins, tokens, or NTFs, between chains (parachains) to use them as you would
 any other asset native to that chain. Interoperability is possible through [XCM][]
 and [SPREE modules][], which together ensure that assets are not lost or duplicated across multiple chain.
 
@@ -27,7 +27,7 @@ interface.
    3. "send to address" - Select the account you want to be in control of the coins on the
       destination chain.
    4. "amount" - Insert the number of tokens you want to teleport
-4. After reviewing the transaction information and fees, click the "Teleport" button.
+4. After revewing the transaction information and fees, click the "Teleport" button.
 5. Click "Sign and Submit".
 6. Enter your password, and click "Sign the transaction".
 

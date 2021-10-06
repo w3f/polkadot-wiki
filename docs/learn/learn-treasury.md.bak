@@ -131,7 +131,7 @@ the direct responsibility of the Council, and at some point the Council and the 
 different groups of accounts.
 
 A tip will enter a closing phase when more than a half plus one of the tipping group have endorsed a
-tip. During that time frame, the other members of the tipping group can still issue their tips, but
+tip. During that timeframe, the other members of the tipping group can still issue their tips, but
 do not have to. Once the window closes, anyone can call the `close_tip` extrinsic, and the tip will
 be paid out.
 
