@@ -304,7 +304,7 @@ Rococo testnet "Custom Node" underneath "Development", following the
 
 ### Parachain Playground
 
-You can also take advanatge of the account functions offered on PolkadotJS Apps
+You can also take advantage of the account functions offered on PolkadotJS Apps
 to test the entire Parachain onboarding process (e.g. crowdloans, auctions, registrations).
 
 Start a local node on [Westend](../maintain/maintain-networks.md###westend-test-network)

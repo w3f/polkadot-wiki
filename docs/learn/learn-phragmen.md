@@ -233,7 +233,7 @@ Weighted Phragmén is similar to Basic Phragmén in that it selects candidates s
 round, until the maximum number of candidates are elected. However, it has additional features to
 also allocate weight (stake) behind the candidates.
 
-*Note: in terms of validator selection, for the following algorithm, you can think of "voters" as
+*NOTE: in terms of validator selection, for the following algorithm, you can think of "voters" as
 "nominators" and "candidates" as "validators".*
 
 1. Candidates are elected, one per round, and added to the set of successful candidates (they have
@@ -697,3 +697,4 @@ The `Phragmms` algorithm iterates through the available seats, starting with an 
   its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
   Phragmén validator election outcome before the start of an era.
+  
