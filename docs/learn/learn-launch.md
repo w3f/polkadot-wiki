@@ -68,9 +68,8 @@ auction and winner's onboarding.
 
 ## Polkadot 2.0
 
-With the release of Polkadot 1.0, researchers have begun research for the next version of the
-Polkadot network. With many questions yet to be answered, as of now, some big areas of research will
-be in:
+Researchers are in the midst of research for the next version of the Polkadot network. With many 
+questions yet to be answered, as of now, some big areas of research will be in:
 
 - Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
 - Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of
