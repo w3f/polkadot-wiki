@@ -8,7 +8,7 @@ slug: ../../kusama-getting-started
 
 ### Polkadot's Canary Network
 
-Kusama is a _canary network_ for Polkadot; an early release of the code that is available first and
+Kusama is a *canary network* for Polkadot; an early release of the code that is available first and
 holds real economic value. For developers, Kusama is a proving ground for runtime upgrades, on-chain
 governance, and parachains.
 
@@ -171,13 +171,12 @@ the [Kusama Claims process][claims].
 
 <br />
 
-For brand-new learners of Kusama's cousin network, Polkadot, please head over to our [Polkadot
-Wiki][polkadot wiki].
+For brand-new learners of Kusama's cousin network, Polkadot, please head over to the 
+[Polkadot Wiki][].
 
 While Kusama does not support smart contracts natively, building apps on it is still possible
-(example: [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into _proper_
-development, however, the [builders guide from Polkadot's wiki][polkadot-builders] applies to Kusama
-as well.
+(e.g. [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into *proper* development, 
+however, check out the [builders guide][].
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [medium]: https://medium.com/polkadot-network/kusama-network-7446706b8f4c
@@ -187,4 +186,4 @@ as well.
 [validator]: ../../maintain/kusama/mirror-maintain-guides-how-to-validate-kusama.md
 [nominator]: ../../maintain/kusama/mirror-maintain-guides-how-to-nominate-kusama.md
 [polkadot wiki]: https://wiki.polkadot.network/
-[polkadot-builders]: ../../build/build-index.md
+[builders guide]: ../../build/build-index.md
