@@ -16,10 +16,12 @@ development statuses.
 
 | Wallet Name                                                         | Development State | Team Name | Description       | Custody       | Supports |
 | ------------------------------------------------------------------- | ----------------- | --------- | ----------------- | ------------- | -------- |
-| [Parity Signer](https://www.parity.io/signer/) (see warning below)  | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
-| [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Non-custodial | Staking  |
-| [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Non-custodial | Staking  |
-| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Non-Custodial | Staking  |
+| [Parity Signer](https://www.parity.io/signer/) (see warning below)  | Live              | Parity    | iOS and Android                        | Non-custodial | Staking  |
+| [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux                        | Non-custodial | Staking  |
+| [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension                      | Non-custodial | Staking  |
+| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser                                | Non-Custodial | Staking  |
+| [AirGap Wallet](https://airgap.it/)                                 | Live              | AirGap    | iOS, Android, Win, Mac, Linux, Browser | Non-Custodial | Staking  |
+| [AirGap Vault](https://airgap.it/)                                  | Live              | AirGap    | iOS, Android                           | Non-Custodial | Staking  |
 
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
 Polkadot-JS, the Polkadot{.js} extension, or Parity Signer. For other wallet software, you should
