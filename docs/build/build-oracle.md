@@ -6,7 +6,7 @@ description: Information about building with oracles.
 slug: ../build-oracle
 ---
 
-In the blockchain context, an _oracle_ is a way to bring real-world data onto the blockchain so that
+In the blockchain context, an *oracle* is a way to bring real-world data onto the blockchain so that
 it can be used by a decentralized application.
 
 Oracles serve many purposes for application builders. For example:
@@ -27,8 +27,8 @@ dictate the real-world data on-chain. On the decentralized end, a [complex game 
 don't submit the same data as everyone else. Solutions such as [ChainLink][chainlink] fit somewhere
 in the middle, where the amount of trust you put into the reporting oracles can be adjusted based on
 your preferences. A Chainlink [Feed Pallet][feed pallet] was recently released to allow smart
-contract applications across {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}to access
-price reference data, made available as a Substrate oracle pallet.
+contract applications across {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} to 
+access price reference data, made available as a Substrate oracle pallet.
 
 When using an oracle in your application you should be aware of the benefits and risks that are
 baked into its specific model. As the {{ polkadot: Polkadot :polkadot }}
