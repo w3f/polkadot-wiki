@@ -5,7 +5,6 @@ module.exports = {
       label: "Get Started",
       items: [
         "general/kusama/kusama-getting-started",
-        "general/kusama/kusama-faucet",
         "general/kusama/kusama-claims",
         "general/kusama/kusama-endpoints",
         "learn/learn-balance-transfers",
@@ -27,13 +26,42 @@ module.exports = {
         "learn/learn-identity",
         "learn/learn-treasury",
         "learn/learn-registrar",
-        "build/build-guide",
-        "build/build-parachains",
         "maintain/kusama/maintain-guides-society-kusama",
         "general/kusama/kusama-social-recovery",
         "maintain/doc-maintain-guides-validator-community",
       ],
     },
+    {
+      type: "category",
+      label: "What to Build",
+      items: [
+        "build/build-index",
+        {
+          type: "category",
+          label: "Development Guide",
+          items: [
+            "build/build-guide",
+            "learn/learn-implementers-guide",
+            "build/build-parachains",
+            "build/build-storage",
+            "build/build-smart-contracts",
+            "build/build-oracle",
+            "build/build-wallets",
+            "build/build-ss58-registry",
+          ],
+        },
+        {
+          type: "category",
+          label: "Tools",
+          items: ["build/build-tools-index"],
+        },
+        {
+          type: "category",
+          label: "Resources",
+          items: ["build/build-hackathon"],
+        },
+      ],
+    }, 
     {
       type: "category",
       label: "What to Break",
