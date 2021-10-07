@@ -10,6 +10,10 @@ Here, we provide a list of tools available for your development needs. They are 
 you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
 developers, feel free to [add it in](../general/contributing.md).
 
+## Wallets
+
+Please see the [Wallets](build-wallets.md) page.
+
 ## Block Explorers
 
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block
@@ -20,10 +24,6 @@ developers, feel free to [add it in](../general/contributing.md).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
 - [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain explorer.
-
-## Wallets
-
-See the [Wallets](build-wallets.md) page.
 
 ## Network Monitoring & Reporting
 
