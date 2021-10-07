@@ -32,9 +32,20 @@ const mirrored_learn = [
   "learn-parachains",
   "learn-parathreads",
   "learn-crowdloans",
+  "learn-implementers-guide",
 ];
 
-const mirrored_build = ["build-guide", "build-parachains"];
+const mirrored_build = [
+  "build-guide", 
+  "build-parachains",
+  "build-storage",
+  "build-smart-contracts",
+  "build-oracles",
+  "build-wallets",
+  "build/build-ss58-registry",
+  "build-tools-index",
+  "build-hackathon",
+];
 
 const mirrored_maintain = [
   "maintain-guides-how-to-stop-validating",
