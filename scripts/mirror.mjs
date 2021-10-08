@@ -40,9 +40,8 @@ const mirrored_build = [
   "build-parachains",
   "build-storage",
   "build-smart-contracts",
-  "build-oracles",
+  "build-oracle",
   "build-wallets",
-  "build/build-ss58-registry",
   "build-tools-index",
   "build-hackathon",
 ];
