@@ -405,21 +405,12 @@ article img {
   font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
 }
 
-.homepage-font-left {
-  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
-  text-align: left;
-}
-
-.homepage-font-right {
-  font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
-  text-align: right;
-}
-
 .homepage-font-start {
   font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
   color: white;
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 45px;
+  font-stretch: ultra-condensed;
   text-decoration: none;
 }
 
@@ -454,20 +445,19 @@ article img {
 .kusama-full-width {
   width: 100%;
   text-align: center;
-  margin: 75px;
+  margin: 95px;
 }
 
 .kusama-full-width-main {
-  width: 60%;
+  width: 65%;
   text-align: center;
-  margin: 40px;
-  height: auto;
+  margin: 35px;
 }
 
 .mainpage-row-placeholder {
   background: black;
   width: 100%;
-  height: 10px;
+  height: 5px;
   padding: 0;
 }
 
@@ -486,9 +476,9 @@ article img {
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 0;
+  padding: 20;
   color: var(--ifm-color-primary);
-  background: url("../img/Kusama-Alexandra-Heller.gif") center black;
+  background: url("../img/Kusama-Alexandra-Heller.gif ") black;
   background-position: center;
 }
 
@@ -510,7 +500,6 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: black;
 }
@@ -522,7 +511,6 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: black;
 }
@@ -534,7 +522,6 @@ article img {
   width: 100%;
   padding: 0;
   color: white;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: black;
 }
@@ -546,7 +533,6 @@ article img {
   width: 100%;
   padding: 0;
   color: black;
-  background: url("../img/Kusama_Canary_white.png") center no-repeat black;
   background-position: 115px 1px;
   background: white;
 }
@@ -585,20 +571,15 @@ article img {
 
 .kusama-mainpage-build-btn-main {
   background: transparent;
-  border: 3.7px black;
+  border: 3px black;
   color: white;
-  width: 75%;
-  font-weight: 500;
-  font-weight: bold;
-  padding: 50px;
-  font-size: 47px;
-  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  margin-top: -22px;
   text-align: center;
-  vertical-align: middle;
-  margin-bottom: 1rem !important;
-  display: inline-block;
-  line-height: 7;
-  cursor: pointer;
+  vertical-align: bottom;
+  margin-bottom: 5rem !important;
+  line-height: 8;
   background: url("../img/kusama-gifs.gif");
   background-position: center;
 }
@@ -746,13 +727,13 @@ article img {
 }
 
 .typing-demo {
-  width: 22ch;
+  width: 20ch;
   animation: typing 3s steps(15), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 10px solid;
   font-family: "SpaceMono-Regular", "Helvetica", "Arial", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 @keyframes typing {

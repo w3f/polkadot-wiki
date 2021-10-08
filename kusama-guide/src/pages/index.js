@@ -12,14 +12,16 @@ function HomeSplash() {
 
   return (
     <SplashContainer>
-      <button className="kusama-mainpage-build-btn-main homepage-font">
-        <a
-          className="homepage-font-start"
-          href="https://guide.kusama.network/docs/kusama-getting-started"
-        >
-          GET STARTED WITH KUSAMA
-        </a>
-      </button>
+      <div className="mainContainer" style={{ padding: "0" }}>
+        <button className="kusama-mainpage-build-btn-main homepage-font">
+          <a
+            className="homepage-font-start"
+            href="https://guide.kusama.network/docs/kusama-getting-started"
+          >
+            GET STARTED WITH KUSAMA
+          </a>
+        </button>
+      </div>
     </SplashContainer>
   );
 }
@@ -72,7 +74,7 @@ export default function Index() {
             </div>
             <div className="mainpage-column">
               <h2 className="homepage-font">Become a Validator</h2>
-              <p className="homepage-font-right">
+              <p className="homepage-font">
                 The minimum requirement for staking as a validator on Kusama is
                 much lower than it is expected for Polkadot. There are also
                 programs in place such as{" "}
@@ -142,7 +144,7 @@ export default function Index() {
             <div className="mainpage-column">
               <h2 className="homepage-font">Help Improve this Wiki</h2>
               <p className="homepage-font">
-                This wiki was started by and is maintained by Web3 Foundation.
+                This Wiki was started by and is maintained by Web3 Foundation.
                 It is an open-source project and aims to be the most extensive
                 resource of knowledge on Kusama and the Kusama ecosystem.
               </p>

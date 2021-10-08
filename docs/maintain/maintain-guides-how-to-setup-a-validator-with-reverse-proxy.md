@@ -121,7 +121,9 @@ Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create th
 ```bash
 server {
   listen 0.0.0.0:2435;
-  proxy_pass localhost:30333;
+  location / {
+    proxy_pass http://localhost:30333;
+  }
 }
 ```
 
@@ -187,7 +189,7 @@ polkadot \
   --public-addr=/ip4/IP_ADDRESS/tcp/2435 \
   --listen-addr=/ip4/0.0.0.0/tcp/30333 \
   --rpc-methods=Unsafe \
-  --chain=Polkadot
+  --chain=polkadot
 
 ```
 

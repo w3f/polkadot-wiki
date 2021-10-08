@@ -71,9 +71,9 @@ there exist no nodes that are running both of the parachain networks that can qu
 message across the networks.
 
 Due to the neccesary latency involved in sending crosschain messages, some parachains are planning
-to become _hubs_ for an entire industry. For example, a parachain project
+to become *hubs* for an entire industry. For example, a parachain project
 [Acala](https://acala.network) is planning to become a hub for decentralized finance (DeFi)
-applications. Many DeFi applications take advantage of a property known as _composability_ which
+applications. Many DeFi applications take advantage of a property known as *composability* which
 means that functions of one application can be composed with others in a synergistic way to create
 new applications. One example of this include flash loans, which borrow funds to execute some
 on-chain logic as long as the loan is repaid at the end of the transaction.
@@ -145,7 +145,7 @@ Some examples of parachains:
 - **Privacy Chains**: These are chains that do not leak any information to the public through use of
   novel cryptography.
 - **Smart Contract Chains**: These are chains that can have additional logic implemented on them
-  through the deployment of code known as _smart contracts_.
+  through the deployment of code known as *smart contracts*.
 
 ## FAQ
 

@@ -18,7 +18,7 @@ like attestations (see [Judgements](#judgements)).
 
 Users must reserve funds in a bond to store their information on chain:
 {{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
-These funds are _locked_, not spent - they are returned when the identity is cleared.
+These funds are *locked*, not spent - they are returned when the identity is cleared.
 
 These amounts can also be extracted by querying constants through the
 [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on
@@ -141,9 +141,9 @@ name with the appropriate confidence level:
 
 ![A confirmed identity](../assets/identity/10.jpg)
 
-_Note that changing even a single field's value after you've been verified will un-verify your
+*Note that changing even a single field's value after you've been verified will un-verify your
 account and you will need to start the judgement process anew. However, you can still change fields
-while the judgement is going on - it's up to the registrar to keep an eye on the changes._
+while the judgement is going on - it's up to the registrar to keep an eye on the changes.*
 
 ### Cancelling a Judgement
 
