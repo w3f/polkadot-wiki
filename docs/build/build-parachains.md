@@ -112,7 +112,7 @@ Any validator in the validator pool can help validate your blockchain.
 
 ### Things to Consider
 
-#### [Para-nomics](../learn/learn-parachains.md##parachain-economics)
+#### [Para-nomics](../learn/learn-parachains.md##parachain-economies)
 
 ##### Digital nation states
 
@@ -240,12 +240,12 @@ of code. Keep up-to-date with the latest Cumulus developments from the [Cumulus 
 Cumulus handles the network compatibility overhead that any parachain would need to implement to 
 be connected to Polkadot. This includes:
 
-- Cross-chain message passing (XCMP).
-- Out-of-the-box Collator node setup.
-- An embedded full client of the Relay Chain.
-- Block authorship compatibility.
+- Cross-chain message passing (XCMP)
+- Out-of-the-box Collator node setup
+- An embedded full client of the Relay Chain
+- Block authorship compatibility
 
-Interested in building a PDK? See the [future PDKs](##future-pdks) section for details.
+Are you interested in building a PDK? See the [future PDKs](##future-pdks) section for details.
 
 ### How to set up your parachain
 
@@ -268,7 +268,29 @@ Substrate comes with its own networking layer built-in but unfortunately only su
 that includes a collator node and allows for your Substrate-built logic to be compatible with
 Polkadot as either a parachain or parathread.
 
-## Testing a Parachain: Rococo Testnet
+### Future PDKs
+
+> **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3
+> Foundation is giving grants to teams who are doing this, learn more and apply on the
+> [W3F grants page](https://grants.web3.foundation).
+
+One example of a PDK W3F is interested in supporting is a
+[roll-up](https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675) kit that allowed
+developers to create SNARK-based parachains. If we review the roll-up write-up, we see that the
+system uses two roles: users that update **state** and an operator that **aggregates the state
+updates** into a single on-chain update. It should be straightforward to see how we can translate
+this to the parachain terms. The state transition function for a roll-up-like parachain would be
+updating the state (in practice, most likely a Merkle tree, which would be easily verifiable) from
+the user inputs. The operator would act as the collator node, which would aggregate the state and
+create the zk-SNARK proof that it would hand to a Relay Chain's validators for verification.
+
+If you or your team are interested in developing a PDK feel free to open an issue on the
+[W3F collaboration repository](https://github.com/w3f/Web3-collaboration) for comment.
+There may be grants available for this type of work.
+
+## Testing a Parachain
+
+### Rococo Testnet
 
 [Rococo](https://github.com/paritytech/cumulus#rococo-crown) is a testnet built for testing
 parachains. Rococo utilizes Cumulus and
@@ -411,7 +433,7 @@ Then, connect your local node with Polkadot-JS Apps.
 
 ![parachains playground](../assets/parachain-playground.png)
 
-## Deploy a Parachain or Parathread on Polkadot
+## Deploy on Polkadot
 
 Substrate-based chains, including the Polkadot and Kusama Relay Chains, use an
 [SS58 encoding](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>) for
@@ -439,22 +461,12 @@ For more information on how parathread per-block auctions work, see the more det
 {{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
 {{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
 
-## Future PDKs
+## External Resources 
 
-> **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3
-> Foundation is giving grants to teams who are doing this, learn more and apply on the
-> [W3F grants page](https://grants.web3.foundation).
-
-One example of a PDK W3F is interested in supporting is a
-[roll-up](https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675) kit that allowed
-developers to create SNARK-based parachains. If we review the roll-up write-up, we see that the
-system uses two roles: users that update **state** and an operator that **aggregates the state
-updates** into a single on-chain update. It should be straightforward to see how we can translate
-this to the parachain terms. The state transition function for a roll-up-like parachain would be
-updating the state (in practice, most likely a Merkle tree, which would be easily verifiable) from
-the user inputs. The operator would act as the collator node, which would aggregate the state and
-create the zk-SNARK proof that it would hand to a Relay Chain's validators for verification.
-
-If you or your team are interested in developing a PDK feel free to open an issue on the
-[W3F collaboration repository](https://github.com/w3f/Web3-collaboration) for comment.
-There may be grants available for this type of work.
+- [Parachains Guide Overview](https://substrate.dev/substrate-how-to-guides/docs/parachains/overview/)
+- [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+- [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
+- [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
+- [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
+- [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
+- [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)
