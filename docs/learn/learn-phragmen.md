@@ -10,7 +10,8 @@ slug: ../learn-phragmen
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
 the 1890s. While sequential Phragmén is currently in use on Polkadot and Kusama, an improvement on
-the sequential Phragmén method named [Phragmms](#external-resources) will be used in the future.
+the sequential Phragmén method named [Phragmms](#phragmms-fka-balphragmms) will be used in the
+future.
 
 The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
 of the sequential Phragmén method:
@@ -621,63 +622,118 @@ nominations are priority-ranked in terms of amount of stake.
 
 ### Phragmms (fka Balphragmms)
 
-`Phragmms`, formerly known as `Balphragmms`, is a new election rule inspired by Phragmén and developed in-house for Polkadot. In general, election rules on blockchains is an active topic of research. This is due to the conflicting requirements for election rules and blockchains: elections are computationally expensive, but blockchains are computationally limited. Thus, this work constitutes state of the art in terms of optimization.
+`Phragmms`, formerly known as `Balphragmms`, is a new election rule inspired by Phragmén and
+developed in-house for Polkadot. In general, election rules on blockchains is an active topic of
+research. This is due to the conflicting requirements for election rules and blockchains: elections
+are computationally expensive, but blockchains are computationally limited. Thus, this work
+constitutes state of the art in terms of optimization.
 
-Proportional representation is a very important property for a decentralized network to have in order to maintain a sufficient level of decentralization. While this is already provided by the currently implemented `seqPhragmen`, this new election rule provides the advantage of the added security guarantee described below. As far as we can tell, at the time of writing, Polkadot and Kusama are the only blockchain networks that implement an election rule that guarantees proportional representation.
+Proportional representation is a very important property for a decentralized network to have in
+order to maintain a sufficient level of decentralization. While this is already provided by the
+currently implemented `seqPhragmen`, this new election rule provides the advantage of the added
+security guarantee described below. As far as we can tell, at the time of writing, Polkadot and
+Kusama are the only blockchain networks that implement an election rule that guarantees proportional
+representation.
 
-The security of a distributed and decentralized system such as Polkadot is directly related to the goal of avoiding *overrepresentation* of any minority. This is a stark contrast to traditional approaches to proportional representation axioms, which typically only seek to avoid underrepresentation.
+The security of a distributed and decentralized system such as Polkadot is directly related to the
+goal of avoiding *overrepresentation* of any minority. This is a stark contrast to traditional
+approaches to proportional representation axioms, which typically only seek to avoid
+underrepresentation.
 
 #### Maximin Support Objective and PJR
 
-This new election rule aims to achieve a constant-factor approximation guarantee for the *maximin support objective* and the closely related *proportional justified representation* (PJR) property.
+This new election rule aims to achieve a constant-factor approximation guarantee for the *maximin
+support objective* and the closely related *proportional justified representation* (PJR) property.
 
-The maximin support objective is based on maximizing the support of the least-supported elected candidate, or in the case of Polkadot and Kusama, maximizing the least amount of stake backing amongst elected validators. This security-based objective translates to a security guarantee for NPoS and makes it difficult for an adversarial whale’s validator nodes to be elected. The `Phragmms` rule, and the guarantees it provides in terms of security and proportionality, have been formalized in a [peer-reviewed paper](https://arxiv.org/pdf/2004.12990.pdf)).
+The maximin support objective is based on maximizing the support of the least-supported elected
+candidate, or in the case of Polkadot and Kusama, maximizing the least amount of stake backing
+amongst elected validators. This security-based objective translates to a security guarantee for
+NPoS and makes it difficult for an adversarial whale’s validator nodes to be elected. The `Phragmms`
+rule, and the guarantees it provides in terms of security and proportionality, have been formalized
+in a [peer-reviewed paper](https://arxiv.org/pdf/2004.12990.pdf)).
 
-The PJR property considers the proportionality of the voter’s decision power. The property states that a group of voters with cohesive candidate preferences and a large enough aggregate voting strength deserve to have a number of representatives proportional to the group’s vote strength.
+The PJR property considers the proportionality of the voter’s decision power. The property states
+that a group of voters with cohesive candidate preferences and a large enough aggregate voting
+strength deserve to have a number of representatives proportional to the group’s vote strength.
 
 #### Comparing Sequential Phragmén, MMS, and Phragmms
 
-*Sequential Phragmén* (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve PJR.
+*Sequential Phragmén* (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve
+PJR.
 
-Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although `seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the maximin support problem. This is due to `seqPhramen` only performing an *approximate* rebalancing of the distribution of stake.
+Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although
+`seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the
+maximin support problem. This is due to `seqPhramen` only performing an *approximate* rebalancing of
+the distribution of stake.
 
-In contrast, `MMS` is another standard greedy algorithm that simultaneously achieves the PJR property and provides a constant factor approximation for maximin support, although with a considerably slower runtime. This is because for a given partial solution, `MMS` computes a balanced edge weight vector for each possible augmented committee when a new candidate is added, which is computationally expensive.
+In contrast, `MMS` is another standard greedy algorithm that simultaneously achieves the PJR
+property and provides a constant factor approximation for maximin support, although with a
+considerably slower runtime. This is because for a given partial solution, `MMS` computes a balanced
+edge weight vector for each possible augmented committee when a new candidate is added, which is
+computationally expensive.
 
-We introduce a new heuristic inspired by `seqPhragmen`, `PhragMMS`, which maintains a comparable runtime to `seqPhragmen`, offers a constant-factor approximation guarantee for the maximin support objective, and satisfies PJR. This is the fastest known algorithm to achieve a constant-factor guarantee for maximin support.
+We introduce a new heuristic inspired by `seqPhragmen`, `PhragMMS`, which maintains a comparable
+runtime to `seqPhragmen`, offers a constant-factor approximation guarantee for the maximin support
+objective, and satisfies PJR. This is the fastest known algorithm to achieve a constant-factor
+guarantee for maximin support.
 
 #### The New Election Rule: Phragmms
 
-`Phragmms` is an iterative greedy algorithm that starts with an empty committee and alternates between the `Phragmms` heuristic for inserting a new candidate and *rebalancing* by replacing the weight vector with a balanced one. The main differentiator between `Phragmms` and `seqPhragmen` is that the latter only perform an approximate rebalancing. Details can be found in [Balanced Stake Distribution](#rationale-for-maintaining-an-even-distribution-of-stake).
+`Phragmms` is an iterative greedy algorithm that starts with an empty committee and alternates
+between the `Phragmms` heuristic for inserting a new candidate and *rebalancing* by replacing the
+weight vector with a balanced one. The main differentiator between `Phragmms` and `seqPhragmen` is
+that the latter only perform an approximate rebalancing. Details can be found in
+[Balanced Stake Distribution](#rationale-for-maintaining-an-even-distribution-of-stake).
 
-The computation is executed by off-chain workers privately and separately from block production, and the validators only need to submit and verify the solutions on-chain. Relative to a committee *A*, the score of an unelected candidate *c* is an easy-to-compute rough estimate of what would be the size of the least stake backing if we added *c* to committee *A*. Observing on-chain, only one solution needs to be tracked at any given time, and a block producer can submit a new solution in the block only if the block passes the verification test, consisting of checking:
+The computation is executed by off-chain workers privately and separately from block production, and
+the validators only need to submit and verify the solutions on-chain. Relative to a committee *A*,
+the score of an unelected candidate *c* is an easy-to-compute rough estimate of what would be the
+size of the least stake backing if we added *c* to committee *A*. Observing on-chain, only one
+solution needs to be tracked at any given time, and a block producer can submit a new solution in
+the block only if the block passes the verification test, consisting of checking:
 
 1. Feasibility,
 2. Balancedness, and
-3. Local Optimality - The least stake backing of *A* is higher than the highest score among unelected candidates
+3. Local Optimality - The least stake backing of *A* is higher than the highest score among
+   unelected candidates
 
-If the partial solution passes the tests, then it replaces the current solution as the tentative winner. The official winning solution is declared at the end of the election window.
+If the tentative solution passes the tests, then it replaces the current solution as the tentative
+winner. The official winning solution is declared at the end of the election window.
 
-A powerful feature of this algorithm is the fact that both its approximation guarantee for maximin support and the above checks passing can be efficiently verified in linear time. This allows for a more scalable solution for secure and proportional committee elections. While `seqPhragmen` also has a notion of score for unelected candidates, `Phragmms` can be seen as a natural complication of the `seqPhragmen` algorithm, where `Phragmms` always grants higher score values to candidates and thus inserts them with higher support values.
+A powerful feature of this algorithm is the fact that both its approximation guarantee for maximin
+support and the above checks passing can be efficiently verified in linear time. This allows for a
+more scalable solution for secure and proportional committee elections. While `seqPhragmen` also has
+a notion of score for unelected candidates, `Phragmms` can be seen as a natural complication of the
+`seqPhragmen` algorithm, where `Phragmms` always grants higher score values to candidates and thus
+inserts them with higher support values.
 
 **To summarize, the main differences between the two rules are:**
 
 - In `seqPhragmen`, lower scores are better, whereas in `Phragmms`, higher scores are better.
-- Inspired by `seqPhragmen`, the scoring system of `Phragmms` can be considered to be more intuitive and does a better job at estimating the value of adding a candidate to the current solution, and hence leads to a better candidate-selection heuristic.
-- Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector *w* is completely rebalanced after each iteration of the algorithm.
+- Inspired by `seqPhragmen`, the scoring system of `Phragmms` can be considered to be more intuitive
+  and does a better job at estimating the value of adding a candidate to the current solution, and
+  hence leads to a better candidate-selection heuristic.
+- Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector *w* is completely rebalanced after
+  each iteration of the algorithm.
 
-The `Phragmms` election rule is currently being implemented on Polkadot. Once completed, it will become one of the most sophisticated election rules implemented on a blockchain. For the first time, this election rule will provide both fair representation (PJR) and security (constant-factor approximation for the maximin support objection) to a blockchain network.
+The `Phragmms` election rule is currently being implemented on Polkadot. Once completed, it will
+become one of the most sophisticated election rules implemented on a blockchain. For the first time,
+this election rule will provide both fair representation (PJR) and security (constant-factor
+approximation for the maximin support objection) to a blockchain network.
 
 #### Algorithm
 
-The `Phragmms` algorithm iterates through the available seats, starting with an empty committee of size _k_:
-
-Repeat *k* times:
+The `Phragmms` algorithm iterates through the available seats, starting with an empty committee of
+size *k*:
 
 1. Initialize an empty committee *A* and zero edge weight vector *w = 0*.
-2. Find the unelected candidate with highest score and add it to committee *A*.
-3. Re-balance the weight vector *w* for the new committee *A*.
 
-Return *A* and *w*.
+2. Repeat *k* times:
+
+   - Find the unelected candidate with highest score and add it to committee *A*.
+   - Re-balance the weight vector *w* for the new committee *A*.
+
+3. Return *A* and *w*.
 
 ## External Resources
 
@@ -696,4 +752,3 @@ Return *A* and *w*.
   its properties.
 - [Offline Phragmén](https://github.com/kianenigma/offline-phragmen) - Script to generate the
   Phragmén validator election outcome before the start of an era.
-  
