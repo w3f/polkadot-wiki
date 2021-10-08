@@ -6,8 +6,8 @@ description: Learn how to use Ledger with Statemine.
 slug: ../../kusama-statemine-ledger
 ---
 
-> NOTE: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
-> browsers like Brave, Chrome or Edge.
+> **Please note**: Because of required WebUSB support, Ledger wallets currently only work on 
+> Chromium-based browsers like Brave, Chrome or Edge.
 
 Statemine has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
@@ -54,7 +54,7 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ### Using the Developer Release
 
-> NOTE: These instructions are for development installation only. It is recommended to install the
+> These instructions are for development installation only. It is recommended to install the
 > application from Ledger Live unless you _know exactly what you're doing_.
 
 Instructions for downloading the prerelease binary from the GitHub releases is written [on the
@@ -91,7 +91,7 @@ At the end of the process you should have the newly installed Statemine applicat
 
 ### Adding Your Account
 
-> **IMPORTANT:** WebUSB doesn't work with Chromium version 91.xx. For this reason there is a new
+> **Important:** WebUSB doesn't work with Chromium version 91.xx. For this reason there is a new
 > option "WebHID" that needs to be selected in this version of Chromium for your Ledger device to
 > work. This option doesn't work currently with the Polkadot extension.
 
@@ -160,7 +160,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use [Polkadot-JS Apps UI][apps].
 
-> _Important:_ Transfering in this way sends tokens to another account on the Statemine parachain.
+> **Important**: Transfering in this way sends tokens to another account on the Statemine parachain.
 > If you need to transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting)
 > section below.
 
@@ -172,9 +172,9 @@ method is to use [Polkadot-JS Apps UI][apps].
 - Confirm the transaction on your device.
 - A green success notification will be displayed when the transaction is included in a block.
 
-> Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
+> Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the *On* state, your
 > account will be unable to make transactions which would get its balance below the existential
-> deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
+> deposit. This prevents reaping of accounts with low balances. If you toggle this to *Off*, you
 > will be able to go below existential deposit balance, causing your account to be deleted and any
 > dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
 > might be the reason.
