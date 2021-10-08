@@ -38,29 +38,41 @@ internet of the future will have many different types of blockchains working tog
 
 ### What are the Benefits of Deploying a Parachain?
 
-> The parachain model attempts to alleviate five key *build* failures of present technology stacks,
-> as described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper.pdf):
->
-> - **Scalability**: How much is spent on resources and will the network be subject to bottlenecks?
-> - **Isolatability**: Are the needs of many accounted for under the same framework?
-> - **Developability**: Is the system tooling, system support, and overall system integrity dependable?
-> - **Governance**: Can the network remain flexible to evolve and adapt over time? Can decisions be
->   made with sufficient inclusivity, legitimacy, and transparency to provide effective leadership of a
->   decentralised system?
-> - **Applicability**: Does the technology address a burning need on its own? Is other “middleware”
->   required to bridge the gap to actual applications?
+The parachain model attempts to alleviate five key *build* failures of present technology stacks,
+as described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper.pdf):
 
-#### Pooled Security
+- **Scalability**: How much is spent on resources and will the network be subject to bottlenecks?
+- **Isolatability**: Are the needs of many accounted for under the same framework?
+- **Developability**: Is the system tooling, system support, and overall system integrity dependable?
+- **Governance**: Can the network remain flexible to evolve and adapt over time? Can decisions be
+  made with sufficient inclusivity, legitimacy, and transparency to provide effective leadership of a
+  decentralised system?
+- **Applicability**: Does the technology address a burning need on its own? Is other “middleware”
+  required to bridge the gap to actual applications?
 
-Parachains can [lease the security](../learn/learn-security.md) of the
+#### [Shared Security](../learn/learn-security.md) (Pooled Security)
+
+Parachains can lease the security of the
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network by bonding
 {{ polkadot: [DOT](../learn/learn-DOT.md) :polkadot }} {{ kusama: KSM :kusama }} for a
 parachain slot. This means that the social costs of building a community
 around your project and convincing validators to participate in your network security
 are reduced. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} has strong security,
 and decentralised application projects wishing to benefit from this
-security would want to become a parachain to share in that pooled security. For more information
-on the mechanic of leasing a parachain slot through a [candle auction](../learn/learn-auction.md).
+security would want to become a parachain to share in that pooled security.
+
+#### [On-Chain Governance](../learn/learn-governance.md) (Thought-through Governance)
+
+Most governance systems in blockchains use an off-chain governance mechanism. Polkadot's 
+on-chain governance encourages maximum participation of 
+token holders and is frictionless and transparent. It also enables 
+[forkless upgrades](../learn/learn-runtime-upgrades.md).
+
+#### Scalability
+
+The sharded multichain network approach allows for what is essentially parallel computation 
+(processing power) that can process several transactions in parallel. Isolated blockchains are 
+often faced with the network constraint of processing transactions in sequence, causing bottlenecks.
 
 #### Interoperability
 
@@ -76,8 +88,8 @@ passing messages between them. Furthermore, as bridges to other chains are conne
 to Bitcoin or Ethereum) {{ polkadot: Polkadot's :polkadot }} {{ kusama: Kusama's :kusama }} parachains
 will be able to communicate with these as well.
 
-> NOTE: Despite the benefits of becoming a parachain, developers should be conscious of the challenges in
-> becoming a parachain, and whether building a blockchain with an end goal of becoming a
+> **Please note**: Despite the benefits of becoming a parachain, developers should be conscious of the 
+> challenges in becoming a parachain, and whether building a blockchain with an end goal of becoming a
 > parachain is a viable one for their project.
 
 On {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}, you are able to put your
@@ -100,7 +112,7 @@ Any validator in the validator pool can help validate your blockchain.
 
 ### Things to Consider
 
-#### Para-Economics
+#### [Para-nomics](../learn/learn-parachains.md##parachain-economics)
 
 ##### Digital nation states
 
@@ -116,18 +128,21 @@ good return on investment.
 
 ##### Connecting digital economies
 
-[Collators](../learn/learn-collator.md) are incentivized with a native token payout from:
-
+[Collators](../learn/learn-collator.md) act as network maintainers and maintain a full node of a 
+parachain. They are incentivized with a native token payout from:
 - Transaction fees collected
 - Parathread token sponsorship
   - Blocks are naturally produced when a parathread bid is less than the native token payout.
 
 #### Para-objects
 
+            The Relay Chain can host arbitrary state machines, not just blockchains.
+
 The {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network will encourage the
 connection and interoperability between different *para-objects*.
 
-> Here, para-objects are referring to objects on the network that operate in parallel.
+    Here, para-objects are referring to objects on the network that operate in parallel, 
+    formally, parallelizable objects.
 
 These could be in the form of:
 
@@ -146,8 +161,8 @@ While the parachain model has its benefits, it may not be the go-to strategy for
 As a path for migration onto {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}, it may
 be more viable to migrate to one of the chains in one of the reserved slots.
 
-For instance, there are currently options for smart contract deployment on Kusama through the
-networks that have secured a slot in the latest slot auctions.
+For instance, there are currently options for [smart contract deployment](build-smart-contracts.md) on 
+Kusama through the networks that have secured a slot in the latest slot auctions.
 
 ## Parachain Development Kit (PDK)
 
@@ -190,11 +205,9 @@ provide support for {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama
 directly. For this reason, `Cumulus`, an added *library* contains all of the 
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} adot compatibility glue code.
 
-> If you haven't already, get started with Substrate.
-> 
-> The best way to get started with Substrate is to explore the
-> [Substrate Developer Hub](https://substrate.dev/docs/en/), an online resource built and maintained
-> by [Parity Technologies](https://parity.io).
+> If you haven't already, get started with Substrate. The best way to get started with Substrate is 
+> to explore the [Substrate Developer Hub](https://substrate.dev/docs/en/), an online resource built 
+> and maintained by [Parity Technologies](https://parity.io).
 
 ### Cumulus
 
