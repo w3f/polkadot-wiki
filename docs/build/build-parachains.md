@@ -108,13 +108,11 @@ your parachain shares the security of the validator pool with everyone on the re
 
 Any validator in the validator pool can help validate your blockchain.
 
-## Creating a Parachain
+## Things to Consider
 
-### Things to Consider
+### [Para-nomics](../learn/learn-parachains.md#parachain-economies)
 
-#### [Para-nomics](../learn/learn-parachains.md##parachain-economies)
-
-##### Digital nation states
+#### Digital nation states
 
 Parachains can be seen as autonomous agents; networks that act as decentralised digital nation states.
 Parachains have their own communities, rules, economies, governance, treasuries, and relationships
@@ -126,7 +124,7 @@ Moreover, *becoming a parachain* has an opportunity cost associated. Ideally, yo
 value of the network by participating in the parachain selection process, and this should serve as a
 good return on investment.
 
-##### Connecting digital economies
+#### Connecting digital economies
 
 [Collators](../learn/learn-collator.md) act as network maintainers and maintain a full node of a 
 parachain. They are incentivized with a native token payout from:
@@ -134,7 +132,7 @@ parachain. They are incentivized with a native token payout from:
 - Parathread token sponsorship
   - Blocks are naturally produced when a parathread bid is less than the native token payout.
 
-#### Para-objects
+### Para-objects
 
             The Relay Chain can host arbitrary state machines, not just blockchains.
 
@@ -142,7 +140,7 @@ The {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network will
 connection and interoperability between different *para-objects*.
 
     Here, para-objects are referring to objects on the network that operate in parallel, 
-    formally, parallelizable objects.
+    generally, parallelizable objects.
 
 These could be in the form of:
 
@@ -152,7 +150,7 @@ These could be in the form of:
 - [Bridge](../learn/learn-bridges.md) Hubs
 - Nested Relay Chains: [Polkadot 2.0](../learn/learn-launch.md##polkadot2.0)
 
-#### Migration
+### Migration
 
 Projects that are already functioning as solochains or in isolated environments may be interested
 in migrating onto {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} as a para-object.
@@ -164,7 +162,14 @@ be more viable to migrate to one of the chains in one of the reserved slots.
 For instance, there are currently options for [smart contract deployment](build-smart-contracts.md) on 
 Kusama through the networks that have secured a slot in the latest slot auctions.
 
-## Parachain Development Kit (PDK)
+## Implement a Parachain
+
+The Parachain Implementer's Guide is a significant work in progress and maintained by
+Parity Tech. [**The live version**](https://w3f.github.io/parachain-implementers-guide/) is built 
+from the source located in the official
+[Polkadot repository](https://github.com/paritytech/polkadot/tree/master/roadmap/implementers-guide).
+
+### Parachain Development Kit (PDK)
 
 A **PDK** is a set of tools that allows developers to easily create a parachain. In
 practice, the PDK will consist of the following key components:
@@ -173,7 +178,7 @@ practice, the PDK will consist of the following key components:
 - *Collator node* : a type of peer-to-peer node in the {{ polkadot: Polkadot :polkadot }}
   {{ kusama: Kusama :kusama }} network with certain responsibilities regarding parachains.
 
-### Key Components
+#### Key Components
 
 The state transition function (STF) can be an abstract way for an application to go from one state
 to another state. The only constraint that {{ polkadot: Polkadot :polkadot }}
@@ -194,7 +199,7 @@ Collator nodes are responsible for passing the succinct proofs to the relay chai
 tracking the latest blocks from the relay chain. In essence, a collator node also acts as a light
 client for the relay chain. For more on collator nodes, see the [collator page](../learn/learn-collator.md).
 
-### What PDKs Exist?
+#### What PDKs Exist?
 
 Currently, the only PDK is [Parity Substrate](https://github.com/paritytech/substrate) and
 [Cumulus](https://github.com/paritytech/cumulus). **[Substrate](https://substrate.dev/)** is a
@@ -209,7 +214,7 @@ directly. For this reason, `Cumulus`, an added *library* contains all of the
 > to explore the [Substrate Developer Hub](https://substrate.dev/docs/en/), an online resource built 
 > and maintained by [Parity Technologies](https://parity.io).
 
-### Cumulus
+#### Cumulus
 
     Cumulus clouds are shaped sort of like dots; together they form an intricate system;
     beautiful and functional.
@@ -461,7 +466,7 @@ For more information on how parathread per-block auctions work, see the more det
 {{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
 {{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
 
-## External Resources 
+## Resources 
 
 - [Parachains Guide Overview](https://substrate.dev/substrate-how-to-guides/docs/parachains/overview/)
 - [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
@@ -469,4 +474,7 @@ For more information on how parathread per-block auctions work, see the more det
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
 - [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
 - [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
+- [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
+- [Polkadot Parachain Slots](https://polkadot.network/polkadot-parachain-slots/)
+- [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
 - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)
