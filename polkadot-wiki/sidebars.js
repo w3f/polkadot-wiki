@@ -107,7 +107,6 @@ module.exports = {
           label: "Development Guide",
           items: [
             "build/build-guide",
-            "learn/learn-implementers-guide",
             "build/build-parachains",
             "build/build-storage",
             "build/build-smart-contracts",
