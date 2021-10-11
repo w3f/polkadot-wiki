@@ -112,6 +112,7 @@ module.exports = {
             "build/build-storage",
             "build/build-smart-contracts",
             "build/build-oracle",
+            "build/build-data",
             "build/build-ss58-registry",
             "build/build-wallets",
           ],
