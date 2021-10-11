@@ -97,7 +97,7 @@ logic. Some transactions warrant limiting resources with other strategies. For e
   voter tried anything malicious.
 - Deposits: Some transactions, like setting an [identity](learn-identity.md) or claiming an index,
   use storage space indefinitely. These require a deposit that will be returned if the user decides
-  to free storage (e.g. clear their IDE).
+  to free storage (e.g. clear their ide).
 - Burns: A transaction may burn funds internally based on its logic. For example, a transaction may
   burn funds from the sender if it creates new storage entries, thus increasing the state size.
 - Limits: Some limits are part of the protocol. For example, nominators can only nominate 16

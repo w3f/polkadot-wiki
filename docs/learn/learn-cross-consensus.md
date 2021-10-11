@@ -46,7 +46,7 @@ of deployment.
   includes a native asset that can be used as a reserve for that asset. Then, the derivative form of the
   asset on each of those chains would be fully backed, allowing the derivative asset to be exchanged for the underlying asset on the reserve chain backing it.
 
-### XCVM (Cross-Chain Virtual Machine)
+### XCVM (Cross-Consensus Virtual Machine)
 
 An ultra-high level non-Turing-complete computer whose instructions are designed in a way to be roughly at
 the same level as transactions.

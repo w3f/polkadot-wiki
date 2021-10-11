@@ -94,7 +94,7 @@ selected oversubscribed validators, or the validator you are nominating has 100%
 generally wise to choose as many trustworthy validators as you can (up to 16) to reduce the risk of
 none of your nominated validators being elected.
 
-Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go all of the
+Rewards are *lazy* - somebody must trigger a payout for a validator for rewards to go all of the
 validator's nominators. Any account can do this, although in practice validator operators often do
 this as a service to their nominators. See the page on [Simple Payouts](learn-simple-payouts.md) for
 more information and instructions for claiming rewards.
@@ -192,7 +192,7 @@ details.
 > and
 > [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
 > and
-> [Nominating/Staking on Polkadot and Kusama](https://www.youtube.com/watch?v=NYs9oWAbzbE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=14)
+> [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
 
 ### Guides
 

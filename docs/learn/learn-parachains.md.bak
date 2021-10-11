@@ -70,7 +70,7 @@ latency for messages is higher if there are many messages that are in queue to b
 there exist no nodes that are running both of the parachain networks that can quickly gossip the
 message across the networks.
 
-Due to the necessary latency involved in sending crosschain messages, some parachains are planning
+Due to the neccesary latency involved in sending crosschain messages, some parachains are planning
 to become *hubs* for an entire industry. For example, a parachain project
 [Acala](https://acala.network) is planning to become a hub for decentralized finance (DeFi)
 applications. Many DeFi applications take advantage of a property known as *composability* which
@@ -155,7 +155,7 @@ Some examples of parachains:
 use other consensus algorithms that provide their own finality. Only sovereign chains (that must
 bridge to the Relay Chain via a parachain) can control their own consensus. Parachains have control
 over how blocks are authored and by whom. Polkadot guarantees valid state transitions. Executing a
-block finality outside the context of the Relay Chain is outside the scope of trust
+block finality outside the context of the relay chain is outside the scope of trust
 that Polkadot provides.
 
 #### How about parachains that are not Substrate-based?
@@ -164,7 +164,7 @@ Substrate provides [FRAME Pallets](https://substrate.dev/docs/en/knowledgebase/r
 part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
 that can be used for consensus. Polkadot being a Substrate-based chain relies on BABE as the block
 production scheme and GRANDPA as the finality gadget as part of its consensus mechanism. Collectively,
-this is a [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block finality are separate. Parachains only need to produce blocks as they can rely on the Relay Chain to validate the state transitions. Thus, parachains can have their own block production where the [collators](learn-collator.md) act as the block producers, even if the parachain is not Substrate-based.
+this is a [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block finality are separate. Parachains only need to produce blocks as they can rely on the relay chain to validate the state transitions. Thus, parachains can have their own block production where the [collators](learn-collator.md) act as the block producers, even if the parachain is not Substrate-based.
 
 ### How will parachain slots be distributed?
 
@@ -194,12 +194,12 @@ that parachain's validator group again.
 If anywhere from 30% to 50% of the validators go offline, availability will suffer because we need
 two thirds of the validator set to back the parachain candidates. In other words, all parachains
 will stop until the situation is resolved. Finality will also stop, but low-value transactions on
-the Relay Chain should be safe enough to execute, despite common forks. Once the required number of
+the relay chain should be safe enough to execute, despite common forks. Once the required number of
 validators is in the validator set again, parachains will resume block production.
 
-Given that collators are full nodes of the Relay Chain and the parachain they are running, they will
+Given that collators are full nodes of the relay chain and the parachain they are running, they will
 be able to recognize a disruption as soon as it occurs and should stop producing block candidates.
-Likewise, it should be easy for them to recognize when it's safe to restart block production -
+Likewise, it should be easy for them to recongize when it's safe to restart block production -
 perhaps based on finality delay, validator set size, or some other factor that is yet to be decided
 within [Cumulus](https://github.com/paritytech/cumulus).
 

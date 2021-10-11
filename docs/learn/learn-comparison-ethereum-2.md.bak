@@ -146,7 +146,7 @@ interpretation by the receiving chain.
 ## Governance
 
 Ethereum 2.0 governance is still unresolved. Ethereum currently uses off-chain governance procedures
-like GitHub discussions, All Core Devs calls, and Ethereum Magicians to make decisions about the
+like Github discussions, All Core Devs calls, and Ethereum Magicians to make decisions about the
 protocol. [9]
 
 Polkadot uses on-chain [governance](learn-governance.md) with a multicameral system. There are

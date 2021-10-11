@@ -37,7 +37,7 @@ provable finality, and has no effective strategy in resisting cartels.
 
 ## Nominated Proof of Stake
 
-In traditional PoS systems, block production participation is dependent on token holdings as opposed to computational power. While PoS developers usually have a proponent for equitable participation in a decentralized manner, most projects end up proposing some level of centralized operation, where the number of validators with full participation rights is limited. These validators are often seen to be the most wealthy, and, as a result, influence the PoS network as they are the most staked. Usually, the number of candidates to maintain the network with the necessary knowledge (and equipment) is limited; this can directly increase operational costs as well. Systems with a large number of validators tend to form pools to decrease the variance of their revenue and profit from economies of scale. These pools are often off-chain.
+In traditional PoS systems, block production participation is dependant on token holdings as opposed to computational power. While PoS developers usually have a proponent for equitable participation in a decentralized manner, most projects end up proposing some level of centralized operation, where the number of validators with full participation rights is limited. These validators are often seen to be the most wealthy, and, as a result, influence the PoS network as they are the most staked. Usually, the number of candidates to maintain the network with the necessary knowledge (and equipment) is limited; this can directly increase operational costs as well. Systems with a large number of validators tend to form pools to decrease the variance of their revenue and profit from economies of scale. These pools are often off-chain.
 
 A way to alleviate this is to implement pool formation on-chain and allow token holders to vote [with
 their stake] for validators to represent them.
@@ -173,7 +173,7 @@ primaries at the time of evaluation than the one below it.
 
 ## Nakamoto consensus
 
-Nakamoto consensus consists of the longest chain rule using proof of work as its Sybil resistance
+Nakamoto consensus consists of the longest chain rule using proof of work as its sybil resistance
 mechanism and leader election.
 
 Nakamoto consensus only gives us probabilistic finality. Probabilistic finality states that a block

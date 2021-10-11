@@ -11,7 +11,7 @@ actions on their behalf. Much like the Stash and Controller account relationship
 [staking](learn-staking.md), proxies allow users to keep one account in cold storage and actively
 participate in the network with the weight of the tokens in that account.
 
-> Check out our Polkadot YouTube video that explains
+> Check out our Polkadot Youtube video that explains
 > [what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
 
 ## Proxy Types
@@ -32,7 +32,7 @@ account.
 ### Any Proxies
 
 As implied by the name, a proxy type of "Any" allows the proxy account to make any transaction,
-including balance transfers. In most cases, this should be avoided as the proxy account is used more
+incuding balance transfers. In most cases, this should be avoided as the proxy account is used more
 frequently than the cold account and is therefore less secure.
 
 ### Non-transfer Proxies
@@ -61,7 +61,7 @@ Controller accounts, but does allow the Stash to be accessed even less frequentl
 
 ### Identity Judgement Proxies
 
-"Identity Judgement" proxies are in charge of allowing registrars to make judgement on an account's
+"Identity Judgement" proxies are in charge of allowing registars to make judgement on an account's
 identity. If you are unfamiliar with judgements and identities on chain, please refer to
 [this page](learn-identity.md#judgements).
 
@@ -102,7 +102,7 @@ Alice or Bob or even add in a new account into the anonymous proxy, the anonymou
 care of that change. If a multisig wanted to modify itself without an anonymous proxy, a whole new
 multisig would be created.
 
-![anonymous multisig proxy](../assets/multisig_proxy_diagram.png)
+![anonymous mutlisig proxy](../assets/multisig_proxy_diagram.png)
 
 ## How to set up a Proxy
 
@@ -256,7 +256,7 @@ pub const ProxyDepositFactor: Balance = deposit(0, 33);
 ```
 
 The `ProxyDepositBase` is the required amount to be reserved for an account to have a proxy list
-(creates one new item in storage). For every proxy the account has, an additional amount defined by
+(creates one new item in storage). For every proxy the account has, an additonal amount defined by
 the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
 On Polkadot the `ProxyDepositBase` is {{ dot_proxy_deposit_base }} and the `ProxyDepositFactor` is

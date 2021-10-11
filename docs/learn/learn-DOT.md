@@ -157,6 +157,9 @@ obtain its native tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chat
 
 You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-validator.md).
 
+Watch this video on how to get started on Westend
+[![Testing Polkadot features on Westend](https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg)](https://www.youtube.com/watch?v=0ji0ccZyb3k)
+
 ### Westend
 
 | Unit            | Decimal Places | Example        |

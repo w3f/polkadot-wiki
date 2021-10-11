@@ -72,26 +72,6 @@ Note that you can use the same addresses (except anonymous proxies!) on Statemin
 the Relay Chain. The SS58 encodings are the same, only the chain information (genesis hash, etc.)
 will change on transaction construction.
 
-### Transferring Assets
-
-Using Statemine, assets can be easily created and also transacted with.
-
-> Statemine has an existential deposit equal to 1/10th of Kusama's, so you'll need to teleport `0.000003333 KSM` (+ tx fees) to Statemine.
-
-#### Receiving:
-
-You can use the same account on both networks and both will use the same `pubkey`.
-The network IDs change, so your address will look different. At the moment, assets are not
-visible on the Accounts page; you will need to visit the [Assets Page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/assets) under the `Network` tab on Statemine to receive assets.
-
-![statemine asset examples](../assets/statemine-asset-examples.png)
-
-#### Sending:
-
-Similarly, head over to the [Assets Page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/assets) on Statemine and select the ID of the asset(s) you would like to send.
-
-> Sending the asset follows the same transaction scheme as sending KSM (or DOT).
-
 ## Integration
 
 Statemint will come with the same tooling suite that Parity Technologies provides for the Relay

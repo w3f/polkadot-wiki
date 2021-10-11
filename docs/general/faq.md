@@ -6,13 +6,13 @@ description: Some FAQs to help you conquer your experience with Polkadot.
 slug: ../faq
 ---
 
-_This FAQ focuses on technical questions for users interested in developing applications for
+*This FAQ focuses on technical questions for users interested in developing applications for
 Polkadot. If you have a more general question, you may wish to search for the answer on our support
 [Knowledge Base](https://support.polkadot.network/support/home) or the main
 [Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
 [Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or email
-[support](mailto:support@polkadot.network)._
+[support](mailto:support@polkadot.network).*
 
 ## Polkadot Launch
 
@@ -41,7 +41,7 @@ For more information on the Polkadot roadmap please visit the
 
 ### How do I apply to be a validator?
 
-There is no central authority that decides on validators, so there is not per se an _application_
+There is no central authority that decides on validators, so there is not per se an *application*
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
 on how to do this you can consult the
@@ -49,13 +49,13 @@ on how to do this you can consult the
 [Polkadot validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md) for validating on Polkadot.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
-will be included in the _active set_ right away. The validators are elected to the active set based
+will be included in the *active set* right away. The validators are elected to the active set based
 on the results of an election algorithm known as [Phragmén's method](../learn/learn-phragmen.md). Phragmén's
 method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
 You will likely want to campaign your validator to the community in order to get more backing. You
-are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
+are looking for *nominators* that will put up their tokens to increase the stake for your validator.
 For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
 also run a joint program called [Thousand Validators](thousand-validators.md) that will nominate
 validators if they apply and fit the requirements.
@@ -105,7 +105,7 @@ similar PoS chains with comparable levels of economic security as Polkadot. The 
 are operating with around 150 validators, while Polkadot is already securely running with
 {{ num_validators }}.
 
-Additionally, other projects sometimes have a different definition of _validator_ that approximates
+Additionally, other projects sometimes have a different definition of *validator* that approximates
 more closely to remote signing keys without the full operation of a validating node. On Polkadot,
 each validator is running their own validating node and performing full verification of the Relay
 Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state
@@ -132,13 +132,13 @@ No - and yes. The Polkadot Relay Chain does not implement smart contracts native
 not having smart contracts on the Relay Chain is part of the design philosophy for Polkadot that
 dictates that the Relay Chain should be the minimal logic required to accomplish its job.
 
-However, Polkadot will be a platform for other chains that _do_ implement smart contracts. It's
+However, Polkadot will be a platform for other chains that *do* implement smart contracts. It's
 possible for parachains to enable smart contract functionality and then benefit from the security
 and interoperability features of Polkadot. Additionally, existing smart contract chains can connect
 to Polkadot as a parachain, or via a bridge.
 
 While the Polkadot Relay Chain does not implement smart contracts directly, undoubtedly there will
-be parachains that do. So it's better to say that the Polkadot _ecosystem_ has smart contracts
+be parachains that do. So it's better to say that the Polkadot *ecosystem* has smart contracts
 versus "Polkadot has smart contracts."
 
 ### How will the Polkadot Relay Chain connect to external chains in the ecosystem?
@@ -190,13 +190,13 @@ conviction to sway the progression of the protocol.
 A savvy reader might have noticed that the answer to the previous question endowed the token holder
 with the ultimate responsibility to ensure that Polkadot's governance does not fail. By following
 the train of this assertion, one might assume that Polkadot's governance is susceptible to becoming
-ruled by a few large token holders (called _whales_ in trading parlance) and therefore become a mere
+ruled by a few large token holders (called *whales* in trading parlance) and therefore become a mere
 plutocracy (rule of the rich).
 
 There are several other mechanisms that are built-in to the governance system to resist this
 plutocratic tendency. One of these mechanisms is called conviction voting, and imbues greater voting
 power to token holders who are willing to lock their tokens on the protocol for longer lengths of
-time. Longer lockups display _conviction_ in a vote. Conviction voting could allow a highly
+time. Longer lock-ups display *conviction* in a vote. Conviction voting could allow a highly
 determined minority to overrule the vote of an apathetic majority in certain situations. Another
 mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
 approval or rejection based on what part of the governance protocol the proposal originated in. For

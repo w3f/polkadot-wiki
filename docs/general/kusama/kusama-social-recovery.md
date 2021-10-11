@@ -2,7 +2,7 @@
 id: kusama-social-recovery
 title: Social Recovery
 sidebar_label: Account Recovery
-description: Steps on how to perfrom account recovery on Kusama.
+description: Steps on how to perform account recovery on Kusama.
 slug: ../../kusama-social-recovery
 ---
 

@@ -6,7 +6,7 @@ description: Steps on how to unbond and rebond your stake.
 slug: ../maintain-guides-how-to-unbond
 ---
 
-The following describes how to stop nominating or validating and retrieve your stake. Please note
+The following content describes how to stop nominating or validating and retrieve your stake. Please note
 that all networks on which you can nominate have a delayed exit period, called the _unbonding
 period_, which serves as a cooldown. You will not be able to transfer your tokens before this period
 has elapsed, and you will not receive any staking rewards during this period (as you are not
@@ -23,7 +23,7 @@ staking with and would like to free the funds for. This will "chill" the tokens.
 
 ![Stop Nominating Button](../assets/NPoS/unbond1.png)
 
-After you confirm this transaction, your tokens will remain _bonded_. This means they stay ready to
+After you confirm this transaction, your tokens will still remain _bonded_. This means they stay ready to
 be distributed among nominees or used as validator self-stake again. To actually withdraw them, you
 need to unbond.
 
@@ -39,7 +39,7 @@ your balance will show as "unbonding" with an indicator of how many more blocks 
 amount is fully unlocked.
 
 This duration varies depending on the network you're on and will typically be four times as fast on
-Kusama as it is on Polkadot. The unbounding period is 28 days on Polkadot, and 7 on Kusama.
+Kusama as it is on Polkadot. The unbonding period is 28 days on Polkadot, and 7 on Kusama.
 
 Once this process is complete, you will have to issue another, final transaction: Withdraw Unbonded,
 which will be available in the same pop-up. You can also check how long you have to wait in order to

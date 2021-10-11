@@ -96,7 +96,7 @@ values={[
 - Then, run:
 
   ```bash
-  brew install openssl cmake llvm`
+  brew install openssl cmake llvm
   ```
 
 - Install Rust in your terminal by running:

@@ -582,7 +582,7 @@ You can use the tools below to convert any SS58 address for any network for use 
 networks
 
 - [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform)
-- [simple address converter](https://polkadot-address-convertor.netlify.app/)
+- [simple address convertor](https://polkadot-address-convertor.netlify.app/)
 
 ### How to Verify a Public Key's Associated Address
 

@@ -11,8 +11,8 @@ to facilitate this, the steps to test, and finally, how to launch your network o
 
 ## Why Create a Parachain?
 
-Parachains are connected to and secured by the Relay Chain. They benefit from the _pooled security_,
-_thought-through governance_, and overall _scalability_ of the heterogeneous sharding approach of the network. Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its own logic and runs in parallel within the Polkadot ecosystem.
+Parachains are connected to and secured by the Relay Chain. They benefit from the *pooled security*,
+*thought-through governance*, and overall *scalability* of the heterogeneous sharding approach of the network. Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its own logic and runs in parallel within the Polkadot ecosystem.
 
 Developers can focus on creating state-of-the-art chains that take advantage of Polkadot's next-generation
 approach. Some examples of what a parachain could be are:
@@ -25,14 +25,14 @@ approach. Some examples of what a parachain could be are:
 
 and more.
 
-Polkadot aims to be a bet against so-called _chain-maximalism_, where the success of Polkadot's
+Polkadot aims to be a bet against so-called *chain-maximalism*, where the success of Polkadot's
 heterogeneous multi-chain approach will play a key part in the overall advancement of Web 3.0 and
 decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
 internet of the future will have many different types of blockchains working together.
 
 ### Benefits of Deploying on Polkadot
 
-> The parachain model attempts to alleviate five key _build_ failures of present technology stacks,
+> The parachain model attempts to alleviate five key *build* failures of present technology stacks,
 > as described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper.pdf):
 >
 > - **Scalability**: How much is spent on resources and will the network be subject to bottlenecks?
@@ -82,11 +82,11 @@ shares the security of the validator pool with everyone on the Relay Chain.
 
 Any validator in the validator pool can help validate your blockchain.
 
-# Creating a Parachain
+## Creating a Parachain
 
-## Things to Consider
+### Things to Consider
 
-### Para-Economics
+#### Para-Economics
 
 Parachains can be seen as autonomous agents; networks that act as decentralised digital nation states.
 Parachains have their own communities, rules, economies, governance, treasuries, and relationships
@@ -94,7 +94,7 @@ with external chains. As a result, the economic policies within parachain ecosys
 developers and overall community of that parachain ecosystem; there isn't necessarily a go-to economic
 model a parachain should follow.
 
-Nonetheless, _becoming a parachain_ has an opportunity cost associated. Ideally, you can increase the value
+Nonetheless, *becoming a parachain* has an opportunity cost associated. Ideally, you can increase the value
 of the network by participating in the parachain selection process, and this should serve as a good return
 on investment.
 
@@ -104,9 +104,9 @@ on investment.
 - Parathread token sponsorship
   - Blocks are naturally produced when a parathread bid is less than the native token payout.
 
-### Para-objects
+#### Para-objects
 
-The Polkadot network will encourage the connection and interoperability between different _para-objects_.
+The Polkadot network will encourage the connection and interoperability between different *para-objects*.
 
 > Here, para-objects is referring to objects on the network that operate in parallel.
 
@@ -118,7 +118,7 @@ These could be in the form of:
 - [Bridge](../learn/learn-bridges.md) Hubs
 - Nested Relay Chains: [Polkadot 2.0](../learn/learn-launch.md##polkadot2.0)
 
-### Migration
+#### Migration
 
 Projects that are already functioning as solochains or in isolated environments may be interested
 in migrating onto Polkadot as a para-object. While the parachain model has its benefits, it may
@@ -130,25 +130,20 @@ chains in one of the reserved slots.
 For instance, there are currently options for smart contract deployment on Kusama through the
 networks that have secured a slot in the latest slot auctions.
 
-Check out their documentation:
-
-- [Moonriver](https://moonbeam.network/networks/moonriver/)
-- [Shiden](https://docs.astar.network/)
-
 ## Parachain Development Kit (PDK)
 
 A **PDK** is a set of tools that allows developers to easily create a parachain. In
 practice, the PDK will consist of the following key components:
 
-- _State transition function_: a way for your application to move from one state to another state.
-- _Collator node_: - a type of peer-to-peer node in the Polkadot network with certain
+- *State transition function*: a way for your application to move from one state to another state.
+- *Collator node*: - a type of peer-to-peer node in the Polkadot network with certain
   responsibilities regarding parachains.
 
 ### Key Components
 
 The state transition function (STF) can be an abstract way for an application to go from one state
 to another state. The only constraint that Polkadot places on this STF is that it must be easily
-verifiable -- usually through what we call a _witness_ or _proof_. It must be so because the Relay
+verifiable -- usually through what we call a *witness* or *proof*. It must be so because the Relay
 Chain validators will need to check that each state it receives from the collator node is correct
 without actually running through the entire computation. Some examples of these proofs include the
 Proof-of-Validity blocks or zk-SNARKs, which require less computational resources to verify than
@@ -170,14 +165,14 @@ Currently, the only PDK is [Parity Substrate](https://github.com/paritytech/subs
 the basic building blocks of a blockchain (things like the networking layer, consensus, a Wasm
 interpreter) while providing an intuitive way to construct your runtime. Substrate is made to ease the
 process of creating a new chain, but it does not provide support for Polkadot compatibility
-directly. For this reason, `Cumulus`, an added _library_ contains all of the Polkadot compatibility
+directly. For this reason, `Cumulus`, an added *library* contains all of the Polkadot compatibility
 glue code. Cumulus is still in development, but the idea is that it should be simple to take a
 Substrate chain and add the parachain code by importing the crates and adding a single line of code.
 Keep up-to-date with the latest Cumulus developments from the [Cumulus section](###cumulus).
 
 > Substrate and Cumulus provide a PDK from the abstraction of the blockchain format, but it is **not
 > necessary** that a parachain even needs to be a blockchain. For example, a parachain just needs to
-> satisfy the two constraints listed above: _state transition function_ and _collator node_.
+> satisfy the two constraints listed above: *state transition function* and *collator node*.
 >
 > Everything else is up to the implementer of the PDK.
 
@@ -260,7 +255,7 @@ and add any comments or a memo for the transfer.
 
 #### Upward Transfers
 
-Upward transfers occur _from_ a parachain _to_ an account on the Relay Chain. To proceed with this
+Upward transfers occur *from* a parachain *to* an account on the Relay Chain. To proceed with this
 kind of transfer, we need to be connected to a parachain node on the network and be on the
 "Network" > "Parachains" tab. Click on the "Transfer to chain" button.
 
@@ -309,7 +304,7 @@ Rococo testnet "Custom Node" underneath "Development", following the
 
 ### Parachain Playground
 
-You can also take advanatge of the account functions offered on PolkadotJS Apps
+You can also take advantage of the account functions offered on PolkadotJS Apps
 to test the entire Parachain onboarding process (e.g. crowdloans, auctions, registrations).
 
 Start a local node on [Westend](../maintain/maintain-networks.md###westend-test-network)

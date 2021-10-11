@@ -8,7 +8,7 @@ slug: ../build-build-with-polkadot
 
 Polkadot is a blockchain protocol with two goals: providing **shared security** among all connected
 parachains and allowing all connected chains to **interoperate** by using
-[XCM](../learn/learn-cross-consensus.md). With the advent of [PDKs](<build-parachains.md##parachain-development-kit-(PDK)>) like Parity Substrate and
+[XCM](../learn/learn-cross-consensus.md). With the advent of [PDKs](<build-pdk#parachain-development-kit-pdk>) like Parity Substrate and
 Cumulus, the time it takes to develop and launch a new chain has dropped significantly. While before
 it would take years to launch a new chain, now it may only take weeks or even days.
 
@@ -21,7 +21,7 @@ may be better suited for your application over the other).
 - Mainnet: **Polkadot**
 - Canary network: **Kusama**
   - [Kusama](https://kusama.network/) is a value-bearing canary network that gets features before
-    Polkadot does... _expect chaos_...
+    Polkadot does... *expect chaos*...
 - Official testnets:
   - **Westend** - Functionality equal to the current Polkadot mainnet, with possible next-generation
     testing of features from time to time that will eventually migrate onto Polkadot. Perma-testnet (is not reset back to genesis block).
@@ -35,7 +35,7 @@ framework.
 
 Tooling is rapidly evolving to interact with the network; there are so many ways to get started!
 
-But before you jump head-first into the code, you should consider the _kind_ of decentralized
+But before you jump head-first into the code, you should consider the *kind* of decentralized
 application you want to make and understand the different paradigms available to developers who want
 to build on Polkadot.
 
@@ -97,7 +97,7 @@ this comparison chart as a cheat sheet:
 ![build 2](../assets/build-2.png)
 
 > **Note:** The image above does not include parathreads, but as we mentioned before all the
-> benefits of parachains apply just as well to parathreads. Parathreads, however, _are_ cheaper to
+> benefits of parachains apply just as well to parathreads. Parathreads, however, *are* cheaper to
 > deploy and maintain. So if they had a column on the table above, it would look like the parachain
 > column with "Ease of deployment" and "Maintenance overhead" changed to `+`.
 
@@ -262,13 +262,13 @@ design of the EVM:
 
 2. **Rent**. Contracts must pay rent or else hold a deposit suitably large enough in order to
    justify its existence on-chain. When a contract does not uphold this, it may create what's called
-   a _tombstone_ which is a reference to the contract. In some conditions, the contract will be
+   a *tombstone* which is a reference to the contract. In some conditions, the contract will be
    deleted outright along with its storage if it does not maintain these requirements.
 
 3. **Caching**. Contracts are cached by default and therefore means they only need to be deployed
    once and afterward be instantiated as many times as you want. This helps to keep the storage load
    on the chain down to the minimum. On top of this, when a contract is no longer being used and the
-   _existential deposit_ is drained, the code will be erased from storage (known as reaping).
+   *existential deposit* is drained, the code will be erased from storage (known as reaping).
 
 ### Ink
 

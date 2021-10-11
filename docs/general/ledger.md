@@ -3,7 +3,7 @@ id: ledger
 title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
 description: How to use the Polkadot application on Ledger.
-slug: ../ledger
+slug: ../learn-ledger
 ---
 
 > NOTE: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
