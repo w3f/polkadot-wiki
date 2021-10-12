@@ -8,49 +8,53 @@ slug: ../learn-bridges
 
 A cornerstone technology of blockchain interoperability is the blockchain bridge. Blockchain bridges
 are ways for two economically sovereign and technologically diverse chains to communicate with each
-other. Bridge designs come in a variety of flavors ranging from centralized and trusted to more
-decentralized and trustless. Polkadot favors the latter bridge designs for its ecosystem, however
+other. Bridge designs come in a variety of flavors ranging from centralised and trusted to more
+decentralised and trustless. Polkadot favors the latter bridge designs for its ecosystem. However,
 there is nothing that blocks a development team from building and deploying the former.
 
-While bridge designs are now getting to a place where they are sufficiently planned out, there has
-not been too many that have been used heavily in production. For this reason, you can consider this
+While bridge designs are now getting to a place where they are sufficiently planned out, there have
+not been too many used heavily in production. For this reason, you can consider this
 page a work in progress. It will be updated as more information is determined and available.
 
-> Bridges are specifically for making the Polkadot ecosystem compatible with external blockchains
-> such as Bitcoin, Ethereum, or Tezos (among others). For information on XCMP, the native
-> interoperability technology that allows parachains to trustlessly communicate, please see the
+> Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }} 
+> {{ kusama: Kusama :kusama }} ecosystem compatible with external blockchains
+> such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
+> interoperability technology that allows parachains to communicate trustlessly, please see the
 > dedicated [cross consensus][] page on the Wiki.
 
 ## Bridging Methods
 
-Building a bridge that is as decentralized and trustless as possible can be done through any of the
+Building a bridge that is as decentralised and trustless as possible can be done through any of the
 following methods (ordered by suggested methodology):
 
-- _Bridge pallets_ - For Substrate-native chains, use a bridge pallet (e.g. Kusama `\<\>` Polkadot
+- *Bridge pallets* - For Substrate-native chains, use a bridge pallet (e.g. Kusama `\<\>` Polkadot
   bridge, since both networks' parachains use Substrate).
-- _Smart contracts_ - If the chain is not on Substrate, you should have smart contracts on the
+- *Smart contracts* - If the chain is not on Substrate, you should have smart contracts on the
   non-Substrate chain to bridge (e.g. Ethereum mainnet will have a bridge smart contract that
   initiates Eth transactions based on incoming XCMP messages).
-- _Higher-order protocols_ - If your chain does not support smart contracts (e.g. Bitcoin), you
+- *Higher-order protocols* - If your chain does not support smart contracts (e.g. Bitcoin), you
   should use [XClaim][xclaim] or similar protocols to bridge.
 
 ### via Bridge Pallets
 
-Receiving messages on Polkadot from an external, non-parachain blockchain can be possible through a
-Substrate pallet. The Substrate instance can then be deployed to Polkadot either as a system-level
-parachain (native extension to the core Polkadot software) or as a community-operated parachain.
+Receiving messages on {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} from 
+an external, non-parachain blockchain can be possible through a Substrate pallet. The Substrate 
+instance can then be deployed to {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} 
+either as a system-level parachain (native extension to the core Polkadot software) or as a 
+community-operated parachain.
 
 An example of a bridge that would strictly use bridge pallets would be a Kusama `\<\>` Polkadot
 bridge, since both use parachains based on Substrate.
 
-For the standalone chains that will not have a parachain bridging module on Polkadot
+For the standalone chains that will not have a parachain bridging module on 
+{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}
 (non-Substrate), it will be necessary to deploy bridge contracts (see below).
 
 ### via Smart Contracts
 
 Given the generality of blockchain platforms with Turing-complete smart contract languages, it is
-possible to bridge Polkadot and any other smart contract capable blockchain (Ethereum, EOS, Tezos,
-etc).
+possible to bridge {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} and any other 
+smart contract capable blockchain.
 
 Those who are already familiar with Ethereum may know of the now archived [Parity Bridge][] and the
 efforts being made to connect PoA sidechains to the Ethereum mainnet. The Parity bridge is a
@@ -65,7 +69,7 @@ on `side` can free up Ether on `main`.
 
 ### via Higher-Order Protocols
 
-Higher-order protocols (like [XCLAIM][xclaim]) can be used to bridge, but should only be used when
+Higher-order protocols (like [XCLAIM][xclaim]) can be used to bridge but should only be used when
 other options are not available. XCLAIM, in particular, requires any swappable asset to be backed by
 a collateral of higher value than the swappable assets, which adds additional overhead.
 
@@ -92,13 +96,13 @@ The Interlay team has written a [specification][interlay] on a Bitcoin bridge th
 allows holders of BTC to "teleport" their assets to Polkadot as PolkaBTC, and holders of PolkaBTC to
 burn their assets for BTC on the Bitcoin chain.
 
-The Bitcoin bridge as documented in the specification is composed of two logically different
+The Bitcoin bridge, as documented in the specification, is composed of two logically different
 components:
 
-- The XCLAIM component that maintains all accounts that own PolkaBTC.
-- The BTC-Relay that is responsible for verifying Bitcoin state when a new transaction is submitted.
+- The XCLAIM component maintains all accounts that own PolkaBTC.
+- The BTC-Relay is responsible for verifying the Bitcoin state when a new transaction is submitted.
 
-For full details on how it works please refer to the specification.
+For full details on how it works, please refer to the specification.
 
 There is now a
 [reference implementation and testnet available](https://medium.com/interlay/polkabtc-beta-testnet-launch-2cc9ea7431b7).
@@ -107,9 +111,9 @@ There is now a
 
 ### For Bridge Builders
 
-If your team is interested in building a bridge between an external chain and Polkadot, there may be
-funding available from the W3F [grants program][]. Please first check that the chain you are
-intending to bridge between hasn't already been built or is in the process of being built by another
+If your team is interested in building a bridge between an external chain and Polkadot, funding may be 
+available from the W3F [grants program][]. Please first check that the chain you intend to bridge between 
+hasn't already been built or is in the process of being created by another
 team. More popular chains with clear use cases will be given priority, and novel bridge designs are
 welcome.
 
