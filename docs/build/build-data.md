@@ -6,9 +6,8 @@ description: An overview about building with data analytics
 slug: ../build-data
 ---
 
-The tools that accentuate and aggregate the valuable data within blockchains 
-and are integral for a multi-chain future. Parachains will need robust and secure ways to index 
-and aggregate data, such as a data aggregation layer.
+The tools that accentuate and aggregate the data within blockchains are integral for a multi-chain future. 
+Parachains will need robust and secure ways to index and aggregate data, such as a data aggregation layer.
 
 ## Indexing and Querying
 
