@@ -23,7 +23,7 @@ The duration can last over several auctions, meaning that the team will not need
 campaign just because they do not secure a slot on their first attempt.
 
 When setting the parameters of a crowdloan campaign, consider the following:
-
+> *Important*: a crowdloan campaign can start well before the auction slot is opened.
 - The campaign creation form requires setting a crowdloan cap &mdash; the maximum amount a campaign
   can collect. A team can still win an [auction](learn-auction.md) if the cap is not reached.
 - Set the desired end of the crowdloan in the "Ending block" field. This helps to ensure that the

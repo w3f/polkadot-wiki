@@ -54,7 +54,7 @@ For the standalone chains that will not have a parachain bridging module on
 
 Given the generality of blockchain platforms with Turing-complete smart contract languages, it is
 possible to bridge {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} and any other 
-smart contract capable blockchain (Ethereum, EOS, Tezos, etc).
+smart contract capable blockchain.
 
 Those who are already familiar with Ethereum may know of the now archived [Parity Bridge][] and the
 efforts being made to connect PoA sidechains to the Ethereum mainnet. The Parity bridge is a
