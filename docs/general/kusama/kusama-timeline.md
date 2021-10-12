@@ -6,9 +6,9 @@ description: Stay up-to-date with the latest action on Kusama.
 slug: ../../kusama-timeline
 ---
 
-Kusama network started as a Proof-of-Authority network and was transitioned to Proof-of-Stake on 28
-October 2019 at approximately 18:43 Zurich time (CET). The first successful validator set rotation
-took place at 22:45 CET.
+Kusama network started as a Proof-of-Authority network and was transitioned to Proof-of-Stake on
+October 28, 2019 at approximately 16:43 UTC. The first successful validator set rotation
+took place at 20:45 UTC.
 
 Currently, Kusama is a healthy Proof-of-Stake network with over 900 validators and over eight
 million blocks produced. If you are curious about the history of the Kusama network, you will find
@@ -33,7 +33,7 @@ Kusama now has its full functionality enabled.
 
 [Source](https://polkadot.network/kusamas-first-adventure/)
 
-**On 4th January 2020**, the Polkadot mainnet runtime, which still wasn't live, was
+On January 4, 2020, the Polkadot mainnet runtime, which at that time still wasn't live, was
 uploaded to the Kusama chain during a runtime upgrade. The mishap was due to a recent split of the
 Kusama logic from the Polkadot logic and that runtime was not correctly named. This led to a halt of
 block production on the Kusama chain and bricked the chain entirely.
@@ -46,7 +46,7 @@ present moment it was necessary to make time flow in the bubble at a speed of si
 the speed of time in the real world. Therefore, the session of Kusama which would normally last one
 hour would last only 10 minutes until the validators caught up to the present moment.
 
-The above plan was executed successfully on the 7th of January. Due to the time warp, the number of
+The above plan was executed successfully on January 7, 2020. Due to the time warp, the number of
 missed blocks in the sessions directly following
 [block #516558](https://polkascan.io/kusama/block/516558) was significantly higher. This is partly
 what contributes to the much higher ratio of missed blocks on Kusama versus Polkadot today.
@@ -55,7 +55,7 @@ what contributes to the much higher ratio of missed blocks on Kusama versus Polk
 
 ### Round One
 
-Kusama promised chaos, and it delivered on that promise. On 15th June 2021, the roll out of the
+Kusama promised chaos, and it delivered on that promise. On June 15th, 2021, the roll out of the
 first public parachain slot auction commenced, marking the beginning of the end to deliver on the
 last piece of core functionality outlined in the Polkadot whitepaper: purpose-built, interoperable
 parachains.
@@ -68,7 +68,7 @@ the slot auctions.
 The five Kusama parachain winners for the first batch were: 
 Karura, Moonriver, Shiden, Khala, and Bifrost.
 
-Kusama made history with a permissionless launch of 5 independent parachains. As parachains become operational, the community will determine which additional features and network upgrades should be added over time.
+Kusama made history with a permissionless launch of five independent parachains. As parachains become operational, the community will determine which additional features and network upgrades should be added over time.
 
 ### Round Two
 
