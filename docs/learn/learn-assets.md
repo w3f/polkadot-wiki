@@ -71,4 +71,6 @@ Users can transfer their NFTs to other accounts. The chain also provides an `app
 
 ## Advanced Techniques
 
-Combining multisig/proxy accounts
+Many asset creators on other networks use smart contracts to control privileged functions like minting and burning. Although Statemint does not have a smart contract interface, it contains the Multisig, Proxy, and Utility pallets, which will meet most account management needs.
+
+For example, if a team wants sign-off from two groups to perform a privileged operation, it could create a 2-of-2 multisig from two anonymous proxies, and then set members from each group as proxies to those anonymous proxies.
