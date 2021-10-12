@@ -255,4 +255,8 @@ their slots as they would be considered essential to the ecosystem's future.
 
 - [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
   W3F research page on parachain allocation that goes more in depth to the mechanism
+- [Research Update: The Case for Candle Auctions](https://polkadot.network/blog/research-update-the-case-for-candle-auctions/) - 
+  W3F breakdown and research update about candle auctions
+- [Front-Running, Smart Contracts, and Candle Auctions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3846363)
+  W3F Research team discusses how to remedy current blockchain auction setbacks with candle auctions
   
