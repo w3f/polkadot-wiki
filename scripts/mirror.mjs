@@ -32,7 +32,6 @@ const mirrored_learn = [
   "learn-parachains",
   "learn-parathreads",
   "learn-crowdloans",
-  "learn-implementers-guide",
 ];
 
 const mirrored_build = [
