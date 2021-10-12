@@ -55,22 +55,19 @@ Parachains that want to send assets to other parachains should do so via instruc
 
 ## Non-Fungible Assets
 
-What are they
-Uniques pallet
+Unlike fungible assets, the particular instance of a non-fungible asset (NFT) has meaning separate from another instance of the same class. Statemint represents NFTs in the [Uniques pallet](https://crates.parity.io/pallet_uniques/index.html).
 
 ### Creation and Management
 
-Asset classes and instances
-Privileges
+Anyone on the network can create an asset class, as long as they reserve the required deposit (1 KSM on Statemine, 100 DOT on Statemint). Creating instances of a class also requres a per-instance deposit, unless the chain's governance designates the class as "free holding", allowing the class to mint more instances without deposit. The creator must specify a `ClassId`, which, like its cousin `AssetId`, should be the canonical identifier for the class.
+
+The creator can also specify the same privileged roles of Owner, Admin, Issuer, and Freezer.
+
+Asset classes and instances can have associated metadata. The metadata is an array of data that the class Owner can add on-chain, for example a link to an IPFS hash or other off-chain hosting service. The Uniques pallet also supports setting key/value pairs as attributes to a class or instance.
 
 ### Using
 
-Transfer
-
-### Application Development
-
-Approve/cancel
-Metadata
+Users can transfer their NFTs to other accounts. The chain also provides an `approve_transfer`, `transfer_approved`, and `cancel_approval` interface that application developers can use to allow users to authorize an application to transfer an instance on their behalf.
 
 ## Advanced Techniques
 
