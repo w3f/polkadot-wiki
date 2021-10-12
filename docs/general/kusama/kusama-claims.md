@@ -24,12 +24,14 @@ since it will allow you to store your encrypted keystore locally.
 In terms of hardware wallet support, you can use the [Kusama Ledger application](kusama-ledger.md),
 or [Parity Signer](../../learn/learn-account-generation.md#parity-signer).
 
-Another option you may consider using is the Subkey command line utility, which will allow you to
+Another option you may consider using is the 
+[Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey#:~:text=Subkey%20is%20a%20public%20key,signatures%20on%20the%20Ristretto%20group) 
+command-line utility, which will allow you to
 take extra steps to protect the security of your key.
 
 There are a variety of other wallets that you can use; see the
-[Polkadot Wiki Wallets page](../../build/build-wallets.md). Many of these wallets support generating Kusama
-accounts as well.
+[Polkadot Wiki Wallets page](../../build/build-wallets.md) for more details. 
+Many of these wallets support generating Kusama accounts as well.
 
 ### Using Kusama Ledger application
 
@@ -70,7 +72,7 @@ You can install Subkey with this one-line command:
 cargo install --force --git https://github.com/paritytech/substrate subkey
 ```
 
-Note that you will already have had to install the proper Rust version and dependencies. If you have
+Note that you will already have had to install the correct Rust version and dependencies. If you have
 not done so, or experience problems installing using that command, run the following commands first,
 and then re-try the previous command:
 
@@ -94,7 +96,7 @@ Alternatively, you can build Subkey from the source code.
 
 You can use Subkey on a computer that is not connected to the internet for added security.
 
-The command `subkey --network kusama generate` will generate a new key-pair. If you want to be more
+The command `subkey --network kusama generate` will generate a new key pair. If you want to be more
 secure, use 24 words, `subkey --network kusama generate --words 24`.
 
 ```
@@ -143,19 +145,19 @@ enter `subkey --help` for more usage examples.
 ![kusama save backup](../../assets/kusama/kusama_backup_account.png)
 
 6. Save your encrypted keystore locally. Ideally, you would also save it on an external hard drive
-   or thumb drive, or print it out and be able to re-enter it later. You should not store it in
+   or thumb drive or print it out and be able to re-enter it later. You should not store it in
    cloud storage, email it to yourself, etc. You can use this backup file to restore your account.
    The seed in the backup file is not readable unless it is decrypted with the password.
 
 7. The account now appears in your Accounts tab and is backed up to the keystore you just saved.
 
-8. Click on the DOT identicon to copy the address to the clipboard.
+8. Click on the **DOT identicon** to copy the address to the clipboard.
    ![kusama copy address](../../assets/kusama/kusama_copy_address.png)
 
 ### Using Polkawallet
 
 1. Install [Polkawallet](https://polkawallet.io). Click "Download" and select the link corresponding
-   to the platform you are using. On Android you may need to allow installing apps from external
+   to the platform you are using. On Android, you may need to allow installing apps from external
    sources. On iOS, you may need to "trust" Polkawallet in the "General > Profiles & Device
    Management > Enterprise App" section before running the app.
 
@@ -171,7 +173,7 @@ enter `subkey --help` for more usage examples.
 4. You will be asked to confirm your seed phrase - this is to make sure you have copied it somewhere
    safe.
 
-5. Click on the pink QR Code symbol and select "Copy address" to copy your address to clipboard.
+5. Click on the pink QR Code symbol and select "Copy address" to copy your address to the clipboard.
 
 <img src={require('./../../assets/kusama/polkawallet-accounts-page.jpg').default} width="50%" /> <img
 src={require('./../../assets/kusama/polkawallet-copy-address.jpg').default} width="50%" />
@@ -186,7 +188,7 @@ address.
 
 1. Copy your Substrate generic address to the clipboard.
 2. Go to the [Polkadot-JS UI](https://polkadot.js.org/apps).
-3. Go to the "Settings" tab and find the configuration for "address network prefix".
+3. Go to the "Settings" tab and find the "address network prefix" configuration.
 4. Select "Substrate (development)" and click "Save and reload".
 5. Go to the "Address book" and click the "Add contact" button.
 6. Enter your address and give it a name like "My Address".
@@ -204,12 +206,12 @@ There are two methods to claim KSM.
 Those who participated in the Polkadot sales before 2020 and have been allocated DOT indicator
 tokens on Ethereum can claim a proportional amount of KSM on the Kusama Network.
 
-To do this you must sign a message containing the address of your Kusama account. You can do this by
+To do this, you must sign a message containing the address of your Kusama account. You can do this by
 using the Polkadot-JS UI
 [Claims app](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/claims). Ensure
 that you are connected to the Kusama network (displayed in the upper-left hand corner of the
 screen). If you are not, change the network to Kusama by clicking in the network change tab in the
-upper left-hand corner..
+upper-left-hand corner..
 
 #### Generate a Kusama address
 
@@ -221,7 +223,7 @@ If you haven't already done so, you will need to generate a Kusama address. See
 The Polkadot-JS [Claims app](https://polkadot.js.org/apps/#/claims) helps you sign a message from
 MyCrypto. MyCrypto is good to use in case you have stored the key to the Ethereum account holding
 your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports
-raw private keys, mnemonics and the Parity signer.
+raw private keys, mnemonics, and the Parity signer.
 
 > **NOTICE**: It is much more secure to download and use the MyCrypto app locally. Please make sure
 > to download the latest version for your operating system. You can always find the most up-to-date
@@ -235,9 +237,9 @@ screen should look something like this:
 
 ![Claim Step 1](../../assets/kusama/claim/claim-1.png)
 
-The hex encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the
-hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public key
-is correct you can use the Subkey tool to inspect your address.
+The hex-encoded string that follows the sentence: "Pay KSM to the Kusama account:" is the
+hex-encoded public key of your Kusama account, minus the `0x` prefix. To verify that the public 
+key is correct, you can use the Subkey tool to inspect your address.
 
 The next step is to go to the MyCrypto application and click on "Sign & Verify Message" tab. This
 will prompt you to select a method for unlocking your wallet. After unlocking your wallet, you will
@@ -254,7 +256,7 @@ Polkadot-JS UI and click "Confirm Claim."
 
 ![Claim Step 3](../../assets/kusama/claim/claim-3.png)
 
-At this point you will see a success message if everything went right and your KSM will now be in
+At this point, you will see a success message if everything went right and your KSM will now be in
 the account that you claimed to. Congratulations you can now participate in aspects of the Kusama
 network such as [governance](../../learn/learn-governance.md) and [staking](../../learn/learn-staking.md). During the soft
 launch period balance transfers will not be enabled.
@@ -266,12 +268,12 @@ launch period balance transfers will not be enabled.
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
 immediately.
 
-Having trouble? Send an email to [support@polkadot.network](mailto:support@polkadot.network).
+Are you having trouble? Send an email to [support@polkadot.network](mailto:support@polkadot.network).
 
 ### Third Party Claims Processes
 
 **We do not recommend using a third-party app or process to perform your claim or acquire KSM.**
 
-Claiming using a third-party process can lead to the loss of your allocation, therefore we cannot
-recommend using any third party apps to do so. Manually specifying your transaction data, as
+Claiming using a third-party process can lead to the loss of your allocation; therefore, we cannot
+recommend using any third-party apps to do so. Manually specifying your transaction data, as
 specified in our claims process, is the only way to be certain you will receive your allocation.

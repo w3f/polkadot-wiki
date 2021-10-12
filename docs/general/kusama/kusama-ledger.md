@@ -6,8 +6,8 @@ description: How to use the Kusama application on Ledger.
 slug: ../../kusama-ledger
 ---
 
-> NOTE: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
-> browsers like Brave and Chrome.
+> **Please note**: Because of required WebUSB support, Ledger wallets currently only work on 
+> Chromium-based browsers like Brave and Chrome.
 
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
@@ -47,7 +47,7 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ### Using the Developer Release
 
-> NOTE: These instructions are for development installation only. It is recommended to install the
+> These instructions are for development installation only. It is recommended to install the
 > application from Ledger Live unless you _know exactly what you're doing_.
 
 Instructions for downloading the prerelease binary from the GitHub releases is written [on the
@@ -214,10 +214,10 @@ want to remove expired democracy locks on an account stored on a Ledger device.
   ACCOUNT is the account you just removed the votes from.
 - Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
 
-**NOTE**: Despite the Polkadot ledger application being compatible with both the Ledger Nano S and the
-Ledger Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are available in the
-light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on
-the full ledger.
+> **Important**: Despite the Polkadot ledger application being compatible with both the Ledger Nano S and 
+> the Ledger Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are 
+> available in the light version. The following [repo by Zondax][] lists the currently supported Democracy 
+> extrinsics on the full ledger.
 
 ## Support
 
