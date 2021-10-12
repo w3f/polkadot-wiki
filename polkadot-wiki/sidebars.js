@@ -53,15 +53,21 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Parachains",
+          label: "Paraobjects",
           items: [
-            "learn/learn-parachains",
+            {
+              type: "category",
+              label: "Parachains",
+              items: [
+                "learn/learn-parachains",
+                "learn/learn-common-goods",
+                "learn/learn-auction",
+                "learn/learn-crowdloans",
+                "learn/learn-teleport",
+              ],  
+            },
             "learn/learn-parathreads",
             "learn/learn-bridges",
-            "learn/learn-common-goods",
-            "learn/learn-auction",
-            "learn/learn-crowdloans",
-            "learn/learn-teleport",
           ],
         },
         {
