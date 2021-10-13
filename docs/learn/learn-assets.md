@@ -19,9 +19,10 @@ parachains can host applications dealing with assets on Statemint, Statemint can
 the "home base" of assets in the network.
 
 Statemint uses DOT as its native token (and Statemine, KSM). These chains yield their governance to
-their respective Relay Chain, and have no inflation or rewards for collators. As
+their respective Relay Chain, and have no inflation or era-based rewards for collators. Collators
+receive a portion of transaction fees. As
 [common good parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-they have a trusted relationship with the Relay Chain, and as such can teleport DOT/KSM between
+they have a trusted relationship with the Relay Chain, and as such, can teleport DOT/KSM between
 themselves and their Relay Chains. That is, DOT on Statemint is just as good as DOT on the Relay
 Chain, likewise for KSM on Statemine and its Relay Chain.
 
@@ -31,11 +32,11 @@ bottom for discussion on using proxy and multisig accounts to replicate oft used
 ## Fungible Assets
 
 Fungible assets are those that are interchangeable, i.e. one unit is equivalent to any other unit
-for the purposes of claiming the underlying item. Statemint represents fungible assets in the
-[Assets pallet](https://crates.parity.io/pallet_assets/index.html). For those familiar with the
-ERC20 standard, this pallet presents a similar interface. However, the logic is encoded directly in
-the chain's runtime. As such, operations are not gas metered and instead are benchmarked upon every
-release, leading to efficient execution and stable transaction fees.
+for the purposes of claiming the underlying item. Statemint represents fungible assets in the Assets
+pallet. For those familiar with the ERC20 standard, this pallet presents a similar interface.
+However, the logic is encoded directly in the chain's runtime. As such, operations are not gas
+metered and instead are benchmarked upon every release, leading to efficient execution and stable
+transaction fees.
 
 ### Creation and Management
 
@@ -54,13 +55,14 @@ privileged roles, but can reassign them after creation. These roles are:
 - Admin
 - Freezer
 
-The owner has the ability to set the accounts responsible for the other three roles, as well as set
-asset metadata (e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses
-of their choosing. The freezer can freeze assets on target addresses or the entire asset class. The
-admin can make force transfers as well as unfreeze accounts of the asset class. **Always refer to
-the reference documentation for certainty on privileged roles.**
+The owner can set the accounts responsible for the other three roles, as well as set asset metadata
+(e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses of their
+choosing. The freezer can freeze assets on target addresses or the entire asset class. The admin can
+make force transfers as well as unfreeze accounts of the asset class. **Always refer to the
+[reference documentation](https://crates.parity.io/pallet_assets/index.html) for certainty on
+privileged roles.**
 
-An asset's details contains one field not accessible to its owner or admin team, that of asset
+An asset's details contain one field not accessible to its owner or admin team, that of asset
 sufficiency. Only the network's governance mechanism can deem an asset as _sufficient._ A balance of
 a non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
 could not create a new account on-chain by transferring an insufficient asset to it; the account
@@ -70,7 +72,7 @@ transaction fees, such that users can transact on Statemint without the need for
 
 ### Using
 
-Users have a very simple interface, namely the ability to transfer asset balances to other accounts
+Users have a simple interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not _sufficient,_ then the destination account must
 already exist for the transfer to succeed.
 
@@ -78,7 +80,7 @@ The chain also contains a `transfer_keep_alive` function, similar to that of the
 that will fail if execution would kill the sending account.
 
 Statemint also sweeps dust balances into transfers. For example, if an asset has a minimum balance
-of 10, and an account has a balance of 25, then an attempt to transfer 20 units would actually
+of 10 and an account has a balance of 25, then an attempt to transfer 20 units would actually
 transfer all 25.
 
 ### Application Development
@@ -90,7 +92,7 @@ effectuate transfers up to a given amount on behalf of an account.
 ### Cross-Chain Accounting
 
 Statemint uses a reserve-backed system to manage asset transfers to other parachains. It tracks how
-much of each asset has gone to each parachain, and will not accept more back from a particular
+much of each asset has gone to each parachain and will not accept more back from a particular
 parachain.
 
 As a result of this, asset owners can use Statemint to track information like the total issuance of
@@ -116,7 +118,7 @@ stable transaction fees.
 ### Creation and Management
 
 Anyone on the network can create an asset class, as long as they reserve the required deposit (1 KSM
-on Statemine, 100 DOT on Statemint). Creating instances of a class also requres a per-instance
+on Statemine, 100 DOT on Statemint). Creating instances of a class also requires a per-instance
 deposit, unless the chain's governance designates the class as "free holding", allowing the class to
 mint more instances without deposit. The creator must specify a `ClassId`, which, like its cousin
 `AssetId`, should be the canonical identifier for the class.
