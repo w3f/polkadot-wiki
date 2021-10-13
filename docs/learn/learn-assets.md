@@ -2,7 +2,7 @@
 id: learn-assets
 title: Assets
 sidebar_label: Assets
-description: Learn about fungible and non-fungible assets in the Polkadot ecosystem.
+description: Learn about fungible and non-fungible assets in the Polkadot network.
 slug: ../learn-assets
 ---
 
@@ -24,7 +24,8 @@ network.
 {{ kusama: Statemine uses KSM as its native token :kusama }}. The chain yields its governance to
 its respective Relay Chain, and has no inflation or era-based rewards for collators. Collators
 receive a portion of transaction fees. As a
-[common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint has a trusted relationship with the Relay Chain, 
+[common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint 
+has a trusted relationship with the Relay Chain, 
 and as such, can teleport DOT between itself and its Relay Chains. That is, DOT on Statemint is 
 just as good as DOT on the Relay Chain. :polkadot }}
 {{ kusama: Statemine has a trusted relationship with the Relay Chain, 
@@ -47,9 +48,9 @@ transaction fees.
 
 ### Creation and Management
 
-Anyone on the network can create assets on {{ polkadot: Statemint as long as they can reserve the required
-deposit of 100 DOT on Statemint. :polkadot }} {{ kusama: Statemine as long as they can reserve the required
-deposit of 1 KSM on Statemine. :kusama }}. The network reserves the deposit on creation.
+Anyone on the network can create assets on {{ polkadot: Statemint as long as they can reserve the 
+required deposit of 100 DOT on Statemint. :polkadot }} {{ kusama: Statemine as long as they can reserve 
+the required deposit of 1 KSM on Statemine. :kusama }}. The network reserves the deposit on creation.
 The creator also must specify a unique `AssetId`, an integer of type `u32`, to identify the asset.
 The `AssetId` should be the canonical identifier for an asset, as the chain does not enforce
 the uniqueness of metadata like "name" and "symbol". The creator also must specify a minimum balance,
@@ -63,10 +64,10 @@ privileged roles, but can reassign them after creation. These roles are:
 - Admin
 - Freezer
 
-The owner has the ability to set the accounts responsible for the other three roles, as well as set asset 
-metadata (e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses of their
-choosing. The freezer can freeze assets on target addresses or the entire asset class. The admin can
-make force transfers as well as unfreeze accounts of the asset class. **Always refer to the
+The owner has the ability to set the accounts responsible for the other three roles, as well as set 
+asset metadata (e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses 
+of their choosing. The freezer can freeze assets on target addresses or the entire asset class. The 
+admin can make force transfers as well as unfreeze accounts of the asset class. **Always refer to the
 [reference documentation](https://crates.parity.io/pallet_assets/index.html) for certainty on
 privileged roles.**
 
@@ -89,9 +90,9 @@ already exist for the transfer to succeed.
 The chain also contains a `transfer_keep_alive` function, similar to that of the Balances pallet,
 that will fail if execution would kill the sending account.
 
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} also sweeps dust balances into transfers. 
-For example, if an asset has a minimum balance of 10 and an account has a balance of 25, then an attempt 
-to transfer 20 units would actually transfer all 25. 
+{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} also sweeps dust balances into 
+transfers. For example, if an asset has a minimum balance of 10 and an account has a balance of 25, 
+then an attempt to transfer 20 units would actually transfer all 25. 
 
 
 ### Application Development
@@ -103,15 +104,16 @@ effectuate transfers up to a given amount on behalf of an account.
 
 ### Cross-Chain Accounting
 
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} uses a reserve-backed system to 
-manage asset transfers to other parachains. It tracks how much of each asset has gone to each parachain 
-and will not accept more back from a particular parachain.
+{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} uses a reserve-backed system 
+to manage asset transfers to other parachains. It tracks how much of each asset has gone to each 
+parachain and will not accept more back from a particular parachain.
 
-As a result of this, asset owners can use {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} 
-to track information like the total issuance of their asset in the entire network, as parachain balances would 
-be included in the reserve-backed table. Likewise, for the minting and burning of tokens, an asset's team can 
-perform all operations on {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} and propagate any 
-minted tokens to other parachains in the network.
+As a result of this, asset owners can use {{ polkadot: Statemint :polkadot }} 
+{{ kusama: Statemine :kusama }} to track information like the total issuance of their asset in 
+the entire network, as parachain balances would be included in the reserve-backed table. 
+Likewise, for the minting and burning of tokens, an asset's team can perform all operations on 
+{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} and propagate any minted tokens 
+to other parachains in the network.
 
 Parachains that want to send assets to other parachains should do so via instructions to 
 {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} so that the reserve-backed 
