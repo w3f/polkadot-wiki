@@ -6,17 +6,18 @@ description: Information about building with decentralized storage.
 slug: ../build-storage
 ---
 
-Storage is an integral part of modern computer systems, and the same is true for distributed
-and decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it
-will be helpful if you familiarize yourself with the current Web 3.0 approach to decentralized
-storage systems, and how these systems can support your endeavors.
+Storage is an integral part of modern computer systems, and the same is true for
+distributed and decentralized systems like a blockchain. When interacting with
+the {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} ecosystem,
+it will be helpful if you familiarize yourself with the current Web 3.0 approach
+to decentralized storage systems, and how these systems can support your endeavors.
 
 ## DCS (Decentralized cloud storage)
 
 The key attribute that characterises centralized cloud storage is location [of data].
-In decentralised cloud storage, the key attribute becomes the data itself instead of the data's location.
-This can be viewed as the shift from the centralized *location-centric* storage approach to the decentralized
-*content-centric* approach.
+In decentralized cloud storage, the key attribute becomes the data itself instead of the 
+data's location. This can be viewed as the shift from the centralized *location-centric* storage 
+approach to the decentralized *content-centric* approach.
 
 ### IPFS (Interplanetary File System)
 
@@ -88,8 +89,8 @@ be used to store a hash map with any arbitrary number of keys.
 These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can be
 found at the [`Runtime Storage Page`](https://substrate.dev/docs/en/knowledgebase/runtime/storage) on Substrate Developer Hub.
 
-### PolkadotJS Storage
+### Polkadot-JS Storage
 
-The PolkadotJS API offers storage methods that are part of the default Substrate runtime.
+The Polkadot-JS API offers storage methods that are part of the default Substrate runtime.
 They are exposed via `api.query.<module>.<method>`.
 See the [official docs](https://polkadot.js.org/docs/substrate/storage/) for more detials.

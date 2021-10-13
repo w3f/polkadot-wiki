@@ -55,15 +55,10 @@ For example, if `index` is 5 and `error` is 3, as in the example linked above, w
 the runtime for the fourth error (index 3) in the sixth pallet (index 5).
 
 By looking at the
-[runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L965)
+[runtime code](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs)
 we see that the pallet at index 5 is
-[Balances](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L981). Now
-we will check the Balances pallet's code which is hosted in the Substrate repository, and look for
-the fourth error in the Error enum. According to
-[its source](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs#L396) the
-error that we got is
-[InsufficientBalance](https://github.com/paritytech/substrate/blob/master/frame/balances/src/lib.rs#L402)
-or in other words "Balance too low to send value".
+`Balances`. Now we will check the Balances pallet's code which is hosted in the Substrate repository,
+and look for the fourth error in the `Error enum`. According to its source the error that we got is `InsufficientBalance`, or in other words, "Balance too low to send value".
 
 ## Common Errors
 

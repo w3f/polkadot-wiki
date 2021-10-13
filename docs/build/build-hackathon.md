@@ -1,7 +1,7 @@
 ---
 id: build-hackathon
-title: Polkadot Hackathons
-sidebar_label: Polkadot Hackathons
+title: Hackathons
+sidebar_label: Hackathons
 description: Join or host a Hackathon.
 slug: ../build-hackathon
 ---
@@ -9,14 +9,18 @@ slug: ../build-hackathon
 ## Join a Hackathon
 
 Web3 Foundation regularly supports developer focused events! Be the first to know by signing
-up for the [Polkadot newsletter](https://polkadot.network/) - the footer has a link to sign up!
+up for the
+{{ polkadot: [Polkadot newsletter](https://info.polkadot.network/subscribe) :polkadot }} 
+{{ kusama: [Kusama newsletter](https://kusama.network/newsletter/) :kusama }}.
+
 
 ## Host a Hackathon
 
 As one of our objectives in the Web3 Foundation is promoting the
 [Web3 technology stack](https://github.com/w3f/General-Grants-Program/blob/master/grants/polkadot_stack.md)
 , we would like to support any individual or team who wants to organize a hackathon that gets
-more developers to understand Polkadot and Substrate in your city or online.
+more developers to understand {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} and 
+Substrate in your city or online.
 
 We are not only providing technical resources for you, but we can have someone from our team give a
 hands-on workshop/presentation about the technology to help participants get started hacking on it
@@ -24,8 +28,8 @@ more quickly.
 
 ### Why you should host a hackathon?
 
-- Connect with the W3F team and larger community
-- Support Web3 education, opportunities, and more
+- Connect with the Web3 Foundation team and larger community
+- Support Web 3.0 education, opportunities, and more
 - Learn the bleeding-edge technology
 - Make lasting impact and gain connections in the community
 
@@ -92,4 +96,4 @@ Here are a few examples of hackathons W3F has facilitated and supported:
 
 If you have any questions regarding organizing a hackathon, please free feel to contact us by
 [email](mailto:events@web3.foundation) or ask us via
-[Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
+[Element](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
