@@ -22,7 +22,8 @@ network.
 
 {{ polkadot: Statemint uses DOT as its native token :polkadot }} 
 {{ kusama: Statemine uses KSM as its native token :kusama }}. The chain yields its governance to
-its respective Relay Chain, and has no inflation or rewards for collators. As a
+its respective Relay Chain, and has no inflation or era-based rewards for collators. Collators
+receive a portion of transaction fees. As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint has a trusted relationship with the Relay Chain, 
 and as such, can teleport DOT between itself and its Relay Chains. That is, DOT on Statemint is 
 just as good as DOT on the Relay Chain. :polkadot }}
@@ -36,13 +37,13 @@ accounts to replicate oft used contract logic.
 
 ## Fungible Assets
 
-Fungible assets are interchangeable, i.e. one unit is equivalent to any other unit
+Fungible assets are those that are interchangeable, i.e. one unit is equivalent to any other unit
 for the purposes of claiming the underlying item. {{ polkadot: Statemint :polkadot }} 
 {{ kusama: Statemine :kusama }} represents fungible assets in the 
-[Assets pallet](https://crates.parity.io/pallet_assets/index.html). For those familiar with the
-ERC20 standard, this pallet presents a similar interface. However, the logic is encoded directly in
-the chain's runtime. Operations are not gas metered and instead are benchmarked upon every
-release, leading to efficient execution and stable transaction fees.
+Assets pallet. For those familiar with the ERC20 standard, this pallet presents a similar interface.
+However, the logic is encoded directly in the chain's runtime. As such, operations are not gas
+metered and instead are benchmarked upon every release, leading to efficient execution and stable
+transaction fees.
 
 ### Creation and Management
 
@@ -62,11 +63,12 @@ privileged roles, but can reassign them after creation. These roles are:
 - Admin
 - Freezer
 
-The owner can set the accounts responsible for the other three roles, and set
-asset metadata (e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses
-of their choosing. The freezer can freeze assets on target addresses or the entire asset class. The
-admin can make force transfers as well as unfreeze accounts of the asset class. **Always refer to
-the reference documentation for certainty on privileged roles.**
+The owner has the ability to set the accounts responsible for the other three roles, as well as set asset 
+metadata (e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses of their
+choosing. The freezer can freeze assets on target addresses or the entire asset class. The admin can
+make force transfers as well as unfreeze accounts of the asset class. **Always refer to the
+[reference documentation](https://crates.parity.io/pallet_assets/index.html) for certainty on
+privileged roles.**
 
 An asset's details contain one field not accessible to its owner or admin team, that of asset
 sufficiency. Only the network's governance mechanism can deem an asset as *sufficient.* A balance of
@@ -80,16 +82,17 @@ future, *sufficient* assets will be able to pay transaction fees, such that user
 
 ### Using
 
-Users have a straightforward interface, namely the ability to transfer asset balances to other accounts
+Users have a simple interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not *sufficient,* then the destination account must
 already exist for the transfer to succeed.
 
 The chain also contains a `transfer_keep_alive` function, similar to that of the Balances pallet,
-that will fail if execution kills the sending account.
+that will fail if execution would kill the sending account.
 
 {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} also sweeps dust balances into transfers. 
 For example, if an asset has a minimum balance of 10 and an account has a balance of 25, then an attempt 
 to transfer 20 units would actually transfer all 25. 
+
 
 ### Application Development
 
@@ -128,13 +131,11 @@ stable transaction fees.
 ### Creation and Management
 
 {{ polkadot: Anyone on the network can create an asset class, as long as they reserve the required 
-deposit of 100 DOT on Statemint:polkadot }} {{ kusama: Anyone on the network can create an asset class, 
-as long as they reserve the required deposit of 1 KSM on Statemine :kusama }}
-
-Creating instances of a class also requires a per-instance
-deposit, unless the chain's governance designates the class as "free holding", allowing the class to
-mint more instances without deposit. The creator must specify a `ClassId`, which, like its cousin
-`AssetId`, should be the canonical identifier for the class.
+deposit of 100 DOT on Statemint :polkadot }} {{ kusama: Anyone on the network can create an asset class, 
+as long as they reserve the required deposit of 1 KSM on Statemine :kusama }}. Creating instances of a 
+class also requires a per-instance deposit, unless the chain's governance designates the class as 
+"free holding", allowing the class to mint more instances without deposit. The creator must specify a 
+`ClassId`, which, like its cousin `AssetId`, should be the canonical identifier for the class.
 
 The creator can also specify the same privileged roles of Owner, Admin, Issuer, and Freezer.
 
