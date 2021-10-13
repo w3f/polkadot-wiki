@@ -176,6 +176,6 @@ curating educational content around blockchain and Polkadot concepts.
 
 Logan was a Technical Educator at Web3 Foundation where he worked on creating material for
 supporting the development of the next generation of distributed technologies. At Web3 Technical
-Education, Logan focussed on creating the Polkadot Wiki as the central source of truth and knowledge
+Education, Logan focused on creating the Polkadot Wiki as the central source of truth and knowledge
 for the Polkadot protocol. He contributed to the creation of written content and example
 applications that demonstrate how to use these new technologies.
