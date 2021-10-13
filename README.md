@@ -34,24 +34,22 @@ After cloning the source locally, you can start the websites with each of these 
 > the Wiki locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
 
 #### Building
+
 > The Wiki is currently being deployed onto IPFS and will follow the same configuration to build the static files.
 
-- Run `yarn kusama:build`
-- Run `yarn polkadot:build`
-
-#### Running GitHub Pages
-
-- Run `yarn kusama:publish-gh-pages`
-- Run `yarn polkadot:publish-gh-pages`
+- Kusama Guide: `yarn kusama:build`
+- Polkadot Wiki: `yarn polkadot:build`
 
 #### Start
 
-```zsh
-# For the Polkadot Wiki:
-yarn polkadot:start
-# For the Kusama Guide:
-yarn kusama:start
-```
+- For the Kusama Guide: `yarn kusama:start`
+- For the Polkadot Wiki:: `yarn polkadot:start`
+
+#### Running GitHub Pages
+
+- Kusama Guide: `yarn kusama:publish-gh-pages`
+- Polkadot Wiki: `yarn polkadot:publish-gh-pages`
+
 ### Style Guide
 
 Use the style guide from the
