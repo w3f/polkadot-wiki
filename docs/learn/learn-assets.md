@@ -24,10 +24,10 @@ network.
 {{ kusama: Statemine uses KSM as its native token :kusama }}. The chain yields its governance to
 its respective Relay Chain, and has no inflation or rewards for collators. As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint has a trusted relationship with the Relay Chain, 
-and as such can teleport DOT between itself and its Relay Chains. That is, DOT on Statemint is 
+and as such, can teleport DOT between itself and its Relay Chains. That is, DOT on Statemint is 
 just as good as DOT on the Relay Chain. :polkadot }}
 {{ kusama: Statemine has a trusted relationship with the Relay Chain, 
-and as such can teleport KSM between itself and its Relay Chains. That is, KSM on Statemine is 
+and as such, can teleport KSM between itself and its Relay Chains. That is, KSM on Statemine is 
 just as good as KSM on the Relay Chain. :kusama }}
 
 {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} does not support smart contracts. 
@@ -36,12 +36,12 @@ accounts to replicate oft used contract logic.
 
 ## Fungible Assets
 
-Fungible assets are those that are interchangeable, i.e. one unit is equivalent to any other unit
+Fungible assets are interchangeable, i.e. one unit is equivalent to any other unit
 for the purposes of claiming the underlying item. {{ polkadot: Statemint :polkadot }} 
 {{ kusama: Statemine :kusama }} represents fungible assets in the 
 [Assets pallet](https://crates.parity.io/pallet_assets/index.html). For those familiar with the
 ERC20 standard, this pallet presents a similar interface. However, the logic is encoded directly in
-the chain's runtime. As such, operations are not gas metered and instead are benchmarked upon every
+the chain's runtime. Operations are not gas metered and instead are benchmarked upon every
 release, leading to efficient execution and stable transaction fees.
 
 ### Creation and Management
@@ -51,7 +51,7 @@ deposit of 100 DOT on Statemint. :polkadot }} {{ kusama: Statemine as long as th
 deposit of 1 KSM on Statemine. :kusama }}. The network reserves the deposit on creation.
 The creator also must specify a unique `AssetId`, an integer of type `u32`, to identify the asset.
 The `AssetId` should be the canonical identifier for an asset, as the chain does not enforce
-uniqueness of metadata like "name" and "symbol". The creator also must specify a minimum balance,
+the uniqueness of metadata like "name" and "symbol". The creator also must specify a minimum balance,
 which will prevent accounts from having dust balances.
 
 An asset class has a number of privileged roles. The creator of the asset automatically takes on all
@@ -62,13 +62,13 @@ privileged roles, but can reassign them after creation. These roles are:
 - Admin
 - Freezer
 
-The owner has the ability to set the accounts responsible for the other three roles, as well as set
+The owner can set the accounts responsible for the other three roles, and set
 asset metadata (e.g. name, symbol, decimals). The issuer can mint and burn tokens to/from addresses
 of their choosing. The freezer can freeze assets on target addresses or the entire asset class. The
 admin can make force transfers as well as unfreeze accounts of the asset class. **Always refer to
 the reference documentation for certainty on privileged roles.**
 
-An asset's details contains one field not accessible to its owner or admin team, that of asset
+An asset's details contain one field not accessible to its owner or admin team, that of asset
 sufficiency. Only the network's governance mechanism can deem an asset as *sufficient.* A balance of
 a non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
 could not create a new account on-chain by transferring an insufficient asset to it; the account
@@ -80,15 +80,15 @@ future, *sufficient* assets will be able to pay transaction fees, such that user
 
 ### Using
 
-Users have a very simple interface, namely the ability to transfer asset balances to other accounts
+Users have a straightforward interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not *sufficient,* then the destination account must
 already exist for the transfer to succeed.
 
 The chain also contains a `transfer_keep_alive` function, similar to that of the Balances pallet,
-that will fail if execution would kill the sending account.
+that will fail if execution kills the sending account.
 
 {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} also sweeps dust balances into transfers. 
-For example, if an asset has a minimum balance of 10, and an account has a balance of 25, then an attempt 
+For example, if an asset has a minimum balance of 10 and an account has a balance of 25, then an attempt 
 to transfer 20 units would actually transfer all 25. 
 
 ### Application Development
@@ -101,7 +101,7 @@ effectuate transfers up to a given amount on behalf of an account.
 ### Cross-Chain Accounting
 
 {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} uses a reserve-backed system to 
-manage asset transfers to other parachains. It tracks how much of each asset has gone to each parachain, 
+manage asset transfers to other parachains. It tracks how much of each asset has gone to each parachain 
 and will not accept more back from a particular parachain.
 
 As a result of this, asset owners can use {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} 
@@ -131,7 +131,7 @@ stable transaction fees.
 deposit of 100 DOT on Statemint:polkadot }} {{ kusama: Anyone on the network can create an asset class, 
 as long as they reserve the required deposit of 1 KSM on Statemine :kusama }}
 
-Creating instances of a class also requres a per-instance
+Creating instances of a class also requires a per-instance
 deposit, unless the chain's governance designates the class as "free holding", allowing the class to
 mint more instances without deposit. The creator must specify a `ClassId`, which, like its cousin
 `AssetId`, should be the canonical identifier for the class.
@@ -139,7 +139,7 @@ mint more instances without deposit. The creator must specify a `ClassId`, which
 The creator can also specify the same privileged roles of Owner, Admin, Issuer, and Freezer.
 
 Asset classes and instances can have associated metadata. The metadata is an array of data that the
-class Owner can add on-chain, for example a link to an IPFS hash or other off-chain hosting service.
+class Owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting services.
 The Uniques pallet also supports setting key/value pairs as attributes to a class or instance.
 
 ### Using
