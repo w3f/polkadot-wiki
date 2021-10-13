@@ -31,7 +31,7 @@ show two different approaches.
 > Note: DOT can currently only be added using the Resolver method. KSM can be added through both
 > methods are described below.
 
-This guide is also available in video format [on Youtube](https://youtu.be/XKjZk-5_mQc).
+This guide is also available in video format [on YouTube](https://youtu.be/XKjZk-5_mQc).
 
 ## Adding via the UI
 

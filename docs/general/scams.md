@@ -104,7 +104,7 @@ Some simple things that you can do to keep your assets and information secure fr
 ### Always check the source
 
 For any potential scam, always be sure to do a background check on the source, i.e, look at any
-username, email, Youtube channel name, URL, etc. If something seems fishy, that's because it likely
+username, email, YouTube channel name, URL, etc. If something seems fishy, that's because it likely
 is. Never enter any personal data if you feel the source could be a scam. Feel free to check with
 [support@polkadot.network](mailto:support@web3.foundation).
 

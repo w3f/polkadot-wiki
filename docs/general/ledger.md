@@ -51,7 +51,7 @@ Watch the instructions on how to create an account, send/receive and state/unsta
 > NOTE: These instructions are for development installation only. It is recommended to install the
 > application from Ledger Live unless you _know exactly what you're doing_.
 
-Instructions for downloading the prerelease binary from the GitHub releases are written [in the
+Instructions for downloading the pre-release binary from the GitHub releases are written [in the
 README][prerelease instructions] for the Polkadot Ledger application GitHub repository.
 
 On the [releases page][] you can download the shell script `install_app.sh` and then make it
