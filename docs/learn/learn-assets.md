@@ -1,8 +1,8 @@
 ---
 id: learn-assets
-title: Assets on Polkadot
-sidebar_label: Assets on Polkadot
-description: Learn about fungible and non-fungible assets in the Polkadot network.
+title: Assets
+sidebar_label: Assets
+description: Learn about fungible and non-fungible assets in the Polkadot ecosystem.
 slug: ../learn-assets
 ---
 
