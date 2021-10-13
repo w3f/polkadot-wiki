@@ -66,7 +66,7 @@ An asset's details contain one field not accessible to its owner or admin team, 
 sufficiency. Only the network's governance mechanism can deem an asset as _sufficient._ A balance of
 a non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
 could not create a new account on-chain by transferring an insufficient asset to it; the account
-must already exist by having more than the existential deposit in DOT. However, assets deemed
+must already exist by having more than the existential deposit in DOT (or a sufficient asset). However, assets deemed
 _sufficient_ can instantiate accounts. In the future, _sufficient_ assets will be able to pay
 transaction fees, such that users can transact on Statemint without the need for DOT.
 
