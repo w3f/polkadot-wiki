@@ -13,7 +13,7 @@ that would be issued by a creator (e.g. rights to audited, off-chain reserves he
 or art issued as an NFT).
 
 The {{ polkadot: [Statemint parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/) :polkadot }} 
-{{ kusama: [Statemineparachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/) :kusama }} hosts data structures and logic that
+{{ kusama: [Statemine parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/) :kusama }} hosts data structures and logic that
 specialize in the creation, management, and use of assets in the {{ polkadot: Polkadot :polkadot }} 
 {{ kusama: Kusama :kusama }} network. Although other
 parachains can host applications dealing with assets on {{ polkadot: Statemint, Statemint :polkadot }} 
