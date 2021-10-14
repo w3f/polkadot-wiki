@@ -20,8 +20,8 @@ parachains can host applications dealing with assets on {{ polkadot: Statemint, 
 {{ kusama: Statemine, Statemine :kusama }} can be thought of as the "home base" of assets in the 
 network.
 
-{{ polkadot: Statemint uses DOT as its native token :polkadot }} 
-{{ kusama: Statemine uses KSM as its native token :kusama }}. The chain yields its governance to
+{{ polkadot: Statemint uses DOT :polkadot }} 
+{{ kusama: Statemine uses KSM :kusama }} as its native token. The chain yields its governance to
 its parent Relay Chain, and has no inflation or era-based rewards for collators. Collators
 receive a portion of transaction fees. As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint 
