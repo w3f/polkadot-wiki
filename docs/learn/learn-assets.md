@@ -29,7 +29,7 @@ has a trusted relationship with the Relay Chain,
 and as such, can teleport DOT between itself and its Relay Chains. That is, DOT on Statemint is 
 just as good as DOT on the Relay Chain. :polkadot }}
 {{ kusama: Statemine has a trusted relationship with the Relay Chain, 
-and as such, can teleport KSM between itself and its Relay Chains. That is, KSM on Statemine is 
+and as such, can teleport KSM between itself and the Relay Chain. That is, KSM on Statemine is 
 just as good as KSM on the Relay Chain. :kusama }}
 
 {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} does not support smart contracts. 
