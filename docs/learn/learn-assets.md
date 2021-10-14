@@ -22,7 +22,7 @@ network.
 
 {{ polkadot: Statemint uses DOT as its native token :polkadot }} 
 {{ kusama: Statemine uses KSM as its native token :kusama }}. The chain yields its governance to
-its respective Relay Chain, and has no inflation or era-based rewards for collators. Collators
+its parent Relay Chain, and has no inflation or era-based rewards for collators. Collators
 receive a portion of transaction fees. As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint 
 has a trusted relationship with the Relay Chain, 
