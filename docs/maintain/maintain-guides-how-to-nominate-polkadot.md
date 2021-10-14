@@ -23,13 +23,11 @@ performs due diligence on the validators that they elect. When looking for valid
 nominator should pay attention to their own reward percentage for nominating a specific validator -
 as well as the risk that they bear of being slashed if the validator gets slashed.
 
-## Setting up Stash and Controller keys
+If you are a beginner, please watch the video below for detailed instructions
 
-> If you prefer a video format, the following videos related to staking are available:
-> 
-> - [Secure Staking with PolkadotJS Apps](https://youtu.be/FCXC0CDhyS4)
-> - [Staking with a Ledger and PolkadotJS Apps](https://www.youtube.com/watch?v=VN4S8MofEW8)
-> - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
+[![Stake on Polkadot/Kusama](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
+
+## Setting up Stash and Controller keys
 
 Nominators are recommended to set up separate stash and controller accounts. Explanation and
 reasoning for generating distinct accounts for this purpose is elaborated in the [keys][] section of
@@ -97,7 +95,7 @@ earn compound interest.
 ![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
 
 > These concepts have been further explained in Polkadot's
-> [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+> [UI Walkthrough Video](https://youtu.be/FCXC0CDhyS4?t=219)
 
 ### Step 2: Nominate a validator
 
@@ -129,6 +127,11 @@ wiki page for more details.
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond.md).
+
+> The following videos related to staking are also available for your reference:
+> 
+> - [Staking with a Ledger and PolkadotJS Apps](https://www.youtube.com/watch?v=VN4S8MofEW8)
+> - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
 ## Using Command-Line Interface (CLI)
 

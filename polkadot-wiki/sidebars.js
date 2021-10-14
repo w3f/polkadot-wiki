@@ -54,15 +54,21 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Parachains",
+          label: "Paraobjects",
           items: [
-            "learn/learn-parachains",
+            {
+              type: "category",
+              label: "Parachains",
+              items: [
+                "learn/learn-parachains",
+                "learn/learn-common-goods",
+                "learn/learn-auction",
+                "learn/learn-crowdloans",
+                "learn/learn-teleport",
+              ],  
+            },
             "learn/learn-parathreads",
             "learn/learn-bridges",
-            "learn/learn-common-goods",
-            "learn/learn-auction",
-            "learn/learn-crowdloans",
-            "learn/learn-teleport",
           ],
         },
         {
@@ -108,11 +114,11 @@ module.exports = {
           label: "Development Guide",
           items: [
             "build/build-guide",
-            "learn/learn-implementers-guide",
             "build/build-parachains",
             "build/build-storage",
             "build/build-smart-contracts",
             "build/build-oracle",
+            "build/build-data",
             "build/build-ss58-registry",
             "build/build-wallets",
           ],

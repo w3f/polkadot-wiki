@@ -1,16 +1,14 @@
 ---
 id: build-wallets
-title: Polkadot Wallets
-sidebar_label: Polkadot Wallets
+title: Wallets
+sidebar_label: Wallets
 description: An overview of the current supported wallets on Polkadot.
 slug: ../build-wallets
 ---
 
-## Polkadot Wallets
-
-The integration of a [wallet](../general/glossary.md#wallet) with Polkadot allows for simple and easy access to
-private keys and signing transactions. Below are some wallets that support Polkadot along with their
-development statuses.
+The integration of a [wallet](../general/glossary.md#wallet) with {{ polkadot: Polkadot :polkadot }}
+{{ kusama: Kusama :kusama }} allows for simple and easy access to private keys and signing
+transactions. Below are some wallets that support Polkadot along with their development statuses.
 
 ### Supported Wallets
 

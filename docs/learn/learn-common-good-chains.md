@@ -11,7 +11,7 @@ slug: ../learn-common-goods
 "Common Good" parachains are parachain slots reserved for functionality that benefits the ecosystem
 as a whole. By allocating a subset of parachain slots to common good chains, the entire network can
 realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider
-problem. They are not allocated via the parachain auction process, but by the on-chain
+problem. They are not allocated via the parachain auction process but by the on-chain
 {{ polkadot: [governance](learn-governance.md) :polkadot }}
 {{ kusama: [governance](mirror-learn-governance.md) :kusama }} system. Generally, a common good
 parachain's lease would not expire; it would only be removed via governance.
@@ -19,12 +19,12 @@ parachain's lease would not expire; it would only be removed via governance.
 The purpose of these parachains will probably fall into one of two categories: system level chains
 or public utility chains.
 
-### System Level Chains
+## System Level Chains
 
 System level chains move functionality from the Relay Chain into parachains, minimizing the
 administrative use of the Relay Chain. For example, a governance parachain could move all the
 governance processes from the Relay Chain into a parachain. Adding a system level chain is generally
-uncontroversial, because they merely move functionality that the stakeholders already agreed was
+uncontroversial because they merely move functionality that the stakeholders already agreed was
 useful from one place (the Relay Chain) to another (a parachain).
 
 Moving the logic from the Relay Chain to a parachain is an optimization that makes the entire
@@ -35,7 +35,7 @@ system level chain takes one slice and bakes a bigger pie.
 
 The vast majority of common good chains will likely be the unopinionated system level chains.
 
-### Public Utility Chains
+## Public Utility Chains
 
 Public utility chains add functionality that doesn’t exist yet, but that the stakeholders believe
 will add value to the entire network. Because public utility chains add new functionality, there is
@@ -64,13 +64,15 @@ likely be approved by the network stakeholders only in rare scenarios.
 ### Statemint
 
 [Statemint](https://github.com/paritytech/statemint) (and its cousin *Statemine* on Kusama) will
-likely be one of the first common good parachains. Statemint is a public utility chain in that it
-adds functionality not available in the Relay Chain, namely the creation and management of assets.
+likely be one of the first common good parachains.
 
-Statemint will support both fungible and non-fungible assets. The chain offers an interface similar
-to ERC-20 for fungible assets and ERC-721 for non-fungible tokens. These interfaces are in the logic
-of the chain itself; by encoding this logic directly into the Statemint runtime, token storage and
-actions do not need to be metered and can happen faster and cheaper.
+> Statemine is the first common good parachain.
+
+Statemint is a public utility chain in that it adds functionality not available in the Relay Chain, 
+namely the creation and management of assets. Statemint will support both fungible and non-fungible 
+assets. The chain offers an interface similar to ERC-20 for fungible assets and ERC-721 for non-fungible 
+tokens. These interfaces are in the logic of the chain itself; by encoding this logic directly into the 
+Statemint runtime, token storage, and actions do not need to be metered and can happen faster and cheaper.
 
 Like most common good chains, Statemint will use the DOT token as its native token, i.e. represented
 in its instance of the Balances pallet. Statemint trusts messages about balances from the Relay

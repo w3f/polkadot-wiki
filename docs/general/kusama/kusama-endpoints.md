@@ -16,8 +16,7 @@ API services providers in the ecosystem.
 
 ## Parity Archive Node
 
-[Parity](https://www.parity.io/), the company that develops the Polkadot Rust client,
-maintains an archive node at
+[Parity Tech](https://www.parity.io/), maintains an archive node at
 endpoint `wss://kusama-rpc.polkadot.io/`.
 
 To connect to the Parity node, use the endpoint in your JavaScript apps like so:

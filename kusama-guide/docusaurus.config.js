@@ -80,7 +80,7 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/kusama-index",
+          to: "docs/kusama-getting-started",
           label: "Docs",
           position: "right",
         },
