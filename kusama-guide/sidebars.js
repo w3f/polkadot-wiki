@@ -32,6 +32,7 @@ module.exports = {
             "learn/learn-identity",
             "learn/learn-treasury",
             "learn/learn-registrar",
+            "learn/learn-assets",
             "build/build-guide",
             "build/build-parachains",
             "maintain/kusama/maintain-guides-society-kusama",
