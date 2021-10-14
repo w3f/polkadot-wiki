@@ -48,9 +48,9 @@ transaction fees.
 
 ### Creation and Management
 
-Anyone on the network can create assets on {{ polkadot: Statemint as long as they can reserve the 
-required deposit of 100 DOT on Statemint. :polkadot }} {{ kusama: Statemine as long as they can reserve 
-the required deposit of 1 KSM on Statemine. :kusama }}. The network reserves the deposit on creation.
+Anyone on the network can create assets on {{ polkadot: Statemint, as long as they can reserve the 
+required deposit of 100 DOT. :polkadot }} {{ kusama: Statemine, as long as they can reserve 
+the required deposit of 1 KSM. :kusama }}. The network reserves the deposit on creation.
 The creator also must specify a unique `AssetId`, an integer of type `u32`, to identify the asset.
 The `AssetId` should be the canonical identifier for an asset, as the chain does not enforce
 the uniqueness of metadata like "name" and "symbol". The creator also must specify a minimum balance,
