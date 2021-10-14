@@ -530,10 +530,10 @@ and sign the transaction.
 
 ![11](../assets/accounts/multisig-11.png)
 
-You will now see a pending transaction the 'Multisig Test Address' (the red '1' icon), and if you
-click the dropdown under Alice's balance - you will see that a value equivalent to the multisig
-deposit has been 'reserved'; rendering that value untransferable until the multisig transaction
-completes.
+You will now see a pending transaction the 'Multisig Test Address' (the purple icon next to the
+account name), and if you click the dropdown under Alice's balance - you will see that a value
+equivalent to the multisig deposit has been 'reserved'; rendering that value untransferable until
+the multisig transaction completes.
 
 ![12](../assets/accounts/multisig-12.png)
 
