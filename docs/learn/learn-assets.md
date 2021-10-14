@@ -26,7 +26,7 @@ its respective Relay Chain, and has no inflation or era-based rewards for collat
 receive a portion of transaction fees. As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/), {{ polkadot: Statemint 
 has a trusted relationship with the Relay Chain, 
-and as such, can teleport DOT between itself and its Relay Chains. That is, DOT on Statemint is 
+and as such, can teleport DOT between itself and the Relay Chain. That is, DOT on Statemint is 
 just as good as DOT on the Relay Chain. :polkadot }}
 {{ kusama: Statemine has a trusted relationship with the Relay Chain, 
 and as such, can teleport KSM between itself and the Relay Chain. That is, KSM on Statemine is 
