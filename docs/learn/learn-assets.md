@@ -142,7 +142,7 @@ class also requires a per-instance deposit, unless the chain's governance design
 The creator can also specify the same privileged roles of Owner, Admin, Issuer, and Freezer.
 
 Asset classes and instances can have associated metadata. The metadata is an array of data that the
-class Owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting services.
+class Owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting service.
 The Uniques pallet also supports setting key/value pairs as attributes to a class or instance.
 
 ### Using
