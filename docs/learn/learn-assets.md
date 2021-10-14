@@ -76,7 +76,7 @@ sufficiency. Only the network's governance mechanism can deem an asset as *suffi
 a non-sufficient asset (the default) can only exist on already-existing accounts. That is, a user
 could not create a new account on-chain by transferring an insufficient asset to it; the account
 must already exist by having more than the existential deposit {{ polkadot: in DOT :polkadot }} 
-{{ kusama: in KSM :kusama }}. However, assets deemed *sufficient* can instantiate accounts. In the 
+{{ kusama: in KSM :kusama }} (or a sufficient asset). However, assets deemed *sufficient* can instantiate accounts. In the 
 future, *sufficient* assets will be able to pay transaction fees, such that users can transact on 
 {{ polkadot: Statemint without the need for DOT :polkadot }} 
 {{ kusama: Statemine without the need for KSM :kusama }}.
