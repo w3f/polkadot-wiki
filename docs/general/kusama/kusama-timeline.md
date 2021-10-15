@@ -77,7 +77,7 @@ While Kusama’s first five parachains are taking advantage of the built-in feat
 chaos continues.
 
 And in the spirit of chaos, more teams are eager to deploy on Kusama.
-The launch of the second batch of parachain slot auctions officially went live in Septmeber 2021.
+The launch of the second batch of parachain slot auctions officially went live in September 2021.
 Slot auctions occurred over six weeks, where the auctions were expanded by Kusama Council to include 
 six auctions instead of the original five. 
 

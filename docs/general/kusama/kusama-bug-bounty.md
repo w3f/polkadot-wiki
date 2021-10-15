@@ -25,7 +25,7 @@ would be regarded as a high threat.
 
 Please note: The submission quality will be a significant factor in the level of considered compensation.
 A high-quality submission includes explaining how the bug can be reproduced, how it was
-discovered, and elsewise critical details. Please disclose responsibly; disclosure to any third
+discovered, and otherwise critical details. Please disclose responsibly; disclosure to any third
 parties disqualifies bug bounty eligibility.
 
 **Responsible investigation and reporting** Responsible investigation and reporting include, but

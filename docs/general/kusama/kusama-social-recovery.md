@@ -31,7 +31,7 @@ approve the recovery process to recover your account.
 
 First, see the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot-JS Apps
 that shows all available accounts on your browser's local storage and Polkadot-JS extension. 
-To create a recoverable account, make sure you have some KSMs to pay the transaction fees. 
+To create a recoverable account, make sure you have some KSM to pay the transaction fees. 
 You You will also need some for the reserve required by the account recovery setup.
 
 ![kusama accounts page](../../assets/kusama/kusama_social_recovery_accounts_page.png)
