@@ -158,5 +158,5 @@ puts your node at higher risk of attack. You can run your own, private
 
 The node also exposes a Prometheus endpoint by default (disable with `--no-prometheus`). Substrate
 has a
-[vizualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualize-node-metrics/)
+[visualizing node metrics tutorial](https://substrate.dev/docs/en/tutorials/visualize-node-metrics/)
 which uses this endpoint.

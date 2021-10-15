@@ -34,10 +34,10 @@ Please see the [Wallets](build-wallets.md) page.
   [Blogpost](https://medium.com/polkadot-network/polkabot-a3dba18c20c8).
 - [Ryabina's Telegram Bot](https://github.com/Ryabina-io/substratebot) - A Telegram bot for
   monitoring on-chain events of Substrate chains.
-  [Github Repository](https://gitlab.com/Polkabot/polkabot)
+  [GitHub Repository](https://gitlab.com/Polkabot/polkabot)
 - [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows
   network information and staking details from validators and intentions.
-  [Github Repository](https://github.com/Colm3na/polkastats-v2/).
+  [GitHub Repository](https://github.com/Colm3na/polkastats-v2/).
 - [Panic](https://github.com/SimplyVC/panic_polkadot) - A node monitoring and alert server for
   validators.
 - [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to
@@ -124,7 +124,7 @@ usage instructions are provided at
 
 ### WASM
 
-Webassembly related tools and projects.
+WebAssembly related tools and projects.
 
 - [ink!](https://github.com/paritytech/ink/) - An eDSL to write WebAssembly based smart contracts
   using the Rust programming language.

@@ -24,7 +24,7 @@ Oracle solutions range from centralized and trusted to decentralized and game-th
 centralized end of the spectrum, an oracle could be a single account that has the authority to
 dictate the real-world data on-chain. On the decentralized end, a [complex game of
 "chicken"][schellingcoin] can be played among various staked actors who risk getting slashed if they
-don't submit the same data as everyone else. Solutions such as [ChainLink][chainlink] fit somewhere
+don't submit the same data as everyone else. Solutions such as [Chainlink][chainlink] fit somewhere
 in the middle, where the amount of trust you put into the reporting oracles can be adjusted based on
 your preferences. A Chainlink [Feed Pallet][feed pallet] was recently released to allow smart
 contract applications across {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} to 
