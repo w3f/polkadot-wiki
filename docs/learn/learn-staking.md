@@ -16,9 +16,9 @@ Having more stake on a validator does not influence the amount of block rewards 
 However, there is a probabilistic component to reward calculation (discussed below), so rewards may
 not be exactly equal for all validators in a given era.
 
-Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In
-this way, the network incentivizes the nomination of lower-staked validators to create an equally-staked
-validator set.
+Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. 
+In this way, the network creates incentives for the nomination of lower-staked validators to create 
+an equally-staked validator set.
 
 ## How does staking work in Polkadot?
 
@@ -258,7 +258,7 @@ The UI shows it per validator and then all the affected nominators along with th
 unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
 days on Polkadot). After the grace period, the slashes are applied.
 
-The following levels of offense are
+The following levels of offence are
 [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html). However, these
 particular levels are not implemented or referred to in the code or in the system; they are meant as
 guidelines for different levels of severity for offences. To understand how slash amounts are
