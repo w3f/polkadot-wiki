@@ -65,6 +65,20 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    'remark-docusaurus-tabs',
+    '@docusaurus/theme-live-codeblock',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects: function (existingPath) {
+          if (existingPath.startsWith('/docs/')) {
+            return [existingPath.replace('/docs/', '/docs/en/')];
+          }
+        },
+      },
+    ],
+  ],
   themeConfig: {
     colorMode: {
       defaultMode: "light",
