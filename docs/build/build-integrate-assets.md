@@ -99,7 +99,7 @@ database directory, so provision disks accordingly.
 
 ### Sidecar
 
-API Sidecar is a REST service for relay chain and parachain nodes; It comes with endpoints to query
+API Sidecar is a REST service for Relay Chain and parachain nodes; It comes with endpoints to query
 info about assets and asset balances on Statemint.
 
 - Asset lookups will always use the `AssetId` to refer to an asset class. On-chain metadata is

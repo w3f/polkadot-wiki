@@ -44,7 +44,7 @@ Parachain block candidates are collected together and a _Relay Chain block candi
 
 The validators on the network will try to reach a consensus on the Relay Chain block candidate. Upon reaching consensus, the now validated Relay Chain block candidate is shared with the validators and collators, and the process repeats for new transactions. A collator cannot continue building blocks on a parachain until the block candidate they proposed to the Relay Chain validators have been validated.
 
-![relay chain candidate block diagram](../assets/polkadot-consensus-example-2.png)
+![Relay Chain candidate block diagram](../assets/polkadot-consensus-example-2.png)
 
 A block is produced every 6 seconds.
 

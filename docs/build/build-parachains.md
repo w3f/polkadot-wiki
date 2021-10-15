@@ -31,7 +31,7 @@ approach. Some examples of what a parachain could be are:
 
 and more.
 
-Polkadot aims to be a bet against so-called *chain-maximalism*, where the success of Polkadot's
+Polkadot aims to be a bet against *chain-maximalism*, where the success of Polkadot's
 heterogeneous multi-chain approach will play a key part in the overall advancement of Web 3.0 and
 decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
 internet of the future will have many different types of blockchains working together.
@@ -46,7 +46,7 @@ as described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper
 - **Developability**: Is the system tooling, system support, and overall system integrity dependable?
 - **Governance**: Can the network remain flexible to evolve and adapt over time? Can decisions be
   made with sufficient inclusivity, legitimacy, and transparency to provide effective leadership of a
-  decentralised system?
+  decentralized system?
 - **Applicability**: Does the technology address a burning need on its own? Is other “middleware”
   required to bridge the gap to actual applications?
 
@@ -58,7 +58,7 @@ Parachains can lease the security of the
 parachain slot. This means that the social costs of building a community
 around your project and convincing validators to participate in your network security
 are reduced. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} has strong security,
-and decentralised application projects wishing to benefit from this
+and decentralized application projects wishing to benefit from this
 security would want to become a parachain to share in that pooled security.
 
 #### [On-Chain Governance](../learn/learn-governance.md) (Thought-through Governance)
@@ -76,7 +76,7 @@ often faced with the network constraint of processing transactions in sequence, 
 
 #### Interoperability
 
-Any decentralised application or chain that wants to enable trustless messaging to other parachains
+Any decentralized application or chain that wants to enable trustless messaging to other parachains
 already connected to {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} would want to
 become a parachain. Interoperability between sovereign chains involves certain constraints and complex 
 protocols to enable across a wide breadth of chains.
@@ -114,7 +114,7 @@ Any validator in the validator pool can help validate your blockchain.
 
 #### Digital nation states
 
-Parachains can be seen as autonomous agents; networks that act as decentralised digital nation states.
+Parachains can be seen as autonomous agents; networks that act as decentralized digital nation states.
 Parachains have their own communities, rules, economies, governance, treasuries, and relationships
 with external chains. As a result, the economic policies within parachain ecosystems are subject to the
 developers and overall community of that parachain ecosystem; there isn't necessarily a go-to economic

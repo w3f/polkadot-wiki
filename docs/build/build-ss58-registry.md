@@ -6,7 +6,7 @@ description: Information about SS58 encoding.
 slug: ../build-ss58-registry
 ---
 
-Substrate-based chains, including the Polkadot and Kusama relay chains, use an
+Substrate-based chains, including the Polkadot and Kusama Relay Chains, use an
 [SS58 encoding](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>) for
 their address formats. This page serves as a registry for teams to see which chain corresponds to a
 given prefix, and which prefixes are availabe.

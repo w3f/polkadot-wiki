@@ -201,13 +201,13 @@ you clarify to the sender that you wish to receive your tokens on the Statemine 
 
 ### Teleporting
 
-Teleporting allows you to send tokens between the Relay chain and a parachain, or between different
+Teleporting allows you to send tokens between the Relay Chain and a parachain, or between different
 parachains.
 
 The Statemine Ledger app doesn't support the `teleport` extrinsic at this point, so an intermediary
 account needs to be created first.
 
-To teleport KSM to the Relay chain follow these steps:
+To teleport KSM to the Relay Chain follow these steps:
 
 - Create an account outside your Ledger. Instructions can be found [here](../../learn/learn-account-generation.md).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
