@@ -131,7 +131,7 @@ The following example should clarify the above. For simplicity, we have the foll
 |     John      |          150           |            0.375            |  37.5   |
 |   **Kitty**   |           50           |            0.125            |  12.5   |
 
-_Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
+*Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively.*
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT
 than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he
@@ -171,10 +171,10 @@ There are two different accounts for managing your funds: `Stash` and `Controlle
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
   Controller. As a result, you may actively participate with a Stash key kept in a cold wallet,
   meaning it stays offline all the time. You can also designate a Proxy account to vote in
-  [governance](learn-governance) proposals.
+  [governance](learn-governance.md) proposals.
 - **Controller** This account acts on behalf of the Stash account, signalling decisions about
   nominating and validating. It sets preferences like payout account and commission. If you are a
-  validator, it also sets your [session keys](learn-keys.md/#session-keys). It only needs enough
+  validator, it also sets your [session keys](learn-keys.md#session-keys). It only needs enough
   funds to pay transaction fees.
 
 We designed this hierarchy of separate key types so that validator operators and nominators can
@@ -183,7 +183,7 @@ anytime you use one key for multiple roles, or even if you use keys related by d
 should never use any account key for a "hot" session key in particular.
 
 Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
-Polkadot and the cryptography behind it [see here](learn-keys).
+Polkadot and the cryptography behind it [see here](learn-keys.md).
 
 ## Validators and nominators
 
@@ -192,7 +192,7 @@ security to the network will be nominators.
 
 Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
 consensus in GRANDPA, validate the state transition function of parachains, and possibly some other
-responsibilities regarding data availability and [XCM](learn-cross-consensus).
+responsibilities regarding data availability and [XCM](learn-cross-consensus.md).
 
 Nominators, on the other hand, have far fewer responsibilities. Those include monitoring their
 validators' performance (uptime), keeping an eye on changing commission rates (a validator can
@@ -204,9 +204,9 @@ compared to a validators.
 
 ### Want to stake DOT?
 
-- [Nominator Guide](../maintain/maintain-guides-how-to-nominate-polkadot) - Become a nominator on the Polkadot
+- [Nominator Guide](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Become a nominator on the Polkadot
   network.
-- [Validator Guide](../maintain/maintain-guides-how-to-validate-polkadot) - Become a validator on the Polkadot
+- [Validator Guide](../maintain/maintain-guides-how-to-validate-polkadot.md) - Become a validator on the Polkadot
   network.
 
 ## Slashing
@@ -215,7 +215,7 @@ Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the n
 modified software) in the network. They and their nominators will get slashed by losing a percentage
 of their bonded/staked DOT.
 
-Any slashed DOT will be added to the [Treasury](learn-treasury). The rationale for this (rather than
+Any slashed DOT will be added to the [Treasury](learn-treasury.md). The rationale for this (rather than
 burning or distributing them as rewards) is that slashes may then be reverted by the Council by
 simply paying out from the Treasury. This would be useful in situations such as a faulty runtime
 causing slashing or forcing validators offline through no fault of their own. In the case of
@@ -249,7 +249,7 @@ stake allocated to each, they would still end up with a 1% slash, since a 1% sla
 both halves of their stake. Note that you cannot control the percentage of stake you have allocated
 to each validator or choose who your active validator will be (except in the trivial case of
 nominating a single validator). Staking allocations are controlled by the
-[Phragmén algorithm](learn-phragmen).
+[Phragmén algorithm](learn-phragmen.md).
 
 Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
 via
@@ -265,12 +265,12 @@ guidelines for different levels of severity for offences. To understand how slas
 calculated, see the equations in the section below.
 
 - Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch][]. Generally no
-  slashing, only [_chilling_](#chilling).
+  slashing, only [*chilling*](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the
   stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
   any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
-  in [GRANDPA](learn-consensus). Slashes a moderately small amount of the stake and chills.
+  in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
 - Level 4: misconduct that poses a serious security or monetary risk to the system, or mass
   collusion. Slashes all or most of the stake behind the validator and chills.
 
@@ -458,7 +458,7 @@ For specific details about validator payouts, please see
 {{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to treasury. The current token supply of DOT is ~1,000,000,000, as
-a result of [redenomination](../learn/learn-redomination.md). :polkadot }}
+a result of [redenomination](../general/redenomination.md). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
@@ -467,7 +467,7 @@ and the remainder going to treasury. The current token supply of KSM is ~10,000,
 There is an _ideal staking rate_ that the network tries to maintain.
 The goal is to have the _system staking rate_ meet the _ideal staking rate_.
 
-The _system staking rate_ would be the total amount staked over the total token supply, where
+The system staking rate would be the total amount staked over the total token supply, where
 the total amount staked is the stake of all validators and nominators on the network. The ideal
 staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
@@ -482,7 +482,7 @@ staking rate of the entire network.
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
 estimation of all DOT that should be staked, per parachain slot).
 
-> In the absence of parachains, the suggested ideal staking rate is 75%, as liquidity is not
+> In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
 > constrained by locked parachain bonds.
 
 If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators

@@ -33,12 +33,34 @@ that point would win.
 When candle auctions are used online, they require a random number to decide the moment of
 termination.
 
-Parachain slot auctions will differ slightly from a normal candle auction in that it does not use
-the random number to decide the duration of its opening phase. Instead, it has a known open phase
+Parachain slot auctions differ slightly from a normal candle auction in that it does not use
+the random number to decide the duration of its opening phase. Instead, it has a *known open phase*
 and will be retroactively determined (at the normal close) to have ended at some point in the past
 during the ending phase. So during the open phase, bids will continue to be accepted, but later bids
 have higher probability of losing since the retroactively determined close moment may be found to
 have preceded the time that a bid was submitted.
+
+### [Randomness](learn-randomness.md) in Action
+
+The following example will showcase the randomness mechanics of the candle auction for 
+the ninth auction on Kusama. Keep in mind that the candle phase has a uniform termination 
+profile and has an equal probability of ending at any given block, and the termination block 
+cannot be predicted before or during the auction.
+
+- Auction 9 starts at [`block 9362014`](https://kusama.subscan.io/extrinsic/0x7b67d653c9522b623a97e20a967b83a8517fe3821370475ddb6611cd37c29a03?event=9335014-26).
+  > The auction has a full duration equal to `block 9362014` + `72000`. 
+  > Here, `block 72000` is the "ending period", which is divided into **3600 samples of 20 blocks**. 
+  > Figuratively, the candle is lit, and the candle phase lasts for 72,000 blocks.
+- The winning sample during the ending period turned out to have the `index 1078`.
+  > Sample 1078 refers to the winner as of `block 9362014 + 21560`, which equals
+  > [`block 9383574`](https://kusama.subscan.io/block/9383574).
+- The parent block was a new BABE session in the 'Logs', which updated the randomness that was used to 
+  select that [sample index](https://kusama.subscan.io/block/9434277).
+  > You'd be able to inspect the state at the end of `block 9434277` and see the sample indices with 
+  > an [archive node](../maintain/maintain-sync.md####types-of-nodes).
+  > The digest in the 'Logs' of `9434277` is decodable and contains the random value as well as the BABE
+  > authorities.
+- As a result, the winner of this auction did not turn out to be the highest bid during the full duration.
 
 ## Rationale
 
@@ -233,3 +255,8 @@ their slots as they would be considered essential to the ecosystem's future.
 
 - [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
   W3F research page on parachain allocation that goes more in depth to the mechanism
+- [Research Update: The Case for Candle Auctions](https://polkadot.network/blog/research-update-the-case-for-candle-auctions/) - 
+  W3F breakdown and research update about candle auctions
+- [Front-Running, Smart Contracts, and Candle Auctions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3846363)
+  W3F Research team discusses how to remedy current blockchain auction setbacks with candle auctions
+  

@@ -65,6 +65,20 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    'remark-docusaurus-tabs',
+    '@docusaurus/theme-live-codeblock',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects: function (existingPath) {
+          if (existingPath.startsWith('/docs/')) {
+            return [existingPath.replace('/docs/', '/docs/en/')];
+          }
+        },
+      },
+    ],
+  ],
   themeConfig: {
     colorMode: {
       defaultMode: "light",
@@ -80,7 +94,7 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/kusama-index",
+          to: "docs/kusama-getting-started",
           label: "Docs",
           position: "right",
         },

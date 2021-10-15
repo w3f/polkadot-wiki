@@ -16,9 +16,10 @@ please feel free to ask on the Polkadot Watercooler
 
 ## Polkadot Launch
 
-The Genesis block of the Polkadot network was launched on May 26, 2020, as a Proof of Authority
-(PoA) network, with governance controlled by the single Sudo (super-user) account. During this time,
-validators started joining the network and signaling their intention to participate in consensus.
+The Genesis block of the Polkadot network was launched on May 26, 2020 at 15:36:21 UTC, as a Proof 
+of Authority (PoA) network, with governance controlled by the single Sudo (super-user) account. 
+During this time, validators started joining the network and signaling their intention to participate 
+in consensus.
 
 The network evolved to become a Proof of Stake (PoS) network on June 18, 2020. With the chain
 secured by the decentralized community of validators, the Sudo module was removed on July 20, 2020,

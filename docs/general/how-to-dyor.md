@@ -68,9 +68,9 @@ where you can see what each project has delivered and if, perhaps, their grant h
 The same thing goes for VC funding or another grant, or any advertised association for that matter.
 Check on the corresponding sites to make sure such claims are valid.
 
-Also, make sure that you understand the _scope_ of the association. Going back to the Web3 grants
+Also, make sure you understand the *scope* of the association. Going back to the Web3 grants
 example, they have a precise scope. They are granted for specific deliverables, and the review team
-only checks the code and evaluates these deliverables _of the particular project_. So, having
+only checks the code and evaluates these deliverables *of the particular project*. So, having
 received a Web3 grant provides no information about the general practices of a team, the longevity
 of the project besides the scope of the grant, or other projects the team might be building, which
 is why the badge rules clearly state that it should not be displayed on the team's landing page.
@@ -114,7 +114,7 @@ serious and passionate about building. Regularly releasing new features and upgr
 updating their site and notifying the community of these changes are good earmarks of a legitimate
 project.
 
-Additionally, active development _usually_ also means good development to be used as an _indirect_
+Additionally, active development *usually* also means good development to be used as an *indirect*
 indicator for a closed source project.
 
 An open-source project allows anyone to monitor the development activity through
@@ -197,7 +197,7 @@ without ever touching the Relay Chain. And that's the beauty of Polkadot!
 
 But in all of those cases, their plans to build on Polkadot, whatever they may be, should be clearly
 stated on their site and in their documentation. Most importantly, you should look for an
-explanation of _how_ they plan to achieve that integration. A roadmap that places the integration at
+explanation of *how* they plan to achieve that integration. A roadmap that places the integration at
 some point in the future means close to nothing without clearly stating the steps to get there.
 These plans should be evaluated in tandem with your research on the technical expertise of the team.
 
@@ -287,9 +287,9 @@ less serious team or one that is spread too thin.
 
 ## Crowdloans
 
-With the recent launch of [parachains](../learn/mirror-learn-parachains.md) on Kusama, many projects that aim
-to become a parachain launched a [crowdloan](../learn/mirror-learn-crowdloans.md) to gather the necessary
-funds to participate in the [parachain auctions](../learn/mirror-learn-auction.md). But with all the buzz
+With the recent launch of [parachains](../learn/learn-parachains.md) on Kusama, many projects that aim
+to become a parachain launched a [crowdloan](../learn/learn-crowdloans.md) to gather the necessary
+funds to participate in the [parachain auctions](../learn/learn-auction.md). But with all the buzz
 around the Kusama parachain launch and the imminent Polkadot launch, many scams will very likely also surface.
 So, crowdloans require their own section to ensure participant safety.
 
@@ -304,8 +304,8 @@ about crowdloans through the link above and [here](https://kusama.network/auctio
 
 Many parachain candidates offer a way to participate through their site as well. However, you should
 ensure that they are using the crowdloan pallet in the background and that they are simply wrapping that
-in a nicer, more user-friendly interface. If instead their crowdloan interface _transfers_ funds to an
-account, these funds will be totally under their control, and this means you need to fully trust
+in a nicer, more user-friendly interface. If their crowdloan interface *transfers* funds to an
+account instead, these funds will be totally under their control, and this means you need to fully trust
 that the team will use the funds for the crowdloan, will return your share to you when the lease period
 ends or if they do not win a slot, and will secure the funds properly. If their crowdloan involves this 
 kind of mechanism, it should be explicitly mentioned in their site and documentation.
@@ -335,7 +335,7 @@ and claim verification, have a look at the following material.
    [here](https://webliteracy.pressbooks.com).
 3. Wikipedia article on [fact-checking](https://en.wikipedia.org/wiki/Fact-checking)
 
-Finally, you should also check our complementary guide on [how to identify scams](../learn/learn-scams.md), 
+Finally, you should also check our complementary guide on [how to identify scams](scams.md), 
 which explains how to identify outright scams and avoid them, as well as how to protect
 your sensitive information.
 
