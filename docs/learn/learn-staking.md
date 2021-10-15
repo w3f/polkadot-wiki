@@ -467,7 +467,7 @@ and the remainder going to treasury. The current token supply of KSM is ~10,000,
 There is an _ideal staking rate_ that the network tries to maintain.
 The goal is to have the _system staking rate_ meet the _ideal staking rate_.
 
-The _system staking rate_ would be the total amount staked over the total token supply, where
+The system staking rate would be the total amount staked over the total token supply, where
 the total amount staked is the stake of all validators and nominators on the network. The ideal
 staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
@@ -482,7 +482,7 @@ staking rate of the entire network.
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
 estimation of all DOT that should be staked, per parachain slot).
 
-> In the absence of parachains, the suggested ideal staking rate is 75%, as liquidity is not
+> In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
 > constrained by locked parachain bonds.
 
 If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators
