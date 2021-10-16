@@ -174,6 +174,19 @@ the [Kusama Claims process][claims].
 For brand-new learners of Kusama's cousin network, Polkadot, please head over to the 
 [Polkadot Wiki][].
 
+### Kusama Gifts
+
+<img align="right" src="/img/kusama-gift.png" width="210" height="200"/>
+
+Kusama Gifts provide an easy way to:
+
+- Onboard friends or family who are curious about blockchain but haven’t made the leap yet.
+- Share your love of Kusama and send any amount of KSM.
+- Say ‘thank you’ or send someone tokens when you don’t know their address.
+- Get friends and family set up to participate in crowdloans.
+
+Learn more about how you can create and send Kusama Gifts [here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
+
 While Kusama does not support smart contracts natively, building apps on it is still possible
 (e.g. [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into *proper* development, 
 however, check out the [builders guide][].
