@@ -15,7 +15,7 @@ always better to rely on your own infrastructure than on a third-party-hosted on
 decentralized world.
 
 This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
-same process applies to any other [Substrate](https://substrate.dev/docs/en/)-based chain. First,
+same process applies to any other [Substrate](https://substrate.io)-based chain. First,
 let's clarify the term _full node_.
 
 ### Types of Nodes
@@ -175,7 +175,7 @@ values={[
 ## Get Substrate
 
 Follow instructions as outlined
-[here](https://substrate.dev/docs/en/knowledgebase/getting-started) - note that Windows users will
+[here](https://docs.substrate.io/v3/getting-started/overview/) - note that Windows users will
 have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.

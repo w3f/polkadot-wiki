@@ -72,7 +72,7 @@ Substrate offers a built-in
 [contract pallet](https://substrate.dev/rustdocs/latest/pallet_contracts/index.html);
 as time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
 Additionally, there is the
-[EVM Pallet](https://substrate.dev/docs/en/knowledgebase/smart-contracts/evm-pallet), which allows
+[EVM Pallet](https://docs.substrate.io/v3/runtime/smart-contracts/#evm-pallet), which allows
 a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
 Ethereum contracts.
 
@@ -248,7 +248,7 @@ As always, keep up to date with Polkadot and Kusama by following the
 All the best.
 
 [frontier]: https://github.com/paritytech/frontier
-[contracts pallet]: https://substrate.dev/docs/en/knowledgebase/smart-contracts/contracts-pallet
+[contracts pallet]: https://github.com/paritytech/substrate/blob/master/frame/contracts/
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
 [edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts

@@ -202,7 +202,7 @@ client for the relay chain. For more on collator nodes, see the [collator page](
 #### What PDKs Exist?
 
 Currently, the only PDK is [Parity Substrate](https://github.com/paritytech/substrate) and
-[Cumulus](https://github.com/paritytech/cumulus). **[Substrate](https://substrate.dev/)** is a
+[Cumulus](https://github.com/paritytech/cumulus). **[Substrate](https://substrate.io/)** is a
 blockchain framework that provides the basic building blocks of a blockchain (things like the
 networking layer, consensus, a Wasm interpreter) while providing an intuitive way to construct
 your runtime. Substrate is made to ease the process of creating a new chain, but it does not
@@ -211,7 +211,7 @@ directly. For this reason, `Cumulus`, an added *library* contains all of the
 {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} adot compatibility glue code.
 
 > If you haven't already, get started with Substrate. The best way to get started with Substrate is 
-> to explore the [Substrate Developer Hub](https://substrate.dev/docs/en/), an online resource built 
+> to explore the [Substrate Developer Hub](https://docs.substrate.io/), an online resource built 
 > and maintained by [Parity Technologies](https://parity.io).
 
 #### Cumulus

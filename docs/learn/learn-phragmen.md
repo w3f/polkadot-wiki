@@ -546,7 +546,7 @@ possible. It then runs an edge-reducing algorithm to minimize the number of vali
 nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an
-[off-chain worker](https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-workers).
+[off-chain worker](https://docs.substrate.io/v3/concepts/off-chain-workers).
 In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are
 not allowed in the last quarter of each era.
 
