@@ -258,7 +258,7 @@ Of the protocols that are custom to Substrate, there are the legacy Substrate st
 request-response for getting information on blocks (sync), a light client protocol, a notification
 protocol for transactions, and block announcement. For detailed information on how Substrate uses
 libp2p and the standard and custom protocols, please see the
-[networking documentation](https://substrate.dev/rustdocs/latest/sc_network/index.html).
+[networking documentation](https://docs.substrate.io/rustdocs/latest/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 

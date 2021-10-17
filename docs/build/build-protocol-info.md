@@ -85,7 +85,7 @@ make the transfer if doing so would result in reaping the sender's account.
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
 Account balance information is stored in
-[`AccountData`](https://substrate.dev/rustdocs/latest/pallet_balances/struct.AccountData.html).
+[`AccountData`](https://docs.substrate.io/rustdocs/latest/pallet_balances/struct.AccountData.html).
 Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in
@@ -107,9 +107,9 @@ over time until all the funds are transferable.
 
 More info:
 
-- [Lockable Currency](https://substrate.dev/rustdocs/latest/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://substrate.dev/rustdocs/latest/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://substrate.dev/rustdocs/latest/pallet_vesting/struct.Vesting.html)
+- [Lockable Currency](https://docs.substrate.io/rustdocs/latest/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://docs.substrate.io/rustdocs/latest/frame_support/traits/enum.WithdrawReason.html)
+- [Vesting](https://docs.substrate.io/rustdocs/latest/pallet_vesting/struct.Vesting.html)
 
 ## Extrinsics and Events
 
@@ -195,7 +195,7 @@ The correct way to uniquely identify an extrinsic on a Substrate-based chain is 
 (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of
 extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a
 transaction. This methodology is reflected in the Substrate codebase itself, for example to
-[reference a previous transaction](https://substrate.dev/rustdocs/latest/pallet_multisig/struct.Timepoint.html)
+[reference a previous transaction](https://docs.substrate.io/rustdocs/latest/pallet_multisig/struct.Timepoint.html)
 from the Multisig pallet.
 
 ### Events

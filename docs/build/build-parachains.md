@@ -230,7 +230,7 @@ finalize, and treat as correct.
 
 See the [Cumulus overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a
 more detailed description of Cumulus, and for those with experience in Substrate, give the
-[Cumulus Workshop](https://substrate.dev/cumulus-workshop/) a try.
+[Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/) a try.
 
 Cumulus is still in development, but the idea is that it should be simple
 to take a Substrate chain and add the parachain code by importing the crates and adding a single line
@@ -344,7 +344,7 @@ Once the executable is built, launch collators for your parachain:
 ```
 
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
-has created a [cumulus parachain workshop](https://substrate.dev/cumulus-workshop/) to show you how.
+has created a [Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/) to show you how.
 Get stuck or need support along the way? Join the
 [Parachain Technical matrix chat channel](https://matrix.to/#/#parachain-technical:matrix.parity.io)
 and connect with other builders there.
@@ -418,7 +418,7 @@ If you would like to connect to a parachain via [Polkadot-JS Apps](https://polka
 you may do so by clicking on the network selection at the top left-hand corner of the navigation and
 selecting any parachain of choice. For the purpose of these following examples, we will be using the
 Rococo testnet "Custom Node" underneath "Development", following the
-[parachain workshop](https://substrate.dev/cumulus-workshop/).
+[Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/).
 
 <img src="../docs/assets/polkadotjs_network_parachains.png" height="650" width="450"/>
 
@@ -468,7 +468,7 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## Resources 
 
-- [Parachains Guide Overview](https://substrate.dev/substrate-how-to-guides/docs/parachains/overview/)
+- [Parachains Guide Overview](https://docs.substrate.io/how-to-guides/v3/parachains/connect/)
 - [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
