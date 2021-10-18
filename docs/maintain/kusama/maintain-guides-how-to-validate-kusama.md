@@ -571,6 +571,12 @@ other peers over the network.
 - [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
 
+ > Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider. 
+ You may be locked out of your account and your server shut down if you come in violation.
+ For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
+ their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
+ explicit permission to do so. This may extend to other cryptocurrency activity.
+
 ## Using Docker
 
 If you have Docker installed, you can use it to start your validator node without needing to build

@@ -43,13 +43,13 @@
     "@actions/github": "^5.0.0",
     "@crowdin/cli": "^3.7.0",
     "@docusaurus/core": "^2.0.0-beta.6",
-    "@docusaurus/module-type-aliases": "^2.0.0-beta.6",
-    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.6",
-    "@docusaurus/preset-classic": "^2.0.0-beta.6",
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.7",
+    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.7",
+    "@docusaurus/preset-classic": "^2.0.0-beta.7",
     "@octokit/rest": "^18.12.0",
-    "@polkadot/api": "^6.3.1",
+    "@polkadot/api": "^6.4.1",
     "@polkadot/keyring": "^7.3.1",
-    "axios": "^0.22.0",
+    "axios": "^0.23.0",
     "chalk": "^4.1.2",
     "cross-env": "^7.0.3",
     "fs-extra": "^10.0.0",
@@ -70,13 +70,13 @@
     "yargs": "^17.2.1"
   },
   "dependencies": {
-    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.6",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.7",
     "@polkadot/util": "^7.3.1",
     "@polkadot/wasm-crypto": "^4.2.1",
     "ansi-html": "^0.0.7",
     "immer": "^9.0.6",
     "remark-docusaurus-tabs": "^0.1.0",
-    "replace-in-file": "^6.2.0"
+    "replace-in-file": "^6.3.1"
   },
   "husky": {
     "hooks": {

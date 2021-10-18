@@ -37,7 +37,7 @@ of the parachain. Some parachains may be specific to a particular application, o
 specific features like smart contracts, privacy, or scalability &mdash; still, others might be
 experimental architectures that are not necessarily blockchain in nature.
 
-Polkadot provides many ways to secure a slot for a parachain slot for a particular length of time.
+Polkadot provides many ways to secure a slot for a parachain for a particular length of time.
 Parathreads are part of a pool that shares slots and must-win auctions for individual blocks.
 Parathreads and parachains have the same API; their difference is economic. Parachains will have to
 reserve DOT for the duration of their slot lease; parathreads will pay on a per-block basis.
@@ -50,7 +50,7 @@ Polkadot has a shared state between the Relay Chain and all of the connected par
 Relay Chain must revert for any reason, then all of the parachains would also revert. This is to
 ensure that the validity of the entire system can persist and no individual part is corruptible.
 
-The shared state makes it so that the trust assumptions when using Polkadot parachains are only
+The shared state ensures that the trust assumptions when using Polkadot parachains are only
 those of the Relay Chain validator set and no other. Since the validator set on the Relay Chain is
 expected to be secure with a large amount of stake put up to back it, parachains should benefit from
 this security.

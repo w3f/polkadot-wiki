@@ -25,7 +25,7 @@ In terms of hardware wallet support, you can use the [Kusama Ledger application]
 or [Parity Signer](../../learn/learn-account-generation.md#parity-signer).
 
 Another option you may consider using is the 
-[Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey#:~:text=Subkey%20is%20a%20public%20key,signatures%20on%20the%20Ristretto%20group) 
+[Subkey](https://docs.substrate.io/v3/tools/subkey/#:~:text=Subkey%20is%20a%20public%20key,signatures%20on%20the%20Ristretto%20group) 
 command-line utility, which will allow you to
 take extra steps to protect the security of your key.
 
@@ -88,7 +88,7 @@ cargo install --git https://github.com/alexcrichton/wasm-gc
 Alternatively, you can build Subkey from the source code.
 
 1. Follow the build instructions for
-   [Substrate](https://substrate.dev/docs/en/knowledgebase/getting-started).
+   [Substrate](https://docs.substrate.io/v3/getting-started/installation/).
 2. When building, only build Subkey by typing `cargo build -p subkey`.
 3. The executable is `./target/debug/subkey`.
 
@@ -114,7 +114,7 @@ NOTE: Previous versions of Subkey only generated Substrate addresses. If you do 
 a new seed, you can convert the Substrate address to a Kusama address by following
 [this section](#kusama-from-substrate-address).
 
-See the [Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) or
+See the [Subkey documentation](https://docs.substrate.io/v3/tools/subkey/) or
 enter `subkey --help` for more usage examples.
 
 ### Using Polkadot-JS UI

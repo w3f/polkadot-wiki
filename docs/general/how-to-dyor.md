@@ -22,7 +22,7 @@ Furthermore, a legitimate project doesn't necessarily mean it will also be a suc
 
 The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This
 usually means that the project is building, or intends to build, on the Polkadot ecosystem, using
-[Substrate](https://substrate.dev). But any project can claim that, so the existence of this
+[Substrate](https://substrate.io). But any project can claim that, so the existence of this
 statement on a project's site infers no information about the project's legitimacy, and it's
 certainly not a "seal of approval" by Web3 Foundation.
 
@@ -191,7 +191,7 @@ are gearing up to claim a parachain slot, the
 for the next slot, and the [crowdloan](https://polkadot.js.org/apps/#/parachains/crowdloan) page
 which projects are gathering funds from their community to participate in auctions.
 
-But not all projects that build a chain using [Substrate](https://substrate.dev) aim to become a
+But not all projects that build a chain using [Substrate](https://substrate.io) aim to become a
 parachain. Some use it simply because of its infrastructure to build their customised chain, without
 any plans to connect to the Relay Chain. And other projects may aim to become a parachain only on
 Kusama or directly on Polkadot.

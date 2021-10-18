@@ -167,7 +167,7 @@ that {{ polkadot: Polkadot :polkadot }}
 #### How about parachains that are not Substrate-based?
 
 Substrate provides 
-[FRAME Pallets](https://substrate.dev/docs/en/knowledgebase/runtime/frame#pallets) as
+[FRAME Pallets](https://docs.substrate.io/v3/runtime/frame/) as
 part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
 that can be used for consensus. {{ polkadot: Polkadot :polkadot }} 
 {{ kusama: Kusama :kusama }} being a Substrate-based chain relies on BABE as the block

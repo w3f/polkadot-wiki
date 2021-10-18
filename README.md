@@ -9,7 +9,7 @@
 
 # Polkadot Wiki
 
-<img align="right" src="docs/assets/web3-logo.png" width="518" height="285">
+<img align="right" src="docs/assets/web3-logo.png" width="500" height="255">
 
 <p align="left">
   The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by Web3 Foundation to 
@@ -19,11 +19,10 @@
 ## Contributing to Documentation
 
 The Wiki is an open source project and we will review all issues and pull-requests created
-in this repository. If you notice typos or grammatical errors, please feel free to directly create pull requests with
-these corrections.
-
-Larger contributions may start as issues to test the waters on the subject with the maintainers.
-It is generally preferable to create a pull request over an issue to propose a change to the wiki content.
+in this repository. If you notice typos or grammatical errors, please feel free to create pull requests 
+with these corrections directly. Larger contributions may start as issues to test the waters on the subject 
+with the maintainers. It is generally preferable to create a pull request over an issue to propose a change 
+to the Wiki content.
 
 ### Running Locally
 
@@ -34,22 +33,22 @@ After cloning the source locally, you can start the websites with each of these 
 > The site is built using Docusaurus: you may need to install Docusaurus before running
 > the Wiki locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
 
-```zsh
-# For the Polkadot Wiki:
-yarn polkadot:start
-# For the Kusama Guide:
-yarn kusama:start
-```
+#### Building
 
-#### Building IPFS
+> The Wiki is currently being deployed onto IPFS and will follow the same configuration to build the static files.
 
-- Run `yarn kusama:build`
-- Run `yarn polkadot:build`
+- Kusama Guide: `yarn kusama:build`
+- Polkadot Wiki: `yarn polkadot:build`
+
+#### Start
+
+- For the Kusama Guide: `yarn kusama:start`
+- For the Polkadot Wiki:: `yarn polkadot:start`
 
 #### Running GitHub Pages
 
-- Run `yarn kusama:publish-gh-pages`
-- Run `yarn polkadot:publish-gh-pages`
+- Kusama Guide: `yarn kusama:publish-gh-pages`
+- Polkadot Wiki: `yarn polkadot:publish-gh-pages`
 
 ### Style Guide
 
@@ -103,8 +102,8 @@ one shown above.
 
 ### Automated Deployments
 
-The Polkadot wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
-The Kusama wiki is also deployed to GitHub Pages (via a separate repository).
+The Polkadot Wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages.
+The Kusama Wiki is also deployed to GitHub Pages (via a separate repository).
 
 Development servers exist at `https://staging.polkadot.network` and `https://staging.kusama.network`.
 The servers will reflect the latest `master` commit or PR put up against the master branch by a member of the Technical Education team.
@@ -114,25 +113,25 @@ The latest version of `master` is staged and checked by the team. If all is well
 ### Mirror Pages
 
 A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
-Thus, our Kusama section will either hijack some content it shares with the rest of the wiki, or
+Thus, our Kusama section will either hijack some content it shares with the rest of the Wiki or
 lack that content.
 
 To solve this, the repo mirrors some pages and includes them in additional sidebars. The `scripts`
 folder contains a `mirror.js` script that creates a copy of the pages to duplicate across sidebars.
-The new pages are prefixed with `mirror` and first need to be declared in `mirror.js`, then added to
+The new pages are prefixed with `mirror` and must first be declared in `mirror.js`, then added to
 the relevant sidebar section. To run the script:
 
 ```bash
 yarn mirror
 ```
 
-> Note: This command runs automatically when using `polkadot:start` or `kusama:start` development
+> Note: This command runs when using `polkadot:start` or `kusama:start` development
 > scripts, so you don't need to worry about running it manually if you start the development site
 > with one of these commands.
 
 ### Conditional Rendering
 
-The two wikis support conditional rendering depending on which wiki is being deployed. This is
+The two Wikis support conditional rendering depending on which Wiki is being deployed. This is
 useful for mirrored pages that have most content in common, but some minor differences. To use this
 functionality, surround Kusama specific content with {{ kusama: :kusama }}, and polkadot specific
 content with {{ polkadot: :polkadot }}. Example:
@@ -158,7 +157,7 @@ We are using Crowdin to manage all different translations. You can go to the
 translate to start.  
 All translated content through Crowdin will regularly submit a pull request to this repository.
 
-If you do not see the language you would like to translate, please let us know via Riot.
+If you do not see the language you would like to translate, please let us know via Element.
 
 ## License
 

@@ -27,6 +27,7 @@ module.exports = {
         "learn/learn-identity",
         "learn/learn-registrar",
         "learn/learn-treasury",
+        "learn/learn-assets",
         "maintain/kusama/maintain-guides-society-kusama",
         "general/kusama/kusama-social-recovery",
         "maintain/kusama/maintain-guides-how-to-validate-kusama",

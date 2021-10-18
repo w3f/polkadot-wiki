@@ -69,10 +69,10 @@ can also be mapped directly to and from Substrate's SS58 scheme from existing ac
 ### Substrate Contracts
 
 Substrate offers a built-in
-[contract pallet](https://substrate.dev/rustdocs/latest/pallet_contracts/index.html);
+[contract pallet](https://docs.substrate.io/rustdocs/latest/pallet_contracts/index.html);
 as time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
 Additionally, there is the
-[EVM Pallet](https://substrate.dev/docs/en/knowledgebase/smart-contracts/evm-pallet), which allows
+[EVM Pallet](https://docs.substrate.io/v3/runtime/smart-contracts/#evm-pallet), which allows
 a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
 Ethereum contracts.
 
@@ -89,7 +89,7 @@ Here is the list of current resources available to developers who want to get st
 contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate Contracts Workshop](https://substrate.dev/substrate-contracts-workshop/) - Walks you
+- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/v3/ink-workshop/pt1/) - Walks you
   through the basics of writing and deploying an ERC-20 token using `ink!`.
 
 ### Contracts Pallet
@@ -248,7 +248,7 @@ As always, keep up to date with Polkadot and Kusama by following the
 All the best.
 
 [frontier]: https://github.com/paritytech/frontier
-[contracts pallet]: https://substrate.dev/docs/en/knowledgebase/smart-contracts/contracts-pallet
+[contracts pallet]: https://github.com/paritytech/substrate/blob/master/frame/contracts/
 [edgeware]: https://edgewa.re
 [edgeware documentation]: https://docs.edgewa.re/
 [edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts
