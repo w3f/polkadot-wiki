@@ -133,7 +133,7 @@ are available [here](../maintain-guides-how-to-unbond.md).
 
 Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in
 CLI instead. The CLI approach allows you to interact with the Polkadot / Kusama network without
-going to the PolkadoJS dashboard.
+going to the PolkadotJS dashboard.
 
 ### Step 1: Install @polkadot/api-cli
 
