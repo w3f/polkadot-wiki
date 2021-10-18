@@ -24,7 +24,7 @@ an advanced suite of governance tools and, using the [WebAssembly](https://webas
 standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your
 growing needs without the risks of network forks.
 
-> Note: If you haven't heard of Governance before, a great place to start is the
+> If you haven't heard of Governance before, a great place to start is the
 > [Governance page](../learn/learn-governance.md)
 
 By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users
@@ -147,6 +147,19 @@ control their data and are not limited by trust bounds within the network.
 </tr>
 
 <br />
+
+### Polkadot Gifts
+
+<img align="right" src="/img/polkadot-gift.png" width="210" height="200"/>
+
+Polkadot Gifts provide an easy way to:
+
+- Onboard friends or family who are curious about blockchain but haven’t made the leap yet.
+- Share your love of Polkadot and send any amount of DOT.
+- Say ‘thank you’ or send someone tokens when you don’t know their address.
+- Get friends and family set up to participate in crowdloans.
+
+Learn more about how you can create and send Polkadot Gifts [here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
 
 ## Why Polkadot?
 

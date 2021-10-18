@@ -7,7 +7,7 @@ slug: ../build-ss58-registry
 ---
 
 Substrate-based chains, including the Polkadot and Kusama relay chains, use an
-[SS58 encoding](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>) for
+[SS58 encoding](https://docs.substrate.io/v3/advanced/ss58/) for
 their address formats. This page serves as a registry for teams to see which chain corresponds to a
 given prefix, and which prefixes are available.
 
@@ -54,7 +54,7 @@ given prefix, and which prefixes are available.
 | 39     | mathchain             | MathChain mainnet                                     | MATH                                      | 18                     | \*25519          | https://mathwallet.org        |
 | 40     | mathchain-testnet     | MathChain testnet                                     | MATH                                      | 18                     | \*25519          | https://mathwallet.org        |
 | 41     | poli                  | Polimec Chain                                         | null                                      | null                   | \*25519          | https://polimec.io/           |
-| 42     | substrate             | Substrate                                             | null                                      | null                   | \*25519          | https://substrate.dev/        |
+| 42     | substrate             | Substrate                                             | null                                      | null                   | \*25519          | https://substrate.io/        |
 | 43     | null                  | Bare 32-bit ECDSA SECP-256k1 public key.              | null                                      | null                   | null             | null                          |
 | 44     | chainx                | ChainX                                                | PCX                                       | 8                      | \*25519          | https://chainx.org/           |
 | 45     | uniarts               | UniArts Network                                       | UART, UINK                                | 12, 12                 | \*25519          | https://uniarts.me            |

@@ -58,7 +58,7 @@ Please see the [Wallets](build-wallets.md) page.
 
 - [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in
   Rust. The Rust version of the Polkadot Host is being built with Substrate.
-- [Substrate Knowledge Base](https://substrate.dev/docs/en) - Comprehensive documentation and
+- [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and
   tutorials for building a blockchain using Substrate.
 - [Substrate VSCode plugin](https://github.com/paritytech/vscode-substrate).
 - [Substrate Debug Kit](https://github.com/paritytech/substrate-debug-kit) - A collection of debug
@@ -119,7 +119,7 @@ usage instructions are provided at
   Tool to construct, sign, and broadcast transactions. Signing can be done offline.
 - [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - A С++ API for Polkadot, can
   build `clip`, a command line tool.
-- [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) - Command line utility for
+- [Subkey](https://docs.substrate.io/v3/tools/subkey/) - Command line utility for
   generating and inspecting key pairs.
 
 ### WASM
@@ -158,7 +158,7 @@ WebAssembly related tools and projects.
 
 ### SCALE Codec
 
-The [SCALE](https://substrate.dev/docs/en/knowledgebase/advanced/codec) (Simple Concatenated
+The [SCALE](https://docs.substrate.io/v3/advanced/scale-codec/) (Simple Concatenated
 Aggregate Little-Endian) Codec is a lightweight, efficient, binary serialization and deserialization
 codec.
 

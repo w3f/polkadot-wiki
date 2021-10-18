@@ -27,7 +27,7 @@ This section of the wiki is divided into the following parts:
 ## Tools & Resources
 
 - [Tools](build-tools-index.md) - Maintained list of tools.
-- [Subkey](https://substrate.dev/docs/en/knowledgebase/integrate/subkey) - Command line utility for
+- [Subkey](https://docs.substrate.io/v3/tools/subkey/) - Command line utility for
   generating and inspecting key pairs.
 - [JS tools](https://github.com/polkadot-js/tools) - TypeScript tools for offline signing of
   transactions, RPC calls, and more.
