@@ -67,7 +67,7 @@ timely manner, should monitor changes to runtime events and auxiliary tooling, s
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
 Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
-occurs before broadcasting a priory constructed transaction, you will need to reconstruct it with
+occurs before broadcasting a previously constructed transaction, you will need to reconstruct it with
 the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)

@@ -9,7 +9,7 @@ slug: ../faq
 *This FAQ focuses on technical questions for users interested in developing applications for
 Polkadot. If you have a more general question, you may wish to search for the answer on our support
 [Knowledge Base](https://support.polkadot.network/support/home) or the main
-[Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
+[Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
 [Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or email
 [support](mailto:support@polkadot.network).*

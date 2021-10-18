@@ -57,7 +57,7 @@ He has a Bachelor of Science in Aeronautical and Mechanical Engineering.
 - twitter: [@jakehemmerle](https://twitter.com/jakehemmerle)
 - telegram: [@jakehemmerle](https://t.me/jakehemmerle)
 
-Jake is a technical education intern at the Web3 Foundation and is completing his Bachelors in
+Jake is a technical education intern at Web3 Foundation and is completing his Bachelors in
 Computer science from the University of Cincinnati. He has been learning about blockchain technology
 since 2018 and has long personal interests in peer-to-peer systems, network protocols, applied
 cryptography and privacy enhancing technologies. Jake helps maintain the Wiki and is contributing to
@@ -70,9 +70,9 @@ the w3f/schnorrkel library.
 - email: [danny@web3.foundation](mailto:danny@web3.foundation)
 - matrix / riot / element: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
 
-Danny is a Technical Educator at the Web3 Foundation from Canada. He has a keen interest for
-blockchain technologies and has an admiration for the web 3.0 vision. Danny focuses on educational
-content at the Web3 Foundation and acts on his passion for learning & education. He has a background
+Danny is a Technical Educator at Web3 Foundation from Canada. He has a keen interest for
+blockchain technologies and has an admiration for the Web 3.0 vision. Danny focuses on educational
+content at Web3 Foundation and acts on his passion for learning & education. He has a background
 in computer engineering, politics, and philosophy.
 
 ---
@@ -83,7 +83,7 @@ in computer engineering, politics, and philosophy.
 - matrix / riot / element: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
 - twitter: [@semres8](https://twitter.com/semres8)
 
-Emre is a Technical Educator at the Web3 Foundation. His background is in full stack software
+Emre is a Technical Educator at Web3 Foundation. His background is in full stack software
 development, education, and blockchain technology consulting. He is passionate about learning and
 teaching and has always kept a foot in education by designing and delivering software development
 and blockchain classes at General Assembly, Code Fellows, and Columbia University.
@@ -96,7 +96,7 @@ and blockchain classes at General Assembly, Code Fellows, and Columbia Universit
 - matrix / riot / element: [@radha:web3.foundation](https://matrix.to/#/@radha:web3.foundation)
 - twitter: [@DrW3RK](https://twitter.com/DrW3RK)
 
-Radha is a Technical Educator at the Web3 Foundation. Radha has a PhD in Computer Science and has
+Radha is a Technical Educator at Web3 Foundation. Radha has a PhD in Computer Science and has
 three years of experience teaching Computer Science courses. He also taught a Massively Open Online
 Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). He is excited to
 contribute to Web3 Foundation's vision by educating professionals and the general public about Web
@@ -109,7 +109,7 @@ contribute to Web3 Foundation's vision by educating professionals and the genera
 - email: [alexander@web3.foundation](mailto:alexander@web3.foundation)
 - matrix / riot / element: [@alexander:web3.foundation](https://matrix.to/#/@alexander:web3.foundation)
 
-Alex is a Technical Education Intern at the Web3 Foundation. He is preparing to receive his Computer Science B.S.
+Alex is a Technical Education Intern at Web3 Foundation. He is preparing to receive his Computer Science B.S.
 from San Francisco State University. Outside of his formal education, Alex has developed a deep passion for educating others
 on decentralized systems and pushing forward the Web 3.0 vision. He has educational experience in cryptography, data privacy,
 and enterprise security.

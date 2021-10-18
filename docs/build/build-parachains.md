@@ -31,7 +31,7 @@ approach. Some examples of what a parachain could be are:
 
 and more.
 
-Polkadot aims to be a bet against so-called *chain-maximalism*, where the success of Polkadot's
+Polkadot aims to be a bet against *chain-maximalism*, where the success of Polkadot's
 heterogeneous multi-chain approach will play a key part in the overall advancement of Web 3.0 and
 decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
 internet of the future will have many different types of blockchains working together.
