@@ -127,13 +127,12 @@ blocked upon loading, helping to prevent you from visiting these sites and thus 
 You can use the following list of our official domains to make sure that you're visiting an official
 site:
 
-- polkadot.network
-- polkadot.io
-- kusama.network
-- web3.foundation
-- parity.io
-- substrate.dev
-- substrate.io
+- https://polkadot.network
+- https://polkadot.io
+- https://kusama.network
+- https://web3.foundation
+- https://parity.io
+- https://substrate.io
 
 Of course, many projects building on Polkadot and Kusama that use similar names. If, however, a site
 poses as Polkadot, Kusama, Web3 Foundation, or Parity on a domain not listed above, then it's most

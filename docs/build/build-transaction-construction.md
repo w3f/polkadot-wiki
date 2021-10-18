@@ -201,7 +201,7 @@ There are several ways to submit a signed payload:
 ## Notes
 
 Some addresses to use in the examples. See
-[Subkey documentation](https://substrate.dev/docs/en/knowledgebase/integrate/subkey).
+[Subkey documentation](https://docs.substrate.io/v3/tools/subkey/).
 
 ```bash
 $ subkey --network polkadot generate

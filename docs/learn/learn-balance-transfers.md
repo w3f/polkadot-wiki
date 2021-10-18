@@ -112,7 +112,7 @@ see why by hovering over the information icon next to it.
 #### Existing Recovery Info
 
 Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
-[Recovery Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#recovery), so this is
+[Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
 probably not the reason for your tokens having existing references.
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
@@ -121,7 +121,7 @@ chain state. This can be found under `Developer > Chain state` in [PolkadotJS Ap
 #### Existing {{ polkadot: Non-DOT :polkadot }} {{ kusama: Non-KSM :kusama }} Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
-[Assets Pallet](https://substrate.dev/docs/en/knowledgebase/runtime/frame#assets), so this is
+[Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
 probably not the reason for your tokens having existing references.
 
 ### From the Accounts Page
