@@ -12,6 +12,10 @@ period_, which serves as a cooldown. You will not be able to transfer your token
 has elapsed, and you will not receive any staking rewards during this period (as you are not
 nominating any validators).
 
+Below are the steps you need to follow to unbond **all** of your bonded tokens.
+
+**Skip Step 1 and directly go to Step 2** if you like to **unbond a fraction of your bonded tokens**
+
 ### Step 1: Stop Nominating
 
 On the [Polkadot-JS Apps][] navigate to the "Staking" tab.
