@@ -14,7 +14,7 @@ Cumulus, the time it takes to develop and launch a new chain has dropped signifi
 it would take years to launch a new chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision
-with {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}. 
+with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. 
 It will explain the difference between a parachain and a smart contract 
 (and why one may be better suited for your application over the other).
 
