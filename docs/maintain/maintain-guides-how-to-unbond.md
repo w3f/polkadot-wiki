@@ -67,8 +67,8 @@ Go to the "Extrinsics" option that's located in the "Developer" dropdown in the 
 
 ![extrinsic menu](../assets/rebonding-1.png)
 
-Select the "staking" pallet and the "rebond" extrinsic. Enter the amount of tokens that are
-currently locked in unbonding that you want to rebond. Then click "Submit Transaction".
+Select the "staking" pallet and the "rebond" extrinsic. Enter the amount of [Plancks](../learn/learn-DOT.md#polkadot) that are
+currently locked in unbonding that you want to rebond, where 1 DOT = 10,000,000,000 Plancks. Then click "Submit Transaction".
 
 ![confirm](../assets/rebonding-2.png)
 
