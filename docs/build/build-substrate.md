@@ -28,8 +28,9 @@ this is done through two main approaches:
    - While these nodes are more popular in their usage as they are convenient to use, they are centralized 
      and insecure.
 
-There is now a new paradigm: instead of specifying a centralized RPC node, developers just need to specify 
-the blockchain's chain specification for their application to synchronize with the chain.
+There is now a new paradigm: instead of specifying a centralized RPC node, developers just need to 
+specify the blockchain's [chain specification](https://docs.substrate.io/v3/runtime/chain-specs/) for 
+their application to synchronize with the chain.
 
 ### Node Bundled with User Interface
 
@@ -42,9 +43,20 @@ Application developers can now run a Substrate light client in any NodeJS enviro
 ([@substrate/connect](https://www.npmjs.com/package/@substrate/connect), as well as 
 in-browser applications and extensions, Electron apps, IOT devices, and mobile phones.
 
+#### Two key features
+
+1. Ready-to-use light clients for Substrate chains: Currenlty, Substrate Connect supports Polkadot, 
+   Kusama, Westend and Rococo; because light clients are part of the overall Substrate framework, they 
+   are available for Substrate-based blockchains.
+2. Bundling light-clients of multiple chains: The 
+   [browser extension](https://www.npmjs.com/package/@substrate/connect-extension-protocol) allows 
+   end-users to interact with applications connected to multiple blockchains or connect their own 
+   blockchains to applications that support it.
+
 ## Resources
 
 - [What is a light client and why you should care?](https://www.parity.io/blog/what-is-a-light-client/)
+- [Introducing Substrate Connect: Browser-Based Light Clients for Connecting to Substrate Chains](https://www.parity.io/blog/introducing-substrate-connect)
 - [Substrate Connect GitHub Repo](https://github.com/paritytech/substrate-connect/tree/master/projects/extension)
 - [Substrate Connect Docs](https://docs.substrate.io/v3/integration/substrate-connect/)
 - 
