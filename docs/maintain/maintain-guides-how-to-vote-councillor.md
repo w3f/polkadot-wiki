@@ -14,10 +14,12 @@ councillors in the elections.
 
 ## Voting for Councillors
 
-Voting for councillors requires you to lock 5 DOT on Polkadot or 0.0083 KSM on Kusama for the
-duration of your vote.
+Voting for councillors requires you to reserve 
+{{ polkadot: ~20 DOT :polkadot}}{{ kusama: ~0.063 KSM :kusama}} 
+(a base amount + a per vote amount). You can then bond whatever amount you wish to put 
+behind your vote. See the [democracy guide](maintain-guides-democracy.md) for more information.
 
-> NOTE: Voting and staking locks **can overlap**
+> Note: Voting and staking locks **can overlap**
 > A user can use staked funds to vote for Councillors and/or use those funds in referenda).
 > A user is only prohibited from transferring these funds to another account.
 
@@ -29,7 +31,7 @@ equalized among the chosen group. Unlike validator elections, there is no unbond
 reserved tokens. Once you remove your vote, your tokens will be liquid again.
 
 > Warning: It is your responsibility not to put your entire balance into the reserved value when you
-> make a vote for councillors. It's best to keep _at least_ enough DOT/KSM to pay for transaction
+> make a vote for councillors. It's best to keep *at least* enough DOT/KSM to pay for transaction
 > fees.
 
 Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab.
