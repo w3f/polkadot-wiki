@@ -250,6 +250,7 @@ This is recommended for users with backgrounds of all levels, and the course is 
   explain and demonstrate how to use Polkadot and its [User Interface][ui].
 - Reading [What is Polkadot? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Polkadot's Medium][p medium] or [Web3 Foundation's Medium][w medium].
+- [What can I do with my DOT?][../learn/learn-dot.md]
 
 For brand-new learners of Kusama, Polkadot's canary cousin network: To learn more about how to build
 and maintain on the Kusama network, please head over to our [Kusama Guide][kusama guide].
