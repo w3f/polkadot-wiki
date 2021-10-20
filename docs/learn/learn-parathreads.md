@@ -95,8 +95,7 @@ There are two sources of compensation for collators:
 
 Collators may be paid in local parathread currency. However, the Relay Chain transacts with the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} native currency only. Collators 
-must then submit block candidates with an associated bid in {{ polkadot: DOT :polkadot }} 
-{{ kusama: KSM :kusama }}.
+must then submit block candidates with an associated bid in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
 
 ## Parachain Slot Swaps
 
