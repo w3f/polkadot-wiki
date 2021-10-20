@@ -17,7 +17,7 @@ without running out of funds.
 If the Treasury ends a budget period without spending all of its funds, it suffers a burn of a
 percentage of its funds -- thereby causing deflationary pressure.
 {{ polkadot: This percentage is currently at 1%
-on Polkadot. :polkadot }} {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
+on Polkadot. :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
 [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
 burned. :kusama }}
 
@@ -145,7 +145,7 @@ To better understand the process a tip goes through until it is paid out, let's 
 
 ### Example
 
-Bob has done something great for {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
+Bob has done something great for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 Alice has noticed this and decides to report Bob as deserving a tip from the Treasury. The Council
 is composed of three members Charlie, Dave, and Eve.
 
@@ -170,9 +170,9 @@ independently) decide on the value of the tip that Bob deserves.
 Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of
 the benefit Bob has provided to Kusama.
 
-Charlie tips {{ polkadot: 10 DOT :polkadot }} {{ kusama: 1 KSM :kusama }}. Dave tips
-{{ polkadot: 30 DOT :polkadot }} {{ kusama: 3 KSM :kusama }}. Eve tips
-{{ polkadot: 100 DOT :polkadot }} {{ kusama: 10 KSM :kusama }}.
+Charlie tips {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }}. Dave tips
+{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }}. Eve tips
+{{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}.
 
 The tip could have been closed out with only two of the three tippers. Once more than half of the
 tippers group have issued tip valuations, the countdown to close the tip will begin. In this case,
@@ -180,7 +180,7 @@ the third tipper issued their tip before the end of the closing period, so all t
 make their tip valuations known.
 
 Now the actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out
-{{ polkadot: 30 DOT :polkadot }} {{ kusama: 3 KSM :kusama }} from the Treasury.
+{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }} from the Treasury.
 
 In order for Bob to be paid his tip, some account must call the `close_tip` extrinsic at the end of
 the closing period for the tip. This extrinsic may be called by anyone.

@@ -472,11 +472,11 @@ the total amount staked is the stake of all validators and nominators on the net
 staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
 token liquid. An **ideal staking rate of 50% stabilizes the network**.
-{{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} is inflated according to the system
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the system
 staking rate of the entire network.
 
 > According to the inflation model, this would suggest that if you do not use your
-> {{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} for staking, your tokens
+> {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for staking, your tokens
 > dilute over time.
 
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
@@ -493,7 +493,7 @@ in the percentage of staking rewards that go to the Treasury.
 
 <p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
-- **x-axis**: Proportion of {{ polkadot: DOT :polkadot }} {{ kusama: KSM :kusama }} staked
+- **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
 - **Blue line**: Inflation rewards to stakers
 - **Green line**: Staker rate of return

@@ -6,7 +6,7 @@ description: Learn about fungible and non-fungible assets in the Polkadot networ
 slug: ../learn-assets
 ---
 
-Assets in the {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network can be
+Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
 represented on several chains. They can also take many forms, from a parachain's native token to
 on-chain representations of off-chain reserves. This page focuses on the latter, namely assets that
 would be issued by a creator (e.g. rights to audited, off-chain reserves held by the creator, or art
@@ -16,23 +16,23 @@ The
 {{ polkadot: [Statemint parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/) :polkadot }}
 {{ kusama: [Statemine parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/) :kusama }}
 hosts data structures and logic that specialize in the creation, management, and use of assets in
-the {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network. Although other
+the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. Although other
 parachains can host applications dealing with assets on
-{{ polkadot: Statemint, Statemint :polkadot }} {{ kusama: Statemine, Statemine :kusama }} can be
+{{ polkadot: Statemint, Statemint :polkadot }}{{ kusama: Statemine, Statemine :kusama }} can be
 thought of as the "home base" of assets in the network.
 
-{{ polkadot: Statemint uses DOT :polkadot }} {{ kusama: Statemine uses KSM :kusama }} as its native
+{{ polkadot: Statemint uses DOT :polkadot }}{{ kusama: Statemine uses KSM :kusama }} as its native
 token. The chain yields its governance to its parent Relay Chain, and has no inflation or era-based
 rewards for collators (although collators do receive a portion of transaction fees). As a
 [common good parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
 {{ polkadot: Statemint
 has a trusted relationship with the Relay Chain,
 and as such, can teleport DOT between itself and the Relay Chain. That is, DOT on Statemint is
-just as good as DOT on the Relay Chain. :polkadot }} {{ kusama: Statemine has a trusted relationship with the Relay Chain,
+just as good as DOT on the Relay Chain. :polkadot }}{{ kusama: Statemine has a trusted relationship with the Relay Chain,
 and as such, can teleport KSM between itself and the Relay Chain. That is, KSM on Statemine is
 just as good as KSM on the Relay Chain. :kusama }}
 
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} does not support smart
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} does not support smart
 contracts. See the [Advanced](#advanced-techniques) section at the bottom for discussion on using
 proxy and multisig accounts to replicate oft used contract logic.
 
@@ -48,7 +48,7 @@ upon every release, leading to efficient execution and stable transaction fees.
 ### Creation and Management
 
 Anyone on the network can create assets on {{ polkadot: Statemint, as long as they can reserve the
-required deposit of 100 DOT. :polkadot }} {{ kusama: Statemine, as long as they can reserve
+required deposit of 100 DOT. :polkadot }}{{ kusama: Statemine, as long as they can reserve
 the required deposit of 1 KSM. :kusama }}. The network reserves the deposit on creation. The creator
 also must specify a unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId`
 should be the canonical identifier for an asset, as the chain does not enforce the uniqueness of
@@ -89,20 +89,20 @@ already exist for the transfer to succeed.
 The chain also contains a `transfer_keep_alive` function, similar to that of the Balances pallet,
 that will fail if execution would kill the sending account.
 
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} also sweeps dust balances into
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} also sweeps dust balances into
 transfers. For example, if an asset has a minimum balance of 10 and an account has a balance of 25,
 then an attempt to transfer 20 units would actually transfer all 25.
 
 ### Application Development
 
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} provides an `approve_transfer`,
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} provides an `approve_transfer`,
 `transfer_approved`, and `cancel_approval` interface. Application developers can use this interface
 so that users can authorize the application to effectuate transfers up to a given amount on behalf
 of an account.
 
 ### Cross-Chain Accounting
 
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} uses a reserve-backed system to
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} uses a reserve-backed system to
 manage asset transfers to other parachains. It tracks how much of each asset has gone to each
 parachain and will not accept more back from a particular parachain.
 
@@ -110,11 +110,11 @@ As a result of this, asset owners can use {{ polkadot: Statemint :polkadot }}
 {{ kusama: Statemine :kusama }} to track information like the total issuance of their asset in the
 entire network, as parachain balances would be included in the reserve-backed table. Likewise, for
 the minting and burning of tokens, an asset's team can perform all operations on
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} and propagate any minted tokens
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} and propagate any minted tokens
 to other parachains in the network.
 
 Parachains that want to send assets to other parachains should do so via instructions to
-{{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }} so that the reserve-backed table
+{{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }} so that the reserve-backed table
 stays up to date. For more info, see the "Moving Assets between Chains in XCM" section of the
 [article on the XCM format](https://polkadot.network/blog/xcm-the-cross-consensus-message-format/).
 
@@ -132,7 +132,7 @@ stable transaction fees.
 ### Creation and Management
 
 {{ polkadot: Anyone on the network can create an asset class, as long as they reserve the required
-deposit of 100 DOT on Statemint :polkadot }} {{ kusama: Anyone on the network can create an asset class,
+deposit of 100 DOT on Statemint :polkadot }}{{ kusama: Anyone on the network can create an asset class,
 as long as they reserve the required deposit of 1 KSM on Statemine :kusama }}. Creating instances of
 a class also requires a per-instance deposit, unless the chain's governance designates the class as
 "free holding", allowing the class to mint more instances without deposit. The creator must specify
@@ -154,7 +154,7 @@ users to authorize an application to transfer an instance on their behalf.
 ## Advanced Techniques
 
 Many asset creators on other networks use smart contracts to control privileged functions like
-minting and burning. Although {{ polkadot: Statemint :polkadot }} {{ kusama: Statemine :kusama }}
+minting and burning. Although {{ polkadot: Statemint :polkadot }}{{ kusama: Statemine :kusama }}
 does not have a smart contract interface, it contains the
 [Multisig](https://crates.parity.io/pallet_multisig/index.html),
 [Proxy](https://crates.parity.io/pallet_proxy/index.html), and
