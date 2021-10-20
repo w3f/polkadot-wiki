@@ -49,11 +49,13 @@ runtime upgrades (as determined through its own local governance).
 
 ## Supporting a Crowdloan Campaign
 
-{{ polkadot: 
+> {{ polkadot: **Important**: The minimum balance for contributions for a crowdloan campaign is 
+> currently set to [5 DOTs](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L1196). This is in an attempt to make crowdloans as accessible as possible while maintaining a 
+> balance to justify the use of the network's resources. :polkadot }}{{ kusama: 
 > **Important**: The minimum balance for contributions for a crowdloan campaign is currently set to
-> [5 DOTs](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L1196). 
+> [0.1 KSM](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L1218). 
 > This is in an attempt to make crowdloans as accessible as possible while maintaining a balance to 
-> justify the use of the network's resources. :polkadot }}
+> justify the use of the network's resources. :kusama }}.
 
 Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate
 by sending a special transaction that references the campaign's index. Tokens used to participate
