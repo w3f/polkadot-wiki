@@ -14,10 +14,15 @@ to facilitate this, the steps to test, and finally, how to launch your network o
 
 ### Why Create a Parachain?
 
-Parachains are connected to and secured by the Relay Chain. They benefit from the *pooled security*,
-*thought-through governance*, and overall *scalability* of the heterogeneous sharding approach of the network. 
-Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its own logic
-and runs in parallel within the {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} ecosystem.
+Parachains are connected to and secured by the Relay Chain. Parachains benefit from the 
+[shared security](#shared-security-pooled-security), 
+[on-chain governance](#on-chain-governance-thought-through-governance), 
+and overall [scalability](#scalability) of the 
+[heterogeneous sharding approach](../learn/learn-architecture.md) of Polkadot. 
+
+Creating a parachain can be seen as creating a **layer-1 blockchain**, which has its own logic 
+and runs in parallel within the {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} 
+ecosystem.
 
 Developers can focus on creating state-of-the-art chains that take advantage of
 {{ polkadot: Polkadot's :polkadot }} {{ kusama: Kusama's :kusama }} next-generation
@@ -31,10 +36,12 @@ approach. Some examples of what a parachain could be are:
 
 and more.
 
-Polkadot aims to be a bet against *chain-maximalism*, where the success of Polkadot's
-heterogeneous multi-chain approach will play a key part in the overall advancement of Web 3.0 and
-decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
-internet of the future will have many different types of blockchains working together.
+Polkadot aims to be a bet against *chain-maximalism*, where the success of Polkadot will play a 
+key part in the overall advancement of Web 3.0 and decentralized systems. As a result, the 
+parachain model was designed with the belief that the internet of the future will have many different 
+types of blockchains working together.
+
+**The Blockchain of Blockchains.**
 
 ### What are the Benefits of Deploying a Parachain?
 
@@ -134,13 +141,13 @@ parachain. They are incentivized with a native token payout from:
 
 ### Para-objects
 
-            The Relay Chain can host arbitrary state machines, not just blockchains.
+**The Relay Chain can host arbitrary state machines, not just blockchains.**
 
 The {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network will encourage the
 connection and interoperability between different *para-objects*.
 
-    Here, para-objects are referring to objects on the network that operate in parallel, 
-    generally, parallelizable objects.
+> Here, para-objects are referring to objects on the network that operate in parallel, 
+> generally, parallelizable objects.
 
 These could be in the form of:
 
