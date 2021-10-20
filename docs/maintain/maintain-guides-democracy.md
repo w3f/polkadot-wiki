@@ -28,9 +28,8 @@ the future of Kusama.
 - [Polkadot](https://polkadot.polkassembly.io) and
 [Kusama](https://kusama.polkassembly.io) Polkassembly - for current referenda, latest
 proposals, motions, treasury proposals, tips, bounties, and more.
-
-[Polkadot Daily Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is
-happening in the Polkadot ecosystem, published every weekday except holidays
+- [Polkadot Daily Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is
+happening in the Polkadot ecosystem, published every weekday except holidays.
 
 ## Important Parameters
 
