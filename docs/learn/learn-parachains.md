@@ -26,7 +26,7 @@ parachains through the [XCM](learn-cross-consensus.md) format.
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
 of the collator node is to maintain a full node of the parachain, retain all necessary information
 of the parachain, and produce new block candidates to pass to the Relay Chain validators for
-verification and inclusion in the shared state of {{ polkadot: Polkadot :polkadot }} 
+verification and inclusion in the shared state of {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }}. The incentivization of a collator node
 is an implementation detail of the parachain. They are not required to be staked on the Relay Chain
 or own the native token unless stipulated by the parachain implementation. 

@@ -136,7 +136,7 @@ distro-packaged libraries, any server hardening practices, etc.
 
 #### Specs
 
-Are you running the recommended Standard Hardware for {{ polkadot: Polkadot :polkadot}} 
+Are you running the recommended Standard Hardware for {{ polkadot: Polkadot :polkadot}}
 {{ kusama: Kusama :kusama}}? Can you ensure that machines have
 enough processing power, memory, file storage, and network connectivity? It's helpful for nominators
 to know the specs of the machines a validator uses as to assess how they may perform in the network.
