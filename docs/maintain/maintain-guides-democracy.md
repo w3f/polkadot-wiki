@@ -21,14 +21,13 @@ the governance system please see [here](../learn/learn-governance.md).
 This guide will instruct token holders how to propose and vote on public referenda using the
 Democracy module. Below are a few links to stay informed and directly engage with the community.
 
-[Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) - a place to discuss
+- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io) - a place to discuss
 governance and the future of Polkadot.
-[Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) - a place to discuss governance and
+- [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io) - a place to discuss governance and
 the future of Kusama.
-
-[Polkadot](https://matrix.to/#/#kusama:matrix.parity.io) and
-[Kusama](https://matrix.to/#/#kusama:matrix.parity.io) Polkassembly - for current referenda, latest
-proposals, motions, treasury proposals, tips, bounties and more.
+- [Polkadot](https://polkadot.polkassembly.io) and
+[Kusama](https://kusama.polkassembly.io) Polkassembly - for current referenda, latest
+proposals, motions, treasury proposals, tips, bounties, and more.
 
 [Polkadot Daily Digest](https://matrix.to/#/#dailydigest:web3.foundation) - News about what is
 happening in the Polkadot ecosystem, published every weekday except holidays
