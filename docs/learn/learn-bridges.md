@@ -16,8 +16,8 @@ While bridge designs are now getting to a place where they are sufficiently plan
 not been too many used heavily in production. For this reason, you can consider this
 page a work in progress. It will be updated as more information is determined and available.
 
-> Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }} 
-> {{ kusama: Kusama :kusama }} ecosystem compatible with external blockchains
+> Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
+> Kusama :kusama }} ecosystem compatible with external blockchains
 > such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
 > interoperability technology that allows parachains to communicate trustlessly, please see the
 > dedicated [cross consensus][] page on the Wiki.
@@ -37,9 +37,9 @@ following methods (ordered by suggested methodology):
 
 ### via Bridge Pallets
 
-Receiving messages on {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} from 
+Receiving messages on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} from 
 an external, non-parachain blockchain can be possible through a Substrate pallet. The Substrate 
-instance can then be deployed to {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} 
+instance can then be deployed to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
 either as a system-level parachain (native extension to the core Polkadot software) or as a 
 community-operated parachain.
 
@@ -47,13 +47,13 @@ An example of a bridge that would strictly use bridge pallets would be a Kusama 
 bridge, since both use parachains based on Substrate.
 
 For the standalone chains that will not have a parachain bridging module on 
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 (non-Substrate), it will be necessary to deploy bridge contracts (see below).
 
 ### via Smart Contracts
 
 Given the generality of blockchain platforms with Turing-complete smart contract languages, it is
-possible to bridge {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} and any other 
+possible to bridge {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and any other 
 smart contract capable blockchain.
 
 Those who are already familiar with Ethereum may know of the now archived [Parity Bridge][] and the
