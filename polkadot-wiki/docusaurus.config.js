@@ -93,7 +93,7 @@ module.exports = {
   ],
   themeConfig: {
     colorMode: {
-      disableSwitch: true,
+      disableSwitch: false,
     },
     prism: {
       theme: require('prism-react-renderer/themes/github'),
