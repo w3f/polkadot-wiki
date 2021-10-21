@@ -71,8 +71,8 @@ Substrate framework, they are available for Substrate-based blockchains.
 
 Establishing a sufficient number of peers is difficult due to browser limitations on WebSockets 
 from HTTPS pages, as many nodes need to be available with TLS. The browser extension provided by 
-Substrate connect to overcome this limitation and keeps the chains synced in the background, allowing 
-applications to run faster.
+Substrate connect helps to overcome this limitation and keeps the chains synced in the background, 
+allowing applications to run faster.
 
 #### Bundling light-clients of multiple chains
 
