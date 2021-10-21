@@ -1,3 +1,4 @@
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const { baseUrlPattern } = require('../scripts/utils');
 const { injectPlugin } = require('../scripts/injectPlugin');
 const i18n = require('./i18n');
@@ -96,6 +97,7 @@ module.exports = {
     },
     prism: {
       theme: require('prism-react-renderer/themes/github'),
+      darkTheme: darkCodeTheme,
     },
     liveCodeBlock: {
       /**
