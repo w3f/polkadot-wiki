@@ -102,7 +102,7 @@ module.exports = {
         darkIconStyle: {
           marginLeft: '2px',
         },
-        lightIcon: '\u{1F602}',
+        lightIcon: '🔆',
         lightIconStyle: {
           marginLeft: '1px',
         },
