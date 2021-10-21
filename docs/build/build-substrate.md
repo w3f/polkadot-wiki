@@ -48,6 +48,8 @@ require you to run a full copy of the entire blockchain.
 | holds all of the previous block data and the chain's storage in database                                       	| no database                                                                                                    	|
 | installation, maintenance, and execution tend to be exhaustive and require system administration expertise.   	| no installation; has an optional extension with  minimal or no maintenance. Initializes in five to ten seconds 	|
 
+## How to use Substrate Connect
+
 ### As a JavaScript library
 
 Substrate connect provides a Polkadot-JS API connected to a bundled node. Through the use of the 
