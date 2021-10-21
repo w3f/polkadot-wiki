@@ -8,13 +8,13 @@ slug: ../build-substrate
 
 ## Blockchain User Interfaces are still Centralized
 
-The communication between a standard user interface (UI) and a network node are through a JSON RPC 
+The communication between a standard user interface (UI) and a network node is through a JSON RPC 
 protocol. Generally, the UI will showcase the information that is available on the node, and 
 this is done through two main approaches:
 
 1. **User-Controlled Nodes**: The UI connects to a node client that the user has installed on their 
    machine.
-   - These nodes are secure, but installation and maintenance of these nodes tends to be an inconvenience.
+   - These nodes are secure, but installation and maintenance of these nodes tend to be an inconvenience.
 2. **Publicly-Accessible Nodes**: The UI connects to a third-party-owned publicly-accessible node client.
    - While these nodes are more prevalent in their usage as they are convenient to use, they are centralized 
      and insecure.
@@ -32,15 +32,26 @@ browser extension that builds on the [Polkadot-JS API](https://polkadot.js.org/a
 developers to build application-specific light clients for Substrate chains. There is no installation 
 required or optional extension with minimal or no maintenance. The node is run by the JavaScript engine.
 
-> Simply put, Substrate connect is Substrate client that runs in JavaScript.
+> Simply put, Substrate connect is a Substrate client that runs in JavaScript.
 
 Application developers no longer need to rely on single RPC nodes to allow end-users to interact 
 with their applications. 
 
+### Substrate (full node) vs. Substrate connect (light client)
+
+A light client is a client that lets you utilize all the possibilities of the chain, but it does not 
+require you to run a full copy of the entire blockchain.
+
+| Substrate: Full node                                                                                            	| Substrate connect: Light client                                                                                	|
+|-----------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------	|
+| full verification of all blocks of the chain                                                                    	| only verifies the authenticity of blocks of the chain                                                         	|
+| holds all of the previous block data and the chain's storage in database                                       	| no database                                                                                                    	|
+| installation, maintenance, and execution tend to be exhaustive and require system administration expertise.   	| no installation; has an optional extension with  minimal or no maintenance. Initializes in five to ten seconds 	|
+
 ### As a JavaScript library
 
 Substrate connect provides a Polkadot-JS API connected to a bundled node. Through the use of the 
-library a user can run an actual Substrate-compatible node.
+library, a user can run an actual Substrate-compatible node.
 
 #### A node bundled with its user interface: ready-to-use light clients
 
@@ -56,9 +67,9 @@ Substrate framework, they are available for Substrate-based blockchains.
 
 ### As a browser extension
 
-Establishing a sufficent number of peers is difficult due to browser limitations on websockets 
-from https pages, as many nodes need to be available with TLS. The browser extension provided by 
-Substrate connect overcome this limitation and keeps the chains synced in the background, allowing 
+Establishing a sufficient number of peers is difficult due to browser limitations on WebSockets 
+from HTTPS pages, as many nodes need to be available with TLS. The browser extension provided by 
+Substrate connect to overcome this limitation and keeps the chains synced in the background, allowing 
 applications to run faster.
 
 #### Bundling light-clients of multiple chains
@@ -69,17 +80,6 @@ to applications that support it.
 
 > Substrate Connect will auto-detect whether a user is using the extension. If not, the Wasm light client 
 > will be created in-page for them.
-
-### Substrate (full node) vs. Substrate connect (light client)
-
-A light client is a client that lets you utilize all the possibilities of the chain, but it does not 
-require you to run a full copy of the entire blockchain.
-
-| Substrate: Full node                                                                                            	| Substrate connect: Light client                                                                                	|
-|-----------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------	|
-| full verification of all blocks of the chain                                                                    	| only verifies the authenticity of blocks of the chain                                                         	|
-| holds all of the previous block data and  the chain's storage in database                                       	| no database                                                                                                    	|
-| installation, maintenance, and execution tend to be exhaustive and require system administration expertise.   	| no installation; has an optional extension with  minimal or no maintenance. Initializes in five to ten seconds 	|
 
 ## Resources
 
