@@ -1,4 +1,5 @@
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
 const { baseUrlPattern } = require('../scripts/utils');
 const { injectPlugin } = require('../scripts/injectPlugin');
 const i18n = require('./i18n');
@@ -93,10 +94,22 @@ module.exports = {
   ],
   themeConfig: {
     colorMode: {
+      defaultMode: 'light',
       disableSwitch: false,
+      respectPrefersColorScheme: false,
+      switchConfig: {
+        darkIcon: '🌙',
+        darkIconStyle: {
+          marginLeft: '2px',
+        },
+        lightIcon: '\u{1F602}',
+        lightIconStyle: {
+          marginLeft: '1px',
+        },
+      },
     },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
+      theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
     liveCodeBlock: {
