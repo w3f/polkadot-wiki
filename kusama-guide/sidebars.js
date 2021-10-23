@@ -55,6 +55,7 @@ module.exports = {
             "build/build-oracle",
             "build/build-data",
             "build/build-wallets",
+            "build/build-substrate",
             "build/build-ss58-registry",
           ],
         },

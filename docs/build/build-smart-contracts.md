@@ -6,9 +6,9 @@ description: How smart contracts play their role in the Polkadot ecosystem.
 slug: ../build-smart-contracts
 ---
 
-The {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} Relay Chain will
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain will
 not natively support smart contracts, however,
-parachains on {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}  
+parachains on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  
 will support smart contracts.
 
 ## Difference between developing a smart contract and a parachain
@@ -39,7 +39,7 @@ Some platforms, such as Bitcoin, get around this constraint by providing a very 
 language. Others, such as Ethereum, "charge" the smart contract "gas" for the rights to execute
 their code. If a smart contract does get into a state where execution will never halt, it eventually
 runs out of gas, ceases execution, and any state transition that the smart contract would have made is
-rolled back. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} uses a *weight-fee model*
+rolled back. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a *weight-fee model*
 and not a *gas-metering model*.
 
 Parachains can implement arbitrarily powerful programming languages and contain no gas notion for their

@@ -111,16 +111,16 @@ see why by hovering over the information icon next to it.
 
 #### Existing Recovery Info
 
-Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
+Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
 [Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
 probably not the reason for your tokens having existing references.
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
 chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
 
-#### Existing {{ polkadot: Non-DOT :polkadot }} {{ kusama: Non-KSM :kusama }} Assets
+#### Existing {{ polkadot: Non-DOT :polkadot }}{{ kusama: Non-KSM :kusama }} Assets
 
-Currently, {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} does not use the
+Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
 probably not the reason for your tokens having existing references.
 

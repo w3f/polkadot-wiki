@@ -8,8 +8,7 @@ slug: ../learn-parachains
 
 > For information on how to participate in the crowdloan and parachain auction testing on
 > Rococo, please see the
-> {{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }} 
-> {{ kusama: [Rococo Content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}on the parachain development guide.
+> {{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo Content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}on the parachain development guide.
 
 A parachain is an application-specific data structure that is globally coherent and validatable by
 the validators of the Relay Chain. They take their name from the concept of parallelized chains that 
@@ -20,7 +19,7 @@ there is no specific need for them to be actual blockchains.
 
 Due to their parallel nature, they are
 able to parallelize transaction processing and achieve scalability of the
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} system. They
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system. They
 [share in the security](learn-security.md) of the entire network and can communicate with other
 parachains through the [XCM](learn-cross-consensus.md) format.
 
@@ -35,7 +34,7 @@ or own the native token unless stipulated by the parachain implementation.
 The Polkadot Host (PH) requires that the state transitions performed on parachains be specified
 as a [Wasm](learn-wasm.md) executable. Proofs of new state transitions that occur on a parachain must 
 be validated against the registered state transition function (STF) that is stored on the Relay Chain 
-by the validators before {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} acknowledges 
+by the validators before {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} acknowledges 
 a state transition has occurred on a parachain. The key constraint regarding the logic of a parachain
 is that it must be verifiable by the Relay Chain validators. Verification most commonly takes the
 form of a bundled proof of a state transition known as a Proof-of-Verification (PoV) block, which is
@@ -46,7 +45,7 @@ submitted to the validators from one or more of the parachain collators to be ch
 Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake
 are usually used to select the validator set to handle validation and finalization;
 parachains will not be required to do either of those things. However, since
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} is not overly particular about what
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not overly particular about what
 the parachain can implement, it may be the choice of the parachain to implement a staking token, but
 it's not generally necessary.
 
@@ -54,18 +53,18 @@ Collators may be incentivized through inflation of a native parachain token. The
 to incentivize the collator nodes that do not involve inflating the native parachain token.
 
 Transaction fees in a native parachain token can also be an implementation choice of parachains.
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} makes no hard and fast rules for how
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes no hard and fast rules for how
 the parachains decide on original validity of transactions. For example, a parachain may be
 implemented so that transactions must pay a minimum fee to collators to be valid. The Relay Chain
 will enforce this validity. Similarly, a parachain could not include that in their implementation,
 and Polkadot would still enforce its validity.
 
 Parachains are not required to have their own token. If they do, is up to the parachain to make the
-economic case for their token, not {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
+economic case for their token, not {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## Parachain Hubs
 
-While {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} enables crosschain functionality 
+While {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} enables crosschain functionality 
 amongst the parachains, it necessitates that there is some latency between the dispatch of a message 
 from one parachain until the destination parachain receives the message. In the optimistic scenario, 
 the latency for this message should be at least two blocks - one block for the message to be dispatched 
@@ -89,7 +88,7 @@ parachain hubs, which maintain the stronger property of single block composabili
 
 ## Parachain Slot Acquisition
 
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} supports a limited number of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports a limited number of
 parachains, currently estimated to be about 100. As the number of slots is limited, there are
 several ways to allocate them:
 

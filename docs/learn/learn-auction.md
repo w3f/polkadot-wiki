@@ -220,7 +220,7 @@ Relay Chain.
 The method for dividing the parachain slots into intervals was partly inspired by the desire to
 allow for a greater amount of parachain diversity, and prevent particularly large and well-funded
 parachains from hoarding slots. By making each period a {{ polkadot: three-month duration but the
-overall slot a 2-year duration :polkadot }} {{ kusama: 6-week duration but the overall slot a 1-year
+overall slot a 2-year duration :polkadot }}{{ kusama: 6-week duration but the overall slot a 1-year
 duration :kusama }}, the mechanism can cope with well-funded parachains that will ensure they secure
 a slot at the end of their lease, while gradually allowing other parachains to enter the ecosystem
 to occupy the durations that are not filled. For example, if a large, well-funded parachain has

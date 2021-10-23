@@ -14,7 +14,7 @@ Cumulus, the time it takes to develop and launch a new chain has dropped signifi
 it would take years to launch a new chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision
-with {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}. 
+with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. 
 It will explain the difference between a parachain and a smart contract 
 (and why one may be better suited for your application over the other).
 
@@ -31,8 +31,8 @@ It will explain the difference between a parachain and a smart contract
   - **Canvas** - Wasm based Smart Contract enabled testnet, primarily for `ink!` development.
   - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new genesis block).
 
-{{ polkadot: Polkadot mainnet has been running since May 2020 :polkadot }} 
-{{ kusama: Kusama mainnet has been running since August 2019 :kusama }} and has
+{{ polkadot: Polkadot mainnet has been running since May 2020 :polkadot }}{{ kusama: Kusama mainnet has been 
+running since August 2019 :kusama }} and has
 [implementations in various programming languages](../learn/learn-implementations.md) ranging from 
 Rust to JavaScript. Currently, the leading implementation is built in Rust and built using the 
 Substrate framework.
@@ -41,11 +41,11 @@ Tooling is rapidly evolving to interact with the network; there are so many ways
 
 But before you jump head-first into the code, you should consider the *kind* of decentralized
 application you want to make and understand the different paradigms available to developers who want
-to build on {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
+to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 ## What is the difference between building a parachain, a parathread, or a smart contract?
 
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} provides several ways for you 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides several ways for you 
 to deploy your application: as a smart contract on an existing
 parachain, as your own parachain, or as a parathread. There are trade-offs when working with each 
 of these and reading this section will help you understand them.
@@ -53,10 +53,9 @@ of these and reading this section will help you understand them.
 ### Parachains & Parathreads
 
 Parachains are *parallel* chains containing their own runtime logic and benefit from the 
-shared security and the cross-chain messaging provided by the {{ polkadot: Polkadot :polkadot }} 
-{{ kusama: Kusama :kusama }} Relay Chain. Parachains permit a
-high degree of flexibility and customization but require more effort to create and maintain 
-over time.
+shared security and the cross-chain messaging provided by the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
+Kusama :kusama }} Relay Chain. Parachains permit a high degree of flexibility and 
+customization but require more effort to create and maintain over time.
 
 Parathreads are like parachains and enable the developer to have lower-level control of the logic of
 their application. The main difference between the two is economic since parathreads will be much
@@ -94,7 +93,7 @@ have certain logic that requires loops and it cannot be removed, use the native 
 handle all complex logic and the smart contract to call iteration. If you require off-chain data
 from an oracle, you may want to use a parathread as an oracle feed that only triggers once every 24
 hours (this makes the most sense if the data is useful to other players in the 
-{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} ecosystem too).
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem too).
 
 Most likely you’ve already realized that your application is better suited to be one or the other
 (or a hybrid of them both), but if you need a quick recap to digest the information, you can use
@@ -120,7 +119,7 @@ use, but generally you will send a special transaction that will create the smar
 ledger. You will likely need to pay an associated fee for the initialization logic and any storage
 that your contract consumes.
 
-On {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}, there will be 
+On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there will be 
 parachains that act as smart contract platforms. Smart contracts are executable programs that exist 
 on only a single chain and are limited in complexity. Because they exist on a single chain, they can 
 have smooth interoperability with other smart contracts on the same chain. However, they will always 

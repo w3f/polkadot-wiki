@@ -27,7 +27,7 @@ dictate the real-world data on-chain. On the decentralized end, a [complex game 
 don't submit the same data as everyone else. Solutions such as [Chainlink][chainlink] fit somewhere
 in the middle, where the amount of trust you put into the reporting oracles can be adjusted based on
 your preferences. A Chainlink [Feed Pallet][feed pallet] was recently released to allow smart
-contract applications across {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} to 
+contract applications across {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to 
 access price reference data, made available as a Substrate oracle pallet.
 
 When using an oracle in your application you should be aware of the benefits and risks that are
