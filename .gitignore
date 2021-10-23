@@ -104,3 +104,4 @@ docs/build-ss58-registry.md
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+*.bak

@@ -27,7 +27,7 @@ The image displays only the error name as defined in the code, not its error mes
 error being rather self-explanatory, let's find its details.
 
 In the [explorer tab](https://polkadot.js.org/apps/#/explorer), find the block in which this failure
-occured. Then, expand the `system.ExtrinsicFailed` frame:
+occurred. Then, expand the `system.ExtrinsicFailed` frame:
 
 ![Error described](../assets/errors/02.jpg)
 

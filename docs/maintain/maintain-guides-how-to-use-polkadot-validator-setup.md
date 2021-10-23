@@ -92,7 +92,7 @@ $ git clone git@github.com:w3f/polkadot-secure-validator.git
 
 Now you can `cd` into the `polkadot-validator-setup` directory and start to change the
 configurations to match your custom deployment. However, before we start tweaking those, let's start
-by creating two new SSH keys that we (or rather, the ansible playbooks) will use to access the
+by creating two new SSH keys that we (or rather, the Ansible playbooks) will use to access the
 machines.
 
 ### Step Two: Generate the SSH keys
@@ -130,7 +130,7 @@ First run yarn to install the NodeJS dependencies:
 $ yarn
 ```
 
-Now you can copy the configuration sample and start to cutomize it.
+Now you can copy the configuration sample and start to customize it.
 
 ```zsh
 $ cp config/main.sample.json config/main.json

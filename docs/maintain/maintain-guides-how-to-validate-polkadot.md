@@ -169,7 +169,7 @@ sudo ntpq -p
 
 #### Optional: Installation via Package Managers
 
-The Polkadot Binary in included in `Debian` derivatives (i.e. **Debain**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
+The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
 
 #### Debian-based (Debian, Ubuntu)
 

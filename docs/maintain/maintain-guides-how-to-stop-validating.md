@@ -38,5 +38,5 @@ through the `session.purgeKeys()` extrinsic with the controller account.
 ## Unbond your tokens
 
 Unbonding your tokens can be done through the `Network > Staking > Account actions` page in
-PolkadotJS Apps by clicking the corrosponding stash account dropdown and selecting "Unbond funds".
+PolkadotJS Apps by clicking the corresponding stash account dropdown and selecting "Unbond funds".
 This can also be done through the `staking.unbond()` extrinsic with the controller account.

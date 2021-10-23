@@ -92,7 +92,7 @@ languages.
 <img align="center" width="700" height="350" src="/img/contributing/translate/polkadot-translate-feature.png"/>
 <br/>
 
-The following are steps on how to interact with the crowdin interface for translatations. Check out
+The following are steps on how to interact with the crowdin interface for translations. Check out
 the official [crowdin knowledge base](https://support.crowdin.com/online-editor/) as well.
 
 <p float="center">

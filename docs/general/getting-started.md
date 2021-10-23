@@ -164,12 +164,12 @@ Learn more about how you can create and send Polkadot Gifts [here](https://polka
 ## Why Polkadot?
 
 Back in the early 2000's, when the internet was gaining popularity for the first time, the internet
-featured read-only, static, basic webpages. The online connected world at the time was only the
+featured read-only, static, basic web pages. The online connected world at the time was only the
 beginning of virtual data, identities, and more. The internet during this time was also called the
 Web 1.0.
 
 As social media platforms and online businesses began to emerge, the internet transformed into the
-Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive webpages,
+Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive web pages,
 where users can read and write information plus publish their own for others to see. However, this
 version of the web comes with downsides, dealing with data control, privacy issues, and trust. This
 is where the Web 3.0 comes into the picture.
@@ -241,7 +241,7 @@ This is recommended for users with backgrounds of all levels, and the course is 
 - [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
   into its blockchain technology. This paper dives into the components of Polkadot but is
   understandable for both a non-technical and technical reader.
-- [Polkadot's specification][spec] is a Github repository that holds the latest Polkadot Host
+- [Polkadot's specification][spec] is a GitHub repository that holds the latest Polkadot Host
   protocol specification, Polkadot's specification tests of the many components of the network, and
   the Polkadot Runtime specification. This repo holds algorithms and explores how various processes
   function in the Polkadot network. The Polkadot specification takes Polkadot's ideas and concepts

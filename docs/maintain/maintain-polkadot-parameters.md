@@ -55,7 +55,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
-[Motion #108](https://polkadot.polkassembly.io/motion/108) proposed new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count (22_500). This motion got enacted as a referendum and the value of the minimum nominator bond is updated from 80 DOTs to 120 DOTs. As most of these parameters can be updated via on-chaingovernance, please check the latest parameters on
+[Motion #108](https://polkadot.polkassembly.io/motion/108) proposed new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count (22_500). This motion got enacted as a referendum and the value of the minimum nominator bond is updated from 80 DOTs to 120 DOTs. As most of these parameters can be updated via on-chain governance, please check the latest parameters on
 [chain state](https://polkadot.js.org/apps/#/chainstate) (selected state query -> staking -> minimumNominatorBond and maxNominatorsCount)
 
 | Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
