@@ -145,7 +145,7 @@ the Relay Chain).
 ## Duty Roster
 
 A lookup table that specifies the job that a particular validator is required to do (i.e. attest to
-the validity of a specific paracahain). The duty roster routinely shuffles the validator set into
+the validity of a specific parachain). The duty roster routinely shuffles the validator set into
 different subsets per parachain.
 
 ## Epoch
@@ -277,7 +277,7 @@ is entirely in the hands of the community (i.e., Kusama token holders).
 
 ## Lease Period
 
-A particular amount of time that a parachain for which the parachain can connect to the relay chain.
+A particular amount of time that a parachain for which the parachain can connect to the Relay Chain.
 
 ## LIBP2P
 
@@ -383,13 +383,13 @@ developers to create Polkadot compatible [parachains](##parachain).
 
 ## ParaID
 
-A unique numeric (nonnegative integer) identifier for a parathread.
+A unique numeric (non-negative integer) identifier for a parathread.
 
 ## Parathread
 
 A blockchain that works within the confines of the Polkadot Host, thus allowing it to connect to the
 Polkadot Relay Chain. This can be done either by becoming a parachain or connecting on a "pay as you
-go" basis. All parachains start their lifecycle as a parathread.
+go" basis. All parachains start their life-cycle as a parathread.
 
 ## Parachain Registry
 
@@ -460,9 +460,9 @@ and the amount of time they are willing to lock their tokens.
 
 ## Re-Genesis
 
-Re-Genesis is the process of exporting the current chain state, and creating a new chain that builds on it. Re-Genesis will involve stop-the-world migration, which results in a period of time when no actual blocks are added to the blockchain. In a way, regenesis can be viewed as a hard fork process. A formal design of Re-Genesis on Substrate is still under development - [Re-Genesis Rationale and Design](https://github.com/paritytech/substrate/issues/7458).
+Re-Genesis is the process of exporting the current chain state, and creating a new chain that builds on it. Re-Genesis will involve stop-the-world migration, which results in a period of time when no actual blocks are added to the blockchain. In a way, re-genesis can be viewed as a hard fork process. A formal design of Re-Genesis on Substrate is still under development - [Re-Genesis Rationale and Design](https://github.com/paritytech/substrate/issues/7458).
 
-## Relay chain
+## Relay Chain
 
 The chain that coordinates consensus and communication between parachains (and external chains, via
 bridges).

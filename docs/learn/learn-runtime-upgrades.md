@@ -63,11 +63,11 @@ changes to networking. It is essential to check the release notes, starting with
 priority and acting accordingly.
 
 General infrastructure providers, aside from following the Polkadot releases and upgrading in a
-timely manner, should monitor changes to runtime events and auxilliary tooling, such as the
+timely manner, should monitor changes to runtime events and auxiliary tooling, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
 Transactions constructed for runtime `n` will not work for runtimes `>n`. If a runtime upgrade
-occurs before broadcasting a priorly constructed transaction, you will need to reconstruct it with
+occurs before broadcasting a previously constructed transaction, you will need to reconstruct it with
 the appropriate runtime version and corresponding metadata.
 
 ### For [Nominators](../maintain/maintain-guides-how-to-nominate-polkadot.md)

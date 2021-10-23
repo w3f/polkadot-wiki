@@ -6,7 +6,7 @@ description: Steps on how to contribute to the Polkadot Wiki and the code of con
 slug: ../contributing
 ---
 
-The wiki was started and is maintained by the Web3 Foundation. It is an open source project and aims
+The wiki was started and is maintained by Web3 Foundation. It is an open source project and aims
 to be the most extensive resource of knowledge on Polkadot and the Polkadot ecosystem. A large part
 of the material currently focuses on Polkadot directly but it is not opposed to covering
 informational material for community projects.
@@ -92,7 +92,7 @@ languages.
 <img align="center" width="700" height="350" src="/img/contributing/translate/polkadot-translate-feature.png"/>
 <br/>
 
-The following are steps on how to interact with the crowdin interface for translatations. Check out
+The following are steps on how to interact with the crowdin interface for translations. Check out
 the official [crowdin knowledge base](https://support.crowdin.com/online-editor/) as well.
 
 <p float="center">

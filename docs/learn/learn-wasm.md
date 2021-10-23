@@ -17,7 +17,7 @@ C/C++/Rust, enabling deployment on the web for client and server applications.
 ## Why WebAssembly?
 
 WebAssembly is a platform agnostic binary format, meaning that it will run the same instructions
-across whatever machine it is operating on. Blockchains need determinancy in order to have reliable
+across whatever machine it is operating on. Blockchains need determinacy in order to have reliable
 state transition updates across all nodes in the peer-to-peer network without forcing every peer to
 run the same exact hardware. Wasm is a nice fit for reliability among the possibly diverse set of
 machines. Wasm is both efficient and fast. The efficiency means that it can be uploaded onto the

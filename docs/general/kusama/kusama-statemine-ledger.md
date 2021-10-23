@@ -21,7 +21,7 @@ If you have trouble using Ledger or following the directions below, you can try 
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
 > Please check out our
-> [intro to Ledger video on Youtube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
+> [intro to Ledger video on YouTube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
 
 ## Requirements
 
@@ -57,7 +57,7 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 > These instructions are for development installation only. It is recommended to install the
 > application from Ledger Live unless you _know exactly what you're doing_.
 
-Instructions for downloading the prerelease binary from the GitHub releases is written [on the
+Instructions for downloading the pre-release binary from the GitHub releases is written [on the
 README][prerelease instructions] for the Statemine Ledger application GitHub repository.
 
 On the [releases page][] you can download the shell script `install_app.sh` and then make it
@@ -160,7 +160,7 @@ balance arrow, it will show details of your balance such as locks or reserved am
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use [Polkadot-JS Apps UI][apps].
 
-> **Important**: Transfering in this way sends tokens to another account on the Statemine parachain.
+> **Important**: Transferring in this way sends tokens to another account on the Statemine parachain.
 > If you need to transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting)
 > section below.
 
@@ -201,13 +201,13 @@ you clarify to the sender that you wish to receive your tokens on the Statemine 
 
 ### Teleporting
 
-Teleporting allows you to send tokens between the Relay chain and a parachain, or between different
+Teleporting allows you to send tokens between the Relay Chain and a parachain, or between different
 parachains.
 
 The Statemine Ledger app doesn't support the `teleport` extrinsic at this point, so an intermediary
 account needs to be created first.
 
-To teleport KSM to the Relay chain follow these steps:
+To teleport KSM to the Relay Chain follow these steps:
 
 - Create an account outside your Ledger. Instructions can be found [here](../../learn/learn-account-generation.md).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly

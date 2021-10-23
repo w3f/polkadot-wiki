@@ -63,7 +63,7 @@ blockchain. The referendum was summarized as having four effects if approved by 
 The initial referendum was proposed prior to the Polkadot genesis block under the assumption that
 making a redenomination would be simpler before the Polkadot chain was live. However, many in the
 community pointed out the disconnect of the two networks and how it was unfair for holders of DOT to
-be impacted by a vote by a different token holder set. For this reason, the Web3 Foundation [decided
+be impacted by a vote by a different token holder set. For this reason, Web3 Foundation [decided
 to make a new vote on Polkadot][blog 1] when it went live, although the Kusama vote ended with a
 majority in favor of the redenomination change.
 
@@ -96,7 +96,7 @@ The important notes of the Polkadot vote were as follows:
 > - Voting costs nothing other than the transaction fee and can be done from all accounts with a
 >   non-zero spendable balance. (If you managed to lock up all of your funds in staking to the point
 >   that none is left for transacting and you would like to vote, please contact a representative of
->   the Web3 Foundation.)
+>   Web3 Foundation.)
 > - Locked funds (e.g. for staking) are counted.
 > - No discretionary lock-voting is in place; all DOT used to vote counts the same.
 > - Voting is made on a per-account basis; a single account must all vote the same way and cannot

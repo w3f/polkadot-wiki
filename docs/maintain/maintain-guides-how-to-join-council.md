@@ -29,7 +29,7 @@ one else does.
 Go to [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and navigate to the "Council" tab.
 Click the button on the right that says "Submit Candidacy."
 
-![submit candidancy button](../assets/council/polkadotjs_submit_candidancy.png)
+![submit candidacy button](../assets/council/polkadotjs_submit_candidancy.png)
 
 After making the transaction, you will see your account appear underneath the row "Candidates."
 

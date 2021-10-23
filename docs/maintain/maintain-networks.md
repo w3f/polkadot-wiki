@@ -11,7 +11,7 @@ is to allow for connection to different networks using a single executable and c
 start-up flag. Here are some of the networks associated with Polkadot or Substrate that you may want
 to connect to and join.
 
-## Polkadot Networks
+## Polkadot networks
 
 To connect to a Polkadot network please follow the [instructions](maintain-sync.md) for installing
 the Polkadot executable.
@@ -72,7 +72,7 @@ Follow the instruction [here](../learn/learn-DOT.md#getting-westies) for instruc
 ### Differences
 
 Runtime differences (e.g. existential and multisignature deposit sizes) between the different
-networks can be found by doing a `diff` between the `src/lib.rs` of the respositories. For example,
+networks can be found by doing a `diff` between the `src/lib.rs` of the repositories. For example,
 to compare the Polkadot and Westend runtimes:
 
 - `git clone https://github.com/paritytech/polkadot && cd polkadot/runtime`

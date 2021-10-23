@@ -16,9 +16,9 @@ Having more stake on a validator does not influence the amount of block rewards 
 However, there is a probabilistic component to reward calculation (discussed below), so rewards may
 not be exactly equal for all validators in a given era.
 
-Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. In
-this way, the network incents the nomination of lower-staked validators to create an equally-staked
-validator set.
+Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. 
+In this way, the network creates incentives for the nomination of lower-staked validators to create 
+an equally-staked validator set.
 
 ## How does staking work in Polkadot?
 
@@ -320,7 +320,7 @@ is unlikely to be an attack on the network, but much more likely to be a misconf
 validator. The penalty would be Min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% slash for that
 validator pool (i.e., all stake held by the validator and its nominators).
 
-Now assume that there is a group runnning several validators, and all of them have an issue in the
+Now assume that there is a group running several validators, and all of them have an issue in the
 same slot. The penalty would be Min((3 _ 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
 equivocate, this is a much more serious offence and possibly indicates a coordinated attack on the
 network, and so the slash will be much greater - Min((3 _ 20 / 100)^2, 1) = 0.36, or a 36% slash on
@@ -349,7 +349,7 @@ If you want to know more details about slashing, please look at our
 ### Chilling
 
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
-validator or nominator at any time themselves, taking effect in the next era. It can also specifally
+validator or nominator at any time themselves, taking effect in the next era. It can also specifically
 mean removing a validator from the active validator set by another validator, disqualifying them
 from the set of electable candidates in the next NPoS cycle.
 
@@ -364,7 +364,7 @@ removes the offending validator from the next election.
 
 Polkadot allows some validators to be disabled, but if the number of disabled validators gets too
 large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
-need to resubmit their intention to validate and regarner support from nominators.
+need to resubmit their intention to validate and re-garner support from nominators.
 
 For more on chilling, see the [How to Chill][] page on this wiki.
 
@@ -542,7 +542,7 @@ that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary ne
 
 [Motion #108](https://polkadot.polkassembly.io/motion/108) proposed new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count.
 
-The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to particpate in the network's security. This motion will update the value of the minimum nominator bond from 80 DOTs to 120 DOTs. Prior to this, [Motion #103](https://polkadot.polkassembly.io/motion/103) set a new parameter named `chill-threshold`. With `chill-threshold`, the permissionless `chill_other` may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded) to adjust to this change. A more [permanent solution](https://github.com/paritytech/substrate/issues/9511) for lowering the minimum bond requirement for nominators is in progress.
+The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to participate in the network's security. This motion will update the value of the minimum nominator bond from 80 DOTs to 120 DOTs. Prior to this, [Motion #103](https://polkadot.polkassembly.io/motion/103) set a new parameter named `chill-threshold`. With `chill-threshold`, the permissionless `chill_other` may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded) to adjust to this change. A more [permanent solution](https://github.com/paritytech/substrate/issues/9511) for lowering the minimum bond requirement for nominators is in progress.
 
 **Parameters changed:**
 minimum nominator bond : `80` -> `120`

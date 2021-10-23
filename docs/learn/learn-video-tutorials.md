@@ -32,7 +32,7 @@ slug: ../learn-video-tutorials
 
 ### For validators
 
-- [Validator Resouces](https://www.youtube.com/playlist?list=PLOyWqupZ-WGsM3O0t5iWgvMkivHnwE1C_)
+- [Validator Resources](https://www.youtube.com/playlist?list=PLOyWqupZ-WGsM3O0t5iWgvMkivHnwE1C_)
 - [Why should you become a Validator?](https://youtu.be/0EmP0s6JOW4)
 - [How to upgrade your node](https://youtu.be/5LtcdBR9F40)
 - [Roles and Responsibilities of a Validator](https://youtu.be/riVg_Up_fCg)

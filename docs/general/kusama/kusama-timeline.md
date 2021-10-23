@@ -17,7 +17,7 @@ more information in the sections below.
 ## Rollout plan
 
 The rollout of full functionality of Kusama was staggered to allow for a safe transition. The first
-PoS phase began with 20 validators. Of the 20, the Web3 Foundation ran nine and Parity Technologies
+PoS phase began with 20 validators. Of the 20, Web3 Foundation ran nine and Parity Technologies
 ran six. Five were ran by highly staked community members as voted in by the Phragmén election.
 
 When the initial transition was successful, additional validator spots were opened 10 at a time in
@@ -77,7 +77,7 @@ While Kusama’s first five parachains are taking advantage of the built-in feat
 chaos continues.
 
 And in the spirit of chaos, more teams are eager to deploy on Kusama.
-The launch of the second batch of parachain slot auctions officially went live in Septmeber 2021.
+The launch of the second batch of parachain slot auctions officially went live in September 2021.
 Slot auctions occurred over six weeks, where the auctions were expanded by Kusama Council to include 
 six auctions instead of the original five. 
 

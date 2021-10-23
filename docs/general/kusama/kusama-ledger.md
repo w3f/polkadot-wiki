@@ -21,7 +21,7 @@ If you have trouble using Ledger or following the directions below, you can try 
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
 > Please check out our
-> [intro to Ledger video on Youtube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
+> [intro to Ledger video on YouTube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
 
 ## Requirements
 
@@ -50,7 +50,7 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 > These instructions are for development installation only. It is recommended to install the
 > application from Ledger Live unless you _know exactly what you're doing_.
 
-Instructions for downloading the prerelease binary from the GitHub releases is written [on the
+Instructions for downloading the pre-release binary from the GitHub releases is written [on the
 README][prerelease instructions] for the Kusama Ledger application GitHub repository.
 
 On the [releases page][] you can download the shell script `install_app.sh` and then make it
@@ -193,7 +193,7 @@ want to stake using an account stored on a Ledger device.
 - Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not
   work).
 - Input the amount of tokens to bond and confirm the transaction.
-- Confirm the transaction on the Ledger devivce.
+- Confirm the transaction on the Ledger device.
 - When the transaction is included you will see the newly bonded account in the "Account Actions"
   page.
 - Select "Start Nominating" or "Start Validating" to start nominating or validating.

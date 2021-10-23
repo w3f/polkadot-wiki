@@ -360,7 +360,7 @@ change `YOUR_EMAIL` to your email and paste the app password you just saved earl
 Next, create another `systemd` configuration file named `alertmanager.service` by running the
 command `sudo nano /etc/systemd/system/alertmanager.service` with the following config.
 
-> SERVER_IP - Change to your host IP address amd make sure port 9093 is opened
+> SERVER_IP - Change to your host IP address and make sure port 9093 is opened
 
 ```
 [Unit]
@@ -428,13 +428,13 @@ To monitor the alerts, let's import dashboard "[8010](https://grafana.com/dashbo
 used for Alertmanager. And make sure to select the "Prometheus AlertManager" in the last column.
 Then click "Import".
 
-You will end up having the follwing:
+You will end up having the following:
 
 ![grafana-am-4](../assets/guides/how-to-monitor/4-alert-manager.png)
 
 ### AlertManager Integration
 
-To let the Prometheus server be able to talk to the Alertmanger, we will need to add the following
+To let the Prometheus server be able to talk to the AlertManager, we will need to add the following
 config in the `etc/prometheus/prometheus.yml`.
 
 ```
@@ -509,7 +509,7 @@ To check the rules defined in the "rules.yml" is syntactically correct, run the 
 sudo -u prometheus promtool check rules rules.yml
 ```
 
-Finally, restart everthing by running:
+Finally, restart everything by running:
 
 ```bash
 sudo systemctl restart prometheus && sudo systemctl restart alertmanager

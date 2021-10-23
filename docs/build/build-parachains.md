@@ -152,7 +152,7 @@ These could be in the form of:
 
 ### Migration
 
-Projects that are already functioning as solochains or in isolated environments may be interested
+Projects that are already functioning as "solochains" or in isolated environments may be interested
 in migrating onto {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as a para-object.
 While the parachain model has its benefits, it may not be the go-to strategy for some projects.
 
@@ -424,7 +424,7 @@ Rococo testnet "Custom Node" underneath "Development", following the
 
 ### Parachain Playground
 
-You can also take advanatge of the account functions offered on Polkadot-JS Apps
+You can also take advantage of the account functions offered on Polkadot-JS Apps
 to test the entire Parachain onboarding process (e.g. crowdloans, auctions, registrations).
 
 Start a local node on [Westend](../maintain/maintain-networks.md###westend-test-network)

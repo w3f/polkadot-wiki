@@ -9,7 +9,7 @@ slug: ../faq
 *This FAQ focuses on technical questions for users interested in developing applications for
 Polkadot. If you have a more general question, you may wish to search for the answer on our support
 [Knowledge Base](https://support.polkadot.network/support/home) or the main
-[Polkadot Network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
+[Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
 [Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or email
 [support](mailto:support@polkadot.network).*
@@ -262,7 +262,7 @@ libp2p and the standard and custom protocols, please see the
 
 ### How does libp2p differ from IPFS?
 
-The [Interplanetary Filesystem](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used
+The [Interplanetary File System](https://ipfs.io/) (IPFS) is a peer-to-peer hypermedia protocol used
 primarily for storage of files. It allows one to upload a file onto the network and share it with
 its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists higher on
 the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate

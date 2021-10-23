@@ -13,8 +13,8 @@ storage systems, and how these systems can support your endeavors.
 
 ## DCS (Decentralized cloud storage)
 
-The key attribute that characterises centralized cloud storage is location [of data].
-In decentralised cloud storage, the key attribute becomes the data itself instead of the data's location.
+The key attribute that characterizes centralized cloud storage is location [of data].
+In decentralized cloud storage, the key attribute becomes the data itself instead of the data's location.
 This can be viewed as the shift from the centralized *location-centric* storage approach to the decentralized
 *content-centric* approach.
 
@@ -92,4 +92,4 @@ found at the [`Runtime Storage Page`](https://docs.substrate.io/v3/runtime/stora
 
 The PolkadotJS API offers storage methods that are part of the default Substrate runtime.
 They are exposed via `api.query.<module>.<method>`.
-See the [official docs](https://polkadot.js.org/docs/substrate/storage/) for more detials.
+See the [official docs](https://polkadot.js.org/docs/substrate/storage/) for more details.

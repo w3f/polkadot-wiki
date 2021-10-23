@@ -62,7 +62,7 @@ When you are ready to restore **Validator A**:
 
 Once this time has elapsed, **Validator A** will take over. You can safely stop Validator B.
 
-**NOTE:** To verify that the Session has changed, make sure that a block in the new Session is finalised. You should see log messages like the ones below to confirm the change:
+**NOTE:** To verify that the Session has changed, make sure that a block in the new Session is finalized. You should see log messages like the ones below to confirm the change:
 
 ```
 2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
