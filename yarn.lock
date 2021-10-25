@@ -1687,16 +1687,16 @@
     "@types/react-router-config" "*"
     "@types/react-router-dom" "*"
 
-"@docusaurus/plugin-client-redirects@^2.0.0-beta.7":
-  version "2.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.7.tgz#cbe1831ed9e21a001f92241ed1202b463c328dab"
-  integrity sha512-F98HKcLaR33Q2gcF116WAz5Pz5GMXiDQaWTlzeTDCvtLsOpdu1NZDMo9kMwUg7q9rTDaS5Wy1igEdI5ayk9FSA==
+"@docusaurus/plugin-client-redirects@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.8.tgz#bc2b369c55d24a54c618828c209458dfe73c1772"
+  integrity sha512-8lOZfa8jrl9D9mEAyCDG1QheY+CLSUxDDRf86xZeq07FPpsuXNC0mthggSSJYFFFwQmgOREd7SFoTWGHSZ7GIg==
   dependencies:
-    "@docusaurus/core" "2.0.0-beta.7"
-    "@docusaurus/types" "2.0.0-beta.7"
-    "@docusaurus/utils" "2.0.0-beta.7"
-    "@docusaurus/utils-common" "2.0.0-beta.7"
-    "@docusaurus/utils-validation" "2.0.0-beta.7"
+    "@docusaurus/core" "2.0.0-beta.8"
+    "@docusaurus/types" "2.0.0-beta.8"
+    "@docusaurus/utils" "2.0.0-beta.8"
+    "@docusaurus/utils-common" "2.0.0-beta.8"
+    "@docusaurus/utils-validation" "2.0.0-beta.8"
     chalk "^4.1.2"
     eta "^1.12.3"
     fs-extra "^10.0.0"
