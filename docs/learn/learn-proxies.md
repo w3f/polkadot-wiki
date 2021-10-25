@@ -24,6 +24,7 @@ proxy for the relationship. Polkadot offers:
 - Governance
 - Staking
 - Identity Judgement
+- Auction
 
 When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure
 that the proxy account has the appropriate permission to make that transaction on behalf of the cold
@@ -37,7 +38,7 @@ frequently than the cold account and is therefore less secure.
 
 ### Non-transfer Proxies
 
-Proxies that are of the type "non-transfer" are accounts that allow any type of transaction except
+Proxies that are of the type "Non-transfer" are accounts that allow any type of transaction except
 balance transfers (including vested transfers).
 
 ### Governance Proxies
@@ -64,6 +65,15 @@ Controller accounts, but does allow the Stash to be accessed even less frequentl
 "Identity Judgement" proxies are in charge of allowing registrars to make judgement on an account's
 identity. If you are unfamiliar with judgements and identities on chain, please refer to
 [this page](learn-identity.md#judgements).
+
+### Auction Proxies
+
+Proxies that are of the type "Auction" are accounts that allow transactions pertaining to parachain 
+auctions and crowdloans. The Auction proxy account can sign those transactions on behalf of an account 
+in cold storage. If you already setup a "Non-transfer" proxy account, it can do everything an "Auction" 
+proxy can do. Before participating in a crowdloan using an Auction proxy, it is recommended that you 
+check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
+distribution. 
 
 ### Anonymous Proxies
 
