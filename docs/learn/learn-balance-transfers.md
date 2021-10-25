@@ -73,13 +73,13 @@ deposit of 1 DOT and the account cannot be initialized with such a low balance.
 <!-- https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/issues/965 -->
 <!-- https://github.com/w3f/polkadot-wiki/issues/1101 -->
 
-If you are trying to reap an account and you recieve an error similar to "There is an existing
+If you are trying to reap an account and you receive an error similar to "There is an existing
 reference count on the sender account. As such the account cannot be reaped from the state", then
 you have existing references to this account that must first be removed before it can be reaped.
 References may still exist from:
 
 - Bonded tokens (most likely)
-- Unpurged session keys (if you were prevously a validator)
+- Unpurged session keys (if you were previously a validator)
 - Token locks
 - Existing recovery info
 - Existing assets

@@ -14,7 +14,7 @@ Parachains will need robust and secure ways to index and aggregate data, such as
 ### SubQuery
 
 [SubQuery](https://subquery.network/) is an indexer that allows for the indexing, transforming, 
-and querying of Substrate chain data to power applications. The decentralised network acts as a 
+and querying of Substrate chain data to power applications. The decentralized network acts as a 
 chain-agnostic data aggregation, indexing, and querying layer between blockchains and applications.
 
 SubQuery abstracts away blockchain-specific data idiosyncrasies using the 
@@ -23,7 +23,7 @@ SubQuery abstracts away blockchain-specific data idiosyncrasies using the
 ### The Graph
 
 [The Graph](https://thegraph.com/en/) is a layer-1 indexing tool and querying layer for the 
-decentralised web, who announced an integration plan to bring 
+decentralized web, who announced an integration plan to bring 
 [indexing and querying to Polkadot](https://medium.com/polkadot-network/the-graph-bringing-indexing-and-querying-to-polkadot-6b433e381fe8).
 
 The Graph allows developers to build and publish open APIs, called subgraphs. 

@@ -146,7 +146,7 @@ contract. The different patterns you may see for paying for your smart contract 
 You will need to consider the storage and complexity of your smart contract to ensure that gas usage
 stays within reasonable bounds. Storage will likely be expensive for whichever smart contract
 platform you use, so it is necessary to keep as much data off-chain as possible. You may consider
-using the listed options on the [decentralised storage](build-storage.md) page to keep the data and 
+using the listed options on the [decentralized storage](build-storage.md) page to keep the data and 
 submitting only the content address on chain.
 
 ---

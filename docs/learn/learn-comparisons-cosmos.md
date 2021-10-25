@@ -123,7 +123,7 @@ nominating a validator does not assign any governance voting rights to the valid
 Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-cross-consensus.md) for parachains
 to send arbitrary messages to each other. Parachains open connections with each other and can send
 messages via their established channels. [Collators](learn-collator.md) are full nodes of parachains
-and full nodes of the relay chain, so collator nodes are a key component of message passing. Messages
+and full nodes of the Relay Chain, so collator nodes are a key component of message passing. Messages
 do not pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.)
 go into the Relay Chain. This enhances scalability by keeping data on the edges of the system.
 
@@ -155,7 +155,7 @@ interests and as such, proposals that are unanimously approved of by the Council
 passing threshold in the public referendum. There is also a Technical Committee for making technical
 recommendations (e.g. emergency runtime upgrade to fix a bug).
 
-Cosmos uses coin-vote signalling to pass referenda. The actual enactment of governance decisions is
+Cosmos uses coin-vote signaling to pass referenda. The actual enactment of governance decisions is
 carried out via a protocol fork, much like other blockchains. All token holders can vote, however,
 if a delegator abstains from a vote then the validator they delegate to assume their voting power.
 Validators in Polkadot do not receive any voting power based on their nominators.

@@ -20,7 +20,7 @@ Kusama was released as an early version of the same code to be used in Polkadot,
 share the same underlying architecture: a multichain, heterogeneously-sharded design based on
 [Nominated Proof of Stake (NPoS)](learn-consensus.md). Both networks also share key innovations like
 on-chain [governance](learn-governance.md), hot-swappable runtimes for forkless, on-chain upgrades,
-and [Cross-Conesnsus Message Passing (XCM)](learn-cross-consensus.md) for interoperability. Governance on
+and [Cross-Consensus Message Passing (XCM)](learn-cross-consensus.md) for interoperability. Governance on
 both Polkadot and Kusama is designed to be decentralized and permissionless, giving a say in how the
 network is run to everyone who owns the native token (DOT for Polkadot, KSM for Kusama). Therefore,
 **over time the networks will evolve independently, converging or diverging according to the
@@ -66,7 +66,7 @@ What does _canary_ even mean?
 
 Canary is a type of bird: back in the day, coal miners would put canaries into coal mines as a way to measure the amount of toxic gases that were present. Similarly, canary testing is a way to validate software by releasing software to a limited number of users, or perhaps, an isolated environment - without hurting any birds.
 
-Releases made onto Kusama can be thought of [CanaryReleases](https://martinfowler.com/bliki/CanaryRelease.html).
+Releases made onto Kusama can be thought of as [Canary Releases](https://martinfowler.com/bliki/CanaryRelease.html).
 These releases are usually staged. In Kusama's early days, the network won't just be used for parachain candidates to innovate and test changes, but a proof of concept for Polkadot's sharded model.
 
 In a typical blockchain development pipeline, Kusama would sit in between a "testnet" and a "mainnet"

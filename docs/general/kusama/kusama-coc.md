@@ -11,7 +11,7 @@ big experiment, and we need your participation for it to continue being a great 
 
 ## Community
 
-We want to foster a sense of collaboration amongst ourselves and the open-source community. Kusma
+We want to foster a sense of collaboration amongst ourselves and the open-source community. Kusama
 participants exist to encourage the open exchange of ideas and expression and require an environment
 that recognizes the inherent worth of every person and group. We are here to collaborate, discuss,
 and even disagree. The key is doing this in a manner that comes from a place of respect and

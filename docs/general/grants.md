@@ -6,7 +6,7 @@ description: Learn about Web3 Foundation's Grant Program and how you can benefit
 slug: ../grants
 ---
 
-The Web3 Foundation offers grants for open source software development and research around Substrate,
+Web3 Foundation offers grants for open source software development and research around Substrate,
 Polkadot, and Kusama.
 
 Applications and deliveries are tracked transparently on GitHub and disbursed in BTC, USDT or DAI. However,

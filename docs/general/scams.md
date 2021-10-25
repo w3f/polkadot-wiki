@@ -24,7 +24,7 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
 6. If you can, try to always verify new information that you see with an official source, such as
-   [Polkadot Network's official blog](../general/community.md) or
+   [Polkadot network's official blog](../general/community.md) or
    [Web3 Foundation support](mailto:support@polkadot.network). Often scammers will fake a website or
    a blog post, but if you check it against a secondary source you will reduce the chances of being
    scammed.
@@ -104,7 +104,7 @@ Some simple things that you can do to keep your assets and information secure fr
 ### Always check the source
 
 For any potential scam, always be sure to do a background check on the source, i.e, look at any
-username, email, Youtube channel name, URL, etc. If something seems fishy, that's because it likely
+username, email, YouTube channel name, URL, etc. If something seems fishy, that's because it likely
 is. Never enter any personal data if you feel the source could be a scam. Feel free to check with
 [support@polkadot.network](mailto:support@web3.foundation).
 

@@ -74,7 +74,7 @@ yarn run:signer submit --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf
 ```
 
 This will return a payload to sign and an input waiting for a signature. Take this payload and use
-your normal signing environment (e.g. airgapped machine, VM, etc.). Sign the payload:
+your normal signing environment (e.g. air gapped machine, VM, etc.). Sign the payload:
 
 ```bash
 yarn run:signer sign --account 121X5bEgTZcGQx5NZjwuTjqqKoiG8B2wEAvrUFjuw24ZGZf2 --seed "pulp gaze fuel ... mercy inherit equal" --type sr25519 0x040300ff4a83f1...a8239139ff3ff7c3f6

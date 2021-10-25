@@ -28,7 +28,7 @@ tackle yourself. Being a validator involves more than just executing the Polkado
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator.md) information to make sure you understand the
-factors to consider when constructing your infrastructure. The Web3 Foundation also maintains a
+factors to consider when constructing your infrastructure. Web3 Foundation also maintains a
 [reference implementation for a validator set-up](https://github.com/w3f/polkadot-validator-setup)
 that you can use by deploying yourself (video walkthrough is available
 [here](https://www.youtube.com/watch?v=tTn8P6t7JYc)). As you progress in your journey as a
@@ -169,7 +169,7 @@ sudo ntpq -p
 
 #### Optional: Installation via Package Managers
 
-The Polkadot Binary in included in `Debian` derivatives (i.e. **Debain**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
+The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
 
 #### Debian-based (Debian, Ubuntu)
 

@@ -204,7 +204,7 @@ There are two methods to claim KSM.
 ### DOT Holders
 
 Those who participated in the Polkadot sales before 2020 and have been allocated DOT indicator
-tokens on Ethereum can claim a proportional amount of KSM on the Kusama Network.
+tokens on Ethereum can claim a proportional amount of KSM on the Kusama network.
 
 To do this, you must sign a message containing the address of your Kusama account. You can do this by
 using the Polkadot-JS UI

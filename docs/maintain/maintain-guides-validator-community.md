@@ -171,8 +171,8 @@ quick to adapt to necessary circumstances.
 
 It can also be useful for Nominators to know how the Validator runs software, and where they get new
 binaries from. How do they get alerted for new releases? Do they hear about things from matrix? Do
-they have alerts for particular Github activities? Do they use the Debian/RPM packages? Do they use
-the Parity-provided Github binaries? Do they use Parity Docker images? Do they make their own Docker
+they have alerts for particular GitHub activities? Do they use the Debian/RPM packages? Do they use
+the Parity-provided GitHub binaries? Do they use Parity Docker images? Do they make their own Docker
 images? Do they build the binaries themselves? Validators often have their own build server for
 making binaries. If they take the extra steps to make these and do not rely on external parties,
 this can be seen as a plus from nominators, as it helps contribute to decentralization.

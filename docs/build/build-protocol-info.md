@@ -36,7 +36,7 @@ In Polkadot (and most Substrate chains), user accounts are identified by a 32-by
 `AccountId`. This is simply the public key for the cryptography used by Substrate.
 
 Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
-handle many different cryptographies and chains. It has much in common with Bitcoin's Base58Check
+handle many different cryptographic schemes and chains. It has much in common with Bitcoin's Base58Check
 format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
 See the [SS58 page](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>)
@@ -252,7 +252,7 @@ The Polkadot Relay Chain does not support smart contracts.
 ## Other Networks
 
 Besides running a private network, Polkadot has two other networks where you could test
-infrastucture prior to deploying to the Polkadot mainnet.
+infrastructure prior to deploying to the Polkadot mainnet.
 
 **Kusama Canary Network:** Kusama is Polkadot's cutting-edge cousin. Many risky features are
 deployed to Kusama prior to making their way into Polkadot.
