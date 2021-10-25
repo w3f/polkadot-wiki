@@ -34,7 +34,7 @@ When setting the parameters of a crowdloan campaign, consider the following:
   - `x` is the number of auction periods you want the crowdloan to continue for 
   - `y` is the current block number
 
-           (Blocks/Min * Hour/Min * Day/Hour * Week/Day) * (x * Week/Period).
+  -  `(Blocks/Min * Min/Hour * Hour/Day * Day/Week) * (x[Period] * Week/Period) + y[BlockNumber]`
 
   - "First period" field refers to the first period you want to bid for. If the current auction
     encompasses periods `(3, 4, 5, 6)`, your first period can be at least `3`. The last slot must also
