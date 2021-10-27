@@ -31,7 +31,7 @@ const main = async () => {
     `ipfs-cluster-ctl \
     --enc json \
     --basic-auth ${argv.auth} \
-    --host /dns4/hemmerle.dev/tcp/9097/p2p/12D3KooWBxH7hKkvvp2oCDay9jSh8gw5FkdBsdgPytXFjRgqDvf8 \
+    --host /dns4/ipfs.w3f.community/tcp/9096/p2p/12D3KooWMfXzp2nmNrb7DM4PETYZbaKALnrnwiqnhrvUC66KyYrb \
     ${command}`,
     { encoding: 'utf-8' });
 
