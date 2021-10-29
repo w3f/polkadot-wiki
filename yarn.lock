@@ -6957,10 +6957,10 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-katex@^0.13.19:
-  version "0.13.19"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.19.tgz#017e4c6aade5c50b99d18908393ed4e1df5a3f4a"
-  integrity sha512-5a3eZvdSfdQStJhNDM3JuEOtI9U3N+KzmutLNf76YHosZeA6bcas45O4AwQQ2oVh5xHs5jiUBn5t+s2Cue+bGw==
+katex@^0.13.20:
+  version "0.13.20"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.20.tgz#8bb5d3a1b3383c428b36274385444c747b1fba1f"
+  integrity sha512-nGuuanV0idsPpWy3LKtTYSbqHwPOr9qxXuoJ/1l5fTLA2RYXVknpqElxgudXeaMz55OnxW2KhY7BV1greb08zg==
   dependencies:
     commander "^6.0.0"
 
