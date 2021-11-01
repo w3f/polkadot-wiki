@@ -61,7 +61,7 @@ chain will cost a few dollars, but were on average around $100 per interaction
 
 This prevents use cases that go beyond the current craze of _digital dust
 gathering NFTs_ on Ethereum - profile pictures, generative "look once and then
-put away" art, [ENS](ens) addresses, and proof of attendance badges.
+put away" art, [ENS](ens) addresses, and [proof of attendance badges](https://poap.xyz/).
 
 ![](../assets/nft/samurai.png)
 _[a typical NFT on Ethereum](https://opensea.io/assets/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)_
