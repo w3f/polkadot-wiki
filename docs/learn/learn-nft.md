@@ -83,7 +83,7 @@ ecosystem:
 
 ### Unique network
 
-[Unique network](https://unique.network/), an NFT-specific parachain offering
+[Unique network](https://unique.network/), an NFT-specific blockchain offering
 innovations such as sponsored transactions, bundling fungible tokens with
 non-fungibles, and spliting NFTs into fungible tokens for partial ownership.
 
