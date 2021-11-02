@@ -37,9 +37,10 @@ community members. The application we use most often to interact with the Matrix
 
 ### Polkadot
 
-- [**Polkadot Space**](https://matrix.to/#/#polkadot:web3.foundation) - 
-  Space containing all official rooms below (note that this is a newer feature and may not be
-  supported by your Matrix client).
+[**Polkadot Space**](https://matrix.to/#/#polkadot:web3.foundation) - Space containing all 
+official rooms below. Note that this is a newer feature and may not be supported by your 
+Matrix client. If you face any issues, join the rooms individually.
+
 - [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:web3.foundation) -
   General room for talk about Polkadot.
 - [Polkadot Validator Lounge](https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation) -
@@ -51,8 +52,10 @@ community members. The application we use most often to interact with the Matrix
 
 ### Kusama
 
-- [**Kusama Space**](https://matrix.to/#/#kusama:web3.foundation) - 
-  Space containing all official rooms below.
+[**Kusama Space**](https://matrix.to/#/#kusama:web3.foundation) - Space containing all 
+official rooms below. Note that this is a newer feature and may not be supported by your 
+Matrix client. If you face any issues, join the rooms individually.
+
 - [Kusama Watercooler](https://matrix.to/#/#kusamawatercooler:web3.foundation) -
   General room for talk about Kusama.
 - [Kusama Validator Lounge](https://matrix.to/#/#KusamaValidatorLounge:polkadot.builders) -
