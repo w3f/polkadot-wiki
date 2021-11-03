@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const registryLink = "https://raw.githubusercontent.com/paritytech/substrate/master/ss58-registry.json";
+const registryLink = "https://raw.githubusercontent.com/paritytech/ss58-registry/main/ss58-registry.json";
 
 let output = `
 ---
