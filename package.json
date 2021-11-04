@@ -43,7 +43,7 @@
     "@actions/github": "^5.0.0",
     "@crowdin/cli": "^3.7.1",
     "@docusaurus/core": "^2.0.0-beta.9",
-    "@docusaurus/module-type-aliases": "^2.0.0-beta.8",
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.9",
     "@docusaurus/plugin-client-redirects": "^2.0.0-beta.9",
     "@docusaurus/preset-classic": "^2.0.0-beta.9",
     "@octokit/rest": "^18.12.0",
