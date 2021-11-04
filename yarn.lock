@@ -1565,7 +1565,7 @@
     webpack-merge "^5.8.0"
     webpackbar "^5.0.0-3"
 
-"@docusaurus/core@^2.0.0-beta.9":
+"@docusaurus/core@2.0.0-beta.9", "@docusaurus/core@^2.0.0-beta.9":
   version "2.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.0.0-beta.9.tgz#59b57c5e60fe83ef9e3c6aa7000d470eb0c52656"
   integrity sha512-Bf9c6+yftZfAJk2h4HyaDvzBp5TLhqYtfnfWKKNi0Gdw9vRLXhi7IaiGaLWIuNAIJLTi++Ql0BAn+C0OO8EsWA==
@@ -1701,16 +1701,16 @@
     "@types/react-router-config" "*"
     "@types/react-router-dom" "*"
 
-"@docusaurus/plugin-client-redirects@^2.0.0-beta.8":
-  version "2.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.8.tgz#bc2b369c55d24a54c618828c209458dfe73c1772"
-  integrity sha512-8lOZfa8jrl9D9mEAyCDG1QheY+CLSUxDDRf86xZeq07FPpsuXNC0mthggSSJYFFFwQmgOREd7SFoTWGHSZ7GIg==
+"@docusaurus/plugin-client-redirects@^2.0.0-beta.9":
+  version "2.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.9.tgz#4ac5cd497d31c45728df6bb1c61326fc4062d969"
+  integrity sha512-rksXkA9keq9jsgxp0ZLX+MY68ViDhCpdLcxNCNmZl2c9XA2v8AQN4HU2e6Dq+OEefk/ltQYLIbfTa2Hj/ZEwzQ==
   dependencies:
-    "@docusaurus/core" "2.0.0-beta.8"
-    "@docusaurus/types" "2.0.0-beta.8"
-    "@docusaurus/utils" "2.0.0-beta.8"
-    "@docusaurus/utils-common" "2.0.0-beta.8"
-    "@docusaurus/utils-validation" "2.0.0-beta.8"
+    "@docusaurus/core" "2.0.0-beta.9"
+    "@docusaurus/types" "2.0.0-beta.9"
+    "@docusaurus/utils" "2.0.0-beta.9"
+    "@docusaurus/utils-common" "2.0.0-beta.9"
+    "@docusaurus/utils-validation" "2.0.0-beta.9"
     chalk "^4.1.2"
     eta "^1.12.3"
     fs-extra "^10.0.0"
