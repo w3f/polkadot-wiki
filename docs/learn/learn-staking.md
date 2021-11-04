@@ -464,8 +464,8 @@ a result of [redenomination](../general/redenomination.md). :polkadot }}
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to treasury. The current token supply of KSM is ~10,000,000. :kusama }}
 
-There is an _ideal staking rate_ that the network tries to maintain.
-The goal is to have the _system staking rate_ meet the _ideal staking rate_.
+There is an *ideal staking rate* that the network tries to maintain.
+The goal is to have the *system staking rate* meet the *ideal staking rate*.
 
 The system staking rate would be the total amount staked over the total token supply, where
 the total amount staked is the stake of all validators and nominators on the network. The ideal
@@ -480,7 +480,7 @@ staking rate of the entire network.
 > dilute over time.
 
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
-estimation of all DOT that should be staked, per parachain slot).
+estimation of all DOT that should be staked, per parachain slot). 
 
 > In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
 > constrained by locked parachain bonds.
@@ -519,10 +519,14 @@ please see
 - 50% targeted active staking
 - ~20% annual nominal return
 
-> Keep in mind that when the system's staking rate is lower than the ideal staking rate, the
-> annual nominal return rate will be higher than 20%, encouraging more users to use their tokens
-> for staking. On the contrary, when the system staking rate is higher than the ideal staking rate,
-> the annual nominal return of will be less than 20%, encouraging some users to withdraw.
+Up until now, the network has been following an inflation model that excludes the metric of active 
+parachains. The ideal staking rate is not always 50%, as the number of active parachains influences 
+the available liquidity that is available to secure the network.
+
+Keep in mind that when the system's staking rate is lower than the ideal staking rate, the
+annual nominal return rate will be higher than 20%, encouraging more users to use their tokens
+for staking. On the contrary, when the system staking rate is higher than the ideal staking rate,
+the annual nominal return of will be less than 20%, encouraging some users to withdraw.
 
 ### Why not stake?
 
