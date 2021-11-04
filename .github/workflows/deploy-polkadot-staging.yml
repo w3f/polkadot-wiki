@@ -68,10 +68,11 @@ jobs:
           echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
           yarn && yarn polkadot:build && echo "staging.polkadot.network" > polkadot-wiki/static/CNAME && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=polkadot-wiki-staging yarn run polkadot:publish-gh-pages
 
-          # setup ipfs cluster tools
-          wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.0/ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
-          tar xf ./ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
-          chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
-          export PATH=$PATH:`pwd`/ipfs-cluster-ctl
 
-          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./polkadot-wiki/build --pinName polkadot-wiki-staging
+          # setup ipfs cluster tools
+
+          # wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.0/ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
+          # tar xf ./ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
+          # chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
+          # export PATH=$PATH:`pwd`/ipfs-cluster-ctl
+          # node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./polkadot-wiki/build --pinName polkadot-wiki-staging
