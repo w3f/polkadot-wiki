@@ -6,10 +6,7 @@ description: An introduction on staking in Polkadot's NPoS consensus model.
 slug: ../learn-staking
 ---
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its [consensus](learn-consensus.md) mechanism.
-The system encourages DOT holders to participate as nominators. Nominators may back up to 16
-validators as trusted validator candidates. Both validators and nominators lock their tokens as
-collateral and receive staking rewards.
+Polkadot использует NPoS (Nominated Proof-of-Stake) в качестве механизма для [консенсуса](learn-consensus.md). Таким образом держателей коина DOT система приглашает стать номинаторами. Номинатор может поддержать до 16 кандидатов в валидаторы. И те и другие, т.е. и валидаторы и доверившие им номинаторы, временно ограничивают хождение своих монет (locking=заморозка) для получения, соответственно, прямого или косвенного вознаграждения за стекинг (staking reward).
 
 The staking system pays out rewards essentially equally to all validators regardless of stake.
 Having more stake on a validator does not influence the amount of block rewards it receives.
