@@ -6,16 +6,19 @@ description: An introduction on staking in Polkadot's NPoS consensus model.
 slug: ../learn-staking
 ---
 
-Polkadot использует NPoS (Nominated Proof-of-Stake) в качестве механизма для [консенсуса](learn-consensus.md). Таким образом держателей коина DOT система приглашает стать номинаторами. Номинатор может поддержать до 16 кандидатов в валидаторы. И те и другие, т.е. и валидаторы и доверившие им номинаторы, временно ограничивают хождение своих монет (locking=заморозка) для получения, соответственно, прямого или косвенного вознаграждения за стекинг (staking reward).
+Polkadot использует NPoS (Nominated Proof-of-Stake) в качестве механизма для [консенсуса](learn-consensus.md). 
+Таким образом держателей коина DOT система приглашает стать номинаторами. Номинатор может поддержать 
+до 16 кандидатов в валидаторы. И те и другие, т.е. и валидаторы и доверившие им номинаторы, временно ограничивают 
+хождение своих монет ("заморозка") для получения, соответственно, прямого или косвенного вознаграждения за стекинг.
 
-The staking system pays out rewards essentially equally to all validators regardless of stake.
-Having more stake on a validator does not influence the amount of block rewards it receives.
-However, there is a probabilistic component to reward calculation (discussed below), so rewards may
-not be exactly equal for all validators in a given era.
+Система выплачивает вознаграждения в основном поровну между валидаторами, независимо от ставки.
+Большая ставка на данного валидатора не влияет на величину вознаграждения за блок, которое он получит.
+Однако, существует вероятностный компонент вычисления вознаграждения (см. ниже), поэтому вознаграждения 
+не получаются равными для всех валидаторов в данной эре.
 
-Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. 
-In this way, the network creates incentives for the nomination of lower-staked validators to create 
-an equally-staked validator set.
+Распределение вознаграждения между номинаторами происходит после вычета вознаграждений валидаторам 
+согласно коэффициенту. Таким образом система стимулирует номинаторов ставить на валидаторов с малым 
+суммарным объемом ставок, чтобы выравнять пул валидаторов по сумме ставок.
 
 ## How does staking work in Polkadot?
 
