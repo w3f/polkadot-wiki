@@ -442,7 +442,7 @@ Then, connect your local node with Polkadot-JS Apps.
 
 Substrate-based chains, including the Polkadot and Kusama relay chains, use an
 [SS58 encoding](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) for
-their address formats. [This page](https://github.com/paritytech/substrate/blob/master/ss58-registry.json)
+their address formats. [This page](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
 serves as the canonical registry for teams to see which chain corresponds to a given prefix, and which 
 prefixes are available.
 
