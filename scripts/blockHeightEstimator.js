@@ -49,13 +49,15 @@ const calculateNewBlockHeight = async () => {
   return getBlockHeightFromTime(number.toNumber());
 };
 
+// main functions calls the other functions
 const main = async () => {
   const provider = await getProvider();
-  console.log(' Getting new block height...');
+  console.log('Getting new block height...');
   const blockHeight = await calculateNewBlockHeight();
   return blockHeight;
 };
 
+// log to console the new block height and exit
 main()
   .then((res) => console.log(`In ${hours} hours, the chain will be at block height #${res}`))
   .catch(console.error)
