@@ -1,12 +1,14 @@
 // Required imports
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
-// Time info
+// replace hours with user input
 const hours = 1.5;
+
+// Time info
 const hoursToSeconds = hours * 60 * 60;
 const blockTimeInSeconds = 6;
 
-async function getProvider() {
+const getProvider = async () => {
   // Initialise the provider to connect to the polkadot rpc
   const provider = new WsProvider('wss://rpc.polkadot.io');
 
@@ -21,9 +23,9 @@ async function getProvider() {
   ]);
 
   console.log(`You are connected to chain ${chain} using ${nodeName} v${nodeVersion}`);
-}
+};
 
-async function calculateNewBlockHeight() {
+const calculateNewBlockHeight = async () => {
   // Initialise the provider to connect to the polkadot rpc
   const provider = new WsProvider('wss://rpc.polkadot.io');
 
@@ -38,20 +40,21 @@ async function calculateNewBlockHeight() {
   const { number } = await api.rpc.chain.getHeader();
   console.log(`Chain is at currently block: #${number} at ${dateTimeObj.toString()}`);
 
+  // calculate new block height after some time
   const getBlockHeightFromTime = (currBlockHeight) => {
-    // TODO: take in user input
     const newBlockHeight = hoursToSeconds / blockTimeInSeconds + currBlockHeight;
     return newBlockHeight;
   };
-  return getBlockHeightFromTime(number.toNumber());
-}
 
-async function main() {
+  return getBlockHeightFromTime(number.toNumber());
+};
+
+const main = async () => {
   const provider = await getProvider();
-  console.log(" Getting new block height...");
+  console.log(' Getting new block height...');
   const blockHeight = await calculateNewBlockHeight();
   return blockHeight;
-}
+};
 
 main()
   .then((res) => console.log(`In ${hours} hours, the chain will be at block height #${res}`))
