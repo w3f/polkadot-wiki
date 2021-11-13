@@ -152,13 +152,13 @@ is composed of three members Charlie, Dave, and Eve.
 Alice begins the process by issuing the `report_awesome` extrinsic. This extrinsic requires two
 arguments, a reason and the address to tip. Alice submits Bob's address with the reason being a
 UTF-8 encoded URL to a post on
-{{ polkadot: [polkassembly](https://polkadot.polkassembly.io) :polkadot }}
-{{ kusama: [polkassembly](https://kusama.polkassembly.io) :kusama }} that explains her reasoning for
+{{ polkadot: [Polkassembly](https://polkadot.polkassembly.io) :polkadot }}
+{{ kusama: [Polkassembly](https://kusama.polkassembly.io) :kusama }} that explains her reasoning for
 why Bob deserves the tip.
 
 As mentioned above, Alice must also lock up a deposit for making this report. The deposit is the
-base deposit as set in the chain's parameter list plus the additional deposit per byte contained in
-the reason. This is why Alice submitted a URL as the reason instead of the explanation directly, it
+base deposit as set in the chain's parameter list, plus the additional deposit per byte contained in
+the reason. This is why Alice submitted a URL as the reason instead of the explanation directly: it
 was cheaper for her to do so.
 
 For her trouble, Alice is able to claim the eventual finder's fee if the tip is approved by the
@@ -169,6 +169,8 @@ independently) decide on the value of the tip that Bob deserves.
 
 Charlie, Dave, and Eve all review the report and make tips according to their personal valuation of
 the benefit Bob has provided to Kusama.
+
+For example:
 
 Charlie tips {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }}. Dave tips
 {{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }}. Eve tips
