@@ -1,6 +1,11 @@
 // Required imports
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
+// Time info
+const hours = 1.5;
+const hoursToSeconds = hours * 60 * 60;
+const blockTimeInSeconds = 6;
+
 async function getProvider() {
   // Initialise the provider to connect to the polkadot rpc
   const provider = new WsProvider('wss://rpc.polkadot.io');
@@ -18,34 +23,37 @@ async function getProvider() {
   console.log(`You are connected to chain ${chain} using ${nodeName} v${nodeVersion}`);
 }
 
-async function calculate() {
+async function calculateNewBlockHeight() {
   // Initialise the provider to connect to the polkadot rpc
   const provider = new WsProvider('wss://rpc.polkadot.io');
 
   // Create the API and wait until ready
   const api = await ApiPromise.create({ provider });
 
+  // Get current time
   const now = await api.query.timestamp.now();
+  const dateTimeObj = new Date(now.toNumber());
 
-  // Subscribe to the new headers on-chain. The callback is fired when new headers
-  // are found, the call itself returns a promise with a subscription that can be
-  // used to unsubscribe from the newHead subscription
-  const getBlockHeightFromTime = await api.rpc.chain.subscribeNewHeads((header) => {
-    console.log(`Chain is at currently block: #${header.number} at ${now}`);
-    
+  // Get block number at now
+  const { number } = await api.rpc.chain.getHeader();
+  console.log(`Chain is at currently block: #${number} at ${dateTimeObj.toString()}`);
+
+  const getBlockHeightFromTime = (currBlockHeight) => {
     // TODO: take in user input
-    const hours = 1;
-    const hoursToSeconds = hours * 60 * 60;
-    const blockTimeInSeconds = 6;
-    const newBlockHeight = hoursToSeconds / blockTimeInSeconds + header.number.toNumber();
-    console.log(`In ${hours} hours, the chain will be at block height ${newBlockHeight}`);
+    const newBlockHeight = hoursToSeconds / blockTimeInSeconds + currBlockHeight;
     return newBlockHeight;
-  });
-  return getBlockHeightFromTime();
+  };
+  return getBlockHeightFromTime(number.toNumber());
 }
 
-getProvider().catch(console.error);
+async function main() {
+  const provider = await getProvider();
+  console.log(" Getting new block height...");
+  const blockHeight = await calculateNewBlockHeight();
+  return blockHeight;
+}
 
-// TODO: exits before promise returns
-calculate().catch(console.error);
-//   .finally(() => process.exit());
+main()
+  .then((res) => console.log(`In ${hours} hours, the chain will be at block height #${res}`))
+  .catch(console.error)
+  .finally(() => process.exit(0));
