@@ -25,9 +25,7 @@ const getProvider = async () => {
   console.log(`You are connected to chain ${chain} using ${nodeName} v${nodeVersion}`);
 };
 
-const convertDateToHours = (date) => {
-
-};
+const convertDateToHours = (date) => {};
 
 const calculateNewBlockHeight = async () => {
   // Initialise the provider to connect to the polkadot rpc
