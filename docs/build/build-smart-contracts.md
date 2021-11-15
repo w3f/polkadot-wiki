@@ -119,6 +119,16 @@ the state they consume but has since been deprecated.
 
 See the associated [pull request](https://github.com/paritytech/substrate/pull/9669) for more details.
 
+### Polkadot Standards Proposals (PSPs)
+
+Polkadot ecosystem got its own set of standards to fit ecosystem needs. Please visit [Polkadot Standards Proposals (PSPs) Github](https://github.com/w3f/PSPs).
+
+These standards go through several acceptance phases, and the engagement of the whole community is needed to build valuable and future-proof standards.
+All the teams who will benefit from a standard needs to agree on its content.
+
+Some of these PSPs are targeting Substrate's `contracts` pallet:
+- [PSP22 - Fungible Token Standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md)
+
 ### Ink
 
 [ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts
@@ -136,14 +146,14 @@ parachains.
 ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual
 machine and compatible with Substrate chains.
 
-#### Examples of Smart Contracts in `ink!`
+#### Libraries for Smart Contracts in `ink!`
 
 Collected below are some community examples of smart contracts in `ink!`. **Are you working on a
 smart contract example? Ask us to add it to this page!**
 
-- [Ownable](https://github.com/JesseAbram/foRust/): Port of the OpenZeppelin `Ownable` contract.
 - [OpenBrush](https://docs.openbrush.io/): an `ink!` library providing standard contracts based on
   [PSP](https://github.com/w3f/PSPs) with useful contracts and macros for building.
+- [Metis](https://github.com/patractlabs/metis): an Wasm contract standard library developed by Patract Labs
 
 ## Smart Contract Environments are still Maturing
 
