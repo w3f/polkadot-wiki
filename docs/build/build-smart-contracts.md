@@ -124,7 +124,7 @@ See the associated [pull request](https://github.com/paritytech/substrate/pull/9
 Web3 Foundation supports proposals for Polkadot that define a set standards to fit ecosystem needs.
 
 These standards go through several acceptance phases, where the engagement of the whole community is needed to build valuable and future-proof standards.
-All the teams who will benefit from a standard needs to agree on its content.
+All the teams who will benefit from a standard need to agree on its content.
 
 Some of these PSPs are targeting Substrate's `contracts` pallet:
 - [PSP22 - Fungible Token Standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md)
