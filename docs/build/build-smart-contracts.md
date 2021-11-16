@@ -128,7 +128,7 @@ All the teams who will benefit from a standard need to agree on its content.
 
 Some of these PSPs are targeting Substrate's `contracts` pallet:
 - [PSP22 - Fungible Token Standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md)
-
+Please visit [Polkadot Standards Proposals (PSPs) Github](https://github.com/w3f/PSPs) for more information.
 ### Ink
 
 [ink!](https://github.com/paritytech/ink) is a domain specific language for writing smart contracts
