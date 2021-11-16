@@ -122,7 +122,6 @@ See the associated [pull request](https://github.com/paritytech/substrate/pull/9
 ### Polkadot Standards Proposals (PSPs)
 
 Web3 Foundation supports proposals for Polkadot that define a set standards to fit ecosystem needs.
-
 These standards go through several acceptance phases, where the engagement of the whole community is needed to build valuable and future-proof standards.
 All the teams who will benefit from a standard need to agree on its content.
 
