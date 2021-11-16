@@ -33,7 +33,7 @@ which takes 28 eras. If a validator were to immediately chill and start unbondin
 calculated, and nobody issued a payout for that era from that validator in the next 28 eras, the
 reward would no longer be claimable.
 
-> In order be absolutely sure that staking rewards can be claimed, users should trigger a payout
+> In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout
 > before 28 eras have passed.
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
