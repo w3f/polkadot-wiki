@@ -121,7 +121,7 @@ See the associated [pull request](https://github.com/paritytech/substrate/pull/9
 
 ### Polkadot Standards Proposals (PSPs)
 
-Polkadot ecosystem got its own set of standards to fit ecosystem needs. Please visit [Polkadot Standards Proposals (PSPs) Github](https://github.com/w3f/PSPs).
+Web3 Foundation supports proposals for Polkadot that define a set standards to fit ecosystem needs.
 
 These standards go through several acceptance phases, and the engagement of the whole community is needed to build valuable and future-proof standards.
 All the teams who will benefit from a standard needs to agree on its content.
