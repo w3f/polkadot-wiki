@@ -60,7 +60,7 @@
     "mr-pdf": "^1.0.7",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1",
+    "pretty-quick": "^3.1.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
