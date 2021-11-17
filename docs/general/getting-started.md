@@ -42,8 +42,6 @@ acquisition of a parachain slot and several key functions on Polkadot.
 - 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans)
   for [parachain slot auctions](../learn/learn-auction)
 
-- ?? - you can participate in Democracy voting
-
 - 20 DOT - you can register an [on-chain identity](../learn/learn-identity).
 
 - 120 DOT - you can nominate validators and earn staking rewards. Learn more on
