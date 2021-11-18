@@ -27,6 +27,11 @@ slug: ../learn-video-tutorials
 - [Why should you Nominate on Polkadot and Kusama?](https://youtu.be/weG_uzdSs1E)
 - [Picking validators to Nominate (Stake)](https://youtu.be/ZMzhM1m4I-k)
 
+### Parachain Auctions and Crowdloans
+
+- [Contribute to Crowdloans using Polkadot JS](https://www.youtube.com/watch?v=AA9mPANmzmU)
+- [Introduction to Parachain Slot auctions](https://www.youtube.com/watch?v=bsoxJw0rayk)
+
 ### Governance
 
 - [Voting on Referenda on Polkadot and Kusama](https://www.youtube.com/watch?v=BkbhhlsezGA)
