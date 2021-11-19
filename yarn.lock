@@ -1395,10 +1395,10 @@
     core-js-pure "^3.16.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.13.16", "@babel/runtime@^7.14.0", "@babel/runtime@^7.15.3", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.0.tgz#e27b977f2e2088ba24748bf99b5e1dece64e4f0b"
-  integrity sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw==
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.13.16", "@babel/runtime@^7.14.0", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.0", "@babel/runtime@^7.16.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+  version "7.16.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
+  integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -2224,28 +2224,28 @@
     camelcase "^6.2.0"
     ip-regex "^4.3.0"
 
-"@polkadot/wasm-crypto-asmjs@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-4.2.1.tgz#6b7eae1c011709f8042dfd30872a5fc5e9e021c0"
-  integrity sha512-ON9EBpTNDCI3QRUmuQJIegYoAcwvxDaNNA7uwKTaEEStu8LjCIbQxbt4WbOBYWI0PoUpl4iIluXdT3XZ3V3jXA==
+"@polkadot/wasm-crypto-asmjs@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-4.3.1.tgz#a66e234b54ab6bf00069fd0167d4554ce348b7fc"
+  integrity sha512-syU6ORwWcbyBYOEXS5/3arBFWTduYqpmJeFidg22e8ZbnzA50iiwB8pWN7Skhlyg22ymUAaST9y3DNAMBOmmfw==
   dependencies:
-    "@babel/runtime" "^7.15.3"
+    "@babel/runtime" "^7.16.3"
 
-"@polkadot/wasm-crypto-wasm@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-wasm/-/wasm-crypto-wasm-4.2.1.tgz#2a86f9b405e7195c3f523798c6ce4afffd19737e"
-  integrity sha512-Rs2CKiR4D+2hKzmKBfPNYxcd2E8NfLWia0av4fgicjT9YsWIWOGQUi9AtSOfazPOR9FrjxKJy+chQxAkcfKMnQ==
+"@polkadot/wasm-crypto-wasm@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-wasm/-/wasm-crypto-wasm-4.3.1.tgz#70e5f8e8fbf78aecff99c6d6522ec2e60fc456c8"
+  integrity sha512-WTWUAQgKPk8B9f9zi34SXVhSuHUIVicCZT9Id8/Lov9kGw/9Tctcnjj1uUmXSNj9YsvIfSfh7sMopULuqRUIIw==
   dependencies:
-    "@babel/runtime" "^7.15.3"
+    "@babel/runtime" "^7.16.3"
 
-"@polkadot/wasm-crypto@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-4.2.1.tgz#4d09402f5ac71a90962fb58cbe4b1707772a4fb6"
-  integrity sha512-C/A/QnemOilRTLnM0LfhPY2N/x3ZFd1ihm9sXYyuh98CxtekSVYI9h4IJ5Jrgz5imSUHgvt9oJLqJ5GbWQV/Zg==
+"@polkadot/wasm-crypto@^4.2.1", "@polkadot/wasm-crypto@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-4.3.1.tgz#130ae3b18a96f5be0c80d0b19697ae87db1c408a"
+  integrity sha512-O1YrOsv+B9JLtFDc3Immr2WPWVKHsxGxWjDO7qYDB7VyYP2hVVZ7Cc4NyCwZV/qsklIX7FLMRIcsS5XevL+8aQ==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/wasm-crypto-asmjs" "^4.2.1"
-    "@polkadot/wasm-crypto-wasm" "^4.2.1"
+    "@babel/runtime" "^7.16.3"
+    "@polkadot/wasm-crypto-asmjs" "^4.3.1"
+    "@polkadot/wasm-crypto-wasm" "^4.3.1"
 
 "@polkadot/x-fetch@^7.8.2":
   version "7.8.2"
