@@ -180,7 +180,7 @@ function HomeFooter() {
         </Translate>
       </p>
       <div>
-        <a href={useDocUrl("general/contributing")}>
+        <a href={useDocUrl("contributing")}>
           <button className="btn btn-lg btn-primary btn-bg-primary mr-3">
             <Translate
               id="homepage.homeFooter.improveWiki.contributeButton"

@@ -7,7 +7,10 @@ slug: ../learn-crowdloans
 ---
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
-for their parachain bids in a decentralised crowdloan.
+for their parachain bids in a decentralised crowdloan. If you are here for guidance on how to 
+contribute for a crowdloan, watch the video below or read this [support article on crowdloans](https://support.polkadot.network/support/solutions/articles/65000177341-how-to-participate-in-crowdloans-on-polkadot-or-kusama).
+
+[![Crowdloans on Polkadot JS](https://img.youtube.com/vi/AA9mPANmzmU/0.jpg)](https://youtu.be/AA9mPANmzmU)
 
 > For information on how to participate in the crowdloan and parachain auction testing on
 > Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
