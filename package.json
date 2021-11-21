@@ -68,7 +68,6 @@
     "yargs": "^17.2.1"
   },
   "dependencies": {
-    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.8",
     "@polkadot/util": "^7.3.1",
     "@polkadot/wasm-crypto": "^4.2.1",
     "ansi-html": "^0.0.7",
@@ -81,6 +80,7 @@
     "remark-docusaurus-tabs": "^0.1.0",
     "replace-in-file": "^6.3.2",
     "set-value": "^4.1.0",
+    "stringify": "^5.2.0",
     "trim": "^1.0.1"
   },
   "husky": {
