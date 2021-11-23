@@ -32,7 +32,7 @@ const main = async () => {
     --enc json \
     --basic-auth ${argv.auth} \
     --host /dns4/ipfs.w3f.community/tcp/9096/p2p/12D3KooWMfXzp2nmNrb7DM4PETYZbaKALnrnwiqnhvrUC66KyYrb \
-    ${command}`,
+    ${command} \n`,
     { encoding: 'utf-8' });
 
   // return CID as string from a named pin on the cluster
