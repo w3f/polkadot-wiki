@@ -32,8 +32,8 @@ control their data and are not limited by trust bounds within the network.
 
 ### What can I do with my DOT?
 
-DOT is the native token of the Polkadot Network. DOT can be used for staking, governance,
-acquisition of a parachain slot and several key functions on Polkadot.
+DOT is the native token of the Polkadot Network. DOT can be used for transaction fees, staking, 
+governance, acquisition of a parachain slot and for enabling several key functionalities on Polkadot.
 
 - 1 DOT - minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below 1 DOT, your account will be reaped. Learn more about
@@ -42,10 +42,17 @@ acquisition of a parachain slot and several key functions on Polkadot.
 - 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans)
   for [parachain slot auctions](../learn/learn-auction)
 
-- 20 DOT - you can register an [on-chain identity](../learn/learn-identity).
+- 20 DOT - you can register an [on-chain identity](../learn/learn-identity) or vote for 
+  [council](../maintain/maintain-guides-how-to-vote-councillor)
 
 - 120 DOT - you can nominate validators and earn staking rewards. Learn more on
   [how to stake your DOT](../learn/learn-staking).
+  
+DOT has a lot of utility in [Polkadot's democracy](../maintain/maintain-guides-democracy). Bonding 
+DOT is a requirement to create proposals, to second them and to vote on them when they become 
+referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a 
+[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal). DOT can also enable you 
+to participate in programs like [Thousand Validators Program](../thousand-validators#polkadot).
 
 ### Interact with Polkadot
 
