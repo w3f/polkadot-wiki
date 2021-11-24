@@ -37,22 +37,22 @@ governance, acquisition of a parachain slot and for enabling several key functio
 
 - 1 DOT - minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below 1 DOT, your account will be reaped. Learn more about
-  [Existential Deposit](../build/build-protocol-info#existential-deposit)
+  [Existential Deposit](../build/build-protocol-info.md)
 
-- 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans)
-  for [parachain slot auctions](../learn/learn-auction)
+- 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
+  for [parachain slot auctions](../learn/learn-auction.md)
 
-- 20 DOT - you can register an [on-chain identity](../learn/learn-identity) or vote for 
-  [council](../maintain/maintain-guides-how-to-vote-councillor)
+- 20 DOT - you can register an [on-chain identity](../learn/learn-identity.md) or vote for 
+  [council](../maintain/maintain-guides-how-to-vote-councillor.md)
 
 - 120 DOT - you can nominate validators and earn staking rewards. Learn more on
-  [how to stake your DOT](../learn/learn-staking).
+  [how to stake your DOT](../learn/learn-staking.md).
   
-DOT has a lot of utility in [Polkadot's democracy](../maintain/maintain-guides-democracy). Bonding 
+DOT has a lot of utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md). Bonding 
 DOT is a requirement to create proposals, to second them and to vote on them when they become 
 referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a 
-[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal). DOT can also enable you 
-to participate in programs like [Thousand Validators Program](../thousand-validators#polkadot).
+[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal.md). DOT can also enable you 
+to participate in programs like [Thousand Validators Program](../thousand-validators.md).
 
 ### Interact with Polkadot
 
