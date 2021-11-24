@@ -37,7 +37,7 @@ governance, acquisition of a parachain slot and for enabling several key functio
 
 - 1 DOT - minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below 1 DOT, your account will be reaped. Learn more about
-  [Existential Deposit](../build/build-protocol-info.md)
+  [Existential Deposit](../build/build-protocol-info.md#existential-deposit)
 
 - 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
   for [parachain slot auctions](../learn/learn-auction.md)
@@ -52,7 +52,7 @@ DOT has a lot of utility in [Polkadot's democracy](../maintain/maintain-guides-d
 DOT is a requirement to create proposals, to second them and to vote on them when they become 
 referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a 
 [treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal.md). DOT can also enable you 
-to participate in programs like [Thousand Validators Program](../thousand-validators.md).
+to participate in programs like [Thousand Validators Program](../general/thousand-validators.md#polkadot).
 
 ### Interact with Polkadot
 
