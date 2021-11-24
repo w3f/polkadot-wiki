@@ -32,9 +32,9 @@ control their data and are not limited by trust bounds within the network.
 
 ### What can I do with my DOT?
 
-DOT is the native token of the Polkadot Network. DOT can be used for transaction fees, staking,
-governance, acquisition of a parachain slot and for enabling several key functionalities on
-Polkadot.
+[DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for transaction 
+fees, staking, governance, acquisition of a parachain slot and for enabling several key functionalities 
+on Polkadot.
 
 - 1 DOT - minimum balance required to have an active account on Polkadot Network. If your account
   balance drops below 1 DOT, your account will be reaped. Learn more about
