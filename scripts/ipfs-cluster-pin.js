@@ -35,7 +35,14 @@ let runCommandOnCluster = async (command, retries = 3) => {
     { encoding: 'utf-8' });
   
   return clusterCommander(command).then(
-    (result) => JSON.parse(result).catch((err) => console.error(err)),
+    (result) => {
+      try {
+        return JSON.parse(result);
+      } catch (err) {
+        console.error("Error in parsing JSON...");
+        console.error(err);
+      }
+    },
     (error) => {
       return retries ? runCommandOnCluster(command, retries - 1) : error;
     });
