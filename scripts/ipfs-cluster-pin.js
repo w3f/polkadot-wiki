@@ -2,28 +2,28 @@ const yargs = require("yargs");
 const { create, globSource } = require("ipfs-http-client");
 const { execSync } = require("child_process");
 
-// const argv = yargs(process.argv)
-//   .option("websiteDir", {
-//     alias: "d",
-//     description: "root directory to find files",
-//     type: "string",
-//   })
-//   .option("pinName", {
-//     alias: "n",
-//     description: "required. eg. polkadot-wiki",
-//     type: "string",
-//   })
-//   .option("auth", {
-//     alias: "a",
-//     description: "required. eg. asdf:1234",
-//     type: "string",
-//   })
-//   .help()
-//   .alias("help", "h").argv;
+const argv = yargs(process.argv)
+  .option("websiteDir", {
+    alias: "d",
+    description: "root directory to find files",
+    type: "string",
+  })
+  .option("pinName", {
+    alias: "n",
+    description: "required. eg. polkadot-wiki",
+    type: "string",
+  })
+  .option("auth", {
+    alias: "a",
+    description: "required. eg. asdf:1234",
+    type: "string",
+  })
+  .help()
+  .alias("help", "h").argv;
 
-// if (!argv.websiteDir || !argv.pinName || !argv.auth) {
-//   throw new Error("Must pass --websiteDir, --auth, and --pinName arguments.");
-// }
+if (!argv.websiteDir || !argv.pinName || !argv.auth) {
+  throw new Error("Must pass --websiteDir, --auth, and --pinName arguments.");
+}
 
 let runCommandOnCluster = async (command, retries = 3) => {
   const clusterCommander = async (command) => execSync(
