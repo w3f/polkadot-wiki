@@ -83,7 +83,7 @@
     "remark-docusaurus-tabs": "^0.1.0",
     "replace-in-file": "^6.3.2",
     "set-value": "^4.1.0",
-    "trim": "^0.0.3"
+    "trim": "^1.0.1"
   },
   "husky": {
     "hooks": {
