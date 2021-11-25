@@ -78,7 +78,7 @@ For the full details of the standard hardware please see
 - **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth.
   Starting around 80GB - 160GB will be okay for the first six months of Polkadot, but will need to
   be re-evaluated every six months.
-- **Memory** - 64GB.
+- **Memory** - 64GB ECC.
 
 The specs posted above are by no means the minimum specs that you could use when running a
 validator, however you should be aware that if you are using less you may need to toggle some extra
