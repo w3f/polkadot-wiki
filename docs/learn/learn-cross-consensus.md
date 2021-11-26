@@ -56,7 +56,7 @@ with the following properties:
 
 ## Cross-Consensus Protocols
 
-With the XCM format established, common pattenrs for protocols these messages are needed.
+With the XCM format established, common patterns for protocols these messages are needed.
 Polkadot implements two for acting on XCM messages between its constituent parachains.
 
 ### VMP (Vertical Message Passing)
