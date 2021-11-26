@@ -26,8 +26,8 @@ with the following properties:
 - Interacting with a system whose transaction format is unknown. 
   - XCM is well-versioned, abstract and general and can be used as a means of providing a 
     long-lasting transaction format for wallets to use to create many common transactions.
-    It is _extensible_, and, in turn, _future-proof_ and _forwards-compatible_.
-- Highly efficient to operate in a tighly contrained and metered environment, as is the case with many chains.
+    It is _extensible_ and, in turn, _future-proof_ and _forwards-compatible_.
+- Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
 
 > XCM is not designed in that every system supporting the format is expected to be able to interpret any
 > possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable
@@ -36,7 +36,7 @@ with the following properties:
 ### Example Use-Cases
 
 - Request for specific operations to occur on the recipient system.
-- Optionally include payment of fees on target network for requested operation.
+- Optionally include payment of fees on a target network for requested operation.
 - Provide methods for various token transfer models:
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an
     address on the remote chain for receiving funds and to eventually transfer those funds it controls
@@ -56,8 +56,8 @@ with the following properties:
 
 ## Cross-Consensus Protocols
 
-With the XCM format established, common patters for protcols these messages are needed.
-Polkadot impliments two for acting on XCM messages between its constituent parachains.
+With the XCM format established, common patterns for protocols these messages are needed.
+Polkadot implements two for acting on XCM messages between its constituent parachains.
 
 ### VMP (Vertical Message Passing)
 
@@ -80,7 +80,7 @@ queue of one parachain into the input queue of the destination parachain. Howeve
 associated metadata is stored as a hash in the Relay Chain storage.
 
 The input and output queue are sometimes referred to in the Polkadot codebase and associated
-documentation as `ingress` and `egress` messages respectively.
+documentation as `ingress` and `egress` messages, respectively.
 
 #### XCMP-Lite (HRMP)
 
@@ -97,7 +97,7 @@ out in favor of it.
 
 > XCMP is currently under development and the details are subject to change!
 
-However, these overall architecture and design decisions are more stable:
+However, this overall architecture and design decisions are more stable:
 
 - Cross-chain messages will _not_ be delivered to the Relay Chain.
 - Cross-chain messages will be constrained to a maximum size in bytes.
@@ -123,7 +123,7 @@ which will get returned when the channel is closed.
 For an updated and complete description of the XCMP message format please see the
 [xcm-format repository on GitHub](https://github.com/paritytech/xcm-format).
 
-#### The Anatomy of an XCMP Inteaction
+#### The Anatomy of an XCMP Interaction
 
 A smart contract that exists on parachain `A` will route a message to parachain `B` in which another
 smart contract is called that makes a transfer of some assets within that chain.
@@ -147,7 +147,7 @@ When the collator of parachain `B` is building the next block in its chain, it w
 message in its inbound queue as well as any other messages it may have found/received.
 
 During processing, the message will execute the smart contract on parachain `B` and complete the asset
-transfer like intended.
+transfer as intended.
 
 The collator now hands this block to the validator, which itself will verify that this message was
 processed. If the message was processed and all other aspects of the block are valid, the validator
