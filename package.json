@@ -80,7 +80,7 @@
     "glob-parent": "^6.0.2",
     "immer": "^9.0.7",
     "nth-check": "^2.0.1",
-    "remark-docusaurus-tabs": "^0.1.0",
+    "remark-docusaurus-tabs": "^0.2.0",
     "replace-in-file": "^6.3.2",
     "set-value": "^4.1.0",
     "trim": "^1.0.1"
