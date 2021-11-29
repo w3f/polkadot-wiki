@@ -3546,10 +3546,10 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-check-peer-dependencies@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/check-peer-dependencies/-/check-peer-dependencies-4.0.0.tgz#075253764a850b1af3a14beec67dd1f653dcae62"
-  integrity sha512-AVYu8OKy54mp+KCvyzP0ag4erPH8w78TUXiWu++4i8vqM8Iunqn+j0IfLtyQIjEW5OoNErxuvsoa13kW8FjtxA==
+check-peer-dependencies@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/check-peer-dependencies/-/check-peer-dependencies-4.1.0.tgz#17f2a5026df150f7dbe19b6aaa90a81e0740d6b9"
+  integrity sha512-nKBxfpKDFj0Pzd/8Myvb9ALnHarrOHupiCZ25AA84OIR9hOcLo7OQ0ofmxnIFLqUPVldF1RWPK0ayZq15ukcLw==
   dependencies:
     resolve "^1.19.0"
     semver "^7.3.4"
