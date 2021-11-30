@@ -25,7 +25,8 @@ if (!argv.websiteDir || !argv.pinName || !argv.auth) {
   throw new Error("Must pass --websiteDir, --auth, and --pinName arguments.");
 }
 
-let runCommandOnCluster = async (command, retries = 3) => {
+var runCommandOnCluster = async (command, retries = 3) => {
+  // Note: js-cluster-api doesn't support libp2p so we have to use it via the compiled Go version via shell
   const clusterCommander = async (command) => execSync(
     `ipfs-cluster-ctl \
     --enc json \
@@ -39,8 +40,9 @@ let runCommandOnCluster = async (command, retries = 3) => {
       try {
         return JSON.parse(result);
       } catch (err) {
-        console.error("Error in parsing JSON...");
-        console.error(err);
+        // https://github.com/ipfs/ipfs-cluster/issues/1365
+        console.log("Could not parse IPFS Cluster JSON response. This is not fatal.");
+        return null;
       }
     },
     (error) => {
@@ -48,17 +50,15 @@ let runCommandOnCluster = async (command, retries = 3) => {
     });
 }
 
-const main = async () => {
-  // js-cluster-api doesn't support libp2p so we have to use compiled version...
+// return CID as string from a named pin on the cluster
+const getCidByPinName = async (pinName) => {
+  const pins = await runCommandOnCluster('status');
+  const prevCidObject = pins.find(pin => pin.name == pinName);
+  return prevCidObject ? prevCidObject.cid["/"] : null;
+}
 
-  // return CID as string from a named pin on the cluster
-  const getCidByPinName = async (pinName) => {
-    const pins = await runCommandOnCluster('status');
-    const prevCidObject = pins.find(pin => pin.name == pinName);
-    return prevCidObject ? prevCidObject.cid["/"] : null;
-  }
-  
-  // get and unpin the previous build from the cluster
+const main = async () => {
+  // get and unpin the previous build from the cluster, if exists
   const prevCid = await getCidByPinName(argv.pinName);
   if (prevCid) {
     await runCommandOnCluster(`pin rm ${prevCid}`);
