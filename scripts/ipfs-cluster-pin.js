@@ -46,7 +46,12 @@ var runCommandOnCluster = async (command, retries = 3) => {
       }
     },
     (error) => {
-      return retries ? runCommandOnCluster(command, retries - 1) : error;
+      if (entries > 0) {
+        console.log("Retrying cluster command...");
+        return runCommandOnCluster(command, retries - 1);
+      } else {
+        return error;
+      }
     });
 }
 
@@ -72,6 +77,7 @@ const main = async () => {
   await runCommandOnCluster(`add -r --name ${argv.pinName} ${argv.websiteDir}`);
   const cid = await getCidByPinName(argv.pinName);
   console.log(`Successfully added and pinned '${argv.pinName}' (CID ${cid}).`);
+  console.log("Previous errors are non-fatal.")
 
   // update DNS entry
 };
