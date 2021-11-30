@@ -46,7 +46,7 @@ var runCommandOnCluster = async (command, retries = 3) => {
       }
     },
     (error) => {
-      if (entries > 0) {
+      if (retries > 0) {
         console.log("Retrying cluster command...");
         return runCommandOnCluster(command, retries - 1);
       } else {
