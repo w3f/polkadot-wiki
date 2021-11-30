@@ -78,7 +78,12 @@ accounts reaped, as users could refund the address and try making transactions f
 pallet provides a `transfer_keep_alive` function that will return an error and abort rather than
 make the transfer if doing so would result in reaping the sender's account.
 
-> Note: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT and
+> **Please be advised**: The existential deposit is a property of the Relay Chain. Your account on
+> the Relay Chain has no direct impact on parachains as you have seperate accounts on each parachain.
+> Still, parachains are able to define an existential deposit of their own, but this is seperate to 
+> that of the Relay Chain ED.
+
+> **Note**: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT and
 > 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
 > transfers on Statemint. Statemint integration is discussed in the next page of the guide.
 
