@@ -25,7 +25,7 @@ if (!argv.websiteDir || !argv.pinName || !argv.auth) {
   throw new Error("Must pass --websiteDir, --auth, and --pinName arguments.");
 }
 
-var runCommandOnCluster = async (command, retries = 3) => {
+var runCommandOnCluster = async (command, retries = 6) => {
   // Note: js-cluster-api doesn't support libp2p so we have to use it via the compiled Go version via shell
   const clusterCommander = async (command) => execSync(
     `ipfs-cluster-ctl \
