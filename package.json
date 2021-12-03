@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "@polkadot/util": "^7.3.1",
-    "@polkadot/wasm-crypto": "^4.4.1",
+    "@polkadot/wasm-crypto": "^4.5.1",
     "ansi-html": "^0.0.7",
     "ansi-regex": "^6.0.1",
     "browserslist": "^4.18.1",

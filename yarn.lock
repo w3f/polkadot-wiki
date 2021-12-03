@@ -2245,28 +2245,28 @@
     bn.js "^4.12.0"
     ip-regex "^4.3.0"
 
-"@polkadot/wasm-crypto-asmjs@^4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-4.4.1.tgz#a9cee2343dffe7fc19003e78dcb09cfdce9c62a4"
-  integrity sha512-qeMQfybpLe04reBIyHx6GwyRl9jdQdTC/cdtuEdkRzljZ7/8rIY/rLCt6Hs6vo866E+w2p92swQLZGl0snEBWQ==
+"@polkadot/wasm-crypto-asmjs@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-4.5.1.tgz#e1025a49e106db11d1187caf65f56c960ea2ad2b"
+  integrity sha512-DOdRiWhxVvmqTvp+E9z1j+Yr0zDOGsDvqnT/eNw0Dl1FVUOImsEa7FKns/urASmcxCVEE1jtUWSnij29jrORMQ==
   dependencies:
     "@babel/runtime" "^7.16.3"
 
-"@polkadot/wasm-crypto-wasm@^4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-wasm/-/wasm-crypto-wasm-4.4.1.tgz#6c23fad9a9476b2c083564996fb1076f435c8887"
-  integrity sha512-FduItUfsNhkH8I4cQvBsowhw1KzcNdma96x+KDQYuB6iDUfQa+NpicuLZozhmVBDRQsmZkU90wWNiUjf126OXA==
+"@polkadot/wasm-crypto-wasm@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-wasm/-/wasm-crypto-wasm-4.5.1.tgz#063a58ff7ddd939b7886a6a238109a8d2c416e46"
+  integrity sha512-hPwke85HxpgG/RAlwdCE8u5w7bThvWg399mlB+XjogXMxOUWBZSgq2XYbgzROUXx27inK9nStF4Pnc4zJnqs9A==
   dependencies:
     "@babel/runtime" "^7.16.3"
 
-"@polkadot/wasm-crypto@^4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-4.4.1.tgz#728bf9d2f6ff8716fdc395b51d14e0dd16eb4236"
-  integrity sha512-AeOOuuh04QlkTgXswC+bUT/ftELki58JGu/buZondvCCsPLw9Eu2KloE03ElgX0GmDlPA/MRkEzjQp3fchfydQ==
+"@polkadot/wasm-crypto@^4.4.1", "@polkadot/wasm-crypto@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-4.5.1.tgz#e1ac6d846a0ad8e991cec128994524183ef6e8fd"
+  integrity sha512-Cr21ais3Kq3aedIHZ3J1tjgeD/+K8FCiwEawr0oRywNBSJR8wyuZMePs4swR/6xm8wbBkpqoBVHz/UQHqqQJmA==
   dependencies:
     "@babel/runtime" "^7.16.3"
-    "@polkadot/wasm-crypto-asmjs" "^4.4.1"
-    "@polkadot/wasm-crypto-wasm" "^4.4.1"
+    "@polkadot/wasm-crypto-asmjs" "^4.5.1"
+    "@polkadot/wasm-crypto-wasm" "^4.5.1"
 
 "@polkadot/x-fetch@^8.0.4":
   version "8.0.4"
