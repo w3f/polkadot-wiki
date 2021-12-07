@@ -8568,10 +8568,10 @@ remark-squeeze-paragraphs@4.0.0:
   dependencies:
     mdast-squeeze-paragraphs "^4.0.0"
 
-remarkable-katex@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/remarkable-katex/-/remarkable-katex-1.1.8.tgz#ace896c841314b3fe1ee1a4025f566d02a92c3de"
-  integrity sha512-NdzPcO2ybt9TsLx/I5wwb2CIpG3LhLc8GhYzfpG50FryTok5ZJrgBo3iroW20hen0eZx1bhZkatxSo7+wBBJlQ==
+remarkable-katex@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/remarkable-katex/-/remarkable-katex-1.2.1.tgz#ffb664372b5f3199b2973a2e0a64e8a8f0ee7f20"
+  integrity sha512-Y1VquJBZnaVsfsVcKW2hmjT+pDL7mp8l5WAVlvuvViltrdok2m1AIKmJv8SsH+mBY84PoMw67t3kTWw1dIm8+g==
 
 renderkid@^2.0.6:
   version "2.0.7"

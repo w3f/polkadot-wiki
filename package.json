@@ -64,7 +64,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
-    "remarkable-katex": "^1.1.8",
+    "remarkable-katex": "^1.2.1",
     "shx": "^0.3.3",
     "unist-util-visit": "2.0.1",
     "yargs": "^17.2.1"
