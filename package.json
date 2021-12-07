@@ -67,7 +67,7 @@
     "remarkable-katex": "^1.2.1",
     "shx": "^0.3.3",
     "unist-util-visit": "2.0.1",
-    "yargs": "^17.2.1"
+    "yargs": "^17.3.0"
   },
   "dependencies": {
     "@polkadot/util": "^7.3.1",
