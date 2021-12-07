@@ -11,6 +11,14 @@ Parachains will need robust and secure ways to index and aggregate data, such as
 
 ## Indexing and Querying
 
+### Subsquid
+
+[Subsquid](https://subsquid.io/) is an open-source framework for building powerful and tailored GraphQL APIs to query Substrate chain state and history.
+
+Its multi-tiered architecture allows to have one indexer shared by multiple processors, which means segmenting how data is presented, based on the user's needs, without having to replicate the raw data source.
+
+Subsquid offers filtering, pagination, union types, interfaces and full-text search features out-of-the-box, but its framework approach allows users to extend the query node, with virtually any SQL by adding custom resolvers.
+
 ### SubQuery
 
 [SubQuery](https://subquery.network/) is an indexer that allows for the indexing, transforming, 
@@ -46,12 +54,3 @@ As you can imagine, blockchain explorers also offer data analytics through an in
 users can examine common data points.
 
 Some block explorers in the Polkadot ecosystem are listed on the [tools page](build-tools-index.md##block-explorers).
-
-
-### Subsquid
-
-[Subsquid](https://subsquid.io/) is an open-source framework for building powerful and tailored GraphQL APIs to query Substrate chain state and history.
-
-Its multi-tiered architecture allows to have one Indexer shared by multiple Processors, which means segmenting how data is presented, based on the user's needs, without having to replicate the raw data source.
-
-Subsquid offers filtering, pagination, union types, interfaces and full-text search features out-of-the-box, but its framework approach allows users to extend the query node, with virtually any SQL by adding custom resolvers.
