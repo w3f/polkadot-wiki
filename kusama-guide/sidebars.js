@@ -36,7 +36,6 @@ module.exports = {
         "maintain/doc-maintain-guides-validator-community",
         "general/kusama/kusama-endpoints",
         "general/kusama/kusama-ledger",
-        "general/kusama/kusama-statemine-ledger",
       ],
     },
     {
