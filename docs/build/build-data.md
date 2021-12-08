@@ -15,7 +15,7 @@ Parachains will need robust and secure ways to index and aggregate data, such as
 
 [Subsquid](https://subsquid.io/) is an open-source framework for building tailored GraphQL APIs to query Substrate chain state and history.
 
-Subsquid replaces direct gRPC node access with perfomant wumbo-archive gateways, allowing quick synchronization of the API with the historical on-chain data.  
+Subsquid replaces direct gRPC node access with perfomant super-archive gateways, allowing quick synchronization of the API with the historical on-chain data.  
 
 Subsquid-powered APIs support filtering, pagination, union types, interfaces and full-text search out-of-the-box, and can be further extended with custom GraphQL resolvers.
 
