@@ -1691,20 +1691,18 @@
     "@types/react-router-config" "*"
     "@types/react-router-dom" "*"
 
-"@docusaurus/plugin-client-redirects@^2.0.0-beta.9":
-  version "2.0.0-beta.9"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.9.tgz#4ac5cd497d31c45728df6bb1c61326fc4062d969"
-  integrity sha512-rksXkA9keq9jsgxp0ZLX+MY68ViDhCpdLcxNCNmZl2c9XA2v8AQN4HU2e6Dq+OEefk/ltQYLIbfTa2Hj/ZEwzQ==
+"@docusaurus/plugin-client-redirects@^2.0.0-beta.13":
+  version "2.0.0-beta.13"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.13.tgz#94fdcf60db49b93078a3f48dcda09778bcf0223d"
+  integrity sha512-GbTbyZIJFX4J6CcdIrs8NrPz/NVteT0B+MtcA1vTeSnwCPnn0v0o8FXo0wmBSxQxt2uY5FUdGzSZLHI+qViwyQ==
   dependencies:
-    "@docusaurus/core" "2.0.0-beta.9"
-    "@docusaurus/types" "2.0.0-beta.9"
-    "@docusaurus/utils" "2.0.0-beta.9"
-    "@docusaurus/utils-common" "2.0.0-beta.9"
-    "@docusaurus/utils-validation" "2.0.0-beta.9"
+    "@docusaurus/core" "2.0.0-beta.13"
+    "@docusaurus/utils" "2.0.0-beta.13"
+    "@docusaurus/utils-common" "2.0.0-beta.13"
+    "@docusaurus/utils-validation" "2.0.0-beta.13"
     chalk "^4.1.2"
     eta "^1.12.3"
     fs-extra "^10.0.0"
-    globby "^11.0.2"
     lodash "^4.17.20"
     tslib "^2.3.1"
 
@@ -3933,10 +3931,10 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-check-peer-dependencies@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/check-peer-dependencies/-/check-peer-dependencies-4.0.0.tgz#075253764a850b1af3a14beec67dd1f653dcae62"
-  integrity sha512-AVYu8OKy54mp+KCvyzP0ag4erPH8w78TUXiWu++4i8vqM8Iunqn+j0IfLtyQIjEW5OoNErxuvsoa13kW8FjtxA==
+check-peer-dependencies@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/check-peer-dependencies/-/check-peer-dependencies-4.1.0.tgz#17f2a5026df150f7dbe19b6aaa90a81e0740d6b9"
+  integrity sha512-nKBxfpKDFj0Pzd/8Myvb9ALnHarrOHupiCZ25AA84OIR9hOcLo7OQ0ofmxnIFLqUPVldF1RWPK0ayZq15ukcLw==
   dependencies:
     resolve "^1.19.0"
     semver "^7.3.4"
