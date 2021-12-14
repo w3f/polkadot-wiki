@@ -67,7 +67,6 @@ module.exports = {
   ],
   plugins: [
     'remark-docusaurus-tabs',
-    '@docusaurus/theme-live-codeblock',
     [
       '@docusaurus/plugin-client-redirects',
       {

@@ -248,9 +248,11 @@ after the node is in sync.
 
 Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so
 it's best left up to those that either already have familiarity with docker, or have completed the
-other set-up instructions in this guide. If you would like to connect to your node's WebSockets
-ensure that you run you node with the `--rpc-external` and `--ws-external` commands.
+other set-up instructions in this guide.
+Be aware that when you run polkadot in docker the process only listen on localhost by default. 
+If you would like to connect to your node's services (rpc, websockets, and prometheus) you need to ensure
+that you run you node with the `--rpc-external`, `--ws-external`, and `--prometheus-external` commands.
 
 ```zsh
-docker run -p 9944:9944 parity/polkadot:v0.8.24 --name "calling_home_from_a_docker_container" --rpc-external --ws-external
+docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external
 ```
