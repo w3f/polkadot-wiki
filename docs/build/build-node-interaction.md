@@ -414,3 +414,11 @@ return an error report, e.g.:
     "cause": "Upstream error description"
 }
 ```
+
+### RPC Node APIs
+| Network      | URL |
+| ----------- | ----------- |
+| Polkadot | wss://rpc.polkadot.io |
+| Kusama | wss://kusama-rpc.polkadot.io |
+| Westend | wss://westend-rpc.polkadot.io |
+| Rococo | wss://rococo-rpc.polkadot.io |
