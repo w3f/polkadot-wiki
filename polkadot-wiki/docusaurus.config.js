@@ -31,6 +31,7 @@ module.exports = {
     '../js/packaged/addressChanger.js',
     '../js/clipboard.min.js',
     '../js/copycode.js',
+    '../js/blockHeightEstimator.js'
   ],
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css',
