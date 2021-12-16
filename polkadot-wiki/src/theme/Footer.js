@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import Logo from "@site/static/img/logo-polkadot-light.svg";
+import Logo from "@site/static/img/Polkadot_Logo_Horizontal_White.svg";
 
 function FooterNavColumn({ headline, children }) {
   return (
