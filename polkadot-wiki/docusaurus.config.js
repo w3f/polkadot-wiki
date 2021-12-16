@@ -105,7 +105,7 @@ module.exports = {
     },
     navbar: {
       logo: {
-        src: 'img/logo_polkadot_wiki.svg',
+        src: 'img/Polkadot_Logo_Horizontal_Pink-Black.svg',
       },
       items: [
         {
@@ -157,7 +157,7 @@ module.exports = {
     footer: {
       copyright: `© ${new Date().getFullYear()} Web3 Foundation`,
       logo: {
-        src: 'img/logo-polkadot-light.svg',
+        src: 'img/Polkadot_Logo_Horizontal_White.svg',
       },
     },
     algolia: {
