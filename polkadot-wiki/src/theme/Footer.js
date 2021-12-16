@@ -292,7 +292,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Logo alt="Polkadot Network" />
+                <Logo height={31} alt="Polkadot Network" />
               </a>
             </Col>
           )}
