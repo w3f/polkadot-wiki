@@ -40,7 +40,7 @@ module.exports = {
     'https://fonts.googleapis.com/icon?family=Material+Icons',
   ],
   i18n,
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Polkadot_Favicon.png',
   trailingSlash: false,
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'log',
