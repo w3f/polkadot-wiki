@@ -4,7 +4,7 @@
   <ShortName>Polkadot Wiki</ShortName>
   <Description>Search Polkadot Wiki</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://wiki.polkadot.network/img/favicon.ico</Image>
+  <Image width="16" height="16" type="image/x-icon">https://wiki.polkadot.network/img/Polkadot_Favicon.png</Image>
   <Url type="text/html" method="get" template="https://wiki.polkadot.network/search?q={searchTerms}"/>
   <Url type="application/opensearchdescription+xml" rel="self" template="https://wiki.polkadot.network/opensearch.xml" />
   <moz:SearchForm>https://wiki.polkadot.network/</moz:SearchForm>
