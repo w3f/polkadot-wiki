@@ -31,7 +31,7 @@ var runCommandOnCluster = async (command, retries = 6) => {
     `ipfs-cluster-ctl \
     --enc json \
     --basic-auth ${argv.auth} \
-    --host /dns4/ipfs.w3f.community/tcp/9096/p2p/12D3KooWMfXzp2nmNrb7DM4PETYZbaKALnrnwiqnhvrUC66KyYrb \
+    --host /dns4/ipfs.w3f.community/tcp/9096/p2p/12D3KooWEGmyEGpLWN8HF2ToNX8sykBaPXTSx2BKiT4YnmAa9UKN \
     ${command} \n`,
     { encoding: 'utf-8' });
   
