@@ -17,6 +17,30 @@ documentation for the tool you are using:
 **Polkadot-JS RPC** is a JavaScript library for interacting with the **Substrate RPC API** endpoint, distributed as `@polkadot/api` Node.js package.  
 **Substrate API Sidecar** is using the **Polkadot-JS RPC** to provide separately runnable REST services.
 
+### RPC Node Endpoints
+
+For developer convenience, [Parity Tech](https://www.parity.io/) maintains archive nodes for Polkadot, Kusama, and their test networks with public endpoints. These endpoints can be used with [Polkadot-JS API](https://polkadot.js.org/docs/api) to interact with their respective chains. 
+The table below lists these endpoints.
+
+| Network      | URL |
+| ----------- | ----------- |
+| Polkadot | wss://rpc.polkadot.io |
+| Kusama | wss://kusama-rpc.polkadot.io |
+| Westend | wss://westend-rpc.polkadot.io |
+| Rococo | wss://rococo-rpc.polkadot.io |
+
+Example:
+```javascript
+const { ApiPromise, WsProvider } = require('@polkadot/api');
+
+(async () => {
+    // Construct a provider with the endpoint URL
+    const provider = new WsProvider('wss://rpc.polkadot.io/');
+    // Create an API instance for Polkadot
+    const api = await ApiPromise.create({ provider });
+    // ...
+```
+
 ## Polkadot RPC
 
 The Parity Polkadot client exposes HTTP and WS endpoints for RPC connections. The default ports are
@@ -414,11 +438,3 @@ return an error report, e.g.:
     "cause": "Upstream error description"
 }
 ```
-
-### RPC Node APIs
-| Network      | URL |
-| ----------- | ----------- |
-| Polkadot | wss://rpc.polkadot.io |
-| Kusama | wss://kusama-rpc.polkadot.io |
-| Westend | wss://westend-rpc.polkadot.io |
-| Rococo | wss://rococo-rpc.polkadot.io |
