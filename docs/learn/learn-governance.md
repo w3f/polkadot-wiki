@@ -149,7 +149,7 @@ against - the number of nay votes
 
 turnout - the total number of voting tokens (does not include conviction)
 
-electorate - the total number of DOT tokens issued in the network
+electorate - the total number of tokens issued in the network
 ```
 
 ##### Super-Majority Approve
