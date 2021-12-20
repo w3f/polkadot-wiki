@@ -4,16 +4,13 @@
 [![Polkadot Prod](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-polkadot-prod.yml/badge.svg)](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-polkadot-prod.yml)
 [![Kusama Prod](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-kusama-prod.yml/badge.svg)](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-kusama-prod.yml)
 
-| <a href="https://wiki.polkadot.network/" rel="some text">![Polkadot Wiki](docs/assets/polkadot-wiki.png)</a> | <a href="https://guide.kusama.network/" rel="some text">![Kusama Guide](docs/assets/kusama-guide.png)</a> |
-| :----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-
 # Polkadot Wiki
 
-<img align="right" src="docs/assets/web3-logo.png" width="500" height="255">
+<img align="right" src="docs/assets/web3-logo.png" width="350" height="175">
 
 <p align="left">
-  The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by Web3 Foundation to 
-  keep an up-to-date resource on the best information for learning, building, or maintaining on Polkadot. 
+  The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by Web3 
+  Foundation to keep an up-to-date resource on the best information for learning, building, or maintaining on Polkadot. 
 </p>
 
 ## Contributing to Documentation
@@ -24,38 +21,63 @@ with these corrections directly. Larger contributions may start as issues to tes
 with the maintainers. It is generally preferable to create a pull request over an issue to propose a change 
 to the Wiki content.
 
-### Running Locally
+## Running Locally
 
 Both the Polkadot Wiki and the Kusama Guide are built from the source files in this repository.
 After cloning the source locally, you can start the websites with each of these respective commands
 (ensure you run `yarn` at the root of the repository first to install dependencies):
 
 > The site is built using Docusaurus: you may need to install Docusaurus before running
-> the Wiki locally. Using yarn, run `yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
+> the Wiki locally. 
 
-#### Building
+Using yarn, run:
 
-> The Wiki is currently being deployed onto IPFS and will follow the same configuration to build the static files.
+```bash
+yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
+```
 
-- Kusama Guide: `yarn kusama:build`
-- Polkadot Wiki: `yarn polkadot:build`
+### Build
 
-#### Start
+> The Wiki is currently in the process of being deployed onto IPFS and will follow the same configuration to build the static files.
 
-- For the Kusama Guide: `yarn kusama:start`
-- For the Polkadot Wiki:: `yarn polkadot:start`
+Building the Kusama Guide: 
+```bash 
+yarn kusama:build
+```
+Building the Polkadot Wiki: 
+```bash
+yarn polkadot:build
+```
 
+### Start
+
+Starting the Kusama Guide: 
+```bash
+yarn kusama:start
+```
+
+Starting the Polkadot Wiki: 
+```bash
+yarn polkadot:start
+```
 #### Running GitHub Pages
 
-- Kusama Guide: `yarn kusama:publish-gh-pages`
-- Polkadot Wiki: `yarn polkadot:publish-gh-pages`
+Publishing the Kusama Guide: 
+```bash
+yarn kusama:publish-gh-pages
+```
 
-### Style Guide
+Publishing the Polkadot Wiki: 
+```bash
+yarn polkadot:publish-gh-pages
+```
+
+## Style and Configuration Guide
 
 Use the style guide from the
 [Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style)
 
-#### Formatting
+### Formatting
 
 Use [pretty-quick](https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick)
 as a pre-commit formatting tool.
@@ -163,7 +185,10 @@ If you do not see the language you would like to translate, please let us know v
 
 The Polkadot Wiki is licensed under the [GPL-3.0](LICENSE) free software license.
 
-<p float="center">
-  <img src="docs/assets/polkadot.gif" width="400" height="185"> 
-  <img src="docs/assets/kusama.gif" width="400" height="185"> 
-</p>
+---
+
+***The Wiki belongs to the community, help generate it's identity.*** 
+
+https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-9746-109191db5271.mp4
+
+**Keep engaged by checking out these common [Polkadot ecosystem resources](https://hackmd.io/IMgniwlyT_GIqjI8Wui35A)**.
