@@ -70,8 +70,12 @@
     "yargs": "^17.3.0"
   },
   "dependencies": {
+    "@algolia/client-search": "^4.9.1",
     "@polkadot/util": "^8.2.2",
+    "@polkadot/util-crypto": "^8.2.2",
     "@polkadot/wasm-crypto": "^4.5.1",
+    "@polkadot/x-randomvalues": "*",
+    "@types/react": "^17.0.37",
     "ansi-html": "^0.0.7",
     "ansi-regex": "^6.0.1",
     "browserslist": "^4.19.1",
@@ -84,7 +88,8 @@
     "remark-docusaurus-tabs": "^0.2.0",
     "replace-in-file": "^6.3.2",
     "set-value": "^4.1.0",
-    "trim": "^1.0.1"
+    "trim": "^1.0.1",
+    "typescript": "^4.5.4"
   },
   "husky": {
     "hooks": {
