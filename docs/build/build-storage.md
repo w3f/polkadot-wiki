@@ -8,21 +8,25 @@ slug: ../build-storage
 
 Storage is an integral part of modern computer systems, and the same is true for distributed
 and decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it
-will be helpful if you familiarize yourself with the current Web 3.0 approach to decentralized
+will be helpful if you familiarize yourself with the current WEB3 approach to decentralized
 storage systems, and how these systems can support your endeavors.
 
-## DCS (Decentralized cloud storage)
+## DCS (Decentralized Cloud Storage)
 
-The key attribute that characterizes centralized cloud storage is location [of data].
-In decentralized cloud storage, the key attribute becomes the data itself instead of the data's location.
-This can be viewed as the shift from the centralized *location-centric* storage approach to the decentralized
-*content-centric* approach.
+The key attribute that characterizes centralized cloud storage is the location of data.
+
+In decentralized cloud storage, the key attribute becomes the data itself instead of the data's 
+location.
+
+This can be viewed as the shift from the centralized *location-centric* storage approach to the 
+decentralized *content-centric* approach.
 
 ### IPFS (Interplanetary File System)
 
-[IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all computing devices with the
-same system of files, by utilizing features such as content-addressing, content-signing, and enhanced security
-methods through encryption. IPFS aims to address the current hurdles of the HTTP-based Internet.
+[IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all 
+computing devices with the same system of files, by utilizing features such as content-addressing, 
+content-signing, and enhanced security methods through encryption. IPFS aims to address the current 
+hurdles of the HTTP-based Internet.
 
 #### Brief comparison of IPFS & HTTP:
 
@@ -50,30 +54,30 @@ that offers a decentralized storage network. Filecoin's main focus is the storag
 
 ### Swarm
 
-[EthSwarm](https://www.ethswarm.org/) is a system of peer-to-peer networked nodes that create a decentralized
-storage and communication service for a sovereign digital society.
+[EthSwarm](https://www.ethswarm.org/) is a system of peer-to-peer networked nodes that create a 
+decentralized storage and communication service for a sovereign digital society.
 
 ### BitTorrent File System (BTFS)
 
-[BTFS](https://www.bittorrent.com/token/bittorrent-file-system/) is a file-sharing protocol that uses
-the TRON network and the BitTorrent ecosystem.
+[BTFS](https://www.bittorrent.com/token/bittorrent-file-system/) is a file-sharing protocol that 
+uses the TRON network and the BitTorrent ecosystem.
 
 ## Substrate Storage
 
 Substrate takes a layered approach to storage by using a key-value data store that is implemented
-as a database-backed, *modified* Merkle tree. Substrate's higher-layer storage abstractions are
+as a database-backed, modified Merkle tree. Substrate's higher-layer storage abstractions are
 built on the key-value store.
 
-The key-value data store is backed by [RocksDB](https://rocksdb.org/), and it also supports an experimental
-[Parity database](https://github.com/paritytech/parity-db).
+The key-value data store is backed by [RocksDB](https://rocksdb.org/), and it also supports an 
+experimental [Parity database](https://github.com/paritytech/parity-db).
 
 > The database is used for components that require persistent storage: Substrate clients, Substrate light-clients
 > & off-chain workers. For more information, check out
 > Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
 
-When building on Substrate, *runtime developers* can take advantage of Substrate's FRAME `Storage pallet` which
-gives access to Substrate's storage APIs. These storage items support values that are encoded by Parity's
-`SCALE (Simple Concatenated Aggregate Little-Endian) Codec`.
+When building on Substrate, runtime developers can utilize of Substrate's FRAME `Storage pallet` 
+which gives access to Substrate's storage APIs. These storage items support values that are encoded by 
+Parity's `SCALE (Simple Concatenated Aggregate Little-Endian) Codec`.
 
 There is a
 [`Storage Value`](https://docs.substrate.io/rustdocs/latest/frame_support/storage/trait.StorageValue.html) API
@@ -81,12 +85,12 @@ that is used to store single values,
 a [`Storage Map`](https://docs.substrate.io/rustdocs/latest/frame_support/storage/trait.StorageMap.html) API
 that is used to a key-value hash map,
 a [`Storage Double Map`](https://docs.substrate.io/rustdocs/latest/frame_support/storage/trait.StorageDoubleMap.html) API
-that creates a `storage map` with two keys to provide the ability to efficiently remove all entries that have a common
-first key, and a [`Storage N Map`](https://crates.parity.io/frame_support/storage/trait.StorageNMap.html) API that can
-be used to store a hash map with any arbitrary number of keys.
+that creates a `storage map` with two keys to provide the ability to efficiently remove all entries that have 
+a common first key, and a [`Storage N Map`](https://crates.parity.io/frame_support/storage/trait.StorageNMap.html) 
+API that can be used to store a hash map with any arbitrary number of keys.
 
-These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can be
-found at the [`Runtime Storage Page`](https://docs.substrate.io/v3/runtime/storage/) on Substrate Developer Hub.
+These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can 
+be found at the [`Runtime Storage Page`](https://docs.substrate.io/v3/runtime/storage/) on Substrate Developer Hub.
 
 ### PolkadotJS Storage
 
