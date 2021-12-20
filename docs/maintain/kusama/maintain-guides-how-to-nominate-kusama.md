@@ -7,7 +7,7 @@ slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
 > The following information applies to the Kusama network. If you want to nominate on Polkadot,
-> check out the [Polkadot guide](../maintain-guides-how-to-validate-polkadot.md) instead.
+> check out the [Polkadot guide](../maintain-guides-how-to-nominate-polkadot.md) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
 for appointing their stake to the validators who are the second type of participant. By appointing
