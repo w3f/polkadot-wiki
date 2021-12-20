@@ -80,6 +80,7 @@
     "ansi-regex": "^6.0.1",
     "browserslist": "^4.19.1",
     "check-peer-dependencies": "^4.1.0",
+    "crowdin-cli": "^0.3.0",
     "css-what": "^5.0.1",
     "glob-parent": "^6.0.2",
     "immer": "^9.0.7",
