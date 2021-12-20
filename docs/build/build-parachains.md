@@ -1,3 +1,4 @@
+
 ---
 id: build-parachains
 title: Parachain Development
@@ -418,11 +419,13 @@ Alice is now able to send from her account on parachain 200 to her account on pa
 
 If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
 you may do so by clicking on the network selection at the top left-hand corner of the navigation and
-selecting any parachain of choice. For the purpose of these following examples, we will be using the
+selecting any parachain of choice. 
+
+![rococo parachains](../assets/polkadotjs_network_parachains.png)
+
+For the purpose of these following examples, we will be using the
 Rococo testnet "Custom Node" underneath "Development", following the
 [Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/).
-
-<img src="../docs/assets/polkadotjs_network_parachains.png" height="650" width="450"/>
 
 ### Parachain Playground
 
