@@ -8,7 +8,7 @@ slug: ../maintain-guides-how-to-nominate-polkadot
 
 > The following information applies to the Polkadot network. If you want to nominate on Kusama,
 > check out the
-> [Kusama guide](https://guide.kusama.network/docs/mirror-maintain-guides-how-to-nominate-kusama)
+> [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md)
 > instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
