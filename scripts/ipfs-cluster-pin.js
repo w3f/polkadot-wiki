@@ -129,7 +129,7 @@ class CFClient {
 }
 
 const main = async () => {
-  const cf = CFClient(argv.pinName, argv.cloudflareToken);  // we can derive which dns zone to use based on the pinName
+  const cf = new CFClient(argv.pinName, argv.cloudflareToken);  // we can derive which dns zone to use based on the pinName
   // get and unpin the previous build from the cluster, if exists
   const prevCid = await getCidByPinName(argv.pinName);
   if (prevCid) {
