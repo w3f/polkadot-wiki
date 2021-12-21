@@ -32,4 +32,4 @@ jobs:
           tar xf ./ipfs-cluster-ctl_v0.14.0_linux-amd64.tar.gz
           chmod +x ./ipfs-cluster-ctl/ipfs-cluster-ctl
           export PATH=$PATH:`pwd`/ipfs-cluster-ctl
-          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER}}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD}} --websiteDir ./kusama-guide/build --pinName kusama-guide
+          node ./scripts/ipfs-cluster-pin.js --auth ${{ secrets.CLUSTER_BASIC_AUTH_USER }}:${{ secrets.CLUSTER_BASIC_AUTH_PASSWORD }} --websiteDir ./kusama-guide/build --pinName kusama-guide --cloudflareToken ${{ secrets.CLOUDFLARE_API_TOKEN }} --zoneId ${{ secrets.CLOUDFLARE_ZONE_ID }}
