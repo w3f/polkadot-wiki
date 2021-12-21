@@ -137,7 +137,7 @@ within some acceptable range of their own system clocks.
 
 ## Learn More
 
-- [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/Token%20Economics.html#relay-chain-transaction-fees-and-per-block-transaction-limits)
+- [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/overview/2-token-economics.html)
 - [Substrate Weights](https://docs.substrate.io/v3/concepts/weight/)
 - [Substrate Fees](https://docs.substrate.io/v3/runtime/weights-and-fees/)
 - [Extrinsics](https://docs.substrate.io/v3/concepts/extrinsics/)
