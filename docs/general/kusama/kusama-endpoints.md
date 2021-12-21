@@ -17,17 +17,18 @@ API services providers in the ecosystem.
 ## Parity Archive Node
 
 [Parity Tech](https://www.parity.io/), maintains an archive node at
-endpoint `wss://kusama-rpc.polkadot.io/`.
+endpoint `wss://kusama-rpc.polkadot.io/`. You can find other Partiy Tech maintained endpoints [here](https://wiki.polkadot.network/docs/maintain-endpoints#endpoints). 
 
 To connect to the Parity node, use the endpoint in your JavaScript apps like so:
 
-```javascript
+```javascript {4}
 const{ ApiPromise, WsProvider } = require('@polkadot/api')
-
-(async () => {
-    const provider = new WsProvider('wss://kusama-rpc.polkadot.io/')
-    const api = await ApiPromise.create({ provider })
-    // ...
+async () => {
+  // Construct a provider with the endpoint URL
+  const provider = new WsProvider('wss://kusama-rpc.polkadot.io');
+  // Create an API instance for Kusama
+  const api = await ApiPromise.create({ provider });
+  // ...
 ```
 
 or in Polkadot-JS Apps by clicking the top-left corner of the screen and selecting the appropriate
