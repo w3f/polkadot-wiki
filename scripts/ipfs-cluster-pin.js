@@ -20,15 +20,20 @@ const argv = yargs(process.argv)
     type: "string",
   })
   .option("cloudflareToken", {
-    alias: "t",
+    alias: "cf",
+    description: "required",
+    type: "string",
+  })
+  .option("zoneId", {
+    alias: "zid",
     description: "required",
     type: "string",
   })
   .help()
   .alias("help", "h").argv;
 
-if (!argv.websiteDir || !argv.pinName || !argv.auth || !argv.cloudflareToken) {
-  throw new Error("Must pass --websiteDir, --auth, --cloudflareToken, and --pinName arguments.");
+if (!argv.websiteDir || !argv.pinName || !argv.auth || !argv.cloudflareToken || !argv.zoneId) {
+  throw new Error("Must pass --websiteDir, --auth, --cloudflareToken, --zoneId, and --pinName arguments.");
 }
 
 var runCommandOnCluster = async (command, retries = 6) => {
@@ -69,7 +74,6 @@ const getCidByPinName = async (pinName) => {
 }
 
 
-
 class CFClient {
 
   constructor(pinName, apiToken) {
@@ -92,7 +96,7 @@ class CFClient {
   }
 
   async updateDNSLinkFromCID (newMultiaddr) {
-    const record = {
+    const newRecord = {
       type: "TXT",
       name: this.zone,
       content: `dnslink=/ipfs/${newMultiaddr}`,
@@ -100,10 +104,13 @@ class CFClient {
     }
 
     try {
+      const recordsList = this.cf.dnsRecords.browse(argv.zoneId);
+      const existingRecord = recordList.find(record => record.name === this.zone);
+
       return this.cf.dnsRecords.edit({
         zone_id: argv.zoneId,
-        id: argv.id,
-        record,
+        id: existingRecord.id,
+        record: newRecord,
       })
     } catch (e) {
       console.log('DNS Record does not exist:');
