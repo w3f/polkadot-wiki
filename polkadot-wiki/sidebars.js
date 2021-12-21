@@ -155,6 +155,7 @@ module.exports = {
       items: [
         "maintain/maintain-index",
         "maintain/maintain-polkadot-parameters",
+        "maintain/maintain-endpoints",
         {
           type: "category",
           label: "Nodes and Dapps",
