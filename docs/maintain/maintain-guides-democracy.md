@@ -189,7 +189,7 @@ example below the account has 150 KSM locked in democracy.
 
 ![democracy balance details](../assets/democracy_balance_details.png)
 
-Now you can click the menu button on Apps and find the option that says "Clear expired democracy
+Now you can click the menu button (the three dots) and find the option that says "Clear expired democracy
 locks". After selecting this option you may confirm the transaction and your locks will be cleared
 when successful.
 

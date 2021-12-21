@@ -6,9 +6,9 @@ description: Learn about on-chain identity, judgements and registrars.
 slug: ../learn-identity
 ---
 
-Polkadot provides a naming system that allows participants to add personal information to their
-on-chain account and subsequently ask for verification of this information by
-[registrars](#registrars).
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows 
+participants to add personal information to their on-chain account and subsequently ask for verification 
+of this information by [registrars](#registrars).
 
 ## Setting an Identity
 
@@ -22,7 +22,7 @@ These funds are *locked*, not spent - they are returned when the identity is cle
 
 These amounts can also be extracted by querying constants through the
 [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on
-polkadot.js/apps.
+Polkadot-JS Apps.
 
 First, select `identity` as the `selected constant query`.
 
@@ -62,21 +62,21 @@ Note that custom fields are not shown in the UI by default:
 ![Only built-in fields are shown](../assets/identity/04.jpg)
 
 The rendering of such custom values is, ultimately, up to the UI/dapp makers. In the case of
-PolkadotJS, the team prefers to only show official fields for now. If you want to check that the
+Polkadot-JS, the team prefers to only show official fields for now. If you want to check that the
 values are still stored, use the [Chain State UI](https://polkadot.js.org/apps/#/chainstate) to
 query the active account's identity info:
 
 ![Raw values of custom fields are available on-chain](../assets/identity/05.jpg)
 
 It is up to your own UI or dapp to then do with this data as it pleases. The data will remain
-available for querying via the Polkadot API, so you don't have to rely on the PolkadotJS UI.
+available for querying via the Polkadot API, so you don't have to rely on the Polkadot-JS UI.
 
 You can have a maximum of 100 custom fields.
 
 ### Format Caveat
 
 Please note the following caveat: because the fields support different formats, from raw bytes to
-various hashes, a UI has no way of telling how to encode a given field it encounters. The PolkadotJS
+various hashes, a UI has no way of telling how to encode a given field it encounters. The Polkadot-JS
 UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these values readable
 on-screen. However, given that there are no restrictions on the values that can be placed into these
 fields, a different UI may interpret them as, for example, IPFS hashes or encoded bitmaps. This
@@ -119,8 +119,7 @@ If you don't know which registrar to pick, first check the available registrars 
 
 ### Requesting a Judgement
 
-Requesting judgement follows the same process regardless of whether you're on the Kusama or Polkadot
-networks. Select one of the registrars from the query you made above.
+Select one of the registrars from the query you made above.
 
 ![Requesting judgement](../assets/identity/08.jpg)
 
@@ -164,10 +163,10 @@ Submit the transaction, and the requested judgement will be cancelled.
 ## Registrars
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For
-example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user
-requests judgement, they will pay this fee to the registrar who provides the judgement on those
-claims. Users set a maximum fee they are willing to pay and only registrars below this amount would
-provide judgement.
+example, a registrar could charge {{ kusama: 0.1 KSM :kusama }}{{ polkadot: 1 DOT :polkadot }} to 
+verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee 
+to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing 
+to pay and only registrars below this amount would provide judgement.
 
 ### Becoming a Registrar
 
@@ -188,9 +187,8 @@ Copy the preimage hash. In the above image, that's
 a transaction.
 
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
-field needs to be at least {{ identity_reserve_funds }} KSM. You can find out the minimum by
-querying the chain state under [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants
--> democracy -> minimumDeposit.
+field needs to be at least {{ identity_reserve_funds }} {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. 
+You can find out the minimum by querying the chain state under [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy -> minimumDeposit.
 
 ![Submitting a proposal](../assets/identity/13.jpg)
 
@@ -198,52 +196,39 @@ At this point, DOT holders can second the motion. With enough seconds, the motio
 referendum, which is then voted on. If it passes, users will be able to request judgement from this
 registrar.
 
-### Kusama Registrars
+### Current Registrars
 
-There are multiple registrars on Kusama. Unless no additional information is available here, you must
-reach out to specific registrars individually if you want to be judged by those.
+There are multiple registrars on {{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}. 
+Unless no additional information is available here, you must reach out to specific registrars 
+individually if you want to be judged by those.
 
-- Registrar 0:
-  - URL: https://registrar.web3.foundation/
-  - Account: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,
-  - Fee: 0.04 KSM
-- Registrar 1:
-  - URL: https://registrar.d11d.net/
-  - Account: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn,
-  - Fee: 0.65 KSM,
-- Registrar 2:
-  - Account: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7,
-  - Fee: 1 KSM,
-- Registrar 3:
-  - Account: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM,
-  - Fee: 1 KSM,
-- Registrar 4:
-  - Account: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6,
-  - Fee: 0.04 KSM,
+Registrar 0:  <br />
+**URL**: https://registrar.web3.foundation/  <br />
+**Account**: {{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,  <br /> :kusama }}{{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,  <br /> :polkadot }}
+**Fee**: {{ kusama:  0.04 KSM  <br /> :kusama }}{{ polkadot: 0 DOT,  <br /> :polkadot }}
+  
+Registrar 1:  <br />
+**URL**: https://registrar.d11d.net/  <br />
+**Account**: {{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn,  <br /> :kusama }}{{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,  <br /> :polkadot }}
+**Fee**: {{ kusama: 0.65 KSM,  <br /> :kusama }}{{ polkadot: 10 DOT,  <br /> :polkadot }}
+  
+Registrar 2:  <br />
+**Account**: {{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7,  <br /> :kusama }}{{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,  <br /> :polkadot }}
+**Fee**: {{ kusama: 1 KSM,  <br /> :kusama }}{{ polkadot: 0 DOT. :polkadot }}
+
+{{ kusama: Registrar 3:  <br />
+**Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM,  <br />
+**Fee**: 1 KSM,  <br /> :kusama }}
+
+{{ kusama: Registrar 4:  <br />
+**Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6,  <br />
+**Fee**: 0.04 KSM.  <br /> :kusama }}
 
 To find out how to contact the registrar after the application for judgement or to learn who they
 are, we can check their identity by adding them to our Address Book. Their identity will be
 automatically loaded.
 
 ![Chevdor is registrar #1](../assets/identity/16.jpg)
-
-### Polkadot Registrars
-
-There are multiple registrars on Polkadot. Unless no additional information is available here, you must
-reach out to specific registrars individually if you want to be judged by those.
-
-- Registrar 0:
-  - URL: https://registrar.web3.foundation/
-  - Account: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,
-  - Fee: 0 DOT,
-- Registrar 1:
-  - URL: https://registrar.d11d.net/
-  - Account: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,
-  - Fee: 10 DOT,
-- Registrar 2:
-  - URL: https://polkaregistry.org/
-  - Account: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,
-  - Fee: 0 DOT,
 
 ## Sub Accounts
 
@@ -267,7 +252,7 @@ the sub-account. If omitted, the sub-account will inherit the parent's name and 
 Note that a deposit of {{ identity_sub_reserve_funds }} is required for every sub-account.
 
 You can use
-[polkadot.js/apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants)
+[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants)
 again to verify this amount by querying the `identity.subAccountDeposit` constant.
 
 ![Sub account constant](../assets/identity/19.jpg)
