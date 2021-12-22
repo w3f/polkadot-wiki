@@ -34,7 +34,7 @@ module.exports = {
         "maintain/maintain-guides-how-to-stop-validating",
         "maintain/kusama/maintain-guides-how-to-nominate-kusama",
         "maintain/doc-maintain-guides-validator-community",
-        "general/kusama/kusama-endpoints",
+        "maintain/maintain-endpoints",
         "general/kusama/kusama-ledger",
         "general/kusama/kusama-statemine-ledger",
       ],
