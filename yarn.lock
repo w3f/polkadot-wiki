@@ -1478,15 +1478,16 @@
     "@types/react-router-config" "*"
     "@types/react-router-dom" "*"
 
-"@docusaurus/plugin-client-redirects@^2.0.0-beta.13":
-  version "2.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.13.tgz#94fdcf60db49b93078a3f48dcda09778bcf0223d"
-  integrity sha512-GbTbyZIJFX4J6CcdIrs8NrPz/NVteT0B+MtcA1vTeSnwCPnn0v0o8FXo0wmBSxQxt2uY5FUdGzSZLHI+qViwyQ==
+"@docusaurus/plugin-client-redirects@^2.0.0-beta.14":
+  version "2.0.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-beta.14.tgz#1646bf6bf99889747b7edfa3f1cb4dd3c1f2f471"
+  integrity sha512-CHxEZk20URQb3CU6l4egXYpSVMpgIQ3/niTrx8MCjyfQVnLl/yIKiLeYA1ja4i/wa8UmQnJwKUL7mZDbuP9qeg==
   dependencies:
-    "@docusaurus/core" "2.0.0-beta.13"
-    "@docusaurus/utils" "2.0.0-beta.13"
-    "@docusaurus/utils-common" "2.0.0-beta.13"
-    "@docusaurus/utils-validation" "2.0.0-beta.13"
+    "@docusaurus/core" "2.0.0-beta.14"
+    "@docusaurus/logger" "2.0.0-beta.14"
+    "@docusaurus/utils" "2.0.0-beta.14"
+    "@docusaurus/utils-common" "2.0.0-beta.14"
+    "@docusaurus/utils-validation" "2.0.0-beta.14"
     chalk "^4.1.2"
     eta "^1.12.3"
     fs-extra "^10.0.0"
@@ -7790,10 +7791,10 @@ pretty-error@^3.0.4:
     lodash "^4.17.20"
     renderkid "^2.0.6"
 
-pretty-quick@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/pretty-quick/-/pretty-quick-3.1.2.tgz#89d8741af7122cbd7f34182df746c5a7ea360b5c"
-  integrity sha512-T+fpTJrDjTzewql4p3lKrRA7z3MrNyjBK1MKeaBm5PpKwATgVm885TpY7TgY8KFt5Q1Qn3QDseRQcyX9AKTKkA==
+pretty-quick@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/pretty-quick/-/pretty-quick-3.1.3.tgz#15281108c0ddf446675157ca40240099157b638e"
+  integrity sha512-kOCi2FJabvuh1as9enxYmrnBC6tVMoVOenMaBqRfsvBHB0cbpYHjdQEpSglpASDFEXVwplpcGR4CLEaisYAFcA==
   dependencies:
     chalk "^3.0.0"
     execa "^4.0.0"
