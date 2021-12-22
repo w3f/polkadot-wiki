@@ -134,31 +134,48 @@ prompt your ledger for confirmation when you initiate a transaction.
 
 ### Working on both Kusama and Statemine
 
-The Statemine app uses the same derivation path as the Kusama app. This means that for the same Account Type and Index it will generate the same address. To work with your Ledger on both Kusama and Statemine, you have the following options.
+The Statemine app uses the same derivation path as the Kusama app. This means that for the same 
+Account Type and Index it will generate the same address. To work with your Ledger on both Kusama 
+and Statemine, you have the following options.
 
 #### 1. Use a combination of Polkadot-JS Apps UI and the Polkadot extension (recommended)
 
-By default, when adding a Ledger account in the Polkadot-JS Apps UI it is available only on that network. You can use the same account on Kusama and Statemine without issues if you add your Kusama account in the Polkadot extension and the Statemine account in Polkadot-JS Apps UI directly, as described above.
+By default, when adding a Ledger account in the Polkadot-JS Apps UI it is available only on that 
+network. You can use the same account on Kusama and Statemine without issues if you add your Kusama 
+account in the Polkadot extension and the Statemine account in Polkadot-JS Apps UI directly, 
+as described above.
 
-In this way the same account will be available on both chains, but not on others, and this is the recommended approach.
+In this way the same account will be available on both chains, but not on others, and this is the 
+recommended approach.
 
-You can learn how to add an account in the Polkadot extension [here](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
+You can learn how to add an account in the Polkadot extension 
+[here](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
 
 #### 2. Allow the account on all chains
 
-Alternatively you can add the same account with the same Account Type and Index on both chains only on Polkadot-JS Apps UI. However, by default, an account is available only on one chain. So, if you have the same account on Kusama and add it on Statemine as well, the Kusama account will disappear. And vice versa.
+Alternatively you can add the same account with the same Account Type and Index on both chains only 
+on Polkadot-JS Apps UI. However, by default, an account is available only on one chain. So, if you have 
+the same account on Kusama and add it on Statemine as well, the Kusama account will disappear. 
 
-In order to use the same account on Polkadot-JS Apps UI on both networks you need to disable the option "only this network":
+And vice versa.
+
+In order to use the same account on Polkadot-JS Apps UI on both networks you need to disable the option 
+"only this network":
 
 ![Screenshot 2021-12-22 at 1 32 59 PM](https://user-images.githubusercontent.com/45905709/147086614-01c59ced-2438-4f21-aa3c-d0f989ca3f6b.png)
 
-> **WARNING!!** Disabling the "only this network" option will make the account available **on all chains**. But be careful! You should **not use** this account on other chains besides Kusama and Statemine. Doing so will result in any funds being sent to it to **become inaccessible!!**
+> **WARNING!!** Disabling the "only this network" option will make the account available 
+> **on all chains**. But be careful! You should **not use** this account on other chains besides 
+> Kusama and Statemine. Doing so will result in any funds being sent to it to **become inaccessible!!**
 
 #### 3. Use different accounts on each network
 
-Finally, the last option is to create different accounts on Kusama and Statemine. You can do that by selecting different Account Type and Index combinations on each chain when you add the account.
+Finally, the last option is to create different accounts on Kusama and Statemine. You can do that 
+by selecting different Account Type and Index combinations on each chain when you add the account.
 
-> **IMPORTANT:** Make sure to note which combination of Account Type and Index you selected when you add an account. You will need it if you ever need to restore this account. As a reminder you can add the combination in the account's name, for example "My Ledger account 1/1" for Account Type 1 and Index 1. 
+> **IMPORTANT:** Make sure to note which combination of Account Type and Index you selected when you 
+> add an account. You will need it if you ever need to restore this account. As a reminder you can add 
+> the combination in the account's name, for example "My Ledger account 1/1" for Account Type 1 and Index 1. 
 
 ### Confirming the Address on your Device
 
