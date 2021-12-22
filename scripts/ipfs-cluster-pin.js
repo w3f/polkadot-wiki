@@ -86,7 +86,7 @@ class CFClient {
       key: apiToken
     })
 
-    this.zone = this._getZoneFromPinName(pinName);
+    this.zone = CFClient._getZoneFromPinName(pinName);
   }
 
   static _getZoneFromPinName(pinName) {
