@@ -108,7 +108,7 @@ class CFClient {
 
     try {
       const recordsList = this.cf.dnsRecords.browse(argv.zoneId);
-      const existingRecord = recordList.find(record => record.name === this.zone);
+      const existingRecord = recordsList.find(record => record.name === this.zone);
 
       return this.cf.dnsRecords.edit({
         zone_id: argv.zoneId,
@@ -117,12 +117,12 @@ class CFClient {
       })
     } catch (e) {
       console.log('DNS Record does not exist:');
-      console.log(record);
+      console.log(newRecord);
       console.log('Adding...');
       
       return this.cf.dnsRecords.add({
         zone_id: argv.zoneId,
-        record,
+        record: newRecord,
       })
     }
   }
