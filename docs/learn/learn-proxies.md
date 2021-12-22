@@ -66,6 +66,11 @@ Controller accounts, but does allow the Stash to be accessed even less frequentl
 identity. If you are unfamiliar with judgements and identities on chain, please refer to
 [this page](learn-identity.md#judgements).
 
+### Cancel Proxies
+
+Proxies that are of the type "Cancel" allow accounts to reject and remove any time-delay proxy 
+announcements.
+
 ### Auction Proxies
 
 Proxies that are of the type "Auction" are accounts that allow transactions pertaining to parachain 

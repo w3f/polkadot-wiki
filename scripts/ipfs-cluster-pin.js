@@ -1,6 +1,7 @@
 const yargs = require("yargs");
 const { create, globSource } = require("ipfs-http-client");
 const { execSync } = require("child_process");
+const cloudflare = require("cloudflare");
 
 const argv = yargs(process.argv)
   .option("websiteDir", {
@@ -18,11 +19,21 @@ const argv = yargs(process.argv)
     description: "required. eg. asdf:1234",
     type: "string",
   })
+  .option("cloudflareToken", {
+    alias: "cf",
+    description: "required",
+    type: "string",
+  })
+  .option("zoneId", {
+    alias: "zid",
+    description: "required",
+    type: "string",
+  })
   .help()
   .alias("help", "h").argv;
 
-if (!argv.websiteDir || !argv.pinName || !argv.auth) {
-  throw new Error("Must pass --websiteDir, --auth, and --pinName arguments.");
+if (!argv.websiteDir || !argv.pinName || !argv.auth || !argv.cloudflareToken || !argv.zoneId) {
+  throw new Error("Must pass --websiteDir, --auth, --cloudflareToken, --zoneId, and --pinName arguments.");
 }
 
 var runCommandOnCluster = async (command, retries = 6) => {
@@ -65,7 +76,60 @@ const getCidByPinName = async (pinName) => {
   return prevCidObject ? prevCidObject.cid["/"] : null;
 }
 
+
+class CFClient {
+
+  constructor(pinName, apiToken) {
+
+    this.cf = cloudflare({
+      email: "jake@web3.foundation",
+      key: apiToken
+    })
+
+    this.zone = this._getZoneFromPinName(pinName);
+  }
+
+  static _getZoneFromPinName(pinName) {
+    const zones = {
+      "polkadot-wiki": "polkadot-wiki.w3f.community",
+      "kusama-guide": "kusama-guide.w3f.community"
+    }
+
+    return zones[pinName];
+  }
+
+  async updateDNSLinkFromCID (newMultiaddr) {
+    const newRecord = {
+      type: "TXT",
+      name: this.zone,
+      content: `dnslink=/ipfs/${newMultiaddr}`,
+      ttl: 120,   // seconds
+    }
+
+    try {
+      const recordsList = this.cf.dnsRecords.browse(argv.zoneId);
+      const existingRecord = recordList.find(record => record.name === this.zone);
+
+      return this.cf.dnsRecords.edit({
+        zone_id: argv.zoneId,
+        id: existingRecord.id,
+        record: newRecord,
+      })
+    } catch (e) {
+      console.log('DNS Record does not exist:');
+      console.log(record);
+      console.log('Adding...');
+      
+      return this.cf.dnsRecords.add({
+        zone_id: argv.zoneId,
+        record,
+      })
+    }
+  }
+}
+
 const main = async () => {
+  const cf = new CFClient(argv.pinName, argv.cloudflareToken);  // we can derive which dns zone to use based on the pinName
   // get and unpin the previous build from the cluster, if exists
   const prevCid = await getCidByPinName(argv.pinName);
   if (prevCid) {
@@ -76,13 +140,17 @@ const main = async () => {
   }
   
   // pin new build to cluster with new name
-  console.log(`Uploading and pinning '${argv.websiteDir}' to the cluster as '${argv.pinName}'...`)
+  console.log(`Uploading and pinning '${argv.websiteDir}' to the cluster as '${argv.pinName}'...`);
   await runCommandOnCluster(`add -r --name ${argv.pinName} ${argv.websiteDir}`);
   const cid = await getCidByPinName(argv.pinName);
   console.log(`Successfully added and pinned '${argv.pinName}' (CID ${cid}).`);
-  console.log("Previous errors are non-fatal.")
+  console.log("If above values are non-null, previous errors are non-fatal.");
+
+  await cf.updateDNSLinkFromCID(cid);  // update the
 
   // update DNS entry
+  // https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
+  // https://github.com/cloudflare/node-cloudflare
 };
 
 try {
