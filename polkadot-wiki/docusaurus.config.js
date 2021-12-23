@@ -41,7 +41,7 @@ module.exports = {
     'https://fonts.googleapis.com/icon?family=Material+Icons',
   ],
   i18n,
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Polkadot_Favicon.png',
   trailingSlash: false,
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'log',
@@ -72,7 +72,6 @@ module.exports = {
   ],
   plugins: [
     'remark-docusaurus-tabs',
-    '@docusaurus/theme-live-codeblock',
     [
       '@docusaurus/plugin-client-redirects',
       {
@@ -107,7 +106,7 @@ module.exports = {
     },
     navbar: {
       logo: {
-        src: 'img/logo_polkadot_wiki.svg',
+        src: 'img/Polkadot_Logo_Horizontal_Pink-Black.svg',
       },
       items: [
         {
@@ -159,7 +158,7 @@ module.exports = {
     footer: {
       copyright: `© ${new Date().getFullYear()} Web3 Foundation`,
       logo: {
-        src: 'img/logo-polkadot-light.svg',
+        src: 'img/Polkadot_Logo_Horizontal_White.svg',
       },
     },
     algolia: {

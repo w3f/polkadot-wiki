@@ -31,7 +31,7 @@ approach. Some examples of what a parachain could be are:
 
 and more.
 
-Polkadot aims to be a bet against so-called *chain-maximalism*, where the success of Polkadot's
+Polkadot aims to be a bet against blockchain maximalism, where the success of Polkadot's
 heterogeneous multi-chain approach will play a key part in the overall advancement of Web 3.0 and
 decentralized systems. As a result, Polkadot’s parachain model was designed with the belief that the
 internet of the future will have many different types of blockchains working together.
@@ -243,7 +243,7 @@ of code. Keep up-to-date with the latest Cumulus developments from the [Cumulus 
 > Everything else is up to the implementer of the PDK.
 
 Cumulus handles the network compatibility overhead that any parachain would need to implement to 
-be connected to Polkadot. This includes:
+be connected to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. This includes:
 
 - Cross-chain message passing (XCMP)
 - Out-of-the-box Collator node setup
@@ -259,19 +259,21 @@ Wasm executable. This Wasm code blob will contain the entire state transition fu
 chain, and is what you will need to deploy your project to Polkadot as either a parachain or
 parathread.
 
-Validators on Polkadot will use the submitted Wasm code to validate the state transitions of your
-chain or thread, but doing this requires some additional infrastructure. A validator needs some way
-to stay up to date with the most recent state transitions, since Polkadot nodes will not be required
+Validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use the submitted 
+Wasm code to validate the state transitions of your chain or thread, but doing this requires some 
+additional infrastructure. A validator needs some way to stay up to date with the most recent state 
+ransitions, since {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes will not be required 
 to also be nodes of your chain.
 
 This is where the collator node comes into play. A collator is a maintainer of your parachain and
 performs the critical action of producing new block candidates for your chain and passing them to
-Polkadot validators for inclusion in the Polkadot relay chain.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validators for inclusion in the 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain.
 
 Substrate comes with its own networking layer built-in but unfortunately only supports solo chains
 (that is, chains that do not connect to the relay chain). However, there is the Cumulus extension
 that includes a collator node and allows for your Substrate-built logic to be compatible with
-Polkadot as either a parachain or parathread.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as either a parachain or parathread.
 
 ### Future PDKs
 
@@ -416,11 +418,13 @@ Alice is now able to send from her account on parachain 200 to her account on pa
 
 If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/),
 you may do so by clicking on the network selection at the top left-hand corner of the navigation and
-selecting any parachain of choice. For the purpose of these following examples, we will be using the
+selecting any parachain of choice. 
+
+![rococo parachains](../assets/polkadotjs_network_parachains.png)
+
+For the purpose of these following examples, we will be using the
 Rococo testnet "Custom Node" underneath "Development", following the
 [Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/).
-
-<img src="../docs/assets/polkadotjs_network_parachains.png" height="650" width="450"/>
 
 ### Parachain Playground
 
@@ -438,9 +442,9 @@ Then, connect your local node with Polkadot-JS Apps.
 
 ![parachains playground](../assets/parachain-playground.png)
 
-## Deploy on Polkadot
+## Deploy
 
-Substrate-based chains, including the Polkadot and Kusama relay chains, use an
+Substrate-based chains, including the Polkadot and Kusama Relay Chains, use an
 [SS58 encoding](https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)) for
 their address formats. [This page](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
 serves as the canonical registry for teams to see which chain corresponds to a given prefix, and which 
@@ -448,8 +452,8 @@ prefixes are available.
 
 ### Parachain
 
-To include your parachain into the Polkadot network, you will need to acquire a parachain
-slot.
+To include your parachain into the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, 
+you will need to acquire a parachain slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
 {{ polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}

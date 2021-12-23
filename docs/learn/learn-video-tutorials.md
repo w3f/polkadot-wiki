@@ -17,13 +17,20 @@ slug: ../learn-video-tutorials
 
 ### Accounts, Transfers & Staking
 
-- [How to create Polkadot accounts](https://www.youtube.com/watch?v=hhUZ40ZWqkE)
+- [How to create Polkadot account](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 - [Understanding Accounts and Keys](https://www.youtube.com/watch?v=zhfccevPqWI)
+- [How to Stake DOT/KSM on Polkadot JS](https://www.youtube.com/watch?v=FCXC0CDhyS4)
+- [Using Polkadot with Ledger live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 - [How to Stake DOT/KSM with Ledger](https://www.youtube.com/watch?v=VN4S8MofEW8)
 - [Why do transfers fail?](https://www.youtube.com/watch?v=Wzqi8-WXiK8)
 - [Existential Deposit and Keep-Alive Checks](https://www.youtube.com/watch?v=ZjKpTgxDp_4)
 - [Why should you Nominate on Polkadot and Kusama?](https://youtu.be/weG_uzdSs1E)
 - [Picking validators to Nominate (Stake)](https://youtu.be/ZMzhM1m4I-k)
+
+### Parachain Auctions and Crowdloans
+
+- [Contribute to Crowdloans using Polkadot JS](https://www.youtube.com/watch?v=AA9mPANmzmU)
+- [Introduction to Parachain Slot auctions](https://www.youtube.com/watch?v=bsoxJw0rayk)
 
 ### Governance
 

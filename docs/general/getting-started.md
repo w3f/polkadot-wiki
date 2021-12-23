@@ -30,6 +30,32 @@ growing needs without the risks of network forks.
 By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
 
+### What can I do with my DOT?
+
+[DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for transaction 
+fees, staking, governance, acquisition of a parachain slot and for enabling several key functionalities 
+on Polkadot.
+
+- 1 DOT - minimum balance required to have an active account on Polkadot Network. If your account
+  balance drops below 1 DOT, your account will be reaped. Learn more about
+  [Existential Deposit](../build/build-protocol-info.md#existential-deposit)
+
+- 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
+  for [parachain slot auctions](../learn/learn-auction.md)
+
+- 20 DOT - you can register an [on-chain identity](../learn/learn-identity.md) or vote for
+  [council](../maintain/maintain-guides-how-to-vote-councillor.md)
+
+- 120 DOT - you can nominate validators and earn staking rewards. Learn more on
+  [how to stake your DOT](../learn/learn-staking.md).
+
+DOT has a lot of utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md).
+Bonding DOT is a requirement to create proposals, to second them and to vote on them when they
+become referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a
+[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal.md). DOT can also enable
+you to participate in programs like
+[Thousand Validators Program](../general/thousand-validators.md#polkadot).
+
 ### Interact with Polkadot
 
 <tr class="cards-container">
@@ -159,7 +185,8 @@ Polkadot Gifts provide an easy way to:
 - Say ‘thank you’ or send someone tokens when you don’t know their address.
 - Get friends and family set up to participate in crowdloans.
 
-Learn more about how you can create and send Polkadot Gifts [here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
+Learn more about how you can create and send Polkadot Gifts
+[here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
 
 ## Why Polkadot?
 
@@ -186,15 +213,15 @@ intermediaries and build a trustless infrastructure.
 
 The Polkadot network uses a
 [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
-"[parachains](../learn/learn-parachains.md)", allow transactions to be processed in parallel instead of
-sequentially. Each parachain in the network has a unique state transition function (STF). Polkadot
-has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as long as a
-chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the
-Polkadot network as a parachain.
+"[parachains](../learn/learn-parachains.md)", allow transactions to be processed in parallel instead
+of sequentially. Each parachain in the network has a unique state transition function (STF).
+Polkadot has a Relay Chain acting as the main chain of the system. Based on Polkadot's design, as
+long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect
+to the Polkadot network as a parachain.
 
 Parachains construct and propose blocks to validators on the Relay Chain, where the blocks undergo
-rigorous [availability and validity](../learn/learn-availability.md) checks before being added to the
-finalized chain. As the Relay Chain provides the security guarantees,
+rigorous [availability and validity](../learn/learn-availability.md) checks before being added to
+the finalized chain. As the Relay Chain provides the security guarantees,
 [collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
 stays up to date with the many transactions that take place.
@@ -202,12 +229,12 @@ stays up to date with the many transactions that take place.
 ![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
-transactions can be made between different parachains.
+Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility,
+meaning that transactions can be made between different parachains.
 
-The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to send messages
-of any type to each other. The shared security and validation logic of the Relay Chain provide the
-environment for trust-free message passing that opens up true interoperability.
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) allows parachains to
+send messages of any type to each other. The shared security and validation logic of the Relay Chain
+provide the environment for trust-free message passing that opens up true interoperability.
 
 > To watch a short, beginner-friendly animation on Polkadot, check out our
 > [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
