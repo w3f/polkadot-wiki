@@ -73,7 +73,7 @@ are almost exclusively image-based collectibles of varying rarity.
 
 This is where Polkadot's technology shines and where NFTs 2.0 come into play.
 
-By allowing [heterogeneous application-specific shards](learn-parachains) to
+By allowing [heterogeneous application-specific shards](../learn-parachains) to
 exist, builders are able to natively optimize for complex NFT use cases without
 tradeoffs that would make interacting with the system prohibitively inefficient
 and expensive in other environments.
@@ -227,7 +227,7 @@ customer base has big implications, so multiple projects are focusing on making
 this possible.
 
 Apart from the aforementioned RMRK (Substrate-to-Substrate seamless
-teleportation natively with [XCMP](learn-crosschain)) and Efinity (Paratoken),
+teleportation natively with [XCMP](../learn-crosschain)) and Efinity (Paratoken),
 the following efforts are underway:
 
 - MyNFT: an EVM to EVM bridging effort.
