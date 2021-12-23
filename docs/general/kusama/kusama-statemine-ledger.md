@@ -52,41 +52,6 @@ Here is a list of what you will need before starting:
 
 Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
-### Using the Developer Release
-
-> These instructions are for development installation only. It is recommended to install the
-> application from Ledger Live unless you _know exactly what you're doing_.
-
-Instructions for downloading the pre-release binary from the GitHub releases is written [on the
-README][prerelease instructions] for the Statemine Ledger application GitHub repository.
-
-On the [releases page][] you can download the shell script `install_app.sh` and then make it
-executable in your shell by typing the command `chmod +x install_app.sh`.
-
-Using `install_app.sh` help command will show you the available options:
-
-```zsh
-$ ./install_app.sh --help
-Zondax Installer [Statemine-1.1.1] [Warning: use only for test/demo apps]
-  load    - Load Kusama app
-  delete  - Delete Kusama app
-  version - Show Kusama app version
-```
-
-Next, you must make sure your Ledger device is plugged in and unlocked and you're using the latest
-firmware. If everything is prepared, then type `./install_app.sh load` and accept the prompts on
-your Ledger device to install the application.
-
-First it will prompt you to allow an unsafe manager - confirm this by switching the screen to the
-allow screen and pressing the corresponding buttons.
-
-After some processing time, the screen of your device will update to say "Install app Statemine".
-Navigate all the way to the right, verify the Identifier hash matches the one that is printed in
-your terminal. Click both buttons on "Perform Installation" to install the application. It will ask
-again for your Pin code and you should enter it in the device.
-
-At the end of the process you should have the newly installed Statemine application on the device.
-
 ## Using on Polkadot-JS Apps UI
 
 ### Adding Your Account
