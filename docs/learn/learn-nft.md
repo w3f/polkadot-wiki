@@ -5,8 +5,10 @@ sidebar_label: NFTs
 slug: ../learn-nft
 ---
 
-This page is a high-level overview of NFTs in general, and the various
-approaches to NFTs within the Polkadot network.
+This page is a high-level overview of NFTs and the various approaches to NFTs within 
+the Polkadot network.
+
+**Expect Chaos.**
 
 ## Fungibility
 
@@ -38,6 +40,8 @@ cryptographically proven to "belong" to someone**. This data can be anything -
 concert tickets, attendance badges, simple words, avatars, plots of land in a
 metaverse, audio clips, house deeds, mortgages, and more.
 
+---
+
 ## NFT Standards
 
 A general-purpose blockchain is not built to natively understand the concept of
@@ -63,13 +67,16 @@ This prevents use cases that go beyond the current craze of _digital dust
 gathering NFTs_ on Ethereum - profile pictures, generative "look once and then
 put away" art, [ENS](ens) addresses, and [proof of attendance badges](https://poap.xyz/).
 
+#### A typical [NFT on Ethereum](https://opensea.io/assets/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
+
 ![](../assets/nft/samurai.png)
-> [A typical NFT on Ethereum](https://opensea.io/assets/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
 For the sake of comparison, we can refer to these as NFTs 1.0: static NFTs that
 are almost exclusively image-based collectibles of varying rarity.
 
-## NFTs 2.0: NFTs in Polkadot and Kusama
+---
+
+## NFTs 2.0: NFTs in Polkadot & Kusama
 
 This is where Polkadot's technology shines and where NFTs 2.0 come into play.
 
@@ -91,7 +98,9 @@ Unique Network have launched two NFT projects to date: Substrapunks as part of
 [Hackusama](https://hackusama.devpost.com/), and Chelobricks as a recent
 promotion during [Polkadot Decoded](https://decoded.polkadot.network/). They are
 currently running a betanet which is bridged to Kusama, and on which these NFTs
-are already tradable: see [Unqnft.io](https://unqnft.io) [2].
+are already tradable.
+
+#### NFT from [Unqnft.io](https://unqnft.io) [2]
 
 ![](https://unique.network/local/templates/unique/static/images/content/chel-400.jpg)
 
@@ -103,7 +112,7 @@ whitelabel-friendly. In theory, it should be trivial to set up a new marketplace
 for your project using Unique's technology. Unique network aims to be a
 parachain on Polkadot, and Quartz is their Kusama counterpart.
 
-Unique Network works closely with RMRK (see below).
+*Unique Network works closely with RMRK (see below).*
 
 ### RMRK
 
@@ -121,7 +130,10 @@ pallet in any Substrate chain.
 
 The RMRK team has just launched the 2.0 version of the protocol, a set of "NFT
 legos", primitives that, when put together, allow a builder to compose an NFT
-system of arbitrary complexity without smart contracts. The "legos" are:
+system of arbitrary complexity without smart contracts. 
+
+
+#### NFT Legos
 
 1. NFTs can own other NFTs, NFTs can equip other NFTs for visual change
 2. NFTs can have multiple resources (different outputs based on context and
@@ -137,10 +149,12 @@ The upcoming version 3.0 (Q1 2022) will be pallet and smart contract (EVM)
 versions of all RMRK 2.0 logic, and integration into partner chains for cheap
 and easy teleportation of non-fungibles across dozens of chains.
 
+#### NFT from [Kanaria](https://kanaria.rmrk.app)
+
 ![](../assets/nft/kanaria.png)
 
 > A multi-resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can 
-> also equip other NFTs from within its "inventory", from [Kanaria](https://kanaria.rmrk.app)
+> also equip other NFTs from within its "inventory".
 
 The RMRK team is collaborating closely with Unique network. RMRK's logic and
 technology will be deployed on Unique Network in the form of runtime upgrades
@@ -216,7 +230,9 @@ The can also be interacted with directly through the
 
 ![](../assets/nft/uniques.png)
 
-More UIs are already being developed.
+**More UIs are already being developed**.
+
+---
 
 ## Bridging
 
@@ -229,15 +245,16 @@ Apart from RMRK (Substrate-to-Substrate seamless teleportation natively with
 [XCMP](learn-cross-consensus.md)) and Efinity (Paratoken), the following efforts are 
 underway:
 
-- MyNFT: an EVM to EVM bridging effort.
-- RMRK<->EVM Simplification bridge: a bridge developed during the
+- **MyNFT**: an EVM to EVM bridging effort.
+- **RMRK <-> EVM** Simplification bridge: a bridge developed during the
   [RMRK hackathon](https://rmrk.devpost.com) for porting RMRK NFTs into
   simplified IOUs on EVM chains, primary deployment pending November 2022 on
   Moonriver
-- RMRK<->EVM Full bridge: EVM version of RMRK 2.0 should be ready in December
+- **RMRK <-> EVM** Full bridge: EVM version of RMRK 2.0 should be ready in December
   2021, meaning a full migration of RMRK 2.0 NFTs from RMRK (Kusama) to
   Moonriver (and other EVMs) will become possible
 
 ### References
-[1] [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
-[2] [Unique network's Chelobrick](https://unique.network/blog/chelobricks-making-waves-with-10-000-substrate-based-nfts/)
+
+- [1]: [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
+- [2]: [Unique Network's Chelobrick](https://unique.network/blog/chelobricks-making-waves-with-10-000-substrate-based-nfts/)
