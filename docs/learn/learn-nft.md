@@ -22,10 +22,9 @@ Fungibility is a spectrum - what's fungible to some might not be fungible to
 others. In reality, Pokemon™ cards, the canonical example of non fungible
 assets, are more fungible than US dollar bills each of which has a unique serial
 number which may be of importance to a government agency. The cards have no
-serial numbers.
+serial numbers [1].
 
 ![](<https://www.investopedia.com/thmb/Nr-RLORu5CX_lIWZfLmV5X0eIrc=/613x345/smart/filters:no_upscale()/Clipboard01-d20f6eb9351e4f36a46e11fd87b53b2d.jpg>)
-> Source: [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
 
 Additionally, a digital item like a "purple magic sword" in a game may be
 fungible with another visually identical sword if all the player cares about is
@@ -92,10 +91,9 @@ Unique Network have launched two NFT projects to date: Substrapunks as part of
 [Hackusama](https://hackusama.devpost.com/), and Chelobricks as a recent
 promotion during [Polkadot Decoded](https://decoded.polkadot.network/). They are
 currently running a betanet which is bridged to Kusama, and on which these NFTs
-are already tradable: see [Unqnft.io](https://unqnft.io).
+are already tradable: see [Unqnft.io](https://unqnft.io) [2].
 
 ![](https://unique.network/local/templates/unique/static/images/content/chel-400.jpg)
-> Source: [Unique network's Chelobrick](https://unique.network/blog/chelobricks-making-waves-with-10-000-substrate-based-nfts/)
 
 Users can send KSM into their Unique Network escrow account, trade with it
 there, and then send any earned or leftover KSM back.
@@ -140,6 +138,7 @@ versions of all RMRK 2.0 logic, and integration into partner chains for cheap
 and easy teleportation of non-fungibles across dozens of chains.
 
 ![](../assets/nft/kanaria.png)
+
 > A multi resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can 
 > also equip other NFTs from withing its "inventory", from [Kanaria](https://kanaria.rmrk.app)
 
@@ -238,3 +237,7 @@ the following efforts are underway:
 - RMRK<->EVM Full bridge: EVM version of RMRK 2.0 should be ready in December
   2021, meaning a full migration of RMRK 2.0 NFTs from RMRK (Kusama) to
   Moonriver (and other EVMs) will become possible
+
+### References
+[1] [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
+[2] [Unique network's Chelobrick](https://unique.network/blog/chelobricks-making-waves-with-10-000-substrate-based-nfts/)
