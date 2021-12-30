@@ -6,7 +6,7 @@
 
 # Polkadot Wiki
 
-<img align="right" src="docs/assets/Web3Foundation_1-100.jpg" width="400" height="225">
+<img align="right" src="docs/assets/Web3Foundation_1-100.jpg" width="400">
 
 <p align="left">
   The Polkadot Wiki is the central source of truth for Polkadot. It is a community-focused initiative led by 
