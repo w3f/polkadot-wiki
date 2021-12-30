@@ -2,6 +2,7 @@
 id: learn-nft
 title: NFTs
 sidebar_label: NFTs
+slug: ../learn-nft
 ---
 
 This page is a high level overview of NFTs in general, and the various
@@ -9,7 +10,7 @@ approaches to NFTs within the Polkadot network.
 
 ## Fungibility
 
-NFT stands for _non fungible token_. Fungibility means interchangeability inside
+NFT stands for *non fungible token*. Fungibility means interchangeability inside
 of a group. In theory, a $20 bill is always worth $20 in a store, and identical
 in value to any other $20 bill. It is not, however, fungible with a $1 or $100
 dollar bill (outside its group).
@@ -24,7 +25,7 @@ number which may be of importance to a government agency. The cards have no
 serial numbers.
 
 ![](<https://www.investopedia.com/thmb/Nr-RLORu5CX_lIWZfLmV5X0eIrc=/613x345/smart/filters:no_upscale()/Clipboard01-d20f6eb9351e4f36a46e11fd87b53b2d.jpg>)
-_source: [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)_
+> Source: [Investopedia](https://www.investopedia.com/terms/l/liars-poker.asp)
 
 Additionally, a digital item like a "purple magic sword" in a game may be
 fungible with another visually identical sword if all the player cares about is
@@ -47,8 +48,8 @@ implementations built on top of such a chain are essentially "hacks".
 As an example, Ethereum is a general purpose blockchain which does not have the
 concept of "tokens" (fungible or not) built-in. Tokens in Ethereum are
 essentially spreadsheets of information that are to be interpreted and read in a
-certain way by various user interfaces. This _way_ in which they should read
-them is called a _standard_.
+certain way by various user interfaces. This *way* in which they should read
+them is called a *standard*.
 
 The most widespread fungible token standard you may have heard of is ERC20,
 while the most widespread NFT standard is ERC721, followed closely by ERC1155.
@@ -64,7 +65,7 @@ gathering NFTs_ on Ethereum - profile pictures, generative "look once and then
 put away" art, [ENS](ens) addresses, and [proof of attendance badges](https://poap.xyz/).
 
 ![](../assets/nft/samurai.png)
-_[a typical NFT on Ethereum](https://opensea.io/assets/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)_
+> [A typical NFT on Ethereum](https://opensea.io/assets/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
 For the sake of comparison, we can refer to these as NFTs 1.0: static NFTs that
 are almost exclusively image-based collectibles of varying rarity.
@@ -73,7 +74,7 @@ are almost exclusively image-based collectibles of varying rarity.
 
 This is where Polkadot's technology shines and where NFTs 2.0 come into play.
 
-By allowing [heterogeneous application-specific shards](learn-parachains) to
+By allowing [heterogeneous application-specific shards](learn-parachains.md) to
 exist, builders are able to natively optimize for complex NFT use cases without
 tradeoffs that would make interacting with the system prohibitively inefficient
 and expensive in other environments.
@@ -94,8 +95,7 @@ currently running a betanet which is bridged to Kusama, and on which these NFTs
 are already tradable: see [Unqnft.io](https://unqnft.io).
 
 ![](https://unique.network/local/templates/unique/static/images/content/chel-400.jpg)
-_Source:
-[Unique network's Chelobrick](https://unique.network/blog/chelobricks-making-waves-with-10-000-substrate-based-nfts/)_
+> Source: [Unique network's Chelobrick](https://unique.network/blog/chelobricks-making-waves-with-10-000-substrate-based-nfts/)
 
 Users can send KSM into their Unique Network escrow account, trade with it
 there, and then send any earned or leftover KSM back.
@@ -139,9 +139,9 @@ The upcoming version 3.0 (Q1 2022) will be pallet and smart contract (EVM)
 versions of all RMRK 2.0 logic, and integration into partner chains for cheap
 and easy teleportation of non-fungibles across dozens of chains.
 
-![](../assets/nft/kanaria.png) _a multi resource NFT (gif of statue, and
-SVG-composable dynamic NFT in one) that can also equip other NFTs from withing
-its "inventory", from [Kanaria](https://kanaria.rmrk.app)_
+![](../assets/nft/kanaria.png)
+> A multi resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can 
+> also equip other NFTs from withing its "inventory", from [Kanaria](https://kanaria.rmrk.app)
 
 The RMRK team is collaborating closely with Unique network. RMRK's logic and
 technology will be deployed on Unique Network in the form of runtime upgrades
@@ -169,7 +169,7 @@ standard and makers of the Enjin wallet and Unity plugin which allows easy
 implementation of NFTs into 3D games, Efinity is an NFT bridging chain coming to
 Kusama and Polkadot in 2022.
 
-Their plan is to build a _paratoken_ which would be a standard for token
+Their plan is to build a *paratoken* which would be a standard for token
 migration across different parachains in the Polkadot ecosystem, but also into
 and out of Ethereum and other EVM systems.
 
@@ -227,7 +227,7 @@ customer base has big implications, so multiple projects are focusing on making
 this possible.
 
 Apart from the aforementioned RMRK (Substrate-to-Substrate seamless
-teleportation natively with [XCMP](learn-crosschain)) and Efinity (Paratoken),
+teleportation natively with [XCMP](learn-cross-consensus.md)) and Efinity (Paratoken),
 the following efforts are underway:
 
 - MyNFT: an EVM to EVM bridging effort.
