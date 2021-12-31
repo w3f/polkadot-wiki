@@ -8,7 +8,7 @@ slug: ../learn-scams
 
 Scams have unfortunately made an impact on our community. It's important to stay alert and protect
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
-scammed, please email [our support team](mailto:support@web3.foundation).
+scammed, please get in contact via the [Polkadot Support page](https://support.polkadot.network).
 
 ## Essential rules:
 
@@ -24,10 +24,10 @@ scammed, please email [our support team](mailto:support@web3.foundation).
 5. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the onus is on the user to be as diligent as possible in avoiding them.
 6. If you can, try to always verify new information that you see with an official source, such as
-   [Polkadot network's official blog](../general/community.md) or
-   [Web3 Foundation support](mailto:support@polkadot.network). Often scammers will fake a website or
-   a blog post, but if you check it against a secondary source you will reduce the chances of being
-   scammed.
+   [Polkadot network's official blog](../general/community.md) or 
+   [Polkadot's Official Support](https://support.polkadot.network). 
+   Often scammers will fake a website or a blog post, but if you check it against a secondary source 
+   you will reduce the chances of being scammed.
 
    > Important: With crowdloans active on the network, it is very important to know how to safely
    > participate. Fake crowdloan campaigns may present an attractive target for scammers. If you are
@@ -106,7 +106,7 @@ Some simple things that you can do to keep your assets and information secure fr
 For any potential scam, always be sure to do a background check on the source, i.e, look at any
 username, email, YouTube channel name, URL, etc. If something seems fishy, that's because it likely
 is. Never enter any personal data if you feel the source could be a scam. Feel free to check with
-[support@polkadot.network](mailto:support@web3.foundation).
+[Polkadot's official support](https://support.polkadot.network)..
 
 ### Check twice before sending DOT/KSM
 

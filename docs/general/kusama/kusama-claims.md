@@ -268,7 +268,8 @@ launch period balance transfers will not be enabled.
 After you make an on-chain claim for KSM, your balance should be updated on Polkadot-JS Apps
 immediately.
 
-Are you having trouble? Send an email to [support@polkadot.network](mailto:support@polkadot.network).
+Are you having trouble? Get in touch on the 
+[Polkadot Support page](https://support.polkadot.network).
 
 ### Third Party Claims Processes
 
