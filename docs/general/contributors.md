@@ -31,8 +31,9 @@ he spent five years teaching Computer Science at the University of Pittsburgh. B
 years of experience in software engineering and management.
 
 He is the author of two books:
-[A Friendly Introduction to Software Testing](https://www.amazon.com/Friendly-Introduction-Software-Testing/dp/1523477377), an undergraduate textbook; and
-[Strength in Numbers](https://www.amazon.com/Strength-Numbers-Cryptocurrency-Bill-Laboon/dp/1981526730/),
+[A Friendly Introduction to Software Testing](https://www.amazon.com/Friendly-Introduction-Software-Testing/dp/1523477377), 
+an undergraduate textbook; 
+and [Strength in Numbers](https://www.amazon.com/Strength-Numbers-Cryptocurrency-Bill-Laboon/dp/1981526730/),
 a near-future novel set in a world in which cryptocurrency has eliminated traditional money.
 
 ---
@@ -140,7 +141,8 @@ censorship resistance, and transparency coupled with accountability, so he's fou
 immutable ledgers of the present and future.
 
 In a previous life, he was a web developer and senior PHP editor at SitePoint, which culminated in a
-[book about web-dev-friendly virtual environments](https://www.amazon.com/Jump-Start-PHP-Environment-Language/dp/0994182643). In his [quest for developer health](https://bruno.id/an-endomorphs-journey-to-health-part-2/), 
+[book about web-dev-friendly virtual environments](https://www.amazon.com/Jump-Start-PHP-Environment-Language/dp/0994182643). 
+In his [quest for developer health](https://bruno.id/an-endomorphs-journey-to-health-part-2/), 
 he likes to combine fitness and gaming and can be found in VR on Oculus and Steam as TheSwader. 
 He also runs a weekly newsletter covering all things Web3 at [DotLeap](https://dotleap.substack.com).
 
