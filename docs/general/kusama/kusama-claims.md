@@ -269,7 +269,7 @@ After you make an on-chain claim for KSM, your balance should be updated on Polk
 immediately.
 
 Are you having trouble? Get in touch on the 
-[Polkadot support page](https://support.polkadot.network).
+[Polkadot Support page](https://support.polkadot.network).
 
 ### Third Party Claims Processes
 

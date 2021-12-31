@@ -215,7 +215,7 @@ the full ledger.
 ## Support
 
 If you need support, please visit the
-[Polkadot support page](https://support.polkadot.network).
+[Polkadot Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
 [repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy

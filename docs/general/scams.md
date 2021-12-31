@@ -8,7 +8,7 @@ slug: ../learn-scams
 
 Scams have unfortunately made an impact on our community. It's important to stay alert and protect
 yourself and your non-refundable crypto assets from scammers. If you ever feel you are being
-scammed, please get in contact via the [Polkadot support page](https://support.polkadot.network).
+scammed, please get in contact via the [Polkadot Support page](https://support.polkadot.network).
 
 ## Essential rules:
 

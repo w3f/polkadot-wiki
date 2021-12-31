@@ -18,7 +18,7 @@ It supports most of the available transaction types of the network in the XL ver
 (details [below](#installing-the-ledger-application)).
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
-issue on the [Polkadot support page](https://support.polkadot.network/).
+issue on the [Polkadot Support page](https://support.polkadot.network/).
 
 > Please check out our
 > [intro to Ledger video on YouTube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
@@ -225,7 +225,8 @@ Teleporting **to** a Ledger account from a non-Ledger account doesn't require th
 
 ## Support
 
-If you need support please visit [our Support page](https://support.polkadot.network).
+If you need support, please visit the
+[Polkadot Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
 [apps]: https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
