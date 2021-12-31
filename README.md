@@ -1,10 +1,38 @@
+<div>
+<img align="center" src="https://user-images.githubusercontent.com/25497083/147838114-91029ff4-f900-4f30-823b-b038b2d1b9b9.png" width="850" height="200">
+</div>
+
+
+<div align="Center">
+<h1>Polkadot Wiki</h1>
+<h3> The Source of Truth for Polkadot </h3>
+<br>
+  
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE)
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](https://www.markdownguide.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/general/contributing.md)
 [![Polkadot Prod](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-polkadot-prod.yml/badge.svg)](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-polkadot-prod.yml)
 [![Kusama Prod](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-kusama-prod.yml/badge.svg)](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-kusama-prod.yml)
+</div>
 
-# Polkadot Wiki
+<!-- TOC -->
+
+- [Contributing to Documentation](#contributing-to-documentation)
+- [Running Locally](#running-locally)
+  - [Build](#build)
+  - [Start](#start)
+  - [Publish](#publish)
+- [Style and Configuration Guide](#style-and-configuration-guide)
+  - [Formatting](#formatting)
+  - [Static Site Generator](#static-site-generator)
+  - [Search Engine](#search-engine)
+  - [Automated Deployments](#automated-deployments)
+  - [Mirror Pages](#mirror-pages)
+  - [Conditional Rendering](#conditional-rendering)
+- [Internationalization](#internationalization)
+- [License](#license)
+<!-- /TOC -->
+---
 
 <img align="right" src="https://user-images.githubusercontent.com/25497083/147788625-14e67f76-c53c-4992-8e84-d23cd78e88bd.png" width="250">
 
@@ -79,7 +107,7 @@ yarn kusama:start
 ```bash
 yarn polkadot:start
 ```
-#### Running GitHub Pages
+### Publish
 
 :bird: Publishing the Kusama Guide: 
 ```bash
