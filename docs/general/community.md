@@ -17,7 +17,7 @@ prior contact and anyone doing so is likely trying to scam you.
 - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) -
   Information on hosting meetups, applying for funding, and materials for running it.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
-  [Polkadot Support Email](mailto:support@polkadot.network)
+  [Polkadot Support Contact](https://support.polkadot.network).
 - [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot.html)
 
 ### Events

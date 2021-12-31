@@ -18,7 +18,7 @@ It supports most of the available transaction types of the network in the XL ver
 (details [below](#installing-the-ledger-application)).
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
-issue on the [Polkadot Support Page](https://support.polkadot.network/).
+issue on the [Polkadot support page](https://support.polkadot.network/).
 
 > Please check out our
 > [intro to Ledger video on YouTube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).

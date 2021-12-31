@@ -11,8 +11,8 @@ Polkadot. If you have a more general question, you may wish to search for the an
 [Knowledge Base](https://support.polkadot.network/support/home) or the main
 [Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
 please feel free to ask on the Polkadot Watercooler
-[Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or email
-[support](mailto:support@polkadot.network).*
+[Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or contact
+[Polkadot Support](https://support.polkadot.network).*
 
 ## Polkadot Launch
 

@@ -214,9 +214,8 @@ the full ledger.
 
 ## Support
 
-If you need support please send an email to
-[support@polkadot.network](mailto:support@polkadot.network) or visit our
-[Support Page](https://support.polkadot.network).
+If you need support, please visit the
+[Polkadot support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
 [repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy

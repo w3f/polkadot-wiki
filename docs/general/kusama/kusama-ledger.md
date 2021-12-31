@@ -221,8 +221,8 @@ want to remove expired democracy locks on an account stored on a Ledger device.
 
 ## Support
 
-If you need support please send an email to [support@kusama.network](mailto:support@kusama.network)
-or visit [our Support page](https://support.polkadot.network).
+If you need support, 
+please send visit [Polkadot's support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
 [repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy
