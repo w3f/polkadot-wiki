@@ -13,7 +13,7 @@ is listed as a precaution - if one of these people ever contacts you directly, f
 information to see that it matches the origin of the message, and then feel free to get in touch with someone 
 else on this list to verify the legitimacy of the original inquiry. 
 
-:warning: **Employee impersonation is a very common type of scam**. :warning:
+:warning: **Employee impersonation is a common type of scam**. :warning:
 
 > For other ways of protecting yourself, please see [How to Protect Yourself from Scams](scams.md).
 
@@ -74,7 +74,7 @@ He has a Bachelor of Engineering in Computer Engineering and a background in phi
 - matrix: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
 - twitter: [@semres8](https://twitter.com/semres8)
 
-Emre is a Technical Educator at Web3 Foundation. His background is in full stack software
+Emre is a Technical Educator at Web3 Foundation. His background is in full-stack software
 development, education, and blockchain technology consulting. He is passionate about learning and
 teaching and has always kept a foot in education by designing and delivering software development
 and blockchain classes at General Assembly, Code Fellows, and Columbia University.
@@ -90,8 +90,8 @@ and blockchain classes at General Assembly, Code Fellows, and Columbia Universit
 Radha is a Technical Educator at Web3 Foundation. Radha has a PhD in Computer Science and has
 three years of experience teaching Computer Science courses. He also taught a Massively Open Online
 Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). Radha is excited to
-contribute to Web3 Foundation's vision by educating professionals and the general public about the Web
-3.0 Technology Stack.
+contribute to Web3 Foundation's vision by educating professionals and the general public about the WEB3 
+Technology Stack.
 
 ---
 ---
@@ -105,8 +105,8 @@ The following contributors are no longer participating in an official capacity.
 - matrix: [@alexander:web3.foundation](https://matrix.to/#/@alexander:web3.foundation)
 
 Alex was a Technical Education Intern at Web3 Foundation. He received a Computer Science B.S. from San 
-Francisco State University. Outside of his formal education, Alex has developed a deep passion for educating 
-others on decentralized systems and pushing forward the Web 3.0 vision. He has educational experience in 
+Francisco State University. Alex has developed a deep passion for educating others on decentralized systems 
+and pushing forward the WEB3 vision outside of his formal education. He has educational experience in 
 cryptography, data privacy, and enterprise security.
 
 ---
@@ -120,7 +120,7 @@ cryptography, data privacy, and enterprise security.
 Jake was a Technical Education Intern at Web3 Foundation and is completing a Bachelors in
 Computer Science from the University of Cincinnati. He has been learning about blockchain technology
 since 2018 and has personal interests in peer-to-peer systems, network protocols, applied
-cryptography and privacy enhancing technologies.
+cryptography and privacy-enhancing technologies.
 
 You can now find Jake cracking the code at the Multi-Chain Polkadot DApp Hub, 
 [Astar Network](https://astar.network/).
@@ -133,11 +133,11 @@ You can now find Jake cracking the code at the Multi-Chain Polkadot DApp Hub,
 - matrix: [@bitfalls:matrix.org](https://matrix.to/#/@bitfalls:matrix.org)
 - twitter: [@bitfalls](https://twitter.com/bitfalls)
 
-Bruno joined the crypto ecosystem full time in 2015 with the advent of Ethereum, and created
-educational resources, tutorials and newsletters for budding developers of the industry. 
+Bruno joined the crypto ecosystem full time in 2015 with the advent of Ethereum and created
+educational resources, tutorials, and newsletters for budding developers of the industry. 
 
 From 2019, he was a Technical Educator at Web3 Foundation. He is passionate about decentralization,
-censorship resistance, and transparency coupled with accountability, so he's found his passion in
+censorship resistance, and transparency coupled with accountability, so he has found his passion in
 immutable ledgers of the present and future.
 
 In a previous life, he was a web developer and senior PHP editor at SitePoint, which culminated in a
@@ -153,7 +153,6 @@ create a breakthrough NFT standard.
 
 ### Anson Lau
 
-- email: [anson@web3.foundation](mailto:anson@web3.foundation)
 - matrix: [@anson-lau:matrix.org](https://matrix.to/#/@anson-lau:matrix.org)
 - twitter: [@Anson_LauHK](https://twitter.com/anson_lauhk)
 
@@ -178,10 +177,10 @@ a Bachelor's degree in Computer Science and is passionate about teaching and tec
 - matrix: [@logansaether:matrix.org](https://matrix.to/#/@logansaether:matrix.org)
 - twitter: [@logansaether](https://twitter.com/logansaether)
 
-Logan was a Technical Educator at Web3 Foundation where he worked on creating material for
+Logan was a Technical Educator at Web3 Foundation, where he worked on creating material for
 supporting the development of the next generation of distributed technologies. At Web3 Technical
 Education, Logan focused on creating the Polkadot Wiki as the central source of truth and knowledge
-for the Polkadot protocol. He contributed to the creation of written content and example
+for the Polkadot protocol. He contributed in creating written content and example
 applications that demonstrate how to use these new technologies.
 
 You can now find Logan leading efforts to define the prediction market space at 
