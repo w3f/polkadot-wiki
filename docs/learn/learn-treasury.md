@@ -16,7 +16,7 @@ with the current default set to {{ spend_period }} days. The Treasury attempts t
 in the queue as it can without running out of funds. 
 
 Treasury payout is an automatic process:
-- If the Treasury funds run out with remaining approved proposals to fund, those proposals are kept in the 
+- If the Treasury funds run out with approved proposals left to fund, those proposals are kept in the 
   approved queue, and will receive funding in the following spend period.
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
 percentage of its funds - thereby causing deflationary pressure. This encourages the spending of the 
