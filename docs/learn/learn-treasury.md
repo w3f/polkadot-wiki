@@ -8,12 +8,18 @@ slug: ../learn-treasury
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
 transaction fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
-
+ 
 The funds held in the Treasury can be spent by making a spending proposal that, if approved by the 
 [Council](learn-governance.md#council), will enter a waiting period before distribution. This waiting 
 period is known as the *spend period*, and its duration is subject to [governance](learn-governance.md), 
 with the current default set to {{ spend_period }} days. The Treasury attempts to spend as many proposals 
 in the queue as it can without running out of funds. 
+
+Every spend period, the Council attempts to fund the approved proposals with the available funds 
+in the Treasury. The Council will examine each approved proposal to determine which proposals will 
+receive funding first. If the Treasury funds run out before the Council funds all of the approved 
+proposals, those proposals are kept in the approved queue, and will receive funding in the following spend 
+period.
 
 Treasury payout is an automatic process.
 
@@ -23,7 +29,7 @@ funds in the Treasury by Polkadot's governance system.
 {{ polkadot: This percentage is currently at 1%
 on Polkadot. :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently 
 going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
-burned. :kusama }}
+burned. :kusama }}.
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
 least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
@@ -44,6 +50,7 @@ judgment.
 > The Council does not approve or deny Treasury Proposals based on the funds available in
 > the Treasury. In other words, proposals are not approved just because there are funds ready to spend
 > but are subject to a burn.
+
 
 ## Funding the Treasury
 
