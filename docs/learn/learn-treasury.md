@@ -15,15 +15,10 @@ period is known as the *spend period*, and its duration is subject to [governanc
 with the current default set to {{ spend_period }} days. The Treasury attempts to spend as many proposals 
 in the queue as it can without running out of funds. 
 
-Every spend period, the Council attempts to fund the approved proposals with the available funds 
-in the Treasury. The Council will examine each approved proposal to determine which proposals will 
-receive funding first. If the Treasury funds run out before the Council funds all of the approved 
-proposals, those proposals are kept in the approved queue, and will receive funding in the following spend 
-period.
-
-Treasury payout is an automatic process.
-
-If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
+Treasury payout is an automatic process:
+- If the Treasury funds run out with remaining approved proposals to fund, those proposals are kept in the 
+  approved queue, and will receive funding in the following spend period.
+- If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
 percentage of its funds - thereby causing deflationary pressure. This encourages the spending of the 
 funds in the Treasury by Polkadot's governance system. 
 {{ polkadot: This percentage is currently at 1%
