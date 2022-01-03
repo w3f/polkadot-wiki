@@ -2,24 +2,29 @@
 id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
-description: Details about Polkadot's on-chain treasury.
+description: Details about Polkadot's on-chain Treasury.
 slug: ../learn-treasury
 ---
 
-The Treasury is a pot of funds collected through transaction fees, slashing,
-[staking inefficiencies](learn-staking.md#inflation), etc. The funds held in the Treasury can be
-spent by making a spending proposal that, if approved by the [Council](learn-governance.md#council),
-will enter a waiting period before distribution. This waiting period is known as the budget period,
-and its duration is subject to [governance](learn-governance.md), with the current default set to
-{{ spend_period }} days. The Treasury attempts to spend as many proposals in the queue as it can
-without running out of funds.
+The Treasury is a pot of funds collected through a portion of block production rewards,
+transaction fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
+ 
+The funds held in the Treasury can be spent by making a spending proposal that, if approved by the 
+[Council](learn-governance.md#council), will enter a waiting period before distribution. This waiting 
+period is known as the *spend period*, and its duration is subject to [governance](learn-governance.md), 
+with the current default set to {{ spend_period }} days. The Treasury attempts to spend as many proposals 
+in the queue as it can without running out of funds. 
 
-If the Treasury ends a budget period without spending all of its funds, it suffers a burn of a
-percentage of its funds -- thereby causing deflationary pressure.
+Treasury payout is an automatic process:
+- If the Treasury funds run out with approved proposals left to fund, those proposals are kept in the 
+  approved queue, and will receive funding in the following spend period.
+- If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
+percentage of its funds - thereby causing deflationary pressure. This encourages the spending of the 
+funds in the Treasury by Polkadot's governance system. 
 {{ polkadot: This percentage is currently at 1%
-on Polkadot. :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently going to
-[Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
-burned. :kusama }}
+on Polkadot. :polkadot }}{{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently 
+going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
+burned. :kusama }}.
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
 least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
@@ -34,8 +39,13 @@ Proposals may consist of (but are not limited to):
 - Community events and outreach (meetups, pizza parties, hackerspaces).
 - Software development (wallets and wallet integration, clients and client upgrades).
 
-The Treasury is ultimately controlled by the [Council](learn-governance#council), and how the funds
-will be spent is up to their judgment.
+The [Council](learn-governance#council) governs the Treasury and how the funds are spent is up to their 
+judgment.
+
+> The Council does not approve or deny Treasury Proposals based on the funds available in
+> the Treasury. In other words, proposals are not approved just because there are funds ready to spend
+> but are subject to a burn.
+
 
 ## Funding the Treasury
 
@@ -119,6 +129,10 @@ The threshold for accepting a treasury proposal is at least three-fifths of the 
 other hand, the threshold for rejecting a proposal is at least one-half of the Council.
 
 ![Motions in action](../assets/treasury/motion.png)
+
+You will notice the "spend period" at the top of the Treasury UI.
+
+![Proposal Spend Period](../assets/treasury/spend-period.png)
 
 ## Tipping
 
