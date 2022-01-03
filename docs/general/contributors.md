@@ -40,9 +40,10 @@ a near-future novel set in a world in which cryptocurrency has eliminated tradit
 
 ### Joe Petrowski
 
-- email: [joe@parity.io](mailto:joe@parity.io)
-- matrix: [@joe:matrix.parity.io](https://matrix.to/#/@joe:matrix.parity.io)
+- email: [joe@web3.foundation](mailto:joe@web3.foundation)
+- matrix: [@joe:web3.foundation](https://matrix.to/#/@joe:web3.foundation)
 - telegram: [@joepetrowski](https://t.me/joepetrowski)
+- twitter: [@joepetrowski](https://twitter.com/joepetrowski)
 
 Joe leads Technical Integrations at Web3 Foundation and was previously a Research Analyst at 
 Parity Technologies. He focuses on making Substrate chain integration as smooth as possible, 
@@ -102,12 +103,12 @@ The following contributors are no longer participating in an official capacity.
 
 ### Alex Chau
 
-- matrix: [@alexander:web3.foundation](https://matrix.to/#/@alexander:web3.foundation)
+- matrix: [@a-jwc:​matrix.org](https://matrix.to/#/@a-jwc:​matrix.org)
 
-Alex was a Technical Education Intern at Web3 Foundation. He received a Computer Science B.S. from San 
-Francisco State University. Alex has developed a deep passion for educating others on decentralized systems 
-and pushing forward the WEB3 vision outside of his formal education. He has educational experience in 
-cryptography, data privacy, and enterprise security.
+Alex was a Technical Education Intern at Web3 Foundation. He has developed a deep passion 
+for educating others on decentralized systems and pushing forward the WEB3 vision. 
+Alex has educational experience in cryptography, data privacy, and enterprise security.
+He has a Bachelor of Science in Computer Science from San Francisco State University.
 
 ---
 
@@ -117,12 +118,12 @@ cryptography, data privacy, and enterprise security.
 - twitter: [@jakehemmerle](https://twitter.com/jakehemmerle)
 - telegram: [@jakehemmerle](https://t.me/jakehemmerle)
 
-Jake was a Technical Education Intern at Web3 Foundation and is completing a Bachelors in
+Jake was a Technical Education Intern at Web3 Foundation and is completing a Bachelor's in
 Computer Science from the University of Cincinnati. He has been learning about blockchain technology
 since 2018 and has personal interests in peer-to-peer systems, network protocols, applied
 cryptography and privacy-enhancing technologies.
 
-You can now find Jake cracking the code at the Multi-Chain Polkadot DApp Hub, 
+You can now find Jake cracking the code at the multi-chain Polkadot dApp hub, 
 [Astar Network](https://astar.network/).
 
 ---
