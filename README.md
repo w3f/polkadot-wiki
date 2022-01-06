@@ -1,7 +1,6 @@
-<div>
-<img align="center" src="https://user-images.githubusercontent.com/25497083/147838114-91029ff4-f900-4f30-823b-b038b2d1b9b9.png" width="850" height="222">
-</div>
-
+<p align="center">
+<img align="center" src="https://user-images.githubusercontent.com/25497083/147838114-91029ff4-f900-4f30-823b-b038b2d1b9b9.png" width="650" height="180">
+</p>
 
 <div align="Center">
 <h1>Polkadot Wiki</h1>
