@@ -19,12 +19,13 @@ Here are a couple of things that you need to understand before submitting a tele
 - There will be a transaction fee imposed on the source chain. This fee is **not** automatically
   deducted from the teleport amount you plan to send. Your account balance should be greater than
   the teleport amount and the transaction fees. If you do not account for the sending fee, the
-  teleport transaction will fail.
+  teleport transaction will fail. The sending fee will be deducted from your account balance.
 
 - There will be a transaction fee imposed at the destination chain. This fee is automatically
   deducted from the teleport amount you send. After this fee is deducted, the remaining account
   balance on the destination chain should be greater than its Existential Deposit. If not, the
-  teleport transaction will fail.
+  teleport transaction will fail and the sending fee along with the teleport amount will be deducted
+  from your account balance.
 
   ![teleport](../assets/kusama/KSM-teleport-small.png)
 
