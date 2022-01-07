@@ -63,7 +63,7 @@ likely be approved by the network stakeholders only in rare scenarios.
 
 ### Statemint
 
-[Statemint](https://github.com/paritytech/statemint) (and its cousin *Statemine* on Kusama) will
+[Statemint](https://github.com/paritytech/cumulus/tree/master/polkadot-parachains/statemint) (and its cousin *Statemine* on Kusama) will
 likely be one of the first common good parachains.
 
 > Statemine is the first common good parachain.
