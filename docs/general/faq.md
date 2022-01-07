@@ -169,6 +169,20 @@ portion may go directly to the treasury. The exact percentage that goes into bot
 based on the amount of DOT that are staked. Please see the article on
 [inflation](../learn/learn-staking.md/#inflation) for more information.
 
+### Why can't crowdloaned DOT be staked?
+
+DOTs contributed to a sucessful crowdloan campaign by a parachain are bonded for the entire lease
+period, which is two years on Polkadot. The crowdloaned DOT cannot be used for any other DOT utility
+functionalities like staking and democracy. In exchange to the lost staking rewards or liquidity of DOTs,
+the parachain team may offer rewards to the contributor.
+
+The utility of crowdloaned DOT is to provide a lease for a parachain. The utility of staked DOT is
+to secure the network through a reward/slash mechanism. Allowing crowdloaned DOT to be staked
+results in complex consequences like applying a slash on crowdloaned DOT that was meant to be bonded
+for the entire lease period of a parachain. In a way, the inaccessibility of crowdloaned DOTs and
+the lack of staking rewards for the entire lease duration encourages the contributors to back
+projects that are valuable to the ecosystem.
+
 ## Governance
 
 ### What prevents Polkadot governance from failing?
