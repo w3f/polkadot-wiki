@@ -40,7 +40,7 @@
   "devDependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
-    "@crowdin/cli": "^3.7.4",
+    "@crowdin/cli": "^3.7.5",
     "@docusaurus/core": "^2.0.0-beta.14",
     "@docusaurus/module-type-aliases": "^2.0.0-beta.14",
     "@docusaurus/plugin-client-redirects": "^2.0.0-beta.14",
