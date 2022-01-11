@@ -2111,12 +2111,12 @@
     "@babel/runtime" "^7.16.7"
 
 "@polkadot/x-randomvalues@*":
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-8.2.2.tgz#32eb424a642c19c8d7ce3be8713061a1a0003efd"
-  integrity sha512-v3dx0xvWHd5t6e41Fte63WFX/t1Fu9ug3tOr/QE6yMFrDSeDW9TzFJKklakc0tXryqW0cL4qZzUdSvguGC2TPA==
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-8.3.1.tgz#a40ea594dad11566b9c0be9753fdad0f803888dd"
+  integrity sha512-qIni71DMX1bNHuFqQ6C5dbGMB/E3QzmEUjYfvZv/Q8US5REQTVZuniMwtxM4LH4hrhQbRoNH6QyBxxvcwiTy4Q==
   dependencies:
-    "@babel/runtime" "^7.16.5"
-    "@polkadot/x-global" "8.2.2"
+    "@babel/runtime" "^7.16.7"
+    "@polkadot/x-global" "8.3.1"
 
 "@polkadot/x-randomvalues@8.3.1":
   version "8.3.1"
