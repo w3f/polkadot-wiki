@@ -84,7 +84,7 @@
     "crowdin-cli": "^0.3.0",
     "css-what": "^6.0.1",
     "glob-parent": "^6.0.2",
-    "immer": "^9.0.7",
+    "immer": "^9.0.12",
     "nth-check": "^2.0.1",
     "remark-docusaurus-tabs": "^0.2.0",
     "replace-in-file": "^6.3.2",
