@@ -23,8 +23,8 @@ with the following properties:
 - Generic and extensible for use with fee-free and gas-metered smart contract platforms,
   community parachains, trusted interactions between system parachains and their relay chain,
   and more.
-- Interacting with a system whose transaction format is unknown. 
-  - XCM is well-versioned, abstract and general and can be used as a means of providing a 
+- Interacting with a system whose transaction format is unknown.
+  - XCM is well-versioned, abstract and general and can be used as a means of providing a
     long-lasting transaction format for wallets to use to create many common transactions.
     It is _extensible_ and, in turn, _future-proof_ and _forwards-compatible_.
 - Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
@@ -159,7 +159,7 @@ Check out our animated video below that explores how XCMP works.
 
 <video
       controls="controls"  
-      name="XCMP Animated Video" 
+      name="XCMP Animated Video"
       width="560" height="315"
       src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
 doesn't support embedded videos. </video>
@@ -173,6 +173,8 @@ A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other 
 
 ## How To Make Cross-Chain Transfers
 
+HRMP channels are now open from Statemine to several parachains. This is a placeholder for a tutorial on performing cross chain transfer of assets between parachains.
+
 A tutorial on downward, upward, and lateral transfers can be found
 [here](../build/build-parachains.md#testing-a-parachain).
 
@@ -185,4 +187,3 @@ A tutorial on downward, upward, and lateral transfers can be found
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
-  
