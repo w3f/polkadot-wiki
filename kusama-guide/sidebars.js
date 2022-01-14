@@ -11,32 +11,81 @@ module.exports = {
         "learn/learn-auction",
         "learn/learn-parachains",
         "learn/learn-parathreads",
+        "learn/learn-bridges",
         "learn/learn-crowdloans",
         "general/ens",
         "general/kusama/kusama-parameters",
         "general/doc-thousand-validators",
         "general/kusama/kusama-timeline",
         "general/kusama/kusama-community",
+        "general/ambassadors",
+        "maintain/kusama/maintain-guides-society-kusama",
       ],
     },
     {
       type: "category",
       label: "What to Try",
       items: [
-        "learn/learn-governance",
-        "learn/learn-identity",
-        "learn/learn-registrar",
-        "learn/learn-treasury",
-        "learn/learn-assets",
-        "maintain/kusama/maintain-guides-society-kusama",
-        "general/kusama/kusama-social-recovery",
-        "maintain/kusama/maintain-guides-how-to-validate-kusama",
-        "maintain/maintain-guides-how-to-stop-validating",
-        "maintain/kusama/maintain-guides-how-to-nominate-kusama",
-        "maintain/doc-maintain-guides-validator-community",
-        "maintain/maintain-endpoints",
-        "general/kusama/kusama-ledger",
-        "general/kusama/kusama-statemine-ledger",
+        {
+          type: "category",
+              label: "Accounts",
+              items: [
+                "learn/learn-account-generation",
+                "general/kusama/kusama-social-recovery",
+                "learn/learn-proxies",
+              ],
+        },
+        {
+          type: "category",
+              label: "Assets",
+              items: [
+                "learn/learn-treasury",
+                "learn/learn-assets",
+                "learn/learn-teleport",
+              ],
+        },
+        {
+          type: "category",
+              label: "Identity",
+              items: [
+                "learn/learn-identity",
+                "learn/learn-registrar",
+              ],
+        },
+        {
+          type: "category",
+              label: "Nominate",
+              items: [
+                "learn/learn-staking",
+                "maintain/kusama/maintain-guides-how-to-nominate-kusama",
+              ],
+        },
+        {
+          type: "category",
+              label: "Validate",
+              items: [
+                "maintain/kusama/maintain-guides-how-to-validate-kusama",
+                "maintain/maintain-guides-how-to-stop-validating",
+                "maintain/doc-maintain-guides-validator-community",
+              ],
+        },
+        {
+          type: "category",
+              label: "Governance",
+              items: [
+                "learn/learn-governance",
+                "general/kusama/kusama-social-recovery",
+                "maintain/maintain-guides-how-to-vote-councillor",
+              ],
+        },
+        {
+          type: "category",
+              label: "Ledger",
+              items: [
+                "general/kusama/kusama-ledger",
+                "general/kusama/kusama-statemine-ledger",
+              ],
+        },
       ],
     },
     {
@@ -44,6 +93,8 @@ module.exports = {
       label: "What to Build",
       items: [
         "build/build-index",
+        "build/build-protocol-info",
+        "maintain/maintain-endpoints",
         {
           type: "category",
           label: "Development Guide",
