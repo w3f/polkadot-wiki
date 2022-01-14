@@ -13,9 +13,8 @@ Kusama has a [Ledger][] application that is compatible with the Ledger Nano S an
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
 device that does not get directly exposed to your computer or the internet.
 
-The Kusama application allows you to manage Kusama's native asset, the KSM token. It supports most
-of the available transaction types of the network (a notable exception is the "Batch" transaction
-from the Utility pallet).
+The Kusama application allows you to manage Kusama's native asset, KSM. It supports
+most of the transaction types of the network ,including batch transactions from the Utility pallet.
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -185,8 +184,11 @@ clicking on your account's avatar icon - this immediately copies your address to
 
 ### Staking
 
-Since Ledger does not support batch transactions, you must do two separate transactions when you
-want to stake using an account stored on a Ledger device.
+You can enable staking by issuing a batch transaction that will include 
+the required extrinsics.
+
+You can also issue two separate transactions when you want to stake using an account stored on a 
+Ledger device, as follows:
 
 - Go to the "Staking" tab found under the "Network" dropdown in the top navigation menu.
 - Click the "Account Actions" pane in the inner navigation.
@@ -201,8 +203,11 @@ want to stake using an account stored on a Ledger device.
 
 ### Removing Expired Democracy Locks
 
-Since Ledger does not support batch transactions, you must issue several extrinsics manually when you
-want to remove expired democracy locks on an account stored on a Ledger device.
+You can remove expired democracy locks by issuing a batch transaction that will include 
+the required extrinsics.
+
+You can also manually issue several extrinsics when you want remove expired democracy locks on an 
+account stored on a Ledger device, as follows:
 
 - Go to https://polkadot.js.org/apps/#/accounts. Look at your expired locks and note which referenda
   they were for.

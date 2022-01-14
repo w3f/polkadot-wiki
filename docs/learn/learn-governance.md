@@ -45,7 +45,13 @@ Referenda can be started in one of several ways:
 - Emergency proposals submitted by the Technical Committee and approved by the Council.
 
 All referenda have an *enactment delay* associated with them. This is the period between the
-referendum ending and, assuming the proposal was approved, the changes being enacted. For the first
+referendum ending and, assuming the proposal was approved, the changes being enacted. 
+
+Referenda is considered *baked* if it is closed and tallied. Again, assuming the proposal was 
+approved, it would be scheduled for enactment. Referenda is considered *unbaked* if is pending 
+an outcome, i.e. being voted on.
+
+For the first
 two ways that a referendum is launched, this is a fixed time of 
 {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For the third type, it can be set as 
 desired. Emergency proposals deal with major problems with the network that need to be "fast-tracked". 
