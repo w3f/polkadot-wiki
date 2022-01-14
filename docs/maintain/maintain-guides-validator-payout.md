@@ -30,11 +30,11 @@ If the *mean* of rewards is the average rewards per era, then the *variance* is 
 the average rewards. 
 
 With parachains now on Polkadot, a large percentage of era points will come from parachain validation,
-as a subset of validators are selected to para-validate for all parachains, and those para-validators 
+as a subset of validators are selected to para-validate for all parachains each era, and those para-validators 
 can generate more era points as a result. 
 
-In this case, considering the *expected value* of rewards to consider the weight of era points for validators 
-and para-validator, with respect to each era, will paint a better picture.
+In this case, analyzing the *expected value* of rewards to consider the weight of era points for validators 
+and para-validators for the reward average, will paint a better picture.
 
 Let: 
 - `pe` = para-validator era points,
@@ -43,7 +43,7 @@ Let:
 
 Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`. 
 
-Since `EV(pe)` has a more weighted probability of influencing the `EV`, the increase in variance against the 
+Since `EV(pe)` has a more weighted probability on the `EV`, the increase in variance against the 
 `EV` becomes apparent between the different validator pools (aka. validators in the active set and the ones chosen 
 to para-validate).
 
@@ -57,10 +57,13 @@ Then, `v` &#8593; if `w` &#8593;, as this reduces `p` : `w`, with respect to `e`
 
 Increased `v` is expected, and initially keeping `p` &#8595; using the same para-validator set for all parachains 
 ensures [availability](../learn/learn-availability.md) and [approval voting](../learn/learn-governance.md). 
-Also, even though `v` &#8593; on an `e` to `e` basis, over time, the amount of rewards each validator 
-receives will eventually equal out based on the continuous selection of para-validators.
+In addition, despite `v` &#8593; on an `e` to `e` basis, over time, the amount of rewards each validator 
+receives will equal out based on the continuous selection of para-validators.
 
 > There are plans to scale the active para-validation set in the future.
+
+> The above breakdown of reward variance should only serve as a high-level overview of the 
+> probabilistic nature for staking rewards.
 
 ## Payout Scheme
 
