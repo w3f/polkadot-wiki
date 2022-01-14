@@ -41,9 +41,8 @@
   on Polkadot. 
 </p>
 
-> :high_brightness: **Please Note**: The Wiki will undergo a major revamp over the next several weeks in an attempt 
-> to improve its configuration, functionality, relevancy, adequacy, and overall design. 
-> The new Wiki will exist in a new repository, still under `w3f`.
+:speech_balloon: **Please be advised: The Wiki will undergo a major revamp over the next several weeks in an attempt to improve its configuration, functionality, relevancy, adequacy, and overall design. 
+The new Wiki will exist in a new repository, still under Web3 Foundation.**
 
 > :scroll: This repository will still be maintained in the meantime, and contributions are always encouraged.
 
