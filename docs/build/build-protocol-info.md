@@ -203,6 +203,12 @@ transaction. This methodology is reflected in the Substrate codebase itself, for
 [reference a previous transaction](https://docs.substrate.io/rustdocs/latest/pallet_multisig/struct.Timepoint.html)
 from the Multisig pallet.
 
+### Remarks
+
+Remarks are extrinsics with no effect. They provide additional information to external inputs, acting 
+as *notes*. Remarks are stored alongside block records and do not change the chain's storage; the 
+information is not stored in the chain's trie, but along blocks. 
+
 ### Events
 
 While extrinsics represent information from the outside world, events represent information from the
