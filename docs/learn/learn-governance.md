@@ -10,6 +10,10 @@ slug: ../learn-governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network.
 
+:speech_balloon: **Please be advised: The contents in this guide are subject to change as per the recent efforts to
+modify Polkadot Governance. See the following [pull request](https://github.com/paritytech/substrate/pull/10195) 
+for more details**.
+
 To do this, the network brings together various novel mechanisms, including an amorphous state-transition
 function stored on-chain and defined in a platform-neutral intermediate language (i.e.
 [WebAssembly](learn-wasm.md)) and several on-chain voting mechanisms such as referenda with adaptive

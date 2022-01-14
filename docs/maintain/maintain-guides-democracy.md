@@ -11,6 +11,10 @@ in Polkadot and Kusama. The other two bodies are the
 [council](maintain-guides-how-to-join-council.md) and the
 [technical committee](../learn/learn-governance.md#technical-committee).
 
+:speech_balloon: **Please be advised: The contents in this guide are subject to change as per the recent efforts to
+modify Polkadot Governance. See the following [pull request](https://github.com/paritytech/substrate/pull/10195) 
+for more details**.
+
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
 tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to
