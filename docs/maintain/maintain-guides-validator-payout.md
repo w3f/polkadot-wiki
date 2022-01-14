@@ -9,20 +9,61 @@ slug: ../maintain-guides-validator-payout
 ## Era Points
 
 For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in
-Polkadot), validators are paid proportionally to the amount of _era points_ they have collected. Era
-points are reward points earned for payable actions like:
+Polkadot), validators are paid proportionally to the amount of *era points* they have collected. 
+Era points are reward points earned for payable actions like:
 
 - issuing validity statements for [parachain](../learn/learn-parachains.md) blocks.
 - producing a non-uncle block in the Relay Chain.
 - producing a reference to a previously unreferenced uncle block.
 - producing a referenced uncle block.
 
-_Note: An uncle block is a Relay Chain block that is valid in every regard, but which failed to
+*Note: An uncle block is a Relay Chain block that is valid in every regard, but which failed to
 become canonical. This can happen when two or more validators are block producers in a single slot,
 and the block produced by one validator reaches the next block producer before the others. We call
-the lagging blocks uncle blocks._
+the lagging blocks uncle blocks.*
 
 Payments occur at the end of every era.
+
+Era points create a probabilistic component for staking rewards. 
+
+If the *mean* of staking rewards is the average rewards per era, then the *variance* is the variability 
+from the average staking rewards. 
+
+With parachains now on Polkadot, a large percentage of era points will come from parachain validation,
+as a subset of validators are selected to para-validate for all parachains each era, and those para-validators 
+can generate more era points as a result. 
+
+In this case, analyzing the *expected value* of staking rewards will paint a better picture
+as the weight of era points of validators and para-validators in the reward average are taken into consideration.
+
+Let: 
+- `pe` = para-validator era points,
+- `ne` = non-para-validator era points,
+- `EV` = expected value of staking rewards,
+
+Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`. 
+
+Since `EV(pe)` has a more weighted probability on the `EV`, the increase in variance against the 
+`EV` becomes apparent between the different validator pools (aka. validators in the active set and the ones chosen 
+to para-validate).
+
+Also, let: 
+- `v` = the variance of staking rewards,
+- `p` = number of para-validators,
+- `w` = number validators in the active set,
+- `e` = era,
+
+Then, `v` &#8593; if `w` &#8593;, as this reduces `p` : `w`, with respect to `e`. 
+
+Increased `v` is expected, and initially keeping `p` &#8595; using the same para-validator set for all parachains 
+ensures [availability](../learn/learn-availability.md) and [approval voting](../learn/learn-governance.md). 
+In addition, despite `v` &#8593; on an `e` to `e` basis, over time, the amount of rewards each validator 
+receives will equal out based on the continuous selection of para-validators.
+
+> There are plans to scale the active para-validation set in the future.
+
+> The above breakdown of reward variance should only serve as a high-level overview of the 
+> probabilistic nature for staking rewards.
 
 ## Payout Scheme
 
