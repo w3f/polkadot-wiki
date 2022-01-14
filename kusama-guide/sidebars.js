@@ -44,6 +44,7 @@ module.exports = {
       label: "What to Build",
       items: [
         "build/build-index",
+        "build/build-protocol-info",
         {
           type: "category",
           label: "Development Guide",
