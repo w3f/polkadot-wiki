@@ -104,6 +104,13 @@ intended function call in the announcement. Within this time window, the intende
 cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
 actions can be noticed and reverted within a delay period.
 
+**Please be advised:** Polkadot-JS Apps UI cannot handle complicated proxy setups. (e.g. a proxy -> multisig 
+-> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
+extrinsics tab directly.
+
+**These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
+the chain, as you will be unable to sign extrinsics using the UI.**
+
 ## Why use a Proxy?
 
 Proxies are great to use for specific purposes because they add in a layer of security. Rather than
