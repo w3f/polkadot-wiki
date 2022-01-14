@@ -13,9 +13,8 @@ The Polkadot [Ledger][] application is compatible with both the Ledger Nano S an
 devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that
 does not expose it to your computer or the internet.
 
-The Polkadot Ledger application allows you to manage Polkadot's native token, the DOT. It supports
-most of the transaction types of the network (a notable exception is the "Batch" transaction from
-the Utility pallet).
+The Polkadot Ledger application allows you to manage Polkadot's native token, DOT. It supports
+most of the transaction types of the network ,including batch transactions from the Utility pallet.
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -178,8 +177,11 @@ clicking on your account's avatar icon - this immediately copies your address to
 
 ### Staking
 
-Since Ledger does not support batch transactions, you must do two separate transactions when you
-want to stake using an account stored on a Ledger device.
+You can enable staking by issuing a batch transaction that will include 
+the required extrinsics.
+
+You can also issue two separate transactions when you want to stake using an account stored on a 
+Ledger device, as follows:
 
 - Go to the "Staking" tab found under the "Network" dropdown in the top navigation menu.
 - Click the "Account Actions" pane in the inner navigation.
@@ -194,8 +196,11 @@ want to stake using an account stored on a Ledger device.
 
 ### Removing Expired Democracy Locks
 
-Since Ledger does not support batch transactions, you must issue several extrinsics manually when you
-want remove expired democracy locks on an account stored on a Ledger device.
+You can remove expired democracy locks by issuing a batch transaction that will include 
+the required extrinsics.
+
+You can also manually issue several extrinsics when you want remove expired democracy locks on an 
+account stored on a Ledger device, as follows:
 
 - Go to https://polkadot.js.org/apps/#/accounts. Look at your expired locks and note which referenda
   they were for.
@@ -207,10 +212,9 @@ want remove expired democracy locks on an account stored on a Ledger device.
   ACCOUNT is the account you just removed the votes from.
 - Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
 
-**NOTE**: Despite the Polkadot ledger application being compatible with both the Ledger Nano S and the
-Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics are available in the
-light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on
-the full ledger.
+**Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger 
+Nano S and the Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics 
+are available in the light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on the full ledger.
 
 ## Support
 
