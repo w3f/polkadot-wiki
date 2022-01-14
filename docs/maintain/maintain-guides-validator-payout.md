@@ -26,20 +26,20 @@ Payments occur at the end of every era.
 
 Era points create a probabilistic component for staking rewards. 
 
-If the *mean* of rewards is the average rewards per era, then the *variance* is the variability from 
-the average rewards. 
+If the *mean* of staking rewards is the average rewards per era, then the *variance* is the variability 
+from the average staking rewards. 
 
 With parachains now on Polkadot, a large percentage of era points will come from parachain validation,
 as a subset of validators are selected to para-validate for all parachains each era, and those para-validators 
 can generate more era points as a result. 
 
-In this case, analyzing the *expected value* of rewards to consider the weight of era points for validators 
-and para-validators for the reward average, will paint a better picture.
+In this case, analyzing the *expected value* of staking rewards will paint a better picture
+as the weight of era points of validators and para-validators in the reward average are taken into consideration.
 
 Let: 
 - `pe` = para-validator era points,
 - `ne` = non-para-validator era points,
-- `EV` = expected value of rewards,
+- `EV` = expected value of staking rewards,
 
 Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`. 
 
@@ -48,7 +48,7 @@ Since `EV(pe)` has a more weighted probability on the `EV`, the increase in vari
 to para-validate).
 
 Also, let: 
-- `v` = the variance of rewards,
+- `v` = the variance of staking rewards,
 - `p` = number of para-validators,
 - `w` = number validators in the active set,
 - `e` = era,
