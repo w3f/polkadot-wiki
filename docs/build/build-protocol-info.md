@@ -1,73 +1,76 @@
 ---
 id: build-protocol-info
-title: Polkadot Protocol Information
-sidebar_label: Polkadot Protocol
+title: Protocol Information
+sidebar_label: Protocol Information
 description: Characteristics about the Polkadot protocol, and what you need to consider when building.
 slug: ../build-protocol-info
 ---
 
-This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
-specific to Polkadot, notable differences to other chains that you may have worked with, and
-practical information for dealing with the chain.
+This page serves as a high-level introduction to the 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} protocol with terminology that may be 
+specific to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, notable differences to other 
+chains that you may have worked with, and practical information for dealing with the chain.
 
 ## Tokens
 
-- **Token decimals:**
-  - Polkadot (DOT): 10
-  - Kusama (KSM): 12
+- **Token decimals:** {{ polkadot: Polkadot (DOT) - 10 :polkadot }}{{ kusama: Kusama (KSM) - 12 :kusama }}
 - **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
 
-### Redenomination
-
-Polkadot conducted a poll, which ended on 27 July 2020 (block 888_888), in which the stakeholders
+{{ polkadot: Polkadot conducted a poll, which ended on 27 July 2020 (block 888_888), in which the stakeholders
 decided to redenominate the DOT token. The redenomination does not change the number of base units
 (called "plancks" in Polkadot) in the network. The only change is that a single DOT token will be
-1e10 plancks instead of the original 1e12 plancks. See the Polkadot blog posts explaining the
-[details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the
-[results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote.
+1e10 plancks instead of the original 1e12 plancks. :polkadot }}
 
-The redenomination took effect 72 hours after transfers were enabled, at block 1_248_326, which
-occurred at approximately 16:50 UTC on 21 Aug 2020.
+{{ polkadot: The redenomination took effect 72 hours after transfers were enabled, at block 1_248_326, which
+occurred at approximately 16:50 UTC on 21 Aug 2020. See the Polkadot blog posts explaining the
+[details](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) and the
+[results](https://medium.com/polkadot-network/the-results-are-in-8f6b1ca2a4e6) of the vote. Learn more about 
+the redenomination of DOT on the [Redenomination page](../general/redenomination.md). :polkadot }}
+
+{{ kusama: Unlike Polkadot, Kusama has not been through a redenomination. Learn more about 
+the redenomination of DOT on the [Redenomination page](../general/redenomination.md). :kusama }}
 
 ## Addresses
 
-In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit)
-`AccountId`. This is simply the public key for the cryptography used by Substrate.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (and most Substrate chains), 
+user accounts are identified by a 32-byte (256-bit) `AccountId`. This is simply the public key for the 
+cryptography used by Substrate.
 
-Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
-handle many different cryptographic schemes and chains. It has much in common with Bitcoin's Base58Check
-format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} (and Substrate) use the SS58 address format. 
+This is a broad "meta-format" designed to handle many different cryptographic schemes and chains. It has much 
+in common with Bitcoin's Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 
+encoding.
 
 See the [SS58 page](<https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)>)
 in the Substrate wiki for encoding information and a more comprehensive list of network prefixes.
 
 Relevant SS58 prefixes for this guide:
 
-- Polkadot: 0
-- Kusama: 2
+- {{ polkadot: Polkadot: 0 :polkadot }}{{ kusama: Kusama: 2 :kusama }}
 - Westend: 42
 
 ### Cryptography
 
-Polkadot supports the following [cryptographic](../learn/learn-cryptography.md) key pairs and signing
-algorithms:
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports the following 
+[cryptographic](../learn/learn-cryptography.md) key pairs and signing algorithms:
 
 - Ed25519
 - Sr25519 - Schnorr signatures on the Ristretto group
 - ECDSA signatures on secp256k1
 
-Note that the address for a secp256k1 key is the SS58 encoding of the _hash of the public key_ in
+Note that the address for a secp256k1 key is the SS58 encoding of the *hash of the public key* in
 order to reduce the public key from 33 bytes to 32 bytes.
 
 ## Existential Deposit
 
-Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust accounts
-from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed
-from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 33.3333 microKSM
-(0.0000333333 KSM). You can always verify the existential deposit by checking the
-[chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
-`balances.existentialDeposit`.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and most Substrate-based chains, use 
+an *existential deposit* (ED) to prevent dust accounts from bloating chain state. If an account drops below the 
+ED, it will be *reaped*, i.e. completely removed from storage and the nonce reset. 
+
+{{ polkadot: Polkadot's ED is currently 1 DOT :polkadot }}{{ kusama: Kusama's ED is currently 33.3333 
+microKSM (0.0000333333 KSM) :kusama }}. You can always verify the existential deposit by checking 
+the [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant `balances.existentialDeposit`.
 
 Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial
 wallets should set a minimum withdrawal amount that is greater than the ED to guarantee successful
@@ -83,15 +86,17 @@ make the transfer if doing so would result in reaping the sender's account.
 > Still, parachains are able to define an existential deposit of their own, but this is seperate to 
 > that of the Relay Chain ED.
 
-> **Note**: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT and
-> 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
+> **Note**: The Statemint parachain has a lower existential deposit than the Relay Chain 
+> {{ polakdot: 0.1 DOT :polkadot }}{{ kusama: 0.000003333 KSM :kusama }}
+> as well as lower transaction fees. It is highly recommended to handle balance
 > transfers on Statemint. Statemint integration is discussed in the next page of the guide.
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
 Account balance information is stored in
 [`AccountData`](https://docs.substrate.io/rustdocs/latest/pallet_balances/struct.AccountData.html).
-Polkadot primarily deals with two types of balances: free and reserved.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  primarily deals with two types of balances: 
+free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in
 staking and governance, for example. Reserved balance represents funds that have been set aside by
@@ -100,10 +105,16 @@ some operation and still belong to the account holder, but cannot be used.
 Locks are an abstraction over free balance that prevent spending for certain purposes. Several locks
 can operate on the same account, but they overlap rather than add. Locks are automatically added
 onto accounts when tasks are done on the network (e.g. leasing a parachain slot or voting), these
-are not customizable. For example, an account could have a free balance of 200 DOT with two locks on
+are not customizable. 
+
+
+{{ polkadot: For example, an account could have a free balance of 200 DOT with two locks on
 it: 150 DOT for `Transfer` purposes and 100 DOT for `Reserve` purposes. The account could not make a
 transfer that brings its free balance below 150 DOT, but an operation could result in reserving DOT
-such that the free balance is below 150, but above 100 DOT.
+such that the free balance is below 150, but above 100 DOT. :polkadot }}{{ kusama: For example, an account 
+could have a free balance of 20 KSM with two locks on it: 15 KSM for `Transfer` purposes and 10 KSM for 
+`Reserve` purposes. The account could not make a transfer that brings its free balance below 15 KSM, but an 
+operation could result in reserving KSM such that the free balance is below 15, but above 10 KSM. :kusama }}
 
 Bonding tokens for staking and voting in governance referenda both utilize locks.
 
@@ -141,9 +152,11 @@ on-chain can be recognized prior to execution, they can be gossiped on the netwo
 with a low risk of spam. Signed transactions fit the concept of a transaction in Ethereum or
 Bitcoin.
 
-Some transactions cannot be signed by a fee-paying account and use unsigned transactions. For
-example, when a user claims their DOT from the Ethereum DOT indicator contract to a new DOT address,
-the new address doesn't yet have any funds with which to pay fees.
+Some transactions cannot be signed by a fee-paying account and use unsigned transactions. 
+For example, when a user claims their {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from the 
+Ethereum {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} indicator contract to a new 
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} address, the new address doesn't yet have any funds 
+with which to pay fees.
 
 ### Transaction Mortality
 
@@ -162,24 +175,26 @@ against, i.e. the minimum value of validity period and block hash count.
 Setting the block checkpoint to zero, using the genesis hash, and a validity period of zero will
 make the transaction "immortal".
 
-**NOTE:** If an account is reaped and a user re-funds the account, then they could replay an
+**Please be advised:** If an account is reaped and a user re-funds the account, then they could replay an
 immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
 
-> Note: The assumption that a transaction's hash is a unique identifier is the number one mistake
+> The assumption that a transaction's hash is a unique identifier is the number one mistake
 > that indexing services and custodians make. This error will cause major issues for your users.
 > Make sure that you read this section carefully.
 
 Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a transaction's hash
-as a unique identifier. In Substrate-based chains like Polkadot, a transaction's hash only serves as
-a fingerprint of the information within a transaction, and there are times when two transactions
-with the same hash are both valid. In the case that one is invalid, the network properly handles the
-transaction and does not charge a transaction fee to the sender nor consider the transaction in the
+as a unique identifier. In Substrate-based chains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, 
+a transaction's hash only serves as a fingerprint of the information within a transaction, and there are times when 
+two transactions with the same hash are both valid. In the case that one is invalid, the network properly handles 
+the transaction and does not charge a transaction fee to the sender nor consider the transaction in the
 block's fullness.
 
 Imagine this contrived example with a [reaped account](#existential-deposit). The first and last
 transactions are identical, and both valid.
+
+> The following example uses DOT.
 
 | Index | Hash | Origin    | Nonce | Call                | Results                       |
 | :---: | :--: | :-------- | :---: | :------------------ | :---------------------------- |
@@ -203,6 +218,12 @@ transaction. This methodology is reflected in the Substrate codebase itself, for
 [reference a previous transaction](https://docs.substrate.io/rustdocs/latest/pallet_multisig/struct.Timepoint.html)
 from the Multisig pallet.
 
+### Remarks
+
+Remarks are extrinsics with no effect. They provide additional information to external inputs, acting 
+as *notes*. Remarks are stored alongside block records and do not change the chain's storage; the 
+information is not stored in the chain's trie, but along blocks. 
+
 ### Events
 
 While extrinsics represent information from the outside world, events represent information from the
@@ -217,25 +238,26 @@ Monitor events instead of transaction names to ensure that you can properly cred
 
 ### Fees
 
-Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Users can also add a
-"tip" to increase transaction priority during congested periods. See the
-[transaction fee](../learn/learn-transaction-fees.md) page for more info.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses weight-based fees that, unlike gas, are 
+charged *pre-dispatch*. Users can also add a "tip" to increase transaction priority during congested periods. 
+See the [transaction fee](../learn/learn-transaction-fees.md) page for more info.
 
 ### Encoding
 
 Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them
-and interact directly with the chain data or implement your own codec, Polkadot encodes block and
-transaction data using the
-[SCALE codec](https://docs.substrate.io/v3/advanced/scale-codec/).
+and interact directly with the chain data or implement your own codec, 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  encodes block and transaction data using 
+the [SCALE codec](https://docs.substrate.io/v3/advanced/scale-codec/).
 
 ## Runtime Upgrades
 
-[Runtime upgrades](../learn/learn-runtime-upgrades.md) allow Polkadot to change the
-logic of the chain without the need for a hard fork. A hard fork would require node operators to manually
-upgrade their nodes to the latest runtime version. In a distributed system, this is a complex process to
-coordinate and communicate. Polkadot can upgrade without a hard fork. The existing runtime logic is followed
-to update the Wasm runtime stored on the blockchain to a new version. The upgrade is then included in the
-blockchain itself, meaning that all the nodes on the network execute it.
+[Runtime upgrades](../learn/learn-runtime-upgrades.md) allow 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  to change the logic of the chain without the 
+need for a hard fork. A hard fork would require node operators to manually upgrade their nodes to the latest runtime 
+version. In a distributed system, this is a complex process to coordinate and communicate. 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  can upgrade without a hard fork. The existing runtime logic 
+is followed to update the Wasm runtime stored on the blockchain to a new version. The upgrade is then included in the blockchain 
+itself, meaning that all the nodes on the network execute it.
 
 Generally there is no need to upgrade your nodes manually before the runtime upgrade as they will
 automatically start to follow the new logic of the chain. Nodes only need to be updated when the
@@ -247,49 +269,63 @@ you don't think you can submit a transaction before the upgrade, it is better to
 it after the upgrade takes place.
 
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
-following the Polkadot releases and upgrading in a timely manner, especially for high priority or
+following the releases and upgrading in a timely manner, especially for high priority or
 critical releases.
 
 ## Smart Contracts
 
-The Polkadot Relay Chain does not support smart contracts.
+The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  Relay Chain does not support smart 
+contracts or customizable logic.
 
-## Other Networks
+## Networks
 
-Besides running a private network, Polkadot has two other networks where you could test
-infrastructure prior to deploying to the Polkadot mainnet.
+{{ polkadot: Besides running a private network, Polkadot has two other networks where you could test
+infrastructure prior to deploying to the Polkadot mainnet. :polkadot }}{{ kusama: Besides running a private network, 
+Kusama has two other networks where you can deploy infrastructure.
 
-**Kusama Canary Network:** Kusama is Polkadot's cutting-edge cousin. Many risky features are
-deployed to Kusama prior to making their way into Polkadot.
+{{ polkadot: **Kusama Canary Network:** Kusama is Polkadot's cutting-edge cousin. 
+Many risky features are deployed to Kusama prior to making their way into Polkadot. :polkadot }}
 
-**Westend Testnet:** Westend is Polkadot's testnet and uses the Polkadot runtime.
+{{ polkadot: **Westend Testnet:** Westend is Polkadot's testnet and uses the Polkadot runtime. :polkadot }}
+
+{{ kusama: **Westend Testnet:** Westend is Kusama's testnet and uses the Kusama runtime. :kusama }}
+
+{{ kusama: **Polkadot (mainnet):** Kusama is Polkadot's cutting-edge cousin. 
+Many risky features are deployed to Kusama prior to making their way into Polkadot. However, 
+when infrastructure is tested and verified, Polkadot provides a production ready platform for 
+deployment. :kusama }}
+
+Learn more about the [differences between Polkadot and Kusama](../learn/learn-kusama-vs-polkadot.md)
 
 ## Other F.A.Q.
 
 **Can an account's balance change without a corresponding, on-chain transaction?**
 
-No, but not all balance changes are in a _transaction,_ some are in _events._ You will need to run
+No, but not all balance changes are in a *transaction*, some are in *events*. You will need to run
 an archive node and listen for events and transactions to track all account activity. This
-especially applies to _locking_ operations if you are calculating balance as the spendable balance,
+especially applies to *locking* operations if you are calculating balance as the spendable balance,
 i.e. free balance minus the maximum lock.
 
 **What chain depth is considered "safe"?**
 
-Polkadot uses a deterministic finality mechanism. Once a block is finalized, it cannot be reverted
-except by a hard fork. Kusama has had hard forks that had to revert four finalized blocks in order
-to cancel a runtime upgrade. Using a finalized depth of ten blocks should be safe.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}  uses a deterministic finality mechanism. 
+Once a block is finalized, it cannot be reverted except by a hard fork. 
 
-Note that block production and finality are isolated processes in Polkadot, and the chain can have a
-long unfinalized head.
+>Kusama has had hard forks that had to revert four finalized blocks in order to cancel a runtime upgrade. 
+
+Using a finalized depth of ten blocks should be safe.
+
+Note that block production and finality are isolated processes in 
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} , and the chain can have a long unfinalized head.
 
 **Do users need to interact with any smart contracts?**
 
 No, users interact directly with the chain's logic.
 
-**Does Polkadot have state rent?**
+**Does the Relay Chain have state rent?**
 
-No, Polkadot uses the existential deposit to prevent dust accounts and other economic mechanisms
-like locking or reserving tokens for operations that utilize state.
+No, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses the existential deposit to prevent 
+dust accounts and other economic mechanisms like locking or reserving tokens for operations that utilize state.
 
 **What is an external source to see the current chain height?**
 
