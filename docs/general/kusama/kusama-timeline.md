@@ -53,8 +53,6 @@ what contributes to the much higher ratio of missed blocks on Kusama versus Polk
 
 ## Kusama's Current Adventure: Auctions
 
-### Round One
-
 Kusama promised chaos, and it delivered on that promise. On June 15th, 2021, the roll out of the
 first public parachain slot auction commenced, marking the beginning of the end to deliver on the
 last piece of core functionality outlined in the Polkadot whitepaper: purpose-built, interoperable
@@ -62,29 +60,11 @@ parachains.
 
 Teams and projects looking to become an official parachain on the Kusama network have been working
 hard to bring their technologies to life, many of whom started a
-[crowdloan campaign](../../learn/learn-crowdloans.md##starting-a-crowdloan-campaign) in order to participate in
-the slot auctions.
+[crowdloan campaign](../../learn/learn-crowdloans.md##starting-a-crowdloan-campaign) in order to participate 
+in the slot auctions.
 
-The five Kusama parachain winners for the first batch were: 
-Karura, Moonriver, Shiden, Khala, and Bifrost.
+Kusama has made history with the permissionless launch of several independent parachains, and continues to do 
+so with ongoing slot auction. As parachains become operational, the community will determine which additional features and network upgrades should be added over time.
 
-Kusama made history with a permissionless launch of five independent parachains. As parachains become operational, the community will determine which additional features and network upgrades should be added over time.
-
-### Round Two
-
-While Kusama’s first five parachains are taking advantage of the built-in features of the network and forkless upgradability provided by Substrate,
-
-chaos continues.
-
-And in the spirit of chaos, more teams are eager to deploy on Kusama.
-The launch of the second batch of parachain slot auctions officially went live in September 2021.
-Slot auctions occurred over six weeks, where the auctions were expanded by Kusama Council to include 
-six auctions instead of the original five. 
-
-There will be a pause for evaluation of overall network performance before a third batch of auctions begins 
-in a similar schedule.
-
-The six Kusama parachain winners for the second batch were: 
-KILT, Calamari, Basilisk, Altair, Parallel Heiko and ****
-
-The path of Kusama deployment will pave the way to Polkadot's parachains as the technology becomes proven.
+While Kusama’s current parachains are taking advantage of the built-in features of the network and forkless upgradability provided by Substrate, chaos continues, and in the spirit of chaos, more teams are eager to 
+deploy on Kusama. The path of Kusama deployment has paved the way to Polkadot's parachains as the technology became proven.
