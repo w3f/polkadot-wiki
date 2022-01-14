@@ -1,7 +1,7 @@
 ---
 id: maintain-guides-how-to-nominate-polkadot
-title: How to Nominate on Polkadot
-sidebar_label: How to Nominate on Polkadot
+title: Become a Nominator on Polkadot
+sidebar_label: Nominate
 description: Steps on how to nominate on Polkadot.
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
