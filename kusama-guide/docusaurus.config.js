@@ -72,10 +72,7 @@ module.exports = {
       {
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {
-            existingPath.replace('/docs/', '/docs/en/');
-          }
-          if (existingPath.startsWith('/en/latest/', '/en/')) {
-            existingPath.replace('/');
+            return [existingPath.replace('/docs/', '/docs/en/')];
           }
         },
       },
