@@ -70,25 +70,20 @@ module.exports = {
     ],
   ],
   plugins: [
-    "remark-docusaurus-tabs",
-    "@docusaurus/theme-live-codeblock",
+    'remark-docusaurus-tabs',
     [
-      "@docusaurus/plugin-client-redirects",
+      '@docusaurus/plugin-client-redirects',
       {
         redirects: [
           {
-            to: "/",
+            to: '/',
 
-            from: ["/en/latest", "/en/"],
+            from: ['/en/latest', '/en/'],
           },
         ],
         createRedirects: function (existingPath) {
-          if (existingPath.startsWith("/docs/")) {
-            return [
-              existingPath.replace("/docs/", "/docs/en/"),
-              existingPath.replace("/docs/", "/docs/zh-CN/"),
-              existingPath.replace("/docs/", "/docs/ru-RU/"),
-            ];
+          if (existingPath.startsWith('/docs/')) {
+            return [existingPath.replace('/docs/', '/docs/en/')];
           }
         },
       },
