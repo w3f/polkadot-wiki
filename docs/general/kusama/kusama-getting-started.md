@@ -8,15 +8,18 @@ slug: ../../kusama-getting-started
 
 ### Polkadot's Canary Network
 
-Kusama is a *canary network* for Polkadot; an early release of the code that is available first and
+Kusama is a *canary network* for Polkadot; an earlier release of the code that is available first and
 holds real economic value. For developers, Kusama is a proving ground for runtime upgrades, on-chain
 governance, and parachains.
 
 **No Promises**.
 
-Kusama is owned by those who hold the Kusama tokens (**KSM**). There's no central kill switch and
-all changes are made through the protocol's on-chain governance. Kusama is experimental. The network
-is a permissionless and anyone can come along and start using it.
+Kusama is owned by those who hold the Kusama tokens (KSM). There's no central kill switch and
+all changes are made through the protocol's on-chain governance. 
+
+Kusama is experimental. 
+
+The network is a permissionless and anyone can come along and start using it.
 Those who participated in the Polkadot sale can claim a proportional amount of KSM through
 the [Kusama Claims process][claims].
 
