@@ -6,17 +6,24 @@ description: Get started with Polkadot.
 slug: ../getting-started
 ---
 
-Welcome to the Polkadot Wiki! This central source of truth contains guides for interacting with the
-core functionality. Our wiki has three main sections: Learn (for learners), Build (for people that
-want to build on Polkadot), and Maintain (for people that want to maintain the network).
+Welcome to the Polkadot Wiki! 
+
+The Wiki serves as the central source of truth for Polkadot. 
+It is a community-focused initiative led by Web3 Foundation to keep an up-to-date resource on the 
+best information for learning, building, or maintaining on Polkadot.
+
+The Wiki has three main sections: Learn (for learners), Build (for people that want to build on Polkadot), 
+and Maintain (for people that want to maintain the network).
 
 ## What is Polkadot?
+
+Polkadot is the first fully-sharded blockchain.
 
 Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a
 secure, trust-free environment.
 
-Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less
-networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet
+Polkadot is built to connect and secure unique blockchains, whether they be public, permissionless
+networks, private consortium chains, or other Web3 technologies. It enables an internet
 where independent blockchains can exchange information under common security guarantees.
 
 Polkadot is a living network with the core pillars of governance and upgradability. The network has
@@ -27,34 +34,8 @@ growing needs without the risks of network forks.
 > If you haven't heard of Governance before, a great place to start is the
 > [Governance page](../learn/learn-governance.md)
 
-By connecting these dots, Polkadot serves as a foundational part of a decentralized web, where users
+By connecting these dots, Polkadot serves as a foundational layer of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
-
-### What can I do with my DOT?
-
-[DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for transaction 
-fees, staking, governance, acquisition of a parachain slot and for enabling several key functionalities 
-on Polkadot.
-
-- 1 DOT - minimum balance required to have an active account on Polkadot Network. If your account
-  balance drops below 1 DOT, your account will be reaped. Learn more about
-  [Existential Deposit](../build/build-protocol-info.md#existential-deposit)
-
-- 5 DOT - minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
-  for [parachain slot auctions](../learn/learn-auction.md)
-
-- 20 DOT - you can register an [on-chain identity](../learn/learn-identity.md) or vote for
-  [council](../maintain/maintain-guides-how-to-vote-councillor.md)
-
-- 120 DOT - you can nominate validators and earn staking rewards. Learn more on
-  [how to stake your DOT](../learn/learn-staking.md).
-
-DOT has a lot of utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md).
-Bonding DOT is a requirement to create proposals, to second them and to vote on them when they
-become referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a
-[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal.md). DOT can also enable
-you to participate in programs like
-[Thousand Validators Program](../general/thousand-validators.md#polkadot).
 
 ### Interact with Polkadot
 
@@ -174,6 +155,34 @@ you to participate in programs like
 
 <br />
 
+### What can I do with my DOT?
+
+[DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for transaction 
+fees, staking, governance, acquisition of a parachain slot and for enabling several key functionalities 
+on Polkadot.
+
+- **1 DOT**: the minimum balance required to have an active account on Polkadot Network. If your account
+  balance drops below 1 DOT, your account will be reaped. Learn more about [Accounts](../learn/learn-accounts.md)
+  and the [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
+
+- **5 DOT**: the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
+  for [parachain slot auctions](../learn/learn-auction.md).
+
+- **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md) or vote for
+  [council](../maintain/maintain-guides-how-to-vote-councillor.md).
+
+- **120 DOT**: you can nominate validators and earn staking rewards. Learn more on
+  [how to stake your DOT](../learn/learn-staking.md) and what it means to be a 
+  [nominator](../learn/learn-nominator.md).
+
+DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md).
+Bonding DOT is a requirement to create proposals, to second them and to vote on them when they
+become referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a
+[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal.md). DOT can also enable
+you to participate in programs like the
+[Thousand Validators Program](../general/thousand-validators.md#polkadot).
+
+
 ### Polkadot Gifts
 
 <img align="right" src="/img/polkadot-gift.png" width="210" height="200"/>
@@ -198,13 +207,13 @@ Web 1.0.
 As social media platforms and online businesses began to emerge, the internet transformed into the
 Web 2.0. This upgraded internet, which we still use today, features dynamic, interactive web pages,
 where users can read and write information plus publish their own for others to see. However, this
-version of the web comes with downsides, dealing with data control, privacy issues, and trust. This
-is where the Web 3.0 comes into the picture.
+version of the web comes with downsides, dealing with data control, privacy issues, and the consequences 
+of trust. This is where the WEB3 comes into the picture.
 
-The Web 3.0 is taking centralized applications and turning them into decentralized, trust-free
-protocols. The goal is to transform the internet into a decentralized web, where users control their
-own data and identity in a trust-free environment. The Web 3.0 movement aims to remove
-intermediaries and build a trustless infrastructure.
+The WEB3 is taking centralized infrastructure and applications and turning them into decentralized, 
+trust-free protocols. The goal is to transform the internet into a decentralized web, where users control 
+their own data and identity in a trust-free environment. The Web3 movement aims to remove
+intermediaries and build trustless infrastructure.
 
 > To learn more of the Web3 movement, check out this video from the
 > [Web3 Summit](https://youtu.be/l44z35vabvA)
@@ -246,7 +255,7 @@ Whether you're a blockchain developer or if you're interested in taking part of
 platform for everyone. This wiki offers a place for builders and maintainers to utilize
 [tools](../build/build-tools-index.md) and for brand-new learners to dive into educational material.
 
-# Getting Started
+## Where to start learning?
 
 For brand-new learners of Blockchain technology:
 
@@ -256,7 +265,7 @@ For brand-new learners of Blockchain technology:
 
 This is recommended for users with backgrounds of all levels, and the course is free!
 
-## Brand-New Polkadot learners:
+### Brand-New Polkadot learners:
 
 - [Polkadot's original white paper][white-paper] is a technical summary around one possible
   direction of implementing the Polkadot network. This paper uses rationale and technical details to
