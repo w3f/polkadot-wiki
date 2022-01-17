@@ -2096,14 +2096,29 @@
     "@types/node-fetch" "^2.5.12"
     node-fetch "^2.6.6"
 
-"@polkadot/x-global@8.3.1", "@polkadot/x-global@^8.3.1":
+"@polkadot/x-global@8.3.1":
   version "8.3.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-8.3.1.tgz#e8a93dcb594a2cffed30a2fe1df90995a2aab985"
   integrity sha512-bqqbF484jLqe4naPn7rtQJKgWRFtmg0UWIQ5U8qxh4IKZMPAfbMgVtv8+haH8Xf6pjurfSIOIjowySvc8UArVQ==
   dependencies:
     "@babel/runtime" "^7.16.7"
 
-"@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@8.3.1":
+"@polkadot/x-global@8.3.2", "@polkadot/x-global@^8.3.1":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-8.3.2.tgz#5d8800512b503ec755da5afceeabed9ab0047710"
+  integrity sha512-lIZZF33mr/BU4VZ6AB8JtMw6WAvhYW41WFXkegCM5EToyVYf59xb1ExtalyhpuDsxdNfITDxX6wBoH736ON5og==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+
+"@polkadot/x-randomvalues@*":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-8.3.2.tgz#fe0c932f440bfa9f9903e718d3a7950cb52b2574"
+  integrity sha512-RbKPHqNqSSe57yBzxkTIIjE1gG98sjr+l0EQpLtDzgxB9eYXsaGWbYrVbfDtAAo+H8xRoDPna7i/+JnlSONRIQ==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+    "@polkadot/x-global" "8.3.2"
+
+"@polkadot/x-randomvalues@8.3.1":
   version "8.3.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-8.3.1.tgz#a40ea594dad11566b9c0be9753fdad0f803888dd"
   integrity sha512-qIni71DMX1bNHuFqQ6C5dbGMB/E3QzmEUjYfvZv/Q8US5REQTVZuniMwtxM4LH4hrhQbRoNH6QyBxxvcwiTy4Q==
