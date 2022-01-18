@@ -16,6 +16,14 @@ to the tx pool for a block producer to include on-chain. The Relay Chain validat
 each parachain follows its unique rules and can pass messages between shards in a trust-free
 environment.
 
+With parachains now on the network, para-validators are selected every epoch to validate parachain 
+blocks for all parachains connected to the Relay Chain. Para-validators work in groups to 
+validate parachain blocks. 
+
+The selected para-validators are one of {{ polkadot: 297 :polkadot }}{{ kusama: 1000 :kusama }}
+validators randomly selected (per epoch) to participate in the validation, creating a validator pool 
+of 200 para-validators.
+
 Validators perform two functions:
 
 1. **Verifying** that the information contained in an assigned set of parachain blocks is valid
