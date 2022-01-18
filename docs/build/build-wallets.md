@@ -45,9 +45,6 @@ These are wallets which have been supported by either the Polkadot or Kusama Tre
 
 > **This third-party wallet was not funded by a Treasury Proposal and instead received a tip from the Treasury. Unlike a Treasury Proposal, tipping is a separate system that the council members individually participate in to collectively decide on the value of the tip. Learn more about tipping on the [Treasury Page](../learn/learn-treasury.md##tipping). 
 
-
-
-
 ## Encryption Enhancement
 
 Some newly generated `JSON` account files cannot be imported (restored) into older wallet software.
