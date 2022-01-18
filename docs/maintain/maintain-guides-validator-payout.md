@@ -31,7 +31,7 @@ from the average staking rewards.
 
 With parachains now on Polkadot, a large percentage of era points will come from parachain validation,
 as a subset of validators are selected to para-validate for all parachains each epoch, and those 
-para-validators can generate more era points as a result. Para validators are rewarded 20 era points 
+para-validators can generate more era points as a result. Para-validators are rewarded 20 era points 
 each for each parachain block that they validate.
 
 In this case, analyzing the *expected value* of staking rewards will paint a better picture
