@@ -25,20 +25,20 @@ nefarious power collators have is transaction censorship. To prevent censorship,
 needs to ensure that there exist some neutral collators - but not necessarily a majority. Theoretically,
 the censorship problem is solved with having just one honest collator.
 
-### XCM
+## XCM
 
 Collators are a key element of the
 [XCM (Cross-Consensus Message Passing Format)](learn-cross-consensus.md).
 By being full nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible
 for them to send messages from parachain A to parachain B.
 
-## Taking the case for one Parachain
+## Taking the Case for One Parachain
 
-A start of a new block candidate is initiated with a block creation time. The collator aggregates all new transactions at the end of the process. When doing so, the collator signs the _parachain block candidate_ and produces state transition proofs, which are a summary of the final account balances caused by the transactions in the candidate block. The collator relays the candidate block and state transition proofs to the validators
+A start of a new block candidate is initiated with a block creation time. The collator aggregates all new transactions at the end of the process. When doing so, the collator signs the *parachain block candidate* and produces state transition proofs, which are a summary of the final account balances caused by the transactions in the candidate block. The collator relays the candidate block and state transition proofs to the validators
 on-chain. The validators verify the transactions within the parachain block candidate. Upon verification, and if
 all is well, the validator shares the candidate block with the Relay Chain.
 
-Parachain block candidates are collected together and a _Relay Chain block candidate_ is produced.
+Parachain block candidates are collected together and a *Relay Chain block candidate* is produced.
 
 ![parachain candidate block diagram](../assets/polkadot-consensus-example-1.png)
 
