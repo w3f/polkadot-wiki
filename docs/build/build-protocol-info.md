@@ -2,7 +2,8 @@
 id: build-protocol-info
 title: Polkadot Protocol Information
 sidebar_label: Polkadot Protocol
-description: Characteristics about the Polkadot protocol, and what you need to consider when building.
+description:
+  Characteristics about the Polkadot protocol, and what you need to consider when building.
 slug: ../build-protocol-info
 ---
 
@@ -36,13 +37,17 @@ In Polkadot (and most Substrate chains), user accounts are identified by a 32-by
 `AccountId`.
 
 Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
-handle many different cryptographic schemes and chains. It has much in common with Bitcoin's Base58Check
-format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
+handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
+Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
-See the [SS58 page](https://docs.substrate.io/v3/advanced/ss58/)
-in the Substrate documentation for encoding information and a more comprehensive list of network prefixes.
+See the [SS58 page](https://docs.substrate.io/v3/advanced/ss58/) in the Substrate documentation for
+encoding information and a more comprehensive list of network prefixes.
 
-> **Warning:** Do not use regular expressions (regex) to validate addresses. Always verify using the prefix and checksum of the address. Substrate API Sidecar provides an `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided address. If you want to validate addresses in another way, see the [validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses)
+> **Warning:** Do not use regular expressions (regex) to validate addresses. Always verify using the
+> prefix and checksum of the address. Substrate API Sidecar provides an
+> `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
+> address. If you want to validate addresses in another way, see the
+> [validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses)
 
 Relevant SS58 prefixes for this guide:
 
@@ -52,8 +57,8 @@ Relevant SS58 prefixes for this guide:
 
 ### Cryptography
 
-Polkadot supports the following [cryptographic](../learn/learn-cryptography.md) key pairs and signing
-algorithms:
+Polkadot supports the following [cryptographic](../learn/learn-cryptography.md) key pairs and
+signing algorithms:
 
 - Ed25519
 - Sr25519 - Schnorr signatures on the Ristretto group
@@ -64,10 +69,10 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 ## Existential Deposit
 
-Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust accounts
-from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e. completely removed
-from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is 33.3333 microKSM
-(0.0000333333 KSM). You can always verify the existential deposit by checking the
+Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust
+accounts from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e.
+completely removed from storage and the nonce reset. Polkadot's ED is 1 DOT, while Kusama's is
+33.3333 microKSM (0.0000333333 KSM). You can always verify the existential deposit by checking the
 [chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
 `balances.existentialDeposit`.
 
@@ -81,12 +86,12 @@ pallet provides a `transfer_keep_alive` function that will return an error and a
 make the transfer if doing so would result in reaping the sender's account.
 
 > **Please be advised**: The existential deposit is a property of the Relay Chain. Your account on
-> the Relay Chain has no direct impact on parachains as you have seperate accounts on each parachain.
-> Still, parachains are able to define an existential deposit of their own, but this is seperate to 
-> that of the Relay Chain ED.
+> the Relay Chain has no direct impact on parachains as you have seperate accounts on each
+> parachain. Still, parachains are able to define an existential deposit of their own, but this is
+> seperate to that of the Relay Chain ED.
 
-> **Note**: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT and
-> 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
+> **Note**: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT
+> and 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
 > transfers on Statemint. Statemint integration is discussed in the next page of the guide.
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
@@ -227,17 +232,16 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them
 and interact directly with the chain data or implement your own codec, Polkadot encodes block and
-transaction data using the
-[SCALE codec](https://docs.substrate.io/v3/advanced/scale-codec/).
+transaction data using the [SCALE codec](https://docs.substrate.io/v3/advanced/scale-codec/).
 
 ## Runtime Upgrades
 
-[Runtime upgrades](../learn/learn-runtime-upgrades.md) allow Polkadot to change the
-logic of the chain without the need for a hard fork. A hard fork would require node operators to manually
-upgrade their nodes to the latest runtime version. In a distributed system, this is a complex process to
-coordinate and communicate. Polkadot can upgrade without a hard fork. The existing runtime logic is followed
-to update the Wasm runtime stored on the blockchain to a new version. The upgrade is then included in the
-blockchain itself, meaning that all the nodes on the network execute it.
+[Runtime upgrades](../learn/learn-runtime-upgrades.md) allow Polkadot to change the logic of the
+chain without the need for a hard fork. A hard fork would require node operators to manually upgrade
+their nodes to the latest runtime version. In a distributed system, this is a complex process to
+coordinate and communicate. Polkadot can upgrade without a hard fork. The existing runtime logic is
+followed to update the Wasm runtime stored on the blockchain to a new version. The upgrade is then
+included in the blockchain itself, meaning that all the nodes on the network execute it.
 
 Generally there is no need to upgrade your nodes manually before the runtime upgrade as they will
 automatically start to follow the new logic of the chain. Nodes only need to be updated when the
