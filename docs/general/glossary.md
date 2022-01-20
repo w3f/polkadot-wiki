@@ -467,6 +467,12 @@ Re-Genesis is the process of exporting the current chain state, and creating a n
 The chain that coordinates consensus and communication between parachains (and external chains, via
 bridges).
 
+## Remarks
+
+Remarks are extrinsics with no effect. They provide additional information to external inputs, acting 
+as *notes*. Remarks are stored alongside block records and do not change the chain's storage; the 
+information is not stored in the chain's trie, but along blocks. 
+
 ## Rococo
 
 The [testnet](##testnet) set aside for testing parachains, cumulus, and related technology.
