@@ -34,7 +34,7 @@ occurred at approximately 16:50 UTC on 21 Aug 2020.
 ## Addresses
 
 In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit)
-`AccountId`.
+`AccountId`. This is often, but not always, the public key of a cryptographic key pair.
 
 Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
 handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
@@ -47,7 +47,7 @@ encoding information and a more comprehensive list of network prefixes.
 > prefix and checksum of the address. Substrate API Sidecar provides an
 > `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
 > address. If you want to validate addresses in another way, see the
-> [validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses)
+> [validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses).
 
 Relevant SS58 prefixes for this guide:
 
