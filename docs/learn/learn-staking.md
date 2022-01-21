@@ -44,7 +44,7 @@ candidates that it supports. In the next era, a certain number of validators hav
 backing get elected and become active.
 
 There are no particular requirements to become a nominator, though we expect each nominator to
-carefully track the performance and reputation of the validators they back. Nominating is _not_ a
+carefully track the performance and reputation of the validators they back. Nominating is *not* a
 "set and forget" operation.
 
 Once the nomination period ends, the NPoS election mechanism takes the nominators and their
@@ -110,7 +110,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - There are no tips for any transactions processed.
 - They do NOT charge any commission fees.
 - Total reward amount is 100 DOT tokens.
-- The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual
+- The current minimum amount of DOT to be a validator is 350 (note that this is *not* the actual
   value, which fluctuates, but merely an assumption for purposes of this example; to understand how
   the actual minimal stake is calculated, see
   [here](../general/faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
@@ -141,9 +141,9 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards.
 
-In Polkadot and Kusama, this limit is currently {{ polkadot\_max\_nominators }}, although this can be
-modified via runtime upgrade. A validator with more than {{ polkadot\_max\_nominators }} nominators is
-*oversubscribed*. When payouts occur, only the top {{ polkadot\_max\_nominators }} nominators as
+In Polkadot and Kusama, this limit is currently {{ polkadot_max_nominators }}, although this can be
+modified via runtime upgrade. A validator with more than {{ polkadot_max_nominators }} nominators is
+*oversubscribed*. When payouts occur, only the top {{ polkadot_max_nominators }} nominators as
 measured by amount of stake allocated to that validator will receive rewards. All other nominators
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
