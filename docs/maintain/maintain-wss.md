@@ -47,7 +47,7 @@ To get WSS (secure websocket), you need an SSL certificate. There are two possib
 
 The first approach is getting a dedicated domain, redirecting its nameservers to your IP address,
 setting up an Nginx server for that domain, and finally
-[following LetsEncrypt instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)
+[following LetsEncrypt instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntubionic)
 for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx
 configuration. This will let you connect Polkadot-JS UI to a URL like mynode.mydomain.com rather
 than 82.196.8.192:9944, which is arguably more user friendly.
@@ -82,7 +82,7 @@ keep in mind that you need to replace some placeholder values. Notably:
   `/etc/ssl/certs/dhparam.pem` if self-signed.
 
 _Note that if you used Certbot, it should have made the path insertions below for you if you
-followed the [official instructions](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html)_
+followed the [official instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntubionic)_
 
 ```conf
 server {
