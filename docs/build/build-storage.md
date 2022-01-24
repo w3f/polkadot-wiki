@@ -21,9 +21,24 @@ location.
 This can be viewed as the shift from the centralized *location-centric* storage approach to the 
 decentralized *content-centric* approach.
 
+### Crust
+
+[Crust](https://crust.network) provides a Web3.0 decentralized storage network for the Metaverse. It is designed to realize core values of decentralization, privacy and assurance. Crust supports multiple storage-layer protocols such as IPFS, and exposes instant accessible on-chain storage functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.
+
+The Crust protocol is 100% compatible with [IPFS](https://ipfs.io) procotol, it matches people who have hard drive space to spare with those users that need to store data or host content.
+
+Crust builds on top of Substrate and provides a native cross-chain communnication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-crosschain) called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage). The basic idea of xStorage shows below:
+
+![xcmp-xstorage](../assets/build-3.png)
+
+Crust also supports the majority contract platforms, including Ethereum/Solana/Near/Elrond/... with [cross-chain solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
+
+> To learn more about Crust, check its [Decentralized Storage Market](https://wiki.crust.network/docs/en/DSM) and [Guaranteed Proof of Stake](https://wiki.crust.network/docs/en/GPoS)
+> Also, you can start with [Build-101](https://wiki.crust.network/docs/en/build101) to start integrating with Crust.
+
 ### IPFS (Interplanetary File System)
 
-[IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all 
+[IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all
 computing devices with the same system of files, by utilizing features such as content-addressing, 
 content-signing, and enhanced security methods through encryption. IPFS aims to address the current 
 hurdles of the HTTP-based Internet.
