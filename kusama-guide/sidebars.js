@@ -93,7 +93,6 @@ module.exports = {
       label: "What to Build",
       items: [
         "build/build-index",
-        "build/build-protocol-info",
         "maintain/maintain-endpoints",
         {
           type: "category",
