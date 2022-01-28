@@ -96,7 +96,7 @@ be found at the [`Runtime Storage Page`](https://docs.substrate.io/v3/runtime/st
 
 [Crust Network](https://crust.network) provides a Web3.0 decentralized storage network for the Metaverse. It is designed to realize core values of decentralization, privacy, and assurance. Crust supports multiple storage-layer protocols such as [IPFS](#ipfs-interplanetary-file-system), and exposes instant accessible on-chain storage functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.
 
-Crust provides a native cross-chain communnication communication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-crosschain), called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage). The basic idea of xStorage shows below:
+Crust provides a native cross-chain communnication communication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-crosschain), called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
 
 The protocol also supports most smart contract platforms, including Ethereum, with its [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
 
