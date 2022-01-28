@@ -105,7 +105,7 @@ prompt your ledger for confirmation when you initiate a transaction.
 
 Polkadot and Kusama accounts will show up in Statemint and Statemine respectively, even if they're not set to be used on all chains. What this means is that if you already have a Kusama Ledger account, that account will also be available on Statemine. But the opposite is not the case: an account created specifically on Statemine or Statemint won't show up on Kusama or Polkadot respectively. 
 
-**However**, as mentioned above, the Polkadot extension does not support Statemine Ledger accounts at the moment. So, if your Kusama account is in the Polkadot extension, you'll need to remove it from there and re-add it on Polkadot-JS UI directly **as a Kusama account**, as described [here](https://wiki.polkadot.network/docs/kusama-ledger#using-on-polkadot-js-apps-ui).
+**However**, as mentioned above, the Polkadot extension does not support Statemine Ledger accounts at the moment. So, if your Kusama account is in the Polkadot extension, you'll need to remove it from there and re-add it on Polkadot-JS UI directly **as a Kusama account**, as described [here](https://guide.kusama.network/docs/kusama-ledger#using-on-polkadot-js-apps-ui).
 
 To remove an account from the Polkadot extension:
 1. Open the extension
