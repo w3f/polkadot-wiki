@@ -6,7 +6,7 @@ description: Learn how to use Ledger with Statemine.
 slug: ../../kusama-statemine-ledger
 ---
 
-> **Please note**: Because of required WebUSB support, Ledger wallets currently only work on 
+> **Please note**: Because of required WebUSB support, Ledger wallets currently only work on
 > Chromium-based browsers like Brave, Chrome or Edge.
 
 Statemine has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
@@ -54,7 +54,14 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ## Using on Polkadot-JS Apps UI
 
+> **IMPORTANT** The Polkadot extension doesn't support Statemine Ledger accounts at this point, so
+> you need to add your account on Polkadot-JS UI as described below.
+
 ### Adding Your Account
+
+> **NOTE:** These instructions will guide you on how to add a Ledger account that's **only**
+> available on Statemine. If you want to use the same Ledger account on both Kusama **and**
+> Statemine check the instructions [below](#working-on-both-kusama-and-statemine).
 
 [Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
 device will work with the browser interface after installation. The functionality is currently gated
@@ -99,48 +106,32 @@ prompt your ledger for confirmation when you initiate a transaction.
 
 ### Working on both Kusama and Statemine
 
-The Statemine app uses the same derivation path as the Kusama app. This means that for the same 
-Account Type and Index it will generate the same address. To work with your Ledger on both Kusama 
-and Statemine, you have the following options.
+Polkadot and Kusama accounts from the
+[extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
+will show up in Statemint and Statemine respectively, even if they're not set to be used on all
+chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama respectively, 
+use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes sense to also be 
+available on their respective common good parachains. What this means is that if you already have a 
+Kusama Ledger account configured on the extension, that account will also be available on Statemine. 
+But the opposite is not the case: an account created specifically on Statemine or Statemint won't show up
+on Kusama or Polkadot respectively.
 
-#### 1. Use a combination of Polkadot-JS Apps UI and the Polkadot extension (recommended)
+**However**, as mentioned above, the
+[Polkadot extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
+does not support Statemine Ledger accounts at the moment, but the Polkadot-JS UI does. So, if your
+Kusama account is in the Polkadot extension, you'll need to remove it from there and re-add it on
+Polkadot-JS UI directly **as a Kusama account**, as described
+[here](https://guide.kusama.network/docs/kusama-ledger#using-on-polkadot-js-apps-ui). After that,
+you will be able to make transactions with that account.
 
-By default, when adding a Ledger account in the Polkadot-JS Apps UI it is available only on that 
-network. You can use the same account on Kusama and Statemine without issues if you add your Kusama 
-account in the Polkadot extension and the Statemine account in Polkadot-JS Apps UI directly, 
-as described above.
+To remove an account from the Polkadot extension:
 
-In this way the same account will be available on both chains, but not on others, and this is the 
-recommended approach.
+1. Open the extension
+2. Click on the three dots next to the account
+3. Select "Forget account".
 
-You can learn how to add an account in the Polkadot extension 
-[here](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
-
-#### 2. Allow the account on all chains
-
-Alternatively you can add the same account with the same Account Type and Index on both chains only 
-on Polkadot-JS Apps UI. However, by default, an account is available only on one chain. So, if you have 
-the same account on Kusama and add it on Statemine as well, the Kusama account will disappear. 
-
-And vice versa.
-
-In order to use the same account on Polkadot-JS Apps UI on both networks you need to disable the option 
-"only this network":
-
-![Screenshot 2021-12-22 at 1 32 59 PM](https://user-images.githubusercontent.com/45905709/147086614-01c59ced-2438-4f21-aa3c-d0f989ca3f6b.png)
-
-> **WARNING!!** Disabling the "only this network" option will make the account available 
-> **on all chains**. But be careful! You should **not use** this account on other chains besides 
-> Kusama and Statemine. Doing so will result in any funds being sent to it to **become inaccessible!!**
-
-#### 3. Use different accounts on each network
-
-Finally, the last option is to create different accounts on Kusama and Statemine. You can do that 
-by selecting different Account Type and Index combinations on each chain when you add the account.
-
-> **IMPORTANT:** Make sure to note which combination of Account Type and Index you selected when you 
-> add an account. You will need it if you ever need to restore this account. As a reminder you can add 
-> the combination in the account's name, for example "My Ledger account 1/1" for Account Type 1 and Index 1. 
+> **WARNING!** As mentioned above, a Polkadot Ledger account will also be available on Statemint.
+> **DO NOT** send funds to it! They'll be inaccessible until a Statemint Ledger app is released!
 
 ### Confirming the Address on your Device
 
@@ -166,9 +157,9 @@ balance arrow, it will show details of your balance such as locks or reserved am
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use [Polkadot-JS Apps UI][apps].
 
-> **Important**: Transferring in this way sends tokens to another account on the Statemine parachain.
-> If you need to transfer KSM between Statemine and Kusama, see the [Teleporting](#teleporting)
-> section below.
+> **Important**: Transferring in this way sends tokens to another account on the Statemine
+> parachain. If you need to transfer KSM between Statemine and Kusama, see the
+> [Teleporting](#teleporting) section below.
 
 - Click on the "Send" button next to your account.
 - In the second input, select one of the accounts from the drop-down menu or paste the address that
@@ -178,9 +169,9 @@ method is to use [Polkadot-JS Apps UI][apps].
 - Confirm the transaction on your device.
 - A green success notification will be displayed when the transaction is included in a block.
 
-> Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the *On* state, your
+> Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
 > account will be unable to make transactions which would get its balance below the existential
-> deposit. This prevents reaping of accounts with low balances. If you toggle this to *Off*, you
+> deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
 > will be able to go below existential deposit balance, causing your account to be deleted and any
 > dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
 > might be the reason.
@@ -215,20 +206,22 @@ account needs to be created first.
 
 To teleport KSM to the Relay Chain follow these steps:
 
-- Create an account outside your Ledger. Instructions can be found [here](../../learn/learn-account-generation.md).
+- Create an account outside your Ledger. Instructions can be found
+  [here](../../learn/learn-account-generation.md).
 - Transfer the desired amount as described [above](#sending-a-transfer). If you want to send exactly
   the amount you want to teleport, don't forget take into account the fees for teleporting that will
   be deducted in the next step.
-- Teleport your tokens following the instructions you will find [here](../../learn/learn-teleport.md).
+- Teleport your tokens following the instructions you will find
+  [here](../../learn/learn-teleport.md).
 
 Teleporting **to** a Ledger account from a non-Ledger account doesn't require these extra steps.
 
 ## Support
 
-If you need support, please visit the
-[Polkadot Support page](https://support.polkadot.network).
+If you need support, please visit the [Polkadot Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
-[apps]: https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
+[apps]:
+  https://cloudflare-ipfs.com/ipns/dotapps.io/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/explorer
 [prerelease instructions]: https://github.com/Zondax/ledger-statemine
 [releases page]: https://github.com/Zondax/ledger-statemine/releases
