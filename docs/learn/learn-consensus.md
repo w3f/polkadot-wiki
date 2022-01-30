@@ -93,7 +93,7 @@ specified [Casper FFG](#casper-ffg).
 
 BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
-Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments. BABE
+[Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain selection rule and slot time adjustments. BABE
 assigns block production slots to validators according to stake and using the Polkadot
 [randomness cycle](learn-randomness.md).
 
