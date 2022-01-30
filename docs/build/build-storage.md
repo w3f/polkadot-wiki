@@ -23,7 +23,7 @@ decentralized *content-centric* approach.
 
 ### IPFS (Interplanetary File System)
 
-[IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all 
+[IPFS](https://ipfs.io/) is a peer-to-peer distributed file system that seeks to connect all
 computing devices with the same system of files, by utilizing features such as content-addressing, 
 content-signing, and enhanced security methods through encryption. IPFS aims to address the current 
 hurdles of the HTTP-based Internet.
@@ -91,6 +91,17 @@ API that can be used to store a hash map with any arbitrary number of keys.
 
 These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can 
 be found at the [`Runtime Storage Page`](https://docs.substrate.io/v3/runtime/storage/) on Substrate Developer Hub.
+
+### Crust Storage
+
+[Crust Network](https://crust.network) provides a Web3.0 decentralized storage network for the Metaverse. It is designed to realize core values of decentralization, privacy, and assurance. Crust supports multiple storage-layer protocols such as [IPFS](#ipfs-interplanetary-file-system), and exposes instant accessible on-chain storage functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.
+
+Crust provides a native cross-chain communnication communication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-crosschain), called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
+
+The protocol also supports most smart contract platforms, including Ethereum, with its [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
+
+> To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en).
+> Try integrating with Crust by following their [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
 
 ### PolkadotJS Storage
 
