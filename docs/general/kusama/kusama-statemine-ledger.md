@@ -109,19 +109,19 @@ prompt your ledger for confirmation when you initiate a transaction.
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
 will show up in Statemint and Statemine respectively, even if they're not set to be used on all
-chains. The reasoning behind this is that Statemine, which is a common good parachain on Kusama uses
-KSM as its native token. Hence, the same accounts that were selected for Kusama will also be
-injected into Statemine. What this means is that if you already have a Kusama Ledger account
-configured on the extension, that account will also be available on Statemine. But the opposite is
-not the case: an account created specifically on Statemine or Statemint won't show up on Kusama or
-Polkadot respectively.
+chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama respectively, 
+use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes sense to also be 
+available on their respective common good parachains. What this means is that if you already have a 
+Kusama Ledger account configured on the extension, that account will also be available on Statemine. 
+But the opposite is not the case: an account created specifically on Statemine or Statemint won't show up
+on Kusama or Polkadot respectively.
 
 **However**, as mentioned above, the
 [Polkadot extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
 does not support Statemine Ledger accounts at the moment, but the Polkadot-JS UI does. So, if your
 Kusama account is in the Polkadot extension, you'll need to remove it from there and re-add it on
 Polkadot-JS UI directly **as a Kusama account**, as described
-[here](https://guide.kusama.network/docs/kusama-ledger#using-on-polkadot-js-apps-ui). After which,
+[here](https://guide.kusama.network/docs/kusama-ledger#using-on-polkadot-js-apps-ui). After that,
 you will be able to make transactions with that account.
 
 To remove an account from the Polkadot extension:
