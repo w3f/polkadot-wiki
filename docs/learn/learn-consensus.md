@@ -37,10 +37,18 @@ provable finality, and has no effective strategy in resisting cartels.
 
 ## Nominated Proof of Stake
 
-In traditional PoS systems, block production participation is dependent on token holdings as opposed to computational power. While PoS developers usually have a proponent for equitable participation in a decentralized manner, most projects end up proposing some level of centralized operation, where the number of validators with full participation rights is limited. These validators are often seen to be the most wealthy, and, as a result, influence the PoS network as they are the most staked. Usually, the number of candidates to maintain the network with the necessary knowledge (and equipment) is limited; this can directly increase operational costs as well. Systems with a large number of validators tend to form pools to decrease the variance of their revenue and profit from economies of scale. These pools are often off-chain.
+In traditional PoS systems, block production participation is dependent on token holdings as opposed
+to computational power. While PoS developers usually have a proponent for equitable participation in
+a decentralized manner, most projects end up proposing some level of centralized operation, where
+the number of validators with full participation rights is limited. These validators are often seen
+to be the most wealthy, and, as a result, influence the PoS network as they are the most staked.
+Usually, the number of candidates to maintain the network with the necessary knowledge (and
+equipment) is limited; this can directly increase operational costs as well. Systems with a large
+number of validators tend to form pools to decrease the variance of their revenue and profit from
+economies of scale. These pools are often off-chain.
 
-A way to alleviate this is to implement pool formation on-chain and allow token holders to vote [with
-their stake] for validators to represent them.
+A way to alleviate this is to implement pool formation on-chain and allow token holders to vote
+[with their stake] for validators to represent them.
 
 Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
 is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
@@ -93,9 +101,9 @@ specified [Casper FFG](#casper-ffg).
 
 BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
-Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments. BABE
-assigns block production slots to validators according to stake and using the Polkadot
-[randomness cycle](learn-randomness.md).
+[Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
+selection rule and slot time adjustments. BABE assigns block production slots to validators
+according to stake and using the Polkadot [randomness cycle](learn-randomness.md).
 
 Validators in Polkadot will participate in a lottery in every slot that will tell them whether or
 not they are the block producer candidate for that slot. Slots are discrete units of time, nominally
@@ -125,10 +133,10 @@ For more details on BABE, please see the
 ### BADASS BABE: SASSAFRAS
 
 SASSAFRAS (Semi Anonymous Sortition of Staked Assignees For Fixed-time Rhythmic Assignment of Slots)
-(aka SASSY BABE or BADASS BABE), is an extension of BABE and acts as a constant-time block production protocol.
-This approach tries to address the shortcomings of BABE by ensuring that exactly one
-block is produced with time-constant intervals. The protocol utilizes zk-SNARKs to construct a
-ring-VRF and is a work in progress. This section will be updated as progress ensues.
+(aka SASSY BABE or BADASS BABE), is an extension of BABE and acts as a constant-time block
+production protocol. This approach tries to address the shortcomings of BABE by ensuring that
+exactly one block is produced with time-constant intervals. The protocol utilizes zk-SNARKs to
+construct a ring-VRF and is a work in progress. This section will be updated as progress ensues.
 
 ## Finality Gadget: GRANDPA
 
