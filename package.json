@@ -76,7 +76,7 @@
     "@polkadot/util-crypto": "^8.2.2",
     "@polkadot/wasm-crypto": "^4.5.1",
     "@polkadot/x-randomvalues": "*",
-    "@types/react": "^17.0.38",
+    "@types/react": "^17.0.39",
     "ansi-html": "^0.0.7",
     "ansi-regex": "^6.0.1",
     "browserslist": "^4.19.1",
