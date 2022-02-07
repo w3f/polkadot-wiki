@@ -6825,10 +6825,10 @@ mock-socket@^9.1.2:
   resolved "https://registry.yarnpkg.com/mock-socket/-/mock-socket-9.1.2.tgz#cce6cf2193aada937ba41de3288c5c1922fbd571"
   integrity sha512-XKZkCnQ9ISOlTnaPg4LYYSMj7+6i78HyadYzLA5JM4465ibLdjappZD9Csnqc3Tfzep/eEK/LCJ29BTaLHoB1A==
 
-mr-pdf@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.7.tgz#dd697221746b5e47850c63ca516644f6d64190d8"
-  integrity sha512-kt0nBI/21IWe6J8sjlbdMYZcIetTU2odxe3i7+5dxY+mSnbocUfkhsRItOuveZMxcou0YD+d+JZXxIzFe8on9Q==
+mr-pdf@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.8.tgz#14be8f908a3c2a1a08cfc1c95f0f8bb83a0ae1cf"
+  integrity sha512-aP1vrtP+SrmNwjL9dNIpWsSlaPesON4G/8CFYkp+Yxazj9eCY6TzYvCkFpfL/u6xTaMaExPe6gb6L7KQReXVIA==
   dependencies:
     chalk "^3.0.0"
     commander "^4.1.1"
