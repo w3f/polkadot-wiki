@@ -173,7 +173,7 @@ feasible in your situation.
 
 ### Go to Polkadot-JS Apps
 
-Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the
+Navigate to [Polkadot-JS Apps](https://dotapps.io/) and click on "Accounts" underneath the
 Accounts tab. It is located in the navigation bar at the top of your screen.
 
 ![pjs-01](../assets/accounts/polkadot_js_01.png)
