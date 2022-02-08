@@ -356,7 +356,7 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 ## Origin
 
 The initiator of an extrinsic. A simple origin would be the account that is sending a token to
-another account. Polkadot also supports more complex origin types, such as the root origin, from
+another account. Polkadot also supports more complex origin types, such as the [root origin](##Root Origin), from
 which privileged functions can be called.
 
 ## Oversubscribed
@@ -476,6 +476,12 @@ information is not stored in the chain's trie, but along blocks.
 ## Rococo
 
 The [testnet](##testnet) set aside for testing parachains, cumulus, and related technology.
+
+## Root Origin
+
+A system-level origin in [Substrate](##Substrate). This is the highest privilege level and can be 
+thought of as the superuser of the runtime origin. To learn about more raw origins in Substrate, 
+visit [Substrate Docs](https://docs.substrate.io/v3/runtime/origins/)
 
 ## Runtime
 
