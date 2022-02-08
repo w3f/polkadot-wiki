@@ -479,8 +479,9 @@ The [testnet](##testnet) set aside for testing parachains, cumulus, and related 
 
 ## Root Origin
 
-A system-level origin in [Substrate](##Substrate). This is the highest privilege level and can be thought of as the superuser of the runtime origin.
-To learn about more raw origins in Substrate, visit [Substrate Docs](https://docs.substrate.io/v3/runtime/origins/)
+A system-level origin in [Substrate](##Substrate). This is the highest privilege level and can be 
+thought of as the superuser of the runtime origin. To learn about more raw origins in Substrate, 
+visit [Substrate Docs](https://docs.substrate.io/v3/runtime/origins/)
 
 ## Runtime
 
