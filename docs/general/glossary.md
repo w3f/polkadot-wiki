@@ -18,7 +18,7 @@ The fourth (now defunct) proof of concept (PoC-4) [testnet](##testnet) for Polka
 
 ## Attestation
 
-In the Polkadot validity system, an _attestation_ is a type of message that validators broadcast
+In the Polkadot validity system, an *attestation* is a type of message that validators broadcast
 that says whether they think a parachain candidate block is valid or invalid.
 
 ## Auction (Parachain)
@@ -194,7 +194,7 @@ The collection of Substrate-provided pallets (Substrate Runtime Modules).
 The origin of a blockchain, also known as block 0. It can also be used to reference the initial
 state of the blockchain at origination.
 
-> Example: "In the _genesis_ state Alice, Bob, and Charlie had 30 tokens each."
+> Example: "In the *genesis* state Alice, Bob, and Charlie had 30 tokens each."
 
 ## Governance
 
@@ -227,7 +227,7 @@ clients are following consensus rules incompatible to the ones followed by upgra
 
 Defined by Jae Kwon of Cosmos as "a new chain that takes into account state from an existing chain;
 not to compete, but to provide broad access." A non-contentious blockchain that inherits the state
-of the underlying blockchain and creates a new branch of _the same blockchain_.
+of the underlying blockchain and creates a new branch of *the same blockchain*.
 
 ## Horizontal Relay-routed Message Passing
 
@@ -297,13 +297,13 @@ Short for "main network": the fully functional and acting chain that runs its ow
 
 ## Message
 
-In Polkadot's XCMP protocol, a _message_ is arbitrary data that is sent from one parachain (the
+In Polkadot's XCMP protocol, a *message* is arbitrary data that is sent from one parachain (the
 egress chain) to another (the ingress chain) through a channel and ensured delivery by the validator
 set.
 
 ## Message Queue
 
-In Polkadot's XCMP protocol, a _message queue_ is the list of messages waiting to be processed by a
+In Polkadot's XCMP protocol, a *message queue* is the list of messages waiting to be processed by a
 particular receiving parachain over a channel.
 
 ## Metadata
@@ -356,8 +356,8 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 ## Origin
 
 The initiator of an extrinsic. A simple origin would be the account that is sending a token to
-another account. Polkadot also supports more complex origin types, such as the [root origin](##Root
-Origin), from which privileged functions can be called.
+another account. Polkadot also supports more complex origin types, such as the [root origin](##Root Origin), from
+which privileged functions can be called.
 
 ## Oversubscribed
 
@@ -460,11 +460,7 @@ and the amount of time they are willing to lock their tokens.
 
 ## Re-Genesis
 
-Re-Genesis is the process of exporting the current chain state, and creating a new chain that builds
-on it. Re-Genesis will involve stop-the-world migration, which results in a period of time when no
-actual blocks are added to the blockchain. In a way, re-genesis can be viewed as a hard fork
-process. A formal design of Re-Genesis on Substrate is still under development -
-[Re-Genesis Rationale and Design](https://github.com/paritytech/substrate/issues/7458).
+Re-Genesis is the process of exporting the current chain state, and creating a new chain that builds on it. Re-Genesis will involve stop-the-world migration, which results in a period of time when no actual blocks are added to the blockchain. In a way, re-genesis can be viewed as a hard fork process. A formal design of Re-Genesis on Substrate is still under development - [Re-Genesis Rationale and Design](https://github.com/paritytech/substrate/issues/7458).
 
 ## Relay Chain
 
@@ -473,9 +469,9 @@ bridges).
 
 ## Remarks
 
-Remarks are extrinsics with no effect. They provide additional information to external inputs,
-acting as _notes_. Remarks are stored alongside block records and do not change the chain's storage;
-the information is not stored in the chain's trie, but along blocks.
+Remarks are extrinsics with no effect. They provide additional information to external inputs, acting 
+as *notes*. Remarks are stored alongside block records and do not change the chain's storage; the 
+information is not stored in the chain's trie, but along blocks. 
 
 ## Rococo
 
@@ -483,9 +479,8 @@ The [testnet](##testnet) set aside for testing parachains, cumulus, and related 
 
 ## Root Origin
 
-A system level [origin](##Origin) in [Substrate](##Substrate). This is the highest privilege level
-and can be thought of as the superuser of the runtime origin. To learn about more raw origins in
-Substrate, visit [Substrate Docs](https://docs.substrate.io/v3/runtime/origins/)
+A system level origin in [Substrate](##Substrate). This is the highest privilege level and can be thought of as the superuser of the runtime origin.
+To learn about more raw origins in Substrate, visit [Substrate Docs](https://docs.substrate.io/v3/runtime/origins/)
 
 ## Runtime
 
@@ -501,7 +496,7 @@ deal with accounts and balances. In Substrate, modules are called "pallets".
 ## Safety
 
 The property of a distributed system indicating that a particular state transition will not be
-reverted. [GRANDPA](##grandpa-finality-gadget) provides _deterministic_ safety. That is, for a state
+reverted. [GRANDPA](##grandpa-finality-gadget) provides *deterministic* safety. That is, for a state
 changed marked as "safe" or "final", one would require a hard fork to revert that change.
 
 ## Scalability
@@ -639,7 +634,7 @@ The abbreviation for [WebAssembly](##webassembly).
 
 ## Watermark
 
-In Polkadot's parachain messaging scheme, the _watermark_ is the minimum processed send-height of
+In Polkadot's parachain messaging scheme, the *watermark* is the minimum processed send-height of
 the receiving parachain. All messages on all channels that are sending to this parachain at or
 before the watermark are guaranteed to be processed.
 
