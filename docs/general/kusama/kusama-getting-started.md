@@ -31,7 +31,7 @@ the [Kusama Claims process][claims].
 
 <tr class="cards-container">
   <td>
-    <a class="guide-link" href="../docs/learn-account-generation">
+    <a class="guide-link" href="../learn-account-generation">
       <img src="/img/kusama-guide/Account.png" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Creating an Account</h5>
@@ -39,7 +39,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-balance-transfers">
+    <a class="guide-link" href="../learn-balance-transfers">
       <img src="/img/kusama-guide/Transfer.png" alt="Drawing" width="250" height="150"/>
         <div class="cards-body">
             <h5 class="cards-title">Balance Transfers</h5>
@@ -47,7 +47,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-staking">
+    <a class="guide-link" href="../learn-staking">
       <img class="guide-image" src="/img/kusama-guide/Stake.png" alt="Drawing" width="250" height="150" />
               <div class="cards-body">
                   <h5 class="cards-title">Staking</h5>
@@ -60,7 +60,7 @@ the [Kusama Claims process][claims].
 
 <tr class="cards-container">
   <td>
-    <a class="guide-link" href="../docs/learn-parachains">  
+    <a class="guide-link" href="../learn-parachains">  
       <img class="guide-image" src="/img/kusama-guide/Parachain.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Parachains</h5>
@@ -68,7 +68,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-bridges">  
+    <a class="guide-link" href="../learn-bridges">  
       <img class="guide-image" src="/img/kusama-guide/Bridges.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Bridges</h5>
@@ -76,7 +76,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-vote-councillor">
+    <a class="guide-link" href="../maintain-guides-how-to-vote-councillor">
       <img class="guide-image" src="/img/kusama-guide/Voting.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Vote for Councilors</h5>
@@ -89,7 +89,7 @@ the [Kusama Claims process][claims].
 
 <tr class="cards-container">
   <td>
-  <a class="guide-link" href="../docs/learn-treasury#creating-the-proposal">
+  <a class="guide-link" href="../learn-treasury#creating-the-proposal">
     <img class="guide-image" src="/img/kusama-guide/Proposal.png" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
                 <h5 class="cards-title">Make Proposals</h5>
@@ -97,7 +97,7 @@ the [Kusama Claims process][claims].
   </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-join-council#submit-candidacy">  
+    <a class="guide-link" href="../maintain-guides-how-to-join-council#submit-candidacy">  
       <img class="guide-image" src="/img/kusama-guide/Council.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Council Candidacy</h5>
@@ -105,7 +105,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-treasury">  
+    <a class="guide-link" href="../learn-treasury">  
       <img class="guide-image" src="/img/kusama-guide/Treasury.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Treasury</h5>
@@ -118,7 +118,7 @@ the [Kusama Claims process][claims].
 
 <tr class="cards-container">
   <td>
-    <a class="guide-link" href="../docs/learn-identity">
+    <a class="guide-link" href="../learn-identity">
       <img class="guide-image" src="/img/kusama-guide/Identity.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                  <h5 class="cards-title">Set an Identity</h5>
@@ -126,7 +126,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/maintain-guides-how-to-nominate-kusama">
+    <a class="guide-link" href="../maintain-guides-how-to-nominate-kusama">
       <img class="guide-image" src="/img/kusama-guide/Nominate.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                  <h5 class="cards-title">Become a Nominator</h5>
@@ -134,7 +134,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/learn-proxies">
+    <a class="guide-link" href="../learn-proxies">
       <img class="guide-image" src="/img/kusama-guide/Proxy.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Proxy Accounts</h5>
@@ -147,7 +147,7 @@ the [Kusama Claims process][claims].
 
 <tr class="cards-container">
   <td>
-    <a class="guide-link" href="../docs/learn-crowdloans/">
+    <a class="guide-link" href="../learn-crowdloans/">
       <img class="guide-image" src="/img/kusama-guide/Crowdloans.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Participate in Crowdloans</h5>
@@ -155,7 +155,7 @@ the [Kusama Claims process][claims].
     </a>
   </td>
   <td>
-  <a class="guide-link" href="../docs/maintain-guides-society-kusama">  
+  <a class="guide-link" href="../maintain-guides-society-kusama">  
     <img class="guide-image" src="/img/kusama-guide/Kusama-Society.png" alt="Drawing" width="250" height="150"/>
             <div class="cards-body">
                 <h5 class="cards-title">Join Kappa Sigma Mu</h5>
@@ -163,7 +163,7 @@ the [Kusama Claims process][claims].
   </a>
   </td>
   <td>
-    <a class="guide-link" href="../docs/ambassadors">  
+    <a class="guide-link" href="../ambassadors">  
       <img class="guide-image" src="/img/kusama-guide/Ambassadors.png" alt="Drawing" width="250" height="150"/>
               <div class="cards-body">
                   <h5 class="cards-title">Become an Ambassador</h5>
