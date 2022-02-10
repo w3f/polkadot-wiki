@@ -1,3 +1,5 @@
+
+
 ---
 id: learn-staking
 title: Staking
@@ -297,18 +299,24 @@ available [here](../maintain/maintain-guides-secure-validator.md).
 
 Here are three examples of unresponsiveness. Assume that there are 100 validators in the active set.
 
-The first example takes into account a unresponsiveness of < 10%, resulting in 0% slashing.
-
 If 1 validator is unresponsiveness, the unresponsiveness validator would be slashed at a fraction of 
-min((3 * (1 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to a 0% slash.
+min((3 * (1 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to no slash.
 
-If 14 validator are unresponsiveness, the unresponsiveness is > 10% and grows linearly by 7%. 
-The validators would be slashed at a fraction of min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 which 
-comes out to around a 1% slash.
+> The first example takes into account a unresponsiveness of < 10%, resulting in no slash.
 
-If 60 validators are unresponsiveness, the unresponsiveness of validators is > 1/3 of the all 
+If 14 validator are unresponsiveness, the unresponsiveness is > 10%. The validators would be slashed 
+at a fraction of min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to around a 0.06% 
+slash.
+
+> The second example takes into account a unresponsiveness of > 10%, and should expect the slash to
+> grow linearly by 7%.
+
+If 33 validators are unresponsiveness, the unresponsiveness of validators is >= 1/3 of the all 
 validators in the active set. The validators would be slashed at a fraction of 
-min((3 * (60 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to around 10.7% slash.
+min((3 * (33 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to around 5% slash.
+
+> The third example takes into account a unresponsiveness of 1/3 of the validators in the active set,
+> and should expect a slash of around 5%.
 
 ### Equivocation
 
