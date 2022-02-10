@@ -1,5 +1,3 @@
-
-
 ---
 id: learn-staking
 title: Staking
