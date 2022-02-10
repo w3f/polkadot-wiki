@@ -68,8 +68,8 @@ likely be approved by the network stakeholders only in rare scenarios.
 
 Statemint is a public utility chain in that it adds functionality not available in the Relay Chain, 
 namely, the creation and management of assets. Statemint will support both fungible and non-fungible 
-assets. The chain offers an interface similar to ERC-20 for fungible assets and ERC-721 for non-fungible 
-assets. These interfaces are in the logic of the chain itself; by encoding this logic directly into the 
+assets. The chain offers an interface similar to ERC-20 for fungible tokens and ERC-721 for non-fungible 
+token. These interfaces are in the logic of the chain itself; by encoding this logic directly into the 
 Statemint runtime, token storage, and actions do not need to be metered and can happen faster and cheaper.
 
 Like most common good chains, Statemint will use the DOT token as its native token, i.e. represented
@@ -100,17 +100,18 @@ where money is issued at the bottom, and not as credit to businesses or creditwo
 every individual gets a [universal basic income (UBI)](https://book.encointer.org/economics-ubi.html).
 
 To resist Sybil attacks, the Encointer protocol uses a PoP mechanism to foster a 
-unique identity system. The notion is that a person can only be in one place at one time. 
+unique identity system. The notion is that a person can only be present at one place at a given time. 
 Participants are requested to attend physical key-signing ceremonies with small groups of random people 
 at randomized locations, where these local meetings are part of one global ceremony that co-occur. 
 Participants use the Encointer wallet app to participate in these ceremonies, and the wallet enables the 
-management of local community currencies.
+management of local community currencies. Watch an Encointer ceremony in action in 
+[this video](https://www.youtube.com/watch?v=tcgpCCYBqko).
 
 The protocol involves [other mechanisms](https://book.encointer.org/ssi.html#privacy-considerations) to 
 protect the privacy of users in addition to the physical key-signing ceremonies.
 
-Encointer falls under common good logic as it offers a sybil defense mechanism and a basis for digital 
-democracy. This can also be adapted by system level chains who can use the unique identity system to 
+Encointer falls under common good logic as it offers a Sybil defense mechanism and a basis for digital 
+democracy. This can also be adapted by system level chains which can use the unique identity system to 
 prevent Sybil attacks, and use PoP for token airdrops or faucets.
 
 > Encointer is currently in testnet phase, and its mainnet is planned for launch as a common good parachain 
