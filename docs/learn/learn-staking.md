@@ -287,7 +287,7 @@ Here is the formula for calculation:
 
     Let x = offenders, n = total no. validators in the active set
 
-    0.05 * min((3 * (x - 1))) / n, 1)
+    min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
 Validators should have a well-architected network infrastructure to ensure the node is running to
 reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with 
@@ -295,9 +295,20 @@ backup nodes that kick in **only once the original node is verifiably offline** 
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
 
-Here is an example of unresponsiveness. If there are 100 validators in the active set, 
-and 1 validator is unresponsiveness, the unresponsiveness validator would be slashed at a fraction of 
-0.05 * min((3 * (x - 1))) / n, 1) which comes out to a 5% slash.
+Here are three examples of unresponsiveness. Assume that there are 100 validators in the active set.
+
+The first example takes into account a unresponsiveness of < 10%, resulting in 0% slashing.
+
+If 1 validator is unresponsiveness, the unresponsiveness validator would be slashed at a fraction of 
+min((3 * (1 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to a 0% slash.
+
+If 14 validator are unresponsiveness, the unresponsiveness is > 10% and grows linearly by 7%. 
+The validators would be slashed at a fraction of min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 which 
+comes out to around a 1% slash.
+
+If 60 validators are unresponsiveness, the unresponsiveness of validators is > 1/3 of the all 
+validators in the active set. The validators would be slashed at a fraction of 
+min((3 * (60 - (100 / 10 + 1))) / 100, 1) * 0.07 which comes out to around 10.7% slash.
 
 ### Equivocation
 
