@@ -24,23 +24,29 @@ designed the Polkadot fee system with the following objectives:
 
 Fees on the Polkadot Relay Chain are calculated based on three parameters:
 
-- A per-byte fee (also known as the "length fee").
-- A weight fee.
+- A weight fee
+- A length fee
 - A tip (optional).
 
-The length fee is the product of a constant per-byte fee and the size of the transaction in bytes.
-
-Weights are a fixed number designed to manage the time it takes to validate a block. Each
+Weights are a fixed number designed to manage the time to validate a block. Each
 transaction has a base weight that accounts for the overhead of inclusion (e.g. signature
-verification) as well as a dispatch weight that accounts for the time to execute the transaction.
-The total weight is multiplied by a per-weight fee to calculate the transaction's weight fee.
+verification) and a dispatch weight that accounts for the weight of a transaction 
+(the time to execute the transaction). The weights in the runtime are converted to a fee.
 
-Tips are an optional transaction fee that users can add to give a transaction higher priority.
+The weight fee is the sum of the base weight + sum of the total weight consumed by call(s).
 
-Together, these three fees constitute the inclusion fee. This fee is deducted from the sender's
-account prior to transaction execution. A portion of the fee will go to the block producer and the
-remainder will go to the [Treasury](learn-treasury.md). At Polkadot's genesis, this is set to 20%
-and 80%, respectively.
+The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
+
+Together, these fees constitute the inclusion fee. 
+The inclusion fee is the base fee + length fee + adjusted weight fee.
+
+This is the minimum a user pays for a transaction. The inclusion fee is deducted from the sender's 
+account before transaction execution. A portion of the fee will go to the block author, and the 
+remainder will go to the [Treasury](learn-treasury.md). This is 20% and 80%, respectively.
+
+Tips are an optional transaction fee that users can add. Tips are not part of the inclusion fee and are 
+included on top of the inclusion fee, only for signed transactions. The entire tip goes directly to the 
+block author.
 
 ## Block Limits and Transaction Priority
 
