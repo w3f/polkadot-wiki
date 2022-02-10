@@ -321,9 +321,9 @@ validator. The penalty would be Min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% sla
 validator pool (i.e., all stake held by the validator and its nominators).
 
 Now assume that there is a group running several validators, and all of them have an issue in the
-same slot. The penalty would be Min((3 _ 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
+same slot. The penalty would be Min((3 \_ 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
 equivocate, this is a much more serious offence and possibly indicates a coordinated attack on the
-network, and so the slash will be much greater - Min((3 _ 20 / 100)^2, 1) = 0.36, or a 36% slash on
+network, and so the slash will be much greater - Min((3 \_ 20 / 100)^2, 1) = 0.36, or a 36% slash on
 all of these validators and their nominators. All slashed validators will also be chilled.
 
 From the example above, the risk in nominating or running many validators in the active set are
