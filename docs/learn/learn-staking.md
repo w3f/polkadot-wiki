@@ -280,11 +280,11 @@ Let's look at these offences in a bit more detail.
 
 For every session, validators will send an "I'm online" heartbeat to indicate they are live. If a
 validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
-unresponsive. Depending on the repeated offences and how many other validators were unresponsive or
-offline during the epoch, slashing may occur.
+unresponsive. Slashing may occur depending on the repeated offences and how many other validators were 
+unresponsive or offline during the epoch.
 
-Validators should have a well-architected network infrastructure to ensure the node is running to
-reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with 
+Validators should have a well-architected network infrastructure to ensure the node runs to
+reduce the risk of slashing or chilling. A high availability setup is desirable, preferably with 
 backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
@@ -295,23 +295,24 @@ Here is the formula for calculating slashing due to unresponsiveness:
 
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
-A few examples are provided below demonstrate how slashing is calculated using this expression. 
+The examples demonstrate how to calculate the slashing penalty for unresponsiveness. 
 
 > In all of the examples, assume that there are 100 validators in the active set.
 
-If < 10% of all validators are offline, no slashing would be enacted. 
+No slashing would enact if < 10% of all validators are unresponsive. 
 
 For example, if exactly 10 validators were unresponsive, the expression 3 * (x - (n / 10 + 1))) / n
 would be 3 * (10 - (100 / 10 + 1)) / 100 = 3 * (10 - (10 + 1)) / 100 = -0.03 which is rounded to 0.
 
 > The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0. 
 
-If 14 validators are unresponsive, then slashing would happen occur, as > 10% of validators are unresponsive. 
+If 14 validators are unresponsive, then slashing would occur, as > 10% of validators are unresponsive. 
 
 The slashing penalty would be 
 min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 = min((3 * (14 - 11))/100, 1) * 0.07 = min(0.09, 1) * 0.07 = 0.6%
 
-Similarly, if one-third of the validator set (around 33/100) are unresponsive, the slashing penalty would be around 5%.
+Similarly, if one-third of the validator set (around 33/100) are unresponsive, the slashing penalty would be 
+about 5%.
 
 The maximum slashing that can occur due to unresponsiveness is 7%. After around 45% of the validators go offline, 
 the expression 3 * (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07 
