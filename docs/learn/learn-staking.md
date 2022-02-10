@@ -289,16 +289,22 @@ Here is the formula for calculation:
 
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
-Let us run through a few examples to understand this equation. In all of the examples, assume that
-there are 100 validators in the active set.
-
-Note that if less than 10% of all validators are offline, no penalty is enacted.
+Validators should have a well-architected network infrastructure to ensure the node is running to
+reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with backup
+nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
+and being slashed for equivocation - see below). A comprehensive guide on validator setup is
+available [here](../maintain/maintain-guides-secure-validator.md).
 
 Validators should have a well-architected network infrastructure to ensure the node is running to
 reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with backup
 nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
+
+Let us run through a few examples to understand this equation. In all of the examples, assume that
+there are 100 validators in the active set.
+
+> Note that if less than 10% of all validators are offline, no penalty is enacted.
 
 ### GRANDPA Equivocation
 
