@@ -289,26 +289,33 @@ backup nodes that kick in **only once the original node is verifiably offline** 
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
 
-Here is the formula for calculating Slashing due to unresponsiveness:
+Here is the formula for calculating slashing due to unresponsiveness:
 
     Let x = offenders, n = total no. validators in the active set
 
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
-Let us run through a few examples to understand this equation. In all of the examples, assume that 
-there are 100 validators in the active set.
+A few examples are provided below demonstrate how slashing is calculated using this expression. 
 
-Due to the expression 3 * (x - (n / 10 + 1))) / n in the equation, you could say if less than around 10% of all validators are offline, 
-no slashing would be enacted. Let's see why! If 10 validators out of 100 went offline, the expression 3 * (x - (n / 10 + 1))) / n
-would be 3*(10 - (100/10 + 1))/100 = 3*(10 - (10 + 1))/100 = -0.03 which is rounded to 0. The minimum value between 0 and 1 is 0.
-0 multipled by 0.07 is 0. 
+> In all of the examples, assume that there are 100 validators in the active set.
 
-If 14 validators are unresponsive, then slashing would happen! Let's calculate the percentage of the slashing penalty through the equation.
-min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 = min((3 * (14 - 11))/100, 1) * 0.07 = min(0.09, 1) * 0.07 = 0.0063 which comes out to be 
-around a 0.6%. Similarly, if one-third of the validator set (around 33) goes offline, the the slashing applied would be around 5%.
+If < 10% of all validators are offline, no slashing would be enacted. 
 
-The maximum slashing that can be applied dues to unresponsiveness is 7%. After around 45% of the validators go offline, the the expression 
-3 * (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07 will be ceiled to 7%.
+For example, if exactly 10 validators were unresponsive, the expression 3 * (x - (n / 10 + 1))) / n
+would be 3 * (10 - (100 / 10 + 1)) / 100 = 3 * (10 - (10 + 1)) / 100 = -0.03 which is rounded to 0.
+
+> The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0. 
+
+If 14 validators are unresponsive, then slashing would happen occur, as > 10% of validators are unresponsive. 
+
+The slashing penalty would be 
+min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 = min((3 * (14 - 11))/100, 1) * 0.07 = min(0.09, 1) * 0.07 = 0.6%
+
+Similarly, if one-third of the validator set (around 33/100) are unresponsive, the slashing penalty would be around 5%.
+
+The maximum slashing that can occur due to unresponsiveness is 7%. After around 45% of the validators go offline, 
+the expression 3 * (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07 
+will be ceiled to 7%.
 
 ### Equivocation
 
