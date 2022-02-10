@@ -185,7 +185,7 @@ should never use any account key for a "hot" session key in particular.
 Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
 Polkadot and the cryptography behind it [see here](learn-keys.md).
 
-## Validators and nominators
+## Validators and Nominators
 
 Since validator slots are limited, most of those who wish to stake their DOT and contribute economic
 security to the network will be nominators.
@@ -278,7 +278,7 @@ Let's look at these offences in a bit more detail.
 
 ### Unresponsiveness
 
-For every session, validators will send an "I'm Online" heartbeat to indicate they are online. If a
+For every session, validators will send an "I'm online" heartbeat to indicate they are live. If a
 validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
 unresponsive. Depending on the repeated offences and how many other validators were unresponsive or
 offline during the epoch, slashing may occur.
@@ -287,49 +287,40 @@ Here is the formula for calculation:
 
     Let x = offenders, n = total no. validators in the active set
 
-    min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
+    0.05 * min((3 * (x - 1))) / n, 1)
 
 Validators should have a well-architected network infrastructure to ensure the node is running to
-reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with backup
-nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
+reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with 
+backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
 
-Validators should have a well-architected network infrastructure to ensure the node is running to
-reduce the risk of being slashed or chilled. A high availability setup is desirable, preferably with backup
-nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
-and being slashed for equivocation - see below). A comprehensive guide on validator setup is
-available [here](../maintain/maintain-guides-secure-validator.md).
+Here is an example of unresponsiveness. If there are 100 validators in the active set, 
+and 1 validator is unresponsiveness, the unresponsiveness validator would be slashed at a fraction of 
+0.05 * min((3 * (x - 1))) / n, 1) which comes out to a 5% slash.
 
-Let us run through a few examples to understand this equation. In all of the examples, assume that
-there are 100 validators in the active set.
+### Equivocation
 
-> Note that if less than 10% of all validators are offline, no penalty is enacted.
+**GRANDPA Equivocation**: A validator signs two or more votes in the same round on different chains.
 
-### GRANDPA Equivocation
-
-A validator signs two or more votes in the same round on different chains.
-
-### BABE Equivocation
-
-A validator produces two or more blocks on the Relay Chain in the same time slot.
+**BABE Equivocation**: A validator produces two or more blocks on the Relay Chain in the same time slot.
 
 Both GRANDPA and BABE equivocation use the same formula for calculating the slashing penalty:
 
     Let x = offenders, n = total no. validators in active set
 
-    Min( (3 * x / n )^2, 1)
+    min( (3 * x / n )^2, 1)
 
 As an example, assume that there are 100 validators in the active set, and one of them equivocates
 in a slot (for our purposes, it does not matter whether it was a BABE or GRANDPA equivocation). This
 is unlikely to be an attack on the network, but much more likely to be a misconfiguration of a
-validator. The penalty would be Min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% slash for that
+validator. The penalty would be min(3 \* 1 / 100)^2, 1) = 0.0009, or a 0.09% slash for that
 validator pool (i.e., all stake held by the validator and its nominators).
 
 Now assume that there is a group running several validators, and all of them have an issue in the
-same slot. The penalty would be Min((3 \_ 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
+same slot. The penalty would be min((3 \* 5 / 100)^2, 1) = 0.0225, or a 2.25% slash. If 20 validators
 equivocate, this is a much more serious offence and possibly indicates a coordinated attack on the
-network, and so the slash will be much greater - Min((3 \_ 20 / 100)^2, 1) = 0.36, or a 36% slash on
+network, and so the slash will be much greater - min((3 \* 20 / 100)^2, 1) = 0.36, or a 36% slash on
 all of these validators and their nominators. All slashed validators will also be chilled.
 
 From the example above, the risk in nominating or running many validators in the active set are
