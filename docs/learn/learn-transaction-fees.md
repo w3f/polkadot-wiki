@@ -48,7 +48,6 @@ call(s).
 
 To learn more about the motivation of a weight fee, check out this 
 [Substrate doc](https://docs.substrate.io/v3/concepts/weight/) on weights.
-The base fee is the minimum a user pays for a transaction. 
 
 The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
 
