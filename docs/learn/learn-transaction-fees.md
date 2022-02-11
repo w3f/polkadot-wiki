@@ -41,6 +41,10 @@ The base fee is the minimum a user pays for a transaction.
 
 The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
 
+There is also a targeted fee adjustment that serves as a multiplier which can tune the final fee
+based on network congestion. This can constitute an adjusted weight fee which is the 
+targeted fee adjustment \* weight fee.
+
 Together, these fees constitute the inclusion fee. 
 The inclusion fee is the base fee + length fee + adjusted weight fee.
 
