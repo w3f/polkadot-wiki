@@ -70,15 +70,17 @@ As most of these parameters can be updated via on-chain governance, please check
 
 ### Parachains
 
-| Crowdloans and Auctions  | Time    | Amount                     | Description                                                                      |
-| ------------------------ | ------  | -------------------------- | -------------------------------------------------------------------------------- |
-| Minimum contribution     | 7 days  | 5 DOTs                     | The minimum token allocation required to participate in a loan.                  |
-| Auction duration         | 7 days  | Subject to token economics | The total duration of the slot auction, subject to the candle auction mechanism. |
+| Crowdloans and Auctions  | Time    | Slots   | Description                                                                      |
+| ------------------------ | ------  | ------- | -------------------------------------------------------------------------------- |
+| Auction duration         | 7 days  | 100_800 | The total duration of the slot auction, subject to the candle auction mechanism. |
+| Opening period           | 2 days  | 28_800  | The opening period of the slot auction.                                          |
+| Ending period            | 5 days  | 72_000  | The ending period of the slot auction.                                           |
 
-| Parachain Slot           | Time     | Slots   | Description                                                                              |
-| ------------------------ | -------- | ------- | ---------------------------------------------------------------------------------------  |
-| Slot period              | 12 weeks | 100     | The length of one lease period for a parachain slot.                                     |
-| Total slot duration      | 96 days  | 100     | The length of the total lease period for a parachain slot, consisting of 8 slot periods  |
+
+| Parachain Slot           | Time     | Slots         | Description                                                                              |
+| ------------------------ | -------- | ------------- | ---------------------------------------------------------------------------------------- | 
+| Slot period              | 12 weeks | 1_209_600     | The length of one lease period for a parachain slot.                                     |
+| Total slot duration      | 2 years  | 10_512_000    | The length of the total lease period for a parachain slot, consisting of 8 slot periods. |
 
 
 ### Treasury
@@ -96,3 +98,4 @@ Plancks make up a DOT.
 
 The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
 known as \_Denomination Day*. See [Redenomination](../general/redenomination.md) for details.
+
