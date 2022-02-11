@@ -35,6 +35,7 @@ module.exports = {
             "learn/learn-accounts",
             "learn/learn-account-generation",
             "learn/learn-account-restore",
+            "learn/learn-polkadotjs",
             "learn/learn-assets",
             "learn/learn-nft",
             "learn/learn-DOT",
