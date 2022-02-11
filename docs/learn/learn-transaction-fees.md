@@ -64,7 +64,7 @@ A portion of the fee will go to the block author, and the remainder will go to t
 [Treasury](learn-treasury.md). This is 20% and 80%, respectively.
 
 Tips are an optional transaction fee that users can add. Tips are not part of the inclusion 
-fee and are an incentive to block authors from prioritizing a transaction, and the entire 
+fee and are an incentive to block authors for prioritizing a transaction, and the entire 
 tip goes directly to the block author.
 
 ## Block Limits and Transaction Priority
