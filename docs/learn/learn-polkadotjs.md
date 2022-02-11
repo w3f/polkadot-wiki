@@ -27,7 +27,7 @@ and sending or receiving transactions.
 
 ### [Polkadot-JS Extension](https://polkadot.js.org/extension/)
 
-The extension is a simple proof-of-concept for managing accounts in a browser extension and allowing 
+The extension is a simple tool for managing accounts in a browser extension and allowing 
 the signing of extrinsics using these accounts. The Polkadot-JS extension is not made for users to 
 interact with on-chain functions as one would find through a wallet app. The extension acts as 
 a robust key-store and thus acts as an account manager for Substrate-based accounts.
@@ -46,8 +46,9 @@ A JavaScript API allowing for programs to interface with the functionality of Po
 
 ## Polkadot-JS Apps
 
-Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with a node, allowing access to 
-all features available on Substrate chains.
+Polkadot-JS Apps is the native Polkadot/Kusama/Substrate UI for interacting with a node, allowing access 
+to all features available on Substrate chains. Polkadot-JS Apps also allows developers to to interface with 
+a local node.
 
 > Note that the UI may not precisely align with the functionality of individual parachains.
 
@@ -59,6 +60,7 @@ Among other things, Polkadot-JS Apps allows a user to:
 - [Auctions](learn-auction.md)
 - Query chain metadata
 - Query on-chain data using RPC calls
+- Call extrinsics using your account
 
 ### Developers
 
