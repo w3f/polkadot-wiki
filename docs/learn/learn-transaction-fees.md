@@ -33,7 +33,7 @@ Fees on the Polkadot Relay Chain are calculated based on three parameters:
 Weights are a fixed set of numbers that are used in Substrate-based chains to manage 
 the time it takes to validate a block. Each transaction has a base weight that accounts 
 for the overhead of inclusion (e.g. signature verification) and a dispatch weight that 
-accounts for the time to execute the transaction. All weights, even the base weight, is 
+accounts for the time to execute the transaction. All weights, even the base weight, 
 are a measure of time taken to execute on some standard hardware.
 
 The runtime 
