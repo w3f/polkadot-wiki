@@ -577,6 +577,31 @@ released the multisig transaction deposit.
 
 ![16](../assets/accounts/multisig-16.png)
 
+## Decoding Call Data
+
+You can use Polkadot-JS Apps to decode call data, as the extension only shows raw call data.
+This will allow you to know what you're signing. 
+
+> The decoded call data requires you to understand what the events or calls mean in the context of 
+> the transaction.
+
+1. Before submitting a transaction, copy the call data.
+
+![17](../assets/accounts/decode-1.png)
+
+2. Navigate to the [Decode tab](https://polkadot.js.org/apps/#/extrinsics/decode) under the 
+   Extrinsics section and paste the call data in the "hex-encoded call" window. Make sure you have 
+   the correct account selected.
+
+3. Verify that the data is what you expect.
+
+![18](../assets/accounts/decode-2.png)
+
+4. Navigate back to the Polkadot-JS extension and approve the transaction.
+
+Another way to perform this is to update your metadata for that chain. You will then be able to 
+have the Polkadot-JS extension parse the call data for you.
+
 ## Address Conversion Tools
 
 You can use the tools below to convert any SS58 address for any network for use on different
@@ -649,7 +674,7 @@ associated public key. The public key is returned as a hexadecimal string (i.e. 
 
 ##### Consider the following example:
 
-![17](../assets/accounts/pubkey-1.png)
+![19](../assets/accounts/pubkey-1.png)
 
 If you are comfortable enough to distinguish between each account parameter, you can prefix the
 public-key string with **"0x"** on your own:
@@ -664,7 +689,7 @@ both address associations to your public key. Copy your public key into the "Inp
 Key" textbox and click "Transform" at the bottom. On the right-hand side, the addresses for Polkadot
 and Substrate that are returned based on your public key should match the ones you inspected.
 
-![18](../assets/accounts/pubkey-2.png)
+![20](../assets/accounts/pubkey-2.png)
 
 > NOTE: You may have to scroll down to the bottom of the menu to find the Substrate address based on
 > the menu listings. You will notice that many networks that also use the same Substrate address.
