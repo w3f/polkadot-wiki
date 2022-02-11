@@ -75,10 +75,10 @@ As most of these parameters can be updated via on-chain governance, please check
 | Minimum contribution     | 7 days  | 5 DOTs                     | The minimum token allocation required to participate in a loan.                  |
 | Auction duration         | 7 days  | Subject to token economics | The total duration of the slot auction, subject to the candle auction mechanism. |
 
-| Parachain Slot           | Time    | Slots   | Description                                                                              |
-| ------------------------ | ------  | ------- | ---------------------------------------------------------------------------------------  |
-| Slot period              | 8 days  | 100     | The length of one lease period for a parachain slot.                                     |
-| Total slot duration      | 96 days | 100     | The length of the total lease period for a parachain slot, consisting of 12 slot periods |
+| Parachain Slot           | Time     | Slots   | Description                                                                              |
+| ------------------------ | -------- | ------- | ---------------------------------------------------------------------------------------  |
+| Slot period              | 12 weeks | 100     | The length of one lease period for a parachain slot.                                     |
+| Total slot duration      | 96 days  | 100     | The length of the total lease period for a parachain slot, consisting of 8 slot periods  |
 
 
 ### Treasury
