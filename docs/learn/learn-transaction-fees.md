@@ -30,11 +30,11 @@ Fees on the Polkadot Relay Chain are calculated based on three parameters:
 - A Length fee
 - A Tip (optional).
 
-Weights are a fixed set of numbers that are used in Substrate-based chains to manage 
-the time it takes to validate a block. Each transaction has a base weight that accounts 
-for the overhead of inclusion (e.g. signature verification) and a dispatch weight that 
+Weights are a fixed set of numbers used in Substrate-based chains to manage the time it 
+takes to validate a block. Each transaction has a base weight that accounts for the overhead 
+of inclusion (e.g. signature verification) and a dispatch weight that 
 accounts for the time to execute the transaction. All weights, even the base weight, 
-are a measure of time taken to execute on some standard hardware.
+are a measure of time to execute on some standard hardware.
 
 The runtime 
 [converts weight units to balance units](https://docs.substrate.io/how-to-guides/v3/weights/calculate-fees/) 
@@ -53,8 +53,8 @@ The base fee is the minimum a user pays for a transaction.
 The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
 
 There is also a targeted fee adjustment that serves as a multiplier which tunes the 
-final fee based on network congestion. This can constitute an adjusted weight fee which 
-is calculated as the targeted fee adjustment times the weight fee.
+final fee based on network congestion. This can constitute an adjusted weight fee calculated 
+as the targeted fee adjustment times the weight fee.
 
 Together, these fees constitute the inclusion fee. The inclusion fee is the 
 base fee plus the length fee plus the adjusted weight fee.
@@ -64,7 +64,7 @@ A portion of the fee will go to the block author, and the remainder will go to t
 [Treasury](learn-treasury.md). This is 20% and 80%, respectively.
 
 Tips are an optional transaction fee that users can add. Tips are not part of the inclusion 
-fee and are included as an incentive to block authors to prioritize a transaction. The entire 
+fee and are an incentive to block authors from prioritizing a transaction, and the entire 
 tip goes directly to the block author.
 
 ## Block Limits and Transaction Priority
