@@ -262,7 +262,7 @@ parathread.
 Validators on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use the submitted 
 Wasm code to validate the state transitions of your chain or thread, but doing this requires some 
 additional infrastructure. A validator needs some way to stay up to date with the most recent state 
-ransitions, since {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes will not be required 
+transitions, since {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes will not be required 
 to also be nodes of your chain.
 
 This is where the collator node comes into play. A collator is a maintainer of your parachain and
