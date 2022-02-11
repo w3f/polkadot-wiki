@@ -24,25 +24,29 @@ designed the Polkadot fee system with the following objectives:
 
 Fees on the Polkadot Relay Chain are calculated based on three parameters:
 
-- A weight fee
-- A length fee
-- A tip (optional).
+- A Weight fee
+  - Base weight
+  - Call(s) weight
+- A Length fee
+- A Tip (optional).
 
 Weights are a fixed number designed to manage the time to validate a block. Each
 transaction has a base weight that accounts for the overhead of inclusion (e.g. signature
 verification) and a dispatch weight that accounts for the weight of a transaction 
-(the time to execute the transaction). The weights in the runtime are converted to a fee.
+(the time to execute the transaction). The weights in the runtime are converted to a fee
+using [WeightToFee](https://docs.substrate.io/how-to-guides/v3/weights/calculate-fees/).
 
 The weight fee is the sum of the base weight + sum of the total weight consumed by call(s).
+The base fee is the minimum a user pays for a transaction.
 
 The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
 
 Together, these fees constitute the inclusion fee. 
 The inclusion fee is the base fee + length fee + adjusted weight fee.
 
-This is the minimum a user pays for a transaction. The inclusion fee is deducted from the sender's 
-account before transaction execution. A portion of the fee will go to the block author, and the 
-remainder will go to the [Treasury](learn-treasury.md). This is 20% and 80%, respectively.
+The inclusion fee is deducted from the 
+sender's account before transaction execution. A portion of the fee will go to the block author, 
+and the remainder will go to the [Treasury](learn-treasury.md). This is 20% and 80%, respectively.
 
 Tips are an optional transaction fee that users can add. Tips are not part of the inclusion fee and are 
 included on top of the inclusion fee, only for signed transactions. The entire tip goes directly to the 
