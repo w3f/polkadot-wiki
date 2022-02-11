@@ -30,11 +30,12 @@ Fees on the Polkadot Relay Chain are calculated based on three parameters:
 - A Length fee
 - A Tip (optional).
 
-Weights are a fixed number designed to manage the time to validate a block. Each
-transaction has a base weight that accounts for the overhead of inclusion (e.g. signature
-verification) and a dispatch weight that accounts for the weight of a transaction 
-(the time to execute the transaction). The weights in the runtime are converted to a fee
-using [WeightToFee](https://docs.substrate.io/how-to-guides/v3/weights/calculate-fees/).
+Weights are a fixed set of numbers that are used in Substrate based chains to manage 
+the time it takes to validate a block. Each transaction has a base weight that accounts 
+for the overhead of inclusion (e.g. signature verification) and a dispatch weight that 
+accounts for the weight of a transaction (the time to execute the transaction). The weights 
+in the runtime are converted to a fee using 
+[WeightToFee](https://docs.substrate.io/how-to-guides/v3/weights/calculate-fees/).
 
 The weight fee is the sum of the base weight + sum of the total weight consumed by call(s).
 To learn more about the motivation of a weight fee, check out this 
@@ -43,8 +44,8 @@ The base fee is the minimum a user pays for a transaction.
 
 The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
 
-There is also a targeted fee adjustment that serves as a multiplier which can tune the final 
-fee based on network congestion. This can constitute an adjusted weight fee which is the 
+There is also a targeted fee adjustment that serves as a multiplier which can tune the 
+final fee based on network congestion. This can constitute an adjusted weight fee which is 
 calculated as the targeted fee adjustment \* weight fee.
 
 Together, these fees constitute the inclusion fee. The inclusion fee is the 
@@ -54,9 +55,9 @@ The inclusion fee is deducted from the sender's account before transaction execu
 A portion of the fee will go to the block author, and the remainder will go to the 
 [Treasury](learn-treasury.md). This is 20% and 80%, respectively.
 
-Tips are an optional transaction fee that users can add. Tips are not part of the inclusion fee and 
-are included on top of the inclusion fee, only for signed transactions. The entire tip goes directly 
-to the block author.
+Tips are an optional transaction fee that users can add. Tips are not part of the inclusion fee 
+and are included on top of the inclusion fee, only for signed transactions. The entire tip goes 
+directly to the block author.
 
 ## Block Limits and Transaction Priority
 
