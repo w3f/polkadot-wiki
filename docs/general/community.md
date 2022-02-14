@@ -68,7 +68,7 @@ Matrix client. If you face any issues, join the rooms individually.
 - [**Substrate Developers Public Space**](https://matrix.to/#/#substrate-builders-space:matrix.parity.io) -
   Curated collection of rooms around all things Substrate.
   Contains the two below and many others.
-- [Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) - More
+- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More
   advanced room for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://matrix.to/#/#ink:matrix.parity.io) -
   A room to discuss developing Substrate smart contracts using Parity Ink!

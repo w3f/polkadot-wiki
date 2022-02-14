@@ -271,6 +271,6 @@ The other way is to use the pub/sub RPC `author_submitAndWatchExtrinsic`. Again,
 
 This concludes the article. Here you should have a good idea of how to interact with a Substrate/Polkadot node in order to track the finalised chain head, to decode SS58 addresses, check account information like balances & nonces and to construct, submit and track transactions. You've also learnt a little about the SCALE codec, the Substrate metadata system and how to build future-proof and generic Substrate-based systems.
 
-If you have any questions, please come ask in [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org).
+If you have any questions, please come ask in [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate).
 
 _The original source of this page was published [here](https://hackmd.io/@gavwood/r1jTRX2Zr)._
