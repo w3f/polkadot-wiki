@@ -189,6 +189,6 @@ ink! 已经为新的智能合约技术栈打下了很多基础，该技术是基
 
 本指南为您提供了一个心智模型，并展示了必要的资源来帮助您确定并开始以平行链或智能合约的形式构建项目。即使工具仍在日趋成熟，但尽早开发的优势将是您对项目的熟悉和超前，使您能够创新并创造出真正全新的东西。
 
-如果您对 Polkadot 上的平行链或智能合约抱有有趣的想法，请随时进入[波卡饮水机](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)进行讨论。开发者或许更感兴趣加入[波卡开发者小酒馆](https://riot.im/app/#/room/#polkadotnoobs:matrix.org)或者[Substrate 技术交流群](https://riot.im/app/#/room/#substrate-technical:matrix.org)提问讨论。与往常一样，请关注 [社区频道](community)以便及时跟进 Polkadot 的最新动态。
+如果您对 Polkadot 上的平行链或智能合约抱有有趣的想法，请随时进入[波卡饮水机](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)进行讨论。开发者或许更感兴趣加入[波卡开发者小酒馆](https://riot.im/app/#/room/#polkadotnoobs:matrix.org)或者[Substrate 技术交流群](https://area51.stackexchange.com/proposals/126136/substrate)提问讨论。与往常一样，请关注 [社区频道](community)以便及时跟进 Polkadot 的最新动态。
 
 祝好运！

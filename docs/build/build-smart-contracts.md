@@ -99,7 +99,7 @@ written smart contracts before. However, the Contracts pallet makes some notable
 design of the EVM:
 
 1. **Wasm**. The Contracts pallet uses WebAssembly as its compilation target. Any language that
-   compiles to Wasm can potentially be used to write smart contracts. Nevertheless, it is better to 
+   compiles to Wasm can potentially be used to write smart contracts. Nevertheless, it is better to
    have a dedicated domain-specific language, and for that reason Parity offers the [ink!](#ink) language.
 
 2. **Rent**. Contracts must pay rent or else hold a deposit suitably large enough in order to
@@ -156,9 +156,9 @@ smart contract example? Ask us to add it to this page!**
 
 ## Smart Contract Environments are still Maturing
 
-It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }} 
+It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} and the development is only now stabilizing.
-We are actively producing content to help developers get up to speed and will maintain the Wiki 
+We are actively producing content to help developers get up to speed and will maintain the Wiki
 with the latest resources. You should also keep up to date with the following links:
 
 ### Parity Tech
@@ -174,83 +174,83 @@ with the latest resources. You should also keep up to date with the following li
 - [Acala](https://acala.network/)
 - [Phala](https://phala.network)
 
-Many smart contract platforms are building to become a parachain in the ecosystem. 
-A community created and maintained list of different smart 
-contract platforms building on Polkadot can be found at 
+Many smart contract platforms are building to become a parachain in the ecosystem.
+A community created and maintained list of different smart
+contract platforms building on Polkadot can be found at
 [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
 
 #### Edgeware
 
-[Edgeware][edgeware] is a permissionless smart contract platform. It is an option for smart contract 
-developers and want to deploy to a live environment. Users can deploy both EVM and WASM smart contracts 
+[Edgeware][edgeware] is a permissionless smart contract platform. It is an option for smart contract
+developers and want to deploy to a live environment. Users can deploy both EVM and WASM smart contracts
 on Edgeware. Edgeware intends to connect to Polkadot and Kusama as a smart contract parachain.
 
-Try deploying a smart contract on Edgeware by following their 
+Try deploying a smart contract on Edgeware by following their
 [documentation][edgeware contracts documentation].
 
 #### Moonbeam
 
 [Moonbeam][] is another project that is planning to deploy to Polkadot as a parachain and will
-support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier][], an interoperability layer 
-with existing Ethereum tooling, it will support all applications that are written to target the EVM 
+support Ethereum compatible smart contracts. Since Moonbeam uses [Frontier][], an interoperability layer
+with existing Ethereum tooling, it will support all applications that are written to target the EVM
 environment with little friction.
 
-[Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam, launched 
-as a parachain on Kusama. Parachain functionality is live, and features are being incrementally released. 
+[Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam, launched
+as a parachain on Kusama. Parachain functionality is live, and features are being incrementally released.
 The final phase of the launch will include EVM functionality and balance transfers.
 
 Try deploying a smart contract to Moonbeam by following their [documentation][moonbeam docs].
 
 #### Astar
 
-[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform and 
-intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is the sister 
-network to Astar, is currently live on Kusama, and supports EVM, WASM, and Layer 2 solutions. Astar aims 
-to house all layer 2 scaling solutions and support all layer 2 protocols through the 
+[Astar](https://astar.network/) (formerly Plasm) is built on Substrate as a smart contract platform and
+intends to integrate with Polkadot as a parachain. [Shiden](https://shiden.astar.network/) is the sister
+network to Astar, is currently live on Kusama, and supports EVM, WASM, and Layer 2 solutions. Astar aims
+to house all layer 2 scaling solutions and support all layer 2 protocols through the
 [OVM](https://docs.astar.network/learn/layer2/optimistic-virtual-machine) (Optimistic Virtual Machine).
 
-Try deploying an Ethereum or ink! smart contract by following their 
+Try deploying an Ethereum or ink! smart contract by following their
 [documentation](https://docs.astar.network/build/smart-contracts).
 
 #### Acala
 
-[Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain 
-delivering a set of protocols to serve as the DeFi hub on Polkadot. [Karura](https://acala.network/karura), 
-Acala's canary network is live as a parachain on Kusama. Interested teams are now able to deploy DApps and 
-smart contracts on Karura's platform. Acala is also implementing the 
+[Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
+delivering a set of protocols to serve as the DeFi hub on Polkadot. [Karura](https://acala.network/karura),
+Acala's canary network is live as a parachain on Kusama. Interested teams are now able to deploy DApps and
+smart contracts on Karura's platform. Acala is also implementing the
 [Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
 
-Try deploying an Acala EVM smart contract by following their 
+Try deploying an Acala EVM smart contract by following their
 [documentation](https://wiki.acala.network/build/development-guide/smart-contracts).
 
 #### Phala
 
-[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide strong 
-guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala will enable 
-the use of confidential smart contracts on Polkadot. [Khala](https://phala.network/en/khala) is Phala's 
+[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide strong
+guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala will enable
+the use of confidential smart contracts on Polkadot. [Khala](https://phala.network/en/khala) is Phala's
 canary network and is live as a parachain on Kusama.
 
-Try deploying a confidential smart contract by following their 
+Try deploying a confidential smart contract by following their
 [documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
 
 ## Keep In Touch
 
-Even though the tooling is still maturing, the advantage of being early will be the familiarity and 
+Even though the tooling is still maturing, the advantage of being early will be the familiarity and
 head start on your project, allowing you to innovate and create something truly new.
 
-{{ polkadot: If you have interesting ideas for smart contracts on Polkadot, feel free to drop 
-into the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) to talk 
+{{ polkadot: If you have interesting ideas for smart contracts on Polkadot, feel free to drop
+into the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) to talk
 about them. Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
+[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
 [social channels](../general/community.md). :polkadot }}
 
-{{ kusama: If you have interesting ideas for smart contracts on Kusama, feel free to drop into the 
+{{ kusama: If you have interesting ideas for smart contracts on Kusama, feel free to drop into the
 [Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) to talk about them.
 Developers may be interested in joining the
 [Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://matrix.to/#/#substrate-technical:matrix.org) to ask their questions.
+[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their questions.
 As always, keep up to date with Polkadot and Kusama by following the
 [social channels](../general/community.md). :kusama }}
 

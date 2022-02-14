@@ -271,6 +271,6 @@ struct BalanceTransferFunction:
 
 文章到此结束。在这里，您应该知道如何与 Substrate/Polkadot 节点进行交互，以便跟踪最终确定的链头、解码 SS58 地址、检查账户信息(如 balances & nonces) 以及构建、提交和跟踪交易。您还了解了 SCALE 编码器、Substrate 元数据系统以及如何构建面向未来的通用 Substrate 系统。
 
-如果你有任何问题，请在 [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) 问。
+如果你有任何问题，请在 [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) 问。
 
 _最初版本发布在[此处](https://hackmd.io/@gavwood/r1jTRX2Zr)。_
