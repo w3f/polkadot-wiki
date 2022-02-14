@@ -48,7 +48,7 @@
     "@octokit/rest": "^18.12.0",
     "@polkadot/api": "^7.7.1",
     "@polkadot/keyring": "^8.2.2",
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "chalk": "^4.1.2",
     "cloudflare": "^2.9.1",
     "cross-env": "^7.0.3",
