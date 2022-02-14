@@ -28,7 +28,7 @@ The Polkadot community is expanding every day. Below are the most essential link
 
 ### Technical
 
-- [Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org) - More advanced room for technical questions on building with Substrate.
+- [Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) - More advanced room for technical questions on building with Substrate.
 - [Smart Contracts & Parity Ink!](https://riot.im/app/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A room to discuss developing Substrate smart contracts using Parity Ink!
 
 ## Socials

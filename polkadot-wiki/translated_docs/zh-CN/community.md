@@ -36,7 +36,7 @@ Web3 基金会主办了许多线上和线下的活动。你可以通过[这个 N
 
 ### 技术
 
-- [Substract Technical](https://app.element.io/#/room/#substrate-technical:matrix.org) - 关于 Substrate 的更深入的技术问题讨论聊天室
+- [Substract Technical](https://area51.stackexchange.com/proposals/126136/substrate) - 关于 Substrate 的更深入的技术问题讨论聊天室
 - [Smart Contract & Parity Ink!](https://app.element.io/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - 讨论基于 Parity Ink! 开发的 Substrate 智能合约的聊天室
 
 ## 媒体
