@@ -6,7 +6,7 @@ description: Learn about the DOT token Redenomination.
 slug: ../redenomination
 ---
 
-> Note: The DOT redenomination took place on 21 August, now known as Denomination Day, at block
+> Note: The DOT redenomination took place on 21 August 2021, now known as Denomination Day, at block
 > #1_248_328.
 
 While [DOT](../learn/learn-DOT.md) is the unit of currency on Polkadot that most people use when interacting
