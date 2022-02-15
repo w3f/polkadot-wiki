@@ -28,11 +28,10 @@ In staking, you can be either a [nominator or a validator](#validators-and-nomin
 
 As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
 chain's native token. The earned rewards can be bonded (locked) immediately for staking on your
-account, which would effectively compound the rewards you receive over time. Instead of bonding
-your rewards, you could also choose to have them deposited to your account or a different account
-as free balance. You can take a look at the [nominator guide](learn-nominator.md) to understand
-your responsibilities as a nominator, and the [validator docs](learn-validator.md) to understand
-what you need to do as a validator.
+account, which would effectively compound the rewards you receive over time. You could also choose 
+to have them deposited to your account or a different account as free (transferable) balance. You can 
+take a look at the [nominator guide](learn-nominator.md) to understand your responsibilities as a 
+nominator, and the [validator docs](learn-validator.md) to understand what you need to do as a validator.
 
 If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the
 video below
