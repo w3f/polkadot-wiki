@@ -18,7 +18,7 @@ The parachain slots will be sold according to an unpermissioned
 [candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
 secure on a blockchain.
 
-[![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/bsoxJw0rayk/0.jpg)](https://youtu.be/bsoxJw0rayk)
+[![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
 
 ## Mechanics of a Candle auction
 
