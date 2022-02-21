@@ -16,8 +16,8 @@ Having more stake on a validator does not influence the amount of block rewards 
 However, there is a probabilistic component to reward calculation (discussed below), so rewards may
 not be exactly equal for all validators in a given era.
 
-Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted. 
-In this way, the network creates incentives for the nomination of lower-staked validators to create 
+Distribution of the rewards are pro-rata to all stakers after the validator's commission is deducted.
+In this way, the network creates incentives for the nomination of lower-staked validators to create
 an equally-staked validator set.
 
 ## How does staking work in Polkadot?
@@ -27,11 +27,13 @@ an equally-staked validator set.
 In staking, you can be either a [nominator or a validator](#validators-and-nominators).
 
 As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
-chain's native token. You can take a look at the [nominator guide](learn-nominator.md) to understand
-your responsibilities as a nominator, and the [validator docs](learn-validator.md) to understand
-what you need to do as a validator.
+chain's native token. The earned rewards can be bonded (locked) immediately for staking on your
+account, which would effectively compound the rewards you receive over time. You could also choose 
+to have them deposited to your account or a different account as free (transferable) balance. You can 
+take a look at the [nominator guide](learn-nominator.md) to understand your responsibilities as a 
+nominator, and the [validator docs](learn-validator.md) to understand what you need to do as a validator.
 
-If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the 
+If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the
 video below
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
@@ -280,11 +282,11 @@ Let's look at these offences in a bit more detail.
 
 For every session, validators will send an "I'm online" heartbeat to indicate they are live. If a
 validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
-unresponsive. Slashing may occur depending on the repeated offences and how many other validators were 
+unresponsive. Slashing may occur depending on the repeated offences and how many other validators were
 unresponsive or offline during the epoch.
 
 Validators should have a well-architected network infrastructure to ensure the node runs to
-reduce the risk of slashing or chilling. A high availability setup is desirable, preferably with 
+reduce the risk of slashing or chilling. A high availability setup is desirable, preferably with
 backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing
 and being slashed for equivocation - see below). A comprehensive guide on validator setup is
 available [here](../maintain/maintain-guides-secure-validator.md).
@@ -295,27 +297,27 @@ Here is the formula for calculating slashing due to unresponsiveness:
 
     min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 
-The examples demonstrate how to calculate the slashing penalty for unresponsiveness. 
+The examples demonstrate how to calculate the slashing penalty for unresponsiveness.
 
 > In all of the examples, assume that there are 100 validators in the active set.
 
-No slashing would enact if < 10% of all validators are unresponsive. 
+No slashing would enact if < 10% of all validators are unresponsive.
 
 For example, if exactly 10 validators were unresponsive, the expression 3 * (x - (n / 10 + 1))) / n
 would be 3 * (10 - (100 / 10 + 1)) / 100 = 3 * (10 - (10 + 1)) / 100 = -0.03 which is rounded to 0.
 
-> The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0. 
+> The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0.
 
-If 14 validators are unresponsive, then slashing would occur, as > 10% of validators are unresponsive. 
+If 14 validators are unresponsive, then slashing would occur, as > 10% of validators are unresponsive.
 
-The slashing penalty would be 
+The slashing penalty would be
 min((3 * (14 - (100 / 10 + 1))) / 100, 1) * 0.07 = min((3 * (14 - 11))/100, 1) * 0.07 = min(0.09, 1) * 0.07 = 0.6%
 
-Similarly, if one-third of the validator set (around 33/100) are unresponsive, the slashing penalty would be 
+Similarly, if one-third of the validator set (around 33/100) are unresponsive, the slashing penalty would be
 about 5%.
 
-The maximum slashing that can occur due to unresponsiveness is 7%. After around 45% of the validators go offline, 
-the expression 3 * (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07 
+The maximum slashing that can occur due to unresponsiveness is 7%. After around 45% of the validators go offline,
+the expression 3 * (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 * (x - (n / 10 + 1))) / n, 1) * 0.07
 will be ceiled to 7%.
 
 ### Equivocation
@@ -496,7 +498,7 @@ staking rate of the entire network.
 > dilute over time.
 
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
-estimation of all DOT that should be staked, per parachain slot). 
+estimation of all DOT that should be staked, per parachain slot).
 
 > In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
 > constrained by locked parachain bonds.
@@ -535,8 +537,8 @@ please see
 - 50% targeted active staking
 - ~20% annual nominal return
 
-Up until now, the network has been following an inflation model that excludes the metric of active 
-parachains. The ideal staking rate is not always 50%, as the number of active parachains influences 
+Up until now, the network has been following an inflation model that excludes the metric of active
+parachains. The ideal staking rate is not always 50%, as the number of active parachains influences
 the available liquidity that is available to secure the network.
 
 Keep in mind that when the system's staking rate is lower than the ideal staking rate, the
