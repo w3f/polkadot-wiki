@@ -16,7 +16,7 @@ Having more stake on a validator does not influence the amount of block rewards 
 However, there is a probabilistic component to reward calculation (discussed below), so rewards may
 not be exactly equal for all validators in a given era.
 
-Distribution of the rewards are pro-rata to all stakers after the validator payment is deducted.
+Distribution of the rewards are pro-rata to all stakers after the validator's commission is deducted.
 In this way, the network creates incentives for the nomination of lower-staked validators to create
 an equally-staked validator set.
 
