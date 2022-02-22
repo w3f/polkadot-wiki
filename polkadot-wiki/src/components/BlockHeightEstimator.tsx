@@ -25,10 +25,11 @@ export const BlockHeightEstimator = () => {
     e.preventDefault();
 
     setIsSubmitted(true);
-    const value = date + ' ' + time + ':00';
+    const value = date + ' ' + time;
     console.log(value);
-
+    
     try {
+      setIsLoading(true);
       const ret = await driver(value);
       console.log(ret);
       if (ret == NaN) {
@@ -65,6 +66,7 @@ export const BlockHeightEstimator = () => {
                 placeholder="Enter Time"
                 onChange={onTimeInput}
                 value={time}
+                step="1"
                 required
               />
             </Col>
@@ -83,25 +85,31 @@ export const BlockHeightEstimator = () => {
         </Form.Group>
       </Form>
       <Form.Group controlId="formNewBlockHeight">
-        <Form.Label>New Block Height: </Form.Label>
-        <div style={{ color: 'var(--ifm-color-primary)' }}>
-          {(() => {
-            if (!isSubmitted) {
-              return '';
-            } else {
-              if (!isLoading) {
-                return <div>{blockHeight}</div>;
-              } else {
-                return (
-                  <div>Loading...</div>
-                  // <>
-                  //   <Spinner animation="border" size="sm" variant="dark" />
-                  // </>
-                );
-              }
-            }
-          })()}
-        </div>
+        <Row>
+          <Col md="auto">
+            <Form.Label>Estimated Block Height (6s blocktime): </Form.Label>
+          </Col>
+          <Col>
+            <div style={{ color: 'var(--ifm-color-primary)' }}>
+              {(() => {
+                if (!isSubmitted) {
+                  return '';
+                } else {
+                  if (!isLoading) {
+                    return <div>{blockHeight}</div>;
+                  } else {
+                    return (
+                      <div>Loading...</div>
+                      // <>
+                      //   <Spinner animation="border" size="sm" variant="dark" />
+                      // </>
+                    );
+                  }
+                }
+              })()}
+            </div>
+          </Col>
+        </Row>
       </Form.Group>
     </div>
   );
