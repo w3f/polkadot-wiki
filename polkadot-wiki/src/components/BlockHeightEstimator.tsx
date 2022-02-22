@@ -27,7 +27,7 @@ export const BlockHeightEstimator = () => {
     setIsSubmitted(true);
     const value = date + ' ' + time;
     console.log(value);
-    
+
     try {
       setIsLoading(true);
       const ret = await driver(value);
@@ -50,7 +50,9 @@ export const BlockHeightEstimator = () => {
           <Form.Text>Enter both a date and time</Form.Text>
           <Row>
             <Col>
-              <Form.Label>Date</Form.Label>
+              <Form.Label>
+                Date<span style={{ color: 'red' }}> *</span>
+              </Form.Label>
               <Form.Control
                 type="date"
                 placeholder="Enter Date"
@@ -60,7 +62,9 @@ export const BlockHeightEstimator = () => {
               />
             </Col>
             <Col>
-              <Form.Label>Time</Form.Label>
+              <Form.Label>
+                Time<span style={{ color: 'red' }}> *</span>
+              </Form.Label>
               <Form.Control
                 type="time"
                 placeholder="Enter Time"
