@@ -45,7 +45,7 @@ const convertDateToSeconds = (date: {
   const datefromAPITimeStamp = new Date(dateFromAPI).getTime();
   const nowTimeStamp = now.getTime();
 
-  const microSecondsDiff = Math.abs(datefromAPITimeStamp - nowTimeStamp);
+  const microSecondsDiff = datefromAPITimeStamp - nowTimeStamp;
 
   // Math.round is used instead of Math.floor to account for certain DST cases
   // Number of milliseconds per day =
