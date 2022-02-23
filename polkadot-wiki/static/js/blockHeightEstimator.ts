@@ -1,14 +1,7 @@
 // Required imports
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
-// replace hours with user input
-// const userInput = '12/23/2021 18:39:00';
-const userInput = '1';
-const formattedUserInput =
-  new Date(userInput).toLocaleDateString() + ' ' + new Date(userInput).toLocaleTimeString();
-
 // Time Constants
-const BLOCK_TIME_IN_SECONDS = 6;
 const MINUTES_IN_HOUR = 60;
 const SECONDS_IN_MINUTE = 60;
 
@@ -69,7 +62,8 @@ const parseDate = (date: string) => {
 
 async function calculateNewBlockHeight<T extends number | null>(
   seconds: T,
-  api: any
+  api: any,
+  blockTime: number
 ): Promise<number | Error | null> {
   if (typeof seconds == null) {
     return Error('date is null');
@@ -86,19 +80,21 @@ async function calculateNewBlockHeight<T extends number | null>(
       `${chain} is currently at block: #${number} at ${dateTimeObj.toLocaleDateString()} ${dateTimeObj.toLocaleTimeString()}`
     );
 
-    return getBlockHeightFromTime(number.toNumber(), seconds as number);
+    return getBlockHeightFromTime(number.toNumber(), seconds as number, blockTime);
   } catch (err) {
     console.error(err);
     return null;
   }
 }
 
-const getBlockHeightFromTime = (currBlockHeight: number, seconds: number) => {
-  const newBlockHeight = Math.round(seconds / BLOCK_TIME_IN_SECONDS + currBlockHeight);
+const getBlockHeightFromTime = (currBlockHeight: number, seconds: number, blockTime: number) => {
+  const blockTimeInSeconds = blockTime / 1000;
+  const newBlockHeight = Math.round(seconds / blockTimeInSeconds + currBlockHeight);
   return newBlockHeight;
 };
 
-export const driver = async (dateOrHours: string) => {
+export const driver = async (dateOrHours: string, blockTime: number) => {
+  // * blockTime is in ms; dateOrHours in form YEAR-MONTH-DAY HR:MIN:SEC (****-**-** **:**:**)
   console.log('Getting new block height...');
   let seconds: string | number | null = null;
   if (dateOrHours.includes('-')) {
@@ -107,10 +103,11 @@ export const driver = async (dateOrHours: string) => {
     seconds = parseInt(dateOrHours) * MINUTES_IN_HOUR * SECONDS_IN_MINUTE;
   }
   const api = await getProvider();
-  const blockHeight = await calculateNewBlockHeight(seconds, api);
+  const blockHeight = await calculateNewBlockHeight(seconds, api, blockTime);
   return blockHeight;
 };
 
+// * TEST
 // log to console the new block height, return as number, and exit
 // pass in as date (MONTH/DAY/YEAR HR/MIN) or hours (number as string)
 // driver(userInput)
@@ -128,4 +125,3 @@ export const driver = async (dateOrHours: string) => {
 //   })
 //   .catch(console.error)
 //   .finally(() => process.exit(0));
-

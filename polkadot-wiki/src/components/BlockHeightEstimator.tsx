@@ -5,8 +5,12 @@ import React, { useState } from 'react';
 export const BlockHeightEstimator = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
+  const [blockTime, setBlockTime] = useState(6000);
+
   const [isDateFilled, setIsDateFilled] = useState(false);
   const [isTimeFilled, setIsTimeFilled] = useState(false);
+  const [isBlockTimeFilled, setIsBlockTimeFilled] = useState(false);
+
   const [blockHeight, setBlockHeight] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +25,11 @@ export const BlockHeightEstimator = () => {
     setIsTimeFilled(true);
   };
 
+  const onBlockTimeInput = ({ target: { value } }) => {
+    setBlockTime(value);
+    setIsBlockTimeFilled(true);
+  };
+
   const onFormSubmit = async (e: any) => {
     e.preventDefault();
 
@@ -30,7 +39,7 @@ export const BlockHeightEstimator = () => {
 
     try {
       setIsLoading(true);
-      const ret = await driver(value);
+      const ret = await driver(value, blockTime);
       console.log(ret);
       if (ret == NaN) {
         setBlockHeight('Invalid number returned. Please try again');
@@ -75,6 +84,18 @@ export const BlockHeightEstimator = () => {
               />
             </Col>
             <Col>
+              <Form.Label>
+                Block Time (ms)<span style={{ color: 'red' }}> *</span>
+              </Form.Label>
+              <Form.Control
+                type="text"
+                defaultValue={6000}
+                onChange={onBlockTimeInput}
+                value={blockTime}
+                required
+              />
+            </Col>
+            <Col>
               <Button
                 variant="primary"
                 type="submit"
@@ -91,7 +112,7 @@ export const BlockHeightEstimator = () => {
       <Form.Group controlId="formNewBlockHeight">
         <Row>
           <Col md="auto">
-            <Form.Label>Estimated Block Height (6s blocktime): </Form.Label>
+            <Form.Label>Estimated Block Height: </Form.Label>
           </Col>
           <Col>
             <div style={{ color: 'var(--ifm-color-primary)' }}>
