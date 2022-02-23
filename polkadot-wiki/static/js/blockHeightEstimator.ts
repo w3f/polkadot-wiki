@@ -32,19 +32,17 @@ const convertDateToSeconds = (date: {
   second: number;
 }) => {
   const dateFromAPI = `${date.month} ${date.day} ${date.year} ${date.hour}:${date.minute}:${date.second}`;
-  // TODO: use the block timestamp to set now
   // const now = await api.query.timestamp.now();
-
   const now = new Date();
   const datefromAPITimeStamp = new Date(dateFromAPI).getTime();
   const nowTimeStamp = now.getTime();
 
-  const microSecondsDiff = datefromAPITimeStamp - nowTimeStamp;
+  const milliSecondsDiff = datefromAPITimeStamp - nowTimeStamp;
 
   // Math.round is used instead of Math.floor to account for certain DST cases
   // Number of milliseconds per day =
   //   60 minutes/hour * 60 seconds/minute * 1000 ms/second
-  const seconds = Math.round(microSecondsDiff / 1000);
+  const seconds = Math.round(milliSecondsDiff / 1000);
 
   return seconds;
 };
