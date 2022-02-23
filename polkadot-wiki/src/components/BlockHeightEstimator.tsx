@@ -85,7 +85,7 @@ export const BlockHeightEstimator = () => {
             </Col>
             <Col>
               <Form.Label>
-                Block Time (ms)<span style={{ color: 'red' }}> *</span>
+                Block Time (ms)
               </Form.Label>
               <Form.Control
                 type="text"
