@@ -31,22 +31,21 @@ extinguished and the candle went out, the auction would suddenly terminate and t
 that point would win.
 
 When candle auctions are used online, they require a random number to decide the moment of
-termination.
+termination. Parachain slot auctions differ slightly from a normal candle auction in that it does not 
+use the random number to decide the duration of its opening phase. 
 
-Parachain slot auctions differ slightly from a normal candle auction in that it does not use
-the random number to decide the duration of its opening phase. 
+The candle auction on Polkadot is split into two parts: the *opening period* which is in 
+effect immediately after the auction starts. This period lasts for one day and eighteen hours and 
+serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing 
+their stragtey on how to win a slot auction. So during the open phase, bids will continue to be accepted, 
+but later bids have higher probability of losing since they are retroactively determined close moment 
+may be found to have preceded the time that a bid was submitted. 
 
-The candle auction on Polkadot is split into two main parts: the *opening period* which is in 
-effect immediately after the auction has started which is designed as a buffer-like time for parachain 
-candidates to setup their initial bids, and likely start executing their stragtey on how to win a slot 
-auction. So during the open phase, bids will continue to be accepted, but later bids have higher 
-probability of losing since the retroactively determined close moment may be found to have preceded the 
-time that a bid was submitted. 
-
-The opening period then transitions into an *ending period*, where the auction is subject to end based on 
-the candle auction mechanism. The random ending is managed by propagating through the entire ending period, 
-where a snapshot is taken at each block within the ending period to capture the winners during that block. 
-At the end of the period, one of the snapshots is randomly selected to determine the winner of the auction.
+The opening period then transitions into an *ending period* of five days, where the auction is subject 
+to end based on the candle auction mechanism. The random ending is managed by propagating through the 
+entire ending period, where a snapshot is taken at each block within the ending period to capture the 
+winners during that block. At the end of the period, one of the snapshots is randomly selected to determine 
+the winner of the auction.
 
 More details on this is available in the [Polkadot Implementation](#polkadot-implementation) section.
 
