@@ -82,7 +82,7 @@ At the end of the process you should have the newly installed Polkadot applicati
 
 ## Using on Polkadot-JS Apps
 
-If you are a beginner, please consider watching this video tutorial on how to connect your Ledger
+Please consider watching this video tutorial on how to connect your Ledger
 device with Polkadot JS UI, with your accounts imported to Polkadot browser extension.
 
 [![Connect Ledger to Polkadot JS UI](https://img.youtube.com/vi/7VlTncHCGPc/0.jpg)](https://youtu.be/7VlTncHCGPc)
