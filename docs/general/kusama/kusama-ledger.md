@@ -83,6 +83,10 @@ At the end of the process you should have the newly installed Kusama application
 
 ### Loading Your Account
 
+You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the Polkadot JS UI. For instructions
+on how to import Ledger accounts to Polkadot JS extension in written format, read through this [article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
+For importing your account to the UI, read through the instructions below.
+
 [Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
 device will work with the browser interface after installation. The functionality is currently gated
 behind a feature setting that you will need to turn on.
