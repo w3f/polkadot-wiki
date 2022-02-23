@@ -4,6 +4,7 @@ const { ApiPromise, WsProvider } = require('@polkadot/api');
 // Time Constants
 const MINUTES_IN_HOUR = 60;
 const SECONDS_IN_MINUTE = 60;
+const DEFAULT_BLOCK_TIME = 6000;
 
 const getProvider = async () => {
   // Initialise the provider to connect to the polkadot rpc
@@ -103,7 +104,8 @@ export const driver = async (dateOrHours: string, blockTime: number) => {
     seconds = parseInt(dateOrHours) * MINUTES_IN_HOUR * SECONDS_IN_MINUTE;
   }
   const api = await getProvider();
-  const blockHeight = await calculateNewBlockHeight(seconds, api, blockTime);
+  // * If not blockTime is provided, use 6000 ms
+  const blockHeight = await calculateNewBlockHeight(seconds, api, blockTime || DEFAULT_BLOCK_TIME);
   return blockHeight;
 };
 
