@@ -42,10 +42,20 @@ but later bids have higher probability of losing since they are retroactively de
 may be found to have preceded the time that a bid was submitted. 
 
 The opening period then transitions into an *ending period* of five days, where the auction is subject 
-to end based on the candle auction mechanism. The random ending is managed by propagating through the 
-entire ending period, where a snapshot is taken at each block within the ending period to capture the 
-winners during that block. At the end of the period, one of the snapshots is randomly selected to determine 
-the winner of the auction.
+to end based on the candle auction mechanism. 
+
+The auction’s ending time can be any time within this ending period, and is automatically and randomly 
+chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The random ending is managed 
+by propagating through the entire ending period, where a snapshot is taken at each block within the 
+ending period to capture the winners during that block. At the end of the period, one of the snapshots 
+is randomly selected to determine the winner of the auction.
+
+This process is executes six hours right after the ending period. 
+**The parachain candidate with the highest bid at the ending time chosen by the VRF wins the slot auction**. 
+> [Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made during 
+> these six hours when the winning block for the auction is being determined on-chain.
+  
+With one day and eighteen hours for the starting period, five days for the ending period (candle auction phase) and six hours for determining the auction winner, a parachain auction on Polkadot lasts exactly one week from the start.
 
 More details on this is available in the [Polkadot Implementation](#polkadot-implementation) section.
 
