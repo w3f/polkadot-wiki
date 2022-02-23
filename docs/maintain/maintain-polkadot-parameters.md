@@ -78,8 +78,8 @@ As most of these parameters can be updated via on-chain governance, please check
 
 | Parachain Slot           | Time     | Slots         | Description                                                                              |
 | ------------------------ | -------- | ------------- | ---------------------------------------------------------------------------------------- | 
-| Slot period              | 12 weeks | 1_209_600     | The length of one lease period for a parachain slot.                                     |
-| Total slot duration      | 2 years  | 10_512_000    | The length of the total lease period for a parachain slot, consisting of 8 slot periods. |
+| Lease period             | 12 weeks | 1_209_600     | The length of one lease period in a parachain slot.                                     |
+| Total slot duration      | 2 years  | 10_512_000    | The maximum duration a parachain can lease by winning a slot auction (8 lease periods). |
 
 ### Treasury
 
