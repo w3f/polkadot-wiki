@@ -37,7 +37,7 @@ use the random number to decide the duration of its opening phase.
 The candle auction on Polkadot is split into two parts: the *opening period* which is in 
 effect immediately after the auction starts. This period lasts for one day and eighteen hours and 
 serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing 
-their stragtey on how to win a slot auction. So during the open phase, bids will continue to be accepted, 
+their strategy on how to win the slot auction. So during the open phase, bids will continue to be accepted, 
 but later bids have higher probability of losing since they are retroactively determined close moment 
 may be found to have preceded the time that a bid was submitted. 
 
@@ -55,7 +55,9 @@ This process is executes six hours right after the ending period.
 > [Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made during 
 > these six hours when the winning block for the auction is being determined on-chain.
   
-With one day and eighteen hours for the starting period, five days for the ending period (candle auction phase) and six hours for determining the auction winner, a parachain auction on Polkadot lasts exactly one week from the start.
+With one day and eighteen hours for the starting period, five days for the ending period (candle auction 
+phase) and six hours for determining the auction winner, a parachain auction on Polkadot lasts exactly one week 
+from the start.
 
 More details on this is available in the [Polkadot Implementation](#polkadot-implementation) section.
 
@@ -106,9 +108,9 @@ to *grief* honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the two-step
-commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart
-contracts to participate.
+names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the 
+two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows 
+smart contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but not when the auction will
 be determined to have ended. This helps to ensure that bidders are willing to bid their true bids
