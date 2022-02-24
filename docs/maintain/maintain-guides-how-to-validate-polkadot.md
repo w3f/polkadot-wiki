@@ -252,7 +252,7 @@ git checkout VERSION
 ./scripts/init.sh
 ```
 
-Build native code with the cargo release profile.
+Build native code with the production profile.
 
 ```sh
 cargo build --profile production
