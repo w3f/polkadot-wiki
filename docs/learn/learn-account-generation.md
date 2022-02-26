@@ -173,8 +173,8 @@ feasible in your situation.
 
 ### Go to Polkadot-JS Apps
 
-Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) (or [dotapps.io](https://dotapps.io/)) 
-and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar at the top 
+Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) (or [dotapps.io](https://dotapps.io/))
+and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar at the top
 of your screen.
 
 ![pjs-01](../assets/accounts/polkadot_js_01.png)
@@ -276,7 +276,7 @@ Input the name for your identity and then click "Create".
 ### Back Up Account
 
 Parity Signer will then generate a recovery phrase for you and display it in the form of 12 or 24
-words.
+words. Although, in the latest version of [Parity Signer (5.x.x)](https://apps.apple.com/us/app/parity-signer/id1218174838) generates only 24 words phrase.
 
 You should write down this recovery phrase on paper and
 [store it somewhere safe](#storing-your-key-safely).
@@ -288,7 +288,7 @@ You should write down this recovery phrase on paper and
 After confirming that you have backed up your seed, a new textbox will appear in which you can set a
 PIN. The PIN code should contain at least 6 digits. If the PIN codes do not match, it will not allow
 you to create an account. The PIN code will be used when signing any transaction, or to protect
-sensitive operations such as deleting an identity or revealing the recovery phrase.
+sensitive operations such as deleting an identity or revealing the recovery phrase. In the latest version of [Parity Signer (5.x.x)](https://apps.apple.com/us/app/parity-signer/id1218174838), the PIN of the phone device will be used instead and you do not have to create a separate PIN for your accounts.
 
 Note that if someone knows the 12/24 words in your recovery phrase, they will still have control
 over your account, even if they do not know the PIN.
@@ -306,9 +306,23 @@ identity.
 There is currently no way to copy your address from Parity signer in plain text in order to send it
 via text or email. You must use the QR method.
 
-### Your Address
+### Import account to Parity Signer Companion
 
-The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going
+To interface your Parity Signer account with Polkadot JS UI, the recommended option is to install [Parity Signer Companion](parity.link/signer-companion),
+which is a browser extension. After installing it on a compatible browser, click on the import button and approve the necessary permissions
+for the extension to access your computer's camera. You should now see a square box inside your computer camera's field of view.
+Now, open the Parity Signer app on your phone and click on the account that you would like to add to the Parity Signer Companion, which should display its QR code.
+Now, make sure the QR code of your account displayed on your phone screen is properly visible within that square box.
+Adjust the brightness of your phone if necessary. You should now see your account and its address on the Parity Signer Companion.
+
+> Note that the private keys for your accounts still reside on the Parity Signer app on your phone
+
+If you open [Accounts](https://polkadot.js.org/apps/#/accounts) tab on Polkadot JS UI, you should see the accounts on Parity Signer Companion injected.
+
+
+### Import account to Polkadot JS UI
+
+If you want to import your account to the Polkadot JS UI directly, please follow the instructions in this section. You can import your address to the Polkadot-JS Apps UI by going
 to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer
 and click "Add via QR", and following the instructions to add the account. An account created this
 way will always require you to sign messages with your Parity Signer device. It will do this only by
