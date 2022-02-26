@@ -9,9 +9,10 @@ slug: ../learn-balance-transfers
 Balance transfers are used to send a balance from one account to another account. To start
 transferring a balance, we will begin by using [Polkadot-JS Apps][]. This guide assumes that you've
 already [created an account](learn-account-generation.md) and have some funds that are ready to be
-transferred.
+transferred. This guide also contains instructions on how to sign the balance transfer transactions
+for accounts created on Polkadot JS Extension, Ledger devices and Parity Signer App.
 
-## Polkadot-JS Apps
+## Polkadot-JS Apps UI
 
 Let's begin by opening [Polkadot-JS Apps][]. There are two ways to conduct a balance transfer:
 
@@ -38,34 +39,66 @@ for it to remain active.** See the [existential deposit][] section for more info
 After setting your inputs correctly, click the "Make Transfer" button and confirm. Once the transfer
 is included in a block you will see a green notification in the top-right corner of your screen.
 
+### Signing on Polkadot Extension
+
+If your account is injected to Polkadot JS UI through the Polkadot Extension, the balance transfer transaction needs to be signed
+on the popup window. You can examine the method and info dropdowns highlighted in the screenshot below and ensure they match with the original transaction submitted. Sign the transaction by entering the password for the account set for this account when it was created on the Polkadot Extension.
+
+![extension transfer](../assets/accounts/extenstion-transaction.png)
+
+### Signing on Ledger device
+
+Assuming that you imported your Ledger account to Polkadot Extension, you will be presented with a popup window for signing the balance transfer transaction. Review the transaction details on the Ledger device and approve it to sign the transaction.
+
+> If you are looking for instructions in a video, watch the tutorial on how to connect [Ledger to Polkadot JS UI](https://youtu.be/7VlTncHCGPc).
+
+![Ledger transfer](../assets/accounts/ledger-transaction.png)
+
+### Signing on Parity Signer App
+
+If you imported your Parity Signer account to Polkadot JS UI directly, you will be presented with a popup window with a QR code and a camera window as shown below.
+Open QR scanner on your phone's Parity Signer app and scan the QR code presented. You may be prompted to enter your PIN to sign the transaction.
+The signed extrinsic will then be available as a QR code that needs to be shown in front of your computer's camera (in the red square window shown to the right in the screenshot below).
+
+![Companion transfer](../assets/accounts/signer-transaction.png)
+
+If you imported your Parity Signer account to [Parity Signer Companion](https://parity.link/signer-companion), you will be presented with a popup window with a QR code as shown below.
+
+![Companion transfer](../assets/accounts/companion-transfer.png)
+
+Scan this QR code on the Parity Signer app on your phone and you will be presented with a QR code consisting of the signed extrinsic for this transaction. Click on the **next to signing** button in the popup window shown above. You can then show the QR code on your phone within the red square window.
+
+![Companion transfer](../assets/accounts/companion-transfer2.png)
+
+
 ### Keep-Alive Checks
 
-At an [extrinsic](../general/glossary.md#extrinsic) level, there are two main ways to transfer funds 
-from one account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you 
-to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence; 
+At an [extrinsic](../general/glossary.md#extrinsic) level, there are two main ways to transfer funds
+from one account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you
+to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence;
 `transfer_keep_alive` will not allow you to send an amount
 that would allow the sending account to be removed due to it going below the existential deposit.
 
 By default, Polkadot-JS Apps will use `transfer_keep_alive`, ensuring that the account you send from
-cannot drop below the existential deposit of 
-{{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.001666 KSM :kusama }}. 
+cannot drop below the existential deposit of
+{{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.001666 KSM :kusama }}.
 
-However, it may be that you do not want to keep this account alive (for example, because you are moving 
-all of your funds to a different address). In this case, click on the "keep-alive" toggle at the bottom 
-of the modal window. The label should switch from "Transfer with account keep-alive 
+However, it may be that you do not want to keep this account alive (for example, because you are moving
+all of your funds to a different address). In this case, click on the "keep-alive" toggle at the bottom
+of the modal window. The label should switch from "Transfer with account keep-alive
 checks" - `transfer_keep_alive` will be used, to "Normal transfer without keep-alive checks" -
-`transfer` extrinsic will be used. As a common use case for using normal transfers is to entirely clear 
-out the account, a second toggle will appear if you have the keep-alive check turned off that will send all 
+`transfer` extrinsic will be used. As a common use case for using normal transfers is to entirely clear
+out the account, a second toggle will appear if you have the keep-alive check turned off that will send all
 the tokens in the account, minus a transaction fee, to the destination address.
 
-Attempting to send less than the existential deposit to an account with 
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: 0 KSM :kusama }} will always fail, no matter if the keep-alive 
-check is on or not. 
+Attempting to send less than the existential deposit to an account with
+{{ polkadot: 0 DOT :polkadot }}{{ kusama: 0 KSM :kusama }} will always fail, no matter if the keep-alive
+check is on or not.
 
-{{ polkadot: For instance, attempting to transfer 0.1 DOT to an account you just generated 
-(and thus has no DOT) will fail, since 0.1 is less than the existential deposit of 1 DOT and the account 
-cannot be initialized with such a low balance. :polkadot }}{{ kusama: For instance, attempting to transfer 
-0.0001 KSM to an account you just generated (and thus has no KSM) will fail, since 0.1 is less than the 
+{{ polkadot: For instance, attempting to transfer 0.1 DOT to an account you just generated
+(and thus has no DOT) will fail, since 0.1 is less than the existential deposit of 1 DOT and the account
+cannot be initialized with such a low balance. :polkadot }}{{ kusama: For instance, attempting to transfer
+0.0001 KSM to an account you just generated (and thus has no KSM) will fail, since 0.1 is less than the
 existential deposit of 0.001666 KSM and the account cannot be initialized with such a low balance. :kusama }}
 
 > Note: Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
@@ -94,7 +127,7 @@ you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
 If you used this account to set up a validator and you did not purge your keys before unbonding your
 tokens, you need to purge your keys. You can do this by seeing the
-[How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also be 
+[How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also be
 checked by checking `session.nextKeys` in the chain state for an existing key.
 
 #### Checking for Locks
