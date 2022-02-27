@@ -21,7 +21,7 @@ If you have trouble using Ledger or following the directions below, you can try 
 issue on the [Polkadot Support page](https://support.polkadot.network/).
 
 > Please check out our
-> [intro to Ledger video on YouTube for more information](https://www.youtube.com/watch?v=p24yOcLLFmI&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=33&ab_channel=Polkadot).
+> [intro to Ledger video on YouTube for more information](https://youtu.be/7VlTncHCGPc).
 
 ## Requirements
 
@@ -109,10 +109,10 @@ prompt your ledger for confirmation when you initiate a transaction.
 Polkadot and Kusama accounts from the
 [extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadotjs-browser-extension)
 will show up in Statemint and Statemine respectively, even if they're not set to be used on all
-chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama respectively, 
-use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes sense to also be 
-available on their respective common good parachains. What this means is that if you already have a 
-Kusama Ledger account configured on the extension, that account will also be available on Statemine. 
+chains. Statemint and Statemine, which are common good parachains on Polkadot and Kusama respectively,
+use DOT and KSM as their native tokens. Hence, accounts on Polkadot and Kusama makes sense to also be
+available on their respective common good parachains. What this means is that if you already have a
+Kusama Ledger account configured on the extension, that account will also be available on Statemine.
 But the opposite is not the case: an account created specifically on Statemine or Statemint won't show up
 on Kusama or Polkadot respectively.
 

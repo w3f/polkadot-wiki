@@ -252,10 +252,10 @@ git checkout VERSION
 ./scripts/init.sh
 ```
 
-Build native code with the cargo release profile.
+Build native code with the production profile.
 
 ```sh
-cargo build --release
+cargo build --profile production
 ```
 
 **_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
