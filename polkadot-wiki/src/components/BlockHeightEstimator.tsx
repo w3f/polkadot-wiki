@@ -94,16 +94,8 @@ export const BlockHeightEstimator = () => {
               />
             </Col>
             <Col>
-              <Form.Label>
-                Block Time (ms)
-              </Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={6000}
-                onChange={onBlockTimeInput}
-                value={blockTime}
-                required
-              />
+              <Form.Label>Block Time (ms)</Form.Label>
+              <Form.Control type="number" onChange={onBlockTimeInput} value={blockTime} required />
             </Col>
             <Col>
               <Button
