@@ -1,11 +1,14 @@
 import { Button, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import { driver } from '../../static/js/blockHeightEstimator';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+const DEFAULT_BLOCK_TIME = 6000;
 
 export const BlockHeightEstimator = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [blockTime, setBlockTime] = useState(6000);
+  const [blockTime, setBlockTime] = useState(DEFAULT_BLOCK_TIME);
+  let mountedRef = useRef(true);
 
   const [isDateFilled, setIsDateFilled] = useState(false);
   const [isTimeFilled, setIsTimeFilled] = useState(false);
@@ -35,12 +38,12 @@ export const BlockHeightEstimator = () => {
 
     setIsSubmitted(true);
     const value = date + ' ' + time;
-    console.log(value);
 
     try {
       setIsLoading(true);
       const ret = await driver(value, blockTime);
-      console.log(ret);
+      // * if no component unmounted, run clean up function
+      if (!mountedRef.current) return null;
       if (ret == NaN) {
         setBlockHeight('Invalid number returned. Please try again');
       }
@@ -51,6 +54,13 @@ export const BlockHeightEstimator = () => {
     }
     setIsLoading(false);
   };
+
+  // * only used for clean up to avoid memory leaks
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   return (
     <div>
