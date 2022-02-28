@@ -14,7 +14,7 @@ transactions. Below are some wallets that support Polkadot along with their deve
 
 | Wallet Name                                                         | Development State | Team Name | Description       | Custody       | Supports |
 | ------------------------------------------------------------------- | ----------------- | --------- | ----------------- | ------------- | -------- |
-| [Parity Signer](https://www.parity.io/signer/) (see warning below)  | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
+| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
 | [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Non-custodial | Staking  |
 | [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Non-custodial | Staking  |
 | [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Non-Custodial | Staking  |
