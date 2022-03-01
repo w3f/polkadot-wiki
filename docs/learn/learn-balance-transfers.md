@@ -62,7 +62,7 @@ The signed extrinsic will then be available as a QR code that needs to be shown 
 
 ![Companion transfer](../assets/accounts/signer-transaction.png)
 
-If you imported your Parity Signer account to [Parity Signer Companion](https://parity.link/signer-companion), you will be presented with a popup window with a QR code as shown below.
+If your account was setup on [Parity Signer Companion](https://parity.link/signer-companion) instead of Polkadot-JS Apps, you will see a pop-up window with a QR code, as shown below for this transaction.
 
 ![Companion transfer](../assets/accounts/companion-transfer.png)
 
