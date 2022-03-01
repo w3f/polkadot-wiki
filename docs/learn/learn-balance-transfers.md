@@ -42,7 +42,7 @@ is included in a block you will see a green notification in the top-right corner
 ### Signing on Polkadot Extension
 
 If you inject your account in Polkadot-JS Apps through the Polkadot-JS Extension, you need to sign the balance transfer transaction
-on the popup window. You can examine the method and info dropdowns highlighted in the screenshot below and ensure they match with the original transaction submitted. Sign the transaction by entering the password for the account set for this account when it was created on the Polkadot Extension.
+on the pop-up window. You can examine the method and info dropdowns (highlighted in the screenshot below) and ensure they match with the original transaction submission. Then, sign the transaction by entering the account password.
 
 ![extension transfer](../assets/accounts/extenstion-transaction.png)
 
