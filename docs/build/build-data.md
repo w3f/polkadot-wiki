@@ -28,6 +28,11 @@ chain-agnostic data aggregation, indexing, and querying layer between blockchain
 SubQuery abstracts away blockchain-specific data idiosyncrasies using the 
 [SubQuery SDK](https://github.com/subquery/subql).
 
+### Web3Go
+
+[Web3GO](https://web3go.xyz/) is a Polkadot-based open data analytics platform that provides 
+infrastructure and tooling to help users visualize, curate, share, and analyze on-chain data.
+
 ### The Graph
 
 [The Graph](https://thegraph.com/en/) is a layer-1 indexing tool and querying layer for the 
