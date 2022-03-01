@@ -66,7 +66,7 @@ If you imported your Parity Signer account to [Parity Signer Companion](https://
 
 ![Companion transfer](../assets/accounts/companion-transfer.png)
 
-Scan this QR code on the Parity Signer app on your phone and you will be presented with a QR code consisting of the signed extrinsic for this transaction. Click on the **next to signing** button in the popup window shown above. You can then show the QR code on your phone within the red square window.
+Scan the QR code using Parity Signer. You will see a QR code consisting of the signed extrinsic for this transaction. Click on the **next to signing** button in the pop-up window, as shown above. You can then show the QR code on your phone within the red square window.
 
 ![Companion transfer](../assets/accounts/companion-transfer2.png)
 
