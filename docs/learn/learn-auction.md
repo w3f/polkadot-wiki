@@ -31,53 +31,52 @@ extinguished and the candle went out, the auction would suddenly terminate and t
 that point would win.
 
 When candle auctions are used online, they require a random number to decide the moment of
-termination. Parachain slot auctions differ slightly from a normal candle auction in that it does not 
-use the random number to decide the duration of its opening phase. 
+termination. Parachain slot auctions differ slightly from a normal candle auction in that they do not randomly terminate the auction. Instead, they run for an entire fixed duration and the winner is chosen retroactively.
 
-The candle auction on Polkadot is split into two parts: the *opening period* which is in 
-effect immediately after the auction starts. This period lasts for one day and eighteen hours and 
-serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing 
-their strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted, 
+The candle auction on Polkadot is split into two parts: the *opening period* which is in
+effect immediately after the auction starts. This period lasts for one day and eighteen hours and
+serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing
+their strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted,
 but they do not have any effect on the outcome of the auction.
 
-The opening period then transitions into an *ending period* of five days, where the auction is subject 
-to end based on the candle auction mechanism. 
+The opening period then transitions into an *ending period* of five days, where the auction is subject
+to end based on the candle auction mechanism.
 
-The auction’s ending time can be any time within this ending period, and is automatically and randomly 
-chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The probability of winning 
-the auction is equal to the number of blocks with a winning bid divided by the total number of blocks in 
-the ending period. The random ending is managed by propagating through the entire ending period, where a 
-snapshot is taken at each block within the ending period to capture the winners during that block. At the 
+The auction’s ending time can be any time within this ending period, and is automatically and randomly
+chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The probability of winning
+the auction is equal to the number of blocks with a winning bid divided by the total number of blocks in
+the ending period. The random ending is managed by propagating through the entire ending period, where a
+snapshot is taken at each block within the ending period to capture the winners during that block. At the
 end of the period, one of the snapshots is randomly selected to determine the winner of the auction.
 
-This process is executes six hours right after the ending period. 
-**The parachain candidate with the highest bid at the ending time chosen by the VRF wins the slot auction**. 
-> [Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made during 
+This process is executed in the next epoch (which lasts for six hours on Polkadot) after the ending period. 
+**The parachain candidate with the highest bid at the ending time chosen by the VRF wins the slot auction**.
+> [Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made during
 > these six hours when the winning block for the auction is being determined on-chain.
-  
-With one day and eighteen hours for the starting period, five days for the ending period (candle auction 
-phase) and six hours for determining the auction winner, a parachain auction on Polkadot lasts exactly one week 
+
+With one day and eighteen hours for the starting period, five days for the ending period (candle auction
+phase) and six hours for determining the auction winner, a parachain auction on Polkadot lasts exactly one week
 from the start.
 
 More details on this is available in the [Polkadot Implementation](#polkadot-implementation) section.
 
 ### [Randomness](learn-randomness.md) in action
 
-The following example will showcase the randomness mechanics of the candle auction for 
-the ninth auction on Kusama. Keep in mind that the candle phase has a uniform termination 
-profile and has an equal probability of ending at any given block, and the termination block 
+The following example will showcase the randomness mechanics of the candle auction for
+the ninth auction on Kusama. Keep in mind that the candle phase has a uniform termination
+profile and has an equal probability of ending at any given block, and the termination block
 cannot be predicted before or during the auction.
 
 - Auction 9 starts at [`block 9362014`](https://kusama.subscan.io/extrinsic/0x7b67d653c9522b623a97e20a967b83a8517fe3821370475ddb6611cd37c29a03?event=9335014-26).
-  > The auction has a full duration equal to `block 9362014` + `72000`. 
-  > Here, `block 72000` is the "ending period", which is divided into **3600 samples of 20 blocks**. 
+  > The auction has a full duration equal to `block 9362014` + `72000`.
+  > Here, `block 72000` is the "ending period", which is divided into **3600 samples of 20 blocks**.
   > Figuratively, the candle is lit, and the candle phase lasts for 72,000 blocks.
 - The winning sample during the ending period turned out to have the `index 1078`.
   > Sample 1078 refers to the winner as of `block 9362014 + 21560`, which equals
   > [`block 9383574`](https://kusama.subscan.io/block/9383574).
-- The parent block was a new BABE session in the 'Logs', which updated the randomness that was used to 
+- The parent block was a new BABE session in the 'Logs', which updated the randomness that was used to
   select that [sample index](https://kusama.subscan.io/block/9434277).
-  > You'd be able to inspect the state at the end of `block 9434277` and see the sample indices with 
+  > You'd be able to inspect the state at the end of `block 9434277` and see the sample indices with
   > an [archive node](../maintain/maintain-sync.md####types-of-nodes).
   > The digest in the 'Logs' of `9434277` is decodable and contains the random value as well as the BABE
   > authorities.
@@ -108,8 +107,8 @@ to *grief* honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the 
-two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows 
+names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the
+two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows
 smart contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but not when the auction will
@@ -276,8 +275,7 @@ their slots as they would be considered essential to the ecosystem's future.
 
 - [Parachain Allocation](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/3-parachain-allocation.html) -
   W3F research page on parachain allocation that goes more in depth to the mechanism
-- [Research Update: The Case for Candle Auctions](https://polkadot.network/blog/research-update-the-case-for-candle-auctions/) - 
+- [Research Update: The Case for Candle Auctions](https://polkadot.network/blog/research-update-the-case-for-candle-auctions/) -
   W3F breakdown and research update about candle auctions
 - [Front-Running, Smart Contracts, and Candle Auctions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3846363)
   W3F Research team discusses how to remedy current blockchain auction setbacks with candle auctions
-  
