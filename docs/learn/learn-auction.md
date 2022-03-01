@@ -44,12 +44,11 @@ The opening period then transitions into an *ending period* of five days, where 
 to end based on the candle auction mechanism. 
 
 The auction’s ending time can be any time within this ending period, and is automatically and randomly 
-chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). 
-"The probability of winning the auction is equal to the number of blocks with a winning bid divided by the total number of blocks in the ending period." 
-The random ending is managed 
-by propagating through the entire ending period, where a snapshot is taken at each block within the 
-ending period to capture the winners during that block. At the end of the period, one of the snapshots 
-is randomly selected to determine the winner of the auction.
+chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The probability of winning 
+the auction is equal to the number of blocks with a winning bid divided by the total number of blocks in 
+the ending period. The random ending is managed by propagating through the entire ending period, where a 
+snapshot is taken at each block within the ending period to capture the winners during that block. At the 
+end of the period, one of the snapshots is randomly selected to determine the winner of the auction.
 
 This process is executes six hours right after the ending period. 
 **The parachain candidate with the highest bid at the ending time chosen by the VRF wins the slot auction**. 
