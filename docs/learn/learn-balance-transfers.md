@@ -50,7 +50,7 @@ on the pop-up window. You can examine the method and info dropdowns (highlighted
 
 Assuming that you have imported your Ledger account to the Polkadot-JS Extension, you will see a pop-up window for signing the balance transfer transaction. Review the transaction details on the Ledger device and approve it to sign the transaction.
 
-> If you are looking for instructions in a video, watch the tutorial on how to connect [Ledger to Polkadot JS UI](https://youtu.be/7VlTncHCGPc).
+> If you are looking for instructions in a video, watch the tutorial on how to connect [Ledger to Polkadot-JS Apps](https://youtu.be/7VlTncHCGPc).
 
 ![Ledger transfer](../assets/accounts/ledger-transaction.png)
 
