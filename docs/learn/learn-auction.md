@@ -20,7 +20,7 @@ secure on a blockchain.
 
 [![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
 
-## Mechanics of a Candle auction
+## Mechanics of a Candle Auction
 
 Candle auctions are a variant of open auctions where bidders submit bids that are increasingly
 higher and the highest bidder at the conclusion of the auction is considered the winner.
@@ -37,9 +37,9 @@ use the random number to decide the duration of its opening phase.
 The candle auction on Polkadot is split into two parts: the *opening period* which is in 
 effect immediately after the auction starts. This period lasts for one day and eighteen hours and 
 serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing 
-their strategy on how to win the slot auction. So during the open phase, bids will continue to be accepted, 
-but later bids have higher probability of losing since they are retroactively determined close moment 
-may be found to have preceded the time that a bid was submitted. 
+their strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted. 
+During the ending period, later bids have a higher probability of losing since they are retroactively 
+determined close moment may be found to have preceded the time that a bid was submitted. 
 
 The opening period then transitions into an *ending period* of five days, where the auction is subject 
 to end based on the candle auction mechanism. 
@@ -61,7 +61,7 @@ from the start.
 
 More details on this is available in the [Polkadot Implementation](#polkadot-implementation) section.
 
-### [Randomness](learn-randomness.md) in Action
+### [Randomness](learn-randomness.md) in action
 
 The following example will showcase the randomness mechanics of the candle auction for 
 the ninth auction on Kusama. Keep in mind that the candle phase has a uniform termination 
