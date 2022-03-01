@@ -33,7 +33,7 @@ that point would win.
 When candle auctions are used online, they require a random number to decide the moment of
 termination. Parachain slot auctions differ slightly from a normal candle auction in that they do
 not randomly terminate the auction. Instead, they run for an entire fixed duration and the winner is
-chosen retroactively.
+randomly chosen retroactively.
 
 The candle auction on Polkadot is split into two parts: the _opening period_ which is in effect
 immediately after the auction starts. This period lasts for one day and eighteen hours and serves as
