@@ -92,7 +92,7 @@
     "replace-in-file": "^6.3.2",
     "set-value": "^4.1.0",
     "trim": "^1.0.1",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   },
   "husky": {
     "hooks": {
