@@ -54,7 +54,7 @@ Assuming that you have imported your Ledger account to the Polkadot-JS Extension
 
 ![Ledger transfer](../assets/accounts/ledger-transaction.png)
 
-### Signing on Parity Signer App
+### Signing Transactions with Parity Signer
 
 If you imported your Parity Signer account to Polkadot JS UI directly, you will be presented with a popup window with a QR code and a camera window as shown below.
 Open QR scanner on your phone's Parity Signer app and scan the QR code presented. You may be prompted to enter your PIN to sign the transaction.
