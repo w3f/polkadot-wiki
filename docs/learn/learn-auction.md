@@ -52,7 +52,7 @@ entire ending period, where a snapshot is taken at each block within the ending 
 the winners during that block. At the end of the period, one of the snapshots is randomly selected
 to determine the winner of the auction.
 
-This process is executed in the next epoch (which lasts for six hours on Polkadot) after the ending
+This process executes in the next epoch (which lasts for six hours on Polkadot) after the ending
 period. **The parachain candidate with the highest bid at the ending time chosen by the VRF wins the
 slot auction**.
 
