@@ -37,15 +37,16 @@ use the random number to decide the duration of its opening phase.
 The candle auction on Polkadot is split into two parts: the *opening period* which is in 
 effect immediately after the auction starts. This period lasts for one day and eighteen hours and 
 serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing 
-their strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted, but they do not have any effect on the outcome of the auction.
-During the ending period, later bids have a higher probability of losing since they are retroactively 
-determined close moment may be found to have preceded the time that a bid was submitted. 
+their strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted, 
+but they do not have any effect on the outcome of the auction.
 
 The opening period then transitions into an *ending period* of five days, where the auction is subject 
 to end based on the candle auction mechanism. 
 
 The auction’s ending time can be any time within this ending period, and is automatically and randomly 
-chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The random ending is managed 
+chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). During the ending period, 
+later bids have a higher probability of losing since they are retroactively determined close moment may 
+be found to have preceded the time that a bid was submitted. The random ending is managed 
 by propagating through the entire ending period, where a snapshot is taken at each block within the 
 ending period to capture the winners during that block. At the end of the period, one of the snapshots 
 is randomly selected to determine the winner of the auction.
