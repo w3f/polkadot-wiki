@@ -30,7 +30,8 @@ SubQuery abstracts away blockchain-specific data idiosyncrasies using the
 
 ### Web3Go
 
-[Web3GO](https://web3go.xyz/) is a Polkadot-based open data analytics platform that provides infrastructure and tooling to help users visualize, curate, share, and analyze on-chain data.
+[Web3GO](https://web3go.xyz/) is a Polkadot-based open data analytics platform that provides 
+infrastructure and tooling to help users visualize, curate, share, and analyze on-chain data.
 
 ### The Graph
 
