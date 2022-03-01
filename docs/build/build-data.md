@@ -32,7 +32,6 @@ SubQuery abstracts away blockchain-specific data idiosyncrasies using the
 
 [Web3GO](https://web3go.xyz/) Web3Go is a data analytics platform on Polkadot focused on building professional dashboards and providing the tools and API to help users easily visualize, curate, and share data. currently, Web3Go focuses on building the infrastructure for data from the Polkadot ecosystem. 
 
-
 ### The Graph
 
 [The Graph](https://thegraph.com/en/) is a layer-1 indexing tool and querying layer for the 
