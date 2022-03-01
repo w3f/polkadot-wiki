@@ -18,9 +18,9 @@ The parachain slots will be sold according to an unpermissioned
 [candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
 secure on a blockchain.
 
-[![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/bsoxJw0rayk/0.jpg)](https://youtu.be/bsoxJw0rayk)
+[![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
 
-## Mechanics of a Candle auction
+## Mechanics of a Candle Auction
 
 Candle auctions are a variant of open auctions where bidders submit bids that are increasingly
 higher and the highest bidder at the conclusion of the auction is considered the winner.
@@ -31,16 +31,37 @@ extinguished and the candle went out, the auction would suddenly terminate and t
 that point would win.
 
 When candle auctions are used online, they require a random number to decide the moment of
-termination.
+termination. Parachain slot auctions differ slightly from a normal candle auction in that it does not 
+use the random number to decide the duration of its opening phase. 
 
-Parachain slot auctions differ slightly from a normal candle auction in that it does not use
-the random number to decide the duration of its opening phase. Instead, it has a *known open phase*
-and will be retroactively determined (at the normal close) to have ended at some point in the past
-during the ending phase. So during the open phase, bids will continue to be accepted, but later bids
-have higher probability of losing since the retroactively determined close moment may be found to
-have preceded the time that a bid was submitted.
+The candle auction on Polkadot is split into two parts: the *opening period* which is in 
+effect immediately after the auction starts. This period lasts for one day and eighteen hours and 
+serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing 
+their strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted, 
+but they do not have any effect on the outcome of the auction.
 
-### [Randomness](learn-randomness.md) in Action
+The opening period then transitions into an *ending period* of five days, where the auction is subject 
+to end based on the candle auction mechanism. 
+
+The auction’s ending time can be any time within this ending period, and is automatically and randomly 
+chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The probability of winning 
+the auction is equal to the number of blocks with a winning bid divided by the total number of blocks in 
+the ending period. The random ending is managed by propagating through the entire ending period, where a 
+snapshot is taken at each block within the ending period to capture the winners during that block. At the 
+end of the period, one of the snapshots is randomly selected to determine the winner of the auction.
+
+This process is executes six hours right after the ending period. 
+**The parachain candidate with the highest bid at the ending time chosen by the VRF wins the slot auction**. 
+> [Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made during 
+> these six hours when the winning block for the auction is being determined on-chain.
+  
+With one day and eighteen hours for the starting period, five days for the ending period (candle auction 
+phase) and six hours for determining the auction winner, a parachain auction on Polkadot lasts exactly one week 
+from the start.
+
+More details on this is available in the [Polkadot Implementation](#polkadot-implementation) section.
+
+### [Randomness](learn-randomness.md) in action
 
 The following example will showcase the randomness mechanics of the candle auction for 
 the ninth auction on Kusama. Keep in mind that the candle phase has a uniform termination 
@@ -87,9 +108,9 @@ to *grief* honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of
 second price auction in which bids are hidden and only revealed in a later phase, have emerged as a
 well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable
-names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the two-step
-commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart
-contracts to participate.
+names on the [ENS](../general/ens.md). The Candle auction is another solution that does not need the 
+two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows 
+smart contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but not when the auction will
 be determined to have ended. This helps to ensure that bidders are willing to bid their true bids
