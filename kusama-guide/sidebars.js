@@ -16,11 +16,20 @@ module.exports = {
         "learn/learn-crowdloans",
         "general/ens",
         "general/kusama/kusama-parameters",
-        "general/doc-thousand-validators",
         "general/kusama/kusama-timeline",
         "general/kusama/kusama-community",
         "general/ambassadors",
         "maintain/kusama/maintain-guides-society-kusama",
+        {
+          type: "category",
+          label: "Programmes",
+          items: [
+            "general/grants",
+            "general/builders-program",
+            "general/doc-thousand-validators",
+            "general/doc-thousand-contributors",
+            ],  
+        },
       ],
     },
     {
