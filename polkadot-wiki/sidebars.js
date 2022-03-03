@@ -7,7 +7,6 @@ module.exports = {
         "general/getting-started",
         "general/claims",
         "general/redenomination",
-        "general/grants",
         "general/ambassadors",
         "general/research",
         "general/community",
@@ -18,8 +17,17 @@ module.exports = {
         "general/ledger",
         "general/scams",
         "general/how-to-dyor",
-        "general/doc-thousand-validators",
         "general/faq",
+        {
+          type: "category",
+          label: "Programmes",
+          items: [
+            "general/grants",
+            "general/builders-program",
+            "general/doc-thousand-validators",
+            "general/doc-thousand-contributors",
+            ],  
+        },
       ],
     },
     {
