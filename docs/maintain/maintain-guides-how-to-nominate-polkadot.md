@@ -130,7 +130,7 @@ are available [here](maintain-guides-how-to-unbond.md).
 
 > The following videos related to staking are also available for your reference:
 > 
-> - [Staking with a Ledger and PolkadotJS Apps](https://www.youtube.com/watch?v=VN4S8MofEW8)
+> - [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
 > - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
 ## Using Command-Line Interface (CLI)
