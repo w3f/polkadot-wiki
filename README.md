@@ -77,7 +77,7 @@ After cloning the source locally, you can start the websites with each of these 
 Using yarn, run:
 
 ```bash
-yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest`.
+yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
 ### Build
