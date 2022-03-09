@@ -161,7 +161,6 @@ module.exports = {
       },
     },
     algolia: {
-      appId: 'BEUYRRAUZN',
       apiKey: '8bfa06b56bb8f33e5698c7f40b00b38f',
       indexName: 'polkadot',
       algoliaOptions: {
