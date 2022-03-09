@@ -171,7 +171,8 @@ your tokens, the stronger your vote will be weighted. The timeline for the convi
 the voting period ends; tokens used for voting will always be locked until the end of the voting
 period, no matter what conviction you vote with. Unwillingness to lock your tokens means that your
 vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days means
-you can make your vote count for 600% of the tokens that you hold.
+you can make your vote count for 600% of the tokens that you hold. It is possible to vote with
+tokens already locked by staking.
 
 When you are comfortable with the decision you have made, click the blue "Vote" button to submit
 your transaction and wait for it to be included in a block.
