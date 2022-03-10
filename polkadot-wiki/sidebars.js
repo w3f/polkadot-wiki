@@ -42,6 +42,7 @@ module.exports = {
             "learn/learn-security",
             "learn/learn-consensus",
             "learn/learn-nominator",
+            "learn/learn-staking-faq",
             "learn/learn-validator",
             "learn/learn-collator",
             "learn/learn-governance",
