@@ -49,7 +49,7 @@ Only the top 256 nominators of a Validator receive the staking rewards. If your 
 
 ### Min-Active Nomination Threshold is not met
 
-With the [bags-list implementation](https://github.com/paritytech/substrate/pull/9507), the minimum stake threshold to earn staking rewards can change with each era. Do not confuse this with min-intention-threshold (10 DOT) which is required to submit your intention to nominate. The network supports 50,000 nominator intentions, but can reward only up to 22500 nominators in any given era. If you nominate with, say 50 DOT, you are not guaranteed to be part of the top 22500 and hence you may not earn staking rewards. The entry barrier to be an electing nominator is now determined dynamically, based on market demand.
+With the [bags-list implementation](https://github.com/paritytech/substrate/pull/9507), the minimum stake threshold to earn staking rewards can change with each era. Do not confuse this with min-intention-threshold (10 DOT) which is required to submit your intention to nominate. The network supports 50,000 nominator intentions, but can reward at most 22500 nominators in any given era. If you nominate with, say 50 DOT, you are not guaranteed to be part of the top 22500 and hence you may not earn staking rewards. The entry barrier to be an electing nominator is now determined dynamically, based on market demand.
 
 The nominator intentions (up to 50,000) serve as a waitlist for the electing subset (22,500) which receives rewards in each era. Having more number of nominator intentions than the electing subset allows for the dynamic staking system to have some flexibility. For example, assume the top 1000 nominators all unbond their stake, having that extra buffer of nomination intentions becomes useful.
 
