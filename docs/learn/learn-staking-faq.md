@@ -21,7 +21,7 @@ You will earn rewards when your stake is applied to one or multiple validators t
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
-If you choose to stake through custodial services like central exchanges, you may not have to follow the steps above. By staking through the custodial service, you place your trust in them to act in the best interests of you and the network. Make surre you thoroughly read the terms and conditions to understand the risks associated with the respective custodial staking service. (Not your keys, Not your tokens!).
+If you choose to stake through custodial services like central exchanges, you may not have to follow the steps above. By staking through the custodial services, you place your trust in them to act in the best interests of you and the network. Make sure you thoroughly read the terms and conditions to understand the risks associated with the respective custodial staking service. (Not your keys, Not your tokens!).
 
 ## 2. When do I get slashed?
 
@@ -41,7 +41,7 @@ If none of the validators you nominated made it to the active set in an era, you
 
 ### Nominated a validator with 100% commission
 
-When you nominated a validator who takes 100% commission on staking rewards, you will not receive any staking reward for the eras when your nomination is applied to that specific validator.
+When you nominate a validator who takes 100% commission on staking rewards, you will not receive any staking reward for the eras when your nomination is applied to that specific validator.
 
 ### Nominated an oversubscribed validator
 
@@ -52,5 +52,17 @@ Only the top 256 nominators of a Validator receive the staking rewards. If your 
 With the [bags-list implementation](https://github.com/paritytech/substrate/pull/9507), the minimum stake threshold to earn staking rewards can change with each era. Do not confuse this with min-intention-threshold (10 DOT) which is required to submit your intention to nominate. The network supports 50,000 nominator intentions, but can reward only up to 22500 nominators in any given era. If you nominate with, say 50 DOT, you are not guaranteed to be part of the top 22500 and hence you may not earn staking rewards. The entry barrier to be an electing nominator is now determined dynamically, based on market demand.
 
 The nominator intentions (up to 50,000) serve as a waitlist for the electing subset (22,500) which receives rewards in each era. Having more number of nominator intentions than the electing subset allows for the dynamic staking system to have some flexibility. For example, assume the top 1000 nominators all unbond their stake, having that extra buffer of nomination intentions becomes useful.
+
+
+## 4. Any plans to reward every single nominator (instead of just top 22,500)?
+
+Yes! Polkadot's staking system is among the most complex in the blockchain ecosystem. The relay chain's validator set is securing not just the state transition of the relay chain itself, but also a potentially large number of parallel chains, or parachains for short. Since security is its main goal, Polkadot has been designed with a complex, and strict staking system, optimized for locking the most amount of tokens at stake while spreading that stake as evenly as possible to maximize decentralization - all with the goal of effectively minimizing the possibility of the validator set becoming compromised. 
+
+With the current implementation, the optimal election solution of the complex graph of nominator and validator mappings needs to be evaluated within a single block execution time on Polkadot network. Based on network benchmarks, 22,500 is chosen as a conservative estimate for the maximum number of nominators in the staking election solution. As maximizing the total stake on the network is one of the key objectives, this mechanism favors the nominators with higher stakes. 
+
+To make sure every nominator gets rewarded, the immediate solution being worked on is Nomination/Staking pools, which are still in progress [here](https://github.com/paritytech/substrate/pull/10694). There are also proposals to perform [multi-block election and having a dedicated common-good parachain for NPoS](https://github.com/paritytech/substrate/issues/9511) on Polkadot. 
+
+
+
 
 
