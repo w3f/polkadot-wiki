@@ -54,7 +54,7 @@ With the [bags-list implementation](https://github.com/paritytech/substrate/pull
 The nominator intentions (up to 50,000) serve as a waitlist for the electing subset (22,500) which receives rewards in each era. Having more number of nominator intentions than the electing subset allows for the dynamic staking system to have some flexibility. For example, assume the top 1000 nominators all unbond their stake, having that extra buffer of nomination intentions becomes useful.
 
 
-## 4. Any plans to reward every single nominator (instead of just top 22,500)?
+## 4. Any plans to reward every single nominator?
 
 Yes! Polkadot's staking system is among the most complex in the blockchain ecosystem. The relay chain's validator set is securing not just the state transition of the relay chain itself, but also a potentially large number of parallel chains, or parachains for short. Since security is its main goal, Polkadot has been designed with a complex, and strict staking system, optimized for locking the most amount of tokens at stake while spreading that stake as evenly as possible to maximize decentralization - all with the goal of effectively minimizing the possibility of the validator set becoming compromised. 
 
