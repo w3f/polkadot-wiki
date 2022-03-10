@@ -13,7 +13,7 @@ slug: ../learn-staking-faq
 
 Thanks for considering to nominate and stake your DOT to secure the Polkadot Network and its parachains. The success of Nominated Proof of Staking (NPoS) relies on well informed nominators. To directly submit your intent to stake on Polkadot, you should
 
--  have an account on a non-custodial wallet that supports staking. Watch this tutorial on [creating an account on Polkadot-JS Extension](https://youtu.be/sy7lvAqyzkY).
+-  have an account on a [non-custodial wallet](../build/build-wallets.md) that supports staking. If you are a beginner, watch this tutorial on [creating an account on Polkadot-JS Extension](https://youtu.be/sy7lvAqyzkY).
 -  have more DOT than min-intention-threshold. This is a strict threshold decided by the chain protocol, which is now 10 DOT.
 -  bond and nominate your DOT to Validators who are accepting nominations (you can choose up to 16). Read this article on [how to choose validators](https://support.polkadot.network/support/solutions/articles/65000150130).
 
