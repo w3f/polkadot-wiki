@@ -73,6 +73,10 @@ available for querying via the Polkadot API, so you don't have to rely on the Po
 
 You can have a maximum of 100 custom fields.
 
+> _Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a primary
+>  identity with an on-chain account and then using that primary identity then assign a sub-identity to
+>  the ledger stash. Check this [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) for more information_ 
+
 ### Format Caveat
 
 Please note the following caveat: because the fields support different formats, from raw bytes to
