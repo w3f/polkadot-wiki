@@ -52,8 +52,8 @@ future staking plans, tooling used, or a number of additional topics. Having a d
 additionally to provide this sort of information is ideal.
 
 > _Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a primary
->  identity with an on-chain account and then using that primary identity then assign a sub-identity to
->  the ledger stash. Check this [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) for more information_ 
+>  identity with an on-chain account and then using that primary identity, assign a sub-identity to the
+>  ledger stash. Check this [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) for more information_ 
 
 
 ### Website
