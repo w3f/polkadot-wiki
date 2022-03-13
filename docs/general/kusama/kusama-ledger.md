@@ -244,8 +244,8 @@ click on set subs button.
 - Sign and submit the transaction from the parent account with the identity
 
 You should now see the sub-identity displayed on-chain. You need to aware that 0.033 KSM is reserved for setting 
-identity and 0.006 KSM for each sub-identity. This reserved account balance is freed once you [clear the identities]
-(../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
+identity and 0.006 KSM for each sub-identity. This reserved account balance is freed once you 
+[clear the identities](../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
 
 ![Sub-identity example](../../assets/identity/sub-id-3.png)
 
