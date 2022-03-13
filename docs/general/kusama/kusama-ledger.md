@@ -236,16 +236,17 @@ it to set a sub-identity to your Ledger account.
 
 - Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to the account
 to which you already set identity. You should see an option to set onchain sub-identities. Click on it.
-![Add sub-identity in PolkadotJS](../../assets/identity/sub-id-1.png)
+
+  ![Add sub-identity in PolkadotJS](../../assets/identity/sub-id-1.png)
 - In the pop-up window, select your Ledger account from the dropdown and enter text in sub name field. Then,
 click on set subs button.
-![Set sub-identity in PolkadotJS](../../assets/identity/sub-id-2.png)
-- Sign and submit the transaction from the parent account with the identity (Ensure it has the required balance
-reserved for setting sub-identy, which is )
+  ![Set sub-identity in PolkadotJS](../../assets/identity/sub-id-2.png)
+- Sign and submit the transaction from the parent account with the identity
 
 You should now see the sub-identity displayed on-chain. You need to aware that 0.033 KSM is reserved for setting 
 identity and 0.006 KSM for each sub-identity. This reserved account balance is freed once you [clear the identities]
 (../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
+
 ![Sub-identity example](../../assets/identity/sub-id-3.png)
 
 
