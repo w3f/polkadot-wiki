@@ -47,7 +47,7 @@ We recommend using [nvm][] as a tool to manage different NodeJS versions across 
 
 ```
 sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 node -v  (Check your node version)
 ```
@@ -56,7 +56,7 @@ node -v  (Check your node version)
 
 ```
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
 sudo apt install yarn
 ```
@@ -65,8 +65,8 @@ sudo apt install yarn
 
 ```
 sudo apt-get install unzip
-wget https://releases.hashicorp.com/terraform/0.12.16/terraform_0.12.16_linux_amd64.zip
-unzip terraform_0.12.16_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_linux_amd64.zip
+unzip terraform_1.1.7_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 terraform --version  (Check whether it is configured properly)
 ```
@@ -87,7 +87,7 @@ sudo apt-get install python -y
 The first step is to clone the `polkadot-validator-setup` guide locally.
 
 ```zsh
-$ git clone git@github.com:w3f/polkadot-secure-validator.git
+$ git clone https://github.com/w3f/polkadot-validator-setup.git
 ```
 
 Now you can `cd` into the `polkadot-validator-setup` directory and start to change the
