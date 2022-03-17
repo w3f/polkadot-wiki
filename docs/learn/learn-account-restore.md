@@ -10,8 +10,8 @@ Depending on what software you are using to access your account, there are vario
 and restore your account. It is a good idea to back your information up and keep it in a secure
 place.. Note that in order to recover an account, you should create your account according to the
 instructions [here](learn-account-generation.md). In general, however, as long as you know how you
-created your account, and have the seed phrase (mnemonic phrase) or JSON file (and password) stored
-securely, you will be able to restore your account.
+created your account, and have the seed phrase ([mnemonic phrase](learn-accounts#portability)) or 
+JSON file (and password) stored securely, you will be able to restore your account.
 
 This page covers backing up and restoring accounts in Polkadot{.js} Browser Plugin, Polkadot-JS UI,
 and Parity Signer. For other wallet applications, please see their specific documentation.
@@ -37,7 +37,7 @@ on the + button at the top. This will open up a menu with several choices - sele
 from backup JSON file". The program then prompts you for the `.json` file which was download earlier
 and the password for that account.
 
-![restore-account-plugin](../assets/accounts/polkadot.js_restore_account.png)
+![restore-account-plugin](../assets/accounts/backing_up_and_restoring/extension_restore.png)
 
 Once these are filled out, and the "Restore" button has been pressed, you'll be taken back to the
 main page of the plugin. This account will now be listed with the rest of your accounts.
@@ -55,7 +55,7 @@ and enter your password for that account. This `.json` file holds all relevant d
 account to be used in account restoration. Note that you will need to enter your password here; the
 file cannot be unencrypted without it.
 
-![restore-account-polkadot](../assets/accounts/polkadot_restore_account.png)
+![restore-account-polkadot](../assets/accounts/backing_up_and_restoring/via_json.png)
 
 After you press the "Restore" button, you should see a green notification letting you know that your
 account has been restored. It will now be included in your accounts list on this browser.
@@ -78,7 +78,14 @@ creating a new account, rather adding that account onto the Polkadot-JS UI. Any 
 same seed words will have control over that account on-chain. This is why it is so important to keep
 your seed words secret and safe.
 
-![restore-using-json](../assets/accounts/polkadot-js-existing-json.png)
+Step 1
+![restore-using-json](../assets/accounts/backing_up_and_restoring/via_existing_seed_1.png)
+
+Step 2
+![restore-using-json](../assets/accounts/backing_up_and_restoring/via_existing_seed_2.png)
+
+Step 3
+![restore-using-json](../assets/accounts/backing_up_and_restoring/via_existing_seed_3.png)
 
 Finally, click the "Save" button, then click the "Create and backup account" button. This will
 download the `.json` file which contains the data to be used in account restoration. You can use
@@ -105,3 +112,41 @@ Set an identity PIN that will be used to unlock this account when you need to.
 ![restore-using-parity](../assets/parity_Signer_restore2.PNG)
 
 The identity has now been recovered and you can select a network to create the first account.
+
+## Transferring Polkadot-JS Apps Accounts/Addresses From One Computer to Another
+
+> **Note:** Note: This will overwrite any existing accounts with the same pubkey on your new computer. 
+> This generally should not make a difference (since it can still access the same account), but might if you 
+> have e.g. an account which was stored externally in the extension on the old computer but was created 
+> directly in browser on the new one.
+
+This has been tested on Brave and Chrome, but not other browsers.
+
+1. Go to Polkadot-JS Apps
+2. Go to JavaScript console (on Brave, NOT on Polkadot-JS)
+3. Type in the command JSON.stringify(localStorage)
+4. Copy and paste the returned string to a text editor.
+5. Check that the string you pasted both begins and ends with a tick mark ('). If not, add one to the beginning and end.
+6. Save and send that JSON file to the new computer.
+7. On new computer, go to Polkadot-JS Apps
+8. Open the Javascript console
+9. Set a variable raw equal to the JSON you created =
+
+```
+raw = ... copy-pasted json from original computer ...
+```
+
+10. Run the following code:
+
+```
+accounts = JSON.parse(raw);
+for (var key in accounts) {
+    if (accounts.hasOwnProperty(key)) {
+        val = JSON.stringify(accounts[key]).replace(/\\/g,'').slice(1,-1);
+        console.log(key + " -> " + val);
+        localStorage.setItem(key, val);
+    }
+}
+```
+
+11. Refresh Polkadot-JS App browser and check Accounts and Addresses pages. All of your accounts and addresses should now be available.
