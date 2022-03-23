@@ -168,12 +168,13 @@ on Polkadot.
 - **5 DOT**: the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
   for [parachain slot auctions](../learn/learn-auction.md).
 
+- **10 DOT**: the minimum stake required to submit your intent to nominate validators. But, to earn staking 
+  rewards, your stake should not be less than the minimum stake among the active nominators which is a dynamic
+  threshold. Learn more about [becoming a nominator](../learn/learn-nominator.md).
+
 - **20 DOT**: you can register an [on-chain identity](../learn/learn-identity.md) or vote for
   [council](../maintain/maintain-guides-how-to-vote-councillor.md).
 
-- **120 DOT**: you can nominate validators and earn staking rewards. Learn more on
-  [how to stake your DOT](../learn/learn-staking.md) and what it means to be a 
-  [nominator](../learn/learn-nominator.md).
 
 DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md).
 Bonding DOT is a requirement to create proposals, to second them and to vote on them when they
