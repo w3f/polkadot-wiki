@@ -74,7 +74,7 @@ updated via on-chain governance and the most recent and up to date version can b
 [chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query > staking > minimumNominatorBond**)
 
 - **min-electing:** minimum stake among the electing nominators. Since this is almost always the same as 
-“min-active”, it might not be reported
+“min-active”, it might not be reported.
 
 - **min-active:** minimum stake among the active nominators. If your stake falls below this dynamic threshold in
 a given era, you will not receive staking rewards for that era.
