@@ -67,7 +67,7 @@ sharing their rewards and slashes.
 
 Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to
 the fact that the solution set must fit in a single block, a minimum number of DOT will be required to 
-nominate with, in order to receive staking rewards can change between the eras.
+nominate with, in order to receive staking rewards, can change between the eras.
 
 - **min-intention-threshold:** minimum stake to declare the intention to nominate. This parameter can be 
 updated via on-chain governance and the most recent and up to date version can be found on 
