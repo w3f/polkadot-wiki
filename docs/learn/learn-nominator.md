@@ -58,7 +58,7 @@ a "nominator".
 - **electing nominator:** a nominator who is selected to be a part of the input to the NPoS election 
 algorithm. This selection is based on stake, and is done using the bags-list pallet.
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active validator, 
-sharing their rewards and slashes.
+sharing their rewards (if among the top 256 backers) and slashes.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
