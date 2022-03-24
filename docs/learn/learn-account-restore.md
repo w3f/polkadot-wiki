@@ -149,7 +149,12 @@ This has been tested on Brave and Chrome, but not other browsers.
 
 1. Go to Polkadot-JS Apps
 2. Go to JavaScript console on the browser (Available in Developer Tools)
-3. Type in the command JSON.stringify(localStorage)
+3. Type in the command:
+
+```
+JSON.stringify(localStorage)
+```
+
 4. Copy and paste the returned string to a text editor and save the file.
 5. Check that the string you pasted both begins and ends with a tick mark ('). If not, add one to the beginning and end.
 6. Save and send that file with the copied string to the new computer.
@@ -161,7 +166,7 @@ This has been tested on Brave and Chrome, but not other browsers.
 raw = ... copy-pasted json from original computer ...
 ```
 
-10. Run the following code:
+10. Run the following code on the console:
 
 ```
 accounts = JSON.parse(raw);
