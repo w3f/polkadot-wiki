@@ -62,9 +62,9 @@ account has been restored. It will now be included in your accounts list on this
 
 ![restore-complete-polkadot](../assets/accounts/polkadot_restore_complete.png)
 
-### Using an Existing Mnemonic Seed to Restore an Account with Polkadot.js Extension (Prefered)
+### Using an Existing Mnemonic Seed to Restore an Account with Polkadot.js Extension (Preferred)
 
-Using the Polkadot JS [Extension](https://polkadot.js.org/extension/) is the prefered way of managing
+Using the Polkadot JS [Extension](https://polkadot.js.org/extension/) is the preferred way of managing
 your accounts. So when restoring accounts using an existing seed phrase the extension is the way to go.
 
 Navigate to the polkadot.js extension and click the plus sign on the top right
