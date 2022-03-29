@@ -7,7 +7,7 @@ slug: ../../maintain-bug-bounty
 ---
 
 > Note: The bug bounty program does *not* cover bugs on code bases that are external to or, written 
-> on top of Polkadot, or that use Polkadot. To be eligable for the bug bounty program the bug has to
+> on top of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug has to
 > be a part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
 > GRANDPA, etc.
 

@@ -7,8 +7,8 @@ slug: ../../kusama-bug-bounty
 ---
 
 > Note: The bug bounty program does *not* cover bugs on code bases that are external to or, written 
-> on top of Kusama, or that use Kusama. To be eligable for the bug bounty program the bug has to
-> be a part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
+> on top of Kusama, or that use Kusama. To be eligible for the bug bounty program the bug has to
+> be a part of the Kusama codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
 > GRANDPA, etc.
 
 We call on our community and all bug bounty hunters to help identify bugs in Kusama.
