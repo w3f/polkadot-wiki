@@ -35,6 +35,26 @@ function from the Balances pallet will take:
 - `dest`: Destination address
 - `#[compact] value`: Number of tokens (compact encoding)
 
+**Serialized transaction format**
+Before being submitted, transactions are serialized. Serialized transactions are hex encoded SCALE-encoded bytes with the following format:
+- Compact encoded number of SCALE-encoded bytes following this.
+- 1 bit: it is a 0 if no signature is present, or a 1 if it is.
+- 7 bits: the transaction protocol version.
+- If there is a signature:
+  - a SCALE encoded `sp_runtime::MultiAddress::Id<AccountId32, u32>` indicating the signer(s) of the transaction.
+  - a SCALE encoded `sp_runtime::MultiSignature::S225519` with the signature.
+  - a SCALE encoded `sp_runtime::generic::Era` indicationg for how long this transaction will live in the pool.
+  - Compact encoded u32 with the nonce.
+  - Compact encoded u128 with the tip paid to the block producer.
+- The specific transaction parameters or call data, which consists of:
+  - 1 byte: the pallet index the transaction is calling into.
+  - 1 byte: the function in the pallet the transaction is calling.
+  - variable: the SCALE-encoded parameters required by the function being called.
+ 
+The metadata provides you with all of the information required to know how to construct the serialized call data specific to your transaction. You can read more about the metadata, its format and how to get it in the [Substrate documentation](https://docs.substrate.io/v3/runtime/metadata/). 
+
+**Summary**
+
 Once you have all the necessary information, you will need to:
 
 1. Construct an unsigned transaction.
