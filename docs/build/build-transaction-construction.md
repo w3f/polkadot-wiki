@@ -36,6 +36,7 @@ function from the Balances pallet will take:
 - `#[compact] value`: Number of tokens (compact encoding)
 
 **Serialized transaction format**
+
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded SCALE-encoded bytes with the following format:
 - Compact encoded number of SCALE-encoded bytes following this.
 - 1 bit: it is a 0 if no signature is present, or a 1 if it is.
@@ -44,8 +45,8 @@ Before being submitted, transactions are serialized. Serialized transactions are
   - a SCALE encoded `sp_runtime::MultiAddress::Id<AccountId32, u32>` indicating the signer(s) of the transaction.
   - a SCALE encoded `sp_runtime::MultiSignature::S225519` with the signature.
   - a SCALE encoded `sp_runtime::generic::Era` indicationg for how long this transaction will live in the pool.
-  - Compact encoded u32 with the nonce.
-  - Compact encoded u128 with the tip paid to the block producer.
+  - Compact encoded `u32` with the nonce.
+  - Compact encoded `u128` with the tip paid to the block producer.
 - The specific transaction parameters or call data, which consists of:
   - 1 byte: the pallet index the transaction is calling into.
   - 1 byte: the function in the pallet the transaction is calling.
