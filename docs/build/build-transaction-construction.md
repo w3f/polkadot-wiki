@@ -37,13 +37,13 @@ function from the Balances pallet will take:
 
 **Serialized transaction format**
 
-Before being submitted, transactions are serialized. Serialized transactions are hex encoded SCALE-encoded bytes with the following format:
+Before being submitted, transactions are serialized. Serialized transactions are hex encoded SCALE-encoded bytes. The specific serialization is defined in the runtime and can change if the runtime is upgraded, but in general the serialization format can be described as follows:
 - Compact encoded number of SCALE-encoded bytes following this.
 - 1 bit: it is a 0 if no signature is present, or a 1 if it is.
-- 7 bits: the transaction protocol version.
+- 7 bits: the transaction version.
 - If there is a signature:
   - a SCALE encoded `sp_runtime::MultiAddress::Id<AccountId32, u32>` indicating the signer(s) of the transaction.
-  - a SCALE encoded `sp_runtime::MultiSignature::S225519` with the signature.
+  - a SCALE encoded `sp_runtime::MultiSignature::{SigningScheme}` with the signature\*.
   - a SCALE encoded `sp_runtime::generic::Era` indicationg for how long this transaction will live in the pool.
   - Compact encoded `u32` with the nonce.
   - Compact encoded `u128` with the tip paid to the block producer.
@@ -52,7 +52,9 @@ Before being submitted, transactions are serialized. Serialized transactions are
   - 1 byte: the function in the pallet the transaction is calling.
   - variable: the SCALE-encoded parameters required by the function being called.
  
-The metadata provides you with all of the information required to know how to construct the serialized call data specific to your transaction. You can read more about the metadata, its format and how to get it in the [Substrate documentation](https://docs.substrate.io/v3/runtime/metadata/). 
+The metadata provides you with all of the information required to know how to construct the serialized call data specific to your transaction. You can read more about the metadata, its format and how to get it in the [Substrate documentation](https://docs.substrate.io/v3/runtime/metadata/).
+
+\* Polkadot supports sr25519, ed25519, and ECDSA as signing schemes. 
 
 **Summary**
 
