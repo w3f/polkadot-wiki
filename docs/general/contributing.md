@@ -11,7 +11,11 @@ to be the most extensive resource of knowledge on Polkadot and the Polkadot ecos
 of the material currently focuses on Polkadot directly but it is not opposed to covering
 informational material for community projects.
 
-**Please do not try to pull request any marketing material as this will be rejected.**
+:::caution Marketing material
+
+Please do not try to pull request any marketing material as this will be rejected.
+
+:::
 
 Nonetheless, pull requests, discussions, and contributions from the community are encouraged. Active
 community members who demonstrate a record of good contributions may be given write access to the
@@ -20,9 +24,13 @@ repository.
 Otherwise, Web3 Foundation holds the administrative position and final say on the content that is
 included. Specifically, the Technical Education team at the foundation are most directly involved.
 
-> Check out the
-> [How to Contribute to the Polkadot Wiki](https://www.youtube.com/watch?v=6i55KOcy7B0) video for
-> steps on contributions.
+:::note Contributing Explainer
+
+Check out the
+[How to Contribute to the Polkadot Wiki](https://www.youtube.com/watch?v=6i55KOcy7B0) video for
+steps on contributions.
+
+:::
 
 ## How to Contribute
 
@@ -72,8 +80,6 @@ There are a few basic ground-rules for contributors:
 
 This document is based on the
 [Level contribution guidelines](https://github.com/Level/community/blob/master/CONTRIBUTING.md).
-
----
 
 ---
 

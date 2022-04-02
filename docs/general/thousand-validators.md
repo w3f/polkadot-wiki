@@ -130,4 +130,3 @@ Since approximately early January 2021, the nominators will select an automatic 
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
 [polkadot 1kv form]: https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform
 [identity instructions]: ../learn/mirror-learn-identity.md#setting-an-identity
-

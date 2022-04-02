@@ -29,12 +29,16 @@ scammed, please get in contact via the [Polkadot Support page](https://support.p
    Often scammers will fake a website or a blog post, but if you check it against a secondary source 
    you will reduce the chances of being scammed.
 
-   > Important: With crowdloans active on the network, it is very important to know how to safely
-   > participate. Fake crowdloan campaigns may present an attractive target for scammers. If you are
-   > participating in a network-native crowdloan, **never send your tokens to an address.** Native
-   > crowdloan contributions are made with a special transaction using a campaign index, where the
-   > contributed assets remain locked until the end of the lease period. Legitimate teams will not
-   > ask you to send your assets to an address to participate in a network-native crowdloan.
+   :::caution
+
+   With crowdloans active on the network, it is very important to know how to safely
+   participate. Fake crowdloan campaigns may present an attractive target for scammers. If you are
+   participating in a network-native crowdloan, **never send your tokens to an address.** Native
+   crowdloan contributions are made with a special transaction using a campaign index, where the
+   contributed assets remain locked until the end of the lease period. Legitimate teams will not
+   ask you to send your assets to an address to participate in a network-native crowdloan.
+
+   :::
 
 ### Some Common Types of Scams
 
