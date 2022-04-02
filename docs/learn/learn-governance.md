@@ -414,7 +414,7 @@ The Technical Committee was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 Technical Committee is composed of the teams that have successfully implemented or specified either
-a {{ polkadot: Polkadot: polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are 
+a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are 
 added or removed from the Technical Committee via a simple majority vote of the [Council](#council).
 
 The Technical Committee can, along with the Council, produce emergency referenda, which are

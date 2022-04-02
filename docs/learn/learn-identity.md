@@ -73,6 +73,10 @@ available for querying via the Polkadot API, so you don't have to rely on the Po
 
 You can have a maximum of 100 custom fields.
 
+> _Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a primary
+>  identity with an on-chain account and then using that primary identity, assign a [sub-identity](#sub-accounts) 
+>  to the Ledger stash._ 
+
 ### Format Caveat
 
 Please note the following caveat: because the fields support different formats, from raw bytes to
@@ -238,9 +242,24 @@ be a validation company running multiple validators. A single entity, "My Stakin
 register multiple sub accounts that represent the [Stash accounts](learn-keys.md) of each of their
 validators.
 
-An account can have a maximum of 100 sub-accounts.
+An account can have a maximum of 100 sub-accounts. Note that a deposit of {{ identity_sub_reserve_funds }}
+is required for every sub-account.
 
-To register a sub-account on an existing account, you must currently use the
+- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to the account
+to which you already set identity. You should see an option to set onchain sub-identities. Click on it.
+
+  ![Add sub-identity in PolkadotJS](../assets/identity/sub-id-1.png)
+- In the pop-up window, select your Ledger account from the dropdown and enter text in sub name field. Then,
+click on set subs button.
+![Set sub-identity in PolkadotJS](../assets/identity/sub-id-2.png)
+- Sign and submit the transaction from the parent account with the identity
+
+You should now see the sub-identity displayed on-chain. 
+
+>  Here is a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting sub-identities using
+>  Polkadot-JS UI
+
+You can also use the
 [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics). There, select the identity pallet, then
 `setSubs` as the function to use. Click "Add Item" for every child account you want to add to the
 parent sender account. The value to put into the Data field of each parent is the optional name of
@@ -248,8 +267,6 @@ the sub-account. If omitted, the sub-account will inherit the parent's name and 
 `parent/parent` instead of `parent/child`.
 
 ![Sub account setup](../assets/identity/06.jpg)
-
-Note that a deposit of {{ identity_sub_reserve_funds }} is required for every sub-account.
 
 You can use
 [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants)

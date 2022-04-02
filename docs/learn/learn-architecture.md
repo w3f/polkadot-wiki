@@ -57,11 +57,11 @@ this security.
 
 ## [Bridges](learn-bridges.md)
 
-A blockchain [bridge](../general/glossary.md##bridge) is a connection that allows for arbitrary data to
+A blockchain [bridge](../general/glossary.md#bridge) is a connection that allows for arbitrary data to
 transfer from one network to another. These chains are interoperable through the bridge but can
 exist as standalone chains with different protocols, rules, and governance models. In Polkadot,
 bridges connect to the Relay Chain and are secured through the Polkadot consensus mechanism,
-maintained by [collators](##collators).
+maintained by [collators](#collators).
 
 Polkadot uses bridges to bridge the future of Web 3.0, as bridges are fundamental to Polkadot's
 interoperable architecture by acting as a [secure and robust] communication channel for chains in
@@ -71,19 +71,19 @@ isolation.
 
 ## Validators
 
-[Validators](../general/glossary.md##validator), if elected to the validator set, produce blocks on the Relay
+[Validators](../general/glossary.md#validator), if elected to the validator set, produce blocks on the Relay
 Chain. They also accept proofs of valid state transition from collators. In return, they will
 receive staking rewards.
 
 ## Nominators
 
-[Nominators](../general/glossary.md##nominator) bond their stake to particular validators in order to help them
+[Nominators](../general/glossary.md#nominator) bond their stake to particular validators in order to help them
 get into the active validator set and thus produce blocks for the chain. In return, nominators are
 generally rewarded with a portion of the staking rewards from that validator.
 
 ## Collators
 
-[Collators](../general/glossary.md##collator) are full nodes on both a parachain and the Relay Chain. They
+[Collators](../general/glossary.md#collator) are full nodes on both a parachain and the Relay Chain. They
 collect parachain transactions and produce state transition proofs for the validators on the Relay
 Chain. They can also send and receive messages from other parachains using XCMP.
 

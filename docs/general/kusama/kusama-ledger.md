@@ -228,6 +228,28 @@ account stored on a Ledger device, as follows:
 > available in the light version. The following [repo by Zondax][] lists the currently supported Democracy
 > extrinsics on the full ledger.
 
+### Setting Sub-Identity (Sub-ID) for your Ledger Account
+
+Setting an Identity is not possible on Ledger app yet, but as a workaround, you can 
+[set the identity for an on-chain account ](../../learn/learn-identity.md#setting-an-identity) and then use 
+it to set a sub-identity to your Ledger account.
+
+- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to the account
+to which you already set identity. You should see an option to set onchain sub-identities. Click on it.
+
+  ![Add sub-identity in PolkadotJS](../../assets/identity/sub-id-1.png)
+- In the pop-up window, select your Ledger account from the dropdown and enter text in sub name field. Then,
+click on set subs button.
+  ![Set sub-identity in PolkadotJS](../../assets/identity/sub-id-2.png)
+- Sign and submit the transaction from the parent account with the identity
+
+You should now see the sub-identity displayed on-chain. You need to aware that {{ identity_reserve_funds }} KSM is reserved for setting 
+identity and {{ identity_sub_reserve_funds }} KSM for each sub-identity. This reserved account balance is freed once you 
+[clear the identities](../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
+
+![Sub-identity example](../../assets/identity/sub-id-3.png)
+
+
 ## Support
 
 If you need support, please visit the
