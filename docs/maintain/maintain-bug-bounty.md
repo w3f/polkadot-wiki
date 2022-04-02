@@ -1,17 +1,17 @@
 ---
-id: kusama-bug-bounty
+id: maintain-bug-bounty
 title: Bug Bounty
 sidebar_label: Bug Bounty
 description: An overview of how you can help catch bugs.
-slug: ../../kusama-bug-bounty
+slug: ../../maintain-bug-bounty
 ---
 
 > Note: The bug bounty program does *not* cover bugs on code bases that are external to or, written 
-> on top of Kusama, or that use Kusama. To be eligible for the bug bounty program the bug has to
-> be a part of the Kusama codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
+> on top of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug has to
+> be a part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
 > GRANDPA, etc.
 
-We call on our community and all bug bounty hunters to help identify bugs in Kusama.
+We call on our community and all bug bounty hunters to help identify bugs in Polkadot.
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it
 as per [instructions on Web3 Foundation website](https://web3.foundation/security-report/).
@@ -37,7 +37,7 @@ parties disqualifies bug bounty eligibility.
 isn't limited to, the following:
 
 - Don't violate the privacy of other users, destroy data, etc.
-- Don't defraud or harm Kusama network or its users during your research; you should make a good
+- Don't defraud or harm Polkadot network or its users during your research; you should make a good
   faith effort not to interrupt or degrade our services.
 - Don't target the validators' physical security measures, or attempt to use social engineering,
   spam, distributed denial of service (DDoS) attacks, etc.

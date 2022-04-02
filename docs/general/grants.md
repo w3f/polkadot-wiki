@@ -30,15 +30,15 @@ Polkadot and Kusama offer everyone the opportunity to apply for funding via the 
 - [Polkadot Treasury Guide](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w)
 - [Kusama Treasury Guide](https://docs.google.com/document/d/1p3UQUjph5t8TVaWnTkfrI5mE-BABnM9Xvtuhdlhl6JE)
 
-{{ kusama:
-
-#### Kusama Faucet
+:::info Kusama Faucet
 
 Due to high demand and spamming issues, the Kusama faucet is no longer in operation. The Web3 Foundation has considered new ways to distribute KSM for people who need KSM to build.
 
 If you are interested in obtaining KSM for building or research, you can apply through the
 [Treasury](../learn/mirror-learn-treasury.md#creating-a-treasury-proposal) or receive a
-[tip](../learn/mirror-learn-treasury.md#tipping) for doing something cool in the community. :kusama }}
+[tip](../learn/mirror-learn-treasury.md#tipping) for doing something cool in the community. 
+
+:::
 
 ### Other Grant Programs
 

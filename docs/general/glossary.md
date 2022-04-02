@@ -14,7 +14,7 @@ potentially receive staking rewards in return for doing so.
 
 ## Alexander
 
-The fourth (now defunct) proof of concept (PoC-4) [testnet](##testnet) for Polkadot.
+The fourth (now defunct) proof of concept (PoC-4) [testnet](#testnet) for Polkadot.
 
 ## Attestation
 
@@ -194,7 +194,11 @@ The collection of Substrate-provided pallets (Substrate Runtime Modules).
 The origin of a blockchain, also known as block 0. It can also be used to reference the initial
 state of the blockchain at origination.
 
-> Example: "In the *genesis* state Alice, Bob, and Charlie had 30 tokens each."
+:::note Example
+
+In the *genesis* state Alice, Bob, and Charlie had 30 tokens each.
+
+:::
 
 ## Governance
 
@@ -246,7 +250,7 @@ validating this era. This type of nomination may become active in a future era.
 
 Extrinsics that are "inherently true." Inherents are not gossiped on the network and are put into
 blocks by the block author. They are not provably true the way that the desire to send funds is,
-therefore they do not carry a signature. A blockchain's [runtime](##runtime) must have rules for
+therefore they do not carry a signature. A blockchain's [runtime](#runtime) must have rules for
 validating inherents. For example, timestamps are inherents. They are validated by being within some
 margin that each validator deems reasonable.
 
@@ -272,7 +276,7 @@ The abbreviation for Kusama network tokens.
 ## Kusama
 
 The "canary network" for Polkadot. It consists of an early-release, unaudited version of the
-Polkadot software. It is **not** a [testnet](##testnet) - after the transition to NPoS, the network
+Polkadot software. It is **not** a [testnet](#testnet) - after the transition to NPoS, the network
 is entirely in the hands of the community (i.e., Kusama token holders).
 
 ## Lease Period
@@ -356,7 +360,7 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 ## Origin
 
 The initiator of an extrinsic. A simple origin would be the account that is sending a token to
-another account. Polkadot also supports more complex origin types, such as the [root origin](##Root Origin), from
+another account. Polkadot also supports more complex origin types, such as the [root origin](#Root Origin), from
 which privileged functions can be called.
 
 ## Oversubscribed
@@ -369,7 +373,7 @@ maximum number of nominators is {{ kusama_max_nominators }} on Kusama and
 
 ## Pallet
 
-A [Substrate](##substrate) runtime module.
+A [Substrate](#substrate) runtime module.
 
 ## Parachain
 
@@ -378,8 +382,8 @@ Polkadot Host. Also known as "parallelized chain."
 
 ## Parachain Development Kit (PDK)
 
-Similar to an [SDK](##sdk), parachain development kits (PDK) is a set of tools that make it easy for
-developers to create Polkadot compatible [parachains](##parachain).
+Similar to an [SDK](#sdk), parachain development kits (PDK) is a set of tools that make it easy for
+developers to create Polkadot compatible [parachains](#parachain).
 
 ## ParaID
 
@@ -415,7 +419,7 @@ Runtime Environment or PRE.
 
 ## Polkadot Runtime Environment
 
-The previous name for the [Polkadot Host](##polkadot-host).
+The previous name for the [Polkadot Host](#polkadot-host).
 
 ## Proof of Stake (PoS)
 
@@ -449,7 +453,7 @@ and possible recovery methods.
 ## Random Seed
 
 A random seed is a pseudo-random number available on-chain. It is used in various places of the
-Polkadot protocol, most prominently in [BABE](##babe) the block production mechanism.
+Polkadot protocol, most prominently in [BABE](#babe) the block production mechanism.
 
 ## Referendum
 
@@ -475,11 +479,11 @@ information is not stored in the chain's trie, but along blocks.
 
 ## Rococo
 
-The [testnet](##testnet) set aside for testing parachains, cumulus, and related technology.
+The [testnet](#testnet) set aside for testing parachains, cumulus, and related technology.
 
 ## Root Origin
 
-A system-level origin in [Substrate](##Substrate). This is the highest privilege level and can be 
+A system-level origin in [Substrate](#Substrate). This is the highest privilege level and can be 
 thought of as the superuser of the runtime origin. To learn about more raw origins in Substrate, 
 visit [Substrate Docs](https://docs.substrate.io/v3/runtime/origins/)
 
@@ -497,7 +501,7 @@ deal with accounts and balances. In Substrate, modules are called "pallets".
 ## Safety
 
 The property of a distributed system indicating that a particular state transition will not be
-reverted. [GRANDPA](##grandpa-finality-gadget) provides *deterministic* safety. That is, for a state
+reverted. [GRANDPA](#grandpa-finality-gadget) provides *deterministic* safety. That is, for a state
 changed marked as "safe" or "final", one would require a hard fork to revert that change.
 
 ## Scalability
@@ -523,7 +527,7 @@ Controller.
 ## Session Key
 
 Hot keys that are used for performing network operations by validators, for example, signing
-[GRANDPA](##grandpa-finality-gadget) commit messages.
+[GRANDPA](#grandpa-finality-gadget) commit messages.
 
 ## Shared Security
 
@@ -582,7 +586,7 @@ burning an amount on the sending chain and minting an equivalent amount on the d
 ## Testnet
 
 Short for "test network": an experimental network where testing and development takes place.
-Networks are often executed on a testnet before they are deployed to a [mainnet](##mainnet)
+Networks are often executed on a testnet before they are deployed to a [mainnet](#mainnet).
 
 ## Tokenization
 
@@ -609,7 +613,7 @@ and voting on consensus along with other validators.
 Vertical message passing consists of two separate types of message passing, Downward Message Passing
 (DMP) and Upward Message Passing (UMP). Downward messages pass from the Relay Chain to a parachain,
 although they may also originate from another parachain via
-[HRMP](##Horizontal-Relay-routed-Message-Passing). Upward messages originate from parachains and go
+[HRMP](#Horizontal-Relay-routed-Message-Passing). Upward messages originate from parachains and go
 up to the Relay Chain via runtime entry points.
 
 ## Voting
@@ -631,7 +635,7 @@ blockchain networks.
 
 ## Wasm
 
-The abbreviation for [WebAssembly](##webassembly).
+The abbreviation for [WebAssembly](#webassembly).
 
 ## Watermark
 

@@ -156,6 +156,7 @@ module.exports = {
       label: 'Maintain',
       items: [
         'maintain/maintain-index',
+        'maintain/maintain-bug-bounty',
         'maintain/maintain-polkadot-parameters',
         'maintain/maintain-endpoints',
         {
