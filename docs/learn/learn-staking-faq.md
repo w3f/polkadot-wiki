@@ -79,7 +79,16 @@ min-intention-threshold (10 DOT) which is required to submit your intention to n
 supports 50,000 nominator intentions, but can reward at most 22500 nominators in any given era. If
 you nominate with, say 50 DOT, you are not guaranteed to be part of the top 22500 and hence you may
 not earn staking rewards. The entry barrier to be an electing nominator is now determined
-dynamically, based on market demand.
+dynamically, based on market demand. 
+
+:::note If your account is in the last bag receiving staking rewards
+
+Within the context of a single bag, nodes are not sorted by their stake, but instead placed in insertion 
+order. Accounts can put themselves in front of other accounts with lower stake in the same bag using the 
+'bagsList.putInFrontOf' extrinsic. It's important to note that this process only puts you in front of
+an account that has lower stake in the same bag. Check this [support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards) for instructions.
+
+:::
 
 The nominator intentions (up to 50,000) serve as a waitlist for the electing subset (22,500) which
 receives rewards in each era. Having more number of nominator intentions than the electing subset
