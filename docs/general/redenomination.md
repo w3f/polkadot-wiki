@@ -6,21 +6,30 @@ description: Learn about the DOT token Redenomination.
 slug: ../redenomination
 ---
 
-> Note: The DOT redenomination took place on 21 August 2020, now known as Denomination Day, at block
-> #1_248_328.
+:::info Denomination Day
+
+The DOT redenomination took place on 21 August 2020, known as Denomination Day, at block
+number 1_248_328.
+
+:::
 
 While [DOT](../learn/learn-DOT.md) is the unit of currency on Polkadot that most people use when interacting
 with the system, the smallest unit of account is called the Planck. A Planck's relation to DOT is
 like the relation of a Satoshi to Bitcoin. Before 21 August, the DOT was denominated as 1e12
-Plancks, that is twelve decimal places. After this date, DOT is denominated as 1e10 Plancks, as in
-ten decimal places. DOT denominated to twelve decimal places is referred to as "DOT (old)" and DOT
-denominated to ten decimal places is generally referred to as "DOT". When the difference must be
-made explicit, the current ten-decimal-denominated DOT is referred to as "_New DOT_".
+Plancks, that is, twelve decimal places. After Denomination Day, DOT is denominated as 
+1e10 Plancks, as in, ten decimal places. DOT denominated to twelve decimal places is referred to 
+as "DOT (old)" and DOT denominated to ten decimal places is generally referred to as "DOT". 
+When the difference must be made explicit, the current ten-decimal-denominated DOT is referred to 
+as "*New DOT*".
 
-> Check out our
-> [technical explainer video that explains more of Redenomination](https://www.youtube.com/watch?v=xXIcnBV4uUE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22&ab_channel=Polkadot).
+:::note Redenomination Explainer
 
-The change in denomination, henceforth referred to as the _redenomination_, was voted on by the
+Check out our
+[technical explainer video that explains more of Redenomination](https://www.youtube.com/watch?v=xXIcnBV4uUE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22&ab_channel=Polkadot).
+
+:::
+
+The change in denomination, henceforth referred to as the *redenomination*, was voted on by the
 community of DOT holders. The community decided between four options, to change the DOT denomination
 by a factor of ten, one hundred, one thousand, or not at all. The end result was to change the
 denomination by a factor of one hundred.
@@ -42,23 +51,31 @@ under the old denomination.
      After the change the decimal is here
 ```
 
-**There are no state changes with redenomination. There are no transfers. The real change regards
+:::note 
+
+There are no state changes with redenomination. There are no transfers. The real change regards
 the social consensus around where to put the decimal place when we talk about what constitutes a
-DOT.**
+DOT.
+
+:::
 
 ## Origins
 
 The initial vote for redenomination occurred as a [referendum][referendum 52] on the Kusama
 blockchain. The referendum was summarized as having four effects if approved by KSM holders.
 
-> - The total allocations of DOT will increase one hundred times from 10 million to 1 billion.
-> - DOT allocation balances will increase by a factor of one hundred, such that 1 DOT will be 100
->   DOT.
-> - The distribution of DOT does not change, and holders of DOT still own an equal share of the
->   network as before the change.
-> - The precision of DOT will change from 12 decimal places to 10 decimal places.
-> - The main benefit of this change is to avoid using small decimals when dealing with DOT and to
->   achieve an easier calculation system.
+:::info Referendum Summary
+
+- The total allocations of DOT will increase one hundred times from 10 million to 1 billion.
+- DOT allocation balances will increase by a factor of one hundred, such that 1 DOT will be 100
+  DOT.
+- The distribution of DOT does not change, and holders of DOT still own an equal share of the
+  network as before the change.
+- The precision of DOT will change from 12 decimal places to 10 decimal places.
+- The main benefit of this change is to avoid using small decimals when dealing with DOT and to
+  achieve an easier calculation system.
+
+:::
 
 The initial referendum was proposed prior to the Polkadot genesis block under the assumption that
 making a redenomination would be simpler before the Polkadot chain was live. However, many in the
@@ -69,9 +86,13 @@ majority in favor of the redenomination change.
 
 Web3 Foundation summarized the decision not to change:
 
-> However, given the non-negligible amount of opposition, including from some within the ranks of
-> Web3 Foundation and Parity, **the Foundation decided that we cannot, in good faith, sponsor
-> redenomination at present.**
+:::note
+
+However, given the non-negligible amount of opposition, including from some within the ranks of
+Web3 Foundation and Parity, **the Foundation decided that we cannot, in good faith, sponsor
+the redenomination.**
+
+:::
 
 ## The Vote
 
@@ -87,24 +108,20 @@ of the four options: no change, a change of 10x, a change of 100x, or a change o
 logic was contained in a specially-built Substrate pallet that was included in Polkadot's runtime
 for this poll.
 
-The important notes of the Polkadot vote were as follows:
+:::info Summary of the Vote
 
-> - Any combination of the four options may be approved of by the voter. There is no need to select
->   only one option!
-> - Approving of all or none of the options is equivalent and will not affect the outcome.
-> - All voters may alter their votes any number of times prior to the close of the poll.
-> - Voting costs nothing other than the transaction fee and can be done from all accounts with a
->   non-zero spendable balance. (If you managed to lock up all of your funds in staking to the point
->   that none is left for transacting and you would like to vote, please contact a representative of
->   Web3 Foundation.)
-> - Locked funds (e.g. for staking) are counted.
-> - No discretionary lock-voting is in place; all DOT used to vote counts the same.
-> - Voting is made on a per-account basis; a single account must all vote the same way and cannot
->   split its vote.
-> - This vote does not affect any economics of the Polkadot platform. Staking rewards, inflation,
->   effective market capitalization and the underlying balances of every account remain completely
->   unchanged. It is “merely” about what units we use to denominate the balances into “DOT” for the
->   purpose of display.
+- Any combination of the four options may have been approved of by the voter. There was no need to
+  only select one option.
+- Approving of all or none of the options was equivalent and did not affect the outcome.
+- All voters were able to alter their votes any number of times prior to the close of the poll.
+- No discretionary lock-voting was in place; all DOT used to vote counts the same.
+- Voting was made on a per-account basis; a single account must have voted the same way and was unable
+  to split its vote.
+- This vote did not affect any economics of the Polkadot platform. As in, staking rewards, inflation,
+  effective market capitalization, and the underlying balances of every account remained completely
+  unchanged. It was “merely” about what units the network uses to denominate the balances into “DOT”.
+
+:::
 
 With a voting period of two weeks set, the redenomination was now in the hands of the Polkadot
 community for a final, binding decision.

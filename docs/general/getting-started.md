@@ -6,14 +6,15 @@ description: Get started with Polkadot.
 slug: ../getting-started
 ---
 
-Welcome to the Polkadot Wiki! 
+:::info Welcome to the Polkadot Wiki
 
-The Wiki serves as the central source of truth for Polkadot. 
-It is a community-focused initiative led by Web3 Foundation to keep an up-to-date resource on the 
-best information for learning, building, or maintaining on Polkadot.
+The Polkadot Wiki serves as the central source of truth for Polkadot. 
+It is a community-focused initiative led by Web3 Foundation to keep an up-to-date resource on 
+the best information for learning, building, and maintaining on Polkadot.
 
-The Wiki has three main sections: Learn (for learners), Build (for people that want to build on Polkadot), 
-and Maintain (for people that want to maintain the network).
+The Wiki has three main sections: Learn (for learners), Build (for people that want to build on Polkadot), and Maintain (for people that want to maintain the network).
+
+:::
 
 ## What is Polkadot?
 
@@ -31,9 +32,12 @@ an advanced suite of governance tools and, using the [WebAssembly](https://webas
 standard as a "meta-protocol", can autonomously deploy network upgrades. Polkadot adapts to your
 growing needs without the risks of network forks.
 
-> If you haven't heard of Governance before, a great place to start is the
-> [Governance page](../learn/learn-governance.md)
+:::note Learn more about Governance
 
+If you haven't heard of Governance before, a great place to start is 
+the [Governance page](../learn/learn-governance.md)
+
+:::
 By connecting these dots, Polkadot serves as a foundational layer of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
 
@@ -216,10 +220,14 @@ trust-free protocols. The goal is to transform the internet into a decentralized
 their own data and identity in a trust-free environment. The Web3 movement aims to remove
 intermediaries and build trustless infrastructure.
 
-> To learn more of the Web3 movement, check out this video from the
-> [Web3 Summit](https://youtu.be/l44z35vabvA)
+:::note The Web3 Movement
 
-## How does Polkadot work?
+To learn more of the Web3 movement, check out this video from 
+the [Web3 Summit](https://youtu.be/l44z35vabvA)
+
+:::
+
+## How does Polkadot Work?
 
 The Polkadot network uses a
 [sharded model](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>) where shards - called
@@ -246,8 +254,12 @@ The [Cross-Consensus Messaging Format (XCM)](../learn/learn-cross-consensus.md) 
 send messages of any type to each other. The shared security and validation logic of the Relay Chain
 provide the environment for trust-free message passing that opens up true interoperability.
 
-> To watch a short, beginner-friendly animation on Polkadot, check out our
-> [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
+:::note Polkadot Primer
+
+To watch a short, beginner-friendly animation on Polkadot, check out our
+[Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
+
+:::
 
 ## Why should you use Polkadot?
 
