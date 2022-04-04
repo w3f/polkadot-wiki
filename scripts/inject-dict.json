@@ -61,13 +61,13 @@
   },
   {
     "tpl": "existential_deposit",
-    "default": { "kusama": 0.008333, "polkadot": 1 },
+    "default": { "kusama": 0.0000333333, "polkadot": 1.0 },
     "path": "consts.balances.existentialDeposit",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "crowdloan_min_contribution",
-    "default": { "kusama": 0.01, "polkadot": 5 },
+    "default": { "kusama": 0.1, "polkadot": 5 },
     "path": "consts.crowdloan.minContribution",
     "filters": ["humanReadableToken"]
   },
