@@ -6,8 +6,12 @@ description: How to use the Kusama application on Ledger.
 slug: ../../kusama-ledger
 ---
 
-> **Please note**: Because of required WebUSB support, Ledger wallets currently only work on
-> Chromium-based browsers like Brave and Chrome.
+:::info
+
+Because of required WebUSB support, Ledger wallets currently only work on
+Chromium-based browsers like Brave and Chrome.
+
+:::
 
 Kusama has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
@@ -19,8 +23,12 @@ most of the transaction types of the network ,including batch transactions from 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
-> Please check out our
-> [intro to Ledger video on YouTube for more information](https://youtu.be/7VlTncHCGPc).
+:::note Intro to Ledger Explainer
+
+Please check out our
+[intro to Ledger video on YouTube for more information](https://youtu.be/7VlTncHCGPc).
+ 
+:::
 
 ## Requirements
 
@@ -46,8 +54,12 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ### Using the Developer Release
 
-> These instructions are for development installation only. It is recommended to install the
-> application from Ledger Live unless you _know exactly what you're doing_.
+:::tip 
+
+These instructions are for development installation only. It is recommended to install the
+application from Ledger Live unless you *know exactly what you're doing*.
+
+:::
 
 Instructions for downloading the pre-release binary from the GitHub releases is written [on the
 README][prerelease instructions] for the Kusama Ledger application GitHub repository.
@@ -163,14 +175,18 @@ method is to use [Polkadot-JS Apps UI][apps].
 - Confirm the transaction on your device.
 - A green success notification will be displayed when the transaction is included in a block.
 
-> Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
-> account will be unable to make transactions which would get its balance below the existential
-> deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
-> will be able to go below existential deposit balance, causing your account to be deleted and any
-> dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
-> might be the reason.
+:::note The "Transfer with Keep-Alive Checks" toggle
+
+While this toggle is in the *On* state, your
+account will be unable to make transactions which would get its balance below the existential
+deposit. This prevents reaping of accounts with low balances. If you toggle this to *Off*, you
+will be able to go below existential deposit balance, causing your account to be deleted and any
+dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
+might be the reason.
 
 A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
+
+:::
 
 ### Receiving a Transfer
 
@@ -181,10 +197,14 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-> **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
-> by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
-> will intercept clicks and clipboard requests and can change your copied value in-flight, so being
-> extra vigilant around copy-paste operations makes sense.
+:::caution Before giving anyone your address
+
+Make sure it matches what's really on the Ledger
+by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
+will intercept clicks and clipboard requests and can change your copied value in-flight, so being
+extra vigilant around copy-paste operations makes sense.
+
+:::
 
 ### Staking
 
@@ -223,10 +243,13 @@ account stored on a Ledger device, as follows:
   ACCOUNT is the account you just removed the votes from.
 - Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
 
-> **Important**: Despite the Polkadot ledger application being compatible with both the Ledger Nano S and
-> the Ledger Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are
-> available in the light version. The following [repo by Zondax][] lists the currently supported Democracy
-> extrinsics on the full ledger.
+:::info
+
+Despite the Polkadot ledger application being compatible with both the Ledger Nano S and
+the Ledger Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are
+available in the light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on the full ledger.
+
+:::
 
 ### Setting Sub-Identity (Sub-ID) for your Ledger Account
 
@@ -248,7 +271,6 @@ identity and {{ identity_sub_reserve_funds }} KSM for each sub-identity. This re
 [clear the identities](../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
 
 ![Sub-identity example](../../assets/identity/sub-id-3.png)
-
 
 ## Support
 
