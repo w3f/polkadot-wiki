@@ -54,7 +54,7 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ### Using the Developer Release
 
-:::tip Instructions
+:::tip 
 
 These instructions are for development installation only. It is recommended to install the
 application from Ledger Live unless you *know exactly what you're doing*.
