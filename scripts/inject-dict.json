@@ -66,6 +66,12 @@
     "filters": ["humanReadableToken"]
   },
   {
+    "tpl": "crowdloan_min_contribution",
+    "default": { "kusama": 0.01, "polkadot": 5 },
+    "path": "consts.crowdloan.minContribution",
+    "filters": ["humanReadableToken"]
+  },
+  {
     "tpl": "kusama_max_nominators",
     "default": "256"
   },

@@ -33,6 +33,12 @@ differ from Polkadot's._
 a block in the chain. Thus, the times given are *estimates*. See [Consensus](../../learn/learn-consensus.md) for
 more details._
 
+### Accounts, Identity and Crowdloans
+
+The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
+The deposit required to set an Identity is {{ identity_reserve_funds }}
+The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
+
 ### Governance
 
 | Democracy        | Time   | Slots   | Description                                                                                                                                                   |
