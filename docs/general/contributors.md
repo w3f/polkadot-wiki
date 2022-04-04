@@ -13,11 +13,13 @@ is listed as a precaution - if one of these people ever contacts you directly, f
 information to see that it matches the origin of the message, and then feel free to get in touch with someone 
 else on this list to verify the legitimacy of the original inquiry. 
 
-:warning: **Employee impersonation is a common type of scam**. :warning:
+:::warning Employee impersonation is a common type of scam
 
-> For other ways of protecting yourself, please see [How to Protect Yourself from Scams](scams.md).
+For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](scams.md) guide.
 
----
+:::
+
+## Technical Education
 
 ### Bill Laboon
 
@@ -26,7 +28,7 @@ else on this list to verify the legitimacy of the original inquiry.
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
 - telegram: [@BillLaboon](https://t.me/BillLaboon)
 
-Bill Laboon is the Director of Education and Community at Web3 Foundation. Prior to Web3 Foundation, 
+Bill Laboon is the Head of Education and Grants at Web3 Foundation. Prior to Web3 Foundation, 
 he spent five years teaching Computer Science at the University of Pittsburgh. Bill also has several
 years of experience in software engineering and management.
 
@@ -36,7 +38,40 @@ an undergraduate textbook;
 and [Strength in Numbers](https://www.amazon.com/Strength-Numbers-Cryptocurrency-Bill-Laboon/dp/1981526730/),
 a near-future novel set in a world in which cryptocurrency has eliminated traditional money.
 
----
+### Radhakrishna Dasari
+
+- email: [radha@web3.foundation](mailto:radha@web3.foundation)
+- matrix: [@radha:web3.foundation](https://matrix.to/#/@radha:web3.foundation)
+- twitter: [@DrW3RK](https://twitter.com/DrW3RK)
+
+Radha leads Technical Education at Web3 Foundation. Radha has a PhD in Computer Science and 
+has three years of experience teaching Computer Science courses. He also taught a Massively Open 
+Online Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). Radha 
+is excited to contribute to Web3 Foundation's vision by educating professionals and the general 
+public about the WEB3 Technology Stack.
+
+### Danny Salman
+
+- email: [danny@web3.foundation](mailto:danny@web3.foundation)
+- matrix: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
+- twitter: [@dannysalman_](https://twitter.com/dannysalman_)
+
+Danny is a Technical Educator at Web3 Foundation who has a keen interest in blockchain and trust-free 
+technologies. As a technical educator, Danny contributes to, documents, and supports the WEB3 vision. 
+He has a Bachelor of Engineering in Computer Engineering and a background in philosophy & politics.
+
+### Emre Surmeli
+
+- email: [emre@web3.foundation](mailto:emre@web3.foundation)
+- matrix: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
+- twitter: [@semres8](https://twitter.com/semres8)
+
+Emre is a Technical Educator at Web3 Foundation. His background is in full-stack software
+development, education, and blockchain technology consulting. He is passionate about learning and
+teaching and has always kept a foot in education by designing and delivering software development
+and blockchain classes at General Assembly, Code Fellows, and Columbia University.
+
+## Technical Integrations
 
 ### Joe Petrowski
 
@@ -55,48 +90,6 @@ Prior to working at Parity, Joe worked in shock and vibration simulation for sat
 algorithmic trading, and professional cycling. He has a Bachelor of Science in Aeronautical and 
 Mechanical Engineering.
 
----
-
-### Danny Salman
-
-- email: [danny@web3.foundation](mailto:danny@web3.foundation)
-- matrix: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
-- twitter: [@dannysalman_](https://twitter.com/dannysalman_)
-
-Danny is a Technical Educator at Web3 Foundation who has a keen interest in blockchain and trust-free 
-technologies. As a technical educator, Danny contributes to, documents, and supports the WEB3 vision. 
-He has a Bachelor of Engineering in Computer Engineering and a background in philosophy & politics.
-
----
-
-### Emre Surmeli
-
-- email: [emre@web3.foundation](mailto:emre@web3.foundation)
-- matrix: [@emre:web3.foundation](https://matrix.to/#/@emre:web3.foundation)
-- twitter: [@semres8](https://twitter.com/semres8)
-
-Emre is a Technical Educator at Web3 Foundation. His background is in full-stack software
-development, education, and blockchain technology consulting. He is passionate about learning and
-teaching and has always kept a foot in education by designing and delivering software development
-and blockchain classes at General Assembly, Code Fellows, and Columbia University.
-
----
-
-### Radhakrishna Dasari
-
-- email: [radha@web3.foundation](mailto:radha@web3.foundation)
-- matrix: [@radha:web3.foundation](https://matrix.to/#/@radha:web3.foundation)
-- twitter: [@DrW3RK](https://twitter.com/DrW3RK)
-
-Radha is a Technical Educator at Web3 Foundation. Radha has a PhD in Computer Science and has
-three years of experience teaching Computer Science courses. He also taught a Massively Open Online
-Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-vision-basics). Radha is excited to
-contribute to Web3 Foundation's vision by educating professionals and the general public about the WEB3 
-Technology Stack.
-
----
----
-
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
@@ -110,23 +103,18 @@ for educating others on decentralized systems and pushing forward the WEB3 visio
 Alex has educational experience in cryptography, data privacy, and enterprise security.
 He has a Bachelor of Science in Computer Science from San Francisco State University.
 
----
-
 ### Jake Hemmerle
 
 - matrix: [@jake:hemmerle.dev](https://matrix.to/#/@jake:hemmerle.dev)
 - twitter: [@jakehemmerle](https://twitter.com/jakehemmerle)
 - telegram: [@jakehemmerle](https://t.me/jakehemmerle)
 
-Jake was a Technical Education Intern at Web3 Foundation and is completing a Bachelor's in
-Computer Science from the University of Cincinnati. He has been learning about blockchain technology
+Jake was a Technical Education Intern at Web3 Foundation and studied Computer Science at the University of Cincinnati. He has been learning about blockchain technology
 since 2018 and has personal interests in peer-to-peer systems, network protocols, applied
 cryptography and privacy-enhancing technologies.
 
 You can now find Jake cracking the code at the multi-chain Polkadot dApp hub, 
 [Astar Network](https://astar.network/).
-
----
 
 ### Bruno Skvorc
 
@@ -150,8 +138,6 @@ He also runs a weekly newsletter covering all things Web3 at [DotLeap](https://d
 You can now find Bruno hacking the metaverse by leading the way at [RMRK](https://rmrk.app/) to
 create a breakthrough NFT standard.
 
----
-
 ### Anson Lau
 
 - matrix: [@anson-lau:matrix.org](https://matrix.to/#/@anson-lau:matrix.org)
@@ -163,15 +149,11 @@ cryptoeconomics, and privacy areas. Anson has been actively participating in the
 since 2017 and creating video content to help different people understand how decentralization could
 deliver us a better future.
 
----
-
 ### Kirsten Richard
 
 Kirsten was a Technical Educator Intern at Web3 Foundation from Canada. She focused on
 curating educational content around blockchain and Polkadot network concepts. Kirsten has 
 a Bachelor's degree in Computer Science and is passionate about teaching and technology.
-
----
 
 ### Logan Saether
 
