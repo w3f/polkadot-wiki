@@ -150,7 +150,7 @@ function applyFilter(value, filter, wiki) {
 
   switch (filter) {
     case "humanReadableToken":
-      value = (value / values[wiki].precision).toFixed(3) + " " + values[wiki].symbol;
+      value = (value / values[wiki].precision).toFixed(6) + " " + values[wiki].symbol;
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;
