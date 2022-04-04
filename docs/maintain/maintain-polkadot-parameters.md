@@ -33,6 +33,10 @@ differ from Kusama's._
 a block in the chain. Thus, the times given are *estimates*. See [Consensus](../learn/learn-consensus.md) for
 more details._
 
+### Accounts
+
+The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }} DOT
+
 ### Governance
 
 | Democracy        | Time    | Slots   | Description                                                                                                                                                   |

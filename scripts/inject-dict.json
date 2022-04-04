@@ -55,8 +55,14 @@
   },
   {
     "tpl": "identity_field_funds",
-    "default": { "kusama": 0.008333, "polkadot": 0.066 },
+    "default": { "kusama": 0.0000333333, "polkadot": 0.066 },
     "path": "consts.identity.reserveFieldFunds",
+    "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "existential_deposit",
+    "default": { "kusama": 0.008333, "polkadot": 1 },
+    "path": "consts.balances.existentialDeposit",
     "filters": ["humanReadableToken"]
   },
   {
