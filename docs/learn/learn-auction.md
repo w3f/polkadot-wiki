@@ -56,8 +56,12 @@ This process executes in the next epoch (which lasts for six hours on Polkadot) 
 period. **The parachain candidate with the highest bid at the ending time chosen by the VRF wins the
 slot auction**.
 
-> [Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made
-> during these six hours when the winning block for the auction is being determined on-chain.
+:::info
+
+[Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made
+during these six hours when the winning block for the auction is being determined on-chain.
+
+:::
 
 With one day and eighteen hours for the starting period, five days for the ending period (candle
 auction phase) and six hours for determining the auction winner, a parachain auction on Polkadot
@@ -68,6 +72,8 @@ section.
 
 ### [Randomness](learn-randomness.md) in action
 
+:::info Randomness Example
+
 The following example will showcase the randomness mechanics of the candle auction for the ninth
 auction on Kusama. Keep in mind that the candle phase has a uniform termination profile and has an
 equal probability of ending at any given block, and the termination block cannot be predicted before
@@ -75,19 +81,37 @@ or during the auction.
 
 - Auction 9 starts at
   [`block 9362014`](https://kusama.subscan.io/extrinsic/0x7b67d653c9522b623a97e20a967b83a8517fe3821370475ddb6611cd37c29a03?event=9335014-26).
-  > The auction has a full duration equal to `block 9362014` + `72000`. Here, `block 72000` is the
-  > "ending period", which is divided into **3600 samples of 20 blocks**. Figuratively, the candle
-  > is lit, and the candle phase lasts for 72,000 blocks.
+
+  :::note The auction has a full duration equal to `block 9362014` + `72000`
+
+  Here, `block 72000` is the "ending period", which is divided into 
+  **3600 samples of 20 blocks**. Figuratively, the candle
+  is lit, and the candle phase lasts for 72,000 blocks.
+
+  :::
+
 - The winning sample during the ending period turned out to have the `index 1078`.
-  > Sample 1078 refers to the winner as of `block 9362014 + 21560`, which equals
-  > [`block 9383574`](https://kusama.subscan.io/block/9383574).
+  
+  :::note Sample 1078 is the winner
+
+  Sample 1078 refers to the winner as of `block 9362014 + 21560`, which equals
+  [`block 9383574`](https://kusama.subscan.io/block/9383574).
+
+  :::
+
 - The parent block was a new BABE session in the 'Logs', which updated the randomness that was used
   to select that [sample index](https://kusama.subscan.io/block/9434277).
-  > You'd be able to inspect the state at the end of `block 9434277` and see the sample indices with
-  > an [archive node](../maintain/maintain-sync.md####types-of-nodes). The digest in the 'Logs' of
-  > `9434277` is decodable and contains the random value as well as the BABE authorities.
+
+  :::note Inspecting the block state
+
+  You'd be able to inspect the state at the end of `block 9434277` and see the sample indices with
+  an [archive node](../maintain/maintain-sync.md####types-of-nodes). The digest in the 'Logs' of
+  `9434277` is decodable and contains the random value as well as the BABE authorities.
+
 - As a result, the winner of this auction did not turn out to be the highest bid during the full
   duration.
+
+:::
 
 ## Rationale
 
@@ -125,7 +149,7 @@ have ended before they even bid.
 
 ## Polkadot Implementation
 
-Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the
+Polkadot will use a random beacon_ based on the VRF that's used also in other places of the
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
@@ -135,9 +159,12 @@ combination of periods of the slot duration. Parachains may lease more than one 
 meaning that they could extend their lease to Polkadot past the maximum duration by leasing a
 contiguous slot.
 
-> Note: Individual parachain slots are fungible. This means that parachains do not need to always
-> inhabit the same slot, but as long as a parachain inhabits any slot it can continue as a
-> parachain.
+:::note Individual parachain slots are fungible. 
+
+This means that parachains do not need to always inhabit the same slot, but as long as a 
+parachain inhabits any slot it can continue as a parachain.
+
+:::
 
 ## Bidding
 
@@ -169,8 +196,12 @@ Bidders will submit a configuration of bids specifying the token amount they are
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
 periods available for a slot (`n` will be 8 for both Polkadot and Kusama).
 
-> Please note: If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
-> way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
+:::note
+
+If you bond tokens with a parachain slot, you cannot stake with those tokens. In this
+way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
+
+:::
 
 A bidder configuration for a single bidder may look like the following pseudocode example:
 
