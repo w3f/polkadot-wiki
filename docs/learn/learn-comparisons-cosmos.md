@@ -186,9 +186,13 @@ a chain's STF. Beyond simply using the pallets, Substrate adds a further layer o
 allows developers to compose FRAME's pallets by adding custom modules and configuring the parameters
 and initial storage values for the chain.
 
-> Note: Polkadot can support an STF written in any language, so long as it compiles to its
-> meta-protocol Wasm. Likewise, it could still use the Substrate client (database, RPC, networking,
-> etc.); it only needs to implement the primitives at the interface.
+:::note Polkadot can support an STF written in any language
+
+So long as it compiles to its
+meta-protocol Wasm. Likewise, it could still use the Substrate client (database, RPC, networking,
+etc.); it only needs to implement the primitives at the interface.
+
+:::
 
 ## Conclusion
 
