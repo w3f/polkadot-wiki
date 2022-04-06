@@ -17,10 +17,14 @@ Era points are reward points earned for payable actions like:
 - producing a reference to a previously unreferenced uncle block.
 - producing a referenced uncle block.
 
-*Note: An uncle block is a Relay Chain block that is valid in every regard, but which failed to
+:::note
+
+An uncle block is a Relay Chain block that is valid in every regard, but which failed to
 become canonical. This can happen when two or more validators are block producers in a single slot,
 and the block produced by one validator reaches the next block producer before the others. We call
-the lagging blocks uncle blocks.*
+the lagging blocks uncle blocks.
+
+:::
 
 Payments occur at the end of every era.
 
@@ -36,6 +40,11 @@ each for each parachain block that they validate.
 
 In this case, analyzing the *expected value* of staking rewards will paint a better picture
 as the weight of era points of validators and para-validators in the reward average are taken into consideration.
+
+:::note High-level breakdown of reward variance 
+
+This should only serve as a high-level overview of the probabilistic nature for staking 
+rewards.
 
 Let: 
 - `pe` = para-validator era points,
@@ -61,10 +70,9 @@ ensures [availability](../learn/learn-availability.md) and [approval voting](../
 In addition, despite `v` &#8593; on an `e` to `e` basis, over time, the amount of rewards each validator 
 receives will equal out based on the continuous selection of para-validators.
 
-> There are plans to scale the active para-validation set in the future.
+There are plans to scale the active para-validation set in the future
 
-> The above breakdown of reward variance should only serve as a high-level overview of the 
-> probabilistic nature for staking rewards.
+:::
 
 ## Payout Scheme
 
@@ -182,12 +190,16 @@ their validator to "reimburse" themselves for the cost of running a validator no
 all rewards are shared based on the stake behind each validator. This includes the stake of the
 validator itself, plus any stake bonded by nominators.
 
-> **NOTE:** Validators set their preference as a percentage of the block reward, _not_ an absolute
-> number of DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward
-> peaking when the amount staked is at 50% of the total supply. The commission is set as the amount
-> taken by the validator; that is, 0% commission means that the validator does not receive any
-> proportion of the rewards besides that owed to it from self-stake, and 100% commission means that
-> the validator operator gets all rewards and gives none to its nominators.
+:::info Validators set their preference as a percentage
+
+Validators set their preference as a percentage of the block reward, _not_ an absolute
+number of DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward
+peaking when the amount staked is at 50% of the total supply. The commission is set as the amount
+taken by the validator; that is, 0% commission means that the validator does not receive any
+proportion of the rewards besides that owed to it from self-stake, and 100% commission means that
+the validator operator gets all rewards and gives none to its nominators.
+
+:::
 
 In the following examples, we can see the results of several different validator payment schemes and
 split between nominator and validator stake. We will assume a single nominator for each validator.

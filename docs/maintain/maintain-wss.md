@@ -37,7 +37,9 @@ cargo build --release
 
 This will start the syncing process with Kusama's mainnet.
 
-_Note: the `--rpc-cors` mode needs to be set to all so that all external connections are allowed._
+:::note The `--rpc-cors` mode needs to be set to all so that all external connections are allowed
+
+:::
 
 ## Set up a certificate
 

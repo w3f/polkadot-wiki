@@ -6,10 +6,11 @@ description: Steps on how to nominate on Polkadot.
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
 
-> The following information applies to the Polkadot network. If you want to nominate on Kusama,
-> check out the
-> [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md)
-> instead.
+:::info The following information applies to the Polkadot network 
+
+If you want to nominate on Kusama, check out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
+
+:::
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible
 for appointing their stake to the validators who are the second type of participant. By appointing
@@ -94,8 +95,12 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
 
-> These concepts have been further explained in Polkadot's
-> [UI Walkthrough Video](https://youtu.be/FCXC0CDhyS4?t=219)
+:::note Explainer video on nominator account actions using the PolkadotJS UI
+
+These concepts have been further explained in Polkadot's
+[UI Walkthrough Video](https://youtu.be/FCXC0CDhyS4?t=219)
+
+:::
 
 ### Step 2: Nominate a validator
 
@@ -128,10 +133,13 @@ At some point, you might decide to stop nominating one or more validators. You c
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond.md).
 
-> The following videos related to staking are also available for your reference:
-> 
-> - [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
-> - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
+:::note Explainer videos on staking
+
+The following videos related to staking are also available for your reference: 
+- [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
+- [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
+
+:::
 
 ## Using Command-Line Interface (CLI)
 
@@ -162,8 +170,12 @@ staking model.
 
 `NUMBER_OF_TOKENS`: The number of DOT you would like to stake to the network.
 
-> **Note**: DOT has ten decimal places and is always represented as an integer with zeroes at the
-> end. So 1 DOT = 10_000_000_000 Plancks.
+:::note Decimal places
+
+DOT has ten decimal places and is always represented as an integer with zeroes at the
+end. So 1 DOT = 10_000_000_000 Plancks.
+
+:::
 
 `REWARD_DESTINATION`:
 

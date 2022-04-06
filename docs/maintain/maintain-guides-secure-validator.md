@@ -48,9 +48,13 @@ for instructions on setting Session keys. These should be generated and kept wit
 When you generate new Session keys, you must submit an extrinsic (a Session certificate) from your
 Controller key telling the chain your new Session keys.
 
-> **NOTE:** Session keys can also be generated outside the client and inserted into the client's
-> keystore via RPC. For most users, we recommend using the key generation functionality within the
-> client.
+:::info Generating session keys
+
+Session keys can also be generated outside the client and inserted into the client's
+keystore via RPC. For most users, we recommend using the key generation functionality within the
+client.
+
+:::
 
 ### Signing Outside the Client
 
@@ -58,9 +62,13 @@ In the future, Polkadot will support signing payloads outside the client so that
 on another device, e.g. a hardware security module (HSM) or secure enclave. For the time being,
 however, Session key signatures are performed within the client.
 
-> **NOTE:** HSMs are not a panacea. They do not incorporate any logic and will just sign and return
-> whatever payload they receive. Therefore, an attacker who gains access to your validator node
-> could still commit slashable behavior.
+:::info HSMs are not a panacea
+
+They do not incorporate any logic and will just sign and return
+whatever payload they receive. Therefore, an attacker who gains access to your validator node
+could still commit slashable behavior.
+
+:::
 
 ## Monitoring Tools
 

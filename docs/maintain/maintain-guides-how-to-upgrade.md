@@ -14,7 +14,11 @@ This guide will provide an option for validators to seamlessly substitute an act
 
 The process can take several hours, so make sure you understand the instructions first and plan accordingly.
 
-> Note: keep an eye out on new releases from the community and upgrade/downgrade accordingly.
+:::tip Keep an eye out on new releases from the community 
+
+Upgrade or downgrade accordingly.
+
+:::
 
 ## Key Components
 
@@ -31,7 +35,6 @@ Each validator server contains essential private keys in a folder called the *ke
 For this reason, it is advised that validators DO NOT CLONE or COPY the *keystore* folder and instead generate session keys for each new validator instance.
 
 Default keystore path - `/home/polkadot/.local/share/polkadot/chains/<chain>/keystore`
-   
 
 ## Steps
 
@@ -68,4 +71,3 @@ Once this time has elapsed, **Validator A** will take over. You can safely stop 
 2019-10-28 21:44:13 Applying authority set change scheduled at block #450092
 2019-10-28 21:44:13 Applying GRANDPA set change to new set with 20 authorities
 ```
-

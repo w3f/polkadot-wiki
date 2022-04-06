@@ -6,12 +6,13 @@ description: The fundamentals for running a Polkadot validator.
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-> The following information applies to the Polkadot network. If you want to set up a validator on
-> Kusama, check out the
-> [Kusama guide](kusama/mirror-maintain-guides-how-to-validate-kusama.md)
-> instead.
+:::info The following information applies to the Polkadot network
+
+If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/mirror-maintain-guides-how-to-validate-kusama.md) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
+
+:::
 
 ## Preliminaries
 
@@ -21,10 +22,14 @@ slashed, your money and your reputation will be at risk. However, running a vali
 very rewarding, knowing that you contribute to the security of a decentralized network while growing
 your stash.
 
-⚠️
-**`Warning: It is highly recommended that you have significant system administration experience before attempting to run your own validator.`
+:::warning
+
+It is highly recommended that you have significant system administration experience before attempting to run your own validator.
+
 You must be able to handle technical issues and anomalies with your node which you must be able to
-tackle yourself. Being a validator involves more than just executing the Polkadot binary.**
+tackle yourself. Being a validator involves more than just executing the Polkadot binary.
+
+:::
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator.md) information to make sure you understand the
@@ -104,7 +109,15 @@ If not, this command will fetch the latest version of Rust and install it.
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 ```
 
-> If you do not have "curl" installed, run "sudo apt install curl"
+:::note 
+
+If you do not have "curl" installed, run: 
+
+```bash
+sudo apt install curl
+```
+
+:::
 
 To configure your shell, run the following command.
 
@@ -160,10 +173,14 @@ verify that everything is working:
 sudo ntpq -p
 ```
 
-> _WARNING_: Skipping this can result in the validator node missing block authorship opportunities.
-> If the clock is out of sync (even by a small amount), the blocks the validator produces may not
-> get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
-> zero allocated blocks making it on chain.
+:::warning
+
+Skipping this can result in the validator node missing block authorship opportunities.
+If the clock is out of sync (even by a small amount), the blocks the validator produces may not
+get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
+zero allocated blocks making it on chain.
+
+:::
 
 ### Building and Installing the `polkadot` binary
 
@@ -216,8 +233,15 @@ It should return
 /usr/bin/polkadot
 ```
 
-> By default, the Polkadot systemd service is disabled.
-> To start the service, run `sudo systemctl start polkadot.service`.
+:::note By default, the Polkadot systemd service is disabled
+
+To start the service, run:
+
+```bash
+sudo systemctl start polkadot.service
+```
+
+:::
 
 ### Polkadot Binary
 
@@ -231,8 +255,15 @@ of all the potential 0.9 releases. You should replace `VERSION` below with the l
 the highest number). You can also find the latest Kusama version on the
 [release](https://github.com/paritytech/polkadot/releases) tab.
 
-> Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
-> `git clone git@github.com:paritytech/polkadot.git`.
+:::note
+
+If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
+
+```sh
+git clone git@github.com:paritytech/polkadot.git
+```
+
+:::
 
 ```sh
 git clone https://github.com/paritytech/polkadot.git
@@ -260,22 +291,26 @@ cargo build --profile production
 
 **_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
 
-> Note if you run into compile errors, you may have to switch to a less recent nightly. This can be
-> done by running:
->
-> ```sh
-> rustup install nightly-2021-06-09
-> rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-09
-> cargo +nightly-2021-06-09 build --release
-> ```
->
-> You may also need to run the build more than once.
->
-> If you would like to execute the tests, run the following command:
->
-> ```sh
-> cargo test --all
-> ```
+:::note Compilation Errors
+
+If you run into compile errors, you may have to switch to a less recent nightly. This can be
+done by running:
+
+```sh
+rustup install nightly-2021-06-09
+rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-09
+cargo +nightly-2021-06-09 build --release
+```
+
+You may also need to run the build more than once.
+
+If you would like to execute the tests, run the following command:
+
+```sh
+cargo test --all
+```
+
+:::
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
 directory. You may then take the generated `subkey` executable and transfer it to an air-gapped
@@ -287,14 +322,18 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 ### Synchronize Chain Data
 
-> **Note:** By default, Validator nodes are in archive mode. If you've already synced the chain not
-> in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure
-> that you run Polkadot with the `--pruning=archive` option.
->
-> You may run a validator node in non-archive mode by adding the following flags:
-> `--unsafe-pruning --pruning <NUM OF BLOCKS>`, a reasonable value being 1000. Note that an archive
-> node and non-archive node's databases are not compatible with each other, and to switch you will
-> need to purge the chain data.
+:::info By default, Validator nodes are in archive mode
+
+If you've already synced the chain not in archive mode, you must first remove the 
+database with `polkadot purge-chain` and then ensure that you run Polkadot with 
+the `--pruning=archive` option.
+
+You may run a validator node in non-archive mode by adding the following flags:
+`--unsafe-pruning --pruning <NUM OF BLOCKS>`, a reasonable value being 1000. Note that an archive
+node and non-archive node's databases are not compatible with each other, and to switch you will
+need to purge the chain data.
+
+:::
 
 You can begin syncing your node by running the following command:
 
@@ -319,7 +358,7 @@ if you do not want to start in validator mode right away.
 2021-06-17 03:07:10 Listening for new connections on 127.0.0.1:9944.
 ```
 
-Example of node sync:
+:::note Example of node sync
 
 ```
 2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u
@@ -330,18 +369,24 @@ Example of node sync:
 2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s
 ```
 
+:::
+
 The `--pruning=archive` flag is implied by the `--validator` flag, so it is only
 required explicitly if you start your node without one of these two options. If you do not set your
 pruning to archive node, even when not running in validator mode, you will need to
 re-sync your database when you switch.
 
-> **Note:** Validators should sync using the RocksDb backend. This is implicit by default, but can
-> be explicit by passing the `--database RocksDb` flag.
->
-> In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note
-> that **ParityDB is still experimental and should not be used in production.** If you want to test
-> out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will
-> require a resync.
+:::note Validators should sync using the RocksDb backend 
+
+This is implicit by default, but can
+be explicit by passing the `--database RocksDb` flag.
+
+In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note
+that **ParityDB is still experimental and should not be used in production.** If you want to test
+out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will
+require a resync.
+
+:::
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
@@ -404,13 +449,17 @@ the funds bonded by the Stash account.
 
 ## Set Session Keys
 
-> **Note:** The session keys are consensus critical, so if you are not sure if your node has the
-> current session keys that you made the `setKeys` transaction then you can use one of the two
-> available RPC methods to query your node:
-> [hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
-> check for a specific key or
-> [hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
-> to check the full session key public key string.
+:::caution Session keys are consensus critical
+
+If you are not sure if your node has the
+current session keys that you made the `setKeys` transaction then you can use one of the two
+available RPC methods to query your node:
+[hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
+check for a specific key or
+[hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
+to check the full session key public key string.
+
+:::
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you
 will now start running the node.
@@ -453,8 +502,8 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps RPC. If
-you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator
+You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps RPC. 
+If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator
 node. You can configure the apps dashboard to connect to the endpoint of your validator in the
 Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you
 will not be able to use this method since making RPC requests to this node would effect the local
@@ -519,8 +568,9 @@ validator's rewards. This is the rate that your validator will be commissioned w
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-> Note: setting a commission rate of 100% suggests that you do not want your validator to receive
-> nominations.
+:::caution Setting a commission rate of 100% suggests that you do not want your validator to receive nominations
+
+:::
 
 You can also determine if you would like to receive nominations with the "allows new nominations"
 option.
@@ -544,7 +594,7 @@ you are not selected for the validator set in a particular era. However, it may 
 increase the number of DOT staked or seek out nominators for your validator in order to join the
 validator set.
 
-**Congratulations!** If you have followed all of these steps, and been selected to be a part of the
+**Congratulations**, if you have followed all of these steps, and been selected to be a part of the
 validator set, you are now running a Polkadot validator! If you need help, reach out on the
 [Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 
@@ -579,11 +629,14 @@ other peers over the network.
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
- > Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider. 
- You may be locked out of your account and your server shut down if you come in violation.
- For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
- their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
- explicit permission to do so. This may extend to other cryptocurrency activity.
+::: caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
+
+You may be locked out of your account and your server shut down if you come in violation.
+For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
+their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
+explicit permission to do so. This may extend to other cryptocurrency activity.
+
+:::
 
 ## Using Docker
 
