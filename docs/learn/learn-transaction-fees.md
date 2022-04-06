@@ -43,8 +43,12 @@ as part of the fee calculation.
 The weight fee is the sum of the base weight and the sum of the total weight consumed by 
 call(s). 
 
-> A transaction can include several calls. For instance, a `batch` can contain `bond` and `nominate`, 
-> and the weight would be one base weight and then the sum of the weights for `bond` and `nominate`.
+:::info A transaction can include several calls
+
+For instance, a `batch` can contain `bond` and `nominate`, 
+and the weight would be one base weight and then the sum of the weights for `bond` and `nominate`.
+
+:::
 
 To learn more about the motivation of a weight fee, check out this 
 [Substrate doc](https://docs.substrate.io/v3/concepts/weight/) on weights.

@@ -27,9 +27,14 @@ is equal to 1e10 Planck.
 | Dot (DOT)       | 10             | 1.0000000000 |
 | Million (MDOT)  | 16             | 1,000,000.00 |
 
-> Note: This changed at block #1*248_328. Previously, DOT was denominated as equal to 1e12 Planck,
-> just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".
-> See [Redenomination of DOT](../general/redenomination.md) for more details.*
+
+:::note DOT was redenominated at block #1*248_328
+
+Previously, DOT was denominated as equal to 1e12 Planck,
+just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".
+See [Redenomination of DOT](../general/redenomination.md) for more details.*
+
+:::
 
 ### Kusama
 
@@ -52,8 +57,12 @@ DOT serves three key functions in Polkadot:
 DOT can also serve ancillary functions by virtue of being a transferrable token. For example, DOT
 stored in the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
-> These concepts have been further explained in the video
-> [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
+:::note Explainer video on token utility
+
+These concepts have been further explained in the video
+[Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
+
+:::
 
 ### DOT for Governance
 
