@@ -137,7 +137,7 @@ is defined [in the society pallet][substrate pallet] if you would like to have a
 Example:
 
 ```
-Let's assume we have 5 members in the society.
+Let's assume we have 5 members in the society
 
 lock_duration = 100 - 50_000 / (5 + 500)
 lock_duration * MAX_LOCK_DURATION_IN_BLOCKS

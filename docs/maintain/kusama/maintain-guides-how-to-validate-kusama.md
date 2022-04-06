@@ -6,7 +6,7 @@ description: The fundamentals for running a Kusama validator.
 slug: ../../maintain-guides-how-to-validate-kusama
 ---
 
-This guide will instruct you how to set up a validator node on the Kusama network.
+This guide will instruct you how to set up a validator node on the Kusama network
 
 ## Preliminaries
 
@@ -229,7 +229,7 @@ It should return
 /usr/bin/polkadot
 ```
 
-:::info By default, the Polkadot systemd service is disabled.
+:::info By default, the Polkadot systemd service is disabled
 
 To start the service, run 
 
@@ -287,7 +287,7 @@ cargo build --release
 
 **_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
 
-:::note
+:::note Compilation Errors
 
 If you run into compile errors, you may have to switch to a less recent nightly. This can be
 done by running:
@@ -382,7 +382,7 @@ required explicitly if you start your node without one of these two options. If 
 pruning to archive node, even when not running in validator, you will need to
 re-sync your database when you switch.
 
-:::note Validators should sync using the RocksDb backend. 
+:::note Validators should sync using the RocksDb backend
 
 This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
 
@@ -561,7 +561,7 @@ validator's rewards. This is the rate that your validator will be commissioned w
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-:::info setting a commission rate of 100% suggests that you do not want your validator to receive nominations
+:::caution setting a commission rate of 100% suggests that you do not want your validator to receive nominations
 
 :::
 
@@ -587,7 +587,7 @@ you are not selected for the validator set in a particular era. However, it may 
 increase the number of KSM staked or seek out nominators for your validator in order to join the
 validator set.
 
-**Congratulations!** If you have followed all of these steps, and been selected to be a part of the
+**Congratulations**, if you have followed all of these steps, and been selected to be a part of the
 validator set, you are now running a Kusama validator! If you need help, reach out on the
 [Kusama forum](https://forum.kusama.network/) or in the
 [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
@@ -622,7 +622,7 @@ other peers over the network.
 - [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
 
-  :::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider.
+  :::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
 
   You may be locked out of your account and your server shut down if you come in violation.
   For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
