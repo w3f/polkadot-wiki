@@ -10,6 +10,7 @@ slug: ../learn-crowdloans
 for their parachain bids in a decentralised crowdloan. 
 
 :::note Contributing to a crowdloan
+
 If you are here for guidance on how to 
 contribute for a crowdloan, watch the video below or read this [support article on crowdloans](https://support.polkadot.network/support/solutions/articles/65000177341-how-to-participate-in-crowdloans-on-polkadot-or-kusama).
 
@@ -61,7 +62,7 @@ runtime upgrades (as determined through its own local governance).
 
 ## Supporting a Crowdloan Campaign
 
-:::info minimum balance
+:::info Minimum Crowdloan Contribution
 
 The minimum balance for contributions for a crowdloan campaign is 
 currently set to {{ crowdloan_min_contribution }}. 
@@ -76,7 +77,7 @@ must be transferable &mdash; that is, not locked for any reason, including staki
 governance &mdash; because they will be moved into a module-controlled account that was generated
 uniquely for this campaign.
 
-:::caution A campaign is identified by an index, not by address
+:::caution Do not send Crowdloan contributions directly to the Parachain address
 
 All crowdloan contributions are handled by the Crowdloan module’s logic where a
 campaign is identified by an index, not by address. **Never transfer tokens to an address in 
