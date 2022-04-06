@@ -16,11 +16,15 @@ While bridge designs are now getting to a place where they are sufficiently plan
 not been too many used heavily in production. For this reason, you can consider this
 page a work in progress. It will be updated as more information is determined and available.
 
-> Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
-> Kusama :kusama }} ecosystem compatible with external blockchains
-> such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
-> interoperability technology that allows parachains to communicate trustlessly, please see the
-> dedicated [cross consensus][] page on the Wiki.
+:::info Purpose of bridging
+
+Bridges are specifically for making the {{ polkadot: Polkadot :polkadot }}{{ kusama: 
+Kusama :kusama }} ecosystem compatible with external blockchains
+such as Bitcoin, Ethereum, or Tezos (among others). For information on XCM, the native
+interoperability technology that allows parachains to communicate trustlessly, please see the
+dedicated [cross consensus][] page on the Wiki.
+
+:::
 
 ## Bridging Methods
 
@@ -64,8 +68,12 @@ chains, `main` and `side`. Ether deposited into the contract on `main` generates
 denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract
 on `side` can free up Ether on `main`.
 
-> To learn more on how Bitcoin and Ethereum can Cooperate and Collaborate Through Polkadot, check
-> out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
+:::note
+
+To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through Polkadot, check
+out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
+
+:::
 
 ### via Higher-Order Protocols
 
