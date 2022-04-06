@@ -33,16 +33,18 @@ which takes 28 eras. If a validator were to immediately chill and start unbondin
 calculated, and nobody issued a payout for that era from that validator in the next 28 eras, the
 reward would no longer be claimable.
 
-> In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout
-> before 28 eras have passed.
+:::info In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout before 28 eras have passed.
+
+:::
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
 fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will
 automatically calculate that validator's reward, find the top {{ polkadot_max_nominators }}
 nominators for that era, and distribute the rewards pro rata.
 
-> NOTE: The Staking system only applies the highest {{ polkadot_max_nominators }} nominations to
-> each validator to reduce the complexity of the staking set.
+:::note The Staking system only applies the highest {{ polkadot_max_nominators }} nominations to each validator to reduce the complexity of the staking set.
+
+:::
 
 These details are handled for you automatically if you use the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit

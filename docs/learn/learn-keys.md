@@ -95,11 +95,15 @@ Burdges' (a Web3 researcher)
 [original forum post](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70/2)
 on the topic:
 
-> There is one sacrifice we make by choosing Schnorr signatures over ECDSA signatures for account
-> keys: Both require 64 bytes, but only ECDSA signatures communicate their public key. There are
-> obsolete Schnorr variants that support recovering the public key from a signature, but they break
-> important functionality like hierarchical deterministic key derivation. In consequence, Schnorr
-> signatures often take an extra 32 bytes for the public key.
+:::info Choosing Schnorr signatures over ECDSA signatures
+
+There is one sacrifice we make by choosing Schnorr signatures over ECDSA signatures for account
+keys: Both require 64 bytes, but only ECDSA signatures communicate their public key. There are
+obsolete Schnorr variants that support recovering the public key from a signature, but they break
+important functionality like hierarchical deterministic key derivation. In consequence, Schnorr
+signatures often take an extra 32 bytes for the public key.
+
+:::
 
 But ultimately the benefits of using Schnorr signatures outweigh the tradeoffs, and future
 optimizations may resolve the inefficiencies pointed out in the quote above.
@@ -141,13 +145,15 @@ Not yet, but they will be. BLS signatures allow more efficient signature aggrega
 GRANDPA validators are usually signing the same thing (e.g. a block), it makes sense to aggregate
 them, which can allow for other protocol optimizations.
 
-As stated in the BLS library's README,
+:::info From the BLS library's README
 
-> Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and
-> much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS
-> permits a diverse array of signature aggregation options far beyond any other known signature
-> scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold
-> signatures.
+Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and
+much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS
+permits a diverse array of signature aggregation options far beyond any other known signature
+scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold
+signatures.
+
+:::
 
 Even though Schnorr signatures allow for signature aggregation, BLS signatures are much more
 efficient in some fashions. For this reason it will be one of the session keys that will be used by
@@ -164,11 +170,8 @@ validators on the Polkadot network and critical to the GRANDPA finality gadget.
 
 ## Appendix A: On the security of curves
 
-From the
-[introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10)
-into `libssl`:
+:::note From the [Introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10) into `libssl`
 
-```text
 The reason is the following: During summer of 2013, revelations from ex-
 consultant at [the] NSA Edward Snowden gave proof that [the] NSA willingly inserts backdoors
 into software, hardware components and published standards. While it is still
@@ -187,4 +190,5 @@ However an alternative exists in the form of Curve25519. This algorithm has been
 proposed in 2006 by DJB [Curve25519]. Its main strengths are its speed, its
 constant-time run time (and resistance against side-channel attacks), and its
 lack of nebulous hard-coded constants.
-```
+
+:::
