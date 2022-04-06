@@ -88,13 +88,9 @@ passing messages between them. Furthermore, as bridges to other chains are conne
 to Bitcoin or Ethereum) {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains
 will be able to communicate with these as well.
 
-:::note Building considerations
-
-Despite the benefits of becoming a parachain, developers should be conscious of the 
-challenges in becoming a parachain, and whether building a blockchain with an end goal of becoming a
-parachain is a viable one for their project.
-
-:::
+> **Please note**: Despite the benefits of becoming a parachain, developers should be conscious of the 
+> challenges in becoming a parachain, and whether building a blockchain with an end goal of becoming a
+> parachain is a viable one for their project.
 
 On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, you are able to put your
 blockchain’s latest block head onto the relay chain.
@@ -138,15 +134,13 @@ parachain. They are incentivized with a native token payout from:
 
 ### Para-objects
 
-:::info The Relay Chain can host arbitrary state machines, not just blockchains.
+            The Relay Chain can host arbitrary state machines, not just blockchains.
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network will encourage the
 connection and interoperability between different *para-objects*.
 
-Here, para-objects are referring to objects on the network that operate in parallel, 
-generally, parallelizable objects.
-
-:::
+    Here, para-objects are referring to objects on the network that operate in parallel, 
+    generally, parallelizable objects.
 
 These could be in the form of:
 
@@ -216,13 +210,9 @@ provide support for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama 
 directly. For this reason, `Cumulus`, an added *library* contains all of the 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} adot compatibility glue code.
 
-:::note Get started with Substrate
-
-The best way to get started with Substrate is 
-to explore the [Substrate Developer Hub](https://docs.substrate.io/), an online resource built 
-and maintained by [Parity Technologies](https://parity.io).
-
-:::
+> If you haven't already, get started with Substrate. The best way to get started with Substrate is 
+> to explore the [Substrate Developer Hub](https://docs.substrate.io/), an online resource built 
+> and maintained by [Parity Technologies](https://parity.io).
 
 #### Cumulus
 
@@ -246,16 +236,11 @@ Cumulus is still in development, but the idea is that it should be simple
 to take a Substrate chain and add the parachain code by importing the crates and adding a single line
 of code. Keep up-to-date with the latest Cumulus developments from the [Cumulus section](###cumulus).
 
-
-:::info Using PDKs
-
-Substrate and Cumulus provide a PDK from the abstraction of the blockchain format, but it is **not
-necessary** that a parachain even needs to be a blockchain. For example, a parachain just needs to
-satisfy the two constraints listed above: *state transition function* and *collator node*.
-
-Everything else is up to the implementer of the PDK.
-
-:::
+> Substrate and Cumulus provide a PDK from the abstraction of the blockchain format, but it is **not
+> necessary** that a parachain even needs to be a blockchain. For example, a parachain just needs to
+> satisfy the two constraints listed above: *state transition function* and *collator node*.
+>
+> Everything else is up to the implementer of the PDK.
 
 Cumulus handles the network compatibility overhead that any parachain would need to implement to 
 be connected to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. This includes:
@@ -292,13 +277,9 @@ that includes a collator node and allows for your Substrate-built logic to be co
 
 ### Future PDKs
 
-:::info Call to action
-
-Do you want to build a Parachain Development Kit from scratch? The Web3
-Foundation is giving grants to teams who are doing this, learn more and apply on the
-[W3F grants page](https://grants.web3.foundation).
-
-:::
+> **Call to Action:** Do you want to build a Parachain Development Kit from scratch? The Web3
+> Foundation is giving grants to teams who are doing this, learn more and apply on the
+> [W3F grants page](https://grants.web3.foundation).
 
 One example of a PDK W3F is interested in supporting is a
 [roll-up](https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675) kit that allowed

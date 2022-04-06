@@ -101,14 +101,10 @@ this comparison chart as a cheat sheet:
 
 ![build 2](../assets/build-2.png)
 
-:::note The image above does not include parathreads
-
-As we mentioned before, all the benefits of parachains apply just as well to parathreads. 
-Parathreads, however, *are* cheaper to deploy and maintain. So if they had a column on the table 
-above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead" 
-changed to `+`.
-
-:::
+> **Note:** The image above does not include parathreads, but as we mentioned before all the
+> benefits of parachains apply just as well to parathreads. Parathreads, however, *are* cheaper to
+> deploy and maintain. So if they had a column on the table above, it would look like the parachain
+> column with "Ease of deployment" and "Maintenance overhead" changed to `+`.
 
 --- 
 
