@@ -1,7 +1,7 @@
 ---
 id: learn-registrar
 title: Using W3F Registrar
-sidebar_label: How to use W3F Registrar
+sidebar_label: Registrar
 description: A deprecated page on registrars.
 slug: ../learn-registrar
 ---

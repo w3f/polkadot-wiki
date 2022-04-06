@@ -121,7 +121,7 @@ vote, given your stake. At the same time, holding only a small amount of tokens 
 the holder cannot influence the referendum result, thanks to time-locking. You can read more about
 this at [Voluntary Locking](#voluntary-locking).
 
-::: Referenda explainer video
+:::note Referenda explainer video
 
 To learn more about voting on referenda, please check out our
 [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
@@ -318,7 +318,7 @@ support - will move to a public referendum under a neutral, majority-carries vot
 case that all members of the council vote in favor of a motion, the vote is considered unanimous and
 becomes a referendum with negative adaptive quorum biasing.
 
-::: Explainer video on the Council
+:::note Explainer video on the Council
 
 For more information, check out our [video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
 

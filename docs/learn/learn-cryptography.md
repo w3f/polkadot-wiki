@@ -1,7 +1,7 @@
 ---
 id: learn-cryptography
 title: Cryptography Explainer
-sidebar_label: Cryptography Explainer
+sidebar_label: Cryptography
 description: An overview of the cryptographic functions used in Polkadot.
 slug: ../learn-cryptography
 ---
