@@ -90,7 +90,7 @@ nominators all unbond their stake, having that extra buffer of nomination intent
 
 Within the context of a single bag, nodes are not sorted by their stake, but instead placed in insertion 
 order. Accounts can put themselves in front of other accounts with lower stake in the same bag using the 
-'bagsList.putInFrontOf' extrinsic. It's important to note that this process only puts you in front of
+`bagsList.putInFrontOf` extrinsic. It's important to note that this process only puts you in front of
 an account that has lower stake in the same bag. Check this [support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards) for instructions.
 
 :::
