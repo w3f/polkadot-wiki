@@ -24,8 +24,12 @@ There are five phases of the Availability and the Validity protocol.
 The parachain phase of AnV is when the _collator_ of a parachain proposes a _candidate block_ to the
 validators that are currently assigned to the parachain.
 
-> A **candidate block** is a new block from a parachain collator that may or may not be valid and
-> must go through validity checks before being included into the Relay Chain.
+:::note Candidate block
+
+A new block from a parachain collator that may or may not be valid and
+must go through validity checks before being included into the Relay Chain.
+
+:::
 
 ### Relay Chain submission phase
 
@@ -75,8 +79,12 @@ requiring all validators to keep tabs on all the parachains. Instead, validators
 pieces of the data and can later reconstruct the entire data under the assumption that 1/3+1 of the
 validators can provide their pieces of the data.
 
-**Note:** The 1/3+1 threshold of validators that must be responsive in order to construct the full
+:::note
+
+The 1/3+1 threshold of validators that must be responsive in order to construct the full
 parachain state data corresponds to Polkadot's security assumption in regard to Byzantine nodes.
+
+:::
 
 ## Fishermen: Deprecated
 

@@ -11,8 +11,12 @@ actions on their behalf. Much like the Stash and Controller account relationship
 [staking](learn-staking.md), proxies allow users to keep one account in cold storage and actively
 participate in the network with the weight of the tokens in that account.
 
-> Check out our Polkadot YouTube video that explains
-> [what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
+:::note Explainer video on proxies
+
+Check out our Polkadot YouTube video that explains
+[what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
+
+:::
 
 ## Proxy Types
 
@@ -46,9 +50,13 @@ balance transfers (including vested transfers).
 The "Governance" type will allow proxies to make transactions related to governance (i.e., from the
 Democracy, Council, Treasury, Technical Committee, and Elections pallets).
 
-> See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information on
-> governance proxies or watch our
-> [technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
+:::note Explainers on governance proxies
+
+See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information on
+governance proxies or watch our
+[technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
+
+:::
 
 ### Staking Proxies
 
@@ -88,8 +96,12 @@ account designates a proxy account, but anonymous proxies are the opposite. The 
 the proxy relationship is the proxy account and the new account is the primary. Use extreme care
 with anonymous proxies; once you remove the proxy relationship, the account will be inaccessible.
 
-> Learn more about anonymous proxies from our
-> [technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
+:::note Explainer video on anonymous proxies
+
+Learn more about anonymous proxies from our
+[technical explainer video](https://www.youtube.com/watch?v=iWq53zXo7dw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=28&ab_channel=Polkadot).
+
+:::
 
 ![anonymous proxy](../assets/proxy_anonymous_diagram.png)
 
@@ -104,12 +116,16 @@ intended function call in the announcement. Within this time window, the intende
 cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
 actions can be noticed and reverted within a delay period.
 
-**Please be advised:** Polkadot-JS Apps UI cannot handle complicated proxy setups. (e.g. a proxy -> multisig 
+:::caution Polkadot-JS Apps cannot handle complicated proxy setups
+
+Polkadot-JS Apps cannot handle complicated proxy setups. (e.g. a proxy -> multisig 
 -> an anonymous proxy which is part of another multisig). These complex setups must be done using the 
 extrinsics tab directly.
 
-**These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
-the chain, as you will be unable to sign extrinsics using the UI.**
+These complex proxy setups should only be performed if you are comfortable enough interacting directly with 
+the chain, as you will be unable to sign extrinsics using the UI.
+
+:::
 
 ## Why use a Proxy?
 
@@ -141,20 +157,27 @@ next to it). The `addProxy(proxy, proxy_type)` function will need to be selected
 a proxy. The chosen proxy account that you set will be the account that has the proxy on it. The
 selected account at the top is the account that will be the primary account.
 
-> NOTE: If you see an `unused` option when adding in a proxy, this is not a proxy type. This is an
-> empty `enum`, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
-> created.
+:::caution `unused` option
+
+If you see an `unused` option when adding in a proxy, this is not a proxy type. This is an
+empty `enum`, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
+created.
+
+:::
 
 **It is critical to setup Anonymous Proxies with appropriate permissions and be aware of potential dangers**
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
-> NOTE: The first anonymous proxy you add should always be of *type* `Any`.
-> Also, if there are multiple anonymous proxies for the proxied account, you should keep at least  *one* `Any`
-> type.
-> Without having an `Any` type proxy, you won't be able to send funds, add new proxies, kill the
-> anonymous proxy or take any action not specifically allowed by the types of the proxies the
-> account has.
+:::caution Anonymous proxy types
+
+The first anonymous proxy you add should always be of *type* `Any`.
+Also, if there are multiple anonymous proxies for the proxied account, you should keep at 
+least  *one* `Any` type. Without having an `Any` type proxy, you won't be able to send funds, 
+add new proxies, kill the anonymous proxy or take any action not specifically allowed by the types 
+of the proxies the account has.
+
+:::
 
 For anonymous proxies, a different function will need to be called, the
 `anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would
@@ -179,19 +202,25 @@ where you will be able to select the type of proxy for that specific account.
 
 ![proxy generation part 2](../assets/polkadot_add_another_proxy.png)
 
-> NOTE: You cannot create an anonymous function from the Accounts page, you must be on the
-> Extrinsics page.
+:::info Creating an anonymous function 
+
+You cannot create an anonymous function from the Accounts page, you must be on the
+Extrinsics page.
+
+:::
 
 ### Removing Proxies
+
+:::warning There is no way to get access to the proxy after deleting it
 
 If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
 this.
 
 For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the `killAnonymous` function for anonymous proxies. This must be called **from** the *anonymous* proxy. This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
 
-The following steps can be used to remove your proxy:
+:::
 
-> WARNING: there is no way to get access to the proxy after deleting it.
+The following steps can be used to remove your proxy:
 
 - **Step 0**: You need to know the following information:
 
