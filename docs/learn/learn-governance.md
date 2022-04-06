@@ -460,7 +460,7 @@ At some point you will likely need a place for a longer-form discussion. For thi
 you present all the evidence for your circumstances and state clearly what kind of change you would
 suggest to the councillors to enact. 
 
-:::info Making a case
+:::info 
 
 Remember, the councillors do not need to make the change, it is your responsibility to make a 
 strong case for why the change should be made.

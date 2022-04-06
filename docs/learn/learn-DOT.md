@@ -28,7 +28,7 @@ is equal to 1e10 Planck.
 | Million (MDOT)  | 16             | 1,000,000.00 |
 
 
-:::note This changed at block #1*248_328
+:::note DOT was redenominated at block #1*248_328
 
 Previously, DOT was denominated as equal to 1e12 Planck,
 just like Kusama. This denomination is deprecated, and, if necessary, referred to as "DOT (old)".

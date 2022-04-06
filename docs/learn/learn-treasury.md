@@ -42,9 +42,9 @@ Proposals may consist of (but are not limited to):
 The [Council](learn-governance#council) governs the Treasury and how the funds are spent is up to their 
 judgment.
 
-:::caution The Council does not approve or deny Treasury Proposals based on the available funds
+:::caution 
 
-Proposals are not approved just because there are funds ready to spend
+The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are not approved just because there are funds ready to spend
 but are subject to a burn.
 
 :::
