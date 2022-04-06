@@ -173,9 +173,9 @@ search for "Existing Members (Challenges)". Besides that, you can earn extra KSM
 apply for the membership and requesting a tip. This is useful when a user does not have enough
 balance to reserve a deposit. The tip will be given when a user successfully joins the society.
 
-:::info Each member can only vouch for one user at a time 
+:::info
 
-A member is not required to reserve the deposit when vouching for a user.
+Each member can only vouch for one user at a time. A member is not required to reserve the deposit when vouching for a user.
 
 :::
 

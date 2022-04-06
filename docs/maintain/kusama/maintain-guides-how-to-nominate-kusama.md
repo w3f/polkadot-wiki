@@ -6,9 +6,9 @@ description: Steps on how to nominate on Kusama.
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
-:::info This guide applies to the Kusama network
+:::info
 
-If you want to nominate on Polkadot,
+The following information applies to the Kusama network. If you want to nominate on Polkadot,
 check out the [Polkadot guide](../maintain-guides-how-to-nominate-polkadot.md) instead.
 
 :::
