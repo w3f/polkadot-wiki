@@ -10,7 +10,7 @@ slug: ../miscellaneous
 
 ### Polkadot as a service provider
 
-The current state of Polkadot can be compared to a modern day ISP (internet service providers), 
+The current state of Polkadot can be compared to a modern day ISP (internet service provider), 
 where Polkadot is essentially providing access, or specifically, local connectivitiy to web3. 
 
 Polkadot would require another means (or another layer) of communication to directly connect and 
@@ -22,4 +22,5 @@ Polkadot manages a subset of the world's hardware resources, through its active 
 In principle, Polkadot is a management system which maintains its system through on-chain 
 governance.
 
-Polkadot's approach to management starts with sharding, which is essentially a dedicated CPU core.
+Polkadot's approach to management starts with sharding, creating a set of parachain slots that 
+essentially serve as dedicated CPU cores.
