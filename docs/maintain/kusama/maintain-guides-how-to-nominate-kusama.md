@@ -102,7 +102,7 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../../assets/payout/01.png)
 
-:::note Explainer video on nominator account actions using the PolkadotJS UI
+:::note Explainer video on using the Polkadot-JS UI
 
 These concepts have been further explained in Polkadot's
 [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
