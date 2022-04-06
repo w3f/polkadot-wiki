@@ -190,7 +190,7 @@ their validator to "reimburse" themselves for the cost of running a validator no
 all rewards are shared based on the stake behind each validator. This includes the stake of the
 validator itself, plus any stake bonded by nominators.
 
-:::info Validators set their preference as a percentage
+:::info 
 
 Validators set their preference as a percentage of the block reward, _not_ an absolute
 number of DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward

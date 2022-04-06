@@ -6,9 +6,9 @@ description: The fundamentals for running a Polkadot validator.
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-:::info The following information applies to the Polkadot network
+:::info 
 
-If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/mirror-maintain-guides-how-to-validate-kusama.md) instead.
+The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/mirror-maintain-guides-how-to-validate-kusama.md) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
 
@@ -594,7 +594,7 @@ you are not selected for the validator set in a particular era. However, it may 
 increase the number of DOT staked or seek out nominators for your validator in order to join the
 validator set.
 
-**Congratulations**, if you have followed all of these steps, and been selected to be a part of the
+**Congratulations!** If you have followed all of these steps, and been selected to be a part of the
 validator set, you are now running a Polkadot validator! If you need help, reach out on the
 [Polkadot Validator chat](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation).
 

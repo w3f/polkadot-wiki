@@ -6,9 +6,9 @@ description: Steps on how to nominate on Polkadot.
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
 
-:::info The following information applies to the Polkadot network 
+:::info 
 
-If you want to nominate on Kusama, check out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
+The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
 
 :::
 
@@ -95,7 +95,7 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
 
-:::note Explainer video on nominator account actions using the PolkadotJS UI
+:::note 
 
 These concepts have been further explained in Polkadot's
 [UI Walkthrough Video](https://youtu.be/FCXC0CDhyS4?t=219)
