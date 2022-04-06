@@ -6,8 +6,12 @@ description: Steps on how to nominate on Kusama.
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
-> The following information applies to the Kusama network. If you want to nominate on Polkadot,
-> check out the [Polkadot guide](../maintain-guides-how-to-nominate-polkadot.md) instead.
+:::info The following information applies to the Kusama network. 
+
+If you want to nominate on Polkadot,
+check out the [Polkadot guide](../maintain-guides-how-to-nominate-polkadot.md) instead.
+
+:::
 
 Nominators are one type of participant in the staking subsystem of Kusama. They are responsible
 for appointing their stake to the validators who are the second type of participant. By appointing
@@ -21,10 +25,14 @@ on the validators that they elect. When looking for validators to nominate, a no
 to their own reward percentage for nominating a specific validator - as well as the risk that they bear of 
 being slashed if the validator gets slashed.
 
-> If you prefer a video format for the tutorials, the following videos related to staking on Kusama are available:
->
-> - [How to Stake on Polkadot (and Kusama)](https://youtu.be/FCXC0CDhyS4)
-> - [Staking with Kusama App on Ledger and PolkadotJS Apps UI](https://www.youtube.com/watch?v=7VlTncHCGPc&t=305s)
+:::note Explainer videos on staking
+
+If you prefer a video format for the tutorials, the following videos related to staking on Kusama are available:
+
+- [How to Stake on Polkadot (and Kusama)](https://youtu.be/FCXC0CDhyS4)
+- [Staking with Kusama App on Ledger and PolkadotJS Apps UI](https://www.youtube.com/watch?v=7VlTncHCGPc&t=305s)
+
+:::
 
 ## Setting up Stash and Controller keys
 
@@ -94,8 +102,12 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../../assets/payout/01.png)
 
-> These concepts have been further explained in Polkadot's
-> [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+:::note Explainer video on nominator account actions using the PolkadotJS UI
+
+These concepts have been further explained in Polkadot's
+[UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+
+:::
 
 ### Step 2: Nominate a validator
 
