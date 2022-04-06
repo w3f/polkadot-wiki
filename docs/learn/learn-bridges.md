@@ -68,7 +68,7 @@ chains, `main` and `side`. Ether deposited into the contract on `main` generates
 denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract
 on `side` can free up Ether on `main`.
 
-:::note Explainer video on Ethereum x Polkadot
+:::note
 
 To learn more on how Bitcoin and Ethereum can cooperate and collaborate Through Polkadot, check
 out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)

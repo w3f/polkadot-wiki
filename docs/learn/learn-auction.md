@@ -149,7 +149,7 @@ have ended before they even bid.
 
 ## Polkadot Implementation
 
-Polkadot will use a random beacon_ based on the VRF that's used also in other places of the
+Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the
 protocol. The VRF will provide the base of the randomness, which will retroactively determine the
 end-time of the auction.
 
