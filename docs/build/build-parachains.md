@@ -88,7 +88,7 @@ passing messages between them. Furthermore, as bridges to other chains are conne
 to Bitcoin or Ethereum) {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} parachains
 will be able to communicate with these as well.
 
-:::note Building considerations
+:::note
 
 Despite the benefits of becoming a parachain, developers should be conscious of the 
 challenges in becoming a parachain, and whether building a blockchain with an end goal of becoming a
@@ -247,7 +247,7 @@ to take a Substrate chain and add the parachain code by importing the crates and
 of code. Keep up-to-date with the latest Cumulus developments from the [Cumulus section](###cumulus).
 
 
-:::info Using PDKs
+:::info
 
 Substrate and Cumulus provide a PDK from the abstraction of the blockchain format, but it is **not
 necessary** that a parachain even needs to be a blockchain. For example, a parachain just needs to

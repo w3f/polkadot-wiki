@@ -75,8 +75,9 @@ built on the key-value store.
 The key-value data store is backed by [RocksDB](https://rocksdb.org/), and it also supports an 
 experimental [Parity database](https://github.com/paritytech/parity-db).
 
-:::note The database is used for components that require persistent storage
+:::note
 
+The database is used for components that require persistent storage
 These are components like Substrate clients, Substrate light-clients & off-chain workers. 
 For more information, check out
 Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
