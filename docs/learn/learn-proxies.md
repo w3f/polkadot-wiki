@@ -169,7 +169,7 @@ created.
 
 ### Creating Anonymous Proxies on Polkadot-JS UI
 
-:::caution Anonymous proxy types
+:::caution
 
 The first anonymous proxy you add should always be of *type* `Any`.
 Also, if there are multiple anonymous proxies for the proxied account, you should keep at 
@@ -202,7 +202,7 @@ where you will be able to select the type of proxy for that specific account.
 
 ![proxy generation part 2](../assets/polkadot_add_another_proxy.png)
 
-:::info Creating an anonymous function 
+:::info
 
 You cannot create an anonymous function from the Accounts page, you must be on the
 Extrinsics page.
@@ -211,12 +211,14 @@ Extrinsics page.
 
 ### Removing Proxies
 
-:::warning There is no way to get access to the proxy after deleting it
+:::warning There is no way to get access to the anonymous proxy after deleting it
 
 If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
 this.
 
-For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the `killAnonymous` function for anonymous proxies. This must be called **from** the *anonymous* proxy. This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
+For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the 
+`killAnonymous` function for anonymous proxies. This must be called **from** the *anonymous* proxy. 
+This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
 
 :::
 

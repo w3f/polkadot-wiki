@@ -145,7 +145,7 @@ Not yet, but they will be. BLS signatures allow more efficient signature aggrega
 GRANDPA validators are usually signing the same thing (e.g. a block), it makes sense to aggregate
 them, which can allow for other protocol optimizations.
 
-:::info As stated in the BLS library's README
+:::info From the BLS library's README
 
 Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and
 much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS

@@ -29,7 +29,7 @@ with the following properties:
     It is _extensible_ and, in turn, _future-proof_ and _forwards-compatible_.
 - Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
 
-:::info XCM design
+:::info
 
 XCM is not designed in that every system supporting the format is expected to be able to interpret any
 possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable

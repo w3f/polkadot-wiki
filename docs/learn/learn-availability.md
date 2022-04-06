@@ -26,7 +26,7 @@ validators that are currently assigned to the parachain.
 
 :::note Candidate block
 
-A new block from a parachain collator that may or may not be valid and
+A candidate block is a new block from a parachain collator that may or may not be valid and
 must go through validity checks before being included into the Relay Chain.
 
 :::
