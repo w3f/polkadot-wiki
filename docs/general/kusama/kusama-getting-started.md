@@ -12,22 +12,26 @@ Kusama is a *canary network* for Polkadot; an earlier release of the code that i
 holds real economic value. For developers, Kusama is a proving ground for runtime upgrades, on-chain
 governance, and parachains.
 
-**No Promises**.
+:::info No Promises
 
 Kusama is owned by those who hold the Kusama tokens (KSM). There's no central kill switch and
 all changes are made through the protocol's on-chain governance. 
-
-Kusama is experimental. 
 
 The network is a permissionless and anyone can come along and start using it.
 Those who participated in the Polkadot sale can claim a proportional amount of KSM through
 the [Kusama Claims process][claims].
 
-> As a KSM holder, you can interact with all the features of the Kusama network such as
-> staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and
-> everything else.
+Kusama is experimental. **Expect Chaos**.
 
-**Expect Chaos**.
+:::
+
+:::tip As a KSM holder
+
+You can interact with all the features of the Kusama network such as
+staking (i.e. validating or nominating), governance, parachain auctions, basic transfers and
+everything else.
+
+:::
 
 <tr class="cards-container">
   <td>

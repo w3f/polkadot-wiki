@@ -11,8 +11,12 @@ key management over the past few years. Kusama provides a method that allows use
 accounts by setting up a social recovery. It is an M-of-N recovery tool based on the
 multi-signature wallet to get back access to your lost account.
 
-> **Important**: There is no way to get back your private key by using this method. This is just a way of
-> performing transactions on behalf of the lost account, so you can think of it as a proxy instead.
+:::caution There is no way to get back your private key by using this method
+
+This is just a way of performing transactions on behalf of the lost account, so you can
+think of it as a proxy instead.
+
+:::
 
 In this guide, you will learn how to create a recoverable account, how to recover it, and what you
 need to be aware of when using it.
@@ -26,8 +30,12 @@ approve the recovery process to recover your account.
 
 ![](../../assets/recovery/social-recovery-diag-1.png)
 
-> If you are recovering an account, ensure that your network is set to Kusama. 
-> You can do this by selecting the network from the top right corner in the Polkadot-JS UI.
+:::note Account Recovery
+
+If you are recovering an account, ensure that your network is set to Kusama. 
+You can do this by selecting the network from the top right corner in the Polkadot-JS UI.
+
+:::
 
 First, see the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot-JS Apps
 that shows all available accounts on your browser's local storage and Polkadot-JS extension. 
@@ -50,17 +58,25 @@ more KSM will be required.
 `recovery threshold` - The number of friends required to submit a `vouchRecovery` transaction in
 order to recover the account.
 
-> 1 is the minimum, but it is not recommended to set a small number. If you set 1, that means
-> any of your recovery helpers would be able to recover your account.
+:::info
+
+1 is the minimum, but it is not recommended to set a small number. If you set 1, that means
+any of your recovery helpers would be able to recover your account.
+
+:::
 
 `recovery block delay` - Once the threshold is reached, you will need to wait until the block delay
 has passed until you can claim the recovery. This is a protection mechanism to allow the account
 owner to have enough time to check and react in case someone pretends to be you and initiates a
 recovery process.
 
-> Setting the block delay to be a little longer would be better since even if an attacker
-> acquired enough signatures to recover your account, they would still have to wait until the block
-> delay is passed to control your account.
+:::info
+
+Setting the block delay to be a little longer would be better since even if an attacker
+acquired enough signatures to recover your account, they would still have to wait until the block
+delay is passed to control your account.
+
+:::
 
 ![kusama accounts page2](../../assets/kusama/kusama_make_account_recoverable.png)
 
@@ -73,8 +89,12 @@ held in the lost account to the new account.
 
 The above diagram shows the whole process of recovering an account.
 
-> Ensure that your new account has enough KSM to pay for the transaction fees and the amount
-> that is used for reserve when making a recovery.
+:::info
+
+Ensure that your new account has enough KSM to pay for the transaction fees and the amount
+that is used for reserve when making a recovery.
+
+:::
 
 Navigate to the menu beside the send button in the row of your new account and click
 the "Initiate recover for another" option.
@@ -137,10 +157,14 @@ The recovery process is now complete and successful.
 
 ![](../../assets/recovery/social-recovery-15.png)
 
-> There is still one possible way to recover the account without going through the recovery
-> process. That is by using the `Root` origin. However, in order to use root permissions, you will
-> need to either go through the council or submit a public proposal. To learn more about governance,
-> see [here](../../learn/learn-governance.md).
+:::tip Using `Root` origin
+
+There is still one possible way to recover the account without going through the recovery
+process. That is by using the `Root` origin. However, in order to use root permissions, you will
+need to either go through the council or submit a public proposal. To learn more about governance,
+see [here](../../learn/learn-governance.md).
+
+:::
 
 ## Further Reading
 
