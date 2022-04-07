@@ -42,7 +42,7 @@ module.exports = {
             },
             {
               type: 'category',
-              label: 'Assets',
+              label: 'Tokens and Assets',
               items: [
                   'learn/learn-assets',
                   'learn/learn-DOT',
