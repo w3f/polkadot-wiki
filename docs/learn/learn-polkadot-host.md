@@ -1,7 +1,7 @@
 ---
 id: learn-polkadot-host
 title: Polkadot Host (PH)
-sidebar_label: Polkadot Host (PH)
+sidebar_label: Polkadot Host
 description: Learn about the components of the Polkadot host.
 slug: ../learn-polkadot-host
 ---

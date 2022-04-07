@@ -1,7 +1,7 @@
 ---
 id: learn-keys
 title: Polkadot Keys
-sidebar_label: Polkadot Keys
+sidebar_label: Keys
 description: Learn about the different cryptographic keys used in Polkadot.
 slug: ../learn-keys
 ---

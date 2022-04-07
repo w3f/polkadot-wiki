@@ -1,7 +1,7 @@
 ---
 id: learn-balance-transfers
 title: Balance Transfers
-sidebar_label: How to transfer Balances
+sidebar_label: Balances Transfers
 description: Steps on how to perform balance transfers.
 slug: ../learn-balance-transfers
 ---
