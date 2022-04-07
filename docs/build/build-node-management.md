@@ -12,9 +12,9 @@ guide will always refer to the executable as `polkadot`.
 
 **Always refer to the client's help `polkadot --help` for the most up-to-date information.**
 
-:::note For other client implementation teams
+:::note 
 
-Feel free to make a PR to this page with instructions (or a
+Other client implementation teams: Feel free to make a PR to this page with instructions (or a
 link to instructions) for your client.
 
 :::

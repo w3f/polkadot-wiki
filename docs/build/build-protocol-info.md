@@ -99,8 +99,8 @@ is seperate to that of the Relay Chain ED.
 
 :::note Existential deposit for Statemint
 
-The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT
-and 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
+The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT)
+ as well as lower transaction fees. It is highly recommended to handle balance
 transfers on Statemint. Statemint integration is discussed in the next page of the guide.
 
 :::
