@@ -61,6 +61,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
+Maximum number of Validators that can be nominated by a nominator - {{ polkadot_max_nominations }}
 
 | Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -78,7 +79,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 | Ending period            | 5 days  | 72_000  | The ending period of the slot auction.                                           |
 
 | Parachain Slot           | Time     | Slots         | Description                                                                              |
-| ------------------------ | -------- | ------------- | ---------------------------------------------------------------------------------------- | 
+| ------------------------ | -------- | ------------- | ---------------------------------------------------------------------------------------- |
 | Lease period             | 12 weeks | 1_209_600     | The length of one lease period in a parachain slot.                                     |
 | Total slot duration      | 2 years  | 10_512_000    | The maximum duration a parachain can lease by winning a slot auction (8 lease periods). |
 
@@ -95,5 +96,5 @@ Burn percentage is currently `1.00%`.
 DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
 Plancks make up a DOT.
 
-The denomination of DOT was changed from 12 decimals of precision at block #1*248_328 in an event
-known as \_Denomination Day*. See [Redenomination](../general/redenomination.md) for details.
+The denomination of DOT was changed from 12 decimals of precision at block #1\_248\_328 in an event
+known as *Denomination Day*. See [Redenomination](../general/redenomination.md) for details.
