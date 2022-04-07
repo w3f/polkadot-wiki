@@ -71,7 +71,7 @@ module.exports = {
             },
             {
               type: 'category',
-              label: 'Stake',
+              label: 'Staking',
               items: [
                   'learn/learn-staking',
                   'learn/learn-staking-faq',
