@@ -1,7 +1,7 @@
 ---
 id: learn-balance-transfers
 title: Balance Transfers
-sidebar_label: How to transfer Balances
+sidebar_label: Balances Transfers
 description: Steps on how to perform balance transfers.
 slug: ../learn-balance-transfers
 ---
@@ -50,7 +50,11 @@ on the pop-up window. You can examine the method and info dropdowns (highlighted
 
 Assuming that you have imported your Ledger account to the Polkadot-JS Extension, you will see a pop-up window for signing the balance transfer transaction. Review the transaction details on the Ledger device and approve it to sign the transaction.
 
-> If you are looking for instructions in a video, watch the tutorial on how to connect [Ledger to Polkadot-JS Apps](https://youtu.be/7VlTncHCGPc).
+:::note Connect Ledger to Polkadot-JS Apps
+
+If you are looking for instructions in a video, watch the tutorial on how to connect [Ledger to Polkadot-JS Apps](https://youtu.be/7VlTncHCGPc).
+
+:::
 
 ![Ledger transfer](../assets/accounts/ledger-transaction.png)
 
@@ -69,7 +73,6 @@ If your account was setup on [Parity Signer Companion](https://parity.link/signe
 Scan the QR code using Parity Signer. You will see a QR code consisting of the signed extrinsic for this transaction. Click on the **next to signing** button in the pop-up window, as shown above. You can then show the QR code on your phone within the red square window.
 
 ![Companion transfer](../assets/accounts/companion-transfer2.png)
-
 
 ### Keep-Alive Checks
 
@@ -101,8 +104,12 @@ cannot be initialized with such a low balance. :polkadot }}{{ kusama: For instan
 0.0001 KSM to an account you just generated (and thus has no KSM) will fail, since 0.1 is less than the
 existential deposit of 0.001666 KSM and the account cannot be initialized with such a low balance. :kusama }}
 
-> Note: Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
-> from the sending account if you attempt to transfer.
+:::note
+
+Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted
+from the sending account if you attempt to transfer.
+
+:::
 
 ### Existing Reference Error
 

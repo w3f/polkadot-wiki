@@ -114,9 +114,13 @@ Encointer falls under common good logic as it offers a Sybil defense mechanism a
 democracy. This can also be adapted by system level chains which can use the unique identity system to 
 prevent Sybil attacks, and use PoP for token airdrops or faucets.
 
-> Encointer is currently in testnet phase, and its mainnet is planned for launch as a common good parachain 
-> on Kusama. To learn more about Encointer, check out the official 
-> [Encointer book](https://book.encointer.org/introduction.html).
+:::note
+
+Encointer is currently in testnet phase, and its mainnet is planned for launch as a common good parachain 
+on Kusama. To learn more about Encointer, check out the official 
+[Encointer book](https://book.encointer.org/introduction.html).
+
+:::
 
 ### Bridges
 

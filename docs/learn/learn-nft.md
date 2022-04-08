@@ -132,7 +132,6 @@ The RMRK team has just launched the 2.0 version of the protocol, a set of "NFT
 legos", primitives that, when put together, allow a builder to compose an NFT
 system of arbitrary complexity without smart contracts. 
 
-
 #### NFT Legos
 
 1. NFTs can own other NFTs, NFTs can equip other NFTs for visual change
@@ -153,8 +152,12 @@ and easy teleportation of non-fungibles across dozens of chains.
 
 ![](../assets/nft/kanaria.png)
 
-> A multi-resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can 
-> also equip other NFTs from within its "inventory".
+:::note Multi-resource NFTs
+
+A multi-resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can 
+also equip other NFTs from within its "inventory".
+
+:::
 
 The RMRK team is collaborating closely with Unique network. RMRK's logic and
 technology will be deployed on Unique Network in the form of runtime upgrades
