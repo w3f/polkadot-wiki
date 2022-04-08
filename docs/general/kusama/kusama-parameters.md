@@ -61,6 +61,8 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 ### Staking, Validating, and Nominating
 
+Maximum number of Validators that can be nominated by a nominator - {{ kusama_max_nominations }}
+
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 6 hours | 3_600   | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case the a validator misbehaves.                                                      |

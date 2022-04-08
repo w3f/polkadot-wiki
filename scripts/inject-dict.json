@@ -78,5 +78,13 @@
   {
     "tpl": "polkadot_max_nominators",
     "default": "256"
+  },
+  {
+    "tpl": "kusama_max_nominations",
+    "default": "24"
+  },
+  {
+    "tpl": "polkadot_max_nominations",
+    "default": "16"
   }
 ]

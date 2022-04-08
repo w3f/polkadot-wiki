@@ -106,7 +106,7 @@ These concepts have been further explained in Polkadot's
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
-now be distributed to up to 16 validators. Be careful about the validators you choose since you will
+now be distributed to up to {{ polkadot_max_nominations }} validators. Be careful about the validators you choose since you will
 be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
