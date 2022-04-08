@@ -140,10 +140,14 @@ The identity has now been recovered and you can select a network to create the f
 
 ## Transferring Polkadot-JS Apps Accounts/Addresses From One Computer to Another
 
-> **Note:** Note: This will overwrite any existing accounts with the same pubkey on your new computer. 
-> This generally should not make a difference (since it can still access the same account), but might if you 
-> have e.g. an account which was stored externally in the extension on the old computer but was created 
-> directly in browser on the new one.
+:::caution
+
+This will overwrite any existing accounts with the same pubkey on your new computer. 
+This generally should not make a difference (since it can still access the same account), but might 
+if you have e.g. an account which was stored externally in the extension on the old computer but was 
+created directly in browser on the new one.
+
+:::
 
 This has been tested on Brave and Chrome, but not other browsers.
 
