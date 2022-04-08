@@ -485,7 +485,7 @@ For this example, we will be using the
 [Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps) to create a 2-of-3 multisig address
 and send a transaction with it.
 
-:::note Differences for Westend
+:::note 
 
 While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
 notable differences:
