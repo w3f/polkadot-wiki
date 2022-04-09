@@ -36,6 +36,11 @@ hurdles of the HTTP-based Internet.
 | requests: use a cryptographic hash of that data                                                                                          | requests: use the address on which data is hosted                                                                                                                             |
 | accessibility: data is distributed to multiple nodes and can be accessed at any time. Bandwidth is high: nearest peer can serve the data | accessibility: data can only be accessed if the server is live and there are no interruptions in transmission. Bandwidth is limited: clients send requests to the same server |
 
+### Filebase
+
+
+[Filebase](https://filebase.com) is the first S3-compatible object storage platform that allows users to store data in a secure, redundant, and performant manner across multiple decentralized storage networks. Filebase currently supports the IPFS, Sia, Skynet, and Storj networks. 
+
 ### Filecoin
 
 Like IPFS, [Filecoin](https://filecoin.io/) is a protocol developed by [Protocol Labs](https://protocol.ai/)
