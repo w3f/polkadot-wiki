@@ -55,8 +55,15 @@ those of the Relay Chain validator set and no other. Since the validator set on 
 expected to be secure with a large amount of stake put up to back it, parachains should benefit from
 this security.
 
-## [Bridges](learn-bridges.md)
+## Interoperability
 
+### [XCM](learn-crosschain.md)
+XCM, short for cross-consensus messaging is a format, and not a protocol. It does not assume anything
+about the reciever or senders consensus mechanism, it just cares about the format in which the messages
+must be formatted in. This format is the bread and butter of how parachains can communicate with one 
+another.
+
+### [Bridges](learn-bridges.md)
 A blockchain [bridge](../general/glossary.md#bridge) is a connection that allows for arbitrary data to
 transfer from one network to another. These chains are interoperable through the bridge but can
 exist as standalone chains with different protocols, rules, and governance models. In Polkadot,
