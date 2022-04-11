@@ -109,6 +109,7 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on the latest release
 - {{ kusama: Max two nodes (under same sub/super identity) :kusama }}{{ polkadot: Reward destination 'Staked' :polkadot }}
+- Validators must operate nodes themselves, they may not be operated by third parties or staking providers.
 
 #### Nominators
 
