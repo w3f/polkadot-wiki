@@ -43,30 +43,6 @@ Like IPFS, [Filecoin](https://filecoin.io/) is a protocol developed by [Protocol
 that offers a decentralized storage network. Filecoin's main focus is the storage itself and uses IPFS as a
 [complementary] back-end protocol.
 
-### Storj
-
-[Storj](https://www.storj.io/) is a decentralized cloud storage system for developers.
-
-### Sia
-
-[Sia](https://sia.tech/) aims to be decentralized storage for the post-cloud world.
-
-:::info
-
-Both Storj & Sia encrypt all files before being uploaded and distributes them robustly and reliably.
-
-:::
-
-### Swarm
-
-[EthSwarm](https://www.ethswarm.org/) is a system of peer-to-peer networked nodes that create a 
-decentralized storage and communication service for a sovereign digital society.
-
-### BitTorrent File System (BTFS)
-
-[BTFS](https://www.bittorrent.com/token/bittorrent-file-system/) is a file-sharing protocol that 
-uses the TRON network and the BitTorrent ecosystem.
-
 ## Substrate Storage
 
 Substrate takes a layered approach to storage by using a key-value data store that is implemented
