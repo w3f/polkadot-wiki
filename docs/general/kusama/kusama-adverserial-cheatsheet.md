@@ -3,6 +3,7 @@ id: kusama-adversarial-cheatsheet
 title: Adversarial Cheatsheet
 sidebar_label: Adversarial Cheatsheet
 description: A cheatsheet to help you create chaos.
+keywords: [cheatsheet, kusama, model, chaos]
 slug: ../../kusama-adversarial-cheatsheet
 ---
 
