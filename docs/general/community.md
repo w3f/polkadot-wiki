@@ -3,6 +3,7 @@ id: community
 title: Community
 sidebar_label: Community
 description: Stay in-touch and keep up-to-date by interacting and engaging in the Polkadot community.
+keywords: [community, events, socials, chat, blogs, ecosystem]
 slug: ../community
 ---
 
