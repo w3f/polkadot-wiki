@@ -3,6 +3,7 @@ id: kusama-coc
 title: Kusama Code of Conduct
 sidebar_label: Code of Conduct
 description: Kusama's Code of Conduct to sustain chaos.
+keywords: [coc, code of conduct, report, guideline]
 slug: ../../kusama-coc
 ---
 

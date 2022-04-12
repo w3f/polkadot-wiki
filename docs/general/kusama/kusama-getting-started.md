@@ -3,6 +3,7 @@ id: kusama-getting-started
 title: Interact with Kusama
 sidebar_label: Home
 description: Reference point for Kusama content.
+keywords: [getting started, introduction, kusama, interact]
 slug: ../../kusama-getting-started
 ---
 
