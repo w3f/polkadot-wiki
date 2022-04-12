@@ -3,6 +3,7 @@ id: ens
 title: Adding accounts to an ENS domain
 sidebar_label: Using ENS with DOT/KSM accounts
 description: Steps on how to use an ENS with Substrate-based accounts.
+keywords: [ENS, domain, eth]
 slug: ../ens
 ---
 

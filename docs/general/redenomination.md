@@ -3,6 +3,7 @@ id: redenomination
 title: Redenomination of DOT
 sidebar_label: Redenomination of DOT
 description: Learn about the DOT token Redenomination.
+keywords: [DOT, redenomination]
 slug: ../redenomination
 ---
 
