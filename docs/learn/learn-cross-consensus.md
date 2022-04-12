@@ -29,9 +29,13 @@ with the following properties:
     It is _extensible_ and, in turn, _future-proof_ and _forwards-compatible_.
 - Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
 
-> XCM is not designed in that every system supporting the format is expected to be able to interpret any
-> possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable
-> interpretations under some systems or will be intentionally unsupported.
+:::info
+
+XCM is not designed in that every system supporting the format is expected to be able to interpret any
+possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable
+interpretations under some systems or will be intentionally unsupported.
+
+:::
 
 ### Example Use-Cases
 
@@ -52,7 +56,8 @@ with the following properties:
 
 ![xcm tech stack](../assets/cross-consensus-tech-stack.png)
 
-> XCM can be used to express the meaning of the messages over each of these three communication channels.
+XCM can be used to express the meaning of the messages over each of these three communication 
+channels.
 
 ## Cross-Consensus Protocols
 
@@ -90,12 +95,18 @@ and functionality as XCMP but is much more demanding on resources since it store
 the Relay Chain storage. When XCMP has been implemented, HRMP is planned to be deprecated and phased
 out in favor of it.
 
-> Note: A stop-gap protocol is a temporary substitute for the functionality that is not fully
-> complete. While XCMP proper is still in development, HRMP is a working replacement.
+:::note
+
+A stop-gap protocol is a temporary substitute for the functionality that is not fully
+omplete. While XCMP proper is still in development, HRMP is a working replacement.
+
+:::
 
 #### XCMP Design
 
-> XCMP is currently under development and the details are subject to change!
+:::caution XCMP is currently under development and the details are subject to change
+
+:::
 
 However, this overall architecture and design decisions are more stable:
 
@@ -185,4 +196,3 @@ A tutorial on downward, upward, and lateral transfers can be found
   description of cross-chain communication on the Web3 Foundation research wiki.
 - [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
   overview of the messaging schemes from the Parachain Implementor's guide.
-  

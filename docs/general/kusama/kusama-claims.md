@@ -3,6 +3,7 @@ id: kusama-claims
 title: Kusama Claims
 sidebar_label: Claims
 description: Step-by-step guide on how to claim your KSM tokens.
+keywords: [claims, tokens, kusama]
 slug: ../../kusama-claims
 ---
 
@@ -225,10 +226,14 @@ MyCrypto. MyCrypto is good to use in case you have stored the key to the Ethereu
 your DOT indicator tokens on a hardware device like a Ledger Nano S or a Trezor. It also supports
 raw private keys, mnemonics, and the Parity signer.
 
-> **NOTICE**: It is much more secure to download and use the MyCrypto app locally. Please make sure
-> to download the latest version for your operating system. You can always find the most up-to-date
-> releases of the desktop app on their
-> [releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
+:::tip Downloading MyCrypto
+
+It is much more secure to download and use the MyCrypto app locally. Please make sure
+to download the latest version for your operating system. You can always find the most up-to-date
+releases of the desktop app on their
+[releases page](https://github.com/MyCryptoHQ/MyCrypto/releases).
+
+:::
 
 Once you've downloaded MyCrypto and have it running locally (we recommend an air-gapped computer for
 maximum security), you can start by navigating to the Claims app on the Polkadot-JS UI. Select the

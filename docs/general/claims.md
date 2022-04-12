@@ -3,12 +3,13 @@ id: claims
 title: Polkadot Claims
 sidebar_label: Claims
 description: Step-by-step guide on how to claim your DOT tokens.
+keywords: [claim, DOT, token sale]
 slug: ../claims
 ---
 
 If you made a DOT purchase in one of the pre-launch sales, then you will need to claim your DOT
 tokens. For those who made a pre-genesis claim by sending a claim transaction to the Claims Contract
-on Ethereum, you will still need to send a free _attest_ transaction that will agree to the terms
+on Ethereum, you will still need to send a free *attest* transaction that will agree to the terms
 and conditions of your allocation. If you did not make a pre-genesis claim, then you will claim and
 attest in a single transaction.
 
@@ -18,10 +19,14 @@ If you are making a claim on Polkadot for the first time, please read on below i
 [making a claim](#making-a-claim) section. If you've already claimed during the pre-genesis claims
 period, please proceed to the [attesting to a statement](#attesting-to-a-statement) section instead.
 
-> To learn more on How to claim your DOT post genesis, check out our walkthrough
-> [video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22)
-> and our video on
-> [Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+:::note How to Claim your DOT
+
+To learn more on How to claim your DOT post genesis, check out our walkthrough
+[video](https://www.youtube.com/watch?v=rjhWfKXJTCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=22)
+and our video on
+[Claiming DOT with an Ethereum address generated using an old mnemonic phrase](https://www.youtube.com/watch?v=AlwrM27x3As&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=16)
+
+:::
 
 ## Making a Claim
 
@@ -29,9 +34,13 @@ If you did not make a claim in the pre-genesis claims period, then you are able 
 tokens after genesis. There is no time limit for making your claim so feel free to do this whenever
 you are most comfortable.
 
-> Note: When you make a claim, you will also attest to the agreement that corresponds to your DOT
-> allocation. The two actions, "claim" and "attest", are done in a single transaction, but for the
-> most part this is simplified from the perspective of the user.
+:::note
+
+When you make a claim, you will also attest to the agreement that corresponds to your DOT
+allocation. The two actions, "claim" and "attest", are done in a single transaction, but for the
+most part this is simplified from the perspective of the user.
+
+:::
 
 ### What You Will Need
 
@@ -47,8 +56,12 @@ account. Go to their downloads page and ensure that you download the latest vers
 operating system. This is important because the latest version will always have the latest security
 patches.
 
-> **NOTICE**: It is much more secure to download and use the MyCrypto app locally. You can always
-> find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
+:::caution
+
+It is much more secure to download and use the MyCrypto app locally. You can always
+find the most up-to-date releases of the desktop app on their [releases page][mycrypto].
+
+:::
 
 You will need a Polkadot account to claim your DOT. Please follow the instructions on the [account
 generation][] page for generating a new Polkadot account.

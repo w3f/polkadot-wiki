@@ -3,6 +3,7 @@ id: kusama-coc
 title: Kusama Code of Conduct
 sidebar_label: Code of Conduct
 description: Kusama's Code of Conduct to sustain chaos.
+keywords: [coc, code of conduct, report, guideline]
 slug: ../../kusama-coc
 ---
 
@@ -25,28 +26,32 @@ background. Community participants have read through the requisite resources and
 knowledge about Kusama and all related content. This knowledge equips the community with the
 requisite information needed to dispense of their duties as a participant.
 
-## Bugs
+:::note Examples of Unacceptable Behavior
 
-Please understand that this network is, despite its success, an experiment with potential flaws, so
-it’s appreciated that community members help report any sort of exploits directly to the team before
-sharing publicly. Please see the [bug bounty program](kusama-bug-bounty.md).
-
-## Examples of Unacceptable Behavior
-
-> Please note: these are just a few examples, and you can always consult a team member 
-> if you have any questions.
+These are just a few examples, and you can always consult a team member 
+if you have any questions.
 
 - Obnoxious, aggressive comments towards individuals or other projects on any medium of communication.
 - Knowingly distributing false information about Kusama or other projects.
 - Harassing other individuals or projects.
 
+:::
+
 That said, please note that Kusama is an edgy and meme-friendly network, and community member
 actions shouldn't be taken too seriously - try to assume jest before malice.
 
-## What To Do If You Witness or Are Subject To Unacceptable Behavior
+:::tip What To Do If You Witness or Are Subject To Unacceptable Behavior
 
 If you are being harassed, notice that someone else is being harassed, or have any other concerns
 relating to harassment, please contact the administrator of the channel you’re in.
 
 This Code of Conduct may be revised at any time. We are always willing to revise this document based
 on feedback from the Kusama participants and/or the Polkadot community.
+
+:::
+
+## Bugs
+
+Please understand that this network is, despite its success, an experiment with potential flaws, so
+it’s appreciated that community members help report any sort of exploits directly to the team before
+sharing publicly. Please see the [bug bounty program](kusama-bug-bounty.md).

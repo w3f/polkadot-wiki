@@ -1,7 +1,7 @@
 ---
 id: learn-staking
 title: Staking
-sidebar_label: Staking
+sidebar_label: Staking Concepts
 description: An introduction on staking in Polkadot's NPoS consensus model.
 slug: ../learn-staking
 ---
@@ -299,14 +299,22 @@ Here is the formula for calculating slashing due to unresponsiveness:
 
 The examples demonstrate how to calculate the slashing penalty for unresponsiveness.
 
-> In all of the examples, assume that there are 100 validators in the active set.
+:::note
+
+In all of the examples, assume that there are 100 validators in the active set.
+
+:::
 
 No slashing would enact if < 10% of all validators are unresponsive.
 
 For example, if exactly 10 validators were unresponsive, the expression 3 * (x - (n / 10 + 1))) / n
 would be 3 * (10 - (100 / 10 + 1)) / 100 = 3 * (10 - (10 + 1)) / 100 = -0.03 which is rounded to 0.
 
-> The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0.
+:::note
+
+The minimum value between 0 and 1 is 0. 0 multipled by 0.07 is 0.
+
+:::
 
 If 14 validators are unresponsive, then slashing would occur, as > 10% of validators are unresponsive.
 
@@ -422,10 +430,15 @@ nominate. Staking rewards are kept available for 84 eras, which is approximately
 and 21 days on Kusama. For more information on why this is so, see the page on
 [simple payouts](learn-simple-payouts.md).
 
-> WARNING: If nobody claims your staking rewards by this time, then you will not be able to claim
-> them and some of your staking rewards will be lost. Additionally, if the validator unbonds all
-> their own stake, any pending payouts will be lost. Since unbonding takes 28 days on Polkadot,
-> nominators should check if they have pending payouts at least this often.
+
+:::warning Claiming staking rewards
+
+If nobody claims your staking rewards by this time, then you will not be able to claim
+them and some of your staking rewards will be lost. Additionally, if the validator unbonds all
+their own stake, any pending payouts will be lost. Since unbonding takes 28 days on Polkadot,
+nominators should check if they have pending payouts at least this often.
+
+:::
 
 ### Claiming Rewards
 
@@ -493,15 +506,23 @@ token liquid. An **ideal staking rate of 50% stabilizes the network**.
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the system
 staking rate of the entire network.
 
-> According to the inflation model, this would suggest that if you do not use your
-> {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for staking, your tokens
-> dilute over time.
+:::info 
+
+According to the inflation model, this would suggest that if you do not use your
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for staking, your tokens
+dilute over time.
+
+:::
 
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
 estimation of all DOT that should be staked, per parachain slot).
 
-> In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
-> constrained by locked parachain bonds.
+:::info Staking rate without parachains
+
+In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
+constrained by locked parachain bonds.
+
+:::
 
 If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators
 goes up. On the contrary, if it goes above, staking rewards drop. This is a result of the change
@@ -559,18 +580,6 @@ on the number of validators has not been determined yet, but should only be limi
 strain of the network due to peer-to-peer message passing. The estimate of the number of validators
 that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
 900 validator slots in the active set.
-
-## Motion #108: New Minimum Nomination Bond
-
-[Motion #108](https://polkadot.polkassembly.io/motion/108) proposed new nomination limits to the Polkadot network, offering a temporary solution to increase the stability and security of the network. Note that this motion **does not** increase the maximum nominator count.
-
-The goal of this motion is to increase the minimum nomination bond, allowing new nominators that meet this requirement to participate in the network's security. This motion will update the value of the minimum nominator bond from 80 DOTs to 120 DOTs. Prior to this, [Motion #103](https://polkadot.polkassembly.io/motion/103) set a new parameter named `chill-threshold`. With `chill-threshold`, the permissionless `chill_other` may only be executed if, and only if, the current nominator count is greater than 90% of the maximum number of nominators. Any existing nominator can update their nomination preferences (amount of DOT bonded) to adjust to this change. A more [permanent solution](https://github.com/paritytech/substrate/issues/9511) for lowering the minimum bond requirement for nominators is in progress.
-
-**Parameters changed:**
-minimum nominator bond : `80` -> `120`
-
-**Parameters added:**
-chill-threshold: `90%`
 
 ## Resources
 

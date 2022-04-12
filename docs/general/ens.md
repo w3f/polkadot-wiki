@@ -3,6 +3,7 @@ id: ens
 title: Adding accounts to an ENS domain
 sidebar_label: Using ENS with DOT/KSM accounts
 description: Steps on how to use an ENS with Substrate-based accounts.
+keywords: [ENS, domain, eth]
 slug: ../ens
 ---
 
@@ -14,22 +15,30 @@ decentralized and secure way to translate text via smart contracts. Supporting w
 allow senders to input ENS domains instead of long and unwieldy addresses. This prevents phishing,
 fraud, typos, and adds a layer of usability on top of the regular wallet user experience.
 
-> Note: You will need an ENS name and an Ethereum account with some ether in it to follow along with
-> this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
-> subdomain registrars like [Nameth](https://nameth.io). Note that if you're using an older ENS
-> name, you should make sure you're using the
-> [new resolver](https://medium.com/the-ethereum-name-service/ens-registry-migration-is-over-now-what-a-few-things-to-know-fb05f921872a).
-> Visiting the ENS App will warn you about this if not. You will also need some way to use your
-> Ethereum address - following this guide on a personal computer is recommended. Wallets like
-> [Frame](https://frame.sh/) and [Metamask](https://metamask.io) are safe and will make interacting
-> with the Ethereum blockchain through your browser very easy.
+:::note 
+
+You will need an ENS name and an Ethereum account with some ether in it to follow along with
+this guide. To register an ENS name, visit the [ENS App](https://app.ens.domains) or any number of
+subdomain registrars like [Nameth](https://nameth.io). Note that if you're using an older ENS
+name, you should make sure you're using the
+[new resolver](https://medium.com/the-ethereum-name-service/ens-registry-migration-is-over-now-what-a-few-things-to-know-fb05f921872a).
+Visiting the ENS App will warn you about this if not. You will also need some way to use your
+Ethereum address - following this guide on a personal computer is recommended. Wallets like
+[Frame](https://frame.sh/) and [Metamask](https://metamask.io) are safe and will make interacting
+with the Ethereum blockchain through your browser very easy.
+
+:::
 
 Despite living on the Ethereum blockchain, the ENS system has multi-chain support. In this guide,
 you'll go through the process of adding a KSM and DOT address to ENS. We cover both KSM and DOT to
 show two different approaches.
 
-> Note: DOT can currently only be added using the Resolver method. KSM can be added through both
-> methods are described below.
+:::note
+
+DOT can currently only be added using the Resolver method. KSM can be added through both
+methods are described below.
+
+:::
 
 This guide is also available in video format [on YouTube](https://youtu.be/XKjZk-5_mQc).
 

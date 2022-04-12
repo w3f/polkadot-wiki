@@ -3,11 +3,16 @@ id: ledger
 title: Using the Polkadot Ledger Application
 sidebar_label: Ledger Application
 description: How to use the Polkadot application on Ledger.
+keywords: [ledger, staking, polkadot app]
 slug: ../learn-ledger
 ---
 
-> NOTE: Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
-> browsers like Brave and Chrome.
+:::info
+
+Because of required WebUSB support, Ledger wallets currently only work on Chromium-based
+browsers like Brave and Chrome.
+
+:::
 
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
 devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that
@@ -47,8 +52,12 @@ Watch the instructions on how to create an account, send/receive and state/unsta
 
 ### Using the Developer Release
 
-> NOTE: These instructions are for development installation only. It is recommended to install the
-> application from Ledger Live unless you _know exactly what you're doing_.
+:::tip Instructions
+
+These instructions are for development installation only. It is recommended to install the
+application from Ledger Live unless you *know exactly what you're doing*.
+
+:::
 
 Instructions for downloading the pre-release binary from the GitHub releases are written [in the
 README][prerelease instructions] for the Polkadot Ledger application GitHub repository.
@@ -87,8 +96,12 @@ device with Polkadot-JS UI, by importing your accounts to Polkadot-JS Extension
 
 [![Connect Ledger to Polkadot JS UI](https://img.youtube.com/vi/7VlTncHCGPc/0.jpg)](https://youtu.be/7VlTncHCGPc)
 
-> Note: Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with
-> normal operation.
+:::info
+
+Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with
+normal operation.
+
+:::
 
 ### Loading Your Account
 
@@ -179,10 +192,14 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-> **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
-> by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
-> will intercept clicks and clipboard requests and can change your copied value in-flight, so being
-> extra vigilant around copy-paste operations makes sense.
+:::warning
+
+Before giving anyone your address, make sure it matches what's really on the Ledger
+by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
+will intercept clicks and clipboard requests and can change your copied value in-flight, so being
+extra vigilant around copy-paste operations makes sense.
+
+:::
 
 ### Staking
 

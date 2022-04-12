@@ -3,6 +3,7 @@ id: doc-thousand-validators
 title: Thousand Validators Programme
 sidebar_label: Thousand Validators Programme
 description: Learn about the Thousand Validators Programme and how it can support your validator endeavors.
+keywords: [thousand validators programme, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
@@ -109,6 +110,7 @@ and fill in the [application form][polkadot 1kv form]. You will hear back from t
 - Separate controller and stash (or have a Staking proxy set up)
 - Must be on the latest release
 - {{ kusama: Max two nodes (under same sub/super identity) :kusama }}{{ polkadot: Reward destination 'Staked' :polkadot }}
+- Validators must operate nodes themselves, they may not be operated by third parties or staking providers.
 
 #### Nominators
 
@@ -130,4 +132,3 @@ Since approximately early January 2021, the nominators will select an automatic 
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6
 [polkadot 1kv form]: https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform
 [identity instructions]: ../learn/mirror-learn-identity.md#setting-an-identity
-

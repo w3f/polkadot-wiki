@@ -13,11 +13,12 @@ offer a potential setup for your validator that aims to prevent some types of po
 at the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and,
 if you're using another Substrate-based chain, it should work with some tweaks.
 
-> NOTE: This setup should not be assumed to include the best security practices. It is up to
-> you to add additional security hardening.
+:::tip This setup should not be assumed to include the best security practices
 
-> Also, the current version of polkadot validator setup doesn't allow for the creation and
-> configuration of sentry nodes.
+It is up to you to add additional security hardening.
+
+Also, the current version of polkadot validator setup doesn't allow for the creation 
+and configuration of sentry nodes.
 
 There are two ways that the setup can be configured:
 
@@ -32,7 +33,11 @@ There are two ways that the setup can be configured:
    as an automation tool for setting up the VPN, Firewall, and the validator node. It supports
    a few different cloud providers such as AWS, Microsoft Azure, GCP, and Packet.
 
-> Please file an [issue][] if you would like to make a feature request or report a bug for this setup.
+   :::note Please file an [issue][] if you would like to make a feature request or report a bug for this setup
+
+   :::
+
+:::
 
 ## Dependencies
 
@@ -47,7 +52,7 @@ We recommend using [nvm][] as a tool to manage different NodeJS versions across 
 
 ```
 sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 node -v  (Check your node version)
 ```
@@ -56,7 +61,7 @@ node -v  (Check your node version)
 
 ```
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
 sudo apt install yarn
 ```
@@ -65,8 +70,8 @@ sudo apt install yarn
 
 ```
 sudo apt-get install unzip
-wget https://releases.hashicorp.com/terraform/0.12.16/terraform_0.12.16_linux_amd64.zip
-unzip terraform_0.12.16_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_linux_amd64.zip
+unzip terraform_1.1.7_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 terraform --version  (Check whether it is configured properly)
 ```
@@ -87,7 +92,7 @@ sudo apt-get install python -y
 The first step is to clone the `polkadot-validator-setup` guide locally.
 
 ```zsh
-$ git clone git@github.com:w3f/polkadot-secure-validator.git
+$ git clone https://github.com/w3f/polkadot-validator-setup.git
 ```
 
 Now you can `cd` into the `polkadot-validator-setup` directory and start to change the
@@ -191,9 +196,13 @@ send all your nodes' data (e.g. IP address) to the public endpoint, but it is hi
 that that you set up your own telemetry server to protect your validator’s data from being exposed
 to the public. If you want to do that, see [substrate telemetry source][].
 
-> NOTE: If you decided to send your node’s information to public telemetry, the name for your
-> validator and public node that is displayed on the telemetry would look something like
-> `PROJECT_NAME-sv-public-0` / `PROJECT_NAME-sv-validator-0`.
+:::note
+
+If you decided to send your node’s information to public telemetry, the name for your
+validator and public node that is displayed on the telemetry would look something like
+`PROJECT_NAME-sv-public-0` / `PROJECT_NAME-sv-validator-0`.
+
+:::
 
 Configure `projectId` to be the name of the project you want to use in GCP.
 
@@ -205,16 +214,23 @@ is the path to the JSON file containing the credentials of the service account y
 service account needs to have write access to compute and network resources if you use GCP. For
 others, you can check that by referring to the [README][].
 
+:::info Environment variables for Ansible
+
 Besides that, you need two additional environment variables that will allow Ansible to connect to
 the created machines. These values of these variables will be the keys that you generated at the
 beginning of the guide.
 
-> `SSH_ID_RSA_PUBLIC` - Path to private SSH key you want to use for the public nodes.
+* `SSH_ID_RSA_PUBLIC` - Path to private SSH key you want to use for the public nodes
+* `SSH_ID_RSA_VALIDATOR` - Path to private SSH key you want to use for the validator
 
-> `SSH_ID_RSA_VALIDATOR` - Path to private SSH key you want to use for the validator.
+:::
 
-> NOTE: You will need to configure the Compute Engine API and enable billing on your GCP accounts to
-> properly run these scripts.
+:::note 
+
+You will need to configure the Compute Engine API and enable billing on your GCP accounts 
+to properly run these scripts.
+
+:::
 
 After everything is configured properly, you can start to run the deployment with:
 
@@ -222,12 +238,14 @@ After everything is configured properly, you can start to run the deployment wit
 $ scripts/deploy.sh
 ```
 
-> NOTE: Certain steps of the process may hang, however the scripts are idempotent so you simply need
-> to re-run them and
+:::note
 
-When the deployment and configuration is completed, you should see some output that looks like
-what's below. You are able to find the validator’s session keys by searching for "show rotateKeys
-output".
+Certain steps of the process may hang, however the scripts are idempotent so you simply need
+to re-run them and when the deployment and configuration is completed, you should see some output 
+that looks like what's below. You are able to find the validator’s session keys by searching for 
+"show rotateKeys output".
+
+:::
 
 ```
 TASK [polkadot-validator-session-info : retrieve session info] *****************

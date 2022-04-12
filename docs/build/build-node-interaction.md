@@ -3,6 +3,7 @@ id: build-node-interaction
 title: Node Interaction
 sidebar_label: Node Interaction
 description: Tools for node interaction.
+keywords: [RPC, api, integration]
 slug: ../build-node-interaction
 ---
 

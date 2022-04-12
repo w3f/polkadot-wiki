@@ -3,6 +3,7 @@ id: build-guide
 title: Builders Starter's Guide
 sidebar_label: Builders Starter's Guide
 description: Start building with Polkadot/Kusama.
+keywords: [build, how to build, develop, parachain, smart contract]
 slug: ../build-build-with-polkadot
 ---
 
@@ -101,10 +102,14 @@ this comparison chart as a cheat sheet:
 
 ![build 2](../assets/build-2.png)
 
-> **Note:** The image above does not include parathreads, but as we mentioned before all the
-> benefits of parachains apply just as well to parathreads. Parathreads, however, *are* cheaper to
-> deploy and maintain. So if they had a column on the table above, it would look like the parachain
-> column with "Ease of deployment" and "Maintenance overhead" changed to `+`.
+:::note The image above does not include parathreads
+
+As we mentioned before, all the benefits of parachains apply just as well to parathreads. 
+Parathreads, however, *are* cheaper to deploy and maintain. So if they had a column on the table 
+above, it would look like the parachain column with "Ease of deployment" and "Maintenance overhead" 
+changed to `+`.
+
+:::
 
 --- 
 

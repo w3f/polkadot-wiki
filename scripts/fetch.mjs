@@ -150,7 +150,12 @@ function applyFilter(value, filter, wiki) {
 
   switch (filter) {
     case "humanReadableToken":
-      value = (value / values[wiki].precision).toFixed(3) + " " + values[wiki].symbol;
+      let decimals = 6
+      if (wiki === "polkadot") {
+        decimals = 3;
+      }
+
+      value = (value / values[wiki].precision).toFixed(decimals) + " " + values[wiki].symbol;
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;

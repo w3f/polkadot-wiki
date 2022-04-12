@@ -3,6 +3,7 @@ id: build-storage
 title: Decentralized Storage Systems
 sidebar_label: Decentralized Storage
 description: Information about building with decentralized storage.
+keywords: [build, cloud, storage,]
 slug: ../build-storage
 ---
 
@@ -50,7 +51,11 @@ that offers a decentralized storage network. Filecoin's main focus is the storag
 
 [Sia](https://sia.tech/) aims to be decentralized storage for the post-cloud world.
 
-> Both Storj & Sia encrypt all files before being uploaded and distributes them robustly and reliably.
+:::info
+
+Both Storj & Sia encrypt all files before being uploaded and distributes them robustly and reliably.
+
+:::
 
 ### Swarm
 
@@ -71,9 +76,14 @@ built on the key-value store.
 The key-value data store is backed by [RocksDB](https://rocksdb.org/), and it also supports an 
 experimental [Parity database](https://github.com/paritytech/parity-db).
 
-> The database is used for components that require persistent storage: Substrate clients, Substrate light-clients
-> & off-chain workers. For more information, check out
-> Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
+:::note
+
+The database is used for components that require persistent storage
+These are components like Substrate clients, Substrate light-clients & off-chain workers. 
+For more information, check out
+Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
+
+:::
 
 When building on Substrate, runtime developers can utilize of Substrate's FRAME `Storage pallet` 
 which gives access to Substrate's storage APIs. These storage items support values that are encoded by 
@@ -100,8 +110,12 @@ Crust provides a native cross-chain communnication communication pallet based on
 
 The protocol also supports most smart contract platforms, including Ethereum, with its [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
 
-> To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en).
-> Try integrating with Crust by following their [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
+:::note Learn more about Crust
+
+To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en).
+Try integrating with Crust by following their [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
+
+:::
 
 ### PolkadotJS Storage
 

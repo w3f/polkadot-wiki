@@ -3,11 +3,16 @@ id: kusama-statemine-ledger
 title: Using Ledger Devices with Statemine
 sidebar_label: Ledger Devices with Statemine
 description: Learn how to use Ledger with Statemine.
+keywords: [statemine, ledger, kusama, assets]
 slug: ../../kusama-statemine-ledger
 ---
 
-> **Please note**: Because of required WebUSB support, Ledger wallets currently only work on
-> Chromium-based browsers like Brave, Chrome or Edge.
+:::info
+
+Because of required WebUSB support, Ledger wallets currently only work on
+Chromium-based browsers like Brave, Chrome or Edge.
+
+:::
 
 Statemine has a [Ledger][] application that is compatible with the Ledger Nano S and Ledger Nano X
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
@@ -20,8 +25,12 @@ It supports most of the available transaction types of the network in the XL ver
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Support page](https://support.polkadot.network/).
 
-> Please check out our
-> [intro to Ledger video on YouTube for more information](https://youtu.be/7VlTncHCGPc).
+:::note Intro to Ledger Explainer
+
+Please check out our
+[intro to Ledger video on YouTube for more information](https://youtu.be/7VlTncHCGPc).
+
+:::
 
 ## Requirements
 
@@ -37,11 +46,15 @@ Here is a list of what you will need before starting:
 
 ### Using Ledger Live
 
-> Note for **Ledger Nano S**: There are two versions of the Statemine app: the normal (light)
-> version and the XL version. The light version has smaller size but it supports only basic
-> functionality. If you want access to all the supported extrinsics, you need to install the XL
-> version of the app. You can see [here][prerelease instructions] a full list of the extrinsics
-> supported by both versions.
+:::note Ledger Nano S
+
+There are two versions of the Statemine app: the normal (light)
+version and the XL version. The light version has smaller size but it supports only basic
+functionality. If you want access to all the supported extrinsics, you need to install the XL
+version of the app. You can see [here][prerelease instructions] a full list of the extrinsics
+supported by both versions.
+
+:::
 
 - Open the "Manager" tab in Ledger Live.
 - Connect and unlock your Ledger device.
@@ -54,14 +67,22 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ## Using on Polkadot-JS Apps UI
 
-> **IMPORTANT** The Polkadot extension doesn't support Statemine Ledger accounts at this point, so
-> you need to add your account on Polkadot-JS UI as described below.
+:::info
+
+The Polkadot extension doesn't support Statemine Ledger accounts at this point, so
+you need to add your account on Polkadot-JS UI as described below.
+
+:::
 
 ### Adding Your Account
 
-> **NOTE:** These instructions will guide you on how to add a Ledger account that's **only**
-> available on Statemine. If you want to use the same Ledger account on both Kusama **and**
-> Statemine check the instructions [below](#working-on-both-kusama-and-statemine).
+:::note 
+
+These instructions will guide you on how to add a Ledger account that's **only**
+available on Statemine. If you want to use the same Ledger account on both Kusama **and**
+Statemine check the instructions [below](#working-on-both-kusama-and-statemine).
+
+:::
 
 [Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
 device will work with the browser interface after installation. The functionality is currently gated
@@ -130,8 +151,13 @@ To remove an account from the Polkadot extension:
 2. Click on the three dots next to the account
 3. Select "Forget account".
 
-> **WARNING!** As mentioned above, a Polkadot Ledger account will also be available on Statemint.
-> **DO NOT** send funds to it! They'll be inaccessible until a Statemint Ledger app is released!
+:::warning
+
+As mentioned above, a Polkadot Ledger account will also be available on Statemint.
+
+**DO NOT** send funds to it. They will be inaccessible until a Statemint Ledger app is released.
+
+:::
 
 ### Confirming the Address on your Device
 
@@ -157,9 +183,13 @@ balance arrow, it will show details of your balance such as locks or reserved am
 If you would like to send a transfer from your account housed on the Ledger device, the easiest
 method is to use [Polkadot-JS Apps UI][apps].
 
-> **Important**: Transferring in this way sends tokens to another account on the Statemine
-> parachain. If you need to transfer KSM between Statemine and Kusama, see the
-> [Teleporting](#teleporting) section below.
+:::info Transfers
+
+Transferring in this way sends tokens to another account on the Statemine
+parachain. If you need to transfer KSM between Statemine and Kusama, see the
+[Teleporting](#teleporting) section below.
+
+:::
 
 - Click on the "Send" button next to your account.
 - In the second input, select one of the accounts from the drop-down menu or paste the address that
@@ -169,14 +199,18 @@ method is to use [Polkadot-JS Apps UI][apps].
 - Confirm the transaction on your device.
 - A green success notification will be displayed when the transaction is included in a block.
 
-> Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
-> account will be unable to make transactions which would get its balance below the existential
-> deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
-> will be able to go below existential deposit balance, causing your account to be deleted and any
-> dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
-> might be the reason.
+:::note The "Transfer with Keep-Alive Checks" toggle
+
+Note the "Transfer with Keep-Alive Checks" toggle. While this toggle is in the _On_ state, your
+account will be unable to make transactions which would get its balance below the existential
+deposit. This prevents reaping of accounts with low balances. If you toggle this to _Off_, you
+will be able to go below existential deposit balance, causing your account to be deleted and any
+dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
+might be the reason.
 
 A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
+
+:::
 
 ### Receiving a Transfer
 
@@ -187,14 +221,22 @@ The easiest way to get your address is to click on the account name which will o
 address will be shown in this sidebar, along with some other information. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-**Please note** that your Statemine address is the same as your Kusama address. So make sure that
-you clarify to the sender that you wish to receive your tokens on the Statemine parachain, otherwise
-(if you're receiving KSM tokens) they could be sent on the Kusama chain.
+:::note Your Statemine address is the same as your Kusama address
 
-> **Warning**: before giving anyone your address, make sure it matches what's really on the Ledger
-> by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
-> will intercept clicks and clipboard requests and can change your copied value in-flight, so being
-> extra vigilant around copy-paste operations makes sense.
+Make sure that you clarify to the sender that you wish to receive your tokens on the 
+Statemine parachain, otherwise (if you're receiving KSM tokens) they could be sent on the Kusama 
+chain.
+
+:::
+
+:::caution Before giving anyone your address
+
+Make sure it matches what's really on the Ledger
+by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
+will intercept clicks and clipboard requests and can change your copied value in-flight, so being
+extra vigilant around copy-paste operations makes sense.
+
+:::
 
 ### Teleporting
 

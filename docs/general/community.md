@@ -3,12 +3,19 @@ id: community
 title: Community
 sidebar_label: Community
 description: Stay in-touch and keep up-to-date by interacting and engaging in the Polkadot community.
+keywords: [community, events, socials, chat, blogs, ecosystem]
 slug: ../community
 ---
 
 The Polkadot community is expanding every day. Below are the most essential links to the community
-channels. Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without
+channels. 
+
+:::caution
+
+Keep in mind that no admin or moderator will ever DM you for any reason whatsoever without
 prior contact and anyone doing so is likely trying to scam you.
+
+:::
 
 ## General
 
@@ -24,15 +31,15 @@ prior contact and anyone doing so is likely trying to scam you.
 
 Web3 Foundation hosts many events online and in-person. To check out our current and past
 events, please refer to our public
-[Notion page here](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
+[Notion page](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
 
 ## Matrix Chats
 
 We primarily use [Matrix](https://matrix.org) across the organization and to communicate with
 community members. The application we use most often to interact with the Matrix protocol is the
-[Element](https://app.element.io) messenger.
+[Element](https://app.element.io) messenger client.
 
-- This wiki's public Matrix room is
+- This Wiki's public Matrix room is
   [here](https://matrix.to/#/#polkadotwikipublic:web3.foundation).
 
 ### Polkadot

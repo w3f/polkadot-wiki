@@ -48,15 +48,42 @@ nomination. However, the election algorithm attempts to minimize this situation,
 occur often, so you should almost always see only a single active nomination per era. See the
 [section on Phragmén optimization](learn-phragmen.md#optimizations) for more details.
 
+### Staking Election Stages
+
+The staking election system has 3 stages for both validators and nominators, namely "intention", 
+"electable/electing", and "active".
+
+- **intention to nominate:** an account that has stated the intention to nominate; also called simply 
+a "nominator".
+- **electing nominator:** a nominator who is selected to be a part of the input to the [NPoS election 
+algorithm](learn-phragmen.md). This selection is based on stake, and is done using the 
+[bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
+- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active validator, 
+sharing their rewards (if among the top 256 backers) and slashes.
+
+![Nominator Election](../assets/staking/nominator-election.png)
+
 ### Required Minimum Stake
 
 Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to
-the fact that the solution set must fit in a single block, in some eras, a minimum number of DOT
-will be required to nominate with in order to receive staking rewards.
+the fact that the solution set must fit in a single block, a minimum number of DOT will be required to 
+nominate with, in order to receive staking rewards, can change between the eras.
 
-This parameter can be updated via on-chain governance and the most recent and up to date version can
-be found on [chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query >
-staking > minimumNominatorBond**)
+- **min-intention-threshold:** minimum stake to declare the intention to nominate. This parameter can be 
+updated via on-chain governance and the most recent and up to date version can be found on 
+[chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query > staking > minimumNominatorBond**)
+
+- **min-electing:** minimum stake among the electing nominators. Since this is almost always the same as 
+“min-active”, it might not be reported.
+
+- **min-active:** minimum stake among the active nominators. If your stake falls below this dynamic threshold in
+a given era, you will not receive staking rewards for that era.
+
+Thus, for **nominator counters**, we have:
+
+- count of nominator intentions, and max possible nominator intentions (50,000).
+- count of electing nominators, and maximum possible electing nominators (22,500). 	
+- count of active nominators, and maximum possible active nominators (22,500).
 
 ### Oversubscribed Validators
 
@@ -187,12 +214,16 @@ your nomination earn you rewards. You can read the blog post
 ["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
 details.
 
-> These concepts have been further explained in the
-> [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
-> and
-> [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
-> and
-> [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+:::note Explainer videos on Nominating
+
+These concepts have been further explained in the
+[Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
+and
+[What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+and
+[Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+
+:::
 
 ### Guides
 

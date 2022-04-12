@@ -16,7 +16,7 @@ way.
 
 Polkadot-JS as a term has multiple moving parts that are worth mentioning.
 
-### [Polkadot-JS UI](polkadot.js.org)
+### [Polkadot-JS UI](https://polkadot.js.org/)
 
 The Polkadot-JS UI is a hosted application that loads in your browser. The UI has a standard DNS hosted
 version, which always has the latest features, and an IPFS version that is less frequently updated but 
@@ -34,13 +34,13 @@ a robust key-store and thus acts as an account manager for Substrate-based accou
 
 However, it also provides a simple interface for interacting with extension-compliant dApps. 
 
-#### [Polkadot-JS Phishing List](polkadot.js.org/phishing/)
+#### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
 
 The phishing list website is a community-driven curation of less-than-honest operators. The Polkadot-JS 
 extension uses this list to warn a user about suspicious URLs and addresses that are part of the list, and 
 automatically blocks the account address. 
 
-### [Polkadot-JS API](github.com/polkadot-js/api)
+### [Polkadot-JS API](https://github.com/polkadot-js/api)
 
 A JavaScript API allowing for programs to interface with the functionality of Polkadot.
 
