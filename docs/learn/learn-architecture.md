@@ -57,11 +57,13 @@ this security.
 
 ## Interoperability
 
-### [XCM](learn-crosschain.md)
-XCM, short for cross-consensus messaging is a format, and not a protocol. It does not assume anything
-about the reciever or senders consensus mechanism, it just cares about the format in which the messages
-must be formatted in. This format is the bread and butter of how parachains can communicate with one 
-another.
+### [XCM](learn-crosschain)
+XCM, short for cross-consensus message, is a format and not a protocol. The format 
+does not assume anything about the receiver or senders consensus mechanism, it only cares about 
+the format in which the messages must be structured in. XCM format is how parachains will be able to 
+communicate with one another. Different from XCMP which is short for cross-chain messaging protocol,
+XCM is what gets delivered, and XCMP is the delivery mechanism. Best way to learn more about XCM by
+reading the [specification](https://github.com/paritytech/xcm-format).
 
 ### [Bridges](learn-bridges.md)
 A blockchain [bridge](../general/glossary.md#bridge) is a connection that allows for arbitrary data to
