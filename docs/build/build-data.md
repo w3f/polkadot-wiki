@@ -3,6 +3,7 @@ id: build-data
 title: Data Analytics
 sidebar_label: Data
 description: An overview about building with data analytics
+keywords: [data, index, query, explorer, dashboard]
 slug: ../build-data
 ---
 

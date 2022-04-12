@@ -3,6 +3,7 @@ id: build-storage
 title: Decentralized Storage Systems
 sidebar_label: Decentralized Storage
 description: Information about building with decentralized storage.
+keywords: [build, cloud, storage,]
 slug: ../build-storage
 ---
 
