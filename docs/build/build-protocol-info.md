@@ -4,6 +4,7 @@ title: Polkadot Protocol Information
 sidebar_label: Polkadot Protocol
 description:
   Characteristics about the Polkadot protocol, and what you need to consider when building.
+keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---
 

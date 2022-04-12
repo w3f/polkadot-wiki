@@ -3,6 +3,7 @@ id: kusama-ledger
 title: Using Ledger Devices
 sidebar_label: Ledger Devices
 description: How to use the Kusama application on Ledger.
+keywords: [ledger, staking, kusama,]
 slug: ../../kusama-ledger
 ---
 

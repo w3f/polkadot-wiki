@@ -3,6 +3,7 @@ id: grants
 title: Web3 Foundation Grants
 sidebar_label: Grants
 description: Learn about Web3 Foundation's Grant Program and how you can benefit from it.
+keywords: [grants program, grants, funding]
 slug: ../grants
 ---
 

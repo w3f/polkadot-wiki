@@ -43,18 +43,22 @@ with the chain, it ensures that an address they may come across belongs to the v
 actions of that identity throughout various parts of the ecosystem (staking, governance, block
 explorers, etc) form a cohesive representation of their participation.
 
-> _Note: When running multiple validator nodes, the best way to scale an identity is to use multiple
-> sub-identities from a single verified identity._
+:::note When running multiple validator nodes, the best way to scale an identity is to use multiple sub-identities from a single verified identity
+
+:::
 
 It's recommended to fill out as many fields in the identity as possible, so Nominators have ample
 means of reaching out. Nominators may wish to know more about the Validator, the particular setup,
 future staking plans, tooling used, or a number of additional topics. Having a dedicated website
 additionally to provide this sort of information is ideal.
 
-> _Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a primary
->  identity with an on-chain account and then using that primary identity, assign a 
->  [sub-identity](../learn/learn-identity.md#sub-accounts) to the Ledger stash._ 
+:::note Ledger app doesn't support the extrinsic for setting identity yet 
 
+As a workaround, create a primary
+identity with an on-chain account and then using that primary identity, assign a 
+[sub-identity](../learn/learn-identity.md#sub-accounts) to the Ledger stash.
+
+:::
 
 ### Website
 

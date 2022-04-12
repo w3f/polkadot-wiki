@@ -1,7 +1,7 @@
 ---
 id: learn-consensus
 title: Polkadot Consensus
-sidebar_label: Polkadot Consensus
+sidebar_label: Consensus
 description: An explanation of the consensus model used in Polkadot.
 slug: ../learn-consensus
 ---
@@ -75,8 +75,12 @@ _provable finality._
 In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf), it is phrased
 in this way:
 
-> We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
-> participants after some unspecified time.
+:::note 
+
+We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all
+participants after some unspecified time.
+
+:::
 
 ## Hybrid Consensus
 

@@ -3,6 +3,7 @@ id: build-integrate-assets
 title: Assets on Polkadot
 sidebar_label: Integrating Assets
 description: Tools that you can use to integrating assets.
+keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
 

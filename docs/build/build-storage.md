@@ -3,6 +3,7 @@ id: build-storage
 title: Decentralized Storage Systems
 sidebar_label: Decentralized Storage
 description: Information about building with decentralized storage.
+keywords: [build, cloud, storage,]
 slug: ../build-storage
 ---
 
@@ -42,26 +43,6 @@ Like IPFS, [Filecoin](https://filecoin.io/) is a protocol developed by [Protocol
 that offers a decentralized storage network. Filecoin's main focus is the storage itself and uses IPFS as a
 [complementary] back-end protocol.
 
-### Storj
-
-[Storj](https://www.storj.io/) is a decentralized cloud storage system for developers.
-
-### Sia
-
-[Sia](https://sia.tech/) aims to be decentralized storage for the post-cloud world.
-
-> Both Storj & Sia encrypt all files before being uploaded and distributes them robustly and reliably.
-
-### Swarm
-
-[EthSwarm](https://www.ethswarm.org/) is a system of peer-to-peer networked nodes that create a 
-decentralized storage and communication service for a sovereign digital society.
-
-### BitTorrent File System (BTFS)
-
-[BTFS](https://www.bittorrent.com/token/bittorrent-file-system/) is a file-sharing protocol that 
-uses the TRON network and the BitTorrent ecosystem.
-
 ## Substrate Storage
 
 Substrate takes a layered approach to storage by using a key-value data store that is implemented
@@ -71,9 +52,14 @@ built on the key-value store.
 The key-value data store is backed by [RocksDB](https://rocksdb.org/), and it also supports an 
 experimental [Parity database](https://github.com/paritytech/parity-db).
 
-> The database is used for components that require persistent storage: Substrate clients, Substrate light-clients
-> & off-chain workers. For more information, check out
-> Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
+:::note
+
+The database is used for components that require persistent storage
+These are components like Substrate clients, Substrate light-clients & off-chain workers. 
+For more information, check out
+Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
+
+:::
 
 When building on Substrate, runtime developers can utilize of Substrate's FRAME `Storage pallet` 
 which gives access to Substrate's storage APIs. These storage items support values that are encoded by 
@@ -100,8 +86,12 @@ Crust provides a native cross-chain communnication communication pallet based on
 
 The protocol also supports most smart contract platforms, including Ethereum, with its [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
 
-> To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en).
-> Try integrating with Crust by following their [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
+:::note Learn more about Crust
+
+To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en).
+Try integrating with Crust by following their [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
+
+:::
 
 ### PolkadotJS Storage
 

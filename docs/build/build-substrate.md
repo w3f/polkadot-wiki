@@ -3,6 +3,7 @@ id: build-substrate
 title: Substrate Connect
 sidebar_label: Substrate Connect
 description: Information about Substrate Connect.
+keywords: [build, substrate, substrate connect, light client]
 slug: ../build-substrate
 ---
 
@@ -32,7 +33,7 @@ browser extension that builds on the [PolkadotJS API](https://polkadot.js.org/ap
 developers to build application-specific light clients for Substrate chains. There is no installation 
 required or optional extension with minimal or no maintenance. The node is run by the JavaScript engine.
 
-> Simply put, Substrate connect is a Substrate client that runs in JavaScript.
+Simply put, Substrate connect is a Substrate client that runs in JavaScript.
 
 Application developers no longer need to rely on single RPC nodes to allow end-users to interact 
 with their applications. 
@@ -80,8 +81,12 @@ The [browser extension](https://www.npmjs.com/package/@substrate/connect-extensi
 end-users to interact with applications connected to multiple blockchains or connect their own blockchains 
 to applications that support it.
 
-> Substrate Connect will auto-detect whether a user is using the extension. If not, the Wasm light client 
-> will be created in-page for them.
+:::note
+
+Substrate Connect will auto-detect whether a user is using the extension. If not, the Wasm light client 
+will be created in-page for them.
+
+:::
 
 ## Resources
 
