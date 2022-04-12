@@ -3,7 +3,7 @@ id: research
 title: Research Pages
 sidebar_label: Research Pages
 description: Keep up-to-date with the latest research developments related to Polkadot.
-keywords: [research, developments]
+keywords: [research, development]
 slug: ../research
 ---
 
