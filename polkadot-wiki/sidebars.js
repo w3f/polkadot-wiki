@@ -20,6 +20,17 @@ module.exports = {
         'general/how-to-dyor',
         'general/doc-thousand-validators',
         'general/faq',
+        {
+          type: "category",
+          label: "Programmes",
+          items: [
+            "general/grants",
+            'maintain/maintain-bug-bounty',
+            "general/builders-program",
+            "general/doc-thousand-validators",
+            "general/doc-thousand-contributors",
+           ],  
+        },
       ],
     },
     {
@@ -180,7 +191,6 @@ module.exports = {
       label: 'Maintain',
       items: [
         'maintain/maintain-index',
-        'maintain/maintain-bug-bounty',
         'maintain/maintain-polkadot-parameters',
         'maintain/maintain-endpoints',
         {
