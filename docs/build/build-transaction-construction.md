@@ -3,6 +3,7 @@ id: build-transaction-construction
 title: Transaction Construction and Signing
 sidebar_label: Transaction Construction
 description: Information about how transactions are constructed on Polkadot.
+keywords: [transaction, transaction construction, format, tools]
 slug: ../build-transaction-construction
 ---
 

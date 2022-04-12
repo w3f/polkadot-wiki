@@ -3,6 +3,7 @@ id: build-substrate
 title: Substrate Connect
 sidebar_label: Substrate Connect
 description: Information about Substrate Connect.
+keywords: [build, substrate, substrate connect, light client]
 slug: ../build-substrate
 ---
 

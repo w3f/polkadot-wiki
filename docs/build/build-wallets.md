@@ -3,6 +3,7 @@ id: build-wallets
 title: Wallets
 sidebar_label: Wallets
 description: An overview of the current supported wallets on Polkadot.
+keywords: [wallets, account, signer, supported wallets]
 slug: ../build-wallets
 ---
 

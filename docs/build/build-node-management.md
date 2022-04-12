@@ -3,6 +3,7 @@ id: build-node-management
 title: Node Management
 sidebar_label: Node Management
 description: Steps on how to manage your Polkadot node.
+keywords: [node, management, deployment, operations, monitor]
 slug: ../build-node-management
 ---
 

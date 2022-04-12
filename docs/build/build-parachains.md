@@ -3,6 +3,7 @@ id: build-parachains
 title: Parachain Development
 sidebar_label: Parachain Development
 description: A guide on what it means to become a Parachain and the steps to do so.
+keywords: [build, parachain, develop, implement, PDK]
 slug: ../build-pdk
 ---
 
