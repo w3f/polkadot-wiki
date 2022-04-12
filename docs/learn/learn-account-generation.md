@@ -3,6 +3,7 @@ id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
 description: Steps on generating a Polkadot account.
+keywords: [account, generation, model, chaos]
 slug: ../learn-account-generation
 ---
 

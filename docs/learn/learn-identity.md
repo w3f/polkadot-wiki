@@ -181,7 +181,7 @@ to pay and only registrars below this amount would provide judgement.
 To become a registrar, submit a pre-image and proposal into
 [Democracy](../maintain/maintain-guides-democracy.md), then wait for people to vote
 on it. For best results, write a post about your identity and intentions beforehand, and once the
-proposal is in the queue ask people to second it so that it gets ahead in the referendum queue.
+proposal is in the queue ask people to endorse it so that it gets ahead in the referendum queue.
 
 Here's how to submit a proposal to become a registrar:
 
@@ -200,9 +200,9 @@ You can find out the minimum by querying the chain state under [Chain State](htt
 
 ![Submitting a proposal](../assets/identity/13.jpg)
 
-At this point, DOT holders can second the motion. With enough seconds, the motion will become a
-referendum, which is then voted on. If it passes, users will be able to request judgement from this
-registrar.
+At this point, DOT holders can endorse the motion. With enough endorsements, the motion 
+will become a referendum, which is then voted on. If it passes, users will be able to 
+request judgement from this registrar.
 
 ### Current Registrars
 
