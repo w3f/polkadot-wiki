@@ -3,6 +3,7 @@ id: learn-parachains
 title: Parachains
 sidebar_label: Parachains
 description: An introductory guide to Parachains.
+keywords: [parachains, application-specific, sharding]
 slug: ../learn-parachains
 ---
 

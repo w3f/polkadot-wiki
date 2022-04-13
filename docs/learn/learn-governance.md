@@ -3,6 +3,7 @@ id: learn-governance
 title: Governance
 sidebar_label: Governance
 description: Learn about Polkadot's thought-through governance model.
+keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 

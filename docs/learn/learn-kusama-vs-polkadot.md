@@ -3,6 +3,7 @@ id: learn-kusama-vs-polkadot
 title: What is the difference between Polkadot and Kusama?
 sidebar_label: Comparing Polkadot and Kusama
 description: Comparing the cousins.
+keywords: [polkadot, kusama, polkadot vs kusama, canary]
 slug: ../learn-kusama-vs-polkadot
 ---
 

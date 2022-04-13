@@ -3,6 +3,7 @@ id: learn-assets
 title: Assets
 sidebar_label: Assets
 description: Learn about fungible and non-fungible assets in the Polkadot network.
+keywords: [assets, fungible, non-fungible]
 slug: ../learn-assets
 ---
 

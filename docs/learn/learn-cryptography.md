@@ -3,6 +3,7 @@ id: learn-cryptography
 title: Cryptography Explainer
 sidebar_label: Cryptography Explainer
 description: An overview of the cryptographic functions used in Polkadot.
+keywords: [cryptography, hashing, keypair, signing]
 slug: ../learn-cryptography
 ---
 

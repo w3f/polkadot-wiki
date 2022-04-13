@@ -3,6 +3,7 @@ id: learn-cross-consensus
 title: Cross-Consensus Message Format (XCM)
 sidebar_label: Cross-Consensus Message Format (XCM)
 description: Learn about the messaging format at the forefront of interoperability.
+keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-crosschain
 ---
 

@@ -3,6 +3,7 @@ id: learn-keys
 title: Polkadot Keys
 sidebar_label: Keys
 description: Learn about the different cryptographic keys used in Polkadot.
+keywords: [keys, account keys, session keys, ed25519, BLS, signatures]
 slug: ../learn-keys
 ---
 

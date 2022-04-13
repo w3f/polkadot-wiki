@@ -3,6 +3,7 @@ id: learn-validator
 title: Validator
 sidebar_label: Validator
 description: An introduction about validators.
+keywords: [validate, validator, maintain, NPoS, stake]
 slug: ../learn-validator
 ---
 

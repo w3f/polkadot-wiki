@@ -3,6 +3,7 @@ id: learn-identity
 title: Identity
 sidebar_label: Identity
 description: Learn about on-chain identity, judgements and registrars.
+keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
 

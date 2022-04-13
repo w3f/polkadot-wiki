@@ -3,6 +3,7 @@ id: learn-randomness
 title: Randomness
 sidebar_label: Randomness
 description: Learn about the approach to randomness in Polkadot's NPoS.
+keywords: [randomness, verifiable random function, VDF]
 slug: ../learn-randomness
 ---
 
