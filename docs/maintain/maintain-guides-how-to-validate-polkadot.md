@@ -3,6 +3,7 @@ id: maintain-guides-how-to-validate-polkadot
 title: Run a Validator (Polkadot)
 sidebar_label: How to run a Validator on Polkadot
 description: The fundamentals for running a Polkadot validator.
+keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 

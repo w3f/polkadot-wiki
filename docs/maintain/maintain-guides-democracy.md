@@ -3,6 +3,7 @@ id: maintain-guides-democracy
 title: Participate in Democracy
 sidebar_label: Participate in Democracy
 description: Steps on how to participate in democracy.
+keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 

@@ -3,6 +3,7 @@ id: maintain-wss
 title: Set up Secure WebSocket for Remote Connections
 sidebar_label: Set up Secure WebSocket for Remote Connections
 description: Steps on setting up a secure socket for remote connections.
+keywords: [web socket, remote, connection, secure websocket]
 slug: ../maintain-wss
 ---
 

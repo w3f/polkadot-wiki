@@ -3,6 +3,7 @@ id: maintain-guides-how-to-upgrade
 title: How to Upgrade Your Validator
 sidebar_label: How to Upgrade Your Validator
 descriptions: Steps on how to upgrade your validator node.
+keywords: [upgrade, node, validator, release, session]
 slug: ../maintain-guides-how-to-upgrade
 ---
 

@@ -3,6 +3,7 @@ id: maintain-endpoints
 title: Node Endpoints
 sidebar_label: Node Endpoints
 description: List of node endpoints and examples of use.
+keywords: [endpoints, network, connect]
 slug: ../maintain-endpoints
 ---
 

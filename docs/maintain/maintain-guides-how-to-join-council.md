@@ -3,6 +3,7 @@ id: maintain-guides-how-to-join-council
 title: Join the Council
 sidebar_label: Join the Council
 description: Steps on how to join the official on-chain council.
+keywords: [council, how to join council, governance, candidate]
 slug: ../maintain-guides-how-to-join-council
 ---
 

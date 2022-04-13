@@ -3,6 +3,7 @@ id: maintain-bug-bounty
 title: Bug Bounty
 sidebar_label: Bug Bounty
 description: An overview of how you can help catch bugs.
+keywords: [bug, bug bounty, report]
 slug: ../../maintain-bug-bounty
 ---
 
