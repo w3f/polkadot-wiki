@@ -85,7 +85,7 @@ module.exports = {
               label: "Governance",
               items: [
                 "learn/learn-governance",
-                "maintain/maintain-guides-how-to-join-council"
+                "maintain/maintain-guides-how-to-join-council",
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
         },
