@@ -124,10 +124,15 @@ As well as the file status:
 
 ![file statue](../assets/files/substrate-files-5.png)
 
-The whole files module is decentralized, so your file directory is cached in browser. 
-You can also export and import your file directory info.
+:::note
 
-![manage file dir](../assets/files/substrate-files-5.png)
+The whole files module is decentralized, so your file directory is only cached in browser. 
+The file directory info will not be visible if you switch to a new browser or clear the browser cache. 
+The storage module allows you to export file directory info from the current browser and import it to the new browser.
+
+:::
+
+![manage file dir](../assets/files/substrate-files-6.png)
 
 :::note
 
