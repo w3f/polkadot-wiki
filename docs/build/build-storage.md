@@ -98,3 +98,40 @@ Try integrating with Crust by following their [Crust Storage 101](https://wiki.c
 The PolkadotJS API offers storage methods that are part of the default Substrate runtime.
 They are exposed via `api.query.<module>.<method>`.
 See the [official docs](https://polkadot.js.org/docs/substrate/storage/) for more details.
+
+### Substrate Files
+
+PolkadotJS Apps includes a decentralized storage module that allows Substrate-based chain
+users to upload their files to [IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW) and use the [IPFS W3Auth Pinning Service](https://wiki.crust.network/docs/en/buildIPFSW3AuthPin) to pin their files on Crust Network. 
+
+Start by uploading a single file or folder:
+
+![upload](../assets/files/substrate-files-1.png)
+
+Choose a Gateway:
+
+![gateway](../assets/files/substrate-files-2.png)
+
+Sign the message:
+
+![sign](../assets/files/substrate-files-3.png)
+
+You should be able to view the file info, as follows:
+
+![file info](../assets/files/substrate-files-4.png)
+
+As well as the file status:
+
+![file statue](../assets/files/substrate-files-5.png)
+
+The whole files module is decentralized, so your file directory is cached in browser. 
+You can also export and import your file directory info.
+
+![manage file dir](../assets/files/substrate-files-5.png)
+
+:::note
+
+These above images are taken from this 
+[pull request](https://github.com/polkadot-js/apps/pull/6106)
+
+:::
