@@ -3,6 +3,7 @@ id: maintain-guides-validator-payout
 title: Validator Payout Overview
 sidebar_label: Validator Payout Overview
 description: How validator payout works on the network and what you should expect.
+keywords: [validator payout, payments, rewards, era points]
 slug: ../maintain-guides-validator-payout
 ---
 

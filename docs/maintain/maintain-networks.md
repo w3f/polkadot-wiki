@@ -3,6 +3,7 @@ id: maintain-networks
 title: Networks
 sidebar_label: Networks
 description: Information about the different networks of the Polkadot ecosystem.
+keywords: [networks, mainnet, testnet, canary, substrate]
 slug: ../maintain-networks
 ---
 

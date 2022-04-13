@@ -3,6 +3,7 @@ id: maintain-guides-how-to-stop-validating
 title: How to Stop Validating
 sidebar_label: How to Stop Validating
 description: Steps on how to stop validating.
+keywords: [validating, how to stop validating, validate, chill]
 slug: ../maintain-guides-how-to-stop-validating
 ---
 

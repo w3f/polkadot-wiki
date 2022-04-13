@@ -3,6 +3,7 @@ id: maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 title: Set Up a Validator with NGINX Reverse Proxy
 sidebar_label: Set Up a Validator with NGINX Reverse Proxy
 description: Steps on setting up a reverse proxy for your validator node.
+keywords: [reverse proxy, nginx, setup, secure]
 slug: ../maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 ---
 

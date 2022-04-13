@@ -3,6 +3,7 @@ id: maintain-polkadot-parameters
 title: Polkadot Parameters
 sidebar_label: Parameters
 description: A description about fundamental Polkadot parameters.
+keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
 
