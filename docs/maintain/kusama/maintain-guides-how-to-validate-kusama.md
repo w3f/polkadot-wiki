@@ -3,6 +3,7 @@ id: maintain-guides-how-to-validate-kusama
 title: Run a Validator (Kusama)
 sidebar_label: How to run a Validator on Kusama
 description: The fundamentals for running a Kusama validator.
+keywords: [validate, validator, kusama, stake, maintain]
 slug: ../../maintain-guides-how-to-validate-kusama
 ---
 

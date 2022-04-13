@@ -3,6 +3,7 @@ id: maintain-guides-how-to-nominate-kusama
 title: Become a Nominator on Kusama
 sidebar_label: How to Nominate on Kusama
 description: Steps on how to nominate on Kusama.
+keywords: [nominate, nominator, kusama, stake, staking]
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
