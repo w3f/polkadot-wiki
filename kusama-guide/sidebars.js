@@ -41,6 +41,7 @@ module.exports = {
               label: "Accounts",
               items: [
                 "learn/learn-account-generation",
+                "learn/learn-account-restore",
                 "general/kusama/kusama-social-recovery",
                 "learn/learn-proxies",
               ],
@@ -84,7 +85,7 @@ module.exports = {
               label: "Governance",
               items: [
                 "learn/learn-governance",
-                "general/kusama/kusama-social-recovery",
+                "maintain/maintain-guides-how-to-join-council"
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
         },
