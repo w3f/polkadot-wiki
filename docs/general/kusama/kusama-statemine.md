@@ -6,8 +6,6 @@ description: Statemine and its features
 slug: ../../kusama-statemine
 ---
 
-## Statemine
-
 Statemine is a generic assets parachain which provides functionality for deploying and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Kusama (not to be confused with [Statemint](../../learn/learn-common-good-chains.md#statemint), which is a parachain on Polkadot). The native token of Statemine is KSM. Balance transfers and the Existential Deposit (ED) of KSM on Statemine are about 1/10th of the values on the Relay chain. 
 Apart from the core protocol token KSM, the assets held on Statemine can be broadly categorized as 
 
@@ -17,7 +15,7 @@ Apart from the core protocol token KSM, the assets held on Statemine can be broa
 
 ## Creating Assets on Statemine
 
-::: info
+:::info
 
 Before minting assets on Statemine, we recommend that you try out this tutorial on Westmint, which is a parachain on Westend. 
 The WND tokens (Westies) are free and are available through a [faucet](https://wiki.polkadot.network/docs/learn-DOT#getting-westies).
@@ -51,14 +49,14 @@ If the transaction is successful,  you should see the asset and its details disp
 
 ## Transferring Assets on Statemine
 
-::: caution Beware of scams
+:::caution Beware of scams
 
 Due to the permissionless nature of Statemine, anyone can create an asset with any name and symbol. The most important attribute 
 of an asset is the asset ID. There could be multiple assets with the same name and symbol, but they cannot have the same asset ID. Ex: The USDT by Tether minted on Statemine holds the asset ID: 1984.
 
 :::
 
-::: info
+:::info
 
 The assets can be Sufficient or Non-Sufficient. To hold a Non-Sufficient asset, the Statemine account needs to exist on-chain. This is different from Ethereum where a non-existent account can hold ERC-20 tokens. Ensure that the receiver account has at least 3.33 microKSM which is the Existential Deposit for a Statemine account. Although, there are a few exceptions to this - If an asset is Sufficient or someone has placed a deposit for that account to hold the asset, the Existential Deposit in KSM on the receiver account is not needed.
 
