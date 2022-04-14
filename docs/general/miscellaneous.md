@@ -6,7 +6,17 @@ description: A misc document to present additional information and perspective o
 slug: ../miscellaneous
 ---
 
-## Reconnecting the Dots
+<!-- This page is a WIP -->
+
+## Technical Deep-Dives
+
+This section is under construction.
+
+## Other Polkadot Concepts
+
+This section is under construction.
+
+## Analysis of Polkadot
 
 ### Polkadot as a service provider
 
