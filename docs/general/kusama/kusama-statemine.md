@@ -53,7 +53,7 @@ If the transaction is successful,  you should see the asset and its details disp
 
 ::: caution Beware of scams
 
-Due to the permisionless nature of Statemine, anyone can create an asset with any name and symbol. The most important attribute 
+Due to the permissionless nature of Statemine, anyone can create an asset with any name and symbol. The most important attribute 
 of an asset is the asset ID. There could be multiple assets with the same name and symbol, but they cannot have the same asset ID. Ex: The USDT by Tether minted on Statemine holds the asset ID: 1984.
 
 :::
