@@ -3,6 +3,7 @@ id: learn-security
 title: Security of the network
 sidebar_label: Network Security
 description: Learn about pooled security and how it is maintained.
+keywords: [network, security, shared security, global security]
 slug: ../learn-security
 ---
 

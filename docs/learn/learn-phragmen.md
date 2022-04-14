@@ -3,6 +3,7 @@ id: learn-phragmen
 title: Sequential Phragmén Method
 sidebar_label: Sequential Phragmén Method
 description: Learn about the election method used on Polkadot.
+keywords: [phragmen, sequential phragmén method, elections, algorithm]
 slug: ../learn-phragmen
 ---
 

@@ -3,6 +3,7 @@ id: learn-teleport
 title: Teleporting KSM between Kusama and Statemine
 sidebar_label: Teleporting Assets
 description: Steps on how to teleport assets across parachains.
+keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---
 

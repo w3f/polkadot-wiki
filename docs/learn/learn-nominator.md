@@ -3,6 +3,7 @@ id: learn-nominator
 title: Nominator
 sidebar_label: Nominator
 description: Learn about what it means to be a nominator.
+keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
 

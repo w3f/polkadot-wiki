@@ -3,6 +3,7 @@ id: learn-parathreads
 title: Parathreads
 sidebar_label: Parathreads
 description: An introductory guide to Parathreads.
+keywords: [parathreads, slots ]
 slug: ../learn-parathreads
 ---
 

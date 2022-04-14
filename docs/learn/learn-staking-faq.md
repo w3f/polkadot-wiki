@@ -3,6 +3,7 @@ id: learn-staking-faq
 title: Staking FAQ
 sidebar_label: Staking FAQ
 description: Addresses FAQ on Staking
+keywords: [staking, faq, nominate]
 slug: ../learn-staking-faq
 ---
 

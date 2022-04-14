@@ -3,6 +3,7 @@ id: learn-account-restore
 title: Backing up and Restoring Accounts
 sidebar_label: Backing up and Restoring Accounts
 description: Steps on backing up and restoring a Polkadot account.
+keywords: [account, restore account, polkadot account, polkadotjs]
 slug: ../learn-account-restore
 ---
 

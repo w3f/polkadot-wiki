@@ -3,6 +3,7 @@ id: learn-registrar
 title: Using W3F Registrar
 sidebar_label: W3F Registrar
 description: A deprecated page on registrars.
+keywords: [registrar, identity]
 slug: ../learn-registrar
 ---
 
