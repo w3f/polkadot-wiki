@@ -20,6 +20,7 @@ module.exports = {
         'general/how-to-dyor',
         'general/doc-thousand-validators',
         'general/faq',
+        'general/miscellaneous',
         {
           type: "category",
           label: "Programmes",
