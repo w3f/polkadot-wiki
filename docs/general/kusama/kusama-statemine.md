@@ -58,7 +58,7 @@ of an asset is the asset ID. There could be multiple assets with the same name a
 
 :::
 
-To hold, send or receive most of the assets on Statemine, the accounts need to have a minimum balance of 0.1 microKSM (The Existential Deposit on Statemine). You can send KSM from a Kusama account to a statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport). The balance transfers of KSM on Statemine are similar to the balance transfers KSM on Kusama and can be done on the accounts page on Polkadot-JS Apps UI.
+To hold, send or receive most of the assets on Statemine, the accounts need to have a minimum balance of 0.1 microKSM (The Existential Deposit on Statemine). You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport). The balance transfers of KSM on Statemine are similar to the balance transfers KSM on Kusama and can be done on the accounts page on Polkadot-JS Apps UI.
 
 In this tutorial, transfer of BILLCOINs (Asset ID: 223, Symbol: BILL) is demonstrated.
 
