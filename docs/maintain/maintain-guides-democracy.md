@@ -3,6 +3,7 @@ id: maintain-guides-democracy
 title: Participate in Democracy
 sidebar_label: Participate in Democracy
 description: Steps on how to participate in democracy.
+keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
@@ -11,9 +12,13 @@ in Polkadot and Kusama. The other two bodies are the
 [council](maintain-guides-how-to-join-council.md) and the
 [technical committee](../learn/learn-governance.md#technical-committee).
 
-:speech_balloon: **Please be advised: The contents in this guide are subject to change as per the recent efforts to
-modify Polkadot Governance. See the following [pull request](https://github.com/paritytech/substrate/pull/10195) 
-for more details**.
+
+:::caution The contents in this guide are subject to change 
+
+See the following [pull request](https://github.com/paritytech/substrate/pull/10195) 
+for more details on the recent efforts to modify Polkadot Governance 
+
+:::
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
 provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
@@ -62,9 +67,12 @@ the user to "revoke" their proposal and get the bond back before it has become a
 it is essentially impossible to predict definitely when a proposal may become a referendum (if
 ever), this means that any tokens bonded will be locked for an indeterminate amount of time.
 
-> Proposals cannot be revoked by the proposer, even if they never turn into a referendum. It is
-> important to realize that there is no guarantee that DOT you use for proposing or seconding a
-> proposal will be returned to that account in any given timeframe.
+:::info Proposals cannot be revoked by the proposer, even if they never turn into a referendum
+
+It is important to realize that there is no guarantee that DOT you use for proposing or seconding 
+a proposal will be returned to that account in any given timeframe.
+
+:::
 
 On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order to submit a
 proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the

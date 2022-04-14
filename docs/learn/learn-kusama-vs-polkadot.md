@@ -3,6 +3,7 @@ id: learn-kusama-vs-polkadot
 title: What is the difference between Polkadot and Kusama?
 sidebar_label: Comparing Polkadot and Kusama
 description: Comparing the cousins.
+keywords: [polkadot, kusama, polkadot vs kusama, canary]
 slug: ../learn-kusama-vs-polkadot
 ---
 
@@ -71,9 +72,9 @@ These releases are usually staged. In Kusama's early days, the network won't jus
 
 In a typical blockchain development pipeline, Kusama would sit in between a "testnet" and a "mainnet"
 
-```
-Testnet -> Kusama -> Polkadot
-```
+:::info Testnet -> Kusama -> Polkadot
+
+:::
 
 As you can imagine, building on Kusama first allows teams to test things out in a live, fully decentralized, and
 community-controlled network with real-world conditions and lower stakes in the event of problems or

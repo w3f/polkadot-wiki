@@ -3,6 +3,7 @@ id: maintain-guides-how-to-chill
 title: How to Chill
 sidebar_label: How to Chill
 description: Steps on chilling as a network participant.
+keywords: [chill, chilling, pause]
 slug: ../maintain-guides-how-to-chill
 ---
 
@@ -11,13 +12,17 @@ wants to temporarily pause their active engagement in staking but does not want 
 funds, they can choose to "chill" their involvement and keep their funds staked.
 
 An account can step back from participating in active staking by clicking "Stop" under the
-`Network > Staking > Account actions` page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by
+Network > Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by
 calling the `chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to
 chill, it becomes inactive in the next era. The call must be signed by the _controller_ account, not
 the _stash_.
 
-> Note: If you need a refresher on the different responsibilities of the stash and controller
-> account when staking, take a look at the [accounts][] section in the general staking guide.
+:::note Primer on stash and controller accounts
+
+If you need a refresher on the different responsibilities of the stash and controller
+account when staking, take a look at the [accounts][] section in the general staking guide.
+
+:::
 
 ![staking](../assets/NPoS/staking-keys_stash_controller.png)
 

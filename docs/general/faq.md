@@ -3,6 +3,7 @@ id: faq
 title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
 description: Some FAQs to help you conquer your experience with Polkadot.
+keywords: [FAQ, questions]
 slug: ../faq
 ---
 

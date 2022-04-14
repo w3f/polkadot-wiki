@@ -3,6 +3,7 @@ id: build-node-interaction
 title: Node Interaction
 sidebar_label: Node Interaction
 description: Tools for node interaction.
+keywords: [RPC, api, integration]
 slug: ../build-node-interaction
 ---
 
@@ -95,11 +96,15 @@ In the `balances.transfer` extrinsic, the `partialFee` item is the transaction f
 Notice that some extrinsics do not have a signature. These are
 [inherents](build-protocol-info.md#extrinsics).
 
-> When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining
-> if the extrinsic had a fee. This field only means that it would require a fee if submitted as a
-> transaction. In order to charge a fee, a transaction also needs to be signed. So in the following
-> example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the
-> block by the block author.
+:::info Tracking transaction fees
+
+When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining
+if the extrinsic had a fee. This field only means that it would require a fee if submitted as a
+transaction. In order to charge a fee, a transaction also needs to be signed. So in the following
+example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the
+block by the block author.
+
+:::
 
 ```python
 {
@@ -383,9 +388,13 @@ Notice that some extrinsics do not have a signature. These are
 }
 ```
 
-> The JS number type is a 53 bit precision float. There is no guarantee that the numerical values in
-> the response will have a numerical type. Any numbers larger than `2**53-1` will have a string
-> type.
+:::info The JS number type is a 53 bit precision float
+
+There is no guarantee that the numerical values in
+the response will have a numerical type. Any numbers larger than `2**53-1` will have a string
+type.
+
+:::
 
 ### Submitting a Transaction
 

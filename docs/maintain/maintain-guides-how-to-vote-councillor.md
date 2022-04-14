@@ -3,6 +3,7 @@ id: maintain-guides-how-to-vote-councillor
 title: Voting for Councillors
 sidebar_label: Voting for Councillors
 description: Steps on how to vote for councillors.
+keywords: [council, vote, councillors]
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 
@@ -19,20 +20,32 @@ Voting for councillors requires you to reserve
 (a base amount + a per vote amount). You can then bond whatever amount you wish to put 
 behind your vote. See the [democracy guide](maintain-guides-democracy.md) for more information.
 
-> Note: Voting and staking locks **can overlap**
-> A user can use staked funds to vote for Councillors and/or use those funds in referenda).
-> A user is only prohibited from transferring these funds to another account.
+:::info Voting and staking locks can overlap
 
-> Warning: If your balance is vesting, you cannot use unvested tokens for this lock. You will have
-> to wait until you have at least that many **free** tokens to vote.
+* A user can use staked funds to vote for Councillors and/or use those funds in referenda).
+* A user is only prohibited from transferring these funds to another account.
+
+:::
+
+:::warning 
+
+If your balance is vesting, you cannot use unvested tokens for this lock. 
+You will have to wait until you have at least that many **free** tokens to vote.
+
+:::
 
 Like the validator elections, you can approve up to 16 different councillors and your vote will be
 equalized among the chosen group. Unlike validator elections, there is no unbonding period for your
 reserved tokens. Once you remove your vote, your tokens will be liquid again.
 
-> Warning: It is your responsibility not to put your entire balance into the reserved value when you
-> make a vote for councillors. It's best to keep *at least* enough DOT/KSM to pay for transaction
-> fees.
+
+:::warning
+
+It is your responsibility not to put your entire balance into the reserved value when you
+make a vote for councillors. It's best to keep *at least* enough DOT/KSM to pay for transaction
+fees.
+
+:::
 
 Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab.
 On the right side of the window there are two blue buttons, click on the one that says "Vote."

@@ -16,11 +16,21 @@ module.exports = {
         "learn/learn-crowdloans",
         "general/ens",
         "general/kusama/kusama-parameters",
-        "general/doc-thousand-validators",
         "general/kusama/kusama-timeline",
         "general/kusama/kusama-community",
         "general/ambassadors",
         "maintain/kusama/maintain-guides-society-kusama",
+        "general/contributing",
+        {
+          type: "category",
+          label: "Programmes",
+          items: [
+            "general/grants",
+            "general/builders-program",
+            "general/doc-thousand-validators",
+            "general/doc-thousand-contributors",
+            ],  
+        },
       ],
     },
     {
@@ -32,6 +42,7 @@ module.exports = {
               label: "Accounts",
               items: [
                 "learn/learn-account-generation",
+                "learn/learn-account-restore",
                 "general/kusama/kusama-social-recovery",
                 "learn/learn-proxies",
               ],
@@ -42,6 +53,7 @@ module.exports = {
               items: [
                 "learn/learn-treasury",
                 "learn/learn-assets",
+                "general/kusama/kusama-statemine",
                 "learn/learn-teleport",
               ],
         },
@@ -75,7 +87,7 @@ module.exports = {
               label: "Governance",
               items: [
                 "learn/learn-governance",
-                "general/kusama/kusama-social-recovery",
+                "maintain/maintain-guides-how-to-join-council",
                 "maintain/maintain-guides-how-to-vote-councillor",
               ],
         },

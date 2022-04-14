@@ -3,6 +3,7 @@ id: learn-accounts
 title: Polkadot Accounts
 sidebar_label: Polkadot Accounts
 description: An explanation of accounts, indices, identity, and reaping.
+keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
 
@@ -40,8 +41,12 @@ Polkadot's default address format to represent many different address types. Thi
 byte**, **32 byte**, and **arbitrary raw byte** variants. It also allows an enhancement to the
 original [`indices`](learn-accounts.md##indices) lookup.
 
-> Many wallets allow you to convert between formats. Stand-alone tools exist as well; you can find
-> them in the [address conversion tools](#address-conversion-tools) section.
+:::info
+
+Many wallets allow you to convert between formats. Stand-alone tools exist as well; you can find
+them in the [address conversion tools](#address-conversion-tools) section.
+
+:::
 
 ## Address Generation, Derivation, and Portability
 
@@ -107,7 +112,12 @@ For instance, `//bill//account//1` and `//john/polkadot/initial` are both valid.
 derived account, you must know both the seed and the derivation path, so you should either use a
 well-defined sequence (e.g. //0, //1, //2...) or be sure to write down any derivation paths you use.
 
-> It is not possible to generate a derived account without also knowing the derivation path.
+
+:::info 
+
+It is not possible to generate a derived account without also knowing the derivation path.
+
+:::
 
 ### Soft vs. Hard Derivation
 
@@ -133,9 +143,13 @@ unless both wallets use the same derivation paths.
 Polkadot and Kusama both have paths registered in the
 [BIP44 registry](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
 
-> **Warning:** You must have both the _parent_ private key and the derivation path to arrive at the
-> key for an address. Do not use custom derivation paths unless you are comfortable with your
-> understanding of this topic.
+:::warning
+
+You must have both the _parent_ private key and the derivation path to arrive at the
+key for an address. Do not use custom derivation paths unless you are comfortable with your
+understanding of this topic.
+
+:::
 
 ### Portability
 
@@ -344,8 +358,12 @@ Bob can execute any call even if Charlie disagrees with it. Likewise, Charlie an
 any call without Alice. A threshold is typically a number smaller than the total number of members
 but can also be equal to it, which means they all have to agree.
 
-> Learn more about multisig accounts from our
-> [technical explainer video](https://www.youtube.com/watch?v=ZJLqszvhMyM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=25&ab_channel=Polkadot).
+:::note Explainer on multisig accounts
+
+Learn more about multisig accounts from our
+[technical explainer video](https://www.youtube.com/watch?v=ZJLqszvhMyM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=25&ab_channel=Polkadot).
+
+:::
 
 Multi-signature accounts have several uses:
 
@@ -368,10 +386,13 @@ threshold, they will immediately have access to these tokens.
 
 ### Generating Addresses of Multi-signature Accounts
 
-> NOTE: Addresses that are provided to the multi-sig wallets must be sorted. The below methods for
-> generating sort the accounts for you, but if you are implementing your own sorting, then be aware
-> that the public keys are compared byte-for-byte and sorted ascending before being inserted in the
-> payload that is hashed.
+:::note Addresses that are provided to the multi-sig wallets must be sorted
+
+The below methods for generating sort the accounts for you, but if you are implementing your 
+own sorting, then be aware that the public keys are compared byte-for-byte and sorted ascending 
+before being inserted in the payload that is hashed.
+
+:::
 
 Addresses are deterministically generated from the signers and threshold of the multisig wallet. For
 a code example (in TypeScript) of generating you can view the internals of `@w3f/msig-util`
@@ -465,13 +486,17 @@ For this example, we will be using the
 [Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps) to create a 2-of-3 multisig address
 and send a transaction with it.
 
-> While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
-> notable differences:
->
-> - Existential deposit is equal to 0.01 WND (Westies; Westend's native coin) instead of 1 DOT.
-> - The multi-signature transaction deposit is equal to ~1 WND instead of ~20.2 DOT.
->
-> The photos below reflect values in WND, but instructions are the same for DOT.
+:::note 
+
+While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
+notable differences:
+
+- Existential deposit is equal to 0.01 WND (Westies; Westend's native coin) instead of 1 DOT.
+- The multi-signature transaction deposit is equal to ~1 WND instead of ~20.2 DOT.
+
+The photos below reflect values in WND, but instructions are the same for DOT.
+
+:::
 
 **To create a multisig address and send a transaction using it, you will need the following:**
 
@@ -545,17 +570,26 @@ from the above steps.
 2. Create a new multisig address with the same parameters (Bob, Alice, and Charlie's addresses, and
    a threshold value of '2').
 
-> NOTE: Since multisig address generation is deterministic, if Bob (or any other member), on his
-> computer was to generate a multisig address using Alice's, Charlie's, and his addresses, with a
-> threshold value of '2', he would produce the **same** multisig address that Alice has here.
+
+:::note
+
+Since multisig address generation is deterministic, if Bob (or any other member), on his
+computer was to generate a multisig address using Alice's, Charlie's, and his addresses, with a
+threshold value of '2', he would produce the **same** multisig address that Alice has here.
+
+:::
 
 If done correctly, we should see that the **same** multisig address is produced in Bob's browser,
 and that a pending transaction is displayed, too.
 
 ![13](../assets/accounts/multisig-13.png)
 
-> Alice initiated the transaction by uploading a signature of the hash of the transaction and the
-> hash.
+:::note
+
+Alice initiated the transaction by uploading a signature of the hash of the transaction and the
+hash.
+
+:::
 
 Next, to get Bob's signature, he must craft the same multisig transaction that Alice did by
 providing the same destination address and transfer amount (together, transaction parameters),
@@ -566,9 +600,13 @@ transaction (the same hash) that Alice signed earlier.
 
 Click 'Make Transfer' - ensure that Bob is the 'multisig signatory', and click 'Sign and Submit'.
 
-> NOTE: 'Multisig message with the call (for final approval)' is automatically enabled; this means
-> that, since the transaction will reach the signature threshold, it will execute the actual
-> transaction on the chain after adding the second signature.
+:::note
+
+'Multisig message with the call (for final approval)' is automatically enabled; this means
+that, since the transaction will reach the signature threshold, it will execute the actual
+transaction on the chain after adding the second signature.
+
+:::
 
 ![15](../assets/accounts/multisig-15.png)
 
@@ -582,8 +620,12 @@ released the multisig transaction deposit.
 You can use Polkadot-JS Apps to decode call data, as the extension only shows raw call data.
 This will allow you to know what you're signing. 
 
-> The decoded call data requires you to understand what the events or calls mean in the context of 
-> the transaction.
+:::note
+
+The decoded call data requires you to understand what the events or calls mean in the context of 
+the transaction.
+
+:::
 
 1. Before submitting a transaction, copy the call data.
 
@@ -691,8 +733,12 @@ and Substrate that are returned based on your public key should match the ones y
 
 ![20](../assets/accounts/pubkey-2.png)
 
-> NOTE: You may have to scroll down to the bottom of the menu to find the Substrate address based on
-> the menu listings. You will notice that many networks that also use the same Substrate address.
+:::note
+
+You may have to scroll down to the bottom of the menu to find the Substrate address based on
+the menu listings. You will notice that many networks that also use the same Substrate address.
+
+:::
 
 You can verify your public key verification by recalling that Polkadot addresses start with a '1',
 whereas Substrate addresses generally start with a '5' (Kusama addresses start with a capital

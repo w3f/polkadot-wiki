@@ -1,8 +1,9 @@
 ---
 id: learn-polkadot-host
 title: Polkadot Host (PH)
-sidebar_label: Polkadot Host (PH)
+sidebar_label: Polkadot Host
 description: Learn about the components of the Polkadot host.
+keywords: [polkadot host, runtime]
 slug: ../learn-polkadot-host
 ---
 
@@ -41,8 +42,7 @@ parts in grey are stable and can not change without an explicit hard fork.
 
 - [Polkadot Host Protocol Specification](https://github.com/w3f/polkadot-spec) - Incubator for the
   Polkadot Host spec, including tests.
-- [ChainSafe's Go PH](https://github.com/ChainSafeSystems/go-pre) is a 25-person development team
-  based in Toronto, Canada. ChainSafe is building an implementation of the beacon chain for Ethereum
-  2.0 client in TypeScript and this Go implementation of Polkadot.
+- [Gossamer: A Go implementation of the Polkadot Host](https://github.com/ChainSafe/gossamer) 
+- [Kagome - C++ implementation of Polkadot Host](https://github.com/soramitsu/kagome)
 
 [specification]: https://github.com/w3f/polkadot-spec/

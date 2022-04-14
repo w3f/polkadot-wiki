@@ -3,6 +3,7 @@ id: learn-nominator
 title: Nominator
 sidebar_label: Nominator
 description: Learn about what it means to be a nominator.
+keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
 
@@ -63,7 +64,6 @@ sharing their rewards (if among the top 256 backers) and slashes.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
-
 ### Required Minimum Stake
 
 Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to
@@ -85,7 +85,6 @@ Thus, for **nominator counters**, we have:
 - count of nominator intentions, and max possible nominator intentions (50,000).
 - count of electing nominators, and maximum possible electing nominators (22,500). 	
 - count of active nominators, and maximum possible active nominators (22,500).
-
 
 ### Oversubscribed Validators
 
@@ -216,12 +215,16 @@ your nomination earn you rewards. You can read the blog post
 ["Polkadot Staking: An Update"](https://polkadot.network/polkadot-staking-an-update/) for more
 details.
 
-> These concepts have been further explained in the
-> [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
-> and
-> [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
-> and
-> [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+:::note Explainer videos on Nominating
+
+These concepts have been further explained in the
+[Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
+and
+[What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+and
+[Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+
+:::
 
 ### Guides
 

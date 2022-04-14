@@ -3,6 +3,7 @@ id: maintain-errors
 title: Errors and How to Resolve Them
 sidebar_label: Resolving Errors
 description: Common errors you might encounter and how they can be resolved.
+keywords: [errors, common errors, fix errors]
 slug: ../maintain-errors
 ---
 

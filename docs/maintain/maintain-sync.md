@@ -3,6 +3,7 @@ id: maintain-sync
 title: Set up a Full Node
 sidebar_label: Set up a Full Node
 description: Steps on how to set up a full node.
+keywords: [node, full node, sync, setup node]
 slug: ../maintain-sync
 ---
 
@@ -69,16 +70,18 @@ https://github.com/paritytech/smoldot#wasm-light-node
 This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
-> NOTE: The bash commands that are provided to run against **your node** use
-> `Polkadot` as the default chain.
+:::note The bash commands that are provided to run against **your node** use
+`Polkadot` as the default chain
 
-> Use the `--chain` flag if you are
-> following the setup instructions to setup a `Kusama` node.
-> For example:
->
-> ```bash
-> ./target/release/polkadot --name "Your Node's Name" --chain kusama
-> ```
+Use the `--chain` flag if you are
+following the setup instructions to setup a `Kusama` node.
+For example:
+
+```bash
+./target/release/polkadot --name "Your Node's Name" --chain kusama
+```
+
+:::
 
 <Tabs
 groupId="operating-systems"
@@ -149,9 +152,14 @@ values={[
 
 - Determine the latest version of the [Polkadot binary](https://github.com/paritytech/polkadot/releases).
 
-> The nature of pre-built binaries means that they may not work on your particular architecture or Linux distribution.
-> If you see an error like `cannot execute binary file: Exec format error` it likely means the binary is not compatible
-> with your system. You will either need to compile the [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
+  :::info
+
+  The nature of pre-built binaries means that they may not work on your particular architecture 
+  or Linux distribution. If you see an error like `cannot execute binary file: Exec format error` 
+  it likely means the binary is not compatible with your system. You will either need to compile 
+  the [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
+
+  :::
 
 - Download the correct Polkadot binary within Ubuntu by running the following command. Replace
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):

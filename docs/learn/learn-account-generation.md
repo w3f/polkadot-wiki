@@ -3,6 +3,7 @@ id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
 description: Steps on generating a Polkadot account.
+keywords: [account, account generation, polkadot account, polkadotjs]
 slug: ../learn-account-generation
 ---
 
@@ -18,12 +19,17 @@ There are several ways to generate a Polkadot account:
 - [Vanity Generator](#vanity-generator)
 - [Ledger Hardware Wallet](../general/ledger.md)
 
-> If you prefer video instructions for creating an account using Polkadot JS, we have an easy to follow guide for beginners
-> [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
+
+:::note
+
+If you prefer video instructions for creating an account using Polkadot JS, we have an easy to 
+follow guide for beginners [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
+
+:::
 
 ## DISCLAIMER: Key Security
 
-The _only_ ways to get access to your account are via your secret seed or your account's JSON file
+The *only* ways to get access to your account are via your secret seed or your account's JSON file
 in combination with a password. You must keep them both secure and private. If you share them with
 anyone they will have full access to your account, including all of your funds. This information is
 a target for hackers and others with bad intentions - see also
@@ -50,8 +56,9 @@ by storing in a sealed plastic bag to prevent water damage, storing it in a fire
 it in metal, etc.) It is recommended that you store multiple copies of the seed in geographically
 separate locations (e.g., one in your home safe and one in a safety deposit box at your bank).
 
-You should
-**not store your seed on any kind of computer that has or may have access to the internet in the future.**
+:::caution You should not store your seed on any kind of computer that has or may have access to the internet in the future
+
+:::
 
 ### Storing your account's JSON file
 
@@ -161,11 +168,15 @@ For detailed build and usage instructions of subkey, please see
 
 ## Polkadot-JS Apps
 
-> Please note! If you use this method to create your account and clear your cookies in your browser,
-> your account will be lost forever if you do not [back it up](learn-account-restore.md). Make sure
-> you store your seed phrase in a safe place, or download the account's JSON file if using the
-> Polkadot{.js} browser extension. Learn more about account backup and restoration
-> [here](learn-account-restore.md).
+:::caution
+
+If you use this method to create your account and clear your cookies in your browser,
+your account will be lost forever if you do not [back it up](learn-account-restore.md). Make sure
+you store your seed phrase in a safe place, or download the account's JSON file if using the
+Polkadot{.js} browser extension. Learn more about account backup and restoration
+[here](learn-account-restore.md).
+
+:::
 
 Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least
 secure way of generating an account. It should only be used if all of the other methods are not
@@ -179,10 +190,14 @@ of your screen.
 
 ![pjs-01](../assets/accounts/polkadot_js_01.png)
 
-> To create an account on a different network than Polkadot, you'll need to click on the network
-> selection in the top left corner of the navigation menu. A pop-up sidebar will appear listing
-> live, testing, and custom node to choose from. Do remember to hit the "Switch" button when you
-> want to switch your network.
+:::info Creating an Account on a different network
+
+You will need to click on the network selection in the top left corner of the navigation menu. 
+A pop-up sidebar will appear listing live, testing, and custom node to choose from. 
+
+Do remember to hit the "Switch" button when you want to switch your network.
+
+:::
 
 ### Start Account Generation
 
@@ -243,10 +258,14 @@ threshold is reached.
 Signatories should communicate off-chain to prevent many pending transactions and crossed
 communication lines on-chain.
 
-> The bigger the multisig, the more of a deposit an account needs to put down when initiating a
-> multi-sig call. This is to prevent chain storage spam with pending but never-resolved multi-sig
-> transactions. Once a call is resolved (canceled or executed) the deposit is returned to the
-> initiator. The deposit is not taken from the multi-sig's balance but from the initiator.
+:::info 
+
+The bigger the multisig, the more of a deposit an account needs to put down when initiating a
+multi-sig call. This is to prevent chain storage spam with pending but never-resolved multi-sig
+transactions. Once a call is resolved (canceled or executed) the deposit is returned to the
+initiator. The deposit is not taken from the multi-sig's balance but from the initiator.
+
+:::
 
 For a more in-depth introduction into multi-signature accounts on Polkadot, please see
 [the accounts page section on Multi-sigs](learn-accounts.md#multi-signature-accounts).

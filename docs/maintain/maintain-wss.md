@@ -3,6 +3,7 @@ id: maintain-wss
 title: Set up Secure WebSocket for Remote Connections
 sidebar_label: Set up Secure WebSocket for Remote Connections
 description: Steps on setting up a secure socket for remote connections.
+keywords: [web socket, remote, connection, secure websocket]
 slug: ../maintain-wss
 ---
 
@@ -37,7 +38,9 @@ cargo build --release
 
 This will start the syncing process with Kusama's mainnet.
 
-_Note: the `--rpc-cors` mode needs to be set to all so that all external connections are allowed._
+:::note The `--rpc-cors` mode needs to be set to all so that all external connections are allowed
+
+:::
 
 ## Set up a certificate
 
@@ -131,8 +134,6 @@ Restart nginx after setting this up: `sudo service nginx restart`.
 If you used the self-signed certificate approach, modern browsers will not let you connect to this
 websocket endpoint without that certificate being imported - they will emit an
 `NET:ERR_CERT_AUTHORITY_INVALID` message.
-
-![ERR_CERT_AUTHORITY_INVALID](../assets/wss/wss04.png)
 
 Every websocket connection bootstraps itself with `https` first, so to allow the certificate, visit
 the IP of your machine in the browser prefixed with `https`, like so: `https://MY_IP`. This should

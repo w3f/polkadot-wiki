@@ -3,28 +3,37 @@ id: maintain-guides-how-to-nominate-kusama
 title: Become a Nominator on Kusama
 sidebar_label: How to Nominate on Kusama
 description: Steps on how to nominate on Kusama.
+keywords: [nominate, nominator, kusama, stake, staking]
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
 
-> The following information applies to the Kusama network. If you want to nominate on Polkadot,
-> check out the [Polkadot guide](../maintain-guides-how-to-nominate-polkadot.md) instead.
+:::info
+
+The following information applies to the Kusama network. If you want to nominate on Polkadot,
+check out the [Polkadot guide](../maintain-guides-how-to-nominate-polkadot.md) instead.
+
+:::
 
 Nominators are one type of participant in the staking subsystem of Kusama. They are responsible
 for appointing their stake to the validators who are the second type of participant. By appointing
 their stake, they are able to elect the active set of validators and share in the rewards that are
 paid out.
 
-While the [validators][] are active participants in the network that engage in the block production 
-and finality mechanisms, nominators take a slightly more passive role. Being a nominator does not require 
-running a node of your own or worrying about online uptime. However, a good nominator performs due diligence 
-on the validators that they elect. When looking for validators to nominate, a nominator should pay attention 
-to their own reward percentage for nominating a specific validator - as well as the risk that they bear of 
+While the [validators][] are active participants in the network that engage in the block production
+and finality mechanisms, nominators take a slightly more passive role. Being a nominator does not require
+running a node of your own or worrying about online uptime. However, a good nominator performs due diligence
+on the validators that they elect. When looking for validators to nominate, a nominator should pay attention
+to their own reward percentage for nominating a specific validator - as well as the risk that they bear of
 being slashed if the validator gets slashed.
 
-> If you prefer a video format for the tutorials, the following videos related to staking on Kusama are available:
->
-> - [How to Stake on Polkadot (and Kusama)](https://youtu.be/FCXC0CDhyS4)
-> - [Staking with Kusama App on Ledger and PolkadotJS Apps UI](https://www.youtube.com/watch?v=7VlTncHCGPc&t=305s)
+:::note Explainer videos on staking
+
+If you prefer a video format for the tutorials, the following videos related to staking on Kusama are available:
+
+- [How to Stake on Polkadot (and Kusama)](https://youtu.be/FCXC0CDhyS4)
+- [Staking with Kusama App on Ledger and PolkadotJS Apps UI](https://www.youtube.com/watch?v=7VlTncHCGPc&t=305s)
+
+:::
 
 ## Setting up Stash and Controller keys
 
@@ -94,14 +103,18 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../../assets/payout/01.png)
 
-> These concepts have been further explained in Polkadot's
-> [UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+:::note Explainer video on using the Polkadot-JS UI
+
+These concepts have been further explained in Polkadot's
+[UI Walkthrough Video](https://www.youtube.com/watch?v=mNStMPZjiHM&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8)
+
+:::
 
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](../../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
-now be distributed to up to 16 validators. Be careful about the validators you choose since you will
+now be distributed to up to {{ kusama_max_nominations }} validators. Be careful about the validators you choose since you will
 be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking

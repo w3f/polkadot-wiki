@@ -3,6 +3,7 @@ id: maintain-guides-how-to-unbond
 title: Unbonding and Rebonding
 sidebar_label: Unbonding and Rebonding
 description: Steps on how to unbond and rebond your stake.
+keywords: [unbond, unbonding, rebond, rebonding, stake]
 slug: ../maintain-guides-how-to-unbond
 ---
 

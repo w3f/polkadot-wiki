@@ -3,12 +3,17 @@ id: learn-parachains
 title: Parachains
 sidebar_label: Parachains
 description: An introductory guide to Parachains.
+keywords: [parachains, application-specific, sharding]
 slug: ../learn-parachains
 ---
 
-> For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the
-> {{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo Content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}on the parachain development guide.
+:::info Testing on Rococo
+
+For information on how to participate in the crowdloan and parachain auction testing on
+Rococo, please see the
+{{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo Content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}on the parachain development guide.
+
+:::
 
 A parachain is an application-specific data structure that is globally coherent and validatable by
 the validators of the Relay Chain. They take their name from the concept of parallelized chains that 

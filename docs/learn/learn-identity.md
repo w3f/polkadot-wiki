@@ -3,6 +3,7 @@ id: learn-identity
 title: Identity
 sidebar_label: Identity
 description: Learn about on-chain identity, judgements and registrars.
+keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
 
@@ -73,9 +74,13 @@ available for querying via the Polkadot API, so you don't have to rely on the Po
 
 You can have a maximum of 100 custom fields.
 
-> _Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a primary
->  identity with an on-chain account and then using that primary identity, assign a [sub-identity](#sub-accounts) 
->  to the Ledger stash._ 
+:::note 
+
+The Ledger app doesn't support the extrinsic for setting identity yet. As a workaround, create a primary
+identity with an on-chain account and then using that primary identity, assign a [sub-identity](#sub-accounts) 
+to the Ledger stash.
+
+:::
 
 ### Format Caveat
 
@@ -256,8 +261,12 @@ click on set subs button.
 
 You should now see the sub-identity displayed on-chain. 
 
->  Here is a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting sub-identities using
->  Polkadot-JS UI
+:::note Explainer video on setting sub-identities
+
+Here is a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting sub-identities using
+Polkadot-JS UI
+
+:::
 
 You can also use the
 [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics). There, select the identity pallet, then

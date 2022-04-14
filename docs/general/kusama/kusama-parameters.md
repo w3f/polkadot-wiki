@@ -3,6 +3,7 @@ id: kusama-parameters
 title: Kusama Parameters
 sidebar_label: Parameters
 description: Learn about common Kusama parameters
+keywords: [parameters, kusama, on-chain]
 slug: ../../kusama-parameters
 ---
 
@@ -33,6 +34,12 @@ differ from Polkadot's._
 a block in the chain. Thus, the times given are *estimates*. See [Consensus](../../learn/learn-consensus.md) for
 more details._
 
+### Accounts, Identity and Crowdloans
+
+- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
+- The deposit required to set an Identity is {{ identity_reserve_funds }} KSM
+- The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
+
 ### Governance
 
 | Democracy        | Time   | Slots   | Description                                                                                                                                                   |
@@ -54,6 +61,8 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 | Emergency voting period | 3 hours | 1_800   | The voting period after the technical committee expedites voting.                              |
 
 ### Staking, Validating, and Nominating
+
+Maximum number of Validators that can be nominated by a nominator - {{ kusama_max_nominations }}
 
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

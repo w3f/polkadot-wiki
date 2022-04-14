@@ -3,19 +3,24 @@ id: maintain-bug-bounty
 title: Bug Bounty
 sidebar_label: Bug Bounty
 description: An overview of how you can help catch bugs.
+keywords: [bug, bug bounty, report]
 slug: ../../maintain-bug-bounty
 ---
-
-> Note: The bug bounty program does *not* cover bugs on code bases that are external to or, written 
-> on top of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug has to
-> be a part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, XCM, 
-> GRANDPA, etc.
-
-We call on our community and all bug bounty hunters to help identify bugs in Polkadot.
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it
 as per [instructions on Web3 Foundation website](https://web3.foundation/security-report/).
 Disclosure to any third parties disqualifies bug bounty eligibility.
+
+:::info Bug bounty program scope
+
+The bug bounty program does *not* cover bugs on code bases that are external to or, 
+written on top of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug 
+has to be a part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, 
+XCM, GRANDPA, etc.
+
+We call on our community and all bug bounty hunters to help identify bugs in Polkadot.
+
+:::
 
 ## Eligibility
 
@@ -24,16 +29,24 @@ protocols and protocol/implementation compliance to network security, to classic
 as well as security of cryptographic primitives, could be eligible for a reward. Please note that it's
 entirely our discretion to decide whether a bug is significant enough to qualify for a reward.
 
-**Examples include:** An attack that could disrupt the entire network and harm the validity to the
-network would be considered a critical threat. An attack that would disrupt service to others
-would be regarded as a high threat.
+:::note
 
-Please note: The submission quality will be a significant factor in the level of considered compensation.
+The submission quality will be a significant factor in the level of considered compensation.
 A high-quality submission includes explaining how the bug can be reproduced, how it was
 discovered, and otherwise critical details. Please disclose responsibly; disclosure to any third
 parties disqualifies bug bounty eligibility.
 
-**Responsible investigation and reporting** Responsible investigation and reporting include, but
+Examples:
+ 
+* An attack that could disrupt the entire network and harm the validity to the network would be 
+  considered a critical threat.
+* An attack that would disrupt service to others would be regarded as a high threat.
+
+:::
+
+:::tip Responsible investigation and reporting 
+
+Responsible investigation and reporting include, but
 isn't limited to, the following:
 
 - Don't violate the privacy of other users, destroy data, etc.
@@ -47,6 +60,8 @@ isn't limited to, the following:
 - In general, please investigate and report bugs in a way that makes a reasonable, good-faith effort
   not to be disruptive or harmful to our users or us. Otherwise, your actions might be interpreted
   as an attack rather than an effort to be helpful.
+
+:::
 
 ## How to report a bug
 

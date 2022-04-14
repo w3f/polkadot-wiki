@@ -3,6 +3,7 @@ id: learn-comparisons
 title: Polkadot Comparisons
 sidebar_label: Other comparisons
 description: Learn how Polkadot compares to Ethereum 2, Cosmos, and other chains.
+keywords: [comparisons, polkadot, blockchain]
 slug: ../learn-comparisons
 ---
 

@@ -3,6 +3,7 @@ id: maintain-guides-how-to-join-council
 title: Join the Council
 sidebar_label: Join the Council
 description: Steps on how to join the official on-chain council.
+keywords: [council, how to join council, governance, candidate]
 slug: ../maintain-guides-how-to-join-council
 ---
 
@@ -19,8 +20,12 @@ wins, the bond will be forfeited. You can receive your bond back if you manually
 candidacy before losing. Runners-up are selected after every round and are reserved members in case
 one of the winners gets forcefully removed.
 
-> Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.0033 KSM on
-> Kusama.
+:::note
+
+Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.0033 KSM on
+Kusama.
+
+:::
 
 It is a good idea to announce your council intention before submitting your candidacy so that your
 supporters will know when they can start to vote for you. You can also vote for yourself in case no

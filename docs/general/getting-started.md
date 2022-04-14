@@ -3,6 +3,7 @@ id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
 description: Get started with Polkadot.
+keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
 

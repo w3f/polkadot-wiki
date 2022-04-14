@@ -4,6 +4,7 @@ title: Polkadot Protocol Information
 sidebar_label: Polkadot Protocol
 description:
   Characteristics about the Polkadot protocol, and what you need to consider when building.
+keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---
 
@@ -43,11 +44,15 @@ Base58Check format such as a version prefix, a hash-based checksum suffix, and b
 See the [SS58 page](https://docs.substrate.io/v3/advanced/ss58/) in the Substrate documentation for
 encoding information and a more comprehensive list of network prefixes.
 
-> **Warning:** Do not use regular expressions (regex) to validate addresses. Always verify using the
-> prefix and checksum of the address. Substrate API Sidecar provides an
-> `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
-> address. If you want to validate addresses in another way, see the
-> [validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses).
+:::warning Do not use regular expressions (regex) to validate addresses
+
+Always verify using the
+prefix and checksum of the address. Substrate API Sidecar provides an
+`accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
+address. If you want to validate addresses in another way, see the
+[validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses).
+
+:::
 
 Relevant SS58 prefixes for this guide:
 
@@ -85,14 +90,21 @@ accounts reaped, as users could refund the address and try making transactions f
 pallet provides a `transfer_keep_alive` function that will return an error and abort rather than
 make the transfer if doing so would result in reaping the sender's account.
 
-> **Please be advised**: The existential deposit is a property of the Relay Chain. Your account on
-> the Relay Chain has no direct impact on parachains as you have seperate accounts on each
-> parachain. Still, parachains are able to define an existential deposit of their own, but this is
-> seperate to that of the Relay Chain ED.
+:::info The existential deposit is a property of the Relay Chain
 
-> **Note**: The Statemint parachain has a lower existential deposit than the Relay Chain (0.1 DOT
-> and 0.000003333 KSM) as well as lower transaction fees. It is highly recommended to handle balance
-> transfers on Statemint. Statemint integration is discussed in the next page of the guide.
+Your account on the Relay Chain has no direct impact on parachains as you have seperate accounts 
+on each parachain. Still, parachains are able to define an existential deposit of their own, but this 
+is seperate to that of the Relay Chain ED.
+
+:::
+
+:::note Existential deposit for Statemint
+
+The Statemint parachain has a lower existential deposit (0.1 DOT) than the Relay Chain (1 DOT)
+ as well as lower transaction fees. It is highly recommended to handle balance
+transfers on Statemint. Statemint integration is discussed in the next page of the guide.
+
+:::
 
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
@@ -174,9 +186,13 @@ immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
 
-> Note: The assumption that a transaction's hash is a unique identifier is the number one mistake
-> that indexing services and custodians make. This error will cause major issues for your users.
-> Make sure that you read this section carefully.
+:::caution 
+
+The assumption that a transaction's hash is a unique identifier is the number one mistake
+that indexing services and custodians make. This error will cause major issues for your users.
+Make sure that you read this section carefully.
+
+:::
 
 Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a transaction's hash
 as a unique identifier. In Substrate-based chains like Polkadot, a transaction's hash only serves as

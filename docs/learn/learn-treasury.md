@@ -3,6 +3,7 @@ id: learn-treasury
 title: Treasury
 sidebar_label: Treasury
 description: Details about Polkadot's on-chain Treasury.
+keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
 
@@ -42,10 +43,12 @@ Proposals may consist of (but are not limited to):
 The [Council](learn-governance#council) governs the Treasury and how the funds are spent is up to their 
 judgment.
 
-> The Council does not approve or deny Treasury Proposals based on the funds available in
-> the Treasury. In other words, proposals are not approved just because there are funds ready to spend
-> but are subject to a burn.
+:::caution 
 
+The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are not approved just because there are funds ready to spend
+but are subject to a burn.
+
+:::
 
 ## Funding the Treasury
 

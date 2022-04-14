@@ -3,6 +3,7 @@ id: learn-architecture
 title: Architecture
 sidebar_label: Architecture
 description: Learn about the key components to Polkadot's Architecture.
+keywords: [polkadot, components, architecture]
 slug: ../learn-architecture
 ---
 
@@ -55,8 +56,17 @@ those of the Relay Chain validator set and no other. Since the validator set on 
 expected to be secure with a large amount of stake put up to back it, parachains should benefit from
 this security.
 
-## [Bridges](learn-bridges.md)
+## Interoperability
 
+### [XCM](learn-crosschain)
+XCM, short for cross-consensus message, is a format and not a protocol. The format 
+does not assume anything about the receiver or senders consensus mechanism, it only cares about 
+the format in which the messages must be structured in. The XCM format is how parachains will be able to 
+communicate with one another. Different from XCMP, which is short for cross-chain messaging protocol,
+XCM is what gets delivered, and XCMP is the delivery mechanism. The best way to learn more about XCM is by
+reading the [specification](https://github.com/paritytech/xcm-format).
+
+### [Bridges](learn-bridges.md)
 A blockchain [bridge](../general/glossary.md#bridge) is a connection that allows for arbitrary data to
 transfer from one network to another. These chains are interoperable through the bridge but can
 exist as standalone chains with different protocols, rules, and governance models. In Polkadot,

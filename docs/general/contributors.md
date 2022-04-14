@@ -28,7 +28,7 @@ For other ways of protecting yourself, please see the [How to Protect Yourself f
 - twitter: [@BillLaboon](https://twitter.com/BillLaboon)
 - telegram: [@BillLaboon](https://t.me/BillLaboon)
 
-Bill Laboon is the Director of Education and Community at Web3 Foundation. Prior to Web3 Foundation, 
+Bill Laboon is the Head of Education and Grants at Web3 Foundation. Prior to Web3 Foundation, 
 he spent five years teaching Computer Science at the University of Pittsburgh. Bill also has several
 years of experience in software engineering and management.
 

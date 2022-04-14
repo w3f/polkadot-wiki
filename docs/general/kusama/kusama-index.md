@@ -1,7 +1,7 @@
 ---
 id: kusama-index
 title: Kusama
-description: Legacy link to Kusama Wiki doc
+description: Legacy link to Kusama Wiki document
 slug: ../../kusama-index
 ---
 

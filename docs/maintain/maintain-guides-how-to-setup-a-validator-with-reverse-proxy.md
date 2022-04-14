@@ -3,15 +3,20 @@ id: maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 title: Set Up a Validator with NGINX Reverse Proxy
 sidebar_label: Set Up a Validator with NGINX Reverse Proxy
 description: Steps on setting up a reverse proxy for your validator node.
+keywords: [reverse proxy, nginx, setup, secure]
 slug: ../maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 ---
 
 This guide assumes that you have already configured your hardware with the appropriate specs. It has the same configuration
 as the [polkadot validator setup](https://github.com/w3f/polkadot-secure-validator).
 
-> NOTE: Because validators of parachains need to have publicly accessible IP addresses and ports to receive connections from
-> parachain collators, adding a proxy may potentially reduce connectivity and result in lower era points or the inability to
-> validate parachain blocks. If using a proxy, it's recommended to keep an eye out on networking metrics.
+:::info
+
+Because validators of parachains need to have publicly accessible IP addresses and ports to receive connections from parachain collators, adding a proxy may potentially reduce connectivity and result 
+in lower era points or the inability to validate parachain blocks. If using a proxy, it's recommended 
+to keep an eye out on networking metrics.
+
+:::
 
 We will walk you through how to configure a reverse proxy using NGINX in front of your validator node. The
 validator uses the reverse proxy to filter traffic, whereby additional adjustments can be made to respond to a DDoS attack.
@@ -28,8 +33,12 @@ for this setup.
 In this example, we will assign the port number `2435` to the proxy port and the port number `30333` to the p2p port.
 To enable the firewall and the use of the ports, allow SSH access.
 
-> NOTE: For parachains, you will need to allow for both inbound and outbound traffic on the p2p port. Since the proxy
-> port is the public-facing port, this will need to have inbound and outbound traffic open, with the normal p2p port closed.
+:::note For parachains, you will need to allow for both inbound and outbound traffic on the p2p port
+
+Since the proxy port is the public-facing port, this will need to have inbound and outbound traffic 
+open, with the normal p2p port closed.
+
+:::
 
 ```bash
 ufw enable
@@ -116,7 +125,9 @@ mkdir /etc/nginx/streams-enabled
 Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create the proxy service file called
 `polkadot-proxy.conf` with the following content:
 
-> Use the previously defined ports: port `2435` for the proxy port & port number `30333` for the p2p port.
+:::info Use the previously defined ports: port `2435` for the proxy port & port number `30333` for the p2p port
+
+:::
 
 ```bash
 server {

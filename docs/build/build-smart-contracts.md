@@ -3,6 +3,7 @@ id: build-smart-contracts
 title: Smart Contracts
 sidebar_label: Smart Contracts
 description: How smart contracts play their role in the Polkadot ecosystem.
+keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
@@ -168,7 +169,6 @@ with the latest resources. You should also keep up to date with the following li
 
 ### Parachains
 
-- [Edgeware][]
 - [Moonbeam][]
 - [Astar](https://astar.network/)
 - [Acala](https://acala.network/)
@@ -178,15 +178,6 @@ Many smart contract platforms are building to become a parachain in the ecosyste
 A community created and maintained list of different smart
 contract platforms building on Polkadot can be found at
 [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
-
-#### Edgeware
-
-[Edgeware][edgeware] is a permissionless smart contract platform. It is an option for smart contract
-developers and want to deploy to a live environment. Users can deploy both EVM and WASM smart contracts
-on Edgeware. Edgeware intends to connect to Polkadot and Kusama as a smart contract parachain.
-
-Try deploying a smart contract on Edgeware by following their
-[documentation][edgeware contracts documentation].
 
 #### Moonbeam
 

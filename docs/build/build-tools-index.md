@@ -3,6 +3,7 @@ id: build-tools-index
 title: Tool Index
 sidebar_label: Tool Index
 description: Reference point for a list of tools to support your development.
+keywords: [tools, clients, libraries, explorers, monitor, data, SCALE]
 slug: ../build-tools-index
 ---
 

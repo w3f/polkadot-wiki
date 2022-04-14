@@ -3,6 +3,7 @@ id: kusama-statemine-ledger
 title: Using Ledger Devices with Statemine
 sidebar_label: Ledger Devices with Statemine
 description: Learn how to use Ledger with Statemine.
+keywords: [statemine, ledger, kusama, assets]
 slug: ../../kusama-statemine-ledger
 ---
 

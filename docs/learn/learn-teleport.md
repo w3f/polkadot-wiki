@@ -3,6 +3,7 @@ id: learn-teleport
 title: Teleporting KSM between Kusama and Statemine
 sidebar_label: Teleporting Assets
 description: Steps on how to teleport assets across parachains.
+keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---
 
@@ -46,14 +47,14 @@ PolkadotJS interface to teleport KSM from Kusama to Statemine.
    4. "amount" - Insert the number of tokens you want to teleport. This does not include the
       transfer fee
 4. After reviewing the transaction information and fees, click the "Teleport" button. Remember that
-   the destination chain imposes receiving fee on the teleport amount (It is currently 0.004 KSM on
+   the destination chain imposes receiving fee on the teleport amount (It is currently 0.000010666 KSM on
    Statemine)
 5. Click "Sign and Submit".
 6. Enter your password, and click "Sign the transaction".
 
 The transaction will be signed and broadcasted, and the tokens will appear on the destination chain
-shortly. In the given example screenshot, the received balance would be 0.001 KSM (Teleport amount
-0.005 KSM - Receiving fee 0.004 KSM). If you plan to teleport KSM back to Kusama from Statemine, you
+shortly. In the given example screenshot, the received balance would be around 0.0049 KSM (Teleport amount
+0.005 KSM - Receiving fee 0.000010666 KSM). If you plan to teleport KSM back to Kusama from Statemine, you
 will follow the same procedure as above.
 
 ## Troubleshooting

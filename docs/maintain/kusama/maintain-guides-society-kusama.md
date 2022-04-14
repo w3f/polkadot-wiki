@@ -3,10 +3,11 @@ id: maintain-guides-society-kusama
 title: Kappa Sigma Mu
 sidebar_label: Kappa Sigma Mu
 description: Learn about the Kappa Sigma Mu society and join as a member.
+keywords: [kappa sigma mu, society, kusama, member]
 slug: ../../maintain-guides-society-kusama
 ---
 
-Kappa Sigma Mu is a membership club using the Substrate [Society][substrate pallet] pallet. It is an
+Kappa Sigma Mu is a membership club using the Substrate [Society pallet][substrate pallet]. It is an
 economic game to incentivize users to join a society that coordinates around whatever the rules are
 decided to be. The members of the society are incentivized to participate in the society via the
 rewards paid by the treasury. Currently, there is only one society on Kusama but it is possible to
@@ -77,15 +78,15 @@ You can find an existing member to place a bid on your behalf if you do not have
 willing to give them a tip. An existing member can submit a `vouch` transaction through the
 Extrinsics page.
 
-> vouch(who,value,tip)
->
-> who - The user you are vouching for
->
-> value - The value that the user would like to get when joining the society
->
-> tip - Fees you get
->
-> Note: The final value that the candidate will get = (value - tip)
+:::info vouch(who,value,tip)
+
+* who: The user you are vouching for
+* value: The value that the user would like to get when joining the society
+* tip: Fees you get
+
+The final value that the candidate will get = (value - tip)
+
+:::
 
 ![Society Dashboard](../../assets/society/vouch.jpg)
 
@@ -95,8 +96,12 @@ Bids selected in this phase will be voted on by the existing members to decide w
 will be approved to join the society. Members will vote for all the candidates and the final outcome
 will be randomly selected by one of the votes. Let's take a look the example shown below:
 
-> Note: If the randomly selected member does not vote, it will be treated as a rejection. For each
-> rotation period, the maximum number of members that can be accepted is set as 10.
+:::note
+
+If the randomly selected member does not vote, it will be treated as a rejection. For each
+rotation period, the maximum number of members that can be accepted is set as 10.
+
+:::
 
 A - Accept, R - Reject, S - Skeptic
 
@@ -116,7 +121,9 @@ and their unclaimed payouts will be slashed. Moreover, each member who voted opp
 randomly selected vote will have their unclaimed payouts slashed and strikes increased. In this
 case, member 4 will be punished.
 
-> Note: The maximum number of strikes you can have is on Kusama is 10.
+:::info The maximum number of strikes you can have is on Kusama is 10
+
+:::
 
 The slashed funds (2 KSM currently) will be given to a random member who voted the same as the
 selected vote as a reward for participating in the vote. The reward is escrowed for some period of
@@ -131,7 +138,7 @@ is defined [in the society pallet][substrate pallet] if you would like to have a
 Example:
 
 ```
-Let's assume we have 5 members in the society.
+Let's assume we have 5 members in the society
 
 lock_duration = 100 - 50_000 / (5 + 500)
 lock_duration * MAX_LOCK_DURATION_IN_BLOCKS
@@ -167,8 +174,11 @@ search for "Existing Members (Challenges)". Besides that, you can earn extra KSM
 apply for the membership and requesting a tip. This is useful when a user does not have enough
 balance to reserve a deposit. The tip will be given when a user successfully joins the society.
 
-> Note: Each member can only vouch for one user at a time. A member is not required to reserve the
-> deposit when vouching for a user.
+:::info
+
+Each member can only vouch for one user at a time. A member is not required to reserve the deposit when vouching for a user.
+
+:::
 
 If a member accumulates too many strikes or fails their membership challenge, they will become
 suspended. While a member is suspended, they are unable to claim matured payouts. It is up to the

@@ -3,17 +3,28 @@ id: learn-crowdloans
 title: Parachain Crowdloans
 sidebar_label: Parachain Crowdloans
 description: Learn about crowdloans and how to interact with one.
+keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
-for their parachain bids in a decentralised crowdloan. If you are here for guidance on how to 
+for their parachain bids in a decentralised crowdloan. 
+
+:::note Contributing to a crowdloan
+
+If you are here for guidance on how to 
 contribute for a crowdloan, watch the video below or read this [support article on crowdloans](https://support.polkadot.network/support/solutions/articles/65000177341-how-to-participate-in-crowdloans-on-polkadot-or-kusama).
+
+:::
 
 [![Crowdloans on Polkadot JS](https://img.youtube.com/vi/AA9mPANmzmU/0.jpg)](https://youtu.be/AA9mPANmzmU)
 
-> For information on how to participate in the crowdloan and parachain auction testing on
-> Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
+:::note Testing on Rococo
+
+For information on how to participate in the crowdloan and parachain auction testing on
+Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
+
+:::
 
 ## Starting a Crowdloan Campaign
 
@@ -25,7 +36,7 @@ The duration can last over several auctions, meaning that the team will not need
 campaign just because they do not secure a slot on their first attempt.
 
 When setting the parameters of a crowdloan campaign, consider the following:
-> *Important*: a crowdloan campaign can start well before the auction slot is opened.
+- A crowdloan campaign can start well before the auction slot is opened. 
 - The campaign creation form requires setting a crowdloan cap &mdash; the maximum amount a campaign
   can collect. A team can still win an [auction](learn-auction.md) if the cap is not reached.
 - Set the desired end of the crowdloan in the "Ending block" field. This helps to ensure that the
@@ -52,14 +63,14 @@ runtime upgrades (as determined through its own local governance).
 
 ## Supporting a Crowdloan Campaign
 
-> {{ polkadot: **Important**: The minimum balance for contributions for a crowdloan campaign is 
-> currently set to [5 DOTs](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L1267). 
-> This is in an attempt to make crowdloans as accessible as possible while maintaining a 
-> balance to justify the use of the network's resources. :polkadot }}{{ kusama: 
-> **Important**: The minimum balance for contributions for a crowdloan campaign is currently set to
-> [0.1 KSM](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L1218). 
-> This is in an attempt to make crowdloans as accessible as possible while maintaining a balance to 
-> justify the use of the network's resources. :kusama }}.
+:::info Minimum Crowdloan Contribution
+
+The minimum balance for contributions for a crowdloan campaign is 
+currently set to {{ crowdloan_min_contribution }}. 
+This is in an attempt to make crowdloans as accessible as possible while maintaining a 
+balance to justify the use of the network's resources. 
+
+:::
 
 Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate
 by sending a special transaction that references the campaign's index. Tokens used to participate
@@ -67,9 +78,13 @@ must be transferable &mdash; that is, not locked for any reason, including staki
 governance &mdash; because they will be moved into a module-controlled account that was generated
 uniquely for this campaign.
 
-> **Important**: All crowdloan contributions are handled by the Crowdloan module’s logic where a
-> campaign is identified by an index, not by address. **Never transfer tokens to an address in 
-> support of a campaign.**
+:::caution Do not send Crowdloan contributions directly to the Parachain address
+
+All crowdloan contributions are handled by the Crowdloan module’s logic where a
+campaign is identified by an index, not by address. **Never transfer tokens to an address in 
+support of a campaign.
+
+:::
 
 It is up to individual parachain teams to decide if and how they want to reward participants who
 forgo staking and choose to lock their tokens in support of the parachain’s campaign. As one can
