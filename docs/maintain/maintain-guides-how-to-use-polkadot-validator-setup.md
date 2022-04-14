@@ -3,6 +3,7 @@ id: maintain-guides-how-to-use-polkadot-validator-setup
 title: How to use Polkadot Validator Setup
 sidebar_label: How to use Polkadot Validator Setup
 description: Steps on Web3 Foundation's supported validator setup.
+keywords: [validator setup, validator, configuration]
 slug: ../maintain-guides-how-to-use-polkadot-validator-setup
 ---
 

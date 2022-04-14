@@ -3,6 +3,7 @@ id: maintain-guides-society-kusama
 title: Kappa Sigma Mu
 sidebar_label: Kappa Sigma Mu
 description: Learn about the Kappa Sigma Mu society and join as a member.
+keywords: [kappa sigma mu, society, kusama, member]
 slug: ../../maintain-guides-society-kusama
 ---
 
