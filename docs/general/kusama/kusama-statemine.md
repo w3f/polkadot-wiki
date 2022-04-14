@@ -83,4 +83,4 @@ Ensure that the receiver account has at least 0.1 microKSM which is the Existent
 
 ![Sign asset creating transaction](../../assets/kusama/statemine-asset-transfer-3.png)
 
-If the transaction is successful,  the assets are transferred to the receiver account. 
+If the transaction is successful, the assets are transferred to the receiver account. 
