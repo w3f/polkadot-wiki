@@ -24,7 +24,7 @@ The WND tokens (Westies) are free and are available through a [faucet](https://w
 
 :::
 
-To create an asset on Statemine, you would need a deposit of 1 KSM. Ensure that your Statemine account balance more than 1 KSM,
+To create an asset on Statemine, you would need a deposit of 1 KSM. Ensure that your Statemine account balance is more than 1 KSM,
 which should account for the transaction fee as well. You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport).
 
 Assuming you have the required KSM balance on your Statemine account, the following instructions should let you successfully create an asset on Statemine
