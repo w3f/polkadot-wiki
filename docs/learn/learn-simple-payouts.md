@@ -3,7 +3,7 @@ id: learn-simple-payouts
 title: Simple Payouts
 sidebar_label: Simple Payouts
 description: An overview of how payouts work for those staking.
-keywords: [payouts, simple payouts, rewards]
+keywords: [payouts, simple payouts, rewards, staking]
 slug: ../learn-simple-payouts
 ---
 

@@ -3,7 +3,7 @@ id: learn-implementations
 title: Polkadot Implementations
 sidebar_label: Polkadot Implementations
 description: Learn about the different Polkadot implementations.
-keywords: [implementations, wasm, meta protocol, parity]
+keywords: [implementations, wasm, meta protocol]
 slug: ../learn-implementations
 ---
 
