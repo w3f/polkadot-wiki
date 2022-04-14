@@ -21,6 +21,7 @@ module.exports = {
         "general/ambassadors",
         "general/kusama/kusama-statemine",
         "maintain/kusama/maintain-guides-society-kusama",
+        "general/contributing",
         {
           type: "category",
           label: "Programmes",
