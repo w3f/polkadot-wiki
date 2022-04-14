@@ -3,6 +3,7 @@ id: miscellaneous
 title: Miscellaneous
 sidebar_label: Miscellaneous
 description: A misc document to present additional information and perspective on Polkadot
+keywords: [miscellaneous, polkadot, concepts, analysis]
 slug: ../miscellaneous
 ---
 
