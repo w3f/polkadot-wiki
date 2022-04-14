@@ -19,6 +19,7 @@ module.exports = {
         "general/kusama/kusama-timeline",
         "general/kusama/kusama-community",
         "general/ambassadors",
+        "general/kusama/kusama-statemine",
         "maintain/kusama/maintain-guides-society-kusama",
         {
           type: "category",
