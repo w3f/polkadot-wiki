@@ -72,7 +72,7 @@ These will have a shorter enactment time.
 
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
 (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it - this action is called *seconding*. The proposal with the highest amount of bonded
+to support it - this action is called *endorsing*. The proposal with the highest amount of bonded
 support will be selected to be a referendum in the next voting cycle.
 
 Note that this may be different from the absolute number of seconds; for instance, three accounts

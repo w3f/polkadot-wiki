@@ -21,8 +21,8 @@ for more details on the recent efforts to modify Polkadot Governance
 :::
 
 Public referenda can be proposed and voted on by any token holder in the system as long as they
-provide a bond. After a proposal is made, others can agree with it by _seconding_ it and putting up
-tokens equal to the original bond. Every launch period, the most seconded proposal will be moved to
+provide a bond. After a proposal is made, others can agree with it by *endorsing* it and putting up
+tokens equal to the original bond. Every launch period, the most endorsed proposal will be moved to
 the public referenda table where it can be voted upon. Voters who are willing to lock up their
 tokens for a greater duration of time can do so and get their vote amplified. For more details on
 the governance system please see [here](../learn/learn-governance.md).
@@ -69,7 +69,7 @@ ever), this means that any tokens bonded will be locked for an indeterminate amo
 
 :::info Proposals cannot be revoked by the proposer, even if they never turn into a referendum
 
-It is important to realize that there is no guarantee that DOT you use for proposing or seconding 
+It is important to realize that there is no guarantee that DOT you use for proposing or endorsing 
 a proposal will be returned to that account in any given timeframe.
 
 :::
@@ -94,9 +94,9 @@ in the "proposals" column on the page.
 
 ![submit proposal](../assets/democracy/submit_proposal.png)
 
-Now your proposal is visible by anyone who accesses the chain and others can second it or submit a
+Now your proposal is visible by anyone who accesses the chain and others can endorse it or submit a
 preimage. However, it's hard to tell what exactly this proposal does since it shows the hash of the
-action. Other holders will not be able to make a judgement for whether they second it or not until
+action. Other holders will not be able to make a judgement for whether they endorse it or not until
 someone submits the actual preimage for this proposal. In the next step you will submit the
 preimage.
 
@@ -124,42 +124,42 @@ submitted proposal.
 
 ![proposals updated](../assets/democracy/proposals_updated.png)
 
-## Seconding a Proposal
+## Endorsing a Proposal
 
-Seconding a proposal means that you are agreeing with the proposal and backing it with an equal
+Endorsing a proposal means that you are agreeing with the proposal and backing it with an equal
 amount of deposit as was originally locked. The bonded tokens will be released once the proposal is
-tabled (that is, brought to a vote), just like the original proposer's bond. By seconding a proposal
-you will move it higher up the rank of proposals. The most seconded proposal &mdash; in value, not
+tabled (that is, brought to a vote), just like the original proposer's bond. By endorsing a proposal
+you will move it higher up the rank of proposals. The most endorsed proposal &mdash; in value, not
 number of supporters &mdash; will be brought to a referendum every launch period.
 
-It is important to note that there is no way to stop or cancel seconding a proposal once it has been
-done. Therefore, the DOT that was seconded will be reserved until the proposal is tabled as a
+It is important to note that there is no way to stop or cancel endorsing a proposal once it has been
+done. Therefore, the DOT that was endorsed will be reserved until the proposal is tabled as a
 referendum. This is an indeterminate amount of time, since there is no guarantee that a proposal
 will become a referendum for a given period, as other proposals may be proposed and tabled before
 it.
 
-Note that it is possible for a single account to second a proposal multiple times. This is by
-design; it is the value, not the number of seconds _per se_, that counts in terms of weighting. If
-there were a limit of one second per account, it would be trivial for a user with, for example, 1000
+Note that it is possible for a single account to endorse a proposal multiple times. This is by
+design; it is the value, not the number of endorsements _per se_, that counts in terms of weighting. If
+there were a limit of one endorsement per account, it would be trivial for a user with, for example, 1000
 DOT to create ten accounts with 100 DOT instead of a single account with 1000 DOT. Thus, no
-restrictions are made on the number of times a single account can second a proposal.
+restrictions are made on the number of times a single account can endorse a proposal.
 
-To second a proposal, navigate to the proposal you want to second and click on the "Second" button.
+To endorse a proposal, navigate to the proposal you want to endorse and click on the "Endorse" button.
 
-![second button](../assets/democracy/second_button.png)
+![endorsement button](../assets/democracy/second_button.png)
 
 You will be prompted with the full details of the proposal (if the preimage has been submitted!) and
-can then broadcast the transaction by clicking the blue "Second" button.
+can then broadcast the transaction by clicking the blue "Endorse" button.
 
-![second confirm](../assets/democracy/second_confirm.png)
+![endorsement confirmed](../assets/democracy/second_confirm.png)
 
-Once successful you will see your second appear in the dropdown in the proposal details.
+Once successful, you will see your endorsement appear in the dropdown in the proposal details.
 
-![second result](../assets/democracy/second_result.png)
+![endorsement result](../assets/democracy/second_result.png)
 
 ## Voting on a Proposal
 
-At the end of each launch period, the most seconded proposal will move to referendum. During this
+At the end of each launch period, the most endorsed proposal will move to referendum. During this
 time you can cast a vote for or against the proposal. You may also lock up your tokens for a greater
 length of time to weigh your vote more strongly. During the time your tokens are locked, you are
 unable to transfer them, however they can still be used for further votes. Locks are layered on top
@@ -174,13 +174,12 @@ If you would like to cast your vote for the proposal select the "Aye, I approve"
 would like to cast your vote against the proposal in referendum you will select "Nay, I do not
 approve" option.
 
-The second option is to select your conviction for this vote. The longer you are willing to lock
-your tokens, the stronger your vote will be weighted. The timeline for the conviction starts after
-the voting period ends; tokens used for voting will always be locked until the end of the voting
-period, no matter what conviction you vote with. Unwillingness to lock your tokens means that your
-vote only counts for 10% of the tokens that you hold, while the maximum lock up of 896 days means
-you can make your vote count for 600% of the tokens that you hold. It is possible to vote with
-tokens already locked by staking.
+The endorsement option is to select your conviction for this vote. The longer you are willing 
+to lock your tokens, the stronger your vote will be weighted. The timeline for the conviction starts after the voting period ends; tokens used for voting will always be locked until the 
+end of the voting period, no matter what conviction you vote with. Unwillingness to lock 
+your tokens means that your vote only counts for 10% of the tokens that you hold, while the
+maximum lock up of 896 days means you can make your vote count for 600% of the tokens that 
+you hold. It is possible to vote with tokens already locked by staking.
 
 When you are comfortable with the decision you have made, click the blue "Vote" button to submit
 your transaction and wait for it to be included in a block.
