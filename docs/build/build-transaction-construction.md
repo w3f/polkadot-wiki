@@ -40,11 +40,11 @@ function from the Balances pallet will take:
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded SCALE-encoded bytes. The specific serialization is defined in the runtime and can change if the runtime is upgraded, but in general the serialization format can be described as follows:
 - Compact encoded number of SCALE-encoded bytes following this.
 - 1 bit: it is a 0 if no signature is present, or a 1 if it is.
-- 7 bits: the transaction version.
+- 7 bits: the extrinsic version, it is equal to 4 in decimal.
 - If there is a signature:
   - a SCALE encoded `sp_runtime::MultiAddress::Id<AccountId32, u32>` indicating the signer(s) of the transaction.
   - a SCALE encoded `sp_runtime::MultiSignature::{SigningScheme}` with the signature\*.
-  - a SCALE encoded `sp_runtime::generic::Era` indicationg for how long this transaction will live in the pool.
+  - a SCALE encoded `sp_runtime::generic::Era` indicating for how long this transaction is valid.
   - Compact encoded `u32` with the nonce.
   - Compact encoded `u128` with the tip paid to the block producer.
 - The specific transaction parameters or call data, which consists of:
