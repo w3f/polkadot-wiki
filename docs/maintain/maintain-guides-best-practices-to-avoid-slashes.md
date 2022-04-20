@@ -1,0 +1,38 @@
+Best practices to prevent slashing
+Slashing is implemented as a deterrent for validators to misbehave. Slashes are applied to a validators total stake (own + nominated) and can range from as little as 0.01% or rise to 100%.  In all instances slashes are accompanied by a loss of nominators.  
+Broadly speaking, a slash may occur under four circumstances
+1.	Liveliness – Slashing starts when 10% of the active validators set are offline and increases in a linear manner until 44% of the validator set is offline, at this point the slash is held at 7% 
+2.	Equivocation – A slash of 0.01% is applied with as little as a single evocation.   The slashed amount increases to 100% incrementally as more validators also equivocate.
+3.	Malicious action – This may result from a validator trying to falsely represent the contents of a block.  Slashing penalties of 100% may apply.
+4.	Application related (bug or otherwise) – The amount is unknown and may manifest itself as scenarios 1, 2 and 3 above.
+This article seeks to provide some best-practices to prevent slashing based on lesson’s learned from previous slashes.  It provides comments and guidance for all circumstances except for malicious action by the node-operator.
+Liveliness
+An offline event occurs when a validator does not produce a BLOCK or IMONLINE message within an EPOCH.  Isolated offline events do not result in a slash however the validator would not earn any era points while offline.
+A slash under liveliness occurs when 10% or more of the active validators are offline at the same time.  
+The following are recommendations to validators to avoid slashing under liveliness for servers that have historically functioned:
+1.	Utilize systemd to host your validator instance.  Systemd should be configured to auto reboot the service with a minimum of 60 second delay.  This configuration should aid with re-establishing the instance under isolated failures with the binary.  
+2.	A validator instance can demonstrate un-lively behaviour if it is unable to sync new blocks.  This may be as a result of insufficient disk space or a corrupt database.
+3.	Monitoring should be implemented that allows node-operators to monitor connectivity network connectivity to the peer-to-peer port of the validator instance.  Monitoring should also be implemented to ensure that there is <50 Block ‘drift’ between the target and best blocks.  If either event produces a failure the node-operator should be notified.
+The following are recommendations to validators to avoid liveliness for new servers / migrated servers:
+4.	Ensure that the `--validator` flag is used when starting the validator instance
+5.	If switching keys ensure that the correct session keys are applied
+6.	If migrating using a two server approach, ensure that you don’t switch off the original server too soon.
+7.	Ensure that the database on the new server is fully synchronized
+It is highly recommended to avoid hosting on providers that other validators may also utilize.  If the provider fails, there is a probability that one or more other validators would also fail due to liveliness building to a slash.  
+There is precedent that a slash maybe forgiven if a single validator faces an offline event when a larger operator also faces multiple offline events which results in a slash.
+
+Equivocation 
+Equivocation events can occur when a validator produces two or more of the same block, under this condition it is referred to as a BABE equivocation.  Equivocation may also occur when a validator signs two or more of the same consensus vote, under this condition it is referred to as a GRANDPA Equivocation.
+Equivocations usually occur when there is the existence of duplicate signing keys that reside on the validator host.  If keys are never duplicated the probability of an equivocation slash decreases to near 0.
+The following are scenarios that build towards slashes under equivocation:
+1.	Cloning a server i.e. copying all contents when migrating to new hardware.  This action should be avoided.  If an image is desired, it should be taken before keys are generated.
+2.	High Availability (HA) Systems – Equivocation can occur if there are any concurrent operations either when a failed server restarts or if there’s a false positive event resulting in both servers being online at the same time.  HA systems are to be treated with extreme caution and are not advised.
+3.	The keystore folder is copied when attempting to copy a database from one instance to another.  
+It is important to note that equivocation slashes occur with a single incident.  This can happen if duplicated keystores are in use for only a few seconds.  A slash results in loss of nominators, loss of funds, removal from the Thousand Validator Programme and reputational damage.  An offline event results in loss of some funds but retention of nominators and a fault under the Thousand Validator Programme.  
+Application Related
+In the past there have been releases with bugs that lead to slashes, these issues are not as prevalent in current releases.  The following are advised to node operators to ensure that they obtain pristine binaries or source code and to ensure security of their node:
+1.	Always download either source files or binaries from the official Parity repository
+2.	Verify the hash of downloaded files.
+3.	Use the W3F secure validator setup or adhere to its principles
+4.	Ensure basic security items are checked, use a firewall, manage user access, use SSH certificates
+5.	Avoiding using your server as a general purpose system.  Hosting a validator on your workstation or one that hosts other services increases the risk of maleficence.
