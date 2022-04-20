@@ -131,16 +131,16 @@ should nominate. It is important to note that these traits aren't necessarily "b
 depending on your validator selection methodology, they may be characteristics that you would be
 interested in filtering.
 
-* `one validator per operator`: Do not show groups of validators run by a single operator.
-* `comm. <20%`: Do not show any validators with a commission of 20% or higher.
-* `with capacity`: Do not show any validators who are currently operating
+* **one validator per operator**: Do not show groups of validators run by a single operator.
+* **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
+* **with capacity**: Do not show any validators who are currently operating
   [at capacity](../general/glossary.md#capacity) (i.e., could potentially be oversubscribed).
-* `recent payouts`: Only show validators that have recently caused a
+* **recent payouts**: Only show validators that have recently caused a
   [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
-* `currently elected`: Only show validators that are currently in the active set (i.e., they have been
+* **currently elected**: Only show validators that are currently in the active set (i.e., they have been
   elected to produce blocks this era).
-* `with an identity`: Only show validators that have set an [identity](learn-identity.md).
+* **with an identity**: Only show validators that have set an [identity](learn-identity.md).
   Note that this identity does not have to be verified by a registrar for the validator to show up
   in the list.
 
