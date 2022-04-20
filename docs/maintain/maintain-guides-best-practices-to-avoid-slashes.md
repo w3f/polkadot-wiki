@@ -1,16 +1,20 @@
-## Best practices to avoid slashing
+## Best practices to prevent slashing
 
 Slashing is implemented as a deterrent for validators to misbehave. Slashes are applied to a validators total stake (own + nominated) and can range from as little as 0.01% or rise to 100%.  In all instances slashes are accompanied by a loss of nominators.  
-Broadly speaking, a slash may occur under four circumstances
+
+Broadly speaking, a slash may occur under four circumstances:
+
 1.	Liveliness – Slashing starts when 10% of the active validators set are offline and increases in a linear manner until 44% of the validator set is offline, at this point the slash is held at 7% 
 2.	Equivocation – A slash of 0.01% is applied with as little as a single evocation.   The slashed amount increases to 100% incrementally as more validators also equivocate.
 3.	Malicious action – This may result from a validator trying to falsely represent the contents of a block.  Slashing penalties of 100% may apply.
 4.	Application related (bug or otherwise) – The amount is unknown and may manifest itself as scenarios 1, 2 and 3 above.
+
 This article seeks to provide some best-practices to prevent slashing based on lesson’s learned from previous slashes.  It provides comments and guidance for all circumstances except for malicious action by the node-operator.
 
 ## Liveliness
 An offline event occurs when a validator does not produce a BLOCK or IMONLINE message within an EPOCH.  Isolated offline events do not result in a slash however the validator would not earn any era points while offline.
 A slash under liveliness occurs when 10% or more of the active validators are offline at the same time.  
+
 The following are recommendations to validators to avoid slashing under liveliness for servers that have historically functioned:
 1.	Utilize systemd to host your validator instance.  Systemd should be configured to auto reboot the service with a minimum of 60 second delay.  This configuration should aid with re-establishing the instance under isolated failures with the binary.  
 2.	A validator instance can demonstrate un-lively behaviour if it is unable to sync new blocks.  This may be as a result of insufficient disk space or a corrupt database.
