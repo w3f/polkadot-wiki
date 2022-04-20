@@ -1,4 +1,4 @@
-## Best practices to prevent slashing
+## Best practices to avoid slashing
 
 Slashing is implemented as a deterrent for validators to misbehave. Slashes are applied to a validators total stake (own + nominated) and can range from as little as 0.01% or rise to 100%.  In all instances slashes are accompanied by a loss of nominators.  
 Broadly speaking, a slash may occur under four circumstances
