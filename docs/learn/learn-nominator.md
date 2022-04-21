@@ -154,21 +154,21 @@ nominating from a different address.
 ### Filter Out Validators With Undesirable Traits
 
 On the Targets page, you can filter out validators that have traits that may indicate an issue with
-you nominating them. You can turn these filters off and on to help narrow down which validators you
-should nominate. It is important to note that none of these traits are necessarily "bad"; however,
+you nominating them. You can turn these filters on and off to help narrow down which validators you
+should nominate. It is important to note that these traits aren't necessarily "bad"; however,
 depending on your validator selection methodology, they may be characteristics that you would be
-interested in filtering out.
+interested in filtering.
 
-- **Single from operator** - Do not show groups of validators run by a single operator.
-- **No 20%+ comm** - Do not show any validators with a commission of 20% or higher.
-- **No at capacity** - Do not show any validators who are currently operating
+* **one validator per operator**: Do not show groups of validators run by a single operator.
+* **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
+* **with capacity**: Do not show any validators who are currently operating
   [at capacity](../general/glossary.md#capacity) (i.e., could potentially be oversubscribed).
-- **Recent payouts** - Only show validators that have recently caused a
+* **recent payouts**: Only show validators that have recently caused a
   [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
-- **Only elected** - Only show validators that are currently in the active set (i.e., they have been
+* **currently elected**: Only show validators that are currently in the active set (i.e., they have been
   elected to produce blocks this era).
-- **Only with an identity** - Only show validators that have set an [identity](learn-identity.md).
+* **with an identity**: Only show validators that have set an [identity](learn-identity.md).
   Note that this identity does not have to be verified by a registrar for the validator to show up
   in the list.
 
