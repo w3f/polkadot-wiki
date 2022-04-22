@@ -51,6 +51,10 @@ Before being submitted, transactions are serialized. Serialized transactions are
   - 1 byte: the pallet index the transaction is calling into.
   - 1 byte: the function in the pallet the transaction is calling.
   - variable: the SCALE-encoded parameters required by the function being called.
+- 4 bytes: Spec version of the runtime.
+- 4 bytes: Transaction version of the runtime.
+- 32 bytes: Genesis hash of the chain.
+- 32 bytes: Block hash serving as the era reference. If the transaction is immortal, then this would be the genesis hash.
  
 The metadata provides you with all of the information required to know how to construct the serialized call data specific to your transaction. You can read more about the metadata, its format and how to get it in the [Substrate documentation](https://docs.substrate.io/v3/runtime/metadata/).
 
