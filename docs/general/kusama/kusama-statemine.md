@@ -23,7 +23,7 @@ The WND tokens (Westies) are free and are available through a [faucet](https://w
 :::
 
 To create an asset on Statemine, you would need a deposit of 1 KSM. Ensure that your Statemine account balance is more than 1 KSM,
-which should account for the transaction fee as well. You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport).
+which should account for the transaction fee as well. You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport.md).
 
 Assuming you have the required KSM balance on your Statemine account, the following instructions should let you successfully create an asset on Statemine
 
@@ -62,7 +62,7 @@ The assets can be Sufficient or Non-Sufficient. To hold a Non-Sufficient asset, 
 
 :::
 
-To hold, send or receive most of the assets on Statemine (which are Non-Suffcient), the accounts need to have a minimum balance of 3.33 microKSM (The Existential Deposit on Statemine). You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport). The balance transfers of KSM on Statemine are similar to the balance transfers KSM on Kusama and can be done on the accounts page on Polkadot-JS Apps UI.
+To hold, send or receive most of the assets on Statemine (which are Non-Suffcient), the accounts need to have a minimum balance of 3.33 microKSM (The Existential Deposit on Statemine). You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport.md). The balance transfers of KSM on Statemine are similar to the balance transfers KSM on Kusama and can be done on the accounts page on Polkadot-JS Apps UI.
 
 In this tutorial, transfer of BILLCOINs (Asset ID: 223, Symbol: BILL) is demonstrated.
 
