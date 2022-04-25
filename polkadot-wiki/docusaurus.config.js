@@ -161,11 +161,10 @@ module.exports = {
       },
     },
     algolia: {
-      apiKey: '8bfa06b56bb8f33e5698c7f40b00b38f',
+      appId: 'BEUYRRAUZN',
+      apiKey: '6a00510129926e4ac3219f18999d8ab0',
       indexName: 'polkadot',
-      algoliaOptions: {
-        facetFilters: ['language:LANGUAGE'],
-      },
+      contextualSearch: true,
     },
     docsSideNavCollapsible: true,
   },
