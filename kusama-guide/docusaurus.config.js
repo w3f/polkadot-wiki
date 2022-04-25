@@ -127,11 +127,10 @@ module.exports = {
       },
     },
     algolia: {
-      apiKey: "53c6a4ab0d77c0755375a971c9b7cc3d",
-      indexName: "kusama_guide",
-      algoliaOptions: {
-        facetFilters: ["language:LANGUAGE"],
-      },
+      appId: '33KMAMG2DG',
+      apiKey: '34632cbe78fe091ae08ab7fb51b8c897',
+      indexName: 'kusama_guide',
+      contextualSearch: true,
     },
   },
 };
