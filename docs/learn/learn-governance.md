@@ -428,9 +428,11 @@ Technical Committee is composed of the teams that have successfully implemented 
 a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are 
 added or removed from the Technical Committee via a simple majority vote of the [Council](#council).
 
-The Technical Committee can, along with the Council, produce emergency referenda, which are
-fast-tracked for voting and implementation. These are used for emergency bug fixes or rapid
-implementation of new but battle-tested features into the runtime.
+Purpose of the Technical Committee is to safeguard against malicious referenda, implement bug fixes, 
+reverse faulty runtime updates, or add new but battle tested features. TC has the power to fast-track
+proposals by using the Democracy pallet, and is the only origin that is able to trigger fast-tracking
+functionality. We can think of the TC as a "unique origin" that cannot generate proposals, but are able
+to allow fast-tracking on existing proposals.
 
 Fast-tracked referenda are the only type of referenda that can be active alongside another active
 referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
