@@ -36,6 +36,36 @@ function from the Balances pallet will take:
 - `dest`: Destination address
 - `#[compact] value`: Number of tokens (compact encoding)
 
+**Serialized transaction format**
+
+Before being submitted, transactions are serialized. Serialized transactions are hex encoded SCALE-encoded bytes. The specific serialization is defined in the runtime and can change if the runtime is upgraded, but in general the serialization format can be described as follows:
+
+- Compact encoded number of SCALE encoded bytes following this.
+- 1 bit: it is a 0 if no signature is present, or a 1 if it is.
+- 7 bits: the extrinsic version, it is equal to 4 in decimal.\- 4 bytes: Spec version of the runtime.
+- 4 bytes: Transaction version of the runtime.
+- 32 bytes: Genesis hash of the chain.
+- 32 bytes: Block hash serving as the era reference. If the transaction is immortal, then this would be the genesis hash.
+- If there is a signature:
+  - a SCALE encoded `sp_runtime::MultiAddress::Id<AccountId32, u32>` indicating the signer(s) of the transaction.
+  - a SCALE encoded `sp_runtime::MultiSignature::{SigningScheme}` with the signature\*.
+  - a SCALE encoded `sp_runtime::generic::Era` indicating for how long this transaction is valid:
+    - If the transaction is immortal, the Era would be simply 0.
+    - Otherwise, it would be a `Vec[u64, u64]` comprising the period and the phase.
+  - Compact encoded `u32` with the nonce.
+  - Compact encoded `u128` with the tip paid to the block producer.
+  - a SCALE encoded `sp_runtime::traits::SignedExtension<Vec<Text>>` with the additional data and logic associated with this transaction.
+- The specific transaction parameters or call data, which consists of:
+  - 1 byte: the pallet index the transaction is calling into.
+  - 1 byte: the function in the pallet the transaction is calling.
+  - variable: the SCALE-encoded parameters required by the function being called.
+
+The metadata provides you with all of the information required to know how to construct the serialized call data specific to your transaction. You can read more about the metadata, its format and how to get it in the [Substrate documentation](https://docs.substrate.io/v3/runtime/metadata/).
+
+\* Polkadot supports sr25519, ed25519, and ECDSA as signing schemes.
+
+**Summary**
+
 Once you have all the necessary information, you will need to:
 
 1. Construct an unsigned transaction.
