@@ -57,6 +57,10 @@ shortly. In the given example screenshot, the received balance would be around 0
 0.005 KSM - Receiving fee 0.000010666 KSM). If you plan to teleport KSM back to Kusama from Statemine, you
 will follow the same procedure as above.
 
+A video tutorial on teleporting KSM from Kusama to Statemine is provided below:
+
+[![Teleporting KSM](https://img.youtube.com/vi/PGyDpH2kad8/0.jpg)](https://youtu.be/PGyDpH2kad8)
+
 ## Troubleshooting
 
 If you do not see "Accounts > Teleport" in [PolkadotJS Apps], the source chain that you have
