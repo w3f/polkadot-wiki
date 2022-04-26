@@ -128,7 +128,7 @@ module.exports = {
     },
     algolia: {
       appId: '33KMAMG2DG',
-      apiKey: '34632cbe78fe091ae08ab7fb51b8c897',
+      apiKey: '14a71704b6c2407ab9b374aafffc85e5',
       indexName: 'kusama_guide',
       contextualSearch: true,
     },
