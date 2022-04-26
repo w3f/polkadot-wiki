@@ -74,14 +74,14 @@ a proposal will be returned to that account in any given timeframe.
 
 :::
 
-On Polkadot Apps you can use the "Democracy" tab to make a new proposal. In order to submit a
+On Polkadot Apps you can navigate to the Governance -> Democracy tab to make a new proposal. In order to submit a
 proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the
 hash of the proposal to be enacted. The easiest way to get the preimage hash is by clicking on the
 "Submit preimage" button and configuring the action that you are proposing.
 
-For example, if you wanted to propose that the account "Dave" would have a balance of 10 tokens your
-proposal may look something like the below image. The preimage hash would be
-`0xa50af1fadfca818feea213762d14cd198404d5496bca691294ec724be9d2a4c0`. You can copy this preimage
+The example below demonstrates the creation of a proposal on Kusama (**the same procedure applies to Polkadot**). 
+If you wanted to propose that a remark "Expect Chaos!" is added, the preimage hash would be
+`0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`. You can copy this preimage
 hash and save it for the next step. There is no need to click Submit Preimage at this point, though
 you could. We'll go over that in the next section.
 
@@ -100,7 +100,7 @@ action. Other holders will not be able to make a judgement for whether they endo
 someone submits the actual preimage for this proposal. In the next step you will submit the
 preimage.
 
-![proposals](../assets/democracy/proposals.png)
+![proposal hash](../assets/democracy/proposal-hash.png)
 
 ## Submitting a Preimage
 
@@ -122,7 +122,7 @@ through and click "Submit preimage" and confirm the transaction.
 Once the transaction is included you should see the UI update with the information for your already
 submitted proposal.
 
-![proposals updated](../assets/democracy/proposals_updated.png)
+![proposals](../assets/democracy/proposals.png)
 
 ## Endorsing a Proposal
 
@@ -146,16 +146,16 @@ restrictions are made on the number of times a single account can endorse a prop
 
 To endorse a proposal, navigate to the proposal you want to endorse and click on the "Endorse" button.
 
-![endorsement button](../assets/democracy/second_button.png)
+![endorsement button](../assets/democracy/endorse1.png)
 
 You will be prompted with the full details of the proposal (if the preimage has been submitted!) and
 can then broadcast the transaction by clicking the blue "Endorse" button.
 
-![endorsement confirmed](../assets/democracy/second_confirm.png)
+![endorsement confirmed](../assets/democracy/endorse.png)
 
 Once successful, you will see your endorsement appear in the dropdown in the proposal details.
 
-![endorsement result](../assets/democracy/second_result.png)
+![endorsement result](../assets/democracy/endorsed-list.png)
 
 ## Voting on a Proposal
 
