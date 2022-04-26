@@ -8,7 +8,7 @@ slug: ../maintain-errors
 ---
 
 Errors in Substrate-based chains are usually accompanied by descriptive messages. However, to read
-these messages, a tool parsing the blockchain data needs to request _chain metadata_ from a node.
+these messages, a tool parsing the blockchain data needs to request *chain metadata* from a node.
 That metadata explains how to read the messages. One such tool with a built-in parser for chain
 metadata is the [Polkadot-JS Apps UI](https://polkadot.js.org/apps).
 
@@ -69,20 +69,17 @@ The table below lists the most commonly encountered errors and ways to resolve t
 | ------------------ | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BadOrigin          | You are not allowed to do this operation, e.g. trying to create a council motion with a non-council account. | Either switch to an account that has the necessary permissions, or check if the operation you're trying to execute is permitted at all (e.g. calling `system.setCode` to do a runtime upgrade directly, without voting).                                                                                                                                                                  |
 | BadProof           | The transaction's signature seems invalid.                                                                   | It's possible that the node you're connected to is following an obsolete fork - trying again after it catches up usually resolves the issue. To check for bigger problems, inspect the last finalized and current best block of the node you're connected to and compare the values to chain stats exposed by other nodes - are they in sync? If not, try connecting to a different node. |
-| Future              | Transaction nonce too high, i.e. it's "from the future", **see note below**.                                                     | Reduce the nonce to +1 of current nonce. Check current nonce by inspecting the address you're using to send the transaction.                                                                                                                                                                                                                                                              |
+| Future             | Transaction nonce too high, i.e. it's "from the future", **see note below**.                                 | Reduce the nonce to +1 of current nonce. Check current nonce by inspecting the address you're using to send the transaction.                                                                                                                                                                                                                                                              |
 | Stale              | Transaction nonce too low.                                                                                   | Increase the nonce to +1 of current nonce. Check current nonce by inspecting the address you're using to send the transaction.                                                                                                                                                                                                                                                            |
 | ExhaustsResources  | There aren't enough resources left in the current block to submit this transaction.                          | Try again in the next block.                                                                                                                                                                                                                                                                                                                                                              |
 | Payment            | Unable to pay for TX fee.                                                                                    | You might not have enough free balance to cover the fee this transaction would incur.                                                                                                                                                                                                                                                                                                     |
 | Temporarily banned | The transaction is temporarily banned.                                                                       | The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.                                                                                                                                                                                                                                                                        |
-</br>
 
 :::note Future Error
 
 This error will not cause the TX to be discarded immediately. Instead, it will be sent to the [futures queue](https://docs.substrate.io/v3/concepts/tx-pool/#sorting), where it will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to some other error (ex. the validity period expires).*
 
 :::
-
-
 
 ## Error Table
 
