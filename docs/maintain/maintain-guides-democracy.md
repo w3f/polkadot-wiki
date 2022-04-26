@@ -79,7 +79,7 @@ proposal, you will need to submit what's called the preimage hash. The preimage 
 hash of the proposal to be enacted. The easiest way to get the preimage hash is by clicking on the
 "Submit preimage" button and configuring the action that you are proposing.
 
-The example below is demonstrated on Kusama (the same procedure applies to Polkadot as well). 
+The example below demonstrates the creation of a proposal on Kusama (**the same procedure applies to Polkadot**). 
 If you wanted to propose that a remark "Expect Chaos!" is added, the preimage hash would be
 `0x8ac3f722caf7677254e25ca4ad77d533ca893c7d2ad4009e258d749f2004ef94`. You can copy this preimage
 hash and save it for the next step. There is no need to click Submit Preimage at this point, though
