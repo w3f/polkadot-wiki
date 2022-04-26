@@ -76,7 +76,12 @@ The table below lists the most commonly encountered errors and ways to resolve t
 | Temporarily banned | The transaction is temporarily banned.                                                                       | The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.                                                                                                                                                                                                                                                                        |
 </br>
 
-\* *This error will not cause the TX to be discarded immediately. Instead it will be sent to the [futures queue](https://docs.substrate.io/v3/concepts/tx-pool/#sorting), where it will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to some other error (ex. the validity period expires).*
+:::note Future Error
+
+This error will not cause the TX to be discarded immediately. Instead, it will be sent to the [futures queue](https://docs.substrate.io/v3/concepts/tx-pool/#sorting), where it will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to some other error (ex. the validity period expires).*
+
+:::
+
 
 
 ## Error Table
