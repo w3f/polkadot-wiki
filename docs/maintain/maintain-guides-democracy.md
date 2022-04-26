@@ -74,7 +74,7 @@ a proposal will be returned to that account in any given timeframe.
 
 :::
 
-On Polkadot Apps you can navigate to Governance -> Democracy tab to make a new proposal. In order to submit a
+On Polkadot Apps you can navigate to the Governance -> Democracy tab to make a new proposal. In order to submit a
 proposal, you will need to submit what's called the preimage hash. The preimage hash is simply the
 hash of the proposal to be enacted. The easiest way to get the preimage hash is by clicking on the
 "Submit preimage" button and configuring the action that you are proposing.
