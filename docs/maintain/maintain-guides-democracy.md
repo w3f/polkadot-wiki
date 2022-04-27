@@ -62,7 +62,7 @@ vetoed.
 
 Proposing an action to be taken requires you to bond some tokens. In order to ensure you have enough
 tokens to make the minimum deposit, you can check the parameter in the chain state. Navigate to Developer > 
-Chain State > Constants > Selected constant query: democracy > minimumDeposit: u128 and then click on the plus button). 
+Chain State > Constants > selected constant query: democracy > minimumDeposit: u128 and then click on the plus button. 
 The bonded tokens will only be released once the proposal is tabled (that is, brought to a vote); there is no way for
 the user to "revoke" their proposal and get the bond back before it has become a referendum. Since
 it is essentially impossible to predict definitely when a proposal may become a referendum (if
