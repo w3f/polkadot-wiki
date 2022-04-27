@@ -69,12 +69,17 @@ https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-
 
 Both the Polkadot Wiki and the Kusama Guide are built from the source files in this repository.
 After cloning the source locally, you can start the websites with each of these respective commands
-(ensure you run `yarn` at the root of the repository first to install dependencies):
+(ensure you run `yarn` at the root of the repository first to install dependencies).
+
+Using yarn, run:
+
+```bash
+yarn install
+```
 
 > The site is built using Docusaurus: you may need to install Docusaurus before running
 > the Wiki locally. 
 
-Using yarn, run:
 
 ```bash
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
