@@ -61,8 +61,9 @@ vetoed.
 ## Proposing an Action
 
 Proposing an action to be taken requires you to bond some tokens. In order to ensure you have enough
-tokens to make the minimum deposit you can check the parameter in the chain state. The bonded tokens
-will only be released once the proposal is tabled (that is, brought to a vote); there is no way for
+tokens to make the minimum deposit, you can check the parameter in the chain state. Navigate to Developer > 
+Chain State > Constants > selected constant query: democracy > minimumDeposit: u128 and then click on the plus button. 
+The bonded tokens will only be released once the proposal is tabled (that is, brought to a vote); there is no way for
 the user to "revoke" their proposal and get the bond back before it has become a referendum. Since
 it is essentially impossible to predict definitely when a proposal may become a referendum (if
 ever), this means that any tokens bonded will be locked for an indeterminate amount of time.
@@ -89,7 +90,7 @@ you could. We'll go over that in the next section.
 
 Now you will click on the "Submit proposal" button and enter the preimage hash in the input titled
 "preimage hash" and _at least_ the minimum deposit into the "locked balance" field. Click on the
-blue "Submit proposal" button and confirm the transaction. You should now see your proposal appear
+"Submit proposal" button and confirm the transaction. You should now see your proposal appear
 in the "proposals" column on the page.
 
 ![submit proposal](../assets/democracy/submit_proposal.png)
