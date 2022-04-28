@@ -9,14 +9,16 @@
     "path": "query.staking.validatorCount"
   },
   {
-    "tpl": "dot_proxy_deposit_base",
-    "default": 0,
-    "computed": true
+    "tpl": "proxy_deposit_base",
+    "default": { "kusama": 0.6669, "polkadot": 20.008 },
+    "path": "consts.proxy.proxyDepositBase",
+    "filters": ["humanReadableToken"]
   },
   {
-    "tpl": "dot_proxy_deposit_factor",
-    "default": 0,
-    "computed": true
+    "tpl": "proxy_deposit_factor",
+    "default": { "kusama": 0.01099, "polkadot": 0.033 },
+    "path": "consts.proxy.proxyDepositFactor",
+    "filters": ["humanReadableToken"]
   },
   {
     "tpl": "proposal_min_bond",
