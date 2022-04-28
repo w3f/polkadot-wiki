@@ -10,13 +10,13 @@
   },
   {
     "tpl": "proxy_deposit_base",
-    "default": { "kusama": 0.6669, "polkadot": 20.008 },
+    "default": { "kusama": 0.066693, "polkadot": 20.008 },
     "path": "consts.proxy.proxyDepositBase",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "proxy_deposit_factor",
-    "default": { "kusama": 0.01099, "polkadot": 0.033 },
+    "default": { "kusama": 0.00011, "polkadot": 0.033 },
     "path": "consts.proxy.proxyDepositFactor",
     "filters": ["humanReadableToken"]
   },
