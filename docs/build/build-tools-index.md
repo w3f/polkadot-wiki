@@ -190,8 +190,8 @@ The following tools help you extract and structure data from a Substrate node.
 - [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive) - Can be run
   alongside a Substrate node to archive all blocks, state, and extrinsic data into PostgreSQL
   database.
-- [Hydra: GraphQL Builder](https://github.com/Joystream/joystream/tree/query_node/query-node) -
-  Generate a GraphQL database from a Substrate chain's data.
+- [Subsquid Archives](https://github.com/subsquid/squid-archive-setup) -
+  Generate a GraphQL database from a Substrate chain's data with rich filtering and querying capabilities. The data (events, extrinsics, blocks) for most parachains is readily available though public archive GraphQL endpoints, kept in [Squid Archive Registry](https://github.com/subsquid/archive-registry/blob/main/archives.json)
 - [Polka-store](https://github.com/TheGoldenEye/polka-store) - A tool which scans a Substrate chain
   and stores balance-relevant transactions in an SQLite database.
 - [Substrate-graph](https://github.com/playzero/substrate-graph) - A compact indexer for Substrate
