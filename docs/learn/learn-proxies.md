@@ -313,12 +313,11 @@ The `ProxyDepositBase` is the required amount to be reserved for an account to h
 (creates one new item in storage). For every proxy the account has, an additional amount defined by
 the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
-On Polkadot the `ProxyDepositBase` is {{ dot_proxy_deposit_base }} and the `ProxyDepositFactor` is
-{{ dot_proxy_deposit_factor }}.
+The `ProxyDepositBase` is {{ proxy_deposit_base }} and the 
+`ProxyDepositFactor` is {{ proxy_deposit_factor }}.
 
-So what this boils down to is that the required deposit amount for one proxy on Polkadot is equal to
-(in DOT):
+The required deposit amount for one proxy is equal to:
 
 ```
-{{ dot_proxy_deposit_base }} + {{ dot_proxy_deposit_factor }} * num_proxies
+{{ proxy_deposit_base }} + {{ proxy_deposit_factor }} * num_proxies
 ```
