@@ -1,7 +1,7 @@
 {
   "scripts": {
     "kusama:clean": "shx rm -rf node_modules/.cache; docusaurus clear kusama-guide",
-    "kusama:start": "yarn fetch; docusaurus start kusama-guide",
+    "kusama:start": "yarn fetch --isPolkadot=false; docusaurus start kusama-guide",
     "prekusama:build": "npm-run-all -ln kusama:clean -p \"fetch --isPolkadot=false\" mirror kusama:copy-assets --aggregate-output",
     "kusama:build": "cross-env BUILDING=true docusaurus build kusama-guide; node kusama-guide/postprocess",
     "kusama:inject": "node --experimental-json-modules scripts/inject.mjs --rootDir kusama-guide/build/kusama-guide-hosting",
