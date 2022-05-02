@@ -108,10 +108,12 @@ Alice gets upset, but she cannot move herself up, since Charlie has more DOT tha
 in front of Alice, since he has 11 DOT (> 10), but he still wouldn't get rewards.
 
 Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded automatically and Charlie's 
-stash crosses 20 DOT after rewards from several staking eras. As balance changes due to staking rewards or 
+stash crosses 20 DOT after rewards from several staking eras. As changes in bonded balance due to staking rewards or 
 slashing do not automatically re-bag the account, Charlie has to issue `bagsList.rebag` extrinsic to place his nominator
-node in the right bag. The re-bag button will appear on Polkadot JS Apps UI right beside the stash account in the bag.
+node in the right bag. The re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes in the bag
+needs to be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain. 
 
+![Rebag](../assets/staking/rebag.png)
 
 ### Staking Election Stages
 
