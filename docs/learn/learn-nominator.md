@@ -71,7 +71,7 @@ staking rewards is dynamic and may be much higher, which can be viewed on [Polka
 Bonding additional tokens or unbonding the staked tokens will automatically place the nominating account in the 
 appropriate bag. While the system tries its best to ensure nominators are always represented in the correct bag, 
 certain changes in bonded funds (e.g. a slash in the negative direction, or rewards in the positive direction) can 
-cause an account to be in the wrong bag, and for operational safety reasons the system will not automatically
+cause an account to be in the wrong bag, and for scalability reasons the system will not automatically
 self-adjust.
 
 :::caution `bagsList.putInFrontOf` and `bagsList.rebag` extrinsics
