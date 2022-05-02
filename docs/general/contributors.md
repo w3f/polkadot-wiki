@@ -50,16 +50,6 @@ Online Course (MOOC) on [Coursera](https://www.coursera.org/learn/computer-visio
 is excited to contribute to Web3 Foundation's vision by educating professionals and the general 
 public about the WEB3 Technology Stack.
 
-### Danny Salman
-
-- email: [danny@web3.foundation](mailto:danny@web3.foundation)
-- matrix: [@danny:web3.foundation](https://matrix.to/#/@danny:web3.foundation)
-- twitter: [@dannysalman_](https://twitter.com/dannysalman_)
-
-Danny is a Technical Educator at Web3 Foundation who has a keen interest in blockchain and trust-free 
-technologies. As a technical educator, Danny contributes to, documents, and supports the WEB3 vision. 
-He has a Bachelor of Engineering in Computer Engineering and a background in philosophy & politics.
-
 ### Emre Surmeli
 
 - email: [emre@web3.foundation](mailto:emre@web3.foundation)
@@ -93,6 +83,17 @@ Mechanical Engineering.
 ## Past Contributors
 
 The following contributors are no longer participating in an official capacity.
+
+### Danny Salman
+
+- email: [danny.f.salman@gmail.com](mailto:danny.f.salman@gmail.com)
+- matrix: [@dannysalman:matrix.org](https://matrix.to/#/@dannysalman:matrix.org)
+- telegram: [@dannysalman](https://t.me/dannysalman)
+- twitter: [@dannysalman_](https://twitter.com/dannysalman_)
+
+Danny was a Technical Educator at Web3 Foundation who has a keen interest in blockchain and trust-free 
+technologies. As a Technical Educator, Danny taught and documented Polkadot. He has a Bachelor of 
+Engineering in Computer Engineering and a background in philosophy & politics.
 
 ### Alex Chau
 
@@ -136,7 +137,7 @@ he likes to combine fitness and gaming and can be found in VR on Oculus and Stea
 He also runs a weekly newsletter covering all things Web3 at [DotLeap](https://dotleap.substack.com).
 
 You can now find Bruno hacking the metaverse by leading the way at [RMRK](https://rmrk.app/) to
-create a breakthrough NFT standard.
+create the next-generation NFT standard.
 
 ### Anson Lau
 
