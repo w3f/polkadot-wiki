@@ -44,7 +44,9 @@ video below
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to {{ polkadot_max_nominations }}
 candidates that it supports. In the next era, a certain number of validators having the most DOT
-backing get elected and become active.As a nominator, a minimum of 10 DOT is required to submit an intention to nominate. The Polkadot staking systemcan accept up to 50,000 nomination intents, but can reward only up to 22,500 nominators.
+backing get elected and become active. As a nominator, a minimum of 10 DOT is required to submit an intention to 
+nominate. The Polkadot staking system can accept up to 50,000 nomination intents, but can reward only up to 22,500 
+nominators.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
