@@ -74,6 +74,18 @@
     "filters": ["humanReadableToken"]
   },
   {
+    "tpl": "min_nominator_intention",
+    "default": 10,
+    "path": "query.staking.minNominatorBond",
+    "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "max_nominator_count",
+    "default": 50000,
+    "path": "query.staking.maxNominatorsCount",
+    "filters": ["humanReadableToken"]
+  },
+  {
     "tpl": "kusama_max_nominators",
     "default": "256"
   },

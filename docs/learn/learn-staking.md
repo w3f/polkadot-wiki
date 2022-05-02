@@ -44,8 +44,9 @@ video below
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to {{ polkadot_max_nominations }}
 candidates that it supports. In the next era, a certain number of validators having the most DOT
-backing get elected and become active. As a nominator, a minimum of 10 DOT is required to submit an intention to 
-nominate. The nomination intents are placed in a semi-sorted list called [bags-list](learn-nominator.md#bags-list).
+backing get elected and become active. As a nominator, a minimum of {{ min_nominator_intention }} DOT is 
+required to submit an intention to nominate. The nomination intents are placed in a semi-sorted list 
+called [bags-list](https://github.com/paritytech/substrate/pull/9507).
 The bags list has two primary components, bags and nodes. The list is composed of bags that each describe a range of
 active bonded funds (e.g. the 1st bag will have nominators with 0 → 10 DOT, 2nd bag 11 → 20 DOT, etc).
 In each bag is a list of nodes that correspond to a nominator and their staked funds. 
@@ -74,9 +75,9 @@ do not! The bags-list pallet comes with an important permissionless extrinsic: `
 This sorting functionality is extremely important for the 
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the staking/election 
 system. The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime storage.
-In the current staking system configuration, the bags list keeps 50,000 nomination intents, of which, 22,500 come out as 
-the electing nominators. Check [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more 
-info.
+In the current staking system configuration, the bags list keeps {{ max_nominator_count }} nomination intents, of which, 
+22,500 come out as the electing nominators. Check [Staking Election Stages](learn-nominator.md#staking-election-stages) 
+section for more info.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
