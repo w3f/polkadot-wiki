@@ -62,22 +62,24 @@ can be previewed on [Polkadot JS Apps > Network > Staking > Bags > All Bags](htt
 :::info Minimum DOT required to earn staking rewards
 
 Minimum DOT required to submit intent to nominate is 10 DOT, but the minimum active nomination required to earn
-staking rewards is dynamic and may be much higher and can be viewed on [Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
+staking rewards is dynamic and may be much higher, which can be viewed on [Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
 
 :::
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
 
 Bonding additional tokens or unbonding the staked tokens will automatically place the nominating account in the 
-appropriate bag. 
+appropriate bag. While the system tries its best to ensure nominators are always represented in the correct bag, 
+certain changes in bonded funds (e.g. a slash in the negative direction, or rewards in the positive direction) can 
+cause an account to be in the wrong bag, and for operational safety reasons the system will not automatically
+self-adjust.
 
 :::caution `bagsList.putInFrontOf` and `bagsList.rebag` extrinsics
 
-The nominator accounts in a bag are sorted based on their insertion order. `bagsList.putInFrontOf` extrinsic can be 
-issued to move up in the bag, which might be very useful for the accounts in the last bag eligible for receiving
-staking rewards. Also, balance changes due to staking rewards or slashing do not automatically re-bag the account.
-Whenever applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the instructions are 
-available in this [support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
+The nominator accounts in a bag are sorted based on their insertion order, not by their nomination stake. 
+`bagsList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very useful for the 
+accounts in the last bag eligible for receiving staking rewards. Also, balance changes due to staking rewards or 
+slashing do not automatically re-bag the account. Whenever applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the instructions are available in this [support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
 
 :::
 
