@@ -7,9 +7,10 @@ keywords: [nominate, how to nominate, nominator, stake]
 slug: ../maintain-guides-how-to-nominate-polkadot
 ---
 
-:::info 
+:::info
 
-The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
+The following information applies to the Polkadot network. If you want to nominate on Kusama, check
+out the [Kusama guide](./kusama/maintain-guides-how-to-nominate-kusama.md) instead.
 
 :::
 
@@ -70,8 +71,8 @@ estimate your earnings and this is where it's good to start picking favorites.
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough DOT backing them (as allocated through the
-[Phragmén election mechanism](../learn/learn-phragmen.md)). It is possible validator can remain in the queue
-for a very long time if they never get enough backing.
+[Phragmén election mechanism](../learn/learn-phragmen.md)). It is possible validator can remain in
+the queue for a very long time if they never get enough backing.
 
 The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
@@ -96,7 +97,7 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
 
-:::note 
+:::note
 
 These concepts have been further explained in Polkadot's
 [UI Walkthrough Video](https://youtu.be/FCXC0CDhyS4?t=219)
@@ -106,9 +107,9 @@ These concepts have been further explained in Polkadot's
 ### Step 2: Nominate a validator
 
 You are now bonded. Being bonded means your tokens are locked and could be
-[slashed](../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
-now be distributed to up to {{ polkadot_max_nominations }} validators. Be careful about the validators you choose since you will
-be slashed if your validator commits an offence.
+[slashed](../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded
+funds can now be distributed to up to {{ polkadot_max_nominations }} validators. Be careful about
+the validators you choose since you will be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select up to 16 validators. Although you may choose up to 16 validators, due to the
@@ -125,23 +126,25 @@ in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking)
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
-claim them. See the [Claiming Rewards](../learn/learn-staking.md#claiming-rewards) section of the Staking
-wiki page for more details.
+claim them. See the [Claiming Rewards](../learn/learn-staking.md#claiming-rewards) section of the
+Staking wiki page for more details.
 
 ### Step 3: Monitoring Bags list
 
-This step is highly relevant if the staked DOT is close to the dynamic minimum active nomination threshold
-on the network, which can be viewed on 
-[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets). For instance, 
-, the minimum active nomination receiving staking rewards is 124.575 DOT in the snapshot below. See the 
-[Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator wiki page for more details.
+This step is highly relevant if the staked DOT is close to the dynamic minimum active nomination
+threshold on the network, which can be viewed on
+[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
+For instance, , the minimum active nomination receiving staking rewards is 124.575 DOT in the
+snapshot below. See the [Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator
+wiki page for more details.
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
 
-The nominations within a bag are sorted based on the insertion order and not based on the stake.
-If your stake is close to this dynamic threshold, it is advised that you monitor your bag across the staking eras on 
-[Polkadot JS Apps > Network > Staking > Bags ](https://polkadot.js.org/apps/#/staking/bags). If any action is required,
-the respective buttons (Move up/rebag) will appear beside your stash account.
+The nominations within a bag are sorted based on the insertion order and not based on the stake. If
+your stake is close to this dynamic threshold, it is advised that you monitor your bag across the
+staking eras on
+[Polkadot JS Apps > Network > Staking > Bags ](https://polkadot.js.org/apps/#/staking/bags). If any
+action is required, the respective buttons (Move up/rebag) will appear beside your stash account.
 
 ![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
 
@@ -153,7 +156,8 @@ are available [here](maintain-guides-how-to-unbond.md).
 
 :::note Explainer videos on staking
 
-The following videos related to staking are also available for your reference: 
+The following videos related to staking are also available for your reference:
+
 - [Staking with a Ledger and PolkadotJS Apps](https://youtu.be/7VlTncHCGPc)
 - [Staking with a Ledger and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
@@ -190,8 +194,8 @@ staking model.
 
 :::note Decimal places
 
-DOT has ten decimal places and is always represented as an integer with zeroes at the
-end. So 1 DOT = 10_000_000_000 Plancks.
+DOT has ten decimal places and is always represented as an integer with zeroes at the end. So 1 DOT
+= 10_000_000_000 Plancks.
 
 :::
 
