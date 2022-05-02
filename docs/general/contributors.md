@@ -84,7 +84,6 @@ Mechanical Engineering.
 
 The following contributors are no longer participating in an official capacity.
 
-
 ### Danny Salman
 
 - email: [danny.f.salman@gmail.com](mailto:danny.f.salman@gmail)
@@ -95,7 +94,6 @@ The following contributors are no longer participating in an official capacity.
 Danny was a Technical Educator at Web3 Foundation who has a keen interest in blockchain and trust-free 
 technologies. As a Technical Educator, Danny taught and documented Polkadot. He has a Bachelor of 
 Engineering in Computer Engineering and a background in philosophy & politics.
-
 
 ### Alex Chau
 
