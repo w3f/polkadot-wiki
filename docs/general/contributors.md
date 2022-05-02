@@ -137,7 +137,7 @@ he likes to combine fitness and gaming and can be found in VR on Oculus and Stea
 He also runs a weekly newsletter covering all things Web3 at [DotLeap](https://dotleap.substack.com).
 
 You can now find Bruno hacking the metaverse by leading the way at [RMRK](https://rmrk.app/) to
-create a next-generation NFT standard.
+create the next-generation NFT standard.
 
 ### Anson Lau
 
