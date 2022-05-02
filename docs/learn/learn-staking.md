@@ -39,24 +39,33 @@ video below
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
-### 2. Nomination period
+### 2. Staking System Overview
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
-are made public to all nominators, and a nominator in turn submits a list of any number of
+are made public to all nominators, and a nominator in turn submits a list of up to {{ polkadot_max_nominations }}
 candidates that it supports. In the next era, a certain number of validators having the most DOT
-backing get elected and become active.
+backing get elected and become active.As a nominator, a minimum of 10 DOT is required to submit an intention to nominate. The Polkadot staking systemcan accept up to 50,000 nomination intents, but can reward only up to 22,500 nominators.
 
-There are no particular requirements to become a nominator, though we expect each nominator to
-carefully track the performance and reputation of the validators they back. Nominating is *not* a
-"set and forget" operation.
+:::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Once the nomination period ends, the NPoS election mechanism takes the nominators and their
+Submitting a nomination intent does not guarantee staking rewards. The nomination intents are placed in a semi-sorted
+list called [bags-list](https://github.com/paritytech/substrate/pull/9507) and only the stake of the top 22,500 
+nominators is applied to the validators in the active set. To avail staking rewards, ensure that the number of tokens
+bonded is higher than the minimum active nomination. For more information, check the [nominator guide](learn-nominator.md)
+
+:::
+
+Once the nomination period ends, the NPoS election mechanism takes the nomination intents and their
 associated votes as input, and outputs a set of validators. This "election solution" has to meet
 certain requirements, such as maximizing the amount of stake to nominate validators and distributing
 the stake backing validators as evenly as possible. The objectives of this election mechanism are to
 maximize the security of the network, and achieve fair representation of the nominators. If you want
 to know more about how NPoS works (e.g. election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
+
+We expect each nominator to carefully track the performance and reputation of the validators they back. 
+Nominating is *not* a "set and forget" operation.
+
 
 ### 3. Staking Rewards Distribution
 
