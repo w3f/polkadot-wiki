@@ -45,20 +45,58 @@ Any potential validators can indicate their intention to be a validator candidat
 are made public to all nominators, and a nominator in turn submits a list of up to {{ polkadot_max_nominations }}
 candidates that it supports. In the next era, a certain number of validators having the most DOT
 backing get elected and become active. As a nominator, a minimum of 10 DOT is required to submit an intention to 
-nominate. The Polkadot staking system can accept up to 50,000 nomination intents, but can reward only up to 22,500 
-nominators.
+nominate. The nomination intents are placed in a semi-sorted list called [bags-list](learn-nominator.md#bags-list).
+The bags list has two primary components, bags and nodes. The list is composed of bags that each describe a range of
+active bonded funds (e.g. the 1st bag will have nominators with 0 → 10 DOT, 2nd bag 11 → 20 DOT, etc).
+In each bag is a list of nodes that correspond to a nominator and their staked funds. 
+
+The bags-list pallet is designed to be self-maintaining, with minimal effort from the blockchain, making it extremely 
+scalable. Let us explore the sorting functionality of the bags list with an example. In the bags list below, there are 8 
+nodes placed in 3 bags. It can be observed that the list of nodes within the bags are arranged based on their insertion order and not based on the number of tokens bonded. For instance, the nodes in bag 1 are arranged in this order: 15 →
+12 → 19
+
+![bags list example 1](../assets/staking/bags-list-example-1.png)
+
+Let's say the nominator with the stake of 19 DOT bonds 2 DOT additionally. This action would place that 
+nominator node in bag 2, right after the node with 27 DOT.
+
+:::info 
+
+Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like staking rewards/slashing 
+do not! The bags-list pallet comes with an important permissionless extrinsic: `rebag`. This allows anyone to specify another account that is in the wrong bag, and place it in the correct one. Check the [bags-list](learn-nominator.md#bags-list) section for more information.
+
+:::
+
+![bags list example 2](../assets/staking/bags-list-example-2.png)
+
+
+
+This sorting functionality is extremely important for the 
+[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the staking/election 
+system. The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime storage.
+In the current staking system configuration, the bags list keeps 50,000 nomination intents, of which, 22,500 come out as 
+the electing nominators. Check [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more 
+info.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Submitting a nomination intent does not guarantee staking rewards. The nomination intents are placed in a semi-sorted
-list called [bags-list](https://github.com/paritytech/substrate/pull/9507) and only the stake of the top 22,500 
+Submitting a nomination intent does not guarantee staking rewards. The stake of the top 22,500 
 nominators is applied to the validators in the active set. To avail staking rewards, ensure that the number of tokens
 bonded is higher than the minimum active nomination. For more information, check the [nominator guide](learn-nominator.md)
 
 :::
 
 Once the nomination period ends, the NPoS election mechanism takes the nomination intents and their
-associated votes as input, and outputs a set of validators. This "election solution" has to meet
+associated votes as input, and outputs a set of validators. The bags are iterated from the most staked to the least 
+staked. This could leave the last touched bag to only be partially iterated. This means that in some edge cases, the 
+order of members within a bag is also important. Recall that within each bag, the iteration order is simply the 
+insertion order. If only 7 nodes have to be picked for the electing set, the nodes with 5 and 7 DOT will be selected and 
+will the node with 8 DOT will be left out. The bags-list pallet comes with an extrinsic: `putInFrontOf` which helps the 
+node to move up in the bag. Check the [bags-list](learn-nominator.md#bags-list) section for more information.
+
+![bags list example 3](../assets/staking/bags-list-example-3.png)
+
+The "election solution" has to meet
 certain requirements, such as maximizing the amount of stake to nominate validators and distributing
 the stake backing validators as evenly as possible. The objectives of this election mechanism are to
 maximize the security of the network, and achieve fair representation of the nominators. If you want

@@ -93,9 +93,9 @@ Bag2: Max 1000, Min 20 - Eve, Dave
 
 Bag3: Max 20, Min 10 - Alice, Bob, Charlie
 
-On a per-bag basis, rewards are given based on _insertion_ order, not _amount at stake_. So if only five nominating 
-accounts can get rewards, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 DOT, she is first
-in line in Bag3.
+The bags are iterated based on _insertion_ order, not _amount at stake_. So if only five nominating 
+accounts are picked for the electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 
+DOT, she is first in line in Bag3.
 
 Charlie can put himself in front (move up in the bag) using the , since he has 15 DOT (more than Alice does at 10).
 Now if nothing changes for the next era, Frank, Georgina, Eve, Dave, and Charlie will get rewards. Bag3 now has: 
@@ -106,6 +106,11 @@ the Move up button.
 
 Alice gets upset, but she cannot move herself up, since Charlie has more DOT than her. Bob _could_ move himself 
 in front of Alice, since he has 11 DOT (> 10), but he still wouldn't get rewards.
+
+Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded automatically and Charlie's 
+stash crosses 20 DOT after rewards from several staking eras. As balance changes due to staking rewards or 
+slashing do not automatically re-bag the account, Charlie has to issue `bagsList.rebag` extrinsic to place his nominator
+node in the right bag. The re-bag button will appear on Polkadot JS Apps UI right beside the stash account in the bag.
 
 
 ### Staking Election Stages
