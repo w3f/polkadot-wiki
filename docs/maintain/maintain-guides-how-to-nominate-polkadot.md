@@ -128,7 +128,24 @@ rewards allocated to you. In order to claim them (i.e., add them to your account
 claim them. See the [Claiming Rewards](../learn/learn-staking.md#claiming-rewards) section of the Staking
 wiki page for more details.
 
-### Step 3: Stop nominating
+### Step 3: Monitoring Bags list
+
+This step is highly relevant if the staked DOT is close to the dynamic minimum active nomination threshold
+on the network, which can be viewed on 
+[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets). For instance, 
+, the minimum active nomination receiving staking rewards is 124.575 DOT in the snapshot below. See the 
+[Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator wiki page for more details.
+
+![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
+
+The nominations within a bag are sorted based on the insertion order and not based on the stake.
+If your stake is close to this dynamic threshold, it is advised that you monitor your bag across the staking eras on 
+[Polkadot JS Apps > Network > Staking > Bags ](https://polkadot.js.org/apps/#/staking/bags). If any action is required,
+the respective buttons (Move up/rebag) will appear beside your stash account.
+
+![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
+
+### Step 4: Stop nominating
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
