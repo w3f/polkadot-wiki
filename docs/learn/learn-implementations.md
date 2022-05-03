@@ -15,7 +15,7 @@ piece of software, and its formal implementation depends on being built on top o
 
 > This page will focus on implementations of **Polkadot's underlying infrastructure** (i.e. runtime, host).
 
-## A Wasm-Bassd Meta-Protocol
+## A Wasm-Based Meta-Protocol
 
 Polkadot uses WebAssembly ([Wasm](learn-wasm.md)) as a "meta-protocol". This allows for the use of 
 any programming language that can be interpreted or compiled into Wasm - being the driver for 
