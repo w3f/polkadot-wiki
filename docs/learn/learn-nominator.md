@@ -54,9 +54,9 @@ occur often, so you should almost always see only a single active nomination per
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system. Bags-list allows up to 50,000 nominators to set their _intention_ to
-nominate, of which, the stake of the top 22,500 nominators is considered for elections that
-eventually determine the active validators. The bags-list can be previewed on
+staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set their _intention_ to
+nominate, of which, the stake of the top {{ max_active_nominator_count }} nominators is considered for 
+[electing set](#staking-election-stages) that eventually determines the active validators. The bags-list can be previewed on
 [Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
 
 ![Bags list](../assets/staking/bags-list.png)
@@ -100,7 +100,8 @@ Bag2: Max 1000, Min 20 - Eve, Dave
 
 Bag3: Max 20, Min 10 - Alice, Bob, Charlie
 
-The bags are iterated based on _insertion_ order, not _amount at stake_. So if only five nominating
+The bags are iterated based stake in decreasing order and within a bag, they are iterated on _insertion_ order, 
+not _amount at stake_. So if only five nominating
 accounts are picked for the electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though
 Alice has only 10 DOT, she is first in line in Bag3.
 
