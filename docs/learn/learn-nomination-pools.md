@@ -12,7 +12,7 @@ slug: ../learn-nomination-pools
 [Staking improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) on
 Polkadot. They are designed to permissionlessly allow users (delegators) to pool their funds
 together and act as a single nominator account. Due to the current runtime constraints, Polkadot can
-only handle 22,500 nominators comfortably in the
+only handle {{ max_active_nominator_count }} nominators comfortably in the
 [electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
 [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
 inferred that the staking system on Polkadot favors nominators with a larger stake. Only the
@@ -57,13 +57,13 @@ the era after they joined). Rewards are split pro rata among the actively bonded
 ### Unbond funds
 
 At any point in time after joining the pool, a delegator can start the process of exiting by
-unbonding. unbond_other will unbond all of the delegators funds. Once this call is made, the
+unbonding. `unbond_other` will unbond all of the delegators funds. Once this call is made, the
 delegator will no longer be eligible to claim rewards.
 
 ### Withdraw unbonded funds
 
-After unbond_other has been called and the unbonding duration has passed (e.g. 28 days on Polkadot),
-a delegator may withdraw their funds with withdraw_unbonded_other. Withdrawing effectively ends a
+After `unbond_other` has been called and the unbonding duration has passed (e.g. 28 days on Polkadot),
+a delegator may withdraw their funds with `withdraw_unbonded_other`. Withdrawing effectively ends a
 delegator’s relationship with their pool, allowing them to join a different pool if desired.
 
 ### Limitations
@@ -108,7 +108,7 @@ the nominate extrinsic.
 ### Upkeep
 
 The nominator can update the pool’s validator selection. The state-toggler can update the pool’s
-state to blocked, then kick delegators by calling unbond_other and withdraw_unbonded_other. (The
+state to blocked, then kick delegators by calling `unbond_other` and `withdraw_unbonded_other`. (The
 state can also be toggled back to open). The root can change itself, the state-toggler or the
 nominator at any time.
 
@@ -119,7 +119,7 @@ A pool can be pushed into the “destroying” state via one of:
 - The state-toggler sets the pool to “destroying”.
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
   been slashed. Dismantling a destroying pool:
-- When a pool is in ‘destroying’ state, unbond_other and withdraw_unbonded_other become
+- When a pool is in ‘destroying’ state, `unbond_other` and `withdraw_unbonded_other` become
   permissionless, so anyone can help all the delegators exit.
 - Once the depositor withdraws, no delegators belong to the pool, and all the pool’s resources are
   wiped from state.
