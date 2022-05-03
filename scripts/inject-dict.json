@@ -85,6 +85,11 @@
     "path": "query.staking.maxNominatorsCount"
   },
   {
+    "tpl": "max_active_nominator_count",
+    "default": 22500,
+    "path": "consts.electionProviderMultiPhase.maxElectingVoters"
+  },
+  {
     "tpl": "kusama_max_nominators",
     "default": "256"
   },
