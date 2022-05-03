@@ -1,10 +1,10 @@
 ---
-id: maintain-guides-hrmp
+id: build-hrmp-channels
 title: Opening HRMP Channels
 sidebar_label: Opening HRMP Channels
 description: Steps on how to open HRMP channels between parachains.
 keywords: [HRMP, parachain, Statemint, proposal]
-slug: ../maintain-guides-hrmp
+slug: ../build-hrmp-channels
 ---
 
 [HRMP](../learn/learn-cross-consensus.md#xcmp-lite-hrmp) has the same interface and functionality as
