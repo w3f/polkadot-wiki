@@ -2,7 +2,7 @@
 id: learn-nomination-pools
 title: Nomination Pools
 sidebar_label: Nomination Pools
-description: Nomination Pools
+description: Learn about Nomination Pools and their features
 keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
