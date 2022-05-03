@@ -31,8 +31,7 @@ the Relay Chain.
 ## Opening HRMP channel to Statemint
 
 In order to provide complete contextual information and transparency to the community, which is the
-ultimate decision maker of the proposals, we would like to follow the same process the community
-implemented on Kusama.
+ultimate decision maker of the proposals, we encourage following the process implemented on Kusama.
 
 In general, a governance proposal process includes 4 steps:
 
@@ -62,10 +61,10 @@ review and ultimately vote:
 1.  A request on what the proposal aims to do (opening an HRMP channel with Statemint);
 2.  The use cases this channel will support for your chain;
 3.  Technical details of the proposal, including proposal parameters and technical details of this
-    call: on Kusama, most proposals were designed as a batchAll call containing:
+    call (On Kusama, most proposals were designed as a batchAll calls) :
 
-        - A force transfer from Kusama treasury to Statemine as deposit to accept and open an HRMP channel with your chain;
-        - Send XCM message to Statemine to execute a transaction with superuser (root) permission.
+        - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP channel with your chain;
+        - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
 
         Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT, the first transaction should not be necessary (these guidelines will be updated accordingly).
 
@@ -75,8 +74,7 @@ review and ultimately vote:
     tab;
 6.  The proposal hash for the external motion submission.
 
-Below you will find some examples of how teams have followed this process on Kusama, as a way to
-guide your through this:
+Below is an example of how teams followed this process on Kusama, as a way to:
 
 - Proposal to open HRMP channel between Bifrost and Statemine: the motion can be found
   [here](https://kusama.polkassembly.io/motion/418).
