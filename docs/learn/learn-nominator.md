@@ -54,7 +54,7 @@ occur often, so you should almost always see only a single active nomination per
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set their _intention_ to
+staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set their intention to
 nominate, of which, the stake of the top {{ max_active_nominator_count }} nominators is considered for 
 [electing set](#staking-election-stages) that eventually determines the active validators. The bags-list can be previewed on
 [Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
