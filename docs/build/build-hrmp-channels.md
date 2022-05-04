@@ -63,10 +63,10 @@ review and ultimately vote:
 3.  Technical details of the proposal, including proposal parameters and technical details of this
     call (On Kusama, most proposals were designed as a batchAll calls) :
 
-        - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP channel with your chain;
-        - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
+     - A force transfer from Polkadot treasury to Statemint as deposit to accept and open an HRMP channel with your chain;
+     - Send XCM message to Statemint to execute a transaction with superuser (root) permission.
 
-        Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT, the first transaction should not be necessary (these guidelines will be updated accordingly).
+    Please note that if governance decides to reduce the HRMP channel deposit on Polkadot to 0 DOT, the first transaction should not be necessary (these guidelines will be updated accordingly).
 
 4.  The XCM message to Statemint, which can be decoded on the network;
 5.  The call data to verify on
