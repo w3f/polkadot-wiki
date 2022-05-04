@@ -49,18 +49,92 @@ nomination. However, the election algorithm attempts to minimize this situation,
 occur often, so you should almost always see only a single active nomination per era. See the
 [section on Phragmén optimization](learn-phragmen.md#optimizations) for more details.
 
+### Bags-list
+
+Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
+extremely important for the
+[long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
+staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set their _intention_ to
+nominate, of which, the stake of the top {{ max_active_nominator_count }} nominators is considered for 
+[electing set](#staking-election-stages) that eventually determines the active validators. The bags-list can be previewed on
+[Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
+
+![Bags list](../assets/staking/bags-list.png)
+
+:::info Minimum DOT required to earn staking rewards
+
+Minimum DOT required to submit intent to nominate is 10 DOT, but the minimum active nomination
+required to earn staking rewards is dynamic and may be much higher, which can be viewed on
+[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
+
+:::
+
+![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
+
+Bonding additional tokens or unbonding the staked tokens will automatically place the nominating
+account in the appropriate bag. While the system tries its best to ensure nominators are always
+represented in the correct bag, certain changes in bonded funds (e.g. a slash in the negative
+direction, or rewards in the positive direction) can cause an account to be in the wrong bag, and
+for scalability reasons the system will not automatically self-adjust.
+
+:::caution `bagsList.putInFrontOf` and `bagsList.rebag` extrinsics
+
+The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
+stake. `bagsList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be very
+useful for the accounts in the last bag eligible for receiving staking rewards. Also, balance
+changes due to staking rewards or slashing do not automatically re-bag the account. Whenever
+applicable, Polkadot JS Apps UI prompts the nominator account to rebag or move-up and the
+instructions are available in this
+[support article](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
+
+:::
+
+To demonstrate how bags-list works, let's imagine a simple bag system with 7 accounts and 3 bags:
+
+Alice: 10 DOT, Bob: 11 DOT, Charlie: 15 DOT, Dave: 20 DOT, Eve: 100 DOT, Frank 1000 DOT, Georgina:
+2000 DOT
+
+Bag1: Max 2000, Min 1000 - Frank, Georgina
+
+Bag2: Max 1000, Min 20 - Eve, Dave
+
+Bag3: Max 20, Min 10 - Alice, Bob, Charlie
+
+The bags are iterated based stake in decreasing order and within a bag, they are iterated on _insertion_ order, 
+not _amount at stake_. So if only five nominating
+accounts are picked for the electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though
+Alice has only 10 DOT, she is first in line in Bag3.
+
+Charlie can put himself in front (move up in the bag) using the , since he has 15 DOT (more than
+Alice does at 10). Now if nothing changes for the next era, Frank, Georgina, Eve, Dave, and Charlie
+will get rewards. Bag3 now has: Charlie, Alice, Bob. The `bagsList.putInFrontOf` extrinsic can be
+issued through Polkadot JS Apps UI by clicking on the Move up button.
+
+![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
+
+Alice gets upset, but she cannot move herself up, since Charlie has more DOT than her. Bob _could_
+move himself in front of Alice, since he has 11 DOT (> 10), but he still wouldn't get rewards.
+
+Let us consider a hypothetical scenario where Charlie set the staking rewards to be bonded
+automatically and Charlie's stash crosses 20 DOT after rewards from several staking eras. As changes
+in bonded balance due to staking rewards or slashing do not automatically re-bag the account,
+Charlie has to issue `bagsList.rebag` extrinsic to place his nominator node in the right bag. The
+re-bag button will appear on Polkadot JS Apps UI if any of the nominator nodes in the bag needs to
+be re-bagged. This permissionless extrinsic can be signed and submitted by anyone on chain.
+
+![Rebag](../assets/staking/rebag.png)
+
 ### Staking Election Stages
 
-The staking election system has 3 stages for both validators and nominators, namely "intention", 
 "electable/electing", and "active".
 
-- **intention to nominate:** an account that has stated the intention to nominate; also called simply 
-a "nominator".
-- **electing nominator:** a nominator who is selected to be a part of the input to the [NPoS election 
-algorithm](learn-phragmen.md). This selection is based on stake, and is done using the 
-[bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
-- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active validator, 
-sharing their rewards (if among the top 256 backers) and slashes.
+- **intention to nominate:** an account that has stated the intention to nominate; also called
+  simply a "nominator".
+- **electing nominator:** a nominator who is selected to be a part of the input to the
+  [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
+  the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
+- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
+  validator, sharing their rewards (if among the top 256 backers) and slashes.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
@@ -119,8 +193,14 @@ and you are nominating with enough stake to get into the solution set, your bond
 fully distributed to one or more validators. That being said, you may not receive rewards if you
 nominated very few validator candidates and no one got elected, or your stake is small and you only
 selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
-generally wise to choose as many trustworthy validators as you can (up to 16) to reduce the risk of
-none of your nominated validators being elected.
+generally wise to choose as many trustworthy validators as you can (up to {{ polkadot_max_nominations }}) 
+to reduce the risk of none of your nominated validators being elected.
+
+:::info Not receiving Staking Rewards?
+
+To explore the possible reasons for not receiving staking rewards, check out the [Staking FAQ](learn-staking-faq#3-why-am-i-not-receiving-staking-rewards)
+
+:::
 
 Rewards are *lazy* - somebody must trigger a payout for a validator for rewards to go all of the
 validator's nominators. Any account can do this, although in practice validator operators often do

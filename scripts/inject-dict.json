@@ -74,6 +74,22 @@
     "filters": ["humanReadableToken"]
   },
   {
+    "tpl": "min_nominator_intention",
+    "default": 10,
+    "path": "query.staking.minNominatorBond",
+    "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "max_nominator_count",
+    "default": 50000,
+    "path": "query.staking.maxNominatorsCount"
+  },
+  {
+    "tpl": "max_active_nominator_count",
+    "default": 22500,
+    "path": "consts.electionProviderMultiPhase.maxElectingVoters"
+  },
+  {
     "tpl": "kusama_max_nominators",
     "default": "256"
   },
