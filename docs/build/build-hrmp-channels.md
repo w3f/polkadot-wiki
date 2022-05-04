@@ -41,7 +41,7 @@ In general, a governance proposal process includes 4 steps:
 3. Submission of the proposal as an external motion to Council;
 4. Vote by the community in Democracy module.
 
-:::info
+:::caution
 
 Please note your parachain must make a channel request with Statemint before this proposal enacts,
 in order for the proposal to be enacted successfully.
@@ -93,7 +93,7 @@ the same as in the post.
 
 ## Submission of the proposal as an external motion to Council
 
-A Council member will need to assist you in order to be able to submit an external motion: they will
+A [Council member](../maintain/maintain-guides-how-to-join-council.md) will need to assist you in order to be able to submit an external motion: they will
 use the proposal hash for your preimage and submit it to Council vote. The same contextual
 information you used in the discussion post will be used for the motion post on Polkassembly.
 
