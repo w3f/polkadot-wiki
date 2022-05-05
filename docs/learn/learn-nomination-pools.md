@@ -23,13 +23,16 @@ will be handy to the members who would like to participate in the staking system
 stake much lower than the dynamic min-active nomination threshold on the network. All operations are
 constant space and time complexity relative to the number of members, eliminating any theoretical
 upper bound on the quantity of members the system can handle and thus scaling the number of
-accounts that can participate and earn rewards in the staking system on Polkadot.
+accounts that can participate and earn rewards in the staking system on Polkadot. In summary, each
+nomination pool is viewed as a single nominator from the NPoS system point of view.
+
+![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
 :::info Why aren't the members in the nomination pools called delegators?
 
 The term `delegator` is associated too much with Delegated Proof of Staking (DPoS) and since Polkadot 
 implements Nominated Proof of Staking (NPoS), naming them as delegators would be misleading. 
-`member` is our generic replacement for delegator. In action, members are actually quite similar to 
+`member` is our generic replacement for `delegator`. In action, members are actually quite similar to 
 delegators and do delegate their nomination power to the pool.
 
 :::
