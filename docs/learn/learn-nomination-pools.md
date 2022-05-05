@@ -119,11 +119,12 @@ member's relationship with their pool, allowing them to join a different pool if
 
 ### Creation
 
-The depositor calls the create extrinsic, setting the administrative roles and transferring some
+The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
 funds to the pool in order to add themselves as the first member. As stated above, the depositor
 must always be a member as long as the pool exists; they will be the last member to leave,
-ensuring they always have some skin in the game. The pool’s ‘nominator role’ selects validators with
-the nominate extrinsic.
+ensuring they always have some skin in the game. Significant stake from the depositor is always a 
+good indicator for the pool's credibility. The pool’s ‘nominator role’ selects validators with the 
+nominate extrinsic.
 
 ### Upkeep
 
