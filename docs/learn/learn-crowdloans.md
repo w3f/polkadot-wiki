@@ -78,13 +78,15 @@ must be transferable &mdash; that is, not locked for any reason, including staki
 governance &mdash; because they will be moved into a module-controlled account that was generated
 uniquely for this campaign.
 
+
 :::caution Do not send Crowdloan contributions directly to the Parachain address
 
 All crowdloan contributions are handled by the Crowdloan module’s logic where a
 campaign is identified by an index, not by address. **Never transfer tokens to an address in 
-support of a campaign.
+support of a campaign. 
 
 :::
+
 
 It is up to individual parachain teams to decide if and how they want to reward participants who
 forgo staking and choose to lock their tokens in support of the parachain’s campaign. As one can
@@ -101,9 +103,23 @@ Participants will be able to reclaim their tokens in one of two ways:
 - If the campaign was unsuccessful, then this retirement phase will begin at the campaign's
   configured end, and participants can likewise withdraw their tokens.
 
+:::tip `crowdloan.contribute` extrinsic is trustless
+
+Contributing to a crowdloan through Polkadot JS Apps (which uses `crowdloan.contribute` extrinsic)
+guarantees that you receive your tokens after the campaign ends. If you intend to make contributions
+through other websites and custodial service providers like central exchanges, review their terms and 
+conditions thoroughly and assess the risks associated. 
+
+:::
+
 Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without
 winning a slot, anyone can trigger the refund of crowdloan contributions back to their original
-owners. All contributions must be returned before the crowdloan is entirely deleted from the system.
+owners. This can be done through the permissionless `crowdloan.refund` extrinsic available on Polkadot 
+JS Apps > Developer > Extrinsics page, by specifying the parachain ID. This extrinsic may need to be 
+issued multiple times, if the list of contributors is too long. All contributions must be returned before 
+the crowdloan is entirely deleted from the system.
+
+![Crowdloan refund](../assets/crowdloan-refund.png)
 
 Many projects will have dashboards available that allow users to participate in their crowdloans.
 PolkadotJS apps also offers a breakdown of ongoing crowdloans on the
