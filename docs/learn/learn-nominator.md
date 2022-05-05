@@ -134,7 +134,8 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
   the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator, sharing their rewards (if among the top 256 backers) and slashes.
+  validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when 
+  slashing occurs, all the active nominators backing the validator get slashed.
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
