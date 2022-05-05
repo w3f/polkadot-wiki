@@ -1621,23 +1621,12 @@
     url-loader "^4.1.1"
     webpack "^5.72.0"
 
-"@docusaurus/module-type-aliases@2.0.0-beta.19":
+"@docusaurus/module-type-aliases@2.0.0-beta.19", "@docusaurus/module-type-aliases@^2.0.0-beta.19":
   version "2.0.0-beta.19"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.19.tgz#60c2eea0c3cac58e83ced6f696ff4e395de8d627"
   integrity sha512-VlumB8un3zNZxe7sanAoCnM+WefDsfX/QlSP/uD6w9pdfJDAO7e2/YJRwP0UWmGJ659xd+MGopGyLzA4ga+HaA==
   dependencies:
     "@docusaurus/types" "2.0.0-beta.19"
-    "@types/react" "*"
-    "@types/react-router-config" "*"
-    "@types/react-router-dom" "*"
-    react-helmet-async "*"
-
-"@docusaurus/module-type-aliases@^2.0.0-beta.17":
-  version "2.0.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.18.tgz#001379229c58cbc3ed565e19437cbda86d5e8742"
-  integrity sha512-e6mples8FZRyT7QyqidGS6BgkROjM+gljJsdOqoctbtBp+SZ5YDjwRHOmoY7eqEfsQNOaFZvT2hK38ui87hCRA==
-  dependencies:
-    "@docusaurus/types" "2.0.0-beta.18"
     "@types/react" "*"
     "@types/react-router-config" "*"
     "@types/react-router-dom" "*"
@@ -1851,17 +1840,6 @@
   dependencies:
     fs-extra "^10.1.0"
     tslib "^2.4.0"
-
-"@docusaurus/types@2.0.0-beta.18":
-  version "2.0.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.0.0-beta.18.tgz#9446928a6b751eefde390420b39eac32ba26abb2"
-  integrity sha512-zkuSmPQYP3+z4IjGHlW0nGzSSpY7Sit0Nciu/66zSb5m07TK72t6T1MlpCAn/XijcB9Cq6nenC3kJh66nGsKYg==
-  dependencies:
-    commander "^5.1.0"
-    joi "^17.6.0"
-    utility-types "^3.10.0"
-    webpack "^5.70.0"
-    webpack-merge "^5.8.0"
 
 "@docusaurus/types@2.0.0-beta.19":
   version "2.0.0-beta.19"
