@@ -91,7 +91,7 @@ member's relationship with their pool, allowing them to join a different pool if
 - A member cannot vote with their nominated funds. This can be changed in the future once
   accounts are afforded the ability to split votes.
 - In order for a member to switch pools they must wait for the normal 28 day unbonding process.
-- A member cannot partially unbond funds. This functionality may be added in the future.
+- A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
 ## Pool Administration
 
