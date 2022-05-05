@@ -7,6 +7,12 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
+:::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools). Soon they will be deployed on Kusama and then on Polkadot.
+
+Get some [Westies (WND)](learn-DOT.md#getting-westies) and start experimenting with Nomination pools!
+
+:::
+
 [Nomination pools](https://github.com/paritytech/substrate/pull/10694) are one of the key
 (expertimental) features from the roadmap of
 [Staking improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) on
@@ -68,6 +74,13 @@ The funds nominated to a pool will not be visible in the member's account balanc
 
 :::
 
+Navigate to Network > Staking > Pools page on Polkadot JS Apps UI and choose the pool to join. Click on the 
+Join button and then sign and submit the transaction specifying the amount you would like to nominate.
+
+![Join Pool](../assets/staking/Nomination-Pools-3.png)
+
+![Join Pool](../assets/staking/Nomination-Pools-4.png)
+
 ### Claim rewards
 
 The member can claim their portion of any rewards that have accumulated since the previous time
@@ -124,7 +137,15 @@ funds to the pool in order to add themselves as the first member. As stated abov
 must always be a member as long as the pool exists; they will be the last member to leave,
 ensuring they always have some skin in the game. Significant stake from the depositor is always a 
 good indicator for the pool's credibility. The pool’s ‘nominator role’ selects validators with the 
-nominate extrinsic.
+nominate extrinsic. On Polkadot JS Apps UI, navigate to Network > Staking > Pools and click on Add
+Pool button.
+
+![Create Nomination Pools](../assets/staking/Nomination-Pools-1.png)
+
+The UI automatically assigns ID to the pool and allows for entering the name of the pools as well as 
+the deposit to be bonded.
+
+![Create Nomination Pools - deposit](../assets/staking/Nomination-Pools-2.png)
 
 ### Upkeep
 
