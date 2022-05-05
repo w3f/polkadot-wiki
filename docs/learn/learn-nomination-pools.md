@@ -62,6 +62,12 @@ A member nominates funds to a pool by transferring some amount to the pool’s b
 ability to bond additional funds, or re-stake rewards as long as they are already actively bonded. Note that
 a member may only belong to one pool at a time.
 
+:::info
+
+The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS Apps UI.
+
+:::
+
 ### Claim rewards
 
 The member can claim their portion of any rewards that have accumulated since the previous time
