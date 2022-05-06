@@ -150,6 +150,7 @@ When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the 
 by default. If any of these roles need to be assigned to a different account, create the pool using
 `create` extrinsic available on Developer > Extrinsics > nominationPools on Polkadot JS Apps UI.
 
+  ![Nomination Pool Roles](../assets/staking/Nomination-Pools-7.png)
 
 ### Upkeep
 
