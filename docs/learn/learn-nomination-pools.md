@@ -17,7 +17,7 @@ Soon they will be deployed on Kusama and then on Polkadot.
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
 [Nomination pools](https://github.com/paritytech/substrate/pull/10694) are one of the key
-(expertimental) features from the roadmap of
+(experimental) features from the roadmap of
 [Staking improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) on
 Polkadot. They are designed to permissionlessly allow members to pool their funds
 together and act as a single nominator account. Due to the current runtime constraints, Polkadot can
@@ -25,7 +25,7 @@ only handle {{ max_active_nominator_count }} nominators comfortably in the
 [electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
 [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
 inferred that the staking system on Polkadot favors nominators with a larger stake. Only the
-nomiator accounts which back the Validators in the active set are eligible for receiving staking
+nominator accounts which back the Validators in the active set are eligible for receiving staking
 rewards. This leaves out nomination intents from the accounts with lower DOT balance than the
 min-active nomination and places them in a waiting queue to enter electing set. Nomination pools
 will be handy to the members who would like to participate in the staking system with a
@@ -56,9 +56,9 @@ committed a slashable offence.
 - Unbonding Sub Pools: Collection of pools at different phases (i.e. eras) of the unbonding
   lifecycle.
 - Members: Accounts that nominate to the pools.
-- Point: A unit of measure for a member’s portion of a pool's funds. All pools start with a point to plank 
-ratio of 1, and over time if they receive rewards they increase in value, and if they get slashed they 
-decrease in value.
+- Point: A unit of measure for a member’s portion of a pool's funds. All pools start with a point to Planck 
+ratio of 1. Over time, if the pool receives rewards, they increase in value, and if the pool is slashed, it 
+decreases in value.
 
 ## Pool Member Lifecycle
 
@@ -71,7 +71,7 @@ a member may only belong to one pool at a time.
 
 :::info
 
-The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS Apps UI. This is because the member funds are transferred from their account to the pool's account. Obviously, this pool account is not accessible by anyone (including the pool root or depositor) and only the pool's internal logic can access the account. 
+The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS Apps UI. This is because the member funds are transferred from their account to the pool's account. This pool account is not accessible by anyone (including the pool root or depositor) and only the pool's internal logic can access the account. 
 
 :::
 
@@ -101,7 +101,7 @@ member's relationship with their pool, allowing them to join a different pool if
 
 ### Limitations
 
-- A member cannot vote with their nominated funds. This can be changed in the future once
+- A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This may be changed in the future once
   accounts are afforded the ability to split votes.
 - In order for a member to switch pools they must wait for the normal 28 day unbonding process.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
@@ -114,7 +114,7 @@ member's relationship with their pool, allowing them to join a different pool if
 - Blocked: The pool is blocked; no joiners are permitted.
 - Destroying: The pool is in the process of being destroyed. Once in this state the pool may never
   revert to any other state; it can only proceed to being destroyed. All members can be
-  permissionlesly unbonded; this allows the pool to be dismantled regardless of any individual
+  permissionlessly unbonded; this allows the pool to be dismantled regardless of any individual
   member’s proactivity.
 
 ### Roles:
