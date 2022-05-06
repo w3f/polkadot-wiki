@@ -14,6 +14,8 @@ Soon they will be deployed on Kusama and then on Polkadot.
 
 :::
 
+![Nomination Pools](../assets/staking/NPoS-Pools.png)
+
 [Nomination pools](https://github.com/paritytech/substrate/pull/10694) are one of the key
 (expertimental) features from the roadmap of
 [Staking improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) on
@@ -32,8 +34,6 @@ constant space and time complexity relative to the number of members, eliminatin
 upper bound on the quantity of members the system can handle and thus scaling the number of
 accounts that can participate and earn rewards in the staking system on Polkadot. In summary, each
 nomination pool is viewed as a single nominator from the NPoS system point of view.
-
-![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
 :::info Why aren't the members in the nomination pools called delegators?
 
