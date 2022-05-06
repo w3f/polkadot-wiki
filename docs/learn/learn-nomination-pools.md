@@ -162,7 +162,7 @@ normally using a nominator account.
 ![Nominate validators](../assets/staking/Nomination-Pools-5.png)
 
 
-The `state-toggler` can update the pool’s state to blocked through `setState`extrinsic and then kick members 
+The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and then kick members 
 by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open). The `root` can change 
 itself, the `state-toggler` or the `nominator` at any time.
 
