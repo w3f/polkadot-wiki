@@ -90,13 +90,12 @@ the era after they joined). Rewards are split pro rata among the actively bonded
 ### Unbond funds
 
 At any point in time after joining the pool, a member can start the process of exiting by
-unbonding. `unbond_other` will unbond all of the members funds. Once this call is made, the
-member will no longer be eligible to claim rewards.
+unbonding. `unbond` will unbond part or all of the member's funds. 
 
 ### Withdraw unbonded funds
 
-After `unbond_other` has been called and the unbonding duration has passed (e.g. 28 days on Polkadot),
-a member may withdraw their funds with `withdraw_unbonded_other`. Withdrawing effectively ends a
+After `unbond` has been called and the unbonding duration has passed (e.g. 28 days on Polkadot),
+a member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a
 member's relationship with their pool, allowing them to join a different pool if desired.
 
 ### Limitations
@@ -147,12 +146,25 @@ the deposit to be bonded.
 
 ![Create Nomination Pools - deposit](../assets/staking/Nomination-Pools-2.png)
 
+When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the Depositor account
+by default. If any of these roles need to be assigned to a different account, create the pool using
+`create` extrinsic available on Developer > Extrinsics > nominationPools on Polkadot JS Apps UI.
+
+  ![Nomination Pool Roles](../assets/staking/Nomination-Pools-6.png)
+
 ### Upkeep
 
-The nominator can update the pool’s validator selection. The state-toggler can update the pool’s
-state to blocked, then kick members by calling `unbond_other` and `withdraw_unbonded_other`. (The
-state can also be toggled back to open). The root can change itself, the state-toggler or the
-nominator at any time.
+The `nominator` can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to Network >
+Staking > Accounts page and click on Pooled button.If you have any pooled accounts with the role of 
+`nominator`, you would notice the option to set nominees. Select the validators to nominate like you would
+normally using a nominator account.
+
+![Nominate validators](../assets/staking/Nomination-Pools-5.png)
+
+
+The `state-toggler` can update the pool’s state to blocked through `setState`extrinsic and then kick members 
+by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open). The `root` can change 
+itself, the `state-toggler` or the `nominator` at any time.
 
 ### Destruction
 
@@ -160,8 +172,8 @@ A pool can be pushed into the “destroying” state via one of:
 
 - The state-toggler sets the pool to “destroying”.
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
-  been slashed. Dismantling a destroying pool:
-- When a pool is in ‘destroying’ state, `unbond_other` and `withdraw_unbonded_other` become
+  been slashed. Dismantling a destroying pool
+- When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become
   permissionless, so anyone can help all the members exit.
 - Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
   wiped from state.
