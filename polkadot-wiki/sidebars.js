@@ -174,6 +174,7 @@ module.exports = {
             'build/build-node-management',
             'build/build-node-interaction',
             'build/build-transaction-construction',
+            'build/build-hrmp-channels',
           ],
         },
         {
