@@ -128,13 +128,14 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
 
 "electable/electing", and "active".
 
-- **intention to nominate:** an account that has stated the intention to nominate; also called
-  simply a "nominator".
-- **electing nominator:** a nominator who is selected to be a part of the input to the
-  [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
-  the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
-- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator, sharing their rewards (if among the top 256 backers) and slashes.
+- **intention to nominate:** an account that has stated the intention to nominate; also called simply 
+a "nominator".
+- **electing nominator:** a nominator who is selected to be a part of the input to the [NPoS election 
+algorithm](learn-phragmen.md). This selection is based on stake, and is done using the 
+[bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
+- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active validator, 
+sharing their rewards (if among the top {{ polkadot_max_nominators }} backers) and slashes.
+
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
@@ -156,9 +157,9 @@ a given era, you will not receive staking rewards for that era.
 
 Thus, for **nominator counters**, we have:
 
-- count of nominator intentions, and max possible nominator intentions (50,000).
-- count of electing nominators, and maximum possible electing nominators (22,500). 	
-- count of active nominators, and maximum possible active nominators (22,500).
+- count of nominator intentions, and max possible nominator intentions ({{ max_nominator_count }}).
+- count of electing nominators, and maximum possible electing nominators ({{ max_active_nominator_count }}). 	
+- count of active nominators, and maximum possible active nominators ({{ max_active_nominator_count }}).
 
 ### Oversubscribed Validators
 
