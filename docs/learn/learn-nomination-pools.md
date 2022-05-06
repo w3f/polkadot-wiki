@@ -150,7 +150,6 @@ When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the 
 by default. If any of these roles need to be assigned to a different account, create the pool using
 `create` extrinsic available on Developer > Extrinsics > nominationPools on Polkadot JS Apps UI.
 
-  ![Nomination Pool Roles](../assets/staking/Nomination-Pools-6.png)
 
 ### Upkeep
 
@@ -163,8 +162,7 @@ normally using a nominator account.
 
 
 The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and then kick members 
-by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open). The `root` can change 
-itself, the `state-toggler` or the `nominator` at any time.
+by calling `unbond` and `withdrawUnbonded`.  (The state can also be toggled back to open).
 
 ### Destruction
 
