@@ -7,9 +7,10 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
-:::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools). Soon they will be deployed on Kusama and then on Polkadot.
+:::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools).
 
 Get some [Westies (WND)](learn-DOT.md#getting-westies) and start experimenting with Nomination pools!
+Soon they will be deployed on Kusama and then on Polkadot.
 
 :::
 
