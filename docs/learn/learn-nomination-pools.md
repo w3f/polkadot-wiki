@@ -70,7 +70,7 @@ a member may only belong to one pool at a time.
 
 :::info
 
-The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS Apps UI.
+The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS Apps UI. This is because the member funds are transferred from their account to the pool's account. Obviously, this pool account is not accessible by anyone (including the pool root or depositor) and only the pool's internal logic can access the account. 
 
 :::
 
