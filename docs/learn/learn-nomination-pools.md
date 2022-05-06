@@ -63,7 +63,7 @@ decrease in value.
 
 ### Join a pool
 
-A member nominates funds to a pool by transferring some amount to the pool’s bonded account with the
+A member delegates funds to a pool by transferring some amount to the pool’s bonded account with the
 `join` extrinsic. The pool then increases its bond with the new funds. A member is afforded the
 ability to bond additional funds, or re-stake rewards as long as they are already actively bonded. Note that
 a member may only belong to one pool at a time.
