@@ -128,13 +128,14 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
 
 "electable/electing", and "active".
 
-- **intention to nominate:** an account that has stated the intention to nominate; also called simply 
-a "nominator".
-- **electing nominator:** a nominator who is selected to be a part of the input to the [NPoS election 
-algorithm](learn-phragmen.md). This selection is based on stake, and is done using the 
-[bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
-- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active validator, 
-sharing their rewards (if among the top {{ polkadot_max_nominators }} backers) and slashes.
+- **intention to nominate:** an account that has stated the intention to nominate; also called
+  simply a "nominator".
+- **electing nominator:** a nominator who is selected to be a part of the input to the
+  [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
+  the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
+- **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
+  validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when 
+  slashing occurs, all the active nominators backing the validator get slashed.
 
 
 ![Nominator Election](../assets/staking/nominator-election.png)
