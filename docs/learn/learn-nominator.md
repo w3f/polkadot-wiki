@@ -137,6 +137,7 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
   validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when 
   slashing occurs, all the active nominators backing the validator get slashed.
 
+
 ![Nominator Election](../assets/staking/nominator-election.png)
 
 ### Required Minimum Stake
@@ -157,9 +158,9 @@ a given era, you will not receive staking rewards for that era.
 
 Thus, for **nominator counters**, we have:
 
-- count of nominator intentions, and max possible nominator intentions (50,000).
-- count of electing nominators, and maximum possible electing nominators (22,500). 	
-- count of active nominators, and maximum possible active nominators (22,500).
+- count of nominator intentions, and max possible nominator intentions ({{ max_nominator_count }}).
+- count of electing nominators, and maximum possible electing nominators ({{ max_active_nominator_count }}). 	
+- count of active nominators, and maximum possible active nominators ({{ max_active_nominator_count }}).
 
 ### Oversubscribed Validators
 

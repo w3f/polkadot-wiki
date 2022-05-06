@@ -35,7 +35,7 @@ ultimate decision maker of the proposals, we encourage following the process imp
 
 In general, a governance proposal process includes 4 steps:
 
-1. Publication on [Polkasembly](https://polkadot.polkassembly.io/discussions) for discussion and
+1. Publication on [Polkassembly](https://polkadot.polkassembly.io/discussions) for discussion and
    feedback;
 2. Preimage submission on democracy tab (Polkadot JS Apps);
 3. Submission of the proposal as an external motion to Council;
@@ -48,7 +48,7 @@ in order for the proposal to be enacted successfully.
 
 :::
 
-## Publication on Polkasembly for discussion and feedback
+## Publication on Polkassembly for discussion and feedback
 
 The [discussions section of Polkassembly](https://polkadot.polkassembly.io/discussions) is the best
 place to share the reasoning behind your proposal: make sure to log in with the proposer address (if
