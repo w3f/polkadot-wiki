@@ -9,9 +9,10 @@ slug: ../learn-staking-miner
 
 Intro to staking miner
 
-:::note
+:::caution
 
-Include mention of staking miner importance
+The staking-miner code is experimental and it is still in development phase. Use is at your
+own discression, some funds might be lost.
 
 :::
 
