@@ -49,7 +49,8 @@ PolkadotJS interface to teleport {{ polkadot: DOT from Polkadot to Statemint. :p
    4. "amount" - Insert the number of tokens you want to teleport. This does not include the
       transfer fee
 4. After reviewing the transaction information and fees, click the "Teleport" button. Remember that
-   the destination chain imposes receiving fee on the teleport amount {{ kusama: (It is currently 0.000010666 KSM on
+   the destination chain imposes receiving fee on the teleport amount {{ polkadot: It is currently 0.0032 DOT on
+   Statemint) :polkadot }}{{ kusama: (It is currently 0.000010666 KSM on
    Statemine) :kusama }}
 5. Click "Sign and Submit".
 6. Enter your password, and click "Sign the transaction".
@@ -57,7 +58,7 @@ PolkadotJS interface to teleport {{ polkadot: DOT from Polkadot to Statemint. :p
 The transaction will be signed and broadcasted, and the tokens will appear on the destination chain
 shortly. 
 
-{{ polkadot: ![teleport balance](../assets/statemint/Statemint-Teleport-2.png)  :polkadot }}{{ kusama: In the given example screenshot, the received balance would be around 0.0049 KSM (Teleport amount
+{{ polkadot: ![teleport balance](../assets/statemint/Statemint-Teleport-3.png)  :polkadot }}{{ kusama: In the given example screenshot, the received balance would be around 0.0049 KSM (Teleport amount
 0.005 KSM - Receiving fee 0.000010666 KSM). If you plan to teleport KSM back to Kusama from Statemine, you
 will follow the same procedure as above. :kusama }}
 
