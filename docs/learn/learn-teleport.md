@@ -22,6 +22,14 @@ Here are a couple of things that you need to understand before submitting a tele
   the teleport amount and the transaction fees. If you do not account for the sending fee, the
   teleport transaction will fail. The sending fee will be deducted from your account balance.
 
+:::caution Existential Deposit
+
+  After the teleport, if your account balance drops below the Existential Deposit which is 
+{{ existential_deposit }}, that balance will be burnt and lost. Either plan on teleporting all of 
+  your balance or leave enough such that the account does not get reaped.
+  
+:::
+
 - There will be a transaction fee imposed at the destination chain. This fee is automatically
   deducted from the teleport amount you send. After this fee is deducted, the remaining account
   balance on the destination chain should be greater than its Existential Deposit. If not, the
