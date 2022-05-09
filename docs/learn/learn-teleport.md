@@ -85,7 +85,7 @@ PolkadotJS interface to teleport {{ polkadot: DOT from Polkadot to Statemint. :p
 1. Navigate to [PolkadotJS Apps] and connect to the chain with the tokens you want to teleport.
 2. Navigate to "Accounts > Teleport". This opens the 'teleport assets' interface:
 
-   {{ polkadot: ![teleport](../assets/statemint/Statemint-Teleport-2.png)
+   {{ polkadot: ![teleport](../assets/statemint/Statemint-Teleport-1.png)
    ![teleport](../assets/statemint/Statemint-Teleport-2.png) :polkadot }}{{ kusama: ![teleport](../assets/kusama/KSM-Teleport-Kusama.png) ![transfer](../assets/kusama/ksm-teleport-apps.png) :kusama }}
 
 3. Fill out the transaction:
