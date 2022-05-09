@@ -59,6 +59,7 @@ module.exports = {
                   'learn/learn-assets',
                   'learn/learn-DOT',
                   'learn/learn-nft',
+                  'learn/learn-statemint',
               ],
             },
             {
