@@ -36,6 +36,8 @@ Here are a couple of things that you need to understand before submitting a tele
   teleport transaction will fail and the sending fee along with the teleport amount will be deducted
   from your account balance.
 
+## Teleport {{ polkadot: DOT from Polkadot to Statemint :polkadot }}{{ kusama: KSM from Kusama to Statemine  :kusama }}
+
 
 {{ polkadot: ![teleport](../assets/Teleport-DOT-Statemint.png) :polkadot }}{{ kusama: ![teleport](../assets/kusama/KSM-teleport-small.png) :kusama }}
   
@@ -47,7 +49,8 @@ PolkadotJS interface to teleport {{ polkadot: DOT from Polkadot to Statemint. :p
 1. Navigate to [PolkadotJS Apps] and connect to the chain with the tokens you want to teleport.
 2. Navigate to "Accounts > Teleport". This opens the 'teleport assets' interface:
 
-   {{ polkadot: ![teleport](../assets/statemint/Statemint-Teleport-2.png) :polkadot }}{{ kusama: ![transfer](../assets/kusama/ksm-teleport-apps.png) :kusama }}
+   {{ polkadot: ![teleport](../assets/statemint/Statemint-Teleport-2.png)
+   ![teleport](../assets/statemint/Statemint-Teleport-2.png) :polkadot }}{{ kusama: ![teleport](../assets/kusama/KSM-Teleport-Kusama.png) ![transfer](../assets/kusama/ksm-teleport-apps.png) :kusama }}
 
 3. Fill out the transaction:
    1. "send from account" - Select the account with the source tokens.
