@@ -26,7 +26,7 @@ Here are a couple of things that you need to understand before submitting a tele
 
   After the teleport, if your account balance drops below the Existential Deposit which is 
 {{ existential_deposit }}, that balance will be burnt and lost. Either plan on teleporting all of 
-  your balance or leave enough such that the account does not get reaped.
+  your balance or leave enough balance such that the account does not get reaped.
   
 :::
 
