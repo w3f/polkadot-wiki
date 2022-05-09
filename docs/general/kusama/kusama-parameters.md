@@ -36,7 +36,7 @@ more details._
 
 ### Accounts, Identity and Crowdloans
 
-- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
+- The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
 - The deposit required to set an Identity is {{ identity_reserve_funds }} KSM
 - The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
 

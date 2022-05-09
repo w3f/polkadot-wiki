@@ -284,5 +284,5 @@ be eligible to be funded via a
 [Web 3 Foundation Grant](https://github.com/w3f/General-Grants-Program).
 
 [setting up a validator]: maintain-guides-how-to-validate-polkadot
-[identity]: ../learn/learn-identity#setting-an-identity
+[identity]: ../learn/learn-identity.md#setting-an-identity
 [governance]: maintain-guides-democracy

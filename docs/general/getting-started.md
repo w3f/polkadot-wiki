@@ -184,7 +184,7 @@ on Polkadot.
 DOT has utility in [Polkadot's democracy](../maintain/maintain-guides-democracy.md).
 Bonding DOT is a requirement to create proposals, to endorse them and to vote on them when they
 become referendums. Bonding 100 DOT or 5% of requested funding is a requirement to make a
-[treasury proposal](../learn/learn-treasury#creating-a-treasury-proposal.md). DOT can also enable
+[treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). DOT can also enable
 you to participate in programs like the
 [Thousand Validators Program](../general/thousand-validators.md#polkadot).
 
