@@ -52,7 +52,7 @@ circulating supply of the asset. Failing to uphold either of these two condition
 total issuance (in the case of fungible tokens) or a complete loss/duplication of an NFT.
 
 
-## Teleport {{ polkadot: DOT from Polkadot to Statemint :polkadot }}{{ kusama: KSM from Kusama to Statemine  :kusama }}
+## Teleporting Tokens using Polkadot-JS Apps UI
 
 {{ polkadot: ![teleport](../assets/Teleport-DOT-Statemint.png) :polkadot }}{{ kusama: ![teleport](../assets/kusama/KSM-teleport-small.png) :kusama }}
 
@@ -88,7 +88,7 @@ PolkadotJS interface to teleport {{ polkadot: DOT from Polkadot to Statemint. :p
    
 2. Navigate to "Accounts > Teleport". This opens the 'teleport assets' interface:
 
-   {{ polkadot:![teleport](../assets/statemint/Statemint-Teleport-2.png) :polkadot }}{{ kusama: ![transfer](../assets/kusama/ksm-teleport-apps.png) :kusama }}
+   {{ polkadot: ![teleport](../assets/statemint/Statemint-Teleport-2.png) :polkadot }}{{ kusama: ![transfer](../assets/kusama/ksm-teleport-apps.png) :kusama }}
 
 3. Fill out the transaction:
    1. "send from account" - Select the account with the source tokens.
