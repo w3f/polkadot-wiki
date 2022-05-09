@@ -51,6 +51,9 @@ was taken out of circulation back into circulation. The result of an asset telep
 circulating supply of the asset. Failing to uphold either of these two conditions will result in a change in the asset's 
 total issuance (in the case of fungible tokens) or a complete loss/duplication of an NFT.
 
+
+## Teleport {{ polkadot: DOT from Polkadot to Statemint :polkadot }}{{ kusama: KSM from Kusama to Statemine  :kusama }}
+
 {{ polkadot: ![teleport](../assets/Teleport-DOT-Statemint.png) :polkadot }}{{ kusama: ![teleport](../assets/kusama/KSM-teleport-small.png) :kusama }}
 
 
@@ -74,10 +77,6 @@ Here are a couple of things that you need to understand before submitting a tele
   balance on the destination chain should be greater than its Existential Deposit. If not, the
   teleport transaction will fail and the sending fee along with the teleport amount will be deducted
   from your account balance.
-
-## Teleport {{ polkadot: DOT from Polkadot to Statemint :polkadot }}{{ kusama: KSM from Kusama to Statemine  :kusama }}
-
-  
 
 Teleportation can be done through the [PolkadotJS Apps] interface or through the
 `xcmPallet.limitedTeleportAssets()` extrinsic. In the following example, we will be using the
