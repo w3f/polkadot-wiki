@@ -1,6 +1,6 @@
 ---
 id: learn-teleport
-title: Teleporting KSM between Kusama and Statemine
+title: Teleporting Assets
 sidebar_label: Teleporting Assets
 description: Steps on how to teleport assets across parachains.
 keywords: [teleport, assets, transfer]
@@ -28,16 +28,18 @@ Here are a couple of things that you need to understand before submitting a tele
   teleport transaction will fail and the sending fee along with the teleport amount will be deducted
   from your account balance.
 
-  ![teleport](../assets/kusama/KSM-teleport-small.png)
+
+{{ polkadot: ![teleport](../assets/Teleport-DOT-Statemint.png) :polkadot }}{{ kusama: ![teleport](../assets/kusama/KSM-teleport-small.png) :kusama }}
+  
 
 Teleportation can be done through the [PolkadotJS Apps] interface or through the
 `xcmPallet.limitedTeleportAssets()` extrinsic. In the following example, we will be using the
-PolkadotJS interface to teleport KSM from Kusama to Statemine.
+PolkadotJS interface to teleport {{ polkadot: DOT from Polkadot to Statemint. :polkadot }}{{ kusama: KSM from Kusama to Statemine. :kusama }}
 
 1. Navigate to [PolkadotJS Apps] and connect to the chain with the tokens you want to teleport.
 2. Navigate to "Accounts > Teleport". This opens the 'teleport assets' interface:
 
-   ![transfer](../assets/kusama/ksm-teleport-apps.png)
+   {{ polkadot: ![teleport](../assets/statemint/Statemint-Teleport-2.png) :polkadot }}{{ kusama: ![transfer](../assets/kusama/ksm-teleport-apps.png) :kusama }}
 
 3. Fill out the transaction:
    1. "send from account" - Select the account with the source tokens.
@@ -47,25 +49,26 @@ PolkadotJS interface to teleport KSM from Kusama to Statemine.
    4. "amount" - Insert the number of tokens you want to teleport. This does not include the
       transfer fee
 4. After reviewing the transaction information and fees, click the "Teleport" button. Remember that
-   the destination chain imposes receiving fee on the teleport amount (It is currently 0.000010666 KSM on
-   Statemine)
+   the destination chain imposes receiving fee on the teleport amount {{ kusama: (It is currently 0.000010666 KSM on
+   Statemine) :kusama }}
 5. Click "Sign and Submit".
 6. Enter your password, and click "Sign the transaction".
 
 The transaction will be signed and broadcasted, and the tokens will appear on the destination chain
-shortly. In the given example screenshot, the received balance would be around 0.0049 KSM (Teleport amount
-0.005 KSM - Receiving fee 0.000010666 KSM). If you plan to teleport KSM back to Kusama from Statemine, you
-will follow the same procedure as above.
+shortly. 
 
-A video tutorial on teleporting KSM from Kusama to Statemine is provided below:
+{{ polkadot: ![teleport balance](../assets/statemint/Statemint-Teleport-2.png)  :polkadot }}{{ kusama: In the given example screenshot, the received balance would be around 0.0049 KSM (Teleport amount
+0.005 KSM - Receiving fee 0.000010666 KSM). If you plan to teleport KSM back to Kusama from Statemine, you
+will follow the same procedure as above. :kusama }}
+
+A video tutorial on teleporting (on Kusama) is provided below for reference:
 
 [![Teleporting KSM](https://img.youtube.com/vi/PGyDpH2kad8/0.jpg)](https://youtu.be/PGyDpH2kad8)
 
 ## Troubleshooting
 
 If you do not see "Accounts > Teleport" in [PolkadotJS Apps], the source chain that you have
-selected does not support teleportation yet. As of June 2021, unsupported chains include Polkadot
-mainnet, Rococo testnet, and their respective parachains.
+selected does not support teleportation yet.
 
 [polkadotjs apps]: https://polkadot.js.org/apps/
 [xcm]: learn-cross-consensus.md
