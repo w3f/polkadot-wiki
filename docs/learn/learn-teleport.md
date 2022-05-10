@@ -30,7 +30,7 @@ taking note of the total amount of assets that was taken out.
 
 The source then creates an XCM instruction called `ReceiveTeleportedAssets` and puts the amount of assets taken out of 
 circulation and the receiving account as parameters to this instruction. It then sends this instruction over to the 
-destination, where it gets processed and new assets gets **put back into circulating supply accordingly**.
+destination, where it gets processed and new assets get **put back into circulating supply accordingly**.
 
 ### Deposit Asset
 
