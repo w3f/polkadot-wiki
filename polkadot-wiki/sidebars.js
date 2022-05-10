@@ -162,6 +162,7 @@ module.exports = {
             'build/build-wallets',
             'build/build-substrate',
             'build/build-ss58-registry',
+            'build/build-hrmp-channels',
           ],
         },
         {
@@ -174,7 +175,6 @@ module.exports = {
             'build/build-node-management',
             'build/build-node-interaction',
             'build/build-transaction-construction',
-            'build/build-hrmp-channels',
           ],
         },
         {
