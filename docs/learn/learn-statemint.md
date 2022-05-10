@@ -9,8 +9,9 @@ slug: ../../learn-statemint
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Polkadot
 (not to be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is
-a parachain on Kusama). The native token of Statemint is DOT. Transaction fees and the
-Existential Deposit (ED) of DOT on Statemint are about 1/10th of the values on the Relay chain.
+a parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED), transfer fees,
+and the deposits for proxy/multisig operations on Statemint are about 1/10th of the values on the Relay chain.
+For example, the Existential Deposit of a Statemint account is 0.1 DOT, when compared to 1 DOT on Polkadot.
 Apart from the core protocol token DOT, the assets held on Statemint can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility
@@ -27,8 +28,9 @@ is a parachain on Westend. The WND tokens (Westies) are free and are available t
 
 :::
 
-To create an asset on Statemint, you would need a deposit of 100 DOT. Ensure that your Statemint
-account balance is more than 100 DOT, which should account for the transaction fee as well. You can
+To create an asset on Statemint, you would need a deposit of 100 DOT and around 2 DOT for the metadata
+. Before you create an asset on Statemint, ensure that your Statemint account balance is more 
+than 103 DOT, which should seamlessly account for the required deposits and transaction fees. You can
 send DOT from a Polkadot account to a Statemint account using the teleport functionality. For
 instructions on teleporting DOT, check this [tutorial on Teleports](../learn/learn-teleport.md).
 
