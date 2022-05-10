@@ -9,7 +9,7 @@ slug: ../../learn-statemint
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Polkadot
 (not to be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is
-a parachain on Polkadot). The native token of Statemint is DOT. Balance transfers and the
+a parachain on Kusama). The native token of Statemint is DOT. Transaction fees and the
 Existential Deposit (ED) of DOT on Statemint are about 1/10th of the values on the Relay chain.
 Apart from the core protocol token DOT, the assets held on Statemint can be broadly categorized as
 
