@@ -88,16 +88,28 @@ The member can claim their portion of any rewards that have accumulated since th
 they claimed (or in the case that they have never claimed, any rewards that have accumulated since
 the era after they joined). Rewards are split pro rata among the actively bonded members.
 
+On Polkadot JS Apps UI, navigate to Network > Staking > Accounts > Pooled, where you can view your
+pooled member account details. To claim rewards, click on the three vertical dots and click on 
+Withdraw claimable. 
+
+![Claim rewards](../assets/staking/nomination-pools-claim.png)
+
 ### Unbond funds
 
 At any point in time after joining the pool, a member can start the process of exiting by
 unbonding. `unbond` will unbond part or all of the member's funds. 
+
+On Polkadot JS Apps UI, navigate to Network > Staking > Accounts > Pooled and click on the three vertical 
+dots and click on Unbond funds. 
 
 ### Withdraw unbonded funds
 
 After `unbond` has been called and the unbonding duration has passed (e.g. 28 days on Polkadot),
 a member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a
 member's relationship with their pool, allowing them to join a different pool if desired.
+
+On Polkadot JS Apps UI, navigate to Network > Staking > Accounts > Pooled and click on the three vertical 
+dots and click on Withdraw unbonded.
 
 ### Limitations
 
