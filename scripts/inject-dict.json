@@ -50,10 +50,18 @@
     "filters": ["humanReadableToken"]
   },
   {
+    "tpl": "identity_reserve_funds_ksm",
+    "default": "0.033333"
+  },
+  {
     "tpl": "identity_sub_reserve_funds",
     "default": { "kusama": 0.006666, "polkadot": 20.053 },
     "path": "consts.identity.reserveFunds",
     "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "identity_sub_reserve_funds_ksm",
+    "default": "0.006666"
   },
   {
     "tpl": "identity_field_funds",
