@@ -25,7 +25,14 @@ Polkadot has some basic transaction information that is common to all transactio
 - Transaction Version: The current version for transaction format.
 - Tip: Optional, the [tip](build-protocol-info.md#fees) to increase transaction priority.
 - Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid.
-  If zero, the transaction is [immortal](build-protocol-info.md#transaction-mortality) **NOTE:** There are risks to making a transaction immortal.  If an account is reaped and a user re-funds the account, then they could replay an immortal transaction. Always default to using a mortal extrinsic.
+  If zero, the transaction is [immortal](build-protocol-info.md#transaction-mortality) 
+
+:::caution 
+
+There are risks to making a transaction immortal.  If an account is reaped and a user re-funds the 
+account, then they could replay an immortal transaction. Always default to using a mortal extrinsic.
+
+:::
 
 \*The nonce queried from the System module does not account for pending transactions. You must track
 and increment the nonce manually if you want to submit multiple valid transactions at the same time.
