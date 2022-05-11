@@ -267,8 +267,8 @@ click on set subs button.
   ![Set sub-identity in PolkadotJS](../../assets/identity/sub-id-2.png)
 - Sign and submit the transaction from the parent account with the identity
 
-You should now see the sub-identity displayed on-chain. You need to aware that {{ identity_reserve_funds }} KSM is reserved for setting 
-identity and {{ identity_sub_reserve_funds }} KSM for each sub-identity. This reserved account balance is freed once you 
+You should now see the sub-identity displayed on-chain. You need to aware that {{ identity_reserve_funds_ksm }} KSM is reserved for setting 
+identity and {{ identity_sub_reserve_funds_ksm }} KSM for each sub-identity. This reserved account balance is freed once you 
 [clear the identities](../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
 
 ![Sub-identity example](../../assets/identity/sub-id-3.png)
