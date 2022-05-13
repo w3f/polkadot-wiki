@@ -58,14 +58,11 @@ occurred. From this date, one DOT (old) equals 100 new DOT.
 
 ## Core Functionality
 
-Polkadot is now moving to the next stage of opening up its core functionality, like parachain slot
-auctions, parathreads, and cross-chain message passing. Polkadot is now on track to launch several
-parachains in 2021. These upgrades will require runtime upgrades that will pass through Polkadot's
-normal governance processes. The core functionality does not have to be unlocked sequentially
-&mdash; several features can be unlocked with a single proposal.
+After 5 years of research and development, and a multi-stage launch that began in May of 2020, Polkadot launch 
+is completed on December 18, 2021, with all auction-winning  parachains producing blocks on the network. Read the 
+full article on Polkadot parachain launch on the 
+[Polkadot Network blog](https://polkadot.network/blog/parachains-are-live-polkadot-launch-is-now-complete/).
 
-Parachains will first roll out on Kusama with a common good parachain, followed by the first slot
-auction and winner's onboarding.
 
 ## Polkadot 2.0
 
