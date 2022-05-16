@@ -43,7 +43,7 @@ more about what are the resources currently available and how they can make use 
 
 ## How can you run a hackathon in your city?
 
-Get in touch with the W3F team by [email](mailto:events@web3.foundation) or ask us via our
+Get in touch with the W3F team by [email](mailto:community@web3.foundation) or ask us via our
 [Matrix](https://matrix.to/#/#w3f:matrix.org) chat.
 
 ## How we can help
