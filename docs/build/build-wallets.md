@@ -46,9 +46,11 @@ these wallets or other non-Parity developed wallets.
 | [Nova Wallet](https://novawallet.io/)*         | [1](https://kusama.polkassembly.io/treasury/122)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Non-custodial | Staking  |
 | [Talisman](https://talisman.xyz/)             | Received a Tip**                                                                                                                                                                                    | Live              | TalismanSociety | Browser      | Non-custodial | Staking  |
 
-:::note *Note about Nova wallet
+:::caution *Note about Nova wallet
 
-There's another Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised to ensure that they're using the correct Nova wallet by downloading the app from their [site](https://novawallet.io/) and to never restore or create accounts in wallets they don't trust explicitly.
+There's **another** Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised to ensure that they use the correct Nova wallet by 
+downloading the app from their official website: [https://novawallet.io/](https://novawallet.io/). In general, it is wise to double-check the wallet
+website URLs before creating or restoring accounts (most projects have it listed on their official social media handles). 
 
 :::
 
