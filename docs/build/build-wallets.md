@@ -50,6 +50,8 @@ these wallets or other non-Parity developed wallets.
 
 There's another Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised to ensure that they're using the correct Nova wallet by downloading the app from their [site](https://novawallet.io/) and to never restore or create accounts in wallets they don't trust explicitly.
 
+:::
+
 :::note **Tip from the Treasury
 
 This third-party wallet was not funded by a Treasury Proposal and instead received a tip from the Treasury. Unlike a Treasury Proposal, tipping is a separate 
