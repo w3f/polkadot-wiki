@@ -49,8 +49,8 @@ these wallets or other non-Parity developed wallets.
 :::caution *Note about Nova wallet
 
 There's **another** Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised to ensure that they use the correct Nova wallet by 
-downloading the app from their official website: [https://novawallet.io/](https://novawallet.io/). In general, it is wise to double-check the wallet
-website URLs before creating or restoring accounts (most projects have it listed on their official social media handles). 
+downloading the app from their official website: [https://novawallet.io/](https://novawallet.io/). Before creating or restoring accounts , it is wise to 
+double-check the wallet website URLs through official channels (most projects have it listed on their official social media handles). 
 
 :::
 
