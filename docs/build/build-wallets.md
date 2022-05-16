@@ -43,8 +43,12 @@ these wallets or other non-Parity developed wallets.
 | [Fearless Wallet](https://fearlesswallet.io/) | [1](https://kusama.polkassembly.io/treasury/23), [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74), [4](https://kusama.polkassembly.io/treasury/102) | Live              | SORAMITSU       | iOS, Android | Non-custodial | Staking  |
 | [Polkawallet](https://polkawallet.io/)        | [1](https://kusama.polkassembly.io/treasury/32), [2](https://kusama.polkassembly.io/treasury/41)                                                                                                    | Live              | Polkawallet     | iOS, Android | Non-custodial | Staking  |
 | [Stylo](https://stylo-app.com/)               | [1](https://polkadot.polkassembly.io/treasury/39)                                                                                                                                                   | Live              | Thibaut Sardan  | Android      | Non-custodial | Staking  |
-| [Nova Wallet](https://novawallet.io/)         | [1](https://kusama.polkassembly.io/treasury/122)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Non-custodial | Staking  |
+| [Nova Wallet](https://novawallet.io/)*         | [1](https://kusama.polkassembly.io/treasury/122)                                                                                                                                                    | Live              | Nova Foundation | iOS, Android | Non-custodial | Staking  |
 | [Talisman](https://talisman.xyz/)             | Received a Tip**                                                                                                                                                                                    | Live              | TalismanSociety | Browser      | Non-custodial | Staking  |
+
+:::note *Note about Nova wallet
+
+There's another Nova wallet that is **unrelated** to the Polkadot ecosystem. Users are advised to ensure that they're using the correct Nova wallet by downloading the app from their [site](https://novawallet.io/) and to never restore or create accounts in wallets they don't trust explicitly.
 
 :::note **Tip from the Treasury
 
