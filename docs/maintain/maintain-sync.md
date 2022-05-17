@@ -31,8 +31,15 @@ and so on. Once two thirds of the validators agree on a specific block being val
 An **archive node** keeps all the past blocks. An archive node makes it convenient to query the past
 state of the chain at any point in time. Finding out what an account's balance at a certain block
 was, or which extrinsics resulted in a certain state change are fast operations when using an
-archive node. However, an archive node takes up a lot of disk space - around Kusama's 1.6 millionth
-block this was around 15 to 20GB.
+archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth
+block this was around 660 GB.
+
+:::tip 
+
+[Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama nodes
+in real-time.
+
+:::
 
 Archive nodes are used by utilities that need past information - like block explorers, council
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
