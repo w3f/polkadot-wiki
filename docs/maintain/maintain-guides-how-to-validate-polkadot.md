@@ -81,7 +81,7 @@ For the full details of the standard hardware please see
 [here](https://github.com/paritytech/substrate/pull/5848).
 
 - **CPU** - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
-- **Storage** - A NVMe solid state drive of 1 TB (As it should be reasonably sized to deal with blockchain growth).
+- **Storage** - An NVMe solid state drive of 1 TB (As it should be reasonably sized to deal with blockchain growth).
 - **Memory** - 64GB ECC.
 
 The specs posted above are by no means the minimum specs that you could use when running a
