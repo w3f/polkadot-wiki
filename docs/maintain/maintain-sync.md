@@ -36,7 +36,7 @@ block this was around 660 GB.
 
 :::tip 
 
-[Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama nodes
+The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama nodes
 in real-time.
 
 :::
