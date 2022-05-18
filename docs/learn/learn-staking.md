@@ -619,10 +619,10 @@ Up until now, the network has been following an inflation model that excludes th
 parachains. The ideal staking rate is not always 50%, as the number of active parachains influences
 the available liquidity that is available to secure the network.
 
-Keep in mind that when the system's staking rate is lower than the ideal staking rate, the
-annual nominal return rate will be higher than 20%, encouraging more users to use their tokens
-for staking. On the contrary, when the system staking rate is higher than the ideal staking rate,
-the annual nominal return of will be less than 20%, encouraging some users to withdraw.
+Keep in mind that when the system's staking rate is lower than the ideal staking rate, the annual 
+nominal return rate will be higher, encouraging more users to use their tokens for staking. On the 
+contrary, when the system staking rate is higher than the ideal staking rate, the annual nominal 
+return will be less, encouraging some users to withdraw.
 
 ### Why not stake?
 
