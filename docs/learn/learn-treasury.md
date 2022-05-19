@@ -45,8 +45,8 @@ judgment.
 
 :::caution 
 
-The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are not approved just because there are funds ready to spend
-but are subject to a burn.
+The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are not 
+approved just because there are funds ready to spend but are subject to a burn.
 
 :::
 
@@ -71,10 +71,10 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
-The proposer has to deposit 5% of the requested amount or {{ proposal_min_bond }} (whichever is
-higher) as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded
-otherwise. These values are subject to [governance](learn-governance.md) so they may change in the
-future.
+The proposer has to deposit a minimum of {{ proposal_min_bond }} or 5% of the requested amount with 
+a maximum cap of {{ proposal_max_bond }} as an anti-spam measure. This amount is burned if 
+the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance.md)
+so they may change in the future.
 
 Please note that there is no way for a user to revoke a treasury proposal after it has been
 submitted. The Council will either accept or reject the proposal, and if the proposal is rejected,
