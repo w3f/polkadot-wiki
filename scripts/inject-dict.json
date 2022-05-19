@@ -22,8 +22,14 @@
   },
   {
     "tpl": "proposal_min_bond",
-    "default": { "kusama": 3.333, "polkadot": 100 },
+    "default": { "kusama": 0.066, "polkadot": 100 },
     "path": "consts.treasury.proposalBondMinimum",
+    "filters": ["humanReadableToken"]
+  },
+  {
+    "tpl": "proposal_max_bond",
+    "default": { "kusama": 3.333, "polkadot": 500 },
+    "path": "consts.treasury.proposalBondMaximum",
     "filters": ["humanReadableToken"]
   },
   {
