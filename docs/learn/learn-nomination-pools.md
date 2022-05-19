@@ -16,8 +16,7 @@ Soon they will be deployed on Kusama and then on Polkadot.
 
 :::tip Have questions on Nomination Pools?
 
-If you have questions about nomination pools, please join our [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io)
-on matrix element chat.
+If you have questions about nomination pools, please join our [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
 
 :::
 
