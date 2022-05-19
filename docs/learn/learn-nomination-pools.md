@@ -14,6 +14,13 @@ Soon they will be deployed on Kusama and then on Polkadot.
 
 :::
 
+:::tip Have questions on Nomination Pools?
+
+If you have questions about nomination pools, please join our [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
+
+:::
+
+
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
 [Nomination pools](https://github.com/paritytech/substrate/pull/10694) are one of the key
