@@ -12,12 +12,9 @@ actions on their behalf. Much like the Stash and Controller account relationship
 [staking](learn-staking.md), proxies allow users to keep one account in cold storage and actively
 participate in the network with the weight of the tokens in that account.
 
-:::note Explainer video on proxies
+Check out our Polkadot YouTube video that explains what proxy accounts are:
 
-Check out our Polkadot YouTube video that explains
-[what are proxies](https://www.youtube.com/watch?v=EuaM5dWAJis&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=29&ab_channel=Polkadot).
-
-:::
+[![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
 ## Proxy Types
 
