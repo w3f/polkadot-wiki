@@ -38,7 +38,7 @@ The election provider pallet `pallet_election_provider_multi_phase` is divided i
    Phase::Off   +       Phase::Signed     +      Phase::Unsigned      +
 ```
 
-Solutions provided by the staking miner can only be submitted during the signed phase. Solutions are submitted and queued on the chain as a `RawSolution`. Once submitted, a solution cannot be retracted by the orinating account.
+Solutions provided by the staking miner can only be submitted during the signed phase. Solutions are submitted and queued on the chain as a `RawSolution`. Once submitted, a solution cannot be retracted by the originating account.
 
 `RawSolution` struct definition:
 ```
