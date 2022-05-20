@@ -29,7 +29,7 @@ Running the staking miner requires passing the seed of a funded account in order
 
 ## Signed Phase of the election pallet
 
-The election provider pallet `pallet_election_provider_multi_phase` is divided into two phases, **signed** and **unsigned**. And in the end of the pallets timeline, the function`elect()` is called. 
+The election provider pallet `pallet_election_provider_multi_phase` is divided into two phases, **signed** and **unsigned**. At the end of the pallet's timeline, the function `elect()` is called. 
 
 ```
                                                                    elect()
