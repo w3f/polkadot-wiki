@@ -8,7 +8,9 @@ slug: ../learn-staking-miner
 ---
 
 :::caution
-The staking-miner code is experimental and it is still in development phase. Use is at your own discression, some funds might be lost.
+
+The staking-miner code is experimental and it is still in development phase. Use is at your own discretion, as there is a risk of losing some funds.
+
 :::
 
 Staking miner is a passive validator functionality that runs when a new set of validators need to be elected for NPoS. This is a computationally intense process, hence the mining. Staking miners compete with each other to produce election solutions which consist of a validator set, stake distribution across that set, and a score indicating how optimal the solution is. Stakign miners run the sequential Phragmén algortihm to produce results, and the result is then sent as a transaction to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a transaction fee. The best solution is rewarded
