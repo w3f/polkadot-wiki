@@ -70,7 +70,10 @@ Queue
 |             None              |
 +-------------------------------+
 ```
+
+If you want to run a staking miner on your validator, refer to the repository provided in the resources section below.
+
 ## Further Resources
 
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
-- [Staking Miner code](https://github.com/paritytech/polkadot/tree/master/utils/staking-miner)
+- [Staking Miner repository](https://github.com/paritytech/polkadot/tree/master/utils/staking-miner)
