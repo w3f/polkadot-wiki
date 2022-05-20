@@ -23,7 +23,7 @@ Staking miner uses a pallet called `pallet_election_provider_multi_phase` and ca
 
 A basic election solution is a simple distribution of stake across validators, but this can be optimized for better distribution equaling a higher security score. The staking miner does not act as a validator and focuses solely on the election result and optimization of the solution. It connects to a specified chain and keeps listening to new signed phase of the election pallet in order to submit solutions to the NPoS election. When the correct time comes, it computes its solution and submits it to the chain. The default miner algorithm is sequential Phragmén with a configurable number of balancing iterations that improve the score.
 
-Running the staking miner requires passing the seed of a funded account in order to pay the fees for the transactions that will be sent. The same account's balance is used to reserve deposits as well. The best solution in each round is rewarded. All correct solutions will get their bond back. And some invalid solutions will lose their bond.
+Running the staking miner requires passing the seed of a funded account in order to pay the fees for the transactions that will be sent. The same account's balance is used to reserve deposits as well. The best solution in each round is rewarded. All correct solutions will get their bond back and the ones that submit invalid solutions will lose their bond.
 
 ![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
 
