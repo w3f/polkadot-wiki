@@ -16,7 +16,7 @@ The staking-miner code is experimental and it is still in development phase. Use
 Staking miner is a passive validator functionality that runs when a new set of validators need to be elected for NPoS. This is a computationally intense process, hence the mining. Staking miners compete with each other to produce election solutions which consist of a validator set, stake distribution across that set, and a score indicating how optimal the solution is. Staking miners run the sequential Phragmén algortihm to produce results, and the result is then sent as a transaction to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a transaction fee. The best solution is rewarded
 which in the least covers the transaction fee, and the bond is returned to the account. If the solution is not valid, the bond and the fee are lost.
 
-Staking miner uses the election pallet called `pallet_election_provider_multi_phase` and can only produce solutions during the signed phase of the pallets life cycle. Once the signed phase is over and the unsigned phase starts, only the off-chain workers can provide election results.
+Staking miner uses a pallet called `pallet_election_provider_multi_phase` and can only produce solutions during the signed phase of the pallet's life cycle. Once the signed phase is over and the unsigned phase starts, only the off-chain workers can provide election results.
 
 
 ## NPoS election optimization
