@@ -15,7 +15,7 @@ at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
 ### Periods of common actions and attributes
 
 _NOTE: Polkadot generally runs at &frac14;th the speed of Kusama, except in the time slot duration
-itself. See [Kusama Parameters](../general/kusama/kusama-parameters) for more details on how Polkadot's parameters
+itself. See [Kusama Parameters](https://guide.kusama.network/docs/kusama-parameters/) for more details on how Polkadot's parameters
 differ from Kusama's._
 
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
