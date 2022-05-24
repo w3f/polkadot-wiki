@@ -151,9 +151,22 @@ click on "Developer" > "Extrinsics". Here we will see a page that looks similar 
 
 To add a proxy, click on the pallet selection dropdown menu. The dropdown is labeled "submit the
 following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu
-next to it). The `addProxy(proxy, proxy_type)` function will need to be selected in order to add in
+next to it). The `addProxy(delegate, proxyType, delay)` function will need to be selected in order to add in
 a proxy. The chosen proxy account that you set will be the account that has the proxy on it. The
-selected account at the top is the account that will be the primary account.
+selected account at the top is the account that will be the primary account. When creating a proxy, 
+you are also provided a `delay` field which is by default populated with zero. Leave it as is, if you plan 
+on creating a normal proxy account.
+
+:::tip Time Delayed Proxies
+
+For instance, if you create a proxy with a `delay` value of 100, which means 100 blocks (  
+100 \* 6(seconds) = 600 seconds, or 10 minutes), the proxy calls made by this account will take
+about 10 minutes to get executed. This is done through `announce` extrinsic and then submitting
+`proxyAnnounced` extrinsic after the block delay. Within the block delay time frame, the real account 
+has a chance to reject the announcement from the proxy account. Again, if your intention is to create
+a normal proxy account, use the default value of zero in the `delay` field.
+
+:::
 
 :::caution `unused` option
 
@@ -183,13 +196,6 @@ like to set up if you choose, as well as the index.
 
 ![proxy generation](../assets/polkadot_anon_proxy.png)
 
-### Using Time Delayed Proxies
-
-When creating a proxy through the PolkadotJS application, we are provided a delay field. In this
-example we are creating a proxy with a delay value of 100, which means 100 blocks. 100 \* 6(minutes)
-= 600 minutes, or 10 hours.
-
-![creating a time delayed proxy](../assets/time_delay_proxy_screenshot.png)
 
 ### Another way to create Proxies
 
@@ -209,18 +215,27 @@ Extrinsics page.
 
 ### Removing Proxies
 
-:::warning There is no way to get access to the anonymous proxy after deleting it
+Under the accounts tab, the Polkadot-JS Apps UI shows a blue button beside the account that has proxies.
+Hovering on the blue button lets you click on a link that says "proxy overview" which displays a pop-up 
+window like the one shown below. In this pop-up window, you have an option to clear individual proxy accounts
+or all of them. Under the hood, the UI is calling the extrinsics `removeProxy` for individual accounts and
+ `removeProxies` for clearing all of the proxy accounts.
 
-If you want to remove a proxy, there are a few functions on the extrinsic page that will help do
-this.
+![Remove Proxies](../assets/remove_proxies.png)
 
-For non-anonymous proxies, you can use `removeProxy` or `removeProxies`, but must use the 
-`killAnonymous` function for anonymous proxies. This must be called **from** the *anonymous* proxy. 
+The procedure for removing an Anonymous Proxy is different and there are a few functions on the extrinsic page 
+that will help do this.
+
+
+:::warning There is no way to get access to the anonymous proxy account after deleting it
+
+`removeProxy` or `removeProxies` do not work for anonymous proxies. You must use the 
+`killAnonymous` function which must be called **from** the *anonymous* proxy. 
 This means that the anonymous proxy must be added as an account to Polkadot-JS accounts.
 
 :::
 
-The following steps can be used to remove your proxy:
+The following steps can be used to remove your anonymous proxy:
 
 - **Step 0**: You need to know the following information:
 
@@ -318,3 +333,6 @@ The required deposit amount for one proxy is equal to:
 ```
 {{ proxy_deposit_base }} + {{ proxy_deposit_factor }} * num_proxies
 ```
+
+## Resources
+[Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
