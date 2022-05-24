@@ -333,3 +333,6 @@ The required deposit amount for one proxy is equal to:
 ```
 {{ proxy_deposit_base }} + {{ proxy_deposit_factor }} * num_proxies
 ```
+
+## Resources
+[Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
