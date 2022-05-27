@@ -57,7 +57,7 @@
     "ipfs-http-client": "^55.0.0",
     "katex": "^0.15.6",
     "loud-rejection": "^2.2.0",
-    "mr-pdf": "^1.0.8",
+    "mr-pdf": "^1.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "pretty-quick": "^3.1.3",

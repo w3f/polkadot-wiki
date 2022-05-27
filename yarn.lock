@@ -7235,14 +7235,15 @@ mock-socket@^9.1.3:
   resolved "https://registry.yarnpkg.com/mock-socket/-/mock-socket-9.1.3.tgz#bcb106c6b345001fa7619466fcf2f8f5a156b10f"
   integrity sha512-uz8lx8c5wuJYJ21f5UtovqpV0+KJuVwE7cVOLNhrl2QW/CvmstOLRfjXnLSbfFHZtJtiaSGQu0oCJA8SmRcK6A==
 
-mr-pdf@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.0.8.tgz#14be8f908a3c2a1a08cfc1c95f0f8bb83a0ae1cf"
-  integrity sha512-aP1vrtP+SrmNwjL9dNIpWsSlaPesON4G/8CFYkp+Yxazj9eCY6TzYvCkFpfL/u6xTaMaExPe6gb6L7KQReXVIA==
+mr-pdf@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/mr-pdf/-/mr-pdf-1.1.0.tgz#489c814eb71d1a0723ef8cead5a0b2dd9e550da8"
+  integrity sha512-0+9SljZ4Nz9JevAmC/ECIo0Eod9hbgUAN05jd4Hud+A3LUAPrkwaC0fBsHFM6usHXU3M7gEgsOmeumiBnBVJag==
   dependencies:
     chalk "^3.0.0"
     commander "^4.1.1"
     puppeteer "^2.1.1"
+    puppeteer-autoscroll-down "^1.1.1"
 
 mri@^1.1.5:
   version "1.2.0"
@@ -8317,6 +8318,11 @@ pupa@^2.1.1:
   integrity sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==
   dependencies:
     escape-goat "^2.0.0"
+
+puppeteer-autoscroll-down@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-autoscroll-down/-/puppeteer-autoscroll-down-1.1.1.tgz#895062605143893c74117f69eefa63a237795c90"
+  integrity sha512-NT0/bO4QBCwMPUhTcTItGojP3W9SNQL/VaW57x8bC3HTraQ2qjicZzf0c4ysNvOHwZf/NMMZxscuTymXZ18sGA==
 
 puppeteer@^2.1.1:
   version "2.1.1"
