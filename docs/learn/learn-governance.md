@@ -57,7 +57,7 @@ All referenda have an *enactment delay* associated with them. This is the period
 referendum ending and, assuming the proposal was approved, the changes being enacted. 
 
 Referenda is considered *baked* if it is closed and tallied. Again, assuming the proposal was 
-approved, it would be scheduled for enactment. Referenda is considered *unbaked* if is pending 
+approved, it would be scheduled for enactment. Referenda is considered *unbaked* if it is pending 
 an outcome, i.e. being voted on.
 
 For the first
@@ -75,7 +75,7 @@ Anyone can propose a referendum by depositing the minimum amount of tokens for a
 to support it - this action is called *endorsing*. The proposal with the highest amount of bonded
 support will be selected to be a referendum in the next voting cycle.
 
-Note that this may be different from the absolute number of seconds; for instance, three accounts
+Note that this may be different from the absolute number of endorsements; for instance, three accounts
 bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a 
 single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}. 
 
@@ -341,7 +341,7 @@ it will be left to the stakeholders *en masse* to determine the fate of the prop
 ### Blacklisting
 
 A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
 hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
 proposals that could be submitted with the same hash, i.e.
 [proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
