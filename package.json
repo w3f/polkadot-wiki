@@ -54,7 +54,7 @@
     "cross-env": "^7.0.3",
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
-    "ipfs-http-client": "^55.0.0",
+    "ipfs-http-client": "^57.0.1",
     "katex": "^0.15.6",
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.1.0",
