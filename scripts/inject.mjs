@@ -1,6 +1,6 @@
 import replace from "replace-in-file";
 import yargs from "yargs";
-import replacements from "./inject-dict.json";
+import replacements from "./inject-dict.json" assert {type: "json"};
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import * as computed from "./computed.mjs";
 

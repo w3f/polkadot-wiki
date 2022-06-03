@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import replacements from "./inject-dict.json";
+import replacements from "./inject-dict.json" assert {type: "json"};
 import * as computed from "./computed.mjs";
 
 const argv = yargs(process.argv)
