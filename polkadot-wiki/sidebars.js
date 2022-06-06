@@ -140,7 +140,6 @@ module.exports = {
             'learn/learn-comparisons',
             'learn/learn-comparisons-ethereum-2',
             'learn/learn-comparisons-cosmos',
-            'learn/learn-comparisons-avalanche'
           ],
         },
         'learn/learn-launch',
