@@ -8,10 +8,12 @@ slug: ../learn-staking
 ---
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
-as its [consensus](learn-consensus.md) mechanism. The system encourages DOT holders to participate
-as nominators. Nominators may back up to {{ polkadot: {{ polkadot_max_nominations }} :polkadot 
-}}{{ kusama: {{ kusama_max_nominations }} :kusama }} validators as trusted validator candidates.
-Both validators and nominators lock their tokens as collateral and receive staking rewards.
+as its [consensus](learn-consensus.md) mechanism. The system encourages 
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
+as nominators. Nominators may back up to 
+{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }} 
+validators as trusted validator candidates. Both validators and nominators lock their tokens as collateral 
+and receive staking rewards.
 
 The staking system pays out rewards essentially equally to all validators regardless of stake.
 Having more stake on a validator does not influence the amount of block rewards it receives.
