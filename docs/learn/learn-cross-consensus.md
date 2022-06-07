@@ -99,7 +99,7 @@ out in favor of it.
 :::note
 
 A stop-gap protocol is a temporary substitute for the functionality that is not fully
-omplete. While XCMP proper is still in development, HRMP is a working replacement.
+complete. While XCMP proper is still in development, HRMP is a working replacement.
 
 :::
 
