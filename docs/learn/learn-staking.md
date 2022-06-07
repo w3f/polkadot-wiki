@@ -50,12 +50,12 @@ are made public to all nominators, and a nominator in turn submits a list of up 
 :kusama }} candidates that it supports. In the next era, a certain number of validators having the
 most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
 As a nominator, a minimum of 
-{{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot}}{{ kusama: {{ min_nominator_intention }} :kusama }}
+{{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}
  is required to submit an intention to
 nominate. The nomination intents are placed in a semi-sorted list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
 
-:::caution Minimum Nomination to Receive Staking Rewarrds
+:::caution Minimum Nomination to Receive Staking Rewards
 
 Although the minimum nomination intent is {{ polkadot: {{ min_dot_nominator_intention }}
 DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}, it does not guarantee
@@ -104,7 +104,7 @@ Check [Staking Election Stages](learn-nominator.md#staking-election-stages) sect
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Submitting a nomination intent does not guarantee staking rewards. The stake of the top
+Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
 {{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} nominators is applied to the
 validators in the active set. To avail staking rewards, ensure that the number of tokens bonded is
 higher than the minimum active nomination. For more information, check the
