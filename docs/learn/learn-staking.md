@@ -48,8 +48,8 @@ video below.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to
-{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }}
-:kusama }} candidates that it supports. In the next era, a certain number of validators having the
+{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }}
+ candidates that it supports. In the next era, a certain number of validators having the
 most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
 As a nominator, a minimum of 
 {{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}
