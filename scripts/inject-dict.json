@@ -94,6 +94,10 @@
     "filters": ["humanReadableToken"]
   },
   {
+    "tpl": "min_dot_nominator_intention",
+    "default": "10"
+  },
+  {
     "tpl": "max_nominator_count",
     "default": 50000,
     "path": "query.staking.maxNominatorsCount"

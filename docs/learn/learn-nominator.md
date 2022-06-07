@@ -20,17 +20,18 @@ generate.
 
 While your DOT are staked by nominating a validator, they are 'locked' (bonded). You can receive new
 DOT in your account but you cannot stake as validator or transfer DOT away from your account. You
-can [un-nominate at any time](../maintain/maintain-guides-how-to-unbond.md) to stop staking your funds. Keep in
-mind that the un-nomination is effective in the next era, and that un-nominating does not
-automatically unbond your funds. There is an unbonding period of 7 days on Kusama and 28 days on
+can [un-nominate at any time](../maintain/maintain-guides-how-to-unbond.md) to stop staking your
+funds. Keep in mind that the un-nomination is effective in the next era, and that un-nominating does
+not automatically unbond your funds. There is an unbonding period of 7 days on Kusama and 28 days on
 Polkadot before bonded funds can be transferred after issuing an unbond transaction.
 
 ### Active vs. Inactive Nomination
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your nominations
-will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
+[this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide to configure it first. Your
+nominations will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on
+Polkadot.
 
 ![Nominations](../assets/staking/polkadotjs_nominator_account.png)
 
@@ -54,12 +55,15 @@ occur often, so you should almost always see only a single active nomination per
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
-staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set their intention to
-nominate, of which, the stake of the top {{ max_active_nominator_count }} nominators is considered for 
-[electing set](#staking-election-stages) that eventually determines the active validators. The bags-list can be previewed on
+staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set
+their intention to nominate, of which, the stake of the top {{ max_active_nominator_count }}
+nominators is considered for [electing set](#staking-election-stages) that eventually determines the
+active validators. The bags-list can be previewed on
 [Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
 
 ![Bags list](../assets/staking/bags-list.png)
+
+### Minimum Active Nomination to Receive Staking Rewards
 
 :::info Minimum DOT required to earn staking rewards
 
@@ -100,10 +104,10 @@ Bag2: Max 1000, Min 20 - Eve, Dave
 
 Bag3: Max 20, Min 10 - Alice, Bob, Charlie
 
-The bags are iterated based stake in decreasing order and within a bag, they are iterated on _insertion_ order, 
-not _amount at stake_. So if only five nominating
-accounts are picked for the electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though
-Alice has only 10 DOT, she is first in line in Bag3.
+The bags are iterated based stake in decreasing order and within a bag, they are iterated on
+_insertion_ order, not _amount at stake_. So if only five nominating accounts are picked for the
+electing set, it will be Frank, Georgina, Eve, Dave, Alice. Even though Alice has only 10 DOT, she
+is first in line in Bag3.
 
 Charlie can put himself in front (move up in the bag) using the , since he has 15 DOT (more than
 Alice does at 10). Now if nothing changes for the next era, Frank, Georgina, Eve, Dave, and Charlie
@@ -134,33 +138,35 @@ be re-bagged. This permissionless extrinsic can be signed and submitted by anyon
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake, and is done using
   the [bags-list pallet](https://paritytech.github.io/substrate/master/pallet_bags_list/).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
-  validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when 
+  validator. Staking rewards are received by top {{ polkadot_max_nominators }} nominators, but when
   slashing occurs, all the active nominators backing the validator get slashed.
-
 
 ![Nominator Election](../assets/staking/nominator-election.png)
 
 ### Required Minimum Stake
 
 Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set, and due to
-the fact that the solution set must fit in a single block, a minimum number of DOT will be required to 
-nominate with, in order to receive staking rewards, can change between the eras.
+the fact that the solution set must fit in a single block, a minimum number of DOT will be required
+to nominate with, in order to receive staking rewards, can change between the eras.
 
-- **min-intention-threshold:** minimum stake to declare the intention to nominate. This parameter can be 
-updated via on-chain governance and the most recent and up to date version can be found on 
-[chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query > staking > minimumNominatorBond**)
+- **min-intention-threshold:** minimum stake to declare the intention to nominate. This parameter
+  can be updated via on-chain governance and the most recent and up to date version can be found on
+  [chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query > staking >
+  minimumNominatorBond**)
 
-- **min-electing:** minimum stake among the electing nominators. Since this is almost always the same as 
-“min-active”, it might not be reported.
+- **min-electing:** minimum stake among the electing nominators. Since this is almost always the
+  same as “min-active”, it might not be reported.
 
-- **min-active:** minimum stake among the active nominators. If your stake falls below this dynamic threshold in
-a given era, you will not receive staking rewards for that era.
+- **min-active:** minimum stake among the active nominators. If your stake falls below this dynamic
+  threshold in a given era, you will not receive staking rewards for that era.
 
 Thus, for **nominator counters**, we have:
 
 - count of nominator intentions, and max possible nominator intentions ({{ max_nominator_count }}).
-- count of electing nominators, and maximum possible electing nominators ({{ max_active_nominator_count }}). 	
-- count of active nominators, and maximum possible active nominators ({{ max_active_nominator_count }}).
+- count of electing nominators, and maximum possible electing nominators
+  ({{ max_active_nominator_count }}).
+- count of active nominators, and maximum possible active nominators
+  ({{ max_active_nominator_count }}).
 
 ### Oversubscribed Validators
 
@@ -195,16 +201,18 @@ and you are nominating with enough stake to get into the solution set, your bond
 fully distributed to one or more validators. That being said, you may not receive rewards if you
 nominated very few validator candidates and no one got elected, or your stake is small and you only
 selected oversubscribed validators, or the validator you are nominating has 100% commission. It is
-generally wise to choose as many trustworthy validators as you can (up to {{ polkadot_max_nominations }}) 
-to reduce the risk of none of your nominated validators being elected.
+generally wise to choose as many trustworthy validators as you can (up to
+{{ polkadot_max_nominations }}) to reduce the risk of none of your nominated validators being
+elected.
 
 :::info Not receiving Staking Rewards?
 
-To explore the possible reasons for not receiving staking rewards, check out the [Staking FAQ](learn-staking-faq#3-why-am-i-not-receiving-staking-rewards)
+To explore the possible reasons for not receiving staking rewards, check out the
+[Staking FAQ](learn-staking-faq#3-why-am-i-not-receiving-staking-rewards)
 
 :::
 
-Rewards are *lazy* - somebody must trigger a payout for a validator for rewards to go all of the
+Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go all of the
 validator's nominators. Any account can do this, although in practice validator operators often do
 this as a service to their nominators. See the page on [Simple Payouts](learn-simple-payouts.md) for
 more information and instructions for claiming rewards.
@@ -228,8 +236,8 @@ higher profit. However, that does not guarantee the right way to evaluate the va
 performance.
 
 It is worth taking into consideration "own stake" of a validator. This refers to the quantity of DOT
-the validator has put up at stake themselves. A higher "own stake" amount can be considered
-as having more "skin in the game". This can imply increased trustworthiness. However, a validator not
+the validator has put up at stake themselves. A higher "own stake" amount can be considered as
+having more "skin in the game". This can imply increased trustworthiness. However, a validator not
 having a large amount of "own stake" is not automatically untrustworthy, as the validator could be
 nominating from a different address.
 
@@ -241,18 +249,18 @@ should nominate. It is important to note that these traits aren't necessarily "b
 depending on your validator selection methodology, they may be characteristics that you would be
 interested in filtering.
 
-* **one validator per operator**: Do not show groups of validators run by a single operator.
-* **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
-* **with capacity**: Do not show any validators who are currently operating
+- **one validator per operator**: Do not show groups of validators run by a single operator.
+- **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
+- **with capacity**: Do not show any validators who are currently operating
   [at capacity](../general/glossary.md#capacity) (i.e., could potentially be oversubscribed).
-* **recent payouts**: Only show validators that have recently caused a
+- **recent payouts**: Only show validators that have recently caused a
   [payout to be issued](learn-simple-payouts.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
-* **currently elected**: Only show validators that are currently in the active set (i.e., they have been
-  elected to produce blocks this era).
-* **with an identity**: Only show validators that have set an [identity](learn-identity.md).
-  Note that this identity does not have to be verified by a registrar for the validator to show up
-  in the list.
+- **currently elected**: Only show validators that are currently in the active set (i.e., they have
+  been elected to produce blocks this era).
+- **with an identity**: Only show validators that have set an [identity](learn-identity.md). Note
+  that this identity does not have to be verified by a registrar for the validator to show up in the
+  list.
 
 ### Review Your Validators' History
 
@@ -283,10 +291,10 @@ etc.).
 ### Avoiding Oversubscribed Validators
 
 If you are not nominating with a large number of DOTs, you should try to avoid
-[oversubscribed](../general/glossary.md#oversubscribed) validators. It is not always easy to calculate if the
-validator selected will be oversubscribed in the next session; one way to avoid choosing potentially
-oversubscribed validators is to filter out any that are [at capacity](../general/glossary.md#capacity) on the
-Targets page.
+[oversubscribed](../general/glossary.md#oversubscribed) validators. It is not always easy to
+calculate if the validator selected will be oversubscribed in the next session; one way to avoid
+choosing potentially oversubscribed validators is to filter out any that are
+[at capacity](../general/glossary.md#capacity) on the Targets page.
 
 Finally, if you have a very small amount of DOTs, you may not be able to have your nomination fit
 into the election set. The nominator to validator mapping has to fit in a single block, and if there
@@ -303,14 +311,13 @@ These concepts have been further explained in the
 [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
 and
 [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
-and
-[Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
+and [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
 
 :::
 
 ### Guides
 
-- [Be a Nominator (Polkadot)](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Guide on nominating on
-  the Kusama canary network.
-- [Stop Being a Nominator (all networks)](../maintain/maintain-guides-how-to-unbond.md) - Guide on stopping
-  nominations and withdrawing tokens.
+- [Be a Nominator (Polkadot)](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Guide on
+  nominating on the Kusama canary network.
+- [Stop Being a Nominator (all networks)](../maintain/maintain-guides-how-to-unbond.md) - Guide on
+  stopping nominations and withdrawing tokens.
