@@ -49,14 +49,16 @@ are made public to all nominators, and a nominator in turn submits a list of up 
 {{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }}
 :kusama }} candidates that it supports. In the next era, a certain number of validators having the
 most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
-As a nominator, a minimum of {{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot
-}}{{ kusama: {{ min_nominator_intention }} :kusama }} is required to submit an intention to
+As a nominator, a minimum of 
+{{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot}}{{ kusama: {{ min_nominator_intention }} :kusama }}
+ is required to submit an intention to
 nominate. The nomination intents are placed in a semi-sorted list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
 
-::: caution Minimum Nomination to Receive Staking Rewarrds
+:::caution Minimum Nomination to Receive Staking Rewarrds
 
-Although the minimum nomination intent is {{ min_nominator_intention }}, it does not guarantee
+Although the minimum nomination intent is {{ polkadot: {{ min_dot_nominator_intention }}
+DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}, it does not guarantee
 staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
 which is a dynamic value that can be much higher than {{ polkadot: {{ min_dot_nominator_intention }}
