@@ -55,7 +55,7 @@
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "ipfs-http-client": "^57.0.1",
-    "katex": "^0.15.6",
+    "katex": "^0.16.0",
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.1.0",
     "npm-run-all": "^4.1.5",
