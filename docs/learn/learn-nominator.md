@@ -211,13 +211,29 @@ more information and instructions for claiming rewards.
 
 ### What to Take Into Consideration When Nominating
 
-One thing to keep in mind as a nominator is the validator's commission. The commission is the
-percentage of the validator reward which is taken by the validator before the rewards are split
-among the nominators. As a nominator, you may think that the lowest commission is best. However,
-this is not always true. Validators must be able to run at break-even in order to sustainably
-continue operation. Independent validators that rely on the commission to cover their server costs
-help to keep the network decentralized. Commission is just one piece of the puzzle that you should
-consider when picking validators to nominate.
+There are many factors to consider when deciding which validator's to nominate. One useful tool for assisting in this process is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets) table. This displays potential validators in a table that can be evaluated and sorted using various metrics. Outlined below are the relevant columns to consider, followed by a brief description of each.
+
+- **payout**: How recently the validator has made it's last reward payout to nominators.
+- **nominators**: This column consists of two number values.
+
+  1) Amount of nominators currently bonded in the current era and considered `active`. 
+
+  2) Total amount of nominators that nominated that validator or `all` validators.
+
+  - You may want to avoid validators with high subscriptions as you won't receive rewards if the validator exceeds the maximum threshold of 256.
+  - Every nominator can select up to 16 validators but their bond is bonded to a single validator each era. Therefore, not all nominators are actively bonded to a given validator during every era.
+  - *example:* If nominator X has nominated validators A, B, C and D, but is actively only nominating validator B.  The `active` count (left number) for nominator X is 1, counting B exclusively.  The total or `all` count (right number) is 4, counting A, B, C and D.
+
+    |validator|payout  |nominators            |
+    |---------|--------|----------------------|
+    |*example*|recently|1 (`active`) 4 (`all`)|
+
+- **comm.**: Total commission kept by the validator (100% means nominators will not receive a reward).
+- **total stake**: The total amount of DOT tokens staked from all parties.
+- **own stake**: The amount of DOT tokens the validator has put up as a stake.
+- **return**: How profitable the validator has been.
+
+A validator's commission is the percentage of the validator reward which is taken by the validator before the rewards are split among the nominators. As a nominator, you may think that the lowest commission is best. However, this is not always true. Validators must be able to run at break-even in order to sustainably continue operation. Independent validators that rely on the commission to cover their server costs help to keep the network decentralized. Commission is just one piece of the puzzle that you should consider when picking validators to nominate.
 
 ![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
 

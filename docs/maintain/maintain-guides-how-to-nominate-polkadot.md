@@ -65,8 +65,7 @@ to stake and nominate.
 The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)) allows you to
 claim rewards from staking.
 
-The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
-estimate your earnings and this is where it's good to start picking favorites.
+The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you estimate your earnings and this is where it's good to start picking favorites.  For additional information on content provided in this table checkout [What to take into consideration when nominating](learn-nominator#what-to-take-into-consideration-when-nominating).
 
 The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
