@@ -229,7 +229,7 @@ There are many factors to consider when deciding which validator's to nominate. 
     |*example*|recently|1 (`active`) 4 (`all`)|
 
 - **comm.**: Total commission kept by the validator (100% means nominators will not receive a reward).
-- **total stake**: The total amount of DOT tokens staked from all parties.
+- **total stake**: The total amount of DOT tokens staked by all parties.
 - **own stake**: The amount of DOT tokens the validator has put up as a stake.
 - **return**: How profitable the validator has been.
 
