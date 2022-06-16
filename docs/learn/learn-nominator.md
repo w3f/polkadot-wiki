@@ -225,10 +225,11 @@ each.
   2) Total amount of nominators that nominated that validator or `all` validators.
 
   - You may want to avoid validators with high subscriptions as you won't receive rewards if the
-    validator exceeds the maximum threshold of 256.
+    validator becomes oversubscribed, exceeding the maximum threshold of 256.
   - Every nominator can select up to 16 validators but their bond is bonded to a single validator
     each era. Therefore, not all nominators are actively bonded to a given validator during every
-    era.
+    era. For additional information on the selection process checkout the research behind
+    [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
   - _example:_ If nominator X has nominated validators A, B, C and D, but is actively only
     nominating validator B. The `active` count (left number) for nominator X is 1, counting B
     exclusively. The total or `all` count (right number) is 4, counting A, B, C and D.
@@ -247,8 +248,10 @@ A validator's commission is the percentage of the validator reward which is take
 before the rewards are split among the nominators. As a nominator, you may think that the lowest
 commission is best. However, this is not always true. Validators must be able to run at break-even
 in order to sustainably continue operation. Independent validators that rely on the commission to
-cover their server costs help to keep the network decentralized. Commission is just one piece of the
-puzzle that you should consider when picking validators to nominate.
+cover their server costs help to keep the network decentralized. Some validators, such as Binance or
+Kraken, keep 100% of the commission to payout their staking service clients and therefore do not
+provide any rewards to external nominators. Commission is just one piece of the puzzle that you
+should consider when picking validators to nominate.
 
 ![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
 
