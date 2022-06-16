@@ -220,9 +220,9 @@ each.
 - **payout**: How recently the validator has made it's last reward payout to nominators.
 - **nominators**: This column consists of two number values.
 
-  1. Amount of nominators currently bonded in the current era and considered `active`.
+  1) Amount of nominators currently bonded in the current era and considered `active`.
 
-  2. Total amount of nominators that nominated that validator or `all` validators.
+  2) Total amount of nominators that nominated that validator or `all` validators.
 
   - You may want to avoid validators with high subscriptions as you won't receive rewards if the
     validator exceeds the maximum threshold of 256.
