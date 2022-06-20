@@ -114,7 +114,7 @@ parachain in the network.
 
 ## Shards
 
-Every shard in Ethereum 2.0 has the same STF. Each shards will submit "crosslinks" to the beacon chain
+Every shard in Ethereum 2.0 has the same STF. Each shard will submit "crosslinks" to the beacon chain
 and implement an eWasm execution environment. EWasm is a restricted subset of Wasm for contracts in
 Ethereum. The eWasm interface provides a set of methods available to contracts. There should be a
 similar set of development tools like Truffle and Ganache to develop for eWasm. [7]
