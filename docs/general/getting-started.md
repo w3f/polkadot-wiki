@@ -291,6 +291,8 @@ This is recommended for users with backgrounds of all levels, and the course is 
 - [Polkadot's light paper][light-paper] is a visual, easy to read, and less technical introduction
   into its blockchain technology. This paper dives into the components of Polkadot but is
   understandable for both a non-technical and technical reader.
+- [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot][book] -
+  a book funded by the Polkadot Treasury
 - [Polkadot's specification][spec] is a GitHub repository that holds the latest Polkadot Host
   protocol specification, Polkadot's specification tests of the many components of the network, and
   the Polkadot Runtime specification. This repo holds algorithms and explores how various processes
@@ -349,3 +351,4 @@ and maintain on the Kusama network, please head over to our [Kusama Guide][kusam
 [council voting]: ../maintain/maintain-guides-how-to-vote-councillor.md
 [treasury]: ../learn/learn-treasury.md
 [kusama guide]: https://guide.kusama.network/
+[book]: https://linktr.ee/polkadotbook
