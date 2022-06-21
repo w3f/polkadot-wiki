@@ -7,10 +7,13 @@ keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its [consensus](learn-consensus.md) mechanism. The
-system encourages DOT holders to participate as nominators. Nominators may back up to {{ polkadot_max_nominations }} 
-validators as trusted validator candidates. Both validators and nominators lock their tokens as collateral and
-receive staking rewards.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
+as its [consensus](learn-consensus.md) mechanism. The system encourages 
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
+as nominators. Nominators may back up to 
+{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }} 
+validators as trusted validator candidates. Both validators and nominators lock their tokens as collateral 
+and receive staking rewards.
 
 The staking system pays out rewards essentially equally to all validators regardless of stake.
 Having more stake on a validator does not influence the amount of block rewards it receives.
@@ -21,7 +24,7 @@ Distribution of the rewards are pro-rata to all stakers after the validator's co
 deducted. In this way, the network creates incentives for the nomination of lower-staked validators
 to create an equally-staked validator set.
 
-## How does staking work in Polkadot?
+## How does staking work?
 
 ### 1. Identifying which role you are
 
@@ -36,7 +39,8 @@ a nominator, and the [validator docs](learn-validator.md) to understand what you
 validator.
 
 If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the
-video below
+video below.
+{{ kusama: The video below demonstrates it on Polkadot, but the procedue is the same for Kusama :kusama }}
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
@@ -44,14 +48,30 @@ video below
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to
-{{ polkadot_max_nominations }} candidates that it supports. In the next era, a certain number of
-validators having the most DOT backing get elected and become active. As a nominator, a minimum of
-{{ min_nominator_intention }} is required to submit an intention to nominate. The nomination intents
-are placed in a semi-sorted list called
-[bags-list](https://github.com/paritytech/substrate/pull/9507). The bags list has two primary
-components, bags and nodes. The list is composed of bags that each describe a range of active bonded
-funds (e.g. the 1st bag will have nominators with 0 → 10 DOT, 2nd bag 11 → 20 DOT, etc). In each bag
-is a list of nodes that correspond to a nominator and their staked funds.
+{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }}
+ candidates that it supports. In the next era, a certain number of validators having the
+most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
+As a nominator, a minimum of 
+{{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}
+ is required to submit an intention to
+nominate. The nomination intents are placed in a semi-sorted list called
+[bags-list](https://github.com/paritytech/substrate/pull/9507).
+
+:::caution Minimum Nomination to Receive Staking Rewards
+
+Although the minimum nomination intent is {{ polkadot: {{ min_dot_nominator_intention }}
+DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}, it does not guarantee
+staking rewards. The nominated amount has to be greater than
+[minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
+which is a dynamic value that can be much higher than {{ polkadot: {{ min_dot_nominator_intention }}
+DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}.
+
+:::
+
+{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The bags list
+has two primary components, bags and nodes. The list is composed of bags that each describe a range
+of active bonded funds (e.g. the 1st bag will have nominators with 0 → 10 DOT, 2nd bag 11 → 20 DOT,
+etc). In each bag is a list of nodes that correspond to a nominator and their staked funds.
 
 The bags-list pallet is designed to be self-maintaining, with minimal effort from the blockchain,
 making it extremely scalable. Let us explore the sorting functionality of the bags list with an
@@ -80,15 +100,17 @@ This sorting functionality is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system. The bags-list is capable of including an unlimited number of nodes, subject
 to the chain's runtime storage. In the current staking system configuration, the bags list keeps
-{{ max_nominator_count }} nomination intents, of which, 22,500 come out as the electing nominators.
+{{ max_nominator_count }} nomination intents, of which, at most
+{{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} come out as the electing nominators.
 Check [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Submitting a nomination intent does not guarantee staking rewards. The stake of the top 22,500
-nominators is applied to the validators in the active set. To avail staking rewards, ensure that the
-number of tokens bonded is higher than the minimum active nomination. For more information, check
-the [nominator guide](learn-nominator.md)
+Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
+{{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} nominators is applied to the
+validators in the active set. To avail staking rewards, ensure that the number of tokens bonded is
+higher than the minimum active nomination. For more information, check the
+[nominator guide](learn-nominator.md)
 
 :::
 
@@ -169,7 +191,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - There are no tips for any transactions processed.
 - They do NOT charge any commission fees.
 - Total reward amount is 100 DOT tokens.
-- The current minimum amount of DOT to be a validator is 350 (note that this is *not* the actual
+- The current minimum amount of DOT to be a validator is 350 (note that this is _not_ the actual
   value, which fluctuates, but merely an assumption for purposes of this example; to understand how
   the actual minimal stake is calculated, see
   [here](../general/faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
@@ -190,7 +212,7 @@ The following example should clarify the above. For simplicity, we have the foll
 |     John      |          150           |            0.375            |  37.5   |
 |   **Kitty**   |           50           |            0.125            |  12.5   |
 
-*Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively.*
+_Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
 
 Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT
 than those in pool A because pool A has more overall stake. Sam has staked 50 DOT in pool A, but he
@@ -263,10 +285,10 @@ compared to a validators.
 
 ### Want to stake DOT?
 
-- [Nominator Guide](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Become a nominator on the Polkadot
-  network.
-- [Validator Guide](../maintain/maintain-guides-how-to-validate-polkadot.md) - Become a validator on the Polkadot
-  network.
+- [Nominator Guide](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Become a nominator on
+  the Polkadot network.
+- [Validator Guide](../maintain/maintain-guides-how-to-validate-polkadot.md) - Become a validator on
+  the Polkadot network.
 
 ## Slashing
 
@@ -274,8 +296,8 @@ Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the n
 modified software) in the network. They and their nominators will get slashed by losing a percentage
 of their bonded/staked DOT.
 
-Any slashed DOT will be added to the [Treasury](learn-treasury.md). The rationale for this (rather than
-burning or distributing them as rewards) is that slashes may then be reverted by the Council by
+Any slashed DOT will be added to the [Treasury](learn-treasury.md). The rationale for this (rather
+than burning or distributing them as rewards) is that slashes may then be reverted by the Council by
 simply paying out from the Treasury. This would be useful in situations such as a faulty runtime
 causing slashing or forcing validators offline through no fault of their own. In the case of
 legitimate slashing, it moves tokens away from malicious validators to those building the ecosystem
@@ -324,7 +346,7 @@ guidelines for different levels of severity for offences. To understand how slas
 calculated, see the equations in the section below.
 
 - Level 1: isolated unresponsiveness, i.e. being offline for an entire [epoch][]. Generally no
-  slashing, only [*chilling*](#chilling).
+  slashing, only [_chilling_](#chilling).
 - Level 2: concurrent unresponsiveness or isolated equivocation. Slashes a very small amount of the
   stake and chills.
 - Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
