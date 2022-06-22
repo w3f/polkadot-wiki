@@ -222,7 +222,7 @@ each.
 
   1) Amount of nominators currently bonded in the current era and considered `active`.
 
-  2) Total amount of nominators that nominated that validator or `all` validators.
+  2) Total amount of nominators that nominated that validator.
 
   - You may want to be cautious of validators with a high number of subscribers. A validator is
     considered oversubscribed when more than 256 nominators have nominated the validator. In this
