@@ -239,10 +239,10 @@ each.
     slashable offence.
   - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
     the probability of having the nominators stake applied to the validators active set. Nominating too
-    few validators could results in the nominator being excluded from the active set. This behaviour
-    is a result of the election algorithm attempting to maximize the overall network stake, while
-    minimizing the variance of the active stake across the validators. For additional information on
-    the selection process checkout the research behind
+    few validators could result in the nominators losing their rewards when none of them make it to active set or 
+    when those Validator nodes stop validating. The election algorithm attempts to maximize the overall network 
+    stake, while minimizing the variance of the active stake across the validators. For additional information on
+    the election process checkout the research behind
     [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
   - _example_: If nominator X has nominated validators A, B, C and D, but is actively only
     nominating validator B. The `active` count (left number) for nominator X is 1, counting B
