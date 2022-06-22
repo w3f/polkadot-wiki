@@ -234,7 +234,7 @@ each.
 
   - You may want to be cautious of validators with a high number of subscribers. A validator is
     considered oversubscribed when more than 256 'active' nominators are assigned to the validator. In this
-    scenario only the top 256 nominators will receive rewards. The remaining subscribers will
+    scenario only the top 256 nominators will receive rewards. The remaining nominators will
     recieve nothing, however they can also be slashed in the event that the validator commits a
     slashable offence.
   - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
