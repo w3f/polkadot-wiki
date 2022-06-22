@@ -236,7 +236,7 @@ each.
     minimizing the variance of the active stake across the validators. For additional information on
     the selection process checkout the research behind
     [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
-  - _example:_ If nominator X has nominated validators A, B, C and D, but is actively only
+  - _example_: If nominator X has nominated validators A, B, C and D, but is actively only
     nominating validator B. The `active` count (left number) for nominator X is 1, counting B
     exclusively. The total or `all` count (right number) is 4, counting A, B, C and D.
 
