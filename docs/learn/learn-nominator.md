@@ -224,11 +224,17 @@ each.
 
   2) Total amount of nominators that nominated that validator or `all` validators.
 
-  - You may want to avoid validators with high subscriptions as you won't receive rewards if the
-    validator becomes oversubscribed, exceeding the maximum threshold of 256.
-  - Every nominator can select up to 16 validators but their bond is bonded to a single validator
-    each era. Therefore, not all nominators are actively bonded to a given validator during every
-    era. For additional information on the selection process checkout the research behind
+  - You may want to be cautious of validators with a high number of subscribers. A validator is
+    considered oversubscribed when more than 256 nominators have nominated the validator. In this
+    scenario only the top 256 nominators will receive rewards. The remaining subscribers will
+    recieve nothing, however they can also be slashed in the event that the validator commits a
+    slashable offence.
+  - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
+    the probability of having the nominators stake applied to the validators active set. Having too
+    few validators could results in the nominator being excluded from the active set. This behaviour
+    is a result of the election algorithm attempting to maximize the overall network stake, while
+    minimizing the variance of the active stake across the validators. For additional information on
+    the selection process checkout the research behind
     [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
   - _example:_ If nominator X has nominated validators A, B, C and D, but is actively only
     nominating validator B. The `active` count (left number) for nominator X is 1, counting B
@@ -248,10 +254,10 @@ A validator's commission is the percentage of the validator reward which is take
 before the rewards are split among the nominators. As a nominator, you may think that the lowest
 commission is best. However, this is not always true. Validators must be able to run at break-even
 in order to sustainably continue operation. Independent validators that rely on the commission to
-cover their server costs help to keep the network decentralized. Some validators, such as Binance or
-Kraken, keep 100% of the commission to payout their staking service clients and therefore do not
-provide any rewards to external nominators. Commission is just one piece of the puzzle that you
-should consider when picking validators to nominate.
+cover their server costs help to keep the network decentralized. Some validators, operated by
+central exchanges etc., keep 100% of the commission to payout their staking service clients and
+therefore do not provide any rewards to external nominators. Commission is just one piece of the
+puzzle that you should consider when picking validators to nominate.
 
 ![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
 
