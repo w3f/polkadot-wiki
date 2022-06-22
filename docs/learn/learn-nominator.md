@@ -219,13 +219,53 @@ more information and instructions for claiming rewards.
 
 ### What to Take Into Consideration When Nominating
 
-One thing to keep in mind as a nominator is the validator's commission. The commission is the
-percentage of the validator reward which is taken by the validator before the rewards are split
-among the nominators. As a nominator, you may think that the lowest commission is best. However,
-this is not always true. Validators must be able to run at break-even in order to sustainably
-continue operation. Independent validators that rely on the commission to cover their server costs
-help to keep the network decentralized. Commission is just one piece of the puzzle that you should
-consider when picking validators to nominate.
+There are many factors to consider when deciding which validator's to nominate. One useful tool for
+assisting in this process is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets)
+table. This displays potential validators in a table that can be evaluated and sorted using various
+metrics. Outlined below are the relevant columns to consider, followed by a brief description of
+each.
+
+- **payout**: How recently the validator has made it's last reward payout to nominators.
+- **nominators**: This column consists of two number values.
+
+  1) Amount of nominators currently bonded in the current era and considered `active`.
+
+  2) Total amount of nominators that nominated that validator.
+
+  - You may want to be cautious of validators with a high number of subscribers. A validator is
+    considered oversubscribed when more than 256 'active' nominators are assigned to the validator. In this
+    scenario only the top 256 nominators will receive rewards. The remaining nominators will
+    recieve nothing, however they can be slashed in the event that validator commits a
+    slashable offence.
+  - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
+    the probability of having the nominators stake applied to the validators active set. Nominating too
+    few validators could result in the nominators losing their rewards when none of them make it to active set or 
+    when those Validator nodes stop validating. The election algorithm attempts to maximize the overall network 
+    stake, while minimizing the variance of the active stake across the validators. For additional information on
+    the election process checkout the research behind
+    [nominated proof-of-stake](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html#polkadot-npos-1-overview--page-root).
+  - _example_: If nominator X has nominated validators A, B, C and D, but is actively only
+    nominating validator B. The `active` count (left number) for nominator X is 1, counting B
+    exclusively. The total or `all` count (right number) is 4, counting A, B, C and D.
+
+    | validator | payout   | nominators             |
+    | --------- | -------- | ---------------------- |
+    | _example_ | recently | 1 (`active`) 4 (`all`) |
+
+- **comm.**: Total commission kept by the validator (100% means nominators will not receive a
+  reward).
+- **total stake**: The total amount of DOT tokens staked by all parties.
+- **own stake**: The amount of DOT tokens the validator has put up as a stake.
+- **return**: How profitable the validator has been.
+
+A validator's commission is the percentage of the validator reward which is taken by the validator
+before the rewards are split among the nominators. As a nominator, you may think that the lowest
+commission is best. However, this is not always true. Validators must be able to run at break-even
+in order to sustainably continue operation. Independent validators that rely on the commission to
+cover their server costs help to keep the network decentralized. Some validators, operated by
+central exchanges etc., keep 100% of the commission to payout their staking service clients and
+therefore do not provide any rewards to external nominators. Commission is just one piece of the
+puzzle that you should consider when picking validators to nominate.
 
 ![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
 
