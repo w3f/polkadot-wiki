@@ -258,8 +258,10 @@ double.
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. 
-Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction 
-by 5.5, for instance.
+For additional information on lock period lengths check out the governance table on the
+{{ polkadot: [Polkadot Parameters page](../maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../kusama-parameters/#governance) :kusama }}.
+Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
+5.5.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.
