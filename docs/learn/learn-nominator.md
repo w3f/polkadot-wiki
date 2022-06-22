@@ -238,7 +238,7 @@ each.
     recieve nothing, however they can be slashed in the event that validator commits a
     slashable offence.
   - Every nominator can select up to a maxium of 16 validators, which contributes towards maximizing
-    the probability of having the nominators stake applied to the validators active set. Having too
+    the probability of having the nominators stake applied to the validators active set. Nominating too
     few validators could results in the nominator being excluded from the active set. This behaviour
     is a result of the election algorithm attempting to maximize the overall network stake, while
     minimizing the variance of the active stake across the validators. For additional information on
