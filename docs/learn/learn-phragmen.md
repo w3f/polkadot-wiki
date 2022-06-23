@@ -551,7 +551,7 @@ possible. It then runs an edge-reducing algorithm to minimize the number of vali
 nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an
-[off-chain worker](https://docs.substrate.io/v3/concepts/off-chain-workers).
+[off-chain worker](https://docs.substrate.io/reference/how-to-guides/offchain-workers/).
 In order to give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are
 not allowed in the last quarter of each era.
 
@@ -562,7 +562,7 @@ the
 or the `seqPhragménwithpostprocessing` method in the
 [Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would
 like to dive even more deeply, you can review the
-[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method.html).
+[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=Phragm%C3%A9n#the-election-process).
 
 ### Rationale for Minimizing the Number of Validators Per Nominator
 
@@ -611,9 +611,9 @@ entry to the set.
 Running the Phragmén algorithm is time-consuming, and often cannot be completed within the time
 limits of production of a single block. Waiting for calculation to complete would jeopardize the
 constant block production time of the network. Therefore, as much computation as possible is moved
-to an offchain worker, which validators can work on the problem without impacting block production
+to an off-chain worker, which validators can work on the problem without impacting block production
 time. By restricting the ability of users to make any modifications in the last 25% of an era, and
-running the selection of validators by nominators as an offchain process, validators have a
+running the selection of validators by nominators as an off-chain process, validators have a
 significant amount of time to calculate the new active validator set and allocate the nominators in
 an optimal manner.
 
