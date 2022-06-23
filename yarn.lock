@@ -2882,17 +2882,17 @@
     bn.js "^5.2.1"
     ip-regex "^4.3.0"
 
-"@polkadot/wasm-bridge@6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-bridge/-/wasm-bridge-6.1.4.tgz#ea12a24e73b511133b29795b1100663e2573b0ea"
-  integrity sha512-BgMY8+afJyVbysgyyKwkzsPYgi5+F0apDLEgZ8zOL624k+wx1aPBRalSIncge4KLxgfum4xWHnDLR5zNWJNUAg==
+"@polkadot/wasm-bridge@6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-bridge/-/wasm-bridge-6.1.5.tgz#f77e3605eb30ac199a8d3a6357affb35f81f983a"
+  integrity sha512-nqxhJQTjw5P3yEY1Cd9g86GvpY/PHD3h74dszaBOg5GVPE53G18AKehb5I8daSpOHVKsItKK1n8xstxZTVI0Hg==
   dependencies:
     "@babel/runtime" "^7.18.3"
 
-"@polkadot/wasm-crypto-asmjs@6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-6.1.4.tgz#263a9d563419808a862f9dbc9594521d657b25b5"
-  integrity sha512-HThQRu9q6gcPds2XbF589Fs9PVN8yFMbnt/qTypvXbO7pq1uXwxQFFb5iI0hci9od+/SqsOLBT4D2g0VJSHQJA==
+"@polkadot/wasm-crypto-asmjs@6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-6.1.5.tgz#2446159502fc3966cdcc4a9560494e037bdec3ab"
+  integrity sha512-GsVIe+fjJ2sHfrjtqSLV0tP6nClF/7/QXZd+BAWomVMCVcR35OIrkNK2giDzlCqaTP+MiCb/UF3phrU4wsHV4Q==
   dependencies:
     "@babel/runtime" "^7.18.3"
 
@@ -2903,23 +2903,23 @@
   dependencies:
     "@babel/runtime" "^7.17.8"
 
-"@polkadot/wasm-crypto-init@6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-init/-/wasm-crypto-init-6.1.4.tgz#b1547c413d3454ed63adfa3683d907aa5b91b797"
-  integrity sha512-nyz3/mnHSVOzQD0zfFM3rwMeOvwehkI1OmZSzAaVJLGc3Y5NLbVUzdVtSCSEXQZoT8GAxoiRx44t0Ezq1QNo7w==
+"@polkadot/wasm-crypto-init@6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-init/-/wasm-crypto-init-6.1.5.tgz#86756bc85bffced837778c2c2d35dab69adfb8f5"
+  integrity sha512-VkBNc4cEkQ9YWAKLGW2ve2HV56GBHii3Xy4QYV+8OFYiOUbBMDVmuAvjlCjxiwa8nUxLzgCIz0HqqUx2YzxkhQ==
   dependencies:
     "@babel/runtime" "^7.18.3"
-    "@polkadot/wasm-bridge" "6.1.4"
-    "@polkadot/wasm-crypto-asmjs" "6.1.4"
-    "@polkadot/wasm-crypto-wasm" "6.1.4"
+    "@polkadot/wasm-bridge" "6.1.5"
+    "@polkadot/wasm-crypto-asmjs" "6.1.5"
+    "@polkadot/wasm-crypto-wasm" "6.1.5"
 
-"@polkadot/wasm-crypto-wasm@6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-wasm/-/wasm-crypto-wasm-6.1.4.tgz#355e248b76f984ff055d79bb06570849773e9fe5"
-  integrity sha512-Kwrcx/6qN5Q1dezezzdBX2+uoTAi2uv1FCfdF3ivG03l01GdKdzj4Y/u0vk4Mz6pBMt9ZcjXQK24JRxkeCkGTQ==
+"@polkadot/wasm-crypto-wasm@6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-wasm/-/wasm-crypto-wasm-6.1.5.tgz#1a694958b8aedf1908d0abf4d30a95e68219cef8"
+  integrity sha512-YKriV8xUnnNVCykB0c1r0JEQgGPmgPMsEfHLzKhUeE415vkj3UcfcgXuOXVSEXKqgeoCLkvlY5OL3yb3Fg+Xbw==
   dependencies:
     "@babel/runtime" "^7.18.3"
-    "@polkadot/wasm-util" "6.1.4"
+    "@polkadot/wasm-util" "6.1.5"
 
 "@polkadot/wasm-crypto-wasm@^5.1.1":
   version "5.1.1"
@@ -2937,22 +2937,22 @@
     "@polkadot/wasm-crypto-asmjs" "^5.1.1"
     "@polkadot/wasm-crypto-wasm" "^5.1.1"
 
-"@polkadot/wasm-crypto@^6.1.1", "@polkadot/wasm-crypto@^6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-6.1.4.tgz#1736266127509508a2aa4eb9c26d503bf78dff88"
-  integrity sha512-bkwjRWcwJV9wbcwVy9hKVyEpaXvbVJGNrO6QMtggPd44A2Uzdh+BxJOH0AAzpZFx7y9naHrUO502ySS00Q63gg==
+"@polkadot/wasm-crypto@^6.1.1", "@polkadot/wasm-crypto@^6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-6.1.5.tgz#a7f60ebf81297a460fa1e97f71c4db6c91d49639"
+  integrity sha512-P4MIVE0RJm+Ar0qbOFFtEvA9fkrcmu4KI929k/XiWOqqKuLogwNjZcZiWZYLG7pDIXeHciAy65nIUpV2nr0D+Q==
   dependencies:
     "@babel/runtime" "^7.18.3"
-    "@polkadot/wasm-bridge" "6.1.4"
-    "@polkadot/wasm-crypto-asmjs" "6.1.4"
-    "@polkadot/wasm-crypto-init" "6.1.4"
-    "@polkadot/wasm-crypto-wasm" "6.1.4"
-    "@polkadot/wasm-util" "6.1.4"
+    "@polkadot/wasm-bridge" "6.1.5"
+    "@polkadot/wasm-crypto-asmjs" "6.1.5"
+    "@polkadot/wasm-crypto-init" "6.1.5"
+    "@polkadot/wasm-crypto-wasm" "6.1.5"
+    "@polkadot/wasm-util" "6.1.5"
 
-"@polkadot/wasm-util@6.1.4":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-util/-/wasm-util-6.1.4.tgz#f4e79cd82787bf050f077e871c9b942eb44b56fa"
-  integrity sha512-x1qggFZ2+yeESn9euqJgNtsIIERlvlEogcNuyUvM/zvYOf1Ugjo9NrhcPJqbhRXFgcrvpc4DTfzw6M+zlIbbAQ==
+"@polkadot/wasm-util@6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-util/-/wasm-util-6.1.5.tgz#4dcd4a32d706e18a40c2de65813abad1b4cbf730"
+  integrity sha512-5OH31mz8/Ly50fNOQ6eGFcO8OtLLyTvaoJPqUmcdl6OI+1+8GLoZMoXyRdrhWjftqQFxiJnwvlpqq6VdNVDg6g==
   dependencies:
     "@babel/runtime" "^7.18.3"
 
