@@ -87,8 +87,8 @@ There can be a maximum of 100 public proposals in the proposal queue.
 
 Unanimous Council - When all members of the council agree on a proposal, it can be moved to a
 referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of
-stake voting, the smaller the amount necessary for it to pass - see "Adaptive Quorum Biasing",
-below).
+stake voting, the smaller the amount necessary for it to pass - see
+[Adaptive Quorum Biasing](#adaptive-quorum-biasing)).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum can also be voted upon, but it will be majority-carries (51% wins).
@@ -258,10 +258,9 @@ double.
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. 
-For additional information on lock period lengths check out the governance table on the
-{{ polkadot: [Polkadot Parameters page](../maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../kusama-parameters/#governance) :kusama }}.
 Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
-5.5.
+5.5. For additional information on lock period lengths check out the governance table on the
+{{ polkadot: [Polkadot Parameters page](../maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../kusama-parameters/#governance) :kusama }}.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.
@@ -361,15 +360,16 @@ rendering the per-hash blacklist invalid.
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that
+Council elections are handled by the same [Phragmén election](../docs/learn-phragmen) process that
 selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one {{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
 
-At the end of each term, [Phragmén election algorithm](learn-phragmen.md) runs and the result will
-choose the new councillors based on the vote configurations of all voters. The election also chooses
-a set number of runners up which is currently ({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} 
-that will remain in the queue with their votes intact.
+At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
+the result will choose the new councillors based on the vote configurations of all voters. The
+election also chooses a set number of runners up which is currently
+({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
+intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
 candidate from a list, a Phragmén election is a more expressive way to include each voters' views.
