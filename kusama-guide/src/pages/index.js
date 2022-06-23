@@ -26,6 +26,31 @@ function HomeSplash() {
   );
 }
 
+// Used for advertising events, conferences, etc
+// To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
+function Banner() {
+  const FixedBanner = ({ children }) => (
+    <div className="fixed-banner">
+      <div className="fixed-banner-text-container col-12 col-md-8 col-lg-10 text-center text-md-left mb-2 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
+      <a href="https://decoded.polkadot.network/?utm_source=kusama.network&utm_medium=referral&utm_campaign=decoded%202022&utm_content=notification%20banner4">
+        <p className="banner-text kusama-mainpage-build-btn homepage-font">
+          <span class="font-weight-bolder">POLKADOT DECODED </span>
+           June 29th-30th, 2022
+          <span class="d-flex d-lg-inline-block pl-lg-3"> Join 100+ talks, live streamed from 4 locations worldwide.</span>
+        </p>
+        <button className="banner-button kusama-mainpage-build-btn homepage-font">
+          Sign Up
+        </button>
+        </a>
+      </div>
+    </div>
+  )
+
+  return (
+    <FixedBanner />
+  )
+}
+
 export default function Index() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -158,6 +183,7 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <Banner />
     </Layout>
   );
 }
