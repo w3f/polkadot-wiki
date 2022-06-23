@@ -25,6 +25,7 @@ Please see the [Wallets](build-wallets.md) page.
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains.
   [Repo](https://github.com/itering/subscan-essentials).
 - [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain explorer.
+- [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi support across 40+ parachains.
 
 ## Network Monitoring & Reporting
 
