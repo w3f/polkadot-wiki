@@ -162,8 +162,8 @@ validators on the Polkadot network and critical to the GRANDPA finality gadget.
 
 ## Resources
 
-- [Key discovery attack on BIP32-Ed25519](https://forum.web3.foundation/t/key-recovery-attack-on-bip32-ed25519/44) -
-  Forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition to the
+- [Key discovery attack on BIP32-Ed25519](https://web.archive.org/web/20210513183118/https://forum.w3f.community/t/key-recovery-attack-on-bip32-ed25519/44) -
+  Archive of forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition to the
   sr25519 variant.
 - [Account signatures and keys in Polkadot](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
   Research post by Web3 researcher Jeff Burdges.
