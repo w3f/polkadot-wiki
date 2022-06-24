@@ -123,7 +123,7 @@ the file and continue to use the mnemonic phrase to restore the account if neces
 If you've created an account with Parity Signer, you can recover that account with your seed words.
 If you generated the account with another wallet, there may be additional steps necessary, including
 setting the derivation path: see
-[this document](https://github.com/paritytech/parity-signer/blob/master/docs/tutorials/Recover-Account-Polkadotjs.md)
+[this document](https://github.com/paritytech/parity-signer/blob/master/docs/src/tutorials/Recover-Account-Polkadotjs.md)
 for details.
 
 On Parity Signer, click on the top-right user icon on the screen. Proceed to "+ Add Identity". On
