@@ -69,7 +69,7 @@ This prevents use cases that go beyond the current craze of _digital dust
 gathering NFTs_ on Ethereum - profile pictures, generative "look once and then
 put away" art, [ENS](ens) addresses, and [proof of attendance badges](https://poap.xyz/).
 
-#### A typical [NFT on Ethereum](https://opensea.io/assets/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
+#### A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)
 
 ![](../assets/nft/samurai.png)
 

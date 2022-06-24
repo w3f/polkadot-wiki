@@ -109,7 +109,7 @@ transfers on Statemint. Statemint integration is discussed in the next page of t
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
 Account balance information is stored in
-[`AccountData`](https://docs.substrate.io/rustdocs/latest/pallet_balances/struct.AccountData.html).
+[`AccountData`](https://paritytech.github.io/substrate/master/pallet_balances/struct.AccountData.html).
 Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in
@@ -223,7 +223,7 @@ The correct way to uniquely identify an extrinsic on a Substrate-based chain is 
 (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of
 extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a
 transaction. This methodology is reflected in the Substrate codebase itself, for example to
-[reference a previous transaction](https://docs.substrate.io/rustdocs/latest/pallet_multisig/struct.Timepoint.html)
+[reference a previous transaction](https://paritytech.github.io/substrate/master/pallet_multisig/struct.Multisig.html)
 from the Multisig pallet.
 
 ### Events

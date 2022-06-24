@@ -70,10 +70,10 @@ can also be mapped directly to and from Substrate's SS58 scheme from existing ac
 ### Substrate Contracts
 
 Substrate offers a built-in
-[contract pallet](https://docs.substrate.io/rustdocs/latest/pallet_contracts/index.html);
+[contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html);
 as time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
 Additionally, there is the
-[EVM Pallet](https://docs.substrate.io/v3/runtime/smart-contracts/#evm-pallet), which allows
+[EVM Pallet](https://paritytech.github.io/frontier/frame/evm.html), which allows
 a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
 Ethereum contracts.
 
@@ -153,7 +153,7 @@ smart contract example? Ask us to add it to this page!**
 
 - [OpenBrush](https://docs.openbrush.io/): an `ink!` library providing standard contracts based on
   [PSP](https://github.com/w3f/PSPs) with useful contracts and macros for building.
-- [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by [Patract Labs](https://patract.io/).
+- [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by [Patract Labs](https://github.com/patractlabs).
 
 ## Smart Contract Environments are still Maturing
 
