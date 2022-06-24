@@ -91,9 +91,9 @@ secp256k1 curve. This curve is considered much more secure than NIST curves, whi
 considered possibly _even more_ secure than this one and allows for easier implementation of Schnorr
 signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
 
-The choice of using Schnorr signatures over using ECDSA is not so cut and dry. As stated in Jeff
-Burdges' (a Web3 researcher)
-[original forum post](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70/2)
+The choice of using Schnorr signatures over using ECDSA is not so cut and dry. Jeff
+Burdges (a Web3 researcher) provides additional details on the decision in this
+[research post](https://research.web3.foundation/en/latest/polkadot/keys/1-accounts.html)
 on the topic:
 
 :::info Choosing Schnorr signatures over ECDSA signatures
@@ -165,8 +165,8 @@ validators on the Polkadot network and critical to the GRANDPA finality gadget.
 - [Key discovery attack on BIP32-Ed25519](https://forum.web3.foundation/t/key-recovery-attack-on-bip32-ed25519/44) -
   Forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition to the
   sr25519 variant.
-- [Account signatures and keys in Polkadot](https://forum.web3.foundation/t/account-signatures-and-keys-in-polkadot/70) -
-  Original forum post by Web3 researcher Jeff Burdges.
+- [Account signatures and keys in Polkadot](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
+  Research post by Web3 researcher Jeff Burdges.
 - [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 
 ## Appendix A: On the security of curves
