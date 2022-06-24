@@ -95,19 +95,19 @@ Please see the [Wallets](build-wallets.md) page.
 
 ## Libraries
 
-### Polkadot-JS Common
+### Polkadot-JS API
 
-Polkadot-JS Common provides various utility functions that are used across all projects in the
+The Polkadot-JS API provides various utility functions that are used across all projects in the
 `@polkadot` namespace and is split into a number of internal utility packages. The documentation and
 usage instructions are provided at
-[Polkadot-JS/Common API Documentation](https://polkadot.js.org/common/).
+[Polkadot-JS API Documentation](https://polkadot.js.org/docs/).
 
-- [@polkadot/keyring](https://polkadot.js.org/common/keyring/) This allows you to create and load
+- [@polkadot/keyring](https://polkadot.js.org/docs/keyring) This allows you to create and load
   accounts in JavaScript. It is helpful for creating wallets or any application that will require
   the user to write to chain. [Examples](https://polkadot.js.org/docs/keyring/start/create).
-- [@polkadot/util](https://polkadot.js.org/common/util/) Utility functions like checking if a string
+- [@polkadot/util](https://polkadot.js.org/docs/keyring/start/install#other-dependencies) Utility functions like checking if a string
   is hex-encoded.
-- [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Useful cryptographic
+- [@polkadot/util-crypto](https://polkadot.js.org/docs/util-crypto/) Useful cryptographic
   utilities for developing with Polkadot.
 
 ### CLI Tools
@@ -176,7 +176,7 @@ languages exist:
 - [C++](https://github.com/soramitsu/kagome/tree/master/core/scale)
 - [TypeScript](https://github.com/polkadot-js/api)
 - [AssemblyScript](https://github.com/LimeChain/as-scale-codec)
-- [Haskell](https://github.com/airalab/hs-web3/tree/master/src/Codec)
+- [Haskell](https://github.com/airalab/hs-web3)
 - [Java](https://github.com/emeraldpay/polkaj)
 - [Python](https://github.com/polkascan/py-scale-codec)
 
