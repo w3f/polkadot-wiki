@@ -25,7 +25,7 @@ prior contact and anyone doing so is likely trying to scam you.
   Information on hosting meetups, applying for funding, and materials for running it.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
-- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot.html)
+- [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html)
 
 ### Events
 

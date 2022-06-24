@@ -131,9 +131,9 @@ over time until all the funds are transferable.
 
 More info:
 
-- [Lockable Currency](https://docs.substrate.io/rustdocs/latest/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://docs.substrate.io/rustdocs/latest/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://docs.substrate.io/rustdocs/latest/pallet_vesting/struct.Vesting.html)
+- [Lockable Currency](https://paritytech.github.io/substrate/master/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://paritytech.github.io/substrate/master/frame_support/traits/struct.WithdrawReasons.html)
+- [Vesting](https://paritytech.github.io/substrate/master/pallet_vesting/index.html)
 
 ## Extrinsics and Events
 
