@@ -241,7 +241,7 @@ finalize, and treat as correct.
 
 See the [Cumulus overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a
 more detailed description of Cumulus, and for those with experience in Substrate, give the
-[Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/) a try.
+[parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) a try.
 
 Cumulus is still in development, but the idea is that it should be simple
 to take a Substrate chain and add the parachain code by importing the crates and adding a single line
@@ -366,7 +366,7 @@ Once the executable is built, launch collators for your parachain:
 ```
 
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
-has created a [Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/) to show you how.
+has created [parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) to show you how.
 Get stuck or need support along the way? Join the
 [Parachain Technical matrix chat channel](https://matrix.to/#/#parachain-technical:matrix.parity.io)
 and connect with other builders there.
@@ -444,7 +444,7 @@ selecting any parachain of choice.
 
 For the purpose of these following examples, we will be using the
 Rococo testnet "Custom Node" underneath "Development", following the
-[Cumulus tutorial](https://docs.substrate.io/tutorials/v3/cumulus/start-relay/).
+[parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/).
 
 ### Parachain Playground
 
@@ -492,7 +492,7 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## Resources 
 
-- [Parachains Guide Overview](https://docs.substrate.io/how-to-guides/v3/parachains/connect/)
+- [Parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/)
 - [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)

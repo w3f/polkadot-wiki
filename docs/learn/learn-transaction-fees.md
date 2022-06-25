@@ -38,7 +38,7 @@ accounts for the time to execute the transaction. All weights, even the base wei
 are a measure of time to execute on some standard hardware.
 
 The runtime 
-[converts weight units to balance units](https://docs.substrate.io/how-to-guides/v3/weights/calculate-fees/) 
+[converts weight units to balance units](https://docs.substrate.io/reference/how-to-guides/weights/calculate-fees/) 
 as part of the fee calculation.
 
 The weight fee is the sum of the base weight and the sum of the total weight consumed by 
@@ -52,7 +52,7 @@ and the weight would be one base weight and then the sum of the weights for `bon
 :::
 
 To learn more about the motivation of a weight fee, check out this 
-[Substrate doc](https://docs.substrate.io/v3/concepts/weight/) on weights.
+[Substrate doc](https://docs.substrate.io/main-docs/build/tx-weights-fees/) on weights.
 
 The length fee is a per-byte fee multiplier for the size of the transaction in bytes.
 
@@ -167,6 +167,4 @@ within some acceptable range of their own system clocks.
 ## Learn More
 
 - [Web3 Foundation Research](https://research.web3.foundation/en/latest/polkadot/overview/2-token-economics.html)
-- [Substrate Weights](https://docs.substrate.io/v3/concepts/weight/)
-- [Substrate Fees](https://docs.substrate.io/v3/runtime/weights-and-fees/)
-- [Extrinsics](https://docs.substrate.io/v3/concepts/extrinsics/)
+- [Substrate Extrinsics, Weights & Fees](https://docs.substrate.io/main-docs/build/tx-weights-fees/)

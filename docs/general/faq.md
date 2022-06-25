@@ -277,7 +277,7 @@ Of the protocols that are custom to Substrate, there are the legacy Substrate st
 request-response for getting information on blocks (sync), a light client protocol, a notification
 protocol for transactions, and block announcement. For detailed information on how Substrate uses
 libp2p and the standard and custom protocols, please see the
-[networking documentation](https://docs.substrate.io/rustdocs/latest/sc_network/index.html).
+[networking documentation](https://paritytech.github.io/substrate/master/sc_network/index.html).
 
 ### How does libp2p differ from IPFS?
 
@@ -305,7 +305,7 @@ follows the following formula:
 base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
-Please see the [fee calculation](https://docs.substrate.io/v3/runtime/weights-and-fees/) page in
+Please see the [fee calculation](https://docs.substrate.io/reference/how-to-guides/weights/calculate-fees/) page in
 the Substrate documentation for more detailed information.
 
 ## Answered by Gav series

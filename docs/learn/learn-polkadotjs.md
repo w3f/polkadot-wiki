@@ -103,4 +103,4 @@ For more user-friendly wallets, check out the supported and treasury-funded wall
 ### Documentation
 
 - [Official polkadot{.js} docs](https://polkadot.js.org/docs/)
-- [Substrate docs on Polkadot-JS](https://docs.substrate.io/v3/integration/polkadot-js/)
+- [Substrate docs on Polkadot-JS](https://docs.substrate.io/reference/command-line-tools/polkadot-apps/)

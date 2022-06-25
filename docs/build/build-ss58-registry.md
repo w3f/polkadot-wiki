@@ -6,7 +6,7 @@ description: Information about SS58 encoding.
 slug: ../build-ss58-registry
 ---
 
-:::note Substrate-based chains use an [SS58 encoding](https://docs.substrate.io/v3/advanced/ss58/) for their address formats.
+:::note Substrate-based chains use an SS58 encoding for their address formats.
 
 Please see the 
 [SS58 registry](https://github.com/paritytech/ss58-registry/) to see which 
