@@ -66,6 +66,11 @@ choose whatever [VPS](#vps-list) provider that your prefer, and whatever operati
 comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
 similar for other platforms.
 
+Node hardware should run at a level at or above the standard benchmark machines. Many VPS providers
+seem to fall short in practice, despite good looking specifications. Most validators who are
+serious about setting up an active validator progress to a
+[dedicated server](#dedicated-server-providers).
+
 The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that
 validators run at least the standard hardware in order to ensure they are able to process all blocks
 in time. The following are not _minimum requirements_ but if you decide to run with less than this
@@ -622,6 +627,13 @@ other peers over the network.
 - [Linode](https://www.linode.com/)
 - [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
+
+## Dedicated server providers
+
+- [Hetzner](https://www.hetzner.com/dedicated-rootserver)
+- [OVH](https://www.ovhcloud.com/nl/bare-metal/)
+- [Scaleway](https://www.scaleway.com/en/dedibox/)
+
 
   :::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
 
