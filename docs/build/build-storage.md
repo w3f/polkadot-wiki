@@ -57,7 +57,7 @@ experimental [Parity database](https://github.com/paritytech/parity-db).
 The database is used for components that require persistent storage
 These are components like Substrate clients, Substrate light-clients & off-chain workers. 
 For more information, check out
-Substrate Developer Hub's [Storage Page](https://docs.substrate.io/v3/advanced/storage/).
+Substrate documentation [Storage Page](https://docs.substrate.io/main-docs/build/runtime-storage/).
 
 :::
 
@@ -72,17 +72,17 @@ a [`Storage Map`](https://paritytech.github.io/substrate/master/frame_support/st
 that is used to a key-value hash map,
 a [`Storage Double Map`](https://paritytech.github.io/substrate/master/frame_support/storage/trait.StorageDoubleMap.html) API
 that creates a `storage map` with two keys to provide the ability to efficiently remove all entries that have 
-a common first key, and a [`Storage N Map`](https://crates.parity.io/frame_support/storage/trait.StorageNMap.html) 
+a common first key, and a [`Storage N Map`](https://paritytech.github.io/substrate/master/frame_support/storage/trait.StorageNMap.html) 
 API that can be used to store a hash map with any arbitrary number of keys.
 
 These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can 
-be found at the [`Runtime Storage Page`](https://github.com/substrate-developer-hub/substrate-docs/blob/main/content/md/en/docs/main-docs/build/runtime-storage.md) on Substrate Developer Hub.
+be found at the [`Runtime Storage Page`](https://docs.substrate.io/main-docs/build/runtime-storage/) on Substrate Developer Hub.
 
 ### Crust Storage
 
 [Crust Network](https://crust.network) provides a Web3.0 decentralized storage network for the Metaverse. It is designed to realize core values of decentralization, privacy, and assurance. Crust supports multiple storage-layer protocols such as [IPFS](#ipfs-interplanetary-file-system), and exposes instant accessible on-chain storage functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.
 
-Crust provides a native cross-chain communnication communication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-crosschain), called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
+Crust provides a native cross-chain communication communication pallet based on [XCMP](https://wiki.polkadot.network/docs/learn-crosschain), called [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
 
 The protocol also supports most smart contract platforms, including Ethereum, with its [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
 

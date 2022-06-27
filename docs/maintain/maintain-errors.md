@@ -77,7 +77,7 @@ The table below lists the most commonly encountered errors and ways to resolve t
 
 :::note Future Error
 
-This error will not cause the TX to be discarded immediately. Instead, it will be sent to the [futures queue](https://docs.substrate.io/v3/concepts/tx-pool/#sorting), where it will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to some other error (ex. the validity period expires).*
+This error will not cause the TX to be discarded immediately. Instead, it will be sent to the [futures queue](https://docs.substrate.io/main-docs/fundamentals/transaction-lifecycle/), where it will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to some other error (ex. the validity period expires).*
 
 :::
 

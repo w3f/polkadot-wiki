@@ -73,7 +73,7 @@ Substrate offers a built-in
 [contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html);
 as time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
 Additionally, there is the
-[EVM Pallet](https://docs.rs/pallet-evm/latest/pallet_evm/), which allows
+[EVM Pallet](https://github.com/paritytech/frontier/tree/master/frame/evm#evm-module), which allows
 a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
 Ethereum contracts.
 
@@ -90,7 +90,7 @@ Here is the list of current resources available to developers who want to get st
 contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/v3/ink-workshop/pt1/) - Walks you
+- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/smart-contracts/develop-contract/) - Walks you
   through the basics of writing and deploying an ERC-20 token using `ink!`.
 
 ### Contracts Pallet

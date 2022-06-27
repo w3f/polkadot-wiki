@@ -86,6 +86,13 @@ module.exports = {
     prism: {
       theme: require("prism-react-renderer/themes/github"),
     },
+    announcementBar: {
+      id: 'announcement',
+      content: '<a target="_blank" href="https://decoded.polkadot.network/">POLKADOT DECODED June 29th-30th, 2022. Join 100+ talks, live streamed from 4 locations worldwide</a>',
+      backgroundColor: '#FFFFFF',
+      textColor: '#E6007A',
+      isCloseable: false,
+    },
     navbar: {
       title: "Guide",
       logo: {

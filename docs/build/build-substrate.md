@@ -21,7 +21,7 @@ this is done through two main approaches:
      and insecure.
 
 There is now a new paradigm: instead of specifying a centralized RPC node, developers just need to 
-define the blockchain's [chain specification](https://docs.substrate.io/v3/runtime/chain-specs/) for 
+define the blockchain's [chain specification](https://docs.substrate.io/main-docs/build/chain-spec/) for 
 their application to synchronize with the chain. This is possible with Substrate connect.
 
 ## What is Substrate Connect? 
@@ -93,5 +93,4 @@ will be created in-page for them.
 - [What is a light client and why you should care?](https://www.parity.io/blog/what-is-a-light-client/)
 - [Introducing Substrate Connect: Browser-Based Light Clients for Connecting to Substrate Chains](https://www.parity.io/blog/introducing-substrate-connect)
 - [Substrate connect GitHub Repo](https://github.com/paritytech/substrate-connect/tree/master/projects/extension)
-- [Substrate connect Docs](https://docs.substrate.io/v3/integration/substrate-connect/)
   

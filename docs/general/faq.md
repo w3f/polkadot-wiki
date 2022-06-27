@@ -305,7 +305,7 @@ follows the following formula:
 base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
-Please see the [fee calculation](https://docs.substrate.io/v3/runtime/weights-and-fees/) page in
+Please see the [fee calculation](https://docs.substrate.io/reference/how-to-guides/weights/calculate-fees/) page in
 the Substrate documentation for more detailed information.
 
 ## Answered by Gav series
