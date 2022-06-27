@@ -103,11 +103,10 @@ design of the EVM:
    compiles to Wasm can potentially be used to write smart contracts. Nevertheless, it is better to
    have a dedicated domain-specific language, and for that reason Parity offers the [ink!](#ink) language.
 
-2. **Rent**. Contracts must pay rent or else hold a deposit suitably large enough in order to
-   justify its existence on-chain. When a contract does not uphold this, it may create what's called
-   a *tombstone* which is a reference to the contract. In some conditions, the contract will be
-   deleted outright along with its storage if it does not maintain these requirements.
-
+2. **Deposit**. Contracts must hold a deposit (named _ContractDeposit_ ) suitably large enough in order to
+   justify their existence on-chain. A deployer needs to deposit this into the new contract on 
+   top of the _ExistentialDeposit_.
+   
 3. **Caching**. Contracts are cached by default and therefore means they only need to be deployed
    once and afterward be instantiated as many times as you want. This helps to keep the storage load
    on the chain down to the minimum. On top of this, when a contract is no longer being used and the
