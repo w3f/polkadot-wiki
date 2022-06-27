@@ -41,7 +41,7 @@ Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-form
 handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
 Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
-See the [SS58 page](https://docs.substrate.io/v3/advanced/ss58/) in the Substrate documentation for
+See the [SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses) in the Substrate documentation for
 encoding information and a more comprehensive list of network prefixes.
 
 :::warning Do not use regular expressions (regex) to validate addresses
@@ -49,8 +49,7 @@ encoding information and a more comprehensive list of network prefixes.
 Always verify using the
 prefix and checksum of the address. Substrate API Sidecar provides an
 `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
-address. If you want to validate addresses in another way, see the
-[validation documentation](https://docs.substrate.io/v3/advanced/ss58/#validating-addresses).
+address.
 
 :::
 
@@ -109,7 +108,7 @@ transfers on Statemint. Statemint integration is discussed in the next page of t
 ## Free vs. Reserved vs. Locked vs. Vesting Balance
 
 Account balance information is stored in
-[`AccountData`](https://docs.substrate.io/rustdocs/latest/pallet_balances/struct.AccountData.html).
+[`AccountData`](https://paritytech.github.io/substrate/master/pallet_balances/struct.AccountData.html).
 Polkadot primarily deals with two types of balances: free and reserved.
 
 For most operations, free balance is what you are interested in. It is the "power" of an account in
@@ -131,9 +130,9 @@ over time until all the funds are transferable.
 
 More info:
 
-- [Lockable Currency](https://docs.substrate.io/rustdocs/latest/frame_support/traits/trait.LockableCurrency.html)
-- [Lock Withdraw Reasons](https://docs.substrate.io/rustdocs/latest/frame_support/traits/enum.WithdrawReason.html)
-- [Vesting](https://docs.substrate.io/rustdocs/latest/pallet_vesting/struct.Vesting.html)
+- [Lockable Currency](https://paritytech.github.io/substrate/master/frame_support/traits/trait.LockableCurrency.html)
+- [Lock Withdraw Reasons](https://paritytech.github.io/substrate/master/frame_support/traits/struct.WithdrawReasons.html)
+- [Vesting Info](https://paritytech.github.io/substrate/master/pallet_vesting/struct.VestingInfo.html)
 
 ## Extrinsics and Events
 
@@ -147,7 +146,7 @@ Extrinsics constitute information from the outside world and take on three forms
 
 As an infrastructure provider, you will deal almost exclusively with signed transactions. You will,
 however, see other extrinsics within the blocks that you decode. Find more information in the
-[Substrate documentation](https://docs.substrate.io/v3/concepts/extrinsics/).
+[Substrate documentation](https://docs.substrate.io/main-docs/build/tx-weights-fees/).
 
 Inherents contain information that is not provably true, but validators agree on based on some
 measure of reasonability. For example, a timestamp cannot be proved, but validators can agree that
@@ -223,7 +222,7 @@ The correct way to uniquely identify an extrinsic on a Substrate-based chain is 
 (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of
 extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a
 transaction. This methodology is reflected in the Substrate codebase itself, for example to
-[reference a previous transaction](https://docs.substrate.io/rustdocs/latest/pallet_multisig/struct.Timepoint.html)
+[reference a previous transaction](https://paritytech.github.io/substrate/master/pallet_multisig/struct.Timepoint.html)
 from the Multisig pallet.
 
 ### Events
@@ -248,7 +247,7 @@ Polkadot uses weight-based fees that, unlike gas, are charged _pre-dispatch._ Us
 
 Parity's integration tools should allow you to deal with decoded data. If you'd like to bypass them
 and interact directly with the chain data or implement your own codec, Polkadot encodes block and
-transaction data using the [SCALE codec](https://docs.substrate.io/v3/advanced/scale-codec/).
+transaction data using the [SCALE codec](https://docs.substrate.io/reference/scale-codec/).
 
 ## Runtime Upgrades
 

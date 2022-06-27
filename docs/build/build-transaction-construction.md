@@ -73,7 +73,7 @@ in general the serialization format can be described as follows:
 
 The metadata provides you with all of the information required to know how to construct the serialized call data 
 specific to your transaction. You can read more about the metadata, its format and how to get it in the 
-[Substrate documentation](https://docs.substrate.io/v3/runtime/metadata/).
+[Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
 \* Polkadot supports sr25519, ed25519, and ECDSA as signing schemes.
 
@@ -245,7 +245,7 @@ There are several ways to submit a signed payload:
 ## Notes
 
 Some addresses to use in the examples. See
-[Subkey documentation](https://docs.substrate.io/v3/tools/subkey/).
+[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/).
 
 ```bash
 $ subkey --network polkadot generate

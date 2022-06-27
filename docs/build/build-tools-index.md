@@ -120,7 +120,7 @@ usage instructions are provided at
   Tool to construct, sign, and broadcast transactions. Signing can be done offline.
 - [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - A С++ API for Polkadot, can
   build `clip`, a command line tool.
-- [Subkey](https://docs.substrate.io/v3/tools/subkey/) - Command line utility for
+- [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) - Command line utility for
   generating and inspecting key pairs.
 
 ### WASM
@@ -159,7 +159,7 @@ WebAssembly related tools and projects.
 
 ### SCALE Codec
 
-The [SCALE](https://docs.substrate.io/v3/advanced/scale-codec/) (Simple Concatenated
+The SCALE (Simple Concatenated
 Aggregate Little-Endian) Codec is a lightweight, efficient, binary serialization and deserialization
 codec.
 
@@ -170,15 +170,7 @@ the decoding context has all type knowledge about the encoded data.
 It is used in almost all communication to/from Substrate nodes, so implementations in different
 languages exist:
 
-- [Ruby](https://github.com/itering/scale.rb)
-- [Rust](https://github.com/paritytech/parity-scale-codec)
-- [Go](https://github.com/itering/scale.go)
-- [C++](https://github.com/soramitsu/kagome/tree/master/core/scale)
-- [TypeScript](https://github.com/polkadot-js/api)
-- [AssemblyScript](https://github.com/LimeChain/as-scale-codec)
-- [Haskell](https://github.com/airalab/hs-web3/tree/master/src/Codec)
-- [Java](https://github.com/emeraldpay/polkaj)
-- [Python](https://github.com/polkascan/py-scale-codec)
+- [Substrate Awesome](https://github.com/substrate-developer-hub/awesome-substrate#scale-codec) maintains a list of SCALE codex implementations.
 
 ## Data Crawling and Conversion
 

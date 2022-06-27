@@ -190,7 +190,7 @@ values={[
 ## Get Substrate
 
 Follow instructions as outlined
-[here](https://docs.substrate.io/v3/getting-started/overview/) - note that Windows users will
+[here](https://docs.substrate.io/quick-start/) - note that Windows users will
 have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
