@@ -57,7 +57,7 @@ All referenda have an *enactment delay* associated with them. This is the period
 referendum ending and, assuming the proposal was approved, the changes being enacted. 
 
 Referenda is considered *baked* if it is closed and tallied. Again, assuming the proposal was 
-approved, it would be scheduled for enactment. Referenda is considered *unbaked* if it is pending 
+approved, it would be scheduled for enactment. Referenda is considered *unbaked* if is pending 
 an outcome, i.e. being voted on.
 
 For the first
@@ -75,7 +75,7 @@ Anyone can propose a referendum by depositing the minimum amount of tokens for a
 to support it - this action is called *endorsing*. The proposal with the highest amount of bonded
 support will be selected to be a referendum in the next voting cycle.
 
-Note that this may be different from the absolute number of endorsements; for instance, three accounts
+Note that this may be different from the absolute number of seconds; for instance, three accounts
 bonding {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a 
 single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}. 
 
@@ -87,8 +87,8 @@ There can be a maximum of 100 public proposals in the proposal queue.
 
 Unanimous Council - When all members of the council agree on a proposal, it can be moved to a
 referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of
-stake voting, the smaller the amount necessary for it to pass - see "Adaptive Quorum Biasing",
-below).
+stake voting, the smaller the amount necessary for it to pass - see
+[Adaptive Quorum Biasing](#adaptive-quorum-biasing)).
 
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum can also be voted upon, but it will be majority-carries (51% wins).
@@ -246,20 +246,21 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-| Lock Periods | Vote Multiplier |
-| :----------: | :-------------: |
-|      0       |       0.1       |
-|      1       |        1        |
-|      2       |        2        |
-|      4       |        3        |
-|      8       |        4        |
-|      16      |        5        |
-|      32      |        6        |
+| Lock Periods | Vote Multiplier | Length in Days |
+| :----------: | :-------------: | :------------: |
+|      0       |       0.1       |       0        |
+|      1       |        1        |      28        |
+|      2       |        2        |      56        |
+|      4       |        3        |     112        |
+|      8       |        4        |     224        |
+|      16      |        5        |     448        |
+|      32      |        6        |     896        |
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. 
-Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction 
-by 5.5, for instance.
+Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
+5.5. For additional information regarding the timeline of governance events, check out the governance section on the
+{{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.
@@ -341,7 +342,7 @@ it will be left to the stakeholders *en masse* to determine the fate of the prop
 ### Blacklisting
 
 A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+referendum (if any) is immediately [canceled](#canceling). Additionally, a blacklisted proposal's
 hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
 proposals that could be submitted with the same hash, i.e.
 [proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
@@ -359,15 +360,16 @@ rendering the per-hash blacklist invalid.
 
 All stakeholders are free to signal their approval of any of the registered candidates.
 
-Council elections are handled by the same [Phragmén election](learn-phragmen.md) process that
+Council elections are handled by the same [Phragmén election](../docs/learn-phragmen) process that
 selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one {{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
 
-At the end of each term, [Phragmén election algorithm](learn-phragmen.md) runs and the result will
-choose the new councillors based on the vote configurations of all voters. The election also chooses
-a set number of runners up which is currently ({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} 
-that will remain in the queue with their votes intact.
+At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
+the result will choose the new councillors based on the vote configurations of all voters. The
+election also chooses a set number of runners up which is currently
+({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
+intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
 candidate from a list, a Phragmén election is a more expressive way to include each voters' views.
