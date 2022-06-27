@@ -73,7 +73,7 @@ Substrate offers a built-in
 [contract pallet](https://paritytech.github.io/substrate/master/pallet_contracts/index.html);
 as time goes on, more parachains will support [WebAssembly](../learn/learn-wasm.md) smart contracts.
 Additionally, there is the
-[EVM Pallet](https://paritytech.github.io/frontier/frame/evm.html), which allows
+[EVM Pallet](https://docs.rs/pallet-evm/latest/pallet_evm/), which allows
 a parachain to implement the Ethereum Virtual Machine, thereby supporting almost direct ports of
 Ethereum contracts.
 

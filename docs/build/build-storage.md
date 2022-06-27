@@ -76,7 +76,7 @@ a common first key, and a [`Storage N Map`](https://crates.parity.io/frame_suppo
 API that can be used to store a hash map with any arbitrary number of keys.
 
 These layered APIs act as runtime storage that allows you to store data in your blockchain. More information can 
-be found at the [`Runtime Storage Page`](https://paritytech.github.io/substrate/master/frame_support/storage/index.html) on Substrate Developer Hub.
+be found at the [`Runtime Storage Page`](https://github.com/substrate-developer-hub/substrate-docs/blob/main/content/md/en/docs/main-docs/build/runtime-storage.md) on Substrate Developer Hub.
 
 ### Crust Storage
 

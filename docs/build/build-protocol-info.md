@@ -223,7 +223,7 @@ The correct way to uniquely identify an extrinsic on a Substrate-based chain is 
 (height or hash) and the extrinsic's index. Substrate defines a block as a header and an array of
 extrinsics; therefore, an index in the array at a canonical height will always uniquely identify a
 transaction. This methodology is reflected in the Substrate codebase itself, for example to
-[reference a previous transaction](https://paritytech.github.io/substrate/master/pallet_multisig/struct.Multisig.html)
+[reference a previous transaction](https://paritytech.github.io/substrate/master/pallet_multisig/struct.Timepoint.html)
 from the Multisig pallet.
 
 ### Events
