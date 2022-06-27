@@ -57,7 +57,7 @@ All referenda have an *enactment delay* associated with them. This is the period
 referendum ending and, assuming the proposal was approved, the changes being enacted. 
 
 Referenda is considered *baked* if it is closed and tallied. Again, assuming the proposal was 
-approved, it would be scheduled for enactment. Referenda is considered *unbaked* if it is pending
+approved, it would be scheduled for enactment. Referenda is considered *unbaked* if it is pending 
 an outcome, i.e. being voted on.
 
 For the first
@@ -365,11 +365,10 @@ selects validators from the available pool based on nominations. However, token 
 councillors are isolated from any of the nominations they may have on validators. Council terms last
 for one {{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
 
-At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
-the result will choose the new councillors based on the vote configurations of all voters. The
-election also chooses a set number of runners up which is currently
-({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
-intact.
+At the end of each term, [Phragmén election algorithm](learn-phragmen.md) runs and the result will
+choose the new councillors based on the vote configurations of all voters. The election also chooses
+a set number of runners up which is currently ({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} 
+that will remain in the queue with their votes intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
 candidate from a list, a Phragmén election is a more expressive way to include each voters' views.
