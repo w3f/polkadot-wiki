@@ -446,7 +446,7 @@ Currently, the **DepositBase** equals `deposit(1, 88)` (key size is 32; value is
 bytes) and the **DepositFactor** equals `deposit(0, 32)` (additional address of 32 bytes).
 
 The deposit function in JavaScript is defined below, cribbed from the
-[Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/constants/src/lib.rs#L30).
+[Rust source](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/constants/src/lib.rs).
 
 ```js
 // Polkadot

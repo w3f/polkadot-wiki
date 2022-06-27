@@ -132,7 +132,7 @@ More info:
 
 - [Lockable Currency](https://paritytech.github.io/substrate/master/frame_support/traits/trait.LockableCurrency.html)
 - [Lock Withdraw Reasons](https://paritytech.github.io/substrate/master/frame_support/traits/struct.WithdrawReasons.html)
-- [Vesting](https://paritytech.github.io/substrate/master/pallet_vesting/index.html)
+- [Vesting Info](https://paritytech.github.io/substrate/master/pallet_vesting/struct.VestingInfo.html)
 
 ## Extrinsics and Events
 
