@@ -249,12 +249,12 @@ double.
 | Lock Periods | Vote Multiplier | Length in Days |
 | :----------: | :-------------: | :------------: |
 |      0       |       0.1       |       0        |
-|      1       |        1        |      {{ polkadot: 28 :polkadot }}{{ kusama: 8 :kusama }}        |
-|      2       |        2        |      {{ polkadot: 56 :polkadot }}{{ kusama: 16 :kusama }}        |
-|      4       |        3        |     {{ polkadot: 112 :polkadot }}{{ kusama: 32 :kusama }}        |
-|      8       |        4        |     {{ polkadot: 224 :polkadot }}{{ kusama: 64 :kusama }}        |
-|      16      |        5        |     {{ polkadot: 448 :polkadot }}{{ kusama: 128 :kusama }}        |
-|      32      |        6        |     {{ polkadot: 896 :polkadot }}{{ kusama: 256 :kusama }}         |
+|      1       |        1        |      28        |
+|      2       |        2        |      56        |
+|      4       |        3        |     112        |
+|      8       |        4        |     224        |
+|      16      |        5        |     448        |
+|      32      |        6        |     896        |
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. 
