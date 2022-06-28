@@ -126,6 +126,34 @@
     "default": "16"
   },
   {
+    "tpl": "vote_locking_period_0",
+    "default": { "kusama": 0, "polkadot": 0 }
+  },
+  {
+    "tpl": "vote_locking_period_1",
+    "default": { "kusama": 8, "polkadot": 28 }
+  },
+  {
+    "tpl": "vote_locking_period_2",
+    "default": { "kusama": 16, "polkadot": 56 }
+  },
+  {
+    "tpl": "vote_locking_period_3",
+    "default": { "kusama": 32, "polkadot": 112 }
+  },
+  {
+    "tpl": "vote_locking_period_4",
+    "default": { "kusama": 64, "polkadot": 224 }
+  },
+  {
+    "tpl": "vote_locking_period_5",
+    "default": { "kusama": 128, "polkadot": 448 }
+  },
+  {
+    "tpl": "vote_locking_period_6",
+    "default": { "kusama": 256, "polkadot": 896 }
+  },
+  {
     "tpl": "vote_locking_period",
     "default": { "kusama": 115200, "polkadot": 403200 },
     "path": "consts.democracy.voteLockingPeriod",

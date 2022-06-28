@@ -248,13 +248,13 @@ double.
 
 | Lock Periods | Vote Multiplier | Length in Days |
 | :----------: | :-------------: | :------------: |
-|      0       |       0.1       |       0        |
-|      1       |        1        |      28        |
-|      2       |        2        |      56        |
-|      4       |        3        |     112        |
-|      8       |        4        |     224        |
-|      16      |        5        |     448        |
-|      32      |        6        |     896        |
+|      0       |       0.1       |     {{ vote_locking_period_0 }}  |
+|      1       |        1        |     {{ vote_locking_period_1 }}  |
+|      2       |        2        |     {{ vote_locking_period_2 }}  |
+|      4       |        3        |     {{ vote_locking_period_3 }}  |
+|      8       |        4        |     {{ vote_locking_period_4 }}  |
+|      16      |        5        |     {{ vote_locking_period_5 }}  |
+|      32      |        6        |     {{ vote_locking_period_6 }}  |
 
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
