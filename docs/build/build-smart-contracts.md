@@ -152,7 +152,7 @@ smart contract example? Ask us to add it to this page!**
 
 - [OpenBrush](https://docs.openbrush.io/): an `ink!` library providing standard contracts based on
   [PSP](https://github.com/w3f/PSPs) with useful contracts and macros for building.
-- [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by [Patract Labs](https://patract.io/).
+- [Metis](https://github.com/patractlabs/metis): a Wasm contract standard library, developed by [Patract Labs](https://github.com/patractlabs).
 
 ## Smart Contract Environments are still Maturing
 

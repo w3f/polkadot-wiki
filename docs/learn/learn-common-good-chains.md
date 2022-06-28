@@ -64,7 +64,7 @@ likely be approved by the network stakeholders only in rare scenarios.
 
 ### Statemint
 
-[Statemint](https://github.com/paritytech/cumulus/tree/master/polkadot-parachains/statemint) 
+[Statemint](https://github.com/paritytech/cumulus#statemint-) 
 (and its cousin *Statemine* on Kusama) are the first common good parachains.
 
 Statemint is a public utility chain in that it adds functionality not available in the Relay Chain, 

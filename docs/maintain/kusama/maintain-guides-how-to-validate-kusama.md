@@ -458,9 +458,9 @@ corresponds to the funds bonded by the Stash account.
 
 If you are not sure if your node has the current session keys that you made the `setKeys` 
 transaction then you can use one of the two available RPC methods to query your node:
-[hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)
+[hasKey](https://polkadot.js.org/docs/substrate/rpc#haskeypublickey-bytes-keytype-text-bool)
 to check for a specific key or
-[hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)
+[hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc#hassessionkeyssessionkeys-bytes-bool)
 to check the full session key public key string.
 
 :::
@@ -594,8 +594,7 @@ increase the number of KSM staked or seek out nominators for your validator in o
 validator set.
 
 **Congratulations**, if you have followed all of these steps, and been selected to be a part of the
-validator set, you are now running a Kusama validator! If you need help, reach out on the
-[Kusama forum](https://forum.kusama.network/) or in the
+validator set, you are now running a Kusama validator! If you need help, reach out in the
 [Kusama Validator chat](https://riot.im/app/#/room/#KusamaValidatorLounge:polkadot.builders).
 
 ## Thousand Validators Programme
