@@ -80,7 +80,7 @@ Note that a member may only belong to one pool at a time.
 
 The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS
 Apps UI. This is because the member funds are transferred from their account to the pool's account.
-This pool account is not accessible by anyone (including the pool root or depositor) and only the
+This pool account is not accessible by anyone (including the pool root or instantiator) and only the
 pool's internal logic can access the account.
 
 :::
@@ -142,7 +142,7 @@ vertical dots and click on Withdraw unbonded.
 
 ### Roles:
 
-- Depositor: Creates the pool and is the initial member. The depositor can only leave the pool once
+- Instantiator: Creates the pool and is the initial member. The instantiator can only leave the pool once
   all other members have left. Once they leave by withdrawing, the pool is fully removed from the
   system.
 - Nominator: Can select the validators the pool nominates.
@@ -155,10 +155,10 @@ vertical dots and click on Withdraw unbonded.
 
 ### Creation
 
-The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
-funds to the pool in order to add themselves as the first member. As stated above, the depositor
+The instantiator calls the `create` extrinsic, setting the administrative roles and transferring some
+funds to the pool in order to add themselves as the first member. As stated above, the instantiator
 must always be a member as long as the pool exists; they will be the last member to leave, ensuring
-they always have some skin in the game. Significant stake from the depositor is always a good
+they always have some skin in the game. Significant stake from the instantiator is always a good
 indicator for the pool's credibility. The pool’s ‘nominator role’ selects validators with the
 nominate extrinsic. On Polkadot JS Apps UI, navigate to Network > Staking > Pools and click on Add
 Pool button.
@@ -170,7 +170,7 @@ the deposit to be bonded.
 
 ![Create Nomination Pools - deposit](../assets/staking/Nomination-Pools-2.png)
 
-When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the Depositor account by
+When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the instantiator account by
 default. If any of these roles need to be assigned to a different account, create the pool using
 `create` extrinsic available on Developer > Extrinsics > nominationPools on Polkadot JS Apps UI.
 
@@ -198,7 +198,7 @@ A pool can be pushed into the “destroying” state via one of:
   been slashed. Dismantling a destroying pool
 - When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
   anyone can help all the members exit.
-- Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
+- Once the instantiator withdraws, no members belong to the pool, and all the pool’s resources are
   wiped from state.
 
 ## Slashing
