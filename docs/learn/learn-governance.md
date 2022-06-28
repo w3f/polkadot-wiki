@@ -246,20 +246,22 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-| Lock Periods | Vote Multiplier |
-| :----------: | :-------------: |
-|      0       |       0.1       |
-|      1       |        1        |
-|      2       |        2        |
-|      4       |        3        |
-|      8       |        4        |
-|      16      |        5        |
-|      32      |        6        |
+| Lock Periods | Vote Multiplier | Length in Days |
+| :----------: | :-------------: | :------------: |
+|      0       |       0.1       |     {{ vote_locking_period_0 }}  |
+|      1       |        1        |     {{ vote_locking_period_1 }}  |
+|      2       |        2        |     {{ vote_locking_period_2 }}  |
+|      4       |        3        |     {{ vote_locking_period_3 }}  |
+|      8       |        4        |     {{ vote_locking_period_4 }}  |
+|      16      |        5        |     {{ vote_locking_period_5 }}  |
+|      32      |        6        |     {{ vote_locking_period_6 }}  |
+
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. 
-Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction 
-by 5.5, for instance.
+total), and one lock period equals {{ vote_locking_period }} days. 
+Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
+5.5. For additional information regarding the timeline of governance events, check out the governance section on the
+{{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.
