@@ -256,8 +256,9 @@ double.
 |      16      |        5        |     448        |
 |      32      |        6        |     896        |
 
+
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals {{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. 
+total), and one lock period equals {{ vote_locking_period }} days. 
 Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
 5.5. For additional information regarding the timeline of governance events, check out the governance section on the
 {{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.

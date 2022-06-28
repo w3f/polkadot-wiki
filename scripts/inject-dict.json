@@ -124,5 +124,11 @@
   {
     "tpl": "polkadot_max_nominations",
     "default": "16"
+  },
+  {
+    "tpl": "vote_locking_period",
+    "default": { "kusama": 115200, "polkadot": 403200 },
+    "path": "consts.democracy.voteLockingPeriod",
+    "filters": ["blocksToDays"]
   }
 ]
