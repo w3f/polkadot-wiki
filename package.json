@@ -72,8 +72,8 @@
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
     "@mdx-js/runtime": "^1.6.22",
-    "@polkadot/util": "^8.2.2",
-    "@polkadot/util-crypto": "^8.2.2",
+    "@polkadot/util": "^9.6.2",
+    "@polkadot/util-crypto": "^9.6.2",
     "@polkadot/wasm-crypto": "^6.1.5",
     "@polkadot/x-randomvalues": "*",
     "@types/react": "^18.0.9",
