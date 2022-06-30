@@ -2,8 +2,11 @@ import * as fs from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import replacements from "./inject-dict.json" assert {type: "json"};
-import * as computed from "./computed.mjs";
 
+const Polkadot = "polkadot";
+const Kusama = "kusama";
+
+// Process command line arguments
 const argv = yargs(process.argv)
   .option("dry", {
     alias: "d",
@@ -18,12 +21,13 @@ const argv = yargs(process.argv)
   .help()
   .alias("help", "h").argv;
 
+// Assumes isPolkadot is true for Polkadot and false for Kusama
 if (argv.isPolkadot === undefined) {
   throw new Error("Must pass a --isPolkadot option.");
 }
 
+// Connect to the appropriate rpc based on flag value
 const node = argv.isPolkadot ? "wss://rpc.polkadot.io" : "wss://kusama-rpc.polkadot.io/";
-console.log("Connecting to node " + node);
 
 let filledDict = {};
 
@@ -31,70 +35,67 @@ let filledDict = {};
 const wsProvider = new WsProvider(node);
 ApiPromise.create({ provider: wsProvider })
   .then(function (instance) {
-    console.log("Connected");
+    console.log(`Connected to node at ${node}`);
 
     let wiki;
     if (argv.isPolkadot) {
-      console.log("Working on the Polkadot wiki");
-      wiki = "polkadot";
+      console.log("Active Project: Polkadot Wiki");
+      wiki = Polkadot;
     } else {
-      console.log("Working on Kusama Guide");
-      wiki = "kusama";
+      console.log("Active Project: Kusama Guide");
+      wiki = Kusama;
     }
 
+    // For every key in existing replacements json file
     replacements.forEach(async function (replacement) {
-      if (replacement.computed) {
-        let result = null;
-        try {
-          const key = computed.toCamelCase(replacement.tpl);
-          console.log("Getting", key);
-          result = computed[key];
-        } catch (e) {
-          console.log(e);
-        }
-        filledDict["{{ " + replacement.tpl + " }}"] = result || replacement.default;
-        return;
-      }
-
       let chainValue = undefined;
-      try {
-        // Simple const retrieve
-        if (replacement.path.indexOf("consts") === 0) {
-          console.log("In const for " + replacement.path);
-          chainValue = byString(instance, replacement.path);
-        }
 
-        // Query calls
-        if (replacement.path.indexOf("query") === 0) {
-          console.log("In query for " + replacement.path);
-          chainValue = byString(instance, replacement.path);
-          chainValue = await chainValue();
+      // If the replacement value has a valid path property
+      if("path" in replacement && replacement.path.includes('.')) {
+        const subPaths = replacement.path.split('.');
+        const preFix = subPaths[0];
+        
+        // Process constants and queries
+        switch(preFix) {
+          case "consts":
+            chainValue = byString(instance, replacement.path);
+            break;
+          case "query":
+            chainValue = byString(instance, replacement.path);
+            chainValue = await chainValue();
+            break;
+          default:
+            console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
+            break;
         }
 
         // Convert to human readable number if possible
-        if (undefined !== chainValue.toNumber) {
+        if (chainValue !== undefined && typeof chainValue.toNumber === "function") {
           chainValue = chainValue.toNumber();
         }
-      } catch (e) {}
 
-      // Activate default mode, depending on wiki being injected into
-      if (!chainValue) {
-        console.log("No value found, seeking default for " + replacement.tpl);
-        if (typeof replacement.default === "object") {
-          if (wiki === "polkadot") {
-            chainValue = replacement.default.polkadot;
-          } else {
-            chainValue = replacement.default.kusama;
-          }
-        } else {
-          chainValue = replacement.default;
-        }
+      // Else the path property is missing or doesn't contain a prefix
       } else {
-        if (replacement.filters && replacement.filters.length) {
-          for (let i = 0; i < replacement.filters.length; i++) {
-            chainValue = applyFilter(chainValue, replacement.filters[i], wiki);
+        console.log(`No valid path for ${replacement.tpl}, applying default`);
+          // If the default is an object this logic assumes Polkadot & Kusama values are available
+          if (typeof replacement.default === "object") {
+            if (wiki === Polkadot) {
+              chainValue = replacement.default.polkadot;
+            } else {
+              chainValue = replacement.default.kusama;
+            }
+          } else {
+            // Values are the same despite the project
+            chainValue = replacement.default;
           }
-        }
+      }
+
+      // Check if the replacement has any filters
+      if ("filters" in replacement && replacement.filters.length > 0) {
+        // Check if the replacement has any filters
+          replacement.filters.forEach(filter => {
+            chainValue = applyFilter(chainValue, filter, wiki);
+          });
       }
 
       filledDict["{{ " + replacement.tpl + " }}"] = chainValue;
@@ -151,7 +152,7 @@ function applyFilter(value, filter, wiki) {
   switch (filter) {
     case "humanReadableToken":
       let decimals = 6
-      if (wiki === "polkadot") {
+      if (wiki === Polkadot) {
         decimals = 3;
       }
 
