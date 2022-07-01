@@ -39,6 +39,7 @@ Ensure that the Polkadot-JS Extension installed is updated with the latest metad
 You would notice these updates under Settings > Metadata. Click on Update metadata and approve the
 update.
 
+![update metadata](../assets/update-metadata.png)
 
 
 #### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
