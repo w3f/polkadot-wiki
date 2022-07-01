@@ -256,7 +256,7 @@ export default function Index() {
       <div className="homeContainer">
         <HomeNav />
         <HomeFooter />
-        <Banner />
+        <! --  <Banner /> --> 
       </div>
     </Layout>
   );
