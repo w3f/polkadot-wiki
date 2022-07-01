@@ -108,7 +108,7 @@ Matrix client. If you face any issues, join the rooms individually.
 - [Web3 Medium Blog](https://medium.com/@web3)
 - [Polkadot Blog](https://polkadot.network/blog/)
 - [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-
+[Dotleap.com Newsletter](https://newsletter.dotleap.com/)
 
 ### Newsletters
 
