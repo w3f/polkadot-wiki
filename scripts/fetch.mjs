@@ -73,9 +73,18 @@ ApiPromise.create({ provider: wsProvider })
         if (chainValue !== undefined && typeof chainValue.toNumber === "function") {
           chainValue = chainValue.toNumber();
         }
+      }
 
-      // Else the path property is missing or doesn't contain a prefix
-      } else {
+      // Check if the replacement has any filters
+      if (chainValue !== undefined && "filters" in replacement && replacement.filters.length > 0) {
+        // Check if the replacement has any filters
+        replacement.filters.forEach(filter => {
+          chainValue = applyFilter(chainValue, filter, wiki);
+        });
+      }
+
+      // If the path property is missing or doesn't contain a prefix or failed to retrieve
+      if (chainValue === undefined) {
         console.log(`No valid path for ${replacement.tpl}, applying default`);
           // If the default is an object this logic assumes Polkadot & Kusama values are available
           if (typeof replacement.default === "object") {
@@ -88,14 +97,6 @@ ApiPromise.create({ provider: wsProvider })
             // Values are the same despite the project
             chainValue = replacement.default;
           }
-      }
-
-      // Check if the replacement has any filters
-      if ("filters" in replacement && replacement.filters.length > 0) {
-        // Check if the replacement has any filters
-          replacement.filters.forEach(filter => {
-            chainValue = applyFilter(chainValue, filter, wiki);
-          });
       }
 
       filledDict["{{ " + replacement.tpl + " }}"] = chainValue;
