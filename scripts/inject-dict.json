@@ -10,31 +10,31 @@
   },
   {
     "tpl": "proxy_deposit_base",
-    "default": { "kusama": 666930000, "polkadot": 200080000000 },
+    "default": { "kusama": 66693000000, "polkadot": 200080000000 },
     "path": "consts.proxy.proxyDepositBase",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "proxy_deposit_factor",
-    "default": { "kusama": 1100000, "polkadot": 330000000 },
+    "default": { "kusama": 110000000, "polkadot": 330000000 },
     "path": "consts.proxy.proxyDepositFactor",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "proposal_min_bond",
-    "default": { "kusama": 660000000, "polkadot": 1e12 },
+    "default": { "kusama": 66000000000, "polkadot": 1e12 },
     "path": "consts.treasury.proposalBondMinimum",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "proposal_max_bond",
-    "default": { "kusama": 33330000000, "polkadot": 5e12 },
+    "default": { "kusama": 3333000000000, "polkadot": 5e12 },
     "path": "consts.treasury.proposalBondMaximum",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "tip_deposit_amount",
-    "default": { "kusama": 1660000000, "polkadot": 10000000000 },
+    "default": { "kusama": 166000000000, "polkadot": 10000000000 },
     "path": "consts.treasury.tipReportDepositBase",
     "filters": ["humanReadableToken"]
   },
@@ -50,7 +50,7 @@
   },
   {
     "tpl": "identity_reserve_funds",
-    "default": { "kusama": 333330000, "polkadot": 202580000000 },
+    "default": { "kusama": 33333000000, "polkadot": 202580000000 },
     "path": "consts.identity.reserveFunds",
     "filters": ["humanReadableToken"]
   },
@@ -60,7 +60,7 @@
   },
   {
     "tpl": "identity_sub_reserve_funds",
-    "default": { "kusama": 66660000, "polkadot": 200530000000 },
+    "default": { "kusama": 6666000000, "polkadot": 200530000000 },
     "path": "consts.identity.reserveFunds",
     "filters": ["humanReadableToken"]
   },
@@ -70,19 +70,19 @@
   },
   {
     "tpl": "identity_field_funds",
-    "default": { "kusama": 83330000, "polkadot": 660000000 },
+    "default": { "kusama": 8333000000, "polkadot": 660000000 },
     "path": "consts.identity.reserveFieldFunds",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "existential_deposit",
-    "default": { "kusama": 333333, "polkadot": 10000000000 },
+    "default": { "kusama": 33333300, "polkadot": 10000000000 },
     "path": "consts.balances.existentialDeposit",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "crowdloan_min_contribution",
-    "default": { "kusama": 1000000000, "polkadot": 50000000000 },
+    "default": { "kusama": 100000000000, "polkadot": 50000000000 },
     "path": "consts.crowdloan.minContribution",
     "filters": ["humanReadableToken"]
   },
