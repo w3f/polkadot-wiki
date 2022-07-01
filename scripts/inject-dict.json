@@ -51,7 +51,7 @@
   {
     "tpl": "identity_reserve_funds",
     "default": { "kusama": 33333000000, "polkadot": 202580000000 },
-    "path": "consts.identity.reserveFunds",
+    "path": "consts.identity.basicDeposit",
     "filters": ["humanReadableToken"]
   },
   {
@@ -61,7 +61,7 @@
   {
     "tpl": "identity_sub_reserve_funds",
     "default": { "kusama": 6666000000, "polkadot": 200530000000 },
-    "path": "consts.identity.reserveFunds",
+    "path": "consts.identity.subAccountDeposit",
     "filters": ["humanReadableToken"]
   },
   {
@@ -71,7 +71,7 @@
   {
     "tpl": "identity_field_funds",
     "default": { "kusama": 8333000000, "polkadot": 660000000 },
-    "path": "consts.identity.reserveFieldFunds",
+    "path": "consts.identity.fieldDeposit",
     "filters": ["humanReadableToken"]
   },
   {
