@@ -108,7 +108,6 @@ let v = setInterval(function () {
   if (Object.keys(constantsDict).length === Object.keys(constants).length) {
     clearInterval(v);
     const content = JSON.stringify(constantsDict, null, 2);
-
     writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
     console.log("Updated global constants in computed-dict.json");
     process.exit(0);
@@ -145,7 +144,7 @@ function applyFilter(value, filter, wiki) {
 
   switch (filter) {
     case "humanReadableToken":
-      let decimals = 6
+      let decimals = 6 // Kusama
       if (wiki === Polkadot) {
         decimals = 3;
       }
@@ -155,6 +154,7 @@ function applyFilter(value, filter, wiki) {
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;
+      break;
     default:
       break;
   }
