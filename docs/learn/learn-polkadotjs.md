@@ -74,6 +74,12 @@ To populate the Apps UI, the web app queries the Polkadot-JS API. The API then q
 Polkadot node and uses JavaScript to return information that the UI will display on the screen. 
 You can choose which node to connect to by changing it in the upper-left-hand corner of the screen.
 
+Le's see how we can query on-chain data with Polkadot JS Apps on Polkadot network with an example.
+To find out the current value for existential deposit on Polkadot network, navigate to Developer >
+Chain state > Constants and query the balances pallet for existential deposit as shown in the snapshot
+below. You need to click on the plus button to execute the query.
+
+
 #### Issuing an extrinsic 
 
 Extrinsics are pieces of information that come from outside the chain and are included in a block. 
