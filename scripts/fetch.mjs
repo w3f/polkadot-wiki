@@ -46,7 +46,7 @@ ApiPromise.create({ provider: wsProvider })
       wiki = Kusama;
     }
 
-    // For every key in existing replacements json file
+    // For every object in inject-dict
     replacements.forEach(async function (replacement) {
       let chainValue = undefined;
 
