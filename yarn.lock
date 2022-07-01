@@ -1807,10 +1807,10 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.16", "@babel/runtime@^7.17.2", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  version "7.18.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
-  integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.16", "@babel/runtime@^7.17.2", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+  version "7.18.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.6.tgz#6a1ef59f838debd670421f8c7f2cbb8da9751580"
+  integrity sha512-t9wi7/AW6XtKahAe20Yw0/mMljKq0B1r2fPdvaAdV/KPDZewFXdaaa6K7lxmZBZ8FBNpCiAT6iHPmd6QO9bKfQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -2990,20 +2990,27 @@
   dependencies:
     "@babel/runtime" "^7.17.8"
 
-"@polkadot/x-global@9.6.2", "@polkadot/x-global@^9.6.2":
+"@polkadot/x-global@9.6.2":
   version "9.6.2"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-9.6.2.tgz#caf4a140fe9902a2649c029db43b5424b85cdde8"
   integrity sha512-cbrNeMK6vPEWh2EbLU+hUOERkOAToZ7o2wYYS+ZNdunvUFL9wERB9Uj6JQDAebGD3ZCNHEpMbj6U1WEffiwq9A==
   dependencies:
     "@babel/runtime" "^7.18.3"
 
-"@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@9.6.2":
-  version "9.6.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-9.6.2.tgz#8555710235f649c14ea28c25919bed6c0e4202bb"
-  integrity sha512-GuyTYTkKK6MLPcfWX3rKRze3nUYjdRYWK1PKscslRp0Qq4LBTkroqlE7SMTt8Bh7DYH+0fWN2CmHGdv2oEUq9A==
+"@polkadot/x-global@9.7.1", "@polkadot/x-global@^9.6.2":
+  version "9.7.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-9.7.1.tgz#e7ae746fb9916214cd869e1db54d5571a3e936bb"
+  integrity sha512-hadWnVKrSbUg5dKXREVbLNJhsA1n5lKtsDgdeyu7b73oI+aRFuv+no5l7Z57F1vQWjTvCnHRj0Fg7l0ZWmV4Jg==
   dependencies:
-    "@babel/runtime" "^7.18.3"
-    "@polkadot/x-global" "9.6.2"
+    "@babel/runtime" "^7.18.6"
+
+"@polkadot/x-randomvalues@*":
+  version "9.7.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-9.7.1.tgz#54b4e8e0752b8dc8622692494e9031494fdc0d5e"
+  integrity sha512-RLVLg2GthcIvUXSxPYCc0fPIMdp/FlEeNaDzncqQ63P5mQ3HpWfVHzaKi5rPuA+oQuPjUAAi2QvDmPuPN3SXlQ==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
+    "@polkadot/x-global" "9.7.1"
 
 "@polkadot/x-randomvalues@8.7.1":
   version "8.7.1"
@@ -3012,6 +3019,14 @@
   dependencies:
     "@babel/runtime" "^7.17.8"
     "@polkadot/x-global" "8.7.1"
+
+"@polkadot/x-randomvalues@9.6.2":
+  version "9.6.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-9.6.2.tgz#8555710235f649c14ea28c25919bed6c0e4202bb"
+  integrity sha512-GuyTYTkKK6MLPcfWX3rKRze3nUYjdRYWK1PKscslRp0Qq4LBTkroqlE7SMTt8Bh7DYH+0fWN2CmHGdv2oEUq9A==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    "@polkadot/x-global" "9.6.2"
 
 "@polkadot/x-textdecoder@8.7.1":
   version "8.7.1"
