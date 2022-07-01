@@ -170,7 +170,7 @@ rather another eight week lock is placed to extend the lock just one extra week.
 
 :::info Voting and staking locks can overlap
 
-* A user can use staked funds to vote on referenda ( and/or to vote for Councillors).
+* A user can use staked funds to vote on referenda (and/or to vote for Councillors).
 * A user is only prohibited from transferring these funds to another account.
 
 :::
