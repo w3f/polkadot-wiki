@@ -72,7 +72,10 @@ ApiPromise.create({ provider: wsProvider })
 
       // If the path property is missing or doesn't contain a prefix or failed to retrieve
       if (chainValue === undefined) {
-        //console.log(`No valid path for ${constant.tpl}, applying default`);
+        // Log constants that have fetch paths provided but failed to retrieve validate data
+        if ("path" in constant) {
+          console.log(`Failed to fetch value for ${constant.tpl}, applying default`);
+        }
         // If the default is an object this logic assumes Polkadot & Kusama values are available
         if (typeof constant.default === "object") {
           if (wiki === Polkadot) {
