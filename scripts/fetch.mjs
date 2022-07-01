@@ -65,7 +65,7 @@ ApiPromise.create({ provider: wsProvider })
             chainValue = await chainValue();
             break;
           default:
-            console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
+            //console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
             break;
         }
 
@@ -75,17 +75,9 @@ ApiPromise.create({ provider: wsProvider })
         }
       }
 
-      // Check if the replacement has any filters
-      if (chainValue !== undefined && "filters" in replacement && replacement.filters.length > 0) {
-        // Check if the replacement has any filters
-        replacement.filters.forEach(filter => {
-          chainValue = applyFilter(chainValue, filter, wiki);
-        });
-      }
-
       // If the path property is missing or doesn't contain a prefix or failed to retrieve
       if (chainValue === undefined) {
-        console.log(`No valid path for ${replacement.tpl}, applying default`);
+        //console.log(`No valid path for ${replacement.tpl}, applying default`);
           // If the default is an object this logic assumes Polkadot & Kusama values are available
           if (typeof replacement.default === "object") {
             if (wiki === Polkadot) {
@@ -97,6 +89,14 @@ ApiPromise.create({ provider: wsProvider })
             // Values are the same despite the project
             chainValue = replacement.default;
           }
+      }
+
+      // Check if the replacement has any filters
+      if (chainValue !== undefined && "filters" in replacement && replacement.filters.length > 0) {
+        // Check if the replacement has any filters
+        replacement.filters.forEach(filter => {
+          chainValue = applyFilter(chainValue, filter, wiki);
+        });
       }
 
       filledDict["{{ " + replacement.tpl + " }}"] = chainValue;
@@ -137,8 +137,7 @@ function byString(o, s) {
 }
 
 function applyFilter(value, filter, wiki) {
-  console.log(`Applying ${filter} to ${wiki} value ${value}`);
-
+  //console.log(`Applying ${filter} to ${wiki} value ${value}`);
   const values = {
     polkadot: {
       precision: 1e10,
@@ -157,7 +156,17 @@ function applyFilter(value, filter, wiki) {
         decimals = 3;
       }
 
+      let test = false;
+      if(value === 1) {
+        console.log(value);
+        test = true;
+      }    
+
       value = (value / values[wiki].precision).toFixed(decimals) + " " + values[wiki].symbol;
+
+      if(test) {
+        console.log(value);
+      }
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;
