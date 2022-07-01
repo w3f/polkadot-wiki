@@ -35,13 +35,13 @@
   {
     "tpl": "tip_deposit_amount",
     "default": { "kusama": 166000000000, "polkadot": 10000000000 },
-    "path": "consts.treasury.tipReportDepositBase",
+    "path": "consts.tips.tipReportDepositBase",
     "filters": ["humanReadableToken"]
   },
   {
     "tpl": "tip_finders_fee",
     "default": { "kusama": 20, "polkadot": 20 },
-    "path": "consts.treasury.tipFindersFee"
+    "path": "consts.tips.tipFindersFee"
   },
   {
     "tpl": "spend_period",
