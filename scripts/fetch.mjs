@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import { writeFileSync } from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import constants from "./inject-dict.json" assert {type: "json"};
@@ -112,7 +112,7 @@ let v = setInterval(function () {
     clearInterval(v);
     const content = JSON.stringify(constantsDict, null, 2);
 
-    fs.writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
+    writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
     console.log("Updated global constants in computed-dict.json");
     process.exit(0);
   }
