@@ -61,7 +61,7 @@ ApiPromise.create({ provider: wsProvider })
             chainValue = await chainValue();
             break;
           default:
-            console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
+            console.log(`Unknown path prefix (${preFix}) for ${constant.tpl} in constants`);
         }
 
         // Convert to human readable number if possible
