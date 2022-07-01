@@ -101,9 +101,6 @@ ApiPromise.create({ provider: wsProvider })
   })
   .catch(function (e) {
     console.log(e);
-    console.error(
-      "Error connecting! Check your node URL and make sure its websockets are open, secure if remote (wss), and allow RPC from all."
-    );
     process.exit(1);
   });
 
