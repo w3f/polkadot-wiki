@@ -112,6 +112,7 @@ function HomeNav() {
 
 // Used for advertising events, conferences, etc
 // To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
+/*
 function Banner() {
   const FixedBanner = ({ children }) => (
     <div className="fixed-banner">
@@ -139,6 +140,7 @@ function Banner() {
     <FixedBanner />
   )
 }
+*/
 
 function HomeFooter() {
   const FooterContainer = ({ children }) => (
@@ -254,7 +256,6 @@ export default function Index() {
       <div className="homeContainer">
         <HomeNav />
         <HomeFooter />
-        <Banner />
       </div>
     </Layout>
   );

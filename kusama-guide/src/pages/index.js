@@ -28,6 +28,7 @@ function HomeSplash() {
 
 // Used for advertising events, conferences, etc
 // To do, generalize this, and clean up implementation. This was hacked together for Polkadot Decoded 2022 by Emre
+/*
 function Banner() {
   const FixedBanner = ({ children }) => (
     <div className="fixed-banner">
@@ -50,6 +51,7 @@ function Banner() {
     <FixedBanner />
   )
 }
+*/
 
 export default function Index() {
   const { siteConfig } = useDocusaurusContext();
@@ -183,7 +185,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <Banner />
     </Layout>
   );
 }
