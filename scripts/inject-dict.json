@@ -45,8 +45,7 @@
   },
   {
     "tpl": "spend_period",
-    "default": { "kusama": 6, "polkadot": 24 },
-    "path": "consts.treasury.spendPeriod",
+    "default": { "kusama": 86400, "polkadot": 345600 },
     "filters": ["blocksToDays"]
   },
   {
