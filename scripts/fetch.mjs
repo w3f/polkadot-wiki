@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import replacements from "./inject-dict.json" assert {type: "json"};
+import constants from "./inject-dict.json" assert {type: "json"};
 
 const Polkadot = "polkadot";
 const Kusama = "kusama";
@@ -10,14 +10,9 @@ let constantsDict = {};
 
 // Process command line arguments
 const argv = yargs(process.argv)
-  .option("dry", {
-    alias: "d",
-    description: "Dry run - check values before replacing",
-    type: "boolean",
-  })
   .option("isPolkadot", {
     alias: "p",
-    description: "Is Polkadot - build dict values for Polkadot or Kusama",
+    description: "Is Polkadot - build constant values for Polkadot or Kusama",
     type: "boolean",
   })
   .help()
@@ -48,21 +43,21 @@ ApiPromise.create({ provider: wsProvider })
     }
 
     // For every object in inject-dict
-    replacements.forEach(async function (replacement) {
+    constants.forEach(async function (constant) {
       let chainValue = undefined;
 
-      // If the replacement value has a valid path property
-      if("path" in replacement && replacement.path.includes('.')) {
-        const subPaths = replacement.path.split('.');
+      // If the constant value has a valid path property
+      if("path" in constant && constant.path.includes('.')) {
+        const subPaths = constant.path.split('.');
         const preFix = subPaths[0];
         
         // Process constants and queries
         switch(preFix) {
           case "consts":
-            chainValue = byString(instance, replacement.path);
+            chainValue = byString(instance, constant.path);
             break;
           case "query":
-            chainValue = byString(instance, replacement.path);
+            chainValue = byString(instance, constant.path);
             chainValue = await chainValue();
             break;
           default:
@@ -77,31 +72,31 @@ ApiPromise.create({ provider: wsProvider })
 
       // If the path property is missing or doesn't contain a prefix or failed to retrieve
       if (chainValue === undefined) {
-        //console.log(`No valid path for ${replacement.tpl}, applying default`);
+        //console.log(`No valid path for ${constant.tpl}, applying default`);
         // If the default is an object this logic assumes Polkadot & Kusama values are available
-        if (typeof replacement.default === "object") {
+        if (typeof constant.default === "object") {
           if (wiki === Polkadot) {
-            chainValue = replacement.default.polkadot;
+            chainValue = constant.default.polkadot;
           } else {
-            chainValue = replacement.default.kusama;
+            chainValue = constant.default.kusama;
           }
         } else {
           // Values are the same despite the project
-          chainValue = replacement.default;
+          chainValue = constant.default;
         }
       }
 
       // At this point chainValue should be valid but unformatted (default or fetched value)
-      // Check if the replacement has any filters
-      if ("filters" in replacement && replacement.filters.length > 0) {
+      // Check if the constant has any filters
+      if ("filters" in constant && constant.filters.length > 0) {
         // Apply filter formatting
-        replacement.filters.forEach(filter => {
+        constant.filters.forEach(filter => {
           chainValue = applyFilter(chainValue, filter, wiki);
         });
       }
 
       // Update 
-      constantsDict["{{ " + replacement.tpl + " }}"] = chainValue;
+      constantsDict[`{{ ${constant.tpl} }}`] = chainValue;
     });
   })
   .catch(function (e) {
@@ -113,7 +108,7 @@ ApiPromise.create({ provider: wsProvider })
   });
 
 let v = setInterval(function () {
-  if (Object.keys(constantsDict).length === Object.keys(replacements).length) {
+  if (Object.keys(constantsDict).length === Object.keys(constants).length) {
     clearInterval(v);
     const content = JSON.stringify(constantsDict, null, 2);
 
