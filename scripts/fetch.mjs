@@ -65,7 +65,7 @@ ApiPromise.create({ provider: wsProvider })
             chainValue = await chainValue();
             break;
           default:
-            //console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
+            console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
             break;
         }
 
@@ -156,17 +156,9 @@ function applyFilter(value, filter, wiki) {
         decimals = 3;
       }
 
-      let test = false;
-      if(value === 1) {
-        console.log(value);
-        test = true;
-      }    
-
+      // I think there may be issues with this calculation
+      // (example: input of 1 results in output of 0.000 DOT)
       value = (value / values[wiki].precision).toFixed(decimals) + " " + values[wiki].symbol;
-
-      if(test) {
-        console.log(value);
-      }
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;
