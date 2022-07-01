@@ -6,6 +6,8 @@ import replacements from "./inject-dict.json" assert {type: "json"};
 const Polkadot = "polkadot";
 const Kusama = "kusama";
 
+let constantsDict = {};
+
 // Process command line arguments
 const argv = yargs(process.argv)
   .option("dry", {
@@ -29,14 +31,13 @@ if (argv.isPolkadot === undefined) {
 // Connect to the appropriate rpc based on flag value
 const node = argv.isPolkadot ? "wss://rpc.polkadot.io" : "wss://kusama-rpc.polkadot.io/";
 
-let filledDict = {};
-
 // Connect to a node
 const wsProvider = new WsProvider(node);
 ApiPromise.create({ provider: wsProvider })
   .then(function (instance) {
     console.log(`Connected to node at ${node}`);
 
+    // Set active project
     let wiki;
     if (argv.isPolkadot) {
       console.log("Active Project: Polkadot Wiki");
@@ -66,7 +67,6 @@ ApiPromise.create({ provider: wsProvider })
             break;
           default:
             console.log(`Unknown path prefix in computed dictionary: ${preFix}`);
-            break;
         }
 
         // Convert to human readable number if possible
@@ -91,15 +91,17 @@ ApiPromise.create({ provider: wsProvider })
           }
       }
 
+      // At this point chainValue should be valid but unformatted (default or fetched value)
       // Check if the replacement has any filters
-      if (chainValue !== undefined && "filters" in replacement && replacement.filters.length > 0) {
-        // Check if the replacement has any filters
+      if ("filters" in replacement && replacement.filters.length > 0) {
+        // Apply filter formatting
         replacement.filters.forEach(filter => {
           chainValue = applyFilter(chainValue, filter, wiki);
         });
       }
 
-      filledDict["{{ " + replacement.tpl + " }}"] = chainValue;
+      // Update 
+      constantsDict["{{ " + replacement.tpl + " }}"] = chainValue;
     });
   })
   .catch(function (e) {
@@ -111,12 +113,12 @@ ApiPromise.create({ provider: wsProvider })
   });
 
 let v = setInterval(function () {
-  if (Object.keys(filledDict).length === Object.keys(replacements).length) {
+  if (Object.keys(constantsDict).length === Object.keys(replacements).length) {
     clearInterval(v);
-    const content = JSON.stringify(filledDict, null, 2);
+    const content = JSON.stringify(constantsDict, null, 2);
 
     fs.writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
-    console.log("Save dict values successfully!");
+    console.log("Updated global constants in computed-dict.json");
     process.exit(0);
   }
 }, 1000);
