@@ -78,17 +78,17 @@ ApiPromise.create({ provider: wsProvider })
       // If the path property is missing or doesn't contain a prefix or failed to retrieve
       if (chainValue === undefined) {
         //console.log(`No valid path for ${replacement.tpl}, applying default`);
-          // If the default is an object this logic assumes Polkadot & Kusama values are available
-          if (typeof replacement.default === "object") {
-            if (wiki === Polkadot) {
-              chainValue = replacement.default.polkadot;
-            } else {
-              chainValue = replacement.default.kusama;
-            }
+        // If the default is an object this logic assumes Polkadot & Kusama values are available
+        if (typeof replacement.default === "object") {
+          if (wiki === Polkadot) {
+            chainValue = replacement.default.polkadot;
           } else {
-            // Values are the same despite the project
-            chainValue = replacement.default;
+            chainValue = replacement.default.kusama;
           }
+        } else {
+          // Values are the same despite the project
+          chainValue = replacement.default;
+        }
       }
 
       // At this point chainValue should be valid but unformatted (default or fetched value)
