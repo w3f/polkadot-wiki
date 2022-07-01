@@ -35,6 +35,12 @@ a robust key-store and thus acts as an account manager for Substrate-based accou
 
 However, it also provides a simple interface for interacting with extension-compliant dApps. 
 
+Ensure that the Polkadot-JS Extension installed is updated with the latest metadata of the chain.
+You would notice these updates under Settings > Metadata. Click on Update metadata and approve the
+update.
+
+
+
 #### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
 
 The phishing list website is a community-driven curation of less-than-honest operators. The Polkadot-JS 
