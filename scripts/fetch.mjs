@@ -72,7 +72,7 @@ ApiPromise.create({ provider: wsProvider })
 
       // If the path property is missing or doesn't contain a prefix or failed to retrieve
       if (chainValue === undefined) {
-        // Log constants that have fetch paths provided but failed to retrieve validate data
+        // Log constants that have fetch paths provided but failed to retrieve valid data
         if ("path" in constant) {
           console.log(`Failed to fetch value for ${constant.tpl}, applying default`);
         }
@@ -152,7 +152,6 @@ function applyFilter(value, filter, wiki) {
         decimals = 3;
       }
 
-      // TODO: defaults should assume the same formatted outcome
       value = (value / values[wiki].precision).toFixed(decimals) + " " + values[wiki].symbol;
       break;
     case "blocksToDays":
