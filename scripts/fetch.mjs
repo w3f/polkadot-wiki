@@ -156,8 +156,7 @@ function applyFilter(value, filter, wiki) {
         decimals = 3;
       }
 
-      // I think there may be issues with this calculation
-      // (example: input of 1 results in output of 0.000 DOT)
+      // TODO: defaults should assume the same formatted outcome
       value = (value / values[wiki].precision).toFixed(decimals) + " " + values[wiki].symbol;
       break;
     case "blocksToDays":
