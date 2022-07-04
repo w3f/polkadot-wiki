@@ -1,20 +1,35 @@
 ---
 id: learn-phragmen
-title: Sequential Phragmén Method
-sidebar_label: Sequential Phragmén Method
-description: Learn about the election method used on Polkadot.
-keywords: [phragmen, sequential phragmén method, elections, algorithm]
+title: NPoS Election Algorithms
+sidebar_label: NPoS Election Algorithms
+description: Learn about the election method used on Polkadot's Nominated Proof of Staking.
+keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms]
 slug: ../learn-phragmen
 ---
+
+## NPoS Election Algorithms
+
+Since validators are paid almost equally in Polkadot in each era, it is important that the stake behind each validator 
+is uniformaly spread out. Any algorithm for Nominated Proof of Staking (NPoS) on Polkadot should try to optimize three 
+metrics when computing an election solution graph with nominators and validators:
+
+1. Maximize the total amount at stake.
+1. Maximize the stake behind the minimally staked validator.
+1. Minimize the variance of the stake in the set.
+
+:::note 
+
+ [Sequential Phragmén](#understanding-phragmén), [Phragmms](#phragmms-fka-balphragmms) and 
+ [Star balancing](https://crates.parity.io/sp_npos_elections/balancing/fn.balance.html) are a few
+ notable algorithms used for computing the NPoS solutions in Polkadot and Kusama.
+
+:::
+
 
 ## What is the sequential Phragmén method?
 
 The sequential Phragmén method is a multi-winner election method introduced by Edvard Phragmén in
-the 1890s. While sequential Phragmén is currently in use on Polkadot and Kusama, an improvement on
-the sequential Phragmén method named [Phragmms](#phragmms-fka-balphragmms) will be used in the
-future.
-
-The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
+the 1890s. The quote below taken from the reference [Phragmén paper](#external-resources) sums up the purpose
 of the sequential Phragmén method:
 
 :::note
@@ -27,19 +42,12 @@ organization.
 
 :::
 
-## Where is the Phragmén method used in Polkadot?
 
-### NPoS: Validator Elections
+### Validator Elections
 
-The sequential Phragmén method is used in the Nominated Proof-of-Stake scheme to elect validators
+The sequential Phragmén is one of the methods used in the Nominated Proof-of-Stake scheme to elect validators
 based on their own self-stake and the stake that is voted to them from nominators. It also tries to
-equalize the weights between the validators after each election round. Since validators are paid
-equally in Polkadot, it is important that the stake behind each validator is spread out. Polkadot
-tries to optimize three metrics in its elections:
-
-1. Maximize the total amount at stake.
-1. Maximize the stake behind the minimally staked validator.
-1. Minimize the variance of the stake in the set.
+equalize the weights between the validators after each election round.
 
 #### Off-Chain Phragmén
 
