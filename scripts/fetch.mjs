@@ -111,6 +111,7 @@ ApiPromise.create({ provider: wsProvider })
   });
 
 let v = setInterval(function () {
+  // Verify the correct amount of expected constant values are generated
   if (Object.keys(constantsDict).length === Object.keys(constants).length) {
     clearInterval(v);
 
@@ -122,7 +123,6 @@ let v = setInterval(function () {
     // If the injection flag is present, inject the constants into the doc html
     if (argv.inject) {
       // Template options for replace-in-file
-      console.log(`${argv.rootDir}/docs/**/**/*.html`);
       const options = {
         files: [`${argv.rootDir}/docs/**/**/*.html`],
         from: Object.keys(constantsDict).map((el) => {
