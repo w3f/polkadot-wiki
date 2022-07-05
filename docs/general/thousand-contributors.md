@@ -11,7 +11,7 @@ Web3 Foundation's Technical Education and Support team to offer an off-chain con
 support and reward community contributions. The program focuses on rewarding contributors in the areas 
 of technical education, community, and support that relate to the Polkadot and Kusama ecosystems.
 
-:::note The pilot phase of Thousand Contributors has ended
+:::note The pilot phase of Thousand Contributors Programme has ended
 
 You can still submit your intent to participate. The submissions will be reviewed and accepted on a 
 case-by-case basis. 
