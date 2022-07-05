@@ -2,6 +2,7 @@ import { writeFileSync } from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import constants from "./inject-dict.json" assert {type: "json"};
+import replace from "replace-in-file";
 
 const Polkadot = "polkadot";
 const Kusama = "kusama";
@@ -14,14 +15,16 @@ const argv = yargs(process.argv)
     alias: "p",
     description: "Is Polkadot - build constant values for Polkadot or Kusama",
     type: "boolean",
+    default: false
+  })
+  .option("inject", {
+    alias: "i",
+    description: "Boolean flag for toggling html inject",
+    type: "boolean",
+    default: false
   })
   .help()
   .alias("help", "h").argv;
-
-// Assumes isPolkadot is true for Polkadot and false for Kusama
-if (argv.isPolkadot === undefined) {
-  throw new Error("Must pass a --isPolkadot option.");
-}
 
 // Connect to the appropriate rpc based on flag value
 const node = argv.isPolkadot ? "wss://rpc.polkadot.io" : "wss://kusama-rpc.polkadot.io/";
@@ -110,9 +113,55 @@ ApiPromise.create({ provider: wsProvider })
 let v = setInterval(function () {
   if (Object.keys(constantsDict).length === Object.keys(constants).length) {
     clearInterval(v);
+
+    // Write updated computed-dict.json file
     const content = JSON.stringify(constantsDict, null, 2);
     writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
     console.log("Updated global constants in computed-dict.json");
+
+    // If the injection flag is present, inject the constants into the doc html
+    if (argv.inject) {
+      // Template options for replace-in-file
+      console.log(`${argv.rootDir}/docs/**/**/*.html`);
+      const options = {
+        files: [`${argv.rootDir}/docs/**/**/*.html`],
+        from: Object.keys(constantsDict).map((el) => {
+          return new RegExp(el, "ig");
+        }),
+        to: Object.values(constantsDict),
+      };
+
+      console.log("Replacement configuration: ");
+      console.log(options);
+
+      try {
+        let results = replace.sync(options);
+
+        const changedFiles = results
+          .filter((result) => result.hasChanged)
+          .map((result) => result.file);
+        console.log("Modified files:", changedFiles);
+
+        let from = [/\{\{ kusama: [\s\S]+? :kusama \}\}/gim, /\{\{ polkadot: [\s\S]+? :polkadot \}\}/gim];
+        let to =
+          argv.rootDir.indexOf("kusama-guide") !== -1
+            ? [(match) => match.replace("{{ kusama: ", "").replace(" :kusama }}", ""), ""]
+            : ["", (match) => match.replace("{{ polkadot: ", "").replace(" :polkadot }}", "")];
+        let results2 = replace.sync({
+          files: [`${argv.rootDir}/docs/**/**/*.html`],
+          from: from,
+          to: to,
+        });
+        const changedFiles2 = results2
+          .filter((result) => result.hasChanged)
+          .map((result) => result.file);
+        console.log("Modified files for kusama/polkadot difference:", changedFiles2);
+      } catch (error) {
+        console.error("Error occurred:", error);
+        process.exit(1);
+      }
+    }
+    // Done
     process.exit(0);
   }
 }, 1000);
