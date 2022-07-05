@@ -110,7 +110,7 @@ ApiPromise.create({ provider: wsProvider })
     process.exit(1);
   });
 
-let v = setInterval(function () {
+let v = setInterval(async function () {
   // Verify the correct amount of expected constant values are generated
   if (Object.keys(constantsDict).length === Object.keys(constants).length) {
     clearInterval(v);
@@ -121,7 +121,7 @@ let v = setInterval(function () {
     console.log("Updated global constants in computed-dict.json");
 
     // If the injection flag is present, inject the constants into the doc html
-    if (argv.inject) {
+    if (argv.inject && "rootDir" in argv) {
       // Template options for replace-in-file
       const options = {
         files: [`${argv.rootDir}/docs/**/**/*.html`],
@@ -135,7 +135,8 @@ let v = setInterval(function () {
       console.log(options);
 
       try {
-        let results = replace.sync(options);
+        const results = await replace(options)
+        console.log('Replacement results:', results);
 
         const changedFiles = results
           .filter((result) => result.hasChanged)
