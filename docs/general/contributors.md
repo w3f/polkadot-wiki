@@ -68,10 +68,10 @@ and blockchain classes at General Assembly, Code Fellows, and Columbia Universit
 
 Keith is a member of the TechEd team at the Web3 Foundation. He has been working professionally as a
 software engineer since completing his graduate studies. Keith holds bachelor's and master's degrees
-in Architecture (buildings not computers) and was previously employed in the CAD/3D graphics
-development domains. It was during this time that he discovered his passion for computational
-design. Keith is passionate about learning, developing and sharing decentralized solutions that help
-aid an anti-authoritarian future.
+in Architecture (buildings not computers). It was during this time that he discovered his passion
+for computational design. He was previously employed in the CAD/3D graphics software development
+domains. Keith is passionate about learning, developing and sharing decentralized solutions that
+help aid an anti-authoritarian future.
 
 ## Technical Integrations
 
