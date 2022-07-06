@@ -303,23 +303,24 @@ A Kusama or Polkadot address can have an index. An index is like a short and eas
 version of an address. Claiming an index requires a deposit that is released when the index is
 cleared. Any index can be claimed as long as it is not taken by someone else.
 
-:::note Lookup Account Index on-chain
-
-When someone shares their account index, their actual account address on-chain can be looked up
-through Polkadot-JS Apps UI > Developer > Chain state  and then query accounts from indices, by
-providing the Account Index.
-
-:::
-
-Here is an example snapshot that shows how to lookup the corresponding account address of the
-account index 1988 on Westend network, using Polkadot-JS Apps UI$
-
-
-
 But what if an account gets reaped as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim it. It is possible to _freeze_ 
 an index and permanently assign it to an address. This action consumes a deposit but makes sure that 
 the index can never be reclaimed unless released by the holding account.
+
+:::note Lookup Account Index on-chain
+
+When someone shares their account index, their actual account address on-chain can be looked up
+through Polkadot-JS Apps UI > Developer > Chain state > Storage and selecting state query on
+indices pallet for the account corresponding to the index.
+
+:::
+
+Here is an example snapshot that shows how to lookup the corresponding account address of the
+account index 1988 on Westend network, using Polkadot-JS Apps UI. The output shows the account
+address, its deposit amount and a boolean flag which indicates whether this is claimed permanently.
+
+![query account index](../assets/accounts/query-index.png)
 
 To register an index, submit a `claim` extrinsic to the `indices` pallet, and follow up with a
 `freeze` extrinsic. The easiest way to do this is via PolkadotJS UI through the _Developer ->
