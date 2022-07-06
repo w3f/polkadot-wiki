@@ -61,6 +61,18 @@ development, education, and blockchain technology consulting. He is passionate a
 teaching and has always kept a foot in education by designing and delivering software development
 and blockchain classes at General Assembly, Code Fellows, and Columbia University.
 
+### Keith Alfaro
+
+- email: [keith@web3.foundation](mailto:keith@web3.foundation)
+- matrix: [@keith:web3.foundation](https://matrix.to/#/@keith:web3.foundation)
+
+Keith is a member of the TechEd team at the Web3 Foundation. He has been working professionally as a
+software engineer since completing his graduate studies. Keith holds bachelor's and master's degrees
+in Architecture (buildings not computers) and was previously employed in the CAD/3D graphics
+development domains. It was during this time that he discovered his passion for computational
+design. Keith is passionate about learning, developing and sharing decentralized solutions that help
+aid an anti-authoritarian future.
+
 ## Technical Integrations
 
 ### Joe Petrowski
