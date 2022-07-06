@@ -218,10 +218,11 @@ going to [Society](https://guide.kusama.network/docs/en/maintain-guides-society-
 burned. :kusama }}
 ```
 
-To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
-`kusama:inject`, respectively.
-Inspect the built files in the corresponding `build` folder under `website` or
-`kusama-guide`.
+To verify the appropriate values have been substituted in each scenario, run `polkadot:start` and
+`kusama:start` in separate terminals. If prompted with the
+`[WARNING] Something is already running on port 3000. Would you like to run the app on another port instead?`,
+proceed with `yes`. This will likely launch one project on port 3000 and the other on 3001, allowing
+you to compare the rendered outputs for both projects locally and simultaneously.
 
 ## Internationalization
 
