@@ -317,8 +317,10 @@ indices pallet for the account corresponding to the index.
 :::
 
 Here is an example snapshot that shows how to lookup the corresponding account address of the
-account index 1988 on Westend network, using Polkadot-JS Apps UI. The output shows the account
-address, its deposit amount and a boolean flag which indicates whether this is claimed permanently.
+account index 1988 on 
+[Westend network (Polkadot Test Network)](../maintain/maintain-networks.md#westend-test-network), 
+using Polkadot-JS Apps UI. The output shows the account address, its deposit amount and a boolean 
+flag which indicates whether this is claimed permanently.
 
 ![query account index](../assets/accounts/query-index.png)
 
