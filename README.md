@@ -219,7 +219,7 @@ burned. :kusama }}
 ```
 
 To verify the appropriate values have been substituted in each scenario, run `polkadot:start` and
-`kusama:start` in separate terminals. If prompted with the
+`kusama:start` in separate terminals. If prompted with
 `[WARNING] Something is already running on port 3000. Would you like to run the app on another port instead?`,
 proceed with `yes`. This will likely launch one project on port 3000 and the other on 3001, allowing
 you to compare the rendered outputs for both projects locally and simultaneously.

@@ -1,32 +1,32 @@
-import { writeFileSync } from "fs";
-import yargs from "yargs";
-import { ApiPromise, WsProvider } from "@polkadot/api";
-import constants from "./inject-dict.json" assert {type: "json"};
+import { writeFileSync } from 'fs';
+import yargs from 'yargs';
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import constants from './inject-dict.json' assert { type: 'json' };
 
-const Polkadot = "polkadot";
-const Kusama = "kusama";
+const Polkadot = 'polkadot';
+const Kusama = 'kusama';
 
 let constantsDict = {};
 
 // Process command line arguments
 const argv = yargs(process.argv)
-  .option("isPolkadot", {
-    alias: "p",
-    description: "Is Polkadot - build constant values for Polkadot or Kusama",
-    type: "boolean",
-    default: false
+  .option('isPolkadot', {
+    alias: 'p',
+    description: 'Is Polkadot - build constant values for Polkadot or Kusama',
+    type: 'boolean',
+    default: false,
   })
-  .option("inject", {
-    alias: "i",
-    description: "Boolean flag for toggling html inject",
-    type: "boolean",
-    default: false
+  .option('inject', {
+    alias: 'i',
+    description: 'Boolean flag for toggling html inject',
+    type: 'boolean',
+    default: false,
   })
   .help()
-  .alias("help", "h").argv;
+  .alias('help', 'h').argv;
 
 // Connect to the appropriate rpc based on flag value
-const node = argv.isPolkadot ? "wss://rpc.polkadot.io" : "wss://kusama-rpc.polkadot.io/";
+const node = argv.isPolkadot ? 'wss://rpc.polkadot.io' : 'wss://kusama-rpc.polkadot.io/';
 
 // Connect to a node
 const wsProvider = new WsProvider(node);
@@ -37,10 +37,10 @@ ApiPromise.create({ provider: wsProvider })
     // Set active project
     let wiki;
     if (argv.isPolkadot) {
-      console.log("Active Project: Polkadot Wiki");
+      console.log('Active Project: Polkadot Wiki');
       wiki = Polkadot;
     } else {
-      console.log("Active Project: Kusama Guide");
+      console.log('Active Project: Kusama Guide');
       wiki = Kusama;
     }
 
@@ -49,16 +49,16 @@ ApiPromise.create({ provider: wsProvider })
       let chainValue = undefined;
 
       // If the constant value has a valid path property
-      if("path" in constant && constant.path.includes('.')) {
+      if ('path' in constant && constant.path.includes('.')) {
         const subPaths = constant.path.split('.');
         const preFix = subPaths[0];
-        
+
         // Process constants and queries
-        switch(preFix) {
-          case "consts":
+        switch (preFix) {
+          case 'consts':
             chainValue = byString(instance, constant.path);
             break;
-          case "query":
+          case 'query':
             chainValue = byString(instance, constant.path);
             chainValue = await chainValue();
             break;
@@ -67,7 +67,7 @@ ApiPromise.create({ provider: wsProvider })
         }
 
         // Convert to human readable number if possible
-        if (chainValue !== undefined && typeof chainValue.toNumber === "function") {
+        if (chainValue !== undefined && typeof chainValue.toNumber === 'function') {
           chainValue = chainValue.toNumber();
         }
       }
@@ -75,11 +75,11 @@ ApiPromise.create({ provider: wsProvider })
       // If the path property is missing or doesn't contain a prefix or failed to retrieve
       if (chainValue === undefined) {
         // Log constants that have fetch paths provided but failed to retrieve valid data
-        if ("path" in constant) {
+        if ('path' in constant) {
           console.log(`Failed to fetch value for ${constant.tpl}, applying default`);
         }
         // If the default is an object this logic assumes Polkadot & Kusama values are available
-        if (typeof constant.default === "object") {
+        if (typeof constant.default === 'object') {
           if (wiki === Polkadot) {
             chainValue = constant.default.polkadot;
           } else {
@@ -93,14 +93,14 @@ ApiPromise.create({ provider: wsProvider })
 
       // At this point chainValue should be valid but unformatted (default or fetched value)
       // Check if the constant has any filters
-      if ("filters" in constant && constant.filters.length > 0) {
+      if ('filters' in constant && constant.filters.length > 0) {
         // Apply filter formatting
-        constant.filters.forEach(filter => {
+        constant.filters.forEach((filter) => {
           chainValue = applyFilter(chainValue, filter, wiki);
         });
       }
 
-      // Update 
+      // Update
       constantsDict[`{{ ${constant.tpl} }}`] = chainValue;
     });
   })
@@ -116,17 +116,17 @@ let v = setInterval(async function () {
 
     // Write updated computed-dict.json file
     const content = JSON.stringify(constantsDict, null, 2);
-    writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
-    console.log("Updated global constants in computed-dict.json");
+    writeFileSync('./scripts/computed-dict.json', content, { encoding: 'utf8' });
+    console.log('Updated global constants in computed-dict.json');
     // Done
     process.exit(0);
   }
 }, 1000);
 
 function byString(o, s) {
-  s = s.replace(/\[(\w+)\]/g, ".$1"); // convert indexes to properties
-  s = s.replace(/^\./, ""); // strip a leading dot
-  var a = s.split(".");
+  s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+  s = s.replace(/^\./, ''); // strip a leading dot
+  var a = s.split('.');
   for (var i = 0, n = a.length; i < n; ++i) {
     var k = a[i];
     if (k in o) {
@@ -143,24 +143,24 @@ function applyFilter(value, filter, wiki) {
   const values = {
     polkadot: {
       precision: 1e10,
-      symbol: "DOT",
+      symbol: 'DOT',
     },
     kusama: {
       precision: 1e12,
-      symbol: "KSM",
+      symbol: 'KSM',
     },
   };
 
   switch (filter) {
-    case "humanReadableToken":
-      let decimals = 6 // Kusama
+    case 'humanReadableToken':
+      let decimals = 6; // Kusama
       if (wiki === Polkadot) {
         decimals = 3;
       }
 
-      value = (value / values[wiki].precision).toFixed(decimals) + " " + values[wiki].symbol;
+      value = (value / values[wiki].precision).toFixed(decimals) + ' ' + values[wiki].symbol;
       break;
-    case "blocksToDays":
+    case 'blocksToDays':
       value = (value * 6) / 86400;
       break;
     default:
