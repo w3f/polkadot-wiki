@@ -197,14 +197,14 @@ Learn more about how you can create and send Kusama Gifts [here](https://polkado
 
 While Kusama does not support smart contracts natively, building apps on it is still possible
 (e.g. [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into *proper* development, 
-however, check out the [builders guide][].
+however, check out the [builders guide](./../build/build-index.md).
 
-[mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
-[medium]: https://medium.com/polkadot-network/kusama-network-7446706b8f4c
-[claims]: kusama-claims.md
-[endpoints]: kusama-endpoints.md
-[tokens]: https://claim.kusama.network/
-[validator]: ../../maintain/kusama/mirror-maintain-guides-how-to-validate-kusama.md
-[nominator]: ../../maintain/kusama/mirror-maintain-guides-how-to-nominate-kusama.md
-[polkadot wiki]: https://wiki.polkadot.network/
-[builders guide]: ../../build/build-index.md
+Additional Resources:
+- [mooc](https://mooc.web3.foundation/course/blockchain-fundamentals/)
+- [medium](https://medium.com/polkadot-network/kusama-network-7446706b8f4c)
+- [claims](kusama-claims)
+- [endpoints](kusama-endpoints)
+- [tokens](https://claim.kusama.network/)
+- [validator](../../maintain/kusama/mirror-maintain-guides-how-to-validate-kusama.md)
+- [nominator](../../maintain/kusama/mirror-maintain-guides-how-to-nominate-kusama.md)
+- [polkadot wiki](https://wiki.polkadot.network/)
