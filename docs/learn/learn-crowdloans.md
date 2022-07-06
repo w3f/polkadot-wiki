@@ -63,6 +63,8 @@ runtime upgrades (as determined through its own local governance).
 
 ## Supporting a Crowdloan Campaign
 
+### Contributing to Crowdloans
+
 :::info Minimum Crowdloan Contribution
 
 The minimum balance for contributions for a crowdloan campaign is 
@@ -95,6 +97,8 @@ imagine, rewards will take many forms and may vary widely among projects.
 If a crowdloan campaign is successful, that parachain will be on-boarded to the Relay Chain. The
 collective tokens will be locked in that parachain's account for the entire duration that it is
 active.
+
+### Withdraw Crowdloaned Tokens
 
 Participants will be able to reclaim their tokens in one of two ways:
 

@@ -1,120 +1,168 @@
-import * as fs from "fs";
+import { writeFileSync } from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
-import replacements from "./inject-dict.json" assert {type: "json"};
-import * as computed from "./computed.mjs";
+import constants from "./inject-dict.json" assert {type: "json"};
+import replace from "replace-in-file";
 
+const Polkadot = "polkadot";
+const Kusama = "kusama";
+
+let constantsDict = {};
+
+// Process command line arguments
 const argv = yargs(process.argv)
-  .option("dry", {
-    alias: "d",
-    description: "Dry run - check values before replacing",
-    type: "boolean",
-  })
   .option("isPolkadot", {
     alias: "p",
-    description: "Is Polkadot - build dict values for Polkadot or Kusama",
+    description: "Is Polkadot - build constant values for Polkadot or Kusama",
     type: "boolean",
+    default: false
+  })
+  .option("inject", {
+    alias: "i",
+    description: "Boolean flag for toggling html inject",
+    type: "boolean",
+    default: false
   })
   .help()
   .alias("help", "h").argv;
 
-if (argv.isPolkadot === undefined) {
-  throw new Error("Must pass a --isPolkadot option.");
-}
-
+// Connect to the appropriate rpc based on flag value
 const node = argv.isPolkadot ? "wss://rpc.polkadot.io" : "wss://kusama-rpc.polkadot.io/";
-console.log("Connecting to node " + node);
-
-let filledDict = {};
 
 // Connect to a node
 const wsProvider = new WsProvider(node);
 ApiPromise.create({ provider: wsProvider })
   .then(function (instance) {
-    console.log("Connected");
+    console.log(`Connected to node at ${node}`);
 
+    // Set active project
     let wiki;
     if (argv.isPolkadot) {
-      console.log("Working on the Polkadot wiki");
-      wiki = "polkadot";
+      console.log("Active Project: Polkadot Wiki");
+      wiki = Polkadot;
     } else {
-      console.log("Working on Kusama Guide");
-      wiki = "kusama";
+      console.log("Active Project: Kusama Guide");
+      wiki = Kusama;
     }
 
-    replacements.forEach(async function (replacement) {
-      if (replacement.computed) {
-        let result = null;
-        try {
-          const key = computed.toCamelCase(replacement.tpl);
-          console.log("Getting", key);
-          result = computed[key];
-        } catch (e) {
-          console.log(e);
-        }
-        filledDict["{{ " + replacement.tpl + " }}"] = result || replacement.default;
-        return;
-      }
-
+    // For every object in inject-dict
+    constants.forEach(async function (constant) {
       let chainValue = undefined;
-      try {
-        // Simple const retrieve
-        if (replacement.path.indexOf("consts") === 0) {
-          console.log("In const for " + replacement.path);
-          chainValue = byString(instance, replacement.path);
-        }
 
-        // Query calls
-        if (replacement.path.indexOf("query") === 0) {
-          console.log("In query for " + replacement.path);
-          chainValue = byString(instance, replacement.path);
-          chainValue = await chainValue();
+      // If the constant value has a valid path property
+      if("path" in constant && constant.path.includes('.')) {
+        const subPaths = constant.path.split('.');
+        const preFix = subPaths[0];
+        
+        // Process constants and queries
+        switch(preFix) {
+          case "consts":
+            chainValue = byString(instance, constant.path);
+            break;
+          case "query":
+            chainValue = byString(instance, constant.path);
+            chainValue = await chainValue();
+            break;
+          default:
+            console.log(`Unknown path prefix (${preFix}) for ${constant.tpl} in constants`);
         }
 
         // Convert to human readable number if possible
-        if (undefined !== chainValue.toNumber) {
+        if (chainValue !== undefined && typeof chainValue.toNumber === "function") {
           chainValue = chainValue.toNumber();
-        }
-      } catch (e) {}
-
-      // Activate default mode, depending on wiki being injected into
-      if (!chainValue) {
-        console.log("No value found, seeking default for " + replacement.tpl);
-        if (typeof replacement.default === "object") {
-          if (wiki === "polkadot") {
-            chainValue = replacement.default.polkadot;
-          } else {
-            chainValue = replacement.default.kusama;
-          }
-        } else {
-          chainValue = replacement.default;
-        }
-      } else {
-        if (replacement.filters && replacement.filters.length) {
-          for (let i = 0; i < replacement.filters.length; i++) {
-            chainValue = applyFilter(chainValue, replacement.filters[i], wiki);
-          }
         }
       }
 
-      filledDict["{{ " + replacement.tpl + " }}"] = chainValue;
+      // If the path property is missing or doesn't contain a prefix or failed to retrieve
+      if (chainValue === undefined) {
+        // Log constants that have fetch paths provided but failed to retrieve valid data
+        if ("path" in constant) {
+          console.log(`Failed to fetch value for ${constant.tpl}, applying default`);
+        }
+        // If the default is an object this logic assumes Polkadot & Kusama values are available
+        if (typeof constant.default === "object") {
+          if (wiki === Polkadot) {
+            chainValue = constant.default.polkadot;
+          } else {
+            chainValue = constant.default.kusama;
+          }
+        } else {
+          // Values are the same despite the project
+          chainValue = constant.default;
+        }
+      }
+
+      // At this point chainValue should be valid but unformatted (default or fetched value)
+      // Check if the constant has any filters
+      if ("filters" in constant && constant.filters.length > 0) {
+        // Apply filter formatting
+        constant.filters.forEach(filter => {
+          chainValue = applyFilter(chainValue, filter, wiki);
+        });
+      }
+
+      // Update 
+      constantsDict[`{{ ${constant.tpl} }}`] = chainValue;
     });
   })
   .catch(function (e) {
     console.log(e);
-    console.error(
-      "Error connecting! Check your node URL and make sure its websockets are open, secure if remote (wss), and allow RPC from all."
-    );
     process.exit(1);
   });
 
-let v = setInterval(function () {
-  if (Object.keys(filledDict).length === Object.keys(replacements).length) {
+let v = setInterval(async function () {
+  // Verify the correct amount of expected constant values are generated
+  if (Object.keys(constantsDict).length === Object.keys(constants).length) {
     clearInterval(v);
-    const content = JSON.stringify(filledDict, null, 2);
 
-    fs.writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
-    console.log("Save dict values successfully!");
+    // Write updated computed-dict.json file
+    const content = JSON.stringify(constantsDict, null, 2);
+    writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
+    console.log("Updated global constants in computed-dict.json");
+
+    // If the injection flag is present, inject the constants into the doc html
+    if (argv.inject && "rootDir" in argv) {
+      // Template options for replace-in-file
+      const options = {
+        files: [`${argv.rootDir}/docs/**/**/*.html`],
+        from: Object.keys(constantsDict).map((el) => {
+          return new RegExp(el, "ig");
+        }),
+        to: Object.values(constantsDict),
+      };
+
+      console.log("Replacement configuration: ");
+      console.log(options);
+
+      try {
+        const results = await replace(options)
+        console.log('Replacement results:', results);
+
+        const changedFiles = results
+          .filter((result) => result.hasChanged)
+          .map((result) => result.file);
+        console.log("Modified files:", changedFiles);
+
+        let from = [/\{\{ kusama: [\s\S]+? :kusama \}\}/gim, /\{\{ polkadot: [\s\S]+? :polkadot \}\}/gim];
+        let to =
+          argv.rootDir.indexOf("kusama-guide") !== -1
+            ? [(match) => match.replace("{{ kusama: ", "").replace(" :kusama }}", ""), ""]
+            : ["", (match) => match.replace("{{ polkadot: ", "").replace(" :polkadot }}", "")];
+        let results2 = replace.sync({
+          files: [`${argv.rootDir}/docs/**/**/*.html`],
+          from: from,
+          to: to,
+        });
+        const changedFiles2 = results2
+          .filter((result) => result.hasChanged)
+          .map((result) => result.file);
+        console.log("Modified files for kusama/polkadot difference:", changedFiles2);
+      } catch (error) {
+        console.error("Error occurred:", error);
+        process.exit(1);
+      }
+    }
+    // Done
     process.exit(0);
   }
 }, 1000);
@@ -135,8 +183,7 @@ function byString(o, s) {
 }
 
 function applyFilter(value, filter, wiki) {
-  console.log(`Applying ${filter} to ${wiki} value ${value}`);
-
+  //console.log(`Applying ${filter} to ${wiki} value ${value}`);
   const values = {
     polkadot: {
       precision: 1e10,
@@ -150,8 +197,8 @@ function applyFilter(value, filter, wiki) {
 
   switch (filter) {
     case "humanReadableToken":
-      let decimals = 6
-      if (wiki === "polkadot") {
+      let decimals = 6 // Kusama
+      if (wiki === Polkadot) {
         decimals = 3;
       }
 
@@ -159,6 +206,7 @@ function applyFilter(value, filter, wiki) {
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;
+      break;
     default:
       break;
   }

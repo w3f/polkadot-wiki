@@ -32,7 +32,7 @@ dedicated [cross consensus][] page on the Wiki.
 Building a bridge that is as decentralised and trustless as possible can be done through any of the
 following methods (ordered by suggested methodology):
 
-- *Bridge pallets* - For Substrate-native chains, use a bridge pallet (e.g. Kusama `\<\>` Polkadot
+- *Bridge pallets* - For Substrate-native chains, use a bridge pallet (e.g. Kusama `<->` Polkadot
   bridge, since both networks' parachains use Substrate).
 - *Smart contracts* - If the chain is not on Substrate, you should have smart contracts on the
   non-Substrate chain to bridge (e.g. Ethereum mainnet will have a bridge smart contract that
@@ -48,7 +48,7 @@ instance can then be deployed to {{ polkadot: Polkadot :polkadot }}{{ kusama: Ku
 either as a system-level parachain (native extension to the core Polkadot software) or as a 
 community-operated parachain.
 
-An example of a bridge that would strictly use bridge pallets would be a Kusama `\<\>` Polkadot
+An example of a bridge that would strictly use bridge pallets would be a Kusama `<->` Polkadot
 bridge, since both use parachains based on Substrate.
 
 For the standalone chains that will not have a parachain bridging module on 
@@ -87,7 +87,7 @@ it does not support smart-contracts and it's not based on Substrate.
 
 ## Examples
 
-### Ethereum Bridge (Smart Contracts \<\> Polkadot)
+### Ethereum Bridge (Smart Contracts <-> Polkadot)
 
 As explained by Dr. Gavin Wood in a [blog post][eth bridging blog] from late 2019, there are three
 ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ecosystem.
@@ -98,7 +98,7 @@ ways that the Polkadot and Substrate ecosystem can be bridged to the Ethereum ec
 
 Please read the blog article for fuller descriptions of each one of these options.
 
-### Bitcoin Bridge (XCLAIM \<\> Substrate \<\> Polkadot)
+### Bitcoin Bridge (XCLAIM <-> Substrate <-> Polkadot)
 
 The Interlay team has written a [specification][interlay] on a Bitcoin bridge that is based on the
 [XCLAIM][] design paper. The protocol enables a two-way bridge between Polkadot and Bitcoin. It
@@ -131,7 +131,7 @@ welcome.
 - [Parity Bridges Common Resources](https://github.com/paritytech/parity-bridges-common)
 - [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe and Centrifuge
   were awarded a grant in W3F Grants [Wave 5][] to build a Substrate to Ethereum two-way bridge.
-- [PolkaBTC (Bitcoin \<\> Polkadot Bridge)](https://docs.polkabtc.io/#/)
+- [PolkaBTC (Bitcoin <-> Polkadot Bridge)](https://docs.polkabtc.io/#/)
 - [EOS Bridge][bifrost] - The Bifrost team was awarded a grant in W3F Grants [Wave 5][] to build a
   bridge to EOS.
 - [Tendermint Bridge](https://github.com/ChorusOne/tendermint-light-client) - ChorusOne was awarded
