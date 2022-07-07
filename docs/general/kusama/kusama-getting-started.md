@@ -197,7 +197,7 @@ Learn more about how you can create and send Kusama Gifts [here](https://polkado
 
 While Kusama does not support smart contracts natively, building apps on it is still possible
 (e.g. [RMRK.app](https://rmrk.app)). If you're interested in diving deeper into *proper* development, 
-however, check out the [builders guide](./../build/build-index.md).
+however, check out the [builders guide](build-index).
 
 Additional Resources:
 - [mooc](https://mooc.web3.foundation/course/blockchain-fundamentals/)
