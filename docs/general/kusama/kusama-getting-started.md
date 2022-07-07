@@ -203,7 +203,7 @@ Additional Resources:
 - [mooc](https://mooc.web3.foundation/course/blockchain-fundamentals/)
 - [medium](https://medium.com/polkadot-network/kusama-network-7446706b8f4c)
 - [claims](kusama-claims)
-- [endpoints](kusama-endpoints)
+- [endpoints](maintain-endpoints)
 - [tokens](https://claim.kusama.network/)
 - [validator](../../maintain/kusama/mirror-maintain-guides-how-to-validate-kusama.md)
 - [nominator](../../maintain/kusama/mirror-maintain-guides-how-to-nominate-kusama.md)
