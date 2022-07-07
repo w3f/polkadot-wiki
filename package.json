@@ -72,7 +72,7 @@
     "@mdx-js/runtime": "^1.6.22",
     "@polkadot/util": "^9.6.2",
     "@polkadot/util-crypto": "^9.6.2",
-    "@polkadot/wasm-crypto": "^6.2.2",
+    "@polkadot/wasm-crypto": "^6.2.3",
     "@polkadot/x-randomvalues": "*",
     "@types/react": "^18.0.9",
     "ansi-html": "^0.0.9",
