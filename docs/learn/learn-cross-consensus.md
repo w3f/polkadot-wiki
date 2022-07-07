@@ -8,8 +8,9 @@ slug: ../learn-crosschain
 ---
 
 What started as an approach to _cross-chain communication_, has evolved into a format for
-**Cross-Consensus Communication** that is not only conducted between chains, but also smart
-contracts, pallets, bridges, and even sharded enclaves like [SPREE](learn-spree.md).
+[**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is 
+not only conducted between chains, but also smart contracts, pallets, bridges, and even sharded 
+enclaves like [SPREE](learn-spree.md).
 
 ## Overview of XCM: A Format, Not a Protocol
 
