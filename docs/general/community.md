@@ -21,17 +21,14 @@ prior contact and anyone doing so is likely trying to scam you.
 
 - [Polkadot GitHub](https://github.com/paritytech/polkadot) - Parity maintained repository that
   houses the Rust implementation of the Polkadot Host.
-- [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) -
-  Information on hosting meetups, applying for funding, and materials for running it.
 - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and
   [Polkadot Support Contact](https://support.polkadot.network).
 - [Polkadot's Latest Research](https://research.web3.foundation/en/latest/polkadot/overview.html)
 
 ### Events
 
-Web3 Foundation hosts many events online and in-person. To check out our current and past
-events, please refer to our public
-[Notion page](https://www.notion.so/Public-Events-Database-fdd2df4c29d04818a5dd403e2b85920d).
+[Polkadot Meetup Platform](https://www.meetup.com/pro/polkadot) - Information on hosting meetups, 
+applying for funding, and materials for running it.
 
 ## Matrix Chats
 
@@ -84,7 +81,7 @@ Matrix client. If you face any issues, join the rooms individually.
 
 ### Chat
 
-- [Polkadot Discord](https://discord.gg/wGUDt2p) (RECOMMENDED)
+- [Polkadot Discord](https://discord.gg/polkadot) (RECOMMENDED)
 - [Kusama Discord](https://discord.gg/9AWjTf8wSk)
 
 ### Social media and forums
@@ -108,7 +105,7 @@ Matrix client. If you face any issues, join the rooms individually.
 - [Web3 Medium Blog](https://medium.com/@web3)
 - [Polkadot Blog](https://polkadot.network/blog/)
 - [Gavin Wood's Medium Blog](https://medium.com/@gavofyork)
-[Dotleap.com Newsletter](https://newsletter.dotleap.com/)
+- [Dotleap.com Newsletter](https://newsletter.dotleap.com/)
 
 ### Newsletters
 
