@@ -2,7 +2,6 @@ import { writeFileSync } from "fs";
 import yargs from "yargs";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import constants from "./inject-dict.json" assert {type: "json"};
-import replace from "replace-in-file";
 
 const Polkadot = "polkadot";
 const Kusama = "kusama";
@@ -119,49 +118,6 @@ let v = setInterval(async function () {
     const content = JSON.stringify(constantsDict, null, 2);
     writeFileSync("./scripts/computed-dict.json", content, { encoding: "utf8" });
     console.log("Updated global constants in computed-dict.json");
-
-    // If the injection flag is present, inject the constants into the doc html
-    if (argv.inject && "rootDir" in argv) {
-      // Template options for replace-in-file
-      const options = {
-        files: [`${argv.rootDir}/docs/**/**/*.html`],
-        from: Object.keys(constantsDict).map((el) => {
-          return new RegExp(el, "ig");
-        }),
-        to: Object.values(constantsDict),
-      };
-
-      console.log("Replacement configuration: ");
-      console.log(options);
-
-      try {
-        const results = await replace(options)
-        console.log('Replacement results:', results);
-
-        const changedFiles = results
-          .filter((result) => result.hasChanged)
-          .map((result) => result.file);
-        console.log("Modified files:", changedFiles);
-
-        let from = [/\{\{ kusama: [\s\S]+? :kusama \}\}/gim, /\{\{ polkadot: [\s\S]+? :polkadot \}\}/gim];
-        let to =
-          argv.rootDir.indexOf("kusama-guide") !== -1
-            ? [(match) => match.replace("{{ kusama: ", "").replace(" :kusama }}", ""), ""]
-            : ["", (match) => match.replace("{{ polkadot: ", "").replace(" :polkadot }}", "")];
-        let results2 = replace.sync({
-          files: [`${argv.rootDir}/docs/**/**/*.html`],
-          from: from,
-          to: to,
-        });
-        const changedFiles2 = results2
-          .filter((result) => result.hasChanged)
-          .map((result) => result.file);
-        console.log("Modified files for kusama/polkadot difference:", changedFiles2);
-      } catch (error) {
-        console.error("Error occurred:", error);
-        process.exit(1);
-      }
-    }
     // Done
     process.exit(0);
   }
