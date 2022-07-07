@@ -32,7 +32,7 @@ post where the Treasury Proposal was discussed.
 :::caution Web3 Technologies Foundation does not endorse these wallets
 
 These third-party wallets have been funded by the community through either the Polkadot or Kusama 
-[Treasury](learn-treasury.md). You should use your own due diligence in researching and using them.
+[Treasury](learn-treasury). You should use your own due diligence in researching and using them.
 The official Polkadot Support cannot provide support for issues with 
 these wallets or other non-Parity developed wallets.
 
@@ -57,7 +57,7 @@ double-check the wallet website URLs through official channels (most projects ha
 :::note **Tip from the Treasury
 
 This third-party wallet was not funded by a Treasury Proposal and instead received a tip from the Treasury. Unlike a Treasury Proposal, tipping is a separate 
-system that the council members individually participate in to collectively decide on the value of the tip. Learn more about tipping on the [Treasury Page](../learn/learn-treasury.md##tipping).
+system that the council members individually participate in to collectively decide on the value of the tip. Learn more about tipping on the [Treasury Page](learn-treasury#tipping).
 
 :::
 
