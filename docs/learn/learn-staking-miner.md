@@ -18,14 +18,23 @@ Staking miner is a passive validator functionality that runs when a new set of v
 elected for NPoS. This is a computationally intense process, hence the mining. Staking miners
 compete with each other to produce election solutions which consist of a validator set, stake
 distribution across that set, and a score indicating how optimal the solution is. Staking miners run
-the sequential Phragmén algortihm to produce results, and the result is then sent as a transaction
-to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a transaction
-fee. The best solution is rewarded which in the least covers the transaction fee, and the bond is
-returned to the account. If the solution is not valid, the bond and the fee are lost.
+the any given staking algortihms(as of now, sequential Phragmén or PhragMMS, this is subject to
+change if improved alrgorithms are introduced) to produce results, and the result is then sent as a
+transaction to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a
+transaction fee. The best solution is rewarded which in the least covers the transaction fee, and
+the bond is returned to the account. If the solution is not valid, the bond and the fee are lost.
 
 Staking miner uses a pallet called `pallet_election_provider_multi_phase` and can only produce
-solutions during the signed phase of the pallet's life cycle. Once the signed phase is over and the
-unsigned phase starts, only the off-chain workers can provide election results.
+solutions during the
+[`SignedPhase`](https://crates.parity.io/pallet_election_provider_multi_phase/index.html#signed-phase)
+of the pallet's life cycle. Once the `SignedPhase` is over and the
+[`UnsignedPhase`](https://crates.parity.io/pallet_election_provider_multi_phase/index.html#unsigned-phase)
+starts, only the off-chain workers can provide election results.
+
+Running the staking miner requires passing the seed of a funded account in order to pay the fees for
+the transactions that will be sent. The same account's balance is used to reserve deposits as well.
+The best solution in each round is rewarded. All correct solutions will get their bond back and the
+ones that submit invalid solutions will lose their bond.
 
 ## NPoS election optimization
 
@@ -36,11 +45,6 @@ connects to a specified chain and keeps listening to new signed phase of the ele
 order to submit solutions to the NPoS election. When the correct time comes, it computes its
 solution and submits it to the chain. The default miner algorithm is sequential Phragmén with a
 configurable number of balancing iterations that improve the score.
-
-Running the staking miner requires passing the seed of a funded account in order to pay the fees for
-the transactions that will be sent. The same account's balance is used to reserve deposits as well.
-The best solution in each round is rewarded. All correct solutions will get their bond back and the
-ones that submit invalid solutions will lose their bond.
 
 ![NPoS election optimization](../assets/staking-miner/NPoS-election-optimization.png)
 
@@ -110,4 +114,4 @@ resources section below.
 ## Further Resources
 
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
-- [Staking Miner repository](https://github.com/paritytech/polkadot/tree/master/utils/staking-miner)
+- [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
