@@ -167,6 +167,14 @@ unable to transfer them, however they can still be used for further votes. Locks
 of each other, so an eight week lock does not become a 15 week lock if you vote again a week later,
 rather another eight week lock is placed to extend the lock just one extra week.
 
+
+:::info Voting and staking locks can overlap
+
+* A user can use staked funds to vote on referenda (and/or to vote for Councillors).
+* A user is only prohibited from transferring these funds to another account.
+
+:::
+
 To vote on a referendum, navigate to the
 ["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any active referendum
 will show in the "referenda" column. Click the blue button "Vote" to cast a vote for the referendum.
