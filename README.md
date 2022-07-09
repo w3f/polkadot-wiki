@@ -41,11 +41,6 @@
   on Polkadot. 
 </p>
 
-:speech_balloon: **Please be advised: The Wiki will undergo a major revamp over the next several weeks in an attempt to improve its configuration, functionality, relevancy, adequacy, and overall design. 
-The new Wiki will exist in a new repository, still under Web3 Foundation.**
-
-> :scroll: This repository will still be maintained in the meantime, and contributions are always encouraged.
-
 ## Contributing to Documentation
 
 The Technical Education team at Web3 Foundation are the primary maintainers of the Wiki and will review 
