@@ -634,14 +634,12 @@ other peers over the network.
 - [Scaleway](https://www.scaleway.com/en/dedibox/)
 
 
-  :::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
+:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
 
-  You may be locked out of your account and your server shut down if you come in violation.
-  For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
-  their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
-  explicit permission to do so. This may extend to other cryptocurrency activity.}
+You may be locked out of your account and your server shut down if you come in violation.
+For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires explicit permission to do so. This may extend to other cryptocurrency activity.}
 
-  :::
+:::
 
 ## Using Docker
 
