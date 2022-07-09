@@ -623,7 +623,7 @@ other peers over the network.
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
-::: caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
+:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
 
 You may be locked out of your account and your server shut down if you come in violation.
 For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of
