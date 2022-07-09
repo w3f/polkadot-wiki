@@ -61,22 +61,17 @@ instead.
 
 ### Requirements
 
-The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#vps-list) provider that your prefer, and whatever operating system you are
-comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
-similar for other platforms.
+The most common way for a beginner to run a validator is on a cloud/VPS server. Another way is to install on a dedicated server ("bare metal"). You may choose whatever [VPS](#vps-list) or [dedicated server](#dedicated-server-providers) provider you prefer but keep in mind that node hardware should run at a level equal to or above the standard benchmark machines. 
 
-Node hardware should run at a level at or above the standard benchmark machines. Many VPS providers
-seem to fall short in practice, despite good looking specifications. Most validators who are
-serious about setting up an active validator progress to a
-[dedicated server](#dedicated-server-providers).
+Many VPS providers seem to fall short in practice, despite good looking specifications. Most validators who are actively validating progress to a dedicated server. 
 
-The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that
-validators run at least the standard hardware in order to ensure they are able to process all blocks
-in time. The following are not _minimum requirements_ but if you decide to run with less than this
-beware that you might have performance issue.
+#### Software
 
-#### Standard Hardware
+You may use whatever operating system you are comfortable with. For this guide we will be using **Ubuntu 20.04**, but the instructions should be similar for other platforms.
+
+#### Hardware
+
+The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that validators run at least the standard hardware in order to ensure they are able to process all blocks in time. The following are not _minimum requirements_ but if you decide to run with less than this beware that you might have performance issue.  
 
 For the full details of the standard hardware please see
 [here](https://github.com/paritytech/substrate/pull/5848).
@@ -93,8 +88,7 @@ optimizations in order to be equal to other validators that are running the stan
 
 ### Node Prerequisites: Install Rust and Dependencies
 
-Once you choose your cloud service provider and set-up your new server, the first thing you will do
-is install Rust.
+Once you choose your service provider and set-up your new server, the first thing you will do is install Rust.
 
 If you have never installed Rust, you should do this first.
 
