@@ -42,11 +42,6 @@ the [Governance page](../learn/learn-governance.md)
 By connecting these dots, Polkadot serves as a foundational layer of a decentralized web, where users
 control their data and are not limited by trust bounds within the network.
 
-"What is Polkadot?" - A short Introduction
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/29Ty-VTDnh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 "What is Polkadot?" Parachains, Parathreads, and the Polkadot Ecosystem explained in simple terms by
 [DeFi Teller](https://defiteller.guru/)
 
