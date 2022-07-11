@@ -35,7 +35,7 @@ such as Polkadot's NPoS algorithm.
 
 ## BABE
 
-Blind Assignment of Block Extension is Polkadot's block production mechanism.
+Blind Assignment for Blockchain Extension (BABE) is Polkadot's block production mechanism.
 
 ## Block
 
