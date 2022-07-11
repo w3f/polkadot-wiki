@@ -4,7 +4,7 @@ title: Run a Validator (Polkadot)
 sidebar_label: Validator Guide
 ---
 
-> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your validator but the first validator election and rewards will not start until later. If you want to set up a validator on Kusama, check out the [Kusama guide](mirror-maintain-guides-how-to-validate-kusama) instead.
+> The following information applies to the Polkadot network, which is currently in the soft launch phase. During soft launch the network starts as a Proof-of-Authority network before transitioning to Proof-of-Stake. You will be able to follow this guide to set up your validator but the first validator election and rewards will not start until later. If you want to set up a validator on Kusama, check out the [Kusama guide](maintain-guides-how-to-validate-kusama) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
 

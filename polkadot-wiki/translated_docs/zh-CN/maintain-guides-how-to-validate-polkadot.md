@@ -4,7 +4,7 @@ title: 运行验证人 (Polkadot)
 sidebar_label: How to run a Validator on Polkadot
 ---
 
-> The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/maintain-guides-how-to-validate-kusama) instead.
 
 本指南将指导您如何在 Polkadot 网络上设置验证人节点。
 

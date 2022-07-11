@@ -205,6 +205,6 @@ Additional Resources:
 - [claims](kusama-claims)
 - [endpoints](maintain-endpoints)
 - [tokens](https://claim.kusama.network/)
-- [validator](../../maintain/kusama/mirror-maintain-guides-how-to-validate-kusama.md)
-- [nominator](../../maintain/kusama/mirror-maintain-guides-how-to-nominate-kusama.md)
+- [validator](../../maintain/kusama/maintain-guides-how-to-validate-kusama.md)
+- [nominator](../../maintain/kusama/maintain-guides-how-to-nominate-kusama.md)
 - [polkadot wiki](https://wiki.polkadot.network/)

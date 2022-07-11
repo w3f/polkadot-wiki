@@ -20,7 +20,6 @@ jobs:
       - name: Clone and run the site
         run: |
           yarn
-          yarn mirror
           yarn polkadot:start &
           while ! nc -z localhost 3000; do
               sleep 1

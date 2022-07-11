@@ -477,7 +477,7 @@ you will need to acquire a parachain slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
 {{ polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}
-{{ kusama: [parachain auction](../learn/mirror-learn-auction.md) :kusama }} page of the wiki.
+{{ kusama: [parachain auction](../learn/learn-auction.md) :kusama }} page of the wiki.
 
 ### Parathread
 
@@ -488,7 +488,7 @@ transition into a Relay Chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
 {{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
-{{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
+{{ kusama: [parathread](../learn/learn-parathreads.md) :kusama }} page.
 
 ## Resources 
 

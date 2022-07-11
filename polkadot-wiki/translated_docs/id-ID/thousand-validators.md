@@ -81,6 +81,6 @@ The below addresses are the stash / controller pairs for the nominators involved
 A time delay proxy is used as the main interaction method for all of these accounts.
 
 Since approximately early January 2021, the nominators will select an automatic number of validators to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This can be anywhere from a few validators receiving nomination from a single nominator to the max of 16.
-https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform https://guide.kusama.network/docs/en/mirror-learn-identity#setting-an-identity
+https://docs.google.com/forms/d/e/1FAIpQLSdS-alI-J2wgIRCQVjQC7ZbFiTnf36hYBdmO-1ARMjKbC7H9w/viewform https://guide.kusama.network/docs/en/learn-identity#setting-an-identity
 
 [kusama 1kv form]: https://forms.gle/xqYLoceTwg1qvc9i6

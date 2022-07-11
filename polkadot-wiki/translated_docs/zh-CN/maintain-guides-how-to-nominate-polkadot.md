@@ -4,7 +4,7 @@ title: How to Nominate on Polkadot
 sidebar_label: How to Nominate on Polkadot
 ---
 
-> The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-nominate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/maintain-guides-how-to-nominate-kusama) instead.
 
 提名人是 Polkadot 抵押子系统的一种参与者。 他们负责将会参与抵押中的代币分配给第二种参与者的验证人。 通过抵押他们的代币，他们能够选举活跃的验证人并分享抵押所支付的奖励。
 
