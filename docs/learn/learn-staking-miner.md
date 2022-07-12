@@ -75,7 +75,11 @@ pub struct RawSolution<S> {
 ```
 
 A maximum of `pallet::Config::MaxSignedSubmissions` will be stored on-chain and they will be sorted
-based on score. Higher the score the more optimal the election solution is.
+based on score. Higher the score the more optimal the election solution is. On both Polkadot and
+Kusama the
+['MaxSignedSubmissions'](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L446)
+is set to {{ signed_max_submission }} submissions. This variable can be modified if needed through
+governance.
 
 Upon arrival of a new solution:
 
@@ -87,11 +91,12 @@ Upon arrival of a new solution:
    it is instantly rejected and no bond is reserved.
 
 Upon the end of the signed phase, no more solutions can be submitted and the solutions in the queue
-will be checked using `Pallet::feasibility_check` which ensures the score is indeed correct, and
-marks them as valid or invalid. By checking each solution in the queue, the queue will be
-reorganized by score. The highest valid score will be rewarded. Invalid solutions with higher score
-than the winning solution will be slashed. The rest of the solutions will be discarded and their
-deposit will be returned.
+will be checked using
+[`Pallet::feasibility_check`](https://paritytech.github.io/substrate/master/pallet_election_provider_multi_phase/pallet/struct.Pallet.html#method.feasibility_check)
+which ensures the score is indeed correct, and marks them as valid or invalid. By checking each
+solution in the queue, the queue will be reorganized by score. The highest valid score will be
+rewarded. Invalid solutions with higher score than the winning solution will be slashed. The rest of
+the solutions will be discarded and their deposit will be returned.
 
 ```
 Queue
