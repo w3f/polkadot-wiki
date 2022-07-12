@@ -51,8 +51,8 @@ jobs:
 
       - name: Publish
         run: |
-          git config --global user.email "polkadot-wiki-deploy@users.noreply.github.com"
-          git config --global user.name "Polkadot Wiki CI"
+          git config --global user.email "w3fdeploy@users.noreply.github.com"
+          git config --global user.name "w3fdeploy"
           echo "machine github.com login w3fdeploy password ${{ secrets.ACCESS_KEY }}" > ~/.netrc
 
           yarn && yarn kusama:build && echo "staging.kusama.network" > kusama-guide/static/CNAME && GIT_USER=w3fdeploy PUBLISHING=true PROJECT_NAME=kusama-guide-staging yarn run kusama:publish-gh-pages
