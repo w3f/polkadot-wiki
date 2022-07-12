@@ -14,8 +14,8 @@ discretion, as there is a risk of losing some funds.
 
 :::
 
-The staking miner is a passive validator functionality which runs when a new set of validators need to be
-elected for NPoS. This is a computationally intense process, hence the mining. Staking miners
+The staking miner is a passive validator functionality which runs when a new set of validators need
+to be elected for NPoS. This is a computationally intense process, hence the mining. Staking miners
 compete with each other to produce election solutions which consist of a validator set, stake
 distribution across that set, and a score indicating how optimal the solution is. Staking miners run
 the any given staking algortihms(as of now, sequential Phragmén or PhragMMS, this is subject to
