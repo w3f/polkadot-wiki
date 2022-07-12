@@ -491,7 +491,7 @@ For more information on how parathread per-block auctions work, see the more det
 
 ## Resources 
 
-- [Parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/)
+<!-- - [Parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) -->
 - [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
