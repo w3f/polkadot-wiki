@@ -15,9 +15,16 @@ The goal is to eventually have 100 parachain slots available on {{ polkadot: Pol
 [parathread pool](learn-parathreads.md)). If a parachain wants to have guaranteed block inclusion at
 every Relay Chain block, it must acquire a parachain slot.
 
-The parachain slots will be sold according to an unpermissioned
+The parachain slots will be leased according to an unpermissioned
 [candle auction](https://en.wikipedia.org/wiki/Candle_auction) that has been slightly modified to be
 secure on a blockchain.
+
+:::info Auction Schedule
+
+The auction schedule for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is available
+on the auctions page of the {{ polkadot: [Polkadot website](https://polkadot.network/auctions/). :polkadot }}{{ kusama: [Kusama website](https://kusama.network/auctions/). :kusama }}
+
+:::
 
 [![A Beginner's guide to Parachain Slot Auctions](https://img.youtube.com/vi/i5-Rw2Sf7-w/0.jpg)](https://youtu.be/i5-Rw2Sf7-w)
 
@@ -310,6 +317,13 @@ A number of system or common-good parachains may be granted slots by the
 parachain ID lower than 1_000, and common-good parachains by a parachain ID between 1_000 and 1_999.
 Other parachains will have IDs 2_000 or higher. Such parachains would not have to bid for or renew
 their slots as they would be considered essential to the ecosystem's future.
+
+### How are auctions scheduled?
+
+The parachain slot auctions are scheduled through the governance. At least 2/3 of the Council can 
+initiate an auction, however, Root origin (via referendum) is needed to cancel an auction. Here is a
+proposal that gives a glimpse of what goes into planning auctions schedule - 
+[Proposed Polkadot Auction Schedule 2022](https://polkadot.polkassembly.io/post/863)
 
 ## Resources
 
