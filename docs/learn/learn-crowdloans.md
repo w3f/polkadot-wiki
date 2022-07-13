@@ -35,6 +35,14 @@ range of slots (i.e. the duration of the {{ polkadot: [parachain](learn-parachai
 The duration can last over several auctions, meaning that the team will not need to restart the
 campaign just because they do not secure a slot on their first attempt.
 
+:::info Crowdloan Submission Deposit Required
+
+In order to create a new crowdloan campaign, your account must have 
+{{ polkadot: 500 DOT :polkadot }}{{ kusama: 10 KSM :kusama }} transferrable which will be reserved for 
+the duration of the crowdloan
+
+:::
+
 When setting the parameters of a crowdloan campaign, consider the following:
 - A crowdloan campaign can start well before the auction slot is opened. 
 - The campaign creation form requires setting a crowdloan cap &mdash; the maximum amount a campaign
