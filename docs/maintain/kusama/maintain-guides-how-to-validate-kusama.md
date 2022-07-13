@@ -73,7 +73,7 @@ You may use whatever operating system you are comfortable with. For this guide w
 
 #### Hardware
 
-The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that validators run at least the standard hardware in order to ensure they are able to process all blocks in time. The following are not _minimum requirements_ but if you decide to run with less than this beware that you might have performance issue.  
+The following specs are not the _minimum requirements_, but if you decide to run with less than this, your validator nodes might face performance issues. The transaction weights on Kusama are benchmarked on standard hardware. It is recommended that the validator nodes run on machines matching the standard hardware specs in order to ensure block processing and production in time. 
 
 For the full details of the standard hardware please see
 [here](https://github.com/paritytech/substrate/pull/5848).
