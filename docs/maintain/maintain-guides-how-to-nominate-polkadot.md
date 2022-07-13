@@ -136,7 +136,7 @@ Staking wiki page for more details.
 This step is highly relevant if the staked DOT is close to the dynamic minimum active nomination
 threshold on the network, which can be viewed on
 [Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
-For instance, , the minimum active nomination receiving staking rewards is 124.575 DOT in the
+For instance, the minimum active nomination receiving staking rewards is 124.575 DOT in the
 snapshot below. See the [Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator
 wiki page for more details.
 
