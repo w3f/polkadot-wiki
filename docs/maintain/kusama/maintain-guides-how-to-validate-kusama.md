@@ -67,7 +67,7 @@ Many VPS providers seem to fall short in practice, despite good looking specific
 serious about setting up an active validator progress to a
 [dedicated server](#dedicated-server-providers).
 
-#### Software
+#### Operating System
 
 You may use whatever operating system you are comfortable with. For this guide we will be using **Ubuntu 20.04**, but the instructions should be similar for other platforms.
 
