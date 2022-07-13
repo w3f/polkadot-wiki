@@ -63,7 +63,9 @@ instead.
 
 The most common way for a beginner to run a validator is on a cloud/VPS server. Another way is to install on a dedicated server ("bare metal"). You may choose any [VPS](#vps-list) or [dedicated server](#dedicated-server-providers) provider you prefer, but keep in mind that node hardware should run at a level equal to or above the standard benchmark machines. 
 
-Many VPS providers seem to fall short in practice, despite good looking specifications. Most validators who are actively validating progress to a dedicated server. 
+Many VPS providers seem to fall short in practice, despite good looking specifications. Most validators who are
+serious about setting up an active validator progress to a
+[dedicated server](#dedicated-server-providers).
 
 #### Software
 
