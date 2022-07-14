@@ -35,10 +35,10 @@ were set).
 
 :::caution Purge keys using the same account that set the keys
 
-**It is the same account that needs to call the `session.purge_keys()` extrinsic** in order for the
-correct reference to be removed. Calling the `session.purge_keys()` from the wrong account, although
-it may succeed, will result in a reference on the other account that **cannot** be removed, and as a
-result that account cannot be reaped.
+Make sure to call the session.purge_keys() extrinsic from the same account that set the keys in the 
+first place in order for the correct reference to be removed. Calling the `session.purge_keys()` from 
+the wrong account, although it may succeed, will result in a reference on the other account that
+**cannot** be removed, and as a result that account cannot be reaped.
 
 :::
 
