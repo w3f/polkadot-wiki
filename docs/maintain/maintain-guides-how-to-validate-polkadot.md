@@ -9,7 +9,7 @@ slug: ../maintain-guides-how-to-validate-polkadot
 
 :::info 
 
-The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/mirror-maintain-guides-how-to-validate-kusama.md) instead.
+The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
 

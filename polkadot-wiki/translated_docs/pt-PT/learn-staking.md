@@ -94,8 +94,8 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ### Want to stake DOTs?
 
-- [Nominator Guide](mirror-maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
-- [Validator Guide](mirror-maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
+- [Nominator Guide](maintain-guides-how-to-nominate-kusama) - Become a nominator on the Kusama network.
+- [Validator Guide](maintain-guides-how-to-validate-kusama) - Become a validator on the Kusama network.
 
 ## Slashing
 

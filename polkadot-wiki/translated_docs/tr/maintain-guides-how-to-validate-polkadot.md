@@ -4,7 +4,7 @@ title: Run a Validator (Polkadot)
 sidebar_label: How to run a Validator on Polkadot
 ---
 
-> The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-validate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/maintain-guides-how-to-validate-kusama) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
 

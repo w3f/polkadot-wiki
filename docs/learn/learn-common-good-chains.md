@@ -14,7 +14,7 @@ as a whole. By allocating a subset of parachain slots to common good chains, the
 realize the benefit of valuable parachains that would otherwise be underfunded due to the free-rider
 problem. They are not allocated via the parachain auction process but by the on-chain
 {{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](mirror-learn-governance.md) :kusama }} system. Generally, a common good
+{{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good
 parachain's lease would not expire; it would only be removed via governance.
 
 The purpose of these parachains will probably fall into one of two categories: system level chains

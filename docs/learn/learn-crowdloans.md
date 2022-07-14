@@ -22,7 +22,7 @@ contribute for a crowdloan, watch the video below or read this [support article 
 :::note Testing on Rococo
 
 For information on how to participate in the crowdloan and parachain auction testing on
-Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
+Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}.
 
 :::
 
@@ -31,7 +31,7 @@ Rococo, please see the {{ polkadot: [Rococo content](../build/build-parachains.m
 Anyone who has registered a parachain can create a new crowdloan campaign for a slot
 by depositing a specified number of tokens. A campaign is configured as a
 range of slots (i.e. the duration of the {{ polkadot: [parachain](learn-parachains.md) :polkadot }}
-{{ kusama: [parachain](mirror-learn-parachains.md) :kusama }} will bid for), a cap, and a duration.
+{{ kusama: [parachain](learn-parachains.md) :kusama }} will bid for), a cap, and a duration.
 The duration can last over several auctions, meaning that the team will not need to restart the
 campaign just because they do not secure a slot on their first attempt.
 

@@ -69,7 +69,6 @@ typings/
 polkadot-wiki/build
 kusama-guide/build
 build-script*
-**/mirror*.md
 .DS_Store
 kusama-guide/translated_docs/
 polkadot-wiki/translated-docs/
