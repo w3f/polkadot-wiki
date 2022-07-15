@@ -48,7 +48,7 @@ function FooterSocialColumn() {
         className="socicon-youtube"
       />
       <SocialItem
-        href="https://discord.gg/wGUDt2p"
+        href="https://discord.gg/polkadot"
         className="socicon-discord"
       />
     </ul>

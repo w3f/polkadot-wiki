@@ -43,7 +43,7 @@ We primarily use [Matrix](https://matrix.org) across the organization and to com
 
 ### Chat
 
-- [Polkadot Discord](https://discord.gg/wGUDt2p) (RECOMMENDED)
+- [Polkadot Discord](https://discord.gg/polkadot) (RECOMMENDED)
 - [Kusama Discord](https://discord.gg/JSJcRwz8fp)
 
 ### Social media and forums
