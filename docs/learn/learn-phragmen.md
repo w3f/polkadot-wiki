@@ -10,8 +10,8 @@ slug: ../learn-phragmen
 ## NPoS Election Algorithms
 
 Since validators are paid almost equally in Polkadot in each era, it is important that the stake behind each validator 
-is uniformaly spread out. Any algorithm for Nominated Proof of Staking (NPoS) on Polkadot should try to optimize three 
-metrics when computing an election solution graph with nominators and validators:
+is uniformly spread out. An election algorithm for Nominated Proof of Staking (NPoS) on Polkadot will try to optimize three 
+metrics when computing a solution graph of nominators and validators:
 
 1. Maximize the total amount at stake.
 1. Maximize the stake behind the minimally staked validator.
