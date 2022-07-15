@@ -41,7 +41,7 @@
     "@docusaurus/core": "^2.0.0-rc.1",
     "@docusaurus/module-type-aliases": "^2.0.0-rc.1",
     "@docusaurus/plugin-client-redirects": "^2.0.0-beta.21",
-    "@docusaurus/preset-classic": "^2.0.0-beta.21",
+    "@docusaurus/preset-classic": "^2.0.0-rc.1",
     "@octokit/rest": "^19.0.3",
     "@polkadot/api": "^8.12.2",
     "@polkadot/keyring": "^9.7.2",
