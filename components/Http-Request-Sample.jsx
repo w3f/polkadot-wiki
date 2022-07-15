@@ -6,7 +6,7 @@ This sample component shows how to make an http request
 to an external API and render the response data.
 
 The component can be used in Docusaurus markdown
-by adding the following line anywhere within the file.
+by adding the following lines anywhere within the file.
 
 import Http from "./../../components/Http-Request-Sample"
 {{ polkadot: <Http url="https://polkadot.api.subscan.io/api/scan/block" hash="0x68a27df5a52ff2251df2cc8368f7dcefb305a13bb3d89b65c8fb070f23877f2c" color="#e6007a">Polkadot</Http> :polkadot }}
@@ -43,7 +43,7 @@ async function postRequest(url, hash, setBlockValidator) {
     await axios.post(url, body, headers)
         // If successful
         .then(res => {
-        const body = res.data.data;
+            const body = res.data.data;
             setBlockValidator(body.validator);
             console.log(`Http request to ${url} successful`);
         })
