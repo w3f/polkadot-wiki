@@ -30,7 +30,7 @@ While Kusama does not support smart contracts natively, building apps on it is s
 [create-account]: kusama-claims
 [endpoints]: kusama-endpoints
 [tokens]: https://claim.kusama.network/
-[validator]: mirror-maintain-guides-how-to-validate-kusama
-[nominator]: mirror-maintain-guides-how-to-nominate-kusama
+[validator]: maintain-guides-how-to-validate-kusama
+[nominator]: maintain-guides-how-to-nominate-kusama
 [polkadot wiki]: https://wiki.polkadot.network/
 [polkadot-builders]: https://wiki.polkadot.network/docs/en/build-index

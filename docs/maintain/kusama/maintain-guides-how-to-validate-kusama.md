@@ -19,8 +19,8 @@ your stash.
 
 :::warning
 
-It is highly recommended that you have significant system administration experience
-before attempting to run your own validator.
+It is highly recommended that you have significant system administration experience before
+attempting to run your own validator.
 
 :::
 
@@ -42,18 +42,17 @@ Riot.im) using [this link](https://matrix.to/#/#KusamaValidatorLounge:polkadot.b
 
 You can have a rough estimate on that by using the methods listed
 [here](../../general/faq.md#What-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator-?).
-Validators are elected based on [Phragmén's algorithm](../../learn/learn-phragmen.md). To be elected into the
-set, you need a minimum stake behind your validator. This stake can come from yourself or from
-[nominators](../../learn/learn-nominator.md). This means that as a minimum, you will need enough KSM to set up
-Stash and Controller [accounts](../../learn/learn-keys.md) with the existential deposit, plus a little extra for
-transaction fees. The rest can come from nominators.
+Validators are elected based on [Phragmén's algorithm](../../learn/learn-phragmen.md). To be elected
+into the set, you need a minimum stake behind your validator. This stake can come from yourself or
+from [nominators](../../learn/learn-nominator.md). This means that as a minimum, you will need
+enough KSM to set up Stash and Controller [accounts](../../learn/learn-keys.md) with the existential
+deposit, plus a little extra for transaction fees. The rest can come from nominators.
 
 :::warning
 
-Any KSM that you stake for your validator is liable to be slashed, meaning that an
-insecure or improper setup may result in loss of KSM tokens! If you are not confident in your
-ability to run a validator node, it is recommended to nominate your KSM to a trusted validator node
-instead.
+Any KSM that you stake for your validator is liable to be slashed, meaning that an insecure or
+improper setup may result in loss of KSM tokens! If you are not confident in your ability to run a
+validator node, it is recommended to nominate your KSM to a trusted validator node instead.
 
 :::
 
@@ -61,22 +60,26 @@ instead.
 
 ### Requirements
 
-The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#vps-list) provider that your prefer, and whatever operating system you are
-comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
-similar for other platforms.
+The most common way for a beginner to run a validator is on a cloud/VPS server. Another way is to
+install on a dedicated server ("bare metal"). You may choose any [VPS](#vps-list) or
+[dedicated server](#dedicated-server-providers) provider you prefer, but keep in mind that node
+hardware should run at a level equal to or above the standard benchmark machines.
 
-Node hardware should run at a level at or above the standard benchmark machines. Many VPS providers
-seem to fall short in practice, despite good looking specifications. Most validators who are
-serious about setting up an active validator progress to a
+Many VPS providers seem to fall short in practice, despite good looking specifications. Most
+validators who are serious about setting up an active validator progress to a
 [dedicated server](#dedicated-server-providers).
 
-The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that
-validators run at least the standard hardware in order to ensure they are able to process all blocks
-in time. The following are not _minimum requirements_ but if you decide to run with less than this
-beware that you might have performance issue.
+#### Operating System
 
-#### Standard Hardware
+You may use whatever operating system you are comfortable with. For this guide we will be using
+**Ubuntu 20.04**, but the instructions should be similar for other platforms.
+
+#### Hardware
+
+The following specs are not the _minimum requirements_, but if you decide to run with less than
+this, your validator nodes might face performance issues. The transaction weights on Kusama are
+benchmarked on standard hardware. It is recommended that the validator nodes run on machines
+matching the standard hardware specs in order to ensure block processing and production in time.
 
 For the full details of the standard hardware please see
 [here](https://github.com/paritytech/substrate/pull/5848).
@@ -93,8 +96,8 @@ optimizations in order to be equal to other validators that are running the stan
 
 ### Node Prerequisites: Install Rust and Dependencies
 
-Once you choose your cloud service provider and set-up your new server, the first thing you will do
-is install Rust.
+Once you choose your service provider and set-up your new server, the first thing you will do is
+install Rust.
 
 If you have never installed Rust, you should do this first.
 
@@ -177,10 +180,10 @@ sudo ntpq -p
 
 :::warning
 
-Skipping this can result in the validator node missing block authorship opportunities.
-If the clock is out of sync (even by a small amount), the blocks the validator produces may not
-get accepted by the network. This will result in `ImOnline` heartbeats making it on chain, but
-zero allocated blocks making it on chain.
+Skipping this can result in the validator node missing block authorship opportunities. If the clock
+is out of sync (even by a small amount), the blocks the validator produces may not get accepted by
+the network. This will result in `ImOnline` heartbeats making it on chain, but zero allocated blocks
+making it on chain.
 
 :::
 
@@ -188,7 +191,8 @@ zero allocated blocks making it on chain.
 
 #### Optional: Installation via Package Managers
 
-The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and `RPM-based` distros (i.e. **Fedora**, **CentOS**).
+The Polkadot Binary in included in `Debian` derivatives (i.e. **Debian**, **Ubuntu**) and
+`RPM-based` distros (i.e. **Fedora**, **CentOS**).
 
 #### Debian-based (Debian, Ubuntu)
 
@@ -237,7 +241,7 @@ It should return
 
 :::info By default, the Polkadot systemd service is disabled
 
-To start the service, run 
+To start the service, run
 
 ```bash
 sudo systemctl start polkadot.service
@@ -295,8 +299,8 @@ cargo build --release
 
 :::note Compilation Errors
 
-If you run into compile errors, you may have to switch to a less recent nightly. This can be
-done by running:
+If you run into compile errors, you may have to switch to a less recent nightly. This can be done by
+running:
 
 ```sh
 rustup install nightly-2021-06-09
@@ -326,14 +330,13 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 :::info By default, Validator nodes are in archive mode
 
-If you've already synced the chain not
-in archive mode, you must first remove the database with `polkadot purge-chain` and then ensure
-that you run Polkadot with the `--pruning=archive` option.
+If you've already synced the chain not in archive mode, you must first remove the database with
+`polkadot purge-chain` and then ensure that you run Polkadot with the `--pruning=archive` option.
 
 You may run a validator node in non-archive mode by adding the following flags:
 `--unsafe-pruning --pruning <NUMBER OF BLOCKS>`, but note that an archive node and non-archive
-node's databases are not compatible with each other, and to switch you will need to purge the
-chain data.
+node's databases are not compatible with each other, and to switch you will need to purge the chain
+data.
 
 :::
 
@@ -383,10 +386,9 @@ if you do not want to start in validator mode right away.
 
 :::
 
-The `--pruning=archive` flag is implied by the `--validator` flag, so it is only
-required explicitly if you start your node without one of these two options. If you do not set your
-pruning to archive node, even when not running in validator, you will need to
-re-sync your database when you switch.
+The `--pruning=archive` flag is implied by the `--validator` flag, so it is only required explicitly
+if you start your node without one of these two options. If you do not set your pruning to archive
+node, even when not running in validator, you will need to re-sync your database when you switch.
 
 :::note Validators should sync using the RocksDb backend
 
@@ -439,11 +441,12 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
   Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
-  [here](../../learn/learn-staking.md#reward-distribution). Starting with runtime version v2023 natively
-  included in client version [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3),
-  payouts can go to any custom address. If you'd like to redirect payments to an account that is
-  neither the controller nor the stash account, set one up. Note that it is extremely unsafe to set
-  an exchange address as the recipient of the staking rewards.
+  [here](../../learn/learn-staking.md#reward-distribution). Starting with runtime version v2023
+  natively included in client version
+  [0.9.3](https://github.com/paritytech/polkadot/releases/tag/v0.9.3), payouts can go to any custom
+  address. If you'd like to redirect payments to an account that is neither the controller nor the
+  stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
+  recipient of the staking rewards.
 
 Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
 account.
@@ -456,12 +459,12 @@ corresponds to the funds bonded by the Stash account.
 
 :::caution Session keys are consensus critical
 
-If you are not sure if your node has the current session keys that you made the `setKeys` 
+If you are not sure if your node has the current session keys that you made the `setKeys`
 transaction then you can use one of the two available RPC methods to query your node:
-[hasKey](https://polkadot.js.org/docs/substrate/rpc#haskeypublickey-bytes-keytype-text-bool)
-to check for a specific key or
-[hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc#hassessionkeyssessionkeys-bytes-bool)
-to check the full session key public key string.
+[hasKey](https://polkadot.js.org/docs/substrate/rpc#haskeypublickey-bytes-keytype-text-bool) to
+check for a specific key or
+[hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc#hassessionkeyssessionkeys-bytes-bool) to
+check the full session key public key string.
 
 :::
 
@@ -513,13 +516,13 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: Polkadot-JS Apps
 
-You can generate your [Session keys](../../learn/learn-keys.md#session-keys) in the client via the apps RPC. If
-you are doing this, make sure that you have the Polkadot-JS Apps explorer attached to your validator
-node. You can configure the apps dashboard to connect to the endpoint of your validator in the
-Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you
-will not be able to use this method since making RPC requests to this node would effect the local
-keystore hosted on a _public node_ and you want to make sure you are interacting with the keystore
-for _your node_.
+You can generate your [Session keys](../../learn/learn-keys.md#session-keys) in the client via the
+apps RPC. If you are doing this, make sure that you have the Polkadot-JS Apps explorer attached to
+your validator node. You can configure the apps dashboard to connect to the endpoint of your
+validator in the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3
+Foundation, you will not be able to use this method since making RPC requests to this node would
+effect the local keystore hosted on a _public node_ and you want to make sure you are interacting
+with the keystore for _your node_.
 
 Once ensuring that you have connected to your node, the easiest way to set session keys for your
 node is by calling the `author_rotateKeys` RPC request to create new keys in your validator's
@@ -567,7 +570,8 @@ validator's rewards. This is the rate that your validator will be commissioned w
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-:::caution setting a commission rate of 100% suggests that you do not want your validator to receive nominations
+:::caution setting a commission rate of 100% suggests that you do not want your validator to receive
+nominations
 
 :::
 
@@ -633,11 +637,13 @@ other peers over the network.
 - [OVH](https://www.ovhcloud.com/nl/bare-metal/)
 - [Scaleway](https://www.scaleway.com/en/dedibox/)
 
+:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS
+provider
 
-:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
-
-You may be locked out of your account and your server shut down if you come in violation.
-For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires explicit permission to do so. This may extend to other cryptocurrency activity.}
+You may be locked out of your account and your server shut down if you come in violation. For
+instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their
+[Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
+explicit permission to do so. This may extend to other cryptocurrency activity.}
 
 :::
 

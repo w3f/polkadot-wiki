@@ -8,17 +8,19 @@ slug: ../learn-crosschain
 ---
 
 What started as an approach to _cross-chain communication_, has evolved into a format for
-**Cross-Consensus Communication** that is not only conducted between chains, but also smart
-contracts, pallets, bridges, and even sharded enclaves like [SPREE](learn-spree.md).
+[**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is 
+not only conducted between chains, but also between smart contracts, pallets, bridges, and even 
+sharded enclaves like [SPREE](learn-spree.md).
 
 ## Overview of XCM: A Format, Not a Protocol
 
-**XCM is related to cross-chain in the same way that REST is related RESTful.**
+**XCM is related to cross-chain in the same way that REST is related to RESTful.**
+
 XCM cannot actually send messages between systems. It is a format for how message
 transfer should be performed, similar to how RESTful services use REST as an architectural style
 of deployment.
 
-XCM aims to be a language communicating ideas between consensus systems, hence, "Cross-Consensus"
+XCM aims to be a language to communicate ideas between consensus systems, hence, "Cross-Consensus"
 with the following properties:
 
 - Generic and extensible for use with fee-free and gas-metered smart contract platforms,
@@ -27,7 +29,7 @@ with the following properties:
 - Interacting with a system whose transaction format is unknown. 
   - XCM is well-versioned, abstract and general and can be used as a means of providing a 
     long-lasting transaction format for wallets to use to create many common transactions.
-    It is _extensible_ and, in turn, _future-proof_ and _forwards-compatible_.
+    It is _extensible_ and, in turn, _future-proof_ and _forward-compatible_.
 - Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
 
 :::info
@@ -48,7 +50,7 @@ interpretations under some systems or will be intentionally unsupported.
     into other accounts on that remote chain.
   - **Teleporting**: movement of an asset happens by destroying it on one side and creating a clone on
     the other side.
-  - **Reverse-Based Transfer**: there may be two chains that want to nominate a third chain, where one
+  - **Reserve-Based Transfer**: there may be two chains that want to nominate a third chain, where one
     includes a native asset that can be used as a reserve for that asset. Then, the derivative form of
     the asset on each of those chains would be fully backed, allowing the derivative asset to be
     exchanged for the underlying asset on the reserve chain backing it.
@@ -62,8 +64,9 @@ channels.
 
 ## Cross-Consensus Protocols
 
-With the XCM format established, common patterns for protocols these messages are needed.
-Polkadot implements two for acting on XCM messages between its constituent parachains.
+With the XCM format established, common patterns for protocols of these messages are needed.
+Polkadot implements two message passing protocols for acting on XCM messages between its constituent
+parachains.
 
 ### VMP (Vertical Message Passing)
 
@@ -72,9 +75,6 @@ There are two kinds of vertical message-passing transport protocols:
 - **UMP (Upward Message Passing)**: allows parachains to send messages to their relay chain.
 - **DMP (Downward Message Passing)**: allows the relay chain to pass messages down to one of their
   parachains.
-
-Messages that are passed via `DMP` may originate from a parachain. In which case, first `UMP` is used to
-communicate the message to the Relay Chain and `DMP` is used to move it down to another parachain.
 
 ### XCMP (Cross-Chain Message Passing)
 
@@ -109,8 +109,6 @@ complete. While XCMP proper is still in development, HRMP is a working replaceme
 
 :::
 
-However, this overall architecture and design decisions are more stable:
-
 - Cross-chain messages will _not_ be delivered to the Relay Chain.
 - Cross-chain messages will be constrained to a maximum size in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching
@@ -126,7 +124,7 @@ However, this overall architecture and design decisions are more stable:
 
 XCMP queues must be initiated by first opening a channel between two parachains. The channel is
 identified by both the sender and recipient parachains, meaning that it's a one-way channel. A pair
-of parachains can have at most two channels between them, one for sending messages to the other
+of parachains can have at most establish two channels between them, one for sending messages to the other
 chain and another for receiving messages. The channel will require a deposit in DOT to be opened,
 which will get returned when the channel is closed.
 

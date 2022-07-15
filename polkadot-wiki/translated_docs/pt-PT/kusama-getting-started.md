@@ -28,6 +28,6 @@ For brand-new learners of Kusama's cousin network, Polkadot, please head over to
 [create-account]: kusama-claims
 [endpoints]: kusama-endpoints
 [tokens]: https://claim.kusama.network/
-[validator]: mirror-maintain-guides-how-to-validate-kusama
-[nominator]: mirror-maintain-guides-how-to-nominate-kusama
+[validator]: maintain-guides-how-to-validate-kusama
+[nominator]: maintain-guides-how-to-nominate-kusama
 [polkadot wiki]: https://wiki.polkadot.network/

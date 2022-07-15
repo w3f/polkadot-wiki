@@ -240,8 +240,7 @@ internally, and dictates to the client and synchronization algorithms which chai
 finalize, and treat as correct.
 
 See the [Cumulus overview](https://github.com/paritytech/cumulus/blob/master/docs/overview.md) for a
-more detailed description of Cumulus, and for those with experience in Substrate, give the
-[parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) a try.
+more detailed description of Cumulus.
 
 Cumulus is still in development, but the idea is that it should be simple
 to take a Substrate chain and add the parachain code by importing the crates and adding a single line
@@ -477,7 +476,7 @@ you will need to acquire a parachain slot.
 
 Parachain slots will be sold in open auctions, the mechanics of which can be found on the
 {{ polkadot: [parachain auction](../learn/learn-auction.md) :polkadot }}
-{{ kusama: [parachain auction](../learn/mirror-learn-auction.md) :kusama }} page of the wiki.
+{{ kusama: [parachain auction](../learn/learn-auction.md) :kusama }} page of the wiki.
 
 ### Parathread
 
@@ -488,11 +487,11 @@ transition into a Relay Chain.
 
 For more information on how parathread per-block auctions work, see the more detailed
 {{ polkadot: [parathread](../learn/learn-parathreads.md) :polkadot }}
-{{ kusama: [parathread](../learn/mirror-learn-parathreads.md) :kusama }} page.
+{{ kusama: [parathread](../learn/learn-parathreads.md) :kusama }} page.
 
 ## Resources 
 
-- [Parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/)
+<!-- - [Parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) -->
 - [Common Good Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
