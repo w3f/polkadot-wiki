@@ -11,7 +11,7 @@ import Sample from "./../../components/RPC-Feed"
 ### Your Go-To Overview for Developing a Parachain
 
 {{ polkadot: <Sample url="wss://rpc.polkadot.io" color="#e6007a">Polkadot</Sample> :polkadot }}
-{{ kusama: <Sample color="#000000">Kusama</Sample> :kusama }}
+{{ kusama: <Sample url="wss://kusama-rpc.polkadot.io" color="#000000">Kusama</Sample> :kusama }}
 
 This guide will cover the motivation to build a parachain or parathread, the tools available
 to facilitate this, the steps to test, and finally, how to launch your network on
