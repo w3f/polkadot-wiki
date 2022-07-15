@@ -24,10 +24,10 @@ function WebRequest({children, url, hash, color}) {
     return (
         <span
             style={{
-            backgroundColor: color,
-            borderRadius: '2px',
-            color: '#ffffff',
-            padding: '0.5rem',
+                backgroundColor: color,
+                borderRadius: '2px',
+                color: '#ffffff',
+                padding: '0.5rem',
             }}
         >
             {children}: Block {hash} was validated by {validator}
@@ -45,7 +45,7 @@ async function postRequest(url, hash, setBlockValidator) {
         .then(res => {
         const body = res.data.data;
             setBlockValidator(body.validator);
-            console.log('Http request successful');
+            console.log(`Http request to ${url} successful`);
         })
         // If error
         .catch((error) => {

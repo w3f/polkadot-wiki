@@ -22,7 +22,7 @@ function RPCFeed({children, url, color}) {
         // Unmounting Tasks
         return () => {
             // TODO - verify this code this running successfully when changing pages
-            console.log('unsubscribing!');
+            console.log(`Unsubscribing from ${url}`);
             unsubscribe();
         };
     }, []);
@@ -30,10 +30,10 @@ function RPCFeed({children, url, color}) {
     return (
         <span
             style={{
-            backgroundColor: color,
-            borderRadius: '2px',
-            color: '#ffffff',
-            padding: '0.5rem',
+                backgroundColor: color,
+                borderRadius: '2px',
+                color: '#ffffff',
+                padding: '0.5rem',
             }}
         >
             {children}: Current Block = {block}
