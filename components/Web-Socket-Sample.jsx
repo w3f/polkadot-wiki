@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 
+/*
+This sample component shows how to connect to an external
+web socket RPC and render the response data.
+
+The component can be used in Docusaurus markdown
+by adding the following line anywhere within the file.
+
+import Socket from "./../../components/Web-Socket-Sample"
+{{ polkadot: <Socket url="wss://rpc.polkadot.io" color="#e6007a">Polkadot</Socket> :polkadot }}
+{{ kusama: <Socket url="wss://kusama-rpc.polkadot.io" color="#000000">Kusama</Socket> :kusama }}
+*/
+
 function RPCFeed({children, url, color}) {
     const [block, setBlock] = useState('Loading...');
 
@@ -9,6 +21,7 @@ function RPCFeed({children, url, color}) {
         const unsubscribe = getData(url, setBlock);
         // Unmounting Tasks
         return () => {
+            // TODO - verify this code this running successfully when changing pages
             console.log('unsubscribing!');
             unsubscribe();
         };

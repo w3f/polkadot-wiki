@@ -6,12 +6,17 @@ description: A guide on what it means to become a Parachain and the steps to do 
 keywords: [build, parachain, develop, implement, PDK]
 slug: ../build-pdk
 ---
-import Sample from "./../../components/RPC-Feed"
+
+import Http from "./../../components/Http-Request-Sample"
+import Socket from "./../../components/Web-Socket-Sample"
 
 ### Your Go-To Overview for Developing a Parachain
 
-{{ polkadot: <Sample url="wss://rpc.polkadot.io" color="#e6007a">Polkadot</Sample> :polkadot }}
-{{ kusama: <Sample url="wss://kusama-rpc.polkadot.io" color="#000000">Kusama</Sample> :kusama }}
+{{ polkadot: <Http url="https://polkadot.api.subscan.io/api/scan/block" hash="0x68a27df5a52ff2251df2cc8368f7dcefb305a13bb3d89b65c8fb070f23877f2c" color="#e6007a">Polkadot</Http> :polkadot }}
+{{ kusama: <Http url="https://kusama.api.subscan.io/api/scan/block" hash="0x8019e80a0b97ee827b3bd8be1ac3d0fe4e9978d7b5594c0afb109d3ff8cf3465" color="#000000">Kusama</Http> :kusama }}
+
+{{ polkadot: <Socket url="wss://rpc.polkadot.io" color="#e6007a">Polkadot</Socket> :polkadot }}
+{{ kusama: <Socket url="wss://kusama-rpc.polkadot.io" color="#000000">Kusama</Socket> :kusama }}
 
 This guide will cover the motivation to build a parachain or parathread, the tools available
 to facilitate this, the steps to test, and finally, how to launch your network on
