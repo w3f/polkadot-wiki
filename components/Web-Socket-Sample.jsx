@@ -1,62 +1,108 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 
 /*
-This sample component shows how to connect to an external
-web socket RPC and render the response data.
-
-The component can be used in Docusaurus markdown
-by adding the following lines anywhere within the file.
+This component connects to an external web socket and renders the response data.
+It can be used in Docusaurus markdown by adding the following lines anywhere within the file.
 
 import Socket from "./../../components/Web-Socket-Sample"
-{{ polkadot: <Socket url="wss://rpc.polkadot.io" color="#e6007a">Polkadot</Socket> :polkadot }}
-{{ kusama: <Socket url="wss://kusama-rpc.polkadot.io" color="#000000">Kusama</Socket> :kusama }}
+<Socket network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>
 */
 
-function RPCFeed({children, url, color}) {
-    const [block, setBlock] = useState('Loading...');
-    let unsubscribe = useRef(null);
+function RPCFeed({ network, path, defaultValue, filters=[] }) {
+	const [returnValue, setReturnValue] = useState('');
 
-    useEffect(() => {
-        // Mounting Tasks
-        const connect = async () => {
-            unsubscribe = await getData(url, setBlock);
-        }
-        connect();
+	useEffect(() => {
+		// Set default as a fallback if anything fails
+		setReturnValue(defaultValue);
 
-        // Unmounting Tasks
-        return () => {
-            // Make sure to unsubscribe before changing pages
-            console.log(`Unsubscribing from ${url}`);
-            unsubscribe();
-        };
-    }, []);
+		// Set socket connection
+		let wssUrl = undefined;
+		switch (network) {
+			case "polkadot":
+				wssUrl = "wss://rpc.polkadot.io";
+				break;
+			case "kusama":
+				wssUrl = "wss://kusama-rpc.polkadot.io/";
+				break;
+			default:
+				console.log(`Unknown network provided, ${net}`);
+		}
 
-    return (
-        <span
-            style={{
-                backgroundColor: color,
-                borderRadius: '2px',
-                color: '#ffffff',
-                padding: '0.5rem',
-            }}
-        >
-            {children}: Current Block = {block}
-        </span>
-    )
+		// Apply default value if network is not recognized
+		if (wssUrl === undefined) {
+			console.log("Failed to connect to a valid websocket, applying default");
+		} else {
+			// Otherwise attempt to connect
+			const connect = async () => {
+				await getData(network, path, defaultValue, filters, setReturnValue);
+			}
+			try {
+				connect();
+			} catch (error) {
+				console.log(error);
+			}
+		}
+	}, []);
+
+	return (
+		returnValue
+	)
 }
 
-async function getData(url, setBlock) {
-    // Connect
-    const wsProvider = new WsProvider(url);
-    const api = await ApiPromise.create({ provider: wsProvider });
+async function getData(network, path, defaultValue, filters, setReturnValue) {
+	let wssUrl = undefined;
+	let chainValue = undefined;
 
-    // Subscribe to all new headers
-    const unsubscribe = await api.derive.chain.subscribeNewHeads((header) => {
-        setBlock(header.number.toString());
-    });
+	switch (network) {
+		case "polkadot":
+			wssUrl = "wss://rpc.polkadot.io";
+			break;
+		case "kusama":
+			wssUrl = "wss://kusama-rpc.polkadot.io/";
+			break;
+		default:
+			console.log("Unknown socket url provided, no connection made.");
+	}
 
-    return unsubscribe;
+	// If no valid socket url is provided
+	if (wssUrl === undefined) {
+		return;
+	} else {
+		// Connect
+		const wsProvider = new WsProvider(wssUrl);
+		let api = await ApiPromise.create({ provider: wsProvider });
+
+		// Build API call
+		const prefix = path.substring(0, path.indexOf('.'));
+		const pathParameters = path.split(".");
+		pathParameters.forEach(param => {
+			api = api[param];
+		});
+
+		// Process constants and queries
+		switch (prefix) {
+			case "consts":
+				chainValue = byString(instance, constant.path);
+				break;
+			case "query":
+				chainValue = await api();
+				chainValue = chainValue.toString();
+				break;
+			default:
+				console.log(`Unknown path prefix (${prefix}) in ${path}`);
+		}
+
+		// If no value was retrieved use default
+		if (chainValue === undefined) {
+			console.log(chainValue);
+			chainValue = defaultValue;
+		} else if (filters.length > 0) {
+			// TODO apply filters
+		}
+
+		setReturnValue(chainValue);
+	}
 }
 
 export default RPCFeed;

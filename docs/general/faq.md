@@ -6,6 +6,7 @@ description: Some FAQs to help you conquer your experience with Polkadot.
 keywords: [FAQ, questions]
 slug: ../faq
 ---
+import Socket from "./../../components/Web-Socket-Sample"
 
 :::info
 
@@ -108,8 +109,7 @@ However, increasing validators above one thousand remains a goal for later itera
 
 It is also worth mentioning that one thousand validators is more than the number of validators of
 similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders
-are operating with around 150 validators, while Polkadot is already securely running with
-{{ num_validators }}.
+are operating with around 150 validators, while Polkadot is already securely running with <Socket network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>.
 
 Additionally, other projects sometimes have a different definition of *validator* that approximates
 more closely to remote signing keys without the full operation of a validating node. On Polkadot,
