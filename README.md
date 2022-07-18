@@ -26,7 +26,6 @@
   - [Static Site Generator](#static-site-generator)
   - [Search Engine](#search-engine)
   - [Automated Deployments](#automated-deployments)
-  - [Mirror Pages](#mirror-pages)
   - [Conditional Rendering](#conditional-rendering)
 - [Internationalization](#internationalization)
 - [License](#license)
@@ -40,11 +39,6 @@
   Web3 Foundation to keep an up-to-date resource on the best information for learning, building, or maintaining 
   on Polkadot. 
 </p>
-
-:speech_balloon: **Please be advised: The Wiki will undergo a major revamp over the next several weeks in an attempt to improve its configuration, functionality, relevancy, adequacy, and overall design. 
-The new Wiki will exist in a new repository, still under Web3 Foundation.**
-
-> :scroll: This repository will still be maintained in the meantime, and contributions are always encouraged.
 
 ## Contributing to Documentation
 
@@ -184,23 +178,6 @@ new commits on `master` are transferred into the production branch,`prod`, by re
 production workflow will deploy `prod` to the public sites: [Polkadot Wiki](https://wiki.polkadot.network) and 
 [Kusama Guide](https://guide.kusama.network), respectively.
 
-### Mirror Pages
-
-A limitation of Docusaurus is that pages can only be included in one sidebar at any given time.
-Thus, our Kusama section will either hijack some content it shares with the rest of the Wiki or
-lack that content. The repository mirrors some pages and includes them in additional sidebars to solve this. 
-
-The `scripts` folder contains a `mirror.js` script that creates a copy of the pages to duplicate across 
-sidebars. The new pages are prefixed with `mirror` and must first be declared in `mirror.js`, then added 
-to the relevant sidebar section. To run the script:
-
-```bash
-yarn mirror
-```
-
-> Note: This command runs when using `polkadot:start` or `kusama:start` development
-> scripts, so you don't need to worry about running it manually if you start the development site
-> with one of these commands.
 
 ### Conditional Rendering
 
@@ -218,10 +195,11 @@ going to [Society](https://guide.kusama.network/docs/en/maintain-guides-society-
 burned. :kusama }}
 ```
 
-To test the resolution, run `polkadot:build` and `kusama:build`, then `polkadot:inject` and
-`kusama:inject`, respectively.
-Inspect the built files in the corresponding `build` folder under `website` or
-`kusama-guide`.
+To verify the appropriate values have been substituted in each scenario, run `polkadot:start` and
+`kusama:start` in separate terminals. If prompted with
+`[WARNING] Something is already running on port 3000. Would you like to run the app on another port instead?`,
+proceed with `yes`. This will likely launch one project on port 3000 and the other on 3001, allowing
+you to compare the rendered outputs for both projects locally and simultaneously.
 
 ## Internationalization
 

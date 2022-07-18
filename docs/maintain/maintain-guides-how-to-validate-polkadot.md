@@ -9,7 +9,7 @@ slug: ../maintain-guides-how-to-validate-polkadot
 
 :::info 
 
-The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/mirror-maintain-guides-how-to-validate-kusama.md) instead.
+The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
 
 This guide will instruct you how to set up a validator node on the Polkadot network.
 
@@ -327,11 +327,6 @@ If you've already synced the chain not in archive mode, you must first remove th
 database with `polkadot purge-chain` and then ensure that you run Polkadot with 
 the `--pruning=archive` option.
 
-You may run a validator node in non-archive mode by adding the following flags:
-`--unsafe-pruning --pruning <NUM OF BLOCKS>`, a reasonable value being 1000. Note that an archive
-node and non-archive node's databases are not compatible with each other, and to switch you will
-need to purge the chain data.
-
 :::
 
 You can begin syncing your node by running the following command:
@@ -628,7 +623,7 @@ other peers over the network.
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
-::: caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
+:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider
 
 You may be locked out of your account and your server shut down if you come in violation.
 For instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of

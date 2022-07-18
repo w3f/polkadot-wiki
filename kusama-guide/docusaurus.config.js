@@ -48,10 +48,6 @@ module.exports = {
         docs: {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl: ({ docPath }) => {
-            const githubDocPath = `https://github.com/w3f/polkadot-wiki/edit/master/docs/`;
-            return githubDocPath + docPath.replace("mirror-", "");
-          },
           path: "../docs",
           sidebarPath: "./sidebars.js",
           remarkPlugins: [injectPlugin({ isPolkadot: false })],

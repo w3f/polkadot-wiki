@@ -28,13 +28,25 @@ To chill your validator or nominator, call the `staking.chill()` extrinsic. See 
 
 ## Purge validator session keys
 
-Purging the validator's session keys removes the key reference to your stash. This can be done
-through the `session.purgeKeys()` extrinsic with the controller account.
+Purging the validator's session keys removes the key reference. This can be done through the
+`session.purgeKeys()` extrinsic. The key reference exists on the account that originally called the
+`session.set_keys()` extrinsic, which could be the stash or the controller (at the time the keys
+were set).
 
-:::caution 
+:::caution Purge keys using the same account that set the keys
 
-**If you skip this step, you will not be able to reap your stash account**, and you will also need to rebond, purge the session keys, unbond, and wait the unbonding period 
-again before being able to transfer your tokens. 
+Make sure to call the session.purge_keys() extrinsic from the same account that set the keys in the 
+first place in order for the correct reference to be removed. Calling the `session.purge_keys()` from 
+the wrong account, although it may succeed, will result in a reference on the other account that
+**cannot** be removed, and as a result that account cannot be reaped.
+
+:::
+
+:::caution
+
+**If you skip this step, you will not be able to reap your stash account**, and you will also need
+to rebond, purge the session keys, unbond, and wait the unbonding period again before being able to
+transfer your tokens.
 
 See [Unbonding and Rebonding](maintain-guides-how-to-unbond.md) for more details.
 

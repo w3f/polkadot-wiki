@@ -11,7 +11,7 @@ slug: ../learn-parachains
 
 For information on how to participate in the crowdloan and parachain auction testing on
 Rococo, please see the
-{{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo Content](../build/mirror-build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }} on the parachain development guide.
+{{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }} on the parachain development guide.
 
 :::
 
@@ -103,20 +103,20 @@ several ways to allocate them:
 
 ["Common Good" parachains](#common-good-parachains) are allocated by Polkadot's on-chain
 {{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](mirror-learn-governance.md) :kusama }} system, and are deemed as a "common
+{{ kusama: [governance](learn-governance.md) :kusama }} system, and are deemed as a "common
 good" for the network, such as bridges to other networks or chains. They are usually considered
 system-level chains or public utility chains. These typically do not have an economic model and help 
 remove transactions from the Relay Chain, allowing for more efficient parachain processing.
 
 {{ polkadot: [Auction granted parachains](learn-auction.md) :polkadot }}
-{{ kusama: [Auction granted parachains](mirror-learn-auction.md) :kusama }} are granted in a
+{{ kusama: [Auction granted parachains](learn-auction.md) :kusama }} are granted in a
 permissionless auction. Parachain teams can either bid with their own DOT tokens, or source them
 from the community using the
 {{ polkadot: [crowdloan functionality](learn-crowdloans.md) :polkadot }}
-{{ kusama: [crowdloan functionality](mirror-learn-crowdloans.md) :kusama }}.
+{{ kusama: [crowdloan functionality](learn-crowdloans.md) :kusama }}.
 
 {{ polkadot: [Parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [Parathreads](mirror-learn-parathreads.md) :kusama }} have the same API as parachains,
+{{ kusama: [Parathreads](learn-parathreads.md) :kusama }} have the same API as parachains,
 but are scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
 ### Slot Expiration
@@ -133,7 +133,7 @@ ecosystem as a whole. By allocating a subset of parachain slots to common good c
 network can realize the benefit of valuable parachains that would otherwise be underfunded due to
 the free-rider problem. They are not allocated via the parachain auction process but by the
 on-chain {{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](mirror-learn-governance.md) :kusama }} system. Generally, a common good
+{{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good
 parachain's lease would not expire; it would only be removed via governance.
 
 See the
@@ -186,10 +186,10 @@ is not Substrate-based.
 
 Parachain slots will be acquirable through auction, please see the
 {{ polkadot: [parachain slots](learn-auction.md) :polkadot }}
-{{ kusama: [parachain slots](mirror-learn-auction.md) :kusama }} article. Additionally, some
+{{ kusama: [parachain slots](learn-auction.md) :kusama }} article. Additionally, some
 parachain slots will be set aside to run
 {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [parathreads](mirror-learn-parathreads.md) :kusama }} &mdash; chains that bid on a
+{{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a
 per-block basis to be included in the Relay Chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?

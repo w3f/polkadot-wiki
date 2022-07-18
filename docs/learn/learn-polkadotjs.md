@@ -35,6 +35,13 @@ a robust key-store and thus acts as an account manager for Substrate-based accou
 
 However, it also provides a simple interface for interacting with extension-compliant dApps. 
 
+Ensure that the Polkadot-JS Extension installed is updated with the latest metadata of the chain.
+You would notice these updates under Settings > Metadata. Click on Update metadata and approve the
+update.
+
+![update metadata](../assets/update-metadata.png)
+
+
 #### [Polkadot-JS Phishing List](https://polkadot.js.org/phishing/)
 
 The phishing list website is a community-driven curation of less-than-honest operators. The Polkadot-JS 
@@ -73,6 +80,15 @@ comes down to either querying on-chain data or issuing an extrinsic.
 To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a 
 Polkadot node and uses JavaScript to return information that the UI will display on the screen. 
 You can choose which node to connect to by changing it in the upper-left-hand corner of the screen.
+
+Let's see how we can query on-chain data with Polkadot JS Apps on Polkadot network with an example.
+To find out the current value for existential deposit, navigate to Developer >
+Chain state > Constants and query the balances pallet for existential deposit as shown in the snapshot
+below. You need to click on the plus button to execute the query. The value displayed is in 
+[plancks](learn-DOT#polkadot)
+
+![query chain state](../assets/chain-state-constant.png)
+
 
 #### Issuing an extrinsic 
 

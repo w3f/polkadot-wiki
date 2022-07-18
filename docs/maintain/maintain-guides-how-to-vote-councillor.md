@@ -22,7 +22,7 @@ behind your vote. See the [democracy guide](maintain-guides-democracy.md) for mo
 
 :::info Voting and staking locks can overlap
 
-* A user can use staked funds to vote for Councillors and/or use those funds in referenda).
+* A user can use staked funds to vote for Councillors (and/or use those funds in referenda).
 * A user is only prohibited from transferring these funds to another account.
 
 :::

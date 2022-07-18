@@ -4,7 +4,7 @@ title: How to Nominate on Polkadot
 sidebar_label: How to Nominate on Polkadot
 ---
 
-> The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/mirror-maintain-guides-how-to-nominate-kusama) instead.
+> The following information applies to the Polkadot network. If you want to nominate on Kusama, check out the [Kusama guide](https://guide.kusama.network/docs/en/maintain-guides-how-to-nominate-kusama) instead.
 
 Nominators are one type of participant in the staking subsystem of Polkadot. They are responsible for appointing their stake to the validators who are the second type of participant. By appointing their stake, they are able to elect the active set of validators and share in the rewards that are paid out.
 
