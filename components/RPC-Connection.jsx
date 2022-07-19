@@ -5,8 +5,8 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 This component connects to an external web socket and renders the response data.
 It can be used in Docusaurus markdown by adding the following lines anywhere within the file.
 
-import Socket from "./../../components/Web-Socket-Sample"
-<Socket network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>
+import RPC from "./../../components/RPC-Connection"
+<RPC network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>
 */
 
 const Polkadot = "polkadot";
@@ -39,7 +39,7 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 		if (wsUrl === undefined) {
 			console.log("Failed to connect to a valid websocket, applying default");
 		} else {
-			// Otherwise attempt to connect
+			// Otherwise attempt to connect to RPC
 			const connect = async () => {
 				await syncData(network, path, setReturnValue);
 				// Apply filter to retrieved value if a filter is provided
@@ -93,13 +93,14 @@ async function syncData(network, path, setReturnValue) {
 				chainValue = api.toString();
 				break;
 			case "query":
-				chainValue = await api().toString();
+				chainValue = await api();
+				chainValue = chainValue.toString();
 				break;
 			default:
 				console.log(`Unknown path prefix (${pathParameters[0]}) in ${path}`);
 		}
 
-		// If no value was retrieved use default
+		// If no value was successfully retrieved use default
 		if (chainValue === undefined) {
 			return;
 		}

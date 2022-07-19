@@ -6,7 +6,7 @@ description: Learn about account proxies and how they can benefit your account(s
 keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
-import Socket from "./../../components/Web-Socket-Sample"
+import RPC from "./../../components/RPC-Connection"
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of
 actions on their behalf. Much like the Stash and Controller account relationship in
@@ -327,14 +327,14 @@ The `ProxyDepositBase` is the required amount to be reserved for an account to h
 the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
 The `ProxyDepositBase` is 
-{{ polkadot: <Socket network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <Socket network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }}
 and the `ProxyDepositFactor` is {{ proxy_deposit_factor }}.
 
 The required deposit amount for one proxy is equal to:
 
-{{ polkadot: <Socket network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <Socket network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }} + 
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }} + 
 {{ proxy_deposit_factor }} * num_proxies
 
 ## Resources
