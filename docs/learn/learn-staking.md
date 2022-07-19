@@ -103,7 +103,9 @@ This sorting functionality is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system. The bags-list is capable of including an unlimited number of nodes, subject
 to the chain's runtime storage. In the current staking system configuration, the bags list keeps
-{{ max_nominator_count }} nomination intents, of which, at most
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nomination intents, of which, at most
 {{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} come out as the electing nominators.
 Check [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 

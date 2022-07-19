@@ -163,7 +163,8 @@ to nominate with, in order to receive staking rewards, can change between the er
 
 Thus, for **nominator counters**, we have:
 
-- count of nominator intentions, and max possible nominator intentions ({{ max_nominator_count }}).
+- count of nominator intentions, and max possible nominator intentions (
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}).
 - count of electing nominators, and maximum possible electing nominators
   ({{ max_active_nominator_count }}).
 - count of active nominators, and maximum possible active nominators
