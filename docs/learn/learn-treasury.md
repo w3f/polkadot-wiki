@@ -6,6 +6,7 @@ description: Details about Polkadot's on-chain Treasury.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
+import Constant from "./../../components/Constant"
 import RPC from "./../../components/RPC-Connection"
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
@@ -14,7 +15,10 @@ transaction fees, slashing, [staking inefficiencies](learn-staking.md#inflation)
 The funds held in the Treasury can be spent by making a spending proposal that, if approved by the 
 [Council](learn-governance.md#council), will enter a waiting period before distribution. This waiting 
 period is known as the *spend period*, and its duration is subject to [governance](learn-governance.md), 
-with the current default set to {{ spend_period }} days. The Treasury attempts to spend as many proposals 
+with the current default set to 
+{{ polkadot: <Constant gid="spend_period" value={345600} filter="blocksToDays"/>  :polkadot }}
+{{ kusama: <Constant gid="spend_period" value={86400} filter="blocksToDays"/> :kusama }}
+days. The Treasury attempts to spend as many proposals 
 in the queue as it can without running out of funds. 
 
 Treasury payout is an automatic process:
