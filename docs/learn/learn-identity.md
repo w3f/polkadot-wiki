@@ -21,7 +21,8 @@ like attestations (see [Judgements](#judgements)).
 Users must reserve funds in a bond to store their information on chain: 
 {{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }} and 
-{{ identity_field_funds }} 
+{{ polkadot: <RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
 per each field beyond the legal name.
 These funds are *locked*, not spent - they are returned when the identity is cleared.
 
@@ -252,7 +253,9 @@ be a validation company running multiple validators. A single entity, "My Stakin
 register multiple sub accounts that represent the [Stash accounts](learn-keys.md) of each of their
 validators.
 
-An account can have a maximum of 100 sub-accounts. Note that a deposit of {{ identity_sub_reserve_funds }}
+An account can have a maximum of 100 sub-accounts. Note that a deposit of 
+{{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
 is required for every sub-account.
 
 - Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to the account
