@@ -110,40 +110,40 @@ async function syncData(network, path, setReturnValue) {
 }
 
 function applyFilter(value, filter, network, setReturnValue) {
-  //console.log(`Applying ${filter} to ${network} value ${value}`);
-  const values = {
-    polkadot: {
-      precision: 1e10,
-      symbol: "DOT",
-    },
-    kusama: {
-      precision: 1e12,
-      symbol: "KSM",
-    },
-  };
+	//console.log(`Applying ${filter} to ${network} value ${value}`);
+	const values = {
+		polkadot: {
+      		precision: 1e10,
+      		symbol: "DOT",
+    	},
+    	kusama: {
+      		precision: 1e12,
+      		symbol: "KSM",
+    	},
+  	};
 
-  switch (filter) {
-    case "humanReadableToken":
-      let decimals = undefined;
-      if (network === Polkadot) {
-        decimals = 3;
-      } else if (network === Kusama) {
-				decimals = 6;
-			} else {
-				console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
-				return;
-			}
-			// String to number
-			value = parseFloat(value);
-			// Apply precision
-      value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
-      break;
+	switch (filter) {
+		case "humanReadableToken":
+      		let decimals = undefined;
+      		if (network === Polkadot) {
+        	decimals = 3;
+      	} else if (network === Kusama) {
+			decimals = 6;
+		} else {
+			console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
+			return;
+		}
+		// String to number
+		value = parseFloat(value);
+		// Apply precision
+    	value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
+    	break;
     case "blocksToDays":
-      value = (value * 6) / 86400;
-      break;
+    	value = (value * 6) / 86400;
+    	break;
     default:
-			console.log("Ignoring unknown filter type");
-      return;
+		console.log("Ignoring unknown filter type");
+		return;
   }
 
   setReturnValue(value.toString());
