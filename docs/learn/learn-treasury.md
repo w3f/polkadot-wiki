@@ -73,11 +73,11 @@ The Treasury is funded from different sources:
 ## Creating a Treasury Proposal
 
 The proposer has to deposit a minimum of
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadableToken"/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
 or 5% of the requested amount with a maximum cap of 
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadableToken"/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
 as an anti-spam measure. This amount is burned if 
 the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance.md)
 so they may change in the future.
@@ -161,7 +161,7 @@ be paid out.
 There are two types of tips: public and tipper-initiated. With public tips, a small bond is required
 to place them. This bond depends on the tip message length, and a fixed bond constant defined on
 chain, currently 
-{{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadableToken"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadableToken"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadable"/> :kusama }}.
 Public tips carry a finder's fee of
 {{ polkadot: <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/> :kusama }}% 
 which is paid out from the total amount. Tipper-initiated tips, i.e. tips

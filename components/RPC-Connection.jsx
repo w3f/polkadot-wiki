@@ -123,7 +123,7 @@ function applyFilter(value, filter, network, setReturnValue) {
   	};
 
 	switch (filter) {
-		case "humanReadableToken":
+		case "humanReadable":
       		let decimals = undefined;
       		if (network === Polkadot) {
         		decimals = 3;

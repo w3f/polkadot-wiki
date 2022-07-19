@@ -6,6 +6,7 @@ description: Learn about account proxies and how they can benefit your account(s
 keywords: [proxy, proxies, proxy accounts, proxy types]
 slug: ../learn-proxies
 ---
+import Constant from "./../../components/Constant"
 import RPC from "./../../components/RPC-Connection"
 
 Polkadot provides a module that allows users to set proxy accounts to perform a limited number of
@@ -108,7 +109,8 @@ Learn more about anonymous proxies from our
 
 We can add an additional layer of security to proxies by giving them a delay time. The delay will be
 quantified in number of blocks (blockNumber). Polkadot and Kusama both have
-6 second blocks, hence a delay value of 10 will mean 10 blocks which
+<Constant gid="block_target_in_seconds">6 </Constant>
+second blocks, hence a delay value of 10 will mean 10 blocks which
 will equal 1 minute of delay. The proxy will announce it's intended action and wait for the number
 of blocks defined in the delay time before executing it. The proxy will include the hash of the
 intended function call in the announcement. Within this time window, the intended action may be
@@ -327,17 +329,17 @@ The `ProxyDepositBase` is the required amount to be reserved for an account to h
 the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
 The `ProxyDepositBase` is 
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }}
 and the `ProxyDepositFactor` is 
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadableToken"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadableToken"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }}.
 
 The required deposit amount for one proxy is equal to:
 
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }} + 
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadableToken"/> :kusama }} * num_proxies
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadable"/> :kusama }} + 
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadable"/> :kusama }} * num_proxies
 
 ## Resources
 [Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
