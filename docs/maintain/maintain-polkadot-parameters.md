@@ -41,7 +41,9 @@ more details._
 <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
 - The deposit required to set an Identity is 
 <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
-- The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
+- The minimum contribution required to participate in a crowdloan is 
+<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>
+
 
 ### Governance
 
