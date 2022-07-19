@@ -37,7 +37,8 @@ more details._
 
 ### Accounts, Identity and Crowdloans
 
-- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
+- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is 
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
 - The deposit required to set an Identity is 
 <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
 - The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
