@@ -6,6 +6,7 @@ description: Learn about common Kusama parameters
 keywords: [parameters, kusama, on-chain]
 slug: ../../kusama-parameters
 ---
+import RPC from "./../../../components/RPC-Connection"
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -37,7 +38,8 @@ more details._
 ### Accounts, Identity and Crowdloans
 
 - The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
-- The deposit required to set an Identity is {{ identity_reserve_funds }} KSM
+- The deposit required to set an Identity is 
+<RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
 - The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
 
 ### Governance

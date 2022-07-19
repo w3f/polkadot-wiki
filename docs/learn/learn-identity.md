@@ -6,6 +6,7 @@ description: Learn about on-chain identity, judgements and registrars.
 keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
+import RPC from "./../../components/RPC-Connection"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows 
 participants to add personal information to their on-chain account and subsequently ask for verification 
@@ -17,8 +18,11 @@ Users can set an identity by registering through default fields such as legal na
 website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which they would
 like attestations (see [Judgements](#judgements)).
 
-Users must reserve funds in a bond to store their information on chain:
-{{ identity_reserve_funds }}, and {{ identity_field_funds }} per each field beyond the legal name.
+Users must reserve funds in a bond to store their information on chain: 
+{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }} and 
+{{ identity_field_funds }} 
+per each field beyond the legal name.
 These funds are *locked*, not spent - they are returned when the identity is cleared.
 
 These amounts can also be extracted by querying constants through the
@@ -196,7 +200,8 @@ Copy the preimage hash. In the above image, that's
 a transaction.
 
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
-field needs to be at least {{ identity_reserve_funds }} {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. 
+field needs to be at least 
+{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}. 
 You can find out the minimum by querying the chain state under [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy -> minimumDeposit.
 
 ![Submitting a proposal](../assets/identity/13.jpg)
