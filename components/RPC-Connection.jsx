@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
 /*
-This component connects to an external web socket and renders the response data.
+This component connects to the Polkadot/Kusama APIs and renders the response data.
 It can be used in Docusaurus markdown by adding the following lines anywhere within the file.
 
 import RPC from "./../../components/RPC-Connection"
@@ -20,6 +20,8 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 		if(filter !== undefined) {
 			// Apply filter to default value to match formatting of RPC result
 			applyFilter(defaultValue.toString(), filter, network, setReturnValue)
+		} else {
+			setReturnValue(defaultValue.toString());
 		}
 
 		// Set socket connection
@@ -101,9 +103,7 @@ async function syncData(network, path, setReturnValue) {
 		}
 
 		// If no value was successfully retrieved use default
-		if (chainValue === undefined) {
-			return;
-		}
+		if (chainValue === undefined) { return; }
 
 		setReturnValue(chainValue);
 	}
