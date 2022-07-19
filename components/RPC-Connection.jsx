@@ -126,27 +126,27 @@ function applyFilter(value, filter, network, setReturnValue) {
 		case "humanReadableToken":
       		let decimals = undefined;
       		if (network === Polkadot) {
-        	decimals = 3;
-      	} else if (network === Kusama) {
-			decimals = 6;
-		} else {
-			console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
+        		decimals = 3;
+      		} else if (network === Kusama) {
+				decimals = 6;
+			} else {
+				console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
+				return;
+			}
+			// String to number
+			value = parseFloat(value);
+			// Apply precision
+    		value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
+    		break;
+		case "blocksToDays":
+			value = (value * 6) / 86400;
+			break;
+		default:
+			console.log("Ignoring unknown filter type");
 			return;
-		}
-		// String to number
-		value = parseFloat(value);
-		// Apply precision
-    	value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
-    	break;
-    case "blocksToDays":
-    	value = (value * 6) / 86400;
-    	break;
-    default:
-		console.log("Ignoring unknown filter type");
-		return;
-  }
+	}
 
-  setReturnValue(value.toString());
+	setReturnValue(value.toString());
 }
 
 export default RPC;
