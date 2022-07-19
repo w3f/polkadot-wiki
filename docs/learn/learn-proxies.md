@@ -108,10 +108,9 @@ Learn more about anonymous proxies from our
 ### Time Delayed Proxies
 
 We can add an additional layer of security to proxies by giving them a delay time. The delay will be
-quantified in number of blocks (blockNumber). Polkadot and Kusama both have
-<Constant gid="block_target_in_seconds">6 </Constant>
-second blocks, hence a delay value of 10 will mean 10 blocks which
-will equal 1 minute of delay. The proxy will announce it's intended action and wait for the number
+quantified in number of blocks (blockNumber). Polkadot and Kusama both have <Constant value={6} gid="block_target_in_seconds"/> 
+second blocks, hence a delay value of 10 will mean 10 blocks which will equal 1 minute of delay.
+The proxy will announce it's intended action and wait for the number
 of blocks defined in the delay time before executing it. The proxy will include the hash of the
 intended function call in the announcement. Within this time window, the intended action may be
 cancelled by accounts that control the proxy. Now we can use proxies knowing that any malicious
