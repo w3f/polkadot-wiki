@@ -12,12 +12,15 @@ import Socket from "./../../components/Web-Socket-Sample"
 const Polkadot = "polkadot";
 const Kusama = "kusama";
 
-function RPC({ network, path, defaultValue, filters=undefined }) {
+function RPC({ network, path, defaultValue, filter=undefined }) {
 	const [returnValue, setReturnValue] = useState('');
 
 	useEffect(() => {
 		// Set default as a fallback if anything fails
-		setReturnValue(defaultValue);
+		if(filter !== undefined) {
+			// Apply filter to default value to match formatting of RPC result
+			applyFilter(defaultValue.toString(), filter, network, setReturnValue)
+		}
 
 		// Set socket connection
 		let wsUrl = undefined;
@@ -38,7 +41,11 @@ function RPC({ network, path, defaultValue, filters=undefined }) {
 		} else {
 			// Otherwise attempt to connect
 			const connect = async () => {
-				await syncData(network, path, filters, setReturnValue);
+				await syncData(network, path, setReturnValue);
+				// Apply filter to retrieved value if a filter is provided
+				if(filter !== undefined) {
+					applyFilter(defaultValue.toString(), filter, network, setReturnValue)
+				}
 			}
 			try {
 				connect();
@@ -46,18 +53,12 @@ function RPC({ network, path, defaultValue, filters=undefined }) {
 				console.log(error);
 			}
 		}
-
-		// Apply filter if provided
-		if(filters !== undefined) {
-
-		}
-
 	}, []);
 
 	return (returnValue)
 }
 
-async function syncData(network, path, filters, setReturnValue) {
+async function syncData(network, path, setReturnValue) {
 	let wsUrl = undefined;
 	let chainValue = undefined;
 
@@ -92,8 +93,7 @@ async function syncData(network, path, filters, setReturnValue) {
 				chainValue = api.toString();
 				break;
 			case "query":
-				chainValue = await api();
-				chainValue = chainValue.toString();
+				chainValue = await api().toString();
 				break;
 			default:
 				console.log(`Unknown path prefix (${pathParameters[0]}) in ${path}`);
@@ -132,7 +132,10 @@ function applyFilter(value, filter, network, setReturnValue) {
 				console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
 				return;
 			}
-      value = (value / values[network].precision).toFixed(decimals) + " " + values[network].symbol;
+			// String to number
+			value = parseFloat(value);
+			// Apply precision
+      value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
       break;
     case "blocksToDays":
       value = (value * 6) / 86400;
@@ -142,7 +145,7 @@ function applyFilter(value, filter, network, setReturnValue) {
       return;
   }
 
-  setReturnValue(value);
+  setReturnValue(value.toString());
 }
 
 export default RPC;

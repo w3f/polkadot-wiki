@@ -327,15 +327,15 @@ The `ProxyDepositBase` is the required amount to be reserved for an account to h
 the `ProxyDepositFactor` is reserved as well (appends 33 bytes to storage location).
 
 The `ProxyDepositBase` is 
-{{ polkadot: <Socket network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue="200080000000" filters="humanReadableToken"/> :polkadot }}
-{{ kusama: <Socket network="kusama" path="consts.proxy.proxyDepositBase" defaultValue="66693000000" filters="humanReadableToken"/> :kusama }}
+{{ polkadot: <Socket network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
+{{ kusama: <Socket network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }}
 and the `ProxyDepositFactor` is {{ proxy_deposit_factor }}.
 
 The required deposit amount for one proxy is equal to:
 
-```
-{{ proxy_deposit_base }} + {{ proxy_deposit_factor }} * num_proxies
-```
+{{ polkadot: <Socket network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
+{{ kusama: <Socket network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }} + 
+{{ proxy_deposit_factor }} * num_proxies
 
 ## Resources
 [Proxy pallet documentation](https://crates.parity.io/pallet_proxy/index.html)
