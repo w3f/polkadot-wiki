@@ -6,6 +6,7 @@ description: Details about Polkadot's on-chain Treasury.
 keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-treasury
 ---
+import RPC from "./../../components/RPC-Connection"
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
 transaction fees, slashing, [staking inefficiencies](learn-staking.md#inflation), etc.
@@ -71,8 +72,14 @@ The Treasury is funded from different sources:
 
 ## Creating a Treasury Proposal
 
-The proposer has to deposit a minimum of {{ proposal_min_bond }} or 5% of the requested amount with 
-a maximum cap of {{ proposal_max_bond }} as an anti-spam measure. This amount is burned if 
+The proposer has to deposit a minimum of
+{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadableToken"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadableToken"/> :kusama }}
+or 5% of the requested amount with 
+a maximum cap of 
+{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadableToken"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadableToken"/> :kusama }}
+as an anti-spam measure. This amount is burned if 
 the proposal is rejected, or refunded otherwise. These values are subject to [governance](learn-governance.md)
 so they may change in the future.
 
