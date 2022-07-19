@@ -17,25 +17,25 @@ function RPCFeed({ network, path, defaultValue, filters=[] }) {
 		setReturnValue(defaultValue);
 
 		// Set socket connection
-		let wssUrl = undefined;
+		let wsUrl = undefined;
 		switch (network) {
 			case "polkadot":
-				wssUrl = "wss://rpc.polkadot.io";
+				wsUrl = "wss://rpc.polkadot.io";
 				break;
 			case "kusama":
-				wssUrl = "wss://kusama-rpc.polkadot.io/";
+				wsUrl = "wss://kusama-rpc.polkadot.io/";
 				break;
 			default:
 				console.log(`Unknown network provided, ${net}`);
 		}
 
 		// Apply default value if network is not recognized
-		if (wssUrl === undefined) {
+		if (wsUrl === undefined) {
 			console.log("Failed to connect to a valid websocket, applying default");
 		} else {
 			// Otherwise attempt to connect
 			const connect = async () => {
-				await getData(network, path, defaultValue, filters, setReturnValue);
+				await syncData(network, path, filters, setReturnValue);
 			}
 			try {
 				connect();
@@ -50,38 +50,37 @@ function RPCFeed({ network, path, defaultValue, filters=[] }) {
 	)
 }
 
-async function getData(network, path, defaultValue, filters, setReturnValue) {
-	let wssUrl = undefined;
+async function syncData(network, path, filters, setReturnValue) {
+	let wsUrl = undefined;
 	let chainValue = undefined;
 
 	switch (network) {
 		case "polkadot":
-			wssUrl = "wss://rpc.polkadot.io";
+			wsUrl = "wss://rpc.polkadot.io";
 			break;
 		case "kusama":
-			wssUrl = "wss://kusama-rpc.polkadot.io/";
+			wsUrl = "wss://kusama-rpc.polkadot.io/";
 			break;
 		default:
 			console.log("Unknown socket url provided, no connection made.");
 	}
 
 	// If no valid socket url is provided
-	if (wssUrl === undefined) {
+	if (wsUrl === undefined) {
 		return;
 	} else {
 		// Connect
-		const wsProvider = new WsProvider(wssUrl);
+		const wsProvider = new WsProvider(wsUrl);
 		let api = await ApiPromise.create({ provider: wsProvider });
 
 		// Build API call
-		const prefix = path.substring(0, path.indexOf('.'));
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
 			api = api[param];
 		});
 
-		// Process constants and queries
-		switch (prefix) {
+		// Process constants and queries based on parameters prefix
+		switch (pathParameters[0]) {
 			case "consts":
 				chainValue = byString(instance, constant.path);
 				break;
@@ -90,13 +89,12 @@ async function getData(network, path, defaultValue, filters, setReturnValue) {
 				chainValue = chainValue.toString();
 				break;
 			default:
-				console.log(`Unknown path prefix (${prefix}) in ${path}`);
+				console.log(`Unknown path prefix (${pathParameters[0]}) in ${path}`);
 		}
 
 		// If no value was retrieved use default
 		if (chainValue === undefined) {
-			console.log(chainValue);
-			chainValue = defaultValue;
+			return;
 		} else if (filters.length > 0) {
 			// TODO apply filters
 		}
