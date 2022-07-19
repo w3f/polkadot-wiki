@@ -75,8 +75,7 @@ The Treasury is funded from different sources:
 The proposer has to deposit a minimum of
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadableToken"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadableToken"/> :kusama }}
-or 5% of the requested amount with 
-a maximum cap of 
+or 5% of the requested amount with a maximum cap of 
 {{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadableToken"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadableToken"/> :kusama }}
 as an anti-spam measure. This amount is burned if 
@@ -161,8 +160,11 @@ be paid out.
 
 There are two types of tips: public and tipper-initiated. With public tips, a small bond is required
 to place them. This bond depends on the tip message length, and a fixed bond constant defined on
-chain, currently {{ tip_deposit_amount }}. Public tips carry a finder's fee of
-{{ tip_finders_fee }}% which is paid out from the total amount. Tipper-initiated tips, i.e. tips
+chain, currently 
+{{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadableToken"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadableToken"/> :kusama }}.
+Public tips carry a finder's fee of
+{{ polkadot: <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/> :kusama }}% 
+which is paid out from the total amount. Tipper-initiated tips, i.e. tips
 that a Council member published, do not have a finder's fee or a bond.
 
 To better understand the process a tip goes through until it is paid out, let's consider an example.

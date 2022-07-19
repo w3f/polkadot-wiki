@@ -330,8 +330,7 @@ The `ProxyDepositBase` is
 {{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadableToken"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={66693000000} filter="humanReadableToken"/> :kusama }}
 and the `ProxyDepositFactor` is 
-{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadableToken"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadableToken"/> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadableToken"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={110000000} filter="humanReadableToken"/> :kusama }}.
 
 The required deposit amount for one proxy is equal to:
 
