@@ -84,7 +84,7 @@ For the full details of the standard hardware please see
   - x86-64 compatible;
   - Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen);
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
-  - Prefer single-threaded performance over number of cores.
+  - Prefer single-threaded performance over higher cores count.
 - **Storage**
   - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth).
 - **Memory**
