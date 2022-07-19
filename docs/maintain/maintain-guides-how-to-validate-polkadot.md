@@ -7,7 +7,7 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-:::info 
+:::info
 
 The following information applies to the Polkadot network. If you want to set up a validator on Kusama, check out the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) instead.
 
@@ -49,7 +49,7 @@ experience.
 ### How many DOT do I need?
 
 You can have a rough estimate on that by using the methods listed
-[here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). To be elected 
+[here](../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). To be elected
 into the set, you need a minimum stake behind your validator. This stake can come from yourself or from
 [nominators](../learn/learn-nominator.md). This means that as a minimum, you will need enough DOT to set up
 Stash and Controller [accounts](../learn/learn-keys.md) with the existential deposit, plus a little extra for
@@ -80,9 +80,17 @@ beware that you might have performance issue.
 For the full details of the standard hardware please see
 [here](https://github.com/paritytech/substrate/pull/5848).
 
-- **CPU** - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
-- **Storage** - An NVMe solid state drive of 1 TB (As it should be reasonably sized to deal with blockchain growth).
-- **Memory** - 64GB ECC.
+- **CPU**
+  - x86-64 compatible;
+  - Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen);
+  - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
+  - Prefer single-threaded performance over number of cores.
+- **Storage**
+  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth).
+- **Memory**
+  - 64GB DDR4 ECC.
+- **System**
+  - Linux Kernel 5.16 or newer
 
 The specs posted above are by no means the minimum specs that you could use when running a
 validator, however you should be aware that if you are using less you may need to toggle some extra
@@ -108,9 +116,9 @@ If not, this command will fetch the latest version of Rust and install it.
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 ```
 
-:::note 
+:::note
 
-If you do not have "curl" installed, run: 
+If you do not have "curl" installed, run:
 
 ```bash
 sudo apt install curl
@@ -323,8 +331,8 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 :::info By default, Validator nodes are in archive mode
 
-If you've already synced the chain not in archive mode, you must first remove the 
-database with `polkadot purge-chain` and then ensure that you run Polkadot with 
+If you've already synced the chain not in archive mode, you must first remove the
+database with `polkadot purge-chain` and then ensure that you run Polkadot with
 the `--pruning=archive` option.
 
 :::
@@ -370,7 +378,7 @@ required explicitly if you start your node without one of these two options. If 
 pruning to archive node, even when not running in validator mode, you will need to
 re-sync your database when you switch.
 
-:::note Validators should sync using the RocksDb backend 
+:::note Validators should sync using the RocksDb backend
 
 This is implicit by default, but can
 be explicit by passing the `--database RocksDb` flag.
@@ -496,7 +504,7 @@ associates your validator node with your Controller account on Polkadot.
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps RPC. 
+You can generate your [Session keys](../learn/learn-keys.md#session-keys) in the client via the apps RPC.
 If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator
 node. You can configure the apps dashboard to connect to the endpoint of your validator in the
 Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you
