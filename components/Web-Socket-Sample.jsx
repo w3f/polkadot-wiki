@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { ApiPromise, WsProvider } from '@polkadot/api';
+import { useState, useEffect, useRef } from "react";
+import { ApiPromise, WsProvider } from "@polkadot/api";
 
 /*
 This component connects to an external web socket and renders the response data.
@@ -9,7 +9,10 @@ import Socket from "./../../components/Web-Socket-Sample"
 <Socket network="polkadot" path="query.staking.validatorCount" defaultValue="150"/>
 */
 
-function RPCFeed({ network, path, defaultValue, filters=[] }) {
+const Polkadot = "polkadot";
+const Kusama = "kusama";
+
+function RPC({ network, path, defaultValue, filters=undefined }) {
 	const [returnValue, setReturnValue] = useState('');
 
 	useEffect(() => {
@@ -19,10 +22,10 @@ function RPCFeed({ network, path, defaultValue, filters=[] }) {
 		// Set socket connection
 		let wsUrl = undefined;
 		switch (network) {
-			case "polkadot":
+			case Polkadot:
 				wsUrl = "wss://rpc.polkadot.io";
 				break;
-			case "kusama":
+			case Kusama:
 				wsUrl = "wss://kusama-rpc.polkadot.io/";
 				break;
 			default:
@@ -43,11 +46,15 @@ function RPCFeed({ network, path, defaultValue, filters=[] }) {
 				console.log(error);
 			}
 		}
+
+		// Apply filter if provided
+		if(filters !== undefined) {
+
+		}
+
 	}, []);
 
-	return (
-		returnValue
-	)
+	return (returnValue)
 }
 
 async function syncData(network, path, filters, setReturnValue) {
@@ -82,7 +89,7 @@ async function syncData(network, path, filters, setReturnValue) {
 		// Process constants and queries based on parameters prefix
 		switch (pathParameters[0]) {
 			case "consts":
-				chainValue = byString(instance, constant.path);
+				chainValue = api.toString();
 				break;
 			case "query":
 				chainValue = await api();
@@ -95,12 +102,47 @@ async function syncData(network, path, filters, setReturnValue) {
 		// If no value was retrieved use default
 		if (chainValue === undefined) {
 			return;
-		} else if (filters.length > 0) {
-			// TODO apply filters
 		}
 
 		setReturnValue(chainValue);
 	}
 }
 
-export default RPCFeed;
+function applyFilter(value, filter, network, setReturnValue) {
+  //console.log(`Applying ${filter} to ${network} value ${value}`);
+  const values = {
+    polkadot: {
+      precision: 1e10,
+      symbol: "DOT",
+    },
+    kusama: {
+      precision: 1e12,
+      symbol: "KSM",
+    },
+  };
+
+  switch (filter) {
+    case "humanReadableToken":
+      let decimals = undefined;
+      if (network === Polkadot) {
+        decimals = 3;
+      } else if (network === Kusama) {
+				decimals = 6;
+			} else {
+				console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
+				return;
+			}
+      value = (value / values[network].precision).toFixed(decimals) + " " + values[network].symbol;
+      break;
+    case "blocksToDays":
+      value = (value * 6) / 86400;
+      break;
+    default:
+			console.log("Ignoring unknown filter type");
+      return;
+  }
+
+  setReturnValue(value);
+}
+
+export default RPC;
