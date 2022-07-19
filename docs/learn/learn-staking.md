@@ -6,6 +6,7 @@ description: An introduction on staking in Polkadot's NPoS consensus model.
 keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
+import RPC from "./../../components/RPC-Connection"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
 as its [consensus](learn-consensus.md) mechanism. The system encourages 
@@ -52,19 +53,21 @@ are made public to all nominators, and a nominator in turn submits a list of up 
  candidates that it supports. In the next era, a certain number of validators having the
 most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
 As a nominator, a minimum of 
-{{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}
- is required to submit an intention to
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+is required to submit an intention to
 nominate. The nomination intents are placed in a semi-sorted list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
-Although the minimum nomination intent is {{ polkadot: {{ min_dot_nominator_intention }}
-DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}, it does not guarantee
+Although the minimum nomination intent is 
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}, 
+it does not guarantee
 staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
-which is a dynamic value that can be much higher than {{ polkadot: {{ min_dot_nominator_intention }}
-DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}.
+which is a dynamic value that can be much higher than 
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
 
 :::
 
