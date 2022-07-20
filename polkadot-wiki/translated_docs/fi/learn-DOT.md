@@ -104,7 +104,7 @@ You can also make your own WNDs (testnet DOT) by [becoming a validator](learn-va
 
 ### Getting Rococo Tokens
 
-Rococo is a parachain testnet. It does not have a faucet, and tokens are given only to teams working on parachains or exploring the [crosschain](learn-crosschain) message passing aspects of this testnet. Learn more about Rococo on the [matching wiki page](build-parachains-rococo).
+Rococo is a parachain testnet. It does not have a faucet, and tokens are given only to teams working on parachains or exploring the [crosschain](learn-xcm) message passing aspects of this testnet. Learn more about Rococo on the [matching wiki page](build-parachains-rococo).
 
 ## Kusama Tokens
 

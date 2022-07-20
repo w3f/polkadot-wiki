@@ -7,7 +7,7 @@ description: An introductory guide to Polkadot Parachains.
 
 ![One parachain](assets/network/one_parachain.png)
 
-平行链是特定于应用程序的数据结构，它在上下上是一致的，并且可以由 Polkadot 中继链的验证人进行验证。通常平行链会是一条区块链, 但并没有特别要求它们必须是一条链，之所以叫他们平行链是因为它们于中继链并行运行。由于它们的并行性质，它们能够并行地处理交易并实现 Polkadot 系统的可伸缩性。它们[与 Polkadot 网络共享安全](learn-security)，并且可以通过[ XCMP ](learn-crosschain)与其它平行链进行通信。
+平行链是特定于应用程序的数据结构，它在上下上是一致的，并且可以由 Polkadot 中继链的验证人进行验证。通常平行链会是一条区块链, 但并没有特别要求它们必须是一条链，之所以叫他们平行链是因为它们于中继链并行运行。由于它们的并行性质，它们能够并行地处理交易并实现 Polkadot 系统的可伸缩性。它们[与 Polkadot 网络共享安全](learn-security)，并且可以通过[ XCMP ](learn-xcm)与其它平行链进行通信。
 
 Parachains are maintained by a network maintainer known as a [collator](learn-collator). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the Relay Chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain. They are not required to be staked on the Relay Chain or own DOT tokens unless stipulated to do so by the parachain implementation.
 

@@ -12,7 +12,7 @@ Collators maintain a full-node for the Relay Chain, and a full-node for their pa
 
 ### XCMP
 
-Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-crosschain). By being full-nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for them to send messages from parachain A to parachain B.
+Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-xcm). By being full-nodes of the Relay Chain, they are all aware of each other as peers. This makes it possible for them to send messages from parachain A to parachain B.
 
 ### Guides and Tools
 

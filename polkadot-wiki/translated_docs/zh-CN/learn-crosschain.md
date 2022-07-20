@@ -1,5 +1,5 @@
 ---
-id: learn-crosschain
+id: learn-xcm
 title: 跨链消息传递 (XCMP)
 sidebar_label: 跨链消息传递 (XCMP)
 ---

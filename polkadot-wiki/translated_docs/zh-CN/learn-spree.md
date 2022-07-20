@@ -9,7 +9,7 @@ Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "tr
 SPREE 简要地描述了以下属性和功能：
 
 - 平行链可以选择加入特殊的 Runtime 逻辑（例如智能合约）。
-- 这些碎片有自己的存储空间和自己的 [XCMP](learn-crosschain) 端点。
+- 这些碎片有自己的存储空间和自己的 [XCMP](learn-xcm) 端点。
 - 跨链的所有实例具有相同的逻辑。
 - It executes alongside parachain logic.
 - 受保护：存储不能通过平行链逻辑更改，消息不能被平行链伪造。

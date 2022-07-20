@@ -70,7 +70,7 @@ Alice is now able to send from her account on parachain 200 to her account on pa
 
 The purpose of this document is to clearly describe the requirements for chain builders who wish to participate as [parachains](https://wiki.polkadot.network/docs/en/learn-parachains#docsNav) in the [Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769). Furthermore, this document aims to provide helpful guidance in order to create a more successful outcome for all involved, for rather Parachain Host specific implementations it is recommended to look at the [Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
 
-[Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain#overview-of-xcmp) testing and will undergo rapid changes, updates and chain state resets as it develops. After the initial tests are successful on Rococo, we envision that in the long run it will be integrated into the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) test network.
+[Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-xcm#overview-of-xcmp) testing and will undergo rapid changes, updates and chain state resets as it develops. After the initial tests are successful on Rococo, we envision that in the long run it will be integrated into the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) test network.
 
 ## General Strategy
 

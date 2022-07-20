@@ -58,7 +58,7 @@ this security.
 
 ## Interoperability
 
-### [XCM](learn-crosschain)
+### [XCM](learn-xcm)
 XCM, short for cross-consensus message, is a format and not a protocol. The format 
 does not assume anything about the receiver or senders consensus mechanism, it only cares about 
 the format in which the messages must be structured in. The XCM format is how parachains will be able to 

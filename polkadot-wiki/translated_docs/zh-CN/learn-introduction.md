@@ -48,7 +48,7 @@ Whether you're a blockchain developer or if you're interested in taking part of 
 - [共识](learn-consensus) - 描述 Polkadot 协议中使用的共识类型以及它与其它共识协议的比较。
 - [DOT](learn-DOT) - Information on DOT, the native token of the Polkadot protocol.
 - [治理](learn-governance) - 什么是区块链治理及其在 Polkadot 中的方式。
-- [跨链通信](learn-crosschain) - 跨链消息传递的工作方式。
+- [跨链通信](learn-xcm) - 跨链消息传递的工作方式。
 - [平行链](learn-parachains) - 什么是平行链以及它们如何运作。
 - [平行链拍卖](learn-auction) - 平行链插槽拍卖的机制。
 - [平行线程](learn-parathreads) - 平行线程是在许多平行链-"线程"之间共享插槽的一种方法。

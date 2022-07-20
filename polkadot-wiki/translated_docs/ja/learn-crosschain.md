@@ -1,5 +1,5 @@
 ---
-id: learn-crosschain
+id: learn-xcm
 title: Cross-chain Message Passing (XCMP)
 sidebar_label: Cross-chain Message Passing (XCMP)
 ---

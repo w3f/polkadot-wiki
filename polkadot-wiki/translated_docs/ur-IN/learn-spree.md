@@ -9,7 +9,7 @@ Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "tr
 SPREE in brief was described with the following properties and functions:
 
 - Parachains can opt-in to special runtime logic fragments (like smart contracts).
-- These fragments have their own storage and own [XCMP](learn-crosschain) endpoint.
+- These fragments have their own storage and own [XCMP](learn-xcm) endpoint.
 - All instances across parachains have identical logic.
 - It executes alongside parachain logic.
 - Protected: storage can not be altered by parachain logic; messages can not be faked from them by parachains.

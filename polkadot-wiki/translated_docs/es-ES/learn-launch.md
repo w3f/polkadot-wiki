@@ -45,4 +45,4 @@ With the release of Polkadot 1.0, researchers have begun research for the next v
 
 - Economics and Networking (Zero-Knowledge): How will scalability work in Polkadot 2.0?
 - Horizontal vs. Vertical scalability: What is the breaking point of the maximum number of parachains built with horizontal scalability?
-- Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many tiers of Relay Chains can be nested? How will validators work together to validate blocks on various Relay Chains? How is [XCMP](learn-crosschain) working in the nested setup? How is [AnV](learn-availability) going to work there?
+- Nested Relay Chain: How can multiple Relay Chains exist connected through parachains? How many tiers of Relay Chains can be nested? How will validators work together to validate blocks on various Relay Chains? How is [XCMP](learn-xcm) working in the nested setup? How is [AnV](learn-availability) going to work there?

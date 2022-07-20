@@ -48,7 +48,7 @@ Whether you're a blockchain developer or if you're interested in taking part of 
 - [Consensus](learn-consensus) - Describes what kind of consensus is used in the Polkadot protocol and how it compares to other consensus protocols.
 - [DOT](learn-DOT) - Information on DOT, the native token of the Polkadot protocol.
 - [Governance](learn-governance) - What blockchain governance is, and how it works in Polkadot.
-- [Cross-chain Communication](learn-crosschain) - Information regarding how cross-chain messaging works.
+- [Cross-chain Communication](learn-xcm) - Information regarding how cross-chain messaging works.
 - [Parachains](learn-parachains) - Overview of what a parachain is, and how they work.
 - [Parachain Auctions](learn-auction) - Describes the mechanism for the auctioning of parachain slots.
 - [Parathreads](learn-parathreads) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
