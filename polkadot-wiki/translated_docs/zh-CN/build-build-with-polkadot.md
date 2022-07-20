@@ -6,7 +6,7 @@ sidebar_label: Polkadot 開發者入门指南
 
 _本文是对博文[《波卡开发入门需知》](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)的维护版本。_
 
-作为一个区块链协议，波卡希望达成两个目标：为所有接入的平行链提供**共享安全性**，并允许所有接入的链使用[XCMP](learn-crosschain)来实现**互操作**。随着 Parity 的 Substrate 和 Cumulus 这类[PDKs](build-pdk)的问世，开发和启动一条新链所需花费的时间已大大减少。以前开发一条新链需要几年，而现在可能只需要几周甚至几天。
+作为一个区块链协议，波卡希望达成两个目标：为所有接入的平行链提供**共享安全性**，并允许所有接入的链使用[XCMP](learn-xcm)来实现**互操作**。随着 Parity 的 Substrate 和 Cumulus 这类[PDKs](build-pdk)的问世，开发和启动一条新链所需花费的时间已大大减少。以前开发一条新链需要几年，而现在可能只需要几周甚至几天。
 
 这份指南将带你了解想要使用 Polkadot 创建你的愿景，你现在能做的事儿。我们将解释平行链和智能合约之间的区别（以及为什么其中一个可能比另一个更适合你的应用程序）。还将列出现在可用的资源和即将发布的资源，以便你可以开始创建应用程序，并为参与今年晚些时候的 Polkadot 主网发布做准备。
 
@@ -138,7 +138,7 @@ Substrate 有两种方式来支持开箱即用的智能合约开发。一种方�
 
 [Edgeware](https://edgewa.re)是一个附带智能合约模块的项目。Edgeware 是一个针对智能合约做的免许可平台，正被用于进行链上治理的实验。它是目前开发智能合约并部署其上线的开发者的最佳选项。
 
-Edgeware 的目标是被用于在连接波卡时被视作平行链从而允许其对智能合约的操作。此时，智能合约能够通过[XCMP](learn-crosschain)实现与其它波卡生态系统部分的交互。
+Edgeware 的目标是被用于在连接波卡时被视作平行链从而允许其对智能合约的操作。此时，智能合约能够通过[XCMP](learn-xcm)实现与其它波卡生态系统部分的交互。
 
 关于 Edgeware 的通用文档可以看[这里](https://docs.edgewa.re/)以及[如何使用 Edgeware 部署智能合约](https://contracts.edgewa.re/)。
 

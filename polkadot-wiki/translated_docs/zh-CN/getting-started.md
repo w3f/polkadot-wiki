@@ -38,7 +38,7 @@ Polkadot has a Relay Chain acting as the main chain of the system. Parachains co
 
 为了与其它的区块确认性程序的链条进行交互 (例如: 比特币)，Polkadot 有[桥接链（bridge parachains）](learn-bridges) 提供双向兼容性。
 
-The [Cross-Chain Messaging Protocol (XCMP)](learn-crosschain) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
+The [Cross-Chain Messaging Protocol (XCMP)](learn-xcm) allows parachains to send messages of any type to each other. The shared security and validation logic of the Relay Chain provide the environment for trust-free message passing that opens up true interoperability.
 
 > 观看一个有关 Polkadot 简短的，适合初学者的动画，请访问我们的网站。 [Polkadot Explainer video](https://www.youtube.com/watch?v=_-k0xkooSlA)
 

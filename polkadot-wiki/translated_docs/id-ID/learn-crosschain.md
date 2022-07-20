@@ -1,5 +1,5 @@
 ---
-id: learn-crosschain
+id: learn-xcm
 title: Berlalunya pesan lintas-rantai (XCMP)
 sidebar_label: Berlalunya pesan lintas-rantai (XCMP)
 ---

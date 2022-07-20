@@ -8,7 +8,7 @@ A cornerstone technology of blockchain interoperability is the blockchain bridge
 
 While bridge designs are now getting to a place where they are sufficiently planned out, there has not been too many that have been used heavily in production. For this reason, you can consider this page a work in progress. It will be updated as more information is determined and available.
 
-> Bridges are specifically for making the Polkadot ecosystem compatible for external blockchains such as Bitcoin, Ethereum, or Tezos (among others). For information on XCMP, the native interoperability technology that allows parachains to trustlessly communicate, please see the dedicated [crosschain](learn-crosschain) page on the Wiki.
+> Bridges are specifically for making the Polkadot ecosystem compatible for external blockchains such as Bitcoin, Ethereum, or Tezos (among others). For information on XCMP, the native interoperability technology that allows parachains to trustlessly communicate, please see the dedicated [crosschain](learn-xcm) page on the Wiki.
 
 # Types of bridges
 
