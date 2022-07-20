@@ -6,6 +6,7 @@ description: Learn about what it means to be a nominator.
 keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
+import RPC from "./../../components/RPC-Connection"
 
 Nominators secure the Relay Chain by selecting good validators and staking DOT.
 
@@ -56,7 +57,9 @@ Nominating accounts are placed in a semi-sorted list called bags-list. This sort
 extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system. Bags-list allows up to {{ polkadot_max_nominations }} nominators to set
-their intention to nominate, of which, the stake of the top {{ max_active_nominator_count }}
+their intention to nominate, of which, the stake of the top 
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
 nominators is considered for [electing set](#staking-election-stages) that eventually determines the
 active validators. The bags-list can be previewed on
 [Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
@@ -163,12 +166,14 @@ to nominate with, in order to receive staking rewards, can change between the er
 
 Thus, for **nominator counters**, we have:
 
-- count of nominator intentions, and max possible nominator intentions (
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}).
+- count of nominator intentions, and max possible nominator intentions
+  ({{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}).
 - count of electing nominators, and maximum possible electing nominators
-  ({{ max_active_nominator_count }}).
+  ({{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}).
 - count of active nominators, and maximum possible active nominators
-  ({{ max_active_nominator_count }}).
+  ({{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}).
 
 ### Oversubscribed Validators
 
