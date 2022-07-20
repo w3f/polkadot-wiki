@@ -28,9 +28,9 @@ is a parachain on Westend. The WND tokens (Westies) are free and are available t
 
 :::
 
-To create an asset on Statemint, you would need a deposit of 100 DOT and around 2 DOT for the metadata
+To create an asset on Statemint, you would need a deposit of 10 DOT and around 0.2 DOT for the metadata
 . Before you create an asset on Statemint, ensure that your Statemint account balance is more 
-than 103 DOT, which should seamlessly account for the required deposits and transaction fees. You can
+than 10.3 DOT, which should seamlessly account for the required deposits and transaction fees. You can
 send DOT from a Polkadot account to a Statemint account using the teleport functionality. For
 instructions on teleporting DOT, check this [tutorial on Teleports](../learn/learn-teleport.md).
 
