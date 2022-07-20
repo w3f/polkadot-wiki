@@ -40,6 +40,20 @@ interpretations under some systems or will be intentionally unsupported.
 
 :::
 
+### XCMP
+  *Cross-Chain Message Passing* secure message passing between parachains. There are two variants: *Direct* and *Relayed*.
+  - With *Direct*, message data goes direct between parachains and is O(1) on the side of the Relay-chain and is very scalable.
+  - With *Relayed*, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much less scalable, and parathreads in particular may not receive messages due to excessive queue growth.
+
+### VMP
+  *Vertical Message Passing* message passing between the Relay-chain itself and a parachain. Message data in both cases exists on the Relay-chain. This includes:
+
+- #### UMP
+  *Upward Message Passing* message passing from a parachain to the Relay-chain.
+
+- #### DMP
+  *Downward Message Passing* message passing from the Relay-chain to a parachain.
+
 ### Example Use-Cases
 
 - Request for specific operations to occur on the recipient system.
