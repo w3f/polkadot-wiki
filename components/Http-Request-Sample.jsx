@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 /*
-CURRENTLY NOT USED
-
 This sample component shows how to make an http request
 to an external API and render the response data.
 
