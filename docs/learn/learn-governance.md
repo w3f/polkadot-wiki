@@ -7,6 +7,7 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 import RPC from "./../../components/RPC-Connection"
+import VLTable from "./../../components/Voluntary-Locking"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance 
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. 
@@ -247,16 +248,7 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-| Lock Periods | Vote Multiplier | Length in Days |
-| :----------: | :-------------: | :------------: |
-|      0       |       0.1       |     {{ vote_locking_period_0 }}  |
-|      1       |        1        |     {{ vote_locking_period_1 }}  |
-|      2       |        2        |     {{ vote_locking_period_2 }}  |
-|      4       |        3        |     {{ vote_locking_period_3 }}  |
-|      8       |        4        |     {{ vote_locking_period_4 }}  |
-|      16      |        5        |     {{ vote_locking_period_5 }}  |
-|      32      |        6        |     {{ vote_locking_period_6 }}  |
-
+<VLTable network="polkadot"/>
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals 
