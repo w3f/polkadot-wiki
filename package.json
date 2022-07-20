@@ -1,8 +1,7 @@
 {
   "scripts": {
     "kusama:clean": "shx rm -rf node_modules/.cache; docusaurus clear kusama-guide",
-    "kusama:start": "yarn fetch --isPolkadot=false; docusaurus start kusama-guide",
-    "prekusama:build": "npm-run-all -ln kusama:clean -p \"fetch --isPolkadot=false\" kusama:copy-assets --aggregate-output",
+    "kusama:start": "docusaurus start kusama-guide",
     "kusama:build": "cross-env BUILDING=true docusaurus build kusama-guide; node kusama-guide/postprocess",
     "kusama:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy kusama-guide",
     "kusama:copy-assets": "shx mkdir -p kusama-guide/i18n/zh-CN/docusaurus-plugin-content-docs/current",
@@ -10,8 +9,7 @@
     "kusama:i18n:copy-translations": "cp -R polkadot-wiki/i18n/zh-CN/docusaurus-plugin-content-docs/current kusama-guide/i18n/zh-CN/docusaurus-plugin-content-docs/current",
     "kusama:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/kusama-index\" --outputPDFFilename=\"kusama-guide/static/kusama-wiki.pdf\" --coverTitle=\"KUSAMA GUIDE\"",
     "polkadot:clean": "shx rm -rf node_modules/.cache; docusaurus clear polkadot-wiki",
-    "polkadot:start": "yarn fetch; docusaurus start polkadot-wiki",
-    "prepolkadot:build": "npm-run-all -ln polkadot:clean -p fetch polkadot:copy-assets:* --aggregate-output",
+    "polkadot:start": "docusaurus start polkadot-wiki",
     "polkadot:build": "cross-env BUILDING=true docusaurus build polkadot-wiki; node polkadot-wiki/postprocess",
     "polkadot:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy polkadot-wiki",
     "polkadot:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/getting-started\" --outputPDFFilename=\"polkadot-wiki/static/polkadot-wiki.pdf\" --coverTitle=\"POLKADOT WIKI\"",
@@ -29,7 +27,6 @@
     "polkadot:copy-assets:ru": "shx mkdir -p polkadot-wiki/i18n/ru-RU/docusaurus-plugin-content-docs/current; shx cp -R docs/assets polkadot-wiki/i18n/ru-RU/docusaurus-plugin-content-docs/current",
     "polkadot:copy-assets:zh-CN": "shx mkdir -p polkadot-wiki/i18n/zh-CN/docusaurus-plugin-content-docs/current; shx cp -R docs/assets polkadot-wiki/i18n/zh-CN/docusaurus-plugin-content-docs/current",
     "pdf": "npx mr-pdf --contentSelector=\"article\" --paginationSelector=\".pagination-nav__item--next > a\" --pdfFormat=\"A4\" --pdfMargin=\"90,60,80,60\"",
-    "fetch": "node scripts/fetch.mjs --isPolkadot",
     "crowdin": "crowdin",
     "docusaurus": "docusaurus",
     "prepare": "husky install"

@@ -46,7 +46,7 @@ To be elected into the set, you need a minimum stake behind your validator. This
 yourself or from [nominators](../../learn/learn-nominator.md). This means that as a minimum, you will 
 need enough KSM to set up Stash and Controller [accounts](../../learn/learn-keys.md) with the existential 
 deposit, plus a little extra for transaction fees. The rest can come from nominators. To understand how 
-validators are elected, check the [NPoS Election algorithms](../learn/learn-phragmen.md) page.
+validators are elected, check the [NPoS Election algorithms](../../learn/learn-phragmen.md) page.
 
 
 :::warning
