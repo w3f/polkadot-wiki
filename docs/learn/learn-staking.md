@@ -12,7 +12,8 @@ import RPC from "./../../components/RPC-Connection"
 as its [consensus](learn-consensus.md) mechanism. The system encourages 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
 as nominators. Nominators may back up to 
-{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }} 
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
 validators as trusted validator candidates. Both validators and nominators lock their tokens as collateral 
 and receive staking rewards.
 
@@ -49,8 +50,9 @@ video below.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to
-{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }}
- candidates that it supports. In the next era, a certain number of validators having the
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
+candidates that it supports. In the next era, a certain number of validators having the
 most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
 As a nominator, a minimum of 
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}

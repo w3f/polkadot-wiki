@@ -66,7 +66,7 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 ### Staking, Validating, and Nominating
 
-Maximum number of Validators that can be nominated by a nominator - {{ kusama_max_nominations }}
+Maximum number of Validators that can be nominated by a nominator - <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>
 
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

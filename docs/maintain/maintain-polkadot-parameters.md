@@ -67,7 +67,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
-Maximum number of Validators that can be nominated by a nominator - {{ polkadot_max_nominations }}
+Maximum number of Validators that can be nominated by a nominator - <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>
 
 | Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

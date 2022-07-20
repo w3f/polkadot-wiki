@@ -6,6 +6,7 @@ description: Steps on how to nominate on Kusama.
 keywords: [nominate, nominator, kusama, stake, staking]
 slug: ../../maintain-guides-how-to-nominate-kusama
 ---
+import RPC from "./../../../components/RPC-Connection"
 
 :::info
 
@@ -114,8 +115,8 @@ These concepts have been further explained in Polkadot's
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](../../learn/learn-staking.md#slashing) if the validators you nominate misbehave. All bonded funds can
-now be distributed to up to {{ kusama_max_nominations }} validators. Be careful about the validators you choose since you will
-be slashed if your validator commits an offence.
+now be distributed to up to <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> validators. 
+Be careful about the validators you choose since you will be slashed if your validator commits an offence.
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select some validators.
