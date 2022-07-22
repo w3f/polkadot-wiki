@@ -23,7 +23,6 @@ module.exports = {
       defer: true,
     },
     '../js/custom.js',
-    '../js/packaged/addressChanger.js',
     '../js/clipboard.min.js',
     '../js/copycode.js',
   ],
