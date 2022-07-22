@@ -411,6 +411,27 @@ verified. You can then compare that to the current highest block via
 [Telemetry](https://telemetry.polkadot.io/#list/Kusama) or the
 [Polkadot-JS Block Explorer](https://polkadot.js.org/apps/#/explorer).
 
+#### Database Snapshot Services
+
+If you start a node for the first time, it will start building from the genesis block. This process can 
+take a while depending on the database size. To make this process faster, snapshots can be used. Snapshots
+are compressed backups of the database directory of Polkadot/Kusama nodes, containing either the whole chain 
+(or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed below are a few 
+public snapshot providers for Polkadot and Kusama. 
+
+- [STAKEWORLD](https://stakeworld.nl/docs/snapshot)
+- [Polkachu](https://polkachu.com/snapshots)
+- [Polkashots](https://polkashots.io/)
+
+:::caution 
+
+For the security of the network, it is recommended that you sync from scratch, even if you are running your 
+node in pruning mode for validation. The reason is that if these snapshots get corrupted and a majority of nodes 
+run based on these snapshots, the network could end up running on a non-canonical chain.
+
+:::
+
+
 ## Bond KSM
 
 It is highly recommended that you make your controller and stash accounts be two separate accounts.
