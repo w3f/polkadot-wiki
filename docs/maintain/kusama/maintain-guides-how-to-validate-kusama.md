@@ -415,7 +415,7 @@ verified. You can then compare that to the current highest block via
 
 If you start a node for the first time, it will start building from the genesis block. This process can 
 take a while depending on the database size. To make this process faster, snapshots can be used. Snapshots
-are compressed backups of the database directory of Polkadot/Kusama nodes, containing either the whole chain 
+are compressed backups of the database directory of Polkadot/Kusama nodes, containing the whole chain 
 (or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed below are a few 
 public snapshot providers for Polkadot and Kusama. 
 
