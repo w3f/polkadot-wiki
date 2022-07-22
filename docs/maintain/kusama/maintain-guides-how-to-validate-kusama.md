@@ -427,7 +427,7 @@ providers for Polkadot and Kusama.
 
 For the security of the network, it is recommended that you sync from scratch, even if you are running your 
 node in pruning mode for validation. The reason is that if these snapshots get corrupted and a majority of nodes 
-run based on these screenshots, the network could end up running on a non-canonical chain.
+run based on these snapshots, the network could end up running on a non-canonical chain.
 
 :::
 
