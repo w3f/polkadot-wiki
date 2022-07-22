@@ -252,7 +252,7 @@ double.
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals 
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={115200} filter="blocksToDays"/> :kusama }} days. 
 Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
 5.5. For additional information regarding the timeline of governance events, check out the governance section on the
