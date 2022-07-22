@@ -66,7 +66,7 @@ instead.
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#vps-list) provider that your prefer, and whatever operating system you are
+choose whatever [VPS](#note-about-vps) provider that your prefer, and whatever operating system you are
 comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
 similar for other platforms.
 
@@ -84,11 +84,11 @@ For the full details of the standard hardware please see
   - x86-64 compatible;
   - Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen);
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
-  - Prefer single-threaded performance over higher cores count.
+  - Prefer single-threaded performance over higher cores count. A comparison of single-threaded performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
 - **Storage**
-  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth).
+  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). The latency is more important than the throughput.
 - **Memory**
-  - 64GB DDR4 ECC.
+  - 16GB DDR4 ECC.
 - **System**
   - Linux Kernel 5.16 or newer
 
@@ -642,8 +642,21 @@ other peers over the network.
 ./target/release/polkadot purge-chain
 ```
 
-## VPS List
+## Note about VPS
 
+VPS providers are very popular for running servers of any kind.  
+Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general.  
+The following server types showed acceptable performance. Please note that this is not an endorsement in any way: 
+- Google *c2d* instances
+- AWS *c6id* instances
+
+The following additional configurations were applied to the instances:
+@Artyom please fill in
+
+### VPS List
+
+- [Google Cloud](https://cloud.google.com/)
+- [Amazon AWS](https://aws.amazon.com/)
 - [OVH](https://www.ovh.com.au/)
 - [Digital Ocean](https://www.digitalocean.com/)
 - [Vultr](https://www.vultr.com/)
