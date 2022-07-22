@@ -68,7 +68,7 @@ Here are a couple of things that you need to understand before submitting a tele
 :::caution Existential Deposit
 
 After the teleport, if your account balance drops below the Existential Deposit which is 
-{{ polkadot: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/> :kusama }},
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/> :kusama }},
 that balance will be burnt and lost. Either plan on teleporting all of 
 your balance or leave enough balance such that the account does not get reaped.
   
