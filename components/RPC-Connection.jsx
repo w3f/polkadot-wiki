@@ -137,7 +137,13 @@ function applyFilter(value, filter, network, setReturnValue) {
 			value = parseFloat(value);
 			// TODO: this legacy function needs some attention (see https://github.com/w3f/polkadot-wiki/issues/3539)
 			// Apply precision
-    		value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
+			if (Number.isInteger(value / values[network].precision)) {
+				value = `${(value / values[network].precision)} ${values[network].symbol}`;
+			} else {
+				value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
+			}
+
+    		
     		break;
 		case "blocksToDays":
 			value = (value * 6) / 86400;
