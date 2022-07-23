@@ -5,7 +5,7 @@ sidebar_label: Statemine
 description: Statemine and its features
 slug: ../../kusama-statemine
 ---
-import RPC from "./../../components/RPC-Connection"
+import RPC from "./../../../components/RPC-Connection"
 
 Statemine is a generic assets parachain which provides functionality for deploying and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Kusama (not to be confused with [Statemint](../../learn/learn-common-good-chains.md#statemint), which is a parachain on Polkadot). The native token of Statemine is KSM. Balance transfers and the Existential Deposit (ED) of KSM on Statemine are about 1/10th of the values on the Relay chain. For example, the Existential Deposit of a Statemine account is <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>, 
 when compared to <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>, on Kusama.
