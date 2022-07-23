@@ -6,6 +6,7 @@ description: Learn about Nomination Pools and their features
 keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
+import RPC from "./../../components/RPC-Connection"
 
 :::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and [Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/staking/pools).
 
@@ -27,8 +28,13 @@ If you have questions about nomination pools, please join our
 (experimental) features from the roadmap of
 [Staking improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) on
 Polkadot. They are designed to permissionlessly allow members to pool their funds together and act
-as a single nominator account. Due to the current runtime constraints, Polkadot can only handle
-{{ max_active_nominator_count }} nominators comfortably in the
+as a single nominator account. Due to the current runtime constraints, 
+{{ polkadot: Polkadot :polkadot }}
+{{ kusama: Kusama :kusama }}
+can only handle
+{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
+nominators comfortably in the
 [electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
 [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
 inferred that the staking system on Polkadot favors nominators with a larger stake. Only the

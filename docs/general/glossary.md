@@ -6,6 +6,7 @@ description: Common terms and concepts you may come across in the Polkadot ecosy
 keywords: [glossary, questions, definitions]
 slug: ../glossary
 ---
+import RPC from "./../../components/RPC-Connection"
 
 ## Active Nomination
 
@@ -361,7 +362,7 @@ online, even if they haven't published a block this epoch. This is sometimes ref
 ## Origin
 
 The initiator of an extrinsic. A simple origin would be the account that is sending a token to
-another account. Polkadot also supports more complex origin types, such as the [root origin](#Root Origin), from
+another account. Polkadot also supports more complex origin types, such as the [root origin](#root-origin), from
 which privileged functions can be called.
 
 ## Oversubscribed
@@ -369,8 +370,9 @@ which privileged functions can be called.
 If more than the maximum number of nominators nominate the same validator, it is "oversubscribed",
 and only the top staked nominators (ranked by the amount of stake, up to the maximum number of
 nominators) are paid rewards. Other nominators will receive no rewards for that era. The current
-maximum number of nominators is {{ kusama_max_nominators }} on Kusama and
-{{ polkadot_max_nominators }} on Polkadot, but it can be modified via governance.
+maximum number of nominators is <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/>
+on Kusama and <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/>
+on Polkadot, but it can be modified via governance.
 
 ## Pallet
 

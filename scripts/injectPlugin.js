@@ -1,7 +1,4 @@
-const fs = require("fs");
-const path = require("path");
 const visit = require("unist-util-visit");
-const { yellow, cyan } = require("chalk");
 
 const R_POLKADOT = /{{ polkadot: ([\s\S]+?) :polkadot }}/gim;
 const R_KUSAMA = /{{ kusama: ([\s\S]+?) :kusama }}/gim;
@@ -10,28 +7,7 @@ const R_KUSAMA_TAIL = /[\s\S]* :kusama }}/gim;
 const R_POLKADOT_HEAD = /{{ polkadot: [\s\S]*/gim;
 const R_POLKADOT_TAIL = /[\s\S]* :polkadot }}/gim;
 
-const logger = (file, dryRun, subStr, replaceStr) => {
-  console.log(
-    cyan(
-      `${dryRun ? "[dryRun]" : ""}[${file.basename}] ${yellow(subStr)} => ${yellow(
-        replaceStr ? replaceStr : `""`
-      )}`
-    )
-  );
-};
-
-const unconditionalReplace = (node, file, options) => {
-  const { dict, dryRun = false, verbose = true } = options;
-
-  Object.entries(dict).forEach(([key, value]) => {
-    node.value = node.value.replace(new RegExp(key, "ig"), (match) => {
-      verbose && logger(file, dryRun, key, value);
-      return dryRun ? match : value;
-    });
-  });
-};
-
-const conditionalReplace = (node, file, options) => {
+const conditionalReplace = (node, options) => {
   const { isPolkadot, debug } = options;
   let foundTarget = false,
     foundDelete = false;
@@ -97,27 +73,17 @@ const conditionalReplace = (node, file, options) => {
 };
 
 function transform(options) {
-  return (tree, file) => {
+  return (tree) => {
     visit(tree, ["paragraph", "emphasis", "heading"], (node) => {
-      conditionalReplace(node, file, options);
-    });
-
-    visit(tree, "text", (node) => {
-      unconditionalReplace(node, file, options);
-    });
-
-    visit(tree, "code", (node) => {
-      unconditionalReplace(node, file, options);
+      conditionalReplace(node, options);
     });
   };
 }
 
 function injectPlugin(param) {
-  const dictPath = path.resolve(__dirname, "computed-dict.json");
-  const dict = JSON.parse(fs.readFileSync(dictPath, "utf8"));
   return [
     transform,
-    { dict, isPolkadot: param.isPolkadot, dryRun: false, verbose: false, debug: false },
+    { isPolkadot: param.isPolkadot, dryRun: false, verbose: false, debug: false },
   ];
 }
 

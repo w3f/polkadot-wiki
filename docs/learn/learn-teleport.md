@@ -6,6 +6,7 @@ description: Steps on how to teleport assets across parachains.
 keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---
+import RPC from "./../../components/RPC-Connection"
 
 One of the main properties that Polkadot and Kusama bring to the ecosystems is decentralized
 blockchain interoperability. This interoperability allows for asset teleportation: the process of
@@ -66,9 +67,10 @@ Here are a couple of things that you need to understand before submitting a tele
 
 :::caution Existential Deposit
 
-  After the teleport, if your account balance drops below the Existential Deposit which is 
-{{ existential_deposit }}, that balance will be burnt and lost. Either plan on teleporting all of 
-  your balance or leave enough balance such that the account does not get reaped.
+After the teleport, if your account balance drops below the Existential Deposit which is 
+{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/> :kusama }},
+that balance will be burnt and lost. Either plan on teleporting all of 
+your balance or leave enough balance such that the account does not get reaped.
   
 :::
 
