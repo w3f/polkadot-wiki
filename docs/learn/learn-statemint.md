@@ -5,6 +5,7 @@ sidebar_label: Statemint
 description: Statemint and its features
 slug: ../../learn-statemint
 ---
+import RPC from "./../../components/RPC-Connection"
 
 Statemint is a generic assets parachain which provides functionality for deploying and transferring
 assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Polkadot
