@@ -11,7 +11,8 @@ assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good par
 (not to be confused with [Statemine](https://guide.kusama.network/docs/kusama-statemine/), which is
 a parachain on Kusama). The native token of Statemint is DOT. The Existential Deposit (ED), transfer fees,
 and the deposits for proxy/multisig operations on Statemint are about 1/10th of the values on the Relay chain.
-For example, the Existential Deposit of a Statemint account is 0.1 DOT, when compared to 1 DOT on Polkadot.
+For example, the Existential Deposit of a Statemint account is <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>, 
+when compared to <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>, on Polkadot.
 Apart from the core protocol token DOT, the assets held on Statemint can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility
@@ -28,9 +29,10 @@ is a parachain on Westend. The WND tokens (Westies) are free and are available t
 
 :::
 
-To create an asset on Statemint, you would need a deposit of 10 DOT and around 0.2 DOT for the metadata
-. Before you create an asset on Statemint, ensure that your Statemint account balance is more 
-than 10.3 DOT, which should seamlessly account for the required deposits and transaction fees. You can
+To create an asset on Statemint, you would need a deposit of <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
+and around <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={2006800000} filter="humanReadable"/> for the metadata
+. Before you create an asset on Statemint, ensure that your Statemint account balance is a bit more 
+than the sum of those two deposits, which should seamlessly account for the required deposits and transaction fees. You can
 send DOT from a Polkadot account to a Statemint account using the teleport functionality. For
 instructions on teleporting DOT, check this [tutorial on Teleports](../learn/learn-teleport.md).
 
