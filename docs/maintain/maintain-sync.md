@@ -61,10 +61,20 @@ directly on the network without relying on a centralized infrastructure provider
 Another type of node is a **light node**. A light node has only the runtime and the current state,
 but does not store past blocks and so cannot read historical data without requesting it from a node
 that has it. Light nodes are useful for resource restricted devices. An interesting use-case of
-light nodes is a Chrome extension, which is a node in its own right, running the runtime in [WASM
-format](https://github.com/paritytech/substrate-light-ui) as well as a full or light node that is
-completely encapsulated in WASM and can be integrated into webapps:
-https://github.com/paritytech/smoldot#wasm-light-node
+light nodes is a browser extension, which is a node in its own right, running the runtime in WASM
+format as well as a full or light node that is completely encapsulated in WASM and can be integrated 
+into webapps: https://github.com/paritytech/smoldot#wasm-light-node
+
+:::note Substrate Connect
+
+[Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with 
+substrate based blockchains in the browser without using an RPC server. Substrate Connect uses a 
+smoldot WASM light client to securely connect to the  blockchain network without relying on specific 
+3rd parties. Substrate Connect is available as a 
+[browser extension](https://substrate.io/developers/substrate-connect/) on both Chrome and Firefox.
+
+:::
+
 
 <!--seperates content from instructions-->
 
