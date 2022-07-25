@@ -11,6 +11,8 @@ import RPC from "./../../components/RPC-Connection"
 
 const Polkadot = "polkadot";
 const Kusama = "kusama";
+const Statemine = "statemine";
+const Statemint = "statemint";
 
 function RPC({ network, path, defaultValue, filter=undefined }) {
 	const [returnValue, setReturnValue] = useState('');
@@ -32,6 +34,12 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 				break;
 			case Kusama:
 				wsUrl = "wss://kusama-rpc.polkadot.io/";
+				break;
+			case Statemine:
+				wsUrl = "wss://statemine-rpc.polkadot.io/";
+				break;
+			case Statemint:
+				wsUrl = "wss://statemint-rpc.polkadot.io/";
 				break;
 			default:
 				console.log(`Unknown network provided, ${net}`);
@@ -70,6 +78,12 @@ async function syncData(network, path, setReturnValue) {
 			break;
 		case "kusama":
 			wsUrl = "wss://kusama-rpc.polkadot.io/";
+			break;
+		case "statemine":
+			wsUrl = "wss://statemine-rpc.polkadot.io/";
+			break;
+		case "statemint":
+			wsUrl = "wss://statemint-rpc.polkadot.io/";
 			break;
 		default:
 			console.log("Unknown socket url provided, no connection made.");
@@ -120,14 +134,22 @@ function applyFilter(value, filter, network, setReturnValue) {
       		precision: 1e12,
       		symbol: "KSM",
     	},
+		statemint: {
+			precision: 1e10,
+			symbol: "DOT",
+	  	},
+		statemine: {
+			precision: 1e12,
+			symbol: "KSM",
+	  	},
   	};
 
 	switch (filter) {
 		case "humanReadable":
       		let decimals = undefined;
-      		if (network === Polkadot) {
+      		if (network === Polkadot || network === Statemint) {
         		decimals = 3;
-      		} else if (network === Kusama) {
+      		} else if (network === Kusama || network === Statemine) {
 				decimals = 6;
 			} else {
 				console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
