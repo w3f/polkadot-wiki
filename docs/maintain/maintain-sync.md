@@ -68,7 +68,8 @@ into webapps: https://github.com/paritytech/smoldot#wasm-light-node
 :::note Substrate Connect
 
 [Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with 
-substrate based blockchains in the browser without using an RPC server. Substrate Connect uses a 
+substrate based blockchains in the browser without using an RPC server. It is a light node that runs 
+entirely in Javascript. Substrate Connect uses a 
 smoldot WASM light client to securely connect to the  blockchain network without relying on specific 
 3rd parties. Substrate Connect is available as a 
 [browser extension](https://substrate.io/developers/substrate-connect/) on both Chrome and Firefox.
