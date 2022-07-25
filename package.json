@@ -40,7 +40,7 @@
     "@docusaurus/plugin-client-redirects": "^2.0.0-rc.1",
     "@docusaurus/preset-classic": "^2.0.0-rc.1",
     "@octokit/rest": "^19.0.3",
-    "@polkadot/api": "^8.13.1",
+    "@polkadot/api": "^8.14.1",
     "@polkadot/keyring": "^9.7.2",
     "axios": "^0.27.2",
     "chalk": "^4.1.2",
