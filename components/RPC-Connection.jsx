@@ -137,7 +137,7 @@ function applyFilter(value, filter, network, setReturnValue) {
 			value = parseFloat(value);
 			// Apply precision
 			if (Number.isInteger(value / values[network].precision)) {
-				value = `${(value / values[network].precision)} ${values[network].symbol}`;
+				value = `${value / values[network].precision} ${values[network].symbol}`;
 			} else {
 				value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
 			}
