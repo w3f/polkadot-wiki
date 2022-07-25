@@ -20,7 +20,6 @@
     "rename-version": "docusaurus-rename-version",
     "crowdin-upload": "crowdin --config ../crowdin-docs-v1.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin-docs-v1.yaml download -b master",
-    "generateErrorTable": "node --experimental-json-modules scripts/generateErrorTable.mjs >> docs/maintain-errors.md",
     "polkadot:crowdin:upload:source": "crowdin upload sources --config ./crowdin.yaml -b master",
     "polkadot:crowdin:download:ru": "crowdin download --config ./crowdin.yaml -b master -l ru",
     "polkadot:crowdin:download:zh-CN": "crowdin download --config ./crowdin.yaml -b master -l zh-CN",
