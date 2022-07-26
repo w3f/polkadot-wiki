@@ -1,11 +1,25 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, act, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
 // Set max test duration before failing
 jest.setTimeout(120000); // 2 min
+
+test("Retrieves and applies RPC value", async () => {
+	
+	
+	const { container, debug } = render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue="0" />);
+	await act(async () => {
+		await waitFor(async () => {
+			let validationError = await screen.findByText("10000000000");
+			console.log(validationError);
+			//expect(validationError).toBeInTheDocument();
+		}, {timeout:6000});
+	})
+	debug();
+});
 
 test("RPC falls back to default", () => {
 	const { container } = render(<RPC network="polkadot" path="BAD.PATH" defaultValue="150" />);
@@ -36,7 +50,6 @@ test("All leveraged RPC paths are valid", async () => {
 		{ networks: ["polkadot", "kusama"], path: "consts.identity.basicDeposit" },
 		{ networks: ["polkadot", "kusama"], path: "consts.crowdloan.minContribution" },
 		{ networks: ["polkadot", "kusama"], path: "consts.staking.maxNominations" },
-		{ networks: ["polkadot", "kusama"], path: "consts.balances.existentialDeposit" },
 		{ networks: ["polkadot", "kusama"], path: "consts.democracy.voteLockingPeriod" },
 		{ networks: ["polkadot", "kusama"], path: "consts.identity.fieldDeposit" },
 		{ networks: ["polkadot", "kusama"], path: "consts.electionProviderMultiPhase.maxElectingVoters" },
