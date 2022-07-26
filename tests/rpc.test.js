@@ -4,16 +4,21 @@ import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
-// Set max test duration before failing
-jest.setTimeout(120000); // 2 min
+// Set max test duration before failing (90 seconds)
+jest.setTimeout(90000);
 
-test("Retrieves and applies RPC value", async () => {
-	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue="0" />);
+test("Retrieves and applies a 'const' RPC value", async () => {
+	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={0} />);
 	await waitFor(() => expect(screen.getByText("10000000000")).toBeInTheDocument(), { timeout: 2000 });
 });
 
+test("Retrieves and applies a 'query' RPC value", async () => {
+	render(<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={0} filter="humanReadable"/>);
+	await waitFor(() => expect(screen.getByText("10 DOT")).toBeInTheDocument(), { timeout: 2000 });
+});
+
 test("RPC falls back to default", async () => {
-	render(<RPC network="polkadot" path="BAD.PATH" defaultValue="150" />);
+	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={150} />);
 	await waitFor(() => expect(screen.getByText("150")).toBeInTheDocument(), { timeout: 2000 });
 });
 
@@ -27,6 +32,7 @@ test("Human readable filter with float value", async () => {
 	await waitFor(() => expect(screen.getByText("20.258 DOT")).toBeInTheDocument(), { timeout: 2000 });
 });
 
+// This test takes about a minute to execute synchronously
 test("All leveraged RPC paths are valid", async () => {
 	const paths = [
 		// Polkadot & Kusama

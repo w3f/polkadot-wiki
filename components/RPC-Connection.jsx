@@ -19,7 +19,7 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 
 	useEffect(() => {
 		// Set default as a fallback if anything fails
-		if(filter !== undefined) {
+		if (filter !== undefined) {
 			// Apply filter to default value to match formatting of RPC result
 			applyFilter(defaultValue.toString(), filter, network, setReturnValue)
 		} else {
@@ -53,11 +53,13 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 			const connect = async () => {
 				const newValue = await syncData(network, path, setReturnValue);
 				if (newValue === undefined) {
-					return; // default
-				} else if(filter !== undefined) {
+					 // There was an issue with the request, use default
+					return;
+				} else if (filter !== undefined) {
 					// Apply filter to retrieved value if a filter is provided
 					applyFilter(newValue, filter, network, setReturnValue)
 				} else {
+					// Apply value as-is
 					setReturnValue(newValue);
 				}
 			}
@@ -104,7 +106,7 @@ async function syncData(network, path, setReturnValue) {
 		// Build API call
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
-			if(param in api){
+			if (param in api){
 				api = api[param];
 			}
 		});
