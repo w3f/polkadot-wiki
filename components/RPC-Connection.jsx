@@ -51,10 +51,10 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 		} else {
 			// Otherwise attempt to connect to RPC
 			const connect = async () => {
-				await syncData(network, path, setReturnValue);
+				const newValue = await syncData(network, path, setReturnValue);
 				// Apply filter to retrieved value if a filter is provided
 				if(filter !== undefined) {
-					applyFilter(defaultValue.toString(), filter, network, setReturnValue)
+					applyFilter(newValue, filter, network, setReturnValue)
 				}
 			}
 			try {
@@ -107,7 +107,6 @@ async function syncData(network, path, setReturnValue) {
 		switch (pathParameters[0]) {
 			case "consts":
 				chainValue = api.toString();
-
 				break;
 			case "query":
 				chainValue = await api();
@@ -117,10 +116,7 @@ async function syncData(network, path, setReturnValue) {
 				console.log(`Unknown path prefix (${pathParameters[0]}) in ${path}`);
 		}
 
-		// If no value was successfully retrieved use default
-		if (chainValue === undefined) { return; }
-
-		setReturnValue(chainValue);
+		return chainValue;
 	}
 }
 
@@ -164,8 +160,6 @@ function applyFilter(value, filter, network, setReturnValue) {
 			} else {
 				value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
 			}
-
-    		
     		break;
 		case "blocksToDays":
 			value = (value * 6) / 86400;
