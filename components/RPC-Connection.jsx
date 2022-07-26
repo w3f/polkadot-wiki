@@ -52,8 +52,10 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 			// Otherwise attempt to connect to RPC
 			const connect = async () => {
 				const newValue = await syncData(network, path, setReturnValue);
-				// Apply filter to retrieved value if a filter is provided
-				if(filter !== undefined) {
+				if (newValue === undefined) {
+					return; // default
+				} else if(filter !== undefined) {
+					// Apply filter to retrieved value if a filter is provided
 					applyFilter(newValue, filter, network, setReturnValue)
 				} else {
 					setReturnValue(newValue);
