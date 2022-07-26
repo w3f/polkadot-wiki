@@ -4,7 +4,6 @@ on:
     branches:
       - master
 jobs:
-  name: build and test
   build:
     runs-on: ubuntu-latest
     steps:
