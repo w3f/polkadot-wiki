@@ -55,6 +55,8 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 				// Apply filter to retrieved value if a filter is provided
 				if(filter !== undefined) {
 					applyFilter(newValue, filter, network, setReturnValue)
+				} else {
+					setReturnValue(newValue);
 				}
 			}
 			try {
@@ -100,7 +102,9 @@ async function syncData(network, path, setReturnValue) {
 		// Build API call
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
-			api = api[param];
+			if(param in api){
+				api = api[param];
+			}
 		});
 
 		// Process constants and queries based on parameters prefix

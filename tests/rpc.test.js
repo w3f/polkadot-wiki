@@ -8,35 +8,23 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 jest.setTimeout(120000); // 2 min
 
 test("Retrieves and applies RPC value", async () => {
-	
-	
-	const { container, debug } = render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue="0" />);
-	await act(async () => {
-		await waitFor(async () => {
-			let validationError = await screen.findByText("10000000000");
-			console.log(validationError);
-			//expect(validationError).toBeInTheDocument();
-		}, {timeout:6000});
-	})
-	debug();
+	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue="0" />);
+	await waitFor(() => expect(screen.getByText("10000000000")).toBeInTheDocument(), { timeout: 2000 });
 });
 
-test("RPC falls back to default", () => {
-	const { container } = render(<RPC network="polkadot" path="BAD.PATH" defaultValue="150" />);
-	const content = container.firstChild.textContent;
-	expect(content).toEqual("150");
+test("RPC falls back to default", async () => {
+	render(<RPC network="polkadot" path="BAD.PATH" defaultValue="150" />);
+	await waitFor(() => expect(screen.getByText("150")).toBeInTheDocument(), { timeout: 2000 });
 });
 
-test("Human readable filter with integer value", () => {
-	const { container } = render(<RPC network="polkadot" path="BAD.PATH" defaultValue={50000000000} filter="humanReadable" />);
-	const content = container.firstChild.textContent;
-	expect(content).toEqual("5 DOT");
+test("Human readable filter with integer value", async () => {
+	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={50000000000} filter="humanReadable" />);
+	await waitFor(() => expect(screen.getByText("5 DOT")).toBeInTheDocument(), { timeout: 2000 });
 });
 
-test("Human readable filter with float value", () => {
-	const { container } = render(<RPC network="polkadot" path="BAD.PATH" defaultValue={202580000000} filter="humanReadable" />);
-	const content = container.firstChild.textContent;
-	expect(content).toEqual("20.258 DOT");
+test("Human readable filter with float value", async () => {
+	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={202580000000} filter="humanReadable" />);
+	await waitFor(() => expect(screen.getByText("20.258 DOT")).toBeInTheDocument(), { timeout: 2000 });
 });
 
 test("All leveraged RPC paths are valid", async () => {
