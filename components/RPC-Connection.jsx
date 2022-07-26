@@ -14,10 +14,13 @@ const Kusama = "kusama";
 const Statemine = "statemine";
 const Statemint = "statemint";
 
+let IsMounted = false;
+
 function RPC({ network, path, defaultValue, filter=undefined }) {
 	const [returnValue, setReturnValue] = useState('');
 
 	useEffect(() => {
+		IsMounted = true;
 		// Set default as a fallback if anything fails
 		if(filter !== undefined) {
 			// Apply filter to default value to match formatting of RPC result
@@ -65,6 +68,7 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 		}
 	}, []);
 
+	IsMounted = false;
 	return (returnValue)
 }
 
@@ -100,7 +104,11 @@ async function syncData(network, path, setReturnValue) {
 		// Build API call
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
-			api = api[param];
+			if (api.hasOwnProperty(param)) {
+				api = api[param];
+			} else {
+				return;
+			}
 		});
 
 		// Process constants and queries based on parameters prefix
@@ -119,7 +127,7 @@ async function syncData(network, path, setReturnValue) {
 		// If no value was successfully retrieved use default
 		if (chainValue === undefined) { return; }
 
-		setReturnValue(chainValue);
+		if (IsMounted) { setReturnValue(chainValue); }
 	}
 }
 
@@ -174,7 +182,7 @@ function applyFilter(value, filter, network, setReturnValue) {
 			return;
 	}
 
-	setReturnValue(value.toString());
+	if (IsMounted) { setReturnValue(value.toString()); }
 }
 
 export default RPC;
