@@ -4,8 +4,8 @@ import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
-// Set max test duration before failing (90 seconds)
-jest.setTimeout(90000);
+// Set max test duration before failing (2 min)
+jest.setTimeout(120000);
 
 test("Retrieves and applies a 'const' RPC value", async () => {
 	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={0} />);
