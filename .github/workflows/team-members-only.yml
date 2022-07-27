@@ -15,4 +15,6 @@ jobs:
           team: 'techedu'
           GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
-	run: echo 'TEAM MEMBER'
+        run: echo 'TEAM MEMBER'
+      - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
+        run: echo 'NOT A TEAM MEMBER'
