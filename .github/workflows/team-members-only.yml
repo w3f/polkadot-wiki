@@ -18,8 +18,4 @@ jobs:
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
         run: echo 'TEAM MEMBER - ' ${{ github.actor }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
-        run: |
-          array=${{ steps.checkUserMember.outputs }}
-          for item in ${array[*]}
-          do
-            echo $item
+        run: ${{ fromJson(steps.checkUserMember.outputs) }}
