@@ -8,11 +8,13 @@ jobs:
   credentials-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: JamesSingleton/is-organization-member@1.0.0
+      - uses: tspascoal/get-user-teams-membership@v1
         id: checkUserMember
         with:
-          organization: w3f
           username: ${{ github.actor }}
-          token: ${{ secrets.ACCESS_KEY }}
-      - if: steps.is_organization_member.outputs.result == true
-        run: echo User belongs to w3f org
+          team: 'techedu'
+          GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
+      - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
+        run: echo 'TEAM MEMBER - ' ${{ github.actor }}
+      - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
+        run: echo 'NOT A TEAM MEMBER - ' ${{ github.actor }}
