@@ -22,4 +22,4 @@ jobs:
           array=${{ steps.checkUserMember.outputs }}
           for item in ${array[*]}
           do
-            echo "$item"
+            echo $item
