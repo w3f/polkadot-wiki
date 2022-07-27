@@ -12,6 +12,7 @@ jobs:
         id: checkUserMember
         with:
           username: ${{ github.actor }}
+          organization: 'w3f'
           team: 'techedu'
           GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
