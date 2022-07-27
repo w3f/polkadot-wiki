@@ -8,7 +8,7 @@ jobs:
   credentials-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: jamessingleton/is-organization-member@v1.0.1
+      - uses: JamesSingleton/is-organization-member@1.0.0
         id: checkUserMember
         with:
           organization: w3f
