@@ -18,8 +18,4 @@ jobs:
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
         run: echo 'TEAM MEMBER - ' ${{ github.actor }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
-        run: |
-          for ELEMENT in ${steps.checkUserMember.outputs.teams[@]}
-          do
-          echo File: $ELEMENT.
-          done
+        run: echo ${{ steps.checkUserMember.outputs.teams[*] }}
