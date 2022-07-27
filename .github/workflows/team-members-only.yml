@@ -18,4 +18,4 @@ jobs:
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
         run: echo 'TEAM MEMBER - ' ${{ github.actor }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
-        run: echo 'NOT A TEAM MEMBER - ' ${{ github.actor }}
+        run: echo 'NOT A TEAM MEMBER - ' ${{ steps.checkUserMember.outputs }}
