@@ -13,9 +13,11 @@ jobs:
         with:
           organization: w3f
           username: ${{ github.actor }}
-          team: 'techedu'
+          team: techedu
           GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
         run: echo 'TEAM MEMBER - ' ${{ github.actor }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
         run: echo 'NOT A TEAM MEMBER - ' ${{ github.actor }}
+      - if: ${{ 'true' == 'true' }}
+        run: echo ${{ steps.checkUserMember.outputs.teams[*] }}
