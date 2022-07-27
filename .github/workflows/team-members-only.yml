@@ -14,6 +14,7 @@ jobs:
           username: ${{ github.actor }}
           team: 'techedu'
           GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
+			run: echo ${{ github.actor }}
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
         run: echo 'TEAM MEMBER'
       - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'false' }}
