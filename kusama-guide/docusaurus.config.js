@@ -23,6 +23,11 @@ module.exports = {
       onload: "addBackToTop()",
       defer: true,
     },
+	{
+      src: "https://apisa.web3.foundation/latest.js",
+      async: true,
+      defer: true,
+    },
     "../js/custom.js",
     "../js/clipboard.min.js",
     "../js/copycode.js",
