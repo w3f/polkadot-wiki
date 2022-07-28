@@ -57,6 +57,7 @@ crystallize, things will become easier to use but for now, every custom implemen
 user information will likely have to make a conscious decision on the approach to take, or support
 multiple formats and then attempt multiple encodings until the output makes sense.
 
+
 ## Judgements
 
 After a user injects their information on chain, they can request judgement from a registrar. Users
@@ -93,6 +94,14 @@ If you don't know which registrar to pick, first check the available registrars 
 
 The procedure to request and cancel identity judgements is explained in detail in this
 [support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
+
+:::
+
+:::caution
+
+The set identity calls go on-chain. Hence, the contact information is available publicly, for both legitimate entities, like registrars or validators, but also scammers who might impersonate them. The strings in the identity fields are good candidates for homograph attacks, as someone could list a fraudulent website (web3.f0undation instead of web3.foundation for example) and still get verified by the registrar (if the checks are automated)!
+
+In a decentralized network, one should be cautious making transactions with accounts solely based on their identity. If an account on-chain claims to be of Web3 Foundation, it is wise to verify its authenticity by checking directly with Web3 Foundation or examining the established history of that account on-chain.
 
 :::
 
