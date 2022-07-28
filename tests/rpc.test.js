@@ -4,33 +4,33 @@ import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
-// Set max test duration before failing (2 min)
-jest.setTimeout(120000);
-
 test("Retrieves and applies a 'const' RPC value", async () => {
 	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={0} />);
-	await waitFor(() => expect(screen.getByText("10000000000")).toBeInTheDocument(), { timeout: 2000 });
+	await waitFor(() => expect(screen.getByText("10000000000")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("Retrieves and applies a 'query' RPC value", async () => {
 	render(<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={0} filter="humanReadable"/>);
-	await waitFor(() => expect(screen.getByText("10 DOT")).toBeInTheDocument(), { timeout: 2000 });
+	await waitFor(() => expect(screen.getByText("10 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("RPC falls back to default", async () => {
 	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={150} />);
-	await waitFor(() => expect(screen.getByText("150")).toBeInTheDocument(), { timeout: 2000 });
+	await waitFor(() => expect(screen.getByText("150")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("Human readable filter with integer value", async () => {
 	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={50000000000} filter="humanReadable" />);
-	await waitFor(() => expect(screen.getByText("5 DOT")).toBeInTheDocument(), { timeout: 2000 });
+	await waitFor(() => expect(screen.getByText("5 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
 
 test("Human readable filter with float value", async () => {
 	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={202580000000} filter="humanReadable" />);
-	await waitFor(() => expect(screen.getByText("20.258 DOT")).toBeInTheDocument(), { timeout: 2000 });
+	await waitFor(() => expect(screen.getByText("20.258 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
+
+// Set max test duration before failing (2 min)
+jest.setTimeout(120000);
 
 // This test takes about a minute to execute synchronously
 test("All leveraged RPC paths are valid", async () => {

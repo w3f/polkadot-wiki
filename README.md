@@ -104,6 +104,19 @@ yarn kusama:start
 ```bash
 yarn polkadot:start
 ```
+
+### Test
+✅❌ Running tests locally:
+```bash
+yarn polkadot:test
+
+or
+
+yarn kusama:test
+```
+
+There is no need to run both as the tests are unified.  The tests will also automatically run on new pull requests to the master branch.
+
 ### Publish
 
 :bird: Publishing the Kusama Guide: 
