@@ -13,15 +13,20 @@ import VLTable from "./../../components/Voluntary-Locking"
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network.
 
-:::caution Upcoming governance changes
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralised governance system (v1) was comprised of three main components.
+1. A technocratic committee to manage upgrade timelines.
+2. An approval-voted, elected executive "government" to manage parameters, admin and spending proposals.
+3. A general voting system for everything else which rewarded long-term stakeholders with increased influence.
 
-The contents in this guide are subject to change as per the recent efforts to
-modify Polkadot Governance. See this [pull request](https://github.com/paritytech/substrate/pull/10195) 
-for more details**.
+This system has functioned reasonably well over the first 2-3 years of operation, helping to ensure good use of treasury funds and providing upgrades and fixes in a timely fashion. Like most early technologies the systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with modern advancements. For example, in governance v1, all referenda carry the same weight as only one referenda can be voted on at a time and the voting period can last multiple weeks.  This results in the system favoring careful consideration of very few proposals, as opposed to broad consideration of many. With that being said, governance v2 is here!
 
-:::
+Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the repercussions of referenda better scoped and agile in order to dramatically increase the number of collective decisions the system is able to make.
 
-To do this, the network brings together various novel mechanisms, including an amorphous state-transition
+The following content will begin by walking through many of the core principals of governance on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to understand the roots of governance v1 to better understand the direction of the second iteration. These deltas and distinctions will be highlighted throughout the various sub-topics.
+
+## Premise
+
+At a high level, the network brings together various novel mechanisms, including an amorphous state-transition
 function stored on-chain and defined in a platform-neutral intermediate language (i.e.
 [WebAssembly](learn-wasm.md)) and several on-chain voting mechanisms such as referenda with adaptive
 super-majority thresholds and batch approval voting. 
