@@ -30,10 +30,12 @@ These amounts can also be extracted by querying constants through the
 [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on
 Polkadot-JS Apps.
 
-:::info How to guide for setting and clearing Identities
+:::info Instructions for setting and clearing Identities
 
 The procedure to set and clear identities is explained in detail in this support article - 
 [How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity) 
+
+:::
 
 :::note 
 
@@ -87,11 +89,10 @@ for the `max_fee` put the maximum you're willing to pay for these confirmations.
 If you don't know which registrar to pick, first check the available registrars by going to
 ["Chain State UI"](#) and selecting `identity.registrars()` to get the full list.
 
-:::info How to guide for requesting and cancelling Identity judegements
+:::info Instructions for requesting and cancelling Identity judegements
 
-The procedure to request and cancel identity judegements is explained in detail in this support
- article - 
-["Extrinsics UI"](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
+The procedure to request and cancel identity judgements is explained in detail in this
+[support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
 
 :::
 
@@ -179,7 +180,7 @@ An account can have a maximum of 100 sub-accounts. Note that a deposit of
 {{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
 is required for every sub-account.
 
-:::note Explainer article and video on setting sub-identities
+:::info Explainer article and video on setting sub-identities
 
 Here is the [how to set sub-identities](https://support.polkadot.network/support/solutions/articles/65000181991-how-to-set-identities-for-sub-accounts)
  article and a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting sub-identities using
