@@ -30,54 +30,10 @@ These amounts can also be extracted by querying constants through the
 [Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on
 Polkadot-JS Apps.
 
-First, select `identity` as the `selected constant query`.
+:::info How to guide for setting and clearing Identities
 
-![Identity as the selected constant query](../assets/identity/17.jpg)
-
-Then on the right-hand side, you can select the constants that you would like to view and add them
-onto the webpage by clicking the "plus" icon at the end of the bar.
-
-![Identity as the selected constant query](../assets/identity/18.jpg)
-
-Each field can store up to 32 bytes of information, so the data must be less than that. When
-inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics),
-a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
-
-The easiest way to add the built-in fields is to click the gear icon next to your account and select
-"Set on-chain identity".
-
-![Gear icon provides the option to set identity](../assets/identity/01.jpg)
-
-A popup will appear, offering the default fields.
-
-![Identity field setup popup](../assets/identity/02.jpg)
-
-To add custom fields beyond the default ones, use the Extrinsics UI to submit a raw transaction by
-first clicking "Add Item" and adding any field name you like. The example below adds a field
-`steam`, which is a user's [Steam](https://store.steampowered.com) username. The first value is the
-field name in bytes ("steam") and the second is the account name in bytes ("theswader"). The display
-name also has to be provided, otherwise, the Identity pallet would consider it wiped if we submitted
-it with the "None" option still selected. That is to say, every time you make a change to your
-identity values, you need to re-submit the entire set of fields: the write operation is always
-"overwrite", never "append".
-
-![Setting a custom field](../assets/identity/03.jpg)
-
-Note that custom fields are not shown in the UI by default:
-
-![Only built-in fields are shown](../assets/identity/04.jpg)
-
-The rendering of such custom values is, ultimately, up to the UI/dapp makers. In the case of
-Polkadot-JS, the team prefers to only show official fields for now. If you want to check that the
-values are still stored, use the [Chain State UI](https://polkadot.js.org/apps/#/chainstate) to
-query the active account's identity info:
-
-![Raw values of custom fields are available on-chain](../assets/identity/05.jpg)
-
-It is up to your own UI or dapp to then do with this data as it pleases. The data will remain
-available for querying via the Polkadot API, so you don't have to rely on the Polkadot-JS UI.
-
-You can have a maximum of 100 custom fields.
+The procedure to set and clear identities is explained in detail in this support article - 
+[How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity) 
 
 :::note 
 
@@ -131,48 +87,13 @@ for the `max_fee` put the maximum you're willing to pay for these confirmations.
 If you don't know which registrar to pick, first check the available registrars by going to
 ["Chain State UI"](#) and selecting `identity.registrars()` to get the full list.
 
-### Requesting a Judgement
+:::info How to guide for requesting and cancelling Identity judegements
 
-Select one of the registrars from the query you made above.
+The procedure to request and cancel identity judegements is explained in detail in this support
+ article - 
+["Extrinsics UI"](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
 
-![Requesting judgement](../assets/identity/08.jpg)
-
-This will make your identity go from unjudged:
-
-![An unjudged identity](../assets/identity/07.jpg)
-
-To "waiting":
-
-![A pending identity](../assets/identity/09.jpg)
-
-At this point, direct contact with the registrar is required - the contact info is in their identity
-as shown above. Each registrar will have their own set of procedures to verify your identity and
-values, and only once you've satisfied their requirements will the process continue.
-
-Once the registrar has confirmed the identity, a green checkmark should appear next to your account
-name with the appropriate confidence level:
-
-![A confirmed identity](../assets/identity/10.jpg)
-
-*Note that changing even a single field's value after you've been verified will un-verify your
-account and you will need to start the judgement process anew. However, you can still change fields
-while the judgement is going on - it's up to the registrar to keep an eye on the changes.*
-
-### Cancelling a Judgement
-
-You may decide that you do not want to be judged by a registrar (for instance, because you realize
-you entered incorrect data or selected the wrong registrar). In this case, after submitting the
-request for judgement but before your identity has been judged, you can issue a call to cancel the
-judgement using an extrinsic.
-
-![Cancel Registrar](../assets/registrar_cancel_judgement.png)
-
-To do this, first, go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select
-the `identity` pallet, then `cancelRequest`. Ensure that you are calling this from the correct
-account (the one for which you initially requested judgement). For the `reg_index`, put the index of
-the registrar from which you requested judgement.
-
-Submit the transaction, and the requested judgement will be cancelled.
+:::
 
 ## Registrars
 
@@ -258,38 +179,14 @@ An account can have a maximum of 100 sub-accounts. Note that a deposit of
 {{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
 is required for every sub-account.
 
-- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to the account
-to which you already set identity. You should see an option to set onchain sub-identities. Click on it.
+:::note Explainer article and video on setting sub-identities
 
-  ![Add sub-identity in PolkadotJS](../assets/identity/sub-id-1.png)
-- In the pop-up window, select your Ledger account from the dropdown and enter text in sub name field. Then,
-click on set subs button.
-![Set sub-identity in PolkadotJS](../assets/identity/sub-id-2.png)
-- Sign and submit the transaction from the parent account with the identity
-
-You should now see the sub-identity displayed on-chain. 
-
-:::note Explainer video on setting sub-identities
-
-Here is a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting sub-identities using
+Here is the [how to set sub-identities](https://support.polkadot.network/support/solutions/articles/65000181991-how-to-set-identities-for-sub-accounts)
+ article and a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting sub-identities using
 Polkadot-JS UI
 
 :::
 
-You can also use the
-[Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics). There, select the identity pallet, then
-`setSubs` as the function to use. Click "Add Item" for every child account you want to add to the
-parent sender account. The value to put into the Data field of each parent is the optional name of
-the sub-account. If omitted, the sub-account will inherit the parent's name and be displayed as
-`parent/parent` instead of `parent/child`.
-
-![Sub account setup](../assets/identity/06.jpg)
-
-You can use
-[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants)
-again to verify this amount by querying the `identity.subAccountDeposit` constant.
-
-![Sub account constant](../assets/identity/19.jpg)
 
 ## Clearing and Killing an Identity
 
