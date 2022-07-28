@@ -75,15 +75,3 @@
     }
   };
 })("docReady", window);
-
-docReady(function () {
-  setTimeout(function () {
-    // Custom logic goes here
-
-    // Insert "Improve this wiki ribbon": Done in docusaurus.config.js
-
-    // Add fathom to footer
-
-    // Force edit button to go to non-mirror page: Done in docusaurus.config.js
-  }, 1000);
-});
