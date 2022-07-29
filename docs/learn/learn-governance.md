@@ -18,7 +18,7 @@ The stated goal is to ensure that the majority of the stake can always command t
 2. An approval-voted, elected executive "government" to manage parameters, admin and spending proposals.
 3. A general voting system for everything else which rewarded long-term stakeholders with increased influence.
 
-This system has functioned reasonably well over the first 2-3 years of operation, helping to ensure good use of treasury funds and providing upgrades and fixes in a timely fashion. Like most early technologies the systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with modern advancements. For example, in governance v1, all referenda carry the same weight as only one referenda can be voted on at a time and the voting period can last multiple weeks.  This results in the system favoring careful consideration of very few proposals, as opposed to broad consideration of many. With that being said, governance v2 is here!
+This system has functioned reasonably well over the first 2-3 years of operation, helping to ensure good use of treasury funds and providing upgrades and fixes in a timely fashion. Like most early technologies the systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with modern advancements. For example, in governance v1 all referenda carry the same weight as only one referenda can be voted on at a time and the voting period can last multiple weeks.  This results in the system favoring careful consideration of very few proposals, as opposed to broad consideration of many. With that being said, governance v2 is here!
 
 Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the repercussions of referenda better scoped and agile in order to dramatically increase the number of collective decisions the system is able to make.
 
@@ -37,7 +37,7 @@ All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 To make any changes to the network, the idea is to compose active token holders and the council
 together to administrate a network upgrade decision. No matter whether the proposal is proposed by
-the public (token holders) or the council, it finally will have to go through a referendum to let
+the public (token holders) or the council, it will eventually have to go through a referendum to let
 all holders, weighted by stake, make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
@@ -47,18 +47,18 @@ To better understand how the council is formed, please read [this section](#coun
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific
 *proposal* associated with it that takes the form of a privileged function call in the runtime (that
 includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
-achieving what would otherwise require a "hard fork").
+achieving what would otherwise require a "[hard fork](./../general/glossary#hard-fork)").
 
-Referenda are discrete events, have a fixed period where voting happens, and then are tallied and
-the function call is made if the vote is approved. Referenda are always binary; your only options in
+Referenda are discrete events that have a fixed voting period.  When the voting period ends and the votes are tallied,
+the function call (`set_code`) is made if the vote is approved. Referenda are always binary; your only options in
 voting are "aye", "nay", or abstaining entirely.
 
 Referenda can be started in one of several ways:
 
-- Publicly submitted proposals;
-- Proposals submitted by the council, either through a majority or unanimously;
-- Proposals submitted as part of the enactment of a prior referendum;
-- Emergency proposals submitted by the Technical Committee and approved by the Council.
+1. Publicly submitted proposals;
+2. Proposals submitted by the council, either through a majority or unanimously;
+3. Proposals submitted as part of the enactment of a prior referendum;
+4. Emergency proposals submitted by the Technical Committee and approved by the Council.
 
 All referenda have an *enactment delay* associated with them. This is the period between the
 referendum ending and, assuming the proposal was approved, the changes being enacted. 
@@ -67,19 +67,18 @@ Referenda is considered *baked* if it is closed and tallied. Again, assuming the
 approved, it would be scheduled for enactment. Referenda is considered *unbaked* if it is pending 
 an outcome, i.e. being voted on.
 
-For the first
-two ways that a referendum is launched, this is a fixed time of 
-{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For the third type, it can be set as 
-desired. Emergency proposals deal with major problems with the network that need to be "fast-tracked". 
-These will have a shorter enactment time.
+If a proposal is submitted by the public or council there is a fixed enactment delay period of 
+{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}.
+Proposals submitted as part of the enactment of a prior referendum can set the enactment delay period as desired.
+Emergency proposals deal with major problems with the network that need to be "fast-tracked", which leads to shorter enactment times.
 
 ### Proposing a Referendum
 
 #### Public Referenda
 
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period
-(number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens
-to support it - this action is called *endorsing*. The proposal with the highest amount of bonded
+(number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to show support
+- this action is called *endorsing*. The proposal with the highest amount of bonded
 support will be selected to be a referendum in the next voting cycle.
 
 Note that this may be different from the absolute number of endorsements; for instance, three accounts
@@ -88,7 +87,9 @@ single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts 
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
-There can be a maximum of 100 public proposals in the proposal queue.
+There can be a maximum of 
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }} {{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
+public proposals in the proposal queue.
 
 #### Council Referenda
 
@@ -110,19 +111,18 @@ a vote, assuming there is at least one proposal in one of the queues. There is a
 proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between 
 the top proposal in the two queues.
 
-The "top" proposal is determined by the amount of stake bonded behind it. If the given queue whose
-turn it is to create a referendum that has no proposals (is empty), and proposals are waiting in the
+The "top" proposal is determined by the amount of stake bonded behind it. If the the current queue selection attempts to create a referendum with no proposals (it is empty) and proposals are waiting in the
 other queue, the top proposal in the other queue will become a referendum.
 
-Multiple referenda cannot be voted upon in the same period, excluding emergency referenda. An
-emergency referendum occurring at the same time as a regular referendum (either public- or
-council-proposed) is the only time that multiple referenda will be able to be voted on at once.
+Multiple referenda cannot be voted upon in the same period, excluding emergency referenda.
+An emergency referendum occurring at the same time as a regular referendum (either public- or
+council-proposed) is the only time that multiple referenda will be able to be voted on simultaneously.
 
 #### Voting on a referendum
 
-To vote, a voter generally must lock their tokens up for at least the enactment delay period beyond
-the end of the referendum. This is in order to ensure that some minimal economic buy-in to the
-result is needed and to dissuade vote selling.
+To vote, a voter generally must lock-up their tokens for at least the enactment delay period plus some additional time beyond
+the end of the referendum. The additional time at the end of the cycle helps ensure the voter has some minimal economic buy-in to the
+result and to dissuade vote selling.
 
 It is possible to vote without locking at all, but your vote is worth a small fraction of a normal
 vote, given your stake. At the same time, holding only a small amount of tokens does not mean that
@@ -133,7 +133,6 @@ this at [Voluntary Locking](#voluntary-locking).
 
 To learn more about voting on referenda, please check out our
 [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
-
 
 :::
 
@@ -154,8 +153,9 @@ of them is less than Peter, leading to their voting power counting as less.
 
 #### Tallying
 
-Depending on which entity proposed the proposal and whether all council members voted yes, there are
-three different scenarios. We can use the following table for reference.
+There are three resulting scenarios that can occur,
+depending on which entity initiated the proposal and whether council unanimously voted yes in support.
+These resulting scenarios are visualized in the following table:
 
 |          **Entity**          |                   **Metric**                   |
 | :--------------------------: | :--------------------------------------------: |
@@ -163,31 +163,28 @@ three different scenarios. We can use the following table for reference.
 | Council (Complete agreement) | Negative Turnout Bias (Super-Majority Against) |
 | Council (Majority agreement) |                Simple Majority                 |
 
-Also, we need the following information and apply one of the formulas listed below to calculate the
-voting result. For example, let's use the public proposal as an example, so the
-`Super-Majority Approve` formula will be applied. There is no strict quorum, but the super-majority
-required increases with lower turnout.
+To calculate the result the following variable values are required:
 
-```
-approve - the number of aye votes
+- approve - the number of aye votes
+- against - the number of nay votes
+- turnout - the total number of voting tokens (does not include conviction)
+- electorate - the total number of tokens issued in the network
 
-against - the number of nay votes
+These values are applied to the formulas outlined below to get the voting results.
 
-turnout - the total number of voting tokens (does not include conviction)
-
-electorate - the total number of tokens issued in the network
-```
+For example, in a public proposal the `Super-Majority Approve` formula is applied.
+There is no strict quorum, but the super-majority required increases with lower turnout.
 
 ##### Super-Majority Approve
 
-A `positive turnout bias`, whereby a heavy super-majority of aye votes is required to carry at low
+A `positive turnout bias`, whereby a heavy super-majority of aye (yes) votes is required to carry at low
 turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{turnout}}&space;<&space;{approve&space;\over&space;\sqrt{electorate}})
 
 ##### Super-Majority Against
 
-A `negative turnout bias`, whereby a heavy super-majority of nay votes is required to reject at low
+A `negative turnout bias`, whereby a heavy super-majority of nay (no) votes is required to reject at low
 turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as below.
 
 ![](https://latex.codecogs.com/svg.latex?\large&space;{against&space;\over&space;\sqrt{electorate}}&space;<&space;{approve&space;\over&space;\sqrt{turnout}})
