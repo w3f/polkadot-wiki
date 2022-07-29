@@ -19,7 +19,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true
-          pr-branch: 'polkadot-wiki/update-badges'
           active-emoji: ':green_heart:'
           stale-emoji: ':yellow_heart:'
           inactive-emoji: ':broken_heart:'
