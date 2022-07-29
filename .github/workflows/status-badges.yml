@@ -1,8 +1,7 @@
 name: Update Status Badges
 on:
-  pull_request:
-    branches:
-      - master
+  schedule:
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +18,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true
-          pr-branch: 'polkadot-wiki/update'
+          pr-branch: 'polkadot-wiki/update-badges'
           active-emoji: ':green_heart:'
           stale-emoji: ':yellow_heart:'
           inactive-emoji: ':broken_heart:'
