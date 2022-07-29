@@ -20,6 +20,5 @@ jobs:
           find-all-links: true
           pull-request: true
           active-emoji: ':green_heart:'
-          active-emoji: ':green_heart:'
           stale-emoji-emoji: ':yellow_heart:'
           inactive-emoji: ':broken_heart:'
