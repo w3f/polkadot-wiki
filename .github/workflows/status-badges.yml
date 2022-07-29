@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check and update badges
-        uses: w3f/status-badges@v1.1
+        uses: lucasvanmol/status-badges@v1.1.0
         with:
           path: 'docs/build/build-open-source.md'
           token: ${{ secrets.GITHUB_TOKEN }}
