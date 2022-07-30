@@ -172,6 +172,9 @@ function applyFilter(value, filter, network, setReturnValue) {
 		case "blocksToDays":
 			value = (value * 6) / 86400;
 			break;
+		case "arrayLength":
+			value = value.split(',').length;
+			break;
 		default:
 			console.log("Ignoring unknown filter type");
 			return;
