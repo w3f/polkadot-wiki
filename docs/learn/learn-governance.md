@@ -68,7 +68,7 @@ approved, it would be scheduled for enactment. Referenda is considered *unbaked*
 an outcome, i.e. being voted on.
 
 If a proposal is submitted by the public or council there is a fixed enactment delay period of 
-{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={115,200} filter="blocksToDays" /> :kusama }}.
 Proposals submitted as part of the enactment of a prior referendum can set the enactment delay period as desired.
 Emergency proposals deal with major problems with the network that need to be "fast-tracked", which leads to shorter enactment times.
 
@@ -106,7 +106,9 @@ referendum in progress.
 
 #### Voting Timetable
 
-Every {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, a new referendum will come up for 
+Every 
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}, 
+a new referendum will come up for 
 a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved 
 proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between 
 the top proposal in the two queues.
@@ -305,8 +307,10 @@ the council currently consists of
 members.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
-three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
-malicious referenda, and electing the technical committee.
+three tasks of governance: 
+1. proposing sensible referenda
+2. cancelling uncontroversially dangerous or malicious referenda
+3. electing the technical committee.
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
@@ -360,13 +364,13 @@ All stakeholders are free to signal their approval of any of the registered cand
 Council elections are handled by the same [Phragmén election](../docs/learn-phragmen) process that
 selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
-for one {{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
+for {{ polkadot:  <RPC network="polkadot" path="consts.phragmenElection.termDuration" defaultValue={100800} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.termDuration" defaultValue={14400} filter="blocksToDays" />  :kusama }} day(s).
 
 At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
 the result will choose the new councillors based on the vote configurations of all voters. The
 election also chooses a set number of runners up which is currently
-({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
-intact.
+{{ polkadot:  <RPC network="polkadot" path="consts.phragmenElection.desiredRunnersUp" defaultValue={20} /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.desiredRunnersUp" defaultValue={19} />  :kusama }}
+that will remain in the queue with their votes intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
 candidate from a list, a Phragmén election is a more expressive way to include each voters' views.
@@ -400,9 +404,8 @@ keep remaining on the candidates' list for the next round.
 |     **Total**     |  4  |       4        |  1  |  1  |
 
 For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the
-next election. After round 2, even though candidates A & B get the same number of votes in this
-round, candidate A gets elected because after adding the older unused approvals, it is higher than
-B.
+next election. After round 2, candidate A and B have the same number of votes. Candidate A gets elected because 
+they have more old, unused approvals.
 
 ### Prime Members
 
@@ -413,11 +416,10 @@ to vote before the timeout.
 
 The prime member is chosen based on a [Borda count](https://en.wikipedia.org/wiki/Borda_count).
 
-The purpose of having a prime member of the council is to ensure a quorum, even when several members
+The purpose of having a prime member on the council is to ensure a quorum, even when several members
 abstain from a vote. Council members might be tempted to vote a "soft rejection" or a "soft
 approval" by not voting and letting the others vote. With the existence of a prime member, it forces
-councillors to be explicit in their votes or have their vote counted for whatever is voted on by the
-prime.
+councillors to be explicit in their votes or leave their voting privilege up to the prime member.
 
 ## Technical Committee
 
@@ -450,11 +452,11 @@ let you sign a message easily. When these circumstances can be proven beyond a r
 be an error, the council *may* consider a governance motion to correct it.
 
 The first step to appeal to the council is to get in contact with the councillors. There is no
-singular place where you are guaranteed to grab every councillor's ear with your message. However,
+singular place where you are guaranteed to have the ear of every councillor with your message. However,
 there are a handful of good places to start where you can get the attention of some of them. The
 {{ polkadot: [Polkadot Direction][] :polkadot }}{{ kusama: [Kusama Direction][] :kusama }} matrix 
 room is one such place. After creating an account and joining this room, you can post a 
-well-thought-through message here that lays down your case and provides justification for why you think 
+well-thought-through message here stating your case and providing justification as to why 
 the council should consider enacting a change to the protocol on your behalf.
 
 At some point you will likely need a place for a longer-form discussion. For this, making a post on
