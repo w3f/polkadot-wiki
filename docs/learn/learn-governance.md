@@ -6,6 +6,8 @@ description: Learn about Polkadot's thought-through governance model.
 keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
+import RPC from "./../../components/RPC-Connection"
+import VLTable from "./../../components/Voluntary-Locking"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance 
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. 
@@ -246,19 +248,12 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-| Lock Periods | Vote Multiplier | Length in Days |
-| :----------: | :-------------: | :------------: |
-|      0       |       0.1       |     {{ vote_locking_period_0 }}  |
-|      1       |        1        |     {{ vote_locking_period_1 }}  |
-|      2       |        2        |     {{ vote_locking_period_2 }}  |
-|      4       |        3        |     {{ vote_locking_period_3 }}  |
-|      8       |        4        |     {{ vote_locking_period_4 }}  |
-|      16      |        5        |     {{ vote_locking_period_5 }}  |
-|      32      |        6        |     {{ vote_locking_period_6 }}  |
-
+<VLTable network="polkadot"/>
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals {{ vote_locking_period }} days. 
+total), and one lock period equals 
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.democracy.voteLockingPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }} days. 
 Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction by
 5.5. For additional information regarding the timeline of governance events, check out the governance section on the
 {{ polkadot: [Polkadot Parameters page](../docs/maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](../docs/kusama-parameters/#governance) :kusama }}.

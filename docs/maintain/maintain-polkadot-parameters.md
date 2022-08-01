@@ -6,6 +6,7 @@ description: A description about fundamental Polkadot parameters.
 keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
+import RPC from "./../../components/RPC-Connection"
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -36,9 +37,13 @@ more details._
 
 ### Accounts, Identity and Crowdloans
 
-- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
-- The deposit required to set an Identity is {{ identity_reserve_funds }} DOT
-- The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
+- The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is 
+<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>
+- The deposit required to set an Identity is 
+<RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>
+- The minimum contribution required to participate in a crowdloan is 
+<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>
+
 
 ### Governance
 
@@ -62,7 +67,7 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 
 ### Staking, Validating, and Nominating
 
-Maximum number of Validators that can be nominated by a nominator - {{ polkadot_max_nominations }}
+Maximum number of Validators that can be nominated by a nominator - <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>
 
 | Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

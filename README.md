@@ -104,6 +104,19 @@ yarn kusama:start
 ```bash
 yarn polkadot:start
 ```
+
+### Test
+✅❌ Running tests locally:
+```bash
+yarn polkadot:test
+
+or
+
+yarn kusama:test
+```
+
+There is no need to run both as the tests are unified.  The tests will also automatically run on new pull requests to the master branch.
+
 ### Publish
 
 :bird: Publishing the Kusama Guide: 
@@ -200,6 +213,10 @@ To verify the appropriate values have been substituted in each scenario, run `po
 `[WARNING] Something is already running on port 3000. Would you like to run the app on another port instead?`,
 proceed with `yes`. This will likely launch one project on port 3000 and the other on 3001, allowing
 you to compare the rendered outputs for both projects locally and simultaneously.
+
+### Inline React Components
+
+Occasionally you may require additional functionality that is outside of the scope of basic markdown. React components can be used inline in existing markdown documents as a solution, allowing you to render custom elements. This is currently the strategy used to [retrieve live on-chain values](https://github.com/w3f/polkadot-wiki/tree/master/Components/RPC-Connection.jsx) and display them directly in the docs without the need to recompile or even reload the web app using RPCs. Examples of existing React components used in this project can be found [here](https://github.com/w3f/polkadot-wiki/tree/master/Components). It is important to try and reuse existing components as much as possible instead of creating new ones to keep the code lean and comprehensive. If you are looking to invoke and embed data from 3rd party APIs or sources, checkout the [Http-Request-Sample component](https://github.com/w3f/polkadot-wiki/tree/master/Components/RPC-Connection.jsx).
 
 ## Internationalization
 

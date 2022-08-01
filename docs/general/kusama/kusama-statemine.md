@@ -5,8 +5,10 @@ sidebar_label: Statemine
 description: Statemine and its features
 slug: ../../kusama-statemine
 ---
+import RPC from "./../../../components/RPC-Connection"
 
-Statemine is a generic assets parachain which provides functionality for deploying and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Kusama (not to be confused with [Statemint](../../learn/learn-common-good-chains.md#statemint), which is a parachain on Polkadot). The native token of Statemine is KSM. Balance transfers and the Existential Deposit (ED) of KSM on Statemine are about 1/10th of the values on the Relay chain. 
+Statemine is a generic assets parachain which provides functionality for deploying and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). It is a common good parachain on Kusama (not to be confused with [Statemint](../../learn/learn-common-good-chains.md#statemint), which is a parachain on Polkadot). The native token of Statemine is KSM. Balance transfers and the Existential Deposit (ED) of KSM on Statemine are about 1/10th of the values on the Relay chain. For example, the Existential Deposit of a Statemine account is <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>, 
+when compared to <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>, on Kusama.
 Apart from the core protocol token KSM, the assets held on Statemine can be broadly categorized as 
 
 - Assets backed by an on-chain protocol’s utility
@@ -22,8 +24,12 @@ The WND tokens (Westies) are free and are available through a [faucet](https://w
 
 :::
 
-To create an asset on Statemine, you would need a deposit of 1 KSM. Ensure that your Statemine account balance is more than 1 KSM,
-which should account for the transaction fee as well. You can send KSM from a Kusama account to a Statemine account using the teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport.md).
+To create an asset on Statemine, you would need a deposit of <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/>
+and around <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the metadata
+. Before you create an asset on Statemine, ensure that your Statemine account balance is a bit more 
+than the sum of those two deposits, which should seamlessly account for the required deposits 
+and transaction fees. You can send KSM from a Kusama account to a Statemine account using the 
+teleport functionality. For instructions on teleporting KSM, check this [tutorial on Teleports](../../learn/learn-teleport.md).
 
 Assuming you have the required KSM balance on your Statemine account, the following instructions should let you successfully create an asset on Statemine
 

@@ -82,11 +82,5 @@ docReady(() =>
 
     AOS.init();
 
-    // Add fathom to footer
-
-    let script = document.createElement("script");
-    script.setAttribute("src", "https://mammal.polkadot.network/script.js");
-    script.setAttribute("site", "YOUKYIQA");
-    document.querySelector("body footer").appendChild(script);
   }, 500)
 );

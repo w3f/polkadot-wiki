@@ -6,6 +6,7 @@ description: Learn about common Kusama parameters
 keywords: [parameters, kusama, on-chain]
 slug: ../../kusama-parameters
 ---
+import RPC from "./../../../components/RPC-Connection"
 
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
@@ -36,9 +37,12 @@ more details._
 
 ### Accounts, Identity and Crowdloans
 
-- The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is {{ existential_deposit }}
-- The deposit required to set an Identity is {{ identity_reserve_funds }} KSM
-- The minimum contribution required to participate in a crowdloan is {{ crowdloan_min_contribution }}
+- The [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) is 
+<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333300} filter="humanReadable"/>
+- The deposit required to set an Identity is 
+<RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
+- The minimum contribution required to participate in a crowdloan is 
+<RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>
 
 ### Governance
 
@@ -62,7 +66,7 @@ The Kusama Council consists of up to 19 members and up to 19 runners up.
 
 ### Staking, Validating, and Nominating
 
-Maximum number of Validators that can be nominated by a nominator - {{ kusama_max_nominations }}
+Maximum number of Validators that can be nominated by a nominator - <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/>
 
 | Kusama               | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

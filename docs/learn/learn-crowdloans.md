@@ -6,6 +6,7 @@ description: Learn about crowdloans and how to interact with one.
 keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---
+import RPC from "./../../components/RPC-Connection"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
 for their parachain bids in a decentralised crowdloan. 
@@ -76,7 +77,8 @@ runtime upgrades (as determined through its own local governance).
 :::info Minimum Crowdloan Contribution
 
 The minimum balance for contributions for a crowdloan campaign is 
-currently set to {{ crowdloan_min_contribution }}. 
+currently set to 
+{{ polkadot: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/> :kusama }}. 
 This is in an attempt to make crowdloans as accessible as possible while maintaining a 
 balance to justify the use of the network's resources. 
 

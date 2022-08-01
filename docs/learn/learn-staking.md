@@ -6,12 +6,14 @@ description: An introduction on staking in Polkadot's NPoS consensus model.
 keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
+import RPC from "./../../components/RPC-Connection"
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
 as its [consensus](learn-consensus.md) mechanism. The system encourages 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
 as nominators. Nominators may back up to 
-{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }} 
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
 validators as trusted validator candidates. Both validators and nominators lock their tokens as collateral 
 and receive staking rewards.
 
@@ -48,23 +50,26 @@ video below.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to
-{{ polkadot: {{ polkadot_max_nominations }} :polkadot }}{{ kusama: {{ kusama_max_nominations }} :kusama }}
- candidates that it supports. In the next era, a certain number of validators having the
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
+candidates that it supports. In the next era, a certain number of validators having the
 most {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active.
 As a nominator, a minimum of 
-{{ polkadot: {{ min_dot_nominator_intention }} DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}
- is required to submit an intention to
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+is required to submit an intention to
 nominate. The nomination intents are placed in a semi-sorted list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
-Although the minimum nomination intent is {{ polkadot: {{ min_dot_nominator_intention }}
-DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}, it does not guarantee
+Although the minimum nomination intent is 
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}, 
+it does not guarantee
 staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
-which is a dynamic value that can be much higher than {{ polkadot: {{ min_dot_nominator_intention }}
-DOT :polkadot }}{{ kusama: {{ min_nominator_intention }} :kusama }}.
+which is a dynamic value that can be much higher than 
+{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
 
 :::
 
@@ -100,7 +105,9 @@ This sorting functionality is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system. The bags-list is capable of including an unlimited number of nodes, subject
 to the chain's runtime storage. In the current staking system configuration, the bags list keeps
-{{ max_nominator_count }} nomination intents, of which, at most
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nomination intents, of which, at most
 {{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} come out as the electing nominators.
 Check [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 

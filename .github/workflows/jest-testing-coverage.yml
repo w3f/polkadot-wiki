@@ -1,0 +1,14 @@
+name: Jest Testing Coverage
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: yarn
+    - name: Run jest tests
+      run: yarn polkadot:test
