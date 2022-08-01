@@ -1,7 +1,8 @@
 name: Update Status Badges
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 jobs:
   status_badges:
