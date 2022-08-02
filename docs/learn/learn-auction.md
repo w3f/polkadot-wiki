@@ -272,6 +272,12 @@ less. Together Dave's and Emily's bids only equals a valuation of `560`.
 Charlie's valuation for the entire range is `600`. Therefore Charlie is awarded the complete range
 of the parachain slot.
 
+## Parachain Lease Extension
+
+Before the slot lease expires, parachains have to bid and win another auction for continuity of the
+lease. 
+
+
 ## FAQ
 
 ### Why doesn't everyone bid for the max length?
