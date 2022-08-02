@@ -50,12 +50,11 @@ If you are interested in obtaining KSM for building or research, you can apply t
 
 Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 
-- [Darwinia Grants Program](https://github.com/darwinia-network/collaboration/blob/master/grant/README.md#grant-program)
 - [Moonbeam Grants Program](https://moonbeam.foundation/grants/)
 - [Edgeware Grants and Bounties](https://gov.edgewa.re/discussion/1132-edgeware-proposal-process-and-template)
 - [Crust Grants Program](https://github.com/crustio/Crust-Grants-Program)
 - [HydraDX Grants and Bounties](https://docs.hydradx.io/new_deal/)
-- [Astar / Shiden Network Builders Program](https://github.com/PlasmNetwork/Builders-Program)
+- [Astar / Shiden Network Builders Program](https://astar.network/builders-program/)
 - [Picasso / Composable Grants Program](https://grants.composable.finance)
 - [SubQuery Grants Programme](https://subquery.network/grants)
 - [Acala Grants Program](https://acala.network/ecosystem-program)
