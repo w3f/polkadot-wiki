@@ -10,10 +10,10 @@ slug: ../grants
 ## Web3 Foundation Grants
 
 Web3 Foundation offers grants for open source software development and research around Substrate,
-Polkadot, and Kusama. Applications and deliveries are tracked transparently on GitHub. Information 
-regarding requirements, the application process, deliveries, etc., can be found in the
-[Grants Program README](https://github.com/w3f/Open-Grants-Program). For guidance, there is also a list of
-[previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/docs/accepted_grant_applications.md)
+Polkadot, Kusama and ink!. Applications and deliveries are tracked transparently on GitHub. Information 
+regarding requirements, the application process, deliveries, etc. can be found in the
+[Grants Program README](https://github.com/w3f/Grants-Program#web3-foundation-grants-program). For guidance, there is also a list of
+[previously accepted applications](https://github.com/w3f/Grants-Program/blob/master/docs/accepted_grant_applications.md#accepted-grant-applications-)
 and a list of [frequently asked questions](https://github.com/w3f/Grants-Program/blob/master/docs/faq.md).
 
 ## Alternative Funding Sources
