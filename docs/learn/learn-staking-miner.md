@@ -19,7 +19,7 @@ to be elected for NPoS. This is a computationally intense process, hence the min
 compete with each other to produce election solutions which consist of a validator set, stake
 distribution across that set, and a score indicating how optimal the solution is. Staking miners run
 the any given staking algortihms(as of now, sequential Phragmén or PhragMMS, this is subject to
-change if improved alrgorithms are introduced) to produce results, and the result is then sent as a
+change if improved algorithms are introduced) to produce results, and the result is then sent as a
 transaction to the relay chain via a normal signed extrinsic. The transaction requires a bond, and a
 transaction fee. The best solution is rewarded which in the least covers the transaction fee, and
 the bond is returned to the account. If the solution is not valid, the bond and the fee are lost.
