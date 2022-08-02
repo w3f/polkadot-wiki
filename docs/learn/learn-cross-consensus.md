@@ -7,30 +7,49 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
+Cross-Consensus Message Format or XCM for short is a consensus agnostic, messaging protocol
+which allows Substrate based chains to communicate with eachother. Simply, it's a programming
+language that allows protocol developers to define the type of data which their chains can
+send and recieve packed in a VM that allows for custom execution. The format is flexible and extensible, allowing
+for any kinds of data to be passed around a network of chains that have implemented XCM.
+
+:::caution
+Currently XCM v2 is deployed on Polkadot and v3 is currently in development. And there is a chance
+that the name might change in the near future.
+:::
+
+## Overview of XCM: A Format, Not a Protocol
+
+
+<!-- --- IS THIS STILL RELEVANT?
 What started as an approach to _cross-chain communication_, has evolved into a format for
 [**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is 
 not only conducted between chains, but also between smart contracts, pallets, bridges, and even 
 sharded enclaves like [SPREE](learn-spree.md).
-
-## Overview of XCM: A Format, Not a Protocol
+--- -->
 
 **XCM is related to cross-chain in the same way that REST is related to RESTful.**
 
 XCM cannot actually send messages between systems. It is a format for how message
 transfer should be performed, similar to how RESTful services use REST as an architectural style
-of deployment.
+of development.
 
 XCM aims to be a language to communicate ideas between consensus systems, hence, "Cross-Consensus"
 with the following properties:
 
-- Generic and extensible for use with fee-free and gas-metered smart contract platforms,
+<!-- - Generic and extensible for use with fee-free and gas-metered smart contract platforms,
   community parachains, trusted interactions between system parachains and their relay chain,
   and more.
 - Interacting with a system whose transaction format is unknown. 
   - XCM is well-versioned, abstract and general and can be used as a means of providing a 
     long-lasting transaction format for wallets to use to create many common transactions.
     It is _extensible_ and, in turn, _future-proof_ and _forward-compatible_.
-- Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
+- Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains. -->
+
+1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its completion.
+2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order and in a timely fashion.
+3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to the sender with an additional message.
+4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which messages are being passed.
 
 :::info
 
