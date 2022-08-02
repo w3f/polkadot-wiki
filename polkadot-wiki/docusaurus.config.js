@@ -76,9 +76,12 @@ module.exports = {
         redirects: [
           {
             to: '/',
-
             from: ['/en/latest', '/en/'],
           },
+          {
+            to: '/docs/learn-xcm',
+            from: ['/docs/learn-crosschain']
+          }
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {
