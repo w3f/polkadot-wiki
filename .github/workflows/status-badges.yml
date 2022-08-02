@@ -15,7 +15,7 @@ jobs:
         uses: w3f/status-badges@v1.1
         with:
           path: 'docs/build/build-open-source.md'
-          token: ${{ secrets.ACCESS_KEY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true
           pr-branch: polkadot-wiki/update-badges
