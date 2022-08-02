@@ -1,12 +1,9 @@
 name: Update Status Badges
 on:
-  #schedule:
-  #  - cron: '0 0 * * 1'
-  pull_request:
-    branches:
-      - master
+  schedule:
+    - cron: '0 0 * * 1'
   workflow_dispatch:
-  
+
 jobs:
   status_badges:
     runs-on: ubuntu-latest
@@ -21,6 +18,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true
-          active-emoji: 💚
-          stale-emoji: 💛
-          inactive-emoji: 💔
+          active-emoji: ':green_heart:'
+          stale-emoji: ':yellow_heart:'
+          inactive-emoji: ':broken_heart:'
+          not-found-emoji: ':grey_question:'
+
