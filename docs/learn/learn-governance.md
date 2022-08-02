@@ -35,12 +35,22 @@ All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## Mechanism
 
-To make any changes to the network, the idea is to compose active token holders and the council
-together to administrate a network upgrade decision. No matter whether the proposal is proposed by
-the public (token holders) or the council, it will eventually have to go through a referendum to let
-all holders, weighted by stake, make the decision.
+In governance v1 active token holders and the council together administrate a 
+network upgrade decision. No matter whether the proposal is proposed by
+the public (token holders) or the council, it will eventually have to go through 
+a referendum to let all holders, weighted by stake, make the decision.
 
 To better understand how the council is formed, please read [this section](#council).
+
+There are several changes here with governance v2.
+The way the new governance model reflects its decentralised character is by:
+
+1. Migrating all responsibilities of Council to token holders via democracy votes
+2. Dissolving the current Council collective
+3. Allowing users to delegate voting power in more ways to community members
+
+The Council has fulfilled its role as the representative of passive token holders, guardian of the treasury and initiator of legislation, but the time has come to return these responsibilities to the community.
+
 
 ## Referenda
 
@@ -53,8 +63,7 @@ Referenda are discrete events that have a fixed voting period.  When the voting 
 the function call (`set_code`) is made if the vote is approved. Referenda are always binary; your only options in
 voting are "aye", "nay", or abstaining entirely.
 
-Referenda can be started in one of several ways:
-
+In governance v1, referenda can be started in one of several ways:
 1. Publicly submitted proposals;
 2. Proposals submitted by the council, either through a majority or unanimously;
 3. Proposals submitted as part of the enactment of a prior referendum;
@@ -72,6 +81,14 @@ If a proposal is submitted by the public or council there is a fixed enactment d
 Proposals submitted as part of the enactment of a prior referendum can set the enactment delay period as desired.
 Emergency proposals deal with major problems with the network that need to be "fast-tracked", which leads to shorter enactment times.
 
+In Gov2, anyone is able to start a referendum at anytime and they can do so as many times as they wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in processing and flow of the referenda protocol.
+
+An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the referenda now selects an appropriate Origin for their request based on the requirements.
+
+Each Origin is associated with a single referendum class and each class is associated with a Track. The Track outlines the lifecycle for the proposal and is independent from other class's tracks. Having independent tracks allows the network to tailor the dynamics of referenda based upon their implied privilege level.
+
+So for example, a runtime upgrade (`set_code` call) does not have the same implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different origins are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be predetermined on the pallet.
+
 ### Proposing a Referendum
 
 #### Public Referenda
@@ -87,11 +104,18 @@ single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts 
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
-There can be a maximum of 
+For governance v1, there can be a maximum of 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }} {{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
 public proposals in the proposal queue.
 
-#### Council Referenda
+In Gov2, when a referendum is initially created, it is immediately votable by anyone in the community. However, it is not in a state where it can end, or otherwise have its votes counted, be approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are moved into a state known as **Deciding**. Until they are in this state, they remain undecided.
+
+The criteria for entering the Decided state is a follows:
+1. A **lead-in period** that outlines the amount of time that must elapse before deciding can begin. This helps mitigate against the possibility of "decision snapping" where an attacker controlling a substantial amount of voting power might seek to have a proposal passed immediately after proposing, not allowing the overall voting population adequate time to consider and participate.
+2. There must be room for the decision. All Tracks specify their own limit on the number of referenda which can be decided simultaneously. Tracks that have more potent abilities will have lower limits.
+3. A **Decision Deposit** must be paid.  Creating a referendum is cheap as the deposit value consists of only the value required for the on-chain storage needed to track it.  Having a referendum reviewed and decided upon carries greater risk and uses up limited space since there is a limited number of referenda which can be active in the process simultaneously. This leads to a larger, but refundable, deposit requirement helping to mitigate spam and bloating of the system.
+
+#### Council Referenda (v1)
 
 Unanimous Council - When all members of the council agree on a proposal, it can be moved to a
 referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of
@@ -106,8 +130,8 @@ referendum in progress.
 
 #### Voting Timetable
 
-Every 
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}, 
+In governance v1, every 
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} days, 
 a new referendum will come up for 
 a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved 
 proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between 
@@ -119,6 +143,9 @@ other queue, the top proposal in the other queue will become a referendum.
 Multiple referenda cannot be voted upon in the same period, excluding emergency referenda.
 An emergency referendum occurring at the same time as a regular referendum (either public- or
 council-proposed) is the only time that multiple referenda will be able to be voted on simultaneously.
+
+In governance v2, shares the same{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+day eligibility period when the proposal can get approved. If not approved by then end of this period, the proposal is automatically rejected.
 
 #### Voting on a referendum
 
@@ -152,6 +179,14 @@ a 8 week lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.
 Even though combined both Logan and Kevin vote with more 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both 
 of them is less than Peter, leading to their voting power counting as less.
+
+In governance v2, a proposal is approved if it meets the requirements for **approval** and **support**, removing the adaptive quorum biasing system. 
+
+Approval is defined as the share of approval vote-weight (after adjustment for conviction) against the total number of vote-weight (for both approval and rejection).
+
+Support is the total number of votes in the approval (ignoring any adjustment for conviction) compared to the total possible amount of votes that could be made in the system.
+
+It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation periods and requirements for Approval and Support. It is now possible to configure a proposal in such a way that an increasingly lower amount of support and overall approval for the proposal are needed for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Similarly, classes which command more political significance will tend to accept less controversy (and thus require a higher approval) early on.
 
 #### Tallying
 
