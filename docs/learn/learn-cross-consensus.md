@@ -7,33 +7,31 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
-Cross-Consensus Message Format or XCM for short is a consensus agnostic, messaging protocol
-which allows Substrate based chains to communicate with eachother. Think TCP/IP but for blockchains. 
-One of Polkadot's promises is that of interoperability, XCM is the vehicle by which it will deliver this promise. Simply, it is a standard that allows protocol developers to define the type of data which their chains can
-send and recieve. It comes out of the box with a VM that allows for customization of execution. 
- The format defines useful structures
-that makes sense for cross consensus messaging such as defining locations and assets via pre
-defined data structures like `MultiLocaiton` and `MultiAsset`. 
+Cross-Consensus Message Format or XCM for short is a consensus agnostic, messaging protocol which
+allows Substrate based chains to communicate with eachother. Think TCP/IP but for blockchains. One
+of Polkadot's promises is that of interoperability, XCM is the vehicle by which it will deliver this
+promise. Simply, it is a standard that allows protocol developers to define the type of data which
+their chains can send and recieve. It comes out of the box with a VM that allows for customization
+of execution. The format defines useful structures that makes sense for cross consensus messaging
+such as defining locations and assets via pre defined data structures like `MultiLocaiton` and
+`MultiAsset`.
 
-:::note
-XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in development.
-:::
+:::note XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
+development. :::
 
 ## Overview of XCM: A Format, Not a Protocol
 
-
 <!-- --- IS THIS STILL RELEVANT?
 What started as an approach to _cross-chain communication_, has evolved into a format for
-[**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is 
-not only conducted between chains, but also between smart contracts, pallets, bridges, and even 
+[**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is
+not only conducted between chains, but also between smart contracts, pallets, bridges, and even
 sharded enclaves like [SPREE](learn-spree.md).
 --- -->
 
 **XCM is related to cross-chain in the same way that REST is related to RESTful.**
 
-XCM cannot actually send messages between systems. It is a format for how message
-transfer should be performed, similar to how RESTful services use REST as an architectural style
-of development.
+XCM cannot actually send messages between systems. It is a format for how message transfer should be
+performed, similar to how RESTful services use REST as an architectural style of development.
 
 XCM aims to be a language to communicate ideas between consensus systems, hence, "Cross-Consensus"
 with the following properties:
@@ -41,43 +39,57 @@ with the following properties:
 <!-- - Generic and extensible for use with fee-free and gas-metered smart contract platforms,
   community parachains, trusted interactions between system parachains and their relay chain,
   and more.
-- Interacting with a system whose transaction format is unknown. 
-  - XCM is well-versioned, abstract and general and can be used as a means of providing a 
+- Interacting with a system whose transaction format is unknown.
+  - XCM is well-versioned, abstract and general and can be used as a means of providing a
     long-lasting transaction format for wallets to use to create many common transactions.
     It is _extensible_ and, in turn, _future-proof_ and _forward-compatible_.
 - Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains. -->
 
-1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its completion.
-2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order and in a timely fashion.
-3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to the sender with an additional message.
-4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which messages are being passed.
+1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
+   completion.
+2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
+   and in a timely fashion.
+3. **Asymmetric**: XCM messages do not have results. Any results must be separately communicated to
+   the sender with an additional message.
+4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
+   messages are being passed.
 
 :::info
 
-XCM is not designed in that every system supporting the format is expected to be able to interpret any
-possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable
-interpretations under some systems or will be intentionally unsupported.
+XCM is not designed in that every system supporting the format is expected to be able to interpret
+any possible XCM message. Practically speaking, one can imagine that some messages will not have
+reasonable interpretations under some systems or will be intentionally unsupported.
 
 :::
 
 Some use cases of XCM include:
+
 - Asset transfers
 - Execute platform-specific actions (extrinsics) such as governance voting
 - Enables single use-case chains e.g. Statemint/e as asset parachains
 
 ### XCMP
-  *Cross-Chain Message Passing* secure message passing between parachains. There are two variants: *Direct* and *Relayed*.
-  - With *Direct*, message data goes direct between parachains and is O(1) on the side of the Relay-chain and is very scalable.
-  - With *Relayed*, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much less scalable, and parathreads in particular may not receive messages due to excessive queue growth.
+
+_Cross-Chain Message Passing_ secure message passing between parachains. There are two variants:
+_Direct_ and _Relayed_.
+
+- With _Direct_, message data goes direct between parachains and is O(1) on the side of the
+  Relay-chain and is very scalable.
+- With _Relayed_, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much
+  less scalable, and parathreads in particular may not receive messages due to excessive queue
+  growth.
 
 ### VMP
-  *Vertical Message Passing* message passing between the Relay-chain itself and a parachain. Message data in both cases exists on the Relay-chain. This includes:
+
+_Vertical Message Passing_ message passing between the Relay-chain itself and a parachain. Message
+data in both cases exists on the Relay-chain. This includes:
 
 - #### UMP
-  *Upward Message Passing* message passing from a parachain to the Relay-chain.
+
+  _Upward Message Passing_ message passing from a parachain to the Relay-chain.
 
 - #### DMP
-  *Downward Message Passing* message passing from the Relay-chain to a parachain.
+  _Downward Message Passing_ message passing from the Relay-chain to a parachain.
 
 ### Example Use-Cases
 
@@ -85,20 +97,20 @@ Some use cases of XCM include:
 - Optionally include payment of fees on a target network for requested operation.
 - Provide methods for various token transfer models:
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an
-    address on the remote chain for receiving funds and to eventually transfer those funds it controls
-    into other accounts on that remote chain.
-  - **Teleporting**: movement of an asset happens by destroying it on one side and creating a clone on
-    the other side.
-  - **Reserve-Based Transfer**: there may be two chains that want to nominate a third chain, where one
-    includes a native asset that can be used as a reserve for that asset. Then, the derivative form of
-    the asset on each of those chains would be fully backed, allowing the derivative asset to be
-    exchanged for the underlying asset on the reserve chain backing it.
+    address on the remote chain for receiving funds and to eventually transfer those funds it
+    controls into other accounts on that remote chain.
+  - **Teleporting**: movement of an asset happens by destroying it on one side and creating a clone
+    on the other side.
+  - **Reserve-Based Transfer**: there may be two chains that want to nominate a third chain, where
+    one includes a native asset that can be used as a reserve for that asset. Then, the derivative
+    form of the asset on each of those chains would be fully backed, allowing the derivative asset
+    to be exchanged for the underlying asset on the reserve chain backing it.
 
 ### XCM Tech Stack
 
 ![xcm tech stack](../assets/cross-consensus-tech-stack.png)
 
-XCM can be used to express the meaning of the messages over each of these three communication 
+XCM can be used to express the meaning of the messages over each of these three communication
 channels.
 
 ## Cross-Consensus Protocols
@@ -137,8 +149,8 @@ out in favor of it.
 
 :::note
 
-A stop-gap protocol is a temporary substitute for the functionality that is not fully
-complete. While XCMP proper is still in development, HRMP is a working replacement.
+A stop-gap protocol is a temporary substitute for the functionality that is not fully complete.
+While XCMP proper is still in development, HRMP is a working replacement.
 
 :::
 
@@ -163,9 +175,9 @@ complete. While XCMP proper is still in development, HRMP is a working replaceme
 
 XCMP queues must be initiated by first opening a channel between two parachains. The channel is
 identified by both the sender and recipient parachains, meaning that it's a one-way channel. A pair
-of parachains can have at most establish two channels between them, one for sending messages to the other
-chain and another for receiving messages. The channel will require a deposit in DOT to be opened,
-which will get returned when the channel is closed.
+of parachains can have at most establish two channels between them, one for sending messages to the
+other chain and another for receiving messages. The channel will require a deposit in DOT to be
+opened, which will get returned when the channel is closed.
 
 #### XCMP Message Format
 
@@ -180,8 +192,8 @@ smart contract is called that makes a transfer of some assets within that chain.
 Charlie executes the smart contract on parachain `A`, which initiates a new cross-chain message for
 the destination of a smart contract on parachain `B`.
 
-The collator node of parachain `A` will place this new cross-chain message into its outbound messages
-queue, along with a `destination` and a `timestamp`.
+The collator node of parachain `A` will place this new cross-chain message into its outbound
+messages queue, along with a `destination` and a `timestamp`.
 
 The collator node of parachain `B` routinely pings all other collator nodes asking for new messages
 (filtering by the `destination` field). When the collator of parachain `B` makes its next ping, it
@@ -195,8 +207,8 @@ happened.
 When the collator of parachain `B` is building the next block in its chain, it will process the new
 message in its inbound queue as well as any other messages it may have found/received.
 
-During processing, the message will execute the smart contract on parachain `B` and complete the asset
-transfer as intended.
+During processing, the message will execute the smart contract on parachain `B` and complete the
+asset transfer as intended.
 
 The collator now hands this block to the validator, which itself will verify that this message was
 processed. If the message was processed and all other aspects of the block are valid, the validator
@@ -215,10 +227,13 @@ doesn't support embedded videos. </video>
 
 ## XCVM (Cross-Consensus Virtual Machine)
 
-An ultra-high level non-Turing-complete computer whose instructions are designed in a way to be roughly at
-the same level as transactions.
+An ultra-high level non-Turing-complete computer whose instructions are designed in a way to be
+roughly at the same level as transactions.
 
-A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more XCM instructions. To learn more about the XCVM and the XCM Format, see the latest [blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) by Dr. Gavin Wood.
+A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more
+XCM instructions. To learn more about the XCVM and the XCM Format, see the latest
+[blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
+by Dr. Gavin Wood.
 
 ## How To Make Cross-Chain Transfers
 
@@ -227,7 +242,8 @@ A tutorial on downward, upward, and lateral transfers can be found
 
 ## Resources
 
-- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) - Detailed blog post by Dr. Gavin Wood about the XCM Format.
+- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) -
+  Detailed blog post by Dr. Gavin Wood about the XCM Format.
 - [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format
   sent via XCMP.
 - [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
