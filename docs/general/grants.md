@@ -22,7 +22,7 @@ and a list of [frequently asked questions](https://github.com/w3f/Grants-Program
 
 Check the 
 [alternative funding sources](https://github.com/w3f/Grants-Program/blob/master/README.md#rocket-alternative-funding-sources) 
-section on Web3 Foundation grants repo for comprehensive information.
+section on the Web3 Foundation grants repo for comprehensive information.
 
 :::
 
