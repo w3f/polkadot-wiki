@@ -18,6 +18,14 @@ and a list of [frequently asked questions](https://github.com/w3f/Grants-Program
 
 ## Alternative Funding Sources
 
+:::info
+
+Check the 
+[alternative funding sources](https://github.com/w3f/Grants-Program/blob/master/README.md#rocket-alternative-funding-sources) 
+section on Web3 Foundation grants repo for comprehensive information.
+
+:::
+
 ### Polkadot Treasury
 
 The Polkadot Treasury is a pot of on-chain funds collected through transaction fees, slashing,
@@ -42,12 +50,15 @@ If you are interested in obtaining KSM for building or research, you can apply t
 
 Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 
-- [Moonbeam Grants Program](https://moonbeam.network/community/grants/)
-- [Edgeware Grants and Bounties](https://github.com/edgeware-builders/construction-projects)
+- [Darwinia Grants Program](https://github.com/darwinia-network/collaboration/blob/master/grant/README.md#grant-program)
+- [Moonbeam Grants Program](https://moonbeam.foundation/grants/)
+- [Edgeware Grants and Bounties](https://gov.edgewa.re/discussion/1132-edgeware-proposal-process-and-template)
 - [Crust Grants Program](https://github.com/crustio/Crust-Grants-Program)
-- [HydraDX Grants and Bounties](https://docs.hydradx.io/new_deal)
-- [Astar (formerly Plasm) Grants Program](https://docs.astar.network/ecosystem/builders-program)
+- [HydraDX Grants and Bounties](https://docs.hydradx.io/new_deal/)
+- [Astar / Shiden Network Builders Program](https://github.com/PlasmNetwork/Builders-Program)
+- [Picasso / Composable Grants Program](https://grants.composable.finance)
+- [SubQuery Grants Programme](https://subquery.network/grants)
+- [Acala Grants Program](https://acala.network/ecosystem-program)
+- [OAK’s Developer Grants](https://oak.tech/community/grants/)
 
-Check [other grant programs](https://github.com/w3f/Grants-Program#other-grant-programs) section on
-Web3 Foundation grants repo for more information.
 
