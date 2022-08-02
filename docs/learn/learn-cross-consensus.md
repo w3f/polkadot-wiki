@@ -60,6 +60,11 @@ interpretations under some systems or will be intentionally unsupported.
 
 :::
 
+Some use cases of XCM include:
+- Asset transfers
+- Execute platform-specific actions (extrinsics) such as governance voting
+- Enables single use-case chains e.g. Statemint/e as asset parachains
+
 ### XCMP
   *Cross-Chain Message Passing* secure message passing between parachains. There are two variants: *Direct* and *Relayed*.
   - With *Direct*, message data goes direct between parachains and is O(1) on the side of the Relay-chain and is very scalable.
