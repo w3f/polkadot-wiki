@@ -66,8 +66,7 @@ instead.
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#note-about-vps) provider that your prefer, and whatever operating system you are
-comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
+choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is best to use a recent Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
 #### Reference Hardware
@@ -76,8 +75,7 @@ The transactions weights in Polkadot were benchmarked on reference hardware. We 
 On GCP we used `c2d-highcpu-8` VM instance, on AWS `c6id.2xlarge`.
 It is recommended that hardware used to run the validators at least match the specs of
 the reference hardware in order to ensure they are able to process all blocks
-in time. The following are not _minimum requirements_ but if you decide to run with less than this
-beware that you might have performance issue.
+in time. If you use subpar hardware you will possibly run into performance issues, less era points and even slashes.
 
 - **CPU**
   - x86-64 compatible;
@@ -86,15 +84,16 @@ beware that you might have performance issue.
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
   - Prefer single-threaded performance over higher cores count. A comparison of single-threaded performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
 - **Storage**
-  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). The latency is more important than the throughput.
+  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In general the latency is more important than the throughput.
 - **Memory**
   - 16GB DDR4 ECC.
 - **System**
   - Linux Kernel 5.16 or newer.
+- **Network**
+  - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to support a large number of para-chains and allow for proper congestion control in busy network situations.
 
-The specs posted above are by no means the minimum specs that you could use when running a
-validator, however you should be aware that if you are using less you may need to toggle some extra
-optimizations in order to be equal to other validators that are running the standard.
+The specs posted above are not a *hard* requirement to run a validator, but are considered best practice.  
+Running a validator is a responsible task; using professional hardware is a must in any way.
 
 ### Node Prerequisites: Install Rust and Dependencies
 
@@ -160,7 +159,7 @@ the systems within the network. Currently it is required that validators' local 
 reasonably in sync, so you should be running NTP or a similar service. You can check whether you
 have the NTP client by running:
 
-_If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
+_If you are using Ubuntu 18.04 or newer, NTP Client should be installed by default._
 
 ```sh
 timedatectl
@@ -304,9 +303,9 @@ If you run into compile errors, you may have to switch to a less recent nightly.
 done by running:
 
 ```sh
-rustup install nightly-2021-06-09
-rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-09
-cargo +nightly-2021-06-09 build --release
+rustup install nightly-2022-05-18
+rustup target add wasm32-unknown-unknown --toolchain nightly-2022-05-18
+cargo +nightly-2022-05-18 build --release
 ```
 
 You may also need to run the build more than once.
@@ -642,18 +641,27 @@ other peers over the network.
 ./target/release/polkadot purge-chain
 ```
 
+:::info
+
+Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to quickly get the answers you need.
+
+:::
+
 ## Note about VPS
 
 VPS providers are very popular for running servers of any kind.
-Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general.
+Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general. 
+This does not mean that every provider who advertises a specific performance will also deliver it. 
+Please do your own verification that you get the advertised performance before running a live validator on it. 
 The following server types showed acceptable performance. Please note that this is not an endorsement in any way:
 - GCP's *c2* and *c2d* machine families
 - AWS's *c6id* machine family
 
-The following additional configurations were applied to the instances:
+The following additional configurations were applied to the instances to tune their performance:
 
 ### Disable [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)
-As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core rather than being presented to the OS as two logical cores.
+As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. The node still profits from multiple cores when doing networking and other non-runtime operations. It is therefore still necessary to run it on at least the minimum required number of cores.  
+Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core rather than being presented to the OS as two logical cores.
 SMT implementation on Intel is called Hyper-Threading, on AMD Zen it is 2-way SMT. To disable SMT in runtime:
 ```bash
 for cpunum in $(cat /sys/devices/system/cpu/cpu*/topology/thread_siblings_list | cut -s -d, -f2- | tr ',' '\n' | sort -un)
@@ -706,7 +714,6 @@ Note that mitigations are not disabled completely. You can fully disable all the
 - [Digital Ocean](https://www.digitalocean.com/)
 - [Vultr](https://www.vultr.com/)
 - [Linode](https://www.linode.com/)
-- [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
