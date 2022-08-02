@@ -40,10 +40,14 @@ If you are interested in obtaining KSM for building or research, you can apply t
 
 ### Other Grant Programs
 
-Below is a list of other grant programs in the Polkadot/Substrate ecosystem:
+Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 
 - [Moonbeam Grants Program](https://moonbeam.network/community/grants/)
 - [Edgeware Grants and Bounties](https://github.com/edgeware-builders/construction-projects)
 - [Crust Grants Program](https://github.com/crustio/Crust-Grants-Program)
 - [HydraDX Grants and Bounties](https://docs.hydradx.io/new_deal)
 - [Astar (formerly Plasm) Grants Program](https://docs.astar.network/ecosystem/builders-program)
+
+Check [other grant programs](https://github.com/w3f/Grants-Program#other-grant-programs) section on
+Web3 Foundation grants repo for more information.
+
