@@ -38,7 +38,8 @@ This section of the wiki is divided into the following parts:
 
 ### Grants
 
-- [Grants](../general/grants.md) - A list of all Polkadot-related projects given grants by the Web3 Foundation.
+- [Grants](../general/grants.md) - Information regarding grants and funding sources available in 
+  the Polkadot ecosystem.
 
 ### PSPs
 
