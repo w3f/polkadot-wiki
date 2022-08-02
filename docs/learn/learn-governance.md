@@ -144,10 +144,10 @@ Multiple referenda cannot be voted upon in the same period, excluding emergency 
 An emergency referendum occurring at the same time as a regular referendum (either public- or
 council-proposed) is the only time that multiple referenda will be able to be voted on simultaneously.
 
-In governance v2, shares the same{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+In governance v2, shares the same {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 day eligibility period when the proposal can get approved. If not approved by then end of this period, the proposal is automatically rejected.
 
-#### Voting on a referendum
+#### Voting on a referendum (governance v1)
 
 To vote, a voter generally must lock-up their tokens for at least the enactment delay period plus some additional time beyond
 the end of the referendum. The additional time at the end of the cycle helps ensure the voter has some minimal economic buy-in to the
@@ -190,7 +190,7 @@ It must fulfill this criteria for the minimum of the **Confirmation Period**. Di
 
 #### Tallying
 
-There are three resulting scenarios that can occur,
+In governance v1, there are three resulting scenarios that can occur,
 depending on which entity initiated the proposal and whether council unanimously voted yes in support.
 These resulting scenarios are visualized in the following table:
 
@@ -272,6 +272,12 @@ is low, therefore, based on the above result, the referendum will be rejected. I
 winning voter's tokens are locked. If the voters on the losing side of the referendum believe that
 the outcome will have negative effects, their tokens are transferrable so they will not be locked
 into the decision. Moreover, winning proposals are autonomously enacted only after the enactment delay period.
+
+#### Voting on a referendum (governance v2)
+
+In Gov2, proposals that are mot approved after 
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} 
+days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period.  The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
 
 #### Voluntary Locking
 
