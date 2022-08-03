@@ -22,7 +22,11 @@ This system has functioned reasonably well over the first 2-3 years of operation
 
 Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the repercussions of referenda better scoped and agile in order to dramatically increase the number of collective decisions the system is able to make.
 
+Gov2 is set to launch on Kusama following the final professional audit of its code. Once tested on Kusama, a proposal will be made for the Polkadot network to work on.
+
 The following content will begin by walking through many of the core principals of governance on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to understand the roots of governance v1 to better understand the direction of the second iteration. These deltas and distinctions will be highlighted throughout the various sub-topics.
+
+This being said, it is important to remember that governance is a constantly evolving protocol at this stage in its lifecycle.  As updates for governance v2 are making their way to the networks, plans for governance v2.5 are already in development.
 
 ## Premise
 
@@ -390,21 +394,6 @@ In governance v2, there is a special operation for intervening with a proposal t
 
 Cancelation is itself a governance operation which must be voted upon by the network in order to execute. Since there is usually some urgency to this type of operation, Cancelation comes with its own Origin and Track which has a low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for passing.
 
-### Blacklisting
-
-A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
-hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
-proposals that could be submitted with the same hash, i.e.
-[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
-text to make a suggestion.
-
-Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
-system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to re-submit 
-the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from 
-being submitted - a single changed character in a proposal's text will also change the hash of the proposal, 
-rendering the per-hash blacklist invalid.
-
 ### How to be a council member?
 
 ![](../assets/governance/approval-vote.png)
@@ -502,8 +491,49 @@ Members of the Fellowship can vote on any given Fellowship proposal and the aggr
 
 The mechanism by which the Fellowship votes is the same (Substrate pallet) as what is used for Polkadot stakeholder voting for a proposed referendum.
 
+### Ranking System
+
 So how exactly does this ranking system work?
 
+To prevent a small group of participants from gaining effective control over the network this system with adhere to three main principles:
+
+1. The Fellowship must never have hard power over the network: it cannot change the parameters, conduct rescues or move assets. Their only power in governance resides in the the ability to reduce the effective timeline on which a referendum takes place.
+2. The Fellowship weights those with higher rank more in the aggregate opinion, however the weight should not be so high as to make a small number of higher members’ opinions be insurmountable when compared to a coherent opinion coming from lower-ranked membership.
+3. The Fellowship should be designed to grow and develop its membership and their aggregate levels of expertise and in doing ensure that its overall decision-making capacity gets stronger over time.
+
+To support these conditions, the Fellowship will have a constitution which outlines the requirements and expectations for individuals to attain and retain any given rank. Higher ranks are able to vote and promote lower ranks voting based on this constitution.
+
+**Demotion** occurs automatically after a given period has elapsed and the member is unable to defend their position to their peers.
+
+**Suspension** can happen only through general referendum, ensuring controversy or unpopularity with the Fellowship alone does not necessarily result in expulsion.
+
+Gaining access to top tiers of the ranks will also require a referendum, as to prevent the Fellowship from becoming a cabal (popularity with Fellowship peers alone is not enough to gain access to a top rank).
+
+### Whitelisting
+
+The Whitelist pallet does one thing: it allows one Origin to escalate the privilege level of another Origin for a certain operation.
+
+In Gov2, it allows the Fellowship to authorise a new origin (known as Whitelisted-Root) to be executed with Root-level privileges and will only work with certain specified commands that have been authorised by the Fellowship. The Whitelist pallet verifies two things:
+
+1. The origin really is the Whitelisted-Root (i.e. that the referendum passed on this track)
+2. The proposal has indeed been whitelisted by the Fellowship. 
+
+If both conditions are true, the operation executes with Root-level privileges.
+
+### Blacklisting
+
+A proposal can be blacklisted by Root origin (e.g. sudo). A blacklisted proposal and its related
+referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
+proposals that could be submitted with the same hash, i.e.
+[proposal #2](https://polkascan.io/polkadot/democracy/proposal/2) in which the submitter used plain
+text to make a suggestion.
+
+Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
+system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to re-submit 
+the same proposal. That said, this is far from a fool-proof method of preventing invalid proposals from 
+being submitted - a single changed character in a proposal's text will also change the hash of the proposal, 
+rendering the per-hash blacklist invalid.
 
 ## Frequently Asked Questions
 
@@ -548,3 +578,4 @@ strong case for why the change should be made.
 [polkadot direction]: https://matrix.to/#/#polkadot-direction:matrix.parity.io
 [kusama direction]: https://matrix.to/#/#kusama:matrix.parity.io
 [polkassembly]: https://polkadot.polkassembly.io/
+- [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
