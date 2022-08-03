@@ -33,15 +33,12 @@ development.
 :::
 
 
-
 ## Overview of XCM: A Format, Not a Protocol
 
-<!-- --- IS THIS STILL RELEVANT?
 What started as an approach to _cross-chain communication_, has evolved into a format for
 [**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is
 not only conducted between chains, but also between smart contracts, pallets, bridges, and even
 sharded enclaves like [SPREE](learn-spree.md).
---- -->
 
 **XCM is related to cross-chain in the same way that REST is related to RESTful.**
 
@@ -51,15 +48,6 @@ performed, similar to how RESTful services use REST as an architectural style of
 XCM aims to be a language to communicate ideas between consensus systems, hence, "Cross-Consensus"
 with the following properties:
 
-<!-- - Generic and extensible for use with fee-free and gas-metered smart contract platforms,
-  community parachains, trusted interactions between system parachains and their relay chain,
-  and more.
-- Interacting with a system whose transaction format is unknown.
-  - XCM is well-versioned, abstract and general and can be used as a means of providing a
-    long-lasting transaction format for wallets to use to create many common transactions.
-    It is _extensible_ and, in turn, _future-proof_ and _forward-compatible_.
-- Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains. -->
-
 1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
    completion.
 2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
@@ -68,6 +56,10 @@ with the following properties:
    the sender with an additional message.
 4. **Agnostic**: XCM makes no assumptions about the nature of the Consensus System between which
    messages are being passed.
+
+Similar to UDP, out of the box XCM is a "fire and forget" model. Unless, there is a seperate XCM message
+designed to be a response message which can be sent from the recipient to the sender. Any kind of error
+handling should also be done on the recipient side.
 
 :::info
 
