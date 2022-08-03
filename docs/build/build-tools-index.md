@@ -27,6 +27,12 @@ Please see the [Wallets](build-wallets.md) page.
 - [DotScanner](https://dotscanner.com?utm_source=polkadot_wiki) - Polkadot & Kusama Blockchain explorer.
 - [Polkaholic.io](https://polkaholic.io) - Polkadot & Kusama Blockchain explorer with API and DeFi support across 40+ parachains.
 
+## Blockchain Analytics
+
+- [Web3go](https://app.web3go.xyz/#/) - An open platform for everyone to play with,
+curate and visualize multi-blockchain data
+- [Polkawatch](https://polkawatch.app/) - Polkadot Decentralization Analytics
+
 ## Network Monitoring & Reporting
 
 - [Polkadot Telemetry Service](https://telemetry.polkadot.io/) - Network information including what
@@ -93,6 +99,7 @@ Please see the [Wallets](build-wallets.md) page.
   ReactJS-based starter UI for custom user interfaces for Substrate chains.
 - [Polkadot JS Browser Extension](https://github.com/polkadot-js/extension) - Key management in a
   Chrome extension.
+
 
 ## Libraries
 
