@@ -16,8 +16,14 @@ of execution. The format defines useful structures that makes sense for cross co
 such as defining locations and assets via pre defined data structures like `MultiLocaiton` and
 `MultiAsset`.
 
-:::note XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
-development. :::
+:::note 
+
+XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
+development. 
+
+:::
+
+
 
 ## Overview of XCM: A Format, Not a Protocol
 
@@ -155,10 +161,6 @@ While XCMP proper is still in development, HRMP is a working replacement.
 :::
 
 #### XCMP Design
-
-:::caution XCMP is currently under development and the details are subject to change
-
-:::
 
 - Cross-chain messages will _not_ be delivered to the Relay Chain.
 - Cross-chain messages will be constrained to a maximum size in bytes.
