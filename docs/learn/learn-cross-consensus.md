@@ -9,12 +9,21 @@ slug: ../learn-xcm
 
 Cross-Consensus Message Format or XCM for short is a consensus agnostic, messaging protocol which
 allows Substrate based chains to communicate with eachother. Think TCP/IP but for blockchains. One
-of Polkadot's promises is that of interoperability, XCM is the vehicle by which it will deliver this
+of Polkadot's promises is that of interoperability, and XCM is the vehicle by which it will deliver this
 promise. Simply, it is a standard that allows protocol developers to define the type of data which
 their chains can send and recieve. It comes out of the box with a VM that allows for customization
 of execution. The format defines useful structures that makes sense for cross consensus messaging
 such as defining locations and assets via pre defined data structures like `MultiLocaiton` and
 `MultiAsset`.
+
+- Generic and extensible for use with fee-free and gas-metered smart contract platforms,
+  community parachains, trusted interactions between system parachains and their relay chain,
+  and more.
+- Interacting with a system whose transaction format is unknown.
+  - XCM is well-versioned, abstract and general and can be used as a means of providing a
+    long-lasting transaction format for wallets to use to create many common transactions.
+    It is _extensible_ and, in turn, _future-proof_ and _forward-compatible_.
+- Highly efficient to operate in a tightly constrained and metered environment, as is the case with many chains.
 
 :::note 
 
