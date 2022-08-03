@@ -69,40 +69,12 @@ reasonable interpretations under some systems or will be intentionally unsupport
 
 :::
 
-Some use cases of XCM include:
-
-- Asset transfers
-- Execute platform-specific actions (extrinsics) such as governance voting
-- Enables single use-case chains e.g. Statemint/e as asset parachains
-
-### XCMP
-
-_Cross-Chain Message Passing_ secure message passing between parachains. There are two variants:
-_Direct_ and _Relayed_.
-
-- With _Direct_, message data goes direct between parachains and is O(1) on the side of the
-  Relay-chain and is very scalable.
-- With _Relayed_, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much
-  less scalable, and parathreads in particular may not receive messages due to excessive queue
-  growth.
-
-### VMP
-
-_Vertical Message Passing_ message passing between the Relay-chain itself and a parachain. Message
-data in both cases exists on the Relay-chain. This includes:
-
-- #### UMP
-
-  _Upward Message Passing_ message passing from a parachain to the Relay-chain.
-
-- #### DMP
-  _Downward Message Passing_ message passing from the Relay-chain to a parachain.
-
 ### Example Use-Cases
 
-- Request for specific operations to occur on the recipient system.
+- Request for specific operations to occur on the recipient system such as governance voting.
+- Enables single use-case chains e.g. Statemint/e as asset parachains
 - Optionally include payment of fees on a target network for requested operation.
-- Provide methods for various token transfer models:
+- Provide methods for various asset transfer models:
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an
     address on the remote chain for receiving funds and to eventually transfer those funds it
     controls into other accounts on that remote chain.
@@ -120,23 +92,47 @@ data in both cases exists on the Relay-chain. This includes:
 XCM can be used to express the meaning of the messages over each of these three communication
 channels.
 
+## XCVM (Cross-Consensus Virtual Machine)
+
+At the core of XCM lies the Cross-Consensus Virtual Machine (XCVM). A “message” in XCM is an XCVM program. The XCVM is a state machine, state is kept track in Registers.
+
+It’s an ultra-high level non-Turing-complete computer whose instructions are designed to be roughly at the same level as transactions. Messages are one or more XCM instructions. The program executes until it either runs to the end or hits an error, at which point it finishes up and halts. An XCM executor following the XCVM specification is provided by Parity, and it can be extended or customized, or even ignored altogether and users can create their own construct that follows the XCVM spec.
+
+A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more
+XCM instructions. To learn more about the XCVM and the XCM Format, see the latest
+[blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
+by Dr. Gavin Wood.
+
+XCM Instructions might change a register, they might change the state of the consensus system or both.
+
+One example of such an instruction would be TransferAsset which is used to transfer an asset to some other address on the remote system. It needs to be told which asset(s) to transfer and to whom/where the asset is to be transferred.
+
+```
+enum Instruction {
+    TransferAsset {
+        assets: MultiAssets,
+        beneficiary: MultiLocation,
+    }
+    /* snip */
+}
+```
+
 ## Cross-Consensus Protocols
 
 With the XCM format established, common patterns for protocols of these messages are needed.
 Polkadot implements two message passing protocols for acting on XCM messages between its constituent
 parachains.
 
-### VMP (Vertical Message Passing)
-
-There are two kinds of vertical message-passing transport protocols:
-
-- **UMP (Upward Message Passing)**: allows parachains to send messages to their relay chain.
-- **DMP (Downward Message Passing)**: allows the relay chain to pass messages down to one of their
-  parachains.
-
 ### XCMP (Cross-Chain Message Passing)
 
-XCMP allows the parachains to exchange messages with other parachains on the same Relay Chain.
+_Cross-Chain Message Passing_ secure message passing between parachains. There are two variants:
+_Direct_ and _Relayed_.
+
+- With _Direct_, message data goes direct between parachains and is O(1) on the side of the
+  Relay-chain and is very scalable.
+- With _Relayed_, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much
+  less scalable, and parathreads in particular may not receive messages due to excessive queue
+  growth.
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
 ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output
@@ -145,6 +141,18 @@ associated metadata is stored as a hash in the Relay Chain storage.
 
 The input and output queue are sometimes referred to in the Polkadot codebase and associated
 documentation as `ingress` and `egress` messages, respectively.
+
+### VMP (Vertical Message Passing)
+
+_Vertical Message Passing_ message passing between the Relay-chain itself and a parachain. Message
+data in both cases exists on the Relay-chain. This includes:
+
+- #### UMP (Upward Message Passing)
+
+  _Upward Message Passing_ message passing from a parachain to the Relay-chain.
+
+- #### DMP (Downward Message Passing)
+  _Downward Message Passing_ message passing from the Relay-chain to a parachain.
 
 #### XCMP-Lite (HRMP)
 
@@ -227,16 +235,6 @@ Check out our animated video below that explores how XCMP works.
       width="560" height="315"
       src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
 doesn't support embedded videos. </video>
-
-## XCVM (Cross-Consensus Virtual Machine)
-
-An ultra-high level non-Turing-complete computer whose instructions are designed in a way to be
-roughly at the same level as transactions.
-
-A _message_ in XCM is simply just a programme that runs on the `XCVM`: in other words, one or more
-XCM instructions. To learn more about the XCVM and the XCM Format, see the latest
-[blog post](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392)
-by Dr. Gavin Wood.
 
 ## How To Make Cross-Chain Transfers
 
