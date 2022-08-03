@@ -426,9 +426,10 @@ The previous name for the [Polkadot Host](#polkadot-host).
 
 ## Preimage
 
-The on-chain proposals do not require the entire image of extrinsics and the data to be submitted
+The on-chain proposals do not require the entire image of extrinsics and data to be submitted
 (for instance the WASM code, in case of upgrades), but would rather just need that image's hash. 
-That **preimage** can be submitted and stored on-chain against the hash upon the proposal's dispatch.
+That **preimage** and its data can be submitted and stored on-chain against the hash later,
+upon the proposal's dispatch.
 
 
 ## Proof of Stake (PoS)
