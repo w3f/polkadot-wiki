@@ -1,7 +1,8 @@
 name: Update Status Badges
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    # If this works, restore to '0 0 * * 1' (once a week)
+    - cron: '0 * * * *' # Once an hour, at minute 0
   workflow_dispatch:
 
 jobs:
