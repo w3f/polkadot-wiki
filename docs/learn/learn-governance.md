@@ -180,14 +180,6 @@ Even though combined both Logan and Kevin vote with more
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both 
 of them is less than Peter, leading to their voting power counting as less.
 
-In governance v2, a proposal is approved if it meets the requirements for **approval** and **support**, removing the adaptive quorum biasing system. 
-
-Approval is defined as the share of approval vote-weight (after adjustment for conviction) against the total number of vote-weight (for both approval and rejection).
-
-Support is the total number of votes in the approval (ignoring any adjustment for conviction) compared to the total possible amount of votes that could be made in the system.
-
-It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation periods and requirements for Approval and Support. It is now possible to configure a proposal in such a way that an increasingly lower amount of support and overall approval for the proposal are needed for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Similarly, classes which command more political significance will tend to accept less controversy (and thus require a higher approval) early on.
-
 #### Tallying
 
 In governance v1, there are three resulting scenarios that can occur,
@@ -275,6 +267,14 @@ into the decision. Moreover, winning proposals are autonomously enacted only aft
 
 #### Voting on a referendum (governance v2)
 
+In governance v2, a proposal is approved if it meets the requirements for **approval** and **support**, removing the adaptive quorum biasing system. 
+
+Approval is defined as the share of approval vote-weight (after adjustment for conviction) against the total number of vote-weight (for both approval and rejection).
+
+Support is the total number of votes in the approval (ignoring any adjustment for conviction) compared to the total possible amount of votes that could be made in the system.
+
+It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation periods and requirements for Approval and Support. It is now possible to configure a proposal in such a way that an increasingly lower amount of support and overall approval for the proposal are needed for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Similarly, classes which command more political significance will tend to accept less controversy (and thus require a higher approval) early on.
+
 In Gov2, proposals that are mot approved after 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} 
 days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period.  The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
@@ -309,6 +309,7 @@ Votes are always "counted" at the same time, which is at the end of the voting p
 
 #### Adaptive Quorum Biasing
 
+In governance v1,
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} introduces the concept of 
 "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective 
 super-majority required to make it easier or more difficult for a proposal to pass in the case that there 
@@ -338,10 +339,12 @@ becomes a simple majority.
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority
 against - equate to a simple majority-carries system at 100% turnout.
 
+Adaptive quorum biasing is longer used in governance v2, in replace of the Approval/Support system.
+
 ## Council
 
-To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
-introduces the idea of a "council". The council is an on-chain entity comprising several actors, each 
+In governance v1, passive stakeholders are represented on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
+via a governing body known as "council". The council is an on-chain entity comprising several actors, each 
 represented as an on-chain account. On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, 
 the council currently consists of
 {{ polkadot:  <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" />  :kusama }} 
@@ -368,9 +371,11 @@ For more information, check out our [video explainer on Council](https://www.you
 
 :::
 
+In governance v2, an alternate strategy was required to replace the Council in its previous duties as a body delegated by voters to compensate for the fact that many choose to not take part in day-to-day of governance. Gov2 builds on the **Vote Delegation** feature from v1 where a voter can choose to delegate their voting power to another voter in the system. It does so by improving a feature known as **Multirole Delegation**, where voters can specify a different delegate for every class of referendum in the system. So for example, a voter could delegate one entity for managing a less potent referenda class, choose delegate for a different class with more powerful consequences and still retain full voting power over any classes.
+
 ### Canceling
 
-A proposal can be canceled if the [technical committee](#technical-committee) unanimously agrees to
+In governance v1, a proposal can be canceled if the [technical committee](#technical-committee) unanimously agrees to
 do so, or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
 burned.
 
@@ -380,6 +385,10 @@ the runtime that the proposal would institute.
 
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders *en masse* to determine the fate of the proposal.
+
+In governance v2, there is a special operation for intervening with a proposal that is already being voted on known as **Cancelation**. The operation will immediately reject an ongoing referendum regardless of its status. Depending on the roots of the incident there is also potential for the initial proposer of the deposit to get slashed.
+
+Cancelation is itself a governance operation which must be voted upon by the network in order to execute. Since there is usually some urgency to this type of operation, Cancelation comes with its own Origin and Track which has a low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for passing.
 
 ### Blacklisting
 
@@ -464,7 +473,7 @@ councillors to be explicit in their votes or leave their voting privilege up to 
 
 ## Technical Committee
 
-The Technical Committee(TC) was introduced in the
+In governance v1, the Technical Committee(TC) was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 TC is composed of the teams that have successfully implemented or specified either
@@ -480,6 +489,21 @@ to fast track existing proposals.
 Fast-tracked referenda are the only type of referenda that can be active alongside another active
 referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
+
+In governance v2, a new successor committee was introduced, known as the "Polkadot Fellowship", to replace the Technical Committee. It will serve both the Polkadot and Kusama networks. See additional details below.
+
+## Polkadot Fellowship
+
+The Fellowship is a mostly self-governing expert body with a primary goal of representing humans who embody and contain the technical knowledge base of the Polkadot network and protocol. This is accomplished by associating a rank with members to categorize the degree to which the system expects their opinion to be well-informed, of a sound technical basis and in line with the interests of Polkadot.
+
+Unlike the current Technical Collective it is designed to be far broader in membership (i.e. to work well with even tens of thousands of members) and with far lower in barriers to entry (both in terms of administrative process flow and expectations of expertise). Becoming a candidate member in the Fellowship is as easy as placing a small deposit.
+
+Members of the Fellowship can vote on any given Fellowship proposal and the aggregate opinion of the members (weighted by their rank) constitutes the Fellowship's considered opinion.
+
+The mechanism by which the Fellowship votes is the same (Substrate pallet) as what is used for Polkadot stakeholder voting for a proposed referendum.
+
+So how exactly does this ranking system work?
+
 
 ## Frequently Asked Questions
 
