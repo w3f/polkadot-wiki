@@ -1,8 +1,8 @@
 name: Jest Testing Coverage
 on:
-  pull_request:
-    branches:
-      - master
+  schedule:
+    - cron: '0 0 * * 1' # Once a week
+  workflow_dispatch:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
