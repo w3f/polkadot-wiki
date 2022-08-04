@@ -146,6 +146,8 @@ To format markdown pages, run the following in the `docs` folder:
 
 ```bash
 npx pretty-quick --staged
+or
+npx pretty-quick --branch
 ```
 
 To run pretty on the whole project, `npx pretty-quick`.
