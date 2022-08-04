@@ -13,6 +13,10 @@ import VLTable from "./../../components/Voluntary-Locking"
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. 
 The stated goal is to ensure that the majority of the stake can always command the network.
 
+:::caution Active Development
+The governance protocol has already undergone a couple iterations (v1 and v2) with more changes coming down the pipeline (v2.5). See the comments below for additional details and distinct difference between the various versions.
+:::
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralised governance system (v1) was comprised of three main components.
 1. A technocratic committee to manage upgrade timelines.
 2. An approval-voted, elected executive "government" to manage parameters, admin and spending proposals.
@@ -22,7 +26,7 @@ This system has functioned reasonably well over the first 2-3 years of operation
 
 Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the repercussions of referenda better scoped and agile in order to dramatically increase the number of collective decisions the system is able to make.
 
-Gov2 is set to launch on Kusama following the final professional audit of its code. Once tested on Kusama, a proposal will be made for the Polkadot network to work on.
+**Gov2 is set to launch on Kusama following the final professional audit of its code. Once tested on Kusama, a proposal will be made for the Polkadot network to work on.**
 
 The following content will begin by walking through many of the core principals of governance on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to understand the roots of governance v1 to better understand the direction of the second iteration. These deltas and distinctions will be highlighted throughout the various sub-topics.
 
@@ -39,7 +43,7 @@ All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## Mechanism
 
-In governance v1 active token holders and the council together administrate a 
+In governance v1, active token holders and the council together administrate a 
 network upgrade decision. No matter whether the proposal is proposed by
 the public (token holders) or the council, it will eventually have to go through 
 a referendum to let all holders, weighted by stake, make the decision.
@@ -81,17 +85,17 @@ approved, it would be scheduled for enactment. Referenda is considered *unbaked*
 an outcome, i.e. being voted on.
 
 If a proposal is submitted by the public or council there is a fixed enactment delay period of 
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={115,200} filter="blocksToDays" /> :kusama }}.
+{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={115,200} filter="blocksToDays" /> :kusama }} days.
 Proposals submitted as part of the enactment of a prior referendum can set the enactment delay period as desired.
 Emergency proposals deal with major problems with the network that need to be "fast-tracked", which leads to shorter enactment times.
 
-In Gov2, anyone is able to start a referendum at anytime and they can do so as many times as they wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in processing and flow of the referenda protocol.
+In Gov2, anyone is able to start a referendum at anytime and they can do so as many times as they wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the flow and processing of the referenda protocol.
 
-An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the referenda now selects an appropriate Origin for their request based on the requirements.
+An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the referenda now selects an appropriate Origin for their request based on the requirements of the proposal.
 
 Each Origin is associated with a single referendum class and each class is associated with a Track. The Track outlines the lifecycle for the proposal and is independent from other class's tracks. Having independent tracks allows the network to tailor the dynamics of referenda based upon their implied privilege level.
 
-So for example, a runtime upgrade (`set_code` call) does not have the same implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different origins are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be predetermined on the pallet.
+So for example, a runtime upgrade (`set_code` call) does not have the same implications for the ecosystem as the approval of a treasury tip (`reportAwesome` call), and therefore different Origins are needed in which different turnouts, approvals, deposits and a minimum enactment periods will be predetermined on the pallet.
 
 ### Proposing a Referendum
 
@@ -148,7 +152,7 @@ Multiple referenda cannot be voted upon in the same period, excluding emergency 
 An emergency referendum occurring at the same time as a regular referendum (either public- or
 council-proposed) is the only time that multiple referenda will be able to be voted on simultaneously.
 
-In governance v2, shares the same {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
+Governance v2 shares the same {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
 day eligibility period when the proposal can get approved. If not approved by then end of this period, the proposal is automatically rejected.
 
 #### Voting on a referendum (governance v1)
@@ -234,7 +238,7 @@ proposal is carried, no matter how much stake votes on the proposal.
 
 Example:
 
-Assume we only have {{ polkadot: 1_500 DOT :polkadot }}{{ kusama: 1_50 :kusama }} tokens in total and
+Assume we only have {{ polkadot: 1,500 DOT :polkadot }}{{ kusama: 150 :kusama }} tokens in total and
 that this is a public proposal.
 
 - John:  {{ polkadot: 500 DOT :polkadot }}{{ kusama: 50 KSM :kusama }}
@@ -277,11 +281,11 @@ Approval is defined as the share of approval vote-weight (after adjustment for c
 
 Support is the total number of votes in the approval (ignoring any adjustment for conviction) compared to the total possible amount of votes that could be made in the system.
 
-It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation periods and requirements for Approval and Support. It is now possible to configure a proposal in such a way that an increasingly lower amount of support and overall approval for the proposal are needed for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Similarly, classes which command more political significance will tend to accept less controversy (and thus require a higher approval) early on.
+It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation Periods and requirements for approval and support. It is now possible to configure a proposal in such a way that an increasingly lower amount of support and overall approval for the proposal are needed for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Similarly, classes which command more political significance will tend to accept less controversy (and thus require a higher approval) early on.
 
-In Gov2, proposals that are mot approved after 
+In Gov2, proposals that are not approved after 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} 
-days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period.  The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
+days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period.  The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
 
 #### Voluntary Locking
 
@@ -358,7 +362,7 @@ Along with [controlling the treasury](learn-treasury.md), the council is called 
 three tasks of governance: 
 1. proposing sensible referenda
 2. cancelling uncontroversially dangerous or malicious referenda
-3. electing the technical committee.
+3. electing the technical committee
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
@@ -375,7 +379,7 @@ For more information, check out our [video explainer on Council](https://www.you
 
 :::
 
-In governance v2, an alternate strategy was required to replace the Council in its previous duties as a body delegated by voters to compensate for the fact that many choose to not take part in day-to-day of governance. Gov2 builds on the **Vote Delegation** feature from v1 where a voter can choose to delegate their voting power to another voter in the system. It does so by improving a feature known as **Multirole Delegation**, where voters can specify a different delegate for every class of referendum in the system. So for example, a voter could delegate one entity for managing a less potent referenda class, choose delegate for a different class with more powerful consequences and still retain full voting power over any classes.
+In governance v2, an alternate strategy was required to replace the Council in its previous duties as a body delegated by voters to compensate for the fact that many choose to not take part in day-to-day of governance. Gov2 builds on the **Vote Delegation** feature from v1 where a voter can choose to delegate their voting power to another voter in the system. It does so by improving a feature known as **Multirole Delegation**, where voters can specify a different delegate for every class of referendum in the system. So for example, a voter could delegate one entity for managing a less potent referenda class, choose a different delegate for a different class with more powerful consequences and still retain full voting power over any remaining classes.
 
 ### Canceling
 
@@ -462,7 +466,7 @@ councillors to be explicit in their votes or leave their voting privilege up to 
 
 ## Technical Committee
 
-In governance v1, the Technical Committee(TC) was introduced in the
+In governance v1, the Technical Committee (TC) was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 TC is composed of the teams that have successfully implemented or specified either
@@ -495,13 +499,13 @@ The mechanism by which the Fellowship votes is the same (Substrate pallet) as wh
 
 So how exactly does this ranking system work?
 
-To prevent a small group of participants from gaining effective control over the network this system with adhere to three main principles:
+To prevent a small group of participants from gaining effective control over the network this system will adhere to three main principles:
 
 1. The Fellowship must never have hard power over the network: it cannot change the parameters, conduct rescues or move assets. Their only power in governance resides in the the ability to reduce the effective timeline on which a referendum takes place.
-2. The Fellowship weights those with higher rank more in the aggregate opinion, however the weight should not be so high as to make a small number of higher members’ opinions be insurmountable when compared to a coherent opinion coming from lower-ranked membership.
-3. The Fellowship should be designed to grow and develop its membership and their aggregate levels of expertise and in doing ensure that its overall decision-making capacity gets stronger over time.
+2. The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight should not be so high as to make a small number of higher members’ opinions be insurmountable when compared to a coherent opinion coming from lower-ranked membership.
+3. The Fellowship should be designed to grow and develop its membership and their aggregate levels of expertise and in doing so ensure that its overall decision-making capacity gets stronger over time.
 
-To support these conditions, the Fellowship will have a constitution which outlines the requirements and expectations for individuals to attain and retain any given rank. Higher ranks are able to vote and promote lower ranks voting based on this constitution.
+To support these conditions, the Fellowship will have a constitution which outlines the requirements and expectations for individuals to attain and retain any given rank. Higher ranks are able to vote and promote lower ranks based on this constitution.
 
 **Demotion** occurs automatically after a given period has elapsed and the member is unable to defend their position to their peers.
 
@@ -574,8 +578,7 @@ strong case for why the change should be made.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
   explaining how governance works in Polkadot and Kusama.
-
-[polkadot direction]: https://matrix.to/#/#polkadot-direction:matrix.parity.io
-[kusama direction]: https://matrix.to/#/#kusama:matrix.parity.io
-[polkassembly]: https://polkadot.polkassembly.io/
 - [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
+- [Polkadot Direction](https://matrix.to/#/#polkadot-direction:matrix.parity.io)
+- [Kusama Direction](https://matrix.to/#/#kusama:matrix.parity.io)
+- [PolkAssembly](https://polkadot.polkassembly.io/)
