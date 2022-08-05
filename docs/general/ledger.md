@@ -39,7 +39,7 @@ issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
 Here is a list of what you will need before starting:
 
-- A Ledger Nano X or Nano S plus (reommended since the Polkadot Ledger App takes some space and the Ledger Nano S has limited memory and it is no longer produced).
+- A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements. The Ledger Nano S has limited memory and is no longer produced).
 - The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
