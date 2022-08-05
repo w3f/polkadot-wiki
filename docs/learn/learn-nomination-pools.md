@@ -7,6 +7,9 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 import RPC from "./../../components/RPC-Connection"
+import NominationPools from "./../../components/Nomination-Pools"
+
+{{ kusama: <NominationPools network="kusama"/> :kusama }}
 
 :::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and [Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/staking/pools).
 
