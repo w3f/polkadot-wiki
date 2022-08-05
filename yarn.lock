@@ -2762,20 +2762,27 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
 
-"@polkadot/x-global@10.1.2", "@polkadot/x-global@^10.1.2":
+"@polkadot/x-global@10.1.2":
   version "10.1.2"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.2.tgz#66c2ceb6ef5043bc6bddd5e944f35e64e9d6a0a9"
   integrity sha512-//r3NVLYdYQs0So0IK8Pa0pnL5pPi0geQWE6qjTtPD0oszuN9SUDqDlFQj3I3vqQOwgybbzBGNYRRinP8B2xUg==
   dependencies:
     "@babel/runtime" "^7.18.9"
 
-"@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@10.1.2":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.2.tgz#8a0f15eb0558f837dd10060ad808707fe8b64c05"
-  integrity sha512-KOu6iZWye9KD6qoahiqZ0alrT/5FSGL4XXLhVSg69xAqD6yG2oi2aKA6cZpDU19uZGqVneqsgpebDsrZ0nLUEg==
+"@polkadot/x-global@10.1.3", "@polkadot/x-global@^10.1.2":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.3.tgz#c711ea11256faff10ce0e36d3d5f96d65c53a006"
+  integrity sha512-+ff9n1ceyL/qOL0Tjxnw5c7U/b6wtUjzWSWlEWHr5ZHQfVqnkntsObgvkcL8+oXZAwNDf54Dz+LVOWlSkn4Dwg==
   dependencies:
     "@babel/runtime" "^7.18.9"
-    "@polkadot/x-global" "10.1.2"
+
+"@polkadot/x-randomvalues@*":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.3.tgz#89b37ad93f4dcdc5c4bc61e00dbca2052f2742b9"
+  integrity sha512-3AeYOWSXNVQdUQz/kIJyY3FGLZHoCB6hexMXoeJUw7gn3j3ifzsBW1gBHU10JyGQlMPtMD+UMJBxip1axsWVGw==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@polkadot/x-global" "10.1.3"
 
 "@polkadot/x-randomvalues@10.1.1":
   version "10.1.1"
@@ -2784,6 +2791,14 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
+
+"@polkadot/x-randomvalues@10.1.2":
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.2.tgz#8a0f15eb0558f837dd10060ad808707fe8b64c05"
+  integrity sha512-KOu6iZWye9KD6qoahiqZ0alrT/5FSGL4XXLhVSg69xAqD6yG2oi2aKA6cZpDU19uZGqVneqsgpebDsrZ0nLUEg==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@polkadot/x-global" "10.1.2"
 
 "@polkadot/x-textdecoder@10.1.1":
   version "10.1.1"
