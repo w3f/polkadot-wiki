@@ -29,6 +29,7 @@ test("Human readable filter with float value", async () => {
 	await waitFor(() => expect(screen.getByText("20.258 DOT")).toBeInTheDocument(), { timeout: 5000 });
 });
 
+/*
 // Set max test duration before failing (2 min)
 jest.setTimeout(120000);
 
@@ -126,3 +127,4 @@ test("All leveraged RPC paths are valid", async () => {
 	// All RPC paths should return valid responses
 	expect(attemptedConnections === successfulResponses).toEqual(true);
 });
+*/
