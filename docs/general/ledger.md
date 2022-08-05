@@ -21,7 +21,7 @@ does not expose it to your computer or the internet. That is, even if you connec
   - *Deterministic* means that there is only one seed phrase to generate all the accounts for different blockchain networks.
   - *Hierarchical* means that the accounts are generated in a tree-like structure for different purposes.
 
-Ledger devices can be equipped with applications that are blockchain-specific. Such applications are usually develped by third parties and they enable the user to perform essential actions such as transacting and staking.
+Ledger devices can be equipped with applications that are blockchain-specific. Such applications are usually developed by third parties and they enable the user to transact securely on the blockchain network.
 The Polkadot Ledger application allows you to manage Polkadot's native token, DOT. It supports
 most of the transaction types of the network, including batch transactions from the Utility pallet. Note that the Polkadot Ledger application does not currently support the staking extrinsic `rebag`.
 
