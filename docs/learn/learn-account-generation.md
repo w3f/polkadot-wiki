@@ -133,6 +133,31 @@ message.
 Note that this password does NOT protect your seed phrase. If someone knows the twelve words in your
 mnemonic seed, they still have control over your account even if they do not know the password.
 
+### Reset Password
+
+:::warning
+
+Before following the instructions below make sure you have your mnemonic phrase stored in a safe place accessible to you.
+
+:::
+
+Let's say you created `ACCOUNT 1` protected by password `PSW 1`, and you also exported the JSON file `JSON 1`. To reset the passowrd of your polkadot `ACCOUNT 1` using the browser extension you must follow the following steps:
+
+- On the browser extension go to `ACCOUNT 1` and click "Forget account". This action will delete the access to your account. Note that your tokens are still in your account on the polkadot blockchain network.
+- On the browser extension click the "+" button in the topright corner and select the option "Import account from pre-existing seed". After entering the mnemonic phrase you can chose a new password `PSW 2`.
+
+:::info JSON files do not allow to change account passwords
+
+If you add the account to the extension using the option "Restore account from backup JSON file", this will allow you to restore access to your account using JSON file `JSON 1` protected by the password `PSW 1`, but not to set a new password. Thus, `PSW 1` will become the account password by default.
+
+:::
+
+:::info Cold wallets do not need passwords
+
+For hardware wallets such as [Ledger](https://www.ledger.com/) you do not need to set a password for your account. Each time you need to access funds in your account you are required to sign using your Ledger device. Also, Ledger wallets are deterministic wallets, meaning that you can generate multiple accounts for for multiple blockchain networks without having different passwords to access such accounts.
+
+:::
+
 ### Set Address for Polkadot Mainnet
 
 Now we will ensure that the addresses are displayed as Polkadot mainnet addresses.
@@ -213,6 +238,16 @@ off the computer you're using. You should not store it in cloud storage, email i
 
 You can use this backup file to restore your account. This backup file is not readable unless it is
 decrypted with the password.
+
+### Reset password
+
+To reset the password of an account created with Polkadot-JS you just need to go in the "Accounts" tab, click the icon with three vertical dots on your account and select "Change this account's password".
+
+:::info
+
+If you create an account first using Polkadot-JS, and then you add it to the browser extension, to change the passowrd of such account you need to follow the [guidelines for the browser extension](#reset-password).
+
+:::
 
 ### Multi-signature Accounts
 
