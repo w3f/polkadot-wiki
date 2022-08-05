@@ -63,7 +63,7 @@ Watch the instructions on how to create an account, send/receive and state/unsta
 
 :::info
 
-Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if you create a derived account with for example derivation path 44'/354'/0'/0'/1', this will not be displayed on the Ledger Live App. As a consequence it is not possible to transact with derived accounts using the Ledger Live App, but it is possible to do so using Polkadot js. For more information about derived accounts and derivation paths check [the accounts page](../learn/learn-accounts.md).
+Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if you create a [derived account using Polkadot JS](#using-on-polkadot-js-apps) with a derivation path 44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. As a consequence it is not possible to transact with derived accounts using the Ledger Live App, but it is possible to do so using Polkadot JS. For more information about derived accounts and derivation paths check [the accounts page](../learn/learn-accounts.md).
 
 :::
 
