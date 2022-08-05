@@ -15,11 +15,22 @@ browsers like Brave and Chrome.
 :::
 
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
-devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that
-does not expose it to your computer or the internet.
+devices. Ledger devices are hardware wallets that keep your secret key secured on a physical device that
+does not expose it to your computer or the internet. That is, even if you connect your nano via USB to your computer, the private keys will not be leaked. Ledger devices are also hierarchical deterministic wallets (HD wallets), that is:
 
+  - *Deterministic* means that there is only one seed phrase to generate all the accounts for different blockchain networks.
+  - *Hierarchical* means that the accounts are generated in a tree-like structure for different purposes.
+
+Ledger devices can be equipped with applications that are blockchain-specific. Such applications are usually developed by third parties and they enable the user to transact securely on the blockchain network.
 The Polkadot Ledger application allows you to manage Polkadot's native token, DOT. It supports
-most of the transaction types of the network ,including batch transactions from the Utility pallet.
+most of the transaction types of the network, including batch transactions from the Utility pallet. 
+
+:::note Ledger apps may not support all the transactions
+
+Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of transactions supported. It could be possible that some transactions are supported only on a specific version of the app and some transactions are not supported at all by any version. For instance, the staking `rebag' extrinsic is supported on the XL version but not on the light version. The `setIdentity' extrinsic is not supported by any of the app versions.
+
+:::
+
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -28,9 +39,8 @@ issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
 Here is a list of what you will need before starting:
 
-- A Ledger Nano S or a Ledger Nano X.
-- The latest firmware installed (at the time of writing this is 1.6.1 on the Nano S, and 1.2.4-4 on
-  the Nano X).
+- A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements. The Ledger Nano S has limited memory and is no longer produced).
+- The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
 - A Chromium-based web browser is installed that you can use to access [Polkadot-JS Apps][].
@@ -40,7 +50,7 @@ Here is a list of what you will need before starting:
 ### Using Ledger Live
 
 - Open the "Manager" tab in Ledger Live.
-- Connect and unlock your Ledger device.
+- Connect and unlock your Ledger device by inserting the PIN.
 - If asked, allow the manager on your device by pressing both buttons on the YES screen.
 - Find Polkadot in the app catalog and install it.
 
@@ -49,6 +59,13 @@ Here is a list of what you will need before starting:
 Watch the instructions on how to create an account, send/receive and state/unstake DOTs in the video below
 
 [![Polkadot on Ledger Live](https://img.youtube.com/vi/jL-N_IWiYVA/0.jpg)](https://www.youtube.com/watch?v=jL-N_IWiYVA)
+
+
+:::info
+
+Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if you create a [derived account using Polkadot JS](#using-on-polkadot-js-apps) with a derivation path 44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. As a consequence it is not possible to transact with derived accounts using the Ledger Live App, but it is possible to do so using Polkadot JS. For more information about derived accounts and derivation paths check [the accounts page](../learn/learn-accounts.md).
+
+:::
 
 ### Using the Developer Release
 
@@ -98,8 +115,7 @@ device with Polkadot-JS UI, by importing your accounts to Polkadot-JS Extension
 
 :::info
 
-Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with
-normal operation.
+Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with normal operation.
 
 :::
 
@@ -109,8 +125,7 @@ You can import your Ledger account to [Polkadot Extension](https://polkadot.js.o
 on how to import Ledger accounts to Polkadot JS extension in written format, read through this [article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
 For importing your account to the UI, read through the instructions below.
 
-[Polkadot-JS Apps][] already has an integration with the Ledger application so that your device will
-work with the browser interface after installation. The functionality is currently gated behind a
+[Polkadot-JS Apps][] already has an integration with the Ledger application so that your device will work with the browser interface after installation. The functionality is currently gated behind a
 feature setting that you will need to turn on.
 
 In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
