@@ -19,6 +19,7 @@ transactions. Below are some wallets that support Polkadot along with their deve
 | [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Non-custodial | Staking  |
 | [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Non-custodial | Staking  |
 | [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Non-Custodial | Staking  |
+| [Ledger Live](https://www.ledger.com/polkadot-wallet)         | Live              | Ledger    | iOS, Android, Mac, Windows            | Non-Custodial | Staking  |
 
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
 Polkadot-JS, the Polkadot{.js} extension, or Parity Signer. For other wallet software, you should
