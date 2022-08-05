@@ -22,7 +22,7 @@ The governance protocol has already undergone a couple iterations (v1 and v2) wi
 2. An approval-voted, elected executive "government" to manage parameters, admin and spending proposals.
 3. A general voting system for everything else which rewarded long-term stakeholders with increased influence.
 
-This system has functioned reasonably well over the first 2-3 years of operation, helping to ensure good use of treasury funds and providing upgrades and fixes in a timely fashion. Like most early technologies the systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with modern advancements. For example, in governance v1 all referenda carry the same weight as only one referenda can be voted on at a time and the voting period can last multiple weeks.  This results in the system favoring careful consideration of very few proposals, as opposed to broad consideration of many. With that being said, governance v2 is here!
+This system has functioned reasonably well over the first 2-3 years of operation, helping to ensure good use of treasury funds and providing upgrades and fixes in a timely fashion. Like most early technologies the systems and protocols must evolve as they mature to improve upon their shortcomings and keep up with modern advancements. For example, in governance v1 all referenda carry the same weight as only one referenda can be voted on at a time and the voting period can last multiple weeks. This results in the system favoring careful consideration of very few proposals, as opposed to broad consideration of many. With that being said, governance v2 is here!
 
 Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the repercussions of referenda better scoped and agile in order to dramatically increase the number of collective decisions the system is able to make.
 
@@ -30,7 +30,7 @@ Governance v2 or Gov2 changes how the practical means of day-to-day decisions ar
 
 The following content will begin by walking through many of the core principals of governance on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to understand the roots of governance v1 to better understand the direction of the second iteration. These deltas and distinctions will be highlighted throughout the various sub-topics.
 
-This being said, it is important to remember that governance is a constantly evolving protocol at this stage in its lifecycle.  As updates for governance v2 are making their way to the networks, plans for governance v2.5 are already in development.
+This being said, it is important to remember that governance is a constantly evolving protocol at this stage in its lifecycle. As updates for governance v2 are making their way to the networks, plans for governance v2.5 are already in development.
 
 ## Premise
 
@@ -67,7 +67,7 @@ Referenda are simple, inclusive, stake-based voting schemes. Each referendum has
 includes the most powerful call: `set_code`, which can switch out the entire code of the runtime,
 achieving what would otherwise require a "[hard fork](./../general/glossary#hard-fork)").
 
-Referenda are discrete events that have a fixed voting period.  When the voting period ends and the votes are tallied,
+Referenda are discrete events that have a fixed voting period. When the voting period ends and the votes are tallied,
 the function call (`set_code`) is made if the vote is approved. Referenda are always binary; your only options in
 voting are "aye", "nay", or abstaining entirely.
 
@@ -121,7 +121,7 @@ In Gov2, when a referendum is initially created, it is immediately votable by an
 The criteria for entering the Decided state is a follows:
 1. A **lead-in period** that outlines the amount of time that must elapse before deciding can begin. This helps mitigate against the possibility of "decision snapping" where an attacker controlling a substantial amount of voting power might seek to have a proposal passed immediately after proposing, not allowing the overall voting population adequate time to consider and participate.
 2. There must be room for the decision. All Tracks specify their own limit on the number of referenda which can be decided simultaneously. Tracks that have more potent abilities will have lower limits.
-3. A **Decision Deposit** must be paid.  Creating a referendum is cheap as the deposit value consists of only the value required for the on-chain storage needed to track it.  Having a referendum reviewed and decided upon carries greater risk and uses up limited space since there is a limited number of referenda which can be active in the process simultaneously. This leads to a larger, but refundable, deposit requirement helping to mitigate spam and bloating of the system.
+3. A **Decision Deposit** must be paid. Creating a referendum is cheap as the deposit value consists of only the value required for the on-chain storage needed to track it. Having a referendum reviewed and decided upon carries greater risk and uses up limited space since there is a limited number of referenda which can be active in the process simultaneously. This leads to a larger, but refundable, deposit requirement helping to mitigate spam and bloating of the system.
 
 #### Council Referenda (v1)
 
@@ -176,7 +176,7 @@ To learn more about voting on referenda, please check out our
 Example:
 
 Peter: Votes `No` with {{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} for 
-a 128 week lock period  => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+a 128 week lock period => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
 
 Logan: Votes `Yes` with {{ polkadot: 20 DOT :polkadot }}{{ kusama: 2 KSM :kusama }} for 
 a 4 week lock period => {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
@@ -285,7 +285,7 @@ It must fulfill this criteria for the minimum of the **Confirmation Period**. Di
 
 In Gov2, proposals that are not approved after 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} 
-days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period.  The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
+days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period . The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
 
 #### Voluntary Locking
 
@@ -341,7 +341,7 @@ bias approaches a plain majority carries.
 Referring to the above image, when a referendum only has 25% turnout, the tally of "aye" votes has
 to reach 34% for it to pass.
 
-When the turnout rate is low, a super-majority is required to reject the proposal.  This means a lower threshold of "aye" votes have to be reached, but as turnout increases towards 100%, it
+When the turnout rate is low, a super-majority is required to reject the proposal . This means a lower threshold of "aye" votes have to be reached, but as turnout increases towards 100%, it
 becomes a simple majority.
 
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority
