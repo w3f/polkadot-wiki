@@ -16,7 +16,7 @@ browsers like Brave and Chrome.
 
 The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
 devices. Ledger devices are hardware wallets that keep your secret key secured on a physical device that
-does not expose it to your computer or the internet. That is, even if you connect your nano via USB to your computer, the private keys will not be leacked. Ledger devices are also hierarchical deterministic wallets (HD wallets), that is:
+does not expose it to your computer or the internet. That is, even if you connect your nano via USB to your computer, the private keys will not be leaked. Ledger devices are also hierarchical deterministic wallets (HD wallets), that is:
 
   - Deterministic means that there is only one seed phrase to generate all the accounts for different cryptocurrencies.
   - Hierarchical means that the accounts are generated in a tree-like structure for different purposes.
