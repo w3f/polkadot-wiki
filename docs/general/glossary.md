@@ -424,6 +424,14 @@ Runtime Environment or PRE.
 
 The previous name for the [Polkadot Host](#polkadot-host).
 
+## Preimage
+
+The on-chain proposals do not require the entire image of extrinsics and data
+(for instance the WASM code, in case of upgrades) to be submitted, but would rather just need 
+that image's hash. That **preimage** can be submitted and stored on-chain against the hash later, 
+upon the proposal's dispatch.
+
+
 ## Proof of Stake (PoS)
 
 A method of selecting participation in a consensus system, in which participants are chosen based on
