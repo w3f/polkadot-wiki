@@ -154,7 +154,8 @@ If you add the account to the extension using the option "Restore account from b
 
 :::info Cold wallets do not need passwords
 
-For hardware wallets such as [Ledger](https://www.ledger.com/) you do not need to set a password for your account. Each time you need to access funds in your account you are required to sign using your Ledger device. Also, Ledger wallets are deterministic wallets, meaning that you can generate multiple accounts for for multiple blockchain networks without having different passwords to access such accounts.
+For hardware wallets such as [Ledger](https://www.ledger.com/), you may have to set a PIN for accessing the accounts on the device, but you do not need to set a password for every individual account. When you need to make transactions with your account, you are required to sign using your Ledger device. Also, Ledger wallets let you generate multiple accounts for multiple blockchain networks without having to set different passwords to access such accounts.
+
 
 :::
 
