@@ -133,7 +133,7 @@ message.
 Note that this password does NOT protect your seed phrase. If someone knows the twelve words in your
 mnemonic seed, they still have control over your account even if they do not know the password.
 
-### Reset Password
+### Reset Password using the browser extension
 
 :::warning
 
@@ -240,7 +240,7 @@ off the computer you're using. You should not store it in cloud storage, email i
 You can use this backup file to restore your account. This backup file is not readable unless it is
 decrypted with the password.
 
-### Reset password
+### Reset password using Polkadot-JS
 
 To reset the password of an account created with Polkadot-JS you just need to go in the "Accounts" tab, click the icon with three vertical dots on your account and select "Change this account's password".
 
