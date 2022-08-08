@@ -75,7 +75,7 @@ The transactions weights in Polkadot were benchmarked on reference hardware. We 
 On GCP we used `c2d-highcpu-8` VM instance, on AWS `c6id.2xlarge`.
 It is recommended that hardware used to run the validators at least match the specs of
 the reference hardware in order to ensure they are able to process all blocks
-in time. If you use subpar hardware you will possibly run into performance issues, less era points and even slashes.
+in time. If you use subpar hardware you will possibly run into performance issues, get less era points, and potentially even slashed.
 
 - **CPU**
   - x86-64 compatible;
@@ -92,7 +92,7 @@ in time. If you use subpar hardware you will possibly run into performance issue
 - **Network**
   - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to support a large number of para-chains and allow for proper congestion control in busy network situations.
 
-The specs posted above are not a *hard* requirement to run a validator, but are considered best practice.  
+The specs posted above are not a *hard* requirement to run a validator, but are considered best practice.
 Running a validator is a responsible task; using professional hardware is a must in any way.
 
 ### Node Prerequisites: Install Rust and Dependencies
@@ -650,9 +650,9 @@ Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to
 ## Note about VPS
 
 VPS providers are very popular for running servers of any kind.
-Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general. 
-This does not mean that every provider who advertises a specific performance will also deliver it. 
-Please do your own verification that you get the advertised performance before running a live validator on it. 
+Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general.
+This does not mean that every provider who advertises a specific performance will also deliver it.
+Please do your own verification that you get the advertised performance before running a live validator on it.
 The following server types showed acceptable performance. Please note that this is not an endorsement in any way:
 - GCP's *c2* and *c2d* machine families
 - AWS's *c6id* machine family
@@ -660,7 +660,7 @@ The following server types showed acceptable performance. Please note that this 
 The following additional configurations were applied to the instances to tune their performance:
 
 ### Disable [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)
-As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. The node still profits from multiple cores when doing networking and other non-runtime operations. It is therefore still necessary to run it on at least the minimum required number of cores.  
+As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. The node still profits from multiple cores when doing networking and other non-runtime operations. It is therefore still necessary to run it on at least the minimum required number of cores.
 Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core rather than being presented to the OS as two logical cores.
 SMT implementation on Intel is called Hyper-Threading, on AMD Zen it is 2-way SMT. To disable SMT in runtime:
 ```bash
