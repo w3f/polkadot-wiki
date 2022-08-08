@@ -145,12 +145,13 @@ your changed/staged files.
 To format markdown pages, run the following in the `docs` folder:
 
 ```bash
+# Run on entire project
+npm pretty-quick
+# Run only on staged changes
 npx pretty-quick --staged
-or
+# Run only on local changes
 npx pretty-quick --branch
 ```
-
-To run pretty on the whole project, `npx pretty-quick`.
 
 ### Static Site Generator
 
@@ -218,7 +219,7 @@ you to compare the rendered outputs for both projects locally and simultaneously
 
 ### Inline React Components
 
-Occasionally you may require additional functionality that is outside of the scope of basic markdown. React components can be used inline in existing markdown documents as a solution, allowing you to render custom elements. This is currently the strategy used to [retrieve live on-chain values](https://github.com/w3f/polkadot-wiki/tree/master/Components/RPC-Connection.jsx) and display them directly in the docs without the need to recompile or even reload the web app using RPCs. Examples of existing React components used in this project can be found [here](https://github.com/w3f/polkadot-wiki/tree/master/Components). It is important to try and reuse existing components as much as possible instead of creating new ones to keep the code lean and comprehensive. If you are looking to invoke and embed data from 3rd party APIs or sources, checkout the [Http-Request-Sample component](https://github.com/w3f/polkadot-wiki/tree/master/Components/RPC-Connection.jsx).
+Occasionally you may require additional functionality that is outside of the scope of basic markdown. React components can be used inline in existing markdown documents as a solution, allowing you to render custom elements. This is currently the strategy used to [retrieve live on-chain values](https://github.com/w3f/polkadot-wiki/blob/master/components/RPC-Connection.jsx) and display them directly in the docs without the need to recompile or even reload the web app using RPCs. Examples of existing React components used in this project can be found [here](https://github.com/w3f/polkadot-wiki/tree/master/components). It is important to try and reuse existing components as much as possible instead of creating new ones to keep the code lean and comprehensive. If you are looking to invoke and embed data from 3rd party APIs or sources, checkout the [Http-Request-Sample component](https://github.com/w3f/polkadot-wiki/blob/master/components/Http-Request-Sample.jsx).
 
 ## Internationalization
 
