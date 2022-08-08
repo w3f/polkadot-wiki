@@ -27,7 +27,7 @@ most of the transaction types of the network, including batch transactions from 
 
 :::note Ledger apps may not support all the transactions
 
-Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of transactions supported. It could be possible that some transactions are supported only on a specific version of the app and some transactions are not supported at all by any version. For instance, the staking `rebag` extrinsic is supported on the XL version but not on the light version. The `setIdentity' extrinsic is not supported by any of the app versions.
+Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of transactions supported. It could be possible that some transactions are supported only on a specific version of the app and some transactions are not supported at all by any version. For instance, the staking `rebag` extrinsic is supported on the XL version but not on the light version. The `setIdentity` extrinsic is not supported by any of the app versions.
 
 :::
 
