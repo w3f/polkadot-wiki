@@ -19,17 +19,16 @@ There are several ways to generate a Polkadot account:
 - [Vanity Generator](#vanity-generator)
 - [Ledger Hardware Wallet](../general/ledger.md)
 
-
 :::note
 
-If you prefer video instructions for creating an account using Polkadot JS, we have an easy to 
+If you prefer video instructions for creating an account using Polkadot JS, we have an easy to
 follow guide for beginners [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 
 :::
 
 ## DISCLAIMER: Key Security
 
-The *only* ways to get access to your account are via your secret seed or your account's JSON file
+The _only_ ways to get access to your account are via your secret seed or your account's JSON file
 in combination with a password. You must keep them both secure and private. If you share them with
 anyone they will have full access to your account, including all of your funds. This information is
 a target for hackers and others with bad intentions - see also
@@ -56,7 +55,8 @@ by storing in a sealed plastic bag to prevent water damage, storing it in a fire
 it in metal, etc.) It is recommended that you store multiple copies of the seed in geographically
 separate locations (e.g., one in your home safe and one in a safety deposit box at your bank).
 
-:::caution You should not store your seed on any kind of computer that has or may have access to the internet in the future
+:::caution You should not store your seed on any kind of computer that has or may have access to the
+internet in the future
 
 :::
 
@@ -77,8 +77,8 @@ The Polkadot{.js} Extension provides a reasonable balance of security and usabil
 separate local mechanism to generate your address and interact with Polkadot.
 
 This method involves installing the Polkadot{.js} plugin and using it as a “virtual vault," separate
-from your browser, to store your private keys. It also allows the signing of transactions and similar
-functionality.
+from your browser, to store your private keys. It also allows the signing of transactions and
+similar functionality.
 
 It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
@@ -133,6 +133,44 @@ message.
 Note that this password does NOT protect your seed phrase. If someone knows the twelve words in your
 mnemonic seed, they still have control over your account even if they do not know the password.
 
+### Reset Password using the browser extension
+
+:::warning
+
+Before following the instructions below make sure you have your mnemonic phrase stored in a safe
+place accessible to you.
+
+:::
+
+Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the password of your
+`ACCOUNT 1` using the browser extension you must follow the following steps:
+
+- On the browser extension go to `ACCOUNT 1` and click "Forget account". This action will delete the
+  access to your account. Note that your tokens are still in your account on the polkadot blockchain
+  network.
+- On the browser extension click the "+" button in the topright corner and select the option "Import
+  account from pre-existing seed". After entering the mnemonic phrase you can chose a new password
+  `PSW 2`.
+
+:::info JSON files do not allow to change account passwords
+
+If you add the account to the extension using the option "Restore account from backup JSON file",
+this will allow you to restore access to your account using JSON file protected by the password
+`PSW 1`, but does not let you set a new password. Thus, `PSW 1` will become the account password by
+default.
+
+:::
+
+:::info Accounts on Cold wallets do not need passwords
+
+For hardware wallets such as [Ledger](https://www.ledger.com/), you may have to set a PIN for
+accessing the accounts on the device, but you do not need to set a password for every individual
+account. When you need to make transactions with your account, you are required to sign using your
+Ledger device. Also, Ledger wallets let you generate multiple accounts for multiple blockchain
+networks without having to set different passwords to access such accounts.
+
+:::
+
 ### Set Address for Polkadot Mainnet
 
 Now we will ensure that the addresses are displayed as Polkadot mainnet addresses.
@@ -170,11 +208,10 @@ For detailed build and usage instructions of subkey, please see
 
 :::caution
 
-If you use this method to create your account and clear your cookies in your browser,
-your account will be lost forever if you do not [back it up](learn-account-restore.md). Make sure
-you store your seed phrase in a safe place, or download the account's JSON file if using the
-Polkadot{.js} browser extension. Learn more about account backup and restoration
-[here](learn-account-restore.md).
+If you use this method to create your account and clear your cookies in your browser, your account
+will be lost forever if you do not [back it up](learn-account-restore.md). Make sure you store your
+seed phrase in a safe place, or download the account's JSON file if using the Polkadot{.js} browser
+extension. Learn more about account backup and restoration [here](learn-account-restore.md).
 
 :::
 
@@ -184,16 +221,16 @@ feasible in your situation.
 
 ### Go to Polkadot-JS Apps
 
-Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) (or [dotapps.io](https://dotapps.io/)) 
-and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar at the top 
+Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) (or [dotapps.io](https://dotapps.io/))
+and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar at the top
 of your screen.
 
 ![pjs-01](../assets/accounts/polkadot_js_01.png)
 
 :::info Creating an Account on a different network
 
-You will need to click on the network selection in the top left corner of the navigation menu. 
-A pop-up sidebar will appear listing live, testing, and custom node to choose from. 
+You will need to click on the network selection in the top left corner of the navigation menu. A
+pop-up sidebar will appear listing live, testing, and custom node to choose from.
 
 Do remember to hit the "Switch" button when you want to switch your network.
 
@@ -214,6 +251,18 @@ off the computer you're using. You should not store it in cloud storage, email i
 You can use this backup file to restore your account. This backup file is not readable unless it is
 decrypted with the password.
 
+### Reset password using Polkadot-JS Apps UI
+
+To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the "Accounts"
+tab, click the icon with three vertical dots on your account and select "Change this account's
+password".
+
+:::info
+
+If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension, you need to follow the [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the password of such account.
+
+:::
+
 ### Multi-signature Accounts
 
 Multi-signature accounts are accounts created from several standard accounts (or even other
@@ -222,8 +271,8 @@ multi-sig accounts). For a full explanation, please see the
 
 On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter
 the threshold and add signatories. The threshold must be less than or equal to the number of
-signatories. The threshold indicates how many members must agree for an extrinsic
-submission to be successful. Click `Create` when done.
+signatories. The threshold indicates how many members must agree for an extrinsic submission to be
+successful. Click `Create` when done.
 
 ![Multi-sig account creation](../assets/accounts/create-multisig.png)
 
@@ -251,14 +300,14 @@ second signatory must **repeat the call in full** in order to sign it. In other 
 - because the threshold is 2/3, Charlie can now finalize either or both of these by repeating the
   desired transaction.
 
-Other calls work the same - if a multi-sig wants to become a Council member, the candidacy
-request has to come from the multi-sig, but be signed (re-requested) from each signatory until the
-threshold is reached.
+Other calls work the same - if a multi-sig wants to become a Council member, the candidacy request
+has to come from the multi-sig, but be signed (re-requested) from each signatory until the threshold
+is reached.
 
 Signatories should communicate off-chain to prevent many pending transactions and crossed
 communication lines on-chain.
 
-:::info 
+:::info
 
 The bigger the multisig, the more of a deposit an account needs to put down when initiating a
 multi-sig call. This is to prevent chain storage spam with pending but never-resolved multi-sig
