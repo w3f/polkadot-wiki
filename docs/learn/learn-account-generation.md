@@ -148,7 +148,7 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
 
 :::info JSON files do not allow to change account passwords
 
-If you add the account to the extension using the option "Restore account from backup JSON file", this will allow you to restore access to your account using JSON file `JSON 1` protected by the password `PSW 1`, but not to set a new password. Thus, `PSW 1` will become the account password by default.
+If you add the account to the extension using the option "Restore account from backup JSON file", this will allow you to restore access to your account using JSON file protected by the password `PSW 1`, but does not let you set a new password. Thus, `PSW 1` will become the account password by default.
 
 :::
 
