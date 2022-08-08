@@ -16,7 +16,6 @@ This is a living document and we are relying on our community to contribute to i
 ---
 
 - [:clipboard: About](#clipboard-about)
-- [:battery: Funding](#battery-funding)
 - [:bookmark_tabs: Layers of Polkadot Stack](#bookmark_tabs-layers-of-polkadot-stack)
   - [:iphone: User Interface](#iphone-user-interface)
   - [:wrench: Tools, APIs and Languages](#wrench-tools-apis-and-languages)
@@ -25,7 +24,7 @@ This is a living document and we are relying on our community to contribute to i
   - [:black_circle: Host](#black_circle-host)
   - [:electric_plug: Network Maintenance Tools](#electric_plug-network-maintenance-tools)
   - [:black_nib: Signatures](#black_nib-signatures)
-  - [:green_heart: Consensus](#heavy_check_mark-consensus)
+  - [:green_heart: Consensus](#green_heart-consensus)
   - [:satellite: Networking](#satellite-networking)
 - [:construction_worker: Contributing](#construction_worker-contributing)
 
@@ -54,18 +53,6 @@ The Polkadot Tech Stack is a subset of the Web 3.0 Tech Stack, which consists of
 |--------------------\-------|
 ```
 
-## :battery: Funding
-
-The Web3 Foundation's [Grants Program](https://github.com/w3f/Grants-Program)<!-- NO_STATUS_BADGE --> is focused on funding development work to build out all layers of the Polkadot Tech Stack. 
-
-To get a better understanding of the projects we consider most relevant, you can explore a detailed breakdown of the various layers of the stack below. We divide each of the layers into the various *components* which we feel are most important. We then highlight some of the *existing projects* that address these components as well as some *potentially interesting projects* that we would like to fund.
-
-We typically like to fund more than one project for each component. So, if you see a component with 1 or 0 existing projects, it's likely that we would consider an application in this area. In order to consider funding a proposal that addresses a component with many existing projects, we would need to be persuaded that yours brings unique value to the ecosystem. Such value could come in many forms including but not limited to differentiated functionality, better user experience, the attraction of new users to the ecosystem or a high likelihood that the technology would be maintained for a long period of time.
-
-By describing our areas of priority in detail, we do not wish to preclude grant applications that address different areas that we may not have thought of. We would like to fund all projects that bring value to the ecosystem. If you are considering applying for a project and are not sure if it falls within our areas of interest, please get in touch with us to discuss it.
-
-For open source infrastructure projects that are no longer maintained, we are also interested in signing [maintenance grants](https://github.com/w3f/Grants-Program#hammer_and_wrench-maintenance-grants)<!-- NO_STATUS_BADGE -->. 
-
 ## :bookmark_tabs: Layers of Polkadot Stack
 
 In the below sections you can find a list of different layers of the Polkadot Stack.
@@ -80,7 +67,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
 | Desktop/Web Wallets | [Talisman Web Application](https://github.com/TalismanSociety/talisman-web) :green_heart:, [AirGap](https://github.com/airgap-it/airgap-wallet) :green_heart:, [Sakura](https://github.com/w3finance/sakura) :broken_heart:| User-friendly Wallet based on the [Recovery Pallet](https://github.com/paritytech/substrate/tree/master/frame/recovery)<!-- NO_STATUS_BADGE -->, Web wallets focused on user-onboarding (e.g. using [localStorage](https://github.com/near/near-wallet)<!-- NO_STATUS_BADGE --> )
-| Browser Extensions | [Polkadot{.js}](https://github.com/polkadot-js/extension) :green_heart:, [Polkadot-Js-Plus-Extension](https://github.com/Nick-1979/polkadot-Js-Plus-extension) :green_heart:, [SubWallet-Extension](https://github.com/Koniverse/SubWallet-Extension) :green_heart:, [Doter](https://github.com/ChainBridgeNetworkTeam/Doter) :broken_heart:, [Enzyme](https://github.com/blockxlabs/enzyme/) :broken_heart:, [Speckle OS](https://github.com/GetSpeckle/speckle-browser-extension) :broken_heart:| Sign-in with your polkadot, kusama, etc. account.  
+| Browser Extensions | [Enkrypt](https://github.com/enkryptcom/enKrypt), [Polkadot{.js}](https://github.com/polkadot-js/extension) :green_heart:, [Polkadot-Js-Plus-Extension](https://github.com/Nick-1979/polkadot-Js-Plus-extension) :green_heart:, [SubWallet-Extension](https://github.com/Koniverse/SubWallet-Extension) :green_heart:, [Doter](https://github.com/ChainBridgeNetworkTeam/Doter) :broken_heart:, [Enzyme](https://github.com/blockxlabs/enzyme/) :broken_heart:, [Speckle OS](https://github.com/GetSpeckle/speckle-browser-extension) :broken_heart:| Sign-in with your polkadot, kusama, etc. account.  
 | Mobile Wallets|  [Lunie](https://github.com/luniehq/lunie) :broken_heart:, [Polkawallet](https://github.com/polkawallet-io/polkawallet-flutter) :broken_heart:, [Parity Signer](https://github.com/paritytech/parity-signer) :green_heart:, [imToken](https://github.com/consenlabs/token-core) :broken_heart:, [Fearless Wallet Android](https://github.com/soramitsu/fearless-Android) :green_heart:, [Fearless Wallet iOS](https://github.com/soramitsu/fearless-iOS) :green_heart:, [Stylo](https://github.com/stylo-app/stylo) :green_heart:, [Nova Wallet](https://github.com/nova-wallet/nova-utils) :green_heart:, [Fractapp](https://github.com/fractapp/fractapp/) :broken_heart:
 | Burner Wallets/Faucet| [KodaDot](https://github.com/vue-polkadot/apps) :broken_heart:, [Astar Faucet Bot](https://github.com/AstarNetwork/astar-faucet-bot) :yellow_heart:| Faucet (a sybil-resistant way to receive free tokens)
 | CLI Wallet | [Subwallet](https://github.com/yxf/subwallet) :broken_heart:, [Proxy-hot-wallet](https://github.com/canontech/proxy-hot-wallet) :broken_heart:
@@ -106,10 +93,10 @@ In the below sections you can find a list of different layers of the Polkadot St
 |Substrate Contract clients | [PatractGo](https://github.com/patractlabs/go-patract) :broken_heart:| |
 | SCALE Codec | [Rust](https://github.com/paritytech/parity-scale-codec) :green_heart:, [Python](https://github.com/polkascan/py-scale-codec) :green_heart:, [Golang Chainsafe](https://github.com/ChainSafe/gossamer/tree/development/lib/scale) :green_heart:, [Golang Itering](https://github.com/itering/scale.go) :green_heart:, [C](https://github.com/MatthewDarnell/cScale) :broken_heart:, [C++](https://github.com/soramitsu/scale-codec-cpp) :broken_heart:, [JavaScript](https://github.com/polkadot-js/api) :green_heart:, [AssemblyScript](https://github.com/LimeChain/as-scale-codec) :broken_heart:, [Haskell](https://github.com/airalab/hs-web3/tree/master/src/Codec) :green_heart:, [Java](https://github.com/emeraldpay/polkaj) :yellow_heart:, [Ruby](https://github.com/itering/scale.rb) :broken_heart:, [Dart](https://github.com/nbltrust/dart-scale-codec) :broken_heart:, [Swift](https://github.com/tesseract-one/swift-scale-codec) :broken_heart:, [PHP](https://github.com/gmajor-encrypt/php-scale-codec) :broken_heart:,  [JavaScript by Soramitsu](https://github.com/soramitsu/scale-codec-js-library) :yellow_heart:|
 | Easy Runtime Development | [VS Code Plugin](https://github.com/everstake/vscode-plugin-substrate) :broken_heart:, [Atom Code Plugin](https://github.com/everstake/atom-plugin-substrate) :broken_heart:, [Substrate Playground](https://github.com/paritytech/substrate-playground) :green_heart:, [Substrate Marketplace VS Code Plugin](https://github.com/paritytech/vscode-substrate) :broken_heart:, [AssemblyScript Runtime Generation](https://github.com/LimeChain/as-substrate-runtime) :broken_heart:, [Substrate Package Manager](https://github.com/clearloop/sup) :broken_heart:, [Subsembly: Framework for developing AssemblyScript Substrate Runtimes](https://github.com/LimeChain/subsembly) :broken_heart:, [dependency diener](https://github.com/bkchr/diener) :green_heart:| |
-| Easy Smart Contract Development | [ink-playground](https://github.com/staketechnologies/ink-playground/tree/master) :broken_heart:, [Ink! Remix Plugin](https://github.com/blockchain-it-hr/ink-remix-plugin) :broken_heart:
+| Easy Smart Contract Development | [Typechain Polkadot](https://github.com/Supercolony-net/typechain-polkadot), [ink-playground](https://github.com/staketechnologies/ink-playground/tree/master) :broken_heart:, [Ink! Remix Plugin](https://github.com/blockchain-it-hr/ink-remix-plugin) :broken_heart:
 | Runtime Security | [K specifications](https://github.com/kframework/wasm-semantics) :yellow_heart:, [PolPatrol - Polkadot Runtime Checker](https://github.com/ChainSecurity/polpatrol) :broken_heart:| Automated Runtime checking tools, economic audit simulator such as [gauntlet.network](https://gauntlet.network/)
 | Smart Contract Languages | [Ask!](https://github.com/ask-lang/ask) :green_heart:, [Subscript](https://github.com/slickup/subscript) :broken_heart:, [Solang](https://github.com/hyperledger-labs/solang) :green_heart:, [Ink!](https://github.com/paritytech/ink) :green_heart:, [Move VM Substrate](https://github.com/pontem-network/sp-move) :broken_heart:, [Move smart contract by Neatcoin](https://github.com/neatcoin/neatcoin) :broken_heart:, [Sol2Ink](https://github.com/Supercolony-net/sol2ink) :green_heart:| Functional Programming Languages, other languages with developed toolchains |
-| Smart Contract Security |
+| Smart Contract Security | [Vanguard](https://github.com/Veridise/Vanguard) | 
 | Testing | [Halva](https://github.com/halva-suite/halva) :broken_heart:, [Ink Waterfall](https://github.com/paritytech/ink-waterfall) :yellow_heart:, [Redspot](https://github.com/patractlabs/redspot) :broken_heart:, [MixBytes Tank](https://github.com/mixbytes/tank) :broken_heart:, [sub-flood](https://github.com/NikVolf/sub-flood) :broken_heart:, [Substrate debug-kit](https://github.com/paritytech/substrate-debug-kit) :broken_heart:, [Dotscale - SCALE Codec Comparator](https://github.com/arijitAD/dotscale) :broken_heart:, [Asset CLI tool](https://github.com/JesseAbram/asset_cli_tool) :yellow_heart:, [sub_crash](https://github.com/JesseAbram/unfinished_testing_tool) :broken_heart:, [subwasm](https://github.com/chevdor/subwasm) :yellow_heart:, [subsee](https://github.com/ascjones/subsee) :broken_heart:, [polkadot-lab](https://github.com/w3f/polkadot-lab) :broken_heart:, [Zombienet](https://github.com/paritytech/zombienet) :green_heart:, [RPC-perf](https://github.com/dwellir-public/rpc-perf/) :yellow_heart:
 | Testnet | [Polkadot Launch](https://github.com/paritytech/polkadot-launch) :green_heart:, [polkadot-starship](https://github.com/koute/polkadot-starship) :broken_heart:, [Fork off Substrate](https://github.com/maxsam4/fork-off-substrate) :broken_heart:, [Parachain Launch](https://github.com/open-web3-stack/parachain-launch) :green_heart:|
 | Benchmarking | [Substrate Graph Benchmarks](https://github.com/shawntabrizi/substrate-graph-benchmarks) :broken_heart:|
@@ -195,8 +182,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 |-|-|-
 | SR25519 | [rust](https://github.com/w3f/schnorrkel) :green_heart:(contains partial bindings for C, JavaScript, and Python), [.Net bindings](https://github.com/gautamdhameja/sr25519-dotnet) :broken_heart:, [C](https://github.com/usetech-llc/sr25519) :broken_heart:*(old)*, [C](https://github.com/TerenceGe/sr25519-donna) :broken_heart:*(new)*, [C/C++](https://github.com/soramitsu/soramitsu-sr25519-crust) :broken_heart:, [C#](https://github.com/usetech-llc/sr25519_dotnet) :broken_heart:, [Go](https://github.com/ChainSafe/go-schnorrkel) :green_heart:, [java](https://github.com/debuggor/schnorrkel-java) :broken_heart:, [PHP](https://github.com/gmajor-encrypt/sr25519-bindings) :yellow_heart:
 | Distributed key generation (DKG) | [keygen.rs](https://github.com/isislovecruft/frost-dalek) :broken_heart:
-| Validator HSMs| |
-| Validator HSM-like solutions|
+| Validator HSMs| [Zondax Remote Signer](https://github.com/Zondax/buildroot-zondax) 
 
 ### :green_heart: Consensus
 
