@@ -11,7 +11,7 @@ slug: ../build-open-source
 
 The goal of this page is to provide an overview of the open-source Polkadot/Kusama Tech Stack.
 
-This is a living document and we are relying on our community to contribute to it and help maintain it. [**Please feel free to make edits and additions via pull requests**](#construction_worker-contributing). We apologize if we missed your project!
+This is a living document and we are relying on our community to contribute to it and help maintain it. [**Please feel free to make edits and additions via pull requests**](#%EF%B8%8F-contributing). We apologize if we missed your project!
 
 ---
 
