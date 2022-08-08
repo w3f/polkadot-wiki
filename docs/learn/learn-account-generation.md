@@ -141,7 +141,7 @@ Before following the instructions below make sure you have your mnemonic phrase 
 
 :::
 
-Let's say you created `ACCOUNT 1` protected by password `PSW 1`, and you also exported the JSON file `JSON 1`. To reset the passowrd of your polkadot `ACCOUNT 1` using the browser extension you must follow the following steps:
+Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the password of your `ACCOUNT 1` using the browser extension you must follow the following steps:
 
 - On the browser extension go to `ACCOUNT 1` and click "Forget account". This action will delete the access to your account. Note that your tokens are still in your account on the polkadot blockchain network.
 - On the browser extension click the "+" button in the topright corner and select the option "Import account from pre-existing seed". After entering the mnemonic phrase you can chose a new password `PSW 2`.
