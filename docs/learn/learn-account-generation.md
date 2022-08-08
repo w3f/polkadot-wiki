@@ -246,7 +246,7 @@ To reset the password of an account created with Polkadot-JS you just need to go
 
 :::info
 
-If you create an account first using Polkadot-JS, and then you add it to the browser extension, to change the passowrd of such account you need to follow the [guidelines for the browser extension](#reset-password).
+If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension, you need to follow the [guidelines for the browser extension](#reset-password) to change the password of such account.
 
 :::
 
