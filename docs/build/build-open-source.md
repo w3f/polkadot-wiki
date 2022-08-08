@@ -15,18 +15,18 @@ This is a living document and we are relying on our community to contribute to i
 
 ---
 
-- [:clipboard: About](#clipboard-about)
-- [:bookmark_tabs: Layers of Polkadot Stack](#bookmark_tabs-layers-of-polkadot-stack)
-  - [:iphone: User Interface](#iphone-user-interface)
-  - [:wrench: Tools, APIs and Languages](#wrench-tools-apis-and-languages)
-  - [:memo: ink Smart Contracts](#memo-ink-smart-contracts)
-  - [:link: Chains and Pallets](#link-chains-and-pallets)
-  - [:black_circle: Host](#black_circle-host)
-  - [:electric_plug: Network Maintenance Tools](#electric_plug-network-maintenance-tools)
-  - [:black_nib: Signatures](#black_nib-signatures)
-  - [:green_heart: Consensus](#green_heart-consensus)
-  - [:satellite: Networking](#satellite-networking)
-- [:construction_worker: Contributing](#construction_worker-contributing)
+- [:clipboard: About](-about)
+- [:bookmark_tabs: Layers of Polkadot Stack](-layers-of-polkadot-stack)
+  - [:iphone: User Interface](-user-interface)
+  - [:wrench: Tools, APIs and Languages](-tools-apis-and-languages)
+  - [:memo: ink Smart Contracts](-ink-smart-contracts)
+  - [:link: Chains and Pallets](-chains-and-pallets)
+  - [:black_circle: Host](-host)
+  - [:electric_plug: Network Maintenance Tools](-network-maintenance-tools)
+  - [:black_nib: Signatures](-signatures)
+  - [:green_heart: Consensus](-consensus)
+  - [:satellite: Networking](-networking)
+- [:construction_worker: Contributing](-contributing)
 
 ## :clipboard: About
 
