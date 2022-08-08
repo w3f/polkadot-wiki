@@ -16,7 +16,6 @@ This is a living document and we are relying on our community to contribute to i
 ---
 
 - [:clipboard: About](#-about)
-- [:battery: Funding](#-funding)
 - [:bookmark_tabs: Layers of Polkadot Stack](#-layers-of-polkadot-stack)
   - [:iphone: User Interface](#-user-interface)
   - [:wrench: Tools, APIs and Languages](#-tools-apis-and-languages)
