@@ -50,7 +50,7 @@ If you are interested in obtaining KSM for building or research, you can apply t
 
 Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 
-- [Darwinia Grants Program](https://github.com/darwinia-network/collaboration/blob/master/grant/README.md#grant-program)
+- [Darwinia Grants Program](https://crab.network/#/grants-programs)
 - [Moonbeam Grants Program](https://moonbeam.foundation/grants/)
 - [Edgeware Grants and Bounties](https://gov.edgewa.re/discussion/1132-edgeware-proposal-process-and-template)
 - [Crust Grants Program](https://github.com/crustio/Crust-Grants-Program)
