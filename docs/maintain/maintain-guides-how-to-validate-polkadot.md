@@ -299,8 +299,7 @@ cargo build --profile production
 
 :::note Compilation Errors
 
-If you run into compile errors, you may have to switch to a less recent nightly. This can be
-done by running:
+If you run into compile errors, you may have to pin the version of Rust compiler to one that was used to build the release. Check out `Rust compiler versions` section in the release notes. This can be done by running:
 
 ```sh
 rustup install nightly-2022-05-18
