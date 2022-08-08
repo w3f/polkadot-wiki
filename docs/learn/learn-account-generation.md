@@ -251,15 +251,15 @@ off the computer you're using. You should not store it in cloud storage, email i
 You can use this backup file to restore your account. This backup file is not readable unless it is
 decrypted with the password.
 
-### Reset password using Polkadot-JS
+### Reset password using Polkadot-JS Apps UI
 
-To reset the password of an account created with Polkadot-JS you just need to go in the "Accounts"
+To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the "Accounts"
 tab, click the icon with three vertical dots on your account and select "Change this account's
 password".
 
 :::info
 
-If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension, you need to follow the [guidelines for the browser extension](#reset-password) to change the password of such account.
+If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension, you need to follow the [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the password of such account.
 
 :::
 
