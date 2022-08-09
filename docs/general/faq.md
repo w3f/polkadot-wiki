@@ -92,7 +92,7 @@ You can also use some tools some to perform estimations.
   can provide exact results of running an election on the current set of validators using the same
   Rust code that is ran in Polkadot.
 
-- [Validator stats script](https://github.com/ansonla3/kusama-validator-stats) can give you an
+- [Validator stats script](https://github.com/w3f/validator-stats) can give you an
   estimate that is based on the currently elected set, as well as some statistics about Kusama
   validators.
 
