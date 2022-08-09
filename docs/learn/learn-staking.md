@@ -8,29 +8,30 @@ slug: ../learn-staking
 ---
 import RPC from "./../../components/RPC-Connection"
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
-as its [consensus](learn-consensus.md) mechanism. The system encourages 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
-as nominators. Nominators may back up to 
+Here you will lean about what is staking, why is important and how it works for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+
+# Introduction
+
+Blockchain netowrks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add blocks on the chain. The two main consenuses are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain. The process of locking tokens on the chain is also called `staking`. This is the main difference between PoS and PoW netwroks like Bitcoin that base their security on solving mathematic puzzles, a solution that has been criticized due to the high amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for token holders to become active participatns who contribute to the security and economic stability of the network. PoS networks in general are therefore more inclusive than PoW networks, as participants do not need to have either technical knowledge about blockchain technology nor experience in running minining equipment. PoS ensures that everybody has "skin in the game" and thus can be held accountable. In case of misbehaviour validators can be punished or `slashed`, and depending on the gravity of the situation their stake can be partly or fully confiscated. There are different versions of PoS, here we will concentrate on [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+
+# Nominated Proof-of-Stake
+
+## Overview
+
+Nominated Proof-of-Stake (NPoS) encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as `nominators`. Nominators may back up to 
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
-validators as trusted validator candidates. Both validators and nominators lock their tokens as collateral 
-and receive staking rewards.
+validators as trusted validator candidates. The action of nominating consists in locking or bonding tokens (stake) that are allocated to the validator candidates. Such stake is used to increase the amount of allocated tokens to such candidates, increasing their chance of being selected by the consensus for block production. 
 
-The staking system pays out rewards essentially equally to all validators regardless of stake.
-Having more stake on a validator does not influence the amount of block rewards it receives.
-However, there is a probabilistic component to reward calculation (discussed below), so rewards may
-not be exactly equal for all validators in a given era.
+Both validators and nominators lock their tokens on chain and receive staking rewards at the end of each `era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during which an active set of validators is producing blocks and performing other actions on chain. Each era is divided into 6 epochs or `sessions` during which validators are assigned as block producers to specific timeframes or `slots`.
 
-Distribution of the rewards are pro-rata to all stakers after the validator's commission is
-deducted. In this way, the network creates incentives for the nomination of lower-staked validators
-to create an equally-staked validator set.
+Validators who produce a block are rewarded with tokens and they can share such rewards with their nominators. The staking system pays out rewards equally to all validators regardless of stake. Having more stake on a validator does not influence the amount of block rewards it receives. This avoids centralization of power to few validators. There is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly equal for all validators. Also, during each era validators can earn `era points` by doing different tasks on chain. The more the points, the higher the reward for a specific era. This promotes validators' activity on chain. Distribution of the rewards are pro-rata to all stakers after the validator's commission is deducted. In case of misbehaviour both validator and associated nominators can be slashed.
 
 ## How does staking work?
 
-### 1. Identifying which role you are
+### 1. Identifying your role
 
-In staking, you can be either a [nominator or a validator](#validators-and-nominators).
+In PoS networks you can be either a [nominator or a validator](#validators-and-nominators).
 
 As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
 chain's native token. The earned rewards can be bonded (locked) immediately for staking on your
