@@ -16,8 +16,7 @@ pools! Soon they will be deployed on Polkadot.
 
 :::
 
-{{ kusama: Kusama :kusama }} on-chain nomination pool data:
-{{ kusama: <NominationPools network="kusama"/> :kusama }}
+{{ kusama: Kusama on-chain nomination pool data: <NominationPools network="kusama"/> :kusama }}
 
 :::tip Have questions on Nomination Pools?
 

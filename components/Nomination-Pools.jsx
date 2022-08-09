@@ -26,7 +26,6 @@ const KusamaDefaults = {
 }
 
 function NominationPools({ network }) {
-
   // Set defaults based on network
   let defaults = undefined;
   if (network === "polkadot") { defaults = PolkadotDefaults }
