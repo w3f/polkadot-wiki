@@ -66,35 +66,34 @@ instead.
 ### Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may
-choose whatever [VPS](#vps-list) provider that your prefer, and whatever operating system you are
-comfortable with. For this guide we will be using **Ubuntu 18.04**, but the instructions should be
+choose whatever [VPS](#note-about-vps) provider that your prefer. As OS it is best to use a recent Debian Linux. For this guide we will be using **Ubuntu 22.04**, but the instructions should be
 similar for other platforms.
 
-The transactions weights in Polkadot were benchmarked on standard hardware. It is recommended that
-validators run at least the standard hardware in order to ensure they are able to process all blocks
-in time. The following are not _minimum requirements_ but if you decide to run with less than this
-beware that you might have performance issue.
+#### Reference Hardware
 
-#### Standard Hardware
-
-For the full details of the standard hardware please see
-[here](https://github.com/paritytech/substrate/pull/5848).
+The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services (AWS).
+To be specific, we used `c2d-highcpu-8` VM instance on GCP and `c6id.2xlarge` on AWS.
+It is recommended that the hardware used to run the validators at least matches the specs of
+the reference hardware in order to ensure they are able to process all blocks
+in time. If you use subpar hardware you will possibly run into performance issues, get less era points, and potentially even get slashed.
 
 - **CPU**
   - x86-64 compatible;
   - Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen);
+  - 4 physical cores @ 3.4GHz;
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
-  - Prefer single-threaded performance over higher cores count.
+  - Prefer single-threaded performance over higher cores count. A comparison of single-threaded performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
 - **Storage**
-  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth).
+  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In general, the latency is more important than the throughput.
 - **Memory**
-  - 64GB DDR4 ECC.
+  - 16GB DDR4 ECC.
 - **System**
-  - Linux Kernel 5.16 or newer
+  - Linux Kernel 5.16 or newer.
+- **Network**
+  - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to support a large number of parachains and allow for proper congestion control in busy network situations.
 
-The specs posted above are by no means the minimum specs that you could use when running a
-validator, however you should be aware that if you are using less you may need to toggle some extra
-optimizations in order to be equal to other validators that are running the standard.
+The specs posted above are not a *hard* requirement to run a validator, but are considered best practice.
+Running a validator is a responsible task; using professional hardware is a must in any way.
 
 ### Node Prerequisites: Install Rust and Dependencies
 
@@ -160,7 +159,7 @@ the systems within the network. Currently it is required that validators' local 
 reasonably in sync, so you should be running NTP or a similar service. You can check whether you
 have the NTP client by running:
 
-_If you are using Ubuntu 18.04 / 19.04, NTP Client should be installed by default._
+_If you are using Ubuntu 18.04 or a newer version, NTP Client should be installed by default._
 
 ```sh
 timedatectl
@@ -300,13 +299,12 @@ cargo build --profile production
 
 :::note Compilation Errors
 
-If you run into compile errors, you may have to switch to a less recent nightly. This can be
-done by running:
+If you run into compile errors, you may have to pin the version of Rust compiler to the one that was used to build the release. Check out `Rust compiler versions` section in the release notes. This can be done by running:
 
 ```sh
-rustup install nightly-2021-06-09
-rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-09
-cargo +nightly-2021-06-09 build --release
+rustup install nightly-2022-05-18
+rustup target add wasm32-unknown-unknown --toolchain nightly-2022-05-18
+cargo +nightly-2022-05-18 build --release
 ```
 
 You may also need to run the build more than once.
@@ -401,20 +399,20 @@ verified. You can then compare that to the current highest block via
 
 #### Database Snapshot Services
 
-If you start a node for the first time, it will start building from the genesis block. This process can 
+If you start a node for the first time, it will start building from the genesis block. This process can
 take a while depending on the database size. To make this process faster, snapshots can be used. Snapshots
-are compressed backups of the database directory of Polkadot/Kusama nodes, containing the whole chain 
-(or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed below are a few 
-public snapshot providers for Polkadot and Kusama. 
+are compressed backups of the database directory of Polkadot/Kusama nodes, containing the whole chain
+(or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed below are a few
+public snapshot providers for Polkadot and Kusama.
 
 - [STAKEWORLD](https://stakeworld.nl/docs/snapshot)
 - [Polkachu](https://polkachu.com/snapshots)
 - [Polkashots](https://polkashots.io/)
 
-:::caution 
+:::caution
 
-For the security of the network, it is recommended that you sync from scratch, even if you are running your 
-node in pruning mode for validation. The reason is that if these snapshots get corrupted and a majority of nodes 
+For the security of the network, it is recommended that you sync from scratch, even if you are running your
+node in pruning mode for validation. The reason is that if these snapshots get corrupted and a majority of nodes
 run based on these snapshots, the network could end up running on a non-canonical chain.
 
 :::
@@ -642,13 +640,83 @@ other peers over the network.
 ./target/release/polkadot purge-chain
 ```
 
-## VPS List
+:::info
 
+Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to quickly get the answers you need.
+
+:::
+
+## Note about VPS
+
+VPS providers are very popular for running servers of any kind.
+Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general.
+
+:::note
+
+Before you run a live Validator, please verify if the advertised performance is actually delivered consistently by the VPS provider.
+
+:::
+The following server types showed acceptable performance during the benchmark tests. Please note that this is not an endorsement in any way:
+- GCP's *c2* and *c2d* machine families
+- AWS's *c6id* machine family
+
+The following additional configurations were applied to the instances to tune their performance:
+
+### Disable [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)
+As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. The node still profits from multiple cores when doing networking and other non-runtime operations. It is therefore still necessary to run it on at least the minimum required number of cores.
+Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core rather than being presented to the OS as two logical cores.
+SMT implementation is called _Hyper-Threading_ on Intel and _2-way SMT_ on AMD Zen. To disable SMT in runtime:
+```bash
+for cpunum in $(cat /sys/devices/system/cpu/cpu*/topology/thread_siblings_list | cut -s -d, -f2- | tr ',' '\n' | sort -un)
+do
+  echo 0 > /sys/devices/system/cpu/cpu$cpunum/online
+done
+```
+It will disable every other (vCPU) core.
+
+To save changes permanently add `nosmt=force` as kernel parameter. Edit `/etc/default/grub` and add `nosmt=force` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After the reboot you should see half of the cores are offline. Run `lscpu --extended` to confirm.
+
+### Disable automatic NUMA balancing
+If you have multiple physical CPUs (CPU0 and CPU1) in the system each with its own memory bank (MB0 and MB1), then it is usually slower for a CPU0 to access MB1 due to the slower interconnection. To prevent the OS from automatically moving the running Substrate process from one CPU to another and thus causing an increased latency, it is recommended to disable automatic NUMA balancing.
+
+With automatic NUMA balancing disabled, an OS will always run a process on the same NUMA node where it was initially scheduled.
+
+To disable NUMA balancing in runtime:
+```bash
+sysctl kernel.numa_balancing=0
+```
+To save changes permanently, update startup options and reconfigure GRUB. Edit `/etc/default/grub` and add `numa_balancing=disable` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After reboot you can confirm the change by running `sysctl -a | grep 'kernel.numa_balancing'` and checking if the parameter is set to 0
+
+### Configure Spectre/Meltdown Mitigations
+Spectre and Meltdown are vulnerabilities discovered in modern CPUs a few years ago. Mitigations were made to the Linux kernel to cope with the multiple variations of these attacks. Check out https://meltdownattack.com/ for more info.
+
+Initially those mitigations added ~20% penalty to the performance of the workloads. As CPU manufacturers started to roll-out mitigations implemented in hardware, the performance gap [narrowed down](https://www.phoronix.com/scan.php?page=article&item=3-years-specmelt&num=1). As the benchmark demonstrates, the performance penalty got reduced to ~7% on Intel 10th Gen CPUs. This is true for the workloads running on both bare-metal and VMs. But the penalty remains high for the containerized workloads in some cases.
+
+As demonstrated in [Yusuke Endoh's article](http://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html), a performance penalty for containerized workloads can be as high as 100%. This is due to SECCOMP profile being overprotective about applying Spectre/Meltdown mitigations without providing real security. A longer explanation is a available in the [kernel patch discussion](https://lkml.org/lkml/2020/11/4/1135).
+
+Linux 5.16 [loosened the protections](https://www.phoronix.com/scan.php?page=news_item&px=Linux-Spectre-SECCOMP-Default) applied to SECCOMP threads by default. Containers running on kernel 5.16 and later now don't suffer from the performance penalty implied by using a SECCOMP profile in container runtimes.
+
+#### For Linux >= 5.16
+You are all set. The performance of containerized workloads is on par with non-containerized ones. You don't have to do anything.
+
+#### For Linux < 5.16
+You'll need to disable mitigations for Spectre V2 for user-space tasks as well as Speculative Store Bypass Disable (SSBD) for Spectre V4.
+[This patch message](https://git.kernel.org/pub/scm/linux/kernel/git/kees/linux.git/commit/?h=for-next/seccomp&id=2f46993d83ff4abb310ef7b4beced56ba96f0d9d) describes the reasoning for this default change in more detail:
+
+> Ultimately setting SSBD and STIBP by default for all seccomp jails is a bad sweet spot and bad default with more cons than pros that end up reducing security in the public cloud (by giving an huge incentive to not expose SPEC_CTRL which would be needed to get full security with IBPB after setting nosmt in the guest) and by excessively hurting performance to more secure apps using seccomp that end up having to opt out with SECCOMP_FILTER_FLAG_SPEC_ALLOW.
+
+To disable the mitigations edit `/etc/default/grub` and add `spec_store_bypass_disable=prctl spectre_v2_user=prctl` to `GRUB_CMDLINE_LINUX_DEFAULT` variable, run `sudo update-grub`, then reboot.
+
+Note that mitigations are not disabled completely. You can fully disable all the available kernel mitigations by setting `mitigations=off`. But we don't recommend doing this unless you run a fully trusted code on the host.
+
+### VPS List
+
+- [Google Cloud](https://cloud.google.com/)
+- [Amazon AWS](https://aws.amazon.com/)
 - [OVH](https://www.ovh.com.au/)
 - [Digital Ocean](https://www.digitalocean.com/)
 - [Vultr](https://www.vultr.com/)
 - [Linode](https://www.linode.com/)
-- [Contabo](https://contabo.com/)
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
