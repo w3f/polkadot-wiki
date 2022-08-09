@@ -25,7 +25,7 @@ let table = <table>
 		<tr>
 			<td>1</td>
 			<td>1</td>
-			<td  id="p1"></td>
+			<td id="p1"></td>
 		</tr>
 		<tr>
 			<td>2</td>
@@ -77,15 +77,15 @@ const ksmLocking = {
 	p32: 256
 }
 
-function VoluntaryLocking({network}) { 
+function VoluntaryLocking({ network }) {
 	const [docType, setDocType] = useState("");
 
 	useEffect(() => {
-    // This is a hack to get the document type.
+		// This is a hack to get the document type.
 		// It is required because the standard {{ polkadot/kusama: :polkadot/kusama}}
 		// can't be used to render a table (can't put a <table> in a <p>).
 		// So, we use the same component for Polkadot and Kusama and figure it out here.
-    const title = document.title;
+		const title = document.title;
 		if (title === "Governance · Polkadot Wiki") {
 			updateTable("polkadot")
 		} else if (title === "Governance · Guide") {
@@ -93,7 +93,7 @@ function VoluntaryLocking({network}) {
 		} else {
 			console.log("Unknown wiki/guide type");
 		}
-    }, []);
+	}, []);
 
 	return (table);
 }
