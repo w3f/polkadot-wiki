@@ -27,7 +27,22 @@ Both validators and nominators lock their tokens on chain and receive staking re
 
 Validators who produce a block are rewarded with tokens and they can share such rewards with their nominators. The staking system pays out rewards equally to all validators regardless of stake. Having more stake on a validator does not influence the amount of block rewards it receives. This avoids centralization of power to few validators. There is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly equal for all validators. Also, during each era validators can earn `era points` by doing different tasks on chain. The more the points, the higher the reward for a specific era. This promotes validators' activity on chain. Distribution of the rewards are pro-rata to all stakers after the validator's commission is deducted. In case of misbehaviour both validator and associated nominators can be slashed.
 
-## How does staking work?
+## Being a nominator
+
+Since validator slots are limited, most of those who wish to stake their DOT and contribute economic security to the network will be nominators, thus here we focus on the role of nominators. However, it is worth to mention that validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
+consensus in GRANDPA, validate the state transition function of parachains, and possibly some other
+responsibilities regarding data availability and [XCM](learn-cross-consensus.md). If you want to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
+
+Nominators have far fewer responsibilities than validators. Those include monitoring their
+validators' performance, keeping an eye on changing commission rates (a validator can
+change commission at any time), and general health monitoring of their validators'
+account. Thus, while not set-it-and-forget-it, a nominator's experience is relatively hands-off
+compared to a validators. If you want to be come a nominator check [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide.
+
+
+
+
+
 
 ### 1. Identifying your role
 
@@ -273,30 +288,6 @@ should never use any account key for a "hot" session key in particular.
 
 Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
 Polkadot and the cryptography behind it [see here](learn-keys.md).
-
-## Validators and Nominators
-
-Since validator slots are limited, most of those who wish to stake their DOT and contribute economic
-security to the network will be nominators.
-
-Validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
-consensus in GRANDPA, validate the state transition function of parachains, and possibly some other
-responsibilities regarding data availability and [XCM](learn-cross-consensus.md).
-
-Nominators, on the other hand, have far fewer responsibilities. Those include monitoring their
-validators' performance (uptime), keeping an eye on changing commission rates (a validator can
-change commission at any time), and general health monitoring of their and their validators'
-account. Thus, while not set-it-and-forget-it, a nominator's experience is relatively hands-off
-compared to a validators.
-
-![staking](../assets/NPoS/article-2.png)
-
-### Want to stake DOT?
-
-- [Nominator Guide](../maintain/maintain-guides-how-to-nominate-polkadot.md) - Become a nominator on
-  the Polkadot network.
-- [Validator Guide](../maintain/maintain-guides-how-to-validate-polkadot.md) - Become a validator on
-  the Polkadot network.
 
 ## Slashing
 
