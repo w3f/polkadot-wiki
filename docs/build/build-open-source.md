@@ -11,24 +11,24 @@ slug: ../build-open-source
 
 The goal of this page is to provide an overview of the open-source Polkadot/Kusama Tech Stack.
 
-This is a living document and we are relying on our community to contribute to it and help maintain it. [**Please feel free to make edits and additions via pull requests**](#construction_worker-contributing). We apologize if we missed your project!
+This is a living document and we are relying on our community to contribute to it and help maintain it. [**Please feel free to make edits and additions via pull requests**](#contributing). We apologize if we missed your project!
 
 ---
 
-- [:clipboard: About](#clipboard-about)
-- [:bookmark_tabs: Layers of Polkadot Stack](#bookmark_tabs-layers-of-polkadot-stack)
-  - [:iphone: User Interface](#iphone-user-interface)
-  - [:wrench: Tools, APIs and Languages](#wrench-tools-apis-and-languages)
-  - [:memo: ink Smart Contracts](#memo-ink-smart-contracts)
-  - [:link: Chains and Pallets](#link-chains-and-pallets)
-  - [:black_circle: Host](#black_circle-host)
-  - [:electric_plug: Network Maintenance Tools](#electric_plug-network-maintenance-tools)
-  - [:black_nib: Signatures](#black_nib-signatures)
-  - [:green_heart: Consensus](#green_heart-consensus)
-  - [:satellite: Networking](#satellite-networking)
-- [:construction_worker: Contributing](#construction_worker-contributing)
+- [About](#about)
+- [Layers of Polkadot Stack](#layers-of-polkadot-stack)
+  - [User Interface](#user-interface)
+  - [Tools, APIs and Languages](#tools-apis-and-languages)
+  - [ink Smart Contracts](#ink-smart-contracts)
+  - [Chains and Pallets](#chains-and-pallets)
+  - [Host](#host)
+  - [Network Maintenance Tools](#network-maintenance-tools)
+  - [Signatures](#signatures)
+  - [Consensus](#consensus)
+  - [Networking](#networking)
+- [Contributing](#contributing)
 
-## :clipboard: About
+## About
 
 The Polkadot Tech Stack is a subset of the Web 3.0 Tech Stack, which consists of the **open-source** technologies contributing to and relying on [Polkadot](https://polkadot.network/), [Kusama](https://kusama.network/) and [Substrate](https://substrate.dev/). It is meant to be used for decentralized application (Dapp) development within numerous verticals including DeFi, Gaming, Provenance and many others not pictured below.
 
@@ -53,7 +53,7 @@ The Polkadot Tech Stack is a subset of the Web 3.0 Tech Stack, which consists of
 |--------------------\-------|
 ```
 
-## :bookmark_tabs: Layers of Polkadot Stack
+## Layers of Polkadot Stack
 
 In the below sections you can find a list of different layers of the Polkadot Stack.
 
@@ -62,7 +62,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 - :yellow_heart: Stale (no activity since 1 month)
 - :broken_heart: Unmaintained (no activity for more than 3 months)
 
-### :iphone: User Interface 
+### User Interface 
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -84,7 +84,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Identicon | [PolkadotWebIdenticon](https://github.com/RidOne-technologies/polkadot-web-identicon) :broken_heart:, [Polkadot Angular IdentIcon](https://github.com/RidOne-technologies/polkadot-angular-identicon) :broken_heart:, [Bird Identicon](https://github.com/Noc2/Bird-Identicon) :broken_heart:|
 | Other | [KappaSigmaMu Fratority](https://github.com/KappaSigmaMu/ksm-app) :green_heart:, [Quadratic Funding Webapp](https://github.com/OAK-Foundation/quadratic-funding-webapp) :broken_heart:, [Polkawatch](https://gitlab.com/polkawatch/polkawatch), [Bytepay](https://github.com/bytepayment/bytepay) :yellow_heart:, [charging-management-platform](https://github.com/Delmonicos/charging-management-platform) :broken_heart:, [subidentity-webapp](https://github.com/TDSoftware/subidentity-webapp) :green_heart:, [OpenSquare Paid QA](https://github.com/opensquare-network/paid-qa/) :green_heart:| Portfolio Viewer like Zapper or Zerion
 
-### :wrench: Tools, APIs and Languages
+### Tools, APIs and Languages
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -108,7 +108,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Wallet Connection | [Tesseract](https://github.com/tesseract-one/Tesseract.rs) :yellow_heart:, [WalletConnect](https://github.com/WalletConnect-Labs/walletconnect-v2-monorepo) :grey_question:| |
 | Other | [open-web3 JS library](https://github.com/open-web3-stack/open-web3.js) :green_heart:, [VM-Bridge](https://github.com/CycanTech/GVM-Bridge) :broken_heart:, [srtool](https://github.com/paritytech/srtool) :yellow_heart:, [Substrate Tip Bot](https://github.com/paritytech/substrate-tip-bot) :green_heart:, [ORI (Onchain Risk Intelligence)](https://github.com/syntifi/ori) :broken_heart:, [PolkaTools](https://github.com/albertov19/PolkaTools) :green_heart:, [polkadot-scripts](https://github.com/paritytech/polkadot-scripts) :yellow_heart:, [Static analyzer for Substrate FRAME's pallets](https://github.com/simon-perriard/saft) :green_heart:, [Sube](https://github.com/virto-network/sube) :broken_heart:, [data-store-sidecar](https://github.com/CESSProject/data-store-sidecar) :green_heart:
 
-### :memo: ink Smart Contracts 
+### ink Smart Contracts 
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -120,7 +120,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Other | [Candle Auctions](https://github.com/agryaznov/candle-auction-ink) :broken_heart:, [polkasign-contract](https://github.com/SubDAO-Network/polkasign-contract) :broken_heart:, [OCEX](https://github.com/bsn-si/ocex-cli) :yellow_heart:, [Roloi](https://github.com/RoloiMoney/roloi-polkadot-w3f-grant) :green_heart:| |
 
 
-### :link: Chains and Pallets 
+### Chains and Pallets 
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -156,7 +156,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Marketplaces | [Dot Marketplace](https://github.com/WowLabz/dot-marketplace-v2/tree/Phase2_Milestone2) :green_heart:| 
 | Other | [Substrate Account Filter](https://github.com/gautamdhameja/substrate-account-filter) :broken_heart:, [Subtensor](https://github.com/opentensor/subtensor) :green_heart:, [BitGreen](https://github.com/bitgreen/bitg-node) :green_heart:, [AdMeta](https://github.com/AdMetaNetwork/admeta) :green_heart:, [Chocolate Node](https://github.com/chocolatenetwork/chocolate-node) :green_heart:, [Virto Network](https://github.com/virto-network/virto-node) :yellow_heart:, [Substrate Validator Set](https://github.com/gautamdhameja/substrate-validator-set) :green_heart:, [DEIP](https://github.com/DEIPworld/deip-node) :green_heart:, [DeBio](https://github.com/debionetwork/debio-node) :green_heart:, [MathChain](https://github.com/mathwallet/MathChain) :broken_heart:, [encointer](https://github.com/encointer/encointer-node) :green_heart:, [Grassland](https://github.com/grasslandnetwork/substrate_node) :broken_heart:, [Substrate-Tutorials](https://github.com/rusty-crewmates/substrate-tutorials) :green_heart:, [Fair Squares](https://github.com/Fair-Squares/fair-squares) :green_heart:, [Totem Live Accounting](https://github.com/totem-tech/totem) :broken_heart:| Decentralized review/reputation system
 
-### :black_circle: Host
+### Host
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -166,7 +166,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | AssemblyScript |
 | Light Client | [Substrate Connect](https://github.com/paritytech/substrate-connect) :green_heart:|
 
-### :electric_plug: Network Maintenance Tools
+### Network Maintenance Tools
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -177,7 +177,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Validator monitoring | [ONE-T](https://github.com/turboflakes/one-t), [SubVT](https://github.com/helikon-labs/subvt) :yellow_heart:, [P.A.N.I.C.](https://github.com/SimplyVC/panic_polkadot) :broken_heart:, [Polkalert](https://github.com/galacticcouncil/polkalert) :broken_heart:, [B-Harvest](https://github.com/nodebreaker0-0/substrate/tree/prometheus_v0.3) :broken_heart:, [nmonpolkadot](https://github.com/stakezone/nmonpolkadot) :broken_heart:, [Polkadot-K8s-Monitor](https://github.com/ironoa/polkadot-k8s-monitor) :yellow_heart:, [Polkadot-Watcher](https://github.com/w3f/polkadot-watcher) :green_heart:, [1KV Telegram Bot](https://github.com/helikon-labs/polkadot-kusama-1kv-telegram-bot) :yellow_heart:
 | Validator payout management | [Substrate validator auto payout](https://github.com/Colm3na/substrate-auto-payout) :yellow_heart:, [Polkadot Payouts](https://github.com/w3f/polkadot-payouts) :green_heart:, [staking-payouts CLI](https://github.com/emostov/staking-payouts) :yellow_heart:, [Payctl](https://github.com/stakelink/substrate-payctl) :broken_heart:, [crunch](https://github.com/turboflakes/crunch) :green_heart:|
 
-### :black_nib: Signatures
+### Signatures
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -185,7 +185,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Distributed key generation (DKG) | [keygen.rs](https://github.com/isislovecruft/frost-dalek) :broken_heart:
 | Validator HSMs| [Zondax Remote Signer](https://github.com/Zondax/buildroot-zondax) 
 
-### :green_heart: Consensus
+### Consensus
 
 | Components | Existing projects | Potentially interesting projects
 |-|-|-
@@ -196,14 +196,14 @@ In the below sections you can find a list of different layers of the Polkadot St
 | Other | [Nimbus: Upgradeable consensus framework](https://github.com/PureStake/nimbus) :green_heart:| 
 
 
-### :satellite: Networking
+### Networking
 
 | Components          | Existing projects                                                                                               | Potentially interesting projects |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|----------------------------------|
 | DHT crawler         | [Go](https://github.com/atredispartners/dht-crawler-polkadot) :broken_heart:, [Kotlin](https://github.com/emeraldpay/polkabot) :broken_heart:|                                  |
 | RPC Tor-like access | [WhiteNoise](https://github.com/Evanesco-Labs/WhiteNoise.rs) :broken_heart:|                                  |
 
-## :construction_worker: Contributing
+## Contributing
 
 Pull requests, issues, or other contributions from the community are encouraged!  You can not only add specific projects, but also potentially interesting fields/areas which are currently missing in the tech stack.
 
