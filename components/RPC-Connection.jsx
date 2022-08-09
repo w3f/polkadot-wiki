@@ -103,6 +103,7 @@ async function syncData(network, path, setReturnValue) {
 		const wsProvider = new WsProvider(wsUrl);
 		let api = await ApiPromise.create({ provider: wsProvider });
 
+
 		// Build API call
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
@@ -117,6 +118,32 @@ async function syncData(network, path, setReturnValue) {
 				chainValue = api.toString();
 				break;
 			case "query":
+				switch (pathParameters[2]) {
+					case "validators":
+						const api = await ApiPromise.create({ provider: wsProvider })
+						const [currentValidators, currentEra] = await Promise.all([
+						  api.query.session.validators(),
+						  api.query.staking.currentEra(),
+						]);
+
+
+						const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[0])
+						let validatorMinStake = parseInt(validatorStake['total'].toString())
+						
+
+						for (let i = 1; i < currentValidators.length; i++) {
+							const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[i])
+							const validatorTotalStake = parseInt(validatorStake['total'].toString())
+							if (validatorTotalStake < validatorMinStake ) {
+								validatorMinStake = validatorTotalStake;
+							}
+						}
+						console.log(`validatorMinStake(${validatorMinStake.toString()}) in ${path}`);
+						return validatorMinStake.toString();
+
+
+				}
+
 				chainValue = await api();
 				chainValue = chainValue.toString();
 				break;
@@ -170,6 +197,9 @@ function applyFilter(value, filter, network, setReturnValue) {
 			}
     		break;
 		case "blocksToDays":
+			value = (value * 6) / 86400;
+			break;
+		case "lowStaked":
 			value = (value * 6) / 86400;
 			break;
 		default:

@@ -6,6 +6,7 @@ description: The fundamentals for running a Polkadot validator.
 keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
+import RPC from "./../../components/RPC-Connection"
 
 :::info
 
@@ -55,6 +56,17 @@ into the set, you need a minimum stake behind your validator. This stake can com
 Stash and Controller [accounts](../learn/learn-keys.md) with the existential deposit, plus a little extra for
 transaction fees. The rest can come from nominators. To understand how validators are elected, check the
 [NPoS Election algorithms](../learn/learn-phragmen.md) page.
+
+
+:::info On-Chain Data for Reference
+
+On Polkadot, the minimum stake backing a validator in the active set is <RPC network="polkadot" path="query.session.validators" defaultValue="18684315524834056" filter="humanReadable" />
+in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="799"/> 
+
+On Kusama, the minimum stake backing a validator in the active set is <RPC network="kusama" path="query.session.validators" defaultValue="5367388652143741" filter="humanReadable" />
+in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="4058"/> 
+
+:::
 
 **Warning:** Any DOT that you stake for your validator is liable to be slashed, meaning that an
 insecure or improper setup may result in loss of DOT tokens! If you are not confident in your
