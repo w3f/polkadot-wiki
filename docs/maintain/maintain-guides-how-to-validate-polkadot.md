@@ -71,11 +71,11 @@ similar for other platforms.
 
 #### Reference Hardware
 
-The transactions weights in Polkadot were benchmarked on reference hardware. We ran the benchmark on VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services (AWS).
-On GCP we used `c2d-highcpu-8` VM instance, on AWS `c6id.2xlarge`.
-It is recommended that hardware used to run the validators at least match the specs of
+The transaction weights in Polkadot are benchmarked on reference hardware. We ran the benchmark on VM instances of two major cloud providers: Google Cloud Platform (GCP) and Amazon Web Services (AWS).
+To be specific, we used `c2d-highcpu-8` VM instance on GCP and `c6id.2xlarge` on AWS.
+It is recommended that the hardware used to run the validators at least matches the specs of
 the reference hardware in order to ensure they are able to process all blocks
-in time. If you use subpar hardware you will possibly run into performance issues, get less era points, and potentially even slashed.
+in time. If you use subpar hardware you will possibly run into performance issues, get less era points, and potentially even get slashed.
 
 - **CPU**
   - x86-64 compatible;
@@ -84,13 +84,13 @@ in time. If you use subpar hardware you will possibly run into performance issue
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
   - Prefer single-threaded performance over higher cores count. A comparison of single-threaded performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
 - **Storage**
-  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In general the latency is more important than the throughput.
+  - An NVMe SSD of 1 TB (As it should be reasonably sized to deal with blockchain growth). An estimation of current chain snapshot sizes can be found [here](https://paranodes.io/DBSize). In general, the latency is more important than the throughput.
 - **Memory**
   - 16GB DDR4 ECC.
 - **System**
   - Linux Kernel 5.16 or newer.
 - **Network**
-  - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to support a large number of para-chains and allow for proper congestion control in busy network situations.
+  - The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s). This is required to support a large number of parachains and allow for proper congestion control in busy network situations.
 
 The specs posted above are not a *hard* requirement to run a validator, but are considered best practice.
 Running a validator is a responsible task; using professional hardware is a must in any way.
@@ -159,7 +159,7 @@ the systems within the network. Currently it is required that validators' local 
 reasonably in sync, so you should be running NTP or a similar service. You can check whether you
 have the NTP client by running:
 
-_If you are using Ubuntu 18.04 or newer, NTP Client should be installed by default._
+_If you are using Ubuntu 18.04 or a newer version, NTP Client should be installed by default._
 
 ```sh
 timedatectl
@@ -299,7 +299,7 @@ cargo build --profile production
 
 :::note Compilation Errors
 
-If you run into compile errors, you may have to pin the version of Rust compiler to one that was used to build the release. Check out `Rust compiler versions` section in the release notes. This can be done by running:
+If you run into compile errors, you may have to pin the version of Rust compiler to the one that was used to build the release. Check out `Rust compiler versions` section in the release notes. This can be done by running:
 
 ```sh
 rustup install nightly-2022-05-18
@@ -650,9 +650,13 @@ Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to
 
 VPS providers are very popular for running servers of any kind.
 Extensive benchmarking was conducted to ensure that VPS servers are able to keep up with the work load in general.
-This does not mean that every provider who advertises a specific performance will also deliver it.
-Please do your own verification that you get the advertised performance before running a live validator on it.
-The following server types showed acceptable performance. Please note that this is not an endorsement in any way:
+
+:::note
+
+Before you run a live Validator, please verify if the advertised performance is actually delivered consistently by the VPS provider.
+
+:::
+The following server types showed acceptable performance during the benchmark tests. Please note that this is not an endorsement in any way:
 - GCP's *c2* and *c2d* machine families
 - AWS's *c6id* machine family
 
@@ -661,7 +665,7 @@ The following additional configurations were applied to the instances to tune th
 ### Disable [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)
 As critical path of Substrate is single-threaded we need to optimize for single-core CPU performance. The node still profits from multiple cores when doing networking and other non-runtime operations. It is therefore still necessary to run it on at least the minimum required number of cores.
 Disabling SMT improves the performance as each vCPU becomes mapped to a physical CPU core rather than being presented to the OS as two logical cores.
-SMT implementation on Intel is called Hyper-Threading, on AMD Zen it is 2-way SMT. To disable SMT in runtime:
+SMT implementation is called _Hyper-Threading_ on Intel and _2-way SMT_ on AMD Zen. To disable SMT in runtime:
 ```bash
 for cpunum in $(cat /sys/devices/system/cpu/cpu*/topology/thread_siblings_list | cut -s -d, -f2- | tr ',' '\n' | sort -un)
 do
@@ -673,20 +677,20 @@ It will disable every other (vCPU) core.
 To save changes permanently add `nosmt=force` as kernel parameter. Edit `/etc/default/grub` and add `nosmt=force` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After the reboot you should see half of the cores are offline. Run `lscpu --extended` to confirm.
 
 ### Disable automatic NUMA balancing
-If you have multiple physical CPUs (CPU0 and CPU1) in the system each with its own memory bank (MB0 and MB1) than it is usually slower for a CPU0 to access MB1 due to the slower interconnect. To prevent the OS from automatically moving the running Substrate process from one CPU to another thus causing an increased latency, it is recommended to disable automatic NUMA balancing.
+If you have multiple physical CPUs (CPU0 and CPU1) in the system each with its own memory bank (MB0 and MB1), then it is usually slower for a CPU0 to access MB1 due to the slower interconnection. To prevent the OS from automatically moving the running Substrate process from one CPU to another and thus causing an increased latency, it is recommended to disable automatic NUMA balancing.
 
-With automatic NUMA balancing disabled an OS will always run a process on the same NUMA node where it was initially scheduled.
+With automatic NUMA balancing disabled, an OS will always run a process on the same NUMA node where it was initially scheduled.
 
 To disable NUMA balancing in runtime:
 ```bash
 sysctl kernel.numa_balancing=0
 ```
-To save changes permanently update startup options and reconfigure GRUB. Edit `/etc/default/grub` and add `numa_balancing=disable` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After reboot you can confirm the change by running `sysctl -a | grep 'kernel.numa_balancing'` and checking if the parameter is set to 0
+To save changes permanently, update startup options and reconfigure GRUB. Edit `/etc/default/grub` and add `numa_balancing=disable` to `GRUB_CMDLINE_LINUX_DEFAULT` variable and run `sudo update-grub`. After reboot you can confirm the change by running `sysctl -a | grep 'kernel.numa_balancing'` and checking if the parameter is set to 0
 
 ### Configure Spectre/Meltdown Mitigations
-Spectre and Meltdown are vulnerabilities discovered in modern CPUs a few years ago. There were multiple variations of the attack as mitigations had been coming to the Linux kernel. Check out https://meltdownattack.com/ for more info.
+Spectre and Meltdown are vulnerabilities discovered in modern CPUs a few years ago. Mitigations were made to the Linux kernel to cope with the multiple variations of these attacks. Check out https://meltdownattack.com/ for more info.
 
-Initially those mitigations added ~20% penalty to the performance of the workloads. As CPU manufacturers started to roll-out mitigations implemented in hardware, the performance gap [narrowed down](https://www.phoronix.com/scan.php?page=article&item=3-years-specmelt&num=1). As the benchmark demonstrates the performance penalty got reduced to ~7% on Intel 10th Gen CPUs. This is true for the workloads running on both bare-metal and VMs. But the penalty remains high for the containerized workloads in some cases.
+Initially those mitigations added ~20% penalty to the performance of the workloads. As CPU manufacturers started to roll-out mitigations implemented in hardware, the performance gap [narrowed down](https://www.phoronix.com/scan.php?page=article&item=3-years-specmelt&num=1). As the benchmark demonstrates, the performance penalty got reduced to ~7% on Intel 10th Gen CPUs. This is true for the workloads running on both bare-metal and VMs. But the penalty remains high for the containerized workloads in some cases.
 
 As demonstrated in [Yusuke Endoh's article](http://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html), a performance penalty for containerized workloads can be as high as 100%. This is due to SECCOMP profile being overprotective about applying Spectre/Meltdown mitigations without providing real security. A longer explanation is a available in the [kernel patch discussion](https://lkml.org/lkml/2020/11/4/1135).
 
