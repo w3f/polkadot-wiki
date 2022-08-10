@@ -511,7 +511,7 @@ To support these conditions, the Fellowship will have a constitution which outli
 
 **Suspension** can happen only through general referendum, which ensures that the Fellowship's bias alone does not necessarily result in expulsion.
 
-Gaining access to top tiers of the ranks will also require a referendum, as to prevent the Fellowship from becoming a cabal (popularity with Fellowship peers alone is not enough to gain access to a top rank).
+To prevent the Fellowship from becoming a cabal (popularity with Fellowship peers alone should not be enough to gain access to a top rank), gaining access to top tiers of the ranks will require a referendum. 
 
 ### Whitelisting
 
