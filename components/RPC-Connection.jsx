@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
+import { HumanReadable, BlocksToDays} from "./utilities/filters";
 
 /*
 This component connects to the Polkadot/Kusama APIs and renders the response data.
@@ -74,6 +75,7 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 	return (returnValue)
 }
 
+// Fetch chain data
 async function syncData(network, path, setReturnValue) {
 	let wsUrl = undefined;
 	let chainValue = undefined;
@@ -117,32 +119,6 @@ async function syncData(network, path, setReturnValue) {
 				chainValue = api.toString();
 				break;
 			case "query":
-				switch (pathParameters[2]) {
-					case "validators":
-						const api = await ApiPromise.create({ provider: wsProvider })
-						const [currentValidators, currentEra] = await Promise.all([
-						  api.query.session.validators(),
-						  api.query.staking.currentEra(),
-						]);
-
-
-						const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[0])
-						let validatorMinStake = parseInt(validatorStake['total'].toString())
-						
-
-						for (let i = 1; i < currentValidators.length; i++) {
-							const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[i])
-							const validatorTotalStake = parseInt(validatorStake['total'].toString())
-							if (validatorTotalStake < validatorMinStake ) {
-								validatorMinStake = validatorTotalStake;
-							}
-						}
-						console.log(`validatorMinStake(${validatorMinStake.toString()}) in ${path}`);
-						return validatorMinStake.toString();
-
-
-				}
-
 				chainValue = await api();
 				chainValue = chainValue.toString();
 				break;
@@ -154,56 +130,19 @@ async function syncData(network, path, setReturnValue) {
 	}
 }
 
+// Post-processing functions
 function applyFilter(value, filter, network, setReturnValue) {
-	//console.log(`Applying ${filter} to ${network} value ${value}`);
-	const values = {
-		polkadot: {
-      		precision: 1e10,
-      		symbol: "DOT",
-    	},
-    	kusama: {
-      		precision: 1e12,
-      		symbol: "KSM",
-    	},
-		statemint: {
-			precision: 1e10,
-			symbol: "DOT",
-	  	},
-		statemine: {
-			precision: 1e12,
-			symbol: "KSM",
-	  	},
-  	};
-
 	switch (filter) {
 		case "humanReadable":
-      		let decimals = undefined;
-      		if (network === Polkadot || network === Statemint) {
-        		decimals = 3;
-      		} else if (network === Kusama || network === Statemine) {
-				decimals = 6;
-			} else {
-				console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
-				return;
-			}
-			// String to number
-			value = parseFloat(value);
-			// Apply precision
-			if (Number.isInteger(value / values[network].precision)) {
-				value = `${value / values[network].precision} ${values[network].symbol}`;
-			} else {
-				value = `${(value / values[network].precision).toFixed(decimals)} ${values[network].symbol}`;
-			}
-    		break;
+			HumanReadable(value, network, setReturnValue)
+    	break;
 		case "blocksToDays":
-			value = (value * 6) / 86400;
+			BlocksToDays(value, setReturnValue);
 			break;
 		default:
 			console.log("Ignoring unknown filter type");
 			return;
 	}
-
-	setReturnValue(value.toString());
 }
 
 export default RPC;
