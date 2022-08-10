@@ -509,7 +509,7 @@ To support these conditions, the Fellowship will have a constitution which outli
 
 **Demotion** occurs automatically after a given period has elapsed and the member is unable to defend their position to their peers.
 
-**Suspension** can happen only through general referendum, ensuring controversy or unpopularity with the Fellowship alone does not necessarily result in expulsion.
+**Suspension** can happen only through general referendum, which ensures that the Fellowship's bias alone does not necessarily result in expulsion.
 
 Gaining access to top tiers of the ranks will also require a referendum, as to prevent the Fellowship from becoming a cabal (popularity with Fellowship peers alone is not enough to gain access to a top rank).
 
