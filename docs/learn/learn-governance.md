@@ -120,7 +120,7 @@ In Gov2, when a referendum is initially created, it can be immediately voted on 
 
 The criteria for entering the Decided state is a follows:
 1. A **lead-in period** that outlines the amount of time that must elapse before deciding can begin. This helps mitigate against the possibility of "decision snapping" where an attacker controlling a substantial amount of voting power might seek to have a proposal passed immediately after proposing, not allowing the overall voting population adequate time to consider and participate.
-2. There must be room for the decision. All Tracks specify their own limit on the number of referenda which can be decided simultaneously. Tracks that have more potent abilities will have lower limits.
+2. There must be room for the decision. All Tracks specify their own limit on the number of referenda which can be decided simultaneously. Tracks that have more potent abilities will have lower limits. For example, the Root level Origin has a limit of one, implying that only a single über-dangerous proposal may be decided on at once.
 3. A **Decision Deposit** must be paid. Creating a referendum is cheap as the deposit value consists of only the value required for the on-chain storage needed to track it. But, having a referendum reviewed and decided upon carries the risk of using up the limited spots available in the referenda queue. It makes sense to have a larger, but refundable deposit requirement to help mitigate spam.
 
 #### Council Referenda (v1)
@@ -524,6 +524,8 @@ In Gov2, it allows the Fellowship to authorise a new origin (known as Whiteliste
 2. The proposal has indeed been whitelisted by the Fellowship. 
 
 If both conditions are true, the operation executes with Root-level privileges.
+
+This system enables the ability to have a new parallel Track (Whitelisted-Root Origin), whose parameters allow for a shorter voting turnaround. Through an open and transparent process, a body of global experts on the Polkadot protocol have determined that the action is both safe and time-critical.
 
 ### Blacklisting
 
