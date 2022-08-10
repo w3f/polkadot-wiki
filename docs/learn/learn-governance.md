@@ -14,7 +14,7 @@ mechanism that allows it to evolve gracefully overtime at the ultimate behest of
 The stated goal is to ensure that the majority of the stake can always command the network.
 
 :::caution Active Development
-The governance protocol has already undergone a couple iterations (v1 and v2) with more changes coming down the pipeline (v2.5). See the comments below for additional details and distinct difference between the various versions.
+The governance protocol has already undergone a couple iterations (v1 and v2) with more changes in the pipeline (v2.5). See the comments below for additional details and for distinct differences between the various versions.
 :::
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first decentralised governance system (v1) was comprised of three main components.
