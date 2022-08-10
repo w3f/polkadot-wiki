@@ -3,38 +3,28 @@ import React from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { HumanReadable } from "./utilities/filters";
 
-const PolkadotDefaults = {
-  wsUrl: "wss://rpc.polkadot.io",
-  validators: 18684315524834056,
-  currentEra: 799
-};
-
-const KusamaDefaults = {
-  wsUrl: "wss://kusama-rpc.polkadot.io/",
-  validators: 5367388652143741,
-  currentEra: 4058
-}
-
-function MinimumStake({ network }) {
+function MinimumStake({ network, defaultValue }) {
   const [returnValue, setReturnValue] = useState('');
 
   useEffect(async () => {
+    console.log(defaultValue);
     // Set defaults based on network
-    let defaults = undefined;
-    if (network === "polkadot") { defaults = PolkadotDefaults }
-    else if (network === "kusama") { defaults = KusamaDefaults }
+    let wsUrl = undefined;
+    if (network === "polkadot") { wsUrl = "wss://rpc.polkadot.io" }
+    else if (network === "kusama") { wsUrl = "wss://kusama-rpc.polkadot.io/" }
     else { return (<div />) }
+
     // Set default value to render on component
-    HumanReadable(defaults.validators, network, setReturnValue);
+    HumanReadable(defaultValue, network, setReturnValue);
     // Calculate a more accurate approximation using on-chain data
-    await CalcValidatorMinStake(network, defaults, setReturnValue);
+    await CalcValidatorMinStake(network, wsUrl, setReturnValue);
   });
 
   return (returnValue);
 }
 
-async function CalcValidatorMinStake(network, defaults, setReturnValue) {
-  const wsProvider = new WsProvider(defaults.wsUrl);
+async function CalcValidatorMinStake(network, wsUrl, setReturnValue) {
+  const wsProvider = new WsProvider(wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
 
   const [currentValidators, currentEra] = await Promise.all([
