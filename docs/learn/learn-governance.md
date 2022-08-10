@@ -493,7 +493,7 @@ Unlike the current Technical Collective it is designed to be far broader in memb
 
 Members of the Fellowship can vote on any given Fellowship proposal and the aggregate opinion of the members (weighted by their rank) constitutes the Fellowship's considered opinion.
 
-The mechanism by which the Fellowship votes is the same (Substrate pallet) as what is used for Polkadot stakeholder voting for a proposed referendum.
+The mechanism by which the Fellowship votes is the same as what is used for Polkadot stakeholder voting for a proposed referendum.
 
 ### Ranking System
 
