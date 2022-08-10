@@ -44,9 +44,8 @@ async function CalcValidatorMinStake(network, wsUrl, setReturnValue) {
     }
   });
   
-  const output = validatorMinStake.toString();
-  setReturnValue(output);
-  HumanReadable(output, network, setReturnValue);
+  const result = validatorMinStake.toString();
+  HumanReadable(result, network, setReturnValue);
 }
 
 export default MinimumStake;
