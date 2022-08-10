@@ -57,7 +57,7 @@ The way the new governance model reflects its decentralised character is by:
 2. Dissolving the current Council collective
 3. Allowing users to delegate voting power in more ways to community members
 
-The Council has fulfilled its role as the representative of passive token holders, guardian of the treasury and initiator of legislation, but the time has come to return these responsibilities to the community.
+The Council in Gov1 has fulfilled its role as the representative of passive token holders, guardian of the treasury and initiator of legislation, but is often seen as a centralized entity. To further decentralize Polkadot and Kusama networks, Gov2 proposes to return the responsibilities of the council back to the community.
 
 
 ## Referenda
@@ -285,7 +285,7 @@ It must fulfill this criteria for the minimum of the **Confirmation Period**. Di
 
 In Gov2, proposals that are not approved after 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} 
-days are considered rejected by default and the Decision Deposit is refunded. If the proposal managed to become and remain passing for the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period . The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
+days are considered rejected by default and the Decision Deposit is refunded. If the proposal manages to stay passing until the end of the Confirmation Period, it is considered approved and is scheduled to execute from the proposed origin but after the Enactment Period . The Enactment Period is specified when the referendum is proposed but is also subject to a minimum value based on the Track. More powerful Tracks enforce a larger Enactment Period to ensure the network has ample time to prepare for any changes the proposal may bring.
 
 #### Voluntary Locking
 
@@ -394,7 +394,7 @@ the runtime that the proposal would institute.
 If the cancellation is controversial enough that the council cannot get a two-thirds majority, then
 it will be left to the stakeholders *en masse* to determine the fate of the proposal.
 
-In governance v2, there is a special operation for intervening with a proposal that is already being voted on known as **Cancelation**. The operation will immediately reject an ongoing referendum regardless of its status. Depending on the roots of the incident there is also potential for the initial proposer of the deposit to get slashed.
+In Governance v2, there is a special operation called **Cancelation** for intervening with a proposal that is already being voted on. The operation will immediately reject an ongoing referendum regardless of its status. There is also a provision to ensure the deposit of the proposer is slashed, if the proposal is malicious or spam.
 
 Cancelation itself is a governance operation which must be voted upon by the network in order to be executed. Cancelation comes with its own Origin and Track which has a low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for passing, given that it is invoked with a sense of urgency.
 
@@ -490,7 +490,7 @@ In Governance v2, a new successor committee was introduced, known as the "Polkad
 
 The Fellowship is a mostly self-governing expert body with a primary goal of representing humans who embody and contain the technical knowledge base of the Polkadot network and protocol. This is accomplished by associating a rank with members to categorize the degree to which the system expects their opinion to be well-informed, of a sound technical basis and in line with the interests of Polkadot.
 
-Unlike the current Technical Collective it is designed to be far broader in membership (i.e. to work well with even tens of thousands of members) and with far lower in barriers to entry (both in terms of administrative process flow and expectations of expertise). Becoming a candidate member in the Fellowship is as easy as placing a small deposit.
+Unlike the current Technical Collective, it is designed to be far broader in membership (i.e. to work well with even tens of thousands of members) and with far lower barrier to entry (both in terms of administrative process flow and expectations of expertise). Becoming a candidate member in the Fellowship is as easy as placing a small deposit.
 
 Members of the Fellowship can vote on any given Fellowship proposal and the aggregate opinion of the members (weighted by their rank) constitutes the Fellowship's considered opinion.
 
