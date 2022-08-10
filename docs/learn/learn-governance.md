@@ -112,16 +112,16 @@ single DOT each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts 
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
-For governance v1, there can be a maximum of 
+For Governance v1, there can be a maximum of 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.maxProposals" defaultValue={100} /> :polkadot }} {{ kusama: <RPC network="kusama" path="consts.democracy.maxProposals" defaultValue={100} /> :kusama }}
 public proposals in the proposal queue.
 
-In Gov2, when a referendum is initially created, it is immediately votable by anyone in the community. However, it is not in a state where it can end, or otherwise have its votes counted, be approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are moved into a state known as **Deciding**. Until they are in this state, they remain undecided.
+In Gov2, when a referendum is initially created, it can be immediately voted on by the community. However, it is not in a state where it can end, or otherwise have its votes counted, be approved and summarily enacted. Instead, referenda must fulfil a number of criteria before they are moved into a state known as **Deciding**. Until they are in this state, they remain undecided.
 
 The criteria for entering the Decided state is a follows:
 1. A **lead-in period** that outlines the amount of time that must elapse before deciding can begin. This helps mitigate against the possibility of "decision snapping" where an attacker controlling a substantial amount of voting power might seek to have a proposal passed immediately after proposing, not allowing the overall voting population adequate time to consider and participate.
 2. There must be room for the decision. All Tracks specify their own limit on the number of referenda which can be decided simultaneously. Tracks that have more potent abilities will have lower limits.
-3. A **Decision Deposit** must be paid. Creating a referendum is cheap as the deposit value consists of only the value required for the on-chain storage needed to track it. Having a referendum reviewed and decided upon carries greater risk and uses up limited space since there is a limited number of referenda which can be active in the process simultaneously. This leads to a larger, but refundable, deposit requirement helping to mitigate spam and bloating of the system.
+3. A **Decision Deposit** must be paid. Creating a referendum is cheap as the deposit value consists of only the value required for the on-chain storage needed to track it. But, having a referendum reviewed and decided upon carries the risk of using up the limited spots available in the referenda queue. It makes sense to have a larger, but refundable deposit requirement to help mitigate spam.
 
 #### Council Referenda (v1)
 
@@ -138,9 +138,9 @@ referendum in progress.
 
 #### Voting Timetable
 
-In governance v1, every 
+In Governance v1, every 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} days, 
-a new referendum will come up for 
+a new referendum will be up for 
 a vote, assuming there is at least one proposal in one of the queues. There is a queue for Council-approved 
 proposals and a queue for publicly submitted proposals. The referendum to be voted upon alternates between 
 the top proposal in the two queues.
@@ -149,7 +149,7 @@ The "top" proposal is determined by the amount of stake bonded behind it. If the
 other queue, the top proposal in the other queue will become a referendum.
 
 Multiple referenda cannot be voted upon in the same period, excluding emergency referenda.
-An emergency referendum occurring at the same time as a regular referendum (either public- or
+An emergency referendum occurring at the same time as a regular referendum (either public or
 council-proposed) is the only time that multiple referenda will be able to be voted on simultaneously.
 
 Governance v2 shares the same {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }}
@@ -190,7 +190,7 @@ of them is less than Peter, leading to their voting power counting as less.
 
 #### Tallying
 
-In governance v1, there are three resulting scenarios that can occur,
+In Governance v1, there are three resulting scenarios that can occur,
 depending on which entity initiated the proposal and whether council unanimously voted yes in support.
 These resulting scenarios are visualized in the following table:
 
@@ -275,13 +275,13 @@ into the decision. Moreover, winning proposals are autonomously enacted only aft
 
 #### Voting on a referendum (governance v2)
 
-In governance v2, a proposal is approved if it meets the requirements for **approval** and **support**, removing the adaptive quorum biasing system. 
+In Governance v2, a proposal is approved if it meets the requirements for **approval** and **support**, removing the adaptive quorum biasing system. 
 
-Approval is defined as the share of approval vote-weight (after adjustment for conviction) against the total number of vote-weight (for both approval and rejection).
+**Approval** is defined as the share of approval vote-weight (after adjustment for conviction) against the total vote-weight (for both approval and rejection).
 
-Support is the total number of votes in the approval (ignoring any adjustment for conviction) compared to the total possible amount of votes that could be made in the system.
+**Support** is the total number of votes in the approval (ignoring any adjustment for conviction) compared to the total possible votes that could be made in the system.
 
-It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation Periods and requirements for approval and support. It is now possible to configure a proposal in such a way that an increasingly lower amount of support and overall approval for the proposal are needed for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Similarly, classes which command more political significance will tend to accept less controversy (and thus require a higher approval) early on.
+It must fulfill this criteria for the minimum of the **Confirmation Period**. Different tracks have different Confirmation Periods and requirements for approval and support. It is now possible to configure the amount of support and overall approval required for it to pass. With proposals that use less privileged origins, it is far more reasonable to drop the required turnout to a more realistic amount earlier than those which use highly privileged classes such as `Root`. Classes with more political significance can be made to require a higher approval early on, to avoid controversy.
 
 In Gov2, proposals that are not approved after 
 {{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays" /> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays" /> :kusama }} 
@@ -347,12 +347,12 @@ becomes a simple majority.
 All three tallying mechanisms - majority carries, super-majority approve, and super-majority
 against - equate to a simple majority-carries system at 100% turnout.
 
-Adaptive quorum biasing is longer used in governance v2, in replace of the Approval/Support system.
+Adaptive quorum biasing is longer used in Governance v2 and is replaced by the Approval/Support system.
 
 ## Council
 
-In governance v1, passive stakeholders are represented on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
-via a governing body known as "council". The council is an on-chain entity comprising several actors, each 
+In Governance v1, passive stakeholders are represented on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
+via a governing body known as the "council". The council is an on-chain entity comprising several actors, each 
 represented as an on-chain account. On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, 
 the council currently consists of
 {{ polkadot:  <RPC network="polkadot" path="query.council.members" defaultValue={Array(13)} filter="arrayLength" /> :polkadot }}{{ kusama: <RPC network="kusama" path="query.council.members" defaultValue={Array(19)} filter="arrayLength" />  :kusama }} 
@@ -360,9 +360,9 @@ members.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance: 
-1. proposing sensible referenda
-2. cancelling uncontroversially dangerous or malicious referenda
-3. electing the technical committee
+1. Proposing sensible referenda
+2. Cancelling dangerous or malicious referenda
+3. Electing the Technical Committee
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with
 no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal;
@@ -379,11 +379,11 @@ For more information, check out our [video explainer on Council](https://www.you
 
 :::
 
-In governance v2, an alternate strategy was required to replace the Council in its previous duties as a body delegated by voters to compensate for the fact that many choose to not take part in day-to-day of governance. Gov2 builds on the **Vote Delegation** feature from v1 where a voter can choose to delegate their voting power to another voter in the system. It does so by improving a feature known as **Multirole Delegation**, where voters can specify a different delegate for every class of referendum in the system. So for example, a voter could delegate one entity for managing a less potent referenda class, choose a different delegate for a different class with more powerful consequences and still retain full voting power over any remaining classes.
+In Governance v2, an alternate strategy was required to replace the Council in its previous duties as a body delegated by voters to compensate for the fact that many choose to not take part in day-to-day of governance. Gov2 builds on the **Vote Delegation** feature from v1 where a voter can choose to delegate their voting power to another voter in the system. It does so by improving a feature known as **Multirole Delegation**, where voters can specify a different delegate for every class of referendum in the system. So for example, a voter could delegate one entity for managing a less potent referenda class, choose a different delegate for a different class with more powerful consequences and still retain full voting power over any remaining classes.
 
 ### Canceling
 
-In governance v1, a proposal can be canceled if the [technical committee](#technical-committee) unanimously agrees to
+In Governance v1, a proposal can be canceled if the [Technical Committee](#technical-committee) unanimously agrees to
 do so, or if Root origin (e.g. sudo) triggers this functionality. A canceled proposal's deposit is
 burned.
 
@@ -396,7 +396,8 @@ it will be left to the stakeholders *en masse* to determine the fate of the prop
 
 In governance v2, there is a special operation for intervening with a proposal that is already being voted on known as **Cancelation**. The operation will immediately reject an ongoing referendum regardless of its status. Depending on the roots of the incident there is also potential for the initial proposer of the deposit to get slashed.
 
-Cancelation is itself a governance operation which must be voted upon by the network in order to execute. Since there is usually some urgency to this type of operation, Cancelation comes with its own Origin and Track which has a low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for passing.
+Cancelation itself is a governance operation which must be voted upon by the network in order to be executed. Cancelation comes with its own Origin and Track which has a low lead-time and Approval/Support curves with slightly sharper reductions in their thresholds for passing, given that it is invoked with a sense of urgency.
+
 
 ### How to be a council member?
 
@@ -466,7 +467,7 @@ councillors to be explicit in their votes or leave their voting privilege up to 
 
 ## Technical Committee
 
-In governance v1, the Technical Committee (TC) was introduced in the
+In Governance v1, the Technical Committee (TC) was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 TC is composed of the teams that have successfully implemented or specified either
@@ -483,7 +484,7 @@ Fast-tracked referenda are the only type of referenda that can be active alongsi
 referendum. Thus, with fast-tracked referenda it is possible to have two active referendums at the
 same time. Voting on one does not prevent a user from voting on the other.
 
-In governance v2, a new successor committee was introduced, known as the "Polkadot Fellowship", to replace the Technical Committee. It will serve both the Polkadot and Kusama networks. See additional details below.
+In Governance v2, a new successor committee was introduced, known as the "Polkadot Fellowship", to replace the Technical Committee. It will serve both the Polkadot and Kusama networks. See additional details below.
 
 ## Polkadot Fellowship
 
