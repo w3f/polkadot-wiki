@@ -30,7 +30,7 @@ Governance v2 or Gov2 changes how the practical means of day-to-day decisions ar
 
 The following content will begin by walking through many of the core principles of governance on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to understand the roots of governance v1 to better understand the direction of the second iteration. These deltas and distinctions will be highlighted throughout the various sub-topics.
 
-This being said, it is important to remember that governance is a constantly evolving protocol at this stage in its lifecycle. As updates for governance v2 are making their way to the networks, plans for governance v2.5 are already in development.
+This being said, it is important to remember that governance is a constantly evolving protocol at this stage in its lifecycle. As updates for Governance v2 are making their way to the networks, plans for Governance v2.5 are already in development.
 
 ## Premise
 
