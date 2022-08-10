@@ -103,7 +103,6 @@ async function syncData(network, path, setReturnValue) {
 		const wsProvider = new WsProvider(wsUrl);
 		let api = await ApiPromise.create({ provider: wsProvider });
 
-
 		// Build API call
 		const pathParameters = path.split(".");
 		pathParameters.forEach(param => {
@@ -197,9 +196,6 @@ function applyFilter(value, filter, network, setReturnValue) {
 			}
     		break;
 		case "blocksToDays":
-			value = (value * 6) / 86400;
-			break;
-		case "lowStaked":
 			value = (value * 6) / 86400;
 			break;
 		default:
