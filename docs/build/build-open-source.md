@@ -192,7 +192,7 @@ In the below sections you can find a list of different layers of the Polkadot St
 | PoC | [Spartan](https://github.com/subspace/substrate) :broken_heart:|
 | PoW | [PoW consensus for Substrate](https://github.com/paritytech/substrate/tree/master/client/consensus/pow) :green_heart:, [RandomX](https://github.com/kulupu/kulupu/tree/master/pow) :yellow_heart:, [Sha3 PoW](https://github.com/substrate-developer-hub/recipes/tree/master/consensus/sha3pow) :broken_heart:|
 | Block production | [BABE](https://github.com/paritytech/substrate/tree/master/client/consensus/babe) :green_heart:, [Aura](https://github.com/paritytech/substrate/tree/master/client/consensus/aura) :green_heart:|
-| Finality | [GRANDPA](https://github.com/paritytech/substrate/tree/master/frame/grandpa) :green_heart:|, [AlephBFT](https://github.com/Cardinal-Cryptography/aleph-node/tree/main/finality-aleph) :green_heart:|
+| Finality | [GRANDPA](https://github.com/paritytech/substrate/tree/master/frame/grandpa) :green_heart:, [AlephBFT](https://github.com/Cardinal-Cryptography/aleph-node/tree/main/finality-aleph) :green_heart:|
 | Other | [Nimbus: Upgradeable consensus framework](https://github.com/PureStake/nimbus) :green_heart:| 
 
 
