@@ -43,7 +43,7 @@ All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## Mechanism
 
-In governance v1, active token holders and the council together administrate a 
+In Governance v1, active token holders and the council together administrate a 
 network upgrade decision. No matter whether the proposal is proposed by
 the public (token holders) or the council, it will eventually have to go through 
 a referendum to let all holders, weighted by stake and conviction , make the decision.
