@@ -15,6 +15,24 @@ const KusamaDefaults = {
   currentEra: 4058
 }
 
+function MinimumStake({ network }) {
+  const [returnValue, setReturnValue] = useState('');
+
+  useEffect(async () => {
+    // Set defaults based on network
+    let defaults = undefined;
+    if (network === "polkadot") { defaults = PolkadotDefaults }
+    else if (network === "kusama") { defaults = KusamaDefaults }
+    else { return (<div />) }
+    // Set default value to render on component
+    HumanReadable(defaults.validators, network, setReturnValue);
+    // Calculate a more accurate approximation using on-chain data
+    await CalcValidatorMinStake(network, defaults, setReturnValue);
+  });
+
+  return (returnValue);
+}
+
 async function CalcValidatorMinStake(network, defaults, setReturnValue) {
   const wsProvider = new WsProvider(defaults.wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
@@ -41,24 +59,6 @@ async function CalcValidatorMinStake(network, defaults, setReturnValue) {
   }
   const output = validatorMinStake.toString();
   HumanReadable(output, network, setReturnValue);
-}
-
-function MinimumStake({ network }) {
-  const [returnValue, setReturnValue] = useState('');
-
-  useEffect(async () => {
-    // Set defaults based on network
-    let defaults = undefined;
-    if (network === "polkadot") { defaults = PolkadotDefaults }
-    else if (network === "kusama") { defaults = KusamaDefaults }
-    else { return (<div />) }
-    // Set default value to render on component
-    HumanReadable(defaults.validators, network, setReturnValue);
-    // Calculate a more accurate approximation using on-chain data
-    await CalcValidatorMinStake(network, defaults, setReturnValue);
-  });
-
-  return (returnValue);
 }
 
 export default MinimumStake;
