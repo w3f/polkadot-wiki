@@ -15,7 +15,7 @@ const KusamaDefaults = {
   currentEra: 4058
 }
 
-async function CalcValidatorMinStake(defaults, setReturnValue) {
+async function CalcValidatorMinStake(network, defaults, setReturnValue) {
   const wsProvider = new WsProvider(defaults.wsUrl);
   const api = await ApiPromise.create({ provider: wsProvider })
 
@@ -40,8 +40,7 @@ async function CalcValidatorMinStake(defaults, setReturnValue) {
     }
   }
   const output = validatorMinStake.toString();
-
-  setReturnValue(output);
+  HumanReadable(output, network, setReturnValue);
 }
 
 function MinimumStake({ network }) {
@@ -56,7 +55,7 @@ function MinimumStake({ network }) {
     // Set default value to render on component
     HumanReadable(defaults.validators, network, setReturnValue);
     // Calculate a more accurate approximation using on-chain data
-    await CalcValidatorMinStake(defaults, setReturnValue);
+    await CalcValidatorMinStake(network, defaults, setReturnValue);
   });
 
   return (returnValue);
