@@ -50,7 +50,7 @@ a referendum to let all holders, weighted by stake and conviction , make the dec
 
 To better understand how the council is formed, please read [this section](#council).
 
-There are several changes here with governance v2.
+There are several changes here with Governance v2.
 The way the new governance model reflects its decentralised character is by:
 
 1. Migrating all responsibilities of Council to token holders via democracy votes
