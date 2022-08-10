@@ -28,9 +28,9 @@ async function CalcValidatorMinStake(defaults, setReturnValue) {
   const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[0])
   let validatorMinStake = parseInt(validatorStake['total'].toString())
 
+  // TODO: this operation takes too long - try and see if we can batch the requests or use async
   // For all current validators
   for (let i = 1; i < currentValidators.length; i++) {
-    console.log(i);
     // Get the validators stake
     const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[i])
     const validatorTotalStake = parseInt(validatorStake['total'].toString())
@@ -40,8 +40,6 @@ async function CalcValidatorMinStake(defaults, setReturnValue) {
     }
   }
   const output = validatorMinStake.toString();
-
-  console.log(output);
 
   setReturnValue(output);
 }
