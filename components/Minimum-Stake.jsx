@@ -7,7 +7,6 @@ function MinimumStake({ network, defaultValue }) {
   const [returnValue, setReturnValue] = useState('');
 
   useEffect(async () => {
-    console.log(defaultValue);
     // Set defaults based on network
     let wsUrl = undefined;
     if (network === "polkadot") { wsUrl = "wss://rpc.polkadot.io" }
@@ -18,7 +17,7 @@ function MinimumStake({ network, defaultValue }) {
     HumanReadable(defaultValue, network, setReturnValue);
     // Calculate a more accurate approximation using on-chain data
     await CalcValidatorMinStake(network, wsUrl, setReturnValue);
-  });
+  }, []);
 
   return (returnValue);
 }
@@ -36,18 +35,17 @@ async function CalcValidatorMinStake(network, wsUrl, setReturnValue) {
   const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[0])
   let validatorMinStake = parseInt(validatorStake['total'].toString())
 
-  // TODO: this operation takes too long - try and see if we can batch the requests or use async
-  // For all current validators
-  for (let i = 1; i < currentValidators.length; i++) {
-    // Get the validators stake
-    const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[i])
-    const validatorTotalStake = parseInt(validatorStake['total'].toString())
-    // Compare against current minimum
+  // Iterate era validators
+  const validators = await api.query.staking.erasStakers.entries(currentEra.toString());
+  validators.forEach(([key, validator]) => {
+    const validatorTotalStake = parseInt(validator.total);
     if (validatorTotalStake < validatorMinStake) {
       validatorMinStake = validatorTotalStake;
     }
-  }
+  });
+  
   const output = validatorMinStake.toString();
+  setReturnValue(output);
   HumanReadable(output, network, setReturnValue);
 }
 
