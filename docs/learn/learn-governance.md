@@ -26,7 +26,7 @@ This system has functioned well over the first few years of operation, helping e
 
 Governance v2 or Gov2 changes how the practical means of day-to-day decisions are made, making the repercussions of referenda better scoped and agile in order to dramatically increase the number of collective decisions the system is able to make.
 
-**Gov2 is set to launch on Kusama following the final professional audit of its code. Once tested on Kusama, a proposal will be made for the Polkadot network to work on.**
+**Gov2 is set to launch on Kusama following the final professional audit of its code. Once tested on Kusama, a proposal will be made for it to be deployed on Polkadot.**
 
 The following content will begin by walking through many of the core principals of governance on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. It is important to understand the roots of governance v1 to better understand the direction of the second iteration. These deltas and distinctions will be highlighted throughout the various sub-topics.
 
