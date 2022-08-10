@@ -16,8 +16,8 @@ councillors in the elections.
 ## Voting for Councillors
 
 Voting for councillors requires you to reserve 
-{{ polkadot: ~20 DOT :polkadot }}{{ kusama: ~0.063 KSM :kusama }} 
-(a base amount + a per vote amount). You can then bond whatever amount you wish to put 
+{{ polkadot: ~20.064 DOT :polkadot }}{{ kusama: ~0.067 KSM :kusama }} as a base amount
+and an amount per vote {{ polkadot: ~0.032 DOT :polkadot }}{{ kusama: ~0.00011 KSM :kusama }}. You can then bond whatever amount you wish to put 
 behind your vote. See the [democracy guide](maintain-guides-democracy.md) for more information.
 
 :::info Voting and staking locks can overlap
