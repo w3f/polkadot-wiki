@@ -71,7 +71,7 @@ Referenda are discrete events that have a fixed voting period. When the voting p
 the function call (`set_code`) is made if the vote is approved. Referenda are always binary; your only options in
 voting are "aye", "nay", or abstaining entirely.
 
-In governance v1, referenda can be started in one of several ways:
+In Governance v1, referenda can be started in one of several ways:
 1. Publicly submitted proposals;
 2. Proposals submitted by the council, either through a majority or unanimously;
 3. Proposals submitted as part of the enactment of a prior referendum;
