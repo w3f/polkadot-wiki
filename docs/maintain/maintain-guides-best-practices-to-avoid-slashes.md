@@ -43,3 +43,10 @@ In the past there have been releases with bugs that lead to slashes, these issue
 3.	Use the W3F secure validator setup or adhere to its principles
 4.	Ensure basic security items are checked, use a firewall, manage user access, use SSH certificates
 5.	Avoiding using your server as a general purpose system.  Hosting a validator on your workstation or one that hosts other services increases the risk of maleficence.
+
+## Examples
+|Network|Era|Event Type|Details|Action Taken|
+|-------|---|----------|-------|------------|
+|Polkadot|774|Small Equivocation|[The validator](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io/$165562246360408hKCfC:matrix.org?via=matrix.parity.io&via=corepaper.org&via=matrix.org) migrated servers and cloned the keystore folder.  The onchain event can be viewed [here](https://polkadot.subscan.io/extrinsic/11190109-0?event=11190109-5)|The validator did not submit a request for the slash to be cancelled.|
+|Kusama|3329|Small Equivocation|The validator operated a test machine with cloned keys, the test machine was online at the same time as the primary which resulted in a slash.  Details can be found [here](https://kusama.polkassembly.io/post/1343)|The validator requested a cancellation of the slash but the council declined.|
+|Kusama|3995|Small Equivocation|The validator noticed several errors after which the client crashed and a slash was applied.  The validator recorded all events and opened github issues to allow for technical opinions to be shared.  Details can be found [here](https://kusama.polkassembly.io/post/1733).|The validator made a request to have the slashed cancelled.  The council approved the request as they believe the error was not operator related.| 
