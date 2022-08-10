@@ -499,7 +499,7 @@ The mechanism by which the Fellowship votes is the same as what is used for Polk
 
 So how exactly does this ranking system work?
 
-To prevent a small group of participants from gaining effective control over the network this system will adhere to three main principles:
+To prevent a small group of participants from gaining effective control over the network, this system will adhere to three main principles:
 
 1. The Fellowship must never have hard power over the network: it cannot change the parameters, conduct rescues or move assets. Their only power in governance resides in the the ability to reduce the effective timeline on which a referendum takes place.
 2. The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight should not be so high as to make a small number of higher members’ opinions be insurmountable when compared to a coherent opinion coming from lower-ranked membership.
