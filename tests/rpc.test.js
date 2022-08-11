@@ -2,7 +2,7 @@ import React from "react";
 import { render, act, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
-//import { ApiPromise, WsProvider } from "@polkadot/api";
+import { ApiPromise, WsProvider } from "@polkadot/api";
 
 test("Retrieves and applies a 'const' RPC value", async () => {
 	render(<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={0} />);
