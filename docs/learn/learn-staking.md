@@ -14,25 +14,25 @@ Here you will lean about what is staking, why is important and how it works for
 
 # Introduction
 
-Blockchain netowrks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
+Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
 blocks on the chain. Note that the consensus is split into two processes called `block production`
-and `block finalization`, we will come back to these two terms later on. The two main consenus types
-are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like
+and `block finalization`, we will come back to these two terms later on. The two main consensus
+types are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is
 dependent on the amount of capital locked on chain: the more the locked capital the lower the chance
 that someone will be able to successfully attack the network, as they would require a lot of capital
 themselves or to collude network participants. The process of locking tokens on the chain is also
-called `staking`. This is the main difference between PoS and PoW netwroks like Bitcoin that base
+called `staking`. This is the main difference between PoS and PoW networks like Bitcoin that base
 their security on solving mathematic puzzles, a solution that has been criticized due to the high
 amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible
 for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to
 the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on
 chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for
-token holders to become active participatns who contribute to the security and economic stability of
+token holders to become active participants who contribute to the security and economic stability of
 the network. PoS networks in general are therefore more inclusive than PoW networks, as participants
 do not need to have either the technical knowledge about blockchain technology nor the experience in
-running minining equipment. PoS ensures that everybody has "skin in the game" and thus can be held
-accountable. In case of misbehaviour participants to the staking process can be punished or
+running mining equipment. PoS ensures that everybody has "skin in the game" and thus can be held
+accountable. In case of misbehavior participants to the staking process can be punished or
 `slashed`, and depending on the gravity of the situation their stake can be partly or fully
 confiscated.
 
@@ -47,16 +47,18 @@ subject to loss of stake based on the behavior of the validator.
 With [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, nominators select up to 16
 validators they trust, and the network will automatically distribute the stake among validators in
-an even manner. Polkadot uses tools ranging from election theory to game theory to discrete
-optimization, to develop an efficient validator selection process that offers fair representation
-and security, thus avoiding uneven power and influence among validators. Another key difference in
-Polkadot's NPoS is that nominators are subject to loss of stake if they nominate a bad validator.
+an even manner. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
+from election theory to game theory to discrete optimization, to develop an efficient validator
+selection process that offers fair representation and security, thus avoiding uneven power and
+influence among validators. Another key difference in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS is that nominators are subject
+to loss of stake if they nominate a bad validator.
 
 Here we recall that the security of PoS networks depends on the amount of staked tokens. This means
 that to successfully attack the network one would need a large amount of tokens that can be accrued
 by one single participant alone or by colluding different participants to act maliciously. In case
 of NPoS, if there is an attack the stake of both the validator(s) and nominators will be
-confiscated. So there is little interest of acting in a harmful way becuase all participants can be
+confiscated. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
 the amount they have at stake, avoiding thus large payouts to few large validators which would
 ultimately lead to consensus centralization.
@@ -75,21 +77,22 @@ increasing their chance of being selected by the consensus for block production 
 during which an `active set` of validators is producing blocks and performing other actions on
 chain. This means that not all validators are in the active set, and such set changes between eras.
 Each era is divided into 6 epochs or `sessions` during which validators are assigned as block
-producers to specific timeframes or `slots`. This means that validators know the slots when they
+producers to specific time frames or `slots`. This means that validators know the slots when they
 will be required to produce a block within a specific session, but they do not know all the slots
 within a specific era. This adds a layer of security as, potentially, multiple validators assigned
-to a slot might collude to harm the network only within the timeframe of a session.
+to a slot might collude to harm the network only within the time frame of a session.
 
-Validators who produce a block are rewarded with tokens and they can share such
-rewards with their nominators. Both validators and nominators can stake their tokens on chain and receive staking rewards at the
-end of each era. The staking system pays out rewards equally to all validators
+Validators who produce a block are rewarded with tokens and they can share such rewards with their
+nominators. Both validators and nominators can stake their tokens on chain and receive staking
+rewards at the end of each era. The staking system pays out rewards equally to all validators
 regardless of stake. Having more stake on a validator does not influence the amount of block rewards
 it receives. This avoids centralization of power to few validators. There is a probabilistic
-component to reward calculation, so rewards may not be exactly equal for all
-validators. During each era validators can earn `era points` by doing different tasks on
-chain. The more the points, the higher the reward for a specific era. This promotes validators'
-activity on chain. To know more about era points, how and on which basis they are distributed visit the [dedicated page](../maintain/maintain-guides-validator-payout.md). Distribution of the rewards are pro-rata to all stakers after the validator's
-commission is deducted.
+component to reward calculation, so rewards may not be exactly equal for all validators. During each
+era validators can earn `era points` by doing different tasks on chain. The more the points, the
+higher the reward for a specific era. This promotes validators' activity on chain. To know more
+about era points, how and on which basis they are distributed visit the
+[dedicated page](../maintain/maintain-guides-validator-payout.md). Distribution of the rewards are
+pro-rata to all stakers after the validator's commission is deducted.
 
 ## Being a nominator
 
@@ -104,42 +107,69 @@ parachains, and possibly some other responsibilities regarding data availability
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
 to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
-Nominators have far fewer responsibilities than validators. Those include selecting validators and monitoring their
-performance, keeping an eye on changing commission rates (a validator can change
+Nominators have far fewer responsibilities than validators. Those include selecting validators and
+monitoring their performance, keeping an eye on changing commission rates (a validator can change
 commission at any time), and general health monitoring of their validators' account. Thus, while not
-being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared to a validators. For
-more information you can take a look at the [nominator guide](learn-nominator.md) to understand your
-responsibilities as a nominator.
+being completely set-it-and-forget-it, a nominator's experience is relatively hands-off compared to
+a validators. For more information you can take a look at the [nominator guide](learn-nominator.md)
+to understand your responsibilities as a nominator.
 
 If you want to be come a nominator check
 [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and
 would like to securely stake your tokens using Polkadot JS Apps, watch the video below.
 
-{{ kusama: The video below demonstrates it on Polkadot, but the procedue is the same for Kusama :kusama }}
+{{ kusama: The video below demonstrates it on Polkadot, but the procedure is the same for Kusama :kusama }}
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
 ### Selection of validators
 
-Choosing validators is not a simple task and it should take into asccount for nominator reward and risk preferences, ideally one aims to maximise rewards and minimize risks, with sometimes having to compromise between the two as minimising risks might decrease rewards, although this might be not necessarily be the case. Nominators should be pay attention to six criteria (not in order of importance): 1) amount of era points, 2) total stake which is equivalent to own stake (i.e. coming from the validator) + other stake (i.e. coming from nominators), 3) own stake, 4) commission, 5) identity, and 6) previous slashes. The diagram below shows how the selection of those criteria affects risk-to-reward ratio.
+Choosing validators is not a simple task and it should take into account for nominator reward and
+risk preferences, ideally one aims to maximize rewards and minimize risks, with sometimes having to
+compromise between the two as minimizing risks might decrease rewards, although this might be not
+necessarily be the case. Nominators should be pay attention to six criteria (not in order of
+importance): 1) amount of era points, 2) total stake which is equivalent to own stake (i.e. coming
+from the validator) + other stake (i.e. coming from nominators), 3) own stake, 4) commission, 5)
+identity, and 6) previous slashes. The diagram below shows how the selection of those criteria
+affects risk-to-reward ratio.
 
 ![rewards and risks diagram](../assets/staking/Reward-risk%20nominating.png)
 
 #### In theory
 
-Briefly, in theory, to maximise rewards and minimise risk one could select those validators that have era points above average, have total stake below average becuase they will pay out more rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, have high own stake as if slashed they have a lot to lose, have low commission fees but not 0% as it makes sense that for doing the heavy lifting validators ask for a small commission, have on-chain registered identity so that you can reach out to them or look at their website or social media, and they were not slashed before meaning that their on-chain behaviour is genuine.
+Briefly, in theory, to maximize rewards and minimize risk one could select those validators that
+have era points above average, have total stake below average because they will pay out more rewards
+per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, have high own stake as if slashed
+they have a lot to lose, have low commission fees but not 0% as it makes sense that for doing the
+heavy lifting validators ask for a small commission, have on-chain registered identity so that you
+can reach out to them or look at their website or social media, and they were not slashed before
+meaning that their on-chain behavior is genuine.
 
 #### In practice
 
-:::info Nominators must periodically check their validators
+:::caution Nominators must periodically check their validators
 
-It is important to rememeber that the whole system is dynamic and as such nominators should periodically monitor their validators. Failing to do so could result in rewards not being paid out, even for a prolonged period of time. 
+It is important to remember that the whole system is dynamic and as such nominators should
+periodically monitor the performance and reputation of their validators. Failing to do so could
+result in applied slashes and/or rewards not being paid out, even for a prolonged period of time.
+Nominating is _not_ a "set and forget" operation.
 
 :::
 
-Although the theory can be used as a general guideline, the proctice is more complicated and following the theory might not necessarily lead to the desired result. Validators might have low total stake, low commission and above average era points in one era and then having a totally different profile in the next one. There are criteria that vary more than others with era points being highly variable and thus the probabilistic component of staking rewards. It is not recommended to change nominations at each era only becuase the era points of one validator were low. Selection based on identity, no slashes and low commission should be fine. Variability in rewards due to the other criteria should level out over time. There might be the case when one validator always gets below average era points, this is a case when selecting another validator might help to increase the performance of one staked tokens.
+Although the theory can be used as a general guideline, the practice is more complicated and
+following the theory might not necessarily lead to the desired result. Validators might have low
+total stake, low commission and above average era points in one era and then having a totally
+different profile in the next one. There are criteria that vary more than others with era points
+being highly variable and thus the probabilistic component of staking rewards. It is not recommended
+to change nominations at each era only because the era points of one validator were low. Selection
+based on identity, no slashes and low commission should be fine. Variability in rewards due to the
+other criteria should level out over time. There might be the case when one validator always gets
+below average era points, this is a case when selecting another validator might help to increase the
+performance of one staked tokens.
 
-Check [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-) support article to understnad in detail how to select your own set of validators.
+Check
+[this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
+support article to understand in detail how to select your own set of validators.
 
 ### Accounts
 
@@ -163,8 +193,8 @@ There are three different accounts that can be used to securely manage your fund
 
 :::warning
 
-Never leave high balance on a conroller account, such accounts are usually "hot" meaning that the
-private key is stored on the device (PC, phone) and it is exposed to the interent all the time you
+Never leave high balance on a controller account, such accounts are usually "hot" meaning that the
+private key is stored on the device (PC, phone) and it is exposed to the internet all the time you
 are using it. It is good practice to deposit rewards on the stash account or to send them to another
 cold account.
 
@@ -243,16 +273,16 @@ left out.
 
 ![bags list example 3](../assets/staking/bags-list-example-3.png)
 
-If one receives staking rewards and the amout of staked tokens within the stash account increases
+If one receives staking rewards and the amount of staked tokens within the stash account increases
 over time, the position within a bag changes and may also result in a change of bag. This may also
-happen if accounts within the bag bond more tokens or unbond tokens, one's account position and the position
-of other accounts in the bags list might change. These changes are not done automatically. The bags-list pallet
-comes with the extrinsic `putInFrontOf` which helps the node to move up in the bag. Also, the
-bags-list pallet comes with an important permissionless extrinsic: `rebag`. This allows anyone to
-specify another account that is in the wrong bag, and place it in the correct one. Actions like
-bonding/unbonding tokens automatically rebags the nominator node, but events like staking
-rewards/slashing do not. Check the [bags-list](learn-nominator.md#bags-list) section for more
-information.
+happen if accounts within the bag bond more tokens or unbond tokens, one's account position and the
+position of other accounts in the bags list might change. These changes are not done automatically.
+The bags-list pallet comes with the extrinsic `putInFrontOf` which helps the node to move up in the
+bag. Also, the bags-list pallet comes with an important permissionless extrinsic: `rebag`. This
+allows anyone to specify another account that is in the wrong bag, and place it in the correct one.
+Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like
+staking rewards/slashing do not. Check the [bags-list](learn-nominator.md#bags-list) section for
+more information.
 
 This sorting functionality using bags is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
@@ -280,9 +310,6 @@ possible. The objectives of this election mechanism are to maximize the security
 achieve fair representation of the nominators. If you want to know more about how NPoS works (e.g.
 election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
-
-We expect each nominator to carefully track the performance and reputation of the validators they
-back. Nominating is _not_ a "set and forget" operation.
 
 ### 3. Staking Rewards Distribution
 
