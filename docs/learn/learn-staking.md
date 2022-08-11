@@ -12,26 +12,32 @@ Here you will lean about what is staking, why is important and how it works for 
 
 # Introduction
 
-Blockchain netowrks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add blocks on the chain. The two main consenuses are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the locked capital the lower thre chance someone will be able to successfully attack the network. The process of locking tokens on the chain is also called `staking`. This is the main difference between PoS and PoW netwroks like Bitcoin that base their security on solving mathematic puzzles, a solution that has been criticized due to the high amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for token holders to become active participatns who contribute to the security and economic stability of the network. PoS networks in general are therefore more inclusive than PoW networks, as participants do not need to have either technical knowledge about blockchain technology nor experience in running minining equipment. PoS ensures that everybody has "skin in the game" and thus can be held accountable. In case of misbehaviour participants to the staking process can be punished or `slashed`, and depending on the gravity of the situation their stake can be partly or fully confiscated. There are different versions of PoS, here we will concentrate on [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Blockchain netowrks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add blocks on the chain. Note that the consensus is split into two processes called `block production` and `block finalization`, we will come back to these two terms later on. The two main consenus types are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the locked capital the lower the chance that someone will be able to successfully attack the network, as they would require a lot of capital themselves or to collude network participants. The process of locking tokens on the chain is also called `staking`. This is the main difference between PoS and PoW netwroks like Bitcoin that base their security on solving mathematic puzzles, a solution that has been criticized due to the high amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for token holders to become active participatns who contribute to the security and economic stability of the network. PoS networks in general are therefore more inclusive than PoW networks, as participants do not need to have either technical knowledge about blockchain technology nor experience in running minining equipment. PoS ensures that everybody has "skin in the game" and thus can be held accountable. In case of misbehaviour participants to the staking process can be punished or `slashed`, and depending on the gravity of the situation their stake can be partly or fully confiscated.
 
-# Nominated Proof-of-Stake
+# Nominated Proof-of-stake
+
+The two main types of PoS are Delegated PoS (DPoS) and Nominated PoS (NPoS).
+
+DPoS networks weigh validators by stake, oftentimes allowing the highest-stake validators to take disproportionate control of the network’s consensus protocol. In DPoS networks, delegators are not subject to loss of stake based on the behavior of the validator.
+
+With [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, nominators select up to 16 validators they trust, and the network will automatically distribute the stake among validators in an even manner. Polkadot uses tools ranging from election theory to game theory to discrete optimization, to develop an efficient validator selection process that offers fair representation and security, thus avoiding uneven power and influence among validators. Another key difference in Polkadot's NPoS is that nominators are subject to loss of stake if they nominate a bad validator.
+
+Here we recall that the security of PoS networks depends on the amount of staked tokens. This means that to successfully attack the network one would need a large amount of tokens that can be accrued by one single participant alone or by colluding different participants to act maliciously. In case of NPoS, if there is an attack the stake of both the validator(s) and nominators will be confiscated. So there is little interest of acting in a harmful way becuase all participants can be held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from the amount they have at stake, avoiding thus large payouts to few large validators which would ultimately lead to consensus centralization.
 
 ## Overview
 
 Nominated Proof-of-Stake (NPoS) encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as `nominators`. Nominators may back up to 
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
-validators as trusted validator candidates. The action of nominating consists in locking or bonding tokens (stake) that are allocated to the validator candidates. Such stake is used to increase the amount of allocated tokens to such candidates, increasing their chance of being selected by the consensus for block production. 
+validators as trusted validator candidates. The action of nominating consists in a) locking or bonding tokens (stake) on chain, and 2) nominate a set validator candidates to whom the stake will be allocated. Such stake is used to increase the amount of tokens held by such candidates, increasing their chance of being selected by the consensus for block production during a specific `era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during which an `active set` of validators is producing blocks and performing other actions on chain. This means that not all validators are in the active set, and such set changes between eras. Each era is divided into 6 epochs or `sessions` during which validators are assigned as block producers to specific timeframes or `slots`. This means that validators know the slots when they will be required to produce a block within a specific session, but they do not know all the slots within a specific era. This adds a layer of security as, potentially, multiple validators assigned to a slot might collude to harm the network only within the timeframe of a session.
 
-Both validators and nominators lock their tokens on chain and receive staking rewards at the end of each `era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during which an active set of validators is producing blocks and performing other actions on chain. Each era is divided into 6 epochs or `sessions` during which validators are assigned as block producers to specific timeframes or `slots`.
-
-Validators who produce a block are rewarded with tokens and they can share such rewards with their nominators. The staking system pays out rewards equally to all validators regardless of stake. Having more stake on a validator does not influence the amount of block rewards it receives. This avoids centralization of power to few validators. There is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly equal for all validators. Also, during each era validators can earn `era points` by doing different tasks on chain. The more the points, the higher the reward for a specific era. This promotes validators' activity on chain. Distribution of the rewards are pro-rata to all stakers after the validator's commission is deducted. In case of misbehaviour both validator and associated nominators can be slashed.
+Both validators and nominators can stake their tokens on chain and receive staking rewards at the end of each era. Validators who produce a block are rewarded with tokens and they can share such rewards with their nominators. The staking system pays out rewards equally to all validators regardless of stake. Having more stake on a validator does not influence the amount of block rewards it receives. This avoids centralization of power to few validators. There is a probabilistic component to reward calculation (discussed below), so rewards may not be exactly equal for all validators. Also, during each era validators can earn `era points` by doing different tasks on chain. The more the points, the higher the reward for a specific era. This promotes validators' activity on chain. Distribution of the rewards are pro-rata to all stakers after the validator's commission is deducted.
 
 ## Being a nominator
 
 ### Tasks and responsibilities
 
-Since validator slots are limited, most of those who wish to stake their DOT and contribute economic security to the network will be nominators, thus here we focus on the role of nominators. However, it is worth to mention that validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
+Since validator slots are limited, most of those who wish to stake their DOT and contribute economic security to the network will be nominators, thus here we focus on the role of nominators. However, it is worth mentioning that validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
 consensus in GRANDPA, validate the state transition function of parachains, and possibly some other
 responsibilities regarding data availability and [XCM](learn-cross-consensus.md). For more information you can take a look at the [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
@@ -47,9 +53,34 @@ If you want to be come a nominator check [this](../maintain/maintain-guides-how-
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
 
+### Accounts
 
+There are two different accounts for managing your funds while staking: `Stash` and `Controller`.
 
+- **Stash:** This account holds funds bonded for staking, but delegates some functions to a
+  Controller. As a result, you may actively participate with a Stash key kept in a cold wallet,
+  meaning it stays offline all the time. You can also designate a Proxy account to vote in
+  [governance](learn-governance.md) proposals.
 
+- **Controller** This account acts on behalf of the Stash account, signalling decisions about
+  nominating and validating. It sets preferences like commission and payout account. The earned rewards can be bonded (locked) immediately for staking on your stash account, which would effectively compound the rewards you receive over time. You could also choose to have them deposited to your controller account or a different account as free (transferable) balance. If you are a validator, it also sets your [session keys](learn-keys.md#session-keys). It only needs enough
+  funds to pay transaction fees.
+
+![staking](../assets/NPoS/staking-keys_stash_controller.png)
+
+We designed this hierarchy of separate key types so that validator operators and nominators can
+protect themselves much better than in systems with only one key. As a rule, you lose security
+anytime you use one key for multiple roles, or even if you use keys related by derivation. You
+should never use any account key for a "hot" session key in particular.
+
+Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
+Polkadot and the cryptography behind it [see here](learn-keys.md).
+
+:::info
+
+For ledger users staking directly on Ledger Live, currently there is only one option to use one account as both stash and controller.
+
+:::
 
 ### 2. Staking System Overview
 
@@ -254,34 +285,6 @@ each validator can choose between increasing their fees to earn more, or decreas
 attract more nominators and increase their chances of being elected. In the long term, we expect
 that all validators will need to be cost efficient to remain competitive, and that validators with
 higher reputation will be able to charge slightly higher commission fees (which is fair).
-
-## Accounts
-
-There are two different accounts for managing your funds: `Stash` and `Controller`.
-
-![staking](../assets/NPoS/staking-keys_stash_controller.png)
-
-- **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  Controller. As a result, you may actively participate with a Stash key kept in a cold wallet,
-  meaning it stays offline all the time. You can also designate a Proxy account to vote in
-  [governance](learn-governance.md) proposals.
-- **Controller** This account acts on behalf of the Stash account, signalling decisions about
-  nominating and validating. It sets preferences like payout account and commission. If you are a
-  validator, it also sets your [session keys](learn-keys.md#session-keys). It only needs enough
-  funds to pay transaction fees.
-
-We designed this hierarchy of separate key types so that validator operators and nominators can
-protect themselves much better than in systems with only one key. As a rule, you lose security
-anytime you use one key for multiple roles, or even if you use keys related by derivation. You
-should never use any account key for a "hot" session key in particular.
-
-Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
-Polkadot and the cryptography behind it [see here](learn-keys.md).
-
-As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
-chain's native token. The earned rewards can be bonded (locked) immediately for staking on your
-account, which would effectively compound the rewards you receive over time. You could also choose
-to have them deposited to your account or a different account as free (transferable) balance. 
 
 ## Slashing
 
