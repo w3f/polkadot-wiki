@@ -55,21 +55,21 @@ If you want to be come a nominator check [this](../maintain/maintain-guides-how-
 
 ### Accounts
 
-There are two different accounts for managing your funds while staking: `Stash` and `Controller`.
+There are three different accounts that can be used to securely manage your funds while staking.
 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  Controller. As a result, you may actively participate to staking with a Stash key kept in a cold wallet like ledger,
-  meaning it stays offline all the time. You can also designate a Proxy account to vote in
-  [governance](learn-governance.md) proposals.
+  Controller. As a result, you may actively participate to staking with a Stash private key kept in a cold wallet like ledger,
+  meaning it stays offline all the time. Stash account keys are used to sign bonding, unbonding or chilling, and bond more 
 
-- **Controller** This account acts on behalf of the Stash account, signalling decisions about
+- **Controller:** This account acts on behalf of the Stash account, signalling decisions about
   nominating and validating. It sets preferences like commission (for validators) and payout account. The earned rewards can be bonded (locked) immediately for staking on your stash account, which would effectively compound the rewards you receive over time. You could also choose to have them deposited to your controller account or a different account as free (transferable) balance. If you are a validator, it also sets your [session keys](learn-keys.md#session-keys). Controller accounts only needs enough funds to pay transaction fees.
 
-- **Proxy** This account ...
+- **Proxy:** This account ... You can also designate a Proxy account to vote in
+  [governance](learn-governance.md) proposals.
 
 :::warning
 
-Never leave high balance on a conroller account, such accounts are usually "hot" meaning that the private key is stored on the device (PC, phone) and it is exposed to the interent all the time you are using it.
+Never leave high balance on a conroller account, such accounts are usually "hot" meaning that the private key is stored on the device (PC, phone) and it is exposed to the interent all the time you are using it. It is good practice to deposit rewards on the stash account or to send them to another cold account. 
 
 :::
 
@@ -78,14 +78,13 @@ Never leave high balance on a conroller account, such accounts are usually "hot"
 This hierarchy of separate key types was designed so that nominators and validator operators can
 protect themselves much better than in systems with only one key. As a rule, the more often one uses a private key the higher its visibility and thus the chance it can be stolen. So, if one uses a key for multiple roles on a blockchain network, security can be easily compromised as the likelihood one uses that key often is high. Note that the damage linked to stolen private keys is different depending on the type of account derivation. In case of soft derivation all derived accounts are compromised. More information about account derivation can be found [here](../learn/learn-accounts.md/#derivation-paths).
 
-
 :::info
 
 For ledger users staking directly on Ledger Live, currently there is only one option to use one account as both stash and controller.
 
 :::
 
-### 2. Staking System Overview
+### Staking System Overview
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to
@@ -97,8 +96,7 @@ As a nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
 is required to submit an intention to
-nominate. The nomination intents are placed in a semi-sorted list called
-[bags-list](https://github.com/paritytech/substrate/pull/9507).
+nominate.
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
@@ -112,31 +110,17 @@ which is a dynamic value that can be much higher than
 
 :::
 
-{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The bags list
-has two primary components, bags and nodes. The list is composed of bags that each describe a range
-of active bonded funds (e.g. the 1st bag will have nominators with 0 → 10 DOT, 2nd bag 11 → 20 DOT,
-etc). In each bag is a list of nodes that correspond to a nominator and their staked funds.
+The nomination intents are placed in a so-called [bags-list](https://github.com/paritytech/substrate/pull/9507). {{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }}The bags list has two primary components, bags and nodes. The list is composed of bags that each describe a range of active bonded funds (e.g. the 1st bag will have nominators who staked 0 → 10 DOT, 2nd bag 11 → 20 DOT, etc). Each bag contains nodes that correspond to nominators and their staked funds.
 
 The bags-list pallet is designed to be self-maintaining, with minimal effort from the blockchain,
 making it extremely scalable. Let us explore the sorting functionality of the bags list with an
-example. In the bags list below, there are 8 nodes placed in 3 bags. It can be observed that the
-list of nodes within the bags are arranged based on their insertion order and not based on the
-number of tokens bonded. For instance, the nodes in bag 1 are arranged in this order: 15 → 12 → 19
+example. In the bags list below, there are 8 nodes (corresponding to 8 accounts with staked funds) placed in 3 bags. It can be observed that the list of nodes within the bags are arranged based on their insertion order and not based on the
+number of tokens bonded. For instance, the nodes in bag 1 are arranged in this order: 15 → 12 → 19.
 
 ![bags list example 1](../assets/staking/bags-list-example-1.png)
 
 Let's say the nominator with the stake of 19 DOT bonds 2 DOT additionally. This action would place
 that nominator node in bag 2, right after the node with 27 DOT.
-
-:::info
-
-Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like
-staking rewards/slashing do not! The bags-list pallet comes with an important permissionless
-extrinsic: `rebag`. This allows anyone to specify another account that is in the wrong bag, and
-place it in the correct one. Check the [bags-list](learn-nominator.md#bags-list) section for more
-information.
-
-:::
 
 ![bags list example 2](../assets/staking/bags-list-example-2.png)
 
@@ -150,16 +134,6 @@ nomination intents, of which, at most
 {{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} come out as the electing nominators.
 Check [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
-:::caution Minimum active nomination threshold to earn rewards is dynamic
-
-Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} nominators is applied to the
-validators in the active set. To avail staking rewards, ensure that the number of tokens bonded is
-higher than the minimum active nomination. For more information, check the
-[nominator guide](learn-nominator.md)
-
-:::
-
 Once the nomination period ends, the NPoS election mechanism takes the nomination intents and their
 associated votes as input, and outputs a set of validators. The bags are iterated from the most
 staked to the least staked. This could leave the last touched bag to only be partially iterated.
@@ -171,6 +145,25 @@ node to move up in the bag. Check the [bags-list](learn-nominator.md#bags-list) 
 information.
 
 ![bags list example 3](../assets/staking/bags-list-example-3.png)
+
+:::info
+
+The bags-list pallet comes with an important permissionless extrinsic: `rebag`. This allows anyone to specify another account that is in the wrong bag, and place it in the correct one. ctions like bonding/unbonding tokens automatically rebags the nominator node, but events like staking rewards/slashing do not. Check the [bags-list](learn-nominator.md#bags-list) section for more information.
+
+:::
+
+:::caution Minimum active nomination threshold to earn rewards is dynamic
+
+Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
+{{ polkadot: 22,500 :polkadot }}{{ kusama: 20,000  :kusama }} nominators is applied to the
+validators in the active set. To avail staking rewards, ensure that the number of tokens bonded is
+higher than the minimum active nomination. For more information, check the
+[nominator guide](learn-nominator.md)
+
+:::
+
+
+
 
 The "election solution" has to meet certain requirements, such as maximizing the amount of stake to
 nominate validators and distributing the stake backing validators as evenly as possible. The
