@@ -58,23 +58,26 @@ If you want to be come a nominator check [this](../maintain/maintain-guides-how-
 There are two different accounts for managing your funds while staking: `Stash` and `Controller`.
 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  Controller. As a result, you may actively participate with a Stash key kept in a cold wallet,
+  Controller. As a result, you may actively participate to staking with a Stash key kept in a cold wallet like ledger,
   meaning it stays offline all the time. You can also designate a Proxy account to vote in
   [governance](learn-governance.md) proposals.
 
 - **Controller** This account acts on behalf of the Stash account, signalling decisions about
-  nominating and validating. It sets preferences like commission and payout account. The earned rewards can be bonded (locked) immediately for staking on your stash account, which would effectively compound the rewards you receive over time. You could also choose to have them deposited to your controller account or a different account as free (transferable) balance. If you are a validator, it also sets your [session keys](learn-keys.md#session-keys). It only needs enough
-  funds to pay transaction fees.
+  nominating and validating. It sets preferences like commission (for validators) and payout account. The earned rewards can be bonded (locked) immediately for staking on your stash account, which would effectively compound the rewards you receive over time. You could also choose to have them deposited to your controller account or a different account as free (transferable) balance. If you are a validator, it also sets your [session keys](learn-keys.md#session-keys). Controller accounts only needs enough funds to pay transaction fees.
+
+- **Proxy** This account ...
+
+:::warning
+
+Never leave high balance on a conroller account, such accounts are usually "hot" meaning that the private key is stored on the device (PC, phone) and it is exposed to the interent all the time you are using it.
+
+:::
 
 ![staking](../assets/NPoS/staking-keys_stash_controller.png)
 
-We designed this hierarchy of separate key types so that validator operators and nominators can
-protect themselves much better than in systems with only one key. As a rule, you lose security
-anytime you use one key for multiple roles, or even if you use keys related by derivation. You
-should never use any account key for a "hot" session key in particular.
+This hierarchy of separate key types was designed so that nominators and validator operators can
+protect themselves much better than in systems with only one key. As a rule, the more often one uses a private key the higher its visibility and thus the chance it can be stolen. So, if one uses a key for multiple roles on a blockchain network, security can be easily compromised as the likelihood one uses that key often is high. Note that the damage linked to stolen private keys is different depending on the type of account derivation. In case of soft derivation all derived accounts are compromised. More information about account derivation can be found [here](../learn/learn-accounts.md/#derivation-paths).
 
-Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
-Polkadot and the cryptography behind it [see here](learn-keys.md).
 
 :::info
 
