@@ -37,7 +37,6 @@ async function CalcValidatorMinStake(network, wsUrl, setReturnValue) {
 
   // Iterate era validators
   const validators = await api.query.staking.erasStakers.entries(currentEra.toString());
-
   validators.forEach(([key, validator]) => {
     const validatorTotalStake = parseInt(validator.total);
     if (validatorTotalStake < validatorMinStake) {
