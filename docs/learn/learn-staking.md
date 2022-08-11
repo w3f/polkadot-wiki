@@ -12,7 +12,7 @@ Here you will lean about what is staking, why is important and how it works for 
 
 # Introduction
 
-Blockchain netowrks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add blocks on the chain. The two main consenuses are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain. The process of locking tokens on the chain is also called `staking`. This is the main difference between PoS and PoW netwroks like Bitcoin that base their security on solving mathematic puzzles, a solution that has been criticized due to the high amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for token holders to become active participatns who contribute to the security and economic stability of the network. PoS networks in general are therefore more inclusive than PoW networks, as participants do not need to have either technical knowledge about blockchain technology nor experience in running minining equipment. PoS ensures that everybody has "skin in the game" and thus can be held accountable. In case of misbehaviour validators can be punished or `slashed`, and depending on the gravity of the situation their stake can be partly or fully confiscated. There are different versions of PoS, here we will concentrate on [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Blockchain netowrks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add blocks on the chain. The two main consenuses are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the locked capital the lower thre chance someone will be able to successfully attack the network. The process of locking tokens on the chain is also called `staking`. This is the main difference between PoS and PoW netwroks like Bitcoin that base their security on solving mathematic puzzles, a solution that has been criticized due to the high amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for token holders to become active participatns who contribute to the security and economic stability of the network. PoS networks in general are therefore more inclusive than PoW networks, as participants do not need to have either technical knowledge about blockchain technology nor experience in running minining equipment. PoS ensures that everybody has "skin in the game" and thus can be held accountable. In case of misbehaviour participants to the staking process can be punished or `slashed`, and depending on the gravity of the situation their stake can be partly or fully confiscated. There are different versions of PoS, here we will concentrate on [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
 # Nominated Proof-of-Stake
 
@@ -29,38 +29,27 @@ Validators who produce a block are rewarded with tokens and they can share such 
 
 ## Being a nominator
 
+### Tasks and responsibilities
+
 Since validator slots are limited, most of those who wish to stake their DOT and contribute economic security to the network will be nominators, thus here we focus on the role of nominators. However, it is worth to mention that validators do most of the heavy lifting: they produce new block candidates in BABE, vote and come to
 consensus in GRANDPA, validate the state transition function of parachains, and possibly some other
-responsibilities regarding data availability and [XCM](learn-cross-consensus.md). If you want to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
+responsibilities regarding data availability and [XCM](learn-cross-consensus.md). For more information you can take a look at the [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
 
 Nominators have far fewer responsibilities than validators. Those include monitoring their
 validators' performance, keeping an eye on changing commission rates (a validator can
 change commission at any time), and general health monitoring of their validators'
 account. Thus, while not set-it-and-forget-it, a nominator's experience is relatively hands-off
-compared to a validators. If you want to be come a nominator check [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide.
+compared to a validators. For more information you can take a look at the [nominator guide](learn-nominator.md) to understand your responsibilities as a nominator.
 
+If you want to be come a nominator check [this](../maintain/maintain-guides-how-to-nominate-polkadot.md) guide. If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the video below. 
 
-
-
-
-
-### 1. Identifying your role
-
-In PoS networks you can be either a [nominator or a validator](#validators-and-nominators).
-
-As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
-chain's native token. The earned rewards can be bonded (locked) immediately for staking on your
-account, which would effectively compound the rewards you receive over time. You could also choose
-to have them deposited to your account or a different account as free (transferable) balance. You
-can take a look at the [nominator guide](learn-nominator.md) to understand your responsibilities as
-a nominator, and the [validator docs](learn-validator.md) to understand what you need to do as a
-validator.
-
-If you are a beginner and would like to securely stake your tokens using Polkadot JS Apps, watch the
-video below.
 {{ kusama: The video below demonstrates it on Polkadot, but the procedue is the same for Kusama :kusama }}
 
 [![Staking on Polkadot JS](https://img.youtube.com/vi/FCXC0CDhyS4/0.jpg)](https://youtu.be/FCXC0CDhyS4)
+
+
+
+
 
 ### 2. Staking System Overview
 
@@ -288,6 +277,11 @@ should never use any account key for a "hot" session key in particular.
 
 Controller and Stash account keys can be either sr25519 or ed25519. For more on how keys are used in
 Polkadot and the cryptography behind it [see here](learn-keys.md).
+
+As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the
+chain's native token. The earned rewards can be bonded (locked) immediately for staking on your
+account, which would effectively compound the rewards you receive over time. You could also choose
+to have them deposited to your account or a different account as free (transferable) balance. 
 
 ## Slashing
 
