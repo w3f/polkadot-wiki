@@ -7,7 +7,6 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 import RPC from "./../../components/RPC-Connection"
-import NominationPools from "./../../components/Nomination-Pools"
 
 :::info Nomination Pools are live on [Westend](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwestend-rpc.polkadot.io#/staking/pools) and [Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/staking/pools).
 
@@ -15,8 +14,6 @@ Get some [Westies (WND)](learn-DOT.md#getting-westies) and start experimenting w
 pools! Soon they will be deployed on Polkadot.
 
 :::
-
-{{ kusama: Kusama on-chain nomination pool data: <NominationPools network="kusama"/> :kusama }}
 
 :::tip Have questions on Nomination Pools?
 
@@ -85,6 +82,8 @@ A member delegates funds to a pool by transferring some amount to the pool’s b
 ability to bond additional funds, or re-stake rewards as long as they are already actively bonded.
 Note that a member may only belong to one pool at a time.
 
+{{ kusama: **The current minimum bond to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.** :kusama }}
+
 :::info
 
 The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS
@@ -138,6 +137,12 @@ vertical dots and click on Withdraw unbonded.
 - In order for a member to switch pools they must wait for the normal 28 day unbonding process.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
+:::info Kusama Pool Sizing
+- There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> members (there are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> members).
+- There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> pools (there are currently <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> pools).
+- There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> members per pool.
+:::info
+
 ## Pool Administration
 
 ### States
@@ -168,7 +173,11 @@ The depositor calls the `create` extrinsic, setting the administrative roles and
 funds to the pool in order to add themselves as the first member. As stated above, the depositor
 must always be a member as long as the pool exists; they will be the last member to leave, ensuring
 they always have some skin in the game. Significant stake from the depositor is always a good
-indicator for the pool's credibility. The pool’s ‘nominator role’ selects validators with the
+indicator for the pool's credibility. 
+
+{{ kusama: **The current minimum bond to create a pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
+
+The pool’s ‘nominator role’ selects validators with the
 nominate extrinsic. On Polkadot JS Apps UI, navigate to Network > Staking > Pools and click on Add
 Pool button.
 
