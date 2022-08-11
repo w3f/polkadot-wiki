@@ -2,7 +2,6 @@ import React from "react";
 import { render, act, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import RPC from "../components/RPC-Connection";
-import NominationPools from "../components/Nomination-Pools";
 //import { ApiPromise, WsProvider } from "@polkadot/api";
 
 test("Retrieves and applies a 'const' RPC value", async () => {
@@ -28,15 +27,6 @@ test("Human readable filter with integer value", async () => {
 test("Human readable filter with float value", async () => {
 	render(<RPC network="polkadot" path="BAD.PATH" defaultValue={202580000000} filter="humanReadable" />);
 	await waitFor(() => expect(screen.getByText("20.258 DOT")).toBeInTheDocument(), { timeout: 5000 });
-});
-
-test("Nomination Pools table renders as expected", async () => {
-	render(<NominationPools network="kusama"/>);
-	await waitFor(() => 
-		expect(screen.getByText("65536")).toBeInTheDocument(),
-		expect(screen.getByText("1 KSM")).toBeInTheDocument(),
-		expect(screen.getByText("Total Pools")).toBeInTheDocument(),
-		{ timeout: 15000 });
 });
 
 /*
