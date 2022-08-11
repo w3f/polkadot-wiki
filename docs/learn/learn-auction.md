@@ -275,8 +275,31 @@ of the parachain slot.
 ## Parachain Lease Extension
 
 Before the slot lease expires, parachains have to bid and win another auction for continuity of the
-lease. 
+lease. To avoid any downtime in connectivity and minimize the risk of losing a subsequent auction, 
+parachain teams need to plan well ahead to bid on and secure an adjacent slot before their current 
+lease period ends. Explained in the section above, each slot auction lets you bid for 8 LPs
+(Lease Periods) which enables two scenarios for the parachain's lease extension -
 
+### Lease Extension with Overlapping Slots
+
+Aquire a slot where the first LP is before the last LP of the current slot.
+
+- Register a new 'paraId'
+- Win a slot auction with the new 'paraId'
+
+The parachain will now have two slots: one that will end soon, and one that just started.
+Both slots will have at least one LP in common. When the old slot transitions to their last LP, 
+the parachain can swap the slots. This can be done via on-chain governance or via XCM. 
+
+
+### Lease Extension with Non-Overlapping Slots
+
+Aquire a slot where the first LP starts right after the end of the last LP of the current slot.
+In this case, the parachain can bid directly with their current 'paraId', and it will be automatically 
+extended without the need of swapping. This method has the advantage of not having superposing LP's on 
+different slots owned by the same team, however it has the disadvantage of losing flexibility on when 
+to win a new slot: if the team does not win the exact slot, then it will suffer some downtime until 
+it wins a new slot.
 
 ## FAQ
 
