@@ -15,13 +15,8 @@ Here you will lean about what is staking, why is important and how it works for
 # Introduction
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
-blocks on the chain. Note that the consensus is split into two processes called `block production`
-and `block finalization`, we will come back to these two terms later on. The two main consensus
-types are Proof-of-Work (PoW) and Proof-of-Stake (PoS). In PoS networks like
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is
-dependent on the amount of capital locked on chain: the more the locked capital the lower the chance
-that someone will be able to successfully attack the network, as they would require a lot of capital
-themselves or to collude network participants. The process of locking tokens on the chain is also
+blocks on the chain. Consensus is the process of agreeing on something, in this case the progression of the blockchain or how blocks are added to the chain. Consensus is split into two protocols: `block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e. the way only one block out of many candidates is selected and added to the chain. Because in public blockchains we have many participants who do not know each other (and probably never will), the reach of consensus happens in a secure and trustless way using Proof-of-Work (PoW) or Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the locked capital the lower the chance
+that someone will be able to successfully attack the network, as they would require a lot of own tokens or to collude different network participants. The process of locking tokens on the chain is also
 called `staking`. This is the main difference between PoS and PoW networks like Bitcoin that base
 their security on solving mathematic puzzles, a solution that has been criticized due to the high
 amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible
@@ -61,7 +56,7 @@ of NPoS, if there is an attack the stake of both the validator(s) and nominators
 confiscated. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
 the amount they have at stake, avoiding thus large payouts to few large validators which would
-ultimately lead to consensus centralization.
+ultimately lead to consensus centralization. For a more in-depth review check [this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
 ## Overview
 
@@ -73,14 +68,15 @@ validators as trusted validator candidates. The action of nominating consists in
 bonding tokens (stake) on chain, and 2) nominate a set validator candidates to whom the stake will
 be allocated. Such stake is used to increase the amount of tokens held by such candidates,
 increasing their chance of being selected by the consensus for block production during a specific
-`era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }}
+`era`. 
+
+An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }}
 during which an `active set` of validators is producing blocks and performing other actions on
 chain. This means that not all validators are in the active set, and such set changes between eras.
 Each era is divided into 6 epochs or `sessions` during which validators are assigned as block
 producers to specific time frames or `slots`. This means that validators know the slots when they
 will be required to produce a block within a specific session, but they do not know all the slots
-within a specific era. This adds a layer of security as, potentially, multiple validators assigned
-to a slot might collude to harm the network only within the time frame of a session.
+within a specific era. Having sessions adds a layer of security because it decreases the chance of having multiple validators assigned to a slot colluding to harm the network.
 
 Validators who produce a block are rewarded with tokens and they can share such rewards with their
 nominators. Both validators and nominators can stake their tokens on chain and receive staking
@@ -98,10 +94,9 @@ pro-rata to all stakers after the validator's commission is deducted.
 
 ### Tasks and responsibilities
 
-Since validator slots are limited, most of those who wish to stake their DOT and contribute economic
-security to the network will be nominators, thus here we focus on the role of nominators. However,
-it is worth mentioning that validators do most of the heavy lifting: they produce new block
-candidates in BABE, vote and come to consensus in GRANDPA, validate the state transition function of
+Since validator slots are limited, most of those who wish to stake their DOT and contribute to the economic
+security of the network will be nominators, thus here we focus on the role of nominators. However,
+it is worth mentioning that validators do most of the heavy lifting: they run hardware equipment and manage [session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys), produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition function of
 parachains, and possibly some other responsibilities regarding data availability and
 [XCM](learn-cross-consensus.md). For more information you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
