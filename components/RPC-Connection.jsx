@@ -17,6 +17,7 @@ const Statemint = "statemint";
 
 function RPC({ network, path, defaultValue, filter=undefined }) {
 	const [returnValue, setReturnValue] = useState('');
+	network = network.toLowerCase();
 
 	useEffect(() => {
 		// Set default as a fallback if anything fails
@@ -43,7 +44,7 @@ function RPC({ network, path, defaultValue, filter=undefined }) {
 				wsUrl = "wss://statemint-rpc.polkadot.io/";
 				break;
 			default:
-				console.log(`Unknown network provided, ${net}`);
+				console.log(`Unknown network provided, ${network}`);
 		}
 
 		// Apply default value if network is not recognized
