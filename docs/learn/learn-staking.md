@@ -15,7 +15,7 @@ Here you will lean about what is staking, why is important and how it works for
 # Introduction
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
-blocks on the chain. Consensus is the process of agreeing on something, in this case the progression of the blockchain or how blocks are added to the chain. Consensus is split into two protocols: `block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e. the way only one block out of many candidates is selected and added to the chain. Because in public blockchains we have many participants who do not know each other (and probably never will), the reach of consensus happens in a secure and trustless way using Proof-of-Work (PoW) or Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the locked capital the lower the chance
+blocks on the chain. Consensus is the process of agreeing on something, in this case the progression of the blockchain or how blocks are added to the chain. Consensus is split into two protocols: `block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e. the way only one block out of many candidates is selected and added to the chain. Because in public blockchains we have many participants who do not know each other (and probably never will), the reach of consensus happens in a secure and trustless way using Proof-of-Work (PoW) or Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the capital locked the lower the chance
 that someone will be able to successfully attack the network, as they would require a lot of own tokens or to collude different network participants. The process of locking tokens on the chain is also
 called `staking`. This is the main difference between PoS and PoW networks like Bitcoin that base
 their security on solving mathematic puzzles, a solution that has been criticized due to the high
@@ -83,7 +83,7 @@ nominators. Both validators and nominators can stake their tokens on chain and r
 rewards at the end of each era. The staking system pays out rewards equally to all validators
 regardless of stake. Having more stake on a validator does not influence the amount of block rewards
 it receives. This avoids centralization of power to few validators. There is a probabilistic
-component to reward calculation, so rewards may not be exactly equal for all validators. During each
+component in the calculation of rewards, so they may not be exactly equal for all validators. In fact, during each
 era validators can earn `era points` by doing different tasks on chain. The more the points, the
 higher the reward for a specific era. This promotes validators' activity on chain. To know more
 about era points, how and on which basis they are distributed visit the
@@ -168,7 +168,7 @@ support article to understand in detail how to select your own set of validators
 
 ### Accounts
 
-There are three different accounts that can be used to securely manage your funds while staking.
+There are two different accounts that can be used to securely manage your funds while staking.
 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
   Controller. As a result, you may actively participate to staking with a Stash private key kept in
@@ -182,9 +182,6 @@ There are three different accounts that can be used to securely manage your fund
   them deposited to your controller account or a different account as free (transferable) balance.
   If you are a validator, it also sets your [session keys](learn-keys.md#session-keys). Controller
   accounts only needs enough funds to pay transaction fees.
-
-- **Proxy:** This account ... You can also designate a Proxy account to vote in
-  [governance](learn-governance.md) proposals.
 
 :::warning
 
@@ -212,6 +209,12 @@ For ledger users staking directly on Ledger Live, currently there is only one op
 account as both stash and controller.
 
 :::
+
+### Staking proxies
+
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using [substrate](https://substrate.io/), a modular system to efficiently build blockchains without having deep knowledge about blockchain technology. Within each module or `pallet` one can `call` different functions that have similar logic. For example, the staking pallet contains all functionalities related to staking such as bonding or unbonding funds. The combined information of pallets and calls constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that triggers an event within the chain. Continuing with the staking example, within the staking pallet one can bond funds and nominate some validators. At the end of an era the signature of such extrinsic might trigger a reward payout, this is an event inside the chain. This way of having transactions categorized within pallets and functionalities makes it possible to create accounts having special permissions also called **proxy accounts**.
+
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} proxy accounts are special accounts to which one can delegate signatures to calls from specific pallets. There is thus the possibility to create staking proxy accounts that can be used to sign only calls from staking, session and utility pallets. This makes the stash account even more isolated than using a controller account since now one can bond / unbond / bond more funds using the staking proxy account. However, it is important to remember that actions on proxy accounts are limited, and in the case of staking proxy account calls from the balance pallet cannot be signed. This means that it is not possible to send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
 
 ### Staking System Overview
 
