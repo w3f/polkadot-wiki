@@ -287,10 +287,19 @@ Aquire a slot where the first LP is before the last LP of the current slot.
 - Register a new 'paraId'
 - Win a slot auction with the new 'paraId'
 
-The parachain will now have two slots: one that will end soon, and one that just started.
+The parachain team will have access to two slots: one that will end soon, and one that just started.
 Both slots will have at least one LP in common. When the old slot transitions to their last LP, 
-the parachain can swap the slots. This can be done via on-chain governance or via XCM. 
+the parachain can [swap](https://github.com/paritytech/polkadot/pull/4772) the slots. This can be 
+done via [on-chain governance](https://kusama.polkassembly.io/post/1491) or via XCM.
 
+:::note Any two parachains can swap their slots via XCM
+
+The [slot swap via XCM](https://github.com/paritytech/polkadot/pull/4772) requires two live parachains
+to send an XCM message to the relay chain to approve the swap. A parachain team with access to two 
+overlapping slots can start a shell parachain on the new slot and swap it with their actual parachain
+on the old slot, thus ensuring continuity of the lease.
+
+:::
 
 ### Lease Extension with Non-Overlapping Slots
 
