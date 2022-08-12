@@ -290,7 +290,13 @@ Aquire a slot where the first LP is before the last LP of the current slot.
 The parachain team will have access to two slots: one that will end soon, and one that just started.
 Both slots will have at least one LP in common. When the old slot transitions to their last LP, 
 the parachain can [swap](https://github.com/paritytech/polkadot/pull/4772) the slots. This can be 
-done via [on-chain governance](https://kusama.polkassembly.io/post/1491) or via XCM.
+done via [on-chain governance](https://kusama.polkassembly.io/post/1491). The 'swap'
+call is available in the 'registrar' pallet. 
+
+![Parachain Slot Swap](../assets/para-swap.png)
+
+It is also possible to perform slot swap via XCM.
+
 
 :::note Any two parachains can swap their slots via XCM
 
