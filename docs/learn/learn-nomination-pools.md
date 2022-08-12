@@ -137,7 +137,7 @@ vertical dots and click on Withdraw unbonded.
 - In order for a member to switch pools they must wait for the normal 28 day unbonding process.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
-:::info Kusama Pool Sizing
+:::info Kusama Pool Stats
 - There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> members (there are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> members).
 - There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> pools (there are currently <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> pools).
 - There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> members per pool.
