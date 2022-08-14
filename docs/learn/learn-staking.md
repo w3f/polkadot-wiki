@@ -8,9 +8,9 @@ slug: ../learn-staking
 ---
 import RPC from "./../../components/RPC-Connection"
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
-as its [consensus](learn-consensus.md) mechanism. The system encourages 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements NPoS (Nominated Proof-of-Stake)
+to select the validators who are allowed to participate in its [consensus](learn-consensus.md) protocol. 
+The system encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate
 as nominators. Nominators may back up to 
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }} 
