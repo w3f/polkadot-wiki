@@ -282,7 +282,7 @@ lease period ends. Explained in the section above, each slot auction lets you bi
 
 ### Lease Extension with Overlapping Slots
 
-Aquire a slot where the first LP is before the last LP of the current slot.
+Acquire a slot where the first LP is before the last LP of the current slot.
 
 - Register a new 'paraId'
 - Win a slot auction with the new 'paraId'
