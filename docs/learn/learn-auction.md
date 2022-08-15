@@ -309,7 +309,7 @@ on the old slot, thus ensuring continuity of the lease.
 
 ### Lease Extension with Non-Overlapping Slots
 
-Aquire a slot where the first LP starts right after the end of the last LP of the current slot.
+Acquire a slot where the first LP starts right after the end of the last LP of the current slot.
 In this case, the parachain can bid directly with their current 'paraId', and it will be automatically 
 extended without the need of swapping. This method has the advantage of not having superposing LP's on 
 different slots owned by the same team, however it has the disadvantage of losing flexibility on when 
