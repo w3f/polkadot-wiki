@@ -276,7 +276,7 @@ of the parachain slot.
 
 Before the slot lease expires, parachains have to bid and win another auction for continuity of the
 lease. To avoid any downtime in connectivity and minimize the risk of losing a subsequent auction, 
-parachain teams need to plan well ahead to bid on and secure an adjacent slot before their current 
+parachain teams need to plan ahead to bid on a slot before their current 
 lease period ends. Explained in the section above, each slot auction lets you bid for 8 LPs
 (Lease Periods) which enables two scenarios for the parachain's lease extension -
 
