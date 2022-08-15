@@ -287,7 +287,7 @@ Acquire a slot where the first LP is before the last LP of the current slot.
 - Register a new 'paraId'
 - Win a slot auction with the new 'paraId'
 
-The parachain team will have access to two slots: one that will end soon, and one that just started.
+The parachain team has access to two slots: one that will end soon, and one that just started.
 Both slots will have at least one LP in common. When the old slot transitions to their last LP, 
 the parachain can [swap](https://github.com/paritytech/polkadot/pull/4772) the slots. This can be 
 done via [on-chain governance](https://kusama.polkassembly.io/post/1491). The 'swap'
