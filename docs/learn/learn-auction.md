@@ -276,8 +276,8 @@ of the parachain slot.
 
 Before the slot lease expires, parachains have to bid and win another auction for continuity of the
 lease. To avoid any downtime in connectivity and minimize the risk of losing a subsequent auction, 
-parachain teams need to plan ahead to bid on a slot before their current 
-lease period ends. Explained in the section above, each slot auction lets you bid for 8 LPs
+parachain teams need to plan ahead to bid for the lease extension before their current 
+lease period ends. Explained in the section above, each auction lets you bid for 8 LPs
 (Lease Periods) which enables two scenarios for the parachain's lease extension -
 
 ### Lease Extension with Overlapping Slots
@@ -294,8 +294,6 @@ done via [on-chain governance](https://kusama.polkassembly.io/post/1491). The 's
 call is available in the 'registrar' pallet. 
 
 ![Parachain Slot Swap](../assets/para-swap.png)
-
-It is also possible to perform slot swap via XCM.
 
 
 :::note Any two parachains can swap their slots via XCM
