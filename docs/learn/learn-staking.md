@@ -15,21 +15,29 @@ Here you will lean about what is staking, why is important and how it works for
 # Introduction
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
-blocks on the chain. Consensus is the process of agreeing on something, in this case the progression of the blockchain or how blocks are added to the chain. Consensus is split into two protocols: `block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e. the way only one block out of many candidates is selected and added to the chain. Because in public blockchains we have many participants who do not know each other (and probably never will), the reach of consensus happens in a secure and trustless way using Proof-of-Work (PoW) or Proof-of-Stake (PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of the network is dependent on the amount of capital locked on chain: the more the capital locked the lower the chance
-that someone will be able to successfully attack the network, as they would require a lot of own tokens or to collude different network participants. The process of locking tokens on the chain is also
-called `staking`. This is the main difference between PoS and PoW networks like Bitcoin that base
-their security on solving mathematic puzzles, a solution that has been criticized due to the high
-amount of energy needed for computers to solve such puzzles. In PoW networks miners are responsible
-for adding blocks to the chain, and for doing such work they are rewarded with tokens. Similarly to
-the miners in PoW networks, in PoS networks we have `validators`. Token holders can lock funds on
-chain and for doing so they are getting `staking rewards`. There is thus an economic incentive for
-token holders to become active participants who contribute to the security and economic stability of
-the network. PoS networks in general are therefore more inclusive than PoW networks, as participants
-do not need to have either the technical knowledge about blockchain technology nor the experience in
-running mining equipment. PoS ensures that everybody has "skin in the game" and thus can be held
-accountable. In case of misbehavior participants to the staking process can be punished or
-`slashed`, and depending on the gravity of the situation their stake can be partly or fully
-confiscated.
+blocks on the chain. Consensus is the process of agreeing on something, in this case the progression
+of the blockchain or how blocks are added to the chain. Consensus is split into two protocols:
+`block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e.
+the way only one block out of many candidates is selected and added to the chain. Because in public
+blockchains we have many participants who do not know each other (and probably never will), the
+reach of consensus happens in a secure and trustless way using Proof-of-Work (PoW) or Proof-of-Stake
+(PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
+security of the network is dependent on the amount of capital locked on chain: the more the capital
+locked the lower the chance that someone will be able to successfully attack the network, as they
+would require a lot of own tokens or to collude different network participants. The process of
+locking tokens on the chain is also called `staking`. This is the main difference between PoS and
+PoW networks like Bitcoin that base their security on solving mathematic puzzles, a solution that
+has been criticized due to the high amount of energy needed for computers to solve such puzzles. In
+PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are
+rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`.
+Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is
+thus an economic incentive for token holders to become active participants who contribute to the
+security and economic stability of the network. PoS networks in general are therefore more inclusive
+than PoW networks, as participants do not need to have either the technical knowledge about
+blockchain technology nor the experience in running mining equipment. PoS ensures that everybody has
+"skin in the game" and thus can be held accountable. In case of misbehavior participants to the
+staking process can be punished or `slashed`, and depending on the gravity of the situation their
+stake can be partly or fully confiscated.
 
 # Nominated Proof-of-stake
 
@@ -56,7 +64,8 @@ of NPoS, if there is an attack the stake of both the validator(s) and nominators
 confiscated. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
 the amount they have at stake, avoiding thus large payouts to few large validators which would
-ultimately lead to consensus centralization. For a more in-depth review check [this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
+ultimately lead to consensus centralization. For a more in-depth review check
+[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
 ## Overview
 
@@ -67,26 +76,27 @@ holders to participate as `nominators`. Nominators may back up to
 validators as trusted validator candidates. The action of nominating consists in a) locking or
 bonding tokens (stake) on chain, and 2) nominate a set validator candidates to whom the stake will
 be allocated. Such stake is used to increase the amount of tokens held by such candidates,
-increasing their chance of being selected by the consensus for block production during a specific
-`era`. 
+increasing their chance of being selected by the [election algorithm](learn-phragmen.md) for block
+production during a specific `era`.
 
-An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }}
-during which an `active set` of validators is producing blocks and performing other actions on
-chain. This means that not all validators are in the active set, and such set changes between eras.
-Each era is divided into 6 epochs or `sessions` during which validators are assigned as block
-producers to specific time frames or `slots`. This means that validators know the slots when they
-will be required to produce a block within a specific session, but they do not know all the slots
-within a specific era. Having sessions adds a layer of security because it decreases the chance of having multiple validators assigned to a slot colluding to harm the network.
+An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
+which an `active set` of validators is producing blocks and performing other actions on chain. This
+means that not all validators are in the active set, and such set changes between eras. Each era is
+divided into 6 epochs or `sessions` during which validators are assigned as block producers to
+specific time frames or `slots`. This means that validators know the slots when they will be
+required to produce a block within a specific session, but they do not know all the slots within a
+specific era. Having sessions adds a layer of security because it decreases the chance of having
+multiple validators assigned to a slot colluding to harm the network.
 
 Validators who produce a block are rewarded with tokens and they can share such rewards with their
 nominators. Both validators and nominators can stake their tokens on chain and receive staking
 rewards at the end of each era. The staking system pays out rewards equally to all validators
 regardless of stake. Having more stake on a validator does not influence the amount of block rewards
 it receives. This avoids centralization of power to few validators. There is a probabilistic
-component in the calculation of rewards, so they may not be exactly equal for all validators. In fact, during each
-era validators can earn `era points` by doing different tasks on chain. The more the points, the
-higher the reward for a specific era. This promotes validators' activity on chain. To know more
-about era points, how and on which basis they are distributed visit the
+component in the calculation of rewards, so they may not be exactly equal for all validators. In
+fact, during each era validators can earn `era points` by doing different tasks on chain. The more
+the points, the higher the reward for a specific era. This promotes validators' activity on chain.
+To know more about era points, how and on which basis they are distributed visit the
 [dedicated page](../maintain/maintain-guides-validator-payout.md). Distribution of the rewards are
 pro-rata to all stakers after the validator's commission is deducted.
 
@@ -94,10 +104,14 @@ pro-rata to all stakers after the validator's commission is deducted.
 
 ### Tasks and responsibilities
 
-Since validator slots are limited, most of those who wish to stake their DOT and contribute to the economic
-security of the network will be nominators, thus here we focus on the role of nominators. However,
-it is worth mentioning that validators do most of the heavy lifting: they run hardware equipment and manage [session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys), produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition function of
-parachains, and possibly some other responsibilities regarding data availability and
+Since validator slots are limited, most of those who wish to stake their DOT and contribute to the
+economic security of the network will be nominators, thus here we focus on the role of nominators.
+However, it is worth mentioning that validators do most of the heavy lifting: they run hardware
+equipment and manage
+[session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys),
+produce new block candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to
+consensus in [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition
+function of parachains, and possibly some other responsibilities regarding data availability and
 [XCM](learn-cross-consensus.md). For more information you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
 to be come a validator check [this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
@@ -122,7 +136,7 @@ would like to securely stake your tokens using Polkadot JS Apps, watch the video
 Choosing validators is not a simple task and it should take into account for nominator reward and
 risk preferences, ideally one aims to maximize rewards and minimize risks, with sometimes having to
 compromise between the two as minimizing risks might decrease rewards, although this might be not
-necessarily be the case. Nominators should be pay attention to six criteria (not in order of
+necessarily be the case. Nominators should pay attention especially to six criteria (not in order of
 importance): 1) amount of era points, 2) total stake which is equivalent to own stake (i.e. coming
 from the validator) + other stake (i.e. coming from nominators), 3) own stake, 4) commission, 5)
 identity, and 6) previous slashes. The diagram below shows how the selection of those criteria
@@ -132,13 +146,13 @@ affects risk-to-reward ratio.
 
 #### In theory
 
-Briefly, in theory, to maximize rewards and minimize risk one could select those validators that
-have era points above average, have total stake below average because they will pay out more rewards
-per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, have high own stake as if slashed
-they have a lot to lose, have low commission fees but not 0% as it makes sense that for doing the
-heavy lifting validators ask for a small commission, have on-chain registered identity so that you
-can reach out to them or look at their website or social media, and they were not slashed before
-meaning that their on-chain behavior is genuine.
+Briefly, in theory, to try maximizing rewards and minimizing risk one could select those validators
+that have era points above average, have total stake below average because they will pay out more
+rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, have high own stake as if
+slashed they have a lot to lose, have low commission fees but not 0% as it makes sense that for
+doing the heavy lifting validators ask for a small commission, have on-chain registered identity so
+that you can reach out to them or look at their website or social media, and they were not slashed
+before meaning that their on-chain behavior is genuine.
 
 #### In practice
 
@@ -212,9 +226,26 @@ account as both stash and controller.
 
 ### Staking proxies
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using [substrate](https://substrate.io/), a modular system to efficiently build blockchains without having deep knowledge about blockchain technology. Within each module or `pallet` one can `call` different functions that have similar logic. For example, the staking pallet contains all functionalities related to staking such as bonding or unbonding funds. The combined information of pallets and calls constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that triggers an event within the chain. Continuing with the staking example, within the staking pallet one can bond funds and nominate some validators. At the end of an era the signature of such extrinsic might trigger a reward payout, this is an event inside the chain. This way of having transactions categorized within pallets and functionalities makes it possible to create accounts having special permissions also called **proxy accounts**.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
+[substrate](https://substrate.io/), a modular system to efficiently build blockchains without having
+deep knowledge about blockchain technology. Within each module or `pallet` one can `call` different
+functions that have similar logic. For example, the staking pallet contains all functionalities
+related to staking such as bonding or unbonding funds. The combined information of pallets and calls
+constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that
+triggers an event within the chain. Continuing with the staking example, within the staking pallet
+one can bond funds and nominate some validators. At the end of an era the signature of such
+extrinsic might trigger a reward payout, this is an event inside the chain. This way of having
+transactions categorized within pallets and functionalities makes it possible to create accounts
+having special permissions also called **proxy accounts**.
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} proxy accounts are special accounts to which one can delegate signatures to calls from specific pallets. There is thus the possibility to create staking proxy accounts that can be used to sign only calls from staking, session and utility pallets. This makes the stash account even more isolated than using a controller account since now one can bond / unbond / bond more funds using the staking proxy account. However, it is important to remember that actions on proxy accounts are limited, and in the case of staking proxy account calls from the balance pallet cannot be signed. This means that it is not possible to send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} proxy accounts are special
+accounts to which one can delegate signatures to calls from specific pallets. There is thus the
+possibility to create staking proxy accounts that can be used to sign only calls from staking,
+session and utility pallets. This makes the stash account even more isolated than using a controller
+account since now one can bond / unbond / bond more funds using the staking proxy account. However,
+it is important to remember that actions on proxy accounts are limited, and in the case of staking
+proxy account calls from the balance pallet cannot be signed. This means that it is not possible to
+send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
 
 ### Staking System Overview
 
@@ -309,7 +340,7 @@ achieve fair representation of the nominators. If you want to know more about ho
 election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
 
-### 3. Staking Rewards Distribution
+### Staking Rewards Distribution
 
 To explain how rewards are paid to validators and nominators, we need to consider **validator
 pools**. A validator pool consists of the stake of an elected validator together with the nominators
@@ -342,7 +373,7 @@ stake with your DOT, provider fees, compound rewards, etc.) to have a better est
 it may not be entirely accurate since staking participation is changing dynamically, it works well
 as an indicator.
 
-### 4. Rewards Mechanism
+### Rewards Mechanism
 
 We highlight two features of this payment scheme. The first is that since validator pools are paid
 the same regardless of stake level, pools with less stake will generally pay more to nominators
