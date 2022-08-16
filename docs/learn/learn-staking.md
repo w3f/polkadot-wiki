@@ -50,11 +50,8 @@ subject to loss of stake based on the behavior of the validator.
 With [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, nominators select up to 16
 validators they trust, and the network will automatically distribute the stake among validators in
-an even manner. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
-from election theory to game theory to discrete optimization, to develop an efficient validator
-selection process that offers fair representation and security, thus avoiding uneven power and
-influence among validators. Another key difference in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS is that nominators are subject
+an even manner. Also, in
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS nominators are subject
 to loss of stake if they nominate a bad validator.
 
 Here we recall that the security of PoS networks depends on the amount of staked tokens. This means
@@ -75,11 +72,13 @@ holders to participate as `nominators`. Nominators may back up to
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 validators as trusted validator candidates. The action of nominating consists in a) locking or
 bonding tokens (stake) on chain, and 2) nominate a set validator candidates to whom the stake will
-be allocated. Such stake is used to increase the amount of tokens held by such candidates,
-increasing their chance of being selected by the [election algorithm](learn-phragmen.md) for block
-production during a specific `era`.
+be allocated. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
+from election theory to game theory to discrete optimization, to develop an efficient validator
+selection process that offers fair representation and security, thus avoiding uneven power and
+influence among validators. The election algorithm used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} bases on the Proportional Justified Representation (PJR) method called [Phragmen](learn-phragmen.md). For more information about PJR methods visit [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article.
 
-An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
+The stake from nominators is used to increase the amount of tokens held by such candidates, increasing their chance of being selected by the election algorithm for block
+production during a specific `era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
 which an `active set` of validators is producing blocks and performing other actions on chain. This
 means that not all validators are in the active set, and such set changes between eras. Each era is
 divided into 6 epochs or `sessions` during which validators are assigned as block producers to
