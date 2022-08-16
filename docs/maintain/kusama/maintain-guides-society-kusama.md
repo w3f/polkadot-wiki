@@ -197,4 +197,4 @@ hexadecimal to UTF8 converter.
 
 [substrate pallet]: https://paritytech.github.io/substrate/master/pallet_society/index.html
 [kappa rules]:
-  https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17
+  https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17
