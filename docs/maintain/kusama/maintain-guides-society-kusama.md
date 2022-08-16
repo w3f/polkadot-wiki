@@ -187,7 +187,7 @@ society with all their future payouts slashed.
 
 ## Useful links
 
-[Convention of Approval of Membership](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
+[Convention of Approval of Membership](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
 Rules about joining the Kusama society
 
 [substrate pallet]: https://paritytech.github.io/substrate/master/pallet_society/index.html
