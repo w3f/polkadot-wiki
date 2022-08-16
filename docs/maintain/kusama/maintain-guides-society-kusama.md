@@ -191,9 +191,7 @@ society with all their future payouts slashed.
 [Convention of Approval of Membership](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
 Rules about joining the Kusama society
 
-In order to decode the rules you need to navigate to the Parameters section: Element 1 ("proposal")
--> "value" -> "params" -> Element 2 ("rules") -> copy the section "value" and paste it into a
-hexadecimal to UTF8 converter.
+The rules are encoded on-chain in UTF-8 format. This is displayed in most block explorers as a hexadecimal string. In order to see the rules in human-readable format, you can convert it. In the extrinsic's parameters go to Element 1 ("proposal") -> "value" -> "params" -> Element 2 ("rules") and copy the value corresponding to the key "value". You can use a hex-to-UTF8 converter to then display the text. Note that the text is formatted with Markdown.
 
 [substrate pallet]: https://paritytech.github.io/substrate/master/pallet_society/index.html
 [kappa rules]:
