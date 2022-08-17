@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection"
 Here you will lean about what is staking, why is important and how it works for
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
 
-# Introduction
+## Introduction
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
 blocks on the chain. Consensus is the process of agreeing on something, in this case the progression
@@ -39,7 +39,7 @@ blockchain technology nor the experience in running mining equipment. PoS ensure
 staking process can be punished or `slashed`, and depending on the gravity of the situation their
 stake can be partly or fully confiscated.
 
-# Nominated Proof-of-stake
+## Nominated Proof-of-stake overview
 
 The two main types of PoS are Delegated PoS (DPoS) and Nominated PoS (NPoS).
 
@@ -47,35 +47,23 @@ DPoS networks weigh validators by stake, oftentimes allowing the highest-stake v
 disproportionate control of the network’s consensus protocol. In DPoS networks, delegators are not
 subject to loss of stake based on the behavior of the validator.
 
-With [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) used by
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, nominators select up to 16
-validators they trust, and the network will automatically distribute the stake among validators in
-an even manner. Also, in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS nominators are subject
-to loss of stake if they nominate a bad validator.
-
-Here we recall that the security of PoS networks depends on the amount of staked tokens. This means
-that to successfully attack the network one would need a large amount of tokens that can be accrued
-by one single participant alone or by colluding different participants to act maliciously. In case
-of NPoS, if there is an attack the stake of both the validator(s) and nominators will be
-confiscated. So there is little interest of acting in a harmful way because all participants can be
-held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
-the amount they have at stake, avoiding thus large payouts to few large validators which would
-ultimately lead to consensus centralization. For a more in-depth review check
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
-
-## Overview
-
-Nominated Proof-of-Stake (NPoS) encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+[Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 holders to participate as `nominators`. Nominators may back up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
-validators as trusted validator candidates. The action of nominating consists in a) locking or
+validators as trusted validator candidates, and the network will automatically distribute the stake among validators in
+an even manner. Also, in NPoS the stake of both nominators and validators can be slashed.
+
+### Nominating validators
+
+The action of nominating consists in a) locking or
 bonding tokens (stake) on chain, and 2) nominate a set validator candidates to whom the stake will
 be allocated. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging
 from election theory to game theory to discrete optimization, to develop an efficient validator
 selection process that offers fair representation and security, thus avoiding uneven power and
-influence among validators. The election algorithm used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} bases on the Proportional Justified Representation (PJR) method called [Phragmen](learn-phragmen.md). For more information about PJR methods visit [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article.
+influence among validators. The `election algorithm` used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} bases on the Proportional Justified Representation (PJR) method called [Phragmen](learn-phragmen.md). For more information about PJR methods visit [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article.
+
+### Eras and sessions
 
 The stake from nominators is used to increase the amount of tokens held by such candidates, increasing their chance of being selected by the election algorithm for block
 production during a specific `era`. An era is a period of time of {{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during
@@ -87,7 +75,9 @@ required to produce a block within a specific session, but they do not know all 
 specific era. Having sessions adds a layer of security because it decreases the chance of having
 multiple validators assigned to a slot colluding to harm the network.
 
-Validators who produce a block are rewarded with tokens and they can share such rewards with their
+### Rewards
+
+Validators who produce a block are rewarded with tokens, and they can share rewards with their
 nominators. Both validators and nominators can stake their tokens on chain and receive staking
 rewards at the end of each era. The staking system pays out rewards equally to all validators
 regardless of stake. Having more stake on a validator does not influence the amount of block rewards
@@ -98,6 +88,18 @@ the points, the higher the reward for a specific era. This promotes validators' 
 To know more about era points, how and on which basis they are distributed visit the
 [dedicated page](../maintain/maintain-guides-validator-payout.md). Distribution of the rewards are
 pro-rata to all stakers after the validator's commission is deducted.
+
+### Skin in the game
+
+The security of PoS networks depends on the amount of staked tokens. This means
+that to successfully attack the network one would need a large amount of tokens that can be accrued
+by one single participant alone or by colluding different participants to act maliciously. In case
+of NPoS, if there is an attack both the validator(s) and nominators will be
+`slashed` and their stake partially or fully confiscated. So there is little interest of acting in a harmful way because all participants can be
+held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
+the amount they have at stake, avoiding thus large payouts to few large validators which would
+ultimately lead to consensus centralization. For a more in-depth review check
+[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
 ## Being a nominator
 
@@ -425,15 +427,14 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards.
 
-In Polkadot and Kusama, this limit is currently {{ polkadot_max_nominators }}, although this can be
-modified via runtime upgrade. A validator with more than {{ polkadot_max_nominators }} nominators is
-_oversubscribed_. When payouts occur, only the top {{ polkadot_max_nominators }} nominators as
-measured by amount of stake allocated to that validator will receive rewards. All other nominators
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} this limit is currently {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}, although this can be
+modified via runtime upgrade. A validator with more than {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }} nominators is
+_oversubscribed_. When payouts occur, only the top {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }} nominators as measured by amount of stake allocated to that validator will receive rewards. All other nominators
 are essentially "wasting" their stake - they used their nomination to elect that validator to the
 active stake, but receive no rewards in exchange for doing so.
 
 We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator
-offline, equivocation, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount),
+offline, equivocation, etc.) the slashed amount is a fixed percentage (and not a fixed amount),
 which means that validator pools with more stake get slashed more DOT. Again, this is done to
 provide nominators with an economic incentive to shift their preferences and back less popular
 validators whom they consider to be trustworthy.
