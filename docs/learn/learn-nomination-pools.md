@@ -123,7 +123,7 @@ vertical dots and click on Unbond funds.
 
 ### Withdraw unbonded funds
 
-After `unbond` has been called and the unbonding duration has passed (28 eras), a
+After `unbond` has been called and the unbonding duration has passed (28 eras {{ polkadot: which corresponds to 28 days on Polkadot :polkadot }}{{ kusama: which corresponds to 7 days on Kusama :kusama }}), a
 member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
 relationship with their pool, allowing them to join a different pool if desired.
 
