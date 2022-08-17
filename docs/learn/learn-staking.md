@@ -52,7 +52,8 @@ holders to participate as `nominators`. Nominators may back up to
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 validators as trusted validator candidates, and the network will automatically distribute the stake among validators in
-an even manner. Also, in NPoS the stake of both nominators and validators can be slashed.
+an even manner. Also, in NPoS the stake of both nominators and validators can be slashed.  For an in-depth review of NPoS check
+[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
 
 ### Nominating validators
 
@@ -80,7 +81,7 @@ multiple validators assigned to a slot colluding to harm the network.
 Validators who produce a block are rewarded with tokens, and they can share rewards with their
 nominators. Both validators and nominators can stake their tokens on chain and receive staking
 rewards at the end of each era. The staking system pays out rewards equally to all validators
-regardless of stake. Having more stake on a validator does not influence the amount of block rewards
+regardless of stake. Thus, having more stake on a validator does not influence the amount of block rewards
 it receives. This avoids centralization of power to few validators. There is a probabilistic
 component in the calculation of rewards, so they may not be exactly equal for all validators. In
 fact, during each era validators can earn `era points` by doing different tasks on chain. The more
@@ -95,11 +96,10 @@ The security of PoS networks depends on the amount of staked tokens. This means
 that to successfully attack the network one would need a large amount of tokens that can be accrued
 by one single participant alone or by colluding different participants to act maliciously. In case
 of NPoS, if there is an attack both the validator(s) and nominators will be
-`slashed` and their stake partially or fully confiscated. So there is little interest of acting in a harmful way because all participants can be
+`slashed` and in some cases their stake partially or fully confiscated. So there is little interest of acting in a harmful way because all participants can be
 held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
 the amount they have at stake, avoiding thus large payouts to few large validators which would
-ultimately lead to consensus centralization. For a more in-depth review check
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html) research article.
+ultimately lead to consensus centralization.
 
 ## Being a nominator
 
@@ -248,7 +248,7 @@ it is important to remember that actions on proxy accounts are limited, and in t
 proxy account calls from the balance pallet cannot be signed. This means that it is not possible to
 send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
 
-### Staking System Overview
+## Staking System Overview
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator in turn submits a list of up to
@@ -341,7 +341,7 @@ achieve fair representation of the nominators. If you want to know more about ho
 election, running time complexity, etc.), please read
 [here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
 
-### Staking Rewards Distribution
+### Rewards Distribution
 
 To explain how rewards are paid to validators and nominators, we need to consider **validator
 pools**. A validator pool consists of the stake of an elected validator together with the nominators
@@ -447,7 +447,7 @@ attract more nominators and increase their chances of being elected. In the long
 that all validators will need to be cost efficient to remain competitive, and that validators with
 higher reputation will be able to charge slightly higher commission fees (which is fair).
 
-## Slashing
+### Slashing
 
 Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the network, or runs
 modified software) in the network. They and their nominators will get slashed by losing a percentage
@@ -514,7 +514,7 @@ calculated, see the equations in the section below.
 
 Let's look at these offences in a bit more detail.
 
-### Unresponsiveness
+#### Unresponsiveness
 
 For every session, validators will send an "I'm online" heartbeat to indicate they are live. If a
 validator produces no blocks during an epoch and fails to send the heartbeat, it will be reported as
@@ -565,7 +565,7 @@ The maximum slashing that can occur due to unresponsiveness is 7%. After around 
 validators go offline, the expression 3 _ (x - (n / 10 + 1))) / n will go beyond 1. Hence, min((3 _
 (x - (n / 10 + 1))) / n, 1) \* 0.07 will be ceiled to 7%.
 
-### Equivocation
+#### Equivocation
 
 **GRANDPA Equivocation**: A validator signs two or more votes in the same round on different chains.
 
@@ -611,7 +611,7 @@ again gather support from nominators.
 If you want to know more details about slashing, please look at our
 [research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
 
-### Chilling
+#### Chilling
 
 Chilling is the act of stepping back from any nominating or validating. It can be done by a
 validator or nominator at any time themselves, taking effect in the next era. It can also
@@ -633,7 +633,7 @@ need to resubmit their intention to validate and re-garner support from nominato
 
 For more on chilling, see the [How to Chill][] page on this wiki.
 
-### Slashing Across Eras
+#### Slashing Across Eras
 
 There are 3 main difficulties to account for with slashing in NPoS:
 
