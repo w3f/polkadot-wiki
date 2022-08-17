@@ -22,7 +22,7 @@ the way only one block out of many candidates is selected and added to the canon
 Proof-of-Work (PoW) and Proof-of-Stake(PoS) are well known mechanisms used to reach consensus in a secure and trustless way on public blockchains where we have many participants who do not know each other (and probably never will). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 security of the network is dependent on the amount of capital locked on chain: the more the capital
 locked the lower the chance of an attack on the network, as the attacker
-would require a lot of own tokens or to collude different network participants. The process of
+needs to incur heavy loss to orchestrate a successful attack. The process of
 locking tokens on the chain is also called `staking`. This is the main difference between PoS and
 PoW networks like Bitcoin that base their security on solving mathematic puzzles, a solution that
 has been criticized due to the high amount of energy needed for computers to solve such puzzles. In
