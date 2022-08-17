@@ -19,9 +19,7 @@ blocks on the chain. Consensus is the process of agreeing on something, in this 
 of the blockchain or how blocks are added to the chain. Consensus is split into two protocols:
 `block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e.
 the way only one block out of many candidates is selected and added to the canonical chain.
-blockchains we have many participants who do not know each other (and probably never will), the
-reach of consensus happens in a secure and trustless way using Proof-of-Work (PoW) or Proof-of-Stake
-(PoS). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
+Proof-of-Work (PoW) and Proof-of-Stake(PoS) are well known mechanisms used to reach consensus in a secure and trustless way on public blockchains where we have many participants who do not know each other (and probably never will). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 security of the network is dependent on the amount of capital locked on chain: the more the capital
 locked the lower the chance that someone will be able to successfully attack the network, as they
 would require a lot of own tokens or to collude different network participants. The process of
