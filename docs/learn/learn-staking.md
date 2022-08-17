@@ -286,7 +286,7 @@ Nominators, on the other hand, have far fewer responsibilities. Those include mo
 validators' performance (uptime), keeping an eye on changing commission rates (a validator can
 change commission at any time), and general health monitoring of their and their validators'
 account. Thus, while not set-it-and-forget-it, a nominator's experience is relatively hands-off
-compared to a validators.
+compared to a validator's.
 
 ![staking](../assets/NPoS/article-2.png)
 
