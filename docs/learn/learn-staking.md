@@ -14,7 +14,7 @@ Here you will lean about what is staking, why is important and how it works for
 
 ## Introduction
 
-Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to add
+Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to finalize
 blocks on the chain. Consensus is the process of agreeing on something, in this case the progression
 of the blockchain or how blocks are added to the chain. Consensus is split into two protocols:
 `block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e.
