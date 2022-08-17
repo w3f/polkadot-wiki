@@ -58,9 +58,9 @@ The Polkadot Tech Stack is a subset of the Web 3.0 Tech Stack, which consists of
 In the below sections you can find a list of different layers of the Polkadot Stack.
 
 **Maintenance Status**: 
-- :green_heart: Actively maintained
-- :yellow_heart: Stale (no activity since 1 month)
-- :broken_heart: Unmaintained (no activity for more than 3 months)
+- :green_circle: Actively maintained
+- :yellow_circle: Stale (no activity since 1 month)
+- :red_circle: Unmaintained (no activity for more than 3 months)
 
 ### User Interface 
 
