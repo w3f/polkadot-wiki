@@ -575,18 +575,15 @@ For specific details about validator payouts, please see
 {{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to treasury. DOT went through [redenomination](../general/redenomination.md) 
-in 2020. The current token supply of DOT is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>. 
-:polkadot }}
+in 2020. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion DOT). :polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. The current token supply of KSM is 
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }}. :kusama }}
+and the remainder going to treasury. The current token supply on Kusama is 
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }} (Over 12 Million KSM). :kusama }}
 
 There is an *ideal staking rate* that the network tries to maintain.
-The goal is to have the *system staking rate* meet the *ideal staking rate*.
-
-The system staking rate would be the total amount staked over the total token supply, where
+The goal is to have the *system staking rate* meet the *ideal staking rate*. The system staking rate would be the total amount staked over the total token supply, where
 the total amount staked is the stake of all validators and nominators on the network. The ideal
 staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
