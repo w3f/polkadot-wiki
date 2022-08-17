@@ -23,7 +23,7 @@ Proof-of-Work (PoW) and Proof-of-Stake(PoS) are well known mechanisms used to re
 security of the network is dependent on the amount of capital locked on chain: the more the capital
 locked the lower the chance of an attack on the network, as the attacker
 needs to incur heavy loss to orchestrate a successful attack. The process of
-locking tokens on the chain is also called `staking`. This is the main difference between PoS and
+locking tokens on the chain is called `staking`. 
 PoW networks like Bitcoin that base their security on solving mathematic puzzles, a solution that
 has been criticized due to the high amount of energy needed for computers to solve such puzzles. In
 PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are
