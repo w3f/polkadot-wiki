@@ -80,9 +80,9 @@ Extrinsics page.
 
 :::info vouch(who,value,tip)
 
-* who: The user you are vouching for
-* value: The value that the user would like to get when joining the society
-* tip: Fees you get
+- who: The user you are vouching for
+- value: The value that the user would like to get when joining the society
+- tip: Fees you get
 
 The final value that the candidate will get = (value - tip)
 
@@ -98,8 +98,8 @@ will be randomly selected by one of the votes. Let's take a look the example sho
 
 :::note
 
-If the randomly selected member does not vote, it will be treated as a rejection. For each
-rotation period, the maximum number of members that can be accepted is set as 10.
+If the randomly selected member does not vote, it will be treated as a rejection. For each rotation
+period, the maximum number of members that can be accepted is set as 10.
 
 :::
 
@@ -132,8 +132,8 @@ time - see below.
 #### Lock-up Time
 
 It would take the number of members of the society as the variable to determine how many blocks you
-have to wait in order to get the payout. The longest lockup time is close to 3 years. The formula
-is defined [in the society pallet][substrate pallet] if you would like to have a look.
+have to wait in order to get the payout. The longest lockup time is close to 3 years. The formula is
+defined [in the society pallet][substrate pallet] if you would like to have a look.
 
 Example:
 
@@ -162,8 +162,8 @@ Once you become a member of the society, you will get back the deposit that you 
 the bidding. A few things you need to be aware of. First, you should vote on candidates who applied
 for the membership in every rotation period.
 
-Second, you will need to claim your payout manually by calling `payout` after the lockup time. It
-is the same as the above mentioned lockup formula.
+Second, you will need to claim your payout manually by calling `payout` after the lockup time. It is
+the same as the above mentioned lockup formula.
 
 ![Society Payout](../../assets/society/payout.jpg)
 
@@ -176,7 +176,8 @@ balance to reserve a deposit. The tip will be given when a user successfully joi
 
 :::info
 
-Each member can only vouch for one user at a time. A member is not required to reserve the deposit when vouching for a user.
+Each member can only vouch for one user at a time. A member is not required to reserve the deposit
+when vouching for a user.
 
 :::
 
@@ -187,8 +188,11 @@ society with all their future payouts slashed.
 
 ## Useful links
 
-[Convention of Approval of Membership](https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
+[Convention of Approval of Membership](https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17) -
 Rules about joining the Kusama society
 
+The rules are encoded on-chain in UTF-8 format. This is displayed in most block explorers as a hexadecimal string. In order to see the rules in human-readable format, you can convert it. In the extrinsic's parameters go to Element 1 ("proposal") -> "value" -> "params" -> Element 2 ("rules") and copy the value corresponding to the key "value". You can use a hex-to-UTF8 converter to then display the text. Note that the text is formatted with Markdown.
+
 [substrate pallet]: https://paritytech.github.io/substrate/master/pallet_society/index.html
-[kappa rules]: https://polkascan.io/pre/kusama/transaction/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17
+[kappa rules]:
+  https://kusama.subscan.io/extrinsic/0x948d3a4378914341dc7af9220a4c73acb2b3f72a70f14ee8089799da16d94c17
