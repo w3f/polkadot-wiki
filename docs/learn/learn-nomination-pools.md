@@ -123,7 +123,7 @@ vertical dots and click on Unbond funds.
 
 ### Withdraw unbonded funds
 
-After `unbond` has been called and the unbonding duration has passed (e.g. 28 days on Polkadot), a
+After `unbond` has been called and the unbonding duration has passed (28 eras {{ polkadot: which correspond to 28 days on Polkadot :polkadot }}{{ kusama: which correspond to 7 days on Kusama :kusama }}), a
 member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
 relationship with their pool, allowing them to join a different pool if desired.
 
@@ -134,7 +134,7 @@ vertical dots and click on Withdraw unbonded.
 
 - A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This
   may be changed in the future once accounts are afforded the ability to split votes.
-- In order for a member to switch pools they must wait for the normal 28 day unbonding process.
+- In order for a member to switch pools they must wait for the normal 28 era unbonding process.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
 
 :::info Kusama Pool Stats
