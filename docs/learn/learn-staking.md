@@ -37,11 +37,10 @@ stake can be partly or fully confiscated.
 
 ## Nominated Proof-of-stake overview
 
-The two main types of PoS are Delegated PoS (DPoS) and Nominated PoS (NPoS).
-
-DPoS networks weigh validators by stake, oftentimes allowing the highest-stake validators to take
-disproportionate control of the network’s consensus protocol. In DPoS networks, delegators are not
-subject to loss of stake based on the behavior of the validator.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements NPoS (Nominated Proof-of-Stake),
+a relatively novel and sophisticated mechanism to select the validators who are allowed to participate in 
+its [consensus](learn-consensus.md) protocol. The NPoS encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} 
+holders to participate as nominators.
 
 [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake) encourages {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 holders to participate as `nominators`. Nominators may back up to
