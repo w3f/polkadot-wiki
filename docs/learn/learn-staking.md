@@ -574,12 +574,14 @@ For specific details about validator payouts, please see
 
 {{ polkadot: DOT is inflationary; there is no maximum number of DOT. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. The current token supply of DOT is ~1,000,000,000, as
-a result of [redenomination](../general/redenomination.md). :polkadot }}
+and the remainder going to treasury. DOT went through [redenomination](../general/redenomination.md) 
+in 2020. The current token supply of DOT is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/>. 
+:polkadot }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
-and the remainder going to treasury. The current token supply of KSM is ~10,000,000. :kusama }}
+and the remainder going to treasury. The current token supply of KSM is 
+{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093}/> :kusama }}. :kusama }}
 
 There is an *ideal staking rate* that the network tries to maintain.
 The goal is to have the *system staking rate* meet the *ideal staking rate*.
@@ -588,9 +590,8 @@ The system staking rate would be the total amount staked over the total token su
 the total amount staked is the stake of all validators and nominators on the network. The ideal
 staking rate accounts for having sufficient backing of {{ polkadot: DOT :polkadot }}
 {{ kusama: KSM :kusama }} to prevent the possible compromise of security while keeping the native
-token liquid. An **ideal staking rate of 50% stabilizes the network**.
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the system
-staking rate of the entire network.
+token liquid. {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the 
+system staking rate of the entire network.
 
 :::info 
 
@@ -601,18 +602,20 @@ dilute over time.
 :::
 
 The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
-estimation of all DOT that should be staked, per parachain slot).
+estimation of all DOT that should be staked when all the parachain slots are taken).
 
-:::info Staking rate without parachains
+:::note 
 
-In the **absence of parachains, the suggested ideal staking rate is 75%**, as liquidity is not
-constrained by locked parachain bonds.
+The current staking rate on Polkadot still assumes the absence of parachains, with the suggested 
+ideal staking rate is 75%. Track the progress of the issue to adjust it 
+[here](https://github.com/paritytech/polkadot/pull/5872). This has been adjusted on Kusama already.
 
 :::
 
 If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators
-goes up. On the contrary, if it goes above, staking rewards drop. This is a result of the change
-in the percentage of staking rewards that go to the Treasury.
+go up incentivizing to stake more tokens on the network. On the contrary, if it goes above the 
+ideal rate, staking rewards drop. This is a result of the change in the percentage of staking 
+rewards that go to the Treasury.
 
 ![staking](../assets/NPoS/staking-participation-rate.png)
 
