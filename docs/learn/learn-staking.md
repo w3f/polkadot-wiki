@@ -24,10 +24,8 @@ security of the network is dependent on the amount of capital locked on chain: t
 locked the lower the chance of an attack on the network, as the attacker
 needs to incur heavy loss to orchestrate a successful attack. The process of
 locking tokens on the chain is called `staking`. 
-PoW networks like Bitcoin that base their security on solving mathematic puzzles, a solution that
-has been criticized due to the high amount of energy needed for computers to solve such puzzles. In
 PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are
-rewarded with tokens. Similarly to the miners in PoW networks, in PoS networks we have `validators`.
+rewarded with tokens. In order to do that, miners have to compete to solve difficult mathematic puzzles - a solution that has been criticized for the energy wastage. Similar to the 'miners' in PoW networks, PoS networks have `validators` who do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
 Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is
 thus an economic incentive for token holders to become active participants who contribute to the
 security and economic stability of the network. PoS networks in general are therefore more inclusive
