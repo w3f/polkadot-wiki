@@ -607,8 +607,8 @@ estimation of all DOT that should be staked when all the parachain slots are tak
 :::note 
 
 The current staking rate on Polkadot still assumes the absence of parachains, with the suggested 
-ideal staking rate is 75%. Track the progress of the issue to adjust it 
-[here](https://github.com/paritytech/polkadot/pull/5872). This has been adjusted on Kusama already.
+ideal staking rate of 75%. You can track the progress on the issue to adjust it 
+[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama.
 
 :::
 
@@ -617,7 +617,7 @@ go up incentivizing to stake more tokens on the network. On the contrary, if it 
 ideal rate, staking rewards drop. This is a result of the change in the percentage of staking 
 rewards that go to the Treasury.
 
-![staking](../assets/NPoS/staking-participation-rate.png)
+![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
 <p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
 
@@ -626,7 +626,7 @@ rewards that go to the Treasury.
 - **Blue line**: Inflation rewards to stakers
 - **Green line**: Staker rate of return
 
-You can determine the inflation rewards by checking the staking overview on
+You can determine the staking rewards by checking the staking overview on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking).
 
 The above chart shows the inflation model of the network. Depending on the staking participation,
