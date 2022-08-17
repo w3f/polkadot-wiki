@@ -17,23 +17,28 @@ Here you will lean about what is staking, why is important and how it works for
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to finalize
 blocks on the chain. Consensus is the process of agreeing on something, in this case the progression
 of the blockchain or how blocks are added to the chain. Consensus is split into two protocols:
-`block production`, i.e. the way multiple blocks candidates are produced, and `block finality`, i.e.
-the way only one block out of many candidates is selected and added to the canonical chain.
-Proof-of-Work (PoW) and Proof-of-Stake(PoS) are well known mechanisms used to reach consensus in a secure and trustless way on public blockchains where we have many participants who do not know each other (and probably never will). In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
+
+- `block production`, i.e. the way multiple blocks candidates are produced, and 
+- `block finality`, i.e. the way only one block out of many candidates is selected and added to the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article for more information about finality).
+
+Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well known mechanisms used to reach consensus in a secure and trustless way on public blockchains where we have many participants who do not know each other (and probably never will). In PoW networks, miners are responsible for adding blocks to the chain, and for doing such work they are
+rewarded with tokens. Network security relies on the fact that to add blocks miners must compete to solve difficult mathematic puzzles - a solution that has been criticized for the energy wastage. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
 security of the network is dependent on the amount of capital locked on chain: the more the capital
 locked the lower the chance of an attack on the network, as the attacker
-needs to incur heavy loss to orchestrate a successful attack. The process of
+needs to incur heavy loss to orchestrate a successful attack (more on this later on). The process of
 locking tokens on the chain is called `staking`. 
-PoW networks miners are responsible for adding blocks to the chain, and for doing such work they are
-rewarded with tokens. In order to do that, miners have to compete to solve difficult mathematic puzzles - a solution that has been criticized for the energy wastage. Similar to the 'miners' in PoW networks, PoS networks have `validators` who do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
+
+Similar to the miners in PoW networks, PoS networks have `validators` who do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
 Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is
 thus an economic incentive for token holders to become active participants who contribute to the
 security and economic stability of the network. PoS networks in general are therefore more inclusive
 than PoW networks, as participants do not need to have either the technical knowledge about
-blockchain technology nor the experience in running mining equipment. PoS ensures that everybody has
+blockchain technology nor the experience in running mining equipment. 
+
+PoS ensures that everybody has
 "skin in the game" and thus can be held accountable. In case of misbehavior participants to the
 staking process can be punished or `slashed`, and depending on the gravity of the situation their
-stake can be partly or fully confiscated.
+stake can be partly or fully confiscated. Anyone who has significant stake in the network would not want to attack it, as it is not in their economic interests. The PoS network rewards good behavior and punishes bad behavior. Any rational actor staking on the network would want to get rewarded. It is not in one economic interest to orchestrate an attack and risk losing tokens.
 
 ## Nominated Proof-of-stake overview
 
