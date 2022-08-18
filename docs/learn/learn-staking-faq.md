@@ -50,7 +50,7 @@ staking reward for the eras when your nomination is applied to that specific val
 
 Only the top 256 nominators of a Validator receive the staking rewards. If your nomination is
 applied to an oversubscribed validator and the size of your stake does not put you in the top 256, you will not
-earn rewards. On a regular basis, ensure that the validators you chose are not oversubscribed or that your stake is bigger than the stake of the last nominator.
+earn rewards. On a regular basis, ensure that the validators you chose are not oversubscribed.
 
 ### Min-Active Nomination Threshold is not met
 
