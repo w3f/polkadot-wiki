@@ -24,10 +24,7 @@ If you have questions about nomination pools, please join our
 
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
-[Nomination pools](https://github.com/paritytech/substrate/pull/10694) are one of the key
-(experimental) features from the roadmap of
-[Staking improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) on
-Polkadot. They are designed to permissionlessly allow members to pool their funds together and act
+Nomination pools are one of the key features from the roadmap of staking improvements on {{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}. They are designed to permissionlessly allow members to pool their funds together and act
 as a single nominator account. Due to the current runtime constraints, 
 {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }}
@@ -155,7 +152,7 @@ vertical dots and click on Withdraw unbonded.
   permissionlessly unbonded; this allows the pool to be dismantled regardless of any individual
   member’s proactivity.
 
-### Roles:
+### Roles
 
 - Depositor: Creates the pool and is the initial member. The depositor can only leave the pool once
   all other members have left. Once they leave by withdrawing, the pool is fully removed from the
