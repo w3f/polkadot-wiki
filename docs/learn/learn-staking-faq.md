@@ -32,7 +32,8 @@ If you do not see staking rewards on your account, it could be due to any of the
 
 The [staking reward distribution](learn-simple-payouts) is not automatic and needs to be triggered
 through a transaction. Typically, it is the validators who trigger the staking reward payout
-transaction, but for some reason if they do not, you can claim the rewards on your own, and all the other nominators.
+transaction, but for some reason if they do not, you can claim the rewards on your own, 
+which triggers payout for all the nominators of that specific validator.
 
 ### Nominated validators not in the active set
 
