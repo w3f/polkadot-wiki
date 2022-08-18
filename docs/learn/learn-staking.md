@@ -666,11 +666,13 @@ return will be less, encouraging some users to withdraw.
 
 ## How many validators does Polkadot have?
 
-Polkadot started with 20 open validator positions and has increased gradually to 297. The top bound
-on the number of validators has not been determined yet, but should only be limited by the bandwidth
-strain of the network due to peer-to-peer message passing. The estimate of the number of validators
-that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently has
-900 validator slots in the active set.
+Polkadot started with 20 open validator positions and has increased gradually to
+{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
+The top bound on the number of validators has not been determined yet, but should only be limited by 
+the bandwidth strain of the network due to peer-to-peer message passing. The estimate of the number of
+validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's canary network, currently 
+has {{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }} 
+validator slots in the active set.
 
 ## Resources
 
