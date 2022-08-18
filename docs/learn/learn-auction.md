@@ -272,6 +272,48 @@ less. Together Dave's and Emily's bids only equals a valuation of `560`.
 Charlie's valuation for the entire range is `600`. Therefore Charlie is awarded the complete range
 of the parachain slot.
 
+## Parachain Lease Extension
+
+Before the slot lease expires, parachains have to bid and win another auction for continuity of the
+lease. To avoid any downtime in connectivity and minimize the risk of losing a subsequent auction, 
+parachain teams need to plan ahead to bid for the lease extension before their current 
+lease period ends. Explained in the section above, each auction lets you bid for 8 LPs
+(Lease Periods) which enables two scenarios for the parachain's lease extension -
+
+### Lease Extension with Overlapping Slots
+
+Acquire a slot where the first LP is before the last LP of the current slot.
+
+- Register a new 'paraId'
+- Win a slot auction with the new 'paraId'
+
+The parachain team has access to two slots: one that will end soon, and one that just started.
+Both slots have at least one LP in common. When the old slot transitions to their last LP, 
+the parachain can [swap](https://github.com/paritytech/polkadot/pull/4772) the slots. This can be 
+done via [on-chain governance](https://kusama.polkassembly.io/post/1491). The 'swap'
+call is available in the 'registrar' pallet. 
+
+![Parachain Slot Swap](../assets/para-swap.png)
+
+
+:::note Any two parachains can swap their slots via XCM
+
+The [slot swap via XCM](https://github.com/paritytech/polkadot/pull/4772) requires two live parachains
+to send an XCM message to the relay chain to approve the swap. A parachain team with access to two 
+overlapping slots can start a shell parachain on the new slot and swap it with their actual parachain
+on the old slot, thus ensuring continuity of the lease.
+
+:::
+
+### Lease Extension with Non-Overlapping Slots
+
+Acquire a slot where the first LP starts right after the end of the last LP of the current slot.
+In this case, the parachain can bid directly with their current 'paraId', and it will be automatically 
+extended without the need of swapping. This method has the advantage of not having superfluous LP's on 
+different slots owned by the same team, however it has the disadvantage of losing flexibility on when 
+to win a new slot: if the team does not win the exact slot, then it will suffer some downtime until 
+it wins a new slot.
+
 ## FAQ
 
 ### Why doesn't everyone bid for the max length?
