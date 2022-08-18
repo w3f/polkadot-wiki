@@ -607,8 +607,8 @@ number of parachain slots increase, the ideal staking rate decreases.
 The current staking rate on Polkadot still assumes the absence of parachains, with the suggested 
 ideal staking rate of 75%. You can track the progress on the issue to adjust it 
 [here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama.
-The ideal staking rate on Kusama was 50.5% when there were 49 parachain slots. When the 
-number of slots goes to 60, the ideal staking rate will be 45%. 
+At the time of updating this section, the ideal staking rate on Kusama was 50.5% when there were 
+49 parachain slots. When the number of slots goes to 60, the ideal staking rate will be 45%. 
 [Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535)
 is the code for reference.
 
