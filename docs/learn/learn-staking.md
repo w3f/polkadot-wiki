@@ -16,17 +16,17 @@ Here you will lean about what is staking, why is important and how it works for
 
 Blockchain networks use [consensus](learn-consensus.md/#why-do-we-need-consensus) mechanisms to finalize
 blocks on the chain. Consensus is the process of agreeing on something, in this case the progression
-of the blockchain or how blocks are added to the chain. Consensus is split into two protocols:
+of the blockchain or how blocks are added to the chain. Consensus consists into two actions:
 
 - `block production`, i.e. the way multiple blocks candidates are produced, and 
 - `block finality`, i.e. the way only one block out of many candidates is selected and added to the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article for more information about finality).
 
-Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well known mechanisms used to reach consensus in a secure and trustless way on public blockchains where we have many participants who do not know each other (and probably never will). In PoW networks, miners are responsible for adding blocks to the chain, and for doing such work they are
+Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well known mechanisms used to reach consensus in a secure and trustless way on public blockchains, where we have many participants who do not know each other (and probably never will). In PoW networks, miners are responsible for adding blocks to the chain, and for doing such work they are
 rewarded with tokens. Network security relies on the fact that to add blocks miners must compete to solve difficult mathematic puzzles - a solution that has been criticized for the energy wastage. In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the
-security of the network is dependent on the amount of capital locked on chain: the more the capital
+security of the network depends on the amount of capital locked on chain: the more the capital
 locked the lower the chance of an attack on the network, as the attacker
 needs to incur heavy loss to orchestrate a successful attack (more on this later on). The process of
-locking tokens on the chain is called `staking`. 
+locking tokens on chain is called `staking`. 
 
 Similar to the miners in PoW networks, PoS networks have `validators` who do not have to compete with each other to solve mathematical puzzles and are instead pre-selected to produce the blocks based on the stake backing them.
 Token holders can lock funds on chain and for doing so they are getting `staking rewards`. There is
@@ -38,7 +38,7 @@ blockchain technology nor the experience in running mining equipment.
 PoS ensures that everybody has
 "skin in the game" and thus can be held accountable. In case of misbehavior participants to the
 staking process can be punished or `slashed`, and depending on the gravity of the situation their
-stake can be partly or fully confiscated. Anyone who has significant stake in the network would not want to attack it, as it is not in their economic interests. The PoS network rewards good behavior and punishes bad behavior. Any rational actor staking on the network would want to get rewarded. It is not in one economic interest to orchestrate an attack and risk losing tokens.
+stake can be partly or fully confiscated. It is not in a staker's economic interest to orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
 ## Nominated Proof-of-stake overview
 
@@ -97,7 +97,7 @@ that to successfully attack the network one would need a large amount of tokens 
 by one single participant alone or by colluding different participants to act maliciously. In case
 of NPoS, if there is an attack both the validator(s) and nominators will be
 `slashed` and in some cases their stake partially or fully confiscated. So there is little interest of acting in a harmful way because all participants can be
-held accountable for bad intentions. Also, in NPoS validators are paid equal rewards regardless from
+held accountable for bad actions. Also, in NPoS validators are paid equal rewards regardless from
 the amount they have at stake, avoiding thus large payouts to few large validators which would
 ultimately lead to consensus centralization.
 
@@ -131,34 +131,39 @@ would like to securely stake your tokens using Polkadot JS Apps, watch [this](ht
 ### Selection of validators
 
 Choosing validators is not a simple task and it should take into account for nominator reward and
-risk preferences, ideally one aims to maximize rewards and minimize risks, with sometimes having to
-compromise between the two as minimizing risks might decrease rewards, although this might be not
-necessarily be the case. Nominators should pay attention especially to six criteria (not in order of
-importance): 1) amount of era points, 2) total stake which is equivalent to own stake (i.e. coming
-from the validator) + other stake (i.e. coming from nominators), 3) own stake, 4) commission, 5)
-identity, and 6) previous slashes. The diagram below shows how the selection of those criteria
-affects risk-to-reward ratio.
+risk preferences. Ideally one aims to maximize the reward-to-risk ratio by maximizing rewards and minimizing risks, with sometimes having to
+compromise between the two as minimizing risks might decrease rewards as well. Nominators should pay attention especially to six criteria when nominating validators (not in order of importance):
+
+- amount of era points
+- total stake which is equivalent to own stake (i.e. coming from the validator) + other stake (i.e. coming from nominators)
+- own stake
+- commission fees (i.e. how much validators charge nominators)
+- verified identity
+- previous slashes
+
+The diagram below shows how the selection of those criteria affects reward-to-risk ratio.
 
 ![rewards and risks diagram](../assets/staking/Reward-risk%20nominating.png)
 
 #### In theory
 
-Briefly, in theory, to try maximizing rewards and minimizing risk one could select those validators
-that have era points above average, have total stake below average because they will pay out more
-rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, have high own stake as if
-slashed they have a lot to lose, have low commission fees but not 0% as it makes sense that for
-doing the heavy lifting validators ask for a small commission, have on-chain registered identity so
-that you can reach out to them or look at their website or social media, and they were not slashed
-before meaning that their on-chain behavior is genuine.
+To maximize rewards and minimize risk one could select those validators
+that:
+
+- have era points above average (because they will get more rewards for being active), 
+- have total stake below average (because they will pay out more rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}), 
+- have high own stake (because if slashed they have a lot to lose), 
+- have low commission fees but not 0% (because it makes sense that for doing the heavy lifting validators ask for a small commission), 
+- have on-chain registered identity (because increases trust and you can reach out to them or look at their website or social media), 
+- and have not been slashed (meaning that their on-chain behavior is genuine).
 
 #### In practice
 
 :::caution Nominators must periodically check their validators
 
-It is important to remember that the whole system is dynamic and as such nominators should
+Nominating is _not_ a "set and forget" operation. The whole NPoS system is dynamic and as such nominators should
 periodically monitor the performance and reputation of their validators. Failing to do so could
 result in applied slashes and/or rewards not being paid out, even for a prolonged period of time.
-Nominating is _not_ a "set and forget" operation.
 
 :::
 
@@ -166,12 +171,12 @@ Although the theory can be used as a general guideline, the practice is more com
 following the theory might not necessarily lead to the desired result. Validators might have low
 total stake, low commission and above average era points in one era and then having a totally
 different profile in the next one. There are criteria that vary more than others with era points
-being highly variable and thus the probabilistic component of staking rewards. It is not recommended
+being the most variable and thus the probabilistic component of staking rewards. It is not recommended
 to change nominations at each era only because the era points of one validator were low. Selection
 based on identity, no slashes and low commission should be fine. Variability in rewards due to the
 other criteria should level out over time. There might be the case when one validator always gets
 below average era points, this is a case when selecting another validator might help to increase the
-performance of one staked tokens.
+stake performance.
 
 Check
 [this](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
@@ -182,17 +187,17 @@ support article to understand in detail how to select your own set of validators
 There are two different accounts that can be used to securely manage your funds while staking.
 
 - **Stash:** This account holds funds bonded for staking, but delegates some functions to a
-  Controller. As a result, you may actively participate to staking with a Stash private key kept in
+  controller account. As a result, you may actively participate to staking with a stash private key kept in
   a cold wallet like ledger, meaning it stays offline all the time. Stash account keys are used to
-  sign bonding, unbonding or chilling, and bond more
+  sign staking actions such as bonding and unbonding funds.
 
-- **Controller:** This account acts on behalf of the Stash account, signalling decisions about
+- **Controller:** This account acts on behalf of the stash account, signalling decisions about
   nominating and validating. It sets preferences like commission (for validators) and payout
   account. The earned rewards can be bonded (locked) immediately for staking on your stash account,
   which would effectively compound the rewards you receive over time. You could also choose to have
   them deposited to your controller account or a different account as free (transferable) balance.
   If you are a validator, it also sets your [session keys](learn-keys.md#session-keys). Controller
-  accounts only needs enough funds to pay transaction fees.
+  accounts only needs enough funds to pay for transaction fees.
 
 :::warning
 
@@ -205,7 +210,7 @@ cold account.
 
 ![staking](../assets/NPoS/staking-keys_stash_controller.png)
 
-This hierarchy of separate key types was designed so that nominators and validator operators can
+This hierarchy of separate key types for stash and controller accounts was designed so that nominators and validator operators can
 protect themselves much better than in systems with only one key. As a rule, the more often one uses
 a private key the higher its visibility and thus the chance it can be stolen. So, if one uses a key
 for multiple roles on a blockchain network, security can be easily compromised as the likelihood one
@@ -224,14 +229,13 @@ account as both stash and controller.
 ### Staking proxies
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
-[substrate](https://substrate.io/), a modular system to efficiently build blockchains without having
-deep knowledge about blockchain technology. Within each module or `pallet` one can `call` different
+[substrate](https://substrate.io/), a modular system to efficiently build blockchains without having necessarily deep knowledge about blockchain technology. Within each module or `pallet` one can `call` different
 functions that have similar logic. For example, the staking pallet contains all functionalities
 related to staking such as bonding or unbonding funds. The combined information of pallets and calls
 constitutes an `extrinsic`, i.e. a transaction that is executed from outside the chain but that
 triggers an event within the chain. Continuing with the staking example, within the staking pallet
-one can bond funds and nominate some validators. At the end of an era the signature of such
-extrinsic might trigger a reward payout, this is an event inside the chain. This way of having
+one can bond funds and nominate some validators. The signature of such
+extrinsic might trigger a reward payout at the end of an era; this is an event inside the chain. This way of having
 transactions categorized within pallets and functionalities makes it possible to create accounts
 having special permissions also called **proxy accounts**.
 
@@ -241,7 +245,7 @@ possibility to create staking proxy accounts that can be used to sign only calls
 session and utility pallets. This makes the stash account even more isolated than using a controller
 account since now one can bond / unbond / bond more funds using the staking proxy account. However,
 it is important to remember that actions on proxy accounts are limited, and in the case of staking
-proxy account calls from the balance pallet cannot be signed. This means that it is not possible to
+proxy accounts calls from the balance pallet cannot be signed. This means that it is not possible to
 send funds from a staking proxy. To do that one needs to remove that account as a staking proxy.
 
 ## Staking System Overview
@@ -251,7 +255,7 @@ are made public to all nominators, and a nominator in turn submits a list of up 
 {{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
 candidates that it supports. In the next era, a certain number of validators having the most
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. As a
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. For more information about the election algorithm go to [this](learn-phragmen.md) page on the wiki or [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#) research article. As a
 nominator, a minimum of
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
@@ -267,6 +271,8 @@ which is a dynamic value that can be much higher than
 {{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
 
 :::
+
+### Bags list
 
 The nomination intents are placed in a so-called
 [bags-list](https://github.com/paritytech/substrate/pull/9507).
@@ -303,8 +309,8 @@ If one receives staking rewards and the amount of staked tokens within the stash
 over time, the position within a bag changes and may also result in a change of bag. This may also
 happen if accounts within the bag bond more tokens or unbond tokens, one's account position and the
 position of other accounts in the bags list might change. These changes are not done automatically.
-The bags-list pallet comes with the extrinsic `putInFrontOf` which helps the node to move up in the
-bag. Also, the bags-list pallet comes with an important permissionless extrinsic: `rebag`. This
+The `voterList` pallet comes with the extrinsic `putInFrontOf` which helps the node to move up in the
+bag. Also, the pallet comes with an important permissionless extrinsic: `rebag`. This
 allows anyone to specify another account that is in the wrong bag, and place it in the correct one.
 Actions like bonding/unbonding tokens automatically rebags the nominator node, but events like
 staking rewards/slashing do not. Check the [bags-list](learn-nominator.md#bags-list) section for
