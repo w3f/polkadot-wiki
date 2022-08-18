@@ -9,9 +9,9 @@ slug: ../learn-staking-faq
 
 # Staking FAQ
 
-:::info Support pages
+:::info 
 
-For a "how-to" staking guide please visit [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-) support page.
+For the "how-to" guide on Staking, please visit [this support page.](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
 
 :::
 
