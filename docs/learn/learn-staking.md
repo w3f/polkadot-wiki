@@ -621,7 +621,7 @@ rewards that go to the Treasury.
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
 - **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators and nominators.
-- **Green line**: Staker rate of return
+- **Green line**: Annual rewards rate for stakers. For instance, 0.2 corresponds to 20% of annual returns on the staked tokens
 
 You can determine the staking rewards by checking the staking overview on
 [Polkadot-JS Apps](https://polkadot.js.org/apps/#/staking).
