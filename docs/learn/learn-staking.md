@@ -620,7 +620,7 @@ rewards that go to the Treasury.
 
 - **x-axis**: Proportion of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} staked
 - **y-axis**: Inflation, annualized percentage
-- **Blue line**: Inflation rewards to stakers
+- **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators and nominators.
 - **Green line**: Staker rate of return
 
 You can determine the staking rewards by checking the staking overview on
