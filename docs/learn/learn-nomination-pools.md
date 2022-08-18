@@ -119,7 +119,7 @@ At any point in time after joining the pool, a member can start the process of e
 `unbond` will unbond part or all of the member's funds.
 
 On Polkadot JS Apps UI, navigate to Network > Staking > Accounts > Pooled and click on the three
-vertical dots and click on Unbond funds.
+vertical dots and click on Unbond funds.  In the event that you would like to unbond all funds, it is highly recommended that you use the 'all unbonded' toggle.  Doing so ensures that all funds are unbonded even some that may not display due to rounding by the UI.  
 
 ### Withdraw unbonded funds
 
@@ -134,8 +134,9 @@ vertical dots and click on Withdraw unbonded.
 
 - A member cannot vote (e.g. in Referenda or for Council members) with their nominated funds. This
   may be changed in the future once accounts are afforded the ability to split votes.
-- In order for a member to switch pools they must wait for the normal 28 era unbonding process.
+- In order for a member to switch pools all funds from the account must be unbonded.  This process takes 28 eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
+
 
 :::info Kusama Pool Stats
 - There can be a maximum of <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> members (there are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> members).
