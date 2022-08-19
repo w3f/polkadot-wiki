@@ -61,7 +61,7 @@ BABE 需要适用于[可验证随机函数 (VRF)](learn-randomness#vrfs)以及�
 
 ### 什么是 `sr25519` 并它是从何而来?
 
-某些情况下: Twisted Edward's 曲线 25519 上的 Schnorr 签名被认为是安全，但是 Ed25519 并没有完全解决其错误。最值得注意的是，[ Monero 和所有其他 CryptoNote 货币](https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html)很容易受到双花的利用，这有可能导致未被发现的无限通胀。
+某些情况下: Twisted Edward's 曲线 25519 上的 Schnorr 签名被认为是安全，但是 Ed25519 并没有完全解决其错误。最值得注意的是，[ Monero 和所有其他 CryptoNote 货币](https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html)很容易受到双花的利用，这有可能导致未的无限通胀。
 
 这些漏洞的源于是由于 Ed25519 中的特点，即其 8 的协因子。曲线的协因子是深奥的细节，这可能对更复杂协议的安全实现产生可怕的后果。
 
