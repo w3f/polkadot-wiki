@@ -101,7 +101,7 @@ era after they joined). Rewards are split pro rata among the actively bonded mem
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the unbonding duration has passed (28 eras {{ polkadot: which correspond to 28 days on Polkadot :polkadot }}{{ kusama: which correspond to 7 days on Kusama :kusama }}), a
 member may withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's
-relationship with their pool, allowing them to join a different pool if desired. For guidelines about how to unbond and withdraw funds in a nomination pool visit [this](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) support article.
+relationship with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
 
 ### Limitations
 
