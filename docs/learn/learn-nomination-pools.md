@@ -94,7 +94,7 @@ Check the "How to join a pool" section in [this support article](https://support
 
 The member can claim their portion of any rewards that have accumulated since the previous time they
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
-era after they joined). Rewards are split pro rata among the actively bonded members. For guidelines about how to claim rewards in a nomination pool visit [this](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) support article.
+era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How to claim rewards" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
 
 ### Unbond and withdraw funds
 
