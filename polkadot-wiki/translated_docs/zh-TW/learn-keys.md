@@ -61,7 +61,7 @@ But ultimately the benefits of using Schnorr signatures outweigh the tradeoffs, 
 
 ### What is `sr25519` and where did it come from?
 
-Some context: The Schnorr signatures over the Twisted Edward's Curve25519 are considered secure, however Ed25519 has not been completely devoid of its bugs. Most notably, [Monero and all other CryptoNote currencies](https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html) were vulnerable to a double spend exploit that could have potentially led to undetected, infinite inflation.
+Some context: The Schnorr signatures over the Twisted Edward's Curve25519 are considered secure, however Ed25519 has not been completely devoid of its bugs. Most notably, [Monero and all other CryptoNote currencies](https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html) were vulnerable to a double spend exploit that could have potentially led to infinite inflation.
 
 These exploits were due to one peculiarity in Ed25519, which is known as its cofactor of 8. The cofactor of a curve is an esoteric detail that could have dire consequences for the security of implementation of more complex protocols.
 
