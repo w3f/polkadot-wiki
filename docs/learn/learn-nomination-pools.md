@@ -88,7 +88,7 @@ pool's internal logic can access the account.
 
 :::
 
-For guidelines about how to join a nomination pool visit [this](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) support article.
+Check the "How to join a pool" section in [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools) for guidelines.
 
 ### Claim rewards
 
