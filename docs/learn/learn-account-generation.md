@@ -13,12 +13,12 @@ address. The public and private parts together make up a Polkadot account. You c
 
 There are several ways to generate a Polkadot account:
 
-- [Polkadot{.js} Browser Extension](#polkadotjs-browser-extension) **RECOMMENDED FOR MOST USERS**
+- [Polkadot{.js} Browser Extension](#polkadot-js-apps) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
 - [Polkadot-JS Apps](#polkadot-js-apps)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
-- [Ledger Hardware Wallet](../general/ledger.md)
+- [Ledger Hardware Wallet](#ledger-hardware-wallet)
 
 :::note
 
@@ -100,24 +100,16 @@ networks without having to set different passwords to access such accounts.
 
 ### Set Address for Polkadot Mainnet
 
-Now we will ensure that the addresses are displayed as Polkadot mainnet addresses.
+In Polkadot you can use the same address on multiple chains. To switch between chains you can follow the guidelines in [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-). The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to
+convert your address between the different chain formats. 
 
-Click on "Options" at the top of the plugin window, and under "Display address format for" select
-"Polkadot Relay Chain".
+:::info For privacy reasons, we recommend creating a new address for each chain you're using.
 
-![New seed](../assets/accounts/polkadot_plugin_js_new_04.png)
-
-Your address' format is only visual - the data used to derive this representation of your address
-are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
-recommend creating a new address for each chain you're using.
-
-Our [Accounts page](learn-accounts.md#address-conversion-tools) also has a tool you can use to
-convert your address between the different chain formats.
+:::
 
 You can copy your address by clicking on the account's icon while the desired chain format is
-active. E.g. selecting "Substrate" as the format will change your address to start with the number
-5, and clicking the colorful icon of your account will copy it in that format. While in Polkadot
-mode (starts with 1), that format will be copied, and so on.
+active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful icon of your account will copy it in that format. While in Polkadot
+mode, that address format will be copied, and so on.
 
 ## Subkey
 
@@ -167,13 +159,13 @@ Parity Signer is a secure way of storing your DOT on an air-gapped device. It is
 that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
 installing it. For the tutorial on how to create an account using Parity Signer, [this support article](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
 
-## Ledger Hardware Wallet
-
-To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
-the instructions on our [Ledger hardware wallet guide page](../general/ledger.md).
-
 ## Vanity Generator
 
 The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
 that lets you generate addresses that contain a specific substring.
 For the tutorial on how to create an account using Vanity Generator, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
+
+## Ledger Hardware Wallet
+
+To use a Ledger hardware wallet to create your address and keep your tokens in cold storage, follow
+the instructions on our [Ledger hardware wallet guide page](../general/ledger.md).
