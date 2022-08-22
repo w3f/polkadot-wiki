@@ -73,11 +73,7 @@ on how to import Ledger accounts to the Polkadot JS extension read through [this
 
 #### Derivation paths
 
-When adding a Ledger account using the extension or the UI, you will be asked to select an `account type` and an `account index`.
-
-![Picking an account and derivation path](../assets/ledger/add-account.png)
-
-The first dropdown lets you select an account, while the second dropdown lets you pick a derivation path from that account - think of it like a formula from which child accounts are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live with name `Polkadot 1`, this can be added to Polkadot JS using the 0/0 derivation path (i.e. account type = 0 and account index = 0). If then you add a second account called `Polkadot 2`, this will correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that cam be viewed and used in both Ledger Live and Polkadot JS. Additionally, we can use Polkadot JS to created multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0 derivation path can have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be used in Ledger Live, as it only scans through the parent accounts. So, keep in mind that on Ledger Live balances on the children accounts cannot be viewed, and you cannot use such accounts.
+When adding a Ledger account using the extension or the UI, you will be asked to select an `account type` and an `account index`. The first lets you select an account, while the second lets you pick a derivation path from that account - think of it like a formula from which child accounts are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live with name `Polkadot 1`, this can be added to Polkadot JS using the 0/0 derivation path (i.e. account type = 0 and account index = 0). If then you add a second account called `Polkadot 2`, this will correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that cam be viewed and used in both Ledger Live and Polkadot JS. Additionally, we can use Polkadot JS to created multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0 derivation path can have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be used in Ledger Live, as it only scans through the parent accounts. So, keep in mind that on Ledger Live balances on the children accounts cannot be viewed, and you cannot use such accounts.
 
 #### Connecting your ledger device
 
@@ -90,7 +86,7 @@ If you are adding your Ledger nano for the first time click on the "Unknown devi
 
 :::info Signature error message
 
-If you already connected your device but an error message appears before signing a transaction make sure that on your Ledger nano you have opened the Polkadot application.
+If you already connected your device but an error message appears before signing a transaction make sure that on your Ledger nano you have opened the Polkadot application. Visit [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for more information about signing transactions using your ledger.
 
 :::
 
