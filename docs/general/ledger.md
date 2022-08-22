@@ -67,44 +67,6 @@ Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. T
 
 :::
 
-### Using the Developer Release
-
-:::tip Instructions
-
-These instructions are for development installation only. It is recommended to install the
-application from Ledger Live unless you *know exactly what you're doing*.
-
-:::
-
-Instructions for downloading the pre-release binary from the GitHub releases are written [in the
-README][prerelease instructions] for the Polkadot Ledger application GitHub repository.
-
-On the [releases page][] you can download the shell script `install_app.sh` and then make it
-executable in your shell by typing the command `chmod +x install_app.sh`.
-
-Using `install_app.sh` `help` command will show you the available options:
-
-```zsh
-$ ./install_app.sh --help
-Zondax Installer [Polkadot-1.2011.1] [Warning: use only for test/demo apps]
-  load    - Load Polkadot app
-  delete  - Delete Polkadot app
-  version - Show Polkadot app version
-```
-
-Next, you must make sure your Ledger device is plugged in and unlocked and you're using the latest
-firmware (1.6.1 at the time of writing). If everything is prepared, then type
-`./install_app.sh load` and accept the prompts on your Ledger device to install the application.
-
-First it will prompt you to allow an unsafe manager - confirm this by switching the screen to the
-allow screen and pressing the corresponding buttons.
-
-After some processing time, the screen of your device will update to say "Install app Polkadot".
-Navigate all the way to the right, verify the Identifier hash matches the one that is printed in
-your terminal. Click both buttons on "Perform Installation" to install the application. It will ask
-again for your PIN code.
-
-At the end of the process you should have the newly installed Polkadot application on the device.
 
 ## Using on Polkadot-JS Apps
 
