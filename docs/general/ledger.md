@@ -33,40 +33,27 @@ Check [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specifica
 
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
-issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
+issue on the [Polkadot support pages](https://support.polkadot.network/).
 
 ## Requirements
 
 Here is a list of what you will need before starting:
 
-- A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements. The Ledger Nano S has limited memory and is no longer produced).
+- A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements). The Ledger Nano S has limited memory and is no longer produced.
 - The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
 - A Chromium-based web browser is installed that you can use to access [Polkadot-JS Apps][].
 
-## Installing the Ledger Application
+## Using Ledger Live
 
-### Using Ledger Live
-
-- Open the "Manager" tab in Ledger Live.
-- Connect and unlock your Ledger device by inserting the PIN.
-- If asked, allow the manager on your device by pressing both buttons on the YES screen.
-- Find Polkadot in the app catalog and install it.
-
-![The Polkadot App in the Ledger Manager](../assets/ledger/manager-app-polkadot.png)
-
-Watch the instructions on how to create an account, send/receive and state/unstake DOTs in the video below
-
-[![Polkadot on Ledger Live](https://img.youtube.com/vi/jL-N_IWiYVA/0.jpg)](https://www.youtube.com/watch?v=jL-N_IWiYVA)
-
+Check [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live) to learn how to use Polkadot with ledger live.
 
 :::info
 
 Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. This means that if you create a [derived account using Polkadot JS](#using-on-polkadot-js-apps) with a derivation path 44'/354'/0'/0'/1', it will not be displayed on the Ledger Live App. As a consequence it is not possible to transact with derived accounts using the Ledger Live App, but it is possible to do so using Polkadot JS. For more information about derived accounts and derivation paths check [the accounts page](../learn/learn-accounts.md).
 
 :::
-
 
 ## Using on Polkadot-JS Apps
 
