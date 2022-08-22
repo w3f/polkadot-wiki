@@ -8,7 +8,7 @@ slug: ../learn-account-generation
 ---
 
 An address is the public part of a Polkadot account. The private part is the key used to access this
-address. The public and private parts together make up a Polkadot account. You can think about your public address like your mailbox and your private key like your key to open your mailbox. Everybody can send you information to your public address, but only you can access the box and read such information. In other words, everybody can know your public address but you should keep your private key secret.
+address. The public and private parts together make up a Polkadot account. You can think of the public address  of your account like your mailbox and the private key like the key to open that mailbox. Anybody can send mail to your mailbox, but only you can access them as only you have access to its key. In the context of Polkadot accounts,  anybody can send tokens to your public address but only you can transact with them using your private key. That is why you should keep your private key secret.
 
 
 There are several ways to generate a Polkadot account:
