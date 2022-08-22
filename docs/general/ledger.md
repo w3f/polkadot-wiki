@@ -86,45 +86,31 @@ to confirm the USB connection through a popup like the one below:
 
 ![Display the device connection popup](../assets/ledger/query-device.png)
 
-If you are adding your Ledger nano for the first time click on the "Unknown device" line and the "Connect" button will become available. If you already connected your device but an error message appears before signing a transaction make sure that on your Ledger nano you have opened the Polkadot application.
+If you are adding your Ledger nano for the first time click on the "Unknown device" line and the "Connect" button will become available. 
+
+:::info Signature error message
+
+If you already connected your device but an error message appears before signing a transaction make sure that on your Ledger nano you have opened the Polkadot application.
+
+:::
 
 ### Confirming the Address on your Device
 
-On the "Accounts" tab, find your Ledger-connected account. Click on the three vertical dots at the
-end of the row. This will open a new menu, here you can click the "Show address on hardware device"
-option to display the address on your device.
-
-![Options menu of an account in the Accounts screen of PolkadotJS](../assets/ledger-4.png)
-
-Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS
+To display your Polkadot ledger account address on your Ledger nano you can follow the guidelines on [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device). Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS
 Apps.
 
 ### Checking the Balance of Your Account
 
-There are a few methods to check the balance of your account. You can use Polkadot-JS Apps or you
-can use a block explorer like [Polkascan][] or [Subscan][].
-
-#### Using Polkadot-JS Apps
-
-Once you have your account loaded on the "Accounts" tab it should show a row with your Ledger
-account. At the far right of the row is located your account's DOT balance. If you expand the
-balance arrow, it will show details of your balance such as locks or reserved amounts.
-
-![Account row showing empty balance](../assets/ledger/ledger-balance.png)
+There are a few methods to check the balance of your account. Check out [this support article](https://support.polkadot.network/support/solutions/articles/65000169332-where-can-i-see-the-balance-of-my-account-) for information.
 
 ### Sending a Transfer
 
-Instructions to send a transfer can be found on the
-[balance transfer page](../learn/learn-balance-transfers.md).
+General instructions to send a transfer can be found on [this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui). To sign transactions with your Ledger nano check [this support article](https://support.polkadot.network/support/solutions/articles/65000181994).
 
 ### Receiving a Transfer
 
 In order to receive a transfer on the accounts stored on your Ledger device, you will need to
-provide the sender (i.e. the payer) with your address.
-
-The easiest way to get your address is to click on the account name which will open a sidebar. Your
-address will be shown in this sidebar, along with some other information. Another method is just
-clicking on your account's avatar icon - this immediately copies your address to the clipboard.
+provide the sender (i.e. the payer) with your address. To do so follow the instructions on [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
 :::warning
 
@@ -137,41 +123,12 @@ extra vigilant around copy-paste operations makes sense.
 
 ### Staking
 
-You can enable staking by issuing a batch transaction that will include
-the required extrinsics.
-
-You can also issue two separate transactions when you want to stake using an account stored on a
-Ledger device, as follows:
-
-- Go to the "Staking" tab found under the "Network" dropdown in the top navigation menu.
-- Click the "Account Actions" pane in the inner navigation.
-- Click "+ Stash" instead of "+ Nominator" or "+ Validator" (selecting the latter two will not
-  work).
-- Input the amount of tokens to bond and confirm the transaction.
-- Confirm the transaction on the Ledger device.
-- When the transaction is included you will see the newly bonded account in the "Account Actions"
-  page.
-- Select "Start Nominating" or "Start Validating" to start nominating or validating.
-- Confirm the transaction on Apps and on the Ledger device.
+For staking using Ledger devices check the section "How to stake using your Ledger" on [this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
 
 ### Removing Expired Democracy Locks
 
-You can remove expired democracy locks by issuing a batch transaction that will include
-the required extrinsics.
-
-You can also manually issue several extrinsics when you want remove expired democracy locks on an
-account stored on a Ledger device, as follows:
-
-- Go to https://polkadot.js.org/apps/#/accounts. Look at your expired locks and note which referenda
-  they were for.
-- Go to https://polkadot.js.org/apps/#/extrinsics
-- For each referendum with an expired lock, issue a "democracy.removeVote(X)" extrinsic, where X =
-  the referendum you voted on and has an expired lock. Make sure you do it from the account with the
-  expired locks - you can't do it from another account.
-- Once you have removed all of the votes, issue a "democracy.unlock(ACCOUNT)" extrinsic, where
-  ACCOUNT is the account you just removed the votes from.
-- Go back to https://polkadot.js.org/apps/#/accounts. You'll see that the locks are now removed.
+Check out [this support page](https://support.polkadot.network/support/solutions/articles/65000181870-how-to-remove-expired-democracy-locks) the learn how to remove democracy locks after the end of a Governance referendum.
 
 **Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger
 Nano S and the Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics
-are available in the light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on the full ledger.
+are available in the light version. The following [repository by Zondax](https://github.com/Zondax/ledger-polkadot) lists the currently supported Democracy extrinsics on the full ledger.
