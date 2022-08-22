@@ -480,170 +480,21 @@ while she waits for either Bob or Charlie also to approve the call. When Bob com
 call and execute the transaction, he will not need to place the deposit, and Alice will receive her
 deposit back.
 
-### Example with Polkadot.JS
+### Example with Polkadot JS
 
-For this example, we will be using the
-[Westend](../maintain/maintain-networks.md#westend-test-network) testnet and
-[Polkadot.JS Apps](learn-balance-transfers.md#polkadot-js-apps) to create a 2-of-3 multisig address
-and send a transaction with it.
+:::info
 
-:::note 
-
-While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few
-notable differences:
-
-- Existential deposit is equal to 0.01 WND (Westies; Westend's native coin) instead of 1 DOT.
-- The multi-signature transaction deposit is equal to ~1 WND instead of ~20.2 DOT.
-
-The photos below reflect values in WND, but instructions are the same for DOT.
+Check the "How to create a multisig account" section on [this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account). We recommend trying out the tutorial on [Westend network](../maintain/maintain-networks.md#westend-test-network) - Polkadot's testnet.
 
 :::
-
-**To create a multisig address and send a transaction using it, you will need the following:**
-
-- List of the multisig member's addresses. We will use Alice, Bob, and Charlie.
-- This must be in the address that initiates a multi-signature transaction (in this example,
-  Alice).- DOT to deposit into the multisig address.
-- ~20.2 DOT refundable deposit to send a multisig transaction.
-
-You should already have your account with some coins in it.
-
-![Account page](../assets/accounts/multisig-addy.png)
-
-To generate the multisig address, we need **to add the multisig member addresses to the contact
-book** under "Accounts > Address book".
-
-![Address book](../assets/accounts/multisig-1.png)
-
-Click "Add Contact" in the upper right and provide the address and a name for each address.
-
-![Add Contact](../assets/accounts/multisig-2.png)
-
-Here, Bob and Charlie have been added.
-
-![Address books 2](../assets/accounts/multisig-3.png)
-
-**Next, we need to create the new multi-signature address.** Navigate to the Accounts page (from the
-toolbar, "Accounts > Accounts") and click the "+ Multisig" button. We will supply the three multisig
-member addresses with a value '2' for the threshold.
-
-![New multisig](../assets/accounts/multisig-4.png)
-
-Click 'Create', and you should see the new multisig address appear on this Accounts page.
-
-![5](../assets/accounts/multisig-5.png)
-
-**Let's fund the address now.** For this example, we will transfer some coins from Alice's account
-to the multisig address. Under Alice's address, click 'Send', select the multisig wallet as the
-destination, and provide an amount. Then, click 'Make Transfer', and then 'Sign and Submit'.
-
-![6](../assets/accounts/multisig-6.png) ![7](../assets/accounts/multisig-7.png)
-
-We can see that the multisig account now has a balance.
-
-![9](../assets/accounts/multisig-9.png)
-
-**To send a transaction, we need one of the members to initiate it.** Let's use Alice to initiate
-the transaction.
-
-Make sure Alice has enough coins to cover the multisig transaction deposit and the transaction fees.
-Then, click 'Send' under the "Multisig Test Address", select a destination address (we generated an
-address locally) and a transfer amount, and click 'Make Transfer'.
-
-![10](../assets/accounts/multisig-10.png)
-
-To sign as Alice, make sure she is selected as the 'multisig signatory', click 'Sign and Submit',
-and sign the transaction.
-
-![11](../assets/accounts/multisig-11.png)
-
-You will now see a pending transaction the 'Multisig Test Address' (the purple icon next to the
-account name), and if you click the dropdown arrow right of Alice's balance - you will see that a
-value equivalent to the multisig deposit has been 'reserved'; rendering that value untransferable
-until the multisig transaction completes.
-
-![12](../assets/accounts/multisig-12.png)
-
-**Next, we need a second signature.** Let's get it from Bob. In Bob's browser, repeat the following
-from the above steps.
-
-1. Add Alice, Charlie, and the multisig transaction destination addresses to Bob's Address book.
-2. Create a new multisig address with the same parameters (Bob, Alice, and Charlie's addresses, and
-   a threshold value of '2').
-
-
-:::note
-
-Since multisig address generation is deterministic, if Bob (or any other member), on his
-computer was to generate a multisig address using Alice's, Charlie's, and his addresses, with a
-threshold value of '2', he would produce the **same** multisig address that Alice has here.
-
-:::
-
-If done correctly, we should see that the **same** multisig address is produced in Bob's browser,
-and that a pending transaction is displayed, too.
-
-![13](../assets/accounts/multisig-13.png)
-
-:::note
-
-Alice initiated the transaction by uploading a signature of the hash of the transaction and the
-hash.
-
-:::
-
-Next, to get Bob's signature, he must craft the same multisig transaction that Alice did by
-providing the same destination address and transfer amount (together, transaction parameters),
-signing and submitting it. These transaction parameters will allow Bob to produce and sign the same
-transaction (the same hash) that Alice signed earlier.
-
-![14](../assets/accounts/multisig-14.png)
-
-Click 'Make Transfer' - ensure that Bob is the 'multisig signatory', and click 'Sign and Submit'.
-
-:::note
-
-'Multisig message with the call (for final approval)' is automatically enabled; this means
-that, since the transaction will reach the signature threshold, it will execute the actual
-transaction on the chain after adding the second signature.
-
-:::
-
-![15](../assets/accounts/multisig-15.png)
-
-Assuming no errors, 'Multisig Destination Account' has a balance of 0.3 WND, and Alice's account has
-released the multisig transaction deposit.
-
-![16](../assets/accounts/multisig-16.png)
 
 ## Decoding Call Data
 
-You can use Polkadot-JS Apps to decode call data, as the extension only shows raw call data.
-This will allow you to know what you're signing. 
+:::info
 
-:::note
-
-The decoded call data requires you to understand what the events or calls mean in the context of 
-the transaction.
+Check the "How to use a multisig account" section on [this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
 
 :::
-
-1. Before submitting a transaction, copy the call data.
-
-![17](../assets/accounts/decode-1.png)
-
-2. Navigate to the [Decode tab](https://polkadot.js.org/apps/#/extrinsics/decode) under the 
-   Extrinsics section and paste the call data in the "hex-encoded call" window. Make sure you have 
-   the correct account selected.
-
-3. Verify that the data is what you expect.
-
-![18](../assets/accounts/decode-2.png)
-
-4. Navigate back to the Polkadot-JS extension and approve the transaction.
-
-Another way to perform this is to update your metadata for that chain. You will then be able to 
-have the Polkadot-JS extension parse the call data for you.
 
 ## Address Conversion Tools
 
