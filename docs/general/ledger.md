@@ -37,7 +37,7 @@ issue on the [Polkadot support pages](https://support.polkadot.network/).
 
 ## Requirements
 
-Here is a list of what you will need before starting:
+Here is a list of what you will need before using Polkadot with Ledger:
 
 - A Ledger Nano X or Nano S plus (recommended for Polkadot Ledger App space requirements). The Ledger Nano S has limited memory and is no longer produced.
 - The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to allow access with your nano).
@@ -57,66 +57,36 @@ Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. T
 
 ## Using on Polkadot-JS Apps
 
-Please consider watching this video tutorial on how to connect your Ledger
-device with Polkadot-JS UI, by importing your accounts to Polkadot-JS Extension
+Please consider watching video tutorial below on how to connect your Ledger
+device with Polkadot-JS UI, by importing your accounts to Polkadot-JS Extension.
 
-[![Connect Ledger to Polkadot JS UI](https://img.youtube.com/vi/7VlTncHCGPc/0.jpg)](https://youtu.be/7VlTncHCGPc)
-
-:::info
-
-Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with normal operation.
+:::info Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with normal operation.
 
 :::
+
+[![Connect Ledger to Polkadot JS UI](https://img.youtube.com/vi/7VlTncHCGPc/0.jpg)](https://youtu.be/7VlTncHCGPc)
 
 ### Loading Your Account
 
 You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the Polkadot JS UI. For instructions
-on how to import Ledger accounts to Polkadot JS extension in written format, read through this [article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
-For importing your account to the UI, read through the instructions below.
+on how to import Ledger accounts to the Polkadot JS extension read through [this support article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension), while if you want to import Ledger accounts to the Polkadot JS UI you can consult [this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
 
-[Polkadot-JS Apps][] already has an integration with the Ledger application so that your device will work with the browser interface after installation. The functionality is currently gated behind a
-feature setting that you will need to turn on.
+#### Derivation paths
 
-In order to turn on the interoperability with the Polkadot Ledger application, go to the "Settings"
-tab in Polkadot-JS Apps. Find the option for attaching Ledger devices and switch the option from the
-default "Do not attach Ledger devices" to "Attach Ledger via WebUSB". Be aware: if you are not
-seeing this it is because there is
-[no Ledger support](https://github.com/polkadot-js/apps/issues/3771) on FireFox.
-
-![Dropdown selector for allowing Ledger connections in PolkadotJS Settings](../assets/ledger.png)
-
-Click "Save" to keep your settings.
-
-Now when you go to the "Accounts" tab you will see a new button that says "Add Ledger". Ensure that
-your Ledger device is unlocked and you have navigated into the Polkadot application, then click this
-button.
-
-![Add Ledger button in PolkadotJS](../assets/ledger/query-ledger.png)
-
-A popup will appear asking you to select an account and derivation path.
+When adding a Ledger account using the extension or the UI, you will be asked to select an `account type` and an `account index`.
 
 ![Picking an account and derivation path](../assets/ledger/add-account.png)
 
-The first input will let you name your account if you have not done so already. If you have already
-named your account, this will not change the existing name. The first dropdown lets you select an
-account. You can have multiple accounts on a single Ledger device. The second dropdown lets you pick
-a derivation path - think of it like a formula from which child accounts are generated. If in doubt,
-pick the first option for both. 0 / 0 is a good default.
+The first dropdown lets you select an account, while the second dropdown lets you pick a derivation path from that account - think of it like a formula from which child accounts are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live with name `Polkadot 1`, this can be added to Polkadot JS using the 0/0 derivation path (i.e. account type = 0 and account index = 0). If then you add a second account called `Polkadot 2`, this will correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that cam be viewed and used in both Ledger Live and Polkadot JS. Additionally, we can use Polkadot JS to created multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0 derivation path can have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be used in Ledger Live, as it only scans through the parent accounts. So, keep in mind that on Ledger Live balances on the children accounts cannot be viewed, and you cannot use such accounts.
 
-Once you confirm your selection, depending on your browser and its security settings, you might need
-to confirm the USB connection through a popup like the one below when adding the Ledger device for
-the first time:
+#### Connecting your ledger device
+
+While using a ledger device to sign transactions, depending on your browser and its security settings, you might need
+to confirm the USB connection through a popup like the one below:
 
 ![Display the device connection popup](../assets/ledger/query-device.png)
 
-Click on the "Unknown device" line and the "Connect" button will become available.
-
-You should now be able to scroll down and find a new account on the page with the type "ledger".
-
-![Displaying the Ledger account in the list](../assets/ledger/ledger-balance.png)
-
-You can now use this account to interact with Polkadot on Polkadot-JS Apps and it will prompt your
-ledger for confirmation when you initiate a transaction.
+If you are adding your Ledger nano for the first time click on the "Unknown device" line and the "Connect" button will become available. If you already connected your device but an error message appears before signing a transaction make sure that on your Ledger nano you have opened the Polkadot application.
 
 ### Confirming the Address on your Device
 
@@ -205,16 +175,3 @@ account stored on a Ledger device, as follows:
 **Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger
 Nano S and the Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics
 are available in the light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on the full ledger.
-
-## Support
-
-If you need support, please visit the
-[Polkadot Support page](https://support.polkadot.network).
-
-[ledger]: https://www.ledger.com/
-[repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy
-[polkadot-js apps]: https://polkadot.js.org/apps
-[prerelease instructions]: https://github.com/Zondax/ledger-polkadot#download-and-install
-[releases page]: https://github.com/Zondax/ledger-polkadot/releases
-[polkascan]: https://polkascan.io/polkadot
-[subscan]: https://polkadot.subscan.io/
