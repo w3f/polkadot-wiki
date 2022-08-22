@@ -492,7 +492,7 @@ Check the "How to create a multisig account" section on [this support page](http
 
 :::info
 
-This section has been moved to [this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
+Check the "How to use a multisig account" section on [this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
 
 :::
 
