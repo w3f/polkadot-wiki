@@ -18,8 +18,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true
-          active-emoji: ':green_circle:'
-          stale-emoji: ':yellow_circle:'
-          inactive-emoji: ':red_circle:'
+          active-emoji: '🟢'
+          stale-emoji: '🟡'
+          inactive-emoji: '🔴'
           not-found-emoji: ':grey_question:'
 
