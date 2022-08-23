@@ -105,6 +105,9 @@ convert your address between the different chain formats.
 
 :::info For privacy reasons, we recommend creating a new address for each chain you're using.
 
+Your address' format is only visual - the data used to derive this representation of your address
+are the same, so you can use the same address on multiple chains. However, for privacy reasons, we
+recommend creating a new address for each chain you're using.
 :::
 
 You can copy your address by clicking on the account's icon while the desired chain format is
