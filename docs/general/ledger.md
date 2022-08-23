@@ -59,7 +59,7 @@ Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. T
 
 ### Loading Your Account
 
-:::info Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with normal operation.
+:::info Ledger Live should be off while using Ledger with Polkadot-JS UI as it can interfere with normal operation.
 
 :::
 
