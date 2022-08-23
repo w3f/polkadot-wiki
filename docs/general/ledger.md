@@ -81,7 +81,7 @@ If you are adding your Ledger Nano for the first time, click on the "Unknown dev
 
 :::info Signature error message
 
-If you already connected your device but an error message appears before signing a transaction make sure that on your Ledger nano you have opened the Polkadot application. Visit [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for more information about signing transactions using your ledger.
+If you already connected your device but an error message appears before signing a transaction, make sure you have opened the Polkadot application on your Ledger Nano device. Visit [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for more information about signing transactions using your ledger.
 
 :::
 
