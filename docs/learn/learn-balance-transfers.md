@@ -8,58 +8,29 @@ slug: ../learn-balance-transfers
 ---
 
 Balance transfers are used to send a balance from one account to another account. To start
-transferring a balance, we will begin by using [Polkadot-JS Apps][]. This guide assumes that you've
+transferring a balance, we will begin by using [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). This guide assumes that you've
 already [created an account](learn-account-generation.md) and have some funds that are ready to be
-transferred. This guide also contains instructions on how to sign the balance transfer transactions
-for accounts created on Polkadot JS Extension, Ledger devices and Parity Signer App.
+transferred.
 
-## Polkadot-JS Apps UI
-
-Let's begin by opening [Polkadot-JS Apps][]. There are two ways to conduct a balance transfer:
-
-1. By using the "Transfer" tab in the "Accounts" dropdown (located on the top navigational menu).
-2. Clicking the "Send" button while in the "Accounts" page.
-
-### Using the Transfer Tab
-
-Click on the "Transfer" tab in the "Accounts" dropdown.
-
-![transfer](../assets/transfer-1.png)
-
-Now a modal window will appear on the page. The modal asks you to enter three inputs:
-
-- "send from account": Your account with funds that you will send from.
-- "send to address": The address of the account that will receive the funds.
-- "amount": The amount of tokens you will transfer.
-
-The "existential deposit" box shows you the **minimum amount of funds you must keep in the account
-for it to remain active.** See the [existential deposit][] section for more information.
-
-![transfer](../assets/transfer-2.png)
-
-After setting your inputs correctly, click the "Make Transfer" button and confirm. Once the transfer
-is included in a block you will see a green notification in the top-right corner of your screen.
-
-### Signing on Polkadot Extension
-
-If you inject your account in Polkadot-JS Apps through the Polkadot-JS Extension, you need to sign the balance transfer transaction
-on the pop-up window. You can examine the method and info dropdowns (highlighted in the screenshot below) and ensure they match with the original transaction submission. Then, sign the transaction by entering the account password.
-
-![extension transfer](../assets/accounts/extenstion-transaction.png)
-
-### Signing on Ledger device
-
-Assuming that you have imported your Ledger account to the Polkadot-JS Extension, you will see a pop-up window for signing the balance transfer transaction. Review the transaction details on the Ledger device and approve it to sign the transaction.
-
-:::note Connect Ledger to Polkadot-JS Apps
-
-If you are looking for instructions in a video, watch the tutorial on how to connect [Ledger to Polkadot-JS Apps](https://youtu.be/7VlTncHCGPc).
+:::info We support only the use of the [_Polkadot-JS UI_](https://polkadot.js.org/apps/#/explorer) together with the [_browser extension_](https://polkadot.js.org/extension/), [_ledger_](https://www.ledger.com/ledger-live) and [_parity signer_](https://www.parity.io/technologies/signer/) for signing transactions. We do not provide support for third party applications.
 
 :::
 
-![Ledger transfer](../assets/accounts/ledger-transaction.png)
+:::info Most of the content on this page has been moved to several support pages. See the links below.
 
-### Signing Transactions with Parity Signer
+:::
+
+- [Using the transfer tab or the send button on your account in Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui)
+    - [Signing with the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993)
+    - [Signing with the browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
+    - [Signing with ledger](https://support.polkadot.network/support/solutions/articles/65000181994)
+    - [Signing with parity signer](https://support.polkadot.network/support/solutions/articles/65000182000)
+
+## Signing Transactions with Parity Signer
+
+:::info This information is complementary to the [dedicated support page](https://support.polkadot.network/support/solutions/articles/65000182000). 
+
+:::
 
 If you directly import your Parity Signer account to Polkadot-JS Apps, you will see a pop-up window with a QR code and a camera window, as shown below.
 Open the QR scanner on Parity Signer and scan the QR code. You may be prompted to enter your PIN to sign the transaction.
@@ -75,7 +46,7 @@ Scan the QR code using Parity Signer. You will see a QR code consisting of the s
 
 ![Companion transfer](../assets/accounts/companion-transfer2.png)
 
-### Keep-Alive Checks
+## Keep-Alive Checks
 
 At an [extrinsic](../general/glossary.md#extrinsic) level, there are two main ways to transfer funds
 from one account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you
@@ -112,7 +83,7 @@ from the sending account if you attempt to transfer.
 
 :::
 
-### Existing Reference Error
+## Existing Reference Error
 
 If you are trying to reap an account and you receive an error similar to "There is an existing
 reference count on the sender account. As such the account cannot be reaped from the state", then
@@ -125,20 +96,20 @@ References may still exist from:
 - Existing recovery info
 - Existing assets
 
-#### Bonded Tokens
+### Bonded Tokens
 
 If you have tokens that are bonded, you will need to unbond them before you can reap your account.
 Follow the instructions at [Unbonding and Rebonding](../maintain/maintain-guides-how-to-unbond.md) to check if
 you have bonded tokens, stop nominating (if necessary) and unbond your tokens.
 
-#### Purging Session Keys
+### Purging Session Keys
 
 If you used this account to set up a validator and you did not purge your keys before unbonding your
 tokens, you need to purge your keys. You can do this by seeing the
 [How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also be
 checked by checking `session.nextKeys` in the chain state for an existing key.
 
-#### Checking for Locks
+### Checking for Locks
 
 You can check for locks by querying `system.account(AccountId)` under `Developer > Chain state`.
 Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
@@ -150,7 +121,7 @@ You can also check for locks by navigating to `Accounts > Accounts` in
 account under the 'balances' column. If it shows that some tokens are in a 'locked' state, you can
 see why by hovering over the information icon next to it.
 
-#### Existing Recovery Info
+### Existing Recovery Info
 
 Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
 [Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
@@ -159,25 +130,8 @@ probably not the reason for your tokens having existing references.
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
 chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
 
-#### Existing {{ polkadot: Non-DOT :polkadot }}{{ kusama: Non-KSM :kusama }} Assets
+### Existing {{ polkadot: Non-DOT :polkadot }}{{ kusama: Non-KSM :kusama }} Assets
 
 Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
 [Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is
 probably not the reason for your tokens having existing references.
-
-### From the Accounts Page
-
-Navigate to the "Accounts" page by selecting the "Accounts" tab from the "Accounts" dropdown located
-on the top navigational menu of Polkadot-JS Apps.
-
-You will see a list of accounts you have loaded. Click the "Send" button in the row for the account
-you will like to send funds from.
-
-![transfer](../assets/transfer-3.png)
-
-Now you will see the same modal window as if using the "Transfer" tab. Fill in the inputs correctly
-and hit "Make Transfer" then confirm the balance transfer. You will see a green notification in the
-top-right corner of the screen when the transfer is included in a block.
-
-[polkadot-js apps]: https://polkadot.js.org/apps
-[existential deposit]: ../build/build-protocol-info.md#existential-deposit
