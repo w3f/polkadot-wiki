@@ -32,13 +32,13 @@ transferred.
 
 :::
 
-If you directly import your Parity Signer account to Polkadot-JS Apps, you will see a pop-up window with a QR code and a camera window, as shown below.
+If you directly import your Parity Signer account to Polkadot-JS UI, you will see a pop-up window with a QR code and a camera window, as shown below.
 Open the QR scanner on Parity Signer and scan the QR code. You may be prompted to enter your PIN to sign the transaction.
 The signed extrinsic will then be available as a QR code that needs to be shown in front of your computer's camera (as shown in the red square window shown to the right in the screenshot below).
 
 ![Companion transfer](../assets/accounts/signer-transaction.png)
 
-If your account was setup on [Parity Signer Companion](https://parity.link/signer-companion) instead of Polkadot-JS Apps, you will see a pop-up window with a QR code, as shown below for this transaction.
+If your account was setup on [Parity Signer Companion](https://parity.link/signer-companion) instead of Polkadot-JS UI, you will see a pop-up window with a QR code, as shown below for this transaction.
 
 ![Companion transfer](../assets/accounts/companion-transfer.png)
 
@@ -48,27 +48,20 @@ Scan the QR code using Parity Signer. You will see a QR code consisting of the s
 
 ## Keep-Alive Checks
 
-At an [extrinsic](../general/glossary.md#extrinsic) level, there are two main ways to transfer funds
-from one account to another. These are `transfer` and `transfer_keep_alive`. `transfer` will allow you
-to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence;
-`transfer_keep_alive` will not allow you to send an amount
-that would allow the sending account to be removed due to it going below the existential deposit.
+In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are two main ways to transfer funds from one account to another:
 
-By default, Polkadot-JS Apps will use `transfer_keep_alive`, ensuring that the account you send from
-cannot drop below the existential deposit of
+- `transfer keep-alive` (default option) will not allow you to send an amount
+that would allow the sending account to be removed due to it going below the [existential deposit](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) of
 {{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.001666 KSM :kusama }}.
+- `transfer` will allow you to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence. If the balance drops below the existential deposit your account will be reaped. It may be that you do not want to keep the account alive (for example, because you are moving all of your funds to a different address). To switch the keep-alive check off visit [this support article](https://support.polkadot.network/support/solutions/articles/65000169248).
 
-However, it may be that you do not want to keep this account alive (for example, because you are moving
-all of your funds to a different address). In this case, click on the "keep-alive" toggle at the bottom
-of the modal window. The label should switch from "Transfer with account keep-alive
-checks" - `transfer_keep_alive` will be used, to "Normal transfer without keep-alive checks" -
-`transfer` extrinsic will be used. As a common use case for using normal transfers is to entirely clear
-out the account, a second toggle will appear if you have the keep-alive check turned off that will send all
-the tokens in the account, minus a transaction fee, to the destination address.
+:::info
 
 Attempting to send less than the existential deposit to an account with
 {{ polkadot: 0 DOT :polkadot }}{{ kusama: 0 KSM :kusama }} will always fail, no matter if the keep-alive
 check is on or not.
+
+:::
 
 {{ polkadot: For instance, attempting to transfer 0.1 DOT to an account you just generated
 (and thus has no DOT) will fail, since 0.1 is less than the existential deposit of 1 DOT and the account
@@ -85,9 +78,9 @@ from the sending account if you attempt to transfer.
 
 ## Existing Reference Error
 
-If you are trying to reap an account and you receive an error similar to "There is an existing
-reference count on the sender account. As such the account cannot be reaped from the state", then
-you have existing references to this account that must first be removed before it can be reaped.
+If you are trying to reap an account and you receive an error similar to `"There is an existing
+reference count on the sender account. As such the account cannot be reaped from the state"`, then
+you have existing references to this account that must be first removed before it can be reaped.
 References may still exist from:
 
 - Bonded tokens (most likely)
@@ -111,15 +104,11 @@ checked by checking `session.nextKeys` in the chain state for an existing key.
 
 ### Checking for Locks
 
-You can check for locks by querying `system.account(AccountId)` under `Developer > Chain state`.
-Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
+Check out [this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-) to learn how to check for locks.
+
+You can also check for locks by querying `system.account(AccountId)` in [`Chain state` tab under the `Developer` drop-down menu in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate). Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
 JSON object. If you see a non-zero value for anything other than `free`, you have locks on your
 account that need to get resolved.
-
-You can also check for locks by navigating to `Accounts > Accounts` in
-[PolkadotJS Apps](https://polkadot.js.org/apps/#/). Then, click the dropdown arrow of the relevant
-account under the 'balances' column. If it shows that some tokens are in a 'locked' state, you can
-see why by hovering over the information icon next to it.
 
 ### Existing Recovery Info
 
