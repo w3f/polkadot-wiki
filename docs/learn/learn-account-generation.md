@@ -46,7 +46,7 @@ in order to keep your funds safe.
 
 ## Polkadot JS Browser Extension
 
-The Polkadot JS Extension provides a reasonable balance of security and usability. It provides a
+The Polkadot-JS Browser Extension (simply referred to as Polkadot Extension) provides a reasonable balance of security and usability. It provides a
 separate local mechanism to generate your address and interact with Polkadot.
 
 This method involves installing the Polkadot JS extension and using it as a “virtual vault," separate
