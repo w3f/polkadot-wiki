@@ -112,12 +112,19 @@ For instance, `//bill//account//1` and `//john/polkadot/initial` are both valid.
 derived account, you must know both the seed and the derivation path, so you should either use a
 well-defined sequence (e.g. //0, //1, //2...) or be sure to write down any derivation paths you use.
 
-
 :::info 
 
 It is not possible to generate a derived account without also knowing the derivation path.
 
 :::
+
+There is an additional type of derivation called password derivation. On Polkadot you can derive a **password key** account using **///** after the mnemonic phrase
+
+```
+'caution juice atom organ advance problem want pledge someone senior holiday very///0'
+```
+
+In this type of derivation, if the seed would leak, accounts cannot be derived without the initial password. Unlike hard and soft derivations that can be mixed, here only a single password should be specified per derivation.
 
 ### Soft vs. Hard Derivation
 
