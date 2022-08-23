@@ -87,7 +87,7 @@ If you already connected your device but an error message appears before signing
 
 ### Confirming the Address on your Device
 
-To display your Polkadot ledger account address on your Ledger nano you can follow the guidelines on [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device). Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS
+To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device). Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS UI
 Apps.
 
 ### Checking the Balance of Your Account
