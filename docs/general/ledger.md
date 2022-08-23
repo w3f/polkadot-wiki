@@ -77,7 +77,7 @@ to confirm the USB connection through a popup like the one below:
 
 ![Display the device connection popup](../assets/ledger/query-device.png)
 
-If you are adding your Ledger nano for the first time click on the "Unknown device" line and the "Connect" button will become available. 
+If you are adding your Ledger Nano for the first time, click on the "Unknown device" line and the "Connect" button will become available. 
 
 :::info Signature error message
 
