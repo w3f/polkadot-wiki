@@ -57,18 +57,13 @@ Ledger Live will only show the main account with BIP44 path 44'/354'/0'/0'/0'. T
 
 ## Using on Polkadot-JS Apps
 
-Please consider watching video tutorial below on how to connect your Ledger
-device with Polkadot-JS UI, by importing your accounts to Polkadot-JS Extension.
+### Loading Your Account
 
 :::info Ledger Live should be off while using Ledger with Polkadot-JS Apps as it can interfere with normal operation.
 
 :::
 
-[![Connect Ledger to Polkadot JS UI](https://img.youtube.com/vi/7VlTncHCGPc/0.jpg)](https://youtu.be/7VlTncHCGPc)
-
-### Loading Your Account
-
-You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the Polkadot JS UI. For instructions
+You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the [Polkadot JS UI](https://polkadot.js.org/apps/#/explorer). For instructions
 on how to import Ledger accounts to the Polkadot JS extension read through [this support article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension), while if you want to import Ledger accounts to the Polkadot JS UI you can consult [this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
 
 #### Derivation paths
