@@ -13,7 +13,7 @@ address. The public and private parts together make up a Polkadot account. You c
 
 There are several ways to generate a Polkadot account:
 
-- [Polkadot{.js} Browser Extension](#polkadot-js-apps) **RECOMMENDED FOR MOST USERS**
+- [Polkadot-JS Browser Extension](#polkadot-js-browser-extension) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
 - [Polkadot-JS Apps](#polkadot-js-apps)
 - [Parity Signer](#parity-signer)
