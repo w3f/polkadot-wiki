@@ -20,7 +20,7 @@ transferred.
 
 :::
 
-- [Using the transfer tab or the send button on your account in Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui)
+- [Using the transfer tab or the send button on your account in the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui)
     - [Signing with the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993)
     - [Signing with the browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
     - [Signing with ledger](https://support.polkadot.network/support/solutions/articles/65000181994)
