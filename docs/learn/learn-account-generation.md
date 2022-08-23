@@ -56,7 +56,7 @@ similar functionality.
 It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
 
-:::info For the tutorial on how to create an account using Polkadot JS browser extension, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account). 
+:::info For the tutorial on how to create an account using Polkadot Extension, visit [this support article](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account). 
 
 :::
 
