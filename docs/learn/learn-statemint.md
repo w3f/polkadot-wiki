@@ -20,6 +20,8 @@ Apart from the core protocol token DOT, the assets held on Statemint can be broa
 - Assets with off-chain backing
 - Assets without any backing
 
+For additional background on Statemint and Statemine checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
+
 ## Creating Assets on Statemint
 
 :::info
@@ -67,48 +69,4 @@ Network > Assets page on Statemint.
 
 ## Transferring Assets on Statemint
 
-:::caution Beware of scams
-
-Due to the permissionless nature of Statemint, anyone can create an asset with any name and symbol.
-The most important attribute of an asset is the asset ID. There could be multiple assets with the
-same name and symbol, but they cannot have the same asset ID.
-
-:::
-
-:::info
-
-The assets can be Sufficient or Non-Sufficient. To hold a Non-Sufficient asset, the Statemint
-account needs to exist on-chain. This is different from Ethereum where a non-existent account can
-hold ERC-20 tokens. Ensure that the receiver account has at least 0.1 DOT which is the Existential
-Deposit for a Statemint account. Although, there are a few exceptions to this - If an asset is
-Sufficient or someone has placed a deposit for that account to hold the asset, the Existential
-Deposit in DOT on the receiver account is not needed.
-
-:::
-
-To hold, send or receive most of the assets on Statemint (which are Non-Suffcient), the accounts
-need to have a minimum balance of 0.1 DOT (The Existential Deposit on Statemint). You can send DOT
-from a Polkadot account to a Statemint account using the teleport functionality. For instructions on
-teleporting DOT, check this [tutorial on Teleports](learn-teleport.md). The balance transfers of DOT
-on Statemint are similar to the balance transfers DOT on Polkadot and can be done on the accounts
-page on Polkadot-JS Apps UI.
-
-In this tutorial, transfer of JOEs (Asset ID: 8, Symbol: JOE) is demonstrated.
-
-- Access Statemint through Polkdot-JS Apps UI.
-- Navigate to Network > Assets and click on the Balances tab
-- Select the asset to transfer from the drop-down (The assets are sorted based on their IDs). If you
-  have accounts with the selected asset, they will be displayed.
-
-![Finding the asset](../assets/statemint/Statemint-asset-transfer-1.png)
-
-- Click on the send button
-- Enter the receiver address and the amount to transfer.
-
-![Asset transfer transaction](../assets/statemint/Statemint-asset-transfer-2.png)
-
-- Sign and submit the transaction
-
-![Sign asset creating transaction](../assets/statemint/Statemint-asset-transfer-3.png)
-
-If the transaction is successful, the assets are transferred to the receiver account.
+Checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine), for a step by step guide covering how to make a transfer on the Statemine and the risks associated.
