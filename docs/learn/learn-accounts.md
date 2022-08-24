@@ -124,7 +124,13 @@ There is an additional type of derivation called password derivation. On Polkado
 'caution juice atom organ advance problem want pledge someone senior holiday very///0'
 ```
 
-In this type of derivation, if the seed would leak, accounts cannot be derived without the initial password. Unlike hard and soft derivations that can be mixed, here only a single password should be specified per derivation.
+In this type of derivation, if the seed would leak, accounts cannot be derived without the initial password. In fact, if one knows the seed and the soft or hard derivation path, will have access to your account because the account password is only used to sign transactions on a specific device. For password-derived accounts, the password is applied on the derivation path meaning that you can know the seed phrase and the derivation path, but without the password it is not possible to access the account. In mathematical terms, if we have a `written derivation path` and a `password` we can calculate the `real derivation path` as `f(written derivation path, password)`; where `f` is a function. We can then calculate the `account key pair` using `f(seed, real derivation path)`. Note that unlike hard and soft derivations that can be mixed, only a single password should be specified per derivation.
+
+:::info
+
+Password-derived account are as secure as the chosen password.
+
+:::
 
 ### Soft vs. Hard Derivation
 
