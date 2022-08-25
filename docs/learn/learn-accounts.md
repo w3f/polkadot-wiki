@@ -126,7 +126,7 @@ There is an additional type of derivation called password derivation. On Polkado
 
 In this type of derivation, if the seed would leak, accounts cannot be derived without the initial
 password. In fact, if one knows the seed and the soft or hard derivation path, they will have access to
-your account because the account password is only used to sign transactions on a specific device.
+your account.
 For password-derived accounts, the password is applied on the derivation path meaning that you can
 know the seed phrase and the derivation path, but without the password it is not possible to access
 the account. In mathematical terms, if we have a `written derivation path` and a `password` we can
