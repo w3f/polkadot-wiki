@@ -145,74 +145,8 @@ multisig would be created.
 
 ### Using the Polkadot-JS UI
 
-To set up a proxy, navigate to the [Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and
-click on "Developer" > "Extrinsics". Here we will see a page that looks similar to this:
-
-![proxy generation](../assets/polkadot_generating_proxy.png)
-
-To add a proxy, click on the pallet selection dropdown menu. The dropdown is labeled "submit the
-following extrinsic". Select the `proxy` pallet, then the `addProxy` extrinsic (in the dropdown menu
-next to it). The `addProxy(delegate, proxyType, delay)` function will need to be selected in order to add in
-a proxy. The chosen proxy account that you set will be the account that has the proxy on it. The
-selected account at the top is the account that will be the primary account. When creating a proxy, 
-you are also provided a `delay` field which is by default populated with zero. Leave it as is, if you plan 
-on creating a normal proxy account.
-
-:::tip Time Delayed Proxies
-
-For instance, if you create a proxy with a `delay` value of 100, which means 100 blocks (  
-100 \* 6(seconds) = 600 seconds, or 10 minutes), the proxy calls made by this account will take
-about 10 minutes to get executed. This is done through `announce` extrinsic and then submitting
-`proxyAnnounced` extrinsic after the block delay. Within the block delay time frame, the real account 
-has a chance to reject the announcement from the proxy account. Again, if your intention is to create
-a normal proxy account, use the default value of zero in the `delay` field.
-
-:::
-
-:::caution `unused` option
-
-If you see an `unused` option when adding in a proxy, this is not a proxy type. This is an
-empty `enum`, and if you try to add this in as a proxy, nothing will happen. No new proxy will be
-created.
-
-:::
-
-**It is critical to setup Anonymous Proxies with appropriate permissions and be aware of potential dangers**
-
-### Creating Anonymous Proxies on Polkadot-JS UI
-
-:::caution
-
-The first anonymous proxy you add should always be of *type* `Any`.
-Also, if there are multiple anonymous proxies for the proxied account, you should keep at 
-least  *one* `Any` type. Without having an `Any` type proxy, you won't be able to send funds, 
-add new proxies, kill the anonymous proxy or take any action not specifically allowed by the types 
-of the proxies the account has.
-
-:::
-
-For anonymous proxies, a different function will need to be called, the
-`anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would
-like to set up if you choose, as well as the index.
-
-![proxy generation](../assets/polkadot_anon_proxy.png)
-
-
-### Another way to create Proxies
-
-There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" in the navigation
-and then click the "Accounts" button. For each of the accounts you have on this page, the three dot
-button will let you create a proxy by using "Add proxy". This will open up a pop up onto your screen
-where you will be able to select the type of proxy for that specific account.
-
-![proxy generation part 2](../assets/polkadot_add_another_proxy.png)
-
-:::info
-
-You cannot create an anonymous function from the Accounts page, you must be on the
-Extrinsics page.
-
-:::
+- [Creating a Proxy](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account)
+- [Creating an Anonymous Proxy](https://support.polkadot.network/support/solutions/articles/65000182196)
 
 ### Removing Proxies
 
