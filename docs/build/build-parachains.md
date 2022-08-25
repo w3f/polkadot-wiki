@@ -365,7 +365,7 @@ Once the executable is built, launch collators for your parachain:
 ```
 
 If you are interested in running and launching your own parathread or parachain, Parity Technologies
-has created [parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/) to show you how.
+has created [parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/) to show you how.
 Get stuck or need support along the way? Join the
 [Parachain Technical matrix chat channel](https://matrix.to/#/#parachain-technical:matrix.parity.io)
 and connect with other builders there.
@@ -443,7 +443,7 @@ selecting any parachain of choice.
 
 For the purpose of these following examples, we will be using the
 Rococo testnet "Custom Node" underneath "Development", following the
-[parachain tutorials](https://docs.substrate.io/tutorials/connect-other-chains/relay-chain/).
+[parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/).
 
 ### Parachain Playground
 
