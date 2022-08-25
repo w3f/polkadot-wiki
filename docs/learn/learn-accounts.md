@@ -129,7 +129,7 @@ password. In fact, if one knows the seed and the soft or hard derivation path, t
 your account.
 For password-derived accounts, the password is applied on the derivation path meaning that you can
 know the seed phrase and the derivation path, but without the password it is not possible to access
-the account. In mathematical terms, if we have a `written derivation path` and a `password` we can
+the account. In mathematical terms, if we have a `written derivation path` and a `password`, we can
 calculate the `real derivation path` as `f(written derivation path, password)`; where `f` is a
 function. We can then calculate the `account key pair` using `f(seed, real derivation path)`. Note
 that unlike hard and soft derivations that can be mixed, only a single password should be specified
