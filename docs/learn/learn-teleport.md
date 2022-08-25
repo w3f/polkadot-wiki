@@ -35,7 +35,7 @@ destination, where it gets processed and new assets are **put back into** the ci
 ### Deposit Asset
 
 The destination deposits the assets to the receiving account. The actions of **taking out** from the circulating supply and **putting back** into the circulating supply show the great flexibility that an [XCM][] executor has in regulating the flow of an asset without changing its circulating supply. Assets are transferred to an inaccessible account in order to take them out from circulation. Likewise, for putting assets back into circulation, assets are released from a pre-filled and inaccessible 
-treasury, or perform a mint of the assets. This process requires mutual trust between the source and destination. The destination must trust the source of having appropriately removed the sent assets from the circulating supply, and the source must trust the destination of having put the received assets back into circulation. The result of an asset teleportation should result in the same circulating supply of the asset. Failing to uphold either of these two conditions will result in a change in the asset's 
+treasury, or perform a mint of the assets. This process requires mutual trust between the source and destination. The destination must trust the source of having appropriately removed the sent assets from the circulating supply, and the source must trust the destination of having put the received assets back into circulation. The result of an asset teleportation should result in the same circulating supply of the asset, and failing to uphold this condition will result in a change in the asset's 
 total issuance (in the case of fungible tokens) or a complete loss/duplication of an NFT.
 
 
