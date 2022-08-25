@@ -20,7 +20,7 @@ Apart from the core protocol token DOT, the assets held on Statemint can be broa
 - Assets with off-chain backing
 - Assets without any backing
 
-For additional background on Statemint and Statemine checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
+For additional background on Statemint and Statemine check out [this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
 
 ## Creating Assets on Statemint
 
@@ -42,7 +42,7 @@ instructions on teleporting DOT, check this [tutorial on Teleports](../learn/lea
 Assuming you have the required DOT balance on your Statemint account, the following instructions
 should let you successfully create an asset on Statemint
 
-- Access Statemint through Polkdot-JS Apps UI.
+- Access Statemint through [Polkadot-JS UI][].
 - Navigate to Network > Assets.
 
 ![Navigate to Assets page](../assets/statemint/Statemint-asset-0.png)
@@ -59,8 +59,8 @@ should let you successfully create an asset on Statemint
 
 ![Asset managing accounts](../assets/statemint/Statemint-asset-2.png)
 
-- Sign and submit the transaction. (If you like to verify the transaction details before signing,
-  you can click on the dropdown button pointed by the arrow in the snapshot below)
+- Sign and submit the transaction (If you like to verify the transaction details before signing,
+  you can click on the dropdown button pointed by the arrow in the snapshot below).
 
 ![Sign asset creating transaction](../assets/statemint/Statemint-asset-3.png)
 
@@ -70,3 +70,5 @@ Network > Assets page on Statemint.
 ## Transferring Assets on Statemint
 
 Checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine), for a step by step guide covering how to make a transfer on the Statemine and the risks associated.
+
+[polkadot-js ui]: https://polkadot.js.org/apps/#/explorer
