@@ -1,7 +1,7 @@
 ---
 id: learn-auction
-title: Parachain Slots Auction
-sidebar_label: Parachain Slots Auction
+title: Parachain Slot Auctions
+sidebar_label: Parachain Slot Auctions
 description: Learn about slot auctions.
 keywords: [auction, slot auctions, parachain, bidding]
 slug: ../learn-auction
