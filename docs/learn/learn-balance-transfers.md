@@ -134,9 +134,9 @@ account that need to get resolved.
 
 ### Existing Recovery Info
 
-Currently, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} does not use the
+{{ polkadot: Currently, Polkadot does not use the
 [Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
-probably not the reason for your tokens having existing references.
+probably not the reason for your tokens having existing references. :polkadot }}
 
 {{ kusama: On Kusama, you can check if recovery has been set up by checking the `recovery.recoverable(AccountId)`
 chain state. This can be found under `Developer > Chain state` in [PolkadotJS Apps][polkadot-js apps]. :kusama }}
