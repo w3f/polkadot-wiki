@@ -152,13 +152,11 @@ To create a **proxy account** read [this support article](https://support.polkad
 
 ## Removing Proxies
 
-Under the [accounts tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) there is blue button next to the account that has proxies.
-Hovering on the blue button lets you click on a link that says "proxy overview", which displays a pop-up 
-window like the one shown below. In this pop-up window, you have an option to clear individual proxy accounts
-or all of them. Under the hood, the UI is calling the extrinsics `removeProxy` for individual accounts and
- `removeProxies` for clearing all of the proxy accounts.
+:::info Removing proxies
 
-![Remove Proxies](../assets/remove_proxies.png)
+The remove proxies read the section "Removing Proxies" on [this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
+
+:::
 
 :::caution Removing anonymous proxies
 
