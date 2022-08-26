@@ -19,11 +19,11 @@ Check out our Polkadot YouTube video that explains what proxy accounts are:
 
 ## Anonymous Proxies
 
-Polkadot includes a function to create an **Anonymous proxy**. Such type of proxy is the only way of accessing a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
+Polkadot includes a function to create an **Anonymous proxy**. Such type of proxy is used to access a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
 the proxy relationship is the proxy account and the new account is the primary. 
 
-:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the primary account will be inaccessible.
+:::danger Use extreme care with anonymous proxies. Once you remove the proxy relationship, the proxy account will be inaccessible.
 
 :::
 
