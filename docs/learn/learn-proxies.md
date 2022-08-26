@@ -17,76 +17,7 @@ Check out our Polkadot YouTube video that explains what proxy accounts are:
 
 [![Proxy Accounts](https://img.youtube.com/vi/1tcygkq52tU/0.jpg)](https://www.youtube.com/watch?v=1tcygkq52tU)
 
-## Proxy Types
-
-You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of
-proxy for the relationship. Polkadot offers:
-
-- Any
-- Non-transfer
-- Governance
-- Staking
-- Identity Judgement
-- Auction
-
-When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure
-that the proxy account has the appropriate permission to make that transaction on behalf of the cold
-account.
-
-### Any Proxies
-
-As implied by the name, a proxy type of **Any** allows the proxy account to make any transaction,
-including balance transfers. In most cases, this should be avoided as the proxy account is used more
-frequently than the cold account and is therefore less secure.
-
-### Non-transfer Proxies
-
-Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
-[balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting) transfers).
-
-### Governance Proxies
-
-The **Governance** type will allow proxies to make transactions related to governance (i.e., from the
-Democracy, Council, Treasury, Technical Committee, and Elections pallets).
-
-:::note Explainers on governance proxies
-
-See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information on
-governance proxies or watch our
-[technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
-
-:::
-
-### Staking Proxies
-
-The **Staking** type allows staking-related transactions, but do not confuse a staking proxy with the
-controller account. Within the staking pallet, some transactions must come from the stash account, while
-others must come from the controller account. The stash account is meant to stay in cold storage, while the
-controller account makes day-to-day transactions like setting session keys or deciding which
-validators to nominate. The stash account still needs to make some transactions such as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_ of stash and
-controller accounts, but does allow the stash to be accessed even less frequently than using a controller account.
-
-### Identity Judgement Proxies
-
-The **Identity Judgement** proxies are in charge of allowing registrars to make judgement on an account's
-identity. If you are unfamiliar with judgements and identities on chain, please refer to
-[this page](learn-identity.md#judgements).
-
-### Cancel Proxies
-
-Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy 
-announcements.
-
-### Auction Proxies
-
-Proxies that are of the type **Auction** are accounts that allow transactions pertaining to parachain 
-auctions and crowdloans. The Auction proxy account can sign those transactions on behalf of an account 
-in cold storage. If you already setup a Non-transfer proxy account, it can do everything an Auction 
-proxy can do. Before participating in a crowdloan using an Auction proxy, it is recommended that you 
-check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
-distribution.
-
-### Anonymous Proxies
+## Anonymous Proxies
 
 Polkadot includes a function to create an **Anonymous proxy**. Such type of proxy is the only way of accessing a designated primary account. That is, it generates an address but no corresponding private key. Normally, a primary
 account designates a proxy account, but anonymous proxies are the opposite. The account that creates
@@ -105,7 +36,7 @@ Learn more about anonymous proxies from our
 
 :::
 
-### Time-delayed Proxies
+## Time-delayed Proxies
 
 We can add an additional layer of security to proxies by giving them a delay time. The delay will be
 quantified in number of blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has 6 
@@ -141,6 +72,75 @@ care of that change. If a multisig wanted to modify itself without an anonymous 
 multisig would be created.
 
 ![anonymous multisig proxy](../assets/multisig_proxy_diagram.png)
+
+## Proxy Types
+
+You can set a proxy account via the Proxy module. When you set a proxy, you must choose a type of
+proxy for the relationship. Polkadot offers:
+
+- Any
+- Non-transfer
+- Governance
+- Staking
+- Identity Judgement
+- Auction
+
+When a proxy account makes a `proxy` transaction, Polkadot filters the desired transaction to ensure
+that the proxy account has the appropriate permission to make that transaction on behalf of the cold
+account.
+
+### Any
+
+As implied by the name, a proxy type of **Any** allows the proxy account to make any transaction,
+including balance transfers. In most cases, this should be avoided as the proxy account is used more
+frequently than the cold account and is therefore less secure.
+
+### Non-transfer
+
+Proxies that are of the type **Non-transfer** are accounts that allow any type of transaction except
+[balance transfers](learn-balance-transfers.md) (including [vested](learn-DOT.md/#vesting) transfers).
+
+### Governance
+
+The **Governance** type will allow proxies to make transactions related to governance (i.e., from the
+Democracy, Council, Treasury, Technical Committee, and Elections pallets).
+
+:::note Explainers on governance proxies
+
+See [Governance](../maintain/maintain-guides-democracy.md#governance-proxies) for more information on
+governance proxies or watch our
+[technical explainer video that explores this concept](https://www.youtube.com/watch?v=q5qLFhG4SDw&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=27&ab_channel=Polkadot).
+
+:::
+
+### Staking
+
+The **Staking** type allows staking-related transactions, but do not confuse a staking proxy with the
+controller account. Within the staking pallet, some transactions must come from the stash account, while
+others must come from the controller account. The stash account is meant to stay in cold storage, while the
+controller account makes day-to-day transactions like setting session keys or deciding which
+validators to nominate. The stash account still needs to make some transactions such as bonding extra funds or designating a new controller account. A proxy doesn't change the _roles_ of stash and
+controller accounts, but does allow the stash to be accessed even less frequently than using a controller account.
+
+### Identity Judgement
+
+The **Identity Judgement** proxies are in charge of allowing registrars to make judgement on an account's
+identity. If you are unfamiliar with judgements and identities on chain, please refer to
+[this page](learn-identity.md#judgements).
+
+### Cancel
+
+Proxies that are of the type **Cancel** allow accounts to reject and remove any time-delay proxy 
+announcements.
+
+### Auction
+
+Proxies that are of the type **Auction** are accounts that allow transactions pertaining to parachain 
+auctions and crowdloans. The Auction proxy account can sign those transactions on behalf of an account 
+in cold storage. If you already setup a Non-transfer proxy account, it can do everything an Auction 
+proxy can do. Before participating in a crowdloan using an Auction proxy, it is recommended that you 
+check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
+distribution.
 
 ## How to set up a Proxy
 
