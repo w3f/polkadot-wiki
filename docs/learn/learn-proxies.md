@@ -142,14 +142,15 @@ proxy can do. Before participating in a crowdloan using an Auction proxy, it is 
 check with the respective parachain team for any possible issues pertaining to the crowdloan rewards 
 distribution.
 
-## How to set up a Proxy
+## Creating Proxies
 
-### Using the Polkadot-JS UI
+:::info
 
-- [Creating a Proxy](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account)
-- [Creating an Anonymous Proxy](https://support.polkadot.network/support/solutions/articles/65000182196)
+To create a **proxy account** read [this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account), while to create an **anonymous proxy account** you check out [this other support article](https://support.polkadot.network/support/solutions/articles/65000182196).
 
-### Removing Proxies
+:::
+
+## Removing Proxies
 
 Under the [accounts tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) there is blue button next to the account that has proxies.
 Hovering on the blue button lets you click on a link that says "proxy overview", which displays a pop-up 
@@ -159,48 +160,11 @@ or all of them. Under the hood, the UI is calling the extrinsics `removeProxy` f
 
 ![Remove Proxies](../assets/remove_proxies.png)
 
-The procedure for removing an Anonymous Proxy is different and there are a few functions on the extrinsic page 
-that will help do this.
+:::caution Removing anonymous proxies
 
-:::warning There is no way to get access to the primary account after deleting the anonymous proxy
-
-`removeProxy` or `removeProxies` do not work for anonymous proxies. You must use the 
-`killAnonymous` function which must be called **from** the *anonymous* proxy. 
-This means that the anonymous proxy must be added as an account to the Polkadot-JS UI.
+The procedure for removing an Anonymous Proxy is different. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
 
 :::
-
-The following steps can be used to remove your anonymous proxy:
-
-- **Step 0**: You need to know the following information:
-
-  - the **account** you created the anonymous proxy from
-  - **type of proxy**, index (almost always 0)
-  - **block height** it was created at
-  - the **extrinsic index** in the block (on most block explorers, you will see the extrinsic ID listed as something along the lines of "9000-2" -> 9000 is the block height (block number) and 2 is the extrinsic index. You can find this information by looking up your account in a block explorer.
-
-  ![anon proxy info](../assets/kill-proxy-1.png)
-
-- **Step 1**: Go to https://polkadot.js.org/apps/#/accounts (make sure you are on correct network).
-- **Step 2**: Click `Proxied` and add your address, name it `ANON PROXY`. You should now see this address
-  in accounts. Now you need to call `killAnonymous` from the anonymous proxy. It is important to note that anonymous proxies *work backwards*; the original account acts as the proxy.
-
-  ![add proxy to delete](../assets/kill-proxy-2.png)
-
-- **Step 3**: Go to https://polkadot.js.org/apps/#/extrinsics
-- **Step 4**: Call extrinsic `proxy.killAnonymous` using the selected account ANON PROXY and the following parameters:
-
-  - Spawner: (original account)
-  - Proxy type (kind of proxy)
-  - Index 0 (almost always, but can be seen in creating extrinsic)
-  - Block number x
-  - Extrinsic index y
-
-  ![call extrinsic](../assets/kill-proxy-3.png)
-
-- **Step 5**: Submit and sign extrinsic
-
-  ![sign extrinsic](../assets/kill-proxy-3.png)
 
 ## How to view your Proxies
 
