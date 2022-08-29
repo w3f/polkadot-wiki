@@ -70,7 +70,7 @@ attestation:
 - Unknown: The default value, no judgement made yet.
 - Reasonable: The data appears reasonable, but no in-depth checks (e.g. formal KYC process) were
   performed (all the currently verified identities).
-- Known Good: The registrar has certified that the information is correct (this step involves passport checks, and at the moment no account has known good identity, with the exception of registrars).
+- Known Good: The registrar has certified that the information is correct (this step involves verification of state issued identity documents, and at the moment no account has known good identity, with the exception of registrars).
 - Out of Date: The information used to be good, but is now out of date.
 - Low Quality: The information is low quality or imprecise, but can be fixed with an update.
 - Erroneous: The information is erroneous and may indicate malicious intent.
