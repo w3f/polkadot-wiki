@@ -69,8 +69,8 @@ attestation:
 
 - Unknown: The default value, no judgement made yet.
 - Reasonable: The data appears reasonable, but no in-depth checks (e.g. formal KYC process) were
-  performed.
-- Known Good: The registrar has certified that the information is correct.
+  performed (all the currently verified identities on-chain).
+- Known Good: The registrar has certified that the information is correct (this step involves verification of state issued identity documents, and at the moment no account has known good identity, with the exception of registrars).
 - Out of Date: The information used to be good, but is now out of date.
 - Low Quality: The information is low quality or imprecise, but can be fixed with an update.
 - Erroneous: The information is erroneous and may indicate malicious intent.
@@ -83,17 +83,22 @@ Registrars gain trust by performing proper due diligence and would presumably be
 issuing faulty judgements.
 
 To be judged after submitting your identity information, go to the
-["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then
+[Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then
 `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and
 for the `max_fee` put the maximum you're willing to pay for these confirmations.
 
 If you don't know which registrar to pick, first check the available registrars by going to
-["Chain State UI"](#) and selecting `identity.registrars()` to get the full list.
+[Chain State tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate) and selecting `identity.registrars()` to get the full list.
 
 :::info Instructions for requesting and cancelling Identity judegements
 
 The procedure to request and cancel identity judgements is explained in detail in this
 [support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
+
+:::
+
+:::info Requesting judgement through Web3 Foundation Registrar
+If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks. For more information visit [this support article](https://support.polkadot.network/support/solutions/articles/65000179747-how-to-use-the-w3f-registrar-page).
 
 :::
 
@@ -201,14 +206,11 @@ Polkadot-JS UI
 ## Clearing and Killing an Identity
 
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
-an identity also clears all sub accounts and returns their deposits.
+an identity also clears all sub accounts and returns their deposits. 
 
-To clear an identity:
+:::info Visit the section "Clear an Identity" on [this support article](https://support.polkadot.network/support/solutions/articles/65000181981) for guidelines about clearing identities.
 
-1. Navigate to the [Accounts UI](https://polkadot.js.org/apps/#/accounts).
-2. Click the three dots corresponding to the account you want to clear and select 'Set on-chain
-   identity'.
-3. Select 'Clear Identity', and sign and submit the transaction.
+:::
 
 **Killing:** The Council can kill an identity that it deems erroneous. This results in a slash of
 the deposit.
