@@ -8,8 +8,9 @@ slug: ../learn-auction
 ---
 import RPC from "./../../components/RPC-Connection"
 
-For a [parachain](learn-parachains.md) to be added to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
-parachain slots. A parachain slot is a scarce resource on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as only a limited number are
+For a [parachain](learn-parachains.md) to be added to {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} 
+it must inhabit one of the available parachain slots. A parachain slot is a scarce resource 
+on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} as only a limited number are
 available. As parachains ramp up, there may only be a few slots unlocked every few months.
 The goal is to eventually have 100 parachain slots available on {{ polkadot: Polkadot :polkadot }}
 {{ kusama: Kusama :kusama }} (these will be split between parachains and the
@@ -17,7 +18,8 @@ The goal is to eventually have 100 parachain slots available on {{ polkadot: Pol
 every Relay Chain block, it must acquire a parachain slot.
 
 The parachain slots will be leased according to an unpermissioned
-[candle auction](https://en.wikipedia.org/wiki/Candle_auction), with several alterations related to improving security while operating on a blockchain. See [Rationale](#rationale) for additional details.
+[candle auction](https://en.wikipedia.org/wiki/Candle_auction), with several alterations related to 
+improving security while operating on a blockchain. See [Rationale](#rationale) for additional details.
 
 :::info Auction Schedule
 
@@ -33,8 +35,10 @@ on the auctions page of the {{ polkadot: [Polkadot website](https://polkadot.net
 Candle auctions are a variant of open auctions where bidders submit bids that are increasingly
 higher. The highest bidder at the conclusion of the auction is considered the winner.
 
-Candle auctions were originally employed in the 16th century for the sale of ships. The name is derived from the system by which the auction length was determined. The phrase "inch of a candle" refers to the length of time required for a candle to burn down 1 inch. When the flame
-extinguishes and the candle goes out, the auction terminates and the standing bid at
+Candle auctions were originally employed in the 16th century for the sale of ships. 
+The name is derived from the system by which the auction length was determined. 
+The phrase "inch of a candle" refers to the length of time required for a candle to burn down 1 inch. 
+When the flame extinguishes and the candle goes out, the auction terminates and the standing bid at
 that point in time prevails the winner.
 
 When candle auctions are used online, they require a random number to decide the moment of
@@ -44,15 +48,18 @@ randomly chosen retroactively.
 
 The candle auction on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is split into two parts: 
 
-1. The *opening period* which is in effect immediately after the auction starts. This period lasts for one day and eighteen hours and serves as a buffer time for parachain candidates to setup their initial bids, and likely start executing their
-strategy on how to win the slot auction. During the opening phase, bids will continue to be accepted, but they do not have any effect on the outcome of the auction.
+1. The *opening period* which is in effect immediately after the auction starts. This period lasts for one day
+ and eighteen hours and serves as a buffer time for parachain candidates to setup their initial bids, and likely 
+ start executing their strategy on how to win the slot auction. During the opening phase, bids will continue to 
+ be accepted, but they do not have any effect on the outcome of the auction.
 
-2. The _ending period_ follows the opening period for five additional days, where the auction is subject to end based on the candle auction mechanism.
+2. The _ending period_ follows the opening period for five additional days, where the auction is subject to end 
+ based on the candle auction mechanism.
 
 The auction’s ending time can occur any time within the ending period.
-This time is automatically and randomly chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The probability
-of winning the auction is equal to the number of blocks that contain a winning bid, divided by the total
-number of blocks in the ending period. The random ending is managed by propagating through the
+This time is automatically and randomly chosen by the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). 
+The probability of winning the auction is equal to the number of blocks that contain a winning bid, divided by the
+total number of blocks in the ending period. The random ending is managed by propagating through the
 entire ending period, where a snapshot is taken at each block within the ending period to capture
 the winners for that given block. At the end of the period, one of the snapshots is randomly selected
 to determine the winner of the auction.
@@ -140,20 +147,23 @@ an opportunity to snipe any auction at the last concluding block by adding it th
 ignoring other bids. There is also the possibility of a malicious bidder or a block producer trying
 to _grief_ honest bidders by sniping auctions.
 
-For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a type of sealed-bid auction where bids are hidden and only revealed at a later phase, have emerged as a
+For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), 
+a type of sealed-bid auction where bids are hidden and only revealed at a later phase, have emerged as a
 well-regarded mechanic. For example, this mechanism is leveraged to auction human readable
 names on the [ENS](../general/ens.md). The Candle auction is another solution that does not require a
 two-step commit and reveal schemes (a main component of Vickrey auctions), which
 allows smart contracts to participate.
 
-Candle auctions allow everyone to always know the states of the bid, but they do not reveal when the auction has officially ended. This helps to ensure that bidders are willing to make their true bids
+Candle auctions allow everyone to always know the states of the bid, but they do not reveal when the 
+auction has officially ended. This helps to ensure that bidders are willing to make their true bids
 early. Otherwise, they may find themselves in a situation where the auction was determined to
 have ended before having an opportunity to bid.
 
 ## Network Implementation
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use a *random beacon* based on the [Verifiable Random Function (VRF)](learn-randomness.md##vrf).
-The VRF will provide the base of the randomness, which will retroactively determine the end-time of the auction.
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use a *random beacon* based on 
+the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The VRF will provide the base of 
+the randomness, which will retroactively determine the end-time of the auction.
 
 The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }}
 {{ kusama: 1 year and divided into 6-week periods :kusama }}; Parachains may lease a slot for any
@@ -163,7 +173,8 @@ contiguous slot.
 
 :::note Individual parachain slots are fungible. 
 
-This means that parachains do not need to always inhabit the same slot, however they always must maintain a slot to remain a parachain.
+This means that parachains do not need to always inhabit the same slot, however they always must maintain
+a slot to remain a parachain.
 
 :::
 
@@ -315,7 +326,8 @@ it wins a new slot.
 
 ### Why doesn't everyone bid for the max length?
 
-For the duration of the slot, the tokens used for bidding in the auction are locked up. This suggests there is an opportunity cost associated with bidding, as the tokens could have been leveraged for something else.
+For the duration of the slot, the tokens used for bidding in the auction are locked up. This suggests there 
+is an opportunity cost associated with bidding, as the tokens could have been leveraged for something else.
 
 ### How does this mechanism help ensure parachain diversity?
 
