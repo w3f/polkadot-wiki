@@ -98,7 +98,7 @@ The procedure to request and cancel identity judgements is explained in detail i
 :::
 
 :::info Requesting judgement through Web3 Foundation Registrar
-If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional challenges. For more information visit [this support article](https://support.polkadot.network/support/solutions/articles/65000179747-how-to-use-the-w3f-registrar-page).
+If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks. For more information visit [this support article](https://support.polkadot.network/support/solutions/articles/65000179747-how-to-use-the-w3f-registrar-page).
 
 :::
 
