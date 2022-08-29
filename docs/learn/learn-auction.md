@@ -64,9 +64,8 @@ entire ending period, where a snapshot is taken at each block within the ending 
 the winners for that given block. At the end of the period, one of the snapshots is randomly selected
 to determine the winner of the auction.
 
-This process executes in the next epoch after the ending
-period. **The parachain candidate with the highest bid at the ending time chosen by the VRF wins the
-slot auction**.
+This process executes in the next epoch after the ending period. **The parachain candidate with the highest
+bid at the ending time chosen by the VRF wins the slot auction**.
 
 :::info
 
@@ -78,7 +77,8 @@ during these six hours when the winning block for the auction is being determine
 With 1 day and 18 hours for the starting period,
 {{ polkadot: <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> :kusama }}
 days for the ending period (candle auction phase) and 6 hours for determining the auction winner,
-a parachain auction on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lasts exactly one week from the start.
+a parachain auction on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lasts 
+exactly one week from the start.
 
 More details on this are available in the [Network Implementation](#network-implementation) section.
 
@@ -244,11 +244,13 @@ amount of tokens held over the entire lease duration of the parachain slot. This
 highest bidder for any given slot lease period might not always win (see the
 [example below](#examples)).
 
-A random number, which is based on the [VRF](learn-randomness.md##vrf) used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, is determined at each block.
+A random number, which is based on the [VRF](learn-randomness.md##vrf) used 
+by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, is determined at each block.
 Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random
 number produced by the VRF is examined next to the threshold to determine if that block is the end
 of the auction within the so-called *ending period*. Additionally, the VRF will pick a block from
-the last epoch to access the state of bids which can help aid in mitigating some types of attacks from malicious validators.
+the last epoch to access the state of bids which can help aid in mitigating some types of attacks 
+from malicious validators.
 
 ### Examples
 
