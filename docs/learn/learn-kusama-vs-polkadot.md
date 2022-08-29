@@ -18,11 +18,14 @@ Cousins have their differences after all.
 
 ## Comparing the two networks
 
-To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
+To get a better understanding of the key similarities and difference between Polkadot and Kusama,
+checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
 
 ## Cost and Speed
 
-Teams wishing to run a parachain are required to bond tokens as security. It is likely the bonding requirement on Kusama will be lower than on Polkadot, making it the more affordable development environment.
+Teams wishing to run a parachain are required to bond tokens as security. 
+It is likely the bonding requirement on Kusama will be lower than on Polkadot, 
+making it the more affordable development environment.
 
 Another key technical difference between Polkadot and Kusama is that Kusama has modified
 governance parameters that allow for faster upgrades. Kusama is up to four times faster than
