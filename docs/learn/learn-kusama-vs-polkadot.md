@@ -6,73 +6,53 @@ description: Comparing the cousins.
 keywords: [polkadot, kusama, polkadot vs kusama, canary]
 slug: ../learn-kusama-vs-polkadot
 ---
+import RPC from "./../../components/RPC-Connection"
 
-Although they share many parts of their code, Polkadot and Kusama are independent, standalone
-networks with different priorities.
+Although they are like cousins and share many parts of their code, Polkadot and Kusama are independent, standalone
+networks with different priorities. Kusama is wild and fast, and great for bold experimentation and early-stage deployment. Polkadot is more conservative, prioritizing stability and dependability. Cousins have their differences after all.
 
-Kusama is wild and fast; great for bold experimentation and early-stage deployment. Polkadot is more
-conservative, prioritizing stability and dependability.
+:::info
 
-Cousins have their differences after all.
+To get a better understanding of the key similarities and difference between Polkadot and Kusama,
+checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
 
-## What the two networks have in common
+:::
 
-Kusama was released as an early version of the same code to be used in Polkadot, which means they
-share the same underlying architecture: a multichain, heterogeneously-sharded design based on
-[Nominated Proof of Stake (NPoS)](learn-consensus.md). Both networks also share key innovations like
-on-chain [governance](learn-governance.md), hot-swappable runtimes for forkless, on-chain upgrades,
-and [Cross-Consensus Message Passing (XCM)](learn-cross-consensus.md) for interoperability. Governance on
-both Polkadot and Kusama is designed to be decentralized and permissionless, giving a say in how the
-network is run to everyone who owns the native token (DOT for Polkadot, KSM for Kusama). Therefore,
-**over time the networks will evolve independently, converging or diverging according to the
-decisions of their respective communities.**
+## Cost and Speed
 
-## Key differences
+Teams wishing to run a parachain are required to bond tokens as security. 
+The bonding requirement on Kusama is lower than on Polkadot, 
+making it the more affordable development environment.
 
-There are a few important distinctions to be made.
-
-![polkadot_vs_kusama](../assets/Cousins_2.png)
-
-Both networks also have different circulating supplies.
-
-### Speed
-
-The first key technical difference between Polkadot and Kusama is that Kusama has modified
+Another key technical difference between Polkadot and Kusama is that Kusama has modified
 governance parameters that allow for faster upgrades. Kusama is up to four times faster than
-Polkadot, with seven days for token holders to vote on referendums followed by an enactment period
-of eight days, after which the referendum will be enacted on the chain. This means stakeholders need
-to stay active and vigilant if they want to keep up with all the proposals, referenda, and upgrades,
-and validators on Kusama often need to update on short notice.
+Polkadot. On Polkadot, the voting period on referendums
+lasts <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/> days,
+followed by an enactment period
+of <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/> days
+before the changes are enacted on-chain. On Kusama, voting
+lasts <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100,800} filter="blocksToDays"/> days,
+followed by an <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115,200} filter="blocksToDays"/> day
+enactment period. This means stakeholders need to stay active and vigilant if they want to keep up with 
+all the proposals, referenda, and upgrades, and validators on Kusama often need to update on short notice.
 
-On Polkadot, votes last 28 days followed by an enactment period of 28 days. This does not mean that
-the Kusama blockchain itself is faster, in the sense of faster block times or transaction throughput
-(these are the same on both networks), but that there's a shorter amount of time between governance
-events such as proposing new referenda, voting, and enacting approved upgrades. This allows Kusama
-to adapt and evolve faster than Polkadot.
+This does not mean that the Kusama blockchain itself is faster, in the sense of faster block times or
+transaction throughput (these are the same on both networks), but that there's a shorter amount of 
+time between governance events such as proposing new referenda, voting, and enacting approved upgrades.
+This allows Kusama to adapt and evolve faster than Polkadot.
 
-### Lean setups
+## Canary network
 
-Teams wishing to run a parachain need to bond tokens as security. The bonding requirement on Kusama
-is likely to be lower than on Polkadot.
+The initial use case for Kusama was as a pre-production environment, a “canary network”.
 
-### Use cases
-
-Polkadot is and always will be the primary network for the deployment of enterprise-level
-applications and those that entail high-value transactions requiring bank-level security and
-stability.
-
-The initial use case for Kusama is as a pre-production environment, a “canary network”.
-For the average developer, this seems like it could be a testnet, what is the difference?
-What does _canary_ even mean?
-
-Canary is a type of bird: back in the day, coal miners would put canaries into coal mines as a way to measure the amount of toxic gases that were present. Similarly, canary testing is a way to validate software by releasing software to a limited number of users, or perhaps, an isolated environment - without hurting any birds.
+Canary is a type of bird: back in the day, coal miners would put canaries into coal mines as a way to measure the amount of toxic gases in the tunnels. Similarly, canary testing is a way to validate software by releasing software to a limited number of users, or perhaps, an isolated environment - without hurting a wide range of users.
 
 Releases made onto Kusama can be thought of as [Canary Releases](https://martinfowler.com/bliki/CanaryRelease.html).
 These releases are usually staged. In Kusama's early days, the network won't just be used for parachain candidates to innovate and test changes, but a proof of concept for Polkadot's sharded model.
 
-In a typical blockchain development pipeline, Kusama would sit in between a "testnet" and a "mainnet"
+Kusama is not simply a testnet, the blockchain is fully functional with attached economic value, and own governance. The future of Kusama is in the hands of its participants. In a typical blockchain development pipeline, Kusama would sit in between a "testnet" and a "mainnet":
 
-:::info Testnet -> Kusama -> Polkadot
+:::info Testnet --> Kusama --> Polkadot
 
 :::
 
@@ -109,3 +89,4 @@ guidance to teams building for the ecosystem.
 - [About Kusama](https://kusama.network)
 - [The Kusama Wiki](https://guide.kusama.network)
 - [Kusama on Polkadot-JS Apps](https://kusama.dotapps.io)
+- [Polkadot and Kusama: What's the difference?](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-)
