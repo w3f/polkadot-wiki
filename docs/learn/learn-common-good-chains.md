@@ -89,12 +89,12 @@ Statemint will require the Relay Chain's "root origin", i.e. a referendum. Some 
 
 ### Encointer
 
-Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With [referendum 187](https://kusama.polkassembly.io/referendum/187) Encointer became Kusama's second common good parachain and it adds logic to the Relay Chain
+Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With [referendum 158](https://kusama.polkassembly.io/referendum/158) Encointer was registered as the second common good parachain on Kusama's network. The functionality of Encointer adds logic to the Relay Chain
 that aims to bring financial inclusivity to WEB3 and mitigate Sybil attacks with a novel 
 Proof of Personhood (PoP) system for unique identity. 
 
 Encointer offers a framework that, in principle, allows for any group of real people to create, 
-distribute and use their own digital community tokens.
+distribute and use their own digital community tokens. [Referendum 187](https://kusama.polkassembly.io/referendum/187) introduced a runtime upgrade bringing governance and full  funcitonality for communities to be able to use the protocol.
 
 Encointer aims to invert the [Cantillon Effect](https://www.newworldencyclopedia.org/entry/Richard_Cantillon), 
 where money is issued at the bottom, and not as credit to businesses or creditworthy individuals. This way, 
