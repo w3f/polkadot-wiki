@@ -89,8 +89,6 @@ More details on this are available in the [Network Implementation](#network-impl
 
 ### [Randomness](learn-randomness.md) in action
 
-:::info Randomness Example
-
 The following example will showcase the randomness mechanics of the candle auction for the ninth
 auction on Kusama. Keep in mind that the candle phase has a uniform termination profile and has an
 equal probability of ending at any given block, and the termination block cannot be predicted before
@@ -124,9 +122,9 @@ or during the auction.
   [archive node](../maintain/maintain-sync.md####types-of-nodes). The digest in the `Logs` of
   `9434277` is decodable and contains the random value as well as the BABE authorities.
 
-- As a result, the winner of this auction was not the highest bid during the full duration.
+  :::
 
-:::
+- As a result, the winner of this auction was not the highest bid during the full duration.
 
 ## Rationale
 
@@ -168,13 +166,12 @@ ended before having an opportunity to bid.
 the [Verifiable Random Function (VRF)](learn-randomness.md##vrf). The VRF will provide the base of
 the randomness, which will retroactively determine the end-time of the auction.
 
-The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }}
-{{ kusama: 1 year and divided into 6-week periods :kusama }}; Parachains may lease a slot for any
+The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods :polkadot }}{{ kusama: 1 year and divided into 6-week periods :kusama }}. Parachains may lease a slot for any
 combination of periods of the slot duration. Parachains may lease more than one slot over time,
 meaning that they could extend their lease to the network past the maximum duration by leasing a
 contiguous slot.
 
-:::note Individual parachain slots are fungible.
+:::note Individual parachain slots are fungible
 
 This means that parachains do not need to always inhabit the same slot, however they always must
 maintain a slot to remain a parachain.
@@ -211,10 +208,7 @@ for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` 
 periods available for a slot.
 (`n`={{ polkadot: <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Polkadot :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Kusama :kusama }})
 
-:::note
-
-If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way, you pay
-for the parachain slot by forfeiting the opportunity to earn staking rewards.
+:::note If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way, you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
 
 :::
 
@@ -273,11 +267,9 @@ Dave - 100 \* 4 = 400 for range 5 - 8
 
 Emily - 40 \* 4 = 160 for range 1 - 4
 
-Although Dave had the highest bid in accordance to token amount, when we do the calculations we see
+Although Dave had the highest bid in accordance to token amount per period, when we do the calculations we see
 that since he only bid for a range of 4, he would need to share the slot with Emily who bid much
-less. Together Dave and Emily's bids only equals a valuation of `560`.
-
-Charlie's valuation for the entire range is `600`. Therefore Charlie is awarded the complete range
+less. Together Dave and Emily's bids only equals a valuation of `560`. Charlie's valuation for the entire range is `600`. Therefore Charlie is awarded the complete range
 of the parachain slot.
 
 ## Parachain Lease Extension
