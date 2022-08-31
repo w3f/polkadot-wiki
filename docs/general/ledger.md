@@ -14,7 +14,7 @@ browsers like Brave and Chrome.
 
 :::
 
-The Polkadot [Ledger][] application is compatible with both the Ledger Nano S and the Ledger Nano X
+The Polkadot [Ledger](https://www.ledger.com/) application is compatible with both the Ledger Nano S and the Ledger Nano X
 devices. Ledger devices are hardware wallets that keep your secret key secured on a physical device that
 does not expose it to your computer or the internet. That is, even if you connect your nano via USB to your computer, the private keys will not be leaked. Ledger devices are also hierarchical deterministic wallets (HD wallets), that is:
 
@@ -44,6 +44,7 @@ Here is a list of what you will need before using Polkadot with Ledger:
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
 - A Chromium-based web browser is installed that you can use to access the [Polkadot-JS UI][].
+
 
 ## Using Ledger Live
 
