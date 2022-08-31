@@ -248,7 +248,8 @@ A tutorial on downward, upward, and lateral transfers can be found
 - [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) - Detailed blog post by Dr. Gavin Wood about the XCM Format.
 
 - [XCM Format specification](https://github.com/paritytech/xcm-format) - The best starting point for understanding the XCM API at a technical level.
-  sent via XCMP.
+
+- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) - High level overview of XCM and specifically the new features available in XCM v3.
 
 - [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical description of cross-chain communication on the Web3 Foundation research wiki.
 
@@ -257,4 +258,4 @@ A tutorial on downward, upward, and lateral transfers can be found
 
 - [Sub0 Online: Getting Started with XCM - Your First Cross Chain Messages](https://www.youtube.com/watch?v=5cgq5jOZx9g) - Code focused workshop on how XCM v1 works, and the core concepts of XCM.
 
-- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) - High level overview of XCM and specifically the new features available in XCM v3
+- [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) - Technical audit report by Quarkslab prepared for Parity.
