@@ -3,15 +3,16 @@ id: kusama-ledger
 title: Using Ledger Devices
 sidebar_label: Ledger Devices
 description: How to use the Kusama application on Ledger.
-keywords: [ledger, staking, kusama,]
+keywords: [ledger, staking, kusama]
 slug: ../../kusama-ledger
 ---
+
 import RPC from "./../../../components/RPC-Connection"
 
 :::info
 
-Because of required WebUSB support, Ledger wallets currently only work on
-Chromium-based browsers like Brave and Chrome.
+Because of required WebUSB support, Ledger wallets currently only work on Chromium-based browsers
+like Brave and Chrome.
 
 :::
 
@@ -19,8 +20,8 @@ Kusama has a [Ledger][] application that is compatible with the Ledger Nano S an
 devices. The Ledger devices are hardware wallets that keep your private key secured on a physical
 device that does not get directly exposed to your computer or the internet.
 
-The Kusama application allows you to manage Kusama's native asset, KSM. It supports
-most of the transaction types of the network ,including batch transactions from the Utility pallet.
+The Kusama application allows you to manage Kusama's native asset, KSM. It supports most of the
+transaction types of the network ,including batch transactions from the Utility pallet.
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
@@ -29,7 +30,7 @@ issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
 
 Please check out our
 [intro to Ledger video on YouTube for more information](https://youtu.be/7VlTncHCGPc).
- 
+
 :::
 
 ## Requirements
@@ -56,10 +57,10 @@ Please proceed to the [usage instructions](#using-on-polkadot-js-apps) below.
 
 ### Using the Developer Release
 
-:::tip 
+:::tip
 
 These instructions are for development installation only. It is recommended to install the
-application from Ledger Live unless you *know exactly what you're doing*.
+application from Ledger Live unless you _know exactly what you're doing_.
 
 :::
 
@@ -97,8 +98,10 @@ At the end of the process you should have the newly installed Kusama application
 
 ### Loading Your Account
 
-You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to the Polkadot JS UI. For instructions
-on how to import Ledger accounts to Polkadot JS extension in written format, read through this [article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
+You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to
+the Polkadot JS UI. For instructions on how to import Ledger accounts to Polkadot JS extension in
+written format, read through this
+[article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension).
 For importing your account to the UI, read through the instructions below.
 
 [Polkadot-JS Apps UI][apps] already has an integration with the Ledger application so that your
@@ -179,12 +182,11 @@ method is to use [Polkadot-JS Apps UI][apps].
 
 :::note The "Transfer with Keep-Alive Checks" toggle
 
-While this toggle is in the *On* state, your
-account will be unable to make transactions which would get its balance below the existential
-deposit. This prevents reaping of accounts with low balances. If you toggle this to *Off*, you
-will be able to go below existential deposit balance, causing your account to be deleted and any
-dust amount of KSM to be burned. If you encounter KeepAlive errors when making transactions, this
-might be the reason.
+While this toggle is in the _On_ state, your account will be unable to make transactions which would
+get its balance below the existential deposit. This prevents reaping of accounts with low balances.
+If you toggle this to _Off_, you will be able to go below existential deposit balance, causing your
+account to be deleted and any dust amount of KSM to be burned. If you encounter KeepAlive errors
+when making transactions, this might be the reason.
 
 A detailed guide on doing transfers is available [here](../../learn/learn-balance-transfers.md).
 
@@ -201,17 +203,16 @@ clicking on your account's avatar icon - this immediately copies your address to
 
 :::caution Before giving anyone your address
 
-Make sure it matches what's really on the Ledger
-by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware
-will intercept clicks and clipboard requests and can change your copied value in-flight, so being
-extra vigilant around copy-paste operations makes sense.
+Make sure it matches what's really on the Ledger by
+[confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
+intercept clicks and clipboard requests and can change your copied value in-flight, so being extra
+vigilant around copy-paste operations makes sense.
 
 :::
 
 ### Staking
 
-You can enable staking by issuing a batch transaction that will include
-the required extrinsics.
+You can enable staking by issuing a batch transaction that will include the required extrinsics.
 
 You can also issue two separate transactions when you want to stake using an account stored on a
 Ledger device, as follows:
@@ -229,8 +230,8 @@ Ledger device, as follows:
 
 ### Removing Expired Democracy Locks
 
-You can remove expired democracy locks by issuing a batch transaction that will include
-the required extrinsics.
+You can remove expired democracy locks by issuing a batch transaction that will include the required
+extrinsics.
 
 You can also manually issue several extrinsics when you want remove expired democracy locks on an
 account stored on a Ledger device, as follows:
@@ -247,40 +248,45 @@ account stored on a Ledger device, as follows:
 
 :::info
 
-Despite the Polkadot ledger application being compatible with both the Ledger Nano S and
-the Ledger Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are
-available in the light version. The following [repo by Zondax][] lists the currently supported Democracy extrinsics on the full ledger.
+Despite the Polkadot ledger application being compatible with both the Ledger Nano S and the Ledger
+Nano X, none of the [Democracy](../../maintain/maintain-guides-democracy.md) extrinsics are
+available in the light version. The following [repo by Zondax][] lists the currently supported
+Democracy extrinsics on the full ledger.
 
 :::
 
 ### Setting Sub-Identity (Sub-ID) for your Ledger Account
 
-Setting an Identity is not possible on Ledger app yet, but as a workaround, you can 
-[set the identity for an on-chain account ](../../learn/learn-identity.md#setting-an-identity) and then use 
-it to set a sub-identity to your Ledger account.
+Setting an Identity is not possible on Ledger app yet, but as a workaround, you can
+[set the identity for an on-chain account ](../../learn/learn-identity.md#setting-an-identity) and
+then use it to set a sub-identity to your Ledger account.
 
-- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to the account
-to which you already set identity. You should see an option to set onchain sub-identities. Click on it.
+- Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots correponding to
+  the account to which you already set identity. You should see an option to set onchain
+  sub-identities. Click on it.
 
   ![Add sub-identity in PolkadotJS](../../assets/identity/sub-id-1.png)
-- In the pop-up window, select your Ledger account from the dropdown and enter text in sub name field. Then,
-click on set subs button.
+
+- In the pop-up window, select your Ledger account from the dropdown and enter text in sub name
+  field. Then, click on set subs button.
   ![Set sub-identity in PolkadotJS](../../assets/identity/sub-id-2.png)
 - Sign and submit the transaction from the parent account with the identity
 
-You should now see the sub-identity displayed on-chain. You need to be aware 
-that <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>
-is reserved for setting identity 
-and <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/>
-for each sub-identity. This reserved account balance is freed once you 
-[clear the identities](../../learn/learn-identity.md#clearing-and-killing-an-identity) on the account.
+You should now see the sub-identity displayed on-chain. You need to be aware that
+{{ polkadot: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+is reserved for setting identity and
+{{ polkadot: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+for each sub-identity. This reserved account balance is freed once you
+[clear the identities](../../learn/learn-identity.md#clearing-and-killing-an-identity) on the
+account.
 
 ![Sub-identity example](../../assets/identity/sub-id-3.png)
 
 ## Support
 
-If you need support, please visit the
-[Polkadot Support page](https://support.polkadot.network).
+If you need support, please visit the [Polkadot Support page](https://support.polkadot.network).
 
 [ledger]: https://www.ledger.com/
 [repo by zondax]: https://github.com/Zondax/ledger-polkadot#democracy
