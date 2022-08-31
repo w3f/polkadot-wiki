@@ -21,7 +21,7 @@ devices. The Ledger devices are hardware wallets that keep your private key secu
 device that does not get directly exposed to your computer or the internet.
 
 The Kusama application allows you to manage Kusama's native asset, KSM. It supports most of the
-transaction types of the network ,including batch transactions from the Utility pallet.
+transaction types of the network, including batch transactions from the Utility pallet.
 
 If you have trouble using Ledger or following the directions below, you can try searching for your
 issue on the [Polkadot Knowledge Base](https://support.polkadot.network/).
