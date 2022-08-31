@@ -78,12 +78,32 @@ reasonable interpretations under some systems or will be intentionally unsupport
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an
     address on the remote chain for receiving funds and to eventually transfer those funds it
     controls into other accounts on that remote chain.
-  - **Teleporting**: movement of an asset happens by destroying it on one side and creating a clone
+  - **Asset Teleportation**: movement of an asset happens by destroying it on one side and creating a clone
     on the other side.
-  - **Reserve-Based Transfer**: there may be two chains that want to nominate a third chain, where
+  - **Reserve Asset Transfer**: there may be two chains that want to nominate a third chain, where
     one includes a native asset that can be used as a reserve for that asset. Then, the derivative
     form of the asset on each of those chains would be fully backed, allowing the derivative asset
     to be exchanged for the underlying asset on the reserve chain backing it.
+
+Lets review two of these example use cases `Asset Teleportation` and `Reserve Asset Transfer`.
+
+#### Asset Teleportation
+![](../assets/cross-consensus/xcm-asset-teleportation.png)
+
+An asset teleport operation from a single source to a single destination.
+
+1. [InitiateTeleport](https://github.com/paritytech/xcm-format#initiateteleport)
+2. [ReceiveTeleportedAsset](https://github.com/paritytech/xcm-format#receiveteleportedasset)
+3. [DepositAsset](https://github.com/paritytech/xcm-format#depositasset)
+
+#### Reserve Asset Transfer
+![](../assets/cross-consensus/xcm-reserve-asset-transfer.png)
+
+1. [InitiateReserveWithdraw](https://github.com/paritytech/xcm-format#initiatereservewithdraw)
+2. [WithdrawAsset](https://github.com/paritytech/xcm-format#withdrawasset)
+3. [DepositReserveAsset](https://github.com/paritytech/xcm-format#depositreserveasset)
+4. [ReserveAssetDeposited](https://github.com/paritytech/xcm-format#reserveassetdeposited)
+5. [DepositAsset](https://github.com/paritytech/xcm-format#depositasset)
 
 ### XCM Tech Stack
 
