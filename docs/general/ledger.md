@@ -43,7 +43,8 @@ Here is a list of what you will need before using Polkadot with Ledger:
 - The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live under the "Manager" tab, you will need to allow access with your nano).
 - Ledger Live is installed and at version 2.1 or newer (see settings -> about to find out if you're
   up to date).
-- A Chromium-based web browser is installed that you can use to access [Polkadot-JS Apps](https://polkadot.js.org/apps/).
+- A Chromium-based web browser is installed that you can use to access the [Polkadot-JS UI][].
+
 
 ## Using Ledger Live
 
@@ -87,8 +88,7 @@ If you already connected your device but an error message appears before signing
 
 ### Confirming the Address on your Device
 
-To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device). Here you can scroll through and make sure the address matches to what is displayed on Polkadot-JS UI
-Apps.
+To display your Polkadot ledger account address on your Ledger Nano you can follow the guidelines on [this support article](https://support.polkadot.network/support/solutions/articles/65000181854-how-to-confirm-your-account-address-on-your-ledger-device). Here you can scroll through and make sure the address matches to what is displayed on [Polkadot-JS UI][].
 
 ### Checking the Balance of Your Account
 
@@ -123,3 +123,6 @@ Check out [this support page](https://support.polkadot.network/support/solutions
 **Please be advised**: Despite the Polkadot ledger application being compatible with both the Ledger
 Nano S and the Ledger Nano X, none of the [Democracy](../maintain/maintain-guides-democracy.md) extrinsics
 are available in the light version. The following [repository by Zondax](https://github.com/Zondax/ledger-polkadot) lists the currently supported Democracy extrinsics on the full ledger.
+
+[ledger]: https://www.ledger.com/
+[polkadot-js ui]: https://polkadot.js.org/apps/#/explorer
