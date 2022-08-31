@@ -243,11 +243,18 @@ A tutorial on downward, upward, and lateral transfers can be found
 
 ## Resources
 
-- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) -
-  Detailed blog post by Dr. Gavin Wood about the XCM Format.
-- [XCM Format](https://github.com/paritytech/xcm-format) - Description of the high-level XCM format
+- [Shawn Tabrizi: XCM - The Backbone Of A Multichain Future | Polkadot Decoded 2022](https://www.youtube.com/watch?v=cS8GvPGMLS0) - High level overview which should answer “What is XCM?
+
+- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) - Detailed blog post by Dr. Gavin Wood about the XCM Format.
+
+- [XCM Format specification](https://github.com/paritytech/xcm-format) - The best starting point for understanding the XCM API at a technical level.
   sent via XCMP.
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
-  description of cross-chain communication on the Web3 Foundation research wiki.
-- [Messaging Overview](https://w3f.github.io/parachain-implementers-guide/messaging.html) - An
-  overview of the messaging schemes from the Parachain Implementor's guide.
+
+- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical description of cross-chain communication on the Web3 Foundation research wiki.
+
+- [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An
+  overview of the messaging schemes from the Polkadot Parachain Host Implementor's guide.
+
+- [Sub0 Online: Getting Started with XCM - Your First Cross Chain Messages](https://www.youtube.com/watch?v=5cgq5jOZx9g) - Code focused workshop on how XCM v1 works, and the core concepts of XCM.
+
+- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) - High level overview of XCM and specifically the new features available in XCM v3
