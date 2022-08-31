@@ -6,6 +6,7 @@ keywords: [balance, transfers, transaction, signing]
 description: Steps on how to perform balance transfers.
 slug: ../learn-balance-transfers
 ---
+
 import RPC from "./../../components/RPC-Connection"
 
 Balance transfers are used to send a balance from one account to another account. To start
@@ -35,7 +36,8 @@ below.
 
 ## Signing Transactions with Parity Signer
 
-:::info This information is complementary to the [dedicated support page](https://support.polkadot.network/support/solutions/articles/65000182000).
+:::info This information is complementary to the
+[dedicated support page](https://support.polkadot.network/support/solutions/articles/65000182000).
 
 :::
 
@@ -66,7 +68,9 @@ transfer funds from one account to another:
 - `transfer keep-alive` (default option) will not allow you to send an amount that would allow the
   sending account to be removed due to it going below the
   [existential deposit](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
-  of {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}.
+  of
+  {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
+  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>. :kusama }}
 - `transfer` will allow you to send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
   regardless of the consequence. If the balance drops below the existential deposit your account
   will be reaped. It may be that you do not want to keep the account alive (for example, because you
