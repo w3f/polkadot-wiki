@@ -28,7 +28,7 @@ such as defining locations and assets via pre defined data structures like `Mult
 :::note 
 
 XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in
-development. 
+development. See Gavins talk about v3 in the resources section.
 
 :::
 
