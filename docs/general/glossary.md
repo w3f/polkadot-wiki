@@ -372,9 +372,9 @@ If more than the maximum number of nominators nominate the same validator, it is
 and only the top staked nominators (ranked by the amount of stake, up to the maximum number of
 nominators) are paid rewards. Other nominators will receive no rewards for that era. The current
 maximum number of nominators is
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> on
-Kusama :kusama }}{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/>
-on Polkadot :polkadot }}, but it can be modified via governance.
+{{ kusama: <RPC network="kusama" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> on Kusama :kusama }}
+{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> on Polkadot :polkadot }}
+, but it can be modified via governance.
 
 ## Pallet
 
