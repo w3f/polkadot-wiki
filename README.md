@@ -261,8 +261,8 @@ The validator count in parentheses is
 {{ kusama: (<RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>) :kusama }}
 ```
 
-Failing to wrap these components can add unexpected formatting, such as line-breaks, especially
-after running prettier.
+Failing to follow this schema can results in unexpected formatting, such as added line-breaks or
+spacing, especially after running prettier.
 
 ## Internationalization
 
