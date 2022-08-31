@@ -236,15 +236,29 @@ If you are looking to invoke and embed data from 3rd party APIs or sources, chec
 A full list of sample components can be found
 [here](https://github.com/w3f/polkadot-wiki/tree/master/components).
 
-It is important to try and reuse existing components as much as possible instead of creating new
-ones to keep the code lean and comprehensive. It is also important to run prettier after adding a
-new component, validating that the desired rendering format is not altered based on the formatting
-changes. RPC components should always use conditional rendering to ensure stable formatting and that
-the correct data is displayed for the correct network, for example:
+Try and reuse existing components as much as possible instead of creating new ones to keep the code
+lean and comprehensive. It is also important to run prettier after adding a new component,
+validating that the desired rendering format is not altered based on the formatting changes. Below
+are some best practices for achieving common formatting that will not be modified by the prettier
+command:
+
+Always wrap RPC components in conditional rendering & keep them on newlines:
 
 ```
 {{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
+```
+
+To add grammar without added spacing, place the grammar inside the conditional brackets:
+
+```
+The validator count followed by a period is
+{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>. :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>. :kusama }}
+
+The validator count in parentheses is
+{{ polkadot: (<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>) :polkadot }}
+{{ kusama: (<RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>) :kusama }}
 ```
 
 Failing to wrap these components can add unexpected formatting, such as line-breaks, especially
