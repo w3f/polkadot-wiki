@@ -63,7 +63,10 @@
   resolved "https://registry.yarnpkg.com/@algolia/cache-common/-/cache-common-4.14.1.tgz#11d44a6442f83deb3629a04c20df8408088f6449"
   integrity sha512-XhAzm0Sm3D3DuOWUyDoVSXZ/RjYMvI1rbki+QH4ODAVaHDWVhMhg3IJPv3gIbBQnEQdtPdBhsf2hyPxAu28E5w==
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@algolia/cache-in-memory@4.14.1":
   version "4.14.1"
@@ -116,6 +119,7 @@
     "@algolia/client-common" "4.14.1"
     "@algolia/requester-common" "4.14.1"
     "@algolia/transporter" "4.14.1"
+<<<<<<< HEAD
 >>>>>>> Add ridirect
 
 "@algolia/cache-common@4.14.2":
@@ -192,6 +196,8 @@
     "@algolia/client-common" "4.14.2"
     "@algolia/requester-common" "4.14.2"
     "@algolia/transporter" "4.14.2"
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@algolia/events@^4.0.1":
   version "4.0.1"
@@ -203,6 +209,7 @@
   resolved "https://registry.yarnpkg.com/@algolia/logger-common/-/logger-common-4.14.1.tgz#acbd36b66e3b408f99cacfb581ad3bd28defcc28"
   integrity sha512-58CK87wTjUWI1QNXc3nFDQ7EXBi28NoLufXE9sMjng2fAL1wPdyO+KFD8KTBoXOZnJWflPj5F7p6jLyGAfgvcQ==
 
+<<<<<<< HEAD
 "@algolia/logger-common@4.14.2":
   version "4.14.2"
   resolved "https://registry.yarnpkg.com/@algolia/logger-common/-/logger-common-4.14.2.tgz#b74b3a92431f92665519d95942c246793ec390ee"
@@ -250,6 +257,8 @@
   resolved "https://registry.yarnpkg.com/@algolia/logger-common/-/logger-common-4.14.1.tgz#acbd36b66e3b408f99cacfb581ad3bd28defcc28"
   integrity sha512-58CK87wTjUWI1QNXc3nFDQ7EXBi28NoLufXE9sMjng2fAL1wPdyO+KFD8KTBoXOZnJWflPj5F7p6jLyGAfgvcQ==
 
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@algolia/logger-console@4.14.1":
   version "4.14.1"
   resolved "https://registry.yarnpkg.com/@algolia/logger-console/-/logger-console-4.14.1.tgz#7e7d7486d71ccfe38e63234626931083592149d2"
@@ -281,11 +290,15 @@
   resolved "https://registry.yarnpkg.com/@algolia/transporter/-/transporter-4.14.1.tgz#7eca8568ff710d9d1a7bbd3c1dafbbf44a6143f5"
   integrity sha512-xbmoIqszFDOCCZqizBQ2TNHcGtjZX7EkJCzABsrokA0WqtfZzClFmtc+tZYgtEiyAfIF70alTegG19poQGdkvg==
   dependencies:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
     "@algolia/cache-common" "4.14.1"
     "@algolia/logger-common" "4.14.1"
     "@algolia/requester-common" "4.14.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@algolia/transporter@4.14.2":
   version "4.14.2"
@@ -298,6 +311,8 @@
 
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.0.tgz#56c133824780de3174aed5ab6834f3026790154d"
@@ -307,10 +322,14 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
 =======
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
 >>>>>>> Add ridirect
+=======
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
   integrity sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==
@@ -318,10 +337,14 @@
     "@babel/highlight" "^7.18.6"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/compat-data@^7.17.7", "@babel/compat-data@^7.18.8":
 =======
 "@babel/compat-data@^7.13.11", "@babel/compat-data@^7.18.8":
 >>>>>>> Add ridirect
+=======
+"@babel/compat-data@^7.13.11", "@babel/compat-data@^7.18.8":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.8"
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.18.8.tgz#2483f565faca607b8535590e84e7de323f27764d"
   integrity sha512-HSmX4WZPPK3FUxYp7g2T6EyO8j96HlZJlxmKPSh6KAcqwyDrfx7hKjXpAW/0FhFfTJsR0Yt4lAjLI2coMptIHQ==
@@ -349,10 +372,14 @@
     source-map "^0.5.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.18.5", "@babel/core@^7.18.6":
 =======
 "@babel/core@^7.18.5", "@babel/core@^7.18.6":
 >>>>>>> Add ridirect
+=======
+"@babel/core@^7.18.5", "@babel/core@^7.18.6":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.18.9.tgz#805461f967c77ff46c74ca0460ccf4fe933ddd59"
   integrity sha512-1LIb1eL8APMy91/IMW+31ckrfBM4yCoLaVzoDhZUKSM4cu1L1nIidyxkCgzPAgrC5WEz36IPEr/eSeSF9pIn+g==
@@ -374,10 +401,14 @@
     semver "^6.3.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/generator@^7.12.5", "@babel/generator@^7.18.7", "@babel/generator@^7.18.9", "@babel/generator@^7.7.2":
 =======
 "@babel/generator@^7.12.5", "@babel/generator@^7.18.7", "@babel/generator@^7.18.9":
 >>>>>>> Add ridirect
+=======
+"@babel/generator@^7.12.5", "@babel/generator@^7.18.7", "@babel/generator@^7.18.9":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.18.9.tgz#68337e9ea8044d6ddc690fb29acae39359cca0a5"
   integrity sha512-wt5Naw6lJrL1/SGkipMiFxJjtyczUWTP38deiP1PO60HsBjDeKk08CGC3S8iVuvf0FmTdgKwU1KIXzSKL1G0Ug==
@@ -402,10 +433,14 @@
     "@babel/types" "^7.18.9"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/helper-compilation-targets@^7.17.7", "@babel/helper-compilation-targets@^7.18.9":
 =======
 "@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.18.9":
 >>>>>>> Add ridirect
+=======
+"@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.18.9":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/helper-compilation-targets/-/helper-compilation-targets-7.18.9.tgz#69e64f57b524cde3e5ff6cc5a9f4a387ee5563bf"
   integrity sha512-tzLCyVmqUiFlcFoAPLA/gL9TeYrF61VLNtb+hvkuVaB5SUjW7jcfrglBIX1vUIoT7CLP3bBlIMeyEsIl2eFQNg==
@@ -516,10 +551,14 @@
   integrity sha512-O4KCvQA6lLiMU9l2eawBPMf1xPP8xPfB3iEQw150hOVTqj/rfXz0ThTb4HEzqQfs2Bmo5Ay8BzxfzVtBrr9dVg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.16.7", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.18.9", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
 =======
 "@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.13.0", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.18.9", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
 >>>>>>> Add ridirect
+=======
+"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.13.0", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.18.9", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.18.9.tgz#4b8aea3b069d8cb8a72cdfe28ddf5ceca695ef2f"
   integrity sha512-aBXPT3bmtLryXaoJLyYPXPlSD4p1ld9aYeR+sJNOZjJJGiOpb+fKfh3NkcCu7J54nUJwCERPBExCCpyCOHnu/w==
@@ -605,10 +644,14 @@
     js-tokens "^4.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/parser@^7.1.0", "@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.18.6", "@babel/parser@^7.18.8", "@babel/parser@^7.18.9":
 =======
 "@babel/parser@^7.12.7", "@babel/parser@^7.18.6", "@babel/parser@^7.18.8", "@babel/parser@^7.18.9":
 >>>>>>> Add ridirect
+=======
+"@babel/parser@^7.12.7", "@babel/parser@^7.18.6", "@babel/parser@^7.18.8", "@babel/parser@^7.18.9":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.18.9.tgz#f2dde0c682ccc264a9a8595efd030a5cc8fd2539"
   integrity sha512-9uJveS9eY9DJ0t64YbIBZICtJy8a5QrDEVdiLCG97fVLpDTpGX7t8mMSb6OWw6Lrnjqj4O8zwjELX3dhoMgiBg==
@@ -1342,10 +1385,14 @@
     regenerator-runtime "^0.13.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
 =======
 "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
 >>>>>>> Add ridirect
+=======
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
   integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
@@ -1353,10 +1400,14 @@
     regenerator-runtime "^0.13.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/template@^7.12.7", "@babel/template@^7.18.6", "@babel/template@^7.3.3":
 =======
 "@babel/template@^7.12.7", "@babel/template@^7.18.6":
 >>>>>>> Add ridirect
+=======
+"@babel/template@^7.12.7", "@babel/template@^7.18.6":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.18.6.tgz#1283f4993e00b929d6e2d3c72fdc9168a2977a31"
   integrity sha512-JoDWzPe+wgBsTTgdnIma3iHNFC7YVJoPssVBDjiHfNlyt4YcunDtcDOUmfVDfCK5MfdsaIoX9PkijPhjH3nYUw==
@@ -1366,10 +1417,14 @@
     "@babel/types" "^7.18.6"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/traverse@^7.12.9", "@babel/traverse@^7.18.8", "@babel/traverse@^7.18.9", "@babel/traverse@^7.7.2":
 =======
 "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.18.8", "@babel/traverse@^7.18.9":
 >>>>>>> Add ridirect
+=======
+"@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.18.8", "@babel/traverse@^7.18.9":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.18.9.tgz#deeff3e8f1bad9786874cb2feda7a2d77a904f98"
   integrity sha512-LcPAnujXGwBgv3/WHv01pHtb2tihcyW1XuL9wd7jqh1Z8AQkTd+QVjMrMijrln0T7ED3UXLIy36P9Ao7W75rYg==
@@ -1386,10 +1441,14 @@
     globals "^11.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/types@^7.0.0", "@babel/types@^7.12.7", "@babel/types@^7.18.4", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4":
 =======
 "@babel/types@^7.12.7", "@babel/types@^7.18.4", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.4.4":
 >>>>>>> Add ridirect
+=======
+"@babel/types@^7.12.7", "@babel/types@^7.18.4", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.4.4":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.18.9.tgz#7148d64ba133d8d73a41b3172ac4b83a1452205f"
   integrity sha512-WwMLAg2MvJmt/rKEVQBBhIVffMmnilX4oe0sRe7iPOHIGsqpruFHHdrfj4O1CMMtgMtCU4oPafZjDPCRgO57Wg==
@@ -1988,10 +2047,25 @@
     multiformats "^9.5.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
   integrity sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==
+=======
+"@jridgewell/gen-mapping@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz#e5d2e450306a9491e3bd77e323e38d7aff315996"
+  integrity sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==
+  dependencies:
+    "@jridgewell/set-array" "^1.0.0"
+    "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.2.tgz#c1aedc61e853f2bb9f5dfe6d4442d3b565b253b9"
+  integrity sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     camelcase "^5.3.1"
     find-up "^4.1.0"
@@ -1999,6 +2073,7 @@
     js-yaml "^3.13.1"
     resolve-from "^5.0.0"
 
+<<<<<<< HEAD
 "@istanbuljs/schema@^0.1.2":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
@@ -2064,9 +2139,39 @@
   version "29.0.1"
   resolved "https://registry.yarnpkg.com/@jest/expect-utils/-/expect-utils-29.0.1.tgz#c1a84ee66caaef537f351dd82f7c63d559cf78d5"
   integrity sha512-Tw5kUUOKmXGQDmQ9TSgTraFFS7HMC1HG/B7y0AN2G2UzjdAXz9BzK2rmNpCSDl7g7y0Gf/VLBm//blonvhtOTQ==
+=======
+"@jridgewell/resolve-uri@^3.0.3":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"
+  integrity sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==
+
+"@jridgewell/set-array@^1.0.0", "@jridgewell/set-array@^1.0.1":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@jridgewell/set-array/-/set-array-1.1.2.tgz#7c6cf998d6d20b914c0a55a91ae928ff25965e72"
+  integrity sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw==
+
+"@jridgewell/source-map@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@jridgewell/source-map/-/source-map-0.3.2.tgz#f45351aaed4527a298512ec72f81040c998580fb"
+  integrity sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==
+  dependencies:
+    "@jridgewell/gen-mapping" "^0.3.0"
+    "@jridgewell/trace-mapping" "^0.3.9"
+
+"@jridgewell/sourcemap-codec@^1.4.10":
+  version "1.4.14"
+  resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz#add4c98d341472a289190b424efbdb096991bb24"
+  integrity sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==
+
+"@jridgewell/trace-mapping@^0.3.7", "@jridgewell/trace-mapping@^0.3.9":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.14.tgz#b231a081d8f66796e475ad588a1ef473112701ed"
+  integrity sha512-bJWEfQ9lPTvm3SneWwRFVLzrh6nhjwqw7TUFFBEMzwvg7t7PCDenf2lDwqo4NQXzdpgBXyFgDWnQA+2vkruksQ==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     jest-get-type "^29.0.0"
 
+<<<<<<< HEAD
 "@jest/expect@^29.0.1":
   version "29.0.1"
   resolved "https://registry.yarnpkg.com/@jest/expect/-/expect-29.0.1.tgz#0ffde7f5b4c87f1dd6f8664726bd53f6cd1f7014"
@@ -2139,9 +2244,40 @@
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.0.0.tgz#5f47f5994dd4ef067fb7b4188ceac45f77fe952a"
   integrity sha512-3Ab5HgYIIAnS0HjqJHQYZS+zXc4tUmTmBH3z83ajI6afXp8X3ZtdLX+nXx+I7LNkJD7uN9LAVhgnjDgZa2z0kA==
+=======
+"@leichtgewicht/ip-codec@^2.0.1":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
+  integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
+
+"@libp2p/interface-peer-id@^1.0.0":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@libp2p/interface-peer-id/-/interface-peer-id-1.0.4.tgz#f8d8114ad58cb04eb880bdd8f91799e418f92881"
+  integrity sha512-VRnE0MqmS1kN43hyKCEdkhz0gciuDML7hpL3p8zDm0LnveNMLJsR+/VSUaugCi/muOzLaLk26WffKWbMYfnGfA==
+  dependencies:
+    multiformats "^9.6.3"
+
+"@libp2p/interfaces@^2.0.0":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@libp2p/interfaces/-/interfaces-2.0.4.tgz#78d36637b59d864990d1c315e32f66a58f2a50df"
+  integrity sha512-MfwkTFyHJtvwNxkjOjzkXyIVvKFtEW2Q3IGRJPyPQMrtB6ll0rGMTlyJ3BQS1bcD0YkNhggFm+8XiU2/0LCBhQ==
+  dependencies:
+    "@multiformats/multiaddr" "^10.1.5"
+    err-code "^3.0.1"
+    interface-datastore "^6.1.0"
+    it-pushable "^2.0.1"
+    it-stream-types "^1.0.4"
+    multiformats "^9.6.3"
+
+"@libp2p/logger@^1.1.4":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@libp2p/logger/-/logger-1.1.6.tgz#2f24af0fc3fc7a8f9e8e266e25569fdd94976096"
+  integrity sha512-ZKoRUt7cyHlbxHYDZ1Fn3A+ByqGABdmd4z07+1TfVvpEQSpn2IVcV0mt6ff5kUUtGuVeSrqK1/ZDzWqhgg56vg==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     "@sinclair/typebox" "^0.24.1"
 
+<<<<<<< HEAD
 "@jest/source-map@^29.0.0":
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@jest/source-map/-/source-map-29.0.0.tgz#f8d1518298089f8ae624e442bbb6eb870ee7783c"
@@ -2314,6 +2450,13 @@
   integrity sha512-8Ch/kQGyoDl3m0TYz/uuHRbJ3TRoG7XI9ZTFHd1P21KrpF3YvCeK5PCWDsP7IICc+Q39n0IS9zLVhGySiS7FXQ==
 >>>>>>> Add ridirect
   dependencies:
+=======
+"@libp2p/peer-id@^1.1.10":
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/@libp2p/peer-id/-/peer-id-1.1.14.tgz#11372de04a225d2cdb7a73005f0e36725bd3b895"
+  integrity sha512-8Ch/kQGyoDl3m0TYz/uuHRbJ3TRoG7XI9ZTFHd1P21KrpF3YvCeK5PCWDsP7IICc+Q39n0IS9zLVhGySiS7FXQ==
+  dependencies:
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
     "@libp2p/interface-peer-id" "^1.0.0"
     err-code "^3.0.1"
     multiformats "^9.6.3"
@@ -2386,6 +2529,11 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.1.2.tgz#e9e035b9b166ca0af657a7848eb2718f0f22f183"
   integrity sha512-KYRCASVTv6aeUi1tsF8/vpyR7zpfs3FUzy2Jqm+MU+LmUKhQ0y2FpfwqkCcxSg2ua4GALJd8k2R76WxwZGbQpA==
+
+"@noble/secp256k1@1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@noble/secp256k1/-/secp256k1-1.6.3.tgz#7eed12d9f4404b416999d0c87686836c4c5c9b94"
+  integrity sha512-T04e4iTurVy7I8Sw4+c5OSN9/RkPlo1uKxAomtxQNLq8j1uPAqnsqG1bqvY3Jv7c13gyr6dui0zmh/I3+f/JaQ==
 
 "@noble/secp256k1@1.6.3":
   version "1.6.3"
@@ -2494,6 +2642,7 @@
     "@octokit/types" "^6.0.3"
     universal-user-agent "^6.0.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 "@octokit/openapi-types@^12.10.0":
   version "12.10.1"
@@ -2506,11 +2655,17 @@
   integrity sha512-40U39YoFBhJhmkAg6gbJnh9U8aueJwCuiTW0mXY2pNl9/+E7dUxXiMPOrIUGT12XqLinroaXYA3FUiw3BMeNfg==
 =======
 
+=======
+
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@octokit/openapi-types@^12.10.0":
   version "12.10.1"
   resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-12.10.1.tgz#57b5cc6c7b4e55d8642c93d06401fb1af4839899"
   integrity sha512-P+SukKanjFY0ZhsK6wSVnQmxTP2eVPPE8OPSNuxaMYtgVzwJZgfGdwlYjf4RlRU4vLEw4ts2fsE2icG4nZ5ddQ==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@octokit/plugin-paginate-rest@^2.17.0":
   version "2.21.3"
@@ -2606,6 +2761,7 @@
   dependencies:
     "@octokit/openapi-types" "^12.10.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 "@octokit/types@^7.0.0":
   version "7.0.0"
@@ -2615,6 +2771,8 @@
     "@octokit/openapi-types" "^13.0.0"
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
@@ -2688,7 +2846,10 @@
 "@polkadot/keyring@10.1.1":
 =======
 "@polkadot/keyring@^10.0.2":
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-10.1.1.tgz#f6fa7ad0916e49b55bed91cef99434ece8dd32b2"
   integrity sha512-lgYS9UIa611FBnYXb7DnVuLsiMnUR2S8x1jfNBJT32x7T66XSRnc7kpwgHW0MNGVTwjFVVfIr7XfpvXGDoBZgg==
@@ -2697,6 +2858,7 @@
     "@polkadot/util" "10.1.1"
     "@polkadot/util-crypto" "10.1.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@polkadot/keyring@^10.1.6":
   version "10.1.6"
@@ -2709,6 +2871,8 @@
 
 "@polkadot/networks@10.1.1":
 =======
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@polkadot/keyring@^9.7.2":
   version "9.7.2"
   resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-9.7.2.tgz#3e252bdcabce4f4e74b8fbcd98d77bb0205af21e"
@@ -2719,7 +2883,10 @@
     "@polkadot/util-crypto" "9.7.2"
 
 "@polkadot/networks@10.1.1", "@polkadot/networks@^10.0.2":
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/networks/-/networks-10.1.1.tgz#d3deeff5c4cfad8c1eec85732351d80d1b2d0934"
   integrity sha512-upM8r0mrsCVA+vPVbJUjtnkAfdleBMHB+Fbxvy3xtbK1IFpzQTUhSOQb6lBnBAPBFGyxMtQ3TytnInckAdYZeg==
@@ -2728,6 +2895,7 @@
     "@polkadot/util" "10.1.1"
     "@substrate/ss58-registry" "^1.24.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@polkadot/networks@10.1.6", "@polkadot/networks@^10.1.6":
   version "10.1.6"
@@ -2760,6 +2928,8 @@
     "@polkadot/types" "9.2.4"
     "@polkadot/util" "^10.1.6"
 =======
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@polkadot/networks@9.7.2":
   version "9.7.2"
   resolved "https://registry.yarnpkg.com/@polkadot/networks/-/networks-9.7.2.tgz#9064f0578b293245bee263367d6f1674eb06e506"
@@ -2875,10 +3045,14 @@
     rxjs "^7.5.6"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@polkadot/util-crypto@10.1.1":
 =======
 "@polkadot/util-crypto@10.1.1", "@polkadot/util-crypto@^10.0.2":
 >>>>>>> Add ridirect
+=======
+"@polkadot/util-crypto@10.1.1", "@polkadot/util-crypto@^10.0.2":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/util-crypto/-/util-crypto-10.1.1.tgz#c6e16e626e55402fdb44c8bb20ce4a9d7c50b9db"
   integrity sha512-R0V++xXbL2pvnCFIuXnKc/TlNhBkyxcno1u8rmjYNuH9S5GOmi2jY/8cNhbrwk6wafBsi+xMPHrEbUnduk82Ag==
@@ -2913,10 +3087,14 @@
     tweetnacl "^1.0.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@polkadot/util@10.1.1":
 =======
 "@polkadot/util@10.1.1", "@polkadot/util@^10.0.2":
 >>>>>>> Add ridirect
+=======
+"@polkadot/util@10.1.1", "@polkadot/util@^10.0.2":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-10.1.1.tgz#5aa20eac03806e70dc21e618a7f8cd767dac0fd0"
   integrity sha512-/g0sEqOOXfiNmQnWcFK3H1+wKBjbJEfGj6lTmbQ0xnL4TS5mFFQ7ZZEvxD60EkoXVMuCmSSh9E54goNLzh+Zyg==
@@ -2941,6 +3119,7 @@
     "@polkadot/x-textencoder" "10.1.6"
     "@types/bn.js" "^5.1.0"
     bn.js "^5.2.1"
+<<<<<<< HEAD
 
 "@polkadot/wasm-bridge@6.3.1":
   version "6.3.1"
@@ -2949,6 +3128,17 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
 
+=======
+    ip-regex "^4.3.0"
+
+"@polkadot/wasm-bridge@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/wasm-bridge/-/wasm-bridge-6.3.1.tgz#439fa78e80947a7cb695443e1f64b25c30bb1487"
+  integrity sha512-1TYkHsb9AEFhU9uZj3biEnN2yKQNzdrwSjiTvfCYnt97pnEkKsZI6cku+YPZQv5w/x9CQa5Yua9e2DVVZSivGA==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@polkadot/wasm-crypto-asmjs@6.3.1":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto-asmjs/-/wasm-crypto-asmjs-6.3.1.tgz#e8f469c9cf4a7709c8131a96f857291953f3e30a"
@@ -2975,10 +3165,14 @@
     "@polkadot/wasm-util" "6.3.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@polkadot/wasm-crypto@^6.2.3", "@polkadot/wasm-crypto@^6.3.1":
 =======
 "@polkadot/wasm-crypto@^6.2.2", "@polkadot/wasm-crypto@^6.2.3", "@polkadot/wasm-crypto@^6.3.1":
 >>>>>>> Add ridirect
+=======
+"@polkadot/wasm-crypto@^6.2.2", "@polkadot/wasm-crypto@^6.2.3", "@polkadot/wasm-crypto@^6.3.1":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-6.3.1.tgz#63f5798aca2b2ff0696f190e6862d9781d8f280c"
   integrity sha512-OO8h0qeVkqp4xYZaRVl4iuWOEtq282pNBHDKb6SOJuI2g59eWGcKh4EQU9Me2VP6qzojIqptrkrVt7KQXC68gA==
@@ -2998,10 +3192,14 @@
     "@babel/runtime" "^7.18.9"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@polkadot/x-bigint@10.1.1":
 =======
 "@polkadot/x-bigint@10.1.1", "@polkadot/x-bigint@^10.0.2":
 >>>>>>> Add ridirect
+=======
+"@polkadot/x-bigint@10.1.1", "@polkadot/x-bigint@^10.0.2":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-bigint/-/x-bigint-10.1.1.tgz#c084cfdfe48633da07423f4d9916563882947563"
   integrity sha512-YNYN64N4icKyqiDIw0tcGyWwz3g/282Kk0ozfcA5TM0wGRe2BwmoB4gYrZ7pJDxvsHnRPR6Dw0r9Xxh8DNIzHQ==
@@ -3009,6 +3207,7 @@
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
 
+<<<<<<< HEAD
 "@polkadot/x-bigint@10.1.6", "@polkadot/x-bigint@^10.1.6":
   version "10.1.6"
   resolved "https://registry.yarnpkg.com/@polkadot/x-bigint/-/x-bigint-10.1.6.tgz#25ec3af7217862808e20ccf0ecd1dfafb1bc31bd"
@@ -3027,6 +3226,15 @@
     "@polkadot/x-global" "10.1.6"
     "@types/node-fetch" "^2.6.2"
     node-fetch "^3.2.10"
+=======
+"@polkadot/x-bigint@9.7.2":
+  version "9.7.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-bigint/-/x-bigint-9.7.2.tgz#ec79977335dce173a81e45247bdfd46f3b301702"
+  integrity sha512-qi8/DTGypFSt5vvNOsYcEaqH72lymfyidGlsHlZ6e7nNASnEhk/NaOcINiTr1ds+fpu4dtKXWAIPZufujf2JeQ==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
+    "@polkadot/x-global" "9.7.2"
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@polkadot/x-global@10.1.1":
 =======
@@ -3041,13 +3249,17 @@
     node-fetch "^3.2.9"
 
 "@polkadot/x-global@10.1.1", "@polkadot/x-global@^10.0.2":
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.1.tgz#d0d90ef71fd94f59605e8c73dcd1aa3e3dd4fc37"
   integrity sha512-wB3rZTTNN14umLSfR2GLL0dJrlGM1YRUNw7XvbA+3B8jxGCIOmjSyAkdZBeiCxg2XIbJD3EkB0hBhga2mNuS6g==
   dependencies:
     "@babel/runtime" "^7.18.9"
 
+<<<<<<< HEAD
 "@polkadot/x-global@10.1.6", "@polkadot/x-global@^10.1.6":
   version "10.1.6"
   resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-10.1.6.tgz#af6e3c38384d64c69e66607b7a6e794822c65e40"
@@ -3064,6 +3276,15 @@
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.6"
 =======
+=======
+"@polkadot/x-global@9.7.2":
+  version "9.7.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-9.7.2.tgz#9847fd1da13989f321ca621e85477ba70fd8d55a"
+  integrity sha512-3NN5JhjosaelaFWBJSlv9mb/gDAlt7RuZ8NKlOjB+LQHd9g6ZbnYi5wwjW+i/x/3E4IVbBx66uvWgNaw7IBrkg==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
+
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@polkadot/x-randomvalues@*", "@polkadot/x-randomvalues@10.1.1":
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-10.1.1.tgz#3b1f590e6641e322e3a28bb4f17f0a53005d9ada"
@@ -3071,6 +3292,7 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
+<<<<<<< HEAD
 >>>>>>> Add ridirect
 
 "@polkadot/x-randomvalues@10.1.1":
@@ -3080,6 +3302,16 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
+=======
+
+"@polkadot/x-randomvalues@9.7.2":
+  version "9.7.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-9.7.2.tgz#d580b0e9149ea22b2afebba5d7b1368371f7086d"
+  integrity sha512-819slnXNpoVtqdhjI19ao7w5m+Zwx11VfwCZkFQypVv3b/1UEoKG/baJA9dVI6yMvhnBN//i8mLgNy3IXWbVVw==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
+    "@polkadot/x-global" "9.7.2"
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@polkadot/x-textdecoder@10.1.1":
   version "10.1.1"
@@ -3089,6 +3321,7 @@
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
 
+<<<<<<< HEAD
 "@polkadot/x-textdecoder@10.1.6":
   version "10.1.6"
   resolved "https://registry.yarnpkg.com/@polkadot/x-textdecoder/-/x-textdecoder-10.1.6.tgz#3eaceb8f9b9e6872232b63e9c7a0ac84bdcc7eba"
@@ -3096,6 +3329,15 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.6"
+=======
+"@polkadot/x-textdecoder@9.7.2":
+  version "9.7.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-textdecoder/-/x-textdecoder-9.7.2.tgz#c94ea6c8f510fdf579659248ede9421854e32b42"
+  integrity sha512-hhrMNZwJBmusdpqjDRpOHZoMB4hpyJt9Gu9Bi9is7/D/vq/hpxq8z7s6NxrbRyXJf1SIk6NMK0jf5XjRLdKdbw==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
+    "@polkadot/x-global" "9.7.2"
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@polkadot/x-textencoder@10.1.1":
   version "10.1.1"
@@ -3105,6 +3347,7 @@
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
 
+<<<<<<< HEAD
 "@polkadot/x-textencoder@10.1.6":
   version "10.1.6"
   resolved "https://registry.yarnpkg.com/@polkadot/x-textencoder/-/x-textencoder-10.1.6.tgz#a7d2d9bcd7d9c6bc663d524a278aa4a6679ecf28"
@@ -3122,6 +3365,16 @@
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.6"
 =======
+=======
+"@polkadot/x-textencoder@9.7.2":
+  version "9.7.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-textencoder/-/x-textencoder-9.7.2.tgz#2ae29fa5ca2c0353e7a1913eef710b2d45bdf0b2"
+  integrity sha512-GHbSdbMPixDAOnJ9cvL/x9sPNeHegPoDSqCAzY5H6/zHc/fNn0vUu0To9VpPgPhp/Jb9dbc0h8YqEyvOcOlphw==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
+    "@polkadot/x-global" "9.7.2"
+
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@polkadot/x-ws@^10.0.2":
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@polkadot/x-ws/-/x-ws-10.1.1.tgz#e1933ffcb7e6b6cfef12582fbe407a49600c0de3"
@@ -3129,7 +3382,10 @@
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@polkadot/x-global" "10.1.1"
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
     "@types/websocket" "^1.0.5"
     websocket "^1.0.34"
 
@@ -3215,7 +3471,10 @@
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@restart/ui/-/ui-1.3.0.tgz#a5589aaf752bbcc0d089ae5c7c52d7984c22cb9a"
   integrity sha512-VRb330/6tDaHAHRkqe0GOawuj+hcZM7Zp5piWk/3AVwW18+0sQxGqqFeiH1ZeEMdn7w+D8bZPaY3QoLTmDKcGg==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     "@babel/runtime" "^7.18.3"
     "@popperjs/core" "^2.11.5"
@@ -3286,7 +3545,10 @@
 "@substrate/connect-extension-protocol@^1.0.1":
 =======
 "@substrate/connect-extension-protocol@^1.0.0":
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@substrate/connect-extension-protocol/-/connect-extension-protocol-1.0.1.tgz#fa5738039586c648013caa6a0c95c43265dbe77d"
   integrity sha512-161JhCC1csjH3GE5mPLEd7HbWtwNSPJBg3p1Ksz9SFlTzj/bgEwudiRN2y5i0MoLGCIJRYKyKGMxVnd29PzNjg==
@@ -3307,6 +3569,7 @@
   dependencies:
     pako "^2.0.4"
 <<<<<<< HEAD
+<<<<<<< HEAD
     ws "^8.8.1"
 
 "@substrate/ss58-registry@^1.24.0":
@@ -3315,10 +3578,16 @@
 
 "@substrate/ss58-registry@^1.23.0", "@substrate/ss58-registry@^1.24.0":
 >>>>>>> Add ridirect
+=======
+    websocket "^1.0.32"
+
+"@substrate/ss58-registry@^1.23.0", "@substrate/ss58-registry@^1.24.0":
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "1.25.0"
   resolved "https://registry.yarnpkg.com/@substrate/ss58-registry/-/ss58-registry-1.25.0.tgz#0fcd8c9c0e53963a88fbed41f2cbd8a1a5c74cde"
   integrity sha512-LmCH4QJRdHaeLsLTPSgJaXguMoIW+Ig9fA9LRPpeya9HefVAJ7gZuUYinldv+QmX7evNm5CL0rspNUS8l1DvXg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@substrate/ss58-registry@^1.28.0":
   version "1.28.0"
@@ -3327,6 +3596,8 @@
 
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 "@svgr/babel-plugin-add-jsx-attribute@^6.3.1":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-6.3.1.tgz#b9a5d84902be75a05ede92e70b338d28ab63fa74"
@@ -3635,6 +3906,7 @@
   resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.9.tgz#7f0e7931343761efde1e2bf48c40f02f3f75705a"
   integrity sha512-QsbSjA/fSk7xB+UXlCT3wHBy5ai9wOcNDWwZAtud+jXhwOM3l+EYZh8Lng4+/6n8uar0J7xILzqftJdJ/Wdfkw==
 <<<<<<< HEAD
+<<<<<<< HEAD
   dependencies:
     "@types/node" "*"
 
@@ -3671,6 +3943,8 @@
   integrity sha512-YfAchFs0yM1QPDrLm2VHe+WHGtqms3NXnXAMolrgrVP6fgBHHXy1ozAbo/dFtPNtZC/m66bPiCTWYmqp1F14gA==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     "@types/node" "*"
     "@types/tough-cookie" "*"
@@ -3718,6 +3992,7 @@
 
 "@types/node@*", "@types/node@>=13.7.0":
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "18.6.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.6.1.tgz#828e4785ccca13f44e2fb6852ae0ef11e3e20ba5"
   integrity sha512-z+2vB6yDt1fNwKOeGbckpmirO+VBDuQqecXkgeIqDlaOtmKn6hPR/viQ8cxCfqLU4fTlvM3+YjM367TukWdxpg==
@@ -3726,6 +4001,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.6.tgz#0ba49ac517ad69abe7a1508bc9b3a5483df9d5d7"
   integrity sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==
 >>>>>>> Add ridirect
+=======
+  version "18.0.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.6.tgz#0ba49ac517ad69abe7a1508bc9b3a5483df9d5d7"
+  integrity sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 "@types/node@^17.0.5":
   version "17.0.45"
@@ -3807,6 +4087,7 @@
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.15.tgz#d355644c26832dc27f3e6cbf0c4f4603fc4ab7fe"
   integrity sha512-iz3BtLuIYH1uWdsv6wXYdhozhqj20oD4/Hk2DNXIn1kFsmp9x8d9QB6FnPhfkbhd2PgEONt9Q1x/ebkwjfFLow==
 <<<<<<< HEAD
+<<<<<<< HEAD
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -3818,6 +4099,8 @@
   integrity sha512-mk0BL8zBinf2ozNr3qPnlu1oyVTYq+4V7WA76RgxUAtf0Em/Wbid38KN6n4abEkvO4xMTBWmnP1FtQzgkEiJoA==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -4106,7 +4389,10 @@ acorn@^7.1.1:
 acorn@^8.0.4, acorn@^8.5.0, acorn@^8.7.1:
 =======
 acorn@^8.0.4, acorn@^8.4.1, acorn@^8.5.0:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "8.8.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.0.tgz#88c0187620435c7f6015803f5539dae05a9dbea8"
   integrity sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==
@@ -4691,11 +4977,14 @@ browser-readablestream-to-it@^1.0.1, browser-readablestream-to-it@^1.0.3:
   integrity sha512-+12sHB+Br8HIh6VAMVEG5r3UXCyESIgDW7kzk3BjIXa43DVqVwL7GC5TW3jeh+72dtcH99pPVpw0X8i0jt+/kw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.6, browserslist@^4.18.1, browserslist@^4.20.2, browserslist@^4.20.3, browserslist@^4.21.2, browserslist@^4.21.3:
   version "4.21.3"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.3.tgz#5df277694eb3c48bc5c4b05af3e8b7e09c5a6d1a"
   integrity sha512-898rgRXLAyRkM1GryrrBHGkqA5hlpkV5MhtZwg9QXeiyLUYs2k00Un05aX5l2/yJIOObYKOpS2JNo8nJDE7fWQ==
 =======
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.6, browserslist@^4.18.1, browserslist@^4.20.2, browserslist@^4.20.3, browserslist@^4.21.2:
   version "4.21.2"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.2.tgz#59a400757465535954946a400b841ed37e2b4ecf"
@@ -4831,7 +5120,10 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001335, caniuse-lite@^1.0.30001366:
   version "1.0.30001368"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001368.tgz#c5c06381c6051cd863c45021475434e81936f713"
   integrity sha512-wgfRYa9DenEomLG/SdWgQxpIyvdtH3NW8Vq+tB6AwR9e56iOIcu1im5F/wNdDf04XlKHXqIx4N8Jo0PemeBenQ==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -5263,6 +5555,7 @@ copy-webpack-plugin@^11.0.0:
 
 core-js-compat@^3.21.0, core-js-compat@^3.22.1:
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "3.24.0"
   resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.24.0.tgz#885958fac38bf3f4464a90f2663b4620f6aee6e3"
   integrity sha512-F+2E63X3ff/nj8uIrf8Rf24UDGIz7p838+xjEp+Bx3y8OWXj+VTPPZNCtdqovPaS9o7Tka5mCH01Zn5vOd6UQg==
@@ -5271,11 +5564,17 @@ core-js-compat@^3.21.0, core-js-compat@^3.22.1:
   resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.23.5.tgz#11edce2f1c4f69a96d30ce77c805ce118909cd5b"
   integrity sha512-fHYozIFIxd+91IIbXJgWd/igXIc8Mf9is0fusswjnGIWVG96y2cwyUdlCkGOw6rMLHKAxg7xtCIVaHsyOUnJIg==
 >>>>>>> Add ridirect
+=======
+  version "3.23.5"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.23.5.tgz#11edce2f1c4f69a96d30ce77c805ce118909cd5b"
+  integrity sha512-fHYozIFIxd+91IIbXJgWd/igXIc8Mf9is0fusswjnGIWVG96y2cwyUdlCkGOw6rMLHKAxg7xtCIVaHsyOUnJIg==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     browserslist "^4.21.2"
     semver "7.0.0"
 
 core-js-pure@^3.20.2:
+<<<<<<< HEAD
 <<<<<<< HEAD
   version "3.24.0"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.24.0.tgz#10eeb90dbf0d670a6b22b081aecc7deb2faec7e1"
@@ -5286,6 +5585,8 @@ core-js@^3.23.3:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.24.0.tgz#4928d4e99c593a234eb1a1f9abd3122b04d3ac57"
   integrity sha512-IeOyT8A6iK37Ep4kZDD423mpi6JfPRoPUdQwEWYiGolvn4o6j2diaRzNfDfpTdu3a5qMbrGUzKUpYpRY8jXCkQ==
 =======
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "3.23.5"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.23.5.tgz#23daaa9af9230e50f10b0fa4b8e6b87402be4c33"
   integrity sha512-8t78LdpKSuCq4pJYCYk8hl7XEkAX+BP16yRIwL3AanTksxuEf7CM83vRyctmiEL8NDZ3jpUcv56fk9/zG3aIuw==
@@ -5294,7 +5595,10 @@ core-js@^3.23.3:
   version "3.23.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.23.5.tgz#1f82b0de5eece800827a2f59d597509c67650475"
   integrity sha512-7Vh11tujtAZy82da4duVreQysIoO2EvVrur7y6IzZkH1IHPSekuDi8Vuw1+YKjkbfWLRD7Nc9ICQ/sIUDutcyg==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -5957,7 +6261,10 @@ electron-to-chromium@^1.4.188:
   version "1.4.198"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.198.tgz#36a8e7871046f7f94c01dc0133912fd5cf226c6a"
   integrity sha512-jwqQPdKGeAslcq8L+1SZZgL6uDiIDmTe9Gq4brsdWAH27y7MJ2g9Ue6MyST3ogmSM49EAQP7bype1V5hsuNrmQ==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -6002,7 +6309,10 @@ end-of-stream@^1.1.0:
 enhanced-resolve@^5.10.0:
 =======
 enhanced-resolve@^5.9.3:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.10.0.tgz#0dc579c3bb2a1032e357ac45b8f3a6f3ad4fb1e6"
   integrity sha512-T0yTFjdpldGY8PmuXXR0PyQ1ufZpEGiHVrp7zHKB7jdR4qlmZHhONVM5AQOAWXuF/w3dnHbEQVrNptJgt7F+cQ==
@@ -6126,6 +6436,7 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 escape-string-regexp@^2.0.0:
   version "2.0.0"
@@ -6133,6 +6444,8 @@ escape-string-regexp@^2.0.0:
   integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 escape-string-regexp@^4.0.0:
   version "4.0.0"
@@ -6760,7 +7073,10 @@ glob-to-regexp@^0.4.1:
 glob@^7.0.0, glob@^7.0.5, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
 =======
 glob@^7.0.0, glob@^7.0.5, glob@^7.1.3, glob@^7.1.6:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.3.tgz#b8df0fb802bbfa8e89bd1d938b4e16578ed44f2b"
   integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
@@ -7157,6 +7473,7 @@ http-parser-js@>=0.5.1:
   resolved "https://registry.yarnpkg.com/http-parser-js/-/http-parser-js-0.5.8.tgz#af23090d9ac4e24573de6f6aecc9d84a48bf20e3"
   integrity sha512-SGeBX54F94Wgu5RH3X5jsDtf4eHyRogWX1XGT3b4HuW3tQPM4AaBzoUji/4AAJNXCEOWZ5O0DgZmJw1947gD5Q==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 http-proxy-agent@^5.0.0:
   version "5.0.0"
@@ -7168,6 +7485,8 @@ http-proxy-agent@^5.0.0:
     debug "4"
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 http-proxy-middleware@^2.0.3:
   version "2.0.6"
@@ -7283,6 +7602,7 @@ import-lazy@^2.1.0:
   resolved "https://registry.yarnpkg.com/import-lazy/-/import-lazy-2.1.0.tgz#05698e3d45c88e8d7e9d92cb0584e77f096f3e43"
   integrity sha512-m7ZEHgtw69qOGw+jwxXkHlrlIPdTGkyh66zXZ1ajZbxkDBNjSY/LGbmjc7h0s2ELsUDTAhFr55TrPSSqJGPG0A==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import-local@^3.0.2:
   version "3.1.0"
@@ -7293,6 +7613,8 @@ import-local@^3.0.2:
     resolve-cwd "^3.0.0"
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -7804,6 +8126,7 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
+<<<<<<< HEAD
 
 iso-url@^1.1.5:
   version "1.2.1"
@@ -7845,6 +8168,8 @@ istanbul-lib-report@^3.0.0:
     istanbul-lib-coverage "^3.0.0"
     make-dir "^3.0.0"
     supports-color "^7.1.0"
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 istanbul-lib-source-maps@^4.0.0:
   version "4.0.1"
@@ -7855,6 +8180,7 @@ istanbul-lib-source-maps@^4.0.0:
     istanbul-lib-coverage "^3.0.0"
     source-map "^0.6.1"
 
+<<<<<<< HEAD
 istanbul-reports@^3.1.3:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-3.1.5.tgz#cc9a6ab25cb25659810e4785ed9d9fb742578bae"
@@ -7863,12 +8189,21 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 =======
+=======
+isobject@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
+  integrity sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 it-all@^1.0.4:
   version "1.0.6"
@@ -8368,6 +8703,7 @@ jsbn@~0.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 jsdom@^20.0.0:
   version "20.0.0"
@@ -8403,6 +8739,8 @@ jsdom@^20.0.0:
     xml-name-validator "^4.0.0"
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 jsesc@^2.5.1:
   version "2.5.2"
@@ -8943,6 +9281,7 @@ multicast-dns@^7.2.5:
 
 multiformats@^9.0.2, multiformats@^9.4.2, multiformats@^9.4.5, multiformats@^9.5.1, multiformats@^9.5.4, multiformats@^9.6.3:
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "9.7.1"
   resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.7.1.tgz#ab348e5fd6f8e7fb3fd56033211bda48854e2173"
   integrity sha512-TaVmGEBt0fhxiNJMGphBfB+oGvUxFs8KgGvgl8d3C+GWtrFcvXdJ2196eg+dYhmSFClmgFfSfJEklo+SZzdNuw==
@@ -8951,6 +9290,11 @@ multiformats@^9.0.2, multiformats@^9.4.2, multiformats@^9.4.5, multiformats@^9.5
   resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.7.0.tgz#845799e8df70fbb6b15922500e45cb87cf12f7e5"
   integrity sha512-uv/tcgwk0yN4DStopnBN4GTgvaAlYdy6KnZpuzEPFOYQd71DYFJjs0MN1ERElAflrZaYyGBWXyGxL5GgrxIx0Q==
 >>>>>>> Add ridirect
+=======
+  version "9.7.0"
+  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.7.0.tgz#845799e8df70fbb6b15922500e45cb87cf12f7e5"
+  integrity sha512-uv/tcgwk0yN4DStopnBN4GTgvaAlYdy6KnZpuzEPFOYQd71DYFJjs0MN1ERElAflrZaYyGBWXyGxL5GgrxIx0Q==
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 multimatch@^4.0.0:
   version "4.0.0"
@@ -9025,7 +9369,10 @@ no-case@^3.0.4:
 nock@^13.2.9:
 =======
 nock@^13.2.8:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "13.2.9"
   resolved "https://registry.yarnpkg.com/nock/-/nock-13.2.9.tgz#4faf6c28175d36044da4cfa68e33e5a15086ad4c"
   integrity sha512-1+XfJNYF1cjGB+TKMWi29eZ0b82QOvQs2YoLNzbpWGqFMtRQHTa57osqdGj4FrFPgkO4D4AZinzUJR9VvW3QUA==
@@ -9055,16 +9402,22 @@ node-fetch@2.6.7, node-fetch@^2.5.0, node-fetch@^2.6.7:
     whatwg-url "^5.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 node-fetch@^3.2.10:
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.2.10.tgz#e8347f94b54ae18b57c9c049ef641cef398a85c8"
   integrity sha512-MhuzNwdURnZ1Cp4XTazr69K0BTizsBroX7Zx3UgDSVcZYKF/6p0CBe4EUb/hLqmzVhl0UpYfgRljQ4yxE+iCxA==
 =======
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 node-fetch@^3.2.8, node-fetch@^3.2.9:
   version "3.2.9"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.2.9.tgz#3f6070bf854de20f21b9fe8479f823462e615d7d"
   integrity sha512-/2lI+DBecVvVm9tDhjziTVjo2wmTsSxSk58saUYP0P/fRJ3xxtfMDY24+CKTkfm0Dlhyn3CSXNL0SoRiCZ8Rzg==
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   dependencies:
     data-uri-to-buffer "^4.0.0"
     fetch-blob "^3.1.4"
@@ -9084,6 +9437,7 @@ node-gyp-build@^4.3.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
   integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -9091,6 +9445,8 @@ node-int64@^0.4.0:
   integrity sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 node-releases@^2.0.6:
   version "2.0.6"
@@ -9531,6 +9887,7 @@ pify@^3.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pirates@^4.0.4:
   version "4.0.5"
@@ -9538,6 +9895,8 @@ pirates@^4.0.4:
   integrity sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 pkg-dir@^4.1.0, pkg-dir@^4.2.0:
   version "4.2.0"
@@ -10016,7 +10375,10 @@ proxy-from-env@^1.0.0:
 psl@^1.1.28, psl@^1.1.33:
 =======
 psl@^1.1.28:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.9.0.tgz#d0df2a137f00794565fcaf3b2c00cd09f8d5a5a7"
   integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
@@ -10660,6 +11022,7 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 resolve-cwd@^3.0.0:
   version "3.0.0"
@@ -10669,6 +11032,8 @@ resolve-cwd@^3.0.0:
     resolve-from "^5.0.0"
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -10686,6 +11051,7 @@ resolve-pathname@^3.0.0:
   integrity sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 resolve.exports@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/resolve.exports/-/resolve.exports-1.1.0.tgz#5ce842b94b05146c0e03076985d1d0e7e48c90c9"
@@ -10695,6 +11061,9 @@ resolve@^1.1.6, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.14.2, resolve@^1.19
 =======
 resolve@^1.1.6, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.14.2, resolve@^1.19.0, resolve@^1.3.2:
 >>>>>>> Add ridirect
+=======
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.14.2, resolve@^1.19.0, resolve@^1.3.2:
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "1.22.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.1.tgz#27cb2ebb53f91abb49470a928bba7558066ac177"
   integrity sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==
@@ -11349,6 +11718,7 @@ strip-bom@^3.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
   integrity sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 strip-bom@^4.0.0:
   version "4.0.0"
@@ -11356,6 +11726,8 @@ strip-bom@^4.0.0:
   integrity sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 strip-final-newline@^2.0.0:
   version "2.0.0"
@@ -11652,6 +12024,7 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type-check@~0.3.2:
   version "0.3.2"
@@ -11666,6 +12039,8 @@ type-detect@4.0.8:
   integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 type-fest@^0.20.2:
   version "0.20.2"
@@ -11907,7 +12282,10 @@ unzip-response@^2.0.1:
 update-browserslist-db@^1.0.5:
 =======
 update-browserslist-db@^1.0.4:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/update-browserslist-db/-/update-browserslist-db-1.0.5.tgz#be06a5eedd62f107b7c19eb5bcefb194411abf38"
   integrity sha512-dteFFpCyvuDdr9S/ff1ISkKt/9YZxKjI9WlRR99c180GaztJtRa/fn18FdxGVKVsnPY7/a/FDN68mcvUmP4U7Q==
@@ -12146,7 +12524,10 @@ warning@^4.0.0, warning@^4.0.3:
 watchpack@^2.4.0:
 =======
 watchpack@^2.3.1:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-2.4.0.tgz#fa33032374962c78113f93c7f2fb4c54c9862a5d"
   integrity sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==
@@ -12176,6 +12557,7 @@ webidl-conversions@^3.0.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
   integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 webidl-conversions@^7.0.0:
   version "7.0.0"
@@ -12183,6 +12565,8 @@ webidl-conversions@^7.0.0:
   integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
 =======
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
 
 webpack-bundle-analyzer@^4.5.0:
   version "4.5.0"
@@ -12463,7 +12847,10 @@ ws@^7.3.1:
 ws@^8.4.2, ws@^8.8.0, ws@^8.8.1:
 =======
 ws@^8.4.2:
+<<<<<<< HEAD
 >>>>>>> Add ridirect
+=======
+>>>>>>> 22da076a7e1e236d34eb1e5b8428c081087ec467
   version "8.8.1"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.8.1.tgz#5dbad0feb7ade8ecc99b830c1d77c913d4955ff0"
   integrity sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==
