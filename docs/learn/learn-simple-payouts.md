@@ -7,6 +7,8 @@ keywords: [payouts, simple payouts, rewards, staking]
 slug: ../learn-simple-payouts
 ---
 
+import RPC from "./../../components/RPC-Connection"
+
 Polkadot and Kusama make stakers claim their rewards for past eras by submitting a transaction. This
 naturally leads to spreading out reward distribution, as people make transactions at disparate
 times, rather than updating the accounts of all stakers in a single block.
@@ -16,10 +18,11 @@ transactions would allow the block construction algorithm to process only a limi
 and ensure that the network maintains a constant block time. If all rewards were sent out in one
 block, this could cause serious issues with the stability of the network.
 
-Simple payouts require one transaction per validator, per [era](../general/glossary.md##era), to claim rewards.
-The reason Polkadot requires this is to avoid an attack where someone has several thousand accounts
-nominating a single validator. The major cost in reward distribution is mutating the accounts in
-storage, and Polkadot cannot pay out several thousand accounts in a single transaction.
+Simple payouts require one transaction per validator, per [era](../general/glossary.md##era), to
+claim rewards. The reason Polkadot requires this is to avoid an attack where someone has several
+thousand accounts nominating a single validator. The major cost in reward distribution is mutating
+the accounts in storage, and Polkadot cannot pay out several thousand accounts in a single
+transaction.
 
 ## Claiming Rewards
 
@@ -34,16 +37,22 @@ which takes 28 eras. If a validator were to immediately chill and start unbondin
 calculated, and nobody issued a payout for that era from that validator in the next 28 eras, the
 reward would no longer be claimable.
 
-:::info In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout before 28 eras have passed.
+:::info In order to be absolutely sure that staking rewards can be claimed, users should trigger a
+payout before 28 eras have passed.
 
 :::
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
 fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will
-automatically calculate that validator's reward, find the top {{ polkadot_max_nominators }}
+automatically calculate that validator's reward, find the top
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
 nominators for that era, and distribute the rewards pro rata.
 
-:::note The Staking system only applies the highest {{ polkadot_max_nominators }} nominations to each validator to reduce the complexity of the staking set.
+:::note The Staking system only applies the highest
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominations to each validator to reduce the complexity of the staking set.
 
 :::
 
