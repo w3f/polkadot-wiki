@@ -501,11 +501,8 @@ already maxed out.
 Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
 Polkadot will also produce blocks at approximately six second intervals.
 
-Rewards are recorded per session (approximately one hour on Kusama and four hours on Polkadot) and
-calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). Thus,
-rewards will be calculated four times per day on Kusama and once per day on Polkadot.
-
-Rewards are calculated based on era points, which have a probabilistic component. In other words,
+Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on Polkadot). 
+These rewards are calculated based on era points, which have a probabilistic component. In other words,
 there may be slight differences in your rewards from era to era, and even amongst validators in the
 active set at the same time. These variations should cancel out over a long enough timeline. See the
 page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md) for more information on how
