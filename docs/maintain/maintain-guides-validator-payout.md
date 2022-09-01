@@ -7,11 +7,13 @@ keywords: [validator payout, payments, rewards, era points]
 slug: ../maintain-guides-validator-payout
 ---
 
+import RPC from "./../../components/RPC-Connection"
+
 ## Era Points
 
 For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in
-Polkadot), validators are paid proportionally to the amount of *era points* they have collected. 
-Era points are reward points earned for payable actions like:
+Polkadot), validators are paid proportionally to the amount of _era points_ they have collected. Era
+points are reward points earned for payable actions like:
 
 - issuing validity statements for [parachain](../learn/learn-parachains.md) blocks.
 - producing a non-uncle block in the Relay Chain.
@@ -20,56 +22,59 @@ Era points are reward points earned for payable actions like:
 
 :::note
 
-An uncle block is a Relay Chain block that is valid in every regard, but which failed to
-become canonical. This can happen when two or more validators are block producers in a single slot,
-and the block produced by one validator reaches the next block producer before the others. We call
-the lagging blocks uncle blocks.
+An uncle block is a Relay Chain block that is valid in every regard, but which failed to become
+canonical. This can happen when two or more validators are block producers in a single slot, and the
+block produced by one validator reaches the next block producer before the others. We call the
+lagging blocks uncle blocks.
 
 :::
 
 Payments occur at the end of every era.
 
-Era points create a probabilistic component for staking rewards. 
+Era points create a probabilistic component for staking rewards.
 
-If the *mean* of staking rewards is the average rewards per era, then the *variance* is the variability 
-from the average staking rewards. 
+If the _mean_ of staking rewards is the average rewards per era, then the _variance_ is the
+variability from the average staking rewards.
 
-With parachains now on Polkadot, a large percentage of era points will come from parachain validation,
-as a subset of validators are selected to para-validate for all parachains each epoch, and those 
-para-validators can generate more era points as a result. Para-validators are rewarded 20 era points 
-each for each parachain block that they validate.
+With parachains now on Polkadot, a large percentage of era points will come from parachain
+validation, as a subset of validators are selected to para-validate for all parachains each epoch,
+and those para-validators can generate more era points as a result. Para-validators are rewarded 20
+era points each for each parachain block that they validate.
 
-In this case, analyzing the *expected value* of staking rewards will paint a better picture
-as the weight of era points of validators and para-validators in the reward average are taken into consideration.
+In this case, analyzing the _expected value_ of staking rewards will paint a better picture as the
+weight of era points of validators and para-validators in the reward average are taken into
+consideration.
 
-:::note High-level breakdown of reward variance 
+:::note High-level breakdown of reward variance
 
-This should only serve as a high-level overview of the probabilistic nature for staking 
-rewards.
+This should only serve as a high-level overview of the probabilistic nature for staking rewards.
 
-Let: 
+Let:
+
 - `pe` = para-validator era points,
 - `ne` = non-para-validator era points,
 - `EV` = expected value of staking rewards,
 
-Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`. 
+Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`.
 
-Since `EV(pe)` has a more weighted probability on the `EV`, the increase in variance against the 
-`EV` becomes apparent between the different validator pools (aka. validators in the active set and the ones chosen 
-to para-validate).
+Since `EV(pe)` has a more weighted probability on the `EV`, the increase in variance against the
+`EV` becomes apparent between the different validator pools (aka. validators in the active set and
+the ones chosen to para-validate).
 
-Also, let: 
+Also, let:
+
 - `v` = the variance of staking rewards,
 - `p` = number of para-validators,
 - `w` = number validators in the active set,
 - `e` = era,
 
-Then, `v` &#8593; if `w` &#8593;, as this reduces `p` : `w`, with respect to `e`. 
+Then, `v` &#8593; if `w` &#8593;, as this reduces `p` : `w`, with respect to `e`.
 
-Increased `v` is expected, and initially keeping `p` &#8595; using the same para-validator set for all parachains 
-ensures [availability](../learn/learn-availability.md) and [approval voting](../learn/learn-governance.md). 
-In addition, despite `v` &#8593; on an `e` to `e` basis, over time, the amount of rewards each validator 
-receives will equal out based on the continuous selection of para-validators.
+Increased `v` is expected, and initially keeping `p` &#8595; using the same para-validator set for
+all parachains ensures [availability](../learn/learn-availability.md) and
+[approval voting](../learn/learn-governance.md). In addition, despite `v` &#8593; on an `e` to `e`
+basis, over time, the amount of rewards each validator receives will equal out based on the
+continuous selection of para-validators.
 
 There are plans to scale the active para-validation set in the future
 
@@ -185,10 +190,11 @@ validator, then you will lose 1 DOT in each case.
 
 :::caution
 
-If a validator is oversubscribed in an era, staking rewards are distributed only to the the top 
-{{ polkadot_max_nominators }} nominators and the rest of the nominators do not receive any rewards. 
-This is not the case for slashing! Every active nominator of the validator committing slashable offence
-will be slashed.
+If a validator is oversubscribed in an era, staking rewards are distributed only to the the top
+{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
+{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+nominators and the rest of the nominators do not receive any rewards. This is not the case for
+slashing! Every active nominator of the validator committing slashable offence will be slashed.
 
 :::
 
@@ -200,14 +206,14 @@ their validator to "reimburse" themselves for the cost of running a validator no
 all rewards are shared based on the stake behind each validator. This includes the stake of the
 validator itself, plus any stake bonded by nominators.
 
-:::info 
+:::info
 
-Validators set their preference as a percentage of the block reward, _not_ an absolute
-number of DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward
-peaking when the amount staked is at 50% of the total supply. The commission is set as the amount
-taken by the validator; that is, 0% commission means that the validator does not receive any
-proportion of the rewards besides that owed to it from self-stake, and 100% commission means that
-the validator operator gets all rewards and gives none to its nominators.
+Validators set their preference as a percentage of the block reward, _not_ an absolute number of
+DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking when
+the amount staked is at 50% of the total supply. The commission is set as the amount taken by the
+validator; that is, 0% commission means that the validator does not receive any proportion of the
+rewards besides that owed to it from self-stake, and 100% commission means that the validator
+operator gets all rewards and gives none to its nominators.
 
 :::
 
