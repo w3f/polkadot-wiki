@@ -30,7 +30,7 @@ function FooterSocialColumn() {
 	};
 
 	const Social = () => (
-		<ul className="list-social-links">
+		<ul className="list-social-links mb-5">
 			<SocialItem href="https://twitter.com/Polkadot" className="socicon-twitter" />
 			<SocialItem href="https://www.reddit.com/r/polkadot" className="socicon-reddit" />
 			<SocialItem href="https://github.com/paritytech/polkadot" className="socicon-github" />
