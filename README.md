@@ -244,7 +244,7 @@ the
 
 ## Internationalization
 
-| :exclamation: Currently the Wiki is being reorgnaized and updated, during this time we will not be prioritizing translations. |
+| ❗ Currently the Wiki is being reorgnaized and updated. It is recommended to resume working on translations after the Wiki revamp is completed. |
 | ----------------------------------------------------------------------------------------------------------------- |
 
 We are using Crowdin to manage all different translations. You can go to the
